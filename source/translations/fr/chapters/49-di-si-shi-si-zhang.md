@@ -12,13 +12,13 @@ kind: chapter
 {class="chapter-intro mb-4"}
 La théorie est terminée, place à la pratique. Ce chapitre n'est pas un simple tutoriel à recopier : c'est une méthode de terrain pour apprendre « comment penser, comment demander, comment vérifier ». À travers trois projets de difficulté croissante, nous verrons tout le cheminement, du besoin au produit fini. Quel que soit l'outil que tu utilises, ce processus s'applique.
 
-#### 1. Projet 1 : un mini-site d'outils personnels (niveau débutant)
+1. Projet 1 : un mini-site d'outils personnels (niveau débutant)
 
 ##### 1. Réfléchir au besoin
 
 Objectif : créer une page web d'outils personnels qui présente l'accès à 3 ou 4 petits outils pratiques. C'est un projet purement front-end, sans back-end ni base de données. L'important n'est pas la complexité des outils, mais de vivre le parcours complet « du besoin au produit fini ».
 
-Selon les cinq éléments du besoin : Who — un usage personnel. What — une page web présentant l'accès aux outils. Why — regrouper les outils du quotidien sur une seule page, faciles d'accès. How — un fichier unique HTML+CSS+JS, sans framework. Constraint — à réaliser en 30 minutes, sans déploiement.
+Selon les cinq éléments du besoin : Who — un usage personnel. What, une page web présentant l'accès aux outils. Why, regrouper les outils du quotidien sur une seule page, faciles d'accès. How, un fichier unique HTML+CSS+JS, sans framework. Constraint: à réaliser en 30 minutes, sans déploiement.
 
 ##### 2. Donner les instructions
 
@@ -52,7 +52,7 @@ Quand l'IA fournit le code, fais la réception avec les trois niveaux de vérifi
 
 Si tu veux aussi implémenter la fonction d'un outil (et pas seulement son accès), procède par étapes — ajoute la fonction d'un outil, vérifie, puis ajoute le suivant. C'est l'application concrète de la stratégie des « petits pas rapides ».
 
-#### 2. Projet 2 : une application de comptabilité full-stack (niveau intermédiaire)
+2. Projet 2 : une application de comptabilité full-stack (niveau intermédiaire)
 
 ##### 1. Réflexion sur le besoin et PRD
 
@@ -125,17 +125,17 @@ Donne la structure complète du code backend.
 ```
 :::
 
-Note ce qui fait la force de cette instruction : elle décrit uniquement l'étape en cours (le squelette back-end), sans y mêler de besoins front-end ; elle liste clairement les champs et les points d'entrée (assez de contraintes pour l'IA), tout en laissant le détail de l'implémentation à l'IA ; elle suit le principe « Goal-Driven Execution » — dire « quoi faire » plutôt que « comment faire ».
+Note ce qui fait la force de cette instruction : elle décrit uniquement l'étape en cours (le squelette back-end), sans y mêler de besoins front-end ; elle liste clairement les champs et les points d'entrée (assez de contraintes pour l'IA), tout en laissant le détail de l'implémentation à l'IA ; elle suit le principe « Goal-Driven Execution », dire « quoi faire » plutôt que « comment faire ».
 
 Dès que l'IA fournit le code, vérifie aussitôt : lance le serveur et teste chaque point d'entrée avec curl ou Postman. Une fois tout confirmé, ouvre une nouvelle conversation pour l'étape 2 (les pages de base du front-end). Chaque étape suit la boucle « instruction - vérification - nouvelle conversation ».
 
-#### 3. Projet 3 : une application augmentée par l'IA (niveau avancé)
+3. Projet 3 : une application augmentée par l'IA (niveau avancé)
 
 ##### 1. Concevoir le projet
 
-Objectif : une application connectée à l'API d'un grand modèle — par exemple un « assistant d'apprentissage IA » : l'utilisateur saisit un contenu à étudier, et l'IA produit un résumé, relie les notions entre elles et recommande des ressources. La particularité de ce projet : ton application appelle elle-même l'IA, et tu dois gérer l'appel d'API, l'ingénierie des prompts, la gestion des erreurs et autres nouveaux défis.
+Objectif : une application connectée à l'API d'un grand modèle, par exemple un « assistant d'apprentissage IA » : l'utilisateur saisit un contenu à étudier, et l'IA produit un résumé, relie les notions entre elles et recommande des ressources. La particularité de ce projet : ton application appelle elle-même l'IA, et tu dois gérer l'appel d'API, l'ingénierie des prompts, la gestion des erreurs et autres nouveaux défis.
 
-La leçon la plus importante de ce projet : quand tu « utilises l'IA pour écrire le code qui appelle l'IA », l'ingénierie des prompts demande une attention toute particulière. Les prompts que ton application envoie à l'API du grand modèle doivent eux aussi suivre les principes vus dans ce guide — clarté, concision, orientation objectif.
+La leçon la plus importante de ce projet : quand tu « utilises l'IA pour écrire le code qui appelle l'IA », l'ingénierie des prompts demande une attention toute particulière. Les prompts que ton application envoie à l'API du grand modèle doivent eux aussi suivre les principes vus dans ce guide, clarté, concision, orientation objectif.
 
 ##### 2. Les points techniques clés
 
@@ -144,7 +144,7 @@ Ce projet soulève plusieurs points techniques que tu n'as pas rencontrés dans 
 - Gestion des clés API : une clé ne doit jamais être codée en dur, gère-la via des variables d'environnement ;
 - Traitement des réponses en flux : les réponses des grands modèles arrivent généralement en streaming, à afficher mot à mot ;
 - Maîtrise de la consommation de tokens : les grands modèles facturent au token, il faut contrôler la consommation au niveau de l'application ;
-- Gestion des modèles de prompts : chaque fonction a son propre modèle de prompt, à organiser de façon structurée.
+- Gestion des modèles de prompts : chaque fonction a son propre modèle de prompt, à organiser de façon structurée
 
 Tu peux confier tous ces points à l'IA, mais tu dois en comprendre le « pourquoi » : pourquoi une clé ne doit pas être codée en dur ? pourquoi des réponses en flux ? pourquoi contrôler la consommation de tokens ? C'est en comprenant le « pourquoi » que tu pourras juger si la solution de l'IA tient la route.
 
@@ -166,16 +166,16 @@ La liste de contrôle universelle de la programmation IA
 Passe à l'action : termine le « projet 1 » cette semaine
 
 {class="mt-1"}
-Prends le « mini-site d'outils » de la section 1 du chapitre 44 comme ton premier devoir de programmation IA : 5 minutes pour les cinq éléments du besoin, envoie l'instruction à l'IA (n'importe quel outil fera l'affaire), puis fais la réception avec les trois niveaux de vérification. Tu as 30 minutes — et voilà ta première réalisation en programmation IA. Une fois terminé, garde-la précieusement : c'est le trophée de ton passage de « lecteur » à « praticien ».
+Prends le « mini-site d'outils » de la section 1 du chapitre 44 comme ton premier devoir de programmation IA : 5 minutes pour les cinq éléments du besoin, envoie l'instruction à l'IA (n'importe quel outil fera l'affaire), puis fais la réception avec les trois niveaux de vérification. Tu as 30 minutes: et voilà ta première réalisation en programmation IA. Une fois terminé, garde-la précieusement : c'est le trophée de ton passage de « lecteur » à « praticien ».
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 L'essentiel du chapitre
 
-- Projet 1 (débutant) : un site d'outils pur front-end — tout le parcours en 30 minutes
-- Projet 2 (intermédiaire) : une application de comptabilité full-stack — PRD + fichier mémoire + 5 étapes successives, chacune « utilisable »
-- Projet 3 (avancé) : un assistant d'apprentissage IA — écrire avec l'IA le code qui appelle l'IA, en soignant les prompts
+- Projet 1 (débutant) : un site d'outils pur front-end, tout le parcours en 30 minutes
+- Projet 2 (intermédiaire) : une application de comptabilité full-stack, PRD + fichier mémoire + 5 étapes successives, chacune « utilisable »
+- Projet 3 (avancé) : un assistant d'apprentissage IA, écrire avec l'IA le code qui appelle l'IA, en soignant les prompts
 - Les huit étapes du processus universel : réflexion sur le besoin → découpage → PRD → fichier mémoire → implémentation pas à pas → tests → relecture → itération
 - Chaque étape suit la boucle « instruction - vérification - nouvelle conversation »
 :::

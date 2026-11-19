@@ -18,7 +18,7 @@ Para practicar a nivel personal, te recomiendo OpenWeatherMap o la china QWeathe
 
 1. Regístrate → en la página API keys genera una clave (apikey);
 2. La versión gratuita puede llamar al endpoint Current Weather: api.openweathermap.org/data/2.5/weather? q=beijing&appid=TU_CLAVE&units=metric;
-3. Pruébalo primero en el navegador para ver qué pinta tiene el JSON que devuelve: es la «tarea previa» obligatoria antes de conectar cualquier API.
+3. Pruébalo primero en el navegador para ver qué pinta tiene el JSON que devuelve: es la «tarea previa» obligatoria antes de conectar cualquier API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -146,7 +146,7 @@ Hay detalles que merece la pena aprender: first? toma el primer elemento con seg
 - Buscador: el modificador .searchable arriba, con la interacción de búsqueda del sistema; al enviar, llama a vm.search;
 - Ciudades favoritas: guarda las ciudades que miras a menudo en UserDefaults y la próxima vez se consultan solas al abrir;
 - Tirar para actualizar: .refreshable { await vm.search(...) } lo arregla en una línea;
-- Iconos del tiempo: usa Image(systemName:) mapeando por descripción (sun.max / cloud.rain / snowflake) y la interfaz cobra vida al instante.
+- Iconos del tiempo: usa Image(systemName:) mapeando por descripción (sun.max / cloud.rain / snowflake) y la interfaz cobra vida al instante
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -160,13 +160,13 @@ OpenWeatherMap no se entiende demasiado bien con los nombres de ciudades en chin
 {class="font-semibold"}
 Manos a la obra: lista de comprobación de la app del tiempo
 
-#### 6. Cómo depurar las peticiones de red: imprimir, capturar el tráfico y simular red lenta
+6. Cómo depurar las peticiones de red: imprimir, capturar el tráfico y simular red lenta
 
 Cuando una app conectada falla, nueve de cada diez veces es porque «la petición no se envió bien» o «la respuesta no se interpretó bien». Tres herramientas de depuración:
 
 1. Imprimir los datos crudos: imprime String(data: data, encoding: .utf8) para ver el JSON original: nombres de campos y tipos a simple vista, diez veces más rápido que adivinar;
 2. Herramientas de captura: en Mac, el gratuito Proxyman / el de código abierto Charles interceptan todas las peticiones y respuestas de la app, como una radiografía de la capa de red;
-3. Simular red lenta: en el menú del simulador, Features → Network Link Conditioner (hay que descargar la herramienta de la web de desarrolladores), que simula 3G y latencia alta y delata esos problemas de experiencia de «dar vueltas cargando media vida».
+3. Simular red lenta: en el menú del simulador, Features → Network Link Conditioner (hay que descargar la herramienta de la web de desarrolladores), que simula 3G y latencia alta y delata esos problemas de experiencia de «dar vueltas cargando media vida»
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

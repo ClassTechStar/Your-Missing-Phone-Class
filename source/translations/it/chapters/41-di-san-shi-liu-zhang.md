@@ -2,12 +2,12 @@
 id: di-san-shi-liu-zhang
 num: 36
 part: er-tong-pian
-nav: Capitolo 36: Smartphone e casa intelligente — Rendi la casa più furba
+nav: Capitolo 36: Come collegare tutti i dispositivi di casa
 toc: default
 kind: chapter
 ---
 
-### Capitolo 36: Telefono e casa intelligente — rendi la casa smart
+### Capitolo 36: Come collegare tutti i dispositivi di casa
 
 {class="chapter-intro mb-4"}
 Il telefono può fare una cosa sempre più importante: diventare il «telecomando» dell'intera casa. Da una lampadina a una presa, da una serratura a un sensore, la casa intelligente sta passando da «giocattolo da smanettoni» a «dotazione di casa». Questo capitolo ti aiuta a fare chiarezza su protocolli, ecosistemi, hub e kit di partenza, e si chiude con una checklist di sicurezza per non farti mordere dallo «smart».

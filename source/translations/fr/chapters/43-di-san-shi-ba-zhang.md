@@ -10,9 +10,9 @@ kind: chapter
 ### Chapitre 38 : Les cinq grands principes de la programmation IA
 
 {class="chapter-intro mb-4"}
-Si ce livre ne devait vous faire retenir qu'un chapitre, ce serait celui-ci. Les cinq principes en sont le cœur ; tous les suivants — contexte, besoins, dialogue, qualité — les déploient dans diverses situations. Rassurez-vous : chacun est simple à comprendre, mais chacun mérite de s'ancrer dans vos réflexes au fil de plusieurs projets.
+Si ce livre ne devait vous faire retenir qu'un chapitre, ce serait celui-ci. Les cinq principes en sont le cœur ; tous les suivants, contexte, besoins, dialogue, qualité, les déploient dans diverses situations. Rassurez-vous : chacun est simple à comprendre, mais chacun mérite de s'ancrer dans vos réflexes au fil de plusieurs projets.
 
-L'histoire est amusante : en open-sourçant son projet, Andrej Karpathy a joint un fichier CLAUDE.md de seulement 70 lignes, résumant quatre principes de collaboration avec l'IA. Ce fichier a dépassé 70 000 stars sur GitHub et est devenu la référence la plus citée par les praticiens du monde entier. Ces principes ne sont pas des slogans, mais des habitudes de pensée opérationnelles nées de la pratique. Ce livre y ajoute un cinquième — l'itération-vérification — pour former un ensemble complet.
+L'histoire est amusante : en open-sourçant son projet, Andrej Karpathy a joint un fichier CLAUDE.md de seulement 70 lignes, résumant quatre principes de collaboration avec l'IA. Ce fichier a dépassé 70 000 stars sur GitHub et est devenu la référence la plus citée par les praticiens du monde entier. Ces principes ne sont pas des slogans, mais des habitudes de pensée opérationnelles nées de la pratique. Ce livre y ajoute un cinquième — l'itération-vérification, pour former un ensemble complet.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -24,7 +24,7 @@ Pourquoi un fichier de 70 lignes vaut-il tant ?
 
 #### I. Principe 1 : Think Before Coding (penser avant de coder)
 
-Le plus contre-intuitif des cinq. Si l'IA code pour nous, pourquoi encore penser d'abord ? Réponse simple : la qualité de la production de l'IA est proportionnelle à la qualité de votre entrée. Si vous n'avez pas clarifié ce que vous voulez, l'IA vous enfermera dans un cycle de corrections infinies — ce qu'on appelle « l'IA qui se perd avec vous ».
+Le plus contre-intuitif des cinq. Si l'IA code pour nous, pourquoi encore penser d'abord ? Réponse simple : la qualité de la production de l'IA est proportionnelle à la qualité de votre entrée. Si vous n'avez pas clarifié ce que vous voulez, l'IA vous enfermera dans un cycle de corrections infinies, ce qu'on appelle « l'IA qui se perd avec vous ».
 
 « Penser d'abord » signifie répondre à trois questions avant de donner une instruction : un « triangle de réflexion » dont aucun sommet ne peut manquer :
 
@@ -60,7 +60,7 @@ En pratique, quelques réflexes concrets :
 - Ne demandez qu'un point fonctionnel à la fois, pas tout le système d'un coup ;
 - Privilégiez la bibliothèque standard et les solutions simples plutôt que des dépendances complexes ;
 - Si 50 lignes suffisent, n'acceptez pas 500 ;
-- Quand la production dépasse le cadre, osez dire « coupez le superflu ».
+- Quand la production dépasse le cadre, osez dire « coupez le superflu »
 
 ::: div .overflow-x-auto
 ```html
@@ -71,13 +71,13 @@ En pratique, quelques réflexes concrets :
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Solutions excessives vs solutions simples selon les cas
 
-#### III. Principe 3 : Surgical Changes (modifications chirurgicales)
+III. Principe 3 : Surgical Changes (modifications chirurgicales)
 
 Quand vous itérez sur un projet existant, chaque modification doit être chirurgicale : ne toucher qu'à ce qu'il faut. Essentiel en programmation IA, car l'IA a tendance à « en profiter pour retoucher » : vous demandez de corriger un bug, elle restructure la moitié du fichier.
 
 Exigence centrale : préciser à chaque fois le périmètre et les limites. Dites « ne modifie que la fonction calculate_discount », « ne touche pas au reste », « garde le style de code actuel ». Si l'IA dépasse le cadre, demandez immédiatement d'annuler le superflu.
 
-Karpathy l'illustre avec un diff. Vous demandez d'ajouter une logique « prix membre » au calcul de remise du panier : une bonne production ne touche qu'à cette fonction et ajoute quelques lignes ; une mauvaise restructure tout le fichier — plus « élégant » peut-être, mais impossible de savoir si de nouveaux bugs sont apparus. En programmation IA, « ça a l'air mieux » ne justifie jamais de sortir du cadre.
+Karpathy l'illustre avec un diff. Vous demandez d'ajouter une logique « prix membre » au calcul de remise du panier : une bonne production ne touche qu'à cette fonction et ajoute quelques lignes ; une mauvaise restructure tout le fichier, plus « élégant » peut-être, mais impossible de savoir si de nouveaux bugs sont apparus. En programmation IA, « ça a l'air mieux » ne justifie jamais de sortir du cadre.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -97,11 +97,11 @@ Ne modifie que la fonction calculate_discount dans cart.py : 1. Ajoute une logiq
 :::
 :::
 
-#### IV. Principe 4 : Goal-Driven Execution (exécution pilotée par l'objectif)
+IV. Principe 4 : Goal-Driven Execution (exécution pilotée par l'objectif)
 
 Ce principe répond à une question clé : faut-il dire à l'IA « comment faire » ou « quoi faire » ? Karpathy choisit la seconde option. Plutôt que « crée une classe, puis ajoute des méthodes, puis écris des tests », dites « j'ai besoin d'un outil qui analyse un CSV et compte les valeurs uniques de chaque colonne ». L'IA choisit son chemin ; vous validez le résultat.
 
-L'avantage est double. L'IA gagne en autonomie et choisit la meilleure voie, libre de vos étapes intermédiaires ; vous passez du « comment » au « est-ce correct » — c'est exactement le travail du Conductor.
+L'avantage est double. L'IA gagne en autonomie et choisit la meilleure voie, libre de vos étapes intermédiaires ; vous passez du « comment » au « est-ce correct », c'est exactement le travail du Conductor.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -157,7 +157,7 @@ L'étape clé est le « retour précis ». Si la vérification échoue, ne dites
 <strong>Capacité de l'Agent = capacité du modèle × qualité du Harness</strong>
 :::
 
-La capacité du modèle est le plafond intellectuel du cerveau de l'IA ; le Harness est le « cadre de travail » autour du modèle — gestion du contexte, intégration d'outils, orchestration, mémoire, etc.
+La capacité du modèle est le plafond intellectuel du cerveau de l'IA ; le Harness est le « cadre de travail » autour du modèle, gestion du contexte, intégration d'outils, orchestration, mémoire, etc.
 
 Ce concept explique une confusion courante : pourquoi, avec le même GPT-4 ou Claude, certains réalisent des projets éblouissants et d'autres du code médiocre ? La différence n'est pas dans le modèle, mais dans le Harness. Un bon Harness comprend : un cahier des charges clair, une intégration d'outils cohérente, un contexte ordonné, un processus de validation complet. Le modèle fixe le plafond ; le Harness détermine jusqu'où vous l'exploitez.
 
@@ -176,7 +176,7 @@ Les chapitres suivants vous apprennent à construire un bon Harness : chapitre 3
 À vous de jouer : décomposez votre prochaine idée avec le « triangle de réflexion »
 
 {class="mt-1"}
-Choisissez une petite idée en attente (page compte à rebours, script de rappel d'hydratation). En 3 minutes : ① quel problème ? ② à quoi ça ressemble ? ③ quelles contraintes (temps, technique, environnement) ? Écrivez les réponses en un paragraphe. Bravo, vous venez de vivre votre premier « Think Before Coding » — ce paragraphe est déjà une instruction de qualité.
+Choisissez une petite idée en attente (page compte à rebours, script de rappel d'hydratation). En 3 minutes : ① quel problème ? ② à quoi ça ressemble ? ③ quelles contraintes (temps, technique, environnement) ? Écrivez les réponses en un paragraphe. Bravo, vous venez de vivre votre premier « Think Before Coding »: ce paragraphe est déjà une instruction de qualité.
 :::
 
 ::: div .chapter-summary
@@ -184,8 +184,8 @@ Choisissez une petite idée en attente (page compte à rebours, script de rappel
 Résumé du chapitre
 
 - Les cinq principes viennent du CLAUDE.md de 70 lignes de Karpathy (70K+ stars) ; ce livre ajoute le cinquième : l'itération-vérification
-- Think Before Coding : répondre aux trois questions — quoi faire ? quel résultat ? quelles contraintes ?
-- Simplicity First : le piège est de « faire trop » — pour un prix remisé, pas besoin d'un moteur e-commerce
+- Think Before Coding : répondre aux trois questions, quoi faire ? quel résultat ? quelles contraintes ?
+- Simplicity First : le piège est de « faire trop »: pour un prix remisé, pas besoin d'un moteur e-commerce
 - Surgical Changes : modifications chirurgicales, refuser le « j'en profite pour retoucher »
 - Goal-Driven Execution : dire « quoi », pas « comment », laisser l'IA choisir sa voie
 - Iterate and Verify : trois niveaux (fonctionnel/cas limites/architecture) + retours précis, en boucle

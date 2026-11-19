@@ -10,7 +10,7 @@ class: mb-12
 ## VII. Programmation par IA en pratique (chap. 37-47)
 
 {class="chapter-intro mb-4"}
-Si vous êtes arrivé jusqu'ici, vous êtes déjà un expert du téléphone. Ce volume fait un pas de plus : laisser l'IA écrire du code pour vous. En 2025, une phrase de Karpathy a lancé le mouvement Vibe Coding ; en 2026, la programmation IA est devenue l'Agentic Engineering : « donnez un objectif à l'IA, elle planifie, travaille et valide elle-même ». Onze chapitres, des cinq principes mentaux à l'ingénierie du contexte et des besoins, en passant par le choix des outils et des modèles, l'API des grands modèles, trois projets complets et un système d'assurance qualité — pour passer de « savoir utiliser l'IA » à « commander une armée d'IA ». Retenez : les outils changent tous les trois mois, la méthodologie évolue tous les trois ans. Ce volume vous enseigne la seconde.
+Si vous êtes arrivé jusqu'ici, vous êtes déjà un expert du téléphone. Ce volume fait un pas de plus : laisser l'IA écrire du code pour vous. En 2025, une phrase de Karpathy a lancé le mouvement Vibe Coding ; en 2026, la programmation IA est devenue l'Agentic Engineering : « donnez un objectif à l'IA, elle planifie, travaille et valide elle-même ». Onze chapitres, des cinq principes mentaux à l'ingénierie du contexte et des besoins, en passant par le choix des outils et des modèles, l'API des grands modèles, trois projets complets et un système d'assurance qualité, pour passer de « savoir utiliser l'IA » à « commander une armée d'IA ». Retenez : les outils changent tous les trois mois, la méthodologie évolue tous les trois ans. Ce volume vous enseigne la seconde.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

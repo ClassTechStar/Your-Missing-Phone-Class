@@ -10,7 +10,7 @@ class: mb-12
 ## Part IX: iOS Development in Practice (Chapters 59-69)
 
 {class="chapter-intro mb-4"}
-Attention Apple fans: from getting to know the iOS ecosystem and installing Xcode, through Swift and SwiftUI, to two complete projects and publishing on the App Store. Note one hard requirement — you need a Mac. Parts 8 and 9 share the same programming mindset, so finishing one makes the other much faster. After these 11 chapters, you'll be able to build real apps that live on hundreds of millions of iPhones.
+Attention Apple fans: from getting to know the iOS ecosystem and installing Xcode, through Swift and SwiftUI, to two complete projects and publishing on the App Store. Note one hard requirement, you need a Mac. Parts 8 and 9 share the same programming mindset, so finishing one makes the other much faster. After these 11 chapters, you'll be able to build real apps that live on hundreds of millions of iPhones.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

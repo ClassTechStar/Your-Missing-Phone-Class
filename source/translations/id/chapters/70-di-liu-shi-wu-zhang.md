@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 65: Proyek 1 — Buku Catatan Keuangan Saya (Versi Lokal)
 
 {class="chapter-intro mb-4"}
-Selamat datang di "proyek serius" pertamamu. Buku catatan keuangan ini meski tidak terhubung internet, isinya lengkap: bisa mencatat transaksi, melihat riwayat, merangkum per bulan, serta menghapus dan mengubah. Setelah menyelesaikannya, kamu telah melewati alur lengkap "data → logika → antarmuka". Jangan buru-buru menyalin kode — pikirkan dulu dengan jelas, baru mulai; itu prinsip kita selama ini.
+Selamat datang di "proyek serius" pertamamu. Buku catatan keuangan ini meski tidak terhubung internet, isinya lengkap: bisa mencatat transaksi, melihat riwayat, merangkum per bulan, serta menghapus dan mengubah. Setelah menyelesaikannya, kamu telah melewati alur lengkap "data → logika → antarmuka". Jangan buru-buru menyalin kode, pikirkan dulu dengan jelas, baru mulai; itu prinsip kita selama ini.
 
 #### 1. Memikirkan Kebutuhan: Tanya Dulu Lima Pertanyaan
 
@@ -23,11 +23,16 @@ Selamat datang di "proyek serius" pertamamu. Buku catatan keuangan ini meski tid
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Lima elemen kebutuhan buku catatan keuangan
 
-Lalu pecah menjadi langkah-langkah kecil yang "setiap langkahnya langsung bisa dipakai": ① bangun lapisan data SwiftData (bisa menyimpan satu transaksi); ② halaman daftar (bisa melihat riwayat); ③ popup entri (bisa menambah catatan); ④ hapus dan edit; ⑤ kartu ringkasan bulanan. Setiap langkah selesai, App selalu berupa "sesuatu yang bisa dipakai".
+Lalu pecah menjadi langkah-langkah kecil yang "setiap langkahnya langsung bisa dipakai":
+1. bangun lapisan data SwiftData (bisa menyimpan satu transaksi);
+2. halaman daftar (bisa melihat riwayat);
+3. popup entri (bisa menambah catatan);
+4. hapus dan edit;
+5. kartu ringkasan bulanan. Setiap langkah selesai, App selalu berupa "sesuatu yang bisa dipakai".
 
 #### 2. Lapisan Data: Memberi "Catatan" Sebuah Rumah
 
-Pertama, definisikan seperti apa satu transaksi — field cukup untuk kebutuhan, jangan serakah:
+Pertama, definisikan seperti apa satu transaksi: field cukup untuk kebutuhan, jangan serakah:
 
 ::: div .code-block
 :::inline div .code-head
@@ -74,7 +79,7 @@ Langsung membuat antarmuka mengoperasikan basis data? Bisa jalan, tapi kode anta
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Gambar 4: Struktur tiga lapis MVVM — data mengalir satu arah, tiap lapis tidak melampaui batasnya
+Gambar 4: Struktur tiga lapis MVVM, data mengalir satu arah, tiap lapis tidak melampaui batasnya
 :::
 
 ::: div .code-block
@@ -116,7 +121,7 @@ class RecordViewModel {
 ```
 :::
 
-Di antarmuka tulis @State private var vm = RecordViewModel(...), lalu langsung render daftar dari vm.records — begitu data berubah, antarmuka otomatis menyegarkan.
+Di antarmuka tulis @State private var vm = RecordViewModel(...), lalu langsung render daftar dari vm.records, begitu data berubah, antarmuka otomatis menyegarkan.
 
 #### 4. Antarmuka: Halaman Daftar + Popup Entri
 
@@ -167,12 +172,12 @@ Poin penting popup entri: keyboard kolom nominal memakai .keyboardType(.decimalP
 Perhatian: Jangan Malas Memvalidasi Input
 
 {class="mt-1"}
-Kolom nominal wajib divalidasi: nilai kosong, angka negatif, dan input tidak sah seperti "abc" semuanya harus ditahan (cek dengan Double(text); jika gagal mengembalikan nil). Salah satu penyebab paling umum App crash adalah "menganggap input pengguna anak yang penurut". Ingat: semua yang diketik pengguna harus diperiksa seperti musuh.
+Kolom nominal wajib divalidasi: nilai kosong, angka negatif, dan input tidak sah seperti "abc" semuanya harus ditahan cek dengan Double(text); jika gagal mengembalikan nil. Salah satu penyebab paling umum App crash adalah "menganggap input pengguna anak yang penurut". Ingat: semua yang diketik pengguna harus diperiksa seperti musuh.
 :::
 
 #### 5. Edit, Hapus, dan Ringkasan
 
-- Hapus: .onDelete pada List untuk hapus dengan geser ke kiri + popup konfirmasi (salah hapus adalah hal yang paling dibenci pengguna App pencatat keuangan);
+- Hapus: .onDelete pada List untuk hapus dengan geser ke kiri + popup konfirmasi ,(salah hapus adalah hal yang paling dibenci pengguna App pencatat keuangan);
 - Edit: ketuk baris untuk masuk popup edit dengan nilai lama sudah terisi (mengubah sedikit lebih hemat tenaga daripada mengetik ulang);
 - Ringkasan: pakai filter + reduce untuk menghitung "pemasukan / pengeluaran / saldo bulan ini", ditampilkan dalam kartu di bagian atas:
 
@@ -198,21 +203,21 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 ```
 :::
 
-#### 6. Penerimaan: Pemeriksaan Tiga Lapis + Dua Tantangan Lanjutan
+6. Penerimaan: Pemeriksaan Tiga Lapis + Dua Tantangan Lanjutan
 
 Setelah proyek selesai, lakukan penerimaan tiga lapis sesuai "fungsi → batas → arsitektur": bisa mencatat atau tidak, bisa menghapus atau tidak, apakah data tetap ada setelah App dimulai ulang (fungsi); apakah crash saat nominal diisi 0 atau negatif (batas); apakah antarmuka dan data tercampur, apakah ada field yang ditulis mati (arsitektur).
 
 Setelah versi dasar lolos penerimaan, beri dirimu dua "hidangan lanjutan":
 
-1. Statistik kategori: tambahkan tab "Statistik", gunakan Swift Charts untuk menggambar pengeluaran per kategori sebagai diagram lingkaran/batang — pustaka grafik resmi Apple, beberapa baris kode langsung jadi grafik;
-2. Sinkronisasi iCloud: mengaktifkan sinkronisasi iCloud di SwiftData hanya perlu beberapa pengaturan — buku catatan otomatis tersinkron antara iPhone/iPad, langsung terasa "canggih".
+1. Statistik kategori: tambahkan tab "Statistik", gunakan Swift Charts untuk menggambar pengeluaran per kategori sebagai diagram lingkaran/batang, pustaka grafik resmi Apple, beberapa baris kode langsung jadi grafik;
+2. Sinkronisasi iCloud: mengaktifkan sinkronisasi iCloud di SwiftData hanya perlu beberapa pengaturan, buku catatan otomatis tersinkron antara iPhone/iPad, langsung terasa "canggih".
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Selesaikan Minggu Ini
 
 {class="mt-1"}
-Bekerjalah mengikuti urutan "lapisan data → ViewModel → halaman daftar → popup entri → kartu ringkasan", satu langkah per hari. Kalau macet, tempelkan pesan error apa adanya ke mesin pencari atau AI (masih ingat Bagian 7 "Praktik Pemrograman dengan AI"? Saat mendeskripsikan masalah, jelaskan dengan jelas "perilaku yang diharapkan, perilaku yang terjadi, langkah reproduksi"). Setelah selesai, pakai untuk mencatat keuangan selama satu minggu — memakai App buatan sendiri memberi rasa pencapaian yang mendorongmu terus berjalan.
+Bekerjalah mengikuti urutan "lapisan data → ViewModel → halaman daftar → popup entri → kartu ringkasan", satu langkah per hari. Kalau macet. tempelkan pesan error apa adanya ke mesin pencari atau AI (masih ingat Bagian 7 "Praktik Pemrograman dengan AI"? Saat mendeskripsikan masalah, jelaskan dengan jelas "perilaku yang diharapkan, perilaku yang terjadi, langkah reproduksi"). Setelah selesai, pakai untuk mencatat keuangan selama satu minggu, memakai App buatan sendiri memberi rasa pencapaian yang mendorongmu terus berjalan.
 :::
 
 ::: div .chapter-summary

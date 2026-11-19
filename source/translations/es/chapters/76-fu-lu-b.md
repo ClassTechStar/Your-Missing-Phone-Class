@@ -1,13 +1,13 @@
 ---
 id: fu-lu-b
 num: B
-nav: BQi2
+nav: Apéndice B: ¿Te has quedado atascado con un ejercicio?
 toc: default
 kind: appendix
 after_part: fu-lu
 ---
 
-### Apéndice B: Referencia de ejercicios prácticos
+### Apéndice B: ¿Te has quedado atascado con un ejercicio?
 
 - <strong>Nueva estándar de Carga inalámbrica</strong> Carga inalámbrica con alineacion magnetica, tipo MagSafe; más comoda para cargar.
 - <strong>eSIM</strong> SIM incrustada

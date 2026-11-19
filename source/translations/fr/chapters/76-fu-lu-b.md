@@ -1,13 +1,13 @@
 ---
 id: fu-lu-b
 num: B
-nav: BAnnexe B : Petit guide d'exercices pratiques
+nav: Annexe B : Bloqué sur un exercice ?
 toc: default
 kind: appendix
 after_part: fu-lu
 ---
 
-### Annexe B : Petit guide d'exercices pratiques
+### Annexe B : Bloqué sur un exercice ?
 
 - <strong>Exercices de base</strong>:Nettoyez le stockage du smartphone : trouvez et supprimez les vieilles vidéos « oubliées », les captures d’écran en double et les applis inutilisées depuis longtemps.
 - <strong>Exercices logiciels</strong>:Configurez le nettoyage de stockage WeChat, le chemin est généralement [Moi] - [Paramètres] - [Général] - [Espace de stockage].

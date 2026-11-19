@@ -48,7 +48,7 @@ El teléfono establece conexión directa con satélites de comunicaciones en ór
 La comunicación por satélite requiere una antena de hardware especial en el teléfono; no todos los teléfonos la admiten. Además, suele requerir una suscripción de pago, aunque la función de emergencia suele ser gratuita.
 :::
 
-#### II. Comunicación sin red: una nueva forma de comunicación a corta distancia
+II. Comunicación sin red: una nueva forma de comunicación a corta distancia
 
 La "comunicación sin red" se refiere a la tecnología que permite que dos teléfonos se comúniquen directamente sin red móvil ni Wi-Fi.
 
@@ -68,13 +68,13 @@ Usa Bluetooth o frecuencias de radio dedicadas para establecer una conexión pun
 - <strong>Huawei</strong>: la App Canghai admite llamadas sin red.
 - <strong>Xiaomi</strong>: algunas funciones del Xiaomi Miaoxiang Center.
 
-#### III. Detección de accidentes de tráfico: salvar vidas en el momento crítico
+III. Detección de accidentes de tráfico: salvar vidas en el momento crítico
 
 La detección de accidentes usa los sensores del teléfono para detectar accidentes graves y llamar automáticamente al teléfono de emergencia.
 
 ##### Principio de funcionamiento:
 
-El teléfono combina varios sensores —acelerómetro, giroscopio, barómetro, micrófono— para determinar si se ha producido una colisión grave. Al detectar un accidente, el teléfono:
+El teléfono combina varios sensores,acelerómetro, giroscopio, barómetro, micrófono, para determinar si se ha producido una colisión grave. Al detectar un accidente, el teléfono:
 
 1. Muestra una cuenta atrás y pregunta si estás bien.
 2. Si no respondes cuando termina la cuenta atrás, llama automáticamente al teléfono de emergencia.
@@ -91,7 +91,7 @@ El teléfono combina varios sensores —acelerómetro, giroscopio, barómetro, m
 - Puede dispararse por error (por ejemplo, en montañas rusas o deportes intensos); basta con cancelarlo a tiempo.
 - Depende de sensores y algoritmos; no es 100 % fiable, pero añade una capa más de protección.
 
-#### IV. Tecnología SparkLink: la conexión inalámbrica de nueva generación
+IV. Tecnología SparkLink: la conexión inalámbrica de nueva generación
 
 SparkLink (Xingling) es una tecnología de comunicación inalámbrica de nueva generación impulsada por Huawei, con el objetivo de sustituir a Bluetooth y Wi-Fi en determinados escenarios. Supera a las soluciiones actuales en indicadores clave: la velocidad de transmisión puede alcanzar 900 Mbps (muy por encima de los 50 Mbps de Bluetooth), la latencia es de solo 20μs (Bluetooth, unos 15 ms) y una sola red admite 4096 dispositivos conectados simultáneamente (Bluetooth, normalmente menos de 8).
 

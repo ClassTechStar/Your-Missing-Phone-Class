@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 50: Kotlin a guida rapida — il primo linguaggio dello sviluppo Android
 
 {class="chapter-intro mb-4"}
-In questo capitolo iniziamo davvero con il linguaggio. Niente ansia — Kotlin è famoso per essere «amichevole con i principianti», e non devi imparare a memoria la grammatica: padroneggiando il 20% della sintassi capisci e scrivi l'80% del codice di ogni giorno. Il resto lo cercherai man mano che fai i progetti. Ricorda il nostro principio di studio: capire > memorizzare, saper usare > essere perfetti.
+In questo capitolo iniziamo davvero con il linguaggio. Niente ansia, Kotlin è famoso per essere «amichevole con i principianti», e non devi imparare a memoria la grammatica: padroneggiando il 20% della sintassi capisci e scrivi l'80% del codice di ogni giorno. Il resto lo cercherai man mano che fai i progetti. Ricorda il nostro principio di studio: capire > memorizzare, saper usare > essere perfetti.
 
 #### 1. Variabili e tipi: dare un nome ai dati
 
@@ -49,12 +49,12 @@ I tipi base più usati di Kotlin
 Consiglio: il principio «val prima di tutto»
 
 {class="mt-1"}
-La regola d'oro della community Kotlin: per impostazione predefinita usa val, e var solo se serve davvero. Se usi var dove basterebbe val, l'IDE ti segnala in giallo. Questa abitudine ti risparmia tutta una famiglia di bug «variabile modificata per sbaglio» — meno cose cambiano nel codice, più è facile ragionarci.
+La regola d'oro della community Kotlin: per impostazione predefinita usa val, e var solo se serve davvero. Se usi var dove basterebbe val, l'IDE ti segnala in giallo. Questa abitudine ti risparmia tutta una famiglia di bug «variabile modificata per sbaglio», meno cose cambiano nel codice, più è facile ragionarci.
 :::
 
 #### 2. Le funzioni: la logica impacchettata in «pulsanti»
 
-Una funzione è un pezzo di logica con un nome, come un pulsante del telecomando — lo premi (la chiami) e parte una serie di azioni. In Kotlin si dichiara con fun:
+Una funzione è un pezzo di logica con un nome, come un pulsante del telecomando, lo premi (la chiami) e parte una serie di azioni. In Kotlin si dichiara con fun:
 
 ::: div .code-block
 :::inline div .code-head
@@ -75,7 +75,7 @@ println(add(3, 5))            // stampa: 8
 ```
 :::
 
-Qualche punto chiave: i parametri vanno tra parentesi (prima il nome, poi il tipo, separati dai due punti); il tipo di ritorno va dopo le parentesi; il template di stringa $nomeVariabile è la comodità di punta di Kotlin — niente più incastri alla Java tra «stringa + variabile».
+Qualche punto chiave: i parametri vanno tra parentesi (prima il nome, poi il tipo, separati dai due punti); il tipo di ritorno va dopo le parentesi; il template di stringa $nomeVariabile è la comodità di punta di Kotlin: niente più incastri alla Java tra «stringa + variabile».
 
 #### 3. Condizioni e cicli: far «pensare» il programma
 
@@ -115,7 +115,7 @@ when è la costruzione a più rami più usata in Kotlin: nello sviluppo Android 
 
 #### 4. La null safety: l'«amuleto salvavita» di Kotlin
 
-Il bug più celebre dell'era Java si chiama NullPointerException (eccezione di puntatore nullo) — il programma tocca qualcosa che «non c'è» e va subito in crash. Secondo le statistiche è da sempre primo nella classifica dei crash di Android. Kotlin lo risolve a livello di linguaggio: per impostazione predefinita i valori nulli non sono ammessi.
+Il bug più celebre dell'era Java si chiama NullPointerException (eccezione di puntatore nullo). Il programma tocca qualcosa che «non c'è» e va subito in crash. Secondo le statistiche è da sempre primo nella classifica dei crash di Android. Kotlin lo risolve a livello di linguaggio: per impostazione predefinita i valori nulli non sono ammessi.
 
 ::: div .code-block
 :::inline div .code-head
@@ -146,7 +146,7 @@ String? significa «può essere nullo», a ?: b significa «se a è nullo usa b�
 
 #### 5. Classi e oggetti: gli stampi per fabbricare «pezzi»
 
-La classe è lo «stampo» degli oggetti, l'oggetto è il «prodotto finito» della classe. In Android tutto — schermate, pulsanti, dati — è un oggetto. In Kotlin c'è un'arma segreta chiamata data class (classe di dati), fatta apposta per «contenere dati»: una riga vale decine di righe di Java:
+La classe è lo «stampo» degli oggetti, l'oggetto è il «prodotto finito» della classe. In Android tutto — schermate, pulsanti, dati, è un oggetto. In Kotlin c'è un'arma segreta chiamata data class (classe di dati), fatta apposta per «contenere dati»: una riga vale decine di righe di Java:
 
 ::: div .code-block
 :::inline div .code-head
@@ -172,9 +172,9 @@ val twin = me.copy(name = "Marco Rossi")   // copia e cambia un campo
 
 Quando farai il registro delle spese, ogni voce sarà una data class: data class Record(val amount: Double, val category: String, val date: String). Visto? Sei già capace di scrivere la struttura di codice di un progetto vero.
 
-#### 6. Lambda e funzioni di ordine superiore: lo «zucchero sintattico» di Kotlin
+6. Lambda e funzioni di ordine superiore: lo «zucchero sintattico» di Kotlin
 
-Nel codice Android vedrai ogni giorno «funzioni senza nome» come { ... }: si chiamano lambda (funzioni anonime). onClick = { count++ } su un Button è una lambda — impacchetta «cosa fare al tocco» in un blocco e lo consegna al pulsante.
+Nel codice Android vedrai ogni giorno «funzioni senza nome» come { ... }: si chiamano lambda (funzioni anonime). onClick = { count++ } su un Button è una lambda, impacchetta «cosa fare al tocco» in un blocco e lo consegna al pulsante.
 
 ::: div .code-block
 :::inline div .code-head

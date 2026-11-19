@@ -10,7 +10,7 @@ class: mb-12
 ## 8. Bahagian Amali Pembangunan Android (Bab 48-58)
 
 {class="chapter-intro mb-4"}
-Bahagian ketujuh telah mengajar anda mengarahkan AI menulis kod; bahagian ini kita menurunkan kemahiran itu ke Android: daripada mengenali Android dan memasang Android Studio, kepada Kotlin dan Jetpack Compose, seterusnya dua projek lengkap dan pelancaran di Google Play. Sepanjang perjalanan tidak perlu Mac — Windows sahaja sudah boleh. Selepas menghabiskan 11 bab, anda mampu menghasilkan App sebenar yang terpasang dalam telefon 300 juta orang.
+Bahagian ketujuh telah mengajar anda mengarahkan AI menulis kod; bahagian ini kita menurunkan kemahiran itu ke Android: daripada mengenali Android dan memasang Android Studio, kepada Kotlin dan Jetpack Compose, seterusnya dua projek lengkap dan pelancaran di Google Play. Sepanjang perjalanan tidak perlu Mac, Windows sahaja sudah boleh. Selepas menghabiskan 11 bab, anda mampu menghasilkan App sebenar yang terpasang dalam telefon 300 juta orang.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

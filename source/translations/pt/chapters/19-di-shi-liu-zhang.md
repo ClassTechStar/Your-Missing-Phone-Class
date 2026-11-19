@@ -2,17 +2,17 @@
 id: di-shi-liu-zhang
 num: 16
 part: jin-jie-pian
-nav: Capítulo 16: Contas e serviços em nuvem
+nav: Capítulo 16: Ao trocar de celular, quais contas você perde?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 16: Sistema de contas e serviços em nuvem
+### Capítulo 16: Ao trocar de celular, quais contas você perde?
 
 {class="chapter-intro mb-4"}
 Um amigo meu teve o celular roubado no ano passado. A primeira coisa que ele pensou não foi "quanto custa o celular", mas sim "ainda consigo recuperar minhas fotos?". Infelizmente, ele não havia ativado o backup em nuvem. O celular é um bem material, mas os dados na sua conta são coisas que, uma vez perdidas, nunca mais voltam. Neste capítulo, vamos conversar sobre como fazer um verdadeiro seguro para sua vida digital.
 
-#### I. Sua conta do celular: quantas coisas ela realmente gerencia?
+I. Sua conta do celular: quantas coisas ela realmente gerencia?
 
 Muita gente acha que a conta serve só para baixar apps. Na verdade, uma conta de celular está vinculada a muito mais coisas do que você imagina:
 
@@ -26,9 +26,9 @@ Se você usa iPhone, tudo isso está vinculado ao seu Apple ID. Se usa Android, 
 
 #### II. Três coisas obrigatórias: faça agora
 
-1. <strong>Ative a autenticação de dois fatores</strong>: Seja você usuário de Apple ou Android, a primeira coisa a fazer é ir nas configurações da conta e ativar a "Autenticação de dois fatores" ou "Verificação em duas etapas". É como colocar uma fechadura extra na sua porta — só a senha não basta, é preciso que seu telefone receba um código de verificação. Mesmo que alguém adivinhe sua senha online, sem seu telefone, não conseguirá entrar.
-2. <strong>Vincule um método de recuperação confiável</strong>: A autenticação de dois fatores é muito segura, mas tem um risco — e se você perder seu próprio telefone? Por isso o sistema solicita que você configure uma "Chave de recuperação" ou "E-mail/telefone de backup". Esta é a única forma de recuperar sua conta em uma emergência. É melhor anotar em papel, não guardar no celular.
-3. <strong>Confirme que o "Buscar celular" está ativado</strong>: Esta função, depois que o celular é perdido, ajuda a localizar, bloquear, emitir som e até apagar remotamente todos os dados. É a última linha de defesa. Muita gente pula essa etapa ao comprar o celular, e quando precisa, descobre que não estava ativado — aí é tarde demais.
+1. <strong>Ative a autenticação de dois fatores</strong>: Seja você usuário de Apple ou Android, a primeira coisa a fazer é ir nas configurações da conta e ativar a "Autenticação de dois fatores" ou "Verificação em duas etapas". É como colocar uma fechadura extra na sua porta: só a senha não basta, é preciso que seu telefone receba um código de verificação. Mesmo que alguém adivinhe sua senha online, sem seu telefone, não conseguirá entrar.
+2. <strong>Vincule um método de recuperação confiável</strong>: A autenticação de dois fatores é muito segura, mas tem um risco, e se você perder seu próprio telefone? Por isso o sistema solicita que você configure uma "Chave de recuperação" ou "E-mail/telefone de backup". Esta é a única forma de recuperar sua conta em uma emergência. É melhor anotar em papel, não guardar no celular.
+3. <strong>Confirme que o "Buscar celular" está ativado</strong>: Esta função, depois que o celular é perdido, ajuda a localizar, bloquear, emitir som e até apagar remotamente todos os dados. É a última linha de defesa. Muita gente pula essa etapa ao comprar o celular, e quando precisa, descobre que não estava ativado, aí é tarde demais.
 
 #### III. iCloud: o "ar" dos usuários Apple
 
@@ -40,7 +40,7 @@ A Apple oferece 5GB grátis. Sinceramente, esses 5GB não são suficientes nem p
 - <strong>Fazer upgrade</strong>: 50GB por R$ 3,50/mês, 200GB por R$ 10,90/mês. Pessoalmente, acho que 50GB é suficiente para a maioria das pessoas, principalmente para backup e miniaturas de fotos.
 - <strong>Solução alternativa</strong>: Se não quiser pagar, exporte as fotos periodicamente para o computador e desative a sincronização de fotos do iCloud. Mas, nesse caso, você perde a conveniência do backup automático de fotos.
 
-Um lembrete importante: a Fototeca do iCloud não é um "drive em nuvem" — é uma "sincronização". Se você excluir uma foto do celular, ela também será excluída do iCloud. Se o que você quer é "fazer backup na nuvem e depois liberar espaço no celular", a Fototeca do iCloud não é o que você precisa. Você precisa do Backup do iCloud ou de um drive em nuvem de terceiros.
+Um lembrete importante: a Fototeca do iCloud não é um "drive em nuvem", é uma "sincronização". Se você excluir uma foto do celular, ela também será excluída do iCloud. Se o que você quer é "fazer backup na nuvem e depois liberar espaço no celular", a Fototeca do iCloud não é o que você precisa. Você precisa do Backup do iCloud ou de um drive em nuvem de terceiros.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -71,14 +71,14 @@ No final de 2022, a Apple lançou a <strong>Proteção Avançada de Dados do iCl
 - <strong>Observações</strong>: ①Após ativar, guarde a chave de recuperação com muito cuidado, caso contrário os dados não poderão ser recuperados em caso de perda da conta; ②Alguns recursos como álbuns compartilhados e biblioteca compartilhada do iCloud não participam da E2EE; ③Apple ID da China continental ainda não suporta ADP, sendo necessário trocar para conta de outra região.
 
 {class="mt-1"}
-Resumo em uma frase: Se sua conta contém dados privados importantes e a região da conta suporta, é altamente recomendável ativar o ADP — esta é a proteção de dados em nuvem mais forte que uma pessoa comum pode obter.
+Resumo em uma frase: Se sua conta contém dados privados importantes e a região da conta suporta, é altamente recomendável ativar o ADP, esta é a proteção de dados em nuvem mais forte que uma pessoa comum pode obter.
 :::
 
 #### IV. Sincronização e backup: não confunda
 
 Essas duas palavras soam parecidas, mas as consequências são completamente diferentes:
 
-- <strong>Sincronização</strong> é bidirecional: você exclui no celular, exclui na nuvem; você exclui na nuvem, exclui no celular. Fotos do iCloud, Contatos, Notas — tudo isso é sincronização. A vantagem é a consistência entre dispositivos; a desvantagem é que "se excluiu, desapareceu mesmo".
+- <strong>Sincronização</strong> é bidirecional: você exclui no celular, exclui na nuvem; você exclui na nuvem, exclui no celular. Fotos do iCloud, Contatos, Notas: tudo isso é sincronização. A vantagem é a consistência entre dispositivos; a desvantagem é que "se excluiu, desapareceu mesmo".
 - <strong>Backup</strong> é unidirecional: o celular tira um "instantâneo" do estado atual e o armazena na nuvem. Depois, se você excluir algo no celular, aquilo ainda estará no backup da nuvem. O Backup do iCloud e o backup local no computador são backups. A vantagem é que os dados ficam mais seguros; a desvantagem é que ocupa espaço e não é atualizado em tempo real.
 
 #### V. A matriz de contas dos usuários Android
@@ -87,11 +87,11 @@ No lado Android, a situação é mais complexa que na Apple, porque seus dados p
 
 - <strong>Conta da marca</strong> (Huawei/Xiaomi/OPPO/vivo): Gerencia seu espaço em nuvem, busca de celular, loja de aplicativos, carteira. Cada marca tem seu próprio serviço de nuvem, geralmente no modelo básico grátis + expansão paga.
 - <strong>Conta Google</strong>: Se você usa Gmail, Google Fotos, Google Contatos, tudo isso está na conta Google. O Google oferece 15GB grátis, mais generoso que a Apple, mas é compartilhado com Gmail e Drive.
-- <strong>WeChat/QQ</strong>: São independentes do sistema do celular. Seu histórico de conversas e favoritos do WeChat não estão na conta da marca nem na conta Google — estão apenas nos servidores do próprio WeChat.
+- <strong>WeChat/QQ</strong>: São independentes do sistema do celular. Seu histórico de conversas e favoritos do WeChat não estão na conta da marca nem na conta Google, estão apenas nos servidores do próprio WeChat.
 
 Portanto, ao fazer backup no Android, é preciso verificar separadamente: backup em nuvem da marca, backup do Google e backup do histórico de conversas do WeChat. Nenhum dos três pode faltar.
 
-#### VI. Compartilhamento familiar: faça sua família também se beneficiar
+VI. Compartilhamento familiar: faça sua família também se beneficiar
 
 O "Compartilhamento Familiar" da Apple permite que você e sua família compartilhem compras de apps, músicas, filmes, espaço do iCloud e também a localização. Até 6 pessoas podem ser adicionadas. Configuração: Ajustes > Seu nome > Compartilhamento Familiar. Huawei e Xiaomi também têm funções semelhantes, que podem ser encontradas nas configurações da conta como "Compartilhamento familiar" ou "Nuvem familiar".
 

@@ -10,9 +10,9 @@ kind: chapter
 ### Bab 53: Penyimpanan Data dan Permintaan Rangkaian
 
 {class="chapter-intro mb-4"}
-Aplikasi yang hanya boleh 'dilihat' ialah aplikasi mati; aplikasi yang boleh menyimpan data dan menyambung rangkaian barulah hidup. Bab ini memperkenalkan 'set tiga' lapisan data Android: DataStore (menyimpan konfigurasi kecil), Room (menyimpan data berstruktur), Retrofit (berbual dengan pelayan), ditambah 'penyelaras utama' mereka — korutin. Selepas bab ini, anda boleh menulis aplikasi sebenar yang mengingati tabiat pengguna dan mengemas kini kandungan secara masa nyata.
+Aplikasi yang hanya boleh 'dilihat' ialah aplikasi mati; aplikasi yang boleh menyimpan data dan menyambung rangkaian barulah hidup. Bab ini memperkenalkan 'set tiga' lapisan data Android: DataStore (menyimpan konfigurasi kecil), Room (menyimpan data berstruktur), Retrofit (berbual dengan pelayan), ditambah 'penyelaras utama' mereka: korutin. Selepas bab ini, anda boleh menulis aplikasi sebenar yang mengingati tabiat pengguna dan mengemas kini kandungan secara masa nyata.
 
-#### 1. Macam Mana Memilih Penyelesaian Penyimpanan: Lihat Jadual Ini Dahulu
+1. Macam Mana Memilih Penyelesaian Penyimpanan: Lihat Jadual Ini Dahulu
 
 ::: div .overflow-x-auto
 ```html
@@ -54,7 +54,7 @@ Perhatikan yang dipulangkan ialah Flow — satu aliran data yang 'mengalir'. Seb
 
 #### 3. Room: Memberi Data 'Rumah Sebenar'
 
-Buku perakaunan ada ratusan hingga ribuan rekod, malah perlu pertanyaan dan statistik mengikut kategori dan bulan — ini memerlukan pangkalan data. Room ialah pembungkus rasmi SQLite, menjadikan 'membina jadual, membuat pertanyaan data' semula jadi seperti menulis Kotlin. Tiga benda:
+Buku perakaunan ada ratusan hingga ribuan rekod, malah perlu pertanyaan dan statistik mengikut kategori dan bulan, ini memerlukan pangkalan data. Room ialah pembungkus rasmi SQLite, menjadikan 'membina jadual, membuat pertanyaan data' semula jadi seperti menulis Kotlin. Tiga benda:
 
 ::: div .code-block
 :::inline div .code-head
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-Templat 'set tiga' ini boleh dipindahkan terus ke mana-mana projek anda — tukar nama medan sahaja. Pertanyaan memulangkan Flow, antara muka segar semula mengikut data secara automatik; nikmatnya tidak terkata.
+Templat 'set tiga' ini boleh dipindahkan terus ke mana-mana projek anda, tukar nama medan sahaja. Pertanyaan memulangkan Flow, antara muka segar semula mengikut data secara automatik; nikmatnya tidak terkata.
 
 #### 4. Retrofit: Berbual dengan Pelayan
 
@@ -131,12 +131,12 @@ val result = api.getWeather("Beijing")
 Amaran Perangkap: Dua Hukum Besi Rangkaian
 
 {class="mt-1"}
-① Permintaan rangkaian sama sekali tidak boleh dibuat pada utas utama — akan menyekat antara muka malah meranap (NetworkOnMainThreadException). Semua panggilan rangkaian mesti diletakkan dalam korutin (viewModelScope.launch). ② HTTP berjelas dilarang secara lalai: mulai Android 9, HTTPS diwajibkan. Semasa menguji jika perlu guna alamat tempatan http://, perlu mengisytiharkan usesCleartextTraffic secara jelas dalam Manifest — tetapi produk sebenar mesti sepenuhnya HTTPS.
+① Permintaan rangkaian sama sekali tidak boleh dibuat pada utas utama, akan menyekat antara muka malah meranap (NetworkOnMainThreadException). Semua panggilan rangkaian mesti diletakkan dalam korutin (viewModelScope.launch). ② HTTP berjelas dilarang secara lalai: mulai Android 9, HTTPS diwajibkan. Semasa menguji jika perlu guna alamat tempatan http://, perlu mengisytiharkan usesCleartextTraffic secara jelas dalam Manifest, tetapi produk sebenar mesti sepenuhnya HTTPS.
 :::
 
 #### 5. Penghuraian JSON: 'Menterjemah' Data Rangkaian
 
-Data yang dipulangkan pelayan kebanyakannya JSON — rentetan teks seperti 'kamus tersarang'. Retrofit memerlukan seorang 'penterjemah' untuk menukarkannya kepada objek Kotlin. Dua penyelesaian arus perdana 2026:
+Data yang dipulangkan pelayan kebanyakannya JSON: rentetan teks seperti 'kamus tersarang'. Retrofit memerlukan seorang 'penterjemah' untuk menukarkannya kepada objek Kotlin. Dua penyelesaian arus perdana 2026:
 
 ::: div .overflow-x-auto
 ```html
@@ -166,11 +166,11 @@ data class WeatherResponse(
 ```
 :::
 
-Apa pun penyelesaiannya, hukum besinya ialah: lihat dahulu JSON sebenar yang dipulangkan, barulah takrifkan medan. Banyak pepijat 'penghuraian gagal' berpunca daripada nama medan tersilap atau tahap penyarangan tersalah jangka — cetak JSON mentah dan bandingkan; sepuluh saat dapat dikesan.
+Apa pun penyelesaiannya, hukum besinya ialah: lihat dahulu JSON sebenar yang dipulangkan, barulah takrifkan medan. Banyak pepijat 'penghuraian gagal' berpunca daripada nama medan tersilap atau tahap penyarangan tersalah jangka: cetak JSON mentah dan bandingkan; sepuluh saat dapat dikesan.
 
 #### 6. Korutin: 'Bahasa Perantaraan' Keserentakan Android
 
-suspend dan launch yang berulang di atas datang daripada korutin Kotlin (Coroutine) — penyelesaian keserentakan rasmi Android. Anda boleh memahaminya secara kasar: memastikan operasi yang 'perlu menunggu sebentar' (rangkaian, pangkalan data) tidak menyekat antara muka.
+suspend dan launch yang berulang di atas datang daripada korutin Kotlin (Coroutine): penyelesaian keserentakan rasmi Android. Anda boleh memahaminya secara kasar: memastikan operasi yang 'perlu menunggu sebentar' (rangkaian, pangkalan data) tidak menyekat antara muka.
 
 ::: div .code-block
 :::inline div .code-head
@@ -198,7 +198,7 @@ Untuk yang sifar asas, cukup ingat cara guna dahulu; prinsip 'gantung dan sambun
 Mari cuba: Buat Aplikasi Kecil 'Satu Ayat Sehari'
 
 {class="mt-1"}
-Cari satu API petikan percuma (contohnya hitokoto dan seumpamanya), guna Retrofit untuk menarik 'satu ayat sehari', paparkan di tengah skrin, tambah butang 'Tukar ayat' (minta semula dalam korutin). Kemudian simpan ayat yang digemari ke dalam 'kegemaran' dengan Room. Latihan ini menggunakan DataStore/Room/Retrofit/korutin semuanya sekali habis — selepas menyiapkannya, Bab 7 dan 8 cuma makanan ringan.
+Cari satu API petikan percuma (contohnya hitokoto dan seumpamanya), guna Retrofit untuk menarik 'satu ayat sehari', paparkan di tengah skrin, tambah butang 'Tukar ayat' (minta semula dalam korutin). Kemudian simpan ayat yang digemari ke dalam 'kegemaran' dengan Room. Latihan ini menggunakan DataStore/Room/Retrofit/korutin semuanya sekali habis, selepas menyiapkannya, Bab 7 dan 8 cuma makanan ringan.
 :::
 
 ::: div .chapter-summary

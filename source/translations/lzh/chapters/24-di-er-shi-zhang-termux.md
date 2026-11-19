@@ -21,7 +21,7 @@ Termux之核心優勢在於輕量化與高度可擴展性，適於開發、學�
 
 ##### 完整之Linux環境
 
-Termux<strong>僅內置Bash</strong>此一種Shell。若欲使用Zsh或fish等其他Shell，須通過包管理器手動安裝，例如：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>或<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。同時Termux支持Vim、Nano、Emacs等編輯器，提供接近原生之命令行體驗。用戶可通過"pkg install"安裝2000+軟件包，包括GCC、OpenSSH、SQLMap等開發與安全工具。
+Termux<strong>僅內置Bash</strong>此一種Shell。若欲使用Zsh或fish等其他Shell，須通過包管理器手動安裝，例如：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>或<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。同時Termux支持Vim、Nano、Emacs等編輯器，提供接近原生之命令行體驗，用戶可通過"pkg install"安裝2000+軟件包，包括GCC、OpenSSH、SQLMap等開發與安全工具。
 
 ##### 強大之包管理
 

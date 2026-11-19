@@ -12,9 +12,9 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Congratulazioni: aprendo questo libro ti trovi al centro di una rivoluzione professionale. Il punto di partenza è una frase pubblicata sui social da un programmatore nel 2025. Sembra drammatico? Ma è andata proprio così.
 
-#### 1. La nascita del Vibe Coding: un movimento nato da una frase
+1. La nascita del Vibe Coding: un movimento nato da una frase
 
-Nel febbraio 2025 Andrej Karpathy — ricorda questo nome, lo incontrerai ancora — pubblicò un tweet poi citato innumerevoli volte: «C'è un nuovo modo di programmare che chiamo Vibe Coding: vai completamente a sensazione (vibes), ignora i dettagli del codice e lascia che l'AI faccia tutto. Dici quello che vedi, copi e incolli, basta che funzioni.»
+Nel febbraio 2025 Andrej Karpathy: ricorda questo nome, lo incontrerai ancora, pubblicò un tweet poi citato innumerevoli volte: «C'è un nuovo modo di programmare che chiamo Vibe Coding: vai completamente a sensazione (vibes), ignora i dettagli del codice e lascia che l'AI faccia tutto. Dici quello che vedi, copi e incolli, basta che funzioni.»
 
 Quella frase apparentemente casuale diede in realtà un nome preciso a un cambiamento di paradigma già in corso: gli umani non scrivono più codice riga per riga, ma descrivono l'intenzione in linguaggio naturale e l'AI realizza l'implementazione. Il tono di Karpathy era scherzoso, ma l'intuizione era profonda: quando la capacità di generazione del codice da parte dell'AI supera una certa soglia, il collo di bottiglia non è più «riesco a scrivere questa riga?», ma «riesco a pensare con chiarezza cosa voglio?».
 
@@ -32,7 +32,7 @@ Il termine Vibe Coding passò rapidamente da scherzo a concetto ingegneristico s
 
 #### 2. Stato dell'arte nel 2026: l'era dell'Agentic Engineering
 
-Ad agosto 2026 la programmazione AI aveva già attraversato diverse iterazioni di paradigma. Il Vibe Coding fu la prima scintilla, ma presto ci si rese conto che «parlare a sensazione» con l'AI produceva codice di qualità instabile — a volte brillante, a volte disastroso. Il paradigma evolse: dalla semplice programmazione conversazionale all'ingegneria strutturata degli Agent.
+Ad agosto 2026 la programmazione AI aveva già attraversato diverse iterazioni di paradigma. Il Vibe Coding fu la prima scintilla, ma presto ci si rese conto che «parlare a sensazione» con l'AI produceva codice di qualità instabile, a volte brillante, a volte disastroso. Il paradigma evolse: dalla semplice programmazione conversazionale all'ingegneria strutturata degli Agent.
 
 Ancora Karpathy, all'inizio del 2026, propose il concetto di Agentic Engineering. A differenza del Vibe Coding «dimmi e genero», l'Agentic Engineering sottolinea: dai un obiettivo all'AI, lascia che pianifichi i passaggi, chiami strumenti, verifichi i risultati e iteri le correzioni. L'AI non è più un semplice generatore di codice, ma un agente che percepisce l'ambiente, prende decisioni ed esegue azioni.
 
@@ -100,7 +100,7 @@ Questa tabella merita di essere letta due volte: riassume tutto il cambiamento d
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Confronto tra Coder tradizionale e comandante AI
 
-Questo non significa che la conoscenza della programmazione non conti. Al contrario: solo se capisci il codice scritto dall'AI puoi revisionarlo e correggerlo efficacemente; solo se comprendi strutture dati e algoritmi puoi giudicare se la soluzione dell'AI è sensata. La tua riserva di conoscenza determina il «tetto del tuo comando» — ma il ruolo della conoscenza passa da «strumento di esecuzione» a «base di giudizio».
+Questo non significa che la conoscenza della programmazione non conti. Al contrario: solo se capisci il codice scritto dall'AI puoi revisionarlo e correggerlo efficacemente; solo se comprendi strutture dati e algoritmi puoi giudicare se la soluzione dell'AI è sensata. La tua riserva di conoscenza determina il «tetto del tuo comando», ma il ruolo della conoscenza passa da «strumento di esecuzione» a «base di giudizio».
 
 #### 4. Perché la metodologia conta più degli strumenti
 
@@ -110,7 +110,7 @@ Gli strumenti si rinnovano ogni tre mesi, la metodologia evolve solo ogni tre an
 
 Chi inizia con la programmazione AI spesso chiede subito «qual è il miglior strumento» o «qual è il modello più forte». Domande legittime, ma con le priorità sbagliate. Lo scenario degli strumenti ad agosto 2026 è completamente diverso da quello di agosto 2025: Trae, Qoder e altri sono saliti e scesi, Cursor è passato da plugin a IDE indipendente fino a Cursor 3, Claude Code da progetto sperimentale a scelta principale per la programmazione da terminale. Ma dietro questi cambiamenti, i principi di pensiero dei praticanti di successo sono rimasti quasi invariati.
 
-Per questo il libro non spreca pagine per insegnarti l'uso puntuale di un singolo strumento — quelle cose diventano obsolete subito. Tutta l'attenzione è su una metodologia collaudata: come pensare ai requisiti, come comunicare con l'AI, come verificare l'output, come iterare. Con questa metodologia qualsiasi strumento si impara in fretta; imparando solo lo strumento, cambiandolo si riparte da zero.
+Per questo il libro non spreca pagine per insegnarti l'uso puntuale di un singolo strumento: quelle cose diventano obsolete subito. Tutta l'attenzione è su una metodologia collaudata: come pensare ai requisiti. Come comunicare con l'AI, come verificare l'output, come iterare. Con questa metodologia qualsiasi strumento si impara in fretta; imparando solo lo strumento, cambiandolo si riparte da zero.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

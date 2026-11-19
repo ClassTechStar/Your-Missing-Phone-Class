@@ -126,7 +126,7 @@ navController.popBackStack()              // 返回上一頁
 
 檢舊之教程，汝必遇 Fragment——其為 Activity 中「可復用界面之片段」，於舊式多頁架構中為絕對之主角。然 Compose 之世，頁面逕以 Composable 函數 + Navigation 路由足矣，官家亦已弱 Fragment 之位。本書故不列之於主線。
 
-貽汝之議：新項目勿主動用 Fragment；然讀舊碼、面試見問之時，知其為「Activity 中所嵌之界面片段」足矣。為學之資，恆先擇 2023 年以後者——安卓技術之棧，其「老黃曆」之新，速於所想。
+貽汝之議：新項目勿主動用 Fragment；然讀舊碼、面試見問之時，知其為「Activity 中所嵌之界面片段」足矣。為學之資，恆先擇 2023 年以後者，安卓技術之棧，其「老黃曆」之新，速於所想。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -141,7 +141,13 @@ navController.popBackStack()              // 返回上一頁
 本章小結
 
 - 四大組件：Activity（門面）、Service（後臺）、BroadcastReceiver（喇叭）、ContentProvider（資料櫃）
-- 生命之期六回調：onCreate → onStart → onResume → onPause → onStop → onDestroy
+生命之期六回調：
+1. onCreate
+2. onStart
+3. onResume
+4. onPause
+5. onStop
+6. onDestroy
 - 轉屏則毀而重建 Activity：用 rememberSaveable 保其狀態
 - Intent 者「車票」也：顯式跳己頁，隱式調系統之能
 - 多頁用 Navigation Compose：NavHost + composable 路由

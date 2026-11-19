@@ -2,27 +2,27 @@
 id: di-shi-ba-zhang
 num: 18
 part: jin-jie-pian
-nav: Kapitel 18: Daten sichern und umziehen
+nav: Kapitel 18: Backup jetzt, nicht erst, wenn's dringend wird
 toc: default
 kind: chapter
 ---
 
-### Kapitel 18: Daten-Backup und -Migration
+### Kapitel 18: Backup jetzt, nicht erst, wenn's dringend wird
 
 {class="chapter-intro mb-4"}
 Android
 
-#### : Jede Marke hat ihre eigene Desktop-Software, z. B. Huawei-Telefonassistent, Xiaomi-Assistent, Samsung Smart Switch. An den Computer anschließen und den Anweisungen folgen.
+- Jede Marke hat ihre eigene Desktop-Software, z. B. Huawei-Telefonassistent, Xiaomi-Assistent, Samsung Smart Switch. An den Computer anschließen und den Anweisungen folgen.
 
 Der Vorteil eines Computer-Backups ist, dass man keinen Cloud-Speicher kaufen muss, und die Wiederherstellung ist viel schneller als aus der Cloud. Der Nachteil: Du musst dich daran erinnern, regelmäßig das Kabel anzuschließen und zu sichern – die meisten Menschen schaffen das nicht.
 
 - <strong>Methode 2: Cloud-Backup (am unkompliziertesten, empfohlen für alle)</strong> iPhone
 - <strong>: Einstellungen → dein Name → iCloud → iCloud-Backup → aktivieren. Wenn das Smartphone am Strom hängt, mit Wi-Fi verbunden und gesperrt ist, wird automatisch gesichert. Die kostenlosen 5 GB reichen wahrscheinlich nicht – empfohlen, für ein paar Yuan auf 50 GB zu erweitern.</strong> Android
-- <strong>: Die Marken-Clouds haben alle Backup-Funktionen. Bei Huawei in den Einstellungen „Cloud-Backup" suchen, bei Xiaomi „Xiaomi Cloud Services", OPPO/vivo ähnlich. Außerdem gibt es das von Google bereitgestellte Backup (Einstellungen → System → Backup) – auch das aktivieren.</strong> Der größte Vorteil des Cloud-Backups: Du musst dich nicht darum kümmern, es passiert automatisch. Der größte Nachteil: Die Wiederherstellung dauert lange, weil viel heruntergeladen werden muss, und der kostenlose Speicher reicht meist nicht.
+- <strong>: Die Marken-Clouds haben alle Backup-Funktionen. Bei Huawei in den Einstellungen „Cloud-Backup" suchen, bei Xiaomi „Xiaomi Cloud Services", OPPO/vivo ähnlich. Außerdem gibt es das von Google bereitgestellte Backup (Einstellungen → System → Backup) – auch das aktivieren.</strong> Der größte Vorteil des Cloud-Backups: Du musst dich nicht darum kümmern, es passiert automatisch. Der größte Nachteil: Die Wiederherstellung dauert lange, weil viel heruntergeladen werden muss, und der kostenlose Speicher reicht meist nicht
 
 III. Kategorisierte Backup-Strategie: Wichtige Dinge separat speichern
 
-#### Das vollständige Backup ist ein Auffangnetz, aber manche Dinge sind zu wichtig, als dass du sie nicht separat speichern solltest:
+Das vollständige Backup ist ein Auffangnetz, aber manche Dinge sind zu wichtig, als dass du sie nicht separat speichern solltest:
 
 Fotos und Videos (die wertvollsten digitalen Vermögenswerte)
 
@@ -30,15 +30,15 @@ Fotos und Videos (die wertvollsten digitalen Vermögenswerte)
 
 - <strong>iPhone</strong> Kostenlose Methode
 - <strong>Android</strong> Kontakte (leicht übersehen, aber extrem wichtig)
-- iPhone-Kontakte werden standardmäßig mit iCloud synchronisiert – solange Sync aktiv ist, ist kein zusätzliches Backup nötig. Wer auf Nummer sicher gehen will, kann auf iCloud.com eine vCard-Datei exportieren und auf dem Computer speichern.
+- iPhone-Kontakte werden standardmäßig mit iCloud synchronisiert – solange Sync aktiv ist, ist kein zusätzliches Backup nötig. Wer auf Nummer sicher gehen will, kann auf iCloud.com eine vCard-Datei exportieren und auf dem Computer speichern
 
 ##### Android-Kontakte werden normalerweise mit Google oder der Marken-Cloud synchronisiert. In den Einstellungen der Kontakte-App eine .vcf-Datei exportieren – das ist ein vollständiges Backup.
 
 - <strong>iPhone</strong> Dies muss separat angesprochen werden, denn im vollständigen Backup sind WeChat-Chatverläufe oft unvollständig, und Gerätewechsel-Tools können sie überhaupt nicht bewegen.
 - <strong>Android</strong>. WeChat → Ich → Einstellungen → Allgemein → Chat-Verlauf migrieren &amp; backup → Migrieren → Auf Smartphone/Tablet migrieren. Altes und neues Smartphone ins gleiche Wi-Fi einloggen, Code scannen und übertragen. Achtung: Vor Abschluss der Migration das alte Smartphone nicht aus WeChat ausloggen.
-- Methode 2: Auf Computer sichern
+- Methode 2: Auf Computer sichern.
 
-#### . Auf dem Computer WeChat-PC-Version installieren, unten links drei Striche → Migrieren &amp; Backup → Backup &amp; Wiederherstellung → Chat-Verlauf auf Computer sichern. Später, beim Gerätewechsel, kann man ihn auf das neue Smartphone wiederherstellen.
+. Auf dem Computer WeChat-PC-Version installieren, unten links drei Striche → Migrieren &amp; Backup → Backup &amp; Wiederherstellung → Chat-Verlauf auf Computer sichern. Später, beim Gerätewechsel, kann man ihn auf das neue Smartphone wiederherstellen.
 
 Methode 3: In der Cloud sichern
 
@@ -60,7 +60,7 @@ Ein Drittanbieter-Tool verwenden oder das Gerätewechsel-App der alten Marke (di
 - <strong>: Apple hat die App „Auf iOS übertragen", die du auf dem Android-Smartphone herunterlädst. Beim Aktivieren des neuen iPhone wählst du „Von Android-Gerät Daten übertragen". Übertragen werden können Kontakte, Fotos, SMS und andere Basisdaten, aber keine App-Daten. WeChat-Chatverläufe müssen mit WeChats eigener Migrationsfunktion übertragen werden.</strong> iPhone → Android
 - <strong>: Jede Android-Marke hat entsprechende Migrations-Tools, aber ehrlich gesagt ist das plattformübergreifende Migrationserlebnis nicht so gut wie innerhalb derselben Plattform. Das Wichtigste zuerst erledigen: Kontakte exportieren, Fotos backupen, WeChat-Chatverläufe migrieren. Den Rest nach und nach.</strong> V. Die goldene Regel des Backups: Das 3-2-1-Prinzip
 
-#### Das ist ein klassisches Prinzip aus dem Bereich Datensicherheit, einfach zu merken:
+Das ist ein klassisches Prinzip aus dem Bereich Datensicherheit, einfach zu merken:
 
 3
 
@@ -78,13 +78,13 @@ Besonderer Hinweis zu WeChat-Chatverläufen
 - <strong>Übe: Führe eine vollständige Backup-Übung durch</strong> Prüfe, ob iCloud-Cloud-Backup oder Marken-Cloud-Backup aktiviert ist, und bestätige die Zeit des letzten Backups.
 - <strong>Sichere Fotos manuell: Per Datenkabel mit dem Computer verbinden und die Ordner DCIM und Pictures auf den Computer kopieren.</strong> Sichere Kontakte: iPhone-Nutzer exportieren auf iCloud.com eine vCard; Android-Nutzer exportieren in der Kontakte-App-Einstellung eine .vcf-Datei.
 
-#### Sichere WeChat-Chatverläufe: WeChat öffnen → Ich → Einstellungen → Allgemein → Chat-Verlauf migrieren &amp; backup → Auf Computer sichern.
+Sichere WeChat-Chatverläufe: WeChat öffnen → Ich → Einstellungen → Allgemein → Chat-Verlauf migrieren &amp; backup → Auf Computer sichern.
 
 Kopiere die exportierte Kontakte-vcf und den Fotoordner zusätzlich auf eine externe Festplatte oder einen USB-Stick – damit ist das „eine Offline-Backup an anderem Ort" des 3-2-1-Prinzips erfüllt.
 
 - <strong>Kapitel 19: Fehlersuche und Selbsthilfe</strong> Das Smartphone ist wie ein Mensch – gelegentlich „krankt" es auch. Ruckeln, Abstürze, schwarzer Bildschirm, lädt nicht – die meisten Probleme sind gar nicht so schlimm, und du kannst vor dem Besuch der Werkstatt erst selbst ausprobieren. Dieses Kapitel ist deine „Smartphone-Notfall-Handbuch" – zuerst mit kostengünstigen Methoden probieren, und wenn das nicht klappt, den Fachmann aufsuchen.
 - <strong>I. Smartphone wird langsam und heiß – die am häufigsten gestellte Frage</strong> Ehrlich gesagt, wenn ein Smartphone nach etwa einem Jahr langsam wird, ist das völlig normal. Der Grund muss nicht sein, dass das Smartphone kaputt ist – meistens ist es „Staubansammlung": temporäre Dateien, Hintergrundprozesse, Speicherplatz, der sich langsam füllt.
-- <strong>Zuerst diagnostizieren, nicht sofort reparieren:</strong> Speicherplatz prüfen
+- <strong>Zuerst diagnostizieren, nicht sofort reparieren:</strong> Speicherplatz prüfen.
 
 : Einstellungen → Speicher, freien Platz ansehen. Wenn weniger als 10 % frei sind, wird das System sehr langsam, weil es mühsam Platz schafft. Meine Erfahrung: Mindestens 15–20 % freier Speicherplatz halten, damit das Smartphone einigermaßen flüssig läuft.
 
@@ -103,7 +103,7 @@ Kopiere die exportierte Kontakte-vcf und den Fotoordner zusätzlich auf eine ext
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : Wurde es nach einem System-Update langsam? (Nach großen Versions-Updates ist Langsamkeit in den ersten Tagen normal, das System baut im Hintergrund Indizes neu auf.) Oder wurde es nach der Installation einer neuen App langsam? (Probier, sie zu deinstallieren.)
 2. Nutzungsumgebung ansehen
-3. : Wenn das Smartphone in der Sonne liegt, eine dicke Hülle trägt und gleichzeitig geladen wird, während du spielst, ist Überhitzung unvermeidlich. Hohe Temperaturen führen dazu, dass die CPU automatisch den Takt senkt – das Smartphone wirkt plötzlich langsam. Abkühlen lassen und es erneut versuchen.
+3. : Wenn das Smartphone in der Sonne liegt, eine dicke Hülle trägt und gleichzeitig geladen wird, während du spielst, ist Überhitzung unvermeidlich. Hohe Temperaturen führen dazu, dass die CPU automatisch den Takt senkt – das Smartphone wirkt plötzlich langsam. Abkühlen lassen und es erneut versuchen
 4. Behandlungsmethoden (von einfach bis komplex)
-5. : Smartphone neu starten (löst 60 % der Probleme) → Speicherplatz aufräumen (nutzlose Apps und Videos löschen) → wenn eine App Ärger macht, ihren Cache leeren oder neu installieren → letzte Möglichkeit: Daten sichern und auf Werkseinstellungen zurücksetzen.
+5. : Smartphone neu starten (löst 60 % der Probleme) → Speicherplatz aufräumen (nutzlose Apps und Videos löschen) → wenn eine App Ärger macht, ihren Cache leeren oder neu installieren → letzte Möglichkeit: Daten sichern und auf Werkseinstellungen zurücksetzen
 :::

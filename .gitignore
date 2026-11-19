@@ -48,3 +48,6 @@ latex/*/pass*.log
 
 # 翻译记忆库是派生数据（bookkit tm build 从源稿+翻译源可再生，约 24MB），不入库
 manifest/tm/
+
+# 去 AI 味管线的诊断产物（AI 味报告、朗读体检清单、路径库候选等）：可由脚本重新生成，不入库
+state/

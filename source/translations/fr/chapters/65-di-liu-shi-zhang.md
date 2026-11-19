@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 60 : Monter l’environnement de développement — Xcode et le premier projet
 
 {class="chapter-intro mb-4"}
-Pour bien faire le travail, il faut d’abord affûter ses outils. Dans ce chapitre, on monte la « cuisine » : installer Xcode, faire tourner le simulateur, créer le tout premier projet iOS de ta vie, puis décortiquer la structure du projet pour tout comprendre. Une fois l’environnement prêt, tu verras pour la première fois ton code se transformer en bouton cliquable — un instant que beaucoup gardent toute leur vie en mémoire.
+Pour bien faire le travail, il faut d’abord affûter ses outils. Dans ce chapitre, on monte la « cuisine » : installer Xcode, faire tourner le simulateur, créer le tout premier projet iOS de ta vie, puis décortiquer la structure du projet pour tout comprendre. Une fois l’environnement prêt, tu verras pour la première fois ton code se transformer en bouton cliquable, un instant que beaucoup gardent toute leur vie en mémoire.
 
 #### 1. S’équiper d’un Mac
 
@@ -37,9 +37,9 @@ Swift Playgrounds, gratuit sur iPad, permet d’apprendre les bases du langage S
 
 Xcode est l’environnement de développement intégré officiel d’Apple, et il est gratuit. Trois étapes suffisent :
 
-1. Sur Mac, ouvre l’App Store, cherche « Xcode » et clique sur Installer — attention, il pèse plusieurs Go, choisis un créneau avec du bon réseau ;
+1. Sur Mac, ouvre l’App Store, cherche « Xcode » et clique sur Installer, attention, il pèse plusieurs Go, choisis un créneau avec du bon réseau ;
 2. au premier lancement après l’installation, accepte le contrat et laisse se terminer l’installation des composants (c’est automatique) ;
-3. dans le menu Xcode → Settings → Locations, vérifie que Command Line Tools est bien sélectionné — les outils en ligne de commande sont le préalable de beaucoup de scripts et d’outils tiers.
+3. dans le menu Xcode → Settings → Locations, vérifie que Command Line Tools est bien sélectionné — les outils en ligne de commande sont le préalable de beaucoup de scripts et d’outils tiers
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -62,7 +62,7 @@ Ouvre Xcode → Create New Project → choisis iOS → le modèle App, puis remp
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Les cinq champs à remplir à la création du projet
 
-Après avoir cliqué sur Create, Xcode génère un projet qui tourne immédiatement. Choisis un simulateur en haut à gauche (par exemple iPhone 17) et clique sur ▶ — quelques secondes plus tard, une fenêtre affichant « Hello, world! » apparaît sur l’écran du simulateur. Ta première app iOS vient de naître.
+Après avoir cliqué sur Create, Xcode génère un projet qui tourne immédiatement. Choisis un simulateur en haut à gauche (par exemple iPhone 17) et clique sur ▶, quelques secondes plus tard, une fenêtre affichant « Hello, world! » apparaît sur l’écran du simulateur. Ta première app iOS vient de naître.
 
 #### 4. Anatomie du projet : à quoi sert chaque fichier
 
@@ -100,9 +100,9 @@ Figure 2 : la structure d’un projet Xcode que tout débutant doit connaître
 - MyFirstAppApp.swift : le point d’entrée du programme ; en SwiftUI, il ne compte que quelques lignes — « démarre, puis affiche l’écran principal » ;
 - ContentView.swift : la vue de l’écran principal ; tout ce que tu vois en ce moment est ici ;
 - Assets.xcassets : l’entrepôt des ressources — icônes, images et couleurs se rangent ici ;
-- Réglages du Target : clique sur l’icône bleue du projet à gauche pour y entrer ; le numéro de version, la version minimale d’iOS et la signature s’y trouvent. Le nom d’affichage de l’app et l’icône se règlent aussi ici.
+- Réglages du Target : clique sur l’icône bleue du projet à gauche pour y entrer ; le numéro de version, la version minimale d’iOS et la signature s’y trouvent. Le nom d’affichage de l’app et l’icône se règlent aussi ici
 
-#### 5. Astuces d’efficacité dans Xcode : les cinq « raccourcis bonus » du débutant
+5. Astuces d’efficacité dans Xcode : les cinq « raccourcis bonus » du débutant
 
 Une fois rodés, ces raccourcis te donneront des allures de « grand pro » :
 
@@ -115,16 +115,16 @@ Une fois rodés, ces raccourcis te donneront des allures de « grand pro » :
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Raccourcis très utilisés de Xcode (le kit de cinq du débutant)
 
-Deux bonus cachés : le multi-simulateur (faire tourner en même temps iPhone et iPad pour comparer les dispositions) et la bibliothèque d’extraits de code (glisse tes quelques lignes favorites dans le panneau Snippets à droite, et insère-les en un clic la prochaine fois) — utilise ces outils d’efficacité, et le tour de main viendra tout seul.
+Deux bonus cachés : le multi-simulateur (faire tourner en même temps iPhone et iPad pour comparer les dispositions) et la bibliothèque d’extraits de code (glisse tes quelques lignes favorites dans le panneau Snippets à droite, et insère-les en un clic la prochaine fois), utilise ces outils d’efficacité, et le tour de main viendra tout seul.
 
-#### 6. Débogage sur appareil réel : installer l’app dans ton iPhone
+6. Débogage sur appareil réel : installer l’app dans ton iPhone
 
 Le simulateur est bien, mais l’appareil réel reste la destination finale. Avec un identifiant Apple gratuit, tu peux déboguer sur un vrai appareil :
 
 1. relie l’iPhone par câble (ou débogue en sans fil sur le même Wi-Fi) ;
 2. dans la liste des appareils en haut de Xcode, choisis ton téléphone ; au premier essai, il te proposera de te connecter à ton identifiant Apple et configurera la signature automatiquement ;
 3. sur l’iPhone, [Réglages] → [Général] → [VPN et gestion des appareils] → accorde ta confiance au certificat de développeur ;
-4. clique sur ▶, et l’app s’installe dans l’appareil réel.
+4. clique sur ▶, et l’app s’installe dans l’appareil réel
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -134,9 +134,9 @@ Attention : la « limite de sept jours » du compte gratuit
 Une app signée avec un identifiant Apple gratuit expire au bout de 7 jours (il suffit de relancer une fois pour la renouveler). C’est un mécanisme anti-abus d’Apple, largement suffisant pour la phase d’apprentissage ; le compte développeur payant (99 dollars par an) n’a pas cette limite, le détail au chapitre 67.
 :::
 
-#### 7. Premier essai + premiers secours contre les erreurs courantes
+7. Premier essai + premiers secours contre les erreurs courantes
 
-Ouvre ContentView.swift, remplace le texte de Text("Hello, world!") par ton prénom, puis relance avec ⌘R — quelques secondes plus tard, ton prénom s’affiche sur le simulateur. Félicitations, tu viens d’accomplir ta première boucle complète « modifier le code → compiler → installer → exécuter ».
+Ouvre ContentView.swift, remplace le texte de Text("Hello, world!") par ton prénom, puis relance avec ⌘R, quelques secondes plus tard, ton prénom s’affiche sur le simulateur. Félicitations, tu viens d’accomplir ta première boucle complète « modifier le code → compiler → installer → exécuter ».
 
 ::: div .overflow-x-auto
 ```html

@@ -11,7 +11,7 @@ kind: appendix
 
 Terima kasih kerana berusaha menamatkan "kelas telefon" ini! Sepanjang proses penulisan, kami merujuk banyak buku panduan rasmi pengeluar, manual pengguna dan artikel pendidikan teknologi yang disiarkan secara terbuka bagi memastikan ketepatan maklumat.
 
-Teknologi berkembang pesat dari hari ke hari; kandungan buku ini berdasarkan teknologi dan produk arus perdana semasa penulisan. Apabila anda membacanya, mungkin sudah muncul pula fungsi dan produk baharu yang lain. Kami berharap idea dan kaedah yang diajarkan dalam buku ini dapat membantu anda menghadapi lebih banyak perkara digital baharu pada masa hadapan dengan tenang.
+Teknologi berkembang pesat dari hari ke hari; kandungan buku ini berdasarkan teknologi dan produk arus perdana semasa penulisan. Apabila anda membacanya, mungkin sudah muncul pula fungsi dan produk baharu yang lain. Kami berharap idea dan kaedah yang diajarkan dalam buku ini dapat membantu anda ,menghadapi lebih banyak perkara digital baharu pada masa hadapan dengan tenang.
 
 #### Poin Kemas Kini Versi 1.6
 
@@ -22,22 +22,22 @@ Teknologi berkembang pesat dari hari ke hari; kandungan buku ini berdasarkan tek
 - Memperluas bab aksesibiliti (panduan lengkap operasi VoiceOver/TalkBack, zum dan penapis warna, penerangan imej AI, sari kata masa nyata, saluran ganda panggilan RTT/TTY).
 - Menulis semula rangka kerja arah prompt dengan pendekatan "Peranan-Konteks-Tugas-Had", disertakan 3 contoh senario lengkap.
 - Menambah tiga lampiran teknologi lanjutan: Tambahan Bab 1: Analisis peluasan memori telefon Android (definisi asas, prinsip zRAM/swap, bottleneck kelajuan, sempadan senario yang sesuai, serta penamaan dan cara pengaktifan oleh pelbagai pengeluar).
-- Tambahan Bab 20: Termux—persekitaran terminal Linux mudah alih pada peranti Android (fungsi teras, ekosistem pemalam, pemasangan dan konfigurasi, serta senario tipikal seperti pembangunan mudah alih/penyelenggaraan pelayan/ujian keselamatan).
-- Tambahan Bab 23: Panduan Asas GitHub—daripada pengehosan kod kepada platform kolaborasi (perbezaan Git dan GitHub, konsep teras, pendaftaran dan permulaan, aliran kerja kolaborasi Pull Request, peringatan keselamatan, penyelesaian akses dari tanah besar).
+- Tambahan Bab 20: Termux,persekitaran terminal Linux mudah alih pada peranti Android (fungsi teras, ekosistem pemalam, pemasangan dan konfigurasi, serta senario tipikal seperti pembangunan mudah alih/penyelenggaraan pelayan/ujian keselamatan).
+- Tambahan Bab 23: Panduan Asas GitHub,daripada pengehosan kod kepada platform kolaborasi (perbezaan Git dan GitHub, konsep teras, pendaftaran dan permulaan, aliran kerja kolaborasi Pull Request, peringatan keselamatan, penyelesaian akses dari tanah besar).
 
 #### Poin Kemas Kini Versi 1.7
 
 1\. Menambah 4 bab baharu
 
-- Bab 29:Kesihatan Digital—analisis masa skrin, had App, mod Jangan Ganggu, peraturan 20-20-20 penjagaan mata, penyelamatan tulang belakang leher, pengurusan tidur, "buta selektif" bagi kebimbangan maklumat, cabaran kesihatan digital selama seminggu.
-- Bab 30: Penghantaran Skrin dan Sistem Kereta—perbandingan tiga kem AirPlay / Miracast / DLNA, pilihan penghantaran skrin berkabel, mod desktop Samsung DeX, empat penyelesaian kereta utama CarPlay / Android Auto / HiCar / CarLife, serta praktik penghantaran skrin di bilik mesyuarat.
-- Bab 31: Penghasilan Video Pendek—tiga soalan pemilihan topik, tetapan penggambaran 5 langkah, lima teknik pergerakan kamera (tolak, tarik, pan, alih, ikut), aliran kerja enam langkah CapCut (Jianying), poin penting menghasilkan muka depan, serta prinsip kandungan "3 saat pertama menentukan segalanya".
-- Bab 32:Manual Pertolongan Cemas Keselamatan—SOP 30 minit emas selepas telefon hilang, proses kendalian 72 jam selepas ditipu, pemeriksaan mod selamat apabila dijangkiti, enam langkah merebut semula akaun yang direta, cara menghadapi mesej ugutan, serta lima perkara pencegahan harian.
+- Bab 29:Kesihatan Digital,analisis masa skrin, had App, mod Jangan Ganggu, peraturan 20-20-20 penjagaan mata, penyelamatan tulang belakang leher, pengurusan tidur, "buta selektif" bagi kebimbangan maklumat, cabaran kesihatan digital selama seminggu.
+- Bab 30: Penghantaran Skrin dan Sistem Kereta:perbandingan tiga kem AirPlay / Miracast / DLNA, pilihan penghantaran skrin berkabel, mod desktop Samsung DeX, empat penyelesaian kereta utama CarPlay / Android Auto / HiCar / CarLife, serta praktik penghantaran skrin di bilik mesyuarat.
+- Bab 31: Penghasilan Video Pendek,tiga soalan pemilihan topik, tetapan penggambaran 5 langkah, lima teknik pergerakan kamera (tolak, tarik, pan, alih. ikut), aliran kerja enam langkah CapCut (Jianying), poin penting menghasilkan muka depan, serta prinsip kandungan "3 saat pertama menentukan segalanya".
+- Bab 32:Manual Pertolongan Cemas Keselamatan,SOP 30 minit emas selepas telefon hilang, proses kendalian 72 jam selepas ditipu, pemeriksaan mod selamat apabila dijangkiti, enam langkah merebut semula akaun yang direta, cara menghadapi mesej ugutan, serta lima perkara pencegahan harian.
 
 2\. Menambah dua bab baharu
 
-- Bab 27: Mesra Warga Emas dan Kasih Sayang Keluarga—jadual perbandingan mod mudah antara jenama, enam penipuan dan tiga lapis pertahanan antipenipuan, bantuan jarak jauh (MeeTime/Sunflower), mod Penyayang WeChat dan input suara, SOS / pengesanan jatuh / peringatan ubat.
-- Bab 28:Panduan Pembelian—kaedah pemilihan telefon tiga langkah, jadual spesifikasi "cuma lihat lima perkara", cadangan lima aras bajet, jadual pemilihan untuk tujuh senario, lima perangkap pembelian telefon, serta analisis masa dan saluran pembelian.
+- Bab 27: Mesra Warga Emas dan Kasih Sayang Keluarga,jadual perbandingan mod mudah antara jenama, enam penipuan dan tiga lapis pertahanan antipenipuan, bantuan jarak jauh (MeeTime/Sunflower), mod Penyayang WeChat dan input suara, SOS / pengesanan jatuh / peringatan ubat.
+- Bab 28:Panduan Pembelian,kaedah pemilihan telefon tiga langkah, jadual spesifikasi "cuma lihat lima perkara", cadangan lima aras bajet, jadual pemilihan untuk tujuh senario, lima perangkap pembelian telefon, serta analisis masa dan saluran pembelian.
 
 3\. Menambah fungsi bacaan suara dan interaksi
 
@@ -68,7 +68,7 @@ Isi kandungan, laluan pembelajaran (empat langkah→lima langkah), peta bab, nom
 
 #### Poin Kemas Kini Versi 1.8
 
-Menambah Bahagian Ketujuh "Praktik Pengaturcaraan AI" (Bab 37-47, sebanyak 11 bab): revolusi paradigma dan Agentic Engineering, lima prinsip pemikiran pengaturcaraan AI, kejuruteraan konteks dan pembangunan dipacu spesifikasi (SDD), kejuruteraan keperluan, panorama alat pengaturcaraan AI 2026, panorama model besar dan praktik API, kejuruteraan perbualan, aliran penuh projek lengkap daripada 0 ke 1, jaminan kualiti, jalan lanjutan (kolaborasi MCP/pelbagai Agent) serta manual rujukan pantas. Isi kandungan, laluan pembelajaran (lima langkah→enam langkah), peta bab dan indeks rujukan pantas turut dikemas kini serentak. Kandungan bersumber daripada edisi Ogos 2026 buku "Pemikiran Pengaturcaraan AI: Panduan Metodologi daripada Sifar Asas hingga Praktik Full-Stack".
+Menambah Bahagian Ketujuh "Praktik Pengaturcaraan AI" (Bab 37-47, sebanyak 11 bab): revolusi paradigma dan Agentic Engineering, lima prinsip pemikiran pengaturcaraan AI, kejuruteraan konteks dan pembangunan dipacu spesifikasi (SDD), kejuruteraan keperluan. panorama alat pengaturcaraan AI 2026, panorama model besar dan praktik API, kejuruteraan perbualan, aliran penuh projek lengkap daripada 0 ke 1, jaminan kualiti, jalan lanjutan (kolaborasi MCP/pelbagai Agent) serta manual rujukan pantas. Isi kandungan, laluan pembelajaran (lima langkah→enam langkah), peta bab dan indeks rujukan pantas turut dikemas kini serentak. Kandungan bersumber daripada edisi Ogos 2026 buku "Pemikiran Pengaturcaraan AI: Panduan Metodologi daripada Sifar Asas hingga Praktik Full-Stack".
 
 Menambah Bahagian Kelapan "Praktik Pembangunan Android" (Bab 48-58, sebanyak 11 bab) dan Bahagian Kesembilan "Praktik Pembangunan iOS" (Bab 59-69, sebanyak 11 bab): kedua-dua platform meliputi penyediaan persekitaran (Android Studio / Xcode), kursus kilat bahasa (Kotlin / Swift), rangka kerja antara muka (Jetpack Compose / SwiftUI), data dan rangkaian, dua projek praktik lengkap (buku catatan + semakan cuaca), ujian dan penerbitan (Google Play / App Store) serta manual rujukan pantas. Isi kandungan, laluan pembelajaran (enam langkah→lapan langkah), peta bab dan indeks rujukan pantas turut dikemas kini serentak. Kandungan bersumber daripada edisi Ogos 2026 buku "Pembangunan Android dari Sifar" dan "Pembangunan iOS dari Sifar".
 
@@ -79,14 +79,14 @@ Menambah Bahagian Kelapan "Praktik Pembangunan Android" (Bab 48-58, sebanyak 11 
 - Perluasan keupayaan sekatan gangguan Bab 8: menambah penerangan praktikal seperti pengecaman panggilan masuk, senarai hitam/putih, penapis kata kunci SMS, senyapkan panggilan tidak dikenali pada iOS, kaitan dengan Jangan Ganggu dan sebagainya, serta dipautkan silang dengan Bab 13.
 - Cadangan perlindungan tiga lapis: sekatan sistem + antigangguan pengendali + Pusat Antipenipuan Kebangsaan, dengan penekanan penggunaan senarai putih untuk mengelakkan sekatan tersilap.
 
-#### Tambahan kandungan: Amaran cuaca / amaran bencana alam / amaran gempa bumi
+Tambahan kandungan: Amaran cuaca / amaran bencana alam / amaran gempa bumi
 
 - Bab 13 menambah Seksyen 7: amaran cuaca (saluran meteorologi rasmi + App cuaca sistem + gred warna), amaran bencana alam (pelbagai saluran meteorologi/kecemasan), serta prinsip amaran gempa bumi dan salah tanggapan biasa (amaran bukanlah ramalan).
 - Jadual pengaktifan amaran gempa mengikut jenama: kemasukan biasa dan perkara yang perlu diberi perhatian tentang kebenaran bagi Xiaomi, Huawei/HONOR, keluarga OPPO, vivo, iPhone, Samsung dan lain-lain.
 - Bab 32 menambah "Senario Sifar": turutan perlindungan diri selepas amaran gempa, cara menghadapi hujan lebat/taufan, serta kaitan dengan SOS satelit / komunikasi tanpa rangkaian; manual pertolongan cemas dan tetapan amaran Bab 13 dipautkan silang antara satu sama lain.
-- Kaitan subbahagian cuaca: entri App cuaca dalam bahagian perjalanan ditambah dengan notifikasi amaran dan peringatan "notifikasi mesti diaktifkan barulah maklumat dapat diterima".
+- Kaitan subbahagian cuaca: entri App cuaca dalam bahagian perjalanan ditambah dengan notifikasi amaran ,dan peringatan "notifikasi mesti diaktifkan barulah maklumat dapat diterima".
 
-#### Tambahan kandungan: Kerjasama merentas peranti dan alat kecekapan
+Tambahan kandungan: Kerjasama merentas peranti dan alat kecekapan
 
 - Seksyen 8 Bab 13: kawalan komputer dari jauh melalui telefon (Sunflower, ToDesk) serta garis merah antipenipuan; pejabat AI (Trae / WorkBuddy / Dumate) dan aliran kerja mengawal komputer dengan telefon; kertas dinding dinamik daripada miHoYo.
 - Hantar pantas rangkaian setempat dan papan keratan: LocalSend, Feige Transfer, AirDrop; KDE Connect, papan keratan sejagat, serta pemindahan antara telefon dan komputer jenama yang sama.

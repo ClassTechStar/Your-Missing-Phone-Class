@@ -37,16 +37,16 @@ O Swift Playgrounds, gratuito no iPad, ensina o básico da linguagem Swift (sem 
 
 O Xcode é o ambiente de desenvolvimento integrado oficial da Apple, e é gratuito. Instalação em três passos:
 
-1. No Mac, abra a App Store, busque “Xcode” e clique em instalar — atenção, ele tem vários GB, então escolha um horário com boa conexão;
+1. No Mac, abra a App Store, busque “Xcode” e clique em instalar, atenção, ele tem vários GB, então escolha um horário com boa conexão;
 2. Ao abrir pela primeira vez depois da instalação, aceite o acordo e deixe os componentes terminarem de baixar (é automático);
-3. No menu Xcode > Settings > Locations, confira se o Command Line Tools está selecionado — as ferramentas de linha de comando são pré-requisito de muitos scripts e ferramentas de terceiros.
+3. No menu Xcode > Settings > Locations, confira se o Command Line Tools está selecionado, as ferramentas de linha de comando são pré-requisito de muitos scripts e ferramentas de terceiros
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Atenção: o “jogo de encaixe” entre versões e sistema
 
 {class="mt-1"}
-O Xcode novo costuma exigir o macOS mais recente, e Macs antigos ficam presos em versões antigas. Para publicar na App Store, a Apple pede builds feitos com um Xcode relativamente novo (geralmente com um período de tolerância). Por isso, não demore para atualizar o sistema — desenvolvedores iOS estão entre os que mais correm atrás das versões novas.
+O Xcode novo costuma exigir o macOS mais recente, e Macs antigos ficam presos em versões antigas. Para publicar na App Store, a Apple pede builds feitos com um Xcode relativamente novo (geralmente com um período de tolerância). Por isso, não demore para atualizar o sistema. Desenvolvedores iOS estão entre os que mais correm atrás das versões novas.
 :::
 
 #### 3. Crie seu primeiro projeto
@@ -62,7 +62,7 @@ Abra o Xcode > Create New Project > escolha iOS > modelo App e preencha:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 As cinco coisas a preencher ao criar o projeto
 
-Depois de clicar em Create, o Xcode gera um projeto pronto para rodar. No canto superior esquerdo, escolha um simulador (por exemplo, iPhone 17) e clique no ▶ para executar — em poucos segundos, uma janela com “Hello, world!” aparece na tela do simulador. Seu primeiro app iOS acabou de nascer.
+Depois de clicar em Create, o Xcode gera um projeto pronto para rodar. No canto superior esquerdo, escolha um simulador (por exemplo, iPhone 17) e clique no ▶ para executar, em poucos segundos, uma janela com “Hello, world!” aparece na tela do simulador. Seu primeiro app iOS acabou de nascer.
 
 #### 4. Anatomia do projeto: para que serve cada arquivo
 
@@ -97,12 +97,12 @@ Depois de clicar em Create, o Xcode gera um projeto pronto para rodar. No canto 
 Figura 2: a estrutura de projeto do Xcode que todo iniciante precisa conhecer
 :::
 
-- MyFirstAppApp.swift: o ponto de entrada do programa; no SwiftUI ele tem só algumas linhas — “inicie e mostre a tela principal”;
+- MyFirstAppApp.swift: o ponto de entrada do programa; no SwiftUI ele tem só algumas linhas, “inicie e mostre a tela principal”;
 - ContentView.swift: a view da tela principal; tudo o que você vê agora está aqui;
-- Assets.xcassets: o depósito de recursos — ícones, imagens e cores ficam aqui;
-- Configurações do Target: clique no ícone azul do projeto à esquerda para entrar; número da versão, versão mínima do iOS e assinatura ficam aí. O nome de exibição e o ícone do app também se configuram nesse lugar.
+- Assets.xcassets: o depósito de recursos, ícones, imagens e cores ficam aqui;
+- Configurações do Target: clique no ícone azul do projeto à esquerda para entrar; número da versão, versão mínima do iOS e assinatura ficam aí. O nome de exibição e o ícone do app também se configuram nesse lugar
 
-#### 5. Truques de eficiência no Xcode: os cinco “cheats de atalhos” do iniciante
+5. Truques de eficiência no Xcode: os cinco “cheats de atalhos” do iniciante
 
 Dominando estes, você vai parecer “bem profissional”:
 
@@ -124,7 +124,7 @@ O simulador é ótimo, mas o aparelho de verdade é o destino final. Dá para te
 1. Conecte o iPhone pelo cabo de dados (ou faça o debug sem fio no mesmo Wi-Fi);
 2. Na lista de aparelhos no topo do Xcode, selecione seu celular; na primeira vez, ele pedirá para entrar com o Apple ID e configurará a assinatura automaticamente;
 3. No iPhone, vá em [Ajustes] > [Geral] > [VPN e Gerenciamento de Dispositivos] e confie no seu certificado de desenvolvedor;
-4. Clique no ▶ e o app é instalado no aparelho.
+4. Clique no ▶ e o app é instalado no aparelho
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -136,7 +136,7 @@ Um app assinado com Apple ID gratuito expira depois de 7 dias (basta rodar de no
 
 #### 7. Um primeiro teste + primeiros socorros para erros comuns
 
-Abra o ContentView.swift, troque o texto de Text("Hello, world!") pelo seu nome e pressione ⌘R para rodar de novo — em poucos segundos, seu nome aparece no simulador. Parabéns: você acabou de completar o primeiro ciclo completo de “editar código > compilar > instalar > executar”.
+Abra o ContentView.swift, troque o texto de Text("Hello, world!") pelo seu nome e pressione ⌘R para rodar de novo: em poucos segundos, seu nome aparece no simulador. Parabéns: você acabou de completar o primeiro ciclo completo de “editar código > compilar > instalar > executar”.
 
 ::: div .overflow-x-auto
 ```html
@@ -152,7 +152,7 @@ Tabela de primeiros socorros para erros de ambiente de iniciantes
 Mãos à obra: complete sua lista de “ritual de desenvolvedor”
 
 {class="mt-1"}
-① Instale o Xcode e faça o simulador funcionar; ② rode seu app no aparelho de verdade e tire uma captura de tela para guardar; ③ troque o texto de Hello pelo seu nome; ④ nas configurações do Target, mude o nome de exibição do app para “Meu primeiro app”. Com esses quatro passos feitos, você já é alguém com uma obra própria.
+① Instale o Xcode e faça o simulador funcionar. ② rode seu app no aparelho de verdade e tire uma captura de tela para guardar. ③ troque o texto de Hello pelo seu nome. ④ nas configurações do Target, mude o nome de exibição do app para “Meu primeiro app”. Com esses quatro passos feitos, você já é alguém com uma obra própria.
 :::
 
 ::: div .chapter-summary
@@ -160,7 +160,7 @@ Mãos à obra: complete sua lista de “ritual de desenvolvedor”
 Resumo do capítulo
 
 - Exigências: Mac + Xcode; sem Mac, aprenda a linguagem primeiro no Swift Playgrounds do iPad
-- Instale o Xcode pela App Store; versões novas exigem sistema novo — não adie a atualização
+- Instale o Xcode pela App Store; versões novas exigem sistema novo, não adie a atualização
 - Os cinco pontos ao criar um projeto: nome, Team, identificador da organização, SwiftUI e Swift
 - Regra de bolso do projeto: o código fica todo na pasta MyFirstApp/; as configurações do Target cuidam de versão e assinatura
 - Com Apple ID gratuito, o debug no aparelho tem limite de 7 dias de assinatura; a conta paga não tem essa limitação

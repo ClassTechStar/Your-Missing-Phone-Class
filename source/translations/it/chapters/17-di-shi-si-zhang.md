@@ -31,7 +31,7 @@ Capire i principi di crittografia del gestore di password aiuta a giudicare se u
 
 ##### 1. Crittografia AES-256
 
-AES (Advanced Encryption Standard) è uno standard di crittografia simmetrica riconosciuto dal NIST (National Institute of Standards and Technology) ed è ampiamente usato da banche, esercito e governi. "256" indica una chiave di 256 bit: per forzarla bruta occorrerebbe, in teoria, un tempo superiore all'età dell'universo. I principali gestori di password (1Password, Bitwarden, KeePass ecc.) usano AES-256 per cifrare la tua cassaforte.
+AES (Advanced Encryption Standard) è uno standard di crittografia simmetrica riconosciuto dal NIST, (National Institute of Standards and Technology) ed è ampiamente usato da banche, esercito e governi. "256" indica una chiave di 256 bit: per forzarla bruta occorrerebbe, in teoria, un tempo superiore all'età dell'universo. I principali gestori di password (1Password, Bitwarden, KeePass ecc.) usano AES-256 per cifrare la tua cassaforte.
 
 ##### 2. Architettura Zero-Knowledge
 
@@ -112,7 +112,7 @@ Conclusione: <strong>"lunghezza + casualità" contano più di "simboli complessi
 Il sito <a href="https://haveibeenpwned.com" class="text-primary hover:underline" target="_blank" rel="noopener">haveibeenpwned.com</a>, gestito dal ricercatore di sicurezza Troy Hunt, raccoglie gli account e le password trapelati nelle principali violazioni di dati. Puoi:
 
 1. Inserire l'email per verificare se il tuo account è stato esposto in una violazione.
-2. Usare la funzione Pwned Passwords per verificare se una password è nei database noti di fughe di dati (i gestori di password e i browser hanno già integrato questa query).
+2. Usare la funzione Pwned Passwords per verificare se una password è nei database noti di fughe di dati, (i gestori di password e i browser hanno già integrato questa query).
 
 Se una password è presente nel database delle fughe, <strong>per quanto complessa possa sembrare, va sostituita immediatamente</strong>: gli attacchi a dizionario proveranno per primi queste password note.
 
@@ -339,7 +339,7 @@ La versione gratuita di Bitwarden supporta la condivisione di password tra singo
 <i class="fas fa-lightbulb mr-2"></i>Rapporto qualità-prezzo di 1Password Famiglia
 
 {class="mt-1"}
-1Password Families costa circa 4,99 dollari al mese e supporta fino a 5 membri della famiglia; ciascuno ha una cassaforte personale + 4 casseforti condivise. A persona sono meno di 1 dollaro al mese: è la soluzione con la migliore esperienza di condivisione familiare oggi disponibile. La versione famiglia di Bitwarden a 10 dollari all'anno supporta 6 persone ed è più economica, ma l'interfaccia è leggermente inferiore.
+1Password Families costa circa 4,99 dollari al mese e supporta fino a 5 membri della famiglia. Ciascuno ha una cassaforte personale + 4 casseforti condivise. A persona sono meno di 1 dollaro al mese: è la soluzione con la migliore esperienza di condivisione familiare oggi disponibile. La versione famiglia di Bitwarden a 10 dollari all'anno supporta 6 persone ed è più economica, ma l'interfaccia è leggermente inferiore.
 :::
 
 ##### 4. Scenario team: condivisione di password di server/database

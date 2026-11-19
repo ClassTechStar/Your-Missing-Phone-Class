@@ -57,7 +57,7 @@ struct CounterView: View {
 
 #### 二、NavigationStack：頁面跳轉之「棧」
 
-iOS 16 以降，多頁導航用 NavigationStack——若一疊盤，推一入一，返則逐一彈出：
+iOS 16 以降，多頁導航用 NavigationStack：若一疊盤，推一入一，返則逐一彈出：
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink 即「可點之跳轉連結」；navigationTitle 自生導航欄之題與返鈕。欲程式化跳轉（如點「保存」而自返）者，用 @Environment(\.dismiss) 以闔當前之頁——二法相濟，九成導航之需備矣。
+NavigationLink 即「可點之跳轉連結」；navigationTitle 自生導航欄之題與返鈕。欲程式化跳轉（如點「保存」而自返）者，用 @Environment(\.dismiss) 以闔當前之頁，二法相濟，九成導航之需備矣。
 
 #### 三、彈窗與底部標籤：sheet 與 TabView
 
@@ -141,7 +141,7 @@ struct MainTabView: View {
 
 #### 四、List：iOS 之「國民列表」
 
-iOS 最常用而最具「蘋果味」之組件即 List——天生帶分割線、滑動而刪、點而高亮：
+iOS 最常用而最具「蘋果味」之組件即 List，天生帶分割線、滑動而刪、點而高亮：
 
 ::: div .code-block
 :::inline div .code-head
@@ -166,7 +166,7 @@ struct RecordListView: View {
 ```
 :::
 
-列表 + NavigationLink + sheet + TabView——合此四者，汝已能搭「賬本列表 → 點開詳情 → 點+彈錄入」完整 App 之骨架矣。次章記賬本之項，即如是搭成。
+列表 + NavigationLink + sheet + TabView，合此四者，汝已能搭「賬本列表 → 點開詳情 → 點+彈錄入」完整 App 之骨架矣。次章記賬本之項，即如是搭成。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-典型之用：返前台則刷數據，入後台則存草稿。iOS 於後台之運行管束甚嚴——常 App 入後台不久即被懸置（凍結），勿冀於後台潛作重務；誠欲定時之務，用第 68 章本地通知，而非「後台常駐」。
+典型之用：返前台則刷數據，入後台則存草稿。iOS 於後台之運行管束甚嚴，常 App 入後台不久即被懸置（凍結），勿冀於後台潛作重務；誠欲定時之務，用第 68 章本地通知，而非「後台常駐」。
 
 {class="mt-1"}
-作一假數據版記賬本之骨架：TabView 三標籤（賬本/統計/設置）→ 賬本頁以 List 陳假數據、點行跳詳情（NavigationStack）→ 右上「+」鈕彈錄入 sheet。不貯數據、不連網，純練骨架——骨架既成，第 65 章填以真數，如水到而渠成。
+作一假數據版記賬本之骨架：TabView 三標籤（賬本/統計/設置）→ 賬本頁以 List 陳假數據、點行跳詳情（NavigationStack）→ 右上「+」鈕彈錄入 sheet。不貯數據、不連網，純練骨架，骨架既成，第 65 章填以真數，如水到而渠成。
 :::
 
 ::: div .chapter-summary

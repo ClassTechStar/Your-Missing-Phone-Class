@@ -2,29 +2,29 @@
 id: di-er-shi-liu-zhang
 num: 26
 part: chao-yue-pian
-nav: Chapitre 26 : Les frontières actuelles de la technologie du téléphone
+nav: Chapitre 26 : Les nouvelles technologies peuvent attendre
 toc: default
 kind: chapter
 ---
 
-### Chapitre 26 : L'avant-garde technologique actuelle des smartphones
+### Chapitre 26 : Les nouvelles technologies peuvent attendre
 
 {class="chapter-intro mb-4"}
 Après avoir traité de la « fin de vie » des anciens smartphones, tournons-nous vers le présent. La période 2024-2026 connaît une explosion technologique concentrée : l'IA passe du cloud à la poche, la communication par satellite descend des modèles phares vers le milieu de gamme, les écrans pliables passent de « l'essai » à « l'usage courant », et la technologie des batteries connaît une percée au niveau des matériaux sans précédent depuis des années. Ce chapitre passe en revue ces technologies de pointe en cours de déploiement, pour vous aider à décider « s'il est temps de changer » et « quel appareil choisir ».
 
-#### I. Smartphone IA : argument marketing ou véritable révolution ?
+I. Smartphone IA : argument marketing ou véritable révolution ?
 
 Depuis 2024, presque tous les fabricants Android brandissent l'étendard du « smartphone IA » sur leurs modèles phares, et Apple a lancé Apple Intelligence dans iOS 18. Mais qu'est-ce qui définit vraiment un « smartphone IA » ? La profession s'est mise d'accord sur trois critères d'évaluation :
 
 - <strong>Grands modèles IA sur terminal</strong> : Le smartphone peut exécuter localement un modèle de langage d'environ 7B paramètres (comme les versions légères de Qwen, Llama, DeepSeek), accomplissant des tâches de résumé de texte, de traduction et de génération de contenu sans dépendre du cloud. Test : si les fonctions IA fonctionnent en mode avion, c'est un modèle côté appareil.
 - <strong>Puissance NPU (TOPS)</strong> : La puissance du NPU (unité de traitement neuronal) se mesure en TOPS (opérations par billion par seconde). Les puces phares de 2024 (comme Snapdragon 8 Gen3, Dimensity 9300) offrent 40-70 TOPS ; les nouvelles puces de 2025-2026 dépassent généralement les 100 TOPS, seuil matériel pour exécuter de grands modèles côté appareil.
-- <strong>Scénarios AI Agent</strong> : Il ne sait pas seulement « répondre aux questions », mais peut exécuter des chaînes de tâches inter-applications — par exemple « rassemble les photos de la réunion d'hier dans un album et partage-le avec Zhang San », le système appelant automatiquement plusieurs applications comme Album, Fichiers et WeChat. C'est le critère distinctif entre un smartphone IA et un « smartphone avec assistant IA ».
+- <strong>Scénarios AI Agent</strong> : Il ne sait pas seulement « répondre aux questions », mais peut exécuter des chaînes de tâches inter-applications, par exemple « rassemble les photos de la réunion d'hier dans un album et partage-le avec Zhang San », le système appelant automatiquement plusieurs applications comme Album, Fichiers et WeChat. C'est le critère distinctif entre un smartphone IA et un « smartphone avec assistant IA ».
 
-#### II. Comparaison des stratégies IA des fabricants : qui fait vraiment, qui se contente d'une étiquette ?
+II. Comparaison des stratégies IA des fabricants : qui fait vraiment, qui se contente d'une étiquette ?
 
 Les parcours IA de chaque fabricant diffèrent nettement, voici les points à surveiller lors de l'achat :
 
-- <strong>Apple Intelligence d'Apple (iOS 18+)</strong> : Met l'accent sur l'intégration des applications système — résumé d'e-mails, priorité des notifications, correction stylistique, retouche photo IA. Modèle principalement côté appareil, les tâches complexes passent par Private Cloud Compute. Avantages : protection de la vie privée et fluidité système ; inconvénients : lancement plus lent pour les scénarios en chinois, certaines fonctions progressivement prises en charge à partir de 2025.
+- <strong>Apple Intelligence d'Apple (iOS 18+)</strong> : Met l'accent sur l'intégration des applications système, résumé d'e-mails, priorité des notifications, correction stylistique, retouche photo IA. Modèle principalement côté appareil, les tâches complexes passent par Private Cloud Compute. Avantages : protection de la vie privée et fluidité système ; inconvénients : lancement plus lent pour les scénarios en chinois, certaines fonctions progressivement prises en charge à partir de 2025.
 - <strong>Google Gemini Nano</strong> : Intégré dans les séries Pixel 8/9, prend en charge « Circle to Search », Magic Compose, résumé d'enregistrement, etc. Gemini Nano est une véritable petit modèle côté appareil, l'écosystème open source est favorable, c'est l'implémentation de référence pour les smartphones Android IA.
 - <strong>Grand modèle Pangu de Huawei</strong> : Intègre l'assistant Xiaoyi de HarmonyOS, prend en charge la génération de contenu côté appareil, la retouche IA, l'effacement IA (suppression de passants), le résumé d'appel. Après HarmonyOS NEXT 5.0, l'intégration système est renforcée, les capacités IA sont profondément fusionnées avec le système.
 - <strong>Grand modèle MiLM de Xiaomi</strong> : Intégré à HyperOS, prend en charge le portrait IA, le résumé IA, le dessinateur IA, la super résolution. Xiaomi adopte la route « collaboration appareil-cloud », les modèles légers tournent côté appareil, les tâches lourdes dans le cloud.
@@ -32,16 +32,16 @@ Les parcours IA de chaque fabricant diffèrent nettement, voici les points à su
 
 <strong>Conseil d'achat</strong> : Si vous avez souvent besoin de l'IA pour traiter des documents professionnels ou organiser des informations, privilégiez les modèles à forte puissance de calcul côté appareil et à intégration système des fonctions IA ; si vous ne faites qu'occasionnellement de la retouche IA, un modèle milieu de gamme courant suffit.
 
-#### III. Communication par satellite : du « gadget » de flagship au standard du milieu de gamme
+III. Communication par satellite : du « gadget » de flagship au standard du milieu de gamme
 
 La communication par satellite est l'une des technologies qui a le plus réellement démocratisé ces deux dernières années. En 2022, le Huawei Mate 60 et l'iPhone 14 l'ont lancée en exclusivité sur les modèles phares ; en 2025, elle est disponible sur les modèles à 2000-3000 yuans.
 
 - <strong>Messages courts BeiDou étendus au milieu de gamme</strong> : La fonction de messages courts du satellite BeiDou (envoi de SMS de moins de 1000 caractères chinois + position) a été étendue à des modèles milieu de gamme comme Redmi, realme, iQOO, sans abonnement mensuel, utilisation gratuite. Adapté à la randonnée, au road trip, etc.
 - <strong>Appel satellite Tiantong</strong> : Les séries Huawei Mate 60/70, Honor Magic6, etc. prennent en charge les appels satellite Tiantong-1, permettant de passer/recevoir des appels satellite et d'envoyer des messages satellite. Nécessite un forfait satellite opérateur (environ 10-200 yuans/mois), adapté aux utilisateurs pénétrant souvent dans des zones inhabitées.
 - <strong>Messages satellite iPhone (SOS)</strong> : L'iPhone 14 et les modèles ultérieurs prennent en charge le SOS par satellite, permettant d'envoyer des messages texte aux services d'urgence et de partager la position. Service gratuit pendant 2 ans, prolongation payante dans certaines régions.
-- <strong>Conseils pratiques</strong> : Les citadins en ont rarement besoin, mais les amateurs de plein air et les professionnels en déplacement dans des zones reculées devraient fortement envisager un modèle avec fonction satellite — cela peut sauver des vies au moment critique.
+- <strong>Conseils pratiques</strong> : Les citadins en ont rarement besoin, mais les amateurs de plein air et les professionnels en déplacement dans des zones reculées devraient fortement envisager un modèle avec fonction satellite: cela peut sauver des vies au moment critique.
 
-#### IV. Maturité de l'écosystème pliable : peut-il servir d'appareil principal ?
+IV. Maturité de l'écosystème pliable : peut-il servir d'appareil principal ?
 
 Les écrans pliables sont passés de « l'essai technologique » à « l'usage principal possible ». Pour juger de leur maturité, trois critères : durabilité matérielle, adaptation des applications et écosystème d'interaction.
 
@@ -53,7 +53,7 @@ Les écrans pliables sont passés de « l'essai technologique » à « l'usage p
 
 <strong>Conseil d'achat</strong> : Si vous êtes un utilisateur intensif de lecture, de traitement de documents ou de vidéo, le pliable horizontal mérite d'être envisagé ; si vous recherchez la portabilité et l'aspect social, le pliable vertical est plus adapté. Il est recommandé de l'essayer en magasin pendant au moins 30 minutes avant de décider.
 
-#### V. 6G et Wi-Fi 7 : vitesse et frontières de la connectivité de nouvelle génération
+V. 6G et Wi-Fi 7 : vitesse et frontières de la connectivité de nouvelle génération
 
 Bien que la 6G ne soit pas encore vraiment déployée, les technologies associées sont en route :
 
@@ -61,7 +61,7 @@ Bien que la 6G ne soit pas encore vraiment déployée, les technologies associé
 - <strong>Wi-Fi 7(802.11be)</strong> : Devenu standard sur les modèles phares depuis 2024, débit théorique de pointe de 46 Gbps (4 fois le Wi-Fi 6), prenant en charge la largeur de canal 320 MHz, 4K-QAM et MLO (multi-link). En pratique, avec un routeur Wi-Fi 7, les modèles phares atteignent 2-5 Gbps, 2-3 fois plus rapides que le Wi-Fi 6E. Si vous passez à un smartphone Wi-Fi 7, n'oubliez pas d'associer un routeur Wi-Fi 7 pour exploiter pleinement les performances.
 - <strong>Bluetooth 5.4 et LE Audio</strong> : Les nouveaux modèles de 2024-2026 prennent généralement en charge le Bluetooth 5.4 et LE Audio (audio à faible consommation), peuvent connecter simultanément deux paires d'écouteurs pour écouter la même chanson, et l'audio diffusé Auracast permet à plusieurs personnes d'écouter la même source en synchronisation dans les lieux publics.
 
-#### VI. Batterie à anode silicium-carbone : l'autonomie connaît enfin une percée au niveau des matériaux
+VI. Batterie à anode silicium-carbone : l'autonomie connaît enfin une percée au niveau des matériaux
 
 L'autonomie des smartphones est critiquée depuis des années pour sa « charge quotidienne » ; depuis 2024, la popularisation des batteries à anode silicium-carbone a apporté une amélioration substantielle.
 
@@ -70,7 +70,7 @@ L'autonomie des smartphones est critiquée depuis des années pour sa « charge 
 - <strong>Association avec la charge rapide 100 W</strong> : L'anode silicium-carbone est compatible avec la charge rapide, une charge complète en 17 minutes avec 100 W/120 W n'est plus une nouveauté. En 2025, certains modèles prennent en charge 150 W-240 W, chargeant à 80 % en 10 minutes.
 - <strong>Conseil d'achat</strong> : Si vous êtes un utilisateur intensif, privilégiez les modèles post-2024 combinant « anode silicium-carbone + charge rapide 100 W », l'anxiété d'autonomie sera considérablement réduite.
 
-#### VII. Aperçu du chapitre : retenez ces technologies de pointe en une phrase
+VII. Aperçu du chapitre : retenez ces technologies de pointe en une phrase
 
 - Trois critères du smartphone IA : grand modèle côté appareil, puissance NPU en TOPS, scénarios AI Agent inter-applications.
 - Communication par satellite : messages courts BeiDown étendus au milieu de gamme, appels Tiantong encore réservés aux phares.

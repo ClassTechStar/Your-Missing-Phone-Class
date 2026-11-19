@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 La technologie évolue sans cesse, et les fonctionnalités du smartphone aussi. Communication par satellite, communication hors réseau, détection d'accident, technologie SparkLink... Ces fonctions qui semblent sorties de la science-fiction ont en fait déjà intégré notre quotidien. Découvrons ensemble ces technologies de pointe.
 
-#### 1. Communication par satellite : demander de l'aide même sans signal
+1. Communication par satellite : demander de l'aide même sans signal
 
 La communication par satellite est une avancée majeure dans le domaine des smartphones ces dernières années. Quand vous êtes en pleine nature sauvage, dans les montagnes profondes, sans aucun signal mobile, la communication par satellite peut être votre bouée de sauvetage.
 
@@ -48,7 +48,7 @@ Le smartphone établit directement une connexion avec un satellite de communicat
 La communication par satellite nécessite une antenne matérielle spéciale dans le smartphone, tous les smartphones ne la prennent pas en charge. De plus, la communication par satellite nécessite généralement un abonnement payant, mais la fonction de détresse d'urgence est généralement gratuite.
 :::
 
-#### 2. Communication hors réseau : un nouveau mode de communication à courte distance
+2. Communication hors réseau : un nouveau mode de communication à courte distance
 
 La « communication hors réseau » désigne la technologie permettant à deux smartphones de communiquer directement entre eux en l'absence de réseau mobile et de Wi-Fi.
 
@@ -68,13 +68,13 @@ Utilise le Bluetooth ou des fréquences radio dédiées pour établir une connex
 - <strong>Huawei</strong>: L'application Canghai prend en charge les appels hors réseau.
 - <strong>Xiaomi</strong>: Certaines fonctions du centre Xiaomi Miaoxiang.
 
-#### 3. Détection d'accident de voiture : sauver des vies au moment critique
+3. Détection d'accident de voiture : sauver des vies au moment critique
 
 La détection d'accident est une fonctionnalité qui utilise les capteurs du smartphone pour détecter un accident grave et appeler automatiquement les secours.
 
 ##### Principe de fonctionnement :
 
-Le smartphone utilise plusieurs capteurs — accéléromètre, gyroscope, baromètre, micro — pour déterminer de manière globale si une collision grave s'est produite. Après détection, le smartphone :
+Le smartphone utilise plusieurs capteurs: accéléromètre, gyroscope, baromètre, micro, pour déterminer de manière globale si une collision grave s'est produite. Après détection, le smartphone :
 
 1. Affiche un compte à rebours, vous demandant si vous allez bien.
 2. Si vous ne répondez pas à la fin du compte à rebours, appelle automatiquement les secours.
@@ -91,7 +91,7 @@ Le smartphone utilise plusieurs capteurs — accéléromètre, gyroscope, barom�
 - Peut se déclencher par erreur (comme sur des montagnes russes ou lors d'un exercice intense), il suffit d'annuler à temps.
 - Dépend des capteurs et des algorithmes, pas fiable à 100 %, mais constitue une couche de protection supplémentaire.
 
-#### 4. Technologie SparkLink : la connexion sans fil de nouvelle génération
+4. Technologie SparkLink : la connexion sans fil de nouvelle génération
 
 SparkLink est une technologie de communication sans fil de nouvelle génération développée sous l'impulsion de Huawei, visant à remplacer le Bluetooth et le Wi-Fi dans certains scénarios. Elle surpasse les solutions existantes sur les indicateurs clés : débit en bande de base jusqu'à 900 Mbps (largement supérieur aux 50 Mbps du Bluetooth), latence aussi basse que 20μs (Bluetooth environ 15 ms), réseau unique prenant en charge 4096 appareils connectés simultanément (Bluetooth généralement moins de 8).
 

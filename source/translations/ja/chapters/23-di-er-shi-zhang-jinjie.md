@@ -25,11 +25,11 @@ kind: supplement
 ##### よく使う機能一覧：
 
 - <strong>：パソコンに接続して高度な操作、フラッシュやデータ復元など。</strong>: PCに接続して高度な操作（フラッシュ、データ復元、ADB コマンドなど）を行うために必ず有効化するスイッチ。本章の「ADB 実用コマンド」小節を参照。
-- <strong>：画面にタッチポイントを表示、チュートリアル録画に適する。</strong>: 画面にタッチポイントを表示（小さな丸が指に追従）。操作チュートリアルやデモの録画に適しています。
+- <strong>：画面にタッチポイントを表示。チュートリアル録画に適する。</strong>: 画面にタッチポイントを表示（小さな丸が指に追従）。操作チュートリアルやデモの録画に適しています。
 
 ##### パフォーマンスと快適さ関連：
 
-- <strong>アニメーション速度調整（ウィンドウアニメーションスケール / トランジションアニメーションスケール / アニメーション時間スケール）</strong>: これら3つのオプションは App を開く時やページ切り替え時のアニメーション時間を制御します。デフォルトは1x。0.5xにするとスマホが「見た目上」速くなります（実際の処理速度は変わらず、アニメーションが速くなるだけ）。完全にオフにするとアニメーションなしで直接ジャンプします。多くのギークは0.5xに設定し、遷移感を残しつつ速さを演出。完全オフは操作がぎこちなくなり、本来のカクつきを隠して「とても滑らか」と誤認させる原因にもなります。
+- <strong>アニメーション速度調整（ウィンドウアニメーションスケール / 、トランジションアニメーションスケール / アニメーション時間スケール）</strong>: これら3つのオプションは App を開く時やページ切り替え時のアニメーション時間を制御します。デフォルトは1x。0.5xにするとスマホが「見た目上」速くなります（実際の処理速度は変わらず、アニメーションが速くなるだけ）。完全にオフにするとアニメーションなしで直接ジャンプします。多くのギークは0.5xに設定し、遷移感を残しつつ速さを演出。完全オフは操作がぎこちなくなり、本来のカクつきを隠して「とても滑らか」と誤認させる原因にもなります。
 - <strong>GPU レンダリングの強制（Force GPU Rendering）</strong>: すべての2D描画を CPU ではなく GPU に強制的に処理させます。旧機種や最適化の不十分な App でスクロールの滑らかさが向上することがありますが、GPU 負荷と消費電力も増加します。現代のスマホはデフォルトで GPU レンダリングを多用しているため、このスイッチは中高級機種への影響は限定的で、歴史的な名残のオプションです。一般ユーザーはデフォルトのままで問題ありません。
 - <strong>GPU レンダリングプロファイリングの表示（Profile GPU Rendering）</strong>: 画面上に棒グラフで毎フレームのレンダリング所要時間をリアルタイム表示。緑色の横線は16.6ms（60fps のフレーム時間閾値）を表します。棒が緑線を超えるとフレームドロップが発生しています。これは開発者が App のカクつきを調査する強力なツールで、一般ユーザーもどの App の最適化が不十分かを比較できます——例えば、ある App のスクロール時に棒が頻繁に赤線を超えるなら、ほぼその App が原因です。
 
@@ -48,11 +48,11 @@ kind: supplement
 
 #### 二、OEM ロック解除：開発者オプション内の「フラッシュスイッチ」
 
-開発者オプションの中に目立たないが重要なスイッチがあります——「OEM ロック解除」（一部ブランドでは「OEM アンロック許可」や「デバイスアンロック」と呼ばれます）。このスイッチ自体は BL ロックを解除しませんが、「事前許可」です：これをオンにして初めて、メーカーが fastboot コマンドやブランドツールで BL の解除を許可します。
+開発者オプションの中に目立たないが重要なスイッチがあります，「OEM ロック解除」（一部ブランドでは「OEM アンロック許可」や「デバイスアンロック」と呼ばれます）。このスイッチ自体は BL ロックを解除しませんが、「事前許可」です：これをオンにして初めて、メーカーが fastboot コマンドやブランドツールで BL の解除を許可します。
 
 - <strong>スイッチの役割</strong>: メーカーに「私は保証を放棄し、自己責任で BL の解除を許可してほしい」と宣言するようなものです。このスイッチがオフの場合、BL 解除コマンドはすべて直接拒否されます。
 - <strong>BL ロックとの関係</strong>: OEM ロック解除は「資格申請」、BL 解除が「実際の操作」です。前者はスマホの設定でタップするだけ、後者はメーカーの公式サイトで解除コードを申請し、PC で fastboot コマンド（例： <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>）を実行する必要があり、両方が不可欠です。
-- <strong>初期化するとリセットされるか</strong>: はい。「OEM ロック解除」スイッチは初期化後にオフに戻りますが、BL ロックは一度解除すると物理レベルの状態となり、初期化では再ロックされません——手動で <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> を実行して再ロックする必要があります。
+- <strong>初期化するとリセットされるか</strong>: はい。「OEM ロック解除」スイッチは初期化後にオフに戻りますが、BL ロックは一度解除すると物理レベルの状態となり、初期化では再ロックされません，手動で <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> を実行して再ロックする必要があります。
 - <strong>いつオンにすべきか</strong>: フラッシュや Root を確実に行う場合を除き、オフのままにしてください。「USB デバッグ」とは独立したスイッチで、フラッシュ時は通常両方をオンにします。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -75,7 +75,7 @@ BLロックの役割：
 
 ##### 各ブランドのBLロック方針：
 
-- <strong>Xiaomi</strong>：ロック解除可能。アカウント連携と待機期間（7〜30日）が必要。
+- <strong>Xiaomi</strong>：ロック解除可能。アカウント連携と待機期間（7〜30日）が必要
 - <strong>Huawei</strong>OnePlus
 - <strong>：アンロック可能、比較的緩和。</strong>OPPO/vivo
 - <strong>：一部機種はアンロック可能、申請が必要。</strong>Samsung
@@ -84,12 +84,12 @@ BLロックの役割：
 
 #### 四、ADB 実用コマンド：PC からスマホを操作
 
-ADB の正式名称は Android Debug Bridge で、Google が公式提供するコマンドラインツールです。PC から USB または Wi-Fi 経由で Android スマホと通信できます。Root 不要で、スマホの「USB デバッグ」がオンなら使えます。「PC からスマホに指示を出すリモコン」と理解してください——フラッシュ、App インストール、ファイル転送、ログ確認にすべて必要です。
+ADB の正式名称は Android Debug Bridge で、Google が公式提供するコマンドラインツールです。PC から USB または Wi-Fi 経由で Android スマホと通信できます。Root 不要で、スマホの「USB デバッグ」がオンなら使えます。「PC からスマホに指示を出すリモコン」と理解してください，フラッシュ、App インストール、ファイル転送、ログ確認にすべて必要です。
 
 ##### USB で接続する方法：
 
 1. スマホ側：開発者オプション → 「USB デバッグ」をオン。
-2. PC 側：Google 公式から Platform Tools（ <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb</code> 3. タスク（Task）：AIに何をするか明確に伝える <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot</code> の2つの実行ファイルを含む）をダウンロードし、任意のディレクトリに解凍。
+2. PC 側：Google 公式から Platform Tools（ <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb</code> 3. タスク「Task」：AIに何をするか明確に伝える <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot</code> の2つの実行ファイルを含む）をダウンロードし、任意のディレクトリに解凍。
 3. データケーブルでスマホと PC を接続。スマホに「USB デバッグを許可しますか？」のポップアップが表示されるので、「常に許可」にチェックを入れて確定。
 4. PC のコマンドライン（Windows の PowerShell や cmd）で <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>を実行し、 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">List of devices attached / xxxxxxxx device</code>のような出力があれば接続成功です。
 
@@ -98,7 +98,7 @@ ADB の正式名称は Android Debug Bridge で、Google が公式提供する�
 <i class="fas fa-exclamation-triangle mr-2"></i>ドライバーと認証ポップアップを見逃さないで
 
 {class="mt-1"}
-Windows ユーザーで <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> が「unauthorized」と表示されるかデバイスがリストされない場合、多くはドライバーが未インストールかスマホで「許可」を押し忘れたのが原因です。Samsung/Xiaomi などのブランドは各社の「USB ドライバー」や「スマホアシスタント」をインストールしてドライバーを補完できます。Mac と Linux は通常ドライバー不要です。スマホのポップアップを誤って消してしまった場合は、ケーブルを挿し直すと再表示されます。
+Windows ユーザーで <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> が「unauthorized」と表示されるかデバイスがリストされない場合、多くはドライバーが未インストールかスマホで「許可」を押し忘れたのが原因です。Samsung/Xiaomi などのブランドは各社の「USB 、ドライバー」や「スマホアシスタント」をインストールしてドライバーを補完できます。Mac と Linux は通常ドライバー不要です。スマホのポップアップを誤って消してしまった場合は、ケーブルを挿し直すと再表示されます。
 :::
 
 ##### よく使う ADB コマンド：
@@ -140,7 +140,7 @@ Android 4.2 以降はマルチユーザーをサポートし、各ユーザー�
 
 #### 五、Root 権限：Android の「スーパー管理者」
 
-Root 権限は Linux のスーパーユーザーに相当し（/ ディレクトリに対して完全な制御権を持ち、任意のファイルの読み書きが可能）、Android システムの最高権限です。Windows の Administrator とは本質的な違いがあります：Windows はセキュリティ上の理由から管理者に多くの制限を設けており（真の最高権限は TrustedInstaller）、Administrator であっても Linux root のように直接 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">sudo rm -rf /*</code>を実行できません。Root 権限を取得すると、システムファイルの変更、プリインストール App のアンインストール、Root 必要な高度な App の使用が可能になります。
+Root 権限は Linux のスーパーユーザーに相当し（/ ディレクトリに対して完全な制御権を持ち、任意のファイルの読み書きが可能）、Android システムの最高権限です。Windows の Administrator とは本質的な違いがあります：Windows はセキュリティ上の理由から管理者に多くの制限を設けており（真の最高権限は TrustedInstaller）。Administrator であっても Linux root のように直接 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">sudo rm -rf /*</code>を実行できません。Root 権限を取得すると、システムファイルの変更、プリインストール App のアンインストール、Root 必要な高度な App の使用が可能になります。
 
 ##### アンインストールできないプリインストールアプリを削除。
 
@@ -167,12 +167,12 @@ Root 権限は Linux のスーパーユーザーに相当し（/ ディレクト
 
 #### 六、SafetyNet と Play Integrity 認証：なぜ Root 後に銀行 App が使えないのか
 
-多くの Root ユーザーがこんな絶望的瞬間を経験しています：Root 後、意気揚々とモジュールをインストールしたのに、銀行 App を開くと——「お使いのデバイスは安全でないため使用できません」。Google Pay も使えず、Netflix すら高画質再生を拒否されます。その背後にあるのは Google の2つのデバイス完全性認証メカニズム：旧式の SafetyNet と新型の Play Integrity API です。
+多くの Root ユーザーがこんな絶望的瞬間を経験しています：Root 後、意気揚々とモジュールをインストールしたのに、銀行 App を開くと：「お使いのデバイスは安全でないため使用できません」。Google Pay も使えず、Netflix すら高画質再生を拒否されます。その背後にあるのは Google の2つのデバイス完全性認証メカニズム：旧式の SafetyNet と新型の Play Integrity API です。
 
 ##### SafetyNet / Play Integrity とは：
 
 - <strong>SafetyNet Attestation（旧版、2017年〜）</strong>: Google が早期に発表したデバイス完全性チェック API。App はこれを通じて Google サーバーに「このデバイスは CTS 互換性テストに合格しているか、未変更の公式状態か」を問い合わせます。戻り値は Basic Attestation（基本検証）と Strong Attestation（強力検証、ハードウェアキー依存）に分かれます。Google は SafetyNet を2024年以降順次廃止すると発表しています。
-- <strong>Play Integrity API（新版、2022年〜）</strong>: Google が発表した代替方案で、SafetyNet より厳格かつ包括的です。デバイス完全性に加え、「アプリ完全性」（App が改ざんされていないか）と「アカウント/認可完全性」（ユーザーアカウントが Google に信頼されているか）も含みます。新規 App は Play Integrity に移行すべきです。
+- <strong>Play Integrity API（新版、2022年〜）</strong>: Google が発表した代替方案で、SafetyNet より厳格かつ包括的です。デバイス完全性に加え、「アプリ完全性」（App が改ざんされていないか）と「アカウント/認可完全性」（ユーザーアカウントが 、Google に信頼されているか）も含みます。新規 App は Play Integrity に移行すべきです。
 - <strong>誰が使うか</strong>: 銀行、金融、決済系 App（Google Pay、各銀行のネットバンキング、支付宝/WeChat Pay の一部シーン）、ストリーミング（Netflix の高画質著作権保護）、一部ゲームのアンチチート（Tencent/NetEase の一部ゲーム）、企業オフィス App（MDM デバイスコンプライアンスチェック）。
 
 ##### Play Integrity の3段階認証結果：
@@ -184,7 +184,7 @@ Root 権限は Linux のスーパーユーザーに相当し（/ ディレクト
 
 ##### なぜ Root 後にこれらの App が使えなくなるのか：
 
-App は Play Integrity API で Google サーバーに認証リクエストを送信し、Google はデバイスの複数指標をチェックします——Bootloader ロック状態、システムパーティションの変更有無、su バイナリの存在、SELinux が Permissive モードかなど。いずれかの異常が認証レベルの低下または空を引き起こし、銀行 App は「デバイスが安全でない」と判断してサービスを拒否します。
+App は Play Integrity API で Google サーバーに認証リクエストを送信し、Google はデバイスの複数指標をチェックします，Bootloader ロック状態、システムパーティションの変更有無、su バイナリの存在、SELinux が Permissive モードかなど。いずれかの異常が認証レベルの低下または空を引き起こし、銀行 App は「デバイスが安全でない」と判断してサービスを拒否します。
 
 ##### 現代の隠蔽方案：Magisk Hide / Shamiko / Zygisk：
 
@@ -208,7 +208,7 @@ Google は定期的に検出ルールを更新し、App メーカーも Play Int
 
 - <strong>：有効化して、アニメーション加速などの機能を体験しても良いが、他の設定は変更しない。</strong>: オンにして、アニメーション加速、GPU レンダリングプロファイリングなどの機能を体験できますが、理解できない他のオプションはむやみに変更しないでください。
 - <strong>OEM ロック解除と BL ロック</strong>: フラッシュや Root の予定がなければ、両方のスイッチをデフォルト（オフ）のままが最も安全です。
-- <strong>ADB</strong>: Root 不要の強力ツールで、一般でも使えます——例えば <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> でプリインストール App をアンインストール。ただし削除前にパッケージ名が削除可能か必ず確認してください。
+- <strong>ADB</strong>: Root 不要の強力ツールで、一般でも使えます，例えば <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> でプリインストール App をアンインストール。ただし削除前にパッケージ名が削除可能か必ず確認してください。
 - <strong>ワイヤレスシステムアップデート</strong>: 一般ユーザーの Root は推奨しません。リスクが利益を上回ります。どうしても必要な機能がある場合は、Root 不要の代替方案を先に調べましょう（ADB でプリインストール削除、Shizuku で一部 Root 機能を代替など）。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -220,5 +220,5 @@ Google は定期的に検出ルールを更新し、App メーカーも Play Int
 2. 設定に戻り、「開発者オプション」を見つける（通常は設定下部または「システム」内）。
 3. 「ウィンドウアニメーションスケール」、「トランジションアニメーションスケール」、「アニメーション時間スケール」を見つけ、すべて0.5xまたはオフに設定。
 4. スマホが速くなったか感じてみる。
-5. 第二十章付録：Termux——Androidデバイス上のポータブルLinuxターミナル環境
+5. 第二十章付録：Termux——Androidデバイス上のポータブルLinuxターミナル環境。
 :::

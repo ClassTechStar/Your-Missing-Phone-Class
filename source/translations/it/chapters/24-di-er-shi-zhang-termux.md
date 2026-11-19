@@ -13,7 +13,7 @@ Se la modalità sviluppatore non ti sembra ancora abbastanza "hardcore" e vuoi p
 
 #### 1. Che cos'è Termux
 
-Termux è un'applicazione open source di emulatore di terminale e ambiente Linux progettata per dispositivi Android; senza permessi di root offre sul telefono un'esperienza shell Linux completa. Essendo un'app leggera (il pacchetto di installazione è di circa 30 MB), Termux supporta un ecosistema software ricco tramite il sistema di gestione pacchetti APT e permette di eseguire su dispositivo mobile strumenti come Python, Node.js, Git, SSH, persino di allestire server o di fare penetration testing.
+Termux è un'applicazione open source di emulatore di terminale e ambiente Linux progettata per dispositivi Android; senza permessi di root offre sul telefono un'esperienza shell Linux completa. Essendo un'app leggera (il pacchetto di installazione è di circa 30 MB), Termux supporta un ecosistema software ricco tramite il sistema di gestione pacchetti APT , e permette di eseguire su dispositivo mobile strumenti come Python, Node.js, Git, SSH, persino di allestire server o di fare penetration testing.
 
 Il vantaggio principale di Termux è la leggerezza e l'alta estendibilità, adatto a scenari di sviluppo, apprendimento e amministrazione di sistema. Integra pacchetti standard ed emulazione terminale precisa in una soluzione open source.
 
@@ -21,7 +21,7 @@ Il vantaggio principale di Termux è la leggerezza e l'alta estendibilità, adat
 
 ##### Ambiente Linux completo
 
-Termux <strong>include solo Bash</strong> come shell. Per usare altre shell come Zsh o fish, occorre installarle manualmente col gestore pacchetti, ad esempio: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> o <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux supporta editor come Vim, Nano ed Emacs e offre un'esperienza a riga di comando vicina a quella nativa. Con "pkg install" si possono installare oltre 2000 pacchetti, inclusi strumenti di sviluppo e sicurezza come GCC, OpenSSH, SQLMap.
+Termux <strong>include solo Bash</strong> come shell. Per usare altre shell come Zsh o fish, occorre installarle manualmente col gestore pacchetti, ad esempio: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> o <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux supporta editor come Vim, Nano ed Emacs e offre un'esperienza a riga di comando vicina a quella nativa. Con "pkg install" si possono installare oltre 2000 pacchetti. Inclusi strumenti di sviluppo e sicurezza come GCC, OpenSSH, SQLMap.
 
 ##### Gestione pacchetti potente
 
@@ -130,7 +130,7 @@ L'ultima versione stabile di Termux è la v0.118.2, per dispositivi con Android 
 <i class="fas fa-info-circle mr-2"></i>In sintesi
 
 {class="mt-1"}
-Termux porta la potente esperienza del terminale Linux sui dispositivi Android e trasforma il telefono in uno strumento portatile di sviluppo e apprendimento. Che tu sia uno sviluppatore, un amministratore di sistema o un appassionato di tecnologia, con Termux puoi godere di un'esperienza a riga di comando completa su dispositivo mobile, realizzando l'idea di un "Linux in tasca".
+Termux porta la potente esperienza del terminale Linux sui dispositivi Android , e trasforma il telefono in uno strumento portatile di sviluppo e apprendimento. Che tu sia uno sviluppatore, un amministratore di sistema o un appassionato di tecnologia, con Termux puoi godere di un'esperienza a riga di comando completa su dispositivo mobile, realizzando l'idea di un "Linux in tasca".
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

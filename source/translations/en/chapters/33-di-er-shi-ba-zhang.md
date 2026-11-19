@@ -2,19 +2,19 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Chapter 28: Spend Wisely, Buy the Right Phone — The Ultimate Phone-Buying Guide
+nav: Chapter 28: Before You Buy, Settle These Three Things First
 toc: default
 kind: chapter
 ---
 
-### Chapter 28: Spend Wisely on Your Dream Phone — The Ultimate Smartphone Buying Guide
+### Chapter 28: Before You Buy, Settle These Three Things First
 
 {class="chapter-intro mb-4"}
-When buying a phone, many people spend a week reading reviews, a month comparing prices, then end up spending five or six thousand on a flagship they don't actually need. This chapter doesn't list spec sheets — you can find those on official websites. What I want to give you is a "phone selection mindset" — so no matter what new phone hits the market, you can judge whether it suits you.
+When buying a phone, many people spend a week reading reviews, a month comparing prices, then end up spending five or six thousand on a flagship they don't actually need. This chapter doesn't list spec sheets, you can find those on official websites. What I want to give you is a "phone selection mindset": so no matter what new phone hits the market, you can judge whether it suits you.
 
 #### 0. Three-Step Phone Selection: Needs → Budget → Model
 
-Many people ask online "what phone should I buy for 3,000 yuan?" — this question can't actually be answered, because we don't know what you'll primarily use the phone for. The correct thinking order when buying a phone should be:
+Many people ask online "what phone should I buy for 3,000 yuan?": this question can't actually be answered, because we don't know what you'll primarily use the phone for. The correct thinking order when buying a phone should be:
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
@@ -26,7 +26,7 @@ Many people ask online "what phone should I buy for 3,000 yuan?" — this questi
 3. <strong>Finally, Pick a Model</strong>: Use your prioritized needs and budget to match with models.
 :::
 
-#### I. How to Read Core Specs — You Don't Need to Understand Everything, Just These Five
+I. How to Read Core Specs — You Don't Need to Understand Everything, Just These Five
 
 Spec sheets have dozens of data points, but ordinary users only need to focus on these five dimensions:
 
@@ -73,7 +73,7 @@ Spec sheets have dozens of data points, but ordinary users only need to focus on
 
 #### II. Budget-Tier Recommendations (Based on Mid-2026 Market)
 
-The following recommendations are based on the mid-2026 Chinese mainland market. Prices are official starting prices. Actual prices fluctuate — refer to the price at time of purchase.
+The following recommendations are based on the mid-2026 Chinese mainland market. Prices are official starting prices. Actual prices fluctuate, refer to the price at time of purchase.
 
 ##### 💰 Under 1,000 Yuan: Can Make Calls, Use WeChat — Good Enough
 
@@ -175,8 +175,8 @@ Here are the most common "user profiles" — just find the one that matches you:
 {class="list-decimal pl-6 mb-3 space-y-2"}
 1. <strong>Pitfall 1: Four or Five Cameras Don't Equal Good Photos</strong>— Manufacturers love to stack lens numbers in specs, but two of them are often 2MP "filler lenses" (macro + depth) that are practically useless. When evaluating a phone's photography, <strong>only look at the main + ultrawide + telephoto</strong>— these three are enough. You can pretend the rest don't exist.
 2. <strong>Pitfall 2: Don't Be Fooled by 108 Megapixels</strong>— High megapixel count doesn't mean good image quality. Sensor size, aperture, and algorithm tuning matter far more than pixel count. Many flagship phones use 50MP large-sensor cameras that produce photos far superior to some 108MP budget phones.
-3. <strong>Pitfall 3: Don't Buy Carrier-Locked Phones</strong>— "Deposit phone credit, get a free phone" looks like a great deal, but carrier-customized phones have slow system updates, non-removable pre-installed apps, and are usually carrier-locked (only work with that carrier's SIM card). You think you're saving money, but you're actually getting "locked in."
-4. <strong>Pitfall 4: "Curved Screens Are Premium" — Marketing, Not Truth</strong>— Curved screens were once a flagship signature, but more and more people are discovering their problems: hard to apply screen protectors, edge accidental touches, and expensive repairs when cracked. The 2026 trend is returning to "slightly curved" or even "completely flat" screens. Don't choose a curved screen just because "curved means premium."
+3. <strong>Pitfall 3: Don't Buy Carrier-Locked Phones</strong>— "Deposit phone credit, get a free phone" looks like a great deal, but carrier-customized phones have slow system updates, non-removable pre-installed apps, and are usually carrier-locked (only work with that carrier's SIM card). You think you're saving money, but you're actually getting "locked in.".
+4. <strong>Pitfall 4: "Curved Screens Are Premium", Marketing, Not Truth</strong>— Curved screens were once a flagship signature, but more and more people are discovering their problems: hard to apply screen protectors, edge accidental touches, and expensive repairs when cracked. The 2026 trend is returning to "slightly curved" or even "completely flat" screens. Don't choose a curved screen just because "curved means premium.".
 5. <strong>Pitfall 5: Not All "AI Phones" Are Actually Useful</strong>— In 2026, every manufacturer is shouting "AI phone," but many just renamed their existing voice assistant. Genuinely useful AI features include: real-time translation, AI eraser (removing people from photos), AI photo editing, on-device LLM inference, and localized smart summaries. Other flashy features are mostly gimmicks.
 
 #### V. When Is the Best Time to Buy?
@@ -190,8 +190,8 @@ Here are the most common "user profiles" — just find the one that matches you:
 #### VI. Where to Buy — Which Channels Are Reliable?
 
 - <strong>Brand Official Store / Tmall Flagship Store / JD.com Self-Operated</strong>: Safest option. No price advantage, but no worry about refurbished or counterfeit goods, and best after-sales service.
-- <strong>Pinduoduo "10 Billion Subsidy"</strong>: Lowest prices, but only buy from stores labeled with "10 Billion Subsidy." Avoid unlabeled ones. Record an unboxing video when you receive the goods — you can return if there are issues.
-- <strong>Physical Retail Stores</strong>: You can touch and feel the phone. Note: Sales staff will push high-margin models (not the most suitable ones for you). Before visiting, lock in 2-3 target models online, and tell them "I only want to see these."
+- <strong>Pinduoduo "10 Billion Subsidy"</strong>: Lowest prices, but only buy from stores labeled with "10 Billion Subsidy." Avoid unlabeled ones. Record an unboxing video when you receive the goods, you can return if there are issues.
+- <strong>Physical Retail Stores</strong>: You can touch and feel the phone. Note: Sales staff will push high-margin models (not the most suitable ones for you). Before visiting, lock in 2-3 target models online, and tell them "I only want to see these.".
 - <strong>Used Platforms (Xianyu / Zhuanzhuan)</strong>: Cheaper but risky. If buying used, remember three rules: require purchase invoice or order screenshot, require IMEI number for verification, <strong>only use platform transactions, never transfer money privately</strong>.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

@@ -50,6 +50,94 @@ CLASS_SUB = 'text-gray-500 dark:text-gray-500 pl-6 text-xs'
 NUM_ITEM = 'mr-1.5 text-xs text-gray-400 font-mono'
 NUM_SUB = 'mr-1.5 text-xs text-gray-300 font-mono'
 
+# 每章页脚的「报告错误」入口（方案 §8.3：勘误入口三处之一）。
+# 路径用 ../ 开头：书页在 v1.8/ 或 v1.9/ 下，勘误页在仓库根；
+# 同步到站点后由 scripts/sync_site.py 降级为 ./。
+#
+# **必须逐语言本地化**：lint 的 residual 检查要求非中文语言版里汉字数为 0，
+# 文言文版还必须是繁体字形。一段中文页脚塞进 18 种语言，
+# 等于在每个外文页面里留下 3500 多个汉字。
+ERRATA_FOOTER = {
+    'zh-CN': ('发现这一章有错？到<a href="../errata.html" class="text-primary hover:underline">'
+              '勘误页</a>报告（路径过时、事实有误、说不清，都欢迎提），'
+              '或加 QQ 群 1074995524。本页路径版本见章首锚点。'),
+    'zh-TW': ('發現這一章有錯？到<a href="../errata.html" class="text-primary hover:underline">'
+              '勘誤頁</a>回報（路徑過時、事實有誤、說不清，都歡迎提），'
+              '或加 QQ 群 1074995524。本頁路徑版本見章首錨點。'),
+    'yue': ('呢一章有錯？去<a href="../errata.html" class="text-primary hover:underline">'
+            '勘誤頁</a>講（路徑過時、事實唔啱、講唔明，都歡迎講），'
+            '或者加 QQ 群 1074995524。本頁路徑版本見章首錨點。'),
+    'lzh': ('此章有誤乎？往<a href="../errata.html" class="text-primary hover:underline">'
+            '勘誤頁</a>言之（路徑過時、事實有訛、不能明言者，皆可言之），'
+            '或入 QQ 群 1074995524。本頁路徑版本，見章首之錨。'),
+    'ja': ('この章に誤りがありましたら、<a href="../errata.html" class="text-primary hover:underline">'
+           '勘誤ページ</a>へ（古いパス、違う事実、読みにくい表現、すべて歓迎）。'
+           'QQ グループ 1074995524 でも報告できます。'),
+    'ko': ('이 장에 오류가 있으면 <a href="../errata.html" class="text-primary hover:underline">'
+           '오류 신고 페이지</a>로 알려 주세요(오래된 경로, 잘못된 사실, 이해하기 어려운 설명 — 모두 환영). '
+           'QQ 그룹 1074995524 로도 됩니다.'),
+    'en': ('Found an error in this chapter? '
+           '<a href="../errata.html" class="text-primary hover:underline">Report it on the errata page</a>'
+           ' — outdated path, wrong fact, unclear wording, all welcome. '
+           'You can also reach us on QQ group 1074995524.'),
+    'ru': ('Нашли ошибку в этой главе? '
+           '<a href="../errata.html" class="text-primary hover:underline">Сообщите на странице исправлений</a>'
+           ' — устаревший путь, неверный факт, непонятная формулировка: всё приветствуется. '
+           'Можно написать и в QQ-группу 1074995524.'),
+    'it': ('Trovato un errore in questo capitolo? '
+           '<a href="../errata.html" class="text-primary hover:underline">Segnalalo sulla pagina delle correzioni</a>'
+           ' — percorso superato, fatto impreciso, frase poco chiara: tutto benvenuto. '
+           'Puoi anche scrivere nel gruppo QQ 1074995524.'),
+    'pt': ('Encontrou um erro neste capítulo? '
+           '<a href="../errata.html" class="text-primary hover:underline">Reporte na página de erratas</a>'
+           ' — caminho desatualizado, facto incorreto, frase confusa: tudo bem-vindo. '
+           'Também pode escrever no grupo QQ 1074995524.'),
+    'es': ('¿Has encontrado un error en este capítulo? '
+           '<a href="../errata.html" class="text-primary hover:underline">Repórtalo en la página de erratas</a>'
+           ' — ruta obsoleta, dato incorrecto, frase confusa: todo bienvenido. '
+           'También puedes escribir en el grupo QQ 1074995524.'),
+    'fr': ('Une erreur dans ce chapitre ? '
+           '<a href="../errata.html" class="text-primary hover:underline">Signalez-la sur la page des errata</a>'
+           ' — chemin obsolète, fait inexact, phrase confuse : tout est bienvenu. '
+           'Vous pouvez aussi écrire dans le groupe QQ 1074995524.'),
+    'de': ('Fehler in diesem Kapitel gefunden? '
+           '<a href="../errata.html" class="text-primary hover:underline">Melden Sie ihn auf der Errata-Seite</a>'
+           ' — veralteter Pfad, falsche Angabe, unklarer Satz: alles willkommen. '
+           'Sie erreichen uns auch in der QQ-Gruppe 1074995524.'),
+    'el': ('Βρήκατε λάθος σε αυτό το κεφάλαιο; '
+           '<a href="../errata.html" class="text-primary hover:underline">Αναφέρετέ το στη σελίδα διορθώσεων</a>'
+           ' — παλιός δρόμος, λανθασμένο γεγονός, ασαφής πρόταση: όλα ευπρόσδεκτα. '
+           'Μπορείτε επίσης να γράψετε στην ομάδα QQ 1074995524.'),
+    'ar': ('وجدت خطأً في هذا الفصل؟ '
+           '<a href="../errata.html" class="text-primary hover:underline">أبلغ عنه في صفحة الأخطاء</a>'
+           ' — مسار قديم، معلومة غير دقيقة، صياغة غامضة: كلها مقبولة. '
+           'يمكنك الكتابة أيضًا في مجموعة QQ 1074995524.'),
+    'he': ('מצאתם שגיאה בפרק זה? '
+           '<a href="../errata.html" class="text-primary hover:underline">דיווחו בדף התיקונים</a>'
+           ' — נתיב לא מעודכן, עובדה שגויה, ניסוח לא ברור: הכל קבל. '
+           'אפשר גם לכתוב בקבוצת QQ 1074995524.'),
+    'th': ('พบข้อผิดพลาดในบทนี้หรือไม่? '
+           '<a href="../errata.html" class="text-primary hover:underline">แจ้งได้ที่หน้าแก้ไข</a>'
+           ' — เส้นทางล้าสมัย ข้อเท็จจริงไม่ถูกต้อง ถ้อยคำกำกวม: ทั้งหมดยินดีรับ. '
+           'แจ้งผ่านกลุ่ม QQ 1074995524 ก็ได้.'),
+    'id': ('Menemukan kesalahan di bab ini? '
+           '<a href="../errata.html" class="text-primary hover:underline">Laporkan di halaman koreksi</a>'
+           ' — jalur yang usang, fakta yang keliru, kalimat yang membingungkan: semuanya diterima. '
+           'Anda juga bisa menghubungi kami di grup QQ 1074995524.'),
+    'ms': ('Jumpa ralat dalam bab ini? '
+           '<a href="../errata.html" class="text-primary hover:underline">Laporkan di halaman ralat</a>'
+           ' — laluan lapuk, fakta salah, ayat yang mengelirukan: semuanya dialtrexceka. '
+           'Anda juga boleh menghubungi kami dalam kumpulan QQ 1074995524.'),
+}
+ERRATA_FOOTER_DEFAULT = ERRATA_FOOTER['en']
+
+
+def errata_footer(lang: str) -> str:
+    return ('\n                <p class="text-xs text-gray-500 dark:text-gray-400 mt-6 pt-3 '
+            'border-t border-gray-200 dark:border-gray-700">'
+            + ERRATA_FOOTER.get(lang, ERRATA_FOOTER_DEFAULT)
+            + '</p>\n            ')
+
 
 class BookError(RuntimeError):
     pass
@@ -155,7 +243,7 @@ def build(root: Path, lang: str = 'zh-CN', out: Path = None, book_path: Path = N
             if comment:
                 blocks.append('                ' + comment)
             blocks.append(f'                <div id="{cid}" class="mb-10 content-section">\n'
-                          f'{body}\n                </div>')
+                          f'{body}\n{errata_footer(lang)}\n                </div>')
         blocks.append('            </section>')
         # 未归属任何篇的章节：跟在篇的 </section> 之后（v1.8 第 36 章即如此）
         for cid in part.get('orphans', []):
@@ -165,7 +253,7 @@ def build(root: Path, lang: str = 'zh-CN', out: Path = None, book_path: Path = N
             if comment:
                 blocks.append('            ' + comment)
             blocks.append(f'            <div id="{cid}" class="mb-10 content-section">\n'
-                          f'{body}\n            </div>')
+                          f'{body}\n{errata_footer(lang)}\n            </div>')
 
     body_html = '\n\n'.join(blocks)
 
@@ -188,9 +276,29 @@ def build(root: Path, lang: str = 'zh-CN', out: Path = None, book_path: Path = N
     if out:
         out = Path(out)
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(html, encoding='utf-8', newline='\n')
+        _write_with_retry(out, html)
         result['out'] = str(out)
     return {'html': html, **result}
+
+
+def _write_with_retry(path: Path, text: str, tries: int = 6) -> None:
+    """写盘带重试。
+
+    Windows 上偶发 OSError [Errno 22]（索引器/杀软短暂抢占文件句柄）。
+    13MB 的书页 HTML 命中率不低，重试几次就能稳定写出去。
+    """
+    import time
+    last = None
+    for i in range(tries):
+        try:
+            with open(path, 'w', encoding='utf-8', newline='\n') as f:
+                f.write(text)
+            return
+        except OSError as e:
+            last = e
+            if i < tries - 1:
+                time.sleep(0.8 * (i + 1))
+    raise last
 
 
 # ---------------------------------------------------------------- 等价性校验

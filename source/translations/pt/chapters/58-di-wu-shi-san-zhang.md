@@ -10,9 +10,9 @@ kind: chapter
 ### Capítulo 53: Armazenamento de dados e requisições de rede
 
 {class="chapter-intro mb-4"}
-Um App que só 'mostra' está morto; o App que salva dados e se conecta à rede é que está vivo. Neste capítulo você vai conhecer o 'trio' da camada de dados do Android: DataStore (guarda configurações pequenas), Room (guarda dados estruturados) e Retrofit (conversa com o servidor), além do 'maestro' deles — as corrotinas. Ao fim do capítulo, você será capaz de escrever Apps de verdade, que lembram os hábitos do usuário e atualizam o conteúdo em tempo real.
+Um App que só 'mostra' está morto; o App que salva dados e se conecta à rede é que está vivo. Neste capítulo você vai conhecer o 'trio' da camada de dados do Android: DataStore (guarda configurações pequenas), Room (guarda dados estruturados) e Retrofit (conversa com o servidor), além do 'maestro' deles: as corrotinas. Ao fim do capítulo, você será capaz de escrever Apps de verdade, que lembram os hábitos do usuário e atualizam o conteúdo em tempo real.
 
-#### 1. Como escolher a solução de armazenamento: comece por esta tabela
+1. Como escolher a solução de armazenamento: comece por esta tabela
 
 ::: div .overflow-x-auto
 ```html
@@ -23,7 +23,7 @@ Um App que só 'mostra' está morto; o App que salva dados e se conecta à rede 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 A divisão de trabalho do trio de dados
 
-Grave este ditado: 'configurações pequenas vão para o DataStore, dados em lote vão para o Room, dados de fora passam pelo Retrofit'. O SharedPreferences, comum nos tutoriais antigos, já foi substituído pelo DataStore, e o SQL escrito à mão no SQLite já cedeu lugar ao Room — aprenda direto o novo e não pegue o caminho velho.
+Grave este ditado: 'configurações pequenas vão para o DataStore, dados em lote vão para o Room, dados de fora passam pelo Retrofit'. O SharedPreferences, comum nos tutoriais antigos, já foi substituído pelo DataStore, e o SQL escrito à mão no SQLite já cedeu lugar ao Room, aprenda direto o novo e não pegue o caminho velho.
 
 #### 2. DataStore: guardando configurações pequenas
 
@@ -50,11 +50,11 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 ```
 :::
 
-Repare que o retorno é um Flow — um fluxo de dados que 'flui'. Assim que o valor muda, todos os lugares que o observam recebem o novo valor automaticamente. Esse conceito (reatividade) é a pedra fundamental do Android moderno, e você vai colocá-lo em prática no capítulo 54.
+Repare que o retorno é um Flow: um fluxo de dados que 'flui'. Assim que o valor muda, todos os lugares que o observam recebem o novo valor automaticamente. Esse conceito (reatividade) é a pedra fundamental do Android moderno, e você vai colocá-lo em prática no capítulo 54.
 
 #### 3. Room: dando aos dados uma 'casa de verdade'
 
-Um controle de gastos acumula centenas ou milhares de lançamentos e ainda precisa consultar e somar por categoria e por mês — isso pede um banco de dados. O Room é o encapsulamento oficial do SQLite; ele deixa 'criar tabelas e consultar dados' tão natural quanto escrever Kotlin. São três peças:
+Um controle de gastos acumula centenas ou milhares de lançamentos e ainda precisa consultar e somar por categoria e por mês, isso pede um banco de dados. O Room é o encapsulamento oficial do SQLite; ele deixa 'criar tabelas e consultar dados' tão natural quanto escrever Kotlin. São três peças:
 
 ::: div .code-block
 :::inline div .code-head
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-Esse modelo de 'trio' pode ser levado tal como está para qualquer projeto seu — basta trocar os nomes dos campos. As consultas retornam Flow e a interface se atualiza sozinha conforme os dados; simplesmente maravilhoso.
+Esse modelo de 'trio' pode ser levado tal como está para qualquer projeto seu, basta trocar os nomes dos campos. As consultas retornam Flow e a interface se atualiza sozinha conforme os dados; simplesmente maravilhoso.
 
 #### 4. Retrofit: conversando com o servidor
 
@@ -131,7 +131,7 @@ val result = api.getWeather("Pequim")
 Alerta de armadilha: duas regras de ferro da rede
 
 {class="mt-1"}
-① Requisições de rede jamais devem ser feitas na thread principal — travaria a interface e poderia até derrubar o App (NetworkOnMainThreadException). Toda chamada de rede precisa ficar dentro de uma corrotina (viewModelScope.launch). ② HTTP em texto puro é proibido por padrão: desde o Android 9, exige-se HTTPS. Para testar com um endereço local em http://, é preciso declarar usesCleartextTraffic explicitamente no Manifest — mas o produto final deve usar HTTPS de ponta a ponta.
+① Requisições de rede jamais devem ser feitas na thread principal — travaria a interface e poderia até derrubar o App (NetworkOnMainThreadException). Toda chamada de rede precisa ficar dentro de uma corrotina (viewModelScope.launch). ② HTTP em texto puro é proibido por padrão: desde o Android 9, exige-se HTTPS. Para testar com um endereço local em http://, é preciso declarar usesCleartextTraffic explicitamente no Manifest, mas o produto final deve usar HTTPS de ponta a ponta.
 :::
 
 #### 5. Parsing de JSON: 'traduzindo' os dados da rede
@@ -166,11 +166,11 @@ data class WeatherResponse(
 ```
 :::
 
-Seja qual for a solução, a regra de ferro é: primeiro olhe o JSON real que volta, depois defina os campos. Muitos bugs de 'falha no parsing' nascem de nomes de campos errados ou níveis de aninhamento adivinhados — imprima o JSON original e compare; dez segundos resolvem.
+Seja qual for a solução, a regra de ferro é: primeiro olhe o JSON real que volta, depois defina os campos. Muitos bugs de 'falha no parsing' nascem de nomes de campos errados ou níveis de aninhamento adivinhados, imprima o JSON original e compare; dez segundos resolvem.
 
 #### 6. Corrotinas: o 'idioma comum' da concorrência no Android
 
-O suspend e o launch, que apareceram várias vezes acima, vêm das corrotinas do Kotlin (Coroutine) — a solução oficial de concorrência do Android. De forma bem grosseira, entenda assim: executar operações que 'precisam esperar um pouco' (rede, banco de dados) sem bloquear a interface.
+O suspend e o launch, que apareceram várias vezes acima, vêm das corrotinas do Kotlin (Coroutine), a solução oficial de concorrência do Android. De forma bem grosseira, entenda assim: executar operações que 'precisam esperar um pouco' (rede, banco de dados) sem bloquear a interface.
 
 ::: div .code-block
 :::inline div .code-head
@@ -198,7 +198,7 @@ Se você parte do zero, por agora basta decorar o uso; o princípio de 'suspende
 Mãos à obra: crie um mini-app de 'frase do dia'
 
 {class="mt-1"}
-Encontre uma API gratuita de citações (algo como o hitokoto), use o Retrofit para buscar a 'frase do dia', mostre-a no centro da tela e adicione um botão 'Trocar frase' (refazendo a requisição numa corrotina). Depois, salve as frases favoritas numa 'coleção' com o Room. Esse exercício usa DataStore/Room/Retrofit/corrotinas todos de uma vez — terminando-o, os capítulos 7 e 8 serão mamão com açúcar.
+Encontre uma API gratuita de citações (algo como o hitokoto), use o Retrofit para buscar a 'frase do dia', mostre-a no centro da tela e adicione um botão 'Trocar frase' (refazendo a requisição numa corrotina). Depois, salve as frases favoritas numa 'coleção' com o Room. Esse exercício usa DataStore/Room/Retrofit/corrotinas todos de uma vez, terminando-o, os capítulos 7 e 8 serão mamão com açúcar.
 :::
 
 ::: div .chapter-summary

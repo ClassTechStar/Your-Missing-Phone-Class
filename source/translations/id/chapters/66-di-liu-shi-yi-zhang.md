@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 61: Kilat Mengenal Swift — Bahasa Pertama Pengembangan Apple
 
 {class="chapter-intro mb-4"}
-Di bab ini kita resmi belajar bahasanya. Jangan tegang — Swift terkenal "ramah pemula", dan kamu tak perlu menghafal buku sintaks: kuasai dulu 20% sintaksnya, kamu sudah bisa membaca dan menulis 80% kode sehari-hari. Sisanya dicari sambil mengerjakan proyek. Ingat prinsip belajar kita: pahami > hafalkan, bisa pakai > mahir.
+Di bab ini kita resmi belajar bahasanya. Jangan tegang, Swift terkenal "ramah pemula", dan kamu tak perlu menghafal buku sintaks: kuasai dulu 20% sintaksnya, kamu sudah bisa membaca dan menulis 80% kode sehari-hari. Sisanya dicari sambil mengerjakan proyek. Ingat prinsip belajar kita: pahami > hafalkan, bisa pakai > mahir.
 
 #### 1. Variabel dan tipe: Memberi nama pada data
 
@@ -51,12 +51,12 @@ Tipe dasar Swift yang sering dipakai
 Tips: Prinsip utamakan let
 
 {class="mt-1"}
-Hukum besi komunitas Swift: bawaannya pakai let, var baru kalau memang perlu. Memakai var di tempat yang bisa let akan kena peringatan kuning dari Xcode. Kebiasaan ini menghilangkan satu kelas besar bug "variabel berubah tanpa sengaja" — makin sedikit kode yang bisa berubah, makin mudah ditelusuri.
+Hukum besi komunitas Swift: bawaannya pakai let, var baru kalau memang perlu. Memakai var di tempat yang bisa let akan kena peringatan kuning dari Xcode. Kebiasaan ini menghilangkan satu kelas besar bug "variabel berubah tanpa sengaja", makin sedikit kode yang bisa berubah, makin mudah ditelusuri.
 :::
 
 #### 2. Optional: "Jimat anti-crash" milik Swift
 
-Ini konsep terpenting Swift, tanpa pesaing. Satu kalimat: saat sebuah nilai mungkin "tak ada", Swift memaksamu menanganinya — menghapus "crash null pointer", mimpi buruk industri ini, dari level bahasa.
+Ini konsep terpenting Swift, tanpa pesaing. Satu kalimat: saat sebuah nilai mungkin "tak ada", Swift memaksamu menanganinya, menghapus "crash null pointer", mimpi buruk industri ini, dari level bahasa.
 
 ::: div .code-block
 :::inline div .code-head
@@ -87,7 +87,7 @@ print(len)
 Perhatian: ! adalah "operasi berisiko tinggi"
 
 {class="mt-1"}
-Menulis nickname! di kode (forced unwrap) sama saja berteriak ke compiler "saya jamin ini bukan nil" — begitu tebakanmu salah, App langsung crash. Prinsip masa pemula: sebisa mungkin pakai if let / ??, jangan pakai !. Saat melengkapi kode, Xcode kadang iseng menyisipkan ! sekalian — ingat untuk menghapusnya.
+Menulis nickname! di kode (forced unwrap) sama saja berteriak ke compiler "saya jamin ini bukan nil", begitu tebakanmu salah, App langsung crash. Prinsip masa pemula: sebisa mungkin pakai if let / ??, jangan pakai !. Saat melengkapi kode, Xcode kadang iseng menyisipkan ! sekalian — ingat untuk menghapusnya.
 :::
 
 #### 3. Fungsi dan closure: Mengemas logika menjadi "tombol"
@@ -116,7 +116,7 @@ let big = numbers.filter { $0 > 2 }    // Menyaring
 ```
 :::
 
-Di SwiftUI closure ada di mana-mana: kurung kurawal setelah Button("Tekan aku") { ... } adalah sebuah closure. Hafalkan baik-baik "kombinasi jurus" koleksi: map, filter, sorted — 90% pengolahan daftar kelak adalah gabungan ketiganya.
+Di SwiftUI closure ada di mana-mana: kurung kurawal setelah Button("Tekan aku") { ... } adalah sebuah closure. Hafalkan baik-baik "kombinasi jurus" koleksi: map, filter, sorted, 90% pengolahan daftar kelak adalah gabungan ketiganya.
 
 #### 4. Struct dan protokol: Sistem "LEGO"-nya Swift
 
@@ -147,7 +147,7 @@ struct Record: Identifiable { ... }   // Mengikuti protocol = berjanji mengimple
 ```
 :::
 
-Di SwiftUI hampir semuanya struct (View adalah protokol). Belum paham kalimat ini tidak apa-apa — kamu akan bertemu terus di Bab 62; di dunia Swift, peluk dulu struct.
+Di SwiftUI hampir semuanya struct (View adalah protokol). Belum paham kalimat ini tidak apa-apa: kamu akan bertemu terus di Bab 62; di dunia Swift, peluk dulu struct.
 
 #### 5. Kartu cepat sintaks untuk kamu yang nol dasar
 

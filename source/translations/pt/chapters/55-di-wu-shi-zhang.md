@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 50: Kotlin em ritmo acelerado — a primeira linguagem do desenvolvimento Android
 
 {class="chapter-intro mb-4"}
-Neste capítulo vamos estudar a linguagem de verdade. Sem medo — o Kotlin é famoso por ser "amigável para iniciantes" e você não precisa decorar a gramática: dominando 20% da sintaxe, você já entende e escreve 80% do código do dia a dia. O resto você consulta enquanto desenvolve o projeto. Lembre do nosso princípio de estudo: entender > decorar, saber usar > ser perfeito.
+Neste capítulo vamos estudar a linguagem de verdade. Sem medo, o Kotlin é famoso por ser "amigável para iniciantes" e você não precisa decorar a gramática: dominando 20% da sintaxe, você já entende e escreve 80% do código do dia a dia. O resto você consulta enquanto desenvolve o projeto. Lembre do nosso princípio de estudo: entender > decorar, saber usar > ser perfeito.
 
 #### 1. Variáveis e tipos: dando nome aos dados
 
@@ -49,12 +49,12 @@ Tipos básicos mais usados do Kotlin
 Dica: o princípio do val primeiro
 
 {class="mt-1"}
-A regra de ferro da comunidade Kotlin: por padrão use val e só use var quando realmente for necessário. Se usar var onde daria val, o IDE avisa com texto amarelo. Esse hábito elimina uma grande família de bugs de "variável alterada sem querer" — quanto menos o código muda, mais fácil raciocinar sobre ele.
+A regra de ferro da comunidade Kotlin: por padrão use val e só use var quando realmente for necessário. Se usar var onde daria val, o IDE avisa com texto amarelo. Esse hábito elimina uma grande família de bugs de "variável alterada sem querer", quanto menos o código muda, mais fácil raciocinar sobre ele.
 :::
 
 #### 2. Funções: empacotando a lógica em "botões"
 
-Uma função é um trecho de lógica com nome, como um botão do controle remoto — aperta (chama), e uma sequência de ações acontece. Em Kotlin, declaramos com fun:
+Uma função é um trecho de lógica com nome, como um botão do controle remoto, aperta (chama), e uma sequência de ações acontece. Em Kotlin, declaramos com fun:
 
 ::: div .code-block
 :::inline div .code-head
@@ -115,7 +115,7 @@ O when é a forma mais usada de múltiplas escolhas em Kotlin; no desenvolviment
 
 #### 4. Segurança contra nulos: o "amuleto de proteção" do Kotlin
 
-O bug mais famoso da era Java chama-se NullPointerException (exceção de ponteiro nulo) — o programa acessa algo "que não existe" e trava na hora. Nas estatísticas, ele lidera constantemente o ranking de travamentos do Android. O Kotlin resolveu isso no nível da linguagem: por padrão, valores nulos não são permitidos.
+O bug mais famoso da era Java chama-se NullPointerException (exceção de ponteiro nulo), o programa acessa algo "que não existe" e trava na hora. Nas estatísticas, ele lidera constantemente o ranking de travamentos do Android. O Kotlin resolveu isso no nível da linguagem: por padrão, valores nulos não são permitidos.
 
 ::: div .code-block
 :::inline div .code-head
@@ -146,7 +146,7 @@ String? significa "pode ser nulo"; a ?: b significa "se a for nulo, use b" (o s�
 
 #### 5. Classes e objetos: o molde que fabrica "peças"
 
-A classe é o "molde" do objeto, e o objeto é o "produto pronto" da classe. Tudo no Android — telas, botões, dados — é um objeto. O Kotlin tem uma joia chamada data class (classe de dados), feita sob medida para "guardar dados": uma linha vale dezenas em Java:
+A classe é o "molde" do objeto, e o objeto é o "produto pronto" da classe. Tudo no Android, telas, botões, dados: é um objeto. O Kotlin tem uma joia chamada data class (classe de dados), feita sob medida para "guardar dados": uma linha vale dezenas em Java:
 
 ::: div .code-block
 :::inline div .code-head
@@ -172,7 +172,7 @@ val twin = me.copy(name = "Joãozinho")   // copia e muda um campo
 
 Quando você for fazer o seu aplicativo de controle de gastos, cada lançamento será uma data class: data class Record(val amount: Double, val category: String, val date: String). Viu? Você já consegue escrever a estrutura de código de um projeto real.
 
-#### 6. Lambdas e funções de alta ordem: o "açúcar sintático" do Kotlin
+6. Lambdas e funções de alta ordem: o "açúcar sintático" do Kotlin
 
 No código Android você verá todos os dias funções "sem nome" como { ... }; elas se chamam lambdas (funções anônimas). O onClick = { count++ } de um Button é um lambda — empacota "o que fazer ao clicar" num pacote só e entrega ao botão.
 
@@ -198,7 +198,7 @@ val bigBills = bills.filter { it > 50 }.sorted()
 
 Guarde alguns "combos de coleção" muito usados: filter (filtrar), map (transformar), sorted (ordenar) e sum (somar). Nos próximos tempos, 90% do processamento de listas será combinação dessas quatro jogadas. A filosofia do Kotlin é: se a lógica cabe em uma frase, jamais escreva cinco.
 
-#### 7. Cartão de consulta rápida da sintaxe para quem parte do zero
+7. Cartão de consulta rápida da sintaxe para quem parte do zero
 
 Não tente decorar toda a sintaxe num dia. Salve este cartão, consulte-o enquanto programa e, em duas semanas, a familiaridade vem naturalmente:
 

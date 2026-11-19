@@ -18,7 +18,7 @@ kind: chapter
 
 ##### データ保護
 
-- <strong>：新システムをフラッシュしても、元のアカウントパスワードがなければユーザーデータにアクセスできません。</strong>二、BLロック解除の詳細フロー（Xiaomiを例に）
+- <strong>：新システムをフラッシュしても、元のアカウントパスワードがなければユーザーデータにアクセスできません。</strong>二、BLロック解除の詳細フロー（Xiaomiを例に）。
 - <strong>ロック解除権限の申請</strong>：Xiaomiのロック解除ツールサイトで解除を申請。
 - <strong>アカウント連携</strong>：スマートフォンの設定でXiaomiアカウントを連携。
 
@@ -143,7 +143,7 @@ SamsungのKnoxヒューズは<strong>不可逆的</strong>で、一度トリガ�
 <i class="fas fa-info-circle mr-2"></i>決済機能の異常
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- <strong>ROM焼きの前に必ず完全なバックアップを行い、チュートリアルを注意深く読み、機種とバージョンの一致を確認してください。</strong>おすすめリソース
+- <strong>ROM焼きの前に必ず完全なバックアップを行い、チュートリアルを注意深く読み、機種とバージョンの一致を確認してください。</strong>おすすめリソース。
 - <strong>XDA Developers</strong>：世界最大のAndroid開発者コミュニティ、豊富なROM焼きチュートリアルとROMリソースがあります。
 - <strong>Coolapk</strong>：中国国内で有名なデジタルコミュニティ、中国語のチュートリアルや議論が豊富です。
 :::

@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 47 : Aide-mémoire et ressources
 
 {class="chapter-intro mb-4"}
-Ce chapitre est un aide-mémoire qui se consulte de façon autonome. Quand un principe t'échappe ou qu'il te faut décider vite, ouvre-le directement. Traite-le comme une « fiche de poche » : les cinq grands principes en un clin d'œil, l'arbre de décision des outils, la FAQ, les ressources d'apprentissage — il y a tout.
+Ce chapitre est un aide-mémoire qui se consulte de façon autonome. Quand un principe t'échappe ou qu'il te faut décider vite, ouvre-le directement. Traite-le comme une « fiche de poche » : les cinq grands principes en un clin d'œil, l'arbre de décision des outils, la FAQ, les ressources d'apprentissage, il y a tout.
 
 #### 1. Les cartes mémo des principes de pensée
 
@@ -56,11 +56,11 @@ Figure 6 : Arbre de décision pour choisir un outil de programmation IA
 
 Q1 : Je n'ai jamais programmé, puis-je quand même coder avec l'IA ?
 
-Oui. En 2026, les outils de programmation IA sont assez puissants pour que tu décrives ton besoin en langue naturelle et laisses l'IA générer le code. Deux conseils : d'abord, démarre avec des outils Builder en ligne (comme v0 ou Bolt), qui ne demandent aucune configuration d'environnement ; ensuite, apprends les concepts de base en pratiquant — pas besoin de maîtriser la syntaxe, mais il faut pouvoir « comprendre dans les grandes lignes » le code écrit par l'IA, sinon la réception ne sera pas fiable.
+Oui. En 2026, les outils de programmation IA sont assez puissants pour que tu décrives ton besoin en langue naturelle et laisses l'IA générer le code. Deux conseils : d'abord, démarre avec des outils Builder en ligne (comme v0 ou Bolt), qui ne demandent aucune configuration d'environnement ; ensuite, apprends les concepts de base en pratiquant, pas besoin de maîtriser la syntaxe, mais il faut pouvoir « comprendre dans les grandes lignes » le code écrit par l'IA, sinon la réception ne sera pas fiable.
 
 Q2 : Quel langage de programmation devrais-je apprendre ?
 
-Cela dépend de ce que tu veux faire. Front-end de sites web : JavaScript/TypeScript ; traitement de données ou IA : Python ; back-end d'entreprise : Java ou Go. Mais surtout : à l'ère de la programmation IA, l'importance du « langage » décline. L'IA gère les détails de syntaxe ; ce que tu dois comprendre, c'est la « structure d'un programme » — ce qu'est une fonction, une boucle, une structure de données. Ces concepts transcendent les langages : une fois acquis, tu passes de l'un à l'autre très vite.
+Cela dépend de ce que tu veux faire. Front-end de sites web : JavaScript/TypeScript ; traitement de données ou IA : Python ; back-end d'entreprise : Java ou Go. Mais surtout : à l'ère de la programmation IA, l'importance du « langage » décline. L'IA gère les détails de syntaxe ; ce que tu dois comprendre, c'est la « structure d'un programme », ce qu'est une fonction, une boucle, une structure de données. Ces concepts transcendent les langages : une fois acquis, tu passes de l'un à l'autre très vite.
 
 Q3 : Le code écrit par l'IA pose-t-il des problèmes de droits d'auteur ?
 
@@ -68,11 +68,11 @@ En août 2026, la question reste juridiquement controversée. En général, le c
 
 Q4 : L'IA va-t-elle remplacer les programmeurs ?
 
-Pas à court terme. Ce que l'IA remplace, ce n'est pas le métier de « programmeur », c'est le travail de « codage ligne à ligne ». Comme la calculatrice n'a pas remplacé les mathématiciens, mais les a libérés des calculs pénibles à la main. Les outils de programmation IA font passer le programmeur de « l'écriture de code » à « la réflexion sur les problèmes » — ce qui, en réalité, relève son plafond de valeur. Demain, l'avantage compétitif ne sera pas de savoir « combien de lignes on écrit », mais « quels problèmes complexes on sait résoudre ».
+Pas à court terme. Ce que l'IA remplace, ce n'est pas le métier de « programmeur », c'est le travail de « codage ligne à ligne ». Comme la calculatrice n'a pas remplacé les mathématiciens, mais les a libérés des calculs pénibles à la main. Les outils de programmation IA font passer le programmeur de « l'écriture de code » à « la réflexion sur les problèmes », ce qui, en réalité, relève son plafond de valeur. Demain, l'avantage compétitif ne sera pas de savoir « combien de lignes on écrit », mais « quels problèmes complexes on sait résoudre ».
 
 Q5 : Comment juger si la production de l'IA est correcte ?
 
-La vérification en trois niveaux. Premier niveau, fonctionnel : ça tourne ? Entrées et sorties sont-elles correctes ? C'est la base. Deuxième niveau, limites : que se passe-t-il avec une entrée vide, trop longue ou anormale ? Cela révèle les problèmes cachés. Troisième niveau, architecture : la structure du code est-elle saine ? Du code en dur ? Facile à faire évoluer ? Ce niveau demande un certain jugement technique. Si tu ne peux pas l'évaluer, fais au moins les deux premiers — un programme qui tourne et tient les cas limites te place déjà au-dessus de la plupart des débutants.
+La vérification en trois niveaux. Premier niveau, fonctionnel : ça tourne ? Entrées et sorties sont-elles correctes ? C'est la base. Deuxième niveau, limites : que se passe-t-il avec une entrée vide, trop longue ou anormale ? Cela révèle les problèmes cachés. Troisième niveau, architecture : la structure du code est-elle saine ? Du code en dur ? Facile à faire évoluer ? Ce niveau demande un certain jugement technique. Si tu ne peux pas l'évaluer, fais au moins les deux premiers, un programme qui tourne et tient les cas limites te place déjà au-dessus de la plupart des débutants.
 
 #### 4. Les ressources d'apprentissage recommandées
 
@@ -89,7 +89,7 @@ La liste des ressources d'apprentissage recommandées
 
 #### 5. Conclusion : les outils en main, la méthode en tête
 
-Revenons à la conviction centrale de ce livre : les outils se renouvellent tous les trois mois, la méthodologie n'évolue que tous les trois ans. En ce mois d'août 2026, les outils de programmation IA sont devenus d'une puissance étonnante — tu peux créer un site en une phrase, générer une application full-stack à partir d'une description, mener une refactorisation complexe en une seule instruction. Mais plus les outils sont puissants, plus la méthodologie compte — parce que leur puissance amplifie chacune de tes décisions.
+Revenons à la conviction centrale de ce livre : les outils se renouvellent tous les trois mois, la méthodologie n'évolue que tous les trois ans. En ce mois d'août 2026, les outils de programmation IA sont devenus d'une puissance étonnante: tu peux créer un site en une phrase, générer une application full-stack à partir d'une description, mener une refactorisation complexe en une seule instruction. Mais plus les outils sont puissants, plus la méthodologie compte, parce que leur puissance amplifie chacune de tes décisions.
 
 Si ton besoin est clair, l'IA l'implémente efficacement ; s'il est flou, l'IA fabrique efficacement la mauvaise chose. Si tu restes fidèle à la simplicité, l'IA valide vite tes idées ; si tu veux tout et tout de suite, elle entasse vite la dette technique. Si tu modifies avec précision, elle optimise ton code comme un chirurgien ; si tes instructions sont floues, elle introduit des bugs à la machette.
 

@@ -9,7 +9,7 @@ kind: supplement
 ### Tambahan: Analisis Pengembangan Ingatan Telefon Android
 
 {class="chapter-intro mb-4"}
-Apabila membeli telefon, anda sering nampak pengiklanan seperti "12GB+8GB RAM" — seolah-olah secara ajaib mendapat 8GB RAM tambahan. Tetapi adakah ia benar-benar membolehkan telefon lebih pantas? Adakah ia sebaliknya merosakkan telefon? Bahagian ini akan menjelaskan sepenuhnya teknologi "pengembangan ingatan" ini.
+Apabila membeli telefon, anda sering nampak pengiklanan seperti "12GB+8GB RAM", seolah-olah secara ajaib mendapat 8GB RAM tambahan. Tetapi adakah ia benar-benar membolehkan telefon lebih pantas? Adakah ia sebaliknya merosakkan telefon? Bahagian ini akan menjelaskan sepenuhnya teknologi "pengembangan ingatan" ini.
 
 #### I. Definisi Asas
 
@@ -49,7 +49,7 @@ Pengembangan ingatan bukan penawar, kesannya berbeza mengikut model dan senario 
 
 Setiap jenama panggilan berbeza: Xiaomi panggil "Pengembangan Ingatan", Huawei panggil "Gabungan Ingatan", Samsung panggil "RAM Plus", vivo namakan "Extended RAM", OnePlus panggil "Memory Extension". Fungsi ini adalah keupayaan natif sistem, tiada hubungan langsung dengan versi asas Android.
 
-Laluan pengaktifan umum: Masuk [Tetapan] → [Lagi Tetapan] → Cari subitem [Ingatan] atau [Prestasi] → Aktifkan "Pengembangan Ingatan" dan pilih tahap kapasiti (biasanya 2GB–7GB), berkuat kuasa selepas mulakan semula. Selepas mengaktifkan, sistem akan memaparkan gabungan ingatan seperti "8GB+4GB".
+Laluan pengaktifan umum: Masuk [Tetapan].[Lagi Tetapan].Cari subitem [Ingatan] atau [Prestasi].Aktifkan "Pengembangan Ingatan" dan pilih tahap kapasiti (biasanya 2GB–7GB), berkuat kuasa selepas mulakan semula. Selepas mengaktifkan, sistem akan memaparkan gabungan ingatan seperti "8GB+4GB".
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

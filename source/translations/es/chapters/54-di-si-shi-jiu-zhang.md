@@ -19,7 +19,7 @@ Android Studio es el entorno de desarrollo integrado (IDE) oficial de Google: gr
 1. Abre la web oficial developer.android.com/studio y descarga la última versión estable (en agosto de 2026, la posterior a Narwhal; hay para Windows/Mac/Linux);
 2. Ejecuta el instalador y dale a "Siguiente" todo el camino: el asistente incluye automáticamente el Android SDK y los componentes del emulador;
 3. Al arrancar por primera vez, descarga los componentes del SDK como te pida el programa (con las casillas por defecto basta; puede llevar unos minutos y varios GB de espacio);
-4. Al terminar verás la pantalla de bienvenida. Enhorabuena: la "cocina" ya está montada.
+4. Al terminar verás la pantalla de bienvenida. Enhorabuena: la "cocina" ya está montada
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -67,7 +67,7 @@ Un dispositivo real es siempre el entorno de pruebas más auténtico: el tacto d
 1. En el móvil, abre [Ajustes] → [Acerca del teléfono] y toca 7 veces seguidas el "Número de compilación" para activar las "Opciones de desarrollador";
 2. En [Opciones de desarrollador], activa la Depuración por USB;
 3. Conecta el móvil al ordenador con un cable de datos y, en la ventana emergente del móvil, elige "Permitir depuración por USB";
-4. Vuelve a Android Studio: tu móvil aparecerá en el desplegable de dispositivos de la barra de herramientas. Pulsa Run.
+4. Vuelve a Android Studio: tu móvil aparecerá en el desplegable de dispositivos de la barra de herramientas. Pulsa Run
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -77,7 +77,7 @@ Aviso para esquivar problemas: no dejes la Depuración por USB siempre activada
 La Depuración por USB equivale a abrir una "puerta trasera" en el móvil. Cuando cargues en lugares públicos o te conectes a ordenadores poco fiables, desactívala sin falta para que nadie pueda leer tus datos a través de ella. Apágala cada vez que termines de desarrollar; hazlo costumbre.
 :::
 
-#### 4. Desmontar la estructura del proyecto: para qué sirve cada archivo
+4. Desmontar la estructura del proyecto: para qué sirve cada archivo
 
 La primera vez que abras el proyecto, el árbol de archivos de la izquierda puede marearte. Tranquilo: en el día a día, el 90 % de tu tiempo lo pasarás solo con estos:
 
@@ -139,7 +139,7 @@ setContent {
 
 Enhorabuena: acabas de completar un ciclo entero de "cambiar código → compilar → instalar → ejecutar". Ese ciclo será el pan de cada día del desarrollo. Aprovecha la racha y prueba a cambiar algo más: sube el tamaño de la letra, cambia el color; en el próximo capítulo descubrirás de dónde sale esa "magia".
 
-#### 6. Primeros auxilios con errores habituales: la "sala de urgencias" de tus dos primeras semanas
+6. Primeros auxilios con errores habituales: la "sala de urgencias" de tus dos primeras semanas
 
 Montando el entorno y durante la primera compilación es muy probable que te cruces con estos tres errores. Tranquilo: todos tienen antídoto:
 

@@ -10,15 +10,15 @@ kind: chapter
 ### 第五十五章：項目二——天氣查詢 App（網絡版）
 
 {class="chapter-intro mb-4"}
-記賬冊者「練內功」也，天氣 App 者「見世面」也——其將與互聯網相交接。此項目汝將學：請免費之 API、析 JSON、理「載中/成/敗」三種界面之態，及何以善藏 API 之鑰。既成之，汝遂具作任何「連網 App」之能——新聞、匯率、翻譯，其術一也。
+記賬冊者「練內功」也，天氣 App 者「見世面」也，其將與互聯網相交接。此項目汝將學：請免費之 API、析 JSON、理「載中/成/敗」三種界面之態。及何以善藏 API 之鑰。既成之，汝遂具作任何「連網 App」之能——新聞、匯率、翻譯，其術一也。
 
 #### 一、申請免費天氣之 API
 
-個人練手，薦 OpenWeatherMap 或國內之和風天氣（QWeather）——皆有免費之額，註冊即用。以 OpenWeatherMap 為例：
+個人練手，薦 OpenWeatherMap 或國內之和風天氣（QWeather），皆有免費之額，註冊即用。以 OpenWeatherMap 為例：
 
-1. 註冊一賬 → 於 API keys 之頁生一 Key（apikey）；
-2. 免費版可調 Current Weather（當前天氣）之接口：api.openweathermap.org/data/2.5/weather? q=beijing&appid=汝之Key&units=metric；
-3. 先於瀏覽器試一遭，觀所返 JSON 之形——此接任何 API 前必為之「預習」也。
+1. 註冊一賬 → 於 API keys 之頁生一 Key（apikey）。
+2. 免費版可調 Current Weather（當前天氣）之接口：api.openweathermap.org/data/2.5/weather? q=beijing&appid=汝之Key&units=metric。
+3. 先於瀏覽器試一遭，觀所返 JSON 之形，此接任何 API 前必為之「預習」也。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -59,7 +59,7 @@ interface WeatherApi {
 ```
 :::
 
-Gson 自以 JSON 塞入此諸 data class——字段之名相合，魔法自生。
+Gson 自以 JSON 塞入此諸 data class，字段之名相合，魔法自生。
 
 #### 三、三種界面之態：載中 / 成 / 敗
 
@@ -138,13 +138,13 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-小細數者可學：firstOrNull() 安取其首元（列表或空），?: 「未知」以為兜底之文——空安全之則於界面亦然。溫度以 72.sp 大字之號壯其場面，「輕」字重（Light）使數顯雅，此天氣類 App 之經典之方也。
+小細數者可學：firstOrNull() 安取其首元（列表或空），?: 「未知」以為兜底之文：空安全之則於界面亦然。溫度以 72.sp 大字之號壯其場面，「輕」字重（Light）使數顯雅，此天氣類 App 之經典之方也。
 
 #### 五、界面與交互之細
 
-- 搜索之框：頂置 TextField，書城名而點搜（鍵上設「搜索」之動，回車即搜）；
-- 天氣之卡：大字之溫（26.5°）、天氣之述（晴）、濕度、城名；
-- 收藏之城：常觀之城存於 DataStore，次啟自查之——便而溫習第六章；
+- 搜索之框：頂置 TextField，書城名而點搜（鍵上設「搜索」之動，回車即搜）。
+- 天氣之卡：大字之溫（26.5°）、天氣之述（晴）、濕度、城名。
+- 收藏之城：常觀之城存於 DataStore，次啟自查之，便而溫習第六章。
 - 下拉而新：Compose 中用 PullToRefreshBox（Material 3 所供），手感頓「專業」矣。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -152,7 +152,7 @@ fun WeatherContent(data: WeatherResponse) {
 小識：圖片使界面活
 
 {class="mt-1"}
-每種天氣配一 emoji 或圖標（☀️🌧️❄️），以 when(description) 映之——三行代碼，界面溫情倍之。亦可載第三方天氣圖標之庫，然練手之階 emoji 足矣。
+每種天氣配一 emoji 或圖標（☀️🌧️❄️），以 when(description) 映之，三行代碼，界面溫情倍之。亦可載第三方天氣圖標之庫，然練手之階 emoji 足矣。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -167,9 +167,9 @@ fun WeatherContent(data: WeatherResponse) {
 {class="font-semibold mb-1"}
 本章小結
 
-- 先於瀏覽器試 API、曉 JSON，而後書碼——「預習」恆無虧
+- 先於瀏覽器試 API、曉 JSON，而後書碼，「預習」恆無虧
 - API Key 藏於 local.properties，決不入代碼之庫
 - Retrofit 接口 + data class：字段相合，JSON 自析
 - Loading/Success/Error 三段之態，連網界面之萬金油也
-- 網斷、空入、城之不存——理錯者，連網 App 及格之線也
+- 網斷、空入、城之不存，理錯者，連網 App 及格之線也
 :::

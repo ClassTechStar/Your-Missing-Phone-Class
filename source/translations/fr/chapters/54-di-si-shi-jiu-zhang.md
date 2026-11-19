@@ -10,16 +10,16 @@ kind: chapter
 ### Chapitre 49 : Monter l'environnement de développement — Android Studio et le premier projet
 
 {class="chapter-intro mb-4"}
-Pour bien faire le travail, il faut d'abord aiguiser ses outils. Dans ce chapitre, on monte la « cuisine » : installer Android Studio, faire tourner l'émulateur, créer ton tout premier projet Android, puis démonter la structure du projet pour bien la comprendre. Une fois l'environnement prêt, tu verras pour la première fois ton code se transformer en un bouton cliquable — un instant que beaucoup gardent en mémoire toute leur vie.
+Pour bien faire le travail, il faut d'abord aiguiser ses outils. Dans ce chapitre, on monte la « cuisine » : installer Android Studio, faire tourner l'émulateur, créer ton tout premier projet Android, puis démonter la structure du projet pour bien la comprendre. Une fois l'environnement prêt, tu verras pour la première fois ton code se transformer en un bouton cliquable, un instant que beaucoup gardent en mémoire toute leur vie.
 
 #### 1. Installer Android Studio
 
 Android Studio est l'environnement de développement intégré (IDE) officiel de Google : gratuit, et avec la panoplie complète — écrire du code, prévisualiser l'interface, déboguer, générer le paquet, tout s'y trouve. Quatre étapes pour l'installer :
 
 1. Ouvre le site officiel developer.android.com/studio et télécharge la dernière version stable (en août 2026, une version postérieure à Narwhal ; disponible pour Windows/Mac/Linux) ;
-2. lance le programme d'installation et clique sur « Suivant » jusqu'au bout — l'assistant installe automatiquement le SDK Android et les composants de l'émulateur ;
+2. lance le programme d'installation et clique sur « Suivant » jusqu'au bout, l'assistant installe automatiquement le SDK Android et les composants de l'émulateur ;
 3. au premier lancement, télécharge les composants du SDK comme indiqué (garde les cases par défaut ; prévois quelques minutes et plusieurs Go d'espace) ;
-4. à la fin, tu arrives sur la page d'accueil — félicitations, la « cuisine » est montée.
+4. à la fin, tu arrives sur la page d'accueil, félicitations, la « cuisine » est montée
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -42,14 +42,14 @@ Sur la page d'accueil, clique sur New Project, choisis le modèle Empty Activity
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Les trois choses à remplir à la création du projet
 
-Après avoir cliqué sur Finish, Android Studio télécharge automatiquement les dépendances et construit le projet avec Gradle (compte quelques minutes la première fois, ce sera bien plus rapide ensuite). Une fois la construction terminée, tu as une app qui tourne — même si elle n'affiche encore qu'un simple « Hello Android! ».
+Après avoir cliqué sur Finish, Android Studio télécharge automatiquement les dépendances et construit le projet avec Gradle (compte quelques minutes la première fois, ce sera bien plus rapide ensuite). Une fois la construction terminée, tu as une app qui tourne, même si elle n'affiche encore qu'un simple « Hello Android! ».
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Petit conseil : les subtilités du nom de package
 
 {class="mt-1"}
-Le nom de package (package name) est comme le « numéro de carte d'identité » de l'app : il doit être unique dans le monde entier et ne peut plus être changé après publication. Pour t'exercer, com.example.xxx suffit ; pour un vrai produit, remplace-le par ton propre domaine inversé (par exemple com.tonnom.nomdelapp). Ne publie jamais avec com.example — la boutique refuserait l'app.
+Le nom de package (package name) est comme le « numéro de carte d'identité » de l'app : il doit être unique dans le monde entier et ne peut plus être changé après publication. Pour t'exercer, com.example.xxx suffit ; pour un vrai produit, remplace-le par ton propre domaine inversé (par exemple com.tonnom.nomdelapp). Ne publie jamais avec com.example, la boutique refuserait l'app.
 :::
 
 #### 3. Faire tourner : émulateur et appareil réel
@@ -62,12 +62,12 @@ L'émulateur crée un téléphone Android virtuel dans ton ordinateur. Dans Andr
 
 ##### 2. Le débogage sur appareil réel (encore mieux)
 
-Un appareil réel reste l'environnement de test le plus authentique — la sensation du tactile, un vrai réseau, de vrais capteurs : l'émulateur ne peut pas rivaliser. Le débogage sur un téléphone Android est tout simple :
+Un appareil réel reste l'environnement de test le plus authentique, la sensation du tactile, un vrai réseau, de vrais capteurs : l'émulateur ne peut pas rivaliser. Le débogage sur un téléphone Android est tout simple :
 
 1. Sur le téléphone, ouvre [Réglages] > [À propos du téléphone] et tape 7 fois de suite sur « Numéro de version » pour activer les « Options développeur » ;
 2. dans [Options développeur], active le débogage USB ;
 3. relie le téléphone à l'ordinateur avec un câble USB et choisis « Autoriser le débogage USB » dans la fenêtre qui s'affiche ;
-4. retourne dans Android Studio : ton téléphone apparaît dans la liste déroulante des appareils de la barre d'outils ; clique sur Run.
+4. retourne dans Android Studio : ton téléphone apparaît dans la liste déroulante des appareils de la barre d'outils ; clique sur Run
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -112,9 +112,9 @@ Figure 2 : la structure du projet que tout débutant doit connaître (règle d'o
 :::
 
 - MainActivity.kt : la « porte d'entrée » de l'app. Quand l'utilisateur touche l'icône, c'est elle qui est réveillée en premier. Dans le modèle actuel, elle se charge d'afficher « Hello Android! ».
-- AndroidManifest.xml : le « livret de famille » de l'app — il déclare le nom de l'app, son icône, ses écrans et les permissions nécessaires (appareil photo, localisation, etc.).
+- AndroidManifest.xml : le « livret de famille » de l'app, il déclare le nom de l'app, son icône, ses écrans et les permissions nécessaires (appareil photo, localisation, etc.).
 - Le dossier res/ : l'entrepôt de ressources, où sont rangées images, icônes, textes et couleurs. Placer les textes dans les fichiers de ressources plutôt qu'en dur dans le code est une bonne pratique Android (pratique pour changer de langue ou de thème).
-- build.gradle.kts : la recette de construction — elle déclare la version minimale prise en charge et les bibliothèques dont le projet dépend (Compose, par exemple).
+- build.gradle.kts : la recette de construction: elle déclare la version minimale prise en charge et les bibliothèques dont le projet dépend (Compose, par exemple).
 
 #### 5. Premier essai : remplace « Hello » par ton prénom
 
@@ -137,9 +137,9 @@ setContent {
 ```
 :::
 
-Félicitations : tu viens de boucler un cycle complet « modifier le code → compiler → installer → exécuter ». Ce cycle, c'est le quotidien du développeur pour tous les jours à venir. Tant que le fer est chaud, essaie d'autres modifications : agrandis la taille du texte, change la couleur — le chapitre suivant t'expliquera d'où viennent ces « magies ».
+Félicitations : tu viens de boucler un cycle complet « modifier le code → compiler → installer → exécuter ». Ce cycle, c'est le quotidien du développeur pour tous les jours à venir. Tant que le fer est chaud, essaie d'autres modifications : agrandis la taille du texte, change la couleur, le chapitre suivant t'expliquera d'où viennent ces « magies ».
 
-#### 6. Premiers secours contre les erreurs fréquentes : les « urgences » des deux premières semaines
+6. Premiers secours contre les erreurs fréquentes : les « urgences » des deux premières semaines
 
 Pendant l'installation de l'environnement et la première construction, tu rencontreras très probablement les trois erreurs suivantes. Pas de panique, chacune a son remède :
 
@@ -157,7 +157,7 @@ Table de secours des erreurs d'environnement pour débutants
 Petit conseil : la méthode pour chercher une erreur
 
 {class="mt-1"}
-La première ligne du message d'erreur est la plus précieuse — copie-la telle quelle dans un moteur de recherche en ajoutant le mot-clé « android studio ». Ne cherche pas des questions vagues du genre « je n'arrive pas à installer mon environnement » ; cherche l'erreur précise, du type « Gradle sync failed: Could not resolve com.android.tools.build ». Aux questions précises, les réponses précises.
+La première ligne du message d'erreur est la plus précieuse: copie-la telle quelle dans un moteur de recherche en ajoutant le mot-clé « android studio ». Ne cherche pas des questions vagues du genre « je n'arrive pas à installer mon environnement » ; cherche l'erreur précise, du type « Gradle sync failed: Could not resolve com.android.tools.build ». Aux questions précises, les réponses précises.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

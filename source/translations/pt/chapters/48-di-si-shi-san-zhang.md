@@ -2,15 +2,15 @@
 id: di-si-shi-san-zhang
 num: 43
 part: ai-biancheng-pian
-nav: Capítulo 43: Engenharia de diálogo — técnicas para conversas eficientes
+nav: Capítulo 43: Como falar com a IA para ela entender
 toc: default
 kind: chapter
 ---
 
-### Capítulo 43: Engenharia de diálogo — técnicas de conversa para colaborar com a IA com eficiência
+### Capítulo 43: Como falar com a IA para ela entender
 
 {class="chapter-intro mb-4"}
-O diálogo é a forma central de interação na programação com IA. Mas atenção: 'diálogo' não é a mesma coisa que 'conversa fiada' — um diálogo eficiente de programação com IA é uma técnica de comunicação estruturada, que chamamos de 'engenharia de diálogo'. Ela estuda como obter o código de maior qualidade com o menor número possível de rodadas de conversa. Simplificando, este capítulo ensina como deixar as coisas claras ao conversar com a IA.
+O diálogo é a forma central de interação na programação com IA. Mas atenção: 'diálogo' não é a mesma coisa que 'conversa fiada', um diálogo eficiente de programação com IA é uma técnica de comunicação estruturada, que chamamos de 'engenharia de diálogo'. Ela estuda como obter o código de maior qualidade com o menor número possível de rodadas de conversa. Simplificando, este capítulo ensina como deixar as coisas claras ao conversar com a IA.
 
 #### 1. Estratégia de camadas de Prompt
 
@@ -25,7 +25,7 @@ O diálogo com a IA pode ser dividido em três camadas, e cada uma tem uma funç
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 As três camadas do Prompt de diálogo
 
-O Prompt da camada de sistema geralmente fica no arquivo de memória do projeto (como o CLAUDE.md) e não precisa ser repetido a cada conversa. A camada de tarefa é a que você mais usa na conversa — ela deve conter três elementos: 'o que fazer', 'com qual tecnologia' e 'quais restrições'. A camada de feedback é a que mais exige habilidade — um bom feedback permite que a IA corrija com precisão; um feedback ruim só a faz ficar chutando de novo.
+O Prompt da camada de sistema geralmente fica no arquivo de memória do projeto (como o CLAUDE.md) e não precisa ser repetido a cada conversa. A camada de tarefa é a que você mais usa na conversa: ela deve conter três elementos: 'o que fazer', 'com qual tecnologia' e 'quais restrições'. A camada de feedback é a que mais exige habilidade: um bom feedback permite que a IA corrija com precisão. Um feedback ruim só a faz ficar chutando de novo.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -35,14 +35,14 @@ Dica: os três golpes do feedback
 Um modelo prático de feedback é 'apontar o problema + explicar o esperado + fornecer contexto'. Por exemplo: 'o tratamento de erros da linha 25 usa apenas console.log (aponta o problema), em produção deveria usar um handler de erros unificado e devolver mensagens amigáveis ao usuário (explica o esperado), e o projeto já tem uma função handleError que pode ser usada (fornece o contexto)'. Esse tipo de feedback é dez vezes mais eficaz do que 'melhora o tratamento de erros'.
 :::
 
-#### 2. Diálogo de depuração: como descrever erros para a IA localizar rápido
+2. Diálogo de depuração: como descrever erros para a IA localizar rápido
 
 A depuração é um dos cenários mais frequentes na programação com IA. Quando você encontra um bug, o jeito de descrever o problema à IA determina diretamente se ela vai conseguir localizar e corrigir rápido. A seguir, os quatro pontos-chave do diálogo de depuração:
 
 1. Mostre à IA a informação original, e não o seu relato. Mencione diretamente com @ o log de erros, a pilha de exceções e o código relevante, em vez de descrever com um 'parece que deu algum erro'. Para a IA, ver a informação original é mais preciso do que ver a sua interpretação.
-2. Descreva a diferença entre o 'comportamento esperado' e o 'comportamento real'. 'Eu esperava que, ao clicar no botão, fosse para a página inicial (esperado), mas, na verdade, nada acontece ao clicar (real)' — esse tipo de descrição é muito mais útil do que 'o botão está quebrado'.
+2. Descreva a diferença entre o 'comportamento esperado' e o 'comportamento real'. 'Eu esperava que, ao clicar no botão, fosse para a página inicial (esperado), mas, na verdade, nada acontece ao clicar (real)', esse tipo de descrição é muito mais útil do que 'o botão está quebrado'.
 3. Forneça os passos para reproduzir. 'Primeiro digito o nome de usuário, depois clico no botão de entrar, e o erro aparece' — os passos de reprodução permitem que a IA simule o seu caminho de operação e localize o problema mais facilmente.
-4. Diga claramente o que você já tentou. 'Já verifiquei a requisição de rede: retorna 200 e os dados estão normais' — isso ajuda a IA a descartar caminhos já verificados e a não perder tempo repetindo verificações.
+4. Diga claramente o que você já tentou. 'Já verifiquei a requisição de rede: retorna 200 e os dados estão normais', isso ajuda a IA a descartar caminhos já verificados e a não perder tempo repetindo verificações.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -62,7 +62,7 @@ Após clicar no botão Entrar, a página não reage. Comportamento esperado: ap�
 :::
 :::
 
-#### 3. Estratégias de iteração: passos pequenos e rápidos vs. refatoração em grandes passos
+3. Estratégias de iteração: passos pequenos e rápidos vs. refatoração em grandes passos
 
 A iteração na programação com IA tem duas estratégias básicas, para cenários diferentes. Entender a diferença entre elas ajuda você a escolher corretamente em cada situação.
 
@@ -81,24 +81,24 @@ Comparação entre as duas estratégias de iteração
 
 Na prática, as duas estratégias costumam ser combinadas. Por exemplo, ao refatorar um módulo, primeiro use a 'refatoração em grandes passos' para a IA apresentar o plano geral; depois de revisar o plano, execute aos poucos com 'passos pequenos e rápidos'. Assim você mantém a visão global e controla o risco de execução.
 
-#### 4. Gerenciamento de contexto em conversas de múltiplas rodadas
+4. Gerenciamento de contexto em conversas de múltiplas rodadas
 
 Conforme o número de rodadas aumenta, você precisa gerenciar ativamente o contexto da conversa para evitar o problema de 'a IA esqueceu as informações do início'. A seguir, algumas técnicas práticas de gerenciamento de contexto.
 
-Primeiro, 'ancore' as informações-chave. No início da conversa, deixe as restrições importantes claras por escrito e reafirme-as nos momentos certos ao longo do diálogo. Por exemplo: 'lembre-se: nossos dados ficam no localStorage, não podemos usar banco de dados' — reitere essa restrição nas solicitações de alteração relacionadas, para evitar que a IA esqueça.
+Primeiro, 'ancore' as informações-chave. No início da conversa, deixe as restrições importantes claras por escrito e reafirme-as nos momentos certos ao longo do diálogo. Por exemplo: 'lembre-se: nossos dados ficam no localStorage, não podemos usar banco de dados', reitere essa restrição nas solicitações de alteração relacionadas, para evitar que a IA esqueça.
 
 Segundo, use bem a técnica de 'resumir e continuar'. Quando a conversa ficar muito longa, peça à IA que 'resuma o progresso atual e as pendências' e então abra uma nova conversa tomando esse resumo como ponto de partida. Assim você preserva o contexto essencial e evita a degradação das conversas longas.
 
 Terceiro, 'uma conversa, uma tarefa'. Essa é a estratégia de gerenciamento de contexto mais simples e mais eficaz. Cada conversa trata apenas de uma tarefa ou de um ponto de funcionalidade; ao concluir, abra uma nova conversa para o próximo. Isso limita naturalmente o comprimento da conversa e mantém o contexto claro.
 
-Quarto, aproveite os recursos de gerenciamento de contexto das ferramentas. A maioria das ferramentas de programação com IA tem botões de 'limpar contexto' ou 'nova sessão' — quando sentir que a qualidade das respostas da IA piorou, não hesite: abra uma nova sessão. Perder parte do histórico da conversa é muito melhor do que continuar sofrendo com um contexto degradado.
+Quarto, aproveite os recursos de gerenciamento de contexto das ferramentas. A maioria das ferramentas de programação com IA tem botões de 'limpar contexto' ou 'nova sessão', quando sentir que a qualidade das respostas da IA piorou, não hesite: abra uma nova sessão. Perder parte do histórico da conversa é muito melhor do que continuar sofrendo com um contexto degradado.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mãos à obra: seja o 'paciente' da sua IA uma vez
 
 {class="mt-1"}
-Monte de propósito uma pequena página no navegador com um bug (por exemplo, um botão que não reage). Depois, descreva tudo à IA uma vez, seguindo o formato de 'boa descrição de depuração' deste capítulo: informação original, esperado vs. real, passos de reprodução e o que já foi verificado. Sinta a diferença na velocidade com que a IA localiza o problema — você vai entender por que 'saber descrever o problema' é, em si, uma habilidade.
+Monte de propósito uma pequena página no navegador com um bug (por exemplo, um botão que não reage). Depois, descreva tudo à IA uma vez, seguindo o formato de 'boa descrição de depuração' deste capítulo: informação original, esperado vs. real, passos de reprodução e o que já foi verificado. Sinta a diferença na velocidade com que a IA localiza o problema, você vai entender por que 'saber descrever o problema' é, em si, uma habilidade.
 :::
 
 ::: div .chapter-summary

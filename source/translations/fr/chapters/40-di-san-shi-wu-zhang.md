@@ -2,12 +2,12 @@
 id: di-san-shi-wu-zhang
 num: 35
 part: er-tong-pian
-nav: Chapitre 35 : Enfants et téléphone — guide éducatif de l'ère numérique
+nav: Chapitre 35 : Donner un smartphone à un enfant : les règles
 toc: default
 kind: chapter
 ---
 
-### Chapitre 35 : Les enfants et le smartphone — Guide éducatif à l'ère du numérique
+### Chapitre 35 : Donner un smartphone à un enfant : les règles
 
 {class="chapter-intro mb-4"}
 Ce chapitre ne traite pas le smartphone de « monstre » et ne prône pas non plus « plus tôt on commence, plus on est intelligent ». Nous procédons par tranches d'âge : donner des appareils, fixer des règles, enseigner l'éducation numérique, protéger la santé, étape par étape.
@@ -156,7 +156,7 @@ Cette section est souvent négligée mais importante. Les actifs numériques des
 <i class="fas fa-triangle-exclamation mr-2"></i>L'autre face du « patrimoine numérique des enfants »
 
 {class="mt-1"}
-Les enfants sont « enregistrés » dès la naissance — photos de croissance publiées par les parents, vidéos envoyées par la maternelle, données de santé de la montre connectée. Ces données, une fois téléchargées, sont difficiles à supprimer complètement. Avant de publier, demandez-vous : dans dix ans, cette photo gênera-t-elle l'enfant ? Respecter la personnalité numérique de l'enfant commence par s'abstenir de tout publier.
+Les enfants sont « enregistrés » dès la naissance, photos de croissance publiées par les parents, vidéos envoyées par la maternelle, données de santé de la montre connectée. Ces données, une fois téléchargées, sont difficiles à supprimer complètement. Avant de publier, demandez-vous : dans dix ans, cette photo gênera-t-elle l'enfant ? Respecter la personnalité numérique de l'enfant commence par s'abstenir de tout publier.
 :::
 
 ::: div .chapter-summary

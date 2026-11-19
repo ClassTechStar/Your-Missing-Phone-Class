@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十四章：项目一——我的记账本（本地版）
 
 {class="chapter-intro mb-4"}
-欢迎来到你的第一个"正经项目"。这个记账本虽然不联网，但五脏俱全：能记一笔账、能看流水、能按月统计、能删改。做完它，你就完整走了一遍"数据 → 逻辑 → 界面"的全流程。别急着抄代码——<strong>先想清楚再动手</strong>，这是咱们一贯的原则。
+欢迎来到你的第一个"正经项目"。这个记账本虽然不联网，但五脏俱全：能记一笔账、能看流水、能按月统计、能删改。做完它，你就完整走了一遍"数据 → 逻辑 → 界面"的全流程。别急着抄代码<strong>先想清楚再动手</strong>，这是咱们一贯的原则。
 
 #### 一、需求思考：先问五个问题
 
@@ -29,7 +29,7 @@ kind: chapter
 
 #### 二、数据层：让"账"有个家
 
-先定义一笔账长什么样——字段要够用但别贪多：
+先定义一笔账长什么样，字段要够用但别贪多：
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +49,7 @@ data class Record(
 ```
 :::
 
-Dao 里加两条"统计用"的查询——这是记账本的灵魂：
+Dao 里加两条"统计用"的查询，这是记账本的灵魂：
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,7 +82,7 @@ interface RecordDao {
 <i class="fas fa-lightbulb mr-2"></i>小贴士：金额为什么用 Double？
 
 {class="mt-1"}
-严谨的金融 App 会用 BigDecimal 或"以分为单位的 Int"来避免浮点误差（0.1+0.2≠0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成"分"为单位——这是无数前辈踩出来的坑。
+严谨的金融 App 会用 BigDecimal 或"以分为单位的 Int"来避免浮点误差（0.1+0.2≠0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成"分"为单位：这是无数前辈踩出来的坑。
 :::
 
 #### 三、MVVM：界面与逻辑"分家"
@@ -95,7 +95,7 @@ interface RecordDao {
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-图 5：MVVM 三层结构——数据单向流动，各层互不越界
+图 5：MVVM 三层结构，数据单向流动，各层互不越界
 :::
 
 ::: div .code-block
@@ -129,7 +129,7 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 
 #### 四、界面：列表页 + 录入页
 
-列表页用 <strong>LazyColumn</strong>（懒加载列表）——数据再多也不卡：
+列表页用 <strong>LazyColumn</strong>（懒加载列表），数据再多也不卡：
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,7 +203,7 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-交互细节两条经验：<strong>删除必须二次确认</strong>（防止手滑），编辑尽量<strong>预填原值</strong>（改一个字比重新输入省事）。别小看这两个细节——产品感就是这些细节堆出来的。
+交互细节两条经验：<strong>删除必须二次确认</strong>（防止手滑），编辑尽量<strong>预填原值</strong>（改一个字比重新输入省事）。别小看这两个细节，产品感就是这些细节堆出来的。
 
 #### 六、验收：三层检查 + 两个进阶挑战
 
@@ -211,15 +211,15 @@ suspend fun deleteById(id: Long)
 
 基础版验收通过后，给自己加两道"进阶菜"：
 
-1. <strong>月度筛选</strong>：顶部加月份切换（比如 2026-08 ▾），列表只显示当月流水；
-2. <strong>分类饼图</strong>：用 Compose 的 Canvas 或引入轻量图表库，把"钱花哪儿了"画成饼图——做完这个，记账本就有点"产品样"了。
+1. <strong>月度筛选</strong>：顶部加月份切换（比如 2026-08 ▾），列表只显示当月流水。
+2. <strong>分类饼图</strong>：用 Compose 的 Canvas 或引入轻量图表库，把"钱花哪儿了"画成饼图，做完这个，记账本就有点"产品样"了。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 <i class="fas fa-hands mr-2"></i>来动手：本周完成它
 
 {class="mt-1"}
-按"数据层 → ViewModel → 列表页 → 录入页 → 汇总卡片"的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清"期望行为、实际行为、复现步骤"）。完成后用它记一周账——自己做的 App 用起来，成就感会推着你继续往前走。
+按"数据层、ViewModel、列表页、录入页、汇总卡片"的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清"期望行为、实际行为、复现步骤"）。完成后用它记一周账，自己做的 App 用起来，成就感会推着你继续往前走。
 :::
 
 ::: div .chapter-summary

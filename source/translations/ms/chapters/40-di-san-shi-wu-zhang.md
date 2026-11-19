@@ -2,12 +2,12 @@
 id: di-san-shi-wu-zhang
 num: 35
 part: er-tong-pian
-nav: Bab 35: Kanak-kanak dan Telefon—Panduan Pendidikan Era Digital
+nav: Bab 35: Beri anak telefon, aturan mainnya apa?
 toc: default
 kind: chapter
 ---
 
-### Bab 35: Kanak-kanak dan Telefon — Panduan Pendidikan Era Digital
+### Bab 35: Beri anak telefon, aturan mainnya apa?
 
 {class="chapter-intro mb-4"}
 Ajar anak-anak tentang penggunaan teknologi secara bertanggungjawab, keselamatan dalam talian, dan etika digital.
@@ -46,7 +46,7 @@ Sebelum beri peranti kepada anak, perkara pertama bukan buka, tetapi tetapkan ka
 ##### 3. Apakah RAW?
 
 - <strong>RAW adalah format fail yang menyimpan semua data dari sensor kamera, tanpa pemampatan. Sesuai untuk edit lanjutan, tetapi fail lebih besar dan perlu diproses.</strong>: Tetapan &gt; Masa Skrin &gt; Had App, boleh tetapkan masa guna harian setiap kategori App (contoh permainan 30 minit).
-- <strong>HDR (High Dynamic Range) sesuai untuk scene dengan kontras tinggi (langit cerah + foreground gelap). Tidak sesuai untuk scene bergerak atau scene dengan kontras rendah.</strong> IV. Soalan keselamatan
+- <strong>HDR (High Dynamic Range) sesuai untuk scene dengan kontras tinggi (langit cerah + foreground gelap). Tidak sesuai untuk scene bergerak atau scene dengan kontras rendah.</strong> IV. Soalan keselamatan.
 - <strong>1. Adakah saya perlu pasang antivirus?</strong> iPhone: Tidak perlu. iOS tidak benarkan App akses sistem, antivirus tidak berkesan.
 - <strong>Android: Tidak wajib jika anda pasang App hanya dari Google Play dan elakkan pelayaran web berbahaya. Jika anda kerap pasang App dari sumber tidak diketahui, pertimbang antivirus.</strong>: Guna iPhone ibu bapa jauh urus peranti anak, sahkan permintaan muat turun, lihat laporan guna.
 
@@ -54,7 +54,7 @@ Sebelum beri peranti kepada anak, perkara pertama bukan buka, tetapi tetapkan ka
 
 - <strong>Google Family Link</strong>: Skim rasmi Google, boleh jauh urus tempoh guna peranti, kunci peranti, lihat laporan aktiviti. Android domestik perlu lihat ketersediaan model.
 - <strong>Ruang kanak-kanak Xiaomi</strong>: Tetapan &gt; Ruang Kanak-kanak, boleh tetapkan masa guna, App senarai putih, keluar perlu kata laluan ibu bapa.
-- <strong>Mod pelajar Huawei</strong> V. Soalan lain
+- <strong>Mod pelajar Huawei</strong> V. Soalan lain.
 - <strong>1. Adakah telefon boleh dihack melalui Bluetooth?</strong> Secara teori ya, tetapi sangat jarang. Pastikan Bluetooth dimatikan apabila tidak diguna, dan jangan berpasangan dengan peranti tidak diketahui.
 
 ::: div .overflow-x-auto
@@ -88,11 +88,11 @@ Anak selalu boleh cari cara untuk skip (online cari "cara crack Masa Skrin" tuto
 
 #### 3. Mod remaja
 
-Bab 27: Penghujung — Telefon pintar adalah alat, bukan tuan <strong>Perlu ibu bapa aktif buka dan tetapkan kata laluan</strong>:
+Bab 27: Penghujung, Telefon pintar adalah alat, bukan tuan <strong>Perlu ibu bapa aktif buka dan tetapkan kata laluan</strong>:
 
 - <strong>Kunci bukan teknologi, tetapi sikap</strong>: Setiap hari had 40 minit (22:00-6:00 dilarang), kandungan hanya papar video sains dan pendidikan pilihan, tidak boleh live, tidak boleh reward, tidak boleh topup.
 - <strong>Mod remaja WeChat</strong>: Hadkan WeChat Pay (perlu kebenaran ibu bapa had jumlah), hadkan kandungan akaun rasmi, Video Account, Shake, Orang Berdekatan dan fungsi lain lalai tutup.
-- <strong>Fahami perkakasan telefon (SoC, RAM, storan, skrin, bateri), sistem operasi (iOS, Android, HarmonyOS), dan tetapan asas.</strong> Bab 4-6: Keselamatan dan privasi
+- <strong>Fahami perkakasan telefon (SoC, RAM, storan, skrin, bateri), sistem operasi (iOS, Android, HarmonyOS), dan tetapan asas.</strong> Bab 4-6: Keselamatan dan privasi.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -107,7 +107,7 @@ Ramai anak guna kad pengenalan ibu bapa daftar akaun permainan skip anti-ketagih
 Teknik boleh halang 90% risiko, baki 10% bergantung pertimbangan anak. Berbanding "tidak boleh online", lebih penting ajar mereka "cara online":
 
 - <strong>Perlindungan privasi</strong>: Jangan dedahkan nama sebenar, sekolah, alamat rumah kepada orang asing; jangan hantar foto peribadi, kad pengenalan, foto keluarga; fungsi lokasi lalai tutup, hanya buka semasa guna.
-- <strong>Bab 13-15: Privasi dan kreativiti</strong>: Dicaci, diasingkan, di-P gambar jahat semua adalah bullying. Beritahu anak apabila hadapi jangan berbalah, jangan padam bukti, serta-merta beritahu ibu bapa. WeChat boleh tekan lama mesej komplen, platform akan urus akaun penyerang.
+- <strong>Bab 13-15: Privasi dan kreativiti</strong>: Dicaci, diasingkan, di-P gambar jahat semua adalah bullying. Beritahu anak apabila hadapi jangan berbalah. jangan padam bukti, serta-merta beritahu ibu bapa. WeChat boleh tekan lama mesej komplen, platform akan urus akaun penyerang.
 - <strong>Bab 16-18: Pengurusan dan penyelesaian masalah</strong>: Ajar anak bezakan "fakta" dan "pendapat", kenal pasti clickbait, tajuk mengejutkan; faham algoritma hanya cadangkan yang anda mahu tengok, tidak wakili dunia penuh; jumpa iklan "rezeki turun dari langit" jangan
 - <strong>Bab 19-21: Produktiviti dan AI</strong>: Jangan klik link asing, jangan imbas QR code tidak diketahui, jangan muat turun App bukan dari App Store rasmi; kata laluan jangan kongsi dengan sesiapa (termasuk "kawan baik"); jumpa yang minta kod pengesahan
 
@@ -119,10 +119,10 @@ Teknik boleh halang 90% risiko, baki 10% bergantung pertimbangan anak. Berbandin
 Praktik keselamatan, penyelamatan kecemasan, dan masa depan telefon pintar.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Bab 25-26: Etika dan soalan lazim
+- Bab 25-26: Etika dan soalan lazim.
 - Etika digital dan soalan lazim.
 - Sempadan kandungan: Tidak pasang App tanpa maklum ibu bapa, tidak sembang peribadi dengan orang asing.
-- 1. Alat, bukan tuan
+- 1. Alat, bukan tuan.
 - Ibu bapa berjanji: Tidak "skrol telefon" melebihi masa dipersetujui di depan anak, jadikan contoh.
 :::
 

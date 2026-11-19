@@ -10,9 +10,9 @@ kind: chapter
 ### Bab 67: Penggilapan dan Penerbitan — Pengujian, Penyahpepijatan dan Muat Naik ke App Store
 
 {class="chapter-intro mb-4"}
-App sudah siap, kemudian apa? Bab ini menjawab tiga perkara untuk 'dari boleh berjalan' kepada 'boleh dihantar': cara menyahpepiat dan mencari bug dengan cekap, cara menulis ujian untuk mencegah regresi, dan cara menghantar App ke App Store agar boleh dimuat turun oleh seluruh dunia. Muat naik bukan sekadar upacara — ia titik peralihan yang mengubah sesebuah karya menjadi produk.
+App sudah siap, kemudian apa? Bab ini menjawab tiga perkara untuk 'dari boleh berjalan' kepada 'boleh dihantar': cara menyahpepiat dan mencari bug dengan cekap, cara menulis ujian untuk mencegah regresi, dan cara menghantar App ke App Store agar boleh dimuat turun oleh seluruh dunia. Muat naik bukan sekadar upacara, ia titik peralihan yang mengubah sesebuah karya menjadi produk.
 
-#### 1. Tiga senjata penyahpepijatan: print, titik sekatan, pratonton
+1. Tiga senjata penyahpepijatan: print, titik sekatan, pratonton
 
 ::: div .overflow-x-auto
 ```html
@@ -28,12 +28,12 @@ Tiga senjata penyahpepijatan
 Petua: Ranap, bagaimana membacanya?
 
 {class="mt-1"}
-Apabila Swift ranap, konsol mencetak 'Fatal error' beserta sebabnya, dan Xcode berhenti pada baris ralat sambil menyerlahkannya. Sejarah ranap pada peranti sebenar boleh dilihat di Xcode → Window → Organizer → Crashes (memerlukan akaun berbayar). Utamakan mencari kata kunci 'ayat pertama sebab ralat + swiftui' — soalan yang tepat barulah mendapat jawapan yang tepat.
+Apabila Swift ranap, konsol mencetak 'Fatal error' beserta sebabnya, dan Xcode berhenti pada baris ralat sambil menyerlahkannya. Sejarah ranap pada peranti sebenar boleh dilihat di Xcode → Window → Organizer → Crashes (memerlukan akaun berbayar). Utamakan mencari kata kunci 'ayat pertama sebab ralat + swiftui'. soalan yang tepat barulah mendapat jawapan yang tepat.
 :::
 
 #### 2. Pengujian: memberikan insurans kepada kod
 
-Ujian manual tidak boleh diharap — selepas mengubah fungsi ini, fungsi lain rosak secara senyap. Ujian ialah 'ubat penyesalan' sekali gus 'baju tahan peluru'. iOS menggunakan rangka kerja XCTest, terdiri daripada dua jenis:
+Ujian manual tidak boleh diharap, selepas mengubah fungsi ini, fungsi lain rosak secara senyap. Ujian ialah 'ubat penyesalan' sekali gus 'baju tahan peluru'. iOS menggunakan rangka kerja XCTest, terdiri daripada dua jenis:
 
 ::: div .overflow-x-auto
 ```html
@@ -77,7 +77,7 @@ Jalankan ujian: ⌘U. Semua hijau barulah ubah kod, hati pun tenang. Pengesahan 
 
 #### 3. Pemeteraian dan pembungkusan: mencap 'cop' pada App
 
-Setiap App iOS mesti dimeterai sebelum boleh dipasang — sebagai bukti 'pakej ini datang daripada anda dan tidak diganggu gugat'. Hubungan hierarkinya:
+Setiap App iOS mesti dimeterai sebelum boleh dipasang, sebagai bukti 'pakej ini datang daripada anda dan tidak diganggu gugat'. Hubungan hierarkinya:
 
 - Peringkat pembelajaran: Apple ID percuma + pemeteraian automatik Xcode (Personal Team), boleh dijalankan pada peranti sebenar, perlu diperbaharui setiap 7 hari;
 - Peringkat pengedaran: akaun pembangun berbayar (99 dolar AS/tahun) mengeluarkan sijil dan fail provisioning, barulah boleh dimuat naik dan dipasang secara jangka panjang.
@@ -108,24 +108,24 @@ Rajah 5: Enam langkah muat naik ke App Store
 :::
 
 - Pendaftaran: developer.apple.com, akaun individu 99 dolar AS/tahun;
-- Bahan: ikon (1024×1024, jangan sertakan sudut bulat — Apple memotongnya sendiri), tangkapan skrin (pelbagai saiz iPhone), huraian, pautan dasar privasi;
-- Soal selidik privasi: isytiharkan dengan jujur data apa yang dikumpul — buku rekod perbelanjaan yang tidak bersambung internet boleh menjawab 'tidak mengumpul sebarang data';
-- Semakan: penyerahan pertama sering menunggu 1-7 hari; jika ditolak, ubah satu demi satu mengikut 'nota semakan' — sebab penolakan Apple biasanya ditulis dengan sangat khusus, cukup ikut sahaja;
-- TestFlight: sebelum muat naik, kirim dahulu versi ujian kepada rakan untuk ujian dalaman (paling banyak 10000 orang), kumpulkan satu pusingan maklum balas barulah serahkan secara rasmi — sungguh berbau profesional.
+- Bahan: ikon (1024×1024, jangan sertakan sudut bulat, Apple memotongnya sendiri), tangkapan skrin (pelbagai saiz iPhone), huraian, pautan dasar privasi;
+- Soal selidik privasi: isytiharkan dengan jujur data apa yang dikumpul, buku rekod perbelanjaan yang tidak bersambung internet boleh menjawab 'tidak mengumpul sebarang data';
+- Semakan: penyerahan pertama sering menunggu 1-7 hari; jika ditolak, ubah satu demi satu mengikut 'nota semakan', sebab penolakan Apple biasanya ditulis dengan sangat khusus, cukup ikut sahaja;
+- TestFlight: sebelum muat naik, kirim dahulu versi ujian kepada rakan untuk ujian dalaman (paling banyak 10000 orang), kumpulkan satu pusingan maklum balas barulah serahkan secara rasmi, sungguh berbau profesional
 
-#### 5. Cara membuat bahan kedai: tanggapan pertama menentukan muat turun
+5. Cara membuat bahan kedai: tanggapan pertama menentukan muat turun
 
 Halaman kedai ialah etalase yang dilihat pengguna semasa 'membelah kedai'. Tiga bahan menentukan tanggapan pertama:
 
 - Ikon: 1024×1024, jangan gunakan tangkapan skrin sambil lewa. Tiada kemahiran reka bentuk? Jana grafik ringkas dengan alat AI; barulah layak jika masih dapat dikenali dengan sekali pandang walaupun dikecilkan pada skrin utama;
-- Tangkapan skrin: sekurang-kurangnya 2 set (saiz utama iPhone), memaparkan senario fungsi paling teras; setiap satu disertai satu ayat teks berbahasa manusia ('catat sekelip mata' sepuluh kali lebih baik daripada 'penyelesaian pengurusan kewangan yang cekap');
-- Huraian: ayat pertama menjelaskan 'apa ini + untuk siapa'; jangan menimbunkan 'paling profesional, paling hebat' — kejujuran lebih berkesan daripada pembesaran.
+- Tangkapan skrin: sekurang-kurangnya 2 set (saiz utama iPhone), memaparkan senario fungsi paling teras; setiap satu disertai satu ayat teks berbahasa manusia ('catat sekelip mata' sepuluh kali lebih baik dari,pada 'penyelesaian pengurusan kewangan yang cekap');
+- Huraian: ayat pertama menjelaskan 'apa ini + untuk siapa'; jangan menimbunkan 'paling profesional, paling hebat', kejujuran lebih berkesan daripada pembesaran
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: 'Hantar' buku rekod perbelanjaan sekali
 
-#### 6. Senarai ringkas pelaporan ranap dan pengoptimuman prestasi
+6. Senarai ringkas pelaporan ranap dan pengoptimuman prestasi
 
 Sebelum App dimuat naik, dua perkara ini wajar meluangkan setengah jam masing-masing:
 
@@ -138,7 +138,7 @@ App tidak ranap semasa anda menguji tidak bermakna ia tidak akan ranap pada tele
 1. Senarai guna LazyVStack / List: senarai panjang jangan gunakan VStack biasa secara keras — pemuatan malas ialah pelajaran pertama prestasi;
 2. Imej jangan paksa masuk imej asal: guna AsyncImage (imej jauh) dan cache sistem; imej asal 5MB cukup untuk membekukan model lama;
 3. Jangan lakukan kerja berat pada urutan utama: rangkaian dan fail besar semuanya melalui async/await;
-4. Ukur dengan Instruments: penganalisis prestasi terbina dalam Xcode (Time Profiler, semakan kebocoran memori) — ukur dahulu, kemudian barulah optimumkan, jangan ikut perasaan.
+4. Ukur dengan Instruments: penganalisis prestasi terbina dalam Xcode (Time Profiler, semakan kebocoran memori) — ukur dahulu, kemudian barulah optimumkan, jangan ikut perasaan
 
 {class="mt-1"}
 (1) Tambah 3 ujian unit bagi logik seperti parseAmount (jalankan hijau dengan ⌘U); (2) guna titik sekatan untuk menangkap sendiri satu ranap buatan sendiri dan membaikinya; (3) Product → Archive bungkus satu pakej, melalui TestFlight jemput rakan untuk ujian dalaman; (4) ada kelapangan? Daftar akaun pembangun dan serahkan buku rekod perbelanjaan untuk dimuat naik benar-benar. Tiga langkah pertama boleh siap malam ini juga.
@@ -152,5 +152,12 @@ Ringkasan bab ini
 - XCTest: ujian unit (⌘U) + ujian UI + ujian manual, sudah disediakan dalam templat
 - Pemeteraian: akaun percuma pemeteraian automatik (diperbaharui setiap 7 hari); akaun berbayar diperlukan untuk pengedaran
 - Pembungkusan: Generic iOS Device + Archive + Distribute; sijil wajib dibuat sandaran
-- Enam langkah muat naik: daftar → bahan → muat naik → soal selidik privasi → semakan → terbit; ujian dalaman TestFlight dahulu
+Enam langkah muat naik：
+1. daftar
+2. bahan
+3. muat naik
+4. soal selidik privasi
+5. semakan
+6. terbit
+ujian dalaman TestFlight dahulu
 :::

@@ -43,7 +43,7 @@ fun HomeScreen() {
 
 Fíjate en ese "sombrero" llamado @Composable: le dice al compilador "esto es una pieza de interfaz". Las piezas se pueden anidar sin límite, y ese es todo el secreto de Compose.
 
-#### 2. Componentes básicos: texto, botón, campo de texto e imagen
+2. Componentes básicos: texto, botón, campo de texto e imagen
 
 Los componentes de Compose son "bloques de construcción"; los cuatro más habituales:
 
@@ -88,7 +88,7 @@ Ya tienes los componentes, ¿cómo se colocan? Recuerda tres "cajas":
 
 - Column: apila en vertical (como la cola del comedor);
 - Row: alinea en horizontal (como sentados lado a lado);
-- Box: coloca en capas (como un mazo de cartas apiladas; ideal para insignias y superposiciones).
+- Box: coloca en capas (como un mazo de cartas apiladas; ideal para insignias y superposiciones)
 
 ::: div .code-block
 :::inline div .code-head
@@ -178,13 +178,13 @@ Tres líneas de código y tienes un contador vivo. Ahí está lo agradable de Co
 Figura 3: el flujo de datos unidireccional "estado → interfaz" de Compose
 :::
 
-#### 5. Temas y modo oscuro: se configura una vez y manda en toda la app
+5. Temas y modo oscuro: se configura una vez y manda en toda la app
 
 El MyFirstAppTheme { ... } del proyecto de plantilla es el tema. Se apoya en las directrices de diseño Material 3 y te ayuda a llevar colores, tipografías y formas con un mismo criterio. Dar soporte al modo oscuro solo exige tres pasos:
 
 1. definir en el tema las dos paletas, clara y oscura (la plantilla ya genera sola el ColorScheme);
 2. isSystemInDarkTheme() detecta solo cuando el sistema pasa al modo oscuro;
-3. usar los colores que da el tema (por ejemplo, MaterialTheme.colorScheme.primary) en vez de valores clavados a mano.
+3. usar los colores que da el tema (por ejemplo, MaterialTheme.colorScheme.primary) en vez de valores clavados a mano
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -194,13 +194,13 @@ Consejo: el color dinámico de Material 3
 "Material You", que existe desde Android 12, permite a la app sacar colores de tu fondo de pantalla. Las plantillas de Compose lo traen por defecto (dynamicColor). Tu app se "cambiará de traje" sola en el móvil de cada usuario: esa es la poesía del Android moderno.
 :::
 
-#### 6. Vista previa, animaciones y edición en vivo: los "extras" de Compose
+6. Vista previa, animaciones y edición en vivo: los "extras" de Compose
 
 Tres "extras" de Compose para la experiencia de desarrollo: una vez probados, ya no hay vuelta atrás:
 
 - Vista previa con @Preview: al añadir la anotación @Preview a un Composable, Android Studio dibuja la interfaz al momento en el panel de la derecha: ves lo que escribes sin tener que instalar cada vez en el móvil;
 - Edición en vivo (Live Edit): Android Studio en 2026 admite "recargar en caliente" ciertos cambios sobre el emulador o el dispositivo real; retoques pequeños como cambiar el color de un texto se ven al segundo en el dispositivo;
-- APIs de animación: con unas pocas líneas de animateFloatAsState o AnimatedVisibility los elementos pasan de un estado a otro con suavidad; esa "sensación premium" suele estar a esas pocas líneas de distancia.
+- APIs de animación: con unas pocas líneas de animateFloatAsState o AnimatedVisibility los elementos pasan de un estado a otro con suavidad; esa "sensación premium" suele estar a esas pocas líneas de distancia
 
 ::: div .code-block
 :::inline div .code-head

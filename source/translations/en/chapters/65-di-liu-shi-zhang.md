@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 60: Setting Up Your Development Environment—Xcode and Your First Project
 
 {class="chapter-intro mb-4"}
-A craftsman is only as good as their tools. In this chapter we'll set up the "kitchen": install Xcode, get the simulator running, create the first iOS project of your life, and then take the project structure apart so you understand every piece. Once the environment is ready, you'll see your own code turn into a button you can tap for the very first time—a moment many people remember for the rest of their lives.
+A craftsman is only as good as their tools. In this chapter we'll set up the "kitchen": install Xcode, get the simulator running, create the first iOS project of your life, and then take the project structure apart so you understand every piece. Once the environment is ready, you'll see your own code turn into a button you can tap for the very first time. It's a moment many people remember for the rest of their lives.
 
 #### 1. Getting a Mac Ready
 
@@ -37,16 +37,16 @@ The free Swift Playgrounds app on the iPad teaches the basics of the Swift langu
 
 Xcode is Apple's official integrated development environment, and it's free. Three steps to install:
 
-1. On your Mac, open the App Store, search for "Xcode," and click Install—heads up, it's several GB, so pick a time when your connection is fast;
+1. On your Mac, open the App Store, search for "Xcode," and click Install,heads up, it's several GB, so pick a time when your connection is fast;
 2. On first launch after installing, accept the agreement and let the components install (it happens automatically);
-3. In the menu bar, go to Xcode > Settings > Locations and make sure Command Line Tools is selected—the command line tools are a prerequisite for many scripts and third-party tools.
+3. In the menu bar, go to Xcode > Settings > Locations and make sure Command Line Tools is selected:the command line tools are a prerequisite for many scripts and third-party tools
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Note: The Version and System "Matching Game"
 
 {class="mt-1"}
-A new Xcode usually demands the latest macOS, while older Macs get stuck on older versions. When you publish to the App Store, Apple requires building with a relatively recent Xcode (usually with a grace period). So don't put off system updates too long—iOS developers are among the busiest "new version chasers" out there.
+A new Xcode usually demands the latest macOS, while older Macs get stuck on older versions. When you publish to the App Store, Apple requires building with a relatively recent Xcode (usually with a grace period). So don't put off system updates too long. iOS developers are among the busiest "new version chasers" out there.
 :::
 
 #### 3. Creating Your First Project
@@ -62,11 +62,11 @@ Open Xcode > Create New Project > choose iOS > the App template, then fill in:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 The five things to fill in when creating a project
 
-After you click Create, Xcode generates a project that runs right away. Pick a simulator in the top-left corner (say, iPhone 17) and click ▶ to run—a few seconds later, a window saying "Hello, world!" appears on the simulator's screen. Your first iOS app has been born.
+After you click Create, Xcode generates a project that runs right away. Pick a simulator in the top-left corner (say, iPhone 17) and click ▶ to run,a few seconds later, a window saying "Hello, world!" appears on the simulator's screen. Your first iOS app has been born.
 
 #### 4. Project Structure, Dissected: What Each File Does
 
-On the left is the project navigator—as a beginner, you only need to know these:
+On the left is the project navigator,as a beginner, you only need to know these:
 
 ::: div .figure
 ```html
@@ -98,11 +98,11 @@ Figure 2: The Xcode project structure every beginner must know
 :::
 
 - MyFirstAppApp.swift: the program's entry point. In SwiftUI it's only a few lines—"launch, then show the main screen";
-- ContentView.swift: the main screen view—everything you're looking at right now lives here;
-- Assets.xcassets: the resource warehouse—icons, images, and colors all go here;
-- Target settings: click the blue project icon on the left to get in. The version number, the minimum iOS version, and signing are all in there. The app's display name and icon are configured here too.
+- ContentView.swift: the main screen view,everything you're looking at right now lives here;
+- Assets.xcassets: the resource warehouse:icons, images, and colors all go here;
+- Target settings: click the blue project icon on the left to get in. The version number, the minimum iOS version, and signing are all in there. The app's display name and icon are configured here too
 
-#### 5. Xcode Efficiency Tricks: Five "Shortcut Power-Ups" for Beginners
+5. Xcode Efficiency Tricks: Five "Shortcut Power-Ups" for Beginners
 
 Get fluent with these and you'll look "very professional":
 
@@ -115,7 +115,7 @@ Get fluent with these and you'll look "very professional":
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 High-frequency Xcode shortcuts (the beginner's five)
 
-Two more hidden perks: multiple simulators at once (run an iPhone and an iPad side by side to compare layouts) and the snippet library (drag a few lines of frequently used code into the Snippets panel on the right, then insert them with one click next time)—use these efficiency tools early, and the fluency will follow naturally.
+Two more hidden perks: multiple simulators at once (run an iPhone and an iPad side by side to compare layouts), and the snippet library (drag a few lines of frequently used code into the Snippets panel on the right, then insert them with one click next time). Use these efficiency tools early, and the fluency will follow naturally.
 
 #### 6. Testing on a Real Device: Install the App on Your iPhone
 
@@ -124,19 +124,19 @@ The simulator is nice, but a real device is the destination. You can test on a r
 1. Connect your iPhone with a cable (or debug wirelessly over the same Wi-Fi);
 2. Pick your phone from the device list at the top of Xcode; the first time, you'll be asked to sign in with your Apple ID and signing gets configured automatically;
 3. On the iPhone, go to [Settings] > [General] > [VPN & Device Management] and trust your developer certificate;
-4. Click ▶, and the app lands on your real device.
+4. Click ▶, and the app lands on your real device
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Note: The Free Account's "Seven-Day Limit"
 
 {class="mt-1"}
-An app signed with a free Apple ID stops working after 7 days (just run it again to renew). This is Apple's anti-abuse mechanism, and it's completely fine for the learning stage; a paid developer account ($99/year) has no such limit—Chapter 67 has the details.
+An app signed with a free Apple ID stops working after 7 days (just run it again to renew). This is Apple's anti-abuse mechanism, and it's completely fine for the learning stage; a paid developer account ($99/year) has no such limit,Chapter 67 has the details.
 :::
 
 #### 7. Try It Yourself + First Aid for Common Errors
 
-Open ContentView.swift, change the text inside Text("Hello, world!") to your name, and press ⌘R to run again—a few seconds later, your name shows up on the simulator. Congratulations: you've completed your first full "edit code → build → install → run" loop.
+Open ContentView.swift, change the text inside Text("Hello, world!") to your name, and press ⌘R to run again,a few seconds later, your name shows up on the simulator. Congratulations: you've completed your first full "edit code → build → install → run" loop.
 
 ::: div .overflow-x-auto
 ```html

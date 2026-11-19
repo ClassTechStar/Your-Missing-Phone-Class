@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Früher habe ich auch Arbeiten am Smartphone nur als „Notbehelf“ betrachtet – bis ich auf einer Dienstreise den Laptop vergaß und Angebotsänderung wie Vertragsunterzeichnung komplett am Handy erledigte. Ehrlich gesagt liegt der Engpass mobiler Arbeit selten am Gerät selbst, sondern daran, dass man seine Fähigkeiten und Grenzen nicht kennt.
 
-#### 1. Dokumente bearbeiten: Schreiben und Gestalten in der Handfläche
+1. Dokumente bearbeiten: Schreiben und Gestalten in der Handfläche
 
 Dokumente auf dem Smartphone-Bildschirm zu bearbeiten fühlt sich wirklich anders an als am Computer. Die größten Probleme: kleiner Bildschirm, dicke Finger, schnell verrutschtes Layout. Mit ein paar Tricks lässt sich das Erlebnis aber deutlich verbessern:
 
@@ -41,7 +41,7 @@ Das Scannen mit dem Smartphone kann, richtig eingesetzt, viele Gänge zum Copysh
 - <strong>OCR-Texterkennung</strong>: Wenn Sie aus einem gescannten Dokument den Text zur Bearbeitung extrahieren möchten, benötigen Sie OCR. Die in WeChat integrierte Funktion „Text extrahieren" ist am einfachsten – langes Drücken auf das Bild genügt, und die Erkennungsgenauigkeit ist ordentlich. Für größere Mengen eignen sich die App Baimiao oder Quanneng Scan King. Für die chinesische Zeichenerkennung liefert Baidus OCR-Engine gute Ergebnisse; die Bild-zu-Text-Funktion von WPS ist ebenfalls sehr genau.
 - <strong>Scan-Tipps</strong>: Fotografieren Sie an einem Ort mit ausreichendem Licht, am besten mit einer Tischlampe seitlich, um Schatten der Hände auf dem Dokument zu vermeiden. Wenn das Dokument geknickt ist, glätten Sie es erst mit der Hand. Mehrseitige Dokumente können nacheinander gescannt und zu einem einzigen PDF zusammengefügt werden, ohne jede Seite einzeln zu speichern.
 
-#### 4. Cloud-Speicher wählen: Es gibt nicht den Besten, nur den für Sie Passenden
+4. Cloud-Speicher wählen: Es gibt nicht den Besten, nur den für Sie Passenden
 
 Bei der Wahl des Cloud-Speichers habe ich lange überlegt und schließlich erkannt: Es kommt darauf an, was Ihr digitales Hauptleben ausmacht.
 

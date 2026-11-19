@@ -57,7 +57,7 @@ struct CounterView: View {
 
 #### 二、NavigationStack：頁面跳轉的"棧"
 
-iOS 16 起，多頁面導航用 NavigationStack——像一摞盤子，推一個進一個，返回時逐個跳出：
+iOS 16 起，多頁面導航用 NavigationStack，像一摞盤子，推一個進一個，返回時逐個跳出：
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink 就是"能點的跳轉連結"；navigationTitle 自動生成導航欄標題和返回按鈕。要程式設計式跳轉（比如點完"儲存"自動返回）時，用 @Environment(\.dismiss) 關閉當前頁面——這兩招配合，90% 的導航需求就齊了。
+NavigationLink 就是"能點的跳轉連結"；navigationTitle 自動生成導航欄標題和返回按鈕。要程式設計式跳轉（比如點完"儲存"自動返回）時，用 @Environment(\.dismiss) 關閉當前頁面：這兩招配合，90% 的導航需求就齊了。
 
 #### 三、跳出視窗與底部標籤：sheet 與 TabView
 
@@ -166,7 +166,7 @@ struct RecordListView: View {
 ```
 :::
 
-列表 + NavigationLink + sheet + TabView——把這四樣組合起來，你已經能搭出"帳本列表 → 點開詳情 → 點+彈錄入"的完整 App 骨架了。下一章的記帳本專案，就是這麼搭的。
+列表 + NavigationLink + sheet + TabView：把這四樣組合起來，你已經能搭出"帳本列表 → 點開詳情 → 點+彈錄入"的完整 App 骨架了。下一章的記帳本專案，就是這麼搭的。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-典型用途：回前臺時重新整理資料，進後臺時儲存草稿。iOS 對後臺執行管得很嚴——普通 App 進後臺後很快被掛起（凍結），別指望在後臺偷偷乾重活；真要定時任務，用第 68 章的本地通知，而不是"後臺常駐"。
+典型用途：回前臺時重新整理資料，進後臺時儲存草稿。iOS 對後臺執行管得很嚴，普通 App 進後臺後很快被掛起（凍結），別指望在後臺偷偷乾重活；真要定時任務，用第 68 章的本地通知，而不是"後臺常駐"。
 
 {class="mt-1"}
-做一個假資料版本的記帳本骨架：TabView 三個標籤（帳本/統計/設定）→ 帳本頁用 List 顯示假資料、點行跳詳情（NavigationStack）→ 右上角"+"按鈕彈錄入 sheet。不存資料、不聯網，純練骨架——這個骨架做好，第 65 章往裡填真資料就是水到渠成。
+做一個假資料版本的記帳本骨架：TabView 三個標籤（帳本/統計/設定）→ 帳本頁用 List 顯示假資料、點行跳詳情（NavigationStack）→ 右上角"+"按鈕彈錄入 sheet。不存資料、不聯網，純練骨架，這個骨架做好，第 65 章往裡填真資料就是水到渠成。
 :::
 
 ::: div .chapter-summary

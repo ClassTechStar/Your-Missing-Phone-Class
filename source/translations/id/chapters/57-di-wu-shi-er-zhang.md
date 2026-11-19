@@ -27,7 +27,7 @@ Sekilas empat komponen utama Android
 
 Di fase pemula, 95% waktumu berkutat dengan Activity; Service dan BroadcastReceiver dipakai saat memutar musik atau mengirim push notification; ContentProvider paling jarang dipakai (data yang umum sudah dibungkus rapi oleh sistem). Catatan lagi: keempat komponen utama wajib 'mendaftar' di AndroidManifest.xml; kalau tidak terdaftar, sistem tidak akan menemukannya.
 
-#### 2. Siklus Hidup Activity: 'Peta Harta Karun' Pertama Pengembangan Android
+2. Siklus Hidup Activity: 'Peta Harta Karun' Pertama Pengembangan Android
 
 Aplikasi di ponsel kapan pun bisa terinterupsi: ada telepon masuk, pengguna berpindah ke WeChat untuk membalas pesan, sistem kehabisan memori lalu menutupmu... Seumur hidup Activity adalah berkeliling di peta ini:
 
@@ -122,11 +122,11 @@ Tips: Kalau Halamannya Makin Banyak, Bagaimana?
 Saat proyek membesar, kumpulkan semua rute halaman dalam satu berkas (misalnya AppNavGraph.kt) agar terkelola rapi; jangan biarkan logika 'pergi ke mana' tersebar di tiap halaman. Ini langkah pertama dari 'bisa jalan' menuju 'mudah dirawat'.
 :::
 
-#### 5. Sekalian Kenalan: Apa Itu Fragment (dan Kenapa Buku Ini Tidak Mengajarkannya)
+5. Sekalian Kenalan: Apa Itu Fragment (dan Kenapa Buku Ini Tidak Mengajarkannya)
 
-Saat membaca tutorial lama kamu pasti bertemu Fragment—'potongan antarmuka yang bisa dipakai ulang' di dalam Activity, pemeran utama mutlak di arsitektur multi-halaman lama. Tetapi di era Compose, halaman cukup memakai fungsi Composable + rute Navigation, dan secara resmi posisi Fragment pun sudah dikurangi. Karena itu buku ini tidak memasukkannya ke jalur utama.
+Saat membaca tutorial lama kamu pasti bertemu Fragment,'potongan antarmuka yang bisa dipakai ulang' di dalam Activity, pemeran utama mutlak di arsitektur multi-halaman lama. Tetapi di era Compose, halaman cukup memakai fungsi Composable + rute Navigation, dan secara resmi posisi Fragment pun sudah dikurangi. Karena itu buku ini tidak memasukkannya ke jalur utama.
 
-Saran untukmu: pada proyek baru jangan aktif-aktif memakai Fragment; tapi saat membaca kode lama atau ditanya saat wawancara, cukup tahu bahwa ia 'potongan antarmuka yang tertanam di dalam Activity'. Sumber belajar selalu prioritaskan yang terbit 2023 ke atas—'almanak lama' tumpukan teknologi Android ternyata lebih cepat kedaluwarsa dari yang dikira.
+Saran untukmu: pada proyek baru jangan aktif-aktif memakai Fragment; tapi saat membaca kode lama atau ditanya saat wawancara, cukup tahu bahwa ia 'potongan antarmuka yang tertanam di dalam Activity'. Sumber belajar selalu prioritaskan yang terbit 2023 ke atas:'almanak lama' tumpukan teknologi Android ternyata lebih cepat kedaluwarsa dari yang dikira.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

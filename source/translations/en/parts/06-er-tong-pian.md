@@ -10,4 +10,4 @@ class: mb-12
 ## Children and Phones Special Topic (Chapters 35-36)
 
 {class="chapter-intro mb-4"}
-The relationship between children and phones is one of the biggest headaches for this generation of parents. Give it too early, fear addiction; too late, fear falling behind. Control too much, fear rebellion; too little, fear losing control. This chapter doesn't take sides or lecture — it breaks down "when to give, how to manage, how to teach, how to protect" into actionable steps, helping you be a confident parent in the digital age.
+The relationship between children and phones is one of the biggest headaches for this generation of parents. Give it too early, fear addiction; too late, fear falling behind. Control too much, fear rebellion; too little, fear losing control. This chapter doesn't take sides or lecture, it breaks down "when to give, how to manage, how to teach, how to protect" into actionable steps, helping you be a confident parent in the digital age.

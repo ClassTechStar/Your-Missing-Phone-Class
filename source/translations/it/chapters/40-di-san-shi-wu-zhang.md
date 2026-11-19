@@ -2,15 +2,15 @@
 id: di-san-shi-wu-zhang
 num: 35
 part: er-tong-pian
-nav: Capitolo 35: Bambini e smartphone — Guida educativa all'era digitale
+nav: Capitolo 35: Dai il telefono a tuo figlio: poni le regole
 toc: default
 kind: chapter
 ---
 
-### Capitolo 35: Bambini e telefoni — guida all'educazione nell'era digitale
+### Capitolo 35: Dai il telefono a tuo figlio: poni le regole
 
 {class="chapter-intro mb-4"}
-Questo capitolo non racconta che "il telefono è un mostro", né sponsors "chi prima comincia prima diventa intelligente". Procediamo per fasce d'età: device, regole, alfabetizzazione, salute — un passo alla volta.
+Questo capitolo non racconta che "il telefono è un mostro", né sponsors "chi prima comincia prima diventa intelligente". Procediamo per fasce d'età: device, regole, alfabetizzazione, salute, un passo alla volta.
 
 #### 1. A quale età dare il telefono al bambino?
 
@@ -31,7 +31,7 @@ Il primo telefono del bambino non deve essere un flagship. Le "prestazioni ecced
 
 ##### L'orologio intelligente come soluzione transitoria
 
-Se vuoi solo risolvere il problema "riesci a contattarlo dopo scuola", un orologio per bambini è più adatto del telefono. Può solo chiamare, inviare messaggi vocali, localizzare — niente browser né brevi video, e limita naturalmente le "porte di dipendenza":
+Se vuoi solo risolvere il problema "riesci a contattarlo dopo scuola", un orologio per bambini è più adatto del telefono. Può solo chiamare, inviare messaggi vocali, localizzare, niente browser né brevi video, e limita naturalmente le "porte di dipendenza":
 
 - <strong>Orologio telefonico XiaoTianCai</strong>: l'ecosistema più completo; il "touch per aggiungere amici" tra coetanei è il suo punto di forza, ma l'ecosistema app dedicato è piuttosto chiuso.
 - <strong>Orologio per bambini Huawei</strong>: buona integrazione col telefono Huawei, localizzazione precisa, supporta videotelefonate, ottimo rapporto qualità-prezzo.
@@ -107,7 +107,7 @@ Molti bambini registrano i conti gioco con la carta d'identità dei genitori per
 La tecnologia intercetta il 90% dei rischi; il restante 10% dipende dal giudizio del bambino. Più che "non navigare", conta insegnargli "come navigare":
 
 - <strong>Protezione della privacy</strong>: non rivelare a estranei nome vero, scuola, indirizzo di casa; non inviare foto personali, documento d'identità, foto di famiglia; la localizzazione è disattivata per default, attivata solo quando serve.
-- <strong>Riconoscimento e gestione del cyberbullismo</strong>: insulti, isolamento, fotomontaggi offensivi sono tutti bullismo. Dì al bambino: non rispondere con insulti, non cancellare le prove, avverti subito i genitori. Su WeChat puoi tenere premuto sul messaggio per segnalarlo e la piattaforma tratterà l'account dell'aggressore.
+- <strong>Riconoscimento e gestione del cyberbullismo</strong>: insulti, isolamento. Fotomontaggi offensivi sono tutti bullismo. Dì al bambino: non rispondere con insulti, non cancellare le prove, avverti subito i genitori. Su WeChat puoi tenere premuto sul messaggio per segnalarlo e la piattaforma tratterà l'account dell'aggressore.
 - <strong>Spirito critico</strong>: insegnagli a distinguere "fatti" da "opinioni", a riconoscere clickbait e titoli shock; a capire che l'algoritmo spinge solo ciò che vuoi vedere, non rappresenta il mondo intero; di fronte ad annunci "una torta dal cielo", non credere mai.
 - <strong>Sicurezza online</strong>: non cliccare link sconosciuti, non scansionare QR code di origine dubbia, non scaricare app da store non ufficiali; non condividere la password con nessuno (nemmeno con il "migliore amico"); chiunque chieda un codice di verifica va considerato un truffatore.
 
@@ -131,7 +131,7 @@ Scrivere le regole, firmarle entrambi e affiggerle in vista è molto più effica
 Occhi, collo e sonno del bambino sono in fase di sviluppo e il telefono li danneggia più di quanto faccia con gli adulti:
 
 - <strong>Tempo schermo consigliato</strong>: 3-6 anni non più di 1 ora al giorno; 6-12 anni niente limiti per l'apprendimento, intrattenimento non oltre 1 ora; sopra i 12 anni da concordare col bambino, ma intrattenimento non oltre 2 ore.
-- <strong>Abitudini per la vista</strong>: segui la "regola 20-20-20" — ogni 20 minuti di schermo, guarda a 20 piedi (circa 6 metri) di distanza per 20 secondi; niente telefono nell'ora prima di dormire, la luce blu inibisce la melatonina e altera il sonno.
+- <strong>Abitudini per la vista</strong>: segui la "regola 20-20-20", ogni 20 minuti di schermo, guarda a 20 piedi (circa 6 metri) di distanza per 20 secondi; niente telefono nell'ora prima di dormire, la luce blu inibisce la melatonina e altera il sonno.
 - <strong>Gestione della postura</strong>: schermo all'altezza degli occhi, non a testa bassa o spalle curve; non più di 30 minuti consecutivi, poi alzati e muoviti.
 - <strong>Regole condivise in famiglia</strong>: tavolo, camera da letto, studio come "zone senza telefono"; quando si guarda un film insieme o si fa attività all'aperto, i telefoni si ritirano: "mettere via il telefono" diventi cultura di famiglia, non punizione per il bambino.
 
@@ -147,8 +147,8 @@ Le ricerche mostrano che il tempo di utilizzo del telefono da parte dei genitori
 
 Questa sezione è spesso trascurata, ma importante. I beni digitali del bambino (account, foto, saldi ricaricati, attrezzatura di gioco) affrontano anch'essi problemi di successione e privacy:
 
-- <strong>Successione dei beni digitali dei minori</strong>: in caso di premorienza del bambino, la successione di account social, account di gioco e foto su cloud segue lo stesso iter degli adulti, con certificato di morte e certificato di parentela. Si consiglia ai genitori di configurare in anticipo un "contatto per l'eredità" o "contatto di emergenza" per gli account importanti del bambino (ad esempio il contatto per l'eredità Apple, la successione dell'account WeChat).
-- <strong>Privacy digitale dei minori</strong>: la "Legge sulla protezione delle informazioni personali" stabilisce che il trattamento dei dati personali di minori sotto i 14 anni richiede il consenso del tutore e deve seguire regole di privacy dedicate. I genitori dovrebbero verificare periodicamente le politiche di privacy delle app più usate dal bambino e disattivare le opzioni "raccomandazioni personalizzate" e "condivisione dati".
+- <strong>Successione dei beni digitali dei minori</strong>: in caso di premorienza del bambino, la successione di account social, account di gioco e foto su cloud segue lo stesso iter degli adulti, con certificato di morte e certificato di parentela. Si consiglia ai genitori di configurare in anticipo un "contatto per l'eredità" o "contatto di emergenza" per gli account importanti del bambino, (ad esempio il contatto per l'eredità Apple, la successione dell'account WeChat).
+- <strong>Privacy digitale dei minori</strong>: la "Legge sulla protezione delle informazioni personali" stabilisce , che il trattamento dei dati personali di minori sotto i 14 anni richiede il consenso del tutore e deve seguire regole di privacy dedicate. I genitori dovrebbero verificare periodicamente le politiche di privacy delle app più usate dal bambino , e disattivare le opzioni "raccomandazioni personalizzate" e "condivisione dati".
 - <strong>Consigli per la registrazione degli account</strong>: gli account registrati per il bambino dovrebbero usare email/numero di telefono controllabili dal genitore, per una gestione unificata durante la minore età; a maggiore età si potrà fare il passaggio dell'account.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
@@ -169,6 +169,6 @@ Il bambino viene "registrato" fin dalla nascita — foto di crescita pubblicate 
 - Il Tempo di utilizzo di iOS e Family Link/controlli di marca Android sono due difese tecniche, meglio combinate
 - La modalità adolescente e l'anti-dipendenza dei giochi sono obbligo di legge, ma vanno attivate e protette col password dal genitore
 - L'alfabetizzazione digitale conta più dei filtri tecnici: insegnare al bambino a riconoscere bullismo, proteggere la privacy, leggere criticamente i contenuti
-- Le abitudini sane cominciano dal genitore — tu metti giù il telefono, e il bambino farà lo stesso
+- Le abitudini sane cominciano dal genitore: tu metti giù il telefono, e il bambino farà lo stesso
 - Eredità digitale e privacy dei minori sono temi emergenti: configura fin da ora il "contatto per l'eredità" e trattieni il postare il bambino
 :::

@@ -2,22 +2,22 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Capítulo 25: Descarte de celulares usados e herança digital
+nav: Capítulo 25: Vai vender o celular usado? Faça essas coisas
 toc: default
 kind: chapter
 ---
 
-### Capítulo 25: Descarte de celulares usados e herança digital
+### Capítulo 25: Vai vender o celular usado? Faça essas coisas
 
 {class="chapter-intro mb-4"}
-Ei, pessoal, depois de mais de vinte capítulos de "treinamento", acredito que você já passou de um "novato digital" a um usuário de celular bastante confiante. Mas a vida tecnológica sempre tem ciclos — o novo amor eventualmente se torna um velho conhecido. Quando você estiver pronto para "aposentar" seu velho companheiro, sabe como se despedir de forma digna e segura?
+Ei, pessoal, depois de mais de vinte capítulos de "treinamento", acredito que você já passou de um "novato digital" a um usuário de celular bastante confiante. Mas a vida tecnológica sempre tem ciclos, o novo amor eventualmente se torna um velho conhecido. Quando você estiver pronto para "aposentar" seu velho companheiro, sabe como se despedir de forma digna e segura?
 
-#### I. A "eutanásia" do celular antigo: guia de venda ou doação segura
+I. A "eutanásia" do celular antigo: guia de venda ou doação segura
 
-Princípio fundamental: a limpeza de dados não é "excluir", é "sobrescrever". Muitas pessoas acham que basta arrastar as fotos para a lixeira e esvaziar a galeria para resolver tudo. Resultado: depois de repassar o celular, o novo dono usa um software de recuperação de dados e — pronto — fotos antigas, históricos de conversa, fotos de documentos de identidade, tudo de volta. Esse tipo de "vexame público" acontece todos os anos.
+Princípio fundamental: a limpeza de dados não é "excluir", é "sobrescrever". Muitas pessoas acham que basta arrastar as fotos para a lixeira e esvaziar a galeria para resolver tudo. Resultado: depois de repassar o celular, o novo dono usa um software de recuperação de dados e, pronto, fotos antigas, históricos de conversa, fotos de documentos de identidade, tudo de volta. Esse tipo de "vexame público" acontece todos os anos.
 
-1. <strong>"Faxina geral" pessoal</strong>: faça um último backup completo, saia de todas as contas (iCloud, Huawei/Xiaomi/Samsung, Google), desative a função "Buscar meu celular" — caso contrário, o próximo usuário será barrado pela tela de bloqueio de ativação.
-2. <strong>Execute a "formatação" definitiva</strong>: a "Restauração de fábrica" dos celulares modernos geralmente inclui exclusão criptografada — ela destrói a própria chave de criptografia. Sem a chave, todos os dados do disco se tornam instantaneamente ilegíveis.
+1. <strong>"Faxina geral" pessoal</strong>: faça um último backup completo, saia de todas as contas (iCloud, Huawei/Xiaomi/Samsung, Google), desative a função "Buscar meu celular", caso contrário, o próximo usuário será barrado pela tela de bloqueio de ativação.
+2. <strong>Execute a "formatação" definitiva</strong>: a "Restauração de fábrica" dos celulares modernos geralmente inclui exclusão criptografada: ela destrói a própria chave de criptografia. Sem a chave, todos os dados do disco se tornam instantaneamente ilegíveis.
 3. <strong>Última "camuflagem" (apenas para dispositivos muito antigos)</strong>: celulares modernos (iOS 8+, Android 6+) já possuem criptografia completa de disco (FBE) por padrão. A restauração de fábrica destrói a chave de criptografia, tornando os dados teoricamente irrecuperáveis. <strong>Esta etapa não é necessária</strong>. Apenas para dispositivos muito antigos sem criptografia (anteriores a 2015), é necessário preencher o armazenamento com arquivos inúteis após a restauração de fábrica e executar a restauração novamente.
 
 <strong>Tabela de referência rápida de caminhos de exclusão de dados por marca</strong>: embora o princípio seja o mesmo, cada marca esconde a "restauração de fábrica" em um local ligeiramente diferente. As principais diferenças estão abaixo.
@@ -78,7 +78,7 @@ Princípio fundamental: a limpeza de dados não é "excluir", é "sobrescrever".
 
 #### II. Herança digital: como sua alma social será preservada?
 
-Os dados dentro do celular há muito deixaram de ser "virtuais". Eles carregam suas finanças, relações sociais, produções criativas e até sua "identidade digital". <strong>Após o falecimento de uma pessoa, como esses ativos devem ser tratados?</strong> Isso não é mais uma questão abstrata, mas um problema real enfrentado por cada vez mais famílias — parentes não sabem as senhas, plataformas não permitem herança, criptomoedas se perdem para sempre.
+Os dados dentro do celular há muito deixaram de ser "virtuais". Eles carregam suas finanças, relações sociais, produções criativas e até sua "identidade digital". <strong>Após o falecimento de uma pessoa, como esses ativos devem ser tratados?</strong> Isso não é mais uma questão abstrata, mas um problema real enfrentado por cada vez mais famílias, parentes não sabem as senhas, plataformas não permitem herança, criptomoedas se perdem para sempre.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -132,7 +132,7 @@ A pessoa designada não precisa de um dispositivo Apple. Com a chave e a certid�
 {class="font-semibold mt-4 mb-1"}
 ##### 3. "Gerenciador de Conta Inativa" do Google: cuidando automaticamente do pós-vida
 
-O Google oferece o "Gerenciador de Conta Inativa (Inactive Account Manager)", que executa automaticamente ações predefinidas quando o usuário fica muito tempo sem fazer login — este é um dos mecanismos de herança digital mais completos atualmente.
+O Google oferece o "Gerenciador de Conta Inativa (Inactive Account Manager)", que executa automaticamente ações predefinidas quando o usuário fica muito tempo sem fazer login: este é um dos mecanismos de herança digital mais completos atualmente.
 
 1. Acesse <strong>myaccount.google.com/inactive</strong> e faça login na sua conta Google.
 2. Defina o período de timeout: 3 / 6 / 12 / 18 meses sem login para acionar.
@@ -146,7 +146,7 @@ O Google oferece o "Gerenciador de Conta Inativa (Inactive Account Manager)", qu
 
 As principais plataformas sociais chinesas tratam as contas de falecidos de duas formas: <strong>"memorialização" (manter a conta para homenagem de amigos e familiares)</strong> e <strong>"exclusão" (remoção completa)</strong>. Os familiares podem solicitar ao suporte da plataforma apresentando certidão de óbito, comprovante de parentesco e documento de identidade do solicitante.
 
-- <strong>Weibo</strong>: suporta "memorialização" de conta. Familiares fornecem certidão de óbito para solicitar. A conta é bloqueada (não é possível fazer login), mas o conteúdo é preservado. A página principal exibe "Esta conta foi definida como conta memorial". Também é possível solicitar exclusão, exigindo escritura pública de herança.
+- <strong>Weibo</strong>: suporta "memorialização" de conta. Familiares fornecem certidão de óbito para solicitar. A conta é bloqueada (não é possível fazer login), mas o conteúdo é preservado. A página principal exibe "Esta conta foi definida como conta memorial". Também é possível solicitar exclusão. Exigindo escritura pública de herança.
 - <strong>Douyin (TikTok chinês)</strong>: através de "Eu - Configurações - Feedback e Ajuda - Conta e Segurança - Excluir conta" ou atendimento humano, enviar certidão de óbito, comprovante de parentesco e documento do solicitante. Após aprovação, pode-se excluir ou converter para estado memorial.
 - <strong>Bilibili</strong>: pelo canal de suporte, enviar comprovante de falecimento e comprovante de parentesco para solicitar exclusão da conta ou preservação como página memorial; o tratamento de conteúdo histórico de criadores exige declaração de direitos autorais.
 - <strong>Xiaohongshu (RED)</strong>: através do suporte oficial, enviar certidão de óbito e comprovante de parentesco para solicitar exclusão da conta e remoção de conteúdo.
@@ -194,8 +194,8 @@ O testamento tradicional de bens não cobre ativos digitais. Recomenda-se que vo
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Redes sociais: WeChat (conta xxx), Weibo, Douyin, Bilibili, Xiaohongshu, etc.
-- Pagamentos: Alipay, WeChat Pay, apps de cada banco
-- Nuvem: iCloud, Huawei Cloud, Xiaomi Cloud, conta Google, conta Microsoft
+- Pagamentos: Alipay, WeChat Pay, apps de cada banco.
+- Nuvem: iCloud, Huawei Cloud, Xiaomi Cloud, conta Google, conta Microsoft.
 - E-mail: QQ Mail, NetEase Mail, Gmail, etc.
 - Outros: drives virtuais, serviços de assinatura, contas de jogos, etc.
 
@@ -230,7 +230,7 @@ O testamento tradicional de bens não cobre ativos digitais. Recomenda-se que vo
 <i class="fas fa-exclamation-triangle mr-2"></i>Aviso legal sobre "senhas"
 
 {class="mt-1"}
-Escrever senhas diretamente no testamento apresenta risco de vazamento, e após a divulgação do testamento, todos os herdeiros poderão vê-las. <strong>A prática mais segura é: no testamento, escreva apenas "lista de contas + vontades de disposição + local de custódia da senha". A senha real deve ser transmitida separadamente ao executor de confiança através da senha mestra do gerenciador de senhas</strong>. Isso atende aos requisitos legais e reduz o risco de vazamento de senhas.
+Escrever senhas diretamente no testamento apresenta risco de vazamento, e após a divulgação do testamento. Todos os herdeiros poderão vê-las. <strong>A prática mais segura é: no testamento, escreva apenas "lista de contas + vontades de disposição + local de custódia da senha". A senha real deve ser transmitida separadamente ao executor de confiança através da senha mestra do gerenciador de senhas</strong>. Isso atende aos requisitos legais e reduz o risco de vazamento de senhas.
 :::
 
 #### III. A última etapa ecológica

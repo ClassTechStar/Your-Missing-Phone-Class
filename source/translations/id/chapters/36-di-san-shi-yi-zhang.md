@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 31: Pengantar Syuting Video Pendek dan Kreasi Konten
 
 {class="chapter-intro mb-4"}
-Di 2026, video pendek bukan lagi "mainan anak muda", telah menjadi cara dasar semua orang untuk mendapatkan informasi dan mengekspresikan diri. Apakah ingin merekam kehidupan, berbagi pengetahuan, atau membuat sampingan, ponsel adalah alat kreasi terbaik — tidak perlu beli kamera, tidak perlu belajar Premiere, satu ponsel sudah bisa mulai. Bab ini membantu Anda mulai dari nol.
+Di 2026, video pendek bukan lagi "mainan anak muda", telah menjadi cara dasar semua orang untuk mendapatkan informasi dan mengekspresikan diri. Apakah ingin merekam kehidupan, berbagi pengetahuan, atau membuat sampingan, ponsel adalah alat kreasi terbaik, tidak perlu beli kamera, tidak perlu belajar Premiere, satu ponsel sudah bisa mulai. Bab ini membantu Anda mulai dari nol.
 
 #### 1. Sebelum Syuting Pikirkan Jelas: Untuk Siapa Anda Syuting?
 
@@ -20,7 +20,7 @@ Kesalahan pertama banyak orang saat buat video adalah "langsung ambil ponsel syu
 2. <strong>Nilai apa yang bisa saya berikan?</strong>— Buat tertawa (hiburan), buat belajar (pengetahuan), buat ngiler (kuliner), buat hangat (emosi). Minimal pegang satu.
 3. <strong>Di platform mana saya bisa update konsisten?</strong>— Douyin/Kuaishou (hiburan umum), Xiaohongshu (gaya hidup), Bilibili (konten mendalam), Video Account (lingkaran sosial). Pilih satu basis utama untuk fokus, jangan langsung distribusi ke semua platform.
 
-#### 2. Pengaturan Dasar Syuting Ponsel — 5 Hal Wajib Sebelum Syuting
+2. Pengaturan Dasar Syuting Ponsel — 5 Hal Wajib Sebelum Syuting
 
 1. <strong>Resolusi set 1080P, frame rate set 30fps</strong>: Ini standar platform video pendek. File 4K terlalu besar upload lambat, 60fps di platform sosial tidak ada keunggulan malah file lebih besar.
 2. <strong>Bersihkan lensa</strong>: Nomor satu juga yang paling penting. Sebelum syuit gosok lensa dengan baju, gambar langsung jernih satu tingkat.
@@ -30,7 +30,7 @@ Kesalahan pertama banyak orang saat buat video adalah "langsung ambil ponsel syu
 
 #### 3. Lima Jurus Camera Movement — Buat Gambar "Bergerak"
 
-Masalah terbesar pemula syuting video adalah gambar terlalu "diam" — sepanjang waktu berdiri tidak bergerak syuting. Pelajari lima camera movement dasar berikut, gambar langsung terasa profesional:
+Masalah terbesar pemula syuting video adalah gambar terlalu "diam": sepanjang waktu berdiri tidak bergerak syuting. Pelajari lima camera movement dasar berikut, gambar langsung terasa profesional:
 
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>Push (Dorong)</strong>: Ponsel perlahan mendekati subjek. Menciptakan ketegangan atau keintiman "mendekat".
@@ -52,7 +52,7 @@ Jianying (versi domestik CapCut) adalah tool editing ponsel paling cocok untuk p
 5. <strong>Tambah musik</strong>: Library musik Jianying punya banyak musik bebas hak cipta. Pilih BGM yang ritmenya cocok dengan konten, volume setel sekitar 1/3 dari audio asli video.
 6. <strong>Export</strong>: Export 1080P, frame rate 30fps, bitrate pilih "Recommended".
 
-#### 5. Pentingnya Cover — 70% Orang Hanya Lihat Cover untuk Putuskan Menonton atau Tidak
+5. Pentingnya Cover — 70% Orang Hanya Lihat Cover untuk Putuskan Menonton atau Tidak
 
 Cover video pendek adalah "etalse", menentukan orang lain ingin klik masuk atau tidak. Beberapa poin membuat cover:
 
@@ -64,7 +64,7 @@ Cover video pendek adalah "etalse", menentukan orang lain ingin klik masuk atau 
 #### 6. Tiga Filosofi Kreasi Konten
 
 {class="list-disc pl-6 mb-3 space-y-2"}
-- <strong>3 detik pertama tentukan hidup mati</strong>: Platform video pendek, penonton 3 detik putuskan scroll atau lanjut tonton. 3 detik pertama harus beri "hook" — satu pertanyaan, satu suspense, satu gambar tak terduga.
+- <strong>3 detik pertama tentukan hidup mati</strong>: Platform video pendek, penonton 3 detik putuskan scroll atau lanjut tonton. 3 detik pertama harus beri "hook", satu pertanyaan, satu suspense, satu gambar tak terduga.
 - <strong>Satu video hanya bahas satu hal</strong>: Kesalahan paling sering pemula adalah satu video terlalu banyak konten. Satu video hanya selesaikan satu masalah, bahas tuntas lebih penting dari bahas semua.
 - <strong>Konsisten lebih penting dari bakat</strong>: Rekomendasi algoritma butuh "warm up account". 20 video pertama hampir tidak ada views, ini normal. Konsisten update 2-3 video per minggu, biarkan algoritma mengenali arah konten Anda, traffic akan perlahan naik.
 
@@ -87,7 +87,13 @@ Cover video pendek adalah "etalse", menentukan orang lain ingin klik masuk atau 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Sebelum syuting pikirkan jelas: audiens siapa, nilai apa yang diberikan, posting di platform mana
 - 5 hal sebelum syuting: 1080P/30fps, bersihkan lensa, kunci fokus eksposur, tentukan landscape/portret, aktifkan grid line
-- Lima jurus camera movement: push, pull, pan, track, follow — stabil adalah prioritas utama
-- Editing pakai Jianying: trim → transisi → subtitle → BGM → export, enam langkah
+- Lima jurus camera movement: push, pull, pan, track, follow: stabil adalah prioritas utama
+Editing pakai Jianying：
+1. trim
+2. transisi
+3. subtitle
+4. BGM
+5. export
+enam langkah
 - 3 detik pertama tentukan hidup mati, satu video hanya bahas satu hal, konsisten lebih penting dari bakat
 :::

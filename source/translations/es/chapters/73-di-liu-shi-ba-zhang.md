@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 68: El camino avanzado — permisos, notificaciones y arquitectura moderna
 
 {class="chapter-intro mb-4"}
-Saber hacer una app es solo el comienzo. Este capítulo habla de los escalones que van de «saber hacer» a «hacerlo bien»: cómo pedir permisos con elegancia, cómo mandar notificaciones sin resultar pesado, cómo elevar un peldaño más la arquitectura y —en 2026— cómo escribir código iOS en compañía de la IA. Cada punto te lo vas a encontrar enseguida en proyectos reales.
+Saber hacer una app es solo el comienzo. Este capítulo habla de los escalones que van de «saber hacer» a «hacerlo bien»: cómo pedir permisos con elegancia, cómo mandar notificaciones sin resultar pesado, cómo elevar un peldaño más la arquitectura y —en 2026, cómo escribir código iOS en compañía de la IA. Cada punto te lo vas a encontrar enseguida en proyectos reales.
 
 #### 1. Permisos: primero toca la puerta, luego entra
 
@@ -95,13 +95,13 @@ func scheduleDailyReminder() {
 
 Ojo: el permiso de notificaciones de iOS también «solo se pide una vez» y el usuario puede apagarlo cuando quiera en los Ajustes del sistema; por eso importa el valor del contenido de cada notificación: abusar una sola vez puede costarte al usuario para siempre.
 
-#### 3. Arquitectura avanzada: MVVM en profundidad y testeabilidad
+3. Arquitectura avanzada: MVVM en profundidad y testeabilidad
 
 Ya usaste MVVM en el capítulo 65; aquí van tres puntos avanzados:
 
 - Abstracción con protocolos: haz que el ViewModel dependa de un protocol (protocolo) y no de una clase concreta: en las pruebas puedes inyectar «fuentes de datos falsas»; es la piedra angular de la testeabilidad;
 - Responsabilidad única: cada ViewModel se ocupa de una sola cosa (el de cuentas no se mete con el tiempo); si crecen las funciones, divídelo;
-- No hagas sobreingeniería: en un proyecto pequeño de una persona, «clase @Observable + abstracción con protocolos» basta. Las arquitecturas pesadas como VIPER o Clean Architecture, cuando lleguen el equipo y la complejidad: las herramientas sirven a los objetivos, no para presumir.
+- No hagas sobreingeniería: en un proyecto pequeño de una persona, «clase @Observable + abstracción con protocolos» basta. Las arquitecturas pesadas como VIPER o Clean Architecture, cuando lleguen el equipo y la complejidad: las herramientas sirven a los objetivos, no para presumir
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -124,7 +124,7 @@ En 2026, la IA ya está profundamente metida en el flujo de desarrollo de Apple.
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Los cuatro escenarios del desarrollo de iOS asistido por IA
 
-La metodología concreta —cómo dar instrucciones a la IA, cómo aceptar los resultados, cómo evitar tropiezos— está desarrollada en 11 capítulos completos de la séptima parte de este libro, «Práctica de programación con IA» (capítulos 37-47); se recomienda encarecidamente leerla a la par: la sintaxis de Swift, en esta parte; los trucos de colaborar con la IA, en la séptima.
+La metodología concreta:cómo dar instrucciones a la IA, cómo aceptar los resultados, cómo evitar tropiezos: está desarrollada en 11 capítulos completos de la séptima parte de este libro, «Práctica de programación con IA» (capítulos 37-47); se recomienda encarecidamente leerla a la par: la sintaxis de Swift, en esta parte; los trucos de colaborar con la IA, en la séptima.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

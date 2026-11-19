@@ -2,12 +2,12 @@
 id: di-wu-zhang
 num: 05
 part: ji-chu-pian
-nav: Kapitel 5: Das Smartphone besser verstehen lassen
+nav: Kapitel 5: Mach das Smartphone so, wie es dir passt
 toc: default
 kind: chapter
 ---
 
-### Kapitel 5: Das Smartphone besser verstehen lassen – Grundeinstellungen
+### Kapitel 5: Mach das Smartphone so, wie es dir passt
 
 {class="chapter-intro mb-4"}
 Ein paar Minuten Einstellungen verbessern das Erlebnis enorm. Diese Einstellungen sind wie das „Stimmen" des Smartphones, damit es besser zu deinen Gewohnheiten passt.
@@ -36,7 +36,7 @@ Ein schönes Hintergrundbild (statisch oder animiert) verändert die Stimmung. A
 
 <strong>Startbildschirm-Widgets</strong>: Wetter, Kalender, Musiksteuerung direkt auf dem Startbildschirm – ein Schritt bis zur Aktion. iOS und Android unterstützen dies; lange auf eine freie Stelle des Startbildschirms drücken, um Widgets hinzuzufügen.
 
-#### Vier. Effizienzeinstellungen: Das Smartphone als dein „externes Gehirn"
+Vier. Effizienzeinstellungen: Das Smartphone als dein „externes Gehirn"
 
 Dieser Bereich behandelt Funktionen, „die man nach dem Einrichten nicht mehr missen möchte" – jede einzelne kann deine tägliche Effizienz spürbar steigern.
 
@@ -54,7 +54,7 @@ Dieser Bereich behandelt Funktionen, „die man nach dem Einrichten nicht mehr m
 
 ##### 3. Schnelle Gesten: Einen Schritt schneller sein
 
-- <strong>Screenshot</strong>:
+- <strong>Screenshot</strong>:.
 - <strong>Langes Screenshot / Scroll-Screenshot</strong>: Nach einem normalen Screenshot auf die Option „Langer Screenshot" tippen.
 - <strong>Ein-Tasten-Scan</strong>: Im Kontrollzentrum / in den Schnelleinstellungen ein „Scannen"-Symbol hinzufügen.
 - <strong>Auf Rückseite tippen (iPhone)</strong>: Unter [Einstellungen] &gt; [Bedienungshilfen] &gt; [Berührung] &gt; [Auf Rückseite tippen] Aktionen wie „Screenshot" oder „Sperren" zuweisen.
@@ -70,7 +70,7 @@ Dieser Bereich behandelt Funktionen, „die man nach dem Einrichten nicht mehr m
 
 - <strong>App-Split-Screen / Bild-in-Bild</strong>: Beim Videoschauen Nachrichten beantworten, beim Surfen Notizen machen.
 - <strong>Kleines Fenster / Schwebendes Fenster</strong>: WeChat / TikTok unterstützen den „kleinen-Fenster-Modus" – nach dem Antworten sofort einklappen.
-- <strong>Häufige Apps anpinnen</strong>:
+- <strong>Häufige Apps anpinnen</strong>:.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -80,7 +80,7 @@ Dieser Bereich behandelt Funktionen, „die man nach dem Einrichten nicht mehr m
 Bei einem neuen Smartphone oder nach einem großen Versions-Update empfiehlt es sich, 10 Minuten in diese Einstellungen zu investieren:<br> · Sperrbildschirm-Passwort + biometrische Entsperrung · Benachrichtigungsgruppierung + Marketing-Push deaktivieren · Schriftgröße / Aktualisierungsrate / Dunkelmodus<br> · Standard-Eingabemethode / Browser / E-Mail · Notfallkontakte / medizinische ID · Backup-Einstellungen
 :::
 
-#### Fünf. Bedienungshilfen und Barrierefreiheit: Die Kraft der Technik für das Gute
+Fünf. Bedienungshilfen und Barrierefreiheit: Die Kraft der Technik für das Gute
 
 Lass dich vom Namen „Bedienungshilfen" nicht abschrecken – diese Funktionen kann jeder nutzen. Sie wurden ursprünglich für Menschen mit Behinderungen entwickelt, sind aber auch für alle anderen nützlich – etwa bei temporär verletzter Hand, beim Tragen eines Kindes, wenn im U-Bahn-Waggon ein Kopfhörer ausfällt oder wenn man mit Lesebrille kleine Schrift liest … Sie können immer helfen. Letztlich spiegelt Barrierefreiheits-Design die Idee der <strong>Technik für das Gute</strong> wider: Jeder soll digital gleichberechtigt teilhaben können.
 
@@ -103,7 +103,7 @@ Ein Screenreader ist das wichtigste Werkzeug für sehbehinderte Nutzer. Er liest
 2. Zwei-Finger-Wischen: Seite nach oben/unten/links/rechts scrollen;
 3. Ein-Finger-Doppeltipp: Aktuelles Fokuselement aktivieren (entspricht „Tippen");
 4. Drei-Finger-Wischen: Seite wechseln;
-5. Ein-Finger-Dreifach-Tipp: Vergrößern oder Auswählen (anders als normales Dreifach-Tippen).
+5. Ein-Finger-Dreifach-Tipp: Vergrößern oder Auswählen (anders als normales Dreifach-Tippen)
 
 {class="mt-1"}
 <strong>Personalisierung</strong>: [VoiceOver] &gt; [Sprache], hier lassen sich <strong>Sprechgeschwindigkeit</strong>(Standard ca. 50 %, auf 70–80 % für flüssigeres Höhen einstellen),<strong>Tonhöhe</strong> einstellen und verschiedene Sprachpakete wechseln. iOS bringt „Verstärkte Sprache“ und „Sprachregler“ mit – Ersteres entfernt Atemgeräusche und Pausen, so klingt es natürlicher.
@@ -124,7 +124,7 @@ Ein Screenreader ist das wichtigste Werkzeug für sehbehinderte Nutzer. Er liest
 2. einfingerig doppelt tippen: Element aktivieren;
 3. zweifingerig hoch/runter oder links/rechts wischen: scrollen;
 4. dreifingerig einmal tippen: in den Lesemodus wechseln (am Stück vorlesen);
-5. vierfingerig einmal tippen: Vorlesen pausieren/fortsetzen.
+5. vierfingerig einmal tippen: Vorlesen pausieren/fortsetzen
 
 {class="mt-1"}
 <strong>Personalisierung</strong>: Unter [TalkBack] > [Text-zu-Sprache-Einstellungen] lassen sich <strong>Sprechgeschwindigkeit</strong>,<strong>Tonhöhe</strong> und der <strong>Sprach-Engine</strong> wechseln (Empfehlung: Google Text-to-Speech-Engine für natürlichere Stimme).
@@ -194,7 +194,7 @@ Live-Captions (Echtzeituntertitel) sind eine <strong>systemweite Sprach-zu-Text-
 2. Bei <strong>deutlich artikulierter, mittlerer Sprechgeschwindigkeit</strong> ist die Erkennungsrate am höchsten;
 3. Mehrpersonengespräche verringern die Genauigkeit – der Modus „Nur eine Person anzeigen" kann helfen;
 4. iOS <strong>kleinere Sprachen werden schlechter erkannt</strong>;
-5. Hintergrundmusik oder Stimmengewirr können die Erkennung unterbrechen.
+5. Hintergrundmusik oder Stimmengewirr können die Erkennung unterbrechen
 :::
 
 ##### 5. Anruf-Szenario mit zwei Kanälen: Sprach-zu-Text + Text-zu-Sprache

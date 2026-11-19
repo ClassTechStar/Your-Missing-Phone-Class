@@ -2,22 +2,22 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Chapitre 25 : Revente d'un téléphone d'occasion et héritage numérique
+nav: Chapitre 25 : Avant de revendre : les gestes à faire d'abord
 toc: default
 kind: chapter
 ---
 
-### Chapitre 25 : Traitement des smartphones d'occasion et patrimoine numérique
+### Chapitre 25 : Avant de revendre : les gestes à faire d'abord
 
 {class="chapter-intro mb-4"}
-Hé les amis, après plus de vingt chapitres d'« entraînement », vous êtes passé d'un « débutant du numérique » à un utilisateur de smartphone plutôt à l'aise. Mais la vie technologique connaît des cycles — le nouveau devient toujours l'ancien. Quand vous êtes prêt à laisser votre vieux compagnon « prendre sa retraite », savez-vous comment lui dire adieu dignement et en toute sécurité ?
+Hé les amis, après plus de vingt chapitres d'« entraînement », vous êtes passé d'un « débutant du numérique » à un utilisateur de smartphone plutôt à l'aise. Mais la vie technologique connaît des cycles, le nouveau devient toujours l'ancien. Quand vous êtes prêt à laisser votre vieux compagnon « prendre sa retraite », savez-vous comment lui dire adieu dignement et en toute sécurité ?
 
-#### I. « Euthanasie » du vieux smartphone : guide de vente ou de don sécurisé
+I. « Euthanasie » du vieux smartphone : guide de vente ou de don sécurisé
 
-Principe fondamental : le nettoyage des données n'est pas une « suppression », mais un « écrasement ». Beaucoup pensent qu'il suffit de glisser les photos dans la corbeille et de vider l'album pour que tout soit réglé, mais après la revente du smartphone, le nouveau propriétaire n'a qu'à lancer un logiciel de récupération de données pour retrouver les anciennes photos, les historiques de discussion et les photos de cartes d'identité — ce type de « fiasco social » se produit chaque année.
+Principe fondamental : le nettoyage des données n'est pas une « suppression », mais un « écrasement ». Beaucoup pensent qu'il suffit de glisser les photos dans la corbeille et de vider l'album pour que tout soit réglé, mais après la revente du smartphone, le nouveau propriétaire n'a qu'à lancer un logiciel de récupération de données pour retrouver les anciennes photos, les historiques de discussion et les photos de cartes d'identité, ce type de « fiasco social » se produit chaque année.
 
-1. <strong>Grand ménage personnel</strong> : Effectuez une dernière sauvegarde complète, déconnectez tous les comptes (iCloud, compte Huawei/Xiaomi/Samsung, compte Google), désactivez la fonction « Localiser mon appareil » — sinon le prochain utilisateur sera bloqué par le verrou d'activation.
-2. <strong>Exécuter le « formatage » ultime</strong> : La « réinitialisation d'usine » des smartphones modernes inclut généralement un effacement chiffré — elle détruit la clé de chiffrement elle-même, une fois la clé détruite, toutes les données du disque se transforment instantanément en données inintelligibles.
+1. <strong>Grand ménage personnel</strong> : Effectuez une dernière sauvegarde complète, déconnectez tous les comptes (iCloud, compte Huawei/Xiaomi/Samsung, compte Google), désactivez la fonction « Localiser mon appareil », sinon le prochain utilisateur sera bloqué par le verrou d'activation.
+2. <strong>Exécuter le « formatage » ultime</strong> : La « réinitialisation d'usine » des smartphones modernes inclut généralement un effacement chiffré, elle détruit la clé de chiffrement elle-même, une fois la clé détruite, toutes les données du disque se transforment instantanément en données inintelligibles.
 3. <strong>Dernier « leurre » (uniquement pour les anciens appareils)</strong> : Les smartphones modernes (iOS 8+, Android 6+) sont chiffrés par défaut (FBE), la réinitialisation d'usine détruit la clé de chiffrement, les données sont théorlement irrécupérables,<strong>cette étape n'est pas nécessaire</strong>. Uniquement pour les très anciens appareils non chiffrés (avant 2015), il est nécessaire de remplir le stockage avec des fichiers poubelle après la réinitialisation d'usine, puis d'effectuer une nouvelle réinitialisation d'usine.
 
 <strong>Tableau de référence des chemins d'effacement de données par marque</strong> : Bien que le principe soit le même, chaque marque cache légèrement différemment l'emplacement de la « réinitialisation d'usine », les différences clés sont les suivantes.
@@ -76,7 +76,7 @@ Principe fondamental : le nettoyage des données n'est pas une « suppression »
 - <strong>Clé USB / périphérique OTG non débranché</strong> : Si un périphérique est connecté pendant l'effacement, les données du périphérique peuvent être effacées par erreur, ou l'effacement peut être interrompu.
 :::
 
-#### II. Patrimoine numérique : comment placer votre âme sociale ?
+II. Patrimoine numérique : comment placer votre âme sociale ?
 
 Les données dans le smartphone ne sont plus « virtuelles » depuis longtemps. Elles portent votre argent, vos relations sociales, vos créations et même votre « identité numérique ».<strong>Après le décès d'une personne, comment gérer ces actifs ?</strong> Ce n'est plus une question abstraite, mais un dilemme réel auquel de plus en plus de familles sont confrontées — les proches ne connaissent pas les mots de passe, les plateformes ne permettent pas l'héritage, les cryptomonnaies sont définitivement perdues.
 
@@ -132,7 +132,7 @@ La personne désignée n'a pas besoin d'un appareil Apple, elle peut demander l'
 {class="font-semibold mt-4 mb-1"}
 ##### 3. « Gestionnaire de compte inactif » de Google : gère automatiquement vos affaires posthumes
 
-Google propose le « Gestionnaire de compte inactif (Inactive Account Manager) », qui peut exécuter automatiquement des actions prédéfinies en cas d'inactivité prolongée de l'utilisateur — c'est actuellement l'un des mécanismes de patrimoine numérique les plus aboutis.
+Google propose le « Gestionnaire de compte inactif (Inactive Account Manager) », qui peut exécuter automatiquement des actions prédéfinies en cas d'inactivité prolongée de l'utilisateur, c'est actuellement l'un des mécanismes de patrimoine numérique les plus aboutis.
 
 1. Visitez <strong>myaccount.google.com/inactive</strong>, connectez-vous à votre compte Google.
 2. Définissez le délai d'inactivité : déclenchement après 3 / 6 / 12 / 18 mois sans connexion.
@@ -194,8 +194,8 @@ Le testament patrimonial traditionnel ne peut pas gérer les actifs numériques.
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Réseaux sociaux : WeChat (compte xxx), Weibo, Douyin, Bilibili, Xiaohongshu, etc.
-- Paiement : Alipay, WeChat Pay, applications de cartes bancaires
-- Cloud : iCloud, Huawei Cloud, Xiaomi Cloud, compte Google, compte Microsoft
+- Paiement : Alipay, WeChat Pay, applications de cartes bancaires.
+- Cloud : iCloud, Huawei Cloud, Xiaomi Cloud, compte Google, compte Microsoft.
 - E-mail : QQ Mail, NetEase Mail, Gmail, etc.
 - Autres : disques réseau, services d'abonnement, comptes de jeux, etc.
 

@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 資料三件套的分工
 
-記一個口訣："小配置進 UserDefaults，成批資料進 SwiftData，外面的資料走 URLSession"。舊教學裡的 Core Data 依然能用（SwiftData 就是它的現代馬甲），手寫 SQLite 則基本不用碰——直接學新的，別走老路。
+記一個口訣："小配置進 UserDefaults，成批資料進 SwiftData，外面的資料走 URLSession"。舊教學裡的 Core Data 依然能用（SwiftData 就是它的現代馬甲），手寫 SQLite 則基本不用碰，直接學新的，別走老路。
 
 #### 二、UserDefaults：存點小配置
 
@@ -46,7 +46,7 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-注意它只適合零散的小配置——幾十上百條記錄請交給 SwiftData，別把 UserDefaults 當資料庫用（會拖慢啟動、也不便查詢）。
+注意它只適合零散的小配置，幾十上百條記錄請交給 SwiftData，別把 UserDefaults 當資料庫用（會拖慢啟動、也不便查詢）。
 
 #### 三、SwiftData：給資料安個"真正的家"
 
@@ -107,11 +107,11 @@ struct RecordListView: View {
 ```
 :::
 
-這套"@Model + modelContainer + @Query"模板可以原樣搬進你的任何專案——換換欄位名就行。資料一變，@Query 自動重新整理介面，妙不可言。
+這套"@Model + modelContainer + @Query"模板可以原樣搬進你的任何專案：換換欄位名就行。資料一變，@Query 自動重新整理介面，妙不可言。
 
 #### 四、Codable：給 JSON"翻譯"
 
-伺服器的資料大多是 JSON 文字。Swift 的 Codable 協議讓"JSON ⇄ 結構體"的轉換自動發生——欄位名對得上，魔法就生效：
+伺服器的資料大多是 JSON 文字。Swift 的 Codable 協議讓"JSON ⇄ 結構體"的轉換自動發生，欄位名對得上，魔法就生效：
 
 ::: div .code-block
 :::inline div .code-head
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "晴"
 ```
 :::
 
-鐵律：先看真實返回的 JSON，再定義欄位。很多"解析失敗"的 bug 都是欄位名寫錯、型別猜錯（伺服器發 "26.5" 字串，你宣告成 Double）——把原始 JSON 列印出來對照，十秒定位。
+鐵律：先看真實返回的 JSON，再定義欄位。很多"解析失敗"的 bug 都是欄位名寫錯、型別猜錯（伺服器發 "26.5" 字串，你宣告成 Double），把原始 JSON 列印出來對照，十秒定位。
 
 #### 五、URLSession + async/await：和伺服器說話
 
@@ -175,7 +175,7 @@ struct WeatherService {
 避坑提醒：兩條網路鐵律
 
 {class="mt-1"}
-① 聯網必須 async/await，絕不阻塞主執行緒——卡住介面是崩潰級體驗。Swift 的結構化併發讓這變得很自然，但別忘了 try await 和 do/catch。② ATS 預設禁止明文 HTTP：iOS 要求 HTTPS。測試本地 http:// 服務時需要在 Info.plist 裡臨時開例外（NSAppTransportSecurity），但正式產品必須全走 HTTPS——稽核也會盯這個。
+① 聯網必須 async/await，絕不阻塞主執行緒，卡住介面是崩潰級體驗。Swift 的結構化併發讓這變得很自然，但別忘了 try await 和 do/catch。② ATS 預設禁止明文 HTTP：iOS 要求 HTTPS。測試本地 http:// 服務時需要在 Info.plist 裡臨時開例外（NSAppTransportSecurity），但正式產品必須全走 HTTPS，稽核也會盯這個。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-給使用者看"人話"，給日誌看"原話"（print 完整 error）。別把 error.localizedDescription 的英文天書直接甩給使用者——產品感就藏在這些細節裡。
+給使用者看"人話"，給日誌看"原話"（print 完整 error）。別把 error.localizedDescription 的英文天書直接甩給使用者，產品感就藏在這些細節裡。
 
 {class="mt-1"}
-找一個免費的名言 API（比如 hitokoto 之類），用 URLSession + async/await 拉取"每日一句"，顯示在螢幕中央，加個"換一句"按鈕。再把喜歡的句子用 SwiftData 存進"收藏夾"。這個練習把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍——做完它，第 7、8 章就是小菜一碟。
+找一個免費的名言 API（比如 hitokoto 之類），用 URLSession + async/await 拉取"每日一句"，顯示在螢幕中央，加個"換一句"按鈕。再把喜歡的句子用 SwiftData 存進"收藏夾"。這個練習把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍：做完它，第 7、8 章就是小菜一碟。
 :::
 
 ::: div .chapter-summary

@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Die Theorie sitzt – jetzt wird gewerkelt. Dieses Kapitel ist kein einfaches „Tipp-nach“-Tutorial, sondern eine Praxis-Methodik für „Wie denke ich? Wie frage ich? Wie prüfe ich?“. An drei Projekten mit steigendem Schwierigkeitsgrad zeigen wir den kompletten Gedankengang von der Anforderung bis zum fertigen Produkt. Diese Vorgehensweise funktioniert, egal welches Tool du nutzt.
 
-#### 1. Projekt 1: Eine schlanke persönliche Tool-Seite (Einsteiger)
+1. Projekt 1: Eine schlanke persönliche Tool-Seite (Einsteiger)
 
 ##### 1. Über die Anforderungen nachdenken
 
@@ -52,7 +52,7 @@ Sobald die KI den Code liefert, nimmst du die Abnahme entlang der drei Prüfeben
 
 Willst du auch die Funktion eines Tool-Kartens umsetzen (statt nur des Einstiegs), ergänze sie nach und nach – jedes Mal eine Funktion, und erst nach der Prüfung die nächste. Genau das ist die Strategie der „kleinen schnellen Schritte“ in der Praxis.
 
-#### 2. Projekt 2: Full-Stack-Ausgabenverwaltung (Fortgeschrittene)
+2. Projekt 2: Full-Stack-Ausgabenverwaltung (Fortgeschrittene)
 
 ##### 1. Anforderungsdenken und PRD
 
@@ -144,7 +144,7 @@ Dieses Projekt bringt ein paar technische Punkte mit, die in den ersten beiden P
 - Verwaltung der API-Schlüssel: Schlüssel gehören niemals in den Code – verwalte sie über Umgebungsvariablen;
 - Verarbeitung von Streaming-Antworten: LLMs antworten meist als Stream, der Zeichen für Zeichen angezeigt werden muss;
 - Kontrolle des Token-Verbrauchs: LLMs werden pro Token abgerechnet, die App muss den Verbrauch steuern;
-- Verwaltung von Prompt-Vorlagen: verschiedene Funktionen brauchen verschiedene Prompt-Vorlagen – strukturiert gepflegt.
+- Verwaltung von Prompt-Vorlagen: verschiedene Funktionen brauchen verschiedene Prompt-Vorlagen – strukturiert gepflegt
 
 All diese Punkte kann die KI für dich umsetzen – aber du musst das „Warum“ hinter jedem Punkt verstehen: Warum dürfen Schlüssel nicht hardcodiert werden? Warum braucht es Streaming-Antworten? Warum muss der Token-Verbrauch kontrolliert werden? Erst wenn du das „Warum“ verstehst, kannst du beurteilen, ob die Lösung der KI stimmig ist.
 

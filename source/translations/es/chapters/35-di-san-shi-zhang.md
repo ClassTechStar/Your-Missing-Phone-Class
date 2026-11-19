@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Por muy grande que sea la pantalla de tu teléfono, sigue siendo de 7 pulgadas; pero tu TV tiene 55 pulgadas y tu proyector 100. "Lanzar" la imagen del teléfono a una pantalla grande es una experiencia de otra dimensión. Este capítulo explica la proyección de pantalla, las presentaciones y la conectividad con el coche; tres escenarios frecuentes que te ayudan a extender las capacidades del teléfono a pantallas más grandes.
 
-#### I. Los tres campos de la proyección inalámbrica - no los confundas
+I. Los tres campos de la proyección inalámbrica - no los confundas
 
 La proyección inalámbrica parece "la imagen del teléfono en la TV", pero hay tres tecnologías subyacentes, no compatibles entre sí:
 
@@ -58,7 +58,7 @@ Algunos teléfonos Android soportan el "modo escritorio": al conectar una pantal
 - <strong>Motorola Ready For</strong>: Los Moto insignia también lo soportan; funciones similares a DeX.
 - <strong>Casos de uso</strong>: Oficina ligera (responder correos, editar documentos), presentar PPT, ver vídeos en pantalla grande. No adecuado para Excel intensivo o diseño profesional.
 
-#### IV. Conectividad con el coche - la forma correcta de usar el teléfono mientras conduces
+IV. Conectividad con el coche - la forma correcta de usar el teléfono mientras conduces
 
 Operar el teléfono mientras conduces es ilegal, pero navegar, escuchar música y responder llamadas son necesidades reales. Los sistemas de conectividad del coche te permiten usar las funciones principales del teléfono en la pantalla del coche; el teléfono puede quedarse apartado:
 
@@ -89,7 +89,7 @@ Las reuniones son el escenario más frecuente de proyección y también donde m�
 <i class="fas fa-hands mr-2"></i>Práctica: completa una proyección de teléfono a TV
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. Cambio de plataforma cruzado (Android a iPhone o viceversa)
+1. Cambio de plataforma cruzado (Android a iPhone o viceversa).
 2. Abre una foto o un vídeo en el teléfono.
 3. Intenta la proyección inalámbrica (iPhone usa duplicación de pantalla, Android usa el botón de proyección inalámbrica).
 4. Si falla, comprueba si la TV soporta el protocolo correspondiente o prueba DLNA (botón "proyectar" en la app de galería/vídeo).

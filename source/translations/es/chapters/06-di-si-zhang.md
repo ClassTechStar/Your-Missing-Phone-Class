@@ -2,17 +2,17 @@
 id: di-si-zhang
 num: 04
 part: ji-chu-pian
-nav: Capítulo 4: Instalar y gestionar apps
+nav: Capítulo 4: Antes de instalar una App, mírala bien
 toc: default
 kind: chapter
 ---
 
-### Capítulo 4: Instalar y gestionar App — las "habilidades" del teléfono
+### Capítulo 4: Antes de instalar una App, mírala bien
 
 {class="chapter-intro mb-4"}
 Las App hacen que el teléfono pueda hacer de todo, pero también hay que gestionarlas. Igual que asignarías un puesto y permisos a un nuevo empleado, instalar App requiere un procedimiento normalizado.
 
-#### I. Tiendas oficiales: el "supermercado de aplicaciones" más seguro
+I. Tiendas oficiales: el "supermercado de aplicaciones" más seguro
 
 - <strong>Android</strong>: Google Play (en el extranjero) o la tienda integrada de cada marca (como Huawei AppGallery, Xiaomi App Store).
 - <strong>iOS</strong>: solo App Store.
@@ -50,7 +50,7 @@ La tienda de aplicaciones no es un "adorno"; detrás hay una cadena de seguridad
 - <strong>Certificación de desarrollador</strong>: para publicar hace falta certificación empresarial, de identidad personal o de tarjeta de crédito. Si surge un problema, se puede localizar a alguien; no es una "App negra".
 - <strong>Supervisión continua</strong>: las App ya publicadas también se reescanean de forma continua; los comportamientos maliciosos detectados se retiran forzosamente.
 
-#### III. Fuentes de terceros y "parásitos electrónicos": ¡alto riesgo!
+III. Fuentes de terceros y "parásitos electrónicos": ¡alto riesgo!
 
 Descargar App desde páginas web o enlaces desconocidos puede traer virus, robar privacidad y clonar pagos. Aquí introducimos un concepto nuevo: el <strong>"parásito electrónico"</strong>.
 
@@ -64,7 +64,7 @@ Se refiere a <strong>software "pirateado" con troyanos incrustados</strong>: cre
 {class="list-disc pl-6 mt-2 space-y-1 text-sm"}
 - Versiones "pirateadas", "gratuitas", "sin anuncios" de software de pago;
 - Herramientas grisáceas como "generadores de likes", "cazadores de sobres rojos", "cheats de juegos";
-- App supuestamente "versiones internas" recomendadas por "publicidad pequeña" en grupos de chat.
+- App supuestamente "versiones internas" recomendadas por "publicidad pequeña" en grupos de chat
 
 {class="mt-2"}
 Estos programas funcionan en apariencia, pero en segúndo plano pueden <strong>robar contactos, leer SMS, espiar el micrófono o minar criptomonedas</strong>. El modo puro es la <strong>primera línea de defensa</strong> contra ellos: directamente impide su instalación.
@@ -73,7 +73,7 @@ Estos programas funcionan en apariencia, pero en segúndo plano pueden <strong>r
 ##### Recomendaciones para la segúnda línea de defensa:
 
 - <strong>Análisis completo de virus periódico</strong>: usa el centro de seguridad integrado en el teléfono (como Huawei Phone Manager, Xiaomi Security Center) para escanear una vez al mes.
-- <strong>Concede permisos sensibles con precaución</strong>: contactos, SMS, ubicación, cámara, micrófono — estos cinco "permisos de alto riesgo" deben revisarse estrictamente.
+- <strong>Concede permisos sensibles con precaución</strong>: contactos, SMS, ubicación, cámara, micrófono, estos cinco "permisos de alto riesgo" deben revisarse estrictamente.
 - <strong>Vigila anomalías en consumo y datos</strong>: si el teléfono se calienta de repente, la batería cae rápido o los datos se consumen de madrugada, lo más probable es que haya un "parásito" oculto en segúndo plano.
 
 Si no hay más remedio que instalar una App de terceros:

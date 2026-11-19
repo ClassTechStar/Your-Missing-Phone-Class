@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Glückwunsch: Wer dieses Buch aufschlägt, steht mitten in einer beruflichen Paradigmenrevolution. Ihr Anfangspunkt: ein Satz eines Entwicklers in sozialen Medien im Jahr 2025. Klingt dramatisch? Ist aber so.
 
-#### 1. Die Geburt von Vibe Coding: Ein Satz startet eine Bewegung
+1. Die Geburt von Vibe Coding: Ein Satz startet eine Bewegung
 
 Im Februar 2025 schrieb Andrej Karpathy – merken Sie sich den Namen, er taucht noch öfter auf – in sozialen Medien einen oft zitierten Beitrag: „Es gibt eine neue Art zu programmieren: Vibe Coding. Man geht ganz nach Gefühl (vibes), ignoriert Code-Details und lässt die KI alles machen. Was man sieht, sagt man, kopiert, fügt ein – Hauptsache, es läuft.“
 

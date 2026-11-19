@@ -86,8 +86,8 @@ fun BasicWidgets() {
 
 元件有了，怎麼擺放？記住三個"盒子"：
 
-- Column：豎著排（像排隊打飯）；
-- Row：橫著排（像並排坐）；
+- Column：豎著排（像排隊打飯）。
+- Row：橫著排（像並排坐）。
 - Box：疊著放（像撲克牌摞一起，適合做角標、遮罩）。
 
 ::: div .code-block
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-想讓佈局更好看？給元件加 Modifier（修飾符）——它就像給積木"上妝"：
+想讓佈局更好看？給元件加 Modifier（修飾符），它就像給積木"上妝"：
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,7 +135,7 @@ Text(
 注意：Modifier 的順序有講究
 
 {class="mt-1"}
-padding(16.dp).background(Blue) 和 background(Blue).padding(16.dp) 效果不同——前者是"先留白再塗色"（背景不含邊距），後者是"先塗色再留白"（背景包含邊距）。新手最容易在這上面畫錯"奇怪的白邊"。不確定時，調換順序試試，預覽立刻告訴你答案。
+padding(16.dp).background(Blue) 和 background(Blue).padding(16.dp) 效果不同，前者是"先留白再塗色"（背景不含邊距），後者是"先塗色再留白"（背景包含邊距）。新手最容易在這上面畫錯"奇怪的白邊"。不確定時，調換順序試試，預覽立刻告訴你答案。
 :::
 
 #### 四、狀態：讓介面"活"起來
@@ -182,8 +182,8 @@ fun Counter() {
 
 模板專案裡的 MyFirstAppTheme { ... } 就是主題。它基於 Material 3 設計規範，幫你把顏色、字型、形狀統一管理。支援深色模式只需三步：
 
-1. 在主題裡定義好淺色/深色兩套配色（模板已自動生成 ColorScheme）；
-2. 系統切到深色模式時，isSystemInDarkTheme() 自動判斷；
+1. 在主題裡定義好淺色/深色兩套配色（模板已自動生成 ColorScheme）。
+2. 系統切到深色模式時，isSystemInDarkTheme() 自動判斷。
 3. 用主題提供的顏色（如 MaterialTheme.colorScheme.primary）而不是寫死顏色值。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -198,9 +198,9 @@ Android 12 起的"Material You"能讓 App 從你的桌布裡提取顏色。Compo
 
 Compose 三個開發體驗上的"外掛"，用上就回不去：
 
-- @Preview 預覽：給 Composable 加 @Preview 註解，Android Studio 右側立刻渲染出介面——改程式碼所見即所得，不用每次裝到手機上；
-- 實時編輯（Live Edit）：2026 年的 Android Studio 支援在模擬器/真機上"熱更新"部分改動，改文字顏色之類的小調整，裝置上秒變；
-- 動畫 API：animateFloatAsState、AnimatedVisibility 幾行程式碼就能讓元素平滑過渡——"進階感"往往就差這幾十行。
+- @Preview 預覽：給 Composable 加 @Preview 註解，Android Studio 右側立刻渲染出介面：改程式碼所見即所得，不用每次裝到手機上。
+- 實時編輯（Live Edit）：2026 年的 Android Studio 支援在模擬器/真機上"熱更新"部分改動，改文字顏色之類的小調整，裝置上秒變。
+- 動畫 API：animateFloatAsState、AnimatedVisibility 幾行程式碼就能讓元素平滑過渡，"進階感"往往就差這幾十行。
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 小貼士：先功能後動畫
 
 {class="mt-1"}
-新手常犯的毛病是"介面還沒做對，就開始糾結動畫"。先讓功能跑通，最後再統一加動效——這也是"簡單至上"原則：動畫是錦上添花，功能是雪中送炭。
+新手常犯的毛病是"介面還沒做對，就開始糾結動畫"。先讓功能跑通，最後再統一加動效：這也是"簡單至上"原則：動畫是錦上添花，功能是雪中送炭。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

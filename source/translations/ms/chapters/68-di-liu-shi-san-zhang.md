@@ -57,7 +57,7 @@ Nasihat terus untuk pemula: state peribadi halaman guna @State, yang merentas ha
 
 #### 2. NavigationStack: 'tindanan' lompatan halaman
 
-Mulai iOS 16, navigasi berbilang halaman menggunakan NavigationStack — seperti timbunan pinggan: satu dimasukkan satu demi satu, dan dikeluarkan satu demi satu semasa kembali:
+Mulai iOS 16, navigasi berbilang halaman menggunakan NavigationStack, seperti timbunan pinggan: satu dimasukkan satu demi satu, dan dikeluarkan satu demi satu semasa kembali:
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink ialah 'pautan lompatan yang boleh ditekan'; navigationTitle menjana tajuk bar navigasi dan butang kembali secara automatik. Untuk lompatan secara berprogram (contohnya kembali automatik selepas menekan 'Simpan'), gunakan @Environment(\.dismiss) untuk menutup halaman semasa — dengan dua helah ini, 90% keperluan navigasi sudah lengkap.
+NavigationLink ialah 'pautan lompatan yang boleh ditekan'; navigationTitle menjana tajuk bar navigasi dan butang kembali secara automatik. Untuk lompatan secara berprogram (contohnya kembali automatik selepas menekan 'Simpan'), gunakan @Environment(\.dismiss) untuk menutup halaman semasa, dengan dua helah ini, 90% keperluan navigasi sudah lengkap.
 
 #### 3. Pop timbul dan tab bawah: sheet dan TabView
 
@@ -141,7 +141,7 @@ Peraturan pengalaman: aliran utama guna NavigationStack untuk menolak halaman (s
 
 #### 4. List: senarai paling popular di iOS
 
-Komponen paling kerap digunakan dan paling 'berbau Apple' di iOS ialah List — sedia ada garis pemisah, padam dengan leretan dan sorotan semasa ditekan:
+Komponen paling kerap digunakan dan paling 'berbau Apple' di iOS ialah List, sedia ada garis pemisah, padam dengan leretan dan sorotan semasa ditekan:
 
 ::: div .code-block
 :::inline div .code-head
@@ -166,7 +166,7 @@ struct RecordListView: View {
 ```
 :::
 
-Senarai + NavigationLink + sheet + TabView — gabungkan empat elemen ini, dan anda sudah boleh membina kerangka App lengkap 'senarai rekod → buka butiran → tekan + muncul borang kemasukan'. Projek buku rekod perbelanjaan bab seterusnya dibina begini.
+Senarai + NavigationLink + sheet + TabView, gabungkan empat elemen ini, dan anda sudah boleh membina kerangka App lengkap 'senarai rekod → buka butiran → tekan + muncul borang kemasukan'. Projek buku rekod perbelanjaan bab seterusnya dibina begini.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-Kegunaan tipikal: segarkan data semasa kembali ke hadapan, simpan draf semasa masuk ke latar belakang. iOS mengawal pelaksanaan latar belakang dengan sangat ketat — App biasa akan segera digantung (dibekukan) selepas masuk latar belakang; jangan berharap boleh membuat kerja berat secara senyap-senyap di latar belakang. Jika benar-benar perlu tugasan berkala, gunakan pemberitahuan tempatan dalam Bab 68, bukan 'kekal berjalan di latar belakang'.
+Kegunaan tipikal: segarkan data semasa kembali ke hadapan, simpan draf semasa masuk ke latar belakang. iOS mengawal pelaksanaan latar belakang dengan sangat ketat, App biasa akan segera digantung (dibekukan) selepas masuk latar belakang; jangan berharap boleh membuat kerja berat secara senyap-senyap di latar belakang. Jika benar-benar perlu tugasan berkala, gunakan pemberitahuan tempatan dalam Bab 68, bukan 'kekal berjalan di latar belakang'.
 
 {class="mt-1"}
-Bina kerangka versi data palsu buku rekod perbelanjaan: TabView tiga tab (Rekod/Statistik/Tetapan) → halaman rekod guna List memaparkan data palsu, tekan baris untuk ke butiran (NavigationStack) → butang '+' penjuru atas kanan memunculkan sheet kemasukan. Tanpa menyimpan data, tanpa internet — semata-mata latihan kerangka. Kerangka ini siap, mengisinya dengan data sebenar pada Bab 65 menjadi perkara semula jadi.
+Bina kerangka versi data palsu buku rekod perbelanjaan: TabView tiga tab (Rekod/Statistik/Tetapan) → halaman rekod guna List memaparkan data palsu, tekan baris untuk ke butiran (NavigationStack) → butang '+' penjuru atas kanan memunculkan sheet kemasukan. Tanpa menyimpan data, tanpa internet, semata-mata latihan kerangka. Kerangka ini siap, mengisinya dengan data sebenar pada Bab 65 menjadi perkara semula jadi.
 :::
 
 ::: div .chapter-summary

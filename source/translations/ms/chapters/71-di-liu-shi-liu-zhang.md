@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 66: Projek 2 — App Carian Cuaca (Versi Rangkaian)
 
 {class="chapter-intro mb-4"}
-Buku rekod perbelanjaan ialah 'latihan dalaman', App cuaca ialah 'melihat dunia luar' — ia perlu berurusan dengan internet. Dalam projek ini anda belajar: memohon API percuma, menghurai JSON, mengendalikan tiga state antara muka 'memuatkan/berjaya/gagal', serta cara menyembunyikan kunci API dengan baik. Selepas menyiapkannya, anda mempunyai keupayaan membuat sebarang 'App rangkaian' — berita, kadar pertukaran, penterjemah; caranya serupa sahaja.
+Buku rekod perbelanjaan ialah 'latihan dalaman', App cuaca ialah 'melihat dunia luar', ia perlu berurusan dengan internet. Dalam projek ini anda belajar: memohon API percuma, menghurai JSON, mengendalikan tiga state antara muka 'memuatkan/berjaya/gagal', serta cara menyembunyikan kunci API dengan baik. Selepas menyiapkannya, anda mempunyai keupayaan membuat sebarang 'App rangkaian', berita, kadar pertukaran, penterjemah; caranya serupa sahaja.
 
 #### 1. Memohon API cuaca percuma
 
@@ -18,7 +18,7 @@ Untuk latihan individu, disyorkan OpenWeatherMap atau QWeather (perkhidmatan Chi
 
 1. Daftar akaun → jana satu kunci (apikey) pada halaman API keys;
 2. Versi percuma boleh memanggil antara muka Current Weather: api.openweathermap.org/data/2.5/weather? q=beijing&appid=kunciAnda&units=metric;
-3. Cuba dahulu sekali dalam pelayar untuk melihat bentuk JSON yang dikembalikan — inilah 'persiapan' yang wajib sebelum menyambung sebarang API.
+3. Cuba dahulu sekali dalam pelayar untuk melihat bentuk JSON yang dikembalikan: inilah 'persiapan' yang wajib sebelum menyambung sebarang API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -146,7 +146,7 @@ Beberapa butiran kecil wajar dipelajari: first? mengambil elemen pertama dengan 
 - Kotak carian: modifier .searchable di bahagian atas, interaksi carian terbina dalam sistem, semasa dihantar memanggil vm.search;
 - Bandar kegemaran: simpan bandar yang kerap dilihat ke dalam UserDefaults, dibuka kali seterusnya carian dibuat secara automatik;
 - Segar semula dengan leret ke bawah: .refreshable { await vm.search(...) } selesai dalam satu baris;
-- Ikon cuaca: guna Image(systemName:) untuk memetakan mengikut huraian (sun.max / cloud.rain / snowflake), antara muka terus menjadi hidup.
+- Ikon cuaca: guna Image(systemName:) untuk memetakan mengikut huraian (sun.max / cloud.rain / snowflake), antara muka terus menjadi hidup
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -160,13 +160,13 @@ Sokongan OpenWeatherMap terhadap nama bandar dalam tulisan Cina hanya sederhana;
 {class="font-semibold"}
 Praktik: Senarai semak penerimaan App cuaca
 
-#### 6. Cara menyahpepiat permintaan rangkaian: cetakan, pemeriksaan paket dan simulasi rangkaian perlahan
+6. Cara menyahpepiat permintaan rangkaian: cetakan, pemeriksaan paket dan simulasi rangkaian perlahan
 
 App rangkaian bermasalah, sembilan daripada sepuluh berpunca daripada 'permintaan tidak dihantar dengan betul' atau 'tindak balas tidak dihurai dengan betul'. Tiga kaedah penyahpepijatan:
 
-1. Cetak data mentah: cetak String(data: data, encoding: .utf8) untuk melihat JSON mentah — nama medan dan jenis kelihatan jelas sekali pandang, sepuluh kali lebih pantas daripada meneka;
+1. Cetak data mentah: cetak String(data: data, encoding: .utf8) untuk melihat JSON mentah, nama medan dan jenis kelihatan jelas sekali pandang, sepuluh kali lebih pantas daripada meneka;
 2. Alat pemeriksaan paket: Proxyman yang percuma di Mac / Charles sumber terbuka boleh memerangkap semua permintaan dan tindak balas App, memaparkan lapisan rangkaian dengan jelas seperti sinar-X;
-3. Simulasi rangkaian lemah: menu simulator Features → Network Link Conditioner (alat perlu dimuat turun dari tapak web pembangun), boleh mensimulasikan 3G dan kependaman tinggi — mengesan masalah pengalaman 'berputar lama tanpa hasil'.
+3. Simulasi rangkaian lemah: menu simulator Features → Network Link Conditioner (alat perlu dimuat turun dari tapak web pembangun), boleh mensimulasikan 3G dan kependaman tinggi, mengesan masalah pengalaman 'berputar lama tanpa hasil'
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -188,5 +188,5 @@ Ringkasan bab ini
 - Sembunyikan kunci API dalam xcconfig, jangan sekali-kali masuk repositori kod
 - Model Codable + URLSession async/await: medan sepadan, JSON dihurai secara automatik
 - Corak tiga peringkat state loading/success/error ialah templat serbaguna antara muka rangkaian
-- Tiada internet, input kosong, bandar tidak wujud — pengendalian ralat ialah garis lulus App rangkaian
+- Tiada internet, input kosong, bandar tidak wujud: pengendalian ralat ialah garis lulus App rangkaian
 :::

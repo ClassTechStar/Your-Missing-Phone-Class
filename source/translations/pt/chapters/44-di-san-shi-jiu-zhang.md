@@ -2,19 +2,19 @@
 id: di-san-shi-jiu-zhang
 num: 39
 part: ai-biancheng-pian
-nav: Capítulo 39: Engenharia de contexto — fazendo a IA entender suas intenções
+nav: Capítulo 39: A IA não entendeu? Talvez você não foi claro
 toc: default
 kind: chapter
 ---
 
-### Capítulo 39: Engenharia de contexto — fazer a IA entender a sua intenção
+### Capítulo 39: A IA não entendeu? Talvez você não foi claro
 
 {class="chapter-intro mb-4"}
-Já aconteceu de trocar de conversa e a IA "esquecer" tudo do seu projeto? Não é de propósito: ela é naturalmente esquecida. Este capítulo ensina a instalar um "sistema de memória de longo prazo" na IA e apresenta um dos paradigmas mais quentes de 2026 — o desenvolvimento orientado a especificação.
+Já aconteceu de trocar de conversa e a IA "esquecer" tudo do seu projeto? Não é de propósito: ela é naturalmente esquecida. Este capítulo ensina a instalar um "sistema de memória de longo prazo" na IA e apresenta um dos paradigmas mais quentes de 2026, o desenvolvimento orientado a especificação.
 
-#### 1. Arquivo de memória do projeto: a "memória de longo prazo" da IA
+1. Arquivo de memória do projeto: a "memória de longo prazo" da IA
 
-Os modelos de IA têm uma limitação fundamental: a memória é de curto prazo. A cada nova conversa, a IA começa do zero sobre o seu projeto. Você precisa repetir "usamos React", "o backend é Node.js", "o banco é PostgreSQL", "o estilo usa aspas duplas". É ineficiente e fácil de esquecer — como treinar um estagiário novo todo dia.
+Os modelos de IA têm uma limitação fundamental: a memória é de curto prazo. A cada nova conversa, a IA começa do zero sobre o seu projeto. Você precisa repetir "usamos React", "o backend é Node.js", "o banco é PostgreSQL", "o estilo usa aspas duplas". É ineficiente e fácil de esquecer, como treinar um estagiário novo todo dia.
 
 A solução é o "arquivo de memória do projeto": um texto na raiz do projeto que a ferramenta de IA lê automaticamente ao iniciar a conversa. Cada ferramenta tem o seu nome:
 
@@ -27,7 +27,7 @@ A solução é o "arquivo de memória do projeto": um texto na raiz do projeto q
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Convenções de nome do arquivo de memória por ferramenta
 
-Os nomes mudam, o princípio é o mesmo: escreva no arquivo o que a IA deve "sempre lembrar". Um bom arquivo traz: visão geral do projeto (o que é), stack (tecnologias), padrões de código (nomenclatura, indentação, comentários), estrutura de pastas e convenções (branches, commits, testes). O CLAUDE.md de Karpathy tem só 70 linhas, mas cobre o essencial — conciso e completo.
+Os nomes mudam, o princípio é o mesmo: escreva no arquivo o que a IA deve "sempre lembrar". Um bom arquivo traz: visão geral do projeto (o que é), stack (tecnologias), padrões de código (nomenclatura, indentação, comentários), estrutura de pastas e convenções (branches, commits, testes). O CLAUDE.md de Karpathy tem só 70 linhas, mas cobre o essencial, conciso e completo.
 
 ::: div .code-block
 :::inline div .code-head
@@ -80,7 +80,7 @@ Fluxo do SDD em cinco passos:
 2. Defina interfaces e estruturas de dados (no mesmo arquivo);
 3. Peça à IA que gere a implementação a partir da spec;
 4. Rode testes para validar se a entrega segue a spec;
-5. Se não seguir, corrija a spec ou peça à IA para corrigir o código.
+5. Se não seguir, corrija a spec ou peça à IA para corrigir o código
 
 Nesse fluxo, o arquivo de especificação é a "fonte única da verdade": o código pode ser regenerado, mas a spec precisa estar correta primeiro.
 
@@ -105,11 +105,11 @@ Nesse fluxo, o arquivo de especificação é a "fonte única da verdade": o cód
 Figura 3: fluxo de trabalho do desenvolvimento orientado a especificação (SDD)
 :::
 
-A vantagem do SDD é que a spec é mais estável que o código. Quando o modelo ou a ferramenta muda, a sua spec continua valendo — basta gerar o código de novo. É por isso que o livro insiste que "metodologia vale mais que ferramenta": a spec é o veículo concreto da sua metodologia.
+A vantagem do SDD é que a spec é mais estável que o código. Quando o modelo ou a ferramenta muda, a sua spec continua valendo, basta gerar o código de novo. É por isso que o livro insiste que "metodologia vale mais que ferramenta": a spec é o veículo concreto da sua metodologia.
 
 #### 3. Gestão da janela de contexto
 
-Mesmo com o arquivo de memória, ainda faltará contexto em conversas longas. A janela de contexto (quanto a IA processa ao mesmo tempo) é limitada. Com chat muito extenso e muitos arquivos citados, a IA "esquece" o começo e a qualidade cai — como uma conversa de seis horas em que o amigo já não lembra o que você disse na abertura.
+Mesmo com o arquivo de memória, ainda faltará contexto em conversas longas. A janela de contexto (quanto a IA processa ao mesmo tempo) é limitada. Com chat muito extenso e muitos arquivos citados, a IA "esquece" o começo e a qualidade cai: como uma conversa de seis horas em que o amigo já não lembra o que você disse na abertura.
 
 A estratégia central é a "referência em camadas":
 
@@ -126,8 +126,8 @@ Estratégia de gestão da janela de contexto em camadas
 
 Engenharia de contexto não é uma configuração única; é um processo de melhoria contínua. Alguns pontos comprovados na prática:
 
-1. Atualize o arquivo de memória junto com o projeto. Ao adotar uma tecnologia nova ou mudar a arquitetura, atualize o arquivo na hora — não explique de improviso no chat.
-2. Prefira @ a colar textões. A maioria das ferramentas aceita @arquivo ou @pasta, injetando o conteúdo no contexto em segundo plano — mais eficiente e sem poluir a conversa.
+1. Atualize o arquivo de memória junto com o projeto. Ao adotar uma tecnologia nova ou mudar a arquitetura, atualize o arquivo na hora, não explique de improviso no chat.
+2. Prefira @ a colar textões. A maioria das ferramentas aceita @arquivo ou @pasta, injetando o conteúdo no contexto em segundo plano, mais eficiente e sem poluir a conversa.
 3. Conversas curtas e cirúrgicas. Cada chat, uma tarefa ou um ponto de função. Ao concluir, abra outro. Conversas longas gastam a janela de contexto e "distraem" a IA.
 4. Mostre o resultado em vez de descrever. Em bugs, @cite o log de erro em vez de dizer "parece que tem algum erro". A IA responde melhor à informação original do que à sua versão.
 5. Limpe e arquive com regularidade. Conversas concluídas e arquivos temporários ocupam o espaço de trabalho. Manter o diretório limpo também ajuda a IA a entender a estrutura.

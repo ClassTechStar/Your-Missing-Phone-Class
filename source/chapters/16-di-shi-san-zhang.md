@@ -2,15 +2,17 @@
 id: di-shi-san-zhang
 num: 13
 part: ruan-jian-pian
-nav: 第十三章：工具类App推荐
+nav: 第十三章：哪些 App 值得装，哪些别装
 toc: default
 kind: chapter
 ---
 
-### 第十三章：工具类App推荐
+### 第十三章：哪些 App 值得装，哪些别装
 
 {class="chapter-intro mb-4"}
-本章精选效率、健康、出行类工具，并补充实用系统与跨设备能力：清浊等清理与防骚扰、手机自带拦截开关、天气与地震预警；向日葵/ToDesk 远控电脑、Trae 等 AI 办公、人工桌面、LocalSend 等局域网快传、跨设备剪贴板、Aegis/Microsoft Authenticator 动态口令、滴答清单日程与纸质扫描。
+本章精选效率、健康、出行类工具，并补充实用系统与跨设备能力：清浊等清理与防骚扰、手机自带拦截开关、天气与地震预警；向日葵/ToDesk 远控电脑、Trae 等 AI 办公、人工桌面、LocalSend 等局域网快传。跨设备剪贴板、Aegis/Microsoft Authenticator 动态口令、滴答清单日程与纸质扫描。
+
+<div class="version-anchor">本章界面路径按 iOS 18.x / HarmonyOS 5.x / Android 15 核对（2026 年 11 月）。你的机型或系统版本不同，菜单名字和位置可能对不上——以你手机上显示的为准。</div>
 
 #### 一、效率工具：管理你的时间与注意力
 
@@ -70,9 +72,9 @@ kind: chapter
 
 ##### 1. 运动健身
 
-- <strong>Keep</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>居家训练者、零基础新手、想减脂塑形的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>海量免费课程，从 HIIT 到瑜伽全覆盖，AI 自动生成训练计划，社区氛围浓厚。
+- <strong>Keep</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>居家训练者、零基础新手、想减脂塑形的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>很多免费课程，从 HIIT 到瑜伽全覆盖，AI 自动生成训练计划，社区氛围浓厚。
 - <strong>Nike Training Club（NTC）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求专业教练指导、希望系统训练的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>Nike 官方出品，课程全部免费，动作演示由专业教练录制，按肌群/器械分类清晰。
-- <strong>苹果健身（Fitness）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>Apple Watch 用户、想用闭环激励自己动起来的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>每日三个活动圆环（移动/锻炼/站立），可视化目标，与手表心率数据无缝打通。
+- <strong>苹果健身（Fitness）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>Apple Watch 用户、想用闭环激励自己动起来的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>每日三个活动圆环（移动/锻炼/站立），看得见目标，与手表心率数据无缝打通。
 
 ##### 2. 睡眠追踪
 
@@ -84,7 +86,7 @@ kind: chapter
 
 - <strong>Calm</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>压力大的上班族、入睡困难者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"每日平静"冥想引导 + 睡眠故事（由名人朗读），界面唯美，英文内容丰富。
 - <strong>潮汐</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要白噪音专注/入睡的中文用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>国产精品，自然音效 + 冥想课程 + 番茄钟，中文引导更亲切。
-- <strong>小睡眠</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要助眠音效、记录梦话/呼噜声的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>海量白噪音可叠加组合（雨声+风扇+篝火），睡前定时关闭，梦话录音有趣又实用。
+- <strong>小睡眠</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要助眠音效、记录梦话/呼噜声的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>很多白噪音可叠加组合（雨声+风扇+篝火），睡前定时关闭，梦话录音有趣又实用。
 
 ##### 4. 女性健康
 
@@ -116,6 +118,17 @@ kind: chapter
 - <strong>Google Maps</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>出国旅行者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>全球覆盖最全、本地评价真实，街景与离线地图是异国他乡的救星。
 
 ##### 3. 翻译
+
+<div class="stance-box">
+<div class="stance-box-head">作者立场</div>
+<p>翻译 App 留一个就够，别装一排。</p>
+<ul>
+<li>浏览器和系统自带的翻译已经能应付大多数出国场景；</li>
+<li>同时装多个的结果是互相抢活，通知和权限乱响；</li>
+<li>真需要离线翻译的，只留一个支持下载语言包的。</li>
+</ul>
+<p class="stance-box-note">（无利益相关。我没有对每一款翻译 App 做长期横评，以上是按功能重叠度做的判断。）</p>
+</div>
 
 - <strong>谷歌翻译</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>出国旅行者、跨语言学习者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"对话"实时双向翻译、"相机"即时取词翻译是旅行神器，支持离线语言包下载。
 
@@ -166,7 +179,7 @@ kind: chapter
 
 ##### 高效信息检索指南：
 
-- <strong>善用AI搜索</strong>：Bing的AI摘要、Edge的Copilot可以直接回答问题，帮你从海量结果中提炼关键信息，比逐条点击链接高效得多。
+- <strong>善用AI搜索</strong>Bing的AI摘要、Edge的Copilot可以直接回答问题，帮你从很多结果中提炼关键信息，比逐条点击链接高效得多。
 - <strong>识别虚假信息与广告</strong>：搜索结果中标注"广告"或"赞助"的条目是付费推广，不是自然搜索结果。注意甄别信息来源的权威性，优先选择官方网站、知名媒体的内容。
 - <strong>正确下载应用</strong>：在搜索引擎中输入"应用名+官网"，如"微信官网"，优先点击带有官方域名标识的结果。不要从第三方下载站安装软件，它们经常捆绑流氓软件。
 - <strong>官网鉴别技巧</strong>：下载Windows 11应该访问microsoft.com，下载Chrome应该访问google.com。看域名是否与品牌一致，是最基本的鉴别方法。
@@ -190,7 +203,7 @@ kind: chapter
   - .de — 德国
   - .tw — 台湾
   - .hk — 香港
-- <strong>安全提示</strong>：.gov和.edu后缀的网站通常更可信，因为申请门槛高。.xyz、.top等廉价域名容易被钓鱼网站利用，访问时要多留个心眼。
+- <strong>安全提示</strong>：.gov和.edu后缀的网站通常更可信，因为申请门槛高。.xyz、.top等廉价域名容易被钓鱼网站利用，访问时要多留个心眼
 
 ##### 广告拦截：
 
@@ -254,11 +267,30 @@ kind: chapter
 
 #### 六、实用系统工具：清理、防骚扰与安全防护
 
+<div class="stance-box">
+<div class="stance-box-head">作者立场</div>
+<p>系统自带的那一套够用了，不要再装第二套清理或安全 App。</p>
+<ul>
+<li>品牌自带的手机管家懂自家 App 的缓存结构，误删风险最低；</li>
+<li>第二套要常驻后台，白耗电；</li>
+<li>两套同时跑还会抢权限，越清越卡。</li>
+</ul>
+<p class="stance-box-note">（无利益相关。清理类 App 我没有逐个长期使用过，以上是按它们的工作机制做的判断。）</p>
+</div>
+
 除了效率与健康类 App，真正影响日常体验的往往是「少被打扰、存储够用、骗子进不来」这三件事。本节先盘点常用实用软件，再单独展开<strong>手机自带的骚扰拦截功能</strong>——很多人买了手机多年，却从没打开过这些开关。
 
 ##### 1. 系统清理与存储优化
 
-- <strong>清浊</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>安卓用户，希望轻量清理缓存、残留文件、空文件夹，又不想被「手机管家」全家桶打扰的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>体积小、无广告干扰，支持深度扫描应用残留、大文件定位、存储占用分析；比商业「一键加速」更克制，适合动手能力强的用户做定期维护。<span class="text-gray-500 dark:text-gray-400">注意：</span>清理前先确认路径，微信、相册、文档目录不要盲目全选；系统级缓存尽量优先用品牌自带存储清理，第三方工具只作补充。
+<div class="case-box">
+<div class="case-box-head">翻车现场</div>
+<p>手机自带"手机管家"，用户又装了一个第三方清理 App。结果两个都在后台跑，一个弹"已清理完毕"，另一个弹"发现若干可优化项"，手机反而更卡。</p>
+<p class="case-box-quote">"我刚清完，它又弹出来一堆垃圾。"</p>
+<p class="case-box-src">场景来源：全书通用场景（非特定读者）</p>
+<p><strong>怎么办</strong>：品牌自带的那套留着，它懂自家 App 的缓存结构，误删风险最低。第三方那个卸载掉：它常驻后台白耗电，权限还会跟系统打架，越清越卡。真要清理，先看系统存储里的"应用"和"其他"各占多少，再决定删谁。</p>
+</div>
+
+- <strong>清浊</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>安卓用户，希望轻量清理缓存、残留文件、空文件夹，又不想被「手机管家」全家桶打扰的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>体积小、无广告干扰，支持深度扫描应用残留、大文件定位、存储占用分析；比商业「一键加速」更克制，适合拿来做定期维护。<span class="text-gray-500 dark:text-gray-400">注意：</span>清理前先确认路径，微信、相册、文档目录不要盲目全选；系统级缓存尽量优先用品牌自带存储清理，第三方工具只作补充。
 - <strong>系统自带存储清理</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有人，尤其是长辈和怕折腾的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>安卓 [设置] > [存储] > [清理加速]；iOS [设置] > [通用] > [iPhone 储存空间]。系统更懂自家 App 缓存结构，误删风险最低，应作为<strong>第一选择</strong>。
 - <strong>微信/QQ 内置存储管理</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>聊天大户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>微信 [我] > [设置] > [通用] > [存储空间]，可按聊天、文件类型精细清理；比外部「清微信」类工具更安全。
 - <strong>原则</strong>：能用系统/App 自带的，就不用第三方；能按路径/类型勾选的，就不要「一键全清」。清理的目标是释放空间，不是把重要数据一起扫掉。
@@ -266,7 +298,7 @@ kind: chapter
 ##### 2. 防骚扰与安全类实用软件
 
 - <strong>国家反诈中心</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有人，尤其是长辈、财务相关岗位、经常网购/接陌生电话的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>官方出品，可开启来电预警、短信风险提示、可疑网址检测；与公安反诈数据库联动，是「三道防线」里最有官方背书的一环。
-- <strong>品牌安全中心 / 手机管家</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>对应品牌用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>华为手机管家、小米安全中心、OPPO 手机管家、vivo 手机管家等，集成骚扰拦截、病毒查杀、权限管理、支付保护，通常<strong>免费且与系统底层协同更好</strong>，不建议再装第二套商业安全软件造成权限冲突。
+- <strong>品牌安全中心 / 手机管家</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>对应品牌用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>华为手机管家、小米安全中心、OPPO 手机管家和 vivo 手机管家等，集成骚扰拦截、病毒查杀、权限管理以及支付保护，通常<strong>免费且与系统底层协同更好</strong>，不建议再装第二套商业安全软件造成权限冲突。
 - <strong>运营商防骚扰服务</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>被高频外呼、AI 语音电话轰炸的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>移动发送 <span class="kbd">KTFSR</span> 到 10086 开通；电信关注「天翼防骚扰」；联通在「联通手机管家」中设置。拦截发生在<strong>运营商侧</strong>，手机不响铃也能挡住一批骚扰号。
 - <strong>AdGuard</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>被各类弹窗、贴片广告、应用内广告困扰的所有用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>系统级广告拦截（不仅限浏览器），可过滤 App 内横幅广告与开屏追踪，省流量、加速页面加载，付费版支持全设备。
 - <strong>慎装「清理加速 / 骚扰拦截」全家桶</strong>：部分第三方管家常驻后台、反复请求通讯录与短信权限，拦截能力未必比系统强，反而增加耗电与隐私风险。优先打开系统自带功能，再考虑官方反诈 App。
@@ -335,7 +367,7 @@ kind: chapter
 <i class="fas fa-info-circle mr-2"></i>三层防护叠加建议
 
 {class="mt-1"}
-日常推荐「<strong>系统拦截 + 运营商防骚扰 + 国家反诈中心</strong>」三层叠加：系统管标记与黑名单，运营商在网侧挡高频外呼，反诈中心补官方预警。三层不必都开到最严，避免把快递、外卖、医生电话也误杀——可对通讯录与最近联系人放行。
+日常推荐「<strong>系统拦截 + 运营商防骚扰 + 国家反诈中心</strong>」三层叠加：系统管标记与黑名单，运营商在网侧挡高频外呼，反诈中心补官方预警。三层不必都开到最严，避免把快递、外卖、医生电话也误杀，可对通讯录与最近联系人放行。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
@@ -363,7 +395,7 @@ kind: chapter
   - <strong>黄色</strong>：加强防范，减少不必要户外活动。
   - <strong>橙色</strong>：严重，尽量留在室内，远离危险区域。
   - <strong>红色</strong>：特别严重，听从停课、停工、避险指引，不要硬闯积水、山洪、大风路段。
-- <strong>常见预警类型</strong>：暴雨、暴雪、台风、高温、寒潮、大风、雷电、冰雹、道路结冰、大雾、干旱、地质灾害风险。
+- <strong>常见预警类型</strong>：暴雨、暴雪、台风、高温、寒潮、大风、雷电、冰雹。道路结冰、大雾、干旱、地质灾害风险也在其中。
 
 ##### 2. 自然灾害预警：不只「下雨」
 
@@ -372,7 +404,7 @@ kind: chapter
   - 手机系统通知 + 天气 App 预警。
   - 微信关注当地「应急管理局」「气象局」公众号。
   - 12379 国家预警信息发布相关渠道（短信/服务，视地区开通情况）。
-  - 电视、应急广播、村/社区大喇叭——山区、汛期不要只盯手机。
+  - 电视、应急广播、村/社区大喇叭，山区、汛期不要只盯手机。
 - <strong>户外与出行提醒</strong>：台风天不贴广告牌、不走树下；暴雨不进地下车库、隧道、下穿桥；山区旅游遇「地质灾害气象风险」预警应立即离开陡坡、沟谷。
 - <strong>与急救手册联动</strong>：灾后失联、手机没电、需要定位求救时，见 <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">第三十二章</a> 地震/灾害场景，以及 <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">第七章</a> 卫星通信与无网通。
 
@@ -471,7 +503,7 @@ kind: chapter
 
 - <strong>向日葵远程控制</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要在外出时操作家里/公司 Windows 或 Mac 的用户；也常用于帮长辈远程修手机（见第二十七章）。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>国产生态成熟，手机 App 控制电脑桌面、传文件、开关机（部分需硬件）；免费版一般够个人轻度使用。
 - <strong>ToDesk</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求连接稳定、低延迟远程办公/运维的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>设备码+密码连接，手机控电脑、电脑控手机（视版本）、文件传输与多显示器切换较顺手，国内节点体验通常较好。
-- <strong>基本用法</strong>：电脑端安装客户端并登录/保持在线 → 手机端装 App → 用<strong>设备识别码 + 连接密码</strong>（或同一账号）建立会话 → 手机触控板/手势操作桌面。
+- <strong>基本用法</strong>：电脑端先装客户端并登录保持在线，手机端装上 App，两边用<strong>设备识别码 + 连接密码</strong>（或者用同一个账号）建立会话。会话通了，手机就是触控板，用手势就能操作电脑桌面。
 - <strong>安全红线（务必记住）</strong>：
   - 陌生人自称「客服/公检法/运营商」让你装向日葵、ToDesk 并远程你<strong>手机或电脑</strong>，<strong>一律拒绝</strong>——这是典型诈骗手法（详见第二十七章）。
   - 自己用时：开启二次验证、修改默认密码、不用时退出账号或关闭无人值守；公司电脑遵守单位安全规定。
@@ -480,14 +512,14 @@ kind: chapter
 ##### 2. AI 办公软件：Trae / WorkBuddy / Dumate
 
 - <strong>Trae</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>编程与文档协作用户，中文环境友好。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>字节跳动推出的 AI IDE/编程助手，SOLO 模式可一句话生成项目；日常写代码、改文档效率高。若电脑端运行，可在移动端配合远控或官方配套能力查看/跟进任务（以产品最新形态为准）。详见 <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">第四十一章</a> AI 编程工具全景。
-- <strong>WorkBuddy</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>希望 AI 帮忙整理会议纪要、邮件、汇报、办公文档的职场用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>面向办公场景的 AI 助手，适合「起草—润色—总结」这类高频文案；部分工作流可在手机端发起，重活放到电脑端完成。
-- <strong>Dumate</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要多人协作、文档与知识管理一体化的团队/个人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>AI 协作向办公工具，强调资料汇聚与协同编辑；手机端可查看与轻量编辑，复杂排版建议在电脑大屏处理。
+- <strong>WorkBuddy</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>希望 AI 帮忙整理会议纪要、邮件、汇报、办公文档的职场用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>面向办公场景的 AI 助手，适合「起草—润色—总结」这类高频文案，模板现成，改改就能用；部分工作流可在手机端发起，重活放到电脑端完成。
+- <strong>Dumate</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要多人协作、文档与知识管理一体化的团队/个人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>AI 协作向办公工具，强调资料汇聚与协同编辑；手机端可以查看和轻量编辑，复杂排版还是建议拿到电脑大屏上处理，同一份文档来回切不容易串版。
 - <strong>「手机端远程控制电脑」怎么理解</strong>：很多 AI 办公能力跑在电脑/网页端；在手机上通过<strong>向日葵/ToDesk</strong>连回电脑，或使用产品自身的手机 App/网页，就能在通勤时「遥控」电脑上的 AI 任务。原则：<strong>重计算、长文档放电脑；看进度、改几句放手机</strong>。
 - <strong>隐私提醒</strong>：上传合同、身份证、客户数据前看清产品隐私条款与企业合规要求；公司资料优先用单位指定工具。
 
 ##### 3. 人工桌面：米哈游动态壁纸（手机 + PC）
 
-- <strong>人工桌面</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>喜欢米哈游角色、想要免费动态壁纸的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>米哈游推出的<strong>免费</strong>动态壁纸应用，支持<strong>手机端与 PC 端</strong>；角色 Live2D/动态演出可作桌面，部分机型/系统可设为锁屏或桌面壁纸。
+- <strong>人工桌面</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>喜欢米哈游角色、想要免费动态壁纸的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>米哈游推出的<strong>免费</strong>动态壁纸应用，支持<strong>手机端与 PC 端</strong>；角色 Live2D/动态演出可以当桌面或锁屏壁纸。
 - <strong>省电与性能</strong>：动态壁纸比静态图更耗电、占 GPU；低电量或老机型可只在充电时使用，或降低帧率（若 App 提供选项）。
 - <strong>安装来源</strong>：优先官网/正规应用商店，避免第三方「破解版」捆绑木马；PC 版注意安装路径与开机自启是否需要。
 

@@ -2,17 +2,17 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Chapitre 56 : Peaufiner et publier — mise en ligne sur Google Play
+nav: Chapitre 56 : Votre app est prête, mettez-la en ligne
 toc: default
 kind: chapter
 ---
 
-### Chapitre 56 : Peaufiner et publier — tests, débogage et mise en ligne sur Google Play
+### Chapitre 56 : Votre app est prête, mettez-la en ligne
 
 {class="chapter-intro mb-4"}
-Ton app est faite, et maintenant ? Ce chapitre répond aux trois questions qui mènent de « ça tourne » à « c’est livrable » : comment déboguer efficacement pour trouver les bugs, comment écrire des tests pour prévenir les régressions, et comment envoyer l’app sur Google Play pour que le monde entier la télécharge. La publication n’est pas qu’une cérémonie — c’est le tournant qui transforme une création en produit.
+Ton app est faite, et maintenant ? Ce chapitre répond aux trois questions qui mènent de « ça tourne » à « c’est livrable » : comment déboguer efficacement pour trouver les bugs, comment écrire des tests pour prévenir les régressions, et comment envoyer l’app sur Google Play pour que le monde entier la télécharge. La publication n’est pas qu’une cérémonie: c’est le tournant qui transforme une création en produit.
 
-#### 1. Les trois armes du débogage : Logcat, points d’arrêt, inspecteur d’UI
+1. Les trois armes du débogage : Logcat, points d’arrêt, inspecteur d’UI
 
 ::: div .overflow-x-auto
 ```html
@@ -28,7 +28,7 @@ Les trois armes du débogage
 Astuce : comment lire un message d’erreur ?
 
 {class="mt-1"}
-Après un plantage, Logcat affiche une pile rouge (stacktrace) : remonte du bas vers le haut jusqu’à la première ligne qui commence par ton propre nom de package (par exemple com.example.yourapp) — cette ligne est en général la scène du crime. Regarde d’abord le « type d’exception » (pointeur nul ? conversion de type ?), puis la ligne « at ... tonfichier:ligne ». Cette méthode résout 80 % des plantages.
+Après un plantage, Logcat affiche une pile rouge (stacktrace) : remonte du bas vers le haut jusqu’à la première ligne qui commence par ton propre nom de package (par exemple com.example.yourapp), cette ligne est en général la scène du crime. Regarde d’abord le « type d’exception » (pointeur nul ? conversion de type ?), puis la ligne « at ... tonfichier:ligne ». Cette méthode résout 80 % des plantages.
 :::
 
 #### 2. Les tests : une assurance pour ton code
@@ -76,18 +76,18 @@ La validation des montants et les calculs statistiques du carnet de comptes devr
 
 #### 3. Signer et empaqueter : apposer le « sceau » sur ton app
 
-Android exige que chaque package d’installation soit signé — comme un cachet officiel qui prouve « ce package vient de moi et n’a pas été altéré ». En débogage, Android Studio utilise automatiquement la signature debug ; pour publier, il te faut ta propre signature release. La procédure :
+Android exige que chaque package d’installation soit signé, comme un cachet officiel qui prouve « ce package vient de moi et n’a pas été altéré ». En débogage, Android Studio utilise automatiquement la signature debug ; pour publier, il te faut ta propre signature release. La procédure :
 
 1. Menu Build → Generate Signed Bundle / APK ;
 2. crée le fichier keystore (magasin de clés) — définis un mot de passe et conserve-le précieusement ;
-3. choisis release au format AAB, et la construction est terminée.
+3. choisis release au format AAB, et la construction est terminée
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Attention au piège : keystore perdu = app perdue
 
 {class="mt-1"}
-Après la mise en ligne, toute mise à jour de l’app doit utiliser la même signature, sinon la boutique refusera la mise à jour. Si le fichier keystore ou le mot de passe est perdu, tu n’as plus qu’à créer une nouvelle app et la publier à nouveau — tous les anciens utilisateurs restent sur le carreau. Sauvegarde impérativement le keystore et le mot de passe dans un endroit sûr (cloud chiffré + carnet de notes) : c’est l’une des leçons les plus chères de l’histoire des développeurs Android.
+Après la mise en ligne, toute mise à jour de l’app doit utiliser la même signature, sinon la boutique refusera la mise à jour. Si le fichier keystore ou le mot de passe est perdu, tu n’as plus qu’à créer une nouvelle app et la publier à nouveau: tous les anciens utilisateurs restent sur le carreau. Sauvegarde impérativement le keystore et le mot de passe dans un endroit sûr (cloud chiffré + carnet de notes) : c’est l’une des leçons les plus chères de l’histoire des développeurs Android.
 :::
 
 #### 4. Le parcours complet de publication sur Google Play
@@ -107,41 +107,41 @@ Figure 6 : les six étapes de la publication sur Google Play
 
 - Inscription : des frais uniques de 25 dollars, avec un compte Google utilisable ;
 - Éléments : icône de l’app (512×512), captures d’écran (au moins 2), description des fonctionnalités, lien vers la politique de confidentialité (obligatoire dès qu’on collecte des données) ;
-- Formulaire de sécurité des données : déclare honnêtement quelles données sont collectées — un carnet de comptes hors ligne peut revendiquer « zéro collecte » ;
-- Examen : la première publication d’un nouveau compte passe souvent par une vérification humaine, de quelques heures à quelques jours ; en cas de rejet, corrige selon les remarques.
+- Formulaire de sécurité des données : déclare honnêtement quelles données sont collectées, un carnet de comptes hors ligne peut revendiquer « zéro collecte » ;
+- Examen : la première publication d’un nouveau compte passe souvent par une vérification humaine, de quelques heures à quelques jours ; en cas de rejet, corrige selon les remarques
 
-Note pour les utilisateurs en Chine : Google Play nécessite un environnement réseau particulier, et la distribution en Chine continentale passe généralement par les boutiques locales (Huawei, Xiaomi, Yingyongbao, etc.). Le processus de publication y est similaire, mais chaque boutique a ses propres critères d’examen — un même AAB/APK peut être distribué sur plusieurs boutiques. Pour t’entraîner, réussir une seule boutique est déjà une victoire.
+Note pour les utilisateurs en Chine : Google Play nécessite un environnement réseau particulier, et la distribution en Chine continentale passe généralement par les boutiques locales (Huawei, Xiaomi, Yingyongbao, etc.). Le processus de publication y est similaire, mais chaque boutique a ses propres critères d’examen, un même AAB/APK peut être distribué sur plusieurs boutiques. Pour t’entraîner, réussir une seule boutique est déjà une victoire.
 
-#### 5. Réussir les éléments de la fiche boutique : la première impression, c’est le nombre de téléchargements
+5. Réussir les éléments de la fiche boutique : la première impression, c’est le nombre de téléchargements
 
 La fiche de la boutique est la vitrine que voient les utilisateurs en « promenade ». Trois éléments déterminent la première impression :
 
 - Icône : 512×512, ne te contente pas d’une capture d’écran. Sans talent en design, génère une forme géométrique épurée avec un outil d’IA ; elle n’est valide que si on la reconnaît d’un coup d’œil une fois réduite sur l’écran d’accueil du téléphone ;
 - Captures d’écran : au moins 2, idéalement 4 à 6, montrant les scénarios les plus essentiels ; accompagne chacune d’une phrase en langage humain (« Notez une dépense en une seconde » vaut dix fois mieux que « Une solution efficace de gestion des comptes ») ;
-- Description : la première phrase doit dire clairement « ce que c’est + pour qui », sans entasser les « le plus pro, le plus puissant » — le classement de la boutique dépend surtout des mots-clés et du taux de conversion en téléchargements, et la sincérité bat l’exagération.
+- Description : la première phrase doit dire clairement « ce que c’est + pour qui », sans entasser les « le plus pro, le plus puissant » — le classement de la boutique dépend surtout des mots-clés et du taux de conversion en téléchargements, et la sincérité bat l’exagération
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Astuce : compare-toi aux autres
 
 {class="mt-1"}
-Avant de publier, fais un tour dans le top 10 des apps du même genre sur la boutique et compare les captures : quel style d’icône ? quels arguments mettent-ils en avant ? comment écrivent-ils leurs titres ? S’inspirer n’est pas plagier — apprends les codes et remplace par ton propre contenu : c’est la leçon la plus rapide pour lancer n’importe quel produit.
+Avant de publier, fais un tour dans le top 10 des apps du même genre sur la boutique et compare les captures : quel style d’icône ? quels arguments mettent-ils en avant ? comment écrivent-ils leurs titres ? S’inspirer n’est pas plagier, apprends les codes et remplace par ton propre contenu : c’est la leçon la plus rapide pour lancer n’importe quel produit.
 :::
 
-#### 6. Petite liste : optimisation des performances et signalement des plantages
+6. Petite liste : optimisation des performances et signalement des plantages
 
 Avant de publier ton app, ces deux tâches méritent chacune une demi-heure :
 
 ##### 1. Les quatre points d’autocontrôle des performances
 
-1. Utilise LazyColumn pour les listes : ne dispose jamais une longue liste avec Column brut — le chargement paresseux est la première leçon de performance sur Android ;
+1. Utilise LazyColumn pour les listes : ne dispose jamais une longue liste avec Column brut, le chargement paresseux est la première leçon de performance sur Android ;
 2. Ne balance pas les images en pleine résolution : utilise la bibliothèque Coil pour redimensionner et mettre en cache automatiquement — une image brute de 5 Mo suffit à faire ramer à mort un téléphone d’entrée de gamme ;
 3. Évite les travaux lourds sur le thread principal : base de données, réseau, gros fichiers, tout se fait dans des coroutines ;
-4. Mesure avec le Profiler : l’analyseur de performances intégré à Android Studio montre la mémoire, le CPU et la consommation d’énergie — mesurer d’abord, optimiser ensuite, jamais au doigt mouillé.
+4. Mesure avec le Profiler : l’analyseur de performances intégré à Android Studio montre la mémoire, le CPU et la consommation d’énergie, mesurer d’abord, optimiser ensuite, jamais au doigt mouillé
 
 ##### 2. Le signalement des plantages
 
-Que ton app ne plante pas pendant tes tests ne garantit rien sur le téléphone des utilisateurs. Avant la publication, intègre Firebase Crashlytics (officiel Google, gratuit) : quelques lignes de configuration, et à chaque plantage la pile d’erreurs est remontée automatiquement — dans la console, tu vois « quel modèle, quelle version, quelle ligne ». Publier sans suivi des plantages, c’est conduire les yeux bandés.
+Que ton app ne plante pas pendant tes tests ne garantit rien sur le téléphone des utilisateurs. Avant la publication, intègre Firebase Crashlytics (officiel Google, gratuit) : quelques lignes de configuration, et à chaque plantage la pile d’erreurs est remontée automatiquement, dans la console, tu vois « quel modèle, quelle version, quelle ligne ». Publier sans suivi des plantages, c’est conduire les yeux bandés.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

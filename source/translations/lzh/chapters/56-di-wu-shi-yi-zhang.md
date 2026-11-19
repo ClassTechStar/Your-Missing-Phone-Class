@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十一章：界面開發——Jetpack Compose 入門
 
 {class="chapter-intro mb-4"}
-界面者，用戶所見之全也。Compose 未興之前，安卓界面以 XML 書之——繁瑣如填空之題；2021 年穀歌出 Jetpack Compose：逕以 Kotlin 代碼「畫」界面，所見即所得，改一行而預覽立新。至 2026 年，Compose 已為新項目之絕對主流。此章吾儕學「畫」之道。
+界面者，用戶所見之全也。Compose 未興之前，安卓界面以 XML 書之：繁瑣如填空之題；2021 年穀歌出 Jetpack Compose：逕以 Kotlin 代碼「畫」界面，所見即所得，改一行而預覽立新。至 2026 年，Compose 已為新項目之絕對主流。此章吾儕學「畫」之道。
 
 #### 一、Compose 之思：界面即函數
 
@@ -41,7 +41,7 @@ fun HomeScreen() {
 ```
 :::
 
-慎視 @Composable 此「冠」——所以告編譯器曰：此乃界面積木也。積木可無限相套，此即 Compose 之全祕。
+慎視 @Composable 此「冠」，所以告編譯器曰：此乃界面積木也。積木可無限相套，此即 Compose 之全祕。
 
 #### 二、基礎組件：文字、按鈕、輸入框、圖片
 
@@ -80,14 +80,14 @@ fun BasicWidgets() {
 ```
 :::
 
-輸入框彼兩行中現 remember { mutableStateOf("") }——此即 Compose「狀態」之魔法，本章第五節詳言之。今姑識其面焉。
+輸入框彼兩行中現 remember { mutableStateOf("") }，此即 Compose「狀態」之魔法，本章第五節詳言之。今姑識其面焉。
 
 #### 三、布局三件：Column、Row、Box
 
 組件既有，何以擺置？記三「盒子」：
 
-- Column：縱而列之（如列隊而取食）；
-- Row：橫而列之（如並肩而坐）；
+- Column：縱而列之（如列隊而取食）。
+- Row：橫而列之（如並肩而坐）。
 - Box：疊而置之（如撲克之牌相壘，宜為角標、遮罩）。
 
 ::: div .code-block
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-欲布局愈美乎？與組件加 Modifier（修飾符）——猶為積木「上妝」也：
+欲布局愈美乎？與組件加 Modifier（修飾符），猶為積木「上妝」也：
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,7 +135,7 @@ Text(
 慎之：Modifier 之序有考
 
 {class="mt-1"}
-padding(16.dp).background(Blue) 與 background(Blue).padding(16.dp) 其效不同——前者「先留白後塗色」（背景不含邊距），後者「先塗色後留白」（背景含邊距）。新手最易於此畫出「怪異之白邊」。未定之時，易序而試，預覽立告汝以答。
+padding(16.dp).background(Blue) 與 background(Blue).padding(16.dp) 其效不同，前者「先留白後塗色」（背景不含邊距），後者「先塗色後留白」（背景含邊距）。新手最易於此畫出「怪異之白邊」。未定之時，易序而試，預覽立告汝以答。
 :::
 
 #### 四、狀態：使界面「活」
@@ -182,8 +182,8 @@ fun Counter() {
 
 模板項目中之 MyFirstAppTheme { ... } 即主題也。其本 Material 3 設計之範，助汝一統理顏色、字體、形狀。欲支深色模式，僅需三步：
 
-1. 於主題中定淺色/深色兩套之配色（模板已自生 ColorScheme）；
-2. 系統切至深色模式時，isSystemInDarkTheme() 自判之；
+1. 於主題中定淺色/深色兩套之配色（模板已自生 ColorScheme）。
+2. 系統切至深色模式時，isSystemInDarkTheme() 自判之。
 3. 用主題所供之色（如 MaterialTheme.colorScheme.primary），勿硬寫色值。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -198,9 +198,9 @@ fun Counter() {
 
 Compose 開發體驗之「外掛」有三，一用則不可復返：
 
-- @Preview 預覽：與 Composable 加 @Preview 之註，Android Studio 右側立渲染界面——改碼所見即所得，不必每番裝於機上；
-- 實時編輯（Live Edit）：2026 年之 Android Studio 支於模擬器/真機上「熱更新」部分之改，若易文字顏色之屬小調，機上秒變；
-- 動畫 API：animateFloatAsState、AnimatedVisibility 數行代碼即令諸元平滑而過——「高級之感」往往僅欠此數十行耳。
+- @Preview 預覽：與 Composable 加 @Preview 之註，Android Studio 右側立渲染界面，改碼所見即所得，不必每番裝於機上。
+- 實時編輯（Live Edit）：2026 年之 Android Studio 支於模擬器/真機上「熱更新」部分之改，若易文字顏色之屬小調，機上秒變。
+- 動畫 API：animateFloatAsState、AnimatedVisibility 數行代碼即令諸元平滑而過，「高級之感」往往僅欠此數十行耳。
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 小識：先功能後動畫
 
 {class="mt-1"}
-新手常犯之病，乃「界面尚未做對，遽糾結於動畫」。先使功能通焉，終乃一統加動效——此亦「簡單至上」之則：動畫者錦上添花也，功能者雪中送炭也。
+新手常犯之病，乃「界面尚未做對，遽糾結於動畫」。先使功能通焉，終乃一統加動效，此亦「簡單至上」之則：動畫者錦上添花也，功能者雪中送炭也。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

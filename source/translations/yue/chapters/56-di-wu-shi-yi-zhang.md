@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十一章：介面開發——Jetpack Compose 入門
 
 {class="chapter-intro mb-4"}
-介面係用戶見到嘅所有嘢。喺 Compose 出現之前，安卓介面用 XML 寫——好似填空題咁麻煩；2021 年穀歌推出咗 Jetpack Compose：直接用 Kotlin 程式碼「畫」介面，所見即所得，改一行程式碼預覽即刻刷新。到 2026 年，Compose 已經係新項目嘅絕對主流。呢一章，我哋學識「畫畫」。
+介面係用戶見到嘅所有嘢。喺 Compose 出現之前，安卓介面用 XML 寫，好似填空題咁麻煩；2021 年穀歌推出咗 Jetpack Compose：直接用 Kotlin 程式碼「畫」介面，所見即所得，改一行程式碼預覽即刻刷新。到 2026 年，Compose 已經係新項目嘅絕對主流。呢一章，我哋學識「畫畫」。
 
 #### 一、Compose 嘅思想：介面就係函數
 
@@ -41,7 +41,7 @@ fun HomeScreen() {
 ```
 :::
 
-留意 @Composable 呢頂「帽」——佢話畀編譯器知「呢個係一嚿介面積木」。積木可以無限嵌套，呢個就係 Compose 嘅全部秘密。
+留意 @Composable 呢頂「帽」，佢話畀編譯器知「呢個係一嚿介面積木」。積木可以無限嵌套，呢個就係 Compose 嘅全部秘密。
 
 #### 二、基礎組件：文字、按鈕、輸入框、圖片
 
@@ -80,14 +80,14 @@ fun BasicWidgets() {
 ```
 :::
 
-輸入框嗰兩行入面出現咗 remember { mutableStateOf("") }——呢個就係 Compose 嘅「狀態」魔法，本章第五節會詳細講。而家先混個面熟。
+輸入框嗰兩行入面出現咗 remember { mutableStateOf("") }，呢個就係 Compose 嘅「狀態」魔法，本章第五節會詳細講。而家先混個面熟。
 
 #### 三、佈局三件套：Column、Row、Box
 
 組件有咗，點樣擺放？記住三個「盒」：
 
-- Column：打直排（好似排隊打飯噉）；
-- Row：打橫排（好似並排坐噉）；
+- Column：打直排（好似排隊打飯噉）。
+- Row：打橫排（好似並排坐噉）。
 - Box：疊住放（好似啤牌疊埋一齊，適合做角標、遮罩）。
 
 ::: div .code-block
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-想佈局更加好睇？畀組件加 Modifier（修飾符）——佢就好似畀積木「上妝」噉：
+想佈局更加好睇？畀組件加 Modifier（修飾符）：佢就好似畀積木「上妝」噉：
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,7 +135,7 @@ Text(
 注意：Modifier 嘅次序有講究
 
 {class="mt-1"}
-padding(16.dp).background(Blue) 同 background(Blue).padding(16.dp) 效果唔同——前者係「先留白再塗色」（背景唔包邊距），後者係「先塗色再留白」（背景包埋邊距）。新手最容易喺呢度畫錯「奇怪嘅白邊」。唔確定嗰陣，調轉次序試吓，預覽即刻話你知答案。
+padding(16.dp).background(Blue) 同 background(Blue).padding(16.dp) 效果唔同：前者係「先留白再塗色」（背景唔包邊距），後者係「先塗色再留白」（背景包埋邊距）。新手最容易喺呢度畫錯「奇怪嘅白邊」。唔確定嗰陣，調轉次序試吓，預覽即刻話你知答案。
 :::
 
 #### 四、狀態：畀介面「活」起上嚟
@@ -182,8 +182,8 @@ fun Counter() {
 
 模板項目入面嘅 MyFirstAppTheme { ... } 就係主題。佢基於 Material 3 設計規範，幫你將顏色、字體、形狀統一管理。支援深色模式只需要三步：
 
-1. 喺主題入面定義好淺色／深色兩套配色（模板已經自動生成咗 ColorScheme）；
-2. 系統轉去深色模式嗰陣，isSystemInDarkTheme() 會自動判斷；
+1. 喺主題入面定義好淺色／深色兩套配色（模板已經自動生成咗 ColorScheme）。
+2. 系統轉去深色模式嗰陣，isSystemInDarkTheme() 會自動判斷。
 3. 用主題提供嘅顏色（例如 MaterialTheme.colorScheme.primary）而唔係寫死顏色值。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -198,9 +198,9 @@ Android 12 開始嘅「Material You」可以令 App 由你嘅桌布入面提取�
 
 Compose 三個開發體驗上嘅「外掛」，一用咗就返唔到轉頭：
 
-- @Preview 預覽：畀 Composable 加 @Preview 註解，Android Studio 右邊即刻 render 出個介面——改程式碼所見即所得，唔使每次都裝落手機度；
-- 實時編輯（Live Edit）：2026 年嘅 Android Studio 支援喺模擬器／真機上面「熱更新」部分改動，改文字顏色呢類小調整，設備上面即刻變；
-- 動畫 API：animateFloatAsState、AnimatedVisibility 幾行程式碼就可以令元素平滑過渡——「高級感」往往就差咗呢幾十行。
+- @Preview 預覽：畀 Composable 加 @Preview 註解，Android Studio 右邊即刻 render 出個介面，改程式碼所見即所得，唔使每次都裝落手機度。
+- 實時編輯（Live Edit）：2026 年嘅 Android Studio 支援喺模擬器／真機上面「熱更新」部分改動，改文字顏色呢類小調整，設備上面即刻變。
+- 動畫 API：animateFloatAsState、AnimatedVisibility 幾行程式碼就可以令元素平滑過渡：「高級感」往往就差咗呢幾十行。
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 小貼士：先功能後動畫
 
 {class="mt-1"}
-新手成日犯嘅毛病係「介面都未整啱，就開始糾結動畫」。先令功能行通，最後先統一加動效——呢個亦都係「簡單至上」原則：動畫係錦上添花，功能係雪中送炭。
+新手成日犯嘅毛病係「介面都未整啱，就開始糾結動畫」。先令功能行通，最後先統一加動效：呢個亦都係「簡單至上」原則：動畫係錦上添花，功能係雪中送炭。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -246,7 +246,7 @@ fun AnimatedBox() {
 - Compose 思想：介面 = @Composable 函數，積木式嵌套
 - 四大組件：Text / Button / TextField / Image
 - 佈局三件套：Column 打直排、Row 打橫排、Box 疊放
-- Modifier 鏈式「上妝」：padding、fillMaxWidth、background、clickable——次序有意義
+- Modifier 鏈式「上妝」：padding、fillMaxWidth、background、clickable，次序有意義
 - 狀態係靈魂：remember + mutableStateOf，改資料介面自動重畫
 - 主題用 Material 3 + 動態取色，深色模式一次配置全局生效
 :::

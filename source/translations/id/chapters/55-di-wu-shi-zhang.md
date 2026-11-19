@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 50: Cepat Mengenal Kotlin—Bahasa Pertama Pengembangan Android
 
 {class="chapter-intro mb-4"}
-Di bab ini kita resmi belajar bahasanya. Jangan tegang—Kotlin terkenal 'ramah pemula', dan kamu tidak perlu menghafal buku tata bahasa: dengan menguasai 20% sintaksnya dulu, kamu bisa memahami dan menulis 80% kode sehari-hari. Sisanya dipelajari sambil mengerjakan proyek. Ingat prinsip belajar kita: memahami > menghafal, bisa pakai > mahir.
+Di bab ini kita resmi belajar bahasanya. Jangan tegang,Kotlin terkenal 'ramah pemula', dan kamu tidak perlu menghafal buku tata bahasa: dengan menguasai 20% sintaksnya dulu, kamu bisa memahami dan menulis 80% kode sehari-hari. Sisanya dipelajari sambil mengerjakan proyek. Ingat prinsip belajar kita: memahami > menghafal, bisa pakai > mahir.
 
 #### 1. Variabel dan Tipe: Memberi Nama pada Data
 
@@ -49,7 +49,7 @@ Tipe-tipe dasar Kotlin yang sering dipakai
 Tips: Prinsip val Dulu
 
 {class="mt-1"}
-Hukum besi komunitas Kotlin: pakai val secara bawaan, pakai var hanya kalau memang perlu. Kalau tempat yang bisa memakai val malah memakai var, IDE akan memperingatkanmu dengan teks kuning. Kebiasaan ini menyelamatkanmu dari satu golongan besar bug 'variabel berubah tanpa sengaja'—makin sedikit hal yang berubah, makin mudah kodenya ditelusuri.
+Hukum besi komunitas Kotlin: pakai val secara bawaan, pakai var hanya kalau memang perlu. Kalau tempat yang bisa memakai val malah memakai var, IDE akan memperingatkanmu dengan teks kuning. Kebiasaan ini menyelamatkanmu dari satu golongan besar bug 'variabel berubah tanpa sengaja',makin sedikit hal yang berubah, makin mudah kodenya ditelusuri.
 :::
 
 #### 2. Fungsi: Mengemas Logika Menjadi 'Tombol'
@@ -75,7 +75,7 @@ println(add(3, 5))            // Keluaran: 8
 ```
 :::
 
-Beberapa poin penting: parameter ditulis di dalam kurung (nama dulu, tipe belakang, dipisah titik dua); tipe kembalian ditulis setelah kurung; template string $namavariabel adalah kepraktisan andalan Kotlin—tidak perlu menyambung-nyambung 'string + variabel' seperti di Java.
+Beberapa poin penting: parameter ditulis di dalam kurung (nama dulu, tipe belakang, dipisah titik dua); tipe kembalian ditulis setelah kurung; template string $namavariabel adalah kepraktisan andalan Kotlin,tidak perlu menyambung-nyambung 'string + variabel' seperti di Java.
 
 #### 3. Kondisi dan Perulangan: Membuat Program 'Berpikir'
 
@@ -115,7 +115,7 @@ when adalah cara percabangan banyak yang paling sering dipakai di Kotlin; dalam 
 
 #### 4. Null Safety: 'Jimat Penyelamat' Kotlin
 
-Bug paling terkenal era Java bernama NullPointerException (pengecualian pointer kosong)—program mengakses sesuatu yang 'tidak berisi apa-apa' dan langsung crash. Statistik menunjukkan ia selalu menduduki puncak daftar crash Android. Kotlin menyelesaikannya dari level bahasa: secara bawaan nilai kosong tidak diizinkan.
+Bug paling terkenal era Java bernama NullPointerException (pengecualian pointer kosong),program mengakses sesuatu yang 'tidak berisi apa-apa' dan langsung crash. Statistik menunjukkan ia selalu menduduki puncak daftar crash Android. Kotlin menyelesaikannya dari level bahasa: secara bawaan nilai kosong tidak diizinkan.
 
 ::: div .code-block
 :::inline div .code-head
@@ -141,12 +141,12 @@ println(len)
 Perhatian: Jangan Tertukar antara ? dan ?:
 
 {class="mt-1"}
-String? berarti 'boleh kosong', sedangkan a ?: b berarti 'jika a kosong pakai b' (bentuknya mirip rambut Elvis, makanya disebut operator Elvis). Di awal menulis kode, kalau kompiler munculkan 'error terkait null', delapan dari sepuluh kali kamu lupa menangani tipe nullable—justru itu bahasanya sedang melindungimu.
+String? berarti 'boleh kosong', sedangkan a ?: b berarti 'jika a kosong pakai b' (bentuknya mirip rambut Elvis, makanya disebut operator Elvis). Di awal menulis kode, kalau kompiler munculkan 'error terkait null', delapan dari sepuluh kali kamu lupa menangani tipe nullable,justru itu bahasanya sedang melindungimu.
 :::
 
 #### 5. Kelas dan Objek: Cetakan Pembuat 'Komponen'
 
-Kelas adalah 'cetakan' bagi objek, objek adalah 'hasil jadi' dari kelas. Semua hal di Android—halaman, tombol, data—adalah objek. Kotlin punya senjata ampuh bernama data class (kelas data), khusus 'wadah data', satu baris setara puluhan baris Java:
+Kelas adalah 'cetakan' bagi objek, objek adalah 'hasil jadi' dari kelas. Semua hal di Android,halaman, tombol, data,adalah objek. Kotlin punya senjata ampuh bernama data class (kelas data), khusus 'wadah data', satu baris setara puluhan baris Java:
 
 ::: div .code-block
 :::inline div .code-head
@@ -174,7 +174,7 @@ Nanti kalau kamu membuat aplikasi catatan keuangan, satu catatan adalah satu dat
 
 #### 6. Lambda dan Fungsi Tingkat Tinggi: 'Gula Sintaks' Kotlin
 
-Di kode Android kamu akan melihat { ... } setiap hari; 'fungsi tanpa nama' itu disebut lambda (fungsi anonim). onClick milik Button = { count++ } adalah sebuah lambda—mengemas 'apa yang dilakukan setelah ditekan' menjadi satu bungkus lalu menyerahkannya ke tombol.
+Di kode Android kamu akan melihat { ... } setiap hari; 'fungsi tanpa nama' itu disebut lambda (fungsi anonim). onClick milik Button = { count++ } adalah sebuah lambda—mengemas 'apa yang ,dilakukan setelah ditekan' menjadi satu bungkus lalu menyerahkannya ke tombol.
 
 ::: div .code-block
 :::inline div .code-head

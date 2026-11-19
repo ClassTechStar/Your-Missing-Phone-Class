@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 60: Menyiapkan Lingkungan Pengembangan — Xcode dan Proyek Pertama
 
 {class="chapter-intro mb-4"}
-Ingin bekerja bagus, tajamkan dulu alatnya. Di bab ini kita menata "dapur": memasang Xcode, menjalankan Simulator sampai jalan, membuat proyek iOS pertama dalam hidupmu, lalu membongkar struktur proyeknya sampai jelas. Setelah lingkungan siap, kamu akan pertama kali melihat kode tulisanmu menjadi tombol yang bisa ditekan — momen ini bagi banyak orang diingat seumur hidup.
+Ingin bekerja bagus, tajamkan dulu alatnya. Di bab ini kita menata "dapur": memasang Xcode, menjalankan Simulator sampai jalan, membuat proyek iOS pertama dalam hidupmu, lalu membongkar struktur proyeknya sampai jelas. Setelah lingkungan siap, kamu akan pertama kali melihat kode tulisanmu menjadi tombol yang bisa ditekan, momen ini bagi banyak orang diingat seumur hidup.
 
 #### 1. Siapkan sebuah Mac
 
@@ -30,7 +30,7 @@ Referensi konfigurasi Mac untuk pengembangan (Agustus 2026)
 Tips: Tanpa Mac pun bisa belajar bahasanya dulu
 
 {class="mt-1"}
-Swift Playgrounds yang gratis di iPad bisa dipakai mempelajari dasar bahasa Swift (tanpa Mac); bahkan bisa dipasang di iPhone. Mainkan dulu materi bahasa Bab 61 di Playgrounds sampai cair, begitu Mac tiba langsung melesat. "Mengasah parang tak menunda menebang kayu" — maksudnya persis itu.
+Swift Playgrounds yang gratis di iPad bisa dipakai mempelajari dasar bahasa Swift (tanpa Mac); bahkan bisa dipasang di iPhone. Mainkan dulu materi bahasa Bab 61 di Playgrounds sampai cair, begitu Mac tiba langsung melesat. "Mengasah parang tak menunda menebang kayu", maksudnya persis itu.
 :::
 
 #### 2. Memasang Xcode
@@ -39,14 +39,14 @@ Xcode adalah lingkungan pengembangan terintegrasi resmi Apple, gratis. Terpasang
 
 1. Di Mac buka App Store, cari "Xcode", tekan pasang — perhatikan ukurannya beberapa GB, pilih waktu dengan jaringan bagus;
 2. Setelah terpasang, saat pertama dijalankan: setujui perjanjian, tunggu komponen selesai terpasang (otomatis);
-3. Menu Xcode → Settings → Locations, pastikan Command Line Tools sudah terpilih — alat baris perintah adalah prasyarat banyak skrip dan alat pihak ketiga.
+3. Menu Xcode → Settings → Locations, pastikan Command Line Tools sudah terpilih, alat baris perintah adalah prasyarat banyak skrip dan alat pihak ketiga
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Perhatian: "Permainan pencocokan" versi dan sistem
 
 {class="mt-1"}
-Xcode baru kerap menuntut macOS terbaru, sedangkan Mac lama bisa tertahan di versi tua. Saat tayang ke App Store, Apple menuntut build dengan Xcode yang lebih baru (biasanya diberi masa tenggang). Jadi jangan menunda pembaruan sistem terlalu lama — pengembang iOS adalah kelompok yang paling rajin "mengejar versi baru".
+Xcode baru kerap menuntut macOS terbaru, sedangkan Mac lama bisa tertahan di versi tua. Saat tayang ke App Store, Apple menuntut build dengan Xcode yang lebih baru (biasanya diberi masa tenggang). Jadi jangan menunda pembaruan sistem terlalu lama, pengembang iOS adalah kelompok yang paling rajin "mengejar versi baru".
 :::
 
 #### 3. Membuat proyek pertamamu
@@ -97,10 +97,10 @@ Panel kiri adalah project navigator; pemula cukup mengenal ini:
 Gambar 2: Struktur proyek Xcode yang wajib dipahami pemula
 :::
 
-- MyFirstAppApp.swift: pintu masuk program; di SwiftUI isinya hanya beberapa baris — "nyalakan, lalu tampilkan layar utama";
+- MyFirstAppApp.swift: pintu masuk program; di SwiftUI isinya hanya beberapa baris: "nyalakan, lalu tampilkan layar utama";
 - ContentView.swift: tampilan layar utama; semua yang kamu lihat sekarang ada di sini;
-- Assets.xcassets: gudang aset — ikon, gambar, dan warna ditaruh di sini;
-- Pengaturan Target: tekan ikon proyek biru di kiri untuk masuk; nomor versi, versi iOS minimum, dan penandatanganan semuanya ada di dalamnya. Nama tampilan App dan ikon juga diatur di sini.
+- Assets.xcassets: gudang aset, ikon, gambar, dan warna ditaruh di sini;
+- Pengaturan Target: tekan ikon proyek biru di kiri untuk masuk; nomor versi, versi iOS minimum, dan penandatanganan semuanya ada di dalamnya. Nama tampilan App dan ikon juga diatur di sini
 
 #### 5. Trik efisiensi Xcode: Lima "cheat shortcut" untuk pemula
 
@@ -115,7 +115,7 @@ Kalau lima ini sudah terbiasa, kamu akan tampak "sangat profesional":
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Shortcut Xcode paling sering dipakai (paket lima pemula)
 
-Dua bonus tersembunyi lainnya: menjalankan beberapa Simulator sekaligus (iPhone dan iPad jalan bersamaan untuk membandingkan tata letak) dan pustaka potongan kode (tarik beberapa baris kode yang sering dipakai ke panel Snippets di kanan, nanti tinggal sisipkan sekali tekan) — pakai dulu alat efisiensinya, kecekatan tangan otomatis naik.
+Dua bonus tersembunyi lainnya: menjalankan beberapa Simulator sekaligus (iPhone dan iPad jalan bersamaan untuk membandingkan tata ,letak) dan pustaka potongan kode (tarik beberapa baris kode yang sering dipakai ke panel Snippets di kanan, nanti tinggal sisipkan sekali tekan), pakai dulu alat efisiensinya, kecekatan tangan otomatis naik.
 
 #### 6. Debug di perangkat asli: Memasang App ke iPhone-mu
 
@@ -124,14 +124,14 @@ Simulator memang nyaman, tetapi perangkat asli adalah garis finisnya. Dengan App
 1. Sambungkan iPhone dengan kabel data (atau debug nirkabel lewat Wi-Fi yang sama);
 2. Pada daftar perangkat di bagian atas Xcode pilih ponselmu; pertama kali akan diminta masuk Apple ID dan penandatanganan dikonfigurasi otomatis;
 3. Di iPhone buka [Pengaturan] → [Umum] → [VPN & Manajemen Perangkat] → percayai sertifikat pengembangmu;
-4. Tekan ▶, dan App terpasang di perangkat asli.
+4. Tekan ▶, dan App terpasang di perangkat asli
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Perhatian: "Batasan tujuh hari" akun gratis
 
 {class="mt-1"}
-App bertanda tangan Apple ID gratis akan kedaluwarsa setelah 7 hari (jalankan ulang sekali untuk memperpanjang). Ini mekanisme anti penyalahgunaan Apple dan untuk tahap belajar sepenuhnya cukup; akun pengembang berbayar (99 dolar AS/tahun) tak punya batasan ini — dibahas rinci di Bab 67.
+App bertanda tangan Apple ID gratis akan kedaluwarsa setelah 7 hari (jalankan ulang sekali untuk memperpanjang). Ini mekanisme anti penyalahgunaan Apple dan untuk tahap belajar sepenuhnya cukup; akun pengembang berbayar (99 dolar AS/tahun) tak punya batasan ini: dibahas rinci di Bab 67.
 :::
 
 #### 7. Uji coba pertama + Pertolongan pertama error umum
@@ -152,7 +152,10 @@ Tabel pertolongan pertama error lingkungan pemula
 Praktik: Tuntaskan daftar "ritual pengembangan"mu
 
 {class="mt-1"}
-① Pasang Xcode dan jalankan Simulator sampai jalan; ② jalankan App-mu sekali di perangkat asli dan simpan tangkapan layarnya sebagai kenangan; ③ ganti tulisan Hello dengan namamu; ④ ubah nama tampilan App menjadi "App Pertamaku" di pengaturan Target. Setelah empat langkah ini selesai, kamu resmi menjadi orang yang punya karya.
+1. Pasang Xcode dan jalankan Simulator sampai jalan;
+2. jalankan App-mu sekali di perangkat asli dan simpan tangkapan layarnya sebagai kenangan;
+3. ganti tulisan Hello dengan namamu;
+4. ubah nama tampilan App menjadi "App Pertamaku" di pengaturan Target. Setelah empat langkah ini selesai, kamu resmi menjadi orang yang punya karya.
 :::
 
 ::: div .chapter-summary

@@ -2,12 +2,12 @@
 id: di-ling-zhang
 num: 00
 part: ji-chu-pian
-nav: Kursiv
+nav: Kapitel 0: Drei Dinge, bevor es losgeht
 toc: default
 kind: chapter
 ---
 
-### Kapitel 0: Hallo, bevor es losgeht
+### Kapitel 0: Drei Dinge, bevor es losgeht
 
 {class="mb-3"}
 Bevor wir richtig loslegen, klären wir ein paar Grundregeln, damit du alles Spätere verstehst. Ganz ohne Eile: Wer das Werkzeug schärft, hackt danach schneller.
@@ -33,7 +33,7 @@ Rate mal: Manche Dinge heißen anders, tun aber dasselbe. Z. B. Anwendung (Andro
 
 Außerdem gibt es im Android-Lager noch Huaweis HarmonyOS, das eigene Besonderheiten hat – darauf gehen wir später gesondert ein. Kurzum: egal welches Smartphone du nutzt, dieses Buch hilft dir weiter.
 
-#### 4. Handyspeicher: warum von 128 GB nach dem Kauf kaum 110 GB übrig bleiben
+4. Handyspeicher: warum von 128 GB nach dem Kauf kaum 110 GB übrig bleiben
 
 Die Einheiten kennst du: 1 TB = 1024 GB, 1 GB = 1024 MB, 1 MB = 1024 KB … Aber hier lauert die Falle: Die Hersteller rechnen mit dem Faktor 1000, das System mit 1024 – deshalb „schrumpft“ der gekaufte 128-GB-Speicher auf dem Papier.
 

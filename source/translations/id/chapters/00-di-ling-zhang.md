@@ -2,21 +2,21 @@
 id: di-ling-zhang
 num: 00
 part: ji-chu-pian
-nav: Bab 0: Hai, sebelum memulai
+nav: Bab 0: Tiga hal jujur sebelum kita mulai
 toc: default
 kind: chapter
 ---
 
-### Bab 0: Hai, sebelum memulai
+### Bab 0: Tiga hal jujur sebelum kita mulai
 
 {class="mb-3"}
 Sebelum menjelajah secara resmi, mari kita bahas beberapa aturan dasar dulu, untuk memastikan Anda memahami semua yang dibahas nanti. Jangan terburu-buru, menyiapkan pisau dengan baik tidak akan menghambat pekerjaan menebang kayu.
 
-#### 1. Apa yang bisa dibantu oleh buku ini? (dan yang tidak bisa)
+1. Apa yang bisa dibantu oleh buku ini? (dan yang tidak bisa)
 
 Buku ini bisa membantu Anda memahami secara sistematis cara menggunakan ponsel, memahami alasan di balik fitur-fiturnya, dan baik Anda pengguna Android maupun Apple, sebagian besar konsepnya berlaku umum. Buku ini akan mengajak Anda berlatih langsung, meningkatkan Anda dari "bisa menggunakan" menjadi "memahami penggunaan".
 
-Buku ini bukan manual untuk ponsel tertentu, juga bukan berita teknologi tentang produk terbaru, apalagi panduan untuk membuat Anda kecanduan ponsel. Sejujurnya, jika yang Anda harapkan adalah "cara menonton video di ponsel dengan lebih nikmat", Anda mungkin akan kecewa—kami lebih peduli pada cara membuat ponsel benar-benar melayani Anda, bukan sebaliknya.
+Buku ini bukan manual untuk ponsel tertentu, juga bukan berita teknologi tentang produk terbaru, apalagi panduan untuk membuat Anda kecanduan ponsel. Sejujurnya, jika yang Anda harapkan adalah "cara menonton video di ponsel dengan lebih nikmat", Anda mungkin akan kecewa,kami lebih peduli pada cara membuat ponsel benar-benar melayani Anda, bukan sebaliknya.
 
 #### 2. Penjelasan "kode rahasia" kami
 
@@ -33,7 +33,7 @@ Tebak apa, beberapa hal namanya berbeda, tapi fungsinya sama. Misalnya: aplikasi
 
 Selain itu, di kubu Android ada juga sistem HarmonyOS milik Huawei, yang memiliki karakteristiknya sendiri, akan kita bahas khusus nanti. Singkatnya, apa pun ponsel yang Anda gunakan, buku ini bisa membantu Anda.
 
-#### 4. Kapasitas ponsel: Mengapa membeli 128G, tapi yang tersedia kurang dari 110G?
+4. Kapasitas ponsel: Mengapa membeli 128G, tapi yang tersedia kurang dari 110G?
 
 Unit kapasitas yang diketahui semua: 1TB = 1024GB, 1GB = 1024MB, 1MB = 1024KB... tapi ada jebakan di sini: produsen hard disk biasanya menghitung dengan basis 1000, sedangkan sistem menghitung dengan basis 1024, jadi hard disk "128G" yang Anda beli, kapasitas aktualnya akan "menyusut".
 
@@ -48,7 +48,7 @@ Tapi alasan utama kapasitas ponsel Anda menyusut ada tiga:
 <i class="fas fa-lightbulb mr-2"></i>Saran kecil saat membeli ponsel
 
 {class="mt-1"}
-Saat ini ponsel 128GB pada dasarnya tidak cukup, mulai dari 256GB lebih aman. Jika Anda suka fotografi atau bermain game, disarankan langsung ke 512GB atau lebih besar. Ingat, untuk ruang penyimpanan, lebih baik berlebih daripada kurang.
+Saat ini ponsel 128GB pada dasarnya tidak cukup, mulai dari 256GB lebih aman. Jika Anda suka fotografi atau bermain game. disarankan langsung ke 512GB atau lebih besar. Ingat, untuk ruang penyimpanan, lebih baik berlebih daripada kurang.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -82,6 +82,6 @@ Jika ponsel hilang atau rusak, yang Anda hilang bukan hanya perangkat keras seni
 
 Sama seperti menjaga kesehatan tidak bisa menunggu sakit baru ke dokter,<strong>manajemen ponsel juga harus dimulai dari "kebiasaan harian"</strong>. Yang ditekankan berulang-ulang dalam buku ini bukan teknik tingkat lanjut tertentu, melainkan prinsip-prinsip sederhana ini:
 
-- <strong>Pencegahan utama</strong>: Instal aplikasi hanya dari toko resmi, hilangkan informasi sensitif foto sebelum dikirim, jangan gunakan kata sandi yang sama berulang—"tindakan kecil" ini biayanya sangat rendah, tapi bisa menangkal sebagian besar risiko.
-- <strong>Pemeriksaan berkala</strong>: Atur folder unduhan sebulan sekali, audit izin sekali per kuartal, cadangan penuh sekali per enam bulan—ritme tetap jauh lebih efektif daripada pemadam kebakaran sesaat.
-- <strong>Sisakan jalan mundur</strong>: Aktifkan sinkronisasi cloud, catat akun dan kata sandi dengan baik, tulis sebuah "daftar warisan digital"—pastikan ketika kejadian tak terduga terjadi, Anda dan keluarga bisa menghadapinya dengan tenang.
+- <strong>Pencegahan utama</strong>: Instal aplikasi hanya dari toko resmi, hilangkan informasi sensitif foto sebelum dikirim, jangan gunakan kata sandi yang sama berulang,"tindakan kecil" ini biayanya sangat rendah, tapi bisa menangkal sebagian besar risiko.
+- <strong>Pemeriksaan berkala</strong>: Atur folder unduhan sebulan sekali, audit izin sekali per kuartal, cadangan penuh sekali per enam bulan,ritme tetap jauh lebih efektif daripada pemadam kebakaran sesaat.
+- <strong>Sisakan jalan mundur</strong>: Aktifkan sinkronisasi cloud, catat akun dan kata sandi dengan baik, tulis sebuah "daftar warisan digital",pastikan ketika kejadian tak terduga terjadi, Anda dan keluarga bisa menghadapinya dengan tenang.

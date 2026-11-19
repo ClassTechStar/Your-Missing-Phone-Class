@@ -11,7 +11,7 @@ kind: supplement
 {class="chapter-intro mb-4"}
 Pour vraiment comprendre les secrets de la photographie et de la vidéo sur smartphone, vous devez connaître quelques notions professionnelles de technologie d'image. Ces connaissances vous aident non seulement à mieux utiliser l'appareil photo du smartphone, mais aussi à être plus critique dans le choix d'un équipement.
 
-#### 1. Résolution, fréquence d'images et débit : les trois piliers de la qualité vidéo
+1. Résolution, fréquence d'images et débit : les trois piliers de la qualité vidéo
 
 ##### Résolution :
 
@@ -126,7 +126,7 @@ Lors du tournage de vidéos HDR, vous avez besoin d'un écran prenant en charge 
 
 ##### Qu'est-ce que le format RAW :
 
-Le format RAW contient les « données brutes » enregistrées par le capteur de l'appareil photo — des informations non compressées et non traitées. C'est comme des ingrédients crus qui nécessitent une « cuisson » en post-traitement pour devenir un plat fini. Les smartphones, en raison de leurs limites de stockage et de puissance de calcul, produisent par défaut des JPEG ou HEIF déjà « cuits » ; le RAW doit être activé spécifiquement.
+Le format RAW contient les « données brutes » enregistrées par le capteur de l'appareil photo, des informations non compressées et non traitées. C'est comme des ingrédients crus qui nécessitent une « cuisson » en post-traitement pour devenir un plat fini. Les smartphones, en raison de leurs limites de stockage et de puissance de calcul, produisent par défaut des JPEG ou HEIF déjà « cuits » ; le RAW doit être activé spécifiquement.
 
 ##### Comparaison RAW vs HEIF vs JPEG :
 
@@ -155,13 +155,13 @@ La photographie moderne sur smartphone ne peut plus se passer de la « photograp
 
 Lorsque vous appuyez une fois sur le déclencheur, le smartphone prend en réalité plusieurs photos. L'algorithme aligne et fusionne pondérément les images pour obtenir une photo finale de haute qualité.
 
-- <strong>Mode nuit</strong> : Prend plusieurs photos sous-exposées en rafale pendant 1-3 secondes, les aligne puis les superpose — le bruit s'annule et la luminosité s'accumule. Résultat : des images nettes même en faible lumière.
+- <strong>Mode nuit</strong> : Prend plusieurs photos sous-exposées en rafale pendant 1-3 secondes, les aligne puis les superpose, le bruit s'annule et la luminosité s'accumule. Résultat : des images nettes même en faible lumière.
 - <strong>HDR (High Dynamic Range)</strong> : Prend trois (ou plusieurs) photos sous-exposée, normalement exposée et surexposée, puis les fusionne en une seule photo avec des détails dans les hautes lumières et les ombres. Particulièrement efficace en contre-jour.
 - <strong>Deep Fusion (Apple) / Photonic Engine</strong> : Pour les scènes de faible à moyenne luminosité, analyse et fusionne plusieurs images pixel par pixel, en améliorant particulièrement les textures et les détails. Les détails comme les tricots et les cheveux seront nettement plus clairs.
 
 ##### Segmentation sémantique :
 
-L'IA ne traite pas l'image entière de manière uniforme ; elle « comprend » d'abord ce qu'il y a dans l'image — ciel, visages, herbe, bâtiments, vêtements — puis applique des stratégies de traitement différentes à chaque zone.
+L'IA ne traite pas l'image entière de manière uniforme ; elle « comprend » d'abord ce qu'il y a dans l'image, ciel, visages, herbe, bâtiments, vêtements, puis applique des stratégies de traitement différentes à chaque zone.
 
 - <strong>Ciel</strong> : Renforce le bleu et réduit la luminosité séparément pour éviter la surexposition.
 - <strong>Visage</strong> : Identifie les zones de couleur de peau, éclaircit et lisse le teint sans toucher aux traits du visage ni aux détails des cheveux.
@@ -177,9 +177,9 @@ L'IA ne traite pas l'image entière de manière uniforme ; elle « comprend » d
 ##### Photographie computationnelle vs photographie optique :
 
 - <strong>Avantages de la photographie computationnelle</strong> : Bonne qualité d'image même avec un petit objectif, des photos exploitables même en très faible lumière ou en contre-jour, et des photos « belles » sans que l'utilisateur ait besoin de connaissances en photographie.
-- <strong>Inconvénients de la photographie computationnelle</strong> : L'image est parfois « surtraitée » — netteté excessive, couleurs déformées, ciel aux teintes peu naturelles ; la fusion multi-images laisse des traînées lorsque le sujet bouge ; les détails sont « calculés » plutôt qu'enregistrés fidèlement.
+- <strong>Inconvénients de la photographie computationnelle</strong> : L'image est parfois « surtraitée »: netteté excessive, couleurs déformées, ciel aux teintes peu naturelles ; la fusion multi-images laisse des traînées lorsque le sujet bouge ; les détails sont « calculés » plutôt qu'enregistrés fidèlement.
 - <strong>Avantages de la photographie optique</strong> : Un grand capteur avec un objectif à grande ouverture capture la lumière de manière fidèle, qualité d'image naturelle, grand espace de post-traitement ; pas d'artefacts dus à des « extrapolations » algorithmiques.
-- <strong>Tendance</strong> : Les smartphones phares modernes combinent « optique + computation » — utilisant un grand capteur pour obtenir des informations réelles et des algorithmes pour optimiser le rendu. Les deux ne sont pas opposés.
+- <strong>Tendance</strong> : Les smartphones phares modernes combinent « optique + computation », utilisant un grand capteur pour obtenir des informations réelles et des algorithmes pour optimiser le rendu. Les deux ne sont pas opposés.
 
 #### VII. Types d'objectifs et focales
 
@@ -194,19 +194,19 @@ Les smartphones phares modernes sont généralement équipés de trois à quatre
 
 ##### Compromis entre taille de capteur et taille des pixels :
 
-Le capteur est la « base » qui détermine la quantité de lumière captée. Dans le secteur, on dit qu'« un capteur plus large fait la différence » — à nombre de pixels égal, plus le capteur est grand, plus chaque pixel est grand, plus la lumière captée est importante, et meilleure est la qualité d'image.
+Le capteur est la « base » qui détermine la quantité de lumière captée. Dans le secteur, on dit qu'« un capteur plus large fait la différence », à nombre de pixels égal, plus le capteur est grand, plus chaque pixel est grand, plus la lumière captée est importante, et meilleure est la qualité d'image.
 
 - <strong>Grand capteur</strong> : Grande quantité de lumière captée, bonne qualité d'image de nuit, grande plage dynamique. Inconvénients : le smartphone doit être plus épais (module de caméra proéminent) et le coût est élevé.
 - <strong>Hauts pixels, petit capteur</strong> : En plein jour avec une lumière abondante, les hauts pixels produisent des photos plus nettes, facilitant le recadrage en post-traitement. Mais en faible lumière, chaque pixel reçoit moins de lumière, avec davantage de bruit.
-- <strong>Choix des modèles phares</strong> : L'objectif principal utilise généralement un capteur de 1/1,3 pouce à 1 pouce (certains modèles utilisent déjà un capteur de 1 pouce), avec environ 50 millions de pixels — c'est le point d'équilibre entre qualité d'image et compacité.
+- <strong>Choix des modèles phares</strong> : L'objectif principal utilise généralement un capteur de 1/1,3 pouce à 1 pouce (certains modèles utilisent déjà un capteur de 1 pouce), avec environ 50 millions de pixels, c'est le point d'équilibre entre qualité d'image et compacité.
 
 ##### Technologie de fusion de pixels (Pixel Binning) :
 
-Pour concilier hauts pixels de jour et grands pixels de nuit, les fabricants utilisent la « fusion de pixels » — en combinant plusieurs petits pixels en un seul grand pixel pour la sortie.
+Pour concilier hauts pixels de jour et grands pixels de nuit, les fabricants utilisent la « fusion de pixels », en combinant plusieurs petits pixels en un seul grand pixel pour la sortie.
 
 - <strong>Pixels quad-bin (Quad Bayer)</strong> : Capteur de 50 millions de pixels, sortie en 12,5 millions de pixels. Chaque pixel de sortie est synthétisé à partir de 4 pixels adjacents, multipliant par 4 la quantité de lumière, pour une qualité d'image plus nette.
 - <strong>Pixels nano-bin (Nonacell)</strong> : Utilisé pour les capteurs de plus de 100 millions de pixels, sortie d'environ 11-12 millions de pixels. Même principe, quantité de lumière encore plus grande.
-- <strong>Effet réel</strong> : En mode photo par défaut, vous obtenez une photo à basse résolution fusionnée — bonne qualité d'image et fichier réduit. Pour des détails extrêmes (par exemple, documents, sujets éloignés), vous pouvez passer manuellement en « mode hauts pixels » pour une sortie en pleine résolution.
+- <strong>Effet réel</strong> : En mode photo par défaut, vous obtenez une photo à basse résolution fusionnée, bonne qualité d'image et fichier réduit. Pour des détails extrêmes (par exemple, documents, sujets éloignés), vous pouvez passer manuellement en « mode hauts pixels » pour une sortie en pleine résolution.
 
 #### VIII. Modes de prise de vue spéciaux
 
@@ -214,10 +214,10 @@ Outre la photographie quotidienne, le smartphone propose plusieurs modes spécia
 
 ##### Mode panorama :
 
-- Pendant la prise de vue, déplacez lentement et régulièrement le smartphone dans le sens de la flèche, sans précipitation — un mouvement trop rapide provoque des erreurs d'assemblage.
+- Pendant la prise de vue, déplacez lentement et régulièrement le smartphone dans le sens de la flèche, sans précipitation, un mouvement trop rapide provoque des erreurs d'assemblage.
 - Gardez le smartphone stable verticalement, déplacez-le uniquement horizontalement. En cas de mouvement vertical, la ligne d'horizon deviendra ondulée.
-- À utiliser avec prudence en présence de personnes ou de véhicules en mouvement — l'assemblage peut produire des « demi-corps » ou des « fantômes ».
-- Le mode panorama peut aussi être utilisé en vertical — prise de vue verticale et assemblage horizontal, idéal pour les bâtiments hauts ou les cascades.
+- À utiliser avec prudence en présence de personnes ou de véhicules en mouvement, l'assemblage peut produire des « demi-corps » ou des « fantômes ».
+- Le mode panorama peut aussi être utilisé en vertical, prise de vue verticale et assemblage horizontal, idéal pour les bâtiments hauts ou les cascades.
 
 ##### Ralenti et accéléré :
 

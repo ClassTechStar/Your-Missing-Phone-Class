@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 42: LLM Landscape and API Practice
 
 {class="chapter-intro mb-4"}
-Previous chapters covered how to work with AI. This one answers a more basic question: which AI, and how? By August 2026 the LLM landscape is rich — globally GPT, Claude, and Gemini compete; in China DeepSeek, Tongyi Qianwen, GLM, Kimi, and Doubao bloom. Each model has its own personality and strengths: pick right and you fly; pick wrong and you drag. This chapter introduces the models, shows how to wire them into your apps via API, and how to choose a Token Plan that fits your usage.
+Previous chapters covered how to work with AI. This one answers a more basic question: which AI, and how? By August 2026 the LLM landscape is rich, globally GPT, Claude, and Gemini compete; in China DeepSeek, Tongyi Qianwen, GLM, Kimi, and Doubao bloom. Each model has its own personality and strengths: pick right and you fly; pick wrong and you drag. This chapter introduces the models, shows how to wire them into your apps via API, and how to choose a Token Plan that fits your usage.
 
 #### 1. Global major LLMs: the big three
 
@@ -41,7 +41,7 @@ In August 2026 OpenAI upgraded free users' default model to GPT-5.6 Luna and ope
 
 ##### 2. Anthropic Claude series: coding and rigor at the top
 
-If GPT is the all-rounder, Claude is the coding ceiling. Anthropic's Claude series has long led SWE-bench (software engineering benchmark) by a wide margin, with top code quality and real-world engineering delivery. Even better, Claude's hallucination rate (chance of making things up) is the lowest online at about 1% — ideal for academic, legal, and other high-precision work.
+If GPT is the all-rounder, Claude is the coding ceiling. Anthropic's Claude series has long led SWE-bench (software engineering benchmark) by a wide margin, with top code quality and real-world engineering delivery. Even better, Claude's hallucination rate (chance of making things up) is the lowest online at about 1%, ideal for academic, legal, and other high-precision work.
 
 Claude's other killer feature is long context: up to 1 million tokens, able to "read" hundreds of pages of contracts or a whole codebase without missing details. Nearly irreplaceable for refactors and long-document analysis. Claude Code, the terminal AI coding tool, hit $2.5 billion annualized revenue by mid-2026 — strong evidence of Claude's coding reputation.
 
@@ -54,13 +54,13 @@ Claude's other killer feature is long context: up to 1 million tokens, able to "
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Anthropic Claude series pricing (August 2026; Sonnet 5 at promotional rate)
 
-Claude's downside is price — Fable 5 output is the most expensive of all models at $50 per million tokens. Multimodal (image/video understanding) is also relatively weak. For individual developers on a budget, Sonnet 5's promotional price is excellent value.
+Claude's downside is price, Fable 5 output is the most expensive of all models at $50 per million tokens. Multimodal (image/video understanding) is also relatively weak. For individual developers on a budget, Sonnet 5's promotional price is excellent value.
 
 ##### 3. Google Gemini series: the multimodal king
 
-Google's Gemini series reached 3.1 Pro in 2026. Its biggest edge is native multimodal — precise image-text parsing, accurate OCR for tables, efficient video frame extraction, and deep audio/video analysis. Deeply tied to Google's ecosystem (Search, Gmail, cloud), it shines at real-time information retrieval and cross-modal understanding. Gemini also supports up to 2 million tokens of context — the largest window today.
+Google's Gemini series reached 3.1 Pro in 2026. Its biggest edge is native multimodal — precise image-text parsing, accurate OCR for tables, efficient video frame extraction, and deep audio/video analysis. Deeply tied to Google's ecosystem (Search, Gmail, cloud), it shines at real-time information retrieval and cross-modal understanding. Gemini also supports up to 2 million tokens of context: the largest window today.
 
-Gemini positions itself as the first choice for scientific reasoning and multimodal work. If your project involves lots of image analysis, video understanding, or scientific computing, Gemini has few rivals. But pure-text code generation is slightly behind Claude, and its Chinese is less natural than domestic models.
+Gemini positions itself as the first choice for scientific reasoning and multimodal work. If your project involves lots of image analysis, video understanding, or scientific computing, Gemini has few rivals. But for pure-text code generation it is slightly behind Claude, and its Chinese reads less naturally than domestic models.
 
 ::: div .overflow-x-auto
 ```html
@@ -87,7 +87,7 @@ By 2026, China's large models have gone from 'chasers' to running neck and neck 
 
 DeepSeek is a phenomenon among Chinese large models. In early 2025, DeepSeek-V3 shook the market with its positioning of 'one-tenth the price of GPT with comparable capability,' and the industry dubbed it the 'kill line' for general-purpose AI models — nothing cheaper works as well, and nothing more expensive gives you more. By August 2026, DeepSeek V4-Pro was officially released: a 1.6-trillion-parameter MoE architecture with about 49B parameters active, support for 1 million tokens of lossless context, and coding value widely seen as the best in the world.
 
-DeepSeek V4 made a huge leap in agent capability — its DeepSWE benchmark score jumped from 12.8 to 62.7 (+390%), and NL2Repo rose from 38.5 to 61.5. The API now supports both the Responses API and the Anthropic API, so it works with mainstream coding tools like Codex and Claude Code. That means you can swap DeepSeek's API in for Claude's and use it inside Claude Code — cutting your costs several times over with a nearly identical experience.
+DeepSeek V4 made a huge leap in agent capability: its DeepSWE benchmark score jumped from 12.8 to 62.7 (+390%), and NL2Repo rose from 38.5 to 61.5. The API now supports both the Responses API and the Anthropic API, so it works with mainstream coding tools like Codex and Claude Code. That means you can swap DeepSeek's API in for Claude's, and use it inside Claude Code. You cut your costs several times over, with a nearly identical experience.
 
 ::: div .overflow-x-auto
 ```html
@@ -105,7 +105,7 @@ Price comparison: for the same 1 million input tokens plus 1 million output toke
 Watch Out: DeepSeek Is About to Raise Its Prices
 
 {class="mt-1"}
-On August 6, 2026, DeepSeek officially announced that it 'plans to significantly raise API prices in the near future,' so the promotional prices may not last long. Some media reports speculate the increase could be as much as 30 times, and as of August 14 the company had not yet published its final pricing plan. On top of that, the official DeepSeek V4 release introduced peak/off-peak pricing — calls during peak hours cost exactly double. Keep an eye on the official announcements for the latest prices.
+On August 6, 2026, DeepSeek officially announced that it 'plans to significantly raise API prices in the near future'. So the promotional prices may not last long. Some media reports speculate the increase could be as much as 30 times, and as of August 14 the company still had not published its final pricing plan. On top of that, the official DeepSeek V4 release introduced peak/off-peak pricing, calls during peak hours cost exactly double. Keep an eye on the official announcements for the latest prices.
 :::
 
 ##### 2. Tongyi Qianwen Qwen3.7 Max: Alibaba Cloud's Enterprise Choice
@@ -121,15 +121,15 @@ Alibaba Cloud's Qwen (Tongyi Qianwen) series leans on the Alibaba Cloud ecosyste
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Qwen (Tongyi Qianwen) series tiered pricing (August 2026)
 
-Qwen's pricing is tiered — from the ultra-low-cost qwen-turbo (0.6 yuan per 1M output tokens) up to the flagship qwen3.7-max (36 yuan per 1M output tokens), covering everything from lightweight Q&A to complex reasoning. For companies already on Alibaba Cloud, Qwen is the most convenient integration choice.
+Qwen's pricing is tiered, from the ultra-low-cost qwen-turbo (0.6 yuan per 1M output tokens) up to the flagship qwen3.7-max (36 yuan per 1M output tokens), covering everything from lightweight Q&A to complex reasoning. For companies already on Alibaba Cloud, Qwen is the most convenient integration choice.
 
 ##### 3. Zhipu GLM-5.1: Top Chinese Model on SWE-bench
 
-Zhipu AI's GLM series shone in 2026. GLM-5.1 took first place among Chinese models on SWE-bench: a 744B hybrid MoE-dense architecture with support for 1 million tokens of context. Its hallmarks are precise Chinese semantic understanding and support for compliant private deployment in China — which matters a great deal for finance and government scenarios with strict data security requirements. GLM-5.1 is priced at 6 yuan for input and 24 yuan for output per 1M tokens, in the middle of the pack among Chinese models.
+Zhipu AI's GLM series shone in 2026. GLM-5.1 took first place among Chinese models on SWE-bench: a 744B hybrid MoE-dense architecture with support for 1 million tokens of context. Its hallmarks are precise Chinese semantic understanding and support for compliant private deployment in China, which matters a great deal for finance and government scenarios with strict data security requirements. GLM-5.1 is priced at 6 yuan for input and 24 yuan for output per 1M tokens, in the middle of the pack among Chinese models.
 
 ##### 4. Kimi K3: The King of Ultra-Long Text
 
-Moonshot AI's Kimi series is known for its ultra-long text handling. Kimi K3, released in July 2026, has 2.8 trillion parameters and lands in the global top tier across many complex-task benchmarks. Kimi's core use cases are large codebase analysis and long-document retrieval augmentation — it can chew through the text of an entire book or the code of an entire project, and it excels at 'needle in a haystack' retrieval tasks. Kimi is relatively pricey (about 12-20 yuan per 1M output tokens), but in long-text scenarios nothing else matches its value for money.
+Moonshot AI's Kimi series is known for its ultra-long text handling. Kimi K3, released in July 2026, has 2.8 trillion parameters and lands in the global top tier across many complex-task benchmarks. Its core use cases are large codebase analysis and long-document retrieval augmentation: it can chew through the text of an entire book, or the code of an entire project, and it excels at 'needle in a haystack' retrieval tasks. Kimi is relatively pricey (about 12-20 yuan per 1M output tokens), but in long-text scenarios nothing else matches its value for money.
 
 ##### 5. Doubao: ByteDance's All-Rounder
 
@@ -144,7 +144,7 @@ ByteDance's Doubao series has been steady in 2026. Doubao Seed 2.1 Pro is the fl
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Side-by-Side Comparison of China's Top Five Models (August 2026)
 
-One important trend: the sense of a 'generation gap' between Chinese models and GPT/Claude has disappeared. In logical reasoning and math competitions, Chinese flagships trail GPT-5 by single digits. Claude still leads in systematic architectural thinking and complex engineering reasoning — it produces architecture plans with more 'flair,' while Chinese models can sometimes come across as 'by the book.' But in Chinese-language scenarios, cost control, and compliant deployment, Chinese models hold an overwhelming advantage.
+One important trend: the sense of a 'generation gap' between Chinese models and GPT/Claude has disappeared. In logical reasoning and math competitions, Chinese flagships trail GPT-5 by single digits. Claude still leads in systematic architectural thinking and complex engineering reasoning, it produces architecture plans with more 'flair,' while Chinese models can sometimes come across as 'by the book.' But in Chinese-language scenarios, cost control, and compliant deployment, Chinese models hold an overwhelming advantage.
 
 ::: div .figure
 ```html
@@ -182,7 +182,7 @@ Figure 4: Price vs. Performance of the Five Models (lower price is better, highe
 
 #### 3. A Decision Framework for Choosing a Model
 
-Now that you know each model's strengths, how do you pick one for your project? Here is a 'four-question decision method' — answer four questions, and you'll lock onto the model that fits you best.
+Now that you know each model's strengths, how do you pick one for your project? Here is a 'four-question decision method', answer four questions, and you'll lock onto the model that fits you best.
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -210,12 +210,12 @@ Figure 5: The Four-Question Decision Method for Choosing a Large Model
 Tip: The Combination Strategy
 
 {class="mt-1"}
-This decision method isn't dogma — many situations call for combining several models. One common strategy: use DeepSeek or Qwen for everyday development (cheap, good with Chinese), Claude for critical architecture design (strong reasoning, low hallucination), and Gemini for multimodal analysis (image and video processing). Switch models as needed instead of riding 'one model to the grave.'
+This decision method isn't dogma, many situations call for combining several models. One common strategy: use DeepSeek or Qwen for everyday development (cheap, good with Chinese), Claude for critical architecture design (strong reasoning, low hallucination), and Gemini for multimodal analysis (image and video processing). Switch models as needed instead of riding 'one model to the grave.'
 :::
 
-#### 4. Getting Started with API Calls: Connecting to a Large Model from Scratch
+4. Getting Started with API Calls: Connecting to a Large Model from Scratch
 
-Many AI coding tutorials only teach you how to use the chat interface, but real 'AI programming' — having your application call a large model — goes through an API. An API (Application Programming Interface) is a communication protocol between programs. Through an API, your code can call on a large model's abilities as easily as calling a function.
+Many AI coding tutorials only teach you how to use the chat interface, but real 'AI programming', having your application call a large model — goes through an API. An API (Application Programming Interface) is a communication protocol between programs. Through an API, your code can call on a large model's abilities as easily as calling a function.
 
 ##### 1. What Is a Token
 
@@ -233,7 +233,7 @@ One million Chinese characters is roughly 1.5 million tokens. Processing 1 milli
 
 ##### 2. Getting an API Key
 
-The first step in using a large model API is getting an API Key — a string used to verify your identity. Every model provider has its own API platform, where you register an account and create an API Key. Here are the API platform entry points for the mainstream models and the steps to get a key:
+The first step in using a large model API is getting an API Key, a string used to verify your identity. Every model provider has its own API platform. There you register an account and create an API Key. Below are the entry points for the mainstream models, together with the steps to get a key:
 
 ::: div .overflow-x-auto
 ```html
@@ -249,7 +249,7 @@ API platforms for mainstream models and how to get a key (August 2026)
 Security Note: Your API Key Is Your Wallet Password
 
 {class="mt-1"}
-An API Key is the equivalent of your wallet password — anyone who gets hold of it can spend your quota calling the model. So: never write an API Key into your code (manage it with environment variables); never commit code containing a Key to a public Git repository; never share screenshots containing a Key on social media. If a Key leaks, delete it on the platform and create a new one immediately.
+An API Key is the equivalent of your wallet password, anyone who gets hold of it can spend your quota calling the model. So: never write an API Key into your code (manage it with environment variables); never commit code containing a Key to a public Git repository; never share screenshots containing a Key on social media. If a Key leaks, delete it on the platform and create a new one immediately.
 :::
 
 ##### 3. Your First API Call
@@ -292,9 +292,9 @@ print(f"Total tokens: {response.usage.total_tokens}")
 ```
 :::
 
-The core logic of this code: create a client (carrying the API Key and the model address) → build the message list (system sets the role, user is the human's input) → send the request → get the reply. This pattern works for nearly every OpenAI-compatible model — just swap the api_key and base_url to change models. That is why so many Chinese models choose to be OpenAI SDK compatible: developers can switch models by changing two lines of code, so the cost of migrating is almost nil.
+The core logic of this code: create a client (carrying the API Key and the model address) → build the message list (system sets the role, user is the human's input) → send the request → get the reply. This pattern works for nearly every OpenAI-compatible model. Just swap the api_key and base_url to change models. That is why so many Chinese models choose to be OpenAI SDK compatible: developers can switch models by changing two lines of code, so the cost of migrating is almost nil.
 
-Here is what changes when you switch to another model — note that only two lines need to change:
+Here is what changes when you switch to another model, note that only two lines need to change:
 
 ::: div .code-block
 :::inline div .code-head
@@ -334,7 +334,7 @@ client = OpenAI(
 
 ##### 4. Streaming Responses
 
-In a real application, you usually don't want to wait for the AI to finish everything before displaying it in one lump — that makes users wait far too long. Streaming responses let the text appear word by word as the AI generates it, which vastly improves the user experience. Like a typewriter with letters popping out one at a time — it feels completely different to the user.
+In a real application, you usually don't want to wait for the AI to finish everything before displaying it in one lump, that makes users wait far too long. Streaming responses let the text appear word by word as the AI generates it, which vastly improves the user experience. Like a typewriter with letters popping out one at a time, it feels completely different to the user.
 
 ::: div .code-block
 :::inline div .code-head
@@ -387,7 +387,7 @@ For beginners, start with pay-as-you-go — no upfront cost, and you pay for exa
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Mainstream AI tool subscription plans (August 2026)
 
-Chinese models handle subscriptions a little differently. DeepSeek is mainly pay-as-you-go, with no monthly subscription plan — you top up and get charged based on actual usage. Qwen offers prepaid resource packages on the Bailian platform (buy a fixed amount of tokens at a discounted price). Doubao has similar prepaid options on Volcano Engine. For developers in China, the most economical combination is usually: DeepSeek pay-as-you-go (daily development) plus Doubao's free allowance (trying things out).
+Chinese models handle subscriptions a little differently. DeepSeek is mainly pay-as-you-go, with no monthly subscription plan, you top up and get charged based on actual usage. Qwen offers prepaid resource packages on the Bailian platform (buy a fixed amount of tokens at a discounted price). Doubao has similar prepaid options on Volcano Engine. For developers in China, the most economical combination is usually: DeepSeek pay-as-you-go (daily development) plus Doubao's free allowance (trying things out).
 
 ##### 3. API Aggregation Platforms
 
@@ -407,16 +407,16 @@ Mainstream API Aggregation Platforms (August 2026)
 Watch Out: Don't Buy 'Shared Keys'
 
 {class="mt-1"}
-Do not buy so-called 'shared API Keys' on Taobao, Xianyu, or similar platforms — these Keys usually come from unclear sources, can be banned at any moment, and carry the risk of data leaks. Always get API Keys through official platforms or reputable aggregators.
+Do not buy so-called 'shared API Keys' on Taobao, Xianyu, or similar platforms: these Keys usually come from unclear sources, can be banned at any moment, and carry the risk of data leaks. Always get API Keys through official platforms or reputable aggregators.
 :::
 
 ##### 4. Cost Optimization Strategies
 
 Picking the right model is only the first step — knowing how to 'use it frugally' matters just as much. Here are a few cost optimization strategies proven in practice:
 
-1. Make the most of cache hits. Many models offer 'caching' — when your request includes content that has been processed before (such as a system prompt), that portion is billed at a tiny fraction of the normal price. DeepSeek charges just 1/60 of the regular price for cache hits. Putting your fixed system prompt at the start of the message list maximizes cache hits.
-2. Tiered routing — use a cheap model for simple tasks and an expensive one for complex tasks. For example, DeepSeek V4 Flash for text classification (2 yuan per 1M output tokens) and Claude for architecture design (181 yuan per 1M output tokens). In a typical project, 80% of calls can go to the cheap model.
-3. Cap your output length. APIs bill by output tokens, so longer output costs more. In scenarios that don't call for long-winded answers, set the max_tokens parameter to limit output length and keep the AI from 'rambling on.'
+1. Make the most of cache hits. Many models offer 'caching', when your request includes content that has been processed before (such as a system prompt), that portion is billed at a tiny fraction of the normal price. DeepSeek charges just 1/60 of the regular price for cache hits. Putting your fixed system prompt at the start of the message list maximizes cache hits.
+2. Tiered routing: use a cheap model for simple tasks and an expensive one for complex tasks. For example, DeepSeek V4 Flash for text classification (2 yuan per 1M output tokens), and Claude for architecture design (181 yuan per 1M output tokens). In a typical project, 80% of calls can go to the cheap model.
+3. Cap your output length. APIs bill by output tokens, so longer output costs more. In scenarios that don't call for long-winded answers, set the max_tokens parameter to limit output length and keep the AI from 'rambling on.'.
 4. Use the Batch API for non-real-time tasks. If you have lots of tasks that don't need instant responses (such as bulk data labeling or document summarization), the Batch API earns you a 50% discount. Both OpenAI and Azure offer this feature.
 5. Monitor your token usage. Most API platforms provide a usage dashboard. Check the usage breakdown regularly, find the calls that burn the most tokens, and optimize them specifically. One small prompt tweak (say, changing 'please explain in detail' to 'please explain in 3 sentences') can save 50% of your tokens.
 
@@ -431,7 +431,7 @@ Cost optimization strategies and their impact (August 2026)
 
 #### 6. Hands-On: Wiring a Large Model API into a Project
 
-Let's wrap up the chapter with a complete hands-on exercise — building an 'AI Summarizer': the user pastes in a long piece of text, and the app calls a large model API to produce a summary. This exercise walks through the full API workflow: environment setup, the API call, error handling, and cost control.
+Let's wrap up the chapter with a complete hands-on exercise: building an 'AI Summarizer': the user pastes in a long piece of text, and the app calls a large model API to produce a summary. This exercise walks through the full API workflow: environment setup, the API call, error handling, and cost control.
 
 ::: div .code-block
 :::inline div .code-head
@@ -511,7 +511,7 @@ if __name__ == "__main__":
 ```
 :::
 
-This code embodies several API best practices: the API Key is read from an environment variable and never hardcoded; the function has clear documentation and type hints; max_tokens is set to cap the output length; temperature is set low (0.3) for more stable output; error handling is complete; and token consumption is returned for cost tracking. When you have the AI write this code, you can simply tell it these requirements — it is fully capable of implementing them.
+This code embodies several API best practices: the API Key is read from an environment variable and never hardcoded; the function has clear documentation and type hints; max_tokens is set to cap the output length; temperature is set low (0.3) for more stable output; error handling is complete; and token consumption is returned for cost tracking. When you have the AI write this code, you can simply tell it these requirements: it is fully capable of implementing them.
 
 :::inline div .quote-line
 The final lesson of this chapter: models are the "ammunition," methodology is the "tactics." The right ammunition makes the battle smoother, but without good tactics even the best ammo loses the war. Now that you know each model's strengths and how to use the APIs, you have a well-stocked arsenal — but how you fight the battle still depends on the thinking methods from the earlier chapters.
@@ -522,7 +522,7 @@ The final lesson of this chapter: models are the "ammunition," methodology is th
 Try It Yourself: Get Your First API Call Running
 
 {class="mt-1"}
-Register on a Chinese model platform (we recommend DeepSeek or Zhipu — both give new users a free allowance), create an API Key, put it into your system environment variables (not into your code!), and then run the 'first API call' code above. The moment you see the AI's reply print out, you have crossed the line between 'using AI' and 'building AI applications.'
+Register on a Chinese model platform (we recommend DeepSeek or Zhipu, both give new users a free allowance), create an API Key, put it into your system environment variables (not into your code!), and then run the 'first API call' code above. The moment you see the AI's reply print out, you have crossed the line between 'using AI' and 'building AI applications.'
 :::
 
 ::: div .chapter-summary
@@ -530,10 +530,10 @@ Register on a Chinese model platform (we recommend DeepSeek or Zhipu — both gi
 Chapter Recap
 
 - The big three international models: GPT-5.6 (a balanced all-rounder), Claude (top-tier coding with a hallucination rate of just 1%), Gemini (king of multimodal with 2M context)
-- China's top five: DeepSeek V4 (best value for money — watch for the price-increase announcement), Qwen3.7 (enterprise-grade), GLM-5.1 (No. 1 in China on SWE), Kimi K3 (ultra-long text), Doubao (a free way to start)
+- China's top five: DeepSeek V4 (best value for money, watch for the price-increase announcement), Qwen3.7 (enterprise-grade), GLM-5.1 (No. 1 in China on SWE), Kimi K3 (ultra-long text), Doubao (a free way to start)
 - The four-question decision method: Where will it be deployed? Coding or something else? Ultra-long context? Tight budget?
 - Tokens are the billing unit: 1 Chinese character is about 1.5-2 tokens; 1 million characters is about 1.5 million tokens
 - An API Key is your wallet password: manage it with environment variables, never hardcode it, never upload it to Git
-- Chinese models are generally OpenAI SDK compatible: switching models means changing just two lines — api_key and base_url
+- Chinese models are generally OpenAI SDK compatible: switching models means changing just two lines: api_key and base_url
 - Five ways to save: cache hits, tiered routing, capping output, the Batch API, and monitoring usage
 :::

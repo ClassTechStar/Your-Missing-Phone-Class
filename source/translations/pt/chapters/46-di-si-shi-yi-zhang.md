@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 41: Panorama das ferramentas de programação com IA em 2026
 
 {class="chapter-intro mb-4"}
-Aviso antecipado: este capítulo é uma "fotografia" do ecossistema de agosto de 2026. Em seis meses estará desatualizado — e essa é a primeira lição. O objetivo não é dizer "use esta ferramenta", e sim construir um critério de escolha. Quando você entende a filosofia de cada ferramenta, decide bem em qualquer época.
+Aviso antecipado: este capítulo é uma "fotografia" do ecossistema de agosto de 2026. Em seis meses estará desatualizado, e essa é a primeira lição. O objetivo não é dizer "use esta ferramenta", e sim construir um critério de escolha. Quando você entende a filosofia de cada ferramenta, decide bem em qualquer época.
 
 #### 1. Três escolas e um quadro de decisão
 
@@ -37,11 +37,11 @@ A questão não é "qual é a melhor", e sim "qual combina com o seu cenário". 
 
 ##### 1. Cursor 3
 
-Cursor é a IDE de IA mais usada no mundo. O Cursor 3, de abril de 2026, marcou uma virada: o modo Agent ultrapassou o autocomplete por Tab — de "a IA completa o código" para "a IA conclui a tarefa". Recursos centrais: edição em múltiplos arquivos, percepção de contexto (estrutura e dependências do projeto) e integração profunda com o terminal (a IA roda comandos e lê a saída dentro do editor).
+Cursor é a IDE de IA mais usada no mundo. O Cursor 3, de abril de 2026, marcou uma virada: o modo Agent ultrapassou o autocomplete por Tab, de "a IA completa o código" para "a IA conclui a tarefa". Recursos centrais: edição em múltiplos arquivos, percepção de contexto (estrutura e dependências do projeto) e integração profunda com o terminal (a IA roda comandos e lê a saída dentro do editor).
 
 ##### 2. Trae
 
-Trae é a IDE de IA da ByteDance, com grande base de usuários na China. O modo SOLO (ou Builder) é o clássico "criar um projeto com uma frase": você descreve a necessidade e a IA faz o caminho todo, da inicialização ao código. Seus pontos fortes são o suporte em chinês e a adaptação à rede local — ideal para começar rápido.
+Trae é a IDE de IA da ByteDance, com grande base de usuários na China. O modo SOLO (ou Builder) é o clássico "criar um projeto com uma frase": você descreve a necessidade e a IA faz o caminho todo, da inicialização ao código. Seus pontos fortes são o suporte em chinês e a adaptação à rede local: ideal para começar rápido.
 
 ##### 3. Outras ferramentas
 
@@ -53,7 +53,7 @@ O Windsurf (antigo Codeium) é famoso pela experiência fluida de autocomplete. 
 
 ##### 1. Claude Code
 
-Claude Code é a ferramenta de terminal da Anthropic e, em meados de 2026, alcançou US$ 2,5 bilhões de receita anualizada. Funciona de outro jeito: você descreve a tarefa em linguagem natural no terminal e ele lê os arquivos, altera o código, roda testes, analisa resultados e corrige em ciclo — sem abrir o editor.
+Claude Code é a ferramenta de terminal da Anthropic e, em meados de 2026, alcançou US$ 2,5 bilhões de receita anualizada. Funciona de outro jeito: você descreve a tarefa em linguagem natural no terminal e ele lê os arquivos, altera o código, roda testes, analisa resultados e corrige em ciclo, sem abrir o editor.
 
 A vantagem é a "percepção do projeto inteiro": sem a limitação da janela do editor, ele navega pelo diretório e entende as dependências. Também suporta o CLAUDE.md, para que a IA já saiba o contexto no início da sessão. Em refatoração, mudanças em lote e escrita de testes em projetos grandes, o agente de terminal costuma ser mais eficiente que plugins de IDE.
 
@@ -79,7 +79,7 @@ Se amanhã todas as ferramentas de programação com IA desaparecessem, três h�
 
 Olhando 2024–2026: em 2024 o GitHub Copilot era o rei; em 2025, o Cursor o superou; em 2026, o Claude Code despontou. A cada ferramenta nova, alguém diz "dessa vez é diferente", mas a conclusão é a mesma: quem se dá bem já tem metodologia sólida. Essas pessoas se adaptam em poucos dias; quem só decorou cliques recomeça do zero a cada troca.
 
-Por isso, a trilha sugerida é: começar com uma ferramenta (qualquer uma) e praticar as cinco regras; com a metodologia firme, experimentar outras escolas e sentir as diferenças; por fim, montar a sua combinação — por exemplo, Cursor no dia a dia, Claude Code em refatoração e testes, v0 em protótipos. A combinação é pessoal; a metodologia é comum.
+Por isso, a trilha sugerida é: começar com uma ferramenta (qualquer uma) e praticar as cinco regras; com a metodologia firme, experimentar outras escolas e sentir as diferenças; por fim, montar a sua combinação: por exemplo, Cursor no dia a dia, Claude Code em refatoração e testes, v0 em protótipos. A combinação é pessoal; a metodologia é comum.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

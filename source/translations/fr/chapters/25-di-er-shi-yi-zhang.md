@@ -2,15 +2,15 @@
 id: di-er-shi-yi-zhang
 num: 21
 part: chao-yue-pian
-nav: Chapitre 21 : Exploration approfondie des réseaux mobiles et de la sécurité de l'information
+nav: Chapitre 21 : Peut-on se connecter à un Wi-Fi public ?
 toc: default
 kind: chapter
 ---
 
-### Chapitre 21 : Exploration approfondie des réseaux mobiles et de la sécurité de l'information
+### Chapitre 21 : Peut-on se connecter à un Wi-Fi public ?
 
 {class="chapter-intro mb-4"}
-Nous utilisons tous les jours le smartphone pour naviguer sur Internet, payer, discuter, c'est très pratique. Mais avez-vous déjà pensé à vos historiques de discussion, mots de passe de paiement, photos... combien de fois ces informations « circulent à découvert » sur le réseau ? Honnêtement, la plupart des gens n'y pensent jamais, mais une fois que ça arrive — par exemple un compte piraté, une carte bancaire vidée — il est trop tard pour regretter. Ce chapitre va parler sérieusement de comment rendre votre vie numérique moins « transparente ».
+Nous utilisons tous les jours le smartphone pour naviguer sur Internet, payer, discuter, c'est très pratique. Mais avez-vous déjà pensé à vos historiques de discussion, mots de passe de paiement, photos... combien de fois ces informations « circulent à découvert » sur le réseau ? Honnêtement, la plupart des gens n'y pensent jamais, mais une fois que ça arrive — par exemple un compte piraté, une carte bancaire vidée, il est trop tard pour regretter. Ce chapitre va parler sérieusement de comment rendre votre vie numérique moins « transparente ».
 
 #### I. VPN : la « cape d'invisibilité » du réseau
 
@@ -23,9 +23,9 @@ Que peut donc faire un VPN ? En résumé : premièrement,<strong>protéger votre
 
 Par ailleurs, le VPN n'est pas omnipotent. Il ne protège que les données « en transit », si le site web cible lui-même n'est pas sûr, ou si votre smartphone est déjà infecté par un logiciel malveillant, le VPN ne peut rien pour vous.
 
-#### II. Le « piège doux » du WiFi public — plus dangereux que vous ne le pensez
+II. Le « piège doux » du WiFi public — plus dangereux que vous ne le pensez
 
-Vous pourriez penser, ce n'est qu'un WiFi gratuit, quel risque cela peut-il présenter ? Laissez-moi vous raconter une histoire vraie : des chercheurs en sécurité ont fait une expérience, ils ont installé un point d'accès WiFi appelé « Starbucks_Free » dans un aéroport, en moins d'une heure, plus d'une centaine de personnes s'y sont connectées. En réalité, ce point d'accès était installé par les chercheurs eux-mêmes, tout le <strong>trafic non chiffré</strong> passant par ce point d'accès — par exemple le contenu des pages web HTTP que vous visitez, les communications d'applications sans TLS — ils pouvaient effectivement les intercepter et les consulter.
+Vous pourriez penser, ce n'est qu'un WiFi gratuit, quel risque cela peut-il présenter ? Laissez-moi vous raconter une histoire vraie : des chercheurs en sécurité ont fait une expérience, ils ont installé un point d'accès WiFi appelé « Starbucks_Free » dans un aéroport, en moins d'une heure, plus d'une centaine de personnes s'y sont connectées. En réalité, ce point d'accès était installé par les chercheurs eux-mêmes, tout le <strong>trafic non chiffré</strong> passant par ce point d'accès — par exemple le contenu des pages web HTTP que vous visitez, les communications d'applications sans TLS: ils pouvaient effectivement les intercepter et les consulter.
 
 Mais attention à une condition préalable cruciale : aujourd'hui, WeChat, les applications bancaires, Alipay que vous utilisez quotidiennement sont presque tous passés au chiffrement HTTPS. Autrement dit, même si les attaquants interceptent les paquets de données, ils ne voient qu'un tas de caractères incompréhensibles,<strong>impossibles à lire directement pour vos discussions ou mots de passe de paiement</strong>. Cependant, ils peuvent toujours savoir quels sites vous avez visités (noms de domaine), si certaines vieilles applications ou pages web utilisent encore HTTP en clair, le contenu sera complètement exposé. Cette attaque s'appelle « attaque de l'homme du milieu » (Man-in-the-Middle), le principe est que l'attaquant « s'intercale » entre vous et le véritable routeur WiFi. Plus effrayant encore, le smartphone de beaucoup de gens est réglé sur « connexion automatique aux WiFi connus », l'attaquant n'a qu'à nommer son point d'accès comme un WiFi que vous avez déjà connecté (par exemple « ChinaNet » ou « CMCC »), votre smartphone s'y connectera automatiquement.
 
@@ -36,7 +36,7 @@ Comment s'en protéger ? Quelques conseils pratiques :
 - <strong>Utilisez les données mobiles pour les opérations sensibles</strong>: virements, connexion bancaire, saisie de numéro de carte d'identité... ces opérations, utilisez fidèlement vos données 4G/5G, n'économisez pas ces quelques mégaoctets.
 - <strong>Oubliez les WiFi peu utilisés</strong>: au retour d'un déplacement ou d'un voyage, « oubliez » les WiFi d'hôtel, d'aéroport que vous avez temporairement connectés. Ainsi, la prochaine fois, le téléphone ne se connectera pas automatiquement à un faux point d'accès du même nom.
 
-#### III. Comment le HTTPS vous protège-t-il ? — Handshake SSL/TLS
+III. Comment le HTTPS vous protège-t-il ? — Handshake SSL/TLS
 
 Je viens de mentionner le HTTPS, mais comment fonctionne-t-il réellement ? Chaque fois que vous accédez à un site HTTPS, le navigateur et le serveur procèdent à un « handshake SSL/TLS », tout le processus ressemble à ceci :
 
@@ -47,9 +47,9 @@ Je viens de mentionner le HTTPS, mais comment fonctionne-t-il réellement ? Chaq
 
 C'est comme aller à la banque : vous présentez d'abord votre carte d'identité (certificat), le guichetier vérifie votre identité, puis vous convenez d'un mot de code, les conversations suivantes ne sont compréhensibles que par vous deux. Même si quelqu'un écoute, il n'entend que du charabia chiffré.
 
-Mais attention : le HTTPS garantit uniquement que le « processus de transmission » est chiffré, il ne garantit pas que le site cible est bienveillant. Les sites de phishing peuvent aussi utiliser HTTPS — cette petite icône de cadenas indique seulement que vous êtes connecté à « un site », pas que ce site est bien celui que vous voulez visiter. Donc, vérifiez vous-même si l'adresse est correcte.
+Mais attention : le HTTPS garantit uniquement que le « processus de transmission » est chiffré, il ne garantit pas que le site cible est bienveillant. Les sites de phishing peuvent aussi utiliser HTTPS, cette petite icône de cadenas indique seulement que vous êtes connecté à « un site », pas que ce site est bien celui que vous voulez visiter. Donc, vérifiez vous-même si l'adresse est correcte.
 
-#### IV. Sécurité DNS : votre « annuaire téléphonique réseau » est-il sûr ?
+IV. Sécurité DNS : votre « annuaire téléphonique réseau » est-il sûr ?
 
 Le DNS (Domain Name System) est comme l'annuaire téléphonique d'Internet : vous saisissez « baidu.com », le DNS vous aide à trouver à quelle adresse IP il correspond (par exemple 110.242.68.66), puis le navigateur peut s'y connecter. Le problème est que les requêtes DNS traditionnelles sont en <strong>clair</strong>,<strong>non chiffrées</strong>! Autrement dit, votre FAI, votre fournisseur WiFi, ou n'importe quel nœud intermédiaire peut voir quels sites vous avez visités.
 
@@ -66,7 +66,7 @@ Personnellement, je recommande d'utiliser le 1.1.1.1 de Cloudflare ou le 8.8.8.8
 
 D'abord la conclusion :<strong>le mode navigation privée est le rideau de votre maison, pas une cape d'invisibilité.</strong>
 
-Ce qu'il fait : ne laisse pas de traces localement — après fermeture de la fenêtre privée, le navigateur ne conserve pas votre historique de navigation, cookies, saisie de formulaires, historique de recherche. Pour emprunter l'ordinateur de quelqu'un pour chercher quelque chose, ou acheter un cadeau sans que la famille ne le découvre dans l'historique, le mode navigation privée est approprié.
+Ce qu'il fait : ne laisse pas de traces localement: après fermeture de la fenêtre privée, le navigateur ne conserve pas votre historique de navigation, cookies, saisie de formulaires, historique de recherche. Pour emprunter l'ordinateur de quelqu'un pour chercher quelque chose, ou acheter un cadeau sans que la famille ne le découvre dans l'historique, le mode navigation privée est approprié.
 
 Ce qu'il ne peut pas faire :
 
@@ -77,17 +77,17 @@ Ce qu'il ne peut pas faire :
 
 Donc retenez : le mode navigation privée est un « effaceur local », pas un « vêtement d'invisibilité réseau ». Si vous avez vraiment besoin de cacher vos traces en ligne, il faut utiliser la combinaison VPN + navigateur Tor, mais pour un usage quotidien, connaître ces éléments suffit.
 
-#### VI. Vie privée du navigateur : ne laissez pas le navigateur vous vendre
+VI. Vie privée du navigateur : ne laissez pas le navigateur vous vendre
 
 Vous ne vous en rendez peut-être pas compte, mais le navigateur lui-même est un énorme collecteur d'informations. Cookies, historique de navigation, cache, remplissage automatique, permissions de localisation... chacun peut révéler votre vie privée. Quelques conseils :
 
-- <strong>Nettoyez régulièrement les données de navigation</strong>: de temps en temps, allez dans les réglages pour nettoyer cookies, cache, historique. Ce n'est pas pour empêcher « le suivi » — ça, nettoyer les cookies ne sert plus à grand-chose — mais pour éviter que le téléphone ne devienne de plus en plus lent. Le cache du navigateur peut occuper plusieurs Go.
+- <strong>Nettoyez régulièrement les données de navigation</strong>: de temps en temps, allez dans les réglages pour nettoyer cookies, cache, historique. Ce n'est pas pour empêcher « le suivi », ça, nettoyer les cookies ne sert plus à grand-chose, mais pour éviter que le téléphone ne devienne de plus en plus lent. Le cache du navigateur peut occuper plusieurs Go.
 - <strong>Oubliez le fantasme « Ne pas me suivre »</strong>: l'option « envoyer la demande 'Ne pas me suivre' » dans le navigateur demande essentiellement aux sites de ne pas vous suivre. Mais si le site écoute ou non, c'est une autre histoire, la plupart des sites ignorent. N'en attendez rien.
 - <strong>Utilisez des navigateurs protecteurs de la vie privée</strong>: Firefox Focus, DuckDuckGo Browser, Brave bloquent par défaut les traqueurs et publicités, bien plus propres que les paramètres par défaut de Chrome et Safari.
 - <strong>Le moteur de recherche compte aussi</strong>: utilisez DuckDuckGo à la place de Baidu/Google, il n'enregistre pas votre historique de recherche, ne construit pas de profil utilisateur. Honnêtement, les résultats de recherche sont moins précis que Google, mais pour des recherches quotidiennes, c'est suffisant.
 - <strong>Vérifiez les permissions des applications</strong>: allez dans les réglages du téléphone pour voir quelles permissions ont été accordées à votre navigateur. A-t-il vraiment besoin d'accéder à votre localisation, micro, contacts ? Très probablement non.
 
-#### VII. Liste de sécurité pratique : protégez-vous à partir de maintenant
+VII. Liste de sécurité pratique : protégez-vous à partir de maintenant
 
 Après tout cela, voici une liste de sécurité simple et directe, une demi-heure pour tout régler, la sécurité de votre smartphone fera un bond en avant :
 

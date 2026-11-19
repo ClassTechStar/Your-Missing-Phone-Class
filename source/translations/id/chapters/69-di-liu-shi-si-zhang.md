@@ -23,7 +23,7 @@ App yang hanya bisa "dilihat" itu mati; App yang bisa menyimpan data dan terhubu
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Pembagian tugas trio data
 
-Hafalkan jembatan keledai ini: "konfigurasi kecil masuk UserDefaults, data dalam jumlah besar masuk SwiftData, data dari luar lewat URLSession". Core Data di tutorial lama tetap bisa dipakai (SwiftData adalah wajah modernnya), sedangkan SQLite tulis manual hampir tidak perlu disentuh — belajar langsung yang baru, jangan ambil jalan lama.
+Hafalkan jembatan keledai ini: "konfigurasi kecil masuk UserDefaults, data dalam jumlah besar masuk SwiftData, data dari luar lewat URLSession". Core Data di tutorial lama tetap bisa dipakai (SwiftData adalah wajah modernnya), sedangkan SQLite tulis manual hampir tidak perlu disentuh: belajar langsung yang baru, jangan ambil jalan lama.
 
 #### 2. UserDefaults: Menyimpan Konfigurasi Kecil
 
@@ -46,7 +46,7 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-Ingat, ia hanya cocok untuk konfigurasi kecil yang berserakan — puluhan hingga ratusan rekaman serahkan ke SwiftData; jangan menjadikan UserDefaults sebagai basis data (akan memperlambat proses startup dan menyulitkan pencarian).
+Ingat, ia hanya cocok untuk konfigurasi kecil yang berserakan: puluhan hingga ratusan rekaman serahkan ke SwiftData; jangan menjadikan UserDefaults sebagai basis data (akan memperlambat proses startup dan menyulitkan pencarian).
 
 #### 3. SwiftData: Memberi Data "Rumah yang Sesungguhnya"
 
@@ -107,7 +107,7 @@ struct RecordListView: View {
 ```
 :::
 
-Templat "@Model + modelContainer + @Query" ini bisa dipindahkan apa adanya ke proyek mana pun milikmu — cukup ganti nama fieldnya. Begitu data berubah, @Query otomatis menyegarkan antarmuka; kenyamanannya luar biasa.
+Templat "@Model + modelContainer + @Query" ini bisa dipindahkan apa adanya ke proyek mana pun milikmu, cukup ganti nama fieldnya. Begitu data berubah, @Query otomatis menyegarkan antarmuka; kenyamanannya luar biasa.
 
 #### 4. Codable: "Menerjemahkan" JSON
 
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "Cerah"
 ```
 :::
 
-Aturan besi: lihat dulu JSON asli yang dikembalikan, baru definisikan field. Banyak bug "gagal parsing" penyebabnya nama field salah tulis atau tipe salah tebak (server mengirim string "26.5", kamu mendeklarasikannya sebagai Double) — cetak JSON mentahnya untuk dibandingkan, masalah ketemu dalam sepuluh detik.
+Aturan besi: lihat dulu JSON asli yang dikembalikan, baru definisikan field. Banyak bug "gagal parsing" penyebabnya nama field salah tulis atau tipe salah tebak (server mengirim string "26.5", kamu mendeklarasikannya sebagai Double), cetak JSON mentahnya untuk dibandingkan, masalah ketemu dalam sepuluh detik.
 
 #### 5. URLSession + async/await: Berbicara dengan Server
 
@@ -175,14 +175,14 @@ struct WeatherService {
 Peringatan Jebakan: Dua Aturan Besi Jaringan
 
 {class="mt-1"}
-① Akses internet wajib async/await, jangan pernah memblokir thread utama — antarmuka yang macet adalah pengalaman selevel crash. Structured concurrency di Swift membuat hal ini terasa alami, tapi jangan lupakan try await dan do/catch. ② ATS secara bawaan melarang HTTP teks polos: iOS mewajibkan HTTPS. Saat menguji layanan http:// lokal, perlu membuka pengecualian sementara di Info.plist (NSAppTransportSecurity), tetapi produk resmi wajib sepenuhnya lewat HTTPS — pemeriksaan App Store juga mengawasi hal ini.
+① Akses internet wajib async/await, jangan pernah memblokir thread utama: antarmuka yang macet adalah pengalaman selevel crash. Structured concurrency di Swift membuat hal ini terasa alami, tapi jangan lupakan try await dan do/catch. ② ATS secara bawaan melarang HTTP teks polos: iOS mewajibkan HTTPS. Saat menguji layanan http:// lokal, perlu membuka pengecualian sementara di Info.plist (NSAppTransportSecurity), tetapi produk resmi wajib sepenuhnya lewat HTTPS — pemeriksaan App Store juga mengawasi hal ini.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Membuat Aplikasi Kecil "Kalimat Harian"
 
-#### 6. Kesalahan Jaringan Juga Perlu "Diklasifikasi": Jangan Buang Semua Error ke Pengguna
+6. Kesalahan Jaringan Juga Perlu "Diklasifikasi": Jangan Buang Semua Error ke Pengguna
 
 Koneksi putus, timeout, 404, server 500… kesalahan yang berbeda butuh pesan yang berbeda pula untuk pengguna:
 
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-Tunjukkan "bahasa manusia" kepada pengguna, dan "teks asli" untuk log (print error secara lengkap). Jangan melempar tulisan Inggris rumit dari error.localizedDescription langsung ke pengguna — rasa produk justru tersembunyi di detail seperti ini.
+Tunjukkan "bahasa manusia" kepada pengguna, dan "teks asli" untuk log (print error secara lengkap). Jangan melempar tulisan Inggris rumit dari error.localizedDescription langsung ke pengguna: rasa produk justru tersembunyi di detail seperti ini.
 
 {class="mt-1"}
-Cari API kutipan gratis (misalnya hitokoto dan sejenisnya), gunakan URLSession + async/await untuk mengambil "kalimat harian", tampilkan di tengah layar, dan tambahkan tombol "Ganti kalimat". Lalu simpan kalimat favorit ke "koleksi" dengan SwiftData. Latihan ini memakai UserDefaults/SwiftData/Codable/URLSession semuanya sekaligus — setelah menyelesaikannya, Bab 7 dan 8 akan terasa seperti makan hidangan ringan.
+Cari API kutipan gratis (misalnya hitokoto dan sejenisnya), gunakan URLSession + async/await untuk mengambil "kalimat harian", tampilkan di tengah layar, dan tambahkan tombol "Ganti kalimat". Lalu simpan kalimat favorit ke "koleksi" dengan SwiftData. Latihan ini memakai UserDefaults/SwiftData/Codable/URLSession semuanya sekaligus, setelah menyelesaikannya, Bab 7 dan 8 akan terasa seperti makan hidangan ringan.
 :::
 
 ::: div .chapter-summary

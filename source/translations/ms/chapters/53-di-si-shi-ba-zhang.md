@@ -2,31 +2,31 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: Bab 48: Mengenali Android—Daripada Sistem Pengendalian kepada Ekosistem Pembangunan
+nav: Bab 48: Bagaimana Android menjadi seperti sekarang?
 toc: default
 kind: chapter
 ---
 
-### Bab 48: Mengenali Android — Daripada Sistem Operasi kepada Ekosistem Pembangunan
+### Bab 48: Bagaimana Android menjadi seperti sekarang?
 
 {class="chapter-intro mb-4"}
-Tahniah kerana membuat keputusan ini — daripada "orang yang bermain telefon" kepada "orang yang membina aplikasi telefon". Sebelum bertindak, mari bentangkan peta dahulu: dari mana datangnya Android? Mengapa pembangun sedunia menulis aplikasi untuknya? Dan apa yang berlaku sepanjang perjalanan sebuah App daripada jari anda menaip papan kekunci hingga sampai ke telefon pengguna?
+Tahniah kerana membuat keputusan ini, daripada "orang yang bermain telefon" kepada "orang yang membina aplikasi telefon". Sebelum bertindak, mari bentangkan peta dahulu: dari mana datangnya Android? Mengapa pembangun sedunia menulis aplikasi untuknya? Dan apa yang berlaku sepanjang perjalanan sebuah App daripada jari anda menaip papan kekunci hingga sampai ke telefon pengguna?
 
-#### 1. Asal usul Android: daripada "robot kecil" kepada "sistem terbesar di dunia"
+1. Asal usul Android: daripada "robot kecil" kepada "sistem terbesar di dunia"
 
-Kisah Android bermula pada 2003 — seorang jurutera bernama Andy Rubin menubuhkan syarikat Android dengan matlamat yang sederhana: membina sistem operasi pintar yang "lebih faham kamera". Kemudian Google membelinya pada 2005; pada 2007, bersama-sama puluhan pengeluar, ditubuhkan Open Handset Alliance (OHA); dan pada September 2008, telefon Android pertama, HTC Dream (G1), dilancarkan secara rasmi.
+Kisah Android bermula pada 2003, seorang jurutera bernama Andy Rubin menubuhkan syarikat Android dengan matlamat yang sederhana: membina sistem operasi pintar yang "lebih faham kamera". Kemudian Google membelinya pada 2005; pada 2007, bersama-sama puluhan pengeluar, ditubuhkan Open Handset Alliance (OHA); dan pada September 2008, telefon Android pertama, HTC Dream (G1), dilancarkan secara rasmi.
 
-Kisah selepasnya sudah semua orang tahu: menjelang 2026, Android ialah sistem operasi mudah alih dengan pangsa pasaran terbesar di dunia, dengan jumlah peranti aktif mencecah bilion. Telefon anda, kotak TV, skrin besar dalam kereta dan jam pintar — kemungkinan besar semuanya berjalan atas Android. Apa maksudnya? Maksudnya, setiap baris kod yang anda tulis mempunyai peluang digunakan oleh paling ramai orang di dunia.
+Kisah selepasnya sudah semua orang tahu: menjelang 2026, Android ialah sistem operasi mudah alih dengan pangsa pasaran terbesar di dunia, dengan jumlah peranti aktif mencecah bilion. Telefon anda, kotak TV, skrin besar dalam kereta dan jam pintar, kemungkinan besar semuanya berjalan atas Android. Apa maksudnya? Maksudnya, setiap baris kod yang anda tulis mempunyai peluang digunakan oleh paling ramai orang di dunia.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Tip: Gen sumber terbuka Android
 
 {class="mt-1"}
-Kod teras Android (AOSP, Android Open Source Project) ialah sumber terbuka — mana-mana pengeluar boleh mengambilnya untuk diubah suai dan diperibadikan. Itulah sebabnya Xiaomi ada MIUI (kini dipanggil HyperOS), Huawei ada lapisan keserasian HarmonyOS dan Samsung ada One UI. Ini perkara baik untuk pembangun: yang anda pelajari ialah "pembangunan Android", bukan "pembangunan sesuatu jenama" — satu set kemahiran, boleh digunakan di merata tempat.
+Kod teras Android (AOSP, Android Open Source Project) ialah sumber terbuka: mana-mana pengeluar boleh mengambilnya untuk diubah suai dan diperibadikan. Itulah sebabnya Xiaomi ada MIUI (kini dipanggil HyperOS), Huawei ada lapisan keserasian HarmonyOS dan Samsung ada One UI. Ini perkara baik untuk pembangun: yang anda pelajari ialah "pembangunan Android", bukan "pembangunan sesuatu jenama": satu set kemahiran, boleh digunakan di merata tempat.
 :::
 
-Evolusi nombor versi juga menarik: bermula dengan Cupcake (kek cawan) 1.5, setiap versi besar dinamakan sempena pencuci mulut — Donut, Eclair, Froyo, Gingerbread... sehinggalah Android 10 pada 2019 baharu ditukar kepada nombor tulen. Sehingga Ogos 2026, versi rasmi terkini ialah Android 17, manakala "versi sokongan minimum" yang sebenarnya perlu anda ambil peduli semasa membangun — App arus utama biasanya menetapkannya antara Android 8 (API 26) dan Android 10 (API 29); dengan menyokong peranti beberapa tahun lalu, barulah pangkalan pengguna anda cukup besar.
+Evolusi nombor versi juga menarik: bermula dengan Cupcake (kek cawan) 1.5, setiap versi besar dinamakan sempena pencuci mulut — Donut, Eclair, Froyo, Gingerbread... sehinggalah Android 10 pada 2019 baharu ditukar kepada nombor tulen. Sehingga Ogos 2026, versi rasmi terkini ialah Android 17, manakala "versi sokongan minimum" yang sebenarnya perlu anda ambil peduli semasa membangun, App arus utama biasanya menetapkannya antara Android 8 (API 26) dan Android 10 (API 29); dengan menyokong peranti beberapa tahun lalu, barulah pangkalan pengguna anda cukup besar.
 
 ::: div .overflow-x-auto
 ```html
@@ -39,7 +39,7 @@ Sejarah ringkas versi Android (sehingga Ogos 2026; tumpuan utama pembangunan)
 
 #### 2. Menulis dengan bahasa apa: Java atau Kotlin?
 
-Dalam sejarah pembangunan Android, dua bahasa arus utama pernah muncul. Java ialah "warga tua pengasas" — digunakan sejak Android dilahirkan; Kotlin ialah "warganegara kelas pertama" yang dilantik Google pada 2017, dan sejak 2019 pihak rasmi menyatakan jelas "Kotlin dahulu" (Kotlin-first). Menjelang 2026, hampir semua projek baharu menggunakan Kotlin, dan kebanyakan projek lama juga sedang berhijrah sedikit demi sedikit.
+Dalam sejarah pembangunan Android, dua bahasa arus utama pernah muncul. Java ialah "warga tua pengasas", digunakan sejak Android dilahirkan; Kotlin ialah "warganegara kelas pertama" yang dilantik Google pada 2017, dan sejak 2019 pihak rasmi menyatakan jelas "Kotlin dahulu" (Kotlin-first). Menjelang 2026, hampir semua projek baharu menggunakan Kotlin, dan kebanyakan projek lama juga sedang berhijrah sedikit demi sedikit.
 
 Terus terang sahaja: jika anda benar-benar sifar asas, belajar Kotlin terus; jangan pusing belakang untuk menyentuh Java. Tiga sebabnya: pertama, jumlah kod Kotlin 30%-40% lebih sedikit daripada Java (fungsi yang sama, Kotlin lebih pendek dan jelas); kedua, ia secara semula jadi melindungi daripada "null pointer", mimpi ngeri pemula; ketiga, semua tutorial moden, dokumentasi rasmi dan alat pengaturcaraan AI (masih ingat buku pengaturcaraan AI kita?) semuanya berpandukan Kotlin. Java hanya akan anda jumpa semasa menyelenggara projek lama atau membaca kod lama.
 
@@ -85,11 +85,11 @@ Dalam aliran ini, ada dua konsep yang perlu anda kenali sekarang:
 - APK: format pakej pemasangan aplikasi Android (.apk); hanya dua klik sudah boleh dipasang ke telefon, seperti .exe dalam Windows. Untuk ujian sendiri pada kebiasaannya atau dikongsi dengan kawan untuk mencuba, gunakan yang ini.
 - AAB: Android App Bundle (.aab), "format pakej canggih" untuk pelancaran di Google Play. Kedai akan memotongnya secara dinamik mengikut model telefon pengguna supaya pakej yang dimuat turun lebih kecil untuk setiap orang. Tidak boleh dipasang sendiri; hanya boleh diserahkan kepada kedai.
 
-Selain itu, anda juga akan sentiasa mendengar satu istilah: SDK (Software Development Kit, kit alat pembangunan perisian). Ia ialah satu set lengkap "peralatan pembangunan" yang disediakan secara rasmi oleh Android — termasuk pustaka API pelbagai versi, alat penyahpepijatan, imej emulator dan sebagainya. Kelas seperti Activity dan Button yang anda panggil semasa menulis kod semuanya datang daripada SDK.
+Selain itu, anda juga akan sentiasa mendengar satu istilah: SDK (Software Development Kit, kit alat pembangunan perisian). Ia ialah satu set lengkap "peralatan pembangunan" yang disediakan secara rasmi oleh Android: termasuk pustaka API pelbagai versi, alat penyahpepijatan, imej emulator dan sebagainya. Kelas seperti Activity dan Button yang anda panggil semasa menulis kod semuanya datang daripada SDK.
 
-#### 4. Gambaran menyeluruh teknologi Android: "senarai senjata" anda
+4. Gambaran menyeluruh teknologi Android: "senarai senjata" anda
 
-Sebelum belajar secara rasmi, kenali dahulu persediaan standard projek Android arus utama pada 2026 — tidak mengapa jika anda belum memahami senarai ini; setelah selesai menghabiskan seluruh buku dan membaca semula, semuanya akan terang dengan jelas:
+Sebelum belajar secara rasmi, kenali dahulu persediaan standard projek Android arus utama pada 2026, tidak mengapa jika anda belum memahami senarai ini; setelah selesai menghabiskan seluruh buku dan membaca semula, semuanya akan terang dengan jelas:
 
 ::: div .overflow-x-auto
 ```html
@@ -100,11 +100,11 @@ Sebelum belajar secara rasmi, kenali dahulu persediaan standard projek Android a
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Sekilas pandang tindanan teknologi Android arus utama 2026
 
-Jangan gentar dengan rentetan istilah Inggeris ini. Ia seperti periuk belanga dan pinggan mangkuk di dapur — buat masa ini anda hanya perlu tahu "memasak perlu masuk dapur"; cara menggunakan setiap alat akan dibongkarkan satu demi satu dalam bab-bab berikutnya. Dan berita baiknya: semasa mencipta projek baharu, Android Studio akan menyediakan keseluruhan set ini secara automatik untuk anda; anda hanya perlu fokus memasak.
+Jangan gentar dengan rentetan istilah Inggeris ini. Ia seperti periuk belanga dan pinggan mangkuk di dapur, buat masa ini anda hanya perlu tahu "memasak perlu masuk dapur"; cara menggunakan setiap alat akan dibongkarkan satu demi satu dalam bab-bab berikutnya. Dan berita baiknya: semasa mencipta projek baharu, Android Studio akan menyediakan keseluruhan set ini secara automatik untuk anda; anda hanya perlu fokus memasak.
 
-#### 5. Android vs iOS: "pelajaran memilih pihak" pertama bagi pembangun
+5. Android vs iOS: "pelajaran memilih pihak" pertama bagi pembangun
 
-Mungkin anda memegang peranti Android dan Apple secara serentak. Sebagai pembangun, perbezaan pengalaman kedua-dua pihak berbaloi difahami lebih awal — bukan pilihan kubu "mana yang lebih baik", tetapi kiraan realistik "pihak mana lebih sesuai untuk anda memulakan langkah":
+Mungkin anda memegang peranti Android dan Apple secara serentak. Sebagai pembangun, perbezaan pengalaman kedua-dua pihak berbaloi difahami lebih awal, bukan pilihan kubu "mana yang lebih baik", tetapi kiraan realistik "pihak mana lebih sesuai untuk anda memulakan langkah":
 
 ::: div .overflow-x-auto
 ```html
@@ -115,14 +115,14 @@ Mungkin anda memegang peranti Android dan Apple secara serentak. Sebagai pembang
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan laluan pembangunan Android dan iOS (Ogos 2026)
 
-Jujur sahaja: jika komputer anda bukan Mac, soalan ini langsung tidak perlu difikirkan — Android adalah satu-satunya pilihan. Jika anda ada Mac, Bahagian 8 dan 9 buku ini boleh dibaca secara berdampingan; cara berfikir pengaturcaraannya serupa, jadi selepas menguasai satu pihak, mempelajari pihak yang satu lagi akan jauh lebih pantas.
+Jujur sahaja: jika komputer anda bukan Mac, soalan ini langsung tidak perlu difikirkan, Android adalah satu-satunya pilihan. Jika anda ada Mac, Bahagian 8 dan 9 buku ini boleh dibaca secara berdampingan; cara berfikir pengaturcaraannya serupa, jadi selepas menguasai satu pihak, mempelajari pihak yang satu lagi akan jauh lebih pantas.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mari cuba: Lihat 'Android' dalam telefon anda
 
 {class="mt-1"}
-Buka [Tetapan] → [Mengenai Telefon] pada telefon anda (atau 'Mengenai Peranti'), cari baris 'Versi Android' — ketik beberapa kali berturut-turut dan anda boleh mencetuskan permainan easter egg sistem. Catat nombor versi anda, dan rujuk jadual versi di atas untuk melihat generasinya. Telefon anda itulah 'peranti ujian pembangunan' pertama anda.
+Buka [Tetapan] → [Mengenai Telefon] pada telefon anda (atau 'Mengenai Peranti'), cari baris 'Versi Android': ketik beberapa kali berturut-turut dan anda boleh mencetuskan permainan easter egg sistem. Catat nombor versi anda, dan rujuk jadual versi di atas untuk melihat generasinya. Telefon anda itulah 'peranti ujian pembangunan' pertama anda.
 :::
 
 ::: div .chapter-summary

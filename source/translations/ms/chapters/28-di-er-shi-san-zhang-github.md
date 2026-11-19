@@ -9,11 +9,11 @@ kind: chapter
 ### Lampiran Bab 23: Panduan Permulaan GitHub — Daripada Hos Kod ke Platform Kolaborasi
 
 {class="chapter-intro mb-4"}
-Bab sebelumnya kita bincangkan "pemikiran pengaturcaraan", dan untuk benar-benar melaksanakan pemikiran pengaturcaraan dan membuat projek bersama orang lain, tidak boleh lari dari satu nama—GitHub. Sama ada anda pelajar jabatan sains komputer yang ingin menyertai pertandingan, ingin menyimpan karya kod anda, atau sekadar ingin melihat apa yang sedang dikerjakan oleh pembangun di seluruh dunia, GitHub adalah platform yang mesti anda kenali. Bahagian ini bermula dari konsep paling asas, membantu anda membina satu pemahaman yang jelas.
+Bab sebelumnya kita bincangkan "pemikiran pengaturcaraan", dan untuk benar-benar melaksanakan pemikiran pengaturcaraan dan membuat projek bersama orang lain, tidak boleh lari dari satu nama,GitHub. Sama ada anda pelajar jabatan sains komputer yang ingin menyertai pertandingan, ingin menyimpan karya kod anda, atau sekadar ingin melihat apa yang sedang dikerjakan oleh pembangun di seluruh dunia, GitHub adalah platform yang mesti anda kenali. Bahagian ini bermula dari konsep paling asas, membantu anda membina satu pemahaman yang jelas.
 
 #### 1. Apakah Sebenarnya GitHub?
 
-Git ialah buku harian di komputer anda, GitHub ialah platform blog awam <strong>—anda boleh menerbitkan karya sendiri, mengikuti projek orang lain, menyertai perbincangan dan kolaborasi. Ia bukan sahaja "gudang belakang pentas pengaturcara", lebih seperti sebuah "bandar teknologi" yang dibina bersama oleh pembangun di seluruh dunia—projek dilahirkan di sini, diulang, dibincangkan, diguna semula.</strong> Bagi orang biasa, GitHub juga bukan sesuatu yang jauh dari jangkauan. Ramai bukan pengaturcara menggunakannya untuk menghoskan nota, buku elektronik, blog peribadi, malah untuk menyandarkan fail konfigurasi. Selagi anda mempunyai sedikit keperluan "mahu mengemas benda anda dengan baik dan berkongsi", GitHub berbaloi untuk anda kenali.
+Git ialah buku harian di komputer anda, GitHub ialah platform blog awam <strong>—anda boleh menerbitkan karya sendiri, mengikuti projek orang lain, menyertai perbincangan dan kolaborasi. Ia bukan sahaja "gudang belakang pentas pengaturcara", lebih seperti sebuah "bandar teknologi" yang dibina bersama oleh pembangun di seluruh dunia,projek dilahirkan di sini, diulang, dibincangkan, diguna semula.</strong> Bagi orang biasa, GitHub juga bukan sesuatu yang jauh dari jangkauan. Ramai bukan pengaturcara menggunakannya untuk menghoskan nota, buku elektronik, blog peribadi, malah untuk menyandarkan fail konfigurasi. Selagi anda mempunyai sedikit keperluan "mahu mengemas benda anda dengan baik dan berkongsi", GitHub berbaloi untuk anda kenali.
 
 2\. Perbezaan Antara Git dan GitHub (Konsep Penting!)<strong>Ramai orang akan mengelirukan dua perkataan ini ketika pertama kali terdedah, di sini membantu anda menyusun dengan jelas:</strong> Perbandingan
 
@@ -81,7 +81,7 @@ Hakikat
 - <strong>Permintaan Gabung (Pull Request, singkatannya PR)</strong>: Apabila anda selesai mengubah kod pada satu cabang dan ingin menggabungkannya ke cabang utama, anda memulakan satu PR, membolehkan ahli pasukan menyemak kod sebelum menggabungkan. Ini adalah mekanisme teras kolaborasi GitHub.
 - <strong>Isu (Issue)</strong>: Digunakan untuk merakam bug, permintaan fungsi, topik perbincangan. Setiap Issue seperti satu hantaran perbincangan, boleh ditugaskan orang bertanggungjawab, diberikan label.
 - <strong>Fork</strong>: Menyalin repositori orang lain ke akaun anda sendiri, anda boleh mengubah salinan anda sesuka hati, tidak menjejaskan repositori asal. Selepas siap mengubah, boleh hantar PR kepada penulis asal, meminta menggabungkan penambahbaikan anda.
-- <strong>🛠️ Fungsi Teras</strong> GitHub menyediakan bukan sahaja storan kod, tetapi juga termasuk:
+- <strong>🛠️ Fungsi Teras</strong> GitHub menyediakan bukan sahaja storan kod, tetapi juga termasuk:.
 - <strong>Kawalan versi</strong>: Merakam sejarah setiap perubahan kod, kod rosak boleh kembali ke versi normal sebelumnya bila-bila masa.
 
 ##### Fungsi Teras
@@ -90,14 +90,14 @@ Hakikat
 
 - <strong>Penjejakan masalah</strong>: Gunakan Issue merakam bug dan permintaan fungsi, memudahkan pasukan menjejaki.
 - <strong>Pengurusan projek</strong>: Mengintegrasikan item tindakan, papan projek (Projects) dan alat pengurusan lain, setara dengan Trello ringan terbina dalam.
-- <strong>Automasi</strong>: Melalui
+- <strong>Automasi</strong>: Melalui.
 - <strong>GitHub Actions</strong> merealisasikan kompilasi automatik, ujian, pembungkusan, penyebaran selepas kod dihantar, merupakan alat teras "CI/CD (Integrasi Berterusan/Penyebaran Berterusan)" moden.
 - <strong>Pengurusan dokumentasi</strong>: README memperkenalkan projek, Wiki menyimpan seni bina terperinci dan spesifikasi pembangunan, Pages malah boleh terus menghoskan laman web statik.<strong>Hos kod dan paparan</strong>: Setiap repositori mempunyai paparan laman web yang cantik, menyokong penonjolan sintaks, merupakan "muka depan" karya teknikal anda.
 - <strong>Komuniti sumber terbuka</strong>: Anda boleh Star (kutip) projek yang disukai, Watch (ikuti) dinamik projek, Follow (ikuti) pembangun, menyertai kolaborasi sumber terbuka global.
-- <strong>4. Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda</strong>📝 Daftar akaun
-- <strong>Lawati</strong> github.com
+- <strong>4. Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda</strong>📝 Daftar akaun.
+- <strong>Lawati</strong> github.com.
 
-#### 4. Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda
+4. Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda
 
 ##### Daftar akaun
 
@@ -108,10 +108,10 @@ Hakikat
 
 ##### Cipta repositori pertama
 
-1. Tulis satu penerangan ringkas (Description), membiarkan orang lain tahu repositori ini untuk apa.
-2. Pilih Awam (Public) atau Peribadi (Private). Repositori awam boleh dilihat semua orang, peribadi hanya boleh dilihat diri sendiri dan kolaborator. Akaun percuma juga menyokong repositori peribadi tanpa had.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Tandakan "Add a README file"—README ialah "manual arahan" projek, setiap repositori disyorkan mempunyainya.</code>
+1. Tulis satu penerangan ringkas (Description), membiarkan orang lain tahu repositori ini untuk apa
+2. Pilih Awam (Public) atau Peribadi (Private). Repositori awam boleh dilihat semua orang, peribadi hanya boleh dilihat diri sendiri dan kolaborator. Akaun percuma juga menyokong repositori peribadi tanpa had.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Tandakan "Add a README file",README ialah "manual arahan" projek, setiap repositori disyorkan mempunyainya.</code>
 3. Pengetahuan Kecil: Apakah README
-4. README.md ialah fail format Markdown, kandungan pertama yang dilihat orang lain apabila membuka repositori anda. README yang baik biasanya mengandungi: pengenalan projek, kaedah pemasangan, contoh penggunaan, lesen, maklumat hubungan. Menulis README yang baik adalah kualiti asas pengaturcara, juga merupakan ambang pertama sama ada projek boleh digunakan oleh orang lain.
+4. README.md ialah fail format Markdown, kandungan pertama yang dilihat orang lain apabila membuka repositori anda. README yang baik biasanya mengandungi: pengenalan projek. kaedah pemasangan, contoh penggunaan, lesen, maklumat hubungan. Menulis README yang baik adalah kualiti asas pengaturcara, juga merupakan ambang pertama sama ada projek boleh digunakan oleh orang lain
 5. 5. Aliran Kerja Asas: Daripada Tempatan ke Awan
 6. Memahami aliran kerja GitHub, terasnya ialah mengingat kitaran ini:
 
@@ -130,12 +130,12 @@ Hakikat
 1. <strong>git commit</strong>: Merakam perubahan di kawasan peringatan secara rasmi menjadi satu "commit", disertakan satu ayat penjelasan, contohnya "baiki bug log masuk". Langkah ini hanya dilengkapkan secara tempatan.
 2. <strong>git push</strong>: Memuat naik commit tempatan ke awan GitHub, supaya orang lain boleh melihatnya.
 3. <strong>git pull</strong>: Sebelum mula bekerja, tarik kod terkini dari awan dahulu, memastikan tempatan kekal disegerakkan dengan ahli pasukan yang lain.
-4. <strong>Bagi pemula, ingat formula ini:</strong>"Pull dulu baru ubah, selepas ubah add, commit bawa penjelasan, akhirnya push ke atas"
-5. <strong>. Biasakan tabiat ini, kolaborasi pasukan tidak akan kacau.</strong>6. Aliran Kerja Kolaborasi Pasukan: Bagaimana Pull Request Berfungsi
+4. <strong>Bagi pemula, ingat formula ini:</strong>"Pull dulu baru ubah, selepas ubah add, commit bawa penjelasan, akhirnya push ke atas".
+5. <strong>. Biasakan tabiat ini, kolaborasi pasukan tidak akan kacau.</strong>6. Aliran Kerja Kolaborasi Pasukan: Bagaimana Pull Request Berfungsi.
 
 Tempat paling kuat GitHub terletak pada mekanisme kolaborasinya. Satu aliran kerja kolaborasi pasukan yang tipikal adalah seperti ini:<strong>Buka cabang</strong>: Buka satu cabang baharu dari cabang utama (biasanya dipanggil main atau master), contohnya
 
-#### 6. Aliran Kerja Kolaborasi Pasukan: Bagaimana Pull Request Berfungsi
+6. Aliran Kerja Kolaborasi Pasukan: Bagaimana Pull Request Berfungsi
 
 , membangunkan fungsi baharu pada cabang ini.
 
@@ -144,9 +144,9 @@ Tempat paling kuat GitHub terletak pada mekanisme kolaborasinya. Satu aliran ker
 3. <strong>Semakan kod (Code Review)</strong>: Ahli pasukan melihat kod anda, mengemukakan pendapat atau cadangan pengubahsuaian. Anda boleh terus commit berdasarkan maklum balas, PR akan dikemas kini secara automatik.
 4. <strong>Gabung</strong>: Selepas semakan lulus, klik "Merge" untuk menggabungkan kod ke cabang utama. Sumbangan anda secara rasmi memasuki projek!
 5. <strong>Aliran ini menjamin</strong> mana-mana kod sebelum memasuki cabang utama telah disemak
-6. <strong>, sangat mengurangkan kebarangkalian kesilapan. Projek sumber terbuka juga menggunakan mekanisme ini untuk menerima sumbangan daripada orang asing di seluruh dunia—anda benar-benar boleh menghantar PR pada sesetengah projek sumber terbuka terkenal, selepas diterima anda menjadi penyumbang projek tersebut.</strong>7. Senario Aplikasi Tipikal GitHub
+6. <strong>, sangat mengurangkan kebarangkalian kesilapan. Projek sumber terbuka juga menggunakan mekanisme ini untuk menerima sumbangan daripada orang asing di seluruh dunia:anda benar-benar boleh menghantar PR pada sesetengah projek sumber terbuka terkenal, selepas diterima anda menjadi penyumbang projek tersebut.</strong>7. Senario Aplikasi Tipikal GitHub
 
-🎓 Pelajar menyertai pertandingan dan projek kursus <strong>Pelajar jabatan sains komputer menyertai ACM, hackathon, reka bentuk pengijazahan, hampir semuanya tidak boleh lari dari GitHub. Ia bukan sahaja boleh menjadi platform kolaborasi pasukan, juga boleh menjadi tetingkap pameran karya—juri pertandingan boleh terus melihat repositori anda, memahami kualiti kod dan proses kolaborasi. Ramai syarikat semasa merekrut juga meminta melampirkan halaman utama GitHub, sebagai bukti keupayaan teknikal.</strong>📚 Pangkalan pengetahuan peribadi dan hos nota
+🎓 Pelajar menyertai pertandingan dan projek kursus <strong>Pelajar jabatan sains komputer menyertai ACM, hackathon, reka bentuk pengijazahan, hampir semuanya tidak boleh lari dari GitHub. Ia bukan sahaja boleh menjadi platform kolaborasi pasukan. juga boleh menjadi tetingkap pameran karya.juri pertandingan boleh terus melihat repositori anda, memahami kualiti kod dan proses kolaborasi. Ramai syarikat semasa merekrut juga meminta melampirkan halaman utama GitHub, sebagai bukti keupayaan teknikal.</strong>📚 Pangkalan pengetahuan peribadi dan hos nota
 
 #### 7. Senario Aplikasi Tipikal GitHub
 
@@ -176,8 +176,8 @@ Rajin commit, langkah kecil berlari pantas
 - <strong>Manfaatkan .gitignore</strong>: Fail ini digunakan untuk memberitahu Git fail mana yang tidak perlu dimasukkan dalam pengurusan versi (contohnya konfigurasi kata laluan, keluaran kompilasi, folder kebergantungan), mengelakkan memuat naik fail sampah.
 - <strong>Banyak melihat projek sumber terbuka yang cemerlang</strong>: Layari GitHub Trending, lihat struktur kod projek bintang tinggi, cara menulis README, aliran kolaborasi, adalah cara percuma paling cepat untuk meningkatkan diri.
 - <strong>Mohon pakej pelajar GitHub</strong>: Selepas pengesahan pelajar boleh mendapatkan kuota banyak alat dan perkhidmatan berbayar secara percuma (Copilot, nama domain, perkhidmatan awan dll.), bernilai ribuan dolar.
-- <strong>Peringatan Keselamatan</strong> Jangan sekali-kali memuat naik kata laluan, kunci API, rentetan sambungan pangkalan data dan maklumat sensitif lain ke GitHub, terutamanya repositori awam—selepas bocor, akan ditangkap oleh perayau dalam beberapa saat, akibatnya serius.
-- <strong>Tidak sengaja memuat naik maklumat sensitif, hanya memadam fail tidak cukup (masih ada dalam rekod sejarah), perlu gunakan</strong> git filter-branch
+- <strong>Peringatan Keselamatan</strong> Jangan sekali-kali memuat naik kata laluan, kunci API, rentetan sambungan pangkalan data dan maklumat sensitif lain ke GitHub, terutamanya repositori awam,selepas bocor, akan ditangkap oleh perayau dalam beberapa saat, akibatnya serius.
+- <strong>Tidak sengaja memuat naik maklumat sensitif, hanya memadam fail tidak cukup (masih ada dalam rekod sejarah), perlu gunakan</strong> git filter-branch.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -185,7 +185,7 @@ Rajin commit, langkah kecil berlari pantas
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Repositori peribadi juga tidak mutlak selamat, maklumat sensitif lebih baik diurus menggunakan pemboleh ubah persekitaran, jangan masuk ke repositori kod.
-- Perkara yang perlu diperhatikan apabila mengakses GitHub dari dalam negara<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">GitHub kadang-kadang tidak stabil apabila diakses dari dalam negara, mungkin muncul tidak boleh dibuka, klon perlahan. Boleh cuba: ① Gunakan tapak cermin dalam negara (seperti GitClone, ghproxy) mempercepat klon; ② Konfigurasikan Hosts atau gunakan proksi; ③ Jika utamanya untuk kolaborasi dalam negara, juga boleh pertimbangkan pengganti domestik</code> Gitee
+- Perkara yang perlu diperhatikan apabila mengakses GitHub dari dalam negara<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">GitHub kadang-kadang tidak stabil apabila diakses dari dalam negara, mungkin muncul tidak boleh dibuka, klon perlahan. Boleh cuba: ① Gunakan tapak cermin dalam negara (seperti GitClone, ghproxy) mempercepat klon; ② Konfigurasikan Hosts atau gunakan proksi; ③ Jika utamanya untuk kolaborasi dalam negara, juga boleh pertimbangkan pengganti domestik</code> Gitee.
 - , fungsinya serupa dan kelajuan akses pantas. Ramai pasukan akan menghoskan di GitHub dan Gitee serentak, mengambil kira kedua-dua pengantarabangsaan dan kelajuan domestik.
 :::
 
@@ -202,7 +202,7 @@ GitHub Pages membolehkan anda menghoskan satu laman web statik secara percuma, d
 <i class="fas fa-lightbulb mr-2"></i>cara kerja era digital
 
 {class="mt-1"}
-: pengurusan versi menjadikan semua boleh dijejak, mekanisme kolaborasi menjadikan pasukan beroperasi cekap, semangat sumber terbuka menjadikan pengetahuan mengalir bebas. Walaupun anda tidak menulis kod, memahami konsep "commit, cabang, gabung" juga boleh membantu anda menguruskan lebih baik apa-apa kandungan yang memerlukan "pengubahsuaian berulang + kolaborasi berbilang orang"—daripada tesis kepada dokumen, daripada nota kepada cadangan.
+: pengurusan versi menjadikan semua boleh dijejak, mekanisme kolaborasi menjadikan pasukan beroperasi cekap, semangat sumber terbuka menjadikan pengetahuan mengalir bebas. Walaupun anda tidak menulis kod, memahami konsep "commit, cabang, gabung" juga boleh membantu anda menguruskan lebih baik apa-apa kandungan yang memerlukan "pengubahsuaian berulang + kolaborasi berbilang orang",daripada tesis kepada dokumen, daripada nota kepada cadangan.
 :::
 
 #### 9. Ringkasan: Mengapa Setiap Orang Patut Mengenali GitHub
@@ -219,6 +219,6 @@ hello-github
 1. Masuk ke repositori, klik butang edit README.md (ikon pensil), tulis satu pengenalan diri dengan Markdown, commit perubahan.
 2. Dalam bar carian GitHub cari satu kata kunci yang anda minati (contohnya<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python-tutorial</code>), Star dua projek yang anda suka.
 3. (Lanjutan) Pasang Git di komputer, klon repositori ke tempatan, ubah README kemudian push kembali ke awan, selesaikan satu aliran kerja "tempatan → awan" yang lengkap.
-4. Bab 24: Analisis Mendalam Kebenaran Root &amp; Kunci BL<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Bab ini adalah pengembangan mendalam terhadap kandungan Bab 20, sesuai untuk pengguna yang benar-benar ingin memahami mekanisme peringkat bawah telefon, malah mencuba memuat turun sistem. Sila ambil perhatian, operasi ini mempunyai risiko tertentu, sila berhati-hati.</code>1. Memahami Bootloader Secara Mendalam
+4. Bab 24: Analisis Mendalam Kebenaran Root &amp; Kunci BL<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Bab ini adalah pengembangan mendalam terhadap kandungan Bab 20, sesuai untuk pengguna yang benar-benar ingin memahami mekanisme peringkat bawah telefon, malah mencuba memuat turun sistem. Sila ambil perhatian, operasi ini mempunyai risiko tertentu, sila berhati-hati.</code>1. Memahami Bootloader Secara Mendalam.
 5. Bootloader ialah program pertama yang berjalan semasa telefon dimulakan, tugasnya ialah memulakan perkakasan, memuatkan kernel sistem pengoperasian. Boleh anggap Bootloader sebagai "penjaga pintu" telefon.
 :::

@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十三章：数据存储与网络请求
 
 {class="chapter-intro mb-4"}
-一个只能"看"的 App 是死的；能存数据、能连网络的 App 才是活的。这一章认识安卓数据层的"三件套"：DataStore（存小配置）、Room（存结构化数据）、Retrofit（和服务器对话），外加它们的"总调度"——协程。学完这章，你就能写会记住用户习惯、会实时更新内容的真 App 了。
+一个只能"看"的 App 是死的；能存数据、能连网络的 App 才是活的。这一章认识安卓数据层的"三件套"：DataStore（存小配置）、Room（存结构化数据）、Retrofit（和服务器对话），外加它们的"总调度"，协程。学完这章，你就能写会记住用户习惯、会实时更新内容的真 App 了。
 
 #### 一、存储方案怎么选：先看这张表
 
@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 数据三件套的分工
 
-记一个口诀：<strong>"小配置进 DataStore，成批数据进 Room，外面的数据走 Retrofit"</strong>。旧教程里常见的 SharedPreferences 已被 DataStore 取代，SQLite 手写 SQL 也已被 Room 取代——直接学新的，别走老路。
+记一个口诀：<strong>"小配置进 DataStore，成批数据进 Room，外面的数据走 Retrofit"</strong>。旧教程里常见的 SharedPreferences 已被 DataStore 取代，SQLite 手写 SQL 也已被 Room 取代，直接学新的，别走老路。
 
 #### 二、DataStore：存点小配置
 
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-这套"三件套"模板可以原样搬进你的任何项目——换换字段名就行。查询返回 Flow，界面跟着数据自动刷新，妙不可言。
+这套"三件套"模板可以原样搬进你的任何项目，换换字段名就行。查询返回 Flow，界面跟着数据自动刷新，妙不可言。
 
 #### 四、Retrofit：和服务器说话
 
@@ -136,7 +136,7 @@ val result = api.getWeather("北京")
 
 #### 五、JSON 解析：给网络数据"翻译"
 
-服务器返回的数据大多是 JSON——一串像"嵌套字典"的文本。Retrofit 需要一个"翻译官"把它变成 Kotlin 对象。2026 年的两大主流方案：
+服务器返回的数据大多是 JSON，一串像"嵌套字典"的文本。Retrofit 需要一个"翻译官"把它变成 Kotlin 对象。2026 年的两大主流方案：
 
 ::: div .overflow-x-auto
 ```html
@@ -170,7 +170,7 @@ data class WeatherResponse(
 
 #### 六、协程：安卓并发的"普通话"
 
-上面反复出现的 <code class="inline">suspend</code> 和 <code class="inline">launch</code> 来自 Kotlin 协程（Coroutine）——安卓官方的并发方案。你可以粗暴地理解为：<strong>让"要等一会儿"的操作（网络、数据库）不阻塞界面</strong>。
+上面反复出现的 <code class="inline">suspend</code> 和 <code class="inline">launch</code> 来自 Kotlin 协程（Coroutine），安卓官方的并发方案。你可以粗暴地理解为：<strong>让"要等一会儿"的操作（网络、数据库）不阻塞界面</strong>。
 
 ::: div .code-block
 :::inline div .code-head
@@ -198,7 +198,7 @@ viewModelScope.launch {
 <i class="fas fa-hands mr-2"></i>来动手：做一个"每日一句"小应用
 
 {class="mt-1"}
-找一个免费的名言 API（比如 hitokoto 之类），用 Retrofit 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮（协程里重新请求）。再把喜欢的句子用 Room 存进"收藏夹"。这个练习把 DataStore/Room/Retrofit/协程全用了一遍——做完它，第 7、8 章就是小菜一碟。
+找一个免费的名言 API（比如 hitokoto 之类），用 Retrofit 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮（协程里重新请求）。再把喜欢的句子用 Room 存进"收藏夹"。这个练习把 DataStore/Room/Retrofit/协程全用了一遍，做完它，第 7、8 章就是小菜一碟。
 :::
 
 ::: div .chapter-summary

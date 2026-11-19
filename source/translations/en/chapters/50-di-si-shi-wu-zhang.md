@@ -2,21 +2,21 @@
 id: di-si-shi-wu-zhang
 num: 45
 part: ai-biancheng-pian
-nav: Chapter 45: Quality Assurance — Making AI-Written Code Reliable
+nav: Chapter 45: AI Wrote It, Now Make It Work
 toc: default
 kind: chapter
 ---
 
-### Chapter 45: Quality Assurance — Making AI-Written Code Reliable
+### Chapter 45: AI Wrote It, Now Make It Work
 
 {class="chapter-intro mb-4"}
-AI-written code has a telltale trait: it usually 'looks right' — tidy variable names, thorough comments, clear logic. But 'looking right' is not the same as 'being right.' Hidden problems in AI code are often harder to catch than in hand-written code, precisely because its surface quality is so high that it lulls you into lowering your guard. This chapter shows you how to build an effective quality assurance system for AI code — three lines of defense (testing, review, and version control) to turn 'looks right' into 'is right.'
+AI-written code has a telltale trait: it usually 'looks right' — tidy variable names, thorough comments, clear logic. But 'looking right' is not the same as 'being right.' Hidden problems in AI code are often harder to catch than in hand-written code, precisely because its surface quality is so high that it lulls you into lowering your guard. This chapter shows you how to build an effective quality assurance system for AI code, three lines of defense (testing, review, and version control) to turn 'looks right' into 'is right.'
 
 #### 1. Test-Driven: Have the AI Write the Tests
 
-Testing is the first line of defense for quality in AI coding. The good news: having the AI write tests is easier and more reliable than having it write feature code — because a test's expected behavior is well defined, it rarely produces code that 'looks right but isn't.'
+Testing is the first line of defense for quality in AI coding. The good news: having the AI write tests is easier and more reliable than having it write feature code, because a test's expected behavior is well defined, it rarely produces code that 'looks right but isn't.'
 
-The test-driven AI coding flow: first have the AI write the feature code; once the basic functionality passes, immediately have it write test cases. The test cases should cover the normal path, boundary cases, and error cases. Then have the AI fix the feature code based on the test feedback. The beauty of this flow: once the tests are written, they become a standing verification tool — any later change can be checked by running the tests to confirm no regressions slipped in.
+The test-driven AI coding flow: first have the AI write the feature code; once the basic functionality passes, immediately have it write test cases. The test cases should cover the normal path, boundary cases, and error cases. After that, have the AI fix the feature code based on the test feedback. The beauty of this flow: once the tests are written, they become a standing verification tool: any later change can be checked by running the tests to confirm no regressions slipped in.
 
 ::: div .code-block
 :::inline div .code-head
@@ -41,11 +41,11 @@ Use the Vitest framework and give the complete test file.
 ```
 :::
 
-Notice what makes this instruction work: it explicitly lists the three categories of test cases (normal, boundary, and error), leaving the AI no room to 'test selectively.' Sometimes an AI will write only happy-path tests to 'get it done fast' — spelling out every category prevents that.
+Notice what makes this instruction work: it explicitly lists the three categories of test cases (normal, boundary, and error), leaving the AI no room to 'test selectively.' Sometimes an AI will write only happy-path tests to 'get it done fast', spelling out every category prevents that.
 
 #### 2. Code Review Techniques
 
-Even with test coverage, you still need to review the AI's code yourself. Code review does not mean reading line by line — that is too slow and too dependent on your own coding skill. Effective AI code review focuses on these key dimensions:
+Even with test coverage, you still need to review the AI's code yourself. Code review does not mean reading line by line, that is too slow and too dependent on your own coding skill. Effective AI code review focuses on these key dimensions:
 
 ::: div .overflow-x-auto
 ```html
@@ -56,7 +56,7 @@ Even with test coverage, you still need to review the AI's code yourself. Code r
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Key dimensions for reviewing AI code
 
-When reviewing, you don't have to check everything one by one yourself — you can have the AI do the first pass. An instruction like: "Please review this code for security, error handling, and performance, and point out potential issues." AI's self-review ability keeps improving; it can't fully replace human review, but it helps you filter out most of the obvious problems.
+When reviewing, you don't have to check everything one by one yourself, you can have the AI do the first pass. An instruction like: "Please review this code for security, error handling, and performance, and point out potential issues." AI's self-review ability keeps improving; it can't fully replace human review, but it helps you filter out most of the obvious problems.
 
 #### III. Version Control: Git's Role in AI Coding
 
@@ -77,11 +77,11 @@ A few pitfalls show up again and again in AI coding, and almost every beginner s
 
 ##### 1. Pitfall One: The Trust Trap
 
-"Code written by AI looks so professional — it must be fine, right?" This is the most dangerous trap. AI-generated code is very tidy on the surface — proper naming, complete comments, clear structure — and that "surface polish" makes people lower their guard. But a tidy surface doesn't mean the logic is correct. The antidote: always verify through testing, never judge by "does it look right."
+"Code written by AI looks so professional, it must be fine, right?" This is the most dangerous trap. AI-generated code is very tidy on the surface: proper naming, complete comments, clear structure: and that "surface polish" makes people lower their guard. But a tidy surface doesn't mean the logic is correct. The antidote: always verify through testing, never judge by "does it look right."
 
 ##### 2. Pitfall Two: The Bloat Trap
 
-"Since AI can write my code, why not make the features more complete?" That leads to code bloat. AI is great at "giving extra": ask it for a login page and it hands you a full user management system. Extra features don't just add complexity — they raise the odds of bugs too. The antidote: strictly follow the Simplicity First principle and tell the AI explicitly to "build only this feature, add nothing extra."
+"Since AI can write my code, why not make the features more complete?" That leads to code bloat. AI is great at "giving extra": ask it for a login page and it hands you a full user management system. Extra features don't just add complexity: they raise the odds of bugs too. The antidote: strictly follow the Simplicity First principle and tell the AI explicitly to "build only this feature, add nothing extra."
 
 ##### 3. Pitfall Three: The Understanding Trap
 
@@ -89,14 +89,14 @@ A few pitfalls show up again and again in AI coding, and almost every beginner s
 
 ##### 4. Pitfall Four: The Context Trap
 
-"I said this earlier in the conversation — the AI should still remember, right?" It very likely doesn't. As conversations get longer or you start new sessions, the AI loses earlier context. If a key constraint isn't written into the project memory file, it will very likely be ignored in later changes. The antidote: write key constraints into the project memory file instead of relying on conversational memory.
+"I said this earlier in the conversation, the AI should still remember, right?" It very likely doesn't. As conversations get longer or you start new sessions, the AI loses earlier context. If a key constraint isn't written into the project memory file, it will very likely be ignored in later changes on the project. The antidote is simple: write the key constraints into the project memory file.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 The Four Traps at a Glance
 
 {class="mt-1"}
-Trust trap — don't trust "it looks right"; Bloat trap — AI loves to "give extra"; Understanding trap — vague requirements make it "guess"; Context trap — conversational memory "forgets." The matching antidotes: verify with tests, cut the extras, give full details, write to the memory file.
+Trust trap, don't trust "it looks right"; Bloat trap — AI loves to "give extra"; Understanding trap, vague requirements make it "guess"; Context trap — conversational memory "forgets." The matching antidotes: verify with tests, cut the extras, give full details, write to the memory file.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -111,7 +111,7 @@ If you've already started Project One (the tool site): ① have the AI write the
 {class="font-semibold mb-1"}
 Chapter Summary
 
-- AI code that "looks right" ≠ "is right" — when the surface looks too good, it's easy to lower your guard
+- AI code that "looks right" ≠ "is right": when the surface looks too good, it's easy to lower your guard
 - Have the AI write tests: explicitly list the three case types (normal / boundary / error) to prevent "selective testing"
 - Five review dimensions: security, error handling, performance, maintainability, dependency management
 - Git is your "undo button": commit often, move in small steps, isolate with branches, check the diff often

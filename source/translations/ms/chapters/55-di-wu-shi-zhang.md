@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 50: Panduan Pantas Kotlin — Bahasa Pertama Pembangunan Android
 
 {class="chapter-intro mb-4"}
-Dalam bab ini kita mula belajar bahasa secara rasmi. Jangan gementar — Kotlin terkenal 'mesra pemula', dan anda tidak perlu menghafal buku tatabahasa: kuasai dahulu 20% tatabahasa, anda sudah boleh memahami dan menulis 80% kod harian. Sisanya dicari semasa membuat projek. Ingat prinsip pembelajaran kita: memahami > menghafal, boleh guna > mahir.
+Dalam bab ini kita mula belajar bahasa secara rasmi. Jangan gementar: Kotlin terkenal 'mesra pemula', dan anda tidak perlu menghafal buku tatabahasa: kuasai dahulu 20% tatabahasa, anda sudah boleh memahami dan menulis 80% kod harian. Sisanya dicari semasa membuat projek. Ingat prinsip pembelajaran kita: memahami > menghafal, boleh guna > mahir.
 
 #### 1. Pemboleh Ubah dan Jenis: Memberi Nama kepada Data
 
@@ -49,12 +49,12 @@ Jenis asas lazim Kotlin
 Petua: Prinsip Keutamaan val
 
 {class="mt-1"}
-Hukum mutlak komuniti Kotlin: guna val secara lalai, guna var hanya apabila benar-benar perlu. Jika guna var di tempat yang boleh guna val, IDE akan memberi amaran dengan teks kuning. Tabiat ini membantu anda mengelakkan satu kategori besar pepijat 'pemboleh ubah diubah tanpa sengaja' — semakin sedikit perubahan pada kod, semakin mudah ia difahami.
+Hukum mutlak komuniti Kotlin: guna val secara lalai, guna var hanya apabila benar-benar perlu. Jika guna var di tempat yang boleh guna val, IDE akan memberi amaran dengan teks kuning. Tabiat ini membantu anda mengelakkan satu kategori besar pepijat 'pemboleh ubah diubah tanpa sengaja': semakin sedikit perubahan pada kod, semakin mudah ia difahami.
 :::
 
 #### 2. Fungsi: Membungkus Logik Menjadi 'Butang'
 
-Fungsi ialah satu logik yang bernama, seperti butang pada alat kawalan jauh — tekan sekali (panggil), satu siri tindakan dilaksanakan. Dalam Kotlin, isytiharkan dengan fun:
+Fungsi ialah satu logik yang bernama, seperti butang pada alat kawalan jauh, tekan sekali (panggil), satu siri tindakan dilaksanakan. Dalam Kotlin, isytiharkan dengan fun:
 
 ::: div .code-block
 :::inline div .code-head
@@ -75,7 +75,7 @@ println(add(3, 5))            // Output: 8
 ```
 :::
 
-Beberapa perkara penting: parameter ditulis dalam tanda kurung (nama di hadapan, jenis di belakang, dipisahkan dengan usus besar); jenis pulangan ditulis selepas tanda kurung; templat rentetan $namapembolehubah ialah kemudahan khas Kotlin — tidak perlu lagi mencantum 'rentetan + pemboleh ubah' seperti dalam Java.
+Beberapa perkara penting: parameter ditulis dalam tanda kurung (nama di hadapan, jenis di belakang, dipisahkan dengan usus besar); jenis pulangan ditulis selepas tanda kurung; templat rentetan $namapembolehubah ialah kemudahan khas Kotlin, tidak perlu lagi mencantum 'rentetan + pemboleh ubah' seperti dalam Java.
 
 #### 3. Syarat dan Gelung: Membuat Program 'Berfikir'
 
@@ -115,7 +115,7 @@ when ialah cara pencabangan berbilang yang paling kerap digunakan dalam Kotlin; 
 
 #### 4. Keselamatan Null: 'Penyelamat Nyawa' Kotlin
 
-Pepijat paling terkenal zaman Java dipanggil NullPointerException (pengecualian penuding kosong) — program mengakses sesuatu yang 'tiada apa-apa' dan terus ranap. Menurut statistik, ia sentiasa nombor satu dalam senarai ranapan Android. Kotlin menyelesaikannya pada peringkat bahasa: nilai kosong tidak dibenarkan secara lalai.
+Pepijat paling terkenal zaman Java dipanggil NullPointerException (pengecualian penuding kosong), program mengakses sesuatu yang 'tiada apa-apa' dan terus ranap. Menurut statistik, ia sentiasa nombor satu dalam senarai ranapan Android. Kotlin menyelesaikannya pada peringkat bahasa: nilai kosong tidak dibenarkan secara lalai.
 
 ::: div .code-block
 :::inline div .code-head
@@ -141,12 +141,12 @@ println(len)
 Perhatian: Jangan Tertukar antara ? dan ?:
 
 {class="mt-1"}
-String? bermaksud 'dibenarkan kosong', a ?: b bermaksud 'jika a kosong guna b' (bentuknya mirip gaya rambut Elvis, sebab itu dipanggil operator Elvis). Ketika mula menulis kod, jika kompiler melaporkan 'ralat berkaitan null', kebarangkalian besar anda terlupa mengendalikan jenis boleh kosong — itulah bahasa itu sedang melindungi anda.
+String? bermaksud 'dibenarkan kosong', a ?: b bermaksud 'jika a kosong guna b' (bentuknya mirip gaya rambut Elvis, sebab itu dipanggil operator Elvis). Ketika mula menulis kod, jika kompiler melaporkan 'ralat berkaitan null', kebarangkalian besar anda terlupa mengendalikan jenis boleh kosong, itulah bahasa itu sedang melindungi anda.
 :::
 
 #### 5. Kelas dan Objek: Acuan Pembuat 'Komponen'
 
-Kelas ialah 'acuan' objek, objek ialah 'hasil siap' kelas. Segala benda dalam Android — halaman, butang, data — semuanya objek. Dalam Kotlin ada senjata ajaib dipanggil data class (kelas data), khusus untuk 'memuat data'; satu baris setara puluhan baris Java:
+Kelas ialah 'acuan' objek, objek ialah 'hasil siap' kelas. Segala benda dalam Android, halaman, butang, data, semuanya objek. Dalam Kotlin ada senjata ajaib dipanggil data class (kelas data), khusus untuk 'memuat data'; satu baris setara puluhan baris Java:
 
 ::: div .code-block
 :::inline div .code-head
@@ -174,7 +174,7 @@ Kelak apabila anda membina buku perakaunan, setiap rekod ialah satu data class: 
 
 #### 6. Lambda dan Fungsi Peringkat Tinggi: 'Gula Sintaks' Kotlin
 
-Dalam kod Android anda akan melihat { ... } 'fungsi tanpa nama' ini setiap hari; ia dipanggil lambda (fungsi tanpa nama). onClick = { count++ } pada Button ialah satu lambda — membungkus 'apa yang dilakukan selepas ditekan' menjadi satu bungkusan dan menyerahkannya kepada butang.
+Dalam kod Android anda akan melihat { ... } 'fungsi tanpa nama' ini setiap hari; ia dipanggil lambda (fungsi tanpa nama). onClick = { count++ } pada Button ialah satu lambda, membungkus 'apa yang dilakukan selepas ditekan' menjadi satu bungkusan dan menyerahkannya kepada butang.
 
 ::: div .code-block
 :::inline div .code-head

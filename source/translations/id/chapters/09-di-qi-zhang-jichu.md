@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Satu, Komunikasi Satelit: Meminta Bantuan Tanpa Sinyal
 
-#### Komunikasi satelit adalah terobosan besar di bidang ponsel dalam beberapa tahun terakhir. Saat Anda berada di daerah terpencil, hutan belantara, atau pegunungan dalam, di mana ponsel sama sekali tidak memiliki sinyal, komunikasi satelit bisa menjadi penyelamat.
+Komunikasi satelit adalah terobosan besar di bidang ponsel dalam beberapa tahun terakhir. Saat Anda berada di daerah terpencil, hutan belantara, atau pegunungan dalam, di mana ponsel sama sekali tidak memiliki sinyal, komunikasi satelit bisa menjadi penyelamat.
 
 Prinsip Kerja:
 
@@ -22,7 +22,7 @@ Model yang Didukung:
 
 ##### Apple
 
-- <strong>Apple</strong>: Seri iPhone 14 dan setelahnya, mendukung SOS darurat via satelit. Seri iPhone 17 lebih lanjut mendukung pengiriman iMessage dan SMS via satelit, dan memperluas cakupan ke lebih banyak wilayah.
+- <strong>Apple</strong>: Seri iPhone 14 dan setelahnya, mendukung SOS darurat via satelit. Seri iPhone 17 lebih lanjut mendukung pengiriman iMessage dan SMS via satelit, dan memperluas cakupan ke lebih banyak wilayah
 - <strong>Huawei</strong> Xiaomi/OPPO/vivo
 - <strong>: Sejak 2024 model unggulan secara bertahap mendukung fitur pesan satelit BeiDou.</strong> Tren perkembangan
 - <strong>: Komunikasi satelit sedang berkembang dari fitur eksklusif flagship kelas atas ke kelas bawah, di masa depan model kelas menengah juga diharapkan dapat mendukung. Sistem satelit BeiDou Tiongkok memiliki dukungan terluas di ponsel domestik.</strong> Skenario Penggunaan:
@@ -31,14 +31,14 @@ Model yang Didukung:
 
 - Kecelakaan di laut.
 - Bencana alam yang menyebabkan komunikasi darat terputus.
-- Cara Penggunaan:
+- Cara Penggunaan:.
 
 ##### Pastikan berada di area terbuka yang dapat melihat langit.
 
 1. Buka fitur komunikasi satelit ponsel (biasanya di antarmuka panggilan darurat).
 2. Ikuti petunjuk layar, arahkan ke arah satelit.
 3. Kirim pesan bantuan dan lokasi yang sudah ditentukan.
-4. Pengetahuan Singkat
+4. Pengetahuan Singkat.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -48,7 +48,7 @@ Model yang Didukung:
 Dua, Komunikasi Tanpa Jaringan: Cara Baru Komunikasi Jarak Dekat
 :::
 
-#### "Komunikasi tanpa jaringan" mengacu pada teknologi di mana dua ponsel dapat berkomunikasi langsung tanpa jaringan seluler dan Wi-Fi.
+"Komunikasi tanpa jaringan" mengacu pada teknologi di mana dua ponsel dapat berkomunikasi langsung tanpa jaringan seluler dan Wi-Fi.
 
 Prinsip Teknologi:
 
@@ -68,7 +68,7 @@ Skenario Aplikasi:
 - <strong>Huawei</strong> Xiaomi
 - <strong>Xiaomi</strong> Tiga, Deteksi Kecelakaan Mobil: Penyelamat di Saat Kritis
 
-#### Deteksi kecelakaan mobil adalah fitur yang menggunakan sensor ponsel untuk mendeteksi kecelakaan parah dan secara otomatis memanggil telepon darurat.
+Deteksi kecelakaan mobil adalah fitur yang menggunakan sensor ponsel untuk ,mendeteksi kecelakaan parah dan secara otomatis memanggil telepon darurat.
 
 Prinsip Kerja:
 
@@ -78,7 +78,7 @@ Menampilkan antarmuka hitungan mundur, menanyakan apakah Anda baik-baik saja.
 
 1. Jika hitungan mundur berakhir dan Anda tidak merespons, secara otomatis memanggil telepon darurat.
 2. Mengirim lokasi Anda ke kontak darurat.
-3. Model yang Didukung:
+3. Model yang Didukung:.
 
 ##### Apple
 
@@ -89,9 +89,9 @@ Menampilkan antarmuka hitungan mundur, menanyakan apakah Anda baik-baik saja.
 
 - Dapat terpicu secara salah (misalnya roller coaster, olahraga intens), cukup batalkan saja.
 - Bergantung pada sensor dan algoritma, tidak 100% andal, namun menambah satu lapis perlindungan ekstra.
-- Empat, Teknologi SparkLink: Koneksi Nirkabel Generasi Berikutnya
+- Empat, Teknologi SparkLink: Koneksi Nirkabel Generasi Berikutnya.
 
-#### SparkLink adalah teknologi komunikasi nirkabel generasi baru yang dipimpin pengembangannya oleh Huawei, dengan target menggantikan Bluetooth dan Wi-Fi dalam beberapa skenario. Pada indikator kunci, ia menandingi atau bahkan melampaui solusi yang ada: kecepatan air interface dapat mencapai 900Mbps (jauh melampaui 50Mbps Bluetooth), latensi serendah 20μs (Bluetooth sekitar 15ms), satu jaringan mendukung 4096 perangkat terhubung secara bersamaan (Bluetooth biasanya di bawah 8).
+SparkLink adalah teknologi komunikasi nirkabel generasi baru yang dipimpin pengembangannya oleh Huawei, dengan target menggantikan Bluetooth dan Wi-Fi dalam beberapa skenario. Pada indikator kunci, ia menandingi atau bahkan melampaui solusi yang ada: kecepatan air interface dapat mencapai 900Mbps (jauh melampaui 50Mbps Bluetooth), latensi serendah 20μs (Bluetooth sekitar 15ms), satu jaringan mendukung 4096 perangkat terhubung secara bersamaan (Bluetooth biasanya di bawah 8).
 
 Karakteristik Teknologi:
 
@@ -129,5 +129,5 @@ Periksa: Apakah ponsel Anda mendukung fitur-fitur ini
 1. Cari "deteksi kecelakaan" atau "SOS darurat", periksa apakah diaktifkan.
 2. Jika ponsel Anda adalah Huawei, lihat apakah mendukung koneksi perangkat SparkLink.
 3. Pelajari cara penggunaan fitur-fitur ini, mungkin berguna di saat kritis.
-4. II. Bagian Perangkat Lunak (Bab 8-14)
+4. II. Bagian Perangkat Lunak (Bab 8-14).
 :::

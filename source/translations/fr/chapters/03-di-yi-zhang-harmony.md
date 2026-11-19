@@ -21,7 +21,7 @@ Par exemple : vous regardez une vidéo sur votre smartphone et voulez la voir su
 
 #### II. HarmonyOS 4.3 : version mature basée sur AOSP
 
-HarmonyOS 4.3 est la version largement déployée sur les smartphones Huawei actuels. À noter, HarmonyOS 4.3 est compatible avec le cadre de code du projet open source Android (AOSP), il peut donc être entièrement compatible avec les applications Android — la plupart des apps que vous téléchargez sur l'AppGallery de Huawei sont essentiellement des applications Android, exécutées via la couche de compatibilité de HarmonyOS. Mais HarmonyOS 4.3 n'est pas un simple Android renommé : il ajoute de nombreuses capacités distribuées propriétaires de Huawei, le moteur Ark, etc., sur la base d'AOSP.
+HarmonyOS 4.3 est la version largement déployée sur les smartphones Huawei actuels. À noter, HarmonyOS 4.3 est compatible avec le cadre de code du projet open source Android (AOSP), il peut donc être entièrement compatible avec les applications Android, la plupart des apps que vous téléchargez sur l'AppGallery de Huawei sont essentiellement des applications Android, exécutées via la couche de compatibilité de HarmonyOS. Mais HarmonyOS 4.3 n'est pas un simple Android renommé : il ajoute de nombreuses capacités distribuées propriétaires de Huawei, le moteur Ark, etc., sur la base d'AOSP.
 
 ##### Caractéristiques clés :
 
@@ -39,7 +39,7 @@ HarmonyOS 4.3 est la version largement déployée sur les smartphones Huawei act
 - <strong>Super hub de transit</strong>: une zone de stockage temporaire, peut stocker texte, images, fichiers, puis les glisser dans n'importe quelle app. Le partage inter-applications devient ultra fluide.
 - <strong>Recherche intelligente</strong>: recherche globale, peut chercher apps, fichiers, réglages, pages web.
 
-#### III. HarmonyOS NEXT (HarmonyOS 6) : le vrai point de départ du système d'exploitation propriétaire de Huawei
+III. HarmonyOS NEXT (HarmonyOS 6) : le vrai point de départ du système d'exploitation propriétaire de Huawei
 
 HarmonyOS NEXT (HarmonyOS NEXT 5.0) est fondamentalement différent de HarmonyOS 4.3 — il adopte le micro-noyau HarmonyOS propriétaire de Huawei, ne dépend plus du noyau Linux et du code AOSP, et <strong>ne prend plus directement en charge les applications Android</strong>. C'est l'étape clé qui fait passer HarmonyOS de « forme de transition compatible Android » à « système d'exploitation totalement indépendant ».
 
@@ -48,7 +48,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0) est fondamentalement différent de HarmonyOS
 - <strong>Noyau entièrement propriétaire</strong>: HarmonyOS NEXT utilise le noyau propriétaire de Huawei, ne contient plus aucun code AOSP. Le système est plus léger, plus sûr, plus efficace.
 - <strong>Ne prend plus en charge les applications Android</strong>: c'est le plus grand changement. HarmonyOS NEXT ne peut exécuter que des applications HarmonyOS natives, impossible d'installer et d'exécuter des fichiers APK. Avant la mise à niveau, vérifiez que vos apps usuelles ont déjà une version native HarmonyOS.
 - <strong>Écosystème d'applications natives</strong>: Huawei pousse activement les développeurs à migrer leurs applications vers la plateforme native HarmonyOS. Actuellement, les apps principales comme WeChat, Alipay, Taobao ont déjà des versions natives HarmonyOS, mais certaines applications de niche peuvent ne pas encore être adaptées.
-- <strong>Architecture de sécurité Xingdun</strong>: tout nouveau système de sécurité, protection de bout en bout du matériel au logiciel. Prend en charge un contrôle des autorisations plus fin, par exemple « localisation floue » — l'application ne sait que approximativement où vous êtes, pas la position précise.
+- <strong>Architecture de sécurité Xingdun</strong>: tout nouveau système de sécurité, protection de bout en bout du matériel au logiciel. Prend en charge un contrôle des autorisations plus fin, par exemple « localisation floue », l'application ne sait que approximativement où vous êtes, pas la position précise.
 - <strong>Intégration profonde de l'IA</strong>: capacités IA au niveau système, pas seulement une app avec IA. Par exemple, les sous-titres IA peuvent traduire les vidéos en temps réel, le détourage IA peut identifier intelligemment le sujet.
 - <strong>Transfert sans couture inter-appareils</strong>: capacités distribuées encore plus avancées. L'état de l'application peut basculer sans couture entre appareils : le document que vous éditez sur le smartphone s'ouvre automatiquement sur l'ordinateur quand vous vous en approchez.
 - <strong>Méta-services</strong>: services légers utilisables sans installation. Par exemple, scanner un QR code ouvre directement une fonctionnalité, sans avoir à télécharger l'app au préalable.

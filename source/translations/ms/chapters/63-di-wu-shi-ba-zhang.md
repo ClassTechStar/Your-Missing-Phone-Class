@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 58: Manual rujukan pantas dan sumber
 
 {class="chapter-intro mb-4"}
-Bab ini ialah manual rujukan pantas yang boleh digunakan secara berasingan. Apabila anda lupa sesuatu sintaks atau perlu membuat keputusan pantas, terus rujuk sini. Disyorkan untuk menjadikannya "kad saku": rujukan pantas kod biasa, soalan lazim, sumber pembelajaran — tiada halaman tertinggal.
+Bab ini ialah manual rujukan pantas yang boleh digunakan secara berasingan. Apabila anda lupa sesuatu sintaks atau perlu membuat keputusan pantas, terus rujuk sini. Disyorkan untuk menjadikannya "kad saku": rujukan pantas kod biasa, soalan lazim, sumber pembelajaran: tiada halaman tertinggal.
 
 #### 1. Kad rujukan pantas kod biasa
 
@@ -31,11 +31,11 @@ Ikuti laluan buku ini: minggu 1-2 pasang persekitaran dan belajar asas Kotlin; m
 
 S2: Adakah Java masih perlu dipelajari?
 
-Tidak perlu. Projek baharu, tutorial baharu dan jawatan baharu pada asasnya semuanya menggunakan Kotlin. Anda hanya akan bertemu banyak Java apabila "menyelenggara projek lama berumur sepuluh tahun". Selepas menguasai Kotlin, jika kerja memerlukannya, menambah Java akan cepat — kedua-duanya berkongsi ekosistem mesin maya yang sama.
+Tidak perlu. Projek baharu, tutorial baharu dan jawatan baharu pada asasnya semuanya menggunakan Kotlin. Anda hanya akan bertemu banyak Java apabila "menyelenggara projek lama berumur sepuluh tahun". Selepas menguasai Kotlin, jika kerja memerlukannya, menambah Java akan cepat, kedua-duanya berkongsi ekosistem mesin maya yang sama.
 
 S3: Emulator atau peranti sebenar?
 
-Emulator memang mudah untuk debug semasa pembangunan (snapshot, pelbagai model), tetapi penerimaan akhir mesti melalui peranti sebenar — sentuhan, prestasi, rangkaian sebenar, penderia, semuanya tidak boleh digantikan oleh emulator. Jika berkemampuan, membeli satu peranti sebenar kelas pertengahan sebagai peranti ujian ialah pelaburan paling berbaloi.
+Emulator memang mudah untuk debug semasa pembangunan (snapshot, pelbagai model), tetapi penerimaan akhir mesti melalui peranti sebenar, sentuhan, prestasi, rangkaian sebenar, penderia, semuanya tidak boleh digantikan oleh emulator. Jika berkemampuan, membeli satu peranti sebenar kelas pertengahan sebagai peranti ujian ialah pelaburan paling berbaloi.
 
 S4: Senangkah mendapat kerja dalam pembangunan Android?
 
@@ -74,17 +74,17 @@ Rujukan pantas arahan Gradle biasa
 Petua: jika binaan bermasalah, jalankan clean dahulu
 
 {class="mt-1"}
-Peristiwa misteri "semalam boleh jalan, hari ini tiba-tiba tidak" — enam atau tujuh daripada sepuluh kali disebabkan cache binaan bercelaru. Jalankan ./gradlew clean kemudian bina semula; ini boleh menyembuhkan lebih separuh masalah "misteri". Jika masih tidak boleh, mulakan semula Android Studio — petua ini paling berkesan digandingkan dengan File → Invalidate Caches.
+Peristiwa misteri "semalam boleh jalan, hari ini tiba-tiba tidak", enam atau tujuh daripada sepuluh kali disebabkan cache binaan bercelaru. Jalankan ./gradlew clean kemudian bina semula; ini boleh menyembuhkan lebih separuh masalah "misteri". Jika masih tidak boleh, mulakan semula Android Studio: petua ini paling berkesan digandingkan dengan File → Invalidate Caches.
 :::
 
 #### 5. Penutup: daripada aplikasi pertama ke aplikasi ke-N
 
-Bila dilihat semula, anda daripada "tidak tahu apa itu Activity" kepada memasang persekitaran, menguasai Kotlin, melukis antara muka dengan Compose, menyambungkan aplikasi kepada pangkalan data dan rangkaian, kemudian menguji, membungkus dan menerbitkan — di laluan ini, anda telah menamatkan bahagian paling sukar daripada perjalanan sifar ke satu.
+Bila dilihat semula, anda daripada "tidak tahu apa itu Activity" kepada memasang persekitaran, menguasai Kotlin, melukis antara muka dengan Compose. menyambungkan aplikasi kepada pangkalan data dan rangkaian, kemudian menguji, membungkus dan menerbitkan, di laluan ini, anda telah menamatkan bahagian paling sukar daripada perjalanan sifar ke satu.
 
 Dunia teknologi berubah sangat pantas: rangka kerja akan dinaik taraf, alat akan berganti, AI akan mengambil alih lebih banyak kerja "menaip papan kekunci". Tetapi ada satu perkara yang tidak akan lapuk: kebolehan anda menguraikan idea yang kabar kepada langkah-langkah yang jelas, kemudian melaksanakannya langkah demi langkah. Alat ialah pengganda, pemikiran ialah asas. Pengganda boleh diganti, tetapi asas tidak boleh digoyang.
 
 :::inline div .quote-line
-Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta peranti Android. Mulai hari ini, berkarya dengan papan kekunci—itulah romantisme pembangun Android.
+Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta peranti Android. Mulai hari ini, berkarya dengan papan kekunci,itulah romantisme pembangun Android.
 :::
 
 #### Rujukan

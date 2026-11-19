@@ -31,14 +31,14 @@ Limites no uso de gravações
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Não use gravações para chantagem, divulgação ou humilhação pública de outras pessoas.
 - Conteúdo que envolva a privacidade de terceiros (por exemplo, uma conversa alheia gravada por acaso) não pode ser espalhado livremente.
-- Em situações importantes, recomenda-se avisar verbalmente no início da chamada que "esta conversa será gravada" — isso é mais correto e dá mais força probatória.
+- Em situações importantes, recomenda-se avisar verbalmente no início da chamada que "esta conversa será gravada", isso é mais correto e dá mais força probatória.
 :::
 
 ##### Conteúdo aprofundado sobre combate a chamadas indesejadas:
 
 - Como funciona: o app de telefone consulta uma enorme base de números pela internet e, na hora da chamada, mostra "spam", "golpe" ou o nome da empresa.
 - Como ativar: no Android, abra o app de telefone > Configurações > Bloqueio de spam; no iOS, vá em Configurações > Telefone > Bloqueio e Identificação de Chamadas. Os caminhos detalhados por marca e as opções recomendadas estão na tabela comparativa do Capítulo 13 «Ferramentas úteis do sistema».
-- Principais plataformas de marcação: na China, a marcação de números é feita principalmente por três provedores de dados — Tencent Mobile Manager, 360 Mobile Guard e Diànghuà Bāng (Tapir). As operadoras (China Mobile/Unicom/Telecom) também costumam usar esses dados para exibir o "nome do titular" e o bloqueio de spam. As bases de marcação dos fabricantes (Huawei, Xiaomi, OPPO, vivo) geralmente se integram a esses provedores.
+- Principais plataformas de marcação: na China, a marcação de números é feita principalmente por três provedores de dados, Tencent Mobile Manager, 360 Mobile Guard e Diànghuà Bāng (Tapir). As operadoras (China Mobile/Unicom/Telecom) também costumam usar esses dados para exibir o "nome do titular" e o bloqueio de spam. As bases de marcação dos fabricantes (Huawei, Xiaomi, OPPO, vivo) geralmente se integram a esses provedores.
 - E se o seu número for marcado por engano: se o seu número de trabalho normal for marcado erradamente como "delivery", "correios" ou "spam", você pode recorrer pelos seguintes canais: |   |  Diànghuà Bāng: acesse a plataforma de recurso de números (haoma.tk.cn) e envie um documento de identidade.
 - 360: envie pelo recurso "Recurso de número" dentro do app 360 Mobile Guard.
 - Tencent: envie pela página "Recurso de número" do miniapp "Tencent Mobile Manager".
@@ -49,7 +49,7 @@ Limites no uso de gravações
 - Lista negra / lista branca: bloqueie manualmente números de spam conhecidos; adicione contatos e números de entrega à lista branca para evitar bloqueios acidentais.
 - Filtro de palavras-chave em SMS: mensagens com termos como "prêmio", "empréstimo" ou "clique no link" vão automaticamente para a caixa de bloqueio.
 - Silenciar chamadas desconhecidas no iOS: chamadas fora dos contatos são apenas silenciadas e vão para o correio de voz, sem interromper você; ideal para quem recebe muito spam, mas fique atento a chamadas importantes de desconhecidos.
-- Integração com o modo Não Perturbe: à noite ou em reuniões, permita apenas chamadas dos contatos, combinado com agendamento automático — a qualidade do sono melhora na hora.
+- Integração com o modo Não Perturbe: à noite ou em reuniões, permita apenas chamadas dos contatos, combinado com agendamento automático, a qualidade do sono melhora na hora.
 - Como combinar com apps úteis: priorize o bloqueio nativo do sistema e some o Centro Nacional Antifraude e o antispam da operadora; para limpeza, ferramentas leves como Qingzhuo são opções, mas instale apenas um app de segurança/limpeza de cada tipo — veja o Capítulo 13.
 
 ##### O que é VoLTE/VoNR e como ativar:
@@ -72,7 +72,7 @@ O SMS tradicional não foi aposentado: continua sendo um canal confiável para r
 
 - iMessage: mensagens enviadas pela internet entre dispositivos Apple, exibidas em balões azuis. Suporta fotos e vídeos de alta qualidade, confirmação de leitura etc., é totalmente gratuito e com criptografia de ponta a ponta.
 - RCS: protocolo de comunicação de nova geração impulsionado por operadoras e pelo Google em todo o mundo. Funciona de forma semelhante ao iMessage ou WeChat, mas baseado no número de telefone.
-- Interoperabilidade entre iMessage e RCS: a partir do iOS 18, a Apple passou a suportar o padrão RCS. Isso significa que iPhones e Androids podem trocar imagens em alta definição, confirmações de leitura e indicadores de digitação via RCS — fim da experiência dos "balões verdes". O pré-requisito é que as operadoras de ambos os lados tenham RCS habilitado e que o sistema esteja atualizado o suficiente.
+- Interoperabilidade entre iMessage e RCS: a partir do iOS 18, a Apple passou a suportar o padrão RCS. Isso significa que iPhones e Androids podem trocar imagens em alta definição, confirmações de leitura e indicadores de digitação via RCS, fim da experiência dos "balões verdes". O pré-requisito é que as operadoras de ambos os lados tenham RCS habilitado e que o sistema esteja atualizado o suficiente.
 
 ##### Situação do RCS na China:
 
@@ -86,7 +86,7 @@ O SMS tradicional não foi aposentado: continua sendo um canal confiável para r
 Limites de segurança com códigos de verificação
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Nunca encaminhe códigos de verificação: qualquer pessoa que peça para você "ler o código" ou "encaminhar o SMS" pode ser golpista — inclusive quem se diz "atendente", "entregador" ou "polícia/justiça". Código de verificação = o seu dinheiro.
+- Nunca encaminhe códigos de verificação: qualquer pessoa que peça para você "ler o código" ou "encaminhar o SMS" pode ser golpista, inclusive quem se diz "atendente", "entregador" ou "polícia/justiça". Código de verificação = o seu dinheiro.
 - Cuidado com SMS de phishing: desconfie de links em mensagens como "seu ETC expirou", "cartão de saúde congelado" ou "indenização por encomenda perdida". Instituições sérias nunca pedem número de cartão ou senha por link em SMS.
 - Identificação do número: SMS oficiais de bancos costumam vir de códigos curtos que começam com 95 ou de 1069 + assinatura da empresa. Qualquer "aviso de banco" vindo de um celular comum de 11 dígitos é quase sempre golpe.
 - Backup de autenticação em dois fatores: não troque de número sem necessidade se ele estiver vinculado a contas importantes; se precisar trocar, desvincule antes todas as contas críticas. Caso contrário, o novo dono do número pode redefinir suas senhas por SMS.
@@ -114,10 +114,10 @@ WeChat e QQ já ultrapassaram o papel de ferramentas de comunicação e se torna
 
 ##### Dicas de gerenciamento de grupos:
 
-- Anúncio do grupo: o administrador publica em "..." > [Anúncio do grupo], no canto superior direito. Todos recebem alerta forte — ideal para avisos importantes. Aparece automaticamente para novos membros.
+- Anúncio do grupo: o administrador publica em "..." > [Anúncio do grupo], no canto superior direito. Todos recebem alerta forte, ideal para avisos importantes. Aparece automaticamente para novos membros.
 - Tarefas do grupo: o administrador pode fixar uma mensagem como "tarefa do grupo"; todos veem um aviso vermelho que desaparece ao concluir. Ótimo para inscrições e coleta de tarefas.
 - Lista colaborativa: digite "#lista" no campo de texto para iniciar uma lista em sequência, útil para pedidos de comida e contagem de inscrições. O resultado é consolidado no topo do grupo, sem inundar o chat.
-- Live no grupo: " + " no canto superior direito > [Live do grupo]. A transmissão fica restrita ao grupo — bom para treinamentos internos, encontros de família e testes de produto.
+- Live no grupo: " + " no canto superior direito > [Live do grupo]. A transmissão fica restrita ao grupo, bom para treinamentos internos, encontros de família e testes de produto.
 - Dobrar o grupo: na lista de grupos, deslize o nome para a esquerda > [Dobrar]. Grupos menos importantes ficam em "Grupos dobrados" e só avisam quando mencionarem você.
 - Somente administradores @todos: em grupos com mais de 500 membros, membros comuns não podem mencionar todos, evitando distrações.
 
@@ -136,7 +136,7 @@ Cada ferramenta de videochamada tem seus pontos fortes. Escolher a certa para ca
 - WeChat Video: cobertura nacional, fácil para todas as idades. Ideal para contato diário com família e amigos. Suporta até 20 pessoas (via miniapp "Video em grupo"); a desvantagem é a queda acentuada de qualidade em redes ruins.
 - FaceTime: exclusivo do ecossistema Apple, com ótima qualidade e criptografia de ponta a ponta. Desde o iOS 15, aceita convites por "link" para usuários Android/Web, mas o anfitrião precisa ser um dispositivo Apple. Ideal para famílias com aparelhos mistos.
 - Zoom: primeira opção para reuniões internacionais, com reuniões gratuitas de até 40 minutos para 100 pessoas. Tem compartilhamento de tela, fundo virtual e salas de breakout — ótimo para colaboração remota e internacional.
-- Tencent Meeting: preferida no ambiente corporativo chinês, integra-se profundamente ao WeChat e permite entrada por QR code. Suporta reuniões de 300 pessoas (plano pago), com gravação na nuvem, legendas ao vivo e atas automáticas — ideal para treinamentos e eventos grandes.
+- Tencent Meeting: preferida no ambiente corporativo chinês, integra-se profundamente ao WeChat e permite entrada por QR code. Suporta reuniões de 300 pessoas (plano pago), com gravação na nuvem, legendas ao vivo e atas automáticas, ideal para treinamentos e eventos grandes.
 - Recomendações por cenário: 1 a 1 no dia a dia, WeChat; entre usuários Apple, FaceTime; reuniões de negócios formais, Zoom ou Tencent Meeting (na China, Tencent; no exterior, Zoom).
 
 ##### Referência de largura de banda e consumo de dados:
@@ -159,7 +159,7 @@ Cada ferramenta de videochamada tem seus pontos fortes. Escolher a certa para ca
 Dica rápida
 
 {class="mt-1"}
-Se a rede travar, desligue o vídeo e mantenha só o áudio — é mais educado do que desligar a chamada. Antes de reuniões importantes, use o "Teste de rede" do Tencent Meeting para medir a largura de banda.
+Se a rede travar, desligue o vídeo e mantenha só o áudio, é mais educado do que desligar a chamada. Antes de reuniões importantes, use o "Teste de rede" do Tencent Meeting para medir a largura de banda.
 :::
 
 #### 5. E-mail: configurar e usar no celular
@@ -170,7 +170,7 @@ Se a rede travar, desligue o vídeo e mantenha só o áudio — é mais educado 
 ##### Diferenças entre IMAP, POP3 e Exchange:
 
 - POP3: baixa os e-mails do servidor e, por padrão, apaga o original, deixando apenas uma cópia local. Bom para quem usa um só dispositivo e precisa ler offline. Desvantagem: ao trocar de aparelho, o histórico some. Já não é recomendado.
-- IMAP: os e-mails ficam sempre no servidor; o local é só cache. A sincronização entre celular/computador/tablet é consistente — lido em um, lido em todos. É o protocolo mais recomendado hoje.
+- IMAP: os e-mails ficam sempre no servidor; o local é só cache. A sincronização entre celular/computador/tablet é consistente, lido em um, lido em todos. É o protocolo mais recomendado hoje.
 - Exchange (inclui ActiveSync): protocolo da Microsoft que, além de e-mail, sincroniza calendário, contatos e tarefas. Primeira opção para e-mail corporativo. Suportado por Outlook, NetEase Enterprise Mail e Tencent Enterprise Mail.
 - Recomendação: e-mail pessoal use IMAP; e-mail corporativo, prefira Exchange e, em seguida, IMAP; evite POP3, a menos que precise de arquivamento especial.
 
@@ -187,7 +187,7 @@ Se a rede travar, desligue o vídeo e mantenha só o áudio — é mais educado 
 Observação
 
 {class="mt-1"}
-E-mails corporativos costumam exigir que o administrador habilite uma "senha de autorização do cliente" ou "código de autorização IMAP/SMTP" — não dá para usar direto a senha do webmail. Se o login falhar, gere o código de autorização no webmail e insira no celular.
+E-mails corporativos costumam exigir que o administrador habilite uma "senha de autorização do cliente" ou "código de autorização IMAP/SMTP", não dá para usar direto a senha do webmail. Se o login falhar, gere o código de autorização no webmail e insira no celular.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

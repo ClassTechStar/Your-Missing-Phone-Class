@@ -124,16 +124,16 @@ navController.popBackStack()              // 返回上一頁
 
 #### 五、順帶認識：Fragment 是什麼（以及為什麼本書沒教）
 
-查老教學時你一定會撞見 Fragment——它是 Activity 裡的"可複用介面片段"，在老式多頁面架構裡是絕對主角。但 Compose 時代，頁面直接用 Composable 函式 + Navigation 路由就夠了，官方也已弱化 Fragment 的地位。本書因此沒把它放進主線。
+查老教學時你一定會撞見 Fragment，它是 Activity 裡的"可複用介面片段"，在老式多頁面架構裡是絕對主角。但 Compose 時代，頁面直接用 Composable 函式 + Navigation 路由就夠了，官方也已弱化 Fragment 的地位。本書因此沒把它放進主線。
 
-給你的建議：新專案不主動用 Fragment；但讀老程式碼、面試被問到時，知道它是"Activity 裡嵌的介面片段"即可。學習資源永遠優先選 2023 年以後的——安卓技術棧的"老黃曆"更新得比想象中快。
+給你的建議：新專案不主動用 Fragment；但讀老程式碼、面試被問到時，知道它是"Activity 裡嵌的介面片段"即可。學習資源永遠優先選 2023 年以後的，安卓技術棧的"老黃曆"更新得比想象中快。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 來動手：給計數器裝上"記憶"
 
 {class="mt-1"}
-把第 51 章的計數器改造一下：① 把 remember 換成 rememberSaveable，旋轉螢幕驗證數字還在；② 加一個"關於"按鈕，用 Navigation 跳到第二個頁面顯示版本號；③ 在兩個頁面的 onCreate/onPause 裡列印日誌（Log.d），用 Logcat 觀察生命週期呼叫順序。做完這三步，生命週期就不再是紙上談兵。
+把第 51 章的計數器改造一下：① 把 remember 換成 rememberSaveable，旋轉螢幕驗證數字還在；② 加一個"關於"按鈕。用 Navigation 跳到第二個頁面顯示版本號；③ 在兩個頁面的 onCreate/onPause 裡列印日誌（Log.d），用 Logcat 觀察生命週期呼叫順序。做完這三步，生命週期就不再是紙上談兵。
 :::
 
 ::: div .chapter-summary
@@ -141,7 +141,13 @@ navController.popBackStack()              // 返回上一頁
 本章小結
 
 - 四大元件：Activity（門面）、Service（後臺）、BroadcastReceiver（喇叭）、ContentProvider（資料櫃）
-- 生命週期六回撥：onCreate → onStart → onResume → onPause → onStop → onDestroy
+生命週期六回撥：
+1. onCreate
+2. onStart
+3. onResume
+4. onPause
+5. onStop
+6. onDestroy
 - 旋轉螢幕會銷燬重建 Activity：用 rememberSaveable 保住狀態
 - Intent 是"車票"：顯式跳自家頁面，隱式調系統能力
 - 多頁面用 Navigation Compose：NavHost + composable 路由

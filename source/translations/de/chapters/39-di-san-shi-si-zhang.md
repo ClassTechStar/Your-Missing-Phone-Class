@@ -2,12 +2,12 @@
 id: di-san-shi-si-zhang
 num: 34
 part: zhan-wang-pian
-nav: Kapitel 34: Auto-Vernetzung im Detail – Handy und Auto wachsen zusammen
+nav: Kapitel 34: Handy und Auto: verbinden ohne Theater
 toc: default
 kind: chapter
 ---
 
-### Kapitel 34: Tiefer Leitfaden zur Auto-Konnektivitaet – Verschmelzung von Smartphone und Auto
+### Kapitel 34: Handy und Auto: verbinden ohne Theater
 
 {class="chapter-intro mb-4"}
 Das Auto entwickelt sich vom »vier Raeder plus Sofa« zum »vier Raeder plus Smartphone«. Egal ob Verbrenner oder Elektro – die Beziehung zwischen Handy und Infotainment-System bestimmt dein Fahrerlebnis. Dieses Kapitel klaert die drei Hauptansaetze der Handy-Auto-Vernetzung, die Merkmale der verschiedenen Systeme und praktische Tipps fuer entspannteres Fahren.
@@ -70,7 +70,7 @@ Die drei wichtigsten Uebertragungsloesungen haben unterschiedliche Schwerpunkte.
 ```
 :::
 
-#### 3. HarmonyOS Cockpit: Nahtloser Uebergang zwischen Handy und Auto
+3. HarmonyOS Cockpit: Nahtloser Uebergang zwischen Handy und Auto
 
 Waehrend CarPlay das Handy »ins Auto uebertraegt«, ist das HarmonyOS Cockpit der Ansatz »Handy und Auto gehoeren von vornherein zusammen«. Die Zusammenarbeit von Huawei-Handy und AITO/Luxeed-Infotainment repraesentiert den aktuell hoechsten Standard der inlaendischen Handy-Auto-Vernetzung:
 

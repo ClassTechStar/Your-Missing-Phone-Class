@@ -2,17 +2,17 @@
 id: di-si-zhang
 num: 04
 part: ji-chu-pian
-nav: Chapitre 4 : Installer et gérer les app
+nav: Chapitre 4 : Avant d'installer une app, regardez-la bien
 toc: default
 kind: chapter
 ---
 
-### Chapitre 4 : Installer et gérer les applications — le « pack de compétences » du smartphone
+### Chapitre 4 : Avant d'installer une app, regardez-la bien
 
 {class="chapter-intro mb-4"}
 Les applications rendent le smartphone capable de tout faire, mais il faut aussi bien les gérer. Comme vous assigneriez un poste et des autorisations à un nouvel employé, l'installation d'applications nécessite un processus standardisé.
 
-#### 1. Boutique officielle : le « supermarché d'applications » le plus sûr
+1. Boutique officielle : le « supermarché d'applications » le plus sûr
 
 - <strong>Android</strong>: Google Play (à l'étranger) ou les boutiques intégrées de chaque marque (comme Huawei AppGallery, Xiaomi App Store).
 - <strong>iOS</strong>: Uniquement l'App Store.
@@ -20,7 +20,7 @@ Les applications rendent le smartphone capable de tout faire, mais il faut aussi
 
 Importance sécuritaire essentielle : examinées, mises à jour garanties, paiements sécurisés. Guide d'action :<strong>téléchargez en priorité uniquement depuis les boutiques officielles !</strong>
 
-#### 2. Mode pur/protection : activez le « pare-feu antivirus » du smartphone
+2. Mode pur/protection : activez le « pare-feu antivirus » du smartphone
 
 Les grandes marques nationales (Huawei, Xiaomi, OPPO, vivo, Honor) intègrent toutes un <strong>mode pur</strong> ou <strong>mode protection</strong>, un commutateur de sécurité au niveau système.<strong>Il est fortement recommandé à tous les utilisateurs de l'activer</strong>.
 
@@ -46,11 +46,11 @@ La fonction principale du mode pur (aussi appelé « mode protection ») est de 
 La boutique d'applications n'est pas là pour la décoration, elle dispose d'une chaîne de sécurité complète :
 
 - <strong>Analyse antivirus</strong>: Chaque application est soumise avant publication à une analyse conjointe de plusieurs moteurs antivirus pour identifier les chevaux de Troie et virus connus.
-- <strong>Vérification des autorisations</strong>: La boutique examine si les autorisations demandées par l'application sont « raisonnables » — une application de lampe de poche qui demande l'accès aux contacts ? Rejet ou retrait immédiat.
+- <strong>Vérification des autorisations</strong>: La boutique examine si les autorisations demandées par l'application sont « raisonnables », une application de lampe de poche qui demande l'accès aux contacts ? Rejet ou retrait immédiat.
 - <strong>Certification du développeur</strong>: La publication nécessite une certification d'entreprise, de carte d'identité personnelle ou de carte de crédit. En cas de problème, on peut retrouver la personne, ce ne sont pas des « applications fantômes ».
 - <strong>Surveillance continue</strong>: Les applications déjà publiées sont régulièrement réexaminées, tout comportement malveillant nouvellement découvert entraîne un retrait forcé.
 
-#### 3. Sources tierces et « parasites électroniques » : risque extrêmement élevé !
+3. Sources tierces et « parasites électroniques » : risque extrêmement élevé !
 
 Télécharger des applications depuis des pages web ou des liens inconnus peut inclure des virus, voler vos données privées, frauder vos paiements. Mentionnons ici un nouveau concept : les <strong>« parasites électroniques »</strong>.
 
@@ -64,17 +64,17 @@ Il s'agit de <strong>logiciels « crackés » implantés de chevaux de Troie</st
 {class="list-disc pl-6 mt-2 space-y-1 text-sm"}
 - Versions « crackées », « gratuites », « sans publicité » de logiciels payants ;
 - Outils gris comme « boost de likes », « capture d'enveloppes rouges », « tricheurs de jeux » ;
-- Prétendues versions « internes » d'applications recommandées par des « petites annonces » dans des groupes de discussion.
+- Prétendues versions « internes » d'applications recommandées par des « petites annonces » dans des groupes de discussion
 
 {class="mt-2"}
-Ces programmes semblent fonctionner, mais en coulisses ils peuvent <strong>voler les contacts, lire les SMS, écouter le micro, miner en arrière-plan</strong>. Le mode pur est la <strong>première ligne de défense</strong> contre eux — en vous empêchant directement de les installer.
+Ces programmes semblent fonctionner, mais en coulisses ils peuvent <strong>voler les contacts, lire les SMS, écouter le micro, miner en arrière-plan</strong>. Le mode pur est la <strong>première ligne de défense</strong> contre eux: en vous empêchant directement de les installer.
 :::
 
 ##### Deuxième ligne de défense recommandée :
 
 - <strong>Analyse antivirus complète régulière</strong>: Utilisez le centre de sécurité intégré au smartphone (comme Huawei Gestionnaire de téléphone, Xiaomi Centre de sécurité) pour une analyse mensuelle.
-- <strong>Accord prudent des autorisations sensibles</strong>: Contacts, SMS, localisation, appareil photo, micro — ces cinq « autorisations à haut risque » doivent être strictement contrôlées.
-- <strong>Surveillez les anomalies de consommation et de données</strong>: Le smartphone chauffe soudainement, la batterie se vide vite, les données consommées la nuit — il y a probablement un « parasite » caché en arrière-plan.
+- <strong>Accord prudent des autorisations sensibles</strong>: Contacts, SMS, localisation, appareil photo, micro, ces cinq « autorisations à haut risque » doivent être strictement contrôlées.
+- <strong>Surveillez les anomalies de consommation et de données</strong>: Le smartphone chauffe soudainement, la batterie se vide vite, les données consommées la nuit, il y a probablement un « parasite » caché en arrière-plan.
 
 Si vous devez absolument installer une application tierce :
 
@@ -90,7 +90,7 @@ Conseil ultime : dans les paramètres système, désactivez l'autorisation « In
 - <strong>Mise à jour</strong>:<strong>Il faut mettre à jour !</strong> Principalement pour corriger les failles de sécurité. Il est recommandé d'activer les mises à jour automatiques.
 - <strong>Désinstallation</strong>: Appuyez longuement sur l'icône et glissez vers la zone de désinstallation. Pour un nettoyage plus complet, allez dans [Paramètres] &gt; [Gestion des applications] pour trouver et désinstaller.
 
-#### 5. Gestion des autorisations : vous êtes le « patron » des applications
+5. Gestion des autorisations : vous êtes le « patron » des applications
 
 Les applications demandent des autorisations (comme contacts, localisation) parfois à juste titre (une carte a besoin de la localisation), parfois sans raison (une lampe de poche a besoin des contacts).
 

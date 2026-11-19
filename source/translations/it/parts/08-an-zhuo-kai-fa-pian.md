@@ -10,7 +10,7 @@ class: mb-12
 ## 8. Sviluppo Android in pratica (Capitoli 48-58)
 
 {class="chapter-intro mb-4"}
-La settima parte ti ha insegnato a dirigere l'AI che scrive codice; in questa mettiamo l'abilità in pratica su Android: dal conoscere Android e installare Android Studio a Kotlin e Jetpack Compose, fino a due progetti completi e alla pubblicazione su Google Play. Per tutto il percorso non serve un Mac — basta Windows. Al termine degli 11 capitoli sarai capace di costruire un'app vera, da far arrivare nei telefoni di trecento milioni di persone.
+La settima parte ti ha insegnato a dirigere l'AI che scrive codice; in questa mettiamo l'abilità in pratica su Android: dal conoscere Android e installare Android Studio a Kotlin e Jetpack Compose, fino a due progetti completi e alla pubblicazione su Google Play. Per tutto il percorso non serve un Mac, basta Windows. Al termine degli 11 capitoli sarai capace di costruire un'app vera, da far arrivare nei telefoni di trecento milioni di persone.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

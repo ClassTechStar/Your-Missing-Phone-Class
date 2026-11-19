@@ -31,8 +31,8 @@ Apply for unlock permission
 Bind account
 
 1. : Bind your Xiaomi account in phone settings.
-2. 🔐 Hardware-Level Storage and Verification
-3. The BL lock status (Locked/Unlocked) and the manufacturer's public key are typically stored in protected hardware areas (such as Qualcomm's devinfo partition, eFuse, or RPMB partition) to prevent software tampering. On each boot, the Bootloader reads the status from this secure area and decides whether to perform strict signature verification.
+2. 🔐 Hardware-Level Storage and Verification.
+3. The BL lock status (Locked/Unlocked) and the manufacturer's public key are typically stored in protected hardware areas, such as Qualcomm's devinfo partition, eFuse, or the RPMB partition, to prevent software tampering. On each boot, the Bootloader reads the status from this secure area and decides whether to perform strict signature verification.
 
 ##### 🔏 Digital Signature Verification
 
@@ -83,7 +83,7 @@ Decrypt the image's built-in signature with the public key to obtain a hash valu
 ```
 :::
 
-#### 2. Detailed Process for Unlocking BL Lock (Using Xiaomi as an Example)
+2. Detailed Process for Unlocking BL Lock (Using Xiaomi as an Example)
 
 1. <strong>Feature Limitations</strong> Ensures security-dependent features (such as payment, banking apps) work normally
 2. <strong>✅ Complete features: all official features work normally</strong>⚠️ Feature limited: some security-sensitive apps (such as Google Pay, banking apps) may refuse to run upon detecting BL unlock status; DRM services may be downgraded, affecting HD video playback
@@ -111,14 +111,14 @@ Flashing carries risks; proceed with caution. May lead to:<strong>Phone bricking
 - <strong>Data loss</strong> V. Samsung Knox: The Irreversible Cost of BL Unlocking
 - <strong>Unlike other Android manufacturers, Samsung's BL unlock mechanism has a unique "fuse" design:</strong> For Samsung phones, unlocking triggers Knox fuse tripping, permanently losing some security features (such as Samsung Pay); clears all protected data; affects warranty
 - <strong>. Specifically:</strong> The Fuse Is One-Time
-- <strong>: There's an eFuse inside the phone that permanently burns out once it detects BL has been unlocked — it cannot be restored.</strong> Affected Features
+- <strong>: There's an eFuse inside the phone that permanently burns out once it detects BL has been unlocked, it cannot be restored.</strong> Affected Features
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 <i class="fas fa-exclamation-triangle mr-2"></i>: Samsung Pay (transit cards/bank cards), Knox Secure Folder, enterprise MDM management, and some health insurance apps will all stop working.
 
 {class="mt-1"}
-Forced Data Wipe <strong>: After the fuse is triggered, the phone forces a factory reset — all local data is erased (cloud data is not affected).</strong> Warranty Impact
+Forced Data Wipe <strong>: After the fuse is triggered, the phone forces a factory reset, all local data is erased (cloud data is not affected).</strong> Warranty Impact
 :::
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
@@ -126,7 +126,7 @@ Forced Data Wipe <strong>: After the fuse is triggered, the phone forces a facto
 <i class="fas fa-skull-crossbones mr-2"></i>Important Warning
 
 {class="mt-1"}
-Flashing carries risks—proceed with caution. It may cause:
+Flashing carries risks,proceed with caution. It may cause:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Bricked phone (won’t boot)

@@ -126,14 +126,14 @@ navController.popBackStack()              // 返回上一页
 
 查老教程时你一定会撞见 <strong>Fragment</strong>——它是 Activity 里的"可复用界面片段"，在老式多页面架构里是绝对主角。但 Compose 时代，页面直接用 Composable 函数 + Navigation 路由就够了，官方也已弱化 Fragment 的地位。本书因此没把它放进主线。
 
-给你的建议：<strong>新项目不主动用 Fragment</strong>；但读老代码、面试被问到时，知道它是"Activity 里嵌的界面片段"即可。学习资源永远优先选 2023 年以后的——安卓技术栈的"老黄历"更新得比想象中快。
+给你的建议：<strong>新项目不主动用 Fragment</strong>；但读老代码、面试被问到时，知道它是"Activity 里嵌的界面片段"即可。学习资源永远优先选 2023 年以后的，安卓技术栈的"老黄历"更新得比想象中快。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 <i class="fas fa-hands mr-2"></i>来动手：给计数器装上"记忆"
 
 {class="mt-1"}
-把第 51 章的计数器改造一下：① 把 remember 换成 rememberSaveable，旋转屏幕验证数字还在；② 加一个"关于"按钮，用 Navigation 跳到第二个页面显示版本号；③ 在两个页面的 onCreate/onPause 里打印日志（Log.d），用 Logcat 观察生命周期调用顺序。做完这三步，生命周期就不再是纸上谈兵。
+把第 51 章的计数器改造一下：① 把 remember 换成 rememberSaveable，旋转屏幕验证数字还在；② 加一个"关于"按钮，用 Navigation 跳到第二个页面显示版本号，正好练一遍页面跳转；③ 在两个页面的 onCreate/onPause 里打印日志，用 Logcat 看调用顺序。做完这三步，生命周期就不再是纸上谈兵。
 :::
 
 ::: div .chapter-summary
@@ -141,7 +141,7 @@ navController.popBackStack()              // 返回上一页
 <i class="fas fa-flag-checkered mr-1"></i>本章小结
 
 - 四大组件：Activity（门面）、Service（后台）、BroadcastReceiver（喇叭）、ContentProvider（资料柜）
-- 生命周期六回调：onCreate → onStart → onResume → onPause → onStop → onDestroy
+- 生命周期六回调：onCreate、onStart、onResume、onPause、onStop、onDestroy
 - 旋转屏幕会销毁重建 Activity：用 rememberSaveable 保住状态
 - Intent 是"车票"：显式跳自家页面，隐式调系统能力
 - 多页面用 Navigation Compose：NavHost + composable 路由

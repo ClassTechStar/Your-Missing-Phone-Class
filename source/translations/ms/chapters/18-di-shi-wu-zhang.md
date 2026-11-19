@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Bab 15: Sains Bateri dan Pengoptimuman Hayat Bateri
+nav: Bab 15: Cas dua kali sehari, bateri atau cara guna?
 toc: default
 kind: chapter
 ---
 
-### Bab 15: Sains Bateri & Pengoptimuman Ketahanan
+### Bab 15: Cas dua kali sehari, bateri atau cara guna?
 
 {class="chapter-intro mb-4"}
 Bateri ialah "jantung tenaga" telefon pintar anda. Bab ini membantu anda memahami perangai bateri, belajar teknik cas dan ketahanan secara saintifik, dan mengucapkan selamat tinggal kepada kebimbangan paras bateri.
@@ -26,10 +26,10 @@ Bateri ialah "jantung tenaga" telefon pintar anda. Bab ini membantu anda memaham
 - Cas pantas merosakkan bateri?
 - <strong>Menggunakan aksesori cas pantas ori atau bersijil, kerosakannya sangat kecil. Telefon pintar dan pengecas mempunyai kawalan suhu, dan akan mengurangkan kuasa secara automatik apabila terlalu panas.</strong> Pengecasan wayarles
 
-#### 2. Mitos Pengecasan? Cas Pantas, Cas Wayarles & Peraturan Emas
+2. Mitos Pengecasan? Cas Pantas, Cas Wayarles & Peraturan Emas
 
 - <strong>Peraturan emas penjagaan bateri</strong> : Cuba kekalkan paras bateri antara 20%-80%, jangan biarkan ia kelaparan (0%) atau terlalu kenyang (100%).
-- <strong>Pengecasan wayarles</strong> Anda mungkin pernah mengalami situasi ini: telefon pintar anda menyokong cas pantas, tetapi selepas menukar pengecas, ia menjadi sangat perlahan. Ini kerana cas pantas bukan sekadar "kuasa besar sudah cukup", tetapi memerlukan pengecas, kabel data, dan telefon pintar bertiga "bercakap dalam bahasa yang sama" — inilah protokol cas pantas.
+- <strong>Pengecasan wayarles</strong> Anda mungkin pernah mengalami situasi ini: telefon pintar anda menyokong cas pantas, tetapi selepas menukar pengecas, ia menjadi sangat perlahan. Ini kerana cas pantas bukan sekadar "kuasa besar sudah cukup", tetapi memerlukan pengecas, kabel data, dan telefon pintar bertiga "bercakap dalam bahasa yang sama", inilah protokol cas pantas.
 - <strong>1. Prinsip Asas Cas Pantas</strong> Kuasa pengecasan = Voltan × Arus (P = U × I). Untuk meningkatkan kuasa, sama ada meningkatkan voltan, meningkatkan arus, atau kedua-duanya. Protokol yang berbeza memilih laluan teknikal yang berbeza.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -83,14 +83,14 @@ Fasa rundingan
 - <strong>FCP (Fast Charge Protocol)</strong>: Semua model iPhone, Google Pixel, sebahagian telefon pintar andalan Android, komputer riba, dan konsol permainan Switch menyokong protokol PD.
 - <strong>Kelebihan</strong>: Keserasian universal yang kuat, satu pengecas boleh mengecas pelbagai peranti; menyokong PPS (Power Supply Boleh Atur Cara), boleh melaraskan voltan dan arus dengan tepat.
 - <strong>Cip Surge P1</strong>: Memerlukan antara muka Type-C dan cip khusus, kos lebih tinggi.
-- <strong>Qualcomm QC (Quick Charge)</strong>— Perintis Kem Android
+- <strong>Qualcomm QC (Quick Charge)</strong>— Perintis Kem Android.
 - <strong>QC 3.0</strong>: Menyokong voltan boleh laras 3.6V-20V dengan langkah 0.2V, maksimum 18W.
 
 <strong>QC 4.0/4+</strong>: Serasi dengan protokol USB PD, menyokong sehingga 27W, menambah teknologi pengecasan dwilaluan.
 
 - <strong>QC 5.0</strong>: Menyokong sehingga 100W+, 0-50% hanya memerlukan 5 minit, peningkatan besar dalam pengurangan haba.
 - <strong>Keserasian</strong>: Kebanyakan telefon pintar dengan pemproses Snapdragon Qualcomm menyokongnya, tetapi setiap jenama biasanya mengutamakan protokol peribadi mereka sendiri.
-- <strong>VOOC/Dart</strong>— Wakil Voltan Rendah Arus Tinggi
+- <strong>VOOC/Dart</strong>— Wakil Voltan Rendah Arus Tinggi.
 - <strong>Cip Surge P1</strong>: Voltan rendah arus tinggi (bermula 5V/4A), haba lebih rendah, kecekapan lebih tinggi.
 
 <strong>VOOC 1.0</strong>: 20W (5V/4A), dikeluarkan pada 2014, memulakan era cas pantas.
@@ -99,20 +99,20 @@ Fasa rundingan
 - <strong>SuperVOOC 2.0</strong>: 65W, mengecas penuh bateri 4000mAh dalam 30 minit.
 - <strong>150W/240W Super Flash Charge</strong>: Teknologi cas pantas pengeluaran besar terpantas pada masa kini.
 - <strong>Ciri</strong>: Memerlukan pengecas dan kabel data khusus (mempunyai pin sentuhan tambahan), tidak serasi dengan protokol lain.
-- <strong>Huawei SuperCharge</strong>— Evolusi Cas Pantas Voltan Tinggi
+- <strong>Huawei SuperCharge</strong>— Evolusi Cas Pantas Voltan Tinggi.
 - <strong>FCP (Fast Charge Protocol)</strong>: 9V/2A, 18W, serasi dengan QC 2.0.
 
 <strong>SCP (Super Charge Protocol)</strong>: Menyokong kuasa lebih tinggi, dari 22.5W ke 66W dan kemudian 100W.
 
 - <strong>Ciri teknikal</strong>: Menggunakan teknologi pam cas, menukar voltan tinggi kepada voltan rendah arus tinggi untuk input bateri, kecekapan sehingga 98%.
 - <strong>Keserasian</strong>: Khusus untuk telefon pintar Huawei/Honor, sebahagian pengecas menyokong protokol PD.
-- <strong>Protokol</strong>— Kebangkitan Protokol Buatan Sendiri
+- <strong>Protokol</strong>— Kebangkitan Protokol Buatan Sendiri.
 - <strong>Cip Surge P1</strong>: Cip pengurusan cas pantas buatan Xiaomi, menyokong cas pantas berwayar 120W.
 
 <strong>Cip Surge G1</strong>: Cip pengurusan bateri, bekerjasama dengan P1 untuk mencapai cas pantas yang lebih cekap.
 
 - <strong>Ciri teknikal</strong>: Menggunakan skim dwi-sel bersiri + pam cas, menyokong keserasian pelbagai protokol.
-- <strong>Cas Pantas Apple</strong>— Konservatif tetapi Stabil
+- <strong>Cas Pantas Apple</strong>— Konservatif tetapi Stabil.
 - <strong>Protokol</strong>: Hanya menyokong protokol USB PD.
 
 <strong>4. Protokol Pengecasan Wayarles</strong>: iPhone 8 dan selepas menyokong cas pantas, maksimum kira-kira 27W (iPhone 15 Pro Max boleh mencapai 27W+).
@@ -175,7 +175,7 @@ Fasa rundingan
 
 : Dikeluarkan pada 2023, memperkenalkan penempatan magnet (serupa dengan Apple MagSafe), menyokong 15W+.
 
-- <strong>Protokol peribadi</strong>: Setiap jenanda mempunyai pengecasan wayarles berkelajuan tinggi sendiri, seperti cas wayarles 50W Xiaomi, cas wayarles 50W Huawei, dll., memerlukan pengecas khusus.
+- <strong>Protokol peribadi</strong>: Setiap jenanda mempunyai pengecasan wayarles berkelajuan tinggi sendiri, seperti cas wayarles 50W Xiaomi, cas wayarles 50W Huawei, dll., memerlukan pengecas khusus
 - <strong>5. Panduan Pembelian Cas Pantas</strong> Perhatikan padanan protokol
 - <strong>: Apabila membeli pengecas, pastikan ia menyokong protokol cas pantas telefon pintar anda. Pengecas pihak ketiga biasanya akan menyenaraikan protokol yang disokong.</strong> Perhatikan kabel data
 
@@ -193,7 +193,7 @@ Fasa rundingan
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 4. Ini Barulah Tip Jimat Bateri Sebenar
 - Skrin (raja penggunaan bateri)
-- : Kurangkan kecerahan, perpendek masa auto-kunci. Telefon pintar OLED boleh menjimatkan banyak bateri dengan mengaktifkan mod gelap.
+- : Kurangkan kecerahan, perpendek masa auto-kunci. Telefon pintar OLED boleh menjimatkan banyak bateri dengan mengaktifkan mod gelap
 - Isyarat lemah
 :::
 
@@ -231,7 +231,7 @@ Jika anda perhati pengumuman telefon flagship 2024-2026, "anod silikon-karbon" h
 <i class="fas fa-hands mr-2"></i>Bab 16: Sistem Akaun &amp; Perkhidmatan Awan
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. Saya ada seorang kawan, telefon pintarnya dicuri tahun lepas. Perkara pertama yang terlintas di fikirannya bukan "berapa harganya telefon itu", tetapi "adakah foto-foto di dalamnya boleh diambil kembali?" Malangnya, dia tidak mengaktifkan sandaran awan. Telefon pintar adalah harta benda luaran, tetapi data dalam akaun — jika hilang, ia tidak akan kembali selama-lamanya. Bab ini kita akan bincangkan cara memberikan insurans sebenar untuk kehidupan digital anda.
+1. Saya ada seorang kawan, telefon pintarnya dicuri tahun lepas. Perkara pertama yang terlintas di fikirannya bukan "berapa harganya telefon itu", tetapi "adakah foto-foto di dalamnya boleh diambil kembali?" Malangnya, dia tidak mengaktifkan sandaran awan. Telefon pintar adalah harta benda luaran, tetapi data dalam akaun: jika hilang, ia tidak akan kembali selama-lamanya. Bab ini kita akan bincangkan cara memberikan insurans sebenar untuk kehidupan digital anda.
 2. 1. Akaun telefon pintar anda, sebenarnya mengawal berapa banyak perkara?
 3. Ramai orang fikir akaun hanya digunakan untuk memuat turun App. Sebenarnya, perkara yang terikat di sebalik akaun telefon pintar jauh lebih banyak daripada yang anda bayangkan:
 :::

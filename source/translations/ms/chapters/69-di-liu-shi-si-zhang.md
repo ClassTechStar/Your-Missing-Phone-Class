@@ -23,7 +23,7 @@ App yang hanya boleh 'dilihat' ialah App mati; App yang boleh menyimpan data dan
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Pembahagian tugas tiga serangkai data
 
-Hafal satu rumus: 'tetapan kecil masuk UserDefaults, data beramai-ramai masuk SwiftData, data dari luar guna URLSession'. Core Data dalam tutorial lama masih boleh digunakan (SwiftData ialah jubah modennya), manakala SQLite tulisan tangan hampir tidak perlu disentuh — belajar terus yang baharu, jangan ikut jalan lama.
+Hafal satu rumus: 'tetapan kecil masuk UserDefaults, data beramai-ramai masuk SwiftData, data dari luar guna URLSession'. Core Data dalam tutorial lama masih boleh digunakan (SwiftData ialah jubah modennya), manakala SQLite tulisan tangan hampir tidak perlu disentuh, belajar terus yang baharu, jangan ikut jalan lama.
 
 #### 2. UserDefaults: simpan tetapan kecil
 
@@ -46,11 +46,11 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-Perhatikan ia hanya sesuai untuk tetapan kecil yang berselerak — rekod berpuluhan hingga beratus-ratus serahkan kepada SwiftData; jangan gunakan UserDefaults sebagai pangkalan data (melambatkan permulaan dan sukar dibuat pertanyaan).
+Perhatikan ia hanya sesuai untuk tetapan kecil yang berselerak: rekod berpuluhan hingga beratus-ratus serahkan kepada SwiftData; jangan gunakan UserDefaults sebagai pangkalan data (melambatkan permulaan dan sukar dibuat pertanyaan).
 
 #### 3. SwiftData: berikan data 'rumah sebenar'
 
-SwiftData ialah penyelesaian pangkalan data rasmi mulai iOS 17, memudahkan 'bina jadual, tambah-padam-ubah-cari' hingga ke tahap maksimum — satu anotasi @Model sahaja, kelas data bertukar menjadi jadual pangkalan data:
+SwiftData ialah penyelesaian pangkalan data rasmi mulai iOS 17, memudahkan 'bina jadual, tambah-padam-ubah-cari' hingga ke tahap maksimum, satu anotasi @Model sahaja, kelas data bertukar menjadi jadual pangkalan data:
 
 ::: div .code-block
 :::inline div .code-head
@@ -107,7 +107,7 @@ struct RecordListView: View {
 ```
 :::
 
-Templat '@Model + modelContainer + @Query' ini boleh dibawa masuk ke mana-mana projek anda seadanya — cukup tukar nama medan. Data berubah, @Query menyegarkan antara muka secara automatik; sungguh menakjubkan.
+Templat '@Model + modelContainer + @Query' ini boleh dibawa masuk ke mana-mana projek anda seadanya, cukup tukar nama medan. Data berubah, @Query menyegarkan antara muka secara automatik; sungguh menakjubkan.
 
 #### 4. Codable: 'menerjemahkan' JSON
 
@@ -175,14 +175,14 @@ struct WeatherService {
 Amaran: dua peraturan besi rangkaian
 
 {class="mt-1"}
-(1) Sambungan internet mesti async/await, jangan sekali-kali menyekat urutan utama — antara muka tersekat ialah pengalaman tahap ranap. Keserentakan berstruktur Swift menjadikannya semula jadi, tetapi jangan lupa try await dan do/catch. (2) ATS secara lalai melarang HTTP jelas: iOS menuntut HTTPS. Semasa menguji perkhidmatan http:// tempatan, perlu buka pengecualian sementara dalam Info.plist (NSAppTransportSecurity), tetapi produk rasmi mesti sepenuhnya HTTPS — semakan Apple juga memantau perkara ini.
+(1) Sambungan internet mesti async/await, jangan sekali-kali menyekat urutan utama: antara muka tersekat ialah pengalaman tahap ranap. Keserentakan berstruktur Swift menjadikannya semula jadi, tetapi jangan lupa try await dan do/catch. (2) ATS secara lalai melarang HTTP jelas: iOS menuntut HTTPS. Semasa menguji perkhidmatan http:// tempatan, perlu buka pengecualian sementara dalam Info.plist (NSAppTransportSecurity), tetapi produk rasmi mesti sepenuhnya HTTPS: semakan Apple juga memantau perkara ini.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Bina aplikasi kecil 'ayat harian'
 
-#### 6. Ralat rangkaian juga perlu 'dikelaskan': jangan campak semua ralat kepada pengguna
+6. Ralat rangkaian juga perlu 'dikelaskan': jangan campak semua ralat kepada pengguna
 
 Tiada internet, tamat masa, 404, pelayan 500… ralat yang berbeza, mesej yang patut dilihat pengguna juga berbeza:
 
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-Tunjukkan 'bahasa manusia' kepada pengguna, dan 'teks asal' kepada log (print ralat penuh). Jangan campakkan teks Inggeris yang mengerikan daripada error.localizedDescription terus kepada pengguna — rasa produk tersembunyi dalam butiran begini.
+Tunjukkan 'bahasa manusia' kepada pengguna, dan 'teks asal' kepada log (print ralat penuh). Jangan campakkan teks Inggeris yang mengerikan daripada error.localizedDescription terus kepada pengguna, rasa produk tersembunyi dalam butiran begini.
 
 {class="mt-1"}
-Cari API petikan percuma (seperti hitokoto), guna URLSession + async/await untuk menarik 'ayat harian', paparkan di tengah skrin, dan tambahkan butang 'Tukar ayat'. Kemudian simpan ayat kegemaran ke dalam 'Kegemaran' dengan SwiftData. Latihan ini menggunakan UserDefaults/SwiftData/Codable/URLSession semuanya sekali — selepas menyiapkannya, Bab 7 dan 8 menjadi perkara mudah.
+Cari API petikan percuma (seperti hitokoto), guna URLSession + async/await untuk menarik 'ayat harian', paparkan di tengah skrin, dan tambahkan butang 'Tukar ayat'. Kemudian simpan ayat kegemaran ke dalam 'Kegemaran' dengan SwiftData. Latihan ini menggunakan UserDefaults/SwiftData/Codable/URLSession semuanya sekali, selepas menyiapkannya, Bab 7 dan 8 menjadi perkara mudah.
 :::
 
 ::: div .chapter-summary

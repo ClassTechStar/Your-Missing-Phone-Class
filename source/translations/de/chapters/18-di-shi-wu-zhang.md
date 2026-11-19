@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Kapitel 15: Akkuwissenschaft und Laufzeit-Optimierung
+nav: Kapitel 15: Zweimal am Tag laden: Akku oder Gewohnheit?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 15: Batterietechnologie und Akkulaufzeit-Optimierung
+### Kapitel 15: Zweimal am Tag laden: Akku oder Gewohnheit?
 
 {class="chapter-intro mb-4"}
 Schadet Schnellladen dem Akku?
@@ -26,11 +26,11 @@ Kabelloses Laden
 - Handshake-Phase
 - <strong>: Smartphone und Ladegerät kommunizieren über das Kabel und tauschen die unterstützten Protokolle und Leistungsinformationen aus.</strong> Verhandlungsphase
 
-#### 2. Lademythen? Schnellladen, kabelloses Laden und die goldene Regel
+2. Lademythen? Schnellladen, kabelloses Laden und die goldene Regel
 
 - <strong>Lade-Phase</strong> : Das Ladegerät liefert die ausgehandelte Spannung und Stromstärke, das Smartphone übernimmt das Energiemanagement.
 - <strong>Anpassungs-Phase</strong>: Mit steigendem Ladestand senkt das Smartphone schrittweise die Ladeleistung, um den Akku zu schonen.
-- <strong>2. Gängige Schnellladeprotokolle im Detail</strong> USB PD (Power Delivery)
+- <strong>2. Gängige Schnellladeprotokolle im Detail</strong> USB PD (Power Delivery).
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -74,14 +74,14 @@ Spannungsstufen
 1. <strong>Handshake-Phase</strong>: Alle iPhones, Google Pixel, einige Android-Flaggschiffe, Laptops und die Switch-Konsole unterstützen PD.
 2. <strong>Verhandlungsphase</strong>: Universell einsetzbar – ein Ladegerät für viele Geräte; unterstützt PPS (Programmable Power Supply) für feine Spannungs-/Stromregelung.
 3. <strong>Ladephase</strong>: Benötigt Type-C-Anschluss und spezialisierten Chip, höherer Kosten.
-4. <strong>Qualcomm QC (Quick Charge)</strong>– der Veteran im Android-Lager
+4. <strong>Qualcomm QC (Quick Charge)</strong>– der Veteran im Android-Lager.
 
 ##### QC 3.0
 
 <strong>: Unterstützt einstellbare Spannung von 3,6 V–20 V in 0,2 V-Schritten, maximal 18 W.</strong> QC 4.0/4+
 
 - <strong>Merkmale</strong> QC 5.0
-- <strong>: Unterstützt 100 W+, 0–50 % in 5 Minuten, deutlich verbesserte Wärmeprobleme.</strong>: 5 V, 9 V, 15 V, 20 V; PD 3.1 unterstützt zusätzlich 28 V, 36 V und 48 V.
+- <strong>: Unterstützt 100 W+, 0–50 % in 5 Minuten, deutlich verbesserte Wärmeprobleme.</strong>: 5 V, 9 V, 15 V, 20 V; PD 3.1 unterstützt zusätzlich 28 V, 36 V und 48 V
 - <strong>Ladungspumpe</strong> OPPO VOOC / OnePlus WARP / Realme Dart
 - <strong>– Vertreter von Niederspannung und hohem Strom</strong> Technikweg
 - <strong>: Niederspannung, hoher Strom (ab 5 V/4 A), geringere Hitze, höhere Effizienz.</strong> VOOC 1.0
@@ -90,14 +90,14 @@ Spannungsstufen
 
 - <strong>: 30 W–65 W, mit Dual-Zellen-Seriendesign.</strong> SuperVOOC 2.0
 - <strong>: 65 W, 4000-mAh-Akku in 35 Minuten voll.</strong>150 W/240 W Super Flash Charge
-- <strong>iPhone/iPad</strong>: Unterstützt über 100 W, 0-50 % in nur 5 Minuten, deutlich weniger Hitzeentwicklung.
+- <strong>iPhone/iPad</strong>: Unterstützt über 100 W, 0-50 % in nur 5 Minuten, deutlich weniger Hitzeentwicklung
 - <strong>Ladungspumpe</strong> Huawei SuperCharge
 
 <strong>– Evolution des Hochspannungs-Schnellladens</strong> FCP (Fast Charge Protocol)
 
 - <strong>100 W</strong> SCP (Super Charge Protocol)
 - <strong>: Unterstützt höhere Leistung, von 22,5 W über 40 W bis 100 W.</strong> Technik-Merkmal
-- <strong>: Nutzt Ladungspumpen-Technik, wandelt Hochspannung in Niederspannung mit hohem Strom um, Effizienz bis zu 98 %.</strong>: 50-65 W, mit in Reihe geschalteten Dual-Akkuzellen.
+- <strong>: Nutzt Ladungspumpen-Technik, wandelt Hochspannung in Niederspannung mit hohem Strom um, Effizienz bis zu 98 %.</strong>: 50-65 W, mit in Reihe geschalteten Dual-Akkuzellen
 - <strong>: Nur für Huawei/Honor-Smartphones, einige Ladegeräte unterstützen PD.</strong> Xiaomi Surge Schnellladen
 - <strong>– Aufstieg der Eigenentwicklung</strong> Surge P1-Chip
 - <strong>Merkmale</strong> Surge G1-Chip
@@ -107,13 +107,13 @@ Spannungsstufen
 - <strong>: Dual-Zellen-Serie + Ladungspumpe, unterstützt mehrere Protokolle.</strong> Apple Schnellladen
 - <strong>– konservativ, aber stabil</strong> Protokoll
 - <strong>Technikweg</strong> Leistung
-- <strong>Ladungspumpe</strong>: Exklusiv für Huawei-/Honor-Smartphones; einige Ladegeräte unterstützen auch PD.
+- <strong>Ladungspumpe</strong>: Exklusiv für Huawei-/Honor-Smartphones; einige Ladegeräte unterstützen auch PD
 
 <strong>: Leistung eher konservativ, aber optimierte Ladekurve und hervorragende Wärmekontrolle.</strong> Zubehör-Anforderung
 
 - <strong>: USB-C-auf-Lightning-Kabel (oder USB-C-auf-USB-C) und PD-Ladegerät nötig.</strong>3. Vergleich der Schnellladeprotokolle
 - <strong>Protokoll</strong> Max. Leistung
-- <strong>Technikweg</strong>: Dual-Zellen in Serie plus Charge-Pump-Architektur, kompatibel mit mehreren Protokollen.
+- <strong>Technikweg</strong>: Dual-Zellen in Serie plus Charge-Pump-Architektur, kompatibel mit mehreren Protokollen
 
 <strong>Auf das Kabel achten</strong>240 W
 
@@ -177,7 +177,7 @@ Spannungsstufen
 
 - <strong>Sicherheitshinweise Schnellladen</strong> Vermeiden Sie gleichzeitiges Laden und Spielen von ressourcenintensiven Spielen – das erhöht die Hitze.
 - <strong>Verwenden Sie keine minderwertigen Ladegeräte und Kabel – Sicherheitsrisiko.</strong> Beim Laden dicke Smartphone-Hüllen abnehmen, um die Wärmeabfuhr zu unterstützen.
-- <strong>Wenn Ladegerät oder Smartphone ungewöhnlich heiß werden oder ungewöhnlich riechen – sofort Nutzung einstellen.</strong>4. Das sind die echten Stromspar-Tipps
+- <strong>Wenn Ladegerät oder Smartphone ungewöhnlich heiß werden oder ungewöhnlich riechen – sofort Nutzung einstellen.</strong>4. Das sind die echten Stromspar-Tipps.
 
 ##### Bildschirm (Stromfresser Nr. 1)
 
@@ -191,7 +191,7 @@ Spannungsstufen
 <i class="fas fa-exclamation-triangle mr-2"></i>: iPhone unter Einstellungen → Allgemein → Hintergrund-App-Aktualisierung; Android in den Akku-Einstellungen der jeweiligen App.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Prüfen Sie: Eine Gesundheits-Untersuchung für Ihren Akku
+- Prüfen Sie: Eine Gesundheits-Untersuchung für Ihren Akku.
 - Gesundheitsstand ablesen: Suchen Sie die maximale Kapazität Ihres Akkus und notieren Sie sie.
 - Verbrauch analysieren: Sehen Sie sich die Diagramme und App-Listen in den Akku-Einstellungen an und finden Sie die Stromfresser.
 - Maßnahmen ergreifen: Hintergrundaktivität für Apps mit abnormal hohem Verbrauch einschränken.
@@ -231,7 +231,7 @@ Wenn du die Praesentationen der Flaggschiff-Smartphones 2024-2026 verfolgt hast,
 <i class="fas fa-hands mr-2"></i>: Bezahlte Apps und In-App-Käufe im Wert von Hunderten Yuan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. Smartphone finden
+1. Smartphone finden.
 2. : Nach Verlust des Smartphones das einzige Werkzeug, um es zu orten, zu sperren oder Daten fernzulöschen.
 3. Wenn Sie ein Apple-Smartphone nutzen, ist all das an Ihre Apple-ID gebunden. Bei Android ist es an Ihr Huawei-/Xiaomi-/OPPO-/vivo-Konto und zusätzlich an Ihr Google-Konto gebunden. Diese Konten sind der „Melderegister-Eintrag" Ihres digitalen Lebens – verlieren Sie den, ist vieles schwer nachzuweisen.
 :::

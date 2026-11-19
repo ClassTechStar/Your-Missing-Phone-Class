@@ -1,13 +1,13 @@
 ---
 id: jie-yu
 num: i
-nav: iEpílogo: Mantén la curiosidad, mantén la lucidez
+nav: Epílogo: Entender el teléfono, eso es todo
 toc: default
 kind: conclusion
 after_part: fu-lu
 ---
 
-### Epílogo: Mantén la curiosidad, mantén la lucidez
+### Epílogo: Entender el teléfono, eso es todo
 
 : La app de Traducción del iPhone y Google Translate traducen texto en imágenes. Útil para traducir carteles y menús en el extranjero.
 

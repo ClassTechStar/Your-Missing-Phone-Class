@@ -2,15 +2,15 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: Bab 2: Kemas Bilik Digital Anda
+nav: Bab 2: Ada sesuatu dalam telefon yang hilang?
 toc: default
 kind: chapter
 ---
 
-### Bab 2: Kemas Bilik Digital Anda — Pengurusan Fail
+### Bab 2: Ada sesuatu dalam telefon yang hilang?
 
 {class="chapter-intro mb-4"}
-Telefon digunakan lama akan menjadi kotor, tabiat baik bermula dari menguruskan fail. Seperti bilik anda perlu disusun secara berkala, ruang digital anda juga perlu dijaga. Telefon yang teratur, bukan sahaja mudah mencari barang, berjalan juga lebih lancar.
+Telefon digunakan lama akan menjadi kotor, tabiat baik bermula dari menguruskan fail. Seperti bilik anda perlu disusun secara berkala. ruang digital anda juga perlu dijaga. Telefon yang teratur, bukan sahaja mudah mencari barang, berjalan juga lebih lancar.
 
 #### I. Sistem Storan Tiga Lapisan: Gudang Digital Anda
 
@@ -205,7 +205,7 @@ Pelbagai akhiran fail dalam telefon membuatkan orang pening, memahaminya boleh m
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### Lapan, Pengurusan Imej dan Sistem Fail: Atur Aset dengan Teratur
+Lapan, Pengurusan Imej dan Sistem Fail: Atur Aset dengan Teratur
 
 Akar kekacauan adalah ketiadaan peraturan. Membina peraturan sebenarnya sangat mudah, kuncinya adalah <strong>ketekalan</strong>.
 
@@ -238,7 +238,7 @@ Semak semua fail dalam direktori "Muat Turun" minggu ini, simpan yang berguna, a
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. Bina folder tahunan <code>2025_Keluarga</code> ,
 2. 2026_Keluarga
-3. untuk foto keluarga tahun ini. <code>2. Strategi Pengendalian Fail Berlebihan</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code>Pembersihan automatik 72 jam</code> : Fail sementara yang diterima oleh App sosial seperti WeChat, QQ (stiker, gambar sembang, video pendek), kebanyakannya hanya dilihat sekali dan tidak berguna lagi. Dalam [WeChat] &gt; [Tetapan] &gt; [Umum] &gt; [Ruang Storan], aktifkan "pembersihan automatik", tetapkan cache tamat tempoh kepada 72 jam. Telefon serta-merta lebih ringan, dan rekod penting tidak hilang.
+3. untuk foto keluarga tahun ini. <code>2. Strategi Pengendalian Fail Berlebihan</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code>Pembersihan automatik 72 jam</code> : Fail sementara yang diterima oleh App sosial seperti WeChat, QQ (stiker, gambar sembang, video pendek), kebanyakannya hanya dilihat sekali dan tidak berguna lagi. Dalam [WeChat] &gt; [Tetapan] &gt; [Umum] &gt; [Ruang Storan], aktifkan "pembersihan automatik", tetapkan cache tamat tempoh kepada 72 jam. Telefon serta-merta lebih ringan, dan rekod penting tidak hilang
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -249,7 +249,7 @@ Semak semua fail dalam direktori "Muat Turun" minggu ini, simpan yang berguna, a
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>Peraturan pengelasan automatik</strong>: Kebanyakan App album jenama menyokong pengelasan pintar: individu, landskap, dokumen, tangkap layar. Selepas diaktifkan, gambar berkumpulan yang baru diambil akan dimasukkan secara automatik ke "Individu &gt; Zhang San", kontrak yang diimbas akan dimasukkan ke "Dokumen".
 - <strong>Dengan pembersihan bulanan, kebarangkalian "tidak dapat menemui sesuatu" boleh dikurangkan dengan ketara</strong>.
-- <strong>3. Piawaian Pengendalian Keselamatan Imej</strong> adalah jenis data paling "sensitif" dalam telefon — satu tangkapan rawak boleh mendedahkan lokasi, peranti, dan masa anda. Kami mencadangkan <strong>membina aliran kerja "perlindungan berganda"</strong>:
+- <strong>3. Piawaian Pengendalian Keselamatan Imej</strong> adalah jenis data paling "sensitif" dalam telefon, satu tangkapan rawak boleh mendedahkan lokasi, peranti, dan masa anda. Kami mencadangkan <strong>membina aliran kerja "perlindungan berganda"</strong>:.
 
 {class="font-semibold mt-4 mb-1"}
 ##### Proses Standard untuk Menghantar Foto ID / Tangkap Layar Sensitif
@@ -269,12 +269,12 @@ Pikselkan maklumat yang kelihatan <strong>: Gunakan alat terbina dalam atau piha
 {class="mt-3 mb-2"}
 Kaedah biasa pembersihan metadata (EXIF) (operasi asas, perlindungan mendalam lihat Bab 6 "Pengasingan Data Foto"):
 
-- <strong>Android</strong>: Kebanyakan App album jenama akan memaklumkan "Sama ada hendak membuang maklumat lokasi" semasa "Kongsi", hanya tanda semak.<strong>Alat profesional</strong>: ExifTool (komputer), Metapho (iOS), Photo Metadata Remover (Android) boleh membuang semua metadata dengan menyeluruh.
+- <strong>Android</strong>: Kebanyakan App album jenama akan memaklumkan "Sama ada hendak membuang maklumat lokasi" semasa "Kongsi", hanya tanda semak.<strong>Alat profesional</strong>: ExifTool (komputer), Metapho (iOS), Photo Metadata Remover (Android) boleh membuang semua metadata dengan menyeluruh
 - <strong>iOS</strong> disimpan jangka panjang
 - <strong>(kad pengenalan, kad bank, imbasan buku keluarga, pasport), disyorkan untuk disimpan dalam</strong> album sulit
 
-:<strong>iPhone: [Foto] &gt; Pilih foto &gt; Sembunyikan (hanya boleh dilihat selepas pengesahan Face ID);</strong> Huawei/Xiaomi: [Album] &gt; Tekan lama foto &gt; "Pindah ke Peti Besi";<strong>App penyulitan pihak ketiga:</strong> 360 Safe Gallery, Pengurus Galeri Tencent (album peribadi), KeepSafe dan lain-lain — dilindungi kata laluan berasingan dan lebih tersembunyi.
+:<strong>iPhone: [Foto] &gt; Pilih foto &gt; Sembunyikan (hanya boleh dilihat selepas pengesahan Face ID);</strong> Huawei/Xiaomi: [Album] &gt; Tekan lama foto &gt; "Pindah ke Peti Besi";<strong>App penyulitan pihak ketiga:</strong> 360 Safe Gallery, Pengurus Galeri Tencent (album peribadi), KeepSafe dan lain-lain: dilindungi kata laluan berasingan dan lebih tersembunyi.
 
 - ,
 - Pengurus Album Tencent (Album Privasi)
-- ,<strong>KeepSafe</strong> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<strong>Bab 3: Sambungkan Telefon ke "Garis Hayat" — Rangkaian</strong> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<strong>Sifar, Tidak Keliru dengan Rangkaian — Bezakan "Jalan" dan "Kenderaan" Wi-Fi dan Data Mudah Alih</strong> Ramai orang mempunyai ikon Wi-Fi dan isyarat yang menyala serentak di bahagian atas skrin telefon, tetapi keliru tentang perbezaan asas antara keduanya. Kesalahpahaman klasik ialah:
+- ,<strong>KeepSafe</strong> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<strong>Bab 3: Sambungkan Telefon ke "Garis Hayat", Rangkaian</strong> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<strong>Sifar, Tidak Keliru dengan Rangkaian, Bezakan "Jalan" dan "Kenderaan" Wi-Fi dan Data Mudah Alih</strong> Ramai orang mempunyai ,ikon Wi-Fi dan isyarat yang menyala serentak di bahagian atas skrin telefon, tetapi keliru tentang perbezaan asas antara keduanya. Kesalahpahaman klasik ialah:

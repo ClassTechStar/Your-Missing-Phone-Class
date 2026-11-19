@@ -2,12 +2,12 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Capítulo 28: Gastar bien y acertar con tu móvil — la guía definitiva de compra
+nav: Capítulo 28: Antes de comprar, aclara estas tres cosas
 toc: default
 kind: chapter
 ---
 
-### Capítulo 28: Gastar bien para comprar el móvil ideal — Guía definitiva de compra
+### Capítulo 28: Antes de comprar, aclara estas tres cosas
 
 {class="chapter-intro mb-4"}
 Comprar un teléfono: mucha gente mira reseñas durante una semana y compara precios durante un mes, pero al final gasta cinco o seis mil yuanes en un teléfono insignia que en realidad no necesita. Este capítulo no lista tablas de parámetros; eso lo puedes ver en la web oficial. Lo que quiero darte es un "método de pensamiento para elegir teléfono", para que en el futuro, sin importar qué teléfono nuevo salga al mercado, puedas juzgar por ti mismo si te conviene.
@@ -26,7 +26,7 @@ Mucha gente pregunta en internet "¿qué móvil comprar por 3000 yuanes?", pero 
 3. <strong>Solo al final elige el modelo</strong>: Con tu lista de necesidades ordenadas y tu presupuesto, busca modelos que coincidan.
 :::
 
-#### I. Cómo leer los parámetros clave - no necesitas entenderlos todos, con estos cinco basta
+I. Cómo leer los parámetros clave - no necesitas entenderlos todos, con estos cinco basta
 
 Las fichas técnicas tienen decenas de datos, pero los usuarios comunes solo necesitan prestar atención a cinco dimensiones:
 
@@ -71,7 +71,7 @@ Las fichas técnicas tienen decenas de datos, pero los usuarios comunes solo nec
 ```
 :::
 
-#### II. Recomendaciones por rango de presupuesto (basado en el mercado chino a mediados de 2026)
+II. Recomendaciones por rango de presupuesto (basado en el mercado chino a mediados de 2026)
 
 Las siguientes recomendaciones se basan en el mercado de China continental en 2026; los precios son oficiales de salida. Los precios concretos pueden variar; usa el precio real al momento de compra.
 

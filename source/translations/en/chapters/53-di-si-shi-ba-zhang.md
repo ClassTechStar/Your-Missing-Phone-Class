@@ -2,17 +2,17 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: Chapter 48: Meet Android — From Operating System to Developer Ecosystem
+nav: Chapter 48: How Did Android Become What It Is Today?
 toc: default
 kind: chapter
 ---
 
-### Chapter 48: Getting to Know Android — From Operating System to Development Ecosystem
+### Chapter 48: How Did Android Become What It Is Today?
 
 {class="chapter-intro mb-4"}
-Congratulations on making this decision — going from "someone who plays with phones" to "someone who makes phone apps." Before we start, let's spread out the map: where did Android come from? Why are developers all over the world writing apps for it? And from the moment your fingers hit the keyboard to when an app lands on a user's phone, what happens in between?
+Congratulations on making this decision, going from "someone who plays with phones" to "someone who makes phone apps." Before we start, let's spread out the map: where did Android come from? Why are developers all over the world writing apps for it? And from the moment your fingers hit the keyboard to when an app lands on a user's phone, what happens in between?
 
-#### I. Android's Origin Story: From "Little Robot" to "The World's Biggest System"
+I. Android's Origin Story: From "Little Robot" to "The World's Biggest System"
 
 Android's story begins in 2003 — an engineer named Andy Rubin founded Android Inc., with a modest goal: build a smart operating system that "understood cameras better." Google acquired it in 2005, and in 2007 joined dozens of manufacturers to form the Open Handset Alliance (OHA). In September 2008, the first Android phone, the HTC Dream (G1), went on sale.
 
@@ -23,10 +23,10 @@ You know the rest of the story: by 2026, Android is the world's largest mobile o
 Tip: Android's Open-Source DNA
 
 {class="mt-1"}
-Android's core code (AOSP, the Android Open Source Project) is open source — any manufacturer can take it and customize it. That's why Xiaomi has MIUI (now called HyperOS), Huawei has its HarmonyOS compatibility layer, and Samsung has One UI. That's good news for developers: what you learn is "Android development," not "development for one brand" — one skill set that works on every device.
+Android's core code (AOSP, the Android Open Source Project) is open source: any manufacturer can take it and customize it. That's why Xiaomi has MIUI (now called HyperOS), Huawei has its HarmonyOS compatibility layer, and Samsung has One UI. That's good news for developers. What you learn is "Android development", not "development for one brand". It is one skill set that works on every device.
 :::
 
-The version numbers are fun too: starting with 1.5 Cupcake, every major release was named after a dessert — Donut, Eclair, Froyo, Gingerbread... until Android 10 in 2019 switched to plain numbers. As of August 2026, the latest official release is Android 17, and the "minimum supported version" you actually need to care about in development is usually set by mainstream apps somewhere between Android 8 (API 26) and Android 10 (API 29) — support devices from a few years back and your potential user base is big enough.
+The version numbers are fun too: starting with 1.5 Cupcake, every major release was named after a dessert, Donut, Eclair, Froyo, Gingerbread... until Android 10 in 2019 switched to plain numbers. As of August 2026, the latest official release is Android 17, and the "minimum supported version" you actually need to care about in development is usually set by mainstream apps. That usually falls somewhere between Android 8 (API 26) and Android 10 (API 29). Support devices from a few years back, and your potential user base is big enough.
 
 ::: div .overflow-x-auto
 ```html
@@ -39,7 +39,7 @@ A Brief History of Android Versions (as of August 2026 — key items for develop
 
 #### II. Which Language to Write In: Java or Kotlin?
 
-Two mainstream languages have appeared over Android's history. Java is the "founding elder" — Android used it from day one. Kotlin was named a "first-class citizen" by Google in 2017, and from 2019 the official stance has been "Kotlin-first." By 2026, nearly all new projects use Kotlin, and most older projects are gradually migrating too.
+Two mainstream languages have appeared over Android's history. Java is the "founding elder", Android used it from day one. Kotlin was named a "first-class citizen" by Google in 2017, and from 2019 the official stance has been "Kotlin-first." By 2026, nearly all new projects use Kotlin, and most older projects are gradually migrating too.
 
 Let's be honest: if you're a complete beginner, learn Kotlin directly and don't look back at Java. Three reasons: first, Kotlin takes 30%-40% less code than Java (same features, shorter and clearer); second, it's natively protected against "null pointers," a beginner's nightmare; third, all modern tutorials, official docs, and AI coding tools (remember our AI coding book?) are Kotlin-based. You'll only run into Java when maintaining old projects or reading old code.
 
@@ -82,14 +82,14 @@ Figure 1: The full journey of an Android app from idea to the store
 
 Two concepts from this pipeline you need to know right now:
 
-- APK: the installation package format for Android apps (.apk). Like a Windows .exe, it installs onto a phone with a tap. Use it for your own testing or for sharing with friends to try.
-- AAB: Android App Bundle (.aab), the "advanced packaging format" used to publish on Google Play. The store dynamically trims the package to match each user's phone model, so everyone downloads a smaller file. You can't install it yourself — it only goes through the store.
+- APK: the installation package format for Android apps (.apk). Like a Windows .exe, it installs onto a phone with a tap. Use it for your own testing, or share it with friends so they can try it out.
+- AAB: Android App Bundle (.aab), the "advanced packaging format" used to publish on Google Play. The store dynamically trims the package to match each user's phone model, so everyone downloads a smaller file. You can't install it yourself, it only goes through the store.
 
-Another term you'll hear constantly: SDK (Software Development Kit). It's the full set of "development gear" provided officially by Android — the API libraries for each version, debugging tools, emulator images, and more. Classes like Activity and Button that you call in your code all come from the SDK.
+Another term you'll hear constantly: SDK (Software Development Kit). It's the full set of "development gear" provided officially by Android: the API libraries for each version, debugging tools, emulator images, and more. Classes like Activity and Button that you call in your code all come from the SDK.
 
 #### IV. The Android Tech Stack at a Glance: Your "Weapon List"
 
-Before we formally start learning, meet the standard configuration of a mainstream Android project in 2026 — it's fine if this list makes no sense yet; come back after you finish the book and it will all click:
+Before we formally start learning, meet the standard configuration of a mainstream Android project in 2026, it's fine if this list makes no sense yet; come back after you finish the book and it will all click:
 
 ::: div .overflow-x-auto
 ```html
@@ -100,9 +100,9 @@ Before we formally start learning, meet the standard configuration of a mainstre
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 The Mainstream Android Tech Stack of 2026 at a Glance
 
-Don't be intimidated by all that English. These are just the pots and pans in the kitchen — right now you only need to know that "cooking means entering the kitchen"; how each tool works will be unpacked for you chapter by chapter. And here's the good news: when Android Studio creates a new project, it sets up this whole stack for you automatically. You just get cooking.
+Don't be intimidated by all that English. These are just the pots and pans in the kitchen, right now you only need to know that "cooking means entering the kitchen"; how each tool works will be unpacked for you chapter by chapter. And here's the good news: when Android Studio creates a new project, it sets up this whole stack for you automatically. You just get cooking.
 
-#### V. Android vs. iOS: A Developer's First Lesson in Choosing Sides
+V. Android vs. iOS: A Developer's First Lesson in Choosing Sides
 
 You may be holding an Android device and an Apple device at the same time. As a developer, the differences in experience between the two sides are worth knowing up front — this isn't about taking sides on "which is better," it's the practical math of "which side suits your start":
 
@@ -115,14 +115,14 @@ You may be holding an Android device and an Apple device at the same time. As a 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Android vs. iOS Development Paths (August 2026)
 
-Let's be honest: if your computer isn't a Mac, this question answers itself — Android is the only option. If you do have a Mac, you can read Parts Eight and Nine of this book side by side; the programming mindset transfers, and learning the second side after the first is much faster.
+Let's be honest: if your computer isn't a Mac, this question answers itself, Android is the only option. If you do have a Mac, you can read Parts Eight and Nine of this book side by side; the programming mindset transfers, and learning the second side after the first is much faster.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Hands-On: Look at the "Android" in Your Phone
 
 {class="mt-1"}
-Open [Settings] > [About phone] (or "About device") on your phone and find the "Android version" row — tap it several times in a row and you'll trigger the system's hidden Easter-egg game. Note your version number and check it against the version table above to see which generation it belongs to. Your phone is your very first "development test device."
+Open [Settings] > [About phone] (or "About device") on your phone and find the "Android version" row, tap it several times in a row and you'll trigger the system's hidden Easter-egg game. Note your version number and check it against the version table above to see which generation it belongs to. Your phone is your very first "development test device."
 :::
 
 ::: div .chapter-summary

@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Eine App, die nur "angucken" kann, ist tot; erst eine App, die Daten speichern und sich vernetzen kann, lebt. In diesem Kapitel lernst du das "Trio" der Android-Datenschicht kennen: DataStore (kleine Einstellungen speichern), Room (strukturierte Daten speichern), Retrofit (mit dem Server sprechen) – plus ihr "Dispositionszentrum", die Koroutinen. Nach diesem Kapitel kannst du echte Apps schreiben, die sich Nutzer-Gewohnheiten merken und Inhalte live aktualisieren.
 
-#### 1. Welches Speicherkonzept wofür? Erst diese Tabelle anschauen
+1. Welches Speicherkonzept wofür? Erst diese Tabelle anschauen
 
 ::: div .overflow-x-auto
 ```html

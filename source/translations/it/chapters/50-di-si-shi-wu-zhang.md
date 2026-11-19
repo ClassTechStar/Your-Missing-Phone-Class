@@ -2,21 +2,21 @@
 id: di-si-shi-wu-zhang
 num: 45
 part: ai-biancheng-pian
-nav: Capitolo 45: Garanzia di qualità — Rendere affidabile il codice scritto dall'AI
+nav: Capitolo 45: L'AI ha scritto, ma il lavoro non è finito
 toc: default
 kind: chapter
 ---
 
-### Capitolo 45: Garanzia di qualità — rendere affidabile il codice scritto dall'AI
+### Capitolo 45: L'AI ha scritto, ma il lavoro non è finito
 
 {class="chapter-intro mb-4"}
-Il codice scritto dall'AI ha un tratto distintivo: di solito «sembra giusto» — nomi delle variabili in regola, commenti completi, logica chiara. Ma «sembrare giusto» non vuol dire «essere giusto». I problemi nascosti nel codice dell'AI sono spesso più difficili da scovare che nel codice scritto a mano, perché la sua qualità apparente è così alta che porta ad abbassare la guardia. In questo capitolo impari a costruire per il codice dell'AI un sistema di garanzia della qualità davvero efficace — con tre linee di difesa, test, revisione e controllo di versione — per trasformare il «sembra giusto» in «è giusto davvero».
+Il codice scritto dall'AI ha un tratto distintivo: di solito «sembra giusto», nomi delle variabili in regola, commenti completi, logica chiara. Ma «sembrare giusto» non vuol dire «essere giusto». I problemi nascosti nel codice dell'AI sono spesso più difficili da scovare che nel codice scritto a mano, perché la sua qualità apparente è così alta che porta ad abbassare la guardia. In questo capitolo impari a costruire per il codice dell'AI un sistema di garanzia della qualità davvero efficace, con tre linee di difesa, test, revisione e controllo di versione, per trasformare il «sembra giusto» in «è giusto davvero».
 
 #### 1. Test-driven: fai scrivere i test all'AI
 
-I test sono la prima linea di difesa della qualità nella programmazione AI. La buona notizia: far scrivere i test all'AI è più facile e affidabile che fargli scrivere il codice delle funzionalità — perché il comportamento atteso dei test è ben definito, ed è raro che ne escano codici «che sembrano giusti ma non lo sono».
+I test sono la prima linea di difesa della qualità nella programmazione AI. La buona notizia: far scrivere i test all'AI è più facile e affidabile che fargli scrivere il codice delle funzionalità. Perché il comportamento atteso dei test è ben definito, ed è raro che ne escano codici «che sembrano giusti ma non lo sono».
 
-Il flusso della programmazione AI guidata dai test è questo: prima fai scrivere all'AI il codice della funzionalità; appena le funzioni di base superano la verifica, fai scrivere subito i casi di test. I casi di test devono coprire il percorso normale, i casi limite e le situazioni anomale. Poi fai correggere all'AI il codice della funzionalità in base ai risultati dei test. Il bello di questo flusso: una volta scritti, i test diventano uno strumento di verifica permanente — ogni modifica successiva può essere convalidata eseguendo i test, per accertare di non aver introdotto regressioni.
+Il flusso della programmazione AI guidata dai test è questo: prima fai scrivere all'AI il codice della funzionalità; appena le funzioni di base superano la verifica, fai scrivere subito i casi di test. I casi di test devono coprire il percorso normale, i casi limite e le situazioni anomale. Poi fai correggere all'AI il codice della funzionalità in base ai risultati dei test. Il bello di questo flusso: una volta scritti, i test diventano uno strumento di verifica permanente: ogni modifica successiva può essere convalidata eseguendo i test, per accertare di non aver introdotto regressioni.
 
 ::: div .code-block
 :::inline div .code-head
@@ -45,7 +45,7 @@ Nota le caratteristiche di questa istruzione: elenca in modo esplicito le tre ca
 
 #### 2. Tecniche di revisione del codice
 
-Anche con i test a copertura, il codice prodotto dall'AI va comunque revisionato a mano. Revisionare il codice non significa leggerlo riga per riga — costerebbe troppo tempo e dipenderebbe troppo dal tuo livello di programmazione. Una revisione efficace del codice AI deve guardare a queste dimensioni chiave:
+Anche con i test a copertura, il codice prodotto dall'AI va comunque revisionato a mano. Revisionare il codice non significa leggerlo riga per riga, costerebbe troppo tempo e dipenderebbe troppo dal tuo livello di programmazione. Una revisione efficace del codice AI deve guardare a queste dimensioni chiave:
 
 ::: div .overflow-x-auto
 ```html
@@ -58,9 +58,9 @@ Le dimensioni chiave della revisione del codice AI
 
 Durante la revisione non serve controllare tutto da solo — puoi chiedere all'AI di fare la prima passata. Istruzione tipo: «revisiona la sicurezza, la gestione degli errori e le prestazioni di questo codice e segnala i potenziali problemi». La capacità di autoverifica dell'AI cresce di continuo: pur non sostituendo del tutto la revisione umana, ti aiuta a filtrare la maggior parte dei problemi evidenti.
 
-#### 3. Controllo di versione: il ruolo di Git nella programmazione con l'AI
+3. Controllo di versione: il ruolo di Git nella programmazione con l'AI
 
-Nella programmazione AI Git conta ancora più che nella programmazione tradizionale. Dato che ogni modifica dell'AI può introdurre cambiamenti imprevedibili, ti serve un rimedio affidabile contro i ripensamenti — e il controllo di versione è proprio quel rimedio.
+Nella programmazione AI Git conta ancora più che nella programmazione tradizionale. Dato che ogni modifica dell'AI può introdurre cambiamenti imprevedibili, ti serve un rimedio affidabile contro i ripensamenti, e il controllo di versione è proprio quel rimedio.
 
 La buona pratica di Git nella programmazione AI è «commit frequenti, piccoli passi avanti». Ogni volta che completi un punto funzionale verificabile, fai un commit. Così, quando una modifica dell'AI crea problemi, puoi riposizionarti con precisione sull'ultimo stato utilizzabile, senza buttare via tutto il lavoro.
 
@@ -77,26 +77,26 @@ Nella programmazione AI ci sono alcune trappole che si ripresentano di continuo 
 
 ##### 1. Trappola uno: la trappola della fiducia
 
-«Il codice scritto dall'AI sembra molto professionale, di sicuro va bene, no?» — è la trappola più pericolosa. Il codice generato dall'AI è in superficie molto ordinato — nomi in regola, commenti completi, struttura chiara — e questo «professionalismo di superficie» porta ad abbassare la guardia. Ma la pulizia della facciata non garantisce la correttezza della logica. Antidoto: verifica sempre con i test, invece di giudicare dal «sembra giusto o no».
+«Il codice scritto dall'AI sembra molto professionale, di sicuro va bene, no?» — è la trappola più pericolosa. Il codice generato dall'AI è in superficie molto ordinato — nomi in regola, commenti completi, struttura chiara, e questo «professionalismo di superficie» porta ad abbassare la guardia. Ma la pulizia della facciata non garantisce la correttezza della logica. Antidoto: verifica sempre con i test, invece di giudicare dal «sembra giusto o no».
 
 ##### 2. Trappola due: la trappola del gonfiore
 
-«Visto che l'AI mi scrive il codice, perché non realizzare le funzioni in modo completo?» — e il codice gonfia. L'AI è bravissima a «dare del più»: le chiedi una pagina di login e ti consegna un sistema di gestione utenti completo. Le funzioni in più non solo aumentano la complessità, ma anche la probabilità di bug. Antidoto: rispetta con rigore il principio Simplicity First e dì chiaramente all'AI «fai solo questa funzione, non aggiungere altro».
+«Visto che l'AI mi scrive il codice, perché non realizzare le funzioni in modo completo?», e il codice gonfia. L'AI è bravissima a «dare del più»: le chiedi una pagina di login e ti consegna un sistema di gestione utenti completo. Le funzioni in più non solo aumentano la complessità, ma anche la probabilità di bug. Antidoto: rispetta con rigore il principio Simplicity First e dì chiaramente all'AI «fai solo questa funzione, non aggiungere altro».
 
 ##### 3. Trappola tre: la trappola della comprensione
 
-«L'AI capirà comunque cosa intendo, no?» — non per forza. La capacità di comprensione dell'AI è notevole, ma davanti a richieste vaghe continua a «indovinare». Quando indovina male, il codice che produce è sbagliato. E c'è di peggio: il codice nato da un'indovinella sbagliata di solito «sembra molto ragionevole», e ti convince che abbia capito. Antidoto: nelle istruzioni dai dettagli concreti a sufficienza, per ridurre lo spazio in cui l'AI deve «indovinare».
+«L'AI capirà comunque cosa intendo, no?», non per forza. La capacità di comprensione dell'AI è notevole, ma davanti a richieste vaghe continua a «indovinare». Quando indovina male, il codice che produce è sbagliato. E c'è di peggio: il codice nato da un'indovinella sbagliata di solito «sembra molto ragionevole», e ti convince che abbia capito. Antidoto: nelle istruzioni dai dettagli concreti a sufficienza, per ridurre lo spazio in cui l'AI deve «indovinare».
 
 ##### 4. Trappola quattro: la trappola del contesto
 
-«L'ho detto nei dialoghi precedenti, l'AI se lo ricorda ancora, no?» — molto probabilmente no. Man mano che i dialoghi si allungano o si aprono nuove sessioni, l'AI perde il contesto iniziale. Se un vincolo chiave non finisce nel file di memoria del progetto, c'è da scommettere che venga ignorato nelle modifiche successive. Antidoto: i vincoli chiave si scrivono nel file di memoria del progetto, senza contare sulla memoria dei dialoghi.
+«L'ho detto nei dialoghi precedenti, l'AI se lo ricorda ancora, no?»: molto probabilmente no. Man mano che i dialoghi si allungano o si aprono nuove sessioni, l'AI perde il contesto iniziale. Se un vincolo chiave non finisce nel file di memoria del progetto, c'è da scommettere che venga ignorato nelle modifiche successive. Antidoto: i vincoli chiave si scrivono nel file di memoria del progetto, senza contare sulla memoria dei dialoghi.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Ripasso rapido delle quattro trappole
 
 {class="mt-1"}
-Trappola della fiducia — non fidarti del «sembra giusto»; trappola del gonfiore — l'AI ama «dare del più»; trappola della comprensione — davanti a richieste vaghe «indovina»; trappola del contesto — la memoria dei dialoghi «dimentica». Gli antidoti corrispondenti sono: verifica con i test, taglia il superfluo, dai tutti i dettagli, scrivi nel file di memoria.
+Trappola della fiducia, non fidarti del «sembra giusto»; trappola del gonfiore, l'AI ama «dare del più»; trappola della comprensione: davanti a richieste vaghe «indovina»; trappola del contesto: la memoria dei dialoghi «dimentica». Gli antidoti corrispondenti sono: verifica con i test, taglia il superfluo, dai tutti i dettagli, scrivi nel file di memoria.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -111,7 +111,7 @@ Se hai già iniziato il Progetto 1 (il sito di strumenti): ① fai scrivere all'
 {class="font-semibold mb-1"}
 Riepilogo del capitolo
 
-- Il codice AI che «sembra giusto» ≠ «è davvero giusto» — la qualità superficiale troppo alta fa proprio abbassare la guardia
+- Il codice AI che «sembra giusto» ≠ «è davvero giusto», la qualità superficiale troppo alta fa proprio abbassare la guardia
 - Fai scrivere i test all'AI: elenca esplicitamente le tre categorie di casi (normali / limite / anomali) per evitare i «test selettivi»
 - Le cinque dimensioni della revisione: sicurezza, gestione degli errori, prestazioni, manutenibilità, gestione delle dipendenze
 - Git è il «rimedio contro i ripensamenti»: commit frequenti, piccoli passi avanti, branch separati, diff sempre sotto gli occhi

@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 41: Panorama degli strumenti di programmazione AI nel 2026
 
 {class="chapter-intro mb-4"}
-Una prevenzione prima di iniziare: questo capitolo è uno “scatto” dell'ecosistema degli strumenti di agosto 2026. Tra sei mesi sarà superato — ed è proprio la prima lezione che il capitolo vuole insegnarti. Lo scopo del capitolo non è insegnarti “quale strumento usare”, ma aiutarti a costruire un quadro di giudizio su “come scegliere gli strumenti”. Quando capirai la filosofia di design dei diversi strumenti, potrai in ogni momento fare la scelta giusta per te.
+Una prevenzione prima di iniziare: questo capitolo è uno “scatto” dell'ecosistema degli strumenti di agosto 2026. Tra sei mesi sarà superato, ed è proprio la prima lezione che il capitolo vuole insegnarti. Lo scopo del capitolo non è insegnarti “quale strumento usare”, ma aiutarti a costruire un quadro di giudizio su “come scegliere gli strumenti”. Quando capirai la filosofia di design dei diversi strumenti, potrai in ogni momento fare la scelta giusta per te.
 
 #### 1. Le tre scuole e il quadro di scelta
 
@@ -37,7 +37,7 @@ L'AI integrata nell'IDE è la scuola più diffusa: incorpora le capacità AI nel
 
 ##### 1. Cursor 3
 
-Cursor è attualmente l'IDE di programmazione AI più usato al mondo. Cursor 3, rilasciato nell'aprile 2026, segna una svolta importante per gli strumenti di programmazione AI: l'utilizzo della modalità Agent ha superato per la prima volta quello del completamento Tab — gli sviluppatori sono passati da “l'AI mi completa il codice” a “l'AI completa i miei compiti”. Le caratteristiche principali di Cursor 3 includono: editing multi-file (l'AI può modificare più file insieme per portare a termine il compito), consapevolezza del contesto (comprende automaticamente struttura del progetto e dipendenze) e profonda integrazione con il terminale (l'AI può eseguire comandi e vedere l'output direttamente dall'editor).
+Cursor è attualmente l'IDE di programmazione AI più usato al mondo. Cursor 3, rilasciato nell'aprile 2026, segna una svolta importante per gli strumenti di programmazione AI: l'utilizzo della modalità Agent ha superato per la prima volta quello del completamento Tab, gli sviluppatori sono passati da “l'AI mi completa il codice” a “l'AI completa i miei compiti”. Le caratteristiche principali di Cursor 3 includono: editing multi-file (l'AI può modificare più file insieme per portare a termine il compito), consapevolezza del contesto (comprende automaticamente struttura del progetto e dipendenze) e profonda integrazione con il terminale, (l'AI può eseguire comandi e vedere l'output direttamente dall'editor).
 
 ##### 2. Trae
 
@@ -45,21 +45,21 @@ Trae è l'IDE di programmazione AI lanciato da ByteDance, con una base di utenti
 
 ##### 3. Altri strumenti
 
-Windsurf (ex Codeium) è noto per un'esperienza di completamento del codice fluidissima, ideale per chi cerca la sensazione di “scrivere al volo”. CodeBuddy di Tencent Cloud, come estensione di VS Code, eccelle nell'integrazione con l'ecosistema cloud ed è adatto a progetti pensati per Tencent Cloud o per lo sviluppo di Mini Program WeChat. Anche Lingma di Alibaba (Tongyi Lingma) e Comate di Baidu offrono esperienze di integrazione nell'IDE simili, ciascuna con ottimizzazioni proprie per gli scenari in cinese.
+Windsurf (ex Codeium) è noto per un'esperienza di completamento del codice fluidissima. Ideale per chi cerca la sensazione di “scrivere al volo”. CodeBuddy di Tencent Cloud, come estensione di VS Code, eccelle nell'integrazione con l'ecosistema cloud ed è adatto a progetti pensati per Tencent Cloud o per lo sviluppo di Mini Program WeChat. Anche Lingma di Alibaba (Tongyi Lingma) e Comate di Baidu offrono esperienze di integrazione nell'IDE simili, ciascuna con ottimizzazioni proprie per gli scenari in cinese.
 
 #### 3. La scuola degli Agent da terminale
 
-L'Agent da terminale è la scuola che cresce più in fretta nel 2026. Idea centrale: l'AI non dovrebbe essere un semplice plugin dell'editor, ma poter operare sull'intero ambiente di sviluppo come fa uno sviluppatore — leggere e scrivere file, eseguire comandi, vedere l'output, installare dipendenze. Claude Code è il rappresentante di questa scuola.
+L'Agent da terminale è la scuola che cresce più in fretta nel 2026. Idea centrale: l'AI non dovrebbe essere un semplice plugin dell'editor, ma poter operare sull'intero ambiente di sviluppo come fa uno sviluppatore: leggere e scrivere file, eseguire comandi, vedere l'output, installare dipendenze. Claude Code è il rappresentante di questa scuola.
 
 ##### 1. Claude Code
 
-Claude Code è lo strumento di programmazione AI da terminale lanciato da Anthropic, arrivato a metà 2026 a un fatturato annualizzato di 2,5 miliardi di dollari. Il suo funzionamento è completamente diverso da quello di un IDE tradizionale: descrivi il compito in linguaggio naturale nel terminale, e Claude Code legge in autonomia i file pertinenti, modifica il codice, esegue i test, controlla i risultati e corregge iterando — senza che tu debba aprire l'editor.
+Claude Code è lo strumento di programmazione AI da terminale lanciato da Anthropic, arrivato a metà 2026 a un fatturato annualizzato di 2,5 miliardi di dollari. Il suo funzionamento è completamente diverso da quello di un IDE tradizionale: descrivi il compito in linguaggio naturale nel terminale, e Claude Code legge in autonomia i file pertinenti, modifica il codice, esegue i test, controlla i risultati e corregge iterando: senza che tu debba aprire l'editor.
 
 Il vantaggio di Claude Code è la “percezione dell'intero progetto”: non è limitato dalla finestra dell'editor, può esplorare liberamente l'intera directory del progetto e capire le dipendenze tra i file. Supporta anche i file di memoria del progetto CLAUDE.md, così l'AI conosce il contesto fin dall'inizio di ogni sessione. Per refactoring di progetti grandi, modifiche in blocco, scrittura di test e compiti simili, un Agent da terminale è più efficiente di un plugin per IDE.
 
 ##### 2. Codex CLI e Aider
 
-Codex CLI di OpenAI offre un'esperienza di programmazione da terminale simile e supporta la funzione /import — permette di importare una base di codice esistente perché l'AI la comprenda. Aider è uno strumento open source di programmazione AI da terminale che supporta più modelli (GPT, Claude, DeepSeek e altri), adatto a chi vuole cambiare modello con flessibilità. Questi strumenti hanno ognuno le sue peculiarità, ma la stessa idea di fondo: dare all'AI, nel terminale, la piena capacità di operare sull'ambiente di sviluppo.
+Codex CLI di OpenAI offre un'esperienza di programmazione da terminale simile e supporta la funzione /import. Permette di importare una base di codice esistente perché l'AI la comprenda. Aider è uno strumento open source di programmazione AI da terminale che supporta più modelli (GPT, Claude, DeepSeek e altri), adatto a chi vuole cambiare modello con flessibilità. Questi strumenti hanno ognuno le sue peculiarità, ma la stessa idea di fondo: dare all'AI, nel terminale, la piena capacità di operare sull'ambiente di sviluppo.
 
 #### 4. La scuola dei Builder nel cloud
 
@@ -77,9 +77,9 @@ Il vantaggio comune di questi strumenti è “iniziare senza configurazione” �
 Se domani tutti gli strumenti di programmazione con l'IA sparissero, dovrebbero restare tre abitudini: pensare bene prima di agire, fare un piccolo passo alla volta, verificare una volta finito. Gli strumenti sono amplificatori, la metodologia è la fondazione. Gli amplificatori si possono sostituire, la fondazione non deve vacillare.
 :::
 
-Ripercorriamo i cambiamenti di strumenti dal 2024 al 2026: nel 2024 il re era GitHub Copilot, nel 2025 lo ha sostituito Cursor, nel 2026 Claude Code ha fatto il grande balzo. A ogni nuovo strumento qualcuno proclama “stavolta è diverso”, ma alla fine si scopre che chi sfrutta bene lo strumento nuovo è proprio chi ha una metodologia solida. A loro basta qualche giorno di adattamento per cambiare strumento, mentre chi ha imparato solo i comandi riparte da zero a ogni cambio.
+Ripercorriamo i cambiamenti di strumenti dal 2024 al 2026: nel 2024 il re era GitHub Copilot, nel 2025 lo ha sostituito Cursor, nel 2026 Claude Code ha fatto il grande balzo. A ogni nuovo strumento qualcuno proclama “stavolta è diverso”, ma alla fine si scopre che chi sfrutta bene lo strumento nuovo è proprio chi ha una metodologia solida. A loro basta qualche giorno di adattamento per cambiare strumento. Mentre chi ha imparato solo i comandi riparte da zero a ogni cambio.
 
-Perciò il percorso di apprendimento consigliato da questo libro è: inizia con uno strumento (uno qualsiasi va bene) e assorbi nella pratica i cinque principi di pensiero; quando la tua metodologia sarà abbastanza solida, prova strumenti di scuole diverse e senti le differenze di filosofia di design; alla fine formerai la tua combinazione personale — per esempio Cursor per lo sviluppo quotidiano, Claude Code per refactoring e test, v0 per i prototipi rapidi. La combinazione varia da persona a persona, ma la metodologia è comune.
+Perciò il percorso di apprendimento consigliato da questo libro è: inizia con uno strumento (uno qualsiasi va bene) e assorbi nella pratica i cinque principi di pensiero; quando la tua metodologia sarà abbastanza solida, prova strumenti di scuole diverse e senti le differenze di filosofia di design; alla fine formerai la tua combinazione personale, per esempio Cursor per lo sviluppo quotidiano, Claude Code per refactoring e test, v0 per i prototipi rapidi. La combinazione varia da persona a persona, ma la metodologia è comune.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

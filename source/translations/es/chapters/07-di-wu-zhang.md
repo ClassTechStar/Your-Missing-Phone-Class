@@ -2,12 +2,12 @@
 id: di-wu-zhang
 num: 05
 part: ji-chu-pian
-nav: Capítulo 5: Haz que tu móvil te entienda mejor
+nav: Capítulo 5: Ajusta el teléfono a tu gusto
 toc: default
 kind: chapter
 ---
 
-### Capítulo 5: Haz que el teléfono te entienda mejor — Ajustes básicos
+### Capítulo 5: Ajusta el teléfono a tu gusto
 
 {class="chapter-intro mb-4"}
 Dedicar unos minutos a la configuración mejora enormemente la experiencia. Estos ajustes son como "afinar" el teléfono para que se ajuste a tus hábitos de uso.
@@ -36,7 +36,7 @@ Cambiar a un fondo bonito (estático o dinámico) cambia el ánimo. Los teléfon
 
 <strong>Widgets de escritorío</strong>: coloca el tiempo, la agenda o el control de música en el escritorío para acceder con un solo paso. iOS y Android lo admiten; mantén pulsado un espacio vacío del escritorío para añadirlos.
 
-#### IV. Ajustes de eficiencia: convierte el teléfono en tu "cerebro auxiliar"
+IV. Ajustes de eficiencia: convierte el teléfono en tu "cerebro auxiliar"
 
 Esta parte reúne funciones "que una vez configuradas no hay vuelta atrás"; cada una puede mejorar notablemente tu eficiencia diaria.
 
@@ -80,7 +80,7 @@ Esta parte reúne funciones "que una vez configuradas no hay vuelta atrás"; cad
 Al estrenar un teléfono o tras una gran actualización, dedica 10 minutos a repasar estos ajustes:<br> ① Contraseña de bloqueo + biometría ② Agrupar notificaciones + desactivar marketing ③ Tamaño de fuente / tasa de refresco / modo oscuro<br> ④ Teclado / navegador / correo predeterminados ⑤ Contacto de emergencia / tarjeta médica ⑥ Ajustes de copia de seguridad
 :::
 
-#### V. Accesibilidad y adaptabilidad: el poder de la tecnología para el bien
+V. Accesibilidad y adaptabilidad: el poder de la tecnología para el bien
 
 Que no te asuste el nombre "accesibilidad"; estas funciones son para todo el mundo. Se diseñaron inicialmente para personas con discapacidad, pero también son útiles para cualquier persona: con una mano lesionada o cargando al bebé, en el metro con los auriculares estropeados, con gafas de cerca leyendo textos pequeños... En definitiva, el diseño accesible encarna la idea de <strong>la tecnología para el bien</strong>: que todos puedan disfrutar por igual de la vida digital.
 
@@ -103,7 +103,7 @@ El lector de pantalla es la herramienta central para que las personas con discap
 2. Deslizar con dos dedos: desplazarse hacía arriba/abajo o izquierda/derecha por la página;
 3. Doble toque con un dedo: activar el elemento con el foco actual (equivalente a "clic");
 4. Deslizar con tres dedos: cambiar de página;
-5. Triple toque con un dedo: ampliar o seleccionar (distinto del triple toque normal).
+5. Triple toque con un dedo: ampliar o seleccionar (distinto del triple toque normal)
 
 {class="mt-1"}
 <strong>Ajustes personalizados</strong>: [VoiceOver] &gt; [Voz], permite ajustar la <strong>velocidad de lectura</strong>(por defecto alrededor del 50 %; se puede subir a 70-80 % para una escucha más fluida), el <strong>tono</strong> y cambiar de paquete de voz. iOS incorpora "Voz mejorada" y "Controlador de voz"; el primero reduce respiraciones y pausas para una escucha más natural.
@@ -124,7 +124,7 @@ El lector de pantalla es la herramienta central para que las personas con discap
 2. Doble toque con un dedo: activar el elemento;
 3. Deslizar arriba/abajo o izquierda/derecha con dos dedos: desplazarse;
 4. Un toque con tres dedos: entrar en modo lectura (lectura continua);
-5. Un toque con cuatro dedos: pausar/reanudar la lectura.
+5. Un toque con cuatro dedos: pausar/reanudar la lectura
 
 {class="mt-1"}
 <strong>Ajustes personalizados</strong>: [TalkBack] &gt; [Ajustes de texto a voz], permite ajustar la <strong>velocidad</strong>, <strong>tono</strong> y cambiar de <strong>motor de voz</strong>(se recomienda instalar el motor de texto a voz de Google, con una lectura más natural).
@@ -168,7 +168,7 @@ Cuando el lector de pantalla se topa con una imagen, lo habitual era saltarla o 
 <i class="fas fa-lightbulb mr-2"></i>Escenarios de uso
 
 {class="mt-1"}
-Prueba a preguntar sobre una foto de calle "¿cuántas personas hay en esta imagen? ¿Qué están haciendo?", o abre una App de comida a domicilio y deja que la IA lea los nombres de los platos del menú en imagen —<strong>esto es verdaderamente "la tecnología hace la vida más igualitaria"</strong>.
+Prueba a preguntar sobre una foto de calle "¿cuántas personas hay en esta imagen? ¿Qué están haciendo?", o abre una App de comida a domicilio y deja que la IA lea los nombres de los platos del menú en imagen<strong>esto es verdaderamente "la tecnología hace la vida más igualitaria"</strong>.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -194,7 +194,7 @@ Los subtítulos en tiempo real (Live Captíons) son una función <strong>a nivel
 2. La precisión es mayor cuando el hablante <strong>articula con claridad y a velocidad moderada</strong>;
 3. Las conversaciones entre varias personas reducen la precisión; puede usarse el modo "mostrar solo a una persona";
 4. Admite mandarín, cantonés, inglés y otros idiomas principales;<strong>la precisión en idiomas minoritaríos es menor</strong>;
-5. Si hay música de fondo o voces que interfieren durante la conversación, el reconocimiento se interrumpirá.
+5. Si hay música de fondo o voces que interfieren durante la conversación, el reconocimiento se interrumpirá
 :::
 
 ##### 5. Escenarío de llamada bidireccional: voz a texto + texto a voz
@@ -217,7 +217,7 @@ Cuando el usuario <strong>ni puede oír ni puede hablar</strong>(afonía súbita
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>RTT (Real-Time Text)</strong>: ambos interlocutores deben ser compatibles; el texto se muestra a medida que se escribe, sin latencia; los principales operadores ya lo admiten;
 - <strong>TTY (teletipo)</strong>: requiere un dispositivo TTY específico; está siendo sustituido por RTT;
-- La <strong>función de voz a texto</strong> de WeChat/QQ es una alternativa: mantén pulsado el mensaje de voz → "Convertir a texto".
+- La <strong>función de voz a texto</strong> de WeChat/QQ es una alternativa: mantén pulsado el mensaje de voz → "Convertir a texto"
 :::
 
 ##### 6. Funciones "pequeñas pero útiles" para todos
@@ -248,5 +248,5 @@ Busca un rato libre y haz estas pruebas:
 1. Activa <strong>VoiceOver / TalkBack</strong> e intenta navegar por WeChat deslizando con tres dedos sin usar los ojos;
 2. Activa los <strong>subtítulos en tiempo real</strong> y habla al teléfono para comprobar la precisión;
 3. Usa <strong>tres toques</strong> para ampliar un texto al 200 % y experimentar el día a día de una persona con discapacidad visual;
-4. Desactiva todas las funciones anteriores y reflexiona: "Si siempre necesitara estas funciones, ¿cómo querría que estuvieran diseñadas?".
+4. Desactiva todas las funciones anteriores y reflexiona: "Si siempre necesitara estas funciones, ¿cómo querría que estuvieran diseñadas?"
 :::

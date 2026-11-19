@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 41: Panorama Alat Pemrograman AI 2026
 
 {class="chapter-intro mb-4"}
-Sebagai "vaksin" dulu: bab ini adalah "potret" ekosistem alat per Agustus 2026. Setengah tahun kemudian ia akan kedaluwarsa — dan itu justru pelajaran pertama yang ingin diajarkan bab ini. Tujuan bab ini bukan mengajarimu "alat mana yang dipakai", melainkan membantumu membangun kerangka penilaian "bagaimana memilih alat". Begitu kamu memahami filosofi desain berbagai alat, kamu bisa membuat pilihan yang sesuai untuk dirimu kapan pun.
+Sebagai "vaksin" dulu: bab ini adalah "potret" ekosistem alat per Agustus 2026. Setengah tahun kemudian ia akan kedaluwarsa, dan itu justru pelajaran pertama yang ingin diajarkan bab ini. Tujuan bab ini bukan mengajarimu "alat mana yang dipakai". melainkan membantumu membangun kerangka penilaian "bagaimana memilih alat". Begitu kamu memahami filosofi desain berbagai alat, kamu bisa membuat pilihan yang sesuai untuk dirimu kapan pun.
 
 #### 1. Tiga Aliran Besar dan Kerangka Pemilihan
 
@@ -37,7 +37,7 @@ AI Terintegrasi IDE adalah aliran paling arus utama: kemampuan AI ditanamkan ke 
 
 ##### 1. Cursor 3
 
-Cursor saat ini adalah IDE pemrograman AI yang paling banyak digunakan di dunia. Cursor 3 yang dirilis April 2026 menandai titik balik penting bagi alat pemrograman AI: tingkat penggunaan mode Agent untuk pertama kalinya melampaui mode pelengkapan Tab — pengembang beralih dari "AI melengkapi kodenya" ke "AI menyelesaikan tugasnya". Fitur inti Cursor 3 meliputi: pengeditan multi-file (AI bisa mengubah beberapa file sekaligus untuk menyelesaikan tugas), kesadaran konteks (memahami struktur proyek dan relasi dependensi secara otomatis), serta integrasi mendalam dengan terminal (AI bisa langsung menjalankan perintah dan melihat output dari dalam editor).
+Cursor saat ini adalah IDE pemrograman AI yang paling banyak digunakan di dunia. Cursor 3 yang dirilis April 2026 menandai titik balik penting bagi alat pemrograman AI: tingkat penggunaan mode Agent untuk pertama kalinya melampaui mode pelengkapan Tab: pengembang beralih dari "AI melengkapi kodenya" ke "AI menyelesaikan tugasnya". Fitur inti Cursor 3 meliputi: pengeditan multi-file (AI bisa mengubah beberapa file sekaligus untuk menyelesaikan tugas), kesadaran konteks (memahami struktur proyek dan relasi dependensi secara otomatis), serta integrasi mendalam dengan terminal (AI bisa langsung menjalankan perintah dan melihat output dari dalam editor).
 
 ##### 2. Trae
 
@@ -45,21 +45,21 @@ Trae adalah IDE pemrograman AI yang diluncurkan ByteDance dengan basis pengguna 
 
 ##### 3. Alat Lainnya
 
-Windsurf (dulu bernama Codeium) terkenal karena pengalaman pelengkapan kode yang mulus, cocok bagi pengembang yang mengejar sensasi "mengetik secepat kilat". Tencent Cloud CodeBuddy, sebagai plugin VS Code, unggul dalam integrasi dengan ekosistem cloud, cocok untuk proyek yang berencana di-deploy ke Tencent Cloud atau mengembangkan mini program WeChat. Tongyi Lingma dari Alibaba dan Comate dari Baidu juga menyediakan pengalaman integrasi IDE serupa, masing-masing dengan keunikan pada optimalisasi skenario bahasa Tionghoa.
+Windsurf (dulu bernama Codeium) terkenal karena pengalaman pelengkapan kode yang mulus, cocok bagi pengembang yang mengejar sensasi "mengetik secepat kilat". Tencent Cloud CodeBuddy, sebagai plugin VS Code, unggul dalam integrasi dengan ekosistem cloud. cocok untuk proyek yang berencana di-deploy ke Tencent Cloud atau mengembangkan mini program WeChat. Tongyi Lingma dari Alibaba dan Comate dari Baidu juga menyediakan pengalaman integrasi IDE serupa, masing-masing dengan keunikan pada optimalisasi skenario bahasa Tionghoa.
 
 #### 3. Aliran Agent Terminal
 
-Agent Terminal adalah aliran yang tumbuh paling cepat pada 2026. Ide intinya: AI tidak seharusnya hanya menjadi plugin editor; ia harus mampu mengoperasikan seluruh lingkungan pengembangan seperti pengembang sungguhan — membaca dan menulis file, menjalankan perintah, melihat output, memasang dependensi. Claude Code adalah perwakilan aliran ini.
+Agent Terminal adalah aliran yang tumbuh paling cepat pada 2026. Ide intinya: AI tidak seharusnya hanya menjadi plugin editor; ia harus mampu mengoperasikan seluruh lingkungan pengembangan seperti pengembang sungguhan, membaca dan menulis file, menjalankan perintah, melihat output, memasang dependensi. Claude Code adalah perwakilan aliran ini.
 
 ##### 1. Claude Code
 
-Claude Code adalah alat pemrograman AI berbasis terminal dari Anthropic yang hingga pertengahan 2026 telah mencapai pendapatan tahunan sebesar 2,5 miliar dolar AS. Cara kerjanya sama sekali berbeda dari IDE tradisional: kamu mendeskripsikan tugas dengan bahasa natural di terminal, lalu Claude Code secara mandiri membaca file terkait, mengubah kode, menjalankan pengujian, melihat hasil, dan memperbaiki secara iteratif — seluruh proses tidak mengharuskanmu membuka editor.
+Claude Code adalah alat pemrograman AI berbasis terminal dari Anthropic ,yang hingga pertengahan 2026 telah mencapai pendapatan tahunan sebesar 2,5 miliar dolar AS. Cara kerjanya sama sekali berbeda dari IDE tradisional: kamu mendeskripsikan tugas dengan bahasa natural di terminal, lalu Claude Code secara mandiri membaca file terkait, mengubah kode, menjalankan pengujian, melihat hasil, dan memperbaiki secara iteratif — seluruh proses tidak mengharuskanmu membuka editor.
 
 Keunggulan Claude Code adalah "kesadaran seluruh proyek": ia tidak terbatas pada jendela editor, bebas menelusuri seluruh direktori proyek dan memahami relasi dependensi antar file. Ia juga mendukung file memori proyek CLAUDE.md sehingga AI langsung memahami latar belakang proyek sejak awal setiap sesi. Untuk tugas seperti refaktorasi proyek besar, perubahan massal, dan penulisan pengujian, Agent Terminal lebih efisien daripada plugin IDE.
 
 ##### 2. Codex CLI dan Aider
 
-Codex CLI dari OpenAI menawarkan pengalaman pemrograman terminal serupa dan mendukung fitur /import — bisa mengimpor basis kode yang sudah ada agar dipahami AI. Aider adalah alat pemrograman AI terminal yang open source, mendukung berbagai model (GPT, Claude, DeepSeek, dll.), cocok bagi pengguna yang ingin berpindah model secara fleksibel. Meski masing-masing punya keunikan, alat-alat ini berbagi satu ide inti yang sama: memberi AI kemampuan penuh mengoperasikan lingkungan pengembangan di terminal.
+Codex CLI dari OpenAI menawarkan pengalaman pemrograman terminal serupa dan mendukung fitur /import, bisa mengimpor basis kode yang sudah ada agar dipahami AI. Aider adalah alat pemrograman AI terminal yang open source, mendukung berbagai model (GPT. Claude, DeepSeek, dll.), cocok bagi pengguna yang ingin berpindah model secara fleksibel. Meski masing-masing punya keunikan, alat-alat ini berbagi satu ide inti yang sama: memberi AI kemampuan penuh mengoperasikan lingkungan pengembangan di terminal.
 
 #### 4. Aliran Builder Cloud
 
@@ -77,9 +77,9 @@ Keunggulan bersama alat-alat ini adalah "mulai tanpa konfigurasi" — buka brows
 Andai besok semua alat coding AI menghilang, tiga kebiasaan yang tetap harus Anda pegang: berpikir jernih sebelum bertindak, melangkah kecil satu per satu, dan memverifikasi setelah selesai. Alat adalah penguat, metodologi adalah fondasi. Penguat boleh diganti, fondasi tak boleh goyah.
 :::
 
-Lihat kembali pergantian alat dari 2024 hingga 2026: pada 2024 GitHub Copilot adalah rajanya, pada 2025 Cursor mengambil alih, pada 2026 Claude Code tampil mencolok. Setiap kali alat baru muncul, selalu ada yang mengklaim "kali ini beda", tetapi pada akhirnya terbukti: mereka yang menggunakan alat baru dengan baik justru mereka yang metodologinya kuat. Mereka hanya butuh beberapa hari penyesuaian saat berganti alat, sedangkan yang hanya menghafal cara memakai satu alat harus belajar dari awal setiap kali berganti.
+Lihat kembali pergantian alat dari 2024 hingga 2026: pada 2024 GitHub Copilot adalah rajanya, pada 2025 Cursor mengambil alih, pada 2026 Claude Code tampil mencolok. Setiap kali alat baru muncul, selalu ada yang mengklaim "kali ini beda". tetapi pada akhirnya terbukti: mereka yang menggunakan alat baru dengan baik justru mereka yang metodologinya kuat. Mereka hanya butuh beberapa hari penyesuaian saat berganti alat, sedangkan yang hanya menghafal cara memakai satu alat harus belajar dari awal setiap kali berganti.
 
-Karena itu, jalur belajar yang disarankan buku ini adalah: mulailah dengan satu alat (yang mana pun boleh) dan rasakan lima prinsip berpikir utama lewat praktik; setelah metodologimu cukup kokoh, coba alat dari aliran-aliran yang berbeda dan rasakan perbedaan filosofi desainnya; pada akhirnya kamu akan membentuk kombinasi alatmu sendiri — misalnya Cursor untuk pengembangan harian, Claude Code untuk refaktorasi dan pengujian, dan v0 untuk prototipe cepat. Kombinasi alat berbeda-beda untuk tiap orang, tetapi metodologinya berlaku umum.
+Karena itu, jalur belajar yang disarankan buku ini adalah: mulailah dengan satu alat (yang mana pun boleh) dan rasakan lima prinsip berpikir utama lewat praktik; setelah metodologimu cukup kokoh, coba alat dari aliran-aliran yang berbeda dan rasakan perbedaan filosofi desainnya; pada akhirnya kamu akan membentuk kombinasi alatmu sendiri, misalnya Cursor untuk pengembangan harian, Claude Code untuk refaktorasi dan pengujian, dan v0 untuk prototipe cepat. Kombinasi alat berbeda-beda untuk tiap orang, tetapi metodologinya berlaku umum.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

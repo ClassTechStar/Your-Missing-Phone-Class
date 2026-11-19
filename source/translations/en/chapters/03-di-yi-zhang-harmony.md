@@ -9,7 +9,7 @@ kind: supplement
 ### Chapter 1 Appendix: HarmonyOS Operating System Special Topic
 
 {class="chapter-intro mb-4"}
-HarmonyOS is Huawei's self-developed operating system. Since its release in 2019, it has gone through several major versions. It's not just "another Android replacement"—it's a new species with a unique design philosophy. Let's dive deep into this rising operating system.
+HarmonyOS is Huawei's self-developed operating system. Since its release in 2019, it has gone through several major versions. It's not just "another Android replacement",it's a new species with a unique design philosophy. Let's dive deep into this rising operating system.
 
 #### 1. What Is HarmonyOS? Why Is It Different?
 
@@ -17,11 +17,11 @@ HarmonyOS's core philosophy is "interconnection of all things." Unlike tradition
 
 <strong>Distributed architecture</strong> is the soul of HarmonyOS. Simply put, it can virtualize multiple devices into a "super terminal." Your phone, tablet, computer, watch, and TV are no longer isolated individuals but integrated "organs" that can call upon each other's capabilities.
 
-For example: You're watching a video on your phone and want to see it on a bigger screen. The traditional way is screen casting; on HarmonyOS, you can directly "stream" the video to the TV to continue watching, with the phone becoming a remote control. This isn't simple screen casting—the app itself is running across devices.
+For example: You're watching a video on your phone and want to see it on a bigger screen. The traditional way is screen casting; on HarmonyOS, you can directly "stream" the video to the TV to continue watching, with the phone becoming a remote control. This isn't simple screen casting,the app itself is running across devices.
 
 #### 2. HarmonyOS 4.3: A Mature Version Based on AOSP
 
-HarmonyOS 4.3 is the currently widely deployed version on Huawei phones. It should be noted that HarmonyOS 4.3 is compatible with the code framework of the Android Open Source Project (AOSP), so it can fully support Android apps—most apps you download from the Huawei AppGallery are essentially still Android apps, running through HarmonyOS's compatibility layer. But HarmonyOS 4.3 is not simply a reskinned Android; it adds a large number of Huawei's self-developed distributed capabilities, Ark engine, and other technologies on top of AOSP.
+HarmonyOS 4.3 is the currently widely deployed version on Huawei phones. It should be noted that HarmonyOS 4.3 is compatible with the code framework of the Android Open Source Project (AOSP), so it can fully support Android apps,most apps you download from the Huawei AppGallery are essentially still Android apps, running through HarmonyOS's compatibility layer. But HarmonyOS 4.3 is not simply a reskinned Android; it adds a large number of Huawei's self-developed distributed capabilities, Ark engine, and other technologies on top of AOSP.
 
 ##### Core Features:
 
@@ -39,18 +39,18 @@ HarmonyOS 4.3 is the currently widely deployed version on Huawei phones. It shou
 - <strong>Super Hub</strong>: A temporary storage area where you can stash text, images, and files, then drag them into any app. Cross-app sharing becomes incredibly smooth.
 - <strong>Smart Search</strong>: Global search that can find apps, files, settings, and web pages.
 
-#### 3. HarmonyOS NEXT (HarmonyOS 6): The True Starting Point of Huawei's Autonomous Operating System
+3. HarmonyOS NEXT (HarmonyOS 6): The True Starting Point of Huawei's Autonomous Operating System
 
-HarmonyOS NEXT (HarmonyOS NEXT 5.0) is fundamentally different from HarmonyOS 4.3—it uses Huawei's self-developed HarmonyOS microkernel, no longer relying on the Linux kernel and AOSP code, and <strong>no longer directly supports Android apps</strong>. This is the key step for HarmonyOS to officially transition from "an Android-compatible transitional form" to "a fully independent operating system."
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) is fundamentally different from HarmonyOS 4.3. It uses Huawei's self-developed HarmonyOS microkernel, no longer relying on the Linux kernel and AOSP code, and <strong>no longer directly supports Android apps</strong>. This is the key step for HarmonyOS: the shift from "an Android-compatible transitional form" to "a fully independent operating system."
 
 ##### Major Changes:
 
 - <strong>Fully autonomous kernel</strong>: HarmonyOS NEXT uses Huawei's self-developed kernel, containing no AOSP code. The system is more streamlined, more secure, and more efficient.
 - <strong>No longer supports Android apps</strong>: This is the biggest change. HarmonyOS NEXT can only run native HarmonyOS apps and cannot install or run APK files. Before upgrading, please confirm that your frequently used apps already have native HarmonyOS versions.
 - <strong>Native app ecosystem</strong>: Huawei is fully pushing developers to migrate apps to the native HarmonyOS platform. Currently, mainstream apps such as WeChat, Alipay, and Taobao have launched native HarmonyOS versions, but some niche apps may not yet be adapted.
-- <strong>Star Shield security architecture</strong>: A brand-new security system with full-chain protection from hardware to software. Supports finer-grained permission control, such as "fuzzy location"—apps can only know roughly where you are, not your precise location.
+- <strong>Star Shield security architecture</strong>: A brand-new security system with full-chain protection from hardware to software. Supports finer-grained permission control, such as "fuzzy location",apps can only know roughly where you are, not your precise location.
 - <strong>Deep AI integration</strong>: System-level AI capabilities, not just a single app having AI. For example, AI subtitles can translate videos in real time, and AI cutout can intelligently identify subjects.
-- <strong>Cross-device seamless streaming</strong>: Further distributed capabilities. App state can switch seamlessly between devices—a document you're editing on your phone automatically opens on your computer when you walk up to it.
+- <strong>Cross-device seamless streaming</strong>: Further distributed capabilities. App state can switch seamlessly between devices,a document you're editing on your phone automatically opens on your computer when you walk up to it.
 - <strong>Meta-services</strong>: Lightweight services that can be used without installation. For example, scanning a QR code directly opens a function without first downloading an app.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -69,7 +69,7 @@ After upgrading to HarmonyOS NEXT, your phone will not be able to run Android ap
 
 #### 4. HarmonyOS Ecosystem: Devices and Apps
 
-HarmonyOS is not just a phone system—it's an ecosystem covering multiple devices.
+HarmonyOS is not just a phone system,it's an ecosystem covering multiple devices.
 
 ##### Supported Device Types:
 
@@ -82,11 +82,11 @@ HarmonyOS is not just a phone system—it's an ecosystem covering multiple devic
 
 ##### App Ecosystem Status:
 
-The HarmonyOS App Market already has millions of apps, and mainstream apps are essentially all available. Huawei is also actively encouraging developers to create native HarmonyOS apps. As of mid-2026, top apps including WeChat, Alipay, Taobao, Douyin, Meituan, and JD.com have all launched native HarmonyOS versions, making daily use largely barrier-free. Some niche and industry-specific apps may still be in adaptation — before upgrading, it's recommended to confirm whether your frequently used apps are already supported.
+The HarmonyOS App Market already has millions of apps, and mainstream apps are essentially all available. Huawei is also actively encouraging developers to create native HarmonyOS apps. As of mid-2026, top apps including WeChat, Alipay, Taobao, Douyin, Meituan, and JD.com have all launched native HarmonyOS versions, making daily use largely barrier-free. Some niche and industry-specific apps may still be in adaptation: before upgrading, it's recommended to confirm whether your frequently used apps are already supported.
 
 #### 5. HarmonyOS Practical Tips
 
-- <strong>Super Device</strong>: Swipe down from the top right of the screen to open the Control Center, tap "Super Device" to see other devices around you—drag to connect.
+- <strong>Super Device</strong>: Swipe down from the top right of the screen to open the Control Center, tap "Super Device" to see other devices around you:drag to connect.
 - <strong>Super Hub</strong>: Long-press text/images/files, select "Copy to Hub," then long-press to paste in other apps, or drag it out.
 - <strong>Service cards</strong>: Swipe up on an app icon to expand the card; long-press the card to resize or add to the home screen.
 - <strong>Smart multi-window</strong>: Swipe inward from the left or right edge of the screen and pause to open the sidebar; tap an app to open it as a floating window.

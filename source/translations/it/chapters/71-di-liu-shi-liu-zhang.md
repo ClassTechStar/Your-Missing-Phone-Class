@@ -14,11 +14,11 @@ Il registro delle spese è allenamento "interiore", l'app meteo è la prima usci
 
 #### 1. Richiedere un'API meteo gratuita
 
-Per allenarsi a livello personale, consiglio OpenWeatherMap oppure il cinese QWeather — entrambi offrono una quota gratuita e si usano subito dopo la registrazione. Prendiamo OpenWeatherMap come esempio:
+Per allenarsi a livello personale, consiglio OpenWeatherMap oppure il cinese QWeather, entrambi offrono una quota gratuita e si usano subito dopo la registrazione. Prendiamo OpenWeatherMap come esempio:
 
 1. Registrati → nella pagina API keys genera una chiave (apikey);
 2. La versione gratuita può chiamare l'interfaccia Current Weather: api.openweathermap.org/data/2.5/weather? q=beijing&appid=tuaChiave&units=metric;
-3. Prima fai una prova nel browser e guarda com'è fatto il JSON restituito — è il "compito a casa" obbligatorio prima di collegare qualsiasi API.
+3. Prima fai una prova nel browser e guarda com'è fatto il JSON restituito, è il "compito a casa" obbligatorio prima di collegare qualsiasi API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -65,7 +65,7 @@ struct WeatherService {
 ```
 :::
 
-#### 3. I tre stati dell'interfaccia: caricamento / riuscito / fallito
+3. I tre stati dell'interfaccia: caricamento / riuscito / fallito
 
 L'anima di un'app connessa è la "gestione degli stati". Rete lenta, rete assente, nome della città sbagliato… per ogni situazione l'interfaccia deve dare conto all'utente. Rappresentali con eleganza usando un enum + switch:
 
@@ -146,7 +146,7 @@ Alcuni dettagli meritano di essere imparati: first? prende in sicurezza il primo
 - Campo di ricerca: il modificatore .searchable in alto offre l'interazione di ricerca di sistema; all'invio chiama vm.search;
 - Città preferite: salva le città consultate di frequente in UserDefaults e alla prossima apertura cercale automaticamente;
 - Aggiornamento trascinando in basso: una riga con .refreshable { await vm.search(...) };
-- Icone del meteo: usa Image(systemName:) mappando in base alla descrizione (sun.max / cloud.rain / snowflake): l'interfaccia prende vita all'istante.
+- Icone del meteo: usa Image(systemName:) mappando in base alla descrizione (sun.max / cloud.rain / snowflake): l'interfaccia prende vita all'istante
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -160,13 +160,13 @@ OpenWeatherMap supporta mediamente i nomi di città in cinese: cercare il nome i
 {class="font-semibold"}
 Mettiti alla prova: la checklist di collaudo dell'app meteo
 
-#### 6. Come fare il debug delle richieste di rete: stampa, packet capture e simulazione di rete lenta
+6. Come fare il debug delle richieste di rete: stampa, packet capture e simulazione di rete lenta
 
 Quando un'app connessa dà problemi, nove volte su dieci è perché "la richiesta non è stata inviata bene" o "la risposta non è stata analizzata bene". Tre strumenti di debug:
 
-1. Stampa dei dati grezzi: stampa String(data: data, encoding: .utf8) per vedere il JSON originale — nomi dei campi e tipi a colpo d'occhio, dieci volte più veloce che tirare a indovinare;
-2. Strumenti di packet capture: Proxyman (gratuito su Mac) o Charles open source intercettano tutte le richieste e le risposte dell'app e rendono il livello di rete trasparente come una radiografia;
-3. Simulare la rete debole: dal menu del simulatore, Features → Network Link Conditioner (lo strumento va scaricato dal sito per sviluppatori), per emulare 3G e alta latenza — così scoperchi i problemi di esperienza tipo "la rotella che gira mezz'ora".
+1. Stampa dei dati grezzi: stampa String(data: data, encoding: .utf8) per vedere il JSON originale, nomi dei campi e tipi a colpo d'occhio, dieci volte più veloce che tirare a indovinare;
+2. Strumenti di packet capture: Proxyman (gratuito su Mac) e Charles, (open source) intercettano tutte le richieste e le risposte dell'app e rendono il livello di rete trasparente come una radiografia;
+3. Simulare la rete debole: dal menu del simulatore, Features → Network Link Conditioner (lo strumento va scaricato dal sito per sviluppatori), per emulare 3G e alta latenza: così scoperchi i problemi di esperienza tipo "la rotella che gira mezz'ora"
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -177,14 +177,14 @@ Se la richiesta fallisce appena inviata con un errore "App Transport Security", 
 :::
 
 {class="mt-1"}
-① La ricerca del meteo funziona regolarmente; ② disconnetti la rete: l'app segnala l'errore con eleganza senza crashare (fai la prova dal simulatore spegnendo la rete del Mac!); ③ digiti una città inesistente: il messaggio è amichevole; ④ salvi due città nei preferiti e dopo il riavvio dell'app ci sono ancora; ⑤ in modalità scura l'interfaccia non acceca. Solo superando tutti e cinque i punti il progetto può dirsi laureato.
+① La ricerca del meteo funziona regolarmente. ② disconnetti la rete: l'app segnala l'errore con eleganza senza crashare (fai la prova dal simulatore spegnendo la rete del Mac!). ③ digiti una città inesistente: il messaggio è amichevole. ④ salvi due città nei preferiti e dopo il riavvio dell'app ci sono ancora. ⑤ in modalità scura l'interfaccia non acceca. Solo superando tutti e cinque i punti il progetto può dirsi laureato.
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 Riepilogo del capitolo
 
-- Prima provare l'API nel browser e capire il JSON, poi scrivere il codice — "prepararsi in anticipo" non costa mai nulla
+- Prima provare l'API nel browser e capire il JSON, poi scrivere il codice, "prepararsi in anticipo" non costa mai nulla
 - La chiave API nascosta nel xcconfig, mai dentro il repository del codice
 - Modello Codable + URLSession async/await: campi corrispondenti, JSON analizzato in automatico
 - Gli stati in tre fasi loading/success/error sono l'asso nella manica delle interfacce connesse

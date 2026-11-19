@@ -87,7 +87,7 @@ Estos son los recursos recomendados a agosto de 2026. Ojo: los enlaces de intern
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Lista de recursos de aprendizaje recomendados
 
-#### V. Cierre: las herramientas en la mano, la metodología en la mente
+V. Cierre: las herramientas en la mano, la metodología en la mente
 
 Volvamos a la creencia central del libro: las herramientas se renuevan cada tres meses, y la metodología solo evoluciona cada tres años. Hoy, a agosto de 2026, las herramientas de programación con IA ya son asombrosas: puedes crear una web con una frase, generar una aplicación full stack con una descripción y completar una refactorización compleja con una sola instrucción. Pero cuanto más potente es la herramienta, más resalta la importancia de la metodología, porque la potencia de la herramienta multiplica cada una de tus decisiones.
 

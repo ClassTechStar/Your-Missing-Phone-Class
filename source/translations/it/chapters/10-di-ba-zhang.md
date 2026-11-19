@@ -21,7 +21,7 @@ L'app Telefono dei moderni smartphone è molto più di un semplice tastierino: i
 - A cosa serve: registrare il contenuto di chiamate importanti per verbali di lavoro, interviste, promesse dei clienti o come prova in caso di controversie.
 - Nota legale: in Cina, per usare la registrazione di una chiamata come prova è necessario il consenso dell'altra parte, oppure che serva a tutelare i propri diritti legittimi.
 - Registrazione unilaterale vs consenso reciproco: sul piano giuridico, una registrazione ottenuta «senza il consenso dell'altra parte» non è automaticamente invalida. Secondo le interpretazioni giudiziarie della Corte Suprema Popolare, purché il metodo di acquisizione non violi gravemente i diritti legittimi altrui, non contravvenga a divieti di legge e non contrasti con l'ordine pubblico e il buon costume, la registrazione può comunque essere presentata come prova. Alcuni tribunali provinciali, però, applicano criteri più severi nelle cause civili per le «registrazioni segrete»; nei processi penali la revisione di legalità è di solito più rigorosa.
-- Differenze locali: i tribunali di Pechino, Shanghai, Guangdong e altre zone sono relativamente tolleranti verso la registrazione unilaterale come prova civile; le registrazioni che coinvolgono segreti commerciali o privacy personale richiedono invece particolare prudenza ovunque e possono essere escluse per violazione della privacy.
+- Differenze locali: i tribunali di Pechino, Shanghai, Guangdong e altre zone sono relativamente tolleranti verso la registrazione unilaterale come prova civile; le registrazioni che coinvolgono segreti commerciali o privacy personale richiedono invece particolare prudenza ovunque , e possono essere escluse per violazione della privacy.
 - Come si fa: su Android di solito c'è un pulsante «Registra» chiaro nella schermata di chiamata; iOS non offre la registrazione nativa delle chiamate e serve un'app di terze parti o un auricolare Bluetooth con funzione di registrazione.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
@@ -38,7 +38,7 @@ Limiti d'uso delle registrazioni
 
 - Come funziona: l'app Telefono interroga online un vasto database di numeri e mostra «chiamata indesiderata», «chiamata truffa» o il nome dell'azienda durante la chiamata in arrivo.
 - Come attivarlo: su Android vai in Telefono > Impostazioni > Blocco chiamate indesiderate; su iOS vai in Impostazioni > Telefono > Blocca e identifica chiamate. Per i percorsi dettagliati di ogni marca e le opzioni consigliate, vedi la tabella comparativa nel Capitolo 13 «Strumenti di sistema utili».
-- Principali piattaforme di segnalazione: in Cina la marcatura dei numeri è gestita soprattutto da tre fornitori di dati — Tencent Mobile Manager, 360 Mobile Guard e Dianhua Bang (Tapir). Anche gli operatori (China Mobile/Unicom/Telecom) usano spesso questi dati per mostrare il «nome del titolare» e per il blocco delle chiamate indesiderate. I database dei produttori di smartphone (Huawei, Xiaomi, OPPO, vivo) collaborano in gran parte con questi fornitori.
+- Principali piattaforme di segnalazione: in Cina la marcatura dei numeri è gestita soprattutto da tre fornitori di dati, Tencent Mobile Manager, 360 Mobile Guard e Dianhua Bang (Tapir). Anche gli operatori (China Mobile/Unicom/Telecom) usano spesso questi dati per mostrare il «nome del titolare» e per il blocco delle chiamate indesiderate. I database dei produttori di smartphone (Huawei, Xiaomi, OPPO, vivo) collaborano in gran parte con questi fornitori.
 - Cosa fare se il tuo numero è stato segnalato per errore: se il tuo numero di lavoro è stato marcato erroneamente come «consegna cibo» «corriere» «chiamata indesiderata», puoi presentare ricorso tramite questi canali: Dianhua Bang: visita la piattaforma di ricorso numeri (haoma.tk.cn) e invia un documento d'identità.
 - 360: invia il ricorso tramite la funzione «Ricorso numero» nell'app 360 Mobile Guard.
 - Tencent: invia tramite la pagina «Ricorso numero» della mini-app «Tencent Mobile Manager».
@@ -55,7 +55,7 @@ Limiti d'uso delle registrazioni
 ##### Che cos'è VoLTE/VoNR e come attivarlo:
 
 - VoLTE (Voice over LTE): tecnologia di chiamata vocale sulla rete 4G; durante la chiamata non si torna più a 2G/3G, puoi navigare mentre parli, l'audio è più nitido e la connessione più rapida.
-- VoNR (Voice over NR): chiamata vocale su 5G, l'evoluzione di VoLTE. Latenza inferiore, qualità audio migliore e supporto per videochiamate HD. Serve uno smartphone 5G + un piano 5G + copertura 5G locale.
+- VoNR (Voice over NR): chiamata vocale su 5G. L'evoluzione di VoLTE. Latenza inferiore, qualità audio migliore e supporto per videochiamate HD. Serve uno smartphone 5G + un piano 5G + copertura 5G locale.
 - Come attivarlo: su iOS in Impostazioni > Rete cellulare > Opzioni dati cellulari > Voce e dati attiva «VoLTE»; su Android cerca l'interruttore «VoLTE chiamate HD» in Impostazioni > Rete mobile > Dati mobile > Avanzate. Di solito l'operatore lo attiva in modo predefinito; se durante una chiamata la rete si disconnette e non navighi, quasi sempre VoLTE non è attivo.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -180,7 +180,7 @@ Se la rete va a scatti, spegni prima il video e tieni l'audio: è più educato c
 2. Android: nell'app «Email» integrata o in Outlook scegli «Aggiungi account» e inserisci indirizzo email completo e password.
 3. Dati del server (esempio Exchange): l'indirizzo del server è di solito «mail.dominioazienda.com» o «outlook.office365.com»; nel campo dominio inserisci la sigla dell'azienda.
 4. Se compare «Impossibile verificare il server», inserisci manualmente: server in entrata (IMAP) porta 993, crittografia SSL; server in uscita (SMTP) porta 465 o 587, crittografia TLS.
-5. Dopo l'accesso attiva «Push» in [Impostazioni account] per ricevere la posta in tempo reale e disattiva «Anteprima messaggio» per proteggere i segreti commerciali.
+5. Dopo l'accesso attiva «Push» in [Impostazioni account] per ricevere la posta in tempo reale , e disattiva «Anteprima messaggio» per proteggere i segreti commerciali.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}

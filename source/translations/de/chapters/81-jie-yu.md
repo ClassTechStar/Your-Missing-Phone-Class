@@ -1,13 +1,13 @@
 ---
 id: jie-yu
 num: i
-nav: iEpilog: Neugierig bleiben, achtsam bleiben
+nav: Epilog: Das Handy verstehen, mehr ist es nicht
 toc: default
 kind: conclusion
 after_part: fu-lu
 ---
 
-### Epilog: Neugierig bleiben, achtsam bleiben
+### Epilog: Das Handy verstehen, mehr ist es nicht
 
 Herzlichen Glückwunsch, Sie haben es bis hierher geschafft.
 

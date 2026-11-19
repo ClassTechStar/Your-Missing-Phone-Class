@@ -10,15 +10,15 @@ kind: chapter
 ### Capítulo 55: Projeto 2 — App de consulta de clima (versão conectada)
 
 {class="chapter-intro mb-4"}
-O controle de gastos é 'treinar o fundamento'; o App de clima é 'ver o mundo' — ele precisa lidar com a internet. Neste projeto você vai aprender: pedir uma API gratuita, fazer parsing de JSON, tratar os três estados de interface 'carregando/sucesso/erro' e como esconder bem a chave da API. Ao terminá-lo, você terá a capacidade de fazer qualquer 'App conectado' — notícias, câmbio, tradução; a receita é a mesma.
+O controle de gastos é 'treinar o fundamento'; o App de clima é 'ver o mundo', ele precisa lidar com a internet. Neste projeto você vai aprender: pedir uma API gratuita, fazer parsing de JSON, tratar os três estados de interface 'carregando/sucesso/erro' e como esconder bem a chave da API. Ao terminá-lo, você terá a capacidade de fazer qualquer 'App conectado', notícias, câmbio, tradução; a receita é a mesma.
 
 #### 1. Pedindo uma API de clima gratuita
 
-Para estudo individual, recomendo o OpenWeatherMap ou, na China, a QWeather — ambas têm cota gratuita e funcionam assim que você se cadastra. Usando o OpenWeatherMap como exemplo:
+Para estudo individual, recomendo o OpenWeatherMap ou, na China, a QWeather, ambas têm cota gratuita e funcionam assim que você se cadastra. Usando o OpenWeatherMap como exemplo:
 
 1. Crie a conta → na página API keys, gere uma chave (apikey);
 2. O plano gratuito permite chamar o endpoint Current Weather (clima atual): api.openweathermap.org/data/2.5/weather? q=beijing&appid=SUA_CHAVE&units=metric;
-3. Teste primeiro no navegador para ver como é o JSON que volta — esse 'preparo' é obrigatório antes de integrar qualquer API.
+3. Teste primeiro no navegador para ver como é o JSON que volta, esse 'preparo' é obrigatório antes de integrar qualquer API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -59,7 +59,7 @@ interface WeatherApi {
 ```
 :::
 
-O Gson enche esses data class com o JSON automaticamente — com os nomes dos campos iguais, a mágica acontece sozinha.
+O Gson enche esses data class com o JSON automaticamente, com os nomes dos campos iguais, a mágica acontece sozinha.
 
 #### 3. Os três estados de interface: carregando / sucesso / erro
 
@@ -138,21 +138,21 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-Alguns detalhes que valem a pena aprender: firstOrNull() pega o primeiro elemento com segurança (a lista pode estar vazia) e ?: "Desconhecido" oferece um texto de reserva — o princípio da null safety vale na interface também. A temperatura usa fonte grande de 72.sp para dar presença, e o peso 'leve' (Light) deixa os números elegantes; essa é a receita clássica dos Apps de clima.
+Alguns detalhes que valem a pena aprender: firstOrNull() pega o primeiro elemento com segurança (a lista pode estar vazia) e ?: "Desconhecido" oferece um texto de reserva, o princípio da null safety vale na interface também. A temperatura usa fonte grande de 72.sp para dar presença, e o peso 'leve' (Light) deixa os números elegantes; essa é a receita clássica dos Apps de clima.
 
 #### 5. Detalhes de interface e interação
 
 - Campo de busca: TextField no topo; digite a cidade e toque em buscar (configure a ação 'buscar' no teclado — dar Enter já pesquisa);
 - Cartão do clima: temperatura em fonte grande (26,5°), descrição do tempo (céu limpo), umidade e nome da cidade;
 - Cidades favoritas: salve no DataStore as cidades que você consulta sempre e consulte-as automaticamente ao reabrir — de quebra, uma revisão do capítulo 6;
-- Puxar para atualizar: no Compose, use o PullToRefreshBox (oferecido pelo Material 3) e a sensação fica 'profissional' na hora.
+- Puxar para atualizar: no Compose, use o PullToRefreshBox (oferecido pelo Material 3) e a sensação fica 'profissional' na hora
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Dica: imagens dão vida à interface
 
 {class="mt-1"}
-Dê a cada tipo de clima um emoji ou ícone (☀️🌧️❄️) mapeado com when(description) — três linhas de código e o charme da interface dobra. Também dá para usar uma biblioteca de ícones de clima de terceiros, mas na fase de estudo os emojis bastam.
+Dê a cada tipo de clima um emoji ou ícone (☀️🌧️❄️) mapeado com when(description), três linhas de código e o charme da interface dobra. Também dá para usar uma biblioteca de ícones de clima de terceiros, mas na fase de estudo os emojis bastam.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -160,16 +160,16 @@ Dê a cada tipo de clima um emoji ou ícone (☀️🌧️❄️) mapeado com wh
 Mãos à obra: checklist de aceitação do App de clima
 
 {class="mt-1"}
-① A busca de clima funciona normalmente; ② sem internet, o App comunica o erro com elegância sem cair (teste com o modo avião ativado!); ③ digitar uma cidade inexistente gera um aviso amigável; ④ favoritar duas cidades e, ao reiniciar o App, elas continuam lá; ⑤ girar a tela não perde o estado. Só com as cinco aprovadas o projeto se forma.
+① A busca de clima funciona normalmente. ② sem internet, o App comunica o erro com elegância sem cair (teste com o modo avião ativado!). ③ digitar uma cidade inexistente gera um aviso amigável. ④ favoritar duas cidades e, ao reiniciar o App, elas continuam lá. ⑤ girar a tela não perde o estado. Só com as cinco aprovadas o projeto se forma.
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 Resumo do capítulo
 
-- Teste a API no navegador e entenda o JSON antes de escrever o código — 'se preparar antes' nunca dá prejuízo
+- Teste a API no navegador e entenda o JSON antes de escrever o código, 'se preparar antes' nunca dá prejuízo
 - A API Key vai escondida em local.properties; jamais entra no repositório de código
 - Interface Retrofit + data class: com os campos casados, o JSON é convertido automaticamente
 - Os três estados Loading/Success/Error são o curinga das interfaces conectadas
-- Sem internet, entrada vazia, cidade inexistente — tratar erros é a nota mínima de um App conectado
+- Sem internet, entrada vazia, cidade inexistente, tratar erros é a nota mínima de um App conectado
 :::

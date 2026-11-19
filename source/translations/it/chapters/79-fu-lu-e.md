@@ -22,22 +22,22 @@ La tecnologia avanza a passi rapidissimi: i contenuti del libro si basano sulle 
 - Espanso il capitolo sull'accessibilità (guida completa a VoiceOver/TalkBack, ingrandimento e filtri colore, descrizione delle immagini con l'AI, sottotitoli in tempo reale, chiamate a doppio canale RTT/TTY).
 - Riscritto il framework per i prompt secondo lo schema "ruolo-contesto-compito-limiti", con 3 casi completi.
 - Aggiunte tre appendici tecniche di approfondimento: Appendice al Capitolo 1: analisi dell'espansione della memoria sugli smartphone Android (definizione essenziale, principi di zRAM/swap, colli di bottiglia di velocità, limiti degli scenari d'uso, nomenclatura e attivazione secondo i vari produttori).
-- Appendice al Capitolo 20: Termux — un ambiente terminale Linux portatile sui dispositivi Android (funzioni principali, ecosistema di plugin, installazione e configurazione, scenari tipici come sviluppo mobile, amministrazione di server e test di sicurezza).
-- Appendice al Capitolo 23: guida introduttiva a GitHub — dall'hosting del codice alla piattaforma di collaborazione (differenza tra Git e GitHub, concetti chiave, registrazione e primi passi, flusso di collaborazione con le Pull Request, avvertenze di sicurezza, soluzioni di accesso dalla Cina).
+- Appendice al Capitolo 20: Termux, un ambiente terminale Linux portatile sui dispositivi Android (funzioni principali, ecosistema di plugin, installazione e configurazione, scenari tipici come sviluppo mobile, amministrazione di server e test di sicurezza).
+- Appendice al Capitolo 23: guida introduttiva a GitHub, dall'hosting del codice alla piattaforma di collaborazione (differenza tra Git e GitHub, concetti chiave, registrazione e primi passi, flusso di collaborazione con le Pull Request, avvertenze di sicurezza, soluzioni di accesso dalla Cina).
 
 #### Punti chiave della versione 1.7
 
 1\. Quattro nuovi capitoli
 
-- Capitolo 29: Benessere digitale — analisi del tempo di schermo, limiti per le App, modalità Non disturbare, regola 20-20-20 per gli occhi, sollievo per il collo, gestione del sonno, "cecità selettiva" contro l'ansia da informazioni, sfida di benessere digitale di una settimana.
-- Capitolo 30: Screen mirroring e auto — confronto tra i tre campi AirPlay / Miracast / DLNA, soluzioni con cavo, modalità desktop Samsung DeX, i quattro sistemi per l'auto CarPlay / Android Auto / HiCar / CarLife, proiezione in sala riunioni in pratica.
-- Capitolo 31: Creazione di video brevi — le tre domande per scegliere il tema, la configurazione in 5 passi per riprendere, i cinque movimenti di camera (zoom avanti, zoom indietro, panoramica, traslazione, inseguimento), il flusso di lavoro in sei passi con CapCut, i punti chiave per la copertina, la regola "i primi 3 secondi decidono tutto".
-- Capitolo 32: Manuale di pronto soccorso di sicurezza — la procedura dei 30 minuti d'oro dopo lo smarrimento, i passi da compiere nelle 72 ore successive a una truffa, il controllo in modalità provvisoria in caso di infezione, i sei passi per riprendere un account rubato, come reagire ai messaggi estorsivi, le cinque cose da fare ogni giorno per prevenire.
+- Capitolo 29: Benessere digitale, analisi del tempo di schermo, limiti per le App, modalità Non disturbare, regola 20-20-20 per gli occhi, sollievo per il collo, gestione del sonno, "cecità selettiva" contro l'ansia da informazioni, sfida di benessere digitale di una settimana.
+- Capitolo 30: Screen mirroring e auto, confronto tra i tre campi AirPlay / Miracast / DLNA, soluzioni con cavo, modalità desktop Samsung DeX, i quattro sistemi per l'auto CarPlay / Android Auto / HiCar / CarLife, proiezione in sala riunioni in pratica.
+- Capitolo 31: Creazione di video brevi: le tre domande per scegliere il tema, la configurazione in 5 passi per riprendere, i cinque movimenti di camera (zoom avanti, zoom indietro, panoramica, traslazione, inseguimento), il flusso di lavoro in sei passi con CapCut, i punti chiave per la copertina, la regola "i primi 3 secondi decidono tutto".
+- Capitolo 32: Manuale di pronto soccorso di sicurezza: la procedura dei 30 minuti d'oro dopo lo smarrimento, i passi da compiere nelle 72 ore successive a una truffa, il controllo in modalità provvisoria in caso di infezione, i sei passi per riprendere un account rubato, come reagire ai messaggi estorsivi, le cinque cose da fare ogni giorno per prevenire.
 
 2\. Due nuovi capitoli
 
-- Capitolo 27: Anziani e famiglia — tabella comparativa delle modalità semplificate per marca, le sei truffe più diffuse e le tre linee di difesa, assistenza remota (MeeTime/Sunlogin), modalità Cura di WeChat e dettatura vocale, SOS / rilevamento delle cadute / promemoria dei farmaci.
-- Capitolo 28: Guida all'acquisto — il metodo in tre passi per scegliere, la tabella dei parametri "guardane solo cinque", consigli su cinque fasce di budget, tabella di scelta per sette scenari, le cinque trappole più comuni, analisi dei tempi e dei canali di acquisto.
+- Capitolo 27: Anziani e famiglia: tabella comparativa delle modalità semplificate per marca, le sei truffe più diffuse e le tre linee di difesa, assistenza remota (MeeTime/Sunlogin), modalità Cura di WeChat e dettatura vocale, SOS / rilevamento delle cadute / promemoria dei farmaci.
+- Capitolo 28: Guida all'acquisto: il metodo in tre passi per scegliere, la tabella dei parametri "guardane solo cinque", consigli su cinque fasce di budget, tabella di scelta per sette scenari, le cinque trappole più comuni, analisi dei tempi e dei canali di acquisto.
 
 3\. Nuove funzioni di lettura vocale e interazione
 
@@ -72,21 +72,21 @@ Aggiunta la settima parte, "Programmazione con l'AI in pratica" (Capitoli 37-47,
 
 Aggiunte l'ottava parte, "Sviluppo Android in pratica" (Capitoli 48-58, in tutto 11 capitoli), e la nona parte, "Sviluppo iOS in pratica" (Capitoli 59-69, in tutto 11 capitoli): per entrambe le piattaforme sono coperti la configurazione dell'ambiente (Android Studio / Xcode), l'apprendimento rapido del linguaggio (Kotlin / Swift), i framework di interfaccia (Jetpack Compose / SwiftUI), dati e rete, due progetti pratici completi (registro delle spese + app meteo), test e pubblicazione (Google Play / App Store) e il manuale di consultazione rapida. Aggiornati di conseguenza indice, percorso di apprendimento (da sei a otto passi), mappa dei capitoli e indice rapido. Contenuti tratti da "Sviluppo Android da zero" e "Sviluppo iOS da zero", edizione agosto 2026.
 
-#### Contenuti in più: app utili e blocco delle chiamate indesiderate
+Contenuti in più: app utili e blocco delle chiamate indesiderate
 
 - Nel Capitolo 13 è stata aggiunta la sesta sezione, "Utilità di sistema pratiche": strumenti di pulizia come Zhengli e Qingzhuo, la pulizia dello spazio integrata nel sistema, il Centro nazionale anti-truffa, i gestori di telefono dei vari marchi, l'antispam degli operatori e AdGuard, con il principio di scelta "prima il sistema / poi gli ufficiali / con parsimonia i terzi".
 - Tabella comparativa del blocco delle chiamate indesiderate integrato nei telefoni per marca: percorsi di accesso e voci consigliate da attivare per iOS, Xiaomi/Redmi, Huawei/Honor, OPPO/realme/OnePlus, vivo/iQOO e Samsung.
 - Arricchite le funzioni di blocco delle chiamate indesiderate del Capitolo 8: istruzioni pratiche su riconoscimento delle chiamate, liste nere e bianche, filtro delle SMS per parole chiave, silenziamento delle chiamate sconosciute su iOS, collegamento con la modalità Non disturbare e altro, con rimandi incrociati al Capitolo 13.
 - Suggerimento sui tre livelli di difesa: blocco di sistema + antispam dell'operatore + Centro nazionale anti-truffa, con attenzione alla lista bianca per evitare blocchi sbagliati.
 
-#### Contenuti in più: allerte meteo / allerte per calamità naturali / allerte sismiche
+Contenuti in più: allerte meteo / allerte per calamità naturali / allerte sismiche
 
 - Nel Capitolo 13 è stata aggiunta la settima sezione: allerte meteo (canali meteo ufficiali + app meteo di sistema + livelli di colore), allerte per calamità naturali (più canali meteo/protezione civile), principio delle allerte sismiche e malintesi frequenti (allerta ≠ previsione).
 - Tabella di attivazione delle allerte sismiche per marca: percorsi più comuni e attenzione ai permessi per Xiaomi, Huawei/Honor, la famiglia OPPO, vivo, iPhone, Samsung e altri.
 - Nel Capitolo 32 è stato aggiunto lo "scenario zero": l'ordine delle azioni per mettersi in salvo dopo un'allerta sismica, come affrontare piogge torrenziali/tifoni e il collegamento con SOS via satellite / comunicazioni senza rete; il manuale di pronto soccorso e le impostazioni delle allerte del Capitolo 13 sono collegati tra loro.
 - Collegamento con la sezione meteo: alla voce app meteo dei viaggi sono state aggiunte le notifiche di allerta e il promemoria "le ricevi solo se hai aperto le notifiche".
 
-#### Contenuti in più: collaborazione tra dispositivi e strumenti di produttività
+Contenuti in più: collaborazione tra dispositivi e strumenti di produttività
 
 - Ottava sezione del Capitolo 13: controllare il computer dal telefono (Sunlogin, ToDesk) e le linee rosse anti-truffa; ufficio con l'AI (Trae / WorkBuddy / Dumate) e il flusso di lavoro con il telefono come telecomando del computer; gli sfondi animati del Desktop artificiale di miHoYo.
 - Trasferimenti rapidi in rete locale e appunti: LocalSend, Feige ChuanShu, AirDrop; KDE Connect, appunti universali e trasferimento tra telefono e computer dello stesso marchio.

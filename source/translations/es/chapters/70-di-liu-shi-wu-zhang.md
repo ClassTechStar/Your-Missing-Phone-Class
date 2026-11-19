@@ -74,7 +74,7 @@ Una app financiera rigurosa usaría Decimal (decimales exactos) para evitar los 
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figura 4: la estructura de tres capas de MVVM — los datos fluyen en un solo sentido y cada capa respeta sus límites
+Figura 4: la estructura de tres capas de MVVM, los datos fluyen en un solo sentido y cada capa respeta sus límites
 :::
 
 ::: div .code-block

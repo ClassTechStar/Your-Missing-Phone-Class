@@ -2,19 +2,19 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: 第四十八章：认识安卓——从操作系统到开发生态
+nav: 第四十八章：安卓是怎么长成现在这样的
 toc: default
 kind: chapter
 ---
 
-### 第四十八章：认识安卓——从操作系统到开发生态
+### 第四十八章：安卓是怎么长成现在这样的
 
 {class="chapter-intro mb-4"}
 恭喜你做出这个决定——从"玩手机的人"变成"做手机应用的人"。在动手之前，咱们先把地图摊开：安卓从哪里来？为什么全世界的开发者都在给它写应用？一个 App 从你的手指敲键盘到用户手机上，中间都发生了什么？
 
 #### 一、安卓的身世：从"小机器人"到"全球最大系统"
 
-安卓（Android）的故事始于 2003 年——一个叫 Andy Rubin 的工程师创办了 Android 公司，目标很朴素：做一套"更懂相机"的智能操作系统。后来谷歌在 2005 年收购了它，2007 年联合几十家厂商成立开放手机联盟（OHA），2008 年 9 月，第一款安卓手机 HTC Dream（G1）正式发售。
+安卓（Android）的故事始于 2003 年：一个叫 Andy Rubin 的工程师创办了 Android 公司，目标很朴素：做一套"更懂相机"的智能操作系统。后来谷歌在 2005 年收购了它，2007 年联合几十家厂商成立开放手机联盟（OHA），2008 年 9 月，第一款安卓手机 HTC Dream（G1）正式发售。
 
 后面的故事大家都知道了：到 2026 年，<strong>安卓是全球市场份额最大的移动操作系统，活跃设备数以十亿计</strong>。你的手机、电视盒子、车载大屏、智能手表，很可能都在跑安卓。这意味着什么？意味着你写的每一行代码，都有机会被世界上最多的人用到。
 
@@ -23,10 +23,10 @@ kind: chapter
 <i class="fas fa-lightbulb mr-2"></i>小贴士：安卓的开源基因
 
 {class="mt-1"}
-安卓的核心代码（AOSP，Android Open Source Project）是开源的——任何厂商都能拿去修改定制。所以小米有 MIUI（现在叫澎湃 OS）、华为有鸿蒙兼容层、三星有 One UI。这对开发者是好事：<strong>你学的是"安卓开发"，不是"某个品牌的开发"</strong>，一套功夫，全网通吃。
+安卓的核心代码（AOSP，Android Open Source Project）是开源的，任何厂商都能拿去修改定制。所以小米有 MIUI（现在叫澎湃 OS）、华为有鸿蒙兼容层、三星有 One UI。这对开发者是好事：<strong>你学的是"安卓开发"，不是"某个品牌的开发"</strong>，一套功夫，全网通吃。
 :::
 
-版本号的进化也很有意思：从 1.5 的纸杯蛋糕（Cupcake）开始，每个大版本都以甜点命名——甜甜圈、闪电泡芙、冻酸奶、姜饼……一直到 2019 年的安卓 10 才改成了纯数字。到 2026 年 8 月，最新正式版是 <strong>Android 17</strong>，而开发时你真正需要关心的"最低支持版本"，主流 App 一般定在 Android 8（API 26）到 Android 10（API 29）之间——<strong>支持到几年前的设备，你的用户盘子才够大</strong>。
+版本号的进化也很有意思：从 1.5 的纸杯蛋糕（Cupcake）开始，每个大版本都以甜点命名，甜甜圈、闪电泡芙、冻酸奶、姜饼……一直到 2019 年的安卓 10 才改成了纯数字。到 2026 年 8 月，最新正式版是 <strong>Android 17</strong>，而开发时你真正需要关心的"最低支持版本"，主流 App 一般定在 Android 8（API 26）到 Android 10（API 29）之间<strong>支持到几年前的设备，你的用户盘子才够大</strong>。
 
 ::: div .overflow-x-auto
 ```html
@@ -39,7 +39,7 @@ kind: chapter
 
 #### 二、用什么语言写：Java 还是 Kotlin？
 
-安卓开发历史上出现过两种主流语言。Java 是"开国元老"——安卓诞生之初就用它；<strong>Kotlin 是 2017 年谷歌钦点的"一等公民"</strong>，2019 年起官方明确"Kotlin 优先"（Kotlin-first），到 2026 年，新项目几乎全部用 Kotlin，旧项目也大多在陆续迁移。
+安卓开发历史上出现过两种主流语言。Java 是"开国元老"，安卓诞生之初就用它；<strong>Kotlin 是 2017 年谷歌钦点的"一等公民"</strong>，2019 年起官方明确"Kotlin 优先"（Kotlin-first），到 2026 年，新项目几乎全部用 Kotlin，旧项目也大多在陆续迁移。
 
 说句实在话：如果你是完全零基础，<strong>直接学 Kotlin，别回头碰 Java</strong>。原因有三：一是 Kotlin 代码量比 Java 少 30%-40%（同样的功能，Kotlin 更短更清晰）；二是它天生防"空指针"这种新手噩梦；三是所有现代教程、官方文档、AI 编程工具（还记得咱们的 AI 编程书吗？）都在以 Kotlin 为准。Java 只在维护老项目、读老代码时会遇到。
 
@@ -85,11 +85,11 @@ class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(
 - <strong>APK</strong>：安卓应用的安装包格式（.apk），双击就能装到手机上，就像 Windows 的 .exe。平时自己测试、给朋友传着玩，用它。
 - <strong>AAB</strong>：Android App Bundle（.aab），上架 Google Play 用的"高级打包格式"。商店会根据用户的手机型号动态裁剪，让每个人下载的包更小。自己装不了，只能交给商店。
 
-另外你还会不断听到一个词：<strong>SDK</strong>（Software Development Kit，软件开发工具包）。它就是安卓官方提供的一整套"开发装备"——包括各版本的 API 库、调试工具、模拟器镜像等。你写代码时调用的 <code class="inline">Activity</code>、<code class="inline">Button</code> 这些类，都来自 SDK。
+另外你还会不断听到一个词：<strong>SDK</strong>（Software Development Kit，软件开发工具包）。它就是安卓官方提供的一整套"开发装备"，包括各版本的 API 库、调试工具、模拟器镜像等。你写代码时调用的 <code class="inline">Activity</code>、<code class="inline">Button</code> 这些类，都来自 SDK。
 
 #### 四、安卓技术栈全景：你的"武器清单"
 
-正式学习前，先认识一下 2026 年主流安卓项目的标准配置——这张清单你现在看不懂没关系，全书学完回来看，会豁然开朗：
+正式学习前，先认识一下 2026 年主流安卓项目的标准配置：这张清单你现在看不懂没关系，全书学完回来看，会豁然开朗：
 
 ::: div .overflow-x-auto
 ```html
@@ -115,7 +115,7 @@ class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 安卓与 iOS 开发路径对比（2026 年 8 月）
 
-说句实在话：<strong>如果你的电脑不是 Mac，那这道题根本不用选——安卓是唯一选项</strong>。如果你有 Mac，本书第八、九两篇可以对照着读，编程思路是相通的，学完一边再学另一边会快很多。
+说句实在话：<strong>如果你的电脑不是 Mac，那这道题根本不用选，安卓是唯一选项</strong>。如果你有 Mac，本书第八、九两篇可以对照着读，编程思路是相通的，学完一边再学另一边会快很多。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -133,5 +133,11 @@ class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(
 - 最新正式版 Android 17；主流 App 最低支持 Android 8-10，用户盘子才够大
 - 新项目一律用 Kotlin：代码少 30%+、防空指针、官方钦定
 - APK 自己装，AAB 上商店；SDK 是官方开发装备包
-- 2026 标准技术栈：Kotlin + Compose + MVVM + Room + Retrofit + Gradle + Android Studio
+- 2026 标准技术栈：
+  - 界面：Kotlin + Compose
+  - 架构：MVVM
+  - 数据：Room
+  - 网络：Retrofit
+  - 构建：Gradle
+  - 开发环境：Android Studio
 :::

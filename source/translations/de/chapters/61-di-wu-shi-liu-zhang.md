@@ -2,17 +2,17 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Kapitel 56: Feinschliff und Veröffentlichung – ab in den Google Play Store
+nav: Kapitel 56: App fertig? Jetzt in den Google Play Store
 toc: default
 kind: chapter
 ---
 
-### Kapitel 56: Feinschliff und Veröffentlichung – Testen, Debuggen und der Weg in den Google Play Store
+### Kapitel 56: App fertig? Jetzt in den Google Play Store
 
 {class="chapter-intro mb-4"}
 Die App ist fertig – und nun? In diesem Kapitel geht es um die drei Schritte von „läuft irgendwie“ zu „auslieferungsfertig“: Wie debuggst du effizient, um Bugs zu finden? Wie schreibst du Tests, die Rückfälle verhindern? Und wie bekommst du die App in den Google Play Store, damit die ganze Welt sie herunterladen kann? Die Veröffentlichung ist nicht bloß ein Ritual – sie ist die Schwelle, an der aus einem Werk ein Produkt wird.
 
-#### 1. Die drei Debug-Werkzeuge: Logcat, Haltepunkte, UI-Inspektor
+1. Die drei Debug-Werkzeuge: Logcat, Haltepunkte, UI-Inspektor
 
 ::: div .overflow-x-auto
 ```html
@@ -80,7 +80,7 @@ Android verlangt, dass jedes Installationspaket signiert ist – wie ein offizie
 
 1. Menü Build → Generate Signed Bundle / APK;
 2. Eine Keystore-Datei (Schlüsselspeicher) anlegen – Passwort setzen und gut verwahren;
-3. Release und das AAB-Format wählen – der Build ist fertig.
+3. Release und das AAB-Format wählen – der Build ist fertig
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -108,17 +108,17 @@ Abbildung 6: Sechs Schritte bis in den Google Play Store
 - Registrieren: einmalige Registrierungsgebühr von 25 US-Dollar, du brauchst ein nutzbares Google-Konto;
 - Materialien: App-Icon (512×512), Screenshots (mindestens 2), Funktionsbeschreibung, Link zur Datenschutzerklärung (Pflicht, sobald Daten erhoben werden);
 - Formular zur Datensicherheit: ehrlich angeben, welche Daten erhoben werden – ein Haushaltsbuch ohne Internetzugriff darf „Null“ melden;
-- Prüfung: Bei der ersten Veröffentlichung mit einem neuen Konto wird oft von Hand geprüft, das dauert von Stunden bis Tagen; bei einer Rückgabe einfach die Hinweise umsetzen.
+- Prüfung: Bei der ersten Veröffentlichung mit einem neuen Konto wird oft von Hand geprüft, das dauert von Stunden bis Tagen; bei einer Rückgabe einfach die Hinweise umsetzen
 
 Hinweis für Nutzer in China: Google Play braucht eine besondere Netzwerkumgebung, und die Verbreitung auf dem chinesischen Festland läuft meist über chinesische Stores (Huawei, Xiaomi, MyApp von Tencent usw.). Der Ablauf in chinesischen Stores ist ähnlich, aber jeder Store hat eigene Prüfgewohnheiten – dieselbe AAB/APK-Datei darf in mehreren Stores erscheinen. Für die Übung ist ein Store, der ganz durchläuft, schon ein Sieg.
 
-#### 5. Store-Materialien gestalten: Der erste Eindruck ist die Downloadzahl
+5. Store-Materialien gestalten: Der erste Eindruck ist die Downloadzahl
 
 Die Store-Seite ist das Schaufenster, das Nutzer beim „Bummeln“ sehen. Drei Materialien entscheiden über den ersten Eindruck:
 
 - Icon: 512×512, kein Notbehelf-Screenshot. Ohne Designgeschick lässt du dir von einem KI-Tool eine schlichte geometrische Form erzeugen – sie taugt nur, wenn man sie auf dem Handy-Startbildschirm verkleinert noch auf den ersten Blick erkennt;
 - Screenshots: mindestens 2, besser 4–6, mit den zentralen Funktionsszenarien; zu jedem ein Satz in echter Alltagssprache („In einer Sekunde eine Ausgabe erfasst“ ist zehnmal besser als „Effiziente Buchhaltungslösung“);
-- Beschreibung: Der erste Satz klärt „Was ist das + wofür ist es da“, statt Superlative wie „am professionellsten, am stärksten“ aufzutürmen – das Suchranking im Store hängt vor allem von Schlüsselwörtern und der Download-Quote ab, Ehrlichkeit wirkt besser als Übertreibung.
+- Beschreibung: Der erste Satz klärt „Was ist das + wofür ist es da“, statt Superlative wie „am professionellsten, am stärksten“ aufzutürmen – das Suchranking im Store hängt vor allem von Schlüsselwörtern und der Download-Quote ab, Ehrlichkeit wirkt besser als Übertreibung
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -128,7 +128,7 @@ Tipp: Ein A/B-Blick auf die Kollegen
 Schlender vor der Veröffentlichung durch die Top 10 der ähnlichen Apps im Store und vergleiche Screenshots: Welchen Stil haben ihre Icons? Welches Verkaufsargument zeigen ihre Screenshots? Wie lauten ihre Titel? Nachahmen ist nicht kopieren – lerne das Muster und fülle es mit deinem eigenen Inhalt. Das ist die schnellste Lektion für den Kaltstart eines jeden Produkts.
 :::
 
-#### 6. Mini-Checkliste: Performance-Optimierung und Absturzmeldungen
+6. Mini-Checkliste: Performance-Optimierung und Absturzmeldungen
 
 Vor der Veröffentlichung lohnen sich für diese beiden Punkte je eine halbe Stunde:
 
@@ -137,7 +137,7 @@ Vor der Veröffentlichung lohnen sich für diese beiden Punkte je eine halbe Stu
 1. Listen mit LazyColumn: Lange Listen niemals mit Column hart anordnen – Lazy Loading ist die erste Lektion in Android-Performance;
 2. Bilder nicht im Original einbauen: Mit der Bildbibliothek Coil automatisch skalieren und cachen – ein 5-MB-Originalbild bringt ein schwaches Gerät zum Wackeln;
 3. Schwere Arbeit auf dem Main-Thread vermeiden: Datenbank, Netzwerk und große Dateien gehören in Coroutinen;
-4. Mit dem Profiler nachmessen: Der eingebaute Performance-Profiler von Android Studio zeigt Arbeitsspeicher, CPU und Akkuverbrauch – erst messen, dann optimieren, nicht nach Gefühl.
+4. Mit dem Profiler nachmessen: Der eingebaute Performance-Profiler von Android Studio zeigt Arbeitsspeicher, CPU und Akkuverbrauch – erst messen, dann optimieren, nicht nach Gefühl
 
 ##### 2. Absturzmeldungen
 

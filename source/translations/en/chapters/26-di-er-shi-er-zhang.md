@@ -2,12 +2,12 @@
 id: di-er-shi-er-zhang
 num: 22
 part: chao-yue-pian
-nav: Chapter 22: How AI Works Inside Your Phone
+nav: Chapter 22: What Is AI Actually Doing in Your Phone?
 toc: default
 kind: chapter
 ---
 
-### Chapter 22: How AI Works in Phones
+### Chapter 22: What Is AI Actually Doing in Your Phone?
 
 {class="chapter-intro mb-4"}
 : Converts sound waves into text.
@@ -22,13 +22,13 @@ kind: chapter
 2. <strong>On-device AI keeps computation in the phone, with fast speed, high privacy, and offline capability. Cloud AI requires internet connection but can handle more complex tasks.</strong>4. AI LLMs and Mobile Phones: Your Portable Smart Assistant
 3. <strong>In 2024-2025, the explosion of AI LLMs (such as DeepSeek, ChatGPT, Wenxin Yiyan, Tongyi Qianwen, etc.) profoundly changed the way mobile phones are used. Phones are no longer just tools that execute instructions, but intelligent partners that can understand, reason, and create.</strong> What is an AI LLM?
 
-#### AI LLMs (Large Language Models) are AI systems trained on massive amounts of text data that can understand and generate natural language. You can imagine it as a "super scholar" who has read almost all the text on the internet, capable of answering questions, writing articles, translating, programming, and analyzing data.
+AI LLMs (Large Language Models) are AI systems trained on massive amounts of text data. They can understand and generate natural language. You can imagine it as a "super scholar" who has read almost all the text on the internet, capable of answering questions, writing articles, translating, programming, and analyzing data.
 
 AI LLM Applications on Mobile Phones:
 
 #### Conversational assistants
 
-In 2025-2026, the explosion of AI large models (such as DeepSeek R1, ChatGPT-5, ERNIE Bot 5.0, Tongyi Qianwen 3, etc.) profoundly changed how phones are used. Phones are no longer just tools that execute commands — they have become intelligent partners that can understand, reason, and create. On-device AI chips (NPU computing power exceeding 80 TOPS) made large model inference run locally on phones for the first time, enabling AI without an internet connection.
+In 2025-2026, the explosion of AI large models (such as DeepSeek R1, ChatGPT-5, ERNIE Bot 5.0, Tongyi Qianwen 3, etc.) profoundly changed how phones are used. Phones are no longer just tools that execute commands. They have become intelligent partners that can understand, reason, and create. On-device AI chips (NPU computing power exceeding 80 TOPS) made large model inference run locally on phones for the first time, enabling AI without an internet connection.
 
 ##### Writing and creation
 
@@ -55,8 +55,8 @@ Faster response
 
 - <strong>: System-level AI capabilities, supporting AI image search, AI summaries, AI real-time captions, on-device LLM conversations, and more.</strong> Samsung Galaxy AI
 - <strong>: Real-time call translation, note AI summaries, image generation and editing, search circle selection, and other functions.</strong>5. Several Typical Application Scenarios and Practical Operations
-- <strong>To give you a more intuitive feel for the "superpowers" of mobile AI, below we use five specific scenarios to show how AI "comes to the rescue" in daily life:</strong> Scenario 1: Real-Time Translation—Your Personal Translator for Traveling Abroad
-- <strong>Actual performance</strong>: Can't speak French when ordering in Paris? iPhone's "Translate" App supports a face-to-face dual-person dialogue mode, where both parties see subtitles in their own language, and can even do simultaneous interpretation. On the Android side, Samsung Galaxy AI's real-time call translation lets you speak Chinese directly on the phone, and the other party hears English, and vice versa.
+- <strong>To give you a more intuitive feel for the "superpowers" of mobile AI, below we use five specific scenarios to show how AI "comes to the rescue" in daily life:</strong> Scenario 1: Real-Time Translation:Your Personal Translator for Traveling Abroad
+- <strong>Actual performance</strong>: Can't speak French when ordering in Paris? iPhone's "Translate" App supports a face-to-face dual-person dialogue mode, where both parties see subtitles in their own language, and can even do simultaneous interpretation. On the Android side, Samsung Galaxy AI's real-time call translation lets you speak Chinese directly on the phone, and the other party hears English, and vice versa
 
 #### Underlying principle
 
@@ -92,7 +92,7 @@ Faster response
 
 <strong>Underlying principle</strong> Why do we need a framework?
 
-#### Many people use AI like using Baidu—typing in a few keywords. But AI is not a search engine; it's a language model that "reads, understands, and then answers."
+Many people use AI like using Baidu—typing in a few keywords. But AI is not a search engine; it's a language model that "reads, understands, and then answers."
 
 Give it more context, clearly state what you want, and constrain it from going off track <strong>, and it can give you precise results. A framework translates "what a good answer looks like" in your head into instructions AI can understand.</strong>1. Role: Tell AI Who It Is
 
@@ -153,8 +153,8 @@ Practical examples:<strong>"Please</strong> list 5 permissions I should immediat
 - The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>"Please</strong> compare these four phones in the 3,000 yuan price range
 - The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>"Please</strong> explain 'what is 5G' in words a primary school student can understand
 - The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>"Please</strong> write three short video scripts for my breakfast shop
-- The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>Why is it effective?</strong> The task part is the "command center" for AI's actions.
-- The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>. Vague words like "do something," "make a," "take a look" are taboos for AI—it will guess your meaning, and the results often go off track.</strong>4. Constraints: Tell AI What Not to Do
+- The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>Why is it effective?</strong> The task part is the "command center" for AI's actions
+- The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>. Vague words like "do something," "make a," "take a look" are taboos for AI,it will guess your meaning, and the results often go off track.</strong>4. Constraints: Tell AI What Not to Do
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -173,7 +173,7 @@ No more than 200 words, list in bullet points <strong>." (Length + format)</stro
 - , only explain principles." (Boundaries)<strong>"</strong> Each paragraph no more than 3 lines
 - , only explain principles." (Boundaries)<strong>"</strong> Must include: usage scenarios, pros and cons, my budget match
 - , only explain principles." (Boundaries)<strong>"</strong> Don't give specific investment advice
-- , only explain principles." (Boundaries)<strong>Why is it effective?</strong> Without constraints, AI tends to "freestyle"—either too academic, too long, or off-topic. Clear constraints = clear "delivery standards," aligning expectations on both sides, making results controllable.
+- , only explain principles." (Boundaries)<strong>Why is it effective?</strong> Without constraints, AI tends to "freestyle",either too academic, too long, or off-topic. Clear constraints = clear "delivery standards," aligning expectations on both sides, making results controllable
 - , only explain principles." (Boundaries)<strong>Writing good prompts is not a one-time thing.</strong> After writing, first self-check these five points
 
 ::: div .highlight-quote
@@ -245,7 +245,7 @@ Include background rather than isolated <strong>: Tell AI "who I am, why I'm ask
 <strong>discussing the Q2 marketing promotion plan</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-list 7 days of non-repeating breakfast pairings <strong>(</strong> Task <strong>). Each breakfast requires: ① Preparation time no more than 15 minutes ② Nutritionally balanced (protein + carbs + fruits/vegetables) ③ Suitable for all ages ④ Ingredients available at ordinary supermarkets (</strong> Constraints <strong>).</strong> Why it's effective <strong>: Role sets professionalism, background gives the commonalities of three types of people, task clearly defines deliverables, and 4 constraints ensure executability.</strong> Scenario 2: Study Assistance (CET-6 Exam Preparation)<strong>Prompt</strong> Fill in the repository name, such as
+list 7 days of non-repeating breakfast pairings <strong>(</strong> Task <strong>). Each breakfast must meet the following requirements: ① Preparation time no more than 15 minutes. ② Nutritionally balanced (protein + carbs + fruits/vegetables). ③ Suitable for all ages. ④ Ingredients available at ordinary supermarkets (</strong> Constraints <strong>).</strong> Why it's effective <strong>: Role sets professionalism, background gives the commonalities of three types of people, task clearly defines deliverables, and 4 constraints ensure executability.</strong> Scenario 2: Study Assistance (CET-6 Exam Preparation)<strong>Prompt</strong> Fill in the repository name, such as
 
 {class="mt-1"}
 <strong>: When unsatisfied with AI's answer, you can say "This is too professional, please explain again in words a primary school student can understand."</strong> experienced CET-6 English teacher
@@ -259,7 +259,7 @@ list 7 days of non-repeating breakfast pairings <strong>(</strong> Task <strong>
 <strong>discussing the Q2 marketing promotion plan</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Please organize the following meeting notes into structured minutes <strong>(Task). Requirements: ① Clear time allocation for listening, speaking, reading, and writing each week ② Give the key breakthrough direction for each month ③ Recommend 3 suitable review materials (explain reasons in Chinese) ④ Output in table format (Constraints).</strong> Why it's effective <strong>: Role sets professional background, background gives score and time anchors, task clearly defines "phased plan," constraints require "tabular" and "executable."</strong> Scenario 3: Work Efficiency (Meeting Minutes Organization)<strong>Prompt</strong>:
+Please organize the following meeting notes into structured minutes <strong>(Task). Requirements: ① Clear time allocation for listening, speaking, reading, and writing each week. ② Give the key breakthrough direction for each month. ③ Recommend 3 suitable review materials (explain reasons in Chinese). ④ Output in table format (Constraints).</strong> Why it's effective <strong>: Role sets professional background, background gives score and time anchors, task clearly defines "phased plan," constraints require "tabular" and "executable."</strong> Scenario 3: Work Efficiency (Meeting Minutes Organization)<strong>Prompt</strong>:
 
 {class="mt-1"}
 <strong>: When unsatisfied with AI's answer, you can say "This is too professional, please explain again in words a primary school student can understand."</strong> senior administrative assistant
@@ -273,7 +273,7 @@ Please organize the following meeting notes into structured minutes <strong>(Tas
 <strong>discussing the Q2 marketing promotion plan</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Please organize the following meeting notes into structured minutes <strong>(Task). Requirements: ① Divide into three parts: "Resolutions / Action Items / Risks and Dissents" ② Mark the responsible person and deadline for action items (if not mentioned, write "to be confirmed") ③ Total word count within 600 words ④ Output in markdown format (Constraints).</strong> Why it's effective <strong>: Role sets administrative perspective, background gives meeting topic, task clearly defines structured output, 4 constraints make the result directly reusable.</strong> Advanced Techniques: Make AI Your "Personal Assistant"<strong>Try these advanced uses to experience AI's true power:</strong> Multi-round dialogue optimization
+Please organize the following meeting notes into structured minutes <strong>(Task). Requirements: ① Divide into three parts: "Resolutions / Action Items / Risks and Dissents". ② Mark the responsible person and deadline for action items (if not mentioned, write "to be confirmed"). ③ Total word count within 600 words. ④ Output in markdown format (Constraints).</strong> Why it's effective <strong>: Role sets administrative perspective, background gives meeting topic, task clearly defines structured output, 4 constraints make the result directly reusable.</strong> Advanced Techniques: Make AI Your "Personal Assistant"<strong>Try these advanced uses to experience AI's true power:</strong> Multi-round dialogue optimization
 
 {class="mt-1"}
 <strong>: When unsatisfied with AI's answer, you can say "This is too professional, please explain again in words a primary school student can understand."</strong> Chain of Thought (CoT)
@@ -287,21 +287,21 @@ Please organize the following meeting notes into structured minutes <strong>(Tas
 Multi-AI collaboration
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- <strong>: Use A to write the first draft, B to polish, C to translate—combining them works even better.</strong> System prompts
-- <strong>: Preset your identity, preferences, taboos, etc. in AI settings to make answers better fit your needs.</strong>7. AI's Limitations and Challenges: Maintain Clear Judgment
+- <strong>: Use A to write the first draft, B to polish, C to translate:combining them works even better.</strong> System prompts
+- <strong>: Preset your identity, preferences, taboos, and so on in the AI settings, so that the answers fit your needs better.</strong>7. AI's Limitations and Challenges: Maintain Clear Judgment
 - <strong>Although AI is powerful, it's by no means "omnipotent." Clearly understanding its limitations is key to using it better:</strong>"Hallucination" problem
 - <strong>Challenge 2: AI Photo Editing</strong> Knowledge cutoff
 :::
 
-#### : Most AI's training data has a cutoff date (such as early 2024); it doesn't know what happened after that.
+- Most AI's training data has a cutoff date (such as early 2024); it doesn't know what happened after that.
 
 Limited reasoning ability
 
-- <strong>: Complex multi-step reasoning, mathematical proofs, and logical traps—AI still easily makes mistakes.</strong> Privacy risks
+- <strong>: Complex multi-step reasoning, mathematical proofs, and logical traps,AI still easily makes mistakes.</strong> Privacy risks
 - <strong>: In cloud AI services, your conversations may be used for model training. For sensitive information, prioritize on-device AI.</strong> Bias and values
 - <strong>: AI may carry biases from training data; you need to maintain independent thinking.</strong> AI Usage Tips
-- <strong>AI-generated content may be inaccurate ("hallucination" problem); important information must be verified.</strong> Don't enter personal privacy information into AI (ID numbers, passwords, bank information, etc.).
-- <strong>Make good use of prompts: The more specific and clear the description, the higher the quality of AI's answer.</strong> AI is a tool, not an authority; maintain independent thinking and judgment.
+- <strong>AI-generated content may be inaccurate ("hallucination" problem); important information must be verified.</strong> Don't enter personal privacy information into AI (ID numbers, passwords, bank information, etc.)
+- <strong>Make good use of prompts: The more specific and clear the description, the higher the quality of AI's answer.</strong> AI is a tool, not an authority; maintain independent thinking and judgment
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -321,7 +321,7 @@ Limited reasoning ability
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: First use a simple prompt "write a travel guide" to ask AI, then use the CRISPE framework to write a detailed prompt. Compare the quality difference of the two answers.</strong> Chapter 23: Programming Thinking and Automation Enlightenment
-2. <strong>In the previous two chapters, we built a secure "boundary wall" for our phones and witnessed its increasingly smart "AI brain" within the wall. Now, let's unlock one of the phone's ultimate potentials: letting it "think" like a programmer and automatically complete the continuous tasks you set. You might say: "I don't know how to write code, what does this have to do with me?" Don't worry, this chapter doesn't require you to write a single line of code—modern phones have lowered the threshold for "programming" to the point where you can do it with simple dragging and dropping.</strong>1. What Exactly Is Automation?
+2. <strong>In the previous two chapters, we built a secure "boundary wall" for our phones and witnessed its increasingly smart "AI brain" within the wall. Now, let's unlock one of the phone's ultimate potentials: letting it "think" like a programmer and automatically complete the continuous tasks you set. You might say: "I don't know how to write code, what does this have to do with me?" Don't worry, this chapter doesn't require you to write a single line of code,modern phones have lowered the threshold for "programming" to the point where you can do it with simple dragging and dropping.</strong>1. What Exactly Is Automation?
 3. <strong>In plain language, automation is:</strong> letting your phone automatically do a series of things for you when a certain condition is met.
 :::
 
@@ -331,6 +331,6 @@ Limited reasoning ability
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: iPhone 13 → Xiaomi 15 cross-brand phone replacement.
-- <strong>Steps</strong>: ① Old phone iCloud/WeChat built-in backup → ② Sign out of Apple ID + turn off "Find" → ③ New phone uses "Xiaomi Migration" app to scan QR code → ④ Select migration items → ⑤ WeChat uses built-in "Chat History Migration" separately → ⑥ Verify key data (contacts/photos/WeChat) → ⑦ Old phone encrypted wipe.
+- <strong>Steps</strong>: ① Back up on the old phone with the built-in iCloud/WeChat tools. ② Sign out of Apple ID and turn off "Find". ③ On the new phone, use the "Xiaomi Migration" app to scan the QR code. ④ Select the migration items. ⑤ Migrate WeChat separately with its built-in "Chat History Migration". ⑥ Verify the key data (contacts/photos/WeChat). ⑦ Wipe the old phone.
 - <strong>Expected Result</strong>: Zero data loss, old phone can be safely resold.
 :::

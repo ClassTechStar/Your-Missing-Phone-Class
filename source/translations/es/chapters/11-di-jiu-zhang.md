@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Yo también pensaba que trabajar en el teléfono era "apañarse", hasta que un viaje de negocios me dejó sin computadora y tuve que terminar de revisar una propuesta y firmar un contrato desde el teléfono. Sinceramente, el cuello de botella del trabajo móvil muchas veces no está en el teléfono, sino en que no conoces sus límites.
 
-#### I. Tratamiento de documentos: editar y crear desde la palma de la mano
+I. Tratamiento de documentos: editar y crear desde la palma de la mano
 
 Editar documentos en la pantalla del teléfono se siente distinto que en la computadora. El mayor problema es la pantalla pequeña, los dedos gruesos y la maquetación fácilmente desalineada. Pero hay técnicas que mejoran bastante la experiencia:
 
@@ -27,8 +27,8 @@ Editar documentos en la pantalla del teléfono se siente distinto que en la comp
 A la hora de tomar notas, mucha gente quiere montar de entrada un sistema muy complejo y no aguanta ni tres días. Mi consejo es empezar ligero y luego pasar a algo más serío: primero crea el hábito de "anotar" y luego piensa en "gestionar".
 
 - <strong>Apunte rápido — basta con lo integrado en el sistema</strong>: Notas de iOS arranca rapidísimo y admite escanear documentos, escribir a mano y grabar audio. Las notas de las marcas Android tampoco se quedan atrás y se pueden abrir rápido desde la pantalla de bloqueo. Sirven para anotar ideas temporales, listas de compra o puntos de reuniones. La clave es que abren rápido: cuando se te ocurre algo, lo anotas sin esperar a que cargue la App.
-- <strong>Leer más tarde — recopilar información</strong>: la función "Flotante" de WeChat es en realidad una herramienta oculta. Si ves un buen artículo y no tienes tiempo de leerlo, pulsa "Flotante" en la esquina superior derecha y se contraerá en un punto circular pegado al borde de la pantalla; puedes abrirlo cuando quieras. Es mucho más cómodo que reenviarlo al "Asistente de transferencia de archivos". Además, herramientas de "leer más tarde" como Cubox o Pocket permiten recopilar en cualquier plataforma lo que veas.
-- <strong>Montar un sistema — Notíon y Lark</strong>: cuando sientas que las notas sueltas empiezan a ser difíciles de encontrar, es el momento de Notíon. Es muy flexible: puedes crear una "base de datos de notas de lectura" que se organiza automáticamente por título, autor y puntuación; o montar un "tablero de proyecto" para visualizar el progreso de las tareas. Las "tablas multidimensiónales" de Lark son similares y el acceso desde China es más rápido. Llevo más de tres años usando Notíon para gestionar todos mis materiales de escritura, notas de estudio y progreso de proyectos.
+- <strong>Leer más tarde, recopilar información</strong>: la función "Flotante" de WeChat es en realidad una herramienta oculta. Si ves un buen artículo y no tienes tiempo de leerlo, pulsa "Flotante" en la esquina superior derecha y se contraerá en un punto circular pegado al borde de la pantalla; puedes abrirlo cuando quieras. Es mucho más cómodo que reenviarlo al "Asistente de transferencia de archivos". Además, herramientas de "leer más tarde" como Cubox o Pocket permiten recopilar en cualquier plataforma lo que veas.
+- <strong>Montar un sistema, Notíon y Lark</strong>: cuando sientas que las notas sueltas empiezan a ser difíciles de encontrar, es el momento de Notíon. Es muy flexible: puedes crear una "base de datos de notas de lectura" que se organiza automáticamente por título, autor y puntuación; o montar un "tablero de proyecto" para visualizar el progreso de las tareas. Las "tablas multidimensiónales" de Lark son similares y el acceso desde China es más rápido. Llevo más de tres años usando Notíon para gestionar todos mis materiales de escritura, notas de estudio y progreso de proyectos.
 
 <strong>Estrategia práctica de notas</strong>: mi costumbre es un "trío": ideas temporales en la nota del sistema (apertura instantánea), artículos para leer en la ventana flotante de WeChat (a mano) y conocimiento que requiere acumulación a largo plazo en Notíon (sistematizado). No intentes meterlo todo en una sola herramienta desde el principio; así es más fácil abandonar.
 
@@ -41,7 +41,7 @@ El escaneo con el teléfono, bien usado, ahorra muchos viajes a la copistería. 
 - <strong>Reconocimiento OCR de texto</strong>: si necesitas extraer el texto del escaneo para editarlo, hace falta OCR. La función "Extraer texto" integrada en WeChat es la más sencilla: mantén pulsada la imagen y se usa; la precisión es bastante buena. Para procesar grandes cantidades, puedes usar la App Baimiao o CamScanner. Para el reconocimiento de chino, el motor OCR de Baidu funciona bastante bien; la función de imagen a texto de WPS también es muy precisa.
 - <strong>Consejos de escaneo</strong>: escanea en un lugar bien iluminado, preferiblemente con una lámpara lateral, para no proyectar la sombra de la mano sobre el documento. Si el documento tiene las esquinas dobladas, alísalo con la mano antes de escanear. Los documentos de varias páginas se pueden escanear de forma continua y combinarlos en un solo PDF, sin guardarlos uno a uno.
 
-#### IV. Qué disco en la nube elegir: no hay uno mejor, solo el que mejor se adapte a ti
+IV. Qué disco en la nube elegir: no hay uno mejor, solo el que mejor se adapte a ti
 
 Estuve dándole vueltas mucho tiempo a qué disco en la nube elegir y al final vi que depende de cuál sea tu "ecosistema principal".
 

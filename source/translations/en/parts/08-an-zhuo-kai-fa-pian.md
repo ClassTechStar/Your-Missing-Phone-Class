@@ -10,7 +10,7 @@ class: mb-12
 ## Part VIII: Android Development in Practice (Chapters 48-58)
 
 {class="chapter-intro mb-4"}
-Part Seven taught you to direct AI in writing code; in this part we put that skill to work on Android: from getting to know Android and installing Android Studio, through Kotlin and Jetpack Compose, to two complete projects and publishing on Google Play. No Mac needed the whole way — Windows is enough. After these 11 chapters, you'll be able to build a real app that lands in the phones of 300 million people.
+Part Seven taught you to direct AI in writing code; in this part we put that skill to work on Android: from getting to know Android and installing Android Studio, through Kotlin and Jetpack Compose, to two complete projects and publishing on Google Play. No Mac needed the whole way: Windows is enough. After these 11 chapters, you'll be able to build a real app that lands in the phones of 300 million people.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

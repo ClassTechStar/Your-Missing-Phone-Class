@@ -10,11 +10,11 @@ kind: chapter
 ### Chapter 14: Password Managers
 
 {class="chapter-intro mb-4"}
-In the digital age, your passwords are the keys to your front door. But with too many keys, all too complex—what then? A password manager is your "universal key butler".
+In the digital age, your passwords are the keys to your front door. But with too many keys, all too complex,what then? A password manager is your "universal key butler".
 
 #### I. Why Do You Need a Password Manager?
 
-Modern people have dozens or even hundreds of online accounts on average. If every account uses the same password, one hacked website puts all accounts at risk. If every account uses a different complex password, they are impossible to remember.
+Modern people have dozens or even hundreds of online accounts on average. If every account uses the same password, one hacked website puts all accounts at risk. If every account uses a different complex password, then they are impossible for anyone to actually remember.
 
 A password manager solves this dilemma: you only need to remember one master password, and it remembers all the others for you.
 
@@ -31,33 +31,33 @@ Understanding the encryption principles behind password managers helps you judge
 
 ##### 1. AES-256 Encryption
 
-AES (Advanced Encryption Standard) is a symmetric encryption algorithm certified by the U.S. National Institute of Standards and Technology (NIST), widely used by banks, military, and government. "256" refers to the 256-bit key length — it would theoretically take longer than the age of the universe to brute-force. Mainstream password managers (1Password, Bitwarden, KeePass, etc.) all use AES-256 to encrypt your password vault.
+AES (Advanced Encryption Standard) is a symmetric encryption algorithm certified by the U.S. National Institute of Standards and Technology (NIST). It's widely used by banks, military, and government. "256" refers to the 256-bit key length, it would theoretically take longer than the age of the universe to brute-force. Mainstream password managers (1Password, Bitwarden, KeePass, etc.) all use AES-256 to encrypt your password vault.
 
 ##### 2. Zero-Knowledge Architecture
 
-"Zero-knowledge" doesn't mean the service provider stores nothing — it means that <strong>encryption and decryption are both done locally on your device, and the server only stores encrypted ciphertext</strong>. The specific process:
+"Zero-knowledge" doesn't mean the service provider stores nothing: it means that <strong>encryption and decryption are both done locally on your device, and the server only stores encrypted ciphertext</strong>. The specific process:
 
 1. You enter your master password in the client.
 2. The client derives an encryption key from the master password (this happens on your phone/computer).
 3. Only the encrypted ciphertext is uploaded to the server.
 4. On next login, the server sends back the ciphertext, and the client decrypts it again using your master password.
 
-Key Point:<strong>The master password itself never leaves your device</strong>, and the server doesn't have it either. So even if the service provider is hacked, the attacker only gets a pile of unbreakable ciphertext — unless they can guess your master password.
+Key Point:<strong>The master password itself never leaves your device</strong>, and the server doesn't have it either. So even if the service provider is hacked, the attacker only gets a pile of unbreakable ciphertext, unless they can guess your master password.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>Why does "zero-knowledge" mean the service provider can't see your passwords either?
 
 {class="mt-1"}
-Because the decryption key is derived from your master password, which exists only in your mind and is used only on your local device. The service provider's server has neither the master password nor the decryption key — only ciphertext. That's why legitimate providers like Bitwarden and 1Password explicitly state "we cannot see your passwords either" — it's not that they don't want to, it's that they technically can't.
+Because the decryption key is derived from your master password, which exists only in your mind and is used only on your local device. The service provider's server has neither the master password nor the decryption key — only ciphertext. That's why legitimate providers like Bitwarden and 1Password explicitly state "we cannot see your passwords either", it's not that they don't want to, it's that they technically can't.
 :::
 
 ##### 3. Key Derivation Functions: PBKDF2 and Argon2
 
-The master password can't be used directly as an encryption key — it needs to be processed by a "key derivation function." The purpose of this function is to <strong>deliberately slow down computation</strong>, making the cost of brute-force attacks prohibitively high.
+The master password can't be used directly as an encryption key, it needs to be processed by a "key derivation function." The purpose of this function is to <strong>deliberately slow down computation</strong>, making the cost of brute-force attacks prohibitively high.
 
 - <strong>PBKDF2</strong>: A well-established standard, widely used by iCloud Keychain, Bitwarden, LastPass, and others. Slows down cracking through repeated iteration (typically 100,000+ times) of hashing.
-- <strong>Argon2</strong>: The winner of the 2015 Password Hashing Competition, more modern than PBKDF2. In addition to "computational cost," it introduces "memory cost" — making it difficult for specialized hardware like GPUs/ASICs to accelerate cracking. Already supported by Bitwarden, KeePassXC, and others.
+- <strong>Argon2</strong>: The winner of the 2015 Password Hashing Competition, more modern than PBKDF2. In addition to "computational cost," it introduces "memory cost", making it difficult for specialized hardware like GPUs/ASICs to accelerate cracking. Already supported by Bitwarden, KeePassXC, and others.
 
 Higher iteration counts are more secure but also slower to unlock. Legitimate providers publicly disclose their derivation algorithm and iteration counts for security community auditing.
 
@@ -65,7 +65,7 @@ Higher iteration counts are more secure but also slower to unlock. Legitimate pr
 
 In August 2022, the veteran password manager LastPass announced that its development environment was breached; in November of the same year, it further disclosed that hackers had taken backups of users' password vaults (encrypted ciphertext). Key lessons from the incident:
 
-- <strong>Zero-Knowledge Architecture Held the Line</strong>: Since the password vault was encrypted, hackers got the ciphertext but couldn't decrypt it — provided the user's master password was strong enough.
+- <strong>Zero-Knowledge Architecture Held the Line</strong>: Since the password vault was encrypted, hackers got the ciphertext but couldn't decrypt it: provided the user's master password was strong enough.
 - <strong>Users with Weak Master Passwords Are Most at Risk</strong>: Hackers can brute-force weak master passwords offline, so users with weak or reused master passwords face real risk.
 - <strong>Metadata Was Also Leaked</strong>: Although password contents were encrypted, metadata like site URLs and notes may not have been, revealing which services the user used.
 
@@ -81,7 +81,7 @@ First, your master password must be long and unique (16+ characters recommended,
 
 ##### System Built-in:
 
-- <strong>iCloud Keychain</strong>: The first choice for Apple ecosystem users. Seamlessly integrated with Safari and apps, free, secure. The downside is that cross-platform use is inconvenient.
+- <strong>iCloud Keychain</strong>: The first choice for Apple ecosystem users. Seamlessly integrated with Safari and apps. It's free, and secure. The downside is that cross-platform use is inconvenient.
 - <strong>Google Password Manager</strong>: Convenient for Android users. Integrates with Chrome and the Android system, free.
 - <strong>Huawei Password Vault</strong>: Built into HarmonyOS, suitable for Huawei users.
 
@@ -102,7 +102,7 @@ Password managers generally display a "password strength" indicator bar (red/yel
 
 - <strong>"123456"</strong>: Extremely low entropy, cracked instantly.
 - <strong>"P@ssw0rd"</strong>: Appears complex, but appears in all dictionary attack lists, so entropy is still low.
-- <strong>"correct horse battery staple"</strong>: Four random words, approximately 44 bits of entropy, far harder to crack than "P@ssw0rd."
+- <strong>"correct horse battery staple"</strong>: Four random words, approximately 44 bits of entropy, far harder to crack than "P@ssw0rd.".
 - <strong>16 random characters (including upper/lower case + digits + symbols)</strong>: Approximately 100 bits of entropy, uncrackable by brute force with current computing power.
 
 Conclusion:<strong>"Length + randomness" is more important than "complex symbols"</strong>. This is why the random long passwords generated by password managers are truly secure.
@@ -112,7 +112,7 @@ Conclusion:<strong>"Length + randomness" is more important than "complex symbols
 Maintained by security researcher Troy Hunt, <a href="https://haveibeenpwned.com" class="text-primary hover:underline" target="_blank" rel="noopener">haveibeenpwned.com</a> it collects accounts and passwords leaked in major data breaches. You can:
 
 1. Enter your email to check if your account was exposed in a breach.
-2. Use the Pwned Passwords feature to check if a password is in the known leaked database (password managers and browsers have this built in).
+2. Use the Pwned Passwords feature to check if a password is in the known leaked database. Password managers and browsers have this built in.
 
 If a password appears in the leaked database,<strong>no matter how complex it looks, you must change it immediately</strong>— because dictionary attacks prioritize these known passwords.
 
@@ -144,7 +144,7 @@ Worried that entering your password on HaveIBeenPwned will cause another leak? N
 
 #### VI. Passkey: The Future of Passwordless Login
 
-In 2024-2026, password technology is undergoing a revolution —<strong>Passkey</strong> is poised to completely replace traditional passwords. Jointly promoted by Apple, Google, and Microsoft, endorsed by the FIDO Alliance and the World Wide Web Consortium (W3C), this is the biggest change in login methods in decades.
+In 2024-2026, password technology is undergoing a revolution<strong>Passkey</strong> is poised to completely replace traditional passwords. Jointly promoted by Apple, Google, and Microsoft, endorsed by the FIDO Alliance and the World Wide Web Consortium (W3C), this is the biggest change in login methods in decades.
 
 ##### 1. What Is Passkey?
 
@@ -203,24 +203,24 @@ Passkey is based on the FIDO2 / WebAuthn standard, using <strong>on-device key p
 <i class="fas fa-lightbulb mr-2"></i>Cross-Device Sync Is the Key Breakthrough
 
 {class="mt-1"}
-The biggest pain point of early Passkey was being "bound to a single device" — you had to recreate it when switching phones. Starting in 2023, Apple, Google, and Microsoft implemented cloud sync for Passkeys: iCloud Keychain syncs across Apple devices, Google Password Manager syncs across Android devices. Third parties like 1Password have enabled cross-ecosystem sync. This means Passkey is now practical enough to replace passwords.
+The biggest pain point of early Passkey was being "bound to a single device", you had to recreate it when switching phones. Starting in 2023, Apple, Google, and Microsoft implemented cloud sync for Passkeys: iCloud Keychain syncs across Apple devices, Google Password Manager syncs across Android devices. Third parties like 1Password have enabled cross-ecosystem sync. This means Passkey is now practical enough to replace passwords.
 :::
 
 ##### 4. How to Create and Use Passkey on Your Phone
 
 <strong>iOS (iPhone) Path:</strong>
 
-1. On the account security page of a Passkey-supporting website (such as Google, Microsoft, Amazon, eBay, PayPal), select "Add passkey."
+1. On the account security page of a Passkey-supporting website (such as Google, Microsoft, Amazon, eBay, PayPal), select "Add passkey.".
 2. The system shows a Face ID / Touch ID verification window. Once verified, the Passkey is automatically generated and saved to iCloud Keychain.
-3. Next time you log in to this website, enter your username and select "Sign in with iPhone" — just a Face ID scan and you're in.
+3. Next time you log in to this website, enter your username and select "Sign in with iPhone": just a Face ID scan and you're in.
 4. Management: Settings → Passwords → find the corresponding website to see the Passkey entry.
 
 <strong>Android Path:</strong>
 
-1. On the account security page of a Passkey-supporting website, select "Add passkey."
+1. On the account security page of a Passkey-supporting website, select "Add passkey.".
 2. Google Password Manager popup → select your Google account → screen lock verification (fingerprint/pattern/PIN).
 3. Passkey is automatically saved to Google Password Manager and synced across Android devices with the same account.
-4. Next time you log in, select "Use Passkey" — just unlock your screen and you're in.
+4. Next time you log in, select "Use Passkey": just unlock your screen and you're in.
 5. Management: Android Settings → Passwords, passkeys &amp; autofill → Password Manager → google.com.
 
 ##### 5. Cross-Device Passkey Login
@@ -232,7 +232,7 @@ If you're on a Windows PC logging into a website that only has a Passkey on your
 3. The PC displays a QR code — scan it with your iPhone.
 4. iPhone shows a Face ID verification, and upon confirmation, the website login is completed on the PC.
 
-This process uses dual encrypted communication via Bluetooth + internet — the Passkey private key never leaves your iPhone.
+This process uses dual encrypted communication via Bluetooth + internet, the Passkey private key never leaves your iPhone.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -250,12 +250,12 @@ This process uses dual encrypted communication via Bluetooth + internet — the 
 <i class="fas fa-exclamation-triangle mr-2"></i>Transition Period Recommendations
 
 {class="mt-1"}
-Passkey hasn't completely replaced passwords — many websites are still in a "Passkey + password" coexistence phase. Recommendation: prioritize enabling Passkey for high-value accounts, but <strong>don't immediately delete traditional passwords</strong>, keep them as backup; continue using your password manager, since not all websites support Passkey. Treat Passkey as a "powerful supplement to password managers" rather than an "immediate replacement."
+Passkey hasn't completely replaced passwords, many websites are still in a "Passkey + password" coexistence phase. Recommendation: prioritize enabling Passkey for high-value accounts, but <strong>don't immediately delete traditional passwords</strong>, keep them as backup; continue using your password manager, since not all websites support Passkey. Treat Passkey as a "powerful supplement to password managers" rather than an "immediate replacement."
 :::
 
 #### VII. Hardware Security Keys
 
-If your security requirements exceed those of ordinary users — for example, if you hold significant cryptocurrency, are an executive/journalist/activist, or protect enterprise core accounts — hardware security keys are a more reliable choice than SMS verification codes.
+If your security requirements exceed those of ordinary users, for example, if you hold significant cryptocurrency, are an executive/journalist/activist, or protect enterprise core accounts — hardware security keys are a more reliable choice than SMS verification codes.
 
 ##### 1. What Is a Hardware Security Key?
 
@@ -271,20 +271,20 @@ A hardware key is a physical device (shaped like a USB drive) with an internal s
 - <strong>Phishing Resistance</strong>: Like Passkey, hardware keys only respond to the real domain, so phishing sites can't trick them into providing verification codes.
 - <strong>SIM-Swap Resistance</strong>: SMS verification codes can be intercepted via SIM-swap attacks, while hardware keys don't need a phone number.
 - <strong>Man-in-the-Middle Resistance</strong>: The FIDO2 protocol includes a challenge value in each signature, preventing replay.
-- <strong>Physical Isolation</strong>: The private key remains inside the hardware chip forever — even if malware compromises your computer, it can't read it.
+- <strong>Physical Isolation</strong>: The private key remains inside the hardware chip forever: even if malware compromises your computer, it can't read it.
 
 ##### 3. Applicable Scenarios
 
 - Cryptocurrency exchange accounts, wallet recovery.
 - Enterprise SSO, remote work VPN, SSH server login.
-- Email, GitHub, social media and other "master accounts" — once compromised, all other accounts can be reset.
+- Email, GitHub, social media and other "master accounts", once compromised, all other accounts can be reset.
 - Journalists, lawyers, executives, and other high-sensitivity individuals.
 
 ##### 4. How to Configure a Hardware Key as Two-Factor Authentication
 
 Using a Google Account + YubiKey as an example:
 
-1. Purchase a YubiKey (recommended to buy two at once — one for daily use and one as backup, stored in different locations).
+1. Purchase a YubiKey (recommended to buy two at once, one for daily use and one as backup, stored in different locations).
 2. Sign in to myaccount.google.com → Security → 2-Step Verification.
 3. Select "Add security key" → insert the YubiKey into the USB-C port or tap it against your phone's NFC sensor.
 4. Follow the prompt to touch the YubiKey's metal contact to complete registration.
@@ -306,12 +306,12 @@ The biggest risk of hardware keys is "loss." Recommendations: ① Register two d
 <i class="fas fa-exclamation-triangle mr-2"></i>Be Careful with Purchase Channels
 
 {class="mt-1"}
-Always purchase from official stores or authorized dealers — don't buy used or keys from unknown sources, as pre-configured hardware could theoretically have been implanted with a backdoor. YubiKey firmware cannot be updated after manufacturing, but Yubico continuously publishes security advisories — follow their official website.
+Always purchase from official stores or authorized dealers, don't buy used or keys from unknown sources, as pre-configured hardware could theoretically have been implanted with a backdoor. YubiKey firmware cannot be updated after manufacturing, but Yubico continuously publishes security advisories — follow their official website.
 :::
 
 #### VIII. Family/Team Password Sharing
 
-In family scenarios, Netflix, home Wi-Fi, router admin, and smart lock passwords need to be shared among the whole family; in team scenarios, servers, databases, and social media accounts require multi-person collaboration.<strong>Sending passwords via WeChat or writing them in shared documents are high-risk practices</strong>— once chat history or document permissions are leaked, the passwords are leaked too.
+In family scenarios, Netflix, home Wi-Fi, router admin, and smart lock passwords need to be shared among the whole family; in team scenarios, servers, databases, and social media accounts require multi-person collaboration. <strong>Sending passwords via WeChat or writing them in shared documents are high-risk practices</strong>. Once chat history or document permissions are leaked, the passwords are leaked too.
 
 ##### 1. 1Password's "Shared Vaults"
 
@@ -319,9 +319,9 @@ In family scenarios, Netflix, home Wi-Fi, router admin, and smart lock passwords
 
 - <strong>Personal Vault</strong>: Only you can see it, for private accounts like banks and email.
 - <strong>Shared Vault</strong>: Family or team members can all see it, for shared items like Netflix, home Wi-Fi, and shared credit cards.
-- <strong>Permission Tiers</strong>: The team version can set certain members to "view only" or "view but not edit."
+- <strong>Permission Tiers</strong>: The team version can set certain members to "view only" or "view but not edit.".
 
-Family or team members don't need to share a master password — each logs in with their own account and can see the shared vault content they're authorized for. Password changes sync in real-time to all members.
+Family or team members don't need to share a master password, each logs in with their own account and can see the shared vault content they're authorized for. Password changes sync in real-time to all members.
 
 ##### 2. Bitwarden's "Organizations" Feature
 
@@ -329,7 +329,7 @@ Bitwarden's free version supports individual password sharing (via the "Send" fe
 
 ##### 3. Family Scenarios: Secure Ways to Share Netflix, Wi-Fi, and Other Passwords
 
-- <strong>Netflix / Streaming Sites</strong>: Store login passwords in 1Password Families' "Shared Vault" — family members log in individually without sharing in a group chat.
+- <strong>Netflix / Streaming Sites</strong>: Store login passwords in 1Password Families' "Shared Vault", family members log in individually without sharing in a group chat.
 - <strong>Home Wi-Fi Password</strong>: iOS devices can share Wi-Fi passwords directly via AirDrop to visiting guests without reading it aloud; Android 12+ also has a "Nearby Share Wi-Fi" feature.
 - <strong>Smart Locks, Smart Appliances</strong>: Use the manufacturer app's "Family Members" feature to create individual accounts for each person, rather than sharing one admin account.
 - <strong>Home Router Admin</strong>: Store the admin password in a 1Password Shared Vault, and set up a separate SSID for guest Wi-Fi.
@@ -339,19 +339,19 @@ Bitwarden's free version supports individual password sharing (via the "Send" fe
 <i class="fas fa-lightbulb mr-2"></i>1Password Families Value for Money
 
 {class="mt-1"}
-1Password Families costs about $4.99/month, supporting up to 5 family members, each with an independent personal vault + 4 shared vaults. That's less than $1/person/month — currently the best family sharing experience. Bitwarden's family plan at $10/year supports 6 people, offering better value but with a slightly less polished interface.
+1Password Families costs about $4.99/month, supporting up to 5 family members, each with an independent personal vault + 4 shared vaults. That's less than $1/person/month, currently the best family sharing experience. Bitwarden's family plan at $10/year supports 6 people, offering better value but with a slightly less polished interface.
 :::
 
 ##### 4. Team Scenarios: Server/Database Password Sharing
 
 - <strong>1Password Teams / Business</strong>: Can create multiple vaults by department and project team, with fine-grained permission control and auditable access logs.
 - <strong>Bitwarden Teams / Enterprise</strong>: Open-source solution, self-hostable, enterprise version supports SSO integration and directory sync.
-- <strong>Separation of Duties Principle</strong>: Admin passwords should not be held by only one person — designate 2-3 "emergency contacts" to ensure business continuity when key personnel leave or take vacation.
+- <strong>Separation of Duties Principle</strong>: Admin passwords should not be held by only one person, designate 2-3 "emergency contacts" to ensure business continuity when key personnel leave or take vacation.
 - <strong>Offboarding Process</strong>: Immediately revoke departing employees' password manager access, and rotate all high-sensitivity passwords they had access to if necessary.
 
 ##### 5. Emergency Access: In Case Something Happens to You
 
-Imagine a scenario: you alone manage all the family's important accounts, but you're unexpectedly hospitalized or pass away, and your family can't log into the bank, email, or insurance accounts.<strong>The "Emergency Access" feature</strong> is designed exactly for this — authorize a trusted family member/friend to access your password vault when you can't respond.
+Imagine a scenario: you alone manage all the family's important accounts, but you're unexpectedly hospitalized or pass away, and your family can't log into the bank, email, or insurance accounts.<strong>The "Emergency Access" feature</strong> is designed exactly for this: authorize a trusted family member/friend to access your password vault when you can't respond.
 
 <strong>Bitwarden Emergency Access Setup:</strong>
 
@@ -363,16 +363,16 @@ Imagine a scenario: you alone manage all the family's important accounts, but yo
 
 <strong>1Password Emergency Access:</strong>
 
-1. 1Password doesn't call it "Emergency Access" directly, but it can be achieved through the "Family/Team Organization" feature — after adding family members to the family plan, place some entries in a "Shared Vault."
+1. 1Password doesn't call it "Emergency Access" directly, but it can be achieved through the "Family/Team Organization" feature, after adding family members to the family plan, place some entries in a "Shared Vault.".
 2. For individual plan users, it's recommended to tell one highly trusted family member your master password, or write it in a sealed envelope stored in a safe.
-3. 1Password also provides a "Recovery Code" — be sure to print and save it when enabling two-factor authentication.
+3. 1Password also provides a "Recovery Code", be sure to print and save it when enabling two-factor authentication.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-hands mr-2"></i>Set Up Now: Leave a "Spare Key" for Your Family
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. Choose a trusted family member as your "emergency contact."
+1. Choose a trusted family member as your "emergency contact.".
 2. Set up emergency access in your password manager (Bitwarden) or add them to a family shared vault (1Password).
 3. Write the master password + recovery code on paper, seal in an envelope, store in a home safe or inform a trusted family member.
 4. Review every six months to confirm the emergency contact is still appropriate.
@@ -380,10 +380,10 @@ Imagine a scenario: you alone manage all the family's important accounts, but yo
 
 #### IX. Password Manager Best Practices
 
-- <strong>Set a Strong Master Password</strong>: The master password is the last line of defense — make sure to set a long, complex password and memorize it firmly.
+- <strong>Set a Strong Master Password</strong>: The master password is the last line of defense, make sure to set a long, complex password and memorize it firmly.
 - <strong>Enable Two-Factor Authentication</strong>: Turn on 2FA for your password manager account to add a layer of protection.
 - <strong>Regularly Check for Weak Passwords</strong>: Most password managers have a "security audit" feature that helps you find weak and duplicate passwords.
-- <strong>Don't Forget the Master Password</strong>: The master password cannot be recovered — forgetting it means losing all passwords. It's recommended to write it down on paper and keep it in a safe place.
+- <strong>Don't Forget the Master Password</strong>: The master password cannot be recovered, forgetting it means losing all passwords. It's recommended to write it down on paper and keep it in a safe place.
 - <strong>Emergency Access</strong>: Set up an emergency contact, so if you can't access your account, a trusted person can obtain your passwords.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4

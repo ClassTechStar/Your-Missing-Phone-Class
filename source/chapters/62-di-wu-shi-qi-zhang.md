@@ -46,7 +46,7 @@ fun CameraButton() {
 <i class="fas fa-exclamation-triangle mr-2"></i>注意：被永久拒绝怎么办？
 
 {class="mt-1"}
-用户勾了"不再询问"后，<code class="inline">launchPermissionRequest</code> 不会再弹窗。此时应引导用户去系统设置里手动开启（用 <code class="inline">Intent</code> 跳到应用设置页），并在界面里说明"这个权限用来做什么"。态度好一点，用户开权限的意愿会高很多——<strong>申请权限的文案，值得认真写</strong>。
+用户勾了"不再询问"后，<code class="inline">launchPermissionRequest</code> 不会再弹窗。此时应引导用户去系统设置里手动开启（用 <code class="inline">Intent</code> 跳到应用设置页），并在界面里说明"这个权限用来做什么"。态度好一点，用户开权限的意愿会高很多<strong>申请权限的文案，值得认真写</strong>。
 :::
 
 #### 二、通知：在正确的时间说有用的话
@@ -89,8 +89,8 @@ if (ActivityCompat.checkSelfPermission(this,
 
 项目变大后，两个"甜蜜的烦恼"会找上门：
 
-- <strong>对象创建乱</strong>：每个页面都在自己 new 数据库、new API——用 <strong>Hilt</strong>（依赖注入框架）统一管理，"谁要什么，开口就有人递"；
-- <strong>代码堆成山</strong>：单模块项目越改越慢——拆成 <strong>多模块</strong>（app / core / feature-xxx），各功能独立开发、独立测试。
+- <strong>对象创建乱</strong>：每个页面都在自己 new 数据库、new API，用 <strong>Hilt</strong>（依赖注入框架）统一管理，"谁要什么，开口就有人递"。
+- <strong>代码堆成山</strong>：单模块项目越改越慢：拆成 <strong>多模块</strong>（app / core / feature-xxx），各功能独立开发、独立测试。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -113,17 +113,17 @@ Hilt 和模块化都是好工具，但<strong>单人项目先别急着上</stron
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 AI 辅助安卓开发的四个场景
 
-具体方法论——怎么给 AI 下指令、怎么验收、怎么避坑——完整的 11 章内容在本书第七篇《AI编程实战篇》（第37-47章）里，强烈建议配合阅读：<strong>安卓语法交给本篇，AI 协作的心法交给第七篇</strong>。
+具体方法论，怎么给 AI 下指令、怎么验收、怎么避坑，完整的 11 章内容在本书第七篇《AI编程实战篇》（第37-47章）里，强烈建议配合阅读：<strong>安卓语法交给本篇，AI 协作的心法交给第七篇</strong>。
 
 #### 五、Compose 性能优化与调试工具
 
 Compose 写起来爽，但"重组过多"也会卡。三个实用技巧：
 
-- <strong>稳定参数</strong>：给数据类加 <code class="inline">@Immutable</code> 或使用 <code class="inline">derivedStateOf</code>，避免无关状态变化触发大面积重组；
-- <strong>记得用 key</strong>：<code class="inline">items(list, key = { it.id })</code> 让列表增删时只动该动的项——不加 key，删除一项可能整表重画；
+- <strong>稳定参数</strong>：给数据类加 <code class="inline">@Immutable</code> 或使用 <code class="inline">derivedStateOf</code>，避免无关状态变化触发大面积重组。
+- <strong>记得用 key</strong>：<code class="inline">items(list, key = { it.id })</code> 让列表增删时只动该动的项——不加 key，删除一项可能整表重画。
 - <strong>Layout Inspector 的 Compose 模式</strong>：实时看每个 Composable 的重组次数，谁频繁重组一目了然，照着热点优化。
 
-另外把 <code class="inline">Compose 编译器报告</code>（Metrics）打开，能生成一份"哪些组件不稳定"的报告——进阶路上，数据永远比感觉可靠。
+另外把 <code class="inline">Compose 编译器报告</code>（Metrics）打开，能生成一份"哪些组件不稳定"的报告，进阶路上，数据永远比感觉可靠。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -140,6 +140,6 @@ Compose 写起来爽，但"重组过多"也会卡。三个实用技巧：
 - 敏感权限：Manifest 声明 + 运行时申请 + 被拒后优雅引导
 - 通知三纪律：只发有用的、能关、不骚扰；渠道 + 权限缺一不可
 - 定时任务用 WorkManager，别自己造轮子
-- Hilt 管对象、模块化管代码——单人小项目先别急着上
+- Hilt 管对象、模块化管代码：单人小项目先别急着上
 - AI 辅助四场景：写码、查资料、写测试、改 bug；方法论见第七篇（第37-47章）
 :::

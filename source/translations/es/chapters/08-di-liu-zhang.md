@@ -2,12 +2,12 @@
 id: di-liu-zhang
 num: 06
 part: ji-chu-pian
-nav: Capítulo 6: Protege tu vida digital
+nav: Capítulo 6: ¿Teléfono perdido? ¿Contraseña olvidada?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 6: Protege tu vida digital — Seguridad y privacidad
+### Capítulo 6: ¿Teléfono perdido? ¿Contraseña olvidada?
 
 {class="chapter-intro mb-4"}
 Seguridad del teléfono = seguridad de la privacidad + seguridad patrimonial. En esta era en que los datos son un activo, proteger el teléfono es protegerte a ti mismo.
@@ -29,7 +29,7 @@ El bloqueo de pantalla es la primera línea de defensa de tu teléfono y tambié
 - Activa la biometría.
 - Ajusta el tiempo de bloqueo a "Inmediato" o al más corto posible.
 
-#### II. "Buscar mi teléfono": la herramienta antirrobo definitiva
+II. "Buscar mi teléfono": la herramienta antirrobo definitiva
 
 <strong>¡Debe estar activada!</strong> Permite:
 
@@ -83,26 +83,26 @@ La IA puede clonar voz y rostro, pero no es infalible; se pueden aprovechar vari
 
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>Verificación por acción</strong>: en una videollamada, pide al interlocutor que complete una secuencia de movimientos, como "pasa la mano rápidamente por delante de la cara", "gira la cabeza para mostrar el contorno de la oreja" o "parpadea 5 veces seguidas". Las técnicas de intercambio de rostro por IA actuales <strong>suelen fallar</strong> con oclusiones dinámicas complejas, movimientos rápidos y cambios de iluminación, produciendo
-- <strong>congelamientos, distorsiones faciales o bordes defectuosos</strong>.<strong>Verificación por contraseña privada</strong>.
+- <strong>congelamientos, distorsiones faciales o bordes defectuosos</strong>.<strong>Verificación por contraseña privada</strong>
 - <strong>termina la llamada de inmediato y activa el protocolo de seguridad</strong>.<strong>Verificación secundaria</strong>: sigue estrictamente el principio de "<strong>cuatro no y una verificación</strong>" de la Oficina de Ciberseguridad del Ministerío de Público: no creas en mensajes de desconocidos, no transfieras dinero a la ligera, no reveles información personal sensible, no difundas contenido sospechoso. Ante cualquier movimiento de dinero,
 
 ##### devuelve la llamada desde un número ya conocido o confirma en persona
 
-- <strong>. Al transferir, elige el modo "ingreso en 24 horas" para disponer de tiempo suficiente para detectar el fraude y recuperar el dinero.</strong>3. Timos clásicos (sigue habiendo que estar alerta):
+- <strong>. Al transferir, elige el modo "ingreso en 24 horas" para disponer de tiempo suficiente para detectar el fraude y recuperar el dinero.</strong>3. Timos clásicos (sigue habiendo que estar alerta):.
 - <strong>Premíos / reembolso por tareas</strong>: cebo; primero te dan un pequeño beneficio y luego te estafan una cantidad grande.
 - <strong>Estafa amorosa</strong>: "matanza del cerdo"; tras cultivar el afecto, te estafan el dinero.
 
 ##### Suplantación de un conocido
 
 - : tras robar una cuenta, piden dinero prestado (en la era de la IA, aún más difícil de distinguir).
-- 4. Protecciones integradas en el teléfono:
+- 4. Protecciones integradas en el teléfono:.
 - Bloqueo de llamadas molestas.
 
 ##### Protección contra robo de códigos de verificación.
 
 <strong>Análisis de seguridad de los enlaces en SMS.</strong>5. Fórmula antifraude:
 
-#### V. Resistirse al "doxxing" y a los ataques de ingeniería social: cortar la cadena de la fuga de privacidad
+V. Resistirse al "doxxing" y a los ataques de ingeniería social: cortar la cadena de la fuga de privacidad
 
 Si te encuentras con un "asunto urgente", mantén la calma 5 minutos; casi todos los fraudes delatan su cola en ese momento.<strong>V. Resistirse al "doxxing" y a los ataques de ingeniería social: cortar la cadena de la fuga de privacidad</strong> El principio central del "doxxing" (ataque de ingeniería social) es
 
@@ -110,7 +110,7 @@ Si te encuentras con un "asunto urgente", mantén la calma 5 minutos; casi todos
 
 Los métodos básicos de limpieza de EXIF se encuentran en el Capítulo 2 "Gestión de imágenes y sistema de archivos". Antes de compartir fotos en redes sociales, es necesario además <strong>1. Anonimización de fotos</strong> Antes de compartir fotos en redes sociales, hay que usar herramientas de edición profesionales para <strong>eliminar por completo los metadatos (EXIF)</strong>, incluidos fecha de toma, modelo del dispositivo, coordenadas GPS, etc. La información clave que aparezca en la foto, como
 
-- números de puerta, matrículas, códigos de barras de billetes, números de identificación
+- números de puerta, matrículas, códigos de barras de billetes, números de identificación.
 - , debe difuminarse o pixelarse para no revelar involuntariamente tus movimientos.
 - iOS: en [Configuración] &gt; [Privacidad y seguridad] &gt; [Cámara] puedes desactivar "Ubicación precisa"; al compartir, elige "Solo esta foto" para eliminar los metadatos.
 
@@ -177,7 +177,7 @@ Si pierdes el teléfono, no te asustes; sigue este orden:
 - Enviar el código de verificación a nadie (ni siquiera al "servicio al cliente");
 - Hacer clic en enlaces desconocidos de SMS, sobre todo de números extranjeros que empiezan por 00;
 - Iniciar sesión en la banca online o en pagos bajo Wi-Fi público;
-- Activar la "pantalla compartida" o el "control remoto" con desconocidos.
+- Activar la "pantalla compartida" o el "control remoto" con desconocidos
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

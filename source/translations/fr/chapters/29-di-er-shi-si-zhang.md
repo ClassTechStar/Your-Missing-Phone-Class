@@ -83,7 +83,7 @@ Pour mieux comprendre les avantages et les inconvénients du verrouillage BL, no
 ```
 :::
 
-#### II. Procédure détaillée de déverrouillage du BL (exemple Xiaomi)
+II. Procédure détaillée de déverrouillage du BL (exemple Xiaomi)
 
 1. <strong>Demander la permission de déverrouillage</strong>:Demandez le déverrouillage sur le site de l'outil de déverrouillage Xiaomi.
 2. <strong>Lier le compte</strong>:Liez votre compte Xiaomi dans les paramètres du smartphone.
@@ -104,7 +104,7 @@ Le flashage consiste à installer un nouveau système d'exploitation sur le smar
 - <strong>Flasher un Recovery tiers</strong>:Comme TWRP, pour la sauvegarde/restauration et le flashage de ROMs tierces.
 - <strong>Flasher une ROM tierce</strong>:Comme LineageOS, Pixel Experience, etc., pour découvrir d'autres systèmes.
 
-#### V. Samsung Knox : le coût irréversible du déverrouillage du BL
+V. Samsung Knox : le coût irréversible du déverrouillage du BL
 
 Contrairement aux autres fabricants Android, le mécanisme de déverrouillage du BL des smartphones Samsung possède une conception unique de « fusion » :<strong>Pour les smartphones Samsung, le déverrouillage déclenche la fusion Knox, entraînant la perte permanente de certaines fonctions de sécurité (telles que Samsung Pay) ; toutes les données protégées sont effacées ; la garantie est affectée</strong>. Plus précisément :
 

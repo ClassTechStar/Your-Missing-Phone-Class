@@ -57,7 +57,7 @@ struct CounterView: View {
 
 #### 二、NavigationStack：頁面跳轉嘅"棧"
 
-iOS 16 開始，多頁面導航用 NavigationStack——好似一疊碟咁，推一個入一個，返回嗰陣逐個彈出嚟：
+iOS 16 開始，多頁面導航用 NavigationStack，好似一疊碟咁，推一個入一個，返回嗰陣逐個彈出嚟：
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink 就係"㩒得嘅跳轉連結"；navigationTitle 自動生成導航欄標題同返回按鈕。要編程式跳轉（譬如㩒完"保存"自動返回）嗰陣，用 @Environment(\.dismiss) 關閉當前頁面——呢兩招一齊用，90% 嘅導航需求就齊喇。
+NavigationLink 就係"㩒得嘅跳轉連結"；navigationTitle 自動生成導航欄標題同返回按鈕。要編程式跳轉（譬如㩒完"保存"自動返回）嗰陣，用 @Environment(\.dismiss) 關閉當前頁面，呢兩招一齊用，90% 嘅導航需求就齊喇。
 
 #### 三、彈窗同底部標籤：sheet 同 TabView
 
@@ -141,7 +141,7 @@ struct MainTabView: View {
 
 #### 四、List：iOS 嘅"國民列表"
 
-iOS 上面最常用、最有"蘋果味"嘅組件就係 List——天生帶分割線、滑動刪除、㩒咗會高亮：
+iOS 上面最常用、最有"蘋果味"嘅組件就係 List，天生帶分割線、滑動刪除、㩒咗會高亮：
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-典型用途：返到前台嗰陣刷新數據，入咗後台嗰陣保存草稿。iOS 對後台運行管得好嚴——普通 App 入咗後台好快就會被掛起（凍結），唔好指望喺後台偷偷哋做重活；真係要定時任務，用第 68 章嘅本地通知，而唔係"後台常駐"。
+典型用途：返到前台嗰陣刷新數據，入咗後台嗰陣保存草稿。iOS 對後台運行管得好嚴，普通 App 入咗後台好快就會被掛起（凍結），唔好指望喺後台偷偷哋做重活；真係要定時任務，用第 68 章嘅本地通知，而唔係"後台常駐"。
 
 {class="mt-1"}
-做一個假數據版本嘅記賬本骨架：TabView 三個標籤（賬本／統計／設定）→ 賬本頁用 List 顯示假數據、㩒行跳詳情（NavigationStack）→ 右上角"+"按鈕彈錄入 sheet。唔存數據、唔上網，純練骨架——呢個骨架做好咗，第 65 章再入去填真數據就水到渠成。
+做一個假數據版本嘅記賬本骨架：TabView 三個標籤（賬本／統計／設定）→ 賬本頁用 List 顯示假數據、㩒行跳詳情（NavigationStack）→ 右上角"+"按鈕彈錄入 sheet。唔存數據、唔上網，純練骨架，呢個骨架做好咗，第 65 章再入去填真數據就水到渠成。
 :::
 
 ::: div .chapter-summary

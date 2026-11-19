@@ -10,14 +10,14 @@ kind: chapter
 ### 第五十五章：项目二——天气查询 App（网络版）
 
 {class="chapter-intro mb-4"}
-记账本是"练内功"，天气 App 是"见世面"——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理"加载中/成功/失败"三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何"联网 App"的能力——新闻、汇率、翻译，套路一模一样。
+记账本是"练内功"，天气 App 是"见世面"——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理"加载中/成功/失败"三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何"联网 App"的能力，新闻、汇率、翻译，套路一模一样。
 
 #### 一、申请免费天气 API
 
 个人练手，推荐 <strong>OpenWeatherMap</strong> 或国内的 <strong>和风天气（QWeather）</strong>——都有免费额度，注册即用。以 OpenWeatherMap 为例：
 
-1. 注册账号 → 在 API keys 页面生成一个 Key（<code class="inline">apikey</code>）；
-2. 免费版可调用 Current Weather（当前天气）接口：<code class="inline">api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric</code>；
+1. 注册账号 → 在 API keys 页面生成一个 Key（<code class="inline">apikey</code>）。
+2. 免费版可调用 Current Weather（当前天气）接口：<code class="inline">api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric</code>。
 3. 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
@@ -25,7 +25,7 @@ kind: chapter
 <i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：密钥绝不能写死在代码里
 
 {class="mt-1"}
-API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。正确做法：放进 <code class="inline">local.properties</code>（这个文件已被 gitignore 忽略），再通过 Gradle 的 buildConfig 读进代码。搜索"Android 隐藏 API Key 的最佳实践"照着改即可。
+API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。正确做法：放进 <code class="inline">local.properties</code>（这个文件已被 gitignore 忽略），再通过 Gradle 的 buildConfig 读进代码。搜索"Android 隐藏 API Key 的好办法"照着改即可。
 :::
 
 #### 二、网络层：Retrofit + JSON 解析
@@ -59,7 +59,7 @@ interface WeatherApi {
 ```
 :::
 
-Gson 会自动把 JSON 塞进这些 data class——<strong>字段名一致，魔法自动发生</strong>。
+Gson 会自动把 JSON 塞进这些 data class<strong>字段名一致，魔法自动发生</strong>。
 
 #### 三、三种界面状态：加载中 / 成功 / 失败
 
@@ -138,13 +138,13 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-几个小细节值得学：<code class="inline">firstOrNull()</code> 安全取第一个元素（列表可能为空），<code class="inline">?: "未知"</code> 给兜底文案——空安全原则在界面里同样适用。温度用 <code class="inline">72.sp</code> 的大字号撑场面，"轻"字重（Light）让数字显得优雅，这是天气类 App 的经典配方。
+几个小细节值得学：<code class="inline">firstOrNull()</code> 安全取第一个元素（列表可能为空），<code class="inline">?: "未知"</code> 给兜底文案，空安全原则在界面里同样适用。温度用 <code class="inline">72.sp</code> 的大字号撑场面，"轻"字重（Light）让数字显得优雅，这是天气类 App 的经典配方。
 
 #### 五、界面与交互细节
 
-- <strong>搜索框</strong>：顶部 TextField，输城市名点搜索（键盘上设"搜索"动作，回车即搜）；
-- <strong>天气卡片</strong>：大字号温度（26.5°）、天气描述（晴）、湿度、城市名；
-- <strong>收藏城市</strong>：把常看的城市存进 DataStore，下次打开自动查——顺手复习第 6 章；
+- <strong>搜索框</strong>：顶部 TextField，输城市名点搜索（键盘上设"搜索"动作，回车即搜）。
+- <strong>天气卡片</strong>：大字号温度（26.5°）、天气描述（晴）、湿度、城市名。
+- <strong>收藏城市</strong>：把常看的城市存进 DataStore，下次打开自动查——顺手复习第 6 章。
 - <strong>下拉刷新</strong>：Compose 里用 <code class="inline">PullToRefreshBox</code>（Material 3 提供），手感立刻"专业"起来。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -167,9 +167,9 @@ fun WeatherContent(data: WeatherResponse) {
 {class="font-semibold mb-1"}
 <i class="fas fa-flag-checkered mr-1"></i>本章小结
 
-- 先浏览器试 API、看懂 JSON，再写代码——"预习"永远不亏
+- 先浏览器试 API、看懂 JSON，再写代码，"预习"永远不亏
 - API Key 藏进 local.properties，绝不进代码库
 - Retrofit 接口 + data class：字段对上，JSON 自动解析
 - Loading/Success/Error 三段式状态是联网界面万金油
-- 断网、空输入、城市不存在——错误处理是联网 App 的及格线
+- 断网、空输入、城市不存在，错误处理是联网 App 的及格线
 :::

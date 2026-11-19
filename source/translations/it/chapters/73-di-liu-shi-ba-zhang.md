@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 68: La strada del livello successivo — permessi, notifiche e architettura moderna
 
 {class="chapter-intro mb-4"}
-Saper costruire un'app è solo l'inizio. In questo capitolo parliamo di qualche scoglio del passaggio da "saper fare" a "far bene": come chiedere i permessi con eleganza, come inviare notifiche senza risultare antipatici, come alzare di un livello l'architettura e — nel 2026 — come scrivere codice iOS in coppia con l'IA. Ogni punto è qualcosa che incontrerai subito in un progetto reale.
+Saper costruire un'app è solo l'inizio. In questo capitolo parliamo di qualche scoglio del passaggio da "saper fare" a "far bene": come chiedere i permessi con eleganza, come inviare notifiche senza risultare antipatici, come alzare di un livello l'architettura e: nel 2026, come scrivere codice iOS in coppia con l'IA. Ogni punto è qualcosa che incontrerai subito in un progetto reale.
 
 #### 1. Permessi: prima bussa alla porta, poi entra
 
@@ -51,7 +51,7 @@ class LocationModel {
 Attenzione: la "singola occasione" dei permessi iOS
 
 {class="mt-1"}
-L'avviso dei permessi su iOS compare una volta sola — se l'utente rifiuta, non ricomparirà mai più. Quindi: scegli il momento della richiesta "nell'attimo in cui l'utente sta per usarla" (non una raffica di avvisi all'avvio) e spiega nel testo lo scopo. La guida nell'interfaccia dopo il rifiuto ("vai nelle Impostazioni ad attivare la posizione") è di serie: non lasciare l'utente intrappolato in un vicolo cieco.
+L'avviso dei permessi su iOS compare una volta sola: se l'utente rifiuta, non ricomparirà mai più. Quindi: scegli il momento della richiesta "nell'attimo in cui l'utente sta per usarla" (non una raffica di avvisi all'avvio) e spiega nel testo lo scopo. La guida nell'interfaccia dopo il rifiuto ("vai nelle Impostazioni ad attivare la posizione") è di serie: non lasciare l'utente intrappolato in un vicolo cieco.
 :::
 
 #### 2. Notifiche: dire cose utili al momento giusto
@@ -93,22 +93,22 @@ func scheduleDailyReminder() {
 ```
 :::
 
-Attenzione: anche il permesso delle notifiche su iOS "compare una volta sola", e l'utente può disattivarlo in qualunque momento dalle Impostazioni di sistema — per questo il valore percepito del contenuto è fondamentale: un abuso, anche una volta sola, può farti perdere l'utente per sempre.
+Attenzione: anche il permesso delle notifiche su iOS "compare una volta sola", e l'utente può disattivarlo in qualunque momento dalle Impostazioni di sistema, per questo il valore percepito del contenuto è fondamentale: un abuso, anche una volta sola, può farti perdere l'utente per sempre.
 
-#### 3. Architettura di livello avanzato: MVVM a fondo e testabilità
+3. Architettura di livello avanzato: MVVM a fondo e testabilità
 
 Al capitolo 65 abbiamo già usato MVVM; qui aggiungiamo tre punti di livello avanzato:
 
-- Astrazione tramite protocolli: fai dipendere il ViewModel da protocolli (protocol) e non da classi concrete — nei test puoi iniettare "fonti di dati finte", ed è la pietra angolare della testabilità;
+- Astrazione tramite protocolli: fai dipendere il ViewModel da protocolli (protocol) e non da classi concrete, nei test puoi iniettare "fonti di dati finte", ed è la pietra angolare della testabilità;
 - Responsabilità unica: un ViewModel gestisce una cosa sola (chi tiene le spese non si occupa del meteo); quando le funzioni aumentano, lo dividi;
-- Niente sovraingegneria: in un piccolo progetto in solitario, "classi @Observable + astrazione tramite protocolli" basta. Architetture pesanti come VIPER o Clean Architecture aspettino che arrivino il team e la complessità — gli strumenti servono agli obiettivi, non a fare sfoggio.
+- Niente sovraingegneria: in un piccolo progetto in solitario, "classi @Observable + astrazione tramite protocolli" basta. Architetture pesanti come VIPER o Clean Architecture aspettino che arrivino il team e la complessità: gli strumenti servono agli obiettivi, non a fare sfoggio
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Consiglio: il "dividendo d'ecosistema" di SwiftUI
 
 {class="mt-1"}
-L'ecosistema iOS offre altri due "privilegi unici" di livello avanzato: i widget (WidgetKit) permettono all'utente di vedere le informazioni senza aprire l'app (la "spesa del mese" del registro delle spese direttamente sul desktop), e le scorciatoie (App Intents) permettono all'utente di invocare le tue funzioni con Siri o con le automazioni. Entrambi hanno framework ufficiali, l'ingresso non costa molto, ma il vantaggio sull'esperienza utente è enorme — sulla strada avanzata meritano lo sblocco prioritario.
+L'ecosistema iOS offre altri due "privilegi unici" di livello avanzato: i widget, (WidgetKit) permettono all'utente di vedere le informazioni senza aprire l'app (la "spesa del mese" del registro delle spese direttamente sul desktop), e le scorciatoie (App Intents) permettono all'utente di invocare le tue funzioni con Siri o con le automazioni. Entrambi hanno framework ufficiali, l'ingresso non costa molto, ma il vantaggio sull'esperienza utente è enorme: sulla strada avanzata meritano lo sblocco prioritario.
 :::
 
 #### 4. Le novità del 2026: sviluppo iOS assistito dall'IA
@@ -124,7 +124,7 @@ Nel 2026 l'IA è già profondamente incorporata nel flusso di sviluppo Apple. Se
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 I quattro scenari dello sviluppo iOS assistito dall'IA
 
-La metodologia concreta — come dare istruzioni all'IA, come accettare i risultati, come evitare le trappole — è trattata per intero negli 11 capitoli della Parte 7 di questo libro, "Programmazione pratica con l'IA" (capitoli 37-47), la cui lettura è fortemente consigliata in parallelo: la sintassi Swift sta in questa parte, i segreti della collaborazione con l'IA nella Parte 7.
+La metodologia concreta, come dare istruzioni all'IA, come accettare i risultati, come evitare le trappole, è trattata per intero negli 11 capitoli della Parte 7 di questo libro, "Programmazione pratica con l'IA" (capitoli 37-47), la cui lettura è fortemente consigliata in parallelo: la sintassi Swift sta in questa parte, i segreti della collaborazione con l'IA nella Parte 7.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -162,7 +162,7 @@ struct WeatherScreen: View {
 ```
 :::
 
-Dietro queste due regole c'è la "sicurezza dalle data race" di Swift 6 — il compilatore segnala l'errore appena sbagli a scrivere, invece di farti scoprirlo quando l'app crasha. Gli errori del compilatore non sono prese in giro: sono pallottole fermate al posto tuo.
+Dietro queste due regole c'è la "sicurezza dalle data race" di Swift 6, il compilatore segnala l'errore appena sbagli a scrivere, invece di farti scoprirlo quando l'app crasha. Gli errori del compilatore non sono prese in giro: sono pallottole fermate al posto tuo.
 
 {class="mt-1"}
 ① Aggiungi al registro delle spese "un promemoria per annotare le spese ogni giorno alle 20:00" (permesso notifiche + notifiche locali); ② trasforma la fonte dati del ViewModel in un'astrazione tramite protocollo e scrivi un test unitario che inietta dati finti; ③ aggiungi un widget da desktop "spesa del mese". Completato il trio, il tuo progetto avrà l'aspetto di un "esercito regolare".

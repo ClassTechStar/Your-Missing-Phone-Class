@@ -11,7 +11,7 @@ kind: supplement
 {class="chapter-intro mb-4"}
 Um wirklich die Geheimnisse der Smartphone-Fotografie und -Videografie zu verstehen, sollten Sie einige professionelle Bildtechnik-Kenntnisse kennenlernen. Dieses Wissen hilft Ihnen nicht nur, die Smartphone-Kamera besser zu nutzen, sondern verleiht Ihnen auch bei der Geräteauswahl mehr Urteilskraft.
 
-#### 1. Auflösung, Bildrate und Bitrate: Die drei Elemente der Videoqualität
+1. Auflösung, Bildrate und Bitrate: Die drei Elemente der Videoqualität
 
 ##### Auflösung (Resolution):
 

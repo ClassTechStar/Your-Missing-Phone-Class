@@ -2,12 +2,12 @@
 id: di-si-zhang
 num: 04
 part: ji-chu-pian
-nav: Kapitel 4: Apps installieren und verwalten
+nav: Kapitel 4: Bevor du eine App installierst: erst hinsehen
 toc: default
 kind: chapter
 ---
 
-### Kapitel 4: Apps installieren und verwalten – der „Fähigkeitsrucksack" des Smartphones
+### Kapitel 4: Bevor du eine App installierst: erst hinsehen
 
 {class="chapter-intro mb-4"}
 Apps machen das Smartphone zu einem Allrounder, aber sie müssen auch verwaltet werden. Genau wie du einem neuen Mitarbeiter einen Arbeitsplatz zuweist und Berechtigungen vergibst, erfordert die Installation von Apps einen standardisierten Prozess.
@@ -20,7 +20,7 @@ Apps machen das Smartphone zu einem Allrounder, aber sie müssen auch verwaltet 
 
 Zentrale Sicherheitsbedeutung: geprüft, Updates garantiert, sichere Zahlungen. Handlungsleitfaden:<strong>Downloads vorzugsweise nur aus offiziellen Stores!</strong>
 
-#### Zwei. Reiner Modus / Schutzmodus: Den „Virenschutz" des Smartphones aktivieren
+Zwei. Reiner Modus / Schutzmodus: Den „Virenschutz" des Smartphones aktivieren
 
 Alle großen chinesischen Marken (Huawei, Xiaomi, OPPO, vivo, Honor) verfügen über einen integrierten <strong>reinen Modus</strong> bzw.<strong>bzw.</strong> Schutzmodus <strong>– einen systemweiten Sicherheitsschalter.</strong> Android
 
@@ -50,7 +50,7 @@ Ein App-Store ist keine „Dekoration" – hinter ihm steht eine vollständige S
 - <strong>Entwicklerzertifizierung</strong>: Für den Store-Einstieg braucht es Firmenqualifikation, Personalausweis- oder Kreditkartenprüfung. Bei Problemen gibt es einen Ansprechpartner – keine „Schwarz-App“.
 - <strong>Kontinuierliche Überwachung</strong>: Auch gelistete Apps werden regelmäßig neu gescannt; neu entdecktes Schadverhalten führt zur erzwungenen Löschung.
 
-#### 3. Drittanbieter-Quellen und „elektronische Parasiten“: höchst riskant!
+3. Drittanbieter-Quellen und „elektronische Parasiten“: höchst riskant!
 
 Apps aus Webseiten oder unbekannten Links können Viren einschleppen, Privatsphäre ausspionieren und Zahlungsdaten abgreifen. Ein neues Konzept:<strong>„elektronische Parasiten“</strong>.
 
@@ -64,7 +64,7 @@ Gemeint sind <strong>„geknackte“ Software mit eingebautem Trojaner</strong>�
 {class="list-disc pl-6 mt-2 space-y-1 text-sm"}
 - „Crack-Versionen“, „Gratis-Versionen“, „werbefreie Versionen“ kostenpflichtiger Software;
 - graue Tools wie „Likes klicken“, „Rote-Umschläge-Abgreifen“, „Spiel-Cheats“;
-- „internen Versionen“, die in Gruppenchats per Kleinanzeige empfohlen werden.
+- „internen Versionen“, die in Gruppenchats per Kleinanzeige empfohlen werden
 
 {class="mt-2"}
 Diese Programme funktionieren an der Oberfläche – im Hintergrund können sie <strong>Kontakte stehlen, SMS lesen, das Mikrofon abhören und im Hintergrund Coins schürfen</strong>. Der reine Modus ist der <strong>erste Verteidigungswall</strong>– er verhindert die Installation einfach komplett.

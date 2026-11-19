@@ -36,7 +36,13 @@ CARD = """                <a href="{ver}/{code}.html" class="lang-card block {bg
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">{desc}</p>
+                    {tier}
                 </a>"""
+
+TIER_HTML = """<p class="text-xs mt-3 pt-2 border-t border-gray-200/70" title="{note}">
+                        <span class="text-amber-500 tracking-tight">{stars}</span>
+                        <span class="text-gray-500">{label}</span>
+                    </p>"""
 
 RE_BLOCK = re.compile(r'[ \t]*<!-- AUTOGEN:languages-(?P<ver>v[\d.]+) START[^>]*-->'
                       r'[\s\S]*?<!-- AUTOGEN:languages-(?P=ver) END -->')
@@ -63,6 +69,13 @@ def _card(mf, version: str, code: str) -> str:
                       + '">' + badge['text'] + '</span>')
     else:
         badge_html = '<span class="text-3xl">' + meta.get('flag', '🌐') + '</span>'
+    # 审校分级：AI 的恶习是假装所有语言同等完美，这里如实标出实际投入
+    q = meta.get('quality') or {}
+    tier = TIER_HTML.format(
+        stars=q.get('stars', ''),
+        label=q.get('label', ''),
+        note=q.get('note', ''),
+    ) if q else ''
     return CARD.format(
         ver=version, code=code,
         badge=badge_html,
@@ -71,7 +84,7 @@ def _card(mf, version: str, code: str) -> str:
         flag=meta.get('flag', '🌐'),
         name=meta.get('name', code),
         label_classes=card.get('label_classes', 'text-gray-500'),
-        label=label, desc=desc)
+        label=label, desc=desc, tier=tier)
 
 
 def render_block(mf, version: str) -> str:

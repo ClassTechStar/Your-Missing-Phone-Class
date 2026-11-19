@@ -30,21 +30,21 @@ Batasan Wajib Penggunaan Rakaman
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Rakaman tidak boleh digunakan untuk ugutan, penyebaran atau penghinaan terbuka terhadap orang lain.
-- Kandungan yang melibatkan privasi pihak ketiga (contohnya perbualan orang lain yang dirakam secara tidak sengaja) tidak boleh disebarkan sesuka hati.
-- Untuk situasi penting, disyorkan memberitahu secara lisan pada awal panggilan bahawa "panggilan ini akan dirakam" — ini mematuhi peraturan dan menjadikan rakaman lebih berkuasa sebagai bukti.
+- Kandungan yang melibatkan privasi pihak ketiga (contohnya perbualan orang ,lain yang dirakam secara tidak sengaja) tidak boleh disebarkan sesuka hati.
+- Untuk situasi penting, disyorkan memberitahu secara lisan pada awal panggilan bahawa "panggilan ini akan ,dirakam" — ini mematuhi peraturan dan menjadikan rakaman lebih berkuasa sebagai bukti.
 :::
 
 ##### Kandungan mendalam tentang penanganan panggilan gangguan:
 
 - Prinsip: Aplikasi telefon merujuk pangkalan data nombor yang besar melalui rangkaian, lalu memaparkan "panggilan gangguan", "panggilan penipuan" atau nama syarikat apabila panggilan masuk.
 - Cara mengaktifkan: Pada Android, masuk Aplikasi Telefon > Tetapan > Sekatan Gangguan; pada iOS, masuk Tetapan > Telefon > Sekatan dan Pengecaman Panggilan. Untuk laluan suis terperinci setiap jenama dan item yang disyorkan, lihat jadual perbandingan jenama dalam Bab 13 "Alat Sistem Praktikal".
-- Platform penanda utama: Penandaan nombor di China disediakan terutamanya oleh tiga penyedia perkhidmatan data — Tencent Mobile Manager, 360 Mobile Guard dan Dianhuabang (Tapir). Fungsi paparan "nama pemilik" dan "sekatan gangguan" oleh operator (China Mobile/China Unicom/China Telecom) juga sering menggunakan data ini. Pangkalan penanda pengeluar telefon (Huawei, Xiaomi, OPPO, vivo) kebanyakannya bekerjasama dengan penyedia perkhidmatan di atas.
+- Platform penanda utama: Penandaan nombor di China disediakan terutamanya oleh tiga penyedia perkhidmatan data, Tencent Mobile Manager, 360 Mobile Guard dan Dianhuabang (Tapir). Fungsi paparan "nama pemilik" dan "sekatan gangguan" oleh operator (China Mobile/China Unicom/China Telecom) juga sering menggunakan data ini. Pangkalan penanda pengeluar telefon (Huawei, Xiaomi, OPPO, vivo) kebanyakannya bekerjasama dengan penyedia perkhidmatan di atas.
 - Apa perlu buat jika ditanda salah: Jika nombor kerja normal anda ditanda secara salah sebagai "penghantaran makanan", "kurier" atau "panggilan gangguan", anda boleh membuat rayuan melalui saluran berikut: Dianhuabang: Lawati platform rayuan nombor (haoma.tk.cn) dan serahkan bukti identiti.
 - 360: Serahkan melalui fungsi "Rayuan Nombor" dalam aplikasi 360 Mobile Guard.
 - Tencent: Serahkan melalui halaman "Rayuan Nombor" dalam mini program "Tencent Mobile Manager".
 - Tiga operator utama: Pengguna China Mobile boleh hantar SMS "KTFSR" ke 10086 untuk mengaktifkan fungsi anti-gangguan; pengguna China Telecom boleh ikuti akaun rasmi "Tianyi Anti-Harassment"; pengguna China Unicom boleh tetapkan dalam "Unicom Mobile Manager".
 
-- Anti-gangguan lanjutan: Aktifkan "Sekatan Panggilan Frekuensi Tinggi" operator (contohnya Had Panggilan Frekuensi Tinggi China Mobile) untuk menyekat secara automatik panggilan keluar suara AI.
+- Anti-gangguan lanjutan: Aktifkan "Sekatan Panggilan Frekuensi Tinggi" operator (contohnya Had Panggilan ,Frekuensi Tinggi China Mobile) untuk menyekat secara automatik panggilan keluar suara AI.
 - Keupayaan biasa sekatan bawaan telefon: Pengecaman Panggilan Masuk / Sekatan Pintar: Menanda dan menyekat secara automatik gangguan, penipuan dan promosi iklan berdasarkan pangkalan data nombor.
 - Senarai hitam / senarai putih: Sekat secara manual nombor gangguan yang diketahui; masukkan kenalan serta nombor kurier dan penghantaran makanan ke dalam senarai putih untuk mengelak salah sekat.
 - Penapis kata kunci SMS: SMS yang mengandungi kata kunci seperti "menang hadiah", "pinjaman", "klik pautan" akan dimasukkan secara automatik ke dalam kotak sekatan.
@@ -159,7 +159,7 @@ Setiap alat panggilan video ada kekuatannya yang tersendiri; memilih alat yang s
 Petua Ringkas
 
 {class="mt-1"}
-Apabila rangkaian tersekat-sekat, matikan video dan kekalkan suara terlebih dahulu — lebih sopan daripada terus menutup panggilan. Sebelum mesyuarat penting, boleh gunakan fungsi "Semakan Rangkaian" bawaan "Tencent Meeting" untuk menguji lebar jalur lebih awal.
+Apabila rangkaian tersekat-sekat, matikan video dan kekalkan suara terlebih dahulu, lebih sopan daripada terus menutup panggilan. Sebelum mesyuarat penting, boleh gunakan fungsi "Semakan Rangkaian" bawaan "Tencent Meeting" untuk menguji lebar jalur lebih awal.
 :::
 
 #### 5. E-mel: Pemasangan dan Penggunaan pada Telefon
@@ -169,8 +169,8 @@ Apabila rangkaian tersekat-sekat, matikan video dan kekalkan suara terlebih dahu
 
 ##### Perbezaan protokol IMAP vs POP3 vs Exchange:
 
-- POP3: Selepas memuat turun mel daripada pelayan, yang asal dipadam secara lalai, hanya disimpan secara tempatan. Sesuai untuk situasi yang hanya menggunakan satu peranti dan memerlukan bacaan luar talian. Kekurangannya, selepas bertukar peranti, mel lama tidak dapat dilihat; sudah tidak disyorkan.
-- IMAP: Mel sentiasa disimpan di pelayan, secara tempatan hanya sebagai cache. Status segerak konsisten merentas pelbagai peranti (telefon/komputer/tablet) — satu pihak dibaca, semua dibaca. Protokol pilihan arus perdana masa kini.
+- POP3: Selepas memuat turun mel daripada pelayan, yang asal dipadam secara lalai, hanya disimpan secara tempatan. Sesuai untuk situasi yang hanya menggunakan satu peranti dan memerlukan bacaan luar talian. Kekurangannya, selepas bertukar peranti. mel lama tidak dapat dilihat; sudah tidak disyorkan.
+- IMAP: Mel sentiasa disimpan di pelayan, secara tempatan hanya sebagai cache. Status segerak konsisten merentas pelbagai peranti (telefon/komputer/tablet), satu pihak dibaca, semua dibaca. Protokol pilihan arus perdana masa kini.
 - Exchange (termasuk ActiveSync): Protokol Microsoft; selain mel, ia juga menyegerakkan kalendar, kenalan dan tugasan. Pilihan pertama untuk e-mel korporat. Outlook, NetEase Enterprise Mail dan Tencent Enterprise Mail semuanya menyokongnya.
 - Cadangan pemilihan: E-mel peribadi gunakan IMAP; e-mel syarikat utamakan Exchange, kemudian IMAP; elakkan POP3 sebanyak mungkin, kecuali ada keperluan arkib yang khas.
 

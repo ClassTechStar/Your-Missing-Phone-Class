@@ -2,19 +2,19 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Chapitre 28 : Bien dépenser pour acheter le téléphone de tes rêves — le guide ultime d'achat
+nav: Chapitre 28 : Avant d'acheter, clarifiez ces trois points
 toc: default
 kind: chapter
 ---
 
-### Chapitre 28 : Dépenser juste pour acheter le bon — Guide ultime d'achat de smartphone
+### Chapitre 28 : Avant d'acheter, clarifiez ces trois points
 
 {class="chapter-intro mb-4"}
-Pour acheter un smartphone, beaucoup de gens regardent des tests pendant une semaine et comparent les prix pendant un mois, pour finir par dépenser cinq ou six mille yuans dans un modèle phare qu'ils n'utilisent pas vraiment. Ce chapitre ne liste pas de tableaux de paramètres — vous les trouverez sur les sites officiels. Ce que je veux faire, c'est vous donner une « méthode de choix », afin qu'à l'avenir, quel que soit le nouveau smartphone sur le marché, vous puissiez juger par vous-même s'il vous convient.
+Pour acheter un smartphone, beaucoup de gens regardent des tests pendant une semaine et comparent les prix pendant un mois, pour finir par dépenser cinq ou six mille yuans dans un modèle phare qu'ils n'utilisent pas vraiment. Ce chapitre ne liste pas de tableaux de paramètres, vous les trouverez sur les sites officiels. Ce que je veux faire, c'est vous donner une « méthode de choix », afin qu'à l'avenir, quel que soit le nouveau smartphone sur le marché, vous puissiez juger par vous-même s'il vous convient.
 
-#### 0. Méthode de choix en trois étapes : besoins → budget → modèle
+0. Méthode de choix en trois étapes : besoins → budget → modèle
 
-Beaucoup de gens demandent en ligne « quel smartphone acheter pour 3000 yuans », une question à laquelle il est impossible de répondre — car on ne sait pas à quoi va principalement servir le smartphone. L'ordre de réflexion correct pour acheter un smartphone est :
+Beaucoup de gens demandent en ligne « quel smartphone acheter pour 3000 yuans », une question à laquelle il est impossible de répondre, car on ne sait pas à quoi va principalement servir le smartphone. L'ordre de réflexion correct pour acheter un smartphone est :
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
@@ -26,7 +26,7 @@ Beaucoup de gens demandent en ligne « quel smartphone acheter pour 3000 yuans �
 3. <strong>Enfin, choisissez le modèle</strong> : Avec votre classement de besoins et votre budget, trouvez le modèle correspondant.
 :::
 
-#### I. Comment lire les paramètres clés — inutile de tout comprendre, ces cinq suffisent
+I. Comment lire les paramètres clés — inutile de tout comprendre, ces cinq suffisent
 
 Les tableaux de paramètres contiennent souvent des dizaines de données, mais l'utilisateur ordinaire n'a besoin de prêter attention qu'à ces cinq dimensions :
 
@@ -71,7 +71,7 @@ Les tableaux de paramètres contiennent souvent des dizaines de données, mais l
 ```
 :::
 
-#### II. Recommandations par tranche budgétaire (basé sur le marché mi-2026)
+II. Recommandations par tranche budgétaire (basé sur le marché mi-2026)
 
 Les recommandations suivantes sont basées sur le marché chinois continental mi-2026, les prix sont les prix de lancement officiels. Les prix réels peuvent varier, référez-vous au prix au moment de l'achat.
 
@@ -176,7 +176,7 @@ Voici quelques « profils d'utilisation » courants, trouvez le vôtre :
 1. <strong>Piège 1 : quatre ou cinq objectifs ne signifient pas bonne photo</strong> — Les fabricants aiment empiler les objectifs dans les paramètres, dont deux sont souvent des « objectifs gadget » de 2 mégapixels (macro + profondeur), totalement inutiles. Pour évaluer la capacité photo d'un smartphone,<strong>regardez seulement principal + ultra grand-angle + téléobjectif</strong> ces trois suffisent. Les autres peuvent être ignorés.
 2. <strong>Piège 2 : ne vous laissez pas intimider par 100 mégapixels</strong> — Un nombre de pixels élevé ne signifie pas bonne qualité d'image. La taille du capteur, l'ouverture et le traitement algorithmique sont bien plus importants. Beaucoup de modèles phares utilisent un grand capteur de 50 mégapixels, et les photos sont bien meilleures que celles de certains modèles à 100 mégapixels à 1000 yuans.
 3. <strong>Piège 3 : n'achetez pas de smartphone opérateur</strong> — « Déposez du crédit, recevez un smartphone » semble avantageux, mais les smartphones opérateurs ont des mises à jour système lentes, des applications préinstallées impossibles à supprimer, et sont généralement verrouillés (seule la carte SIM de cet opérateur fonctionne). Apparemment économie, en réalité « verrouillage ».
-4. <strong>Piège 4 : « l'écran courbe c'est haut de gamme » — c'est du marketing, pas une vérité</strong> — L'écran courbe était autrefois le signe des modèles phares, mais de plus en plus de gens découvrent ses problèmes : protection d'écran difficile, fausses manips sur les bords, réparation coûteuse en cas de casse. La tendance 2026 est de revenir à « légèrement courbé » voire « totalement plat ». Ne choisissez pas un écran courbe sous prétexte que « courbe = haut de gamme ».
+4. <strong>Piège 4 : « l'écran courbe c'est haut de gamme », c'est du marketing, pas une vérité</strong> — L'écran courbe était autrefois le signe des modèles phares, mais de plus en plus de gens découvrent ses problèmes : protection d'écran difficile, fausses manips sur les bords, réparation coûteuse en cas de casse. La tendance 2026 est de revenir à « légèrement courbé » voire « totalement plat ». Ne choisissez pas un écran courbe sous prétexte que « courbe = haut de gamme ».
 5. <strong>Piège 5 : tous les « smartphones IA » ne sont pas vraiment utiles</strong> — En 2026, tous les fabricants crient « smartphone IA », mais beaucoup se contentent de renommer leur assistant vocal existant. Les fonctions IA vraiment utiles sont : la traduction en temps réel, l'effacement IA (supprimer des personnes d'une photo), la retouche IA, l'inférence de grand modèle côté appareil, le résumé intelligent local. Les autres fonctions voyantes sont surtout des gadgets.
 
 #### V. Quand acheter au meilleur prix ?
@@ -185,7 +185,7 @@ Voici quelques « profils d'utilisation » courants, trouvez le vôtre :
 - <strong>Double 11 (fin octobre à mi-novembre)</strong> : La grande promotion du second semestre, d'une ampleur similaire au 618. À cette période, de nombreuses nouvelles générations de phares viennent de sortir, et la baisse de prix de la génération précédente est maximale.
 - <strong>Un mois après le lancement</strong> : Au lancement, prix catalogue ; un mois plus tard, le prix des canaux (boutiques tierces) est généralement 200-500 yuans moins cher.
 - <strong>Deux semaines avant le Nouvel An chinois à la Fête des Lanternes</strong> : Le « festival des achats du Nouvel An » des magasins physiques pour écouler les stocks, il est possible de négocier avec le vendeur.
-- <strong>Moments déconseillés</strong> : Acheter le jour même de la présentation — à moins de vouloir vraiment être parmi les premiers, le prix de lancement est le plus élevé.
+- <strong>Moments déconseillés</strong> : Acheter le jour même de la présentation, à moins de vouloir vraiment être parmi les premiers, le prix de lancement est le plus élevé.
 
 #### VI. Quel canal choisir — où acheter en confiance ?
 

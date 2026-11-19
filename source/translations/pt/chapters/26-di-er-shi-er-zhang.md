@@ -2,21 +2,21 @@
 id: di-er-shi-er-zhang
 num: 22
 part: chao-yue-pian
-nav: Capítulo 22: Como a IA funciona dentro do celular
+nav: Capítulo 22: O que a IA realmente faz no seu celular?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 22: Como a IA funciona no celular
+### Capítulo 22: O que a IA realmente faz no seu celular?
 
 {class="chapter-intro mb-4"}
-Bem-vindo ao "show de mágica" mais fascinante do seu celular, com a estrela principal: a Inteligência Artificial. As fotos incríveis que você tira "com um clique", o assistente de voz que responde prontamente, o teclado que parece te conhecer cada vez melhor — por trás de tudo isso está esse cérebro invisível.
+Bem-vindo ao "show de mágica" mais fascinante do seu celular, com a estrela principal: a Inteligência Artificial. As fotos incríveis que você tira "com um clique", o assistente de voz que responde prontamente, o teclado que parece te conhecer cada vez melhor: por trás de tudo isso está esse cérebro invisível.
 
-#### 1. Câmera com IA: seu "laboratório de revelação digital" no celular
+1. Câmera com IA: seu "laboratório de revelação digital" no celular
 
 A fotografia computacional com IA de hoje é como ter uma equipe de editores profissionais + fotógrafos embutida diretamente no botão do obturador. Antes mesmo de você pressionar o botão, a IA já está trabalhando: escaneando a cena, identificando "isto é céu azul", "isto é um rosto", "isto é cena noturna".
 
-#### 2. Assistentes de voz: como seu "secretário de voz" te entende?
+2. Assistentes de voz: como seu "secretário de voz" te entende?
 
 1. <strong>Ouvir (reconhecimento de fala)</strong>: converte ondas sonoras em texto.
 2. <strong>Entender (compreensão de linguagem natural)</strong>: compreende a intenção, extrai entidades-chave.
@@ -26,9 +26,9 @@ A fotografia computacional com IA de hoje é como ter uma equipe de editores pro
 
 A IA no dispositivo mantém o processamento dentro do celular: rápida, mais privada, funciona offline. A IA na nuvem precisa de internet, mas pode lidar com tarefas mais complexas.
 
-#### 4. Grandes modelos de IA e o celular: seu assistente inteligente de bolso
+4. Grandes modelos de IA e o celular: seu assistente inteligente de bolso
 
-Em 2025-2026, a explosão dos grandes modelos de IA (como DeepSeek R1, ChatGPT-5, Wenxin Yiyan 5.0, Tongyi Qianwen 3, entre outros) transformou profundamente a forma como usamos o celular. O telefone deixou de ser apenas uma ferramenta que executa comandos e se tornou um parceiro inteligente capaz de compreender, raciocinar e criar. Os chips de IA no dispositivo (NPU com poder de computação superior a 80 TOPS) permitiram, pela primeira vez, a inferência de grandes modelos diretamente no celular, sem precisar de internet.
+Em 2025-2026, a explosão dos grandes modelos de IA (como DeepSeek R1, ChatGPT-5, Wenxin Yiyan 5.0, Tongyi Qianwen 3, entre outros) transformou profundamente a forma como usamos o celular. O telefone deixou de ser apenas uma ferramenta que executa comandos e se tornou um parceiro inteligente capaz de compreender. Raciocinar e criar. Os chips de IA no dispositivo (NPU com poder de computação superior a 80 TOPS) permitiram, pela primeira vez, a inferência de grandes modelos diretamente no celular, sem precisar de internet.
 
 ##### O que é um grande modelo de IA?
 
@@ -36,15 +36,15 @@ Grandes modelos de IA (Large Language Model, LLM) são sistemas de IA treinados 
 
 ##### Aplicações de grandes modelos de IA no celular:
 
-- <strong>Assistente de conversa</strong>: apps como DeepSeek, ChatGPT, Doubao, Kimi, que permitem perguntar, traduzir, redigir textos, resumir artigos a qualquer momento. Mais inteligentes que os mecanismos de busca tradicionais — não te dão apenas links, mas respostas diretas.
+- <strong>Assistente de conversa</strong>: apps como DeepSeek, ChatGPT, Doubao, Kimi, que permitem perguntar, traduzir, redigir textos, resumir artigos a qualquer momento. Mais inteligentes que os mecanismos de busca tradicionais, não te dão apenas links, mas respostas diretas.
 - <strong>Escrita e criação</strong>: deixe a IA escrever e-mails, resumir atas de reunião, polir textos, gerar textos criativos.
 - <strong>Geração e edição de imagens</strong>: IA remove pessoas indesejadas de fotos com um clique, expande bordas de imagens, converte estilos e até gera imagens a partir de descrições textuais.
-- <strong>Tradução em tempo real</strong>: tradução em tempo real de chamadas, tradução de conversas presenciais, tradução por câmera — viajar para o exterior sem barreiras linguísticas.
-- <strong>Apoio ao aprendizado</strong>: a IA pode explicar conceitos, criar exercícios, corrigir tarefas — um tutor particular de bolso.
+- <strong>Tradução em tempo real</strong>: tradução em tempo real de chamadas, tradução de conversas presenciais, tradução por câmera, viajar para o exterior sem barreiras linguísticas.
+- <strong>Apoio ao aprendizado</strong>: a IA pode explicar conceitos, criar exercícios, corrigir tarefas, um tutor particular de bolso.
 
 ##### Grandes modelos no dispositivo: o celular rodando IA localmente
 
-Os smartphones topo de linha mais recentes já conseguem executar pequenos grandes modelos de IA localmente (geralmente com cerca de 7 bilhões de parâmetros), trazendo as seguintes mudanças:
+Os smartphones topo de linha mais recentes já conseguem executar pequenos grandes modelos de IA localmente, (geralmente com cerca de 7 bilhões de parâmetros), trazendo as seguintes mudanças:
 
 - <strong>Sem necessidade de internet</strong>: funções de IA funcionam offline, no avião, no metrô.
 - <strong>Privacidade mais segura</strong>: suas conversas e dados não são enviados para a nuvem, tudo é processado localmente no celular.
@@ -92,16 +92,16 @@ Para você sentir de forma mais intuitiva os "superpoderes" da IA no celular, va
 
 <strong>Princípio por trás</strong>: modelos de visão computacional (CV) vetorizam (Embedding) o conteúdo das imagens e depois fazem correspondência de similaridade com consultas textuais. Essa "busca multimodal" é um grande avanço no gerenciamento de álbuns de fotos no celular.
 
-#### 6. Otimização de prompts: a "fórmula de comunicação" para fazer a IA te obedecer
+6. Otimização de prompts: a "fórmula de comunicação" para fazer a IA te obedecer
 
-A qualidade da resposta da IA depende muito de como você "pergunta". A mesma pergunta, formulada de maneiras diferentes, pode gerar respostas completamente diferentes da IA. A seguir, apresentamos uma abordagem de comunicação <strong>das mais práticas e fáceis de usar: "Papel-Contexto-Tarefa-Restrições"</strong>, com muitos exemplos.
+A qualidade da resposta da IA depende muito de como você "pergunta". A mesma pergunta, formulada de maneiras diferentes, pode gerar respostas completamente diferentes da IA. Em seguida, apresentamos uma abordagem de comunicação <strong>das mais práticas e fáceis de usar: "Papel-Contexto-Tarefa-Restrições"</strong>, com muitos exemplos.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-puzzle-piece mr-2"></i>Por que preciso de uma estrutura?
 
 {class="mt-1"}
-Muitas pessoas usam IA como usam o Baidu — digitam algumas palavras-chave. Mas a IA não é um mecanismo de busca; é um modelo de linguagem que "lê, compreende e depois responde". <strong>Dê a ela mais contexto, diga claramente o que você quer, limite-a para não se desviar</strong>, e ela te dará resultados precisos. A estrutura é a tradução do que "uma boa resposta" significa na sua cabeça para instruções que a IA entende.
+Muitas pessoas usam IA como usam o Baidu, digitam algumas palavras-chave. Mas a IA não é um mecanismo de busca; é um modelo de linguagem que "lê, compreende e depois responde". <strong>Dê a ela mais contexto, diga claramente o que você quer. Limite-a para não se desviar</strong>, e ela te dará resultados precisos. A estrutura é a tradução do que "uma boa resposta" significa na sua cabeça para instruções que a IA entende.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -245,7 +245,7 @@ Escrever um bom prompt não é algo que se faz de uma vez. <strong>Antes de envi
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Você é uma blogueira de café da manhã especializada em nutrição (<strong>Papel</strong>). Sou uma mãe trabalhadora, com apenas 15 minutos para preparar o café da manhã, tenho um filho de 6 anos e uma sogra de 60 anos em casa (<strong>Contexto</strong>). Por favor, <strong>liste 7 combinações de café da manhã diferentes para a semana</strong> (<strong>Tarefa</strong>). Requisitos para cada café da manhã: ① tempo de preparo não superior a 15 minutos ② nutricionalmente equilibrado (proteína + carboidrato + frutas/vegetais) ③ adequado para crianças e idosos ④ ingredientes disponíveis em supermercados comuns (<strong>Restrições</strong>).
+Você é uma blogueira de café da manhã especializada em nutrição (<strong>Papel</strong>). Sou uma mãe trabalhadora, com apenas 15 minutos para preparar o café da manhã, tenho um filho de 6 anos e uma sogra de 60 anos em casa (<strong>Contexto</strong>). Por favor, <strong>liste 7 combinações de café da manhã diferentes para a semana</strong> (<strong>Tarefa</strong>). Requisitos para cada café da manhã. ① tempo de preparo não superior a 15 minutos. ② nutricionalmente equilibrado (proteína + carboidrato + frutas/vegetais). ③ adequado para crianças e idosos. ④ ingredientes disponíveis em supermercados comuns (<strong>Restrições</strong>).
 
 {class="mt-1"}
 <strong>Por que funciona</strong>: Papel define o nível profissional, Contexto fornece um ponto em comum para três pessoas, Tarefa especifica claramente o entregável, 4 Restrições garantem que seja executável.
@@ -259,7 +259,7 @@ Você é uma blogueira de café da manhã especializada em nutrição (<strong>P
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Você é <strong>um professor experiente de inglês para o CET-6</strong> (Papel). Sou um estudante universitário comum, <strong>passei no CET-4 com 480 pontos, meta de 500 no CET-6, faltam 3 meses</strong> (Contexto). Por favor, <strong>elabore um plano de estudos executável de 12 semanas para mim</strong> (Tarefa). Requisitos: ① definir claramente a distribuição semanal de tempo para listening, speaking, reading e writing ② indicar a direção principal de foco a cada mês ③ recomendar 3 materiais de estudo adequados (com justificativa em português) ④ apresentar em formato de tabela (Restrições).
+Você é <strong>um professor experiente de inglês para o CET-6</strong> (Papel). Sou um estudante universitário comum, <strong>passei no CET-4 com 480 pontos, meta de 500 no CET-6, faltam 3 meses</strong> (Contexto). Por favor, <strong>elabore um plano de estudos executável de 12 semanas para mim</strong> (Tarefa). Requisitos: ① definir claramente a distribuição semanal de tempo para listening, speaking, reading e writing. ② indicar a direção principal de foco a cada mês. ③ recomendar 3 materiais de estudo adequados (com justificativa em português). ④ apresentar em formato de tabela (Restrições).
 
 {class="mt-1"}
 <strong>Por que funciona</strong>: Papel define o contexto profissional, Contexto fornece parâmetros de nota e tempo, Tarefa especifica claramente um "plano faseado", Restrições exigem "formato de tabela" e "executável".
@@ -289,7 +289,7 @@ Experimente estes usos avançados para sentir o verdadeiro poder da IA:
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Otimização por múltiplas rodadas de conversa</strong>: quando não estiver satisfeito com a resposta da IA, diga "Isso está muito técnico, por favor explique de novo de um jeito que uma criança do primário entenda".
 - <strong>Cadeia de pensamento (CoT)</strong>: peça para a IA "pensar passo a passo", a qualidade da resposta geralmente melhora: "Por favor, analise este problema de matemática passo a passo".
-- <strong>Colaboração entre múltiplas IAs</strong>: use a IA A para escrever o rascunho, a B para polir, a C para traduzir — a combinação traz resultados ainda melhores.
+- <strong>Colaboração entre múltiplas IAs</strong>: use a IA A para escrever o rascunho, a B para polir, a C para traduzir, a combinação traz resultados ainda melhores.
 - <strong>Prompt de sistema</strong>: nas configurações da IA, predefina sua identidade, preferências, restrições, etc., para que as respostas se adequem melhor às suas necessidades.
 :::
 
@@ -299,7 +299,7 @@ Embora poderosa, a IA está longe de ser "onipotente". Reconhecer suas limitaç�
 
 - <strong>Problema de "alucinação"</strong>: a IA pode inventar coisas com convicção (o termo técnico é Hallucination). Ela pode criar eventos históricos inexistentes, citações erradas, estatísticas falsas. Informações importantes devem ser verificadas manualmente.
 - <strong>Corte de conhecimento</strong>: a maioria dos modelos de IA tem uma data de corte nos dados de treinamento (como início de 2024). Ela não sabe o que aconteceu depois.
-- <strong>Capacidade de raciocínio limitada</strong>: raciocínios complexos com múltiplas etapas, provas matemáticas, armadilhas lógicas — a IA ainda erra com frequência.
+- <strong>Capacidade de raciocínio limitada</strong>: raciocínios complexos com múltiplas etapas, provas matemáticas, armadilhas lógicas, a IA ainda erra com frequência.
 - <strong>Riscos de privacidade</strong>: nos serviços de IA na nuvem, suas conversas podem ser usadas para treinar o modelo. Informações sensíveis devem preferencialmente usar IA no dispositivo.
 - <strong>Vieses e valores</strong>: a IA pode carregar vieses presentes nos dados de treinamento. É preciso manter o pensamento independente.
 
@@ -331,6 +331,6 @@ Embora poderosa, a IA está longe de ser "onipotente". Reconhecer suas limitaç�
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Cenário</strong>: iPhone 13 → Xiaomi 15, troca de celular entre marcas diferentes.
-- <strong>Etapas</strong>: ① backup no celular antigo via iCloud/WeChat → ② sair do Apple ID + desativar "Buscar" → ③ no celular novo, usar o app "Xiaomi Switch" escaneando o QR code → ④ selecionar itens a migrar → ⑤ migrar separadamente o histórico de conversas do WeChat com a função "Migração de histórico de conversas" → ⑥ verificar dados críticos (contatos/álbum/WeChat) → ⑦ apagar o celular antigo com criptografia.
+- <strong>Etapas</strong>: ① backup no celular antigo via iCloud/WeChat →. ② sair do Apple ID + desativar "Buscar" →. ③ no celular novo, usar o app "Xiaomi Switch" escaneando o QR code →. ④ selecionar itens a migrar →. ⑤ migrar separadamente o histórico de conversas do WeChat com a função "Migração de histórico de conversas" →. ⑥ verificar dados críticos (contatos/álbum/WeChat) →. ⑦ apagar o celular antigo com criptografia.
 - <strong>Resultado esperado</strong>: zero perda de dados, celular antigo pronto para revenda segura.
 :::

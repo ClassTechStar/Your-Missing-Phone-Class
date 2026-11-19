@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 41 : Panorama des outils de programmation IA en 2026
 
 {class="chapter-intro mb-4"}
-Un avertissement d'abord : ce chapitre est une « photo » de l'écosystème des outils en août 2026. Dans six mois, elle sera dépassée — et c'est justement la première leçon que ce chapitre veut t'enseigner. Son but n'est pas de t'apprendre « quel outil utiliser », mais de t'aider à construire un cadre de jugement pour « comment choisir un outil ». Une fois que tu auras compris la philosophie de conception des différents outils, tu sauras à tout moment faire le choix qui te convient.
+Un avertissement d'abord : ce chapitre est une « photo » de l'écosystème des outils en août 2026. Dans six mois, elle sera dépassée, et c'est justement la première leçon que ce chapitre veut t'enseigner. Son but n'est pas de t'apprendre « quel outil utiliser », mais de t'aider à construire un cadre de jugement pour « comment choisir un outil ». Une fois que tu auras compris la philosophie de conception des différents outils, tu sauras à tout moment faire le choix qui te convient.
 
 #### 1. Les trois grandes écoles et le cadre de choix
 
@@ -37,7 +37,7 @@ L'IA intégrée à l'IDE est l'école la plus répandue : elle greffe les capaci
 
 ##### 1. Cursor 3
 
-Cursor est aujourd'hui l'IDE de programmation IA le plus utilisé au monde. Cursor 3, sorti en avril 2026, marque un tournant important : le mode Agent est devenu plus utilisé que la complétion Tab — les développeurs sont passés de « l'IA complète mon code » à « l'IA accomplit mes tâches ». Les atouts clés de Cursor 3 : l'édition multi-fichiers (l'IA peut modifier plusieurs fichiers à la fois pour mener une tâche à bien), la conscience du contexte (elle comprend automatiquement la structure du projet et ses dépendances) et l'intégration poussée avec le terminal (elle peut lancer des commandes et lire les sorties sans quitter l'éditeur).
+Cursor est aujourd'hui l'IDE de programmation IA le plus utilisé au monde. Cursor 3, sorti en avril 2026, marque un tournant important : le mode Agent est devenu plus utilisé que la complétion Tab, les développeurs sont passés de « l'IA complète mon code » à « l'IA accomplit mes tâches ». Les atouts clés de Cursor 3 : l'édition multi-fichiers (l'IA peut modifier plusieurs fichiers à la fois pour mener une tâche à bien), la conscience du contexte (elle comprend automatiquement la structure du projet et ses dépendances) et l'intégration poussée avec le terminal (elle peut lancer des commandes et lire les sorties sans quitter l'éditeur).
 
 ##### 2. Trae
 
@@ -49,11 +49,11 @@ Windsurf (ex-Codeium) est réputé pour sa complétion de code très fluide, par
 
 #### 3. L'école des Agents terminaux
 
-L'Agent terminal est l'école qui croît le plus vite en 2026. L'idée centrale : l'IA ne devrait pas être un simple plugin d'éditeur, elle devrait manipuler tout l'environnement de développement comme le ferait un développeur — lire et écrire des fichiers, lancer des commandes, consulter les sorties, installer des dépendances. Claude Code est le représentant emblématique de cette école.
+L'Agent terminal est l'école qui croît le plus vite en 2026. L'idée centrale : l'IA ne devrait pas être un simple plugin d'éditeur, elle devrait manipuler tout l'environnement de développement comme le ferait un développeur, lire et écrire des fichiers, lancer des commandes, consulter les sorties, installer des dépendances. Claude Code est le représentant emblématique de cette école.
 
 ##### 1. Claude Code
 
-Claude Code est l'outil de programmation IA en terminal lancé par Anthropic, qui atteignait mi-2026 un revenu annualisé de 2,5 milliards de dollars. Sa façon de travailler est radicalement différente d'un IDE classique : tu décris la tâche en langage naturel dans le terminal, et Claude Code lit tout seul les fichiers concernés, modifie le code, lance les tests, examine les résultats et corrige par itérations — sans que tu aies besoin d'ouvrir un éditeur.
+Claude Code est l'outil de programmation IA en terminal lancé par Anthropic, qui atteignait mi-2026 un revenu annualisé de 2,5 milliards de dollars. Sa façon de travailler est radicalement différente d'un IDE classique : tu décris la tâche en langage naturel dans le terminal, et Claude Code lit tout seul les fichiers concernés, modifie le code, lance les tests, examine les résultats et corrige par itérations, sans que tu aies besoin d'ouvrir un éditeur.
 
 La force de Claude Code, c'est sa « vision du projet entier » : libéré des fenêtres d'éditeur, il parcourt librement tout le répertoire du projet et comprend les dépendances entre fichiers. Il prend aussi en charge le fichier de mémoire de projet CLAUDE.md, qui donne à l'IA, dès le début de chaque session, le contexte du projet. Pour le refactoring de grands projets, les modifications en masse ou la rédaction de tests, l'Agent terminal est plus efficace qu'un plugin d'IDE.
 
@@ -77,9 +77,9 @@ Le point commun de ces outils est le « démarrage sans configuration » : un na
 Trois habitudes à garder même si demain tous les outils de programmation par IA disparaissaient : réfléchir avant d'agir, ne faire qu'un petit pas à la fois, vérifier une fois terminé. Les outils sont l'amplificateur, la méthodologie est le socle. L'amplificateur se remplace, le socle ne bouge pas.
 :::
 
-Regarde l'évolution des outils de 2024 à 2026 : en 2024, GitHub Copilot régnait ; en 2025, Cursor l'a supplanté ; en 2026, Claude Code a surgi. À chaque apparition d'un nouvel outil, quelqu'un proclame « cette fois c'est différent » — et on finit toujours par découvrir que ceux qui l'exploitent le mieux sont justement ceux dont la méthode est solide. Eux n'ont besoin que de quelques jours d'adaptation pour changer d'outil, tandis que ceux qui n'avaient appris que les manipulations repartent de zéro à chaque changement.
+Regarde l'évolution des outils de 2024 à 2026 : en 2024, GitHub Copilot régnait ; en 2025, Cursor l'a supplanté ; en 2026, Claude Code a surgi. À chaque apparition d'un nouvel outil, quelqu'un proclame « cette fois c'est différent », et on finit toujours par découvrir que ceux qui l'exploitent le mieux sont justement ceux dont la méthode est solide. Eux n'ont besoin que de quelques jours d'adaptation pour changer d'outil, tandis que ceux qui n'avaient appris que les manipulations repartent de zéro à chaque changement.
 
-Le chemin d'apprentissage recommandé par ce livre : commence avec un outil (n'importe lequel) et fais-toi les cinq grands principes de pensée par la pratique ; une fois ta méthode bien ancrée, essaie des outils des différentes écoles pour ressentir les différences de philosophie de conception ; au bout du compte, tu formeras ta propre combinaison d'outils — par exemple Cursor au quotidien, Claude Code pour le refactoring et les tests, v0 pour les prototypes rapides. La combinaison varie d'une personne à l'autre, mais la méthode est commune à tous.
+Le chemin d'apprentissage recommandé par ce livre : commence avec un outil (n'importe lequel) et fais-toi les cinq grands principes de pensée par la pratique ; une fois ta méthode bien ancrée, essaie des outils des différentes écoles pour ressentir les différences de philosophie de conception ; au bout du compte, tu formeras ta propre combinaison d'outils, par exemple Cursor au quotidien, Claude Code pour le refactoring et les tests, v0 pour les prototypes rapides. La combinaison varie d'une personne à l'autre, mais la méthode est commune à tous.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

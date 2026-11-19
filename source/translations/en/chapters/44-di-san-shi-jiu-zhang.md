@@ -2,21 +2,21 @@
 id: di-san-shi-jiu-zhang
 num: 39
 part: ai-biancheng-pian
-nav: Chapter 39: Context Engineering — Helping AI Understand Your Intent
+nav: Chapter 39: AI Doesn't Get It, So Say It More Clearly
 toc: default
 kind: chapter
 ---
 
-### Chapter 39: Context Engineering — Make AI Understand You
+### Chapter 39: AI Doesn't Get It, So Say It More Clearly
 
 {class="chapter-intro mb-4"}
-Ever open a new chat and watch AI forget everything about your project? It's not messing with you — it's just forgetful by design. This chapter teaches you to install a "long-term memory system" for AI, and introduces one of 2026's hottest development paradigms: Spec-Driven Development.
+Ever open a new chat and watch AI forget everything about your project? It's not messing with you, it's just forgetful by design. This chapter teaches you to install a "long-term memory system" for AI, and introduces one of 2026's hottest development paradigms: Spec-Driven Development.
 
 #### 1. Project memory files: AI's long-term memory
 
-AI models have a fundamental limit: their memory is short-term. At the start of every conversation, AI knows nothing about your project. You'd have to keep saying "we use React," "backend is Node.js," "database is PostgreSQL," "code style uses double quotes." That's inefficient and easy to miss — like onboarding a new colleague every single day.
+AI models have a fundamental limit: their memory is short-term. At the start of every conversation, AI knows nothing about your project. You'd have to keep saying "we use React," "backend is Node.js," "database is PostgreSQL," "code style uses double quotes." That's inefficient and easy to miss, like onboarding a new colleague every single day.
 
-The fix is a project memory file — a plain text file in the project root that AI tools auto-read at the start of each conversation. Different tools use different names:
+The fix is a project memory file, a plain text file in the project root that AI tools auto-read at the start of each conversation. Different tools use different names:
 
 ::: div .overflow-x-auto
 ```html
@@ -27,7 +27,7 @@ The fix is a project memory file — a plain text file in the project root that 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Project memory file naming conventions by tool
 
-Names differ, but the idea is the same: write down what you want AI to always remember. A good project memory file includes: project overview (what this is), tech stack (what you're using), code conventions (naming, indentation, comments), directory layout (how code is organized), and development practices (branch strategy, commit style, testing). Karpathy's CLAUDE.md is only 70 lines but covers all key info — concise and complete.
+Names differ, but the idea is the same: write down what you want AI to always remember. A good project memory file includes the project overview (what this is), the tech stack (what you're using), and the code conventions (naming, indentation, comments). It also covers the directory layout (how code is organized) and the development practices (branch strategy, commit style, testing). Karpathy's CLAUDE.md is only 70 lines but covers all key info: concise and complete.
 
 ::: div .code-block
 :::inline div .code-head
@@ -67,12 +67,12 @@ A full-stack personal finance tracker that helps users record daily income and e
 Note: Don't turn it into a second requirements doc
 
 {class="mt-1"}
-Watch the length — don't write a multi-page requirements document. The purpose is to help AI build background context quickly, not to describe every feature in detail. Keep it concise, structured, and limited to what AI needs to know.
+Watch the length, don't write a multi-page requirements document. The purpose is to help AI build background context quickly, not to describe every feature in detail. Keep it concise, structured, and limited to what AI needs to know.
 :::
 
 #### 2. Spec-Driven Development (SDD)
 
-Spec-Driven Development (SDD) is a 2026-era paradigm with one core idea: write the spec first, then the code. Unlike classic TDD (test-driven development), SDD "specs" aren't just test cases — they include requirement descriptions, interface definitions, data models, and more. AI generates code from those specs; humans write and maintain the specs.
+Spec-Driven Development (SDD) is a 2026-era paradigm with one core idea: write the spec first, then the code. Unlike classic TDD (test-driven development), SDD "specs" aren't just test cases, they include requirement descriptions, interface definitions, data models, and more. AI generates code from those specs; humans write and maintain the specs.
 
 SDD workflow in five steps:
 
@@ -80,9 +80,9 @@ SDD workflow in five steps:
 2. Define interfaces and data structures (in the spec file);
 3. Have AI generate code from the spec;
 4. Run tests to verify the output matches the spec;
-5. If it doesn't match, fix the spec or have AI fix the code.
+5. If it doesn't match, fix the spec or have AI fix the code
 
-In this flow, the spec file is the single source of truth — code can be regenerated, but the spec must be right first.
+In this flow, the spec file is the single source of truth, code can be regenerated, but the spec must be right first.
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -109,7 +109,7 @@ SDD's advantage: specs are more stable than code. When models or tools change, y
 
 #### 3. Context window management
 
-Even with a project memory file, you'll still hit "not enough context." AI context windows (how much info they can handle at once) are limited. When a chat gets too long or pulls in too many files, AI "forgets" early info and quality drops — like chatting with a friend for six hours and them forgetting the first thing you said.
+Even with a project memory file, you'll still hit "not enough context." AI context windows (how much info they can handle at once) are limited. When a chat gets too long or pulls in too many files, AI "forgets" early info and quality drops, like chatting with a friend for six hours and them forgetting the first thing you said.
 
 The core strategy for context windows is layered referencing:
 
@@ -127,8 +127,8 @@ Layered context window management
 Context engineering isn't a one-time setup — it's ongoing tuning. Here are tips proven over and over in practice:
 
 1. Keep the memory file in sync with the project. When you add a new technology or change the architecture, update the memory file right away instead of explaining it ad hoc in chat.
-2. Prefer @ references over pasting whole files. Most AI coding tools support @file or @folder syntax and inject content in the background — more efficient and cleaner than manual paste.
-3. Keep chats short and focused. One conversation handles one task or one feature. Start a new chat for the next one. Long chats burn context and make AI "distracted."
+2. Prefer @ references over pasting whole files. Most AI coding tools support @file or @folder syntax and inject content in the background, more efficient and cleaner than manual paste.
+3. Keep chats short and focused. One conversation handles one task or one feature. Start a new chat for the next one. Long chats burn context and make AI "distracted.".
 4. Show AI the result, don't just describe it. When you hit a bug, @-reference the raw error log instead of saying "there's some error." AI works better with original information than your paraphrase.
 5. Clean up and archive regularly. Finished chats and temp files clutter the workspace. Cleaning them keeps the project tidy and helps AI understand the structure faster.
 
@@ -137,7 +137,7 @@ Context engineering isn't a one-time setup — it's ongoing tuning. Here are tip
 Hands-on: Write a 70-line memory file for your project
 
 {class="mt-1"}
-Pick a project you're doing (or planning) and write a CLAUDE.md: project overview (2–3 sentences), tech stack (list it), code conventions (3–5 rules), directory structure (draw a tree), dev practices (2–3 items). Keep it under 70 lines — you'll find your own understanding of the project sharpens too.
+Pick a project you're doing (or planning) and write a CLAUDE.md: project overview (2–3 sentences), tech stack (list it), code conventions (3–5 rules), directory structure (draw a tree), dev practices (2–3 items). Keep it under 70 lines, you'll find your own understanding of the project sharpens too.
 :::
 
 ::: div .chapter-summary
@@ -146,7 +146,7 @@ Chapter recap
 
 - AI memory is short-term: every new chat starts at zero project knowledge
 - Project memory files (CLAUDE.md etc.) are AI's long-term memory, auto-loaded each chat
-- Good memory file = overview + stack + conventions + layout + practices — 70 lines is plenty
+- Good memory file = overview + stack + conventions + layout + practices, 70 lines is plenty
 - SDD: spec first, then code. The spec is the single source of truth and more stable than code
 - Four context layers: project memory → @file references → chat history → immediate instructions
 - Five practical tips: keep in sync, use @, keep chats short, show raw info, clean up regularly

@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Chapitre 15 : Science de la batterie et optimisation de l'autonomie
+nav: Chapitre 15 : Deux recharges par jour : batterie ou usage ?
 toc: default
 kind: chapter
 ---
 
-### Chapitre 15 : Science de la batterie et optimisation de l'autonomie
+### Chapitre 15 : Deux recharges par jour : batterie ou usage ?
 
 {class="chapter-intro mb-4"}
 La batterie est le « cœur énergétique » de votre smartphone. Ce chapitre vous aide à comprendre les petites humeurs de la batterie, à apprendre des techniques scientifiques de charge et d'autonomie, et à dire adieu à l'anxiété de la batterie.
@@ -26,7 +26,7 @@ La batterie d'un smartphone (lithium-ion ou lithium-polymère) est comme une ép
 - L'état de santé de la batterie est le pourcentage de la capacité maximale actuelle par rapport à celle neuve. En dessous de 80 %, vous sentirez clairement l'autonomie diminuer.
 - <strong>Comment vérifier ?</strong> iPhone : Réglages &gt; Batterie &gt; Santé de la batterie et charge ; Android : généralement recherchez « santé de la batterie » dans les réglages.
 
-#### II. Mythes de la charge ? Charge rapide, charge sans fil et règle d'or
+II. Mythes de la charge ? Charge rapide, charge sans fil et règle d'or
 
 - <strong>La charge rapide abîme-t-elle la batterie ?</strong> Avec des accessoires de charge rapide d'origine ou certifiés, les dommages sont minimes. Le téléphone et le chargeur ont un contrôle de température, ils réduisent automatiquement la puissance en cas de surchauffe.
 - <strong>Charge sans fil</strong>: pratique mais moins efficace, chauffe davantage. Adaptée pour la charge de toute la nuit.
@@ -61,7 +61,7 @@ Vous avez peut-être remarqué que les chargeurs rapides sont de plus en plus pe
 :::
 
 {id="di-shi-wu-zhang-kuichong"}
-#### III. Analyse complète des protocoles de charge rapide : pourquoi votre chargeur ne charge-t-il pas vite ?
+III. Analyse complète des protocoles de charge rapide : pourquoi votre chargeur ne charge-t-il pas vite ?
 
 Vous avez peut-être rencontré cette situation : votre smartphone prend en charge la charge rapide, mais après avoir changé de chargeur, la charge devient très lente. C'est parce que la charge rapide n'est pas simplement « plus de puissance suffit », mais nécessite que le chargeur, le câble et le téléphone « parlent la même langue » — ce sont les protocoles de charge rapide.
 
@@ -197,7 +197,7 @@ La charge sans fil a également ses propres standards de protocole :
 - Si le chargeur ou le téléphone chauffe anormalement ou dégage une odeur, arrêtez immédiatement de l'utiliser.
 :::
 
-#### IV. Nouvelle technologie de batterie : anode en silicium-carbone
+IV. Nouvelle technologie de batterie : anode en silicium-carbone
 
 Si vous avez suivi les présentations de smartphones phares en 2024-2026, le terme « anode silicium-carbone » est presque devenu synonyme de batterie haut de gamme. Il s'agit d'une mise à niveau importante du matériau d'anode des batteries lithium-ion, dont le principe n'est pas complexe :
 

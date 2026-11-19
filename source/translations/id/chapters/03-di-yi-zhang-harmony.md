@@ -21,7 +21,7 @@ Contoh: Anda menggunakan ponsel menonton video, ingin menonton di layar besar, c
 
 #### 2. HarmonyOS 4.3: Versi matang berbasis AOSP
 
-HarmonyOS 4.3 adalah versi yang saat ini banyak di-deploy di ponsel Huawei. Perlu dijelaskan, HarmonyOS 4.3 kompatibel dengan code framework Android Open Source Project (AOSP), karena itu ia bisa kompatibel penuh dengan aplikasi Android—sebagian besar aplikasi yang Anda download dari Huawei AppGallery pada dasarnya masih aplikasi Android, berjalan melalui compatibility layer HarmonyOS. Tapi HarmonyOS 4.3 bukan sekadar shell Android, ia menambahkan banyak kemampuan distributed self-developed Huawei, Ark Engine, dan teknologi lain di atas AOSP.
+HarmonyOS 4.3 adalah versi yang saat ini banyak di-deploy di ponsel Huawei. Perlu dijelaskan, HarmonyOS 4.3 kompatibel dengan code framework Android Open Source Project (AOSP), karena itu ia bisa kompatibel penuh dengan aplikasi Android,sebagian besar aplikasi yang Anda download dari Huawei AppGallery pada dasarnya masih aplikasi Android, berjalan melalui compatibility layer HarmonyOS. Tapi HarmonyOS 4.3 bukan sekadar shell Android, ia menambahkan banyak kemampuan distributed self-developed Huawei, Ark Engine, dan teknologi lain di atas AOSP.
 
 ##### Fitur inti:
 
@@ -39,16 +39,16 @@ HarmonyOS 4.3 adalah versi yang saat ini banyak di-deploy di ponsel Huawei. Perl
 - <strong>Super hub</strong>: Area penyimpanan sementara, bisa menampung teks, gambar, file sementara, lalu drag ke aplikasi mana saja untuk digunakan. Sharing lintas aplikasi menjadi sangat halus.
 - <strong>Smart search</strong>: Global search, bisa mencari aplikasi, file, pengaturan, webpage.
 
-#### 3. HarmonyOS NEXT (HarmonyOS 6): Titik awal sejati sistem operasi self-developed Huawei
+3. HarmonyOS NEXT (HarmonyOS 6): Titik awal sejati sistem operasi self-developed Huawei
 
-HarmonyOS NEXT (HarmonyOS NEXT 5.0) dan HarmonyOS 4.3 memiliki perbedaan mendasar—ia menggunakan microkernel HarmonyOS self-developed Huawei, tidak lagi bergantung pada kernel Linux dan kode AOSP, juga <strong>tidak lagi langsung mendukung aplikasi Android</strong>. Ini adalah langkah kunci HarmonyOS dari "bentuk transisi kompatibel Android" resmi menuju "sistem operasi sepenuhnya independen".
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) dan HarmonyOS 4.3 memiliki perbedaan mendasar,ia menggunakan microkernel HarmonyOS self-developed Huawei, tidak lagi bergantung pada kernel Linux dan kode AOSP, juga <strong>tidak lagi langsung mendukung aplikasi Android</strong>. Ini adalah langkah kunci HarmonyOS dari "bentuk transisi kompatibel Android" resmi menuju "sistem operasi sepenuhnya independen".
 
 ##### Perubahan besar:
 
 - <strong>Kernel sepenuhnya self-developed</strong>: HarmonyOS NEXT menggunakan kernel self-developed Huawei, tidak lagi mengandung kode AOSP apa pun. Sistem lebih ringkas, lebih aman, lebih efisien.
 - <strong>Tidak lagi mendukung aplikasi Android</strong>: Ini perubahan terbesar. HarmonyOS NEXT hanya bisa menjalankan aplikasi native HarmonyOS, tidak bisa instal dan jalankan file APK. Sebelum upgrade harap konfirmasi aplikasi yang sering Anda gunakan sudah punya versi native HarmonyOS.
 - <strong>Ekosistem aplikasi native</strong>: Huawei sedang mendorong pengembang untuk migrasi aplikasi ke platform native HarmonyOS. Saat ini aplikasi mainstream seperti WeChat, Alipay, Taobao sudah merilis versi native HarmonyOS, tapi sebagian aplikasi niche mungkin belum diadaptasi.
-- <strong>Arsitektur keamanan Star Shield</strong>: Sistem keamanan baru, perlindungan full-chain dari hardware ke software. Mendukung kontrol izin lebih granular, seperti "fuzzy location"—aplikasi hanya tahu Anda kira-kira di mana, tidak tahu lokasi presisi.
+- <strong>Arsitektur keamanan Star Shield</strong>: Sistem keamanan baru, perlindungan full-chain dari hardware ke software. Mendukung kontrol izin lebih granular, seperti "fuzzy location":aplikasi hanya tahu Anda kira-kira di mana, tidak tahu lokasi presisi.
 - <strong>Integrasi AI mendalam</strong>: Kemampuan AI system-level, bukan hanya aplikasi tertentu yang punya AI. Misalnya AI subtitle bisa real-time translate video, AI cutout bisa smart recognize subject.
 - <strong>Cross-device seamless flow</strong>: Kemampuan distributed lebih lanjut. State aplikasi bisa switch seamlessly antar perangkat, dokumen yang Anda edit di ponsel, saat berjalan ke komputer otomatis terbuka di komputer.
 - <strong>Meta service</strong>: Layanan lightweight yang bisa digunakan tanpa instalasi. Misalnya scan QR code langsung membuka fungsi tertentu, tanpa download aplikasi dulu.

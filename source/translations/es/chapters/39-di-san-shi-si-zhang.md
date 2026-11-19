@@ -2,17 +2,17 @@
 id: di-san-shi-si-zhang
 num: 34
 part: zhan-wang-pian
-nav: Capítulo 34:Guía a fondo de la conexión coche-móvil — la fusión del móvil y el coche
+nav: Capítulo 34: Teléfono y coche: conectar sin líos
 toc: default
 kind: chapter
 ---
 
-### Capítulo 34:Guía detallada de conectividad móvil-automóvil — La fusión del teléfono y el coche
+### Capítulo 34: Teléfono y coche: conectar sin líos
 
 {class="chapter-intro mb-4"}
 Usa el teléfono como nivel de burbuja
 
-#### : La app de Brújula del iPhone tiene una función de nivel (desliza hacia la izquierda). Android también tiene apps de nivel; útil para colgar cuadros o estanterías.
+- La app de Brújula del iPhone tiene una función de nivel (desliza hacia la izquierda). Android también tiene apps de nivel; útil para colgar cuadros o estanterías.
 
 Usa el flash del teléfono como linterna
 
@@ -20,7 +20,7 @@ Usa el flash del teléfono como linterna
 - <strong>: Además de despertarte, la alarma puede servirte de recordatorio para tomar medicina, recoger a los niños o una reunión importante.</strong> Usa el cronómetro y el temporizador para la gestión del tiempo
 - <strong>: Usa el cronómetro para medir el tiempo de tareas (técnica Pomodoro) y el temporizador para limitar el tiempo de uso del teléfono o de la cocina.</strong> Usa la grabadora de voz para tomar notas rápidas
 
-#### : Si no puedes escribir, graba tus ideas en voz. Útil para reuniones, ideas repentinas o cuando conduces.
+- Si no puedes escribir, graba tus ideas en voz. Útil para reuniones, ideas repentinas o cuando conduces.
 
 Usa la app de Tiempo para planificar el día
 
@@ -70,7 +70,7 @@ Usa la app de Tiempo para planificar el día
 ```
 :::
 
-#### : Los mayores pueden confundirse con demasiadas notificaciones. Desactiva las notificaciones de apps que no sean esenciales (noticias, juegos, compras).
+- Los mayores pueden confundirse con demasiadas notificaciones. Desactiva las notificaciones de apps que no sean esenciales (noticias, juegos, compras).
 
 VII. Diez habilidades para usuarios avanzados
 
@@ -78,7 +78,7 @@ VII. Diez habilidades para usuarios avanzados
 - <strong>: Los "Atajos" del iPhone y los "Atajos" de Android permiten automatizar tareas complejas. Por ejemplo, un atajo que, al salir del trabajo, envía un mensaje a tu pareja, activa la navegación y sube el volumen.</strong> Usa "Automaciones" para tareas programadas
 - <strong>: Las automatizaciones del iPhone pueden ejecutar acciones según la hora, la ubicación o un evento. Por ejemplo, al llegar a casa, conecta el Wi-Fi y reproduce música; al salir del trabajo, activa el modo no molestar.</strong> Domina la "pantalla dividida" y la "ventana flotante"
 
-#### : En Android, usa la pantalla dividida para hacer dos cosas a la vez; usa la ventana flotante para ver un vídeo mientras usas otras apps. En iPhone, usa "Image in Picture" para el mismo propósito.
+- En Android, usa la pantalla dividida para hacer dos cosas a la vez; usa la ventana flotante para ver un vídeo mientras usas otras apps. En iPhone, usa "Image in Picture" para el mismo propósito.
 
 Usa "texto escaneado" para digitalizar documentos
 
@@ -87,7 +87,7 @@ Usa "texto escaneado" para digitalizar documentos
 - <strong>: Si pierdes el teléfono, usa "Buscar mi iPhone" o "Buscar mi dispositivo" desde otro dispositivo para localizarlo, bloquearlo o borrar los datos de forma remota.</strong> Domina la "grabación de pantalla"
 - <strong>: El iPhone y Android tienen grabación de pantalla integrada. Útil para grabar tutoriales, guardar vídeos que no se pueden descargar o reportar bugs.</strong> Usa "modo de una mano" para teléfonos grandes
 
-#### : Si el teléfono es demasiado grande, activa el modo de una mano para reducir la pantalla y operar con un solo dedo.
+- Si el teléfono es demasiado grande, activa el modo de una mano para reducir la pantalla y operar con un solo dedo.
 
 Aprende a usar "transferencia de archivos rápida"
 
@@ -103,7 +103,7 @@ Aprende a usar "transferencia de archivos rápida"
 No dejes que la batería llegue a 0%
 :::
 
-#### : Las baterías de litio no les gusta llegar a 0% ni quedarse al 100% mucho tiempo. Intenta cargar el teléfono cuando llegue al 20-30% y desenchufarlo al 80-90%.
+- Las baterías de litio no les gusta llegar a 0% ni quedarse al 100% mucho tiempo. Intenta cargar el teléfono cuando llegue al 20-30% y desenchufarlo al 80-90%.
 
 - <strong>No uses el teléfono mientras se carga</strong>: Usar el teléfono mientras se carga genera calor extra y acelera el envejecimiento de la batería. Si tienes que usarlo, al menos no juegues ni grabes vídeos.
 - <strong>Evita las temperaturas extremas</strong>: El calor es el mayor enemigo de la batería. No dejes el teléfono al sol ni en un coche caliente en verano. El frío extremo también daña la batería, aunque de forma temporal.

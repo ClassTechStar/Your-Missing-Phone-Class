@@ -2,17 +2,17 @@
 id: di-liu-zhang
 num: 06
 part: ji-chu-pian
-nav: Chapitre 6 : Protéger ta vie numérique
+nav: Chapitre 6 : Smartphone perdu ? Mot de passe oublié ?
 toc: default
 kind: chapter
 ---
 
-### Chapitre 6 : Protéger votre vie numérique — sécurité et vie privée
+### Chapitre 6 : Smartphone perdu ? Mot de passe oublié ?
 
 {class="chapter-intro mb-4"}
 Sécurité du smartphone = sécurité de la vie privée + sécurité du patrimoine. À l'ère où les données sont un actif, protéger votre smartphone, c'est vous protéger.
 
-#### 1. Écran de verrouillage : la première ligne de défense physique
+1. Écran de verrouillage : la première ligne de défense physique
 
 L'écran de verrouillage est la première ligne de défense de votre smartphone, et aussi la plus facilement négligée.
 
@@ -40,7 +40,7 @@ L'écran de verrouillage est la première ligne de défense de votre smartphone,
 
 Allez dans [Paramètres], Apple cherchez « Localiser mon iPhone », Android cherchez « Localiser mon appareil » ou un service similaire de la marque, assurez-vous qu'il est activé (vert).
 
-#### 3. Mise à jour système : appliquer les correctifs, boucher les failles
+3. Mise à jour système : appliquer les correctifs, boucher les failles
 
 Le but principal des mises à jour système est de corriger les failles de sécurité, comme reboucher les trous d'un mur. Donc, quand vous voyez une notification de mise à jour système, essayez de mettre à jour le plus vite possible.
 
@@ -84,7 +84,7 @@ L'IA peut cloner la voix et le visage, mais elle n'est pas invulnérable, il y a
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>Méthode de vérification par action</strong>: Lors d'un appel vidéo, demandez activement à l'interlocuteur d'exécuter des actions consécutives prédéfinies, par exemple « passez rapidement la main devant votre visage », « montrez le contour de votre oreille de profil » ou « clignez rapidement 5 fois de suite ». Actuellement, la technologie de deepfake IA a du mal avec les occlusions dynamiques complexes, les scènes de mouvement rapide et les changements d'ombre,<strong>avec des artefacts très probables comme des saccades, des distorsions du visage ou des bords défectueux</strong>.
 - <strong>Méthode de vérification par mot de passe secret</strong>: Établissez et utilisez des questions de vérification privées prédéfinies, comme « Quel plat avez-vous commandé lors de notre dernier dîner ensemble », « Quel a été le premier cadeau que je vous ai offert » et autres détails connus seulement des deux parties. Si l'interlocuteur hésite visiblement ou répond à côté,<strong>mettez immédiatement fin à l'appel et activez le protocole de sécurité</strong>.
-- <strong>Méthode de double vérification</strong>: Respectez strictement le principe des «<strong>quatre non et une vérification</strong>» publié par le Bureau de la cybersécurité du ministère de la Sécurité publique — ne pas croire aveuglément les messages inconnus, ne pas transférer d'argent à la légère, ne pas divulguer d'informations personnelles sensibles, ne pas diffuser de contenu suspect. Pour toute transaction financière, vérifiez impérativement en <strong>rappelant le numéro d'origine connu ou en confirmant en personne</strong>. Pour les virements, il est recommandé de choisir le mode « crédit sous 24 heures », laissant une fenêtre de temps suffisante pour identifier une arnaque potentielle et récupérer les fonds.
+- <strong>Méthode de double vérification</strong>: Respectez strictement le principe des «<strong>quatre non et une vérification</strong>» publié par le Bureau de la cybersécurité du ministère de la Sécurité publique, ne pas croire aveuglément les messages inconnus, ne pas transférer d'argent à la légère, ne pas divulguer d'informations personnelles sensibles, ne pas diffuser de contenu suspect. Pour toute transaction financière, vérifiez impérativement en <strong>rappelant le numéro d'origine connu ou en confirmant en personne</strong>. Pour les virements, il est recommandé de choisir le mode « crédit sous 24 heures », laissant une fenêtre de temps suffisante pour identifier une arnaque potentielle et récupérer les fonds.
 
 ##### 3. Schémas traditionnels courants (restez vigilants) :
 
@@ -102,7 +102,7 @@ L'IA peut cloner la voix et le visage, mais elle n'est pas invulnérable, il y a
 
 <strong>Ne pas croire aveuglément, ne pas divulguer, ne pas cliquer, ne pas transférer, en cas de doute, vérifiez d'abord !</strong> Face à une « urgence », prenez 5 minutes pour vous calmer, presque toutes les arnaques se démasquent à ce moment-là.
 
-#### 5. Résister au « doxxing » et aux attaques d'ingénierie sociale : couper la chaîne de fuite de données privées
+5. Résister au « doxxing » et aux attaques d'ingénierie sociale : couper la chaîne de fuite de données privées
 
 Le principe central du « doxxing » (attaque d'ingénierie sociale) est de <strong>collecter systématiquement, analyser et assembler les fragments numériques personnels pour construire un profil complet de la personne</strong>. La clé de la prévention est de tracer des lignes rouges claires pour la vie privée personnelle et d'établir un système de protection multicouche.
 
@@ -133,7 +133,7 @@ Les caméras connectées, serrures connectées, enceintes connectées et autres 
 En 2022, la police d'une localité a signalé que des pirates avaient cracké les mots de passe par défaut de caméras de surveillance domestiques d'une marque (beaucoup d'utilisateurs ne les avaient jamais modifiés), volant les images de chambres de milliers de foyers et les revendant en ligne.<strong>Ne pas changer le mot de passe par défaut = laisser la porte de chez soi grande ouverte</strong>.
 :::
 
-#### 6. Protection de la vie privée : vos données sont votre patrimoine
+6. Protection de la vie privée : vos données sont votre patrimoine
 
 Les photos, historiques de discussion et traces de localisation dans votre smartphone sont en essence vos « actifs numériques ». Une fois divulgués, au mieux du spam publicitaire, au pire du doxxing, de la fraude voire du chantage.
 
@@ -166,7 +166,7 @@ Ne paniquez pas si vous perdez votre smartphone, suivez cet ordre :
 
 - <strong>Configurer un PIN de carte SIM</strong>: Après activation, à chaque redémarrage ou changement de carte, le code PIN est requis, empêchant de « retirer la carte et changer de smartphone » pour contourner le verrouillage.
 - <strong>Avantages de l'eSIM</strong>: Pas de carte physique à retirer, sécurité plus élevée ; prend en charge la bascule entre plusieurs numéros, très pratique en voyage.
-- <strong>Risque de réémission de carte</strong>: Méfiez-vous de l'arnaque de « réémission de carte par l'opérateur » — l'escroc se fait passer pour vous pour faire réémettre la carte SIM, prenant ainsi le contrôle de votre numéro de téléphone. Configurer « la réémission nécessite la présence personnelle du titulaire avec sa carte d'identité en boutique » est la défense la plus efficace.
+- <strong>Risque de réémission de carte</strong>: Méfiez-vous de l'arnaque de « réémission de carte par l'opérateur », l'escroc se fait passer pour vous pour faire réémettre la carte SIM, prenant ainsi le contrôle de votre numéro de téléphone. Configurer « la réémission nécessite la présence personnelle du titulaire avec sa carte d'identité en boutique » est la défense la plus efficace.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -177,7 +177,7 @@ Ne paniquez pas si vous perdez votre smartphone, suivez cet ordre :
 - Envoyer votre code de vérification à qui que ce soit (même au « service client ») ;
 - Cliquer sur des liens inconnus dans les SMS, surtout ceux commençant par 00 (numéros internationaux) ;
 - Se connecter à la banque en ligne ou effectuer des paiements en Wi-Fi public ;
-- Activer le « partage d'écran » ou le « contrôle à distance » pour un inconnu.
+- Activer le « partage d'écran » ou le « contrôle à distance » pour un inconnu
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

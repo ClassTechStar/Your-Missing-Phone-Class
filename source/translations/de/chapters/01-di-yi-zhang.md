@@ -2,12 +2,12 @@
 id: di-yi-zhang
 num: 01
 part: ji-chu-pian
-nav: Kapitel 1: Hallo, mein privater Computer
+nav: Kapitel 1: Erst einmal das Smartphone kennenlernen
 toc: default
 kind: chapter
 ---
 
-### Kapitel 1: Hallo, mein persönlicher Computer
+### Kapitel 1: Erst einmal das Smartphone kennenlernen
 
 {class="chapter-intro mb-4"}
 Praktische Anwendungsszenarien
@@ -28,7 +28,7 @@ SoC steht für System on Chip – wörtlich: ein ganzes System auf einem Chip. E
 
 <strong>CPU: Design mit großen und kleinen Kernen</strong>: Moderne Smartphone-CPUs setzen meist auf ARMs „big.LITTLE“-Architektur: Die Kerne werden in verschiedene Leistungsstufen aufgeteilt:
 
-- <strong>: Texterkennung (OCR), Objekterkennung, Szenenerkennung.</strong> Geräteseitiges KI-Großmodell
+- <strong>: Texterkennung (OCR), Objekterkennung, Szenenerkennung.</strong> Geräteseitiges KI-Großmodell.
 - <strong>: Die neuesten Flagship-Chips unterstützen bereits das Ausführen kleiner KI-Großmodelle (7B-Parameter-Klasse) auf dem Smartphone, wodurch Offline-KI-Dialoge, Dokumentzusammenfassungen und intelligentes Schreiben ermöglicht werden. Der Hexagon-NPU des Snapdragon 8 Elite bietet 45 TOPS Rechenleistung, die NPU 890 des Dimensity 9400 unterstützt ebenfalls geräteseitige Großmodelle (LLM-Inferenzgeschwindigkeit um 80 % gesteigert), und der 6-Kern-NPU des Apple A18 Pro bietet etwa 35 TOPS Rechenleistung.</strong>: Ausgeglichene Balance von Leistung und Verbrauch für alltägliche Mittellast-Aufgaben. Social-Media-Feeds, Videos und Multitasking laufen hauptsächlich darüber.
 - <strong>Effizienzkern (kleiner Kern)</strong>: Niedrigster Verbrauch, für leichte Hintergrundaufgaben. Standby, Musik, Benachrichtigungen – fast ohne Stromverbrauch.
 
@@ -36,7 +36,7 @@ Super-Core / Großkern
 
 <strong>: Höchste Leistung, für schwere Aufgaben wie Spiele-Loading, App-Starts, komplexe Berechnungen. Höchste Taktfrequenz (3 GHz+), aber auch höchster Stromverbrauch.</strong> Die drei Leistungsklassen arbeiten zusammen: Der System-Scheduler verteilt Aufgaben automatisch nach Last – leichte Aufgaben an die Kleinkerne (Strom sparen), schwere an die Großkerne (volle Power), danach zurück zu den Kleinkernen. Deshalb kann das Smartphone flüssig spielen und trotzdem einen ganzen Tag durchhalten.
 
-- <strong>Qualcomm Snapdragon 8 Elite</strong>: Nutzt die selbstentwickelte Oryon-CPU-Architektur (aus der Nuvia-Übernahme), 2 Super-Cores (4,32 GHz) + 6 Leistungskerne (3,53 GHz), alle auf TSMCs zweiter 3-nm-Generation. Verabschiedet sich komplett von ARMs Referenzarchitektur; Single- und Multi-Core-Performance legen deutlich zu. GPU ist Adreno 830 mit Slice-Architektur, +40 % Grafikleistung; Hexagon NPU mit 75 TOPS, +45 % AI-Inferenz. (Hinweis: Samsung-Galaxy-Custom-Version mit höheren Taktraten, Super-Core bis 4,47 GHz.)
+- <strong>Qualcomm Snapdragon 8 Elite</strong>: Nutzt die selbstentwickelte Oryon-CPU-Architektur (aus der Nuvia-Übernahme), 2 Super-Cores (4,32 GHz) + 6 Leistungskerne (3,53 GHz), alle auf TSMCs zweiter 3-nm-Generation. Verabschiedet sich komplett von ARMs Referenzarchitektur; Single- und Multi-Core-Performance legen deutlich zu. GPU ist Adreno 830 mit Slice-Architektur, +40 % Grafikleistung; Hexagon NPU mit 75 TOPS, +45 % AI-Inferenz. (Hinweis: Samsung-Galaxy-Custom-Version mit höheren Taktraten, Super-Core bis 4,47 GHz.).
 - <strong>MediaTek Dimensity 9400</strong>: 2 Leistungskerne (ca. 4,04 GHz) + 4 Effizienzkerne (ca. 2,4 GHz), TSMCs zweite 3-nm-Generation. 6-Kern-GPU mit hardwarebeschleunigtem Raytracing; 16-Kern-NPU (ca. 35 TOPS) für lokale AI und Apple Intelligence. Apples selbstentwickelte Architektur führt bei Single-Core und Effizienz weiterhin; die Unified-Memory-Architektur bietet hohe Bandbreite für AI-Inferenz.
 - <strong>Apple A18 Pro</strong>: Verbaut in der Mate-70-Serie, nutzt die selbstentwickelte Taishan-CPU-Architektur; NPU und ISP wurden weiter verstärkt; unterstützt 5.5G und Satellitenkommunikation – der neueste Durchbruch chinesischer Chips.
 - <strong>HiSilicon Kirin 9020</strong> Die GPU (Graphics Processing Unit) ist auf Grafik- und parallele Rechenaufgaben spezialisiert. Sie hat deutlich mehr Kerne als die CPU (oft Hunderte bis Tausende), aber jeder Kern ist einfacher gebaut – ideal, um viele ähnliche Berechnungen gleichzeitig auszuführen.
@@ -86,7 +86,7 @@ Der ISP verarbeitet die Rohdaten der Kamera und wandelt Lichtsignale in ansprech
 
 ##### 2. Arbeitsspeicher (RAM): Der temporäre Arbeitstisch
 
-Der Arbeitsspeicher ist wie dein Schreibtisch — je größer, desto mehr Dateien kannst du gleichzeitig ausbreiten. 12GB sind heute der Standard, 16GB eignen sich für Vielnutzer, 24GB und darüber hinaus sind die Wahl von Gamern und Technik-Enthusiasten.
+Der Arbeitsspeicher ist wie dein Schreibtisch, je größer, desto mehr Dateien kannst du gleichzeitig ausbreiten. 12GB sind heute der Standard, 16GB eignen sich für Vielnutzer, 24GB und darüber hinaus sind die Wahl von Gamern und Technik-Enthusiasten.
 
 Der RAM-Typ ist ebenfalls wichtig: LPDDR5 ist schneller und sparsamer als LPDDR4X. Apple hat zwar nicht viel Arbeitsspeicher, aber durch gute Systemoptimierung wirkt es „ausreichend".
 
@@ -94,13 +94,13 @@ Der RAM-Typ ist ebenfalls wichtig: LPDDR5 ist schneller und sparsamer als LPDDR4
 
 ##### 3. Speicher (ROM/Flash): Das langfristige Lager
 
-Der Speicher ist wie dein Bücherschrank — der Ort, an dem alle Fotos, Videos und Apps liegen. Aktuell dominieren UFS 3.1 oder UFS 4.0, die um ein Vielfaches schneller sind als das ältere eMMC.
+Der Speicher ist wie dein Bücherschrank: der Ort, an dem alle Fotos, Videos und Apps liegen. Aktuell dominieren UFS 3.1 oder UFS 4.0, die um ein Vielfaches schneller sind als das ältere eMMC.
 
 <strong>Warum ist die Speichergeschwindigkeit wichtig?</strong> Sie bestimmt die App-Startgeschwindigkeit, die Ladezeit von Spielen und die Speichergeschwindigkeit von Fotos. Bei längerer Nutzung sorgt langsamer Speicher dafür, dass das Smartphone immer langsamer wird.
 
 ##### 4. Bildschirm: Deine Augen
 
-Der Bildschirm ist das Hauptfenster, über das du mit dem Smartphone interagierst — seine Qualität beeinflusst das Erlebnis direkt.
+Der Bildschirm ist das Hauptfenster, über das du mit dem Smartphone interagierst, seine Qualität beeinflusst das Erlebnis direkt.
 
 - <strong>Material</strong>: OLED bietet lebendige Farben, hohen Kontrast und spart mehr Strom (bei schwarzen Bildbereichen leuchten die Pixel nicht), kann aber bei niedriger Helligkeit zu Flackern führen, das die Augen belastet; LCD ist augenfreundlicher und günstiger, aber Kontrast und Farben sind dem OLED unterlegen.
 - <strong>Auflösung</strong>: 1080P ist der Standard, 2K ist schärfer, verbraucht aber mehr Strom. Das Konzept von Apples „Retina-Display" besagt: Bei einem bestimmten Abstand kann das menschliche Auge die einzelnen Pixel nicht mehr erkennen.
@@ -126,9 +126,9 @@ HDR beim Fotografieren und HDR am Bildschirm sind zwei verschiedene Dinge. Das F
 
 ##### 5. Akku und Laden: die Energiequelle
 
-Der Akku ist das „kurzlebigste" Bauteil des Smartphones — nach zwei bis drei Jahren zeigt er deutliche Alterung. Die aktuell übliche Kapazität liegt bei 5500-7500mAh.
+Der Akku ist das „kurzlebigste" Bauteil des Smartphones: nach zwei bis drei Jahren zeigt er deutliche Alterung. Die aktuell übliche Kapazität liegt bei 5500-7500mAh.
 
-- <strong>Ladeleistung</strong>: Im Android-Lager ist man bereits bei 100W bis 200W angekommen — in zehn bis wenigen Minuten voll geladen; Apple verharrt noch bei 20-30W. Schadet Schnellladen dem Akku? Mit Originalzubehör ist das kaum ein Problem, da das Smartphone einen Temperaturschutz hat.
+- <strong>Ladeleistung</strong>: Im Android-Lager ist man bereits bei 100W bis 200W angekommen: in zehn bis wenigen Minuten voll geladen; Apple verharrt noch bei 20-30W. Schadet Schnellladen dem Akku? Mit Originalzubehör ist das kaum ein Problem, da das Smartphone einen Temperaturschutz hat.
 - <strong>Kabelloses Laden</strong>: Bequem, aber ineffizient und wärmer. Gut fürs beiläufige Laden im Büro, ungeeignet, wenn es schnell gehen muss.
 - <strong>Rückwärtsladen (Reverse Charging)</strong>: Das Handy wird zur Powerbank und lädt Kopfhörer oder Uhr – für den Notfall.
 
@@ -206,15 +206,15 @@ Im Handy stecken über ein Dutzend Sensoren, die still ihren Dienst tun:
 
 Die Hardware ist der Körper, das Betriebssystem die Seele. Die drei großen Systeme haben jeweils ihre Besonderheiten:
 
-- <strong>Android</strong>: Wie eine Open-Source-Community — Smartphone-Hersteller können tiefgreifend anpassen, die Auswahl ist groß. Du kannst Themes wechseln, Drittanbieter-App-Stores installieren und verschiedene Funktionen ausprobieren. Aber gerade wegen der Offenheit ist die Fragmentierung ausgeprägt, und die Erfahrung variiert stark zwischen den Marken.
-- <strong>iOS</strong>: Wie ein sorgfältig gepflegter Garten — Apple kontrolliert Hard- und Software gleichermaßen, das Erlebnis ist einheitlich und flüssig. Hohe App-Qualität, guter Datenschutz, aber geringere Freiheit — viele Dinge laufen nach Apples Regeln.
+- <strong>Android</strong>: Wie eine Open-Source-Community, Smartphone-Hersteller können tiefgreifend anpassen, die Auswahl ist groß. Du kannst Themes wechseln, Drittanbieter-App-Stores installieren und verschiedene Funktionen ausprobieren. Aber gerade wegen der Offenheit ist die Fragmentierung ausgeprägt, und die Erfahrung variiert stark zwischen den Marken.
+- <strong>iOS</strong>: Wie ein sorgfältig gepflegter Garten, Apple kontrolliert Hard- und Software gleichermaßen, das Erlebnis ist einheitlich und flüssig. Hohe App-Qualität, guter Datenschutz, aber geringere Freiheit, viele Dinge laufen nach Apples Regeln.
 - <strong>HarmonyOS</strong>: Huaweis neue Spezies, setzt auf verteilte Fähigkeiten, die eine nahtlose Zusammenarbeit zwischen verschiedenen Geräten ermöglichen. Darauf gehen wir später gesondert ein.
 
-Alle drei Ökosysteme sind äußerst reichhaltig — wähle einfach das, das zu deinem Lebensstil passt. Es gibt kein absolut Gutes oder Schlechtes, nur ein Passendes oder Nicht-Passendes.
+Alle drei Ökosysteme sind äußerst reichhaltig, wähle einfach das, das zu deinem Lebensstil passt. Es gibt kein absolut Gutes oder Schlechtes, nur ein Passendes oder Nicht-Passendes.
 
 #### Drei. Smartphone-Anschlüsse im Überblick
 
-Die Anschlüsse sind die Brücke zur Außenwelt — die Unterschiede sind beträchtlich:
+Die Anschlüsse sind die Brücke zur Außenwelt, die Unterschiede sind beträchtlich:
 
 ##### Micro USB
 
@@ -241,7 +241,7 @@ Die Anschlüsse sind die Brücke zur Außenwelt — die Unterschiede sind beträ
 
 - <strong>Physische Eigenschaften</strong>: Runder 3-Pol- oder 4-Pol-Stecker, 3-Pol überträgt linken und rechten Audiokanal, 4-Pol hat zusätzlich einen Mikrofonkanal.
 - <strong>: MFi-zertifizierte Apple-Kabel enthalten einen Authentifizierungschip; nicht zertifizierte Kabel laden oder übertragen Daten möglicherweise nicht richtig. Wenn du noch ein älteres iPhone nutzt, halte ein Lightning-Kabel bereit.</strong>: Analoge Signalübertragung, Plug &amp; Play, ohne Treiber oder Konvertierung. Stabile Tonqualität, null Latenz.
-- <strong>Aktueller Stand</strong>: Die meisten Flagship-Smartphones haben den 3.5mm-Anschluss entfernt — ein Type-C-Adapterkabel oder Bluetooth-Kopfhörer sind nötig. Einige Mittelklasse- und Gaming-Smartphones behalten ihn noch.
+- <strong>Aktueller Stand</strong>: Die meisten Flagship-Smartphones haben den 3.5mm-Anschluss entfernt, ein Type-C-Adapterkabel oder Bluetooth-Kopfhörer sind nötig. Einige Mittelklasse- und Gaming-Smartphones behalten ihn noch.
 
 #### Vier. Smartphone-Produktlinien und Namensregeln
 
@@ -267,7 +267,7 @@ Angesichts der verwirrenden Produktlinien der verschiedenen Marken hilft es, die
 - <strong>: Ursprünglich für Großbild-Smartphones, heute von den Marken unterschiedlich verwendet. Redmi Note ist eine Mittelklasse-Serie.</strong>: Ursprünglich die Bezeichnung für große Displays; inzwischen verwenden die Marken sie unterschiedlich. Redmi Note ist eine Mittelklasse-Serie.
 - <strong>Neo</strong>: Die „e“-Version – meist leistungsorientierte Modelle der Mittelklasse.
 
-#### 5. Modem und Antennen: die heimlichen Helden der Handykommunikation
+5. Modem und Antennen: die heimlichen Helden der Handykommunikation
 
 Dass dein Handy telefonieren und surfen kann, verdankt es dem Duo aus Baseband-Chip und Antennen.
 
@@ -279,7 +279,7 @@ Das Baseband ist der Prozessor für die Funkkommunikation im Handy: Es moduliert
 
 Die Handyantennen stecken im Gehäuseinneren, meist rund um den Rahmen verlegt. Das Design beeinflusst den Empfang direkt:
 
-- <strong>: Multiple Input Multiple Output — mehrere Antennen senden und empfangen gleichzeitig Daten, was Geschwindigkeit und Stabilität erhöht. 4×4 MIMO ist schneller als 2×2 MIMO.</strong>: Multiple Input Multiple Output – mehrere Antennen senden und empfangen gleichzeitig, das erhöht Tempo und Stabilität. 4×4 MIMO ist schneller als 2×2 MIMO.
+- <strong>: Multiple Input Multiple Output, mehrere Antennen senden und empfangen gleichzeitig Daten, was Geschwindigkeit und Stabilität erhöht. 4×4 MIMO ist schneller als 2×2 MIMO.</strong>: Multiple Input Multiple Output – mehrere Antennen senden und empfangen gleichzeitig, das erhöht Tempo und Stabilität. 4×4 MIMO ist schneller als 2×2 MIMO.
 - <strong>Anzahl der Antennen</strong>: Flagship-Smartphones haben üblicherweise über zehn Antennen (Mobilfunk, WLAN, Bluetooth, NFC, GPS benötigen jeweils eigene Antennen).
 - <strong>Einfluss des Metallgehäuses</strong>: Metall schirmt Signale ab, daher benötigen Smartphones mit Metallgehäuse Antennenbänder (Kunststoffstreifen am Rahmen). Glas- und Kunststoffgehäuse beeinflussen das Signal weniger.
 
@@ -287,7 +287,7 @@ Die Handyantennen stecken im Gehäuseinneren, meist rund um den Rahmen verlegt. 
 
 - <strong>4G LTE</strong>: Theoretische Spitzenrate 1Gbps Downlink / 500Mbps Uplink (Cat.18), in der Praxis meist 50-150Mbps. Größte Abdeckung, ausreichend.
 - <strong>5G NR</strong>: Theoretische Spitzenrate 10Gbps+ Downlink. Sub-6GHz-Frequenzen bieten eine bessere Abdeckung, mmWave-Millimeterwellen sind extrem schnell, haben aber eine sehr geringe Abdeckung.
-- <strong>5G-A (5G Advanced)</strong>: Die erweiterte Version von 5G, auch als 5.5G bezeichnet. Downlink bis zu 10Gbps, Uplink 1Gbps, Verbindungsdichte und Positionierungsgenauigkeit werden deutlich gesteigert. Ab 2024 haben China Mobile, China Telecom und China Unicom begonnen, in wichtigen Städten 5G-A-Netze auszurollen. Das Huawei Mate 70, das Xiaomi 15 und andere Flagship-Smartphones unterstützen bereits 5G-A. 5G-A bringt zudem die Fähigkeit der „integrierten Wahrnehmung und Kommunikation" — Basisstationen können gleichzeitig kommunizieren und die Umgebung erfassen, was die Infrastruktur für die Niedrigflughöhe-Wirtschaft (Drohnenlieferung) und das vernetzte Auto bereitstellt.
+- <strong>5G-A (5G Advanced)</strong>: Die erweiterte Version von 5G, auch als 5.5G bezeichnet. Downlink bis zu 10Gbps, Uplink 1Gbps, Verbindungsdichte und Positionierungsgenauigkeit werden deutlich gesteigert. Ab 2024 haben China Mobile, China Telecom und China Unicom begonnen, in wichtigen Städten 5G-A-Netze auszurollen. Das Huawei Mate 70, das Xiaomi 15 und andere Flagship-Smartphones unterstützen bereits 5G-A. 5G-A bringt zudem die Fähigkeit der „integrierten Wahrnehmung und Kommunikation", Basisstationen können gleichzeitig kommunizieren und die Umgebung erfassen, was die Infrastruktur für die Niedrigflughöhe-Wirtschaft (Drohnenlieferung) und das vernetzte Auto bereitstellt.
 
 ##### Klassifizierung der Netzwerkfrequenzbänder:
 
@@ -298,7 +298,7 @@ Die von einem Smartphone unterstützten Frequenzbänder bestimmen, in welchen L�
 - <strong>5G NR Band (N-Serie)</strong>: Wie n1, n3, n28, n41, n78, n79 usw. n78 (3,5GHz) ist das Haupt-5G-Band in China, n41 (2,5GHz) wird von China Mobile häufiger verwendet.
 - <strong>Entwicklung der Netzwerktechnologien:</strong> Die Nutzung von Mobilfunkdaten im Ausland kann zu astronomischen Rechnungen führen! Schalte vor der Ausreise in den Einstellungen das Datenroaming aus oder kaufe im Voraus eine lokale SIM-Karte / einen internationalen Roaming-Tarif.
 
-#### Sechs. Dein Smartphone — wie viele Rollen spielt es eigentlich?
+Sechs. Dein Smartphone — wie viele Rollen spielt es eigentlich?
 
 Es ist längst mehr als nur ein Telefon:
 
@@ -313,7 +313,7 @@ Es ist längst mehr als nur ein Telefon:
 9. <strong>Digitaler Ausweis</strong>: Elektronischer Personalausweis, elektronischer Führerschein, Gesundheitscode …
 10. <strong>Unterhaltungszentrum</strong>: Musik, Video, E-Books, Podcasts …
 
-Denk mal darüber nach — ein kleines Gerät, das so viel vom Leben trägt! Deshalb: Es gut zu beherrschen, heißt, das Leben besser zu beherrschen.
+Denk mal darüber nach: ein kleines Gerät, das so viel vom Leben trägt! Deshalb: Es gut zu beherrschen, heißt, das Leben besser zu beherrschen.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -2,17 +2,17 @@
 id: di-san-shi-er-zhang
 num: 32
 part: shi-zhan-pian
-nav: Capítulo 32:Manual de primeros auxilios para la seguridad del móvil
+nav: Capítulo 32: ¿Problema? Treinta segundos para acotar el daño
 toc: default
 kind: chapter
 ---
 
-### Capítulo 32:Manual de primeros auxilios para la seguridad del móvil
+### Capítulo 32: ¿Problema? Treinta segundos para acotar el daño
 
 {class="chapter-intro mb-4"}
 Este capítulo es un «plan de emergencia». Ojalá nunca lo necesites, pero si de verdad pierdes el móvil, te lo roban o sufres una estafa, este manual te ayudará a reducir al máximo las pérdidas; y cuando llegan desastres como terremotos o lluvias torrenciales, el móvil también es una herramienta para recibir alertas, enviar tu ubicación, pedir socorro y mantener el contacto. Te recomendamos leerlo entero ahora mismo y guardar capturas de los pasos clave, o imprimirlo y dejarlo en casa: porque cuando ocurra puede que ya no tengas el móvil a mano, y en pleno desastre puede quedarse sin batería o sin señal.
 
-#### Escenario cero: terremoto / tiempo extremo — cómo el móvil te ayuda a salvar la vida
+Escenario cero: terremoto / tiempo extremo — cómo el móvil te ayuda a salvar la vida
 
 Aquí se protege tu integridad física, no tus cuentas ni tu dinero. La configuración de las alertas se explica en el Capítulo 13, «Alertas del tiempo, alertas de desastres naturales y alertas sísmicas»; aquí solo veremos qué hacer cuando suene la alarma.
 
@@ -51,7 +51,7 @@ Lluvias torrenciales / tifón / crecidas repentinas: actúa ya en la fase de ale
 4. Memoriza al menos un número que puedas marcar sin agenda (el móvil de un familiar) y escríbelo en un papel para la cartera.
 :::
 
-#### Escenario uno: has perdido el móvil o te lo han robado — los 30 minutos de oro
+Escenario uno: has perdido el móvil o te lo han robado — los 30 minutos de oro
 
 Los primeros 30 minutos tras perder el móvil son el «tiempo de oro»; si actúas bien, salvarás tu dinero y tu privacidad. Sigue estos pasos en orden y no te saltes ninguno:
 
@@ -71,7 +71,7 @@ Procedimiento estándar de los primeros 30 minutos tras la pérdida
 9. Denuncia (minutos 25-30): llama al 110 o acude a la comisaría más cercana a presentar la denuncia y consigue el justificante. Lo necesitarás después para el seguro y para posibles disputas con el banco.
 :::
 
-#### Escenario dos: te han estafado — las 72 horas de oro para reaccionar
+Escenario dos: te han estafado — las 72 horas de oro para reaccionar
 
 Al descubrir que te han estafado, lo más importante es mantener la calma. Decidir en medio del pánico provoca segundas pérdidas. Sigue estos pasos:
 
@@ -82,17 +82,17 @@ Al descubrir que te han estafado, lo más importante es mantener la calma. Decid
 5. Contacta con el banco o la plataforma de pago: explica la estafa y pide congelar las cuentas implicadas. Si te han hecho cargos fraudulentos en la tarjeta de crédito, pide al banco que active el proceso de impugnación del pago.
 6. Cambia todas las contraseñas: desde otro dispositivo seguro, cambia la contraseña de tu Apple ID o cuenta de marca, WeChat, Alipay y las apps bancarias, y activa la verificación en dos pasos.
 
-#### Escenario tres: el móvil se ha infectado con un virus o un troyano — ¿qué hacer?
+Escenario tres: el móvil se ha infectado con un virus o un troyano — ¿qué hacer?
 
-Si tu móvil presenta estos síntomas —anuncios que aparecen sin motivo, apps extrañas que se instalan solas, la factura del teléfono se dispara o el consumo de datos es anormal—, lo más probable es que tenga malware:
+Si tu móvil presenta estos síntomas,anuncios que aparecen sin motivo, apps extrañas que se instalan solas, la factura del teléfono se dispara o el consumo de datos es anormal, lo más probable es que tenga malware:
 
-- Primer paso: entra en modo seguro — en un Android, mantén pulsado el botón de encendido para apagar; luego mantenlo pulsado para encender y, en cuanto vibre, mantén pulsado el botón de bajar volumen sin soltarlo hasta entrar en modo seguro (abajo a la izquierda verás el texto «Modo seguro»). En este modo todas las apps de terceros se desactivan, lo que facilita la investigación.
-- Segundo paso: desinstala las apps sospechosas — en modo seguro, entra en [Ajustes] > [Gestión de aplicaciones], ordena por fecha, localiza las apps instaladas recientemente que no reconozcas y desinstálalas.
-- Tercer paso: instala una app de seguridad y analiza — descarga «Tencent Mobile Manager» o «360 Mobile Guard» y haz un análisis completo del sistema.
+- Primer paso: entra en modo seguro, en un Android, mantén pulsado el botón de encendido para apagar; luego mantenlo pulsado para encender y, en cuanto vibre, mantén pulsado el botón de bajar volumen sin soltarlo hasta entrar en modo seguro (abajo a la izquierda verás el texto «Modo seguro»). En este modo todas las apps de terceros se desactivan, lo que facilita la investigación.
+- Segundo paso: desinstala las apps sospechosas, en modo seguro, entra en [Ajustes] > [Gestión de aplicaciones], ordena por fecha, localiza las apps instaladas recientemente que no reconozcas y desinstálalas.
+- Tercer paso: instala una app de seguridad y analiza: descarga «Tencent Mobile Manager» o «360 Mobile Guard» y haz un análisis completo del sistema.
 - Cuarto paso: restaurar de fábrica (último recurso) — si nada de lo anterior funciona, haz una copia de seguridad de los datos importantes y restaura el móvil de fábrica. Ojo: el restablecimiento borra todos los datos; antes copia sin falta las fotos, los contactos y otros archivos importantes.
 - Un iPhone prácticamente no se infecta: el sistema de aislamiento (sandbox) de iOS dificulta que el malware sobreviva. Si tu iPhone se comporta de forma extraña, lo más probable es que sea un error de alguna app o de la configuración, no un virus. Restaurar de fábrica resuelve el 99 % de los problemas.
 
-#### Escenario cuatro: te han robado una cuenta — recupera el control rápido
+Escenario cuatro: te han robado una cuenta — recupera el control rápido
 
 1. Cambia la contraseña de inmediato: si todavía puedes entrar en la cuenta, cámbiala en cuanto descubras el robo. La nueva debe ser totalmente distinta de la antigua.
 2. Expulsa los demás dispositivos: en los ajustes de seguridad de la cuenta, busca «gestión de dispositivos conectados» y cierra la sesión de todos los que no reconozcas.
@@ -101,7 +101,7 @@ Si tu móvil presenta estos síntomas —anuncios que aparecen sin motivo, apps 
 5. Revisa los datos vinculados: comprueba si han cambiado el número de teléfono o el correo asociados a la cuenta. Si es así, recupérala con la función de apelación de la cuenta.
 6. Revisa los ajustes de pago: si te han robado WeChat o Alipay, comprueba que no hayan manipulado los pagos sin contraseña ni los cobros automáticos, y que no hayan añadido tus tarjetas a cuentas desconocidas.
 
-#### Escenario cinco: recibes mensajes de chantaje — no temas, no pagues
+Escenario cinco: recibes mensajes de chantaje — no temas, no pagues
 
 Hay dos chantajes típicos: ① «tengo vídeos o fotos íntimas tuyos; si no pagas, se los envío a todos los contactos de tu agenda»; ② «tu móvil está controlado por un hacker; si no pagas, lo bloqueo para siempre». Si te ocurre esto:
 
@@ -111,13 +111,13 @@ Hay dos chantajes típicos: ① «tengo vídeos o fotos íntimas tuyos; si no pa
 - Cambia las contraseñas: si te preocupa, cambia la de tus cuentas principales para quedarte tranquilo.
 - Si de verdad existe riesgo de filtración de tu intimidad: denuncia. La policía tiene experiencia en este tipo de casos.
 
-#### Escenario seis: estafas con caras y voces falsas por IA — ver ya no es creer
+Escenario seis: estafas con caras y voces falsas por IA — ver ya no es creer
 
 Desde 2024, la IA puede clonar rostros y voces hasta el punto de que un estafador aparece en una videollamada «convertido» en tu familiar, tu jefe o tu amigo. «Mamá, me ha pasado algo, transfíreme dinero ya»: la persona del vídeo se ve y suena idéntica a tu hijo, pero es falsa. Es uno de los engaños más peligrosos y difíciles de detectar en la actualidad.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Primer paso: detectar los fallos — las cuatro grietas típicas de la falsificación por IA
+Primer paso: detectar los fallos, las cuatro grietas típicas de la falsificación por IA
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Frecuencia de parpadeo anormal: una persona real parpadea entre 15 y 20 veces por minuto; las caras falsificadas por IA suelen parpadear demasiado poco o con un ritmo rígido.
@@ -148,7 +148,7 @@ Tercer paso: cómo denunciar tras confirmar la estafa
 5. Avisa a familia y amigos: el estafador puede usar tu vídeo falsificado para engañar a otras personas; publica un aviso por adelantado en tu perfil o en el grupo familiar.
 :::
 
-#### Escenario siete: el ataque de SIM swap (secuestro de SIM) — te han «robado» el número
+Escenario siete: el ataque de SIM swap (secuestro de SIM) — te han «robado» el número
 
 Es un ataque que mucha gente no conoce y que causa daños enormes. El SIM swap (secuestro de la tarjeta SIM) consiste en que el atacante, falsificando tus datos de identidad, se hace pasar por ti en la tienda del operador y emite una SIM nueva a tu nombre. Cuando lo consigue, la señal de tu móvil desaparece de golpe, y el teléfono del atacante, con esa tarjeta nueva, recibe todos tus códigos de verificación por SMS: Alipay, el banco, WeChat… todas las puertas quedan abiertas.
 
@@ -164,7 +164,7 @@ Es un ataque que mucha gente no conoce y que causa daños enormes. El SIM swap (
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Medidas de protección — ponle «candado» también a la SIM
+Medidas de protección, ponle «candado» también a la SIM
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Configura el PIN de la SIM: ruta [Ajustes] > [Teléfono] > [PIN de la tarjeta SIM]. Una vez activado, cada vez que el móvil se reinicie o cambies de tarjeta habrá que introducir el PIN para poder usarla. Aunque el atacante se apodere de la tarjeta, no podrá utilizarla.
@@ -175,7 +175,7 @@ Medidas de protección — ponle «candado» también a la SIM
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Qué hacer tras el secuestro — la velocidad lo es todo
+Qué hacer tras el secuestro, la velocidad lo es todo
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Llama de inmediato al servicio del operador para reportar la pérdida: China Mobile 10086 / Unicom 10010 / Telecom 10000; pide la suspensión inmediata de la línea y la congelación del trámite de reemplazo de SIM para impedir que el atacante siga usando tu número.
@@ -188,7 +188,7 @@ Qué hacer tras el secuestro — la velocidad lo es todo
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-Prevenir es mejor que curar — 5 cosas del día a día
+Prevenir es mejor que curar, 5 cosas del día a día
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Contraseña de bloqueo + verificación en dos pasos: activa las dos

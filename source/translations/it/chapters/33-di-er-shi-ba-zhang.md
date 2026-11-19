@@ -2,12 +2,12 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Capitolo 28: Spendere bene per il telefono che vuoi — La guida definitiva all'acquisto
+nav: Capitolo 28: Prima di comprare, chiarisci queste tre cose
 toc: default
 kind: chapter
 ---
 
-### Capitolo 28: Spendere bene per il telefono desiderato — Guida definitiva all'acquisto
+### Capitolo 28: Prima di comprare, chiarisci queste tre cose
 
 {class="chapter-intro mb-4"}
 Per l'acquisto di un telefono, molti guardano recensioni per una settimana, confrontano i prezzi per un mese, e poi finiscono per spendere cinque-seimila yuan in un top di gamma che in realtà non sfruttano. Questo capitolo non elenca schede tecniche — quelle le trovi sul sito ufficiale. Voglio darti un "metodo di scelta", così in futuro, qualsiasi telefono nuovo esca, potrai giudicare da solo se è adatto a te.
@@ -26,7 +26,7 @@ Molti online chiedono "quale telefono comprare con tremila yuan", domanda che in
 3. <strong>Solo alla fine scegli il modello</strong>: con le tue priorità e il budget, cerca il telefono corrispondente.
 :::
 
-#### 1. Come leggere le specifiche principali — non serve capirle tutte, cinque bastano
+1. Come leggere le specifiche principali — non serve capirle tutte, cinque bastano
 
 Le schede tecniche hanno decine di voci, ma l'utente comune deve guardare solo cinque dimensioni:
 
@@ -71,7 +71,7 @@ Le schede tecniche hanno decine di voci, ma l'utente comune deve guardare solo c
 ```
 :::
 
-#### 2. Raccomandazioni per fascia di prezzo (riferimento al mercato cinese a metà 2026)
+2. Raccomandazioni per fascia di prezzo (riferimento al mercato cinese a metà 2026)
 
 Le raccomandazioni seguenti si basano sul mercato cinese continentale a metà 2026, i prezzi sono quelli di partenza ufficiali. I prezzi effettivi possono variare, fa fede quello al momento dell'acquisto.
 
@@ -181,11 +181,11 @@ Ecco alcuni dei "profili d'uso" più comuni, basta trovare il proprio:
 
 #### 5. Quando si compra al miglior prezzo?
 
-- <strong>618 (fine maggio - metà giugno)</strong>: il periodo di maggiori sconti dell'anno. Per spingere le vendite, i top di gamma scendono di 800-1500 yuan. È la finestra migliore per acquisti nella prima metà dell'anno.
+- <strong>618 (fine maggio - metà giugno)</strong>. Il periodo di maggiori sconti dell'anno. Per spingere le vendite, i top di gamma scendono di 800-1500 yuan. È la finestra migliore per acquisti nella prima metà dell'anno.
 - <strong>Double 11 (fine ottobre - metà novembre)</strong>: promozioni di seconda metà dell'anno, simili al 618. In questo periodo molte marche lanciano la nuova generazione di top di gamma, e i modelli precedenti scendono di più.
 - <strong>Un mese dopo il lancio di un nuovo modello</strong>: al lancio prezzo pieno, dopo un mese i canali terzi scendono generalmente di 200-500 yuan.
 - <strong>Da due settimane prima del Capodanno cinese alla Festa delle Lanterne</strong>: i negozi fisici svuotano le scorte con la "festa dei doni di Capodanno", puoi contrattare con il commesso.
-- <strong>Sconsigliato</strong>: comprare al lancio il giorno stesso — a meno che tu non voglia proprio essere tra i primi utenti, il prezzo di lancio è il più alto.
+- <strong>Sconsigliato</strong>: comprare al lancio il giorno stesso, a meno che tu non voglia proprio essere tra i primi utenti, il prezzo di lancio è il più alto.
 
 #### 6. Quale canale scegliere — dove conviene comprare?
 

@@ -25,17 +25,17 @@ Android development cheat sheet (August 2026 edition)
 
 #### 2. FAQ
 
-Q1: I can't code at all — how long does learning Android development take?
+Q1: I can't code at all, how long does learning Android development take?
 
-Follow this book's path: weeks 1-2, set up the environment and learn Kotlin basics; weeks 3-4, learn Compose and build screens; weeks 5-6, finish the expense tracker project; weeks 7-8, complete the weather project. Two months from zero to independently building small apps — provided you put in 1-2 hours a day and actually type code instead of only reading.
+Follow this book's path: weeks 1-2, set up the environment and learn Kotlin basics; weeks 3-4, learn Compose and build screens; weeks 5-6, finish the expense tracker project; weeks 7-8, complete the weather project. Two months from zero to independently building small apps, provided you put in 1-2 hours a day and actually type code instead of only reading.
 
 Q2: Do I still need to learn Java?
 
-No. New projects, new tutorials, and new jobs are all Kotlin-first. You only run into lots of Java when "maintaining a ten-year-old project." After learning Kotlin, picking up Java for work goes fast — the two share the same underlying virtual machine ecosystem.
+No. New projects, new tutorials, and new jobs are all Kotlin-first. You only run into lots of Java when "maintaining a ten-year-old project." After learning Kotlin, picking up Java for work goes fast, the two share the same underlying virtual machine ecosystem.
 
 Q3: Emulator or real device?
 
-For development and debugging, the emulator is convenient (snapshots, many device types), but acceptance must pass on a real device — touch feel, performance, real networks, and sensors can't be replaced by an emulator. If your budget allows, buying a mid-range phone as a test device is the best-value investment.
+For development and debugging, the emulator is convenient (snapshots, many device types), but acceptance must pass on a real device, touch feel, performance, real networks, and sensors can't be replaced by an emulator. If your budget allows, buying a mid-range phone as a test device is the best-value investment.
 
 Q4: Are Android development jobs easy to find?
 
@@ -79,12 +79,12 @@ For "it worked yesterday but not today" hauntings, six or seven times out of ten
 
 #### 5. Closing: From Your First App to Your Nth App
 
-Looking back: you went from "not knowing what an Activity is" to setting up the environment, learning Kotlin, drawing screens with Compose, connecting your app to a database and the network, and on to testing, packaging, and publishing — you've already walked the hardest zero-to-one stretch of this road.
+Looking back: you went from "not knowing what an Activity is" to setting up the environment, learning Kotlin, drawing screens with Compose, connecting your app to a database and the network, and on to testing, packaging, and publishing, you've already walked the hardest zero-to-one stretch of this road.
 
 The tech world changes fast: frameworks upgrade, tools get replaced, and AI takes over more and more of the "typing" work. But one thing never goes out of date: your ability to take a fuzzy idea, break it into clear steps, and build it one step at a time. Tools are amplifiers; thinking is the foundation. Amplifiers can be swapped out; the foundation must not shake.
 
 :::inline div .quote-line
-You're no longer just "someone who knows how to use a phone." You can turn the ideas in your head into real apps running on 300 million Android devices. From today, create with your keyboard — that's the romance of being an Android developer.
+You're no longer just "someone who knows how to use a phone." You can turn the ideas in your head into real apps running on 300 million Android devices. From today, create with your keyboard, that's the romance of being an Android developer.
 :::
 
 #### References

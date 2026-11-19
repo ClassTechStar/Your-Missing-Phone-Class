@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Capítulo 15: A ciência da bateria e a otimização da autonomia
+nav: Capítulo 15: Duas cargas por dia: é a bateria ou o uso?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 15: Ciência da bateria e otimização da autonomia
+### Capítulo 15: Duas cargas por dia: é a bateria ou o uso?
 
 {class="chapter-intro mb-4"}
 A bateria é o "coração energético" do seu celular. Este capítulo vai ajudar você a entender o temperamento da bateria, aprender técnicas científicas de carregamento e autonomia, eliminando de vez a ansiedade da bateria.
@@ -22,11 +22,11 @@ A bateria do celular (íon de lítio ou polímero de lítio) é como uma esponja
 
 ##### Indicadores principais: contagem de ciclos e saúde da bateria
 
-- Um ciclo não é uma carga única. Por exemplo, usar 60% hoje e recarregar completamente, depois usar 40% amanhã e recarregar completamente — o consumo total de 100% conta como um ciclo.
+- Um ciclo não é uma carga única. Por exemplo, usar 60% hoje e recarregar completamente, depois usar 40% amanhã e recarregar completamente, o consumo total de 100% conta como um ciclo.
 - A saúde da bateria é a porcentagem da capacidade máxima atual em relação à capacidade quando nova. Abaixo de 80%, você notará claramente uma autonomia reduzida.
 - <strong>Como verificar?</strong> iPhone: Ajustes > Bateria > Saúde da Bateria e Carregamento; Android: geralmente procure por "saúde da bateria" nas configurações.
 
-#### II. Mitos do carregamento? Carregamento rápido, sem fio e regras de ouro
+II. Mitos do carregamento? Carregamento rápido, sem fio e regras de ouro
 
 - <strong>Carregamento rápido danifica a bateria?</strong> Usando acessórios originais ou certificados, o dano é mínimo. O telefone e o carregador têm controle de temperatura, reduzindo automaticamente a potência se superaquecer.
 - <strong>Carregamento sem fio</strong>: Conveniente, mas menos eficiente e gera mais calor. Adequado para carregamento noturno.
@@ -61,9 +61,9 @@ Você deve ter notado que os carregadores rápidos estão ficando cada vez menor
 :::
 
 {id="di-shi-wu-zhang-kuichong"}
-#### III. Análise completa dos protocolos de carregamento rápido: por que seu carregador não carrega rápido?
+III. Análise completa dos protocolos de carregamento rápido: por que seu carregador não carrega rápido?
 
-Você já deve ter passado por isso: o celular claramente suporta carregamento rápido, mas ao trocar de carregador ele fica muito lento. Isso acontece porque o carregamento rápido não é simplesmente "quanto mais potência, melhor" — é necessário que o carregador, o cabo de dados e o telefone "falem a mesma língua" — isso é o protocolo de carregamento rápido.
+Você já deve ter passado por isso: o celular claramente suporta carregamento rápido, mas ao trocar de carregador ele fica muito lento. Isso acontece porque o carregamento rápido não é simplesmente "quanto mais potência, melhor", é necessário que o carregador, o cabo de dados e o telefone "falem a mesma língua", isso é o protocolo de carregamento rápido.
 
 ##### 1. Princípio básico do carregamento rápido
 
@@ -197,7 +197,7 @@ O carregamento sem fio também tem seus próprios padrões de protocolo:
 - Se o carregador ou telefone aquecer anormalmente ou emitir cheiro estranho, pare de usar imediatamente.
 :::
 
-#### IV. Nova tecnologia de bateria: bateria de ânodo de silício-carbono
+IV. Nova tecnologia de bateria: bateria de ânodo de silício-carbono
 
 Se você acompanhou os lançamentos de flagships de 2024-2026, o termo "ânodo de silício-carbono" quase se tornou sinônimo de bateria premium. Esta é uma atualização importante do material do ânodo das baterias de lítio. O princípio não é complicado:
 
@@ -218,7 +218,7 @@ Se você acompanhou os lançamentos de flagships de 2024-2026, o termo "ânodo d
 
 <strong>Impacto real para o usuário</strong>: O maior benefício do ânodo de silício-carbono é "maior capacidade no mesmo volume" — o telefone pode ser mais fino sem sacrificar a autonomia; ou o corpo permanece com a mesma espessura, mas a bateria salta de 4500mAh para 5500mAh. Em outras palavras, você não precisa pagar o preço do "peso e espessura" pela autonomia. Vale notar que as baterias de ânodo de silício-carbono ainda precisam de otimização dos chips de carregamento rápido no gerenciamento de baixa temperatura e carga completa, sendo esta também uma das razões pelas quais os fabricantes recomendam manter o carregamento em 80% a longo prazo.
 
-#### V. Estas sim são as verdadeiras técnicas de economia de bateria
+V. Estas sim são as verdadeiras técnicas de economia de bateria
 
 - <strong>Tela (a maior consumidora)</strong>: Reduza o brilho, diminua o tempo de bloqueio automático. Celulares com tela OLED economizam bastante bateria com o modo escuro ativado.
 - <strong>Sinal fraco</strong>: Em elevadores e subsolos, o telefone busca sinal desesperadamente, consumindo bateria muito rápido.

@@ -11,7 +11,7 @@ kind: appendix
 
 #### Official Support Is Your First Choice:
 
-- <strong>: Apple uses iTunes, Huawei uses Huawei Phone Assistant, Xiaomi uses Xiaomi Device Transfer.</strong> Useful Websites &amp; Bloggers:
+- <strong>: Apple uses iTunes, Huawei uses Huawei Phone Assistant, Xiaomi uses Xiaomi Device Transfer.</strong> Useful Websites &amp; Bloggers:.
 - <strong>Look Up Tips</strong>: Search "[Your Phone Model] tips" on Bilibili.
 - <strong>Watch Reviews</strong>: Watch review videos from several different bloggers.
 
@@ -23,13 +23,13 @@ kind: appendix
 
 #### Security Self-Check One-Sentence Checklist:
 
-1. Appendix E: Acknowledgments &amp; Notes
+1. Appendix E: Acknowledgments &amp; Notes.
 2. Thank you for sticking with this "phone course" to the end! During the writing process, we referenced extensive manufacturer official documentation, user manuals, and publicly available tech education articles to ensure accuracy of information.
-3. Technology evolves rapidly. The content in this book is based on mainstream technology and products at the time of writing. By the time you read this, there may already be new features and products available. We hope the thinking patterns and methods taught in this book will help you confidently face even more digital innovations in the future.
-4. Version 1.6 Update Highlights
+3. Technology evolves rapidly. The content in this book is based on mainstream technology and products at the time of writing. By the time you read this, there may already be new features and products available. We hope the thinking patterns and methods taught in this book will help you face even more digital innovations, in the future, with confidence.
+4. Version 1.6 Update Highlights.
 5. Expanded "Digital Asset Value &amp; Management Philosophy", added new "Image &amp; File System Management" chapter (time+event naming, categorization &amp; organization, 72-hour auto-cleanup, EXIF sanitization).
 
 #### Friendly Links · Two Other "Missing" Courses：
 
 - <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — An open-source Chinese introduction to computing; the idea for this book grew out of it.
-- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — A free MIT course on the shell, Git and the command line — things school rarely teaches but you use every day.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — A free MIT course on the shell, Git and the command line, things school rarely teaches but you use every day.

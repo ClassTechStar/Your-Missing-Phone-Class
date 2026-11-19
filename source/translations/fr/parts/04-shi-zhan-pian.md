@@ -10,4 +10,4 @@ class: mb-12
 ## V. Section pratique (Chapitres 27-32)
 
 {class="chapter-intro mb-4"}
-Après avoir assimilé les connaissances théoriques des vingt-six premiers chapitres, il est temps de les mettre en pratique. Ces six chapitres ne sont pas théoriques — de l'aide aux aînés pour régler leur smartphone à l'achat facile d'un nouvel appareil, en passant par l'instauration de saines habitudes numériques, le tutoriel pratique de duplication d'écran et de tournage de courtes vidéos, jusqu'au manuel de premiers secours numérique pour les situations d'urgence. Chaque chapitre est une compétence pratique immédiatement applicable.
+Après avoir assimilé les connaissances théoriques des vingt-six premiers chapitres, il est temps de les mettre en pratique. Ces six chapitres ne sont pas théoriques, de l'aide aux aînés pour régler leur smartphone à l'achat facile d'un nouvel appareil, en passant par l'instauration de saines habitudes numériques, le tutoriel pratique de duplication d'écran et de tournage de courtes vidéos, jusqu'au manuel de premiers secours numérique pour les situations d'urgence. Chaque chapitre est une compétence pratique immédiatement applicable.

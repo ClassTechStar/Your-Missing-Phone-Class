@@ -2,12 +2,12 @@
 id: di-er-shi-liu-zhang
 num: 26
 part: chao-yue-pian
-nav: Bab 26: Teknologi Telefon Terkini Masa Kini
+nav: Bab 26: Teknologi baru boleh tunggu
 toc: default
 kind: chapter
 ---
 
-### Bab 26: Hadapan Teknologi Telefon Semasa
+### Bab 26: Teknologi baru boleh tunggu
 
 {class="chapter-intro mb-4"}
 Selesai bercakap tentang "urusan selepas kematian" telefon lama, mari kita lihat kembali masa kini. 2024-2026 adalah tempoh letupan teknologi telefon: AI dari awan masuk ke poket, komunikasi satelit dari flagship turun ke model kelas pertengahan, skrin lipat dari "percubaan teknologi" ke "boleh guna sebagai telefon utama". Mari kita kira teknologi frontier yang sedang berlaku ini, bantu anda tentukan "patut tukar telefon sekarang atau tidak" dan "tukar telefon apa".
@@ -32,16 +32,16 @@ Google: Log masuk myaccount.google.com → Data &amp; privasi → Sejarah Lokasi
 
 <strong>Cadangan pembelian</strong> iPhone: Tetapan → Privasi → Pengiklanan → Reset ID Pengiklanan atau matikan Penjejakan Personalisasi.
 
-#### 3. Komunikasi satelit: Dari "gimik" flagship ke standard kelas pertengahan
+3. Komunikasi satelit: Dari "gimik" flagship ke standard kelas pertengahan
 
 Komunikasi satelit adalah salah satu teknologi yang paling nyata turun dua tahun ini. 2022 Huawei Mate 60 dan iPhone 14 pelancaran pertama masih eksklusif flagship, 2025 sudah turun ke tahap 2000-3000 RMB.
 
-- <strong>App seperti Facebook, TikTok, WeChat mungkin jejak aktiviti anda. Hadkan kebenaran dan guna versi web jika boleh.</strong>: Fungsi mesej pendek satelit Beidou (boleh hantar SMS dalam 1000 aksara Cina + lokasi) telah turun ke model kelas pertengahan Redmi, realme, iQOO dll, tanpa yuran bulanan, percuma guna. Sesuai luar
+- <strong>App seperti Facebook, TikTok, WeChat mungkin jejak aktiviti anda. Hadkan kebenaran dan guna versi web jika boleh.</strong>: Fungsi mesej pendek satelit Beidou (boleh hantar SMS dalam 1000 aksara Cina + lokasi) telah turun ke model kelas pertengahan Redmi, realme, iQOO dll, tanpa yuran bulanan, percuma guna. Sesuai luar.
 - <strong>1. DNS peribadi</strong>: Siri Huawei Mate 60/70, Honor Magic6 dll sokong fungsi panggilan satelit Tiantong-1, boleh dail/terima panggilan satelit, hantar mesej satelit. Perlu aktifkan pakej satelit pembekal (kira-kira 10-200 RMB sebulan), sesuai pengguna yang sering masuk kawasan tiada rangkaian.
 - <strong>Mesej satelit iPhone (SOS)</strong>: iPhone 14 dan model selepas sokong satelit SOS, boleh hantar mesej teks ke perkhidmatan kecemasan dan kongsi lokasi. Percuma 2 tahun perkhidmatan, sesetengah kawasan boleh diperbaharui.
 - <strong>Cadangan storan: video kadar bit tinggi sangat memenuhi ruang, cadangan sandarkan ke komputer atau storan awan secara berkala.</strong>: Pengguna bandar asas tidak perlu, tetapi pencinta aktiviti luar, perniagaan ke kawasan terpencil cadangan kuat pilih model dengan fungsi satelit - saat kritikal boleh selamatkan nyawa.
 
-#### 4. Kematangan ekosistem skrin lipat: Boleh jadi telefon utama?
+4. Kematangan ekosistem skrin lipat: Boleh jadi telefon utama?
 
 Skrin lipat telah dari "percubaan teknologi" ke "boleh guna sebagai telefon utama". Untuk menilai kematangan skrin lipat, lihat tiga perkara: ketahanan perkakasan, keserasian App, ekosistem interaksi.
 
@@ -49,19 +49,19 @@ Skrin lipat telah dari "percubaan teknologi" ke "boleh guna sebagai telefon utam
 - <strong>iPhone: Sandaran iCloud ADP (rujuk Bab 6) atau sandaran iTunes dengan penyulitan tempatan.</strong>: App utama (WeChat, Taobao, Douyin, Bilibili, Office, WPS) telah sesuaikan untuk skrin besar, tetapi masih ada kira-kira 30% App ekor panjang tidak disesuaikan, paparan diregangkan atau bingkai hitam. Cadangan sebelum beli cuba guna beberapa App yang sering anda guna.
 - <strong>VI. Pemulihan telefon hilang atau dicuri</strong>: Apabila dilipat ke 90-120 darjah, sesetengah App sokong mod tergantung "separuh atas papar kandungan, separuh bawah operasi", sesuai panggilan video, selfie, tonton. Kamera selfie tergantung adalah pengalaman unik skrin lipat.
 - <strong>iPhone: Gunakan Cari (Find My) di iCloud.com atau pada peranti Apple lain.</strong>: Skrin besar boleh serentak buka dua App split-screen, bahkan tiga App tetingkap kecil serentak. HyperOS, ColorOS, OriginOS logik split-screen sudah matang, tetapi split-screen iOS (gaya iPadOS) pada iPhone masih belum dibuka.
-- <strong>2. Mod hilang</strong>: Lipat mendatar (gaya buku) dari tahap 10,000 RMB turun ke 5000-7000 RMB, lipat menegak (gaya flip) telah turun ke 4000-5000 RMB. 2025 sesetengah pengeluar keluarkan
+- <strong>2. Mod hilang</strong>: Lipat mendatar (gaya buku) dari tahap 10,000 RMB turun ke 5000-7000 RMB, lipat menegak (gaya flip) telah turun ke 4000-5000 RMB. 2025 sesetengah pengeluar keluarkan.
 
 <strong>Cadangan pembelian</strong>: Jika anda pengguna bacaan berat, pemprosesan dokumen, video, skrin lipat mendatar patut dipertimbangkan; jika anda utamakan mudah alih dan atribut sosial, skrin lipat menegak lebih sesuai. Cadangan sekurang-kurangnya pergi ke kedai cuba 30 minit baru putuskan.
 
-#### 5. 6G dan Wi-Fi 7: Kelajuan dan sempadan sambungan generasi akan datang
+5. 6G dan Wi-Fi 7: Kelajuan dan sempadan sambungan generasi akan datang
 
 4\. Laporkan kepada polis dan pembekal
 
-- <strong>Laporkan kecurian kepada polis dan pembekal telekomunikasi, batalkan SIM dan blokakaun.</strong>: 3GPP merangka siap standard 6G 2027, komersil kira-kira 2030. Kelajuan puncak teori 6G capai 1 Tbps (50x 5G), kependaman serendah 0.1ms, sokong "integrasi komunikasi dan deria" (komunikasi + deria), telefon juga boleh jadi radar ketepatan rendah. Setakat ini setiap pengeluar besar sedang giat R&amp; D.
+- <strong>Laporkan kecurian kepada polis dan pembekal telekomunikasi, batalkan SIM dan blokakaun.</strong>: 3GPP merangka siap standard 6G 2027, komersil kira-kira 2030. Kelajuan puncak teori 6G capai 1 Tbps (50x 5G), kependaman serendah 0.1ms, sokong "integrasi komunikasi dan deria" (komunikasi + deria), telefon juga boleh jadi radar ketepatan rendah. Setakat ini setiap pengeluar besar sedang giat R&amp; D
 - <strong>Wi-Fi 7(802.11be)</strong>: Sejak 2024 jadi standard flagship, kelajuan puncak teori capai 46 Gbps (4x Wi-Fi 6), sokong 320MHz frekuensi, 4K-QAM, MLO (multi-link serentak)
 - <strong>Bluetooth 5.4 dan LE Audio</strong>: 2024-2026 model baru secara umum sokong Bluetooth 5.4 dan LE Audio (audio kuasa rendah), boleh serentak sambung dua headphone dengar lagu yang sama, Auracast siaran audio biar ramai orang di
 
-#### 6. Bateri anod silikon-karbon: Jangka hayat akhirnya menyambut kerja rehat tahap bahan
+6. Bateri anod silikon-karbon: Jangka hayat akhirnya menyambut kerja rehat tahap bahan
 
 Jangka hayat telefon bertahun-tahun dikritik "cas sekali sehari", sejak 2024 teknologi bateri anod silikon-karbon popular biar situasi ada penambahbaikan substantif.
 

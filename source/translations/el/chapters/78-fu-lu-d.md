@@ -32,4 +32,4 @@ after_part: fu-lu
 #### Χρήσιμοι σύνδεσμοι · Δύο ακόμη «μαθήματα που λείπουν»：
 
 - <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Ένα ανοιχτό κινεζικό εγχειρίδιο εισαγωγής στην πληροφορική· από την ιδέα του γεννήθηκε αυτό το βιβλίο.
-- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Ένα δωρεάν μάθημα του MIT για το κέλυφος, το Git και τη γραμμή εντολών — πράγματα που δεν διδάσκονται στο σχολείο αλλά χρησιμοποιούνται καθημερινά.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Ένα δωρεάν μάθημα του MIT για το κέλυφος, το Git και τη γραμμή εντολών, πράγματα που δεν διδάσκονται στο σχολείο αλλά χρησιμοποιούνται καθημερινά.

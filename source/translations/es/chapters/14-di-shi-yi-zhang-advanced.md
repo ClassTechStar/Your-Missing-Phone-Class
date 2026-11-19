@@ -11,7 +11,7 @@ kind: supplement
 {class="chapter-intro mb-4"}
 Para comprender verdaderamente los secretos de la fotografía y video móvil, necesitas conocimientos técnicos de imagen profesionales. Esto no solo te ayudará a usar mejor la cámara del móvil, sino también a tomar mejores decisiones al elegir equipo.
 
-#### 1. Resolución, tasa de frames y bitrate: los tres elementos de la calidad de video
+1. Resolución, tasa de frames y bitrate: los tres elementos de la calidad de video
 
 ##### Resolución:
 

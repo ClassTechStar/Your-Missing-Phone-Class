@@ -51,10 +51,10 @@ Les types de base courants de Swift
 Astuce : le principe « let d’abord »
 
 {class="mt-1"}
-La règle d’airain de la communauté Swift : par défaut let, et var seulement en cas de vraie nécessité. Si tu emploies var là où let suffirait, Xcode te le signalera en jaune. Cette habitude t’épargne toute une famille de bugs « variable modifiée par mégarde » — moins le code varie, plus il est facile à raisonner.
+La règle d’airain de la communauté Swift : par défaut let, et var seulement en cas de vraie nécessité. Si tu emploies var là où let suffirait, Xcode te le signalera en jaune. Cette habitude t’épargne toute une famille de bugs « variable modifiée par mégarde », moins le code varie, plus il est facile à raisonner.
 :::
 
-#### 2. Les optionnels (Optional) : le « talisman anti-plantage » de Swift
+2. Les optionnels (Optional) : le « talisman anti-plantage » de Swift
 
 C'est le concept le plus important de Swift, et de loin. En une phrase : quand une valeur peut « ne pas exister », Swift t'oblige à la traiter — le langage élimine à la racine le crash « pointeur nul », ce cauchemar de la profession.
 
@@ -87,10 +87,10 @@ print(len)
 Attention : le ! est une opération à haut risque
 
 {class="mt-1"}
-Écrire nickname! dans le code (déballage forcé), c'est crier au compilateur « je te garantis que ce n'est pas nil » — et si tu te trompes, l'App plante sur-le-champ. Règle de débutant : utilise autant que possible if let / ?? et bannis le !. Quand Xcode complète ton code, il glisse parfois un ! sans te le demander : pense à le retirer.
+Écrire nickname! dans le code (déballage forcé), c'est crier au compilateur « je te garantis que ce n'est pas nil », et si tu te trompes, l'App plante sur-le-champ. Règle de débutant : utilise autant que possible if let / ?? et bannis le !. Quand Xcode complète ton code, il glisse parfois un ! sans te le demander : pense à le retirer.
 :::
 
-#### 3. Fonctions et closures : empaqueter la logique en « boutons »
+3. Fonctions et closures : empaqueter la logique en « boutons »
 
 Une fonction, c'est une logique qui porte un nom, comme un bouton sur une télécommande. Une closure (fermeture), c'est une « fonction sans nom » que l'on peut passer à d'autres à la volée :
 
@@ -116,11 +116,11 @@ let big = numbers.filter { $0 > 2 }    // filtrer
 ```
 :::
 
-En SwiftUI, les closures sont partout : les accolades qui suivent le Button("Appuie-moi") { ... } d'un bouton forment une closure. Grave bien les combos de collections map, filter et sorted — 90 % du traitement des listes, à l'avenir, sera une combinaison de ces trois-là.
+En SwiftUI, les closures sont partout : les accolades qui suivent le Button("Appuie-moi") { ... } d'un bouton forment une closure. Grave bien les combos de collections map, filter et sorted, 90 % du traitement des listes, à l'avenir, sera une combinaison de ces trois-là.
 
 #### 4. Structures et protocoles : le système « LEGO » de Swift
 
-La préférence officielle de Swift est claire : privilégie les structures (struct) et n'utilise les classes (class) que pour l'héritage. La struct est un « type valeur » — chaque copie vit sa propre vie, ce qui élimine d'office toute une famille de bugs :
+La préférence officielle de Swift est claire : privilégie les structures (struct) et n'utilise les classes (class) que pour l'héritage. La struct est un « type valeur », chaque copie vit sa propre vie, ce qui élimine d'office toute une famille de bugs :
 
 ::: div .code-block
 :::inline div .code-head
@@ -147,7 +147,7 @@ struct Record: Identifiable { ... }   // adopter le protocole = promettre de rem
 ```
 :::
 
-En SwiftUI, presque tout est une struct (View est un protocole). Pas grave si tu ne le saisis pas encore : tu t'y frotteras chaque jour au chapitre 62 — dans le monde de Swift, adopte d'abord la struct.
+En SwiftUI, presque tout est une struct (View est un protocole). Pas grave si tu ne le saisis pas encore : tu t'y frotteras chaque jour au chapitre 62, dans le monde de Swift, adopte d'abord la struct.
 
 #### 5. La fiche mémo de syntaxe pour grands débutants
 
@@ -173,7 +173,7 @@ Si tu as un Mac, ouvre Xcode → Playground ; sinon, prends Swift Playgrounds su
 Résumé du chapitre
 
 - let en priorité, var avec parcimonie ; le type se déduit tout seul, mais une déclaration explicite après le deux-points reste possible
-- Les optionnels sont l'âme de Swift : une valeur potentiellement vide doit être traitée — if let / ?? sont tes talismans, le ! est une opération à haut risque
+- Les optionnels sont l'âme de Swift : une valeur potentiellement vide doit être traitée, if let / ?? sont tes talismans, le ! est une opération à haut risque
 - Les appels de fonction portent le nom des paramètres ; une closure = une fonction sans nom, omniprésente en SwiftUI
 - Privilégie la struct et respecte les protocoles (Protocol) ; en SwiftUI, presque tout est une struct
 - 20 % de la syntaxe fait 80 % du travail : d'abord savoir s'en servir, la maîtrise viendra ensuite

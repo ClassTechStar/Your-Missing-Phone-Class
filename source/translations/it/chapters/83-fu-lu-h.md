@@ -14,10 +14,10 @@ Questo libro continua a essere aggiornato. Qui sotto trovi le direzioni pianific
 
 ::: div .success-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-v1.8 già realizzato: aggiunte la settima, l'ottava e la nona parte — "Programmazione con l'AI in pratica", "Sviluppo Android in pratica" e "Sviluppo iOS in pratica" (Capitoli 37-69, in tutto 33 capitoli)
+v1.8 già realizzato: aggiunte la settima, l'ottava e la nona parte, "Programmazione con l'AI in pratica", "Sviluppo Android in pratica" e "Sviluppo iOS in pratica" (Capitoli 37-69, in tutto 33 capitoli)
 
 {class="mt-1"}
-Dalla rivoluzione di paradigma della programmazione con l'AI ai cinque principi di pensiero, dal context engineering all'ingegneria dei requisiti, dal panorama degli strumenti e dei modelli del 2026 alla pratica con le API, dal conversation engineering ai tre progetti completi, fino alla garanzia della qualità e al percorso di crescita — ti porta dal "saper usare l'AI" al "dirigere l'AI che scrive codice"; poi la catena di sviluppo completa delle due grandi piattaforme Android e iOS: configurazione dell'ambiente (Android Studio / Xcode), apprendimento rapido del linguaggio (Kotlin / Swift), framework di interfaccia (Jetpack Compose / SwiftUI), dati e rete, progetti pratici (registro delle spese + app meteo), test e pubblicazione (Google Play / App Store) e manuale di consultazione rapida — ti accompagna da semplice utente digitale fino a diventare sviluppatore di App.
+Dalla rivoluzione di paradigma della programmazione con l'AI ai cinque principi di pensiero, dal context engineering all'ingegneria dei requisiti, dal panorama degli strumenti e dei modelli del 2026 alla pratica con le API, dal conversation engineering ai tre progetti completi, fino alla garanzia della qualità e al percorso di crescita: ti porta dal "saper usare l'AI" al "dirigere l'AI che scrive codice"; poi la catena di sviluppo completa delle due grandi piattaforme Android e iOS: configurazione dell'ambiente (Android Studio / Xcode), apprendimento rapido del linguaggio (Kotlin / Swift), framework di interfaccia (Jetpack Compose / SwiftUI), dati e rete, progetti pratici (registro delle spese + app meteo), test e pubblicazione (Google Play / App Store) e manuale di consultazione rapida, ti accompagna da semplice utente digitale fino a diventare sviluppatore di App.
 :::
 
 ::: div .info-box .rounded-lg .p-4

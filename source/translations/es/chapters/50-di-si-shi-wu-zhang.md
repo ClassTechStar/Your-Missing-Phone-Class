@@ -2,12 +2,12 @@
 id: di-si-shi-wu-zhang
 num: 45
 part: ai-biancheng-pian
-nav: Capítulo 45: Garantía de calidad — que el código escrito por la IA sea fiable
+nav: Capítulo 45: La IA escribe, pero el trabajo no acaba
 toc: default
 kind: chapter
 ---
 
-### Capítulo 45: Garantía de calidad — que el código escrito por la IA sea fiable
+### Capítulo 45: La IA escribe, pero el trabajo no acaba
 
 {class="chapter-intro mb-4"}
 El código escrito por la IA tiene un rasgo característico: suele "parecer correcto", con nombres de variables bien puestos, comentarios completos y lógica clara. Pero "parecer correcto" no es "ser correcto". Los problemas escondidos en el código de la IA suelen ser más difíciles de descubrir que en el escrito a mano, porque su calidad superficial es tan alta que invita a bajar la guardia. Este capítulo te enseña a montar un sistema eficaz de garantía de calidad para el código de la IA: con tres líneas de defensa (pruebas, revisión y control de versiones) pasaremos de "parece correcto" a "es correcto".
@@ -58,7 +58,7 @@ Dimensiones clave de la revisión del código de la IA
 
 No tienes que comprobarlo todo tú mismo: puedes pedirle a la IA que haga la primera ronda de revisión. Una instrucción como: "revisa la seguridad, el manejo de errores y el rendimiento de este código y señala los posibles problemas". La capacidad de autorrevisión de la IA mejora sin parar; no sustituye del todo a la revisión humana, pero te filtra la mayoría de los problemas evidentes.
 
-#### III. Control de versiones: el papel de Git en la programación con IA
+III. Control de versiones: el papel de Git en la programación con IA
 
 En la programación con IA, Git importa todavía más que en la programación tradicional. Como cada cambio de la IA puede traer variaciones imprevisibles, necesitas un "remedio" fiable: el control de versiones es ese remedio.
 

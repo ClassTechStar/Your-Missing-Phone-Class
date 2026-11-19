@@ -93,7 +93,7 @@ Guna VPN untuk akses selamat ke rangkaian syarikat dari lokasi jauh.
 2. Guna telefon buka satu foto atau satu video.
 3. Cuba pelancangan skrin wayarles (iPhone guna cermin skrin, Android guna butang pelancangan skrin wayarles).
 4. Jika gagal, semak TV sama ada sokong protokol sepadan, atau cuba DLNA tolak (dalam App album/video ketik butang "pelancangan skrin").
-5. 1. Papan kekunci Bluetooth
+5. 1. Papan kekunci Bluetooth.
 :::
 
 ::: div .chapter-summary
@@ -105,5 +105,5 @@ Guna VPN untuk akses selamat ke rangkaian syarikat dari lokasi jauh.
 - 2. Tetikus Bluetooth
 - Samsung DeX/Mod desktop Huawei buat telefon berubah komputer pejabat ringan
 - Sambungan kereta: CarPlay/Android Auto/HiCar/CarLife empat skim utama
-- Hub USB-C dengan port HDMI, USB-A, SD card untuk sambung berbilang peranti.
+- Hub USB-C dengan port HDMI, USB-A, SD card untuk sambung berbilang peranti
 :::

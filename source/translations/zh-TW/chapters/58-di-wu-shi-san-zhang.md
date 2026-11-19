@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十三章：資料儲存與網路請求
 
 {class="chapter-intro mb-4"}
-一個只能"看"的 App 是死的；能存資料、能連網路的 App 才是活的。這一章認識安卓資料層的"三件套"：DataStore（存小配置）、Room（存結構化資料）、Retrofit（和伺服器對話），外加它們的"總排程"——協程。學完這章，你就能寫會記住使用者習慣、會實時更新內容的真 App 了。
+一個只能"看"的 App 是死的；能存資料、能連網路的 App 才是活的。這一章認識安卓資料層的"三件套"：DataStore（存小配置）、Room（存結構化資料）、Retrofit（和伺服器對話），外加它們的"總排程"，協程。學完這章，你就能寫會記住使用者習慣、會實時更新內容的真 App 了。
 
 #### 一、儲存方案怎麼選：先看這張表
 
@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 資料三件套的分工
 
-記一個口訣："小配置進 DataStore，成批資料進 Room，外面的資料走 Retrofit"。舊教學裡常見的 SharedPreferences 已被 DataStore 取代，SQLite 手寫 SQL 也已被 Room 取代——直接學新的，別走老路。
+記一個口訣："小配置進 DataStore，成批資料進 Room，外面的資料走 Retrofit"。舊教學裡常見的 SharedPreferences 已被 DataStore 取代，SQLite 手寫 SQL 也已被 Room 取代：直接學新的，別走老路。
 
 #### 二、DataStore：存點小配置
 
@@ -50,11 +50,11 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 ```
 :::
 
-注意返回的是 Flow——一個會"流動"的資料流。值一旦改變，所有觀察它的地方自動收到新值。這個概念（響應式）是安卓現代的基石，第 54 章會實戰。
+注意返回的是 Flow，一個會"流動"的資料流。值一旦改變，所有觀察它的地方自動收到新值。這個概念（響應式）是安卓現代的基石，第 54 章會實戰。
 
 #### 三、Room：給資料安個"真正的家"
 
-記帳本有成百上千筆賬，還要按分類、按月份查詢統計——這需要資料庫。Room 是 SQLite 的官方封裝，把"建表、查資料"變得像寫 Kotlin 一樣自然。三樣東西：
+記帳本有成百上千筆賬，還要按分類、按月份查詢統計：這需要資料庫。Room 是 SQLite 的官方封裝，把"建表、查資料"變得像寫 Kotlin 一樣自然。三樣東西：
 
 ::: div .code-block
 :::inline div .code-head
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-這套"三件套"模板可以原樣搬進你的任何專案——換換欄位名就行。查詢返回 Flow，介面跟著資料自動重新整理，妙不可言。
+這套"三件套"模板可以原樣搬進你的任何專案，換換欄位名就行。查詢返回 Flow，介面跟著資料自動重新整理，妙不可言。
 
 #### 四、Retrofit：和伺服器說話
 
@@ -131,12 +131,12 @@ val result = api.getWeather("北京")
 避坑提醒：兩條網路鐵律
 
 {class="mt-1"}
-① 網路請求絕不能在主執行緒做——會卡死介面甚至崩潰（NetworkOnMainThreadException）。所有網路呼叫必須放在協程（viewModelScope.launch）裡。② 明文 HTTP 預設被禁止：安卓 9 起要求 HTTPS。測試時若要用 http:// 的本地地址，需要在 Manifest 裡顯式宣告 usesCleartextTraffic——但正式產品必須全走 HTTPS。
+① 網路請求絕不能在主執行緒做，會卡死介面甚至崩潰（NetworkOnMainThreadException）。所有網路呼叫必須放在協程（viewModelScope.launch）裡。② 明文 HTTP 預設被禁止：安卓 9 起要求 HTTPS。測試時若要用 http:// 的本地地址，需要在 Manifest 裡顯式宣告 usesCleartextTraffic，但正式產品必須全走 HTTPS。
 :::
 
 #### 五、JSON 解析：給網路資料"翻譯"
 
-伺服器返回的資料大多是 JSON——一串像"巢狀字典"的文字。Retrofit 需要一個"翻譯官"把它變成 Kotlin 物件。2026 年的兩大主流方案：
+伺服器返回的資料大多是 JSON：一串像"巢狀字典"的文字。Retrofit 需要一個"翻譯官"把它變成 Kotlin 物件。2026 年的兩大主流方案：
 
 ::: div .overflow-x-auto
 ```html
@@ -166,7 +166,7 @@ data class WeatherResponse(
 ```
 :::
 
-無論哪種方案，鐵律都是：先看真實返回的 JSON，再定義欄位。很多"解析失敗"的 bug，都是因為欄位名寫錯、巢狀層級猜錯——把原始 JSON 列印出來對照，十秒定位。
+無論哪種方案，鐵律都是：先看真實返回的 JSON，再定義欄位。很多"解析失敗"的 bug，都是因為欄位名寫錯、巢狀層級猜錯，把原始 JSON 列印出來對照，十秒定位。
 
 #### 六、協程：安卓併發的"普通話"
 
@@ -198,7 +198,7 @@ viewModelScope.launch {
 來動手：做一個"每日一句"小應用
 
 {class="mt-1"}
-找一個免費的名言 API（比如 hitokoto 之類），用 Retrofit 拉取"每日一句"，顯示在螢幕中央，加個"換一句"按鈕（協程裡重新請求）。再把喜歡的句子用 Room 存進"收藏夾"。這個練習把 DataStore/Room/Retrofit/協程全用了一遍——做完它，第 7、8 章就是小菜一碟。
+找一個免費的名言 API（比如 hitokoto 之類），用 Retrofit 拉取"每日一句"，顯示在螢幕中央，加個"換一句"按鈕（協程裡重新請求）。再把喜歡的句子用 Room 存進"收藏夾"。這個練習把 DataStore/Room/Retrofit/協程全用了一遍：做完它，第 7、8 章就是小菜一碟。
 :::
 
 ::: div .chapter-summary

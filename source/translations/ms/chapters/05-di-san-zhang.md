@@ -2,17 +2,17 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Bab 3: Sambungkan Telefon kepada "Talian Nyawa"
+nav: Bab 3: Rangkaian putus? Jangan tergesa-gesa mula semula
 toc: default
 kind: chapter
 ---
 
-### Bab 3: Sambungkan Telefon ke "Garis Hayat" — Rangkaian
+### Bab 3: Rangkaian putus? Jangan tergesa-gesa mula semula
 
 {class="chapter-intro mb-4"}
-Tanpa rangkaian, telefon pintar kehilangan separuh "kecerdasannya". Rangkaian adalah garis hayat telefon moden — memahaminya, menggunakannya dengan baik, dan melindunginya adalah mata pelajaran wajib bagi setiap pengguna telefon.
+Tanpa rangkaian, telefon pintar kehilangan separuh "kecerdasannya". Rangkaian adalah garis hayat telefon moden, memahaminya, menggunakannya dengan baik, dan melindunginya adalah mata pelajaran wajib bagi setiap pengguna telefon.
 
-#### Sifar, Tidak Keliru dengan Rangkaian — Bezakan "Jalan" dan "Kenderaan" Wi-Fi dan Data Mudah Alih
+Sifar, Tidak Keliru dengan Rangkaian — Bezakan "Jalan" dan "Kenderaan" Wi-Fi dan Data Mudah Alih
 
 Bayangkan internet sebagai sebuah bandar.<strong>"Jalan"</strong> ialah laluan antara telefon anda dan internet,
 
@@ -45,7 +45,7 @@ Dari segi keselamatan, data mudah alih biasanya lebih selamat daripada Wi-Fi awa
 {class="font-semibold mt-4 mb-1"}
 ##### kandungan HTTP yang tidak disulitkan
 
-; manakala mesej WeChat, kata laluan log masuk App perbankan dan lain-lain yang disulitkan melalui HTTPS, penyerang <strong>tidak dapat membaca secara langsung</strong>— melainkan melaksanakan serangan penyingkiran SSL yang lebih kompleks dan pengguna mengabaikan amaran sijil. Namun begitu, apabila melakukan operasi pembayaran di luar, menggunakan data mudah alih telefon secara langsung masih merupakan pilihan paling selamat.<strong>Peringatan Keselamatan</strong> Di tempat awam seperti lapangan terbang, pusat membeli-belah, dan kafe, jangan sambung ke Wi-Fi percuma yang namanya mencurigakan (seperti "Free_WiFi_2024"). Walaupun bersambung, jangan sekali-kali log masuk ke App perbankan atau memasukkan kata laluan di atasnya.<strong>4. Pengesanan di Telefon: Fahami "Kod Rahsia" Bar Status</strong> Bagaimana mengetahui telefon anda kini menggunakan kaedah sambungan apa? Menggunakan telefon Huawei sebagai contoh, apabila
+; manakala mesej WeChat, kata laluan log masuk App perbankan dan lain-lain yang disulitkan melalui HTTPS, penyerang <strong>tidak dapat membaca secara langsung</strong>— melainkan melaksanakan serangan ,penyingkiran SSL yang lebih kompleks dan pengguna mengabaikan amaran sijil. Namun begitu, apabila melakukan operasi pembayaran di luar, menggunakan data mudah alih telefon secara langsung masih merupakan pilihan paling selamat.<strong>Peringatan Keselamatan</strong> Di tempat awam seperti lapangan terbang, pusat membeli-belah, dan kafe, jangan sambung ke Wi-Fi percuma yang namanya mencurigakan (seperti "Free_WiFi_2024"). Walaupun bersambung, jangan sekali-kali log masuk ke App perbankan atau memasukkan kata laluan di atasnya.<strong>4. Pengesanan di Telefon: Fahami "Kod Rahsia" Bar Status</strong> Bagaimana mengetahui telefon anda kini menggunakan kaedah sambungan apa? Menggunakan telefon Huawei sebagai contoh, apabila
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -69,7 +69,7 @@ Satu, Rangkaian Mudah Alih (4G/5G) dan Data Mudah Alih <strong>Rangkaian mudah a
 
 ##### : Kelajuan pantas (secara teori tertinggi 10Gbps), tetapi liputan masih dalam penambahbaikan, penggunaan kuasa tinggi. Sesuai untuk memuat turun fail besar dan menonton video definisi tinggi.
 
-- <strong>5G SA vs NSA</strong>: SA ialah rangkaian mandiri, NSA bergantung pada stesen pangkalan 4G. Pengalaman SA lebih baik, tetapi memerlukan pengendali dan telefon yang menyokong.
+- <strong>5G SA vs NSA</strong>: SA ialah rangkaian mandiri, NSA bergantung pada stesen pangkalan 4G. Pengalaman SA lebih baik, tetapi memerlukan pengendali dan telefon yang menyokong
 - <strong>Hadkan aktiviti latar belakang</strong> Apakah data mudah alih
 - <strong>: Ia adalah jumlah data yang dihasilkan semasa telefon melayari internet. Menonton video dan melayari gambar paling banyak menggunakan data, manakala teks dan suara secara relatif menjimatkan.</strong> Tip menjimatkan data
 
@@ -165,9 +165,9 @@ Standard Wi-Fi ditetapkan oleh IEEE, setiap generasi mempunyai peningkatan yang 
 - Tiga, Bluetooth: Pemain Serbaguna Komunikasi Wayarles Jarak Dekat
 - Bluetooth mungkin merupakan teknologi wayarles yang paling kerap digunakan pada telefon anda — fon telinga wayarles, jam pintar, sistem kereta, papan kekunci dan tetikus, semuanya bergantung padanya.
 - Prinsip Teknologi:
-- Bluetooth beroperasi pada jalur ISM 2.4GHz, menggunakan teknologi penyebaran spektrum lompat frekuensi (FHSS) untuk menyebarkan data dan bertukar-tukar penghantaran secara pantas merentasi 79 saluran, mengelakkan gangguan dengan berkesan. Jarak komunikasi Bluetooth dibahagikan kepada tiga kelas: Kelas 1 kira-kira 100 meter, Kelas 2 kira-kira 10 meter (biasa digunakan pada telefon), Kelas 3 kira-kira 1 meter.
+- Bluetooth beroperasi pada jalur ISM 2.4GHz, menggunakan teknologi penyebaran spektrum lompat frekuensi (FHSS) untuk ,menyebarkan data dan bertukar-tukar penghantaran secara pantas merentasi 79 saluran, mengelakkan gangguan dengan berkesan. Jarak komunikasi Bluetooth dibahagikan kepada tiga kelas: Kelas 1 kira-kira 100 meter, Kelas 2 kira-kira 10 meter (biasa digunakan pada telefon), Kelas 3 kira-kira 1 meter.
 
-#### Tiga, Bluetooth: Pemain Serbaguna Komunikasi Wayarles Jarak Dekat
+Tiga, Bluetooth: Pemain Serbaguna Komunikasi Wayarles Jarak Dekat
 
 Bluetooth 4.0
 
@@ -182,7 +182,7 @@ Bluetooth 4.2
 - <strong>Bluetooth 5.2</strong>: Standard baharu LE Audio, menyokong pengekodan LC3 (kualiti audio lebih baik, penggunaan kuasa lebih rendah), audio berbilang aliran, audio siaran.
 - <strong>Bluetooth 5.3/5.4</strong>: Mengoptimumkan lagi penggunaan kuasa dan kestabilan sambungan, mengukuhkan siaran berkala.
 - <strong>Penyebaran LE Audio</strong>: Pada 2024-2025, LE Audio telah memasuki fasa penyebaran pantas. Fon telinga benar-benar wayarles baharu jenama utama (seperti Huawei FreeBuds Pro 4, Xiaomi Buds 5 Pro, Samsung Galaxy Buds3 dan lain-lain) telah menyokong LE Audio dan pengekodan LC3, menyediakan kependaman lebih rendah dan kualiti audio lebih baik. Apabila membeli fon telinga baharu, disyorkan untuk mengutamakan produk yang menyokong LE Audio.
-- <strong>Senario Penggunaan:</strong> Penghantaran audio
+- <strong>Senario Penggunaan:</strong> Penghantaran audio.
 
 <strong>: Fon telinga wayarles, audio kereta. LE Audio Bluetooth 5.2 menjadikan kualiti audio dan kependaman melonjak secara kualitatif.</strong>: 2025-2026, LE Audio telah memasuki fasa populariti pesat. Fon kepala tanpa wayar baharu jenama utama (seperti Huawei FreeBuds Pro 5, Xiaomi Buds 6 Pro, Samsung Galaxy Buds3 Pro dll) telah menyokong LE Audio dan pengekodan LC3, menyediakan kependaman lebih rendah dan kualiti bunyi lebih baik. Apabila membeli fon kepala baharu, disyorkan utamakan produk yang menyokong LE Audio.
 
@@ -192,9 +192,9 @@ Bluetooth 4.2
 - <strong>Perkhidmatan lokasi</strong>: Bluetooth Beacon digunakan untuk navigasi dalaman, penjejakan barang (seperti Apple AirTag).
 - <strong>Rumah pintar</strong>: Rangkaian Bluetooth Mesh mengawal mentol lampu, kunci pintu dan lain-lain.
 - <strong>Empat, Kawalan Inframerah: Telefon Berubah Menjadi Kawalan Jauh Serbaguna</strong> Kawalan inframerah adalah salah satu teknologi kawalan wayarles tertua, tetapi masih praktikal pada telefon. Sebahagian telefon Android (seperti beberapa model Xiaomi, Huawei) mempunyai pemancar inframerah terbina dalam, boleh mengawal TV, penyaman udara, kotak atas set dan lain-lain peranti.
-- <strong>Rumah pintar</strong> Kawalan inframerah menghantar isyarat denyut cahaya inframerah pada frekuensi tertentu (biasanya 38kHz) melalui diod pemancar cahaya inframerah, dan penerima inframerah peranti menyahkod denyutan ini untuk melaksanakan operasi yang sepadan. Jenama berbeza menggunakan protokol pengekodan berbeza, yang biasa termasuk NEC, RC5, RC6, SONY dan lain-lain. App inframerah dalam telefon mempunyai pustaka pengekodan pelbagai jenama terbina dalam, hanya pilih jenama dan model untuk dipadankan.
+- <strong>Rumah pintar</strong> Kawalan inframerah menghantar isyarat denyut cahaya inframerah ,pada frekuensi tertentu (biasanya 38kHz) melalui diod pemancar cahaya inframerah, dan penerima inframerah peranti menyahkod denyutan ini untuk melaksanakan operasi yang sepadan. Jenama berbeza menggunakan protokol pengekodan berbeza, yang biasa termasuk NEC, RC5, RC6, SONY dan lain-lain. App inframerah dalam telefon mempunyai pustaka pengekodan pelbagai jenama terbina dalam, hanya pilih jenama dan model untuk dipadankan.
 
-#### Empat, Kawalan Inframerah: Telefon Berubah Menjadi Kawalan Jauh Serbaguna
+Empat, Kawalan Inframerah: Telefon Berubah Menjadi Kawalan Jauh Serbaguna
 
 Kearahan
 
@@ -206,7 +206,7 @@ Jarak pendek
 
 - <strong>Apple tidak menyokong</strong>: iPhone tidak mempunyai pemancar inframerah, tidak boleh menggunakan fungsi ini.
 - <strong>Lima, NFC: Sihir Sentuhan</strong> NFC (Near Field Communication, Komunikasi Medan Dekat) adalah teknologi komunikasi wayarles frekuensi tinggi pada jarak sangat pendek (dalam 10 sentimeter), beroperasi pada frekuensi 13.56MHz, kadar penghantaran tertinggi 424Kbps.
-- <strong>Prinsip dan Mod Komunikasi:</strong> NFC berkembang daripada teknologi RFID, menyokong tiga mod operasi:
+- <strong>Prinsip dan Mod Komunikasi:</strong> NFC berkembang daripada teknologi RFID, menyokong tiga mod operasi:.
 
 #### Lima, NFC: Sihir Sentuhan
 
@@ -216,7 +216,7 @@ Jarak pendek
 
 : Dua peranti NFC menghantar data antara satu sama lain, seperti Android Beam (telah dihentikan).
 
-- <strong>Mod simulasi kad</strong>: Telefon menyimulasikan kad pintar, ini adalah mod yang paling kerap digunakan — kad bas, kad akses, kad bank semuanya menggunakan mod ini.
+- <strong>Mod simulasi kad</strong>: Telefon menyimulasikan kad pintar, ini adalah mod yang paling kerap digunakan: kad bas, kad akses, kad bank semuanya menggunakan mod ini
 - <strong>Mekanisme Keselamatan:</strong> Jarak ultra pendek
 - <strong>: Jarak komunikasi dalam 10 sentimeter itu sendiri adalah jaminan keselamatan fizikal, penyadapan jarak jauh hampir mustahil.</strong> Cip selamat
 
@@ -234,7 +234,7 @@ Jarak pendek
 - <strong>Rumah pintar</strong> Apabila anda mempunyai lebihan data, anda boleh mengaktifkan hotspot untuk digunakan oleh tablet dan komputer.
 - <strong>Kaedah pengaktifan</strong>: Tetapan &gt; Hotspot Peribadi/Perkongsian Rangkaian, aktifkannya.
 
-#### Enam, Hotspot Peribadi: Jadikan Telefon sebagai Penghala Wi-Fi
+Enam, Hotspot Peribadi: Jadikan Telefon sebagai Penghala Wi-Fi
 
 : Sangat menggunakan kuasa bateri dan data, ingat untuk menetapkan kata laluan yang kompleks, dan hadkan bilangan peranti yang bersambung.
 
@@ -247,7 +247,7 @@ Jarak pendek
 <i class="fas fa-hands mr-2"></i>Bab 4: Pasang dan Urus Aplikasi — "Pakej Kemahiran" Telefon
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. Aplikasi menjadikan telefon mampu melakukan apa sahaja, tetapi perlu diurus dengan baik. Sama seperti anda menyusun tempat duduk dan memperuntukkan kebenaran untuk pekerja baharu, memasang App juga memerlukan satu set proses piawaian.
+1. Aplikasi menjadikan telefon mampu melakukan apa sahaja, tetapi perlu diurus dengan baik. Sama seperti anda menyusun tempat duduk dan memperuntukkan kebenaran untuk pekerja baharu, memasang App juga memerlukan satu set proses piawaian
 2. Satu, Kedai Rasmi: "Supermarket Aplikasi" Paling Selamat
 3. Android
 :::

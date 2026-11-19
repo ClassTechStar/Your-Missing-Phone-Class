@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 54: Project 1 — My Expense Tracker (Local Version)
 
 {class="chapter-intro mb-4"}
-Welcome to your first "real project." This expense tracker never goes online, but it has everything it needs: record a transaction, view the ledger, see monthly summaries, delete and edit. Finishing it means you've walked the full "data → logic → UI" pipeline from start to end. Don't rush to copy code — think it through first, then build. That's our standing principle.
+Welcome to your first "real project." This expense tracker never goes online, but it has everything it needs: record a transaction, view the ledger, see monthly summaries, delete and edit. Finishing it means you've walked the full "data → logic → UI" pipeline from start to end. Don't rush to copy code, think it through first, then build. That's our standing principle.
 
 #### 1. Thinking Through Requirements: Ask Five Questions First
 
@@ -29,7 +29,7 @@ Then break it into small steps where "every step is usable": (1) build the Room 
 
 #### 2. The Data Layer: Giving Each Transaction a Home
 
-First define what one transaction looks like — enough fields to be useful, but don't get greedy:
+First define what one transaction looks like, enough fields to be useful, but don't get greedy:
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +49,7 @@ data class Record(
 ```
 :::
 
-Add two "summary" queries to the Dao — these are the soul of the tracker:
+Add two "summary" queries to the Dao, these are the soul of the tracker:
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,7 +82,7 @@ interface RecordDao {
 Tip: why use Double for amounts?
 
 {class="mt-1"}
-Rigorous finance apps use BigDecimal or "an Int counted in cents" to avoid floating-point errors (the old 0.1 + 0.2 ≠ 0.3 problem). For a practice project, Double is plenty; if you ever build a real financial product, remember to switch to cents as the unit — it's a pitfall countless developers before you have stumbled into.
+Rigorous finance apps use BigDecimal or "an Int counted in cents" to avoid floating-point errors (the old 0.1 + 0.2 ≠ 0.3 problem). For a practice project, Double is plenty; if you ever build a real financial product, remember to switch to cents as the unit, it's a pitfall countless developers before you have stumbled into.
 :::
 
 #### 3. MVVM: UI and Logic "Live Apart"
@@ -129,7 +129,7 @@ In the UI (Compose) you'd write: val vm: RecordViewModel = viewModel(), then val
 
 #### 4. The UI: List Screen + Entry Screen
 
-The list screen uses LazyColumn (a lazy-loading list) — smooth no matter how much data:
+The list screen uses LazyColumn (a lazy-loading list), smooth no matter how much data:
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,7 +203,7 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-Two bits of interaction wisdom: deleting always needs a second confirmation (to prevent fat-finger slips), and editing should pre-fill the original values (fixing one character beats retyping everything). Don't underestimate these details — that "polished product" feel is built exactly from details like these.
+Two bits of interaction wisdom: deleting always needs a second confirmation (to prevent fat-finger slips), and editing should pre-fill the original values (fixing one character beats retyping everything). Don't underestimate these details, that "polished product" feel is built exactly from details like these.
 
 #### 6. Acceptance: a three-layer check + two advanced challenges
 
@@ -212,14 +212,14 @@ When the project is done, accept it across three layers: "features → edge case
 Once the basic version passes acceptance, serve yourself two "advanced dishes":
 
 1. Monthly filter: add a month switcher at the top (e.g., 2026-08 ▾) so the list shows only that month's transactions;
-2. Category pie chart: use Compose's Canvas or add a lightweight charting library to draw "where the money went" as a pie chart — finish this and the tracker starts to look like a real product.
+2. Category pie chart: use Compose's Canvas or add a lightweight charting library to draw "where the money went" as a pie chart, finish this and the tracker starts to look like a real product.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Hands-on: finish it this week
 
 {class="mt-1"}
-Build in this order: "data layer → ViewModel → list screen → entry screen → summary card," one step a day. When stuck, paste the error as-is into a search engine or an AI (remember Part 7, "AI Coding in Practice"? When describing a problem, spell out the "expected behavior, actual behavior, and steps to reproduce"). Once it's done, track a week of spending with it — using an app you built yourself gives you a sense of achievement that pushes you forward.
+Build in this order: "data layer → ViewModel → list screen → entry screen → summary card". One step a day. When stuck, paste the error as-is into a search engine or an AI (remember Part 7, "AI Coding in Practice"?). When describing a problem, spell out the "expected behavior, actual behavior, and steps to reproduce". Once it's done, track a week of spending with it. Using an app you built yourself gives you a sense of achievement that pushes you forward.
 :::
 
 ::: div .chapter-summary

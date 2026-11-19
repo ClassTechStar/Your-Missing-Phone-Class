@@ -2,17 +2,17 @@
 id: di-san-shi-er-zhang
 num: 32
 part: shi-zhan-pian
-nav: Capitolo 32: Manuale di pronto soccorso per la sicurezza dello smartphone
+nav: Capitolo 32: Problemi? Trenta secondi per limitare i danni
 toc: default
 kind: chapter
 ---
 
-### Capitolo 32: Manuale di pronto soccorso per la sicurezza del telefono
+### Capitolo 32: Problemi? Trenta secondi per limitare i danni
 
 {class="chapter-intro mb-4"}
 Questo capitolo è un «piano di emergenza». Speriamo non ti serva mai, ma se perdi il telefono, te lo rubano o subisci una truffa, questo manuale ti aiuta a ridurre i danni al minimo; in caso di terremoti, pioggia intensa o altre calamità, il telefono è anche lo strumento per ricevere allerte, localizzarti e restare in contatto. Ti consigliamo di leggerlo adesso, poi fai uno screenshot dei passaggi chiave o stampalo e tienilo in casa: quando succede qualcosa il telefono potrebbe non essere più con te, e in caso di calamità potrebbe essere scarico o senza segnale.
 
-#### Scenario zero: terremoto / maltempo estremo — come il telefono può salvarti la vita
+Scenario zero: terremoto / maltempo estremo — come il telefono può salvarti la vita
 
 Qui si protegge la sicurezza personale, non il denaro sugli account. Per le impostazioni di allerta vedi Capitolo 13 «Allerte meteo, calamità naturali e terremoti»; qui parliamo solo di cosa fare dopo lo scatto dell'allarme.
 
@@ -84,15 +84,15 @@ Se ti rendi conto di essere stato truffato, la cosa più importante è restare c
 
 #### Scenario tre: il telefono ha un virus/trojan — cosa fare?
 
-Se noti questi sintomi — annunci che spuntano dal nulla, app strane che si installano da sole, costi in bolletta alle stelle, consumo di dati anomalo — è molto probabile che ci sia malware:
+Se noti questi sintomi, annunci che spuntano dal nulla, app strane che si installano da sole, costi in bolletta alle stelle, consumo di dati anomalo, è molto probabile che ci sia malware:
 
-- Passo 1: modalità provvisoria — su Android tieni premuto il tasto di accensione per spegnere, poi tienilo premuto per riaccendere; quando vibra, tieni premuto il tasto volume giù finché non compare la «Modalità provvisoria» (in basso a sinistra). In modalità provvisoria tutte le app di terze parti sono disattivate e puoi individuare il problema.
-- Passo 2: disinstalla le app sospette — in modalità provvisoria vai in Impostazioni > Gestione app, ordina per data e disinstalla le app sconosciute installate di recente.
+- Passo 1: modalità provvisoria, su Android tieni premuto il tasto di accensione per spegnere, poi tienilo premuto per riaccendere; quando vibra, tieni premuto il tasto volume giù finché non compare la «Modalità provvisoria» (in basso a sinistra). In modalità provvisoria tutte le app di terze parti sono disattivate e puoi individuare il problema.
+- Passo 2: disinstalla le app sospette: in modalità provvisoria vai in Impostazioni > Gestione app, ordina per data e disinstalla le app sconosciute installate di recente.
 - Passo 3: installa un'app di sicurezza ed esegui una scansione — scarica «Tencent Mobile Manager» o «360 Mobile Guard» e fai una scansione completa.
-- Passo 4: ripristino di fabbrica (soluzione estrema) — se i metodi precedenti non funzionano, esegui il backup dei dati importanti e ripristina le impostazioni di fabbrica. Attenzione: il ripristino cancella tutti i dati, salva prima foto, rubrica e altri file importanti.
-- iPhone quasi non si infetta — il meccanismo sandbox di iOS rende difficile la sopravvivenza ai malware. Se il tuo iPhone si comporta in modo strano, quasi sempre è un bug di un'app o un problema di impostazioni, non un virus. Il ripristino di fabbrica risolve il 99% dei problemi.
+- Passo 4: ripristino di fabbrica (soluzione estrema), se i metodi precedenti non funzionano, esegui il backup dei dati importanti e ripristina le impostazioni di fabbrica. Attenzione: il ripristino cancella tutti i dati, salva prima foto, rubrica e altri file importanti.
+- iPhone quasi non si infetta, il meccanismo sandbox di iOS rende difficile la sopravvivenza ai malware. Se il tuo iPhone si comporta in modo strano, quasi sempre è un bug di un'app o un problema di impostazioni, non un virus. Il ripristino di fabbrica risolve il 99% dei problemi.
 
-#### Scenario quattro: account rubato — riconquista rapidamente il controllo
+Scenario quattro: account rubato — riconquista rapidamente il controllo
 
 1. Cambia subito la password: se riesci ancora ad accedere, cambiala immediatamente. La nuova password deve essere completamente diversa da quella vecchia.
 2. Disconnetti gli altri dispositivi: nelle impostazioni di sicurezza dell'account trova «Gestione dispositivi di accesso» e disconnetti tutti i dispositivi sconosciuti.
@@ -101,7 +101,7 @@ Se noti questi sintomi — annunci che spuntano dal nulla, app strane che si ins
 5. Controlla i dati collegati: verifica se il numero di telefono o l'email collegati all'account sono stati modificati. In tal caso, recupera l'account con la funzione di ricorso.
 6. Controlla le impostazioni di pagamento: se sono stati rubati WeChat/Alipay, verifica che i pagamenti senza password e gli addebiti automatici non siano stati manomessi e che non siano state aggiunte carte a conti sconosciuti.
 
-#### Scenario cinque: hai ricevuto un messaggio di estorsione — non avere paura, non pagare
+Scenario cinque: hai ricevuto un messaggio di estorsione — non avere paura, non pagare
 
 Le estorsioni più comuni sono due: ① «Ho un tuo video/foto intimo, se non paghi lo mando a tutti i tuoi contatti»; ② «Il tuo telefono è stato hackerato, se non pago lo blocco». In questi casi:
 
@@ -111,13 +111,13 @@ Le estorsioni più comuni sono due: ① «Ho un tuo video/foto intimo, se non pa
 - Cambia le password: se sei preoccupato, cambia la password dei tuoi account principali per stare più tranquillo.
 - Se c'è davvero il rischio di una fuga di dati sensibili: denuncia. La polizia ha esperienza in questi casi.
 
-#### Scenario sei: truffe con deepfake vocali e video AI — ciò che vedi non è più vero
+Scenario sei: truffe con deepfake vocali e video AI — ciò che vedi non è più vero
 
 Dal 2024 le tecnologie di deepfake e sintesi vocale AI permettono ai truffatori di «diventare» tuo figlio, un parente o un superiore in videochiamata. «Mamma, ho avuto un incidente, mandami subito i soldi» — la persona nel video sembra e suona esattamente tuo figlio, ma è falsa. È una delle truffe più difficili da individuare e più pericolose.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Passo 1: riconoscere le falle — quattro punti deboli comuni del deepfake
+Passo 1: riconoscere le falle: quattro punti deboli comuni del deepfake
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Frequenza di battito delle palpebre anomala: una persona reale sbatte le palpebre 15-20 volte al minuto; nei deepfake si sbatte troppo poco o in modo rigido.
@@ -132,7 +132,7 @@ Passo 2: tre modi per verificare l'autenticità
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Chiedi un'azione specifica: fai girare la testa, coprire il viso o la bocca con la mano e poi aprire e chiudere. Il deepfake si tradisce con le occlusioni e i grandi angoli di rotazione: il viso si deforma o non segue il movimento.
-- Fai una domanda che solo l'altra persona conosce: inventa una domanda falsa, ad esempio «quale clinica abbiamo portato il cane l'ultima volta?» — un truffatore non saprà rispondere o balbetta.
+- Fai una domanda che solo l'altra persona conosce: inventa una domanda falsa, ad esempio «quale clinica abbiamo portato il cane l'ultima volta?», un truffatore non saprà rispondere o balbetta.
 - Richiama un numero noto: chiudi la video e chiama direttamente il numero salvato in rubrica. Il truffatore non può controllare il vero cellulare: si scopre subito.
 :::
 
@@ -142,13 +142,13 @@ Passo 3: cosa fare dopo aver confermato la truffa
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Smetti subito di trasferire denaro: per quanto «urgente», fermati. Chi ti spinge a «bonificare subito e non riagganciare» è quasi sempre un truffatore.
-2. Conserva tutte le prove: registra lo schermo, fai screenshot di videochiamata, chat, account e bonifici — sono materiali fondamentali per la perizia tecnica.
+2. Conserva tutte le prove: registra lo schermo, fai screenshot di videochiamata, chat, account e bonifici, sono materiali fondamentali per la perizia tecnica.
 3. Chiama la linea anti-frode 96110: specifica che si tratta di truffa con deepfake vocale/video AI; l'operatore avvierà il blocco di emergenza.
 4. Chiama 110 per denunciare: porta tutte le prove al commissariato e sottolinea l'uso di tecnologie AI, così la polizia può classificare il reato.
 5. Avvisa amici e parenti: i truffatori potrebbero usare il tuo video falso per ingannare altri; pubblica un avviso su Moments o nel gruppo di famiglia.
 :::
 
-#### Scenario sette: attacco SIM swap (sequestro SIM) — il tuo numero è stato «rubato»
+Scenario sette: attacco SIM swap (sequestro SIM) — il tuo numero è stato «rubato»
 
 È un attacco poco conosciuto ma devastante. Il SIM swap consiste nel fatto che l'aggressore, falsificando i tuoi dati, si spaccia per te in filiale e richiede una nuova SIM. Appena la SIM viene sostituita, il tuo telefono perde improvvisamente il segnale e il telefono dell'aggressore, con la nuova SIM, riceve tutti i tuoi codici di verifica: Alipay, banca, WeChat, tutto spalancato.
 
@@ -158,19 +158,19 @@ Come accorgersene? Tre segnali di allarme del SIM swap
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Il telefono mostra improvvisamente «Nessun servizio»/«Nessuna SIM» anche se non l'hai toccata e il riavvio non serve: spesso è l'istante del sequestro.
-- Ricevi un SMS dell'operatore «Sostituzione SIM completata» o «Servizio attivato» — ma tu non hai fatto nulla.
+- Ricevi un SMS dell'operatore «Sostituzione SIM completata» o «Servizio attivato», ma tu non hai fatto nulla.
 - Improvvisamente non ricevi più i codici di verifica, e nemmeno altri SMS: i messaggi sono stati dirottati sulla SIM dell'aggressore.
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Misure di protezione — metti «sotto chiave» anche la SIM
+Misure di protezione, metti «sotto chiave» anche la SIM
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Imposta il PIN della SIM: percorso Impostazioni &gt; Telefono &gt; PIN SIM. Attivato, ogni riavvio o cambio SIM richiede il PIN: anche se qualcuno ha la carta, non la può usare.
-- Attiva la verifica a due fattori dell'operatore: nell'app China Mobile/Unicom/Telecom trova «Centro sicurezza» o «Verifica servizi» e attiva l'avviso per sostituzioni SIM non richieste e la doppia password per le pratiche. Così in filiale verrà richiesta un'ulteriore verifica d'identità.
+- Attiva la verifica a due fattori dell'operatore: nell'app China Mobile/Unicom/Telecom trova «Centro sicurezza» o «Verifica servizi» , e attiva l'avviso per sostituzioni SIM non richieste e la doppia password per le pratiche. Così in filiale verrà richiesta un'ulteriore verifica d'identità.
 - Account importanti non solo con SMS: per banche, Apple ID e altri account di valore preferisci app autenticatrici (Google Authenticator, Microsoft Authenticator) o chiavi hardware invece dei codici SMS.
-- Filigrana sulle fotocopie dei documenti: sulle copie per pratiche scrivi «solo per uso XX» — gli aggressori spesso si spacciano per te con documenti d'identità trapelati.
+- Filigrana sulle fotocopie dei documenti: sulle copie per pratiche scrivi «solo per uso XX», gli aggressori spesso si spacciano per te con documenti d'identità trapelati.
 :::
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
@@ -205,7 +205,7 @@ Pratica: crea la tua «scheda di contatti di emergenza»
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Prendi un foglio e scrivi questi numeri: assistenza operatore (China Mobile 10086 / Unicom 10010 / Telecom 10000), assistenza banca, linea anti-frode 96110, 110, telefono dei familiari.
 2. Scrivi l'email di registrazione del tuo Apple ID/account del marchio e i contatti di riserva.
-3. Tieni questo foglio nel portafoglio o attaccato al frigorifero — non nel telefono, perché in caso di emergenza il telefono potrebbe non esserci.
+3. Tieni questo foglio nel portafoglio o attaccato al frigorifero: non nel telefono, perché in caso di emergenza il telefono potrebbe non esserci.
 4. Controlla adesso: «Trova il mio telefono» è attivo? Il PIN della SIM è impostato?
 :::
 

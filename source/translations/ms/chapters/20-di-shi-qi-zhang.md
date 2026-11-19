@@ -10,14 +10,14 @@ kind: chapter
 ### Bab 17: Sambungan Telefon dengan Peranti Lain
 
 {class="chapter-intro mb-4"}
-: Jika anda menggunakan iPhone dengan Mac, AirDrop adalah fungsi pertama yang perlu anda pelajari. Pada telefon pintar, ketik Kongsi → AirDrop → pilih Mac anda, foto akan sampai serta-merta, tanpa menggunakan data dan tanpa Wi-Fi, menggunakan Bluetooth dan sambungan terus Wi-Fi. Terdapat juga fungsi yang mudah diabaikan dipanggil "Papan Keratan Universal" — salin teks di telefon pintar, tampal terus di Mac, seperti sihir.
+: Jika anda menggunakan iPhone dengan Mac, AirDrop adalah fungsi pertama yang perlu anda pelajari. Pada telefon pintar, ketik Kongsi → AirDrop → pilih Mac anda, foto akan sampai serta-merta, tanpa menggunakan data dan tanpa Wi-Fi, menggunakan Bluetooth dan sambungan terus Wi-Fi. Terdapat juga fungsi yang mudah diabaikan dipanggil "Papan Keratan Universal": salin teks di telefon pintar, tampal terus di Mac, seperti sihir.
 
 #### Android + Windows (Sambung ke Windows)
 
-: Microsoft mempunyai App bernama "Sambung ke Windows", terbina dalam telefon pintar Samsung, telefon pintar Android lain boleh muat turun dari kedai aplikasi. Selepas berpasangan, anda boleh terus melihat pemberitahuan telefon pintar, membalas SMS, melihat-lihat foto, malah membuat dan menerima panggilan di komputer. Saya sendiri telah menggunakannya selama dua tahun, semasa mesyuarat tidak perlu sentiasa menunduk melihat telefon pintar, pemberitahuan di skrin komputer sudah memadai.
+: Microsoft mempunyai App bernama "Sambung ke Windows", terbina dalam telefon pintar Samsung, telefon pintar Android lain boleh muat turun dari kedai aplikasi. Selepas berpasangan, anda boleh terus melihat pemberitahuan telefon pintar. membalas SMS, melihat-lihat foto, malah membuat dan menerima panggilan di komputer. Saya sendiri telah menggunakannya selama dua tahun, semasa mesyuarat tidak perlu sentiasa menunduk melihat telefon pintar, pemberitahuan di skrin komputer sudah memadai.
 
-- <strong>Kolaborasi berbilang skrin jenama</strong>: "Kolaborasi Berbilang Skrin" Huawei dan "Xiaomi Smart Share" lebih hebat — terus menggerunkan skrin telefon pintar ke komputer, anda boleh menggunakan tetikus untuk menyeret fail dari telefon pintar ke komputer, dan juga menatal TikTok dan membalas WeChat di komputer. Salin tampal merentas peranti, seret fail, pengalaman sangat lancar.
-- <strong>2. Unjuk Skrin ke TV: Tonton Bersama Keluarga</strong> Semasa pulang untuk Tahun Baru Cina, sepupu perempuan saya mahu memainkan video perjalanan graduasinya di TV. Bersusah payah untuk masa yang lama, akhirnya mendapati ia sebenarnya sangat mudah:
+- <strong>Kolaborasi berbilang skrin jenama</strong>: "Kolaborasi Berbilang Skrin" Huawei dan "Xiaomi Smart Share" lebih hebat, terus menggerunkan skrin telefon pintar ke komputer, anda boleh menggunakan tetikus untuk menyeret fail dari telefon pintar ke komputer, dan juga menatal TikTok dan membalas WeChat di komputer. Salin tampal merentas peranti, seret fail, pengalaman sangat lancar.
+- <strong>2. Unjuk Skrin ke TV: Tonton Bersama Keluarga</strong> Semasa pulang untuk Tahun Baru Cina, sepupu perempuan saya mahu memainkan video perjalanan graduasinya di TV. Bersusah payah untuk masa yang lama, akhirnya mendapati ia sebenarnya sangat mudah:.
 - <strong>iPhone → TV</strong>: Tarik ke bawah Pusat Kawalan dari sudut kanan atas, ketik ikon dua kotak bertindan (Cermin Skrin), cari nama TV anda, ketik sekali dan ia akan disambungkan. Prasyaratnya ialah TV dan telefon pintar disambungkan ke Wi-Fi yang sama, dan TV menyokong AirPlay (kebanyakan TV pintar menyokongnya).
 
 #### Android → TV
@@ -26,19 +26,19 @@ kind: chapter
 
 - <strong>Unjuk terus dari App video</strong>: Jika anda hanya mahu menonton iQIYI, Bilibili, YouTube di TV, sebenarnya lebih mudah — cari ikon kecil segi empat dengan simbol Wi-Fi di antara muka main, ketik, pilih TV, video akan dipindahkan ke TV. Pada masa ini telefon pintar boleh melakukan perkara lain, video terus dimainkan di TV, tidak saling mengganggu.
 - <strong>Unjuk skrin tidak berjaya?</strong>: 90% kes adalah kerana tidak disambungkan ke Wi-Fi yang sama. 10% lagi adalah kerana fungsi unjuk skrin TV tidak diaktifkan, pergi ke tetapan TV cari suis "Interaksi Berbilang Skrin" atau "AirPlay".
-- <strong>3. Dengan Jam Tangan Pintar/Gelang Pintar: Pengurus Kesihatan di Pergelangan Tangan</strong> Saya membeli gelang pintar untuk ibu saya, pada mulanya dia berkata "Saya tidak bersukan, beli ini untuk apa". Selepas menggunakannya selama dua minggu, dia mendapati dirinya hanya tidur lebih lima jam sehari, dan mula melaraskan rutin tidurnya secara aktif. Inilah nilai paling praktikal jam tangan/gelang pintar — menukar data kesihatan yang tidak kelihatan kepada nombor yang boleh dilihat.
-- <strong>Penapis pemberitahuan</strong>: Apabila telefon pintar bergetar tanpa henti dalam beg atau poket, angkat pergelangan tangan untuk melihat — sama ada WeChat dari bos atau promosi Pinduoduo, boleh menilai dalam satu saat, mesej yang tidak berbaloi untuk mengeluarkan telefon pintar biarkan sahaja.
+- <strong>3. Dengan Jam Tangan Pintar/Gelang Pintar: Pengurus Kesihatan di Pergelangan Tangan</strong> Saya membeli gelang pintar untuk ibu saya, pada mulanya dia berkata "Saya tidak bersukan, beli ini untuk apa". Selepas menggunakannya selama dua minggu, dia mendapati dirinya hanya tidur lebih lima jam sehari, dan mula melaraskan rutin tidurnya secara aktif. Inilah nilai paling praktikal jam tangan/gelang pintar, menukar data kesihatan yang tidak kelihatan kepada nombor yang boleh dilihat.
+- <strong>Penapis pemberitahuan</strong>: Apabila telefon pintar bergetar tanpa henti dalam beg atau poket, angkat pergelangan tangan untuk melihat, sama ada WeChat dari bos atau promosi Pinduoduo, boleh menilai dalam satu saat, mesej yang tidak berbaloi untuk mengeluarkan telefon pintar biarkan sahaja.
 
 #### Penyegerakan data kesihatan
 
-: Jam tangan memantau kadar jantung, oksigen darah, tidur, dan langkah 24 jam, data ini akan secara automatik disimpulkan ke dalam App Kesihatan di telefon pintar. Lama-kelamaan anda boleh melihat trend anda sendiri — sama ada berjalan terlalu sedikit bulan ini, sama ada kualiti tidur minggu ini bertambah baik.
+: Jam tangan memantau kadar jantung, oksigen darah, tidur, dan langkah 24 jam, data ini akan secara automatik disimpulkan ke dalam App Kesihatan di telefon pintar. Lama-kelamaan anda boleh melihat trend anda sendiri, sama ada berjalan terlalu sedikit bulan ini, sama ada kualiti tidur minggu ini bertambah baik.
 
 - <strong>Penyegerakan kad pengangkutan/kad akses</strong>: Kad bas dan kad akses yang diikat pada telefon pintar, kebanyakan jenama akan menyegerakkannya secara automatik ke jam tangan. Semasa menaiki LRT tidak perlu mengeluarkan telefon pintar, pergelangan tangan dekatkan ke pintu gerbang dan terus lalu, benar-benar ada perasaan "masa depan sudah tiba".
-- <strong>Alat cari telefon pintar</strong>: Jam tangan biasanya mempunyai fungsi "cari telefon pintar", ketik dan telefon pintar akan berbunyi. Saya sendiri menggunakan fungsi ini lebih kerap daripada yang dijangka — telefon pintar diletakkan sembarangan dan lupa di mana.
+- <strong>Alat cari telefon pintar</strong>: Jam tangan biasanya mempunyai fungsi "cari telefon pintar", ketik dan telefon pintar akan berbunyi. Saya sendiri menggunakan fungsi ini lebih kerap daripada yang dijangka, telefon pintar diletakkan sembarangan dan lupa di mana.
 - <strong>4. Dengan Rumah Pintar: Telefon Pintar Ialah "Suis Utama" di Rumah</strong> pintar kedengaran sangat misteri, tetapi sebenarnya hanya tiga perkara: kawalan jarak jauh menggunakan telefon pintar, tetapkan peraturan automasi, kawalan suara.
-- <strong>Berikut adalah beberapa kegunaan sebenar saya sendiri, anda akan tahu betapa praktikalnya:</strong> Penyaman udara
+- <strong>Berikut adalah beberapa kegunaan sebenar saya sendiri, anda akan tahu betapa praktikalnya:</strong> Penyaman udara.
 
-#### : Dalam perjalanan pulang pada musim panas, hidupkan penyaman udara terlebih dahulu dengan telefon pintar, masuk ke rumah sudah sejuk. Beli soket penyaman udara tambahan lebih seratus ringgit boleh merealisasikannya, tidak perlu menukar penyaman udara.
+- Dalam perjalanan pulang pada musim panas, hidupkan penyaman udara terlebih dahulu dengan telefon pintar, masuk ke rumah sudah sejuk. Beli soket penyaman udara tambahan lebih seratus ringgit boleh merealisasikannya, tidak perlu menukar penyaman udara.
 
 Lampu
 
@@ -52,7 +52,7 @@ Lampu
 5\. Fon Kepala dan Pembesar Suara Bluetooth: Kebebasan Wayarles
 
 - Menukar dari fon kepala berwayar ke fon kepala Bluetooth, bagi saya adalah peningkatan pengalaman telefon pintar yang paling ketara. Tidak akan lagi mengeluarkan seberkas wayar berbelit dari beg, dan tidak perlu risau wayar terkait pada pemegang pintu.
-- Perpasangan sangat mudah
+- Perpasangan sangat mudah.
 - : Fon kepala biasanya akan memasuki mod perpasangan secara automatik kali pertama dihidupkan (lampu berkelip), telefon pintar buka Bluetooth boleh mencarinya, ketik sekali dan ia akan disambungkan. Selepas itu setiap kali dikeluarkan ia akan disambung secara automatik, tidak perlu buat apa-apa.
 
 #### Jenama sama ada bonus
@@ -88,7 +88,7 @@ Audio Bluetooth klasik (A2DP) yang diguna dua puluh tahun sedang diganti <strong
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Kualiti audio lebih baik: LE Audio guna codec LC3, pada kadar bit sama kualiti jauh melebihi codec SBC lama; pada kualiti sama, kadar bit lebih rendah, lebih jimat kuasa.</strong> Penggunaan kuasa rendah: Boleh tingkat jangka hayat earphone Bluetooth kira-kira 1.5-2 kali.
 - <strong>Berbilang aliran: Satu telefon boleh serentak hantar audio ke berbilang earphone (senario berkongsi muzik).</strong> Auracast Broadcast Audio: Boleh siar audio ke bilangan besar penerima tanpa had, sesuai senario awam seperti televisyen senyap gim, audio panduan lapangan terbang.
-- <strong>Kesan kepada pengguna: Earphone Bluetooth beli selepas 2024 semakin banyak sokong LE Audio; iOS 17+ dan Android 14+ juga sokong native. Jika beli earphone baharu, perhatikan sama ada sokong LE Audio/Auracast.</strong> Wi-Fi 7 (802.11be) — Peningkatan kelajuan rangkaian generasi baharu <strong>Wi-Fi 7 adalah standard Wi-Fi generasi baharu, kelajuan teori capai</strong> Band 6GHz ditambah: Band 2.4GHz + 5GHz asal, tambah band 6GHz baharu, lebar jalur jumlah lebih besar.
+- <strong>Kesan kepada pengguna: Earphone Bluetooth beli selepas 2024 semakin banyak sokong LE Audio; iOS 17+ dan Android 14+ juga sokong native. Jika beli earphone baharu, perhatikan sama ada sokong LE Audio/Auracast.</strong> Wi-Fi 7 (802.11be), Peningkatan kelajuan rangkaian generasi baharu <strong>Wi-Fi 7 adalah standard Wi-Fi generasi baharu, kelajuan teori capai</strong> Band 6GHz ditambah: Band 2.4GHz + 5GHz asal, tambah band 6GHz baharu, lebar jalur jumlah lebih besar.
 - <strong>Status semasa</strong> Pengkodan 4K-QAM: Berbanding 1K-QAM Wi-Fi 6, kadar penghantaran naik 20%.
 :::
 
@@ -97,10 +97,10 @@ Audio Bluetooth klasik (A2DP) yang diguna dua puluh tahun sedang diganti <strong
 : Navigasi (jauh lebih baik daripada navigasi kereta), membuat panggilan (jawab dari stereng), mendengar muzik (App muzik dalam telefon pintar terus dimainkan di kereta), menghantar WeChat secara suara (Siri atau Xiao Ai membantu membaca mesej dan membalas).
 
 - <strong>Kereta lama juga boleh guna</strong>: Jika kereta anda agak lama dan tidak menyokong, beli skrin CarPlay luaran beberapa ratus ringgit, lekatkan pada papan pemuka, pengalaman hampir sama.
-- <strong>7. Keselamatan dan Privasi dalam Sambungan Peranti</strong> Semakin banyak peranti disambungkan, semakin besar risiko kebocoran privasi. Beberapa perkara yang perlu diperhatikan:
+- <strong>7. Keselamatan dan Privasi dalam Sambungan Peranti</strong> Semakin banyak peranti disambungkan, semakin besar risiko kebocoran privasi. Beberapa perkara yang perlu diperhatikan:.
 - <strong>Sebelum mengunjuk skrin di tempat awam, periksa dahulu sama ada terdapat mesej peribadi dalam bar pemberitahuan telefon pintar, jangan biarkan seluruh keluarga melihat kandungan yang tidak sepatutnya.</strong> Sebelum memberikan peranti kepada orang lain atau menjualnya, nyah-ikat terlebih dahulu — pergi ke tetapan telefon pintar cari peranti tersebut, pilih "Buang" atau "Nyahpasang".
 
-#### Kamera rumah pintar, beli yang bermerek dan disulitkan, jangan beli jenama murahan puluhan ringgit. Terlalu banyak berita tentang kamera digodam dan disiarkan secara langsung.
+Kamera rumah pintar, beli yang bermerek dan disulitkan, jangan beli jenama murahan puluhan ringgit. Terlalu banyak berita tentang kamera digodam dan disiarkan secara langsung.
 
 Mari cuba: Unjuk skrin telefon pintar ke TV, dan tetapkan satu senario pintar
 
@@ -113,9 +113,9 @@ Mari cuba: Unjuk skrin telefon pintar ke TV, dan tetapkan satu senario pintar
 <i class="fas fa-hands mr-2"></i>Pilih satu foto kegemaran anda dan unjuk ke TV, biar ahli keluarga melihatnya.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. Jika anda mempunyai peranti rumah pintar, cuba cipta "Mod Keluar Rumah" dalam App telefon pintar: satu ketik matikan lampu, matikan penyaman udara, mulakan robot pembersih vakum.
+1. Jika anda mempunyai peranti rumah pintar, cuba cipta "Mod Keluar Rumah" dalam App telefon pintar: satu ketik matikan lampu, matikan penyaman udara, mulakan robot pembersih vakum
 2. Bab 18: Sandaran Data &amp; Pemindahan
-3. Seorang jiran saya, telefon pintarnya terjatuh ke dalam kolam air dan selepas dikeluarkan tidak boleh dihidupkan lagi. Yang paling menyedihkannya bukan telefon pintar itu sendiri, tetapi foto-foto di dalamnya yang tidak disandarkan selama tiga tahun — semua rekod anaknya dari lahir hingga pandai berjalan. Selepas mendengarnya hati saya sangat tidak sedap, kerana perkara ini boleh dielakkan sepenuhnya. Bab ini kita akan benar-benar memberikan insurans kepada data anda.
+3. Seorang jiran saya, telefon pintarnya terjatuh ke dalam kolam air dan selepas dikeluarkan tidak boleh dihidupkan lagi. Yang paling menyedihkannya bukan telefon pintar itu sendiri, tetapi foto-foto di dalamnya yang tidak disandarkan selama tiga tahun — semua rekod anaknya dari lahir hingga pandai berjalan. Selepas mendengarnya hati saya sangat tidak sedap, kerana perkara ini boleh dielakkan sepenuhnya. Bab ini kita akan benar-benar memberikan insurans kepada data anda
 4. 1. Fahami Terlebih Dahulu: Perkara Apa dalam Telefon Pintar Anda yang Hilang Akan Hilang Selamanya
 5. "Status kemandirian" data yang berbeza tidak sama, anda perlu membezakannya:
 :::
@@ -126,6 +126,6 @@ Mari cuba: Unjuk skrin telefon pintar ke TV, dan tetapkan satu senario pintar
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Kesan praktikal: Wi-Fi 7 router telah mula dijual, tetapi telefon perlu sokong. iPhone 15 Pro/16 siri, Xiaomi 14, Samsung S24 Ultra dll flagship 2024 telah sokong Wi-Fi 7; peranti lebih awal disokong melalui kemas kini OS. Jika ada router Wi-Fi 7, boleh nikmati kelajuan rangkaian lebih cepat dan lebih stabil.</strong>: Pengguna Xiaomi 14 jangka hayat bateri rendah, separuh hari sudah tiada bateri.
-- <strong>Setiap telefon ada fungsi "tersembunyi" yang tidak digunakan kebanyakan orang — ia bukan Easter Egg sengaja tersembunyi oleh jurutera, tetapi ditimbus dalam lapisan tetapan dalam, atau tidak diperkenalkan dengan jelas oleh pengiklanan. Bab ini akan kumpulkan beberapa fungsi paling praktikal yang patut anda cuba.</strong>: Tetapan -&gt; Bateri -&gt; Lihat ranking penggunaan kuasa -&gt; Kenal pasti App latar belakang abnormal -&gt; Tutup 5G tukar 4G -&gt; Had latar belakang -&gt; Buka mod jimat kuasa -&gt; Cabut sarung semasa cas untuk dissipasi haba.
+- <strong>Setiap telefon ada fungsi "tersembunyi" yang tidak digunakan kebanyakan orang: ia bukan Easter Egg sengaja tersembunyi oleh jurutera, tetapi ditimbus dalam lapisan tetapan dalam, atau tidak diperkenalkan dengan jelas oleh pengiklanan. Bab ini akan kumpulkan beberapa fungsi paling praktikal yang patut anda cuba.</strong>: Tetapan -&gt; Bateri -&gt; Lihat ranking penggunaan kuasa -&gt; Kenal pasti App latar belakang abnormal -&gt; Tutup 5G tukar 4G -&gt; Had latar belakang -&gt; Buka mod jimat kuasa -&gt; Cabut sarung semasa cas untuk dissipasi haba.
 - <strong>"Pilihan pembangun" adalah mod kawalan khas yang disediakan Android untuk jurutera, biasanya tidak ditunjukkan kepada pengguna biasa. Tetapi beberapa fungsi praktikal di dalamnya sangat berbaloi untuk dibuka.</strong>: Jangka hayat dipanjangkan 30-50%, data kesihatan bateri boleh dibaca.
 :::

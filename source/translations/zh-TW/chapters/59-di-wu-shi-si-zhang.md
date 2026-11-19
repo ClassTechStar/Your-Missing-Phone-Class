@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十四章：專案一——我的記帳本（本地版）
 
 {class="chapter-intro mb-4"}
-歡迎來到你的第一個"正經專案"。這個記帳本雖然不聯網，但五臟俱全：能記一筆賬、能看流水、能按月統計、能刪改。做完它，你就完整走了一遍"資料 → 邏輯 → 介面"的全流程。別急著抄程式碼——先想清楚再動手，這是咱們一貫的原則。
+歡迎來到你的第一個"正經專案"。這個記帳本雖然不聯網，但五臟俱全：能記一筆賬、能看流水、能按月統計、能刪改。做完它，你就完整走了一遍"資料 → 邏輯 → 介面"的全流程。別急著抄程式碼，先想清楚再動手，這是咱們一貫的原則。
 
 #### 一、需求思考：先問五個問題
 
@@ -29,7 +29,7 @@ kind: chapter
 
 #### 二、資料層：讓"賬"有個家
 
-先定義一筆賬長什麼樣——欄位要夠用但別貪多：
+先定義一筆賬長什麼樣，欄位要夠用但別貪多：
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +49,7 @@ data class Record(
 ```
 :::
 
-Dao 里加兩條"統計用"的查詢——這是記帳本的靈魂：
+Dao 里加兩條"統計用"的查詢：這是記帳本的靈魂：
 
 ::: div .code-block
 :::inline div .code-head
@@ -95,7 +95,7 @@ interface RecordDao {
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-圖 5：MVVM 三層結構——資料單向流動，各層互不越界
+圖 5：MVVM 三層結構，資料單向流動，各層互不越界
 :::
 
 ::: div .code-block
@@ -125,11 +125,11 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 :::
 
-介面（Compose）裡這樣用：val vm: RecordViewModel = viewModel()，然後 val list by vm.records.collectAsState()——資料一變，列表自動重新整理，你什麼都不用做。這就是 MVVM + Flow + Compose 三劍合璧的威力。
+介面（Compose）裡這樣用：val vm: RecordViewModel = viewModel()，然後 val list by vm.records.collectAsState()，資料一變，列表自動重新整理，你什麼都不用做。這就是 MVVM + Flow + Compose 三劍合璧的威力。
 
 #### 四、介面：列表頁 + 錄入頁
 
-列表頁用 LazyColumn（懶載入列表）——資料再多也不卡：
+列表頁用 LazyColumn（懶載入列表），資料再多也不卡：
 
 ::: div .code-block
 :::inline div .code-head
@@ -211,15 +211,15 @@ suspend fun deleteById(id: Long)
 
 基礎版驗收透過後，給自己加兩道"進階菜"：
 
-1. 月度篩選：頂部加月份切換（比如 2026-08 ▾），列表只顯示當月流水；
-2. 分類餅圖：用 Compose 的 Canvas 或引入輕量圖表庫，把"錢花哪兒了"畫成餅圖——做完這個，記帳本就有點"產品樣"了。
+1. 月度篩選：頂部加月份切換（比如 2026-08 ▾），列表只顯示當月流水。
+2. 分類餅圖：用 Compose 的 Canvas 或引入輕量圖表庫，把"錢花哪兒了"畫成餅圖：做完這個，記帳本就有點"產品樣"了。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 來動手：本週完成它
 
 {class="mt-1"}
-按"資料層 → ViewModel → 列表頁 → 錄入頁 → 彙總卡片"的順序動手，每天一步。卡住了就把報錯原樣丟給搜尋引擎或 AI（還記得第七篇《AI程式設計實戰篇》嗎？描述問題時說清"期望行為、實際行為、復現步驟"）。完成後用它記一週賬——自己做的 App 用起來，成就感會推著你繼續往前走。
+按"資料層 → ViewModel → 列表頁 → 錄入頁 → 彙總卡片"的順序動手，每天一步。卡住了就把報錯原樣丟給搜尋引擎或 AI（還記得第七篇《AI程式設計實戰篇》嗎？描述問題時說清"期望行為、實際行為、復現步驟"）。完成後用它記一週賬，自己做的 App 用起來，成就感會推著你繼續往前走。
 :::
 
 ::: div .chapter-summary

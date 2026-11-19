@@ -48,11 +48,11 @@ kind: supplement
 
 #### 二、OEM解鎖：開發者選項入面嘅「刷機開關」
 
-喺開發者選項入面有一個唔太起眼但好重要嘅開關——「OEM解鎖」（部分品牌叫「OEM解鎖允許」或「設備解鎖」）。呢個開關本身唔會解鎖BL鎖，但佢係一個「前置許可」：淨係打開佢，廠商先允許你通過fastboot命令或品牌工具去解鎖BL。
+喺開發者選項入面有一個唔太起眼但好重要嘅開關，「OEM解鎖」（部分品牌叫「OEM解鎖允許」或「設備解鎖」）。呢個開關本身唔會解鎖BL鎖，但佢係一個「前置許可」：淨係打開佢，廠商先允許你通過fastboot命令或品牌工具去解鎖BL。
 
 - <strong>開關嘅作用</strong>：相當於向廠商聲明「我同意放棄保修、自負風險，請允許我解鎖BL」。如果呢個開關係關閉嘅，任何解鎖BL嘅命令都會被直接拒絕。
 - <strong>同BL鎖嘅關係</strong>：OEM解鎖係「申請資格」，BL解鎖先係「實際操作」。前者喺手機設定入面撳一下就得，後者需要去廠商官網申請解鎖碼、用電腦跑fastboot命令（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>），兩者缺一不可。
-- <strong>恢復出廠設定會重置嗎</strong>：會。「OEM解鎖」開關喺恢復出廠後會返到關閉狀態，但BL鎖一旦解鎖就係物理級別嘅狀態，唔會因為恢復出廠而重新上鎖——需要手動執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> 先可以重新上鎖。
+- <strong>恢復出廠設定會重置嗎</strong>：會。「OEM解鎖」開關喺恢復出廠後會返到關閉狀態，但BL鎖一旦解鎖就係物理級別嘅狀態，唔會因為恢復出廠而重新上鎖，需要手動執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> 先可以重新上鎖。
 - <strong>乜嘢時候應該打開</strong>：除非你確定要刷機或Root，否則保持關閉。佢同「USB調試」係兩個獨立開關，刷機時通常需要同時打開。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -60,7 +60,7 @@ kind: supplement
 <i class="fas fa-info-circle mr-2"></i>小知識：點解廠商要設定呢個開關
 
 {class="mt-1"}
-早期安卓冇呢個開關，惡意軟件淨係攞到權限就可以偷偷刷入系統。Google後來要求所有安卓廠商喺開發者選項中加入「OEM解鎖」開關，作為一道「用戶知情同意」嘅確認。呢個都係點解即便你解咗BL鎖，如果OEM解鎖開關被關閉，重新刷機仍然會失敗。
+早期安卓冇呢個開關。惡意軟件淨係攞到權限就可以偷偷刷入系統。Google後來要求所有安卓廠商喺開發者選項中加入「OEM解鎖」開關，作為一道「用戶知情同意」嘅確認。呢個都係點解即便你解咗BL鎖，如果OEM解鎖開關被關閉，重新刷機仍然會失敗。
 :::
 
 #### 三、BL鎖（Bootloader鎖）：刷機嘅第一道門
@@ -84,7 +84,7 @@ Bootloader係手機啟動時載入作業系統嘅程式。BL鎖就係廠商為�
 
 #### 四、ADB實用命令：通過電腦控制手機
 
-ADB 全稱 Android Debug Bridge（安卓調試橋），係 Google 官方提供嘅命令行工具，等電腦通過 USB 或 Wi-Fi 與安卓手機通信。佢本身唔需要 Root，淨係手機開咗「USB調試」就可以用。可以將佢理解為「用電腦畀手機下指令嘅遙控器」——刷機、裝App、傳檔案、查日誌，都靠佢。
+ADB 全稱 Android Debug Bridge（安卓調試橋），係 Google 官方提供嘅命令行工具，等電腦通過 USB 或 Wi-Fi 與安卓手機通信。佢本身唔需要 Root，淨係手機開咗「USB調試」就可以用。可以將佢理解為「用電腦畀手機下指令嘅遙控器」，刷機、裝App、傳檔案、查日誌，都靠佢。
 
 ##### 點樣通過 USB 連接：
 
@@ -135,7 +135,7 @@ Windows 用戶如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 <i class="fas fa-info-circle mr-2"></i>小知識：--user 0 係乜嘢意思
 
 {class="mt-1"}
-安卓 4.2 之後支援多用戶，每個用戶有獨立嘅 ID（機主係 0，附加用戶由 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示「淨係對當前機主卸載」，系統分區入面嘅 APK 檔案依然存在，淨係唔畀機主顯示。呢個就係點解佢唔需要 Root——冇鬱系統檔案，淨係改咗「用戶配置」。呢個都係佢同 Root 後卸載最大嘅區別：Root 卸載係真正由系統入面刪掉，所有用戶都唔再有；ADB 卸載淨係「對當前用戶隱藏」。
+安卓 4.2 之後支援多用戶，每個用戶有獨立嘅 ID（機主係 0，附加用戶由 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示「淨係對當前機主卸載」。系統分區入面嘅 APK 檔案依然存在，淨係唔畀機主顯示。呢個就係點解佢唔需要 Root，冇鬱系統檔案，淨係改咗「用戶配置」。呢個都係佢同 Root 後卸載最大嘅區別：Root 卸載係真正由系統入面刪掉，所有用戶都唔再有；ADB 卸載淨係「對當前用戶隱藏」。
 :::
 
 #### 五、Root權限：安卓嘅「超級管理員」
@@ -173,7 +173,7 @@ Root操作有一定風險，可能導致手機變磚（無法開機）。如果�
 
 - <strong>SafetyNet Attestation（舊版，2017年起）</strong>：Google 早期推出嘅設備完整性檢查 API，應用通過佢向 Google 伺服器查詢「呢臺設備係咪通過 CTS 兼容性測試、係咪處於未修改嘅官方狀態」。返回結果分為 Basic Attestation（基礎校驗）同 Strong Attestation（強校驗，依賴硬件密鑰）。Google 已宣佈 SafetyNet 將喺 2024 年後逐步停用。
 - <strong>Play Integrity API（新版，2022年起）</strong>：Google 推出嘅替代方案，比 SafetyNet 更嚴格也更全面。除咗設備完整性，仲包括「應用完整性」（App 係咪被篡改）同「帳號/授權完整性」（用戶帳號係咪被 Google 信任）。新 App 應遷移到 Play Integrity。
-- <strong>邊個用</strong>：銀行、金融、支付類 App（如 Google Pay、各銀行嘅網銀、支付寶/微信支付嘅部分場景）、串流媒體（Netflix 高清版權保護）、部分遊戲反作弊（如騰訊/網易嘅部分遊戲）、企業辦公 App（MDM 設備合規性檢查）。
+- <strong>邊個用</strong>：銀行、金融、支付類 App（如 Google Pay、各銀行嘅網銀、支付寶/微信支付嘅部分場景）。串流媒體（Netflix 高清版權保護）、部分遊戲反作弊（如騰訊/網易嘅部分遊戲）、企業辦公 App（MDM 設備合規性檢查）。
 
 ##### Play Integrity 嘅三級認證結果：
 
@@ -184,7 +184,7 @@ Root操作有一定風險，可能導致手機變磚（無法開機）。如果�
 
 ##### 點解 Root 後呢啲 App 會失效：
 
-應用通過 Play Integrity API 向 Google 伺服器發起認證請求，Google 會檢查設備嘅多項指標——Bootloader 鎖定狀態、系統分區係咪被修改、係咪存在 su 二進制檔案、SELinux 係咪處於寬鬆模式等。任何一項異常都會導致返回嘅認證級別降低或為空，銀行 App 一睇「設備不安全」，自然就拒絕服務喇。
+應用通過 Play Integrity API 向 Google 伺服器發起認證請求，Google 會檢查設備嘅多項指標，Bootloader 鎖定狀態、系統分區係咪被修改、係咪存在 su 二進制檔案、SELinux 係咪處於寬鬆模式等。任何一項異常都會導致返回嘅認證級別降低或為空，銀行 App 一睇「設備不安全」，自然就拒絕服務喇。
 
 ##### 現代隱藏方案：Magisk Hide / Shamiko / Zygisk：
 
@@ -208,7 +208,7 @@ Google 每隔一段時間就會更新檢測規則，App 廠商都會跟進升級
 
 - <strong>開發者模式</strong>：可以開啟，體驗下動畫加速、GPU 呈現分析等功能，但唔好亂改其他唔理解嘅選項。
 - <strong>OEM 解鎖與 BL 鎖</strong>：如果你唔打算刷機或 Root，兩個開關都保持預設（關閉）狀態最安全。
-- <strong>ADB</strong>：免 Root 嘅強大工具，普通人都可以用——比如用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> 卸載預裝 App。但刪之前一定要查清楚包名可唔可以刪。
+- <strong>ADB</strong>：免 Root 嘅強大工具，普通人都可以用：比如用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> 卸載預裝 App。但刪之前一定要查清楚包名可唔可以刪。
 - <strong>Root</strong>：普通用戶唔建議 Root，風險大過收益。如果確實需要某些功能，可以先了解有冇唔需要 Root 嘅替代方案（比如用 ADB 卸載預裝、用 Shizuku 替代部分 Root 功能）。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

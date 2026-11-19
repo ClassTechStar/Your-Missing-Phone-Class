@@ -48,7 +48,7 @@ kind: supplement
 
 #### 二、OEM解锁：开发者选项里的"刷机开关"
 
-在开发者选项里有一个不太起眼但很重要的开关——"OEM解锁"（部分品牌叫"OEM解锁允许"或"设备解锁"）。这个开关本身不会解锁BL锁，但它是一个"前置许可"：只有打开它，厂商才允许你通过fastboot命令或品牌工具去解锁BL。
+在开发者选项里有一个不太起眼但很重要的开关，"OEM解锁"（部分品牌叫"OEM解锁允许"或"设备解锁"）。这个开关本身不会解锁BL锁，但它是一个"前置许可"：只有打开它，厂商才允许你通过fastboot命令或品牌工具去解锁BL。
 
 - <strong>开关的作用</strong>：相当于向厂商声明"我同意放弃保修、自负风险，请允许我解锁BL"。如果这个开关是关闭的，任何解锁BL的命令都会被直接拒绝。
 - <strong>与BL锁的关系</strong>：OEM解锁是"申请资格"，BL解锁才是"实际操作"。前者在手机设置里点一下就行，后者需要去厂商官网申请解锁码、用电脑跑fastboot命令（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>），二者缺一不可。
@@ -60,7 +60,7 @@ kind: supplement
 <i class="fas fa-info-circle mr-2"></i>小知识：为什么厂商要设置这个开关
 
 {class="mt-1"}
-早期安卓没有这个开关，恶意软件只要拿到权限就能偷偷刷入系统。Google后来要求所有安卓厂商在开发者选项中加入"OEM解锁"开关，作为一道"用户知情同意"的确认。这也就是为什么即便你解了BL锁，如果OEM解锁开关被关闭，重新刷机仍然会失败。
+早期安卓没有这个开关，恶意软件只要拿到权限就能偷偷刷入系统。Google后来要求所有安卓厂商在开发者选项中加入"OEM解锁"开关，作为一道"用户知情同意"的确认。所以，即便你解了BL锁，只要OEM解锁开关关着，重新刷机照样失败。
 :::
 
 #### 三、BL锁（Bootloader锁）：刷机的第一道门
@@ -84,7 +84,7 @@ Bootloader是手机启动时加载操作系统的程序。BL锁就是厂商为�
 
 #### 四、ADB实用命令：通过电脑控制手机
 
-ADB 全称 Android Debug Bridge（安卓调试桥），是 Google 官方提供的命令行工具，让电脑通过 USB 或 Wi-Fi 与安卓手机通信。它本身不需要 Root，只要手机开了"USB调试"就能用。可以把它理解为"用电脑给手机下指令的遥控器"——刷机、装App、传文件、查日志，都得靠它。
+ADB 全称 Android Debug Bridge（安卓调试桥），是 Google 官方提供的命令行工具，让电脑通过 USB 或 Wi-Fi 与安卓手机通信。它本身不需要 Root，只要手机开了"USB调试"就能用。可以把它理解为"用电脑给手机下指令的遥控器"，刷机、装App、传文件、查日志，都得靠它。
 
 ##### 如何通过 USB 连接：
 
@@ -135,7 +135,7 @@ Windows 用户如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 <i class="fas fa-info-circle mr-2"></i>小知识：--user 0 是什么意思
 
 {class="mt-1"}
-安卓 4.2 之后支持多用户，每个用户有独立的 ID（机主是 0，附加用户从 10 开始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"只对当前机主卸载"，系统分区里的 APK 文件依然存在，只是不给机主显示了。这就是为什么它不需要 Root——没动系统文件，只是改了"用户配置"。这也是它和 Root 后卸载最大的区别：Root 卸载是真正从系统里删掉，所有用户都不再有；ADB 卸载只是"对当前用户隐藏"。
+安卓 4.2 之后支持多用户，每个用户有独立的 ID（机主是 0，附加用户从 10 开始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"只对当前机主卸载"，系统分区里的 APK 文件依然存在，只是不再给机主显示。所以它不需要 Root，没动系统文件，只改了"用户配置"。这也是它和 Root 后卸载最大的区别：Root 卸载是真正从系统里删掉，所有用户都不再有；ADB 卸载只是"对当前用户隐藏"。
 :::
 
 #### 五、Root权限：安卓的"超级管理员"
@@ -167,13 +167,13 @@ Root操作有一定风险，可能导致手机变砖（无法开机）。如果�
 
 #### 六、SafetyNet与Play Integrity认证：为什么Root后银行App不能用
 
-很多Root用户都遇到过这样的崩溃瞬间：Root之后兴致勃勃地装了一堆模块，结果打开银行App——"您的设备不安全，无法使用"，Google Pay也用不了，连Netflix都拒绝高清播放。这背后是Google的两套设备完整性认证机制：旧的 SafetyNet 和新的 Play Integrity API。
+很多Root用户都遇到过这样的崩溃瞬间：Root之后兴致勃勃地装了一堆模块，结果打开银行App："您的设备不安全，无法使用"，Google Pay也用不了，连Netflix都拒绝高清播放。这背后是Google的两套设备完整性认证机制：旧的 SafetyNet 和新的 Play Integrity API。
 
 ##### 什么是 SafetyNet / Play Integrity：
 
 - <strong>SafetyNet Attestation（旧版，2017年起）</strong>：Google 早期推出的设备完整性检查 API，应用通过它向 Google 服务器查询"这台设备是否通过 CTS 兼容性测试、是否处于未修改的官方状态"。返回结果分为 Basic Attestation（基础校验）和 Strong Attestation（强校验，依赖硬件密钥）。Google 已宣布 SafetyNet 将在 2024 年后逐步停用。
 - <strong>Play Integrity API（新版，2022年起）</strong>：Google 推出的替代方案，比 SafetyNet 更严格也更全面。除了设备完整性，还包括"应用完整性"（App 是否被篡改）和"账号/授权完整性"（用户账号是否被 Google 信任）。新 App 应迁移到 Play Integrity。
-- <strong>谁来用</strong>：银行、金融、支付类 App（如 Google Pay、各银行的网银、支付宝/微信支付的部分场景）、流媒体（Netflix 高清版权保护）、部分游戏反作弊（如腾讯/网易的部分游戏）、企业办公 App（MDM 设备合规性检查）。
+- <strong>谁来用</strong>：银行、金融和支付类 App（如 Google Pay、各银行的网银和支付宝/微信支付的部分场景）、流媒体（Netflix 高清版权保护）、部分游戏反作弊（如腾讯/网易的部分游戏），以及企业办公 App（MDM 设备合规性检查）。
 
 ##### Play Integrity 的三级认证结果：
 
@@ -188,9 +188,9 @@ Root操作有一定风险，可能导致手机变砖（无法开机）。如果�
 
 ##### 现代隐藏方案：Magisk Hide / Shamiko / Zygisk：
 
-为了在享受 Root 便利的同时还能用银行 App，社区开发了一系列"隐藏 Root 状态"的方案。核心思路都是：让检测程序看到的不是一个被修改过的系统，而是一个"看起来正常"的设备。
+为了在享受 Root 便利的同时还能用银行 App，社区开发了一系列"隐藏 Root 状态"的方案。核心思路都是：不是一个被修改过的系统，是一个"看起来正常"的设备。
 
-- <strong>Magisk</strong>：当前最主流的 Systemless Root 方案——不修改系统分区，而是通过挂载的方式实现 Root。这样设计的好处是 OTA 更新失败的几率小、卸载比较干净，是后续所有隐藏方案的基础。但使用 Magisk 仍然需要解锁 BL 锁。
+- <strong>Magisk</strong>：当前最主流的 Systemless Root 方案，不修改系统分区，而是通过挂载的方式实现 Root。这样设计的好处是 OTA 更新失败的几率小、卸载比较干净，是后续所有隐藏方案的基础。但使用 Magisk 仍然需要解锁 BL 锁。
 - <strong>Magisk Hide（已停更）</strong>：Magisk 早期内置的隐藏模块，能对指定 App 隐藏 Root。但 2021 年起已被 Magisk 官方移除，原因是 Google 持续升级检测手段，双方陷入"猫鼠游戏"。
 - <strong>Zygisk</strong>：Magisk 24.0+ 引入的新机制，类似 Riru，通过注入 Zygote 进程实现模块加载，比直接修改系统更隐蔽。开启 Zygisk 是使用现代隐藏方案的前提。
 - <strong>Shamiko</strong>：当前最主流的隐藏模块，配合 Zygisk 工作，可以为指定 App（"反向白名单"模式）隐藏 Root、隐藏 Magisk 自身、伪造 Bootloader 锁定状态。Shamiko 通过 LSPosed 仓库或 GitHub 分发。
@@ -208,7 +208,7 @@ Google 每隔一段时间就会更新检测规则，App 厂商也会跟进升级
 
 - <strong>开发者模式</strong>：可以开启，体验一下动画加速、GPU 呈现分析等功能，但不要乱改其他不理解的选项。
 - <strong>OEM 解锁与 BL 锁</strong>：如果你不打算刷机或 Root，两个开关都保持默认（关闭）状态最安全。
-- <strong>ADB</strong>：免 Root 的强大工具，普通人也能用——比如用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> 卸载预装 App。但删之前一定要查清楚包名能不能删。
+- <strong>ADB</strong>：免 Root 的强大工具，普通人也能用，比如用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> 卸载预装 App。但删之前一定要查清楚包名能不能删。
 - <strong>Root</strong>：普通用户不建议 Root，风险大于收益。如果确实需要某些功能，可以先了解有没有不需要 Root 的替代方案（比如用 ADB 卸载预装、用 Shizuku 替代部分 Root 功能）。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

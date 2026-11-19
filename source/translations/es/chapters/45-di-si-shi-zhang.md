@@ -2,12 +2,12 @@
 id: di-si-shi-zhang
 num: 40
 part: ai-biancheng-pian
-nav: Capítulo 40: Ingeniería de requisitos: convertir ideas en instrucciones que la IA pueda ejecutar
+nav: Capítulo 40: Explícalo primero, y luego a la acción
 toc: default
 kind: chapter
 ---
 
-### Capítulo 40: Ingeniería de requisitos: convertir ideas en instrucciones que la IA pueda ejecutar
+### Capítulo 40: Explícalo primero, y luego a la acción
 
 {class="chapter-intro mb-4"}
 Si la ingeniería de contexto resuelve «que la IA conozca el contexto», la ingeniería de requisitos resuelve «que la IA sepa qué hay que hacer exactamente esta vez». Es la etapa donde más se nota la diferencia entre personas en la programación con IA: con las mismas herramientas y los mismos modelos, hay quien logra proyectos impresionantes y quien solo consigue juguetes mediocres. La diferencia suele estar no en la capacidad técnica, sino en la capacidad de expresar los requisitos.
@@ -38,7 +38,7 @@ Tomemos como ejemplo «hacer una app personal de gastos»; una forma razonable d
 1. Implementar la función básica de registro de ingresos y gastos (añadir, ver y eliminar registros);
 2. Añadir la función de categorías (etiquetar cada registro como comida, transporte, etc.);
 3. Implementar el resumen mensual (estadísticas de ingresos y gastos mes a mes);
-4. Añadir la visualización de datos (mostrar la estructura de gastos con gráficos).
+4. Añadir la visualización de datos (mostrar la estructura de gastos con gráficos)
 
 Cada paso es un incremento de funcionalidad que puede ejecutarse y verificarse por separado.
 
@@ -94,7 +94,7 @@ Step 5: exportación de datos
 
 Fíjate en el estilo de escritura de este PRD: listas concisas y formato estructurado, en lugar de discursos interminables. Cada punto de funcionalidad tiene una definición clara y el modelo de datos se describe con tipos sencillos. Un PRD con este estilo no solo lo entiendes tú con facilidad: cuando se lo das a la IA, también comprende con precisión cada punto del requisito.
 
-#### 4. En la práctica: una demostración completa, de la idea al plan
+4. En la práctica: una demostración completa, de la idea al plan
 
 Teorizar sin práctica es aburrido; vamos a recorrer todo el proceso de la ingeniería de requisitos con un ejemplo completo. Supongamos que tu idea es: «quiero hacer un rastreador de aprendizaje que registre qué estudio cada día».
 
@@ -111,7 +111,7 @@ Segundo paso: descomponer los requisitos.
 1. Paso 1: implementar la función «registrar entradas de estudio» (fecha, contenido, duración);
 2. Paso 2: añadir las «estadísticas de tiempo de estudio» (hoy y acumulado semanal);
 3. Paso 3: implementar la vista «calendario de estudio» (mostrada como el gráfico de contribuciones de GitHub);
-4. Paso 4: añadir la función «repaso de estudio» (muestra al azar los registros de un día pasado para ayudarte a repasar).
+4. Paso 4: añadir la función «repaso de estudio» (muestra al azar los registros de un día pasado para ayudarte a repasar)
 
 Tercer paso: escribir un PRD breve. No hace falta que sea largo: la descomposición de arriba ya constituye el cuerpo del PRD. Organízalo en un archivo .md, colócalo en la raíz del proyecto y úsalo como referencia compartida entre tú y la IA.
 

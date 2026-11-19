@@ -10,7 +10,7 @@ class: mb-12
 ## 9. Bahagian Amali Pembangunan iOS (Bab 59-69)
 
 {class="chapter-intro mb-4"}
-Untuk penggemar Apple, sini tempatnya: daripada mengenali ekosistem iOS, memasang Xcode, kepada Swift dan SwiftUI, kemudian dua projek lengkap dan penerbitan di App Store. Perhatikan satu syarat wajib — perlukan sebuah Mac. Idea pengaturcaraan Bahagian 8 dan 9 saling berkaitan; selepas menamatkan satu bahagian, bahagian yang lain akan jauh lebih cepat dikuasai. Selepas 11 bab, anda boleh membuat aplikasi sebenar yang terpasang dalam ratusan juta iPhone.
+Untuk penggemar Apple, sini tempatnya: daripada mengenali ekosistem iOS, memasang Xcode, kepada Swift dan SwiftUI, kemudian dua projek lengkap dan penerbitan di App Store. Perhatikan satu syarat wajib, perlukan sebuah Mac. Idea pengaturcaraan Bahagian 8 dan 9 saling berkaitan; selepas menamatkan satu bahagian, bahagian yang lain akan jauh lebih cepat dikuasai. Selepas 11 bab, anda boleh membuat aplikasi sebenar yang terpasang dalam ratusan juta iPhone.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

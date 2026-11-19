@@ -2,21 +2,21 @@
 id: di-ling-zhang
 num: 00
 part: ji-chu-pian
-nav: Bab 0: Hai, Sebelum Mula
+nav: Bab 0: Tiga perkara jujur sebelum mula
 toc: default
 kind: chapter
 ---
 
-### Bab 0: Hai, Sebelum Mula
+### Bab 0: Tiga perkara jujur sebelum mula
 
 {class="mb-3"}
 Sebelum meneroka secara rasmi, mari kita bercakap tentang peraturan asas untuk memastikan anda faham apa yang akan dibincangkan kemudian. Jangan tergesa-gesa, mengasah pisau tidak melambatkan kerja menebang kayu.
 
-#### I. Apa yang Buku Ini Bantu Anda Lakukan? (Dan Apa yang Tidak)
+I. Apa yang Buku Ini Bantu Anda Lakukan? (Dan Apa yang Tidak)
 
 Ia membantu anda memahami secara sistematik cara menggunakan telefon pintar, memahami sebab di sebalik fungsi, dan sama ada anda penyokong Android atau Apple, kebanyakan idea adalah universal. Ia akan membimbing anda berlatih, menaikkan taraf anda dari "tahu guna" ke "faham guna".
 
-Ia bukan manual untuk model telefon tertentu, bukan berita teknologi mengejar produk baharu, dan bukan panduan mengajar anda ketagih telefon. Sejujurnya, jika anda menjangkakan "cara menonton video dengan lebih puas", anda mungkin kecewa — kami lebih mengambil berat tentang cara menjadikan telefon benar-benar berkhidmat kepada anda, bukan sebaliknya.
+Ia bukan manual untuk model telefon tertentu, bukan berita teknologi mengejar produk baharu, dan bukan panduan mengajar anda ketagih telefon. Sejujurnya, jika anda menjangkakan "cara menonton video dengan lebih puas", anda mungkin kecewa, kami lebih mengambil berat tentang cara menjadikan telefon benar-benar berkhidmat kepada anda, bukan sebaliknya.
 
 #### II. Penjelasan "Kod Rahsia" Kami
 
@@ -33,7 +33,7 @@ Anda tahu apa, sesetengah perkara dipanggil dengan nama berbeza tetapi fungsinya
 
 Selain itu, dalam kem Android kini ada sistem HarmonyOS Huawei, yang mempunyai ciri tersendiri, akan dibincangkan khusus kemudian. Ringkasnya, tidak kira telefon apa yang anda gunakan, buku ini boleh membantu anda.
 
-#### IV. Kapasiti Telefon: Mengapa Beli 128G tetapi Kurang daripada 110G Tersedia?
+IV. Kapasiti Telefon: Mengapa Beli 128G tetapi Kurang daripada 110G Tersedia?
 
 Semua orang tahu unit kapasiti: 1TB = 1024GB, 1GB = 1024MB, 1MB = 1024KB... tetapi ada perangkap di sini: pengeluar cakera keras biasanya mengira berdasarkan asas 1000, manakala sistem mengira berdasarkan asas 1024, jadi cakera keras "128G" yang anda beli akan "menyusut" dari segi kapasiti sebenar.
 
@@ -48,7 +48,7 @@ Tapi sebab utama kapasiti telefon anda menyusut ada tiga:
 <i class="fas fa-lightbulb mr-2"></i>Saranan Membeli Telefon
 
 {class="mt-1"}
-Telefon 128GB kini pada asasnya tidak mencukupi, 256GB sebagai permulaan lebih selamat. Jika anda suka mengambil gambar, bermain permainan, cadangan terus ke 512GB atau lebih besar. Ingat, ruang storan ini, lebih baik berlebihan daripada tidak mencukupi.
+Telefon 128GB kini pada asasnya tidak mencukupi, 256GB sebagai permulaan lebih selamat. Jika anda suka mengambil gambar, bermain permainan. cadangan terus ke 512GB atau lebih besar. Ingat, ruang storan ini, lebih baik berlebihan daripada tidak mencukupi.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -82,6 +82,6 @@ Jika telefon hilang atau rosak, anda kehilangan bukan sahaja perkakasan bernilai
 
 Seperti menjaga kesihatan tidak boleh menunggu sakit baru jumpa doktor,<strong>pengurusan telefon juga mesti bermula dari "tabiat harian"</strong>. Buku ini menekankan berulang kali bukan kemahiran lanjutan tertentu, tetapi prinsip-prinsip ringkas ini:
 
-- <strong>Pencegahan utama</strong>: Pasang App hanya dari kedai rasmi, nyahpeka gambar sebelum dihantar, jangan ulang kata laluan — "tindakan kecil" ini kosnya sangat rendah, tetapi boleh menangkis kebanyakan risiko.
-- <strong>Pemeriksaan berkala</strong>: Susun folder muat turun sekali sebulan, audit kebenaran sekali setiap suku tahun, sandaran penuh sekali setiap enam bulan — rentetan tetap 100 kali lebih berkesan daripada memadam kebakaran sementara.
-- <strong>Berikan ruang untuk berundur</strong>: Aktifkan penyegerakan awan, ingat kata laluan akaun, tulis "senarai warisan digital" — pastikan apabila kemalangan berlaku, anda dan keluarga boleh menghadapi dengan tenang.
+- <strong>Pencegahan utama</strong>: Pasang App hanya dari kedai rasmi, nyahpeka gambar sebelum dihantar, jangan ulang kata laluan, "tindakan kecil" ini kosnya sangat rendah, tetapi boleh menangkis kebanyakan risiko.
+- <strong>Pemeriksaan berkala</strong>: Susun folder muat turun sekali sebulan, audit kebenaran sekali setiap suku tahun, sandaran penuh sekali setiap enam bulan, rentetan tetap 100 kali lebih berkesan daripada memadam kebakaran sementara.
+- <strong>Berikan ruang untuk berundur</strong>: Aktifkan penyegerakan awan, ingat kata laluan akaun, tulis "senarai warisan digital", pastikan apabila kemalangan berlaku, anda dan keluarga boleh menghadapi dengan tenang.

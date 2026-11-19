@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 69 : Mémo et ressources
 
 {class="chapter-intro mb-4"}
-Ce chapitre est un mémo qui se suffit à lui-même. Quand tu ne te rappelles plus d'une écriture ou qu'il te faut décider vite, ouvre-le directement. Traite-le comme des « cartes de poche » : mémo du code courant, questions fréquentes, ressources d'apprentissage — sans en sauter la moindre page.
+Ce chapitre est un mémo qui se suffit à lui-même. Quand tu ne te rappelles plus d'une écriture ou qu'il te faut décider vite, ouvre-le directement. Traite-le comme des « cartes de poche » : mémo du code courant, questions fréquentes, ressources d'apprentissage, sans en sauter la moindre page.
 
 #### 1. La fiche mémo du code courant
 
@@ -31,11 +31,11 @@ Tu peux apprendre le langage, mais pas faire un développement complet. Swift Pl
 
 Q2 : Combien coûte l'apprentissage du développement iOS ?
 
-Phase d'apprentissage : 0 yuan (Xcode gratuit + tests sur appareil réel avec un identifiant Apple gratuit). Phase de publication : compte développeur à 99 $ par an (environ 700 yuans). Ajoute l'investissement matériel d'un Mac, et c'est tout le coût. Au regard du retour — même un petit utilitaire sur l'App Store trouve des utilisateurs payants — le calcul est rentable.
+Phase d'apprentissage : 0 yuan (Xcode gratuit + tests sur appareil réel avec un identifiant Apple gratuit). Phase de publication : compte développeur à 99 $ par an (environ 700 yuans). Ajoute l'investissement matériel d'un Mac, et c'est tout le coût. Au regard du retour, même un petit utilitaire sur l'App Store trouve des utilisateurs payants: le calcul est rentable.
 
 Q3 : SwiftUI ou UIKit, lequel apprendre en premier ?
 
-SwiftUI. En 2026, les nouveaux projets, tutoriels et postes sont dominés par SwiftUI, et ce livre l'utilise du début à la fin. UIKit est le framework de la génération précédente, encore très utilisé dans d'anciens projets — une fois SwiftUI bien maîtrisé, complète avec UIKit selon tes besoins (Apple propose des tutoriels d'interopérabilité), tu t'y mettras très vite. N'inverse pas l'ordre.
+SwiftUI. En 2026, les nouveaux projets, tutoriels et postes sont dominés par SwiftUI, et ce livre l'utilise du début à la fin. UIKit est le framework de la génération précédente, encore très utilisé dans d'anciens projets: une fois SwiftUI bien maîtrisé, complète avec UIKit selon tes besoins (Apple propose des tutoriels d'interopérabilité), tu t'y mettras très vite. N'inverse pas l'ordre.
 
 Q4 : Est-ce facile de trouver du travail en développement iOS ?
 
@@ -43,7 +43,7 @@ L'état du marché en 2026 : les postes juniors qui se contentent de « dessiner
 
 Q5 : Que faire si l'app est refusée lors de la validation ?
 
-Pas de panique, c'est tout à fait normal — une première soumission a de bonnes chances d'être refusée. Apple motive ses refus de façon très précise (quelle page, quelle règle) ; corrige point par point, réponds avec tes explications dans App Store Connect, puis renvoie. Les trois grandes causes de refus : l'usage des permissions mal expliqué, des bugs d'interface, des métadonnées (captures/description) qui ne correspondent pas au produit. Vérifie ces trois points à l'avance et tu économiseras un tour d'attente.
+Pas de panique, c'est tout à fait normal, une première soumission a de bonnes chances d'être refusée. Apple motive ses refus de façon très précise (quelle page, quelle règle) ; corrige point par point, réponds avec tes explications dans App Store Connect, puis renvoie. Les trois grandes causes de refus : l'usage des permissions mal expliqué, des bugs d'interface, des métadonnées (captures/description) qui ne correspondent pas au produit. Vérifie ces trois points à l'avance et tu économiseras un tour d'attente.
 
 #### III. Aide-mémoire des raccourcis Xcode les plus utilisés
 
@@ -61,7 +61,7 @@ Aide-mémoire des raccourcis Xcode les plus utilisés
 Petit conseil : en cas de compilation mystérieuse, vide d'abord le cache
 
 {class="mt-1"}
-Les événements paranormaux du type « hier ça tournait, aujourd'hui plus rien » viennent dans six à sept cas sur dix d'un cache de build corrompu. Un ⇧⌘K pour nettoyer puis recompiler guérit la grande majorité de ces bizarreries. Si ça ne suffit pas, redémarre Xcode (voire le Mac entier), et en dernier recours « supprime le dossier DerivedData » — c'est le rituel en trois temps que se transmettent les développeurs iOS.
+Les événements paranormaux du type « hier ça tournait, aujourd'hui plus rien » viennent dans six à sept cas sur dix d'un cache de build corrompu. Un ⇧⌘K pour nettoyer puis recompiler guérit la grande majorité de ces bizarreries. Si ça ne suffit pas, redémarre Xcode (voire le Mac entier), et en dernier recours « supprime le dossier DerivedData », c'est le rituel en trois temps que se transmettent les développeurs iOS.
 :::
 
 #### IV. Ressources d'apprentissage recommandées
@@ -77,7 +77,7 @@ Liste des ressources pour apprendre le développement iOS (août 2026)
 
 #### V. Conclusion : de la première app à l'énième app
 
-Avec le recul, tu es passé de « je ne sais pas ce qu'est SwiftUI » à : installer Xcode, apprendre Swift, dessiner des interfaces avec SwiftUI, brancher une base de données et le réseau sur ton app, puis tester, empaqueter, publier — sur ce chemin, tu as déjà franchi le tronçon le plus difficile, celui qui mène de zéro à un.
+Avec le recul, tu es passé de « je ne sais pas ce qu'est SwiftUI » à : installer Xcode, apprendre Swift, dessiner des interfaces avec SwiftUI, brancher une base de données et le réseau sur ton app, puis tester, empaqueter, publier, sur ce chemin, tu as déjà franchi le tronçon le plus difficile, celui qui mène de zéro à un.
 
 Le monde de la technologie va très vite : les frameworks se mettent à niveau, les outils changent de génération, l'IA prend en charge de plus en plus de travail de « frappe au clavier ». Mais une chose ne se démode pas : ta capacité à décomposer une idée floue en étapes claires, puis à la réaliser pas à pas. Les outils sont des amplificateurs, la réflexion est le socle. Un amplificateur peut se remplacer, le socle ne doit pas bouger.
 

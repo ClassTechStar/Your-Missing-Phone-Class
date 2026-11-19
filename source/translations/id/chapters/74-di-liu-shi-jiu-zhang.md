@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 69: Manual Referensi Cepat dan Sumber Belajar
 
 {class="chapter-intro mb-4"}
-Bab ini adalah manual contekan yang bisa dipakai secara mandiri. Saat kamu lupa suatu penulisan atau perlu mengambil keputusan cepat, langsung buka bagian ini. Sarannya, perlakukan sebagai "kartu saku": contekan kode yang sering dipakai, pertanyaan umum, sumber belajar — tidak ada yang terlewat.
+Bab ini adalah manual contekan yang bisa dipakai secara mandiri. Saat kamu lupa suatu penulisan atau perlu mengambil keputusan cepat, langsung buka bagian ini. Sarannya, perlakukan sebagai "kartu saku": contekan kode yang sering dipakai, pertanyaan umum, sumber belajar, tidak ada yang terlewat.
 
 #### 1. Kartu Contekan Kode yang Sering Dipakai
 
@@ -31,11 +31,11 @@ Bahasa bisa dipelajari, tapi pengembangan lengkap belum bisa. Swift Playgrounds 
 
 Q2: Berapa biaya untuk belajar pengembangan iOS?
 
-Tahap belajar: Rp0 (Xcode gratis + Apple ID gratis untuk debugging di perangkat asli). Tahap rilis: akun pengembang 99 dolar AS/tahun (sekitar Rp1,6 juta). Ditambah investasi perangkat keras satu Mac, itulah seluruh biayanya. Dibandingkan imbal hasilnya — di App Store bahkan alat kecil pun punya pengguna yang membayar — hitungan ini sepadan.
+Tahap belajar: Rp0 (Xcode gratis + Apple ID gratis untuk debugging di perangkat asli). Tahap rilis: akun pengembang 99 dolar AS/tahun (sekitar Rp1.6 juta). Ditambah investasi perangkat keras satu Mac. itulah seluruh biayanya. Dibandingkan imbal hasilnya — di App Store bahkan alat kecil pun punya pengguna yang membayar: hitungan ini sepadan.
 
 Q3: Mana yang dipelajari dulu, SwiftUI atau UIKit?
 
-SwiftUI. Proyek baru, tutorial baru, dan lowongan baru pada 2026 semuanya berbasis SwiftUI, dan buku ini memakainya dari awal sampai akhir. UIKit adalah framework generasi sebelumnya yang masih dipakai di banyak proyek lama — setelah SwiftUI-mu lancar, pelajari UIKit sesuai kebutuhan (dokumentasi resmi menyediakan tutorial interoperabilitas), dan kamu akan cepat menguasainya. Jangan dibalik urutannya.
+SwiftUI. Proyek baru, tutorial baru, dan lowongan baru pada 2026 semuanya berbasis SwiftUI, dan buku ini memakainya dari awal sampai akhir. UIKit adalah framework generasi sebelumnya yang masih dipakai di banyak proyek lama, setelah SwiftUI-mu lancar, pelajari UIKit sesuai kebutuhan (dokumentasi resmi menyediakan tutorial interoperabilitas), dan kamu akan cepat menguasainya. Jangan dibalik urutannya.
 
 Q4: Apakah mudah mencari kerja di bidang pengembangan iOS?
 
@@ -43,7 +43,7 @@ Situasi pasar tahun 2026: posisi pemula yang hanya "bisa menggambar antarmuka" p
 
 Q5: Bagaimana jika App ditolak saat ditinjau?
 
-Jangan panik, itu hal yang wajar—peluang ditolak pada pengiriman pertama tidak kecil. Alasan penolakan dari Apple biasanya ditulis sangat spesifik (halaman mana, pedoman mana). Perbaiki satu per satu, balas dengan penjelasan di App Store Connect, lalu kirim ulang. Tiga penyebab penolakan yang paling sering: tujuan izin (permission) tidak dijelaskan dengan jelas, antarmuka masih bermasalah (bug), dan metadata (tangkapan layar/deskripsi) tidak sesuai dengan isi aplikasi. Periksa sendiri ketiga hal ini lebih awal untuk menghemat satu putaran waktu tunggu.
+Jangan panik, itu hal yang wajar—peluang ditolak pada pengiriman pertama tidak kecil. Alasan penolakan dari Apple biasanya ditulis sangat spesifik (halaman mana. pedoman mana). Perbaiki satu per satu, balas dengan penjelasan di App Store Connect, lalu kirim ulang. Tiga penyebab penolakan yang paling sering: tujuan izin (permission) tidak dijelaskan dengan jelas, antarmuka masih bermasalah (bug), dan metadata (tangkapan layar/deskripsi) tidak sesuai dengan isi aplikasi. Periksa sendiri ketiga hal ini lebih awal untuk menghemat satu putaran waktu tunggu.
 
 #### 3. Panduan Cepat Pintasan Keyboard Xcode yang Sering Dipakai
 
@@ -77,12 +77,12 @@ Daftar sumber belajar pengembangan iOS (Agustus 2026)
 
 #### 5. Penutup: Dari App Pertama hingga App ke-N
 
-Dilihat ke belakang, kamu berangkat dari "tidak tahu SwiftUI itu apa", lalu memasang Xcode, belajar Swift, menggambar antarmuka dengan SwiftUI, menghubungkan App ke database dan jaringan, hingga menguji, mengemas, dan menerbitkannya—di jalan ini kamu sudah melewati bagian tersulit dari perjalanan dari nol ke satu.
+Dilihat ke belakang, kamu berangkat dari "tidak tahu SwiftUI itu apa", lalu memasang Xcode, belajar Swift, menggambar antarmuka dengan SwiftUI. menghubungkan App ke database dan jaringan, hingga menguji, mengemas, dan menerbitkannya—di jalan ini kamu sudah melewati bagian tersulit dari perjalanan dari nol ke satu.
 
 Dunia teknologi berubah sangat cepat: framework akan diperbarui, alat akan berganti, dan AI akan mengambil alih semakin banyak pekerjaan "menekan tombol keyboard". Namun ada satu hal yang tidak akan usang: kemampuanmu memecah sebuah ide yang masih kabur menjadi langkah-langkah yang jelas, lalu mewujudkannya selangkah demi selangkah. Alat adalah pengeras, cara berpikir adalah fondasi. Pengeras boleh diganti, fondasi tidak boleh goyah.
 
 :::inline div .quote-line
-Anda tidak lagi sekadar "orang yang pandai memakai ponsel". Anda bisa mengubah ide di kepala menjadi aplikasi yang benar-benar berjalan di ratusan juta iPhone. Mulai hari ini, berkarya lewat keyboard—itulah romantisme developer iOS.
+Anda tidak lagi sekadar "orang yang pandai memakai ponsel". Anda bisa mengubah ide di kepala menjadi aplikasi yang benar-benar berjalan di ratusan juta iPhone. Mulai hari ini, berkarya lewat keyboard,itulah romantisme developer iOS.
 :::
 
 #### Referensi

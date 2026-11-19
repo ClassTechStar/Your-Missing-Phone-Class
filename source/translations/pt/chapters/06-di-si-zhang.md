@@ -2,12 +2,12 @@
 id: di-si-zhang
 num: 04
 part: ji-chu-pian
-nav: Capítulo 4: Instalar e gerenciar apps
+nav: Capítulo 4: Antes de instalar um app, dê uma olhada
 toc: default
 kind: chapter
 ---
 
-### Capítulo 4: Instalar e Gerenciar Apps — O "Pacote de Habilidades" do Smartphone
+### Capítulo 4: Antes de instalar um app, dê uma olhada
 
 {class="chapter-intro mb-4"}
 Os apps tornam o smartphone capaz de tudo, mas é preciso gerenciá-los bem. Assim como você organiza a estação de trabalho e atribui permissões a novos funcionários, instalar apps também exige um processo padronizado.
@@ -20,7 +20,7 @@ Os apps tornam o smartphone capaz de tudo, mas é preciso gerenciá-los bem. Ass
 
 Significado central de segurança: passam por revisão, atualizações garantidas, pagamento seguro. Guia de ação: <strong>Priorize baixar apenas das lojas oficiais!</strong>
 
-#### II. Modo Puro / Modo de Proteção: Ative o "Firewall" do telefone
+II. Modo Puro / Modo de Proteção: Ative o "Firewall" do telefone
 
 As principais marcas chinesas (Huawei, Xiaomi, OPPO, vivo, Honor) possuem integrado o <strong>Modo Puro</strong> ou <strong>Modo de Proteção</strong>, um interruptor de segurança no nível do sistema. <strong>Recomenda-se fortemente que todos os usuários o ativem</strong>.
 
@@ -32,7 +32,7 @@ O Modo Puro (também chamado "Modo de Proteção") tem como <strong>função pri
 
 - <strong>Usuários idosos</strong>: Não conseguem distinguir anúncios "oficiais" de "falsos". O Modo Puro é o amuleto mais seguro.
 - <strong>Usuários pouco sensíveis a permissões de apps</strong>: Não precisam instalar apps de nicho, versões beta ou jogos de servidores estrangeiros.
-- <strong>Todos os usuários que desejam aumentar a segurança do dispositivo</strong>: Mesmo para entusiastas, é melhor ativado do que desativado — se houver necessidade temporária, basta desativar momentaneamente.
+- <strong>Todos os usuários que desejam aumentar a segurança do dispositivo</strong>: Mesmo para entusiastas, é melhor ativado do que desativado, se houver necessidade temporária, basta desativar momentaneamente.
 
 ##### 3. Caminho de ativação (exemplo Huawei/Xiaomi)
 
@@ -46,11 +46,11 @@ O Modo Puro (também chamado "Modo de Proteção") tem como <strong>função pri
 A loja de apps não é "apenas decorativa". Por trás dela há um pipeline completo de segurança:
 
 - <strong>Verificação de vírus</strong>: Cada app é analisado por vários motores antivírus antes da publicação, identificando assinaturas conhecidas de trojans e vírus.
-- <strong>Revisão de permissões</strong>: A loja analisa se as permissões solicitadas pelo app são "razoáveis" — um app de lanterna pedindo acesso aos contatos? Rejeitado ou removido diretamente.
-- <strong>Certificação de desenvolvedor</strong>: A publicação requer credenciais empresariais, documento de identidade ou verificação de cartão de crédito. Se houver problemas, é possível identificar o responsável — não são "apps anônimos".
+- <strong>Revisão de permissões</strong>: A loja analisa se as permissões solicitadas pelo app são "razoáveis", um app de lanterna pedindo acesso aos contatos? Rejeitado ou removido diretamente.
+- <strong>Certificação de desenvolvedor</strong>: A publicação requer credenciais empresariais, documento de identidade ou verificação de cartão de crédito. Se houver problemas, é possível identificar o responsável, não são "apps anônimos".
 - <strong>Monitoramento contínuo</strong>: Apps já publicados são continuamente reanalisados. Comportamentos maliciosos recém-descobertos resultam em remoção forçada.
 
-#### III. Fontes de Terceiros e "Parasitas Eletrônicos": Risco altíssimo!
+III. Fontes de Terceiros e "Parasitas Eletrônicos": Risco altíssimo!
 
 Baixar apps de páginas web ou links suspeitos pode trazer vírus, roubar privacidade e drenar pagamentos. Apresentamos aqui um novo conceito: os <strong>"Parasitas Eletrônicos"</strong>.
 
@@ -64,7 +64,7 @@ Referem-se a <strong>softwares "crackeados" com cavalos de Troia embutidos</stro
 {class="list-disc pl-6 mt-2 space-y-1 text-sm"}
 - Softwares pagos em versão "crackeada", "gratuita" ou "sem anúncios";
 - Ferramentas obscuras como "ganhar curtidas", "roubar envelopes vermelhos", "cheats para jogos";
-- Os chamados apps "versão interna" recomendados em "anúncios" de grupos de bate-papo.
+- Os chamados apps "versão interna" recomendados em "anúncios" de grupos de bate-papo
 
 {class="mt-2"}
 Esses programas parecem funcionar, mas nos bastidores podem estar <strong>roubando contatos, lendo SMS, escutando o microfone, minerando criptomoedas em segundo plano</strong>. O Modo Puro é a <strong>primeira linha de defesa</strong> — simplesmente impede que você os instale.
@@ -73,8 +73,8 @@ Esses programas parecem funcionar, mas nos bastidores podem estar <strong>rouban
 ##### Sugestões para a segunda linha de defesa:
 
 - <strong>Verificação completa de vírus periodicamente</strong>: Use o centro de segurança integrado do telefone (como Huawei Optimizer, Xiaomi Security Center) uma vez por mês.
-- <strong>Conceda permissões sensíveis com cautela</strong>: Contatos, SMS, localização, câmera, microfone — estas cinco "permissões de alto risco" devem ser rigorosamente aprovadas.
-- <strong>Fique atento a consumo anormal de bateria e dados</strong>: Telefone esquentando de repente, bateria descarregando rápido, consumo de dados durante a madrugada — muito provavelmente há um "parasita" escondido em segundo plano.
+- <strong>Conceda permissões sensíveis com cautela</strong>: Contatos, SMS, localização, câmera, microfone: estas cinco "permissões de alto risco" devem ser rigorosamente aprovadas.
+- <strong>Fique atento a consumo anormal de bateria e dados</strong>: Telefone esquentando de repente, bateria descarregando rápido, consumo de dados durante a madrugada, muito provavelmente há um "parasita" escondido em segundo plano.
 
 Se for absolutamente necessário instalar um app de terceiros:
 
@@ -183,7 +183,7 @@ Técnicas de otimização dos apps modernos:
 <i class="fas fa-info-circle mr-2"></i>Curiosidade: Por que alguns apps têm pacotes de instalação tão grandes?
 
 {class="mt-1"}
-Apps de jogos costumam ser os maiores, pois contêm muitas texturas em alta definição, modelos 3D e arquivos de áudio. Apps de redes sociais também são relativamente grandes, pois precisam suportar vários módulos funcionais. Apps utilitários costumam ser os menores. Se você encontrar um app utilitário particularmente grande, desconfie: pode estar empacotado com funcionalidades desnecessárias.
+Apps de jogos costumam ser os maiores, pois contêm muitas texturas em alta definição, modelos 3D e arquivos de áudio. Apps de redes sociais também são relativamente grandes, pois precisam suportar vários módulos funcionais. Os apps utilitários costumam ser os menores. Se você encontrar um app utilitário particularmente grande, desconfie: pode estar empacotado com funcionalidades desnecessárias.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

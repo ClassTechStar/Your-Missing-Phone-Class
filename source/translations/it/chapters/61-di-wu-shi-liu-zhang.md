@@ -2,17 +2,17 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Capitolo 56: Rifinire e pubblicare — Pubblicare su Google Play
+nav: Capitolo 56: La tua app è pronta, ora pubblicala
 toc: default
 kind: chapter
 ---
 
-### Capitolo 56: Rifinire e pubblicare — test, debug e lancio su Google Play
+### Capitolo 56: La tua app è pronta, ora pubblicala
 
 {class="chapter-intro mb-4"}
 L'app è fatta, e adesso? Questo capitolo risponde alle tre domande che portano da «funziona» a «è pronta da consegnare»: come fare debug in modo efficiente per trovare i bug, come scrivere test per evitare regressioni e come portare l'app su Google Play perché sia scaricabile in tutto il mondo. La pubblicazione non è un semplice rito: è la linea che separa un'opera da un prodotto.
 
-#### 1. I tre strumenti del debug: Logcat, breakpoint e inspector della UI
+1. I tre strumenti del debug: Logcat, breakpoint e inspector della UI
 
 ::: div .overflow-x-auto
 ```html
@@ -79,8 +79,8 @@ Nel registro delle spese, la verifica degli importi e i calcoli delle statistich
 Android impone che ogni pacchetto di installazione sia firmato: è come il timbro ufficiale che certifica che «questo pacchetto è mio e non è stato manomesso». In fase di debug Android Studio usa da solo la firma debug; per pubblicare serve la tua firma release. Procedura:
 
 1. menu Build → Generate Signed Bundle / APK;
-2. crea il file keystore (il portachiavi delle chiavi) — imposta una password e conservala con cura;
-3. scegli release e il formato AAB, e la build è completata.
+2. crea il file keystore (il portachiavi delle chiavi), imposta una password e conservala con cura;
+3. scegli release e il formato AAB, e la build è completata
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -107,25 +107,25 @@ Figura 6: i sei passi per arrivare su Google Play
 
 - Registrazione: tassa una tantum di 25 dollari, serve un account Google funzionante;
 - Materiali: icona dell'app (512×512), screenshot (almeno 2), descrizione delle funzioni, link all'informativa sulla privacy (obbligatoria se raccogli dati);
-- Modulo sulla sicurezza dei dati: dichiara in buona fede quali dati raccogli — un registro delle spese che non va in rete può dichiarare «raccolta zero»;
-- Revisione: la prima pubblicazione di un account nuovo passa spesso per una revisione umana, da qualche ora a qualche giorno; se te la respingono, correggi secondo le osservazioni ricevute.
+- Modulo sulla sicurezza dei dati: dichiara in buona fede quali dati raccogli, un registro delle spese che non va in rete può dichiarare «raccolta zero»;
+- Revisione: la prima pubblicazione di un account nuovo passa spesso per una revisione umana, da qualche ora a qualche giorno; se te la respingono, correggi secondo le osservazioni ricevute
 
-Nota per i lettori in Cina: Google Play richiede un ambiente di rete particolare, e la distribuzione nella Cina continentale passa in genere per gli store nazionali (Huawei, Xiaomi, Yingyongbao e altri). La procedura per gli store nazionali è simile, ma ognuno ha i suoi gusti in fatto di revisione — lo stesso AAB/APK si può distribuire su più store. Per fare pratica, basta portarne a termine uno per aver già vinto.
+Nota per i lettori in Cina: Google Play richiede un ambiente di rete particolare, e la distribuzione nella Cina continentale passa in genere per gli store nazionali (Huawei, Xiaomi, Yingyongbao e altri). La procedura per gli store nazionali è simile, ma ognuno ha i suoi gusti in fatto di revisione, lo stesso AAB/APK si può distribuire su più store. Per fare pratica, basta portarne a termine uno per aver già vinto.
 
-#### 5. Come preparare i materiali dello store: la prima impressione vale i download
+5. Come preparare i materiali dello store: la prima impressione vale i download
 
 La pagina dello store è la vetrina che l'utente vede mentre «passeggia per i negozi». Tre materiali decidono la prima impressione:
 
 - Icona: 512×512, non improvvisare con uno screenshot. Senza competenze di design, genera con uno strumento AI una semplice forma geometrica: è valida solo se, ridotta in miniatura sulla schermata home del telefono, resta riconoscibile a colpo d'occhio;
-- Screenshot: almeno 2, meglio 4-6, che mostrino le scene d'uso delle funzioni più importanti; a ognuno aggiungi una frase scritta in linguaggio umano («registra una voce in un secondo» vale dieci volte «una soluzione efficiente per la gestione delle spese»);
-- Descrizione: la prima frase deve chiarire «che cos'è + a chi serve»; evita di accumulare superlativi come «il più professionale, il più potente» — il posizionamento nella ricerca dello store dipende soprattutto da parole chiave e conversioni dei download: la sincerità rende più dell'esagerazione.
+- Screenshot: almeno 2, meglio 4-6, che mostrino le scene d'uso delle funzioni più importanti; a ognuno aggiungi una frase scritta in linguaggio umano, («registra una voce in un secondo» vale dieci volte «una soluzione efficiente per la gestione delle spese»);
+- Descrizione: la prima frase deve chiarire «che cos'è + a chi serve»; evita di accumulare superlativi come «il più professionale, il più potente»: il posizionamento nella ricerca dello store dipende soprattutto da parole chiave e conversioni dei download: la sincerità rende più dell'esagerazione
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Consiglio: guarda come fanno gli altri
 
 {class="mt-1"}
-Prima di pubblicare, fai un giro tra le prime dieci app dello stesso genere nello store e confronta gli screenshot: che stile hanno le loro icone? Che punto di forza raccontano gli screenshot? Come sono scritti i titoli? Imitare non è copiare: studi lo schema e ci metti i tuoi contenuti — è la lezione più rapida per il lancio di qualunque prodotto.
+Prima di pubblicare, fai un giro tra le prime dieci app dello stesso genere nello store e confronta gli screenshot: che stile hanno le loro icone? Che punto di forza raccontano gli screenshot? Come sono scritti i titoli? Imitare non è copiare: studi lo schema e ci metti i tuoi contenuti, è la lezione più rapida per il lancio di qualunque prodotto.
 :::
 
 #### 6. Mini checklist: prestazioni e report dei crash
@@ -134,10 +134,10 @@ Prima di pubblicare l'app, queste due cose meritano mezz'ora ciascuna:
 
 ##### 1. Quattro controlli sulle prestazioni
 
-1. Gli elenchi con LazyColumn: mai impaginare a forza una lista lunga con Column — il caricamento lazy è la prima lezione di prestazioni su Android;
-2. Non forzare le immagini originali: usa la libreria grafica Coil per ridimensionarle e metterle in cache in automatico — una foto originale da 5 MB basta a ingorgare un telefono di fascia bassa;
+1. Gli elenchi con LazyColumn: mai impaginare a forza una lista lunga con Column, il caricamento lazy è la prima lezione di prestazioni su Android;
+2. Non forzare le immagini originali: usa la libreria grafica Coil per ridimensionarle e metterle in cache in automatico, una foto originale da 5 MB basta a ingorgare un telefono di fascia bassa;
 3. Evita i lavori pesanti sul thread principale: database, rete e file grossi vanno gestiti nelle coroutine;
-4. Misura col Profiler: l'analizzatore di prestazioni integrato in Android Studio mostra memoria, CPU e consumo energetico — prima si misura, poi si ottimizza; niente sensazioni.
+4. Misura col Profiler: l'analizzatore di prestazioni integrato in Android Studio mostra memoria, CPU e consumo energetico — prima si misura, poi si ottimizza; niente sensazioni
 
 ##### 2. Report dei crash
 
@@ -148,7 +148,7 @@ Se non crasha nei tuoi test, non vuol dire che non crashi sul telefono degli ute
 Mani in pasta: fai la «consegna» del registro delle spese
 
 {class="mt-1"}
-① Aggiungi 3 test di unità alla logica tipo parseAmount; ② con il Logcat acchiappa con le tue mani un crash provocato apposta e aggiustalo; ③ genera un APK firmato in release e mandalo a un amico da installare (questo sì che è il rito dell'opera compiuta); ④ se hai fiato, registrati come sviluppatore e invia davvero il registro delle spese allo store. I primi tre punti si chiudono stasera.
+① Aggiungi 3 test di unità alla logica tipo parseAmount. ② con il Logcat acchiappa con le tue mani un crash provocato apposta e aggiustalo. ③ genera un APK firmato in release e mandalo a un amico da installare (questo sì che è il rito dell'opera compiuta). ④ se hai fiato, registrati come sviluppatore e invia davvero il registro delle spese allo store. I primi tre punti si chiudono stasera.
 :::
 
 ::: div .chapter-summary

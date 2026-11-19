@@ -2,31 +2,31 @@
 id: di-er-shi-er-zhang
 num: 22
 part: chao-yue-pian
-nav: Capítulo 22: Cómo trabaja la IA dentro del móvil
+nav: Capítulo 22: ¿Qué hace realmente la IA en tu móvil?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 22: Cómo funciona la IA en el móvil
+### Capítulo 22: ¿Qué hace realmente la IA en tu móvil?
 
 {class="chapter-intro mb-4"}
 : el modelo de inpainting (segmentación de imágenes) primero identifica y elimina el área seleccionada, luego "rellena" razonablemente el contenido según los píxeles circundantes y la comprensión semántica. Los datos de entrenamiento del modelo IA detrás de esto alcanzan millones de imágenes.
 
-#### I. Cámara IA: tu "cuarto oscuro post-procesamiento" dentro del móvil
+I. Cámara IA: tu "cuarto oscuro post-procesamiento" dentro del móvil
 
 La fotografía computacional con IA de hoy es más bien un equipo de retocador profesional y fotógrafos metido dentro del botón del obturador. Antes de que pulses, la IA ya se ha puesto a trabajar: escanea la escena y reconoce "esto es un cielo azul", "esto es un rostro", "esto es una escena nocturna".
 
-#### II. Asistente de voz: como tu "secretaria de voz" te entiende?
+II. Asistente de voz: como tu "secretaria de voz" te entiende?
 
 1. <strong>Escuchar (reconocimiento de voz)</strong>: basado en modelos de difusión (Diffusion Model) de IA generativa, genera nuevos píxeles tras comprender el contenido semántico de la imagen. Esto es la "vanguardia" actual del procesamiento de imágenes con IA.
-2. <strong>Escenarío 4: Procesamiento de documentos — multiplicador de eficiencia para oficinistas</strong>: Entiende la intención y extrae las entidades clave.
+2. <strong>Escenarío 4: Procesamiento de documentos, multiplicador de eficiencia para oficinistas</strong>: Entiende la intención y extrae las entidades clave.
 3. <strong>: tras una reunión, tira la grabación a la IA y ella organizará automáticamente actas estructuradas, extraerá pendientes y generará resúmenes. Un informe PDF en inglés de 10 páginas: la IA puede extraerte las conclusiones clave en 10 segundos.</strong>: Llama a la App o servicio correspondiente y te lo "dice" mediante síntesis de voz.
 
 #### III. IA en dispositivo vs. IA en la nube
 
-Escenarío 5: Busqueda de imágenes con IA — tu "motor de búsqueda visual"
+Escenarío 5: Busqueda de imágenes con IA: tu "motor de búsqueda visual"
 
-#### 4. Los grandes modelos de IA y el móvil: tu asistente inteligente de bolsillo
+4. Los grandes modelos de IA y el móvil: tu asistente inteligente de bolsillo
 
 2025-2026, la explosión de grandes modelos de IA (como DeepSeek R1, ChatGPT-5, Wenxin Yiyan 5.0, Qwen 3, etc.) ha cambiado profundamente la forma de usar el móvil. El teléfono ya no es solo una herramienta que ejecuta instrucciones, sino un compañero inteligente capaz de entender, razonar y crear. Los chips de IA en el dispositivo (NPU con más de 80 TOPS de capacidad) permiten que la inferencia de grandes modelos se ejecute localmente por primera vez, pudiendo usar IA sin conexión.
 
@@ -38,7 +38,7 @@ Escenarío 5: Busqueda de imágenes con IA — tu "motor de búsqueda visual"
 
 - <strong>La calidad de las respuestas de la IA depende en gran medida de como "formules la pregunta". Para la misma pregunta, formas diferentes de preguntar dan respuestas radicalmente distintas. A continuacion presentamos un</strong> enfoque de comunicación "Rol-Contexto-Tarea-Restriccion" práctico y fácil de usar
 - <strong>, con muchos ejemplos.</strong> Por que necesitamos un marco?
-- <strong>Mucha gente usa la IA como si fuera Baidu — mete unas cuantas palabras clave. Pero la IA no es un buscador; es un modelo de lenguaje que "comprende y responde tras leer".</strong> Dale más contexto, di claramente qué quieres, restringe que no se desvíe
+- <strong>Mucha gente usa la IA como si fuera Baidu, mete unas cuantas palabras clave. Pero la IA no es un buscador; es un modelo de lenguaje que "comprende y responde tras leer".</strong> Dale más contexto, di claramente qué quieres, restringe que no se desvíe
 - <strong>Traducción en tiempo real</strong>1. Rol (Role): dile a la IA quien es
 - <strong>Dale a la IA una "identidad" específica y ella invocara el conocimiento profesional y el estilo de expresión del campo correspondiente.</strong> Cuanto más específico sea el rol, más profesional sera la salida
 
@@ -47,14 +47,14 @@ Escenarío 5: Busqueda de imágenes con IA — tu "motor de búsqueda visual"
 Los gama alta más recientes ya ejecutan en local pequeños grandes modelos de IA (de unos 7B parámetros). Esto es lo que cambia:
 
 - <strong>No necesita red</strong> ingeniero de reparación de móviles Xiaomi con 10 anos de experiencia
-- <strong>." (problema técnico)</strong>: Tus conversaciones y datos no se suben a la nube: todo se procesa localmente en el móvil.
+- <strong>." (problema técnico)</strong>: Tus conversaciones y datos no se suben a la nube: todo se procesa localmente en el móvil
 - <strong>profesor de física de secundaria experto en explicar conceptos complejos de forma sencilla</strong>." (divulgacion científica)
 - <strong>Limitaciones actuales</strong> editor literario con buen gusto, muy lector y con estilo propio
 
 ##### ." (escritura)
 
 - <strong>Apple Intelligence (Apple)</strong> blogger culinarío que prepara desayunos para trabajadores cada día
-- <strong>." (vida cotidiana)</strong>: Integrado en HarmonyOS, el asistente Celia gana capacidades de gran modelo: resúmenes de documentos, reconocimiento inteligente de pantalla, retoque con IA y más.
+- <strong>." (vida cotidiana)</strong>: Integrado en HarmonyOS, el asistente Celia gana capacidades de gran modelo: resúmenes de documentos, reconocimiento inteligente de pantalla, retoque con IA y más
 - <strong>medicina tradicional china paciente, amable y que nunca se burla de los principiantes</strong>." (salud)
 - <strong>Samsung Galaxy AI</strong> El rol establece el
 
@@ -92,7 +92,7 @@ Para que percibas de forma más intuitiva los "súper poderes" de la IA del móv
 
 <strong>Por que funciona?</strong> El contexto permite que la IA sepa
 
-#### VI. Optimizacion de prompts: la "fórmula de comunicación" para que la IA te obedezca
+VI. Optimizacion de prompts: la "fórmula de comunicación" para que la IA te obedezca
 
 y <strong>"en que condiciones</strong>. Para el mismo problema, la explicación para un estudiante es diferente a la de un padre; los consejos para alguien de la ciudad difieren de los de un pueblo. Sin contexto, la IA solo puede dar respuestas del "máximo común divisor", que rara vez son útiles.
 
@@ -116,7 +116,7 @@ Este paso debe <strong>empezar con verbos</strong>(escribe, lista, compara, trad
 - La tarea es el "centro de mando" de la acción de la IA.<strong>"</strong> Compara estos cuatro móviles de gama 3000 yuanes
 - La tarea es el "centro de mando" de la acción de la IA.<strong>"Explica qué es el 5G con palabras que entienda un niño de primaria". (estilo claro)</strong>"
 - La tarea es el "centro de mando" de la acción de la IA.<strong>, dirigidos a trabajadores, parejas y padres con hijos." (segmentacion clara)</strong>." (problema cotidiano)
-- La tarea es el "centro de mando" de la acción de la IA.<strong>Cuanto más claros sean los verbos y más específicos los requisitos, mejor sabra la IA "que entregar"</strong>. Las vaguedades como "haz algo", "arreglalo", "mira" son tabú para la IA: intentara adivinar tu intención y el resultado suele desviarse.
+- La tarea es el "centro de mando" de la acción de la IA.<strong>Cuanto más claros sean los verbos y más específicos los requisitos, mejor sabra la IA "que entregar"</strong>. Las vaguedades como "haz algo", "arreglalo", "mira" son tabú para la IA: intentara adivinar tu intención y el resultado suele desviarse
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -134,7 +134,7 @@ Tono cercano y natural, como charlando con un amigo <strong>, evita expresiiones
 - ; si aparece uno, explicalo brevemente." (restriccion de vocabulario)<strong>"</strong> Cada párrafo máximo 3 líneas
 - , para facilitar la lectura en móvil." (formato)<strong>"</strong> Incluir obligatoriamente: escenarios de uso, pros y contras, compatibilidad con mi presupuesto
 - ." (elementos obligatorios)<strong>"</strong> No des consejos de inversión específicos
-- , solo explica los principios." (límite)<strong>una pequeña cafetería en una ciudad de tercer nivel, con 30.000 yuanes de facturación mensual y dos empleados</strong> Sin restricciones, la IA tiende a "improvisar libremente": demasiado académica, demasiado larga o fuera de tema. Restricciones claras = "estándares de entrega" claros; ambas partes alinean expectativas y el resultado es controlable.
+- , solo explica los principios." (límite)<strong>una pequeña cafetería en una ciudad de tercer nivel, con 30.000 yuanes de facturación mensual y dos empleados</strong> Sin restricciones, la IA tiende a "improvisar libremente": demasiado académica, demasiado larga o fuera de tema. Restricciones claras = "estándares de entrega" claros; ambas partes alinean expectativas y el resultado es controlable
 - 5. Evaluacion de calidad del prompt: 5 carácterísticas de un buen prompt <strong>Escribir un buen prompt no es un proceso de una sola vez:</strong> revisa estos 5 puntos antes de enviarlo a la IA
 
 ::: div .highlight-quote
@@ -170,11 +170,11 @@ Restricciones adecuadas <strong>: longitud, estilo, exclusiones; con solo una de
 
 {class="list-disc pl-6 mb-3 space-y-2"}
 - (<strong>). Requisitos: ① Tiempo max. 15 min ② Equilibrado (proteinas + carbohidratos + verduras/frutas) ③ Apto para todas las edades ④ Ingredientes en supermercado común (</strong>." (longitud y formato)
-- (<strong>un tono cercano y natural, como al charlar con un amigo</strong>:El rol define el profesionalismo, el contexto cubre necesidades de tres grupos, la tarea específica el entregable y las 4 restricciones garantizan ejecutabilidad.
+- (<strong>un tono cercano y natural, como al charlar con un amigo</strong>:El rol define el profesionalismo, el contexto cubre necesidades de tres grupos, la tarea específica el entregable y las 4 restricciones garantizan ejecutabilidad
 - (<strong>Prompt:</strong>:
 - (<strong>profesor experimentado de preparación del CET-6 de inglés</strong>(
 - (<strong>). Soy un estudiante universitarío normal,</strong> CET-4: 480 puntos, objetivo CET-6: 500, me quedan 3 meses
-- (<strong>no des consejos de inversión concretos</strong>).
+- (<strong>no des consejos de inversión concretos</strong>)
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -186,7 +186,7 @@ Restricciones adecuadas <strong>: longitud, estilo, exclusiones; con solo una de
 
 ). Requisitos: ① Distribucion semanal clara de listening/speaking/reading/writing ② Direcciones clave de enfoque mensual ③ Recomendar 3 materiales adecuados (explicación en chino) ④ Salida en formato tabla (<strong>repasa estos cinco puntos antes de enviarlo</strong>).
 
-1. <strong>Concreto, no abstracto</strong>:El rol establece el fondo profesional, el contexto da las puntuaciones y plazos, la tarea define "plan por etapas", las restricciones exigen "formato tabla" y "ejecutabilidad".
+1. <strong>Concreto, no abstracto</strong>:El rol establece el fondo profesional, el contexto da las puntuaciones y plazos, la tarea define "plan por etapas", las restricciones exigen "formato tabla" y "ejecutabilidad"
 2. <strong>Escenarío 3: Eficiencia laboral (organización de actas de reunión)</strong> Prompt:
 3. <strong>:</strong> Eres una
 4. <strong>asistente administrativa senior</strong>(
@@ -273,7 +273,7 @@ Colaboración multi-IA <strong>No introduzcas información personal privada en l
 <strong>Pensamiento encadenado (CoT)</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Colaboración multi-IA <strong>: usa A para el borrador, B para pulir, C para traducir — la combinación da mejores resultados.</strong> Prompt del sistema:<strong>:preconfigura tu identidad, preferencias y restricciones en los ajustes de IA para que las respuestas se ajusten mejor a tus necesidades.</strong> Desafio: tres ejercicios prácticos de IA <strong>Desafio 1: Instrucciones complejas</strong>: di al asistente de voz: "Recordame manana a las 7 que lleve paraguas, y cambia mi cita de las 3 de esta tarde a las 4." Observa si puede completar multiples pasos de una vez.
+Colaboración multi-IA <strong>: usa A para el borrador, B para pulir, C para traducir: la combinación da mejores resultados.</strong> Prompt del sistema:<strong>:preconfigura tu identidad, preferencias y restricciones en los ajustes de IA para que las respuestas se ajusten mejor a tus necesidades.</strong> Desafio: tres ejercicios prácticos de IA <strong>Desafio 1: Instrucciones complejas</strong>: di al asistente de voz: "Recordame manana a las 7 que lleve paraguas, y cambia mi cita de las 3 de esta tarde a las 4." Observa si puede completar multiples pasos de una vez.
 
 {class="mt-1"}
 <strong>Desafio 2: Edicion con IA</strong>: toma una foto turística con extraños, usa la función "eliminacion mágica" o "borrador IA" para eliminar a las personas. Observa como la IA "rellena" el fondo.
@@ -287,19 +287,19 @@ Colaboración multi-IA <strong>: usa A para el borrador, B para pulir, C para tr
 : primero pregunta a la IA con un prompt simple: "escribe una guía de viaje", luego usa el marco CRISPE para escribir un prompt detallado. Compara la diferencia de calidad entre las dos respuestas.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- <strong>Cada vez que pagas con WeChat/Alipay escaneando un código QR, el móvil lee la notificación de pago y registra automáticamente el monto y el comerciante en una nota o tabla de Numbers. Esto requiere usar el trigger "recibir SMS/notificación" de "Automatización" (iOS 17+ soporta lectura de transacciones de monedero), combinado con la acción "anadir a Numbers". Para quienes quieren llevar cuentas pero son perezosos para registrar manualmente, es una salvacíon.</strong> En los dos capítulos anteriores, construimos un "muro de seguridad" para tu móvil y conocimos su "cerebro IA", cada vez más inteligente dentro de ese muro. Ahora, desbloqueemos uno de los últimos potenciales del móvil: hacer que "piense" como un programador y ejecute automáticamente tareas continuas que tu configures. Podrias decir: "Yo no se programar, que tiene que ver conmigo?" Tranquilo: este capítulo no requiere que escribas ni una sola linea de código — los móviles modernos han bajado la barrera de la "programacion" al nivel de arrastrar y soltar.
+- <strong>Cada vez que pagas con WeChat/Alipay escaneando un código QR, el móvil lee la notificación de pago y registra automáticamente el monto y el comerciante en una nota o tabla de Numbers. Esto requiere usar el trigger "recibir SMS/notificación" de "Automatización" (iOS 17+ soporta lectura de transacciones de monedero), combinado con la acción "anadir a Numbers". Para quienes quieren llevar cuentas pero son perezosos para registrar manualmente, es una salvacíon.</strong> En los dos capítulos anteriores, construimos un "muro de seguridad" para tu móvil y conocimos su "cerebro IA", cada vez más inteligente dentro de ese muro. Ahora, desbloqueemos uno de los últimos potenciales del móvil: hacer que "piense" como un programador y ejecute automáticamente tareas continuas que tu configures. Podrias decir: "Yo no se programar, que tiene que ver conmigo?" Tranquilo: este capítulo no requiere que escribas ni una sola linea de código, los móviles modernos han bajado la barrera de la "programacion" al nivel de arrastrar y soltar.
 - <strong>III. Automatización Android - Tasker y amigos</strong> En palabras simples: automatización es:
-- <strong>hacer que el móvil ejecute una serie de acciones automáticamente cuando se cumple cierta condición.</strong> No necesitas operar manualmente cada vez ni recordar que hacer — el móvil juzga el momento y ejecuta por si mismo.
+- <strong>hacer que el móvil ejecute una serie de acciones automáticamente cuando se cumple cierta condición.</strong> No necesitas operar manualmente cada vez ni recordar que hacer: el móvil juzga el momento y ejecuta por si mismo.
 - <strong>Nivel intermedio: Tasker — el rey de la automatización Android</strong> En esencia, la automatización es una cadena lógica de "si... entonces...", el if-else de la programacion. Una vez que entiendas este modo de pensamiento, aunque nunca escribas código en tu vida, tu capacidad para resolver problemas de forma sistematica mejorara notablemente. Elementos clave:
 :::
 
-#### VII. Limitaciones y desafíos de la IA: mantén un criterio claro
+VII. Limitaciones y desafíos de la IA: mantén un criterio claro
 
 : cuando empezar? Puede ser "cada día a las 7", "cuando me conecto al Wi-Fi de casa", "cuando llego a cierto lugar", "cuando la batería baja del 20%".
 
 - <strong>Accion a ejecutar</strong>: que hacer exactamente? Puede ser enviar un mensaje de WeChat, abrir una App, ajustar el volumen, cambiar el fondo de pantalla, reproducir música, enviar notificaciones... casi todo lo que puedas hacer manualmente en tu móvil, la automatización puede hacerlo.
 - <strong>Lógica intermedia</strong>(opcional pero potente): si la situación es A, haz X; si no, haz Y. Por ejemplo: "si es día laborable reproduce podcasts de noticias, si es fin de semana reproduce música". Esto se llama "ramificación condicional".
-- <strong>II. "Atajos" de iOS: la herramienta de automatización para usuarios Apple</strong> La App "Atajos" (Shortcuts) de Apple viene preinstalada, no necesita descarga. Su concepto central es ensamblar varias operaciones como si fueran bloques de construccion. Primero algúnos conceptos clave:
+- <strong>II. "Atajos" de iOS: la herramienta de automatización para usuarios Apple</strong> La App "Atajos" (Shortcuts) de Apple viene preinstalada, no necesita descarga. Su concepto central es ensamblar varias operaciones como si fueran bloques de construccion. Primero algúnos conceptos clave:.
 - <strong>"Atajos"</strong>: un flujo de automatización completo; puede ejecutarse manualmente o activarse por voz con Siri. Por ejemplo, dices "Oye Siri, modo casa" y ejecuta automáticamente las operaciones que configuraste.
 - <strong>"Automatización"</strong>: instrucciones que se ejecutan automáticamente cuando se cumple el trigger, sin necesidad de activacíon manual. Por ejemplo: "cuando el móvil se conecta al Bluetooth del coche, abre automáticamente la App de mapas". La automatización se configura en la pestana "Automatización", separada de "Atajos".
 
@@ -308,10 +308,10 @@ Colaboración multi-IA <strong>: usa A para el borrador, B para pulir, C para tr
 <i class="fas fa-info-circle mr-2"></i>"Accion"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- : la unidad mínima de ejecucion. Abrir una App es una acción, enviar un mensaje es una acción, obtener el clima es una acción, ajustar el brillo es una acción. Puedes encadenar cientos o miles de acciones.
+- : la unidad mínima de ejecucion. Abrir una App es una acción, enviar un mensaje es una acción, obtener el clima es una acción, ajustar el brillo es una acción. Puedes encadenar cientos o miles de acciones
 - Aqui tienes varios ejemplos realmente útiles; siguiendolos una vez lo entenderas todo:
 - Ejemplo 1: Flujo "Buenos días" con un toque
-- Cada manana tocas una vez (o dices a Siri "buenos días") y el móvil automáticamente: obtiene el clima del día → lee el clima y la temperatura → muestra tu agenda del día → abre tu App de música favorita y empieza a reproducir. Pasos: crear nuevo atajo -&gt; anadir acción "obtener clima actual" -&gt; anadir "leer texto" -&gt; anadir "obtener eventos del calendario" -&gt; anadir "mostrar recordatorío" -&gt; anadir "abrir App" seleccionar NetEase Cloud Music. Asi de simple, todo arrastrando y soltando.
+- Cada manana tocas una vez (o dices a Siri "buenos días") y el móvil automáticamente: obtiene el clima del día → lee el clima y la temperatura → muestra tu agenda del día → abre tu App de música favorita y empieza a reproducir. Pasos: crear nuevo atajo -&gt; anadir acción "obtener clima actual" -&gt; anadir "leer texto" -&gt; anadir "obtener eventos del calendario" -&gt; anadir "mostrar recordatorío" -&gt; anadir "abrir App" seleccionar NetEase Cloud Music. Asi de simple, todo arrastrando y soltando
 - Ejemplo 2: "Modo ahorro de energía" automático
 :::
 
@@ -320,9 +320,9 @@ Colaboración multi-IA <strong>: usa A para el borrador, B para pulir, C para tr
 <i class="fas fa-hands mr-2"></i>Perfil (Profile)
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. <strong>: define "cuándo activar". Los triggers pueden ser: tiempo, ubicación, estado de conexión Wi-Fi, Bluetooth, recepción de notificaciones específicas, estado de batería, orientación de pantalla... Tasker soporta una cantidad absurda de triggers — decenas de tipos.</strong> Tarea (Task)
+1. <strong>: define "cuándo activar". Los triggers pueden ser: tiempo, ubicación, estado de conexión Wi-Fi, Bluetooth, recepción de notificaciones específicas, estado de batería, orientación de pantalla... Tasker soporta una cantidad absurda de triggers: decenas de tipos.</strong> Tarea (Task)
 2. <strong>: define "qué hacer al activarse". Una tarea puede contener múltiples acciones que se ejecutan secuencialmente. Tipos de acciones: ajustar configuración del sistema (volumen, brillo, Wi-Fi, Bluetooth, modo avión), enviar SMS, peticiones HTTP, ejecutar comandos Shell, control de reproducción multimedia, mostrar diálogos, etc.</strong> Aqui tienes algúnos escenarios clásicos y prácticos de Tasker:
-3. <strong>Encender Wi-Fi al llegar a casa</strong>: configura el trigger como "conexión a antena específica" (porque cerca de casa te conectas a una antena fija) -&gt; tarea "activar Wi-Fi". No usa GPS ni consume batería; el móvil enciende el Wi-Fi automáticamente en cuanto entra en tu vecindad.
+3. <strong>Encender Wi-Fi al llegar a casa</strong>: configura el trigger como "conexión a antena específica" (porque cerca de casa te conectas a una antena fija) -&gt; tarea "activar Wi-Fi". No usa GPS ni consume batería; el móvil enciende el Wi-Fi automáticamente en cuanto entra en tu vecindad
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4

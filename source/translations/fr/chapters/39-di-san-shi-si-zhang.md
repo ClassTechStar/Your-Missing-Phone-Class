@@ -2,12 +2,12 @@
 id: di-san-shi-si-zhang
 num: 34
 part: zhan-wang-pian
-nav: Chapitre 34 : Guide approfondi de la connexion voiture-téléphone — la fusion du téléphone et de l'automobile
+nav: Chapitre 34 : Téléphone et voiture : connecter sans galère
 toc: default
 kind: chapter
 ---
 
-### Chapitre 34 : Guide approfondi de connectivité automobile — La fusion du smartphone et de la voiture
+### Chapitre 34 : Téléphone et voiture : connecter sans galère
 
 {class="chapter-intro mb-4"}
 L'automobile passe de « quatre roues et un canapé » à « quatre roues et un smartphone ». Que vous conduisiez une voiture thermique ou à énergie nouvelle, la relation entre smartphone et système embarqué détermine votre expérience de conduite. Ce chapitre clarifie les trois grandes voies de connectivité, les caractéristiques des différents systèmes embarqués, et quelques astuces pour rendre la conduite plus fluide.
@@ -70,7 +70,7 @@ Les trois solutions de duplication dominantes ont chacune leurs atouts ; voici u
 ```
 :::
 
-#### III. Cockpit HarmonyOS : transition fluide entre smartphone et voiture
+III. Cockpit HarmonyOS : transition fluide entre smartphone et voiture
 
 Si CarPlay consiste à « projeter le smartphone sur la voiture », le cockpit HarmonyOS considère que « smartphone et voiture ne font qu'un ». La synergie entre les smartphones Huawei et les systèmes embarqués AITO/Luxeed représente le meilleur niveau actuel de connectivité en Chine :
 
@@ -114,7 +114,7 @@ Quelle que soit la solution, manipuler le smartphone en conduisant est une infra
 <i class="fas fa-lightbulb mr-2"></i>Conseils lors de l'achat d'une voiture
 
 {class="mt-1"}
-Si l'expérience du système embarqué compte pour vous, testez en concession : ① apportez votre smartphone pour tester la stabilité de CarPlay/HiCar ; ② testez la vitesse de réponse et le taux de reconnaissance de l'assistant vocal ; ③ vérifiez si la boutique d'applications propose vos applications habituelles ; ④ renseignez-vous sur la fréquence des mises à jour OTA — un bon système embarqué s'améliore par itérations logicielles.
+Si l'expérience du système embarqué compte pour vous, testez en concession : ① apportez votre smartphone pour tester la stabilité de CarPlay/HiCar ; ② testez la vitesse de réponse et le taux de reconnaissance de l'assistant vocal ; ③ vérifiez si la boutique d'applications propose vos applications habituelles ; ④ renseignez-vous sur la fréquence des mises à jour OTA: un bon système embarqué s'améliore par itérations logicielles.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

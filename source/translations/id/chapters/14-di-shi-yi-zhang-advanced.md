@@ -11,7 +11,7 @@ kind: supplement
 {class="chapter-intro mb-4"}
 Untuk benar-benar memahami misteri fotografi dan video ponsel, Anda perlu memahami beberapa pengetahuan teknik imaging profesional. Pengetahuan ini tidak hanya membantu Anda menggunakan kamera ponsel dengan lebih baik, tetapi juga membuat Anda lebih bijak saat memilih perangkat.
 
-#### 1. Resolusi, Frame Rate, dan Bitrate: Tiga Elemen Kualitas Video
+1. Resolusi, Frame Rate, dan Bitrate: Tiga Elemen Kualitas Video
 
 ##### Resolusi menentukan kejernihan gambar, dinyatakan dalam jumlah piksel.
 
@@ -21,7 +21,7 @@ Untuk benar-benar memahami misteri fotografi dan video ponsel, Anda perlu memaha
 - <strong>: 1920×1080 piksel, resolusi paling mainstream saat ini.</strong>2K (QHD)
 - <strong>: 2560×1440 piksel, lebih jernih dari 1080P.</strong>4K (UHD)
 - <strong>: 3840×2160 piksel, ultra HD, detail kaya.</strong>8K
-- <strong>: 7680×4320 piksel, standar masa depan, saat ini dukungan perangkat terbatas.</strong> Semakin tinggi resolusi, semakin jernih gambar, tetapi file juga semakin besar, dan persyaratan penyimpanan serta pemrosesan semakin tinggi.
+- <strong>: 7680×4320 piksel, standar masa depan, saat ini dukungan perangkat terbatas.</strong> Semakin tinggi resolusi, semakin jernih gambar, tetapi file juga semakin besar, dan persyaratan penyimpanan serta pemrosesan semakin tinggi
 
 Frame Rate:
 
@@ -32,7 +32,7 @@ Frame Rate:
 - <strong>: Frame rate standar film, memiliki "cinematic feel" yang unik.</strong>30fps
 - <strong>: Umum digunakan untuk TV dan video online, lancar dan natural.</strong>60fps
 - <strong>: Frame rate tinggi, cocok untuk scene olahraga dan recording game, sangat lancar.</strong>120fps/240fps
-- <strong>: Frame rate super tinggi, dapat digunakan untuk video slow motion.</strong> Semakin tinggi frame rate, semakin lancar gambar, semakin baik efek slow motion, tetapi file juga semakin besar.
+- <strong>: Frame rate super tinggi, dapat digunakan untuk video slow motion.</strong> Semakin tinggi frame rate, semakin lancar gambar, semakin baik efek slow motion, tetapi file juga semakin besar
 
 Bitrate:
 
@@ -42,7 +42,7 @@ Semakin tinggi bitrate, semakin baik kualitas gambar, semakin banyak detail yang
 
 - Bitrate terlalu rendah akan menyebabkan gambar muncul mozaik, color banding, dan jejak kompresi lainnya.
 - Shooting video profesional biasanya memerlukan bitrate tinggi untuk mempertahankan lebih banyak ruang post-processing.
-- 2. Format Kodek Video: H.264, H.265, dan ProRes
+- 2. Format Kodek Video: H.264, H.265, dan ProRes.
 
 #### 2. Format Kodek Video: H.264, H.265, dan ProRes
 
@@ -73,7 +73,7 @@ Semakin tinggi bitrate, semakin baik kualitas gambar, semakin banyak detail yang
 - <strong>: Data sensor mentah yang belum diproses, mempertahankan informasi maksimal.</strong> Kelebihan
 - <strong>: Ruang penyesuaian post-processing sangat besar, dapat mengubah eksposur, white balance, dan parameter lain tanpa kehilangan kualitas gambar.</strong> Kekurangan
 - <strong>Kekurangan</strong> Skenario Cocok
-- <strong>: Produksi profesional kelas atas. Seri iPhone 15 Pro mendukung shooting video Apple ProRes (hingga 4K 60fps), tetapi format ProRes RAW saat ini perlu digunakan bersama perangkat perekam eksternal, ponsel belum mendukung shooting langsung.</strong>: Produksi profesional high-end. Seri iPhone 15 Pro dan setelahnya mendukung syuting video Apple ProRes (maksimal 4K 60fps), iPhone 17 Pro lebih lanjut mendukung ProRes RAW langsung rekam di kamera.
+- <strong>: Produksi profesional kelas atas. Seri iPhone 15 Pro mendukung shooting video Apple ProRes (hingga 4K 60fps), tetapi format ProRes RAW saat ini perlu digunakan bersama perangkat perekam eksternal, ponsel belum mendukung shooting langsung.</strong>: Produksi profesional high-end. Seri iPhone 15 Pro dan setelahnya mendukung syuting video Apple ProRes (maksimal 4K 60fps), iPhone 17 Pro lebih lanjut mendukung ProRes RAW langsung rekam di kamera
 
 #### 3. HDR: Teknologi High Dynamic Range
 
@@ -82,7 +82,7 @@ HDR10
 - <strong>: Standar HDR paling dasar, kompatibilitas baik.</strong> HDR10+
 - <strong>: Standar yang didorong Samsung, mendukung metadata dinamis.</strong> Dolby Vision
 - <strong>: Standar HDR kelas atas yang dikembangkan Dolby, kualitas gambar terbaik, tetapi memerlukan lisensi.</strong> HLG
-- <strong>: Standar HDR tingkat broadcast, kompatibel dengan monitor biasa.</strong> Saat shooting video HDR, diperlukan monitor yang mendukung HDR untuk melihat efek lengkap.
+- <strong>: Standar HDR tingkat broadcast, kompatibel dengan monitor biasa.</strong> Saat shooting video HDR, diperlukan monitor yang mendukung HDR untuk melihat efek lengkap
 
 4\. Color Space dan Color Depth
 
@@ -108,7 +108,7 @@ HDR10
 - Shooting olahraga: 1080P/4K + 60fps, memastikan kelancaran.
 - Kreasi profesional: 4K + ProRes (jika didukung), mempertahankan ruang post-processing maksimal.
 - Saran penyimpanan: Video bitrate tinggi sangat menghabiskan ruang, disarankan cadangkan secara berkala ke komputer atau cloud storage.
-- Jelajahi: Pengaturan Video Ponsel Anda
+- Jelajahi: Pengaturan Video Ponsel Anda.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -119,18 +119,18 @@ HDR10
 1. Lihat opsi resolusi dan frame rate, coba berbagai kombinasi.
 2. Jika didukung, periksa apakah ada opsi lanjutan seperti HDR, ProRes.
 3. Rekam beberapa segmen video dengan pengaturan berbeda, bandingkan kualitas gambar dan ukuran file.
-4. Bab 12: Hiburan Audio-Visual dan Membaca
+4. Bab 12: Hiburan Audio-Visual dan Membaca.
 :::
 
 #### 5. Perbandingan Format RAW dengan HEIF/JPEG
 
 ##### Apa itu format RAW:
 
-Format RAW adalah "data mentah" yang direkam sensor kamera — informasi mentah murni tanpa kompresi dan pemrosesan. Ibarat bahan mentah, perlu "dimasak" di post-production agar jadi hasil akhir. Karena penyimpanan dan daya komputasi ponsel terbatas, default foto yang diambil sudah "dimasak" menjadi JPEG atau HEIF, RAW perlu diaktifkan khusus.
+Format RAW adalah "data mentah" yang direkam sensor kamera, informasi mentah murni tanpa kompresi dan pemrosesan. Ibarat bahan mentah, perlu "dimasak" di post-production agar jadi hasil akhir. Karena penyimpanan dan daya komputasi ponsel terbatas, default foto yang diambil sudah "dimasak" menjadi JPEG atau HEIF, RAW perlu diaktifkan khusus.
 
 ##### Perbandingan RAW vs HEIF vs JPEG:
 
-- <strong>JPEG</strong>: Format tertua, kompatibilitas terbaik (semua perangkat bisa membuka). Color depth 8-bit, kompresi lossy, file terkecil (2-5MB per foto). Ruang post-production terbatas, paksa menerangi bayangan mudah muncul color banding.
+- <strong>JPEG</strong>: Format tertua, kompatibilitas terbaik (semua perangkat bisa membuka). Color depth 8-bit, kompresi lossy. file terkecil (2-5MB per foto). Ruang post-production terbatas, paksa menerangi bayangan mudah muncul color banding.
 - <strong>HEIF/HEIC</strong>: Format baru yang didorong Apple, dengan kualitas yang sama file hanya setengah dari JPEG (1-3MB per foto). Mendukung color depth 10-bit dan channel transparan. Kelemahannya beberapa perangkat lama dan Windows perlu install plugin untuk membuka.
 - <strong>RAW</strong>: Data mentah tanpa kompresi, file terbesar (20-100MB per foto). Color depth biasanya 12-16bit, ruang post-production terbesar. Kelemahannya harus pakai software profesional (Lightroom, Snapseed, dll.) untuk membuka dan memproses, tidak bisa langsung dibagikan.
 
@@ -143,13 +143,13 @@ Format RAW adalah "data mentah" yang direkam sensor kamera — informasi mentah 
 
 ##### Cara mengaktifkan RAW di ponsel:
 
-- <strong>iPhone ProRAW</strong>: Hanya iPhone 12 Pro dan model Pro di atasnya yang mendukung. Buka "Settings → Camera → Format" aktifkan "Apple ProRAW". Lalu di antarmuka kamera atas akan muncul tombol "RAW", aktifkan saja. File sekitar 25MB/foto, disarankan aktifkan saat dibutuhkan.
+- <strong>iPhone ProRAW</strong>: Hanya iPhone 12 Pro dan model Pro di atasnya yang mendukung. Buka "Settings → Camera → Format" aktifkan "Apple ProRAW". Lalu di antarmuka kamera atas akan muncul tombol "RAW". aktifkan saja. File sekitar 25MB/foto, disarankan aktifkan saat dibutuhkan.
 - <strong>Android Motion Raw / Ultra RAW</strong>: Setiap merek penyebutannya berbeda. Model flagship Xiaomi/OPPO/vivo di kamera "Pro Mode" atau "More" bisa menemukan saklar RAW; Huawei di "Pro Mode" aktifkan RAW; Samsung Galaxy S series di mode "Pro" ada opsi RAW. Ukuran file biasanya 20-50MB.
 - <strong>Saran Umum</strong>: Foto sehari-hari tidak perlu aktifkan RAW, file terlalu besar memakan ruang; hanya aktifkan di skenario penting (pemandangan, portrait, butuh post-production).
 
 #### 6. Prinsip Computational Photography
 
-Fotografi ponsel modern sudah tidak bisa lepas dari "computational photography" — yaitu mengandalkan algoritma bukan hanya lensa dan sensor untuk menghasilkan foto. Memahami beberapa prinsip inti ini membuat Anda lebih paham apa yang dilakukan ponsel saat menekan shutter.
+Fotografi ponsel modern sudah tidak bisa lepas dari "computational photography": yaitu mengandalkan algoritma bukan hanya lensa dan sensor untuk menghasilkan foto. Memahami beberapa prinsip inti ini membuat Anda lebih paham apa yang dilakukan ponsel saat menekan shutter.
 
 ##### Multi-frame fusion:
 
@@ -161,7 +161,7 @@ Saat ponsel menekan shutter sekali, sebenarnya mengambil banyak foto. Algoritma 
 
 ##### Semantic segmentation:
 
-AI tidak hanya memproses seluruh gambar secara seragam, tapi pertama "memahami" apa di dalam gambar — langit, wajah, rumput, bangunan, pakaian — lalu menerapkan strategi pemrosesan berbeda untuk setiap area.
+AI tidak hanya memproses seluruh gambar secara seragam, tapi pertama "memahami" apa di dalam gambar, langit, wajah, rumput, bangunan, pakaian, lalu menerapkan strategi pemrosesan berbeda untuk setiap area.
 
 - <strong>Langit</strong>: Secara terpisah meningkatkan biru, menurunkan kecerahan, menghindari overexpose.
 - <strong>Wajah</strong>: Identifikasi area warna kulit, menerangkan dan menghaluskan warna kulit secara terpisah, tanpa mengubah detail fitur wajah dan rambut.
@@ -179,7 +179,7 @@ AI tidak hanya memproses seluruh gambar secara seragam, tapi pertama "memahami" 
 - <strong>Keunggulan computational photography</strong>: Volume kecil juga bisa dapat kualitas bagus, skenario ekstrem seperti cahaya redup dan backlight juga bisa menghasilkan foto, pengguna biasa tidak perlu paham fotografi untuk menghasilkan foto "bagus".
 - <strong>Kelemahan computational photography</strong>: Gambar kadang "over-processed" — over-sharpening, distorsi warna, warna langit tidak natural; multi-frame fusion saat subjek bergerak akan meninggalkan ghosting; detail "dihitung" bukan direkam nyata.
 - <strong>Keunggulan optical photography</strong>: Sensor besar + lensa aperture besar bisa menangkap cahaya secara nyata, kualitas gambar natural, ruang post-production besar; tidak akan menghasilkan artefak karena algoritma "menebak".
-- <strong>Tren</strong>: Ponsel flagship modern adalah kombinasi "optik + komputasi" — menggunakan sensor besar untuk mendapatkan informasi nyata, algoritma untuk mengoptimalkan presentasi. Keduanya tidak saling bertentangan.
+- <strong>Tren</strong>: Ponsel flagship modern adalah kombinasi "optik + komputasi": menggunakan sensor besar untuk mendapatkan informasi nyata, algoritma untuk mengoptimalkan presentasi. Keduanya tidak saling bertentangan.
 
 #### 7. Jenis Lensa dan Focal Length
 
@@ -194,19 +194,19 @@ Ponsel flagship modern biasanya dilengkapi tiga sampai empat lensa, masing-masin
 
 ##### Trade-off ukuran sensor dan ukuran piksel:
 
-Sensor adalah "fondasi", menentukan berapa banyak cahaya yang bisa diterima. Industri bilang "sensor lebih besar satu tingkat menekan yang kecil" — dengan jumlah piksel yang sama, sensor lebih besar berarti piksel individual juga lebih besar, cahaya masuk lebih banyak, kualitas gambar lebih baik.
+Sensor adalah "fondasi", menentukan berapa banyak cahaya yang bisa diterima. Industri bilang "sensor lebih besar satu tingkat menekan yang kecil", dengan jumlah piksel yang sama, sensor lebih besar berarti piksel individual juga lebih besar, cahaya masuk lebih banyak, kualitas gambar lebih baik.
 
 - <strong>Sensor Besar</strong>: Cahaya masuk besar, kualitas foto malam bagus, dynamic range lebar. Kelemahannya ponsel jadi tebal (modul lensa menonjol), biaya tinggi.
 - <strong>Piksel Tinggi Sensor Kecil</strong>: Saat siang cahaya cukup, piksel tinggi bisa hasilkan foto lebih jelas, mudah di-crop di post-production. Tapi di cahaya redup setiap piksel kurang cahaya, noise banyak.
-- <strong>Pilihan Flagship Mainstream</strong>: Kamera utama kebanyakan 1/1.3 inci sampai 1 inci (sebagian model sudah pakai sensor 1 inci), jumlah piksel sekitar 50 juta — ini titik keseimbangan kualitas dan volume.
+- <strong>Pilihan Flagship Mainstream</strong>: Kamera utama kebanyakan 1/1.3 inci sampai 1 inci (sebagian model sudah pakai sensor 1 inci), jumlah piksel sekitar 50 juta: ini titik keseimbangan kualitas dan volume.
 
 ##### Teknologi pixel binning:
 
-Untuk menyeimbangkan piksel tinggi siang dan piksel besar malam, produsen ponsel memakai "pixel binning" — menggabungkan beberapa piksel kecil menjadi satu piksel besar untuk output.
+Untuk menyeimbangkan piksel tinggi siang dan piksel besar malam, produsen ponsel memakai "pixel binning", menggabungkan beberapa piksel kecil menjadi satu piksel besar untuk output.
 
 - <strong>Quad Bayer (4-in-1)</strong>: Sensor 50 juta piksel, output foto 12.5 juta piksel. Setiap piksel output disintesis dari 4 piksel tetangga, cahaya masuk naik 4x, kualitas gambar lebih bersih.
 - <strong>Nonacell (9-in-1)</strong>: Untuk sensor di atas 100 juta piksel, output sekitar 11-12 juta piksel. Prinsip sama, cahaya masuk lebih besar.
-- <strong>Efek aktual</strong>: Mode foto default, yang Anda dapatkan adalah foto piksel rendah hasil fusion — kualitas bagus, file kecil. Saat butuh detail ekstrem (seperti foto dokumen, pemandangan jauh), bisa manual beralih ke "High-Res Mode" untuk output resolusi penuh.
+- <strong>Efek aktual</strong>: Mode foto default, yang Anda dapatkan adalah foto piksel rendah hasil fusion, kualitas bagus, file kecil. Saat butuh detail ekstrem (seperti foto dokumen, pemandangan jauh), bisa manual beralih ke "High-Res Mode" untuk output resolusi penuh.
 
 #### 8. Mode Syuting Khusus
 
@@ -214,10 +214,10 @@ Selain foto sehari-hari, di ponsel ada beberapa mode khusus, jika digunakan deng
 
 ##### Mode panorama:
 
-- Saat memotret ikuti panah petunjuk, gerakkan ponsel secara horizontal perlahan dan stabil, jangan cepat — jika cepat akan muncul misalignment stitching.
+- Saat memotret ikuti panah petunjuk, gerakkan ponsel secara horizontal perlahan dan stabil, jangan cepat, jika cepat akan muncul misalignment stitching.
 - Jaga ponsel stabil secara vertikal, hanya geser horizontal. Jika goyang atas-bawah, garis horizon akan bergelombang.
-- Hati-hati saat ada orang atau mobil bergerak — saat stitching akan muncul "setengah badan" atau "hantu".
-- Mode panorama juga bisa difoto vertikal — foto vertikal lalu stitch horizontal, cocok untuk memotret bangunan tinggi atau air terjun.
+- Hati-hati saat ada orang atau mobil bergerak, saat stitching akan muncul "setengah badan" atau "hantu".
+- Mode panorama juga bisa difoto vertikal, foto vertikal lalu stitch horizontal, cocok untuk memotret bangunan tinggi atau air terjun.
 
 ##### Slow motion dan time-lapse:
 

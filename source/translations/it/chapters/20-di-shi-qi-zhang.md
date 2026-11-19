@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Il telefono che hai in mano è in realtà un super telecomando e un centro dati. Non solo fa telefonate, ma può collegare computer, TV, orologi, altoparlanti e automobili, così che questi dispositivi non siano più isolati. In questo capitolo parliamo di come farli "fare squadra".
 
-#### 1. Collaborazione con il computer: telefono e computer non sono più due mondi
+1. Collaborazione con il computer: telefono e computer non sono più due mondi
 
 A dire il vero, la cosa che mi dava più fastidio era scattare una foto col telefono e doverla trasferire al computer per ritoccarla: serviva il cavo dati, bisognava aspettare il trasferimento. Poi ho scoperto che in realtà il cavo non serve affatto: una buona integrazione è dieci volte più veloce del cavo.
 
@@ -29,7 +29,7 @@ Durante le feste a casa, mia cugina voleva riprodurre sul TV il video del suo vi
 - <strong>Proiezione diretta dall'app video</strong>: se vuoi solo guardare iQIYI, Bilibili o YouTube sul TV, è ancora più semplice: nell'interfaccia di riproduzione cerca una piccola icona a forma di rettangolo con il simbolo Wi-Fi, toccala, scegli il TV e il video passa al TV. Il telefono nel frattempo può fare altro, il video continua sul TV senza interferenze.
 - <strong>Cosa fare se la proiezione non riesce</strong>: nel 90% dei casi non sei sulla stessa rete Wi-Fi. Nel restante 10% la funzione di proiezione del TV non è attiva: cerca l'interruttore "Interazione multi-schermo" o "AirPlay" nelle impostazioni del TV.
 
-#### 3. Con orologi smart e braccialetti: il tutor di salute al polso
+3. Con orologi smart e braccialetti: il tutor di salute al polso
 
 Ho regalato un braccialetto a mia madre. All'inizio diceva: "Non faccio sport, a cosa mi serve?". Dopo due settimane ha scoperto che dormiva solo cinque ore e ha iniziato a correggere autonomamente il proprio ritmo. Questo è il valore più concreto di orologi e braccialetti: trasformare dati di salute invisibili in numeri visibili.
 
@@ -38,7 +38,7 @@ Ho regalato un braccialetto a mia madre. All'inizio diceva: "Non faccio sport, a
 - <strong>Sincronizzazione tessera trasporti/tessera di accesso</strong>: la tessera dell'autobus e quella di accesso configurate sul telefono, nella maggior parte dei marchi, vengono sincronizzate automaticamente sull'orologio. In metropolitana non devi tirare fuori il telefono, basta avvicinare il polso al tornello: sembra davvero che "il futuro sia arrivato".
 - <strong>Trova-telefono</strong>: gli orologi hanno quasi tutti la funzione "trova telefono": lo tocchi e il telefono suona. La uso molto più del previsto: appoggio il telefono distrattamente e poi non ricordo dov'è.
 
-#### 4. Con la casa intelligente: il telefono è l'"interruttore generale" di casa
+4. Con la casa intelligente: il telefono è l'"interruttore generale" di casa
 
 La casa intelligente sembra chissà cosa, ma in fondo sono solo tre cose: controllo remoto tramite telefono, regole di automazione e comando vocale.
 
@@ -96,7 +96,7 @@ Il classico audio Bluetooth (A2DP), usato per vent'anni, sta per essere sostitui
 
 Usare il telefono alla guida è illegale e pericoloso. Ma a volte serve davvero navigare, rispondere a una chiamata, ascoltare musica. Qui entrano in gioco CarPlay (Apple) e Android Auto (Android).
 
-- <strong>Come collegarsi</strong>: se la tua auto lo supporta (quasi tutte le auto nuove degli ultimi anni lo supportano), collega il telefono con un cavo dati alla porta USB dell'auto e lo schermo dell'auto si trasformerà automaticamente nell'interfaccia CarPlay o Android Auto. Alcune auto nuove supportano la connessione wireless, ancora più comoda.
+- <strong>Come collegarsi</strong>: se la tua auto lo supporta (quasi tutte le auto nuove degli ultimi anni lo supportano), collega il telefono con un cavo dati alla porta USB dell'auto , e lo schermo dell'auto si trasformerà automaticamente nell'interfaccia CarPlay o Android Auto. Alcune auto nuove supportano la connessione wireless, ancora più comoda.
 - <strong>Cosa puoi fare</strong>: navigazione (molto meglio di quella integrata nell'auto), chiamate (rispondi dal volante), musica (le app musicali del telefono si proiettano sull'auto), inviare WeChat vocale (Siri o Xiao Ai leggono e rispondono ai messaggi).
 - <strong>Anche le auto vecchie</strong>: se la tua auto è vecchia e non lo supporta, con qualche centinaio di yuan puoi comprare uno schermo CarPlay esterno da incollare sul cruscotto, con un'esperienza simile.
 
@@ -126,6 +126,6 @@ Più dispositivi sono collegati, più si amplia la superficie di rischio per la 
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: utente con Xiaomi 14, scarsa autonomia, batteria esaurita in mezza giornata.
-- <strong>Passaggi</strong>: ① Impostazioni → Batteria → classifica dei consumi → ② identifica app anomale in background → ③ disattiva 5G e passa a 4G → ④ limita il background → ⑤ attiva la modalità risparmio energetico → ⑥ durante la ricarica togli la cover per dissipare il calore.
+- <strong>Passaggi</strong>: ① Impostazioni → Batteria → classifica dei consumi →. ② identifica app anomale in background →. ③ disattiva 5G e passa a 4G →. ④ limita il background →. ⑤ attiva la modalità risparmio energetico →. ⑥ durante la ricarica togli la cover per dissipare il calore.
 - <strong>Risultato atteso</strong>: autonomia prolungata del 30-50%, dato di stato di salute della batteria leggibile.
 :::

@@ -2,43 +2,43 @@
 id: di-shi-ba-zhang
 num: 18
 part: jin-jie-pian
-nav: Bab 18: Cadangan dan Migrasi Data
+nav: Bab 18: Cadangkan sekarang, jangan tunggu sampai terlupa
 toc: default
 kind: chapter
 ---
 
-### Bab 18: Pencadangan dan migrasi data
+### Bab 18: Cadangkan sekarang, jangan tunggu sampai terlupa
 
 {class="chapter-intro mb-4"}
 1\. Pertama pahami: Apa saja di ponsel Anda yang hilang akan hilang selamanya
 
-#### "Status kelangsungan" data yang berbeda tidak sama, Anda harus membedakannya:
+"Status kelangsungan" data yang berbeda tidak sama, Anda harus membedakannya:
 
 Tersimpan lokal di ponsel, hilang berarti benar-benar hilang
 
 - <strong>: Foto video (jika tidak mengaktifkan sinkronisasi cloud), catatan, SMS, riwayat panggilan, file yang diunduh.</strong> Tersimpan di server aplikasi, ganti ponsel login ulang akan ada
 - <strong>: Daftar teman WeChat, pesanan Taobao, riwayat transaksi di aplikasi bank. Hal-hal ini disimpan di server perusahaan terkait, bukan di ponsel Anda.</strong> Di zona abu-abu, perlu operasi khusus
-- <strong>: Riwayat chat WeChat (meskipun server WeChat menyimpannya, tetapi Anda sendiri tidak dapat mengunduh dari server), kredensial perangkat yang terikat ke mobile banking, kunci di aplikasi autentikasi dua langkah (seperti Google Authenticator).</strong> Jadi yang perlu Anda lindungi dengan prioritas adalah kategori pertama dan ketiga.
+- <strong>: Riwayat chat WeChat (meskipun server WeChat menyimpannya, tetapi Anda sendiri tidak dapat mengunduh dari server), kredensial perangkat yang terikat ke mobile banking, kunci di aplikasi autentikasi dua langkah (seperti Google Authenticator).</strong> Jadi yang perlu Anda lindungi dengan prioritas adalah kategori pertama dan ketiga
 
 2\. Pencadangan seluruh perangkat: Selesai semua dalam sekali
 
-#### Pencadangan seluruh perangkat seperti mengambil "snapshot" lengkap ponsel — pengaturan sistem saat ini, tata letak desktop, data aplikasi, foto, kontak, semuanya dikemas.
+Pencadangan seluruh perangkat seperti mengambil "snapshot" lengkap ponsel — pengaturan sistem saat ini, tata letak desktop, data aplikasi, foto, kontak, semuanya dikemas.
 
 Opsi 1: Pencadangan lokal komputer (paling andal, direkomendasikan untuk yang punya komputer)
 
 ##### iPhone
 
-- <strong>: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi, saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</strong> Android
-- <strong>Android</strong> Keuntungan pencadangan komputer adalah tidak perlu membeli ruang cloud, dan kecepatan pemulihan jauh lebih cepat dari pemulihan cloud. Kerugiannya adalah Anda harus ingat untuk secara berkala mencolokkan kabel untuk mencadangkan — sebagian besar orang tidak bisa melakukan ini.
+- <strong>: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi. saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</strong> Android
+- <strong>Android</strong> Keuntungan pencadangan komputer adalah tidak perlu membeli ruang cloud, dan kecepatan pemulihan jauh lebih cepat dari pemulihan cloud. Kerugiannya adalah Anda harus ingat untuk secara berkala mencolokkan kabel untuk menca,dangkan — sebagian besar orang tidak bisa melakukan ini
 - Opsi 2: Pencadangan cloud (paling nyaman, direkomendasikan untuk semua orang)
 
 ##### iPhone
 
-- <strong>: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi, saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</strong> Android
-- <strong>Android</strong> Keuntungan terbesar pencadangan cloud adalah "tidak perlu Anda pusing", otomatis selesai. Kerugian terbesar adalah saat pemulihan harus mengunduh lama, dan ruang gratis umumnya tidak cukup.
+- <strong>: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi. saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</strong> Android
+- <strong>Android</strong> Keuntungan terbesar pencadangan cloud adalah "tidak perlu Anda pusing", otomatis selesai. Kerugian terbesar adalah saat pemulihan harus mengunduh lama, dan ruang gratis umumnya tidak cukup
 - 3. Strategi pencadangan terkategori: Hal penting disimpan terpisah
 
-#### Pencadangan seluruh perangkat adalah jaring pengaman, tetapi beberapa hal terlalu penting, layak disimpan terpisah:
+Pencadangan seluruh perangkat adalah jaring pengaman, tetapi beberapa hal terlalu penting, layak disimpan terpisah:
 
 Foto dan video (aset digital paling berharga)
 
@@ -60,7 +60,7 @@ Metode 1: Migrasi ke ponsel baru
 - <strong>. Pasang WeChat versi PC di komputer, tiga garis di kiri bawah → Migrasi &amp; Pencadangan → Pencadangan &amp; Pemulihan → Cadangkan riwayat chat ke komputer. Setelah itu ganti ponsel bisa dipulihkan ke ponsel baru.</strong> Metode 3: Cadangkan ke cloud
 - <strong>. WeChat juga mendukung pencadangan ke iCloud atau ruang cloud ponsel, tetapi perhatikan: cadangan ini hanya bisa dipulihkan di ponsel saat ini, tidak bisa dipulihkan lintas perangkat. Untuk ganti ponsel, masih harus menggunakan dua metode sebelumnya.</strong>4. Panduan ganti ponsel: Dari ponsel lama ke ponsel baru
 
-#### Ganti ponsel baru adalah hal yang menyenangkan, tetapi jika data tidak dipindahkan menjadi sakit kepala. Tiga situasi ditangani secara terpisah:
+Ganti ponsel baru adalah hal yang menyenangkan, tetapi jika data tidak dipindahkan menjadi sakit kepala. Tiga situasi ditangani secara terpisah:
 
 Upgrade merek yang sama (paling sederhana)
 
@@ -78,13 +78,13 @@ Ganti ponsel lintas platform (Android ke iPhone, atau sebaliknya)
 - <strong>: Apple punya aplikasi "Move to iOS", unduh di ponsel Android, saat aktivasi iPhone baru pilih "Pindahkan data dari perangkat Android". Bisa memindahkan kontak, foto, SMS dan data dasar lainnya, tetapi data aplikasi tidak bisa dipindahkan. Riwayat chat WeChat masih harus menggunakan fungsi migrasi WeChat sendiri.</strong> iPhone → Android
 - <strong>: Setiap merek Android memiliki alat migrasi yang sesuai, tetapi sejujurnya, pengalaman migrasi lintas platform tidak sebaik platform yang sama. Hal paling penting dilakukan dulu secara terpisah: ekspor kontak, cadangkan foto, migrasi riwayat chat WeChat. Sisanya perlahan-lahan.</strong>5. Aturan emas pencadangan: Prinsip 3-2-1
 
-#### Ini adalah prinsip klasik di bidang keamanan data, sederhana dan mudah diingat:
+Ini adalah prinsip klasik di bidang keamanan data, sederhana dan mudah diingat:
 
 3
 
 - <strong>: Data penting simpan setidaknya tiga salinan (satu asli, dua cadangan).</strong>2
 - <strong>: Cadangan gunakan dua media penyimpanan yang berbeda (misalnya satu di cloud, satu di hard disk eksternal).</strong>1
-- <strong>: Setidaknya satu cadangan diletakkan di lokasi fisik yang berbeda (mencegah kebakaran, pencurian, dll. menghancurkan semua data sekaligus).</strong> Untuk orang biasa, mencapai "satu di cloud, satu di komputer" sudah dianggap sangat baik. Tidak perlu terlalu rumit, yang penting Anda benar-benar melakukannya.
+- <strong>: Setidaknya satu cadangan diletakkan di lokasi fisik yang berbeda (mencegah kebakaran, pencurian, dll. menghancurkan semua data sekaligus).</strong> Untuk orang biasa, mencapai "satu di cloud, satu di komputer" sudah dianggap sangat baik. Tidak perlu terlalu rumit, yang penting Anda benar-benar melakukannya
 
 Perhatian khusus riwayat chat WeChat
 
@@ -105,5 +105,5 @@ Berlatih: Lakukan latihan pencadangan lengkap
 2. Cadangkan kontak: pengguna iPhone ekspor vCard di iCloud.com; pengguna Android ekspor file .vcf di pengaturan aplikasi Kontak.
 3. Cadangkan riwayat chat WeChat: buka WeChat → Saya → Pengaturan → Umum → Migrasi &amp; Pencadangan Riwayat Chat → Cadangkan ke komputer.
 4. Salin file vcf kontak dan folder foto yang diekspor ke hard disk eksternal atau USB flash drive, menyelesaikan "satu offline di tempat lain" dari prinsip "3-2-1".
-5. Bab 19: Pemecahan masalah dan penyelamatan diri
+5. Bab 19: Pemecahan masalah dan penyelamatan diri.
 :::

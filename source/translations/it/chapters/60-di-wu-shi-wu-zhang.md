@@ -10,15 +10,15 @@ kind: chapter
 ### Capitolo 55: Progetto 2 — l'app del meteo (versione in rete)
 
 {class="chapter-intro mb-4"}
-Il registro delle spese è «ginnastica interna», l'app del meteo è «aprirsi al mondo» — deve trattare con internet. In questo progetto imparerai: richiedere un'API gratuita, fare il parsing del JSON, gestire i tre stati dell'interfaccia «caricamento / successo / errore» e come nascondere bene la chiave API. Completandolo avrai la capacità di realizzare qualunque «app connessa» — notizie, tassi di cambio, traduzioni: lo schema è sempre lo stesso.
+Il registro delle spese è «ginnastica interna», l'app del meteo è «aprirsi al mondo», deve trattare con internet. In questo progetto imparerai: richiedere un'API gratuita, fare il parsing del JSON, gestire i tre stati dell'interfaccia «caricamento / successo / errore» e come nascondere bene la chiave API. Completandolo avrai la capacità di realizzare qualunque «app connessa», notizie, tassi di cambio, traduzioni: lo schema è sempre lo stesso.
 
 #### 1. Richiedere un'API meteo gratuita
 
-Per esercitarsi da soli, ti consiglio OpenWeatherMap oppure QWeather (il «meteo del vento armonioso», molto usato in Cina) — entrambe hanno una quota gratuita, basta registrarsi. Prendiamo OpenWeatherMap come esempio:
+Per esercitarsi da soli, ti consiglio OpenWeatherMap oppure QWeather (il «meteo del vento armonioso», molto usato in Cina): entrambe hanno una quota gratuita, basta registrarsi. Prendiamo OpenWeatherMap come esempio:
 
 1. Registrati → nella pagina API keys genera una Key (apikey);
 2. Il piano gratuito può chiamare l'interfaccia Current Weather (meteo attuale): api.openweathermap.org/data/2.5/weather? q=beijing&appid=LA_TUA_KEY&units=metric;
-3. Prima provala una volta nel browser, per vedere com'è fatto il JSON restituito — è la «preparazione» da fare sempre prima di collegare qualunque API.
+3. Prima provala una volta nel browser, per vedere com'è fatto il JSON restituito, è la «preparazione» da fare sempre prima di collegare qualunque API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -59,9 +59,9 @@ interface WeatherApi {
 ```
 :::
 
-Gson infila da solo il JSON dentro queste data class — se i nomi dei campi coincidono, la magia avviene da sola.
+Gson infila da solo il JSON dentro queste data class: se i nomi dei campi coincidono, la magia avviene da sola.
 
-#### 3. I tre stati dell'interfaccia: caricamento / successo / errore
+3. I tre stati dell'interfaccia: caricamento / successo / errore
 
 L'anima di un'app connessa è la «gestione degli stati». Rete lenta, rete assente, nome della città sbagliato... in ogni situazione l'interfaccia deve rendere conto all'utente. Si rappresenta con eleganza con una sealed class (classe sigillata):
 
@@ -138,21 +138,21 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-Qualche dettaglio da imparare: firstOrNull() prende in sicurezza il primo elemento (l'elenco potrebbe essere vuoto), ?: "sconosciuto" dà il testo di ripiego — il principio della null safety vale anche nell'interfaccia. La temperatura usa un corpo grande come 72.sp per fare figura, e il peso «leggero» (Light) rende il numero elegante: è la ricetta classica delle app meteo.
+Qualche dettaglio da imparare: firstOrNull() prende in sicurezza il primo elemento (l'elenco potrebbe essere vuoto), ?: "sconosciuto" dà il testo di ripiego, il principio della null safety vale anche nell'interfaccia. La temperatura usa un corpo grande come 72.sp per fare figura, e il peso «leggero» (Light) rende il numero elegante: è la ricetta classica delle app meteo.
 
 #### 5. Dettagli di interfaccia e d'interazione
 
 - Campo di ricerca: un TextField in alto, digiti il nome della città e tocchi cerca (imposta l'azione «Cerca» sulla tastiera, Invio per cercare);
 - Scheda meteo: temperatura a corpo grande (26,5°), descrizione del tempo (sereno), umidità, nome della città;
-- Città preferite: salva in DataStore le città che guardi più spesso e alla prossima apertura le cerca da solo — così ripassi di passo il capitolo 6;
-- Tira per aggiornare: in Compose usa PullToRefreshBox (offerto da Material 3) e la sensazione al tocco diventa subito «professionale».
+- Città preferite: salva in DataStore le città che guardi più spesso e alla prossima apertura le cerca da solo, così ripassi di passo il capitolo 6;
+- Tira per aggiornare: in Compose usa PullToRefreshBox (offerto da Material 3) e la sensazione al tocco diventa subito «professionale»
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Consiglio: le immagini danno vita all'interfaccia
 
 {class="mt-1"}
-Abbina a ogni tipo di meteo un emoji o un'icona (☀️🌧️❄️), mappandoli con when(description) — tre righe di codice e il calore umano dell'interfaccia raddoppia. Puoi anche caricare una libreria di icone meteo di terze parti, ma nella fase di esercizio gli emoji bastano e avanzano.
+Abbina a ogni tipo di meteo un emoji o un'icona (☀️🌧️❄️), mappandoli con when(description), tre righe di codice e il calore umano dell'interfaccia raddoppia. Puoi anche caricare una libreria di icone meteo di terze parti, ma nella fase di esercizio gli emoji bastano e avanzano.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -160,7 +160,7 @@ Abbina a ogni tipo di meteo un emoji o un'icona (☀️🌧️❄️), mappandol
 Mani in pasta: la checklist di collaudo dell'app del meteo
 
 {class="mt-1"}
-① La ricerca del meteo funziona; ② stacca la rete: l'app segnala l'errore con eleganza senza bloccarsi (prova con la modalità aereo!); ③ digiti una città che non esiste e il messaggio resta gentile; ④ metti due città nei preferiti e, riavviata l'app, ci sono ancora; ⑤ ruotando lo schermo lo stato non si perde. Solo superando tutti e cinque i punti il progetto si può dire promosso.
+① La ricerca del meteo funziona. ② stacca la rete: l'app segnala l'errore con eleganza senza bloccarsi (prova con la modalità aereo!). ③ digiti una città che non esiste e il messaggio resta gentile. ④ metti due città nei preferiti e, riavviata l'app, ci sono ancora. ⑤ ruotando lo schermo lo stato non si perde. Solo superando tutti e cinque i punti il progetto si può dire promosso.
 :::
 
 ::: div .chapter-summary

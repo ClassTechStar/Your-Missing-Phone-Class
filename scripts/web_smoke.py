@@ -84,7 +84,9 @@ def main():
         threading.Thread(target=serve, daemon=True).start()
 
     targets = ([('index.html', None), ('quiz.html', None), ('v1.8/zh-CN.html?safe=1', None),
-                ('v1.9/zh-CN.html', 120)]
+                ('v1.9/zh-CN.html', 120),
+                # 去 AI 味 v2.0 新增的治理页：勘误页与语言诚实分级页
+                ('errata.html', None), ('languages.html', None)]
                + [(f'v1.8/{l}.html', EXPECT_H3) for l in LANGS])
     # 分章页（bookkit split 构建存在时纳入冒烟）：书首页 + 首个章节页
     if (ROOT / 'dist' / 'site' / 'v1.9' / 'zh-CN' / 'index.html').is_file():

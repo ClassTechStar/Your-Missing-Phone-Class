@@ -2,23 +2,23 @@
 id: di-er-shi-qi-zhang
 num: 27
 part: shi-zhan-pian
-nav: Capítulo 27: Fácil también para papá y mamá — guía del móvil para mayores
+nav: Capítulo 27: Ajusta el teléfono de tus padres
 toc: default
 kind: chapter
 ---
 
-### Capítulo 27: Tus padres también pueden usarlo fácilmente - Guía completa de adaptación para mayores
+### Capítulo 27: Ajusta el teléfono de tus padres
 
 {class="chapter-intro mb-4"}
 Sinceramente, al escribir este capítulo pensé en mis padres. Mi madre, cada vez que el teléfono le muestra una "actualización del sistema", no se atreve a pulsar, por miedo a romperlo. La fuente de WeChat de mi padre era más pequeña que una hormiga, pero no sabía cómo agrandarla y estuvo entrecerrando los ojos durante dos años. No es que sean "torpes", es que los teléfonos por defecto tratan a todos como si tuvieran veintitantos años. En este capítulo, con palabras muy directas, resuelvo uno por uno los problemas más comunes que enfrentan los mayores al usar el teléfono.
 
-#### 0. Primero, ajusta tu mentalidad: no es que "los mayores no sepan usar", es que "el teléfono no está bien diseñado"
+0. Primero, ajusta tu mentalidad: no es que "los mayores no sepan usar", es que "el teléfono no está bien diseñado"
 
 Antes de hacer cualquier ajuste, hay que dejar claro un concepto:<strong>Las interfaces de los teléfonos inteligentes actuales no han sido diseñadas teniendo en cuenta a los usuarios mayores</strong>. Las ventanas emergentes son tan pequeñas que no se ven, los gestos requieren toques precisos, los iconos se parecen todos: estos no son problemas del usuario, son problemas del producto. Así que ayudar a los mayores con el teléfono no consiste primero en enseñar, sino en ayudarles a <strong>ajustar el entorno</strong>. Si el entorno está bien ajustado, la mitad de los problemas desaparecen.
 
 Hay tres reglas de oro para ayudar a los mayores con el teléfono: 1) <strong>No les apresures</strong>; tú llevas diez años usando smartphones, ellos pueden llevar solo tres meses. 2) <strong>Usa analogías</strong>; "el Wi-Fi es como las tuberías de agua de casa, abre el grifo y hay agua", este tipo de metáfora es infinitamente más comprensible que la jerga técnica. 3) <strong>Escríbelo</strong>; si se lo enseñas de palabra pueden olvidarlo, pero si coges un papel y escribes los pasos clave y se lo pegas en la parte trasera de la funda del teléfono, funciona mejor que cualquier otra cosa.
 
-#### I. Primer paso: activa el "modo simple" - el teléfono se vuelve más claro
+I. Primer paso: activa el "modo simple" - el teléfono se vuelve más claro
 
 Los teléfonos actuales suelen tener integrado un "modo simple" (llamado "modo cuidado", "modo senior" o "modo mayor"), al activarlo, todo el teléfono cambia radicalmente:
 
@@ -53,7 +53,7 @@ Los teléfonos actuales suelen tener integrado un "modo simple" (llamado "modo c
 
 Si usas otra marca, busca "simple" o "mayor" en el cuadro de búsqueda en la parte superior de los "Ajustes" del teléfono; normalmente lo encontrarás. Si no lo encuentras, sigue los ajustes de "agrandar manualmente" a continuación uno por uno; el efecto es igual de bueno.
 
-#### II. Si no activas el modo simple, también puedes ajustar manualmente - "fuente grande + iconos grandes" en 5 pasos
+II. Si no activas el modo simple, también puedes ajustar manualmente - "fuente grande + iconos grandes" en 5 pasos
 
 Algunos mayores no quieren usar el modo simple porque les parece demasiado "para mayores". Puedes ajustar manualmente los siguientes cinco elementos con el mismo buen resultado:
 
@@ -74,7 +74,7 @@ Algunos mayores no quieren usar el modo simple porque les parece demasiado "para
 4. Pon cuatro accesos directos de llamada en el escritorio: pareja, hijos, médico de familia (si lo hay), comunidad/comunidad de vecinos.
 :::
 
-#### III. Prevención de fraude - este capítulo debes leerlo con tus mayores
+III. Prevención de fraude - este capítulo debes leerlo con tus mayores
 
 Los ancianos son las principales víctimas del fraude telefónico. No es que sean poco cautelosos, sino que las tácticas de los estafadores están cuidadosamente diseñadas para explotar las debilidades psicológicas de los mayores. Estas son las estafas más comunes y cómo afrontarlas. Te recomiendo que se las leas o que imprimas esto y lo pegues junto al teléfono.
 
@@ -107,7 +107,7 @@ Los ancianos son las principales víctimas del fraude telefónico. No es que sea
 - ❤ <strong>Si tienes dudas, llama primero a tus hijos para preguntar.</strong>
 :::
 
-#### IV. Asistencia remota - puedes ayudar a tus padres con el teléfono aunque estés lejos
+IV. Asistencia remota - puedes ayudar a tus padres con el teléfono aunque estés lejos
 
 A veces los mayores tienen problemas y, por mucho que intentes describirlo por teléfono, no encuentran el botón. Aquí es donde la "asistencia remota" resulta útil: puedes ver la pantalla de su teléfono directamente desde el tuyo y ayudarles a operar. Cada marca tiene una solución diferente:
 
@@ -117,7 +117,7 @@ A veces los mayores tienen problemas y, por mucho que intentes describirlo por t
 - <strong>Solución universal (todas las marcas)</strong>: Descarga la app "Sunlogin Remote Control" (la versión gratuita es suficiente); cada uno la instala en su teléfono. Registra la misma cuenta o añádelos como amigos; pide a tus padres que te dicten el código de verización que aparece en su teléfono y podrás ver y operar su pantalla remotamente.
 - <strong>Usuaríos de iPhone</strong>: FaceTime soporta "compartir pantalla" durante las llamadas. En una llamada de FaceTime, toca el botón de compartir pantalla y la otra persona podrá ver tu pantalla. Pero las restricciones de seguridad de iOS no permiten operación remota; solo puedes "enseñar guiando".
 
-#### V. "Adaptación de WeChat para mayores" - con estas frases es suficiente
+V. "Adaptación de WeChat para mayores" - con estas frases es suficiente
 
 WeChat es la app que más usan los mayores, pero la interfaz es demasiado densa. Estos son unos ajustes con efecto inmediato:
 
@@ -127,7 +127,7 @@ WeChat es la app que más usan los mayores, pero la interfaz es demasiado densa.
 - <strong>Enséñales a usar "entrada de voz" en lugar de teclear</strong>: En el teclado junto al chat, mantén pulsada la barra espaciadora (Android) o toca el icono del micrófono (iPhone) y habla directamente; tu voz se convierte en texto y se envía. La precisión del reconocimiento ya es muy alta; para los mayores que no saben escribir en pinyin, es una comodidad "transformadora".
 - <strong>Desactivar funciones de "Descubrir" que no usan</strong>: WeChat &gt; Yo &gt; Ajustes &gt; General &gt; Gestión de Descubrir; desactiva "Momentos", "Canales de video", "Directos", "Compras" y "Juegos" si no los usan, para reducir distracciones.
 
-#### VI. ¿Qué hacer si se pierde el teléfono? Prepara un "plan de emergencia" para tus mayores
+VI. ¿Qué hacer si se pierde el teléfono? Prepara un "plan de emergencia" para tus mayores
 
 Mejor prevenir que curar. Antes de que se pierda el teléfono, haz estas cosas:
 
@@ -135,7 +135,7 @@ Mejor prevenir que curar. Antes de que se pierda el teléfono, haz estas cosas:
 2. <strong>Anota las contraseñas y cuentas importantes en un papel</strong>: La contraseña de Apple ID / cuenta de Huawei / cuenta de Xiaomi; guárdala en un cajón cerrado y entrega una copia a un hijo de confianza. Si se pierde el teléfono, necesitarás acceder a estas cuentas para bloquear y localizar remotamente; si se te olvida la contraseña, será un problema.
 3. <strong>Enséñales una frase a los mayores</strong>:<strong>"Si pierdo el teléfono, lo primero es llamar a la familia."</strong> La familia puede iniciar sesión inmediatamente en iCloud o en la web de búsqueda de dispositivos de Android para marcarlo remotamente como "modo perdido"; así quien lo encuentre no podrá abrirlo ni usarlo.
 
-#### VII. Auriculares inalámbricos y compatibilidad con audífonos - una buena función ignorada
+VII. Auriculares inalámbricos y compatibilidad con audífonos - una buena función ignorada
 
 Muchos mayores tienen problemas de audición, pero no saben que el teléfono puede funcionar junto con audífonos. El iPhone y algunos Android soportan audífonos MFi (Made for iPhone), pudiendo enviar el sonido de la llamada directamente al audífono, mucho más claro que sostener el teléfono.
 
@@ -143,7 +143,7 @@ Muchos mayores tienen problemas de audición, pero no saben que el teléfono pue
 - <strong>Si no usa audífono</strong>: En "Accesibilidad &gt; Audio/Visual", activa "Cancelación de ruido de llamada" y "Audio mono" para mejorar la claridad de las llamadas.
 - <strong>Android</strong>: En "Accesibilidad &gt; Mejora de audición" hay ajustes similares; la ubicación varía según la marca, busca "audífono" directamente.
 
-#### VIII. Funciones relacionadas con la salud - el teléfono no es solo una herramienta de comunicación
+VIII. Funciones relacionadas con la salud - el teléfono no es solo una herramienta de comunicación
 
 - <strong>SOS de emergencia</strong>: Pulsar el botón de encendido cinco veces seguidas (en la mayoría de teléfonos); el teléfono llama automáticamente al número de emergencia y envía la ubicación a los contactos de emergencia preestablecidos. Configúralo con antelación para tus mayores - iPhone: "Ajustes &gt; SOS de emergencia"; Android: "Ajustes &gt; Seguridad &gt; Solicitud de emergencia". Enséñales a usarlo con un ensayo previo para que no se confundan en el momento.
 - <strong>Detección de caídas</strong>: Apple Watch tiene esta función; si detecta una caída seguida de inactividad, llama automáticamente a emergencias y notifica a la familia. Si el presupuesto lo permite, compra uno para tus mayores; puede salvar vidas en momentos críticos.

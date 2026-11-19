@@ -2,19 +2,19 @@
 id: di-san-shi-jiu-zhang
 num: 39
 part: ai-biancheng-pian
-nav: Chapitre 39 : Ingénierie du contexte — faire comprendre tes intentions à l'IA
+nav: Chapitre 39 : L'IA ne comprend pas : c'est mal expliqué
 toc: default
 kind: chapter
 ---
 
-### Chapitre 39 : Ingénierie du contexte — faire comprendre votre intention à l'IA
+### Chapitre 39 : L'IA ne comprend pas : c'est mal expliqué
 
 {class="chapter-intro mb-4"}
 Vous est-il arrivé qu'une nouvelle conversation fasse perdre à l'IA toute mémoire de votre projet ? Ce n'est pas de la malice : elle est « oublieuse » par nature. Ce chapitre vous apprend à lui installer un « système de mémoire longue » et vous fait découvrir l'un des paradigmes les plus en vogue en 2026 : le développement piloté par la spécification.
 
-#### I. Fichier de mémoire de projet : la « mémoire longue » de l'IA
+I. Fichier de mémoire de projet : la « mémoire longue » de l'IA
 
-Un modèle d'IA a une limite fondamentale : sa mémoire est de courte durée. Au début de chaque conversation, sa connaissance de votre projet est nulle. Il faut sans cesse rappeler « nous utilisons React », « le backend est Node.js », « la base est PostgreSQL », « les chaînes en doubles guillemets ». Inefficace et source d'oublis — comme réformer chaque jour un nouveau collègue.
+Un modèle d'IA a une limite fondamentale : sa mémoire est de courte durée. Au début de chaque conversation, sa connaissance de votre projet est nulle. Il faut sans cesse rappeler « nous utilisons React », « le backend est Node.js », « la base est PostgreSQL », « les chaînes en doubles guillemets ». Inefficace et source d'oublis, comme réformer chaque jour un nouveau collègue.
 
 Solution : le fichier de mémoire de projet, un fichier texte à la racine du projet que l'outil IA lit automatiquement au début de chaque conversation. Chaque outil a sa convention de nommage :
 
@@ -67,7 +67,7 @@ C'est une app full-stack de suivi de dépenses qui aide l'utilisateur à enregis
 Attention : ce n'est pas un second cahier des charges
 
 {class="mt-1"}
-Surveillez la longueur — pas des dizaines de pages de spécifications. L'objectif est que l'IA « contextualise vite », pas qu'elle décrive chaque fonction en détail. Restez concis, structuré, et ne notez que « ce que l'IA doit savoir ».
+Surveillez la longueur, pas des dizaines de pages de spécifications. L'objectif est que l'IA « contextualise vite », pas qu'elle décrive chaque fonction en détail. Restez concis, structuré, et ne notez que « ce que l'IA doit savoir ».
 :::
 
 #### II. Développement piloté par la spécification (SDD)
@@ -80,7 +80,7 @@ Le flux SDD en cinq étapes :
 2. Définir interfaces et structures de données (dans la spécification) ;
 3. Laisser l'IA générer le code à partir de la spécification ;
 4. Exécuter les tests pour vérifier la conformité ;
-5. Si non conforme, corriger la spécification ou demander à l'IA de corriger le code.
+5. Si non conforme, corriger la spécification ou demander à l'IA de corriger le code
 
 Dans ce flux, la spécification est la « source de vérité » — le code se régénère, mais la spécification doit d'abord être juste.
 
@@ -105,11 +105,11 @@ Dans ce flux, la spécification est la « source de vérité » — le code se r
 Figure 3 : flux de travail du développement piloté par la spécification (SDD)
 :::
 
-Avantage du SDD : la spécification est plus stable que le code. Si le modèle ou l'outil change, la spécification reste valable ; il suffit de régénérer le code. D'où l'insistance de ce livre : « la méthodologie prime sur les outils » — la spécification en est le support concret.
+Avantage du SDD : la spécification est plus stable que le code. Si le modèle ou l'outil change, la spécification reste valable ; il suffit de régénérer le code. D'où l'insistance de ce livre : « la méthodologie prime sur les outils », la spécification en est le support concret.
 
 #### III. Gestion de la fenêtre de contexte
 
-Même avec un fichier de mémoire, le contexte peut manquer. La fenêtre de contexte (quantité d'informations traitées simultanément) est limitée. Conversations trop longues ou fichiers trop nombreux : l'IA « oublie » le début et la qualité chute — comme un ami qui, après six heures de discussion, a oublié votre première phrase.
+Même avec un fichier de mémoire, le contexte peut manquer. La fenêtre de contexte (quantité d'informations traitées simultanément) est limitée. Conversations trop longues ou fichiers trop nombreux : l'IA « oublie » le début et la qualité chute, comme un ami qui, après six heures de discussion, a oublié votre première phrase.
 
 Stratégie clé : les références par couches.
 
@@ -122,12 +122,12 @@ Stratégie clé : les références par couches.
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Stratégie de gestion par couches de la fenêtre de contexte
 
-#### 4. Les points clés de la pratique de l'ingénierie du contexte
+4. Les points clés de la pratique de l'ingénierie du contexte
 
 L'ingénierie du contexte n'est pas un réglage à faire une fois pour toutes, mais un processus d'amélioration continue. Voici quelques points maintes fois éprouvés sur le terrain :
 
 1. Tiens le fichier de mémoire à jour au fil de l'évolution du projet. Quand tu introduis une nouvelle technologie ou changes d'architecture, mets-le à jour immédiatement, au lieu de l'expliquer à la volée dans la conversation.
-2. Utilise bien les références @ plutôt que de coller le texte entier. La plupart des outils de programmation IA acceptent la syntaxe @file ou @folder, qui injecte le contenu du fichier dans le contexte de l'IA en arrière-plan — plus efficace qu'un collage manuel, et sans polluer la conversation.
+2. Utilise bien les références @ plutôt que de coller le texte entier. La plupart des outils de programmation IA acceptent la syntaxe @file ou @folder, qui injecte le contenu du fichier dans le contexte de l'IA en arrière-plan, plus efficace qu'un collage manuel, et sans polluer la conversation.
 3. Garde des conversations « courtes et percutantes ». Une conversation traite une seule tâche ou un seul point de fonctionnalité ; une fois terminé, ouvre une nouvelle conversation pour la suite. Les longues conversations épuisent la fenêtre de contexte et distraient l'IA.
 4. Montre les résultats à l'IA au lieu de les décrire. Face à un bug, référence directement le journal d'erreurs à l'IA avec @, plutôt que de raconter avec tes mots « il semble y avoir une erreur quelque part ». L'IA comprend bien mieux l'information brute que ton résumé.
 5. Nettoie et archive régulièrement. Les conversations terminées et les fichiers temporaires encombrent ton espace de travail. Fais périodiquement le ménage des contenus inutiles et garde le répertoire du projet bien rangé : l'IA comprendra d'autant mieux la structure du projet.
@@ -137,7 +137,7 @@ L'ingénierie du contexte n'est pas un réglage à faire une fois pour toutes, m
 À toi de jouer : écris un fichier de mémoire de 70 lignes pour ton projet
 
 {class="mt-1"}
-Choisis un projet en cours (ou prévu) et rédige un CLAUDE.md : présentation du projet (2 ou 3 phrases), stack technique (mets-la en liste), conventions de code (3 à 5 règles), structure des dossiers (dessine un arbre), conventions de développement (2 ou 3 règles). Reste sous les 70 lignes — une fois écrit, tu verras que ta compréhension du projet sera bien plus claire.
+Choisis un projet en cours (ou prévu) et rédige un CLAUDE.md : présentation du projet (2 ou 3 phrases), stack technique (mets-la en liste), conventions de code (3 à 5 règles), structure des dossiers (dessine un arbre), conventions de développement (2 ou 3 règles). Reste sous les 70 lignes, une fois écrit, tu verras que ta compréhension du projet sera bien plus claire.
 :::
 
 ::: div .chapter-summary

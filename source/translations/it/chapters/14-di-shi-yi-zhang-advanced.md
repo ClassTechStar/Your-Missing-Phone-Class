@@ -11,7 +11,7 @@ kind: supplement
 {class="chapter-intro mb-4"}
 Per comprendere davvero i segreti della fotografia e dei video sul telefono, devi conoscere alcune nozioni professionali di tecnica dell'immagine. Queste conoscenze non solo ti aiutano a usare meglio la fotocamera del telefono, ma ti rendono anche più consapevole nella scelta dei dispositivi.
 
-#### 1. Risoluzione, frame rate e bitrate: i tre elementi della qualità video
+1. Risoluzione, frame rate e bitrate: i tre elementi della qualità video
 
 ##### Risoluzione (Resolution):
 
@@ -149,7 +149,7 @@ Il formato RAW è il "dato originale" registrato dal sensore della fotocamera - 
 
 #### 6. Principi della fotografia computazionale
 
-La fotografia moderna del telefono non può più fare a meno della "fotografia computazionale" - ovvero affidarsi agli algoritmi e non solo a lenti e sensori per generare le foto. Capire questi principi chiave ti fa comprendere meglio cosa fa il telefono nell'istante in cui premi l'otturatore.
+La fotografia moderna del telefono non può più fare a meno della "fotografia computazionale" - ovvero affidarsi agli algoritmi , e non solo a lenti e sensori per generare le foto. Capire questi principi chiave ti fa comprendere meglio cosa fa il telefono nell'istante in cui premi l'otturatore.
 
 ##### Fusione multi-frame:
 

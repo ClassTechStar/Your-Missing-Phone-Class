@@ -53,13 +53,13 @@ Ponto-chave: uma view é uma struct que adota o protocolo View, a propriedade bo
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 As quatro views básicas do SwiftUI
 
-Repare no Image(systemName:) — a Apple inclui a biblioteca de ícones SF Symbols (milhares de ícones gratuitos): um nome como “star.fill” já exibe uma estrela preenchida na hora. É um benefício escondido do desenvolvimento iOS: para montar interfaces, quase não é preciso procurar ícones.
+Repare no Image(systemName:), a Apple inclui a biblioteca de ícones SF Symbols (milhares de ícones gratuitos): um nome como “star.fill” já exibe uma estrela preenchida na hora. É um benefício escondido do desenvolvimento iOS: para montar interfaces, quase não é preciso procurar ícones.
 
 #### 3. O trio de layout: VStack, HStack e ZStack
 
 - VStack: organiza na vertical (como uma fila do bandejão);
 - HStack: organiza na horizontal (como gente sentada lado a lado);
-- ZStack: empilha (como cartas de baralho umas sobre as outras, ótimo para selos e sobreposições).
+- ZStack: empilha (como cartas de baralho umas sobre as outras, ótimo para selos e sobreposições)
 
 ::: div .code-block
 :::inline div .code-head
@@ -89,7 +89,7 @@ VStack(alignment: .leading, spacing: 12) {
 Atenção: a ordem dos modificadores importa
 
 {class="mt-1"}
-padding(16).background(cinza) e background(cinza).padding(16) dão resultados diferentes — o primeiro “deixa o espaço e depois pinta” (o fundo não inclui a margem), o segundo “pinta e depois deixa o espaço” (o fundo inclui a margem). Daí vêm as “bordas brancas estranhas” que tanto atormentam iniciantes. Na dúvida, inverta a ordem: a pré-visualização responde na hora.
+padding(16).background(cinza) e background(cinza).padding(16) dão resultados diferentes, o primeiro “deixa o espaço e depois pinta” (o fundo não inclui a margem), o segundo “pinta e depois deixa o espaço” (o fundo inclui a margem). Daí vêm as “bordas brancas estranhas” que tanto atormentam iniciantes. Na dúvida, inverta a ordem: a pré-visualização responde na hora.
 :::
 
 #### 4. Estado e binding: dando vida à interface
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-O campo de texto usa “binding bidirecional” — o símbolo $ entrega junto o valor e o poder de alterá-lo:
+O campo de texto usa “binding bidirecional”, o símbolo $ entrega junto o valor e o poder de alterá-lo:
 
 ::: div .code-block
 :::inline div .code-head
@@ -152,9 +152,9 @@ Figura 3: o fluxo de dados unidirecional “estado → interface” do SwiftUI
 
 #### 5. Prévia, tema e animação: os “cheats” do SwiftUI
 
-- Macro #Preview: adicione #Preview { ContentView() } no fim do arquivo e o canvas à direita renderiza em tempo real — editar vendo o resultado na hora;
+- Macro #Preview: adicione #Preview { ContentView() } no fim do arquivo e o canvas à direita renderiza em tempo real, editar vendo o resultado na hora;
 - Modo escuro de graça: use cores do sistema (Color(.systemGray6), .primary) em vez de cores fixas e o modo escuro se adapta sozinho, sem uma linha a mais;
-- Animação em uma linha: withAnimation { count += 1 } ou .animation(.default, value: count) na view — transições sedosas.
+- Animação em uma linha: withAnimation { count += 1 } ou .animation(.default, value: count) na view, transições sedosas
 
 ::: div .code-block
 :::inline div .code-head
@@ -186,14 +186,14 @@ struct AnimatedHeartView: View {
 Dica: primeiro a função, depois a animação
 
 {class="mt-1"}
-O defeito clássico do iniciante é “ainda não ter acertado a interface e já ficar remoendo a animação”. Faça a função funcionar primeiro e deixe os efeitos para o final — animação é enfeite no bolo pronto; função é remédio na hora da dor. É também o nosso princípio de sempre: simplicidade acima de tudo.
+O defeito clássico do iniciante é “ainda não ter acertado a interface e já ficar remoendo a animação”. Faça a função funcionar primeiro e deixe os efeitos para o final: animação é enfeite no bolo pronto; função é remédio na hora da dor. É também o nosso princípio de sempre: simplicidade acima de tudo.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mãos à obra: crie um “botão do humor”
 
-#### 6. Consulta rápida dos modificadores mais usados: com esta página, a interface se resolve
+6. Consulta rápida dos modificadores mais usados: com esta página, a interface se resolve
 
 ::: div .overflow-x-auto
 ```html
@@ -204,7 +204,7 @@ Mãos à obra: crie um “botão do humor”
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Consulta rápida dos modificadores mais usados do SwiftUI
 
-Se não decorar tudo, sem problema — esta página existe para consulta. Na prática, os quatro primeiros são os mais usados: padding, cantos arredondados, fundo e fonte.
+Se não decorar tudo, sem problema, esta página existe para consulta. Na prática, os quatro primeiros são os mais usados: padding, cantos arredondados, fundo e fonte.
 
 {class="mt-1"}
 Transforme o projeto modelo em um alternador de humor: um botão que, a cada toque, cicla entre 😀 feliz → 😢 triste → 😡 bravo, com o texto e a cor de fundo mudando junto. Dica: guarde os três pares (texto + cor) em um array, o índice em um @State e, ao tocar, use (index + 1) % 3. Mande para os amigos testarem e colha a primeira leva de “uau, você faz apps!”.

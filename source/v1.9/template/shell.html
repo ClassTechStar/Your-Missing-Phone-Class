@@ -376,6 +376,88 @@ html, body {
             background: var(--surface-dark-3);
             border-color: var(--surface-dark-5);
         }
+        /* --- 去 AI 味 v2.0：证据框 / 立场框 / 版本锚点 --- */
+        .version-anchor {
+            font-size: 0.85em;
+            color: var(--muted-3);
+            background: var(--surface-4);
+            border: 1px dashed var(--line);
+            border-radius: 0.25rem;
+            padding: 0.5rem 0.85rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+        .dark .version-anchor {
+            color: var(--muted);
+            background: var(--surface-dark-4);
+            border-color: var(--surface-dark-5);
+        }
+        .case-box {
+            border-left: 4px solid var(--accent-book);
+            background: var(--surface-3);
+            border-radius: 0.25rem;
+            padding: 0.9rem 1.1rem;
+            margin: 1.25rem 0;
+            max-width: 82ch;
+        }
+        .dark .case-box {
+            background: var(--surface-dark-3);
+        }
+        .case-box-head {
+            font-weight: 700;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+            color: var(--accent-book);
+            margin-bottom: 0.5rem;
+        }
+        .case-box-head::before {
+            content: "▍";
+            margin-right: 0.35em;
+        }
+        .case-box-quote {
+            border-left: 2px solid var(--line);
+            padding-left: 0.75rem;
+            margin: 0.6rem 0;
+            color: var(--muted-3);
+        }
+        .dark .case-box-quote {
+            color: var(--muted);
+        }
+        .case-box-src {
+            font-size: 0.82em;
+            color: var(--muted-3);
+        }
+        .dark .case-box-src {
+            color: var(--muted);
+        }
+        .stance-box {
+            border: 1px solid var(--accent-book);
+            background: var(--wash-warm);
+            border-radius: 0.25rem;
+            padding: 0.9rem 1.1rem;
+            margin: 1.25rem 0;
+            max-width: 82ch;
+        }
+        .dark .stance-box {
+            background: var(--wash-dark);
+        }
+        .stance-box-head {
+            font-weight: 700;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .stance-box-head::before {
+            content: "▍";
+            margin-right: 0.35em;
+        }
+        .stance-box-note {
+            font-size: 0.85em;
+            color: var(--muted-3);
+            margin-top: 0.5rem;
+        }
+        .dark .stance-box-note {
+            color: var(--muted);
+        }
         .chapter-intro {
             font-size: 1.05em;
             color: var(--muted-3);

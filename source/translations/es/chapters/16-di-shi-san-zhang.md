@@ -2,17 +2,17 @@
 id: di-shi-san-zhang
 num: 13
 part: ruan-jian-pian
-nav: Capítulo 13: Recomendaciones de Apps de herramientas
+nav: Capítulo 13: ¿Qué Apps instalar y cuáles evitar?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 13: Apps de herramientas recomendadas
+### Capítulo 13: ¿Qué Apps instalar y cuáles evitar?
 
 {class="chapter-intro mb-4"}
 Este capítulo reúne herramientas de productividad, salud y viajes, además de funciones prácticas del sistema y entre dispositivos: limpieza y antispam tipo Qingzhuo, bloqueo integrado del teléfono, clima y alertas sísmicas; control remoto del PC con Sunlogin/ToDesk, oficina con IA tipo Trae, fondos animados, envío rápido en red local con LocalSend, portapapeles entre dispositivos, códigos dinámicos con Aegis/Microsoft Authenticator, agenda con TickTick y escaneo de documentos en papel.
 
-#### I. Herramientas de productividad: gestiona tu tiempo y tu atención
+I. Herramientas de productividad: gestiona tu tiempo y tu atención
 
 Las apps de productividad son el «esqueleto» de tu vida digital: te ayudan a poner orden en ideas, tareas y archivos dispersos. Aquí van recomendaciones por situación.
 
@@ -128,7 +128,7 @@ Fuera de casa, unas pocas apps bien elegidas te ahorran un montón de problemas.
 - La app del tiempo del sistema / China Weather (weather.com.cn). Para quién: todo el mundo; es la primera opción para consultar el pronóstico y las alertas meteorológicas oficiales. Punto fuerte: las apps del tiempo de los fabricantes están conectadas con canales oficiales como «China Weather», así que las alertas de lluvias torrenciales, tifones, olas de calor, etc. llegan como banners o notificaciones, con gran autoridad.
 - Caiyun Weather Público: quien necesita previsión de lluvia minuto a minuto. Puntos fuertes: precisión líder en «¿va a llover en las próximas dos horas?», mapa dinámico de lluvia muy visual y avisos proactivos antes de que empiece a llover.
 - Carrot Weather Público: entusiastas del clima que buscan diversión y widgets ricos. Puntos fuertes: locutor de IA con humor ácido, muchos widgets personalizables y radar profesional; la versión de pago ofrece más funciones.
-- Clave de alertas: las apps de clima necesitan permiso de notificaciones para recibir avisos; las alertas tienen cuatro niveles —azul, amarillo, naranja y rojo— y el rojo indica el mayor riesgo de fenómenos peligrosos, así que ajusta tus planes según el aviso. Más formas de activarlas en la sección 7 de este capítulo «Alertas meteorológicas / desastres naturales / sismos».
+- Clave de alertas: las apps de clima necesitan permiso de notificaciones para recibir avisos; las alertas tienen cuatro niveles,azul, amarillo, naranja y rojo, y el rojo indica el mayor riesgo de fenómenos peligrosos, así que ajusta tus planes según el aviso. Más formas de activarlas en la sección 7 de este capítulo «Alertas meteorológicas / desastres naturales / sismos».
 
 ##### 6. Guías de viaje
 
@@ -143,7 +143,7 @@ La automatización es una palanca: un poco de configuración a cambio de ahorrar
 - Automatización en Android: las escenas del sistema (por ejemplo «Tareas automáticas» de Xiaomi o «Inteligencia de escena» de Huawei) son las más fáciles; Tasker es muy potente pero tiene una curva de aprendizaje pronunciada, ideal para usuarios avanzados.
 - Idea clave: primero detecta «lo que repites cada día» y luego piensa «¿puedo sustituirlo por un disparador + varias acciones?». Ejemplos detallados y usos avanzados en el Capítulo 23.
 
-#### V. Navegadores y buscadores: tu puerta de entrada a la información
+V. Navegadores y buscadores: tu puerta de entrada a la información
 
 El navegador es tu ventana a internet y el buscador, la brújula para orientarte en el océano de información. Usarlos bien te evita muchos rodeos.
 
@@ -175,21 +175,21 @@ Cuando escribes una dirección, el navegador: ① consulta al servidor DNS la IP
 
 El dominio es la «dirección» del sitio; saber leerlo te ayuda a juzgar su naturaleza y origen:
 
-- Significado de los sufijos más comunes: .com — empresa comercial, el más habitual
-- .cn — dominio nacional de China
-- .org — organización sin ánimo de lucro
-- .net — servicios de red
-- .edu — instituciones educativas
+- Significado de los sufijos más comunes: .com: empresa comercial, el más habitual
+- .cn, dominio nacional de China
+- .org: organización sin ánimo de lucro
+- .net, servicios de red
+- .edu, instituciones educativas
 - .gov — organismos gubernamentales
-- .xyz/.tech/.info — dominios genéricos nuevos, de acceso fácil; precaución
+- .xyz/.tech/.info: dominios genéricos nuevos, de acceso fácil; precaución
 
-- Dominios por país/región: .jp — Japón
-- .kr — Corea del Sur
-- .uk — Reino Unido
-- .de — Alemania
-- .tw — Taiwán
-- .hk — Hong Kong
-- Aviso de seguridad: los sitios .gov y .edu suelen ser más fiables porque el registro es más exigente. Dominios baratos como .xyz o .top se usan mucho en sitios de phishing; al visitarlos, extrema la precaución.
+- Dominios por país/región: .jp, Japón
+- .kr, Corea del Sur
+- .uk, Reino Unido
+- .de: Alemania
+- .tw, Taiwán
+- .hk, Hong Kong
+- Aviso de seguridad: los sitios .gov y .edu suelen ser más fiables porque el registro es más exigente. Dominios baratos como .xyz o .top se usan mucho en sitios de phishing; al visitarlos, extrema la precaución
 
 ##### Bloqueo de anuncios:
 
@@ -251,7 +251,7 @@ Crea una automatización «para relajarte antes de dormir»
 3. Guarda y prueba.
 :::
 
-#### VI. Herramientas prácticas del sistema: limpieza, antispam y seguridad
+VI. Herramientas prácticas del sistema: limpieza, antispam y seguridad
 
 Más allá de las apps de productividad o salud, lo que marca el día a día suele ser: «que no te molesten, que haya espacio suficiente y que los estafadores no entren». Aquí repasamos software útil y luego detallamos el bloqueo de spam del propio teléfono: muchos llevan años con un móvil sin haber activado nunca estos interruptores.
 
@@ -348,7 +348,7 @@ Práctica: activa hoy el bloqueo de spam
 4. Prueba con un número de prueba ya etiquetado (o revisa el registro de bloqueos) para confirmar que funciona.
 :::
 
-#### VII. Alertas meteorológicas, de desastres naturales y sísmicas
+VII. Alertas meteorológicas, de desastres naturales y sísmicas
 
 El bloqueo de spam frena «estafas por teléfono»; las alertas, «desastres y clima extremo». Muchos solo instalan una app de clima para ver la temperatura, sin notificaciones ni alerta sísmica. En los segundos o decenas de segundos previos a un temporal, un tifón o un terremoto, el móvil puede regalarte un tiempo precioso para protegerte.
 
@@ -462,7 +462,7 @@ Práctica: revisa tus alertas en 10 minutos
 4. Comprueba que el sonido de la alerta no quede anulado por el modo No molestar; repite la revisión en el móvil de tus padres.
 :::
 
-#### VIII. Colaboración entre dispositivos: control remoto, envío rápido y seguridad de cuentas
+VIII. Colaboración entre dispositivos: control remoto, envío rápido y seguridad de cuentas
 
 Un móvil fluye mejor cuando «forma equipo» con el ordenador y la tablet. Aquí van herramientas muy usadas: controlar el PC desde el móvil, oficina con IA y trabajo remoto, fondos animados, envío en red local, portapapeles multi-dispositivo, códigos dinámicos 2FA y el enlace entre escaneo en papel y agenda de tareas. La visión más completa de la multi-dispositivo está en el Capítulo 17.
 
@@ -478,7 +478,7 @@ Un móvil fluye mejor cuando «forma equipo» con el ordenador y la tablet. Aqu�
 ##### 2. Oficina con IA: Trae / WorkBuddy / Dumate
 
 - Trae Público: programación y edición de documentos, en entornos chinos. Puntos fuertes: IDE / asistente de programación con IA de ByteDance; el modo SOLO genera un proyecto con una frase; muy útil para código y documentos. Si corre en el PC, desde el móvil puedes seguir tareas con control remoto o las funciones oficiales del producto (según la versión actual). Ver Capítulo 41 Panorama de herramientas de programación con IA.
-- WorkBuddy Público: profesionales que quieren que la IA ayude con actas, correos, informes y documentos de oficina. Puntos fuertes: asistente de IA orientado a oficina, ideal para tareas de «redactar—pulir—resumir»; se puede iniciar en el móvil y dejar el trabajo pesado al PC.
+- WorkBuddy Público: profesionales que quieren que la IA ayude con actas, correos, informes y documentos de oficina. Puntos fuertes: asistente de IA orientado a oficina, ideal para tareas de «redactar:pulir—resumir»; se puede iniciar en el móvil y dejar el trabajo pesado al PC.
 - Dumate Público: equipos o personas que necesitan colaboración y gestión de conocimiento en una sola herramienta. Puntos fuertes: oficina colaborativa con IA, énfasis en reunir material y edición conjunta; en el móvil sirve para ver y editar a medias; el maquetado complejo, mejor en pantalla grande.
 - Qué significa «controlar el PC desde el móvil»: muchas funciones de IA viven en el ordenador o la web; desde el móvil, con Sunlogin/ToDesk o la app del producto, puedes «pilotar» esas tareas de IA en trayectos o fuera de casa. Regla: cálculo pesado y documentos largos, al PC; ver el avance y retocar un par de frases, al móvil.
 - Privacidad: antes de subir contratos, documentos de identidad o datos de clientes, revisa las condiciones de privacidad y la normativa de la empresa; con material corporativo, prioriza las herramientas que indique tu organización.

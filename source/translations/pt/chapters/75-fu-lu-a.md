@@ -15,7 +15,7 @@ kind: appendix
 - <strong>Conferir informações</strong>: Verifique se o IMEI/número de série na caixa coincide com o da nota fiscal.
 - <strong>Testar funções</strong>: Faça uma chamada para testar o alto-falante e o microfone, tire uma foto para verificar a câmera.
 
-#### 2. "Lembretes Importantes" para Ativação e Configuração Inicial:
+2. "Lembretes Importantes" para Ativação e Configuração Inicial:
 
 - <strong>Rede</strong>: Conecte-se primeiro a uma rede Wi-Fi estável.
 - <strong>Conta</strong>: Faça login com seu ID Apple, conta Huawei, conta Xiaomi, etc.

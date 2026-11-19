@@ -35,7 +35,7 @@ Termux<strong>Bash מובנה בלבד</strong>Shell. ל-Zsh/fish, התקן יד
 
 ##### שילוב מערכת והרחבה
 
-- תומך בחיבור מקלדת בלוטות' וצגים חיצוניים, עם תמיכה מלאה בעכבר.
+- תומך בחיבור מקלדת בלוטות' וצגים חיצוניים, עם תמיכה מלאה בעכבר
 - שלוש, מערכת אקולוגית של תוספים
 - היישום המרכזי של Termux ניתן להרחבה דרך מספר יישומי תוספים אופציונליים, המספקים פונקציות ושילובים נוספים:
 
@@ -92,7 +92,7 @@ Termux<strong>Bash מובנה בלבד</strong>Shell. ל-Zsh/fish, התקן יד
 
 ##### שלבי התקנה
 
-1. <strong>אתחול המערכת</strong>: לאחר ההפעלה הראשונה המתן עד להשלמת "Installing bootstrap packages".
+1. <strong>אתחול המערכת</strong>: לאחר ההפעלה הראשונה המתן עד להשלמת "Installing bootstrap packages"
 2. <strong>קבלת הרשאות אחסון</strong>: הרץ את
 3. <strong>termux-setup-storage</strong>לעדכון רשימת החבילות.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">עדכון מקורות תוכנה</code>: הרץ את
 4. <strong>pkg update &amp;&amp; pkg upgrade</strong>לעדכון רשימת החבילות.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">התקן את Python:</code>החלפת מקור מראה
@@ -101,7 +101,7 @@ Termux<strong>Bash מובנה בלבד</strong>Shell. ל-Zsh/fish, התקן יד
 
 - <strong>termux-change-repo</strong>כדי להחליף מקור מראה דרך ממשק גרפי (מומלץ מקור המראה של אוניברסיטת Tsinghua).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">הגדרת מקשי קיצור</code>: מקש הורדת עוצמת הקול מדמה Ctrl, מקש העלאת עוצמת הקול מדמה Esc, לשיפור יעילות הקלט.
 - <strong>עיצוב ממשק</strong>: התקן Zsh + Oh My Zsh, הגדר ערכות נושא ותוספים.
-- <strong>חמישה, תרחישי שימוש אופייניים</strong>בדיקות פיתוח במובייל
+- <strong>חמישה, תרחישי שימוש אופייניים</strong>בדיקות פיתוח במובייל.
 
 #### חמישה, תרחישי שימוש אופייניים
 
@@ -138,7 +138,7 @@ Termux מביא את חוויית טרמינל הלינוקס העוצמתית �
 <i class="fas fa-hands mr-2"></i>הרץ את
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. pkg update &amp;&amp; pkg upgrade
+1. pkg update &amp;&amp; pkg upgrade.
 2. הריצו <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> לעדכון חבילות התוכנה.
 3. התקינו את Python: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>.
 4. הקלידו <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code> וחושו בהנאה שבהרצת קוד על הטלפון.

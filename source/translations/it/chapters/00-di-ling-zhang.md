@@ -2,12 +2,12 @@
 id: di-ling-zhang
 num: 00
 part: ji-chu-pian
-nav: Capitolo 0: Ehi, prima di iniziare
+nav: Capitolo 0: Tre cose da dire prima di cominciare
 toc: default
 kind: chapter
 ---
 
-### Capitolo 0: Ehi, prima di iniziare
+### Capitolo 0: Tre cose da dire prima di cominciare
 
 {class="mb-3"}
 Prima di esplorare ufficialmente, parliamo di alcune regole di base per assicurarci che tu capisca tutto ciò che diremo dopo. Non aver fretta, affilare la scure non ritarda il taglio della legna.
@@ -16,7 +16,7 @@ Prima di esplorare ufficialmente, parliamo di alcune regole di base per assicura
 
 Può aiutarti a capire sistematicamente come usare il cellulare, a capire la logica dietro le funzioni; inoltre, che tu sia del team Android o Apple, la maggior parte delle idee è universale. Ti guiderà in esercizi pratici, facendoti passare da "saper usare" a "capire come usare".
 
-Non è il manuale di un modello specifico di cellulare, né notizie tecnologiche sull'inseguire le ultime novità, e tanto meno una guida per farti assorbire dal cellulare. A dire il vero, se ti aspetti "come scrollare video in modo più piacevole", potresti restare deluso — ci preoccupiamo più di come far servire davvero il cellulare per te, non il contrario.
+Non è il manuale di un modello specifico di cellulare, né notizie tecnologiche sull'inseguire le ultime novità, e tanto meno una guida per farti assorbire dal cellulare. A dire il vero, se ti aspetti "come scrollare video in modo più piacevole", potresti restare deluso, ci preoccupiamo più di come far servire davvero il cellulare per te, non il contrario.
 
 #### 2. Spiegazione dei nostri "codici"
 
@@ -33,7 +33,7 @@ Indovina un po'? Alcune cose hanno nomi diversi ma fanno la stessa cosa. Ad esem
 
 Inoltre, ora nel campo Android c'è anche il sistema HarmonyOS di Huawei, che ha le sue caratteristiche; ne parleremo in modo specifico più avanti. In sintesi, qualsiasi cellulare tu usi, questo libro può aiutarti.
 
-#### 4. Capacità del cellulare: perché ho comprato 128G ma lo spazio disponibile è meno di 110G?
+4. Capacità del cellulare: perché ho comprato 128G ma lo spazio disponibile è meno di 110G?
 
 Le unità di capacità sono note: 1TB = 1024GB, 1GB = 1024MB, 1MB = 1024KB... ma c'è una trappola: i produttori di dischi rigidi di solito usano base 1000, mentre i sistemi usano base 1024, quindi il disco "128G" che hai comprato "si restringe" nella capacità effettiva.
 
@@ -48,7 +48,7 @@ Ma i motivi principali del "restringimento" della capacità del cellulare sono t
 <i class="fas fa-lightbulb mr-2"></i>Piccolo consiglio per l'acquisto
 
 {class="mt-1"}
-Oggi 128 GB sono ormai insufficienti; partire da 256 GB è più prudente. Se ti piace scattare foto o giocare, valuta direttamente 512 GB o più. Ricorda, per lo spazio di archiviazione, meglio abbondare che essere a corto.
+Oggi 128 GB sono ormai insufficienti; partire da 256 GB è più prudente. Se ti piace scattare foto o giocare, valuta direttamente 512 GB o più. Ricorda, per lo spazio di archiviazione. Meglio abbondare che essere a corto.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -82,6 +82,6 @@ Se il cellulare viene perso o si guasta, perdi non solo qualche migliaio di euro
 
 Come per la salute non si può aspettare di ammalarsi per andare dal medico, <strong>anche la gestione del cellulare va affrontata a partire dalle "abitudini quotidiane"</strong>. Questo libro non sottolinea una tecnica avanzata specifica, ma questi principi semplici:
 
-- <strong>Prevenzione prima</strong>: installare app solo dallo store ufficiale, rimuovere dati sensibili dalle foto prima di inviarle, non usare password duplicate — queste "piccole azioni" costano pochissimo ma bloccano la maggior parte dei rischi.
-- <strong>Controlli periodici</strong>: riorganizzare la cartella download una volta al mese, audit dei permessi una volta per trimestre, backup completo una volta ogni semestre — un ritmo fisso è cento volte più efficace del soccorso d'emergenza.
-- <strong>Lasciarsi una via d'uscita</strong>: attivare la sincronizzazione cloud, annotare account e password, scrivere un "inventario del patrimonio digitale" — per garantire che tu e la tua famiglia possiate gestire con calma in caso di imprevisti.
+- <strong>Prevenzione prima</strong>: installare app solo dallo store ufficiale, rimuovere dati sensibili dalle foto prima di inviarle, non usare password duplicate, queste "piccole azioni" costano pochissimo ma bloccano la maggior parte dei rischi.
+- <strong>Controlli periodici</strong>: riorganizzare la cartella download una volta al mese, audit dei permessi una volta per trimestre, backup completo una volta ogni semestre, un ritmo fisso è cento volte più efficace del soccorso d'emergenza.
+- <strong>Lasciarsi una via d'uscita</strong>: attivare la sincronizzazione cloud, annotare account e password, scrivere un "inventario del patrimonio digitale", per garantire che tu e la tua famiglia possiate gestire con calma in caso di imprevisti.

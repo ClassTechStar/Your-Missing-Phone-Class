@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Sai già costruire i giocattoli a pagina singola. Questo capitolo risolve i due problemi della "crescita": come spostarsi tra più pagine (navigazione) e come fluiscono i dati tra le pagine (gestione dello stato). A fine capitolo saprai costruire lo scheletro classico di un'app multipagina: "elenco → dettaglio → modifica".
 
-#### 1. Il "panorama del flusso di dati" della gestione dello stato
+1. Il "panorama del flusso di dati" della gestione dello stato
 
 In SwiftUI @State non è l'unico strumento di stato. Guarda prima questo quadro d'insieme per capire "quando usare quale":
 
@@ -206,7 +206,7 @@ struct MyApp: App {
 Usi tipici: aggiornare i dati al ritorno in primo piano, salvare la bozza quando si passa in sfondo. iOS è molto severo sull'esecuzione in background: un'app normale appena va in sfondo viene presto sospesa (congelata), quindi non contare di fare lavori pesanti di nascosto; se ti serve davvero un'attività programmata, usa le notifiche locali del capitolo 68, non la "residenza permanente in background".
 
 {class="mt-1"}
-Costruisci la versione con dati fittizi dello scheletro del registro: una TabView con tre schede (registro/statistiche/impostazioni) → la pagina registro mostra i dati fittizi con List e toccando una riga si va al dettaglio (NavigationStack) → il pulsante "+" in alto a destra apre la sheet di inserimento. Niente salvataggi, niente rete: solo allenamento sullo scheletro. Con questo scheletro pronto, riempirlo di dati veri al capitolo 65 sarà un gioco.
+Costruisci la versione con dati fittizi dello scheletro del registro: una TabView con tre schede (registro/statistiche/impostazioni) → la pagina registro mostra i dati fittizi con List e toccando una riga si va al dettaglio, (NavigationStack) → il pulsante "+" in alto a destra apre la sheet di inserimento. Niente salvataggi, niente rete: solo allenamento sullo scheletro. Con questo scheletro pronto, riempirlo di dati veri al capitolo 65 sarà un gioco.
 :::
 
 ::: div .chapter-summary

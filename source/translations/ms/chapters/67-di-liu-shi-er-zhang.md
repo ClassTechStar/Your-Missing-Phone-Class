@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 62: Pembangunan Antara Muka — Pengenalan SwiftUI
 
 {class="chapter-intro mb-4"}
-Antara muka ialah segala yang dilihat oleh pengguna. SwiftUI ialah rangka kerja antara muka jenis deklaratif yang dikeluarkan Apple pada 2019 — anda hanya perlu 'menyatakan' bentuk antara muka, dan sistem yang menguruskan pemaparan, penyesuaian mod gelap serta pelbagai saiz skrin secara automatik. Menjelang 2026, SwiftUI sudah menjadi arus perdana mutlak untuk projek baharu. Dalam bab ini, kita belajar 'melukis'.
+Antara muka ialah segala yang dilihat oleh pengguna. SwiftUI ialah rangka kerja antara muka jenis deklaratif yang dikeluarkan Apple pada 2019, anda hanya perlu 'menyatakan' bentuk antara muka, dan sistem yang menguruskan pemaparan, penyesuaian mod gelap serta pelbagai saiz skrin secara automatik. Menjelang 2026, SwiftUI sudah menjadi arus perdana mutlak untuk projek baharu. Dalam bab ini, kita belajar 'melukis'.
 
 #### 1. Falsafah SwiftUI: deklaratif, bukan imperatif
 
@@ -53,13 +53,13 @@ Perkara utama: view = struktur yang mematuhi protokol View, sifat body menerangk
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Empat view asas utama SwiftUI
 
-Perhatikan Image(systemName:) — Apple menyediakan pustaka ikon terbina dalam SF Symbols (beribu-ribu ikon percuma); nama seperti "star.fill" terus memaparkan ikon bintang penuh. Inilah faedah tersembunyi pembangunan iOS: membina antara muka hampir tidak memerlukan carian bahan ikon.
+Perhatikan Image(systemName:), Apple menyediakan pustaka ikon terbina dalam SF Symbols (beribu-ribu ikon percuma); nama seperti "star.fill" terus memaparkan ikon bintang penuh. Inilah faedah tersembunyi pembangunan iOS: membina antara muka hampir tidak memerlukan carian bahan ikon.
 
 #### 3. Tiga alat susun atur: VStack, HStack, ZStack
 
 - VStack: disusun menegak (seperti beratur mengambil makanan);
 - HStack: disusun mengufuk (seperti duduk bersebelahan);
-- ZStack: ditindihkan (seperti kad poker disusun bertindih — sesuai untuk lencana dan lapisan tonjolan).
+- ZStack: ditindihkan (seperti kad poker disusun bertindih, sesuai untuk lencana dan lapisan tonjolan)
 
 ::: div .code-block
 :::inline div .code-head
@@ -89,10 +89,10 @@ VStack(alignment: .leading, spacing: 12) {
 Perhatian: susunan modifier mempengaruhi hasil
 
 {class="mt-1"}
-padding(16).background(kelabu) dan background(kelabu).padding(16) memberi hasil berbeza — yang pertama 'beri ruang dahulu, barulah warnakan' (latar belakang tidak merangkumi ruang tepi), yang kedua 'warnakan dahulu, barulah beri ruang' (latar belakang merangkumi ruang tepi). 'Jalur putih pelik' yang paling kerap mengelirukan pemula berpunca dari sini. Jika tidak pasti, tukar sahaja susunannya dan pratonton akan terus memberi jawapan.
+padding(16).background(kelabu) dan background(kelabu).padding(16) memberi hasil berbeza, yang pertama 'beri ruang dahulu, barulah warnakan' (latar belakang tidak merangkumi ruang tepi), yang kedua 'warnakan dahulu, barulah beri ruang' (latar belakang merangkumi ruang tepi). 'Jalur putih pelik' yang paling kerap mengelirukan pemula berpunca dari sini. Jika tidak pasti, tukar sahaja susunannya dan pratonton akan terus memberi jawapan.
 :::
 
-#### 4. Negeri (state) dan pengikatan: membuat antara muka 'hidup'
+4. Negeri (state) dan pengikatan: membuat antara muka 'hidup'
 
 Antara muka statik membosankan. Peraturan SwiftUI: antara muka sentiasa mencerminkan state dengan setia; state berubah, antara muka dilukis semula secara automatik.
 
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-Medan input perlu "pengikatan dua hala" — simbol $ menghantar "nilai dan kuasa mengubahnya" bersama-sama:
+Medan input perlu "pengikatan dua hala": simbol $ menghantar "nilai dan kuasa mengubahnya" bersama-sama:
 
 ::: div .code-block
 :::inline div .code-head
@@ -152,9 +152,9 @@ Rajah 3: Aliran data sehala "state → antara muka" dalam SwiftUI
 
 #### 5. Pratonton, tema dan animasi: 'tambahan luar' SwiftUI
 
-- Makro #Preview: tambah #Preview { ContentView() } di bahagian bawah fail, dan kanvas di sebelah kanan memaparkan hasil secara masa nyata — ubah kod, apa yang dilihat itulah yang diperoleh;
+- Makro #Preview: tambah #Preview { ContentView() } di bahagian bawah fail, dan kanvas di sebelah kanan memaparkan hasil secara masa nyata, ubah kod, apa yang dilihat itulah yang diperoleh;
 - Mod gelap percuma: gunakan warna sistem (Color(.systemGray6), .primary) dan bukannya warna tetap; mod gelap disesuaikan secara automatik tanpa satu baris tambahan;
-- Animasi selesai dalam satu baris: withAnimation { count += 1 } atau tambah .animation(.default, value: count) pada view — peralihan menjadi lancar.
+- Animasi selesai dalam satu baris: withAnimation { count += 1 } atau tambah .animation(.default, value: count) pada view: peralihan menjadi lancar
 
 ::: div .code-block
 :::inline div .code-head
@@ -193,7 +193,7 @@ Masalah lazim pemula ialah 'antara muka belum betul, tetapi sibuk memikirkan ani
 {class="font-semibold"}
 Praktik: Bina 'butang mood'
 
-#### 6. Rujukan pantas modifier lazim: satu halaman dalam tangan, antara muka tak jadi masalah
+6. Rujukan pantas modifier lazim: satu halaman dalam tangan, antara muka tak jadi masalah
 
 ::: div .overflow-x-auto
 ```html
@@ -204,7 +204,7 @@ Praktik: Bina 'butang mood'
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Rujukan pantas modifier lazim SwiftUI
 
-Tidak apa-apa jika tidak dapat diingat — halaman ini memang untuk dirujuk. Yang paling kerap digunakan sebenarnya hanya empat yang pertama: padding, sudut bulat, latar belakang dan fon.
+Tidak apa-apa jika tidak dapat diingat, halaman ini memang untuk dirujuk. Yang paling kerap digunakan sebenarnya hanya empat yang pertama: padding, sudut bulat, latar belakang dan fon.
 
 {class="mt-1"}
 Ubah projek templat menjadi penukar mood: satu butang yang apabila ditekan berkitar antara 😀 gembira → 😢 sedih → 😡 marah, teks dan warna latar berubah mengikutnya. Petunjuk: gunakan tatasusunan untuk menyimpan tiga set (teks + warna), @State untuk menyimpan indeks, dan (index + 1) % 3 semasa ditekan. Selepas siap, hantar kepada rakan untuk dimainkan dan terimalah gelombang pertama 'wow, anda sudah boleh buat App'.
@@ -219,5 +219,5 @@ Ringkasan bab ini
 - Empat view asas: Text / Button / TextField / Image; pustaka ikon SF Symbols percuma dan lengkap
 - Tiga alat susun atur: VStack menegak, HStack mengufuk, ZStack bertindih; Spacer ialah ruang fleksibel
 - @State menghidupkan antara muka; $ mengikat dua hala untuk disuapkan ke medan input
-- #Preview — apa dilihat itulah yang diperoleh; warna sistem menyesuaikan mod gelap secara automatik; withAnimation memberi kesan animasi dalam satu baris
+- #Preview, apa dilihat itulah yang diperoleh; warna sistem menyesuaikan mod gelap secara automatik; withAnimation memberi kesan animasi dalam satu baris
 :::

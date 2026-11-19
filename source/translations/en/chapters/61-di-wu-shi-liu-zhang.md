@@ -2,17 +2,17 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Chapter 56: Polish and Publish — Launching on Google Play
+nav: Chapter 56: Your App Is Done, Now Get It Published
 toc: default
 kind: chapter
 ---
 
-### Chapter 56: Polish and Release — Testing, Debugging, and Publishing on Google Play
+### Chapter 56: Your App Is Done, Now Get It Published
 
 {class="chapter-intro mb-4"}
-The app is built — now what? This chapter covers the three things that take you from "it runs" to "it ships": how to debug efficiently to find bugs, how to write tests to prevent regressions, and how to put the app on Google Play for the whole world to download. Publishing isn't just ceremony — it's the dividing line between a finished work and a product.
+The app is built — now what? This chapter covers the three things that take you from "it runs" to "it ships": how to debug efficiently to find bugs, how to write tests to prevent regressions, and how to put the app on Google Play for the whole world to download. Publishing isn't just ceremony, it's the dividing line between a finished work and a product.
 
-#### 1. The Three Debugging Tools: Logcat, Breakpoints, and the UI Inspector
+1. The Three Debugging Tools: Logcat, Breakpoints, and the UI Inspector
 
 ::: div .overflow-x-auto
 ```html
@@ -33,7 +33,7 @@ After a crash, Logcat shows a red stack trace. Scan from the bottom up for the f
 
 #### 2. Testing: Insuring Your Code
 
-Manual testing can't be trusted — fix one feature and another quietly breaks. Tests are both "regret medicine" and a "bulletproof vest." Android testing comes in three layers; as a beginner, master the first one first:
+Manual testing can't be trusted, fix one feature and another quietly breaks. Tests are both "regret medicine" and a "bulletproof vest." Android testing comes in three layers; as a beginner, master the first one first:
 
 ::: div .overflow-x-auto
 ```html
@@ -76,18 +76,18 @@ The amount validation and summary calculations in the tracker should all be cove
 
 #### 3. Signing and Packaging: Stamping Your App
 
-Android requires every installable package to be signed — like an official seal proving "this package came from me and hasn't been tampered with." While debugging, Android Studio signs automatically with the debug key; for release you use your own release signature. The process:
+Android requires every installable package to be signed, like an official seal proving "this package came from me and hasn't been tampered with." While debugging, Android Studio signs automatically with the debug key; for release you use your own release signature. The process:
 
 1. Menu Build → Generate Signed Bundle / APK;
-2. Create the keystore file — set a password and keep it safe;
-3. Choose release + the AAB format, and the build is done.
+2. Create the keystore file: set a password and keep it safe;
+3. Choose release + the AAB format, and the build is done
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Watch out: losing the keystore = losing the app
 
 {class="mt-1"}
-Updates after publishing must use the same signature, or the store will reject the update. If the keystore file and password are lost, your only option is to publish as a brand-new app — none of your existing users can come along. Back up the keystore and password somewhere secure (encrypted cloud storage + a notebook). It's one of the most expensive lessons an Android developer can learn.
+Updates after publishing must use the same signature, or the store will reject the update. If the keystore file and password are lost, your only option is to publish as a brand-new app, none of your existing users can come along. Back up the keystore and password somewhere secure (encrypted cloud storage + a notebook). It's one of the most expensive lessons an Android developer can learn.
 :::
 
 #### 4. The Full Google Play Publishing Process
@@ -108,24 +108,24 @@ Figure 6: The six steps to publishing on Google Play
 - Register: a one-time $25 registration fee; you need a working Google account;
 - Assets: an app icon (512×512), screenshots (at least 2), a feature description, and a privacy policy link (required if you collect data);
 - Data safety form: honestly declare what data you collect — an offline expense tracker can declare "zero collection";
-- Review: a new account's first submission is often reviewed by a human, taking anywhere from hours to days; if it's rejected, fix things per the feedback.
+- Review: a new account's first submission is often reviewed by a human, taking anywhere from hours to days; if it's rejected, fix things per the feedback
 
-A note for users in mainland China: Google Play requires special network access, and distribution in mainland China usually goes through domestic stores (Huawei, Xiaomi, Tencent MyApp, etc.). Publishing to domestic stores is a similar process, but each store has its own review quirks — the same AAB/APK can be distributed to several stores. As practice, getting through just one store is already a win.
+A note for users in mainland China: Google Play requires special network access, and distribution in mainland China usually goes through domestic stores (Huawei, Xiaomi, Tencent MyApp, etc.). Publishing to domestic stores is a similar process, but each store has its own review quirks, the same AAB/APK can be distributed to several stores. As practice, getting through just one store is already a win.
 
 #### 5. Making Store Assets: First Impressions Are Downloads
 
 The store page is the shop window users see while browsing. Three assets decide the first impression:
 
 - Icon: 512×512; don't just make do with a screenshot. If design isn't your thing, use an AI tool to generate a clean geometric shape — it only counts if it's still recognizable at home-screen size;
-- Screenshots: at least 2, ideally 4-6, showing your most core feature scenes; pair each with one line of plain speech ("Log an expense in a second" is ten times better than "An efficient expense-tracking solution");
-- Description: the first sentence should make clear "what this is + who it's for"; don't pile up "most professional, most powerful" — store search ranking depends mainly on keywords and download conversion, and honesty works better than exaggeration.
+- Screenshots: at least 2, ideally 4-6, showing your most core feature scenes; pair each with one line of plain speech. ("Log an expense in a second" is ten times better than "An efficient expense-tracking solution");
+- Description: the first sentence should make clear "what this is + who it's for"; don't pile up "most professional, most powerful", store search ranking depends mainly on keywords and download conversion, and honesty works better than exaggeration
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Tip: A/B against your peers
 
 {class="mt-1"}
-Before publishing, browse the top ten apps in your category and screenshot them for comparison: what style are their icons? What selling points do their screenshots push? How are their titles written? Imitating isn't copying — learn the playbook and swap in your own content. It's the fastest cold-start lesson in every product's life.
+Before publishing, browse the top ten apps in your category and screenshot them for comparison: what style are their icons? What selling points do their screenshots push? How are their titles written? Imitating isn't copying, learn the playbook and swap in your own content. It's the fastest cold-start lesson in every product's life.
 :::
 
 #### 6. A quick checklist for performance and crash reporting
@@ -134,10 +134,10 @@ Before publishing, these two things are each worth half an hour:
 
 ##### 1. Four performance self-checks
 
-1. Use LazyColumn for lists: never lay out long lists with a plain Column — lazy loading is Android performance lesson one;
+1. Use LazyColumn for lists: never lay out long lists with a plain Column, lazy loading is Android performance lesson one;
 2. Don't shove full-size images in: use the Coil image library to auto-scale and cache; a single 5MB original is enough to choke a low-end phone;
 3. Keep heavy work off the main thread: database, network, and large files all belong in coroutines;
-4. Measure with the Profiler: Android Studio's built-in profiler shows memory, CPU, and battery use — measure first, then optimize; don't go by feel.
+4. Measure with the Profiler: Android Studio's built-in profiler shows memory, CPU, and battery use, measure first, then optimize; don't go by feel
 
 ##### 2. Crash reporting
 
@@ -157,7 +157,7 @@ Chapter Summary
 
 - The three debugging tools: Logcat for logs, breakpoints for variables, Layout Inspector for the UI
 - Reading crashes: scan the stack from the bottom up for the first line with your package name
-- Three testing layers: unit (seconds — learn this first) / instrumented / manual
+- Three testing layers: unit (seconds, learn this first) / instrumented / manual
 - Publishing requires signing: back up the keystore and password; lose them and the app "changes identity"
 - Six publishing steps: register → assets → upload the AAB → data safety form → review → live
 :::

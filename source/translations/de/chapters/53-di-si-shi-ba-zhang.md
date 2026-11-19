@@ -2,17 +2,17 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: Kapitel 48: Android kennenlernen – vom Betriebssystem zum Entwickler-Ökosystem
+nav: Kapitel 48: Wie wurde Android das, was es heute ist?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 48: Android kennenlernen – Vom Betriebssystem zum Entwickler-Ökosystem
+### Kapitel 48: Wie wurde Android das, was es heute ist?
 
 {class="chapter-intro mb-4"}
 Glückwunsch zu dieser Entscheidung – vom „Handynutzer“ zum „App-Entwickler“. Bevor es losgeht, breiten wir erst einmal die Karte aus: Woher kommt Android? Warum schreiben Entwickler auf der ganzen Welt Apps dafür? Und was passiert eigentlich alles, von deinem Tastenanschlag bis zur App auf dem Handy des Nutzers?
 
-#### 1. Androids Lebensgeschichte: Vom „kleinen Roboter“ zum größten System der Welt
+1. Androids Lebensgeschichte: Vom „kleinen Roboter“ zum größten System der Welt
 
 Die Geschichte von Android beginnt 2003: Der Ingenieur Andy Rubin gründet die Firma Android Inc. mit einem bescheidenen Ziel – ein intelligentes Betriebssystem bauen, das „Kameras besser versteht“. 2005 kauft Google die Firma, 2007 gründet Google gemeinsam mit Dutzenden Herstellern die Open Handset Alliance (OHA), und im September 2008 kommt mit dem HTC Dream (G1) das erste Android-Handy auf den Markt.
 

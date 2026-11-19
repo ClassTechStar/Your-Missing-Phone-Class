@@ -2,12 +2,12 @@
 id: di-er-shi-liu-zhang
 num: 26
 part: chao-yue-pian
-nav: Capítulo 26: La frontera tecnológica del móvil hoy
+nav: Capítulo 26: Las nuevas tecnologías pueden esperar
 toc: default
 kind: chapter
 ---
 
-### Capítulo 26: Fronteras tecnológicas actuales del móvil
+### Capítulo 26: Las nuevas tecnologías pueden esperar
 
 {class="chapter-intro mb-4"}
 Tras hablar de la "despedida" de los teléfonos antiguos, volvamos al presente. 2024-2026 es un periodo de explosión tecnológica: la IA se ha colocado en el bolsillo desde la nube, la comunicación por satélite ha bajado de los gama alta a los gama media, las pantallas plegables han pasado de "novedad" a "uso diario", y la tecnología de baterías ha visto un avance a nivel de materiales no visto en muchos años. En este capítulo repasamos estas tecnologías emergentes para ayudarte a decidir "si ahora es el momento de cambiar" y "a qué cambiar".
@@ -20,7 +20,7 @@ Desde 2024, casi todos los fabricantes Android han lanzado teléfonos insignia b
 - <strong>Capacidad de NPU (TOPS)</strong>: La capacidad de la NPU (unidad de procesamiento neuronal) se mide en TOPS (billones de operaciones por segundo). Los chips insignia de 2024 (como Snapdragon 8 Gen3, Dimensity 9300) tienen una capacidad de NPU entre 40-70 TOPS; los nuevos chips de 2025-2026 superangeneralmentemente los 100 TOPS, este es el umbral de hardware para ejecutar grandes modelos en el dispositivo.
 - <strong>Escenarios de AI Agent</strong>: No solo "responde preguntas", sino que puede ejecutar cadenas de tareas entre apps; por ejemplo, "organiza las fotos de la reunión de ayer en un álbum y compártelo con Zhang San", el sistema puede invocar automáticamente las apps de galería, archivos, WeChat, etc. Esta es la marca distintiva de un AI phone frente a un "teléfono con asistente de IA".
 
-#### II. Comparación de estrategias de IA: ¿quién lo hace en serio y quién solo pone una etiqueta?
+II. Comparación de estrategias de IA: ¿quién lo hace en serio y quién solo pone una etiqueta?
 
 Las rutas de IA de cada fabricante son claramente diferentes; al comprar puedes prestar atención a:
 
@@ -32,7 +32,7 @@ Las rutas de IA de cada fabricante son claramente diferentes; al comprar puedes 
 
 <strong>Recomendacion de compra</strong>: Si necesitas frecuentemente IA para procesar documentos de trabajo y organizar información, prioriza modelos con gran capacidad de cómputo en el dispositivo e integración de IA a nivel de sistema; si solo usas IA para editar fotos ocasionalmente, los gama media ya son suficientes.
 
-#### III. Comunicación por satélite: de "truco" de gama alta a estándar de gama media
+III. Comunicación por satélite: de "truco" de gama alta a estándar de gama media
 
 La comunicación por satélite es una de las tecnologías que más ha bajado en los últimos dos años. En 2022, con el Huawei Mate 60 y el iPhone 14, era exclusiva de los gama alta; en 2025 ya ha bajado al rango de 2000-3000 yuanes.
 
@@ -41,7 +41,7 @@ La comunicación por satélite es una de las tecnologías que más ha bajado en 
 - <strong>Mensajes satelitales de iPhone (SOS)</strong>: iPhone 14 y posteriores soportan SOS por satélite, pudiendo enviar mensajes de texto a servicios de emergencia y compartir la ubicación. Servicio gratuito durante 2 años, con renovación disponible en algunas regiones.
 - <strong>Consejos prácticos</strong>: Los usuarios urbanos básicamente no lo necesitan, pero se recomienda encarecidamente a entusiastas de actividades al aire libre y profesionales de negocios que viajan a zonas remotas que elijan modelos con función satelital; puede salvar vidas en momentos críticos.
 
-#### IV. Madurez del ecosistema de pantallas plegables: ¿se puede usar como teléfono principal?
+IV. Madurez del ecosistema de pantallas plegables: ¿se puede usar como teléfono principal?
 
 Las pantallas plegables han pasado de "novedad tecnológica" a "aptas como teléfono principal". Para evaluar la madurez de una pantalla plegable, hay tres aspectos: durabilidad del hardware, adaptación de apps, ecosistema de interacción.
 
@@ -53,7 +53,7 @@ Las pantallas plegables han pasado de "novedad tecnológica" a "aptas como telé
 
 <strong>Recomendacion de compra</strong>: Si eres un usuario intensivo de lectura, procesamiento de documentos y video, los plegables horizontales merecen consideración; si buscas portabilidad y atributos sociales, los plegables verticales son más adecuados. Se recomienda probar en tienda física al menos 30 minutos antes de decidir.
 
-#### V. 6G y Wi-Fi 7: velocidad y límites de la próxima generación de conectividad
+V. 6G y Wi-Fi 7: velocidad y límites de la próxima generación de conectividad
 
 Aunque el 6G aún no se ha implementado realmente, las tecnologías relacionadas ya están en camino:
 
@@ -61,7 +61,7 @@ Aunque el 6G aún no se ha implementado realmente, las tecnologías relacionadas
 - <strong>Wi-Fi 7(802.11be)</strong>: Desde 2024 es estándar en teléfonos insignia; la velocidad pico teórica alcanza 46 Gbps (4 veces la del Wi-Fi 6), soporta ancho de banda de 320MHz, 4K-QAM y MLO (multi-enlace simultáneo). En la práctica, con un router Wi-Fi 7, los teléfonos insignia pueden alcanzar 2-5 Gbps, 2-3 veces más rápido que Wi-Fi 6E. Si compras un teléfono con Wi-Fi 7, recuerda combinarlo con un router Wi-Fi 7 para aprovechar todo el rendimiento.
 - <strong>Bluetooth 5.4 y LE Audio</strong>: Los teléfonos nuevos de 2024-2026 soportangeneralmentemente Bluetooth 5.4 y LE Audio (audio de baja consumo), pudiendo conectar dos auriculares simultáneamente para escuchar la misma canción; Auracast permite que varias personas escuchen la misma fuente de audio en espacios públicos.
 
-#### VI. Batería de silicio-carbono: la autonomía por fin ve un avance a nivel de materiales
+VI. Batería de silicio-carbono: la autonomía por fin ve un avance a nivel de materiales
 
 La autonomía de los teléfonos ha sido criticada durante años por "una carga al día"; desde 2024, la popularización de la tecnología de batería de silicio-carbono ha mejorado la situación de forma sustancial.
 
@@ -70,7 +70,7 @@ La autonomía de los teléfonos ha sido criticada durante años por "una carga a
 - <strong>Combinación con carga rápida de 100W+</strong>: El ánodo de silicio-carbono es compatible con la carga rápida; 100W/120W que carga completamente en 17 minutos ya no es noticia. En 2025, algunos modelos soportan 150W-240W, cargando al 80% en 10 minutos.
 - <strong>Recomendacion de compra</strong>: Si eres un usuario intensivo, prioriza modelos posteriores a 2024 con la combinación "silicio-carbono + carga rápida de 100W+"; la ansiedad por la batería se reducirá drásticamente.
 
-#### VII. Resumen del capítulo: recuerda estas tendencias en una frase
+VII. Resumen del capítulo: recuerda estas tendencias en una frase
 
 - Tres criterios de AI phone: modelo grande en el dispositivo, capacidad NPU TOPS, escenarios de AI Agent entre apps.
 - Comunicación por satélite: mensajes cortos de BeiDou en gama media, llamadas Tiantong siguen siendo de gama alta.

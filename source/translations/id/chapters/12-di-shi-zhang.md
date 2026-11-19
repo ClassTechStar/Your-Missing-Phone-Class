@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 1\. Bagaimana Cara Menghubungkan Kartu Bank?
 
-#### Apakah Anda menggunakan Alipay atau WeChat, pertama kali menghubungkan kartu harus melalui langkah-langkah ini:
+Apakah Anda menggunakan Alipay atau WeChat, pertama kali menghubungkan kartu harus melalui langkah-langkah ini:
 
 Buka aplikasi, cari "Saya" atau "Dompet". Ketuk "Tambah Kartu Bank".
 
@@ -23,12 +23,12 @@ Buka aplikasi, cari "Saya" atau "Dompet". Ketuk "Tambah Kartu Bank".
 
 2\. Kode Pembayaran Adalah "Siapa yang Melihat, Siapa yang Mengambil Uang"
 
-#### Banyak orang bingung membedakan kode pembayaran dan kode penerimaan, perbedaan ini sangat penting.
+Banyak orang bingung membedakan kode pembayaran dan kode penerimaan, perbedaan ini sangat penting.
 
 Kode Pembayaran
 
 - <strong>: Barcode + QR code yang Anda tunjukkan untuk dipindai kasir. Kode ini setara dengan "dompet elektronik" Anda, siapa yang memindainya bisa menarik uang dari rekening Anda. Jadi</strong> jangan pernah screenshot dan kirim ke siapa pun <strong>. Kode ini otomatis diperbarui setiap menit, justru untuk mencegah penyalahgunaan.</strong> Kode Penerimaan
-- <strong>: Orang lain memindai kode ini untuk transfer ke Anda. Kode ini bisa di-screenshot disimpan, bisa dikirim ke orang lain, aman.</strong> Pahami perbedaan ini, bisa menghindari banyak jebakan penipuan. Siapa pun yang meminta Anda "screenshot kode pembayaran dan kirimkan", seratus persen adalah penipu.
+- <strong>: Orang lain memindai kode ini untuk transfer ke Anda. Kode ini bisa di-screenshot disimpan. bisa dikirim ke orang lain, aman.</strong> Pahami perbedaan ini, bisa menghindari banyak jebakan penipuan. Siapa pun yang meminta Anda "screenshot kode pembayaran dan kirimkan", seratus persen adalah penipu.
 
 3\. Pengaturan Keamanan Ini, 5 Menit Bisa Menghemat Banyak Kekhawatiran
 
@@ -37,9 +37,9 @@ Kode Pembayaran
 - <strong>: Di pengaturan pembayaran Alipay dan WeChat, aktifkan pembayaran biometrik. Sehingga setiap pembayaran perlu tekan sidik jari atau pindai wajah, meski ponsel hilang, orang yang menemukan tidak bisa membelanjakan uang Anda.</strong> Kunci Keamanan
 - <strong>: Alipay dan WeChat memiliki fitur "Security Lock". Setelah diaktifkan, masuk ke halaman "Dompet" aplikasi memerlukan verifikasi identitas tambahan. Jalur: Alipay → Saya → Pengaturan → Akun &amp; Keamanan → Pusat Keamanan → Security Lock.</strong> Pemeriksaan Pembayaran Tanpa Kata Sandi
 - <strong>: Banyak orang telah berlangganan berbagai pembayaran tanpa kata sandi, sendiri pun lupa. Ke pengaturan pembayaran Alipay dan WeChat, cari "Pembayaran Tanpa Kata Sandi/Penagihan Otomatis", lihat layanan apa yang telah berlangganan, matikan yang tidak diperlukan.</strong> Manajemen Perangkat Login
-- <strong>: Secara berkala periksa perangkat apa saja yang pernah login ke akun Anda. Jika menemukan perangkat yang tidak dikenal, segera keluarkan. Jalur: Alipay → Pengaturan → Akun &amp; Keamanan → Manajemen Perangkat Login.</strong>4. Bus dan Metro: Ponsel Adalah Kartu Transportasi
+- <strong>: Secara berkala periksa perangkat apa saja yang pernah login ke akun Anda. Jika menemukan perangkat yang tidak dikenal. segera keluarkan. Jalur: Alipay → Pengaturan → Akun &amp; Keamanan → Manajemen Perangkat Login.</strong>4. Bus dan Metro: Ponsel Adalah Kartu Transportasi
 
-#### Sekarang naik bus dan metro, sudah jarang orang menggunakan kartu transportasi fisik. Ponsel untuk tap gerbang, ada dua jalur:
+Sekarang naik bus dan metro, sudah jarang orang menggunakan kartu transportasi fisik. Ponsel untuk tap gerbang, ada dua jalur:
 
 Kartu Transportasi Virtual di Dompet Ponsel
 
@@ -50,11 +50,11 @@ Kartu Transportasi Virtual di Dompet Ponsel
 
 #### Pembayaran Air/Listrik/Gas
 
-- <strong>: Di "Life Payment" Alipay atau WeChat, hubungkan nomor akun air, listrik, gas rumah Anda. Setelah itu setiap bulan menerima tagihan, langsung ketuk untuk membayar. Nomor akun biasanya bisa ditemukan di tagihan kertas rumah Anda, atau telepon customer service.</strong> Perbandingan Harga Makanan
+- <strong>: Di "Life Payment" Alipay atau WeChat, hubungkan nomor akun air, listrik, gas rumah Anda. Setelah itu setiap bulan menerima tagihan. langsung ketuk untuk membayar. Nomor akun biasanya bisa ditemukan di tagihan kertas rumah Anda, atau telepon customer service.</strong> Perbandingan Harga Makanan
 - <strong>: Harga dan promo toko yang sama di Meituan dan Ele.me sering berbeda. Sebelum memesan, lihat kedua sisi, kadang bisa hemat beberapa yuan. Selain itu, fitur "Pin Hao Fan" Meituan, memesan bersama teman, harganya bisa jauh lebih murah.</strong> Keamanan Taksi
 - <strong>: Di DiDi atau Gaode Taxi, ingat untuk mengatur "Emergency Contact" dan "Trip Sharing". Saat memesan taksi, aplikasi akan otomatis membagikan perjalanan Anda ke kontak yang Anda atur. Selain itu, taksi larut malam prioritaskan "Taksi" bukan "Express", taksi memiliki regulasi industri, tingkat keamanan lebih tinggi.</strong>6. Urus Asuransi Kesehatan, Jaminan Sosial, dan Pemerintahan dengan Ponsel
 
-#### Perubahan beberapa tahun ini sangat besar, banyak urusan yang dulu harus antri di kantor, sekarang selesai dalam beberapa menit di ponsel.
+Perubahan beberapa tahun ini sangat besar, banyak urusan yang dulu harus antri di kantor, sekarang selesai dalam beberapa menit di ponsel.
 
 Voucher Elektronik Asuransi Kesehatan
 
@@ -70,7 +70,7 @@ Voucher Elektronik Asuransi Kesehatan
 - Siapa pun yang meminta Anda screenshot kode pembayaran dan kirimkan, adalah penipu.
 - Jangan klik tautan asing, terutama SMS seperti "ETC kedaluwarsa" "kartu jaminan sosial dinonaktifkan".
 - Pengembalian dana belanja online akan kembali melalui jalur asal, tidak perlu Anda memberikan nomor kartu bank.
-- Lakukan Sekarang: Pemeriksaan Keamanan Aplikasi Pembayaran Anda
+- Lakukan Sekarang: Pemeriksaan Keamanan Aplikasi Pembayaran Anda.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -82,5 +82,5 @@ Voucher Elektronik Asuransi Kesehatan
 2. Periksa daftar "Pembayaran Tanpa Kata Sandi/Penagihan Otomatis", matikan layanan yang tidak lagi diperlukan.
 3. Lihat daftar "Perangkat Login", hapus perangkat yang tidak dikenal.
 4. Aktifkan voucher elektronik asuransi kesehatan Anda, sehingga kunjungan rumah sakit berikutnya tidak perlu bawa kartu fisik.
-5. Bab 11: Fotografi dan Manajemen Gambar
+5. Bab 11: Fotografi dan Manajemen Gambar.
 :::

@@ -46,7 +46,7 @@ Hintergrundprozess-Limit
 Eine
 :::
 
-#### II. OEM-Entsperrung: Der „Flash-Schalter" in den Entwickleroptionen
+II. OEM-Entsperrung: Der „Flash-Schalter" in den Entwickleroptionen
 
 In den Entwickleroptionen gibt es einen unauffaelligen, aber wichtigen Schalter – „OEM-Entsperrung" (manche Marken nennen ihn „OEM-Entsperrung zulassen" oder „Geraet entsperren"). Dieser Schalter selbst entsperrt nicht den Bootloader, sondern ist eine „vorlaeufige Berechtigung": Erst wenn er aktiviert ist, erlaubt der Hersteller das Entsperren des BL per fastboot-Befehl oder markeneigenem Tool.
 
@@ -63,7 +63,7 @@ In den Entwickleroptionen gibt es einen unauffaelligen, aber wichtigen Schalter 
 Fruehe Android-Versionen hatten diesen Schalter nicht; Malware konnte bei entsprechenden Berechtigungen heimlich ein System einspielen. Google verlangte spaeter von allen Android-Herstellern, in den Entwickleroptionen einen „OEM-Entsperrung"-Schalter als „informierte Zustimmung" des Nutzers einzubauen. Deshalb schlaegt ein erneuter Flash-Versuch fehl, wenn der Schalter aus ist – selbst wenn der BL bereits entsperrt wurde.
 :::
 
-#### III. BL-Schloss (Bootloader-Sperre): Die erste Tuer zum Flashen
+III. BL-Schloss (Bootloader-Sperre): Die erste Tuer zum Flashen
 
 OPPO/vivo
 
@@ -75,14 +75,14 @@ OPPO/vivo
 
 ##### Vorteile von Root:
 
-- <strong>Xiaomi</strong> Apps mit fortgeschrittenen Funktionen nutzen (wie Titanium Backup, Greenify).
-- <strong>Ultra</strong> Third-Party-Recovery und Custom-ROMs installieren.
+- <strong>Xiaomi</strong> Apps mit fortgeschrittenen Funktionen nutzen (wie Titanium Backup, Greenify)
+- <strong>Ultra</strong> Third-Party-Recovery und Custom-ROMs installieren
 - <strong>Risiken von Root:</strong> Garantieverlust
 - <strong>: Die meisten Hersteller geben auf gerootete Smartphones keine Garantie.</strong> Sicherheitsrisiko
 - <strong>Samsung</strong> Systeminstabilität
 - <strong>Niedriger Stromverbrauch</strong> Bank-Apps funktionieren nicht
 
-#### IV. Nuetzliche ADB-Befehle: Das Smartphone vom PC aus steuern
+IV. Nuetzliche ADB-Befehle: Das Smartphone vom PC aus steuern
 
 ADB steht fuer Android Debug Bridge und ist ein von Google bereitgestelltes Befehlszeilen-Tool, das die Kommunikation zwischen PC und Android-Smartphone ueber USB oder Wi-Fi ermoeglicht. Es benoetigt kein Root; es reicht, wenn am Handy „USB-Debugging" aktiviert ist. Man kann es sich als „Fernbedienung vorstellen, mit der der PC dem Handy Befehle gibt" – Flashen, Apps installieren, Dateien uebertragen, Logs auslesen: Alles geht ueber ADB.
 
@@ -145,7 +145,7 @@ Root-Berechtigung entspricht dem Superuser unter Linux (volle Kontrolle ueber da
 ##### : Offizielle System-Updates können evtl. nicht mehr empfangen werden.
 
 - Ernsthafte Warnung
-- Root-Operationen sind riskant und können das Smartphone „bricken" (es lässt sich nicht mehr einschalten). Wenn du Anfänger bist, solltest du dich zuerst ausführlich informieren und ein vollständiges Backup haben. Lies vor der Operation das Tutorial sorgfältig und bestätige dein Modell und die Systemversion.
+- Root-Operationen sind riskant und können das Smartphone „bricken" (es lässt sich nicht mehr einschalten). Wenn du Anfänger bist, solltest du dich zuerst ausführlich informieren und ein vollständiges Backup haben. Lies vor der Operation das Tutorial sorgfältig und bestätige dein Modell und die Systemversion
 - IV. Empfehlungen für normale Nutzer
 - Entwicklermodus
 
@@ -165,7 +165,7 @@ Root-Berechtigung entspricht dem Superuser unter Linux (volle Kontrolle ueber da
 Prüfe, ob sich das Smartphone schneller anfühlt.
 :::
 
-#### VI. SafetyNet- und Play Integrity-Zertifizierung: Warum Banking-Apps nach Root nicht mehr funktionieren
+VI. SafetyNet- und Play Integrity-Zertifizierung: Warum Banking-Apps nach Root nicht mehr funktionieren
 
 Viele Root-Nutzer kennen diesen Schockmoment: Nach dem Rooten begeistert eine ganze Reihe Modulen installiert, dann die Banking-App geoeffnet – „Ihr Geraet ist nicht sicher und kann nicht verwendet werden"; Google Pay geht auch nicht, sogar Netflix verweigert die HD-Wiedergabe. Dahinter stehen zwei Google-Zertifizierungssysteme fuer Geraeteintegritaet: das aeltere SafetyNet und die neuere Play Integrity API.
 
@@ -218,7 +218,7 @@ Google aktualisiert die Erkennungsregeln regelmaessig, und App-Hersteller ziehen
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Sicherheits- und Netzwerkfunktionen
 2. SSH-Remote-Verbindung
-3. : Unterstützt SSH-Client- und -Server-Funktionen, kann andere Geräte remote verbinden oder das Smartphone zum SSH-Host machen.
+3. : Unterstützt SSH-Client- und -Server-Funktionen, kann andere Geräte remote verbinden oder das Smartphone zum SSH-Host machen
 4. Verschlüsselungs-Tools
-5. : Bietet OpenSSL und andere Verschlüsselungs-Tools, unterstützt Datenverschlüsselung und sichere Kommunikation.
+5. : Bietet OpenSSL und andere Verschlüsselungs-Tools, unterstützt Datenverschlüsselung und sichere Kommunikation
 :::

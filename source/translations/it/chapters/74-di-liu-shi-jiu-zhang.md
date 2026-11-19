@@ -31,11 +31,11 @@ Puoi imparare il linguaggio, ma non fare lo sviluppo completo. Swift Playgrounds
 
 D2: Quanto costa imparare lo sviluppo iOS?
 
-Fase di studio: 0 euro (Xcode è gratuito + test su dispositivo reale gratuiti con l'ID Apple). Fase di pubblicazione: account sviluppatore a 99 dollari l'anno (circa 90 euro). Sommando l'hardware di un Mac, questo è tutto il costo. Rispetto ai ritorni — sull'App Store anche un piccolo strumento ha utenti disposti a pagare — i conti tornano.
+Fase di studio: 0 euro (Xcode è gratuito + test su dispositivo reale gratuiti con l'ID Apple). Fase di pubblicazione: account sviluppatore a 99 dollari l'anno (circa 90 euro). Sommando l'hardware di un Mac, questo è tutto il costo. Rispetto ai ritorni: sull'App Store anche un piccolo strumento ha utenti disposti a pagare, i conti tornano.
 
 D3: Cosa imparare prima, SwiftUI o UIKit?
 
-SwiftUI. Nel 2026 i nuovi progetti, i nuovi tutorial e le nuove posizioni lavorative sono centrati su SwiftUI, e in tutto il libro usiamo quello. UIKit è il framework della generazione precedente, ancora molto usato nei progetti più datati — quando sarai pratico con SwiftUI potrai aggiungere UIKit secondo necessità (Apple offre tutorial sull'interoperabilità) e impararlo in fretta. Non invertire l'ordine.
+SwiftUI. Nel 2026 i nuovi progetti, i nuovi tutorial e le nuove posizioni lavorative sono centrati su SwiftUI, e in tutto il libro usiamo quello. UIKit è il framework della generazione precedente, ancora molto usato nei progetti più datati, quando sarai pratico con SwiftUI potrai aggiungere UIKit secondo necessità (Apple offre tutorial sull'interoperabilità) e impararlo in fretta. Non invertire l'ordine.
 
 D4: Facile trovare lavoro nello sviluppo iOS?
 
@@ -43,7 +43,7 @@ Il mercato nel 2026: le posizioni base che chiedono solo di "saper disegnare int
 
 D5: L'app è stata rifiutata dalla revisione: che fare?
 
-Niente panico, è normalissimo — alla prima presentazione le probabilità di rifiuto non sono basse. Apple di solito indica il motivo in modo molto preciso (quale pagina, quale linea guida): correggi punto per punto, rispondi con una spiegazione in App Store Connect e ripresenta l'app. I tre motivi di rifiuto più comuni: uso dei permessi spiegato male, bug nell'interfaccia, metadati (screenshot/descrizione) che non corrispondono al prodotto. Controllare da soli questi tre punti in anticipo ti risparmia un giro di attesa.
+Niente panico, è normalissimo: alla prima presentazione le probabilità di rifiuto non sono basse. Apple di solito indica il motivo in modo molto preciso (quale pagina, quale linea guida): correggi punto per punto, rispondi con una spiegazione in App Store Connect e ripresenta l'app. I tre motivi di rifiuto più comuni: uso dei permessi spiegato male, bug nell'interfaccia, metadati (screenshot/descrizione) che non corrispondono al prodotto. Controllare da soli questi tre punti in anticipo ti risparmia un giro di attesa.
 
 #### 3. Scorciatoie da tastiera di uso frequente in Xcode
 
@@ -61,7 +61,7 @@ Scorciatoie da tastiera di uso frequente in Xcode
 Consiglio: di fronte ai misteri della compilazione, prima pulisci la cache
 
 {class="mt-1"}
-"Ieri funzionava, oggi no": sei volte su dieci sono cache di build impazzite. Con ⇧⌘K pulisci e ricompila: risolve più di metà dei problemi inspiegabili. Se non basta, riavvia Xcode (e anche il Mac); se ancora non basta, "cancella la cartella DerivedData" — è la sequenza finale che gli sviluppatori iOS si passano di bocca in bocca.
+"Ieri funzionava, oggi no": sei volte su dieci sono cache di build impazzite. Con ⇧⌘K pulisci e ricompila: risolve più di metà dei problemi inspiegabili. Se non basta, riavvia Xcode (e anche il Mac); se ancora non basta, "cancella la cartella DerivedData", è la sequenza finale che gli sviluppatori iOS si passano di bocca in bocca.
 :::
 
 #### 4. Risorse per lo studio consigliate
@@ -77,7 +77,7 @@ Elenco delle risorse per imparare lo sviluppo iOS (agosto 2026)
 
 #### 5. Conclusione: dal primo App all'ennesimo App
 
-Guardando indietro, sei passato da "non sapere cosa sia SwiftUI" a installare Xcode, imparare Swift, disegnare le interfacce con SwiftUI, collegare l'app a database e rete, fino a test, pacchetto e pubblicazione — su questa strada hai già completato il tratto più difficile del percorso da zero a uno.
+Guardando indietro, sei passato da "non sapere cosa sia SwiftUI" a installare Xcode, imparare Swift, disegnare le interfacce con SwiftUI, collegare l'app a database e rete, fino a test, pacchetto e pubblicazione: su questa strada hai già completato il tratto più difficile del percorso da zero a uno.
 
 Il mondo della tecnologia cambia in fretta: i framework si aggiornano, gli strumenti si rinnovano, l'AI si prende in carico sempre più lavoro da "tastiera". Ma una cosa non passa mai di moda: la capacità di scomporre un'idea vaga in passi chiari e realizzarla passo dopo passo. Gli strumenti sono un amplificatore, il modo di ragionare è la fondamenta. L'amplificatore si può sostituire, la fondamenta no.
 

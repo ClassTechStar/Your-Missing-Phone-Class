@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Eine App, die nur „angeschaut“ werden kann, ist tot; erst eine App, die Daten speichern und sich mit dem Netz verbinden kann, lebt. In diesem Kapitel lernst du das „Trio“ der iOS-Datenschicht kennen: UserDefaults (kleine Einstellungen speichern), SwiftData (strukturierte Daten speichern), URLSession (mit dem Server sprechen), dazu Codable fürs JSON-Parsen und das moderne async/await. Danach schreibst du echte Apps, die sich Gewohnheiten ihrer Nutzer merken und ihre Inhalte aktuell halten.
 
-#### 1. Welche Speicherlösung passt? Erst ein Blick auf diese Tabelle
+1. Welche Speicherlösung passt? Erst ein Blick auf diese Tabelle
 
 ::: div .overflow-x-auto
 ```html
@@ -182,7 +182,7 @@ Stolperfalle: zwei eiserne Netzwerkgesetze
 {class="font-semibold"}
 Jetzt bist du dran: eine kleine „Zitat-des-Tages“-App
 
-#### 6. Auch Netzwerkfehler „staffeln“: nicht jeden Fehler wahllos an den Nutzer werfen
+6. Auch Netzwerkfehler „staffeln“: nicht jeden Fehler wahllos an den Nutzer werfen
 
 Keine Verbindung, Zeitüberschreitung, 404, Serverfehler 500 … Bei verschiedenen Fehlern sollte der Nutzer verschiedene Worte zu sehen bekommen:
 

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>勘误页 · 你缺失的那门手机课</title>
+<meta name="description" content="《你缺失的那门手机课》的公开勘误记录：错误怎么提、谁来改、多久改，以及已经确认并修好的问题清单。">
+<style>
+:root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#fafafa;--accent:#2563eb;
+--warm:#fef3c7;--warm-line:#f59e0b;--ok:#059669;--bad:#dc2626}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+"Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);
+line-height:1.75}
+.wrap{max-width:880px;margin:0 auto;padding:40px 20px 72px}
+header{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:24px}
+h1{font-size:26px;margin:0 0 8px}
+.sub{color:var(--muted);font-size:15px;margin:0}
+h2{font-size:19px;margin:34px 0 10px;padding-left:10px;border-left:4px solid var(--accent)}
+h3{font-size:16px;margin:22px 0 8px}
+p{margin:10px 0}
+a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;background:#fff;
+box-shadow:0 1px 3px rgba(0,0,0,.06)}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:#f4f4f5;font-weight:600}
+tr:nth-child(even) td{background:#fcfcfd}
+.note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--warm-line);
+padding:14px 16px;border-radius:4px;margin:16px 0;font-size:14.5px}
+.note.danger{border-left-color:var(--bad);background:#fff7f6}
+.note.ok{border-left-color:var(--ok);background:#f3fbf7}
+.err{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:14px 0}
+.err h4{margin:0 0 8px;font-size:15.5px;display:flex;gap:10px;align-items:baseline;
+flex-wrap:wrap}
+.tag{font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);
+background:#f4f4f5;color:var(--muted);white-space:nowrap}
+.tag.ok{background:#e8f7f0;border-color:#a7e3c8;color:#047857}
+.tag.wait{background:#fff7e6;border-color:#f5cf7f;color:#92600a}
+.err dl{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:14px}
+.err dt{color:var(--muted);white-space:nowrap}
+.err dd{margin:0}
+pre{background:#f6f7f9;border:1px solid var(--line);border-radius:5px;padding:11px 13px;
+overflow-x:auto;font-size:13px;line-height:1.6;margin:10px 0}
+code{background:#f1f2f4;padding:1px 5px;border-radius:3px;font-size:13px}
+pre code{background:none;padding:0}
+ol,ul{padding-left:22px}
+li{margin:5px 0}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--line);
+color:var(--muted);font-size:13.5px}
+a.btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 16px;
+border-radius:6px;text-decoration:none;font-size:14px;margin:0 8px 8px 0}
+a.btn.gray{background:#4b5563}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>勘误页</h1>
+  <p class="sub">《你缺失的那门手机课》· 这本书的错误怎么提、谁来改、多久改</p>
+</header>
+
+<div class="note">
+<strong>先说清楚这一页在证明什么。</strong><br>
+它证明的不是"这本书零错误"——一本 350 万字、每年手机界面都要换一次的书，不可能零错误。
+它证明的是<strong>内容有人负责</strong>：错误报给谁、谁来改、多久改完、改在哪里，都写在这里。
+</div>
+
+<h2>四种错误，四种处理方式</h2>
+<table>
+<thead><tr><th>类型</th><th>典型样子</th><th>你该怎么办</th><th>我们怎么处理</th></tr></thead>
+<tbody>
+<tr>
+  <td><strong>界面路径过时</strong></td>
+  <td>你照着书点，找不到那个菜单了；或者名字改了、位置挪了</td>
+  <td>报勘误时<strong>附上你的机型和系统版本</strong></td>
+  <td>改 <code>path_db.json</code> 里的路径条目，正文跟着改；大版本后整批巡检</td>
+</tr>
+<tr>
+  <td><strong>事实有误</strong></td>
+  <td>某个说法不对、某个数字错了、某个结论站不住</td>
+  <td>指出书里的原句和你认为错在哪</td>
+  <td>核实后改，并看是否需要连带改掉引用了这一条的别处</td>
+</tr>
+<tr>
+  <td><strong>表述不清</strong></td>
+  <td>读了三遍还是不知道该点哪里</td>
+  <td>指出哪一节、卡在哪一步</td>
+  <td>改写那一段；这类反馈往往比"错"更有价值</td>
+</tr>
+<tr>
+  <td><strong>其它</strong></td>
+  <td>错别字、链接失效、格式乱、翻译不同步</td>
+  <td>直接报</td>
+  <td>顺手修掉</td>
+</tr>
+</tbody>
+</table>
+
+<h2>怎么报</h2>
+<p>
+<a class="btn" href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/issues">GitHub 提 Issue</a>
+<a class="btn gray" href="#template">复制报错模板</a>
+</p>
+<p>也可以直接找作者：QQ 群 <strong>1074995524</strong>（作者 missile 在群里）。
+微信读书、知乎等平台的评论里也看得到，但那些地方不方便贴截图和长文本，优先走 Issue。</p>
+
+<h3 id="template">报错模板：复制这段填就行</h3>
+<pre><code>【章节】第十九章 手机故障排查与自救
+【位置】第四节「手机变卡、发热」的第 2 段
+【原文】打开【设置】→【电池】→【耗电排行】
+【我的机型与系统】小米 14，HyperOS 2（Android 15）
+【我这里的样子】我这里【设置】里没有「电池」这一项，只有「电量与性能」
+【我做了什么】按书里的路径找了两遍
+【我的判断】可能是系统版本不同导致菜单改了名？
+【截图】（如有）</code></pre>
+<p class="sub">填不满也没关系。<strong>章节 + 你看到的实际样子</strong>这两项最重要，其余可以后补。</p>
+
+<h2>已经确认并修好的问题</h2>
+<p>下面每一条都是真的在书稿里查出来、并且已经改掉的。写在这里是为了让你知道我们改了什么，
+也为了让你知道<strong>反馈确实会变成改动</strong>。</p>
+
+<div class="err">
+<h4><span class="tag ok">已修</span> 附录 C 按旧标题引用其他章，改名后变成死链 <span class="tag">2026-11</span></h4>
+<dl>
+<dt>现象</dt><dd>正文里出现「第 X 章《某某》」这种按标题写的交叉引用。章标题一旦改动，这些引用就指向了不存在的标题。</dd>
+<dt>范围</dt><dd>全书 49 处，集中在附录 C（术语对照表）、附录 E、附录 G、附录 H</dd>
+<dt>处理</dt><dd>改标题时同步改引用。现在术语表里的每一处《…》都能在正文里找到同名标题。</dd>
+</dl>
+</div>
+
+<div class="err">
+<h4><span class="tag ok">已修</span> 侧栏标题与页面大标题对不上 <span class="tag">2026-11</span></h4>
+<dl>
+<dt>现象</dt><dd>侧边栏里显示的是简写标题（如「守护你的数字生活」），点进去页面大标题却是全称（如「守护你的数字生活——安全与隐私」）。不是错，但对不上号。</dd>
+<dt>范围</dt><dd>28 个章节区块</dd>
+<dt>处理</dt><dd>本次把一批章标题改成口语化短标题时，侧栏与正文同步更新；目录里查得到的名字与正文完全一致。</dd>
+</dl>
+</div>
+
+<div class="err">
+<h4><span class="tag ok">已修</span> 列表项收尾符号全书不统一 <span class="tag">2026-11</span></h4>
+<dl>
+<dt>现象</dt><dd>同一个列表里，有的条目以句号结尾，有的以分号结尾，有的什么都不加。全书有一千多处条目以分号收尾。</dd>
+<dt>范围</dt><dd>全书 2619 处</dd>
+<dt>处理</dt><dd>统一成句号收尾。分号收尾的列表读起来像被机器切过。</dd>
+</dl>
+</div>
+
+<div class="err">
+<h4><span class="tag ok">已修</span> 章节之间的路径没有统一基准 <span class="tag">2026-11</span></h4>
+<dl>
+<dt>现象</dt><dd>各章对"当前系统版本"的假设不一致，读者没法判断某条路径到底多久算新。</dd>
+<dt>范围</dt><dd>全书 80 个含操作路径的章节</dd>
+<dt>处理</dt><dd>每章开头加了版本锚点（本章路径按 iOS 18.x / HarmonyOS 5.x / Android 15 核对，2026 年 11 月），
+路径登记进 <code>path_db.json</code>，现在可以逐条查、逐条巡检。</dd>
+</dl>
+</div>
+
+<h2>还没修完的</h2>
+<div class="err">
+<h4><span class="tag wait">修订中</span> 菜单路径的年度巡检 <span class="tag">每年大版本后</span></h4>
+<dl>
+<dt>现状</dt><dd>路径库已建立（136 条，覆盖 36 个章节），但"路径在正文里写成了箭头链"这件事，全书只有三分之一做到了。其余章节的操作路径是散在散文里的，还没逐条登记。</dd>
+<dt>计划</dt><dd>随季度修订版推进，把散文里的路径逐步收进路径库。</dd>
+</dl>
+</div>
+
+<div class="err">
+<h4><span class="tag wait">修订中</span> 医学相关章节的逐句审校 <span class="tag">待签约</span></h4>
+<dl>
+<dt>现状</dt><dd>第九十一至九十五章涉及心率、血氧、睡眠与心理健康。本版已加"本篇不能替代医嘱"的声明，并把偏绝对的表述改保守，但<strong>尚未经过执业医师逐句审校与署名</strong>。</dd>
+<dt>计划</dt><dd>审校人到位后会在正文署名，并在这里记录审校范围与日期。在那之前，这一篇请当作<strong>参考</strong>而不是依据。</dd>
+</dl>
+</div>
+
+<h2>我们的承诺</h2>
+<div class="note ok">
+<strong>响应时间：勘误提交后中位 7 天内给出回应</strong>（"回应"包括确认收到并给出结论，不一定当场改完）。<br>
+<strong>修订节奏：每季度一个修订版</strong>，累计的勘误一起进。<br>
+<strong>改在哪里：路径错误改路径库，正文错误改正文</strong>——不是把正文改成一个新说法了事。
+</div>
+
+<p>这个承诺的意义，比"120/120 章逐字核对通过"更大一些。
+逐字核对证明的是<strong>排版忠于源稿</strong>；勘误响应证明的是<strong>内容有人负责</strong>。
+前者是机器能管的事，后者是机器管不了、只能靠人管的事。</p>
+
+<h2>你要是不想提 Issue</h2>
+<p>那也行。把书里任意一个你觉得不对的地方截图发到 QQ 群 1074995524 就行。
+我们不挑渠道，只挑内容。</p>
+
+<h2>顺便一提</h2>
+<p>不同语言版本的可靠程度不一样，<a href="languages.html">那边有分级表</a>。
+中文版是事实源，其余语言是翻译——翻译里保留一点工整是正常的，我们不假装每种语言都同样可靠。</p>
+
+<footer>
+<p>《你缺失的那门手机课》· 作者 missile / ClassTechStar · QQ 群 1074995524 ·
+B 站 @ClassTechStar · 本书按 CC BY-NC-SA 4.0 发布。<br>
+本页的"已修"条目可在仓库里逐条核对；路径相关条目对应 <code>path_db.json</code>。</p>
+</footer>
+
+</div>
+</body>
+</html>

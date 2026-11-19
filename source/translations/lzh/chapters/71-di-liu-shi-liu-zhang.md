@@ -10,15 +10,15 @@ kind: chapter
 ### 第六十六章：項目二——天氣查詢 App（網絡版）
 
 {class="chapter-intro mb-4"}
-記賬本者「練內功」也，天氣 App 者「廣見聞」也——將與互聯網相周旋。此項汝將學：請免費之 API、解 JSON、處「載入中/成/敗」三種界面之態，及藏 API 密鑰之法。成之，則作任何「連網 App」之能具矣——新聞、匯率、翻譯，其術如一。
+記賬本者「練內功」也，天氣 App 者「廣見聞」也——將與互聯網相周旋。此項汝將學：請免費之 API、解 JSON、處「載入中/成/敗」三種界面之態。及藏 API 密鑰之法。成之，則作任何「連網 App」之能具矣，新聞、匯率、翻譯，其術如一。
 
 #### 一、請免費天氣之 API
 
-個人練手，薦 OpenWeatherMap 或國內之和風天氣（QWeather）——皆有免費之額，註冊即用。以 OpenWeatherMap 為例：
+個人練手，薦 OpenWeatherMap 或國內之和風天氣（QWeather），皆有免費之額，註冊即用。以 OpenWeatherMap 為例：
 
-1. 註冊賬號 → 於 API keys 頁生一 Key（apikey）；
-2. 免費版可調 Current Weather 之接口：api.openweathermap.org/data/2.5/weather? q=beijing&appid=汝之Key&units=metric；
-3. 先於瀏覽器一試，觀其返 JSON 之狀——此接任何 API 前必為之「預習」。
+1. 註冊賬號 → 於 API keys 頁生一 Key（apikey）。
+2. 免費版可調 Current Weather 之接口：api.openweathermap.org/data/2.5/weather? q=beijing&appid=汝之Key&units=metric。
+3. 先於瀏覽器一試，觀其返 JSON 之狀，此接任何 API 前必為之「預習」。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -143,9 +143,9 @@ struct WeatherContent: View {
 
 #### 五、交互之細與所藏之城
 
-- 搜索之框：頂部 .searchable 修飾符，系統自帶搜索之交互，提交時調 vm.search；
-- 藏城：以常觀之城貯於 UserDefaults，下次啟則自動查之；
-- 下拉而刷：.refreshable { await vm.search(...) } 一行而成；
+- 搜索之框：頂部 .searchable 修飾符，系統自帶搜索之交互，提交時調 vm.search。
+- 藏城：以常觀之城貯於 UserDefaults，下次啟則自動查之。
+- 下拉而刷：.refreshable { await vm.search(...) } 一行而成。
 - 天氣之圖標：以 Image(systemName:) 依所述而映（sun.max / cloud.rain / snowflake），界面立活。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -164,9 +164,9 @@ OpenWeatherMap 於中文城名之助平平，搜「北京」或無所得而 "bei
 
 連網 App 有疾，十居八九在「請未發正」或「應未解正」。調試之術三：
 
-1. 印原始數據：以 String(data: data, encoding: .utf8) 印而觀原 JSON——字段名、類型一目了然，較猜速十倍；
-2. 抓包之具：Mac 上免費之 Proxyman / 開源之 Charles 能截 App 諸請與應，如 X 光之透視網絡層；
-3. 擬弱網：擬器菜單 Features → Network Link Conditioner（須自開發者之站載具），能擬 3G、高遲滯——以驗「旋轉半晌」之疾。
+1. 印原始數據：以 String(data: data, encoding: .utf8) 印而觀原 JSON，字段名、類型一目了然，較猜速十倍。
+2. 抓包之具：Mac 上免費之 Proxyman / 開源之 Charles 能截 App 諸請與應，如 X 光之透視網絡層。
+3. 擬弱網：擬器菜單 Features → Network Link Conditioner（須自開發者之站載具），能擬 3G、高遲滯，以驗「旋轉半晌」之疾。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -188,5 +188,5 @@ OpenWeatherMap 於中文城名之助平平，搜「北京」或無所得而 "bei
 - API Key 藏於 xcconfig，絕不入碼庫
 - Codable 之模 + URLSession async/await：字段相合，JSON 自解
 - loading/success/error 三段之態，連網界面之萬金油也
-- 斷網、空輸、城之不存——誤之處置，連網 App 及格之線也
+- 斷網、空輸、城之不存，誤之處置，連網 App 及格之線也
 :::

@@ -32,7 +32,7 @@ Beaucoup de gens confondent le code de paiement et le code de réception, cette 
 
 Retenez bien cette différence, elle vous évitera bien des pièges d'arnaque. Toute personne qui vous demande « envoyez-moi une capture d'écran de votre code de paiement » est à 100 % un escroc.
 
-#### 3. Ces paramètres de sécurité, 5 minutes pour les configurer vous éviteront bien des soucis
+3. Ces paramètres de sécurité, 5 minutes pour les configurer vous éviteront bien des soucis
 
 - <strong>Paiement par empreinte/visage</strong>: Dans les paramètres de paiement d'Alipay et WeChat, activez le paiement biométrique. Ainsi, chaque paiement nécessite une empreinte ou un scan facial, même si vous perdez votre smartphone, celui qui le trouve ne peut pas dépenser votre argent.
 - <strong>Verrou de sécurité</strong>: Alipay et WeChat ont tous deux une fonction « Verrou de sécurité ». Après activation, l'accès à la page « Portefeuille » de l'application nécessite une vérification d'identité supplémentaire. Chemin : Alipay → Moi → Paramètres → Compte et sécurité → Centre de sécurité → Verrou de sécurité.
@@ -54,7 +54,7 @@ Je recommande personnellement la carte de transport virtuelle du portefeuille du
 - <strong>Comparaison de prix de livraison</strong>: Le même restaurant a souvent des prix et des promotions différents sur Meituan et Ele.me. Regardez des deux côtés avant de commander, parfois vous économisez plusieurs yuans. De plus, la fonction « Pin Hao Fan » de Meituan, en commandant avec des amis, le prix peut être nettement réduit.
 - <strong>Sécurité VTC</strong>: Dans Didi ou Gaode Dida, n'oubliez pas de configurer « Contact d'urgence » et « Partage de trajet ». Pendant la course, l'application partage automatiquement votre trajet avec le contact configuré. De plus, pour les courses de nuit, privilégiez « Taxi » plutôt que « Voiture rapide », les taxis sont soumis à une réglementation professionnelle, avec un coefficient de sécurité plus élevé.
 
-#### 6. Gérer l'assurance maladie, la sécurité sociale et les démarches administratives avec le smartphone
+6. Gérer l'assurance maladie, la sécurité sociale et les démarches administratives avec le smartphone
 
 Les changements ces dernières années sont considérables, beaucoup de démarches qui nécessitaient auparavant de faire la queue dans un guichet se font maintenant en quelques minutes sur le smartphone.
 

@@ -198,7 +198,7 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 ```
 :::
 
-#### 6. Abnahme: Prüfung auf drei Ebenen + zwei Zusatzaufgaben für Fortgeschrittene
+6. Abnahme: Prüfung auf drei Ebenen + zwei Zusatzaufgaben für Fortgeschrittene
 
 Nach Fertigstellung prüfst du das Projekt auf drei Ebenen entlang von „Funktion → Grenzfälle → Architektur“: Lässt sich erfassen, lässt sich löschen, sind die Daten nach einem Neustart noch da (Funktion)? Stürzt die App ab, wenn du 0 oder negative Beträge eingibst (Grenzfälle)? Sind Oberfläche und Daten vermischt, sind Felder fest einprogrammiert (Architektur)?
 

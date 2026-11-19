@@ -19,9 +19,9 @@ Das Kernkonzept von HarmonyOS lautet „Vernetzung aller Dinge". Anders als herk
 
 Ein Beispiel: Du schaust ein Video auf dem Smartphone und möchtest es auf einem großen Bildschirm sehen. Klassisch würdest du es spiegeln; unter HarmonyOS kannst du das Video direkt auf den Fernseher „übertragen" und dort weiter ansehen, während das Smartphone zur Fernbedienung wird. Das ist kein einfaches Mirroring, sondern die Anwendung selbst läuft geräteübergreifend.
 
-#### Zwei. HarmonyOS 4.3: Die auf AOSP basierende ausgereifte Version
+Zwei. HarmonyOS 4.3: Die auf AOSP basierende ausgereifte Version
 
-HarmonyOS 4.3 ist die Version, die derzeit auf Huawei-Smartphones weit verbreitet ist. Es ist erwähnenswert, dass HarmonyOS 4.3 mit dem Code-Framework des Android Open Source Project (AOSP) kompatibel ist und daher vollständig Android-Anwendungen ausführen kann — die meisten Apps, die du im Huawei AppGallery lädst, sind im Wesentlichen Android-Anwendungen, die über die Kompatibilitätsschicht von HarmonyOS laufen. HarmonyOS 4.3 ist jedoch nicht einfach ein ummanteltes Android, sondern fügt auf der AOSP-Basis zahlreiche von Huawei selbstentwickelte Fähigkeiten wie die verteilte Architektur und die Ark Engine hinzu.
+HarmonyOS 4.3 ist die Version, die derzeit auf Huawei-Smartphones weit verbreitet ist. Es ist erwähnenswert, dass HarmonyOS 4.3 mit dem Code-Framework des Android Open Source Project (AOSP) kompatibel ist und daher vollständig Android-Anwendungen ausführen kann, die meisten Apps, die du im Huawei AppGallery lädst, sind im Wesentlichen Android-Anwendungen, die über die Kompatibilitätsschicht von HarmonyOS laufen. HarmonyOS 4.3 ist jedoch nicht einfach ein ummanteltes Android, sondern fügt auf der AOSP-Basis zahlreiche von Huawei selbstentwickelte Fähigkeiten wie die verteilte Architektur und die Ark Engine hinzu.
 
 ##### Kernmerkmale:
 
@@ -39,16 +39,16 @@ HarmonyOS 4.3 ist die Version, die derzeit auf Huawei-Smartphones weit verbreite
 - <strong>Super-Zwischenablage</strong>: Ein temporärer Speicherbereich für Text, Bilder und Dateien, der in jeder App per Drag-and-Drop eingefügt werden kann. Teilen über App-Grenzen wird butterweich.
 - <strong>Intelligente Suche</strong>: Eine globale Suche über Apps, Dateien, Einstellungen und das Web.
 
-#### Drei. HarmonyOS NEXT (HarmonyOS 5): Der wahre Start von Huaweis eigenem Betriebssystem
+Drei. HarmonyOS NEXT (HarmonyOS 5): Der wahre Start von Huaweis eigenem Betriebssystem
 
 : HarmonyOS NEXT verwendet einen von Huawei selbstentwickelten Kernel ohne AOSP-Code. Das System ist schlanker, sicherer und effizienter.<strong>unterstützt keine Android-Apps mehr direkt</strong>. Das ist der entscheidende Schritt von HarmonyOS aus der „Android-kompatiblen Übergangsform“ hin zu einem „vollständig unabhängigen Betriebssystem“.
 
 ##### Wichtige Neuerungen:
 
 - <strong>Vollständig eigener Kernel</strong>: Das ist die größte Veränderung. HarmonyOS NEXT kann nur native HarmonyOS-Apps ausführen, APK-Dateien lassen sich nicht mehr installieren oder starten. Prüfe vor einem Upgrade, ob deine wichtigsten Apps bereits als native HarmonyOS-Version vorliegen.
-- <strong>Keine Android-App-Unterstützung mehr</strong>: Ein völlig neues Sicherheitssystem mit durchgängigem Schutz von der Hardware bis zur Software. Unterstützt feinere Berechtigungssteuerung, z. B. „ungefähre Standortbestimmung" — eine App erfährt nur grob, wo du bist, nicht die genaue Position.
+- <strong>Keine Android-App-Unterstützung mehr</strong>: Ein völlig neues Sicherheitssystem mit durchgängigem Schutz von der Hardware bis zur Software. Unterstützt feinere Berechtigungssteuerung, z. B. „ungefähre Standortbestimmung", eine App erfährt nur grob, wo du bist, nicht die genaue Position.
 - <strong>Tiefe KI-Integration</strong>: Systemweite KI-Fähigkeiten, nicht nur in einer einzelnen App. So können KI-Untertitel Videos in Echtzeit übersetzen, KI-Freisteller das Motiv intelligent erkennen.
-- <strong>Nahtloser geräteübergreifender Datenfluss</strong>: Die verteilten Fähigkeiten gehen noch weiter. Der App-Zustand lässt sich nahtlos zwischen Geräten wechseln — ein Dokument, das du auf dem Smartphone bearbeitest, öffnet sich am Computer automatisch, wenn du dorthin gehst.
+- <strong>Nahtloser geräteübergreifender Datenfluss</strong>: Die verteilten Fähigkeiten gehen noch weiter. Der App-Zustand lässt sich nahtlos zwischen Geräten wechseln, ein Dokument, das du auf dem Smartphone bearbeitest, öffnet sich am Computer automatisch, wenn du dorthin gehst.
 - <strong>Meta-Services</strong>: Leichtgewichtige Dienste, die ohne Installation nutzbar sind. Zum Beispiel lässt sich durch das Scannen eines QR-Codes direkt eine Funktion öffnen, ohne vorher eine App herunterladen zu müssen.
 - <strong>Nahtloser geräteübergreifender Datenfluss</strong>: Die verteilten Fähigkeiten gehen noch weiter. Der App-Zustand wechselt nahtlos zwischen Geräten – das am Handy begonnene Dokument öffnet am Computer automatisch.
 - <strong>Meta-Services (Luft-Apps)</strong>: Leichtgewichtige Dienste, die ohne Installation nutzbar sind. Zum Beispiel lässt sich durch das Scannen eines QR-Codes direkt eine Funktion öffnen – ohne vorherigen App-Download.
@@ -87,7 +87,7 @@ Stand des App-Ökosystems:
 #### 5. Praktische HarmonyOS-Tipps
 
 - <strong>Super-Terminal</strong>: Wische oben rechts nach unten, um das Kontrollzentrum zu öffnen, tippe auf „Super-Terminal“ – du siehst die anderen Geräte in der Umgebung und verbindest sie per Ziehen.
-- <strong>Super-Zwischenablage</strong> Der HarmonyOS App Market umfasst bereits Millionen von Apps, die gängigen sind im Wesentlichen alle vertreten. Huawei treibt die Entwicklung nativer HarmonyOS-Apps aktiv voran. Stand Anfang 2025 haben führende Apps wie WeChat, Alipay, Taobao, Douyin, Meituan und JD native HarmonyOS-Versionen vorgestellt, sodass der Alltag weitgehend reibungslos funktioniert. Einige Nischen- und Branchen-Apps sind möglicherweise noch in der Anpassung — vor einem Upgrade solltest du prüfen, ob deine wichtigsten Apps bereits unterstützt werden.
+- <strong>Super-Zwischenablage</strong> Der HarmonyOS App Market umfasst bereits Millionen von Apps, die gängigen sind im Wesentlichen alle vertreten. Huawei treibt die Entwicklung nativer HarmonyOS-Apps aktiv voran. Stand Anfang 2025 haben führende Apps wie WeChat, Alipay, Taobao, Douyin, Meituan und JD native HarmonyOS-Versionen vorgestellt, sodass der Alltag weitgehend reibungslos funktioniert. Einige Nischen- und Branchen-Apps sind möglicherweise noch in der Anpassung, vor einem Upgrade solltest du prüfen, ob deine wichtigsten Apps bereits unterstützt werden.
 - <strong>Service-Karten</strong>: Text/Bild/Datei lange drücken, „In Zwischenablage kopieren" wählen, dann in einer anderen App lange drücken und einfügen oder per Drag-and-Drop herausziehen.
 - <strong>Intelligente Mehrfenster</strong>: Vom linken oder rechten Bildschirmrand nach innen wischen und halten, um die Seitenleiste zu öffnen; tippe eine App an, um sie als schwebendes Fenster zu öffnen.
 - <strong>Datenschutz</strong>: Einstellungen > Datenschutz – dort siehst du die Nutzungsprotokolle der App-Berechtigungen und kannst z. B. die unscharfe Standortbestimmung einstellen.
@@ -108,5 +108,5 @@ HarmonyOS wird kontinuierlich weiterentwickelt, zwischen den Versionen kann es l
 1. Öffne das Kontrollzentrum und tippe auf „Super-Terminal“ – schau, ob es in der Nähe andere HarmonyOS-Geräte gibt.
 2. Probiere die „Super-Zwischenablage“ aus: Kopiere einen Text in die Zwischenablage und ziehe ihn in der Notizen-App wieder heraus.
 3. : Vom linken oder rechten Bildschirmrand nach innen wischen und halten, um die Seitenleiste zu öffnen; eine App antippen, um sie als schwebendes Fenster zu öffnen.
-4. Datenschutz
+4. Datenschutz.
 :::

@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Capítulo 15: La ciencia de la batería y la optimización de la autonomía
+nav: Capítulo 15: ¿Dos cargas al día: batería o mal uso?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 15: La ciencia de la batería y la optimización de la autonomía
+### Capítulo 15: ¿Dos cargas al día: batería o mal uso?
 
 {class="chapter-intro mb-4"}
 La batería es el "corazón energético" de tu móvil. En este capítulo entenderás sus caprichos, aprenderás técnicas científicas de carga y duración, y te desharás definitivamente de la ansiedad por la batería.
@@ -26,7 +26,7 @@ La batería del móvil (de iones de litio o polímero de litio) es como una espo
 - La "salud de la batería" es el porcentaje de la capacidad actual respecto a la de fábrica. Cuando baja del 80%, notarás claramente que la duración disminuye.
 - <strong>¿Cómo verlo?</strong> iPhone: Ajustes &gt; Batería &gt; Salud de la batería y carga; Android: generalmente busca «salud de la batería» en Ajustes.
 
-#### 2. Mitos sobre la carga: carga rápida, inalámbrica y reglas de oro
+2. Mitos sobre la carga: carga rápida, inalámbrica y reglas de oro
 
 - <strong>2. Mitos sobre la carga: carga rápida, inalámbrica y reglas de oro</strong> Con accesorios de carga rápida originales o certificados el daño es mínimo. El móvil y el cargador tienen control térmico: si se sobrecalientan, reducen la potencia automáticamente.
 - <strong>Carga inalámbrica</strong>: Cómoda, pero menos eficiente y con más calentamiento. Adecuada para cargar toda la noche.
@@ -61,7 +61,7 @@ Quizas hayas notado que los cargadores rapidos son cada vez mas pequenos; el res
 :::
 
 {id="di-shi-wu-zhang-kuichong"}
-#### 3. Protocolos de carga rápida: ¿por qué tu cargador no carga rápido?
+3. Protocolos de carga rápida: ¿por qué tu cargador no carga rápido?
 
 Te habrá pasado esto: tu móvil soporta carga rápida, pero al cambiar de cargador se vuelve lento. Esto ocurre porque la carga rápida no es simplemente "mayor potencia"; requiere que el cargador, el cable y el móvil "hablen el mismo idioma": ese es el protocolo de carga rápida.
 

@@ -10,9 +10,9 @@ kind: chapter
 ### Capitolo 53: Conservare i dati e parlare con la rete
 
 {class="chapter-intro mb-4"}
-Un'app che serve solo a «guardare» è morta; un'app che salva dati e si collega alla rete è viva. In questo capitolo conosci il «trio» del livello dati di Android: DataStore (le piccole configurazioni), Room (i dati strutturati), Retrofit (chi parla con il server), più il loro «direttore d'orchestra» — le coroutine. A capitolo finito potrai scrivere app vere, capaci di ricordare le abitudini dell'utente e di aggiornare i contenuti in tempo reale.
+Un'app che serve solo a «guardare» è morta; un'app che salva dati e si collega alla rete è viva. In questo capitolo conosci il «trio» del livello dati di Android: DataStore (le piccole configurazioni), Room (i dati strutturati), Retrofit (chi parla con il server), più il loro «direttore d'orchestra», le coroutine. A capitolo finito potrai scrivere app vere, capaci di ricordare le abitudini dell'utente e di aggiornare i contenuti in tempo reale.
 
-#### 1. Come scegliere dove salvare i dati: prima guarda questa tabella
+1. Come scegliere dove salvare i dati: prima guarda questa tabella
 
 ::: div .overflow-x-auto
 ```html
@@ -23,7 +23,7 @@ Un'app che serve solo a «guardare» è morta; un'app che salva dati e si colleg
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 La ripartizione dei compiti del trio dei dati
 
-Impara questa filastrocca: «le piccole configurazioni in DataStore, i dati in blocco in Room, i dati fuori porta passano da Retrofit». Le SharedPreferences, comuni nei vecchi tutorial, sono state sostituite da DataStore, e il SQLite scritto a mano da Room — impara direttamente il nuovo, non riprendere la vecchia strada.
+Impara questa filastrocca: «le piccole configurazioni in DataStore, i dati in blocco in Room, i dati fuori porta passano da Retrofit». Le SharedPreferences, comuni nei vecchi tutorial, sono state sostituite da DataStore, e il SQLite scritto a mano da Room, impara direttamente il nuovo, non riprendere la vecchia strada.
 
 #### 2. DataStore: salvare le piccole configurazioni
 
@@ -50,7 +50,7 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 ```
 :::
 
-Nota che viene restituito un Flow — un flusso di dati che «scorre». Appena il valore cambia, tutti i punti che lo osservano ricevono da soli il nuovo valore. Questo concetto (la reattività) è la pietra angolare dell'Android moderno: lo metterai in pratica nel capitolo 54.
+Nota che viene restituito un Flow: un flusso di dati che «scorre». Appena il valore cambia, tutti i punti che lo osservano ricevono da soli il nuovo valore. Questo concetto (la reattività) è la pietra angolare dell'Android moderno: lo metterai in pratica nel capitolo 54.
 
 #### 3. Room: dare ai dati una «casa vera»
 
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-Questo modello a «tre pezzi» si può copiare identico in qualunque tuo progetto — basta cambiare i nomi dei campi. Le query restituiscono Flow e l'interfaccia si aggiorna da sola al passo con i dati: una meraviglia.
+Questo modello a «tre pezzi» si può copiare identico in qualunque tuo progetto, basta cambiare i nomi dei campi. Le query restituiscono Flow e l'interfaccia si aggiorna da sola al passo con i dati: una meraviglia.
 
 #### 4. Retrofit: parlare con il server
 
@@ -131,12 +131,12 @@ val result = api.getWeather("Pechino")
 Attenzione alle trappole: le due regole d'oro della rete
 
 {class="mt-1"}
-① Le richieste di rete non si fanno mai nel thread principale — congela l'interfaccia e può far crashare l'app (NetworkOnMainThreadException). Tutte le chiamate di rete vanno messe in una coroutine (viewModelScope.launch). ② L'HTTP in chiaro è vietato per impostazione predefinita: da Android 9 in poi serve l'HTTPS. Se per i test devi usare un indirizzo locale in http://, devi dichiarare esplicitamente usesCleartextTraffic nel Manifest — ma un prodotto vero deve viaggiare tutto in HTTPS.
+① Le richieste di rete non si fanno mai nel thread principale, congela l'interfaccia e può far crashare l'app (NetworkOnMainThreadException). Tutte le chiamate di rete vanno messe in una coroutine (viewModelScope.launch). ② L'HTTP in chiaro è vietato per impostazione predefinita: da Android 9 in poi serve l'HTTPS. Se per i test devi usare un indirizzo locale in http://, devi dichiarare esplicitamente usesCleartextTraffic nel Manifest: ma un prodotto vero deve viaggiare tutto in HTTPS.
 :::
 
 #### 5. Il parsing del JSON: «tradurre» i dati di rete
 
-I dati che restituisce il server sono per lo più JSON — una fila di testo che sembra un «dizionario annidato». Retrofit ha bisogno di un «interprete» che li trasformi in oggetti Kotlin. Le due soluzioni più diffuse nel 2026:
+I dati che restituisce il server sono per lo più JSON, una fila di testo che sembra un «dizionario annidato». Retrofit ha bisogno di un «interprete» che li trasformi in oggetti Kotlin. Le due soluzioni più diffuse nel 2026:
 
 ::: div .overflow-x-auto
 ```html
@@ -168,9 +168,9 @@ data class WeatherResponse(
 
 Con qualunque soluzione la regola d'oro è una: prima guarda il JSON realmente restituito, poi definisci i campi. Tanti bug di «parsing fallito» nascono da nomi di campo sbagliati o livelli di annidamento indovinati a caso — stampa il JSON originale e confrontalo: in dieci secondi trovi il punto esatto.
 
-#### 6. Le coroutine: la «lingua franca» della concorrenza in Android
+6. Le coroutine: la «lingua franca» della concorrenza in Android
 
-I suspend e launch che compaiono più volte sopra vengono dalle coroutine di Kotlin (Coroutine) — la soluzione di concorrenza ufficiale di Android. Puoi capirlo alla buona così: far sì che le operazioni che «chiedono di aspettare» (rete, database) non blocchino l'interfaccia.
+I suspend e launch che compaiono più volte sopra vengono dalle coroutine di Kotlin (Coroutine), la soluzione di concorrenza ufficiale di Android. Puoi capirlo alla buona così: far sì che le operazioni che «chiedono di aspettare» (rete, database) non blocchino l'interfaccia.
 
 ::: div .code-block
 :::inline div .code-head
@@ -198,7 +198,7 @@ Se parti da zero, per ora basta ricordarne l'uso; il principio del «sospendere 
 Mani all'opera: crea una mini app «una frase al giorno»
 
 {class="mt-1"}
-Trova un'API gratuita di citazioni (per esempio hitokoto o simili), usa Retrofit per scaricare la «frase del giorno», mostrala al centro dello schermo e aggiungi un pulsante «Cambia frase» (che richiede di nuovo dentro una coroutine). Poi salva le frasi che ti piacciono in una «raccolta» con Room. Questo esercizio usa tutti assieme DataStore/Room/Retrofit/coroutine — finito quello, i capitoli 7 e 8 saranno un gioco da ragazzi.
+Trova un'API gratuita di citazioni (per esempio hitokoto o simili), usa Retrofit per scaricare la «frase del giorno», mostrala al centro dello schermo e aggiungi un pulsante «Cambia frase» (che richiede di nuovo dentro una coroutine). Poi salva le frasi che ti piacciono in una «raccolta» con Room. Questo esercizio usa tutti assieme DataStore/Room/Retrofit/coroutine: finito quello, i capitoli 7 e 8 saranno un gioco da ragazzi.
 :::
 
 ::: div .chapter-summary

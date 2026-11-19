@@ -10,15 +10,15 @@ kind: chapter
 ### Bab 44: Praktik dari 0 ke 1 — Alur Lengkap Proyek Utuh
 
 {class="chapter-intro mb-4"}
-Teorinya sudah selesai; sekarang waktunya praktik. Bab ini bukan sekadar tutorial "tiru sambil ketik", melainkan metodologi praktik tentang "cara berpikir, cara bertanya, cara memverifikasi". Kita akan memakai tiga proyek dengan tingkat kesulitan berbeda untuk memperlihatkan proses berpikir lengkap dari kebutuhan sampai produk jadi. Apa pun alat yang kamu pakai, alur ini berlaku.
+Teorinya sudah selesai; sekarang waktunya praktik. Bab ini bukan sekadar tutorial "tiru sambil ketik", melainkan metodologi praktik tentang "cara berpikir, cara bertanya, cara memverifikasi". Kita akan memakai tiga proyek dengan tingkat kesulitan berbeda untuk ,memperlihatkan proses berpikir lengkap dari kebutuhan sampai produk jadi. Apa pun alat yang kamu pakai, alur ini berlaku.
 
-#### 1. Proyek satu: situs alat pribadi minimalis (tingkat pemula)
+1. Proyek satu: situs alat pribadi minimalis (tingkat pemula)
 
 ##### 1. Merenungkan kebutuhan
 
 Tujuan: membuat satu halaman web situs alat pribadi yang menampilkan pintasan ke 3-4 alat kecil yang berguna. Ini proyek frontend murni, tanpa backend dan database. Yang penting bukan betapa rumitnya alatnya, melainkan merasakan alur lengkap "dari kebutuhan ke produk jadi".
 
-Ikuti lima unsur kebutuhan: Who—dipakai untuk keperluan pribadi. What—satu halaman web yang menampilkan pintasan alat. Why—mengumpulkan alat yang sering dipakai dalam satu halaman agar mudah diakses. How—satu berkas HTML+CSS+JS, tanpa framework. Constraint—selesai dalam 30 menit, tanpa perlu deployment.
+Ikuti lima unsur kebutuhan: Who,dipakai untuk keperluan pribadi. What,satu halaman web yang menampilkan pintasan alat. Why—mengumpulkan alat yang sering dipakai dalam satu halaman agar mudah diakses. How:satu berkas HTML+CSS+JS, tanpa framework. Constraint,selesai dalam 30 menit, tanpa perlu deployment.
 
 ##### 2. Memberikan instruksi
 
@@ -52,19 +52,19 @@ Setelah AI memberikan kodenya, lakukan penerimaan mengikuti pemeriksaan tiga lap
 
 Jika kamu juga ingin mewujudkan fungsi salah satu kartu alat (bukan sekadar pintasannya), tambahkan secara bertahap—tambahkan fungsi satu alat, verifikasi, baru tambahkan yang berikutnya. Inilah penerapan nyata strategi "langkah kecil cepat".
 
-#### 2. Proyek dua: sistem pencatatan keuangan full-stack (tingkat menengah)
+2. Proyek dua: sistem pencatatan keuangan full-stack (tingkat menengah)
 
 ##### 1. Merenungkan kebutuhan dan PRD
 
 Tujuan: satu aplikasi pencatatan keuangan full-stack dengan frontend, backend, dan database. Proyek ini jauh lebih rumit dari yang pertama dan memerlukan metode rekayasa kebutuhan dari Bab 40.
 
-Tulis PRD dulu. Mengikuti templat di Bagian 3 Bab 40, susun gambaran umum proyek, daftar fitur, solusi teknis, model data, dan rencana pengembangan. Pemilihan solusi teknis harus mengikuti prinsip Simplicity First—frontend memakai React tetapi tanpa state management rumit seperti Redux, backend memakai Node.js tetapi tanpa microservices, database memakai SQLite alih-alih PostgreSQL (untuk tahap pengembangan).
+Tulis PRD dulu. Mengikuti templat di Bagian 3 Bab 40, susun gambaran umum proyek, daftar fitur, solusi teknis, model data, dan rencana pengembangan. Pemilihan solusi teknis harus mengikuti prinsip Simplicity First,frontend memakai React tetapi tanpa state management rumit seperti Redux, backend memakai Node.js tetapi tanpa microservices, database memakai SQLite alih-alih PostgreSQL (untuk tahap pengembangan).
 
 Rencana pengembangan dipecah menjadi 5 langkah: Langkah 1 kerangka API backend (server Express + SQLite + antarmuka CRUD); Langkah 2 halaman dasar frontend (daftar catatan + form tambah); Langkah 3 integrasi frontend-backend (panggilan API + tampilan data); Langkah 4 fitur kategori dan filter; Langkah 5 rekap bulanan dan grafik sederhana. Setiap langkah yang selesai selalu berupa "sesuatu yang bisa dipakai".
 
 ##### 2. Menyiapkan berkas memori proyek
 
-Sebelum mulai menulis kode, buat dulu berkas memori proyek. Ini praktik inti dari rekayasa konteks—memastikan AI mengenal latar belakang proyek di awal setiap percakapan.
+Sebelum mulai menulis kode, buat dulu berkas memori proyek. Ini praktik inti dari rekayasa konteks,memastikan AI mengenal latar belakang proyek di awal setiap percakapan.
 
 ::: div .code-block
 :::inline div .code-head
@@ -125,7 +125,7 @@ Berikan struktur kode backend yang lengkap.
 ```
 :::
 
-Perhatikan ciri instruksi ini: ia hanya menjelaskan langkah saat ini (kerangka backend) tanpa mencampur kebutuhan frontend; ia secara eksplisit memuat daftar kolom dan antarmuka (memberi AI batasan yang cukup), tetapi detail implementasinya diserahkan pada AI; dan ia mengikuti prinsip Goal-Driven Execution—menyebut "apa yang dikerjakan", bukan "bagaimana mengerjakannya".
+Perhatikan ciri instruksi ini: ia hanya menjelaskan langkah saat ini (kerangka backend) tanpa mencampur kebutuhan frontend; ia secara eksplisit memuat daftar kolom dan antarmuka (memberi AI batasan yang cukup), tetapi detail implementasinya diserahkan pada AI; dan ia mengikuti prinsip Goal-Driven Execution,menyebut "apa yang dikerjakan", bukan "bagaimana mengerjakannya".
 
 Begitu AI memberikan kodenya, langsung verifikasi: jalankan server, uji setiap antarmuka dengan curl atau Postman apakah berfungsi normal. Setelah dipastikan tidak ada masalah, buka percakapan baru untuk Langkah 2 (halaman dasar frontend). Setiap langkah mengikuti siklus "instruksi-verifikasi-percakapan baru".
 
@@ -133,9 +133,9 @@ Begitu AI memberikan kodenya, langsung verifikasi: jalankan server, uji setiap a
 
 ##### 1. Merancang gagasan proyek
 
-Tujuan: satu aplikasi yang terhubung ke API model besar—misalnya "Asisten Belajar AI": pengguna memasukkan materi pelajaran, AI menghasilkan ringkasan, mengaitkan poin-poin pengetahuan, dan merekomendasikan sumber belajar. Keistimewaan proyek ini: aplikasimu sendiri yang memanggil AI, jadi kamu harus menangani masalah baru seperti pemanggilan API, rekayasa prompt, dan penanganan error.
+Tujuan: satu aplikasi yang terhubung ke API model besar:misalnya "Asisten Belajar AI": pengguna memasukkan materi pelajaran, AI menghasilkan ringkasan, mengaitkan poin-poin pengetahuan, dan merekomendasikan sumber belajar. Keistimewaan proyek ini: aplikasimu sendiri yang memanggil AI, jadi kamu harus menangani masalah baru seperti pemanggilan API, rekayasa prompt, dan penanganan error.
 
-Pelajaran terpenting dari proyek ini: ketika kamu "memakai AI untuk menulis kode yang memanggil AI", kamu harus ekstra memperhatikan rekayasa prompt. Prompt yang dipakai aplikasimu saat memanggil API model besar juga harus mengikuti prinsip yang dibahas panduan ini—jelas, ringkas, dan berorientasi tujuan.
+Pelajaran terpenting dari proyek ini: ketika kamu "memakai AI untuk menulis kode yang memanggil AI", kamu harus ekstra memperhatikan rekayasa prompt. Prompt yang dipakai aplikasimu saat memanggil API model besar juga harus mengikuti prinsip yang dibahas panduan ini,jelas, ringkas, dan berorientasi tujuan.
 
 ##### 2. Poin-poin teknis kunci
 
@@ -144,9 +144,9 @@ Proyek ini melibatkan beberapa poin teknis yang belum kamu temui di dua proyek s
 - Manajemen kunci API: kunci tidak boleh pernah ditulis langsung di dalam kode, kelola dengan environment variable;
 - Penanganan respons streaming: jawaban model besar umumnya streaming dan perlu ditampilkan kata demi kata;
 - Kontrol pemakaian token: model besar ditagih per token, jadi pemakaiannya perlu dikendalikan di level aplikasi;
-- Manajemen templat prompt: fungsi berbeda memakai templat prompt berbeda, jadi perlu dikelola secara terstruktur.
+- Manajemen templat prompt: fungsi berbeda memakai templat prompt berbeda, jadi perlu dikelola secara terstruktur
 
-Semua poin teknis ini bisa diserahkan pada AI, tetapi kamu perlu memahami "mengapa" di balik masing-masing—mengapa kunci tidak boleh ditulis langsung di kode? Mengapa respons streaming diperlukan? Mengapa pemakaian token harus dikendalikan? Dengan memahami "mengapa"-nya, kamu bisa menilai apakah solusi dari AI masuk akal.
+Semua poin teknis ini bisa diserahkan pada AI, tetapi kamu perlu memahami "mengapa" di balik masing-masing,mengapa kunci tidak boleh ditulis langsung di kode? Mengapa respons streaming diperlukan? Mengapa pemakaian token harus dikendalikan? Dengan memahami "mengapa"-nya, kamu bisa menilai apakah solusi dari AI masuk akal.
 
 #### 4. Daftar periksa alur praktik universal
 
@@ -166,16 +166,16 @@ Daftar periksa alur praktik pemrograman AI yang universal
 Mari praktik: selesaikan "Proyek Satu" minggu ini
 
 {class="mt-1"}
-Jadikan "situs alat pribadi" di Bagian 1 Bab 44 sebagai pekerjaan rumah pemrograman AI pertamamu: sisihkan 5 menit untuk melewati lima unsur, kirim instruksinya ke AI (alat apa pun boleh), lalu lakukan penerimaan dengan verifikasi tiga lapis. Selesaikan dalam 30 menit—karya pemrograman AI pertamamu pun lahir. Jangan lupa menyimpannya; ini kenang-an peralihanmu dari "pembaca" menjadi "praktisi".
+Jadikan "situs alat pribadi" di Bagian 1 Bab 44 sebagai pekerjaan rumah pemrograman AI pertamamu: sisihkan 5 menit untuk melewati lima unsur, kirim instruksinya ke AI (alat apa pun boleh), lalu lakukan penerimaan dengan verifikasi tiga lapis. Selesaikan dalam 30 menit,karya pemrograman AI pertamamu pun lahir. Jangan lupa menyimpannya; ini kenang-an peralihanmu dari "pembaca" menjadi "praktisi".
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 Ringkasan bab ini
 
-- Proyek satu (pemula): situs alat frontend murni—merasakan alur lengkap, selesai dalam 30 menit
-- Proyek dua (menengah): sistem pencatatan keuangan full-stack—PRD + berkas memori + implementasi bertahap 5 langkah, setiap langkah "bisa dipakai"
-- Proyek tiga (mahir): Asisten Belajar AI—memakai AI untuk menulis kode yang memanggil AI, perhatikan rekayasa prompt
+- Proyek satu (pemula): situs alat frontend murni,merasakan alur lengkap, selesai dalam 30 menit
+- Proyek dua (menengah): sistem pencatatan keuangan full-stack,PRD + berkas memori + implementasi bertahap 5 langkah, setiap langkah "bisa dipakai"
+- Proyek tiga (mahir): Asisten Belajar AI,memakai AI untuk menulis kode yang memanggil AI, perhatikan rekayasa prompt
 - Delapan langkah alur universal: renungkan kebutuhan → pecah → PRD → berkas memori → implementasi bertahap → uji → tinjau → iterasi
 - Setiap langkah mengikuti siklus "instruksi-verifikasi-percakapan baru"
 :::

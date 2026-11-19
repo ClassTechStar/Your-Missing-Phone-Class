@@ -2,12 +2,12 @@
 id: di-yi-zhang
 num: 01
 part: ji-chu-pian
-nav: Capítulo 1: Hola, mi ordenador personal
+nav: Capítulo 1: Conozcamos primero tu móvil
 toc: default
 kind: chapter
 ---
 
-### Capítulo 1: Hola, mi computadora personal
+### Capítulo 1: Conozcamos primero tu móvil
 
 {class="chapter-intro mb-4"}
 Tu móvil, en realidad, es la computadora personal más poderosa en tu bolsillo. Es infinitamente más potente que la computadora que llevó al ser humano a la Luna, y sin embargo descansa silenciosamente en tu palma. Hoy, vamos a conocer bien a este "gigante silencioso".
@@ -32,11 +32,11 @@ La CPU es el componente más central del SoC, responsable de procesar la mayorí
 - <strong>Núcleo medio</strong>: equilibrio entre rendimiento y consumo, procesa tareas de carga media diaria. Navegar redes sociales, ver videos, cambiar entre aplicaciones depende principalmente de él.
 - <strong>Núcleo pequeño/Núcleo de eficiencia</strong>: el de menor consumo, procesa tareas ligeras en segúndo plano. Reposo, escuchar música, recibir mensajes, etc., casi no gasta batería.
 
-Los tres niveles de núcleos trabajan juntos: el planificador del sistema asigna automáticamente según la carga de la tarea—las tareas ligeras al núcleo pequeño para ahorrar energía, el trabajo pesado al núcleo grande a toda máquina, y vuelve al pequeño al terminar. Por eso el móvil puede ejecutar juegos fluidamente y también estar en reposo todo el día.
+Los tres niveles de núcleos trabajan juntos: el planificador del sistema asigna automáticamente según la carga de la tarea,las tareas ligeras al núcleo pequeño para ahorrar energía, el trabajo pesado al núcleo grande a toda máquina, y vuelve al pequeño al terminar. Por eso el móvil puede ejecutar juegos fluidamente y también estar en reposo todo el día.
 
 <strong>Características de cada marca</strong>:
 
-- <strong>Qualcomm Snapdragon 8 Elite</strong>: adopta la arquitectura CPU auto-desarrollada Oryon (originada de la adquisición de Nuvia), 2 supernúcleos (4.32GHz) + 6 núcleos de rendimiento (3.53GHz), todos basados en el proceso de 3nm de segúnda generación de TSMC. Se despide definitivamente de la arquitectura de referencia ARM, con mejoras saltadas en rendimiento single-core y multi-core. La GPU es Adreno 830, adopta arquitectura de tiles, el rendimiento gráfico mejora un 40%, la NPU Hexagon tiene una potencia de cálculo de unos 45 TOPS, el rendimiento de inferencia de IA mejora un 45%. (Nota: la versión personalizada de Samsung Galaxy tiene frecuencias más altas, el supernúcleo puede alcanzar 4.47GHz.)
+- <strong>Qualcomm Snapdragon 8 Elite</strong>: adopta la arquitectura CPU auto-desarrollada Oryon (originada de la adquisición de Nuvia), 2 supernúcleos (4.32GHz) + 6 núcleos de rendimiento (3.53GHz), todos basados en el proceso de 3nm de segúnda generación de TSMC. Se despide definitivamente de la arquitectura de referencia ARM, con mejoras saltadas en rendimiento single-core y multi-core. La GPU es Adreno 830, adopta arquitectura de tiles, el rendimiento gráfico mejora un 40%, la NPU Hexagon tiene una potencia de cálculo de unos 45 TOPS, el rendimiento de inferencia de IA mejora un 45%. (Nota: la versión personalizada de Samsung Galaxy tiene frecuencias más altas, el supernúcleo puede alcanzar 4.47GHz.).
 - <strong>MedíaTek Dimensity 9400</strong>: 1 supernúcleo (Cortex-X925, 3.62GHz) + 3 núcleos de rendimiento (Cortex-X4, 3.3GHz) + 4 núcleos de eficiencia (Cortex-A720, 2.4GHz), continúa la arquitectura all-big-core, proceso de 3nm de segúnda generación de TSMC. La GPU es Immortalis-G925 (12 núcleos), el rendimiento pico mejora un 41%, el rendimiento de trazado de rayos mejora un 40%. El procesador de IA es la NPU 890 de octava generación, soporta ejecución de grandes modelos en el dispositivo, entrenamiento LoRA en el dispositivo y generación de video en el dispositivo.
 - <strong>Apple A18 Pro</strong>: 2 núcleos de rendimiento (aprox. 4.04GHz) + 4 núcleos de eficiencia (aprox. 2.4GHz), proceso de 3nm de segúnda generación de TSMC. La GPU de 6 núcleos soporta trazado de rayos a nivel de hardware, la NPU de 16 núcleos (aprox. 35 TOPS) proporciona potencia de cálculo para IA en el dispositivo y Apple Intelligence. La arquitectura auto-desarrollada de Apple sigue líderando en rendimiento single-core y eficiencia energética, la arquitectura de memoria unificada proporciona ventaja de ancho de banda para la inferencia de IA.
 - <strong>HiSilicon Kirin 9020 de Huawei</strong>: montado en la serie Mate 70, adopta la arquitectura CPU auto-desarrollada Taishan, las capacidades de NPU e ISP se refuerzan continuamente, soporta 5.5G y comunicación por satélite, representa el último avance de los chips nacionales.
@@ -249,7 +249,7 @@ Ante la deslumbrante gama de productos de cada marca, entender las reglas de nom
 
 ##### Series de productos de marcas principales:
 
-- <strong>Apple</strong>: iPhone (versión estándar) / iPhone Plus (pantalla grande) / iPhone Pro (versión profesional) / iPhone Pro Max (pantalla grande profesional) / iPhone SE (versión económica) / iPhone 16e (versión económica con IA, con chip A18 y módem C1 propio de Apple). En 2026, la serie iPhone 17 incorpora el chip A19 Pro en todos sus modelos, con capacidades de IA mejoradas.
+- <strong>Apple</strong>: iPhone (versión estándar) / iPhone Plus (pantalla grande) / iPhone Pro (versión profesional) / iPhone Pro Max (pantalla grande profesional) / iPhone SE (versión económica) / iPhone 16e (versión económica con IA, con chip A18 y módem C1 propio de Apple). En 2026, la serie iPhone 17 incorpora el chip A19 Pro en todos sus modelos, con capacidades de IA mejoradas
 - <strong>Huawei</strong>: serie Mate (insignia business) / serie P/Pura (insignia imagen) / serie Mate X (insignia plegable) / serie nova (gama media joven) / serie Enjoy (entrada)
 - <strong>Xiaomi</strong>: serie numérica Xiaomi (insignia) / Xiaomi MIX (insignia exploración/plegable) / serie Redmi K (insignia rendimiento) / serie Redmi Note (gama media) / serie numérica Redmi (entrada)
 - <strong>OPPO</strong>: serie Find X (insignia) / serie Reno (gama media) / serie A (entrada) / serie numérica OnePlus (insignia rendimiento)
@@ -267,7 +267,7 @@ Ante la deslumbrante gama de productos de cada marca, entender las reglas de nom
 - <strong>Note</strong>: originalmente se refería a móviles de pantalla grande, ahora cada marca lo usa diferente. Redmi Note es una serie de gama media.
 - <strong>Neo</strong>: versión nueva. Normalmente se refiere a modelos de gama media orientados al rendimiento.
 
-#### 5. Módem y antena: los héroes anónimos de la comunicación del móvil
+5. Módem y antena: los héroes anónimos de la comunicación del móvil
 
 El móvil puede llamar y conectarse gracias a la pareja del chip módem y la antena.
 

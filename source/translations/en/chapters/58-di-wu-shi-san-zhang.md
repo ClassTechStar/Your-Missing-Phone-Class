@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 53: Data Storage and Network Requests
 
 {class="chapter-intro mb-4"}
-An app you can only look at is dead; an app that can save data and reach the network is alive. This chapter introduces the "three-piece set" of Android's data layer: DataStore (for small settings), Room (for structured data), and Retrofit (for talking to servers), plus their "head dispatcher" — coroutines. After this chapter you'll be able to write real apps that remember user preferences and update their content in real time.
+An app you can only look at is dead; an app that can save data and reach the network is alive. This chapter introduces the "three-piece set" of Android's data layer: DataStore (for small settings), Room (for structured data), and Retrofit (for talking to servers), plus their "head dispatcher", coroutines. After this chapter you'll be able to write real apps that remember user preferences and update their content in real time.
 
 #### 1. Choosing a Storage Option: Look at This Table First
 
@@ -23,7 +23,7 @@ An app you can only look at is dead; an app that can save data and reach the net
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 How the data trio divides the work
 
-Memorize this mantra: "small settings go in DataStore, batches of data go in Room, outside data travels via Retrofit." SharedPreferences, common in older tutorials, has been replaced by DataStore, and hand-written SQL for SQLite has been replaced by Room — learn the new way and skip the old road.
+Memorize this mantra: "small settings go in DataStore, batches of data go in Room, outside data travels via Retrofit." SharedPreferences, common in older tutorials, has been replaced by DataStore, and hand-written SQL for SQLite has been replaced by Room, learn the new way and skip the old road.
 
 #### 2. DataStore: Saving Small Settings
 
@@ -54,7 +54,7 @@ Note that what comes back is a Flow — a data stream that "flows." The moment a
 
 #### 3. Room: Giving Your Data a "Real Home"
 
-An expense tracker holds hundreds or thousands of entries, and you'll want to query and summarize by category and by month — that takes a database. Room is the official wrapper around SQLite that makes "creating tables and querying data" feel as natural as writing Kotlin. Three pieces:
+An expense tracker holds hundreds or thousands of entries, and you'll want to query and summarize by category and by month, that takes a database. Room is the official wrapper around SQLite that makes "creating tables and querying data" feel as natural as writing Kotlin. Three pieces:
 
 ::: div .code-block
 :::inline div .code-head
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-You can lift this "trio" template straight into any of your projects — just change the field names. Queries return a Flow, so the UI refreshes automatically as the data changes. Simply delightful.
+You can lift this "trio" template straight into any of your projects, just change the field names. Queries return a Flow, so the UI refreshes automatically as the data changes. Simply delightful.
 
 #### 4. Retrofit: Talking to Servers
 
@@ -131,12 +131,12 @@ val result = api.getWeather("Beijing")
 Watch out: two iron rules of networking
 
 {class="mt-1"}
-(1) Never make network requests on the main thread — it will freeze the UI or even crash the app (NetworkOnMainThreadException). All network calls must go inside a coroutine (viewModelScope.launch). (2) Plain-text HTTP is blocked by default: Android 9 and up requires HTTPS. If you need an http:// local address while testing, you must explicitly declare usesCleartextTraffic in the Manifest — but a real product must use HTTPS everywhere.
+(1) Never make network requests on the main thread, it will freeze the UI or even crash the app (NetworkOnMainThreadException). All network calls must go inside a coroutine (viewModelScope.launch). (2) Plain-text HTTP is blocked by default: Android 9 and up requires HTTPS. If you need an http:// local address while testing, you must explicitly declare usesCleartextTraffic in the Manifest: but a real product must use HTTPS everywhere.
 :::
 
 #### 5. JSON Parsing: Translating Network Data
 
-Most data a server returns is JSON — text that looks like a "nested dictionary." Retrofit needs a "translator" to turn it into Kotlin objects. The two mainstream options in 2026:
+Most data a server returns is JSON, text that looks like a "nested dictionary." Retrofit needs a "translator" to turn it into Kotlin objects. The two mainstream options in 2026:
 
 ::: div .overflow-x-auto
 ```html
@@ -166,11 +166,11 @@ data class WeatherResponse(
 ```
 :::
 
-Whichever option you pick, the iron rule is: look at the real JSON response first, then define your fields. Many "parsing failed" bugs come from misspelled field names or wrongly guessed nesting — print out the raw JSON and compare, and you'll pinpoint the issue in ten seconds.
+Whichever option you pick, the iron rule is: look at the real JSON response first, then define your fields. Many "parsing failed" bugs come from misspelled field names or wrongly guessed nesting: print out the raw JSON and compare, and you'll pinpoint the issue in ten seconds.
 
 #### 6. Coroutines: The "Common Language" of Android Concurrency
 
-The suspend and launch you keep seeing above come from Kotlin coroutines — Android's official concurrency solution. A rough way to think of it: operations that "need to wait a while" (network, database) don't block the UI.
+The suspend and launch you keep seeing above come from Kotlin coroutines: Android's official concurrency solution. A rough way to think of it: operations that "need to wait a while" (network, database) don't block the UI.
 
 ::: div .code-block
 :::inline div .code-head
@@ -198,7 +198,7 @@ If you're starting from zero, just memorize the usage for now; you can dig into 
 Hands-on: Build a "Quote of the Day" Mini App
 
 {class="mt-1"}
-Find a free quotes API (something like hitokoto), use Retrofit to fetch a "quote of the day," show it in the center of the screen, and add a "New quote" button (re-request inside a coroutine). Then use Room to save favorite quotes into a "collection." This one exercise uses DataStore/Room/Retrofit/coroutines all together — finish it, and Chapters 7 and 8 will be a piece of cake.
+Find a free quotes API (something like hitokoto), use Retrofit to fetch a "quote of the day," show it in the center of the screen, and add a "New quote" button (re-request inside a coroutine). Then use Room to save favorite quotes into a "collection." This one exercise uses DataStore/Room/Retrofit/coroutines all together, finish it, and Chapters 7 and 8 will be a piece of cake.
 :::
 
 ::: div .chapter-summary
@@ -207,7 +207,7 @@ Chapter Summary
 
 - The mantra: small settings in DataStore, batches of data in Room, outside data via Retrofit
 - DataStore returns a Flow: when a value changes, observers get the new one automatically
-- Room's trio: @Entity (table) + @Dao (operations) + @Database (final assembly) — the template can be reused as-is
+- Room's trio: @Entity (table) + @Dao (operations) + @Database (final assembly): the template can be reused as-is
 - Retrofit in three steps: define the interface → create the instance → call it inside a coroutine
 - Two iron rules: no networking on the main thread; real products must use HTTPS
 - Coroutines = waiting without blocking the UI; viewModelScope is the screen's own workshop

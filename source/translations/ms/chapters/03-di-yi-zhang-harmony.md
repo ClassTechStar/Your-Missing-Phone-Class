@@ -21,7 +21,7 @@ Contohnya: Anda menggunakan telefon menonton video, ingin menonton di skrin besa
 
 #### II. HarmonyOS 4.3: Versi Matang Berdasarkan AOSP
 
-HarmonyOS 4.3 adalah versi yang digunakan secara meluas pada telefon Huawei kini. Perlu dijelaskan, HarmonyOS 4.3 serasi dengan rangka kerja kod projek sumber terbuka Android (AOSP), jadi ia boleh serasi sepenuhnya dengan aplikasi Android — kebanyakan App yang anda muat turun dari Huawei AppGallery pada asasnya masih aplikasi Android, berjalan melalui lapisan serasi HarmonyOS. Tetapi HarmonyOS 4.3 bukan sekadar shell Android, ia telah menambah banyak keupayaan teragih buatan sendiri Huawei, enjin Ark dan teknologi lain berdasarkan AOSP.
+HarmonyOS 4.3 adalah versi yang digunakan secara meluas pada telefon Huawei kini. Perlu dijelaskan, HarmonyOS 4.3 serasi dengan rangka kerja kod projek sumber terbuka Android (AOSP), jadi ia boleh serasi sepenuhnya dengan aplikasi Android: kebanyakan App yang anda muat turun dari Huawei AppGallery pada asasnya masih aplikasi Android, berjalan melalui lapisan serasi HarmonyOS. Tetapi HarmonyOS 4.3 bukan sekadar shell Android, ia telah menambah banyak keupayaan teragih buatan sendiri Huawei, enjin Ark dan teknologi lain berdasarkan AOSP.
 
 ##### Ciri teras:
 
@@ -39,16 +39,16 @@ HarmonyOS 4.3 adalah versi yang digunakan secara meluas pada telefon Huawei kini
 - <strong>Super transit</strong>: Kawasan storan sementara, boleh menyimpan teks, gambar, fail sementara, kemudian seret ke mana-mana App untuk digunakan. Perkongsian merentasi aplikasi menjadi sangat lancar.
 - <strong>Carian pintar</strong>: Carian global, boleh cari aplikasi, fail, tetapan, laman web.
 
-#### III. HarmonyOS NEXT (HarmonyOS 6): Permulaan Sebenar Sistem Pengendalian Sendiri Huawei
+III. HarmonyOS NEXT (HarmonyOS 6): Permulaan Sebenar Sistem Pengendalian Sendiri Huawei
 
-HarmonyOS NEXT (HarmonyOS NEXT 5.0) berbeza secara asas dengan HarmonyOS 4.3 — ia menggunakan mikrokernel HarmonyOS buatan sendiri Huawei, tidak lagi bergantung kepada kernel Linux dan kod AOSP, juga <strong>tidak lagi menyokong aplikasi Android secara langsung</strong>. Ini adalah langkah penting HarmonyOS dari "bentuk peralihan serasi Android" secara rasmi menuju "sistem pengendalian sepenuhnya bebas".
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) berbeza secara asas dengan HarmonyOS 4.3, ia menggunakan mikrokernel HarmonyOS buatan sendiri Huawei, tidak lagi bergantung kepada kernel Linux dan kod AOSP, juga <strong>tidak lagi menyokong aplikasi Android secara langsung</strong>. Ini adalah langkah penting HarmonyOS dari "bentuk peralihan serasi Android" secara rasmi menuju "sistem pengendalian sepenuhnya bebas".
 
 ##### Perubahan besar:
 
 - <strong>Kernel sepenuhnya sendiri</strong>: HarmonyOS NEXT menggunakan kernel buatan sendiri Huawei, tidak lagi mengandungi sebarang kod AOSP. Sistem lebih ringkas, lebih selamat, lebih cekap.
 - <strong>Tidak lagi menyokong aplikasi Android</strong>: Ini adalah perubahan terbesar. HarmonyOS NEXT hanya boleh menjalankan aplikasi HarmonyOS natif, tidak boleh memasang dan menjalankan fail APK. Sebelum menaik taraf, sila sahkan App yang sering anda guna ada versi HarmonyOS natif.
 - <strong>Ekosistem aplikasi natif</strong>: Huawei sedang berusaha mendorong pembangun untuk memindahkan aplikasi ke platform HarmonyOS natif. Kini App arus perdana seperti WeChat, Alipay, Taobao telah melancarkan versi HarmonyOS natif, tetapi sesetengah aplikasi niche mungkin belum disesuaikan.
-- <strong>Seni bina keselamatan Star Shield</strong>: Sistem keselamatan baharu, perlindungan rantaian penuh dari perkakasan ke perisian. Menyokong kawalan kebenaran lebih halus, seperti "lokasi kabur" — aplikasi hanya tahu anda secara kasar di mana, tidak tahu lokasi tepat.
+- <strong>Seni bina keselamatan Star Shield</strong>: Sistem keselamatan baharu, perlindungan rantaian penuh dari perkakasan ke perisian. Menyokong kawalan kebenaran lebih halus, seperti "lokasi kabur", aplikasi hanya tahu anda secara kasar di mana, tidak tahu lokasi tepat.
 - <strong>Integrasi mendalam AI</strong>: Keupayaan AI tahap sistem, bukan sahaja App tertentu ada AI. Contohnya sari kata AI boleh menterjemah video masa nyata, potong AI boleh mengecam subjek secara pintar.
 - <strong>Aliran merentasi peranti tanpa siut</strong>: Keupayaan teragih lebih lanjut. Status aplikasi boleh bertukar antara peranti tanpa siut, dokumen yang anda edit pada telefon, berjalan ke komputer auto dibuka pada komputer.
 - <strong>Perkhidmatan meta</strong>: Perkhidmatan ringan yang boleh digunakan tanpa pemasangan. Contohnya imbas kod QR terus membuka fungsi tertentu, tanpa perlu muat turun App dahulu.

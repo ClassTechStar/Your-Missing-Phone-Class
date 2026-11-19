@@ -42,7 +42,7 @@ struct ContentView: View {
 
 Puntos clave: una vista = un struct que cumple el protocolo View; la propiedad body describe la interfaz; los .modificadores() se encadenan como quien se maquilla. Eso es todo el suelo firme de SwiftUI.
 
-#### 2. Vistas básicas: texto, botones, campos de texto e imágenes
+2. Vistas básicas: texto, botones, campos de texto e imágenes
 
 ::: div .overflow-x-auto
 ```html
@@ -59,7 +59,7 @@ Fíjate en Image(systemName:): Apple trae de serie la biblioteca de iconos SF Sy
 
 - VStack: apila en vertical (como hacer fila en la cantina);
 - HStack: alinea en horizontal (como sentarse lado a lado);
-- ZStack: superpone elementos (como cartas apiladas; ideal para insignias y capas).
+- ZStack: superpone elementos (como cartas apiladas; ideal para insignias y capas)
 
 ::: div .code-block
 :::inline div .code-head
@@ -154,7 +154,7 @@ Figura 3: el flujo de datos en un solo sentido «estado → interfaz» de SwiftU
 
 - Macro #Preview: añade #Preview { ContentView() } al final del archivo y el lienzo de la derecha renderiza en tiempo real: lo que ves es lo que obtienes mientras escribes código;
 - Modo oscuro gratis: usa colores del sistema (Color(.systemGray6), .primary) en vez de colores fijos y el modo oscuro se adapta solo, sin escribir ni una línea más;
-- Animación en una línea: withAnimation { count += 1 } o añade .animation(.default, value: count) a la vista: transiciones suaves.
+- Animación en una línea: withAnimation { count += 1 } o añade .animation(.default, value: count) a la vista: transiciones suaves
 
 ::: div .code-block
 :::inline div .code-head
@@ -193,7 +193,7 @@ El error típico del principiante es «afinar las animaciones cuando la interfaz
 {class="font-semibold"}
 Manos a la obra: crea un «botón de humor»
 
-#### 6. Referencia rápida de modificadores: esta página a mano, la interfaz resuelta
+6. Referencia rápida de modificadores: esta página a mano, la interfaz resuelta
 
 ::: div .overflow-x-auto
 ```html

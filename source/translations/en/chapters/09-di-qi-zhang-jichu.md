@@ -35,9 +35,9 @@ Supported models:
 
 ##### Trivia
 
-1. Satellite communication requires special hardware antennas in the phone—not all phones support it. Additionally, satellite communication usually requires a paid subscription service, but the emergency SOS feature is generally free.
+1. Satellite communication requires special hardware antennas in the phone:not all phones support it. Additionally, satellite communication usually requires a paid subscription service, but the emergency SOS feature is generally free.
 2. II. Off-Grid Communication: A New Way of Close-Range Communication
-3. "Off-grid communication" refers to technology that allows two phones to communicate directly with each other without mobile networks or Wi-Fi.
+3. "Off-grid communication" refers to technology that allows two phones to communicate directly, without mobile networks or Wi-Fi.
 4. Technical principle:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -58,7 +58,7 @@ Application scenarios:
 
 ##### Smart home
 
-- <strong>: When crowds at concerts and sporting events cause poor signal.</strong> Supported platforms:
+- <strong>: When crowds at concerts and sporting events cause poor signal.</strong> Supported platforms:.
 - <strong>Apple</strong>: iOS 17's "NameDrop" and "Find Friends Offline" features.
 - <strong>Huawei</strong>: The Celia Chat app supports off-grid calls.
 
@@ -66,9 +66,9 @@ Application scenarios:
 
 - <strong>Apple</strong> III. Crash Detection: A Lifesaver at Critical Moments
 - <strong>Huawei</strong> Working principle:
-- <strong>Xiaomi</strong> Pop up a countdown interface, asking if you're okay.
+- <strong>Xiaomi</strong> Pop up a countdown interface, asking if you're okay
 
-#### If you don't respond before the countdown ends, automatically dial emergency numbers.
+If you don't respond before the countdown ends, automatically dial emergency numbers.
 
 Send your location to emergency contacts.
 
@@ -77,19 +77,19 @@ Send your location to emergency contacts.
 Apple
 
 1. : iPhone 14 series and later.
-2. Android
+2. Android.
 3. : Some high-end models have successively added support.
 
 ##### Things to note:
 
-- <strong>Apple</strong> May trigger false alarms (like roller coasters, intense exercise)—just cancel in time.
+- <strong>Apple</strong> May trigger false alarms (like roller coasters, intense exercise),just cancel in time.
 - <strong>Android</strong> IV. SparkLink Technology: Next-Generation Wireless Connectivity
 
 ##### SparkLink is a new-generation wireless communication technology led by Huawei, aiming to replace Bluetooth and Wi-Fi in certain scenarios. It matches or even exceeds existing solutions on key metrics: air interface rate up to 900Mbps (far exceeding Bluetooth's 50Mbps), latency as low as 20μs (Bluetooth about 15ms), and a single network supports 4096 devices connected simultaneously (Bluetooth usually under 8).
 
 - Technical features:
 - Ultra-low latency
-- : End-to-end latency of only 20 microseconds (0.02ms), two orders of magnitude lower than Bluetooth—gaming and music sync are virtually imperceptible.
+- : End-to-end latency of only 20 microseconds (0.02ms), two orders of magnitude lower than Bluetooth,gaming and music sync are virtually imperceptible
 
 #### High speed
 
@@ -118,5 +118,5 @@ Search for "crash detection" or "emergency SOS" to check if it's enabled.
 <i class="fas fa-rocket mr-2"></i>If your phone is Huawei, see if it supports SparkLink device connections.
 
 {class="mt-1"}
-Learn how to use these features—they may come in handy at critical moments.
+Learn how to use these features,they may come in handy at critical moments.
 :::

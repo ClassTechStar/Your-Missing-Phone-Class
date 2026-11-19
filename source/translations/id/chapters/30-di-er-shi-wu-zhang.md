@@ -2,22 +2,22 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Bab 25: Penanganan Ponsel Bekas dan Warisan Digital
+nav: Bab 25: Sebelum menjual ponsel lama, urus dulu ini
 toc: default
 kind: chapter
 ---
 
-### Bab 25: Penanganan Ponsel Bekas dan Warisan Digital
+### Bab 25: Sebelum menjual ponsel lama, urus dulu ini
 
 {class="chapter-intro mb-4"}
-Hei, teman-teman, setelah lebih dari dua puluh bab "pelatihan", saya yakin Anda telah tumbuh dari "pemula digital" menjadi pengguna ponsel yang cukup mahir. Tapi kehidupan teknologi selalu berputar—cinta baru akhirnya menjadi cinta lama. Saat Anda bersiap mempensiunkan "rekan lama" Anda, tahukah Anda bagaimana berpisah dengan layak dan aman?
+Hei, teman-teman, setelah lebih dari dua puluh bab "pelatihan", saya yakin Anda telah tumbuh dari "pemula digital" menjadi pengguna ponsel yang cukup mahir. Tapi kehidupan teknologi selalu berputar:cinta baru akhirnya menjadi cinta lama. Saat Anda bersiap mempensiunkan "rekan lama" Anda, tahukah Anda bagaimana berpisah dengan layak dan aman?
 
-#### 1. "Eutanasia" Ponsel Lama: Panduan Jual atau Hadiah dengan Aman
+1. "Eutanasia" Ponsel Lama: Panduan Jual atau Hadiah dengan Aman
 
-Prinsip inti: Data cleaning bukan "hapus", tapi "overwrite". Banyak orang mengira drag foto ke recycle bin, clear album sudah selesai, hasilnya setelah ponsel berganti tangan, pemilik baru pakai data recovery software scan, foto lama, riwayat chat, foto KTP semua kembali — "skenario memalukan" seperti ini terjadi setiap tahun.
+Prinsip inti: Data cleaning bukan "hapus", tapi "overwrite". Banyak orang mengira drag foto ke recycle bin, clear album sudah selesai, hasilnya setelah ponsel berganti tangan, pemilik baru pakai data recovery software scan, foto lama, riwayat chat, foto KTP semua kembali, "skenario memalukan" seperti ini terjadi setiap tahun.
 
-1. <strong>"Bersih-bersih" mandiri</strong>: Selesaikan backup lengkap terakhir kali, logout semua akun (iCloud, akun Huawei/Xiaomi/Samsung, akun Google), matikan fungsi "Find My Phone" — jika tidak pengguna berikutnya akan diblokir oleh activation lock.
-2. <strong>"Format" ultimate</strong>: "Factory reset" ponsel modern biasanya termasuk encrypted wipe — yang dihancurkan adalah encryption key itu sendiri, sekali key hilang, seluruh data disk instan menjadi gibberish.
+1. <strong>"Bersih-bersih" mandiri</strong>: Selesaikan backup lengkap terakhir kali, logout semua akun (iCloud, akun Huawei/Xiaomi/Samsung, akun Google), matikan fungsi "Find My Phone", jika tidak pengguna berikutnya akan diblokir oleh activation lock.
+2. <strong>"Format" ultimate</strong>: "Factory reset" ponsel modern biasanya termasuk encrypted wipe, yang dihancurkan adalah encryption key itu sendiri, sekali key hilang, seluruh data disk instan menjadi gibberish.
 3. <strong>"Ilusi" Terakhir (hanya perangkat lama)</strong>: Ponsel modern (iOS 8+, Android 6+) sudah default full disk encryption (FBE), factory reset akan menghancurkan encryption key, data secara teori tidak bisa recovery,<strong>tidak perlu langkah ini</strong>. Hanya untuk perangkat non-encrypted yang sangat lama (sebelum 2015), baru perlu setelah factory reset pakai junk file fill storage, lalu execute factory reset sekali lagi.
 
 <strong>Tabel Cepat Path Wipe Data Berbagai Merek</strong>: Meskipun prinsip sama, tapi setiap merek menyembunyikan "factory reset" di posisi yang sedikit berbeda, perbedaan kunci sebagai berikut.
@@ -78,7 +78,7 @@ Prinsip inti: Data cleaning bukan "hapus", tapi "overwrite". Banyak orang mengir
 
 #### 2. Warisan Digital: Bagaimana Menempatkan Jiwa Sosial Anda?
 
-Data di ponsel, sudah lama bukan "virtual" lagi. Itu membawa dana Anda, hubungan sosial, hasil kreasi, bahkan "identitas digital" Anda.<strong>Setelah seseorang meninggal, aset ini bagaimana harus ditangani?</strong> Ini bukan lagi masalah abstrak, tapi dilema nyata yang dihadapi semakin banyak keluarga — kerabat tidak tahu password, platform tidak mengizinkan warisan, cryptocurrency selamanya hilang.
+Data di ponsel, sudah lama bukan "virtual" lagi. Itu membawa dana Anda, hubungan sosial, hasil kreasi, bahkan "identitas digital" Anda.<strong>Setelah seseorang meninggal, aset ini bagaimana harus ditangani?</strong> Ini bukan lagi masalah abstrak, tapi dilema nyata yang dihadapi semakin banyak keluarga, kerabat tidak tahu password, platform tidak mengizinkan warisan, cryptocurrency selamanya hilang.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -119,7 +119,7 @@ Kedua App yang paling sering dipakai orang Tiongkok ini, aturannya masing-masing
 {class="font-semibold mt-4 mb-1"}
 ##### 2. "Legacy Contact" Apple: Tunjuk Lebih Awal, Hasilnya Berlipat Ganda
 
-Sejak iOS 15.2 Apple meluncurkan fitur "Legacy Contact", mengizinkan pengguna menunjuk kontak terpercaya lebih awal, setelah meninggal kontak tersebut bisa dengan <strong>death certificate + Legacy Contact access key</strong> mengajukan akses ke data iCloud almarhum (foto, notes, kontak, notes, dll.). Langkah operasi:
+Sejak iOS 15.2 Apple meluncurkan fitur "Legacy Contact", mengizinkan pengguna menunjuk kontak terpercaya lebih awal, setelah meninggal kontak tersebut bisa dengan <strong>death certificate + ,Legacy Contact access key</strong> mengajukan akses ke data iCloud almarhum (foto, notes, kontak, notes, dll.). Langkah operasi:
 
 1. Di iPhone masuk <strong>[Settings] &gt; [Nama Anda] &gt; [Sign-In &amp; Security] &gt; [Legacy Contact]</strong>.
 2. Klik "Add Legacy Contact", gunakan Face ID untuk konfirmasi identitas.
@@ -194,8 +194,8 @@ Will properti tradisional tidak bisa mengurus aset digital. Disarankan Anda seti
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Sosial: WeChat (akun xxx), Weibo, Douyin, Bilibili, Xiaohongshu, dll.
-- Pembayaran: Alipay, WeChat Pay, berbagai App kartu bank
-- Cloud: iCloud, Huawei Cloud, Xiaomi Cloud, akun Google, akun Microsoft
+- Pembayaran: Alipay, WeChat Pay, berbagai App kartu bank.
+- Cloud: iCloud, Huawei Cloud, Xiaomi Cloud, akun Google, akun Microsoft.
 - Email: QQ Mail, NetEase Mail, Gmail, dll.
 - Lainnya: Cloud drive, subscription service, akun game, dll.
 

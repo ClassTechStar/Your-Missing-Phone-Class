@@ -25,7 +25,7 @@ Android officially defines four basic components, each responsible for one kind 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Android's four components at a glance
 
-As a beginner you'll spend 95% of your time working with the Activity. The Service and BroadcastReceiver come into play for things like music playback and push notifications, and the ContentProvider is used the least (the system has already wrapped the common data for you). One more thing: all four components must "register their household" in AndroidManifest.xml — if they're not registered, the system can't find them.
+As a beginner you'll spend 95% of your time working with the Activity. The Service and BroadcastReceiver come into play for things like music playback and push notifications, and the ContentProvider is used the least (the system has already wrapped the common data for you). One more thing: all four components must "register their household" in AndroidManifest.xml, if they're not registered, the system can't find them.
 
 #### 2. The Activity Lifecycle: Your First Android "Treasure Map"
 
@@ -65,7 +65,7 @@ Watch out: rotating the screen "kills" the Activity
 The most classic beginner fail: you rotate the screen and everything typed into the input fields is gone. Why? By default, rotating the screen destroys and recreates the Activity (running through onDestroy → onCreate). The fix: save state with rememberSaveable (the Compose replacement for remember); it automatically recovers the values when the Activity is rebuilt. You'll use it again and again in Chapters 6 and 7.
 :::
 
-#### 3. Intents: The "Tickets" for Traveling Inside and Outside the App
+3. Intents: The "Tickets" for Traveling Inside and Outside the App
 
 An Intent is the "ticket" components use to talk to each other. Whether you want to jump from one screen to another, open the browser, or launch the camera, you have to "buy a ticket and hop on":
 
@@ -119,14 +119,14 @@ navController.popBackStack()              // go back
 Tip: What if you have lots of screens?
 
 {class="mt-1"}
-As the project grows, keep all the screen routes together in one file (say, AppNavGraph.kt) and manage them in one place — don't let the "where do I go next" logic scatter across every screen. It's the first step from "it runs" to "it's maintainable."
+As the project grows, keep all the screen routes together in one file (say, AppNavGraph.kt) and manage them in one place, don't let the "where do I go next" logic scatter across every screen. It's the first step from "it runs" to "it's maintainable."
 :::
 
-#### 5. A Quick Look: What Is a Fragment (and Why This Book Doesn't Teach It)
+5. A Quick Look: What Is a Fragment (and Why This Book Doesn't Teach It)
 
-Digging through older tutorials, you'll definitely bump into Fragments — reusable pieces of UI embedded in an Activity, the absolute star of the old multi-screen architecture. But in the Compose era, Composable functions plus Navigation routes are all you need, and the official docs have downplayed Fragments. That's why this book leaves them off the main path.
+Digging through older tutorials, you'll definitely bump into Fragments, reusable pieces of UI embedded in an Activity, the absolute star of the old multi-screen architecture. But in the Compose era, Composable functions plus Navigation routes are all you need, and the official docs have downplayed Fragments. That's why this book leaves them off the main path.
 
-My advice: don't reach for Fragments in new projects; just know they're "UI pieces embedded in an Activity" for when you read old code or get asked in an interview. For learning materials, always prefer anything from 2023 onward — Android's stack of "old almanacs" goes stale faster than you'd think.
+My advice: don't reach for Fragments in new projects; just know they're "UI pieces embedded in an Activity" for when you read old code or get asked in an interview. For learning materials, always prefer anything from 2023 onward, Android's stack of "old almanacs" goes stale faster than you'd think.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

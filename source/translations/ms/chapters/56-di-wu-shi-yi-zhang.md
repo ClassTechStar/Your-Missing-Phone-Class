@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 51: Pembangunan Antara Muka — Pengenalan kepada Jetpack Compose
 
 {class="chapter-intro mb-4"}
-Antara muka ialah segala yang dilihat pengguna. Sebelum Compose muncul, antara muka Android ditulis dengan XML — rumit seperti soalan isi tempat kosong; pada 2021 Google memperkenalkan Jetpack Compose: terus 'melukis' antara muka dengan kod Kotlin, apa yang dilihat itulah yang diperoleh, ubah satu baris kod dan pratonton terus disegar semula. Menjelang 2026, Compose sudah menjadi arus perdana mutlak untuk projek baharu. Dalam bab ini, kita belajar 'melukis'.
+Antara muka ialah segala yang dilihat pengguna. Sebelum Compose muncul, antara muka Android ditulis dengan XML, rumit seperti soalan isi tempat kosong; pada 2021 Google memperkenalkan Jetpack Compose: terus 'melukis' antara muka dengan kod Kotlin, apa yang dilihat itulah yang diperoleh, ubah satu baris kod dan pratonton terus disegar semula. Menjelang 2026, Compose sudah menjadi arus perdana mutlak untuk projek baharu. Dalam bab ini, kita belajar 'melukis'.
 
 #### 1. Pemikiran Compose: Antara Muka Ialah Fungsi
 
@@ -41,7 +41,7 @@ fun HomeScreen() {
 ```
 :::
 
-Perhatikan 'topi' @Composable ini — ia memberitahu kompiler 'ini bongkahan antara muka'. Bongkahan boleh disarang tanpa had, dan itulah keseluruhan rahsia Compose.
+Perhatikan 'topi' @Composable ini, ia memberitahu kompiler 'ini bongkahan antara muka'. Bongkahan boleh disarang tanpa had, dan itulah keseluruhan rahsia Compose.
 
 #### 2. Komponen Asas: Teks, Butang, Kotak Input, Imej
 
@@ -80,7 +80,7 @@ fun BasicWidgets() {
 ```
 :::
 
-Dalam dua baris kotak input itu muncul remember { mutableStateOf("") } — inilah 'sihir keadaan' (state) Compose, dijelaskan terperinci dalam Bahagian 5 bab ini. Buat sementara ini, cukup kenal muka dahulu.
+Dalam dua baris kotak input itu muncul remember { mutableStateOf("") }: inilah 'sihir keadaan' (state) Compose, dijelaskan terperinci dalam Bahagian 5 bab ini. Buat sementara ini, cukup kenal muka dahulu.
 
 #### 3. Set Tiga Susun Atur: Column, Row, Box
 
@@ -88,7 +88,7 @@ Komponen sudah ada, macam mana menyusunnya? Ingat tiga 'kotak' ini:
 
 - Column: disusun menegak (seperti beratur mengambil makanan);
 - Row: disusun mengufuk (seperti duduk bersebelahan);
-- Box: ditindih (seperti kad poker disusun bersama, sesuai untuk lencana sudut dan topeng).
+- Box: ditindih (seperti kad poker disusun bersama, sesuai untuk lencana sudut dan topeng)
 
 ::: div .code-block
 :::inline div .code-head
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-Mahu susun atur lebih menawan? Tambahkan Modifier (pengubah) pada komponen — ia umpama memberi 'solekan' kepada bongkahan kayu:
+Mahu susun atur lebih menawan? Tambahkan Modifier (pengubah) pada komponen, ia umpama memberi 'solekan' kepada bongkahan kayu:
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,7 +135,7 @@ Text(
 Perhatian: Susunan Modifier Ada Caranya
 
 {class="mt-1"}
-padding(16.dp).background(Blue) dan background(Blue).padding(16.dp) memberi hasil berbeza — yang pertama 'beri ruang dahulu, kemudian warna' (latar belakang tidak termasuk jidar), yang kedua 'warna dahulu, kemudian beri ruang' (latar belakang termasuk jidar). Pemula paling mudah tersilap melukis 'jidar putih pelik' di sini. Jika tidak pasti, tukar susunannya dan cuba; pratonton terus memberitahu jawapannya.
+padding(16.dp).background(Blue) dan background(Blue).padding(16.dp) memberi hasil berbeza, yang pertama 'beri ruang dahulu, kemudian warna' (latar belakang tidak termasuk jidar), yang kedua 'warna dahulu, kemudian beri ruang' (latar belakang termasuk jidar). Pemula paling mudah tersilap melukis 'jidar putih pelik' di sini. Jika tidak pasti, tukar susunannya dan cuba; pratonton terus memberitahu jawapannya.
 :::
 
 #### 4. Keadaan: Menghidupkan Antara Muka
@@ -163,7 +163,7 @@ fun Counter() {
 ```
 :::
 
-Tiga baris kod, satu pengira yang hidup. Inilah kelebihan Compose berbanding cara lama: tidak perlu 'segar semula antara muka' secara manual, ubah data sahaja. Ingat dua fungsi utama: remember (mengekalkan nilai supaya tidak dikosongkan semasa antara muka disusun semula) dan mutableStateOf (memberitahu Compose 'nilai ini berubah, lukis semula').
+Tiga baris kod, satu pengira yang hidup. Inilah kelebihan Compose berbanding cara lama: tidak perlu 'segar semula antara muka' secara manual, ubah data sahaja. Ingat dua fungsi utama: remember (mengekalkan nilai supaya tidak dikosongkan semasa antara muka ,disusun semula) dan mutableStateOf (memberitahu Compose 'nilai ini berubah, lukis semula').
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -178,29 +178,29 @@ Tiga baris kod, satu pengira yang hidup. Inilah kelebihan Compose berbanding car
 Rajah 3: Aliran data satu hala 'keadaan → antara muka' Compose
 :::
 
-#### 5. Tema dan Mod Gelap: Konfigurasi Sekali, Berkuat Kuasa Global
+5. Tema dan Mod Gelap: Konfigurasi Sekali, Berkuat Kuasa Global
 
 MyFirstAppTheme { ... } dalam projek templat itulah tema. Ia berasaskan spesifikasi reka bentuk Material 3, membantu anda mengurus warna, fon dan bentuk secara menyeluruh. Menyokong mod gelap hanya perlu tiga langkah:
 
 1. Takrifkan dua set skema warna cerah/gelap dalam tema (templat sudah menjana ColorScheme secara automatik);
 2. Apabila sistem bertukar ke mod gelap, isSystemInDarkTheme() menilai secara automatik;
-3. Guna warna yang disediakan tema (contohnya MaterialTheme.colorScheme.primary) dan bukannya nilai warna yang ditulis terus.
+3. Guna warna yang disediakan tema (contohnya MaterialTheme.colorScheme.primary) dan bukannya nilai warna yang ditulis terus
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Petua: Pengambilan Warna Dinamik Material 3
 
 {class="mt-1"}
-'Material You' sejak Android 12 membolehkan aplikasi mendapatkan warna daripada kertas dinding anda. Templat Compose menyokongnya secara lalai (dynamicColor). Aplikasi anda akan 'bertukar pakaian' secara automatik pada telefon pengguna berbeza — itulah romantik Android moden.
+'Material You' sejak Android 12 membolehkan aplikasi mendapatkan warna daripada kertas dinding anda. Templat Compose menyokongnya secara lalai (dynamicColor). Aplikasi anda akan 'bertukar pakaian' secara automatik pada telefon pengguna berbeza, itulah romantik Android moden.
 :::
 
-#### 6. Pratonton, Animasi dan Sunting Langsung: 'Kuasa Tambahan' Compose
+6. Pratonton, Animasi dan Sunting Langsung: 'Kuasa Tambahan' Compose
 
 Tiga 'kuasa tambahan' Compose dalam pengalaman pembangunan; sekali guna, sukar kembali:
 
-- Pratonton @Preview: tambahkan anotasi @Preview pada Composable, Android Studio terus memaparkan antara muka di sebelah kanan — apa yang dilihat itulah yang diperoleh semasa mengubah kod, tidak perlu memasang ke telefon setiap kali;
+- Pratonton @Preview: tambahkan anotasi @Preview pada Composable, Android Studio terus memaparkan antara muka di sebelah kanan, apa yang dilihat itulah yang diperoleh semasa mengubah kod, tidak perlu memasang ke telefon setiap kali;
 - Suntingan langsung (Live Edit): Android Studio 2026 menyokong 'kemas kini panas' sebahagian perubahan pada emulator/peranti sebenar; penyesuaian kecil seperti mengubah warna teks berubah sekelip mata pada peranti;
-- API animasi: animateFloatAsState, AnimatedVisibility — beberapa baris kod sudah cukup untuk membuat elemen beralih dengan lancar — 'kesan premium' sering cuma berbeza dengan puluhan baris ini.
+- API animasi: animateFloatAsState, AnimatedVisibility — beberapa baris kod sudah cukup untuk membuat elemen beralih dengan lancar, 'kesan premium' sering cuma berbeza dengan puluhan baris ini
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 Petua: Fungsi Dahulu, Animasi Kemudian
 
 {class="mt-1"}
-Penyakit lazim pemula: 'antara muka belum betul, dah sibuk fikirkan animasi'. Pastikan fungsi berjalan dahulu, barulah tambahkan kesan gerak secara menyeluruh pada akhirnya — ini juga prinsip 'ringkas itu utama': animasi ialah hiasan yang menambah nilai, fungsi ialah pertolongan di saat genting.
+Penyakit lazim pemula: 'antara muka belum betul, dah sibuk fikirkan animasi'. Pastikan fungsi berjalan dahulu, barulah tambahkan kesan gerak secara menyeluruh pada akhirnya, ini juga prinsip 'ringkas itu utama': animasi ialah hiasan yang menambah nilai, fungsi ialah pertolongan di saat genting.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -246,7 +246,7 @@ Ringkasan Bab
 - Pemikiran Compose: antara muka = fungsi @Composable, disarang gaya bongkahan
 - Empat komponen: Text / Button / TextField / Image
 - Set tiga susun atur: Column menegak, Row mengufuk, Box bertindih
-- Rantai Modifier 'solekan': padding, fillMaxWidth, background, clickable — susunannya bermakna
+- Rantai Modifier 'solekan': padding, fillMaxWidth, background, clickable, susunannya bermakna
 - Keadaan ialah jiwa: remember + mutableStateOf, ubah data maka antara muka dilukis semula secara automatik
 - Tema guna Material 3 + warna dinamik, mod gelap dikonfigurasi sekali dan berkuat kuasa global
 :::

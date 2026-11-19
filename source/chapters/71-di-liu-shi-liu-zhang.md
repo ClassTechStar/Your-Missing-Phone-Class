@@ -10,14 +10,14 @@ kind: chapter
 ### 第六十六章：项目二——天气查询 App（网络版）
 
 {class="chapter-intro mb-4"}
-记账本是"练内功"，天气 App 是"见世面"——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理"加载中/成功/失败"三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何"联网 App"的能力——新闻、汇率、翻译，套路一模一样。
+记账本是"练内功"，天气 App 是"见世面"——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理"加载中/成功/失败"三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何"联网 App"的能力，新闻、汇率、翻译，套路一模一样。
 
 #### 一、申请免费天气 API
 
 个人练手，推荐 <strong>OpenWeatherMap</strong> 或国内的 <strong>和风天气（QWeather）</strong>——都有免费额度，注册即用。以 OpenWeatherMap 为例：
 
-1. 注册账号 → 在 API keys 页面生成一个 Key（<code class="inline">apikey</code>）；
-2. 免费版可调用 Current Weather 接口：<code class="inline">api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric</code>；
+1. 注册账号 → 在 API keys 页面生成一个 Key（<code class="inline">apikey</code>）。
+2. 免费版可调用 Current Weather 接口：<code class="inline">api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric</code>。
 3. 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
@@ -143,9 +143,9 @@ struct WeatherContent: View {
 
 #### 五、交互细节与收藏城市
 
-- <strong>搜索框</strong>：顶部 <code class="inline">.searchable</code> 修饰符，系统自带搜索交互，提交时调 <code class="inline">vm.search</code>；
-- <strong>收藏城市</strong>：把常看的城市存进 UserDefaults，下次打开自动查；
-- <strong>下拉刷新</strong>：<code class="inline">.refreshable { await vm.search(...) }</code> 一行搞定；
+- <strong>搜索框</strong>：顶部 <code class="inline">.searchable</code> 修饰符，系统自带搜索交互，提交时调 <code class="inline">vm.search</code>。
+- <strong>收藏城市</strong>：把常看的城市存进 UserDefaults，下次打开自动查。
+- <strong>下拉刷新</strong>：<code class="inline">.refreshable { await vm.search(...) }</code> 一行搞定。
 - <strong>天气图标</strong>：用 <code class="inline">Image(systemName:)</code> 按描述映射（sun.max / cloud.rain / snowflake），界面立刻活起来。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -164,9 +164,9 @@ OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "b
 
 联网 App 出问题，十有八九在"请求没发对"或"响应没解析对"。三个调试手段：
 
-1. <strong>打印原始数据</strong>：把 <code class="inline">String(data: data, encoding: .utf8)</code> 打印出来看原始 JSON——字段名、类型一目了然，比猜快十倍；
-2. <strong>抓包工具</strong>：Mac 上免费的 Proxyman / 开源 Charles 能截获 App 的全部请求和响应，像 X 光一样看清网络层；
-3. <strong>模拟弱网</strong>：模拟器菜单 Features → Network Link Conditioner（需从开发者网站下载工具），能模拟 3G、高延迟——测出"转圈半天"的体验问题。
+1. <strong>打印原始数据</strong>：把 <code class="inline">String(data: data, encoding: .utf8)</code> 打印出来看原始 JSON：字段名、类型一目了然，比猜快十倍。
+2. <strong>抓包工具</strong>：Mac 上免费的 Proxyman / 开源 Charles 能截获 App 的全部请求和响应，像 X 光一样看清网络层。
+3. <strong>模拟弱网</strong>：模拟器菜单 Features → Network Link Conditioner（需从开发者网站下载工具），能模拟 3G、高延迟，测出"转圈半天"的体验问题。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -184,9 +184,9 @@ OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "b
 {class="font-semibold mb-1"}
 <i class="fas fa-flag-checkered mr-1"></i>本章小结
 
-- 先浏览器试 API、看懂 JSON，再写代码——"预习"永远不亏
+- 先浏览器试 API、看懂 JSON，再写代码："预习"永远不亏
 - API Key 藏进 xcconfig，绝不进代码库
 - Codable 模型 + URLSession async/await：字段对上，JSON 自动解析
 - loading/success/error 三段式状态是联网界面万金油
-- 断网、空输入、城市不存在——错误处理是联网 App 的及格线
+- 断网、空输入、城市不存在，错误处理是联网 App 的及格线
 :::

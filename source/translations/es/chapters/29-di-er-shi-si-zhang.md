@@ -83,7 +83,7 @@ Para comprender más intuitivamente las ventajas y desventajas del bloqueo del b
 ```
 :::
 
-#### II. Proceso detallado de desbloqueo del BL (ejemplo con Xiaomi)
+II. Proceso detallado de desbloqueo del BL (ejemplo con Xiaomi)
 
 1. <strong>Solicitar permiso de desbloqueo</strong>: solicita el desbloqueo en la web de herramientas de desbloqueo de Xiaomi.
 2. <strong>Vincular cuenta</strong>: vincula tu cuenta Xiaomi en la configuración del móvil.
@@ -104,7 +104,7 @@ Flashear significa instalar un nuevo sistema operativo en el móvil. Tipos comun
 - <strong>Flashear Recovery de terceros</strong>: como TWRP, para respaldo/restauración y flasheo de ROMs de terceros.
 - <strong>Flashear ROM de terceros</strong>: como LineageOS, Pixel Experience, etc., para experimentar diferentes sistemas.
 
-#### V. Samsung Knox: El coste irreversible del desbloqueo del bootloader
+V. Samsung Knox: El coste irreversible del desbloqueo del bootloader
 
 A diferencia de otros fabricantes Android, el mecanismo de bloqueo del bootloader de Samsung tiene un diseño único de "fusible":<strong>Para los teléfonos Samsung, desbloquear el bootloader activa el fusible Knox, perdiendo permanentemente algunas funciones de seguridad (como Samsung Pay); se borran todos los datos protegidos; afecta a la garantía</strong>. En concreto:
 

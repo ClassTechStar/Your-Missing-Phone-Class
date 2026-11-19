@@ -12,11 +12,11 @@ kind: chapter
 {class="chapter-intro mb-4"}
 El móvil en tu mano es en realidad un supermando a la vez que centro de datos. No solo hace llamadas: puede conectar el ordenador, la TV, el reloj, los altavoces y el coche, para que estos dispositivos dejen de ser islas. En este capítulo hablaremos de cómo hacerlos "trabajar en equipo".
 
-#### 1. Sincronización con el ordenador: el móvil y el PC ya no son dos mundos separados
+1. Sincronización con el ordenador: el móvil y el PC ya no son dos mundos separados
 
 Sinceramente, lo que más me molestaba era hacer una foto con el móvil y querer editarla en el ordenador: tenía que buscar el cable, esperar la transferencia. Luego descubrí que en realidad no hace falta cable; una buena integración es diez veces más rápida.
 
-- <strong>Ecosistema Apple (AirDrop + Portapapeles universal)</strong>:Si usas iPhone con Mac, AirDrop es lo primero que debes aprender. Toca compartir &gt; AirDrop &gt; elige tu Mac; la foto pasa al instante, sin datos ni Wi-Fi, usando Bluetooth y Wi-Fi directos. Hay otra función fácil de ignorar: "Portapapeles universal" —copias texto en el móvil y lo pegas directamente en el Mac, como magia.
+- <strong>Ecosistema Apple (AirDrop + Portapapeles universal)</strong>:Si usas iPhone con Mac, AirDrop es lo primero que debes aprender. Toca compartir &gt; AirDrop &gt; elige tu Mac; la foto pasa al instante, sin datos ni Wi-Fi, usando Bluetooth y Wi-Fi directos. Hay otra función fácil de ignorar: "Portapapeles universal",copias texto en el móvil y lo pegas directamente en el Mac, como magia.
 - <strong>Android + Windows (Conectar a Windows)</strong>:Microsoft tiene una App llamada "Conectar a Windows", preinstalada en Samsung; para otros Android, descárgala de la tienda. Tras emparejar, puedes ver notificaciones del móvil, responder SMS, ver fotos e incluso recibir y hacer llamadas desde el ordenador. Llevo dos años usándola; en reuniones no necesito mirar el móvil constantemente: basta con la notificación en la pantalla del PC.
 - <strong>Colaboración multipantalla de marca</strong>:La "colaboración multipantalla" de Huawei y "Xiaomi Magic Share" son aún más agresivas: proyectan la pantalla del móvil en el ordenador. Puedes arrastrar archivos con el ratón, usar Douyin o responder WeChat desde el PC. Copiar/pegar entre dispositivos, arrastrar archivos: todo funciona con una fluidez increíble.
 
@@ -29,7 +29,7 @@ En las fiencias de Año Nuevo, mi prima quería poner su video de viaje de gradu
 - <strong>Reproducción directa desde App de vídeo</strong>:Si solo quieres ver iQiyi, Bilibili o YouTube en la tele, es más simple: en la interfaz de reproducción busca un pequeño icono rectangular con símbolo Wi-Fi, tócalo, elige la TV y el video se transfiere. El móvil queda libre para otras cosas mientras el video sigue en la tele.
 - <strong>¿Qué hacer si falla la proyección?</strong>:El 90% de los fallos es por no estar en la misma Wi-Fi. El otro 10% es que la función de proyección de la TV no está activa; ve a los ajustes de la TV y busca "interacción multipantalla" o "AirPlay".
 
-#### 3. Con smartwatch/pulsera inteligente: el gestor de salud en tu muñeca
+3. Con smartwatch/pulsera inteligente: el gestor de salud en tu muñeca
 
 Le compré una pulsera inteligente a mi madre; al principio dijo "¿para qué si no hago ejercicio?". Tras dos semanas de uso, descubrió que solo dormía cinco horas al día y empezó a ajustar su rutina. Ese es el valor más práctico del smartwatch/pulsera: convertir datos de salud invisibles en números visibles.
 
@@ -38,7 +38,7 @@ Le compré una pulsera inteligente a mi madre; al principio dijo "¿para qué si
 - <strong>Sincronización de tarjetas de transporte/acceso</strong>: La tarjeta de transporte y la de acceso vinculadas en el móvil se sincronizan solas con el reloj en la mayoría de marcas. En el metro no sacas el móvil: acercas la muñeca al torno y pasas. De verdad da la sensación de que «el futuro ya llegó».
 - <strong>"Buscar móvil" desde el reloj</strong>: El reloj suele traer la función «buscar móvil»; tócala y el móvil sonará. Yo la uso mucho más de lo que esperaba: dejo el móvil en cualquier lado y se me olvida.
 
-#### 4. Con hogar inteligente: el móvil es el "control maestro" de tu casa
+4. Con hogar inteligente: el móvil es el "control maestro" de tu casa
 
 El Hogar inteligente suena misterioso, pero en realidad son tres cosas: control remoto desde el móvil, reglas de automatización y control por voz.
 
@@ -55,7 +55,7 @@ Te cuento algúnos usos prácticos propios y verás lo útil que es:
 - Buscas relación calidad-precio → Xiaomi Mijia tiene el ecosistema más completo: lámparas, enchufes, robots aspiradora, etc.
 - Usas Huawei → prioriza HarmonyOS Connect; la mejor experiencia con dispositivos Huawei.
 
-#### 5. Auriculares y altavoces Bluetooth: la libertad del wireless
+5. Auriculares y altavoces Bluetooth: la libertad del wireless
 
 Cambiar auriculares con cable por Bluetooth fue para mí la mejora más notable en la experiencia del móvil. Nunca más un ovillo de cables en el bolso ni preocuparse de que se enganchen en las manillas.
 
@@ -92,7 +92,7 @@ El clasico audio Bluetooth (A2DP) usado durante veinte anos esta siendo sustitui
 - <strong>Situación actual</strong>: Los auriculares y telefonos de gama alta lanzados en 2024-2026 soportan LE Audio; los dispositivos antiguos necesitan actualizacion de hardware y no se desbloquea por software. Al comprar auriculares nuevos, comprueba si llevan la marca LE Audio/Auracast.
 :::
 
-#### 6. Con sistemas del coche: compañero de seguridad al conducir
+6. Con sistemas del coche: compañero de seguridad al conducir
 
 Usar el móvil mientras conduces es ilegal y peligroso. Pero a veces necesitas navegación, llamadas o música. Ahí entran CarPlay (Apple) y Android Auto.
 

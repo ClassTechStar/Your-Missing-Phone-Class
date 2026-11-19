@@ -2,12 +2,12 @@
 id: di-si-shi-san-zhang
 num: 43
 part: ai-biancheng-pian
-nav: Capitolo 43: Conversation engineering — Tecniche per un dialogo efficace
+nav: Capitolo 43: Come parlare all'AI perché ti capisca
 toc: default
 kind: chapter
 ---
 
-### Capitolo 43: Ingegneria del dialogo — la tecnica di conversazione per collaborare in modo efficace con l'AI
+### Capitolo 43: Come parlare all'AI perché ti capisca
 
 {class="chapter-intro mb-4"}
 Il dialogo è il modo principale di interazione nella programmazione con l'AI. Ma attenzione: «dialogare» non significa «chiacchierare»: un dialogo efficace per programmare con l'AI è una tecnica di comunicazione strutturata, che chiamiamo «ingegneria del dialogo». Il suo oggetto di studio è come ottenere il codice di massima qualità con il minor numero possibile di turni di conversazione. In parole povere, questo capitolo ti insegna a «farti capire bene» dall'AI.
@@ -25,7 +25,7 @@ Il dialogo con l'AI può dividersi in tre livelli, ognuno con una funzione diver
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 I tre livelli dei prompt di dialogo
 
-Il prompt del livello di sistema di solito vive nel file di memoria del progetto (come CLAUDE.md) e non va ripetuto a ogni dialogo. Il livello di attività è quello che usi più spesso nel dialogo: deve contenere i tre ingredienti «cosa fare», «con quale tecnologia» e «con quali vincoli». Il livello di feedback è quello che mette alla prova la maestria: un buon feedback permette all'AI di correggere con precisione, uno cattivo la fa solo tornare a indovinare.
+Il prompt del livello di sistema di solito vive nel file di memoria del progetto (come CLAUDE.md) e non va ripetuto a ogni dialogo. Il livello di attività è quello che usi più spesso nel dialogo. Deve contenere i tre ingredienti «cosa fare», «con quale tecnologia» e «con quali vincoli». Il livello di feedback è quello che mette alla prova la maestria: un buon feedback permette all'AI di correggere con precisione, uno cattivo la fa solo tornare a indovinare.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -35,7 +35,7 @@ Consiglio: le tre mosse vincenti del feedback
 Un template di feedback pratico è «indicare il problema + spiegare cosa ci si aspetta + fornire il contesto». Per esempio: «la gestione degli errori alla riga 25 usa solo console.log (indicare il problema), in produzione andrebbe usato un gestore degli errori unificato che restituisca messaggi chiari per l'utente (spiegare cosa ci si aspetta), nel progetto c'è una funzione handleError pronta all'uso (fornire il contesto)». Un feedback così vale dieci volte più di «sistemami la gestione degli errori».
 :::
 
-#### 2. Dialoghi di debug: come descrivere gli errori perché l'AI li individui in fretta
+2. Dialoghi di debug: come descrivere gli errori perché l'AI li individui in fretta
 
 Il debug è uno degli scenari più frequenti nella programmazione con l'AI. Quando incontri un bug, il modo in cui descrivi il problema all'AI determina direttamente se riesce a individuarlo e ripararlo in fretta. Ecco i quattro punti chiave del dialogo di debug:
 
@@ -62,7 +62,7 @@ Clic sul pulsante di accesso: la pagina non reagisce. Comportamento atteso: dopo
 :::
 :::
 
-#### 3. Strategie di iterazione: piccoli passi veloci vs grande refactoring
+3. Strategie di iterazione: piccoli passi veloci vs grande refactoring
 
 Nella programmazione con l'AI l'iterazione segue due strategie di base, adatte a scenari diversi. Capirne le differenze ti aiuta a scegliere bene in ogni situazione.
 
@@ -85,7 +85,7 @@ Nella pratica le due strategie si usano spesso in combinazione. Per esempio, nel
 
 Man mano che i turni di dialogo aumentano, devi gestire attivamente il contesto della conversazione per evitare il problema dell'«AI che dimentica le informazioni di inizio dialogo». Ecco alcuni trucchi pratici per gestire il contesto.
 
-Primo: «ancorare» le informazioni chiave. All'inizio del dialogo scrivi chiaramente i vincoli importanti e, nel prosieguo, ripetili al momento giusto. Per esempio: «ricorda che i nostri dati stanno nel localStorage e non possiamo usare un database» — ribadisci questo vincolo nelle richieste di modifica correlate, per impedire che l'AI se lo dimentichi.
+Primo: «ancorare» le informazioni chiave. All'inizio del dialogo scrivi chiaramente i vincoli importanti e, nel prosieguo, ripetili al momento giusto. Per esempio: «ricorda che i nostri dati stanno nel localStorage e non possiamo usare un database», ribadisci questo vincolo nelle richieste di modifica correlate, per impedire che l'AI se lo dimentichi.
 
 Secondo: usa bene il trucco del «riepilogo e ripresa». Quando il dialogo diventa molto lungo, chiedi all'AI di «riepilogare i progressi fatti finora e le cose ancora da fare», poi apri un nuovo dialogo partendo da quel riepilogo. Così conservi il contesto essenziale ed eviti il degrado tipico dei dialoghi lunghi.
 
@@ -98,7 +98,7 @@ Quarto: sfrutta le funzioni di gestione del contesto degli strumenti. Quasi tutt
 Metti in pratica: fai da «paziente» alla tua AI
 
 {class="mt-1"}
-Crea apposta, nel browser, una piccola pagina con dentro un bug (per esempio un pulsante che non reagisce). Poi descrivi tutto all'AI una volta sola, seguendo il formato della «descrizione di debug ben fatta» di questo capitolo: informazioni originali, atteso contro effettivo, passi di riproduzione, verifiche già fatte. Senti la differenza di velocità con cui l'AI individua il problema — capirai perché «descrivere il problema» è in sé un mestiere.
+Crea apposta, nel browser, una piccola pagina con dentro un bug (per esempio un pulsante che non reagisce). Poi descrivi tutto all'AI una volta sola, seguendo il formato della «descrizione di debug ben fatta» di questo capitolo: informazioni originali, atteso contro effettivo, passi di riproduzione, verifiche già fatte. Senti la differenza di velocità con cui l'AI individua il problema, capirai perché «descrivere il problema» è in sé un mestiere.
 :::
 
 ::: div .chapter-summary

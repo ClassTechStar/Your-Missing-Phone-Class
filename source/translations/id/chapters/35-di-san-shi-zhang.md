@@ -51,18 +51,18 @@ Screen cast nirkabel praktis tapi ada delay, main game dan presentasi pengalaman
 
 #### 3. Ponsel Jadi Komputer — Mode Desktop
 
-Sebagian ponsel Android mendukung "mode desktop" — setelah sambung ke monitor, ponsel akan output antarmuka mirip desktop komputer, bisa operasi dengan mouse keyboard:
+Sebagian ponsel Android mendukung "mode desktop", setelah sambung ke monitor, ponsel akan output antarmuka mirip desktop komputer, bisa operasi dengan mouse keyboard:
 
 - <strong>Samsung DeX</strong>: Fitur andalan flagship Samsung. Setelah sambung ke monitor muncul antarmuka desktop, bisa operasi multi-window, pengalaman paling mendekati komputer sungguhan. Dengan keyboard mouse Bluetooth, bisnis keluar kota tidak perlu bawa laptop.
 - <strong>Mode Desktop Huawei</strong>: Seri Huawei Mate/Pura setelah sambung ke monitor juga punya fitur serupa. Mendukung multi-window, file management, App office.
 - <strong>Motorola Ready For</strong>: Flagship Moto juga mendukung, fitur mirip DeX.
 - <strong>: Produksi profesional kelas atas. Seri iPhone 15 Pro mendukung shooting video Apple ProRes (hingga 4K 60fps), tetapi format ProRes RAW saat ini perlu digunakan bersama perangkat perekam eksternal, ponsel belum mendukung shooting langsung.</strong>: Light office (balas email, edit dokumen), presentasi PPT, lihat video di layar besar. Tidak cocok untuk operasi Excel berat atau desain profesional.
 
-#### 4. Car Connectivity — Cara Benar Pakai Ponsel Saat Berkendara
+4. Car Connectivity — Cara Benar Pakai Ponsel Saat Berkendara
 
 Mengoperasikan ponsel saat berkendara itu melanggar hukum, tapi navigasi, dengar musik, telepon adalah kebutuhan. Sistem car connectivity membuat Anda menggunakan fungsi inti ponsel di layar head unit, ponsel bisa diletakkan tidak disentuh:
 
-- <strong>Apple CarPlay</strong>: Pilihan utama pengguna iPhone. Melalui USB atau nirkabel sambung ke head unit, layar head unit muncul antarmuka sederhana iPhone — navigasi (Amap/Baidu), musik, telepon, pesan, podcast. Kontrol suara Siri sepenuhnya tanpa tangan.
+- <strong>Apple CarPlay</strong>: Pilihan utama pengguna iPhone. Melalui USB atau nirkabel sambung ke head unit, layar head unit muncul antarmuka sederhana iPhone, navigasi (Amap/Baidu), musik, telepon, pesan, podcast. Kontrol suara Siri sepenuhnya tanpa tangan.
 - <strong>Android Auto</strong>: Solusi corresponden pengguna Android. Fitur mirip CarPlay, mendukung Google Maps, Spotify dll. Di dalam negeri karena pembatasan layanan Google, sebagian fitur tidak tersedia.
 - <strong>Huawei HiCar</strong>: Solusi buatan Huawei, tingkat dukungan model dalam negeri tinggi. Selain navigasi musik, juga bisa pakai panggilan video Huawei, fusi gambar parkir dan fitur khas lainnya.
 - <strong>Baidu CarLife</strong>: Solusi cross-platform, iOS dan Android bisa pakai. Fitur lebih sedikit tapi kompatibilitas luas, banyak model lama hanya mendukung CarLife.

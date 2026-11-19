@@ -23,7 +23,7 @@ Une App qui sait seulement « montrer » est une App morte ; une App qui stocke 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 La répartition des rôles du trio de données
 
-Retiens cette formule : « les petits réglages vont dans UserDefaults, les données en série vont dans SwiftData, les données venues de dehors passent par URLSession ». Core Data des vieux tutos reste utilisable (SwiftData en est le costume moderne), et le SQLite écrit à la main s'évite en général — apprends directement le neuf, ne prends pas les vieux chemins.
+Retiens cette formule : « les petits réglages vont dans UserDefaults, les données en série vont dans SwiftData, les données venues de dehors passent par URLSession ». Core Data des vieux tutos reste utilisable (SwiftData en est le costume moderne), et le SQLite écrit à la main s'évite en général, apprends directement le neuf, ne prends pas les vieux chemins.
 
 #### 2. UserDefaults : ranger quelques petits réglages
 
@@ -46,11 +46,11 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-Souviens-toi qu'il ne convient qu'aux petits réglages isolés — dès quelques dizaines ou centaines d'enregistrements, remets le volant à SwiftData ; ne prends pas UserDefaults pour une base de données (ça ralentit le démarrage et les requêtes y sont peu commodes).
+Souviens-toi qu'il ne convient qu'aux petits réglages isolés: dès quelques dizaines ou centaines d'enregistrements, remets le volant à SwiftData ; ne prends pas UserDefaults pour une base de données (ça ralentit le démarrage et les requêtes y sont peu commodes).
 
 #### 3. SwiftData : offrir aux données un « vrai chez-soi »
 
-SwiftData est la solution de base de données officielle depuis iOS 17 ; elle pousse la simplicité à l'extrême pour créer les tables et gérer ajouts, suppressions, modifications et lectures — une annotation @Model, et la classe de données devient une table :
+SwiftData est la solution de base de données officielle depuis iOS 17 ; elle pousse la simplicité à l'extrême pour créer les tables et gérer ajouts, suppressions, modifications et lectures, une annotation @Model, et la classe de données devient une table :
 
 ::: div .code-block
 :::inline div .code-head
@@ -107,11 +107,11 @@ struct RecordListView: View {
 ```
 :::
 
-Ce gabarit « @Model + modelContainer + @Query » se transporte tel quel dans n'importe lequel de tes projets — il suffit de changer les noms de champs. Dès que les données bougent, @Query rafraîchit l'interface tout seul : la magie est délicieuse.
+Ce gabarit « @Model + modelContainer + @Query » se transporte tel quel dans n'importe lequel de tes projets: il suffit de changer les noms de champs. Dès que les données bougent, @Query rafraîchit l'interface tout seul : la magie est délicieuse.
 
 #### 4. Codable : « traduire » le JSON
 
-Les données des serveurs sont pour l'essentiel du texte JSON. Le protocole Codable de Swift fait que la conversion « JSON ⇄ struct » se produit automatiquement — dès que les noms de champs concordent, la magie opère :
+Les données des serveurs sont pour l'essentiel du texte JSON. Le protocole Codable de Swift fait que la conversion « JSON ⇄ struct » se produit automatiquement: dès que les noms de champs concordent, la magie opère :
 
 ::: div .code-block
 :::inline div .code-head
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "Ensoleillé"
 ```
 :::
 
-Règle d'airain : regarde d'abord le JSON réellement renvoyé, définis les champs ensuite. Une foule de bugs d'« analyse impossible » tiennent à un nom de champ mal écrit ou à un type deviné de travers (le serveur envoie la chaîne "26.5", toi tu déclares un Double) — imprime le JSON brut et compare : dix secondes pour localiser.
+Règle d'airain : regarde d'abord le JSON réellement renvoyé, définis les champs ensuite. Une foule de bugs d'« analyse impossible » tiennent à un nom de champ mal écrit ou à un type deviné de travers (le serveur envoie la chaîne "26.5", toi tu déclares un Double), imprime le JSON brut et compare : dix secondes pour localiser.
 
 #### 5. URLSession + async/await : parler au serveur
 
@@ -175,14 +175,14 @@ struct WeatherService {
 Piège à éviter : les deux règles d'airain du réseau
 
 {class="mt-1"}
-① Pour le réseau, obligatoirement async/await, et jamais de blocage du thread principal — une interface figée, c'est une expérience de crash. La concurrence structurée de Swift rend cela naturel, mais n'oublie pas try await et do/catch. ② ATS interdit par défaut le HTTP en clair : iOS exige HTTPS. Pour tester un service http:// local, il faut ouvrir une exception temporaire dans Info.plist (NSAppTransportSecurity), mais un produit officiel doit passer intégralement en HTTPS — la revue surveille aussi ce point.
+① Pour le réseau, obligatoirement async/await, et jamais de blocage du thread principal, une interface figée, c'est une expérience de crash. La concurrence structurée de Swift rend cela naturel, mais n'oublie pas try await et do/catch. ② ATS interdit par défaut le HTTP en clair : iOS exige HTTPS. Pour tester un service http:// local, il faut ouvrir une exception temporaire dans Info.plist (NSAppTransportSecurity), mais un produit officiel doit passer intégralement en HTTPS, la revue surveille aussi ce point.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 À toi de jouer : une petite App « phrase du jour »
 
-#### 6. Classer aussi les erreurs réseau : ne pas balancer toutes les erreurs à l'utilisateur
+6. Classer aussi les erreurs réseau : ne pas balancer toutes les erreurs à l'utilisateur
 
 Réseau coupé, délai dépassé, 404, erreur 500 du serveur… chaque erreur appelle son message :
 
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-À l'utilisateur, montre des « paroles humaines » ; aux journaux, garde la « langue d'origine » (print de l'erreur complète). Ne déballe pas devant l'utilisateur le charabia anglais de error.localizedDescription — le raffinement d'un produit se niche dans ces détails.
+À l'utilisateur, montre des « paroles humaines » ; aux journaux, garde la « langue d'origine » (print de l'erreur complète). Ne déballe pas devant l'utilisateur le charabia anglais de error.localizedDescription, le raffinement d'un produit se niche dans ces détails.
 
 {class="mt-1"}
-Trouve une API de citations gratuite (du genre hitokoto), tire la « phrase du jour » avec URLSession + async/await, affiche-la au centre de l'écran et ajoute un bouton « Une autre ». Puis range les phrases que tu aimes dans les « favoris » avec SwiftData. Cet exercice fait tourner UserDefaults, SwiftData, Codable et URLSession — une fois bouclé, les chapitres 7 et 8 seront un vrai jeu d'enfant.
+Trouve une API de citations gratuite (du genre hitokoto), tire la « phrase du jour » avec URLSession + async/await, affiche-la au centre de l'écran et ajoute un bouton « Une autre ». Puis range les phrases que tu aimes dans les « favoris » avec SwiftData. Cet exercice fait tourner UserDefaults, SwiftData, Codable et URLSession: une fois bouclé, les chapitres 7 et 8 seront un vrai jeu d'enfant.
 :::
 
 ::: div .chapter-summary

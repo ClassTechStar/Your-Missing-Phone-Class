@@ -2,12 +2,12 @@
 id: di-si-shi-wu-zhang
 num: 45
 part: ai-biancheng-pian
-nav: Kapitel 45: Qualitätssicherung – KI-Code zuverlässig machen
+nav: Kapitel 45: KI-Code geschrieben? Dann ist es nicht fertig
 toc: default
 kind: chapter
 ---
 
-### Kapitel 45: Qualitätssicherung – KI-Code zuverlässig machen
+### Kapitel 45: KI-Code geschrieben? Dann ist es nicht fertig
 
 {class="chapter-intro mb-4"}
 KI-Code hat eine Eigenheit: Er „sieht meist richtig aus“ – sauber benannte Variablen, ausführliche Kommentare, klare Logik. Aber „richtig aussehen“ ist nicht „wirklich richtig“. Versteckte Probleme in KI-Code sind oft schwerer zu finden als in handgeschriebenem Code, denn die hohe Oberflächenqualität macht sorglos. Dieses Kapitel zeigt dir, wie du für KI-Code ein wirksames Qualitätssicherungssystem aufbaust – mit den drei Verteidigungslinien Tests, Review und Versionskontrolle wird aus „sieht richtig aus“ ein „ist wirklich richtig“.
@@ -58,7 +58,7 @@ Kerndimensionen des KI-Code-Reviews
 
 Beim Review musst du nicht alles selbst durchgehen – lass die KI die erste Runde übernehmen. Anweisung zum Beispiel: „Prüfe bitte Sicherheit, Fehlerbehandlung und Leistung dieses Codes und nenne potenzielle Probleme.“ Die Selbstprüfungsfähigkeit der KI wird immer besser; sie ersetzt das menschliche Review zwar nicht vollständig, filtert aber die meisten offenkundigen Probleme heraus.
 
-#### 3. Versionskontrolle: Die Rolle von Git beim KI-Programmieren
+3. Versionskontrolle: Die Rolle von Git beim KI-Programmieren
 
 Git ist beim KI-Programmieren noch wichtiger als in der klassischen Programmierung. Da jede KI-Änderung unvorhersehbare Folgen haben kann, brauchst du ein verlässliches „Rückgängig“ – die Versionskontrolle ist genau dieses Rückgängig.
 

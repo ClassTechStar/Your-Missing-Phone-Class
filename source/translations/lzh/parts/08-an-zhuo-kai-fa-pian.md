@@ -10,7 +10,7 @@ class: mb-12
 ## 八、安卓開發實戰篇（第48-58章）
 
 {class="chapter-intro mb-4"}
-第七篇教會了汝指揮AI寫代碼，此篇吾儕將功夫落到安卓上：從認識安卓、裝好Android Studio，到Kotlin、Jetpack Compose，再到兩個完整項目與Google Play上架。全程不須Mac——Windows就能幹。11章走完，汝就能做出裝進三億人手機裡之真App。
+第七篇教會了汝指揮AI寫代碼，此篇吾儕將功夫落到安卓上：從認識安卓、裝好Android Studio，到Kotlin、Jetpack Compose，再到兩個完整項目與Google Play上架。全程不須Mac，Windows就能幹。11章走完，汝就能做出裝進三億人手機裡之真App。
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

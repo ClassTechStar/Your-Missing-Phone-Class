@@ -2,17 +2,17 @@
 id: di-shi-ba-zhang
 num: 18
 part: jin-jie-pian
-nav: Chapitre 18 : Sauvegarde et migration des données
+nav: Chapitre 18 : Sauvegardez maintenant, pas quand ça compte
 toc: default
 kind: chapter
 ---
 
-### Chapitre 18 : Sauvegarde et migration des données
+### Chapitre 18 : Sauvegardez maintenant, pas quand ça compte
 
 {class="chapter-intro mb-4"}
-Une voisine a fait tomber son téléphone dans un bassin, après l'avoir repêché, il ne s'allumait plus. Ce qui lui faisait le plus mal, ce n'était pas le téléphone lui-même, mais les photos de trois ans non sauvegardées — tous les souvenirs de l'enfant de la naissance à ses premiers pas. En l'écoutant, je me sentais mal, parce que c'était tout à fait évitable. Ce chapitre va sérieusement souscrire une assurance pour vos données.
+Une voisine a fait tomber son téléphone dans un bassin, après l'avoir repêché, il ne s'allumait plus. Ce qui lui faisait le plus mal, ce n'était pas le téléphone lui-même, mais les photos de trois ans non sauvegardées, tous les souvenirs de l'enfant de la naissance à ses premiers pas. En l'écoutant, je me sentais mal, parce que c'était tout à fait évitable. Ce chapitre va sérieusement souscrire une assurance pour vos données.
 
-#### I. D'abord, comprenez : quelles sont les choses sur votre téléphone qui, une fois perdues, sont vraiment perdues
+I. D'abord, comprenez : quelles sont les choses sur votre téléphone qui, une fois perdues, sont vraiment perdues
 
 Les différentes données n'ont pas le même « statut de survie », vous devez les distinguer :
 
@@ -22,15 +22,15 @@ Les différentes données n'ont pas le même « statut de survie », vous devez 
 
 Ce que vous devez donc protéger en priorité, c'est la première et la troisième catégorie.
 
-#### II. Sauvegarde complète de l'appareil : tout régler en une fois
+II. Sauvegarde complète de l'appareil : tout régler en une fois
 
-La sauvegarde complète de l'appareil, c'est comme prendre un « instantané » complet du téléphone — réglages système actuels, disposition du bureau, données des applications, photos, contacts, tout est emballé.
+La sauvegarde complète de l'appareil, c'est comme prendre un « instantané » complet du téléphone, réglages système actuels, disposition du bureau, données des applications, photos, contacts, tout est emballé.
 
 ##### Option 1 : sauvegarde locale sur ordinateur (la plus fiable, recommandée pour ceux qui ont un ordinateur)
 
 - <strong>iPhone</strong>: connectez le téléphone à l'ordinateur avec un câble de données, ouvrez iTunes (ancienne version Windows) ou Finder (Mac), dans la page de l'appareil, sélectionnez « Sauvegarder maintenant ». Attention à cocher « chiffrer la sauvegarde », sinon les mots de passe et les données de santé ne seront pas inclus dans la sauvegarde.
 - <strong>Android</strong>: chaque marque a son propre logiciel sur ordinateur, comme Huawei HiSuite, Xiaomi Assistant, Samsung Smart Switch. Connectez à l'ordinateur et suivez les instructions.
-- L'avantage de la sauvegarde sur ordinateur est qu'il n'est pas nécessaire de payer pour l'espace cloud, et la restauration est beaucoup plus rapide que depuis le cloud. L'inconvénient est qu'il faut penser à brancher régulièrement le câble pour sauvegarder — la plupart des gens n'y arrivent pas.
+- L'avantage de la sauvegarde sur ordinateur est qu'il n'est pas nécessaire de payer pour l'espace cloud, et la restauration est beaucoup plus rapide que depuis le cloud. L'inconvénient est qu'il faut penser à brancher régulièrement le câble pour sauvegarder, la plupart des gens n'y arrivent pas.
 
 ##### Option 2 : sauvegarde cloud (la plus tranquille, recommandée pour tous)
 
@@ -38,7 +38,7 @@ La sauvegarde complète de l'appareil, c'est comme prendre un « instantané » 
 - <strong>Android</strong>: chaque marque de cloud a une fonction de sauvegarde. Huawei recherchez « sauvegarde cloud » dans les réglages, Xiaomi dans « Xiaomi Cloud Services », OPPO/vivo similaire. Il y a aussi une sauvegarde Google intégrée (Réglages → Système → Sauvegarde), activez-la aussi.
 - Le plus grand avantage de la sauvegarde cloud est « sans intervention de votre part », c'est automatique. Le plus grand inconvénient est que la restauration prend beaucoup de temps à télécharger, et l'espace gratuit est généralement insuffisant.
 
-#### III. Stratégie de sauvegarde par catégorie : les éléments importants méritent une copie séparée
+III. Stratégie de sauvegarde par catégorie : les éléments importants méritent une copie séparée
 
 La sauvegarde complète de l'appareil est un filet de sécurité, mais certaines choses sont trop importantes pour mériter une copie séparée :
 
@@ -60,7 +60,7 @@ Il faut en parler séparément, car dans la sauvegarde complète de l'appareil, 
 - <strong>Méthode 2 : sauvegarder sur l'ordinateur</strong>. Installez WeChat PC sur l'ordinateur, trois barres en bas à gauche → Migration et sauvegarde → Sauvegarde et restauration → Sauvegarder l'historique des discussions sur l'ordinateur. Ensuite, en changeant de téléphone, vous pourrez restaurer sur le nouveau téléphone.
 - <strong>Méthode 3 : sauvegarder sur le cloud</strong>. WeChat prend également en charge la sauvegarde sur iCloud ou l'espace cloud du téléphone, mais attention : cette sauvegarde ne peut être restaurée que sur le téléphone actuel, pas sur un autre appareil. Pour changer de téléphone, il faut utiliser les deux premières méthodes.
 
-#### IV. Guide de changement de téléphone : de l'ancien au nouveau
+IV. Guide de changement de téléphone : de l'ancien au nouveau
 
 Changer de téléphone est une joie, mais si les données ne sont pas migrées, cela devient un casse-tête. Trois situations, trois approches :
 

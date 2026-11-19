@@ -2,17 +2,17 @@
 id: di-shi-jiu-zhang
 num: 19
 part: jin-jie-pian
-nav: Capítulo 19: Diagnóstico de fallos y cómo salvarte tú mismo
+nav: Capítulo 19: ¿Está roto? No lo repares todavía
 toc: default
 kind: chapter
 ---
 
-### Capítulo 19: Diagnóstico de fallos y autopreparación
+### Capítulo 19: ¿Está roto? No lo repares todavía
 
 {class="chapter-intro mb-4"}
 Carga al menos 30 minutos
 
-#### : muchas veces solo es que la batería se agoto por completo. Conecta el cargador original, espera al menos 30 minutos y prueba encender. Algunos móviles necesitan cargar hasta cierto nivel antes de responder tras agotarse.
+- muchas veces solo es que la batería se agoto por completo. Conecta el cargador original, espera al menos 30 minutos y prueba encender. Algunos móviles necesitan cargar hasta cierto nivel antes de responder tras agotarse.
 
 Reinicio forzado
 
@@ -25,21 +25,21 @@ Reinicio forzado
 
 <strong>: revisa si el agujero del micrófono esta tapado — el orificio inferior del móvil se tapa fácilmente con polvo. Limpialo suavemente con un cepillo de cerdas blandas. No uses aguja ni mondadientes; danaras la malla anti-polvo.</strong> Sonido ronco/distorsionado
 
-#### : si es por agua en el altavoz — NO uses secador de pelo con aire caliente! Absorbe la humedad superficial con papel deyja secar naturalmente. Se dice que Apps de drenaje acustico (reproducen sonidos graves para expulsar el agua) pueden ayudar; pruebalos.
+- si es por agua en el altavoz — NO uses secador de pelo con aire caliente! Absorbe la humedad superficial con papel deyja secar naturalmente. Se dice que Apps de drenaje acustico (reproducen sonidos graves para expulsar el agua) pueden ayudar; pruebalos.
 
 VIII. Busca reparación oficial y evita las trampas
 
 1. <strong>Si probaste todo lo anterior sin éxito, toca buscar reparación profesional. Pero el mercado de reparaciiones es un laberinto; aquí van mis experiencias y consejos:</strong> Busca autentico oficial, no "parece oficial"
 2. <strong>: ve al sitio web de la marca (Apple.com.cn, Huawei.com.cn, etc.) y busca la lista de "proveedores autorizados". Las tiendas no autorizadas con logo de Apple en la calle pueden usar repuestos no originales; tras la reparación perdes la resistencia al agua.</strong> Cosas obligatorias antes de enviar a reparar
-3. <strong>: haz copia de seguridad de TODOS los datos (no cuentes con que no se pierdan durante la reparación), cierra todas las cuentas importantes (Apple ID, WeChat, Alipay), desactiva "Buscar mi móvil". Algunos puntos de reparación te pediran la contrasena de bloqueo; esto tiene riesgos de privacidad — mejor cierra las cuentas tu mismo antes de entregarlo.</strong> Trampas al cambiar pantalla
+3. <strong>: haz copia de seguridad de TODOS los datos (no cuentes con que no se pierdan durante la reparación), cierra todas las cuentas importantes (Apple ID, WeChat, Alipay), desactiva "Buscar mi móvil". Algunos puntos de reparación te pediran la contrasena de bloqueo; esto tiene riesgos de privacidad, mejor cierra las cuentas tu mismo antes de entregarlo.</strong> Trampas al cambiar pantalla
 4. <strong>: pantallas no oficiales se dividen en "cristal original reciclado", "cristal no original", "pantalla ensamblada" (todo no original). Los precios varian mucho, pero también la calidad y durabilidad. Si el móvil esta en garantía, sigue el camino oficial sin atajos.</strong> Trampas al cambiar batería
 5. <strong>: baterías no originales pueden tener capacidad falsificada y degradarse en 6 meses más que una original en 2 anos. El precio oficial de Apple para cambiar batería no es mucho mayor que el no oficial; recomiendo ir por la via oficial.</strong> Trampas en recuperación de datos
 
-#### : tras caer al agua o golpearse, si en reparación dicen "la recuperación de datos cuesta extra", ten cuidado — algúnos comercios sin escrupulos exageran el dano para cobrar más. La recuperación de datos legítima cotiza primero y luego opera; si no se recupera, no cobra.
+- tras caer al agua o golpearse, si en reparación dicen "la recuperación de datos cuesta extra", ten cuidado — algúnos comercios sin escrupulos exageran el dano para cobrar más. La recuperación de datos legítima cotiza primero y luego opera; si no se recupera, no cobra.
 
 Truco universal numero 1: reiniciar el móvil
 
-- <strong>Cualquier problema que tengas — lentitud, cierres inesperados, sin red, sonido anormal — reinicia primero el móvil. Suena a excusa, pero por mi experiencia, al menos el 60% de los pequenos problemas se resuelven tras reiniciar. El móvil es como un ordenador: con el tiempo acumula cosas raras en memoria; reiniciar es empezar de cero. Asi que la próxima vez que tu móvil falle, antes de buscar "que hacer", reinicia y mira.</strong> Memoriza ya estas operaciones salvavidas
+- <strong>Cualquier problema que tengas: lentitud, cierres inesperados, sin red, sonido anormal — reinicia primero el móvil. Suena a excusa, pero por mi experiencia, al menos el 60% de los pequenos problemas se resuelven tras reiniciar. El móvil es como un ordenador: con el tiempo acumula cosas raras en memoria; reiniciar es empezar de cero. Asi que la próxima vez que tu móvil falle, antes de buscar "que hacer", reinicia y mira.</strong> Memoriza ya estas operaciones salvavidas.
 - <strong>Reinicio forzado</strong>: para iPhone con pantalla completa: pulsa volumen + → volumen - → mantén pulsado el botón lateral hasta que aparezca el logo. Para Android: mantén el botón de encendido 10-15 segundos hasta que vibre.
 - <strong>Limpiar puerto de carga</strong>: busca una pequeña herramienta (mondadientes o aguja de expulsión de SIM) y limpia suavemente el polvo del puerto de carga.
 - <strong>Reconectar Wi-Fi</strong>: ve a Ajustes de Wi-Fi, "olvida" tu red actual y vuelve a introducir la contraseña para conectar.
@@ -51,7 +51,7 @@ Truco universal numero 1: reiniciar el móvil
 1. <strong>Haz capturas de pantalla de estos pasos o scribelos en notas. Cuando tengas problemas, no entres en panico buscando; simplemente abre tus notas.</strong> Capítulo 20:Modo desarrollador y permisos avanzados
 2. <strong>Este capítulo es para quienes quieren explorar las "funciones ocultas" del móvil. Modo desarrollador, permisos Root, bloqueo BL... estos conceptos suenan muy geek, pero en realidad no estan lejos del usuario común.</strong> I. Modo desarrollador: desbloquear ajustes ocultos
 3. <strong>El modo desarrollador es un menu oculto integrado en el sistema, con muchas funciones que los usuarios normales no necesitan pero los desarrolladores si.</strong> Cómo activarlo:
-4. <strong>Android</strong>: ve a Ajustes &gt; Sobre el móvil y pulsa "Número de versión" 7 veces seguidas hasta que aparezca el mensaje "Ya estás en modo desarrollador".
+4. <strong>Android</strong>: ve a Ajustes &gt; Sobre el móvil y pulsa "Número de versión" 7 veces seguidas hasta que aparezca el mensaje "Ya estás en modo desarrollador"
 
 #### HarmonyOS
 
@@ -100,7 +100,7 @@ III. Permisos Root: el "superadministrador" de Android
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Ventajas de Root:</strong> Desinstalar Apps preinstaladas que no se pueden desinstalar normalmente.
 2. <strong>Usar Apps con funciones avanzadas (como Titanium Backup, Greenify).</strong> Modificar la interfaz y funciones del sistema.
-3. <strong>Instalar Recovery de terceros y ROMs personalizadas.</strong> Riesgos de Root:
+3. <strong>Instalar Recovery de terceros y ROMs personalizadas.</strong> Riesgos de Root:.
 4. <strong>Pérdida de garantía</strong>: la mayoría de fabricantes no garantizan móviles con Root.
-5. Riesgos de seguridad
+5. Riesgos de seguridad.
 :::

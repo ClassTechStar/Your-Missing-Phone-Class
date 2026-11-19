@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink 就是"能点的跳转链接"；<code class="inline">navigationTitle</code> 自动生成导航栏标题和返回按钮。要<strong>编程式跳转</strong>（比如点完"保存"自动返回）时，用 <code class="inline">@Environment(\.dismiss)</code> 关闭当前页面——这两招配合，90% 的导航需求就齐了。
+NavigationLink 就是"能点的跳转链接"；<code class="inline">navigationTitle</code> 自动生成导航栏标题和返回按钮。要<strong>编程式跳转</strong>（比如点完"保存"自动返回）时，用 <code class="inline">@Environment(\.dismiss)</code> 关闭当前页面，这两招配合，90% 的导航需求就齐了。
 
 #### 三、弹窗与底部标签：sheet 与 TabView
 
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-典型用途：<strong>回前台时刷新数据，进后台时保存草稿</strong>。iOS 对后台运行管得很严——普通 App 进后台后很快被挂起（冻结），别指望在后台偷偷干重活；真要定时任务，用第 68 章的本地通知，而不是"后台常驻"。
+典型用途：<strong>回前台时刷新数据，进后台时保存草稿</strong>。iOS 对后台运行管得很严，普通 App 进后台后很快被挂起（冻结），别指望在后台偷偷干重活；真要定时任务，用第 68 章的本地通知，而不是"后台常驻"。
 
 {class="mt-1"}
-做一个假数据版本的记账本骨架：TabView 三个标签（账本/统计/设置）→ 账本页用 List 显示假数据、点行跳详情（NavigationStack）→ 右上角"+"按钮弹录入 sheet。不存数据、不联网，纯练骨架——这个骨架做好，第 65 章往里填真数据就是水到渠成。
+做一个假数据版本的记账本骨架：TabView 三个标签（账本/统计/设置）→ 账本页用 List 显示假数据、点行跳详情（NavigationStack）→ 右上角"+"按钮弹录入 sheet。不存数据、不联网，纯练骨架：这个骨架做好，第 65 章往里填真数据就是水到渠成。
 :::
 
 ::: div .chapter-summary

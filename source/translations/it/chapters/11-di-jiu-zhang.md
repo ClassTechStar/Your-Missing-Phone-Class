@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Anche io un tempo pensavo che lavorare sul telefono fosse solo "arrangiarsi", finché una volta in viaggio d'affari ho dimenticato il computer e ho dovuto modificare un bando e firmare un contratto direttamente sul telefono. A dire il vero, il collo di bottiglia del lavoro su telefono spesso non sta nel telefono stesso, ma nel fatto che non si conoscono i suoi limiti di capacità.
 
-#### 1. Elaborazione documenti: editare e creare sul palmo della mano
+1. Elaborazione documenti: editare e creare sul palmo della mano
 
 Modificare documenti sullo schermo del telefono è diverso rispetto al computer. Il problema maggiore è lo schermo piccolo, le dita grosse, l'impaginazione che slitta facilmente. Ma alcuni accorgimenti migliorano molto l'esperienza:
 
@@ -22,11 +22,11 @@ Modificare documenti sullo schermo del telefono è diverso rispetto al computer.
 
 <strong>Flusso di lavoro pratico</strong>: la mia abitudine attuale è - i file importanti vanno su OneDrive, l'editing quotidiano con WPS, la collaborazione di squadra su Shimo Docs. Da quando i file sono in cloud, non si è più verificato l'imbarazzo di "aver dimenticato la chiavetta USB".
 
-#### 2. App di note: dagli appunti rapidi al sistema di conoscenza
+2. App di note: dagli appunti rapidi al sistema di conoscenza
 
 Per quanto riguarda prendere appunti, molti vogliono subito costruire un sistema complesso, ma poi non resistono oltre tre giorni. Il mio consiglio è prima semplice poi complesso: prima costruisci l'abitudine di "annotare", poi pensa al problema della "gestione".
 
-- <strong>Appunti rapidi - il sistema nativo è sufficiente</strong>: le Note di iOS si avviano rapidissime e supportano scansione documenti, scrittura a mano, registrazione audio. Le note dei vari marchi Android non sono da meno, possono essere avviate rapidamente anche a schermo bloccato. Questi strumenti sono adatti per annotare idee temporanee, liste della spesa, punti chiave delle riunioni. La chiave è l'avvio rapido: viene in mente qualcosa e la si annota, senza aspettare il caricamento dell'app.
+- <strong>Appunti rapidi - il sistema nativo è sufficiente</strong>: le Note di iOS si avviano rapidissime e supportano scansione documenti, scrittura a mano, registrazione audio. Le note dei vari marchi Android non sono da meno. Possono essere avviate rapidamente anche a schermo bloccato. Questi strumenti sono adatti per annotare idee temporanee, liste della spesa, punti chiave delle riunioni. La chiave è l'avvio rapido: viene in mente qualcosa e la si annota, senza aspettare il caricamento dell'app.
 - <strong>Leggi dopo - raccolta di informazioni</strong>: la funzione "Finestra mobile" di WeChat è in realtà uno strumento nascosto. Vedi un buon articolo senza tempo per leggerlo, clicca in alto a destra "Finestra mobile", si ridurrà a un puntino attaccato al bordo dello schermo, riapribile in qualsiasi momento. Molto più comodo che inoltrarlo all'assistente di trasferimento file. Inoltre, strumenti come Cubox o Pocket permettono di raccogliere su più piattaforme i buoni contenuti visti ovunque.
 - <strong>Costruire un sistema - Notion e Feishu</strong>: quando le note sparse diventano difficili da trovare, puoi passare a Notion. È davvero flessibile: puoi creare un "database di note di lettura" organizzato automaticamente per titolo del libro, autore, valutazione; o un "tabellone di progetto" per visualizzare l'avanzamento dei compiti di lavoro. Anche le "Tabelle multidimensionali" di Feishu sono simili e in Cina l'accesso è più veloce. Uso Notion per gestire tutti i miei materiali di scrittura, note di studio e avanzamento dei progetti da oltre tre anni.
 
@@ -41,7 +41,7 @@ La scansione con il telefono, se usata bene, può davvero risparmiare molti fast
 - <strong>Riconoscimento testo OCR</strong>: per i documenti scansionati, se serve estrarre il testo per modificarlo, serve l'OCR. La funzione "Estrai testo" integrata in WeChat è la più semplice - premi a lungo sull'immagine e si usa, la precisione del riconoscimento è buona. Per grandi quantità, puoi usare l'app Baimiao o CamScanner. Per il cinese, il motore OCR di Baidu è buono; anche la conversione immagine-testo di WPS è precisa.
 - <strong>Piccoli trucchi di scansione</strong>: scatta in un luogo ben illuminato, possibilmente con una lampada da tavolo laterale per evitare l'ombra della mano sul documento. Se il foglio è piegato agli angoli, appiattiscilo con la mano prima di scattare. Per documenti di più pagine puoi scansionare in sequenza e unire in un unico PDF, senza salvarli pagina per pagina.
 
-#### 4. Quale cloud scegliere: non c'è il migliore, solo il più adatto a te
+4. Quale cloud scegliere: non c'è il migliore, solo il più adatto a te
 
 Sulla scelta del cloud ho riflettuto a lungo, alla fine ho capito che dipende dal tuo "ecosistema principale".
 

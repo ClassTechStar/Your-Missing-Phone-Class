@@ -2,12 +2,12 @@
 id: di-shi-san-zhang
 num: 13
 part: ruan-jian-pian
-nav: Capítulo Treze: Recomendações de Apps de ferramentas
+nav: Capítulo 13: Quais apps valem a pena e quais evitar
 toc: default
 kind: chapter
 ---
 
-### Capítulo 13: Recomendações de apps de ferramentas
+### Capítulo 13: Quais apps valem a pena e quais evitar
 
 {class="chapter-intro mb-4"}
 Este capítulo seleciona ferramentas de produtividade, saúde e viagens, e complementa com recursos úteis do sistema e entre dispositivos: limpeza e antispam (como Qingzhuo), opções de bloqueio nativas, alertas de clima e terremotos; acesso remoto ao computador (Sunlogin/ToDesk), escritório com IA (Trae), papel de parede animado, transferência rápida em rede local (LocalSend), área de transferência entre dispositivos, códigos dinâmicos (Aegis/Microsoft Authenticator), agenda do TickTick e digitalização de documentos em papel.
@@ -43,7 +43,7 @@ Apps de produtividade são o "esqueleto" da vida digital: ajudam a organizar ide
 ##### 4. Notas (conhecimento organizado)
 
 - Notion Público: quem quer unificar notas, tarefas, bases de dados e wiki; estudantes, freelancers e equipes. Diferenciais: base de conhecimento completa, edição em blocos, páginas pessoais, listas de leitura e quadros de projeto, com rico ecossistema de modelos.
-- Obsidian Público: gestores de conhecimento, pesquisadores e escritores. Diferenciais: armazenamento local em Markdown, links bidirecionais e grafo de relações — suas notas viram um "segundo cérebro", com dados totalmente seus.
+- Obsidian Público: gestores de conhecimento, pesquisadores e escritores. Diferenciais: armazenamento local em Markdown, links bidirecionais e grafo de relações: suas notas viram um "segundo cérebro", com dados totalmente seus.
 - flomo Público: quem quer registrar ideias rápidas sem escrever textões. Diferenciais: notas em cartões, como postar no feed; suporte a etiquetas com # e linha do tempo para revisitar.
 - Notas da Apple Público: usuários de iPhone/Mac com necessidades leves. Diferenciais: abre rápido, escaneia documentos, desenha, cria listas e sincroniza pelo iCloud; gratuita e bem integrada ao sistema.
 - Evernote (Yinxiang) Público: usuários avançados que precisam recortar muitas páginas e arquivar materiais. Diferenciais: extensão de web clipper poderosa, OCR de texto em imagens, marca consolidada e estável, mas o plano premium é pago.
@@ -60,13 +60,13 @@ Contratos, notas fiscais, trabalhos escolares, anotações de quadro branco, có
 
 - CamScanner Público: profissionais e estudantes que escaneiam contratos, recibos e documentos com frequência. Diferenciais: detecção automática de bordas, correção de perspectiva e OCR; gera PDFs multipáginas com sincronização na nuvem.
 - Microsoft Lens Público: estudantes e quem precisa transformar quadro branco/páginas de livro em Word. Diferenciais: gratuito e sem anúncios, exporta em um toque para OneNote/Word, com boa precisão de reconhecimento.
-- Escaneamento nas Notas da Apple Público: usuários de iPhone com necessidades leves. Diferenciais: não precisa instalar app; toque no ícone da câmera dentro das Notas, com remoção automática de sombras e assinatura — grátis e prático.
+- Escaneamento nas Notas da Apple Público: usuários de iPhone com necessidades leves. Diferenciais: não precisa instalar app; toque no ícone da câmera dentro das Notas, com remoção automática de sombras e assinatura, grátis e prático.
 - Baimiao / CamScanner Web / "Document Scan" da câmera de marca: a câmera nativa de Huawei, Xiaomi, OPPO e vivo costuma ter modo "Documento/Escaner"; no Android também dá para usar o Google Camera ou o scanner do sistema. Bom para fotografar rapidamente uma página de contrato.
 - Dicas de fotografia: luz uniforme, celular paralelo ao papel, alinhado aos quatro cantos; documentos multipágina fotografar em ordem e depois juntar em PDF; em documentos sensíveis, atente a marcas d'água e ao local de salvamento, e limpe definitivamente em "Excluídos recentemente" após o uso.
 
 #### 2. Saúde e exercícios
 
-Apps de saúde são o "assistente pessoal" mais subestimado do celular — monitoram continuamente sono, frequência cardíaca e atividade, refletindo o estado de longo prazo melhor do que uma visita ocasional ao médico.
+Apps de saúde são o "assistente pessoal" mais subestimado do celular, monitoram continuamente sono, frequência cardíaca e atividade, refletindo o estado de longo prazo melhor do que uma visita ocasional ao médico.
 
 ##### 1. Exercícios e fitness
 
@@ -105,9 +105,9 @@ Fora de casa, alguns apps bem escolhidos evitam muita dor de cabeça. Veja as re
 
 ##### 1. Voos e trens
 
-- Umetour (Hanglv Zongheng) — Público-alvo: profissionais que voam com frequência. Principal destaque: dados oficiais da aviação civil, as informações mais confiáveis sobre status de voos, trocas de portão de embarque e avisos de atraso; permite consultar o modelo da aeronave e o mapa de assentos.
+- Umetour (Hanglv Zongheng), Público-alvo: profissionais que voam com frequência. Principal destaque: dados oficiais da aviação civil, as informações mais confiáveis sobre status de voos, trocas de portão de embarque e avisos de atraso; permite consultar o modelo da aeronave e o mapa de assentos.
 - 12306 Público: todos que viajam de trem na China. Diferenciais: canal oficial e confiável de compra; suporta lista de espera (compra automática quando alguém devolve); prática para bilhetes estudantis e em grupo.
-- VariFlight (Feichangzhun) — Público-alvo: quem se importa com a pontualidade dos voos e precisa buscar ou deixar alguém no aeroporto. Principal destaque: previsão de atrasos de voos bem precisa; dá para compartilhar a viagem com a família, que acompanha em tempo real sua localização e o horário de chegada.
+- VariFlight (Feichangzhun): Público-alvo: quem se importa com a pontualidade dos voos e precisa buscar ou deixar alguém no aeroporto. Principal destaque: previsão de atrasos de voos bem precisa; dá para compartilhar a viagem com a família, que acompanha em tempo real sua localização e o horário de chegada.
 
 ##### 2. Mapas e navegação
 
@@ -117,18 +117,18 @@ Fora de casa, alguns apps bem escolhidos evitam muita dor de cabeça. Veja as re
 
 ##### 3. Tradução
 
-- Google Tradutor Público: viajantes e estudantes de idiomas. Diferenciais: "Conversa" com tradução bidirecional em tempo real e "Câmera" com tradução instantânea de texto — indispensáveis na viagem; suporta pacotes de idiomas offline.
+- Google Tradutor Público: viajantes e estudantes de idiomas. Diferenciais: "Conversa" com tradução bidirecional em tempo real e "Câmera" com tradução instantânea de texto, indispensáveis na viagem; suporta pacotes de idiomas offline.
 
 ##### 4. Conversão de moedas
 
-- Conversor de Câmbio Minimalista (Jijian Huilü) — Público-alvo: quem viaja para o exterior, faz compras internacionais ou compras transfronteiriças. Principal destaque: interface extremamente limpa, mais de 160 moedas, câmbio atualizado em tempo real, comparação de várias moedas ao mesmo tempo e conversão rápida segurando o dedo sobre o número.
+- Conversor de Câmbio Minimalista (Jijian Huilü): Público-alvo: quem viaja para o exterior, faz compras internacionais ou compras transfronteiriças. Principal destaque: interface extremamente limpa, mais de 160 moedas, câmbio atualizado em tempo real, comparação de várias moedas ao mesmo tempo e conversão rápida segurando o dedo sobre o número.
 
 ##### 5. Clima
 
 - Clima do sistema / China Weather Network Público: todos, como primeira opção para previsões e alertas oficiais. Diferenciais: apps de clima dos fabricantes e canais oficiais como "China Weather" recebem alertas do serviço meteorológico; chuvas fortes, tufões e calor extremo chegam em banners/notificações, com alta autoridade.
 - Caiyun Weather Público: quem precisa de previsão de chuva minuto a minuto. Diferenciais: alta precisão em "vai chover nas próximas duas horas"; mapa dinâmico de chuva intuitivo e alertas ativos antes de começar a chover.
 - Carrot Weather Público: entusiastas de clima que gostam de diversão e muitos widgets. Diferenciais: locução de IA bem-humorada, inúmeros widgets personalizáveis, radar profissional; a versão paga é mais completa.
-- Pontos de alerta: apps de clima precisam de notificações liberadas para enviarem alertas; os alertas têm quatro níveis — azul, amarelo, laranja e vermelho. Vermelho indica risco meteorológico extremo e você deve ajustar os planos conforme o aviso. Mais formas de ativar na seção 7 deste capítulo «Alertas climáticos / Alertas de desastres naturais / Alertas de terremoto».
+- Pontos de alerta: apps de clima precisam de notificações liberadas para enviarem alertas; os alertas têm quatro níveis, azul, amarelo, laranja e vermelho. Vermelho indica risco meteorológico extremo e você deve ajustar os planos conforme o aviso. Mais formas de ativar na seção 7 deste capítulo «Alertas climáticos / Alertas de desastres naturais / Alertas de terremoto».
 
 ##### 6. Guias de viagem
 
@@ -140,10 +140,10 @@ Fora de casa, alguns apps bem escolhidos evitam muita dor de cabeça. Veja as re
 Automação é uma alavanca: "configura uma vez e economiza sempre". Pode reduzir a zero as dezenas de operações repetidas do seu dia. Aqui é só uma introdução; práticas e tutoriais detalhados estão no Capítulo 23: Pensamento computacional e introdução à automação.
 
 - Atalhos do iOS: ferramenta oficial de automação da Apple, sem programar. Em um toque, executa combos como "ao chegar em casa: ligar Wi-Fi + baixar o brilho + anunciar o tempo".
-- Automação no Android: cenários nativos (como "Tarefas automáticas" da Xiaomi e "Cenários inteligentes" da Huawei) são os mais fáceis; o Tasker é poderoso, mas tem curva de aprendizado íngreme — para entusiastas.
+- Automação no Android: cenários nativos (como "Tarefas automáticas" da Xiaomi e "Cenários inteligentes" da Huawei) são os mais fáceis; o Tasker é poderoso, mas tem curva de aprendizado íngreme, para entusiastas.
 - Ideia central: primeiro identifique "o que você repete todo dia", depois pense "dá para substituir por um gatilho + várias ações?". Exemplos detalhados e recursos avançados no Capítulo 23.
 
-#### 5. Navegadores e mecanismos de busca: sua porta de entrada para a informação
+5. Navegadores e mecanismos de busca: sua porta de entrada para a informação
 
 O navegador é a sua janela para a internet; o mecanismo de busca é a bússola para navegar no oceano de informações. Usá-los bem evita muitos desvios.
 
@@ -153,13 +153,13 @@ Ao digitar um endereço, o navegador: ①consulta o servidor DNS para descobrir 
 
 ##### Navegadores recomendados:
 
-- Microsoft Edge: baseado no núcleo Chromium, rápido e compatível. Traz o assistente de IA Copilot, que resume páginas, traduz e conversa. Sincroniza entre dispositivos — recomendo muito como navegador principal.
+- Microsoft Edge: baseado no núcleo Chromium, rápido e compatível. Traz o assistente de IA Copilot, que resume páginas. Traduz e conversa. Sincroniza entre dispositivos, recomendo muito como navegador principal.
 - Safari: padrão nos dispositivos Apple, bem integrado ao sistema e econômico. Boa proteção de privacidade, mas com menos extensões.
 - Chrome: o mais usado no mundo, com muitas extensões. Porém, consome bastante memória e, no celular, gasta mais bateria.
 
 ##### Escolha do mecanismo de busca:
 
-- Bing: da Microsoft, bem integrado ao Edge. O resumo de IA responde direto, sem só listar links — muito mais eficiente. A busca de imagens também é boa.
+- Bing: da Microsoft, bem integrado ao Edge. O resumo de IA responde direto, sem só listar links, muito mais eficiente. A busca de imagens também é boa.
 - Yandex: o maior buscador russo, com busca e busca reversa de imagens muito fortes. Ótimo para achar imagens parecidas e identificar objetos.
 - Baidu: principal buscador de informações na China, mas com muitos anúncios — exige senso crítico.
 - Google: o buscador mais preciso do mundo, mas na China exige rede especial para ser usado.
@@ -168,28 +168,28 @@ Ao digitar um endereço, o navegador: ①consulta o servidor DNS para descobrir 
 
 - Use a busca com IA: o resumo do Bing e o Copilot do Edge respondem direto e destilam o essencial de um mar de resultados — muito mais rápido do que clicar link por link.
 - Identifique desinformação e anúncios: itens marcados como "Anúncio" ou "Patrocinado" são promoções pagas, não resultados orgânicos. Verifique a autoridade da fonte e prefira sites oficiais e veículos conhecidos.
-- Baixar apps corretamente: no buscador, digite "nome do app + site oficial" (por exemplo, "WeChat site oficial") e prefira resultados com domínio oficial. Não instale software de sites de download de terceiros — costumam vir com programas indesejados.
+- Baixar apps corretamente: no buscador, digite "nome do app + site oficial" (por exemplo, "WeChat site oficial") e prefira resultados com domínio oficial. Não instale software de sites de download de terceiros, costumam vir com programas indesejados.
 - Como reconhecer o site oficial: para baixar o Windows 11, acesse microsoft.com; para o Chrome, google.com. Conferir se o domínio corresponde à marca é o método mais básico.
 
 ##### Conhecimento sobre domínios:
 
 O domínio é o "endereço" de um site. Saber lê-lo ajuda a julgar a natureza e a origem da página:
 
-- Significado dos sufixos comuns: |   |  .com — organizações comerciais, o mais comum
+- Significado dos sufixos comuns: |   |  .com, organizações comerciais, o mais comum
 - .cn — domínio nacional da China
 - .org — organizações sem fins lucrativos
 - .net — serviços de rede
-- .edu — instituições de ensino
-- .gov — órgãos governamentais
-- .xyz/.tech/.info — domínios genéricos novos, baratos e de fácil registro: tenha cuidado
+- .edu, instituições de ensino
+- .gov, órgãos governamentais
+- .xyz/.tech/.info, domínios genéricos novos, baratos e de fácil registro: tenha cuidado
 
-- Domínios por país/região: |   |  .jp — Japão
-- .kr — Coreia
-- .uk — Reino Unido
-- .de — Alemanha
+- Domínios por país/região: |   |  .jp, Japão
+- .kr, Coreia
+- .uk, Reino Unido
+- .de, Alemanha
 - .tw — Taiwan
-- .hk — Hong Kong
-- Dica de segurança: sites .gov e .edu costumam ser mais confiáveis, pois o registro é mais rigoroso. Domínios baratos como .xyz e .top são muito usados em phishing — navegue com atenção.
+- .hk, Hong Kong
+- Dica de segurança: sites .gov e .edu costumam ser mais confiáveis, pois o registro é mais rigoroso. Domínios baratos como .xyz e .top são muito usados em phishing: navegue com atenção
 
 ##### Bloqueio de anúncios:
 
@@ -251,9 +251,9 @@ Experimente criar uma automação "relaxar antes de dormir"
 3. Salve e teste.
 :::
 
-#### 6. Ferramentas úteis do sistema: limpeza, antispam e proteção
+6. Ferramentas úteis do sistema: limpeza, antispam e proteção
 
-Além dos apps de produtividade e saúde, o que mais impacta o dia a dia costuma ser "ser incomodado menos, ter espaço de sobra e não cair em golpe". Esta seção primeiro lista apps úteis comuns e depois detalha o bloqueio de spam nativo do celular — muita gente usa o aparelho há anos e nunca abriu essas opções.
+Além dos apps de produtividade e saúde, o que mais impacta o dia a dia costuma ser "ser incomodado menos, ter espaço de sobra e não cair em golpe". Esta seção primeiro lista apps úteis comuns e depois detalha o bloqueio de spam nativo do celular, muita gente usa o aparelho há anos e nunca abriu essas opções.
 
 ##### 1. Limpeza do sistema e otimização de armazenamento
 
@@ -264,7 +264,7 @@ Além dos apps de produtividade e saúde, o que mais impacta o dia a dia costuma
 
 ##### 2. Apps de antispam e segurança
 
-- Centro Nacional Antifraude Público: todos, especialmente idosos, quem trabalha com finanças e quem compra online ou atende números desconhecidos. Diferenciais: oficial; aviso de chamadas, alertas de risco em SMS e detecção de sites suspeitos; integrado às bases antifraude da polícia — a camada mais confiável das "três linhas de defesa".
+- Centro Nacional Antifraude Público: todos, especialmente idosos, quem trabalha com finanças e quem compra online ou atende números desconhecidos. Diferenciais: oficial; aviso de chamadas, alertas de risco em SMS e detecção de sites suspeitos; integrado às bases antifraude da polícia, a camada mais confiável das "três linhas de defesa".
 - Centro de segurança da marca / gerenciador do celular Público: usuários da respectiva marca. Diferenciais: Huawei Phone Manager, Mi Security Center, OPPO/vivo Phone Manager etc., com bloqueio de spam, antivírus, gerenciamento de permissões e proteção de pagamentos. Costumam ser gratuitos e integrados ao sistema; evite instalar um segundo pacote comercial para não gerar conflitos de permissão.
 - Serviço antispam da operadora Público: quem é bombardeado por chamadas de alta frequência e voz por IA. Diferenciais: China Mobile envie KTFSR para 10086; China Telecom siga "Tianyi Antispam"; China Unicom configure no "Unicom Mobile Manager". O bloqueio acontece na operadora e evita até que o celular toque.
 - AdGuard Público: todos os usuários incomodados com pop-ups, anúncios em vídeo e anúncios dentro de apps. Diferenciais: bloqueio em nível de sistema (não só no navegador), filtra banners e rastreamento de splash, economiza dados e acelera o carregamento; a versão paga cobre todos os dispositivos.
@@ -278,7 +278,7 @@ Princípios para escolher apps úteis
 - Sistema primeiro: bloqueio, limpeza e permissões — ative antes o que já vem no celular.
 - Complemento oficial: Centro Nacional Antifraude e antispam da operadora são canais oficiais e podem ser somados.
 - Terceiros com moderação: um app por função já basta; evite conflitos de permissão e disputa de recursos.
-- Menos é mais: quanto mais ferramentas, mais notificações e permissões — e maior a chance de ser incomodado pelas próprias ferramentas.
+- Menos é mais: quanto mais ferramentas, mais notificações e permissões, e maior a chance de ser incomodado pelas próprias ferramentas.
 :::
 
 ##### 3. Bloqueio de spam nativo: como ativar em cada marca
@@ -334,7 +334,7 @@ A seguir, os caminhos por marca. Os nomes podem variar conforme a versão do sis
 Como combinar as três camadas de proteção
 
 {class="mt-1"}
-No dia a dia, recomendo "bloqueio do sistema + antispam da operadora + Centro Nacional Antifraude": o sistema cuida de marcação e lista negra; a operadora bloqueia chamadas de alta frequência na rede; o centro antifraude completa com alertas oficiais. Não é preciso deixar tudo no nível máximo — senão entrega, comida e o médico também são bloqueados. Libere contatos e contatos recentes.
+No dia a dia, recomendo "bloqueio do sistema + antispam da operadora + Centro Nacional Antifraude": o sistema cuida de marcação e lista negra; a operadora bloqueia chamadas de alta frequência na rede; o centro antifraude completa com alertas oficiais. Não é preciso deixar tudo no nível máximo: senão entrega, comida e o médico também são bloqueados. Libere contatos e contatos recentes.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
@@ -377,7 +377,7 @@ O bloqueio de spam protege contra golpes; os alertas protegem contra desastres e
 
 ##### 3. Alerta de terremoto: não é o mesmo que "previsão de terremoto"
 
-O alerta de terremoto (EEW) usa o fato de que ondas eletromagnéticas viajam mais rápido que as ondas sísmicas, e que estações captam primeiro a onda P, para avisar a área afetada com alguns a dezenas de segundos de antecedência — antes da onda destrutiva (S) chegar. Ele não prevê se um terremoto vai acontecer; só ganha tempo para se abrigar, cortar o fogo e sair do elevador. Quanto mais perto do epicentro, menor o tempo de aviso — e às vezes não sobra tempo nenhum.
+O alerta de terremoto (EEW) usa o fato de que ondas eletromagnéticas viajam mais rápido que as ondas sísmicas, e que estações captam primeiro a onda P, para avisar a área afetada com alguns a dezenas de segundos de antecedência: antes da onda destrutiva (S) chegar. Ele não prevê se um terremoto vai acontecer; só ganha tempo para se abrigar, cortar o fogo e sair do elevador. Quanto mais perto do epicentro, menor o tempo de aviso — e às vezes não sobra tempo nenhum.
 
 - Soluções oficiais e do setor: na China continental, incluem capacidades da rede nacional de alerta sísmico e serviços impulsionados por institutos como o Instituto de Redução de Desastres de Chengdu; alguns fabricantes pré-instalam ou recebem alertas via internet.
 - Apps de terceiros: procure na loja apps de "alerta de terremoto" de instituições confiáveis (confira o desenvolvedor e evite apps falsos que pedem permissões demais).
@@ -462,7 +462,7 @@ Prática: revise os alertas em 10 minutos
 4. Confirme que o som do alerta não fica totalmente mudo no Não Perturbe; faça o mesmo no celular dos seus pais.
 :::
 
-#### 8. Colaboração entre dispositivos: acesso remoto, transferência e segurança de contas
+8. Colaboração entre dispositivos: acesso remoto, transferência e segurança de contas
 
 O celular flui melhor quando forma equipe com o computador e o tablet. Esta seção traz ferramentas de uso frequente: controlar o PC pelo celular, escritório com IA e colaboração remota, papel de parede animado, transferência rápida em rede local, área de transferência entre dispositivos, códigos 2FA e a ponte entre digitalização e agenda. Para integração mais completa, veja o Capítulo 17.
 
@@ -470,17 +470,17 @@ O celular flui melhor quando forma equipe com o computador e o tablet. Esta seç
 
 - Sunlogin Público: quem precisa operar o Windows ou Mac de casa/trabalho de longe; também usado para ajudar idosos remotamente (veja o Capítulo 27). Diferenciais: ecossistema chinês maduro; o app do celular controla a área de trabalho, transfere arquivos e pode ligar/desligar o PC (algumas funções exigem hardware); a versão gratuita costuma bastar para uso pessoal leve.
 - ToDesk Público: quem quer conexão estável e baixa latência para trabalho/operacoes remotas. Diferenciais: conexão por código de dispositivo + senha, celular controla o PC e vice-versa (conforme a versão), transferência de arquivos e troca de monitores ágeis; boa experiência com nós na China.
-- Uso básico: instale o cliente no computador e entre/mantenha online → instale o app no celular → use o código do dispositivo + senha de conexão (ou a mesma conta) → opere a área de trabalho com touchpad/gestos no celular.
-- Limites de segurança (guarde bem): |   |  Se um desconhecido se passar por "atendente/polícia/operadora" e pedir para instalar Sunlogin ou ToDesk e acessar seu celular ou PC remotamente, recuse — é golpe clássico (veja o Capítulo 27).
+- Uso básico: instale o cliente no computador e entre/mantenha online → instale o app no celular → use o código do dispositivo + senha de conexão, (ou a mesma conta) → opere a área de trabalho com touchpad/gestos no celular.
+- Limites de segurança (guarde bem): |   |  Se um desconhecido se passar por "atendente/polícia/operadora" e pedir para instalar Sunlogin ou ToDesk e acessar seu celular ou PC remotamente, recuse: é golpe clássico (veja o Capítulo 27).
 - Para uso próprio: ative verificação em duas etapas, troque a senha padrão e, quando não usar, saia da conta ou desative o acesso sem supervisão; no computador da empresa, siga as regras de segurança.
 - Em locais públicos, observe se alguém está espiando a tela ou anotando senhas durante o acesso remoto.
 
 ##### 2. Escritório com IA: Trae / WorkBuddy / Dumate
 
 - Trae Público: quem programa e colabora em documentos, com bom suporte em chinês. Diferenciais: IDE/assistente de programação com IA da ByteDance; o modo SOLO gera projetos a partir de uma frase; muito eficiente para código e documentos. Rodando no computador, dá para acompanhar as tarefas pelo celular com acesso remoto ou os recursos oficiais do produto (consulte a versão atual). Veja o Capítulo 41 (panorama de ferramentas de IA para programação).
-- WorkBuddy Público: profissionais que querem IA para organizar atas, e-mails, relatórios e documentos. Diferenciais: assistente de IA focado em escritório, ótimo para "redigir — revisar — resumir"; parte dos fluxos pode ser iniciada no celular e o trabalho pesado fica no computador.
+- WorkBuddy Público: profissionais que querem IA para organizar atas, e-mails, relatórios e documentos. Diferenciais: assistente de IA focado em escritório, ótimo para "redigir, revisar, resumir"; parte dos fluxos pode ser iniciada no celular e o trabalho pesado fica no computador.
 - Dumate Público: equipes e pessoas que precisam de colaboração, documentos e gestão de conhecimento integrados. Diferenciais: ferramenta de escritório colaborativo com IA, forte em reunir materiais e edição conjunta; no celular dá para ver e editar levemente; diagramação complexa é melhor no PC.
-- Como entender o "controle remoto do PC pelo celular": muitos recursos de IA rodam no computador ou na web. Com Sunlogin/ToDesk ou o app/site oficial, você "comanda" tarefas de IA no PC durante o trajeto. Princípio: cálculo pesado e documentos longos no computador; acompanhar progresso e ajustar frases, no celular.
+- Como entender o "controle remoto do PC pelo celular": muitos recursos de IA rodam no computador ou na web. Com Sunlogin/ToDesk ou o app/site oficial. Você "comanda" tarefas de IA no PC durante o trajeto. Princípio: cálculo pesado e documentos longos no computador; acompanhar progresso e ajustar frases, no celular.
 - Privacidade: antes de enviar contratos, documentos de identidade ou dados de clientes, leia as políticas de privacidade e as exigências de compliance da empresa; para material corporativo, prefira as ferramentas indicadas pela empresa.
 
 ##### 3. Wallpaper animado: N0va Desktop (celular + PC)
@@ -492,7 +492,7 @@ O celular flui melhor quando forma equipe com o computador e o tablet. Esta seç
 ##### 4. Transferência rápida em rede local: LocalSend / Feige / AirDrop
 
 - LocalSend Público: quem mistura Android/Windows/iOS/Mac/Linux e quer transferir entre plataformas sem passar pela nuvem pública. Diferenciais: código aberto, conexão direta no mesmo Wi-Fi para fotos, vídeos e documentos, sem cabo e sem servidores do fabricante; a velocidade depende do roteador.
-- Feige Chuanshu (Feige) — Público-alvo: computadores Windows de escritório e cenários antigos de trabalho em rede local. Principal destaque: ferramenta tradicional de transferência de arquivos e de chat em rede local, boa para mandar arquivos grandes pela intranet; atenção: baixe de canais oficiais e siga as políticas de TI na rede da empresa.
+- Feige Chuanshu (Feige), Público-alvo: computadores Windows de escritório e cenários antigos de trabalho em rede local. Principal destaque: ferramenta tradicional de transferência de arquivos e de chat em rede local, boa para mandar arquivos grandes pela intranet; atenção: baixe de canais oficiais e siga as políticas de TI na rede da empresa.
 - AirDrop Público: usuários de iPhone, iPad e Mac. Diferenciais: compartilhamento em um toque no ecossistema Apple, com Bluetooth + Wi-Fi direto e sem gastar dados; configure "Somente contatos" para evitar estranhos.
 - Outras opções: Mi Share, Huawei Share, vivo Share etc. são muito rápidos entre aparelhos da mesma marca; o "Arquivos" do WeChat é prático, mas tem limite de tamanho e de dispositivos. Para arquivos grandes, prefira LocalSend/AirDrop.
 - Dicas: ambos no mesmo Wi-Fi; em Wi-Fi público, evite arquivos sensíveis e prefira o hotspot pessoal; ao final, confirme no destinatário se o arquivo está íntegro.
@@ -503,7 +503,7 @@ O celular flui melhor quando forma equipe com o computador e o tablet. Esta seç
 - KDE Connect Público: Android + Windows/Linux/Mac, quem quer sincronização de área de transferência open source, espelhamento de notificações e entrada remota. Diferenciais: após parear na LAN, sincroniza a área de transferência, envia notificações do celular ao PC e usa o celular como controle de slides/touchpad; os dados não passam por contas de terceiros.
 - Soluções de marca: Huawei Multi-Screen Collaboration/Super Device, Mi Share+, vivo Share, OPPO Connect, Honor Connect etc. costumam ter área de transferência entre telas e arrastar arquivos; a experiência é melhor entre aparelhos da mesma marca.
 - Canal oficial Windows + Android: "Phone Link / Link to Windows" (evolução do Your Phone) mostra notificações e fotos do celular no PC e permite copiar/colar em cenários compatíveis; modelos como Samsung têm integração mais profunda.
-- Segurança: a área de transferência pode guardar senhas e códigos; em computadores compartilhados, evite a sincronização global e não cole duas vezes em campos de senha. Alguns teclados também leem a área de transferência — atente às permissões.
+- Segurança: a área de transferência pode guardar senhas e códigos; em computadores compartilhados, evite a sincronização global e não cole duas vezes em campos de senha. Alguns teclados também leem a área de transferência: atente às permissões.
 
 ##### 6. Códigos dinâmicos 2FA: Aegis / Microsoft Authenticator
 
@@ -511,7 +511,7 @@ O celular flui melhor quando forma equipe com o computador e o tablet. Esta seç
 - Aegis Authenticator Público: usuários de Android que preferem código aberto e controle local. Diferenciais: gratuito e open source, backup criptografado, importação/exportação, interface limpa e desbloqueio da lista de tokens por digital/rosto.
 - Microsoft Authenticator Público: usuários de contas Microsoft, Office 365/empresariais; iOS/Android. Diferenciais: aprovação de login por push, monitoramento de senhas e backup de contas (conforme a versão), bem integrado ao Windows e à identidade corporativa.
 - Google Authenticator / 2FAS etc.: também são comuns; o importante é ter backup criptografado para não perder os tokens na troca de aparelho.
-- Na troca de celular: migre do aparelho antigo ou use os "códigos de backup/chave de recuperação" do serviço. Imprima os códigos em papel e guarde em dois lugares — não só no mesmo celular.
+- Na troca de celular: migre do aparelho antigo ou use os "códigos de backup/chave de recuperação" do serviço. Imprima os códigos em papel e guarde em dois lugares, não só no mesmo celular.
 - Com gerenciadores de senhas: alguns cofres também guardam TOTP, o que é prático, mas concentra risco. Para contas de alto valor, prefira "gerenciador de senhas + autenticador independente". Veja o Capítulo 14.
 
 ##### 7. Combinação recomendada: como encaixar tudo no dia
@@ -546,5 +546,5 @@ Prática: teste a ponte "entre dispositivos" uma vez
 1. Conecte celular e PC ao mesmo Wi-Fi e envie uma foto pelo LocalSend (ou AirDrop).
 2. Crie no TickTick uma tarefa "hoje às 20: organizar scans" e confirme que aparece no celular e no PC.
 3. Ative 2FA no e-mail ou WeChat (se disponível), vincule com Aegis ou Microsoft Authenticator e guarde os códigos de backup.
-4. Instale o Sunlogin ou ToDesk no seu computador, conecte uma vez pelo seu celular e depois saia ou reforce a senha — aprenda o fluxo sem deixar brechas.
+4. Instale o Sunlogin ou ToDesk no seu computador, conecte uma vez pelo seu celular e depois saia ou reforce a senha, aprenda o fluxo sem deixar brechas.
 :::

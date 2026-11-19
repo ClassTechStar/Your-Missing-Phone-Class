@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十章：Kotlin 快速上手——安卓开发的第一语言
 
 {class="chapter-intro mb-4"}
-这一章咱们正式学语言。别紧张——Kotlin 是出了名的"对新手友好"，而且你不需要背语法书：先掌握 20% 的语法，就能看懂和写出 80% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：<strong>看懂 > 记住，会用 > 精通</strong>。
+这一章咱们正式学语言。别紧张：Kotlin 是出了名的"对新手友好"，而且你不需要背语法书：先掌握 20% 的语法，就能看懂和写出 80% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：<strong>看懂 > 记住，会用 > 精通</strong>。
 
 #### 一、变量与类型：给数据起名字
 
@@ -49,7 +49,7 @@ Kotlin 常用基础类型
 <i class="fas fa-lightbulb mr-2"></i>小贴士：val 优先原则
 
 {class="mt-1"}
-Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>。能用 val 的地方用 var，IDE 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug——代码越少变化，越容易推理。
+Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>。能用 val 的地方用 var，IDE 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug，代码越少变化，越容易推理。
 :::
 
 #### 二、函数：把逻辑打包成"按钮"
@@ -75,7 +75,7 @@ println(add(3, 5))            // 输出：8
 ```
 :::
 
-几个要点：参数写在括号里（名字在前、类型在后，用冒号隔开）；返回类型写在括号后；<strong>字符串模板</strong> <code class="inline">$变量名</code> 是 Kotlin 的招牌便利——不用再像 Java 那样"字符串 + 变量"地拼来拼去。
+几个要点：参数写在括号里（名字在前、类型在后，用冒号隔开）；返回类型写在括号后；<strong>字符串模板</strong> <code class="inline">$变量名</code> 是 Kotlin 的招牌便利，不用再像 Java 那样"字符串 + 变量"地拼来拼去。
 
 #### 三、条件与循环：让程序会"思考"
 
@@ -146,7 +146,7 @@ println(len)
 
 #### 五、类与对象：造"零件"的模具
 
-类是对象的"模具"，对象是类的"成品"。安卓里的一切——页面、按钮、数据——都是对象。Kotlin 里有个神器叫 <strong>data class</strong>（数据类），专门用来"装数据"，一行顶 Java 几十行：
+类是对象的"模具"，对象是类的"成品"。安卓里的一切，页面、按钮、数据——都是对象。Kotlin 里有个神器叫 <strong>data class</strong>（数据类），专门用来"装数据"，一行顶 Java 几十行：
 
 ::: div .code-block
 :::inline div .code-head
@@ -174,7 +174,7 @@ val twin = me.copy(name = "张三丰")   // 复制并改一个字段
 
 #### 六、lambda 与高阶函数：Kotlin 的"语法糖"
 
-安卓代码里你会天天看到 <code class="inline">{ ... }</code> 这种"没名字的函数"，它叫 <strong>lambda（匿名函数）</strong>。Button 的 <code class="inline">onClick = { count++ }</code> 就是一个 lambda——把"点击后做什么"打包成一坨，递给按钮。
+安卓代码里你会天天看到 <code class="inline">{ ... }</code> 这种"没名字的函数"，它叫 <strong>lambda（匿名函数）</strong>。Button 的 <code class="inline">onClick = { count++ }</code> 就是一个 lambda，把"点击后做什么"打包成一坨，递给按钮。
 
 ::: div .code-block
 :::inline div .code-head

@@ -2,17 +2,17 @@
 id: di-san-shi-er-zhang
 num: 32
 part: shi-zhan-pian
-nav: Kapitel 32: Das Erste-Hilfe-Handbuch für Handy-Sicherheit
+nav: Kapitel 32: Notfall? 30 Sekunden, den Schaden zu begrenzen
 toc: default
 kind: chapter
 ---
 
-### Kapitel 32: Notfallhandbuch für Smartphone-Sicherheit
+### Kapitel 32: Notfall? 30 Sekunden, den Schaden zu begrenzen
 
 {class="chapter-intro mb-4"}
 Dieses Kapitel ist ein „Notfallplan“. Hoffentlich brauchen Sie ihn nie – falls doch, hilft er Ihnen, bei Verlust, Diebstahl oder Betrug den Schaden zu begrenzen. Auch bei Erdbeben, Starkregen und anderen Katastrophen ist das Smartphone Werkzeug für Warnungen, Standortnotruf und Kommunikation. Lesen Sie das Kapitel am besten jetzt einmal durch, speichern Sie die wichtigsten Schritte als Screenshot oder drucken Sie sie aus und legen Sie sie zu Hause hin – im Ernstfall ist das Handy womöglich weg, bei Katastrophen leer oder ohne Netz.
 
-#### Szenario 0: Erdbeben / Extremwetter – wie das Smartphone Leben rettet
+Szenario 0: Erdbeben / Extremwetter – wie das Smartphone Leben rettet
 
 Hier geht es um körperliche Sicherheit, nicht um Konten und Geld. Zu Warn-Einstellungen siehe Kapitel 13 „Wetterwarnungen, Naturgefahren und Erdbebenwarnung“; hier nur: Was tun, wenn der Alarm ertönt?
 
@@ -51,7 +51,7 @@ Vier Dinge, die Sie heute erledigen sollten
 4. Mindestens eine Nummer auswendig können, die „ohne Kontaktliste“ erreichbar ist (Handy der Familie), auf Papier in die Geldbörse legen.
 :::
 
-#### Szenario 1: Handy verloren/gestohlen – die goldenen 30 Minuten
+Szenario 1: Handy verloren/gestohlen – die goldenen 30 Minuten
 
 Die ersten 30 Minuten nach Verlust oder Diebstahl sind die „goldene Zeit“. Richtiges Handeln schützt Geld und Privatsphäre. Reihenfolge einhalten, keinen Schritt auslassen:
 
@@ -111,7 +111,7 @@ Zwei typische Maschen: ① „Ich habe kompromittierende Videos/Fotos, sonst geh
 - Passwort ändern: Zur Sicherheit die wichtigsten Konten-Passwörter erneuern.
 - Wenn echte Datenpanne droht: Anzeige erstatten. Die Polizei hat Erfahrung mit solchen Fällen.
 
-#### Szenario 6: KI-Gesichts-/Stimmklau – Augenzeugen sind nicht mehr Beweis
+Szenario 6: KI-Gesichts-/Stimmklau – Augenzeugen sind nicht mehr Beweis
 
 Seit 2024 können Betrüger per KI-Gesicht und KI-Stimme im Videoanruf „zu“ Familie, Vorgesetzten oder Freunden werden. „Mama, mir ist was passiert, schick Geld“ – im Video sieht und klingt alles nach Ihrem Sohn, ist aber Fake. Eine der derzeit schwersten und gefährlichsten Methoden.
 

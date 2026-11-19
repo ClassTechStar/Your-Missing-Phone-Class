@@ -2,19 +2,19 @@
 id: di-er-shi-san-zhang
 num: 23
 part: chao-yue-pian
-nav: Capítulo 23: Pensamiento de programación e iniciación a la automatización
+nav: Capítulo 23: Que el móvil se ocupe de lo repetitivo
 toc: default
 kind: chapter
 ---
 
-### Capítulo 23: Pensamiento de programación e iniciación a la automatización
+### Capítulo 23: Que el móvil se ocupe de lo repetitivo
 
 {class="chapter-intro mb-4"}
-En los dos capítulos anteriores, construimos un "muro de seguridad" para tu móvil y conocimos su "cerebro IA", cada vez más inteligente dentro de ese muro. Ahora, desbloqueemos uno de los últimos potenciales del móvil: hacer que "piense" como un programador y ejecute automáticamente tareas continuas que tu configures. Podrias decir: "Yo no se programar, que tiene que ver conmigo?" Tranquilo: este capítulo no requiere que escribas ni una sola linea de código — los móviles modernos han bajado la barrera de la "programacion" al nivel de arrastrar y soltar.
+En los dos capítulos anteriores, construimos un "muro de seguridad" para tu móvil y conocimos su "cerebro IA", cada vez más inteligente dentro de ese muro. Ahora, desbloqueemos uno de los últimos potenciales del móvil: hacer que "piense" como un programador y ejecute automáticamente tareas continuas que tu configures. Podrias decir: "Yo no se programar, que tiene que ver conmigo?" Tranquilo: este capítulo no requiere que escribas ni una sola linea de código, los móviles modernos han bajado la barrera de la "programacion" al nivel de arrastrar y soltar.
 
 #### I. ¿Qué es la automatización?
 
-En palabras simples: automatización es:<strong>hacer que el móvil ejecute una serie de acciones automáticamente cuando se cumple cierta condición.</strong> No necesitas operar manualmente cada vez ni recordar que hacer — el móvil juzga el momento y ejecuta por si mismo.
+En palabras simples: automatización es:<strong>hacer que el móvil ejecute una serie de acciones automáticamente cuando se cumple cierta condición.</strong> No necesitas operar manualmente cada vez ni recordar que hacer, el móvil juzga el momento y ejecuta por si mismo.
 
 Un ejemplo: cada mañana al despertar apagas a mano el modo No molestar, abres WeChat para ver los mensajes, abres la App del tiempo para ver qué ponerte y abres tu música. Si empaquetas estos pasos en un flujo de automatización configurado como «ejecutar cada día a las 7:00», al despertar solo tienes que coger el móvil: todo está listo.
 
@@ -24,7 +24,7 @@ En esencia, la automatización es una cadena lógica de "si... entonces...", el 
 2. <strong>Accion a ejecutar</strong>: que hacer exactamente? Puede ser enviar un mensaje de WeChat, abrir una App, ajustar el volumen, cambiar el fondo de pantalla, reproducir música, enviar notificaciones... casi todo lo que puedas hacer manualmente en tu móvil, la automatización puede hacerlo.
 3. <strong>Lógica intermedia</strong>(opcional pero potente): si la situación es A, haz X; si no, haz Y. Por ejemplo: "si es día laborable reproduce podcasts de noticias, si es fin de semana reproduce música". Esto se llama "ramificación condicional".
 
-#### II. "Atajos" de iOS: la herramienta de automatización para usuarios Apple
+II. "Atajos" de iOS: la herramienta de automatización para usuarios Apple
 
 La App "Atajos" (Shortcuts) de Apple viene preinstalada, no necesita descarga. Su concepto central es ensamblar varias operaciones como si fueran bloques de construccion. Primero algúnos conceptos clave:
 
@@ -60,14 +60,14 @@ Muchos móviles Android traen un «auto-clicker» de serie o se descarga de la t
 
 Tasker es la herramienta de automatización más potente y reconocida de Android, lidera los rankings desde hace años. Seamos sinceros: su curva de aprendizaje es algo empinada y su interfaz no es precisamente bonita, pero una vez dominado sentirás que tu móvil puede cualquier cosa. El núcleo de Tasker también es el patrón «trigger → tarea»:
 
-- <strong>Perfil (Profile)</strong>: define "cuándo activar". Los triggers pueden ser: tiempo, ubicación, estado de conexión Wi-Fi, Bluetooth, recepción de notificaciones específicas, estado de batería, orientación de pantalla... Tasker soporta una cantidad absurda de triggers — decenas de tipos.
+- <strong>Perfil (Profile)</strong>: define "cuándo activar". Los triggers pueden ser: tiempo, ubicación, estado de conexión Wi-Fi, Bluetooth, recepción de notificaciones específicas, estado de batería, orientación de pantalla... Tasker soporta una cantidad absurda de triggers, decenas de tipos.
 - <strong>Tarea (Task)</strong>: define "qué hacer al activarse". Una tarea puede contener múltiples acciones que se ejecutan secuencialmente. Tipos de acciones: ajustar configuración del sistema (volumen, brillo, Wi-Fi, Bluetooth, modo avión), enviar SMS, peticiones HTTP, ejecutar comandos Shell, control de reproducción multimedia, mostrar diálogos, etc.
 
 Aqui tienes algúnos escenarios clásicos y prácticos de Tasker:
 
 - <strong>Encender Wi-Fi al llegar a casa</strong>: configura el trigger como "conexión a antena específica" (porque cerca de casa te conectas a una antena fija) -&gt; tarea "activar Wi-Fi". No usa GPS ni consume batería; el móvil enciende el Wi-Fi automáticamente en cuanto entra en tu vecindad.
 - <strong>Modo reunión</strong>: condición disparadora (trigger) ="título de evento de calendario contiene'reunión'"-&gt; tarea "activar modo silencioso, bajar volumen multimedia, auto-responder WeChat (requiere plugin)". Nunca más tendrás que preocuparte de que suene el móvil durante una reunión.
-- <strong>Protección nocturna para los ojos</strong>: condición disparadora (trigger) ="22:00-06:00"-&gt; tarea"activa el modo protección visual,, reducir brillo al 20%, poner pantalla en blanco y negro (modo escala de grises)". La pantalla en blanco y negro tiene un efecto mágico contra la adicción a videos cortos — en cuanto se pone gris, ya no quieres seguir deslizando.
+- <strong>Protección nocturna para los ojos</strong>: condición disparadora (trigger) ="22:00-06:00"-&gt; tarea"activa el modo protección visual,, reducir brillo al 20%, poner pantalla en blanco y negro (modo escala de grises)". La pantalla en blanco y negro tiene un efecto mágico contra la adicción a videos cortos, en cuanto se pone gris, ya no quieres seguir deslizando.
 - <strong>Auriculares automáticos para podcasts</strong>: trigger "conexión de auricular con cable / conexión Bluetooth" -&gt; tarea "abrir App Xiaoyuzhou y reproducir último episodio". Ponte los auriculares y escucha, sin tener que desbloquear el móvil ni buscar la App.
 
 Si Tasker te resulta demasiado complicado, prueba su hermano simplificado:<strong>MacroDroid</strong>. Su interfaz es mucho más amigable, tiene plantillas abundantes e ideal para usuarios que no quieren complicarse. Además, muchos sistemas Android chinos (MIUI de Xiaomi, HarmonyOS de Huawei, ColorOS de OPPO) incluyen funciones de "Escenas" o "Asistente inteligente"; aunque no tan potentes como Tasker, son suficientes para la automatización diaria.
@@ -91,7 +91,7 @@ La automatización tampoco es un camino de rosas; aquí te adelanto algúnos obs
 - <strong>Los triggers por ubicación pueden fallar</strong>: el trigger "llegar/salir de ubicación" de iOS usa tecnología de geocercado; la precision depende de la senal GPS y la optimización del sistema. A veces tarda 10 minutos en activarse después de llegar. Se recomienda usar conexión Wi-Fi o antena como trigger en lugar de ubicación: más fiable y ahorra batería.
 - <strong>La "Automatización" de Atajos requiere autorización</strong>: en iOS, la mayoría de los triggers bajo la pestana "Automatización" requieren confirmacion manual (mecanismo de seguridad de iOS). Sin embargo, los triggers de conexión Wi-Fi, Bluetooth y alarma detenida pueden ejecutarse totalmente automáticos sin confirmacion.
 - <strong>Tasker necesita permisos de accesibilidad</strong>: muchas funciones avanzadas (como simulación de clics) requieren el servicio de accesibilidad, lo que muestra una notificación persistente en configuración. Es un diseno de seguridad de Android y no se puede eliminar.
-- <strong>No compliques demasiado la automatización</strong>: al empezar, comienza con flujos pequenos de "2-3 acciones". No intentes crear un superflujo de 20 pasos de inmediato — depurarlo te volvera loco.
+- <strong>No compliques demasiado la automatización</strong>: al empezar, comienza con flujos pequenos de "2-3 acciones". No intentes crear un superflujo de 20 pasos de inmediato: depurarlo te volvera loco.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

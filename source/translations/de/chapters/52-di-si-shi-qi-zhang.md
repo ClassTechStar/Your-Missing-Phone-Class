@@ -87,7 +87,7 @@ Dies sind die empfohlenen Lernressourcen mit Stand August 2026. Beachte: Interne
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Liste der empfohlenen Lernressourcen
 
-#### 5. Schlusswort: Das Werkzeug in der Hand, die Methodik im Kopf
+5. Schlusswort: Das Werkzeug in der Hand, die Methodik im Kopf
 
 Zurück zum Kernbekenntnis dieses Buches: Tools iterieren alle drei Monate, die Methodik entwickelt sich nur alle drei Jahre weiter. Im August 2026 sind die KI-Programmier-Tools schon verblüffend stark – mit einem Satz erstellst du eine Website, mit einer Beschreibung eine Full-Stack-App, mit einer Anweisung ein komplexes Refactoring. Aber je stärker die Tools, desto deutlicher tritt die Methodik hervor – denn starke Tools verstärken jede einzelne deiner Entscheidungen.
 

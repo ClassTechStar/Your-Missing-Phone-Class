@@ -9,7 +9,7 @@ kind: supplement
 ### Apêndice do Capítulo 20: Termux — Ambiente de terminal Linux portátil em dispositivos Android
 
 {class="chapter-intro mb-4"}
-Se você acha que o modo desenvolvedor não é "hardcore" o suficiente e quer experimentar uma linha de comando Linux completa no celular, o Termux foi feito para você. Sem precisar de root, ele transforma um telefone Android comum em uma estação de trabalho Linux portátil — uma ferramenta poderosa para usuários avançados explorarem desenvolvimento e operações em dispositivos móveis.
+Se você acha que o modo desenvolvedor não é "hardcore" o suficiente e quer experimentar uma linha de comando Linux completa no celular, o Termux foi feito para você. Sem precisar de root, ele transforma um telefone Android comum em uma estação de trabalho Linux portátil: uma ferramenta poderosa para usuários avançados explorarem desenvolvimento e operações em dispositivos móveis.
 
 #### 1. O que é o Termux
 
@@ -123,7 +123,7 @@ Instale ferramentas de segurança como Nmap, SQLMap, Hydra, Metasploit para real
 
 #### 6. Versão e compatibilidade
 
-A versão estável mais recente do Termux é a v0.118.2, compatível com dispositivos Android ≥ 7. É importante notar que o Termux pode apresentar instabilidade no Android 12 e versões superiores. Recomenda-se acompanhar o changelog oficial para obter as informações de compatibilidade mais recentes.
+A versão estável mais recente do Termux é a v0.118.2. Compatível com dispositivos Android ≥ 7. É importante notar que o Termux pode apresentar instabilidade no Android 12 e versões superiores. Recomenda-se acompanhar o changelog oficial para obter as informações de compatibilidade mais recentes.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

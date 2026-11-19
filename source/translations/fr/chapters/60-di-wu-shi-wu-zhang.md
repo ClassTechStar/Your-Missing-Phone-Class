@@ -10,15 +10,15 @@ kind: chapter
 ### Chapitre 55 : Projet 2 — L'app météo (version réseau)
 
 {class="chapter-intro mb-4"}
-Le carnet de comptes faisait « travailler les fondamentaux », l'app météo « ouvre sur le monde » — elle dialogue avec Internet. Ce projet t'apprendra : demander une API gratuite, analyser du JSON, gérer les trois états d'interface « chargement/succès/échec » et bien cacher ta clé d'API. Une fois terminé, tu seras capable de créer n'importe quelle app « connectée » — actualités, taux de change, traduction : la recette est exactement la même.
+Le carnet de comptes faisait « travailler les fondamentaux », l'app météo « ouvre sur le monde »: elle dialogue avec Internet. Ce projet t'apprendra : demander une API gratuite, analyser du JSON, gérer les trois états d'interface « chargement/succès/échec » et bien cacher ta clé d'API. Une fois terminé, tu seras capable de créer n'importe quelle app « connectée », actualités, taux de change, traduction : la recette est exactement la même.
 
 #### 1. Demander une API météo gratuite
 
-Pour t'entraîner en solo, je recommande OpenWeatherMap ou le service chinois QWeather — les deux offrent un quota gratuit, utilisable dès l'inscription. Prenons OpenWeatherMap en exemple :
+Pour t'entraîner en solo, je recommande OpenWeatherMap ou le service chinois QWeather, les deux offrent un quota gratuit, utilisable dès l'inscription. Prenons OpenWeatherMap en exemple :
 
 1. Crée un compte → sur la page API keys, génère une clé (apikey) ;
 2. la version gratuite permet d'appeler l'interface Current Weather (météo actuelle) : api.openweathermap.org/data/2.5/weather? q=beijing&appid=taCle&units=metric ;
-3. fais d'abord un essai dans le navigateur pour voir à quoi ressemble le JSON renvoyé — c'est le « devoir de préparation » obligatoire avant de brancher n'importe quelle API.
+3. fais d'abord un essai dans le navigateur pour voir à quoi ressemble le JSON renvoyé, c'est le « devoir de préparation » obligatoire avant de brancher n'importe quelle API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -59,7 +59,7 @@ interface WeatherApi {
 ```
 :::
 
-Gson remplit tout seul ces data class avec le JSON — noms de champs concordants, la magie opère d'elle-même.
+Gson remplit tout seul ces data class avec le JSON, noms de champs concordants, la magie opère d'elle-même.
 
 #### 3. Les trois états d'interface : chargement / succès / échec
 
@@ -100,7 +100,7 @@ when (val s = state) {
 
 Ce triptyque Loading/Success/Error est le « modèle passe-partout » des interfaces connectées : apprends-le par cœur, et tu le déclineras pour toutes tes futures apps en ligne.
 
-#### 4. Le code d'interface en conditions réelles : dessiner la météo
+4. Le code d'interface en conditions réelles : dessiner la météo
 
 Les états sont là ; voici à quoi ressemble l'interface (extraits clés) :
 
@@ -138,21 +138,21 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-Quelques détails qui valent la leçon : firstOrNull() prend le premier élément sans risque (la liste peut être vide) et ?: "Inconnu" fournit le texte de repli — le principe de null safety vaut aussi dans l'interface. La température s'affiche en grande taille 72.sp pour imposer sa présence, et la graisse « légère » (Light) rend le chiffre élégant : c'est la recette classique des apps météo.
+Quelques détails qui valent la leçon : firstOrNull() prend le premier élément sans risque (la liste peut être vide) et ?: "Inconnu" fournit le texte de repli: le principe de null safety vaut aussi dans l'interface. La température s'affiche en grande taille 72.sp pour imposer sa présence, et la graisse « légère » (Light) rend le chiffre élégant : c'est la recette classique des apps météo.
 
 #### 5. Détails d'interface et d'interaction
 
 - La zone de recherche : un TextField en haut, tu tapes le nom de la ville et tu lances la recherche (action « Recherche » sur le clavier, Entrée pour chercher) ;
 - La carte météo : température en grand format (26,5°), description du temps (clair), humidité, nom de la ville ;
-- Les villes favorites : range tes villes consultées souvent dans DataStore, et elles seront recherchées automatiquement à la prochaine ouverture — au passage, révision du chapitre 6 ;
-- Tirer pour actualiser : dans Compose, utilise PullToRefreshBox (fourni par Material 3) et la sensation devient tout de suite « professionnelle ».
+- Les villes favorites : range tes villes consultées souvent dans DataStore, et elles seront recherchées automatiquement à la prochaine ouverture, au passage, révision du chapitre 6 ;
+- Tirer pour actualiser : dans Compose, utilise PullToRefreshBox (fourni par Material 3) et la sensation devient tout de suite « professionnelle »
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Astuce : les images donnent vie à l’interface
 
 {class="mt-1"}
-Associe un emoji ou une icône à chaque type de temps (☀️🌧️❄️) via when(description) — trois lignes de code, et l’interface gagne doublement en chaleur. Tu peux aussi charger une bibliothèque d’icônes météo tierce, mais pour t’entraîner, les emoji suffisent.
+Associe un emoji ou une icône à chaque type de temps (☀️🌧️❄️) via when(description), trois lignes de code, et l’interface gagne doublement en chaleur. Tu peux aussi charger une bibliothèque d’icônes météo tierce, mais pour t’entraîner, les emoji suffisent.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -167,9 +167,9 @@ Associe un emoji ou une icône à chaque type de temps (☀️🌧️❄️) via
 {class="font-semibold mb-1"}
 Résumé du chapitre
 
-- Teste d’abord l’API dans le navigateur et comprends le JSON avant d’écrire le code — « préparer le terrain » n’est jamais du temps perdu
+- Teste d’abord l’API dans le navigateur et comprends le JSON avant d’écrire le code, « préparer le terrain » n’est jamais du temps perdu
 - Cache la clé API dans local.properties, jamais dans le dépôt de code
 - Interface Retrofit + data class : les champs correspondent, le JSON est analysé automatiquement
 - L’état en trois phases Chargement/Succès/Erreur est la solution passe-partout des interfaces connectées
-- Réseau coupé, saisie vide, ville inexistante — la gestion des erreurs est la note de passage d’une app connectée
+- Réseau coupé, saisie vide, ville inexistante, la gestion des erreurs est la note de passage d’une app connectée
 :::

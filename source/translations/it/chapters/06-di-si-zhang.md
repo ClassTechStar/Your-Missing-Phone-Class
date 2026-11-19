@@ -2,12 +2,12 @@
 id: di-si-zhang
 num: 04
 part: ji-chu-pian
-nav: Capitolo 4: Installare e gestire le App
+nav: Capitolo 4: Prima di installare un'app, date un'occhiata
 toc: default
 kind: chapter
 ---
 
-### Capitolo 4: Installare e gestire le app — il "kit di competenze" del telefono
+### Capitolo 4: Prima di installare un'app, date un'occhiata
 
 {class="chapter-intro mb-4"}
 Le app rendono il telefono onnipotente, ma vanno anche gestite. Come assegni una postazione e dei permessi a un nuovo dipendente, anche l'installazione delle app richiede una procedura standard.
@@ -20,7 +20,7 @@ Le app rendono il telefono onnipotente, ma vanno anche gestite. Come assegni una
 
 Significato di sicurezza chiave: app revisionate, aggiornamenti garantiti, pagamenti sicuri. Linea guida operativa: <strong>scarica preferibilmente solo dagli store ufficiali!</strong>
 
-#### 2. Modalità Pure/Protezione: attiva il "muro antivirus" del telefono
+2. Modalità Pure/Protezione: attiva il "muro antivirus" del telefono
 
 I principali brand cinesi (Huawei, Xiaomi, OPPO, vivo, Honor) integrano una <strong>Modalità Pure</strong> o <strong>Modalità Protezione</strong>: è un interruttore di sicurezza a livello di sistema. <strong>Consigliato a tutti gli utenti di attivarlo</strong>.
 
@@ -32,7 +32,7 @@ La funzione principale della Modalità Pure (detta anche "Modalità Protezione")
 
 - <strong>Utenti anziani</strong>: non distinguono tra pubblicità "ufficiali" e "false"; la Modalità Pure è la protezione più sicura.
 - <strong>Utenti poco attenti ai permessi delle app</strong>: non hanno bisogno di installare app di nicchia, versioni beta o giochi per mercati esteri.
-- <strong>Tutti gli utenti che vogliono elevare la sicurezza del dispositivo</strong>: anche per i power user tenerla attiva è meglio — in caso di necessità temporanea, basta disattivarla una tantum.
+- <strong>Tutti gli utenti che vogliono elevare la sicurezza del dispositivo</strong>: anche per i power user tenerla attiva è meglio: in caso di necessità temporanea, basta disattivarla una tantum.
 
 ##### 3. Percorso di attivazione (esempi Huawei/Xiaomi)
 
@@ -46,11 +46,11 @@ La funzione principale della Modalità Pure (detta anche "Modalità Protezione")
 Lo store non è "decorativo": dietro c'è una pipeline di sicurezza completa:
 
 - <strong>Scansione antivirus</strong>: prima della pubblicazione, ogni app viene scansionata congiuntamente da più motori antivirus, per identificare trojan e virus noti.
-- <strong>Verifica dei permessi</strong>: lo store controlla che i permessi richiesti siano "ragionevoli" — un'app torcia che chiede l'accesso ai contatti? Rifiutata o rimossa.
+- <strong>Verifica dei permessi</strong>: lo store controlla che i permessi richiesti siano "ragionevoli": un'app torcia che chiede l'accesso ai contatti? Rifiutata o rimossa.
 - <strong>Certificazione dello sviluppatore</strong>: per pubblicare servono qualifiche aziendali, documento d'identità o carta di credito. In caso di problemi si risale a una persona, non è un'"app nera".
 - <strong>Monitoraggio continuo</strong>: anche le app già pubblicate vengono rescansionate; nuovi comportamenti malevoli portano alla rimozione forzata.
 
-#### 3. Fonti di terze parti e "parassiti elettronici": rischio altissimo!
+3. Fonti di terze parti e "parassiti elettronici": rischio altissimo!
 
 Scaricare app da pagine web o link sconosciuti può portare virus, furto di privacy e frodi di pagamento. Qui introduciamo un nuovo concetto: il <strong>"parassita elettronico"</strong>.
 
@@ -64,23 +64,23 @@ Si tratta di <strong>software "craccati" con trojan incorporati</strong> — cre
 {class="list-disc pl-6 mt-2 space-y-1 text-sm"}
 - Versioni "crackate", "gratuite", "senza pubblicità" di software a pagamento;
 - strumenti in zona grigia come "bot per like", "cattura-busta rossa", "cheat di gioco";
-- cosiddette app "versione interna" sponsorizzate da "pubblicità minuta" nei gruppi di chat.
+- cosiddette app "versione interna" sponsorizzate da "pubblicità minuta" nei gruppi di chat
 
 {class="mt-2"}
-Questi programmi in apparenza funzionano, ma in background potrebbero <strong>rubare i contatti, leggere gli SMS, ascoltare il microfono, minare criptovalute</strong>. La Modalità Pure è la <strong>prima linea di difesa</strong> contro di loro — semplicemente non ti fa installare.
+Questi programmi in apparenza funzionano, ma in background potrebbero <strong>rubare i contatti, leggere gli SMS, ascoltare il microfono, minare criptovalute</strong>. La Modalità Pure è la <strong>prima linea di difesa</strong> contro di loro: semplicemente non ti fa installare.
 :::
 
 ##### Consigli per la seconda linea di difesa:
 
 - <strong>Scansione antivirus completa periodica</strong>: usa il centro sicurezza integrato nel telefono (es. Huawei Phone Manager, Xiaomi Security Center) una volta al mese.
-- <strong>Concedi con cautela i permessi sensibili</strong>: contatti, SMS, posizione, fotocamera, microfono — questi cinque "permessi ad alto rischio" vanno approvati rigorosamente.
-- <strong>Monitora consumi anomali di batteria e traffico</strong>: telefono che si scalda all'improvviso, batteria che cala in fretta, traffico che scorre di notte — con tutta probabilità c'è un "parassita" in background.
+- <strong>Concedi con cautela i permessi sensibili</strong>: contatti, SMS, posizione, fotocamera, microfono, questi cinque "permessi ad alto rischio" vanno approvati rigorosamente.
+- <strong>Monitora consumi anomali di batteria e traffico</strong>: telefono che si scalda all'improvviso, batteria che cala in fretta, traffico che scorre di notte, con tutta probabilità c'è un "parassita" in background.
 
 Se proprio devi installare un'app di terze parti:
 
 1. assicurati che la fonte sia assolutamente attendibile;
 2. leggi con attenzione le richieste di permessi prima dell'installazione;
-3. scansiona con un'app di sicurezza dopo l'installazione.
+3. scansiona con un'app di sicurezza dopo l'installazione
 
 Consiglio definitivo: nelle impostazioni di sistema, disattiva il permesso "Installa app da origini sconosciute".
 

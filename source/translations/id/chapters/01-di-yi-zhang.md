@@ -2,12 +2,12 @@
 id: di-yi-zhang
 num: 01
 part: ji-chu-pian
-nav: Bab 1: Halo, Komputer Pribadiku
+nav: Bab 1: Mari kenali dulu mesin ini
 toc: default
 kind: chapter
 ---
 
-### Bab 1: Halo, komputer pribadiku
+### Bab 1: Mari kenali dulu mesin ini
 
 {class="chapter-intro mb-4"}
 Ponsel Anda sebenarnya adalah superkomputer pribadi di saku Anda. Ia jutaan kali lebih kuat dari komputer yang dulu mendaratkan manusia di bulan, namun dengan tenang berbaring di telapak tangan Anda. Hari ini, mari kita kenali "raksasa yang diam" ini dengan baik.
@@ -28,15 +28,15 @@ CPU adalah komponen paling inti dalam SoC, bertanggung jawab menangani sebagian 
 
 <strong>Desain CPU big.LITTLE</strong>: CPU ponsel modern umumnya menggunakan arsitektur "big.LITTLE" (teknologi big.LITTLE ARM), membagi core menjadi tingkat performa yang berbeda:
 
-- <strong>Super core/Big core</strong>: Performa terkuat, menangani tugas berat. Seperti loading game, peluncuran aplikasi, komputasi kompleks. Frekuensi tertinggi (3GHz+), tapi konsumsi daya juga terbesar.
+- <strong>Super core/Big core</strong>: Performa terkuat, menangani tugas berat. Seperti loading game, peluncuran aplikasi. komputasi kompleks. Frekuensi tertinggi (3GHz+), tapi konsumsi daya juga terbesar.
 - <strong>Medium core</strong>: Seimbang antara performa dan konsumsi daya, menangani tugas beban menengah sehari-hari. Men-scroll Weibo, menonton video, multi-tasking utamanya mengandalkan ini.
 - <strong>Small core/Efficiency core</strong>: Konsumsi daya terendah, menangani tugas latar belakang ringan. Mode standby, mendengarkan musik, menerima pesan, hampir tidak boros listrik.
 
-Tiga tingkat core bekerja sama: scheduler sistem mengalokasikan secara otomatis berdasarkan beban tugas—tugas ringan diserahkan ke small core untuk hemat daya, pekerjaan berat diserahkan ke big core untuk bekerja keras, setelah selesai kembali ke small core. Inilah sebabnya ponsel bisa bermain game dengan lancar sekaligus standby seharian.
+Tiga tingkat core bekerja sama: scheduler sistem mengalokasikan secara otomatis berdasarkan beban tugas,tugas ringan diserahkan ke small core untuk hemat daya, pekerjaan berat diserahkan ke big core untuk bekerja keras, setelah selesai kembali ke small core. Inilah sebabnya ponsel bisa bermain game dengan lancar sekaligus standby seharian.
 
 <strong>Karakteristik arsitektur tiap merek</strong>:
 
-- <strong>Qualcomm Snapdragon 8 Elite</strong>: Menggunakan arsitektur CPU Oryon self-developed (berasal dari akuisisi Nuvia), 2 super core (4.32GHz) + 6 performance core (3.53GHz), semuanya berdasarkan proses 3nm generasi kedua TSMC. Sepenuhnya meninggalkan arsitektur ARM public, performa single-core dan multi-core keduanya meningkat melompat. GPU Adreno 830, menggunakan arsitektur slice, performa grafis meningkat 40%, Hexagon NPU computing power sekitar 45 TOPS, performa inferensi AI meningkat 45%. (Catatan: Versi kustom Samsung Galaxy memiliki frekuensi lebih tinggi, super core mencapai 4.47GHz.)
+- <strong>Qualcomm Snapdragon 8 Elite</strong>: Menggunakan arsitektur CPU Oryon self-developed (berasal dari akuisisi Nuvia), 2 super core (4.32GHz) + 6 performance core (3.53GHz), semuanya berdasarkan proses 3nm generasi kedua TSMC. Sepenuhnya meninggalkan arsitektur ARM public, performa single-core dan multi-core keduanya meningkat melompat. GPU Adreno 830, menggunakan arsitektur slice, performa grafis meningkat 40%, Hexagon NPU computing power sekitar 45 TOPS, performa inferensi AI meningkat 45%. (Catatan: Versi kustom Samsung Galaxy memiliki frekuensi lebih tinggi, super core mencapai 4.47GHz.).
 - <strong>MediaTek Dimensity 9400</strong>: 1 super core (Cortex-X925, 3.62GHz) + 3 performance core (Cortex-X4, 3.3GHz) + 4 efficiency core (Cortex-A720, 2.4GHz), arsitektur all-big-core dilanjutkan, proses 3nm generasi kedua TSMC. GPU Immortalis-G925 (12 core), performa puncak meningkat 41%, performa ray tracing meningkat 40%. AI processor generasi kedelapan NPU 890, mendukung on-device large model, on-device LoRA training dan on-device video generation.
 - <strong>Apple A18 Pro</strong>: 2 performance core (sekitar 4.04GHz) + 4 efficiency core (sekitar 2.4GHz), proses 3nm generasi kedua TSMC. 6-core GPU mendukung hardware ray tracing, 16-core NPU (sekitar 35 TOPS) memberikan computing power kuat untuk on-device AI dan Apple Intelligence. Arsitektur self-developed Apple masih memimpin dalam performa single-core dan efisiensi daya, arsitektur unified memory memberikan keunggulan bandwidth tinggi untuk inferensi AI.
 - <strong>HiSilicon Kirin 9020 Huawei</strong>: Hadir di seri Mate 70, menggunakan arsitektur CPU Taishan self-developed, kemampuan NPU dan ISP terus diperkuat, mendukung 5.5G dan komunikasi satelit, mewakili terobosan terbaru chip domestik.
@@ -122,7 +122,7 @@ HDR saat foto dan HDR layar adalah dua hal berbeda. HDR imaging adalah menyelesa
 
 - <strong>Prinsip algoritma</strong>: Saat menekan shutter, ponsel sebenarnya mengambil beberapa foto dengan exposure berbeda (underexposed untuk retain detail bagian terang, overexposed untuk retain detail bagian gelap, normal exposure untuk retain midtone), lalu menggabungkannya menjadi satu foto high dynamic range.
 - <strong>Alur pemrosesan</strong>: Multi-frame capture → alignment compensation (anti-handshake) → exposure fusion/tone mapping → color correction → output foto akhir.
-- <strong>Optimisasi efek</strong>: Sekarang ponsel sudah bisa melakukan "real-time HDR"—gambar yang terlihat di viewfinder adalah efek setelah pemrosesan HDR, what you see is what you get. Smart HDR Apple dan auto HDR Android sudah sangat matang.
+- <strong>Optimisasi efek</strong>: Sekarang ponsel sudah bisa melakukan "real-time HDR",gambar yang terlihat di viewfinder adalah efek setelah pemrosesan HDR, what you see is what you get. Smart HDR Apple dan auto HDR Android sudah sangat matang.
 
 ##### 5. Baterai dan pengisian daya: Sumber energi
 
@@ -156,7 +156,7 @@ Lensa telephoto tradisional membutuhkan jalur optik yang panjang, akan membuat p
 Image stabilization adalah teknologi kunci yang mempengaruhi kualitas gambar foto dan video, prinsip kedua cara sepenuhnya berbeda:
 
 - <strong>OIS (optical image stabilization)</strong>: Mengimbangi tangan gemetar dengan menggerakkan lensa atau sensor secara fisik. Di dalam lensa ada gyroscope mikro untuk mendeteksi arah dan amplitudo gemetar, lalu menggerakkan motor untuk memindahkan lens group ke arah berlawanan. Kelebihannya tidak mengurangi kualitas gambar, kekurangannya biaya tinggi, menempati ruang.
-- <strong>EIS (electronic image stabilization)</strong>: Mengimbangi gemetar melalui algoritma software dengan cropping dan offset gambar. Ponsel merekam rentang gambar yang sedikit lebih besar, lalu sesuai data gyroscope cropping area yang stabil. Kelebihannya tidak butuh hardware tambahan, kekurangannya akan cropping gambar (bidang pandang mengecil), low light mungkin blur.
+- <strong>EIS (electronic image stabilization)</strong>: Mengimbangi gemetar melalui algoritma software dengan cropping dan offset gambar. Ponsel merekam rentang gambar yang sedikit lebih besar. lalu sesuai data gyroscope cropping area yang stabil. Kelebihannya tidak butuh hardware tambahan, kekurangannya akan cropping gambar (bidang pandang mengecil), low light mungkin blur.
 - <strong>Pilihan aktual</strong>: Foto utama lihat OIS, video kombinasi keduanya efek terbaik. Sekarang banyak ponsel flagship mendukung "Sensor-Shift" sensor shift image stabilization, efek lebih baik dari traditional lens image stabilization.
 
 ##### Optical zoom vs Digital zoom
@@ -206,7 +206,7 @@ Di dalam ponsel tersembunyi belasan sensor, bekerja diam-diam:
 
 Hardware adalah tubuh, sistem operasi adalah jiwa. Tiga sistem besar masing-masing memiliki karakteristik:
 
-- <strong>Android</strong>: Seperti komunitas open source, produsen ponsel bisa customisasi mendalam, pilihan banyak. Anda bisa ganti tema, instal toko aplikasi pihak ketiga, utak-atik berbagai cara. Tapi juga karena keterbukaan, fragmentasi serius, perbedaan pengalaman antar merek besar.
+- <strong>Android</strong>: Seperti komunitas open source, produsen ponsel bisa customisasi mendalam, pilihan banyak. Anda bisa ganti tema, instal toko aplikasi pihak ketiga. utak-atik berbagai cara. Tapi juga karena keterbukaan, fragmentasi serius, perbedaan pengalaman antar merek besar.
 - <strong>: Pengguna biasa tidak dapat mengaktifkan mode pengembang lengkap, membutuhkan akun Apple Developer berbayar.</strong>: Seperti taman yang dirawat dengan baik, Apple menguasai hardware dan software, pengalaman unified dan lancar. Kualitas aplikasi tinggi, perlindungan privasi baik, tapi freedom rendah, banyak hal harus mengikuti aturan Apple.
 - <strong>HarmonyOS</strong>: Spesies baru Huawei, fokus pada kemampuan distributed, bisa membuat perangkat berbeda berkolaborasi seamlessly. Akan kita bahas khusus nanti.
 
@@ -249,9 +249,9 @@ Menghadapi berbagai product line merek yang membingungkan, memahami aturan penam
 
 ##### Seri produk merek mainstream:
 
-- <strong>Apple</strong>: iPhone (versi standar) / iPhone Plus (versi layar besar) / iPhone Pro (versi profesional) / iPhone Pro Max (versi profesional layar besar) / iPhone SE (versi ekonomis) / iPhone 16e (versi AI ekonomis, dengan chip A18 dan modem C1 buatan Apple). Pada 2026, seri iPhone 17 sepenuhnya menggunakan chip A19 Pro, kemampuan AI semakin ditingkatkan.
-- <strong>Huawei</strong>: Seri Mate (business flagship) / Seri P/Pura (imaging flagship) / Seri Mate X (foldable flagship) / Seri nova (young mid-range) / Seri Enjoy (entry)
-- <strong>Xiaomi</strong>: Seri angka Xiaomi (flagship) / Xiaomi MIX (exploration flagship/foldable) / Redmi Seri K (performance flagship) / Redmi Seri Note (mid-range) / Redmi seri angka (entry)
+- <strong>Apple</strong>: iPhone (versi standar) / iPhone Plus (versi layar besar) / iPhone Pro (versi profesional) / iPhone ,Pro Max (versi profesional layar besar) / iPhone SE (versi ekonomis) / iPhone 16e (versi AI ekonomis, dengan chip A18 dan modem C1 buatan Apple). Pada 2026, seri iPhone 17 sepenuhnya menggunakan chip A19 Pro, kemampuan AI semakin ditingkatkan
+- <strong>Huawei</strong>: Seri Mate (business flagship) / Seri P/Pura (imaging flagship) / Seri Mate ,X (foldable flagship) / Seri nova (young mid-range) / Seri Enjoy (entry)
+- <strong>Xiaomi</strong>: Seri angka Xiaomi (flagship) / Xiaomi MIX (exploration flagship/foldable) / Redmi ,Seri K (performance flagship) / Redmi Seri Note (mid-range) / Redmi seri angka (entry)
 - <strong>OPPO</strong>: Seri Find X (flagship) / Seri Reno (mid-range) / Seri A (entry) / Seri angka OnePlus (performance flagship)
 - <strong>vivo</strong>: Seri X (imaging flagship) / Seri angka iQOO (performance flagship) / Seri S (selfie mid-range) / Seri Y (entry)
 - <strong>Samsung</strong>: Galaxy Seri S (flagship) / Galaxy Z Fold/Flip (foldable flagship) / Galaxy Seri A (mid-range)
@@ -267,7 +267,7 @@ Menghadapi berbagai product line merek yang membingungkan, memahami aturan penam
 - <strong>Note</strong>: Awalnya merujuk ponsel layar besar, sekarang penggunaan tiap merek berbeda. Redmi Note adalah seri mid-range.
 - <strong>Neo</strong>: Versi baru. Biasanya merujuk model mid-range berorientasi performa.
 
-#### 5. Baseband dan antena: Pahlawan di balik layar komunikasi ponsel
+5. Baseband dan antena: Pahlawan di balik layar komunikasi ponsel
 
 Ponsel bisa menelepon dan online, bergantung pada pasangan chip baseband dan antena.
 

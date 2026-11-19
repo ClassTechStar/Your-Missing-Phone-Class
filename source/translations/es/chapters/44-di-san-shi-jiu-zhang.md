@@ -2,17 +2,17 @@
 id: di-san-shi-jiu-zhang
 num: 39
 part: ai-biancheng-pian
-nav: Capítulo 39: Ingeniería de contexto — que la IA entienda tu intención
+nav: Capítulo 39: La IA no te entiende: no fuiste claro
 toc: default
 kind: chapter
 ---
 
-### Capítulo 39: Ingeniería de contexto — que la IA entienda tu intención
+### Capítulo 39: La IA no te entiende: no fuiste claro
 
 {class="chapter-intro mb-4"}
 ¿Te ha pasado? Abres una ventana de chat nueva y la IA parece amnésica: se ha olvidado de todo lo básico de tu proyecto. No es que quiera ponerte a prueba: es que de por sí «tiene mala memoria». Este capítulo te enseña a instalarle un «sistema de memoria a largo plazo» y, de paso, te presenta uno de los paradigmas de desarrollo con más tirón en 2026: el desarrollo guiado por especificaciones.
 
-#### 1. El archivo de memoria del proyecto: la «memoria a largo plazo» de la IA
+1. El archivo de memoria del proyecto: la «memoria a largo plazo» de la IA
 
 Los modelos de IA tienen una limitación de fondo: su memoria es «a corto plazo». Cada conversación empieza con la IA sabiendo cero de tu proyecto. Tienes que repetirle en el chat «usamos React», «el backend es Node.js», «la base de datos es PostgreSQL», «en el código usamos comillas dobles». No solo es ineficiente, sino que es fácil olvidar algo: como tener que hacer la inducción a un compañero nuevo cada día.
 
@@ -80,7 +80,7 @@ El flujo de trabajo del SDD tiene cinco pasos:
 2. Define las interfaces y las estructuras de datos (en el archivo de especificación);
 3. Pide a la IA que genere la implementación del código según la especificación;
 4. Ejecuta las pruebas para verificar si el resultado cumple la especificación;
-5. Si no cumple, corrige la especificación o pide a la IA que corrija el código.
+5. Si no cumple, corrige la especificación o pide a la IA que corrija el código
 
 En este flujo, el archivo de especificación es la «única fuente de verdad»: el código se puede regenerar, pero la especificación debe ser correcta primero.
 

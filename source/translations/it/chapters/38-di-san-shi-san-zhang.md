@@ -2,17 +2,17 @@
 id: di-san-shi-san-zhang
 num: 33
 part: zhan-wang-pian
-nav: Capitolo 33: Prospettive future — Il prossimo traguardo del cellulare
+nav: Capitolo 33: Come sarà il telefono tra dieci anni?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 33: Prospettive future — il prossimo viaggio del telefono
+### Capitolo 33: Come sarà il telefono tra dieci anni?
 
 {class="chapter-intro mb-4"}
 Il telefono non scomparirà dall'oggi al domani, ma la sua "posizione egemone" potrebbe essere erosa da una nuova generazione di dispositivi. In questo capitolo parliamo di tre cose: che aspetto avranno i dispositivi di prossima generazione, come il telefono si "invisibilizzerà" diventando la nuova pietra angolare dell'identità, e le questioni etiche che dobbiamo cominciare a pensare in anticipo.
 
-#### 1. AR/VR e calcolo spaziale: la "seconda scrivania" oltre il telefono
+1. AR/VR e calcolo spaziale: la "seconda scrivania" oltre il telefono
 
 La competizione sui dispositivi di prossima generazione è già iniziata, e quelli con maggiori probabilità di erodere il tempo passato sul telefono sono i dispositivi AR/VR e di calcolo spaziale:
 
@@ -20,7 +20,7 @@ La competizione sui dispositivi di prossima generazione è già iniziata, e quel
 - <strong>Occhiali AR</strong>: aprono una "seconda scrivania" davanti ai tuoi occhi, le informazioni digitali diventano onnipresenti come l'aria. Gli occhiali intelligenti dalla partnership tra Meta e Ray-Ban hanno venduto milioni di pezzi, e in Cina aziende come Rokid, XREAL, INMO stanno lanciando occhiali AR di consumo. Gli occhiali AR del 2025-2026 già fanno traduzione in tempo reale, HUD di navigazione e dialogo con assistenti AI, ma sono ancora limitati da display a guida d'onda e autonomia; mancano 3-5 anni per "sostituire il telefono".
 - <strong>Anelli intelligenti e indossabili</strong>: Samsung Galaxy Ring, Oura Ring e altri anelli intelligenti stanno diventando popolari, come "sensori corporei" del telefono che integrano il monitoraggio della salute. Il ruolo del telefono sta passando da "terminale universale" a combinazione di "hub + accessori leggeri multipli".
 
-#### 2. Interfacce cervello-computer: il pensiero come mezzo di interazione
+2. Interfacce cervello-computer: il pensiero come mezzo di interazione
 
 Il pensiero stesso diventerà mezzo di interazione, ma questa strada è più lunga del previsto:
 
@@ -28,9 +28,9 @@ Il pensiero stesso diventerà mezzo di interazione, ma questa strada è più lun
 - <strong>BCI non invasive</strong>: diverse aziende sviluppano cerchietti non invasivi (come Kernel, OpenBCI), che leggono segnali cerebrali senza chirurgia, ma con precisione di gran lunga inferiore a quella invasiva. Manca ancora molto per "scrivere col pensiero".
 - <strong>Prospettive consumer</strong>: le interfacce cervello-computer sono a 10-20 anni dall'interazione consumer con il telefono, ma a breve termine potrebbero essere usate prima in accessibilità, monitoraggio della concentrazione e altri scenari. Le questioni etiche e di privacy ("i miei segnali cerebrali di chi sono come privacy?") diventeranno motivo di dibattito prima ancora della maturazione tecnologica.
 
-#### 3. Il telefono "invisibile" e la nuova pietra angolare dell'identità
+3. Il telefono "invisibile" e la nuova pietra angolare dell'identità
 
-Un'altra direzione dell'evoluzione futura del telefono potrebbe essere "invisibile" — trasformandosi in un "regista dietro le quinte" onnipresente, a diventare l'unica pietra angolare della tua identità digitale:
+Un'altra direzione dell'evoluzione futura del telefono potrebbe essere "invisibile", trasformandosi in un "regista dietro le quinte" onnipresente, a diventare l'unica pietra angolare della tua identità digitale:
 
 - <strong>Autenticazione a due fattori in cloud</strong>: completa in un istante la verifica "tu sei tu", per accedere a qualsiasi servizio senza inserire manualmente codici di verifica.
 - <strong>Eredità digitale come impostazione predefinita</strong>: all'attivazione di un nuovo telefono è preimpostato un piano di successione dei beni digitali, così che "ciò che viene dopo" diventi default di fabbrica.
@@ -41,12 +41,12 @@ Un'altra direzione dell'evoluzione futura del telefono potrebbe essere "invisibi
 Un interrogativo ultimo resta sempre: siamo "dei" potenziati dalla tecnologia, o un "cervello in una vasca" nutrito da algoritmi?
 
 - <strong>Etica dell'AI</strong>: quando l'AI sul dispositivo capisce le tue preferenze meglio di te, la tua "scelta" è volontà autonoma o un risultato indotto? Quando un AI Agent ordina o risponde ai messaggi per te, dove sono responsabilità e confini?
-- <strong>Sovranità dei dati</strong>: i tuoi dati sanitari, i segnali cerebrali, i dati biometrici, a chi appartengono — a te, al produttore del dispositivo o al fornitore cloud? La "Legge sulla protezione delle informazioni personali" cinese e il GDPR dell'UE sono solo l'inizio; l'effettiva attuazione del "diritto alla portabilità dei dati" e del "diritto all'oblio" è ancora lunga.
-- <strong>Divario digitale</strong>: telefoni AI, schermi pieghevoli, comunicazione satellitare stanno allargando il divario tra "chi può permetterseli" e "chi non può". L'equo accesso alle infrastrutture digitali diventerà una nuova questione sociale — critica come 20 anni fa "saper navigare o meno".
+- <strong>Sovranità dei dati</strong>: i tuoi dati sanitari, i segnali cerebrali, i dati biometrici, a chi appartengono: a te, al produttore del dispositivo o al fornitore cloud? La "Legge sulla protezione delle informazioni personali" cinese e il GDPR dell'UE sono solo l'inizio; l'effettiva attuazione del "diritto alla portabilità dei dati" e del "diritto all'oblio" è ancora lunga.
+- <strong>Divario digitale</strong>: telefoni AI, schermi pieghevoli, comunicazione satellitare stanno allargando il divario tra "chi può permetterseli" e "chi non può". L'equo accesso alle infrastrutture digitali diventerà una nuova questione sociale, critica come 20 anni fa "saper navigare o meno".
 - Quando l'algoritmo sa cosa vuoi vedere meglio di te, quanto del tuo "piacere" è spontaneo?
 - Quando accendi lo schermo inavvertitamente ogni pochi minuti, è un'abitudine tua o un "comportamento di dipendenza" progettato?
 
-#### 5. Restare connessi, ma anche indipendenti — la tua filosofia di vita digitale
+5. Restare connessi, ma anche indipendenti — la tua filosofia di vita digitale
 
 Qualsiasi evoluzione tecnologica, queste filosofie di vita digitale rimarranno valide anche tra 10 anni:
 

@@ -2,17 +2,17 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: Capítulo 2: Organize seu quarto digital
+nav: Capítulo 2: Não achou alguma coisa no celular?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 2: Organize Seu Quarto Digital — Gerenciamento de Arquivos
+### Capítulo 2: Não achou alguma coisa no celular?
 
 {class="chapter-intro mb-4"}
-O celular fica bagunçado com o tempo; bons hábitos começam com o gerenciamento de arquivos. Assim como seu quarto precisa de organização regular, seu espaço digital também precisa de cuidados. Um celular bem organizado não só facilita encontrar as coisas, mas também funciona com mais fluidez.
+O celular fica bagunçado com o tempo; bons hábitos começam com o gerenciamento de arquivos. Assim como seu quarto precisa de organização regular. Seu espaço digital também precisa de cuidados. Um celular bem organizado não só facilita encontrar as coisas, mas também funciona com mais fluidez.
 
-#### 1. Sistema de Armazenamento de Três Camadas: Seu Armazém Digital
+1. Sistema de Armazenamento de Três Camadas: Seu Armazém Digital
 
 {class="list-decimal pl-6 mb-3 space-y-2"}
 1. <strong>Armazenamento interno</strong>: Área central, rápida, onde ficam o sistema e os aplicativos. Este é o espaço mais precioso do seu celular; precisa ser usado com sabedoria.
@@ -33,7 +33,7 @@ No Android, geralmente há um aplicativo [Arquivos] ou [Gerenciador de Arquivos]
 - <strong>Documents</strong>: Arquivos de documentos.
 - <strong>Android</strong>: Pasta do sistema Android, contém dados de cada aplicativo; geralmente não delete manualmente.
 
-#### 3. Estrutura do Sistema de Arquivos: Conhecimento Aprofundado
+3. Estrutura do Sistema de Arquivos: Conhecimento Aprofundado
 
 O Android é baseado em Linux, e o sistema de arquivos tem uma certa estrutura hierárquica. Embora usuários comuns não precisem de conhecimento aprofundado, conhecer alguns conceitos básicos ajuda.
 
@@ -48,7 +48,7 @@ O Android é baseado em Linux, e o sistema de arquivos tem uma certa estrutura h
 - <strong>Armazenamento interno</strong>: Espaço privado do aplicativo, inacessível a outros aplicativos. Excluído ao desinstalar o aplicativo.
 - <strong>Armazenamento externo</strong>: Arquivos armazenados pelo aplicativo em área acessível ao usuário, como fotos e conteúdo baixado. Não necessariamente excluídos ao desinstalar o aplicativo.
 
-#### 4. Backup e Recuperação de Dados: Faça um Seguro para Seus Dados
+4. Backup e Recuperação de Dados: Faça um Seguro para Seus Dados
 
 Dados não têm preço; fazer backup é um hábito que deve ser cultivado.
 
@@ -205,14 +205,14 @@ Abra o gerenciador de arquivos > Entre na pasta "Downloads". Veja o que tem lá?
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### 8. Gerenciamento de Imagens e Sistema de Arquivos: Mantenha Seus Ativos Organizados
+8. Gerenciamento de Imagens e Sistema de Arquivos: Mantenha Seus Ativos Organizados
 
 Na seção anterior, aprendemos a "conhecer as pastas", mas apenas conhecer não é suficiente. Esta seção aborda <strong>como estabelecer proativamente um conjunto de normas de gestão que possam ser executadas a longo prazo</strong>, para que seus arquivos estejam sempre fáceis de encontrar, não se percam e não sejam espionados.
 
 {class="font-semibold mt-4 mb-1"}
 ##### 1. Normas de Classificação e Nomenclatura de Arquivos
 
-A raiz da desordem é a falta de regras. Estabelecer regras é, na verdade, muito simples — o segredo está na <strong>consistência</strong>.
+A raiz da desordem é a falta de regras. Estabelecer regras é, na verdade, muito simples: o segredo está na <strong>consistência</strong>.
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
@@ -238,7 +238,7 @@ Escolha um fim de semana livre e siga esta ordem:
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. No gerenciador de arquivos, crie uma pasta de trabalho deste mês no formato <code>2026Q2_Projeto_A</code>;
 2. Revise todos os arquivos desta semana no diretório "Downloads", mantenha os úteis, arquive e exclua os inúteis;
-3. Crie pastas anuais para as fotos da família, como <code>2025_Familia</code>, <code>2026_Familia</code>.
+3. Crie pastas anuais para as fotos da família, como <code>2025_Familia</code>, <code>2026_Familia</code>
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -254,7 +254,7 @@ O celular "engorda" com o tempo; na maioria das vezes, a culpa é dos arquivos r
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Normas de Tratamento Seguro de Imagens
 
-Imagens são o tipo de dado mais "sensível" no celular — uma foto casual pode expor sua localização, dispositivo e horário. Recomendamos <strong>estabelecer um fluxo de trabalho de "proteção dupla"</strong>:
+Imagens são o tipo de dado mais "sensível" no celular, uma foto casual pode expor sua localização, dispositivo e horário. Recomendamos <strong>estabelecer um fluxo de trabalho de "proteção dupla"</strong>:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -263,7 +263,7 @@ Imagens são o tipo de dado mais "sensível" no celular — uma foto casual pode
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Ocultar informações visíveis</strong>: Use ferramentas nativas do sistema ou de terceiros (como Meitu Xiuxiu, Snapseed) para <strong>borrar os dígitos do meio do número de identidade, placa de carro, número da casa, nome, valor</strong> e outros campos críticos;
 2. <strong>Remover metadados</strong>: Antes de enviar, toque em "Compartilhar" ou "Exportar" no álbum; o sistema perguntará se deseja manter as informações de localização. Escolha <strong>"Não manter"</strong>. Assim, o modelo do dispositivo, coordenadas GPS e horário da captura não serão enviados junto com a imagem;
-3. <strong>Marca d'água temporária</strong> (opcional): Em capturas de tela sensíveis, adicione uma marca d'água de texto como "Somente para uso em XX", evitando uso indevido.
+3. <strong>Marca d'água temporária</strong> (opcional): Em capturas de tela sensíveis, adicione uma marca d'água de texto como "Somente para uso em XX", evitando uso indevido
 :::
 
 {class="mt-3 mb-2"}
@@ -277,4 +277,4 @@ Para imagens sensíveis que precisam de <strong>armazenamento de longo prazo</st
 
 - iPhone: [Fotos] > Selecione a foto > Ocultar (visível somente após verificação por Face ID);
 - Huawei/Xiaomi: [Álbum] > Pressione longamente a foto > "Mover para Cofre";
-- Apps de criptografia de terceiros: <strong>360 Álbum Seguro</strong>, <strong>Tencent Gerenciador de Álbum (Álbum Privado)</strong>, <strong>KeepSafe</strong>, etc., com proteção por senha separada e melhor discrição.
+- Apps de criptografia de terceiros: <strong>360 Álbum Seguro</strong>, <strong>Tencent Gerenciador de Álbum (Álbum Privado)</strong>, <strong>KeepSafe</strong>, etc., com proteção por senha separada e melhor discrição

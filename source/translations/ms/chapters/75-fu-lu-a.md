@@ -11,7 +11,7 @@ kind: appendix
 
 #### 1. "Tiga Langkah" Pemeriksaan Unboxing:
 
-- <strong>Cuba fungsi</strong>:Buat panggilan untuk uji pembesar suara dan mikrofon, ambil foto untuk periksa kamera.
+- <strong>Cuba fungsi</strong>:Buat panggilan untuk uji pembesar suara dan mikrofon, ambil foto untuk periksa kamera
 - <strong>2. Peringatan Penting Pengaktifan &amp; Tetapan Awal:</strong> Rangkaian
 - <strong>:Sambung ke Wi-Fi yang stabil terlebih dahulu.</strong> Akaun
 
@@ -20,8 +20,8 @@ kind: appendix
 - <strong>Tetapan asas</strong>:Hidupkan "Cari Telefon Saya", tetapkan kata laluan skrin kunci yang kukuh.
 - <strong>Tetapan eSIM</strong>:Jika telefon anda menyokong eSIM (seperti iPhone, beberapa model Android flagship), anda boleh menambah pelan eSIM dalam tetapan tanpa perlu memasukkan kad SIM fizikal. eSIM sangat mudah semasa ke luar negara, anda boleh membeli pelan eSIM pengendali tempatan secara langsung.
 - <strong>Pemindahan data</strong>:Semasa memindahkan data dari telefon lama, pastikan kedua-dua telefon mempunyai cas bateri yang mencukupi. iPhone gunakan "Quick Start", Android gunakan App pemindahan telefon rasmi.
-- <strong>3. Pasang App – "Keselamatan Diutamakan":</strong> Kedai rasmi diutamakan
-- <strong>:Apple gunakan App Store, Android gunakan kedai aplikasi bawaan telefon.</strong> Jangan beri kebenaran sembarangan
+- <strong>3. Pasang App – "Keselamatan Diutamakan":</strong> Kedai rasmi diutamakan.
+- <strong>:Apple gunakan App Store, Android gunakan kedai aplikasi bawaan telefon.</strong> Jangan beri kebenaran sembarangan.
 
 #### 3. Pasang App – "Keselamatan Diutamakan":
 

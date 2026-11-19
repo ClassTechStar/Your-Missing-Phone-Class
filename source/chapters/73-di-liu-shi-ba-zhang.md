@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十八章：进阶之路——权限、通知与现代架构
 
 {class="chapter-intro mb-4"}
-能做出 App 只是开始。这一章聊聊从"会做"到"做好"的几道坎：怎么优雅地申请权限、怎么发通知不讨人厌、怎么把架构再往上抬一层，以及——在 2026 年，怎么和 AI 搭档写 iOS 代码。每一条都是你在真实项目里马上会遇到的。
+能做出 App 只是开始。这一章聊聊从"会做"到"做好"的几道坎：怎么优雅地申请权限、怎么发通知不讨人厌、怎么把架构再往上抬一层，以及，在 2026 年，怎么和 AI 搭档写 iOS 代码。每一条都是你在真实项目里马上会遇到的。
 
 #### 一、权限：先敲门，再进门
 
@@ -93,22 +93,22 @@ func scheduleDailyReminder() {
 ```
 :::
 
-注意：iOS 的通知权限同样"只弹一次"，且用户随时可以在系统设置里关掉——所以通知内容的价值感很重要，滥发一次可能就永远失去用户。
+注意：iOS 的通知权限同样"只弹一次"，且用户随时可以在系统设置里关掉，所以通知内容的价值感很重要，滥发一次可能就永远失去用户。
 
 #### 三、架构进阶：MVVM 深入与可测试性
 
 第 65 章用过 MVVM，这里补三个进阶要点：
 
-- <strong>协议抽象</strong>：让 ViewModel 依赖协议（protocol）而不是具体类——测试时可以注入"假数据源"，这是可测试性的基石；
-- <strong>单一职责</strong>：一个 ViewModel 只管一件事（记账的不管天气）；功能多了就拆；
-- <strong>别过度设计</strong>：单人小项目，"@Observable 类 + 协议抽象"就够了。VIPER、Clean Architecture 这类重架构，等团队和复杂度找上门再说——工具是服务目标的，不是用来炫耀的。
+- <strong>协议抽象</strong>：让 ViewModel 依赖协议（protocol）而不是具体类，测试时可以注入"假数据源"，这是可测试性的基石。
+- <strong>单一职责</strong>：一个 ViewModel 只管一件事（记账的不管天气）；功能多了就拆。
+- <strong>别过度设计</strong>：单人小项目，"@Observable 类 + 协议抽象"就够了。VIPER、Clean Architecture 这类重架构，等团队和复杂度找上门再说，工具是服务目标的，不是用来炫耀的。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>小贴士：SwiftUI 的"生态红利"
 
 {class="mt-1"}
-iOS 生态还有两个"只此一家"的进阶玩法：<strong>小组件（WidgetKit）</strong>让用户不打开 App 就能看信息（记账本的"本月支出"放桌面），<strong>快捷指令（App Intents）</strong>让用户用 Siri 或自动化调用你的功能。两者都有官方框架，入门成本不高，但对用户体验的加成巨大——进阶路上值得优先解锁。
+iOS 生态还有两个"只此一家"的进阶玩法：<strong>小组件（WidgetKit）</strong>让用户不打开 App 就能看信息（记账本的"本月支出"放桌面），<strong>快捷指令（App Intents）</strong>让用户用 Siri 或自动化调用你的功能。两者都有官方框架，入门成本不高，但对用户体验的加成巨大，进阶路上值得优先解锁。
 :::
 
 #### 四、2026 年的新玩法：AI 辅助 iOS 开发
@@ -134,8 +134,8 @@ AI 辅助 iOS 开发的四个场景
 
 Swift 6 的并发体系有两条新手必懂的规则：
 
-- <strong>界面只能在主线程更新</strong>：SwiftUI 视图默认是 <code class="inline">@MainActor</code>，网络回调回到主线程再改状态（<code class="inline">await MainActor.run { ... }</code> 或把 ViewModel 标成 @MainActor）；
-- <strong>异步任务用 Task 管理</strong>：<code class="inline">.task { }</code> 修饰符随视图出现自动开始、消失自动取消——这是 SwiftUI 里启动异步工作的标准姿势，别在 body 里乱写 Task 裸奔。
+- <strong>界面只能在主线程更新</strong>：SwiftUI 视图默认是 <code class="inline">@MainActor</code>，网络回调回到主线程再改状态（<code class="inline">await MainActor.run { ... }</code> 或把 ViewModel 标成 @MainActor）。
+- <strong>异步任务用 Task 管理</strong>：<code class="inline">.task { }</code> 修饰符随视图出现自动开始、消失自动取消，这是 SwiftUI 里启动异步工作的标准姿势，别在 body 里乱写 Task 裸奔。
 
 ::: div .code-block
 :::inline div .code-head
@@ -162,7 +162,7 @@ struct WeatherScreen: View {
 ```
 :::
 
-这两条规则背后是 Swift 6 的"数据竞争安全"设计——编译器会在你写错时直接报错，而不是等 App 崩了才发现。<strong>编译器的报错不是找茬，是替你挡子弹</strong>。
+这两条规则背后是 Swift 6 的"数据竞争安全"设计，编译器会在你写错时直接报错，而不是等 App 崩了才发现。<strong>编译器的报错不是找茬，是替你挡子弹</strong>。
 
 {class="mt-1"}
 ① 给记账本加"每天 20:00 记账提醒"（通知权限 + 本地通知）；② 把 ViewModel 的数据源改成协议抽象，并写一个注入假数据的单元测试；③ 加一个"本月支出"桌面小组件。三件套做完，你的项目就有"正规军"的样子了。

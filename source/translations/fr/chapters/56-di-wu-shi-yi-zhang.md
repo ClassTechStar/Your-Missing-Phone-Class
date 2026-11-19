@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 51 : Les interfaces — débuter avec Jetpack Compose
 
 {class="chapter-intro mb-4"}
-L'interface, c'est tout ce que l'utilisateur voit. Avant l'arrivée de Compose, on écrivait les interfaces Android en XML — aussi fastidieux qu'un exercice à trous ; en 2021, Google a lancé Jetpack Compose : on « dessine » l'interface directement en code Kotlin, avec un rendu immédiat — change une ligne de code et l'aperçu se met à jour sur-le-champ. En 2026, Compose est la norme absolue des nouveaux projets. Ce chapitre, c'est notre leçon de « dessin ».
+L'interface, c'est tout ce que l'utilisateur voit. Avant l'arrivée de Compose, on écrivait les interfaces Android en XML — aussi fastidieux qu'un exercice à trous ; en 2021, Google a lancé Jetpack Compose : on « dessine » l'interface directement en code Kotlin, avec un rendu immédiat, change une ligne de code et l'aperçu se met à jour sur-le-champ. En 2026, Compose est la norme absolue des nouveaux projets. Ce chapitre, c'est notre leçon de « dessin ».
 
 #### 1. La philosophie de Compose : l'interface est une fonction
 
@@ -41,9 +41,9 @@ fun HomeScreen() {
 ```
 :::
 
-Note le « chapeau » @Composable — il dit au compilateur : « ceci est une brique d'interface ». Les briques peuvent s'emboîter à l'infini : voilà tout le secret de Compose.
+Note le « chapeau » @Composable: il dit au compilateur : « ceci est une brique d'interface ». Les briques peuvent s'emboîter à l'infini : voilà tout le secret de Compose.
 
-#### 2. Les composants de base : texte, bouton, champ de saisie, image
+2. Les composants de base : texte, bouton, champ de saisie, image
 
 Les composants de Compose sont des « briques » ; en voici les quatre plus courantes :
 
@@ -80,7 +80,7 @@ fun BasicWidgets() {
 ```
 :::
 
-Dans les deux lignes du champ de saisie apparaît remember { mutableStateOf("") } — c'est la « magie d'état » de Compose, détaillée en section 5 de ce chapitre. Pour l'instant, contente-toi de la reconnaître de vue.
+Dans les deux lignes du champ de saisie apparaît remember { mutableStateOf("") }, c'est la « magie d'état » de Compose, détaillée en section 5 de ce chapitre. Pour l'instant, contente-toi de la reconnaître de vue.
 
 #### 3. Le trio de mise en page : Column, Row, Box
 
@@ -88,7 +88,7 @@ Les composants sont là, mais comment les disposer ? Retiens trois « boîtes »
 
 - Column : empile à la verticale (comme une file à la cantine) ;
 - Row : aligne à l'horizontale (comme s'asseoir côte à côte) ;
-- Box : superpose (comme des cartes empilées, parfait pour les badges d'angle et les masques).
+- Box : superpose (comme des cartes empilées, parfait pour les badges d'angle et les masques)
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,7 +135,7 @@ Text(
 Attention : l'ordre des Modifier compte
 
 {class="mt-1"}
-padding(16.dp).background(Blue) et background(Blue).padding(16.dp) ne donnent pas le même résultat — le premier « réserve d'abord la marge puis colore » (le fond ne couvre pas la marge), le second « colore d'abord puis réserve la marge » (le fond inclut la marge). C'est là que les débutants dessinent le plus souvent cette « bordure blanche bizarre ». En cas de doute, inverse l'ordre : l'aperçu te donne la réponse aussitôt.
+padding(16.dp).background(Blue) et background(Blue).padding(16.dp) ne donnent pas le même résultat: le premier « réserve d'abord la marge puis colore » (le fond ne couvre pas la marge), le second « colore d'abord puis réserve la marge » (le fond inclut la marge). C'est là que les débutants dessinent le plus souvent cette « bordure blanche bizarre ». En cas de doute, inverse l'ordre : l'aperçu te donne la réponse aussitôt.
 :::
 
 #### 4. L'état : donner vie à l'interface
@@ -178,13 +178,13 @@ Trois lignes de code, et voilà un compteur vivant. C'est là que Compose se ré
 Figure 3 : le flux de données unidirectionnel « état → interface » de Compose
 :::
 
-#### 5. Thème et mode sombre : une configuration, tout l'écran en profite
+5. Thème et mode sombre : une configuration, tout l'écran en profite
 
 Le MyFirstAppTheme { ... } du projet modèle, c'est le thème. Basé sur les spécifications de design Material 3, il gère d'un seul tenant couleurs, polices et formes. Trois étapes suffisent pour prendre en charge le mode sombre :
 
 1. Définis dans le thème deux palettes, claire et sombre (le modèle génère déjà la ColorScheme) ;
 2. quand le système passe en mode sombre, isSystemInDarkTheme() le détecte automatiquement ;
-3. utilise les couleurs fournies par le thème (par exemple MaterialTheme.colorScheme.primary) plutôt que des valeurs de couleur codées en dur.
+3. utilise les couleurs fournies par le thème (par exemple MaterialTheme.colorScheme.primary) plutôt que des valeurs de couleur codées en dur
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -194,13 +194,13 @@ Petit conseil : les couleurs dynamiques de Material 3
 Depuis Android 12, « Material You » permet à une app d'extraire des couleurs de ton fond d'écran. Le modèle Compose le prend en charge par défaut (dynamicColor). Ton app « change de tenue » automatiquement selon le téléphone de chaque utilisateur : c'est la poésie de l'Android moderne.
 :::
 
-#### 6. Aperçu, animations et édition en direct : les « turbo » de Compose
+6. Aperçu, animations et édition en direct : les « turbo » de Compose
 
 Les trois « turbo » de Compose en matière d'expérience de développement : une fois adoptés, impossible de s'en passer :
 
 - L'aperçu @Preview : ajoute l'annotation @Preview à un Composable et Android Studio rend l'interface instantanément à droite — tu modifies le code avec un rendu immédiat, sans devoir installer à chaque fois sur le téléphone ;
-- L'édition en direct (Live Edit) : en 2026, Android Studio sait « recharger à chaud » certaines modifications sur l'émulateur ou l'appareil réel — changer la couleur d'un texte et autres petits ajustements s'appliquent en une seconde sur l'appareil ;
-- Les API d'animation : animateFloatAsState et AnimatedVisibility permettent des transitions douces en quelques lignes de code — la « touche pro » se joue souvent à ces quelques dizaines de lignes près.
+- L'édition en direct (Live Edit) : en 2026, Android Studio sait « recharger à chaud » certaines modifications sur l'émulateur ou l'appareil réel, changer la couleur d'un texte et autres petits ajustements s'appliquent en une seconde sur l'appareil ;
+- Les API d'animation : animateFloatAsState et AnimatedVisibility permettent des transitions douces en quelques lignes de code: la « touche pro » se joue souvent à ces quelques dizaines de lignes près
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 Petit conseil : d'abord la fonction, ensuite l'animation
 
 {class="mt-1"}
-Le travers classique des débutants : « se tracasser des animations avant même que l'interface ne soit juste ». Fais d'abord tourner les fonctionnalités, ajoute les effets à la fin — c'est aussi le principe « la simplicité d'abord » : l'animation est la cerise sur le gâteau, la fonctionnalité est le pain quotidien.
+Le travers classique des débutants : « se tracasser des animations avant même que l'interface ne soit juste ». Fais d'abord tourner les fonctionnalités, ajoute les effets à la fin: c'est aussi le principe « la simplicité d'abord » : l'animation est la cerise sur le gâteau, la fonctionnalité est le pain quotidien.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -246,7 +246,7 @@ Résumé du chapitre
 - La philosophie de Compose : interface = fonction @Composable, emboîtement en briques
 - Les quatre composants majeurs : Text / Button / TextField / Image
 - Le trio de mise en page : Column empile, Row aligne, Box superpose
-- Les Modifier se maquillent en chaîne : padding, fillMaxWidth, background, clickable — l'ordre a son importance
-- L'état est l'âme : remember + mutableStateOf — change les données et l'interface se redessine
+- Les Modifier se maquillent en chaîne : padding, fillMaxWidth, background, clickable, l'ordre a son importance
+- L'état est l'âme : remember + mutableStateOf: change les données et l'interface se redessine
 - Thème avec Material 3 + couleurs dynamiques ; le mode sombre se configure une fois et s'applique partout
 :::

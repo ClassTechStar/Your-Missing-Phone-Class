@@ -10,9 +10,9 @@ kind: chapter
 ### Capítulo 38: Los cinco principios de pensamiento de la programación con IA
 
 {class="chapter-intro mb-4"}
-Si solo puedes quedarte con un capítulo de este libro, que sea este. Los cinco principios de pensamiento son el corazón de la obra; todos los capítulos posteriores —contexto, requisitos, conversación, calidad— son estos cinco principios desplegados en distintos escenarios. Tranquilo: ninguno es difícil de entender, pero cada uno merece que lo «metas en el músculo» con un par de proyectos.
+Si solo puedes quedarte con un capítulo de este libro, que sea este. Los cinco principios de pensamiento son el corazón de la obra; todos los capítulos posteriores,contexto, requisitos, conversación, calidad, son estos cinco principios desplegados en distintos escenarios. Tranquilo: ninguno es difícil de entender, pero cada uno merece que lo «metas en el músculo» con un par de proyectos.
 
-El origen de la historia es curioso: al publicar su proyecto como código abierto, Andrej Karpathy adjuntó un archivo CLAUDE.md de apenas 70 líneas que resumía cuatro principios centrales para colaborar con la IA. Ese archivo acumuló más de 70.000 estrellas en GitHub y se convirtió en la guía más citada por la comunidad mundial de programación con IA. No son consignas vacías, sino hábitos de pensamiento accionables destilados de mucha práctica. Sobre esa base, este libro añade un quinto principio —la verificación iterativa— y completa el sistema de los cinco principios.
+El origen de la historia es curioso: al publicar su proyecto como código abierto, Andrej Karpathy adjuntó un archivo CLAUDE.md de apenas 70 líneas que resumía cuatro principios centrales para colaborar con la IA. Ese archivo acumuló más de 70.000 estrellas en GitHub y se convirtió en la guía más citada por la comunidad mundial de programación con IA. No son consignas vacías, sino hábitos de pensamiento accionables destilados de mucha práctica. Sobre esa base, este libro añade un quinto principio,la verificación iterativa, y completa el sistema de los cinco principios.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -22,7 +22,7 @@ El origen de la historia es curioso: al publicar su proyecto como código abiert
 ¿Qué significan 70.000 estrellas? En GitHub, la inmensa mayoría de los proyectos jamás llega a esa cifra. Que un archivo de texto de 70 líneas la consiga demuestra una cosa: en la era de la IA, lo escaso no es el código, sino la capacidad de «pensar con claridad». Esas 70 líneas son la versión condensada de «pensar con claridad».
 :::
 
-#### 1. Principio 1: Think Before Coding (piensa primero, programa después)
+1. Principio 1: Think Before Coding (piensa primero, programa después)
 
 Es el principio más contraintuitivo de los cinco. Si la IA puede escribir el código por nosotros, ¿para qué «pensar primero»? La respuesta es sencilla: la calidad de lo que produce la IA es proporcional a la calidad de tu entrada. Si ni tú tienes claro qué quieres hacer, sus respuestas te meterán en un bucle interminable de «cambiar y volver a cambiar»: lo que popularmente se llama «que la IA se pierda contigo».
 
@@ -60,7 +60,7 @@ En la práctica, «primero lo simple» se traduce en unos hábitos concretos:
 - Pedir a la IA un solo punto de función cada vez, en lugar de describir el sistema entero de un tirón;
 - Preferir la biblioteca estándar y las soluciones sencillas antes que introducir dependencias complejas;
 - Si algo se resuelve con 50 líneas de código, no dejar que la IA escriba 500;
-- Y cuando la producción de la IA se pase del alcance esperado, decirle con valentía: «recorta lo que sobra».
+- Y cuando la producción de la IA se pase del alcance esperado, decirle con valentía: «recorta lo que sobra»
 
 ::: div .overflow-x-auto
 ```html
@@ -77,7 +77,7 @@ Cuando iteras sobre un proyecto ya existente, cada cambio debería ser tan preci
 
 La exigencia central de los «cambios quirúrgicos» es: en cada instrucción a la IA, delimita con claridad el alcance y los límites del cambio. Dile «modifica solo la función calculate_discount», «no toques el resto» y «mantén el estilo de código actual». Si la IA se sale del alcance que pediste, exige de inmediato que revierta lo que sobra.
 
-Karpathy lo ilustró con un ejemplo de diff (comparación de cambios). Imagina que pides a la IA añadir la lógica de «precio de socio» a la función de cálculo de descuentos del carrito: una buena producción modifica solo esa función y añade unas pocas líneas; una mala reescribe el archivo entero — por elegante que quede el código nuevo, no puedes asegurar que no haya introducido bugs nuevos. En la programación con IA, «parece mejor» nunca puede justificar desviarse de la instrucción.
+Karpathy lo ilustró con un ejemplo de diff (comparación de cambios). Imagina que pides a la IA añadir la lógica de «precio de socio» a la función de cálculo de descuentos del carrito: una buena producción modifica solo esa función y añade unas pocas líneas; una mala reescribe el archivo entero, por elegante que quede el código nuevo, no puedes asegurar que no haya introducido bugs nuevos. En la programación con IA, «parece mejor» nunca puede justificar desviarse de la instrucción.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -97,7 +97,7 @@ Modifica solo la función calculate_discount de cart.py: 1. Añade la lógica de
 :::
 :::
 
-#### 4. Principio 4: Goal-Driven Execution (ejecución orientada a objetivos)
+4. Principio 4: Goal-Driven Execution (ejecución orientada a objetivos)
 
 Este principio responde a una pregunta clave: ¿debes darle a la IA instrucciones de «cómo hacerlo» o de «qué hacer»? La respuesta de Karpathy es lo segundo. En lugar de decirle «primero crea una clase, luego añade métodos y después escribe las pruebas», dile «necesito una herramienta que lea archivos CSV y cuente los valores únicos de cada columna». Deja que la IA decida la ruta de implementación; tú te encargas de aceptar el resultado.
 

@@ -2,12 +2,12 @@
 id: di-san-shi-wu-zhang
 num: 35
 part: er-tong-pian
-nav: Kapitel 35: Kinder und Handys – ein Erziehungsguide fürs digitale Zeitalter
+nav: Kapitel 35: Dem Kind ein Handy geben: Regeln setzen
 toc: default
 kind: chapter
 ---
 
-### Kapitel 35: Kinder und Smartphones – Erziehungsleitfaden fuer das digitale Zeitalter
+### Kapitel 35: Dem Kind ein Handy geben: Regeln setzen
 
 {class="chapter-intro mb-4"}
 Dieses Kapitel behauptet nicht, das Handy sei »ein Ungeheuer«, noch dass »je frueher desto klueger«. Wir gehen nach Altersstufen vor: Geraete bereitstellen, Regeln setzen, Medienkompetenz vermitteln, Gesundheit schuetzen – Schritt fuer Schritt.

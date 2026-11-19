@@ -2,21 +2,21 @@
 id: di-er-shi-er-zhang
 num: 22
 part: chao-yue-pian
-nav: Capitolo 22: Come funziona l'AI dentro lo smartphone
+nav: Capitolo 22: Cosa fa davvero l'IA nel tuo telefono?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 22: Come funziona l'IA nel telefono
+### Capitolo 22: Cosa fa davvero l'IA nel tuo telefono?
 
 {class="chapter-intro mb-4"}
 Benvenuti alla "sparizione magica" più cool del telefono, il protagonista è l'intelligenza artificiale. Le foto "bell'e pronte" che usi ogni giorno, l'assistente vocale pronto a rispondere, la tastiera che più la usi più ti capisce: dietro c'è questo cervello invisibile.
 
-#### 1. Fotocamera AI: la tua "camera oscura di post-produzione" si è trasferita nel telefono
+1. Fotocamera AI: la tua "camera oscura di post-produzione" si è trasferita nel telefono
 
 L'odierna fotografia computazionale AI assomiglia più a un team professionale di ritoccatori e fotografi stipato direttamente nel tasto otturatore. Prima che tu prema l'otturatore, l'IA ha già cominciato a lavorare: scansiona la scena e riconosce "questo è cielo azzurro", "questa è una faccia", "questa è una scena notturna".
 
-#### 2. Assistente vocale: come fa il tuo "segretario vocale" a capirti?
+2. Assistente vocale: come fa il tuo "segretario vocale" a capirti?
 
 1. <strong>Sentire chiaro (riconoscimento vocale)</strong>: trasforma le onde sonore in testo.
 2. <strong>Capire (comprensione del linguaggio naturale)</strong>: comprende l'intento ed estrae le entità chiave.
@@ -26,9 +26,9 @@ L'odierna fotografia computazionale AI assomiglia più a un team professionale d
 
 L'IA on-device mantiene il calcolo nel telefono: è veloce, rispetta la privacy e funziona offline. L'IA cloud richiede connessione, ma può gestire compiti più complessi.
 
-#### 4. Grandi modelli IA e telefono: il tuo assistente intelligente personale
+4. Grandi modelli IA e telefono: il tuo assistente intelligente personale
 
-Nel 2025-2026, l'esplosione dei grandi modelli IA (come DeepSeek R1, ChatGPT-5, Wenxin Yiyan 5.0, Tongyi Qianwen 3, ecc.) ha cambiato profondamente il modo in cui si usa il telefono. Il telefono non è più solo uno strumento che esegue comandi, ma un partner intelligente in grado di comprendere, ragionare e creare. I chip IA on-device (con potenza di calcolo NPU oltre gli 80 TOPS) hanno permesso per la prima volta di eseguire l'inferenza dei grandi modelli localmente sul telefono, usando l'IA anche senza connessione.
+Nel 2025-2026, l'esplosione dei grandi modelli IA (come DeepSeek R1, ChatGPT-5, Wenxin Yiyan 5.0, Tongyi Qianwen 3, ecc.) ha cambiato profondamente il modo in cui si usa il telefono. Il telefono non è più solo uno strumento che esegue comandi, ma un partner intelligente in grado di comprendere, ragionare e creare. I chip IA on-device, (con potenza di calcolo NPU oltre gli 80 TOPS) hanno permesso per la prima volta di eseguire l'inferenza dei grandi modelli localmente sul telefono, usando l'IA anche senza connessione.
 
 ##### Che cos'è un grande modello IA?
 
@@ -36,7 +36,7 @@ Un grande modello IA (Large Language Model, LLM) è un sistema IA addestrato con
 
 ##### Applicazioni dei grandi modelli IA sul telefono:
 
-- <strong>Assistenti conversazionali</strong>: App come DeepSeek, ChatGPT, Doubao, Kimi, con cui puoi fare domande, tradurre, scrivere testi e riassumere articoli in qualsiasi momento. Più intelligenti dei motori di ricerca tradizionali — non ti danno solo link, ma direttamente la risposta.
+- <strong>Assistenti conversazionali</strong>: App come DeepSeek, ChatGPT, Doubao, Kimi, con cui puoi fare domande, tradurre, scrivere testi e riassumere articoli in qualsiasi momento. Più intelligenti dei motori di ricerca tradizionali, non ti danno solo link, ma direttamente la risposta.
 - <strong>Scrittura e creazione</strong>: lascia che l'IA ti aiuti a scrivere email, riassumere verbali di riunione, rifinire articoli, generare testi creativi.
 - <strong>Generazione e modifica di immagini</strong>: l'IA elimina con un clic i passanti dalle foto, espande i bordi dell'immagine, converte lo stile o genera immagini a partire da descrizioni testuali.
 - <strong>Traduzione in tempo reale</strong>: traduzione in tempo reale delle chiamate, traduzione di dialoghi faccia a faccia, traduzione di foto: niente più barriere linguistiche in viaggio all'estero.
@@ -92,7 +92,7 @@ Per farti percepire in modo più intuitivo i "superpoteri" dell'IA sul telefono,
 
 <strong>Principio alla base</strong>: i modelli di visione artificiale (CV) trasformano il contenuto delle immagini in vettori (Embedding), da confrontare poi con la query testuale per similarità. Questa "ricerca multimodale" rappresenta un grande salto nella gestione dell'album del telefono.
 
-#### 6. Ottimizzazione dei prompt: la "formula di comunicazione" per far ubbidire l'IA
+6. Ottimizzazione dei prompt: la "formula di comunicazione" per far ubbidire l'IA
 
 La qualità delle risposte dell'IA dipende in gran parte da come "poni la domanda". Per la stessa domanda, modi diversi di chiedere producono risposte completamente diverse. Qui sotto presentiamo un approccio <strong>molto pratico e facile da usare, basato su "Ruolo-Background-Compito-Vincoli"</strong>, con molti esempi.
 
@@ -101,7 +101,7 @@ La qualità delle risposte dell'IA dipende in gran parte da come "poni la domand
 <i class="fas fa-puzzle-piece mr-2"></i>Perché serve un framework?
 
 {class="mt-1"}
-Molti usano l'IA come usano Baidu — inserendo qualche parola chiave. Ma l'IA non è un motore di ricerca, è un modello linguistico che "legge, comprende e poi risponde". <strong>Dandole più contesto, dicendo chiaramente cosa vuoi e limitandola per evitare derive</strong>, otterrai risultati precisi. Il framework serve a tradurre nella tua mente "come dev'essere una buona risposta" in istruzioni comprensibili all'IA.
+Molti usano l'IA come usano Baidu — inserendo qualche parola chiave. Ma l'IA non è un motore di ricerca. È un modello linguistico che "legge, comprende e poi risponde". <strong>Dandole più contesto, dicendo chiaramente cosa vuoi e limitandola per evitare derive</strong>, otterrai risultati precisi. Il framework serve a tradurre nella tua mente "come dev'essere una buona risposta" in istruzioni comprensibili all'IA.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -245,7 +245,7 @@ Scrivere bene i prompt non è un'operazione una tantum: <strong>prima di inviarl
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Sei un blogger di colazione esperto di abbinamenti nutrizionali (<strong>ruolo</strong>). Sono una mamma lavoratrice, ho solo 15 minuti ogni mattina per preparare la colazione, a casa ho un bambino di 6 anni e una suocera di 60 (<strong>background</strong>). <strong>Elenca 7 menu della colazione diversi per 7 giorni</strong> (<strong>compito</strong>). Ogni colazione deve: ① richiedere al massimo 15 minuti di preparazione ② essere nutrizionalmente equilibrata (proteine + carboidrati + frutta e verdura) ③ essere adatta a tutti ④ con ingredienti reperibili in un supermercato normale (<strong>vincoli</strong>).
+Sei un blogger di colazione esperto di abbinamenti nutrizionali (<strong>ruolo</strong>). Sono una mamma lavoratrice, ho solo 15 minuti ogni mattina per preparare la colazione, a casa ho un bambino di 6 anni e una suocera di 60 (<strong>background</strong>). <strong>Elenca 7 menu della colazione diversi per 7 giorni</strong> (<strong>compito</strong>). Ogni colazione deve: ① richiedere al massimo 15 minuti di preparazione. ② essere nutrizionalmente equilibrata (proteine + carboidrati + frutta e verdura). ③ essere adatta a tutti. ④ con ingredienti reperibili in un supermercato normale (<strong>vincoli</strong>).
 
 {class="mt-1"}
 <strong>Perché funziona</strong>: il ruolo fissa il livello professionale, il background dà le caratteristiche comuni a tre categorie di persone, il compito definisce chiaramente il risultato, i 4 vincoli ne garantiscono l'eseguibilità.
@@ -259,7 +259,7 @@ Sei un blogger di colazione esperto di abbinamenti nutrizionali (<strong>ruolo</
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Sei un <strong>professore di inglese di Livello 6 con molta esperienza</strong> (ruolo). Sono uno studente universitario, <strong>al Livello 4 ho preso 480, il mio obiettivo al Livello 6 è 500, ho ancora 3 mesi</strong> (background). <strong>Prepara per me un piano di studio di 12 settimane eseguibile</strong> (compito). Requisiti: ① ogni settimana con ripartizione chiara del tempo tra ascolto, parlato, lettura e scrittura ② indica la direzione di miglioramento per ogni mese ③ consiglia 3 materiali di ripasso adatti (spiegando il motivo in cinese) ④ output in formato tabella (vincoli).
+Sei un <strong>professore di inglese di Livello 6 con molta esperienza</strong> (ruolo). Sono uno studente universitario, <strong>al Livello 4 ho preso 480, il mio obiettivo al Livello 6 è 500, ho ancora 3 mesi</strong> (background). <strong>Prepara per me un piano di studio di 12 settimane eseguibile</strong> (compito). Requisiti: ① ogni settimana con ripartizione chiara del tempo tra ascolto, parlato, lettura e scrittura. ② indica la direzione di miglioramento per ogni mese. ③ consiglia 3 materiali di ripasso adatti (spiegando il motivo in cinese). ④ output in formato tabella (vincoli).
 
 {class="mt-1"}
 <strong>Perché funziona</strong>: il ruolo fissa il background professionale, il background fornisce i punti di ancoraggio di punteggio e tempo, il compito definisce chiaramente un "piano a fasi", i vincoli richiedono "tabella" ed "eseguibile".
@@ -289,7 +289,7 @@ Prova questi usi avanzati per sperimentare la vera forza dell'IA:
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Ottimizzazione multi-turno</strong>: se la risposta dell'IA non ti soddisfa, puoi dire "è troppo tecnico, spiegalo di nuovo con parole comprensibili a un bambino delle elementari".
 - <strong>Chain of Thought (CoT)</strong>: chiedi all'IA di "pensare passo dopo passo", in genere la qualità della risposta è superiore: "analizza passo dopo passo questo problema di matematica".
-- <strong>Collaborazione tra più IA</strong>: usa A per la prima bozza, B per la rifinitura, C per la traduzione — combinarle dà risultati migliori.
+- <strong>Collaborazione tra più IA</strong>: usa A per la prima bozza, B per la rifinitura, C per la traduzione, combinarle dà risultati migliori.
 - <strong>Prompt di sistema</strong>: preimposta nelle impostazioni dell'IA la tua identità, le preferenze, gli argomenti tabù, per avere risposte più in linea con le tue esigenze.
 :::
 
@@ -331,6 +331,6 @@ Anche se potente, l'IA non è affatto "onnipotente". Riconoscere lucidamente i s
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: iPhone 13 → Xiaomi 15, cambio cross-brand.
-- <strong>Passaggi</strong>: ① backup su iCloud/WeChat integrato del vecchio telefono → ② logout dell'Apple ID + disattivazione di "Trova" → ③ sul nuovo telefono scansione con l'app "Xiaomi Switch" → ④ selezione degli elementi da migrare → ⑤ migrazione separata di WeChat con "Migrazione cronologia chat" → ⑥ verifica dei dati chiave (contatti/album/WeChat) → ⑦ cancellazione crittografata del vecchio telefono.
+- <strong>Passaggi</strong>: ① backup su iCloud/WeChat integrato del vecchio telefono →. ② logout dell'Apple ID + disattivazione di "Trova" →. ③ sul nuovo telefono scansione con l'app "Xiaomi Switch" →. ④ selezione degli elementi da migrare →. ⑤ migrazione separata di WeChat con "Migrazione cronologia chat" →. ⑥ verifica dei dati chiave (contatti/album/WeChat) →. ⑦ cancellazione crittografata del vecchio telefono.
 - <strong>Risultato atteso</strong>: nessuna perdita di dati, il vecchio telefono può essere rivenduto in sicurezza.
 :::

@@ -2,17 +2,17 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Capitolo 3: Collega il telefono alla sua "linea vitale"
+nav: Capitolo 3: Niente rete? Non riavviare subito
 toc: default
 kind: chapter
 ---
 
-### Capitolo 3: Collegare il telefono alla "linea di vita" — La rete
+### Capitolo 3: Niente rete? Non riavviare subito
 
 {class="chapter-intro mb-4"}
 Senza rete, lo smartphone perde metà della sua "intelligenza". La rete è la linea di vita del telefono moderno: capirla, usarla bene e proteggerla è una materia obbligatoria per ogni utente.
 
-#### 0. Non perdersi nella connessione — distinguere "strada" e "veicolo" tra Wi-Fi e traffico dati
+0. Non perdersi nella connessione — distinguere "strada" e "veicolo" tra Wi-Fi e traffico dati
 
 Molte persone vedono contemporaneamente accese le icone Wi-Fi e segnale sul telefono, ma sono totalmente confuse sulla differenza essenziale. L'equivoco più classico è: <strong>sei connesso al Wi-Fi ma le pagine non si caricano</strong> — perché il router ha perso la connessione, e il telefono non è tornato automaticamente al traffico dati. Per capire a fondo il problema, dobbiamo costruire un modello cognitivo "strada e veicolo".
 
@@ -45,7 +45,7 @@ Apri [Impostazioni] > [Rete mobile] > [Gestione traffico] e verifica quanti GB t
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Considerazioni di sicurezza: il Wi-Fi pubblico è un "campo di pesca" nascosto
 
-Per la sicurezza, i dati mobili sono in genere più sicuri del Wi-Fi pubblico. I dati mobili sono cifrati dall'operatore, mentre il Wi-Fi pubblico può essere facilmente trasformato in "hotspot falso" dai hacker per intercettare traffico non cifrato. Va però chiarito: oggi, con la diffusione capillare di HTTPS, l'attaccante può intercettare <strong>quali siti hai visitato</strong> (dominio) e i <strong>contenuti HTTP non cifrati</strong>; ma i messaggi WeChat, le password di login delle app bancarie e altri dati cifrati con HTTPS <strong>non possono essere letti direttamente</strong> — a meno che non venga messo in atto un attacco SSL stripping più complesso e l'utente ignori gli avvisi sui certificati. In ogni caso, per pagamenti fuori casa, usare direttamente i dati mobili resta la scelta più sicura.
+Per la sicurezza, i dati mobili sono in genere più sicuri del Wi-Fi pubblico. I dati mobili sono cifrati dall'operatore, mentre il Wi-Fi pubblico può essere facilmente trasformato in "hotspot falso" dai hacker per intercettare traffico non cifrato. Va però chiarito: oggi, con la diffusione capillare di HTTPS, l'attaccante può intercettare <strong>quali siti hai visitato</strong> (dominio) e i <strong>contenuti HTTP non cifrati</strong>; ma i messaggi WeChat, le password di login delle app bancarie e altri dati cifrati con HTTPS <strong>non possono essere letti direttamente</strong>. A meno che non venga messo in atto un attacco SSL stripping più complesso e l'utente ignori gli avvisi sui certificati. In ogni caso, per pagamenti fuori casa, usare direttamente i dati mobili resta la scelta più sicura.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -58,7 +58,7 @@ In aeroporti, centri commerciali, caffè e altri luoghi pubblici, non connettert
 {class="font-semibold mt-4 mb-1"}
 ##### 4. Verifica lato telefono: capire il "linguaggio segreto" della barra di stato
 
-Come sapere cosa sta usando il telefono in questo momento? Su un telefono Huawei, ad esempio, la comparsa dell'<strong>icona a doppia freccia</strong> accanto al segnale dell'operatore o al segnale WLAN nella barra di stato indica che si sta usando quel metodo per la connessione; se entrambe sono accese, l'accelerazione di rete è attiva e il telefono sta usando entrambi i canali.
+Come sapere cosa sta usando il telefono in questo momento? Su un telefono Huawei, ad esempio, la comparsa dell'<strong>icona a doppia freccia</strong> accanto al segnale dell'operatore o al segnale WLAN nella barra di stato indica , che si sta usando quel metodo per la connessione; se entrambe sono accese, l'accelerazione di rete è attiva e il telefono sta usando entrambi i canali.
 
 Per gli utenti iPhone è più diretto: se l'icona Wi-Fi è accesa, si sta usando il Wi-Fi; se è spenta, guarda le barre di segnale in alto a destra per capire che stai usando il traffico dati. Alcuni telefoni Android mostrano anche "5G" o "4G" nella barra di stato, indicando il tipo di rete mobile corrente.
 
@@ -170,9 +170,9 @@ Il Wi-Fi pubblico può esporre a intercettazioni o a hotspot esca. Regole d'oro:
 - Non connetterti automaticamente a Wi-Fi sconosciuti.
 - Usa siti HTTPS (icona del lucchetto nella barra degli indirizzi).
 
-#### 3. Bluetooth: l'onnipresente della comunicazione wireless a breve distanza
+3. Bluetooth: l'onnipresente della comunicazione wireless a breve distanza
 
-Il Bluetooth è probabilmente una delle tecnologie wireless più usate sul tuo telefono — cuffie wireless, smartwatch, sistemi auto, tastiere e mouse si connettono tutti grazie a essa.
+Il Bluetooth è probabilmente una delle tecnologie wireless più usate sul tuo telefono, cuffie wireless, smartwatch, sistemi auto, tastiere e mouse si connettono tutti grazie a essa.
 
 ##### Principio tecnico:
 
@@ -197,7 +197,7 @@ Il Bluetooth opera nella banda ISM a 2.4GHz e usa la tecnica FHSS (Frequency Hop
 - <strong>Servizi di posizione</strong>: Beacon Bluetooth per navigazione indoor e tracciamento oggetti (es. Apple AirTag).
 - <strong>Casa intelligente</strong>: rete Bluetooth Mesh per controllare lampadine, serrature ecc.
 
-#### 4. Telecommando a infrarossi: il telefono diventa un telecomando universale
+4. Telecommando a infrarossi: il telefono diventa un telecomando universale
 
 Il telecommando a infrarossi è una delle tecnologie di controllo wireless più antiche, ma ancora utile sui telefoni. Alcuni telefoni Android (come alcuni modelli Xiaomi e Huawei) integrano un trasmettitore IR, in grado di controllare TV, condizionatori, decoder e altri elettrodomestici.
 
@@ -221,7 +221,7 @@ NFC deriva dalla tecnologia RFID e supporta tre modalità di funzionamento:
 
 - <strong>Modalità lettura/scrittura</strong>: il telefono legge informazioni da un tag NFC, ad esempio un adesivo NFC che attiva un'azione.
 - <strong>Modalità peer-to-peer</strong>: due dispositivi NFC si scambiano dati, come Android Beam (discontinuato).
-- <strong>Modalità card emulation</strong>: il telefono emula una smart card — è la modalità più usata: carte bus, badge di accesso, carte bancarie si basano su di essa.
+- <strong>Modalità card emulation</strong>: il telefono emula una smart card: è la modalità più usata: carte bus, badge di accesso, carte bancarie si basano su di essa.
 
 ##### Meccanismi di sicurezza:
 
@@ -237,7 +237,7 @@ NFC deriva dalla tecnologia RFID e supporta tre modalità di funzionamento:
 - <strong>Accoppiamento dispositivi</strong>: NFC per accoppiare rapidamente cuffie e casse Bluetooth.
 - <strong>Autenticazione d'identità</strong>: lettura di carte d'identità NFC, verifica della patente elettronica.
 
-#### 6. Hotspot personale: trasforma il telefono in un router Wi-Fi
+6. Hotspot personale: trasforma il telefono in un router Wi-Fi
 
 Quando hai molto traffico dati, puoi attivare l'hotspot per tablet e computer.
 

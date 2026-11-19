@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 65 : Projet 1 — mon carnet de comptes (version locale)
 
 {class="chapter-intro mb-4"}
-Bienvenue dans ton premier « vrai projet ». Ce carnet de comptes ne va pas sur Internet, mais il a tout d'un grand : enregistrer une écriture, consulter le relevé, faire les statistiques par mois, supprimer et corriger. En l'achevant, tu auras parcouru d'un bout à l'autre le cycle complet « données → logique → interface ». Ne te hâte pas pour copier le code — réfléchis d'abord, agis ensuite : c'est notre principe de toujours.
+Bienvenue dans ton premier « vrai projet ». Ce carnet de comptes ne va pas sur Internet, mais il a tout d'un grand : enregistrer une écriture, consulter le relevé, faire les statistiques par mois, supprimer et corriger. En l'achevant, tu auras parcouru d'un bout à l'autre le cycle complet « données → logique → interface ». Ne te hâte pas pour copier le code, réfléchis d'abord, agis ensuite : c'est notre principe de toujours.
 
 #### 1. Réfléchir aux besoins : commencer par cinq questions
 
@@ -27,7 +27,7 @@ Découpe ensuite en petites étapes « utilisables à chaque pas » : ① bâtir
 
 #### 2. La couche données : un toit pour les « écritures »
 
-Définis d'abord à quoi ressemble une écriture — assez de champs, mais sans gloutonnerie :
+Définis d'abord à quoi ressemble une écriture: assez de champs, mais sans gloutonnerie :
 
 ::: div .code-block
 :::inline div .code-head
@@ -61,7 +61,7 @@ class Record {
 Astuce : pourquoi un Double pour les montants ?
 
 {class="mt-1"}
-Une App financière rigoureuse emploie Decimal (décimal exact) pour esquiver les erreurs de virgule flottante (le vieux problème 0,1+0,2≠0,3). Pour un projet d'entraînement, Double suffit ; si un jour tu bâtis un vrai produit financier, pense à passer à Decimal ou à un « Int exprimé en centimes » — c'est un piège où d'innombrables aînés sont tombés.
+Une App financière rigoureuse emploie Decimal (décimal exact) pour esquiver les erreurs de virgule flottante (le vieux problème 0,1+0,2≠0,3). Pour un projet d'entraînement, Double suffit ; si un jour tu bâtis un vrai produit financier, pense à passer à Decimal ou à un « Int exprimé en centimes »: c'est un piège où d'innombrables aînés sont tombés.
 :::
 
 #### 3. MVVM : l'interface et la logique « font ménage à part »
@@ -74,7 +74,7 @@ Laisser l'interface manipuler directement la base ? Ça tourne, mais le code de 
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figure 4 : la structure à trois étages de MVVM — les données coulent dans un seul sens, aucune couche ne dépasse chez les autres
+Figure 4 : la structure à trois étages de MVVM, les données coulent dans un seul sens, aucune couche ne dépasse chez les autres
 :::
 
 ::: div .code-block
@@ -198,14 +198,14 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 ```
 :::
 
-#### 6. La recette : trois niveaux de contrôle + deux défis pour aller plus loin
+6. La recette : trois niveaux de contrôle + deux défis pour aller plus loin
 
 Projet fini ? Passe la recette sur trois niveaux « fonctionnel → limites → architecture » : peut-on enregistrer, supprimer, les données survivent-elles au redémarrage de l'App (fonctionnel) ; l'App plante-t-elle si on saisit 0 ou un montant négatif (limites) ; l'interface et les données sont-elles bien séparées, les champs sont-ils codés en dur (architecture).
 
 Une fois la recette de la version de base franchie, offre-toi deux « plats plus relevés » :
 
-1. Statistiques par catégorie : ajoute un onglet « Stats » et dessine les dépenses par catégorie en camembert / histogramme avec Swift Charts — la bibliothèque de graphiques officielle d'Apple produit un graphique en quelques lignes ;
-2. Synchronisation iCloud : activer la synchro iCloud de SwiftData demande à peine quelques réglages — le carnet se synchronise tout seul entre iPhone/iPad, et prend d'un coup des « allures haut de gamme ».
+1. Statistiques par catégorie : ajoute un onglet « Stats » et dessine les dépenses par catégorie en camembert / histogramme avec Swift Charts, la bibliothèque de graphiques officielle d'Apple produit un graphique en quelques lignes ;
+2. Synchronisation iCloud : activer la synchro iCloud de SwiftData demande à peine quelques réglages: le carnet se synchronise tout seul entre iPhone/iPad, et prend d'un coup des « allures haut de gamme ».
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

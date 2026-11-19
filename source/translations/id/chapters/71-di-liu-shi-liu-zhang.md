@@ -10,15 +10,15 @@ kind: chapter
 ### Bab 66: Proyek 2 — App Cek Cuaca (Versi Jaringan)
 
 {class="chapter-intro mb-4"}
-Buku catatan keuangan melatih "kungfu dasar", App cuaca "menambah wawasan" — ia harus bergaul dengan internet. Dari proyek ini kamu akan belajar: mengajukan API gratis, mengurai JSON, menangani tiga status antarmuka "memuat/berhasil/gagal", serta cara menyembunyikan kunci API dengan baik. Setelah menyelesaikannya, kamu memiliki kemampuan membuat "App online" apa pun — berita, nilai tukar, penerjemah; polanya persis sama.
+Buku catatan keuangan melatih "kungfu dasar", App cuaca "menambah wawasan" — ia harus bergaul dengan internet. Dari proyek ini kamu akan belajar: mengajukan API gratis, mengurai JSON, menangani tiga status antarmuka "memuat/berhasil/gagal", serta cara menyembunyikan kunci API dengan baik. Setelah menyelesaikannya, kamu memiliki kemampuan membuat "App online" apa pun, berita, nilai tukar, penerjemah; polanya persis sama.
 
 #### 1. Mengajukan API Cuaca Gratis
 
-Untuk latihan pribadi, direkomendasikan OpenWeatherMap atau QWeather (HeFeng Weather) asal Tiongkok — keduanya punya kuota gratis, langsung bisa dipakai setelah mendaftar. Contoh dengan OpenWeatherMap:
+Untuk latihan pribadi, direkomendasikan OpenWeatherMap atau QWeather (HeFeng Weather) asal Tiongkok, keduanya punya kuota gratis, langsung bisa dipakai setelah mendaftar. Contoh dengan OpenWeatherMap:
 
 1. Daftar akun → buat sebuah Key (apikey) di halaman API keys;
 2. Versi gratis dapat memanggil antarmuka Current Weather: api.openweathermap.org/data/2.5/weather? q=beijing&appid=KeyKamu&units=metric;
-3. Coba dulu sekali di browser untuk melihat seperti apa JSON yang dikembalikan — ini "persiapan" yang wajib sebelum menghubungkan API apa pun.
+3. Coba dulu sekali di browser untuk melihat seperti apa JSON yang dikembalikan: ini "persiapan" yang wajib sebelum menghubungkan API apa pun
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -106,7 +106,7 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 ```
 :::
 
-Pola tiga bagian loading/success/error ini adalah "templat serbaguna" antarmuka online — hafalkan dulu, nanti semua App online tinggal meniru polanya.
+Pola tiga bagian loading/success/error ini adalah "templat serbaguna" antarmuka online: hafalkan dulu, nanti semua App online tinggal meniru polanya.
 
 #### 4. Kode Antarmuka Praktis: Menggambar Cuaca
 
@@ -146,7 +146,7 @@ Beberapa detail kecil layak dipelajari: first? mengambil elemen pertama dengan a
 - Kolom pencarian: modifier .searchable di bagian atas memberi interaksi pencarian bawaan sistem; saat dikirim, panggil vm.search;
 - Kota favorit: simpan kota yang sering dilihat ke UserDefaults, otomatis dicari saat dibuka berikutnya;
 - Tarik untuk menyegarkan: .refreshable { await vm.search(...) } selesai dalam satu baris;
-- Ikon cuaca: gunakan Image(systemName:) dengan pemetaan berdasarkan deskripsi (sun.max / cloud.rain / snowflake), antarmuka langsung terasa hidup.
+- Ikon cuaca: gunakan Image(systemName:) dengan pemetaan berdasarkan deskripsi (sun.max / cloud.rain / snowflake), antarmuka langsung terasa hidup
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -160,13 +160,13 @@ Dukungan OpenWeatherMap untuk nama kota dalam bahasa Mandarin biasa-biasa saja; 
 {class="font-semibold"}
 Praktik: Daftar Periksa Penerimaan App Cuaca
 
-#### 6. Cara Debug Permintaan Jaringan: Print, Packet Sniffing, dan Simulasi Jaringan Lambat
+6. Cara Debug Permintaan Jaringan: Print, Packet Sniffing, dan Simulasi Jaringan Lambat
 
 Saat App online bermasalah, sembilan dari sepuluh kali penyebabnya "permintaan tidak dikirim dengan benar" atau "respons tidak diurai dengan benar". Tiga alat debug:
 
-1. Cetak data mentah: print String(data: data, encoding: .utf8) untuk melihat JSON mentah — nama field dan tipe terlihat sekilas jelas, sepuluh kali lebih cepat daripada menebak;
+1. Cetak data mentah: print String(data: data, encoding: .utf8) untuk melihat JSON mentah, nama field dan tipe terlihat sekilas jelas, sepuluh kali lebih cepat daripada menebak;
 2. Alat packet sniffing: Proxyman gratis di Mac / Charles open source dapat mencegat semua permintaan dan respons App, memperlihatkan lapisan jaringan sejelas foto rontgen;
-3. Simulasi jaringan lemah: menu simulator Features → Network Link Conditioner (alatnya perlu diunduh dari situs pengembang) dapat mensimulasikan 3G dan latensi tinggi — menguji keluhan pengalaman "loading berputar lama".
+3. Simulasi jaringan lemah: menu simulator Features.Network Link Conditioner (alatnya perlu diunduh dari situs pengembang) dapat mensimulasikan 3G dan latensi tinggi, menguji keluhan pengalaman "loading berputar lama"
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -177,7 +177,11 @@ Jika permintaan langsung error "App Transport Security" begitu dikirim, hampir p
 :::
 
 {class="mt-1"}
-① Pencarian cuaca berjalan normal; ② saat jaringan diputus, App menampilkan error dengan anggun tanpa crash (uji dengan mematikan jaringan Mac dari simulator!); ③ memasukkan kota yang tidak ada, muncul pesan yang ramah; ④ dua kota favorit tetap ada setelah App dimulai ulang; ⑤ antarmuka tidak menyilaukan di dark mode. Lima poin lulus semua, barulah proyek ini dinyatakan lulus.
+1. Pencarian cuaca berjalan normal;
+2. saat jaringan diputus, App menampilkan error dengan anggun tanpa crash (uji dengan mematikan jaringan Mac dari simulator!);
+3. memasukkan kota yang tidak ada, muncul pesan yang ramah;
+4. dua kota favorit tetap ada setelah App dimulai ulang;
+5. antarmuka tidak menyilaukan di dark mode. Lima poin lulus semua, barulah proyek ini dinyatakan lulus.
 :::
 
 ::: div .chapter-summary

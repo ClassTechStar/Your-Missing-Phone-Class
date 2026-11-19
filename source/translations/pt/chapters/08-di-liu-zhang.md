@@ -2,12 +2,12 @@
 id: di-liu-zhang
 num: 06
 part: ji-chu-pian
-nav: Capítulo 6: Proteja sua vida digital
+nav: Capítulo 6: Perdeu o celular? Esqueceu a senha?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 6: Proteja Sua Vida Digital — Segurança e Privacidade
+### Capítulo 6: Perdeu o celular? Esqueceu a senha?
 
 {class="chapter-intro mb-4"}
 Segurança do smartphone = Segurança da privacidade + Segurança patrimonial. Nesta era em que dados são ativos, proteger o telefone é proteger a si mesmo.
@@ -29,7 +29,7 @@ O bloqueio de tela é a primeira linha de defesa do seu telefone, e também a ma
 - Ative o reconhecimento biométrico.
 - Configure o tempo de bloqueio para "Imediato" ou o mais curto possível.
 
-#### II. "Buscar Meu Dispositivo": A Ferramenta Antifurto Definitiva
+II. "Buscar Meu Dispositivo": A Ferramenta Antifurto Definitiva
 
 <strong>Deve ser ativado!</strong> Ele permite:
 
@@ -73,7 +73,7 @@ A tecnologia de IA pode simular com precisão a voz e a entonação de atendente
 <i class="fas fa-chart-line mr-2"></i>③ Golpe de Investimento Financeiro com IA
 
 {class="mt-1"}
-Através de algoritmos de IA, forjam capturas de tela de ganhos falsos "garantidos", interfaces de software de seleção de ações virtuais ou relatórios de análise de investimentos "nível mestre". Usam altos retornos como isca para vender serviços de investimento caros ou induzir a vítima a transferir fundos para contas de negociação controladas por eles, <strong>e no final fogem com o dinheiro</strong>.
+Através de algoritmos de IA, forjam capturas de tela de ganhos falsos "garantidos", interfaces de software de seleção de ações virtuais ou relatórios de análise de investimentos "nível mestre". Usam altos retornos , como isca para vender serviços de investimento caros ou induzir a vítima a transferir fundos para contas de negociação controladas por eles, <strong>e no final fogem com o dinheiro</strong>.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -102,7 +102,7 @@ A IA pode clonar voz e rosto, mas não é invencível. Existem algumas falhas qu
 
 <strong>Não acredite, não divulgue, não clique, não transfira. Em caso de dúvida, verifique primeiro!</strong> Ao se deparar com uma "emergência", respire fundo por 5 minutos. Quase todos os golpes revelam suas falhas neste momento.
 
-#### V. Resistir ao "Doxing" e Ataques de Engenharia Social: Cortar a Cadeia de Vazamento de Privacidade
+V. Resistir ao "Doxing" e Ataques de Engenharia Social: Cortar a Cadeia de Vazamento de Privacidade
 
 O princípio central do "Doxing" (ataque de engenharia social) reside na <strong>coleta, análise e combinação sistemática de fragmentos digitais pessoais para construir um perfil pessoal completo</strong>. A chave para a prevenção está em estabelecer linhas vermelhas claras para a privacidade pessoal e construir um sistema de proteção em múltiplas camadas.
 
@@ -166,7 +166,7 @@ Se perder o telefone, não entre em pânico. Siga esta ordem:
 
 - <strong>Configure o PIN do SIM</strong>: Após ativar, toda vez que reiniciar o telefone ou trocar o chip, será necessário inserir o PIN, evitando que "tirem o chip e coloquem em outro telefone" para burlar o bloqueio de tela.
 - <strong>Vantagens do eSIM</strong>: Sem chip físico para ser removido, segurança maior. Também suporta múltiplos números simultaneamente, muito conveniente para viagens.
-- <strong>Risco de Troca Fraudulenta de SIM</strong>: Cuidado com o golpe de "segunda via do SIM pela operadora" — golpistas usam sua identidade para solicitar uma segunda via do SIM e assumir o controle do seu número. A defesa mais eficaz é configurar que "a segunda via do SIM exige a presença do titular com documento de identidade na loja física".
+- <strong>Risco de Troca Fraudulenta de SIM</strong>: Cuidado com o golpe de "segunda via do SIM pela operadora". Golpistas usam sua identidade para solicitar uma segunda via do SIM e assumir o controle do seu número. A defesa mais eficaz é configurar que "a segunda via do SIM exige a presença do titular com documento de identidade na loja física".
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -177,7 +177,7 @@ Se perder o telefone, não entre em pânico. Siga esta ordem:
 - Enviar códigos de verificação para qualquer pessoa (mesmo que digam ser "atendentes");
 - Clicar em links suspeitos em SMS, especialmente de números internacionais iniciados com 00;
 - Acessar internet banking ou pagamentos em Wi-Fi público;
-- Ativar "Compartilhamento de Tela" ou "Controle Remoto" para estranhos.
+- Ativar "Compartilhamento de Tela" ou "Controle Remoto" para estranhos
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

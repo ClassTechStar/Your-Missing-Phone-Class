@@ -37,8 +37,8 @@ Kemajuan utama 2024-2026: Hayat engsel umumnya diberi nilai 500,000 kali lipat (
 
 1. <strong>Mereka yang suka mencipta dalam "mod tergantung"</strong>:Lipat hingga 90 darjah dan letakkan di atas meja, skrin atas mengambil bidang skrin bawah menekan shutter (swafoto/lukisan masa), skrin atas video skrin bawah mencatat nota, skrin atas siaran langsung skrin bawah membaca komen — ini adalah bentuk yang telefon bar tidak boleh lakukan.
 2. <strong>Pengguna wanita yang mahukan mudah alih tetapi skrin besar</strong>:Skrin lipatan menegak dilipat boleh dimasukkan ke dalam beg kecil, dibuka menjadi telefon biasa, skrin luar juga boleh dijadikan cermin mekap, melihat pemberitahuan.
-3. <strong>Kumpulan ini jangan beli</strong> Telefon hanya digunakan untuk menatal video pendek, bersembang di WeChat, membuat panggilan — skrin lipat tiada manfaat untuk anda, sebaliknya lebih berat dan tebal.
-4. <strong>Tangan kecil atau mempunyai tendinitis pergelangan tangan — skrin lipatan melintang selepas dibuka secara amnya 230g+, pegangan satu tangan penat.</strong> Bajet ketat, satu telefon hendak digunakan lebih 4 tahun — nilai jual semula skrin lipat lebih rendah daripada telefon bar, kos pembaikan tinggi.
+3. <strong>Kumpulan ini jangan beli</strong> Telefon hanya digunakan untuk menatal video pendek, bersembang di WeChat, membuat panggilan, skrin lipat tiada manfaat untuk anda, sebaliknya lebih berat dan tebal.
+4. <strong>Tangan kecil atau mempunyai tendinitis pergelangan tangan: skrin lipatan melintang selepas dibuka secara amnya 230g+, pegangan satu tangan penat.</strong> Bajet ketat, satu telefon hendak digunakan lebih 4 tahun, nilai jual semula skrin lipat lebih rendah daripada telefon bar, kos pembaikan tinggi.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -47,7 +47,7 @@ Kemajuan utama 2024-2026: Hayat engsel umumnya diberi nilai 500,000 kali lipat (
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Jangan terpedaya oleh perkataan "lipat", fokuskan semasa membeli:
 - Jenis engsel
-- :Engsel titisan air (kedutan cetek, hayat panjang, semasa ini utama) lebih baik daripada engsel bentuk U (kedutan dalam, skim awal). Tanya jurujual atau semak ulasan untuk mengesahkan jenis mana.
+- :Engsel titisan air (kedutan cetek, hayat panjang, semasa ini utama) lebih baik daripada engsel bentuk U (kedutan dalam, skim awal). Tanya jurujual atau semak ulasan untuk mengesahkan jenis mana
 :::
 
 #### 3. Perkara utama memilih: Lihat 6 indikator ini
@@ -66,11 +66,11 @@ Kemajuan utama 2024-2026: Hayat engsel umumnya diberi nilai 500,000 kali lipat (
 <i class="fas fa-hands mr-2"></i>Cuba mod tergantung: lipat 90 darjah letak di atas meja, cuba ambil foto dan tonton video.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. Tanya dengan jelas harga pembaikan skrin dalaman berasingan dan polisi waranti.
+1. Tanya dengan jelas harga pembaikan skrin dalaman berasingan dan polisi waranti
 2. Empat, Tip penggunaan unik skrin lipat
 3. Selepas membeli, cara penggunaan ini tidak boleh dialami oleh telefon bar:
 4. 1. Skrin berpisah dan multitugasan
-5. Selepas skrin lipatan melintang dibuka, kebanyakan sistem menyokong pembahagian skrin atas/bawah atau kiri/kanan. Senario tipikal: skrin atas menonton video kelas dalam talian, skrin bawah mencatat nota; kiri WeChat kanan dokumen; atas navigasi peta bawah muzik. Lebih praktikal daripada pembahagian skrin telefon bar, kerana skrin cukup besar, setiap separuh tidak sesak.
+5. Selepas skrin lipatan melintang dibuka, kebanyakan sistem menyokong pembahagian skrin atas/bawah atau kiri/kanan. Senario tipikal: skrin atas menonton video kelas dalam talian, skrin bawah mencatat nota; kiri WeChat kanan dokumen; atas navigasi peta bawah muzik. Lebih praktikal daripada pembahagian skrin telefon bar, kerana skrin cukup besar, setiap separuh tidak sesak
 :::
 
 #### 4. Tip penggunaan khas skrin lipat
@@ -107,8 +107,8 @@ Bahagian paling sensitif skrin lipat adalah skrin dalaman dan engsel, kebiasaan 
 - <strong>Jangan tampal filem kaca tempera biasa</strong>:Skrin dalaman hanya boleh menggunakan filem pelindung rasmi atau filem pelindung UTG, filem kaca tempera biasa akan menjejaskan pelipatan dan sentuhan. Cadangkan pergi ke servis rasmi untuk menampal filem.
 - <strong>Engsel jangan masuk habuk cecair</strong>:Walaupun kebanyakan dinyatakan kalis air IPX8, tetapi gred kalis habuk secara amnya rendah. Pantai, tapak pembinaan dan persekitaran lain perlu berhati-hati.
 - <strong>Kuasa buka-tutup sekata</strong>:Jangan buka secara kasar satu tangan, buka dengan kedua-dua tangan dari tengah secara sekata paling stabil.
-- <strong>Senario kekerapan kerosakan skrin dalaman</strong> Mengepit kabel fon telinga/kabel pengecasan semasa dilipat — terus meretakkan skrin dalaman.
-- <strong>Dimasukkan dalam beg bersama dengan kunci — skrin luar tidak apa, skrin dalaman dihentam kunci sehingga retak.</strong> Masuk dari kawasan sejuk ke bilik hangat pada musim sejuk lalu terus buka-tutup — perubahan suhu menyebabkan perubahan tekanan kaca.
+- <strong>Senario kekerapan kerosakan skrin dalaman</strong> Mengepit kabel fon telinga/kabel pengecasan semasa dilipat: terus meretakkan skrin dalaman.
+- <strong>Dimasukkan dalam beg bersama dengan kunci: skrin luar tidak apa, skrin dalaman dihentam kunci sehingga retak.</strong> Masuk dari kawasan sejuk ke bilik hangat pada musim sejuk lalu terus buka-tutup — perubahan suhu menyebabkan perubahan tekanan kaca.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -118,7 +118,7 @@ Bahagian paling sensitif skrin lipat adalah skrin dalaman dan engsel, kebiasaan 
 - Enam, "Perangkap" skrin lipat dan jangkaan mental
 - Sebelum membeli, anda perlu ada perhitungan ini:
 - Kedutan akan sentiasa ada
-- :Teknologi 2025 tidak mampu "tiada kedutan langsung", hanya mampu "skrin menyala dari hadapan hampir tidak kelihatan". Jika anda seorang perfeksionis, setiap hari rasa tidak selesa melihat kedutan, jangan beli.
+- :Teknologi 2025 tidak mampu "tiada kedutan langsung", hanya mampu "skrin menyala dari hadapan hampir tidak kelihatan". Jika anda seorang perfeksionis, setiap hari rasa tidak selesa melihat kedutan, jangan beli
 :::
 
 #### 6. "Perangkap" skrin lipat dan jangkaan realistik
@@ -129,8 +129,8 @@ Bahagian paling sensitif skrin lipat adalah skrin dalaman dan engsel, kebiasaan 
 - <strong>Nilai jual semula rendah</strong>:Selepas setahun harga jual semula biasanya 50-60% daripada telefon baharu, jatuh lebih cepat daripada telefon bar.
 - <strong>Pembaikan mahal</strong>:Harga pembaikan himpunan skrin dalaman 2,000-4,000 yuan, pembaikan engsel 500-1,500 yuan. Sebelum membeli semak polisi waranti dengan jelas.
 - <strong>Penyesuaian App tidak sekata</strong>:App utama sudah menyesuaikan skrin besar, tetapi App niche mungkin hanya "regangan pembesaran", pengalaman biasa-biasa saja.
-- <strong>Skrin lipat bukan "telefon yang lebih baik", tetapi "telefon dalam bentuk lain". Beli ia kerana anda memerlukan bentuknya yang unik, bukan kerana ia "lebih maju".</strong>—— Tentang falsafah pembelian skrin lipat
-- <strong>Tujuh, Bagaimana memilih jenama utama (2025)</strong> Tidak menulis model khusus (akan lapuk), hanya menulis ciri jenama, membantu anda menempatkan diri dengan cepat:
+- <strong>Skrin lipat bukan "telefon yang lebih baik", tetapi "telefon dalam bentuk lain". Beli ia kerana anda memerlukan bentuknya yang unik, bukan kerana ia "lebih maju".</strong>—, Tentang falsafah pembelian skrin lipat.
+- <strong>Tujuh, Bagaimana memilih jenama utama (2025)</strong> Tidak menulis model khusus (akan lapuk), hanya menulis ciri jenama, membantu anda menempatkan diri dengan cepat:.
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -148,7 +148,7 @@ Bahagian paling sensitif skrin lipat adalah skrin dalaman dan engsel, kebiasaan 
 - <strong>Siri vivo X Fold</strong>:Nisbah skrin luar dan dalaman dalam lipatan melintang paling hampir dengan telefon biasa, dilipat digunakan sebagai telefon bar pengalaman baik.
 - <strong>Siri OPPO Find N</strong>:Saiz lebih padat dalam lipatan melintang, boleh dipegang satu tangan, sesuai untuk pengguna yang rasa lipatan besar terlalu berat.
 - <strong>Siri Huawei Pocket</strong>:Skrin luar terbesar dan paling praktikal dalam lipatan menegak, cermin mekap, pengesan UV, dan fungsi khusus wanita dibuat dengan terperinci.
-- <strong>Cadangan pembelian: Bajet mencukupi mengejar ekosistem pilih Huawei Mate X; mahu engsel paling matang pilih Samsung Z Fold; nisbah harga pilihan utama Xiaomi/vivo; lipatan menegak lihat Huawei Pocket dan Samsung Z Flip.</strong> Peringatan terakhir
+- <strong>Cadangan pembelian: Bajet mencukupi mengejar ekosistem pilih Huawei Mate X; mahu engsel paling matang pilih Samsung Z Fold; nisbah harga pilihan utama Xiaomi/vivo; lipatan menegak lihat Huawei Pocket dan Samsung Z Flip.</strong> Peringatan terakhir.
 - <strong>Teknologi skrin lipat berulang setiap tahun, lampiran ini ditulis pada 2025. Sebelum membeli pastikan semak ulasan terbaharu dan maklum balas pengguna, fokus pada: ujian hayat engsel sebenar, prestasi kedutan, polisi pembaikan skrin dalaman tiga perkara ini. Meraba sendiri di kedai fizikal selalu lebih penting daripada menonton ulasan.</strong> Bacaan terakhir: ...
 
 Terus membaca

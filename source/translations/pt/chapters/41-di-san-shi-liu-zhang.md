@@ -2,12 +2,12 @@
 id: di-san-shi-liu-zhang
 num: 36
 part: er-tong-pian
-nav: Capítulo 36: Celular e casa inteligente — deixando a casa mais esperta
+nav: Capítulo 36: Como conectar todos os aparelhos de casa
 toc: default
 kind: chapter
 ---
 
-### Capítulo 36: Celular e casa inteligente — torne a casa esperta
+### Capítulo 36: Como conectar todos os aparelhos de casa
 
 {class="chapter-intro mb-4"}
 O celular tem mais uma função cada vez mais importante: ser o "controle remoto" da casa. De uma lâmpada a uma tomada e uma fechadura, a casa inteligente deixou de ser brinquedo de entusiasta. Este capítulo organiza protocolos, ecossistemas, hub e kits de entrada e encerra com uma lista de segurança para o "inteligente" não virar contra você.
@@ -27,7 +27,7 @@ Antes de comprar, veja o protocolo: ele define se o aparelho obedece ao seu celu
 Princípio em uma frase
 
 {class="mt-1"}
-Em 2026, prefira aparelhos com selo "Matter over Thread" — a escolha mais à prova de tempo. Os antigos que só têm Wi-Fi ou Bluetooth não precisam ser descartados agora; use-os e migre para Matter nas próximas compras.
+Em 2026, prefira aparelhos com selo "Matter over Thread": a escolha mais à prova de tempo. Os antigos que só têm Wi-Fi ou Bluetooth não precisam ser descartados agora; use-os e migre para Matter nas próximas compras.
 :::
 
 #### 2. Comparação dos três grandes ecossistemas
@@ -91,7 +91,7 @@ Na maioria dos casos iniciantes, o celular é o seu hub: controla luzes, ar, cor
 Teste: monte o "Modo Chegada"
 
 {class="mt-1"}
-No app de casa inteligente, crie uma automação: gatilho "chegar a um local" (casa), ações "acender luz da entrada", "ar a 26 °C", "fechar cortinas". Salve, saia e volte para ver a luz acender sozinha — a sensação de sucesso na primeira vez é melhor do que comprar aparelho novo.
+No app de casa inteligente, crie uma automação: gatilho "chegar a um local" (casa), ações "acender luz da entrada", "ar a 26 °C", "fechar cortinas". Salve, saia e volte para ver a luz acender sozinha: a sensação de sucesso na primeira vez é melhor do que comprar aparelho novo.
 :::
 
 #### 4. Kit de entrada recomendado
@@ -108,7 +108,7 @@ Não é preciso tudo de uma vez; com estas quatro peças você cobre uns 80% do 
 Ordem de compra sugerida
 
 {class="mt-1"}
-Primeiro a caixa de som (define o ecossistema) → depois lâmpada e tomada (fáceis e com retorno imediato) → por fim fechadura e câmeras (envolvem segurança, escolha com cuidado). Adicione um tipo de cada vez e evite "comprei e não sei usar".
+Primeiro a caixa de som, (define o ecossistema) → depois lâmpada e tomada (fáceis e com retorno imediato) → por fim fechadura e câmeras (envolvem segurança, escolha com cuidado). Adicione um tipo de cada vez e evite "comprei e não sei usar".
 :::
 
 #### 5. Cuidados de segurança
@@ -125,8 +125,8 @@ Quanto mais aparelhos, maior a superfície de ataque. Estas quatro regras são o
 Armadilhas a evitar
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Não use "abrir a porta remotamente" para estranhos — prefira senha temporária que expira.
-- Não aponte a cama ou a janela — quem vaza a sua privacidade é você.
+- Não use "abrir a porta remotamente" para estranhos: prefira senha temporária que expira.
+- Não aponte a cama ou a janela, quem vaza a sua privacidade é você.
 - Não compre aparelhos genéricos sem marca só por serem baratos — costumam não receber atualizações e viram uma porta dos fundos em casa.
 :::
 

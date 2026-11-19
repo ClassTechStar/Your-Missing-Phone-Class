@@ -21,7 +21,7 @@ Un ejemplo: estás viendo un video en el móvil y quieres verlo en pantalla gran
 
 #### 2. HarmonyOS 4.3: versión madura basada en AOSP
 
-HarmonyOS 4.3 es la versión ampliamente desplegada actualmente en móviles Huawei. Cabe señalar que HarmonyOS 4.3 es compatible con el marco de código del proyecto de código abierto Android (AOSP), por lo que puede ser totalmente compatible con aplicaciones Android—la mayoría de las Apps que descargas de la AppGallery de Huawei son esencialmente aplicaciones Android, ejecutadas a través de la capa de compatibilidad de HarmonyOS. Pero HarmonyOS 4.3 no es simplemente un Android recubierto, sobre AOSP añade muchas capacidades distribuidas auto-desarrolladas por Huawei, el motor Ark, etc.
+HarmonyOS 4.3 es la versión ampliamente desplegada actualmente en móviles Huawei. Cabe señalar que HarmonyOS 4.3 es compatible con el marco de código del proyecto de código abierto Android (AOSP), por lo que puede ser totalmente compatible con aplicaciones Android,la mayoría de las Apps que descargas de la AppGallery de Huawei son esencialmente aplicaciones Android, ejecutadas a través de la capa de compatibilidad de HarmonyOS. Pero HarmonyOS 4.3 no es simplemente un Android recubierto, sobre AOSP añade muchas capacidades distribuidas auto-desarrolladas por Huawei, el motor Ark, etc.
 
 ##### Características principales:
 
@@ -39,16 +39,16 @@ HarmonyOS 4.3 es la versión ampliamente desplegada actualmente en móviles Huaw
 - <strong>Supertérmino de transferencia</strong>: un área de almacenamiento temporal, puedes guardar texto, imágenes, archivos y luego arrastrarlos a cualquier App. Compartir entre aplicaciones se vuelve súper fluido.
 - <strong>Búsqueda inteligente</strong>: búsqueda global, puede buscar aplicaciones, archivos, ajustes, páginas web.
 
-#### 3. HarmonyOS NEXT (HarmonyOS 6): el verdadero punto de partida del sistema operativo autónomo de Huawei
+3. HarmonyOS NEXT (HarmonyOS 6): el verdadero punto de partida del sistema operativo autónomo de Huawei
 
-HarmonyOS NEXT (HarmonyOS NEXT 5.0) tiene una diferencia fundamental con HarmonyOS 4.3—adopta el microkernel HarmonyOS auto-desarrollado por Huawei, ya no depende del kernel Linux ni del código AOSP, y <strong>ya no soporta directamente aplicaciones Android</strong>. Este es el paso clave de HarmonyOS de "forma tránsitoria compatible con Android" a "sistema operativo completamente independiente".
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) tiene una diferencia fundamental con HarmonyOS 4.3,adopta el microkernel HarmonyOS auto-desarrollado por Huawei, ya no depende del kernel Linux ni del código AOSP, y <strong>ya no soporta directamente aplicaciones Android</strong>. Este es el paso clave de HarmonyOS de "forma tránsitoria compatible con Android" a "sistema operativo completamente independiente".
 
 ##### Cambios importantes:
 
 - <strong>Kernel completamente autónomo</strong>: HarmonyOS NEXT usa el kernel auto-desarrollado por Huawei, ya no contiene código AOSP. Sistema más ligero, más seguro, más eficiente.
 - <strong>Ya no soporta aplicaciones Android</strong>: este es el mayor cambio. HarmonyOS NEXT solo puede ejecutar aplicaciones nativas de HarmonyOS, no puede instalar ni ejecutar archivos APK. Antes de actualizar, confirma que tus Apps habituales ya tienen versión nativa de HarmonyOS.
 - <strong>Ecosistema de aplicaciones nativas</strong>: Huawei está impulsando a los desarrolladores a migrar aplicaciones a la plataforma nativa de HarmonyOS. Actualmente las Apps principales como WeChat, Alipay, Taobao ya tienen versión nativa de HarmonyOS, pero algunas aplicaciones de nicho pueden no estar adaptadas.
-- <strong>Arquitectura de seguridad XingDun</strong>: nuevo sistema de seguridad, protección de cadena completa de hardware a software. Soporta control de permisos más fino, como "ubicación borrosa"—la aplicación solo puede saber aproximadamente dónde estás, no la posición precisa.
+- <strong>Arquitectura de seguridad XingDun</strong>: nuevo sistema de seguridad, protección de cadena completa de hardware a software. Soporta control de permisos más fino, como "ubicación borrosa",la aplicación solo puede saber aproximadamente dónde estás, no la posición precisa.
 - <strong>Integración profunda de IA</strong>: capacidad de IA a nivel de sistema, no solo una App con IA. Por ejemplo, los subtítulos con IA pueden traducir video en tiempo real, el recorte con IA puede identificar inteligentemente el sujeto.
 - <strong>Transferencia sin fisuras entre dispositivos</strong>: capacidad distribuida aún mayor. El estado de la aplicación puede cambiar sin fisuras entre dispositivos, el documento que editas en el móvil se abre automáticamente en el ordenador al acercarte.
 - <strong>Meta-servicios</strong>: servicios ligeros usables sin instalar. Por ejemplo, escanear un código QR abre directamente una función, sin descargar primero una App.

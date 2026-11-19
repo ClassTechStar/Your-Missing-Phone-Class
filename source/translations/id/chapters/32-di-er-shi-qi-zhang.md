@@ -2,23 +2,23 @@
 id: di-er-shi-qi-zhang
 num: 27
 part: shi-zhan-pian
-nav: Bab 27: Orang Tua Pun Mudah Menggunakannya—Panduan Ponsel Ramah Lansia
+nav: Bab 27: Setel ponsel untuk orang tua
 toc: default
 kind: chapter
 ---
 
-### Bab 27: Orang Tua Juga Bisa Pakai dengan Mudah — Panduan Lengkap Ponsel Ramah Lansia
+### Bab 27: Setel ponsel untuk orang tua
 
 {class="chapter-intro mb-4"}
-Jujur, saat menulis bab ini, saya teringat orang tua saya. Ibu saya setiap kali ponsel memunculkan "update sistem", tidak berani klik, takut merusak ponsel. Font WeChat ayah saya lebih kecil dari semut, tapi tidak tahu cara memperbesarnya, jadi dia mencongkai mata selama dua tahun. Ini bukan mereka "bodoh", tapi ponsel secara default memperlakukan semua orang seperti anak muda usia dua puluhan. Bab ini, dengan kata paling lugas, memecahkan satu per satu masalah ponsel yang paling membuat pusing para lansia.
+Jujur, saat menulis bab ini, saya teringat orang tua saya. Ibu saya setiap kali ponsel memunculkan "update sistem", tidak berani klik, takut merusak ponsel. Font WeChat ayah saya lebih kecil dari semut. tapi tidak tahu cara memperbesarnya, jadi dia mencongkai mata selama dua tahun. Ini bukan mereka "bodoh", tapi ponsel secara default memperlakukan semua orang seperti anak muda usia dua puluhan. Bab ini, dengan kata paling lugas, memecahkan satu per satu masalah ponsel yang paling membuat pusing para lansia.
 
-#### 0. Perbaiki Sudut Pandang: Bukan "Lansia Tidak Bisa", tapi "Ponsel Tidak Dirancang dengan Baik"
+0. Perbaiki Sudut Pandang: Bukan "Lansia Tidak Bisa", tapi "Ponsel Tidak Dirancang dengan Baik"
 
 Sebelum melakukan pengaturan apa pun, satu konsep harus ditegaskan:<strong>Antarmuka ponsel pintar saat ini, sejak awal desain tidak terlalu mempertimbangkan pengguna lansia</strong>. Popup terlalu kecil untuk dilihat, gestur operasi butuh sentuhan presisi, ikon terlihat mirip semua — ini bukan masalah pengguna, tapi masalah produk. Jadi membantu lansia menggunakan ponsel, hal pertama bukan mengajari, tapi membantu mereka <strong>mengatur lingkungan</strong>. Lingkungan diatur dengan baik, lebih dari separuh masalah hilang.
 
-Tiga aturan besi membantu lansia dengan ponsel: ① <strong>Jangan terburu</strong>— Anda sudah 10 tahun pakai ponsel pintar, mereka mungkin baru 3 bulan. ② <strong>Gunakan analogi</strong>— "Wi-Fi seperti pipa air di rumah, buka keran baru ada air", analogi seperti ini 10 ribu kali lebih mudah dipahami daripada istilah teknis. ③ <strong>Tuliskan</strong>— mengajar lisan sekali mungkin lupa, ambil selembar kertas tulis langkah kunci tempel di belakang case ponsel mereka, lebih manjur dari apa pun.
+Tiga aturan besi membantu lansia dengan ponsel: ① <strong>Jangan terburu</strong>— Anda sudah 10 tahun pakai ponsel pintar, mereka mungkin baru 3 bulan. ② <strong>Gunakan analogi</strong>— "Wi-Fi seperti pipa air di rumah, buka keran baru ada air". analogi seperti ini 10 ribu kali lebih mudah dipahami daripada istilah teknis. ③ <strong>Tuliskan</strong>— mengajar lisan sekali mungkin lupa, ambil selembar kertas tulis langkah kunci tempel di belakang case ponsel mereka, lebih manjur dari apa pun.
 
-#### 1. Langkah Pertama: Aktifkan "Mode Sederhana" — Ponsel Jadi Lebih Bersih
+1. Langkah Pertama: Aktifkan "Mode Sederhana" — Ponsel Jadi Lebih Bersih
 
 Ponsel sekarang pada dasarnya memiliki "Mode Sederhana" bawaan (ada yang disebut "Mode Peduli" "Mode Lansia" "Mode Orang Tua"), setelah diaktifkan, seluruh ponsel akan berubah drastis:
 
@@ -53,7 +53,7 @@ Ponsel sekarang pada dasarnya memiliki "Mode Sederhana" bawaan (ada yang disebut
 
 Jika merek lain, di kotak pencarian bagian atas "Pengaturan" ponsel langsung cari kata "sederhana" atau "lansia", biasanya bisa ditemukan. Jika tidak ketemu, ikuti skema "atur manual" di bawah ini satu per satu, efeknya sama.
 
-#### 2. Jika Tidak Aktifkan Mode Sederhana, Atur Manual Juga Bisa — 5 Langkah "Font Besar + Ikon Besar"
+2. Jika Tidak Aktifkan Mode Sederhana, Atur Manual Juga Bisa — 5 Langkah "Font Besar + Ikon Besar"
 
 Sebagian lansia tidak mau pakai Mode Sederhana, merasa antarmukanya terlalu "kuno". Maka atur manual lima item berikut, efeknya sama baiknya:
 
@@ -107,7 +107,7 @@ Lansia adalah korban utama penipuan telekomunikasi. Bukan karena kewaspadaan mer
 - ❤ <strong>Hal yang ragu, telepon anak dulu untuk tanya.</strong>
 :::
 
-#### 4. Bantuan Jarak Jauh — Anda di Luar Kota Juga Bisa Bantu Orang Tua Memperbaiki Ponsel
+4. Bantuan Jarak Jauh — Anda di Luar Kota Juga Bisa Bantu Orang Tua Memperbaiki Ponsel
 
 Kadang masalah yang dihadapi lansia, Anda menjelaskan di telepon setengah hari mereka juga tidak menemukan tombol yang dimaksud. Saat itu fitur "bantuan jarak jauh" berguna — Anda bisa langsung melihat layar ponsel mereka di ponsel sendiri, membantu mengoperasikan. Skema setiap merek berbeda:
 
@@ -115,15 +115,15 @@ Kadang masalah yang dihadapi lansia, Anda menjelaskan di telepon setengah hari m
 - <strong>Xiaomi/Redmi</strong>: App video call Xiaomi punya "Remote Assistance", mendukung screen share + voice call sinkron.
 - <strong>: Sebagian model dapat di-unlock, perlu pengajuan.</strong>: bawaan "Family Space" atau "Remote Guardian", cari "remote" di pengaturan untuk menemukan.
 - <strong>Skema universal (semua merek bisa pakai)</strong>: download App "Sunlogin Remote Control" (versi gratis cukup), masing-masing install. Registrasi akun yang sama atau add friend, minta orang tua membacakan kode verifikasi yang tampil di ponsel, Anda bisa remotely melihat dan mengoperasikan layar mereka.
-- <strong>: Fitur pemindaian bawaan iOS Notes sudah sangat baik. Buka Notes → ketuk ikon kamera → pilih "Scan Documents", arahkan ke dokumen ia akan otomatis mengenali bingkai dan mengoreksi perspektif. Setelah difoto bisa menyesuaikan warna—pilih mode "Black &amp; White" hasilnya paling mendekati pemindai, "Grayscale" cocok untuk dokumen bergambar.</strong>: FaceTime call mendukung "Share Screen". Saat FaceTime call, klik tombol share screen, lawan bisa melihat layar Anda. Tapi batasan keamanan iOS tidak bisa remote operasi, hanya "pengajaran dengan instruksi".
+- <strong>: Fitur pemindaian bawaan iOS Notes sudah sangat baik. Buka Notes → ketuk ikon kamera → pilih "Scan Documents", arahkan ke dokumen ia akan otomatis mengenali bingkai dan mengoreksi perspektif. Setelah difoto bisa menyesuaikan warna,pilih mode "Black &amp; White" hasilnya paling mendekati pemindai, "Grayscale" cocok untuk dokumen bergambar.</strong>: FaceTime call mendukung "Share Screen". Saat FaceTime call, klik tombol share screen, lawan bisa melihat layar Anda. Tapi batasan keamanan iOS tidak bisa remote operasi, hanya "pengajaran dengan instruksi".
 
-#### 5. "Modifikasi Ramah Lansia" WeChat — Cukup Bilang Ini kepada Orang Tua
+5. "Modifikasi Ramah Lansia" WeChat — Cukup Bilang Ini kepada Orang Tua
 
 WeChat adalah App yang paling sering dipakai lansia, tapi antarmukanya terlalu padat dan rumit. Berikut beberapa penyesuaian yang langsung terasa efeknya:
 
 - <strong>Perbesar font WeChat sendiri</strong>: WeChat &gt; Saya &gt; Pengaturan &gt; Umum &gt; Ukuran Font, tarik ke maksimum. Catatan, ini hanya memengaruhi font internal WeChat, tidak memengaruhi font sistem ponsel.
 - <strong>Aktifkan "Mode Peduli"</strong>: WeChat &gt; Saya &gt; Pengaturan &gt; Mode Peduli &gt; Aktifkan. Setelah aktif font dan tombol semua membesar, kontras warna diperkuat, juga bisa sekali klik "bacakan pesan teks" (klik sekali pesan teks langsung dibacakan).
-- <strong>Bantu mereka memberi catatan kontak penting</strong>: ubah nama anak, kerabat di kontak menjadi mudah dikenali — misalnya "Anak Sulung - Xiao Ming" "Anak Perempuan Kedua - Xiao Hong", agar mereka begitu buka WeChat langsung tahu siapa siapa.
+- <strong>Bantu mereka memberi catatan kontak penting</strong>: ubah nama anak, kerabat di kontak menjadi mudah dikenali: misalnya "Anak Sulung - Xiao Ming" "Anak Perempuan Kedua - Xiao Hong", agar mereka begitu buka WeChat langsung tahu siapa siapa.
 - <strong>Ajari mereka pakai "input suara" bukan mengetik</strong>: di keyboard di sebelah kotak chat, tahan tombol spasi (Android) atau klik ikon mikrofon (iPhone), langsung bicara bisa berubah jadi teks dikirim. Akurasi pengenalan sudah sangat tinggi, bagi lansia yang tidak bisa pinyin mengetik ini adalah kemudahan "kualitatif".
 - <strong>Matikan fitur di "Halaman Discover" yang tidak dipakai</strong>: WeChat &gt; Saya &gt; Pengaturan &gt; Umum &gt; Manajemen Halaman Discover, matikan "Moments" "Video Channel" "Live" "Shopping" "Game" yang tidak dipakai, kurangi gangguan.
 
@@ -135,7 +135,7 @@ Siapkan sebelum kejadian. Selagi ponsel belum hilang, lakukan beberapa hal ini t
 2. <strong>Catat kata sandi dan akun penting di selembar kertas</strong>: kata sandi Apple ID / akun Huawei / akun Xiaomi, kunci di laci rumah satu salinan, berikan satu salinan ke anak yang dipercaya. Setelah ponsel hilang perlu login akun ini untuk lock dan lacak jarak jauh, jika lupa kata sandi akan merepotkan.
 3. <strong>Ajari lansia satu kalimat</strong>:<strong>"Ponsel hilang, pertama telepon keluarga."</strong> Keluarga bisa langsung login iCloud atau web find device Android, menandai sebagai "Lost Mode" jarak jauh, sehingga yang menemukan tidak bisa membuka, tidak bisa memakai.
 
-#### 7. Kompatibilitas Earphone Nirkabel dan Alat Bantu Dengar — Fitur Bagus yang Terabaikan
+7. Kompatibilitas Earphone Nirkabel dan Alat Bantu Dengar — Fitur Bagus yang Terabaikan
 
 Banyak lansia punya masalah pendengaran, tapi tidak tahu ponsel bisa bekerja sama dengan alat bantu dengar. iPhone dan sebagian ponsel Android mendukung alat bantu dengar MFi (Made for iPhone), bisa langsung mentransmisikan suara panggilan ke alat bantu dengar, jauh lebih jelas daripada memegang ponsel ke telinga.
 
@@ -143,9 +143,9 @@ Banyak lansia punya masalah pendengaran, tapi tidak tahu ponsel bisa bekerja sam
 - <strong>Jika tidak pakai alat bantu dengar</strong>: di "Aksesibilitas &gt; Audio/Visual" aktifkan "Phone Noise Cancellation" dan "Mono Audio", bisa meningkatkan kejelasan panggilan.
 - <strong>Android</strong>: di "Aksesibilitas &gt; Hearing Enhancement" ada pengaturan serupa, posisi setiap merek sedikit berbeda, langsung cari kata "hearing".
 
-#### 8. Fitur Terkait Kesehatan — Ponsel Bukan Sekadar Alat Komunikasi
+8. Fitur Terkait Kesehatan — Ponsel Bukan Sekadar Alat Komunikasi
 
-- <strong>Bantuan SOS Darurat</strong>: tekan tombol power lima kali berturut-turut (sebagian besar ponsel), ponsel akan otomatis menelpon nomor darurat dan mengirim lokasi ke kontak darurat yang telah disetel. Bantu lansia menyiapkan sebelumnya — iPhone: "Pengaturan &gt; Emergency SOS", Android: "Pengaturan &gt; Keamanan &gt; Emergency SOS". Sebelum mengajari lansia, latih sekali dulu, agar tidak gugup saat dibutuhkan.
+- <strong>Bantuan SOS Darurat</strong>: tekan tombol power lima kali berturut-turut (sebagian besar ponsel), ponsel akan otomatis menelpon nomor darurat dan mengirim lokasi ke kontak darurat yang telah disetel. Bantu lansia menyiapkan sebelumnya, iPhone: "Pengaturan &gt; Emergency SOS", Android: "Pengaturan &gt; Keamanan &gt; Emergency SOS". Sebelum mengajari lansia, latih sekali dulu, agar tidak gugup saat dibutuhkan.
 - <strong>Deteksi jatuh</strong>: Apple Watch punya fitur ini, jika mendeteksi Anda jatuh dan tidak bergerak selama beberapa saat, akan otomatis menelpon nomor darurat dan memberitahu keluarga. Jika ada budget belikan untuk lansia, bisa menyelamatkan di momen kritis.
 - <strong>Pengingat minum obat</strong>: App "Health" iPhone punya fitur pengingat obat bawaan, setel nama obat, waktu dan dosis, saat tiba waktunya muncul reminder. Android bisa pakai "alarm" atau download App "pengingat minum obat".
 

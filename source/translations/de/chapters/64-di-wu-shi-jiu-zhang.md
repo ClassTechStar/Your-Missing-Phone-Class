@@ -27,14 +27,14 @@ Auch das System selbst entwickelte sich weiter: Zuerst hieß es iPhone OS, 2010 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Die großen Momente der iOS-Entwicklung (Stand August 2026)
 
-#### 2. Der Walled Garden: „Regeln“ und „Dividenden“ des Apple-Ökosystems
+2. Der Walled Garden: „Regeln“ und „Dividenden“ des Apple-Ökosystems
 
 Das Apple-Ökosystem wird oft als „Walled Garden“ (ummauerter Garten) beschrieben – viele Regeln, strenge Kontrolle: Apps müssen geprüft werden, bevor sie in den Store kommen, Entwicklung läuft nur mit Mac und Xcode, der Vertrieb läuft hauptsächlich über den App Store. Klingt beengend? Für Entwickler bringt dieses Regelwerk aber handfeste, geldwerte Vorteile:
 
 - Kaum Gerätefragmentierung: Es gibt nur eine Handvoll iPhone-Modelle, Bildschirmgrößen und Systemversionen sind hochgradig einheitlich – passt du 5 Modelle an, erreichst du 95 % der Nutzer (bei Android wären es womöglich Dutzende);
 - Sehr hohe Update-Quote: Innerhalb weniger Wochen nach einem Release haben 70–80 % der Nutzer aktualisiert; neue APIs kannst du mutig einsetzen, ohne Rücksicht auf „Systeme von vor fünf Jahren“;
 - Gute Zahlungsgewohnheiten: App-Store-Nutzer geben bereitwilliger Geld für Apps und In-App-Käufe aus;
-- Die Prüfung ist streng, aber der Store bleibt sauber: weniger Kopien und Schadsoftware, gute Produkte fallen leichter auf.
+- Die Prüfung ist streng, aber der Store bleibt sauber: weniger Kopien und Schadsoftware, gute Produkte fallen leichter auf
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

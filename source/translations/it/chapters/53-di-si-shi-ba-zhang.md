@@ -2,17 +2,17 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: Capitolo 48: Conoscere Android — Dal sistema operativo all'ecosistema di sviluppo
+nav: Capitolo 48: Come è diventato Android quello che è oggi?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 48: Conoscere Android — dal sistema operativo all'ecosistema di sviluppo
+### Capitolo 48: Come è diventato Android quello che è oggi?
 
 {class="chapter-intro mb-4"}
 Congratulazioni per questa decisione: da «chi gioca col telefono» a «chi crea le app per il telefono». Prima di metterci mano, spalmiamo la mappa sul tavolo: da dove viene Android? Perché gli sviluppatori di tutto il mondo scrivono app per lui? Cosa succede tra il momento in cui le tue dita battono sulla tastiera e quello in cui l'app arriva sul telefono dell'utente?
 
-#### 1. Le origini di Android: dal «piccolo robot» al «sistema operativo più diffuso al mondo»
+1. Le origini di Android: dal «piccolo robot» al «sistema operativo più diffuso al mondo»
 
 La storia di Android comincia nel 2003: un ingegnere di nome Andy Rubin fonda la società Android, con un obiettivo molto concreto: realizzare un sistema operativo intelligente che «capisse le fotocamere» meglio di altri. Nel 2005 Google la acquista; nel 2007, insieme a decine di produttori, fonda l'Open Handset Alliance (OHA); nel settembre 2008 arriva in vendita il primo telefono Android, l'HTC Dream (G1).
 
@@ -23,10 +23,10 @@ Il seguito lo conosciamo tutti: nel 2026 Android è il sistema operativo mobile 
 Consiglio: il DNA open source di Android
 
 {class="mt-1"}
-Il codice centrale di Android (AOSP, Android Open Source Project) è open source — qualunque produttore può prenderlo, modificarlo e personalizzarlo. Ecco perché Xiaomi ha MIUI (oggi HyperOS), Huawei il livello di compatibilità HarmonyOS e Samsung One UI. Per gli sviluppatori è una buona notizia: ciò che impari è «sviluppo per Android», non «sviluppo per un certo marchio» — un solo impegno, valido per tutto il mercato.
+Il codice centrale di Android (AOSP, Android Open Source Project) è open source, qualunque produttore può prenderlo, modificarlo e personalizzarlo. Ecco perché Xiaomi ha MIUI (oggi HyperOS), Huawei il livello di compatibilità HarmonyOS e Samsung One UI. Per gli sviluppatori è una buona notizia: ciò che impari è «sviluppo per Android», non «sviluppo per un certo marchio», un solo impegno, valido per tutto il mercato.
 :::
 
-Anche l'evoluzione dei nomi delle versioni è curiosa: dalla 1.5 Cupcake in poi, ogni versione maggiore ha preso il nome di un dolce — Donut, Eclair, Frozen Yogurt, Gingerbread... fino ad Android 10 nel 2019, quando si è passati ai soli numeri. Ad agosto 2026 l'ultima versione stabile è Android 17, mentre il «minimo supportato» che conta davvero quando sviluppi, per le app di punta, di solito si colloca tra Android 8 (API 26) e Android 10 (API 29) — sostenendo i dispositivi di qualche anno fa il tuo bacino di utenti resta abbastanza ampio.
+Anche l'evoluzione dei nomi delle versioni è curiosa: dalla 1.5 Cupcake in poi, ogni versione maggiore ha preso il nome di un dolce: Donut, Eclair, Frozen Yogurt, Gingerbread... fino ad Android 10 nel 2019, quando si è passati ai soli numeri. Ad agosto 2026 l'ultima versione stabile è Android 17, mentre il «minimo supportato» che conta davvero quando sviluppi, per le app di punta, di solito si colloca tra Android 8 (API 26) e Android 10 (API 29). Sostenendo i dispositivi di qualche anno fa il tuo bacino di utenti resta abbastanza ampio.
 
 ::: div .overflow-x-auto
 ```html
@@ -39,7 +39,7 @@ Breve storia delle versioni di Android (ad agosto 2026, punti chiave per lo svil
 
 #### 2. In che linguaggio scrivere: Java o Kotlin?
 
-Nella storia dello sviluppo Android due sono stati i linguaggi di punta. Java è il «padre fondatore» — c'era già alla nascita di Android; Kotlin è il «cittadino di prima classe» scelto da Google nel 2017, dal 2019 la linea ufficiale è «Kotlin-first», e nel 2026 i nuovi progetti sono ormai quasi tutti in Kotlin, mentre i vecchi progetti stanno migrando uno dopo l'altro.
+Nella storia dello sviluppo Android due sono stati i linguaggi di punta. Java è il «padre fondatore», c'era già alla nascita di Android; Kotlin è il «cittadino di prima classe» scelto da Google nel 2017, dal 2019 la linea ufficiale è «Kotlin-first», e nel 2026 i nuovi progetti sono ormai quasi tutti in Kotlin, mentre i vecchi progetti stanno migrando uno dopo l'altro.
 
 Parliamoci chiaro: se parti davvero da zero, impara subito Kotlin e non tornare indietro a Java. I motivi sono tre: primo, in Kotlin si scrive il 30%-40% di codice in meno che in Java (a parità di funzioni, Kotlin è più corto e più chiaro); secondo, previene per natura il «null pointer», l'incubo dei principianti; terzo, tutti i tutorial moderni, la documentazione ufficiale e gli strumenti di programmazione AI (ti ricordi il nostro libro sulla programmazione AI?) hanno Kotlin come riferimento. Java lo incontrerai solo mantenendo vecchi progetti o leggendo codice datato.
 
@@ -85,11 +85,11 @@ In questo flusso ci sono due concetti che conviene conoscere subito:
 - APK: il formato del pacchetto di installazione delle app Android (.apk); con un doppio clic si installa sul telefono, come i .exe di Windows. Per le tue prove quotidiane o per passarla in giro agli amici, si usa questo.
 - AAB: Android App Bundle (.aab), il «formato di impacchettamento avanzato» per la pubblicazione su Google Play. Lo store lo ritaglia dinamicamente in base al modello di telefono dell'utente, così ognuno scarica un pacchetto più leggero. Non lo installi da solo: va consegnato allo store.
 
-E sentirai sempre più spesso una parola: SDK (Software Development Kit, kit di sviluppo software). È l'intero «corredo di sviluppo» che la casa Android mette a disposizione — librerie API di ogni versione, strumenti di debug, immagini per l'emulatore e altro. Le classi come Activity o Button che richiami mentre scrivi codice vengono tutte dall'SDK.
+E sentirai sempre più spesso una parola: SDK (Software Development Kit, kit di sviluppo software). È l'intero «corredo di sviluppo» che la casa Android mette a disposizione, librerie API di ogni versione, strumenti di debug, immagini per l'emulatore e altro. Le classi come Activity o Button che richiami mentre scrivi codice vengono tutte dall'SDK.
 
-#### 4. Panoramica dello stack tecnologico di Android: la tua «lista delle armi»
+4. Panoramica dello stack tecnologico di Android: la tua «lista delle armi»
 
-Prima di studiare sul serio, fai amicizia con la configurazione standard dei progetti Android di punta nel 2026 — se adesso questa lista ti risulta incomprensibile nessun problema: quando avrai finito il libro, rileggendola tutto ti apparirà chiaro:
+Prima di studiare sul serio, fai amicizia con la configurazione standard dei progetti Android di punta nel 2026, se adesso questa lista ti risulta incomprensibile nessun problema: quando avrai finito il libro, rileggendola tutto ti apparirà chiaro:
 
 ::: div .overflow-x-auto
 ```html
@@ -100,11 +100,11 @@ Prima di studiare sul serio, fai amicizia con la configurazione standard dei pro
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Panoramica dello stack Android di punta nel 2026
 
-Non farti intimidire da questa fila di parole inglesi. Sono le pentole e i tegami della cucina — per ora ti basta sapere che «per cucinare bisogna entrare in cucina»; come si usa ogni strumento lo vedrai smontato pezzo per pezzo nei capitoli che vengono. E la buona notizia è questa: quando crei un nuovo progetto, Android Studio ti configura da solo tutto l'insieme; tu pensa soltanto a cucinare.
+Non farti intimidire da questa fila di parole inglesi. Sono le pentole e i tegami della cucina: per ora ti basta sapere che «per cucinare bisogna entrare in cucina»; come si usa ogni strumento lo vedrai smontato pezzo per pezzo nei capitoli che vengono. E la buona notizia è questa: quando crei un nuovo progetto, Android Studio ti configura da solo tutto l'insieme; tu pensa soltanto a cucinare.
 
-#### 5. Android vs iOS: la prima «scelta di campo» per gli sviluppatori
+5. Android vs iOS: la prima «scelta di campo» per gli sviluppatori
 
-Probabilmente hai in mano insieme un dispositivo Android e uno Apple. Da sviluppatore vale la pena conoscere in anticipo le differenze di esperienza tra i due mondi — non è la presa di posizione su «quale sia migliore», ma i conti concreti di «quale lato conviene per partire»:
+Probabilmente hai in mano insieme un dispositivo Android e uno Apple. Da sviluppatore vale la pena conoscere in anticipo le differenze di esperienza tra i due mondi, non è la presa di posizione su «quale sia migliore», ma i conti concreti di «quale lato conviene per partire»:
 
 ::: div .overflow-x-auto
 ```html
@@ -115,14 +115,14 @@ Probabilmente hai in mano insieme un dispositivo Android e uno Apple. Da svilupp
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Confronto tra i percorsi di sviluppo Android e iOS (agosto 2026)
 
-A dire il vero: se il tuo computer non è un Mac, la scelta non si pone nemmeno — Android è l'unica opzione. Se hai un Mac, le parti 8 e 9 di questo libro si possono leggere a confronto: l'approccio alla programmazione è lo stesso, e imparata una, l'altra verrà molto più in fretta.
+A dire il vero: se il tuo computer non è un Mac, la scelta non si pone nemmeno, Android è l'unica opzione. Se hai un Mac, le parti 8 e 9 di questo libro si possono leggere a confronto: l'approccio alla programmazione è lo stesso, e imparata una, l'altra verrà molto più in fretta.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mani all'opera: guarda l'«Android» del tuo telefono
 
 {class="mt-1"}
-Apri sul telefono [Impostazioni] → [Info sul telefono] (o «Informazioni sul dispositivo»), trova la voce «Versione Android» — toccala più volte di fila e attiverai anche il minigioco easter egg del sistema. Annota il numero di versione e confrontalo con la tabella qui sopra per capire a quale generazione appartiene. Il tuo telefono è il tuo primo «dispositivo di test».
+Apri sul telefono [Impostazioni] → [Info sul telefono] (o «Informazioni sul dispositivo»), trova la voce «Versione Android», toccala più volte di fila e attiverai anche il minigioco easter egg del sistema. Annota il numero di versione e confrontalo con la tabella qui sopra per capire a quale generazione appartiene. Il tuo telefono è il tuo primo «dispositivo di test».
 :::
 
 ::: div .chapter-summary

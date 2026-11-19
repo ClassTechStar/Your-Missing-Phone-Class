@@ -2,15 +2,15 @@
 id: di-shi-san-zhang
 num: 13
 part: ruan-jian-pian
-nav: Bab 13: Cadangan Aplikasi Alat
+nav: Bab 13: Aplikasi mana yang berbaloi, mana yang perlu elak
 toc: default
 kind: chapter
 ---
 
-### Bab 13: Cadangan Aplikasi Alat
+### Bab 13: Aplikasi mana yang berbaloi, mana yang perlu elak
 
 {class="chapter-intro mb-4"}
-Bab ini memilih alat keberhasilan, kesihatan dan perjalanan, serta menambah keupayaan sistem praktikal dan merentas peranti: pembersihan dan anti-gangguan seperti Qingzhuo, suis sekatan bawaan telefon, amaran cuaca dan gempa bumi; kawalan jauh komputer Sunflower/ToDesk, pejabat AI seperti Trae, Artificial Desktop, penghantaran pantas LAN seperti LocalSend, papan keratan merentas peranti, kata laluan dinamik Aegis/Microsoft Authenticator, jadual TickTick serta imbasan dokumen kertas.
+Bab ini memilih alat keberhasilan, kesihatan dan perjalanan, serta menambah keupayaan sistem praktikal dan merentas peranti: pembersihan dan anti-gangguan seperti Qingzhuo, suis sekatan bawaan telefon, amaran cuaca dan gempa bumi; kawalan jauh komputer Sunflower/ToDesk. pejabat AI seperti Trae, Artificial Desktop, penghantaran pantas LAN seperti LocalSend, papan keratan merentas peranti, kata laluan dinamik Aegis/Microsoft Authenticator, jadual TickTick serta imbasan dokumen kertas.
 
 #### 1. Alat Keberhasilan: Urus Masa dan Perhatian Anda
 
@@ -21,83 +21,83 @@ Alat keberhasilan ialah "rangka" kehidupan digital, membantu anda menyusun idea,
 - TickTick — Sesuai untuk: mereka yang perlu merakam tugasan kerja, kehidupan dan pembelajaran berserta jadual secara bersatu; salah satu cadangan utama bahagian ini. Kelebihan utama: Segerak merentas telefon/komputer/tablet/Web; gabungan senarai + kalendar + Pomodoro; input bahasa semula jadi seperti "mesyuarat pukul 3 petang esok", "hantar laporan mingguan setiap Isnin" dikenali masa dan peraturan berulangnya secara automatik; menyokong subtugasan, tag, keutamaan, lampiran dan senarai kerjasama. Sesuai untuk pengurusan menyeluruh "jadual + semak tugasan + ulasan harian".
 - Cara menggunakan TickTick dengan lebih lancar: Peti Kemasukan: Buang semua dahulu ke dalam "Hari Ini/Peti Kemasukan", pada waktu malam barulah kelaskan ke senarai kerja, keluarga, pembelajaran.
 - Paparan kalendar: Seret mesyuarat dan tarikh akhir ke dalam kalendar untuk melihat konflik, lebih intuitif daripada hanya melihat senarai tugasan.
-- Tugasan berulang: Ambil ubat, bayar bil, senam — tetapkan sebagai tugasan berkala, tidak perlu isi secara manual setiap kali.
+- Tugasan berulang: Ambil ubat, bayar bil, senam, tetapkan sebagai tugasan berkala, tidak perlu isi secara manual setiap kali.
 - Pomodoro: Mulakan fokus terus pada sesuatu tugasan, melihat statistik "berapa banyak benar-benar siap" minggu ini.
 - Kerjasama dengan fungsi telefon: Katakan "ingatkan saya…" kepada pembantu suara untuk memasukkan peringatan sistem; bagi tarikh akhir yang penting, aktifkan juga kalendar sistem sebagai sandaran berganda.
 
-- Todoist — Sesuai untuk: pengguna minimalis dan merentas platform. Kelebihan utama: Antara muka bersih dan terkawal, hierarki projek jelas (tugasan → subtugasan → subtugasan anak), mata karma merangsang pembentukan tabiat.
+- Todoist, Sesuai untuk: pengguna minimalis dan merentas platform. Kelebihan utama: Antara muka bersih dan terkawal, hierarki projek jelas (tugasan → subtugasan → subtugasan anak), mata karma merangsang pembentukan tabiat.
 - Microsoft To Do — Sesuai untuk: pekerja pejabat dan pengguna Outlook. Kelebihan utama: Percuma sepenuhnya, tiada iklan; fungsi "Hari Saya" dikosongkan setiap hari, mengurangkan beban mental; integrasi mendalam dengan ekosistem Microsoft.
-- Nota Sistem/Peringatan — Sesuai untuk: pengguna ringan yang tidak mahu memasang aplikasi pihak ketiga. Kelebihan utama: Pengalaman asli, sifar kelewatan, boleh menambah terus melalui suara Siri/Xiao Ai, terhubung dengan widget sistem.
+- Nota Sistem/Peringatan, Sesuai untuk: pengguna ringan yang tidak mahu memasang aplikasi pihak ketiga. Kelebihan utama: Pengalaman asli, sifar kelewatan, boleh menambah terus melalui suara Siri/Xiao Ai, terhubung dengan widget sistem.
 
 ##### 2. Pomodoro (Latihan Fokus)
 
-- Forest — Sesuai untuk: mereka yang suka memegang telefon dan tidak dapat mengawal diri. Kelebihan utama: Menanam pokok semasa fokus, jika keluar aplikasi lebih awal pokok akan mati, menggunakan "kehidupan maya" untuk membina maklum balas positif, boleh menanam bersama rakan.
-- Tide — Sesuai untuk: mereka yang memerlukan bunyi putih untuk membantu fokus atau tidur. Kelebihan utama: Gabungan bunyi alam (hujan, ombak, hutan) + Pomodoro + meditasi, antara muka minimalis dan menenangkan.
+- Forest, Sesuai untuk: mereka yang suka memegang telefon dan tidak dapat mengawal diri. Kelebihan utama: Menanam pokok semasa fokus, jika keluar aplikasi lebih awal pokok akan mati, menggunakan "kehidupan maya" untuk membina maklum balas positif, boleh menanam bersama rakan.
+- Tide, Sesuai untuk: mereka yang memerlukan bunyi putih untuk membantu fokus atau tidur. Kelebihan utama: Gabungan bunyi alam (hujan, ombak, hutan) + Pomodoro + meditasi, antara muka minimalis dan menenangkan.
 - Prinsip: Fokus klasik 25 minit + rehat 5 minit, boleh dilaraskan kepada 50/10 atau 90/20 mengikut keadaan diri sendiri.
 
 ##### 3. Kalendar (Visualisasi Masa)
 
-- Kalendar Sistem — Sesuai untuk: semua pengguna. Kelebihan utama: Notifikasi asli paling stabil, penggunaan bateri sangat rendah, boleh menambah melalui suara Siri/Xiao Ai.
+- Kalendar Sistem: Sesuai untuk: semua pengguna. Kelebihan utama: Notifikasi asli paling stabil, penggunaan bateri sangat rendah, boleh menambah melalui suara Siri/Xiao Ai.
 - Google Calendar — Sesuai untuk: pengguna berbilang peranti, mereka yang perlu berkongsi jadual dengan orang lain. Kelebihan utama: Fungsi "Sasaran" membantu menyusun masa senam/belajar secara automatik, dengan Gmail mengecam acara dalam e-mel secara pintar.
 
 ##### 4. Aplikasi Nota (Pengumpulan Ilmu)
 
-- Notion — Sesuai untuk: mereka yang perlu mengurus nota, tugasan, pangkalan data dan wiki secara bersatu; pelajar, pekerja bebas dan kerjasama pasukan. Kelebihan utama: Pangkalan ilmu serba boleh, penyuntingan modular Block, boleh membina laman peribadi, senarai bacaan, papan projek, ekosistem templat yang kaya.
+- Notion, Sesuai untuk: mereka yang perlu mengurus nota, tugasan, pangkalan data dan wiki secara bersatu; pelajar, pekerja bebas dan kerjasama pasukan. Kelebihan utama: Pangkalan ilmu serba boleh, penyuntingan modular Block, boleh membina laman peribadi, senarai bacaan, papan projek, ekosistem templat yang kaya.
 - Obsidian — Sesuai untuk: pengurus ilmu mendalam, penyelidik dan penulis. Kelebihan utama: Simpanan Markdown tempatan, pautan dua hala + graf hubungan, menjadikan nota anda sebagai "otak kedua", data sepenuhnya milik anda.
-- flomo — Sesuai untuk: mereka yang mahu merakam ilham berkeping tetapi tidak mahu menulis esei panjang. Kelebihan utama: Nota berbentuk kad, merakam idea seperti menulis Moments, menyokong klasifikasi tag #, imbas balik mengikut garis masa.
-- Apple Notes — Sesuai untuk: pengguna iPhone/Mac, keperluan rakaman ringan. Kelebihan utama: Mula dengan pantas, menyokong imbasan dokumen/lukisan tangan/senarai/segerak iCloud, percuma dan integrasi mendalam dengan sistem.
-- Evernote — Sesuai untuk: pengguna berpengalaman yang perlu kerat halaman web dan mengarkibkan bahan dalam jumlah besar. Kelebihan utama: Sambungan keratan web yang berkuasa, OCR mengecam teks dalam gambar, jenama lama yang stabil, tetapi versi premium perlu berbayar.
+- flomo, Sesuai untuk: mereka yang mahu merakam ilham berkeping tetapi tidak mahu menulis esei panjang. Kelebihan utama: Nota berbentuk kad, merakam idea seperti menulis Moments, menyokong klasifikasi tag #, imbas balik mengikut garis masa.
+- Apple Notes: Sesuai untuk: pengguna iPhone/Mac, keperluan rakaman ringan. Kelebihan utama: Mula dengan pantas, menyokong imbasan dokumen/lukisan tangan/senarai/segerak iCloud, percuma dan integrasi mendalam dengan sistem.
+- Evernote, Sesuai untuk: pengguna berpengalaman yang perlu kerat halaman web dan mengarkibkan bahan dalam jumlah besar. Kelebihan utama: Sambungan keratan web yang berkuasa, OCR mengecam teks dalam gambar, jenama lama yang stabil, tetapi versi premium perlu berbayar.
 
 ##### 5. Alat PDF
 
 - PDF Expert — Sesuai untuk: pengguna iPad/iPhone, pekerja perniagaan yang perlu membuat anotasi kontrak, pelajar. Kelebihan utama: Editor PDF yang paling kuat diiktiraf di iOS, penandaan lancar, menyokong tandatangan, gabung/pisah dan pengisian borang.
 - WPS — Sesuai untuk: pekerja pejabat yang perlu memproses Word/Excel/PPT/PDF serentak. Kelebihan utama: Suit pejabat sehenti, keserasian baik dengan cloud drive dalam negara dan fail WeChat, fungsi versi percuma sudah cukup untuk kegunaan harian.
-- Adobe Acrobat — Sesuai untuk: mereka yang memberikan keutamaan tinggi kepada piawaian format PDF (undang-undang, reka bentuk, penerbitan). Kelebihan utama: Piawaian rasmi, penukaran format PDF/A tanpa ralat, segerak merentas peranti dan fungsi tandatangan elektronik yang profesional.
+- Adobe Acrobat: Sesuai untuk: mereka yang memberikan keutamaan tinggi kepada piawaian format PDF (undang-undang, reka bentuk, penerbitan). Kelebihan utama: Piawaian rasmi, penukaran format PDF/A tanpa ralat, segerak merentas peranti dan fungsi tandatangan elektronik yang profesional.
 
 ##### 6. Aplikasi Imbasan (Digitalisasi Dokumen Kertas)
 
 Kontrak kertas, invois, kerja rumah, nota papan putih, salinan kad pengenalan… Kamera telefon sudah mampu menggantikan kebanyakan pengimbas. Aliran utama: foto yang jelas → potongan tepi dan pembetulan secara automatik → eksport PDF/gambar → OCR sebagai pilihan.
 
 - CamScanner — Sesuai untuk: pekerja perniagaan dan pelajar yang kerap perlu mengimbas kontrak, bil dan dokumen identiti. Kelebihan utama: Pengecaman tepi secara automatik, pembetulan perspektif, pengecaman teks OCR, boleh menjana PDF berbilang halaman dan segerak awan.
-- Microsoft Lens — Sesuai untuk: pelajar, mereka yang perlu mengimbas papan putih/halaman buku menjadi Word. Kelebihan utama: Percuma tanpa iklan, eksport satu klik ke OneNote/Word, ketepatan pengecaman teks tinggi.
-- Imbasan Apple Notes — Sesuai untuk: pengguna iPhone, keperluan imbasan ringan. Kelebihan utama: Tidak perlu memasang aplikasi, klik sahaja ikon kamera dalam Notes untuk mengimbas, membuang bayang secara automatik, anotasi tandatangan, percuma dan mudah digunakan.
+- Microsoft Lens, Sesuai untuk: pelajar, mereka yang perlu mengimbas papan putih/halaman buku menjadi Word. Kelebihan utama: Percuma tanpa iklan, eksport satu klik ke OneNote/Word, ketepatan pengecaman teks tinggi.
+- Imbasan Apple Notes, Sesuai untuk: pengguna iPhone, keperluan imbasan ringan. Kelebihan utama: Tidak perlu memasang aplikasi, klik sahaja ikon kamera dalam Notes untuk mengimbas, membuang bayang secara automatik, anotasi tandatangan, percuma dan mudah digunakan.
 - Baimiao / CamScanner versi web / "Imbasan Dokumen" kamera jenama: Kamera sistem Huawei, Xiaomi, OPPO dan vivo kebanyakannya mempunyai mod "Dokumen/Imbasan"; Android juga boleh menggunakan Google Camera atau pengimbas sistem. Sesuai untuk kecemasan memotret sehelai kontrak.
 - Tip memotret: Cahaya sekata, telefon selari dengan kertas, sasar keempat-empat penjuru; bagi dokumen berbilang halaman, potret mengikut turutan dahulu barulah gabungkan menjadi PDF; dokumen sensitif perhatikan tera air dan lokasi simpanan, selepas digunakan boleh bersihkan sepenuhnya dari "Baru Dihapus".
 
 #### 2. Kesihatan dan Sukan
 
-Aplikasi kesihatan ialah "pembantu peribadi" yang paling diremehkan pada telefon — ia mampu menjejak tidur, kadar jantung dan jumlah senaman anda secara berterusan, lebih mampu mencerminkan keadaan jangka panjang berbanding pergi ke hospital sekali sekala.
+Aplikasi kesihatan ialah "pembantu peribadi" yang paling diremehkan pada telefon, ia mampu menjejak tidur, kadar jantung dan jumlah senaman anda secara berterusan, lebih mampu mencerminkan keadaan jangka panjang berbanding pergi ke hospital sekali sekala.
 
 ##### 1. Senaman dan Kecergasan
 
-- Keep — Sesuai untuk: pelatih di rumah, pemula sifar asas, mereka yang mahu mengurangkan lemak dan membentuk badan. Kelebihan utama: Kursus percuma dalam jumlah besar, dari HIIT hingga yoga, rancangan latihan dijana secara automatik oleh AI, suasana komuniti yang hangat.
-- Nike Training Club (NTC) — Sesuai untuk: mereka yang menginginkan bimbingan jurulatih profesional dan latihan yang berstruktur. Kelebihan utama: Keluaran rasmi Nike, semua kursus percuma, demonstrasi gerakan dirakam oleh jurulatih profesional, klasifikasi mengikut kumpulan otot/peralatan yang jelas.
+- Keep: Sesuai untuk: pelatih di rumah, pemula sifar asas, mereka yang mahu mengurangkan lemak dan membentuk badan. Kelebihan utama: Kursus percuma dalam jumlah besar, dari HIIT hingga yoga, rancangan latihan dijana secara automatik oleh AI, suasana komuniti yang hangat.
+- Nike Training Club (NTC), Sesuai untuk: mereka yang menginginkan bimbingan jurulatih profesional dan latihan yang berstruktur. Kelebihan utama: Keluaran rasmi Nike, semua kursus percuma, demonstrasi gerakan dirakam oleh jurulatih profesional, klasifikasi mengikut kumpulan otot/peralatan yang jelas.
 - Apple Fitness — Sesuai untuk: pengguna Apple Watch, mereka yang mahu menggunakan rangsangan berbentuk kitaran untuk mendorongkan diri bergerak. Kelebihan utama: Tiga cincin aktiviti harian (Bergerak/Senam/Berdiri), sasaran yang dapat dilihat, sambungan lancar dengan data kadar jantung jam tangan.
 
 ##### 2. Penjejakan Tidur
 
-- AutoSleep — Sesuai untuk: pengguna Apple Watch, mereka yang mahu mengetahui nisbah tidur nyenyak/tidur ringan setiap malam. Kelebihan utama: Menjejak secara automatik semasa tidur sambil memakai jam, tidak perlu mula/berhenti secara manual, memberi skor kualiti tidur dan cadangan waktu tidur.
+- AutoSleep, Sesuai untuk: pengguna Apple Watch, mereka yang mahu mengetahui nisbah tidur nyenyak/tidur ringan setiap malam. Kelebihan utama: Menjejak secara automatik semasa tidur sambil memakai jam, tidak perlu mula/berhenti secara manual, memberi skor kualiti tidur dan cadangan waktu tidur.
 - Sleep Cycle — Sesuai untuk: mereka yang tidak memakai jam semasa tidur dan mahu memantau dengan telefon. Kelebihan utama: Menganalisis pergerakan mendonong dan dengkuran melalui mikrofon, membangunkan anda secara pintar pada fasa tidur ringan, bangun tidur tanpa penderitaan.
-- Mi Fitness (Xiaomi) — Sesuai untuk: pengguna gelang/jam Xiaomi. Kelebihan utama: Percuma dan mempunyai sambungan mendalam dengan gelang Xiaomi, penjejakan bersatu kadar jantung/oksigen darah/tidur, nilai berbaloi tinggi.
+- Mi Fitness (Xiaomi), Sesuai untuk: pengguna gelang/jam Xiaomi. Kelebihan utama: Percuma dan mempunyai sambungan mendalam dengan gelang Xiaomi, penjejakan bersatu kadar jantung/oksigen darah/tidur, nilai berbaloi tinggi.
 
 ##### 3. Meditasi dan Relaksasi
 
-- Calm — Sesuai untuk: pekerja yang berasa tertekan, mereka yang sukar tidur. Kelebihan utama: Panduan meditasi "Daily Calm" + kisah tidur (dibacakan oleh orang terkenal), antara muka yang cantik, kandungan bahasa Inggeris yang kaya.
+- Calm, Sesuai untuk: pekerja yang berasa tertekan, mereka yang sukar tidur. Kelebihan utama: Panduan meditasi "Daily Calm" + kisah tidur (dibacakan oleh orang terkenal), antara muka yang cantik, kandungan bahasa Inggeris yang kaya.
 - Tide — Sesuai untuk: pengguna bahasa Cina yang memerlukan bunyi putih untuk fokus/tidur. Kelebihan utama: Produk dalam negara pilihan, bunyi alam + kursus meditasi + Pomodoro, panduan bahasa Cina lebih mesra.
-- Xiao Sleep — Sesuai untuk: mereka yang memerlukan bunyi bantu tidur, merakam meratap/dengkuran semasa tidur. Kelebihan utama: Bunyi putih dalam jumlah besar boleh digabungkan bertindih (hujan + kipas + api unggun), penutup berjadual sebelum tidur, rakaman meratap yang menarik dan berguna.
+- Xiao Sleep, Sesuai untuk: mereka yang memerlukan bunyi bantu tidur, merakam meratap/dengkuran semasa tidur. Kelebihan utama: Bunyi putih dalam jumlah besar boleh digabungkan bertindih (hujan + kipas + api unggun), penutup berjadual sebelum tidur, rakaman meratap yang menarik dan berguna.
 
 ##### 4. Kesihatan Wanita
 
-- Flo — Sesuai untuk: pengguna yang perlu merakam kitaran haid, merancang kehamilan atau memperhatikan kesihatan wanita. Kelebihan utama: Ramalan AI kitaran haid/hari ovulasi berikutnya berketinggian ketepatan, komuniti membolehkan soalan secara anonim, reka bentuk antara muka yang halus.
-- Meiyou — Sesuai untuk: pengguna wanita di China, mereka yang mahu melihat komuniti dan ilmu popular berbahasa Cina. Kelebihan utama: Kandungan setempat yang kaya, menyediakan ilmu yang bersesuaian mengikut fasa kitaran/merancang kehamilan/kehamilan/pembesaran anak.
+- Flo: Sesuai untuk: pengguna yang perlu merakam kitaran haid, merancang kehamilan atau memperhatikan kesihatan wanita. Kelebihan utama: Ramalan AI kitaran haid/hari ovulasi berikutnya berketinggian ketepatan, komuniti membolehkan soalan secara anonim, reka bentuk antara muka yang halus.
+- Meiyou, Sesuai untuk: pengguna wanita di China, mereka yang mahu melihat komuniti dan ilmu popular berbahasa Cina. Kelebihan utama: Kandungan setempat yang kaya, menyediakan ilmu yang bersesuaian mengikut fasa kitaran/merancang kehamilan/kehamilan/pembesaran anak.
 
 ##### 5. Peringatan Ubat
 
-- Pembantu Ubat — Sesuai untuk: pesakit kronik yang perlu mengambil ubat jangka panjang, anak-anak yang perlu menjaga pengambilan ubat warga emas. Kelebihan utama: Imbas kod untuk mengenali ubat, membina senarai ubat secara automatik, pemberitahuan tepat pada waktunya, rekod pengambilan boleh dikongsi dengan keluarga.
+- Pembantu Ubat: Sesuai untuk: pesakit kronik yang perlu mengambil ubat jangka panjang, anak-anak yang perlu menjaga pengambilan ubat warga emas. Kelebihan utama: Imbas kod untuk mengenali ubat, membina senarai ubat secara automatik, pemberitahuan tepat pada waktunya, rekod pengambilan boleh dikongsi dengan keluarga.
 
 ##### 6. Hab Data
 
-- Apple Health/Google Fit — Sesuai untuk: semua pengguna telefon pintar. Kelebihan utama: Menghimpunkan semua data daripada telefon, gelang dan aplikasi kesihatan pihak ketiga (langkah, kadar jantung, tidur, kitaran haid dan sebagainya), merupakan "pusat rekod kesihatan" yang bersatu.
+- Apple Health/Google Fit, Sesuai untuk: semua pengguna telefon pintar. Kelebihan utama: Menghimpunkan semua data daripada telefon, gelang dan aplikasi kesihatan pihak ketiga (langkah, kadar jantung, tidur, kitaran haid dan sebagainya), merupakan "pusat rekod kesihatan" yang bersatu.
 
 #### 3. Perjalanan dan Pengangkutan
 
@@ -105,41 +105,41 @@ Apabila keluar rumah, beberapa aplikasi yang sesuai boleh menyelamatkan anda dar
 
 ##### 1. Penerbangan dan Keretapi Berkelajuan Tinggi
 
-- Umetrip — Sesuai untuk: pekerja perniagaan yang kerap menaiki kapal terbang. Kelebihan utama: Data penerbangan awam rasmi, dinamik penerbangan/perubahan pintu perlepasan/amaran kelewatan yang paling berwibawa, boleh menyemak jenis kapal dan peta tempat duduk.
-- 12306 — Sesuai untuk: semua pengguna keretapi dalam negara. Kelebihan utama: Saluran pembelian tiket rasmi yang satu-satunya boleh dipercayai, menyokong pembelian tiket giliran (tiket yang dikembalikan akan diambil secara automatik), pengendalian tiket pelajar/tiket kumpulan yang mudah.
+- Umetrip, Sesuai untuk: pekerja perniagaan yang kerap menaiki kapal terbang. Kelebihan utama: Data penerbangan awam rasmi, dinamik penerbangan/perubahan pintu perlepasan/amaran kelewatan yang paling berwibawa, boleh menyemak jenis kapal dan peta tempat duduk.
+- 12306: Sesuai untuk: semua pengguna keretapi dalam negara. Kelebihan utama: Saluran pembelian tiket rasmi yang satu-satunya boleh dipercayai, menyokong pembelian tiket giliran (tiket yang dikembalikan akan diambil secara automatik), pengendalian tiket pelajar/tiket kumpulan yang mudah.
 - VariFlight — Sesuai untuk: mereka yang peka terhadap kadar ketepatan masa penerbangan dan memerlukan penghantaran ke lapangan terbang. Kelebihan utama: Ramalan kelewatan penerbangan yang tepat, boleh berkongsi perjalanan dengan keluarga untuk melihat lokasi dan masa ketibaan anda secara masa nyata.
 
 ##### 2. Peta dan Navigasi
 
-- Amap — Sesuai untuk: pengguna bandar di China, pemandu dan pengguna teksi. Kelebihan utama: Keadaan trafik masa nyata yang tepat, keupayaan mengelakkan kesesakan yang kuat, tempahan teksi dan kongsi teksi selesai di satu tempat, pilihan pemindahan pengangkutan awam yang kaya.
-- Baidu Maps — Sesuai untuk: pengguna yang memerlukan maklumat lokasi dan navigasi dalam bangunan. Kelebihan utama: Peta panorama/navigasi AR masa nyata, peta dalam bangunan kawasan tarikan/megamall yang terperinci, pakej suara yang kaya.
-- Google Maps — Sesuai untuk: pengembara ke luar negara. Kelebihan utama: Liputan global yang paling lengkap, ulasan tempatan yang sebenar, Street View dan peta luar talian menjadi penyelamat di negara asing.
+- Amap: Sesuai untuk: pengguna bandar di China, pemandu dan pengguna teksi. Kelebihan utama: Keadaan trafik masa nyata yang tepat, keupayaan mengelakkan kesesakan yang kuat, tempahan teksi dan kongsi teksi selesai di satu tempat, pilihan pemindahan pengangkutan awam yang kaya.
+- Baidu Maps: Sesuai untuk: pengguna yang memerlukan maklumat lokasi dan navigasi dalam bangunan. Kelebihan utama: Peta panorama/navigasi AR masa nyata, peta dalam bangunan kawasan tarikan/megamall yang terperinci, pakej suara yang kaya.
+- Google Maps, Sesuai untuk: pengembara ke luar negara. Kelebihan utama: Liputan global yang paling lengkap, ulasan tempatan yang sebenar, Street View dan peta luar talian menjadi penyelamat di negara asing.
 
 ##### 3. Penterjemah
 
-- Google Translate — Sesuai untuk: pengembara ke luar negara, pelajar bahasa. Kelebihan utama: Terjemahan dwi-arah masa nyata mod "Perbualan" dan terjemahan perkataan segera mod "Kamera" merupakan alat ajaib perjalanan, menyokong muat turun pakej bahasa luar talian.
+- Google Translate, Sesuai untuk: pengembara ke luar negara, pelajar bahasa. Kelebihan utama: Terjemahan dwi-arah masa nyata mod "Perbualan" dan terjemahan perkataan segera mod "Kamera" merupakan alat ajaib perjalanan, menyokong muat turun pakej bahasa luar talian.
 
 ##### 4. Penukaran Kadar Pertukaran
 
-- XCurrency — Sesuai untuk: mereka yang melancong ke luar negara, membeli-belah luar negara dan membeli-belah merentas sempadan. Kelebihan utama: Antara muka sangat bersih, menyokong 160+ mata wang, kadar pertukaran dikemas kini secara masa nyata, boleh membandingkan beberapa mata wang serentak, tekan lama nombor untuk penukaran pantas.
+- XCurrency, Sesuai untuk: mereka yang melancong ke luar negara, membeli-belah luar negara dan membeli-belah merentas sempadan. Kelebihan utama: Antara muka sangat bersih, menyokong 160+ mata wang, kadar pertukaran dikemas kini secara masa nyata, boleh membandingkan beberapa mata wang serentak, tekan lama nombor untuk penukaran pantas.
 
 ##### 5. Cuaca
 
-- Cuaca Sistem / China Weather Network — Sesuai untuk: semua orang, pilihan pertama untuk menyemak ramalan dan amaran meteorologi rasmi. Kelebihan utama: Aplikasi cuaca pengeluar berhubung dengan saluran rasmi seperti "China Weather" untuk amaran balai meteorologi; amaran hujan lebat, taufan, haba berlebihan dan sebagainya akan dihantar sebagai sepanduk/notifikasi, autoritinya tinggi.
-- Caiyun Weather — Sesuai untuk: mereka yang memerlukan ramalan hujan yang tepat sehingga peringkat minit. Kelebihan utama: Ketepatan "adakah hujan dalam dua jam akan datang" terulung dalam industri, peta dinamik jalur hujan dapat dilihat dengan jelas, menghantar peringatan secara aktif sebelum hujan.
-- Carrot Weather — Sesuai untuk: peminat cuaca yang menginginkan keseronokan dan widget yang pelbagai. Kelebihan utama: Siaran cuaca AI yang bermulut tajam, komponen widget desktop yang sangat banyak boleh disuaikan, peta radar profesional, versi berbayar lebih lengkap.
+- Cuaca Sistem / China Weather Network, Sesuai untuk: semua orang, pilihan pertama untuk menyemak ramalan dan amaran meteorologi rasmi. Kelebihan utama: Aplikasi cuaca pengeluar berhubung dengan saluran rasmi seperti "China Weather" untuk amaran balai meteorologi; amaran hujan lebat, taufan, haba berlebihan dan sebagainya akan dihantar sebagai sepanduk/notifikasi, autoritinya tinggi.
+- Caiyun Weather, Sesuai untuk: mereka yang memerlukan ramalan hujan yang tepat sehingga peringkat minit. Kelebihan utama: Ketepatan "adakah hujan dalam dua jam akan datang" terulung dalam industri, peta dinamik jalur hujan dapat dilihat dengan jelas, menghantar peringatan secara aktif sebelum hujan.
+- Carrot Weather: Sesuai untuk: peminat cuaca yang menginginkan keseronokan dan widget yang pelbagai. Kelebihan utama: Siaran cuaca AI yang bermulut tajam, komponen widget desktop yang sangat banyak boleh disuaikan, peta radar profesional, versi berbayar lebih lengkap.
 - Poin amaran: Aplikasi cuaca mesti dibenarkan notifikasi barulah amaran boleh diterima; amaran dibahagikan kepada empat peringkat biru, kuning, oren dan merah; merah bermaksud risiko cuaca bencana paling tinggi, sesuaikan perjalanan mengikut arahan. Untuk cara pengaktifan selanjutnya, lihat Bahagian 7 bab ini "Amaran Cuaca / Amaran Bencana Alam / Amaran Gempa Bumi".
 
 ##### 6. Panduan Perjalanan
 
-- Mafengwo — Sesuai untuk: mereka yang suka membuat panduan terperinci, pemandu sendiri/perjalanan mendalam. Kelebihan utama: Kandungan jurnal perjalanan tulisan pengguna yang kaya, cara bermain/laluan/panduan mengelak jerat destinasi yang terperinci, boleh memuat turun panduan luar talian.
-- Xiaohongshu — Sesuai untuk: pengembara muda yang mahu melihat pengalaman sebenar, mencari tempat menarik/makanan yang kurang dikenali. Kelebihan utama: Bentuk gambar-teks dan video pendek yang intuitif, kandungan seperti "panduan 3 hari bandar XX" dikemas kini dengan pantas dan berkewaktuan tinggi, pengalaman carian yang baik.
+- Mafengwo, Sesuai untuk: mereka yang suka membuat panduan terperinci, pemandu sendiri/perjalanan mendalam. Kelebihan utama: Kandungan jurnal perjalanan tulisan pengguna yang kaya, cara bermain/laluan/panduan mengelak jerat destinasi yang terperinci, boleh memuat turun panduan luar talian.
+- Xiaohongshu, Sesuai untuk: pengembara muda yang mahu melihat pengalaman sebenar, mencari tempat menarik/makanan yang kurang dikenali. Kelebihan utama: Bentuk gambar-teks dan video pendek yang intuitif, kandungan seperti "panduan 3 hari bandar XX" dikemas kini dengan pantas dan berkewaktuan tinggi, pengalaman carian yang baik.
 
 #### 4. Pengenalan Alat Automasi
 
 Automasi ialah tuas "satu konfigurasi untuk menjimatkan usaha jangka panjang", mampu memampatkan puluhan operasi berulang harian anda kepada sifar. Bahagian ini hanya pengenalan konsep; untuk cara bermain dan tutorial terperinci sila lihat Bab 23: Pemikiran Pengaturcaraan dan Pengenalan Automasi.
 
-- "Shortcuts" iOS: Alat automasi rasmi Apple, tanpa pengaturcaraan boleh menyelesaikan tindakan gabungan seperti "sampai rumah aktifkan WiFi + turunkan kecerahan + bacakan cuaca" dengan satu klik.
+- "Shortcuts" iOS: Alat automasi rasmi Apple, tanpa pengaturcaraan boleh menyelesaikan tindakan gabungan seperti "sampai ,rumah aktifkan WiFi + turunkan kecerahan + bacakan cuaca" dengan satu klik.
 - Automasi Android: Penjalinan senario peringkat sistem (contohnya Xiaomi "Automated Tasks", Huawei "Smart Situations") paling mudah dipelajari; Tasker berkuasa tetapi kurva pembelajarannya curam, sesuai untuk golongan geek.
 - Pemikiran teras: Kenal pasti dahulu "operasi yang perlu diulang setiap hari", kemudian fikirkan "bolehkah ia diganti dengan satu syarat pencetus + beberapa tindakan". Untuk contoh terperinci dan cara bermain lanjutan lihat Bab 23.
 
@@ -175,30 +175,30 @@ Selepas anda memasukkan URL dalam pelayar, pelayar akan: (1) bertanya alamat IP 
 
 Domain ialah "nombor rumah" sesuatu laman web; memahaminya membantu anda menilai sifat dan sumber laman tersebut:
 
-- Makna akhiran biasa: .com — pertubuhan komersial, paling biasa
+- Makna akhiran biasa: .com, pertubuhan komersial, paling biasa
 - .cn — domain negara China
 - .org — pertubuhan bukan berasaskan keuntungan
-- .net — pertubuhan perkhidmatan rangkaian
-- .edu — institusi pendidikan
+- .net: pertubuhan perkhidmatan rangkaian
+- .edu, institusi pendidikan
 - .gov — agensi kerajaan
 - .xyz/.tech/.info — domain umum baharu, ambang kemasukan rendah, guna dengan berhati-hati
 
-- Domain negara/wilayah: .jp — Jepun
-- .kr — Korea Selatan
-- .uk — United Kingdom
-- .de — Jerman
-- .tw — Taiwan
-- .hk — Hong Kong
-- Petua keselamatan: Laman web berakhiran .gov dan .edu biasanya lebih dipercayai kerana ambang permohonannya tinggi. Domain murah seperti .xyz dan .top mudah dieksploitasi oleh laman pemancingan data, jadi berhati-hati lebih apabila melawatnya.
+- Domain negara/wilayah: .jp, Jepun
+- .kr, Korea Selatan
+- .uk: United Kingdom
+- .de: Jerman
+- .tw, Taiwan
+- .hk: Hong Kong
+- Petua keselamatan: Laman web berakhiran .gov dan .edu biasanya lebih dipercayai kerana ambang permohonannya tinggi. Domain murah seperti .xyz dan .top mudah dieksploitasi oleh laman pemancingan data, jadi berhati-hati lebih apabila melawatnya
 
 ##### Penyekatan iklan:
 
-- AdGuard — Sesuai untuk: semua pengguna yang terganggu oleh pelbagai pop-up, iklan pra-roll dan iklan dalam aplikasi. Kelebihan utama: Penyekatan iklan peringkat sistem (tidak terhad kepada pelayar), boleh menapis iklan sepanduk dalam aplikasi dan penjejakan skrin pembuka, menjimatkan data dan melajukan pemuatan halaman, versi berbayar menyokong semua peranti.
+- AdGuard, Sesuai untuk: semua pengguna yang terganggu oleh pelbagai pop-up, iklan pra-roll dan iklan dalam aplikasi. Kelebihan utama: Penyekatan iklan peringkat sistem (tidak terhad kepada pelayar), boleh menapis iklan sepanduk dalam aplikasi dan penjejakan skrin pembuka, menjimatkan data dan melajukan pemuatan halaman, versi berbayar menyokong semua peranti.
 
 ##### Pelayan privasi:
 
 - Brave — Sesuai untuk: pengguna harian yang menghargai privasi dan tidak mahu dijejak oleh iklan. Kelebihan utama: Berasaskan teras Chromium, menyekat iklan dan penjejak terus tanpa sebarang tetapan, dilengkapi mod incognito Tor, lebih laju daripada Chrome dan penggunaan memorinya lebih rendah.
-- DuckDuckGo — Sesuai untuk: pengguna yang mahu "mencari satu perkataan tanpa dikejar iklan di seluruh web". Kelebihan utama: Dilengkapi enjin carian sama nama (tidak merekod sejarah carian), satu klik memadam semua jejak pelayaran ("butang bakar"), pengalaman yang konsisten merentas platform.
+- DuckDuckGo, Sesuai untuk: pengguna yang mahu "mencari satu perkataan tanpa dikejar iklan di seluruh web". Kelebihan utama: Dilengkapi enjin carian sama nama (tidak merekod sejarah carian), satu klik memadam semua jejak pelayaran ("butang bakar"), pengalaman yang konsisten merentas platform.
 
 ##### Perbandingan pelayar sekali imbas:
 
@@ -251,22 +251,22 @@ Cuba bina satu automasi "relaksasi sebelum tidur"
 3. Simpan dan uji.
 :::
 
-#### 6. Alat Sistem Praktikal: Pembersihan, Anti-Gangguan dan Perlindungan Keselamatan
+6. Alat Sistem Praktikal: Pembersihan, Anti-Gangguan dan Perlindungan Keselamatan
 
-Selain aplikasi keberhasilan dan kesihatan, yang benar-benar mempengaruhi pengalaman harian selalunya tiga perkara ini: "kurang diganggu, storan cukup, penipu tidak dapat masuk". Bahagian ini menyenaraikan dahulu perisian praktikal yang biasa digunakan, kemudian membincangkan secara berasingan fungsi sekatan gangguan bawaan telefon — ramai orang telah membeli telefon bertahun-tahun tetapi tidak pernah membuka suis-suis ini.
+Selain aplikasi keberhasilan dan kesihatan, yang benar-benar mempengaruhi pengalaman harian selalunya tiga perkara ini: "kurang diganggu, storan cukup, penipu tidak dapat masuk". Bahagian ini menyenaraikan dahulu perisian praktikal yang biasa digunakan, kemudian membincangkan secara berasingan fungsi sekatan gangguan bawaan telefon, ramai orang telah membeli telefon bertahun-tahun tetapi tidak pernah membuka suis-suis ini.
 
 ##### 1. Pembersihan Sistem dan Pengoptimuman Storan
 
-- Qingzhuo — Sesuai untuk: pengguna Android yang mahu membersihkan cache, fail sisa dan folder kosong secara ringan tanpa diganggu oleh "suite penuh Mobile Manager". Kelebihan utama: Saiz kecil, tiada gangguan iklan, menyokong imbasan mendalam sisa aplikasi, pengesanan fail besar dan analisis penggunaan storan; lebih terkawal daripada "pecutan satu klik" komersial, sesuai untuk pengguna berkemahiran tinggi melakukan penyelenggaraan berkala. Perhatian: Sebelum pembersihan pastikan dahulu laluan, jangan buta menandakan semua untuk WeChat, album dan direktori dokumen; bagi cache peringkat sistem utamakan pembersihan storan bawaan jenama, alat pihak ketiga hanya sebagai tambahan.
-- Pembersihan Storan Bawaan Sistem — Sesuai untuk: semua orang, terutamanya warga emas dan pengguna yang tidak suka bereksperimen. Kelebihan utama: Android [Tetapan] > [Storan] > [Pembersihan dan Pecutan]; iOS [Tetapan] > [Umum] > [Storan iPhone]. Sistem lebih memahami struktur cache aplikasi sendiri, risiko memadam salah paling rendah, patut menjadi pilihan pertama.
-- Pengurusan Storan Terbina dalam WeChat/QQ — Sesuai untuk: pengguna berat perbualan. Kelebihan utama: WeChat [Saya] > [Tetapan] > [Umum] > [Ruang Storan], boleh membersihkan secara halus mengikut perbualan dan jenis fail; lebih selamat daripada alat pihak ketiga jenis "bersihkan WeChat".
+- Qingzhuo: Sesuai untuk: pengguna Android yang mahu membersihkan cache, fail sisa dan folder kosong secara ringan tanpa diganggu oleh "suite penuh Mobile Manager". Kelebihan utama: Saiz kecil, tiada gangguan iklan, menyokong imbasan mendalam sisa aplikasi, pengesanan fail besar dan analisis penggunaan storan; lebih terkawal daripada "pecutan satu klik" komersial, sesuai untuk pengguna berkemahiran tinggi melakukan penyelenggaraan berkala. Perhatian: Sebelum pembersihan pastikan dahulu laluan, jangan buta menandakan semua untuk WeChat, album dan direktori dokumen; bagi cache peringkat sistem utamakan pembersihan storan bawaan jenama, alat pihak ketiga hanya sebagai tambahan.
+- Pembersihan Storan Bawaan Sistem — Sesuai untuk: semua orang, terutamanya warga emas dan pengguna yang tidak suka bereksperimen. Kelebihan utama: Android [Tetapan] > [Storan] > [Pembersihan dan Pecutan]; iOS [Tetapan] > [Umum] > [Storan iPhone]. Sistem lebih memahami struktur cache aplikasi sendiri. risiko memadam salah paling rendah, patut menjadi pilihan pertama.
+- Pengurusan Storan Terbina dalam WeChat/QQ, Sesuai untuk: pengguna berat perbualan. Kelebihan utama: WeChat [Saya] > [Tetapan] > [Umum] > [Ruang Storan], boleh membersihkan secara halus mengikut perbualan dan jenis fail; lebih selamat daripada alat pihak ketiga jenis "bersihkan WeChat".
 - Prinsip: Yang boleh menggunakan bawaan sistem/aplikasi, tidak perlu menggunakan pihak ketiga; yang boleh menandakan mengikut laluan/jenis, jangan guna "satu klik bersih semua". Matlamat pembersihan ialah melepaskan ruang, bukan menyapu bersama data yang penting.
 
 ##### 2. Perisian Praktikal Anti-Gangguan dan Keselamatan
 
-- National Anti-Fraud Center — Sesuai untuk: semua orang, terutamanya warga emas, jawatan yang berkaitan kewangan, mereka yang kerap membeli-belah dalam talian atau menerima panggilan daripada nombor tidak dikenali. Kelebihan utama: Keluaran rasmi, boleh mengaktifkan amaran panggilan masuk, peringatan risiko SMS dan pengesanan URL meragukan; terhubung dengan pangkalan data anti-penipuan polis, merupakan pautan yang paling berpaksikan rasmi dalam "tiga lapis pertahanan".
-- Pusat Keselamatan Jenama / Mobile Manager — Sesuai untuk: pengguna jenama berkenaan. Kelebihan utama: Huawei Mobile Manager, Xiaomi Security Center, OPPO Mobile Manager, vivo Mobile Manager dan sebagainya, mengintegrasikan sekatan gangguan, pengimbasan virus, pengurusan kebenaran dan perlindungan pembayaran, biasanya percuma dan kerjasamanya lebih baik dengan lapisan bawah sistem; tidak disyorkan memasang lagi satu set perisian keselamatan komersial yang menyebabkan konflik kebenaran.
-- Perkhidmatan Anti-Gangguan Operator — Sesuai untuk: pengguna yang dibom oleh panggilan keluar frekuensi tinggi dan panggilan suara AI. Kelebihan utama: China Mobile hantar KTFSR ke 10086 untuk mengaktifkan; China Telecom ikuti "Tianyi Anti-Harassment"; China Unicom tetapkan dalam "Unicom Mobile Manager". Sekatan berlaku di pihak operator, walaupun telefon tidak berdering pun mampu menahan sekumpulan nombor gangguan.
+- National Anti-Fraud Center: Sesuai untuk: semua orang, terutamanya warga emas, jawatan yang berkaitan kewangan, mereka yang kerap membeli-belah dalam talian atau menerima panggilan daripada nombor tidak dikenali. Kelebihan utama: Keluaran rasmi, boleh mengaktifkan amaran panggilan masuk, peringatan risiko SMS dan pengesanan URL meragukan; terhubung dengan pangkalan data anti-penipuan polis, merupakan pautan yang paling berpaksikan rasmi dalam "tiga lapis pertahanan".
+- Pusat Keselamatan Jenama / Mobile Manager: Sesuai untuk: pengguna jenama berkenaan. Kelebihan utama: Huawei Mobile Manager, Xiaomi Security Center, OPPO Mobile Manager, vivo Mobile Manager dan sebagainya, mengintegrasikan sekatan gangguan, pengimbasan virus, pengurusan kebenaran dan perlindungan pembayaran, biasanya percuma dan kerjasamanya lebih baik dengan lapisan bawah sistem; tidak disyorkan memasang lagi satu set perisian keselamatan komersial yang menyebabkan konflik kebenaran.
+- Perkhidmatan Anti-Gangguan Operator: Sesuai untuk: pengguna yang dibom oleh panggilan keluar frekuensi tinggi dan panggilan suara AI. Kelebihan utama: China Mobile hantar KTFSR ke 10086 untuk mengaktifkan; China Telecom ikuti "Tianyi Anti-Harassment"; China Unicom tetapkan dalam "Unicom Mobile Manager". Sekatan berlaku di pihak operator, walaupun telefon tidak berdering pun mampu menahan sekumpulan nombor gangguan.
 - AdGuard — Sesuai untuk: semua pengguna yang terganggu oleh pelbagai pop-up, iklan pra-roll dan iklan dalam aplikasi. Kelebihan utama: Penyekatan iklan peringkat sistem (tidak terhad kepada pelayar), boleh menapis iklan sepanduk dalam aplikasi dan penjejakan skrin pembuka, menjimatkan data dan melajukan pemuatan halaman, versi berbayar menyokong semua peranti.
 - Berhati-hati memasang "suite penuh Pembersihan dan Pecutan / Sekatan Gangguan": Sesetengah pengurus pihak ketiga kekal beroperasi di latar belakang, berulang kali meminta kebenaran kenalan dan SMS, keupayaan sekatan belum tentu lebih kuat daripada sistem, sebaliknya menambah penggunaan bateri dan risiko privasi. Utamakan membuka fungsi bawaan sistem, kemudian barulah mempertimbangkan aplikasi anti-penipuan rasmi.
 
@@ -275,7 +275,7 @@ Selain aplikasi keberhasilan dan kesihatan, yang benar-benar mempengaruhi pengal
 Prinsip pemilihan perisian praktikal
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
-- Sistem dahulu: Sekatan, pembersihan, pengurusan kebenaran — buka dahulu suis bawaan telefon.
+- Sistem dahulu: Sekatan, pembersihan, pengurusan kebenaran, buka dahulu suis bawaan telefon.
 - Tambahan rasmi: National Anti-Fraud Center dan perkhidmatan anti-gangguan operator merupakan saluran rasmi, boleh ditindihkan.
 - Pihak ketiga dengan berjaga-jaga: Satu aplikasi sudah cukup untuk fungsi kategori yang sama, mengelakkan kebenaran bergadang dan rebutan sumber latar belakang.
 - Kurang ialah lebih: Semakin banyak alat dipasang, semakin luas permukaan notifikasi dan kebenaran, semakin tinggi kebarangkalian diganggu oleh "alat itu sendiri".
@@ -334,7 +334,7 @@ Berikut adalah pintu masuk yang disenaraikan mengikut jenama. Nama mungkin sedik
 Cadangan Penindihan Tiga Lapis Perlindungan
 
 {class="mt-1"}
-Harian disyorkan penindihan tiga lapis "sekatan sistem + anti-gangguan operator + National Anti-Fraud Center": sistem mengurus penandaan dan senarai hitam, operator menahan panggilan keluar frekuensi tinggi di sisi rangkaian, pusat anti-penipuan menambah amaran rasmi. Ketiga-tiga lapis tidak semestinya dibuka pada tahap paling ketat semuanya, untuk mengelakkan panggilan kurier, penghantaran makanan dan doktor turut disalahsekat — boleh membenarkan kenalan dan kenalan terkini.
+Harian disyorkan penindihan tiga lapis "sekatan sistem + anti-gangguan operator + National Anti-Fraud Center": sistem mengurus penandaan dan senarai hitam, operator menahan panggilan keluar frekuensi tinggi di sisi rangkaian, pusat anti-penipuan menambah amaran rasmi. Ketiga-tiga lapis tidak semestinya dibuka pada tahap paling ketat semuanya, untuk mengelakkan panggilan kurier, penghantaran makanan dan doktor turut disalahsekat, boleh membenarkan kenalan dan kenalan terkini.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
@@ -370,10 +370,10 @@ Sekatan gangguan menahan "penipuan panggilan telefon", manakala fungsi amaran me
 - Cara menerima melalui pelbagai saluran: Notifikasi sistem telefon + amaran aplikasi cuaca.
 - Ikuti akaun WeChat rasmi "Biro Pengurusan Kecemasan" dan "Biro Meteorologi" di kawasan anda.
 - Saluran berkaitan penerbitan maklumat amaran negara 12379 (SMS/perkhidmatan, bergantung kepada ketersediaan di wilayah).
-- Televisyen, siaran kecemasan, pembesar suara kampung/komuniti — di kawasan gunung dan musim banjir jangan hanya bergantung pada telefon.
+- Televisyen, siaran kecemasan, pembesar suara kampung/komuniti, di kawasan gunung dan musim banjir jangan hanya bergantung pada telefon.
 
 - Peringatan luar dan perjalanan: Hari taufan jangan berhampiran papan iklan, jangan berjalan di bawah pokok; hujan lebat jangan masuk parkir basement, terowong dan jambatan bawah; semasa melancong di kawasan gunung dan bertemu amaran "risiko meteorologi bencana geologi", segera tinggalkan cerun curam dan lembah.
-- Hubungan dengan panduan kecemasan: Selepas bencana apabila terputus hubungan, telefon kehabisan bateri, perlu menggunakan lokasi untuk meminta pertolongan — lihat Bab 32 Senario Gempa/Bencana, serta Bab 7 Komunikasi Satelit dan Tanpa Rangkaian.
+- Hubungan dengan panduan kecemasan: Selepas bencana apabila terputus hubungan, telefon kehabisan bateri, perlu menggunakan lokasi untuk meminta pertolongan, lihat Bab 32 Senario Gempa/Bencana, serta Bab 7 Komunikasi Satelit dan Tanpa Rangkaian.
 
 ##### 3. Amaran Gempa Bumi: Bukan Perkara yang Sama dengan "Ramalan Gempa"
 
@@ -462,44 +462,44 @@ Latihan Amali: Semak Tetapan Amaran dalam 10 Minit
 4. Sahkan bunyi amaran tidak akan disenyapkan sepenuhnya oleh mod Jangan Ganggu; semak juga telefon ibu bapa dengan cara yang sama.
 :::
 
-#### 8. Kerjasama Merentas Peranti: Kawalan Jauh Komputer, Pemindahan Pantas dan Keselamatan Akaun
+8. Kerjasama Merentas Peranti: Kawalan Jauh Komputer, Pemindahan Pantas dan Keselamatan Akaun
 
 Telefon digunakan dengan lancar kebanyakannya kerana ia "bergabung pasukan" dengan komputer dan tablet. Bahagian ini menambah beberapa kategori alat praktikal kekerapan tinggi: telefon mengawal komputer dari jauh, pejabat AI dan kerjasama jarak jauh, wallpaper dinamik, penghantaran pantas LAN, papan keratan merentas peranti, kata laluan dinamik 2FA, serta sambungan antara imbasan dokumen kertas dan jadual tugasan. Untuk hubungan berbilang peranti yang lebih sistematik lihat Bab 17.
 
 ##### 1. Telefon Mengawal Komputer dari Jauh: Sunflower / ToDesk
 
-- Sunflower Remote Control — Sesuai untuk: pengguna yang perlu mengoperasikan Windows atau Mac di rumah/syarikat semasa berada di luar; juga sering digunakan untuk membantu warga emas membaiki telefon dari jauh (lihat Bab 27). Kelebihan utama: Ekosistem dalam negara yang matang, aplikasi telefon mengawal desktop komputer, memindahkan fail, menghidupkan/mematikan komputer (sebahagian memerlukan perkakasan tambahan); versi percuma biasanya cukup untuk kegunaan ringan peribadi.
-- ToDesk — Sesuai untuk: pengguna yang menginginkan sambungan stabil dan kelewatan rendah untuk kerja/operasi jarak jauh. Kelebihan utama: Sambungan menggunakan kod peranti + kata laluan, telefon mengawal komputer, komputer mengawal telefon (bergantung kepada versi), pemindahan fail dan pertukaran monitor berbilang skrin agak lancar, pengalaman melalui pelayan nod di China biasanya lebih baik.
-- Penggunaan asas: Pasang klien di komputer dan log masuk/kekalkan dalam talian → pasang aplikasi di telefon → bina sesi dengan kod pengecaman peranti + kata laluan sambungan (atau akaun yang sama) → operasi desktop melalui pad sentuh/gerak isyarat telefon.
-- Batasan keselamatan (mesti diingat): Orang asing yang mendakwa diri sebagai "khidmat pelanggan/polis-pendakwa-mahkamah/operator" meminta anda memasang Sunflower, ToDesk dan mengawal jauh telefon atau komputer anda — tolak terus, ini teknik penipuan klasik (lihat Bab 27).
+- Sunflower Remote Control, Sesuai untuk: pengguna yang perlu mengoperasikan Windows atau Mac di rumah/syarikat semasa berada di luar; juga sering digunakan untuk membantu warga emas membaiki telefon dari jauh (lihat Bab 27). Kelebihan utama: Ekosistem dalam negara yang matang, aplikasi telefon mengawal desktop komputer, memindahkan fail, menghidupkan/mematikan komputer (sebahagian memerlukan perkakasan tambahan); versi percuma biasanya cukup untuk kegunaan ringan peribadi.
+- ToDesk: Sesuai untuk: pengguna yang menginginkan sambungan stabil dan kelewatan rendah untuk kerja/operasi jarak jauh. Kelebihan utama: Sambungan menggunakan kod peranti + kata laluan, telefon mengawal komputer, komputer mengawal telefon (bergantung kepada versi), pemindahan fail dan pertukaran monitor berbilang skrin agak lancar, pengalaman melalui pelayan nod di China biasanya lebih baik.
+- Penggunaan asas: Pasang klien di komputer dan log masuk/kekalkan dalam talian.pasang aplikasi di telefon.bina sesi dengan kod pengecaman peranti + kata laluan sambungan (atau akaun yang sama).operasi desktop melalui pad sentuh/gerak isyarat telefon.
+- Batasan keselamatan (mesti diingat): Orang asing yang mendakwa diri sebagai "khidmat pelanggan/polis-pendakwa-mahkamah/operator" meminta anda memasang Sunflower, ToDesk dan mengawal jauh telefon atau komputer anda, tolak terus, ini teknik penipuan klasik (lihat Bab 27).
 - Semasa menggunakannya sendiri: Aktifkan pengesahan dua langkah, tukar kata laluan lalai, log keluar akaun atau matikan penjagaan tanpa penyeliaan apabila tidak digunakan; komputer syarikat patuhi peraturan keselamatan organisasi.
 - Bekerja jarak jauh di tempat awam, perhatikan adakah terdapat orang di sekeliling yang mengintip skrin dan kata laluan anda.
 
 ##### 2. Perisian Pejabat AI: Trae / WorkBuddy / Dumate
 
 - Trae — Sesuai untuk: pengguna kerjasama pengaturcaraan dan dokumen, mesra dengan persekitaran bahasa Cina. Kelebihan utama: AI IDE/pembantu pengaturcaraan yang dikeluarkan oleh ByteDance, mod SOLO boleh menjana projek dengan satu ayat; menulis kod dan menyunting dokumen harian menjadi cekap. Jika ia berjalan di komputer, di telefon boleh menggunakan kawalan jauh atau keupayaan rasmi seiring untuk melihat/mengikuti tugasan (rujuk bentuk terkini produk). Butiran lanjut lihat Bab 41 Pemandangan Penuh Alat Pengaturcaraan AI.
-- WorkBuddy — Sesuai untuk: pengguna pekerjaan yang mahu AI membantu menyusun minit mesyuarat, e-mel, laporan dan dokumen pejabat. Kelebihan utama: Pembantu AI untuk senario pejabat, sesuai untuk penulisan frekuensi tinggi seperti "draf—mengilap—merumus"; sebahagian aliran kerja boleh dimulakan di telefon, kerja yang berat diserahkan ke komputer untuk diselesaikan.
-- Dumate — Sesuai untuk: pasukan/individu yang memerlukan kerjasama berbilang orang, pengurusan dokumen dan ilmu yang bersatu. Kelebihan utama: Alat pejabat AI berorientasikan kolaborasi, menekankan penghimpunan bahan dan penyuntingan bersama; telefon boleh melihat dan menyunting secara ringan, susun atur yang kompleks disyorkan diproses di skrin besar komputer.
+- WorkBuddy: Sesuai untuk: pengguna pekerjaan yang mahu AI membantu menyusun minit mesyuarat, e-mel, laporan dan dokumen pejabat. Kelebihan utama: Pembantu AI untuk senario pejabat, sesuai untuk penulisan frekuensi tinggi seperti "draf,mengilap,merumus"; sebahagian aliran kerja boleh dimulakan di telefon, kerja yang berat diserahkan ke komputer untuk diselesaikan.
+- Dumate, Sesuai untuk: pasukan/individu yang memerlukan kerjasama berbilang orang, pengurusan dokumen dan ilmu yang bersatu. Kelebihan utama: Alat pejabat AI berorientasikan kolaborasi, menekankan penghimpunan bahan dan penyuntingan bersama; telefon boleh melihat dan menyunting secara ringan, susun atur yang kompleks disyorkan diproses di skrin besar komputer.
 - Cara memahami "telefon mengawal komputer dari jauh": Banyak keupayaan pejabat AI berjalan di komputer/halaman web; di telefon melalui Sunflower/ToDesk menyambung semula ke komputer, atau menggunakan aplikasi telefon/halaman web produk itu sendiri, anda boleh "mengawal jauh" tugasan AI di komputer semasa dalam perjalanan. Prinsip: pengiraan berat dan dokumen panjang letakkan di komputer; melihat kemajuan dan mengubah beberapa ayat gunakan telefon.
 - Peringatan privasi: Sebelum memuat naik kontrak, kad pengenalan dan data pelanggan, baca dengan jelas terma privasi produk dan keperluan pematuhan syarikat; bahan syarikat utamakan menggunakan alat yang ditetapkan oleh organisasi.
 
 ##### 3. Artificial Desktop: Wallpaper Dinamik miHoYo (Telefon + PC)
 
-- Artificial Desktop — Sesuai untuk: peminat watak miHoYo, mereka yang menginginkan wallpaper dinamik percuma. Kelebihan utama: Aplikasi wallpaper dinamik percuma yang dikeluarkan oleh miHoYo, menyokong telefon dan PC; persembahan Live2D/bergerak watak boleh dijadikan desktop, sesetengah model/sistem boleh menetapkannya sebagai wallpaper skrin kunci atau desktop.
+- Artificial Desktop, Sesuai untuk: peminat watak miHoYo, mereka yang menginginkan wallpaper dinamik percuma. Kelebihan utama: Aplikasi wallpaper dinamik percuma yang dikeluarkan oleh miHoYo, menyokong telefon dan PC; persembahan Live2D/bergerak watak boleh dijadikan desktop, sesetengah model/sistem boleh menetapkannya sebagai wallpaper skrin kunci atau desktop.
 - Menjimatkan bateri dan prestasi: Wallpaper dinamik lebih memakan bateri dan GPU berbanding gambar statik; model lama atau bateri rendah boleh menggunakannya hanya semasa mengecas, atau menurunkan kadar bingkai (jika aplikasi menyediakan pilihan).
 - Sumber pemasangan: Utamakan laman rasmi/gedung aplikasi yang sah, elakkan "versi crack" pihak ketiga yang membungkus trojan; bagi versi PC perhatikan laluan pemasangan dan samada perlu auto-start semasa but.
 
 ##### 4. Pemindahan Pantas Fail LAN: LocalSend / Feige Chuanshu / AirDrop
 
-- LocalSend — Sesuai untuk: penggunaan bercampur Android/Windows/iOS/Mac/Linux, mahu pemindahan pantas merentas platform tanpa melalui cloud awam. Kelebihan utama: Sumber terbuka, sambungan terus LAN, menghantar gambar, video dan dokumen antara satu sama lain di bawah Wi-Fi yang sama, tanpa kabel data, tidak melalui pelayan pengeluar, kelajuannya bergantung pada router.
-- Feige Chuanshu — Sesuai untuk: antara komputer Windows di pejabat, senario pejabat LAN lama. Kelebihan utama: Alat pemindahan/sembang LAN lama yang berpengalaman, sesuai untuk menghantar fail besar dalam intranet; perhatikan memuat turun dari saluran yang sah, intranet syarikat patuhi dasar IT.
-- AirDrop — Sesuai untuk: pengguna iPhone, iPad, Mac. Kelebihan utama: Kongsi satu klik dalam ekosistem Apple, pengecaman Bluetooth + pemindahan terus Wi-Fi, tanpa menggunakan data; boleh menetapkan "Kenalan sahaja" untuk mengurangkan gangguan orang asing.
+- LocalSend, Sesuai untuk: penggunaan bercampur Android/Windows/iOS/Mac/Linux, mahu pemindahan pantas merentas platform tanpa melalui cloud awam. Kelebihan utama: Sumber terbuka, sambungan terus LAN, menghantar gambar, video dan dokumen antara satu sama lain di bawah Wi-Fi yang sama, tanpa kabel data, tidak melalui pelayan pengeluar, kelajuannya bergantung pada router.
+- Feige Chuanshu: Sesuai untuk: antara komputer Windows di pejabat, senario pejabat LAN lama. Kelebihan utama: Alat pemindahan/sembang LAN lama yang berpengalaman, sesuai untuk menghantar fail besar dalam intranet; perhatikan memuat turun dari saluran yang sah, intranet syarikat patuhi dasar IT.
+- AirDrop: Sesuai untuk: pengguna iPhone, iPad, Mac. Kelebihan utama: Kongsi satu klik dalam ekosistem Apple, pengecaman Bluetooth + pemindahan terus Wi-Fi, tanpa menggunakan data; boleh menetapkan "Kenalan sahaja" untuk mengurangkan gangguan orang asing.
 - Tambahan lain: Xiaomi Share, Huawei Share, vivo Share dan penyelesaian jenama lain sangat laju antara peranti jenama yang sama; "File Transfer Assistant" WeChat mudah tetapi terhad oleh saiz fail dan peranti log masuk, bagi fail besar lebih disyorkan LocalSend/AirDrop.
 - Tip penggunaan: Kedua-dua pihak sambung Wi-Fi yang sama; Wi-Fi awam mempunyai risiko untuk fail sensitif, utamakan hotspot peribadi; selepas pemindahan selesai, sahkan di penerima samada fail lengkap.
 
 ##### 5. Segerak Papan Keratan Merentas Peranti: KDE Connect / Pemindahan Telefon-Komputer
 
-- "Universal Clipboard" Apple — Sesuai untuk: pengguna iPhone + Mac. Kelebihan utama: Selepas log masuk Apple ID yang sama dan mengaktifkan Handoff, salin di telefon → tampal terus di Mac (sebaliknya juga boleh), teks dan sebahagian fail boleh.
+- "Universal Clipboard" Apple, Sesuai untuk: pengguna iPhone + Mac. Kelebihan utama: Selepas log masuk Apple ID yang sama dan mengaktifkan Handoff, salin di telefon → tampal terus di Mac (sebaliknya juga boleh), teks dan sebahagian fail boleh.
 - KDE Connect — Sesuai untuk: Android + Windows/Linux/Mac, mereka yang mahu segerak papan keratan sumber terbuka, cerminan notifikasi dan input jarak jauh. Kelebihan utama: Selepas berpadanan di LAN, menyegerakkan papan keratan, menghantar notifikasi telefon ke komputer, menggunakan telefon sebagai penggerak slaid/pad sentuh; data tidak melalui akaun pihak ketiga.
 - "Pemindahan Telefon-Komputer" Jenama: Huawei Multi-screen Collaboration/Super Device, Xiaomi MiaoXiang, vivo Share, OPPO Interconnect, Honor Connect dan sebagainya, sering membawa papan keratan merentas skrin dan seretan fail secara terbina, pengalaman terbaik antara jenama yang sama.
 - Saluran rasmi Windows + Android: "Phone Link / Link to Windows" (evolusi Your Phone) boleh melihat notifikasi dan gambar telefon di komputer, serta salin-tampal dalam senario yang disokong; model seperti Samsung mempunyai integrasi yang lebih mendalam.
@@ -508,8 +508,8 @@ Telefon digunakan dengan lancar kebanyakannya kerana ia "bergabung pasukan" deng
 ##### 6. Kata Laluan Dinamik 2FA: Aegis / Microsoft Authenticator
 
 - Mengapa menggunakan aplikasi pengesah dan bukannya SMS: Kod pengesahan SMS boleh menghadapi rampasan penukaran kad SIM; kata laluan dinamik TOTP dijana secara tempatan mengikut algoritma masa, tidak bergantung pada isyarat nombor telefon, lebih tahan terhadap pemancingan data dan intersepsi (masih perlu mengelak trojan dan tangkapan skrin).
-- Aegis Authenticator — Sesuai untuk: pengguna Android yang memilih sumber terbuka dan kawalan tempatan. Kelebihan utama: Sumber terbuka dan percuma, menyokong sandaran berenkripsi serta import/eksport, antara muka bersih, boleh membuka senarai token dengan cap jari/wajah.
-- Microsoft Authenticator — Sesuai untuk: pengguna akaun Microsoft, Office 365/akaun korporat; merentas iOS/Android. Kelebihan utama: Kelulusan log masuk melalui push, pemantauan kata laluan dan sandaran akaun (bergantung kepada versi produk), integrasi rapat dengan sistem identiti Windows/korporat.
+- Aegis Authenticator, Sesuai untuk: pengguna Android yang memilih sumber terbuka dan kawalan tempatan. Kelebihan utama: Sumber terbuka dan percuma, menyokong sandaran berenkripsi serta import/eksport, antara muka bersih, boleh membuka senarai token dengan cap jari/wajah.
+- Microsoft Authenticator, Sesuai untuk: pengguna akaun Microsoft, Office 365/akaun korporat; merentas iOS/Android. Kelebihan utama: Kelulusan log masuk melalui push, pemantauan kata laluan dan sandaran akaun (bergantung kepada versi produk), integrasi rapat dengan sistem identiti Windows/korporat.
 - Google Authenticator / 2FAS dan seumpamanya: juga biasa dalam ekosistem masing-masing; yang penting ada sandaran sulit supaya token tidak hilang bila tukar telefon.
 - Wajib dilakukan bila tukar telefon: pindahkan daripada telefon lama atau gunakan "kod sandaran/kunci pemulihan" dalam perkhidmatan itu; cetak kod sandaran di atas kertas dan simpan di dua tempat, jangan simpan hanya dalam satu telefon yang sama.
 - Dengan pengurus kata laluan: sebahagian pengurus kata laluan juga boleh menyimpan TOTP - mudah tetapi risiko jadi lebih tertumpu; untuk akaun bernilai tinggi, disyorkan membahagikan tugas antara "pengurus kata laluan + aplikasi pengesah berasingan". Lihat Bab 14 untuk butiran.

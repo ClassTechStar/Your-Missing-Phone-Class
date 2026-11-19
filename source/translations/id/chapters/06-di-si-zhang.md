@@ -2,12 +2,12 @@
 id: di-si-zhang
 num: 04
 part: ji-chu-pian
-nav: Bab 4: Memasang dan Mengelola App
+nav: Bab 4: Sebelum pasang aplikasi, lihat-lihat dulu
 toc: default
 kind: chapter
 ---
 
-### Bab 4: Memasang dan Mengelola Aplikasi — "Paket Keterampilan" Ponsel
+### Bab 4: Sebelum pasang aplikasi, lihat-lihat dulu
 
 {class="chapter-intro mb-4"}
 Aplikasi membuat ponsel bisa melakukan apa saja, tetapi juga perlu dikelola dengan baik. Sama seperti Anda memberikan meja kerja dan mengalokasikan izin kepada karyawan baru, memasang aplikasi juga memerlukan proses standar.
@@ -32,7 +32,7 @@ Fungsi inti Mode Murni (juga disebut "Mode Proteksi") adalah memblokir pemasanga
 
 - <strong>: Tidak bisa membedakan iklan "resmi" dan "palsu", Mode Murni adalah jimat paling aman.</strong> Pengguna yang tidak sensitif terhadap izin aplikasi
 - <strong>: Tidak perlu memasang aplikasi niche, beta, game server luar negeri.</strong> Semua pengguna yang ingin meningkatkan keamanan perangkat
-- <strong>: Bahkan penggemar, lebih baik aktif daripada tidak — jika benar-benar butuh sementara, matikan sebentar saja.</strong>3. Jalur Aktivasi (contoh Huawei/Xiaomi)
+- <strong>: Bahkan penggemar, lebih baik aktif daripada tidak: jika benar-benar butuh sementara, matikan sebentar saja.</strong>3. Jalur Aktivasi (contoh Huawei/Xiaomi)
 
 ##### Huawei/HarmonyOS
 
@@ -50,7 +50,7 @@ Pemindaian virus
 - <strong>: Publikasi memerlukan kualifikasi perusahaan, KTP pribadi atau kartu kredit. Jika ada masalah bisa ditemukan orangnya, bukan "aplikasi hitam".</strong> Pemantauan berkelanjutan
 - <strong>: Aplikasi yang sudah dipublikasikan juga akan terus dipindai ulang, perilaku berbahaya yang baru ditemukan akan dipaksa ditarik.</strong>3. Sumber Pihak Ketiga dan "Parasit Elektronik": Risiko Sangat Tinggi!
 
-#### 3. Sumber Pihak Ketiga dan "Parasit Elektronik": Risiko Sangat Tinggi!
+3. Sumber Pihak Ketiga dan "Parasit Elektronik": Risiko Sangat Tinggi!
 
 "parasit elektronik"<strong>.</strong>.
 
@@ -63,18 +63,18 @@ perangkat lunak "versi crack" yang ditanam trojan <strong>— Anda pikir "menghe
 
 {class="list-disc pl-6 mt-2 space-y-1 text-sm"}
 - Alat abu-abu seperti "suka otomatis", "grabs red packet", "cheat game";
-- Aplikasi "versi internal" yang direkomendasikan "iklan kecil" di grup chat.
+- Aplikasi "versi internal" yang direkomendasikan "iklan kecil" di grup chat
 - Program-program ini tampak bisa digunakan, di belakang mungkin
 
 {class="mt-2"}
-mencuri kontak, membaca SMS, menyadap mikrofon, menambang di latar belakang <strong>. Mode Murni adalah</strong> garis pertahanan pertama <strong>melawan mereka — langsung tidak membiarkan Anda memasangnya.</strong> Saran garis pertahanan kedua:
+mencuri kontak, membaca SMS, menyadap mikrofon, menambang di latar belakang <strong>. Mode Murni adalah</strong> garis pertahanan pertama <strong>melawan mereka, langsung tidak membiarkan Anda memasangnya.</strong> Saran garis pertahanan kedua:
 :::
 
 ##### Pemindaian virus penuh berkala
 
 - <strong>: Gunakan pusat keamanan bawaan ponsel (seperti Huawei Phone Manager, Mi Security Center) memindai sekali sebulan.</strong> Berhati-hati memberikan izin sensitif
-- <strong>: Kontak, SMS, lokasi, kamera, mikrofon — kelima "izin berisiko tinggi" ini harus diaudit ketat.</strong> Perhatikan anomali konsumsi daya dan kuota
-- <strong>: Ponsel tiba-tiba panas, baterai cepat berkurang, kuota berjalan tengah malam — kemungkinan besar ada "parasit" tersembunyi di latar belakang.</strong> Jika terpaksa harus memasang aplikasi pihak ketiga:
+- <strong>: Kontak, SMS, lokasi, kamera, mikrofon, kelima "izin berisiko tinggi" ini harus diaudit ketat.</strong> Perhatikan anomali konsumsi daya dan kuota
+- <strong>: Ponsel tiba-tiba panas, baterai cepat berkurang, kuota berjalan tengah malam: kemungkinan besar ada "parasit" tersembunyi di latar belakang.</strong> Jika terpaksa harus memasang aplikasi pihak ketiga:
 
 Pastikan sumber benar-benar tepercaya.
 
@@ -115,11 +115,11 @@ Opsi izin
 - Lokasi real-time: Mungkin dilacak pergerakannya.
 - Kamera/mikrofon: Mungkin diam-diam mengambil foto/rekaman.
 - Akses file: Mungkin membaca file pribadi Anda.
-- 6. Komponen Paket Instalasi Perangkat Lunak
+- 6. Komponen Paket Instalasi Perangkat Lunak.
 :::
 
 {id="di-si-zhang-apk"}
-#### Pernahkah Anda bertanya-tanya, paket instalasi yang diunduh dari toko aplikasi, apa sebenarnya isinya? Memahami komposisi paket instalasi dapat membantu Anda lebih memahami cara kerja aplikasi, juga dapat membantu saat mengalami masalah mengetahui dari mana harus memeriksa.
+Pernahkah Anda bertanya-tanya, paket instalasi yang diunduh dari toko aplikasi, apa sebenarnya isinya? Memahami komposisi paket instalasi dapat membantu Anda lebih memahami cara kerja aplikasi, juga dapat membantu saat mengalami masalah mengetahui dari mana harus memeriksa.
 
 1\. Struktur File APK Android
 
@@ -191,5 +191,5 @@ Praktik: Audit Izin 3 Aplikasi
 <i class="fas fa-hands mr-2"></i>Pilih 3 aplikasi yang sering digunakan (seperti sosial, belanja, alat), masuk ke halaman manajemen izin aplikasi di [Pengaturan], audit satu per satu, matikan izin sensitif yang tidak perlu atau ubah menjadi "Izinkan hanya saat digunakan".
 
 {class="mt-1"}
-Bab 5: Membuat Ponsel Lebih Memahami Anda — Pengaturan Dasar
+Bab 5: Membuat Ponsel Lebih Memahami Anda, Pengaturan Dasar
 :::

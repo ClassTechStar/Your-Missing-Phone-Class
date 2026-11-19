@@ -34,7 +34,9 @@ RE_SCRIPT_BODY = re.compile(r'<script[^>]*>([\s\S]*?)</script>')
 PATH_FIXES = [('../sw.js', '../../sw.js'),
               ('../manifest.webmanifest', '../../manifest.webmanifest'),
               ('../icons/', '../../icons/'),
-              ('../announcements.json', '../../announcements.json')]
+              ('../announcements.json', '../../announcements.json'),
+              ('../errata.html', '../../errata.html'),
+              ('../languages.html', '../../languages.html')]
 
 
 def _externalize(page: str, assets: dict) -> str:
@@ -185,8 +187,10 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         (page_dir / 'assets' / name).write_text(body, encoding='utf-8', newline='\n')
 
     # 输出根 = 可直接部署的自包含站点树：补齐 PWA 资产（sw/manifest/图标/公告）
+    # 以及勘误页与语言分级页（章末「报告错误」入口指向它们）
     import shutil
-    for fname in ('sw.js', 'manifest.webmanifest', 'announcements.json'):
+    for fname in ('sw.js', 'manifest.webmanifest', 'announcements.json',
+                  'errata.html', 'languages.html'):
         src = root / fname
         if src.is_file():
             shutil.copy2(src, out / fname)
@@ -227,6 +231,9 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     for i, cid in enumerate(order):
         s, e = chapter_spans[cid]
         body = built[s:e]
+        # 正文里的相对路径同样要降级（章末勘误入口 ../errata.html → ../../errata.html）
+        for a, b in PATH_FIXES:
+            body = body.replace(a, b)
         prev_id = order[i - 1] if i > 0 else None
         next_id = order[i + 1] if i + 1 < len(order) else None
         nav_bits = []

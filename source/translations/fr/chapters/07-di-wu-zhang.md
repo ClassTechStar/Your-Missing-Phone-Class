@@ -2,12 +2,12 @@
 id: di-wu-zhang
 num: 05
 part: ji-chu-pian
-nav: Chapitre 5 : Faire en sorte que votre smartphone vous comprenne mieux
+nav: Chapitre 5 : Réglez votre smartphone comme il vous plaît
 toc: default
 kind: chapter
 ---
 
-### Chapitre 5 : Faire en sorte que votre smartphone vous comprenne mieux — paramètres de base
+### Chapitre 5 : Réglez votre smartphone comme il vous plaît
 
 {class="chapter-intro mb-4"}
 Quelques minutes de configuration améliorent considérablement l'expérience. Ces paramètres sont comme « l'accordage » du smartphone, le rendant plus conforme à vos habitudes d'utilisation.
@@ -36,7 +36,7 @@ Changez pour un beau fond d'écran (statique ou animé), l'humeur change aussi. 
 
 <strong>Widgets de bureau</strong>: Météo, agenda, contrôle musical sur le bureau, accès en une étape. iOS et Android le prennent tous deux en charge, appuyez longuement sur un espace vide du bureau pour ajouter.
 
-#### 4. Paramètres d'efficacité : faites du smartphone votre « cerveau externe »
+4. Paramètres d'efficacité : faites du smartphone votre « cerveau externe »
 
 Cette partie regroupe des fonctionnalités « dont on ne peut plus se passer une fois configurées », chacune pouvant améliorer significativement votre efficacité quotidienne.
 
@@ -80,7 +80,7 @@ Cette partie regroupe des fonctionnalités « dont on ne peut plus se passer une
 Après avoir reçu un nouveau smartphone ou une mise à jour majeure, il est recommandé de passer 10 minutes sur ces paramètres :<br> ① Mot de passe d'écran de verrouillage + biométrie ② Groupement des notifications + désactivation des pushes marketing ③ Taille de police / taux de rafraîchissement / mode sombre<br> ④ Clavier / navigateur / messagerie par défaut ⑤ Contact d'urgence / carte médicale ⑥ Paramètres de sauvegarde
 :::
 
-#### 5. Accessibilité et conception universelle : la force de la technologie bienveillante
+5. Accessibilité et conception universelle : la force de la technologie bienveillante
 
 Ne vous laissez pas effrayer par le nom « accessibilité », ces fonctionnalités sont utiles pour tout le monde. Elles ont été initialement conçues pour les personnes en situation de handicap, mais elles sont aussi très utiles pour les personnes valides — mains temporairement occupées à porter un bébé, écouteurs en panne dans le métro, presbytie avec des petits caractères... Elles peuvent toutes vous dépanner. Au fond, la conception universelle illustre l'idée que <strong>la technologie est bienveillante</strong>: permettre à chacun de profiter également de la vie numérique.
 
@@ -103,7 +103,7 @@ Le lecteur d'écran est l'outil principal pour les utilisateurs malvoyants. Il <
 2. Balayer à deux doigts : faire défiler la page entière haut/bas/gauche/droite ;
 3. Double tap à un doigt : activer l'élément en focus (équivalent à « cliquer ») ;
 4. Balayer à trois doigts : changer de page ;
-5. Triple tap à un doigt : agrandir ou sélectionner (différent du triple tap normal).
+5. Triple tap à un doigt : agrandir ou sélectionner (différent du triple tap normal)
 
 {class="mt-1"}
 <strong>Paramètres personnalisés</strong>: [VoiceOver] &gt; [Voix], vous pouvez régler la <strong>vitesse de lecture</strong>(environ 50 % par défaut, réglable à 70-80 % pour une écoute plus fluide), le <strong>ton</strong>, changer de pack vocal. iOS intègre « Voix améliorée » et « Contrôleur vocal », le premier réduit les bruits de respiration et les pauses, pour une écoute plus naturelle.
@@ -124,7 +124,7 @@ Le lecteur d'écran est l'outil principal pour les utilisateurs malvoyants. Il <
 2. Double tap à un doigt : activer l'élément ;
 3. Glisser à deux doigts haut/bas/gauche/droite : faire défiler ;
 4. Simple tap à trois doigts : entrer en mode lecture (lecture continue) ;
-5. Simple tap à quatre doigts : pause/reprise de la lecture.
+5. Simple tap à quatre doigts : pause/reprise de la lecture
 
 {class="mt-1"}
 <strong>Paramètres personnalisés</strong>: [TalkBack] &gt; [Paramètres de synthèse vocale], vous pouvez ajuster la <strong>vitesse</strong>, le <strong>ton</strong>, changer de <strong>moteur vocal</strong>(il est recommandé d'installer le moteur Google de synthèse vocale, lecture plus naturelle).
@@ -168,7 +168,7 @@ Quand le lecteur d'écran rencontre une image, l'approche traditionnelle est de 
 <i class="fas fa-lightbulb mr-2"></i>Scénario d'utilisation
 
 {class="mt-1"}
-Essayez de demander à propos d'une photo de rue « Combien de personnes y a-t-il sur cette image ? Que font-elles ? », ou ouvrez une application de livraison et laissez l'IA lire les noms de plats sur le menu —<strong>c'est vraiment « la technologie rendant la vie plus égalitaire »</strong>.
+Essayez de demander à propos d'une photo de rue « Combien de personnes y a-t-il sur cette image ? Que font-elles ? », ou ouvrez une application de livraison et laissez l'IA lire les noms de plats sur le menu<strong>c'est vraiment « la technologie rendant la vie plus égalitaire »</strong>.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -194,7 +194,7 @@ Les sous-titres en temps réel (Live Captions) sont une fonctionnalité <strong>
 2. La reconnaissance est meilleure quand le locuteur <strong>articule clairement et parle à vitesse modérée</strong>;
 3. Les conversations à plusieurs réduisent la précision, vous pouvez utiliser le mode « n'afficher qu'une seule personne » ;
 4. Prend en charge le mandarin, le cantonais, l'anglais et d'autres langues principales,<strong>la reconnaissance des langues minoritaires est moins bonne</strong>;
-5. En cas de musique de fond ou de voix parasites en cours de parole, la reconnaissance peut être saccadée.
+5. En cas de musique de fond ou de voix parasites en cours de parole, la reconnaissance peut être saccadée
 :::
 
 ##### 5. Double canal pour les appels : voix vers texte + texte vers voix
@@ -217,7 +217,7 @@ Quand l'utilisateur <strong>ne peut ni entendre ni parler</strong>(comme une aph
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>RTT (Real-Time Text)</strong>: Les deux parties doivent le prendre en charge, le texte s'affiche au fur et à mesure de la frappe, sans délai, la plupart des opérateurs le prennent en charge ;
 - <strong>TTY (téléscripteur)</strong>: Nécessite un appareil TTY dédié, progressivement remplacé par RTT ;
-- La <strong>fonction voix vers texte de WeChat/QQ</strong> est aussi une alternative : appuyez longuement sur un message vocal → « Convertir en texte ».
+- La <strong>fonction voix vers texte de WeChat/QQ</strong> est aussi une alternative : appuyez longuement sur un message vocal → « Convertir en texte »
 :::
 
 ##### 6. Fonctionnalités « petites mais utiles » pour tout le monde
@@ -248,5 +248,5 @@ Trouvez un moment libre et faites les expériences suivantes :
 1. Activez <strong>VoiceOver / TalkBack</strong>, essayez de naviguer dans WeChat en glissant à trois doigts sans utiliser vos yeux ;
 2. Ouvrez les <strong>sous-titres en temps réel</strong>, parlez dans le smartphone et vérifiez la précision de la reconnaissance ;
 3. Utilisez le <strong>tap à trois doigts</strong> pour agrandir un texte à 200 %, vivez le quotidien d'un utilisateur malvoyant ;
-4. Désactivez toutes les fonctionnalités précédentes, et réfléchissez à « si j'avais besoin de ces fonctionnalités en permanence, comment je voudrais qu'elles soient conçues ».
+4. Désactivez toutes les fonctionnalités précédentes, et réfléchissez à « si j'avais besoin de ces fonctionnalités en permanence, comment je voudrais qu'elles soient conçues »
 :::

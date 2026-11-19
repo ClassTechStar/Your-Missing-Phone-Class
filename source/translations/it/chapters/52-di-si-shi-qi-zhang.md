@@ -56,11 +56,11 @@ Figura 6: albero decisionale per la scelta degli strumenti di programmazione AI
 
 D1: Non so proprio programmare, posso comunque programmare con l'AI?
 
-Sì. Gli strumenti di programmazione AI del 2026 sono ormai abbastanza potenti da permetterti di descrivere i requisiti in linguaggio naturale e far generare il codice all'AI. Due consigli: primo, inizia dagli strumenti Builder nel cloud (come v0 e Bolt), che non richiedono di configurare l'ambiente di sviluppo; secondo, impara i concetti di base mentre li usi — non serve padroneggiare la sintassi, ma devi riuscire a «capire nel complesso» il codice che l'AI scrive, perché senza questo il collaudo non è efficace.
+Sì. Gli strumenti di programmazione AI del 2026 sono ormai abbastanza potenti da permetterti di descrivere i requisiti in linguaggio naturale , e far generare il codice all'AI. Due consigli: primo, inizia dagli strumenti Builder nel cloud (come v0 e Bolt), che non richiedono di configurare l'ambiente di sviluppo; secondo, impara i concetti di base mentre li usi — non serve padroneggiare la sintassi, ma devi riuscire a «capire nel complesso» il codice che l'AI scrive, perché senza questo il collaudo non è efficace.
 
 D2: Quale linguaggio di programmazione dovrei imparare?
 
-Dipende da cosa vuoi fare. Frontend di siti web — JavaScript/TypeScript; elaborazione dati o AI — Python; backend aziendale — Java o Go. Ma conta di più quest'altro: nell'era della programmazione con l'AI, l'importanza del «linguaggio» sta calando. L'AI ti aiuta con i dettagli di sintassi; quello che devi capire è la «struttura dei programmi» — cos'è una funzione, cos'è un ciclo, cos'è una struttura dati. Sono concetti trasversali ai linguaggi: una volta capiti, passare a qualunque linguaggio è rapido.
+Dipende da cosa vuoi fare. Frontend di siti web, JavaScript/TypeScript; elaborazione dati o AI, Python; backend aziendale — Java o Go. Ma conta di più quest'altro: nell'era della programmazione con l'AI, l'importanza del «linguaggio» sta calando. L'AI ti aiuta con i dettagli di sintassi; quello che devi capire è la «struttura dei programmi», cos'è una funzione, cos'è un ciclo, cos'è una struttura dati. Sono concetti trasversali ai linguaggi: una volta capiti, passare a qualunque linguaggio è rapido.
 
 D3: Il codice scritto dall'AI ha problemi di copyright?
 
@@ -68,11 +68,11 @@ Ad agosto 2026 resta una questione legale controversa. In genere, il codice gene
 
 D4: L'AI sostituirà i programmatori?
 
-Non a breve termine. L'AI non sostituisce la professione del «programmatore», ma il lavoro dello «scrivere codice riga per riga». Come la calcolatrice non ha sostituito i matematici, ma li ha liberati dai calcoli a mano più faticosi. Gli strumenti di programmazione AI spostano i programmatori dallo «scrivere codice» al «pensare ai problemi» — e questo in effetti alza il tetto di valore del programmatore. La competitività del futuro non sarà «quante righe di codice sai scrivere», ma «quanto complessi sono i problemi che sai risolvere».
+Non a breve termine. L'AI non sostituisce la professione del «programmatore», ma il lavoro dello «scrivere codice riga per riga». Come la calcolatrice non ha sostituito i matematici, ma li ha liberati dai calcoli a mano più faticosi. Gli strumenti di programmazione AI spostano i programmatori dallo «scrivere codice» al «pensare ai problemi», e questo in effetti alza il tetto di valore del programmatore. La competitività del futuro non sarà «quante righe di codice sai scrivere», ma «quanto complessi sono i problemi che sai risolvere».
 
 D5: Come capire se l'output dell'AI è corretto?
 
-Con la verifica a tre livelli. Primo livello: verifica funzionale — funziona? Input e output sono giusti? È il minimo indispensabile. Secondo livello: verifica dei casi limite — cosa succede con input vuoti, input lunghissimi, input anomali? Qui emergono i problemi nascosti. Terzo livello: verifica dell'architettura — la struttura del codice è sensata? Ci sono valori scritti direttamente nel codice? È facile da estendere? Serve un minimo di giudizio tecnico. Se non riesci a valutare il terzo livello, fai almeno i primi due — se gira e i casi limite si comportano, sei già davanti alla maggior parte dei principianti.
+Con la verifica a tre livelli. Primo livello: verifica funzionale, funziona? Input e output sono giusti? È il minimo indispensabile. Secondo livello: verifica dei casi limite — cosa succede con input vuoti, input lunghissimi, input anomali? Qui emergono i problemi nascosti. Terzo livello: verifica dell'architettura, la struttura del codice è sensata? Ci sono valori scritti direttamente nel codice? È facile da estendere? Serve un minimo di giudizio tecnico. Se non riesci a valutare il terzo livello, fai almeno i primi due, se gira e i casi limite si comportano, sei già davanti alla maggior parte dei principianti.
 
 #### 4. Risorse di studio consigliate
 
@@ -87,16 +87,16 @@ Ecco le risorse di studio consigliate ad agosto 2026. Nota bene: i link delle ri
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Elenco delle risorse di studio consigliate
 
-#### 5. Conclusione: gli strumenti in mano, la metodologia nel cuore
+5. Conclusione: gli strumenti in mano, la metodologia nel cuore
 
-Torniamo alla convinzione centrale di questo libro: gli strumenti si aggiornano ogni tre mesi, la metodologia evolve solo ogni tre anni. Oggi, ad agosto 2026, gli strumenti di programmazione AI sono potenti fino a lasciare a bocca aperta: puoi creare un sito con una frase, generare un'applicazione full stack con una descrizione, completare un refactoring complesso con una sola istruzione. Ma più gli strumenti sono potenti, più spicca l'importanza della metodologia — perché la potenza degli strumenti amplifica ognuna delle tue decisioni.
+Torniamo alla convinzione centrale di questo libro: gli strumenti si aggiornano ogni tre mesi, la metodologia evolve solo ogni tre anni. Oggi, ad agosto 2026, gli strumenti di programmazione AI sono potenti fino a lasciare a bocca aperta: puoi creare un sito con una frase, generare un'applicazione full stack con una descrizione, completare un refactoring complesso con una sola istruzione. Ma più gli strumenti sono potenti, più spicca l'importanza della metodologia: perché la potenza degli strumenti amplifica ognuna delle tue decisioni.
 
-Se i tuoi requisiti sono chiari, l'AI li realizza con efficienza; se sono vaghi, l'AI costruisce con la stessa efficienza la cosa sbagliata. Se segui la semplicità prima di tutto, l'AI ti aiuta a validare le idee in fretta; se vuoi tutto e subito, l'AI ti aiuta ad accumulare debito tecnico altrettanto in fretta. Se modifichi con precisione, l'AI ottimizza il codice come un chirurgo; se le istruzioni sono vaghe, l'AI introduce bug a colpi d'ascia.
+Se i tuoi requisiti sono chiari, l'AI li realizza con efficienza; se sono vaghi, l'AI costruisce con la stessa efficienza la cosa sbagliata. Quando segui la semplicità prima di tutto, l'AI ti aiuta a validare le idee in fretta; se vuoi tutto e subito, l'AI ti aiuta ad accumulare debito tecnico altrettanto in fretta. Modificando con precisione, l'AI ottimizza il codice come un chirurgo; se le istruzioni sono vaghe, l'AI introduce bug a colpi d'ascia.
 
-Ecco perché questo libro dedica la maggior parte dello spazio alla metodologia e non all'uso degli strumenti. Non perché gli strumenti non contino, ma perché la metodologia è il «moltiplicatore» degli strumenti — migliore è la metodologia, maggiore è il valore degli strumenti; con una metodologia pari a zero, anche gli strumenti più potenti valgono zero, perché zero moltiplicato per qualunque numero resta zero.
+Ecco perché questo libro dedica la maggior parte dello spazio alla metodologia e non all'uso degli strumenti. Non perché gli strumenti non contino, ma perché la metodologia è il «moltiplicatore» degli strumenti, migliore è la metodologia, maggiore è il valore degli strumenti; con una metodologia pari a zero, anche gli strumenti più potenti valgono zero, perché zero moltiplicato per qualunque numero resta zero.
 
 :::inline div .quote-line
-Non programmi più da solo. Tu sei il comandante e l'IA è il tuo esercito; la qualità del tuo pensiero determina la forza del tuo esercito. Da oggi armati di metodo e amplifica le tue capacità con gli strumenti — questo è l'intero segreto della programmazione con l'IA.
+Non programmi più da solo. Tu sei il comandante e l'IA è il tuo esercito; la qualità del tuo pensiero determina la forza del tuo esercito. Da oggi armati di metodo e amplifica le tue capacità con gli strumenti, questo è l'intero segreto della programmazione con l'IA.
 :::
 
 #### Bibliografia

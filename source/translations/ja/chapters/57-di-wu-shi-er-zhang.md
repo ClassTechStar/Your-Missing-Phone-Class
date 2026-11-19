@@ -133,7 +133,7 @@ navController.popBackStack()              // 前のページへ戻る
 やってみよう：カウンターに「記憶」をつける
 
 {class="mt-1"}
-第五十一章のカウンターを改造してみましょう。① remember を rememberSaveable に替え、画面を回転しても数字が残ることを確認する。②「このアプリについて」ボタンを追加し、Navigationで2つ目の画面へ遷移してバージョン番号を表示する。③ 両方の画面の onCreate/onPause にログ出力（Log.d）を入れ、Logcatでライフサイクルが呼ばれる順番を観察する。この3つができれば、ライフサイクルはもう机上の知識ではありません。
+第五十一章のカウンターを改造してみましょう。① remember を rememberSaveable に替え、画面を回転しても数字が残ることを確認する。②「このアプリについて」ボタンを追加し、Navigationで2つ目の画面へ遷移してバージョン番号を表示する。③ 両方の画面の onCreate/onPause にログ出力（Log.d）を入れ。Logcatでライフサイクルが呼ばれる順番を観察する。この3つができれば、ライフサイクルはもう机上の知識ではありません。
 :::
 
 ::: div .chapter-summary
@@ -141,7 +141,13 @@ navController.popBackStack()              // 前のページへ戻る
 本章のまとめ
 
 - 4大コンポーネント：Activity（顔）・Service（バックグラウンド）・BroadcastReceiver（スピーカー）・ContentProvider（資料棚）
-- ライフサイクルの6つのコールバック：onCreate → onStart → onResume → onPause → onStop → onDestroy
+ライフサイクルの6つのコールバック：
+1. onCreate
+2. onStart
+3. onResume
+4. onPause
+5. onStop
+6. onDestroy
 - 画面回転でActivityは破棄・再生成される：rememberSaveableで状態を守る
 - Intentは「切符」：明示的は自アプリの画面遷移、暗黙的はシステム機能の呼び出し
 - 複数画面はNavigation Composeで：NavHost＋composableルート

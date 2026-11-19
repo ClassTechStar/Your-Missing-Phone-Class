@@ -2,15 +2,15 @@
 id: di-si-shi-san-zhang
 num: 43
 part: ai-biancheng-pian
-nav: Bab 43: Kejuruteraan Perbualan—Teknik Perbualan Berkesan
+nav: Bab 43: Bercakap dengan AI supaya dia faham
 toc: default
 kind: chapter
 ---
 
-### Bab 43: Kejuruteraan Perbualan — Teknik Berbual untuk Kerjasama Cekap dengan AI
+### Bab 43: Bercakap dengan AI supaya dia faham
 
 {class="chapter-intro mb-4"}
-Perbualan ialah cara interaksi teras dalam pengaturcaraan AI. Tetapi ingat: "berbual" tidak sama dengan "bercakap santai" — perbualan pengaturcaraan AI yang cekap ialah teknik komunikasi berstruktur, dan kita namakan "kejuruteraan perbualan". Ia mengkaji: bagaimana memperoleh output kod berkualiti tertinggi dengan bilangan giliran perbualan paling sedikit. Terus terang, bab ini mengajar anda cara "bercakap jelas" dengan AI.
+Perbualan ialah cara interaksi teras dalam pengaturcaraan AI. Tetapi ingat: "berbual" tidak sama dengan "bercakap santai", perbualan pengaturcaraan AI yang cekap ialah teknik komunikasi berstruktur, dan kita namakan "kejuruteraan perbualan". Ia mengkaji: bagaimana memperoleh output kod berkualiti tertinggi dengan bilangan giliran perbualan paling sedikit. Terus terang, bab ini mengajar anda cara "bercakap jelas" dengan AI.
 
 #### 1. Strategi lapisan Prompt
 
@@ -25,7 +25,7 @@ Perbualan dengan AI boleh dibahagikan kepada tiga lapisan, dan setiap lapisan me
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Tiga lapisan Prompt perbualan
 
-Prompt lapisan sistem biasanya ditulis dalam fail memori projek (contohnya CLAUDE.md) dan tidak perlu diulang pada setiap perbualan. Lapisan tugasan ialah yang paling kerap anda gunakan dalam perbualan — ia patut mengandungi tiga unsur: "buat apa", "guna teknologi apa" dan "ada kekangan apa". Lapisan maklum balas paling menguji kemahiran — maklum balas yang baik membolehkan AI membetulkan dengan tepat; maklum balas yang buruk hanya membuatnya meneka semula.
+Prompt lapisan sistem biasanya ditulis dalam fail memori projek (contohnya CLAUDE.md) dan tidak perlu diulang pada setiap perbualan. Lapisan tugasan ialah yang paling kerap anda gunakan dalam perbualan — ia patut mengandungi tiga unsur: "buat apa". "guna teknologi apa" dan "ada kekangan apa". Lapisan maklum balas paling menguji kemahiran — maklum balas yang baik membolehkan AI membetulkan dengan tepat; maklum balas yang buruk hanya membuatnya meneka semula.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -35,14 +35,14 @@ Tip: Tiga senjata utama maklum balas
 Templat maklum balas yang praktikal ialah "nyatakan masalah + terangkan jangkaan + berikan konteks". Contohnya: "Pengendalian ralat pada baris 25 hanya menggunakan console.log (nyatakan masalah); persekitaran pengeluaran patut menggunakan pengendali ralat yang seragam dan memulangkan mesej mesra pengguna (terangkan jangkaan); projek ini ada fungsi handleError yang boleh digunakan (berikan konteks)". Maklum balas sebegini sepuluh kali lebih berkesan daripada "ubah sikit pengendalian ralat".
 :::
 
-#### 2. Perbualan penyahpepijatan: cara menerangkan ralat supaya AI cepat mengenal pasti
+2. Perbualan penyahpepijatan: cara menerangkan ralat supaya AI cepat mengenal pasti
 
 Penyahpepijatan ialah salah satu situasi paling kerap dalam pengaturcaraan AI. Apabila anda menemui bug, cara anda menerangkan masalah kepada AI terus menentukan sama ada ia dapat membantu anda mengenal pasti dan membaikinya dengan cepat. Berikut ialah empat perkara penting dalam perbualan penyahpepijatan:
 
 1. Tunjukkan maklumat asal kepada AI, bukan penerangan ulangan anda. Rujuk terus log ralat, tindanan pengecualian (exception stack) dan kod berkaitan kepada AI menggunakan @, bukan menerangkannya dengan "macam ada ralat entah apa". AI melihat maklumat asal jauh lebih tepat berbanding melihat tafsiran anda.
-2. Terangkan perbezaan antara "tingkah laku dijangka" dan "tingkah laku sebenar". "Saya jangka selepas butang diklik ia akan pergi ke halaman utama (dijangka), tetapi sebenarnya selepas diklik halaman langsung tiada tindak balas (sebenar)" — penerangan sedemikian jauh lebih berguna daripada "butang rosak".
-3. Berikan langkah penghasilan semula. "Masukkan nama pengguna dahulu, kemudian klik butang log masuk, maka ralat ini akan muncul" — langkah penghasilan semula membolehkan AI mensimulasikan laluan operasi anda, dan lebih mudah mengenal pasti masalah.
-4. Nyatakan dengan jelas apa yang telah anda cuba. "Saya sudah semak permintaan rangkaian; ia memulangkan 200 dan data normal" — ini membantu AI mengetepikan arah yang telah disahkan, tanpa membazir masa mengulang siasatan.
+2. Terangkan perbezaan antara "tingkah laku dijangka" dan "tingkah laku sebenar". "Saya jangka selepas butang diklik ia akan pergi ke halaman utama (dijangka), tetapi sebenarnya selepas diklik halaman langsung tiada tindak balas (sebenar)", penerangan sedemikian jauh lebih berguna daripada "butang rosak".
+3. Berikan langkah penghasilan semula. "Masukkan nama pengguna dahulu, kemudian klik butang log masuk, maka ralat ini akan muncul", langkah penghasilan semula membolehkan AI mensimulasikan laluan operasi anda, dan lebih mudah mengenal pasti masalah.
+4. Nyatakan dengan jelas apa yang telah anda cuba. "Saya sudah semak permintaan rangkaian; ia memulangkan 200 dan data normal", ini membantu AI mengetepikan arah yang telah disahkan, tanpa membazir masa mengulang siasatan.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -62,13 +62,13 @@ Selepas butang log masuk diklik, halaman langsung tiada tindak balas. Tingkah la
 :::
 :::
 
-#### 3. Strategi iterasi: langkah kecil pantas vs refaktor besar-besaran
+3. Strategi iterasi: langkah kecil pantas vs refaktor besar-besaran
 
 Iterasi dalam pengaturcaraan AI mempunyai dua strategi asas, sesuai untuk situasi berbeza. Memahami perbezaannya membantu anda membuat pilihan yang betul dalam keadaan berbeza.
 
 Strategi "langkah kecil pantas" sesuai untuk pembangunan fungsi dan pembaikan bug. Intipatinya: setiap kali, minta AI membuat satu ubah suai kecil sahaja, dan buat yang berikutnya selepas pengesahan lulus. Kelebihannya: setiap langkah boleh disahkan dan boleh dikembalikan, risiko terkawal; kekurangannya: kelajuan lebih perlahan dan memerlukan interaksi perbualan yang kerap. Sesuai untuk: pembangunan fungsi baharu, penerokaan ketika tidak pasti penyelesaian optimum, dan iterasi berhati-hati ketika kurang yakin dengan output AI.
 
-Strategi "refaktor besar-besaran" sesuai untuk ubah suai berskala besar apabila sasaran sudah jelas. Intipatinya: terangkan sasaran lengkap sekali gus, dan biarkan AI merancang serta melaksanakan keseluruhan ubah suai secara autonomi. Kelebihannya: kelajuan tinggi; AI dapat melihat gambaran menyeluruh untuk membuat keputusan seni bina yang lebih baik. Kekurangannya: risiko tinggi; jika tafsiran AI tersasar, kos pembetulan besar. Sesuai untuk: naik taraf seni bina yang jelas, migrasi kod berskala besar dan refaktor yang dijamin dengan ujian secukupnya.
+Strategi "refaktor besar-besaran" sesuai untuk ubah suai berskala besar apabila sasaran sudah jelas. Intipatinya: terangkan sasaran lengkap sekali gus. dan biarkan AI merancang serta melaksanakan keseluruhan ubah suai secara autonomi. Kelebihannya: kelajuan tinggi; AI dapat melihat gambaran menyeluruh untuk membuat keputusan seni bina yang lebih baik. Kekurangannya: risiko tinggi; jika tafsiran AI tersasar, kos pembetulan besar. Sesuai untuk: naik taraf seni bina yang jelas, migrasi kod berskala besar dan refaktor yang dijamin dengan ujian secukupnya.
 
 ::: div .overflow-x-auto
 ```html
@@ -85,20 +85,20 @@ Dalam amalan, kedua-dua strategi sering digunakan secara bergabung. Contohnya, s
 
 Seiring bertambahnya bilangan giliran perbualan, anda perlu menguruskan konteks perbualan secara proaktif untuk mengelakkan masalah "AI terlupa maklumat awal". Berikut ialah beberapa teknik pengurusan konteks yang praktikal.
 
-Pertama, "sauhkan" maklumat penting. Pada permulaan perbualan, tuliskan kekangan penting dengan jelas, dan ulanginya semula pada masa yang sesuai dalam perbualan seterusnya. Contohnya "ingat, data kita disimpan dalam localStorage, tidak boleh guna pangkalan data" — ulangkan kekangan ini dalam permintaan ubah suai yang berkaitan untuk mengelakkan AI terlupa.
+Pertama, "sauhkan" maklumat penting. Pada permulaan perbualan, tuliskan kekangan penting dengan jelas, dan ulanginya semula pada masa yang sesuai dalam perbualan seterusnya. Contohnya "ingat, data kita disimpan dalam localStorage, tidak boleh guna pangkalan data": ulangkan kekangan ini dalam permintaan ubah suai yang berkaitan untuk mengelakkan AI terlupa.
 
 Kedua, gunakan dengan bijak teknik "ringkasan-sambungan". Apabila perbualan menjadi sangat panjang, minta AI "meringkaskan kemajuan setakat ini dan senarai tugas yang belum selesai", kemudian buka perbualan baharu dengan ringkasan itu sebagai titik permulaan. Dengan itu, konteks penting dikekalkan dan kemerosotan perbualan panjang dielakkan.
 
 Ketiga, "satu perbualan satu tugasan". Ini strategi pengurusan konteks paling mudah dan juga paling berkesan. Setiap perbualan hanya mengendalikan satu tugasan atau satu fungsi; selepas selesai, buka perbualan baharu untuk yang berikutnya. Ini secara semula jadi mengehadkan panjang perbualan dan mengekalkan kejelasan konteks.
 
-Keempat, manfaatkan fungsi pengurusan konteks pada alat. Kebanyakan alat pengaturcaraan AI mempunyai butang "kosongkan konteks" atau "sesi baharu" — apabila anda berasa kualiti jawapan AI menurun, jangan teragak-agak, buka sesi baharu. Kehilangan sebahagian sejarah perbualan jauh lebih baik daripada terus berjuang dalam konteks yang telah merosot.
+Keempat, manfaatkan fungsi pengurusan konteks pada alat ini. Hampir semua alat pengaturcaraan AI mempunyai butang "kosongkan konteks" atau "sesi baharu", apabila anda berasa kualiti jawapan AI menurun, jangan teragak-agak, buka sesi baharu. Kehilangan sebahagian sejarah perbualan jauh lebih baik daripada terus berjuang dalam konteks yang telah merosot.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mari praktik: menjadi "pesakit" untuk AI anda sekali
 
 {class="mt-1"}
-Sengaja bina satu halaman kecil di dalam pelayar dan ciptakan satu bug (contohnya butang tiada tindak balas). Kemudian, mengikut format "penerangan penyahpepijatan yang baik" dalam bab ini, terangkan kepada AI secara lengkap sekali: maklumat asal, dijangka vs sebenar, langkah penghasilan semula dan perkara yang sudah disiasat. Rasakan perbezaan kelajuan AI mengenal pasti masalah — anda akan memahami mengapa "menerangkan masalah" itu sendiri satu kemahiran.
+Sengaja bina satu halaman kecil di dalam pelayar dan ciptakan satu bug (contohnya butang tiada tindak balas). Kemudian, mengikut format "penerangan penyahpepijatan yang baik" dalam bab ini, terangkan kepada AI secara lengkap sekali: maklumat asal, dijangka vs sebenar, langkah penghasilan semula dan perkara yang sudah disiasat. Rasakan perbezaan kelajuan AI mengenal pasti masalah, anda akan memahami mengapa "menerangkan masalah" itu sendiri satu kemahiran.
 :::
 
 ::: div .chapter-summary

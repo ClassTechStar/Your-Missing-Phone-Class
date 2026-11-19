@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十一章：界面开发——Jetpack Compose 入门
 
 {class="chapter-intro mb-4"}
-界面是用户看到的一切。在 Compose 出现之前，安卓界面用 XML 写——像填空题一样繁琐；2021 年谷歌推出了 <strong>Jetpack Compose</strong>：直接用 Kotlin 代码"画"界面，所见即所得，改一行代码预览立刻刷新。到 2026 年，Compose 已是新项目的绝对主流。这一章，咱们学会"画画"。
+界面是用户看到的一切。在 Compose 出现之前，安卓界面用 XML 写，像填空题一样繁琐；2021 年谷歌推出了 <strong>Jetpack Compose</strong>：直接用 Kotlin 代码"画"界面，所见即所得，改一行代码预览立刻刷新。到 2026 年，Compose 已是新项目的绝对主流。这一章，咱们学会"画画"。
 
 #### 一、Compose 的思想：界面就是函数
 
@@ -80,14 +80,14 @@ fun BasicWidgets() {
 ```
 :::
 
-输入框那两行里出现了 <code class="inline">remember { mutableStateOf("") }</code>——这就是 Compose 的"状态"魔法，本章第五节细讲。现在先混个脸熟。
+本章第四节细讲
 
 #### 三、布局三件套：Column、Row、Box
 
 组件有了，怎么摆放？记住三个"盒子"：
 
-- <strong>Column</strong>：竖着排（像排队打饭）；
-- <strong>Row</strong>：横着排（像并排坐）；
+- <strong>Column</strong>：竖着排（像排队打饭）。
+- <strong>Row</strong>：横着排（像并排坐）。
 - <strong>Box</strong>：叠着放（像扑克牌摞一起，适合做角标、遮罩）。
 
 ::: div .code-block
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-想让布局更好看？给组件加 <strong>Modifier</strong>（修饰符）——它就像给积木"上妆"：
+想让布局更好看？给组件加 <strong>Modifier</strong>（修饰符），它就像给积木"上妆"：
 
 ::: div .code-block
 :::inline div .code-head
@@ -182,8 +182,8 @@ fun Counter() {
 
 模板项目里的 <code class="inline">MyFirstAppTheme { ... }</code> 就是主题。它基于 <strong>Material 3</strong> 设计规范，帮你把颜色、字体、形状统一管理。支持深色模式只需三步：
 
-1. 在主题里定义好浅色/深色两套配色（模板已自动生成 <code class="inline">ColorScheme</code>）；
-2. 系统切到深色模式时，<code class="inline">isSystemInDarkTheme()</code> 自动判断；
+1. 在主题里定义好浅色/深色两套配色（模板已自动生成 <code class="inline">ColorScheme</code>）。
+2. 系统切到深色模式时，<code class="inline">isSystemInDarkTheme()</code> 自动判断。
 3. 用主题提供的颜色（如 <code class="inline">MaterialTheme.colorScheme.primary</code>）而不是写死颜色值。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -198,8 +198,8 @@ Android 12 起的"Material You"能让 App 从你的壁纸里提取颜色。Compo
 
 Compose 三个开发体验上的"外挂"，用上就回不去：
 
-- <strong>@Preview 预览</strong>：给 Composable 加 <code class="inline">@Preview</code> 注解，Android Studio 右侧立刻渲染出界面——改代码所见即所得，不用每次装到手机上；
-- <strong>实时编辑（Live Edit）</strong>：2026 年的 Android Studio 支持在模拟器/真机上"热更新"部分改动，改文字颜色之类的小调整，设备上秒变；
+- <strong>@Preview 预览</strong>：给 Composable 加 <code class="inline">@Preview</code> 注解，Android Studio 右侧立刻渲染出界面，改代码所见即所得，不用每次装到手机上。
+- <strong>实时编辑（Live Edit）</strong>：2026 年的 Android Studio 支持在模拟器/真机上"热更新"部分改动，改文字颜色之类的小调整，设备上秒变。
 - <strong>动画 API</strong>：<code class="inline">animateFloatAsState</code>、<code class="inline">AnimatedVisibility</code> 几行代码就能让元素平滑过渡——"高级感"往往就差这几十行。
 
 ::: div .code-block
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 <i class="fas fa-lightbulb mr-2"></i>小贴士：先功能后动画
 
 {class="mt-1"}
-新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效——这也是"简单至上"原则：<strong>动画是锦上添花，功能是雪中送炭</strong>。
+新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效，这也是"简单至上"原则：<strong>动画是锦上添花，功能是雪中送炭</strong>。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

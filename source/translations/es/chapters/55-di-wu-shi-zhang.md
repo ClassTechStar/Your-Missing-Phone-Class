@@ -172,7 +172,7 @@ val twin = me.copy(name = "Luisa")   // copia y cambia un campo
 
 Cuando hagas tu app de gastos, cada movimiento será una data class: data class Record(val amount: Double, val category: String, val date: String). ¿Te das cuenta? Ya sabes escribir la estructura de código de un proyecto de verdad.
 
-#### 6. Lambdas y funciones de orden superior: el "azúcar sintáctico" de Kotlin
+6. Lambdas y funciones de orden superior: el "azúcar sintáctico" de Kotlin
 
 En el código Android verás a diario esas "funciones sin nombre" con forma de { ... }; se llaman lambdas (funciones anónimas). El onClick = { count++ } de un Button es una lambda: empaqueta en un bloque "qué hacer al pulsar" y se lo entrega al botón.
 
@@ -198,7 +198,7 @@ val bigBills = bills.filter { it > 50 }.sorted()
 
 Apúntate estos "combos" de colecciones de uso diario: filter (filtrar), map (transformar), sorted (ordenar) y sum (sumar). El 90 % del trabajo con listas que harás en el futuro es combinación de estas cuatro jugadas. La filosofía de Kotlin es: si una lógica se puede decir en una frase, jamás la escribas en cinco.
 
-#### 7. Tarjeta de repaso rápido de sintaxis para quien parte de cero
+7. Tarjeta de repaso rápido de sintaxis para quien parte de cero
 
 No intentes memorizar toda la sintaxis en un día. Guarda esta tarjeta y consúltala mientras escribes código: en dos semanas te saldrá natural:
 

@@ -2,17 +2,17 @@
 id: di-er-shi-jiu-zhang
 num: 29
 part: shi-zhan-pian
-nav: Kapitel 29:Digitale Gesundheit – eine gesunde Beziehung zum Handy
+nav: Kapitel 29: Wissen Sie, wie lange Sie das Handy nutzen?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 29:Digitale Gesundheit – Eine gesunde Beziehung zum Smartphone aufbauen
+### Kapitel 29: Wissen Sie, wie lange Sie das Handy nutzen?
 
 {class="chapter-intro mb-4"}
 Kennen Sie das: Sie wollten nur 5 Minuten Kurzvideos schauen, schauen auf – und zwei Stunden sind vergangen? Oder Sie liegen abends im Bett, scrollen durchs Handy, werden immer wacher und schlafen erst um zwei Uhr nachts ein? Das Handy hat unser Leben verändert, aber es verschlingt unauffällig unsere Zeit und Gesundheit. Dieses Kapitel will Sie nicht dazu bringen, "das Handy aufzugeben", sondern Ihnen helfen, die Kontrolle zurückzugewinnen.
 
-#### I. Schauen Sie zuerst auf Ihre "Bildschirmzeit" —— die Zahlen öffnen die Augen
+I. Schauen Sie zuerst auf Ihre "Bildschirmzeit" —— die Zahlen öffnen die Augen
 
 Bevor Sie etwas ändern, müssen Sie den Ist-Zustand kennen. Das Handy hat eine Funktion, die viele nie geöffnet haben: "Bildschirmzeit" (iPhone) oder "Digitale Gesundheit" (Android). Sie zeigt, wie viel Zeit Sie täglich auf dem Handy verbringen und wofür.
 
@@ -21,7 +21,7 @@ Bevor Sie etwas ändern, müssen Sie den Ist-Zustand kennen. Das Handy hat eine 
 
 <strong>80 % derer, die diese Daten zum ersten Mal sehen, sind schockiert</strong>. Ein Freund stellte fest, dass er täglich über 4 Stunden auf Douyin (TikTok) verbringt – das sind 28 Stunden pro Woche, so viel wie ein Nebenjob. Dieser "digitale Schock" ist der erste Schritt zur Veränderung.
 
-#### II. App-"Nutzungslimits" setzen —— einen Geschwindigkeitsbegrenzer einbauen
+II. App-"Nutzungslimits" setzen —— einen Geschwindigkeitsbegrenzer einbauen
 
 Wenn Sie wissen, wo das Problem liegt, können Sie gezielt Limits setzen. Sie müssen die App nicht löschen – geben Sie ihr einfach ein "tägliches Kontingent":
 
@@ -29,7 +29,7 @@ Wenn Sie wissen, wo das Problem liegt, können Sie gezielt Limits setzen. Sie m�
 2. <strong>Android</strong>: Einstellungen &gt; Digitale Gesundheit &gt; App-Timer. App auswählen und tägliches Limit setzen – danach wird das Symbol grau.
 3. <strong>Tipp</strong>: Setzen Sie das Limit-Passwort auf eines, das Sie selten verwenden und schwer zu merken ist. Ist es zu leicht, werden Sie jedes Mal "verlängern" – und das Limit ist wirkungslos.
 
-#### III. "Nicht stören" richtig nutzen —— nicht Benachrichtigungen ausschalten, sondern Stress
+III. "Nicht stören" richtig nutzen —— nicht Benachrichtigungen ausschalten, sondern Stress
 
 Viele Handys piepen dutzende Male am Tag, und jedes Mal wird die Aufmerksamkeit unterbrochen. Sie denken, Sie "schauen nur kurz" – aber nach jeder Unterbrechung braucht man 15–20 Minuten, um sich wieder zu konzentrieren. "Nicht stören" heißt nicht "unerreichbar sein", sondern hilft Ihnen, die Aufmerksamkeit zurückzugewinnen.
 
@@ -37,7 +37,7 @@ Viele Handys piepen dutzende Male am Tag, und jedes Mal wird die Aufmerksamkeit 
 - <strong>Wichtige Kontakte durchlassen</strong>: In den "Nicht stören"-Einstellungen "Anrufe erlauben" auf "Favoriten" oder "Wiederholte Anrufe" setzen (zweiter Anruf innerhalb von 3 Minuten klingelt normal). So verpassen Sie keine Notrufe der Familie, werden aber nicht von Werbeanrufen gestört.
 - <strong>Arbeits-Fokus-Modus</strong>: Der "Fokus" des iPhone lässt benutzerdefinierte Szenen einstellen – z. B. im Modus "Arbeit" nur arbeitsbezogene App-Benachrichtigungen, im Modus "Lesen" alle Benachrichtigungen stumm.
 
-#### IV. Augenschutz durch Gewohnheit, nicht durch Apps —— die 20-20-20-Regel
+IV. Augenschutz durch Gewohnheit, nicht durch Apps —— die 20-20-20-Regel
 
 Wer lange aufs Handy schaut, bekommt trockene und schmerzende Augen – das ist unvermeidlich. Der Augenschutzmodus (Blaufilter) hilft ein wenig, aber wirklich wirksam ist, die Sehgewohnheiten zu ändern:
 
@@ -61,7 +61,7 @@ Wenn Sie mit gesenktem Kopf aufs Handy schauen, lastet das 5–6-fache des norma
 - <strong>Alle 30 Minuten den Nacken bewegen</strong>: Langsam den Kopf nach links drehen bis zum Anschlag, 3 Sekunden halten, zurück; dann nach rechts, 3 Sekunden halten. 5-mal wiederholen. Danach das "Reiszeichen-Mal-Exercise" – mit dem Kinn das Zeichen „Mi“ in die Luft schreiben.
 - <strong>3 Minuten an der Wand stehen</strong>: Hinterkopf, Schulterblätter, Gesäß und Fersen an die Wand pressen – täglich 3 Minuten stehen korrigiert wirksam die Haltung.
 
-#### VI. Schlaf und Handy —— die Gewohnheit, die Sie im Schlafzimmer am meisten ändern sollten
+VI. Schlaf und Handy —— die Gewohnheit, die Sie im Schlafzimmer am meisten ändern sollten
 
 Das blaue Licht des Handybildschirms hemmt die Melatoninausschüttung und macht Sie "immer wacher". Viele meinen: "Ich werde beim Scrollen müde", aber in Wirklichkeit täuscht das blaue Licht das Gehirn – wenn Sie das Handy weglegen, können Sie nicht einschlafen. Verbesserungsvorschläge:
 

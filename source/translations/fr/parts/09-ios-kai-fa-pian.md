@@ -10,7 +10,7 @@ class: mb-12
 ## IX. Développement iOS en pratique (chap. 59-69)
 
 {class="chapter-intro mb-4"}
-Amoureux d’Apple, c’est par ici : de la découverte de l’écosystème iOS et de l’installation de Xcode à Swift et SwiftUI, puis deux projets complets et la publication sur l’App Store. Attention à un prérequis dur — il faut un Mac. Les huitième et neuvième parts partagent la même logique de programmation : après l’une, l’autre ira beaucoup plus vite. Au bout de 11 chapitres, tu sauras créer de vraies apps installées sur des centaines de millions d’iPhone.
+Amoureux d’Apple, c’est par ici : de la découverte de l’écosystème iOS et de l’installation de Xcode à Swift et SwiftUI, puis deux projets complets et la publication sur l’App Store. Attention à un prérequis dur, il faut un Mac. Les huitième et neuvième parts partagent la même logique de programmation : après l’une, l’autre ira beaucoup plus vite. Au bout de 11 chapitres, tu sauras créer de vraies apps installées sur des centaines de millions d’iPhone.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

@@ -27,7 +27,7 @@ Vistazo rápido a los cuatro componentes de Android
 
 En la etapa de principiante pasarás el 95 % del tiempo con la Activity; Service y BroadcastReceiver entran en juego al reproducir música o al lanzar notificaciones; ContentProvider es el menos usado (el sistema ya tiene bien envueltos los datos habituales). Y una cosa más: los cuatro componentes deben "empadronarse" en AndroidManifest.xml; si no consta el padrón, el sistema no los encuentra.
 
-#### 2. El ciclo de vida de la Activity: el primer "mapa del tesoro" del desarrollo Android
+2. El ciclo de vida de la Activity: el primer "mapa del tesoro" del desarrollo Android
 
 Una app del móvil puede interrumpirse en cualquier momento: suena una llamada, el usuario se va un rato a WeChat, el sistema te mata por falta de memoria... La vida de una Activity es un viaje en bucle por este mapa:
 
@@ -65,7 +65,7 @@ Aviso para esquivar problemas: girar la pantalla "mata" la Activity
 La caída más clásica del principiante: giras la pantalla y desaparece todo lo escrito en el campo de texto. Motivo: al girar, la Activity se destruye y se reconstruye por defecto (pasa por onDestroy → onCreate). Remedio: guardar el estado con rememberSaveable (el relevo de remember en Compose), que recupera los valores solo al reconstruir. Lo usaremos una y otra vez en los capítulos 6 y 7.
 :::
 
-#### 3. Intent: el "billete" para circular dentro y fuera de la app
+3. Intent: el "billete" para circular dentro y fuera de la app
 
 El Intent (intención) es el "billete" con el que se comunican los componentes. Para saltar de una pantalla a otra, o abrir el navegador o la cámara, toca "comprar billete y subir":
 
@@ -122,7 +122,7 @@ Consejo: ¿y cuando las pantallas son muchas?
 Cuando el proyecto crezca, reúne todas las rutas de pantallas en un único archivo (por ejemplo, AppNavGraph.kt) y gestiónalas desde ahí; no dejes la lógica de "a dónde saltar" esparcida por cada pantalla. Es el primer paso de "funciona" a "se puede mantener".
 :::
 
-#### 5. De regalo, conocer: qué es un Fragment (y por qué este libro no lo enseña)
+5. De regalo, conocer: qué es un Fragment (y por qué este libro no lo enseña)
 
 Rastreando tutoriales viejos te toparás seguro con el Fragment: un "fragmento de interfaz reutilizable" dentro de la Activity, protagonista absoluto de las arquitecturas multipantalla antiguas. Pero en la era de Compose basta con funciones Composable + rutas de Navigation, y Google ya le ha bajado el protagonismo. Por eso este libro no lo mete en su línea principal.
 

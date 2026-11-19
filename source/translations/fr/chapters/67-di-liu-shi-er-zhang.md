@@ -59,7 +59,7 @@ Note Image(systemName:) : Apple embarque la bibliothèque d'icônes SF Symbols (
 
 - VStack : empile verticalement (comme la file à la cantine) ;
 - HStack : aligne horizontalement (comme des sièges côte à côte) ;
-- ZStack : superpose (comme des cartes empilées, idéal pour les badges et les masques).
+- ZStack : superpose (comme des cartes empilées, idéal pour les badges et les masques)
 
 ::: div .code-block
 :::inline div .code-head
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-Le champ de saisie exige une « liaison bidirectionnelle » — le symbole $ transmet à la fois la valeur et le droit de la modifier :
+Le champ de saisie exige une « liaison bidirectionnelle »: le symbole $ transmet à la fois la valeur et le droit de la modifier :
 
 ::: div .code-block
 :::inline div .code-head
@@ -152,9 +152,9 @@ Figure 3 : le flux de données unidirectionnel « état → interface » de Swif
 
 #### 5. Aperçu, thème et animations : les « turbo » de SwiftUI
 
-- La macro #Preview : ajoute #Preview { ContentView() } au bas du fichier et le canevas à droite fait le rendu en temps réel — tu modifies le code, l'effet est immédiat (WYSIWYG) ;
-- Le mode sombre offert : emploie les couleurs système (Color(.systemGray6), .primary) plutôt que des couleurs en dur, et l'adaptation au mode sombre se fait toute seule — pas une ligne de plus à écrire ;
-- L'animation en une ligne : withAnimation { count += 1 }, ou .animation(.default, value: count) posé sur la vue — des transitions d'une fluidité parfaite.
+- La macro #Preview : ajoute #Preview { ContentView() } au bas du fichier et le canevas à droite fait le rendu en temps réel, tu modifies le code, l'effet est immédiat (WYSIWYG) ;
+- Le mode sombre offert : emploie les couleurs système (Color(.systemGray6), .primary) plutôt que des couleurs en dur, et l'adaptation au mode sombre se fait toute seule: pas une ligne de plus à écrire ;
+- L'animation en une ligne : withAnimation { count += 1 }, ou .animation(.default, value: count) posé sur la vue, des transitions d'une fluidité parfaite
 
 ::: div .code-block
 :::inline div .code-head
@@ -193,7 +193,7 @@ Le travers classique du débutant : « peaufiner les animations alors que l'inte
 {class="font-semibold"}
 À toi de jouer : crée un « bouton d'humeur »
 
-#### 6. Mémo des modificateurs courants : une page sous la main, plus de souci d'interface
+6. Mémo des modificateurs courants : une page sous la main, plus de souci d'interface
 
 ::: div .overflow-x-auto
 ```html
@@ -204,7 +204,7 @@ Le travers classique du débutant : « peaufiner les animations alors que l'inte
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Mémo des modificateurs SwiftUI courants
 
-Inutile de les apprendre par cœur — cette page est faite pour être consultée. Les quatre plus utilisés sont en réalité les premiers : padding, coins arrondis, fond et police.
+Inutile de les apprendre par cœur, cette page est faite pour être consultée. Les quatre plus utilisés sont en réalité les premiers : padding, coins arrondis, fond et police.
 
 {class="mt-1"}
 Transforme le projet modèle en sélecteur d'humeur : un seul bouton qui, à chaque tap, cycle entre 😀 content → 😢 triste → 😡 furieux, le texte et la couleur de fond suivant le mouvement. Indice : mets les trois paires (texte + couleur) dans un tableau, l'indice dans une @State, et au tap calcule (index + 1) % 3. Quand c'est fini, envoie-le à des amis et récolte ta première vague de « waouh, tu sais faire des Apps ! ».

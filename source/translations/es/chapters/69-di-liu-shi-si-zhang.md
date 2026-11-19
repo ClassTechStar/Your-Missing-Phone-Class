@@ -182,7 +182,7 @@ Para evitar tropiezos: dos reglas de hierro de la red
 {class="font-semibold"}
 Manos a la obra: una miniapp de «frase del día»
 
-#### 6. Los errores de red también se «clasifican»: no le tires todos los fallos al usuario
+6. Los errores de red también se «clasifican»: no le tires todos los fallos al usuario
 
 Sin conexión, tiempo agotado, 404, error 500 del servidor… a cada error le corresponde un mensaje distinto para el usuario:
 

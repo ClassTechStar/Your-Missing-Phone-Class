@@ -38,7 +38,7 @@ Limites d'usage de l'enregistrement
 
 - Principe : l'application Téléphone interroge en ligne une immense base de numéros et affiche, à l'arrivée d'un appel, « appel indésirable », « appel frauduleux » ou le nom d'une entreprise.
 - Activation : sur Android, ouvrez l'application Téléphone > Réglages > Blocage des appels indésirables ; sur iOS, Réglages > Téléphone > Identification et blocage des appels. Pour les chemins précis par marque et les options recommandées, voir le tableau comparatif des marques du chapitre 13 « Outils système pratiques ».
-- Principales plateformes de signalement : en Chine, le signalement des numéros repose surtout sur trois fournisseurs de données — Tencent Mobile Manager, 360 Mobile Guard et Dianhua Bang (Tapir). Les opérateurs (China Mobile / China Unicom / China Telecom) s'appuient souvent sur ces données pour l'affichage du « nom du titulaire » et le « blocage des appels indésirables ». Les bases de signalement des fabricants (Huawei, Xiaomi, OPPO, vivo) collaborent en général avec ces fournisseurs.
+- Principales plateformes de signalement : en Chine, le signalement des numéros repose surtout sur trois fournisseurs de données, Tencent Mobile Manager, 360 Mobile Guard et Dianhua Bang (Tapir). Les opérateurs (China Mobile / China Unicom / China Telecom) s'appuient souvent sur ces données pour l'affichage du « nom du titulaire » et le « blocage des appels indésirables ». Les bases de signalement des fabricants (Huawei, Xiaomi, OPPO, vivo) collaborent en général avec ces fournisseurs.
 - Que faire en cas de signalement erroné : si votre numéro professionnel est à tort étiqueté « livraison », « colis » ou « appel indésirable », vous pouvez contester via les canaux suivants : Dianhua Bang : rendez-vous sur la plateforme de contestation des numéros (haoma.tk.cn) et fournissez une pièce d'identité.
 - 360 : utilisez la fonction « Contester un numéro » dans l'application 360 Mobile Guard.
 - Tencent : via la mini-programme « Tencent Mobile Manager », page « Contester un numéro ».
@@ -50,7 +50,7 @@ Limites d'usage de l'enregistrement
 - Filtrage des SMS par mots-clés : les SMS contenant des termes comme « vous avez gagné », « prêt » ou « cliquez sur le lien » sont automatiquement classés dans la boîte de blocage.
 - Silence des appels inconnus sur iOS : les appels absents de vos contacts sont simplement renvoyés en messagerie vocale sans vous déranger ; pratique en cas d'appels indésirables nombreux, mais attention aux appels importants d'inconnus.
 - Mode Ne pas déranger : la nuit ou pendant une réunion, n'autorisez que les appels de vos contacts, avec une programmation horaire ; votre sommeil s'améliore aussitôt.
-- Quels logiciels associer : commencez par le blocage intégré au système, puis ajoutez le Centre national anti-fraude et la protection de l'opérateur ; pour le nettoyage, des outils légers comme Qingzhuo conviennent, mais une seule application de sécurité/nettoyage par catégorie suffit — voir le chapitre 13.
+- Quels logiciels associer : commencez par le blocage intégré au système, puis ajoutez le Centre national anti-fraude et la protection de l'opérateur ; pour le nettoyage, des outils légers comme Qingzhuo conviennent, mais une seule application de sécurité/nettoyage par catégorie suffit, voir le chapitre 13.
 
 ##### Qu'est-ce que VoLTE/VoNR et comment l'activer :
 

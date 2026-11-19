@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 65: Projeto 1 — meu diário financeiro (versão local)
 
 {class="chapter-intro mb-4"}
-Bem-vindo ao seu primeiro “projeto de verdade”. Este diário financeiro não se conecta à internet, mas tem tudo o que importa: registrar lançamentos, ver o extrato, fazer estatísticas mensais e editar ou excluir. Ao terminá-lo, você terá percorrido o ciclo completo de “dados → lógica → interface”. Não corra para copiar o código — pense primeiro, execute depois; é o nosso princípio de sempre.
+Bem-vindo ao seu primeiro “projeto de verdade”. Este diário financeiro não se conecta à internet, mas tem tudo o que importa: registrar lançamentos, ver o extrato, fazer estatísticas mensais e editar ou excluir. Ao terminá-lo, você terá percorrido o ciclo completo de “dados → lógica → interface”. Não corra para copiar o código, pense primeiro, execute depois; é o nosso princípio de sempre.
 
 #### 1. Pensando nos requisitos: cinco perguntas primeiro
 
@@ -23,11 +23,11 @@ Bem-vindo ao seu primeiro “projeto de verdade”. Este diário financeiro não
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Os cinco elementos de requisitos do diário financeiro
 
-Depois, divida em passos pequenos em que “cada passo já serve para algo”: ① camada de dados com SwiftData (guardar um lançamento); ② tela de lista (ver o extrato); ③ janela de lançamento (adicionar registros); ④ exclusão e edição; ⑤ cartão de resumo mensal. A cada passo concluído, o app já é uma “coisa utilizável”.
+Depois, divida em passos pequenos em que “cada passo já serve para algo”: ① camada de dados com SwiftData (guardar um lançamento). ② tela de lista (ver o extrato). ③ janela de lançamento (adicionar registros). ④ exclusão e edição. ⑤ cartão de resumo mensal. A cada passo concluído, o app já é uma “coisa utilizável”.
 
 #### 2. Camada de dados: dando um lar aos lançamentos
 
-Primeiro, defina como um lançamento se parece — campos suficientes, sem gula:
+Primeiro, defina como um lançamento se parece, campos suficientes, sem gula:
 
 ::: div .code-block
 :::inline div .code-head
@@ -61,7 +61,7 @@ class Record {
 Dica: por que usar Double para o valor?
 
 {class="mt-1"}
-Apps financeiros rigorosos usam Decimal (decimais exatos) para evitar erros de ponto flutuante (o clássico problema de 0.1+0.2≠0.3). Para um projeto de treino, Double basta; se um dia você fizer um produto financeiro de verdade, lembre de trocar por Decimal ou por um “Int em centavos” — uma armadilha que inúmeros veteranos já pisaram.
+Apps financeiros rigorosos usam Decimal (decimais exatos) para evitar erros de ponto flutuante (o clássico problema de 0.1+0.2≠0.3). Para um projeto de treino, Double basta; se um dia você fizer um produto financeiro de verdade, lembre de trocar por Decimal ou por um “Int em centavos”, uma armadilha que inúmeros veteranos já pisaram.
 :::
 
 #### 3. MVVM: separando interface e lógica
@@ -74,7 +74,7 @@ Deixar a interface falar direto com o banco? Funciona, mas o código da tela vir
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figura 4: as três camadas do MVVM — os dados fluem em uma direção e cada camada fica no seu lugar
+Figura 4: as três camadas do MVVM, os dados fluem em uma direção e cada camada fica no seu lugar
 :::
 
 ::: div .code-block
@@ -116,7 +116,7 @@ class RecordViewModel {
 ```
 :::
 
-Na interface, use @State private var vm = RecordViewModel(...) e renderize a lista direto com vm.records — quando os dados mudam, a tela se atualiza sozinha.
+Na interface, use @State private var vm = RecordViewModel(...) e renderize a lista direto com vm.records, quando os dados mudam, a tela se atualiza sozinha.
 
 #### 4. Interface: tela de lista + janela de lançamento
 
@@ -198,21 +198,21 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 ```
 :::
 
-#### 6. Validação: três níveis de verificação + dois desafios avançados
+6. Validação: três níveis de verificação + dois desafios avançados
 
 Depois de terminar o projeto, valide em três camadas "funcionalidade → casos-limite → arquitetura": dá para registrar e excluir? Os dados continuam lá após reiniciar o App (funcionalidade); digitar 0 ou um valor negativo no campo de valor faz o app travar? (casos-limite); interface e dados estão misturados? Há campos fixados no código? (arquitetura).
 
 Depois de passar na validação da versão básica, prepare dois "pratos avançados" para você:
 
-1. Estatísticas por categoria: adicione uma aba "Estatísticas" e use o Swift Charts para desenhar as despesas por categoria em gráfico de pizza/barras — é a biblioteca de gráficos oficial da Apple, com poucas linhas de código;
-2. Sincronização com iCloud: ativar a sincronização iCloud no SwiftData exige apenas algumas configurações — o livro-caixa passa a sincronizar automaticamente entre iPhone/iPad e, de repente, tudo fica bem mais "profissional".
+1. Estatísticas por categoria: adicione uma aba "Estatísticas" e use o Swift Charts para desenhar as despesas por categoria em gráfico de pizza/barras, é a biblioteca de gráficos oficial da Apple, com poucas linhas de código;
+2. Sincronização com iCloud: ativar a sincronização iCloud no SwiftData exige apenas algumas configurações, o livro-caixa passa a sincronizar automaticamente entre iPhone/iPad e, de repente, tudo fica bem mais "profissional".
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mãos à obra: conclua nesta semana
 
 {class="mt-1"}
-Siga a ordem "camada de dados → ViewModel → tela de lista → pop-up de entrada → cartão de resumo", um passo por dia. Se travar, cole a mensagem de erro exatamente como apareceu no buscador ou na IA (lembra da Parte 7, "Prática de Programação com IA"? Ao descrever o problema, deixe claros o "comportamento esperado, o comportamento real e os passos para reproduzir"). Depois de pronto, use-o para anotar os gastos por uma semana — usar um App feito por você mesmo gera uma sensação de conquista que empurra você a continuar.
+Siga a ordem "camada de dados → ViewModel → tela de lista → pop-up de entrada → cartão de resumo", um passo por dia. Se travar, cole a mensagem de erro exatamente como apareceu no buscador ou na IA (lembra da Parte 7, "Prática de Programação com IA"? Ao descrever o problema, deixe claros o "comportamento esperado. O comportamento real e os passos para reproduzir"). Depois de pronto, use-o para anotar os gastos por uma semana, usar um App feito por você mesmo gera uma sensação de conquista que empurra você a continuar.
 :::
 
 ::: div .chapter-summary

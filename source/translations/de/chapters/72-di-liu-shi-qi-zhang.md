@@ -111,21 +111,21 @@ Abbildung 5: Die sechs Schritte in den App Store
 - Materialien: Icon (1024×1024, ohne abgerundete Ecken – Apple rundet selbst), Screenshots (in den iPhone-Größen), Beschreibung, Link zur Datenschutzerklärung;
 - Datenschutz-Fragebogen: ehrlich angeben, welche Daten erhoben werden – ein Haushaltsbuch ohne Netz darf „erhebt keinerlei Daten“ antworten;
 - Prüfung: Beim ersten Einreichen sind 1–7 Tage Wartezeit üblich; bei Ablehnung die „Review-Anmerkungen“ Punkt für Punkt abarbeiten – Apples Ablehnungsgründe sind meist sehr konkret, einfach befolgen;
-- TestFlight: Vor dem Store-Eintrag die Betaversion an Freunde verteilen (bis zu 10 000 Personen), eine Runde Feedback einsammeln und dann offiziell einreichen – höchst professionell.
+- TestFlight: Vor dem Store-Eintrag die Betaversion an Freunde verteilen (bis zu 10 000 Personen), eine Runde Feedback einsammeln und dann offiziell einreichen – höchst professionell
 
-#### 5. Die Store-Materialien: Der erste Eindruck bestimmt die Download-Zahlen
+5. Die Store-Materialien: Der erste Eindruck bestimmt die Download-Zahlen
 
 Die Store-Seite ist das Schaufenster, das Nutzer beim „Bummeln“ sehen. Drei Materialien bestimmen den ersten Eindruck:
 
 - Icon: 1024×1024, kein Notbehelf aus Screenshots. Fehlt dir das Design-Können, erzeuge mit einem KI-Tool eine schlichte Grafik – sie taugt nur etwas, wenn sie auch klein auf dem Startbildschirm auf einen Blick erkennbar bleibt;
 - Screenshots: mindestens 2 Sätze (in den gängigen iPhone-Größen), die die zentralen Funktionsszenarien zeigen; jede mit einer verständlichen Zeile Text („In einer Sekunde eine Buchung“ ist zehnmal besser als „Eine effiziente Buchhaltungs-Lösung“);
-- Beschreibung: Der erste Satz klärt „Was ist das + für wen?“, kein Aufhäufen von „am professionellsten, am stärksten“ – Aufrichtigkeit wirkt mehr als Übertreibung.
+- Beschreibung: Der erste Satz klärt „Was ist das + für wen?“, kein Aufhäufen von „am professionellsten, am stärksten“ – Aufrichtigkeit wirkt mehr als Übertreibung
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Jetzt bist du dran: das Haushaltsbuch einmal „ausliefern“
 
-#### 6. Mini-Checkliste: Absturzberichte und Performance-Optimierung
+6. Mini-Checkliste: Absturzberichte und Performance-Optimierung
 
 Vor dem Store-Eintrag lohnen sich diese zwei Punkte mit je einer halben Stunde:
 
@@ -138,7 +138,7 @@ Dass es bei deinen Tests nicht abstürzt, heißt nicht, dass es auf dem Handy de
 1. Listen mit LazyVStack / List: Lange Listen nicht mit einem normalen VStack erzwingen – Lazy Loading ist die erste Lektion in Performance;
 2. Bilder nicht im Original zustopfen: AsyncImage (für entfernte Bilder) und den System-Cache nutzen; ein 5-MB-Original reicht, um ältere Geräte lahmzulegen;
 3. Schwerstarbeit nicht auf dem Haupt-Thread: Netzwerk und große Dateien laufen über async/await;
-4. Mit Instruments nachmessen: der in Xcode eingebaute Performance-Profiler (Time Profiler, Speicherleck-Prüfung) – erst messen, dann optimieren, nicht nach Bauchgefühl.
+4. Mit Instruments nachmessen: der in Xcode eingebaute Performance-Profiler (Time Profiler, Speicherleck-Prüfung) – erst messen, dann optimieren, nicht nach Bauchgefühl
 
 {class="mt-1"}
 1) Ergänze für parseAmount und andere Logik 3 Unit-Tests (mit ⌘U auf Grün laufen lassen); 2) fange mit einem Haltepunkt selbst einen von dir gebauten Absturz und behebe ihn; 3) baue mit Product → Archive ein Paket und lade über TestFlight Freunde zum Betatest ein; 4) wenn noch Kraft übrig ist, registriere ein Entwicklerkonto und reiche das Haushaltsbuch wirklich in den Store ein. Die ersten drei Schritte sind heute Abend machbar.

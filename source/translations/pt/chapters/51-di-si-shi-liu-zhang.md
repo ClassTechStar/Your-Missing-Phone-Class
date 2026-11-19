@@ -16,13 +16,13 @@ Depois de dominar a metodologia dos Capítulos 37 a 44 e desenvolver projetos co
 
 O MCP (Model Context Protocol) é um protocolo aberto surgido em 2025 e que vem se popularizando ao longo de 2026; ele define o padrão de comunicação entre modelos de IA e ferramentas externas. Resumindo: o MCP permite que a IA "use ferramentas" — não apenas gerar código, mas também executar comandos, consultar bancos de dados, chamar APIs e manipular o sistema de arquivos.
 
-Antes do MCP, cada ferramenta de IA tinha seu próprio jeito de integrar ferramentas, todas incompatíveis entre si. O surgimento do MCP significa que uma ferramenta compatível com o padrão pode ser usada por qualquer ferramenta de IA que suporte MCP. Isso reduz muito o custo de integração e amplia a fronteira de capacidades da IA, de "gerar texto" para "executar ações".
+Antes do MCP, cada ferramenta de IA tinha seu próprio jeito de integrar ferramentas. Todas incompatíveis entre si. O surgimento do MCP significa que uma ferramenta compatível com o padrão pode ser usada por qualquer ferramenta de IA que suporte MCP. Isso reduz muito o custo de integração e amplia a fronteira de capacidades da IA, de "gerar texto" para "executar ações".
 
 Para o usuário avançado, o sentido do MCP é este: você pode construir capacidades de ferramenta sob medida para a IA. Por exemplo, se a sua equipe tem um sistema interno de deploy, você pode escrever uma ferramenta MCP para a IA acionar o sistema diretamente, sem precisar alternar manualmente para o terminal. Essa capacidade de "IA acionando ferramentas" é a infraestrutura do Agentic Engineering.
 
 #### 2. Fluxos de trabalho personalizados e Skills
 
-Quando você repete certos fluxos fixos de programação com IA, pode consolidá-los em "fluxos de trabalho personalizados" ou "Skills". Por exemplo, a sua equipe pode ter um fluxo padrão de revisão de código — primeiro segurança, depois desempenho, depois manutenibilidade. Você pode transformar esse fluxo em uma Skill para a IA segui-lo automaticamente a cada revisão de código.
+Quando você repete certos fluxos fixos de programação com IA, pode consolidá-los em "fluxos de trabalho personalizados" ou "Skills". Por exemplo, a sua equipe pode ter um fluxo padrão de revisão de código. Primeiro segurança, depois desempenho, depois manutenibilidade. Você pode transformar esse fluxo em uma Skill para a IA segui-lo automaticamente a cada revisão de código.
 
 O valor central dos fluxos personalizados é a "consistência" — eles garantem que cada execução siga o mesmo padrão, sem desvios por causa do tamanho da conversa ou de um contexto diferente. Isso importa especialmente no trabalho em equipe: quando todos usam o mesmo fluxo, o estilo do código e o padrão de qualidade da produção tendem a ficar uniformes.
 
@@ -30,7 +30,7 @@ A forma de construir fluxos personalizados varia de ferramenta para ferramenta. 
 
 #### 3. Colaboração entre múltiplos agentes
 
-Em 2026, a colaboração multiagente começou a virar um assunto quente. A ideia central é: em vez de usar um único AI para cumprir a tarefa, usar vários AIs com papéis diferentes em colaboração. Por exemplo, um AI escreve o código, um AI escreve os testes, um AI faz a revisão de código — cada um cuida da sua função e confere o trabalho dos outros.
+Em 2026, a colaboração multiagente começou a virar um assunto quente. A ideia central é: em vez de usar um único AI para cumprir a tarefa, usar vários AIs com papéis diferentes em colaboração. Por exemplo, um AI escreve o código, um AI escreve os testes, um AI faz a revisão de código, cada um cuida da sua função e confere o trabalho dos outros.
 
 As vantagens da colaboração multiagente estão na "divisão de trabalho" e na "verificação cruzada": cada agente se concentra no seu domínio e produz com mais qualidade, e a checagem cruzada entre agentes revela problemas que um agente só poderia deixar passar. As desvantagens, porém, são evidentes: custo de coordenação alto, overhead de comunicação grande e depuração mais complexa.
 
@@ -46,20 +46,20 @@ Para quem desenvolve por conta própria, não é preciso montar um sistema multi
 
 Programação com IA é um campo que muda depressa. A melhor prática de hoje talvez precise de atualização amanhã. Seguem algumas sugestões para aprender continuamente:
 
-Primeiro, vá às fontes, não às interpretações de segunda mão. Os tuítes originais do Andrej Karpathy e o CLAUDE.md dele, a documentação oficial da Anthropic e da OpenAI, os changelogs das principais ferramentas — isso é informação de primeira mão. Artigos e tutoriais da comunidade são interpretações e resumos dessas informações; têm valor, mas podem distorcer. Cultive o hábito de ler as fontes originais.
+Primeiro, vá às fontes, não às interpretações de segunda mão. Os tuítes originais do Andrej Karpathy e o CLAUDE.md dele, a documentação oficial da Anthropic e da OpenAI, os changelogs das principais ferramentas, isso é informação de primeira mão. Artigos e tutoriais da comunidade são interpretações e resumos dessas informações; têm valor, mas podem distorcer. Cultive o hábito de ler as fontes originais.
 
 Segundo, aprenda orientado à prática. Não "estude tudo para depois fazer", e sim "faça enquanto estuda". Sempre que aparecer um tipo novo de problema (como tratar upload de arquivos pela primeira vez ou integrar uma API de terceiros pela primeira vez), aproveite a oportunidade para aprender o conhecimento relacionado. Aprender na prática é muito mais eficiente do que estudar teoria fora do contexto.
 
-Terceiro, mantenha sensibilidade às ferramentas, sem perseguir novidades em excesso. A cada um ou dois meses, reserve meio dia para conhecer as ferramentas e tendências mais recentes — mas não troque de ferramenta a cada lançamento. O critério é: a ferramenta nova melhora de forma significativa algum dos seus gargalos? Se não melhorar, o conjunto atual basta.
+Terceiro, mantenha sensibilidade às ferramentas, sem perseguir novidades em excesso. A cada um ou dois meses, reserve meio dia para conhecer as ferramentas e tendências mais recentes: mas não troque de ferramenta a cada lançamento. O critério é: a ferramenta nova melhora de forma significativa algum dos seus gargalos? Se não melhorar, o conjunto atual basta.
 
-Quarto, construa a sua base de conhecimento pessoal. Registre as conversas em que resolveu cada problema complexo, a lição de cada tropeço e o método que funcionou a cada vez. Não precisa publicar nada — são as suas "anotações de metodologia". Com o acúmulo do tempo, virarão o seu patrimônio mais valioso.
+Quarto, construa a sua base de conhecimento pessoal. Registre as conversas em que resolveu cada problema complexo, a lição de cada tropeço e o método que funcionou a cada vez. Não precisa publicar nada: são as suas "anotações de metodologia". Com o acúmulo do tempo, virarão o seu patrimônio mais valioso.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mão na massa: abra um "caderno de tropeços"
 
 {class="mt-1"}
-Crie hoje mesmo um documento (serve um app de notas ou um arquivo .md) e escreva as três lições de programação com IA que você mais quer guardar até agora — mesmo que seja "lembrar de pensar bem antes de perguntar". De agora em diante, a cada tropeço e a cada truque novo, anote mais uma entrada lá. Daqui a seis meses, ao reler, você vai agradecer ao seu eu de hoje.
+Crie hoje mesmo um documento (serve um app de notas ou um arquivo .md) e escreva as três lições de programação com IA que você mais quer guardar até agora, mesmo que seja "lembrar de pensar bem antes de perguntar". De agora em diante, a cada tropeço e a cada truque novo, anote mais uma entrada lá. Daqui a seis meses, ao reler, você vai agradecer ao seu eu de hoje.
 :::
 
 ::: div .chapter-summary

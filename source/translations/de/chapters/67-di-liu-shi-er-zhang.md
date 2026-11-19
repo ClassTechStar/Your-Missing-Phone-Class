@@ -59,7 +59,7 @@ Beachte Image(systemName:) – Apple liefert die SF-Symbols-Symbolbibliothek mit
 
 - VStack: untereinander (wie in der Essensschlange);
 - HStack: nebeneinander (wie nebeneinander auf der Sitzbank);
-- ZStack: übereinander gestapelt (wie ein Haufen Spielkarten – ideal für Badges und Overlays).
+- ZStack: übereinander gestapelt (wie ein Haufen Spielkarten – ideal für Badges und Overlays)
 
 ::: div .code-block
 :::inline div .code-head
@@ -154,7 +154,7 @@ Abbildung 3: SwiftUIs unidirektionaler Datenfluss von „Zustand → Oberfläche
 
 - Das #Preview-Makro: Ergänze am Dateiende #Preview { ContentView() }, und die Leinwand rechts rendert in Echtzeit – Code ändern, sofort sehen;
 - Dunkelmodus gratis: Systemfarben verwenden (Color(.systemGray6), .primary) statt fest codierter Farben – dann passt sich der Dunkelmodus automatisch an, ohne eine einzige Zusatzzeile;
-- Animation mit einer Zeile: withAnimation { count += 1 } oder .animation(.default, value: count) am View – Übergänge werden seidenweich.
+- Animation mit einer Zeile: withAnimation { count += 1 } oder .animation(.default, value: count) am View – Übergänge werden seidenweich
 
 ::: div .code-block
 :::inline div .code-head
@@ -193,7 +193,7 @@ Der typische Anfängerfehler: über Animationen grübeln, obwohl die Oberfläche
 {class="font-semibold"}
 Jetzt bist du dran: Baue einen „Stimmungs-Button“
 
-#### 6. Modifier-Spickzettel: eine Seite in der Hand, und die Oberfläche sitzt
+6. Modifier-Spickzettel: eine Seite in der Hand, und die Oberfläche sitzt
 
 ::: div .overflow-x-auto
 ```html

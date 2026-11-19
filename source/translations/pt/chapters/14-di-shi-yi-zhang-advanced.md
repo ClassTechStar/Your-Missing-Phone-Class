@@ -11,7 +11,7 @@ kind: supplement
 {class="chapter-intro mb-4"}
 Para entender verdadeiramente os segredos da fotografia e do vídeo com celular, você precisa conhecer alguns fundamentos técnicos de imagem profissional. Esse conhecimento não só ajuda a usar melhor a câmera do celular, como também lhe dá mais critério na hora de escolher um aparelho.
 
-#### I. Resolução, Taxa de Quadros e Bitrate: Os Três Pilares da Qualidade de Vídeo
+I. Resolução, Taxa de Quadros e Bitrate: Os Três Pilares da Qualidade de Vídeo
 
 ##### Resolução (Resolution):
 
@@ -126,11 +126,11 @@ Ao gravar vídeo HDR, é necessário um monitor compatível com HDR para visuali
 
 ##### O que é o formato RAW:
 
-O formato RAW são os "dados brutos" registrados pelo sensor da câmera — informação pura e original, sem qualquer compressão ou processamento. É como ingredientes frescos, que precisam ser "cozidos" na pós-produção para se tornarem o prato final. Como o celular tem armazenamento e poder de processamento limitados, por padrão ele gera fotos que já estão "prontas" (JPEG ou HEIF); o RAW precisa ser ativado especificamente.
+O formato RAW são os "dados brutos" registrados pelo sensor da câmera: informação pura e original, sem qualquer compressão ou processamento. É como ingredientes frescos, que precisam ser "cozidos" na pós-produção para se tornarem o prato final. Como o celular tem armazenamento e poder de processamento limitados, por padrão ele gera fotos que já estão "prontas" (JPEG ou HEIF); o RAW precisa ser ativado especificamente.
 
 ##### Comparação RAW vs HEIF vs JPEG:
 
-- <strong>JPEG</strong>: o formato mais antigo, melhor compatibilidade (qualquer dispositivo abre). Profundidade de cor de 8 bits, compressão com perdas, arquivo menor (2 a 5 MB por foto). Margem de pós-produção limitada; forçar o clareamento de sombras tende a gerar manchas de cor.
+- <strong>JPEG</strong>: o formato mais antigo, melhor compatibilidade (qualquer dispositivo abre). Profundidade de cor de 8 bits, compressão com perdas. Arquivo menor (2 a 5 MB por foto). Margem de pós-produção limitada; forçar o clareamento de sombras tende a gerar manchas de cor.
 - <strong>HEIF/HEIC</strong>: novo formato promovido pela Apple. Com a mesma qualidade de imagem, o arquivo tem metade do tamanho do JPEG (1 a 3 MB por foto). Suporta profundidade de cor de 10 bits e canal alfa. A desvantagem é que alguns dispositivos antigos e o Windows precisam instalar plugin para abrir.
 - <strong>RAW</strong>: dados brutos não comprimidos, arquivo maior (20 a 100 MB por foto). Profundidade de cor geralmente de 12 a 16 bits, máxima margem de pós-produção. A desvantagem é que exige software profissional (Lightroom, Snapseed, etc.) para abrir e processar; não pode ser compartilhado diretamente.
 
@@ -149,19 +149,19 @@ O formato RAW são os "dados brutos" registrados pelo sensor da câmera — info
 
 #### VI. Fundamentos da Fotografia Computacional
 
-A fotografia móvel moderna já não pode prescindir da "fotografia computacional" — ou seja, gerar fotos com base em algoritmos, e não apenas na lente e no sensor. Entender esses princípios essenciais ajuda a compreender melhor o que o celular faz no instante em que o obturador é pressionado.
+A fotografia móvel moderna já não pode prescindir da "fotografia computacional", ou seja, gerar fotos com base em algoritmos, e não apenas na lente e no sensor. Entender esses princípios essenciais ajuda a compreender melhor o que o celular faz no instante em que o obturador é pressionado.
 
 ##### Síntese de múltiplos quadros:
 
 Quando você pressiona o obturador no celular, na verdade são capturadas várias fotos. O algoritmo alinha os vários quadros, pondera e os funde, obtendo uma imagem final de alta qualidade.
 
-- <strong>Modo Noturno</strong>: várias fotos subexpostas são capturadas em 1 a 3 segundos; alinhadas e sobrepostas — os ruídos se cancelam e o brilho se acumula. O resultado é uma imagem limpa mesmo em luz baixa.
+- <strong>Modo Noturno</strong>: várias fotos subexpostas são capturadas em 1 a 3 segundos; alinhadas e sobrepostas: os ruídos se cancelam e o brilho se acumula. O resultado é uma imagem limpa mesmo em luz baixa.
 - <strong>HDR (High Dynamic Range)</strong>: são capturadas separadamente fotos subexpostas, normais e superexpostas (três ou mais), e depois combinadas numa única foto com detalhes tanto nas altas luzes quanto nas sombras. Especialmente eficaz em cenas com contraluz.
 - <strong>Deep Fusion (Apple) / Photonic Engine (Motor Fotônico)</strong>: voltado para cenas de luz média a baixa, analisa pixel a pixel vários quadros e os funde, com foco em melhorar textura e detalhes; detalhes como suéteres e cabelos ficam nitidamente mais nítidos.
 
 ##### Segmentação semântica:
 
-A IA não simplesmente aplica um processamento uniforme na imagem inteira; ela primeiro "entende" o que há na cena — céu, rosto, grama, construções, roupas — e então aplica estratégias de processamento distintas para cada região.
+A IA não simplesmente aplica um processamento uniforme na imagem inteira; ela primeiro "entende" o que há na cena, céu, rosto, grama, construções, roupas, e então aplica estratégias de processamento distintas para cada região.
 
 - <strong>Céu</strong>: realce individual do azul, redução de brilho, para evitar superexposição.
 - <strong>Rosto</strong>: identifica a região do tom de pele, clareia e suaviza a pele, sem mexer nos traços faciais e nos detalhes do cabelo.
@@ -177,9 +177,9 @@ A IA não simplesmente aplica um processamento uniforme na imagem inteira; ela p
 ##### Fotografia computacional vs. fotografia óptica:
 
 - <strong>Vantagens da fotografia computacional</strong>: tamanho reduzido também consegue boa qualidade de imagem; cenas extremas como baixa luz e contraluz também produzem boas fotos; o usuário comum não precisa conhecer fotografia para tirar fotos "bonitas".
-- <strong>Desvantagens da fotografia computacional</strong>: a imagem às vezes fica "superprocessada" — nitidez excessiva, distorção de cor, cor do céu não natural; a síntese de múltiplos quadros deixa rastros quando o tema se move; os detalhes são "calculados", não registrados de verdade.
+- <strong>Desvantagens da fotografia computacional</strong>: a imagem às vezes fica "superprocessada": nitidez excessiva, distorção de cor, cor do céu não natural; a síntese de múltiplos quadros deixa rastros quando o tema se move; os detalhes são "calculados", não registrados de verdade.
 - <strong>Vantagens da fotografia óptica</strong>: sensor grande + lente de grande abertura capturam a luz de verdade, qualidade de imagem natural, grande margem de pós-produção; não produz artefatos porque o algoritmo "não inventa".
-- <strong>Tendência</strong>: os celulares flagship modernos combinam "óptica + computação" — usam sensor grande para obter informação real, e algoritmos para otimizar a apresentação. As duas abordagens não são opostas.
+- <strong>Tendência</strong>: os celulares flagship modernos combinam "óptica + computação", usam sensor grande para obter informação real, e algoritmos para otimizar a apresentação. As duas abordagens não são opostas.
 
 #### VII. Tipos de Lentes e Distâncias Focais
 
@@ -194,19 +194,19 @@ Os celulares flagship modernos geralmente têm três ou quatro lentes, cada uma 
 
 ##### Compromisso entre tamanho do sensor e tamanho do pixel:
 
-O sensor é a "base" que determina quanta luz pode ser recebida. No jargão do setor, "uma base maior esmaga a menor" — com o mesmo número de pixels, quanto maior o sensor, maior cada pixel individual, mais luz entra e melhor a qualidade de imagem.
+O sensor é a "base" que determina quanta luz pode ser recebida. No jargão do setor, "uma base maior esmaga a menor", com o mesmo número de pixels, quanto maior o sensor, maior cada pixel individual, mais luz entra e melhor a qualidade de imagem.
 
 - <strong>Sensor grande</strong>: grande entrada de luz, boa qualidade de imagem noturna, ampla faixa dinâmica. A desvantagem é que o celular precisa ser mais grosso (módulo da lente saliente), e o custo é mais alto.
 - <strong>Alta resolução com sensor pequeno</strong>: com boa luz do dia, a alta resolução produz fotos mais nítidas, facilitando o recorte posterior. Mas em luz baixa, cada pixel recebe luz insuficiente, gerando muito ruído.
-- <strong>Escolha dos flagships atuais</strong>: a câmera principal costuma ser de 1/1,3 polegada a 1 polegada (alguns modelos já usam sensor de 1 polegada), com cerca de 50 megapixels — é o ponto de equilíbrio entre qualidade de imagem e volume.
+- <strong>Escolha dos flagships atuais</strong>: a câmera principal costuma ser de 1/1,3 polegada a 1 polegada (alguns modelos já usam sensor de 1 polegada), com cerca de 50 megapixels, é o ponto de equilíbrio entre qualidade de imagem e volume.
 
 ##### Tecnologia de fusão de pixels (Pixel Binning):
 
-Para conciliar alta resolução de dia com pixels grandes à noite, os fabricantes usam a "fusão de pixels" — vários pixels pequenos são combinados num único pixel grande de saída.
+Para conciliar alta resolução de dia com pixels grandes à noite, os fabricantes usam a "fusão de pixels", vários pixels pequenos são combinados num único pixel grande de saída.
 
 - <strong>Fusão de quatro pixels (Quad Bayer)</strong>: sensor de 50 megapixels, gerando foto de 12,5 megapixels. Cada pixel de saída é formado pela fusão de 4 pixels adjacentes; a entrada de luz aumenta 4 vezes, com qualidade de imagem mais limpa.
 - <strong>Fusão de nove pixels (Nonacell)</strong>: usado em sensores acima de 100 megapixels, gerando cerca de 11 a 12 megapixels. Mesmo princípio, com entrada de luz ainda maior.
-- <strong>Efeito prático</strong>: no modo de foto padrão, você recebe a foto com pixels fundidos — qualidade boa, arquivo pequeno. Quando precisar de detalhes extremos (como fotografar documentos ou paisagens distantes), é possível mudar manualmente para o "Modo de Alta Resolução" para obter a resolução total.
+- <strong>Efeito prático</strong>: no modo de foto padrão, você recebe a foto com pixels fundidos, qualidade boa, arquivo pequeno. Quando precisar de detalhes extremos (como fotografar documentos ou paisagens distantes), é possível mudar manualmente para o "Modo de Alta Resolução" para obter a resolução total.
 
 #### VIII. Modos de Captura Especiais
 
@@ -214,16 +214,16 @@ Além da fotografia cotidiana, o celular tem alguns modos especiais que, bem usa
 
 ##### Modo Panorama:
 
-- Ao fotografar, mova o celular lenta e suavemente na horizontal conforme a seta indicativa; não vá rápido — se for rápido, aparecem falhas na costura.
+- Ao fotografar, mova o celular lenta e suavemente na horizontal conforme a seta indicativa; não vá rápido, se for rápido, aparecem falhas na costura.
 - Mantenha o celular estável na vertical, movendo apenas na horizontal. Se balançar para cima e para baixo, a linha do horizonte vira uma onda.
-- Cuidado com pessoas ou carros em movimento — na costura, podem aparecer "meio corpo" ou "fantasmas".
+- Cuidado com pessoas ou carros em movimento, na costura, podem aparecer "meio corpo" ou "fantasmas".
 - O modo panorama também pode ser usado na vertical — fotografar na vertical com costura horizontal é ideal para edifícios altos ou cachoeiras.
 
 ##### Câmera Lenta e Time-Lapse:
 
 - <strong>Câmera lenta</strong>: grava com alta taxa de quadros (120 fps ou 240 fps); na reprodução, vira câmera lenta. Ideal para gotas d'água, momentos esportivos, saltos de animais. A luz precisa ser abundante; no modo câmera lenta, o tempo de entrada de luz é curto, e a qualidade em baixa luz é ruim.
 - <strong>Time-lapse</strong>: captura fotos em intervalos e as combina num vídeo acelerado. Ideal para fluxo de carros, movimento de nuvens, pôr do sol, abertura de flores. O tempo de captura varia de alguns minutos a várias horas; é imprescindível usar tripé para fixar o celular; na mão, com certeza fica borrado.
-- <strong>Dica</strong>: para time-lapse de nuvens, monte o celular, grave por 15 a 30 minutos e obtenha um vídeo de time-lapse de cerca de 10 segundos — o efeito é impactante.
+- <strong>Dica</strong>: para time-lapse de nuvens, monte o celular, grave por 15 a 30 minutos e obtenha um vídeo de time-lapse de cerca de 10 segundos: o efeito é impactante.
 
 ##### Modo Estrelas / Astrofotografia:
 
@@ -257,7 +257,7 @@ Além da fotografia cotidiana, o celular tem alguns modos especiais que, bem usa
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifique se seu celular suporta captura RAW (Ajustes → Câmera → Formatos); tente ativar e fotografar, comparando o tamanho do arquivo JPEG e RAW da mesma cena.
-2. Mude para as três distâncias focais — ultra grande-angular, câmera principal e teleobjetiva — e fotografe a mesma paisagem distante com cada uma, percebendo a diferença de perspectiva e de qualidade de imagem.
+2. Mude para as três distâncias focais: ultra grande-angular, câmera principal e teleobjetiva, e fotografe a mesma paisagem distante com cada uma, percebendo a diferença de perspectiva e de qualidade de imagem.
 3. Encontre uma cena adequada para modo noturno ou modo estrelas; fixe o celular e fotografe uma foto noturna.
 4. Experimente o modo panorama na horizontal para uma grande cena, cuidando para mover o celular de forma estável.
 :::

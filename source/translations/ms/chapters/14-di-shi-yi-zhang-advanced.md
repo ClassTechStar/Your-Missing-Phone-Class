@@ -11,7 +11,7 @@ kind: supplement
 {class="chapter-intro mb-4"}
 Untuk benar-benar memahami rahsia fotografi telefon pintar dan video, anda perlu faham beberapa pengetahuan teknik pengimejan profesional. Pengetahuan ini bukan sahaja membantu anda guna kamera telefon dengan lebih baik, juga buat anda lebih bijak memilih peranti.
 
-#### 1. Resolusi, kadar bingkai & kadar bit: Tiga elemen kualiti video
+1. Resolusi, kadar bingkai & kadar bit: Tiga elemen kualiti video
 
 ##### 1080P (Full HD)
 
@@ -20,8 +20,8 @@ Untuk benar-benar memahami rahsia fotografi telefon pintar dan video, anda perlu
 - <strong>2K (QHD)</strong>: 2560×1440 piksel, lebih jelas daripada 1080P.
 - <strong>4K (UHD)</strong>: 3840×2160 piksel, ultra HD, butiran kaya.
 - <strong>8K</strong>: 7680×4320 piksel, standard masa depan, sokongan peranti buat masa ini terhad.
-- <strong>Resolusi lebih tinggi, gambar lebih jelas, tapi fail juga lebih besar, keperluan terhadap storan dan keupayaan pemprosesan lebih tinggi.</strong> Kadar Bingkai (Frame Rate):
-- <strong>Kadar bingkai menentukan kelembutan gambar, dinyatakan dengan bingkai per saat (fps).</strong>24fps
+- <strong>Resolusi lebih tinggi, gambar lebih jelas, tapi fail juga lebih besar, keperluan terhadap storan dan keupayaan pemprosesan lebih tinggi.</strong> Kadar Bingkai (Frame Rate):.
+- <strong>Kadar bingkai menentukan kelembutan gambar, dinyatakan dengan bingkai per saat (fps).</strong>24fps.
 
 : Kadar bingkai standard filem, ada "rasa filem" yang unik.
 
@@ -31,7 +31,7 @@ Untuk benar-benar memahami rahsia fotografi telefon pintar dan video, anda perlu
 
 - <strong>60fps</strong>: Kadar bingkai tinggi, sesuai adegan sukan dan rakaman permainan, sangat lancar.
 - <strong>120fps/240fps</strong>: Kadar bingkai ultra tinggi, boleh guna untuk video gerakan perlahan.
-- <strong>Kadar bingkai lebih tinggi, gambar lebih lancar, kesan gerakan perlahan lebih baik, tapi fail juga lebih besar.</strong> Kadar Bit (Bitrate):
+- <strong>Kadar bingkai lebih tinggi, gambar lebih lancar, kesan gerakan perlahan lebih baik, tapi fail juga lebih besar.</strong> Kadar Bit (Bitrate):.
 - <strong>Kadar bit menentukan ketumpatan data video, dinyatakan dengan jumlah data per saat (Mbps).</strong> Kadar bit lebih tinggi, kualiti gambar lebih baik, butiran lebih banyak dikekalkan, tapi fail juga lebih besar.
 
 Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan jejak mampatan lain.
@@ -42,7 +42,7 @@ Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan je
 
 - H.264 (AVC):
 - Ciri
-- : Format pengekodan paling meluas digunakan, keserasian sangat baik.
+- : Format pengekodan paling meluas digunakan, keserasian sangat baik
 
 #### 2. Format pengekodan video: H.264, H.265 & ProRes
 
@@ -90,7 +90,7 @@ Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan je
 
 ##### : Standard gamut warna luas dipromosikan Apple, warna lebih kaya.
 
-- <strong>Rec.2020</strong>: Ruang warna standard video HDR, gamut warna paling luas.
+- <strong>Rec.2020</strong>: Ruang warna standard video HDR, gamut warna paling luas
 - <strong>Kedalaman warna:</strong>8-bit
 - <strong>: 16.7 juta warna, standard video biasa.</strong>10-bit
 
@@ -105,7 +105,7 @@ Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan je
 <i class="fas fa-info-circle mr-2"></i>Cadangan storan: video kadar bit tinggi sangat memenuhi ruang, cadangan sandarkan ke komputer atau storan awan secara berkala.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Terokai: Tetapan video telefon anda
+- Terokai: Tetapan video telefon anda.
 - Buka Apl kamera, tukar ke mod video.
 - Tengok pilihan resolusi dan kadar bingkai, cuba gabungan berbeza.
 - Jika disokong, tengok ada pilihan lanjutan HDR, ProRes dll. atau tidak.
@@ -117,7 +117,7 @@ Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan je
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Bab 12: Hiburan Audio-Visual &amp; Pembacaan
-2. Telefon sekarang asasnya telah menggantikan MP3, alat kawalan jauh TV, Kindle dan kons permainan tangan. Tapi sejujurnya, ramai orang hanya guna fungsi paling asas App ini, masih banyak kegunaan bagus yang belum ditemui. Bab ini mari kita cakap cara buat hiburan telefon lebih lancar, lebih selesa.
+2. Telefon sekarang asasnya telah menggantikan MP3, alat kawalan jauh TV, Kindle dan kons permainan tangan. Tapi sejujurnya, ramai orang hanya guna fungsi paling asas App ini, masih banyak kegunaan bagus yang belum ditemui. Bab ini mari kita cakap cara buat hiburan telefon lebih lancar, lebih selesa
 3. 1. Dengar muzik: Pilih App mana, cara dengar macam mana baru selesa
 4. App muzik sekarang fungsinya lebih kurang sama, tapi setiap satu ada fokus tersendiri, pilih yang betul boleh jimat banyak masalah:
 :::
@@ -126,11 +126,11 @@ Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan je
 
 ##### Apakah format RAW:
 
-Format RAW adalah "data mentah" yang direkodkan oleh sensor kamera — maklumat mentah tanpa pemampatan dan pemprosesan. Ia seperti bahan mentah, perlu "dimasak" dalam pasca-pemprosesan untuk menjadi produk siap. Telefon kerana storan dan kuasa pengiraan terhad, lalai menghasilkan JPEG atau HEIF yang sudah "siap dimasak", RAW perlu diaktifkan khas.
+Format RAW adalah "data mentah" yang direkodkan oleh sensor kamera: maklumat mentah tanpa pemampatan dan pemprosesan. Ia seperti bahan mentah, perlu "dimasak" dalam pasca-pemprosesan untuk menjadi produk siap. Telefon kerana storan dan kuasa pengiraan terhad, lalai menghasilkan JPEG atau HEIF yang sudah "siap dimasak", RAW perlu diaktifkan khas.
 
 ##### Perbandingan RAW vs HEIF vs JPEG:
 
-- <strong>JPEG</strong>: Format paling lama, keserasian terbaik (mana-mana peranti boleh buka). 8-bit color depth, pemampatan berbahaya, fail paling kecil (sebuah foto 2-5MB). Ruang pasca terhad, paksa cerahkan bahagian gelap mudah muncul blok warna.
+- <strong>JPEG</strong>: Format paling lama, keserasian terbaik (mana-mana peranti boleh buka). 8-bit color depth, pemampatan berbahaya. fail paling kecil (sebuah foto 2-5MB). Ruang pasca terhad, paksa cerahkan bahagian gelap mudah muncul blok warna.
 - <strong>HEIF/HEIC</strong>: Format baharu yang dipromosikan Apple, saiz fail hanya separuh JPEG untuk kualiti yang sama (sebuah foto 1-3MB). Menyokong 10-bit color depth dan saluran telus. Kelemahannya sesetengah peranti lama dan Windows perlu pasang plugin untuk buka.
 - <strong>RAW</strong>: Data mentah tanpa pemampatan, fail paling besar (sebuah foto 20-100MB). Color depth biasanya 12-16bit, ruang pasca terbesar. Kelemahannya mesti guna perisian profesional (Lightroom, Snapseed dll) untuk buka dan proses, tidak boleh kongsi terus.
 
@@ -149,19 +149,19 @@ Format RAW adalah "data mentah" yang direkodkan oleh sensor kamera — maklumat 
 
 #### VI. Prinsip fotografi pengiraan
 
-Fotografi telefon moden tidak boleh dipisahkan daripada "fotografi pengiraan" — iaitu bergantung kepada algoritma dan bukan hanya kanta dan sensor untuk menghasilkan foto. Fahami beberapa prinsip teras ini, boleh buat anda lebih faham apa yang telefon lakukan saat menekan shutter.
+Fotografi telefon moden tidak boleh dipisahkan daripada "fotografi pengiraan": iaitu bergantung kepada algoritma dan bukan hanya kanta dan sensor untuk menghasilkan foto. Fahami beberapa prinsip teras ini, boleh buat anda lebih faham apa yang telefon lakukan saat menekan shutter.
 
 ##### Penggabungan berbilang bingkai:
 
 Telefon menekan shutter sekali, sebenarnya tangkap berbilang foto. Algoritma jajarkan, gabungkan berbilang bingkai, dapat satu foto kualiti tinggi.
 
-- <strong>Mod malam</strong>: Dalam 1-3 saat tangkap berbilang foto kurang dedahan, jajarkan dan tindih — bising saling membatalkan, kecerahan terkumpul. Hasilnya cahaya malap juga boleh tangkap gambar bersih.
+- <strong>Mod malam</strong>: Dalam 1-3 saat tangkap berbilang foto kurang dedahan, jajarkan dan tindih, bising saling membatalkan, kecerahan terkumpul. Hasilnya cahaya malap juga boleh tangkap gambar bersih.
 - <strong>HDR (Julat Dinamik Tinggi)</strong>: Tangkap berasingan kurang dedahan, normal, lebih dedahan tiga (atau lebih) keping, gabungkan satu foto yang tonjolan dan bahagian gelap ada butiran. Senario cahaya belakang sangat berkesan.
 - <strong>Deep Fusion (Apple)/Photonic Engine (Enjin Fotonik)</strong>: Untuk senario cahaya sederhana-rendah, analisis piksel demi piksel berbilang bingkai dan gabungkan, fokus tingkatkan tekstur dan butiran, sweter, rambut jenis butiran akan jelas lebih jelas.
 
 ##### Pembahagian semantik:
 
-AI bukan hanya proses seluruh gambar sekali, tetapi dahulu "faham" apa ada dalam gambar — langit, muka, rumput, bangunan, pakaian — kemudian aplikasi strategi pemprosesan berbeza untuk setiap kawasan.
+AI bukan hanya proses seluruh gambar sekali, tetapi dahulu "faham" apa ada dalam gambar, langit, muka, rumput, bangunan, pakaian: kemudian aplikasi strategi pemprosesan berbeza untuk setiap kawasan.
 
 - <strong>Langit</strong>: Tingkatkan biru secara berasingan, turunkan kecerahan, elakkan lebih dedahan.
 - <strong>Muka</strong>: Kenalpasti kawasan kulit, cerahkan secara berasingan, licinkan kulit, tidak ubah muka dan butiran rambut.
@@ -177,9 +177,9 @@ AI bukan hanya proses seluruh gambar sekali, tetapi dahulu "faham" apa ada dalam
 ##### Fotografi pengiraan vs fotografi optik:
 
 - <strong>Kelebihan fotografi pengiraan</strong>: Saiz kecil juga boleh dapat kualiti baik, senario cahaya malap, cahaya belakang juga boleh hasilkan gambar, pengguna biasa tidak perlu faham ilmu fotografi untuk tangkap foto "cantik".
-- <strong>Kelemahan fotografi pengiraan</strong>: Gambar kadangkala "lebih diproses" — penajaman berlebihan, warna tidak tepat, warna langit tidak semula jadi; penggabungan berbilang bingkai apabila subjek bergerak akan meninggalkan bayang; butiran "dikira" bukan direkodkan sebenar.
+- <strong>Kelemahan fotografi pengiraan</strong>: Gambar kadangkala "lebih diproses", penajaman berlebihan, warna tidak tepat, warna langit tidak semula jadi; penggabungan berbilang bingkai apabila subjek bergerak akan meninggalkan bayang; butiran "dikira" bukan direkodkan sebenar.
 - <strong>Kelebihan fotografi optik</strong>: Sensor besar + kanta bukaan besar boleh tangkap cahaya sebenar, kualiti semula jadi, ruang pasca besar; tidak akan ada artifak akibat algoritma "tekaan".
-- <strong>Trend</strong>: Telefon flagship moden adalah gabungan "optik + pengiraan" — guna sensor besar dapat maklumat sebenar, guna algoritma optimumkan paparan. Kedua-duanya tidak bertentangan.
+- <strong>Trend</strong>: Telefon flagship moden adalah gabungan "optik + pengiraan", guna sensor besar dapat maklumat sebenar, guna algoritma optimumkan paparan. Kedua-duanya tidak bertentangan.
 
 #### VII. Jenis kanta dan jarak fokus
 
@@ -202,7 +202,7 @@ Sensor adalah "asas", tentukan berapa banyak cahaya boleh diterima. Industri men
 
 ##### Teknologi penggabungan piksel (Pixel Binning):
 
-Untuk seimbangkan piksel tinggi siang dan piksel besar malam, pengeluar telefon guna "penggabungan piksel" — gabungkan beberapa piksel kecil menjadi satu piksel besar output.
+Untuk seimbangkan piksel tinggi siang dan piksel besar malam, pengeluar telefon guna "penggabungan piksel", gabungkan beberapa piksel kecil menjadi satu piksel besar output.
 
 - <strong>Piksel empat-dalam-satu (Quad Bayer)</strong>: Sensor 50 juta piksel, output 12.5 juta piksel foto. Setiap piksel output disintesiskan dari 4 piksel bersebelahan, cahaya masuk tinggi 4 kali, kualiti lebih bersih.
 - <strong>Piksel sembilan-dalam-satu (Nonacell)</strong>: Untuk sensor lebih 100 juta piksel, output kira-kira 11-12 juta piksel. Prinsip sama, cahaya masuk lebih besar.
@@ -214,10 +214,10 @@ Selain tangkap harian, telefon ada beberapa mod khas, guna betul boleh tangkap g
 
 ##### Mod panorama:
 
-- Apabila tangkap ikut arah panah pergerakan perlahan stabil mendatar, jangan cepat — cepat akan ada salah jajar.
+- Apabila tangkap ikut arah panah pergerakan perlahan stabil mendatar, jangan cepat, cepat akan ada salah jajar.
 - Kekalkan telefon stabil menegak, hanya gerak mendatar. Jika bergoyang atas bawah, ufuk akan jadi bergelombang.
 - Berhati-hati apabila ada orang atau kereta bergerak — apabila jajar akan muncul "separuh badan" atau "bayang hantu".
-- Mod panorama juga boleh tangkap menegak — tangkap menegak jajar mendatar, sesuai untuk bangunan tinggi atau air terjun.
+- Mod panorama juga boleh tangkap menegak, tangkap menegak jajar mendatar, sesuai untuk bangunan tinggi atau air terjun.
 
 ##### Slow motion dan time-lapse:
 

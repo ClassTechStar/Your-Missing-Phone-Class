@@ -2,17 +2,17 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Capítulo 28: Gastar certo e levar o celular dos sonhos — guia definitivo de compra de celular
+nav: Capítulo 28: Antes de comprar, resolva estas três coisas
 toc: default
 kind: chapter
 ---
 
-### Capítulo 28: Gaste certo e compre o celular ideal — Guia definitivo de compra de celular
+### Capítulo 28: Antes de comprar, resolva estas três coisas
 
 {class="chapter-intro mb-4"}
-Na hora de comprar um celular, muita gente passa uma semana vendo análises e um mês comparando preços, e no final, acaba gastando cinco ou seis mil yuans num flagship que nem precisava. Este capítulo não vai listar tabelas de especificações — isso você encontra no site oficial. O que quero fazer é lhe dar uma "mentalidade de escolha", para que, independentemente dos novos modelos que o mercado lançar, você consiga julgar por si mesmo qual é o mais adequado para você.
+Na hora de comprar um celular, muita gente passa uma semana vendo análises e um mês comparando preços, e no final, acaba gastando cinco ou seis mil yuans num flagship que nem precisava. Este capítulo não vai listar tabelas de especificações, isso você encontra no site oficial. O que quero fazer é lhe dar uma "mentalidade de escolha", para que, independentemente dos novos modelos que o mercado lançar, você consiga julgar por si mesmo qual é o mais adequado para você.
 
-#### Zero. Método de três passos para escolher: Necessidade → Orçamento → Modelo
+Zero. Método de três passos para escolher: Necessidade → Orçamento → Modelo
 
 Muita gente pergunta na internet "qual celular comprar com três mil yuans". Essa pergunta, na verdade, não tem como responder — porque não se sabe para que você vai usar o celular. A ordem correta de raciocínio para comprar um celular deve ser:
 
@@ -26,7 +26,7 @@ Muita gente pergunta na internet "qual celular comprar com três mil yuans". Ess
 3. <strong>Por fim, escolha o modelo</strong>: com sua lista de prioridades e seu orçamento em mãos, vá buscar o modelo adequado.
 :::
 
-#### I. Como interpretar os parâmetros principais — não precisa entender tudo; entender estes cinco já é suficiente
+I. Como interpretar os parâmetros principais — não precisa entender tudo; entender estes cinco já é suficiente
 
 As tabelas de especificações costumam ter dezenas de dados. Na verdade, o usuário comum só precisa prestar atenção a estas cinco dimensões:
 
@@ -71,7 +71,7 @@ As tabelas de especificações costumam ter dezenas de dados. Na verdade, o usu�
 ```
 :::
 
-#### II. Recomendações por faixa de orçamento (com base no mercado de meados de 2026)
+II. Recomendações por faixa de orçamento (com base no mercado de meados de 2026)
 
 As recomendações abaixo são baseadas no mercado da China continental em 2026, com preços de lançamento oficiais. Os preços reais podem variar. Considere o valor praticado no momento da compra.
 
@@ -170,13 +170,13 @@ Aqui estão os "perfis de uso" mais comuns. É só se encaixar no seu:
 ```
 :::
 
-#### IV. Cinco armadilhas fáceis de cair — dê uma olhada antes de comprar
+IV. Cinco armadilhas fáceis de cair — dê uma olhada antes de comprar
 
 {class="list-decimal pl-6 mb-3 space-y-2"}
-1. <strong>Armadilha 1: Quatro ou cinco câmeras não significam fotos melhores</strong> — os fabricantes adoram empilhar número de lentes nas especificações. Muitas vezes, duas delas são lentes "de enfeite" de 2 megapixels (macro + profundidade), completamente inúteis na prática. Para avaliar a capacidade fotográfica do celular, <strong>olhe apenas para a câmera principal + ultra-wide + teleobjetiva</strong>. As demais, finja que não existem.
-2. <strong>Armadilha 2: Não se deixe impressionar por 100 megapixels</strong> — megapixels altos não significam qualidade de imagem boa. O tamanho do sensor, a abertura e o ajuste do algoritmo são muito mais importantes que os megapixels. Muitos flagships usam sensor grande de 50 megapixels e tiram fotos muito melhores do que certos modelos de entrada de 100 megapixels.
+1. <strong>Armadilha 1: Quatro ou cinco câmeras não significam fotos melhores</strong> — os fabricantes adoram empilhar número de lentes nas especificações. Muitas vezes, duas delas são lentes "de enfeite" de 2 megapixels (macro + profundidade). Completamente inúteis na prática. Para avaliar a capacidade fotográfica do celular, <strong>olhe apenas para a câmera principal + ultra-wide + teleobjetiva</strong>. As demais, finja que não existem.
+2. <strong>Armadilha 2: Não se deixe impressionar por 100 megapixels</strong>. Megapixels altos não significam qualidade de imagem boa. O tamanho do sensor, a abertura e o ajuste do algoritmo são muito mais importantes que os megapixels. Muitos flagships usam sensor grande de 50 megapixels e tiram fotos muito melhores do que certos modelos de entrada de 100 megapixels.
 3. <strong>Armadilha 3: Não compre celular customizado de operadora</strong> — "Crédito de recarga + celular grátis" parece muito vantajoso, mas os celulares customizados de operadora recebem atualizações de sistema mais lentas, podem ter apps pré-instalados que não podem ser removidos e geralmente são bloqueados pela operadora (só funcionam com o chip daquela operadora). Parece que você economizou, mas na verdade você ficou "preso".
-4. <strong>Armadilha 4: "Tela curva é premium" — é marketing, não verdade</strong> — telas curvas já foram o símbolo dos flagships, mas cada vez mais pessoas estão descobrindo seus problemas: difícil de colocar película, toques acidentais nas bordas, conserto caro se quebrar. A tendência de 2026 é voltar para "levemente curvo" ou até "totalmente plano". Não escolha tela curva só porque "curvo é mais premium".
+4. <strong>Armadilha 4: "Tela curva é premium", é marketing, não verdade</strong> — telas curvas já foram o símbolo dos flagships, mas cada vez mais pessoas estão descobrindo seus problemas: difícil de colocar película, toques acidentais nas bordas, conserto caro se quebrar. A tendência de 2026 é voltar para "levemente curvo" ou até "totalmente plano". Não escolha tela curva só porque "curvo é mais premium".
 5. <strong>Armadilha 5: Nem todo "celular com IA" realmente tem IA útil</strong> — em 2026, todos os fabricantes estão gritando "celular com IA", mas muitos só mudaram o nome de assistentes de voz já existentes. As funções de IA realmente úteis são: tradução em tempo real, remoção com IA (apagar pessoas indesejadas das fotos), edição de fotos com IA, inferência de modelo de linguagem on-device, sumarização inteligente localizada. O resto das funções chamativas são basicamente truques de marketing.
 
 #### V. Qual é a melhor época para comprar?
@@ -187,7 +187,7 @@ Aqui estão os "perfis de uso" mais comuns. É só se encaixar no seu:
 - <strong>De duas semanas antes do Ano Novo Chinês até o Festival das Lanternas</strong>: as lojas físicas fazem o "Festival de Compras de Ano Novo" para limpar o estoque. É possível negociar o preço com os vendedores.
 - <strong>Período não recomendado</strong>: comprar no dia do lançamento de um novo produto — a menos que você realmente queira ser um dos primeiros usuários, o preço de lançamento é o mais caro.
 
-#### VI. Como escolher o canal de compra — onde comprar com segurança?
+VI. Como escolher o canal de compra — onde comprar com segurança?
 
 - <strong>Loja oficial da marca / Tmall Flagship Store / JD.com (autogerido)</strong>: o mais seguro. O preço não é o mais baixo, mas você não precisa se preocupar com produtos recondicionados ou falsificados. O pós-venda é o melhor.
 - <strong>Pinduoduo "Subsídio de 10 bilhões"</strong>: preço mais baixo, mas é preciso escolher lojas com o selo "Subsídio de 10 bilhões". Não compre de lojas sem esse selo. Ao receber, lembre-se de gravar um vídeo de unboxing. Se houver problemas, poderá devolver.
@@ -212,7 +212,7 @@ Aqui estão os "perfis de uso" mais comuns. É só se encaixar no seu:
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Método de três passos para escolher: primeiro pense nas necessidades → depois defina o orçamento → por fim, escolha o modelo
-- Parâmetros principais: olhe apenas cinco — processador, tela, câmera, bateria/carregamento e compromisso de atualização do sistema
+- Parâmetros principais: olhe apenas cinco: processador, tela, câmera, bateria/carregamento e compromisso de atualização do sistema
 - 1500-3500 yuans é a faixa de melhor custo-benefício, a mais recomendada
 - Comprar o flagship do ano passado é mais vantajoso do que comprar o modelo intermediário deste ano
 - Cinco armadilhas: golpe de múltiplas câmeras, armadilha dos megapixels altos, customização de operadora, mito da tela curva, hype de IA

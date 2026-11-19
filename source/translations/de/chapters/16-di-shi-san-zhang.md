@@ -2,12 +2,12 @@
 id: di-shi-san-zhang
 num: 13
 part: ruan-jian-pian
-nav: Karten und Navigation
+nav: Kapitel 13: Welche Apps lohnen sich, welche nicht?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 13: Empfehlungen für Werkzeug-Apps
+### Kapitel 13: Welche Apps lohnen sich, welche nicht?
 
 {class="chapter-intro mb-4"}
 In diesem Kapitel stelle ich dir ausgewählte Tools für Produktivität, Gesundheit und unterwegs vor und ergänze praktische System- und Gerätefunktionen: Aufräumen und Schutz vor Belästigung mit Apps wie Qingzhuo, die eingebauten Blockier-Schalter des Handys, Wetter- und Erdbebenwarnungen; PC-Fernsteuerung mit Sunflower/ToDesk, KI-Arbeit mit Trae und anderen, Rengong Desktop, Schnellübertragung im lokalen Netzwerk mit LocalSend und Co., die geräteübergreifende Zwischenablage, Einmalpasswörter mit Aegis/Microsoft Authenticator sowie Terminplanung mit TickTick und das Scannen von Papierdokumenten.
@@ -175,21 +175,21 @@ Nach Eingabe einer Adresse macht der Browser: ① DNS-Abfrage nach der IP-Adress
 
 Die Domain ist die „Hausnummer“ einer Website. Wer sie liest, erkennt Art und Herkunft der Seite:
 
-- Bedeutung häufiger Endungen: .com — kommerzielle Organisation, am häufigsten
-- .cn — chinesische Länderdomain
-- .org — gemeinnützige Organisation
-- .net — Netzdienstleister
-- .edu — Bildungseinrichtung
-- .gov — Regierungsbehörde
-- .xyz/.tech/.info — neuere generische Endungen, niedrige Hürden, Vorsicht geboten
+- Bedeutung häufiger Endungen: .com: kommerzielle Organisation, am häufigsten
+- .cn, chinesische Länderdomain
+- .org, gemeinnützige Organisation
+- .net, Netzdienstleister
+- .edu, Bildungseinrichtung
+- .gov, Regierungsbehörde
+- .xyz/.tech/.info: neuere generische Endungen, niedrige Hürden, Vorsicht geboten
 
-- Länder-/Regions-Domains: .jp — Japan
-- .kr — Südkorea
-- .uk — Vereinigtes Königreich
-- .de — Deutschland
-- .tw — Taiwan
+- Länder-/Regions-Domains: .jp, Japan
+- .kr, Südkorea
+- .uk, Vereinigtes Königreich
+- .de, Deutschland
+- .tw, Taiwan
 - .hk — Hongkong
-- Sicherheitshinweis: Seiten mit .gov und .edu sind in der Regel vertrauenswürdiger, weil die Vergabe streng ist. Billige Endungen wie .xyz oder .top werden häufig von Phishing-Seiten missbraucht – dort besondere Vorsicht.
+- Sicherheitshinweis: Seiten mit .gov und .edu sind in der Regel vertrauenswürdiger, weil die Vergabe streng ist. Billige Endungen wie .xyz oder .top werden häufig von Phishing-Seiten missbraucht – dort besondere Vorsicht
 
 ##### Werbeblocker:
 
@@ -251,7 +251,7 @@ Die Domain ist die „Hausnummer“ einer Website. Wer sie liest, erkennt Art un
 3. Speichern und testen.
 :::
 
-#### 6. Praktische Systemwerkzeuge: Aufräumen, Anti-Spam und Schutz
+6. Praktische Systemwerkzeuge: Aufräumen, Anti-Spam und Schutz
 
 Neben Produktivität und Gesundheit bestimmen drei Dinge den Alltag: „weniger gestört werden, genug Speicher, Betrüger bleiben draußen“. Zuerst die gängigen Helfer, dann die integrierten Blockierfunktionen des Smartphones – viele haben sie seit Jahren nie eingeschaltet.
 
@@ -462,7 +462,7 @@ Alltagsempfehlung: „System-Wetterwarnung + offizielle Wetter-/Notfallkanäle +
 4. Prüfen, dass die Warntöne vom Nicht-stören-Modus nicht komplett unterdrückt werden; dasselbe am Handy der Eltern.
 :::
 
-#### 8. Geräteübergreifend: PC-Fernsteuerung, Schnelltransfer und Kontosicherheit
+8. Geräteübergreifend: PC-Fernsteuerung, Schnelltransfer und Kontosicherheit
 
 Ein Smartphone läuft besonders gut, wenn es mit PC und Tablet ein Team bildet. Hier ergänzend die wichtigsten Helfer: Fernsteuerung des PCs, KI-Büro und Remote-Zusammenarbeit, Live-Wallpapers, LAN-Transfer, geräteübergreifende Zwischenablage, TOTP-2FA sowie Papier-Scans und Terminplanung. Systematischer zu Mehrgeräte-Nutzung: Kapitel 17.
 

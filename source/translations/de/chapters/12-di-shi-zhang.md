@@ -32,7 +32,7 @@ Viele Menschen verwechseln Zahlungscode und Empfangscode – dieser Unterschied 
 
 Wenn Sie diesen Unterschied verinnerlichen, können Sie viele Betrugsmaschen umgehen. Wer immer Sie auffordert, „den Zahlungscode als Screenshot zu schicken" – zu 100 % Betrüger.
 
-#### 3. Diese Sicherheitseinstellungen – 5 Minuten investieren, viel Ärger sparen
+3. Diese Sicherheitseinstellungen – 5 Minuten investieren, viel Ärger sparen
 
 - <strong>Fingerabdruck/Gesichtszahlung</strong>: Aktivieren Sie in den Zahlungseinstellungen von Alipay und WeChat die biometrische Zahlung. So ist bei jeder Zahlung ein Fingerabdruck oder Gesichtsscan nötig – selbst wenn das Smartphone verloren geht, kann der Finder nicht Ihr Geld ausgeben.
 - <strong>Sicherheitssperre</strong>: Sowohl Alipay als auch WeChat haben eine „Sicherheitssperre"-Funktion. Wenn aktiviert, ist beim Öffnen der „Geldbörse"-Seite der App eine zusätzliche Identitätsprüfung nötig. Pfad: Alipay → Mein → Einstellungen → Konto und Sicherheit → Sicherheitscenter → Sicherheitssperre.
@@ -54,7 +54,7 @@ Ich persönlich empfehle die virtuelle Fahrkarte in der Smartphone-Geldbörse. A
 - <strong>Essenslieferung vergleichen</strong>: Dasselbe Restaurant hat auf Meituan und Ele.me oft unterschiedliche Preise und Angebote. Schauen Sie vor der Bestellung auf beiden Plattformen, manchmal sparen Sie ein paar Yuan. Außerdem gibt es bei Meituan die Funktion „Gemeinsam bestellen" – wenn Sie mit Freunden zusammen bestellen, wird es deutlich günstiger.
 - <strong>Sicherheit bei Fahrdiensten</strong>: In DiDi oder Gaode Ride sollten Sie „Notfallkontakt" und „Fahrt teilen" einrichten. Während der Fahrt teilt die App Ihre Fahrt automatisch mit den hinterlegten Kontakten. Außerdem: Bei nächtlichen Fahrten bevorzugen Sie „Taxi" statt „Schnellwagen" – Taxis unterliegen einer Branchenaufsicht und haben eine höhere Sicherheit.
 
-#### 6. Krankenversicherung, Sozialversicherung und Behördengänge mit dem Smartphone
+6. Krankenversicherung, Sozialversicherung und Behördengänge mit dem Smartphone
 
 In den letzten Jahren hat sich viel verändert – viele Dinge, für die man früher in Schlangen vor Schaltern stand, sind heute in wenigen Minuten auf dem Smartphone erledigt.
 

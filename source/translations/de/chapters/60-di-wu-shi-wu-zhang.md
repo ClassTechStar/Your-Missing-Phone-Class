@@ -18,7 +18,7 @@ Zum Üben empfehle ich OpenWeatherMap oder QWeather (Hefeng Weather) – beide h
 
 1. Konto registrieren → auf der Seite API keys einen Key erzeugen (apikey);
 2. Die kostenlose Version darf die Schnittstelle Current Weather (aktuelles Wetter) aufrufen: api.openweathermap.org/data/2.5/weather? q=beijing&appid=deinKey&units=metric;
-3. Probier sie erst einmal im Browser aus und schau an, wie das zurückgegebene JSON aussieht – diese "Vorbereitung" ist Pflicht, bevor du irgendeine API anbindest.
+3. Probier sie erst einmal im Browser aus und schau an, wie das zurückgegebene JSON aussieht – diese "Vorbereitung" ist Pflicht, bevor du irgendeine API anbindest
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -61,7 +61,7 @@ interface WeatherApi {
 
 Gson stopft das JSON automatisch in diese data classes – stimmen die Feldnamen, passiert die Magie von ganz allein.
 
-#### 3. Drei Oberflächenzustände: lädt / erfolgreich / gescheitert
+3. Drei Oberflächenzustände: lädt / erfolgreich / gescheitert
 
 Die Seele einer Online-App ist das "Zustandsmanagement". Langsames Netz, keine Verbindung, falsch geschriebener Stadtname … Für jeden Fall braucht die Oberfläche eine Antwort. Mit einer sealed class (versiegelten Klasse) lässt sich das elegant ausdrücken:
 
@@ -100,7 +100,7 @@ when (val s = state) {
 
 Dieses Loading/Success/Error-Dreigestirn ist das "Universal-Template" für vernetzte Oberflächen – präg es dir ein, danach baust du jede Online-App nach demselben Muster.
 
-#### 4. Oberflächen-Code in der Praxis: Das Wetter auf den Bildschirm malen
+4. Oberflächen-Code in der Praxis: Das Wetter auf den Bildschirm malen
 
 Die Zustände stehen, so sieht die Oberfläche aus (die entscheidenden Ausschnitte):
 
@@ -145,7 +145,7 @@ Ein paar Details lohnen sich zum Lernen: firstOrNull() holt sicher das erste Ele
 - Suchfeld: oben ein TextField, Städtenamen eingeben und auf Suchen tippen (auf der Tastatur die Aktion "Suchen" setzen – Enter startet die Suche);
 - Wetterkarte: Temperatur in großer Schrift (26,5°), Wetterbeschreibung (sonnig), Luftfeuchtigkeit, Stadtname;
 - Favoritenstädte: oft besuchte Städte im DataStore speichern und beim nächsten Start automatisch abfragen – eine beiläufige Wiederholung von Kapitel 6;
-- Pull-to-Refresh: In Compose nimmst du PullToRefreshBox (von Material 3 bereitgestellt) – schon fühlt sich die App sofort professionell an.
+- Pull-to-Refresh: In Compose nimmst du PullToRefreshBox (von Material 3 bereitgestellt) – schon fühlt sich die App sofort professionell an
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

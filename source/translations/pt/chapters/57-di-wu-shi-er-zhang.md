@@ -25,9 +25,9 @@ O Android define oficialmente quatro componentes básicos, cada um responsável 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Visão rápida dos quatro componentes do Android
 
-Na fase de iniciante, você passa 95% do tempo lidando com a Activity; o Service e o BroadcastReceiver entram em cena ao reproduzir música e enviar notificações push; o ContentProvider é o menos usado (o sistema já encapsula os dados mais comuns). E atenção: os quatro componentes precisam ser 'registrados' no AndroidManifest.xml — sem o registro, o sistema não os encontra.
+Na fase de iniciante, você passa 95% do tempo lidando com a Activity; o Service e o BroadcastReceiver entram em cena ao reproduzir música e enviar notificações push; o ContentProvider é o menos usado (o sistema já encapsula os dados mais comuns). E atenção: os quatro componentes precisam ser 'registrados' no AndroidManifest.xml, sem o registro, o sistema não os encontra.
 
-#### 2. O ciclo de vida da Activity: o primeiro 'mapa do tesouro' do desenvolvedor Android
+2. O ciclo de vida da Activity: o primeiro 'mapa do tesouro' do desenvolvedor Android
 
 No celular, um App pode ser interrompido a qualquer momento: chega uma ligação, o usuário troca de app para responder o WeChat, o sistema fica sem memória e encerra o seu processo... A vida de uma Activity é uma viagem em loop por este mapa:
 
@@ -122,11 +122,11 @@ Dica: e quando as telas se multiplicam?
 Quando o projeto crescer, centralize todas as rotas de telas em um único arquivo (por exemplo, AppNavGraph.kt) e gerencie tudo de um só lugar; não deixe a lógica de 'para onde saltar' espalhada pelas telas. Esse é o primeiro passo para sair do 'funciona' e chegar ao 'fácil de manter'.
 :::
 
-#### 5. De quebra: o que é Fragment (e por que este livro não o ensina)
+5. De quebra: o que é Fragment (e por que este livro não o ensina)
 
-Folheando tutoriais antigos, você certamente vai esbarrar no Fragment — um 'trecho de interface reutilizável' dentro da Activity, protagonista absoluto da arquitetura antiga de múltiplas telas. Mas na era do Compose, as telas se resolvem com funções Composable + rotas de Navigation, e a própria Google já reduziu o papel do Fragment. Por isso este livro não o colocou na linha principal.
+Folheando tutoriais antigos, você certamente vai esbarrar no Fragment, um 'trecho de interface reutilizável' dentro da Activity, protagonista absoluto da arquitetura antiga de múltiplas telas. Mas na era do Compose, as telas se resolvem com funções Composable + rotas de Navigation, e a própria Google já reduziu o papel do Fragment. Por isso este livro não o colocou na linha principal.
 
-Sugestão: em projetos novos, não use Fragment por iniciativa própria; mas, ao ler código antigo ou se o tema surgir numa entrevista, basta saber que é um 'trecho de interface embutido na Activity'. Ao buscar material de estudo, priorize sempre o que é de 2023 em diante — o 'almanaque' do ecossistema Android envelhece mais rápido do que se imagina.
+Sugestão: em projetos novos, não use Fragment por iniciativa própria; mas, ao ler código antigo ou se o tema surgir numa entrevista, basta saber que é um 'trecho de interface embutido na Activity'. Ao buscar material de estudo, priorize sempre o que é de 2023 em diante: o 'almanaque' do ecossistema Android envelhece mais rápido do que se imagina.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

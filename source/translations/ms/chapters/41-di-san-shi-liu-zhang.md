@@ -2,12 +2,12 @@
 id: di-san-shi-liu-zhang
 num: 36
 part: er-tong-pian
-nav: Bab 36:Telefon dan Rumah Pintar—Membuat Rumah Lebih Bijak
+nav: Bab 36: Semua peranti rumah, sambung macam mana?
 toc: default
 kind: chapter
 ---
 
-### Bab 36:Telefon dan rumah pintar - menjadikan rumah anda pintar
+### Bab 36: Semua peranti rumah, sambung macam mana?
 
 {class="chapter-intro mb-4"}
 Telefon juga boleh melakukan satu perkara yang semakin penting - menjadi "alat kawalan jauh" untuk seluruh rumah. Dari sebuah lampu, satu soket, hinggalah satu kunci pintu, rumah pintar sedang bertukar daripada "mainan peminat teknologi" kepada "kelengkapan harian". Bab ini membantu anda memahami protokol, ekosistem, hab, dan set permulaan, kemudian ditutup dengan senarai semak keselamatan, supaya anda tidak menjadi mangsa "kepintaran" itu sendiri.
@@ -81,7 +81,7 @@ Dalam kebanyakan senario permulaan, telefon itulah "hab rumah" anda - mengawal l
 
 - Kawalan peranti: buka aplikasi HomeKit/Mijia/AI Life, boleh menyalakan dan mematikan lampu dari jauh atau setempat, laraskan suhu warna, tetapkan suhu penghawa dingin, tutup buka langsir, dan lihat paparan kamera.
 - Senario automasi: gabungkan "syarat -> tindakan"; tiga senario yang paling kerap digunakan: Mod pulang: lokasi sampai rumah + langit gelap -> nyalakan lampu lobi + hidupkan penghawa dingin + tutup langsir + kunci pintu.
-- Mod keluar rumah: orang terakhir keluar (lokasi meninggalkan rumah atau pintu dikunci) -> matikan lampu + matikan penghawa dingin + matikan soket + aktifkan kamera + aktifkan sistem pengawasan.
+- Mod keluar rumah: orang terakhir keluar (lokasi meninggalkan rumah atau pintu dikunci) -> matikan lampu ,+ matikan penghawa dingin + matikan soket + aktifkan kamera + aktifkan sistem pengawasan.
 - Mod tidur: setiap malam jam 23:00 -> matikan semua lampu utama + tutup langsir + penghawa dingin ditetapkan 26 darjah + nyalakan lampu malam.
 
 - Sentuh NFC: tampal satu label NFC di pintu, dan telefon yang disentuh terus mencetuskan senario berkenaan (sentuh sekali untuk lampu masuk pintu, sentuh lagi untuk mod tidur). iPhone menggunakan automasi "Shortcut", sementara Android boleh menulis melalui "Dompet" atau aplikasi pengeluar.
@@ -91,7 +91,7 @@ Dalam kebanyakan senario permulaan, telefon itulah "hab rumah" anda - mengawal l
 Mari cuba: bina "Mod Pulang"
 
 {class="mt-1"}
-Dalam bahagian "Automasi" aplikasi rumah pintar telefon anda, cipta satu yang baharu: pilih syarat pencetus "sampai ke sesuatu lokasi" (rumah), kemudian tambahkan tindakan satu demi satu "nyalakan lampu lobi" "tetapkan penghawa dingin 26 darjah" "tutup langsir". Selepas simpan, keluar berjalan sebentar dan pulang untuk melihat sama ada lampu menyala dengan sendirinya - rasa berjaya kali pertama itu lebih mengujakan daripada membeli peranti baharu.
+Dalam bahagian "Automasi" aplikasi rumah pintar telefon anda, cipta satu yang baharu: pilih syarat pencetus "sampai ke sesuatu lokasi" (rumah), kemudian tambahkan tindakan satu demi satu "nyalakan lampu lobi" "tetapkan penghawa dingin 26 darjah" "tutup langsir". Selepas simpan, keluar berjalan sebentar dan pulang untuk melihat sama ada lampu menyala dengan sendirinya - rasa berjaya kali pertama itu lebih mengujakan dari,pada membeli peranti baharu.
 :::
 
 #### 4. Cadangan set permulaan

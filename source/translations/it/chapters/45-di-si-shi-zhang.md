@@ -2,19 +2,19 @@
 id: di-si-shi-zhang
 num: 40
 part: ai-biancheng-pian
-nav: Capitolo 40: Ingegneria dei requisiti — Trasformare le idee in istruzioni per l'AI
+nav: Capitolo 40: Prima dillo chiaro, poi agisci
 toc: default
 kind: chapter
 ---
 
-### Capitolo 40: Ingegneria dei requisiti — trasformare le idee in istruzioni eseguibili dall'AI
+### Capitolo 40: Prima dillo chiaro, poi agisci
 
 {class="chapter-intro mb-4"}
 Se l'ingegneria del contesto risolve il problema di “far capire all'AI il contesto”, l'ingegneria dei requisiti risolve quello di “far sapere all'AI cosa deve fare esattamente questa volta”. È la fase della programmazione AI che mostra meglio le differenze tra le persone: con gli stessi strumenti e gli stessi modelli, c'è chi realizza progetti sorprendenti e chi solo giocattoli mediocri. La differenza spesso non sta nelle capacità tecniche, ma nella capacità di esprimere i requisiti.
 
 #### 1. Da un'idea vaga a requisiti strutturati
 
-Ogni progetto nasce da un'idea vaga: “voglio fare un'app per tenere le spese”, “voglio un sito personale”, “voglio uno strumento per le cose da fare”. Le idee in sé non sono un problema, ma se le lanci direttamente all'AI la qualità del risultato dipende interamente dalla fortuna. L'obiettivo dell'ingegneria dei requisiti è trasformare quell'idea vaga in un requisito strutturato che l'AI possa eseguire con precisione.
+Ogni progetto nasce da un'idea vaga: “voglio fare un'app per tenere le spese”. “voglio un sito personale”, “voglio uno strumento per le cose da fare”. Le idee in sé non sono un problema, ma se le lanci direttamente all'AI la qualità del risultato dipende interamente dalla fortuna. L'obiettivo dell'ingegneria dei requisiti è trasformare quell'idea vaga in un requisito strutturato che l'AI possa eseguire con precisione.
 
 La buona notizia è che un requisito strutturato non richiede un PRD di decine di pagine. Ti basta rispondere a cinque domande, che chiamiamo i “cinque elementi del requisito”:
 
@@ -38,7 +38,7 @@ Prendendo come esempio “fare un'app personale per le spese”, una scomposizio
 1. Implementare la funzione base di registrazione di entrate e uscite (aggiungere, visualizzare, eliminare le voci);
 2. Aggiungere le categorie (etichettare ogni voce con pasti, trasporti e così via);
 3. Implementare il riepilogo mensile (statistiche di entrate e uscite mese per mese);
-4. Aggiungere la visualizzazione dei dati (grafici della struttura delle spese).
+4. Aggiungere la visualizzazione dei dati (grafici della struttura delle spese)
 
 Ogni passaggio è un incremento funzionale che può essere eseguito e verificato da solo.
 
@@ -111,9 +111,9 @@ Secondo passaggio: scomponiamo i requisiti.
 1. Step 1: implementare la funzione “registra voce di studio” (data, contenuto, durata);
 2. Step 2: aggiungere le “statistiche del tempo di studio” (oggi, totale settimanale);
 3. Step 3: implementare la vista “calendario dello studio” (mostrata come il grafico dei contributi di GitHub);
-4. Step 4: aggiungere la funzione “riassunto dello studio” (mostra a caso le registrazioni di un giorno passato, per ripassare).
+4. Step 4: aggiungere la funzione “riassunto dello studio” (mostra a caso le registrazioni di un giorno passato, per ripassare)
 
-Terzo passaggio: scrivi un PRD breve. Non serve lungo — la scomposizione di sopra costituisce già il corpo principale del PRD. Mettilo in ordine in un file .md, nella cartella radice del progetto, come riferimento comune per te e per l'AI.
+Terzo passaggio: scrivi un PRD breve. Non serve lungo, la scomposizione di sopra costituisce già il corpo principale del PRD. Mettilo in ordine in un file .md, nella cartella radice del progetto, come riferimento comune per te e per l'AI.
 
 Quarto passaggio: inizia a sviluppare il primo step. L'istruzione da dare all'AI può essere:
 
@@ -145,7 +145,7 @@ Scegli un piccolo progetto che rimugini da tempo e dedica 5 minuti a riempire un
 {class="font-semibold mb-1"}
 Riepilogo del capitolo
 
-- I cinque elementi del requisito: Who / What / Why / How / Constraint — pensa bene prima di parlare
+- I cinque elementi del requisito: Who / What / Why / How / Constraint, pensa bene prima di parlare
 - Regola d'oro della scomposizione dei requisiti: a ogni passaggio completato il progetto è una “cosa utilizzabile”
 - Il PRD è scritto per te stesso: panoramica, elenco funzioni, soluzione tecnica, modello dati, interfaccia, piano
 - Una buona istruzione = descrivere solo il passaggio corrente + vincoli chiari + dire “cosa fare” senza dire “come farlo”

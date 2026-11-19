@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Chapter 15: Battery Science and Battery Life Optimization
+nav: Chapter 15: Charging Twice a Day: Battery or Habits?
 toc: default
 kind: chapter
 ---
 
-### Chapter 15: Battery Science and Battery Life Optimization
+### Chapter 15: Charging Twice a Day: Battery or Habits?
 
 {class="chapter-intro mb-4"}
 Afraid of heat
@@ -16,7 +16,7 @@ Afraid of heat
 
 Aging
 
-- <strong>: Over time, the maximum capacity will decrease—this is normal.</strong> Core Metrics: Cycle Count and Battery Health
+- <strong>: Over time, the maximum capacity will decrease,this is normal.</strong> Core Metrics: Cycle Count and Battery Health.
 - <strong>One cycle is not one charge. For example, if you use 60% today and recharge to full, then use 40% tomorrow and recharge to full, the total 100% consumed counts as one cycle.</strong> Battery health is the current maximum capacity as a percentage of brand-new. Below 80%, you'll noticeably feel the battery life shorten.
 - <strong>How to check?</strong> iPhone: Settings &gt; Battery &gt; Battery Health &amp; Charging; Android: usually search "battery health" in Settings.
 
@@ -26,7 +26,7 @@ Aging
 - Using original or certified fast-charging accessories causes minimal harm. The phone and charger have temperature control and will automatically reduce power if overheated.
 - <strong>Wireless charging</strong> : Convenient but less efficient, with more noticeable heat. Suitable for overnight charging.
 
-#### 2. Charging Mysticism? Fast Charging, Wireless Charging, and the Golden Rule
+2. Charging Mysticism? Fast Charging, Wireless Charging, and the Golden Rule
 
 - <strong>: Try to keep the battery level between 20%-80%. Don't keep it starving (0%) or stuffed (100%).</strong> 3. Complete Guide to Fast Charging Protocols: Why Won't Your Charger Charge Fast?
 - <strong>Wireless charging</strong>1. Basic Principles of Fast Charging
@@ -51,12 +51,12 @@ The three options mean: ①<strong>No Limit</strong>— charges to 100%; ②<str
 <i class="fas fa-plug mr-2"></i>GaN Chargers — A Traveler's Best Companion
 
 {class="mt-1"}
-You may have noticed that fast chargers are getting smaller and smaller — the hero behind this is <strong>GaN (Gallium Nitride)</strong> this new semiconductor material. Compared to traditional silicon-based chargers, GaN chargers have several clear advantages:
+You may have noticed that fast chargers are getting smaller and smaller, the hero behind this is <strong>GaN (Gallium Nitride)</strong> this new semiconductor material. Compared to traditional silicon-based chargers, GaN chargers have several clear advantages:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Compact Size</strong>: At the same power output, GaN chargers can be 1/2 or even 1/3 the size of traditional silicon ones. A 65W GaN charger is smaller than Apple's old 5W charger.
 - <strong>High Efficiency, Low Heat</strong>: Gallium nitride's switching loss is far lower than silicon, with energy conversion efficiency reaching 95%+, so it doesn't get hot during charging.
-- <strong>Travel-Friendly</strong>: A single 65W or 100W multi-port GaN charger can simultaneously charge a phone, tablet, and laptop — much lighter than carrying three "bricks."
+- <strong>Travel-Friendly</strong>: A single 65W or 100W multi-port GaN charger can simultaneously charge a phone, tablet, and laptop, much lighter than carrying three "bricks.".
 - <strong>Buying Advice</strong>: Look for GaN chargers that support the PD protocol (65W+ can charge laptops). Well-known brands like Baseus, Anker, Nubia, and Xiaomi are all good choices. Make sure to check that the cable is compatible (high-power charging requires a Type-C cable with an E-Marker chip).
 :::
 
@@ -74,14 +74,14 @@ Charging phase
 1. <strong>: The charger outputs voltage and current according to the negotiated values, and the phone manages the power.</strong> Adjustment phase
 2. <strong>: As the battery level increases, the phone gradually reduces the charging power to protect the battery.</strong>2. Mainstream Fast Charging Protocols in Detail
 3. <strong>USB PD (Power Delivery)</strong>—King of Universal Protocols
-4. <strong>Features</strong>: Official standard developed by USB-IF organization, with the widest coverage. PD 3.0 supports up to 100W (20V/5A), PD 3.1 extends to 240W (48V/5A).
+4. <strong>Features</strong>: Official standard developed by USB-IF organization, with the widest coverage. PD 3.0 supports up to 100W (20V/5A), PD 3.1 extends to 240W (48V/5A)
 
 ##### Voltage levels
 
 <strong>: 5V, 9V, 15V, 20V; PD 3.1 also supports 28V, 36V, 48V.</strong> Compatibility
 
 - <strong>Protocol</strong> Advantages
-- <strong>: Strong universality—one charger can charge multiple devices; supports PPS (Programmable Power Supply) for fine-tuning voltage and current.</strong> Disadvantages
+- <strong>: Strong universality,one charger can charge multiple devices; supports PPS (Programmable Power Supply) for fine-tuning voltage and current.</strong> Disadvantages
 - <strong>QC 5.0</strong> Qualcomm QC (Quick Charge)
 - <strong>—Veteran of the Android Camp</strong> QC 3.0
 - <strong>: Supports adjustable voltage from 3.6V-20V in 0.2V steps, up to 18W.</strong> QC 4.0/4+
@@ -175,14 +175,14 @@ Charging phase
 
 Proprietary protocols
 
-- <strong>: Each brand has its own high-speed wireless charging, such as Xiaomi 50W wireless charging, Huawei 50W wireless charging, etc., requiring dedicated chargers.</strong>5. Fast Charging Purchasing Guide
+- <strong>: Each brand has its own high-speed wireless charging, such as Xiaomi 50W wireless charging, Huawei 50W wireless charging, etc., requiring dedicated chargers.</strong>5. Fast Charging Purchasing Guide.
 - <strong>Check protocol matching</strong>: When purchasing a charger, confirm it supports your phone's fast charging protocol. Third-party chargers usually list supported protocols.
 - <strong>Check the cable</strong>: High-power fast charging requires a dedicated cable. Ordinary cables may only support below 60W.
 
 ##### Check certification
 
 - <strong>: Apple users should choose MFi-certified cables; Android users should choose original brand or well-known third-party.</strong> Check heat
-- <strong>: It's normal for the phone to heat up during fast charging, but if it's burning hot, that's not normal—pause charging or change the charger.</strong> Fast Charging Safety Tips
+- <strong>: It's normal for the phone to heat up during fast charging, but if it's burning hot, that's not normal:pause charging or change the charger.</strong> Fast Charging Safety Tips
 - <strong>Avoid playing heavy games while charging, which will increase heat.</strong> Do not use low-quality chargers and cables, which may cause safety hazards.
 - <strong>Remove thick phone cases while charging to help with heat dissipation.</strong> If the charger or phone heats abnormally or has an unusual smell, stop using it immediately.
 
@@ -201,7 +201,7 @@ Proprietary protocols
 
 If you've been paying attention to 2024-2026 flagship phone launches, "silicon-carbon anode" has practically become synonymous with premium batteries. This is an important upgrade to lithium battery anode materials, and the principle isn't complicated:
 
-- <strong>Traditional Graphite Anode</strong>: Phone batteries have always used graphite as the anode — the technology is mature and stable, but energy density has approached the theoretical limit (approximately 372mAh/g).
+- <strong>Traditional Graphite Anode</strong>: Phone batteries have always used graphite as the anode, the technology is mature and stable, but energy density has approached the theoretical limit (approximately 372mAh/g).
 - <strong>Adding Silicon Material</strong>: Silicon's theoretical specific capacity is about 10 times that of graphite (approximately 4200mAh/g). By adding a small amount of silicon to graphite to create a "silicon-carbon composite anode," the overall energy density of the battery can be significantly improved.
 - <strong>Energy Density Improvement</strong>: At the same volume, silicon-carbon anode batteries can increase capacity by approximately <strong>15%-20%</strong>. This is the key reason 2024-2026 flagship phones can fit 5500-6000mAh batteries in 7-9mm bodies.
 
@@ -223,7 +223,7 @@ If you've been paying attention to 2024-2026 flagship phone launches, "silicon-c
 - <strong>: If the signal is poor, manually switch back to 4G, and battery life will be much better.</strong> Location services
 - <strong>: For non-navigation apps, set location permission to "Only while using".</strong> Limit background activity
 - <strong>: iPhone in Settings &gt; General &gt; Background App Refresh; Android in app battery settings.</strong> Let's Check: Give Your Battery a Health Exam
-- <strong>Check health: Find and note your battery's maximum capacity.</strong> Analyze power consumption details: Look at the charts and app list in battery settings to find the power-hungry culprits.
+- <strong>Check health: Find and note your battery's maximum capacity.</strong> Analyze power consumption details: Look at the charts and app list in battery settings to find the power-hungry culprits
 - <strong>Formulate a strategy: Restrict apps with abnormal background power consumption.</strong> Chapter 16: Account Systems and Cloud Services
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

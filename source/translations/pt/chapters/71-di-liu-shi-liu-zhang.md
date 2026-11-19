@@ -10,15 +10,15 @@ kind: chapter
 ### Capítulo 66: Projeto 2 — App de consulta do tempo (versão conectada)
 
 {class="chapter-intro mb-4"}
-O livro-caixa serve para "treinar a base"; o App de tempo serve para "ver mundo" — ele precisa conversar com a internet. Neste projeto você vai aprender a: pedir uma API gratuita, interpretar JSON, tratar os três estados de tela "carregando/sucesso/falha" e guardar bem a chave da API. Ao terminar, você terá a capacidade de criar qualquer "App conectado" — notícias, câmbio, tradução: a receita é a mesma.
+O livro-caixa serve para "treinar a base"; o App de tempo serve para "ver mundo", ele precisa conversar com a internet. Neste projeto você vai aprender a: pedir uma API gratuita, interpretar JSON, tratar os três estados de tela "carregando/sucesso/falha" e guardar bem a chave da API. Ao terminar, você terá a capacidade de criar qualquer "App conectado", notícias, câmbio, tradução: a receita é a mesma.
 
 #### 1. Solicitando uma API de tempo gratuita
 
-Para praticar individualmente, recomendamos o OpenWeatherMap ou o QWeather (serviço popular na China) — ambos têm cota gratuita e funcionam logo após o cadastro. Usando o OpenWeatherMap como exemplo:
+Para praticar individualmente, recomendamos o OpenWeatherMap ou o QWeather (serviço popular na China), ambos têm cota gratuita e funcionam logo após o cadastro. Usando o OpenWeatherMap como exemplo:
 
 1. Crie a conta → gere uma chave (apikey) na página API keys;
 2. A versão gratuita permite chamar o endpoint Current Weather: api.openweathermap.org/data/2.5/weather? q=beijing&appid=SUA-CHAVE&units=metric;
-3. Teste primeiro uma vez no navegador para ver como é o JSON retornado — essa "lição de casa" é obrigatória antes de integrar qualquer API.
+3. Teste primeiro uma vez no navegador para ver como é o JSON retornado, essa "lição de casa" é obrigatória antes de integrar qualquer API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -146,27 +146,27 @@ Alguns detalhes valem a pena aprender: first? pega o primeiro elemento com segur
 - Campo de busca: o modificador .searchable no topo traz a interação de busca nativa do sistema; ao confirmar, ele chama vm.search;
 - Cidades favoritas: salve as cidades consultadas com frequência no UserDefaults para consultá-las automaticamente na próxima abertura;
 - Puxar para atualizar: .refreshable { await vm.search(...) } resolve em uma linha;
-- Ícones do tempo: use Image(systemName:) mapeando pela descrição (sun.max / cloud.rain / snowflake) e a tela ganha vida na hora.
+- Ícones do tempo: use Image(systemName:) mapeando pela descrição (sun.max / cloud.rain / snowflake) e a tela ganha vida na hora
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Dica: a pegadinha dos nomes de cidade em chinês
 
 {class="mt-1"}
-O OpenWeatherMap tem um suporte mediano a nomes de cidade em chinês: buscar pelo nome em caracteres chineses pode não dar resultado, enquanto "beijing" funciona normalmente. Em um produto de verdade, a solução é embutir uma tabela de mapeamento "nome da cidade → inglês/coordenadas" ou integrar um serviço de tempo local. Na fase de prática, basta suportar nomes em pinyin/inglês — não vale a pena brigar com isso.
+O OpenWeatherMap tem um suporte mediano a nomes de cidade em chinês: buscar pelo nome em caracteres chineses pode não dar resultado, enquanto "beijing" funciona normalmente. Em um produto de verdade, a solução é embutir uma tabela de mapeamento "nome da cidade → inglês/coordenadas" ou integrar um serviço de tempo local. Na fase de prática, basta suportar nomes em pinyin/inglês, não vale a pena brigar com isso.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mãos à obra: checklist de validação do App de tempo
 
-#### 6. Como depurar requisições de rede: logs, captura de pacotes e simulação de rede lenta
+6. Como depurar requisições de rede: logs, captura de pacotes e simulação de rede lenta
 
 Quando um App conectado dá problema, quase sempre é porque "a requisição não foi enviada corretamente" ou "a resposta não foi interpretada corretamente". Três recursos de depuração:
 
-1. Imprimir os dados brutos: imprima String(data: data, encoding: .utf8) para ver o JSON original — nomes de campos e tipos ficam evidentes, dez vezes mais rápido do que ficar adivinhando;
+1. Imprimir os dados brutos: imprima String(data: data, encoding: .utf8) para ver o JSON original, nomes de campos e tipos ficam evidentes, dez vezes mais rápido do que ficar adivinhando;
 2. Captura de pacotes: Proxyman (gratuito no Mac) e Charles interceptam todas as requisições e respostas do App, revelando a camada de rede como um raio-X;
-3. Simular rede fraca: no menu do simulador, Features → Network Link Conditioner (ferramenta que precisa ser baixada do site para desenvolvedores) simula 3G e alta latência — e revela aquele problema de "ficar rodando eternamente".
+3. Simular rede fraca: no menu do simulador, Features → Network Link Conditioner (ferramenta que precisa ser baixada do site para desenvolvedores) simula 3G e alta latência: e revela aquele problema de "ficar rodando eternamente"
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -177,14 +177,14 @@ Se a requisição falha assim que é enviada com o erro "App Transport Security"
 :::
 
 {class="mt-1"}
-① A busca normal exibe o tempo; ② ao desconectar a rede, o App mostra um erro elegante sem travar (teste desligando a rede do Mac com o simulador aberto!); ③ digitar uma cidade inexistente gera um aviso amigável; ④ favoritar duas cidades e elas continuam lá após reiniciar o App; ⑤ a tela fica confortável no modo escuro. Passando nos cinco itens, o projeto se forma.
+① A busca normal exibe o tempo. ② ao desconectar a rede, o App mostra um erro elegante sem travar (teste desligando a rede do Mac com o simulador aberto!). ③ digitar uma cidade inexistente gera um aviso amigável. ④ favoritar duas cidades e elas continuam lá após reiniciar o App. ⑤ a tela fica confortável no modo escuro. Passando nos cinco itens, o projeto se forma.
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 Resumo do capítulo
 
-- Teste a API no navegador e entenda o JSON antes de escrever código — "estudar antes" nunca é perda
+- Teste a API no navegador e entenda o JSON antes de escrever código, "estudar antes" nunca é perda
 - A chave de API vai escondida no xcconfig, jamais no repositório de código
 - Modelo Codable + URLSession com async/await: com os campos alinhados, o JSON se interpreta sozinho
 - O esquema de estados em três partes loading/success/error é o curinga das telas conectadas

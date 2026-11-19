@@ -2,17 +2,17 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Bab 56: Penghalusan dan Penerbitan—Menerbitkan di Google Play
+nav: Bab 56: Aplikasi sudah siap, sekarang terbit
 toc: default
 kind: chapter
 ---
 
-### Bab 56: Pengilatan dan Penerbitan — Ujian, Penyahpepijatan dan Penerbitan di Google Play
+### Bab 56: Aplikasi sudah siap, sekarang terbit
 
 {class="chapter-intro mb-4"}
-Aplikasi sudah siap dibuat, kemudian? Bab ini menjawab tiga perkara 'dari boleh berjalan' ke 'boleh dihantar': bagaimana menyahpepijat dengan cekap untuk mencari bug, bagaimana menulis ujian untuk mengelakkan regresi, dan bagaimana menghantar aplikasi ke Google Play untuk dimuat turun oleh seluruh dunia. Menerbitkan bukan sekadar upacara formal — ia titik peralihan yang menukarkan sebuah karya menjadi produk.
+Aplikasi sudah siap dibuat, kemudian? Bab ini menjawab tiga perkara 'dari boleh berjalan' ke 'boleh dihantar': bagaimana menyahpepijat dengan cekap untuk mencari bug, bagaimana menulis ujian untuk mengelakkan regresi, dan bagaimana menghantar aplikasi ke Google Play untuk dimuat turun oleh seluruh dunia. Menerbitkan bukan sekadar upacara formal, ia titik peralihan yang menukarkan sebuah karya menjadi produk.
 
-#### 1. Tiga Senjata Penyahpepijatan: Logcat, Breakpoint, Pemeriksa UI
+1. Tiga Senjata Penyahpepijatan: Logcat, Breakpoint, Pemeriksa UI
 
 ::: div .overflow-x-auto
 ```html
@@ -33,7 +33,7 @@ Selepas aplikasi ranap, Logcat akan memaparkan stacktrace berwarna merah. Cari d
 
 #### 2. Ujian: beri 'insurans' kepada kod anda
 
-Ujian manual tidak boleh diharap — anda membaiki satu fungsi, fungsi lain rosak secara senyap. Ujian ialah 'ubat penyesalan' dan sekali gus 'baju kebal'. Ujian Android terbahagi kepada tiga lapisan; sebagai pemula, kuasai dahulu lapisan pertama:
+Ujian manual tidak boleh diharap — anda membaiki satu fungsi, fungsi lain rosak secara senyap. Ujian ialah 'ubat penyesalan' dan sekali gus 'baju kebal'. Bagi Android, ujian terbahagi kepada tiga lapisan; sebagai pemula, kuasai dahulu lapisan pertama:
 
 ::: div .overflow-x-auto
 ```html
@@ -74,20 +74,20 @@ fun normalValueParses() {
 
 Pengesahan jumlah wang dan pengiraan statistik dalam buku perakaunan patut dilindungi oleh ujian unit. Jalankan ujian: klik kanan folder test → Run. Jika semuanya hijau, anda boleh mengubah kod dengan tenang.
 
-#### 3. Tandatangan dan bungkusan: 'cop rasmi' untuk aplikasi anda
+3. Tandatangan dan bungkusan: 'cop rasmi' untuk aplikasi anda
 
-Android mewajibkan semua pakej pemasangan ditandatangani — seperti cop rasmi yang membuktikan "pakej ini datang daripada saya dan tidak diubah suai". Semasa debug, Android Studio secara automatik menggunakan tandatangan debug; untuk penerbitan, anda perlu tandatangan release sendiri. Prosedurnya:
+Android mewajibkan semua pakej pemasangan ditandatangani, seperti cop rasmi yang membuktikan "pakej ini datang daripada saya dan tidak diubah suai". Semasa debug, Android Studio secara automatik menggunakan tandatangan debug; untuk penerbitan, anda perlu tandatangan release sendiri. Prosedurnya:
 
 1. Menu Build → Generate Signed Bundle / APK;
-2. Cipta fail keystore (stor kunci) — tetapkan kata laluan dan simpan dengan selamat;
-3. Pilih format release + AAB, dan binaan siap.
+2. Cipta fail keystore (stor kunci), tetapkan kata laluan dan simpan dengan selamat;
+3. Pilih format release + AAB, dan binaan siap
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Amaran penting: keystore hilang = aplikasi hilang
 
 {class="mt-1"}
-Selepas aplikasi diterbitkan, setiap kemas kini mesti menggunakan tandatangan yang sama, jika tidak kedai akan menolak kemas kini tersebut. Sekali fail keystore dan kata laluannya hilang, anda hanya boleh mencipta aplikasi baharu dan menerbitkannya semula — pengguna lama semuanya terputus sambungan. Pastikan anda membuat sandaran keystore dan kata laluannya di tempat yang selamat (storan awan disulitkan + buku nota). Ini antara pengajaran paling mahal bagi pembangun Android.
+Selepas aplikasi diterbitkan, setiap kemas kini mesti menggunakan tandatangan yang sama, jika tidak kedai akan menolak kemas kini tersebut. Sekali fail keystore dan kata laluannya hilang. anda hanya boleh mencipta aplikasi baharu dan menerbitkannya semula, pengguna lama semuanya terputus sambungan. Pastikan anda membuat sandaran keystore dan kata laluannya di tempat yang selamat (storan awan disulitkan + buku nota). Ini antara pengajaran paling mahal bagi pembangun Android.
 :::
 
 #### 4. Proses penuh menerbitkan di Google Play
@@ -108,24 +108,24 @@ Rajah 6: Enam langkah menerbitkan di Google Play
 - Pendaftaran: yuran pendaftaran sekali bayar 25 dolar AS, memerlukan akaun Google yang boleh digunakan;
 - Bahan: ikon aplikasi (512×512), tangkapan skrin (sekurang-kurangnya 2 keping), penerangan fungsi, pautan dasar privasi (wajib jika ada data dikumpul);
 - Borang keselamatan data: isytiharkan dengan jujur data apa yang dikumpul — buku perakaunan yang tidak bersambung ke internet boleh menanda "sifar pengumpulan";
-- Semakan: akaun baharu yang menerbitkan buat kali pertama kerap melalui semakan manusia, dari beberapa jam hingga beberapa hari; jika ditolak, baiki mengikut ulasan yang diberikan.
+- Semakan: akaun baharu yang menerbitkan buat kali pertama kerap melalui semakan manusia, dari beberapa jam hingga beberapa hari; jika ditolak, baiki mengikut ulasan yang diberikan
 
-Perhatian bagi pengguna di China: Google Play memerlukan persekitaran rangkaian khas, dan pengedaran di tanah besar China biasanya melalui kedai tempatan (Huawei, Xiaomi, Yingyongbao dan sebagainya). Prosedur menerbitkan di kedai tempatan serupa, tetapi setiap kedai mempunyai citarasa semakan sendiri — AAB/APK yang sama boleh diedarkan ke banyak kedai. Untuk permulaan, berjaya melalui satu kedai sahaja sudah kemenangan.
+Perhatian bagi pengguna di China: Google Play memerlukan persekitaran rangkaian khas, dan pengedaran di tanah besar China biasanya melalui kedai tempatan (Huawei, Xiaomi, Yingyongbao dan sebagainya). Prosedur menerbitkan di kedai tempatan serupa, tetapi setiap kedai mempunyai citarasa semakan sendiri, AAB/APK yang sama boleh diedarkan ke banyak kedai. Untuk permulaan, berjaya melalui satu kedai sahaja sudah kemenangan.
 
-#### 5. Cara menyediakan bahan kedai: tanggapan pertama menentukan muat turun
+5. Cara menyediakan bahan kedai: tanggapan pertama menentukan muat turun
 
 Halaman kedai ialah etalase yang dilihat pengguna ketika "melayari kedai". Tiga bahan menentukan tanggapan pertama:
 
 - Ikon: 512×512, jangan guna tangkapan skrin sekadar lepas. Jika tiada kemahiran reka bentuk, gunakan alat AI untuk menjana bentuk geometri ringkas; ia hanya layak jika masih dikenali sekilas pandang walaupun diperkecil pada skrin utama telefon;
-- Tangkapan skrin: sekurang-kurangnya 2 keping, lebih baik 4-6 keping, memaparkan senario fungsi paling teras; setiap satu disertakan satu ayat mudah difahami ("Catat satu entri dalam se saat" sepuluh kali lebih baik daripada "Penyelesaian perakaunan yang cekap");
-- Penerangan: ayat pertama mesti menjelaskan "apa ini + untuk siapa"; jangan menimbun "paling profesional, paling hebat" — keutamaan carian kedai terutamanya bergantung pada kata kunci dan penukaran muat turun; kejujuran lebih berkesan daripada pembesaran berlebihan.
+- Tangkapan skrin: sekurang-kurangnya 2 keping, lebih baik 4-6 keping, memaparkan senario fungsi paling teras; setiap satu disertakan satu ayat mudah difahami ("Catat satu entri dalam se saat" sepuluh kali lebih baik dari,pada "Penyelesaian perakaunan yang cekap");
+- Penerangan: ayat pertama mesti menjelaskan "apa ini + untuk siapa"; jangan menimbun "paling profesional, paling hebat", keutamaan carian kedai terutamanya bergantung pada kata kunci dan penukaran muat turun; kejujuran lebih berkesan daripada pembesaran berlebihan
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Petua: buat perbandingan A/B dengan aplikasi sejenis
 
 {class="mt-1"}
-Sebelum menerbitkan, layari sepuluh teratas aplikasi sejenis di kedai dan bandingkan tangkapan skrin: apakah gaya ikon mereka? Apakah jualan unik dalam tangkapan skrin? Bagaimana tajuk ditulis? Meniru bukan menjiplak — pelajari coraknya, gantikan dengan kandungan anda sendiri. Ini pelajaran terpantas untuk memulakan semua produk.
+Sebelum menerbitkan, layari sepuluh teratas aplikasi sejenis di kedai dan bandingkan tangkapan skrin: apakah gaya ikon mereka? Apakah jualan unik dalam tangkapan skrin? Bagaimana tajuk ditulis? Meniru bukan menjiplak, pelajari coraknya, gantikan dengan kandungan anda sendiri. Ini pelajaran terpantas untuk memulakan semua produk.
 :::
 
 #### 6. Senarai semak pengoptimuman prestasi dan laporan ranapan
@@ -137,7 +137,7 @@ Sebelum aplikasi diterbitkan, dua perkara ini berbaloi diberikan masing-masing s
 1. Gunakan LazyColumn untuk senarai: jangan sesekali menyusun senarai panjang dengan Column — lazy loading ialah pelajaran pertama prestasi Android;
 2. Jangan terus gunakan imej asal: gunakan pustaka imej Coil untuk menskala dan menge-cache secara automatik; satu imej asal 5MB sudah cukup untuk menyekat telefon kelas bawah;
 3. Elakkan kerja berat pada benang utama: pangkalan data, rangkaian dan fail besar dilakukan dalam coroutine;
-4. Ukur dengan Profiler: penganalisis prestasi terbina dalam Android Studio boleh melihat memori, CPU dan penggunaan bateri — ukur dahulu, kemudian optima; jangan bergantung pada perasaan.
+4. Ukur dengan Profiler: penganalisis prestasi terbina dalam Android Studio boleh melihat memori, CPU dan penggunaan bateri: ukur dahulu, kemudian optima; jangan bergantung pada perasaan
 
 ##### 2. Laporan ranapan
 
@@ -148,7 +148,10 @@ Aplikasi tidak ranap semasa anda menguji tidak bermakna ia tidak akan ranap pada
 Praktik: "serahkan" buku perakaunan anda sekali
 
 {class="mt-1"}
-① Tambahkan 3 ujian unit untuk logik seperti parseAmount; ② gunakan Logcat untuk menangkap sendiri satu ranapan yang anda cipta dan membaikinya; ③ jana APK bertanda tangan release dan hantar kepada rakan untuk dipasang (barulah ada rasa "karya siap"); ④ jika ada kelapangan, daftar akaun pembangun dan benar-benar hantar buku perakaunan untuk diterbitkan. Tiga yang pertama boleh siap malam ini juga.
+1. Tambahkan 3 ujian unit untuk logik seperti parseAmount;
+2. gunakan Logcat untuk menangkap sendiri satu ranapan yang anda cipta dan membaikinya;
+3. jana APK bertanda tangan release dan hantar kepada rakan untuk dipasang (barulah ada rasa "karya siap");
+4. jika ada kelapangan, daftar akaun pembangun dan benar-benar hantar buku perakaunan untuk diterbitkan. Tiga yang pertama boleh siap malam ini juga.
 :::
 
 ::: div .chapter-summary

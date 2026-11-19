@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 58: Manual de consulta rápida e recursos
 
 {class="chapter-intro mb-4"}
-Este capítulo é um manual de consulta rápida que pode ser usado de forma independente. Quando você não lembrar de alguma sintaxe ou precisar decidir rápido, venha direto para cá. Trate-o como um 'cartão de bolso': consultas de código frequentes, perguntas comuns e recursos de estudo — tudo ali, sem deixar nada de fora.
+Este capítulo é um manual de consulta rápida que pode ser usado de forma independente. Quando você não lembrar de alguma sintaxe ou precisar decidir rápido, venha direto para cá. Trate-o como um 'cartão de bolso': consultas de código frequentes, perguntas comuns e recursos de estudo: tudo ali, sem deixar nada de fora.
 
 #### 1. Cartão de consulta rápida de código
 
@@ -31,11 +31,11 @@ Siga o caminho deste livro: semanas 1-2, instalar o ambiente e aprender o básic
 
 P2: Ainda preciso aprender Java?
 
-Não precisa. Projetos novos, tutoriais novos e vagas novas praticamente todos usam Kotlin. Você só vai encontrar muito Java ao 'manter um projeto com dez anos de idade'. Depois de aprender Kotlin, se o trabalho pedir, completar com Java é rápido — por baixo, os dois vivem no mesmo ecossistema de máquina virtual.
+Não precisa. Projetos novos, tutoriais novos e vagas novas praticamente todos usam Kotlin. Você só vai encontrar muito Java ao 'manter um projeto com dez anos de idade'. Depois de aprender Kotlin, se o trabalho pedir, completar com Java é rápido, por baixo, os dois vivem no mesmo ecossistema de máquina virtual.
 
 P3: Emulador ou aparelho real?
 
-Para desenvolver e depurar, o emulador é prático (snapshots, vários modelos), mas a aceitação precisa passar por um aparelho real — toque, desempenho, rede de verdade, sensores: o emulador não substitui. Se as condições permitirem, comprar um aparelho intermediário como máquina de testes é o investimento mais vantajoso.
+Para desenvolver e depurar, o emulador é prático (snapshots, vários modelos), mas a aceitação precisa passar por um aparelho real, toque, desempenho, rede de verdade, sensores: o emulador não substitui. Se as condições permitirem, comprar um aparelho intermediário como máquina de testes é o investimento mais vantajoso.
 
 P4: É fácil encontrar trabalho com desenvolvimento Android?
 
@@ -74,17 +74,17 @@ Comandos Gradle de uso frequente
 Dica: se o build der problema, comece pelo clean
 
 {class="mt-1"}
-Aqueles mistérios de 'ontem compilava, hoje não compila mais', seis ou sete vezes em cada dez, são cache de build bagunçado. Um ./gradlew clean seguido de um novo build cura a maior parte dos problemas 'paranormais'. Se não resolver, reinicie o Android Studio — e use esse truque junto com File → Invalidate Caches.
+Aqueles mistérios de 'ontem compilava, hoje não compila mais', seis ou sete vezes em cada dez, são cache de build bagunçado. Um ./gradlew clean seguido de um novo build cura a maior parte dos problemas 'paranormais'. Se não resolver, reinicie o Android Studio, e use esse truque junto com File → Invalidate Caches.
 :::
 
 #### 5. Palavras finais: do primeiro App ao N-ésimo App
 
-Olhando para trás: você saiu do 'não faço ideia do que é uma Activity' para instalar o ambiente, aprender Kotlin, desenhar interfaces com o Compose, conectar o App a banco de dados e rede, e depois testar, empacotar e publicar — nesse caminho, você já percorreu o trecho mais difícil da jornada do zero ao um.
+Olhando para trás: você saiu do 'não faço ideia do que é uma Activity' para instalar o ambiente, aprender Kotlin, desenhar interfaces com o Compose, conectar o App a banco de dados e rede, e depois testar, empacotar e publicar: nesse caminho, você já percorreu o trecho mais difícil da jornada do zero ao um.
 
 O mundo da tecnologia muda rápido: frameworks se atualizam, ferramentas se substituem e a IA vai assumindo cada vez mais do trabalho de 'digitar'. Mas uma coisa nunca sai de moda: a sua capacidade de pegar uma ideia vaga, decompô-la em passos claros e implementá-la um a um. Ferramentas são amplificadores; o raciocínio é alicerce. O amplificador pode ser trocado; o alicerce não pode tremer.
 
 :::inline div .quote-line
-Você não é mais só "alguém que sabe usar celular". Você pode transformar as ideias da sua cabeça em apps de verdade rodando em 300 milhões de aparelhos Android. A partir de hoje, crie com o teclado — essa é a poesia de ser desenvolvedor Android.
+Você não é mais só "alguém que sabe usar celular". Você pode transformar as ideias da sua cabeça em apps de verdade rodando em 300 milhões de aparelhos Android. A partir de hoje, crie com o teclado: essa é a poesia de ser desenvolvedor Android.
 :::
 
 #### Referências

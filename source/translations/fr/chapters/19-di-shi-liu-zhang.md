@@ -2,12 +2,12 @@
 id: di-shi-liu-zhang
 num: 16
 part: jin-jie-pian
-nav: Chapitre 16 : Comptes et services cloud
+nav: Chapitre 16 : Changer de téléphone : quels comptes garder ?
 toc: default
 kind: chapter
 ---
 
-### Chapitre 16 : Système de comptes et services cloud
+### Chapitre 16 : Changer de téléphone : quels comptes garder ?
 
 {class="chapter-intro mb-4"}
 J'ai un ami dont le téléphone a été volé l'année dernière. Sa première pensée n'était pas « combien vaut le téléphone », mais « est-ce que je peux récupérer les photos à l'intérieur ? ». Malheureusement, il n'avait pas activé la sauvegarde cloud. Le téléphone est un bien matériel, mais les données dans le compte, une fois perdues, ne reviennent jamais. Ce chapitre parle de comment souscrire une véritable assurance pour votre vie numérique.
@@ -27,7 +27,7 @@ Si vous utilisez un iPhone, tout ce qui précède est lié à votre identifiant 
 #### II. Trois choses à faire absolument, maintenant
 
 1. <strong>Activer l'authentification à deux facteurs</strong>: que vous utilisiez Apple ou Android, la première chose à faire est d'aller dans les réglages du compte pour activer « l'authentification à deux facteurs » ou « la vérification en deux étapes ». C'est comme ajouter un verrou à votre porte — le mot de passe seul ne suffit plus, il faut aussi un code de vérification sur votre téléphone. Même si quelqu'un devine votre mot de passe en ligne, sans votre téléphone, il ne peut pas entrer.
-2. <strong>Lier un mode de récupération fiable</strong>: l'authentification à deux facteurs est très sûre, mais comporte aussi un risque — que faire si vous perdez votre propre téléphone ? Le système vous demandera donc de configurer une « clé de récupération » ou un « e-mail/téléphone de secours ». C'est le seul moyen de récupérer votre compte en cas d'urgence, il vaut mieux l'écrire sur papier, ne le stockez pas dans le téléphone.
+2. <strong>Lier un mode de récupération fiable</strong>: l'authentification à deux facteurs est très sûre, mais comporte aussi un risque, que faire si vous perdez votre propre téléphone ? Le système vous demandera donc de configurer une « clé de récupération » ou un « e-mail/téléphone de secours ». C'est le seul moyen de récupérer votre compte en cas d'urgence, il vaut mieux l'écrire sur papier, ne le stockez pas dans le téléphone.
 3. <strong>Confirmer que « Localiser mon téléphone » est activé</strong>: cette fonction permet, après la perte du téléphone, de le localiser, le verrouiller, faire sonner, voire d'effacer à distance toutes les données. C'est la dernière ligne de défense. Beaucoup de gens sautent cette étape lors de l'achat du téléphone, et lorsqu'ils veulent l'utiliser plus tard, ils découvrent qu'elle n'est pas activée, et il est trop tard.
 
 #### III. iCloud : « l'air » des utilisateurs Apple
@@ -40,7 +40,7 @@ Apple vous offre gratuitement 5 Go, honnêtement, ces 5 Go ne suffisent même pa
 - <strong>Mettre à niveau</strong>: 50 Go pour 6 yuans par mois, 200 Go pour 21 yuans par mois. Personnellement, je trouve que 50 Go suffisent pour la plupart des gens, principalement pour les sauvegardes et les vignettes de photos.
 - <strong>Solution alternative</strong>: si vous ne voulez pas payer, vous pouvez exporter régulièrement les photos vers l'ordinateur, puis désactiver la synchronisation des photos iCloud. Mais vous perdez alors la commodité de la sauvegarde automatique des photos.
 
-Un rappel important : la photothèque iCloud n'est pas un « disque réseau » — c'est une « synchronisation ». Si vous supprimez une photo sur le téléphone, elle sera aussi supprimée sur iCloud. Si ce que vous voulez est « sauvegarder sur le cloud puis vider le téléphone », alors les photos iCloud ne sont pas ce qu'il vous faut, vous avez besoin de la sauvegarde iCloud, ou d'un disque réseau tiers.
+Un rappel important : la photothèque iCloud n'est pas un « disque réseau »: c'est une « synchronisation ». Si vous supprimez une photo sur le téléphone, elle sera aussi supprimée sur iCloud. Si ce que vous voulez est « sauvegarder sur le cloud puis vider le téléphone », alors les photos iCloud ne sont pas ce qu'il vous faut, vous avez besoin de la sauvegarde iCloud, ou d'un disque réseau tiers.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -71,7 +71,7 @@ Fin 2022, Apple a lancé <strong>Protection avancée des données iCloud (Advanc
 - <strong>Précautions</strong> : ① Après activation, conservez soigneusement la clé de récupération, sinon les données ne pourront pas être récupérées en cas de perte de compte ; ② Les albums photo partagés, la photothèque iCloud partagée et quelques autres fonctions ne participent pas à l'E2EE ; ③ Les Apple ID de la région Chine continentale ne prennent pas encore en charge l'ADP, il faut basculer vers un compte d'une autre région.
 
 {class="mt-1"}
-En un mot : si votre compte contient des données privées importantes et que la région de votre compte le permet, il est fortement recommandé d'activer l'ADP — c'est la protection la plus forte des données cloud accessible à l'utilisateur ordinaire.
+En un mot : si votre compte contient des données privées importantes et que la région de votre compte le permet, il est fortement recommandé d'activer l'ADP, c'est la protection la plus forte des données cloud accessible à l'utilisateur ordinaire.
 :::
 
 #### IV. Synchronisation et sauvegarde, ne les confondez pas
@@ -91,7 +91,7 @@ Côté Android, la situation est un peu plus complexe que chez Apple, car vos do
 
 Ainsi, lorsque les utilisateurs Android font des sauvegardes, ils doivent vérifier séparément : la sauvegarde cloud de la marque, la sauvegarde Google, la sauvegarde de l'historique WeChat, les trois sont indispensables.
 
-#### VI. Partage familial : pour que la famille en bénéficie aussi
+VI. Partage familial : pour que la famille en bénéficie aussi
 
 Le « partage familial » d'Apple permet de partager avec votre famille les achats d'applications, la musique, les films, l'espace iCloud, et même la position. Jusqu'à 6 personnes peuvent être ajoutées. Méthode de configuration : Réglages → votre nom → Partage familial. Huawei et Xiaomi ont des fonctions similaires, dans les réglages du compte vous trouverez « partage familial » ou « cloud familial ».
 

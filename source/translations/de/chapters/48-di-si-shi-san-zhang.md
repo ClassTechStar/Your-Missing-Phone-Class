@@ -2,12 +2,12 @@
 id: di-si-shi-san-zhang
 num: 43
 part: ai-biancheng-pian
-nav: Kapitel 43: Konversations-Engineering – effizient dialogieren
+nav: Kapitel 43: So redest du mit der KI, dass sie zuhört
 toc: default
 kind: chapter
 ---
 
-### Kapitel 43: Dialog-Engineering – Dialogtechniken für effiziente Zusammenarbeit mit der KI
+### Kapitel 43: So redest du mit der KI, dass sie zuhört
 
 {class="chapter-intro mb-4"}
 Dialog ist die zentrale Interaktionsform beim KI-Programmieren. Aber Achtung: „Dialog“ ist nicht gleich „Plaudern“ – ein effizientes KI-Programmiergespräch ist eine strukturierte Kommunikationstechnik, die wir „Dialog-Engineering“ nennen. Es untersucht: Wie bekommt man mit möglichst wenigen Dialogrunden die höchste Codequalität? Ganz platt gesagt: Dieses Kapitel zeigt dir, wie du mit der KI „klar redest“.
@@ -35,7 +35,7 @@ Tipp: Feedback in drei Schritten
 Eine praktische Feedback-Vorlage lautet: „Problem benennen + Erwartung erklären + Kontext liefern“. Zum Beispiel: „Die Fehlerbehandlung in Zeile 25 nutzt nur console.log (Problem benennen), in der Produktionsumgebung sollte ein einheitlicher Fehlerbehandler mit nutzerfreundlichen Meldungen zum Einsatz kommen (Erwartung erklären), im Projekt gibt es dafür eine handleError-Funktion (Kontext liefern)“. Ein solches Feedback ist zehnmal wirksamer als „Ändere mal die Fehlerbehandlung“.
 :::
 
-#### 2. Debug-Dialoge: Fehler so beschreiben, dass die KI sie schnell findet
+2. Debug-Dialoge: Fehler so beschreiben, dass die KI sie schnell findet
 
 Debugging ist eine der häufigsten Situationen beim KI-Programmieren. Wenn du auf einen Bug stößt, entscheidet die Beschreibung des Problems gegenüber der KI direkt darüber, wie schnell sie es eingrenzen und beheben kann. Hier die vier Kernpunkte für Debug-Dialoge:
 
@@ -62,7 +62,7 @@ Nach dem Klick auf den Anmelde-Button reagiert die Seite nicht. Erwartetes Verha
 :::
 :::
 
-#### 3. Iterationsstrategie: Kleine schnelle Schritte vs. großes Refactoring
+3. Iterationsstrategie: Kleine schnelle Schritte vs. großes Refactoring
 
 Beim KI-Programmieren gibt es zwei grundlegende Iterationsstrategien für unterschiedliche Situationen. Wer den Unterschied versteht, trifft in jeder Lage die richtige Wahl.
 

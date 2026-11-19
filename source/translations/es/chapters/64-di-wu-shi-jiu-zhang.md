@@ -27,14 +27,14 @@ El propio sistema también evolucionó: al principio se llamaba iPhone OS y en 2
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Cronología del desarrollo iOS (hasta agosto de 2026)
 
-#### 2. El jardín amurallado: las "reglas" y los "dividendos" del ecosistema Apple
+2. El jardín amurallado: las "reglas" y los "dividendos" del ecosistema Apple
 
 El ecosistema Apple suele describirse como un "Walled Garden" (jardín amurallado): muchas reglas y control estricto. Las Apps deben pasar revisión para publicarse, hay que desarrollar con Mac y Xcode, y la distribución va sobre todo por el App Store. ¿Suena a asfixia? Pues para los desarrolladores, estas reglas se cambian por dividendos en metálico:
 
 - Fragmentación de dispositivos mínima: solo hay unos pocos modelos de iPhone, con tamaños de pantalla y versiones de sistema muy uniformes; adaptarte a 5 modelos cubre al 95% de los usuarios (en Android quizá tengas que adaptarte a decenas);
 - Adopción de versiones altísima: en pocas semanas tras cada lanzamiento, siete u ocho de cada diez usuarios ya se actualizan; puedes usar las API nuevas sin miedo y sin atender a "sistemas de hace cinco años";
 - Buenos hábitos de pago: los usuarios del App Store están más dispuestos a gastar en apps y compras integradas;
-- La revisión es estricta, pero la tienda está limpia: pocas copias falsas y apps maliciosas; los buenos productos se ven con más facilidad.
+- La revisión es estricta, pero la tienda está limpia: pocas copias falsas y apps maliciosas; los buenos productos se ven con más facilidad
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

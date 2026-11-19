@@ -18,7 +18,7 @@ Menghalang penurunan taraf
 
 ##### : Menghalang pengguna memuat turun versi sistem lama untuk mengeksploitasi kelemahan yang diketahui.
 
-- <strong>Melindungi data</strong>: Walaupun memuat turun sistem baharu, tanpa kata laluan akaun asal juga tidak boleh mengakses data pengguna.
+- <strong>Melindungi data</strong>: Walaupun memuat turun sistem baharu, tanpa kata laluan akaun asal juga tidak boleh mengakses data pengguna
 - <strong>2. Aliran Terperinci Membuka Kunci BL (Contoh Xiaomi)</strong> Mohon kebenaran nyahkunci
 - <strong>: Mohon nyahkunci di laman web alat nyahkunci Xiaomi.</strong> Ikat akaun
 
@@ -31,7 +31,7 @@ Status kunci BL (Locked/Unlocked) dan kunci awam pengeluar, biasanya disimpan da
 Pengeluar apabila keluarkan kemas kini sistem atau image, akan guna kunci peribadi sendiri untuk menandatangani. Semasa peranti boot, Bootloader akan guna kunci awam terbina dalam untuk mengesahkan image sistem (seperti boot.img, recovery.img). Cara kerjanya:
 
 1. III. Google Inactive Account Manager
-2. Google sediakan "Inactive Account Manager" untuk mengurus akaun selepas kematian atau tidak aktif lama.
+2. Google sediakan "Inactive Account Manager" untuk mengurus akaun selepas kematian atau tidak aktif lama
 3. 1. Cara menetapkan
 
 ##### 🔗 Rantai boot selamat
@@ -93,14 +93,14 @@ Pilih data mana yang boleh dikongsi dengan kontak (Foto, Gmail, Drive dll).
 #### 3. Pelbagai Skim Root
 
 - <strong>SuperSU</strong>: Skim Root lama, kini telah berhenti dikemas kini.
-- <strong>4. Pengenalan Memuat Turun Sistem</strong> Memuat turun sistem merujuk kepada memasang sistem pengoperasian baharu pada telefon. Jenis memuat turun yang biasa:
+- <strong>4. Pengenalan Memuat Turun Sistem</strong> Memuat turun sistem merujuk kepada memasang sistem pengoperasian baharu pada telefon. Jenis memuat turun yang biasa:.
 - <strong>Muat turun ROM rasmi</strong>: Memasang sistem rasmi, digunakan untuk menyelamatkan bata atau menurunkan taraf.
 
 #### 4. Pengenalan Memuat Turun Sistem
 
 : Seperti TWRP, digunakan untuk sandaran pemulihan, memuat turun ROM pihak ketiga.
 
-- <strong>Muat turun ROM pihak ketiga</strong>: Seperti LineageOS, Pixel Experience dll., mengalami sistem yang berbeza.
+- <strong>Muat turun ROM pihak ketiga</strong>: Seperti LineageOS, Pixel Experience dll., mengalami sistem yang berbeza
 - <strong>Amaran Penting</strong> Memuat turun sistem ada risiko, operasi perlu berhati-hati. Boleh menyebabkan:
 - <strong>Telefon menjadi bata (tidak boleh dihidupkan)</strong> Hilang waranti
 
@@ -144,7 +144,7 @@ Coolapk
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Forum setiap model</strong>: Seperti komuniti Xiaomi, komuniti OnePlus dll., mempunyai tutorial rasmi dan bukan rasmi.
-- <strong>Bab 25: Pemprosesan Telefon Terpakai &amp; Warisan Digital</strong> Hei kawan-kawan, selepas lebih dua puluh bab "latihan", dipercayai anda telah bertumbuh daripada "pemula digital" menjadi pengguna telefon yang agak tenang. Tetapi kehidupan teknologi sentiasa berkitlar—kekasih baru akhirnya menjadi kekasih lama. Apabila anda bersedia membiarkan rakan lama ini "bersara", adakah anda tahu bagaimana berpisah secara bermaruah dan selamat?
+- <strong>Bab 25: Pemprosesan Telefon Terpakai &amp; Warisan Digital</strong> Hei kawan-kawan, selepas lebih dua puluh bab "latihan", dipercayai anda telah bertumbuh daripada "pemula digital" menjadi pengguna telefon yang agak tenang. Tetapi kehidupan teknologi sentiasa berkitlar,kekasih baru akhirnya menjadi kekasih lama. Apabila anda bersedia membiarkan rakan lama ini "bersara", adakah anda tahu bagaimana berpisah secara bermaruah dan selamat?
 - <strong>1. "Eutanasia" Telefon Lama: Panduan Jual atau Hadiah Selamat</strong> Prinsip teras: Pembersihan data bukan "memadam", tetapi "menindih".
 :::
 

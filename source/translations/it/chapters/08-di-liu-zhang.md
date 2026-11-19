@@ -2,12 +2,12 @@
 id: di-liu-zhang
 num: 06
 part: ji-chu-pian
-nav: Capitolo 6: Proteggi la tua vita digitale
+nav: Capitolo 6: Telefono perso? Password dimenticata?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 6: Proteggi la tua vita digitale — Sicurezza e privacy
+### Capitolo 6: Telefono perso? Password dimenticata?
 
 {class="chapter-intro mb-4"}
 Sicurezza del telefono = privacy + patrimonio. In un'epoca in cui i dati sono un asset, proteggere il telefono significa proteggere te stesso.
@@ -29,7 +29,7 @@ Il blocco schermo è la prima linea di difesa del telefono e anche la più trasc
 - Attiva il riconoscimento biometrico.
 - Imposta il blocco automatico su "immediato" o sul tempo più breve.
 
-#### 2. "Trova il mio telefono": lo strumento antifurto definitivo
+2. "Trova il mio telefono": lo strumento antifurto definitivo
 
 <strong>Deve essere attivato!</strong> Permette di:
 
@@ -40,7 +40,7 @@ Il blocco schermo è la prima linea di difesa del telefono e anche la più trasc
 
 Vai in [Impostazioni]; su Apple cerca "Trova il mio iPhone", su Android "Trova il mio dispositivo" o un servizio equivalente del brand; assicurati che sia attivo (verde).
 
-#### 3. Aggiornamenti di sistema: applicare patch, tappare le falle
+3. Aggiornamenti di sistema: applicare patch, tappare le falle
 
 Lo scopo principale degli aggiornamenti è correggere vulnerabilità di sicurezza, come rattoppare i buchi nel muro di casa. Quando vedi la notifica di aggiornamento, installa il prima possibile.
 
@@ -84,7 +84,7 @@ L'AI può clonare voce e volto, ma non è invincibile: ci sono alcune crepe da s
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>Verifica con azioni</strong>: in videochiamata, chiedi esplicitamente all'interlocutore di compiere azioni coordinate predefinite, come "passa la mano velocemente davanti al viso", "gira il volto per mostrare il contorno dell'orecchio" o "ammicca rapidamente 5 volte". Negli scenari con occlusioni dinamiche complesse, movimenti rapidi e variazioni di luce, il face-swap AI <strong>mostra facilmente difetti come scattosità, distorsione del volto o sbavatura dei bordi</strong>.
 - <strong>Verifica con codici privati</strong>: stabilisci e usa domande di verifica private predefinite, come "cosa hai ordinato l'ultima volta che siamo andati a cena insieme", "qual è stato il primo regalo che ti ho fatto", dettagli noti solo a voi due. Se l'altra parte esita o risponde a sproposito, <strong>interrompi subito la chiamata e attiva il piano di sicurezza</strong>.
-- <strong>Doppia verifica</strong>: segui rigorosamente il principio del Ministero della Pubblica Sicurezza "<strong>quattro no e una verifica</strong>" — non credere a messaggi sconosciuti, non trasferire denaro a cuor leggero, non divulgare dati personali sensibili, non diffondere contenuti sospetti. In caso di movimento di denaro, <strong>richiama sempre il numero originale già noto o verifica di persona</strong>. Per i bonifici, scegli la modalità "accredito in 24 ore", per lasciare tempo sufficiente a individuare la truffa e recuperare i fondi.
+- <strong>Doppia verifica</strong>: segui rigorosamente il principio del Ministero della Pubblica Sicurezza "<strong>quattro no e una verifica</strong>", non credere a messaggi sconosciuti, non trasferire denaro a cuor leggero, non divulgare dati personali sensibili, non diffondere contenuti sospetti. In caso di movimento di denaro, <strong>richiama sempre il numero originale già noto o verifica di persona</strong>. Per i bonifici, scegli la modalità "accredito in 24 ore", per lasciare tempo sufficiente a individuare la truffa e recuperare i fondi.
 
 ##### 3. Truffe tradizionali (da tenere comunque d'occhio):
 
@@ -102,7 +102,7 @@ L'AI può clonare voce e volto, ma non è invincibile: ci sono alcune crepe da s
 
 <strong>Non credere, non divulgare, non cliccare, non trasferire, in caso di dubbio verifica prima!</strong> Davanti a un'"emergenza" prenditi 5 minuti per calmarti: quasi tutte le truffe si tradiscono in quel momento.
 
-#### 5. Difendersi dal "doxxing" e dagli attacchi di social engineering: spezza la catena della perdita di privacy
+5. Difendersi dal "doxxing" e dagli attacchi di social engineering: spezza la catena della perdita di privacy
 
 Il principio fondamentale del "doxxing" (attacco di social engineering) consiste nel <strong>raccolta sistematica, analisi e assemblaggio di frammenti digitali personali per costruire un profilo completo dell'individuo</strong>. La chiave per difendersi sta nel tracciare confini chiari per la privacy personale e stabilire un sistema di protezione multilivello.
 
@@ -133,7 +133,7 @@ Telecamere smart, serrature smart, casse smart e altri dispositivi IoT al primo 
 Nel 2022, la polizia di una località ha riferito che hacker, decifrando la password predefinita di telecamere domestiche di una certa marca (molti utenti non l'avevano mai modificata), hanno sottratto immagini delle camere da letto di migliaia di famiglie e le hanno vendute online.<strong>Non cambiare la password predefinita = lasciare la porta di casa spalancata</strong>.
 :::
 
-#### 6. Protezione della privacy: i tuoi dati sono la tua proprietà
+6. Protezione della privacy: i tuoi dati sono la tua proprietà
 
 Le foto, le chat, le tracce di posizione nel telefono sono essenzialmente i tuoi "beni digitali". Una volta trapelati, nel migliore dei casi fastidi pubblicitari, nel peggiore dei casi doxxing, truffe o persino ricatti.
 
@@ -177,7 +177,7 @@ Se hai perso il telefono non farti prendere dal panico, segui quest'ordine:
 - Inviare il codice di verifica a chiunque (anche al "servizio clienti");
 - Cliccare su link sospetti negli SMS, in particolare da numeri internazionali che iniziano con 00;
 - Accedere alla banca online o ai pagamenti sotto Wi-Fi pubblico;
-- Attivare "condivisione schermo" o "controllo remoto" con sconosciuti.
+- Attivare "condivisione schermo" o "controllo remoto" con sconosciuti
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

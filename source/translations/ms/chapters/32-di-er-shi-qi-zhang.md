@@ -2,23 +2,23 @@
 id: di-er-shi-qi-zhang
 num: 27
 part: shi-zhan-pian
-nav: Bab 27: Mudah untuk Ibu Bapa Juga—Panduan Telefon Mesra Warga Emas
+nav: Bab 27: Tetapkan telefon untuk ibu bapa
 toc: default
 kind: chapter
 ---
 
-### Bab 27: Ibu bapa juga boleh guna dengan mudah - Panduan lengkap penyesuaian warga emas telefon
+### Bab 27: Tetapkan telefon untuk ibu bapa
 
 {class="chapter-intro mb-4"}
-Jujur, tulis bab ini saya teringat ibu bapa saya. Ibu saya setiap kali telefon popup "kemas kini sistem", dia tidak berani klik, takut rosakkan telefon. Bapa saya fon WeChat lebih kecil dari semut, tetapi dia tidak tahu cara besarkan, jadi terkilan mata lihat dua tahun. Ini bukan mereka "bodoh", tetapi telefon lalai anggap semua orang sebagai pemuda dua puluhan. Bab ini, saya guna paling bahasa langsung, satu persatu selesaikan masalah paling sakit kepala warga emas dalam guna telefon.
+Jujur, tulis bab ini saya teringat ibu bapa saya. Ibu saya setiap kali telefon popup "kemas kini sistem", dia tidak berani klik, takut rosakkan telefon. Bapa saya fon WeChat lebih kecil dari semut. tetapi dia tidak tahu cara besarkan, jadi terkilan mata lihat dua tahun. Ini bukan mereka "bodoh", tetapi telefon lalai anggap semua orang sebagai pemuda dua puluhan. Bab ini, saya guna paling bahasa langsung, satu persatu selesaikan masalah paling sakit kepala warga emas dalam guna telefon.
 
-#### 0. Betulkan minda dahulu: Ini bukan "warga emas tak boleh guna", ini "telefon tak mesra warga emas"
+0. Betulkan minda dahulu: Ini bukan "warga emas tak boleh guna", ini "telefon tak mesra warga emas"
 
 2\. LetsView <strong>App percuma pelancangan skrin, sokong pelbagai peranti.</strong>. Popup terlalu kecil tidak nampak jelas, gerak isyarat operasi perlu sentuhan tepat, ikon rupa hampir sama - ini bukan masalah pengguna, tetapi masalah produk. Jadi bawa warga emas guna telefon, perkara pertama bukan ajar, tetapi bantu mereka <strong>Alat sumber terbuka untuk cermin skrin Android melalui USB, kelajuan tinggi tanpa kelewatan.</strong> VI. Penyelesaian masalah pelancangan skrin
 
 1\. Skrin tidak muncul <strong>Pastikan kedua-dua peranti berada dalam Wi-Fi yang sama, atau sambungan Bluetooth berfungsi.</strong>2. Kualiti rendah <strong>Pastikan rangkaian Wi-Fi cukup laju, atau guna kabel untuk sambungan langsung.</strong>- "Wi-Fi macam paip rumah, buka paip baru ada air", perumpamaan ini lebih mudah faham daripada istilah teknikal sepuluh ribu kali. 3 <strong>Pastikan TV dipilih sebagai output audio dalam tetapan peranti.</strong> Bab 15: Penciptaan video pendek
 
-#### 1. Langkah pertama: Aktifkan "Mod Mudah" — telefon terus lebih ringkas
+1. Langkah pertama: Aktifkan "Mod Mudah" — telefon terus lebih ringkas
 
 Telefon sekarang asas semua ada terbina dalam "mod mudah" (sesetengah panggil "mod penjagaan" "mod warga emas" "mod warga tua"), selepas buka, seluruh telefon akan berubah besar:
 
@@ -53,13 +53,13 @@ Telefon sekarang asas semua ada terbina dalam "mod mudah" (sesetengah panggil "m
 
 Potong: Buang bahagian yang tidak perlu, kekalkan yang penting.
 
-#### 2. Kalau tak guna Mod Mudah, ubah manual pun boleh — "Teks besar + ikon besar" lima langkah
+2. Kalau tak guna Mod Mudah, ubah manual pun boleh — "Teks besar + ikon besar" lima langkah
 
 Muzik: Pilih muzik yang sesuai dengan mood video, larangkan kadar bunyi muzik dan suara.
 
 1. <strong>Teks dan keterangan: Tambah teks atau keterangan untuk terangkan kandungan.</strong> Kesan dan penapis: Guna dengan sederhana, jangan berlebihan.
-2. <strong>3. Eksport</strong>: Pada skrin utama cubit dua jari (seperti kecilkan foto) masuk tetapan desktop &gt; susun atur desktop (atau saiz ikon), pilih susun atur grid paling sedikit (contoh 3x5), ikon naturally
-3. <strong>IV. Platform video pendek</strong>1. Douyin/TikTok
+2. <strong>3. Eksport</strong>: Pada skrin utama cubit dua jari (seperti kecilkan foto) masuk tetapan desktop &gt; susun atur desktop (atau saiz ikon), pilih susun atur grid paling sedikit (contoh 3x5), ikon naturally.
+3. <strong>IV. Platform video pendek</strong>1. Douyin/TikTok.
 4. <strong>Video menegak 9:16, tempoh 15-60 saat. Algoritma mencadangkan berdasarkan minat pengguna.</strong>: Tetapan &gt; Pemberitahuan, tutup semua App pemberitahuan selain telefon, SMS, WeChat. Jadi telefon tidak akan berbunyi sekejap-sekejap, tidak buat orang rasa terganggu.
 5. <strong>Video menegak, fokus pada kandungan kehidupan seharian dan komuniti.</strong>: Tekan lama ruang kosong desktop &gt; tambah widget &gt; kenalan, letak pendail pantas pasangan, anak, doktor, kontak kecemasan ke atas desktop. Tekan sekali terus dail, tidak perlu buka senarai kenalan.
 
@@ -84,7 +84,7 @@ Warga emas adalah kawasan teruk penipuan telekom. Bukan kewaspadaan mereka renda
 - <strong>3. Kekerapan</strong> Hantar video secara berkala untuk kekalkan pengikut.<strong>4. Interaksi</strong> Balas komen, tanya soalan, ajak penonton interaksi.
 - <strong>5. Hashtag</strong>- SMS kata kad perubatan abnormal, suruh anda klik link "aktifkan". Ingat:<strong>Jabatan perubatan, jabatan keselamatan sosial tidak akan hantar SMS suruh anda klik link</strong> Telefon pintar kini jadi alat fotografi utama, menyebabkan kita ada banyak foto dan video. Bab ini membincangkan cara urus dan susun foto dan video anda.
 - <strong>I. Susun foto</strong>- Kumpulan WeChat, SMS cadang pelbagai "pelaburan persaraan" "projek sokongan negara", janji pulangan tinggi. Ingat:<strong>iPhone: Galeri → Album → Jenis album auto (Tempat, Kenangan, Kategori dll).</strong>.
-- <strong>Android: Galeri → Album → Album auto mengikut masa, tempat, orang.</strong>2. Buat album manual <strong>Cipta album mengikut tema: Perjalanan, Keluarga, Kerja, Haiwan dll.</strong>3. Padam foto duplikasi
+- <strong>Android: Galeri → Album → Album auto mengikut masa, tempat, orang.</strong>2. Buat album manual <strong>Cipta album mengikut tema: Perjalanan, Keluarga, Kerja, Haiwan dll.</strong>3. Padam foto duplikasi.
 - <strong>Guna App seperti Gemini Photos (iPhone) atau Files by Google (Android) untuk cari dan padam foto duplikasi.</strong>4. Padam foto tidak bagus <strong>Semak foto secara berkala, padam foto yang tidak bagus, kabur, atau tidak perlu.</strong>.
 - <strong>II. Simpanan foto</strong>- Penipu suruh anda muat turun satu App kawalan jauh (seperti Sunflower, TeamViewer), kemudian kawalan jauh telefon anda pindahkan duit. Ingat:<strong>iCloud Photos: Sandaran automatik, simpan foto dalam awan, boleh akses dari semua peranti.</strong> Google Photos: Sandaran automatik, simpan foto dalam awan, ruang percuma terhad.
 
@@ -107,17 +107,17 @@ Warga emas adalah kawasan teruk penipuan telekom. Bukan kewaspadaan mereka renda
 - ❤ <strong>IV. Edit foto</strong>
 :::
 
-#### 4. Bantuan jarak jauh — Anda boleh baiki telefon ibu bapa walaupun jauh
+4. Bantuan jarak jauh — Anda boleh baiki telefon ibu bapa walaupun jauh
 
 Kadang-kadang masalah warga emas hadapi, anda telefon huraikan lama mereka juga tidak jumpa butang sepadan. Bila ini "bantuan jauh" fungsi sangat berguna - anda boleh terus pada telefon anda lihat skrin telefon mereka
 
-- <strong>iPhone/iPad</strong>: Terbina dalam App "Changlian", ada fungsi "perkongsian skrin". Anda dan ibu bapa pasang Changlian, mulakan panggilan video kemudian ketik "kongsi skrin", anda boleh lukis bulatan pada skrin mereka
+- <strong>iPhone/iPad</strong>: Terbina dalam App "Changlian", ada fungsi "perkongsian skrin". Anda dan ibu bapa pasang Changlian, mulakan panggilan video kemudian ketik "kongsi skrin", anda boleh lukis bulatan pada skrin mereka.
 - <strong>Xiaomi / Redmi</strong>: App panggilan video Xiaomi ada "bantuan jauh", sokong perkongsian skrin + panggilan suara segerak.
 - <strong>Apple</strong> Snapseed: App edit percuma Google, ciri profesional.
 - <strong>Lightroom: App edit profesional Adobe, sokong RAW.</strong>: Muat turun App "Sunflower Remote Control" (versi percuma cukup), anda semua pasang satu. Daftar akaun sama atau tambah kawan, biar ibu bapa baca kod pengesahan pada telefon, anda boleh jauh lihat dan operasi skrin telefon mereka.
-- <strong>Pengenalan teks OCR</strong>: Semasa panggilan FaceTime sokong "perkongsian skrin". Semasa panggilan FaceTime, ketik butang perkongsian skrin, pihak lain boleh lihat skrin anda. Tetapi sekatan keselamatan iOS tidak boleh operasi jauh, hanya "pengajaran arahan".
+- <strong>Pengenalan teks OCR</strong>: Semasa panggilan FaceTime sokong "perkongsian skrin". Semasa panggilan FaceTime, ketik butang perkongsian skrin. pihak lain boleh lihat skrin anda. Tetapi sekatan keselamatan iOS tidak boleh operasi jauh, hanya "pengajaran arahan".
 
-#### 5. "Penyesuaian warga emas" WeChat - Beritahu warga emas beberapa ayat ini sudah cukup
+5. "Penyesuaian warga emas" WeChat - Beritahu warga emas beberapa ayat ini sudah cukup
 
 WeChat adalah App yang paling kerang diguna warga emas, tetapi antara muka terlalu padat terlalu rumit. Berikut adalah beberapa pelarasan yang berkesan serta-merta:
 
@@ -127,7 +127,7 @@ WeChat adalah App yang paling kerang diguna warga emas, tetapi antara muka terla
 - <strong>3. Cari orang</strong> Galeri boleh kenalpasti orang dan kelompok foto mengikut individu (perlu aktifkan ciri ini).
 - <strong>VI. Padam foto dengan selamat</strong>: WeChat &gt; Saya &gt; Tetapan &gt; Umum &gt; Pengurusan halaman Discovery, tutup "Moments" "Video Account" "Live" "Shopping" "Games" yang tidak diguna, kurang gangguan.
 
-#### 6. Telefon hilang macam mana? Sediakan "pelan kecemasan" untuk warga emas
+6. Telefon hilang macam mana? Sediakan "pelan kecemasan" untuk warga emas
 
 2\. Padam dari awan
 
@@ -135,7 +135,7 @@ WeChat adalah App yang paling kerang diguna warga emas, tetapi antara muka terla
 2. <strong>Catat kata laluan dan akaun penting pada sekeping kertas</strong>: Kata laluan Apple ID / akaun Huawei / akaun Xiaomi, kunci dalam laci rumah satu salinan, beri anak yang dipercayai satu salinan. Selepas hilang telefon perlu log masuk akaun ini untuk kunci jauh dan cari kedudukan, jika lupa kata laluan akan susah.
 3. <strong>Telefon yang penuh storan akan jadi perlahan, tidak boleh pasang App baru, tidak boleh simpan foto baru. Bab ini membincangkan cara urus storan telefon.</strong><strong>I. Semak storan</strong> Keluarga boleh terus log masuk iCloud atau halaman web cari peranti Android, tanda jauh sebagai "Mod Hilang", jadi orang yang jumpa juga tidak boleh buka, tidak boleh guna.
 
-#### 7. Keserasian headphone wayarles dan alat bantu pendengaran - Fungsi baik yang diabaikan
+7. Keserasian headphone wayarles dan alat bantu pendengaran - Fungsi baik yang diabaikan
 
 Ramai warga emas ada masalah pendengaran, tetapi tidak tahu telefon boleh bekerjasama dengan alat bantu pendengaran. iPhone dan sesetengah telefon Android sokong alat bantu pendengaran MFi (Made for iPhone), boleh terus hantar suara telefon ke alat bantu pendengaran, lebih jelas daripada angkat telefon dengar.
 
@@ -143,7 +143,7 @@ Ramai warga emas ada masalah pendengaran, tetapi tidak tahu telefon boleh bekerj
 - <strong>Jika tidak guna alat bantu pendengaran</strong>: Dalam "Aksesibiliti &gt; Audio/Visual" buka "pengurangan hingar panggilan" dan "audio mono", boleh tambah baik kejelasan panggilan.
 - <strong>iOS</strong>: Dalam "Aksesibiliti &gt; Pengukuhan pendengaran" ada tetapan serupa, setiap jenama kedudukan sedikit berbeza, terus cari "bantu pendengaran" dua perkataan.
 
-#### 8. Fungsi berkaitan kesihatan — Telefon bukan sekadar alat komunikasi
+8. Fungsi berkaitan kesihatan — Telefon bukan sekadar alat komunikasi
 
 - <strong>3. Kosongkan cache App</strong> Tetapan → Storan → Pilih App → Kosongkan Cache (Android).
 - <strong>iPhone: Padam dan pasang semula App untuk kosongkan cache (iOS tidak ada pilihan cache berasingan).</strong>: Apple Watch ada fungsi ini, dikesan anda jatuh dan tidak bergerak seketika, akan auto dail panggilan kecemasan dan maklum keluarga. Jika ada belanjawan beri warga emas satu, saat kritikal boleh selamatkan nyawa.
@@ -156,8 +156,8 @@ Ramai warga emas ada masalah pendengaran, tetapi tidak tahu telefon boleh bekerj
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - WeChat: Saya → Tetapan → Storan → Kosongkan WeChat ‑ Buang cache dan fail sementara.
 - SMS: Padam mesej lama, terutama yang dengan lampiran media.
-- 6. Guna storan awan
+- 6. Guna storan awan.
 - Pindah foto dan video ke awan (iCloud/Google Photos) dan buang asal dari telefon jika sudah tersandar.
-- WeChat buka "Mod Penjagaan" + "Input Suara" adalah dua fungsi paling praktikal untuk warga emas
+- WeChat buka "Mod Penjagaan" + "Input Suara" adalah dua fungsi paling praktikal untuk warga emas.
 - Belikan pemacu luar USB-C atau wayarless flash drive untuk simpan foto dan video.
 :::

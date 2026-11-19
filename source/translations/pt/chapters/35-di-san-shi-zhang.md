@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 30: Espelhamento de tela, apresentações e conectividade veicular
 
 {class="chapter-intro mb-4"}
-A tela do celular tem no máximo 7 polegadas, mas sua TV tem 55 polegadas e seu projetor tem 100 polegadas. "Jogar" a imagem do celular para uma tela grande proporciona uma experiência completamente diferente. Este capítulo explica com clareza três cenários frequentes — espelhamento de tela, apresentações e conectividade veicular — para estender a capacidade do seu celular a telas maiores.
+A tela do celular tem no máximo 7 polegadas, mas sua TV tem 55 polegadas e seu projetor tem 100 polegadas. "Jogar" a imagem do celular para uma tela grande proporciona uma experiência completamente diferente. Este capítulo explica com clareza três cenários frequentes, espelhamento de tela, apresentações e conectividade veicular, para estender a capacidade do seu celular a telas maiores.
 
 #### 1. Os três campos do espelhamento sem fio — não os confunda
 
@@ -47,25 +47,25 @@ O espelhamento sem fio é conveniente, mas tem latência, o que prejudica a expe
 
 - <strong>iPhone</strong>: É necessário um cabo adaptador Lightning/USB-C para HDMI (cerca de 100-200 RMB). Conectado, a tela do celular é transmitida diretamente para a porta HDMI da TV/projetor.
 - <strong>Android</strong>: Alguns celulares suportam conexão direta USB-C para HDMI (requer suporte a DP Alt Mode, a maioria dos flagships suporta). Basta comprar um cabo USB-C para HDMI.
-- <strong>Cenário de sala de reunião</strong>: Se você frequentemente precisa fazer apresentações com o celular, é recomendável ter sempre um cabo adaptador HDMI na bolsa. As TVs/projetores das salas de reunião quase sempre têm porta HDMI — é só conectar e usar, muito mais confiável do que se estressar com espelhamento sem fio.
+- <strong>Cenário de sala de reunião</strong>: Se você frequentemente precisa fazer apresentações com o celular, é recomendável ter sempre um cabo adaptador HDMI na bolsa. As TVs/projetores das salas de reunião quase sempre têm porta HDMI, é só conectar e usar, muito mais confiável do que se estressar com espelhamento sem fio.
 
 #### 3. Transforme o celular em computador — Modo Desktop
 
-Alguns celulares Android suportam o "Modo Desktop" — ao conectar a um monitor, o celular exibe uma interface semelhante à de um computador desktop, que pode ser operada com mouse e teclado:
+Alguns celulares Android suportam o "Modo Desktop": ao conectar a um monitor, o celular exibe uma interface semelhante à de um computador desktop, que pode ser operada com mouse e teclado:
 
-- <strong>Samsung DeX</strong>: Recurso exclusivo dos flagships Samsung. Ao conectar a um monitor, surge uma interface desktop com suporte a múltiplas janelas — a experiência mais próxima de um computador real. Com teclado e mouse Bluetooth, é possível viajar a trabalho sem levar notebook.
+- <strong>Samsung DeX</strong>: Recurso exclusivo dos flagships Samsung. Ao conectar a um monitor, surge uma interface desktop com suporte a múltiplas janelas, a experiência mais próxima de um computador real. Com teclado e mouse Bluetooth, é possível viajar a trabalho sem levar notebook.
 - <strong>Modo Desktop Huawei</strong>: As séries Huawei Mate/Pura também têm função semelhante ao conectar a um monitor. Suporta múltiplas janelas, gerenciamento de arquivos e apps de escritório.
 - <strong>Motorola Ready For</strong>: Os flagships Moto também suportam, com funcionalidade semelhante ao DeX.
 - <strong>Cenários aplicáveis</strong>: Trabalho leve (responder e-mails, editar documentos), apresentação de PowerPoint, ver vídeos em tela grande. Não é adequado para operações pesadas de Excel ou design profissional.
 
-#### 4. Conectividade veicular — a maneira correta de usar o celular ao dirigir
+4. Conectividade veicular — a maneira correta de usar o celular ao dirigir
 
 Operar o celular enquanto dirige é ilegal, mas navegação, música e chamadas são necessidades reais. Os sistemas de conectividade veicular permitem usar as funções essenciais do celular na tela do carro, mantendo o celular guardado, sem tocá-lo:
 
-- <strong>Apple CarPlay</strong>: A escolha principal para usuários de iPhone. Conecta-se via USB ou sem fio ao sistema do carro, e uma interface simplificada do iPhone aparece na tela do veículo — navegação (Amap/Baidu Maps), música, telefone, mensagens, podcasts. O controle por voz Siri permite operação totalmente mãos-livres.
+- <strong>Apple CarPlay</strong>: A escolha principal para usuários de iPhone. Conecta-se via USB ou sem fio ao sistema do carro, e uma interface simplificada do iPhone aparece na tela do veículo, navegação (Amap/Baidu Maps), música, telefone, mensagens, podcasts. O controle por voz Siri permite operação totalmente mãos-livres.
 - <strong>Android Auto</strong>: Solução correspondente para usuários Android. Funcionalidade semelhante ao CarPlay, compatível com Google Maps, Spotify, etc. Na China, algumas funções não estão disponíveis devido às restrições dos serviços Google.
 - <strong>Huawei HiCar</strong>: Solução própria da Huawei, com alta taxa de compatibilidade em modelos de veículos chineses. Além de navegação e música, oferece recursos exclusivos como videochamadas Huawei e integração com câmeras de estacionamento.
-- <strong>Baidu CarLife</strong>: Solução multiplataforma, compatível com iOS e Android. Tem menos funções, mas ampla compatibilidade — muitos modelos de carros mais antigos só suportam CarLife.
+- <strong>Baidu CarLife</strong>: Solução multiplataforma, compatível com iOS e Android. Tem menos funções, mas ampla compatibilidade, muitos modelos de carros mais antigos só suportam CarLife.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -75,7 +75,7 @@ Operar o celular enquanto dirige é ilegal, mas navegação, música e chamadas 
 Independentemente da solução de conectividade veicular usada, sempre priorize o controle por voz ao dirigir. Defina o destino da navegação com antecedência, escolha a playlist de música antes de sair e não opere a tela do veículo enquanto estiver em movimento.
 :::
 
-#### 5. Espelhamento em sala de reunião na prática — sem mais pânico
+5. Espelhamento em sala de reunião na prática — sem mais pânico
 
 Reuniões são o cenário mais frequente de espelhamento e também o mais propenso a problemas. Aqui estão algumas dicas práticas:
 
@@ -102,8 +102,8 @@ Reuniões são o cenário mais frequente de espelhamento e também o mais propen
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Três campos do espelhamento sem fio: AirPlay (Apple), Miracast (Android), DLNA (transmissão de mídia multiplataforma)
-- Espelhamento com fio é mais estável e sem latência — cabo HDMI é essencial para salas de reunião
+- Espelhamento com fio é mais estável e sem latência, cabo HDMI é essencial para salas de reunião
 - Samsung DeX/Modo Desktop Huawei transformam o celular em um computador de trabalho leve
-- Conectividade veicular: quatro soluções principais — CarPlay/Android Auto/HiCar/CarLife
+- Conectividade veicular: quatro soluções principais, CarPlay/Android Auto/HiCar/CarLife
 - Regras de ouro para espelhamento em reunião: testar antes, ter Plano B, desativar prévia de notificações
 :::

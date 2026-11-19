@@ -54,7 +54,7 @@ Achtung: iOS-Berechtigungen fragen nur „einmal“
 Der Berechtigungsdialog unter iOS erscheint nur ein einziges Mal – lehnt der Nutzer ab, kommt er nie wieder. Deshalb: Den Zeitpunkt der Anfrage auf den Moment legen, „in dem der Nutzer die Funktion gerade braucht“ (nicht gleich beim Start ein Bündel anfragen), und der Text muss den Zweck erklären. Eine Oberflächenführung nach der Ablehnung („Standort in den Einstellungen aktivieren“) gehört zum Standard – lass die Nutzer nicht in der Sackgasse stecken.
 :::
 
-#### 2. Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen
+2. Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen
 
 Benachrichtigungen sind der Kanal, über den die App ihre Nutzer erreicht – und zugleich die Funktion, die am ehesten „blockiert“ wird. iOS nutzt das UserNotifications-Framework; drei Disziplinen beim Versenden: nur Nützliches senden, dem Nutzer das Abschalten ermöglichen, nachts nicht stören. Die Grundverwendung:
 
@@ -101,7 +101,7 @@ In Kapitel 65 hast du MVVM benutzt; hier kommen drei weiterführende Punkte:
 
 - Protokoll-Abstraktion: Das ViewModel soll von einem Protokoll (protocol) abhängen, nicht von einer konkreten Klasse – beim Testen lässt sich dann eine „Fake-Datenquelle“ injizieren; das ist der Grundstein der Testbarkeit;
 - Einzelpflicht: Ein ViewModel kümmert sich nur um eine Sache (das Haushaltsbuch nicht ums Wetter); werden es mehr Funktionen, aufteilen;
-- Nicht überdesignen: Für ein kleines Einzelprojekt genügen „@Observable-Klasse + Protokoll-Abstraktion“. Schwergewichtige Architekturen wie VIPER oder Clean Architecture warten, bis Team und Komplexität an der Tür klopfen – Werkzeuge dienen dem Ziel, sie sind kein Selbstzweck.
+- Nicht überdesignen: Für ein kleines Einzelprojekt genügen „@Observable-Klasse + Protokoll-Abstraktion“. Schwergewichtige Architekturen wie VIPER oder Clean Architecture warten, bis Team und Komplexität an der Tür klopfen – Werkzeuge dienen dem Ziel, sie sind kein Selbstzweck
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -10,11 +10,11 @@ kind: chapter
 ### Chapter 37: The Paradigm Shift — From Writing Code to Directing AI
 
 {class="chapter-intro mb-4"}
-Congratulations — by opening this book you're standing in the middle of a professional paradigm shift. It started with one programmer's social post in 2025. Dramatic? It really happened that way.
+Congratulations: by opening this book you're standing in the middle of a professional paradigm shift. It started with one programmer's social post in 2025. Dramatic? It really happened that way.
 
-#### 1. The birth of Vibe Coding: A movement sparked by one sentence
+1. The birth of Vibe Coding: A movement sparked by one sentence
 
-In February 2025, Andrej Karpathy — remember this name, you'll see it again — posted a tweet that got quoted over and over: "There's a new kind of coding called Vibe Coding, where you fully give in to the vibes, ignore the code details, and let AI handle everything. You say what you see, copy-paste, and basically it just works."
+In February 2025, Andrej Karpathy: remember this name, you'll see it again, posted a tweet that got quoted over and over: "There's a new kind of coding called Vibe Coding, where you fully give in to the vibes, ignore the code details, and let AI handle everything. You say what you see, copy-paste, and basically it just works."
 
 That casual-sounding remark precisely named a paradigm shift already underway: humans no longer write code line by line. Instead, we describe intent in natural language and AI implements it. Karpathy's wording was playful, but the insight is deep: once AI code generation crossed a threshold, the bottleneck stopped being "can I write this line?" and became "can I think this through clearly?"
 
@@ -23,7 +23,7 @@ That casual-sounding remark precisely named a paradigm shift already underway: h
 Quick tip: What's a "vibe"?
 
 {class="mt-1"}
-"Vibe" means mood or feel. Vibe Coding is "directing AI coding by feel" — you describe what you want, AI implements it. Remember the term; it's this movement's birth certificate.
+"Vibe" means mood or feel. Vibe Coding is "directing AI coding by feel", you describe what you want, AI implements it. Remember the term; it's this movement's birth certificate.
 :::
 
 From that moment, "coding" split in two: classic coding turns designs into syntax; new coding turns intent into instructions. The first tests your fingers; the second tests your brain.
@@ -32,9 +32,9 @@ Vibe Coding quickly moved from joke to serious engineering concept. By mid-2026 
 
 #### 2. 2026 status: The Agentic Engineering era
 
-By August 2026, AI coding had gone through several paradigm shifts. Vibe Coding was the first spark, but people soon found that pure vibes + chat produced wildly unstable code — brilliant sometimes, broken others. So the paradigm evolved: from casual chat coding toward structured agent engineering.
+By August 2026, AI coding had gone through several paradigm shifts. Vibe Coding was the first spark, but people soon found that pure vibes + chat produced wildly unstable code, brilliant sometimes, broken others. So the paradigm evolved: from casual chat coding toward structured agent engineering.
 
-Karpathy again — in early 2026 he proposed Agentic Engineering. Unlike Vibe Coding's "say it and it generates," Agentic Engineering means: give AI a goal and let it plan steps, call tools, verify results, and iterate. AI is no longer just a code generator; it's an agent that perceives its environment, makes decisions, and takes actions.
+Karpathy again, in early 2026 he proposed Agentic Engineering. Unlike Vibe Coding's "say it and it generates," Agentic Engineering means: give AI a goal and let it plan steps, call tools, verify results, and iterate. AI is no longer just a code generator; it's an agent that perceives its environment, makes decisions, and takes actions.
 
 This shift brought three key changes:
 
@@ -42,7 +42,7 @@ This shift brought three key changes:
 2. Deliverables changed: From "a piece of code" to "a complete project."
 3. Your role changed: From "review every line" to "define boundaries and accept results."
 
-The numbers don't lie: In Cursor 3, released April 2026, Agent mode usage overtook Tab completion for the first time — a clear sign developers had shifted at scale. Claude Code, the terminal-native AI coding tool, hit a $2.5 billion annualized revenue run rate by mid-2026. The chart below shows that crossover moment:
+The numbers don't lie: In Cursor 3, released April 2026, Agent mode usage overtook Tab completion for the first time: a clear sign developers had shifted at scale. Claude Code, the terminal-native AI coding tool, hit a $2.5 billion annualized revenue run rate by mid-2026. The chart below shows that crossover moment:
 
 ::: div .figure
 ```html
@@ -87,9 +87,9 @@ Honest truth: tools and models change, but successful AI coding practitioners fo
 
 Traditional coding education teaches you to be a Coder — understand syntax, memorize APIs, debug logic. In the AI coding era, that role is being redefined. You no longer need to type every line yourself. Instead, become a Conductor: define the battlefield, set rules, assign tasks, accept results.
 
-The shift isn't about "can you write code" — it's about "can you think clearly about what to build." A great conductor isn't necessarily the best soldier, but they know the objective, terrain, and troop placement best. Likewise, a great AI coding practitioner doesn't need every syntax detail memorized, but must be crystal clear on goals, architectural constraints, and quality standards.
+The shift isn't about "can you write code", it's about "can you think clearly about what to build." A great conductor isn't necessarily the best soldier, but they know the objective, terrain, and troop placement best. Likewise, a great AI coding practitioner doesn't need every syntax detail memorized, but must be crystal clear on goals, architectural constraints, and quality standards.
 
-Worth reading twice — this table captures the whole role change:
+Worth reading twice, this table captures the whole role change:
 
 ::: div .overflow-x-auto
 ```html
@@ -98,7 +98,7 @@ Worth reading twice — this table captures the whole role change:
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
-Traditional Coder vs. AI Conductor — capability comparison
+Traditional Coder vs. AI Conductor: capability comparison
 
 This does NOT mean coding knowledge is obsolete. Far from it: you can only review and correct AI code if you can read it; you can only judge whether AI's design is sound if you understand data structures and algorithms. Knowledge sets your "conductor ceiling" — but its role shifts from "execution tool" to "judgment basis."
 
@@ -108,16 +108,16 @@ This does NOT mean coding knowledge is obsolete. Far from it: you can only revie
 Tools iterate every three months; methodology evolves only every three years. Learn a tool's mechanics and it may be obsolete in three months; master a way of thinking and it still applies three years later.
 :::
 
-Many beginners ask first: "Which tool is best?" "Which model is strongest?" Those questions aren't unimportant — they're just the wrong priority. The 2026 tool landscape looks nothing like 2025: Trae and Qoder rose and fell, Cursor went from plugin to standalone IDE to Cursor 3, Claude Code went from experiment to terminal-coding mainstream. Yet behind all that churn, the thinking principles of successful practitioners barely changed.
+Many beginners ask first: "Which tool is best?" "Which model is strongest?" Those questions aren't unimportant, they're just the wrong priority. The 2026 tool landscape looks nothing like 2025: Trae and Qoder rose and fell, Cursor went from plugin to standalone IDE to Cursor 3, Claude Code went from experiment to terminal-coding mainstream. Yet behind all that churn, the thinking principles of successful practitioners barely changed.
 
-That's why this book won't waste pages on one tool's button-by-button walkthrough — those go stale the moment they're written. Instead, it focuses entirely on a proven thinking methodology: how to think about requirements, how to talk to AI, how to verify output, how to keep iterating. Master this and any tool is quick to pick up. Learn only tool steps and every new tool starts you from zero.
+That's why this book won't waste pages on one tool's button-by-button walkthrough: those go stale the moment they're written. Instead, it focuses entirely on a proven thinking methodology: how to think about requirements, how to talk to AI, how to verify output, how to keep iterating. Master this and any tool is quick to pick up. Learn only tool steps and every new tool starts you from zero.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Reassurance for absolute beginners
 
 {class="mt-1"}
-If you're starting from zero, don't let "methodology" scare you. It's not abstract philosophy — it's an operator's manual for "how to think when something breaks." Like cooking: you can follow a recipe (tool steps), but a real chef understands "why season this way" and "how to control heat" (methodology). This book starts from the basics, pairs every principle with concrete examples, and makes sure you understand both "what" and "how."
+If you're starting from zero, don't let "methodology" scare you. It's not abstract philosophy, it's an operator's manual for "how to think when something breaks." Like cooking: you can follow a recipe (tool steps), but a real chef understands "why season this way" and "how to control heat" (methodology). This book starts from the basics, pairs every principle with concrete examples, and makes sure you understand both "what" and "how."
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -136,5 +136,5 @@ Chapter recap
 - By 2026 it evolved into Agentic Engineering: set goals, delegate, AI plans and executes, humans accept results
 - Cursor 3's Agent mode overtook Tab completion; Claude Code hit $2.5B annualized revenue
 - Your new role is Conductor: define the battlefield, set rules, assign tasks, accept results
-- Tools iterate every three months; methodology every three years — learn methodology, not buttons
+- Tools iterate every three months; methodology every three years, learn methodology, not buttons
 :::

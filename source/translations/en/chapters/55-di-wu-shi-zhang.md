@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 50: Kotlin Quick Start — Android's First Language
 
 {class="chapter-intro mb-4"}
-This chapter is where we officially learn the language. Don't be nervous — Kotlin is famous for being beginner-friendly, and you don't need to memorize a syntax book: master 20% of the syntax and you can read and write 80% of everyday code. Look up the rest as you work on projects. Remember our learning principle: understanding beats memorizing, using beats mastering.
+This chapter is where we officially learn the language. Don't be nervous, Kotlin is famous for being beginner-friendly, and you don't need to memorize a syntax book: master 20% of the syntax and you can read and write 80% of everyday code. Look up the rest as you work on projects. Remember our learning principle: understanding beats memorizing, using beats mastering.
 
 #### I. Variables and Types: Giving Data a Name
 
@@ -33,7 +33,7 @@ val pi = 3.14            // omitted, it's still inferred automatically
 ```
 :::
 
-There are only a few common types — remember them with one table:
+There are only a few common types, remember them with one table:
 
 ::: div .overflow-x-auto
 ```html
@@ -49,7 +49,7 @@ Kotlin's Common Basic Types
 Tip: The val-First Rule
 
 {class="mt-1"}
-An iron rule of the Kotlin community: use val by default and only use var when truly necessary. If you use var where val would work, the IDE will warn you with yellow text. This habit saves you a whole class of "variable got changed unexpectedly" bugs — the less your code changes, the easier it is to reason about.
+An iron rule of the Kotlin community: use val by default and only use var when truly necessary. If you use var where val would work, the IDE will warn you with yellow text. This habit saves you a whole class of "variable got changed unexpectedly" bugs, the less your code changes, the easier it is to reason about.
 :::
 
 #### II. Functions: Packaging Logic into "Buttons"
@@ -75,7 +75,7 @@ println(add(3, 5))            // prints: 8
 ```
 :::
 
-A few key points: parameters go in the parentheses (name first, type after, separated by a colon); the return type goes after the parentheses; and string templates like $variableName are Kotlin's signature convenience — no more gluing "string + variable" together the way Java does.
+A few key points: parameters go in the parentheses (name first, type after, separated by a colon); the return type goes after the parentheses; and string templates like $variableName are Kotlin's signature convenience, no more gluing "string + variable" together the way Java does.
 
 #### III. Conditions and Loops: Teaching the Program to "Think"
 
@@ -115,7 +115,7 @@ when is Kotlin's most common way to write multi-branch logic, and you'll use it 
 
 #### IV. Null Safety: Kotlin's "Life Saver"
 
-The most famous bug of the Java era is the NullPointerException — the program touches something that "isn't there" and crashes on the spot. Statistics say it's the perennial number one on Android's crash leaderboard. Kotlin solved it at the language level: null values are not allowed by default.
+The most famous bug of the Java era is the NullPointerException, the program touches something that "isn't there" and crashes on the spot. Statistics say it's the perennial number one on Android's crash leaderboard. Kotlin solved it at the language level: null values are not allowed by default.
 
 ::: div .code-block
 :::inline div .code-head
@@ -141,12 +141,12 @@ println(len)
 Note: Don't Confuse ? and ?:
 
 {class="mt-1"}
-String? means "null is allowed," while a ?: b means "if a is null, use b" (it looks like Elvis's hairstyle, hence the name Elvis operator). When you're starting out and the compiler complains about a "null-related error," odds are you forgot to handle a nullable type — that's the language protecting you.
+String? means "null is allowed," while a ?: b means "if a is null, use b" (it looks like Elvis's hairstyle, hence the name Elvis operator). When you're starting out and the compiler complains about a "null-related error," odds are you forgot to handle a nullable type, that's the language protecting you.
 :::
 
 #### V. Classes and Objects: Molds for Making "Parts"
 
-A class is the "mold" for objects; objects are the "finished products" of a class. Everything in Android — screens, buttons, data — is an object. Kotlin has a magic tool called the data class, built specifically for "holding data," where one line does what takes dozens in Java:
+A class is the "mold" for objects; objects are the "finished products" of a class. Everything in Android, screens, buttons, data, is an object. Kotlin has a magic tool called the data class, built specifically for "holding data," where one line does what takes dozens in Java:
 
 ::: div .code-block
 :::inline div .code-head
@@ -172,7 +172,7 @@ val twin = me.copy(name = "Alexandra")   // copy and change one field
 
 Later, when you build an expense tracker, each entry is a data class: data class Record(val amount: Double, val category: String, val date: String). See — you can already write the code structure of a real project.
 
-#### VI. Lambdas and Higher-Order Functions: Kotlin's "Syntax Candy"
+VI. Lambdas and Higher-Order Functions: Kotlin's "Syntax Candy"
 
 In Android code you'll see { ... } every day — a "function without a name" called a lambda (anonymous function). Button's onClick = { count++ } is a lambda — it bundles "what to do when clicked" into one package and hands it to the button.
 
@@ -196,7 +196,7 @@ val bigBills = bills.filter { it > 50 }.sorted()
 ```
 :::
 
-Memorize a few high-frequency "collection combos": filter, map, sorted, and sum. 90% of the list handling in your future is a combination of these four moves. Kotlin's philosophy: if logic can be said in one sentence, never write five.
+Memorize a few high-frequency "collection combos": filter, map, sorted, and sum. 90% of the list handling in your future is a combination of these four moves. Kotlin's philosophy is simple. If logic can be said in one sentence, never write five.
 
 #### VII. A Syntax Cheat Sheet for Absolute Beginners
 

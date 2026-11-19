@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 数据三件套的分工
 
-记一个口诀：<strong>"小配置进 UserDefaults，成批数据进 SwiftData，外面的数据走 URLSession"</strong>。旧教程里的 Core Data 依然能用（SwiftData 就是它的现代马甲），手写 SQLite 则基本不用碰——直接学新的，别走老路。
+记一个口诀：<strong>"小配置进 UserDefaults，成批数据进 SwiftData，外面的数据走 URLSession"</strong>。旧教程里的 Core Data 依然能用（SwiftData 就是它的现代马甲），手写 SQLite 则基本不用碰，直接学新的，别走老路。
 
 #### 二、UserDefaults：存点小配置
 
@@ -50,7 +50,7 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 
 #### 三、SwiftData：给数据安个"真正的家"
 
-SwiftData 是 iOS 17 起的官方数据库方案，把"建表、增删改查"简化到了极致——<strong>一个 @Model 注解，数据类就变成数据库表</strong>：
+SwiftData 是 iOS 17 起的官方数据库方案，把"建表、增删改查"简化到了极致<strong>一个 @Model 注解，数据类就变成数据库表</strong>：
 
 ::: div .code-block
 :::inline div .code-head
@@ -107,7 +107,7 @@ struct RecordListView: View {
 ```
 :::
 
-这套"@Model + modelContainer + @Query"模板可以原样搬进你的任何项目——换换字段名就行。数据一变，@Query 自动刷新界面，妙不可言。
+这套"@Model + modelContainer + @Query"模板可以原样搬进你的任何项目，换换字段名就行。数据一变，@Query 自动刷新界面，妙不可言。
 
 #### 四、Codable：给 JSON"翻译"
 
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "晴"
 ```
 :::
 
-铁律：<strong>先看真实返回的 JSON，再定义字段</strong>。很多"解析失败"的 bug 都是字段名写错、类型猜错（服务器发 "26.5" 字符串，你声明成 Double）——把原始 JSON 打印出来对照，十秒定位。
+铁律：<strong>先看真实返回的 JSON，再定义字段</strong>。很多"解析失败"的 bug 都是字段名写错、类型猜错（服务器发 "26.5" 字符串，你声明成 Double），把原始 JSON 打印出来对照，十秒定位。
 
 #### 五、URLSession + async/await：和服务器说话
 
@@ -175,7 +175,7 @@ struct WeatherService {
 <i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：两条网络铁律
 
 {class="mt-1"}
-① <strong>联网必须 async/await，绝不阻塞主线程</strong>——卡住界面是崩溃级体验。Swift 的结构化并发让这变得很自然，但别忘了 <code class="inline">try await</code> 和 <code class="inline">do/catch</code>。② <strong>ATS 默认禁止明文 HTTP</strong>：iOS 要求 HTTPS。测试本地 http:// 服务时需要在 Info.plist 里临时开例外（NSAppTransportSecurity），但正式产品必须全走 HTTPS——审核也会盯这个。
+① <strong>联网必须 async/await，绝不阻塞主线程</strong>——卡住界面是崩溃级体验。Swift 的结构化并发让这变得很自然，但别忘了 <code class="inline">try await</code> 和 <code class="inline">do/catch</code>。② <strong>ATS 默认禁止明文 HTTP</strong>：iOS 要求 HTTPS。测试本地 http:// 服务时需要在 Info.plist 里临时开例外（NSAppTransportSecurity），但正式产品必须全走 HTTPS，审核也会盯这个。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-给用户看"人话"，给日志看"原话"（print 完整 error）。别把 <code class="inline">error.localizedDescription</code> 的英文天书直接甩给用户——产品感就藏在这些细节里。
+给用户看"人话"，给日志看"原话"（print 完整 error）。别把 <code class="inline">error.localizedDescription</code> 的英文天书直接甩给用户：产品感就藏在这些细节里。
 
 {class="mt-1"}
-找一个免费的名言 API（比如 hitokoto 之类），用 URLSession + async/await 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮。再把喜欢的句子用 SwiftData 存进"收藏夹"。这个练习把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍——做完它，第 7、8 章就是小菜一碟。
+找一个免费的名言 API（比如 hitokoto 之类），用 URLSession + async/await 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮。再把喜欢的句子用 SwiftData 存进"收藏夹"。这个练习把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍，做完它，第 7、8 章就是小菜一碟。
 :::
 
 ::: div .chapter-summary

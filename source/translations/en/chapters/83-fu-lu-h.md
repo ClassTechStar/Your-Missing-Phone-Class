@@ -10,14 +10,14 @@ kind: appendix
 ### Appendix H: Version Roadmap
 
 {class="chapter-intro mb-4"}
-This book is still being updated. Below are the planned directions for future versions — and feel free to tell us in your feedback what you'd most like to see.
+This book is still being updated. Below are the planned directions for future versions, and feel free to tell us in your feedback what you'd most like to see.
 
 ::: div .success-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-v1.8 has landed: three brand-new parts — “AI Coding in Practice,” “Android Development in Practice,” and “iOS Development in Practice” (Chapters 37-69, 33 chapters in total)
+v1.8 has landed: three brand-new parts, “AI Coding in Practice,” “Android Development in Practice,” and “iOS Development in Practice” (Chapters 37-69, 33 chapters in total)
 
 {class="mt-1"}
-From the paradigm shift of AI coding, the five thinking principles, context and requirements engineering, the 2026 landscape of tools and models, hands-on API practice, conversation engineering, three complete projects, quality assurance, and the road to more advanced skills — taking you from “knowing how to use AI” up to “directing AI to write code”; to the complete development pipeline for the two big platforms, Android and iOS: environment setup (Android Studio / Xcode), language crash courses (Kotlin / Swift), UI frameworks (Jetpack Compose / SwiftUI), data and networking, hands-on projects (an expense tracker + a weather app), testing and publishing (Google Play / App Store), and a quick-reference handbook — taking you all the way from everyday digital user to app developer.
+From the paradigm shift of AI coding, the five thinking principles, context and requirements engineering, and the 2026 landscape of tools and models: this takes you from “knowing how to use AI” up to “directing AI to write code”. Next come hands-on API practice, conversation engineering, three complete projects, quality assurance, and the road to more advanced skills. Then the complete development pipeline for the two big platforms, Android and iOS: environment setup (Android Studio / Xcode), language crash courses (Kotlin / Swift), UI frameworks (Jetpack Compose / SwiftUI), data and networking. Plus hands-on projects (an expense tracker + a weather app), testing and publishing (Google Play / App Store), and a quick-reference handbook. All of it takes you from an everyday digital user to an app developer.
 :::
 
 ::: div .info-box .rounded-lg .p-4

@@ -13,7 +13,7 @@ after_part: fu-lu
 
 - <strong>Пользователи Apple</strong>: apple.com/cn и iCloud.com.
 - <strong>Пользователи Android</strong>: на официальных сайтах брендов телефонов есть раздел «Сервис и поддержка».
-- <strong>Универсальные инструменты</strong>: для Apple — iTunes, для Huawei — Huawei Phone Assistant, для Xiaomi — Mi Mover.
+- <strong>Универсальные инструменты</strong>: для Apple, iTunes, для Huawei — Huawei Phone Assistant, для Xiaomi, Mi Mover.
 
 #### Полезные сайты и блогеры:
 
@@ -31,5 +31,5 @@ after_part: fu-lu
 
 #### Полезные ссылки · Два других «пропущенных» курса：
 
-- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Открытый китайский учебник по информатике — идея этой книги выросла из него.
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Открытый китайский учебник по информатике, идея этой книги выросла из него.
 - <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Бесплатный курс MIT о командной строке, shell и Git: в школе этому не учат, а без него не обходится ни один день.

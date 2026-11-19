@@ -27,7 +27,7 @@ Aperçu des quatre composants d'Android
 
 Au stade débutant, tu passeras 95 % de ton temps avec l'Activity ; tu utiliseras Service et BroadcastReceiver pour lire de la musique ou envoyer des notifications ; ContentProvider est le moins employé (le système encapsule déjà les données courantes). Autre point à noter : les quatre composants doivent être « déclarés » dans AndroidManifest.xml — sans déclaration, le système ne les trouve pas.
 
-#### 2. Le cycle de vie de l'Activity : la première « carte au trésor » du développeur Android
+2. Le cycle de vie de l'Activity : la première « carte au trésor » du développeur Android
 
 Une app sur téléphone peut être interrompue à tout moment : un appel arrive, l'utilisateur bascule vers WeChat pour répondre, le système manque de mémoire et te supprime… La vie d'une Activity est un voyage en boucle sur ce schéma :
 
@@ -65,7 +65,7 @@ Piège à éviter : la rotation de l'écran « tue » l'Activity
 La scène de chute la plus classique chez les débutants : l'app pivote et tout le texte des champs de saisie disparaît. La cause : par défaut, une rotation détruit et recrée l'Activity (en passant par onDestroy puis onCreate). La solution : enregistrer l'état avec rememberSaveable (le remplaçant de remember dans Compose), qui retrouvera automatiquement les valeurs à la recréation. Tu l'utiliseras souvent aux chapitres 6 et 7.
 :::
 
-#### 3. L'Intent : le « billet » qui circule dans l'app et au-dehors
+3. L'Intent : le « billet » qui circule dans l'app et au-dehors
 
 L'Intent (intention) est le « billet » de communication entre composants. Pour sauter d'un écran à un autre, ouvrir le navigateur ou lancer l'appareil photo, il faut « acheter son billet et monter à bord » :
 
@@ -119,14 +119,14 @@ navController.popBackStack()              // revenir à la page précédente
 Petit conseil : et quand les écrans se multiplient ?
 
 {class="mt-1"}
-Quand le projet grandit, regroupe toutes les routes des écrans dans un seul fichier (par exemple AppNavGraph.kt) pour les gérer d'un seul tenant — ne disperse pas la logique « où va-t-on ? » dans chaque écran. C'est le premier pas de « ça tourne » vers « c'est maintenable ».
+Quand le projet grandit, regroupe toutes les routes des écrans dans un seul fichier (par exemple AppNavGraph.kt) pour les gérer d'un seul tenant, ne disperse pas la logique « où va-t-on ? » dans chaque écran. C'est le premier pas de « ça tourne » vers « c'est maintenable ».
 :::
 
-#### 5. Au passage : c'est quoi un Fragment (et pourquoi ce livre ne l'enseigne pas)
+5. Au passage : c'est quoi un Fragment (et pourquoi ce livre ne l'enseigne pas)
 
-En fouillant les anciens tutos, tu tomberas forcément sur le Fragment — un « fragment d'interface réutilisable » au sein d'une Activity, acteur absolu des anciennes architectures multi-écrans. Mais à l'ère de Compose, les fonctions Composable + les routes de Navigation suffisent, et l'éditeur officiel a relégué le Fragment au second plan. C'est pourquoi ce livre ne l'a pas mis dans son fil principal.
+En fouillant les anciens tutos, tu tomberas forcément sur le Fragment, un « fragment d'interface réutilisable » au sein d'une Activity, acteur absolu des anciennes architectures multi-écrans. Mais à l'ère de Compose, les fonctions Composable + les routes de Navigation suffisent, et l'éditeur officiel a relégué le Fragment au second plan. C'est pourquoi ce livre ne l'a pas mis dans son fil principal.
 
-Mon conseil : dans un nouveau projet, n'utilise pas de ta propre initiative les Fragments ; mais en lisant du vieux code ou en entretien, sache simplement que c'est un « fragment d'interface enchâssé dans une Activity ». Pour tes ressources d'apprentissage, choisis toujours en priorité ce qui est postérieur à 2023 — le « vieil almanach » de la pile technique Android se périme plus vite qu'on ne l'imagine.
+Mon conseil : dans un nouveau projet, n'utilise pas de ta propre initiative les Fragments ; mais en lisant du vieux code ou en entretien, sache simplement que c'est un « fragment d'interface enchâssé dans une Activity ». Pour tes ressources d'apprentissage, choisis toujours en priorité ce qui est postérieur à 2023: le « vieil almanach » de la pile technique Android se périme plus vite qu'on ne l'imagine.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

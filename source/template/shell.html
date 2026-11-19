@@ -312,6 +312,89 @@
             background: #1e2a36;
             border-color: #354152;
         }
+        /* --- 去 AI 味 v2.0：证据框 / 立场框 / 版本锚点 --- */
+        .version-anchor {
+            font-size: 0.85em;
+            color: #6b7280;
+            background: #f5f6f8;
+            border: 1px dashed #d5dbe3;
+            border-radius: 0.25rem;
+            padding: 0.5rem 0.85rem;
+            margin: 0.75rem 0 1.25rem;
+        }
+        .dark .version-anchor {
+            color: #9ca3af;
+            background: #1f2937;
+            border-color: #374151;
+        }
+        .case-box {
+            border-left: 4px solid #2563eb;
+            background: #f5f6f8;
+            border-radius: 0.25rem;
+            padding: 0.9rem 1.1rem;
+            margin: 1.25rem 0;
+            max-width: 82ch;
+        }
+        .dark .case-box {
+            background: #1f2937;
+        }
+        .case-box-head {
+            font-weight: 700;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+        .case-box-head::before {
+            content: "▍";
+            margin-right: 0.35em;
+        }
+        .case-box-quote {
+            border-left: 2px solid #d5dbe3;
+            padding-left: 0.75rem;
+            margin: 0.6rem 0;
+            color: #6b7280;
+        }
+        .dark .case-box-quote {
+            color: #9ca3af;
+        }
+        .case-box-src {
+            font-size: 0.82em;
+            color: #6b7280;
+        }
+        .dark .case-box-src {
+            color: #9ca3af;
+        }
+        .stance-box {
+            border: 1px solid #f59e0b;
+            background: #fef6e7;
+            border-radius: 0.25rem;
+            padding: 0.9rem 1.1rem;
+            margin: 1.25rem 0;
+            max-width: 82ch;
+        }
+        .dark .stance-box {
+            background: #2a2318;
+            border-color: #b45309;
+        }
+        .stance-box-head {
+            font-weight: 700;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .stance-box-head::before {
+            content: "▍";
+            margin-right: 0.35em;
+        }
+        .stance-box-note {
+            font-size: 0.85em;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+        .dark .stance-box-note {
+            color: #9ca3af;
+        }
         .chapter-intro {
             font-size: 1.05em;
             color: #4b5563;

@@ -2,17 +2,17 @@
 id: di-er-shi-liu-zhang
 num: 26
 part: chao-yue-pian
-nav: Kapitel 26: Die aktuelle Technik-Front bei Handys
+nav: Kapitel 26: Neue Technik kann warten
 toc: default
 kind: chapter
 ---
 
-### Kapitel 26: Aktuelle Fronten der Smartphone-Technologie
+### Kapitel 26: Neue Technik kann warten
 
 {class="chapter-intro mb-4"}
 Nachdem wir das „ digitale Erbe" alter Handys besprochen haben, wenden wir uns der Gegenwart zu. 2024-2026 ist eine Phase geballter Smartphone-Innovationen: KI ist von der Cloud in die Hosentasche gewandert, die Satellitenkommunikation vom Flaggschiff ins Mittelsegment gewandert, faltbare Displays vom „Experimentieren" zum „taeglichen Gebrauch" geworden, und auch die Batterietechnologie erlebt einen seit Jahren nicht mehr dagewesenen Materialdurchbruch. Dieses Kapitel beleuchtet diese aktuellen Technikfronten und hilft dir einzuschaetzen, ob „es Zeit fuer ein neues Handy ist" und „welches".
 
-#### I. KI-Smartphone: Marketing-Schlagwort oder echte Revolution?
+I. KI-Smartphone: Marketing-Schlagwort oder echte Revolution?
 
 Seit 2024 bewerben fast alle Android-Hersteller ihre Flaggschiffe als „KI-Handy"; auch Apple hat mit iOS 18 Apple Intelligence eingefuehrt. Aber was genau macht ein Handy zum „KI-Handy"? In der Branche haben sich drei Beurteilungskriterien herausgebildet:
 
@@ -20,7 +20,7 @@ Seit 2024 bewerben fast alle Android-Hersteller ihre Flaggschiffe als „KI-Hand
 - <strong>NPU-Rechenleistung (TOPS)</strong>: Die Rechenleistung der NPU (Neural Processing Unit) wird in TOPS (Billionen Operationen pro Sekunde) angegeben. 2024 erreichten Flaggschiff-Chips (wie Snapdragon 8 Gen3, Dimensity 9300) 40-70 TOPS; dieNeue Generation Chips 2025-2026 uebertreffen allgemein 100 TOPS – das ist die Hardware-Huerde fuer das lokale Ausfuehren grosser Modelle.
 - <strong>KI-Agent-Szenarien</strong>: Nicht nur „Fragen und Antworten", sondern auch die faehige Ausfuehrung von Aufgabenketten ueber mehrere Apps hinweg – z. B. „Sortiere die Fotos von gestern in ein Album und teile sie mit Zhang San"; das System ruft automatisch Album, Datei-Manager, WeChat und andere Apps auf. Das ist das Kernmerkmal, das ein KI-Handy von einem „Handy mit KI-Assistent" unterscheidet.
 
-#### II. Vergleich der KI-Strategien der Hersteller: Wer macht es ernst, wer klebt nur ein Etikett auf?
+II. Vergleich der KI-Strategien der Hersteller: Wer macht es ernst, wer klebt nur ein Etikett auf?
 
 Die KI-Wege der Hersteller unterscheiden sich deutlich; beim Kauf lohnt sich ein genauerer Blick:
 
@@ -32,7 +32,7 @@ Die KI-Wege der Hersteller unterscheiden sich deutlich; beim Kauf lohnt sich ein
 
 <strong>Kaufempfehlung</strong>: Wenn du regelmaessig KI fuer Arbeitsdokumente und Informationsorganisation brauchst, waehle ein Geraet mit starker On-Device-Leistung und systemintegrierten KI-Funktionen. Fuer gelegentliche KI-Bildbearbeitung reicht ein Mittelklasse-Handy.
 
-#### III. Satellitenkommunikation: vom Flaggschiff-„Gag" zum Mittelklasse-Standard
+III. Satellitenkommunikation: vom Flaggschiff-„Gag" zum Mittelklasse-Standard
 
 Die Satellitenkommunikation ist eine der substanzellsten Technologien, die in den letzten zwei Jahren von der Oberklasse ins Mittelsegment gewandert sind. Als Huawei Mate 60 und iPhone 14 sie 2022 ein fuehrten, war sie noch Flaggschiff-exklusiv; 2025 ist sie bereits im 2000-3000-RMB-Segment angekommen.
 
@@ -53,7 +53,7 @@ Faltbare Displays sind vom „Tech-Experiment" zum „tauglichen Hauptgeraet" ge
 
 <strong>Kaufempfehlung</strong>: Fuer Vielleser, Dokumentbearbeiter und Video-Nutzer lohnt sich ein Querfalz-Display; wer Wert auf Tragbarkeit und soziale Attraktivitaet legt, ist mit einem Laengsfalz besser beraten. Vor der Entscheidung mindestens 30 Minuten im Laden ausprobieren.
 
-#### V. 6G und Wi-Fi 7: Tempo und Grenzen der naechsten Verbindungsgeneration
+V. 6G und Wi-Fi 7: Tempo und Grenzen der naechsten Verbindungsgeneration
 
 6G ist noch nicht wirklich angekommen, aber die Technologie ist bereits auf dem Weg:
 
@@ -61,7 +61,7 @@ Faltbare Displays sind vom „Tech-Experiment" zum „tauglichen Hauptgeraet" ge
 - <strong>Wi-Fi 7(802.11be)</strong>: Ab 2024 Standard bei Flaggschiffen; theoretische Spitzenrate bis 46 Gbps (4x Wi-Fi 6); unterstuetzt 320 MHz Bandbreite, 4K-QAM und MLO (Multi-Link-Uebertragung). Gemessen an einem Wi-Fi-7-Router erreichen Flaggschiff-Handys 2-5 Gbps – 2-3x schneller als Wi-Fi 6E. Wer ein Wi-Fi-7-Handy kauft, sollte auch einen Wi-Fi-7-Router haben, um die volle Leistung zu erhalten.
 - <strong>Bluetooth 5.4 und LE Audio</strong>: 2024-2026 unterstuetzen neue Handys allgemein Bluetooth 5.4 und LE Audio (Low Energy Audio); zwei Kopfhoerer-Paare koennen gleichzeitig dasselbe Lied hoeren. Auracast-Broadcast-Audio ermoeglicht es vielen Personen an oeffentlichen Orten, dieselbe Tonquelle synchron zu hoeren.
 
-#### VI. Silizium-Kohlenstoff-Anode: Die Akkulaufzeit erfaehrt endlich einen Materialdurchbruch
+VI. Silizium-Kohlenstoff-Anode: Die Akkulaufzeit erfaehrt endlich einen Materialdurchbruch
 
 Die Akkulaufzeit von Handys wurde jahrelang als „taegliches Laden" kritisiert; seit 2024 hat die Verbreitung der Silizium-Kohlenstoff-Anoden-Technologie eine spuerbare Verbesserung gebracht.
 

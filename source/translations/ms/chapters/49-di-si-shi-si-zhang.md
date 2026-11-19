@@ -12,13 +12,13 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Teori sudah selesai dipelajari; kini masanya untuk bertindak. Bab ini bukan tutorial "ikut sahaja taip" yang mudah, tetapi satu metodologi amalan tentang "cara berfikir, cara bertanya, cara mengesahkan". Kita akan menggunakan tiga projek dengan tahap kesukaran berbeza untuk menunjukkan proses pemikiran lengkap daripada keperluan hingga hasil siap. Apa pun alat yang anda gunakan, aliran kerja ini sesuai.
 
-#### 1. Projek satu: laman alat peribadi minimalis (peringkat permulaan)
+1. Projek satu: laman alat peribadi minimalis (peringkat permulaan)
 
 ##### 1. Pemikiran keperluan
 
 Sasaran: cipta satu laman web alat peribadi yang memaparkan pintu masuk kepada 3-4 alat kecil yang berguna. Ini projek frontend tulen, tidak memerlukan backend dan pangkalan data. Fokusnya bukan pada betapa kompleksnya alat itu sendiri, tetapi pada pengalaman aliran kerja lengkap "daripada keperluan ke hasil siap".
 
-Mengikut lima unsur keperluan: Who (siapa) — kegunaan peribadi. What (apa) — satu laman web yang memaparkan pintu masuk alat. Why (kenapa) — mengumpulkan alat yang kerap digunakan dalam satu halaman untuk akses mudah. How (bagaimana) — satu fail HTML+CSS+JS, tanpa framework. Constraint (kekangan) — siap dalam 30 minit, tidak perlu dilancarkan.
+Mengikut lima unsur keperluan: Who (siapa): kegunaan peribadi. What (apa), satu laman web yang memaparkan pintu masuk alat. Why (kenapa) — mengumpulkan alat yang kerap digunakan dalam satu halaman untuk akses mudah. How (bagaimana): satu fail HTML+CSS+JS, tanpa framework. Constraint (kekangan), siap dalam 30 minit, tidak perlu dilancarkan.
 
 ##### 2. Memberi arahan
 
@@ -50,21 +50,21 @@ Terus berikan fail HTML lengkap.
 
 Selepas AI memberikan kod, buat penerimaan mengikut semakan tiga lapisan pengesahan iterasi. Lapisan pertama, pengesahan fungsi: bolehkah fail dibuka dalam pelayar? Adakah kesemua 4 kad dipaparkan? Adakah animasi hover berfungsi normal? Lapisan kedua, pengesahan sempadan: adakah susun atur normal pada saiz skrin telefon? Adakah kad bertukar baris apabila tetingkap sangat sempit? Lapisan ketiga, pengesahan seni bina: adakah kod boleh dibaca? Adakah CSS digabungkan dalam satu teg style? Adakah ada lebihan yang ketara?
 
-Jika anda juga mahu melaksanakan fungsi sesuatu kad alat (bukan sekadar pintu masuk), boleh ditambah secara berperingkat — tambahkan fungsi satu alat setiap kali, dan tambahkan yang berikutnya selepas pengesahan. Inilah aplikasi sebenar strategi "langkah kecil pantas".
+Jika anda juga mahu melaksanakan fungsi sesuatu kad alat (bukan sekadar pintu masuk), boleh ditambah secara berperingkat, tambahkan fungsi satu alat setiap kali, dan tambahkan yang berikutnya selepas pengesahan. Inilah aplikasi sebenar strategi "langkah kecil pantas".
 
-#### 2. Projek dua: sistem catatan kewangan full-stack (peringkat pertengahan)
+2. Projek dua: sistem catatan kewangan full-stack (peringkat pertengahan)
 
 ##### 1. Pemikiran keperluan dan PRD
 
 Sasaran: satu aplikasi catatan kewangan full-stack yang mempunyai frontend, backend dan pangkalan data. Projek ini jauh lebih kompleks daripada yang pertama dan perlu menggunakan kaedah kejuruteraan keperluan dalam Bab 40.
 
-Tulis PRD dahulu. Mengikut templat dalam Seksyen 3 Bab 40, tuliskan gambaran keseluruhan projek, senarai fungsi, pelan teknikal, model data dan pelan pembangunan. Pemilihan pelan teknikal perlu mempertimbangkan prinsip Simplicity First — frontend menggunakan React tetapi tanpa pengurusan status yang kompleks seperti Redux; backend menggunakan Node.js tetapi tanpa microservices; pangkalan data menggunakan SQLite dan bukan PostgreSQL (pada peringkat pembangunan).
+Tulis PRD dahulu. Mengikut templat dalam Seksyen 3 Bab 40, tuliskan gambaran keseluruhan projek, senarai fungsi, pelan teknikal, model data dan pelan pembangunan. Pemilihan pelan teknikal perlu mempertimbangkan prinsip Simplicity First, frontend menggunakan React tetapi tanpa pengurusan status yang kompleks seperti Redux; backend menggunakan Node.js tetapi tanpa microservices; pangkalan data menggunakan SQLite dan bukan PostgreSQL (pada peringkat pembangunan).
 
 Pelan pembangunan dipecahkan kepada 5 langkah: Langkah 1 rangka API backend (pelayan Express + SQLite + antara muka CRUD); Langkah 2 halaman asas frontend (senarai rekod + borang tambah); Langkah 3 penyepaduan frontend-backend (panggilan API + paparan data); Langkah 4 fungsi kategori dan penapisan; Langkah 5 ringkasan bulanan dan carta ringkas. Setiap langkah yang siap ialah "sesuatu yang boleh digunakan".
 
 ##### 2. Menetapkan fail memori projek
 
-Sebelum mula mengekod, cipta dahulu fail memori projek. Ini amalan teras kejuruteraan konteks — memastikan AI memahami latar belakang projek pada permulaan setiap perbualan.
+Sebelum mula mengekod, cipta dahulu fail memori projek. Ini amalan teras kejuruteraan konteks, memastikan AI memahami latar belakang projek pada permulaan setiap perbualan.
 
 ::: div .code-block
 :::inline div .code-head
@@ -125,17 +125,17 @@ Berikan struktur kod backend yang lengkap.
 ```
 :::
 
-Perhatikan ciri arahan ini: ia hanya menerangkan langkah semasa (rangka backend), tanpa mencampurkan keperluan frontend; ia menyenaraikan medan dan antara muka dengan jelas (memberikan AI kekangan yang cukup), tetapi pelaksanaan khusus ditentukan oleh AI; ia mematuhi prinsip Goal-Driven Execution — menyebut "buat apa" dan bukan "cara buat".
+Perhatikan ciri arahan ini: ia hanya menerangkan langkah semasa (rangka backend), tanpa mencampurkan keperluan frontend; ia menyenaraikan medan dan antara muka dengan jelas (memberikan AI kekangan yang cukup), tetapi pelaksanaan khusus ditentukan oleh AI; ia mematuhi prinsip Goal-Driven Execution, menyebut "buat apa" dan bukan "cara buat".
 
 Selepas AI memberikan kod, sahkan serta-merta: jalankan pelayan, uji setiap antara muka dengan curl atau Postman untuk memastikan ia berfungsi normal. Selepas dipastikan tiada masalah, buka perbualan baharu untuk Langkah 2 (halaman asas frontend). Setiap langkah mematuhi kitaran "arahan-pengesahan-perbualan baharu".
 
-#### 3. Projek tiga: aplikasi dipertingkat AI (peringkat lanjutan)
+3. Projek tiga: aplikasi dipertingkat AI (peringkat lanjutan)
 
 ##### 1. Konsep projek
 
-Sasaran: satu aplikasi yang menyambung ke API model besar — contohnya "Pembantu Pembelajaran AI"; pengguna memasukkan kandungan pembelajaran, dan AI menjana ringkasan, mengaitkan poin pengetahuan serta mengesyorkan sumber pembelajaran. Keistimewaan projek ini ialah: aplikasi anda sendiri sedang memanggil AI, jadi anda perlu mengendalikan panggilan API, kejuruteraan prompt, pengendalian ralat dan masalah baharu yang lain.
+Sasaran: satu aplikasi yang menyambung ke API model besar, contohnya "Pembantu Pembelajaran AI"; pengguna memasukkan kandungan pembelajaran, dan AI menjana ringkasan, mengaitkan poin pengetahuan serta mengesyorkan sumber pembelajaran. Keistimewaan projek ini ialah: aplikasi anda sendiri sedang memanggil AI, jadi anda perlu mengendalikan panggilan API, kejuruteraan prompt, pengendalian ralat dan masalah baharu yang lain.
 
-Pelajaran terpenting yang diajarkan projek ini ialah: apabila anda "menggunakan AI untuk menulis kod yang memanggil AI", anda perlu memberi perhatian lebih kepada kejuruteraan prompt. Prompt yang digunakan oleh aplikasi anda semasa memanggil API model besar juga perlu mematuhi prinsip yang dibincangkan dalam panduan ini — jelas, ringkas dan berpandukan sasaran.
+Pelajaran terpenting yang diajarkan projek ini ialah: apabila anda "menggunakan AI untuk menulis kod yang memanggil AI", anda perlu memberi perhatian lebih kepada kejuruteraan prompt. Prompt yang digunakan oleh aplikasi anda semasa memanggil API model besar juga perlu mematuhi prinsip yang dibincangkan dalam panduan ini, jelas, ringkas dan berpandukan sasaran.
 
 ##### 2. Perkara teknikal penting
 
@@ -144,9 +144,9 @@ Projek ini melibatkan beberapa perkara teknikal yang belum anda temui dalam dua 
 - Pengurusan kunci API: kunci tidak boleh sesekali dikodkan terus dalam kod; urus dengan pemboleh ubah persekitaran;
 - Pengendalian respons penstriman: balasan model besar biasanya disalurkan secara berperingkat (streaming) dan perlu dipaparkan sedikit demi sedikit;
 - Kawalan penggunaan Token: model besar dibilkan mengikut token, jadi penggunaan perlu dikawal pada peringkat aplikasi;
-- Pengurusan templat Prompt: fungsi yang berbeza menggunakan templat prompt yang berbeza, jadi perlu diurus secara berstruktur.
+- Pengurusan templat Prompt: fungsi yang berbeza menggunakan templat prompt yang berbeza, jadi perlu diurus secara berstruktur
 
-Semua perkara teknikal ini boleh dilaksanakan dengan bantuan AI, tetapi anda perlu memahami "kenapa" setiap satu — kenapa kunci tidak boleh dikodkan terus? Kenapa perlu respons penstriman? Kenapa penggunaan token perlu dikawal? Hanya dengan memahami "kenapa", anda dapat menilai sama ada penyelesaian AI itu munasabah.
+Semua perkara teknikal ini boleh dilaksanakan dengan bantuan AI, tetapi anda perlu memahami "kenapa" setiap satu, kenapa kunci tidak boleh dikodkan terus? Kenapa perlu respons penstriman? Kenapa penggunaan token perlu dikawal? Hanya dengan memahami "kenapa", anda dapat menilai sama ada penyelesaian AI itu munasabah.
 
 #### 4. Senarai semak aliran kerja amalan sejagat
 
@@ -166,16 +166,16 @@ Senarai semak aliran kerja amalan pengaturcaraan AI sejagat
 Mari praktik: siapkan "Projek satu" minggu ini
 
 {class="mt-1"}
-Jadikan "laman alat peribadi" dalam Seksyen 1 Bab 44 sebagai tugasan pengaturcaraan AI pertama anda: luangkan 5 minit untuk melalui lima unsur, hantar arahan kepada AI (alat mana pun boleh), kemudian buat penerimaan mengikut pengesahan tiga lapisan. Siapkannya dalam 30 minit — hasil kerja pengaturcaraan AI pertama anda akan lahir. Selepas siap, simpanlah dengan baik; ia ialah cenderamata anda bertukar daripada "pembaca" kepada "pengamal".
+Jadikan "laman alat peribadi" dalam Seksyen 1 Bab 44 sebagai tugasan pengaturcaraan AI pertama anda: luangkan 5 minit untuk melalui lima unsur, hantar arahan kepada AI (alat mana pun boleh), kemudian buat penerimaan mengikut pengesahan tiga lapisan. Siapkannya dalam 30 minit: hasil kerja pengaturcaraan AI pertama anda akan lahir. Selepas siap, simpanlah dengan baik; ia ialah cenderamata anda bertukar daripada "pembaca" kepada "pengamal".
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 Ringkasan bab ini
 
-- Projek satu (permulaan): laman alat frontend tulen — alami aliran kerja lengkap; boleh siap dalam 30 minit
-- Projek dua (pertengahan): sistem catatan kewangan full-stack — PRD + fail memori + pelaksanaan berperingkat 5 langkah; setiap langkah "boleh digunakan"
-- Projek tiga (lanjutan): pembantu pembelajaran AI — guna AI menulis kod yang memanggil AI; perhatikan kejuruteraan prompt
+- Projek satu (permulaan): laman alat frontend tulen: alami aliran kerja lengkap; boleh siap dalam 30 minit
+- Projek dua (pertengahan): sistem catatan kewangan full-stack, PRD + fail memori + pelaksanaan berperingkat 5 langkah; setiap langkah "boleh digunakan"
+- Projek tiga (lanjutan): pembantu pembelajaran AI: guna AI menulis kod yang memanggil AI; perhatikan kejuruteraan prompt
 - Aliran kerja sejagat lapan langkah: pemikiran keperluan → penguraian → PRD → fail memori → pelaksanaan berperingkat → ujian → semakan → iterasi
 - Setiap langkah mematuhi kitaran "arahan-pengesahan-perbualan baharu"
 :::

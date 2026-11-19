@@ -23,7 +23,7 @@ Che tu usi Alipay o WeChat, la prima volta per collegare la carta devi seguire q
 
 Un piccolo trucco: se sei preoccupato per la sicurezza, puoi aprire nell'app della banca un conto elettronico di classe II o III da dedicare ai pagamenti mobili. Metti su questa carta solo i soldi per le piccole spese quotidiane, così anche in caso di problema le perdite sono limitate.
 
-#### 2. Il codice di pagamento funziona come "chi lo vede, incassa"
+2. Il codice di pagamento funziona come "chi lo vede, incassa"
 
 Molti non distinguono tra codice di pagamento e codice di ricezione, ed è una differenza importante.
 
@@ -32,7 +32,7 @@ Molti non distinguono tra codice di pagamento e codice di ricezione, ed è una d
 
 Ricorda questa differenza e potrai evitare molte trappole truffaldine. Chiunque ti chieda di "inviare uno screenshot del codice di pagamento" è al 100% un truffatore.
 
-#### 3. Queste impostazioni di sicurezza, 5 minuti per configurarle e tanti pensieri in meno
+3. Queste impostazioni di sicurezza, 5 minuti per configurarle e tanti pensieri in meno
 
 - <strong>Pagamento con impronta/volto</strong>: nelle impostazioni di pagamento di Alipay e WeChat attiva il pagamento biometrico. In questo modo, a ogni pagamento occorre impronta o volto; anche se perdi il telefono, chi lo trova non può spendere i tuoi soldi.
 - <strong>Blocco di sicurezza</strong>: Alipay e WeChat hanno una funzione "Blocco di sicurezza". Una volta attivata, per entrare nella pagina "Portafoglio" dell'app occorre una verifica d'identità aggiuntiva. Percorso: Alipay → Il mio → Impostazioni → Account e sicurezza → Centro sicurezza → Blocco di sicurezza.
@@ -54,11 +54,11 @@ Personalmente consiglio la carta di trasporto virtuale nel wallet del telefono. 
 - <strong>Confronto dei prezzi del delivery</strong>: lo stesso ristorante su Meituan ed Ele.me ha spesso prezzi e offerte diversi. Prima di ordinare controlla su entrambi, a volte si risparmiano diverse unità. Inoltre la funzione "Pin Hao Fan" di Meituan, ordinando con amici, permette di pagare meno.
 - <strong>Sicurezza dei taxi</strong>: in Didi o Amap Ride-hailing, ricordati di impostare "Contatto di emergenza" e "Condivisione percorso". Quando prendi un taxi, l'app condivide automaticamente il tuo percorso con il contatto impostato. Inoltre, di notte privilegia il "Taxi" rispetto a "Kuai Che" (auto privata): il taxi è soggetto a regolamentazione del settore, con un livello di sicurezza più alto.
 
-#### 6. Gestire dal telefono assicurazione sanitaria, previdenza e adempimenti amministrativi
+6. Gestire dal telefono assicurazione sanitaria, previdenza e adempimenti amministrativi
 
 Negli ultimi anni i cambiamenti sono stati enormi: molte pratiche che prima richiedevano code agli sportelli oggi si sbrigano in pochi minuti sul telefono.
 
-- <strong>Credenziale elettronica dell'assicurazione sanitaria</strong>: cerca "Credenziale elettronica assicurazione sanitaria" in Alipay o WeChat. Dopo l'attivazione, in ospedale o in farmacia basta usare il telefono, senza portare la carta fisica. La prima volta serve una verifica con riconoscimento facciale, in seguito a ogni utilizzo viene generato un codice dinamico.
+- <strong>Credenziale elettronica dell'assicurazione sanitaria</strong>: cerca "Credenziale elettronica assicurazione sanitaria" in Alipay o WeChat. Dopo l'attivazione, in ospedale o in farmacia basta usare il telefono. Senza portare la carta fisica. La prima volta serve una verifica con riconoscimento facciale, in seguito a ogni utilizzo viene generato un codice dinamico.
 - <strong>Consulta previdenza</strong>: scarica l'app "Palmo 12333" o usa il "Centro cittadino" in Alipay per consultare i versamenti previdenziali, il saldo del conto pensione, richiedere sussidi di disoccupazione, ecc.
 - <strong>Imposte sul reddito</strong>: la liquidazione annuale delle imposte sul reddito, da marzo a giugno, si può fare dall'app "Imposte sul reddito personale". Ricordati di controllare se ci sono detrazioni speciali dichiarabili (istruzione dei figli, interessi del mutuo, mantenimento genitori anziani, ecc.), tutte cose che ti permettono di pagare meno tasse o di ottenere un rimborso.
 

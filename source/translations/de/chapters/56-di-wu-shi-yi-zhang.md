@@ -88,7 +88,7 @@ Die Bausteine sind da – aber wie anordnen? Merk dir drei "Schachteln":
 
 - Column: untereinander (wie in der Essensschlange);
 - Row: nebeneinander (wie nebeneinander sitzen);
-- Box: übereinander (wie ein Stapel Spielkarten – gut für Badges und Overlays).
+- Box: übereinander (wie ein Stapel Spielkarten – gut für Badges und Overlays)
 
 ::: div .code-block
 :::inline div .code-head
@@ -178,13 +178,13 @@ Drei Zeilen Code – ein lebendiger Zähler. Das ist der Vorteil von Compose geg
 Abbildung 3: Composes unidirektionaler Datenfluss "Zustand → Oberfläche"
 :::
 
-#### 5. Theme und Dunkelmodus: einmal konfigurieren, überall wirksam
+5. Theme und Dunkelmodus: einmal konfigurieren, überall wirksam
 
 Das MyFirstAppTheme { ... } im Vorlagenprojekt ist das Theme. Es basiert auf dem Material-3-Designsystem und verwaltet Farben, Schriften und Formen zentral. Den Dunkelmodus zu unterstützen braucht nur drei Schritte:
 
 1. Im Theme ein helles/dunkles Farbschema definieren (die Vorlage erzeugt das ColorScheme automatisch);
 2. Wechselt das System in den Dunkelmodus, erkennt das isSystemInDarkTheme() automatisch;
-3. Die vom Theme bereitgestellten Farben verwenden (z. B. MaterialTheme.colorScheme.primary) statt fest kodierte Farbwerte.
+3. Die vom Theme bereitgestellten Farben verwenden (z. B. MaterialTheme.colorScheme.primary) statt fest kodierte Farbwerte
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -200,7 +200,7 @@ Drei "Cheats" für das Entwicklungserlebnis – wer sie benutzt hat, will sie ni
 
 - @Preview-Vorschau: Versieh eine Composable mit der Annotation @Preview, und Android Studio rendert die Oberfläche sofort rechts – Code ändern mit Sofortwirkung, ohne jedes Mal auf das Telefon zu installieren;
 - Live Edit: Das Android Studio von 2026 kann Teile der Änderungen "heiß" auf Emulator/echtem Gerät aktualisieren – kleine Anpassungen wie eine Textfarbe erscheinen sekundenschnell auf dem Gerät;
-- Animations-APIs: Mit animateFloatAsState und AnimatedVisibility lassen sich mit ein paar Zeilen sanfte Übergänge bauen – der "Hochwertigkeits-Effekt" steckt oft genau in diesen paar Zeilen.
+- Animations-APIs: Mit animateFloatAsState und AnimatedVisibility lassen sich mit ein paar Zeilen sanfte Übergänge bauen – der "Hochwertigkeits-Effekt" steckt oft genau in diesen paar Zeilen
 
 ::: div .code-block
 :::inline div .code-head

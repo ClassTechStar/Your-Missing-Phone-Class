@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Poder crear una App es solo el comienzo. Este capítulo habla de los obstáculos que hay entre "saber hacer" y "hacer bien": cómo pedir permisos con elegancia, cómo enviar notificaciones sin resultar molesto, cómo subir un nivel la arquitectura y, en 2026, cómo programar en Android en pareja con la IA. Todo esto lo vas a encontrar enseguida en proyectos reales.
 
-#### 1. Permisos en tiempo de ejecución: primero toca la puerta, luego entra
+1. Permisos en tiempo de ejecución: primero toca la puerta, luego entra
 
 Cámara, ubicación, contactos, notificaciones... para estas "zonas sensibles", Android exige que la App lo pida al usuario en tiempo de ejecución (desde Android 6). La regla es: primero declarar (Manifest), después solicitar (código) y, si el usuario rechaza, degradar con elegancia. En Compose, lo más cómodo es usar rememberPermissionState de la librería oficial Accompanist:
 
@@ -85,7 +85,7 @@ if (ActivityCompat.checkSelfPermission(this,
 
 Las tareas programadas (por ejemplo, "recordar anotar los gastos a las 20:00 cada día") se hacen con WorkManager: es el "mayordomo de tareas en segundo plano" recomendado oficialmente, garantiza que la tarea se ejecute en el momento adecuado y te ahorra preocuparte por la optimización de batería. Para necesidades tipo alarma, es la elección segura.
 
-#### 3. Arquitectura avanzada: inyección de dependencias y modularización
+3. Arquitectura avanzada: inyección de dependencias y modularización
 
 Cuando el proyecto crece, aparecen dos "problemas dulces":
 
@@ -115,13 +115,13 @@ Los cuatro escenarios del desarrollo Android asistido por IA
 
 La metodología concreta (cómo dar instrucciones a la IA, cómo aceptar los resultados y cómo evitar trampas) está desarrollada en 11 capítulos completos de la séptima parte de este libro, "Programación con IA en la práctica" (capítulos 37-47); te recomiendo mucho leerlos juntos: la sintaxis de Android va en esta parte y el arte de colaborar con la IA en la séptima.
 
-#### 5. Optimización de rendimiento y herramientas de depuración en Compose
+5. Optimización de rendimiento y herramientas de depuración en Compose
 
 Con Compose se escribe a gusto, pero la "recomposición excesiva" también provoca tirones. Tres trucos prácticos:
 
 - Estabiliza los parámetros: añade @Immutable a tus data classes o usa derivedStateOf para evitar que cambios de estado sin relación disparen recomposiciones enormes;
 - Recuerda usar key: items(list, key = { it.id }) hace que, al añadir o borrar, la lista solo toque lo que debe tocar; sin key, borrar un elemento puede redibujar la lista entera;
-- Modo Compose del Layout Inspector: muestra en tiempo real cuántas veces se recompone cada Composable; quién se recompone demasiado queda a la vista, y optimiza a partir de esos puntos calientes.
+- Modo Compose del Layout Inspector: muestra en tiempo real cuántas veces se recompone cada Composable; quién se recompone demasiado queda a la vista, y optimiza a partir de esos puntos calientes
 
 Además, activa los informes del compilador de Compose (Metrics), que generan un reporte de "qué componentes son inestables": en el camino avanzado, los datos siempre son más fiables que las sensaciones.
 

@@ -2,12 +2,12 @@
 id: di-shi-liu-zhang
 num: 16
 part: jin-jie-pian
-nav: Capítulo 16: Sistema de cuentas y servicios en la nube
+nav: Capítulo 16: Cambias de móvil: ¿qué cuentas pierdes?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 16: Sistema de cuentas y servicios en la nube
+### Capítulo 16: Cambias de móvil: ¿qué cuentas pierdes?
 
 {class="chapter-intro mb-4"}
 Tengo un amigo al que le robaron el móvil el año pasado. Su primera preocupación no fue "cuánto vale el móvil", sino "¿podré recuperar mis fotos?". Lamentablemente, no había activado la copia de seguridad en la nube. El móvil es un objeto material, pero los datos de tu cuenta son cosas que, si se pierden, no vuelven nunca. En este capítulo hablaremos de cómo asegurar tu vida digital de verdad.

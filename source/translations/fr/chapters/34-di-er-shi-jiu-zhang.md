@@ -2,17 +2,17 @@
 id: di-er-shi-jiu-zhang
 num: 29
 part: shi-zhan-pian
-nav: Chapitre 29 : Santé numérique — construire une relation saine avec ton téléphone
+nav: Chapitre 29 : Combien de temps l'utilisez-vous vraiment ?
 toc: default
 kind: chapter
 ---
 
-### Chapitre 29 : Santé numérique — Construire une relation saine avec votre smartphone
+### Chapitre 29 : Combien de temps l'utilisez-vous vraiment ?
 
 {class="chapter-intro mb-4"}
 Avez-vous déjà vécu cela : vous vouliez juste regarder 5 minutes de courtes vidéos, et en levant les yeux, deux heures étaient passées ? Ou au lit le soir, plus vous regardez le smartphone, plus vous êtes réveillé, et finissez par vous endormir à 2 heures du matin ? Le smartphone a changé notre vie, mais il dévore aussi discrètement notre temps et notre santé. Ce chapitre ne vise pas à vous faire « arrêter le smartphone », mais à vous aider à reprendre le contrôle.
 
-#### I. Regardez d'abord votre « temps d'écran » — les chiffres réveillent
+I. Regardez d'abord votre « temps d'écran » — les chiffres réveillent
 
 Avant de changer, il faut comprendre la situation. Le smartphone dispose d'une fonction que beaucoup n'ont jamais ouverte, appelée « Temps d'écran » (iPhone) ou « Bien-être numérique » (Android), qui vous indique combien de temps vous passez chaque jour sur le smartphone et sur quelles applications.
 
@@ -21,7 +21,7 @@ Avant de changer, il faut comprendre la situation. Le smartphone dispose d'une f
 
 <strong>80 % des personnes qui consultent ces données pour la première fois sont choquées</strong>. Un ami a découvert qu'il passait plus de 4 heures par jour sur Douyin, soit 28 heures par semaine — l'équivalent d'un emploi à temps partiel. Ce « choc numérique » est la première étape du changement.
 
-#### II. Définir des « limites d'utilisation » pour les applications — installez un limiteur de vitesse
+II. Définir des « limites d'utilisation » pour les applications — installez un limiteur de vitesse
 
 Une fois le problème identifié, des limites ciblées peuvent être définies. Pas besoin de supprimer l'application, fixez simplement un « quota quotidien » :
 
@@ -29,15 +29,15 @@ Une fois le problème identifié, des limites ciblées peuvent être définies. 
 2. <strong>Android</strong> : Réglages &gt; Bien-être numérique &gt; Minuteur d'application. Sélectionnez l'application et définissez un plafond quotidien, à l'expiration l'icône devient grise.
 3. <strong>Astuce</strong> : Définissez un mot de passe de limite que vous n'utilisez pas souvent et difficile à mémoriser. S'il est trop facile à saisir, vous serez tenté de « prolonger » à chaque fois, et la limite n'aura plus aucun effet.
 
-#### III. Bon usage du « mode Ne pas déranger » — ce n'est pas couper les notifications, c'est couper l'anxiété
+III. Bon usage du « mode Ne pas déranger » — ce n'est pas couper les notifications, c'est couper l'anxiété
 
 Le smartphone de beaucoup de gens sonne des dizaines de fois par jour, et chaque notification interrompt l'attention. Vous pensez « juste regarder la notification », mais en réalité, il faut 15-20 minutes pour se reconcentrer après chaque interruption. Le mode Ne pas déranger ne vous met pas « hors de portée », il vous aide à reprendre le contrôle de votre attention.
 
 - <strong>Activation programmée</strong> : Programmez le mode Ne pas déranger de 22h à 7h. Ainsi, le smartphone ne vous réveillera pas pour un SMS spam pendant la nuit.
 - <strong>Autoriser les contacts importants à passer</strong> : Dans les réglages du mode Ne pas déranger, définissez « appels autorisés » sur « contacts favoris » ou « appels répétés » (un deuxième appel dans les 3 minutes sonnera normalement). Vous ne manquerez pas les appels urgents de la famille, mais ne serez pas dérangé par les appels commerciaux.
-- <strong>Mode concentration travail</strong> : Le « mode Concentration » de l'iPhone permet de définir des scénarios personnalisés — par exemple, en mode « travail », seules les notifications des applications professionnelles sont autorisées ; en mode « lecture », toutes les notifications sont muettes.
+- <strong>Mode concentration travail</strong> : Le « mode Concentration » de l'iPhone permet de définir des scénarios personnalisés, par exemple, en mode « travail », seules les notifications des applications professionnelles sont autorisées ; en mode « lecture », toutes les notifications sont muettes.
 
-#### IV. Protéger ses yeux par l'habitude, pas par une application — la règle 20-20-20
+IV. Protéger ses yeux par l'habitude, pas par une application — la règle 20-20-20
 
 Regarder longtemps l'écran du smartphone provoque inévitablement une sécheresse et une fatigue oculaires. Le mode de protection des yeux (filtrage de la lumière bleue) aide un peu, mais ce qui est vraiment efficace, c'est de changer ses habitudes :
 
@@ -53,7 +53,7 @@ Toutes les <strong>20 minutes</strong> de regard sur l'écran, déplacez votre r
 - <strong>Ajuster la luminosité de l'écran</strong> : Quand l'environnement est sombre, l'écran doit aussi être sombre. Beaucoup de gens regardent le smartphone dans le noir avec une luminosité trop élevée, c'est le comportement le plus nocif pour les yeux. Activez la « luminosité automatique » et assurez-vous qu'elle fonctionne.
 - <strong>Garder la distance</strong> : Le smartphone doit être à au moins 30 cm des yeux. Beaucoup de gens le tiennent très près, ce qui maintient le muscle ciliaire en contraction permanente, accélérant la myopie.
 
-#### V. Guide de sauvetage cervical pour les «Accros au smartphone» (accros du smartphone penché)
+V. Guide de sauvetage cervical pour les «Accros au smartphone» (accros du smartphone penché)
 
 En regardant le smartphone la tête baissée, votre cou subit une pression 5 à 6 fois supérieure à la position debout normale. Une inclinaison prolongée entraîne une perte de la courbure cervicale, des ostéophytes, des vertiges et des engourdissements des mains. Voici quelques méthodes d'amélioration simples :
 
@@ -61,7 +61,7 @@ En regardant le smartphone la tête baissée, votre cou subit une pression 5 à 
 - <strong>Bougez le cou toutes les 30 minutes</strong> : Tournez lentement la tête à gauche jusqu'au maximum, maintenez 3 secondes, revenez ; puis à droite, maintenez 3 secondes. Répétez 5 fois. Ensuite, faites l'« exercice du caractère Mi » — écrivez le caractère « Mi » (riz) dans les airs avec votre menton.
 - <strong>Debout contre un mur pendant 3 minutes</strong> : Tête, omoplates, fesses et talons contre le mur, tenez debout 3 minutes par jour pour corriger efficacement la posture voûtée.
 
-#### VI. Sommeil et smartphone — l'habitude à changer dans la chambre
+VI. Sommeil et smartphone — l'habitude à changer dans la chambre
 
 La lumière bleue de l'écran du smartphone supprime la sécrétion de mélatonine, vous rendant « plus vous regardez, plus vous êtes réveillé ». Beaucoup de gens pensent « je m'endors en regardant », mais en réalité, le cerveau est trompé par la lumière bleue, et une fois le smartphone posé, il est difficile de s'endormir. Voici des conseils d'amélioration :
 
@@ -70,12 +70,12 @@ La lumière bleue de l'écran du smartphone supprime la sécrétion de mélatoni
 - <strong>Activez le « mode sommeil »</strong> : Le mode de concentration « Sommeil » de l'iPhone peut verrouiller automatiquement l'écran pendant les heures de sommeil et simplifier l'écran de verrouillage ; les marques Android ont des fonctions similaires.
 - <strong>Utilisez un réveil au lieu du smartphone</strong> : Achetez un réveil physique pour quelques dizaines de yuans, n'utilisez pas le smartphone comme réveil, vous découvrirez que le piège du « je regarde juste l'heure puis je scrolle » disparaît.
 
-#### VII. Anxiété informationnelle — apprenez la « cécité sélective »
+VII. Anxiété informationnelle — apprenez la « cécité sélective »
 
 La quantité d'informations que nous recevons chaque jour équivaut à celle qu'une personne de l'Antiquité recevait en une vie entière. Mais le cerveau humain n'est pas conçu pour traiter autant d'informations ; la surcharge informationnelle entraîne anxiété, dispersion de l'attention et fatigue décisionnelle. La solution n'est pas « obtenir plus d'informations », mais « filtrer activement » :
 
 - <strong>Se désabonner</strong> : Ouvrez la liste de tous les comptes publics, créateurs et blogueurs que vous suivez, et posez-vous une question : « Au cours du mois écoulé, en ai-je tiré une valeur réelle ? » Si non, désabonnez-vous. Les canaux d'information doivent être qualitatifs, pas quantitatifs.
-- <strong>Désactiver les notifications non essentielles</strong> : À l'exception de WeChat, téléphone, SMS et calendrier, désactivez toutes les notifications des autres applications. Les actualités n'ont pas besoin de notifications — vous les verrez naturellement quand vous irez les chercher.
+- <strong>Désactiver les notifications non essentielles</strong> : À l'exception de WeChat, téléphone, SMS et calendrier, désactivez toutes les notifications des autres applications. Les actualités n'ont pas besoin de notifications: vous les verrez naturellement quand vous irez les chercher.
 - <strong>Instaurez un « jour de jeûne informationnel »</strong> : Choisissez un jour par semaine (par exemple le dimanche), sans actualités ni courtes vidéos sur le smartphone. Vous découvrirez que le ciel ne tombe pas, et que lundi votre état mental sera nettement meilleur.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

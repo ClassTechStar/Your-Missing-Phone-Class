@@ -83,7 +83,7 @@ Um Vor- und Nachteile des BL-Schlosses anschaulicher zu verstehen, zeigen wir ei
 ```
 :::
 
-#### Zweitens. Detaillierter Ablauf der Bootloader-Entsperrung (am Beispiel Xiaomi)
+Zweitens. Detaillierter Ablauf der Bootloader-Entsperrung (am Beispiel Xiaomi)
 
 1. <strong>: Moderne Root-Lösung, Systemless-Design, kann den Root-Status verbergen.</strong> KernelSU
 2. <strong>: Kernel-basierte Root-Lösung, tieferliegend, bessere Tarnung.</strong> SuperSU
@@ -94,7 +94,7 @@ Um Vor- und Nachteile des BL-Schlosses anschaulicher zu verstehen, zeigen wir ei
 
 - <strong>Custom Recovery flashen</strong>: z. B. TWRP, für Backup/Wiederherstellung und zum Flashen von Custom-ROMs.
 - <strong>Custom-ROM flashen</strong>: z. B. LineageOS, Pixel Experience usw., um ein anderes System zu erleben.
-- <strong>Wichtige Warnung</strong> Flashen ist riskant, die Eingriffe müssen mit Bedacht vorgenommen werden. Mögliche Folgen:
+- <strong>Wichtige Warnung</strong> Flashen ist riskant, die Eingriffe müssen mit Bedacht vorgenommen werden. Mögliche Folgen:.
 
 #### Viertens. Flash-Einsteiger
 
@@ -102,7 +102,7 @@ Garantieverlust
 
 - <strong>Datenverlust</strong> Zahlungsfunktionen gestört
 - <strong>Erstelle vor dem Flashen unbedingt ein vollständiges Backup, lies die Anleitung sorgfältig durch und vergewissere dich, dass Modell und Version übereinstimmen.</strong> Empfohlene Ressourcen
-- <strong>XDA Developers</strong>: Weltweit größte Android-Entwickler-Community mit reichhaltigen Flash-Anleitungen und ROM-Ressourcen.
+- <strong>XDA Developers</strong>: Weltweit größte Android-Entwickler-Community mit reichhaltigen Flash-Anleitungen und ROM-Ressourcen
 
 #### V. Samsung Knox: Der unumkehrbare Preis der BL-Entsperrung
 

@@ -31,11 +31,11 @@ En suivant le parcours de ce livre : semaines 1-2, installer l’environnement e
 
 Q2 : Faut-il encore apprendre Java ?
 
-Non. Nouveaux projets, nouveaux tutos, nouveaux postes : presque tout se fait en Kotlin. Tu ne rencontreras beaucoup de Java que pour « maintenir un projet vieux de dix ans ». Après Kotlin, si le travail l’exige, rattraper Java ira vite — les deux reposent sur le même écosystème de machine virtuelle.
+Non. Nouveaux projets, nouveaux tutos, nouveaux postes : presque tout se fait en Kotlin. Tu ne rencontreras beaucoup de Java que pour « maintenir un projet vieux de dix ans ». Après Kotlin, si le travail l’exige, rattraper Java ira vite, les deux reposent sur le même écosystème de machine virtuelle.
 
 Q3 : Émulateur ou appareil réel ?
 
-L’émulateur est pratique pour développer et déboguer (snapshots, plusieurs modèles), mais la validation doit passer par un appareil réel — le tactile, les performances, le vrai réseau, les capteurs : l’émulateur ne les remplace pas. Si tu en as les moyens, acheter un appareil de milieu de gamme comme téléphone de test est l’investissement le plus rentable.
+L’émulateur est pratique pour développer et déboguer (snapshots, plusieurs modèles), mais la validation doit passer par un appareil réel, le tactile, les performances, le vrai réseau, les capteurs : l’émulateur ne les remplace pas. Si tu en as les moyens, acheter un appareil de milieu de gamme comme téléphone de test est l’investissement le plus rentable.
 
 Q4 : Le développement Android, est-ce que ça trouve du travail ?
 
@@ -79,7 +79,7 @@ Face aux phénomènes paranormaux du genre « hier ça tournait, aujourd’hui p
 
 #### 5. Conclusion : de la première app à l’énième
 
-En regardant derrière toi : tu ne savais même pas ce qu’était une Activity, et te voilà avec l’environnement installé, Kotlin appris, des interfaces dessinées en Compose, une app reliée à sa base de données et au réseau, puis testée, empaquetée et publiée — sur ce chemin, tu as déjà franchi le plus dur du passage de zéro à un.
+En regardant derrière toi : tu ne savais même pas ce qu’était une Activity, et te voilà avec l’environnement installé, Kotlin appris, des interfaces dessinées en Compose, une app reliée à sa base de données et au réseau, puis testée, empaquetée et publiée, sur ce chemin, tu as déjà franchi le plus dur du passage de zéro à un.
 
 Le monde de la technique va très vite : les frameworks se mettent à niveau, les outils changent de génération, l’IA prend en charge de plus en plus de travail de « frappe clavier ». Mais une chose ne se périme pas : ta capacité à découper une idée floue en étapes claires, puis à la réaliser pas à pas. Les outils sont des amplificateurs, la réflexion est le socle. L’amplificateur se remplace, le socle ne bouge pas.
 

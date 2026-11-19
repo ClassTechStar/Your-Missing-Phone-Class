@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 61: Pengenalan pantas Swift — bahasa utama pembangunan Apple
 
 {class="chapter-intro mb-4"}
-Dalam bab ini kita belajar bahasa secara rasmi. Jangan bimbang — Swift terkenal "mesra pemula", dan anda tidak perlu menghafal buku tatabahasa: kuasai dahulu 20% tatabahasanya, dan anda sudah boleh memahami serta menulis 80% kod harian. Sisanya dirujuk sambil membuat projek. Ingat prinsip pembelajaran kita: memahami > menghafal, boleh guna > mahir.
+Dalam bab ini kita belajar bahasa secara rasmi. Jangan bimbang: Swift terkenal "mesra pemula", dan anda tidak perlu menghafal buku tatabahasa: kuasai dahulu 20% tatabahasanya, dan anda sudah boleh memahami serta menulis 80% kod harian. Sisanya dirujuk sambil membuat projek. Ingat prinsip pembelajaran kita: memahami > menghafal, boleh guna > mahir.
 
 #### 1. Pemboleh ubah dan jenis: memberi nama kepada data
 
@@ -51,7 +51,7 @@ Jenis asas biasa Swift
 Petua: prinsip utamakan let
 
 {class="mt-1"}
-Peraturan besi komuniti Swift: secara lalai gunakan let, gunakan var hanya jika benar-benar perlu. Jika anda menggunakan var di tempat yang boleh menggunakan let, Xcode akan memberi amaran berwarna kuning. Kebiasaan ini membantu anda mengelakkan satu kategori besar bug "pemboleh ubah diubah tanpa sengaja" — semakin sedikit perubahan dalam kod, semakin mudah ia ditadbir.
+Peraturan besi komuniti Swift: secara lalai gunakan let, gunakan var hanya jika benar-benar perlu. Jika anda menggunakan var di tempat yang boleh menggunakan let, Xcode akan memberi amaran berwarna kuning. Kebiasaan ini membantu anda mengelakkan satu kategori besar bug "pemboleh ubah diubah tanpa sengaja", semakin sedikit perubahan dalam kod, semakin mudah ia ditadbir.
 :::
 
 #### 2. Optional: "azimat anti-ranap" Swift
@@ -87,10 +87,10 @@ print(len)
 Perhatian: ! ialah "tindakan berisiko tinggi"
 
 {class="mt-1"}
-Menulis nickname! (pembungkusan paksa) dalam kod sama seperti menjerit kepada pengkompil "saya jamin ia bukan nil" — sekali tersalah teka, aplikasi terus ranap. Prinsip zaman pemula: gunakan if let / ?? sebanyak mungkin, jangan guna !. Semasa Xcode melengkapkan kod, kadangkala ia menambah ! tanpa sengaja; ingat untuk membuangnya.
+Menulis nickname! (pembungkusan paksa) dalam kod sama seperti menjerit kepada pengkompil "saya jamin ia bukan nil", sekali tersalah teka, aplikasi terus ranap. Prinsip zaman pemula: gunakan if let / ?? sebanyak mungkin, jangan guna !. Semasa Xcode melengkapkan kod, kadangkala ia menambah ! tanpa sengaja; ingat untuk membuangnya.
 :::
 
-#### 3. Fungsi dan penutupan (closure): membungkus logik menjadi "butang"
+3. Fungsi dan penutupan (closure): membungkus logik menjadi "butang"
 
 Fungsi ialah sepotong logik yang bernama, seperti butang pada alat kawalan jauh. Penutupan (Closure) pula ialah "fungsi tanpa nama", boleh diserahkan kepada orang lain pada bila-bila masa:
 
@@ -116,11 +116,11 @@ let big = numbers.filter { $0 > 2 }    // Tapisan
 ```
 :::
 
-Dalam SwiftUI, penutupan ada di mana-mana: kurungan kerinting selepas Button("Tekan saya") { ... } ialah sebuah penutupan. Hafalkan "kombinasi koleksi" seperti map, filter dan sorted — 90% pemprosesan senarai pada masa hadapan ialah gabungan ketiga-tiganya.
+Dalam SwiftUI, penutupan ada di mana-mana: kurungan kerinting selepas Button("Tekan saya") { ... } ialah sebuah penutupan. Hafalkan "kombinasi koleksi" seperti map, filter dan sorted, 90% pemprosesan senarai pada masa hadapan ialah gabungan ketiga-tiganya.
 
 #### 4. Struct dan protokol: sistem "Lego" Swift
 
-Keutamaan rasmi Swift jelas: utamakan struct, gunakan class hanya apabila perlu pewarisan. Struct ialah "jenis nilai" — apabila disalin, masing-masing bergerak sendiri; secara semula jadi mengurangkan satu kategori bug:
+Keutamaan rasmi Swift jelas: utamakan struct, gunakan class hanya apabila perlu pewarisan. Struct ialah "jenis nilai": apabila disalin, masing-masing bergerak sendiri; secara semula jadi mengurangkan satu kategori bug:
 
 ::: div .code-block
 :::inline div .code-head
@@ -147,7 +147,7 @@ struct Record: Identifiable { ... }   // Mematuhi protocol = berjanji melaksanak
 ```
 :::
 
-Dalam SwiftUI, hampir semuanya ialah struct (View ialah protokol). Jika belum faham ayat ini sekarang, tidak mengapa — Bab 62 akan bertemu dengannya setiap hari. Dalam dunia Swift, peluk struct dahulu.
+Dalam SwiftUI, hampir semuanya ialah struct (View ialah protokol). Jika belum faham ayat ini sekarang, tidak mengapa: Bab 62 akan bertemu dengannya setiap hari. Dalam dunia Swift, peluk struct dahulu.
 
 #### 5. Kad rujukan pantas tatabahasa untuk yang tiada asas
 

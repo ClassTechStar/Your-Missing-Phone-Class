@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 57: La strada del livello successivo — permessi, notifiche e architettura moderna
 
 {class="chapter-intro mb-4"}
-Saper costruire un'app è solo l'inizio. Questo capitolo affronta gli ostacoli che portano da «saper fare» a «fare bene»: come chiedere i permessi con eleganza, come inviare notifiche senza dare fastidio, come alzare di un livello l'architettura e — nel 2026 — come scrivere codice Android in coppia con l'AI. Ogni punto ti capiterà subito fra le mani in un progetto vero.
+Saper costruire un'app è solo l'inizio. Questo capitolo affronta gli ostacoli che portano da «saper fare» a «fare bene»: come chiedere i permessi con eleganza, come inviare notifiche senza dare fastidio, come alzare di un livello l'architettura e — nel 2026: come scrivere codice Android in coppia con l'AI. Ogni punto ti capiterà subito fra le mani in un progetto vero.
 
 #### 1. Permessi a runtime: prima bussi, poi entri
 
@@ -46,7 +46,7 @@ fun CameraButton() {
 Attenzione: e se il permesso viene rifiutato per sempre?
 
 {class="mt-1"}
-Dopo che l'utente ha spuntato «non chiedere più», launchPermissionRequest non apre più il popup. A quel punto guida l'utente ad attivarlo a mano nelle impostazioni di sistema (con un Intent che apre la pagina delle impostazioni dell'app) e spiega nell'interfaccia «a cosa serve questo permesso». Con un atteggiamento gentile la voglia di concedere il permesso cresce parecchio: il testo con cui chiedi i permessi merita di essere scritto sul serio.
+Dopo che l'utente ha spuntato «non chiedere più», launchPermissionRequest non apre più il popup. A quel punto guida l'utente ad attivarlo a mano nelle impostazioni di sistema, (con un Intent che apre la pagina delle impostazioni dell'app) e spiega nell'interfaccia «a cosa serve questo permesso». Con un atteggiamento gentile la voglia di concedere il permesso cresce parecchio: il testo con cui chiedi i permessi merita di essere scritto sul serio.
 :::
 
 #### 2. Notifiche: dire cose utili al momento giusto
@@ -85,22 +85,22 @@ if (ActivityCompat.checkSelfPermission(this,
 
 Le attività programmate (per esempio «ricorda di segnare le spese ogni giorno alle 20:00») si affidano a WorkManager: è il «maggiordomo di pianificazione in background» raccomandato ufficialmente, garantisce che i compiti partano al momento giusto e ti libera dalle preoccupazioni sull'ottimizzazione della batteria. Per esigenze tipo sveglia non sbagli.
 
-#### 3. Architettura avanzata: dependency injection e modularizzazione
+3. Architettura avanzata: dependency injection e modularizzazione
 
 Quando il progetto cresce, si presentano due «dolci seccature»:
 
-- Creazione di oggetti in disordine: ogni schermata si costruisce da sola database e API — con Hilt (framework di dependency injection) si amministra tutto in un posto solo: «chiunque chieda qualcosa, qualcuno glielo porge»;
-- Codice che si accumula a montagna: un progetto a modulo unico si modifica sempre più lentamente — dividilo in più moduli (app / core / feature-xxx), con ogni funzione sviluppata e testata per conto suo.
+- Creazione di oggetti in disordine: ogni schermata si costruisce da sola database e API, con Hilt (framework di dependency injection) si amministra tutto in un posto solo: «chiunque chieda qualcosa, qualcuno glielo porge»;
+- Codice che si accumula a montagna: un progetto a modulo unico si modifica sempre più lentamente, dividilo in più moduli (app / core / feature-xxx), con ogni funzione sviluppata e testata per conto suo.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Consiglio: non progettare troppo
 
 {class="mt-1"}
-Hilt e la modularizzazione sono ottimi strumenti, ma in un progetto in solitaria non avere fretta. Per il registro delle spese bastano e avanzano un modulo unico con dipendenze create a mano. Introducili quando il codice supera le decine di migliaia di righe, la compilazione comincia a rallentare o ci si mette più persone. Gli strumenti servono all'obiettivo, non al fare sfoggio — è anche il principio «semplicità sopra ogni cosa» del nostro libro sulla programmazione con l'AI.
+Hilt e la modularizzazione sono ottimi strumenti, ma in un progetto in solitaria non avere fretta. Per il registro delle spese bastano e avanzano un modulo unico con dipendenze create a mano. Introducili quando il codice supera le decine di migliaia di righe, la compilazione comincia a rallentare o ci si mette più persone. Gli strumenti servono all'obiettivo, non al fare sfoggio: è anche il principio «semplicità sopra ogni cosa» del nostro libro sulla programmazione con l'AI.
 :::
 
-#### 4. La novità del 2026: sviluppare Android con l'assistenza dell'AI
+4. La novità del 2026: sviluppare Android con l'assistenza dell'AI
 
 Nel 2026 l'AI è ormai incastonata nel flusso di lavoro Android. Se vuoi accelerare, questa combinazione è ben rodata:
 
@@ -113,17 +113,17 @@ Nel 2026 l'AI è ormai incastonata nel flusso di lavoro Android. Se vuoi acceler
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 I quattro scenari dello sviluppo Android assistito dall'AI
 
-La metodologia concreta — come dare istruzioni all'AI, come accettare i risultati, come schivare le trappole — occupa ben 11 capitoli nella parte 7 di questo libro, «Programmazione AI in pratica» (capitoli 37-47): è fortemente consigliato leggerli in parallelo. La sintassi Android la copre questa parte, i segreti della collaborazione con l'AI la parte 7.
+La metodologia concreta, come dare istruzioni all'AI, come accettare i risultati, come schivare le trappole, occupa ben 11 capitoli nella parte 7 di questo libro, «Programmazione AI in pratica» (capitoli 37-47): è fortemente consigliato leggerli in parallelo. La sintassi Android la copre questa parte, i segreti della collaborazione con l'AI la parte 7.
 
-#### 5. Ottimizzazione delle prestazioni di Compose e strumenti di debug
+5. Ottimizzazione delle prestazioni di Compose e strumenti di debug
 
 Con Compose si scrive volentieri, ma troppa «ricomposizione» può far inciampare. Tre trucchetti pratici:
 
 - Parametri stabili: aggiungi @Immutable alle data class o usa derivedStateOf, per evitare che variazioni di stato irrilevanti scatenino ricomposizioni su larga scala;
-- Ricorda di usare la key: items(list, key = { it.id }) fa sì che aggiunte e cancellazioni tocchino solo le voci interessate — senza key, cancellare una voce può ridisegnare l'intera lista;
-- La modalità Compose del Layout Inspector: mostra in tempo reale quante volte viene ricomposto ogni Composable; chi si ricompiona troppo si vede a colpo d'occhio e ottimizzerai puntando sui punti caldi.
+- Ricorda di usare la key: items(list, key = { it.id }) fa sì che aggiunte e cancellazioni tocchino solo le voci interessate, senza key, cancellare una voce può ridisegnare l'intera lista;
+- La modalità Compose del Layout Inspector: mostra in tempo reale quante volte viene ricomposto ogni Composable; chi si ricompiona troppo si vede a colpo d'occhio e ottimizzerai puntando sui punti caldi
 
-In più, apri i report del compilatore Compose (Metrics): generano un resoconto di «quali componenti non sono stabili» — sulla via del livello avanzato, i dati sono sempre più affidabili delle sensazioni.
+In più, apri i report del compilatore Compose (Metrics): generano un resoconto di «quali componenti non sono stabili»: sulla via del livello avanzato, i dati sono sempre più affidabili delle sensazioni.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

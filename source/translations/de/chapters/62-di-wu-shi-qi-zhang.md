@@ -49,7 +49,7 @@ Achtung: Was tun nach einer dauerhaften Ablehnung?
 Wenn der Nutzer „Nicht mehr fragen“ angehakt hat, öffnet launchPermissionRequest kein Dialogfenster mehr. Dann leite den Nutzer zu den Systemeinstellungen (per Intent zur App-Einstellungsseite springen) und erkläre in der Oberfläche, „wofür diese Berechtigung gebraucht wird“. Mit freundlichem Ton steigt die Bereitschaft, die Berechtigung zu erteilen, deutlich – der Text einer Berechtigungsanfrage lohnt echtes Bemühen.
 :::
 
-#### 2. Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen
+2. Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen
 
 Benachrichtigungen sind der Kanal, über den eine App Nutzer erreicht – und zugleich die Funktion, die Nutzer am ehesten „blockieren“. Drei Disziplinen: nur Nützliches senden, das Ausschalten ermöglichen und nachts nicht stören. Die Grundanwendung:
 
@@ -85,7 +85,7 @@ if (ActivityCompat.checkSelfPermission(this,
 
 Für geplante Aufgaben (etwa „jeden Tag um 20:00 ans Buchen erinnern“) nimm WorkManager – der offiziell empfohlene „Hintergrund-Planer“ sorgt dafür, dass Aufgaben zum passenden Zeitpunkt laufen, ohne dass du dich um Akkuoptimierung kümmern musst. Für alles Weckerartige ist er die sichere Wahl.
 
-#### 3. Architektur für Fortgeschrittene: Dependency Injection und Modularisierung
+3. Architektur für Fortgeschrittene: Dependency Injection und Modularisierung
 
 Sobald das Projekt wächst, melden sich zwei „süße Sorgen“:
 
@@ -100,7 +100,7 @@ Tipp: Kein Over-Engineering
 Hilt und Modularisierung sind gute Werkzeuge, aber greif bei Ein-Personen-Projekten nicht vorschnell dazu. Für das Haushaltsbuch reichen ein einzelnes Modul plus manuell erzeugte Abhängigkeiten völlig. Erst wenn der Code über zigtausend Zeilen wächst, das Kompilieren langsamer wird oder mehrere Leute zusammenarbeiten, führst du sie bei Bedarf ein. Werkzeuge dienen dem Ziel, sie sind kein Selbstzweck – auch das ist das Prinzip „Einfachheit zuerst“ aus unserem KI-Programmierbuch.
 :::
 
-#### 4. Die neuen Spielregeln 2026: Android-Entwicklung mit KI-Unterstützung
+4. Die neuen Spielregeln 2026: Android-Entwicklung mit KI-Unterstützung
 
 2026 ist KI tief in den Android-Entwicklungsprozess eingebettet. Wenn du schneller werden willst, ist diese Schlagkombination längst erprobt:
 
@@ -121,7 +121,7 @@ Mit Compose zu schreiben macht Spaß, aber „zu viele Recompositions“ können
 
 - Parameter stabilisieren: Datenklassen mit @Immutable versehen oder derivedStateOf verwenden, damit irrelevante Zustandsänderungen keine großflächige Recomposition auslösen;
 - Denk an den key: items(list, key = { it.id }) sorgt dafür, dass beim Einfügen und Löschen nur der betroffene Eintrag angefasst wird – ohne key kann ein einziges Löschen die ganze Liste neu zeichnen;
-- Der Compose-Modus des Layout Inspectors: Er zeigt in Echtzeit, wie oft jedes Composable rekompiniert wurde – auf einen Blick erkennst du die Häufigen und optimierst gezielt an den Hotspots.
+- Der Compose-Modus des Layout Inspectors: Er zeigt in Echtzeit, wie oft jedes Composable rekompiniert wurde – auf einen Blick erkennst du die Häufigen und optimierst gezielt an den Hotspots
 
 Schalte zusätzlich den Compose-Compiler-Bericht (Metrics) ein; er erzeugt eine Übersicht, „welche Komponenten instabil“ sind – auf dem Weg nach vorn sind Daten immer verlässlicher als Gefühl.
 

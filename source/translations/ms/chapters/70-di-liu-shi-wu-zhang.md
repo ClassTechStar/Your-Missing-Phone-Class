@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 65: Projek 1 — Buku Rekod Perbelanjaan Saya (Versi Tempatan)
 
 {class="chapter-intro mb-4"}
-Selamat datang ke 'projek sebenar' pertama anda. Buku rekod perbelanjaan ini walaupun tidak bersambung internet, tetapi lengkap segalanya: boleh merekod transaksi, melihat senarai transaksi, statistik bulanan, memadam dan mengubah. Selepas menyiapkannya, anda telah melalui keseluruhan aliran 'data → logik → antara muka' dengan lengkap. Jangan tergesa menyalin kod — fikir dengan jelas dahulu barulah bertindak; itulah prinsip kita sepanjang buku ini.
+Selamat datang ke 'projek sebenar' pertama anda. Buku rekod perbelanjaan ini walaupun tidak bersambung internet, tetapi lengkap segalanya: boleh merekod transaksi, melihat senarai transaksi, statistik bulanan, memadam dan mengubah. Selepas menyiapkannya, anda telah melalui keseluruhan aliran 'data → logik → antara muka' dengan lengkap. Jangan tergesa menyalin kod: fikir dengan jelas dahulu barulah bertindak; itulah prinsip kita sepanjang buku ini.
 
 #### 1. Pemikiran keperluan: tanya lima soalan dahulu
 
@@ -27,7 +27,7 @@ Kemudian pecahkan kepada langkah kecil 'setiap langkah boleh diguna': (1) bina l
 
 #### 2. Lapisan data: berikan 'rekod' sebuah rumah
 
-Takrifkan dahulu bentuk satu rekod — medan cukup guna tetapi jangan tamak:
+Takrifkan dahulu bentuk satu rekod, medan cukup guna tetapi jangan tamak:
 
 ::: div .code-block
 :::inline div .code-head
@@ -61,7 +61,7 @@ class Record {
 Petua: Mengapa jumlah guna Double?
 
 {class="mt-1"}
-App kewangan yang serius akan guna Decimal (perpuluhan jitu) untuk mengelak ralat titik terapung (masalah lama 0.1+0.2≠0.3). Projek latihan guna Double sudah memadai; jika suatu hari anda membuat produk kewangan sebenar, ingat tukar kepada Decimal atau 'Int dalam unit sen' — inilah perangkap yang dilalui oleh ramai pembangun terdahulu.
+App kewangan yang serius akan guna Decimal (perpuluhan jitu) untuk mengelak ralat titik terapung (masalah lama 0.1+0.2≠0.3). Projek latihan guna Double sudah memadai; jika suatu hari anda membuat produk kewangan sebenar, ingat tukar kepada Decimal atau 'Int dalam unit sen': inilah perangkap yang dilalui oleh ramai pembangun terdahulu.
 :::
 
 #### 3. MVVM: antara muka dan logik 'berpisah'
@@ -74,7 +74,7 @@ Terus biar antara muka mengendalikan pangkalan data? Boleh berjalan, tetapi kod 
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Rajah 4: Struktur tiga lapis MVVM — data mengalir sehala, setiap lapis tidak melangkaui sempadannya
+Rajah 4: Struktur tiga lapis MVVM, data mengalir sehala, setiap lapis tidak melangkaui sempadannya
 :::
 
 ::: div .code-block
@@ -116,7 +116,7 @@ class RecordViewModel {
 ```
 :::
 
-Dalam antara muka tulis @State private var vm = RecordViewModel(...), kemudian paparkan senarai terus dengan vm.records — data berubah, antara muka menyegarkan sendiri.
+Dalam antara muka tulis @State private var vm = RecordViewModel(...), kemudian paparkan senarai terus dengan vm.records, data berubah, antara muka menyegarkan sendiri.
 
 #### 4. Antara muka: halaman senarai + pop timbul kemasukan
 
@@ -167,12 +167,12 @@ Poin penting pop timbul kemasukan: papan kekunci medan jumlah guna .keyboardType
 Perhatian: jangan malas membuat pengesahan input
 
 {class="mt-1"}
-Medan jumlah mesti disahkan: nilai kosong, nombor negatif dan input tidak sah seperti "abc" semuanya perlu disekat (guna Double(text) untuk menilai; jika gagal ia memulangkan nil). Salah satu punca paling biasa App ranap ialah 'menganggap input pengguna sentiasa sopan'. Ingat: segala input pengguna mesti diperiksa seakan memeriksa musuh.
+Medan jumlah mesti disahkan: nilai kosong, nombor negatif dan input tidak sah seperti "abc" semuanya perlu disekat guna Double(text) untuk menilai; jika gagal ia memulangkan nil. Salah satu punca paling biasa App ranap ialah 'menganggap input pengguna sentiasa sopan'. Ingat: segala input pengguna mesti diperiksa seakan memeriksa musuh.
 :::
 
 #### 5. Sunting, padam dan rumusan
 
-- Padam: .onDelete dalam List untuk padam dengan leret ke kiri + pop timbul pengesahan (padaman tersilap ialah perkara paling dibenci pengguna App rekod kewangan);
+- Padam: .onDelete dalam List untuk padam dengan leret ke kiri + pop timbul pengesahan (,padaman tersilap ialah perkara paling dibenci pengguna App rekod kewangan);
 - Sunting: tekan baris untuk masuk ke pop timbul suntingan, isikan nilai asal terlebih dahulu (mengubah sedikit lebih jimat daripada menaip semula);
 - Rumusan: guna filter + reduce untuk mengira 'pendapatan / belanja / baki bulan ini', dipaparkan pada kad di bahagian atas:
 
@@ -204,15 +204,15 @@ Selepas projek siap, jalankan penerimaan tiga lapis 'fungsi → sempadan → sen
 
 Selepas lulus penerimaan versi asas, berikan diri anda dua 'hidangan lanjutan':
 
-1. Statistik kategori: tambah satu tab 'Statistik', guna Swift Charts untuk melukis perbelanjaan mengikut kategori sebagai carta pai/carta bar — pustaka carta rasmi Apple, beberapa baris kod terhasil carta;
-2. Segerakan iCloud: mengaktifkan segerakan iCloud dalam SwiftData hanya perlu beberapa tetapan — buku rekod disegerakkan secara automatik antara iPhone/iPad, terus terasa 'canggih'.
+1. Statistik kategori: tambah satu tab 'Statistik', guna Swift Charts untuk melukis perbelanjaan mengikut kategori sebagai carta pai/carta bar, pustaka carta rasmi Apple, beberapa baris kod terhasil carta;
+2. Segerakan iCloud: mengaktifkan segerakan iCloud dalam SwiftData hanya perlu beberapa tetapan, buku rekod disegerakkan secara automatik antara iPhone/iPad, terus terasa 'canggih'.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Siapkan minggu ini
 
 {class="mt-1"}
-Bertindak mengikut urutan 'lapisan data → ViewModel → halaman senarai → pop timbul kemasukan → kad rumusan', satu langkah sehari. Tersekat? Salin mesej ralat apa adanya kepada enjin carian atau AI (masih ingat Bahagian 7 'Praktik Pengekodan AI'? Semasa menerangkan masalah, nyatakan dengan jelas 'tingkah laku dijangka, tingkah laku sebenar, langkah menghasilkan semula'). Selepas siap, gunakannya untuk merekod perbelanjaan selama seminggu — menggunakan App buatan sendiri, rasa pencapaian akan mendorong anda terus maju.
+Bertindak mengikut urutan 'lapisan data → ViewModel → halaman senarai → pop timbul kemasukan → kad rumusan', satu langkah sehari. Tersekat? Salin mesej ralat apa adanya kepada enjin carian atau AI (masih ingat Bahagian 7 'Praktik Pengekodan AI'? Semasa menerangkan masalah, nyatakan dengan jelas 'tingkah laku dijangka, tingkah laku sebenar, langkah menghasilkan semula'). Selepas siap, gunakannya untuk merekod perbelanjaan selama seminggu, menggunakan App buatan sendiri, rasa pencapaian akan mendorong anda terus maju.
 :::
 
 ::: div .chapter-summary

@@ -15,7 +15,7 @@ Quando compri un cellulare, vedi spesso promozioni come "12GB+8GB RAM" — sembr
 
 L'"espansione memoria" dei cellulari Android (chiamata anche estensione memoria, fusione memoria, RAM Plus, ecc.) <strong>non aggiunge fisicamente chip di memoria RAM</strong>, ma è una tecnologia software a livello di sistema: converte dinamicamente parte della memoria interna (ROM/flash UFS) in memoria RAM virtuale.
 
-Per fare un paragone: la RAM fisica è il "banco di lavoro ad alta velocità", l'espansione memoria è il "magazzino temporaneo". Quando il banco non basta, il sistema sposta i dati temporaneamente inutilizzati nel magazzino e li riprende quando servono. Il magazzino ha grande capacità, ma gli spostamenti sono sicuramente più lenti di averli direttamente sul banco.
+Per fare un paragone: la RAM fisica è il "banco di lavoro ad alta velocità". L'espansione memoria è il "magazzino temporaneo". Quando il banco non basta, il sistema sposta i dati temporaneamente inutilizzati nel magazzino e li riprende quando servono. Il magazzino ha grande capacità, ma gli spostamenti sono sicuramente più lenti di averli direttamente sul banco.
 
 #### 2. Principio tecnico
 
@@ -49,7 +49,7 @@ L'espansione memoria non è onnipotente; l'effetto varia in base al modello e al
 
 I diversi brand la chiamano in modi diversi: Xiaomi "Espansione memoria", Huawei "Fusione memoria", Samsung "RAM Plus", vivo "Extended RAM", OnePlus "Memory Extension". È una capacità nativa del sistema, non legata direttamente alla versione sottostante di Android.
 
-Il percorso tipico di attivazione: entra in [Impostazioni] → [Altre impostazioni] → trova la voce [Memoria] o [Prestazioni] → attiva "Espansione memoria" e scegli la capacità (in genere 2GB-7GB), riavvia per rendere effettiva. Dopo l'attivazione, il sistema mostrerà una combinazione di memoria come "8GB+4GB".
+Il percorso tipico di attivazione: entra in [Impostazioni] → [Altre impostazioni] → trova la voce [Memoria] o [Prestazioni] → attiva "Espansione memoria" e scegli la capacità, (in genere 2GB-7GB), riavvia per rendere effettiva. Dopo l'attivazione, il sistema mostrerà una combinazione di memoria come "8GB+4GB".
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

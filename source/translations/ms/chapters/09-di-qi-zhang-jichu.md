@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Teknologi sentiasa berkembang, fungsi telefon juga sentiasa berevolusi. Komunikasi satelit, komunikasi tanpa rangkaian, pengesanan kemalangan, teknologi SparkLink... fungsi-fungsi yang kedengaran sangat fiksyen sains ini sebenarnya telah memasuki kehidupan kita. Mari kita kenali teknologi terkini ini bersama.
 
-#### Satu, Komunikasi Satelit: Meminta Bantuan Walaupun Tanpa Isyarat
+Satu, Komunikasi Satelit: Meminta Bantuan Walaupun Tanpa Isyarat
 
 Apple
 
@@ -48,7 +48,7 @@ Huawei
 Menggunakan Bluetooth atau frekuensi radio khusus, membina sambungan titik ke titak dalam jarak dekat (biasanya beberapa ratus meter hingga beberapa kilometer).
 :::
 
-#### Dua, Komunikasi Tanpa Rangkaian: Kaedah Komunikasi Baharu Jarak Dekat
+Dua, Komunikasi Tanpa Rangkaian: Kaedah Komunikasi Baharu Jarak Dekat
 
 Aktiviti luar
 
@@ -58,7 +58,7 @@ Pertolongan bencana
 
 ##### Senario Aplikasi:
 
-- <strong>Aktiviti besar</strong>: Konsert, acara sukan dengan ramai orang dan isyarat lemah.
+- <strong>Aktiviti besar</strong>: Konsert, acara sukan dengan ramai orang dan isyarat lemah
 - <strong>Platform Yang Disokong:</strong> Apple
 - <strong>: Fungsi "NameDrop" dan "Cari Kawan Luar Talian" iOS 17.</strong> Huawei
 
@@ -66,9 +66,9 @@ Pertolongan bencana
 
 - <strong>Xiaomi</strong>: Sebahagian fungsi Pusat Miaoxiang Xiaomi.
 - <strong>OPPO/vivo</strong> Pengesanan kemalangan jalan raya adalah fungsi yang menggunakan sensor telefon untuk mengesan kemalangan jalan raya yang serius, dan secara automatik menghubungi telefon kecemasan.
-- <strong>OnePlus</strong> Telefon melalui berbilang sensor seperti meter pecutan, giroskop, barometer, mikrofon dan lain-lain, menilai secara komprehensif sama ada berlaku perlanggaran serius. Selepas mengesan kemalangan, telefon akan:
+- <strong>OnePlus</strong> Telefon melalui berbilang sensor seperti meter pecutan, giroskop, barometer, mikrofon dan lain-lain, menilai secara komprehensif sama ada berlaku perlanggaran serius. Selepas mengesan kemalangan, telefon akan:.
 
-#### Tiga, Pengesanan Kemalangan Jalan Raya: Menyelamatkan Nyawa Pada Saat Kritikal
+Tiga, Pengesanan Kemalangan Jalan Raya: Menyelamatkan Nyawa Pada Saat Kritikal
 
 Jika undur masa tamat dan anda tidak bertindak balas, secara automatik menghubungi telefon kecemasan.
 
@@ -77,7 +77,7 @@ Jika undur masa tamat dan anda tidak bertindak balas, secara automatik menghubun
 Model Yang Disokong:
 
 1. Apple
-2. : Siri iPhone 14 dan selepasnya.
+2. : Siri iPhone 14 dan selepasnya
 3. Android
 
 ##### Model Yang Disokong:
@@ -87,11 +87,11 @@ Model Yang Disokong:
 
 ##### Perkara yang Perlu Diperhatikan:
 
-- SparkLink adalah teknologi komunikasi wayarles generasi baharu yang diketuai pembangunan oleh Huawei, sasaran adalah menggantikan Bluetooth dan Wi-Fi dalam sesetengah senario. Ia membandingkan atau melebihi skim sedia ada dalam penunjuk utama: kadar antara muka udara boleh mencapai 900Mbps (jauh melebihi 50Mbps Bluetooth), kependaman serendah 20μs (Bluetooth kira-kira 15ms), rangkaian tunggal menyokong 4096 peranti bersambung serentak (Bluetooth biasanya kurang daripada 8).
+- SparkLink adalah teknologi komunikasi wayarles generasi baharu yang diketuai pembangunan oleh Huawei, sasaran adalah menggantikan Bluetooth dan Wi-Fi dalam sesetengah senario. Ia membandingkan atau melebihi skim sedia ada dalam penunjuk utama: kadar antara muka udara boleh mencapai 900Mbps (jauh melebihi 50Mbps Bluetooth), kependaman serendah 20μs (Bluetooth kira-kira 15ms), rangkaian tunggal menyokong 4096 peranti bersambung serentak (Bluetooth biasanya kurang daripada 8)
 - Ciri Teknologi:
 - Kependaman ultra rendah
 
-#### Empat, Teknologi SparkLink: Sambungan Wayarles Generasi Seterusnya
+Empat, Teknologi SparkLink: Sambungan Wayarles Generasi Seterusnya
 
 Kadar tinggi
 

@@ -2,12 +2,12 @@
 id: di-er-shi-san-zhang
 num: 23
 part: chao-yue-pian
-nav: Kapitel 23: Programmier-Denken und Automatisierung für Einsteiger
+nav: Kapitel 23: Lass das Handy die Wiederholungsarbeit machen
 toc: default
 kind: chapter
 ---
 
-### Kapitel 23: Programmier-Denken und Automatisierung für Einsteiger
+### Kapitel 23: Lass das Handy die Wiederholungsarbeit machen
 
 {class="chapter-intro mb-4"}
 In den letzten beiden Kapiteln haben wir dem Smartphone eine sichere „Grenzwand“ gebaut und sein im Inneren immer schlauer werdendes „KI-Gehirn“ erlebt. Jetzt schalten wir eines der ultimativen Potenziale des Smartphones frei: Es soll wie ein Programmierer „denken“ und die von dir festgelegten Aufgabenketten automatisch abarbeiten. Du sagst vielleicht: „Ich kann doch nicht programmieren – was hat das mit mir zu tun?“
@@ -24,7 +24,7 @@ Automatisierung ist im Kern eine "Wenn … dann …"-Logikkette, das if-else der
 2. <strong>Aktion</strong>: Was genau tun? Das kann eine WeChat-Nachricht senden, eine App öffnen, die Lautstärke anpassen, das Hintergrundbild wechseln, Musik abspielen, eine Benachrichtigung verschicken … nahezu alles, was du am Smartphone manuell tun kannst, lässt sich auch automatisieren.
 3. <strong>Mittlere Logik</strong>(optional, aber sehr mächtig): Wenn Situation A eintritt, tue X, sonst Y. Zum Beispiel: "An Werktagen Nachrichten-Podcast abspielen, am Wochenende Musik" – das nennt man bedingte Verzweigung.
 
-#### Zweitens. Apples „Kurzbefehle“ – das Automatisierungswunderwerk für Apple-Nutzer
+Zweitens. Apples „Kurzbefehle“ – das Automatisierungswunderwerk für Apple-Nutzer
 
 Apples "Kurzbefehle" (Shortcuts) ist eine vorinstallierte App, die nicht heruntergeladen werden muss. Ihr Kernkonzept besteht darin, verschiedene Aktionen wie Bauklötze zusammenzusetzen. Zunächst einige Schlüsselbegriffe:
 
@@ -84,7 +84,7 @@ Der größte Gewinn beim Erlernen von Automatisierung ist nicht die gesparte Zei
 
 Das klingt hochgestochen, aber sobald du die beiden Grundkonzepte "Auslöser + Aktion" verstanden und mit Kurzbefehlen oder Tasker kombiniert hast, kannst du all das umsetzen. Entscheidend ist,<strong>dass du zuerst erkennst: "Diese Sache lässt sich automatisieren"</strong>– viele können es nicht, weil sie gar nicht in diese Richtung denken.
 
-#### Fünftens. Fallenschutz-Leitfaden: Häufige Probleme der Automatisierung
+Fünftens. Fallenschutz-Leitfaden: Häufige Probleme der Automatisierung
 
 Automatisierung läuft nicht immer rund; ich habe einige Fallgruben für dich vorab durchschritten:
 

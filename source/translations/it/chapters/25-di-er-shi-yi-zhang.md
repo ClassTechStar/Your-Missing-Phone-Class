@@ -2,32 +2,32 @@
 id: di-er-shi-yi-zhang
 num: 21
 part: chao-yue-pian
-nav: Capitolo 21: Reti mobili e sicurezza informatica a fondo
+nav: Capitolo 21: Si può collegare al Wi-Fi pubblico?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 21: Approfondimento su reti mobili e sicurezza dell'informazione
+### Capitolo 21: Si può collegare al Wi-Fi pubblico?
 
 {class="chapter-intro mb-4"}
-Ogni giorno usiamo il telefono per navigare, pagare, chattare, e ci sembra comodissimo. Ma hai mai pensato a quanto spesso le tue chat, le password di pagamento, le foto... viaggino "nude" su Internet? A dire il vero, la maggior parte delle persone non ci pensa mai, ma quando capita qualcosa — come il furto dell'account o della carta di credito — è troppo tardi per i rimpianti. In questo capitolo parliamo di come rendere la tua vita digitale meno "trasparente".
+Ogni giorno usiamo il telefono per navigare, pagare, chattare, e ci sembra comodissimo. Ma hai mai pensato a quanto spesso le tue chat, le password di pagamento, le foto... viaggino "nude" su Internet? A dire il vero, la maggior parte delle persone non ci pensa mai, ma quando capita qualcosa: come il furto dell'account o della carta di credito: è troppo tardi per i rimpianti. In questo capitolo parliamo di come rendere la tua vita digitale meno "trasparente".
 
 #### 1. VPN: il "mantello dell'invisibilità" nella rete
 
 VPN sta per Virtual Private Network (rete privata virtuale). Puoi immaginarla come un tunnel sotterraneo dedicato e cifrato costruito tra casa tua e il sito che vuoi visitare. Tu cammini nel tunnel e chi sta fuori non vede cosa hai in mano né dove stai andando.
 
 - <strong>Navigazione normale</strong>: telefono → rete pubblica → sito di destinazione. Nei router e negli switch intermedi, in qualsiasi punto qualcuno potrebbe "spiare" i dati che invii. Soprattutto sul Wi-Fi pubblico di bar e aeroporti, a dirla tutta, sei praticamente "nudo".
-- <strong>Con una VPN</strong>: telefono → tunnel cifrato VPN → server VPN → sito di destinazione. I dati vengono cifrati e incapsulati; lo "spione" vede solo una sfilza di caratteri senza senso. Inoltre, il sito di destinazione vede l'indirizzo IP del server VPN, non il tuo IP reale.
+- <strong>Con una VPN</strong>: telefono → tunnel cifrato VPN → server VPN → sito di destinazione. I dati vengono cifrati e incapsulati; lo "spione" vede solo una sfilza di caratteri senza senso. Inoltre, il sito di destinazione vede l'indirizzo IP del server VPN. Non il tuo IP reale.
 
 A cosa serve, dunque, una VPN? In sintesi: primo, <strong>protegge la tua privacy sul Wi-Fi pubblico</strong>; secondo, <strong>aggira le restrizioni geografiche</strong> (ad esempio per contenuti disponibili solo in alcuni Paesi); terzo, <strong>impedisce al tuo operatore di rete (ISP) di registrare le tue abitudini di navigazione</strong>. Devo però avvertirti: <strong>non usare VPN gratuite!</strong> Il gratuito spesso significa che i tuoi dati sono la loro "merce". Un mio amico ha usato una VPN gratuita e il telefono ha iniziato a mostrare pubblicità inspiegabilmente; poi abbiamo scoperto che quella VPN vendeva i suoi dati di navigazione agli inserzionisti. Quindi, per scegliere una VPN: o un marchio importante a pagamento (come NordVPN, ExpressVPN), o niente.
 
 Inoltre, la VPN non è onnipotente. Protegge solo i dati "in transito": se il sito di destinazione non è sicuro in sé, o se sul tuo telefono c'è già un malware, la VPN non ti aiuta.
 
-#### 2. La "trappola dolce" del Wi-Fi pubblico: più pericolosa di quanto pensi
+2. La "trappola dolce" del Wi-Fi pubblico: più pericolosa di quanto pensi
 
-Potresti pensare: ma cosa vuoi che succeda, connettersi a un Wi-Fi gratuito? Ti racconto un fatto vero: ricercatori di sicurezza hanno fatto un esperimento in aeroporto, allestendo un hotspot chiamato "Starbucks_Free"; in meno di un'ora si sono collegate oltre un centinaio di persone. In realtà l'hotspot era stato allestito dai ricercatori e tutto il <strong>traffico non cifrato</strong> che lo attraversava — ad esempio i contenuti delle pagine HTTP che visitavi o le comunicazioni delle app senza TLS — poteva essere intercettato e letto.
+Potresti pensare: ma cosa vuoi che succeda, connettersi a un Wi-Fi gratuito? Ti racconto un fatto vero: ricercatori di sicurezza hanno fatto un esperimento in aeroporto, allestendo un hotspot chiamato "Starbucks_Free"; in meno di un'ora si sono collegate oltre un centinaio di persone. In realtà l'hotspot era stato allestito dai ricercatori e tutto il <strong>traffico non cifrato</strong> che lo attraversava, ad esempio i contenuti delle pagine HTTP che visitavi o le comunicazioni delle app senza TLS, poteva essere intercettato e letto.
 
-Ma attenzione a una premessa fondamentale: oggi le app che usi quotidianamente, come WeChat, l'home banking e Alipay, nella stragrande maggioranza viaggiano già in HTTPS cifrato. In altre parole, anche se l'attaccante intercetta i pacchetti, vede solo caratteri senza senso e <strong>non può leggere direttamente le tue chat o la password di pagamento</strong>. Può però sapere quali siti hai visitato (il dominio); se alcune app o pagine vecchie usano ancora HTTP in chiaro, il contenuto è completamente esposto. Questo attacco si chiama "Man-in-the-Middle" (uomo in mezzo): l'attaccante "si infila" tra te e il vero router Wi-Fi. Ancora più inquietante, molti telefoni hanno l'opzione "connessione automatica a Wi-Fi noti": basta che l'attaccante chiami il suo hotspot con lo stesso nome di un Wi-Fi a cui ti sei già connesso (ad esempio "ChinaNet" o "CMCC") e il telefono si collegherà da solo.
+Ma attenzione a una premessa fondamentale: oggi le app che usi quotidianamente. Come WeChat, l'home banking e Alipay, nella stragrande maggioranza viaggiano già in HTTPS cifrato. In altre parole, anche se l'attaccante intercetta i pacchetti, vede solo caratteri senza senso e <strong>non può leggere direttamente le tue chat o la password di pagamento</strong>. Può però sapere quali siti hai visitato (il dominio); se alcune app o pagine vecchie usano ancora HTTP in chiaro, il contenuto è completamente esposto. Questo attacco si chiama "Man-in-the-Middle" (uomo in mezzo): l'attaccante "si infila" tra te e il vero router Wi-Fi. Ancora più inquietante, molti telefoni hanno l'opzione "connessione automatica a Wi-Fi noti": basta che l'attaccante chiami il suo hotspot con lo stesso nome di un Wi-Fi a cui ti sei già connesso, (ad esempio "ChinaNet" o "CMCC") e il telefono si collegherà da solo.
 
 Come difendersi? Alcuni consigli pratici:
 
@@ -47,9 +47,9 @@ Ho citato HTTPS, ma come funziona davvero? Ogni volta che visiti un sito HTTPS, 
 
 È come andare in banca: consegni la carta d'identità (il certificato), l'impiegato verifica la tua identità, poi concordate una parola d'ordine e la conversazione successiva la capite solo voi due. Anche se qualcuno ascolta, sente solo caratteri cifrati senza senso.
 
-Ma attenzione: HTTPS garantisce solo che il "trasferimento" sia cifrato, non che il sito di destinazione sia una persona perbene. Anche i siti di phishing possono usare HTTPS — quel lucchetto indica solo che ti sei collegato a "un sito", non che sia quello che volevi. Quindi verifica tu stesso che l'indirizzo sia corretto.
+Ma attenzione: HTTPS garantisce solo che il "trasferimento" sia cifrato, non che il sito di destinazione sia una persona perbene. Anche i siti di phishing possono usare HTTPS, quel lucchetto indica solo che ti sei collegato a "un sito", non che sia quello che volevi. Quindi verifica tu stesso che l'indirizzo sia corretto.
 
-#### 4. Sicurezza DNS: la tua "rubrica telefonica di rete" è sicura?
+4. Sicurezza DNS: la tua "rubrica telefonica di rete" è sicura?
 
 Il DNS (Domain Name System) è come la rubrica telefonica di Internet: digiti "baidu.com" e il DNS ti restituisce l'indirizzo IP corrispondente (ad esempio 110.242.68.66), così il browser può connettersi. Il problema è che le tradizionali query DNS sono in <strong>chiaro</strong>, <strong>non cifrate</strong>! In pratica, il tuo ISP, il provider Wi-Fi o qualsiasi nodo intermedio può vedere quali siti hai visitato.
 
@@ -60,13 +60,13 @@ Per fortuna oggi esistono soluzioni DNS cifrate:
 - <strong>DNS over HTTPS (DoH)</strong>: nasconde le query DNS nel traffico HTTPS, mescolandole al normale traffico di navigazione: è impossibile distinguere quali siano le query DNS.
 - <strong>DNS over TLS (DoT)</strong>: usa il protocollo TLS per proteggere specificamente le query DNS, con porta dedicata; l'amministratore di rete può sapere che usi DoT ma non può vedere il contenuto.
 
-Personalmente consiglio di usare come server DNS Cloudflare 1.1.1.1 o Google 8.8.8.8: entrambi supportano DNS cifrati. Su Android, nelle impostazioni "DNS privato" basta inserire "one.one.one.one" oppure "dns.google", semplicissimo. Su iPhone è leggermente più macchinoso, serve installare un profilo di configurazione o usare un'app, ma ne vale la pena.
+Personalmente consiglio di usare come server DNS Cloudflare 1.1.1.1 o Google 8.8.8.8: entrambi supportano DNS cifrati. Su Android, nelle impostazioni "DNS privato" basta inserire "one.one.one.one" oppure "dns.google", semplicissimo. Su iPhone è leggermente più macchinoso. Serve installare un profilo di configurazione o usare un'app, ma ne vale la pena.
 
 #### 5. La "navigazione in incognito" rende davvero invisibili?
 
 Prima la conclusione: <strong>la modalità in incognito è la tenda di casa tua, non un mantello dell'invisibilità.</strong>
 
-Cosa fa: non lascia tracce in locale — quando chiudi la finestra in incognito, il browser non salva la cronologia di navigazione, i cookie, i dati inseriti nei moduli o le ricerche. Se devi cercare qualcosa sul computer di un altro o vuoi fare un regalo senza che i familiari lo scoprano dalla cronologia, usare la modalità in incognito è appropriato.
+Cosa fa: non lascia tracce in locale, quando chiudi la finestra in incognito, il browser non salva la cronologia di navigazione, i cookie, i dati inseriti nei moduli o le ricerche. Se devi cercare qualcosa sul computer di un altro o vuoi fare un regalo senza che i familiari lo scoprano dalla cronologia, usare la modalità in incognito è appropriato.
 
 Cosa non fa:
 
@@ -81,7 +81,7 @@ Quindi ricorda: la modalità in incognito è un "cancellatore locale", non un "m
 
 Forse non te ne accorgi, ma il browser in sé è un grande raccoglitore di informazioni. Cookie, cronologia, cache, compilazione automatica, permessi di posizione... ciascuno può far trapelare la tua privacy. Alcuni consigli:
 
-- <strong>Pulisci periodicamente i dati di navigazione</strong>: di tanto in tanto vai nelle impostazioni e cancella cookie, cache e cronologia. Non è tanto per "evitare il tracciamento" — pulire i cookie ormai serve a poco — quanto per evitare che il telefono diventi sempre più lento. La cache del browser può occupare diversi GB.
+- <strong>Pulisci periodicamente i dati di navigazione</strong>: di tanto in tanto vai nelle impostazioni e cancella cookie, cache e cronologia. Non è tanto per "evitare il tracciamento", pulire i cookie ormai serve a poco, quanto per evitare che il telefono diventi sempre più lento. La cache del browser può occupare diversi GB.
 - <strong>Lascia da parte le illusioni del "Non tracciare"</strong>: l'opzione "Invia richiesta 'Do Not Track'" del browser è in pratica una "preghiera" di non essere tracciato. Ma se il sito ti dà retta è un'altra storia; la maggior parte dei siti la ignora. Non farci affidamento.
 - <strong>Usa browser privacy-friendly</strong>: Firefox Focus, DuckDuckGo Browser, Brave bloccano per impostazione predefinita tracker e pubblicità, molto più puliti dei default di Chrome e Safari.
 - <strong>Anche il motore di ricerca conta</strong>: usa DuckDuckGo invece di Baidu/Google: non registra la cronologia delle ricerche e non costruisce un profilo utente. A dire il vero i risultati sono meno precisi di Google, ma per consultazioni quotidiane basta.

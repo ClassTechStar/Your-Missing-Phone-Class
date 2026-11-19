@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 53: Penyimpanan Data dan Permintaan Jaringan
 
 {class="chapter-intro mb-4"}
-Aplikasi yang hanya bisa 'dilihat' adalah aplikasi mati; aplikasi yang bisa menyimpan data dan tersambung ke internet barulah hidup. Bab ini memperkenalkan 'trio' lapisan data Android: DataStore (menyimpan konfigurasi kecil), Room (menyimpan data terstruktur), Retrofit (berbicara dengan server), plus 'pengatur jalannya semuanya'—coroutine. Selesai bab ini, kamu bisa menulis aplikasi sungguhan yang mengingat kebiasaan pengguna dan memperbarui konten secara real-time.
+Aplikasi yang hanya bisa 'dilihat' adalah aplikasi mati; aplikasi yang bisa menyimpan data dan tersambung ke internet barulah hidup. Bab ini memperkenalkan 'trio' lapisan data Android: DataStore (menyimpan konfigurasi kecil), Room (menyimpan data terstruktur), Retrofit (berbicara dengan server), plus 'pengatur jalannya semuanya',coroutine. Selesai bab ini, kamu bisa menulis aplikasi sungguhan yang mengingat kebiasaan pengguna dan memperbarui konten secara real-time.
 
 #### 1. Memilih Skema Penyimpanan: Lihat Tabel Ini Dulu
 
@@ -23,7 +23,7 @@ Aplikasi yang hanya bisa 'dilihat' adalah aplikasi mati; aplikasi yang bisa meny
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Pembagian tugas trio data
 
-Hafalkan pegangan ini: 'konfigurasi kecil masuk DataStore, data dalam jumlah besar masuk Room, data dari luar lewat Retrofit'. SharedPreferences yang sering muncul di tutorial lama sudah digantikan DataStore, dan penulisan SQL manual juga sudah digantikan Room—belajar langsung yang baru, jangan lewat jalan lama.
+Hafalkan pegangan ini: 'konfigurasi kecil masuk DataStore, data dalam jumlah besar masuk Room, data dari luar lewat Retrofit'. SharedPreferences yang sering muncul di tutorial lama sudah digantikan DataStore, dan penulisan SQL manual juga sudah digantikan Room:belajar langsung yang baru, jangan lewat jalan lama.
 
 #### 2. DataStore: Menyimpan Konfigurasi Kecil
 
@@ -50,7 +50,7 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 ```
 :::
 
-Perhatikan yang dikembalikan adalah Flow—aliran data yang 'mengalir'. Begitu nilai berubah, semua tempat yang mengamatinya otomatis menerima nilai baru. Konsep ini (reaktif) adalah batu fondasi Android modern, akan dipraktikkan di Bab 54.
+Perhatikan yang dikembalikan adalah Flow,aliran data yang 'mengalir'. Begitu nilai berubah. semua tempat yang mengamatinya otomatis menerima nilai baru. Konsep ini (reaktif) adalah batu fondasi Android modern, akan dipraktikkan di Bab 54.
 
 #### 3. Room: Memberi Data 'Rumah Sungguhan'
 
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-Templat 'trio' ini bisa dibawa apa adanya ke proyek mana pun—cukup ganti nama kolomnya. Kueri mengembalikan Flow, antarmuka otomatis menyegarkan mengikuti data. Nikmat sekali.
+Templat 'trio' ini bisa dibawa apa adanya ke proyek mana pun,cukup ganti nama kolomnya. Kueri mengembalikan Flow, antarmuka otomatis menyegarkan mengikuti data. Nikmat sekali.
 
 #### 4. Retrofit: Berbicara dengan Server
 
@@ -131,7 +131,7 @@ val result = api.getWeather("Beijing")
 Awas Jebakan: Dua Hukum Besi Jaringan
 
 {class="mt-1"}
-① Permintaan jaringan sama sekali tidak boleh dilakukan di thread utama—bisa membekukan antarmuka bahkan crash (NetworkOnMainThreadException). Semua panggilan jaringan wajib ditaruh dalam coroutine (viewModelScope.launch). ② HTTP teks terbuka dimatikan secara bawaan: sejak Android 9 wajib HTTPS. Saat pengujian kalau perlu alamat lokal http://, harus menyatakan usesCleartextTraffic secara eksplisit di Manifest—tetapi produk resmi wajib sepenuhnya HTTPS.
+① Permintaan jaringan sama sekali tidak boleh dilakukan di thread utama,bisa membekukan antarmuka bahkan crash (NetworkOnMainThreadException). Semua panggilan jaringan wajib ditaruh dalam coroutine (viewModelScope.launch). ② HTTP teks terbuka dimatikan secara bawaan: sejak Android 9 wajib HTTPS. Saat pengujian kalau perlu alamat lokal http://, harus menyatakan usesCleartextTraffic secara eksplisit di Manifest:tetapi produk resmi wajib sepenuhnya HTTPS.
 :::
 
 #### 5. Parsing JSON: 'Menerjemahkan' Data Jaringan
@@ -166,11 +166,11 @@ data class WeatherResponse(
 ```
 :::
 
-Apa pun skemanya, hukum besinya: lihat dulu JSON asli yang dikembalikan, baru definisikan kolomnya. Banyak bug 'parsing gagal' ternyata hanya karena nama kolom salah tulis atau level bersarang salah duga—cetak JSON mentahnya dan cocokkan, sepuluh detik langsung ketemu.
+Apa pun skemanya, hukum besinya: lihat dulu JSON asli yang dikembalikan, baru definisikan kolomnya. Banyak bug 'parsing gagal' ternyata hanya karena nama kolom salah tulis atau level bersarang salah duga,cetak JSON mentahnya dan cocokkan, sepuluh detik langsung ketemu.
 
 #### 6. Coroutine: 'Bahasa Umum' Konkurensi Android
 
-suspend dan launch yang muncul berulang-ulang di atas berasal dari coroutine Kotlin (Coroutine)—skema konkurensi resmi Android. Bisa dipahami kasarnya: membuat operasi yang 'perlu menunggu sebentar' (jaringan, database) tidak memblokir antarmuka.
+suspend dan launch yang muncul berulang-ulang di atas berasal dari coroutine Kotlin (Coroutine),skema konkurensi resmi Android. Bisa dipahami kasarnya: membuat operasi yang 'perlu menunggu sebentar' (jaringan, database) tidak memblokir antarmuka.
 
 ::: div .code-block
 :::inline div .code-head
@@ -198,7 +198,7 @@ Kalau kamu pemula total, cukup ingat dulu cara pakainya; prinsip 'penangguhan da
 Praktik: Membuat Aplikasi Kecil 'Kalimat Hari Ini'
 
 {class="mt-1"}
-Cari API kutipan gratis (semacam hitokoto), pakai Retrofit untuk menarik 'kalimat hari ini', tampilkan di tengah layar, tambahkan tombol 'Ganti Kalimat' (minta ulang lewat coroutine). Lalu simpan kalimat yang disukai ke dalam 'koleksi' memakai Room. Latihan ini memakai DataStore/Room/Retrofit/coroutine semuanya—selesai mengerjakannya, Bab 7 dan 8 akan mudah seperti membalik telapak tangan.
+Cari API kutipan gratis (semacam hitokoto), pakai Retrofit untuk menarik 'kalimat hari ini', tampilkan di tengah layar, tambahkan tombol 'Ganti Kalimat' (minta ulang lewat coroutine). Lalu simpan kalimat yang disukai ke dalam 'koleksi' memakai Room. Latihan ini memakai DataStore/Room/Retrofit/coroutine semuanya,selesai mengerjakannya, Bab 7 dan 8 akan mudah seperti membalik telapak tangan.
 :::
 
 ::: div .chapter-summary

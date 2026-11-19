@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 30: Casting, presentazioni e connettività auto
 
 {class="chapter-intro mb-4"}
-Lo schermo del telefono, per quanto grande, arriva a 7 pollici; ma la tua TV ne ha 55 e il proiettore 100. "Gettare" lo schermo del telefono su uno grande cambia dimensione all'esperienza. Questo capitolo illustra tre scenari ad alta frequenza — casting, presentazioni e connettività auto — per aiutarti a estendere le capacità del telefono a schermi più grandi.
+Lo schermo del telefono, per quanto grande, arriva a 7 pollici; ma la tua TV ne ha 55 e il proiettore 100. "Gettare" lo schermo del telefono su uno grande cambia dimensione all'esperienza. Questo capitolo illustra tre scenari ad alta frequenza: casting, presentazioni e connettività auto, per aiutarti a estendere le capacità del telefono a schermi più grandi.
 
 #### 1. Le tre famiglie del casting wireless — non confonderle
 
@@ -51,18 +51,18 @@ Il casting wireless è comodo ma ha latenza, poco adatto a giochi e presentazion
 
 #### 3. Il telefono diventa computer — modalità desktop
 
-Alcuni telefoni Android supportano la "modalità desktop" — collegandoli a un monitor, il telefono emette un'interfaccia simile a un desktop, utilizzabile con mouse e tastiera:
+Alcuni telefoni Android supportano la "modalità desktop", collegandoli a un monitor, il telefono emette un'interfaccia simile a un desktop, utilizzabile con mouse e tastiera:
 
 - <strong>Samsung DeX</strong>: la funzione di punta dei top di gamma Samsung. Collegato il monitor, compare un'interfaccia desktop, con multi-finestra; l'esperienza più vicina a un vero computer. Con tastiera e mouse Bluetooth, in viaggio puoi non portare il portatile.
 - <strong>Modalità desktop Huawei</strong>: i Huawei Mate/Pura, collegati al monitor, hanno una funzione simile. Supporta multi-finestra, file manager, App di produttività.
 - <strong>Motorola Ready For</strong>: anche i top di gamma Moto la supportano, simile a DeX.
 - <strong>Scenari adatti</strong>: leggero lavoro d'ufficio (email, modifiche documenti), presentazioni PPT, video su grande schermo. Non adatto a uso intensivo di Excel o progettazione professionale.
 
-#### 4. Connettività auto — il modo corretto di usare il telefono in macchina
+4. Connettività auto — il modo corretto di usare il telefono in macchina
 
 Usare il telefono alla guida è illegale, ma navigazione, musica e chiamate sono necessità. I sistemi di connettività auto consentono di usare le funzioni chiave del telefono sullo schermo dell'auto, mentre il telefono resta da parte:
 
-- <strong>Apple CarPlay</strong>: la prima scelta per gli utenti iPhone. Collegando via USB o wireless, sullo schermo dell'auto compare un'interfaccia semplificata dell'iPhone — navigazione (Amap/Baidu Maps), musica, telefono, messaggi, podcast. Il controllo vocale Siri libera le mani.
+- <strong>Apple CarPlay</strong>: la prima scelta per gli utenti iPhone. Collegando via USB o wireless, sullo schermo dell'auto compare un'interfaccia semplificata dell'iPhone: navigazione (Amap/Baidu Maps), musica, telefono, messaggi, podcast. Il controllo vocale Siri libera le mani.
 - <strong>Android Auto</strong>: la soluzione per Android. Funzioni simili a CarPlay, supporta Google Maps, Spotify ecc. In Cina, a causa delle restrizioni dei servizi Google, alcune funzioni non sono disponibili.
 - <strong>Huawei HiCar</strong>: soluzione proprietaria Huawei, alta percentuale di supporto su modelli cinesi. Oltre a navigazione e musica, offre funzioni speciali come videocall Huawei e integrazione telecamera di parcheggio.
 - <strong>Baidu CarLife</strong>: soluzione cross-platform, disponibile sia su iOS sia su Android. Meno funzioni ma alta compatibilità: molte auto vecchie supportano solo CarLife.
@@ -104,6 +104,6 @@ Le riunioni sono lo scenario più frequente di casting, e anche il più problema
 - Tre famiglie di casting wireless: AirPlay (Apple), Miracast (Android), DLNA (cross-platform per media)
 - Il casting via cavo è più stabile e a latenza zero; per le sale riunioni è indispensabile un cavo convertitore HDMI
 - Samsung DeX / modalità desktop Huawei trasformano il telefono in un computer leggero
-- Connettività auto: quattro soluzioni — CarPlay/Android Auto/HiCar/CarLife
+- Connettività auto: quattro soluzioni: CarPlay/Android Auto/HiCar/CarLife
 - Regole d'oro del casting in riunione: test in anticipo, piano B pronto, disattivare l'anteprima notifiche
 :::

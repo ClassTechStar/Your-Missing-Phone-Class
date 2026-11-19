@@ -21,7 +21,7 @@ Keunggulan inti Termux terletak pada ringan dan sangat dapat diperluas, cocok un
 
 ##### Lingkungan Linux lengkap
 
-Termux <strong>Hanya Built-in Bash</strong> satu jenis Shell ini. Jika ingin memakai Zsh atau fish dan Shell lain, perlu via package manager install manual, misalnya:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> atau<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Bersamaan Termux mendukung editor Vim, Nano, Emacs, dll., memberikan pengalaman command line mendekati native. Pengguna bisa via "pkg install" install 2000+ package, termasuk GCC, OpenSSH, SQLMap, dan tool development serta security lain.
+Termux <strong>Hanya Built-in Bash</strong> satu jenis Shell ini. Jika ingin memakai Zsh atau fish dan Shell lain, perlu via package manager install manual, misalnya:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> atau<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Bersamaan Termux mendukung editor Vim, Nano, Emacs, dll.. memberikan pengalaman command line mendekati native. Pengguna bisa via "pkg install" install 2000+ package, termasuk GCC, OpenSSH, SQLMap, dan tool development serta security lain.
 
 ##### Manajemen paket yang kuat
 
@@ -37,7 +37,7 @@ Fungsi keamanan dan jaringan
 
 - Memanggil fungsi perangkat keras Android seperti sensor, kamera melalui plugin Termux:API.
 - Mendukung koneksi keyboard Bluetooth dan layar eksternal, memiliki dukungan mouse lengkap.
-- 3. Ekosistem plugin
+- 3. Ekosistem plugin.
 
 #### 3. Ekosistem plugin
 
@@ -140,6 +140,6 @@ Mari praktik: Jalankan perintah Linux pertama di ponsel
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Jalankan
 2. pkg update &amp;&amp; pkg upgrade<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">untuk memperbarui paket perangkat lunak.</code> Pasang Python:
-3. pkg install python<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">.</code>.
+3. pkg install python<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">.</code>
 4. python3 -c "print('Hello from Termux!')"<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">, rasakan keseruan menjalankan kode di ponsel.</code> IV. Bagian Melampaui (Bab 21-26)
 :::

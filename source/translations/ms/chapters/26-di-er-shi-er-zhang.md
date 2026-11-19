@@ -2,24 +2,24 @@
 id: di-er-shi-er-zhang
 num: 22
 part: chao-yue-pian
-nav: Bab 22: Bagaimana AI Berfungsi dalam Telefon
+nav: Bab 22: Sebenarnya AI buat apa dalam telefon anda?
 toc: default
 kind: chapter
 ---
 
-### Bab 22: Cara AI Berfungsi dalam Telefon
+### Bab 22: Sebenarnya AI buat apa dalam telefon anda?
 
 {class="chapter-intro mb-4"}
 Mendengar dengan jelas (Pengecaman Suara)
 
-#### : Menukar gelombang suara kepada teks.
+- Menukar gelombang suara kepada teks.
 
 Memahami (Pemahaman Bahasa Semula Jadi)
 
-#### : Memahami niat, mengekstrak entiti utama.
+- Memahami niat, mengekstrak entiti utama.
 
 1. <strong>Melaksanakan dan Menjawab</strong>: Memanggil App atau perkhidmatan yang sepadan, kemudian melalui sintesis suara "bercakap" kepada anda.
-2. <strong>3. AI Peranti vs. AI Awan</strong> AI peranti menyimpan pengkomputeran dalam telefon, laju, privasi tinggi, boleh luar talian. AI awan memerlukan sambungan rangkaian, tetapi boleh memproses tugas yang lebih kompleks.
+2. <strong>AI Peranti vs. AI Awan</strong> Pengkomputeran dalam telefon: AI peranti menyimpan pengkomputeran dalam telefon, laju, privasi tinggi, boleh luar talian. AI awan memerlukan sambungan rangkaian, tetapi boleh memproses tugas yang lebih kompleks.
 3. <strong>4. Model Besar AI dan Telefon: Pembantu Pintar Bawaan Anda</strong> Pada 2024-2025, letupan model besar AI (seperti DeepSeek, ChatGPT, Wenxin Yiyan, Tongyi Qianwen dll.) telah mengubah cara penggunaan telefon secara mendalam. Telefon bukan lagi sekadar alat yang melaksanakan arahan, tetapi rakan pintar yang boleh memahami, menaakul dan mencipta.
 
 #### Apakah Model Besar AI?
@@ -39,7 +39,7 @@ Penulisan dan Penciptaan
 - <strong>Penjanaan dan Penyuntingan Imej</strong>: AI memadam pejalan kaki dalam foto dengan satu klik, mengembangkan sempadan imej, penukaran gaya, malah menjana imej berdasarkan penerangan teks.
 - <strong>Terjemahan masa nyata</strong>: Terjemahan panggilan masa nyata, terjemahan perbualan bersemuka, terjemahan foto, perjalanan ke luar negara tiada lagi halangan bahasa.
 - <strong>Bimbingan pembelajaran</strong>: AI boleh menerangkan konsep, mengeluarkan soalan latihan, menyemak kerja, merupakan tutor bawaan.
-- <strong>Terjemahan masa nyata</strong> Telefon flagship terkini sudah mampu menjalankan model besar AI bersaiz kecil secara tempatan (biasanya sekitar 7B parameter), perubahan yang dibawa ialah:
+- <strong>Terjemahan masa nyata</strong> Telefon flagship terkini sudah mampu menjalankan ,model besar AI bersaiz kecil secara tempatan (biasanya sekitar 7B parameter), perubahan yang dibawa ialah:.
 - <strong>Tidak memerlukan rangkaian</strong>: Boleh guna fungsi AI walaupun tiada rangkaian, dalam kapal terbang, dalam kereta api juga boleh.
 
 ##### Privasi lebih selamat
@@ -56,9 +56,9 @@ Penulisan dan Penciptaan
 - <strong>Surge AI Xiaomi</strong>: Keupayaan AI peringkat sistem, menyokong carian imej AI, ringkasan AI, sarikata masa nyata AI, perbualan model besar peranti dll.
 - <strong>Samsung Galaxy AI</strong>: Terjemahan panggilan masa nyata, ringkasan AI nota, penjanaan dan penyuntingan imej, carian bulatan dll.
 - <strong>5. Lima Senario Aplikasi Tipikal dan Amalan</strong> Untuk membolehkan anda merasakan "kuasa luar biasa" AI telefon dengan lebih intuitif, di bawah ini kita gunakan lima senario khusus, menunjukkan bagaimana AI "menyelamatkan" dalam kehidupan harian:
-- <strong>Senario 1: Terjemahan Masa Nyata — Jurubahasa Bawaan untuk Perjalanan ke Luar Negara</strong> Prestasi sebenar
+- <strong>Senario 1: Terjemahan Masa Nyata, Jurubahasa Bawaan untuk Perjalanan ke Luar Negara</strong> Prestasi sebenar
 
-#### : Memesan makanan di Paris tetapi tidak tahu bahasa Perancis? App "Terjemahan" iPhone menyokong mod perbualan bersemuka dua orang, kedua-dua pihak melihat sarikata bahasa masing-masing, malah boleh mentafsir serentak. Galaxy AI Samsung di kem Android boleh membolehkan anda bercakap dalam bahasa Cina terus dalam panggilan, pihak lawan mendengar dalam bahasa Inggeris, dan sebaliknya.
+- Memesan makanan di Paris tetapi tidak tahu bahasa Perancis? App "Terjemahan" iPhone menyokong mod perbualan bersemuka dua orang, kedua-dua pihak melihat sarikata bahasa masing-masing, malah boleh mentafsir serentak. Galaxy AI Samsung di kem Android boleh membolehkan anda bercakap dalam bahasa Cina terus dalam panggilan, pihak lawan mendengar dalam bahasa Inggeris, dan sebaliknya.
 
 Prinsip di sebalik
 
@@ -94,7 +94,7 @@ Prinsip di sebalik
 
 #### Mengapa perlukan rangka kerja?
 
-Ramai orang menggunakan AI seperti menggunakan Baidu—menaip beberapa kata kunci. Tetapi AI bukan enjin carian, ia adalah model bahasa yang "memahami bacaan kemudian menjawab".<strong>Berikan lebih banyak konteks, jelaskan apa yang anda mahu, hadkan ia daripada menyeleweng</strong>, ia boleh memberikan hasil yang tepat. Rangka kerja ialah menterjemahkan "seperti apa jawapan baik dalam fikiran anda" kepada arahan yang boleh difahami oleh AI.
+Ramai orang menggunakan AI seperti menggunakan Baidu,menaip beberapa kata kunci. Tetapi AI bukan enjin carian, ia adalah model bahasa yang "memahami bacaan kemudian menjawab".<strong>Berikan lebih banyak konteks, jelaskan apa yang anda mahu, hadkan ia daripada menyeleweng</strong>, ia boleh memberikan hasil yang tepat. Rangka kerja ialah menterjemahkan "seperti apa jawapan baik dalam fikiran anda" kepada arahan yang boleh difahami oleh AI.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -154,7 +154,7 @@ Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional d
 - Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>, berikan jadual perbandingan kelebihan dan kekurangan." (Format jelas)</strong>"Sila
 - Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>." (Gaya jelas)</strong>"Sila
 - Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>, masing-masing menyasarkan pekerja, pasangan kekasih, dan ibu bapa yang membawa anak." (Pengkhususan jelas)</strong> Mengapa berkesan?
-- Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>Semakin jelas kata kerja, semakin spesifik keperluan, semakin AI tahu "apa yang perlu diserahkan"</strong>. "Buat sikit", "buat satu", "tengok" yang kabur adalah pantang larang AI—ia akan meneka maksud anda, hasilnya sering menyeleweng.
+- Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>Semakin jelas kata kerja, semakin spesifik keperluan, semakin AI tahu "apa yang perlu diserahkan"</strong>. "Buat sikit", "buat satu", "tengok" yang kabur adalah pantang larang AI:ia akan meneka maksud anda, hasilnya sering menyeleweng
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -169,12 +169,12 @@ Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional d
 ##### "
 
 {class="list-disc pl-6 mb-3 space-y-2"}
-- Tanpa sekatan, AI mudah "bermain bebas"—sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>, jangan guna bahasa rasmi seperti 'pertama, kedua, ketiga'." (Nada)</strong>"
+- Tanpa sekatan, AI mudah "bermain bebas":sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>, jangan guna bahasa rasmi seperti 'pertama, kedua, ketiga'." (Nada)</strong>"
 - Tanpa sekatan, AI mudah "bermain bebas"—sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>, apabila menemui nama teknikal, terangkan serentak." (Sekatan kosa kata)</strong>"
 - Tanpa sekatan, AI mudah "bermain bebas"—sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>, mudah dibaca pada telefon." (Susun atur)</strong>"
-- Tanpa sekatan, AI mudah "bermain bebas"—sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>." (Item wajib)</strong>"
-- Tanpa sekatan, AI mudah "bermain bebas"—sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>, hanya terangkan prinsip." (Sempadan)</strong> Mengapa berkesan?
-- Tanpa sekatan, AI mudah "bermain bebas"—sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>5. Penilaian Kualiti Prompt: 5 Ciri Prompt yang Baik</strong> Menulis prompt yang baik bukan urusan sekali,
+- Tanpa sekatan, AI mudah "bermain bebas",sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>." (Item wajib)</strong>"
+- Tanpa sekatan, AI mudah "bermain bebas":sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas, kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>, hanya terangkan prinsip." (Sempadan)</strong> Mengapa berkesan?
+- Tanpa sekatan, AI mudah "bermain bebas"—sama ada terlalu akademik, terlalu panjang, atau menyeleweng. Sekatan yang jelas = "standard penyerahan" yang jelas. kedua-dua pihak menjajarkan jangkaan, barulah hasil boleh dikawal.<strong>5. Penilaian Kualiti Prompt: 5 Ciri Prompt yang Baik</strong> Menulis prompt yang baik bukan urusan sekali,
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -189,8 +189,8 @@ Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional d
 1. <strong>Mempunyai format output yang jelas</strong>: Jadual, senarai, perenggan, atau JSON? Nyatakan terlebih dahulu.
 2. <strong>Sekatan tepat</strong>: Jumlah perkataan, gaya, item yang dielakkan, pilih satu sahaja sudah ada peningkatan yang ketara.
 3. <strong>Boleh disahkan oleh AI</strong>: Selepas bertanya, suruh AI mengulangi keperluan anda; jika tidak dapat menjelaskan bermakna tidak dijelaskan dengan jelas.
-4. <strong>6. Masalah Biasa dan Penyelesaian</strong> Gejala
-5. <strong>Penyelesaian</strong> Jawapan terlalu umum, tidak praktikal
+4. <strong>6. Masalah Biasa dan Penyelesaian</strong> Gejala.
+5. <strong>Penyelesaian</strong> Jawapan terlalu umum, tidak praktikal.
 
 {class="font-semibold mt-4 mb-1"}
 ##### Tambah latar belakang (siapa anda/senario apa)
@@ -245,7 +245,11 @@ Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional d
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Anda adalah blogger sarapan yang mahir dalam padanan pemakanan (<strong>Peranan</strong>). Saya seorang ibu bekerja, setiap pagi hanya ada 15 minit untuk menyiapkan sarapan, di rumah ada anak berumur 6 tahun dan ibu mentua berumur 60 tahun (<strong>Latar Belakang</strong>). Sila <strong>senaraikan padanan sarapan 7 hari tanpa pengulangan</strong> (<strong>Tugas</strong>). Setiap sarapan diminta: ① Masa penyediaan tidak melebihi 15 minit ② Pemakanan seimbang (protein + karbohidrat + buah sayur) ③ Sesuai untuk semua peringkat umur ④ Bahan mentah boleh dibeli di pasaraya biasa (<strong>Sekatan</strong>).
+Anda adalah blogger sarapan yang mahir dalam padanan pemakanan (<strong>Peranan</strong>). Saya seorang ibu bekerja, setiap pagi hanya ada 15 minit untuk menyiapkan sarapan, di rumah ada anak berumur 6 tahun dan ibu mentua berumur 60 tahun (<strong>Latar Belakang</strong>). Sila <strong>senaraikan padanan sarapan 7 hari tanpa pengulangan</strong> (<strong>Tugas</strong>). Setiap sarapan diminta:
+1. Masa penyediaan tidak melebihi 15 minit;
+2. Pemakanan seimbang (protein + karbohidrat + buah sayur);
+3. Sesuai untuk semua peringkat umur;
+4. Bahan mentah boleh dibeli di pasaraya biasa (<strong>Sekatan</strong>).
 
 {class="mt-1"}
 <strong>Mengapa berkesan</strong>: Peranan menetapkan tahap profesional, latar belakang memberikan persamaan tiga jenis orang, tugas menjelaskan hasil penyerahan, 4 sekatan memastikan boleh dilaksanakan.
@@ -259,7 +263,11 @@ Anda adalah blogger sarapan yang mahir dalam padanan pemakanan (<strong>Peranan<
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Anda adalah <strong>guru CET-6 berpengalaman</strong> (Peranan). Saya pelajar ijazah pertama biasa, <strong>CET-4 480 mata, sasaran CET-6 500, tinggal 3 bulan</strong> (Latar Belakang). Sila <strong>susun rancangan persediaan 12 minggu yang boleh dilaksanakan untuk saya</strong> (Tugas). Keperluan: ① Peruntukan masa mendengar, bercakap, membaca, menulis yang jelas setiap minggu ② Berikan arahan fokus penembusan setiap bulan ③ Cadangkan 3 bahan semakan yang sesuai (terangkan sebab dalam bahasa Cina) ④ Output dalam format jadual (Sekatan).
+Anda adalah <strong>guru CET-6 berpengalaman</strong> (Peranan). Saya pelajar ijazah pertama biasa, <strong>CET-4 480 mata, sasaran CET-6 500, tinggal 3 bulan</strong> (Latar Belakang). Sila <strong>susun rancangan persediaan 12 minggu yang boleh dilaksanakan untuk saya</strong> (Tugas). Keperluan:
+1. Peruntukan masa mendengar, bercakap, membaca, menulis yang jelas setiap minggu;
+2. Berikan arahan fokus penembusan setiap bulan;
+3. Cadangkan 3 bahan semakan yang sesuai (terangkan sebab dalam bahasa Cina);
+4. Output dalam format jadual (Sekatan).
 
 {class="mt-1"}
 <strong>Mengapa berkesan</strong>: Peranan menetapkan latar belakang profesional, latar belakang memberikan skor dan sauh masa, tugas menjelaskan "rancangan berperingkat", sekatan meminta "dijadualkan" dan "boleh dilaksanakan".
@@ -273,7 +281,11 @@ Anda adalah <strong>guru CET-6 berpengalaman</strong> (Peranan). Saya pelajar ij
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Anda adalah <strong>penolong pentadbiran kanan</strong> (Peranan). Saya baru selesai mesyuarat jabatan 1 jam, <strong>berbincang tentang pelan pemasaran Q2</strong> (Latar Belakang). <strong>Sila kemas kini rekod mesyuarat berikut menjadi minit berstruktur</strong> (Tugas). Keperluan: ① Bahagikan kepada tiga bahagian "Perkara Keputusan / Item Tindakan / Risiko &amp; Bantahan" ② Item tindakan tandakan orang bertanggungjawab dan tarikh akhir (jika tidak disebut, tulis "TBA") ③ Jumlah perkataan dikawal dalam 600 perkataan ④ Output dalam format markdown (Sekatan).
+Anda adalah <strong>penolong pentadbiran kanan</strong> (Peranan). Saya baru selesai mesyuarat jabatan 1 jam, <strong>berbincang tentang pelan pemasaran Q2</strong> (Latar Belakang). <strong>Sila kemas kini rekod mesyuarat berikut menjadi minit berstruktur</strong> (Tugas). Keperluan:
+1. Bahagikan kepada tiga bahagian "Perkara Keputusan / Item Tindakan / Risiko &amp; Bantahan"
+2. Item tindakan tandakan orang bertanggungjawab dan tarikh akhir (jika tidak disebut, tulis "TBA")
+3. Jumlah perkataan dikawal dalam 600 perkataan
+4. Output dalam format markdown (Sekatan).
 
 {class="mt-1"}
 <strong>Mengapa berkesan</strong>: Peranan menetapkan perspektif pentadbiran, latar belakang memberikan tema mesyuarat, tugas menjelaskan output berstruktur, 4 sekatan menjadikan hasil boleh digunakan semula secara langsung.
@@ -288,7 +300,7 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Pemikiran Berantai (CoT)</strong>: Suruh AI "berfikir langkah demi langkah", kualiti jawapan biasanya lebih tinggi: "Sila analisis soalan matematik ini langkah demi langkah".
-- <strong>Kolaborasi berbilang AI</strong>: Gunakan A menulis draf awal, B mengemas, C menterjemah—penggunaan gabungan lebih berkesan.
+- <strong>Kolaborasi berbilang AI</strong>: Gunakan A menulis draf awal, B mengemas, C menterjemah:penggunaan gabungan lebih berkesan.
 - <strong>Prompt sistem</strong>: Prasetel identiti, keutamaan, pantang larang anda dalam tetapan AI, menjadikan jawapan lebih sesuai dengan keperluan anda.
 - <strong>Risiko privasi</strong>: Dalam perkhidmatan AI awan, perbualan anda mungkin digunakan untuk melatih model. Untuk maklumat sensitif, utamakan AI pada peranti.
 - <strong>Masalah "Halusinasi"</strong>: AI mungkin bercakap serius tetapi merapu (istilah profesional: Hallucination). Ia akan mereka peristiwa sejarah yang tidak wujud, petikan yang salah, statistik palsu. Maklumat penting mesti disahkan secara manual.
@@ -309,11 +321,11 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 <i class="fas fa-info-circle mr-2"></i>AI adalah alat bukan autoriti, kekalkan pemikiran dan penilaian bebas.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Apabila menghadapi keputusan kritikal (perubatan, undang-undang, kewangan), rujuk profesional bukan bergantung pada AI.
+- Apabila menghadapi keputusan kritikal (perubatan, undang-undang, kewangan), rujuk profesional bukan bergantung pada AI
 - Gaya lanjutan: Jadikan AI "Pembantu Peribadi" anda
 - Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 - Pengoptimuman perbualan berbilang pusingan
-- : Apabila tidak berpuas hati dengan jawapan AI, boleh berkata "Ini terlalu profesional, sila terangkan sekali lagi dalam bahasa yang boleh difahami murid sekolah rendah".
+- : Apabila tidak berpuas hati dengan jawapan AI, boleh berkata "Ini terlalu profesional, sila terangkan sekali lagi dalam bahasa yang boleh difahami murid sekolah rendah"
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -322,8 +334,8 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Cabaran Tiga: Pengoptimuman prompt</strong>: Mula-mula guna prompt ringkas "tulis panduan pelancongan" bertanya AI, kemudian gunakan rangka kerja CRISPE menulis prompt terperinci. Bandingkan perbezaan kualiti dua jawapan tersebut.
-2. <strong>Bab 23: Pemikiran Pengaturcaraan &amp; Pengenalan Automasi</strong> Dalam dua bab sebelumnya, kita membina "dinding sempadan" keselamatan untuk telefon, juga menyaksikan "otak AI" yang semakin pintar di dalam dinding tersebut. Sekarang, mari buka salah satu potensi tertinggi telefon: biarkan ia "berfikir" seperti pengaturcara, dan melengkapkan tugas berterusan yang anda tetapkan secara automatik. Anda mungkin berkata: "Saya tidak tahu menulis kod, apa kaitannya dengan saya?" Jangan bimbang, bab ini sama sekali tidak memerlukan anda menulis satu baris kod—telefon moden sudah menurunkan ambang "pengaturcaraan" ke tahap seret dan lepas sahaja.
-3. <strong>1. Apakah Automasi Sebenarnya?</strong> Dalam bahasa mudah, automasi ialah:
+2. <strong>Bab 23: Pemikiran Pengaturcaraan &amp; Pengenalan Automasi</strong> Dalam dua bab sebelumnya, kita membina "dinding sempadan" keselamatan untuk telefon, juga menyaksikan "otak AI" yang semakin pintar di dalam dinding tersebut. Sekarang, mari buka salah satu potensi tertinggi telefon: biarkan ia "berfikir" seperti pengaturcara, dan melengkapkan tugas berterusan yang anda tetapkan secara automatik. Anda mungkin berkata: "Saya tidak tahu menulis kod, apa kaitannya dengan saya?" Jangan bimbang, bab ini sama sekali tidak memerlukan anda menulis satu baris kod—telefon ,moden sudah menurunkan ambang "pengaturcaraan" ke tahap seret dan lepas sahaja.
+3. <strong>1. Apakah Automasi Sebenarnya?</strong> Dalam bahasa mudah, automasi ialah:.
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -332,6 +344,6 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Kesan praktikal: Wi-Fi 7 router telah mula dijual, tetapi telefon perlu sokong. iPhone 15 Pro/16 siri, Xiaomi 14, Samsung S24 Ultra dll flagship 2024 telah sokong Wi-Fi 7; peranti lebih awal disokong melalui kemas kini OS. Jika ada router Wi-Fi 7, boleh nikmati kelajuan rangkaian lebih cepat dan lebih stabil.</strong>: iPhone 13 ke Xiaomi 15 tukar jenama.
-- <strong>Setiap telefon ada fungsi "tersembunyi" yang tidak digunakan kebanyakan orang — ia bukan Easter Egg sengaja tersembunyi oleh jurutera, tetapi ditimbus dalam lapisan tetapan dalam, atau tidak diperkenalkan dengan jelas oleh pengiklanan. Bab ini akan kumpulkan beberapa fungsi paling praktikal yang patut anda cuba.</strong>: iCloud/WeChat sandaran terbina dalam ke log keluar Apple ID + tutup "Cari" ke telefon baru guna App "Xiaomi Phone Clone" imbas kod ke pilih item pemindahan ke WeChat berasingan guna "pemindahan rekod sembang" terbina dalam ke sahkan data penting (kenalan/album/WeChat) ke telefon lama padam tersulit.
-- <strong>"Pilihan pembangun" adalah mod kawalan khas yang disediakan Android untuk jurutera, biasanya tidak ditunjukkan kepada pengguna biasa. Tetapi beberapa fungsi praktikal di dalamnya sangat berbaloi untuk dibuka.</strong> Sistem jana "Access Key" (kunci akses) — kombinasi kod, perlu simpan dengan selamat.
+- <strong>Setiap telefon ada fungsi "tersembunyi" yang tidak digunakan kebanyakan orang — ia bukan Easter Egg sengaja tersembunyi oleh jurutera, tetapi ditimbus dalam lapisan tetapan dalam, atau tidak diperkenalkan dengan jelas oleh pengiklanan. Bab ini akan kumpulkan beberapa fungsi paling praktikal yang patut anda cuba.</strong>: iCloud/WeChat sandaran terbina dalam ke log keluar Apple ID + tutup "Cari" ,ke telefon baru guna App "Xiaomi Phone Clone" imbas kod ke pilih item ,pemindahan ke WeChat berasingan guna "pemindahan rekod sembang" terbina dalam ,ke sahkan data penting (kenalan/album/WeChat) ke telefon lama padam tersulit.
+- <strong>"Pilihan pembangun" adalah mod kawalan khas yang disediakan Android untuk jurutera, biasanya tidak ditunjukkan kepada pengguna biasa. Tetapi beberapa fungsi praktikal di dalamnya sangat berbaloi untuk dibuka.</strong> Sistem jana "Access Key" (kunci akses), kombinasi kod, perlu simpan dengan selamat.
 :::

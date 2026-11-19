@@ -10,13 +10,13 @@ kind: chapter
 ### Chapter 59: Getting to Know iOS — Apple's Ecosystem and Developer Ecosystem
 
 {class="chapter-intro mb-4"}
-Congratulations on this decision — going from "someone who uses an iPhone" to "someone who writes apps for the iPhone." Before you start, let's spread the map out flat: where did iOS come from? What does Apple's "walled garden" mean for developers? What happens between your fingers hitting the keyboard and an app landing on a user's phone?
+Congratulations on this decision, going from "someone who uses an iPhone" to "someone who writes apps for the iPhone." Before you start, let's spread the map out flat: where did iOS come from? What does Apple's "walled garden" mean for developers? What happens between your fingers hitting the keyboard and an app landing on a user's phone?
 
 #### 1. iOS's Origin Story: One Phone Changed an Industry
 
-In January 2007, Jobs pulled the first-generation iPhone out on stage. At the time it didn't even support third-party apps — not until 2008, when Apple launched the App Store and the iPhone SDK, letting developers worldwide write software for the iPhone. That was the moment the "app economy" was born: today, the App Store hosts millions of apps and has paid developers a cumulative total of hundreds of billions of dollars.
+In January 2007, Jobs pulled the first-generation iPhone out on stage. At the time it didn't even support third-party apps, not until 2008, when Apple launched the App Store and the iPhone SDK, letting developers worldwide write software for the iPhone. That was the moment the "app economy" was born: today, the App Store hosts millions of apps and has paid developers a cumulative total of hundreds of billions of dollars.
 
-The system itself has evolved too: it was first called iPhone OS and renamed iOS in 2010; the version number marched up to iOS 17 (2023), and then in 2025 Apple switched to year-based naming — iOS 26 shipped in 2025, and as of August 2026 the current version is iOS 27. The naming changes, but one thing never has: iOS users' willingness to pay and the platform's reputation for software quality are widely considered the best in mobile — the same app usually earns noticeably more on iOS than on Android.
+The system itself has evolved too: it was first called iPhone OS and renamed iOS in 2010; the version number marched up to iOS 17 (2023), and then in 2025 Apple switched to year-based naming — iOS 26 shipped in 2025, and as of August 2026 the current version is iOS 27. The naming changes, but one thing never has: iOS users' willingness to pay and the platform's reputation for software quality are widely considered the best in mobile: the same app usually earns noticeably more on iOS than on Android.
 
 ::: div .overflow-x-auto
 ```html
@@ -27,14 +27,14 @@ The system itself has evolved too: it was first called iPhone OS and renamed iOS
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 A timeline of iOS development (as of August 2026)
 
-#### 2. The Walled Garden: The Apple Ecosystem's "Rules" and "Rewards"
+2. The Walled Garden: The Apple Ecosystem's "Rules" and "Rewards"
 
-The Apple ecosystem is often described as a "walled garden"—lots of rules, tightly enforced: apps must pass review before they can be listed, development requires a Mac and Xcode, and distribution goes mainly through the App Store. Sounds stifling? But for developers, those rules buy rewards worth real money:
+The Apple ecosystem is often described as a "walled garden",lots of rules, tightly enforced: apps must pass review before they can be listed, development requires a Mac and Xcode, and distribution goes mainly through the App Store. Sounds stifling? But for developers, those rules buy rewards worth real money:
 
-- Almost no device fragmentation: there are only a handful of iPhone models, and screen sizes and system versions are highly uniform—adapt to just 5 models and you cover 95% of users (on Android you might have to cover dozens);
+- Almost no device fragmentation: there are only a handful of iPhone models, and screen sizes and system versions are highly uniform. Adapt to just 5 models and you cover 95% of users (on Android you might have to cover dozens);
 - Extremely high system adoption: within a few weeks of a new release, 70–80% of users have upgraded, so you can confidently use new APIs without worrying about "systems from five years ago";
 - Users are happy to pay: App Store users are more willing to spend money on apps and in-app purchases;
-- Strict review, but a clean store: knockoffs and junk apps are rare, so good products are easier to get seen.
+- Strict review, but a clean store: knockoffs and junk apps are rare, so good products are easier to get seen
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -46,9 +46,9 @@ iOS development has hard requirements: you must have a Mac (Xcode runs only on m
 
 #### 3. Which Language to Write In: Objective-C or Swift?
 
-iOS development history has two "lead actors" as well. Objective-C was the founding veteran—used from 2008 to 2014; Swift is the new language Apple released in 2014, and it has evolved all the way to Swift 6 (released in 2024, bringing strict concurrency checking). By 2026, nearly all new projects use Swift.
+iOS development history has two "lead actors" as well. Objective-C was the founding veteran:used from 2008 to 2014; Swift is the new language Apple released in 2014, and it has evolved all the way to Swift 6 (released in 2024, bringing strict concurrency checking). By 2026, nearly all new projects use Swift.
 
-A bit of honest advice for absolute beginners: go straight to Swift and don't even look at Objective-C—unless your future job means maintaining legacy code from ten years ago. Swift's advantages: clean syntax (none of the C-era baggage of semicolons and header files), an Optional mechanism that wipes out "null pointer crashes" at the language level, seamless integration with SwiftUI, and Swift Playgrounds on the iPad for learning while you play.
+A bit of honest advice for absolute beginners: go straight to Swift and don't even look at Objective-C,unless your future job means maintaining legacy code from ten years ago. Swift's advantages: clean syntax (none of the C-era baggage of semicolons and header files), an Optional mechanism that wipes out "null pointer crashes" at the language level, seamless integration with SwiftUI, and Swift Playgrounds on the iPad for learning while you play.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -87,8 +87,8 @@ Figure 1: The full journey of an iOS app from idea to the App Store (note the ex
 
 Key concepts in the pipeline:
 
-- Signing: every iOS app must be "signed" before it can be installed—proof that "this package came from you and hasn't been tampered with." During the learning stage, Xcode signs automatically with your Apple ID; publishing uses a developer certificate. Chapter 67 covers the details.
-- Simulator: an iPhone virtualized on your Mac—the main arena for development and debugging. It runs on the Mac's CPU, so it's remarkably smooth—a big step up from Android emulators.
+- Signing: every iOS app must be "signed" before it can be installed,proof that "this package came from you and hasn't been tampered with." During the learning stage, Xcode signs automatically with your Apple ID; publishing uses a developer certificate. Chapter 67 covers the details.
+- Simulator: an iPhone virtualized on your Mac:the main arena for development and debugging. It runs on the Mac's CPU, so it's remarkably smooth,a big step up from Android emulators.
 - TestFlight: Apple's official "beta distribution" tool—before release, you send test builds to up to 10,000 testers, who install and try them with the TestFlight app. It's an elegance unique to the iOS ecosystem.
 
 #### 5. The Full iOS Tech Stack: Your "Weapon List"
@@ -102,7 +102,7 @@ Key concepts in the pipeline:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 The mainstream iOS tech stack at a glance (2026)
 
-Notice anything? This list is quite a bit shorter than Android's—because Apple "takes care of" a lot of things for you. The closed ecosystem costs you freedom and pays you back in peace of mind: no agonizing over which networking library or which database to pick—the official option is usually the best answer.
+Notice anything? This list is quite a bit shorter than Android's,because Apple "takes care of" a lot of things for you. The closed ecosystem costs you freedom and pays you back in peace of mind: no agonizing over which networking library or which database to pick,the official option is usually the best answer.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

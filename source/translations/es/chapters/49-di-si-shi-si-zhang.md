@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 La teoría ya está; ahora toca hacer. Este capítulo no es un tutorial de "escribir lo que yo escribo", sino una metodología práctica de "cómo pensar, cómo pedir y cómo verificar". Con tres proyectos de distinta dificultad mostraremos el proceso completo de razonamiento, desde los requisitos hasta el producto terminado. Uses la herramienta que uses, este flujo te sirve.
 
-#### I. Proyecto uno: web minimalista de herramientas personales (nivel inicial)
+I. Proyecto uno: web minimalista de herramientas personales (nivel inicial)
 
 ##### 1. Pensar los requisitos
 
@@ -52,7 +52,7 @@ Cuando la IA entregue el código, haz la aceptación con la verificación de tre
 
 Si además quieres implementar la función de alguna tarjeta (y no solo la entrada), puedes ir añadiéndola poco a poco: añade la función de una herramienta, verifícala y pasa a la siguiente. Es la aplicación en la práctica de la estrategia de "pasos pequeños y rápidos".
 
-#### II. Proyecto dos: sistema de contabilidad full stack (nivel intermedio)
+II. Proyecto dos: sistema de contabilidad full stack (nivel intermedio)
 
 ##### 1. Pensar los requisitos y el PRD
 
@@ -129,7 +129,7 @@ Fíjate en los rasgos de esta instrucción: describe solo el paso actual (el esq
 
 Cuando la IA entregue el código, verifícalo enseguida: arranca el servidor y prueba cada endpoint con curl o Postman. Si todo está bien, abre una conversación nueva para el Paso 2 (páginas básicas del frontend). En cada paso se repite el ciclo "instrucción, verificación, nueva conversación".
 
-#### III. Proyecto tres: aplicación potenciada con IA (nivel avanzado)
+III. Proyecto tres: aplicación potenciada con IA (nivel avanzado)
 
 ##### 1. Concebir el proyecto
 
@@ -144,7 +144,7 @@ Este proyecto toca varios puntos técnicos que no aparecieron en los dos anterio
 - Gestión de las claves de API: las claves nunca van dentro del código; se gestionan con variables de entorno;
 - Tratamiento de respuestas en streaming: las respuestas de los grandes modelos suelen llegar en streaming y hay que mostrarlas palabra a palabra;
 - Control del consumo de tokens: los grandes modelos cobran por token, así que el gasto se controla a nivel de aplicación;
-- Gestión de plantillas de prompt: cada función usa su propia plantilla de prompt y conviene gestionarlas de forma estructurada.
+- Gestión de plantillas de prompt: cada función usa su propia plantilla de prompt y conviene gestionarlas de forma estructurada
 
 La IA puede ayudarte a implementar todos estos puntos, pero tú necesitas entender el "porqué" de cada uno: ¿por qué las claves no van en el código? ¿Por qué hacen falta respuestas en streaming? ¿Por qué hay que controlar el consumo de tokens? Solo entendiendo el porqué podrás juzgar si la solución de la IA es razonable.
 

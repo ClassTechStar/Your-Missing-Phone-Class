@@ -2,17 +2,17 @@
 id: di-shi-ba-zhang
 num: 18
 part: jin-jie-pian
-nav: Capítulo 18: Copias de seguridad y migración de datos
+nav: Capítulo 18: Haz la copia de seguridad ahora, no después
 toc: default
 kind: chapter
 ---
 
-### Capítulo 18: Respaldo y migración de datos
+### Capítulo 18: Haz la copia de seguridad ahora, no después
 
 {class="chapter-intro mb-4"}
 Una vecina dejó caer su móvil en una piscina; al sacarlo ya no encendía. Lo que más le dolía no era el móvil en sí, sino las fotos de tres años sin copia de seguridad —todo el registro del crecimiento de su hijo desde que nació hasta que aprendió a caminar. Al escucharla me sentí muy mal, porque esto era totalmente evitable. En este capítulo aseguraremos nuestros datos seriamente.
 
-#### I. Entiende primero: que cosas de tu móvil se pierden para siempre
+I. Entiende primero: que cosas de tu móvil se pierden para siempre
 
 Los datos tienen diferentes "estados de supervivencia"; debes distinguirlos:
 
@@ -24,13 +24,13 @@ Por tanto, debes proteger con prioridad la primera y tercera categorías.
 
 #### II. Copia de seguridad completa: todo de una vez
 
-La copia de seguridad completa es como hacer una "foto" completa del móvil —ajustes del sistema, disposición del escritorío, datos de Apps, fotos, contactos: todo empaquetado.
+La copia de seguridad completa es como hacer una "foto" completa del móvil,ajustes del sistema, disposición del escritorío, datos de Apps, fotos, contactos: todo empaquetado.
 
 ##### Opcion 1: Copia local en ordenador (la más fiable, recomendada si tienes PC)
 
 - <strong>iPhone</strong>:Conecta el móvil al ordenador con cable, abre iTunes (Windows antiguo) o Finder (Mac), en la página del dispositivo elige "Hacer copia ahora". Asegúrate de marcar "Cifrar copia de seguridad", sino las contraseñas y datos de salud no se incluirán.
 - <strong>Android</strong>: cada marca tiene su propio software para PC: Asistente de móvil Huawei, Asistente Xiaomi, Samsung Smart Switch. Conecta al ordenador y sigue las instrucciones.
-- La ventaja de la copia en PC es que no pagas espacio en la nube y la restauración es mucho más rápida que desde la nube. La desventaja: debes recordar conectar el cable periódicamente — la mayoría no lo hace.
+- La ventaja de la copia en PC es que no pagas espacio en la nube y la restauración es mucho más rápida que desde la nube. La desventaja: debes recordar conectar el cable periódicamente, la mayoría no lo hace.
 
 ##### Opcion 2: Copia en la nube (la más comoda, recomendada para todos)
 
@@ -38,7 +38,7 @@ La copia de seguridad completa es como hacer una "foto" completa del móvil —a
 - <strong>Android</strong>: cada marca tiene su función de copia en la nube. Huawei: busca "Copia de seguridad" en ajustes. Xiaomi: "Xiaomi Cloud". OPPO/vivo similar. Además hay la copia de Google (Ajustes &gt; Sistema &gt; Copia de seguridad); actívala también.
 - La mayor ventaja del respaldo en la nube es que es "sin preocupaciones", se hace automáticamente. El mayor inconveniente: la restauración tarda mucho en descargar y el espacio gratuito suele no alcanzar.
 
-#### III. Estrategia de copia por categorías: guarda lo importante por separado
+III. Estrategia de copia por categorías: guarda lo importante por separado
 
 La copia completa es el fondo de seguridad, pero algunas cosas son demasiado importantes para merecer una copia aparte:
 
@@ -93,7 +93,7 @@ Para la mayoría, tener "una copia en la nube + una en el ordenador" ya es excel
 <i class="fas fa-exclamation-triangle mr-2"></i>Atencion especial al historial de WeChat
 
 {class="mt-1"}
-¡El historial de chat de WeChat NO puede migrarse con ningúna herramienta de transferencia de móviles! No está cubierto por la copia completa. Debes usar la función propia "Migración de historial de chat" de WeChat o copiar a WeChat para PC. Mucha gente lo descubre después de cambiar de móvil cuando ya es tarde —el viejo móvil ya puede haber sido restablecido de fábrica.
+¡El historial de chat de WeChat NO puede migrarse con ningúna herramienta de transferencia de móviles! No está cubierto por la copia completa. Debes usar la función propia "Migración de historial de chat" de WeChat o copiar a WeChat para PC. Mucha gente lo descubre después de cambiar de móvil cuando ya es tarde,el viejo móvil ya puede haber sido restablecido de fábrica.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

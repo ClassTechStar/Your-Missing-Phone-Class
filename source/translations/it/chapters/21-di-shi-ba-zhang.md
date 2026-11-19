@@ -2,17 +2,17 @@
 id: di-shi-ba-zhang
 num: 18
 part: jin-jie-pian
-nav: Capitolo 18: Backup e migrazione dei dati
+nav: Capitolo 18: Fai il backup adesso, non quando servirà
 toc: default
 kind: chapter
 ---
 
-### Capitolo 18: Backup e migrazione dei dati
+### Capitolo 18: Fai il backup adesso, non quando servirà
 
 {class="chapter-intro mb-4"}
 Una vicina aveva fatto cadere il telefono in una vasca d'acqua e, tiratolo fuori, non si accendeva più. Quello che le dispiaceva di più non era il telefono in sé, ma le foto non backuppate di tre anni: tutti i ricordi del bambino dalla nascita ai primi passi. Sentendola mi sono sentito male, perché si tratta di una cosa completamente evitabile. In questo capitolo mettiamo seriamente una polizza sui nostri dati.
 
-#### 1. Prima chiarisci: cosa c'è nel tuo telefono che, se perso, non c'è più
+1. Prima chiarisci: cosa c'è nel tuo telefono che, se perso, non c'è più
 
 Lo "stato di sopravvivenza" dei diversi dati è diverso, devi distinguerli:
 
@@ -34,11 +34,11 @@ Il backup integro è come scattare un'istantanea completa del telefono: impostaz
 
 ##### Opzione 2: backup sul cloud (il più comodo, consigliato a tutti)
 
-- <strong>iPhone</strong>: Impostazioni → [il tuo nome] → iCloud → Backup su iCloud → attiva. Il telefono esegue il backup automatico quando è in carica, connesso al Wi-Fi e bloccato. I 5 GB gratuiti probabilmente non bastano, conviene spendere 6 yuan per passare a 50 GB.
+- <strong>iPhone</strong>: Impostazioni → [il tuo nome] → iCloud → Backup su iCloud → attiva. Il telefono esegue il backup automatico quando è in carica. Connesso al Wi-Fi e bloccato. I 5 GB gratuiti probabilmente non bastano, conviene spendere 6 yuan per passare a 50 GB.
 - <strong>Android</strong>: i cloud dei vari marchi hanno funzioni di backup. Su Huawei cerca "backup cloud" nelle impostazioni, su Xiaomi vai in "Xiaomi Cloud Services", OPPO/vivo analogamente. C'è anche il backup integrato di Google (Impostazioni → Sistema → Backup): attiva anche quello.
 - Il grande vantaggio del backup cloud è che "non devi pensarci", è tutto automatico. Il grande svantaggio è che il ripristino richiede un download lungo e lo spazio gratuito di solito non basta.
 
-#### 3. Strategia di backup per categorie: le cose importanti vanno salvate a parte
+3. Strategia di backup per categorie: le cose importanti vanno salvate a parte
 
 Il backup integro è la rete di sicurezza, ma alcune cose sono così importanti da meritare una copia a parte:
 
@@ -56,7 +56,7 @@ Il backup integro è la rete di sicurezza, ma alcune cose sono così importanti 
 
 Va trattata a parte perché nel backup integro spesso non è completa e gli strumenti di migrazione non riescono a spostarla.
 
-- <strong>Metodo 1: migrazione al telefono nuovo</strong>. WeChat → Io → Impostazioni → Generale → Migrazione e backup cronologia chat → Migra → Migra a telefono/tablet. Il telefono vecchio e quello nuovo vanno collegati alla stessa rete Wi-Fi; scansiona il codice per trasferire. Attenzione: prima che la migrazione sia completa, non uscire da WeChat sul telefono vecchio.
+- <strong>Metodo 1: migrazione al telefono nuovo</strong>. WeChat → Io → Impostazioni → Generale → Migrazione e backup cronologia chat → Migra → Migra a telefono/tablet. Il telefono vecchio e quello nuovo vanno collegati alla stessa rete Wi-Fi; scansiona il codice per trasferire. Attenzione: prima che la migrazione sia completa. Non uscire da WeChat sul telefono vecchio.
 - <strong>Metodo 2: backup su computer</strong>. Installa WeChat per PC, in basso a sinistra le tre linee → Migrazione e backup → Backup e ripristino → Esegui backup della cronologia chat sul computer. Quando cambi telefono potrai ripristinarla sul telefono nuovo.
 - <strong>Metodo 3: backup sul cloud</strong>. WeChat supporta anche il backup su iCloud o sul cloud di marca, ma attenzione: questo backup può essere ripristinato solo sul telefono attuale, non è ripristinabile su un altro dispositivo. Per cambiare telefono, devi usare uno dei due metodi precedenti.
 
@@ -71,7 +71,7 @@ Cambiare telefono è una gioia, ma se i dati non passano diventa un mal di testa
 
 ##### Cambio marchio (Android verso Android, marchi diversi)
 
-Usa strumenti di migrazione di terze parti oppure l'app di migrazione del marchio di partenza (la maggior parte delle app di migrazione dei marchi supporta anche il passaggio ad altri Android). Si possono trasferire: contatti, foto, SMS, registro chiamate, alcune app. Non si possono trasferire: gli stati di login dentro le app (devi rifare il login), la cronologia chat di WeChat (usa la funzione di migrazione di WeChat).
+Usa strumenti di migrazione di terze parti oppure l'app di migrazione del marchio di partenza, (la maggior parte delle app di migrazione dei marchi supporta anche il passaggio ad altri Android). Si possono trasferire: contatti, foto, SMS, registro chiamate, alcune app. Non si possono trasferire: gli stati di login dentro le app (devi rifare il login), la cronologia chat di WeChat (usa la funzione di migrazione di WeChat).
 
 ##### Cambio piattaforma (Android verso iPhone o viceversa)
 

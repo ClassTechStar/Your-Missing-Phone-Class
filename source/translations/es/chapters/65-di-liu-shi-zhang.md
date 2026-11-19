@@ -39,7 +39,7 @@ Xcode es el entorno de desarrollo integrado oficial de Apple, y es gratis. Se in
 
 1. Abre el App Store en el Mac, busca "Xcode" y pulsa instalar; ojo, pesa varios GB, así que elige una franja con buena conexión;
 2. Al abrirlo por primera vez tras la instalación, acepta el acuerdo y deja que se instalen los componentes (se hace solo);
-3. En el menú Xcode → Settings → Locations, comprueba que Command Line Tools esté seleccionado; las herramientas de línea de comandos son requisito de muchos scripts y herramientas de terceros.
+3. En el menú Xcode → Settings → Locations, comprueba que Command Line Tools esté seleccionado; las herramientas de línea de comandos son requisito de muchos scripts y herramientas de terceros
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -100,9 +100,9 @@ Figura 2: la estructura de un proyecto Xcode que todo principiante debe conocer
 - MyFirstAppApp.swift: el punto de entrada del programa; en SwiftUI tiene solo unas líneas: "arranca y muestra la pantalla principal";
 - ContentView.swift: la vista de la pantalla principal; todo lo que ves ahora vive aquí;
 - Assets.xcassets: el almacén de recursos; iconos, imágenes y colores van aquí;
-- Ajustes del Target: entra con el icono azul del proyecto a la izquierda; ahí están el número de versión, la versión mínima de iOS y la firma. El nombre visible de la App y el icono también se configuran aquí.
+- Ajustes del Target: entra con el icono azul del proyecto a la izquierda; ahí están el número de versión, la versión mínima de iOS y la firma. El nombre visible de la App y el icono también se configuran aquí
 
-#### 5. Trucos de eficiencia en Xcode: los cinco "power-ups" de atajos para principiantes
+5. Trucos de eficiencia en Xcode: los cinco "power-ups" de atajos para principiantes
 
 Dominando estos parecerás "muy profesional":
 
@@ -117,14 +117,14 @@ Atajos de Xcode de uso frecuente (el kit de cinco del principiante)
 
 Dos regalos ocultos más: varios simuladores a la vez (ejecutar iPhone e iPad al mismo tiempo para comparar diseños) y la biblioteca de fragmentos de código (arrastra esas líneas que usas mucho al panel Snippets de la derecha y la próxima vez insértalas con un clic); usa primero las herramientas de eficiencia y la soltura llega sola.
 
-#### 6. Depurar en un dispositivo real: instalar la App en tu iPhone
+6. Depurar en un dispositivo real: instalar la App en tu iPhone
 
 El simulador está bien, pero el dispositivo real es la meta. Con un Apple ID gratuito también puedes depurar en un móvil real:
 
 1. Conecta el iPhone con el cable de datos (o depura por Wi-Fi en la misma red);
 2. En la lista de dispositivos de la parte superior de Xcode elige tu móvil; la primera vez pedirá iniciar sesión con tu Apple ID y configurará la firma automáticamente;
 3. En el iPhone: [Ajustes] → [General] → [VPN y gestión de dispositivos] → confía en tu certificado de desarrollador;
-4. Pulsa ▶ y la App se instala en el dispositivo real.
+4. Pulsa ▶ y la App se instala en el dispositivo real
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

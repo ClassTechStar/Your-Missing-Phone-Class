@@ -2,12 +2,12 @@
 id: di-si-shi-zhang
 num: 40
 part: ai-biancheng-pian
-nav: Chapitre 40 : Ingénierie des besoins — transformer tes idées en instructions pour l'IA
+nav: Chapitre 40 : Dites-le clairement, puis passez à l'action
 toc: default
 kind: chapter
 ---
 
-### Chapitre 40 : L'ingénierie des exigences — transformer ses idées en instructions que l'IA peut exécuter
+### Chapitre 40 : Dites-le clairement, puis passez à l'action
 
 {class="chapter-intro mb-4"}
 Si l'ingénierie du contexte répond au problème « faire comprendre le contexte à l'IA », l'ingénierie des exigences répond à « faire savoir à l'IA ce qu'il faut faire précisément cette fois ». C'est l'étape de la programmation IA qui révèle le plus les écarts entre les personnes : avec les mêmes outils et les mêmes modèles, certains produisent des projets bluffants, d'autres des jouets médiocres. La différence tient rarement aux compétences techniques, mais plutôt à la capacité d'exprimer ses exigences.
@@ -38,7 +38,7 @@ Prenons l'exemple d'« une appli perso de comptes » ; un découpage raisonnable
 1. Implémenter la fonction de base d'enregistrement des dépenses et recettes (pouvoir ajouter, consulter, supprimer des entrées) ;
 2. Ajouter les catégories (étiqueter chaque entrée : repas, transport, etc.) ;
 3. Implémenter le récapitulatif mensuel (statistiques des dépenses et recettes par mois) ;
-4. Ajouter la visualisation des données (graphiques de la structure des dépenses).
+4. Ajouter la visualisation des données (graphiques de la structure des dépenses)
 
 Chaque étape est un incrément fonctionnel qui peut tourner et se vérifier tout seul.
 
@@ -46,11 +46,11 @@ Chaque étape est un incrément fonctionnel qui peut tourner et se vérifier tou
 Règle d'or pour découper les besoins : à la fin de chaque étape, le projet doit être "quelque chose d'utilisable", même si les fonctions sont rudimentaires. Ne laisse jamais le projet dans l'état "tout à moitié fait et rien ne marche".
 :::
 
-Ce découpage a deux avantages. D'abord, il te permet de toujours voir les progrès : à chaque étape terminée, ton appli gagne une fonction — ce cercle vertueux est vital pour les projets de longue haleine (tout le monde a besoin de ressentir des réussites). Ensuite, il rend chaque tâche de l'IA suffisamment petite, ce qui réduit le risque de « mauvaise interprétation par l'IA » : plus la tâche est petite, plus l'IA la comprend exactement et meilleure est la production.
+Ce découpage a deux avantages. D'abord, il te permet de toujours voir les progrès : à chaque étape terminée, ton appli gagne une fonction, ce cercle vertueux est vital pour les projets de longue haleine (tout le monde a besoin de ressentir des réussites). Ensuite, il rend chaque tâche de l'IA suffisamment petite, ce qui réduit le risque de « mauvaise interprétation par l'IA » : plus la tâche est petite, plus l'IA la comprend exactement et meilleure est la production.
 
 #### 3. Modèle de PRD et mise en pratique
 
-Pour les projets plus grands (par exemple une application full-stack avec front, back et plusieurs modules), les cinq éléments d'exigence peuvent ne pas suffire. Il te faut alors rédiger un document d'exigences du projet (PRD) plus formel. Un point souvent mal compris : le PRD n'est pas écrit pour l'IA — il est écrit pour toi-même, pour clarifier ta réflexion ; ensuite seulement tu pourras donner à l'IA des instructions plus précises.
+Pour les projets plus grands (par exemple une application full-stack avec front, back et plusieurs modules), les cinq éléments d'exigence peuvent ne pas suffire. Il te faut alors rédiger un document d'exigences du projet (PRD) plus formel. Un point souvent mal compris : le PRD n'est pas écrit pour l'IA, il est écrit pour toi-même, pour clarifier ta réflexion ; ensuite seulement tu pourras donner à l'IA des instructions plus précises.
 
 Un bon PRD n'a pas besoin d'être long, mais il doit contenir six parties : la présentation du projet (ce que fait le produit, en un paragraphe), la liste des fonctionnalités (ce que fait chaque point), le choix technique (quelle stack, quelle architecture dans les grandes lignes), le modèle de données (les structures de données clés), la description de l'interface (à quoi ressemblent les pages principales) et le plan de développement (en combien d'étapes).
 
@@ -111,9 +111,9 @@ Deuxième étape : découpe les exigences.
 1. Étape 1 : implémenter la fonction « enregistrer une entrée d'apprentissage » (date, contenu, durée) ;
 2. Étape 2 : ajouter les « statistiques de temps d'étude » (aujourd'hui, cumul de la semaine) ;
 3. Étape 3 : implémenter la vue « calendrier d'apprentissage » (affichée comme le graphe de contributions GitHub) ;
-4. Étape 4 : ajouter la fonction « révision d'apprentissage » (affiche au hasard les notes d'un jour passé, pour t'aider à réviser).
+4. Étape 4 : ajouter la fonction « révision d'apprentissage » (affiche au hasard les notes d'un jour passé, pour t'aider à réviser)
 
-Troisième étape : rédige un PRD court. Pas besoin de longueur — le découpage ci-dessus constitue déjà l'essentiel du PRD. Range-le dans un fichier .md à la racine du projet, comme référence commune entre toi et l'IA.
+Troisième étape : rédige un PRD court. Pas besoin de longueur, le découpage ci-dessus constitue déjà l'essentiel du PRD. Range-le dans un fichier .md à la racine du projet, comme référence commune entre toi et l'IA.
 
 Quatrième étape : commence le développement de la première étape. L'instruction à donner à l'IA peut être :
 

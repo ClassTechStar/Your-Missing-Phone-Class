@@ -2,12 +2,12 @@
 id: di-shi-yi-zhang
 num: 11
 part: ruan-jian-pian
-nav: Capitolo 11: Fotografia e gestione delle immagini
+nav: Capitolo 11: Meglio una foto bella che dieci brutte
 toc: default
 kind: chapter
 ---
 
-### Capitolo 11: Fotografia e gestione delle immagini
+### Capitolo 11: Meglio una foto bella che dieci brutte
 
 {class="chapter-intro mb-4"}
 A dire il vero, la maggior parte delle persone, fotografando con il telefono, ottiene risultati di gran lunga inferiori alle potenzialità del telefono stesso. Non è che tu non sia capace, è che molte piccole impostazioni e abitudini non le hai notate. Questo capitolo non tratta concetti vacui, solo cose che puoi usare subito.
@@ -27,9 +27,9 @@ Non richiedono conoscenze teoriche, basta usarli una volta per vedere l'effetto:
 
 - <strong>Regola dei terzi + griglia</strong>: nelle impostazioni della fotocamera attiva la "Griglia" (o Linee di riferimento). Inquadrando, posiziona il soggetto da evidenziare in corrispondenza dei punti di intersezione delle quattro linee, e l'immagine risulterà subito "giusta". È la regola più semplice ed efficace della fotografia, niente di esoterico, semplicemente in linea con le abitudini visive dell'occhio umano.
 - <strong>Cerca "linee guida"</strong>: quando fotografi paesaggi o scene di strada, fai attenzione alle linee naturali presenti nell'inquadratura - strade, ringhiere, muri, file di alberi - falle arrivare dal bordo dell'inquadratura al soggetto. Usato bene, chi guarda le tue foto penserà che tu abbia studiato fotografia.
-- <strong>Non scattare sempre in piedi</strong>: gran parte delle persone scatta sempre all'altezza dei propri occhi, per cui le prospettive sono sempre uguali. Prova a inginocchiarti per scattare dal basso, oppure a cercare un punto più alto per scattare verso il basso, lo stesso posto sembrerà completamente diverso. Per fotografare bambini e animali serve in particolare inginocchiarsi, solo alla loro altezza si ottengono foto naturali.
-- <strong>La luce è il primo elemento</strong>: a mezzogiorno con il sole alto, i ritratti hanno ombre dure e brutte sul viso. La luce migliore è la "ora dorata" dell'alba e del tramonto, il sole è obliquo e il colore tende al caldo, tutto viene bene. La luce nuvolosa, pur senza brillare, è uniforme e morbida, per i ritratti è più facile ottenere buoni risultati rispetto al sole pieno.
-- <strong>Come usare la modalità notturna</strong>: una volta attivata, il telefono scatta automaticamente una raffica e la fonde. In questo momento la cosa più importante è - la mano non deve tremare assolutamente. Appoggiati a un muro quando puoi, o posa il telefono su un tavolo, se non è possibile trattieni il respiro. La modalità notturna richiede di restare fermi per 2-4 secondi, se tremi l'immagine sfuma.
+- <strong>Non scattare sempre in piedi</strong>: gran parte delle persone scatta sempre all'altezza dei propri occhi. Per cui le prospettive sono sempre uguali. Prova a inginocchiarti per scattare dal basso, oppure a cercare un punto più alto per scattare verso il basso, lo stesso posto sembrerà completamente diverso. Per fotografare bambini e animali serve in particolare inginocchiarsi, solo alla loro altezza si ottengono foto naturali.
+- <strong>La luce è il primo elemento</strong>: a mezzogiorno con il sole alto. I ritratti hanno ombre dure e brutte sul viso. La luce migliore è la "ora dorata" dell'alba e del tramonto, il sole è obliquo e il colore tende al caldo, tutto viene bene. La luce nuvolosa, pur senza brillare, è uniforme e morbida, per i ritratti è più facile ottenere buoni risultati rispetto al sole pieno.
+- <strong>Come usare la modalità notturna</strong>: una volta attivata, il telefono scatta automaticamente una raffica e la fonde. In questo momento la cosa più importante è - la mano non deve tremare assolutamente. Appoggiati a un muro quando puoi. O posa il telefono su un tavolo, se non è possibile trattieni il respiro. La modalità notturna richiede di restare fermi per 2-4 secondi, se tremi l'immagine sfuma.
 
 #### 3. Modalità Ritratto e modalità Professionale
 
@@ -42,7 +42,7 @@ Molti hanno un malinteso sul fotoritocco, pensano che ritoccare non sia reale. I
 
 - <strong>Snapseed</strong>: strumento gratuito di fotoritocco di Google, funzioni professionali senza pubblicità. Il mio flusso quotidiano è: prima con "Regola immagine" ritocca luminosità e contrasto → con "Dettagli" aumenta la nitidezza → con "Bilanciamento bianco" correggi le dominanti cromatiche → infine "Ritaglia" per l'inquadratura desiderata. La funzione "Locale" di Snapseed è molto utile, permette di regolare solo una zona dell'immagine senza toccare tutta la foto.
 - <strong>Xingtu/Meitu</strong>: queste due sono adatte al ritocco dei ritratti. Ma secondo me c'è un principio: il filtro bellezza entro il 30%, oltre è finto, la pelle sembra di plastica. Il naturale è più bello del perfetto.
-- <strong>Lightroom mobile</strong>: se hai pretese cromatiche, questo è il più professionale. Ha regolazione curve, regolazione HSL dei colori separati e altre funzioni avanzate. Per la maggior parte delle persone però è come usare un cannone per uccidere una mosca.
+- <strong>Lightroom mobile</strong>: se hai pretese cromatiche. Questo è il più professionale. Ha regolazione curve, regolazione HSL dei colori separati e altre funzioni avanzate. Per la maggior parte delle persone però è come usare un cannone per uccidere una mosca.
 - <strong>Consiglio sul flusso di ritocco</strong>: la mia abitudine è prima scattare bene l'originale, poi a casa ritoccare con calma sul monitor del computer o sull'iPad; lo schermo del telefono è troppo piccolo e i colori non precisissimi. Se devi proprio ritoccare sul telefono, ricorda di portare la luminosità a un livello medio-alto, non ritoccare in modalità risparmio energetico.
 
 #### 5. Troppe foto, come fare? Strategie di organizzazione

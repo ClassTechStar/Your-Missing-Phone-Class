@@ -10,7 +10,7 @@ class: mb-12
 ## 9. Bagian Praktik Pengembangan iOS (Bab 59-69)
 
 {class="chapter-intro mb-4"}
-Bagi kawan Apple, bagian ini untukmu: dari mengenal ekosistem iOS, memasang Xcode, lalu Swift dan SwiftUI, hingga dua proyek lengkap dan tayang di App Store. Perhatikan satu syarat mutlak — butuh sebuah Mac. Gagasan pemrograman Bagian 8 dan Bagian 9 saling nyambung; setelah menuntaskan satu bagian, mempelajari bagian satunya jauh lebih cepat. Lewati 11 bab ini, dan kamu bisa membuat App sungguhan yang terpasang di ratusan juta iPhone.
+Bagi kawan Apple, bagian ini untukmu: dari mengenal ekosistem iOS, memasang Xcode, lalu Swift dan SwiftUI, hingga dua proyek lengkap dan tayang di App Store. Perhatikan satu syarat mutlak, butuh sebuah Mac. Gagasan pemrograman Bagian 8 dan Bagian 9 saling nyambung; setelah menuntaskan satu bagian, mempelajari bagian satunya jauh lebih cepat. Lewati 11 bab ini, dan kamu bisa membuat App sungguhan yang terpasang di ratusan juta iPhone.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

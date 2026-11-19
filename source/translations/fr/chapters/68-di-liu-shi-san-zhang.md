@@ -57,7 +57,7 @@ Conseil brutal pour débutant : @State pour ce qui reste privé à une page, une
 
 #### 2. NavigationStack : la « pile » des sauts de page
 
-Depuis iOS 16, la navigation multi-pages passe par NavigationStack — comme une pile d'assiettes : on en pousse une après l'autre, et au retour on les dépile une à une :
+Depuis iOS 16, la navigation multi-pages passe par NavigationStack: comme une pile d'assiettes : on en pousse une après l'autre, et au retour on les dépile une à une :
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink, c'est le « lien de navigation cliquable » ; navigationTitle fabrique tout seul le titre de la barre de navigation et le bouton retour. Pour naviguer par le code (par exemple revenir en arrière automatiquement après un « Enregistrer »), emploie @Environment(\.dismiss) pour fermer la page courante — avec ces deux tours, 90 % des besoins de navigation sont couverts.
+NavigationLink, c'est le « lien de navigation cliquable » ; navigationTitle fabrique tout seul le titre de la barre de navigation et le bouton retour. Pour naviguer par le code (par exemple revenir en arrière automatiquement après un « Enregistrer »), emploie @Environment(\.dismiss) pour fermer la page courante: avec ces deux tours, 90 % des besoins de navigation sont couverts.
 
 #### 3. Fenêtres modales et onglets : sheet et TabView
 
@@ -141,7 +141,7 @@ Règle d'expérience : NavigationStack pour pousser les pages du parcours princi
 
 #### 4. List : la liste incontournable d'iOS
 
-Sur iOS, le composant le plus employé et le plus « pomme » qui soit, c'est List — il apporte d'origine séparateurs, suppression par glissement et surbrillance au tap :
+Sur iOS, le composant le plus employé et le plus « pomme » qui soit, c'est List, il apporte d'origine séparateurs, suppression par glissement et surbrillance au tap :
 
 ::: div .code-block
 :::inline div .code-head
@@ -166,7 +166,7 @@ struct RecordListView: View {
 ```
 :::
 
-Liste + NavigationLink + sheet + TabView — combine ces quatre ingrédients et tu peux déjà monter le squelette complet d'une App : « liste du carnet → ouvrir le détail → taper + pour faire apparaître la saisie ». C'est exactement ainsi que sera monté le projet carnet de comptes du chapitre suivant.
+Liste + NavigationLink + sheet + TabView, combine ces quatre ingrédients et tu peux déjà monter le squelette complet d'une App : « liste du carnet → ouvrir le détail → taper + pour faire apparaître la saisie ». C'est exactement ainsi que sera monté le projet carnet de comptes du chapitre suivant.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-Usages typiques : rafraîchir les données au retour au premier plan, enregistrer le brouillon en passant en arrière-plan. iOS encadre très strictement l'exécution en arrière-plan — une App ordinaire est vite suspendue (gelée) après y être passée ; n'espère pas y trimer en cachette. Pour une vraie tâche programmée, passe par les notifications locales du chapitre 68 plutôt que par la « résidence permanente en arrière-plan ».
+Usages typiques : rafraîchir les données au retour au premier plan, enregistrer le brouillon en passant en arrière-plan. iOS encadre très strictement l'exécution en arrière-plan, une App ordinaire est vite suspendue (gelée) après y être passée ; n'espère pas y trimer en cachette. Pour une vraie tâche programmée, passe par les notifications locales du chapitre 68 plutôt que par la « résidence permanente en arrière-plan ».
 
 {class="mt-1"}
-Réalise la version à fausses données du squelette du carnet de comptes : TabView à trois onglets (Carnet / Stats / Réglages) → la page Carnet affiche des fausses données dans une List, un tap sur une ligne ouvre le détail (NavigationStack) → le bouton « + » en haut à droite fait surgir la saisie en sheet. Aucune sauvegarde, aucun réseau : on ne fait que muscler le squelette — une fois celui-ci au point, remplir de vraies données au chapitre 65 coulera de source.
+Réalise la version à fausses données du squelette du carnet de comptes : TabView à trois onglets (Carnet / Stats / Réglages) → la page Carnet affiche des fausses données dans une List, un tap sur une ligne ouvre le détail (NavigationStack) → le bouton « + » en haut à droite fait surgir la saisie en sheet. Aucune sauvegarde, aucun réseau : on ne fait que muscler le squelette, une fois celui-ci au point, remplir de vraies données au chapitre 65 coulera de source.
 :::
 
 ::: div .chapter-summary

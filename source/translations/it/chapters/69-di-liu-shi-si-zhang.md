@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Un'app che serve solo a "guardare" è morta; un'app che salva dati e si collega alla rete è viva. In questo capitolo conosci il "trio" del livello dati di iOS: UserDefaults (le piccole configurazioni), SwiftData (i dati strutturati), URLSession (il dialogo con i server), più Codable per analizzare il JSON e il moderno async/await. A fine capitolo potrai scrivere app vere, capaci di ricordare le abitudini dell'utente e di aggiornare i contenuti in tempo reale.
 
-#### 1. Come scegliere lo schema di archiviazione: guarda prima questa tabella
+1. Come scegliere lo schema di archiviazione: guarda prima questa tabella
 
 ::: div .overflow-x-auto
 ```html
@@ -182,7 +182,7 @@ Attenzione alle trappole: le due regole ferree della rete
 {class="font-semibold"}
 Mettiti alla prova: crea una piccola app "frase del giorno"
 
-#### 6. Anche gli errori di rete vanno "classificati": non scaricare ogni errore addosso all'utente
+6. Anche gli errori di rete vanno "classificati": non scaricare ogni errore addosso all'utente
 
 Rete assente, timeout, 404, errore 500 del server… Per ogni errore diverso, l'utente dovrebbe leggere messaggi diversi:
 

@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Los capítulos anteriores hablaban de «cómo colaborar con la IA»; este capítulo responde a una pregunta más básica: «¿qué IA usar y cómo?». El panorama de los grandes modelos de agosto de 2026 es riquísimo: a nivel internacional compiten los tres grandes, GPT, Claude y Gemini, mientras que en China florecen DeepSeek, Tongyi Qianwen, GLM, Kimi y Doubao. Cada modelo tiene su carácter y sus fortalezas: elegir bien te ahorra la mitad del esfuerzo; elegir mal te cuesta el doble. Este capítulo no solo te presenta estos modelos, sino que también te enseña a conectarlos a tus propias aplicaciones mediante la API y a elegir el Token Plan (plan de consumo) adecuado según tus necesidades.
 
-#### 1. Los grandes modelos internacionales: un terreno de tres potencias
+1. Los grandes modelos internacionales: un terreno de tres potencias
 
 En el mercado internacional de grandes modelos de agosto de 2026 se ha consolidado un triángulo de potencias: OpenAI (serie GPT), Anthropic (serie Claude) y Google (serie Gemini). Cada una tiene un carácter muy marcado; vamos a conocerlas una por una.
 
@@ -213,9 +213,9 @@ Consejo: estrategia de combinación
 Este método de decisión no es un dogma: muchos escenarios requieren combinar varios modelos. Una estrategia común: DeepSeek o Qwen para el desarrollo diario (baratos y buenos en chino), Claude para el diseño de arquitecturas clave (razonamiento fuerte y pocas alucinaciones) y Gemini para el análisis multimodal (procesamiento de imágenes y vídeo). Cambia de modelo según lo que necesites, en vez de «usar uno hasta el final de los tiempos».
 :::
 
-#### 4. Primeros pasos con la API: integrar un gran modelo desde cero
+4. Primeros pasos con la API: integrar un gran modelo desde cero
 
-Muchos tutoriales de programación con IA solo enseñan a usar la interfaz de chat, pero la verdadera «programación con IA» —hacer que tu aplicación llame a un gran modelo— pasa por la API. La API (Application Programming Interface, interfaz de programación de aplicaciones) es el protocolo de comunicación entre programas. Con la API, tu código puede invocar la capacidad de un gran modelo igual que llama a una función.
+Muchos tutoriales de programación con IA solo enseñan a usar la interfaz de chat, pero la verdadera «programación con IA»:hacer que tu aplicación llame a un gran modelo, pasa por la API. La API (Application Programming Interface, interfaz de programación de aplicaciones) es el protocolo de comunicación entre programas. Con la API, tu código puede invocar la capacidad de un gran modelo igual que llama a una función.
 
 ##### 1. Qué es un token
 
@@ -429,7 +429,7 @@ Elegir bien el modelo es solo el primer paso; saber "usarlo de forma ahorrativa"
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Estrategias de optimización de costes y su efecto (agosto de 2026)
 
-#### VI. Práctica: conectar la API de un gran modelo en tu proyecto
+VI. Práctica: conectar la API de un gran modelo en tu proyecto
 
 Cerramos el capítulo con un ejercicio práctico completo: crear un "generador de resúmenes con IA": el usuario introduce un texto largo y se llama a la API de un gran modelo para generar un resumen. Esta práctica muestra el flujo completo de una llamada a la API: configuración del entorno, llamada, gestión de errores y control de costes.
 

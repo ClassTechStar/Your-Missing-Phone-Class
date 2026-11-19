@@ -57,8 +57,8 @@ SwiftUI 四大基础视图
 
 #### 三、布局三件套：VStack、HStack、ZStack
 
-- <strong>VStack</strong>：竖着排（像排队打饭）；
-- <strong>HStack</strong>：横着排（像并排坐）；
+- <strong>VStack</strong>：竖着排（像排队打饭）。
+- <strong>HStack</strong>：横着排（像并排坐）。
 - <strong>ZStack</strong>：叠着放（像扑克牌摞一起，适合做角标、遮罩）。
 
 ::: div .code-block
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-输入框要用"双向绑定"——<code class="inline">$</code> 符号把"值和修改权"一起传进去：
+输入框要用"双向绑定"<code class="inline">$</code> 符号把"值和修改权"一起传进去：
 
 ::: div .code-block
 :::inline div .code-head
@@ -152,8 +152,8 @@ struct InputView: View {
 
 #### 五、预览、主题与动画：SwiftUI 的"外挂"
 
-- <strong>#Preview 宏</strong>：文件底部加 <code class="inline">#Preview { ContentView() }</code>，右侧画布实时渲染——改代码所见即所得；
-- <strong>深色模式免费</strong>：用系统颜色（<code class="inline">Color(.systemGray6)</code>、<code class="inline">.primary</code>）而不是写死颜色，深色模式自动适配，一行不用多写；
+- <strong>#Preview 宏</strong>：文件底部加 <code class="inline">#Preview { ContentView() }</code>，右侧画布实时渲染，改代码所见即所得。
+- <strong>深色模式免费</strong>：用系统颜色（<code class="inline">Color(.systemGray6)</code>、<code class="inline">.primary</code>）而不是写死颜色，深色模式自动适配，一行不用多写。
 - <strong>动画一行搞定</strong>：<code class="inline">withAnimation { count += 1 }</code> 或给视图加 <code class="inline">.animation(.default, value: count)</code>——过渡丝滑。
 
 ::: div .code-block
@@ -186,7 +186,7 @@ struct AnimatedHeartView: View {
 <i class="fas fa-lightbulb mr-2"></i>小贴士：先功能后动画
 
 {class="mt-1"}
-新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效——动画是锦上添花，功能是雪中送炭。这也是咱们一贯的"简单至上"原则。
+新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效：动画是锦上添花，功能是雪中送炭。这也是咱们一贯的"简单至上"原则。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -204,7 +204,7 @@ struct AnimatedHeartView: View {
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 SwiftUI 常用修饰符速查
 
-记不住没关系——这页就是用来查的。用得最多的其实就前四个：padding、圆角、背景、字体。
+记不住没关系，这页就是用来查的。用得最多的其实就前四个：padding、圆角、背景、字体。
 
 {class="mt-1"}
 把模板项目改成一个心情切换器：一个按钮，点击后在 😀开心 → 😢难过 → 😡生气 之间循环切换，文字和背景色跟着变。提示：用数组存三组（文字+颜色），<code class="inline">@State</code> 存下标，点击时 <code class="inline">(index + 1) % 3</code>。做完发给朋友玩，收获第一波"哇你会做 App 了"。

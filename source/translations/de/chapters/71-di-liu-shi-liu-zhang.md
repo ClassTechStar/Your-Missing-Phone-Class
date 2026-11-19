@@ -18,7 +18,7 @@ Zum privaten Üben empfehle ich OpenWeatherMap oder das in China verbreitete QWe
 
 1. Konto registrieren → auf der API-keys-Seite einen Schlüssel (apikey) erzeugen;
 2. Die Gratisversion darf den Current-Weather-Endpunkt aufrufen: api.openweathermap.org/data/2.5/weather? q=beijing&appid=DEIN_KEY&units=metric;
-3. Probiere es zuerst einmal im Browser und schau dir an, wie das zurückkommende JSON aussieht – dieses „Vorbereiten“ ist vor dem Anbinden jeder API Pflicht.
+3. Probiere es zuerst einmal im Browser und schau dir an, wie das zurückkommende JSON aussieht – dieses „Vorbereiten“ ist vor dem Anbinden jeder API Pflicht
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -65,7 +65,7 @@ struct WeatherService {
 ```
 :::
 
-#### 3. Die drei Oberflächenzustände: lädt / erfolgreich / fehlgeschlagen
+3. Die drei Oberflächenzustände: lädt / erfolgreich / fehlgeschlagen
 
 Die Seele einer vernetzten App liegt im „State-Management“. Langsames Netz, keine Verbindung, falsch geschriebener Stadtname … In jedem Fall muss die Oberfläche dem Nutzer Rechenschaft geben. Eleganz erreichst du mit enum + switch:
 
@@ -146,7 +146,7 @@ Ein paar kleine Details sind es wert, gelernt zu werden: first? holt sicher das 
 - Suchfeld: der Modifier .searchable oben; die Suchinteraktion kommt aus dem System, beim Absenden rufst du vm.search auf;
 - Lieblingsstädte: oft angesehene Städte in UserDefaults speichern, beim nächsten Start automatisch abfragen;
 - Zum-Aktualisieren-Ziehen: eine Zeile mit .refreshable { await vm.search(...) };
-- Wettericons: Mit Image(systemName:) nach Beschreibung zuordnen (sun.max / cloud.rain / snowflake) – die Oberfläche lebt sofort auf.
+- Wettericons: Mit Image(systemName:) nach Beschreibung zuordnen (sun.max / cloud.rain / snowflake) – die Oberfläche lebt sofort auf
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -160,13 +160,13 @@ OpenWeatherMap unterstützt chinesische Städtenamen nur mäßig: Die Suche nach
 {class="font-semibold"}
 Jetzt bist du dran: die Abnahme-Checkliste für die Wetter-App
 
-#### 6. Netzwerkanfragen debuggen: Ausgabe, Mitschnitt und simuliertes langsames Netz
+6. Netzwerkanfragen debuggen: Ausgabe, Mitschnitt und simuliertes langsames Netz
 
 Wenn eine vernetzte App Probleme macht, liegt es in neun von zehn Fällen daran, dass „die Anfrage falsch abgesetzt“ oder „die Antwort falsch geparst“ wurde. Drei Debug-Mittel:
 
 1. Rohdaten ausgeben: String(data: data, encoding: .utf8) per print ausgeben und das Roh-JSON ansehen – Feldnamen und Typen auf einen Blick, zehnmal schneller als Raten;
 2. Mitschnitt-Tools: Auf dem Mac fängt das kostenlose Proxyman beziehungsweise das Open-Source-Charles alle Anfragen und Antworten der App ab – die Netzwerkschicht wird sichtbar wie auf einem Röntgenbild;
-3. Schwaches Netz simulieren: Im Simulator-Menü unter Features → Network Link Conditioner (das Tool musst du von der Entwickler-Website laden) lassen sich 3G und hohe Latenz simulieren – so entlarvst du Erfahrungsprobleme wie das „endlose Warten mit Ladekreisen“.
+3. Schwaches Netz simulieren: Im Simulator-Menü unter Features → Network Link Conditioner (das Tool musst du von der Entwickler-Website laden) lassen sich 3G und hohe Latenz simulieren – so entlarvst du Erfahrungsprobleme wie das „endlose Warten mit Ladekreisen“
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -9,7 +9,7 @@ kind: supplement
 ### Appendix: Android Phone Memory Expansion Explained
 
 {class="chapter-intro mb-4"}
-When buying a phone, you often see promotions like "12GB+8GB RAM"—as if 8GB of RAM has appeared out of thin air. But can it really make the phone faster? Could it actually damage the phone? In this section, we'll thoroughly explain the technology of "memory expansion."
+When buying a phone, you often see promotions like "12GB+8GB RAM",as if 8GB of RAM has appeared out of thin air. But can it really make the phone faster? Could it actually damage the phone? In this section, we'll thoroughly explain the technology of "memory expansion."
 
 #### 1. Essential Definition
 
@@ -39,17 +39,17 @@ The fundamental limitation of this technology is the speed difference. Currently
 
 Memory expansion is not a panacea; effects vary by model and usage scenario:
 
-- <strong>When it helps</strong>: Models with 6GB physical RAM + UFS 3.1 or above, with ≥30GB free space, can keep 3-4 more apps alive in the background after enabling 3GB expansion, with a 68% reduction in reload rate—suitable for heavy multitaskers like delivery riders and ride-hailing drivers.
+- <strong>When it helps</strong>: Models with 6GB physical RAM + UFS 3.1 or above, with ≥30GB free space, can keep 3-4 more apps alive in the background after enabling 3GB expansion, with a 68% reduction in reload rate,suitable for heavy multitaskers like delivery riders and ride-hailing drivers.
 - <strong>Daily scenarios</strong>: Significant improvements for WeChat multi-instance, browser tab retention, instant messaging response, with noticeably shorter cold-start times for background apps.
 - <strong>Limited scenarios</strong>: Limited improvement for high-bandwidth scenarios like large game loading and 4K video editing.
 - <strong>When it's harmful</strong>: Models with 8GB RAM + UFS 2.2 and insufficient free space, where enabling it actually increases game frame rate fluctuations, with more battery drain when scrolling short videos and lag when switching.
-- <strong>When it's useless</strong>: Models with 16GB+ of large RAM see almost zero benefit—at most keeping one more app alive, but increasing CPU load by 12% and heat by 2-3°C. For models with more than 12GB RAM, it's recommended to simply turn it off to avoid meaningless compression computation.
+- <strong>When it's useless</strong>: Models with 16GB+ of large RAM see almost zero benefit:at most keeping one more app alive, but increasing CPU load by 12% and heat by 2-3°C. For models with more than 12GB RAM, it's recommended to simply turn it off to avoid meaningless compression computation.
 
 #### 5. Naming and Enabling Methods by Manufacturer
 
 Different brands call it differently: Xiaomi calls it "Memory Extension," Huawei calls it "Memory Fusion," Samsung calls it "RAM Plus," vivo names it "Extended RAM," OnePlus calls it "Memory Extension." This feature is a system-native capability and is not directly tied to the underlying Android version.
 
-The general enabling path is: Enter [Settings] → [More Settings] → find the [Memory] or [Performance] sub-item → enable "Memory Expansion" and select the capacity tier (usually 2GB–7GB), taking effect after restart. After enabling, the system will display a memory combination such as "8GB+4GB".
+The general enabling path is: enter [Settings] → [More Settings] → find the [Memory] or [Performance] sub-item. Then enable "Memory Expansion" and select the capacity tier (usually 2GB–7GB), taking effect after restart. After enabling, the system will display a memory combination such as "8GB+4GB".
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -66,7 +66,7 @@ The general enabling path is: Enter [Settings] → [More Settings] → find the 
 <i class="fas fa-info-circle mr-2"></i>Summary
 
 {class="mt-1"}
-Memory expansion is a mature system-level optimization technology that can improve multitasking capability and background retention for mid-to-low-end models without hardware changes, but it's limited by the huge speed gap between flash and physical memory, and is not a "miracle cure." Whether to enable it and how much to set should be judged based on your model's physical memory size, flash specification, free storage space, and usage habits.
+Memory expansion is a mature system-level optimization technology. It can improve multitasking capability and background retention for mid-to-low-end models without hardware changes, but it's limited by the huge speed gap between flash and physical memory, and is not a "miracle cure." Whether to enable it and how much to set should be judged based on your model's physical memory size, flash specification, free storage space, and usage habits.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

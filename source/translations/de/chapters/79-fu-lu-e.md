@@ -72,21 +72,21 @@ Neu: Teil 7 „KI-Programmierung in der Praxis“ (Kapitel 37–47, insgesamt 11
 
 Neu: Teil 8 „Android-Entwicklung in der Praxis“ (Kapitel 48–58, insgesamt 11 Kapitel) und Teil 9 „iOS-Entwicklung in der Praxis“ (Kapitel 59–69, insgesamt 11 Kapitel): Beide Plattformen decken ab – Umgebungsaufbau (Android Studio / Xcode), Sprach-Crashkurs (Kotlin / Swift), UI-Frameworks (Jetpack Compose / SwiftUI), Daten und Netzwerk, zwei vollständige Praxisprojekte (Haushaltsbuch + Wetterabfrage), Testen und Veröffentlichen (Google Play / App Store) sowie ein Spickzettel. Inhaltsverzeichnis, Lernpfad (sechs → acht Schritte), Kapitelkarte und Schnellindex wurden synchron aktualisiert. Die Inhalte stammen aus „Android-Entwicklung von null an“ und „iOS-Entwicklung von null an“, Ausgabe August 2026.
 
-#### Inhaltliche Ergänzungen: Nützliche Software und Spam-/Belästigungsfilter
+Inhaltliche Ergänzungen: Nützliche Software und Spam-/Belästigungsfilter
 
 - Kapitel 13, neuer Abschnitt 6 „Praktische Systemwerkzeuge“: Aufräum- und Bereinigungstools wie QingZhuo, die im System eingebaute Speicherbereinigung, das Nationale Anti-Betrugs-Zentrum, die Handy-Manager der Hersteller, der Anti-Belästigungs-Service der Netzbetreiber und AdGuard – plus das Auswahlprinzip „erst das System / offizielle Ergänzungen / bei Drittanbietern Zurückhaltung“.
 - Hersteller-Tabelle zur eingebauten Spam-/Belästigungs-Blockierung: Einstiegspfade und empfohlene Einstellungen für iOS, Xiaomi/Redmi, Huawei/Honor, OPPO/realme/OnePlus, vivo/iQOO und Samsung.
 - Erweiterung der Spam-/Belästigungs-Blockierung in Kapitel 8: ergänzt um praktische Anleitungen für die Anruferkennung, Schwarz- und Weißlisten, den SMS-Schlüsselwortfilter, iOS „Unbekannte Anrufer stummschalten“ und die Kopplung mit „Nicht stören“ – mit Querverweisen zu Kapitel 13.
 - Empfehlung für dreifachen Schutz: System-Blockierung + Anti-Belästigungs-Service des Netzbetreibers + Nationales Anti-Betrugs-Zentrum – mit dem Hinweis, wie wichtig eine Whitelist gegen Fehlblockierungen ist.
 
-#### Inhaltliche Ergänzungen: Unwetterwarnung / Warnung vor Naturkatastrophen / Erdbeben-Frühwarnung
+Inhaltliche Ergänzungen: Unwetterwarnung / Warnung vor Naturkatastrophen / Erdbeben-Frühwarnung
 
 - Kapitel 13, neuer Abschnitt 7: Unwetterwarnung (offizielle Wetterkanäle + Wetter-App des Systems + Farbstufen), Warnung vor Naturkatastrophen (mehrere Kanäle von Wetter- und Notfallbehörden), Prinzip und Irrtümer der Erdbeben-Frühwarnung (Warnung ≠ Vorhersage).
 - Aktivierungstabelle für die Erdbeben-Frühwarnung nach Marke: die üblichen Einstiegspunkte bei Xiaomi, Huawei/Honor, der OPPO-Familie, vivo, iPhone, Samsung usw. und worauf du bei den Berechtigungen achten musst.
 - Kapitel 32, neu: „Szenario Null“ – die Schutzreihenfolge nach dem Erdbebenalarm, Verhalten bei Starkregen/Taifun und die Verbindung zu Satelliten-SOS / Kommunikation ohne Netz; das Erste-Hilfe-Handbuch ist mit den Warn-Einstellungen in Kapitel 13 verknüpft.
 - Verzahnung mit dem Wetter-Abschnitt: Der Wetter-App-Eintrag im Reisekapitel wurde um Warn-Benachrichtigungen und den Hinweis ergänzt, dass „die Warnungen nur ankommen, wenn Benachrichtigungen aktiviert sind“.
 
-#### Inhaltliche Ergänzungen: Geräteübergreifende Zusammenarbeit und Effizienz-Tools
+Inhaltliche Ergänzungen: Geräteübergreifende Zusammenarbeit und Effizienz-Tools
 
 - Kapitel 13, Abschnitt 8: den PC vom Handy aus fernsteuern (Sunlogin, ToDesk) samt Anti-Betrug-Rotlinien; KI im Büro (Trae / WorkBuddy / Dumate) und der Workflow „Handy steuert den PC“; die dynamischen Hintergrundbilder von miHoYos „Artificial Desktop“.
 - LAN-Schnellübertragung und Zwischenablage: LocalSend, Feige, AirDrop; KDE Connect, die universelle Zwischenablage und Handy-PC-Übertragung der Hersteller.

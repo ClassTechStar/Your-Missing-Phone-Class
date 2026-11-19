@@ -31,7 +31,7 @@ kind: supplement
 
 - <strong>動畫速度調節（視窗動畫縮放 / 過渡動畫縮放 / 動畫程式時長縮放）</strong>：這三個選項控制開啟App、切換頁面時的動畫時長。預設是1x，調到0.5x會讓手機"看起來"更快（實際上程式執行速度沒變，只是動畫變快了），調到關閉則直接無動畫跳轉。多數極客會設為0.5x，既保留過渡感又顯快；完全關閉會讓操作顯得生硬，並且可能掩蓋程式真實的卡頓，反而讓你誤以為"很流暢"。
 - <strong>強制GPU渲染（Force GPU Rendering）</strong>：強制所有2D繪圖透過GPU而非CPU處理。在老舊機型或某些App最佳化不佳時能提升滾動流暢度，但也會增加GPU負載和耗電。現代手機預設已大量使用GPU渲染，這個開關對中高階機型影響有限，更多是歷史遺留選項，普通使用者保持預設即可。
-- <strong>顯示GPU呈現模式分析（Profile GPU Rendering）</strong>：在螢幕上以柱狀圖實時顯示每幀的渲染耗時，綠色橫線代表16.6ms（60fps的幀時間閾值）。柱子超過綠線就說明掉幀了。這是開發者排查App卡頓的利器，普通使用者也可以用它來對比哪個App最佳化得差——比如某個App滾動時柱子經常飆到紅線以上，那基本就是它的鍋。
+- <strong>顯示GPU呈現模式分析（Profile GPU Rendering）</strong>：在螢幕上以柱狀圖實時顯示每幀的渲染耗時，綠色橫線代表16.6ms（60fps的幀時間閾值）。柱子超過綠線就說明掉幀了。這是開發者排查App卡頓的利器，普通使用者也可以用它來對比哪個App最佳化得差，比如某個App滾動時柱子經常飆到紅線以上，那基本就是它的鍋。
 
 ##### 後臺與續航相關：
 
@@ -48,11 +48,11 @@ kind: supplement
 
 #### 二、OEM解鎖：開發者選項裡的"刷機開關"
 
-在開發者選項裡有一個不太起眼但很重要的開關——"OEM解鎖"（部分品牌叫"OEM解鎖允許"或"裝置解鎖"）。這個開關本身不會解鎖BL鎖，但它是一個"前置許可"：只有開啟它，廠商才允許你透過fastboot命令或品牌工具去解鎖BL。
+在開發者選項裡有一個不太起眼但很重要的開關："OEM解鎖"（部分品牌叫"OEM解鎖允許"或"裝置解鎖"）。這個開關本身不會解鎖BL鎖，但它是一個"前置許可"：只有開啟它，廠商才允許你透過fastboot命令或品牌工具去解鎖BL。
 
 - <strong>開關的作用</strong>：相當於向廠商宣告"我同意放棄保修、自負風險，請允許我解鎖BL"。如果這個開關是關閉的，任何解鎖BL的命令都會被直接拒絕。
 - <strong>與BL鎖的關係</strong>：OEM解鎖是"申請資格"，BL解鎖才是"實際操作"。前者在手機設定裡點一下就行，後者需要去廠商官網申請解鎖碼、用電腦跑fastboot命令（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>），二者缺一不可。
-- <strong>恢復出廠設定會重置嗎</strong>：會。"OEM解鎖"開關在恢復出廠後會回到關閉狀態，但BL鎖一旦解鎖就是物理級別的狀態，不會因為恢復出廠而重新上鎖——需要手動執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> 才能重新上鎖。
+- <strong>恢復出廠設定會重置嗎</strong>：會。"OEM解鎖"開關在恢復出廠後會回到關閉狀態，但BL鎖一旦解鎖就是物理級別的狀態，不會因為恢復出廠而重新上鎖，需要手動執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> 才能重新上鎖。
 - <strong>什麼時候應該開啟</strong>：除非你確定要刷機或Root，否則保持關閉。它和"USB除錯"是兩個獨立開關，刷機時通常需要同時開啟。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -60,7 +60,7 @@ kind: supplement
 <i class="fas fa-info-circle mr-2"></i>小知識：為什麼廠商要設定這個開關
 
 {class="mt-1"}
-早期安卓沒有這個開關，惡意軟體只要拿到許可權就能偷偷刷入系統。Google後來要求所有安卓廠商在開發者選項中加入"OEM解鎖"開關，作為一道"使用者知情同意"的確認。這也就是為什麼即便你解了BL鎖，如果OEM解鎖開關被關閉，重新刷機仍然會失敗。
+早期安卓沒有這個開關。惡意軟體只要拿到許可權就能偷偷刷入系統。Google後來要求所有安卓廠商在開發者選項中加入"OEM解鎖"開關，作為一道"使用者知情同意"的確認。這也就是為什麼即便你解了BL鎖，如果OEM解鎖開關被關閉，重新刷機仍然會失敗。
 :::
 
 #### 三、BL鎖（Bootloader鎖）：刷機的第一道門
@@ -84,7 +84,7 @@ Bootloader是手機啟動時載入作業系統的程式。BL鎖就是廠商為�
 
 #### 四、ADB實用命令：透過電腦控制手機
 
-ADB 全稱 Android Debug Bridge（安卓除錯橋），是 Google 官方提供的命令列工具，讓電腦透過 USB 或 Wi-Fi 與安卓手機通訊。它本身不需要 Root，只要手機開了"USB除錯"就能用。可以把它理解為"用電腦給手機下指令的遙控器"——刷機、裝App、傳檔案、查日誌，都得靠它。
+ADB 全稱 Android Debug Bridge（安卓除錯橋），是 Google 官方提供的命令列工具，讓電腦透過 USB 或 Wi-Fi 與安卓手機通訊。它本身不需要 Root，只要手機開了"USB除錯"就能用。可以把它理解為"用電腦給手機下指令的遙控器"：刷機、裝App、傳檔案、查日誌，都得靠它。
 
 ##### 如何透過 USB 連線：
 
@@ -135,7 +135,7 @@ Windows 使用者如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">
 <i class="fas fa-info-circle mr-2"></i>小知識：--user 0 是什麼意思
 
 {class="mt-1"}
-安卓 4.2 之後支援多使用者，每個使用者有獨立的 ID（機主是 0，附加使用者從 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"只對當前機主解除安裝"，系統分割區裡的 APK 檔案依然存在，只是不給機主顯示了。這就是為什麼它不需要 Root——沒動系統檔案，只是改了"使用者配置"。這也是它和 Root 後解除安裝最大的區別：Root 解除安裝是真正從系統裡刪掉，所有使用者都不再有；ADB 解除安裝只是"對當前使用者隱藏"。
+安卓 4.2 之後支援多使用者，每個使用者有獨立的 ID（機主是 0，附加使用者從 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"只對當前機主解除安裝"，系統分割區裡的 APK 檔案依然存在，只是不給機主顯示了。這就是為什麼它不需要 Root，沒動系統檔案，只是改了"使用者配置"。這也是它和 Root 後解除安裝最大的區別：Root 解除安裝是真正從系統裡刪掉，所有使用者都不再有；ADB 解除安裝只是"對當前使用者隱藏"。
 :::
 
 #### 五、Root許可權：安卓的"超級管理員"
@@ -167,13 +167,13 @@ Root操作有一定風險，可能導致手機變磚（無法開機）。如果�
 
 #### 六、SafetyNet與Play Integrity認證：為什麼Root後銀行App不能用
 
-很多Root使用者都遇到過這樣的崩潰瞬間：Root之後興致勃勃地裝了一堆模組，結果開啟銀行App——"您的裝置不安全，無法使用"，Google Pay也用不了，連Netflix都拒絕高畫質播放。這背後是Google的兩套裝置完整性認證機制：舊的 SafetyNet 和新的 Play Integrity API。
+很多Root使用者都遇到過這樣的崩潰瞬間：Root之後興致勃勃地裝了一堆模組，結果開啟銀行App，"您的裝置不安全，無法使用"，Google Pay也用不了，連Netflix都拒絕高畫質播放。這背後是Google的兩套裝置完整性認證機制：舊的 SafetyNet 和新的 Play Integrity API。
 
 ##### 什麼是 SafetyNet / Play Integrity：
 
 - <strong>SafetyNet Attestation（舊版，2017年起）</strong>：Google 早期推出的裝置完整性檢查 API，應用透過它向 Google 伺服器查詢"這臺裝置是否透過 CTS 相容性測試、是否處於未修改的官方狀態"。返回結果分為 Basic Attestation（基礎校驗）和 Strong Attestation（強校驗，依賴硬體金鑰）。Google 已宣佈 SafetyNet 將在 2024 年後逐步停用。
 - <strong>Play Integrity API（新版，2022年起）</strong>：Google 推出的替代方案，比 SafetyNet 更嚴格也更全面。除了裝置完整性，還包括"應用完整性"（App 是否被篡改）和"帳號/授權完整性"（使用者帳號是否被 Google 信任）。新 App 應遷移到 Play Integrity。
-- <strong>誰來用</strong>：銀行、金融、支付類 App（如 Google Pay、各銀行的網銀、支付寶/微信支付的部分場景）、流媒體（Netflix 高畫質版權保護）、部分遊戲反作弊（如騰訊/網易的部分遊戲）、企業辦公 App（MDM 裝置合規性檢查）。
+- <strong>誰來用</strong>：銀行、金融、支付類 App（如 Google Pay、各銀行的網銀、支付寶/微信支付的部分場景）。流媒體（Netflix 高畫質版權保護）、部分遊戲反作弊（如騰訊/網易的部分遊戲）、企業辦公 App（MDM 裝置合規性檢查）。
 
 ##### Play Integrity 的三級認證結果：
 
@@ -184,13 +184,13 @@ Root操作有一定風險，可能導致手機變磚（無法開機）。如果�
 
 ##### 為什麼 Root 後這些 App 會失效：
 
-應用透過 Play Integrity API 向 Google 伺服器發起認證請求，Google 會檢查裝置的多項指標——Bootloader 鎖定狀態、系統分割區是否被修改、是否存在 su 二進位制檔案、SELinux 是否處於寬鬆模式等。任何一項異常都會導致返回的認證級別降低或為空，銀行 App 一看"裝置不安全"，自然就拒絕服務了。
+應用透過 Play Integrity API 向 Google 伺服器發起認證請求，Google 會檢查裝置的多項指標：Bootloader 鎖定狀態、系統分割區是否被修改、是否存在 su 二進位制檔案、SELinux 是否處於寬鬆模式等。任何一項異常都會導致返回的認證級別降低或為空，銀行 App 一看"裝置不安全"，自然就拒絕服務了。
 
 ##### 現代隱藏方案：Magisk Hide / Shamiko / Zygisk：
 
-為了在享受 Root 便利的同時還能用銀行 App，社群開發了一系列"隱藏 Root 狀態"的方案。核心思路都是：讓檢測程式看到的不是一個被修改過的系統，而是一個"看起來正常"的裝置。
+為了在享受 Root 便利的同時還能用銀行 App，社群開發了一系列"隱藏 Root 狀態"的方案。核心思路都是：不是一個被修改過的系統，是一個"看起來正常"的裝置。
 
-- <strong>Magisk</strong>：當前最主流的 Systemless Root 方案——不修改系統分割區，而是透過掛載的方式實現 Root。這樣設計的好處是 OTA 更新失敗的機率小、解除安裝比較乾淨，是後續所有隱藏方案的基礎。但使用 Magisk 仍然需要解鎖 BL 鎖。
+- <strong>Magisk</strong>：當前最主流的 Systemless Root 方案，不修改系統分割區，而是透過掛載的方式實現 Root。這樣設計的好處是 OTA 更新失敗的機率小、解除安裝比較乾淨，是後續所有隱藏方案的基礎。但使用 Magisk 仍然需要解鎖 BL 鎖。
 - <strong>Magisk Hide（已停更）</strong>：Magisk 早期內建的隱藏模組，能對指定 App 隱藏 Root。但 2021 年起已被 Magisk 官方移除，原因是 Google 持續升級檢測手段，雙方陷入"貓鼠遊戲"。
 - <strong>Zygisk</strong>：Magisk 24.0+ 引入的新機制，類似 Riru，透過注入 Zygote 程式實現模組載入，比直接修改系統更隱蔽。開啟 Zygisk 是使用現代隱藏方案的前提。
 - <strong>Shamiko</strong>：當前最主流的隱藏模組，配合 Zygisk 工作，可以為指定 App（"反向白名單"模式）隱藏 Root、隱藏 Magisk 自身、偽造 Bootloader 鎖定狀態。Shamiko 透過 LSPosed 倉庫或 GitHub 分發。

@@ -2,21 +2,21 @@
 id: di-er-shi-er-zhang
 num: 22
 part: chao-yue-pian
-nav: Bab 22: Bagaimana AI Bekerja di dalam Ponsel
+nav: Bab 22: Sebenarnya apa yang AI lakukan di ponsel Anda?
 toc: default
 kind: chapter
 ---
 
-### Bab 22: Bagaimana AI bekerja di ponsel
+### Bab 22: Sebenarnya apa yang AI lakukan di ponsel Anda?
 
 {class="chapter-intro mb-4"}
 1\. Kamera AI: "Ruang Gelap Pasca-Produksi" Anda Pindah ke Ponsel
 
-#### 1. Kamera AI: "Ruang Gelap Pasca-Produksi" Anda Pindah ke Ponsel
+1. Kamera AI: "Ruang Gelap Pasca-Produksi" Anda Pindah ke Ponsel
 
 2\. Asisten Suara: Bagaimana "Sekretaris Suara" Anda Memahami Anda?
 
-#### 2. Asisten Suara: Bagaimana "Sekretaris Suara" Anda Memahami Anda?
+2. Asisten Suara: Bagaimana "Sekretaris Suara" Anda Memahami Anda?
 
 1. <strong>: Mengubah gelombang suara menjadi teks.</strong> Memahami (pemahaman bahasa alami)
 2. <strong>: Memahami maksud, mengekstrak entitas kunci.</strong> Menjalankan dan menjawab
@@ -36,17 +36,17 @@ Aplikasi Model Besar AI di Ponsel:
 
 ##### Asisten percakapan
 
-- <strong>: App seperti DeepSeek, ChatGPT, Doubao, Kimi, dll., bisa bertanya, menerjemahkan, menulis copy, meringkas artikel kapan saja. Lebih cerdas dari mesin pencari tradisional—ia tidak hanya memberi Anda tautan, tetapi langsung memberi jawaban.</strong> Penulisan dan kreasi
+- <strong>: App seperti DeepSeek, ChatGPT, Doubao, Kimi, dll., bisa bertanya, menerjemahkan, menulis copy, meringkas artikel kapan saja. Lebih cerdas dari mesin pencari tradisional:ia tidak hanya memberi Anda tautan, tetapi langsung memberi jawaban.</strong> Penulisan dan kreasi
 - <strong>: Biarkan AI membantu Anda menulis email, meringkas notulen rapat, memoles artikel, menghasilkan copy kreatif.</strong> Pembuatan dan pengeditan gambar
 - <strong>: AI menghapus orang yang lewat di foto dengan satu klik, memperluas batas gambar, mengubah gaya, bahkan menghasilkan gambar berdasarkan deskripsi teks.</strong> Terjemahan real-time
 - <strong>Terjemahan real-time</strong> Bimbingan belajar
-- <strong>: AI bisa menjelaskan konsep, memberikan soal latihan, mengoreksi pekerjaan—tutor pribadi yang selalu bersama Anda.</strong> Model Besar Sisi Perangkat: Ponsel Menjalankan AI Sendiri
+- <strong>: AI bisa menjelaskan konsep, memberikan soal latihan, mengoreksi pekerjaan,tutor pribadi yang selalu bersama Anda.</strong> Model Besar Sisi Perangkat: Ponsel Menjalankan AI Sendiri
 
 ##### Ponsel flagship terbaru sudah bisa menjalankan model besar AI kecil secara lokal (biasanya sekitar parameter 7B), perubahan yang dibawa:
 
 Tidak perlu jaringan
 
-- <strong>: Bisa menggunakan fungsi AI bahkan saat offline—di pesawat atau di kereta bawah tanah.</strong> Privasi lebih aman
+- <strong>: Bisa menggunakan fungsi AI bahkan saat offline,di pesawat atau di kereta bawah tanah.</strong> Privasi lebih aman
 - <strong>: Percakapan dan data Anda tidak diunggah ke cloud, sepenuhnya diproses secara lokal di ponsel.</strong> Respons lebih cepat
 - <strong>: Tanpa latensi jaringan, respons AI hampir instan.</strong> Keterbatasan saat ini
 - <strong>: Kemampuan model sisi perangkat masih kalah dengan model besar cloud, tugas kompleks masih memerlukan koneksi internet. Namun seiring peningkatan daya komputasi AI chip, model sisi perangkat akan semakin kuat.</strong> Integrasi AI Tingkat Sistem:
@@ -60,7 +60,7 @@ Tidak perlu jaringan
 
 #### 5. Beberapa Skenario Aplikasi Tipikal dan Praktik
 
-Skenario 1: Terjemahan Real-time—Penerjemah Pribadi untuk Bepergian ke Luar Negeri
+Skenario 1: Terjemahan Real-time,Penerjemah Pribadi untuk Bepergian ke Luar Negeri
 
 ##### Performa aktual
 
@@ -92,7 +92,7 @@ Skenario 1: Terjemahan Real-time—Penerjemah Pribadi untuk Bepergian ke Luar Ne
 
 <strong>: Model computer vision (CV) melakukan vektorisasi (Embedding) pada konten gambar, lalu mencocokkan kemiripan dengan kueri teks. "Pencarian multimodal" ini adalah lompatan besar dalam manajemen album ponsel.</strong>6. Optimasi Prompt: "Formula Komunikasi" agar AI Mendengarkan Perintah Anda
 
-#### 6. Optimasi Prompt: "Formula Komunikasi" agar AI Mendengarkan Perintah Anda
+6. Optimasi Prompt: "Formula Komunikasi" agar AI Mendengarkan Perintah Anda
 
 pemikiran komunikasi "Peran-Latar Belakang-Tugas-Batasan" yang paling praktis dan mudah dipelajari <strong>, lengkap dengan banyak contoh.</strong> Mengapa Perlu Kerangka?
 
@@ -245,7 +245,11 @@ Menulis prompt yang baik bukan hal sekali jadi,<strong>setelah selesai, periksa 
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Anda adalah blogger sarapan yang ahli dalam paduan nutrisi (<strong>Peran</strong>). Saya adalah ibu pekerja kantoran, setiap pagi hanya punya 15 menit untuk membuat sarapan, di rumah ada anak berusia 6 tahun dan mertua berusia 60 tahun (<strong>Latar Belakang</strong>). Tolong <strong>daftar 7 menu sarapan tanpa pengulangan</strong>(<strong>Tugas</strong>). Setiap sarapan harus: ① Waktu persiapan tidak lebih dari 15 menit ② Nutrisi seimbang (protein + karbohidrat + buah/sayur) ③ Cocok untuk semua usia ④ Bahan bisa dibeli di supermarket biasa (<strong>Batasan</strong>).
+Anda adalah blogger sarapan yang ahli dalam paduan nutrisi (<strong>Peran</strong>). Saya adalah ibu pekerja kantoran, setiap pagi hanya punya 15 menit untuk membuat sarapan, di rumah ada anak berusia 6 tahun dan mertua berusia 60 tahun (<strong>Latar Belakang</strong>). Tolong <strong>daftar 7 menu sarapan tanpa pengulangan</strong>(<strong>Tugas</strong>). Setiap sarapan harus:
+1. Waktu persiapan tidak lebih dari 15 menit;
+2. Nutrisi seimbang (protein + karbohidrat + buah/sayur);
+3. Cocok untuk semua usia;
+4. Bahan bisa dibeli di supermarket biasa (<strong>Batasan</strong>).
 
 {class="mt-1"}
 <strong>Mengapa efektif</strong>: Peran menentukan tingkat profesional, latar belakang memberi kesamaan tiga jenis orang, tugas menjelaskan hasil yang harus disampaikan, 4 batasan memastikan bisa dieksekusi.
@@ -259,7 +263,11 @@ Anda adalah blogger sarapan yang ahli dalam paduan nutrisi (<strong>Peran</stron
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Anda adalah <strong>guru CET-6 bahasa Inggris yang berpengalaman</strong>(Peran). Saya mahasiswa sarjana biasa,<strong>skor CET-4 480, target CET-6 500, masih ada 3 bulan</strong>(Latar belakang). Tolong <strong>buatkan rencana persiapan 12 minggu yang bisa dieksekusi</strong>(Tugas). Persyaratan: ① Setiap minggu jelaskan alokasi waktu untuk mendengar, berbicara, membaca, menulis ② Berikan fokus terobosan untuk setiap bulan ③ Rekomendasikan 3 buku materi review yang sesuai (jelaskan alasan dalam bahasa Mandarin) ④ Output dalam format tabel (Batasan).
+Anda adalah <strong>guru CET-6 bahasa Inggris yang berpengalaman</strong>(Peran). Saya mahasiswa sarjana biasa,<strong>skor CET-4 480, target CET-6 500, masih ada 3 bulan</strong>(Latar belakang). Tolong <strong>buatkan rencana persiapan 12 minggu yang bisa dieksekusi</strong>(Tugas). Persyaratan:
+1. Setiap minggu jelaskan alokasi waktu untuk mendengar, berbicara, membaca, menulis;
+2. Berikan fokus terobosan untuk setiap bulan;
+3. Rekomendasikan 3 buku materi review yang sesuai (jelaskan alasan dalam bahasa Mandarin);
+4. Output dalam format tabel (Batasan).
 
 {class="mt-1"}
 <strong>Mengapa efektif</strong>: Peran menentukan latar belakang profesional, latar belakang memberi jangkar skor dan waktu, tugas menjelaskan "rencana bertahap", batasan meminta "tabulasi" dan "bisa dieksekusi".
@@ -273,7 +281,11 @@ Anda adalah <strong>guru CET-6 bahasa Inggris yang berpengalaman</strong>(Peran)
 <strong>Prompt</strong>:
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
-Anda adalah <strong>asisten administrasi senior</strong>(Peran). Saya baru saja selesai rapat departemen 1 jam,<strong>membahas rencana promosi pemasaran Q2</strong>(Latar belakang).<strong>Tolong susun catatan rapat berikut menjadi notulen terstruktur</strong>(Tugas). Persyaratan: ① Bagi menjadi tiga bagian "Keputusan / To-do / Risiko dan Keberatan" ② To-do list tandai penanggung jawab dan tenggat waktu (jika tidak disebutkan, tulis "belum dikonfirmasi") ③ Total kata dalam 600 kata ④ Output format markdown (Batasan).
+Anda adalah <strong>asisten administrasi senior</strong>(Peran). Saya baru saja selesai rapat departemen 1 jam,<strong>membahas rencana promosi pemasaran Q2</strong>(Latar belakang).<strong>Tolong susun catatan rapat berikut menjadi notulen terstruktur</strong>(Tugas). Persyaratan:
+1. Bagi menjadi tiga bagian "Keputusan / To-do / Risiko dan Keberatan";
+2. To-do list tandai penanggung jawab dan tenggat waktu (jika tidak disebutkan, tulis "belum dikonfirmasi")
+3. Total kata dalam 600 kata
+4. Output format markdown (Batasan).
 
 {class="mt-1"}
 <strong>Mengapa efektif</strong>: Peran menentukan perspektif administrasi, latar belakang memberi topik rapat, tugas menjelaskan output terstruktur, 4 batasan membuat hasil langsung bisa digunakan kembali.
@@ -289,17 +301,17 @@ Coba penggunaan lanjutan ini, rasakan kekuatan AI yang sebenarnya:
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Optimasi percakapan multi-putaran</strong>: Saat tidak puas dengan jawaban AI, Anda bisa bilang "Ini terlalu profesional, tolong jelaskan sekali lagi dengan bahasa yang bisa dipahami siswa SD".
 - <strong>Chain of Thought (CoT)</strong>: Minta AI "berpikir langkah demi langkah", kualitas jawaban biasanya lebih tinggi: "Tolong analisis soal matematika ini langkah demi langkah".
-- <strong>Kolaborasi multi-AI</strong>: Gunakan A untuk menulis draf awal, B untuk memoles, C untuk menerjemahkan—kombinasi memberikan hasil yang lebih baik.
+- <strong>Kolaborasi multi-AI</strong>: Gunakan A untuk menulis draf awal, B untuk memoles, C untuk menerjemahkan:kombinasi memberikan hasil yang lebih baik.
 - <strong>System prompt</strong>: Preset identitas, preferensi, pantangan Anda di pengaturan AI, agar jawaban lebih sesuai kebutuhan Anda.
 :::
 
-#### 7. Keterbatasan dan Tantangan AI: Pertahankan Penilaian yang Jernih
+7. Keterbatasan dan Tantangan AI: Pertahankan Penilaian yang Jernih
 
 AI memang kuat, tetapi bukan "serba bisa". Memahami keterbatasannya dengan jernih akan membantu Anda menggunakannya dengan lebih baik:
 
 - <strong>Masalah "halusinasi"</strong>: AI bisa bicara sok tahu tapi salah (istilah profesional: Hallucination). Ia akan mengarang peristiwa sejarah yang tidak ada, kutipan yang salah, statistik palsu. Informasi penting harus diverifikasi secara manual.
 - <strong>Pemutusan pengetahuan</strong>: Sebagian besar data pelatihan AI memiliki tanggal cutoff (misalnya awal 2024), ia tidak tahu apa yang terjadi setelah itu.
-- <strong>Kemampuan penalaran terbatas</strong>: Penalaran multi-langkah yang kompleks, pembuktian matematika, jebakan logika—AI masih mudah salah.
+- <strong>Kemampuan penalaran terbatas</strong>: Penalaran multi-langkah yang kompleks, pembuktian matematika, jebakan logika,AI masih mudah salah.
 - <strong>Risiko privasi</strong>: Pada layanan AI cloud, percakapan Anda mungkin digunakan untuk pelatihan model. Informasi sensitif sebaiknya prioritas menggunakan AI sisi perangkat.
 - <strong>Bias dan nilai</strong>: AI mungkin membawa bias dari data pelatihan, perlu mempertahankan pemikiran independen.
 
@@ -331,6 +343,13 @@ AI memang kuat, tetapi bukan "serba bisa". Memahami keterbatasannya dengan jerni
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Skenario</strong>: iPhone 13 → Xiaomi 15 ganti ponsel lintas merek.
-- <strong>Langkah</strong>: ① Ponsel lama iCloud/WeChat backup bawaan → ② Logout Apple ID + matikan "Find" → ③ Ponsel baru pakai App "Mi Mover" scan kode → ④ Pilih item migrasi → ⑤ WeChat terpisah pakai "Chat History Migration" bawaan → ⑥ Verifikasi data kunci (kontak/album/WeChat) → ⑦ Ponsel lama encrypted wipe.
+- <strong>Langkah</strong>:
+1. Ponsel lama iCloud/WeChat backup bawaan.
+2. Logout Apple ID + matikan "Find".
+3. Ponsel baru pakai App "Mi Mover" scan kode.
+4. Pilih item migrasi.
+5. WeChat terpisah pakai "Chat History Migration" bawaan.
+6. Verifikasi data kunci (kontak/album/WeChat).
+7. Ponsel lama encrypted wipe.
 - <strong>Hasil yang Diharapkan</strong>: Data zero loss, ponsel lama bisa aman dijual.
 :::

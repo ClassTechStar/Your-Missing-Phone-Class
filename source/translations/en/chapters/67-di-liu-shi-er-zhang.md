@@ -10,11 +10,11 @@ kind: chapter
 ### Chapter 62: Building Interfaces—Getting Started with SwiftUI
 
 {class="chapter-intro mb-4"}
-The interface is everything the user sees. SwiftUI is the declarative interface framework Apple launched in 2019—you only need to "declare" what the interface looks like, and the system automatically takes care of rendering, dark mode, and every kind of screen. By 2026, SwiftUI is the clear mainstream for new projects. In this chapter, we learn to "paint."
+The interface is everything the user sees. SwiftUI is the declarative interface framework Apple launched in 2019:you only need to "declare" what the interface looks like, and the system automatically takes care of rendering, dark mode, and every kind of screen. By 2026, SwiftUI is the clear mainstream for new projects. In this chapter, we learn to "paint."
 
 #### 1. The SwiftUI Idea: Declarative, Not Imperative
 
-Old-style interface development is "imperative": you give the system orders one step at a time—"create a button → place it at (20,30) → set the color." SwiftUI is "declarative": you simply describe "there's a red button on the screen that says 'Tap me'," and the system takes care of how to draw it and when to redraw it.
+Old-style interface development is "imperative": you give the system orders one step at a time,"create a button → place it at (20,30) → set the color." SwiftUI is "declarative": you simply describe "there's a red button on the screen that says 'Tap me'," and the system takes care of how to draw it and when to redraw it.
 
 ::: div .code-block
 :::inline div .code-head
@@ -53,13 +53,13 @@ Key point: a view = a struct that conforms to the View protocol, the body proper
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 SwiftUI's four basic views
 
-Notice Image(systemName:)—Apple ships a built-in icon library called SF Symbols (thousands of free icons); a name like "star.fill" instantly shows a solid star. This is a hidden perk of iOS development: you almost never have to hunt for icon assets.
+Notice Image(systemName:),Apple ships a built-in icon library called SF Symbols (thousands of free icons); a name like "star.fill" instantly shows a solid star. This is a hidden perk of iOS development: you almost never have to hunt for icon assets.
 
 #### 3. The Layout Trio: VStack, HStack, ZStack
 
 - VStack: lines things up vertically (like queuing for lunch);
 - HStack: lines things up horizontally (like sitting side by side);
-- ZStack: stacks things on top of each other (like a pile of playing cards—perfect for badges and overlays).
+- ZStack: stacks things on top of each other (like a pile of playing cards,perfect for badges and overlays)
 
 ::: div .code-block
 :::inline div .code-head
@@ -89,12 +89,12 @@ VStack(alignment: .leading, spacing: 12) {
 Note: Modifier Order Matters
 
 {class="mt-1"}
-padding(16).background(gray) and background(gray).padding(16) produce different results—the former "spaces first, then paints" (the background excludes the padding), the latter "paints first, then spaces" (the background includes the padding). This is the source of beginners' most common "mystery white edge." When in doubt, swap the order and the preview will tell you the answer instantly.
+padding(16).background(gray) and background(gray).padding(16) produce different results,the former "spaces first, then paints" (the background excludes the padding), the latter "paints first, then spaces" (the background includes the padding). This is the source of beginners' most common "mystery white edge." When in doubt, swap the order and the preview will tell you the answer instantly.
 :::
 
 #### 4. State and Binding: Bringing the Interface to Life
 
-A static interface is dull. SwiftUI's rule: the interface always faithfully reflects the state—when the state changes, the interface redraws automatically.
+A static interface is dull. SwiftUI's rule: the interface always faithfully reflects the state,when the state changes, the interface redraws automatically.
 
 ::: div .code-block
 :::inline div .code-head
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-A text field needs "two-way binding"—the $ symbol hands over both the value and the right to change it:
+A text field needs "two-way binding",the $ symbol hands over both the value and the right to change it:
 
 ::: div .code-block
 :::inline div .code-head
@@ -152,9 +152,9 @@ Figure 3: SwiftUI's one-way "state → interface" data flow
 
 #### 5. Previews, Theming, and Animation: SwiftUI's "Power-Ups"
 
-- The #Preview macro: add #Preview { ContentView() } at the bottom of a file, and the canvas on the right renders in real time—change the code and see the result immediately;
+- The #Preview macro: add #Preview { ContentView() } at the bottom of a file, and the canvas on the right renders in real time:change the code and see the result immediately;
 - Dark mode for free: use system colors (Color(.systemGray6), .primary) instead of hard-coded ones, and dark mode adapts automatically without a single extra line;
-- Animation in one line: withAnimation { count += 1 } or add .animation(.default, value: count) to a view—buttery-smooth transitions.
+- Animation in one line: withAnimation { count += 1 } or add .animation(.default, value: count) to a view:buttery-smooth transitions
 
 ::: div .code-block
 :::inline div .code-head
@@ -186,14 +186,14 @@ struct AnimatedHeartView: View {
 Tip: Function First, Animation Later
 
 {class="mt-1"}
-A classic beginner mistake is "polishing animations before the interface even works." Get the functionality running first, then add motion at the end—animation is the icing, function is the cake. That's also our standing "simplicity first" principle.
+A classic beginner mistake is "polishing animations before the interface even works." Get the functionality running first, then add motion at the end,animation is the icing, function is the cake. That's also our standing "simplicity first" principle.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Hands-on: Build a "Mood Button"
 
-#### 6. Common Modifiers Cheat Sheet: One Page in Hand, No Interface Worries
+6. Common Modifiers Cheat Sheet: One Page in Hand, No Interface Worries
 
 ::: div .overflow-x-auto
 ```html
@@ -204,7 +204,7 @@ Hands-on: Build a "Mood Button"
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Common SwiftUI modifiers cheat sheet
 
-No need to memorize any of this—this page is for looking things up. The ones you'll use most are actually just the first four: padding, rounded corners, background, and font.
+No need to memorize any of this,this page is for looking things up. The ones you'll use most are actually just the first four: padding, rounded corners, background, and font.
 
 {class="mt-1"}
 Turn the template project into a mood switcher: one button that cycles through 😀 happy → 😢 sad → 😡 angry with each tap, while the text and background color change along with it. Hint: store the three pairs (text + color) in an array, keep the index in @State, and on each tap use (index + 1) % 3. Send it to a friend when you're done and collect your first round of "wow, you can make apps now."

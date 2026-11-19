@@ -172,7 +172,7 @@ val twin = me.copy(name = "Fritz")   // kopiert und ändert ein Feld
 
 Wenn du später dein Haushaltsbuch baust, ist jede Buchung eine data class: data class Record(val amount: Double, val category: String, val date: String). Siehst du – du kannst bereits die Code-Struktur eines echten Projekts schreiben.
 
-#### 6. Lambdas und Higher-Order-Funktionen: Kotlins "Syntax-Zucker"
+6. Lambdas und Higher-Order-Funktionen: Kotlins "Syntax-Zucker"
 
 In Android-Code begegnest du täglich Konstrukten wie { ... } – "Funktionen ohne Namen", genannt Lambdas (anonyme Funktionen). Button onClick = { count++ } ist ein solches Lambda: "Was nach dem Antippen passiert" wird als Päckchen verpackt und dem Button übergeben.
 

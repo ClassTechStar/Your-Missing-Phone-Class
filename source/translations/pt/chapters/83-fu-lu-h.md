@@ -14,10 +14,10 @@ Este livro continua sendo atualizado. Abaixo estão as direções planejadas par
 
 ::: div .success-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-v1.8 já disponível: novas Partes VII, VIII e IX — "Prática de Programação com IA", "Prática de Desenvolvimento Android" e "Prática de Desenvolvimento iOS" (Capítulos 37-69, 33 capítulos no total)
+v1.8 já disponível: novas Partes VII, VIII e IX: "Prática de Programação com IA", "Prática de Desenvolvimento Android" e "Prática de Desenvolvimento iOS" (Capítulos 37-69, 33 capítulos no total)
 
 {class="mt-1"}
-Da revolução de paradigma da programação com IA, aos cinco princípios de pensamento, engenharia de contexto e de requisitos, panorama de ferramentas e modelos de 2026, prática com APIs, engenharia de diálogo, três projetos completos, garantia de qualidade e caminho de aprimoramento — levando você de "saber usar a IA" a "comandar a IA a escrever código"; até o ciclo completo de desenvolvimento nas duas grandes plataformas, Android e iOS: configuração do ambiente (Android Studio / Xcode), curso rápido das linguagens (Kotlin / Swift), frameworks de interface (Jetpack Compose / SwiftUI), dados e rede, projetos práticos (controle financeiro + consulta de previsão do tempo), testes e publicação (Google Play / App Store) e manuais de consulta rápida — levando você de usuário digital, passo a passo, a desenvolvedor de apps.
+Da revolução de paradigma da programação com IA, aos cinco princípios de pensamento, engenharia de contexto e de requisitos, panorama de ferramentas e modelos de 2026, prática com APIs, engenharia de diálogo, três projetos completos, garantia de qualidade e caminho de aprimoramento, levando você de "saber usar a IA" a "comandar a IA a escrever código"; até o ciclo completo de desenvolvimento nas duas grandes plataformas, Android e iOS: configuração do ambiente (Android Studio / Xcode), curso rápido das linguagens (Kotlin / Swift), frameworks de interface (Jetpack Compose / SwiftUI), dados e rede, projetos práticos (controle financeiro + consulta de previsão do tempo), testes e publicação (Google Play / App Store) e manuais de consulta rápida: levando você de usuário digital, passo a passo, a desenvolvedor de apps.
 :::
 
 ::: div .info-box .rounded-lg .p-4

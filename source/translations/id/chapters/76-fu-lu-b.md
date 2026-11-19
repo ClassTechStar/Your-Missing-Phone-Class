@@ -2,12 +2,12 @@
 id: fu-lu-b
 num: B
 part: fu-lu
-nav: BLampiran B: Referensi Latihan Praktik
+nav: Lampiran B: Macet di tengah latihan?
 toc: default
 kind: appendix
 ---
 
-### Lampiran B: Referensi Latihan Praktik
+### Lampiran B: Macet di tengah latihan?
 
 - <strong>Latihan bab dasar</strong>: Bersihkan penyimpanan ponsel, targetnya adalah menemukan dan menghapus video lama "yang lupa apa isinya", tangkapan layar duplikat, dan aplikasi yang sudah lama tidak digunakan.
 - <strong>Latihan bab perangkat lunak</strong>: Atur pembersihan penyimpanan WeChat, jalur biasanya adalah [Saya] - [Pengaturan] - [Umum] - [Ruang Penyimpanan].

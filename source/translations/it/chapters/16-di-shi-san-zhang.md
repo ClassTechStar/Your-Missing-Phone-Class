@@ -2,12 +2,12 @@
 id: di-shi-san-zhang
 num: 13
 part: ruan-jian-pian
-nav: Capitolo 13: Raccomandazioni di app di utilità
+nav: Capitolo 13: Quali app vale la pena installare e quali no
 toc: default
 kind: chapter
 ---
 
-### Capitolo 13: App di utilità consigliate
+### Capitolo 13: Quali app vale la pena installare e quali no
 
 {class="chapter-intro mb-4"}
 Questo capitolo raccoglie strumenti di produttività, salute e viaggio, oltre a funzioni di sistema e multi-dispositivo: pulizia e anti-spam come Qingzhuo, blocchi integrati del telefono, meteo e allerta terremoti; controllo remoto del PC con ToDesk/Sunlogin, ufficio AI con Trae, sfondi animati, trasferimento rapido in LAN con LocalSend, appunti multi-dispositivo, codici dinamici con Aegis/Microsoft Authenticator, agenda con TickTick e scansione di documenti cartacei.
@@ -18,7 +18,7 @@ Gli strumenti di produttività sono lo «scheletro» della vita digitale: ti aiu
 
 ##### 1. Liste di cose da fare (gestione attività)
 
-- TickTick Per chi: ha bisogno di registrare in modo unificato attività di lavoro, vita e studio insieme agli impegni; uno dei consigliati principali di questa sezione. Punti di forza: sincronizzazione tra telefono/computer/tablet/Web; liste + calendario + pomodoro in un'unica app; l'input in linguaggio naturale come “riunione domani alle 15” o “consegna del report ogni lunedì” riconosce automaticamente data e ora e le regole di ripetizione; supporta sotto-attività, etichette, priorità, allegati ed elenchi condivisi. Perfetto per una gestione integrata di “agenda + spunta delle attività + ripasso quotidiano”.
+- TickTick Per chi: ha bisogno di registrare in modo unificato attività di lavoro, vita e studio insieme agli impegni; uno dei consigliati principali di questa sezione. Punti di forza: sincronizzazione tra telefono/computer/tablet/Web; liste + calendario + pomodoro in un'unica app; l'input in linguaggio naturale come “riunione domani alle 15” o “consegna del report ogni lunedì” riconosce automaticamente data , e ora e le regole di ripetizione; supporta sotto-attività, etichette, priorità, allegati ed elenchi condivisi. Perfetto per una gestione integrata di “agenda + spunta delle attività + ripasso quotidiano”.
 - Come usarlo meglio TickTick: Casella di raccolta: butta tutto in «Oggi/Inbox» e la sera classifica nelle liste lavoro, famiglia, studio.
 - Vista calendario: trascina riunioni e scadenze sul calendario per vedere i conflitti, molto più intuitivo della sola lista.
 - Attività ricorrenti: medicine, bollette, palestra impostale come regole, senza reinserirle ogni volta.
@@ -143,13 +143,13 @@ L'automazione è una leva: «una configurazione, risparmio a lungo termine»; pu
 - Automazione Android: le scene di sistema (come «Automazioni» di Xiaomi, «Smart Scene» di Huawei) sono le più semplici da usare; Tasker è potente ma ha una curva di apprendimento ripida, adatto agli smanettoni.
 - Idea di base: identifica prima le «azioni che ripeti ogni giorno», poi chiediti «posso sostituirle con una condizione di attivazione + più azioni?». Esempi dettagliati e usi avanzati nel Capitolo 23.
 
-#### 5. Browser e motori di ricerca: il tuo ingresso alle informazioni
+5. Browser e motori di ricerca: il tuo ingresso alle informazioni
 
 Il browser è la tua finestra su internet, il motore di ricerca la bussola nell'oceano delle informazioni. Usarli bene ti fa risparmiare molti errori.
 
 ##### Come funziona un browser:
 
-Quando digiti un indirizzo nel browser succede questo: ① il browser interroga il server DNS per l'IP del dominio; ② invia una richiesta HTTP/HTTPS a quel server; ③ il server restituisce il codice della pagina (HTML, CSS, JavaScript); ④ il browser interpreta il codice e lo rende nella pagina che vedi.
+Quando digiti un indirizzo nel browser succede questo: ① il browser interroga il server DNS per l'IP del dominio. ② invia una richiesta HTTP/HTTPS a quel server. ③ il server restituisce il codice della pagina (HTML, CSS, JavaScript). ④ il browser interpreta il codice e lo rende nella pagina che vedi.
 
 ##### Browser consigliati:
 
@@ -175,21 +175,21 @@ Quando digiti un indirizzo nel browser succede questo: ① il browser interroga 
 
 Il dominio è il «numero civico» del sito: leggerlo ti aiuta a capirne natura e provenienza:
 
-- Significato dei suffissi più comuni: .com — organizzazione commerciale, il più comune
+- Significato dei suffissi più comuni: .com, organizzazione commerciale, il più comune
 - .cn — dominio nazionale della Cina
 - .org — organizzazione non profit
-- .net — servizi di rete
-- .edu — istituzione educativa
+- .net, servizi di rete
+- .edu, istituzione educativa
 - .gov — istituzione governativa
 - .xyz/.tech/.info — domini generici di nuova generazione, bassa soglia di accesso, usare con prudenza
 
-- Domini nazionali/territoriali: .jp — Giappone
-- .kr — Corea
-- .uk — Regno Unito
-- .de — Germania
-- .tw — Taiwan
+- Domini nazionali/territoriali: .jp, Giappone
+- .kr, Corea
+- .uk, Regno Unito
+- .de: Germania
+- .tw, Taiwan
 - .hk — Hong Kong
-- Suggerimento di sicurezza: i siti con suffisso .gov e .edu sono di solito più affidabili perché la registrazione è più rigorosa. I domini economici come .xyz e .top sono spesso usati da siti di phishing: stai attento.
+- Suggerimento di sicurezza: i siti con suffisso .gov e .edu sono di solito più affidabili perché la registrazione è più rigorosa. I domini economici come .xyz e .top sono spesso usati da siti di phishing: stai attento
 
 ##### Blocco annunci:
 
@@ -251,7 +251,7 @@ Prova a creare un'automazione «Rilassarsi prima di dormire»
 3. Salva e prova.
 :::
 
-#### 6. Strumenti di sistema utili: pulizia, anti-spam e sicurezza
+6. Strumenti di sistema utili: pulizia, anti-spam e sicurezza
 
 Oltre alle app di produttività e salute, ciò che influisce davvero sulla vita quotidiana sono tre cose: «meno disturbi, spazio sufficiente, truffatori fuori». Questa sezione elenca prima i software utili più comuni, poi approfondisce le funzioni di blocco integrate nel telefono: molte persone usano lo stesso telefono da anni senza aver mai attivato queste opzioni.
 
@@ -370,7 +370,7 @@ Il blocco chiamate ferma le «truffe telefoniche», le allerte fermano «calamit
 - Come riceverle da più canali: Notifiche del sistema + allerte app Meteo.
 - Segui su WeChat gli account ufficiali locali di «Protezione Civile» e «Ufficio Meteorologico».
 - Canali 12379 per le allerte nazionali (SMS/servizi, a seconda dell'attivazione locale).
-- TV, radio di emergenza, altoparlanti del villaggio/quartiere — in montagna o durante la stagione delle piogge non contare solo sul telefono.
+- TV, radio di emergenza, altoparlanti del villaggio/quartiere, in montagna o durante la stagione delle piogge non contare solo sul telefono.
 
 - Avvisi per attività all'aperto: durante un tifone non avvicinarti a cartelloni e non passare sotto gli alberi; con pioggia intensa non entrare in garage interrati, gallerie o sottopassi; in montagna con allerta «rischio geologico» allontanati subito da pendii e valli.
 - Integrazione con la guida di primo soccorso: in caso di smarrimento dopo un disastro, telefono scarico o necessità di localizzazione, vedi Capitolo 32 Scenari terremoto/calamità e Capitolo 7 Comunicazioni satellitari e senza rete.
@@ -379,8 +379,8 @@ Il blocco chiamate ferma le «truffe telefoniche», le allerte fermano «calamit
 
 L'allerta terremoti (EEW) sfrutta il fatto che le onde elettromagnetiche viaggiano più velocemente delle onde sismiche e che le stazioni captano prima le onde P per inviare avvisi alle aree colpite secondi o decine di secondi prima dell'arrivo delle onde più distruttive (onde S). Non prevede se ci sarà un terremoto, ma può dare il tempo di «mettersi al sicuro, spegnere il fuoco, uscire dall'ascensore». Più sei vicino all'epicentro, meno tempo hai, e a volte non basta.
 
-- Soluzioni ufficiali e di settore: in Cina continentale i principali servizi includono la Rete Nazionale di Allerta Terremoti e i servizi promossi da istituti come il Chengdu Institute of Disaster Prevention; alcuni produttori preinstallano o possono ricevere allerte online.
-- App di terze parti: cerca nello store app ufficiali/istituzionali come «Allerta terremoti» (prima di installare controlla lo sviluppatore ed evita le app contraffatte che chiedono permessi inutili).
+- Soluzioni ufficiali e di settore: in Cina continentale i principali servizi includono la Rete Nazionale di Allerta Terremoti , e i servizi promossi da istituti come il Chengdu Institute of Disaster Prevention; alcuni produttori preinstallano o possono ricevere allerte online.
+- App di terze parti: cerca nello store app ufficiali/istituzionali come «Allerta terremoti», (prima di installare controlla lo sviluppatore ed evita le app contraffatte che chiedono permessi inutili).
 - Cosa fare dopo l'allerta: in casa riparati vicino (sotto il tavolo, angoli di muri portanti, mobili solidi), proteggi testa e collo; tieniti lontano da finestre, pareti esterne e mobili alti; non buttarti sulle scale o dalla finestra; se sei in ascensore scendi al piano più vicino; all'aperto vai in spazio aperto, lontano da cavi, cartelloni e edifici pericolosi. Dopo il terremoto controlla gas e impianto elettrico e attenzione alle repliche.
 - Non silenziare: l'allerta terremoti deve poter «bucare» silenzio e Non disturbare; di notte tieni il telefono a portata di mano e non mettere il volume a 0.
 
@@ -462,7 +462,7 @@ Esercizio pratico: 10 minuti per controllare le impostazioni di allerta
 4. Verifica che il suono dell'allerta non venga silenziato dal Non disturbare; controlla anche il telefono dei tuoi genitori.
 :::
 
-#### 8. Collaborazione multi-dispositivo: controllo remoto, trasferimento rapido e sicurezza account
+8. Collaborazione multi-dispositivo: controllo remoto, trasferimento rapido e sicurezza account
 
 Un telefono funziona bene soprattutto quando «gioca in squadra» con PC e tablet. Questa sezione aggiunge strumenti di uso frequente: controllo remoto del PC dal telefono, ufficio AI e collaborazione da remoto, sfondi animati, trasferimento rapido in LAN, appunti multi-dispositivo, codici dinamici 2FA e integrazione tra scansione cartacea e agenda. Per un approccio più sistematico al multi-dispositivo vedi Capitolo 17.
 
@@ -470,8 +470,8 @@ Un telefono funziona bene soprattutto quando «gioca in squadra» con PC e table
 
 - Sunlogin Remote Control Per chi: chi deve usare da remoto un Windows o Mac di casa/ufficio; spesso usato anche per assistere da remoto i genitori (vedi Capitolo 27). Punti di forza: ecosistema locale maturo, l'app telefono controlla il desktop, trasferisce file, accende/spegne (in parte serve hardware); la versione gratuita basta per un uso personale leggero.
 - ToDesk Per chi: chi cerca connessione stabile e bassa latenza per lavoro/assistenza da remoto. Punti di forza: connessione con codice dispositivo + password, telefono controlla PC e PC controlla telefono (a seconda della versione), trasferimento file e gestione multi-monitor fluidi; i nodi cinesi sono di solito buoni.
-- Uso di base: installa il client sul PC e accedi/resta online → installa l'app sul telefono → avvia la sessione con ID dispositivo + password di connessione (o lo stesso account) → usa touchpad/gesti del telefono per controllare il desktop.
-- Limiti di sicurezza (da ricordare): Se uno sconosciuto si spaccia per «assistenza/forze dell'ordine/operatore» e ti chiede di installare Sunlogin o ToDesk per controllare da remoto il tuo telefono o computer, rifiuta sempre: è una truffa tipica (vedi Capitolo 27).
+- Uso di base: installa il client sul PC e accedi/resta online → installa l'app sul telefono → avvia la sessione con ID dispositivo + password di connessione, (o lo stesso account) → usa touchpad/gesti del telefono per controllare il desktop.
+- Limiti di sicurezza (da ricordare): Se uno sconosciuto si spaccia per «assistenza/forze dell'ordine/operatore» , e ti chiede di installare Sunlogin o ToDesk per controllare da remoto il tuo telefono o computer, rifiuta sempre: è una truffa tipica (vedi Capitolo 27).
 - Per uso personale: attiva l'autenticazione a due fattori, cambia la password predefinita, esci dall'account o disattiva l'accesso non presidiato quando non usi; sui computer aziendali rispetta le policy di sicurezza.
 - In luoghi pubblici attento a qualcuno che sbircia schermo e password.
 

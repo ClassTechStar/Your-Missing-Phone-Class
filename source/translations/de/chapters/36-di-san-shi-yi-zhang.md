@@ -16,19 +16,19 @@ kind: chapter
 
 Der erste Fehler vieler: "Handy in die Hand nehmen und loslegen" – ohne zu wissen, für wen. Bevor Sie drehen, beantworten Sie drei Fragen:
 
-1. <strong>Wer ist mein Publikum?</strong>—— Für Kinder, für Gleichaltrige oder für ältere Menschen – der Stil ist völlig unterschiedlich.
+1. <strong>Wer ist mein Publikum?</strong>—, Für Kinder, für Gleichaltrige oder für ältere Menschen – der Stil ist völlig unterschiedlich.
 2. <strong>Welchen Wert biete ich?</strong>—— Zum Lachen bringen (Unterhaltung), lernen lassen (Wissen), Appetit machen (Essen), berühren (Emotion). Mindestens eines.
 3. <strong>Auf welcher Plattform kann ich regelmäßig posten?</strong>—— Douyin/Kuaishou (Unterhaltung), Xiaohongshu (Lifestyle), Bilibili (tiefe Inhalte), Video-Kanal (sozialer Kreis). Wählen Sie eine Hauptplattform und vertiefen Sie sich – nicht sofort auf allen veröffentlichen.
 
-#### II. Grundlegende Handy-Einstellungen —— 5 Pflichtaktionen vor dem Dreh
+II. Grundlegende Handy-Einstellungen —— 5 Pflichtaktionen vor dem Dreh
 
 1. <strong>Auflösung auf 1080P, Bildrate auf 30 fps</strong>: Das ist der Standard für Kurzvideoplattformen. 4K ist zu groß und lädt langsam, 60 fps bringt auf Social Media keinen Vorteil, macht die Datei aber größer.
 2. <strong>Objektiv sauberwischen</strong>: Die erste und wichtigste Regel. Vor dem Dreh das Objektiv mit dem Ärmel abwischen – das Bild wird sofort deutlich schärfer.
 3. <strong>Fokus und Belichtung sperren</strong>: Im Sucher 2 Sekunden lang auf das Hauptmotiv drücken, bis "AE/AF-Sperre" erscheint. So wird das Bild beim Bewegen nicht ständig hell und dunkel.
-4. <strong>Quer- oder Hochformat?</strong>—— Für Douyin/Kuaishou/Video-Kanal/Xiaohongshu <strong>Hochformat</strong>(9:16). Für Bilibili/YouTube <strong>Querformat</strong>(16:9). Erst Plattform überlegen, dann Format wählen.
+4. <strong>Quer- oder Hochformat?</strong>—, Für Douyin/Kuaishou/Video-Kanal/Xiaohongshu <strong>Hochformat</strong>(9:16). Für Bilibili/YouTube <strong>Querformat</strong>(16:9). Erst Plattform überlegen, dann Format wählen.
 5. <strong>Gitterlinien einschalten</strong>: Einstellungen &gt; Kamera &gt; Gitter. Die Grundlage der Drittel-Regel, hilft, schnell den Bildschwerpunkt zu finden.
 
-#### III. Fünf Kamera-Bewegungen —— das Bild in Bewegung versetzen
+III. Fünf Kamera-Bewegungen —— das Bild in Bewegung versetzen
 
 Das größte Problem von Anfängern ist zu "ruhiges" Bild – die ganze Zeit stillstehend gefilmt. Lernen Sie diese fünf Grundbewegungen, und das Bild wirkt sofort professioneller:
 
@@ -52,7 +52,7 @@ CapCut (die chinesische Version: JianYing) ist aktuell das beste Schneideprogram
 5. <strong>Musik hinzufügen</strong>: CapCut hat eine große Bibliothek lizenzfreier Musik. Wählen Sie ein BGM, das zum Rhythmus und Inhalt passt, und setzen Sie die Lautstärke auf ca. 1/3 des Originaltons.
 6. <strong>Exportieren</strong>: In 1080P exportieren, 30 fps, Bitrate "empfohlen" wählen.
 
-#### V. Die Bedeutung des Thumbnails —— 70 % entscheiden nur anhand des Covers
+V. Die Bedeutung des Thumbnails —— 70 % entscheiden nur anhand des Covers
 
 Das Thumbnail eines Kurzvideos ist die "Schaufenster" – es entscheidet, ob jemand klickt. Wichtige Punkte:
 

@@ -9,13 +9,13 @@ kind: chapter
 ### Chapitre 23 Annexe : Guide de démarrage GitHub — de l'hébergement de code à la plateforme de collaboration
 
 {class="chapter-intro mb-4"}
-Dans le chapitre précédent, nous avons parlé de « pensée programmation », et pour vraiment la mettre en pratique et collaborer avec d'autres, un nom est incontournable — GitHub. Que vous soyez étudiant en informatique participant à des concours, que vous vouliez sauvegarder vos créations de code, ou simplement curieux de voir ce que les développeurs du monde entier bricolent, GitHub est une plateforme que vous devez connaître. Dans cette section, nous partons des concepts les plus fondamentaux pour vous construire une compréhension claire.
+Dans le chapitre précédent, nous avons parlé de « pensée programmation », et pour vraiment la mettre en pratique et collaborer avec d'autres, un nom est incontournable, GitHub. Que vous soyez étudiant en informatique participant à des concours, que vous vouliez sauvegarder vos créations de code, ou simplement curieux de voir ce que les développeurs du monde entier bricolent, GitHub est une plateforme que vous devez connaître. Dans cette section, nous partons des concepts les plus fondamentaux pour vous construire une compréhension claire.
 
 #### I. Qu'est-ce que GitHub exactement ?
 
 En bref, GitHub est une <strong>plateforme d’hébergement de code et de collaboration</strong> basée sur Git. Lancée en 2008, acquise par Microsoft en 2018, elle reste la plus grande plateforme d’hébergement de code open source au monde, hébergeant des centaines de millions de dépôts couvrant presque tous les langages de programmation majeurs.
 
-Pour comprendre par analogie :<strong>Git est le journal intime sur votre ordinateur, GitHub est une plateforme de blogs publique</strong>— vous pouvez publier vos créations, suivre les projets d’autres personnes, participer aux discussions et collaborer. Ce n’est pas seulement le « dépôt back-office des programmeurs », c’est plutôt une « cité technologique » co-construite par les développeurs du monde entier — les projets y naissent, itèrent, sont discutés et réutilisés.
+Pour comprendre par analogie :<strong>Git est le journal intime sur votre ordinateur, GitHub est une plateforme de blogs publique</strong>— vous pouvez publier vos créations, suivre les projets d’autres personnes, participer aux discussions et collaborer. Ce n’est pas seulement le « dépôt back-office des programmeurs », c’est plutôt une « cité technologique » co-construite par les développeurs du monde entier, les projets y naissent, itèrent, sont discutés et réutilisés.
 
 Pour les non-techniciens, GitHub n'est pas hors de portée. Beaucoup de non-programmeurs l'utilisent pour héberger des notes, des livres numériques, des blogs personnels, voire sauvegarder des fichiers de configuration. Tant que vous avez le moindre besoin de « organiser vos contenus et les partager », GitHub mérite que vous le connaissiez.
 
@@ -97,7 +97,7 @@ GitHub offre bien plus que du stockage de code :
 - <strong>Hébergement et présentation de code</strong>:Chaque dépôt a un bel affichage web avec coloration syntaxique, c’est la « vitrine » de vos réalisations techniques.
 - <strong>Communauté open source</strong>:Vous pouvez Star (favoris) les projets que vous aimez, Watch (suivre) l’activité des projets, Follow (suivre) des développeurs, et participer à la collaboration open source mondiale.
 
-#### IV. Inscription et prise en main : créez votre premier dépôt en cinq minutes
+IV. Inscription et prise en main : créez votre premier dépôt en cinq minutes
 
 ##### Inscription
 
@@ -112,7 +112,7 @@ GitHub offre bien plus que du stockage de code :
 2. Remplissez le nom du dépôt (Repository name), par exemple<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
 3. Écrivez une brève description (Description), pour que les autres sachent à quoi sert ce dépôt.
 4. Choisissez Public ou Private. Les dépôts publics sont visibles par tous, les privés uniquement par vous et vos collaborateurs. Les comptes gratuits prennent aussi en charge un nombre illimité de dépôts privés.
-5. Cochez « Add a README file » — le README est le « mode d'emploi » du projet, chaque dépôt devrait en avoir un.
+5. Cochez « Add a README file »: le README est le « mode d'emploi » du projet, chaque dépôt devrait en avoir un.
 6. Cliquez sur « Create repository », votre premier dépôt GitHub est né !
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -135,7 +135,7 @@ Comprendre le flux de travail GitHub, la clé est de retenir ce cycle :<strong>m
 
 Pour les débutants, retenez cette formule :<strong>« d’abord pull puis modifier, après modification add, commit avec message, enfin push »</strong>. Prenez cette habitude et la collaboration d’équipe se passera sans accroc.
 
-#### VI. Flux de collaboration d'équipe : comment fonctionne une Pull Request
+VI. Flux de collaboration d'équipe : comment fonctionne une Pull Request
 
 La plus grande force de GitHub réside dans son mécanisme de collaboration. Un flux de collaboration d'équipe typique :
 
@@ -152,7 +152,7 @@ Ce flux garantit que <strong>tout code est examiné avant d’entrer dans la bra
 
 ##### Étudiants en concours et projets de cours
 
-Les étudiants en informatique participant à des concours ACM, des hackathons ou des projets de fin d'études ne peuvent presque pas s'en passer de GitHub. Il sert à la fois de plateforme de collaboration et de vitrine de réalisations — les juges de concours peuvent directement consulter votre dépôt pour évaluer la qualité du code et le processus collaboratif. Beaucoup d'entreprises demandent aussi un lien GitHub lors du recrutement, comme preuve de compétence technique.
+Les étudiants en informatique participant à des concours ACM, des hackathons ou des projets de fin d'études ne peuvent presque pas s'en passer de GitHub. Il sert à la fois de plateforme de collaboration et de vitrine de réalisations, les juges de concours peuvent directement consulter votre dépôt pour évaluer la qualité du code et le processus collaboratif. Beaucoup d'entreprises demandent aussi un lien GitHub lors du recrutement, comme preuve de compétence technique.
 
 ##### Base de connaissances personnelle et hébergement de notes
 
@@ -184,7 +184,7 @@ Utilisez le dépôt de code comme un cloud : changez d'ordinateur, travaillez su
 <i class="fas fa-exclamation-triangle mr-2"></i>Rappel de sécurité
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Ne soumettez jamais de mots de passe, clés API, chaînes de connexion à la base de données ou autres informations sensibles sur GitHub, surtout dans un dépôt public — une fois divulgués, ils seront captés par des crawlers en quelques secondes, avec des conséquences graves.
+- Ne soumettez jamais de mots de passe, clés API, chaînes de connexion à la base de données ou autres informations sensibles sur GitHub, surtout dans un dépôt public: une fois divulgués, ils seront captés par des crawlers en quelques secondes, avec des conséquences graves.
 - Si vous avez accidentellement soumis des informations sensibles, supprimer le fichier ne suffit pas (l’historique le contient encore), utilisez<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> ou un outil professionnel pour nettoyer l’historique, et changez immédiatement les clés compromises.
 - Les dépôts privés ne sont pas non plus totalement sûrs ; les informations sensibles sont mieux gérées via des variables d'environnement, hors du dépôt de code.
 :::
@@ -202,14 +202,14 @@ L’accès à GitHub depuis la Chine est parfois instable, avec des risques de p
 <i class="fas fa-lightbulb mr-2"></i>Usage avancé : créez un blog personnel gratuit avec GitHub Pages
 
 {class="mt-1"}
-GitHub Pages vous permet d'héberger gratuitement un site statique, couplé à des générateurs comme Jekyll, Hexo ou Hugo, vous pouvez facilement créer un blog personnel. Poussez un article Markdown vers le dépôt, le blog se met à jour automatiquement, avec HTTPS et nom de domaine personnalisé inclus. D'innombrables blogs techniques sont construits ainsi — zéro coût, sans publicité, avec contrôle de versions.
+GitHub Pages vous permet d'héberger gratuitement un site statique, couplé à des générateurs comme Jekyll, Hexo ou Hugo, vous pouvez facilement créer un blog personnel. Poussez un article Markdown vers le dépôt, le blog se met à jour automatiquement, avec HTTPS et nom de domaine personnalisé inclus. D'innombrables blogs techniques sont construits ainsi, zéro coût, sans publicité, avec contrôle de versions.
 :::
 
 #### IX. Résumé : pourquoi tout le monde devrait connaître GitHub
 
-GitHub n’est plus seulement « l’outil des programmeurs », c’est plutôt une <strong>façon de travailler de l’ère numérique</strong>: le contrôle de version rend tout traçable, les mécanismes de collaboration font tourner les équipes efficacement, l’esprit open source fait circuler librement le savoir. Même sans coder, comprendre les concepts de « commit, branche, fusion » vous aidera à mieux gérer tout contenu nécessitant « modifications répétées + collaboration » — des mémoires aux documents, des notes aux plans.
+GitHub n’est plus seulement « l’outil des programmeurs », c’est plutôt une <strong>façon de travailler de l’ère numérique</strong>: le contrôle de version rend tout traçable, les mécanismes de collaboration font tourner les équipes efficacement, l’esprit open source fait circuler librement le savoir. Même sans coder, comprendre les concepts de « commit, branche, fusion » vous aidera à mieux gérer tout contenu nécessitant « modifications répétées + collaboration », des mémoires aux documents, des notes aux plans.
 
-Pour les étudiants en informatique, GitHub est une compétence indispensable : c'est votre portfolio, votre plateforme de collaboration, votre bibliothèque de ressources d'apprentissage, et le « CV » le plus convaincant lors de la recherche d'emploi. Inscrivez-vous tôt, mettez en ligne vos travaux de cours et petits projets, accumulez progressivement — quelques années plus tard, vous aurez un parcours technique qui fera briller les yeux des recruteurs.
+Pour les étudiants en informatique, GitHub est une compétence indispensable : c'est votre portfolio, votre plateforme de collaboration, votre bibliothèque de ressources d'apprentissage, et le « CV » le plus convaincant lors de la recherche d'emploi. Inscrivez-vous tôt, mettez en ligne vos travaux de cours et petits projets, accumulez progressivement, quelques années plus tard, vous aurez un parcours technique qui fera briller les yeux des recruteurs.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

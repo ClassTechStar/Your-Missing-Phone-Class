@@ -2,12 +2,12 @@
 id: di-shi-liu-zhang
 num: 16
 part: jin-jie-pian
-nav: Kapitel 16: Konten und Cloud-Dienste
+nav: Kapitel 16: Handywechsel: Welche Konten kann man verlieren?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 16: Kontosysteme und Cloud-Dienste
+### Kapitel 16: Handywechsel: Welche Konten kann man verlieren?
 
 {class="chapter-intro mb-4"}
 Ein Freund von mir hatte letztes Jahr sein Smartphone gestohlen. Sein erster Gedanke war nicht „Wie teuer war das Smartphone?", sondern „Kann ich meine Fotos wiederbekommen?" Leider hatte er kein Cloud-Backup aktiviert. Das Smartphone ist ein materieller Gegenstand, aber die Daten im Konto sind wirklich unwiederbringlich verloren, wenn sie weg sind. In diesem Kapitel geht es darum, wie Sie Ihrem digitalen Leben eine echte Versicherung verschaffen.

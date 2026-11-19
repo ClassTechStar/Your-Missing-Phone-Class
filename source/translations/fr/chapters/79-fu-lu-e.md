@@ -22,21 +22,21 @@ La technologie évolue à une vitesse fulgurante ; le contenu du livre repose su
 - Élargissement du chapitre accessibilité (maniement complet de VoiceOver/TalkBack, zoom et filtres de couleur, description d'images par IA, sous-titres en direct, double canal d'appel RTT/TTY).
 - Réécriture du cadre des prompts selon l'approche « rôle-contexte-tâche-contraintes », avec 3 exemples de scénario complets.
 - Ajout de trois annexes techniques avancées : Complément du chapitre 1 : décryptage de l'extension de mémoire des téléphones Android (définition exacte, principe du zRAM/swap, goulots de vitesse, limites des cas d'usage, noms et activation selon les fabricants).
-- Complément du chapitre 20 : Termux — un environnement de terminal Linux portable sur appareil Android (fonctions clés, écosystème de plugins, installation et configuration, scénarios typiques comme le développement mobile, l'administration de serveurs ou les tests de sécurité).
-- Complément du chapitre 23 : guide de démarrage GitHub — de l'hébergement de code à la plateforme collaborative (distinction Git vs GitHub, concepts clés, inscription et prise en main, flux de collaboration via Pull Request, rappels de sécurité, solutions d'accès depuis la Chine).
+- Complément du chapitre 20 : Termux, un environnement de terminal Linux portable sur appareil Android (fonctions clés, écosystème de plugins, installation et configuration, scénarios typiques comme le développement mobile, l'administration de serveurs ou les tests de sécurité).
+- Complément du chapitre 23 : guide de démarrage GitHub: de l'hébergement de code à la plateforme collaborative (distinction Git vs GitHub, concepts clés, inscription et prise en main, flux de collaboration via Pull Request, rappels de sécurité, solutions d'accès depuis la Chine).
 
 #### Points clés de la version 1.7
 
 I. Quatre nouveaux chapitres
 
 - Chapitre 29 : santé numérique — analyse du temps d'écran, limites d'app, mode Ne pas déranger, règle 20-20-20 pour les yeux, soulagement des cervicales, gestion du sommeil, « cécité sélective » contre l'anxiété informationnelle, défi santé numérique d'une semaine.
-- Chapitre 30 : projection d'écran et voiture — comparaison des trois camps AirPlay / Miracast / DLNA, solutions de câble, mode bureau Samsung DeX, les quatre solutions embarquées CarPlay / Android Auto / HiCar / CarLife, pratique de la projection en salle de réunion.
-- Chapitre 31 : création de vidéos courtes — les trois questions du choix de sujet, réglages de tournage en 5 étapes, cinq mouvements de caméra (zoom avant/arrière, panoramique, travelling, suivi), flux de travail CapCut en six étapes, points clés de la miniature, philosophie du contenu « les 3 premières secondes décident de tout ».
-- Chapitre 32 : manuel de secours sécurité — procédure des 30 minutes d'or après une perte, processus à 72 heures après une arnaque, examen en mode sans échec en cas d'infection, six étapes pour récupérer un compte volé, réaction aux messages de rançon, cinq gestes de prévention au quotidien.
+- Chapitre 30 : projection d'écran et voiture: comparaison des trois camps AirPlay / Miracast / DLNA, solutions de câble, mode bureau Samsung DeX, les quatre solutions embarquées CarPlay / Android Auto / HiCar / CarLife, pratique de la projection en salle de réunion.
+- Chapitre 31 : création de vidéos courtes, les trois questions du choix de sujet, réglages de tournage en 5 étapes, cinq mouvements de caméra (zoom avant/arrière, panoramique, travelling, suivi), flux de travail CapCut en six étapes, points clés de la miniature, philosophie du contenu « les 3 premières secondes décident de tout ».
+- Chapitre 32 : manuel de secours sécurité, procédure des 30 minutes d'or après une perte, processus à 72 heures après une arnaque, examen en mode sans échec en cas d'infection, six étapes pour récupérer un compte volé, réaction aux messages de rançon, cinq gestes de prévention au quotidien.
 
 II. Deux nouveaux chapitres
 
-- Chapitre 27 : seniors et liens familiaux — tableau comparatif des modes simplifiés par marque, six grandes arnaques et trois lignes de défense antifraude, assistance à distance (Changlian/Sunflower), mode Bienveillance de WeChat et saisie vocale, SOS / détection de chute / rappels de médicaments.
+- Chapitre 27 : seniors et liens familiaux, tableau comparatif des modes simplifiés par marque, six grandes arnaques et trois lignes de défense antifraude, assistance à distance (Changlian/Sunflower), mode Bienveillance de WeChat et saisie vocale, SOS / détection de chute / rappels de médicaments.
 - Chapitre 28 : guide d'achat — méthode de choix en trois étapes, tableau « seulement cinq critères », recommandations sur cinq tranches de budget, tableau de choix selon sept scénarios, cinq grands pièges de l'achat, analyse du bon moment et des canaux.
 
 III. Nouvelles fonctions de lecture à voix haute et d'interaction
@@ -72,21 +72,21 @@ Ajout de la septième partie « Pratique de la programmation par IA » (chapitre
 
 Ajout de la huitième partie « Pratique du développement Android » (chapitres 48 à 58, soit 11 chapitres) et de la neuvième partie « Pratique du développement iOS » (chapitres 59 à 69, soit 11 chapitres) : les deux plateformes couvrent l'installation de l'environnement (Android Studio / Xcode), l'apprentissage express du langage (Kotlin / Swift), les frameworks d'interface (Jetpack Compose / SwiftUI), les données et le réseau, deux projets pratiques complets (carnet de comptes + météo), les tests et la publication (Google Play / App Store) ainsi qu'un aide-mémoire. Sommaire, parcours d'apprentissage (six étapes → huit), carte des chapitres et index de recherche actualisés en même temps. Contenu tiré de « Le développement Android de zéro » et « Le développement iOS de zéro », édition d'août 2026.
 
-#### Compléments de contenu : logiciels utiles et filtrage des indésirables
+Compléments de contenu : logiciels utiles et filtrage des indésirables
 
 - Ajout de la sixième section « Outils système pratiques » au chapitre 13 : outils de nettoyage comme Qingzhuo, nettoyage de stockage intégré au système, Centre national antifraude, assistants téléphoniques des marques, antidémarchage des opérateurs et AdGuard, avec le principe de choix « le système d'abord / les compléments officiels / la parcimonie avec le tiers ».
 - Tableau comparatif du filtrage des indésirables intégré par marque : chemins d'accès et réglages recommandés pour iOS, Xiaomi/Redmi, Huawei/Honor, OPPO/realme/OnePlus, vivo/iQOO et Samsung.
 - Renforcement du filtrage des indésirables au chapitre 8 : ajout d'explications pratiques sur l'identification des appels, les listes noire/blanche, le filtrage des SMS par mots-clés, la mise en silence des inconnus sur iOS, la liaison avec Ne pas déranger, et liens croisés avec le chapitre 13.
 - Recommandation de protection à trois niveaux : filtrage système + antidémarchage de l'opérateur + Centre national antifraude, en insistant sur la liste blanche pour éviter les blocages par erreur.
 
-#### Compléments de contenu : alertes météo / alertes aux catastrophes naturelles / alertes sismiques
+Compléments de contenu : alertes météo / alertes aux catastrophes naturelles / alertes sismiques
 
 - Ajout d'une septième section au chapitre 13 : alertes météo (canaux météorologiques officiels + app météo du système + niveaux par couleur), alertes aux catastrophes naturelles (canaux multiples météo/secours), principe et idées reçues des alertes sismiques (alerte ≠ prévision).
 - Tableau d'activation des alertes sismiques par marque : entrées courantes chez Xiaomi, Huawei/Honor, la famille OPPO, vivo, iPhone, Samsung, etc., et points d'attention sur les permissions.
 - Ajout du « scénario zéro » au chapitre 32 : ordre de mise à l'abri après une alerte sismique, réaction aux pluies torrentielles/typhons, articulation avec le SOS par satellite et les communications sans réseau ; le manuel de secours et les réglages d'alerte du chapitre 13 se renvoient mutuellement.
 - Liaison de la section météo : dans le voyage, l'entrée de l'app météo est enrichie des notifications d'alerte et du rappel « il faut ouvrir les notifications pour les recevoir ».
 
-#### Compléments de contenu : coopération entre appareils et outils d'efficacité
+Compléments de contenu : coopération entre appareils et outils d'efficacité
 
 - Huitième section du chapitre 13 : piloter le PC depuis le téléphone (Sunflower, ToDesk) et les lignes rouges antifraude ; bureautique IA (Trae / WorkBuddy / Dumate) et flux de travail où le téléphone télécommande le PC ; fond d'écran dynamique Human Desktop de miHoYo.
 - Transfert rapide en réseau local et presse-papiers : LocalSend, Feige Chuanshu, AirDrop ; KDE Connect, presse-papiers universel, transferts entre téléphones et ordinateurs de même marque.

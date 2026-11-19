@@ -2,12 +2,12 @@
 id: di-wu-zhang
 num: 05
 part: ji-chu-pian
-nav: Capítulo 5: Tornar o celular mais compreensivo
+nav: Capítulo 5: Deixe o celular do seu jeito
 toc: default
 kind: chapter
 ---
 
-### Capítulo 5: Deixe o Smartphone Mais Inteligente — Configurações Básicas
+### Capítulo 5: Deixe o celular do seu jeito
 
 {class="chapter-intro mb-4"}
 Dedique alguns minutos às configurações e a experiência melhora enormemente. Essas configurações são como "afinar" o telefone para que ele se adapte melhor aos seus hábitos de uso.
@@ -36,7 +36,7 @@ Troque por um papel de parede bonito (estático ou dinâmico), o humor muda tota
 
 <strong>Widgets na área de trabalho</strong>: Clima, agenda, controle de música na tela inicial, acesso direto. Tanto iOS quanto Android suportam. Pressione e segure um espaço vazio na área de trabalho para adicionar.
 
-#### IV. Configurações de Produtividade: Transforme o Smartphone em seu "Cérebro Externo"
+IV. Configurações de Produtividade: Transforme o Smartphone em seu "Cérebro Externo"
 
 Esta seção traz funções das quais "uma vez que você as configura, não consegue mais voltar atrás". Cada uma delas pode aumentar significativamente sua eficiência diária.
 
@@ -77,12 +77,12 @@ Esta seção traz funções das quais "uma vez que você as configura, não cons
 <i class="fas fa-lightbulb mr-2"></i>Checklist do "Primeiro Dia de Trabalho"
 
 {class="mt-1 text-sm"}
-Ao pegar um telefone novo ou após uma grande atualização de versão, reserve 10 minutos para revisar estas configurações:<br> ① Senha de bloqueio + biometria ② Agrupamento de notificações + desativar push de marketing ③ Tamanho da fonte / Taxa de atualização / Modo escuro<br> ④ Teclado / Navegador / E-mail padrão ⑤ Contato de emergência / Ficha médica ⑥ Configurações de backup
+Ao pegar um telefone novo ou após uma grande atualização de versão, reserve 10 minutos para revisar estas configurações:<br> ① Senha de bloqueio + biometria. ② Agrupamento de notificações + desativar push de marketing. ③ Tamanho da fonte, Taxa de atualização / Modo escuro<br>. ④ Teclado / Navegador / E-mail padrão. ⑤ Contato de emergência / Ficha médica. ⑥ Configurações de backup
 :::
 
-#### V. Acessibilidade e Recursos Inclusivos: O Poder da Tecnologia para o Bem
+V. Acessibilidade e Recursos Inclusivos: O Poder da Tecnologia para o Bem
 
-Não se assuste com o nome "Acessibilidade". Essas funções são para todos. Foram originalmente projetadas para pessoas com deficiência, mas também são muito úteis para pessoas comuns — lesão temporária na mão, segurando um bebê, fone de ouvido quebrado no metrô, dificuldade para ler letras pequenas com óculos de leitura... tudo pode ser resolvido. Em última análise, o design acessível incorpora o conceito de <strong>tecnologia para o bem</strong>: permitir que todos possam desfrutar igualmente da vida digital.
+Não se assuste com o nome "Acessibilidade". Essas funções são para todos. Foram originalmente projetadas para pessoas com deficiência, mas também são muito úteis para pessoas comuns, lesão temporária na mão, segurando um bebê, fone de ouvido quebrado no metrô, dificuldade para ler letras pequenas com óculos de leitura... tudo pode ser resolvido. Em última análise, o design acessível incorpora o conceito de <strong>tecnologia para o bem</strong>: permitir que todos possam desfrutar igualmente da vida digital.
 
 ##### 1. Os "Olhos" dos Usuários com Deficiência Visual — Guia Completo do Leitor de Tela
 
@@ -103,7 +103,7 @@ O leitor de tela é a ferramenta central para usuários com deficiência visual 
 2. Deslizar com dois dedos: rolar página inteira para cima/baixo e esquerda/direita;
 3. Toque duplo com um dedo: ativar o elemento em foco (equivalente a "tocar");
 4. Deslizar com três dedos: alternar páginas;
-5. Toque triplo com um dedo: ampliar ou selecionar (diferente do toque triplo comum).
+5. Toque triplo com um dedo: ampliar ou selecionar (diferente do toque triplo comum)
 
 {class="mt-1"}
 <strong>Configurações personalizadas</strong>: [VoiceOver] > [Fala], é possível ajustar a <strong>velocidade de leitura</strong> (padrão cerca de 50%, pode ajustar para 70-80% para uma audição mais fluida), <strong>tom</strong> e alternar entre diferentes pacotes de voz. O iOS possui "Voz aprimorada" e "Controlador de voz": o primeiro reduz ruídos de respiração e pausas, tornando a audição mais natural.
@@ -124,7 +124,7 @@ O leitor de tela é a ferramenta central para usuários com deficiência visual 
 2. Toque duplo com um dedo: ativar elemento;
 3. Deslizar dois dedos para cima/baixo e esquerda/direita: rolar;
 4. Toque único com três dedos: entrar no modo de leitura (leitura contínua);
-5. Toque único com quatro dedos: pausar/continuar leitura.
+5. Toque único com quatro dedos: pausar/continuar leitura
 
 {class="mt-1"}
 <strong>Configurações personalizadas</strong>: [TalkBack] > [Configurações de texto para fala], é possível ajustar a <strong>velocidade</strong>, <strong>tom</strong> e alternar o <strong>motor de voz</strong> (recomenda-se instalar o motor de texto para fala do Google para uma leitura mais natural).
@@ -168,7 +168,7 @@ Quando o leitor de tela encontra uma imagem, a abordagem tradicional é pular ou
 <i class="fas fa-lightbulb mr-2"></i>Cenários de Uso
 
 {class="mt-1"}
-Tente, diante de uma foto de rua, perguntar "Quantas pessoas há nesta imagem? O que elas estão fazendo?", ou abra um app de delivery e peça à IA para ler os nomes dos pratos no menu em imagem — <strong>isso é verdadeiramente "tecnologia tornando a vida mais igualitária"</strong>.
+Tente, diante de uma foto de rua, perguntar "Quantas pessoas há nesta imagem? O que elas estão fazendo?", ou abra um app de delivery e peça à IA para ler os nomes dos pratos no menu em imagem <strong>isso é verdadeiramente "tecnologia tornando a vida mais igualitária"</strong>.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -194,7 +194,7 @@ As Legendas em Tempo Real (Live Captions) são uma função de <strong>conversã
 2. A taxa de reconhecimento é maior quando o falante <strong>articula claramente e fala em ritmo moderado</strong>;
 3. Diálogos com múltiplas pessoas reduzem a precisão. Use o modo "exibir apenas uma pessoa";
 4. Suporta mandarim, cantonês, inglês e outros idiomas principais. <strong>A taxa de reconhecimento é menor para idiomas menos comuns</strong>;
-5. Se houver música de fundo ou interferência de vozes durante a fala, o reconhecimento será intermitente.
+5. Se houver música de fundo ou interferência de vozes durante a fala, o reconhecimento será intermitente
 :::
 
 ##### 5. Canal Duplo em Cenários de Chamada: Fala para Texto + Texto para Fala
@@ -217,7 +217,7 @@ Quando o usuário <strong>não consegue ouvir nem falar</strong> (como perda sú
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>RTT (Real-Time Text)</strong>: Ambas as partes precisam ter suporte. O texto é exibido caractere por caractere conforme digitado, sem atraso. As principais operadoras já oferecem suporte;
 - <strong>TTY (Teletypewriter)</strong>: Requer dispositivo TTY dedicado, sendo gradualmente substituído pelo RTT;
-- A função de <strong>conversão de voz em texto</strong> do WeChat/QQ também é uma alternativa: pressione e segure a mensagem de voz → "Converter para texto".
+- A função de <strong>conversão de voz em texto</strong> do WeChat/QQ também é uma alternativa: pressione e segure a mensagem de voz → "Converter para texto"
 :::
 
 ##### 6. Funções "Pequenas mas Práticas" para Todos
@@ -234,7 +234,7 @@ Quando o usuário <strong>não consegue ouvir nem falar</strong> (como perda sú
 <i class="fas fa-universal-access mr-2"></i>A Filosofia de Design Acessível da Apple
 
 {class="mt-1"}
-A Apple investe enormemente em acessibilidade, atualizando e adicionando novos recursos de acessibilidade todos os anos. O site oficial da Apple possui uma página dedicada à acessibilidade, detalhando o uso de cada função. Os recursos de acessibilidade do iOS costumam ser mais completos e a experiência mais fluida do que no Android. Esta é uma razão importante pela qual muitos usuários com deficiência escolhem a Apple.
+A Apple investe enormemente em acessibilidade, atualizando e adicionando novos recursos de acessibilidade todos os anos. O site oficial da Apple possui uma página dedicada à acessibilidade. Detalhando o uso de cada função. Os recursos de acessibilidade do iOS costumam ser mais completos e a experiência mais fluida do que no Android. Esta é uma razão importante pela qual muitos usuários com deficiência escolhem a Apple.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -248,5 +248,5 @@ Reserve um momento livre para experimentar o seguinte:
 1. Ative o <strong>VoiceOver / TalkBack</strong> e tente navegar pelo WeChat deslizando com três dedos sem usar os olhos;
 2. Ative as <strong>Legendas em Tempo Real</strong> e fale para o telefone para ver a precisão do reconhecimento;
 3. Use o <strong>toque com três dedos</strong> para ampliar um texto em 200% e experimente o cotidiano de um usuário com deficiência visual;
-4. Desative todas as funções anteriores e reflita: "Se eu precisasse dessas funções para sempre, como eu gostaria que fossem projetadas?".
+4. Desative todas as funções anteriores e reflita: "Se eu precisasse dessas funções para sempre, como eu gostaria que fossem projetadas?"
 :::

@@ -18,7 +18,7 @@ The theory is done; now it is time to get your hands dirty. This chapter is not 
 
 Goal: build a personal tools page that shows entry points to 3-4 handy little tools. This is a pure front-end project — no back end and no database needed. The point is not how fancy the tools are but experiencing the full 'from requirements to finished product' process.
 
-Applying the five requirement elements: Who — personal use. What — a web page showing tool entry points. Why — gather your frequently used tools on one page for easy access. How — a single-file HTML+CSS+JS build with no frameworks. Constraint — finish within 30 minutes, no deployment needed.
+Applying the five requirement elements: Who: personal use. What, a web page showing tool entry points. Why? To gather your frequently used tools on one page, so they are easy to reach at any time. How — a single-file HTML+CSS+JS build, with no frameworks at all. Constraint, finish within 30 minutes, no deployment needed.
 
 ##### 2. Giving the Instruction
 
@@ -48,9 +48,9 @@ Please give the complete HTML file directly.
 
 ##### 3. Acceptance and Iteration
 
-Once the AI hands over code, accept it using the three-layer check from iterative verification. First layer, functional check: does the file open in the browser? Do all 4 cards display? Do the hover animations work? Second layer, edge-case check: does the layout hold up at phone screen sizes? Do the cards wrap when the window gets narrow? Third layer, architecture check: is the code readable? Is the CSS inlined in a single style tag? Is there obvious redundancy?
+Once the AI hands over code, accept it using the three-layer check from iterative verification. First layer, functional check: does the file open in the browser? Do all 4 cards actually display? And do the hover animations work? Second layer, edge-case check: does the layout hold up at phone screen sizes? Do the cards wrap gracefully when the window gets narrow? Third layer, architecture check: is the code readable? Is the CSS inlined in a single style tag? Is there any obvious redundancy in it?
 
-If you want one of the tool cards to actually work (rather than just be an entry point), add it gradually — implement one tool's functionality, verify it, then add the next. That is the 'small quick steps' strategy in action.
+If you want one of the tool cards to actually work (rather than just be an entry point), add it gradually: implement one tool's functionality, verify it, then add the next. That is the 'small quick steps' strategy in action.
 
 #### 2. Project 2: A Full-Stack Expense Tracker (Intermediate)
 
@@ -58,7 +58,7 @@ If you want one of the tool cards to actually work (rather than just be an entry
 
 Goal: a full-stack expense-tracking app with a front end, a back end, and a database. This project is far more complex than the first and calls for the requirements engineering method from Chapter 40.
 
-Start by writing the PRD. Following the template from Section 3 of Chapter 40, lay out the project overview, feature list, technical plan, data model, and development plan. When choosing the tech stack, apply the Simplicity First principle — React on the front end but no complex state management like Redux; Node.js on the back end but no microservices; SQLite instead of PostgreSQL for the database (during development).
+Start by writing the PRD. Following the template from Section 3 of Chapter 40, lay out the project overview, feature list, technical plan, data model, and development plan. When choosing the tech stack, apply the Simplicity First principle, React on the front end but no complex state management like Redux; Node.js on the back end but no microservices; SQLite instead of PostgreSQL for the database (during development).
 
 Break the development plan into 5 steps: Step 1, the back-end API skeleton (an Express server + SQLite + CRUD endpoints); Step 2, the basic front-end pages (a records list + an add form); Step 3, hooking the front end to the back end (API calls + data display); Step 4, categories and filtering; Step 5, monthly summaries and simple charts. After every step you have 'something that works.'
 
@@ -125,7 +125,7 @@ Please give the complete backend code structure.
 ```
 :::
 
-Notice what makes this instruction work: it describes only the current step (the back-end skeleton) without mixing in front-end requirements; it explicitly lists the fields and endpoints (giving the AI firm constraints) while leaving the concrete implementation to the AI; and it follows the Goal-Driven Execution principle — saying 'what to do' rather than 'how to do it.'
+Notice what makes this instruction work: it describes only the current step (the back-end skeleton) without mixing in front-end requirements; it explicitly lists the fields and endpoints (giving the AI firm constraints) while leaving the concrete implementation to the AI; and it follows the Goal-Driven Execution principle: saying 'what to do' rather than 'how to do it.'
 
 As soon as the AI hands over code, verify it immediately: run the server and test each endpoint with curl or Postman. Once everything checks out, open a new conversation for Step 2 (the basic front-end pages). Every step follows the 'instruct - verify - new conversation' loop.
 
@@ -133,9 +133,9 @@ As soon as the AI hands over code, verify it immediately: run the server and tes
 
 ##### 1. Conceiving the Project
 
-Goal: an app that connects to a large model API — say, an 'AI Study Assistant' where the user enters study material and the AI generates a summary, links related concepts, and recommends learning resources. What makes this project special: your application itself is calling the AI, so you have to handle new problems like API calls, prompt engineering, and error handling.
+Goal: an app that connects to a large model API, say, an 'AI Study Assistant' where the user enters study material and the AI generates a summary, links related concepts, and recommends learning resources. What makes this project special: your application itself is calling the AI, so you have to handle new problems like API calls, prompt engineering, and error handling.
 
-The most important lesson this project teaches: when you 'use AI to write code that calls AI,' you must pay extra attention to prompt engineering. The prompt your app sends to the large model API also needs to follow the principles discussed in this guide — clear, concise, and goal-driven.
+The most important lesson this project teaches: when you 'use AI to write code that calls AI,' you must pay extra attention to prompt engineering. The prompt your app sends to the large model API also needs to follow the principles discussed in this guide, clear, concise, and goal-driven.
 
 ##### 2. Key Technical Points
 
@@ -144,9 +144,9 @@ This project involves a few technical points you did not meet in the first two p
 - API key management: keys must never be hardcoded in the code; manage them with environment variables;
 - Streaming response handling: large model replies usually arrive as a stream and need to be displayed bit by bit;
 - Token usage control: large models bill by the token, so usage must be controlled at the application level;
-- Prompt template management: different features use different prompt templates, which need to be managed in a structured way.
+- Prompt template management: different features use different prompt templates, which need to be managed in a structured way
 
-The AI can help you implement all of these technical points, but you need to understand the 'why' behind each one — why can't keys be hardcoded? Why are streaming responses needed? Why must token usage be controlled? Only once you understand the 'why' can you judge whether the AI's solution makes sense.
+The AI can help you implement all of these technical points, but you need to understand the 'why' behind each one, why can't keys be hardcoded? Why are streaming responses needed? Why must token usage be controlled? Only once you understand the 'why' can you judge whether the AI's solution makes sense.
 
 #### 4. The Universal Hands-On Checklist
 
@@ -166,16 +166,16 @@ The Universal AI Coding Workflow Checklist
 Try It Yourself: Finish 'Project 1' This Week
 
 {class="mt-1"}
-Treat the 'personal tools site' from Section 1 of Chapter 44 as your first AI coding assignment: spend 5 minutes on the five elements, send the instruction to the AI (any tool will do), then accept the result with the three-layer verification. Finish it within 30 minutes — and your first AI coding creation is born. When you are done, save it somewhere safe; it is the keepsake of your move from 'reader' to 'practitioner.'
+Treat the 'personal tools site' from Section 1 of Chapter 44 as your first AI coding assignment: spend 5 minutes on the five elements, send the instruction to the AI (any tool will do), then accept the result with the three-layer verification. Finish it within 30 minutes, and your first AI coding creation is born. When you are done, save it somewhere safe; it is the keepsake of your move from 'reader' to 'practitioner.'
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 Chapter Recap
 
-- Project 1 (beginner): a pure front-end tools site — experience the full workflow, done in 30 minutes
-- Project 2 (intermediate): a full-stack expense tracker — PRD + memory file + 5 steps, with something that 'works' at every step
-- Project 3 (advanced): an AI study assistant — use AI to write code that calls AI, with attention to prompt engineering
+- Project 1 (beginner): a pure front-end tools site, experience the full workflow, done in 30 minutes
+- Project 2 (intermediate): a full-stack expense tracker: PRD + memory file + 5 steps, with something that 'works' at every step
+- Project 3 (advanced): an AI study assistant: use AI to write code that calls AI, with attention to prompt engineering
 - The universal eight-step workflow: requirements thinking → break down → PRD → memory file → build step by step → test → review → iterate
 - Every step follows the 'instruct - verify - new conversation' loop
 :::

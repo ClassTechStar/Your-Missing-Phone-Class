@@ -2,15 +2,15 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Capítulo 56: Refinamento e publicação — colocando o app no Google Play
+nav: Capítulo 56: O app está pronto, agora publique
 toc: default
 kind: chapter
 ---
 
-### Capítulo 56: Polimento e publicação — testes, depuração e publicação na Google Play
+### Capítulo 56: O app está pronto, agora publique
 
 {class="chapter-intro mb-4"}
-O App ficou pronto, e agora? Este capítulo responde a três coisas que levam do 'funciona' ao 'pronto para entregar': como depurar com eficiência para achar bugs, como escrever testes para evitar regressões e como colocar o App na Google Play para o mundo inteiro baixar. Publicar não é só cerimônia — é a linha divisória entre obra e produto.
+O App ficou pronto, e agora? Este capítulo responde a três coisas que levam do 'funciona' ao 'pronto para entregar': como depurar com eficiência para achar bugs, como escrever testes para evitar regressões e como colocar o App na Google Play para o mundo inteiro baixar. Publicar não é só cerimônia, é a linha divisória entre obra e produto.
 
 #### 1. O trio da depuração: Logcat, breakpoints e inspetor de UI
 
@@ -28,12 +28,12 @@ O trio da depuração
 Dica: como ler uma mensagem de erro?
 
 {class="mt-1"}
-Depois de uma queda, o Logcat mostra uma pilha vermelha (Stacktrace); de baixo para cima, procure a primeira linha que começa com o nome do seu próprio pacote (por exemplo, com.example.yourapp) — essa linha é praticamente a cena do crime. Primeiro veja o 'tipo da Exception' (ponteiro nulo? conversão de tipo?), depois o 'at ... seuArquivo:linha'. Esse truque resolve 80% das quedas.
+Depois de uma queda, o Logcat mostra uma pilha vermelha (Stacktrace); de baixo para cima, procure a primeira linha que começa com o nome do seu próprio pacote (por exemplo, com.example.yourapp): essa linha é praticamente a cena do crime. Primeiro veja o 'tipo da Exception' (ponteiro nulo? conversão de tipo?), depois o 'at ... seuArquivo:linha'. Esse truque resolve 80% das quedas.
 :::
 
 #### 2. Testes: um seguro para o código
 
-Teste manual não é confiável — você mexe numa função e outra quebra por baixo. Testes são o 'remédio do arrependimento' e o 'colete à prova de balas'. Os testes Android têm três camadas; como iniciante, domine primeiro a primeira:
+Teste manual não é confiável, você mexe numa função e outra quebra por baixo. Testes são o 'remédio do arrependimento' e o 'colete à prova de balas'. Os testes Android têm três camadas; como iniciante, domine primeiro a primeira:
 
 ::: div .overflow-x-auto
 ```html
@@ -76,18 +76,18 @@ A validação de valores e os cálculos de estatística do controle de gastos me
 
 #### 3. Assinatura e empacotamento: carimbando o App
 
-O Android exige que todo pacote de instalação seja assinado — como um carimbo oficial que prova 'este pacote saiu de mim e não foi adulterado'. Na depuração, o Android Studio usa a assinatura debug automaticamente; para publicar, use a sua própria assinatura release. O fluxo:
+O Android exige que todo pacote de instalação seja assinado, como um carimbo oficial que prova 'este pacote saiu de mim e não foi adulterado'. Na depuração, o Android Studio usa a assinatura debug automaticamente; para publicar, use a sua própria assinatura release. O fluxo:
 
 1. Menu Build → Generate Signed Bundle / APK;
 2. Crie o arquivo keystore (cofre de chaves) — defina a senha e guarde-a com cuidado;
-3. Escolha release + formato AAB e a compilação está pronta.
+3. Escolha release + formato AAB e a compilação está pronta
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Alerta de armadilha: perder o keystore = perder o App
 
 {class="mt-1"}
-Depois de publicar, toda atualização do App precisa da mesma assinatura, senão a loja recusa. Se o arquivo keystore e a senha se perderem, restará criar um app novo e publicar de novo — e os usuários antigos ficam todos sem atualização. Faça backup do keystore e da senha em local seguro (nuvem criptografada + caderno de anotações); é uma das lições mais caras de um desenvolvedor Android.
+Depois de publicar, toda atualização do App precisa da mesma assinatura, senão a loja recusa. Se o arquivo keystore e a senha se perderem, restará criar um app novo e publicar de novo: e os usuários antigos ficam todos sem atualização. Faça backup do keystore e da senha em local seguro (nuvem criptografada + caderno de anotações); é uma das lições mais caras de um desenvolvedor Android.
 :::
 
 #### 4. O processo completo de publicação na Google Play
@@ -107,18 +107,18 @@ Figura 6: Os seis passos para publicar na Google Play
 
 - Cadastro: taxa única de 25 dólares; é preciso ter uma conta Google utilizável;
 - Materiais: ícone do app (512×512), capturas de tela (no mínimo 2), descrição das funções e link da política de privacidade (obrigatório se coleta dados);
-- Formulário de segurança de dados: declare com sinceridade quais dados são coletados — um controle de gastos sem internet pode declarar 'zero coleta';
-- Revisão: na primeira publicação, contas novas costumam passar por revisão humana, que leva de horas a dias; se devolverem, corrija conforme as observações.
+- Formulário de segurança de dados: declare com sinceridade quais dados são coletados, um controle de gastos sem internet pode declarar 'zero coleta';
+- Revisão: na primeira publicação, contas novas costumam passar por revisão humana, que leva de horas a dias; se devolverem, corrija conforme as observações
 
-Atenção para quem está na China: a Google Play exige um ambiente de rede especial, e a distribuição na China continental costuma ser feita pelas lojas locais (Huawei, Xiaomi, Yingyongbao etc.). O processo nessas lojas é parecido, mas cada uma tem o seu próprio gosto na revisão — o mesmo AAB/APK pode ser distribuído em várias. Para fins de estudo, conseguir passar em uma já é vitória.
+Atenção para quem está na China: a Google Play exige um ambiente de rede especial, e a distribuição na China continental costuma ser feita pelas lojas locais (Huawei, Xiaomi, Yingyongbao etc.). O processo nessas lojas é parecido, mas cada uma tem o seu próprio gosto na revisão, o mesmo AAB/APK pode ser distribuído em várias. Para fins de estudo, conseguir passar em uma já é vitória.
 
-#### 5. Como fazer os materiais da loja: a primeira impressão vale downloads
+5. Como fazer os materiais da loja: a primeira impressão vale downloads
 
 A página da loja é a vitrine que o usuário vê ao 'dar uma volta na loja'. Três materiais definem a primeira impressão:
 
 - Ícone: 512×512; não use uma captura de tela improvisada. Se você não tem jeito para design, gere uma forma geométrica simples com ferramentas de IA; só passa se continuar reconhecível de relance quando reduzida na tela inicial do celular;
 - Capturas: no mínimo 2, de preferência 4 a 6, mostrando os cenários centrais do app; cada uma com uma frase em linguagem de gente ('Registre um gasto em um segundo' vale dez vezes mais que 'Solução eficiente de gestão financeira');
-- Descrição: a primeira frase deve deixar claro 'o que é + para quem é'; nada de empilhar 'o mais profissional, o mais poderoso' — o peso na busca das lojas depende de palavras-chave e de conversão em downloads; sinceridade funciona melhor que exagero.
+- Descrição: a primeira frase deve deixar claro 'o que é + para quem é'; nada de empilhar 'o mais profissional, o mais poderoso': o peso na busca das lojas depende de palavras-chave e de conversão em downloads; sinceridade funciona melhor que exagero
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -128,7 +128,7 @@ Dica: faça um A/B olhando os concorrentes
 Antes de publicar, dê uma volta pelos dez primeiros Apps da mesma categoria na loja e compare as capturas: que estilo de ícone eles usam? que argumento as capturas vendem? como escrevem o título? Imitar não é plagiar — aprenda a fórmula e troque pelo seu conteúdo; essa é a aula mais rápida de partida a frio que existe para qualquer produto.
 :::
 
-#### 6. Mini-lista de otimização de desempenho e relatório de quedas
+6. Mini-lista de otimização de desempenho e relatório de quedas
 
 Antes de publicar o App, vale dedicar meia hora a cada uma destas duas tarefas:
 
@@ -137,7 +137,7 @@ Antes de publicar o App, vale dedicar meia hora a cada uma destas duas tarefas:
 1. Listas com LazyColumn: jamais monte listas longas com Column na força bruta — o carregamento preguiçoso é a primeira lição de desempenho no Android;
 2. Não coloque a imagem original na marra: use a biblioteca de imagens Coil para redimensionar e cachear automaticamente; uma imagem original de 5 MB é capaz de travar um aparelho de entrada;
 3. Evite trabalho pesado na thread principal: banco de dados, rede e arquivos grandes vão para dentro de corrotinas;
-4. Meça com o Profiler: o analisador de desempenho nativo do Android Studio mostra memória, CPU e consumo de bateria — meça primeiro, otimize depois; nada de confiar no feeling.
+4. Meça com o Profiler: o analisador de desempenho nativo do Android Studio mostra memória, CPU e consumo de bateria, meça primeiro, otimize depois; nada de confiar no feeling
 
 ##### 2. Relatório de quedas
 

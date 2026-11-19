@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 67: Penyempurnaan dan Rilis — Pengujian, Debugging, dan Terbit di App Store
 
 {class="chapter-intro mb-4"}
-App sudah jadi, lalu apa? Bab ini menjawab tiga hal untuk bergerak "dari bisa jalan" menuju "siap diserahkan": cara debug yang efisien untuk mencari bug, cara menulis tes untuk mencegah regresi, dan cara mengirim App ke App Store agar diunduh seluruh dunia. Menerbitkan bukan sekadar seremoni — itulah garis pemisah antara sebuah karya dan sebuah produk.
+App sudah jadi, lalu apa? Bab ini menjawab tiga hal untuk bergerak "dari bisa jalan" menuju "siap diserahkan": cara debug yang efisien untuk mencari bug, cara menulis tes untuk mencegah regresi, dan cara mengirim App ke App Store agar diunduh seluruh dunia. Menerbitkan bukan sekadar seremoni, itulah garis pemisah antara sebuah karya dan sebuah produk.
 
 #### 1. Tiga Jurus Debug: print, Breakpoint, dan Pratinjau
 
@@ -28,7 +28,7 @@ Tiga jurus debug
 Tips: Cara Membaca Log Crash?
 
 {class="mt-1"}
-Saat Swift crash, konsol menampilkan "Fatal error" beserta penyebabnya, dan Xcode berhenti di baris yang salah sambil menyorotnya. Riwayat crash di perangkat asli bisa dilihat di Xcode → Window → Organizer → Crashes (perlu akun berbayar). Untuk kata kunci pencarian, utamakan "kalimat pertama penyebab error + swiftui" — pertanyaan yang presisi menghasilkan jawaban yang presisi.
+Saat Swift crash, konsol menampilkan "Fatal error" beserta penyebabnya, dan Xcode berhenti di baris yang salah sambil menyorotnya. Riwayat crash di perangkat asli bisa dilihat di Xcode → Window → Organizer → Crashes (perlu akun berbayar). Untuk kata kunci pencarian. utamakan "kalimat pertama penyebab error + swiftui" — pertanyaan yang presisi menghasilkan jawaban yang presisi.
 :::
 
 #### 2. Pengujian: Memberi Asuransi pada Kode
@@ -73,23 +73,23 @@ final class AmountTests: XCTestCase {
 ```
 :::
 
-Jalankan tes: ⌘U. Setelah semuanya hijau baru ubah kode — hati pun tenang. Validasi nominal dan perhitungan ringkasan di buku catatan keuangan semuanya sebaiknya dilindungi tes unit.
+Jalankan tes: ⌘U. Setelah semuanya hijau baru ubah kode: hati pun tenang. Validasi nominal dan perhitungan ringkasan di buku catatan keuangan semuanya sebaiknya dilindungi tes unit.
 
 #### 3. Penandatanganan dan Packaging: Memberi App "Cap Resmi"
 
-Setiap App iOS harus ditandatangani sebelum bisa dipasang — sebagai bukti "paket ini berasal dari kamu dan tidak diutak-atik". Hubungan tingkatannya:
+Setiap App iOS harus ditandatangani sebelum bisa dipasang, sebagai bukti "paket ini berasal dari kamu dan tidak diutak-atik". Hubungan tingkatannya:
 
 - Tahap belajar: Apple ID gratis + penandatanganan otomatis Xcode (Personal Team), bisa dijalankan di perangkat asli, perlu diperpanjang setiap 7 hari;
 - Tahap distribusi: akun pengembang berbayar (99 dolar AS/tahun) menerbitkan sertifikat dan provisioning profile, barulah bisa terbit di App Store dan dipasang jangka panjang.
 
-Packaging: menu Xcode Product → Archive (mengarsipkan); setelah build selesai, di Organizer pilih Distribute App → pilih App Store Connect → unggah. Pengarsipan wajib memakai Generic iOS Device sebagai target (bukan simulator) — langkah yang sering terlupakan pemula.
+Packaging: menu Xcode Product → Archive (mengarsipkan); setelah build selesai, di Organizer pilih Distribute App → pilih App Store Connect → unggah. Pengarsipan wajib memakai Generic iOS Device sebagai target (bukan simulator), langkah yang sering terlupakan pemula.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Peringatan Jebakan: Sertifikat Hilang = Pembaruan Terputus
 
 {class="mt-1"}
-Begitu sertifikat penandatanganan dan kunci privat hilang, kamu tidak bisa lagi mengirim pembaruan untuk App lama — pengguna hanya bisa memasang aplikasi "benar-benar baru". Backup sertifikat dengan baik (ekspor .p12 dari Keychain) dan simpan kata sandinya. Untungnya Apple menyediakan "penandatanganan otomatis" dan manajemen sertifikat cloud (centang Automatically manage signing di Xcode), yang menghemat sebagian besar kerumitan manual.
+Begitu sertifikat penandatanganan dan kunci privat hilang, kamu tidak bisa lagi mengirim pembaruan untuk App lama, pengguna hanya bisa memasang aplikasi "benar-benar baru". Backup sertifikat dengan baik (ekspor .p12 dari Keychain) dan simpan kata sandinya. Untungnya Apple menyediakan "penandatanganan otomatis" dan manajemen sertifikat cloud (centang Automatically manage signing di Xcode), yang menghemat sebagian besar kerumitan manual.
 :::
 
 #### 4. Alur Lengkap Menerbitkan ke App Store
@@ -108,18 +108,18 @@ Gambar 5: Enam langkah menerbitkan ke App Store
 :::
 
 - Registrasi: developer.apple.com, akun pribadi 99 dolar AS/tahun;
-- Aset: ikon (1024×1024, jangan pakai sudut membulat — Apple yang memotongnya sendiri), tangkapan layar (berbagai ukuran iPhone), deskripsi, tautan kebijakan privasi;
-- Kuesioner privasi: laporkan dengan jujur data apa saja yang dikumpulkan — buku catatan keuangan tanpa internet boleh memilih "tidak mengumpulkan data apa pun";
-- Review: pengajuan pertama biasanya menunggu 1–7 hari; jika ditolak, perbaiki satu per satu sesuai "catatan review" — alasan penolakan Apple biasanya ditulis sangat spesifik, tinggal diikuti;
-- TestFlight: sebelum terbit, kirim dulu versi tes ke teman-teman untuk uji internal (maksimal 10.000 orang), kumpulkan satu putaran masukan sebelum mengajukan resmi — sangat profesional.
+- Aset: ikon (1024×1024, jangan pakai sudut membulat, Apple yang memotongnya sendiri), tangkapan layar (berbagai ukuran iPhone), deskripsi, tautan kebijakan privasi;
+- Kuesioner privasi: laporkan dengan jujur data apa saja yang dikumpulkan, buku catatan keuangan tanpa internet boleh memilih "tidak mengumpulkan data apa pun";
+- Review: pengajuan pertama biasanya menunggu 1–7 hari; jika ditolak, perbaiki satu per satu sesuai "catatan review", alasan penolakan Apple biasanya ditulis sangat spesifik, tinggal diikuti;
+- TestFlight: sebelum terbit, kirim dulu versi tes ke teman-teman untuk uji internal (maksimal 10.000 orang), kumpulkan satu putaran masukan sebelum mengajukan resmi: sangat profesional
 
-#### 5. Membuat Aset Toko: Kesan Pertama Menentukan Jumlah Unduhan
+5. Membuat Aset Toko: Kesan Pertama Menentukan Jumlah Unduhan
 
 Halaman toko adalah etalase yang dilihat pengguna saat "berkunjung". Tiga aset menentukan kesan pertama:
 
 - Ikon: 1024×1024, jangan asal pakai tangkapan layar. Kalau tidak punya kemampuan desain, buat grafis sederhana dengan alat AI; baru dianggap layak jika tetap mudah dikenali sekali lihat setelah diperkecil di layar utama;
-- Tangkapan layar: minimal 2 set (ukuran utama iPhone), memperlihatkan skenario fitur paling inti; setiap gambar diberi satu kalimat caption berbahasa manusia ("Catat dalam sekejap" sepuluh kali lebih baik daripada "Solusi pencatatan keuangan yang efisien");
-- Deskripsi: kalimat pertama menjelaskan dengan jelas "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat" — kejujuran lebih efektif daripada bombastis.
+- Tangkapan layar: minimal 2 set (ukuran utama iPhone), memperlihatkan skenario fitur paling inti; setiap gambar diberi satu kalimat caption berbahasa manusia ("Catat dalam sekejap" sepuluh kali lebih baik dari,pada "Solusi pencatatan keuangan yang efisien");
+- Deskripsi: kalimat pertama menjelaskan dengan jelas "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat", kejujuran lebih efektif daripada bombastis
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -138,10 +138,13 @@ Tidak crash saat kamu menguji belum berarti tidak crash di ponsel pengguna. Appl
 1. Daftar memakai LazyVStack / List: daftar panjang jangan dipaksakan dengan VStack biasa — lazy loading adalah pelajaran performa pertama;
 2. Gambar jangan langsung pakai resolusi asli: gunakan AsyncImage (gambar jarak jauh) dan cache sistem; gambar asli 5MB cukup untuk membuat ponsel tua tersendat;
 3. Jangan mengerjakan tugas berat di thread utama: jaringan dan file besar semuanya lewat async/await;
-4. Ukur dengan Instruments: profiler bawaan Xcode (Time Profiler, pemeriksa kebocoran memori) — ukur dulu, baru optimasi; jangan mengandalkan perasaan.
+4. Ukur dengan Instruments: profiler bawaan Xcode (Time Profiler, pemeriksa kebocoran memori), ukur dulu, baru optimasi; jangan mengandalkan perasaan
 
 {class="mt-1"}
-① Lengkapi 3 tes unit untuk logika seperti parseAmount (jalankan hijau dengan ⌘U); ② gunakan breakpoint untuk menangkap sendiri satu crash buatanmu dan perbaiki; ③ buat satu paket lewat Product → Archive, lalu ajak teman uji internal via TestFlight; ④ jika ada sisa tenaga, daftar akun pengembang dan benar-benar ajukan buku catatan keuanganmu ke App Store. Tiga langkah pertama bisa diselesaikan malam ini juga.
+1. Lengkapi 3 tes unit untuk logika seperti parseAmount (jalankan hijau dengan ⌘U);
+2. gunakan breakpoint untuk menangkap sendiri satu crash buatanmu dan perbaiki;
+3. buat satu paket lewat Product → Archive, lalu ajak teman uji internal via TestFlight;
+4. jika ada sisa tenaga, daftar akun pengembang dan benar-benar ajukan buku catatan keuanganmu ke App Store. Tiga langkah pertama bisa diselesaikan malam ini juga.
 :::
 
 ::: div .chapter-summary

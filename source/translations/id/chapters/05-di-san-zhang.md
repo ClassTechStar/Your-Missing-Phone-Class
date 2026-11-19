@@ -2,17 +2,17 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Bab 3: Menghubungkan Ponsel dengan "Tali Kehidupan"
+nav: Bab 3: Kalau jaringan putus, jangan buru-buru mulai ulang
 toc: default
 kind: chapter
 ---
 
-### Bab 3: Menghubungkan Ponsel ke "Pancaran Kehidupan" — Jaringan
+### Bab 3: Kalau jaringan putus, jangan buru-buru mulai ulang
 
 {class="chapter-intro mb-4"}
 Tanpa jaringan, ponsel pintar setengah "tumpul". Jaringan adalah garis kehidupan ponsel modern; memahaminya, menggunakannya dengan baik, dan melindunginya adalah pelajaran wajib bagi setiap pengguna ponsel.
 
-#### 0. Terhubung Tidak Bingung — Bedakan "Jalan" dan "Kendaraan" Wi-Fi dan Kuota Data
+0. Terhubung Tidak Bingung — Bedakan "Jalan" dan "Kendaraan" Wi-Fi dan Kuota Data
 
 Banyak orang melihat ikon Wi-Fi dan sinyal menyala bersamaan di bagian atas layar ponsel mereka, tetapi bingung tentang perbedaan esensialnya. Kesalahpahaman paling klasik adalah:<strong>terhubung ke Wi-Fi tetapi tidak bisa membuka halaman</strong>— karena router kehilangan koneksi internet, sementara ponsel tidak otomatis beralih ke kuota data. Untuk benar-benar memahami masalah ini, kita perlu membangun model kognitif "jalan dan kendaraan".
 
@@ -27,7 +27,7 @@ Bayangkan internet sebagai sebuah kota.<strong>"Jalan"</strong> adalah jalur ant
 {class="font-semibold mt-4 mb-1"}
 ##### 1. Perbedaan Esensial: Saluran Lokal vs Jalan Tol Jarak Jauh
 
-Wi-Fi pada dasarnya adalah <strong>teknologi jaringan area lokal</strong>, seperti jalan nirkabel yang dipasang di bawah gedung rumah Anda, bertanggung jawab mengirim data dari router ke ponsel. Namun jika lebar pita menunggak atau kabel serat optik putus, jalan masih ada, tetapi "jalan tol" di luar terputus, jadi Anda tidak bisa ke mana pun. Sedangkan kuota data (data seluler) ditransmisikan melalui menara pemancar 4G/5G operator, seperti langsung masuk ke jalur khusus operator, selama ada sinyal Anda bisa langsung terhubung ke internet.
+Wi-Fi pada dasarnya adalah <strong>teknologi jaringan area lokal</strong>, seperti jalan nirkabel yang dipasang di bawah gedung rumah Anda, bertanggung jawab mengirim data dari router ke ponsel. Namun jika lebar pita menunggak atau kabel serat optik putus, jalan masih ada. tetapi "jalan tol" di luar terputus, jadi Anda tidak bisa ke mana pun. Sedangkan kuota data (data seluler) ditransmisikan melalui menara pemancar 4G/5G operator, seperti langsung masuk ke jalur khusus operator, selama ada sinyal Anda bisa langsung terhubung ke internet.
 
 {class="font-semibold mt-4 mb-1"}
 ##### 2. Biaya dan Skenario: Langganan Bulanan Tetap vs Biaya Berdasarkan Penggunaan
@@ -45,7 +45,7 @@ Buka [Pengaturan] &gt; [Jaringan Seluler] &gt; [Manajemen Kuota Data] di ponsel,
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Pertimbangan Keamanan: Wi-Fi Publik adalah "Kolam Pancing" Tersembunyi
 
-Dalam hal keamanan, data seluler biasanya lebih aman daripada Wi-Fi publik. Data seluler dienkripsi oleh operator, sedangkan Wi-Fi publik memang mudah dijadikan "hotspot palsu" oleh peretas untuk mencegat data yang tidak terenkripsi. Namun di sini perlu dibedakan: di era ketika HTTPS sudah meluas, yang dapat dicegat penyerang adalah <strong>situs web mana yang Anda kunjungi</strong>(domain), dan <strong>konten HTTP yang tidak terenkripsi</strong>; sedangkan pesan WeChat, kata sandi login aplikasi bank, dan data lain yang dienkripsi dengan HTTPS, penyerang <strong>tidak dapat langsung membacanya</strong>— kecuali melakukan serangan SSL stripping yang lebih kompleks dan pengguna mengabaikan peringatan sertifikat. Namun demikian, saat melakukan pembayaran di luar, menggunakan kuota data ponsel tetap pilihan paling aman.
+Dalam hal keamanan, data seluler biasanya lebih aman daripada Wi-Fi publik. Data seluler dienkripsi oleh operator, sedangkan Wi-Fi publik memang mudah dijadikan "hotspot palsu" oleh peretas untuk mencegat data yang tidak terenkripsi. Namun di sini perlu dibedakan: di era ketika HTTPS sudah meluas, yang dapat dicegat penyerang adalah <strong>situs web mana yang Anda kunjungi</strong>(domain), dan <strong>konten HTTP yang tidak terenkripsi</strong>; sedangkan pesan WeChat, kata sandi login aplikasi bank, dan data lain yang dienkripsi dengan HTTPS, penyerang <strong>tidak dapat langsung membacanya</strong>— kecuali melakukan serangan SSL ,stripping yang lebih kompleks dan pengguna mengabaikan peringatan sertifikat. Namun demikian, saat melakukan pembayaran di luar, menggunakan kuota data ponsel tetap pilihan paling aman.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -58,7 +58,7 @@ Di tempat umum seperti bandara, mal, kafe, jangan hubungkan ke Wi-Fi gratis deng
 {class="font-semibold mt-4 mb-1"}
 ##### 4. Penilaian di Sisi Ponsel: Pahami "Kode Rahasia" di Status Bar
 
-Bagaimana mengetahui apa yang sedang digunakan ponsel untuk terhubung? Mengambil ponsel Huawei sebagai contoh, munculnya <strong>ikon panah dua arah</strong> di samping sinyal operator atau sinyal WLAN di status bar menandakan sedang menggunakan metode tersebut untuk internet; jika keduanya menyala bersamaan, berarti akselerasi jaringan aktif, ponsel sedang memanfaatkan dua saluran sekaligus.
+Bagaimana mengetahui apa yang sedang digunakan ponsel untuk terhubung? Mengambil ponsel Huawei sebagai contoh, munculnya <strong>ikon panah dua arah</strong> di samping sinyal operator atau sinyal WLAN di status bar menandakan se,dang menggunakan metode tersebut untuk internet; jika keduanya menyala bersamaan, berarti akselerasi jaringan aktif, ponsel sedang memanfaatkan dua saluran sekaligus.
 
 Pengguna iPhone lebih intuitif: jika ikon Wi-Fi menyala berarti menggunakan Wi-Fi, jika tidak menyala lihat batang sinyal di kanan atas berarti menggunakan kuota data. Sebagian ponsel Android juga akan menampilkan ": Jika sinyal buruk, secara manual beralih kembali ke 4G, daya tahan baterai akan jauh lebih baik." atau "4G" di status bar, langsung memberi tahu jenis jaringan seluler saat ini.
 
@@ -172,7 +172,7 @@ Wi-Fi publik mungkin memiliki peretas yang menyadap data atau menyiapkan hotspot
 
 #### 3. Bluetooth: Serba Bisa Komunikasi Nirkabel Jarak Dekat
 
-Bluetooth mungkin salah satu teknologi nirkabel yang paling sering Anda gunakan di ponsel — headphone nirkabel, smartwatch, sistem mobil, keyboard dan mouse, semuanya terhubung melaluinya.
+Bluetooth mungkin salah satu teknologi nirkabel yang paling sering Anda gunakan di ponsel: headphone nirkabel, smartwatch, sistem mobil, keyboard dan mouse, semuanya terhubung melaluinya.
 
 ##### Prinsip Teknis:
 
@@ -197,7 +197,7 @@ Bluetooth bekerja di pita ISM 2.4GHz, menggunakan teknologi Frequency Hopping Sp
 - <strong>Layanan lokasi</strong>: Bluetooth Beacon digunakan untuk navigasi indoor, pelacakan barang (seperti Apple AirTag).
 - <strong>Rumah pintar</strong>: Jaringan Bluetooth Mesh mengontrol bohlam lampu, kunci pintu, dll.
 
-#### 4. Remote Inframerah: Ponsel Berubah Jadi Remote Control Serba Bisa
+4. Remote Inframerah: Ponsel Berubah Jadi Remote Control Serba Bisa
 
 Remote inframerah adalah salah satu teknologi kontrol nirkabel tertua, tetapi masih praktis di ponsel. Sebagian ponsel Android (seperti model tertentu Xiaomi, Huawei) memiliki pemancar inframerah bawaan, dapat mengendalikan TV, AC, set-top box, dan perangkat rumah lainnya.
 

@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Capitolo 15: La scienza della batteria e l'ottimizzazione dell'autonomia
+nav: Capitolo 15: Due ricariche al giorno: batteria o abitudini?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 15: Scienza della batteria e ottimizzazione dell'autonomia
+### Capitolo 15: Due ricariche al giorno: batteria o abitudini?
 
 {class="chapter-intro mb-4"}
 La batteria è il "cuore energetico" del telefono. Questo capitolo ti aiuta a capire le piccole stranezze della batteria e a imparare tecniche scientifiche di ricarica e di autonomia, per dire addio all'ansia da batteria scarica.
@@ -26,7 +26,7 @@ La batteria del telefono (agli ioni di litio o al polimero di litio) è come una
 - Lo stato di salute della batteria è la percentuale della capacità massima attuale rispetto a quella da nuova. Sotto l'80% si avverte un calo netto dell'autonomia.
 - <strong>Dove vederlo?</strong> iPhone: Impostazioni > Batteria > Salute e ricarica della batteria; Android: in genere si cerca "salute batteria" nelle impostazioni.
 
-#### 2. Mito della ricarica? Ricarica rapida, wireless e regola d'oro
+2. Mito della ricarica? Ricarica rapida, wireless e regola d'oro
 
 - <strong>La ricarica rapida danneggia la batteria?</strong> Con accessori originali o certificati, il danno è minimo. Telefono e caricabatterie hanno un controllo termico e riducono la potenza se si surriscaldano.
 - <strong>Ricarica wireless</strong>: comoda ma meno efficiente, con più calore. Adatta alla ricarica notturna.
@@ -61,7 +61,7 @@ Avrai notato che i caricabatterie rapidi sono sempre più piccoli: il protagonis
 :::
 
 {id="di-shi-wu-zhang-kuichong"}
-#### 3. Analisi completa dei protocolli di ricarica rapida: perché il tuo caricabatterie non carica velocemente?
+3. Analisi completa dei protocolli di ricarica rapida: perché il tuo caricabatterie non carica velocemente?
 
 Potresti esserti trovato in questa situazione: il telefono supporta la ricarica rapida, ma cambiando caricabatterie diventa lentissimo. Questo perché la ricarica rapida non è solo "potenza alta", ma richiede che caricabatterie, cavo e telefono "parlino la stessa lingua": questo è il protocollo di ricarica rapida.
 
@@ -197,7 +197,7 @@ Anche la ricarica wireless ha i suoi standard di protocollo:
 - Se il caricabatterie o il telefono si scaldano in modo anomalo o emanano odori strani, interrompi immediatamente l'uso.
 :::
 
-#### 4. Nuove tecnologie per le batterie: anodo in silicio-carbonio
+4. Nuove tecnologie per le batterie: anodo in silicio-carbonio
 
 Se hai seguito le presentazioni dei flagship del 2024-2026, la parola "anodo in silicio-carbonio" è diventata quasi sinonimo di batteria di fascia alta. Si tratta di un importante aggiornamento del materiale dell'anodo delle batterie al litio, e il principio non è complesso:
 

@@ -149,7 +149,7 @@ struct Record: Identifiable { ... }   // adoptar el protocolo = comprometerse a 
 
 En SwiftUI casi todo es un struct (View es un protocolo). No pasa nada si ahora no lo pillas: en el capítulo 62 lo verás todos los días. En el mundo de Swift, abraza primero el struct.
 
-#### 5. Tarjeta de sintaxis de referencia para quienes empiezan de cero
+5. Tarjeta de sintaxis de referencia para quienes empiezan de cero
 
 ::: div .overflow-x-auto
 ```html

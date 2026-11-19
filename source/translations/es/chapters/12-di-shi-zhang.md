@@ -32,7 +32,7 @@ Mucha gente confunde el código de pago con el de cobro; la diferencia es import
 
 Ten clara esta diferencia y evitarás muchas trampas de fraude. Cualquiera que te pida "envíame una captura del código de pago" es, al 100 %, un estafador.
 
-#### III. Estos ajustes de seguridad, 5 minutos que ahorran muchos dolores de cabeza
+III. Estos ajustes de seguridad, 5 minutos que ahorran muchos dolores de cabeza
 
 - <strong>Pago con huella/rostro</strong>: en los ajustes de pago de Alipay y WeChat, activa el pago biométrico. Así, cada pago exige huella o rostro; aunque pierdas el teléfono, quien lo encuentre no podrá gastar tu dinero.
 - <strong>Bloqueo de seguridad</strong>: Alipay y WeChat tienen una función de "bloqueo de seguridad". Al activarla, entrar en la página "Cartera" de la App exige una verificación adicional. Ruta: Alipay → Mi → Ajustes → Cuenta y seguridad → Centro de seguridad → Bloqueo de seguridad.
@@ -54,7 +54,7 @@ Personalmente recomiendo más la tarjeta de transporte virtual de la cartera del
 - <strong>Comparar precios de comida a domicilio</strong>: el mismo restaurante suele tener precios y ofertas distintas en Meituan y en Ele.me. Antes de pedir, mira en ambas; a veces te ahorras unos yuanes. Además, la función "Pin Hao Fan" de Meituan, pidiendo con amigos, sale bastante más barato.
 - <strong>Seguridad del taxi</strong>: en DiDi o en el taxi de Gaode, recuerda configurar "contacto de emergencia" y "compartir trayecto". Al pedir un taxi, la App comparte automáticamente tu trayecto con el contacto que hayas definido. Además, de noche prioriza el "taxi" frente al "coche exprés"; el taxi tiene regulación del sector y mayor seguridad.
 
-#### VI. Gestíona con el teléfono la seguridad social, la sanidad y los trámites
+VI. Gestíona con el teléfono la seguridad social, la sanidad y los trámites
 
 El cambio en los últimos años ha sido grande; muchos trámites que antes requerían ir a una oficina y hacer cola se resuelven ahora en unos minutos desde el teléfono.
 

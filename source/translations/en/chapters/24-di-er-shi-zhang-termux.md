@@ -9,7 +9,7 @@ kind: supplement
 ### Chapter 20 Appendix: Termux—A Portable Linux Terminal Environment on Android Devices
 
 {class="chapter-intro mb-4"}
-If you feel Developer Mode isn't "hardcore" enough and want to experience a complete Linux command line on your phone, then Termux is for you. It requires no root permission, yet can turn an ordinary Android phone into a portable Linux workstation—a powerful tool for advanced users to explore mobile development and operations.
+If you feel Developer Mode isn't "hardcore" enough and want to experience a complete Linux command line on your phone, then Termux is for you. It requires no root permission, yet can turn an ordinary Android phone into a portable Linux workstation,a powerful tool for advanced users to explore mobile development and operations.
 
 #### 1. What Is Termux
 
@@ -29,7 +29,7 @@ Uses the APT package manager (similar to Debian and Ubuntu), can install thousan
 
 ##### Security and Network Features
 
-- <strong>SSH remote connection</strong>: Supports SSH client and server features—connect to other devices remotely or turn your phone into an SSH host.
+- <strong>SSH remote connection</strong>: Supports SSH client and server features:connect to other devices remotely or turn your phone into an SSH host.
 - <strong>Encryption tools</strong>: Provides encryption tools like OpenSSL, supports data encryption and secure communication.
 - <strong>Server setup</strong>: Can configure Nginx or Apache to set up a static web server.
 
@@ -115,7 +115,7 @@ Remotely manage servers via SSH, perform system maintenance, log analysis, and o
 
 ##### Learning Linux Operations
 
-Provides a real Linux environment, an ideal platform for learning the command line and system administration—you can practice Shell scripting and Linux file permission management (such as  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">🔐 Network Security Testing</code> Install security tools like Nmap, SQLMap, Hydra, and Metasploit for network scanning and penetration testing.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">6. Version and Compatibility</code> The latest stable version of Termux is v0.118.2, suitable for devices with Android ≥ 7. Note that Termux may have instability on Android 12 and higher versions; recommend following the official update log for the latest compatibility information.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Provides a real Linux environment, making it an ideal platform for learning command line and system administration. You can practice Shell scripting, Linux file permission management (such as</code> chmod 755
+Provides a real Linux environment. It is an ideal platform for learning the command line and system administration. You can practice Shell scripting and Linux file permission management (such as  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">🔐 Network Security Testing</code>. Install security tools like Nmap, SQLMap, Hydra, and Metasploit. They are used for network scanning and penetration testing.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">6. Version and Compatibility</code> The latest stable version of Termux is v0.118.2, suitable for devices with Android ≥ 7. Note that Termux may have instability on Android 12 and higher versions; recommend following the official update log for the latest compatibility information.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Provides a real Linux environment, making it an ideal platform for learning command line and system administration. You can practice Shell scripting, Linux file permission management (such as</code> chmod 755
 
 ##### 🔐 Network Security Testing
 

@@ -2,12 +2,12 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: 第二章：整理你嘅數碼房間
+nav: 第二章：手機入面嘅嘢，搵唔到點算？
 toc: default
 kind: chapter
 ---
 
-### 第二章：整理你嘅數碼房間——檔案管理
+### 第二章：手機入面嘅嘢，搵唔到點算？
 
 {class="chapter-intro mb-4"}
 手機用耐咗會亂，好習慣由管理檔案開始。就好似你嘅房間需要定期整理一樣，你嘅數碼空間都需要打理。一個井井有條嘅手機，唔只揾嘢方便，運行都更流暢。
@@ -236,8 +236,8 @@ kind: chapter
 揀一個空閒嘅週末，按以下順序操作：
 
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
-1. 喺檔案管理器中創建 <code>2026Q2_項目A</code> 形式嘅本月工作資料夾；
-2. 將所有「下載」目錄入面本週嘅檔案過一遍，留低有用嘅、歸檔、刪除冇用嘅；
+1. 喺檔案管理器中創建 <code>2026Q2_項目A</code> 形式嘅本月工作資料夾。
+2. 將所有「下載」目錄入面本週嘅檔案過一遍，留低有用嘅、歸檔、刪除冇用嘅。
 3. 畀今年嘅家庭相片建立 <code>2025家庭</code>、<code>2026家庭</code> 呢種年度資料夾。
 :::
 
@@ -254,15 +254,15 @@ kind: chapter
 {class="font-semibold mt-4 mb-1"}
 ##### 3. 圖片安全處理規範
 
-圖片係手機入面最「敏感」嘅數據類型——一張隨手拍就可以暴露你嘅位置、設備、時間。我哋建議<strong>建立「雙重保護」工作流</strong>：
+圖片係手機入面最「敏感」嘅數據類型：一張隨手拍就可以暴露你嘅位置、設備、時間。我哋建議<strong>建立「雙重保護」工作流</strong>：
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-image mr-2"></i>發送證件相/敏感截圖嘅標準流程
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
-1. <strong>可見資訊打碼</strong>：用系統自帶或第三方工具（如美圖秀秀、Snapseed）<strong>塗抹身份證號中間幾位、車牌號、門牌、姓名、金額</strong>等關鍵字段；
-2. <strong>元數據剝離</strong>：發送前喺相簿中點「分享」或「導出」，系統會詢問係咪保留位置資訊，選擇<strong>「唔保留」</strong>。咁樣拍攝設備型號、GPS 坐標、拍攝時間就不會跟住圖片一齊發出去；
+1. <strong>可見資訊打碼</strong>：用系統自帶或第三方工具（如美圖秀秀、Snapseed）<strong>塗抹身份證號中間幾位、車牌號、門牌、姓名、金額</strong>等關鍵字段。
+2. <strong>元數據剝離</strong>：發送前喺相簿中點「分享」或「導出」，系統會詢問係咪保留位置資訊，選擇<strong>「唔保留」</strong>。咁樣拍攝設備型號、GPS 坐標、拍攝時間就不會跟住圖片一齊發出去。
 3. <strong>臨時水印</strong>（可選）：喺敏感截圖上加「僅供XX辦理使用」嘅文字水印，避免被濫用。
 :::
 
@@ -275,6 +275,6 @@ kind: chapter
 
 對於需要<strong>長期保存</strong>嘅敏感圖片（身份證、銀行卡、戶口本掃描件、護照），建議存入<strong>加密相簿</strong>：
 
-- iPhone：[相片] > 選中相片 > 隱藏（僅 Face ID 驗證後可查看）；
-- 華為/小米：[相簿] > 長按照片 > 「移入保險櫃」；
+- iPhone：[相片] > 選中相片 > 隱藏（僅 Face ID 驗證後可查看）。
+- 華為/小米：[相簿] > 長按照片 > 「移入保險櫃」。
 - 第三方加密 App：<strong>360 安全相簿</strong>、<strong>騰訊相冊管家（私隱相簿）</strong>、<strong>KeepSafe</strong> 等，單獨密碼保護，隱蔽性更好。

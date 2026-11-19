@@ -27,7 +27,7 @@ Die vier Grundkomponenten von Android auf einen Blick
 
 Als Einsteiger verbringst du 95 % deiner Zeit mit der Activity; Service und BroadcastReceiver brauchst du für Musikwiedergabe und Push-Nachrichten; ContentProvider nutzt du am seltensten (das System kapselt die gebräuchlichen Daten bereits). Und beachte: Alle vier Komponenten müssen sich im AndroidManifest.xml "anmelden" – ohne Registrierung findet das System sie nicht.
 
-#### 2. Der Activity-Lebenszyklus: die erste "Schatzkarte" der Android-Entwicklung
+2. Der Activity-Lebenszyklus: die erste "Schatzkarte" der Android-Entwicklung
 
 Eine App auf dem Telefon kann jederzeit unterbrochen werden: Ein Anruf kommt, der Nutzer wechselt kurz zu WeChat, das System beendet dich wegen Speichermangels … Das Leben einer Activity ist eine Rundreise auf dieser Karte:
 
@@ -65,7 +65,7 @@ Stolperfalle: Eine Drehung des Bildschirms "tötet" die Activity
 Der klassischste Stolperstein: Man dreht den Bildschirm, und der ganze Text im Eingabefeld ist weg. Grund: Eine Bildschirmdrehung zerstört die Activity standardmäßig und baut sie neu auf (durchlaufen von onDestroy → onCreate). Lösung: Den Zustand mit rememberSaveable sichern (in Compose der Ersatz für remember) – es holt die Werte beim Neuaufbau automatisch zurück. In den Kapiteln 6 und 7 wirst du es immer wieder brauchen.
 :::
 
-#### 3. Intent: das "Ticket" für den Verkehr in der App und nach außen
+3. Intent: das "Ticket" für den Verkehr in der App und nach außen
 
 Der Intent (die "Absicht") ist das "Fahrticket" für die Kommunikation zwischen Komponenten. Ob du von einer Seite zur anderen springen, den Browser öffnen oder die Kamera aufrufen willst – immer musst du "ein Ticket lösen und einsteigen":
 
@@ -122,7 +122,7 @@ Tipp: Und wenn es zu viele Seiten werden?
 Sobald das Projekt wächst, schreib alle Seitenrouten gebündelt in eine Datei (z. B. AppNavGraph.kt) und verwalte sie zentral – lass die Logik "Wohin springe ich?" nicht auf alle Seiten verstreuen. Das ist der erste Schritt von "läuft irgendwie" zu "wartbar".
 :::
 
-#### 5. Nebenbei erklärt: Was ist ein Fragment (und warum lehrt dieses Buch es nicht)
+5. Nebenbei erklärt: Was ist ein Fragment (und warum lehrt dieses Buch es nicht)
 
 In alten Tutorials wirst du unweigerlich auf Fragment stoßen – einen "wiederverwendbaren Oberflächen-Schnipsel" innerhalb einer Activity, in der alten Mehrseiten-Architektur der absolute Star. Im Compose-Zeitalter reichen aber Composable-Funktionen + Navigation-Routen für Seiten, und auch offiziell ist Fragment zurückgestuft worden. Deshalb taucht es in diesem Buch nicht im Hauptweg auf.
 

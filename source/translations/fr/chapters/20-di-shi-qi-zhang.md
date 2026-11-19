@@ -12,13 +12,13 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Le smartphone que vous tenez en main est en réalité une super-télécommande et un centre de données. Il ne sert pas qu'à passer des appels, il peut aussi connecter ordinateur, TV, montre, enceinte, voiture, pour que ces appareils ne soient plus des îles isolées. Ce chapitre parle de comment les faire « faire équipe ».
 
-#### I. Collaboration avec l'ordinateur : le smartphone et l'ordinateur ne sont plus deux mondes
+I. Collaboration avec l'ordinateur : le smartphone et l'ordinateur ne sont plus deux mondes
 
 Honnêtement, ce que je détestais avant, c'était de prendre une photo sur le smartphone, vouloir la retoucher sur l'ordinateur, et devoir trouver un câble de données, attendre le transfert. J'ai découvert ensuite qu'en réalité, aucun câble n'était nécessaire, une bonne intégration est dix fois plus rapide qu'un câble.
 
-- <strong>Écosystème Apple (AirDrop + presse-papiers universel)</strong>: si vous utilisez un iPhone avec un Mac, AirDrop est la première fonction à apprendre. Sur le smartphone, appuyez sur Partager → AirDrop → sélectionnez votre Mac, la photo passe instantanément, sans données, sans WiFi, utilise Bluetooth et WiFi Direct. Il y a aussi une fonction facilement négligée appelée « presse-papiers universel » — copiez un texte sur le smartphone, collez-le directement sur le Mac, c'est comme de la magie.
+- <strong>Écosystème Apple (AirDrop + presse-papiers universel)</strong>: si vous utilisez un iPhone avec un Mac, AirDrop est la première fonction à apprendre. Sur le smartphone, appuyez sur Partager → AirDrop → sélectionnez votre Mac, la photo passe instantanément, sans données, sans WiFi, utilise Bluetooth et WiFi Direct. Il y a aussi une fonction facilement négligée appelée « presse-papiers universel », copiez un texte sur le smartphone, collez-le directement sur le Mac, c'est comme de la magie.
 - <strong>Android + Windows (Link to Windows)</strong>: Microsoft a une application appelée « Link to Windows », intégrée aux téléphones Samsung, les autres téléphones Android peuvent la télécharger depuis la boutique d'applications. Après jumelage, vous pouvez directement voir les notifications du téléphone sur l'ordinateur, répondre aux SMS, parcourir les photos, même passer et recevoir des appels. Personnellement, je l'utilise depuis deux ans, en réunion pas besoin de regarder constamment le téléphone, une notification qui apparaît sur l'écran de l'ordinateur suffit.
-- <strong>Collaboration multi-écran de marque</strong>: le « Multi-Screen Collaboration » de Huawei et le « Xiaomi MiaXiang » de Xiaomi vont plus loin — ils projettent directement l'écran du smartphone sur l'ordinateur, vous pouvez utiliser la souris pour faire glisser des fichiers du smartphone à l'ordinateur, et aussi surfer sur TikTok, répondre à WeChat sur l'ordinateur. Copier-coller entre appareils, glisser-déposer de fichiers, l'expérience est très fluide.
+- <strong>Collaboration multi-écran de marque</strong>: le « Multi-Screen Collaboration » de Huawei et le « Xiaomi MiaXiang » de Xiaomi vont plus loin, ils projettent directement l'écran du smartphone sur l'ordinateur, vous pouvez utiliser la souris pour faire glisser des fichiers du smartphone à l'ordinateur, et aussi surfer sur TikTok, répondre à WeChat sur l'ordinateur. Copier-coller entre appareils, glisser-déposer de fichiers, l'expérience est très fluide.
 
 #### II. Casting vers la TV : tout le monde regarde ensemble
 
@@ -26,19 +26,19 @@ Pour le Nouvel An, ma cousine voulait diffuser sur la TV la vidéo de son voyage
 
 - <strong>iPhone → TV</strong>: faites glisser vers le bas le centre de contrôle depuis le coin supérieur droit, appuyez sur l'icône avec deux cadres superposés (Screen Mirroring), trouvez le nom de votre TV, un appui et c'est connecté. Condition préalable : la TV et le téléphone doivent être sur le même WiFi, et la TV doit prendre en charge AirPlay (la plupart des TV intelligentes le prennent en charge).
 - <strong>Android → TV</strong>: les appellations varient, Huawei l'appelle « projection sans fil », Xiaomi « projection », OPPO/vivo « interaction multi-écran ». Généralement dans le panneau des raccourcis, sinon cherchez « projection » dans les réglages.
-- <strong>Application vidéo avec casting direct</strong>: si vous voulez juste regarder iQiyi, Bilibili, YouTube sur la TV, c'est encore plus simple — dans l'interface de lecture, cherchez une petite icône rectangulaire avec un symbole WiFi, appuyez dessus, sélectionnez la TV, la vidéo passe sur la TV. Le téléphone peut faire autre chose, la vidéo continue sur la TV, sans interférence.
+- <strong>Application vidéo avec casting direct</strong>: si vous voulez juste regarder iQiyi, Bilibili, YouTube sur la TV, c'est encore plus simple, dans l'interface de lecture, cherchez une petite icône rectangulaire avec un symbole WiFi, appuyez dessus, sélectionnez la TV, la vidéo passe sur la TV. Le téléphone peut faire autre chose, la vidéo continue sur la TV, sans interférence.
 - <strong>Que faire si le casting échoue</strong>: 90 % des cas, c'est parce que vous n'êtes pas sur le même WiFi. Les 10 % restants, c'est que la fonction de casting de la TV n'est pas activée, cherchez l'interrupteur « interaction multi-écran » ou « AirPlay » dans les réglages de la TV.
 
-#### III. Avec la montre/bracelet connecté : un coach santé au poignet
+III. Avec la montre/bracelet connecté : un coach santé au poignet
 
-J'ai offert un bracelet à ma mère, au début elle disait « je ne fais pas de sport, à quoi ça sert ? ». Après deux semaines d'utilisation, elle a découvert qu'elle ne dormait que cinq heures par jour, et a commencé à ajuster activement son rythme de vie. C'est la valeur la plus pratique des montres/bracelets — transformer les données de santé invisibles en chiffres visibles.
+J'ai offert un bracelet à ma mère, au début elle disait « je ne fais pas de sport, à quoi ça sert ? ». Après deux semaines d'utilisation, elle a découvert qu'elle ne dormait que cinq heures par jour, et a commencé à ajuster activement son rythme de vie. C'est la valeur la plus pratique des montres/bracelets: transformer les données de santé invisibles en chiffres visibles.
 
-- <strong>Filtre de notifications</strong>: quand le téléphone vibre sans arrêt dans le sac ou la poche, levez le poignet pour voir — c'est un WeChat du patron ou une promo Pinduoduo, jugez en une seconde, les messages qui ne méritent pas de sortir le téléphone, laissez-les passer.
-- <strong>Synchronisation des données de santé</strong>: la montre surveille en continu 24h/24 le rythme cardiaque, l'oxygène sanguin, le sommeil, le nombre de pas, ces données sont automatiquement agrégées dans l'application Santé sur le smartphone. Avec le temps, vous voyez vos tendances — ce mois-ci ai-je trop peu marché, cette semaine la qualité du sommeil s'est-elle améliorée.
+- <strong>Filtre de notifications</strong>: quand le téléphone vibre sans arrêt dans le sac ou la poche, levez le poignet pour voir: c'est un WeChat du patron ou une promo Pinduoduo, jugez en une seconde, les messages qui ne méritent pas de sortir le téléphone, laissez-les passer.
+- <strong>Synchronisation des données de santé</strong>: la montre surveille en continu 24h/24 le rythme cardiaque, l'oxygène sanguin, le sommeil, le nombre de pas, ces données sont automatiquement agrégées dans l'application Santé sur le smartphone. Avec le temps, vous voyez vos tendances, ce mois-ci ai-je trop peu marché, cette semaine la qualité du sommeil s'est-elle améliorée.
 - <strong>Synchronisation carte de transport/carte d'accès</strong>: les cartes de bus et cartes d'accès configurées sur le smartphone sont automatiquement synchronisées sur la montre chez la plupart des marques. Dans le métro, pas besoin de sortir le téléphone, le poignet s'approche du portail et c'est passé, on a vraiment l'impression que « le futur est arrivé ».
 - <strong>Trouver mon téléphone, l'outil magique</strong>: la montre a généralement une fonction « trouver mon téléphone », un appui et le téléphone sonne. Personnellement, j'utilise cette fonction bien plus que prévu — je pose le téléphone n'importe où et oublie où il est.
 
-#### IV. Avec la maison connectée : le smartphone est le « commutateur général » de la maison
+IV. Avec la maison connectée : le smartphone est le « commutateur général » de la maison
 
 La maison connectée paraît mystérieuse, mais en réalité, ça se résume à trois choses : contrôle à distance par smartphone, définition de règles d'automatisation, contrôle vocal.
 
@@ -88,11 +88,11 @@ L'audio Bluetooth classique (A2DP) utilisé depuis vingt ans est en train d'êtr
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Plus économe en énergie, meilleure qualité audio</strong> : Utilise le tout nouveau codec LC3, offrant une meilleure qualité audio et une consommation plus faible que le SBC de l'ancienne norme, l'autonomie des écouteurs est nettement prolongée.
 - <strong>Audio double voie</strong> : Transmission indépendante des écouteurs gauche et droit, basculement en mode mono sans déconnexion.
-- <strong>Audio diffusé Auracast</strong> : La fonction phare de LE Audio. Un smartphone ou une télévision peut diffuser simultanément vers <strong>un nombre illimité de</strong> paires d'écouteurs — dans les salles d'embarquement, les musées, les salles de sport et les salles de classe, une seule source permet à plusieurs personnes d'écouter le même contenu avec leurs propres écouteurs.
+- <strong>Audio diffusé Auracast</strong> : La fonction phare de LE Audio. Un smartphone ou une télévision peut diffuser simultanément vers <strong>un nombre illimité de</strong> paires d'écouteurs: dans les salles d'embarquement, les musées, les salles de sport et les salles de classe, une seule source permet à plusieurs personnes d'écouter le même contenu avec leurs propres écouteurs.
 - <strong>État actuel</strong> : En 2024-2026, les écouteurs et smartphones phares nouvellement commercialisés prennent généralement en charge LE Audio, les anciens appareils nécessitent une mise à niveau matérielle et ne peuvent pas être débloqués par logiciel. Lors de l'achat de nouveaux écouteurs, vérifiez la présence du logo LE Audio/Auracast.
 :::
 
-#### VI. Avec le système embarqué : un partenaire de sécurité au volant
+VI. Avec le système embarqué : un partenaire de sécurité au volant
 
 Regarder son smartphone en conduisant est illégal et mortel. Mais parfois, on a vraiment besoin de navigation, de prendre un appel, de mettre de la musique. C'est là que CarPlay (Apple) et Android Auto (Android) entrent en jeu.
 

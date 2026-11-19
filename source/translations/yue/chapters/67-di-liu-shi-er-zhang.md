@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十二章：界面開發——SwiftUI 入門
 
 {class="chapter-intro mb-4"}
-界面係用戶睇到嘅一切。SwiftUI 係蘋果 2019 年推出嘅聲明式界面框架——你只需要"聲明"界面生乜嘢樣，系統自動負責渲染、適配深色模式、適配各種螢幕。到 2026 年，SwiftUI 已經係新項目嘅絕對主流。呢一章，我哋學識"畫畫"。
+界面係用戶睇到嘅一切。SwiftUI 係蘋果 2019 年推出嘅聲明式界面框架，你只需要"聲明"界面生乜嘢樣，系統自動負責渲染、適配深色模式、適配各種螢幕。到 2026 年，SwiftUI 已經係新項目嘅絕對主流。呢一章，我哋學識"畫畫"。
 
 #### 一、SwiftUI 嘅思想：聲明式，唔係命令式
 
@@ -57,8 +57,8 @@ SwiftUI 四大基礎視圖
 
 #### 三、佈局三件套：VStack、HStack、ZStack
 
-- VStack：打直咁排（好似排隊打飯）；
-- HStack：打橫咁排（好似並排坐）；
+- VStack：打直咁排（好似排隊打飯）。
+- HStack：打橫咁排（好似並排坐）。
 - ZStack：疊住放（好似撲克牌疊埋一齊，適合做角標、遮罩）。
 
 ::: div .code-block
@@ -89,7 +89,7 @@ VStack(alignment: .leading, spacing: 12) {
 注意：修飾符次序有講究
 
 {class="mt-1"}
-padding(16).background(灰) 同 background(灰).padding(16) 效果唔同——前者"先留白再塗色"（背景唔包含邊距），後者"先塗色再留白"（背景包含邊距）。新手最常見嘅"奇怪白邊"都係由呢度嚟。唔肯定嗰陣調轉次序，預覽即刻話你知答案。
+padding(16).background(灰) 同 background(灰).padding(16) 效果唔同，前者"先留白再塗色"（背景唔包含邊距），後者"先塗色再留白"（背景包含邊距）。新手最常見嘅"奇怪白邊"都係由呢度嚟。唔肯定嗰陣調轉次序，預覽即刻話你知答案。
 :::
 
 #### 四、狀態同綁定：令界面"活"起嚟
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-輸入框要用"雙向綁定"——$ 符號將"值同修改權"一齊傳入去：
+輸入框要用"雙向綁定"：$ 符號將"值同修改權"一齊傳入去：
 
 ::: div .code-block
 :::inline div .code-head
@@ -152,9 +152,9 @@ struct InputView: View {
 
 #### 五、預覽、主題同動畫：SwiftUI 嘅"外掛"
 
-- #Preview 巨集：喺檔案底部加 #Preview { ContentView() }，右邊畫布即時渲染——改代碼所見即所得；
-- 深色模式免費：用系統顏色（Color(.systemGray6)、.primary）而唔係寫死顏色，深色模式自動適配，一行都唔使多寫；
-- 動畫一行搞掂：withAnimation { count += 1 } 或者畀視圖加 .animation(.default, value: count)——過渡絲滑。
+- #Preview 巨集：喺檔案底部加 #Preview { ContentView() }，右邊畫布即時渲染，改代碼所見即所得。
+- 深色模式免費：用系統顏色（Color(.systemGray6)、.primary）而唔係寫死顏色，深色模式自動適配，一行都唔使多寫。
+- 動畫一行搞掂：withAnimation { count += 1 } 或者畀視圖加 .animation(.default, value: count)，過渡絲滑。
 
 ::: div .code-block
 :::inline div .code-head
@@ -186,7 +186,7 @@ struct AnimatedHeartView: View {
 小貼士：先功能後動畫
 
 {class="mt-1"}
-新手常犯嘅毛病係"界面仲未做啱，就開始糾結動畫"。先令功能行得通，最後先統一加動效——動畫係錦上添花，功能係雪中送炭。呢個都係我哋一貫嘅"簡單至上"原則。
+新手常犯嘅毛病係"界面仲未做啱，就開始糾結動畫"。先令功能行得通，最後先統一加動效，動畫係錦上添花，功能係雪中送炭。呢個都係我哋一貫嘅"簡單至上"原則。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -204,7 +204,7 @@ struct AnimatedHeartView: View {
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 SwiftUI 常用修飾符速查
 
-記唔住唔緊要——呢一頁就係用嚟查嘅。用得最多嘅其實就係頭四個：padding、圓角、背景、字體。
+記唔住唔緊要，呢一頁就係用嚟查嘅。用得最多嘅其實就係頭四個：padding、圓角、背景、字體。
 
 {class="mt-1"}
 將模板項目改成一個心情切換器：一個按鈕，㩒咗之後喺 😀開心 → 😢難過 → 😡嬲 之間循環切換，文字同背景色跟住變。提示：用陣列存三組（文字+顏色），@State 存下標，㩒嗰陣 (index + 1) % 3。做完傳畀朋友玩，收穫第一波"哇你識做 App 喇"。

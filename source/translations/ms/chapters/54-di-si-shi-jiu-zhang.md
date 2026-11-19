@@ -10,16 +10,16 @@ kind: chapter
 ### Bab 49: Membina Persekitaran Pembangunan — Android Studio dan Projek Pertama
 
 {class="chapter-intro mb-4"}
-Ingin membuat kerja dengan baik, tajamkan dahulu peralatan anda. Dalam bab ini kita 'memasang dapur': memasang Android Studio, menjayakan emulator, mencipta projek Android pertama dalam hidup anda, kemudian membongkar struktur projek untuk difahami dengan jelas. Selepas persekitaran siap dipasang, anda buat pertama kalinya akan melihat kod yang anda tulis bertukar menjadi butang yang boleh ditekan — detik ini, ramai orang ingat seumur hidup.
+Ingin membuat kerja dengan baik, tajamkan dahulu peralatan anda. Dalam bab ini kita 'memasang dapur': memasang Android Studio, menjayakan emulator, mencipta projek Android pertama dalam hidup anda, kemudian membongkar struktur projek untuk difahami dengan jelas. Selepas persekitaran siap dipasang, anda buat pertama kalinya akan melihat kod yang anda tulis bertukar menjadi butang yang boleh ditekan: detik ini, ramai orang ingat seumur hidup.
 
 #### 1. Memasang Android Studio
 
-Android Studio ialah persekitaran pembangunan bersepadu (IDE) rasmi Google, percuma, dengan pakej fungsi lengkap: menulis kod, melihat pratonton antara muka, menyahpepijat, membungkus — semuanya di dalamnya. Empat langkah pemasangan:
+Android Studio ialah persekitaran pembangunan bersepadu (IDE) rasmi Google, percuma, dengan pakej fungsi lengkap: menulis kod, melihat pratonton antara muka, menyahpepijat, membungkus: semuanya di dalamnya. Empat langkah pemasangan:
 
 1. Buka laman rasmi developer.android.com/studio dan muat turun versi stabil terkini (pada Ogos 2026, versi selepas Narwhal; ada untuk Windows/Mac/Linux);
 2. Jalankan pemasang, klik 'Seterusnya' dari mula hingga akhir — pembimbing pemasangan akan membawa Android SDK dan komponen emulator secara automatik;
 3. Semasa dilancarkan buat kali pertama, muat turun komponen SDK mengikut arahan (cukup guna pilihan lalai; mungkin mengambil masa beberapa minit dan beberapa GB ruang);
-4. Selepas selesai, anda akan melihat halaman alu-aluan — tahniah, 'dapur' sudah siap.
+4. Selepas selesai, anda akan melihat halaman alu-aluan, tahniah, 'dapur' sudah siap
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -42,14 +42,14 @@ Di halaman alu-aluan, klik New Project, pilih templat Empty Activity (templat pa
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Tiga perkara yang perlu diisi semasa mencipta projek
 
-Selepas klik Finish, Android Studio akan memuat turun kebergantungan dan membina projek secara automatik dengan Gradle (kali pertama perlu menunggu beberapa minit; selepas itu jauh lebih pantas). Setelah siap dibina, anda mempunyai apl yang boleh berjalan — walaupun ia buat sementara hanya memaparkan satu baris "Hello Android!".
+Selepas klik Finish, Android Studio akan memuat turun kebergantungan dan membina projek secara automatik dengan Gradle (kali pertama perlu menunggu beberapa minit; selepas itu jauh lebih pantas). Setelah siap dibina, anda mempunyai apl yang boleh berjalan, walaupun ia buat sementara hanya memaparkan satu baris "Hello Android!".
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Petua: Selok-belok Nama Pakej
 
 {class="mt-1"}
-Nama pakej (package name) seperti 'nombor kad pengenalan' aplikasi; tidak boleh berulang di seluruh dunia, dan tidak boleh diubah selepas diterbitkan. Untuk latihan peribadi, com.example.xxx sudah memadai; produk sebenar mesti diganti dengan domain terbalik anda sendiri (contohnya com.nama.anda.namaaplikasi). Jangan terbitkan dengan com.example — kedai akan menolaknya.
+Nama pakej (package name) seperti 'nombor kad pengenalan' aplikasi; tidak boleh berulang di seluruh dunia, dan tidak boleh diubah selepas diterbitkan. Untuk latihan peribadi, com.example.xxx sudah memadai; produk sebenar mesti diganti dengan domain terbalik anda sendiri (contohnya com.nama.anda.namaaplikasi). Jangan terbitkan dengan com.example, kedai akan menolaknya.
 :::
 
 #### 3. Menjalankannya: Emulator dan Peranti Sebenar
@@ -62,19 +62,19 @@ Emulator ialah telefon Android yang dimayakan di dalam komputer. Dalam Android S
 
 ##### 2. Penyahpepijatan peranti sebenar (lebih disyorkan)
 
-Peranti sebenar sentiasa menjadi persekitaran ujian paling sebenar — rasa geseran semasa meluncur, rangkaian sebenar, sensor sebenar; emulator tidak dapat menandinginya. Penyahpepijatan peranti Android sebenar sangat mudah:
+Peranti sebenar sentiasa menjadi persekitaran ujian paling sebenar: rasa geseran semasa meluncur, rangkaian sebenar, sensor sebenar; emulator tidak dapat menandinginya. Penyahpepijatan peranti Android sebenar sangat mudah:
 
 1. Pada telefon, buka [Tetapan] → [Mengenai Telefon], ketik 'Nombor Binaan' 7 kali berturut-turut untuk mengaktifkan 'Pilihan Pembangun';
 2. Dalam [Pilihan Pembangun], aktifkan Penyahpepijatan USB;
 3. Sambungkan telefon ke komputer dengan kabel data, dan pada tetingkap timbul telefon pilih 'Benarkan penyahpepijatan USB';
-4. Kembali ke Android Studio; telefon anda akan muncul dalam senarai juntai bawah peranti pada bar alat, kemudian tekan Run.
+4. Kembali ke Android Studio; telefon anda akan muncul dalam senarai juntai bawah peranti pada bar alat, kemudian tekan Run
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Amaran Perangkap: Jangan Biarkan Penyahpepijatan USB Sentiasa Aktif
 
 {class="mt-1"}
-Penyahpepijatan USB umpama membuka 'pintu belakang' kepada komputer. Semasa mengecas di tempat awam atau menyambung kepada komputer yang tidak dipercayai, pastikan anda mematikan Penyahpepijatan USB untuk menghalang orang lain membaca data anda melaluinya. Matikan terus selepas selesai membangun — jadikan tabiat.
+Penyahpepijatan USB umpama membuka 'pintu belakang' kepada komputer. Semasa mengecas di tempat awam atau menyambung kepada komputer yang tidak dipercayai, pastikan anda mematikan Penyahpepijatan USB untuk menghalang orang lain membaca data anda melaluinya. Matikan terus selepas selesai membangun, jadikan tabiat.
 :::
 
 #### 4. Membongkar Struktur Projek: Apa Fungsi Setiap Fail
@@ -112,9 +112,9 @@ Rajah 2: Struktur projek yang wajib difahami pemula (rumus: sentuh hanya direkto
 :::
 
 - MainActivity.kt: 'Pintu gerbang' aplikasi. Apabila pengguna mengetik ikon, inilah yang pertama dibangunkan. Dalam templat masa kini, ia bertanggungjawab memaparkan "Hello Android!".
-- AndroidManifest.xml: 'Buku daftar' aplikasi — mengisytiharkan nama aplikasi ini, ikon yang mana, halaman apa yang ada, dan kebenaran apa yang diperlukan (kamera, lokasi dan sebagainya).
+- AndroidManifest.xml: 'Buku daftar' aplikasi, mengisytiharkan nama aplikasi ini, ikon yang mana, halaman apa yang ada, dan kebenaran apa yang diperlukan (kamera, lokasi dan sebagainya).
 - Direktori res/: gudang sumber, menyimpan imej, ikon, rentetan, warna. Meletakkan teks dalam fail sumber dan bukannya menulis terus dalam kod ialah tabiat baik pembangunan Android (mudah untuk tukar bahasa, tukar tema).
-- build.gradle.kts: resipi binaan — mengisytiharkan versi sokongan minimum dan pustaka kebergantungan (contohnya Compose).
+- build.gradle.kts: resipi binaan, mengisytiharkan versi sokongan minimum dan pustaka kebergantungan (contohnya Compose).
 
 #### 5. Uji Kemahiran: Gantikan 'Hello' dengan Nama Anda
 
@@ -139,7 +139,7 @@ setContent {
 
 Tahniah, anda telah melengkapkan satu kitaran penuh 'ubah kod → bina → pasang → jalankan'. Kitaran inilah rutin pembangunan harian anda pada masa hadapan. Sementara masih hangat, cuba ubah sesuatu yang lain: besarkan saiz fon, tukar warna — bab seterusnya kita akan belajar bagaimana 'sihir' ini datang.
 
-#### 6. Pertolongan Cemas Ralat Biasa: 'Bilik Kecemasan' Dua Minggu Pertama Pemula
+6. Pertolongan Cemas Ralat Biasa: 'Bilik Kecemasan' Dua Minggu Pertama Pemula
 
 Pada peringkat penyediaan persekitaran dan binaan pertama, anda berkemungkinan besar menghadapi tiga ralat berikut. Jangan panik; semuanya ada penawar:
 
@@ -157,7 +157,7 @@ Jadual pertolongan cemas ralat persekitaran untuk pemula
 Petua: Metodologi Mencari Ralat
 
 {class="mt-1"}
-Baris pertama mesej ralat paling bernilai — salinkan apa adanya ke dalam enjin carian, tambah kata kunci "android studio". Jangan cari soalan umum seperti "kenapa saya tidak boleh pasang persekitaran", cari ralat spesifik seperti "Gradle sync failed: Could not resolve com.android.tools.build". Soalan yang tepat barulah menghasilkan jawapan yang tepat.
+Baris pertama mesej ralat paling bernilai, salinkan apa adanya ke dalam enjin carian, tambah kata kunci "android studio". Jangan cari soalan umum seperti "kenapa saya tidak boleh pasang persekitaran", cari ralat spesifik seperti "Gradle sync failed: Could not resolve com.android.tools.build". Soalan yang tepat barulah menghasilkan jawapan yang tepat.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -165,7 +165,10 @@ Baris pertama mesej ralat paling bernilai — salinkan apa adanya ke dalam enjin
 Mari cuba: Lengkapkan senarai 'ritual pembangun' anda
 
 {class="mt-1"}
-① Pasang Android Studio dan jayakan emulator; ② jalankan aplikasi anda sekali pada peranti sebenar dan simpan tangkapan skrin sebagai kenangan; ③ ubah teks Hello kepada nama anda; ④ mampatkan projek sebagai arkib simpanan. Selepas melengkapkan empat langkah ini, anda boleh mengumumkan di media sosial: saya kini juga seorang pembangun Android (tangkapan skrin sebagai bukti).
+1. Pasang Android Studio dan jayakan emulator;
+2. jalankan aplikasi anda sekali pada peranti sebenar dan simpan tangkapan skrin sebagai kenangan;
+3. ubah teks Hello kepada nama anda;
+4. mampatkan projek sebagai arkib simpanan. Selepas melengkapkan empat langkah ini, anda boleh mengumumkan di media sosial: saya kini juga seorang pembangun Android (tangkapan skrin sebagai bukti).
 :::
 
 ::: div .chapter-summary
@@ -175,6 +178,6 @@ Ringkasan Bab
 - Android Studio = IDE rasmi percuma; disyorkan 16GB RAM + 20GB cakera + aktifkan virtualisasi
 - Tiga elemen projek baharu: nama, nama pakej (unik sejagat, jangan terbitkan dengan com.example), SDK minimum (mulai API 26)
 - Dua cara menjalankan: emulator (telefon maya dalam komputer) dan peranti sebenar (aktifkan penyahpepijatan USB, ingat matikan selepas guna)
-- Rumus projek: sentuh hanya direktori app/ — MainActivity.kt ialah pintu gerbang, Manifest ialah buku daftar, res/ ialah gudang sumber
+- Rumus projek: sentuh hanya direktori app/, MainActivity.kt ialah pintu gerbang, Manifest ialah buku daftar, res/ ialah gudang sumber
 - Rutin pembangunan = ubah kod → Run → lihat hasil, berulang-ulang
 :::

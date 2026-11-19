@@ -2,17 +2,17 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: Capítulo 48: Conhecendo o Android — do sistema operacional ao ecossistema de desenvolvimento
+nav: Capítulo 48: Como o Android virou o que é hoje?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 48: Conhecendo o Android — do sistema operacional ao ecossistema de desenvolvimento
+### Capítulo 48: Como o Android virou o que é hoje?
 
 {class="chapter-intro mb-4"}
-Parabéns por tomar essa decisão — deixar de ser "quem usa o celular" para virar "quem faz aplicativos de celular". Antes de pôr a mão na massa, vamos abrir o mapa: de onde vem o Android? Por que desenvolvedores do mundo inteiro escrevem aplicativos para ele? O que acontece entre você bater no teclado e o app chegar ao celular do usuário?
+Parabéns por tomar essa decisão: deixar de ser "quem usa o celular" para virar "quem faz aplicativos de celular". Antes de pôr a mão na massa, vamos abrir o mapa. De onde vem o Android? Por que desenvolvedores do mundo inteiro escrevem aplicativos para ele? O que acontece entre você bater no teclado e o app chegar ao celular do usuário?
 
-#### 1. As origens do Android: do "robozinho" ao "maior sistema do mundo"
+1. As origens do Android: do "robozinho" ao "maior sistema do mundo"
 
 A história do Android começa em 2003 — um engenheiro chamado Andy Rubin fundou a Android Inc., com um objetivo bem modesto: criar um sistema operacional inteligente que "entendesse melhor de câmeras". Depois, o Google a comprou em 2005; em 2007, uniu dezenas de fabricantes para fundar a Open Handset Alliance (OHA); e, em setembro de 2008, o primeiro celular Android, o HTC Dream (G1), chegou oficialmente ao mercado.
 
@@ -23,10 +23,10 @@ Daí em diante, todo mundo conhece a história: em 2026, o Android é o sistema 
 Dica: o DNA de código aberto do Android
 
 {class="mt-1"}
-O núcleo do código do Android (AOSP, Android Open Source Project) é de código aberto — qualquer fabricante pode pegar, modificar e personalizar. Por isso a Xiaomi tem a MIUI (hoje HyperOS), a Huawei tem a camada de compatibilidade HarmonyOS e a Samsung tem a One UI. Para quem desenvolve, isso é uma boa: você aprende "desenvolvimento Android", e não "desenvolvimento para uma marca" — um só aprendizado serve para todo o ecossistema.
+O núcleo do código do Android (AOSP, Android Open Source Project) é de código aberto, qualquer fabricante pode pegar, modificar e personalizar. Por isso a Xiaomi tem a MIUI (hoje HyperOS), a Huawei tem a camada de compatibilidade HarmonyOS e a Samsung tem a One UI. Para quem desenvolve, isso é uma boa: você aprende "desenvolvimento Android", e não "desenvolvimento para uma marca" — um só aprendizado serve para todo o ecossistema.
 :::
 
-A evolução dos números de versão também é divertida: a partir do 1.5, o Cupcake, cada versão grande recebeu nome de sobremesa — Donut, Eclair, Frozen Yogurt, Gingerbread... só em 2019, com o Android 10, passou a ser só números. Em agosto de 2026, a versão estável mais recente é o Android 17; já a "versão mínima suportada", que é o que de fato importa ao desenvolver, nos apps principais costuma ficar entre o Android 8 (API 26) e o Android 10 (API 29) — suportando aparelhos de alguns anos atrás é que a sua base de usuários fica grande o suficiente.
+A evolução dos números de versão também é divertida: a partir do 1.5, o Cupcake, cada versão grande recebeu nome de sobremesa: Donut, Eclair, Frozen Yogurt, Gingerbread... só em 2019, com o Android 10, passou a ser só números. Em agosto de 2026, a versão estável mais recente é o Android 17; já a "versão mínima suportada", que é o que de fato importa ao desenvolver, nos apps principais costuma ficar entre o Android 8 (API 26) e o Android 10 (API 29), suportando aparelhos de alguns anos atrás é que a sua base de usuários fica grande o suficiente.
 
 ::: div .overflow-x-auto
 ```html
@@ -39,7 +39,7 @@ Breve história das versões do Android (até agosto de 2026; destaques para des
 
 #### 2. Em que linguagem escrever: Java ou Kotlin?
 
-Ao longo da história do desenvolvimento Android, duas linguagens dominaram. O Java é o "veterano fundador" — esteve lá desde o nascimento do Android; o Kotlin foi apadrinhado pelo Google em 2017 como "cidadão de primeira classe" e, desde 2019, a posição oficial é "Kotlin first". Em 2026, praticamente todos os projetos novos usam Kotlin, e a maioria dos antigos vem migrando aos poucos.
+Ao longo da história do desenvolvimento Android, duas linguagens dominaram. O Java é o "veterano fundador", esteve lá desde o nascimento do Android; o Kotlin foi apadrinhado pelo Google em 2017 como "cidadão de primeira classe" e, desde 2019, a posição oficial é "Kotlin first". Em 2026, praticamente todos os projetos novos usam Kotlin, e a maioria dos antigos vem migrando aos poucos.
 
 Falando francamente: se você parte do zero absoluto, aprenda Kotlin direto e não volte para o Java. São três motivos: primeiro, o código Kotlin é 30% a 40% menor que o Java (a mesma funcionalidade fica mais curta e mais clara em Kotlin); segundo, ele protege de fábrica contra o "ponteiro nulo", o pesadelo dos iniciantes; terceiro, todos os tutoriais modernos, a documentação oficial e as ferramentas de programação com IA (lembra do nosso livro de programação com IA?) tomam o Kotlin como padrão. O Java só aparece quando você mantém projetos antigos ou lê código legado.
 
@@ -85,11 +85,11 @@ Nesse fluxo há dois conceitos que você precisa conhecer desde já:
 - APK: o formato de pacote de instalação dos aplicativos Android (.apk); dá para instalar no celular com dois toques, como o .exe do Windows. Use-o para testar por conta própria ou passar para um amigo experimentar.
 - AAB: o Android App Bundle (.aab), o "formato de empacotamento avançado" usado para publicar no Google Play. A loja recorta o pacote dinamicamente conforme o modelo do celular de cada usuário, deixando o download de cada um menor. Você não consegue instalar um .aab por conta própria; ele só pode ser entregue pela loja.
 
-Outro termo que você vai ouvir sem parar: SDK (Software Development Kit, kit de desenvolvimento de software). É todo o "equipamento de desenvolvimento" fornecido oficialmente pelo Android — inclui as bibliotecas de API de cada versão, ferramentas de depuração, imagens de emulador e mais. As classes como Activity e Button, que você usa ao programar, vêm do SDK.
+Outro termo que você vai ouvir sem parar: SDK (Software Development Kit, kit de desenvolvimento de software). É todo o "equipamento de desenvolvimento" fornecido oficialmente pelo Android, inclui as bibliotecas de API de cada versão, ferramentas de depuração, imagens de emulador e mais. As classes como Activity e Button, que você usa ao programar, vêm do SDK.
 
 #### 4. Panorama da stack Android: a sua "lista de armas"
 
-Antes de estudar de fato, conheça a configuração padrão dos projetos Android mainstream em 2026 — tudo bem se esta lista não fizer sentido agora; quando você terminar o livro e voltar a ela, tudo se esclarecerá:
+Antes de estudar de fato, conheça a configuração padrão dos projetos Android mainstream em 2026, tudo bem se esta lista não fizer sentido agora; quando você terminar o livro e voltar a ela, tudo se esclarecerá:
 
 ::: div .overflow-x-auto
 ```html
@@ -100,11 +100,11 @@ Antes de estudar de fato, conheça a configuração padrão dos projetos Android
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Visão rápida da stack Android dominante em 2026
 
-Não se assuste com essa sequência de termos em inglês. Eles são como as panelas e as vasilhas da cozinha — por ora basta saber que "para cozinhar, é preciso entrar na cozinha"; como cada ferramenta funciona, os próximos capítulos vão desmontando uma a uma. E a boa notícia: ao criar um projeto novo, o Android Studio configura todo esse conjunto automaticamente; você só precisa cozinhar.
+Não se assuste com essa sequência de termos em inglês. Eles são como as panelas e as vasilhas da cozinha, por ora basta saber que "para cozinhar, é preciso entrar na cozinha"; como cada ferramenta funciona, os próximos capítulos vão desmontando uma a uma. E a boa notícia: ao criar um projeto novo, o Android Studio configura todo esse conjunto automaticamente; você só precisa cozinhar.
 
-#### 5. Android vs iOS: a primeira "aula de escolha de lado" de quem desenvolve
+5. Android vs iOS: a primeira "aula de escolha de lado" de quem desenvolve
 
-Talvez você tenha, ao mesmo tempo, aparelhos Android e Apple. Como desenvolvedor, vale conhecer com antecedência as diferenças de experiência entre os dois lados — não é uma torcida por "qual é melhor", e sim a conta real de "por qual lado é mais adequado começar":
+Talvez você tenha, ao mesmo tempo, aparelhos Android e Apple. Como desenvolvedor, vale conhecer com antecedência as diferenças de experiência entre os dois lados: não é uma torcida por "qual é melhor", e sim a conta real de "por qual lado é mais adequado começar":
 
 ::: div .overflow-x-auto
 ```html
@@ -115,14 +115,14 @@ Talvez você tenha, ao mesmo tempo, aparelhos Android e Apple. Como desenvolvedo
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Comparação dos caminhos de desenvolvimento Android e iOS (agosto de 2026)
 
-Falando francamente: se o seu computador não é um Mac, essa questão nem se põe — o Android é a única opção. Se você tem um Mac, dá para ler a Oitava e a Nona Partes deste livro lado a lado: a lógica de programação se transfere, e aprender o segundo lado depois do primeiro fica bem mais rápido.
+Falando francamente: se o seu computador não é um Mac, essa questão nem se põe, o Android é a única opção. Se você tem um Mac, dá para ler a Oitava e a Nona Partes deste livro lado a lado: a lógica de programação se transfere, e aprender o segundo lado depois do primeiro fica bem mais rápido.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mão na massa: conheça o "Android" dentro do seu celular
 
 {class="mt-1"}
-Abra, no celular, [Configurações] → [Sobre o telefone] (ou "Informações do telefone") e localize a linha "Versão do Android" — toque nela várias vezes seguidas e você ainda dispara o minigame secreto do sistema. Anote o número da sua versão e confira na tabela de versões acima a qual geração ele pertence. O seu celular é a sua primeira "máquina de testes de desenvolvimento".
+Abra, no celular, [Configurações] → [Sobre o telefone] (ou "Informações do telefone") e localize a linha "Versão do Android", toque nela várias vezes seguidas e você ainda dispara o minigame secreto do sistema. Anote o número da sua versão e confira na tabela de versões acima a qual geração ele pertence. O seu celular é a sua primeira "máquina de testes de desenvolvimento".
 :::
 
 ::: div .chapter-summary

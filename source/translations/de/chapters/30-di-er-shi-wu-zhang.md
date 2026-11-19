@@ -2,17 +2,17 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Kapitel 25: Gebrauchte Handys abgeben und digitales Erbe
+nav: Kapitel 25: Altes Handy verkaufen? Erst diese Schritte
 toc: default
 kind: chapter
 ---
 
-### Kapitel 25: Gebrauchttelefone und digitales Erbe
+### Kapitel 25: Altes Handy verkaufen? Erst diese Schritte
 
 {class="chapter-intro mb-4"}
 Apples "Legacy-Kontakt"
 
-#### : Vertrauenswürdige Kontakte benennen, die nach dem Tod Zugang zu iCloud-Daten beantragen können.
+- Vertrauenswürdige Kontakte benennen, die nach dem Tod Zugang zu iCloud-Daten beantragen können.
 
 Grundprinzip: Datenloeschung ist nicht „Loeschen", sondern „Ueberschreiben". Viele glauben, es reicht, Fotos in den Papierkorb zu verschieben und das Album zu leeren. Nach dem Weiterverkaufen scannen neue Besitzer mit Datenrettungs-Software – und alte Fotos, Chatverlaeufe und Ausweisfotos sind alle wieder da. Diese „Blamage" passiert jedes Jahr.
 
@@ -194,8 +194,8 @@ Ein herkoemmliches Testament deckt digitale Vermoegenswerte nicht ab. Es wird em
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Soziale Netzwerke: WeChat (Konto xxx), Weibo, Douyin, Bilibili, Xiaohongshu usw.
-- Zahlung: Alipay, WeChat Pay, einzelne Banking-Apps
-- Cloud: iCloud, Huawei Cloud, Xiaomi Cloud, Google-Konto, Microsoft-Konto
+- Zahlung: Alipay, WeChat Pay, einzelne Banking-Apps.
+- Cloud: iCloud, Huawei Cloud, Xiaomi Cloud, Google-Konto, Microsoft-Konto.
 - E-Mail: QQ-Mail, NetEase-Mail, Gmail usw.
 - Sonstige: Online-Festplatten, Abodienste, Spielekonten usw.
 
@@ -233,7 +233,7 @@ Ein herkoemmliches Testament deckt digitale Vermoegenswerte nicht ab. Es wird em
 Passwoerter direkt im Testament zu notieren birgt das Risiko der Preisgabe; nach der Testamenteroeffnung koennen alle Erben sie einsehen.<strong>Sicherer ist: Im Testament nur „Kontoliste + Verfuegungswillen + Aufbewahrungsort der Passwoerter" notieren; die eigentlichen Passwoerter ueber das Master-Passwort des Passwort-Managers separat an den Vertrauensvollstrecker uebergeben</strong>. So wird dem Recht genuegt und das Risiko der Passwortpreisgabe gesenkt.
 :::
 
-#### (Optional) Den Speicher mit Mülldateien füllen und noch einmal zurücksetzen.
+(Optional) Den Speicher mit Mülldateien füllen und noch einmal zurücksetzen.
 
 Ein Smartphone enthaelt Dutzende Metalle wie Gold, Silber, Kupfer und Seltene Erden. Unueberlegt weggeworfen verschmutzt es den Boden und verschwendet Ressourcen. Es gibt drei richtige Recycling-Kanaele mit unterschiedlichen Schwerpunkten:
 

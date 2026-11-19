@@ -2,17 +2,17 @@
 id: di-shi-liu-zhang
 num: 16
 part: jin-jie-pian
-nav: Bab 16: Sistem Akun dan Layanan Cloud
+nav: Bab 16: Ganti ponsel, akun mana yang boleh hilang?
 toc: default
 kind: chapter
 ---
 
-### Bab 16: Sistem akun dan layanan cloud
+### Bab 16: Ganti ponsel, akun mana yang boleh hilang?
 
 {class="chapter-intro mb-4"}
 1\. Akun ponsel Anda, sebenarnya mengelola berapa banyak hal?
 
-#### Banyak orang mengira akun hanya untuk mengunduh aplikasi. Sebenarnya, hal-hal yang terikat pada akun ponsel jauh lebih banyak dari yang Anda bayangkan:
+Banyak orang mengira akun hanya untuk mengunduh aplikasi. Sebenarnya, hal-hal yang terikat pada akun ponsel jauh lebih banyak dari yang Anda bayangkan:
 
 Kontak
 
@@ -20,17 +20,17 @@ Kontak
 - <strong>Foto dan video</strong> Catatan
 - <strong>: Ide, jurnal, kata sandi yang Anda cat dengan santai (ya, banyak orang mencatat kata sandi di catatan).</strong> Riwayat pembelian aplikasi
 - <strong>: Aplikasi berbayar dan pembelian dalam aplikasi yang dibeli dengan ratusan yuan.</strong> Temukan ponsel
-- <strong>: Setelah ponsel hilang, ini adalah satu-satunya alat yang dapat membantu Anda melacak, mengunci, dan menghapus data dari jarak jauh.</strong> Jika Anda menggunakan ponsel Apple, semua hal di atas terikat pada Apple ID Anda. Jika Anda menggunakan Android, maka terikat pada akun Huawei/Xiaomi/OPPO/vivo Anda, juga akun Google Anda. Akun-akun ini adalah "kartu keluarga" kehidupan digital Anda, kehilangan kartu keluarga, banyak hal menjadi tidak jelas.
+- <strong>: Setelah ponsel hilang, ini adalah satu-satunya alat yang dapat membantu Anda melacak, mengunci, dan menghapus data dari jarak jauh.</strong> Jika Anda menggunakan ponsel Apple, semua hal di atas terikat pada Apple ID Anda. Jika Anda menggunakan Android, maka terikat pada akun Huawei/Xiaomi/OPPO/vivo Anda, juga akun Google Anda. Akun-akun ini adalah "kartu keluarga" kehidupan digital Anda, kehilangan kartu keluarga, banyak hal menjadi tidak jelas
 
 2\. Tiga hal yang harus dilakukan, lakukan sekarang
 
 #### Aktifkan autentikasi dua faktor
 
-1. <strong>: Apakah Anda menggunakan Apple atau Android, hal pertama adalah pergi ke pengaturan akun dan aktifkan "autentikasi dua faktor" atau "verifikasi dua langkah". Ini seperti menambahkan kunci ganda pada pintu Anda — kata sandi saja tidak cukup, ponsel Anda juga harus menerima kode verifikasi. Bahkan jika seseorang menebak kata sandi Anda secara online, tanpa ponsel Anda, mereka tidak bisa masuk.</strong> Ikatkan metode pemulihan yang andal
-2. <strong>: Autentikasi dua faktor sangat aman, tetapi ada risiko — bagaimana jika ponsel Anda sendiri hilang? Jadi sistem akan meminta Anda mengatur "kunci pemulihan" atau "email/nomor telepon cadangan". Ini adalah satu-satunya cara untuk mendapatkan kembali akun Anda dalam keadaan darurat, sebaiknya catat di kertas, jangan simpan di ponsel.</strong> Konfirmasi "Temukan Ponsel" sudah aktif
+1. <strong>: Apakah Anda menggunakan Apple atau Android, hal pertama adalah pergi ke pengaturan akun dan aktifkan "autentikasi dua faktor" atau "verifikasi dua langkah". Ini seperti menambahkan kunci ganda pada pintu Anda: kata sandi saja tidak cukup, ponsel Anda juga harus menerima kode verifikasi. Bahkan jika seseorang menebak kata sandi Anda secara online, tanpa ponsel Anda, mereka tidak bisa masuk.</strong> Ikatkan metode pemulihan yang andal
+2. <strong>: Autentikasi dua faktor sangat aman, tetapi ada risiko, bagaimana jika ponsel Anda sendiri hilang? Jadi sistem akan meminta Anda mengatur "kunci pemulihan" atau "email/nomor telepon cadangan". Ini adalah satu-satunya cara untuk mendapatkan kembali akun Anda dalam keadaan darurat, sebaiknya catat di kertas, jangan simpan di ponsel.</strong> Konfirmasi "Temukan Ponsel" sudah aktif
 3. <strong>: Fitur ini dapat membantu Anda melacak, mengunci, memutar suara, bahkan menghapus semua data dari jarak jauh setelah ponsel hilang. Ini adalah pertahanan terakhir. Banyak orang melewatkan langkah ini saat membeli ponsel, dan ketika ingin menggunakannya nanti, terlambat sudah.</strong>3. iCloud: "Udara" bagi pengguna Apple
 
-#### Pengguna ponsel Apple, cepat atau lambat akan menghadapi pertanyaan jiwa: apa yang harus dilakukan jika ruang iCloud penuh?
+Pengguna ponsel Apple, cepat atau lambat akan menghadapi pertanyaan jiwa: apa yang harus dilakukan jika ruang iCloud penuh?
 
 Apple memberikan 5GB gratis secara cuma-cuma, sejujurnya, 5GB ini bahkan tidak cukup untuk satu kali pencadangan. Jadi sebagian besar orang pada akhirnya akan menerima popup yang menjengkelkan: "Ruang penyimpanan iCloud penuh". Saat itu Anda memiliki tiga pilihan:
 
@@ -38,7 +38,7 @@ Bersihkan
 
 - <strong>: Pergi ke Pengaturan → Nama Anda → iCloud → Kelola Penyimpanan, lihat siapa yang mengambil ruang Anda. Umumnya, foto dan cadangan adalah yang terbesar. Bisa hapus cadangan lama yang tidak diperlukan terlebih dahulu.</strong> Upgrade
 - <strong>: 50GB 6 yuan per bulan, 200GB 21 yuan per bulan. Secara pribadi, 50GB cukup untuk sebagian besar orang, terutama untuk pencadangan dan thumbnail foto.</strong> Solusi alternatif
-- <strong>: Jika Anda tidak ingin membayar, Anda dapat mengekspor foto ke komputer secara berkala, lalu mematikan sinkronisasi foto iCloud. Tetapi dengan begitu, Anda kehilangan kemudahan pencadangan foto otomatis.</strong> Pengingat penting: Pustaka Foto iCloud bukan "penyimpanan cloud" — itu adalah "sinkronisasi". Anda menghapus foto di ponsel, iCloud juga akan menghapusnya. Jika yang Anda inginkan adalah "mencadangkan ke cloud lalu mengosongkan ponsel", maka Foto iCloud bukan yang Anda butuhkan, yang Anda butuhkan adalah iCloud Cloud Backup, atau penyimpanan cloud pihak ketiga.
+- <strong>: Jika Anda tidak ingin membayar, Anda dapat mengekspor foto ke komputer secara berkala, lalu mematikan sinkronisasi foto iCloud. Tetapi dengan begitu, Anda kehilangan kemudahan pencadangan foto otomatis.</strong> Pengingat penting: Pustaka Foto iCloud bukan "penyimpanan cloud", itu adalah "sinkronisasi". Anda menghapus foto di ponsel, iCloud juga akan menghapusnya. Jika yang Anda inginkan adalah "mencadangkan ke cloud lalu mengosongkan ponsel", maka Foto iCloud bukan yang Anda butuhkan, yang Anda butuhkan adalah iCloud Cloud Backup, atau penyimpanan cloud pihak ketiga
 
 4\. Sinkronisasi dan pencadangan, jangan tertukar
 
@@ -74,24 +74,24 @@ Akhir 2022 Apple meluncurkan <strong>iCloud Advanced Data Protection (ADP)</stro
 Saran singkat: Jika akun Anda ada data privasi penting, dan wilayah akun mendukung, sangat disarankan mengaktifkan ADP — ini perlindungan data cloud terkuat yang bisa didapat orang biasa.
 :::
 
-#### Kedua kata ini terdengar mirip, tetapi konsekuensinya sangat berbeda:
+Kedua kata ini terdengar mirip, tetapi konsekuensinya sangat berbeda:
 
 Sinkronisasi
 
 - <strong>adalah dua arah: Anda menghapus di ponsel, cloud juga menghapus; Anda menghapus di cloud, ponsel juga ikut menghapus. Foto iCloud, kontak, catatan adalah sinkronisasi. Keuntungannya adalah tetap konsisten antar perangkat, kerugiannya adalah "sekali dihapus, benar-benar hilang".</strong> Pencadangan
 - <strong>adalah satu arah: Ponsel mengambil "snapshot" dari status saat ini dan menyimpannya di cloud. Setelah itu Anda menghapus sesuatu di ponsel, salinan di cadangan cloud masih ada. iCloud Cloud Backup, pencadangan lokal komputer, adalah pencadangan. Keuntungannya adalah data lebih aman, kerugiannya adalah memakan ruang, dan tidak dapat diperbarui secara real-time.</strong>5. Matriks akun pengguna Android
 
-#### Situasi Android sedikit lebih rumit dari Apple, karena data Anda mungkin tersebar di beberapa akun:
+Situasi Android sedikit lebih rumit dari Apple, karena data Anda mungkin tersebar di beberapa akun:
 
 Akun merek
 
 - <strong>(Huawei/Xiaomi/OPPO/vivo): Mengelola ruang cloud, temukan ponsel, toko aplikasi, dompet. Setiap merek memiliki layanan cloudnya sendiri, biasanya model gratis dasar + biaya ekspansi.</strong> Akun Google
 - <strong>: Jika Anda menggunakan Gmail, Google Foto, Google Kontak, hal-hal ini ada di akun Google. Google memberikan 15GB gratis, lebih murah hati dari Apple, tetapi juga dibagi dengan Gmail, Drive.</strong> WeChat/QQ
-- <strong>: Mereka independen dari sistem ponsel. Riwayat chat dan koleksi WeChat Anda, tidak ada di akun merek maupun di akun Google, hanya ada di server WeChat sendiri.</strong> Jadi saat pengguna Android melakukan pencadangan, perlu memeriksa secara terpisah: pencadangan cloud merek, pencadangan Google, pencadangan riwayat chat WeChat, ketiganya tidak boleh ada yang kurang.
+- <strong>: Mereka independen dari sistem ponsel. Riwayat chat dan koleksi WeChat Anda, tidak ada di akun merek maupun di akun Google, hanya ada di server WeChat sendiri.</strong> Jadi saat pengguna Android melakukan pencadangan, perlu memeriksa secara terpisah: pencadangan cloud merek, pencadangan Google, pencadangan riwayat chat WeChat, ketiganya tidak boleh ada yang kurang
 
 6\. Berbagi Keluarga: Biarkan keluarga juga mendapat manfaat
 
-#### "Berbagi Keluarga" Apple memungkinkan Anda berbagi pembelian aplikasi, musik, film, ruang iCloud dengan keluarga, juga dapat berbagi lokasi. Maksimal dapat menambah 6 orang. Cara pengaturan: Pengaturan → Nama Anda → Berbagi Keluarga. Huawei dan Xiaomi juga memiliki fitur serupa, dapat ditemukan "Berbagi Keluarga" atau "Cloud Keluarga" di pengaturan akun.
+"Berbagi Keluarga" Apple memungkinkan Anda berbagi pembelian aplikasi, musik, film, ruang iCloud dengan keluarga, juga dapat berbagi lokasi. Maksimal dapat menambah 6 orang. Cara pengaturan: Pengaturan → Nama Anda → Berbagi Keluarga. Huawei dan Xiaomi juga memiliki fitur serupa, dapat ditemukan "Berbagi Keluarga" atau "Cloud Keluarga" di pengaturan akun.
 
 Skenario yang sangat praktis: Atur berbagi keluarga di ponsel orang tua, sehingga Anda dapat melihat lokasi mereka kapan saja (dengan syarat mereka setuju), jika orang tua tersesat atau ponsel tidak dapat dihubungi, ada pelacakan lokasi.
 
@@ -114,5 +114,5 @@ Praktik: Lakukan pemeriksaan menyeluruh pada akun Anda
 2. Masuk ke manajemen iCloud atau ruang cloud, lihat data apa yang sedang disinkronkan, matikan yang tidak diperlukan.
 3. Konfirmasi "Temukan Ponsel Saya" sudah aktif.
 4. Jika Anda menggunakan Android, periksa apakah pencadangan cloud merek, pencadangan Google, dan pencadangan WeChat semuanya tercakup.
-5. Bab 17: Integrasi ponsel dengan perangkat lain
+5. Bab 17: Integrasi ponsel dengan perangkat lain.
 :::

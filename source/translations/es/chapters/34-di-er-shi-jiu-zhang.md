@@ -2,17 +2,17 @@
 id: di-er-shi-jiu-zhang
 num: 29
 part: shi-zhan-pian
-nav: Capítulo 29:Salud digital — una relación sana con el móvil
+nav: Capítulo 29: ¿Cuánto tiempo usas realmente el teléfono?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 29:Salud digital — Estableciendo una relación saludable con el móvil
+### Capítulo 29: ¿Cuánto tiempo usas realmente el teléfono?
 
 {class="chapter-intro mb-4"}
 ¿Te ha pasado?: solo querías ver vídeos cortos 5 minutos y, al levantar la vista, han pasado dos horas. O estás en la cama por la noche con el teléfono y cada vez estás más despierto, hasta que son las 2 de la madrugada. El teléfono ha cambiado nuestra vida, pero también se está tragando en silencio nuestro tiempo y nuestra salud. Este capítulo no trata de "dejar el teléfono", sino de recuperar el control sobre él.
 
-#### I. Mira tu "tiempo de pantalla" - los números te abrirán los ojos
+I. Mira tu "tiempo de pantalla" - los números te abrirán los ojos
 
 Antes de cambiar, entiende la situación actual. El teléfono tiene una función que mucha gente nunca ha abierto, llamada "Tiempo de uso" (iPhone) o "Bienestar digital" (Android), que te dice cuánto tiempo pasas en el teléfono cada día y en qué apps.
 
@@ -21,7 +21,7 @@ Antes de cambiar, entiende la situación actual. El teléfono tiene una función
 
 <strong>El 80% de quienes ven estos datos por primera vez se asustan</strong>. Un amigo mío descubrió que pasaba más de 4 horas diarias en Douyin, 28 horas a la semana, el equivalente a un trabajo a tiempo parcial. Este "impacto digital" es el primer paso para el cambio.
 
-#### II. Establece "límites de uso" para las apps - ponte un limitador de velocidad
+II. Establece "límites de uso" para las apps - ponte un limitador de velocidad
 
 Una vez sepas dónde está el problema, puedes establecer límites específicos. No necesitas borrar las apps; solo ponles un "límite diario":
 
@@ -29,7 +29,7 @@ Una vez sepas dónde está el problema, puedes establecer límites específicos.
 2. <strong>Android</strong>: Ajustes &gt; Bienestar digital &gt; Temporizador de apps. Selecciona una app y establece un límite diario; al llegar al límite, el icono se vuelve gris.
 3. <strong>Truco</strong>: Pon una contraseña de límite que no uses habitualmente y que no sea fácil de recordar. Si es demasiado fácil de introducir, siempre "ampliarás" el límite y será inútil.
 
-#### III. El uso correcto del "modo no molestar" - no es apagar notificaciones, es apagar la ansiedad
+III. El uso correcto del "modo no molestar" - no es apagar notificaciones, es apagar la ansiedad
 
 A mucha gente le suena el teléfono decenas de veces al día con notificaciones; cada vez, la atención se interrumpe. Crees que solo "miras una notificación", pero en realidad, volver a concentrarte después de cada interrupción requiere 15-20 minutos. El modo no molestar no consiste en "perder el contacto", sino en recuperar el control de tu atención.
 
@@ -37,7 +37,7 @@ A mucha gente le suena el teléfono decenas de veces al día con notificaciones;
 - <strong>Permitir llamadas importantes</strong>: En los ajustes del modo no molestar, pon "permitir llamadas" como "contactos favoritos" o "llamadas repetidas" (una segunda llamada en 3 minutos sonará normalmente). Así no te perderás una llamada de emergencia de la familia, pero tampoco te molestarán los comerciales.
 - <strong>Modo de concentración de trabajo</strong>: El "Modo de concentración" del iPhone permite crear escenarios personalizados; por ejemplo, el modo "trabajo" solo permite notificaciones de apps relacionadas con el trabajo, y el modo "lectura" silencia todas las notificaciones.
 
-#### IV. Cuidar los ojos no depende de apps sino de hábitos - la regla 20-20-20
+IV. Cuidar los ojos no depende de apps sino de hábitos - la regla 20-20-20
 
 Mirar la pantalla del teléfono durante mucho tiempo causa sequedad y cansancio ocular inevitables. El modo de protección ocular (filtro de luz azul) ayuda algo, pero lo realmente efectivo es cambiar el hábito visual:
 
@@ -53,7 +53,7 @@ Cada <strong>20 minutos</strong> mirando la pantalla, desvía la mirada a algo a
 - <strong>Ajustar el brillo de la pantalla</strong>: Si el entorno es oscuro, la pantalla también debe estar oscura. Mucha gente pone el brillo demasiado alto en la oscuridad; esto es lo más dañino para los ojos. Activa el "brillo automático" y asegúrate de que funciona.
 - <strong>Mantén la distancia</strong>: El teléfono debe estar al menos a 30 cm de los ojos. A mucha gente le gusta sostener el teléfono muy cerca; así el músculo ciliar está en constante tensión y la miopía aumenta rápidamente.
 
-#### V. Guía de salvamento cervical para "adictos a mirar hacia abajo"
+V. Guía de salvamento cervical para "adictos a mirar hacia abajo"
 
 Al mirar el teléfono hacia abajo, tu cuello soporta 5-6 veces la presión de estar de pie. Mantener esta postura a largo plazo causa rectificación de la curvatura cervical, proliferación ósea, mareos y entumecimiento de manos. Aquí hay algunos métodos sencillos de mejora:
 
@@ -61,7 +61,7 @@ Al mirar el teléfono hacia abajo, tu cuello soporta 5-6 veces la presión de es
 - <strong>Mueve el cuello cada 30 minutos</strong>: Gira lentamente la cabeza hacia la izquierda hasta el límite, mantén 3 segundos, vuelve al centro; luego gira a la derecha, mantén 3 segundos. Repite 5 veces. Luego haz el "ejercicio del carácter 米": escribe el carácter 米 en el aire con la barbilla.
 - <strong>De pie contra la pared 3 minutos</strong>: Apoya la cabeza, las escápulas, los glúteos y los talones contra la pared; permanece de pie 3 minutos al día para corregir eficazmente la postura encorvada.
 
-#### VI. Sueño y teléfono - el hábito que más deberías cambiar en el dormitorio
+VI. Sueño y teléfono - el hábito que más deberías cambiar en el dormitorio
 
 La luz azul de la pantalla del teléfono inhibe la secreción de melatonina, haciendo que "cuanto más miras, más despierto estás". Mucha gente cree que "lo voy mirando y me da sueño", pero en realidad la luz azul engaña al cerebro y, cuando dejas el teléfono, te cuesta más quedarte dormido. Recomendaciones de mejora:
 
@@ -70,7 +70,7 @@ La luz azul de la pantalla del teléfono inhibe la secreción de melatonina, hac
 - <strong>Activa el "modo sueño"</strong>: El "Modo sueño" del iPhone puede bloquear automáticamente la pantalla durante las horas de descanso y simplificar la pantalla de bloqueo; las marcas Android tienen funciones similares.
 - <strong>Usa un despertador en lugar del teléfono</strong>: Compra un despertador físico barato; si no usas el teléfono como despertador, te librarás de la trampa de "mirar la hora y luego no poder evitar mirar el teléfono".
 
-#### VII. Ansiedad informativa - aprende a tener "ceguera selectiva"
+VII. Ansiedad informativa - aprende a tener "ceguera selectiva"
 
 La cantidad de información que recibimos cada día es la que una persona antigua recibía en toda su vida. Pero el cerebro humano no está diseñado para procesar tanta información; la sobrecarga causa ansiedad, dispersión de la atención y fatiga de decisión. La solución no es "obtener más información", sino "bloquear activamente":
 

@@ -24,7 +24,7 @@ Il Bootloader è il primo programma eseguito all'avvio del telefono; il suo comp
 
 ##### 🔐 Archiviazione e verifica a livello hardware
 
-Lo stato del BL lock (Locked/Unlocked) e la chiave pubblica del produttore sono di solito memorizzati in un'area hardware protetta (come la partizione devinfo di Qualcomm, eFuse o partizione RPMB), per impedire manomissioni software. A ogni avvio, il Bootloader legge lo stato da questa area sicura e in base a ciò decide se eseguire o meno una verifica rigorosa della firma.
+Lo stato del BL lock, (Locked/Unlocked) e la chiave pubblica del produttore sono di solito memorizzati in un'area hardware protetta (come la partizione devinfo di Qualcomm, eFuse o partizione RPMB), per impedire manomissioni software. A ogni avvio, il Bootloader legge lo stato da questa area sicura e in base a ciò decide se eseguire o meno una verifica rigorosa della firma.
 
 ##### 🔏 Verifica della firma digitale
 
@@ -83,7 +83,7 @@ Per capire in modo più intuitivo pro e contro del BL lock, usiamo una tabella c
 ```
 :::
 
-#### 2. Procedura dettagliata di sblocco del BL lock (esempio Xiaomi)
+2. Procedura dettagliata di sblocco del BL lock (esempio Xiaomi)
 
 1. <strong>Richiedere l'autorizzazione di sblocco</strong>: sul sito dell'utility di sblocco Xiaomi.
 2. <strong>Associare l'account</strong>: nelle impostazioni del telefono, collega l'account Xiaomi.

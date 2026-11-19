@@ -2,17 +2,17 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Capítulo 3: Conecta el móvil a su «línea de vida»
+nav: Capítulo 3: Sin conexión, no reinicies todavía
 toc: default
 kind: chapter
 ---
 
-### Capítulo 3: Conecta tu teléfono a la "línea de vida" — Redes
+### Capítulo 3: Sin conexión, no reinicies todavía
 
 {class="chapter-intro mb-4"}
 Sin red, el smartphone pierde la mitad de su "inteligencia". La red es la línea de vida del teléfono moderno; comprenderla, usarla bien y protegerla es una asignatura obligatoria para todo usuario de teléfono.
 
-#### 0. No te pierdas al conectarte — distingue la "carretera" y el "vehículo" entre Wi-Fi y datos móviles
+0. No te pierdas al conectarte — distingue la "carretera" y el "vehículo" entre Wi-Fi y datos móviles
 
 Muchas personas ven los iconos de Wi-Fi y de señal encendidos a la vez en la parte superior de la pantalla, pero no entienden la diferencia esencial. El error más clásico es:<strong>conectado al Wi-Fi pero las páginas no cargan</strong>— porque el router perdió la conexión a internet y el teléfono no conmutó automáticamente a los datos móviles. Para entenderlo a fondo, necesitamos construir un modelo mental de "carretera y vehículo".
 
@@ -170,7 +170,7 @@ El Wi-Fi público puede exponerte a hackers que escuchan el tráfico o montan pu
 - No te conectes automáticamente a Wi-Fi desconocido.
 - Usa sitios HTTPS (icono de candado en la barra de direcciones).
 
-#### III. Bluetooth: el todoterreno de la comunicación inalámbrica de corto alcance
+III. Bluetooth: el todoterreno de la comunicación inalámbrica de corto alcance
 
 Bluetooth es probablemente una de las tecnologías inalámbricas que más usas en tu teléfono: auriculares inalámbricos, smartwatch, sistemas del coche, teclados y ratones se conectan a través de él.
 
@@ -197,7 +197,7 @@ Bluetooth opera en la banda ISM de 2.4GHz y usa la técnica de espectro ensancha
 - <strong>Servicios de ubicación</strong>: balizas Bluetooth (Beacon) para navegación interior y localización de objetos (como Apple AirTag).
 - <strong>Hogar inteligente</strong>: red Bluetooth Mesh para controlar bombillas, cerraduras, etc.
 
-#### IV. Control remoto por infrarrojos: el teléfono como mando universal
+IV. Control remoto por infrarrojos: el teléfono como mando universal
 
 El control por infrarrojos es una de las tecnologías de control inalámbrico más antiguas, pero sigue siendo práctico en el teléfono. Algunos modelos Android (como Xiaomi y Huawei) incluyen un emisor de infrarrojos que permite controlar televisores, aires acondiciónados, decodificadores y otros electrodomésticos.
 
@@ -237,7 +237,7 @@ NFC evoluciona a partir de la tecnología RFID y admite tres modos de funcionami
 - <strong>Emparejamiento de dispositivos</strong>: NFC empareja rápidamente auriculares y altavoces Bluetooth.
 - <strong>Autenticación de identidad</strong>: lectura del DNI por NFC, verificación del permiso de conducir electrónico.
 
-#### VI. Punto de acceso personal: convierte el teléfono en router Wi-Fi
+VI. Punto de acceso personal: convierte el teléfono en router Wi-Fi
 
 Si te sobran datos móviles, puedes activar el punto de acceso para usarlo con la tablet o la computadora.
 

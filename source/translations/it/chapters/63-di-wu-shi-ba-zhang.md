@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 58: Manuale rapido e risorse
 
 {class="chapter-intro mb-4"}
-Questo capitolo è un manuale di consultazione rapida che funziona anche da solo. Quando non ti ricordi una sintassi o devi decidere al volo, apri direttamente qui. Ti consiglio di tenerlo come «biglietto da tasca»: codice di uso quotidiano, domande ricorrenti, risorse per studiare — senza saltare nemmeno una pagina.
+Questo capitolo è un manuale di consultazione rapida che funziona anche da solo. Quando non ti ricordi una sintassi o devi decidere al volo, apri direttamente qui. Ti consiglio di tenerlo come «biglietto da tasca»: codice di uso quotidiano, domande ricorrenti, risorse per studiare, senza saltare nemmeno una pagina.
 
 #### 1. Le schede di consultazione rapida del codice quotidiano
 
@@ -84,7 +84,7 @@ Guardando indietro, sei passato da «non sapevo cos'era un Activity» ad aver al
 Il mondo della tecnologia corre: i framework si aggiornano, gli strumenti si rinnovano, l'AI si prenderà sempre più del lavoro «da tastiera». Ma una cosa non passa mai di moda: la capacità di prendere un'idea vaga, scomporla in passi chiari e realizzarla un passo alla volta. Gli strumenti sono l'amplificatore, il modo di pensare è la fondamenta. L'amplificatore si può sostituire, la fondamenta no.
 
 :::inline div .quote-line
-Non sei più solo "uno che sa usare il telefono": puoi trasformare le idee in testa in app vere che girano su 300 milioni di dispositivi Android. Da oggi crea con la tastiera — questo è il lato romantico dell'essere sviluppatori Android.
+Non sei più solo "uno che sa usare il telefono": puoi trasformare le idee in testa in app vere che girano su 300 milioni di dispositivi Android. Da oggi crea con la tastiera, questo è il lato romantico dell'essere sviluppatori Android.
 :::
 
 #### Bibliografia

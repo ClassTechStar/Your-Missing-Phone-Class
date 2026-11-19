@@ -19,7 +19,7 @@ after_part: fu-lu
 
 - <strong>Regelmäßig Fotos und WeChat-Chats gesichert?</strong> Anti-Betrug-Merkregel: Nicht leichtgläubig sein, nichts preisgeben, nicht überweisen, nicht gierig sein, nicht in Hektik geraten.
 - <strong>Anhang E: Dank und Hinweise</strong> Danke, dass du dieses "Smartphone-Buch" bis zum Ende gelesen hast! Während der Entstehung haben wir zahlreiche offizielle Handbücher der Hersteller sowie öffentliche technische Popularisierungsartikel herangezogen, um die Genauigkeit der Informationen zu sichern.
-- <strong>Die Technik entwickelt sich rasant; die Inhalte dieses Buches beruhen auf den zum Zeitpunkt der Entstehung gängigen Technologien und Produkten. Wenn du es liest, sind vielleicht schon wieder neue Funktionen und Produkte auf dem Markt. Wir hoffen, dass die in diesem Buch vermittelten Denkweisen und Methoden dir helfen, gelassen mit künftigen digitalen Neuheiten umzugehen.</strong> Highlights der Version 1.6
+- <strong>Die Technik entwickelt sich rasant; die Inhalte dieses Buches beruhen auf den zum Zeitpunkt der Entstehung gängigen Technologien und Produkten. Wenn du es liest, sind vielleicht schon wieder neue Funktionen und Produkte auf dem Markt. Wir hoffen, dass die in diesem Buch vermittelten Denkweisen und Methoden dir helfen, gelassen mit künftigen digitalen Neuheiten umzugehen.</strong> Highlights der Version 1.6.
 
 #### Sicherheits-Selbstcheck in einem Satz
 
@@ -31,5 +31,5 @@ after_part: fu-lu
 
 #### Weiterführende Links · Zwei weitere „fehlende“ Kurse：
 
-- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Eine offene chinesische Einführung in die Informatik — aus ihrer Idee ist dieses Buch entstanden.
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Eine offene chinesische Einführung in die Informatik, aus ihrer Idee ist dieses Buch entstanden.
 - <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Ein kostenloser MIT-Kurs über Shell, Git und Kommandozeile: Dinge, die die Schule nicht lehrt, die man aber täglich braucht.

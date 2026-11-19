@@ -1,0 +1,2701 @@
+{
+  "meta": {
+    "purpose": "全书操作路径的单一真源（方案 §5.1）。正文里的路径由本库登记，大版本更新后重跑 scripts/path_check.py 巡检过期条目。",
+    "generated_by": "scripts/build_path_db.py（从 source/v1.9/chapters 生成，请勿手改）",
+    "checked_at": "2026-11",
+    "default_version_scope": "iOS 18.x / HarmonyOS 5.x–6.x / Android 15–16",
+    "status_legend": {
+      "confirmed": "路径入口稳定，读者照做大概率对得上。",
+      "needs-confirm": "随系统版本改名或挪位，需在大版本后复查。"
+    },
+    "disclosure": "本库由脚本从书稿生成，作者已对账，但**全书未做逐台设备的实机复测**。因此条目不写\"实测\"，只声明核对基准版本。读者遇到对不上的路径，请走勘误页 errata.html 反馈，改的是本库，不是散落在正文里的某句话。",
+    "field_notes": {
+      "task": "该路径所属的小节（正文里那一节在讲什么事）",
+      "platform": "适用平台；all 表示三平台通用路径",
+      "version_scope": "该章正文提到的系统版本；未提及则用 default_version_scope",
+      "date": "内容核对到的年月",
+      "verified_by": "book-v1.9 = 以书稿自身为准，由作者对账，非逐设备实测"
+    },
+    "counts": {
+      "entries": 145,
+      "confirmed": 142,
+      "needs-confirm": 3
+    }
+  },
+  "entries": [
+    {
+      "id": "p0001",
+      "file": "00-di-ling-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0002",
+      "file": "00-di-ling-zhang.md",
+      "task": "几个使用约定",
+      "path": [
+        "设置",
+        "电池"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0003",
+      "file": "00-di-ling-zhang.md",
+      "task": "中国手机市场速览：操作系统、品牌与价位段",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0004",
+      "file": "00-di-ling-zhang.md",
+      "task": "中国手机市场速览：操作系统、品牌与价位段",
+      "path": [
+        "设置",
+        "通用",
+        "关于本机"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0005",
+      "file": "00-di-ling-zhang.md",
+      "task": "中国手机市场速览：操作系统、品牌与价位段",
+      "path": [
+        "设置",
+        "WLAN"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0006",
+      "file": "00-di-ling-zhang.md",
+      "task": "中国手机市场速览：操作系统、品牌与价位段",
+      "path": [
+        "设置",
+        "无线局域网",
+        "点网络右边的"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0007",
+      "file": "00-di-ling-zhang.md",
+      "task": "数字生活的基本礼仪：让人舒服的线上相处",
+      "path": [
+        "设置",
+        "存储"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0008",
+      "file": "00-di-ling-zhang.md",
+      "task": "数字生活的基本礼仪：让人舒服的线上相处",
+      "path": [
+        "设置",
+        "应用"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0009",
+      "file": "00-di-ling-zhang.md",
+      "task": "数字生活的基本礼仪：让人舒服的线上相处",
+      "path": [
+        "设置",
+        "通用",
+        "iPhone 储存空间"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0010",
+      "file": "00-di-ling-zhang.md",
+      "task": "这本书会一直更新：开源模式与你的参与方式",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0011",
+      "file": "01-di-yi-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / Android 16 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0012",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "电池",
+        "耗电排行"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0013",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "各厂商命名与开启方式",
+      "path": [
+        "设置",
+        "更多设置",
+        "找到"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0014",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "各厂商命名与开启方式",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0015",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "各厂商命名与开启方式",
+      "path": [
+        "设置",
+        "更多设置",
+        "内存扩展"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0016",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "各厂商命名与开启方式",
+      "path": [
+        "设置",
+        "系统和更新",
+        "内存扩展"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0017",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "各厂商命名与开启方式",
+      "path": [
+        "设置",
+        "关于手机",
+        "运行内存",
+        "内存拓展"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0018",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "各厂商命名与开启方式",
+      "path": [
+        "设置",
+        "运存与存储空间",
+        "内存融合"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0019",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "各厂商命名与开启方式",
+      "path": [
+        "设置",
+        "电池和设备维护",
+        "内存",
+        "RAM Plus"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0020",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "内存与性能的量化关系：数字该怎么读",
+      "path": [
+        "设置",
+        "电池",
+        "耗电排行"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0021",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "内存拓展与省电的平衡",
+      "path": [
+        "设置",
+        "关于手机记下物理内存"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0022",
+      "file": "02-di-yi-zhang-memory.md",
+      "task": "总结与行动指南",
+      "path": [
+        "设置",
+        "关于手机",
+        "运行内存"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0023",
+      "file": "03-di-yi-zhang-harmony.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / HarmonyOS 6 / HarmonyOS 7.0",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0024",
+      "file": "04-di-er-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "我",
+        "设置",
+        "通用",
+        "照片、视频、文件与通话"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18 / 安卓 13",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0025",
+      "file": "06-di-si-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "系统和更新",
+        "纯净模式"
+      ],
+      "platform": [
+        "harmony"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17.4 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0026",
+      "file": "06-di-si-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "应用管理"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17.4 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0027",
+      "file": "10-di-ba-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "我",
+        "设置",
+        "通用",
+        "存储空间"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0028",
+      "file": "100-di-jiu-shi-wu-zhang.md",
+      "task": "生理周期追踪：从\"记日子\"到\"懂身体\"",
+      "path": [
+        "设置",
+        "通知",
+        "锁屏显示"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0029",
+      "file": "100-di-jiu-shi-wu-zhang.md",
+      "task": "压力的\"生理仪表盘\"",
+      "path": [
+        "设置",
+        "通知",
+        "对应 App"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0030",
+      "file": "100-di-jiu-shi-wu-zhang.md",
+      "task": "压力的\"生理仪表盘\"",
+      "path": [
+        "设置",
+        "数据与隐私"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0031",
+      "file": "100-di-jiu-shi-wu-zhang.md",
+      "task": "三个照着做的练习：把\"正念\"落到呼吸上",
+      "path": [
+        "设置",
+        "数据"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0032",
+      "file": "111-fu-lu-a.md",
+      "task": "数据迁移：两条路走稳",
+      "path": [
+        "设置",
+        "关怀模式打开后字号更"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0033",
+      "file": "114-fu-lu-d.md",
+      "task": "逐品牌逛\"服务与支持\"",
+      "path": [
+        "设置",
+        "通用",
+        "关于本机里能查到"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / Android 17 / HarmonyOS 5 / HarmonyOS 6",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0034",
+      "file": "114-fu-lu-d.md",
+      "task": "逐品牌逛\"服务与支持\"",
+      "path": [
+        "设置",
+        "关于手机里那一长串名"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / Android 17 / HarmonyOS 5 / HarmonyOS 6",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0035",
+      "file": "12-di-shi-zhang.md",
+      "task": "到底怎么绑定银行卡？",
+      "path": [
+        "我的",
+        "银行卡"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0036",
+      "file": "12-di-shi-zhang.md",
+      "task": "到底怎么绑定银行卡？",
+      "path": [
+        "我",
+        "服务",
+        "钱包",
+        "银行卡"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0037",
+      "file": "12-di-shi-zhang.md",
+      "task": "付款码是\"谁看谁收钱\"",
+      "path": [
+        "我的",
+        "右上角齿轮"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0038",
+      "file": "12-di-shi-zhang.md",
+      "task": "付款码是\"谁看谁收钱\"",
+      "path": [
+        "我",
+        "服务",
+        "右上角的钱包",
+        "支付设置"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0039",
+      "file": "12-di-shi-zhang.md",
+      "task": "这些安全设置，花5分钟设好能省很多心",
+      "path": [
+        "设置",
+        "钱包与Apple P"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0040",
+      "file": "12-di-shi-zhang.md",
+      "task": "这些安全设置，花5分钟设好能省很多心",
+      "path": [
+        "我",
+        "服务"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0041",
+      "file": "12-di-shi-zhang.md",
+      "task": "出境旅行：手机支付的另一套规则",
+      "path": [
+        "钱包",
+        "账单"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0042",
+      "file": "12-di-shi-zhang.md",
+      "task": "出境旅行：手机支付的另一套规则",
+      "path": [
+        "我的",
+        "账单"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0043",
+      "file": "13-di-shi-yi-zhang.md",
+      "task": "你是不是也犯过这些错？",
+      "path": [
+        "设置",
+        "相机"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0044",
+      "file": "14-di-shi-yi-zhang-advanced.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "相机",
+        "格式"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0045",
+      "file": "14-di-shi-yi-zhang-advanced.md",
+      "task": "分辨率、帧率与码率：视频质量的三要素",
+      "path": [
+        "设置",
+        "相机",
+        "录制视频"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0046",
+      "file": "14-di-shi-yi-zhang-advanced.md",
+      "task": "分辨率、帧率与码率：视频质量的三要素",
+      "path": [
+        "设置",
+        "相机",
+        "格式"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0047",
+      "file": "14-di-shi-yi-zhang-advanced.md",
+      "task": "视频编码格式：H.264、H.265与ProRes",
+      "path": [
+        "设置",
+        "相机",
+        "录制视频"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0048",
+      "file": "14-di-shi-yi-zhang-advanced.md",
+      "task": "色彩空间与色深",
+      "path": [
+        "设置",
+        "相机",
+        "格式"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0049",
+      "file": "14-di-shi-yi-zhang-advanced.md",
+      "task": "影像术语速查表",
+      "path": [
+        "设置",
+        "相机",
+        "格式"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0050",
+      "file": "15-di-shi-er-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "你的名字",
+        "订阅"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0051",
+      "file": "15-di-shi-er-zhang.md",
+      "task": "看视频：从播放器到流媒体的正确打开方式",
+      "path": [
+        "我的",
+        "设置"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0052",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "加密原理简介",
+      "path": [
+        "设置",
+        "安全",
+        "两步验证"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0053",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "加密原理简介",
+      "path": [
+        "设置",
+        "自动填充",
+        "密码管理器",
+        "导出密码"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0054",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "主流密码管理器推荐",
+      "path": [
+        "设置",
+        "密码",
+        "安全建议"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0055",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "密码强度真实评估",
+      "path": [
+        "设置",
+        "密码",
+        "安全建议"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0056",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "密码强度真实评估",
+      "path": [
+        "设置",
+        "密码",
+        "检查密码"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0057",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "密码强度真实评估",
+      "path": [
+        "设置",
+        "密码",
+        "找到对应网站"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0058",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "密码强度真实评估",
+      "path": [
+        "账号",
+        "屏幕锁验证"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0059",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "Passkey：无密码登录的未来",
+      "path": [
+        "账号",
+        "安全",
+        "通行密钥",
+        "添加通行密钥"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0060",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "Passkey：无密码登录的未来",
+      "path": [
+        "安全",
+        "两步验证"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0061",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "Passkey：无密码登录的未来",
+      "path": [
+        "设置",
+        "紧急访问"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0062",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "家庭/团队密码共享",
+      "path": [
+        "设置",
+        "密码与安全"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0063",
+      "file": "17-di-shi-si-zhang.md",
+      "task": "家庭/团队密码共享",
+      "path": [
+        "设置",
+        "密码和自动填充"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0064",
+      "file": "19-di-shi-liu-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "我",
+        "设置",
+        "通用",
+        "聊天记录迁移与备份"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0065",
+      "file": "19-di-shi-liu-zhang.md",
+      "task": "你的手机账号，到底管着多少东西？",
+      "path": [
+        "我",
+        "设置",
+        "账号与安全",
+        "登录设备管理"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0066",
+      "file": "19-di-shi-liu-zhang.md",
+      "task": "你的手机账号，到底管着多少东西？",
+      "path": [
+        "设置",
+        "你的名字"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0067",
+      "file": "19-di-shi-liu-zhang.md",
+      "task": "iCloud：苹果用户的\"空气\"",
+      "path": [
+        "我",
+        "设置",
+        "通用",
+        "聊天记录迁移与备份"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0068",
+      "file": "19-di-shi-liu-zhang.md",
+      "task": "同步和备份，别搞混了",
+      "path": [
+        "设置",
+        "你的名字",
+        "家人共享"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0069",
+      "file": "21-di-shi-ba-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "我",
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0070",
+      "file": "21-di-shi-ba-zhang.md",
+      "task": "先搞清楚：你手机里哪些东西丢了就没了",
+      "path": [
+        "设置",
+        "你的名字"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0071",
+      "file": "21-di-shi-ba-zhang.md",
+      "task": "先搞清楚：你手机里哪些东西丢了就没了",
+      "path": [
+        "设置",
+        "系统",
+        "备份"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0072",
+      "file": "21-di-shi-ba-zhang.md",
+      "task": "整机备份：一次搞定所有东西",
+      "path": [
+        "微信",
+        "我",
+        "设置",
+        "通用",
+        "聊天记录迁移与备份",
+        "迁移",
+        "迁移到手机"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0073",
+      "file": "21-di-shi-ba-zhang.md",
+      "task": "整机备份：一次搞定所有东西",
+      "path": [
+        "微信",
+        "我",
+        "设置",
+        "通用",
+        "聊天记录迁移与备份",
+        "迁移"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0074",
+      "file": "21-di-shi-ba-zhang.md",
+      "task": "第三方备份方案：把鸡蛋多分几个篮子",
+      "path": [
+        "设置",
+        "你的名字"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0075",
+      "file": "21-di-shi-ba-zhang.md",
+      "task": "第三方备份方案：把鸡蛋多分几个篮子",
+      "path": [
+        "微信",
+        "我",
+        "设置",
+        "通用",
+        "聊天记录迁移与备份",
+        "迁移到手机"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0076",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "我",
+        "设置",
+        "通用",
+        "存储空间"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0077",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "微信",
+        "我",
+        "设置",
+        "通用",
+        "存储空间"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0078",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "手机变卡、发热——最常被问的问题",
+      "path": [
+        "设置",
+        "存储"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0079",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "手机变卡、发热——最常被问的问题",
+      "path": [
+        "微信",
+        "我",
+        "设置",
+        "通用",
+        "存储空间"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0080",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "手机变卡、发热——最常被问的问题",
+      "path": [
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0081",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "应用闪退、无响应——App不听话了",
+      "path": [
+        "设置",
+        "帮助与反馈"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0082",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "充不进电或充电慢——可能不是电池的锅",
+      "path": [
+        "设置",
+        "通用",
+        "传输或还原",
+        "还原网络设置"
+      ],
+      "platform": [
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0083",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "应用和服务",
+        "应用管理"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0084",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "存储"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0085",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "电池"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0086",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "系统和更新",
+        "重置"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0087",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "应用设置",
+        "应用管理"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0088",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "我的设备",
+        "存储空间"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0089",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "省电与电池"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0090",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "我的设备",
+        "恢复出厂设置"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0091",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "应用"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0092",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "存储空间"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0093",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "电池和设备维护"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0094",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "常规管理",
+        "重置"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0095",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0096",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "排障方法论：拿到问题的第一分钟，先做什么",
+      "path": [
+        "设置",
+        "通用",
+        "转移或还原 iPho"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0097",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "分人群排障指南：爸妈、学生、出差党、小商家",
+      "path": [
+        "微信",
+        "我",
+        "设置",
+        "通用",
+        "存储空间",
+        "清理缓存"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0098",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "无法开机、卡在Logo界面——先别慌",
+      "path": [
+        "设置",
+        "电池",
+        "电池健康与充电"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0099",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "无法开机、卡在Logo界面——先别慌",
+      "path": [
+        "设置",
+        "电池",
+        "应用启动管理"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0100",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "找官方维修，避开那些坑",
+      "path": [
+        "设置",
+        "应用",
+        "相机"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0101",
+      "file": "22-di-shi-jiu-zhang.md",
+      "task": "耗电异常与存储爆满：两个最常见的\"慢性病\"",
+      "path": [
+        "相册",
+        "最近删除"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0102",
+      "file": "23-di-er-shi-zhang-jinjie.md",
+      "task": "（章内通用）",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 11 / Android 15 / HarmonyOS 5 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0103",
+      "file": "23-di-er-shi-zhang-jinjie.md",
+      "task": "（章内通用）",
+      "path": [
+        "系统",
+        "开发者选项"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 11 / Android 15 / HarmonyOS 5 / iOS 16",
+      "status": "needs-confirm",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0104",
+      "file": "23-di-er-shi-zhang-jinjie.md",
+      "task": "权限的谱系：从普通App到Root，各能碰到什么",
+      "path": [
+        "设置",
+        "关于手机"
+      ],
+      "platform": [
+        "android"
+      ],
+      "version_scope": "Android 11 / Android 15 / HarmonyOS 5 / iOS 16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0105",
+      "file": "27-di-er-shi-san-zhang.md",
+      "task": "iOS\"快捷指令\"——苹果用户的自动化神器",
+      "path": [
+        "设置",
+        "辅助功能",
+        "触控"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0106",
+      "file": "27-di-er-shi-san-zhang.md",
+      "task": "自动化思维的日常应用",
+      "path": [
+        "设置",
+        "无障碍",
+        "已下载的服务"
+      ],
+      "platform": [
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0107",
+      "file": "27-di-er-shi-san-zhang.md",
+      "task": "实例库：十个自动化，从一星难度到五星",
+      "path": [
+        "设置",
+        "特色功能"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0108",
+      "file": "30-di-er-shi-wu-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "备份",
+        "退账号",
+        "关"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 15.2 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0109",
+      "file": "39-di-san-shi-si-zhang.md",
+      "task": "车机互联的三大路线",
+      "path": [
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0110",
+      "file": "39-di-san-shi-si-zhang.md",
+      "task": "车机互联的三大路线",
+      "path": [
+        "设置",
+        "通知"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0111",
+      "file": "39-di-san-shi-si-zhang.md",
+      "task": "造车新势力的车机系统",
+      "path": [
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0112",
+      "file": "39-di-san-shi-si-zhang.md",
+      "task": "造车新势力的车机系统",
+      "path": [
+        "设置",
+        "专注"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0113",
+      "file": "54-di-si-shi-jiu-zhang.md",
+      "task": "模板怎么选：Empty Activity 和它的邻居们",
+      "path": [
+        "下载",
+        "启动"
+      ],
+      "platform": [
+        "android"
+      ],
+      "version_scope": "Android 11 / Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0114",
+      "file": "57-di-wu-shi-er-zhang.md",
+      "task": "三平台生命周期对照：一次学习，三处复用",
+      "path": [
+        "下载",
+        "解析",
+        "入库"
+      ],
+      "platform": [
+        "android"
+      ],
+      "version_scope": "Android 14 / Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0115",
+      "file": "65-di-liu-shi-zhang.md",
+      "task": "工程结构拆解：每个文件是干嘛的",
+      "path": [
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0116",
+      "file": "65-di-liu-shi-zhang.md",
+      "task": "工程结构拆解：每个文件是干嘛的",
+      "path": [
+        "设置",
+        "隐私与安全性"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0117",
+      "file": "65-di-liu-shi-zhang.md",
+      "task": "小试牛刀 + 常见报错急救",
+      "path": [
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0118",
+      "file": "65-di-liu-shi-zhang.md",
+      "task": "小试牛刀 + 常见报错急救",
+      "path": [
+        "设置",
+        "隐私与安全性",
+        "打开开发者模式"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 17 / iOS 18",
+      "status": "needs-confirm",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0119",
+      "file": "66-di-liu-shi-yi-zhang.md",
+      "task": "集合三家：数组、字典与集合",
+      "path": [
+        "文件",
+        "新建 Playgro"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "iOS 18.x / HarmonyOS 5.x–6.x / Android 15–16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0120",
+      "file": "72-di-liu-shi-qi-zhang.md",
+      "task": "测试：给代码上保险",
+      "path": [
+        "设置",
+        "通用"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18 / iOS 26",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0121",
+      "file": "76-di-qi-shi-yi-zhang.md",
+      "task": "创建第一个项目：Hello HarmonyOS",
+      "path": [
+        "设置",
+        "关于手机",
+        "连点版本号七次"
+      ],
+      "platform": [
+        "harmony"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0122",
+      "file": "76-di-qi-shi-yi-zhang.md",
+      "task": "常见报错排查手册：十个最常撞见的错",
+      "path": [
+        "设置",
+        "开发者选项",
+        "打开无线调试"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "needs-confirm",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0123",
+      "file": "87-di-ba-shi-er-zhang.md",
+      "task": "健康数据的三层结构",
+      "path": [
+        "设置",
+        "活动里把三环目标调到"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0124",
+      "file": "87-di-ba-shi-er-zhang.md",
+      "task": "快捷指令：腕上自动化",
+      "path": [
+        "设置",
+        "家人共享"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0125",
+      "file": "87-di-ba-shi-er-zhang.md",
+      "task": "家人共享：给没有 iPhone 的家人也配一块",
+      "path": [
+        "设置",
+        "显示与屏幕亮度"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0126",
+      "file": "87-di-ba-shi-er-zhang.md",
+      "task": "续航、充电与表带的日常账",
+      "path": [
+        "设置",
+        "活动"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0127",
+      "file": "88-di-ba-shi-san-zhang.md",
+      "task": "运动进阶：把训练负荷、恢复建议用起来",
+      "path": [
+        "设置",
+        "佩戴",
+        "重启",
+        "重新配对",
+        "售后"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0128",
+      "file": "90-di-ba-shi-wu-zhang.md",
+      "task": "表盘即仪表盘：按场景布局",
+      "path": [
+        "设置",
+        "声音与触感",
+        "勿扰"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0129",
+      "file": "90-di-ba-shi-wu-zhang.md",
+      "task": "表盘即仪表盘：按场景布局",
+      "path": [
+        "设置",
+        "模式与日常程序"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0130",
+      "file": "90-di-ba-shi-wu-zhang.md",
+      "task": "表盘即仪表盘：按场景布局",
+      "path": [
+        "设置",
+        "声音与振动",
+        "勿扰"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0131",
+      "file": "90-di-ba-shi-wu-zhang.md",
+      "task": "表盘即仪表盘：按场景布局",
+      "path": [
+        "设置",
+        "通知"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0132",
+      "file": "90-di-ba-shi-wu-zhang.md",
+      "task": "自动化：让条件触发代替手动操作",
+      "path": [
+        "设置",
+        "勿扰"
+      ],
+      "platform": [
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0133",
+      "file": "90-di-ba-shi-wu-zhang.md",
+      "task": "自动化：让条件触发代替手动操作",
+      "path": [
+        "设置",
+        "模式与日常程序"
+      ],
+      "platform": [
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0134",
+      "file": "90-di-ba-shi-wu-zhang.md",
+      "task": "自动化：让条件触发代替手动操作",
+      "path": [
+        "设置",
+        "声音与振动",
+        "勿扰"
+      ],
+      "platform": [
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0135",
+      "file": "91-di-ba-shi-liu-zhang.md",
+      "task": "证件与信息：手机里的\"电子保命包\"",
+      "path": [
+        "安全",
+        "紧急信息"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "iOS 18.x / HarmonyOS 5.x–6.x / Android 15–16",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0136",
+      "file": "92-di-ba-shi-qi-zhang.md",
+      "task": "四条路线一张表",
+      "path": [
+        "设置",
+        "蜂窝网络",
+        "添加 eSIM"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0137",
+      "file": "92-di-ba-shi-qi-zhang.md",
+      "task": "四条路线一张表",
+      "path": [
+        "设置",
+        "蜂窝网络"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0138",
+      "file": "92-di-ba-shi-qi-zhang.md",
+      "task": "四条路线一张表",
+      "path": [
+        "设置",
+        "蜂窝网络里选中删除"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0139",
+      "file": "92-di-ba-shi-qi-zhang.md",
+      "task": "eSIM 实操六步走",
+      "path": [
+        "设置",
+        "蜂窝网络",
+        "蜂窝数据"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0140",
+      "file": "92-di-ba-shi-qi-zhang.md",
+      "task": "eSIM 故障排查树：七步定位问题",
+      "path": [
+        "设置",
+        "蜂窝网络"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0141",
+      "file": "92-di-ba-shi-qi-zhang.md",
+      "task": "目的地速查补充：港澳台、澳新与\"非常规\"行程",
+      "path": [
+        "设置",
+        "蜂窝网络"
+      ],
+      "platform": [
+        "ios",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0142",
+      "file": "92-di-ba-shi-qi-zhang.md",
+      "task": "目的地速查补充：港澳台、澳新与\"非常规\"行程",
+      "path": [
+        "设置",
+        "网络和互联网"
+      ],
+      "platform": [
+        "ios",
+        "harmony",
+        "android"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0143",
+      "file": "95-di-jiu-shi-zhang.md",
+      "task": "语音、相机、离线：三大能力的设置详解",
+      "path": [
+        "设置",
+        "显示",
+        "字体大小"
+      ],
+      "platform": [
+        "ios"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18 / iOS 26",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0144",
+      "file": "97-di-jiu-shi-er-zhang.md",
+      "task": "（章内通用）",
+      "path": [
+        "手表",
+        "自家 App",
+        "健康聚合层",
+        "第三方"
+      ],
+      "platform": [
+        "ios",
+        "harmony"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    },
+    {
+      "id": "p0145",
+      "file": "98-di-jiu-shi-san-zhang.md",
+      "task": "读懂睡眠报告的四个数",
+      "path": [
+        "设置",
+        "显示"
+      ],
+      "platform": [
+        "all"
+      ],
+      "version_scope": "Android 15 / HarmonyOS 5 / iOS 18",
+      "status": "confirmed",
+      "date": "2026-11",
+      "verified_by": "book-v1.9",
+      "note": ""
+    }
+  ]
+}

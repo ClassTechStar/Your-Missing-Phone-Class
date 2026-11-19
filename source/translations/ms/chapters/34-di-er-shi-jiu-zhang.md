@@ -2,12 +2,12 @@
 id: di-er-shi-jiu-zhang
 num: 29
 part: shi-zhan-pian
-nav: Bab 29:Kesihatan Digital—Membina Hubungan Sihat dengan Telefon
+nav: Bab 29: Berapa lama sebenarnya anda guna telefon?
 toc: default
 kind: chapter
 ---
 
-### Bab 29:Kesihatan Digital — Wujudkan Hubungan Sihat dengan Telefon
+### Bab 29: Berapa lama sebenarnya anda guna telefon?
 
 {class="chapter-intro mb-4"}
 Pernahkah anda ada pengalaman begini: asalnya mahu skrol 5 minit video pendek, hasilnya angkat kepala sudah lalu dua jam? Atau malam baring di katil skrol telefon, semakin skrol semakin bersemangat, akhirnya 2 pagi
@@ -21,7 +21,7 @@ Sebelum berubah, dahulu fahami situasi semasa. Telefon ada satu fungsi yang rama
 
 <strong>IV. Pengurusan tugas dan nota</strong>. Saya ada kawan selepas lihat dapati diri setiap hari belanjakan 4 jam lebih di Douyin, seminggu adalah 28 jam - setara dengan masa satu kerja sambilan. "Impak digital" ini adalah langkah pertama berubah.
 
-#### 2. Tetapkan "had penggunaan" App — Pasang pengehad kelajuan untuk diri sendiri
+2. Tetapkan "had penggunaan" App — Pasang pengehad kelajuan untuk diri sendiri
 
 Google Keep: Nota mudah dan pantas, segerak dengan akaun Google.
 
@@ -29,7 +29,7 @@ Google Keep: Nota mudah dan pantas, segerak dengan akaun Google.
 2. <strong>iOS</strong> Obsidian: App nota berasaskan Markdown, simpan sebagai fail tempatan, sesuai untuk pengguna kuasa.
 3. <strong>Tip kecil</strong>: Tetapkan kata laluan had sebagai satu kata laluan yang anda tidak biasa guna, tidak mudah ingat. Jika terlalu mudah taip, anda akan tidak tertahan setiap kali "lanjut", had akan jadi tidak berguna.
 
-#### 3. Guna "Mod Jangan Ganggu" dengan betul — Bukan matikan pemberitahuan, tapi matikan kebimbangan
+3. Guna "Mod Jangan Ganggu" dengan betul — Bukan matikan pemberitahuan, tapi matikan kebimbangan
 
 Todoist: App pengurusan tugas popular, sokong projek, label, keutamaan.
 
@@ -58,10 +58,10 @@ Lama lihat skrin telefon, mata kering, bengkak adalah pasti. Mod pelindung mata 
 Apabila menunduk lihat telefon, leher anda menanggung tekanan 5-6 kali ganda berbanding berdiri normal. Menunduk jangka panjang akan menyebabkan kelengkungan servikal berubah lurus, pertumbuhan tulang, pening kebas tangan. Berikut adalah beberapa cara penambahbaikan mudah:
 
 - <strong>Google Translate: Penterjemah berbilang bahasa, sokong teks, suara, imej, luar talian.</strong> Apple Translate: Penterjemah terbina dalam iOS, sokong teks, suara, perbualan.
-- <strong>Microsoft Translator: Penterjemah berbilang platform, sokong perbualan berbilang orang.</strong>2. Penterjemah real-time
+- <strong>Microsoft Translator: Penterjemah berbilang platform, sokong perbualan berbilang orang.</strong>2. Penterjemah real-time.
 - <strong>Guna kamera: Google Translate → Kamera ↑ Terjemah teks dalam imej secara real-time.</strong> Guna suara: Google Translate → Perbualan ↑ Terjemah perbualan dua hala.
 
-#### 6. Tidur dan telefon — Tabiat yang paling perlu diubah dalam bilik tidur
+6. Tidur dan telefon — Tabiat yang paling perlu diubah dalam bilik tidur
 
 Cahaya biru skrin telefon akan menahan rembesan melatonin, buat anda "semakin lihat semakin bersemangat". Ramai orang rasa "saya skrol then mengantuk", sebenarnya ditipu oleh cahaya biru ke otak, bila anda letak telefon sebaliknya tidak mudah tidur. Berikut adalah cadangan penambahbaikan:
 
@@ -87,7 +87,7 @@ Google Maps: Peta popular, sokong navigasi, ulasan, foto, lalu lintas real-time.
 2. Apple Health: App kesihatan terbina dalam iPhone, jejak langkah, jantung, tidur.
 3. Google Fit: App kesihatan Android, jejak aktiviti, senaman, kesihatan.
 4. Hari keempat: 1 jam sebelum tidur tidak lihat telefon, pengecas telefon letak di hujung lain bilik tidur.
-5. 2. App penjejakan
+5. 2. App penjejakan.
 6. Hari keenam: Cuba sehari "puasa maklumat" - tidak lihat berita tidak skrol video pendek.
 7. Hari ketujuh: Lihat laporan Masa Skrin minggu ini, banding dengan minggu lepas.
 :::
@@ -99,8 +99,8 @@ Google Maps: Peta popular, sokong navigasi, ulasan, foto, lalu lintas real-time.
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Dahulu lihat data Masa Skrin, fahami situasi semasa adalah langkah pertama berubah
 - 3. App kesihatan mental
-- Meditasi: App seperti Calm, Headspace untuk meditasi dan relaksasi.
-- Mood: Jejak mood harian, kenalpasti corak emosi.
+- Meditasi: App seperti Calm, Headspace untuk meditasi dan relaksasi
+- Mood: Jejak mood harian, kenalpasti corak emosi
 - 1 jam sebelum tidur tidak lihat telefon, pengecas letak di tempat tangan tidak capai
 - 1. App kalendar
 :::

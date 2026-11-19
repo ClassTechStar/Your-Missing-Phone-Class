@@ -213,7 +213,7 @@ Tipp: Kombinationsstrategie
 Diese Methode ist kein Dogma – viele Szenarien brauchen eine Kombination mehrerer Modelle. Eine gängige Strategie: DeepSeek oder Qwen für die Alltagsentwicklung (günstig, gutes Chinesisch), Claude für kritische Architekturentscheidungen (starke Inferenz, wenig Halluzination), Gemini für Multimodal-Analysen (Bild- und Videobearbeitung). Wechsle das Modell nach Bedarf, statt stur bei einem Modell zu bleiben.
 :::
 
-#### 4. Erste Schritte mit der API: große Modelle von null anbinden
+4. Erste Schritte mit der API: große Modelle von null anbinden
 
 Viele KI-Coding-Tutorials zeigen nur die Chat-Oberfläche. Aber echtes „KI-Programmieren“ – deine App ruft ein großes Modell auf – läuft über eine API. Eine API (Application Programming Interface, Programmierschnittstelle) ist ein Kommunikationsprotokoll zwischen Programmen. Über die API kann dein Code die Fähigkeiten eines großen Modells aufrufen, als riefe er eine Funktion auf.
 

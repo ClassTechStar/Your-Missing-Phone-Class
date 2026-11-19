@@ -10,7 +10,8 @@ kind: chapter
 ### 제64장: 데이터 저장과 네트워크 요청
 
 {class="chapter-intro mb-4"}
-'보기만' 할 수 있는 앱은 죽은 앱이에요. 데이터를 저장하고 네트워크에 연결할 수 있는 앱이 살아 있는 앱이죠. 이 장에서는 iOS 데이터 계층의 '3종 세트'를 만나요. UserDefaults(작은 설정 저장), SwiftData(구조화된 데이터 저장), URLSession(서버와 대화)이요. 여기에 JSON을 해석하는 Codable과 현대적인 async/await까지 더해요. 이 장을 마치면 사용자의 습관을 기억하고 내용을 실시간으로 업데이트하는 진짜 앱을 쓸 수 있어요.
+'보기만' 할 수 있는 앱은 죽은 앱이에요. 데이터를 저장하고 네트워크에 연결할 수 있는 앱이 살아 있는 앱이죠. 이 장에서는 iOS 데이터 계층의 '3종 세트'를 만나요.
+UserDefaults(작은 설정 저장), SwiftData(구조화된 데이터 저장), URLSession(서버와 대화)이요. 여기에 JSON을 해석하는 Codable과 현대적인 async/await까지 더해요. 이 장을 마치면 사용자의 습관을 기억하고 내용을 실시간으로 업데이트하는 진짜 앱을 쓸 수 있어요.
 
 #### 1. 저장 방식 고르기: 먼저 이 표를 보세요
 
@@ -23,7 +24,8 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 데이터 3종 세트의 역할 분담
 
-암기 문구 하나: '작은 설정은 UserDefaults로, 한꺼번에 몰리는 데이터는 SwiftData로, 밖의 데이터는 URLSession으로'. 오래된 튜토리얼의 Core Data는 여전히 쓸 수 있고(SwiftData가 그 현대 버전이에요), 손으로 쓰는 SQLite는 거의 만질 일이 없어요. 바로 새것을 배우세요. 옛길로 가지 마세요.
+암기 문구 하나: '작은 설정은 UserDefaults로, 한꺼번에 몰리는 데이터는 SwiftData로, 밖의 데이터는 URLSession으로'. 오래된 튜토리얼의 Core Data는 여전히 쓸 수 있고(SwiftData가 그 현대 버전이에요), 손으로 쓰는 SQLite는 거의 만질 일이 없어요.
+바로 새것을 배우세요. 옛길로 가지 마세요.
 
 #### 2. UserDefaults: 작은 설정 저장하기
 
@@ -136,7 +138,8 @@ print(result.weather[0].description)   // "맑음"
 ```
 :::
 
-철칙: 실제로 돌아오는 JSON을 먼저 보고 필드를 정의하세요. '파싱 실패' 버그의 상당수는 필드 이름 오타나 타입 착각(서버는 "26.5" 문자열을 보냈는데 여러분이 Double로 선언)에서 나와요. 원본 JSON을 프린트해 대조하면 10초 만에 원인을 찾아요.
+철칙: 실제로 돌아오는 JSON을 먼저 보고 필드를 정의하세요. '파싱 실패' 버그의 상당수는 필드 이름 오타나 타입 착각(서버는 "26.5" 문자열을 보냈는데 여러분이 Double로 선언)에서 나와요.
+원본 JSON을 프린트해 대조하면 10초 만에 원인을 찾아요.
 
 #### 5. URLSession + async/await: 서버와 말하기
 
@@ -175,7 +178,8 @@ struct WeatherService {
 함정 주의: 네트워크 철칙 두 가지
 
 {class="mt-1"}
-① 네트워킹은 반드시 async/await로 하고 절대 메인 스레드를 막지 마세요. 화면이 멈추는 건 크래시급 경험이에요. Swift의 구조화된 동시성이 이를 자연스럽게 해 주지만 try await와 do/catch를 잊지 마세요. ② ATS는 기본적으로 평문 HTTP를 금지해요. iOS는 HTTPS를 요구하죠. 로컬 http:// 서비스를 테스트할 때는 Info.plist에 임시 예외(NSAppTransportSecurity)를 열어야 하지만, 정식 제품은 반드시 전부 HTTPS로 가야 해요. 심사에서도 이 부분을 봐요.
+① 네트워킹은 반드시 async/await로 하고 절대 메인 스레드를 막지 마세요. 화면이 멈추는 건 크래시급 경험이에요. Swift의 구조화된 동시성이 이를 자연스럽게 해 주지만 try await와 do/catch를 잊지 마세요. ② ATS는 기본적으로 평문 HTTP를 금지해요.
+iOS는 HTTPS를 요구하죠. 로컬 http:// 서비스를 테스트할 때는 Info.plist에 임시 예외(NSAppTransportSecurity)를 열어야 하지만, 정식 제품은 반드시 전부 HTTPS로 가야 해요. 심사에서도 이 부분을 봐요.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -212,7 +216,8 @@ func friendlyMessage(_ error: Error) -> String {
 사용자에게는 '사람 말'을, 로그에는 '원문'을 남기세요(error 전체를 print). error.localizedDescription의 영어 점서를 사용자에게 그대로 던지지 마세요. 제품의 완성도는 바로 이런 디테일에 숨어 있어요.
 
 {class="mt-1"}
-무료 명언 API(hitokoto 같은 것)를 하나 찾아 URLSession + async/await로 '오늘의 한 문장'을 가져와 화면 중앙에 표시하고, '다른 문장' 버튼을 하나 추가하세요. 마음에 드는 문장은 SwiftData로 '즐겨찾기'에 저장하고요. 이 연습은 UserDefaults/SwiftData/Codable/URLSession을 모두 한 번씩 쓰게 해 줘요. 이것을 끝내면 제7, 8편은 식은 죽 먹기예요.
+무료 명언 API(hitokoto 같은 것)를 하나 찾아 URLSession + async/await로 '오늘의 한 문장'을 가져와 화면 중앙에 표시하고, '다른 문장' 버튼을 하나 추가하세요. 마음에 드는 문장은 SwiftData로 '즐겨찾기'에 저장하고요. 이 연습은 UserDefaults/SwiftData/Codable/URLSession을 모두 한 번씩 쓰게 해 줘요.
+이것을 끝내면 제7, 8편은 식은 죽 먹기예요.
 :::
 
 ::: div .chapter-summary

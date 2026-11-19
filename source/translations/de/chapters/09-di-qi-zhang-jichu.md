@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Die Technik entwickelt sich täglich weiter, und auch die Smartphone-Funktionen evolveieren ständig. Satellitenkommunikation, Off-Grid-Kommunikation, Unfallerkennung, SparkLink-Technik … diese nach Science-Fiction klingenden Funktionen sind bereits in unser Leben getreten. Lass uns gemeinsam diese fortschrittlichen Technologien kennenlernen.
 
-#### Eins. Satellitenkommunikation: Ohne Empfang trotzdem um Hilfe rufen
+Eins. Satellitenkommunikation: Ohne Empfang trotzdem um Hilfe rufen
 
 Die Satellitenkommunikation ist ein großer Durchbruch im Smartphone-Bereich der letzten Jahre. Wenn du in der Wildnis, tiefen Wäldern bist und dein Smartphone überhaupt kein Signal hat, kann die Satellitenkommunikation die Rettungsleine sein.
 
@@ -31,13 +31,13 @@ Das Smartphone verbindet sich direkt mit einem Kommunikationssatelliten in der U
 
 - Outdoor-Abenteuer, Bergunglücke;
 - Seenotfälle;
-- Naturkatastrophen mit Unterbrechung der Bodenkommunikation.
+- Naturkatastrophen mit Unterbrechung der Bodenkommunikation
 
 ##### Verwendung:
 
 1. Stelle sicher, dass du dich an einem offenen Ort mit Sicht auf den Himmel befindest.
 2. : Spitzenrate von 900 Mbit/s pro Verbindung, ein Vielfaches von Bluetooth-Audio; kann verlustfreies Audio und sogar HD-Video übertragen.
-3. Niedriger Stromverbrauch
+3. Niedriger Stromverbrauch.
 4. : Ab der iPhone 14-Serie wird Notruf-SOS per Satellit unterstuetzt. Die iPhone 17-Serie unterstuetzt zusaetzlich iMessage und SMS per Satellit und hat eine erweiterte regionale Abdeckung.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -48,7 +48,7 @@ Das Smartphone verbindet sich direkt mit einem Kommunikationssatelliten in der U
 Die Satellitenkommunikation erfordert eine spezielle Hardware-Antenne im Smartphone – nicht alle Modelle unterstützen sie. Außerdem ist für die Satellitenkommunikation normalerweise ein kostenpflichtiges Abonnement erforderlich, die Notruffunktion ist jedoch in der Regel kostenlos.
 :::
 
-#### Zwei. Off-Grid-Kommunikation: Neue Art der Nahfeldkommunikation
+Zwei. Off-Grid-Kommunikation: Neue Art der Nahfeldkommunikation
 
 „Off-Grid" bezeichnet die direkte Kommunikation zwischen zwei Smartphones, ohne dass ein Mobilfunknetz oder WLAN vorhanden ist.
 
@@ -68,7 +68,7 @@ Nutzung von Bluetooth oder speziellen Funkfrequenzen für eine Punkt-zu-Punkt-Ve
 - <strong>Huawei</strong>: Die MeeTime-App unterstützt Off-Grid-Anrufe.
 - <strong>Xiaomi</strong>: Teile der Xiaomi-MiaoXiang-Zentrums-Funktionen.
 
-#### Drei. Unfallerkennung: Lebensrettung im entscheidenden Moment
+Drei. Unfallerkennung: Lebensrettung im entscheidenden Moment
 
 Suche nach „Unfallerkennung" / „Notfall-SOS" und prüfe, ob es aktiviert ist.
 
@@ -78,7 +78,7 @@ Das Smartphone nutzt mehrere Sensoren – Beschleunigungssensor, Gyroskop, Barom
 
 1. Es erscheint eine Countdown-Oberfläche, die fragt, ob du in Ordnung bist;
 2. Wenn der Countdown endet und du nicht reagierst, wird automatisch ein Notruf getätigt;
-3. Dein Standort wird an Notfallkontakte gesendet.
+3. Dein Standort wird an Notfallkontakte gesendet
 
 ##### Unterstützte Modelle:
 
@@ -87,11 +87,11 @@ Das Smartphone nutzt mehrere Sensoren – Beschleunigungssensor, Gyroskop, Barom
 
 ##### Hinweise:
 
-- Xiaomi
+- Xiaomi.
 - Fehlauslösungen möglich (z. B. Achterbahn, intensive Bewegung) – einfach rechtzeitig abbrechen.
 - Abhängig von Sensoren und Algorithmen, nicht 100 % zuverlässig, aber eine zusätzliche Sicherheitsebene.
 
-#### 4. NearLink (Xinglian): die drahtlose Verbindung der nächsten Generation
+4. NearLink (Xinglian): die drahtlose Verbindung der nächsten Generation
 
 Vier. SparkLink: Drahtlose Verbindung der nächsten Generation
 

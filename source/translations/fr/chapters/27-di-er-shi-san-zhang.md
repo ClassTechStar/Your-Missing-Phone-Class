@@ -2,29 +2,29 @@
 id: di-er-shi-san-zhang
 num: 23
 part: chao-yue-pian
-nav: Chapitre 23 : Pensée algorithmique et initiation à l'automatisation
+nav: Chapitre 23 : Que le smartphone fasse les tâches répétitives
 toc: default
 kind: chapter
 ---
 
-### Chapitre 23 : Pensée programmation et initiation à l'automatisation
+### Chapitre 23 : Que le smartphone fasse les tâches répétitives
 
 {class="chapter-intro mb-4"}
-Dans les deux chapitres précédents, nous avons construit pour le smartphone des « murs de protection » sécuritaires et découvert son « cerveau IA » de plus en plus intelligent à l'intérieur de ces murs. Maintenant, débloquons l'un des potentiels ultimes du smartphone : lui faire « penser » comme un programmeur et accomplir automatiquement les tâches consécutives que vous définissez. Vous direz peut-être : « Je ne sais pas coder, ça me concerne comment ? » Rassurez-vous, ce chapitre ne nécessite absolument pas d'écrire une seule ligne de code — les smartphones modernes ont abaissé le seuil de la « programmation » au point où il suffit de glisser-déposer pour s'en sortir.
+Dans les deux chapitres précédents, nous avons construit pour le smartphone des « murs de protection » sécuritaires et découvert son « cerveau IA » de plus en plus intelligent à l'intérieur de ces murs. Maintenant, débloquons l'un des potentiels ultimes du smartphone : lui faire « penser » comme un programmeur et accomplir automatiquement les tâches consécutives que vous définissez. Vous direz peut-être : « Je ne sais pas coder, ça me concerne comment ? » Rassurez-vous, ce chapitre ne nécessite absolument pas d'écrire une seule ligne de code, les smartphones modernes ont abaissé le seuil de la « programmation » au point où il suffit de glisser-déposer pour s'en sortir.
 
 #### I. Qu'est-ce que l'automatisation exactement ?
 
-En langage simple, l'automatisation c'est :<strong>faire en sorte que le smartphone accomplisse automatiquement une série d'actions quand une certaine condition est remplie.</strong> Vous n'avez pas besoin d'opérer manuellement à chaque fois, ni de vous rappeler ce qu'il faut faire — le smartphone juge lui-même le moment et s'exécute.
+En langage simple, l'automatisation c'est :<strong>faire en sorte que le smartphone accomplisse automatiquement une série d'actions quand une certaine condition est remplie.</strong> Vous n'avez pas besoin d'opérer manuellement à chaque fois, ni de vous rappeler ce qu'il faut faire, le smartphone juge lui-même le moment et s'exécute.
 
-Par exemple : chaque matin en vous réveillant, vous devez manuellement désactiver le mode Ne pas déranger, ouvrir WeChat pour voir les messages, ouvrir l'application Météo pour voir comment vous habiller, ouvrir NetEase Cloud pour lancer une chanson. Si vous empaquetez toutes ces étapes en un flux automatisé, configuré pour « s'exécuter automatiquement chaque matin à 7h », il vous suffit de prendre le smartphone en vous réveillant — tout est déjà prêt. Ça fait rêver, non ?
+Par exemple : chaque matin en vous réveillant, vous devez manuellement désactiver le mode Ne pas déranger, ouvrir WeChat pour voir les messages, ouvrir l'application Météo pour voir comment vous habiller, ouvrir NetEase Cloud pour lancer une chanson. Si vous empaquetez toutes ces étapes en un flux automatisé, configuré pour « s'exécuter automatiquement chaque matin à 7h », il vous suffit de prendre le smartphone en vous réveillant, tout est déjà prêt. Ça fait rêver, non ?
 
 L'automatisation est essentiellement une chaîne logique « si… alors… », le if-else de la programmation. Une fois ce mode de pensée compris, même si vous ne codez jamais de votre vie, votre approche des problèmes sera beaucoup plus structurée. Les éléments clés :
 
 1. <strong>Condition déclencheuse</strong>: Quand commencer ? Ça peut être « chaque matin à 7h », « quand je me connecte au Wi-Fi de la maison », « quand j'arrive à un certain endroit », « quand la batterie du smartphone descend sous 20% ».
 2. <strong>Action à exécuter</strong>: Que faire concrètement ? Ça peut être envoyer un message WeChat, ouvrir une application, ajuster le volume, changer de fond d'écran, lancer de la musique, envoyer une notification… Presque tout ce que vous pouvez faire manuellement sur le smartphone, l'automatisation peut le faire.
-3. <strong>Logique intermédiaire</strong>(optionnelle mais très puissante) : Si la situation A alors faire X, sinon faire Y. Par exemple « si c'est un jour ouvré, lancer le podcast d'actualités ; le week-end, lancer de la musique » — c'est ce qu'on appelle une branche conditionnelle.
+3. <strong>Logique intermédiaire</strong>(optionnelle mais très puissante) : Si la situation A alors faire X, sinon faire Y. Par exemple « si c'est un jour ouvré, lancer le podcast d'actualités ; le week-end, lancer de la musique », c'est ce qu'on appelle une branche conditionnelle.
 
-#### II. « Raccourcis » iOS — l'outil d'automatisation des utilisateurs Apple
+II. « Raccourcis » iOS — l'outil d'automatisation des utilisateurs Apple
 
 L'application « Raccourcis » (Shortcuts) d'Apple est préinstallée, pas besoin de la télécharger. Son concept clé est d'assembler les opérations comme des blocs de construction. Voici quelques notions fondamentales :
 
@@ -46,7 +46,7 @@ Dans l'onglet « Automatisation », créez une nouvelle automatisation → chois
 
 Après chaque paiement par scan WeChat/Alipay, le smartphone lit la notification de paiement et enregistre automatiquement le montant et le commerçant dans une note ou un tableau Numbers. Cela utilise le déclencheur « SMS/notification reçu » de l'automatisation des raccourcis (iOS 17+ prend en charge la lecture des transactions Wallet), couplé à l'action « Ajouter à Numbers ». Pour ceux qui veulent tenir leurs comptes sans l'effort manuel, c'est une bouée de sauvetage.
 
-Une astuce méconnue : vous pouvez ajouter un raccourci à l'écran d'accueil sous forme d'icône d'appli. Par exemple, créez un raccourci « Taxi pour la maison », placez l'icône sur le bureau, un clic ouvre Didi et règle la destination sur votre domicile — bien plus rapide que d'ouvrir l'appli et de saisir l'adresse manuellement.
+Une astuce méconnue : vous pouvez ajouter un raccourci à l'écran d'accueil sous forme d'icône d'appli. Par exemple, créez un raccourci « Taxi pour la maison », placez l'icône sur le bureau, un clic ouvre Didi et règle la destination sur votre domicile: bien plus rapide que d'ouvrir l'appli et de saisir l'adresse manuellement.
 
 #### III. Automatisation Android — Tasker et ses amis
 
@@ -67,7 +67,7 @@ Voici quelques scénarios classiques et pratiques avec Tasker :
 
 - <strong>Wi-Fi automatique en rentrant</strong>: déclencheur « connexion à antenne spécifique » (antenne fixe près de chez vous) → tâche « Activer Wi-Fi ». Pas de GPS ni surconsommation, le Wi-Fi s’active dès l’entrée dans votre quartier.
 - <strong>Mode réunion</strong>: déclencheur « titre calendrier contient « réunion » » → tâche « Mode silencieux, volume média coupé, auto-réponse WeChat (plugin) ». Plus jamais peur que le smartphone sonne en réunion.
-- <strong>Protection oculaire nocturne</strong>: déclencheur « heure 22h-6h » → tâche « Protection oculaire, luminosité 20 %, écran N&amp; B (niveaux de gris) ». L’écran N&amp; B a un effet miraculeux contre l’envie de scroller — une fois grisé, vous n’avez plus envie.
+- <strong>Protection oculaire nocturne</strong>: déclencheur « heure 22h-6h » → tâche « Protection oculaire, luminosité 20 %, écran N&amp; B (niveaux de gris) ». L’écran N&amp; B a un effet miraculeux contre l’envie de scroller, une fois grisé, vous n’avez plus envie.
 - <strong>Podcast automatique au casque</strong>: déclencheur « insertion casque filaire / connexion Bluetooth casque » → tâche « Ouvrir Xiaoyuzhou et lancer dernier épisode ». Mettez le casque et écoutez, pas besoin de déverrouiller le smartphone.
 
 Si Tasker vous semble trop difficile à prendre en main, essayez son cousin simplifié :<strong>MacroDroid</strong>. L’interface est bien plus conviviale, les modèles sont abondants, parfait pour les utilisateurs qui ne veulent pas se prendre la tête. Par ailleurs, beaucoup de systèmes Android chinois (MIUI de Xiaomi, HarmonyOS de Huawei, ColorOS d’OPPO) intègrent des fonctions « Scènes » ou « Assistant intelligent », moins puissantes que Tasker mais largement suffisantes pour l’automatisation quotidienne.
@@ -84,7 +84,7 @@ Le plus grand bénéfice de l’automatisation n’est pas de gagner quelques se
 
 Tout ça semble très avancé, mais avec les deux concepts de base « déclencheur + action », combinés aux Raccourcis ou Tasker, tout est réalisable. La clé est de <strong>prendre conscience que « cette tâche peut être automatisée »</strong>— beaucoup de gens n’en sont pas incapables, ils n’y pensent simplement pas.
 
-#### V. Guide des pièges à éviter : problèmes courants de l'automatisation
+V. Guide des pièges à éviter : problèmes courants de l'automatisation
 
 L'automatisation n'est pas toujours un long fleuve tranquille, voici quelques pièges que j'ai déjà repérés pour vous :
 

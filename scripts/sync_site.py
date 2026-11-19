@@ -27,7 +27,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 站点根要带的 PWA 资产
 # announcements.json 是页面运行时 fetch 的公告数据，缺了会在控制台打 404
-ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json']
+ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json',
+          'errata.html', 'languages.html']
 ASSET_DIRS = ['icons']
 # 书页里的 og:image 是绝对地址（manifest 的 site_url + cover-og.png），
 # 图必须一起部署到站点根，否则分享卡片抓不到图。
@@ -38,6 +39,8 @@ REWRITES = [
     ('../sw.js', 'sw.js'),
     ('../manifest.webmanifest', 'manifest.webmanifest'),
     ('../icons/', 'icons/'),
+    ('../errata.html', 'errata.html'),
+    ('../languages.html', 'languages.html'),
 ]
 
 

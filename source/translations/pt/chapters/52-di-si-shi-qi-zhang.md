@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 47: Manual de consulta rápida e recursos
 
 {class="chapter-intro mb-4"}
-Este capítulo é um manual de consulta rápida que funciona por si só. Quando você não lembrar de algum princípio ou precisar tomar uma decisão rápida, vá direto para cá. Recomendo tratá-lo como um "cartão de bolso": consulta dos cinco grandes princípios, árvore de decisão de ferramentas, perguntas frequentes e recursos de estudo — sem pular nenhuma página.
+Este capítulo é um manual de consulta rápida que funciona por si só. Quando você não lembrar de algum princípio ou precisar tomar uma decisão rápida, vá direto para cá. Recomendo tratá-lo como um "cartão de bolso": consulta dos cinco grandes princípios, árvore de decisão de ferramentas, perguntas frequentes e recursos de estudo: sem pular nenhuma página.
 
 #### 1. Cartão de consulta rápida dos modelos mentais
 
@@ -56,11 +56,11 @@ Figura 6: Árvore de decisão para escolher ferramentas de programação com IA
 
 P1: Não sei nada de programação. Posso programar com IA?
 
-Pode. As ferramentas de programação com IA de 2026 já são fortes o bastante para você descrever a necessidade em linguagem natural e deixar a IA gerar o código. Mas dois conselhos: primeiro, comece por ferramentas Builder na nuvem (como v0 e Bolt), que não exigem configurar ambiente de desenvolvimento; segundo, aprenda os conceitos básicos enquanto usa — não é preciso dominar a sintaxe, mas você precisa conseguir "entender o sentido geral" do código que a IA escreve; só assim a validação do resultado é eficaz.
+Pode. As ferramentas de programação com IA de 2026 já são fortes o bastante para você descrever a necessidade em linguagem natural e deixar a IA gerar o código. Mas dois conselhos: primeiro, comece por ferramentas Builder na nuvem (como v0 e Bolt), que não exigem configurar ambiente de desenvolvimento; segundo, aprenda os conceitos básicos enquanto usa, não é preciso dominar a sintaxe, mas você precisa conseguir "entender o sentido geral" do código que a IA escreve; só assim a validação do resultado é eficaz.
 
 P2: Qual linguagem de programação devo aprender?
 
-Depende do que você quer fazer. Front-end de sites — JavaScript/TypeScript; processamento de dados ou IA — Python; back-end corporativo — Java ou Go. Mas o mais importante é: na era da programação com IA, a importância da "linguagem" está caindo. A IA cuida dos detalhes de sintaxe; o que você precisa entender é a "estrutura dos programas" — o que é uma função, o que é um laço, o que são estruturas de dados. Esses conceitos atravessam as linguagens; uma vez compreendidos, trocar de linguagem é rápido.
+Depende do que você quer fazer. Front-end de sites, JavaScript/TypeScript; processamento de dados ou IA — Python; back-end corporativo, Java ou Go. Mas o mais importante é: na era da programação com IA, a importância da "linguagem" está caindo. A IA cuida dos detalhes de sintaxe; o que você precisa entender é a "estrutura dos programas", o que é uma função, o que é um laço, o que são estruturas de dados. Esses conceitos atravessam as linguagens; uma vez compreendidos, trocar de linguagem é rápido.
 
 P3: Código escrito por IA tem problema de direitos autorais?
 
@@ -68,11 +68,11 @@ Até agosto de 2026, ainda é uma questão jurídica controversa. Em linhas gera
 
 P4: A IA vai substituir os programadores?
 
-Não em curto prazo. O que a IA substitui não é a profissão de "programador", e sim o trabalho de "codificar linha por linha". Assim como a calculadora não substituiu os matemáticos, mas os libertou do cálculo manual maçante. As ferramentas de programação com IA deslocam o programador de "escrever código" para "pensar nos problemas" — o que, na prática, eleva o teto de valor do programador. A competitividade do futuro não está em "quantas linhas de código você escreve", e sim em "quão complexo é o problema que você resolve".
+Não em curto prazo. O que a IA substitui não é a profissão de "programador", e sim o trabalho de "codificar linha por linha". Assim como a calculadora não substituiu os matemáticos, mas os libertou do cálculo manual maçante. As ferramentas de programação com IA deslocam o programador de "escrever código" para "pensar nos problemas": o que, na prática, eleva o teto de valor do programador. A competitividade do futuro não está em "quantas linhas de código você escreve", e sim em "quão complexo é o problema que você resolve".
 
 P5: Como julgar se a entrega da IA está correta?
 
-Pela validação em três camadas. Primeira: validação funcional — roda? as entradas e saídas estão certas? É o mais básico. Segunda: validação de limites — o que acontece com entrada vazia, entrada longa demais, entrada anormal? Isso revela problemas escondidos. Terceira: validação de arquitetura — a estrutura do código faz sentido? há valores fixados no código (hardcoded)? é fácil de ampliar? Aqui você precisa de certo julgamento técnico. Se você não consegue avaliar a terceira camada, cumpra pelo menos as duas primeiras — se roda e os limites se comportam bem, você já está à frente da maioria dos iniciantes.
+Pela validação em três camadas. Primeira: validação funcional, roda? as entradas e saídas estão certas? É o mais básico. Segunda: validação de limites, o que acontece com entrada vazia, entrada longa demais, entrada anormal? Isso revela problemas escondidos. Terceira: validação de arquitetura, a estrutura do código faz sentido? há valores fixados no código (hardcoded)? é fácil de ampliar? Aqui você precisa de certo julgamento técnico. Se você não consegue avaliar a terceira camada, cumpra pelo menos as duas primeiras, se roda e os limites se comportam bem, você já está à frente da maioria dos iniciantes.
 
 #### 4. Recursos de estudo recomendados
 
@@ -87,16 +87,16 @@ A seguir, os recursos de estudo recomendados até agosto de 2026. Atenção: lin
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Lista de recursos de estudo recomendados
 
-#### 5. Palavras finais: ferramentas nas mãos, metodologia na cabeça
+5. Palavras finais: ferramentas nas mãos, metodologia na cabeça
 
 Voltemos à crença central deste livro: as ferramentas iteram a cada três meses; a metodologia evolui a cada três anos. Hoje, em agosto de 2026, as ferramentas de programação com IA já são poderosas a ponto de impressionar — você cria um site com uma frase, gera um aplicativo full stack com um parágrafo de descrição e conclui uma refatoração complexa com um único comando. Mas quanto mais poderosas as ferramentas, mais se evidencia a importância da metodologia — porque o poder das ferramentas amplifica cada uma das suas decisões.
 
-Se o seu pedido é claro, a IA implementa com eficiência para você; se o seu pedido é vago, a IA também produz a coisa errada com eficiência. Se você segue o "simplicidade em primeiro lugar", a IA ajuda a validar as suas ideias depressa; se você quer abraçar o mundo, a IA também acumula dívida técnica depressa. Se você modifica com precisão, a IA otimiza o código como uma cirurgia; se a sua instrução é vaga, a IA também instala bugs a golpes largos.
+Se o seu pedido é claro, a IA implementa com eficiência para você; se o seu pedido é vago, a IA também produz a coisa errada com eficiência. Ao seguir o "simplicidade em primeiro lugar", a IA ajuda a validar as suas ideias depressa; se você quer abraçar o mundo, a IA também acumula dívida técnica depressa. Se você modifica com precisão, a IA otimiza o código como uma cirurgia; se a sua instrução é vaga, a IA também instala bugs a golpes largos.
 
-É por isso que este livro dedicou a maior parte do espaço à metodologia, e não à operação das ferramentas. Não porque as ferramentas não importem, mas porque a metodologia é o "multiplicador" das ferramentas — quanto melhor a metodologia, maior o valor das ferramentas; com metodologia zero, por mais fortes que sejam as ferramentas, é zero vezes qualquer número.
+É por isso que este livro dedicou a maior parte do espaço à metodologia, e não à operação das ferramentas. Não porque as ferramentas não importem, mas porque a metodologia é o "multiplicador" das ferramentas, quanto melhor a metodologia, maior o valor das ferramentas; com metodologia zero, por mais fortes que sejam as ferramentas, é zero vezes qualquer número.
 
 :::inline div .quote-line
-Você não programa mais sozinho. Você é o comandante e a IA é seu exército; a qualidade do seu pensamento determina a força do seu exército. A partir de hoje, arme seu pensamento com metodologia e amplifique sua capacidade com ferramentas — esse é todo o segredo da programação com IA.
+Você não programa mais sozinho. Você é o comandante e a IA é seu exército; a qualidade do seu pensamento determina a força do seu exército. A partir de hoje, arme seu pensamento com metodologia e amplifique sua capacidade com ferramentas, esse é todo o segredo da programação com IA.
 :::
 
 #### Referências

@@ -39,7 +39,7 @@ Xcode ist Apples offizielle integrierte Entwicklungsumgebung – und kostenlos. 
 
 1. Auf dem Mac den App Store öffnen, nach „Xcode“ suchen und auf Installieren klicken – es sind etliche Gigabyte, such dir eine Zeit mit gutem Netz;
 2. Beim ersten Start die Vereinbarung akzeptieren und die Komponenten installieren (läuft automatisch);
-3. Im Menü Xcode → Settings → Locations prüfen, dass Command Line Tools ausgewählt ist – die Kommandozeilenwerkzeuge sind Voraussetzung für viele Skripte und Drittanbieter-Tools.
+3. Im Menü Xcode → Settings → Locations prüfen, dass Command Line Tools ausgewählt ist – die Kommandozeilenwerkzeuge sind Voraussetzung für viele Skripte und Drittanbieter-Tools
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -100,9 +100,9 @@ Abbildung 2: Die Xcode-Projektstruktur, die Einsteiger kennen müssen
 - MyFirstAppApp.swift: der Programmeinstieg; in SwiftUI sind es nur ein paar Zeilen – „starten, dann die Hauptoberfläche zeigen“;
 - ContentView.swift: die Hauptansicht; alles, was du gerade siehst, liegt hier;
 - Assets.xcassets: das Ressourcenlager – Icons, Bilder und Farben liegen hier;
-- Target-Einstellungen: über das blaue Projektsymbol links hinein; Versionsnummer, minimale iOS-Version und Signatur stehen dort. Auch Anzeigename und Icon der App konfigurierst du hier.
+- Target-Einstellungen: über das blaue Projektsymbol links hinein; Versionsnummer, minimale iOS-Version und Signatur stehen dort. Auch Anzeigename und Icon der App konfigurierst du hier
 
-#### 5. Xcode-Effizienztricks: die fünf „Tastenkürzel-Cheats“ für Einsteiger
+5. Xcode-Effizienztricks: die fünf „Tastenkürzel-Cheats“ für Einsteiger
 
 Wenn du diese beherrschst, wirkst du „sehr professionell“:
 
@@ -117,14 +117,14 @@ Die meistgenutzten Xcode-Tastenkürzel (das Einsteiger-Fünfer-Set)
 
 Zwei weitere versteckte Boni: mehrere Simulatoren gleichzeitig (iPhone und iPad nebeneinander laufen lassen, um Layouts zu vergleichen) und die Snippet-Bibliothek (häufige Codezeilen ins Snippets-Panel rechts ziehen, beim nächsten Mal per Knopfdruck einfügen) – nutz diese Effizienzwerkzeuge einfach, das Gefühl kommt von selbst.
 
-#### 6. Debugging auf dem echten Gerät: die App auf dein iPhone bringen
+6. Debugging auf dem echten Gerät: die App auf dein iPhone bringen
 
 So gut der Simulator auch ist, das echte Gerät ist das Ziel. Auch mit einer kostenlosen Apple ID kannst du auf echten Geräten debuggen:
 
 1. iPhone per Datenkabel anschließen (oder kabellos im selben WLAN debuggen);
 2. In der Geräteliste oben in Xcode dein Handy wählen; beim ersten Mal wirst du zum Anmelden mit der Apple ID aufgefordert, die Signatur wird automatisch eingerichtet;
 3. Auf dem iPhone [Einstellungen] → [Allgemein] → [VPN & Geräteverwaltung] → deinem Entwicklerzertifikat vertrauen;
-4. ▶ drücken, und die App landet auf dem echten Gerät.
+4. ▶ drücken, und die App landet auf dem echten Gerät
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -2,26 +2,26 @@
 id: di-shi-san-zhang
 num: 13
 part: ruan-jian-pian
-nav: Chapitre 13 : Recommandations d'applications utilitaires
+nav: Chapitre 13 : Quelles apps installer, et lesquelles éviter ?
 toc: default
 kind: chapter
 ---
 
-### Chapitre 13 : Recommandations d'applications utilitaires
+### Chapitre 13 : Quelles apps installer, et lesquelles éviter ?
 
 {class="chapter-intro mb-4"}
 Ce chapitre sélectionne des outils de productivité, de santé et de voyage, et complète les capacités système et multi-appareils : nettoyage et anti-indésirables (Qingzhuo…), interrupteurs de blocage intégrés, météo et alertes sismiques ; contrôle à distance d'ordinateur (Sunlogin/ToDesk), bureautique IA (Trae…), bureaux animés, transfert local rapide (LocalSend), presse-papiers multi-appareils, codes dynamiques (Aegis/Microsoft Authenticator), planification TickTick et numérisation de documents papier.
 
-#### I. Outils de productivité : gérer votre temps et votre attention
+I. Outils de productivité : gérer votre temps et votre attention
 
 Les outils de productivité sont l'« ossature » de la vie numérique : ils vous aident à mettre de l'ordre dans idées, tâches et documents épars. Recommandations par usage ci-dessous.
 
 ##### 1. Listes de tâches (gestion des tâches)
 
-- TickTick (Dida Qingdan) — Pour qui : ceux qui veulent centraliser dans un même endroit leurs tâches et agendas de travail, de vie et d'études ; l'un des coups de cœur de cette section. Points forts : synchronisation entre téléphone/ordinateur/tablette/Web ; listes + calendrier + minuteur Pomodoro en un seul outil ; saisie en langage naturel — « réunion demain à 15 h », « rapport hebdo chaque lundi » — avec reconnaissance automatique des dates et des récurrences ; sous-tâches, étiquettes, priorités, pièces jointes et listes collaboratives. Idéal pour une gestion tout-en-un de « planning + suivi des tâches + revue quotidienne ».
+- TickTick (Dida Qingdan), Pour qui : ceux qui veulent centraliser dans un même endroit leurs tâches et agendas de travail, de vie et d'études ; l'un des coups de cœur de cette section. Points forts : synchronisation entre téléphone/ordinateur/tablette/Web ; listes + calendrier + minuteur Pomodoro en un seul outil ; saisie en langage naturel, « réunion demain à 15 h », « rapport hebdo chaque lundi », avec reconnaissance automatique des dates et des récurrences ; sous-tâches, étiquettes, priorités, pièces jointes et listes collaboratives. Idéal pour une gestion tout-en-un de « planning + suivi des tâches + revue quotidienne ».
 - Bien utiliser TickTick : Boîte de collecte : tout jeter d'abord dans « Aujourd'hui / Collecte », puis trier le soir entre travail, famille et études.
 - Vue calendrier : faites glisser réunions et échéances dans le calendrier pour voir les conflits, plus visuel qu'une simple liste.
-- Tâches récurrentes : médicaments, factures, sport — définissez-les une fois, sans ressaisie.
+- Tâches récurrentes : médicaments, factures, sport, définissez-les une fois, sans ressaisie.
 - Pomodoro : lancez la concentration directement sur une tâche et voyez ce que vous avez réellement accompli dans la semaine.
 - Liaison avec le téléphone : via l'assistant vocal « Rappelle-moi… », les rappels entrent dans le système ; pour les échéances importantes, doublez avec le calendrier système.
 
@@ -32,7 +32,7 @@ Les outils de productivité sont l'« ossature » de la vie numérique : ils vou
 ##### 2. Minuteur Pomodoro (entraînement de la concentration)
 
 - Forest Public : ceux qui décrochent trop souvent de leur téléphone. Points forts : plantez un arbre en restant concentré ; si vous quittez l'application trop tôt, l'arbre meurt. Retour positif par la « vie virtuelle », plantation possible entre amis.
-- Tide (Chaoxi) — Pour qui : ceux qui ont besoin de bruit blanc pour se concentrer ou s'endormir. Points forts : sons naturels (pluie, vagues, forêt) + Pomodoro + méditation réunis dans une seule appli, avec une interface épurée et apaisante.
+- Tide (Chaoxi): Pour qui : ceux qui ont besoin de bruit blanc pour se concentrer ou s'endormir. Points forts : sons naturels (pluie, vagues, forêt) + Pomodoro + méditation réunis dans une seule appli, avec une interface épurée et apaisante.
 - Principe : classiquement 25 minutes de concentration + 5 minutes de pause ; adaptez à votre état (50/10 ou 90/20).
 
 ##### 3. Calendrier (visualiser le temps)
@@ -43,10 +43,10 @@ Les outils de productivité sont l'« ossature » de la vie numérique : ils vou
 ##### 4. Notes (capitaliser le savoir)
 
 - Notion Public : unifier notes, tâches, bases de données et wiki ; étudiants, indépendants, équipes. Points forts : base de connaissances polyvalente, édition par blocs, pages personnelles, listes de lecture, tableaux de projets, riches modèles.
-- Obsidian Public : gestionnaires de connaissances avancés, chercheurs, rédacteurs. Points forts : stockage Markdown local, liens bidirectionnels et graphe de relations — un « second cerveau » dont vous restez propriétaire.
+- Obsidian Public : gestionnaires de connaissances avancés, chercheurs, rédacteurs. Points forts : stockage Markdown local, liens bidirectionnels et graphe de relations, un « second cerveau » dont vous restez propriétaire.
 - flomo Public : noter des idées brèves sans rédiger de longs textes. Points forts : notes en cartes, comme un statut, classification par #étiquettes, consultation par chronologie.
 - Notes Apple Public : utilisateurs iPhone/Mac avec des besoins légers. Points forts : lancement rapide, numérisation de documents, dessin, listes, synchronisation iCloud ; gratuit et parfaitement intégré.
-- Evernote (Yinxiang Biji) — Pour qui : les utilisateurs avancés qui capturent beaucoup de pages web et archivent leurs documents. Points forts : une extension de capture web très puissante, de l'OCR pour lire le texte des images, un service vétéran et stable — mais la version premium est payante.
+- Evernote (Yinxiang Biji), Pour qui : les utilisateurs avancés qui capturent beaucoup de pages web et archivent leurs documents. Points forts : une extension de capture web très puissante, de l'OCR pour lire le texte des images, un service vétéran et stable, mais la version premium est payante.
 
 ##### 5. Outils PDF
 
@@ -83,17 +83,17 @@ Les applications de santé sont l'assistant personnel le plus sous-estimé du t�
 ##### 3. Méditation et détente
 
 - Calm Public : salariés stressés, difficultés d'endormissement. Points forts : méditation guidée « Daily Calm » + histoires du soir (voix célèbres), interface soignée, riche contenu anglais.
-- Tide (Chaoxi) — Pour qui : les utilisateurs sinophones qui veulent du bruit blanc pour se concentrer ou s'endormir. Points forts : une perle chinoise qui réunit sons naturels + cours de méditation + Pomodoro, avec des guides en chinois plus chaleureux.
+- Tide (Chaoxi): Pour qui : les utilisateurs sinophones qui veulent du bruit blanc pour se concentrer ou s'endormir. Points forts : une perle chinoise qui réunit sons naturels + cours de méditation + Pomodoro, avec des guides en chinois plus chaleureux.
 - Xiao Sleep — Pour qui : ceux qui veulent des sons pour s'endormir ou enregistrer leurs somniloquies et ronflements. Points forts : une immense banque de bruits blancs à superposer (pluie + ventilateur + feu de camp), un arrêt programmé au coucher, et l'enregistrement des propos nocturnes, à la fois drôle et utile.
 
 ##### 4. Santé féminine
 
 - Flo Public : suivi des règles, projet de bébé, santé féminine. Points forts : prédictions IA précises des prochaines règles/ovulation, questions anonymes dans la communauté, design élégant.
-- Meiyou — Pour qui : les utilisatrices en Chine et celles qui veulent des communautés et de la vulgarisation en chinois. Points forts : des contenus localisés très riches, avec des informations adaptées à chaque étape — cycles, projet bébé, grossesse, puériculture.
+- Meiyou: Pour qui : les utilisatrices en Chine et celles qui veulent des communautés et de la vulgarisation en chinois. Points forts : des contenus localisés très riches, avec des informations adaptées à chaque étape: cycles, projet bébé, grossesse, puériculture.
 
 ##### 5. Rappels de médicaments
 
-- Yongyao Zhushou (Assistant Médicaments) — Pour qui : les malades chroniques sous traitement au long cours et les enfants qui gèrent les médicaments de leurs parents âgés. Points forts : identification des médicaments par scan du code-barres, liste de traitement créée automatiquement, rappels à l'heure par notifications, et journal de prise partageable avec la famille.
+- Yongyao Zhushou (Assistant Médicaments), Pour qui : les malades chroniques sous traitement au long cours et les enfants qui gèrent les médicaments de leurs parents âgés. Points forts : identification des médicaments par scan du code-barres, liste de traitement créée automatiquement, rappels à l'heure par notifications, et journal de prise partageable avec la famille.
 
 ##### 6. Centre de données
 
@@ -105,13 +105,13 @@ En voyage, quelques applications bien choisies évitent bien des ennuis. Recomma
 
 ##### 1. Avions et trains à grande vitesse
 
-- Umetrip (Hanglv Zongheng) — Pour qui : les professionnels qui volent souvent. Points forts : données officielles de l'aviation civile — la source la plus fiable pour le suivi des vols, les changements de porte d'embarquement et les alertes de retard —, plus le type d'appareil et le plan de cabine consultables.
+- Umetrip (Hanglv Zongheng): Pour qui : les professionnels qui volent souvent. Points forts : données officielles de l'aviation civile, la source la plus fiable pour le suivi des vols, les changements de porte d'embarquement et les alertes de retard, plus le type d'appareil et le plan de cabine consultables.
 - 12306 Public : tous les voyageurs en train en Chine. Points forts : canal officiel d'achat de billets, liste d'attente automatique en cas d'annulation, billets étudiants/groupes pratiques.
-- VariFlight (Feichangzhun) — Pour qui : les voyageurs sensibles à la ponctualité des vols et ceux qui déposent ou récupèrent quelqu'un à l'aéroport. Points forts : des prévisions de retard très justes, et le partage d'itinéraire pour que ta famille suive en direct ta position et ton heure d'arrivée.
+- VariFlight (Feichangzhun), Pour qui : les voyageurs sensibles à la ponctualité des vols et ceux qui déposent ou récupèrent quelqu'un à l'aéroport. Points forts : des prévisions de retard très justes, et le partage d'itinéraire pour que ta famille suive en direct ta position et ton heure d'arrivée.
 
 ##### 2. Cartes et navigation
 
-- Amap (Gaode Ditu) — Pour qui : les citadins en Chine, conducteurs et habitués des VTC. Points forts : un trafic en temps réel très précis, une vraie capacité à éviter les bouchons, course ou covoiturage réservés au même endroit, et de nombreuses propositions de correspondances en transports en commun.
+- Amap (Gaode Ditu), Pour qui : les citadins en Chine, conducteurs et habitués des VTC. Points forts : un trafic en temps réel très précis, une vraie capacité à éviter les bouchons, course ou covoiturage réservés au même endroit, et de nombreuses propositions de correspondances en transports en commun.
 - Baidu Maps Public : besoin d'informations de lieux et de navigation intérieure. Points forts : vues panoramiques / navigation AR, plans détaillés de centres commerciaux et sites, nombreuses voix.
 - Google Maps Public : voyageurs à l'étranger. Points forts : couverture mondiale, avis authentiques, Street View et cartes hors ligne indispensables hors de chez soi.
 
@@ -121,19 +121,19 @@ En voyage, quelques applications bien choisies évitent bien des ennuis. Recomma
 
 ##### 4. Conversion de devises
 
-- Jijian Huilü (convertisseur minimaliste) — Pour qui : les voyageurs à l'étranger et les adeptes des achats transfrontaliers. Points forts : une interface ultra épurée, plus de 160 devises, des taux actualisés en temps réel, la comparaison simultanée de plusieurs devises et une conversion rapide par appui long sur le chiffre.
+- Jijian Huilü (convertisseur minimaliste), Pour qui : les voyageurs à l'étranger et les adeptes des achats transfrontaliers. Points forts : une interface ultra épurée, plus de 160 devises, des taux actualisés en temps réel, la comparaison simultanée de plusieurs devises et une conversion rapide par appui long sur le chiffre.
 
 ##### 5. Météo
 
-- Application Météo système / China Weather Public : tout le monde, prévisions et alertes officielles. Points forts : les applications météo constructeurs et canaux officiels comme « China Weather » relaient les alertes de l'observatoire — pluies torrentielles, typhons, fortes chaleurs — par bannière/notification, avec une forte autorité.
+- Application Météo système / China Weather Public : tout le monde, prévisions et alertes officielles. Points forts : les applications météo constructeurs et canaux officiels comme « China Weather » relaient les alertes de l'observatoire, pluies torrentielles, typhons, fortes chaleurs: par bannière/notification, avec une forte autorité.
 - Caiyun Weather Public : prévisions de pluie à la minute. Points forts : « va-t-il pleuvoir dans les deux heures ? » très précis, carte dynamique des précipitations, alerte avant la pluie.
 - Carrot Weather Public : amateurs de météo aimant l'humour et les widgets riches. Points forts : bulletins météo par une IA mordante, nombreux widgets personnalisables, radar professionnel ; la version payante est plus complète.
-- Points clés des alertes : autorisez les notifications des applications météo ; les alertes vont du bleu au rouge, le rouge indiquant le plus haut risque — adaptez vos déplacements. Voir aussi la section 7 de ce chapitre « Alertes météo / catastrophes naturelles / séismes ».
+- Points clés des alertes : autorisez les notifications des applications météo ; les alertes vont du bleu au rouge, le rouge indiquant le plus haut risque, adaptez vos déplacements. Voir aussi la section 7 de ce chapitre « Alertes météo / catastrophes naturelles / séismes ».
 
 ##### 6. Guides de voyage
 
 - Mafengwo Public : amateurs de guides détaillés, road trips et voyages approfondis. Points forts : récits originaux riches, itinéraires/astuces/pièges à éviter complets, guides hors ligne téléchargeables.
-- Xiaohongshu (RedNote) — Pour qui : les jeunes voyageurs en quête de retours d'expérience authentiques, de lieux hors des sentiers battus et de bonnes tables. Points forts : un format photos et courtes vidéos très parlant, des guides comme « 3 jours dans la ville X » vite mis à jour et toujours d'actualité, et une recherche très agréable.
+- Xiaohongshu (RedNote), Pour qui : les jeunes voyageurs en quête de retours d'expérience authentiques, de lieux hors des sentiers battus et de bonnes tables. Points forts : un format photos et courtes vidéos très parlant, des guides comme « 3 jours dans la ville X » vite mis à jour et toujours d'actualité, et une recherche très agréable.
 
 #### IV. Premiers pas avec l'automatisation
 
@@ -143,7 +143,7 @@ L'automatisation est un levier « une configuration, un long confort » : elle p
 - Automatisation Android : les scénarios système (« Tâches automatiques » de Xiaomi, « Intelligence de situation » de Huawei) sont les plus simples à prendre en main ; Tasker est très puissant mais exigeant, réservé aux geeks.
 - Idée clé : repérez d'abord « les gestes répétés chaque jour », puis demandez-vous « un déclencheur + plusieurs actions peut-il les remplacer ? ». Exemples détaillés et usages avancés au chapitre 23.
 
-#### V. Navigateurs et moteurs de recherche : votre porte d'entrée sur l'information
+V. Navigateurs et moteurs de recherche : votre porte d'entrée sur l'information
 
 Le navigateur est votre fenêtre sur Internet ; le moteur de recherche, votre boussole dans l'océan d'informations. Bien les utiliser vous évite bien des détours.
 
@@ -166,7 +166,7 @@ Lorsque vous saisissez une adresse, le navigateur : ① interroge un serveur DNS
 
 ##### Guide de recherche d'information efficace :
 
-- Utilisez la recherche IA : les résumés de Bing et le Copilot d'Edge répondent directement et extraient l'essentiel — bien plus rapide que d'ouvrir chaque lien.
+- Utilisez la recherche IA : les résumés de Bing et le Copilot d'Edge répondent directement et extraient l'essentiel, bien plus rapide que d'ouvrir chaque lien.
 - Repérer fausses informations et publicités : les résultats marqués « Publicité » ou « Sponsorisé » sont des promotions payantes, pas des résultats naturenels. Vérifiez l'autorité de la source et privilégiez sites officiels et médias reconnus.
 - Télécharger correctement une application : tapez « nom de l'app + site officiel » (par exemple « WeChat site officiel ») et cliquez d'abord sur les résultats avec le domaine officiel. Évitez les sites de téléchargement tiers, souvent assortis de logiciels indésirables.
 - Reconnaître un site officiel : pour Windows 11, allez sur microsoft.com ; pour Chrome, sur google.com. Vérifier que le domaine correspond à la marque est la méthode la plus élémentaire.
@@ -176,20 +176,20 @@ Lorsque vous saisissez une adresse, le navigateur : ① interroge un serveur DNS
 Le nom de domaine est l'« adresse » d'un site ; le lire aide à juger sa nature et son origine :
 
 - Extensions courantes : .com — organisation commerciale, la plus courante
-- .cn — domaine national de la Chine
-- .org — organisation à but non lucratif
+- .cn, domaine national de la Chine
+- .org, organisation à but non lucratif
 - .net — services liés aux réseaux
-- .edu — établissement d'enseignement
-- .gov — organisme gouvernemental
-- .xyz/.tech/.info — extensions récentes, faible barrière à l'entrée, à aborder avec prudence
+- .edu: établissement d'enseignement
+- .gov, organisme gouvernemental
+- .xyz/.tech/.info, extensions récentes, faible barrière à l'entrée, à aborder avec prudence
 
-- Domaines nationaux/territoriaux : .jp — Japon
-- .kr — Corée
-- .uk — Royaume-Uni
-- .de — Allemagne
-- .tw — Taïwan
-- .hk — Hong Kong
-- Sécurité : les sites .gov et .edu sont en général plus fiables, car l'obtention est plus exigeante. Les domaines bon marché comme .xyz ou .top sont souvent détournés par des sites d'hameçonnage — restez vigilant.
+- Domaines nationaux/territoriaux : .jp, Japon
+- .kr, Corée
+- .uk, Royaume-Uni
+- .de, Allemagne
+- .tw: Taïwan
+- .hk, Hong Kong
+- Sécurité : les sites .gov et .edu sont en général plus fiables, car l'obtention est plus exigeante. Les domaines bon marché comme .xyz ou .top sont souvent détournés par des sites d'hameçonnage, restez vigilant
 
 ##### Blocage des publicités :
 
@@ -251,24 +251,24 @@ Essayez de créer une automatisation « détente du soir »
 3. Enregistrez et testez.
 :::
 
-#### VI. Outils système pratiques : nettoyage, anti-indésirables et sécurité
+VI. Outils système pratiques : nettoyage, anti-indésirables et sécurité
 
-Au-delà des applications de productivité et de santé, l'expérience quotidienne dépend surtout de trois choses : « être moins dérangé », « avoir assez d'espace de stockage » et « laisser les escrocs dehors ». Nous passons d'abord en revue les logiciels pratiques, puis les fonctions de blocage intégrées au téléphone — nombre de propriétaires ne les ont jamais activées.
+Au-delà des applications de productivité et de santé, l'expérience quotidienne dépend surtout de trois choses : « être moins dérangé », « avoir assez d'espace de stockage » et « laisser les escrocs dehors ». Nous passons d'abord en revue les logiciels pratiques, puis les fonctions de blocage intégrées au téléphone, nombre de propriétaires ne les ont jamais activées.
 
 ##### 1. Nettoyage système et optimisation du stockage
 
-- Qingzhuo — Pour qui : les utilisateurs Android qui veulent un nettoyage léger des caches, fichiers résiduels et dossiers vides, sans subir la batterie d'applis des « gestionnaires de téléphone ». Points forts : léger et sans publicité, avec scan approfondi des résidus d'applis, localisation des gros fichiers et analyse de l'occupation du stockage ; plus mesuré que les « accélérateurs en un clic » du commerce, parfait pour un entretien régulier si tu aimes mettre les mains dans le cambouis. Attention : vérifie les chemins avant de nettoyer, ne coche pas tout à l'aveugle dans WeChat, la galerie photo ou les documents ; pour les caches système, privilégie autant que possible l'outil de stockage intégré de la marque, les outils tiers ne servant qu'en complément.
-- Nettoyage de stockage intégré Public : tout le monde, en particulier les seniors et ceux qui veulent éviter les complications. Points forts : Android [Réglages] > [Stockage] > [Nettoyage] ; iOS [Réglages] > [Général] > [Stockage iPhone]. Le système connaît mieux la structure de cache de ses applications ; risque de suppression erronée minimal — premier choix.
+- Qingzhuo: Pour qui : les utilisateurs Android qui veulent un nettoyage léger des caches, fichiers résiduels et dossiers vides, sans subir la batterie d'applis des « gestionnaires de téléphone ». Points forts : léger et sans publicité, avec scan approfondi des résidus d'applis, localisation des gros fichiers et analyse de l'occupation du stockage ; plus mesuré que les « accélérateurs en un clic » du commerce, parfait pour un entretien régulier si tu aimes mettre les mains dans le cambouis. Attention : vérifie les chemins avant de nettoyer, ne coche pas tout à l'aveugle dans WeChat, la galerie photo ou les documents ; pour les caches système, privilégie autant que possible l'outil de stockage intégré de la marque, les outils tiers ne servant qu'en complément.
+- Nettoyage de stockage intégré Public : tout le monde, en particulier les seniors et ceux qui veulent éviter les complications. Points forts : Android [Réglages] > [Stockage] > [Nettoyage] ; iOS [Réglages] > [Général] > [Stockage iPhone]. Le système connaît mieux la structure de cache de ses applications ; risque de suppression erronée minimal, premier choix.
 - Gestion du stockage intégrée WeChat/QQ Public : gros utilisateurs de messagerie. Points forts : WeChat [Moi] > [Réglages] > [Général] > [Espace de stockage], nettoyage fin par discussion et type de fichier ; plus sûr que les outils externes de « nettoyage WeChat ».
 - Principe : utilisez d'abord ce qui est intégré au système ou à l'application ; si vous pouvez cocher par chemin/type, évitez le « tout effacer en un clic ». L'objectif est de libérer de l'espace, pas de balayer vos données importantes.
 
 ##### 2. Anti-indésirables et sécurité
 
-- Centre national anti-fraude Public : tout le monde, surtout les seniors, les métiers liés à la finance et les acheteurs en ligne / destinataires d'appels d'inconnus. Points forts : solution officielle, alertes d'appels, SMS à risque, détection d'URL suspectes ; liée aux bases anti-fraude de la police — le maillon le plus fiable des « trois lignes de défense ».
+- Centre national anti-fraude Public : tout le monde, surtout les seniors, les métiers liés à la finance et les acheteurs en ligne / destinataires d'appels d'inconnus. Points forts : solution officielle, alertes d'appels, SMS à risque, détection d'URL suspectes ; liée aux bases anti-fraude de la police: le maillon le plus fiable des « trois lignes de défense ».
 - Centre de sécurité de la marque / gestionnaire de téléphone Public : utilisateurs de la marque concernée. Points forts : Huawei Phone Manager, Xiaomi Security Center, OPPO/vivo Phone Manager, etc. : blocage des appels indésirables, antivirus, gestion des autorisations, protection des paiements ; souvent gratuits et mieux intégrés au système. Évitez d'installer une seconde suite de sécurité commerciale qui créerait des conflits d'autorisations.
 - Services anti-indésirables de l'opérateur Public : utilisateurs bombardés d'appels sortants ou vocaux robots. Points forts : China Mobile, envoyez KTFSR au 10086 ; China Telecom, suivez « Tianyi Anti-Spam » ; China Unicom, configurez dans « Unicom Mobile Manager ». Le blocage a lieu côté réseau : le téléphone ne sonne pas et une partie des numéros indésirables est déjà filtrée.
 - AdGuard Public : tous les utilisateurs harcelés par pop-ups, bannières et publicités in-app. Points forts : blocage au niveau système (navigateur et au-delà), filtrage des bannières et du pistage au démarrage, économie de données et pages plus rapides ; version payante multi-appareils.
-- Méfiez-vous des suites « nettoyage / anti-indésirables » : certaines tournent en arrière-plan, demandent sans cesse les contacts et les SMS, sans être plus efficaces que le système — elles consomment batterie et exposent votre vie privée. Activez d'abord les fonctions intégrées, puis envisagez l'application anti-fraude officielle.
+- Méfiez-vous des suites « nettoyage / anti-indésirables » : certaines tournent en arrière-plan, demandent sans cesse les contacts et les SMS, sans être plus efficaces que le système, elles consomment batterie et exposent votre vie privée. Activez d'abord les fonctions intégrées, puis envisagez l'application anti-fraude officielle.
 
 ::: div .success-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -278,7 +278,7 @@ Principes de choix des logiciels pratiques
 - Le système d'abord : blocage, nettoyage, autorisations — commencez par les interrupteurs intégrés.
 - Complément officiel : Centre national anti-fraude et protection de l'opérateur peuvent se cumuler.
 - Tiers avec retenue : une seule application par fonction, pour éviter les conflits d'autorisations et la concurrence en arrière-plan.
-- Moins, c'est plus : plus vous installez d'outils, plus les notifications et autorisations se multiplient — et plus ces outils eux-mêmes risquent de vous déranger.
+- Moins, c'est plus : plus vous installez d'outils, plus les notifications et autorisations se multiplient, et plus ces outils eux-mêmes risquent de vous déranger.
 :::
 
 ##### 3. Blocage intégré des appels indésirables : activation par marque
@@ -334,7 +334,7 @@ Chemins d'accès par marque ci-dessous. Les libellés peuvent varier selon la ve
 Superposer trois couches de protection
 
 {class="mt-1"}
-Au quotidien, combinez « blocage système + protection opérateur + Centre national anti-fraude » : le système gère le signalement et la liste noire, l'opérateur bloque côté réseau les appels à haute fréquence, le centre anti-fraude apporte les alertes officielles. Inutile de tout régler au maximum : évitez de bloquer livraisons, repas à emporter ou appels médicaux — autorisez vos contacts et les personnes récemment contactées.
+Au quotidien, combinez « blocage système + protection opérateur + Centre national anti-fraude » : le système gère le signalement et la liste noire, l'opérateur bloque côté réseau les appels à haute fréquence, le centre anti-fraude apporte les alertes officielles. Inutile de tout régler au maximum : évitez de bloquer livraisons, repas à emporter ou appels médicaux, autorisez vos contacts et les personnes récemment contactées.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
@@ -350,7 +350,7 @@ Exercice pratique : activez le blocage dès aujourd'hui
 
 #### VII. Alertes météo, catastrophes naturelles et séismes
 
-Le blocage des appels protège des « arnaques » ; les alertes protègent des « intempéries et catastrophes ». Beaucoup n'installent qu'une application météo pour la température, sans notifications ni alerte sismique — or, dans les secondes qui précètent une alerte rouge de pluie torrentielle, un typhon ou un séisme, le téléphone peut vous faire gagner un temps précieux.
+Le blocage des appels protège des « arnaques » ; les alertes protègent des « intempéries et catastrophes ». Beaucoup n'installent qu'une application météo pour la température, sans notifications ni alerte sismique, or, dans les secondes qui précètent une alerte rouge de pluie torrentielle, un typhon ou un séisme, le téléphone peut vous faire gagner un temps précieux.
 
 ##### 1. Alertes météo : pluies torrentielles, typhons, fortes chaleurs
 
@@ -370,14 +370,14 @@ Le blocage des appels protège des « arnaques » ; les alertes protègent des �
 - Recevoir les alertes sur plusieurs canaux : Notifications du système + alertes de l'application Météo.
 - Suivre sur WeChat les comptes officiels locaux « Protection civile » et « Observatoire ».
 - Canaux 12379 de diffusion des alertes nationales (SMS/service selon la région).
-- Télévision, radio d'urgence, haut-parleurs de village/quartier — en montagne ou en saison des pluies, ne comptez pas uniquement sur le téléphone.
+- Télévision, radio d'urgence, haut-parleurs de village/quartier, en montagne ou en saison des pluies, ne comptez pas uniquement sur le téléphone.
 
 - En extérieur et en déplacement : par typhon, évitez les panneaux et les arbres ; par fortes pluies, pas de garages souterrains, tunnels ou ponts bas ; en montagne, une alerte « risque météo de catastrophe géologique » impose de quitter immédiatement les pentes raides et les vallées.
 - Lien avec le manuel d'urgence : en cas de perte de contact, de batterie vide ou de besoin de géolocalisation après une catastrophe, voir le chapitre 32 (séismes/catastrophes) et le chapitre 7 (communication satellite et hors réseau).
 
 ##### 3. Alerte sismique : ce n'est pas une « prévision »
 
-L'alerte sismique (EEW) envoie, quelques secondes à quelques dizaines de secondes avant l'arrivée des ondes destructrices, une alerte aux zones potentiellement touchées, en s'appuyant sur la vitesse des ondes électromagnétiques et la détection précoce des ondes P. Elle ne prédit pas un séisme, mais offre une fenêtre pour « se protéger, couper le feu, sortir de l'ascenseur ». Plus on est proche de l'épicentre, moins le délai est long — parfois insuffisant.
+L'alerte sismique (EEW) envoie, quelques secondes à quelques dizaines de secondes avant l'arrivée des ondes destructrices, une alerte aux zones potentiellement touchées, en s'appuyant sur la vitesse des ondes électromagnétiques et la détection précoce des ondes P. Elle ne prédit pas un séisme, mais offre une fenêtre pour « se protéger, couper le feu, sortir de l'ascenseur ». Plus on est proche de l'épicentre, moins le délai est long, parfois insuffisant.
 
 - Solutions officielles et sectorielles : en Chine continentale, on trouve le réseau national d'alerte sismique et les services portés par l'Institut de réduction des catastrophes de Chengdu ; certains téléphones intègrent ou reçoivent ces alertes en ligne.
 - Applications tierces : cherchez « alerte sismique » dans la boutique, avec des applications officielles ou d'organismes reconnus (vérifiez l'éditeur avant l'installation ; méfiez-vous des fausses alertes qui demandent des autorisations abusives).
@@ -462,7 +462,7 @@ Exercice pratique : 10 minutes pour vérifier les alertes
 4. Vérifiez que le son d'alerte n'est pas totalement coupé par le mode Ne pas déranger ; faites de même sur le téléphone de vos parents.
 :::
 
-#### VIII. Collaboration multi-appareils : contrôle à distance, transfert rapide et sécurité des comptes
+VIII. Collaboration multi-appareils : contrôle à distance, transfert rapide et sécurité des comptes
 
 Un téléphone vraiment pratique, c'est souvent un téléphone « en équipe » avec l'ordinateur et la tablette. Voici quelques outils très utiles : contrôle d'un ordinateur depuis le téléphone, bureautique IA et collaboration à distance, fonds d'écran animés, transfert local rapide, presse-papiers multi-appareils, codes dynamiques 2FA, numérisation papier et planification. Pour une vision plus systématique, voir le chapitre 17.
 
@@ -471,30 +471,30 @@ Un téléphone vraiment pratique, c'est souvent un téléphone « en équipe » 
 - Sunlogin Public : ceux qui doivent piloter un Windows/Mac à la maison ou au bureau depuis l'extérieur ; aussi utile pour dépanner à distance le téléphone des parents (voir chapitre 27). Points forts : écosystème chinois mature, bureau distant depuis le téléphone, transfert de fichiers, allumage/extinction (matériel parfois requis) ; la version gratuite suffit à un usage personnel léger.
 - ToDesk Public : utilisateurs exigeant stabilité et faible latence pour le télétravail ou l'administration. Points forts : connexion par code d'appareil + mot de passe, téléphone vers ordinateur et inversement (selon version), transfert de fichiers et multi-écrans fluides ; nœuds souvent performants en Chine.
 - Usage de base : installez le client sur l'ordinateur et connectez-vous / restez en ligne → installez l'application sur le téléphone → ouvrez la session avec l'identifiant d'appareil + le mot de passe (ou le même compte) → pilotez le bureau avec le pavé tactile/gestes du téléphone.
-- Règles de sécurité (à retenir) : Si un inconnu se faisant passer pour le « service client / la police / l'opérateur » vous demande d'installer Sunlogin ou ToDesk pour contrôler votre téléphone ou votre PC, refusez toujours — c'est une arnaque typique (voir chapitre 27).
+- Règles de sécurité (à retenir) : Si un inconnu se faisant passer pour le « service client / la police / l'opérateur » vous demande d'installer Sunlogin ou ToDesk pour contrôler votre téléphone ou votre PC, refusez toujours, c'est une arnaque typique (voir chapitre 27).
 - Pour votre propre usage : activez la double vérification, changez les mots de passe par défaut, déconnectez-vous ou désactivez l'accès sans surveillance quand vous n'utilisez pas la session ; sur un ordinateur d'entreprise, respectez la politique de sécurité interne.
 - En télétravail dans un lieu public, vérifiez que personne ne peut lire votre écran ou vos codes.
 
 ##### 2. Bureautique IA : Trae / WorkBuddy / Dumate
 
 - Trae — Pour qui : ceux qui collaborent sur du code et des documents, avec un environnement sinophone très accueillant. Points forts : un IDE IA / assistant de programmation signé ByteDance, dont le mode SOLO génère un projet à partir d'une seule phrase ; très efficace au quotidien pour écrire du code et retoucher des documents. Si tu l'utilises sur ordinateur, tu peux suivre et gérer les tâches depuis le mobile via une prise en main à distance ou les fonctions officielles associées (selon la forme actuelle du produit). Voir le Chapitre 41, Panorama des outils de programmation IA.
-- WorkBuddy Public : professionnels voulant que l'IA rédige comptes rendus, e-mails, présentations et documents. Points forts : assistant bureautique IA pour les tâches « rédiger — polir — résumer » ; certains flux peuvent être lancés sur mobile, le gros du travail se faisant sur ordinateur.
+- WorkBuddy Public : professionnels voulant que l'IA rédige comptes rendus, e-mails, présentations et documents. Points forts : assistant bureautique IA pour les tâches « rédiger, polir, résumer » ; certains flux peuvent être lancés sur mobile, le gros du travail se faisant sur ordinateur.
 - Dumate Public : équipes ou individus ayant besoin de collaboration et de gestion unifiée des documents et connaissances. Points forts : outil collaboratif IA centré sur le rassemblement des contenus et l'édition partagée ; consultation et retouches légères sur mobile, mise en page complexe sur grand écran.
 - Comprendre « contrôler un PC depuis le téléphone » : de nombreuses fonctions bureautiques IA tournent sur ordinateur ou le Web. Depuis le téléphone, via Sunlogin/ToDesk ou l'application officielle, vous « télécommandez » les tâches IA du PC pendant les trajets. Principe : calculs lourds et longs documents sur l'ordinateur ; suivi et petites retouches sur le téléphone.
 - Vie privée : avant d'envoyer contrats, pièces d'identité ou données clients, lisez la politique de confidentialité et les règles de conformité ; pour les documents d'entreprise, utilisez d'abord les outils imposés par l'organisation.
 
 ##### 3. Bureaux animés : fonds d'écran miHoYo (mobile + PC)
 
-- Rengong Zhuomian — Pour qui : les fans des personnages de miHoYo et celles et ceux qui veulent des fonds d'écran animés gratuits. Points forts : une appli de fonds d'écran animés gratuite signée miHoYo, disponible sur mobile et PC ; les personnages en Live2D ou en animation peuvent habiller ton bureau, et sur certains modèles ou systèmes être définis comme écran de verrouillage ou fond d'écran.
+- Rengong Zhuomian, Pour qui : les fans des personnages de miHoYo et celles et ceux qui veulent des fonds d'écran animés gratuits. Points forts : une appli de fonds d'écran animés gratuite signée miHoYo, disponible sur mobile et PC ; les personnages en Live2D ou en animation peuvent habiller ton bureau, et sur certains modèles ou systèmes être définis comme écran de verrouillage ou fond d'écran.
 - Autonomie et performance : un fond animé consomme plus de batterie et de GPU ; en cas de batterie faible ou d'ancien modèle, utilisez-le uniquement pendant la charge ou réduisez la fréquence d'images si l'application le permet.
 - Source d'installation : privilégiez le site officiel ou les boutiques reconnues ; évitez les « versions craquées » qui contiennent souvent des chevaux de Troie ; sur PC, vérifiez le chemin d'installation et le lancement au démarrage.
 
 ##### 4. Transfert de fichiers en réseau local : LocalSend / Feige / AirDrop
 
 - LocalSend Public : mélanges Android/Windows/iOS/Mac/Linux, transfert multi-plateformes sans cloud public. Points forts : open source, connexion directe en réseau local, partage de photos, vidéos et documents sur le même Wi-Fi, sans câble ni serveur constructeur ; vitesse selon le routeur.
-- Feige Chuanshu — Pour qui : les échanges entre PC Windows de bureau et les environnements de travail en réseau local un peu anciens. Points forts : un outil vétéran de transfert et de messagerie en réseau local, idéal pour faire circuler de gros fichiers en intranet ; télécharge-le depuis un canal officiel et respecte la politique informatique de ton entreprise sur son réseau interne.
+- Feige Chuanshu, Pour qui : les échanges entre PC Windows de bureau et les environnements de travail en réseau local un peu anciens. Points forts : un outil vétéran de transfert et de messagerie en réseau local, idéal pour faire circuler de gros fichiers en intranet ; télécharge-le depuis un canal officiel et respecte la politique informatique de ton entreprise sur son réseau interne.
 - AirDrop Public : utilisateurs iPhone, iPad, Mac. Points forts : partage en un clic dans l'écosystème Apple, découverte Bluetooth + transfert Wi-Fi direct, sans consommation de données ; mode « Contacts uniquement » pour limiter les sollicitations.
-- Autres solutions : Mi Share, Huawei Share, vivo Share, etc. sont très rapides entre appareils de même marque ; l'assistant de transfert de fichiers WeChat est pratique mais limité en taille et en appareils connectés — pour les gros fichiers, préférez LocalSend ou AirDrop.
+- Autres solutions : Mi Share, Huawei Share, vivo Share, etc. sont très rapides entre appareils de même marque ; l'assistant de transfert de fichiers WeChat est pratique mais limité en taille et en appareils connectés, pour les gros fichiers, préférez LocalSend ou AirDrop.
 - Conseils : les deux appareils doivent être sur le même Wi-Fi ; évitez le Wi-Fi public pour les fichiers sensibles, préférez un point d'accès privé ; après l'envoi, vérifiez l'intégrité du fichier côté récepteur.
 
 ##### 5. Presse-papiers multi-appareils : KDE Connect / transfert téléphone-ordinateur
@@ -503,7 +503,7 @@ Un téléphone vraiment pratique, c'est souvent un téléphone « en équipe » 
 - KDE Connect Public : Android + Windows/Linux/Mac, synchronisation open source, miroir de notifications, saisie à distance. Points forts : après appairage local, synchronisation du presse-papiers, notifications du téléphone sur l'ordinateur, téléphone comme télécommande/touchpad de présentation ; les données ne passent pas par un compte tiers.
 - Solutions de marque « téléphone-ordinateur » : Huawei Multi-screen Collaboration / Super Device, Xiaomi Miaoxiang, vivo Share, OPPO Connect, Honor Connect, etc. offrent souvent presse-papiers inter-écrans et glisser-déposer ; l'expérience est optimale au sein d'une même marque.
 - Canal officiel Windows + Android : « Lien vers Windows / Link to Windows » (évolution de Your Phone) affiche notifications et photos du téléphone sur le PC, avec copier-coller dans les cas pris en charge ; intégration plus poussée sur Samsung, etc.
-- Sécurité : le presse-papiers peut contenir mots de passe et codes ; évitez la synchronisation globale sur un ordinateur partagé et ne recollez pas dans les champs de mot de passe ; certaines claviers lisent aussi le presse-papiers — surveillez les autorisations.
+- Sécurité : le presse-papiers peut contenir mots de passe et codes ; évitez la synchronisation globale sur un ordinateur partagé et ne recollez pas dans les champs de mot de passe ; certaines claviers lisent aussi le presse-papiers, surveillez les autorisations.
 
 ##### 6. Codes dynamiques 2FA : Aegis / Microsoft Authenticator
 
@@ -512,7 +512,7 @@ Un téléphone vraiment pratique, c'est souvent un téléphone « en équipe » 
 - Microsoft Authenticator Public : utilisateurs de comptes Microsoft, Office 365 ou d'entreprise, sur iOS/Android. Points forts : validation par notification push, surveillance des mots de passe et sauvegarde de comptes (selon version), forte intégration avec Windows et les identités d'entreprise.
 - Google Authenticator / 2FAS, etc. : également courants dans ces écosystèmes ; l'essentiel est d'avoir une sauvegarde chiffrée pour ne perdre aucun jeton lors d'un changement de téléphone.
 - Changement de téléphone : migrez depuis l'ancien appareil ou utilisez les « codes de secours/clé de récupération » ; imprimez les codes de secours et conservez-les à deux endroits, pas seulement sur le même téléphone.
-- Avec un gestionnaire de mots de passe : certains coffres stockent aussi les TOTP — pratique, mais le risque se concentre ; pour les comptes précieux, préférez « gestionnaire de mots de passe + authentificateur distinct ». Voir le chapitre 14.
+- Avec un gestionnaire de mots de passe : certains coffres stockent aussi les TOTP, pratique, mais le risque se concentre ; pour les comptes précieux, préférez « gestionnaire de mots de passe + authentificateur distinct ». Voir le chapitre 14.
 
 ##### 7. Combinaison recommandée : une journée type
 
@@ -546,5 +546,5 @@ Exercice pratique : faire fonctionner une fois la chaîne multi-appareils
 1. Connectez téléphone et ordinateur au même Wi-Fi et envoyez-vous une photo avec LocalSend (ou AirDrop).
 2. Créez dans TickTick la tâche « Ce soir 20 h : trier les scans » et vérifiez qu'elle apparaît sur le téléphone et l'ordinateur.
 3. Activez la 2FA sur votre e-mail ou WeChat (si disponible), liez Aegis ou Microsoft Authenticator, et conservez les codes de secours.
-4. Installez Sunlogin ou ToDesk sur votre propre ordinateur, connectez-vous une fois depuis votre téléphone, puis déconnectez-vous ou renforcez le mot de passe — maîtrisez le processus sans laisser de porte dérobée.
+4. Installez Sunlogin ou ToDesk sur votre propre ordinateur, connectez-vous une fois depuis votre téléphone, puis déconnectez-vous ou renforcez le mot de passe, maîtrisez le processus sans laisser de porte dérobée.
 :::

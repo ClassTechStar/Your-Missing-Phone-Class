@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 54 : Projet 1 — Mon carnet de comptes (version locale)
 
 {class="chapter-intro mb-4"}
-Bienvenue dans ton premier « vrai projet ». Ce carnet de comptes ne se connecte pas au réseau, mais il a tout d'une grande : enregistrer une écriture, consulter l'historique, faire des statistiques mensuelles, supprimer et modifier. Une fois terminé, tu auras parcouru de bout en bout le flux complet « données → logique → interface ». Ne te précipite pas pour recopier le code — réfléchis d'abord, agis ensuite : c'est notre principe de toujours.
+Bienvenue dans ton premier « vrai projet ». Ce carnet de comptes ne se connecte pas au réseau, mais il a tout d'une grande : enregistrer une écriture, consulter l'historique, faire des statistiques mensuelles, supprimer et modifier. Une fois terminé, tu auras parcouru de bout en bout le flux complet « données → logique → interface ». Ne te précipite pas pour recopier le code, réfléchis d'abord, agis ensuite : c'est notre principe de toujours.
 
 #### 1. Réfléchir au besoin : pose d'abord cinq questions
 
@@ -29,7 +29,7 @@ Décompose ensuite en petites étapes « utilisables dès leur achèvement » : 
 
 #### 2. La couche données : donner un « foyer » aux écritures
 
-Définis d'abord à quoi ressemble une écriture — des champs suffisants, sans gourmandise :
+Définis d'abord à quoi ressemble une écriture, des champs suffisants, sans gourmandise :
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,10 +82,10 @@ interface RecordDao {
 Petit conseil : pourquoi Double pour les montants ?
 
 {class="mt-1"}
-Les apps financières rigoureuses utilisent BigDecimal ou un « Int en centimes » pour éviter les erreurs de virgule flottante (le vieux problème 0,1+0,2≠0,3). Pour un projet d'entraînement, Double suffit ; le jour où tu feras un vrai produit financier, pense à passer aux centimes comme unité — c'est un piège que d'innombrables aînés ont foulé avant toi.
+Les apps financières rigoureuses utilisent BigDecimal ou un « Int en centimes » pour éviter les erreurs de virgule flottante (le vieux problème 0,1+0,2≠0,3). Pour un projet d'entraînement, Double suffit ; le jour où tu feras un vrai produit financier, pense à passer aux centimes comme unité, c'est un piège que d'innombrables aînés ont foulé avant toi.
 :::
 
-#### 3. MVVM : quand interface et logique « quittent la maison commune »
+3. MVVM : quand interface et logique « quittent la maison commune »
 
 Laisser l'interface toucher directement à la base de données ? Ça tourne, mais le code de l'interface devient long et pénible. L'architecture MVVM donne à chacun son rôle : la View (l'interface) ne fait que dessiner, le ViewModel (le pivot logique) gère les données, le Model (Room) gère le stockage.
 
@@ -95,7 +95,7 @@ Laisser l'interface toucher directement à la base de données ? Ça tourne, mai
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figure 5 : la structure MVVM en trois couches — les données circulent dans un seul sens, chaque couche reste à sa place
+Figure 5 : la structure MVVM en trois couches, les données circulent dans un seul sens, chaque couche reste à sa place
 :::
 
 ::: div .code-block
@@ -125,11 +125,11 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 :::
 
-Dans l'interface (Compose), écris : val vm: RecordViewModel = viewModel(), puis val list by vm.records.collectAsState() — dès que les données changent, la liste se rafraîchit toute seule, sans que tu aies rien à faire. C'est la puissance des trois mousquetaires MVVM + Flow + Compose réunis.
+Dans l'interface (Compose), écris : val vm: RecordViewModel = viewModel(), puis val list by vm.records.collectAsState(), dès que les données changent, la liste se rafraîchit toute seule, sans que tu aies rien à faire. C'est la puissance des trois mousquetaires MVVM + Flow + Compose réunis.
 
 #### 4. L'interface : l'écran liste + l'écran de saisie
 
-Pour l'écran liste, utilise LazyColumn (liste à chargement paresseux) — jamais de ralentissement, même avec beaucoup de données :
+Pour l'écran liste, utilise LazyColumn (liste à chargement paresseux), jamais de ralentissement, même avec beaucoup de données :
 
 ::: div .code-block
 :::inline div .code-head
@@ -181,7 +181,7 @@ Attention : ne fais pas l'économe sur la validation des saisies
 Le champ du montant doit absolument être validé : valeurs vides, négatives, saisies illégales comme « abc », tout doit être intercepté (avec toDoubleOrNull()). L'une des causes les plus courantes de plantage d'une app, c'est de « considérer la saisie de l'utilisateur comme un enfant sage ». Retiens : tout ce que tape l'utilisateur doit être inspecté comme un ennemi.
 :::
 
-#### 5. Éditer et supprimer : permettre aux données « d'entrer et de sortir »
+5. Éditer et supprimer : permettre aux données « d'entrer et de sortir »
 
 Un carnet qui sait ajouter mais pas supprimer est bon à jeter au bout de trois jours. Ajoute deux opérations :
 
@@ -203,23 +203,23 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-Deux leçons de détail sur l'interaction : la suppression exige une double confirmation (contre les doigts qui glissent), et l'édition pré-remplit autant que possible les valeurs d'origine (corriger un mot est plus simple que tout retaper). Ne sous-estime pas ces deux détails — le « côté produit » se bâtit sur ce genre de détails.
+Deux leçons de détail sur l'interaction : la suppression exige une double confirmation (contre les doigts qui glissent), et l'édition pré-remplit autant que possible les valeurs d'origine (corriger un mot est plus simple que tout retaper). Ne sous-estime pas ces deux détails, le « côté produit » se bâtit sur ce genre de détails.
 
-#### 6. Réception : trois niveaux de vérification + deux défis avancés
+6. Réception : trois niveaux de vérification + deux défis avancés
 
 Projet terminé, fais la réception selon trois niveaux « fonctionnalités → cas limites → architecture » : sait-on enregistrer, sait-on supprimer, les données sont-elles encore là à la réouverture de l'app (fonctionnalités) ; l'app plante-t-elle avec un montant à 0 ou négatif, les données se perdent-elles à la rotation de l'écran (cas limites) ; interface et données sont-elles mélangées, des champs sont-ils codés en dur (architecture).
 
 Une fois la version de base réceptionnée, offre-toi deux « plats avancés » :
 
 1. Filtre mensuel : ajoute en haut un sélecteur de mois (par exemple 2026-08 ▾), la liste n'affichant que les écritures du mois ;
-2. Camembert par catégorie : avec le Canvas de Compose ou une petite bibliothèque de graphiques, dessine « où part l'argent » en camembert — une fois fait, le carnet de comptes prend un petit « air de produit ».
+2. Camembert par catégorie : avec le Canvas de Compose ou une petite bibliothèque de graphiques, dessine « où part l'argent » en camembert, une fois fait, le carnet de comptes prend un petit « air de produit ».
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 À toi de jouer : termine-le cette semaine
 
 {class="mt-1"}
-Avance dans l'ordre « couche données → ViewModel → écran liste → écran de saisie → carte de synthèse », une étape par jour. En cas de blocage, balance le message d'erreur tel quel à un moteur de recherche ou à une IA (tu te souviens de la partie 7, « L'IA au service du code » ? Décris le problème en précisant « comportement attendu, comportement observé, étapes de reproduction »). Une fois l'app finie, note tes comptes pendant une semaine — utiliser une app de ta propre fabrication donne une fierté qui te poussera à continuer.
+Avance dans l'ordre « couche données → ViewModel → écran liste → écran de saisie → carte de synthèse », une étape par jour. En cas de blocage, balance le message d'erreur tel quel à un moteur de recherche ou à une IA (tu te souviens de la partie 7, « L'IA au service du code » ? Décris le problème en précisant « comportement attendu, comportement observé, étapes de reproduction »). Une fois l'app finie, note tes comptes pendant une semaine, utiliser une app de ta propre fabrication donne une fierté qui te poussera à continuer.
 :::
 
 ::: div .chapter-summary

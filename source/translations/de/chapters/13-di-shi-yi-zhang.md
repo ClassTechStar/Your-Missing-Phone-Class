@@ -2,12 +2,12 @@
 id: di-shi-yi-zhang
 num: 11
 part: ruan-jian-pian
-nav: Kapitel 11: Fotografie und Bildverwaltung
+nav: Kapitel 11: Lieber ein gutes Foto als viele mittelmäßige
 toc: default
 kind: chapter
 ---
 
-### Kapitel 11: Fotografie und Bildverwaltung
+### Kapitel 11: Lieber ein gutes Foto als viele mittelmäßige
 
 {class="chapter-intro mb-4"}
 Ganz ehrlich: Die meisten Menschen fotografieren mit dem Smartphone weit unter dessen Potenzial. Nicht, weil Ihre Technik schlecht ist, sondern weil viele kleine Einstellungen und Gewohnheiten übersehen werden. Dieses Kapitel behandelt nichts Theoretisches, sondern nur Dinge, die Sie sofort anwenden können.
@@ -36,7 +36,7 @@ Diese erfordern keine Theoriekenntnisse – einmal angewendet, sehen Sie den Eff
 - <strong>Porträtmodus</strong>: Das Zweifinger-Pinchen auf dem Bildschirm ist digitaler Zoom: Das Bild wird zugeschnitten und vergroessert, die Qualitaet nimmt deutlich ab. Fuer entfernte Motive die Zoom-Tasten im Sucher verwenden (0.5x/1x/2x/3x). Dabei sind 0.5x (Ultraweitwinkel) und 1x (Hauptkamera) originale optische Linsen ohne Qualitaetsverlust; 2x/3x sind meist „optikqualitaets Zoom" – durch Cropping des hochaufloesenden Sensors realisiert, nahe an optischer Qualitaet, aber ohne eigene Linse. Ueber 3x ist es in der Regel Hybrid- oder Digitalzoom mit sichtbarem Qualitaetsverlust.
 - <strong>Pro-Modus</strong>: Wenn Sie die volle Kontrolle über das Bild möchten, probieren Sie den Pro-Modus. Einige wichtige Parameter: Je niedriger die ISO, desto sauberer das Bild, aber es wird dunkler; je langsamer der Verschluss, desto mehr Licht, aber Verwackeln droht; der Weißabgleich steuert die Farbtemperatur – bei falscher Einstellung wird das Bild zu blau oder zu gelb. Die meisten brauchen den Pro-Modus nicht dauerhaft, aber die Kenntnis dieser Parameter hilft zu verstehen, was die Kamera tut.
 
-#### 4. Nachbearbeitung: Nicht übertreiben, das rechte Maß ist richtig
+4. Nachbearbeitung: Nicht übertreiben, das rechte Maß ist richtig
 
 Viele haben ein Missverständnis gegenüber der Bildbearbeitung und finden, bearbeitet sei „nicht mehr echt". Tatsächlich sieht ein Kamerabild ohnehin anders aus als das, was das Auge sieht – eine angemessene Anpassung dient dazu, das wiederherzustellen, was Sie damals gesehen haben, nicht etwas Künstliches zu erfinden.
 

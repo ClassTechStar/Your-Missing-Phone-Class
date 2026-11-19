@@ -2,21 +2,21 @@
 id: di-ling-zhang
 num: 00
 part: ji-chu-pian
-nav: Chapitre 0 : Salut, avant de commencer
+nav: Chapitre 0 : Trois petites choses à dire d'abord
 toc: default
 kind: chapter
 ---
 
-### Chapitre 0 : Salut, avant de commencer
+### Chapitre 0 : Trois petites choses à dire d'abord
 
 {class="mb-3"}
 Avant l'exploration formelle, parlons d'abord de quelques règles de base pour vous assurer de comprendre tout ce qui suivra. Ne vous inquiétez pas, aiguiser sa hache n'empêche pas de couper du bois.
 
-#### I. Ce que ce livre peut faire pour vous (et ce qu'il ne peut pas faire)
+I. Ce que ce livre peut faire pour vous (et ce qu'il ne peut pas faire)
 
 Il peut vous aider à comprendre systématiquement comment utiliser un smartphone, à saisir la logique derrière les fonctionnalités, et que vous soyez team Android ou team Apple, la plupart des raisonnements sont universels. Il vous guidera dans des exercices pratiques pour passer de « savoir utiliser » à « comprendre l'utilisation ».
 
-Ce n'est pas le manuel d'un modèle de smartphone spécifique, ni des actualités technologiques sur les nouveaux produits, encore moins un guide pour vous rendre accro à votre téléphone. Honnêtement, si vous espériez apprendre « comment regarder des vidéos plus confortablement », vous risquez d'être déçu — nous nous soucions bien plus de la façon dont le smartphone vous sert vraiment, plutôt que l'inverse.
+Ce n'est pas le manuel d'un modèle de smartphone spécifique, ni des actualités technologiques sur les nouveaux produits, encore moins un guide pour vous rendre accro à votre téléphone. Honnêtement, si vous espériez apprendre « comment regarder des vidéos plus confortablement », vous risquez d'être déçu, nous nous soucions bien plus de la façon dont le smartphone vous sert vraiment, plutôt que l'inverse.
 
 #### II. Notre « code secret »
 
@@ -33,7 +33,7 @@ Devinez quoi, certaines choses portent des noms différents mais font le même t
 
 Par ailleurs, dans le camp Android, il y a aussi le système HarmonyOS de Huawei, qui a ses propres caractéristiques et que nous aborderons spécifiquement plus loin. Bref, quel que soit votre smartphone, ce livre peut vous aider.
 
-#### IV. Capacité du smartphone : pourquoi après avoir acheté 128 Go, il en reste moins de 110 disponibles ?
+IV. Capacité du smartphone : pourquoi après avoir acheté 128 Go, il en reste moins de 110 disponibles ?
 
 Vous connaissez les unités de capacité : 1 To = 1024 Go, 1 Go = 1024 Mo, 1 Mo = 1024 Ko... Mais il y a un piège : les fabricants de disques calculent généralement en base 1000, tandis que le système calcule en base 1024, donc le disque « 128 Go » que vous achetez verra sa capacité réelle « rétrécir ».
 
@@ -60,7 +60,7 @@ Ouvrez [Paramètres], trouvez À propos du téléphone (ou une option similaire)
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### V. Votre smartphone est une « bibliothèque d'actifs numériques »
+V. Votre smartphone est une « bibliothèque d'actifs numériques »
 
 Avant d'entrer dans les connaissances spécifiques, établissons d'abord une compréhension fondamentale :<strong>le smartphone n'est plus seulement un outil de communication, c'est notre plus importante bibliothèque d'actifs numériques</strong>. Contacts, historiques de discussion, photos de famille, documents professionnels, applications bancaires, codes de paiement, données de santé, pièces d'identité électroniques... Toutes ces données réunies valent souvent plus que le smartphone lui-même.
 
@@ -82,6 +82,6 @@ Si votre smartphone est perdu ou cassé, vous ne perdez pas seulement du matéri
 
 Comme on ne commence à soigner sa santé que lorsqu'on est malade,<strong>la gestion du smartphone doit aussi commencer par les « habitudes quotidiennes »</strong>. Ce que ce livre souligne constamment, ce n'est pas une technique avancée particulière, mais ces principes simples :
 
-- <strong>Prévention d'abord</strong>: installer des applications uniquement depuis les boutiques officielles, anonymiser les photos avant de les partager, ne pas réutiliser les mots de passe — ces « petits gestes » coûtent très peu mais bloquent la grande majorité des risques.
+- <strong>Prévention d'abord</strong>: installer des applications uniquement depuis les boutiques officielles, anonymiser les photos avant de les partager, ne pas réutiliser les mots de passe: ces « petits gestes » coûtent très peu mais bloquent la grande majorité des risques.
 - <strong>Bilans réguliers</strong>: nettoyer le dossier Téléchargements une fois par mois, auditer les permissions une fois par trimestre, sauvegarde complète une fois par semestre — un rythme fixe est cent fois plus efficace que d'éteindre un incendie à la dernière minute.
-- <strong>Garder une porte de sortie</strong>: activer la synchronisation cloud, noter soigneusement les comptes et mots de passe, rédiger une « liste d'héritage numérique » — pour qu'en cas d'imprévu, vous et votre famille puissiez y faire face sereinement.
+- <strong>Garder une porte de sortie</strong>: activer la synchronisation cloud, noter soigneusement les comptes et mots de passe, rédiger une « liste d'héritage numérique », pour qu'en cas d'imprévu, vous et votre famille puissiez y faire face sereinement.

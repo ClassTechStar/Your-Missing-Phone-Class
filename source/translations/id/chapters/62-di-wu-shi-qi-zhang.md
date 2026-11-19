@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 57: Jalan Menuju Tingkat Lanjut — Izin, Notifikasi, dan Arsitektur Modern
 
 {class="chapter-intro mb-4"}
-Bisa membuat App hanyalah awal. Bab ini membahas beberapa rintangan dari "bisa membuat" menuju "membuat dengan baik": cara meminta izin dengan elegan, cara mengirim notifikasi yang tidak menyebalkan, cara menaikkan arsitektur satu tingkat, dan — di tahun 2026 — cara menulis kode Android berpasangan dengan AI. Semuanya akan segera kamu jumpai di proyek nyata.
+Bisa membuat App hanyalah awal. Bab ini membahas beberapa rintangan dari "bisa membuat" menuju "membuat dengan baik": cara meminta izin dengan elegan, cara mengirim notifikasi yang tidak menyebalkan, cara menaikkan arsitektur satu tingkat, dan, di tahun 2026: cara menulis kode Android berpasangan dengan AI. Semuanya akan segera kamu jumpai di proyek nyata.
 
 #### 1. Izin saat runtime: Ketuk pintu dulu, baru masuk
 
@@ -46,7 +46,7 @@ fun CameraButton() {
 Perhatian: Bagaimana kalau ditolak permanen?
 
 {class="mt-1"}
-Setelah pengguna mencentang "jangan tanya lagi", launchPermissionRequest tidak akan memunculkan dialog lagi. Saat itu, arahkan pengguna menyalakannya manual di Pengaturan sistem (lompat ke halaman pengaturan aplikasi dengan Intent) dan jelaskan di antarmuka "izin ini dipakai untuk apa". Sikap yang ramah membuat pengguna jauh lebih bersedia memberi izin — teks permintaan izin layak ditulis dengan serius.
+Setelah pengguna mencentang "jangan tanya lagi", launchPermissionRequest tidak akan memunculkan dialog lagi. Saat itu, arahkan pengguna menyalakannya manual di Pengaturan sistem (lompat ke halaman ,pengaturan aplikasi dengan Intent) dan jelaskan di antarmuka "izin ini dipakai untuk apa". Sikap yang ramah membuat pengguna jauh lebih bersedia memberi izin, teks permintaan izin layak ditulis dengan serius.
 :::
 
 #### 2. Notifikasi: Mengucapkan hal berguna di waktu yang tepat
@@ -83,13 +83,13 @@ if (ActivityCompat.checkSelfPermission(this,
 ```
 :::
 
-Tugas terjadwal (misalnya "pengingat mencatat pukul 20.00 tiap hari") gunakan WorkManager — ia "asisten penjadwal latar belakang" yang direkomendasikan resmi, menjamin tugas dieksekusi di waktu yang tepat tanpa kamu repot mengurus optimasi baterai. Untuk kebutuhan sekelas alarm, memakai ini pasti tepat.
+Tugas terjadwal (misalnya "pengingat mencatat pukul 20.00 tiap hari") gunakan WorkManager, ia "asisten penjadwal latar belakang" yang direkomendasikan resmi, menjamin tugas dieksekusi di waktu yang tepat tanpa kamu repot mengurus optimasi baterai. Untuk kebutuhan sekelas alarm, memakai ini pasti tepat.
 
-#### 3. Arsitektur lanjutan: Dependency injection dan modularisasi
+3. Arsitektur lanjutan: Dependency injection dan modularisasi
 
 Begitu proyek membesar, dua "masalah manis" akan mendatangi kamu:
 
-- Pembuatan objek kacau: tiap halaman membuat database dan API sendiri-sendiri — kelola semuanya dengan Hilt (framework dependency injection); "siapa butuh apa, tinggal minta, langsung disodorkan";
+- Pembuatan objek kacau: tiap halaman membuat database dan API sendiri-sendiri: kelola semuanya dengan Hilt (framework dependency injection); "siapa butuh apa, tinggal minta, langsung disodorkan";
 - Kode menumpuk jadi gunung: proyek satu modul makin lambat tiap kali diubah — pecah menjadi multi-modul (app / core / feature-xxx), tiap fitur dikembangkan dan diuji secara mandiri.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -97,10 +97,10 @@ Begitu proyek membesar, dua "masalah manis" akan mendatangi kamu:
 Tips: Jangan over-engineering
 
 {class="mt-1"}
-Hilt dan modularisasi memang alat yang bagus, tetapi untuk proyek satu orang jangan buru-buru memakainya. Aplikasi catatan keuangan dengan satu modul + pembuatan dependensi manual sudah sangat cukup. Tunggu sampai kode melewati puluhan ribu baris, kompilasi mulai melambat, atau mulai kerja sama beberapa orang, baru masukkan sesuai kebutuhan. Alat melayani tujuan, bukan untuk dipamerkan — ini juga prinsip "kesederhanaan di atas segalanya" di buku pemrograman AI kita.
+Hilt dan modularisasi memang alat yang bagus, tetapi untuk proyek satu orang jangan buru-buru memakainya. Aplikasi catatan keuangan dengan satu modul + pembuatan dependensi manual sudah sangat cukup. Tunggu sampai kode melewati puluhan ribu baris, kompilasi mulai melambat, atau mulai kerja sama beberapa orang, baru masukkan sesuai kebutuhan. Alat melayani tujuan, bukan untuk dipamerkan, ini juga prinsip "kesederhanaan di atas segalanya" di buku pemrograman AI kita.
 :::
 
-#### 4. Cara bermain baru 2026: Pengembangan Android berbantuan AI
+4. Cara bermain baru 2026: Pengembangan Android berbantuan AI
 
 Di tahun 2026, AI sudah menyatu dalam alur pengembangan Android. Kalau ingin mempercepat, rangkaian kombinasi ini sudah sangat matang:
 
@@ -113,17 +113,17 @@ Di tahun 2026, AI sudah menyatu dalam alur pengembangan Android. Kalau ingin mem
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Empat skenario pengembangan Android berbantuan AI
 
-Metodologi konkretnya — cara memberi instruksi ke AI, cara menilai hasil, cara menghindari jebakan — dibahas lengkap dalam 11 bab di Bagian 7 buku ini, "Praktik Pemrograman AI" (Bab 37-47). Sangat disarankan dibaca beriringan: sintaks Android diserahkan ke bagian ini, kiat kolaborasi dengan AI diserahkan ke Bagian 7.
+Metodologi konkretnya: cara memberi instruksi ke AI, cara menilai hasil, cara menghindari jebakan: dibahas lengkap dalam 11 bab di Bagian 7 buku ini, "Praktik Pemrograman AI" (Bab 37-47). Sangat disarankan dibaca beriringan: sintaks Android diserahkan ke bagian ini, kiat kolaborasi dengan AI diserahkan ke Bagian 7.
 
 #### 5. Optimasi performa dan alat debugging Compose
 
 Menulis dengan Compose memang asyik, tetapi "rekomposisi berlebihan" juga bisa membuat tersendat. Tiga trik praktis:
 
 - Stabilkan parameter: tambahkan @Immutable pada data class atau gunakan derivedStateOf agar perubahan state yang tak berhubungan tidak memicu rekomposisi luas;
-- Ingat pakai key: items(list, key = { it.id }) membuat daftar hanya memperbarui item yang memang harus berubah saat ada penambahan/penghapusan — tanpa key, menghapus satu item bisa menggambar ulang seluruh daftar;
-- Mode Compose di Layout Inspector: melihat jumlah rekomposisi tiap Composable secara waktu nyata; siapa yang sering rekomposisi terlihat jelas, dan optimasi tinggal mengikuti titik panasnya.
+- Ingat pakai key: items(list, key = { it.id }) membuat daftar hanya memperbarui item yang memang harus berubah saat ada penambahan/penghapusan: tanpa key, menghapus satu item bisa menggambar ulang seluruh daftar;
+- Mode Compose di Layout Inspector: melihat jumlah rekomposisi tiap Composable secara waktu nyata; siapa yang sering rekomposisi terlihat jelas, dan optimasi tinggal mengikuti titik panasnya
 
-Selain itu, aktifkan laporan compiler Compose (Metrics) untuk menghasilkan laporan "komponen mana yang tidak stabil" — di jalan menuju tingkat lanjut, data selalu lebih andal daripada perasaan.
+Selain itu, aktifkan laporan compiler Compose (Metrics) untuk menghasilkan laporan "komponen mana yang tidak stabil", di jalan menuju tingkat lanjut, data selalu lebih andal daripada perasaan.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -140,6 +140,6 @@ Ringkasan bab
 - Izin sensitif: deklarasi di Manifest + permintaan saat runtime + arahan elegan setelah ditolak
 - Tiga aturan notifikasi: hanya yang berguna, bisa dimatikan, tidak mengganggu; saluran + izin dua-duanya wajib ada
 - Tugas terjadwal pakai WorkManager, jangan bikin roda sendiri
-- Hilt mengurus objek, modularisasi mengurus kode — proyek kecil satu orang jangan buru-buru
+- Hilt mengurus objek, modularisasi mengurus kode: proyek kecil satu orang jangan buru-buru
 - Empat skenario bantuan AI: menulis kode, mencari referensi, menulis test, memperbaiki bug; metodologinya di Bagian 7 (Bab 37-47)
 :::

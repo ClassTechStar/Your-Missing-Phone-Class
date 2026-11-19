@@ -10,7 +10,7 @@ class: mb-12
 ## Part VII: AI Coding in Practice (Chapters 37-47)
 
 {class="chapter-intro mb-4"}
-By now you're a phone power user. This part takes a bigger leap: let AI write code for you. In 2025 a single Karpathy post lit the Vibe Coding movement. By 2026, AI coding had evolved into Agentic Engineering — "give AI a goal and it plans, works, and checks itself." Eleven chapters cover the five thinking principles, context and requirements engineering, tools and model choice, LLM API practice, three full projects, and a quality system — taking you from "I can use AI" to "I command an AI squad." Remember: tools iterate every three months; methodology evolves every three years. This part teaches the latter.
+By now you're a phone power user. This part takes a bigger leap: let AI write code for you. In 2025 a single Karpathy post lit the Vibe Coding movement. By 2026, AI coding had evolved into Agentic Engineering, "give AI a goal and it plans, works, and checks itself." Eleven chapters cover the five thinking principles, context and requirements engineering, tools and model choice, LLM API practice, three full projects, and a quality system: taking you from "I can use AI" to "I command an AI squad." Remember: tools iterate every three months; methodology evolves every three years. This part teaches the latter.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

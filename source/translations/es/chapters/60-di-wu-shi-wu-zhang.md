@@ -18,7 +18,7 @@ Para practicar en casa van bien OpenWeatherMap o, en China, QWeather (HeFeng); a
 
 1. Crea una cuenta → genera una Key (apikey) en la página API keys;
 2. El plan gratuito permite llamar al endpoint Current Weather (tiempo actual): api.openweathermap.org/data/2.5/weather? q=beijing&appid=TU_CLAVE&units=metric;
-3. Pruébalo primero en el navegador para ver cómo es el JSON que devuelve: es la "lección previa" obligatoria antes de enchufarte a cualquier API.
+3. Pruébalo primero en el navegador para ver cómo es el JSON que devuelve: es la "lección previa" obligatoria antes de enchufarte a cualquier API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -145,7 +145,7 @@ Detalles que valen la pena aprender: firstOrNull() coge el primer elemento sin r
 - Cuadro de búsqueda: un TextField arriba, escribes el nombre de la ciudad y pulsas buscar (configura la acción "Buscar" en el teclado: enter y busca);
 - Tarjeta del tiempo: temperatura en letra grande (26,5°), descripción del tiempo (despejado), humedad y nombre de la ciudad;
 - Ciudades favoritas: guarda las que consultas a menudo en DataStore y la próxima vez que abras la app se consultan solas; de regalo, repaso del capítulo 6;
-- Deslizar para actualizar: en Compose usa PullToRefreshBox (lo trae Material 3) y la sensación pasa a "profesional" al instante.
+- Deslizar para actualizar: en Compose usa PullToRefreshBox (lo trae Material 3) y la sensación pasa a "profesional" al instante
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

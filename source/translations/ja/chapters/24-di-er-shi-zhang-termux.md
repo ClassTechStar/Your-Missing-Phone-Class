@@ -13,7 +13,7 @@ kind: supplement
 
 #### 一、Termuxとは
 
-Termuxの核心的優位性は軽量性と高い拡張性にあり、開発、学習、システム管理など多くのシーンに適しています。標準的なソフトウェアパッケージと精密なターミナルエミュレーションをオープンソースソリューションに統合しています。
+Termuxの核心的優位性は軽量性と高い拡張性にあり、開発、学習、システム管理など多くのシーンに適しています。標準的なソフトウェアパッケージと精密なターミナルエミュ、レーションをオープンソースソリューションに統合しています。
 
 二、核心機能と特徴
 
@@ -37,7 +37,7 @@ Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです�
 
 - Termux:APIプラグインでセンサー、カメラなどAndroidハードウェア機能を呼び出し。
 - Bluetoothキーボードと外部ディスプレイの接続をサポート、完全なマウスサポートあり。
-- 三、プラグインエコシステム
+- 三、プラグインエコシステム。
 
 #### 三、プラグインエコシステム
 
@@ -140,6 +140,6 @@ Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです�
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. pkg update &amp;&amp; pkg upgrade
 2. を実行してパッケージを更新。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Pythonをインストール：</code> pkg install python
-3. 。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>。
+3. 。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>
 4. 四、超越編（第21-26章）<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">この編ではより深いデジタル世界にご案内します。情報セキュリティからAIの原理、プログラミング思考からデジタル遺産まで、これらのコンテンツはあなたを真のデジタル市民にします。</code>第二十一章：モバイルネットワークと情報セキュリティの深掘り
 :::

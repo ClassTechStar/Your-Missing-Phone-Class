@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 69: Quick Reference and Resources
 
 {class="chapter-intro mb-4"}
-This chapter is a quick-reference handbook that works on its own. When you can't remember a bit of syntax or need to make a fast decision, flip straight here. Treat it as a set of "pocket cards": common code, common questions, and learning resources—nothing left out.
+This chapter is a quick-reference handbook that works on its own. When you can't remember a bit of syntax or need to make a fast decision, flip straight here. Treat it as a set of "pocket cards": common code, common questions, and learning resources,nothing left out.
 
 #### 1. Common code cheat sheet
 
@@ -31,7 +31,7 @@ You can learn the language, but not do the full development. Swift Playgrounds o
 
 Q2: How much does learning iOS development cost?
 
-Learning stage: 0 dollars (Xcode is free + a free Apple ID for on-device debugging). Release stage: a developer account at 99 USD/year (about 700 RMB). Add a Mac, and that's the entire cost. Compared with the payoff—even a small utility on the App Store has paying users—the math works out.
+Learning stage: 0 dollars (Xcode is free + a free Apple ID for on-device debugging). Release stage: a developer account at 99 USD/year (about 700 RMB). Add a Mac, and that's the entire cost. Compared with the payoff—even a small utility on the App Store has paying users:the math works out.
 
 Q3: SwiftUI or UIKit—which one first?
 
@@ -43,7 +43,7 @@ The 2026 job market: entry-level roles that amount to "can draw interfaces" are 
 
 Q5: What if my app gets rejected in review?
 
-Don't panic—it's normal; first submissions get rejected at a decent rate. Apple's rejection reasons are usually written very specifically (which page, which guideline). Fix things one by one, reply with an explanation in App Store Connect, and resubmit. The three most common rejection reasons: permission purposes not clearly explained, buggy interfaces, and metadata (screenshots/description) that doesn't match the real thing. Self-check those three ahead of time and you'll save yourself a round of waiting.
+Don't panic: it's normal. First submissions get rejected at a decent rate. Apple's rejection reasons are usually written very specifically (which page, which guideline). Fix things one by one, reply with an explanation in App Store Connect, and resubmit. The three most common rejection reasons: permission purposes not clearly explained, buggy interfaces, and metadata (screenshots/description) that doesn't match the real thing. Self-check those three ahead of time and you'll save yourself a round of waiting.
 
 #### 3. High-frequency Xcode shortcuts
 
@@ -61,7 +61,7 @@ High-frequency Xcode shortcuts
 Tip: when builds act haunted, clean the cache first
 
 {class="mt-1"}
-That spooky "it ran yesterday but not today" phenomenon is, six or seven times out of ten, a scrambled build cache. Clean with ⇧⌘K and rebuild, and it cures the majority of these hauntings. Still broken? Restart Xcode (and the Mac along with it), and if that fails, "delete the DerivedData folder"—the legendary ultimate trio, passed down among iOS developers.
+That spooky "it ran yesterday but not today" phenomenon is, six or seven times out of ten, a scrambled build cache. Clean with ⇧⌘K and rebuild, and it cures the majority of these hauntings. Still broken? Restart Xcode (and the Mac along with it), and if that fails, "delete the DerivedData folder",the legendary ultimate trio, passed down among iOS developers.
 :::
 
 #### 4. Recommended learning resources
@@ -77,12 +77,12 @@ iOS development learning resources (August 2026)
 
 #### 5. Closing: from your first app to your Nth app
 
-Looking back, you went from "having no idea what SwiftUI was" to installing Xcode, learning Swift, drawing interfaces with SwiftUI, hooking your app up to a database and the network, and on to testing, packaging, and shipping—on this road, you've already walked the hardest stretch of the journey from zero to one.
+Looking back, you went from "having no idea what SwiftUI was" to installing Xcode, learning Swift, drawing interfaces with SwiftUI, hooking your app up to a database and the network, and on to testing, packaging, and shipping. On this road, you've already walked the hardest stretch of the journey from zero to one.
 
 The world of technology changes fast: frameworks upgrade, tools get replaced, and AI takes over more and more of the "typing" work. But one thing never goes out of date: your ability to take a fuzzy idea, break it into clear steps, and then build it one step at a time. Tools are the amplifier; the way you think is the foundation. The amplifier can be swapped out; the foundation must not shake.
 
 :::inline div .quote-line
-You're no longer just "someone who knows how to use a phone." You can turn the ideas in your head into real apps running on hundreds of millions of iPhones. From today, create with your keyboard — that's the romance of being an iOS developer.
+You're no longer just "someone who knows how to use a phone." You can turn the ideas in your head into real apps running on hundreds of millions of iPhones. From today, create with your keyboard, that's the romance of being an iOS developer.
 :::
 
 #### References

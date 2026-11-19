@@ -2,17 +2,17 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Kapitel 3: Das Handy an die „Lebensader“ anschließen
+nav: Kapitel 3: Kein Netz? Nicht sofort neu starten
 toc: default
 kind: chapter
 ---
 
-### Kapitel 3: Das Handy an die „Lebensader“ anschließen
+### Kapitel 3: Kein Netz? Nicht sofort neu starten
 
 {class="chapter-intro mb-4"}
-Null. Nicht orientierungslos im Netz — WLAN und Mobilfunk richtig unterscheiden
+Null. Nicht orientierungslos im Netz: WLAN und Mobilfunk richtig unterscheiden
 
-#### Null. Nicht orientierungslos im Netz — WLAN und Mobilfunk richtig unterscheiden
+Null. Nicht orientierungslos im Netz — WLAN und Mobilfunk richtig unterscheiden
 
 WLAN ist verbunden, aber Seiten laden nicht <strong>— weil der Router offline ist und das Smartphone nicht automatisch auf Mobilfunk umschaltet. Um das gründlich zu verstehen, brauchen wir ein Modell von „Straße und Fahrzeug".</strong>:
 
@@ -197,7 +197,7 @@ Bluetooth arbeitet im 2,4-GHz-ISM-Band und nutzt Frequency-Hopping-Spread-Spectr
 - <strong>Standortdienste</strong>: Bluetooth-Beacons für Indoor-Navigation und Gegenstandsverfolgung (z. B. Apple AirTag).
 - <strong>Smart Home</strong>: Bluetooth-Mesh-Netzwerke zur Steuerung von Glühbirnen, Türschlössern usw.
 
-#### Vier. Infrarot-Fernbedienung: Das Smartphone als Universalfernbedienung
+Vier. Infrarot-Fernbedienung: Das Smartphone als Universalfernbedienung
 
 Die Infrarot-Fernbedienung ist eine der ältesten drahtlosen Steuerungstechnologien, bleibt aber am Smartphone weiterhin praktisch. Einige Android-Smartphones (z. B. Xiaomi und bestimmte Huawei-Modelle) verfügen über einen integrierten Infrarots-Sender und können Fernseher, Klimaanlagen, Set-Top-Boxen und andere Haushaltsgeräte fernsteuern.
 

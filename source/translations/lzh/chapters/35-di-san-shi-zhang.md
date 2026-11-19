@@ -51,7 +51,7 @@ kind: chapter
 
 #### 三、手機變電腦——桌面模式
 
-部分安卓手機支持"桌面模式"——連上顯示器後，手機會輸出一個類似電腦桌面之界面，可用鼠標鍵盤操作：
+部分安卓手機支持"桌面模式"，連上顯示器後，手機會輸出一個類似電腦桌面之界面，可用鼠標鍵盤操作：
 
 - <strong>Samsung DeX</strong>：三星旗艦之招牌功能。連接顯示器後彈出桌面界面，可多窗口操作，體驗最接近真正之電腦。配合藍牙鍵鼠，出差可不帶筆記本。
 - <strong>華爲桌面模式</strong>：華爲Mate系列/Pura系列連顯器後亦有類似之能。支多窗口、文管、辦公App。
@@ -62,7 +62,7 @@ kind: chapter
 
 開車時操作手機乃違法之，但導航、聽音樂、接電話又乃剛需。車載互聯繫統使汝於車機屏幕上使用手機之核心功能，手機可放於一邊不碰：
 
-- <strong>Apple CarPlay</strong>：iPhone用戶之首選。通過USB或無線連接車機，車機屏幕上出現iPhone之精簡界面——導航（高德/百度）、音樂、電話、信息、播客。Siri語音控制全程免手。
+- <strong>Apple CarPlay</strong>：iPhone用戶之首選。通過USB或無線連接車機，車機屏幕上出現iPhone之精簡界面，導航（高德/百度）、音樂、電話、信息、播客。Siri語音控制全程免手。
 - <strong>Android Auto</strong>：安卓用戶對策。能與CarPlay似，支Google Maps、Spotify等。國內因Google服限，部能不可用。
 - <strong>華爲HiCar</strong>：華爲自研方案，國內車型支持率高。除矣導航音樂，還能用華爲視頻通話、泊車影像融合等特色功能。
 - <strong>百度CarLife</strong>：跨平臺方案，iOS與安卓皆能用。功能較少但兼容性廣，甚多老車型唯支持CarLife。

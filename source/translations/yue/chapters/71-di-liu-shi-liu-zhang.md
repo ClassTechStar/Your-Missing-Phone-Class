@@ -10,15 +10,15 @@ kind: chapter
 ### 第六十六章：項目二——天氣查詢 App（網絡版）
 
 {class="chapter-intro mb-4"}
-記賬本係"練內功"，天氣 App 係"見世面"——佢要同互聯網打交道。呢個項目你會學到：申請免費 API、解析 JSON、處理"加載中／成功／失敗"三種界面狀態，仲有點樣將 API 密鑰收埋好。做完佢，你就具備咗做任何"上網 App"嘅能力——新聞、匯率、翻譯，套路一模一樣。
+記賬本係"練內功"，天氣 App 係"見世面"，佢要同互聯網打交道。呢個項目你會學到：申請免費 API、解析 JSON、處理"加載中／成功／失敗"三種界面狀態，仲有點樣將 API 密鑰收埋好。做完佢，你就具備咗做任何"上網 App"嘅能力，新聞、匯率、翻譯，套路一模一樣。
 
 #### 一、申請免費天氣 API
 
-個人練手，推薦 OpenWeatherMap 或者國內嘅和風天氣（QWeather）——都有免費額度，註冊就即刻用得。以 OpenWeatherMap 為例：
+個人練手，推薦 OpenWeatherMap 或者國內嘅和風天氣（QWeather），都有免費額度，註冊就即刻用得。以 OpenWeatherMap 為例：
 
-1. 註冊賬號 → 喺 API keys 頁面生成一個 Key（apikey）；
-2. 免費版可以調用 Current Weather 接口：api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric；
-3. 喺瀏覽器先試一次，睇吓返回嘅 JSON 生乜嘢樣——呢個係接任何 API 之前必做嘅"預習"。
+1. 註冊賬號 → 喺 API keys 頁面生成一個 Key（apikey）。
+2. 免費版可以調用 Current Weather 接口：api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric。
+3. 喺瀏覽器先試一次，睇吓返回嘅 JSON 生乜嘢樣，呢個係接任何 API 之前必做嘅"預習"。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -143,9 +143,9 @@ struct WeatherContent: View {
 
 #### 五、交互細節同收藏城市
 
-- 搜尋框：頂部 .searchable 修飾符，系統自帶搜尋交互，提交嗰陣調用 vm.search；
-- 收藏城市：將成日睇嘅城市存入 UserDefaults，下次打開自動查；
-- 下拉刷新：.refreshable { await vm.search(...) } 一行搞掂；
+- 搜尋框：頂部 .searchable 修飾符，系統自帶搜尋交互，提交嗰陣調用 vm.search。
+- 收藏城市：將成日睇嘅城市存入 UserDefaults，下次打開自動查。
+- 下拉刷新：.refreshable { await vm.search(...) } 一行搞掂。
 - 天氣圖標：用 Image(systemName:) 按描述映射（sun.max / cloud.rain / snowflake），界面即刻活起嚟。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -164,9 +164,9 @@ OpenWeatherMap 對中文城市名支援一般，搜"北京"可能冇結果而 "b
 
 上網 App 出問題，十居其九都係"請求發得唔啱"或者"響應解析得唔啱"。三個調試手段：
 
-1. 打印原始數據：將 String(data: data, encoding: .utf8) 打印出嚟睇原始 JSON——字段名、類型一目了然，好過估快十倍；
-2. 抓包工具：Mac 上免費嘅 Proxyman／開源嘅 Charles 可以截獲 App 嘅全部請求同響應，好似 X 光咁睇清網絡層；
-3. 模擬弱網：模擬器菜單 Features → Network Link Conditioner（需要由開發者網站下載工具），可以模擬 3G、高延遲——測出"轉圈轉半日"嘅體驗問題。
+1. 打印原始數據：將 String(data: data, encoding: .utf8) 打印出嚟睇原始 JSON，字段名、類型一目了然，好過估快十倍。
+2. 抓包工具：Mac 上免費嘅 Proxyman／開源嘅 Charles 可以截獲 App 嘅全部請求同響應，好似 X 光咁睇清網絡層。
+3. 模擬弱網：模擬器菜單 Features → Network Link Conditioner（需要由開發者網站下載工具），可以模擬 3G、高延遲，測出"轉圈轉半日"嘅體驗問題。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -184,9 +184,9 @@ OpenWeatherMap 對中文城市名支援一般，搜"北京"可能冇結果而 "b
 {class="font-semibold mb-1"}
 本章小結
 
-- 先喺瀏覽器試 API、睇得明 JSON，再寫代碼——"預習"永遠唔蝕
+- 先喺瀏覽器試 API、睇得明 JSON，再寫代碼，"預習"永遠唔蝕
 - API Key 收入 xcconfig，絕不進代碼庫
 - Codable 模型 + URLSession async/await：字段對上，JSON 自動解析
 - loading/success/error 三段式狀態係上網界面嘅萬金油
-- 斷網、空輸入、城市唔存在——錯誤處理係上網 App 嘅及格線
+- 斷網、空輸入、城市唔存在：錯誤處理係上網 App 嘅及格線
 :::

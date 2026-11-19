@@ -31,7 +31,7 @@ Puedes aprender el lenguaje, pero no hacer desarrollo completo. Con Swift Playgr
 
 P2: ¿Cuánto cuesta aprender desarrollo de iOS?
 
-Fase de aprendizaje: 0 (Xcode es gratuito y una cuenta Apple gratuita permite depurar en un dispositivo real). Fase de publicación: la cuenta de desarrollador cuesta 99 dólares al año (unos 700 yuanes). Sumando la inversión en un Mac, ese es todo el coste. Frente a lo que se recibe a cambio —en el App Store, hasta una pequeña utilidad encuentra usuarios que pagan—, la cuenta sale a favor.
+Fase de aprendizaje: 0 (Xcode es gratuito y una cuenta Apple gratuita permite depurar en un dispositivo real). Fase de publicación: la cuenta de desarrollador cuesta 99 dólares al año (unos 700 yuanes). Sumando la inversión en un Mac, ese es todo el coste. Frente a lo que se recibe a cambio,en el App Store, hasta una pequeña utilidad encuentra usuarios que pagan, la cuenta sale a favor.
 
 P3: ¿Qué conviene aprender primero, SwiftUI o UIKit?
 
@@ -43,7 +43,7 @@ El panorama de 2026: los puestos básicos de «solo saber dibujar interfaces» t
 
 P5: ¿Qué hago si el proceso de revisión rechaza mi app?
 
-No entres en pánico: es totalmente normal —la probabilidad de que el primer envío sea rechazado no es baja. Apple suele escribir el motivo del rechazo con mucho detalle (qué pantalla, qué directriz): corrige punto por punto, responde con una explicación en App Store Connect y vuelve a enviar. Las tres causas de rechazo más habituales son: no explicar con claridad para qué se pide cada permiso, bugs en la interfaz y metadatos (capturas/descripción) que no coinciden con la app real. Si revisas estos tres puntos por adelantado, te ahorras una ronda de espera.
+No entres en pánico: es totalmente normal:la probabilidad de que el primer envío sea rechazado no es baja. Apple suele escribir el motivo del rechazo con mucho detalle (qué pantalla, qué directriz): corrige punto por punto, responde con una explicación en App Store Connect y vuelve a enviar. Las tres causas de rechazo más habituales son: no explicar con claridad para qué se pide cada permiso, bugs en la interfaz y metadatos (capturas/descripción) que no coinciden con la app real. Si revisas estos tres puntos por adelantado, te ahorras una ronda de espera.
 
 #### 3. Atajos de teclado de Xcode: guía de referencia rápida
 
@@ -77,7 +77,7 @@ Lista de recursos para aprender desarrollo iOS (agosto de 2026)
 
 #### 5. Palabras finales: de la primera app a la app número N
 
-Mirando atrás: pasaste de «no saber qué es SwiftUI» a instalar Xcode, aprender Swift, dibujar interfaces con SwiftUI, conectar tu app a una base de datos y a la red, y después probarla, empaquetarla y publicarla — en este camino ya recorriste el tramo más difícil del paso de cero a uno.
+Mirando atrás: pasaste de «no saber qué es SwiftUI» a instalar Xcode, aprender Swift, dibujar interfaces con SwiftUI, conectar tu app a una base de datos y a la red, y después probarla, empaquetarla y publicarla, en este camino ya recorriste el tramo más difícil del paso de cero a uno.
 
 El mundo de la tecnología cambia muy rápido: los frameworks se actualizan, las herramientas se renuevan y la IA irá asumiendo cada vez más trabajo de «teclear». Pero hay algo que no caduca: tu capacidad de descomponer una idea difusa en pasos claros y materializarla poco a poco. Las herramientas son el amplificador; el razonamiento, el cimiento. El amplificador se puede sustituir; el cimiento no debe tambalearse.
 

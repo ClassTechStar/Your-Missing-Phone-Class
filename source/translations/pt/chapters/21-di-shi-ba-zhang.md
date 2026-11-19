@@ -2,17 +2,17 @@
 id: di-shi-ba-zhang
 num: 18
 part: jin-jie-pian
-nav: Capítulo 18: Backup e migração de dados
+nav: Capítulo 18: Faça o backup agora, não quando precisar
 toc: default
 kind: chapter
 ---
 
-### Capítulo 18: Backup e migração de dados
+### Capítulo 18: Faça o backup agora, não quando precisar
 
 {class="chapter-intro mb-4"}
-Um vizinho meu deixou o celular cair na piscina e, quando o tirou, já não ligava mais. O que mais a entristeceu não foi o celular em si, mas as fotos de três anos sem backup — todo o registro do filho, do nascimento até aprender a andar. Ouvir isso me deixou muito mal, porque era algo totalmente evitável. Neste capítulo, vamos fazer um seguro de verdade para seus dados.
+Um vizinho meu deixou o celular cair na piscina e, quando o tirou, já não ligava mais. O que mais a entristeceu não foi o celular em si, mas as fotos de três anos sem backup, todo o registro do filho, do nascimento até aprender a andar. Ouvir isso me deixou muito mal, porque era algo totalmente evitável. Neste capítulo, vamos fazer um seguro de verdade para seus dados.
 
-#### I. Primeiro, entenda: o que no seu celular, se perder, desaparece para sempre
+I. Primeiro, entenda: o que no seu celular, se perder, desaparece para sempre
 
 O "estado de sobrevivência" de cada tipo de dado é diferente. Você precisa distinguir:
 
@@ -24,7 +24,7 @@ Portanto, o que você precisa proteger com prioridade são a primeira e a tercei
 
 #### II. Backup completo do dispositivo: resolva tudo de uma vez
 
-O backup completo é como tirar um "instantâneo" completo do celular — configurações atuais do sistema, layout da tela inicial, dados de apps, fotos, contatos, tudo empacotado.
+O backup completo é como tirar um "instantâneo" completo do celular, configurações atuais do sistema, layout da tela inicial, dados de apps, fotos, contatos, tudo empacotado.
 
 ##### Opção 1: Backup local no computador (a mais confiável, recomendada para quem tem computador)
 
@@ -35,10 +35,10 @@ O backup completo é como tirar um "instantâneo" completo do celular — config
 ##### Opção 2: Backup em nuvem (a mais prática, recomendada para todos)
 
 - <strong>iPhone</strong>: Ajustes > Seu nome > iCloud > Backup do iCloud > Ativar. O backup automático é feito quando o celular está conectado à energia, no Wi-Fi e com a tela bloqueada. Os 5GB grátis provavelmente não serão suficientes; recomenda-se assinar 50GB.
-- <strong>Android</strong>: Cada marca tem sua função de backup em nuvem. Huawei: procure por "Backup em nuvem" nas configurações; Xiaomi: "Xiaomi Cloud"; OPPO/vivo: similar. Além disso, há o backup nativo do Google (Ajustes > Sistema > Backup) — ative-o também.
-- A maior vantagem do backup em nuvem é "não precisar se preocupar" — é automático. A maior desvantagem é que a restauração demora muito para baixar, e o espaço gratuito geralmente não é suficiente.
+- <strong>Android</strong>: Cada marca tem sua função de backup em nuvem. Huawei: procure por "Backup em nuvem" nas configurações; Xiaomi: "Xiaomi Cloud"; OPPO/vivo: similar. Além disso, há o backup nativo do Google (Ajustes > Sistema > Backup): ative-o também.
+- A maior vantagem do backup em nuvem é "não precisar se preocupar", é automático. A maior desvantagem é que a restauração demora muito para baixar, e o espaço gratuito geralmente não é suficiente.
 
-#### III. Estratégia de backup por categoria: o que é importante, salve uma cópia extra separada
+III. Estratégia de backup por categoria: o que é importante, salve uma cópia extra separada
 
 O backup completo do dispositivo é a rede de segurança. Mas algumas coisas são tão importantes que merecem uma cópia extra separada:
 
@@ -50,7 +50,7 @@ O backup completo do dispositivo é a rede de segurança. Mas algumas coisas sã
 ##### Contatos (fácil de ignorar, mas extremamente importante)
 
 - Os contatos do iPhone, por padrão, sincronizam com o iCloud. Se a sincronização estiver ativada, não precisa de backup extra. Mas, para ficar ainda mais seguro, você pode acessar o iCloud.com e exportar um arquivo vCard para o computador.
-- Os contatos do Android geralmente sincronizam com o Google ou com a nuvem da marca. Vá nas configurações do app Contatos e exporte um arquivo .vcf — isso é um backup completo.
+- Os contatos do Android geralmente sincronizam com o Google ou com a nuvem da marca. Vá nas configurações do app Contatos e exporte um arquivo .vcf, isso é um backup completo.
 
 ##### Histórico de conversas do WeChat (tratamento separado, prioridade máxima)
 
@@ -71,11 +71,11 @@ Trocar de celular é motivo de alegria, mas se os dados não forem transferidos,
 
 ##### Troca entre marcas diferentes (Android para Android, marcas diferentes)
 
-Use ferramentas de migração de terceiros ou o app de migração da marca antiga (a maioria dos apps de migração das marcas também suporta transferência para outros Androids). O que pode ser transferido: contatos, fotos, SMS, histórico de chamadas, alguns apps. O que não pode: estado de login nos apps (você precisará fazer login novamente), histórico de conversas do WeChat (use a função de migração do próprio WeChat).
+Use ferramentas de migração de terceiros ou o app de migração da marca antiga, (a maioria dos apps de migração das marcas também suporta transferência para outros Androids). O que pode ser transferido: contatos, fotos, SMS, histórico de chamadas, alguns apps. O que não pode: estado de login nos apps (você precisará fazer login novamente), histórico de conversas do WeChat (use a função de migração do próprio WeChat).
 
 ##### Troca entre plataformas (Android para iPhone, ou vice-versa)
 
-- <strong>Android → iPhone</strong>: A Apple tem o app "Migrar para o iOS". Baixe no Android e, ao ativar o novo iPhone, selecione "Transferir Dados do Android". Transfere contatos, fotos, SMS e outros dados básicos, mas não os dados dos apps. O histórico do WeChat precisa ser migrado pela função do próprio WeChat.
+- <strong>Android → iPhone</strong>: A Apple tem o app "Migrar para o iOS". Baixe no Android e, ao ativar o novo iPhone. Selecione "Transferir Dados do Android". Transfere contatos, fotos, SMS e outros dados básicos, mas não os dados dos apps. O histórico do WeChat precisa ser migrado pela função do próprio WeChat.
 - <strong>iPhone → Android</strong>: Cada marca Android tem sua ferramenta de migração correspondente, mas, sinceramente, a experiência de migração entre plataformas não é tão boa quanto na mesma plataforma. O mais importante é fazer separadamente antes: exportar contatos, fazer backup das fotos, migrar o histórico do WeChat. O resto, devagar se resolve.
 
 #### V. A regra de ouro do backup: princípio 3-2-1
@@ -93,7 +93,7 @@ Para uma pessoa comum, conseguir "uma cópia na nuvem e uma no computador" já �
 <i class="fas fa-exclamation-triangle mr-2"></i>Atenção especial ao histórico de conversas do WeChat
 
 {class="mt-1"}
-O histórico de conversas do WeChat não pode ser migrado por nenhuma ferramenta de migração de celular! Ele não está coberto pelo backup completo do dispositivo. É obrigatório usar a função nativa "Migração de Histórico de Conversas" do WeChat ou fazer backup para o WeChat no computador. Muita gente só descobre que perdeu todo o histórico depois de trocar de celular — aí já é tarde, pois o celular antigo pode já ter sido restaurado para as configurações de fábrica.
+O histórico de conversas do WeChat não pode ser migrado por nenhuma ferramenta de migração de celular! Ele não está coberto pelo backup completo do dispositivo. É obrigatório usar a função nativa "Migração de Histórico de Conversas" do WeChat ou fazer backup para o WeChat no computador. Muita gente só descobre que perdeu todo o histórico depois de trocar de celular, aí já é tarde, pois o celular antigo pode já ter sido restaurado para as configurações de fábrica.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

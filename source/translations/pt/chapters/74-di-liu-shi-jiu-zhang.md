@@ -31,11 +31,11 @@ Dá para aprender a linguagem, mas não para fazer o desenvolvimento completo. O
 
 P2: Quanto custa aprender desenvolvimento iOS?
 
-Fase de aprendizado: zero (Xcode gratuito + Apple ID gratuito para testar em aparelho real). Fase de publicação: conta de desenvolvedor a 99 dólares/ano (cerca de 700 yuans). Somando o hardware de um Mac, esse é o custo total. Diante do retorno — na App Store até uma ferramentinha tem usuários pagantes — a conta compensa.
+Fase de aprendizado: zero (Xcode gratuito + Apple ID gratuito para testar em aparelho real). Fase de publicação: conta de desenvolvedor a 99 dólares/ano (cerca de 700 yuans). Somando o hardware de um Mac, esse é o custo total. Diante do retorno: na App Store até uma ferramentinha tem usuários pagantes, a conta compensa.
 
 P3: SwiftUI ou UIKit, qual aprender primeiro?
 
-SwiftUI. Em 2026, novos projetos, novos tutoriais e novas vagas giram em torno do SwiftUI, e este livro o usa do começo ao fim. O UIKit é o framework da geração anterior e ainda vive em muitos projetos antigos — quando dominar o SwiftUI, complete com UIKit conforme a necessidade (há tutoriais oficiais de interoperabilidade); a curva será rápida. Não inverta a ordem.
+SwiftUI. Em 2026, novos projetos, novos tutoriais e novas vagas giram em torno do SwiftUI, e este livro o usa do começo ao fim. O UIKit é o framework da geração anterior e ainda vive em muitos projetos antigos, quando dominar o SwiftUI, complete com UIKit conforme a necessidade (há tutoriais oficiais de interoperabilidade); a curva será rápida. Não inverta a ordem.
 
 P4: É fácil encontrar trabalho com desenvolvimento iOS?
 
@@ -43,7 +43,7 @@ O cenário de 2026: as vagas de início de carreira que exigem apenas "saber des
 
 P5: Meu App foi rejeitado na revisão; e agora?
 
-Fique calmo, é normal — a chance de rejeição na primeira submissão não é baixa. Os motivos da Apple costumam ser bem específicos (qual tela, qual diretriz); corrija item a item, responda com as explicações no App Store Connect e reenvie. Os três motivos de rejeição mais comuns: finalidade das permissões mal explicada, bugs na interface e metadados (capturas/descrição) que não correspondem ao produto. Checar esses três pontos com antecedência poupa uma rodada de espera.
+Fique calmo, é normal, a chance de rejeição na primeira submissão não é baixa. Os motivos da Apple costumam ser bem específicos (qual tela, qual diretriz); corrija item a item, responda com as explicações no App Store Connect e reenvie. Os três motivos de rejeição mais comuns: finalidade das permissões mal explicada, bugs na interface e metadados (capturas/descrição) que não correspondem ao produto. Checar esses três pontos com antecedência poupa uma rodada de espera.
 
 #### 3. Atalhos de teclado mais usados do Xcode
 
@@ -77,12 +77,12 @@ Lista de recursos de estudo para desenvolvimento iOS (agosto de 2026)
 
 #### 5. Palavras finais: do primeiro App ao enésimo App
 
-Olhando para trás, você saiu de "não fazer ideia do que é SwiftUI" para instalar o Xcode, aprender Swift, desenhar telas com SwiftUI, conectar o App a um banco de dados e à rede, e ainda testar, empacotar e publicar — nesse caminho, você já venceu o trecho mais difícil da jornada do zero ao um.
+Olhando para trás, você saiu de "não fazer ideia do que é SwiftUI" para instalar o Xcode, aprender Swift, desenhar telas com SwiftUI, conectar o App a um banco de dados e à rede, e ainda testar, empacotar e publicar, nesse caminho, você já venceu o trecho mais difícil da jornada do zero ao um.
 
 O mundo da tecnologia muda rápido: frameworks evoluem, ferramentas se renovam e a IA assume cada vez mais o trabalho de "digitar". Mas uma coisa não fica obsoleta: a sua capacidade de pegar uma ideia vaga, decompô-la em passos claros e realizá-la um a um. A ferramenta é o amplificador; o raciocínio é o alicerce. O amplificador pode ser trocado; o alicerce não pode balançar.
 
 :::inline div .quote-line
-Você não é mais só "alguém que sabe usar celular". Você pode transformar as ideias da sua cabeça em apps de verdade rodando em centenas de milhões de iPhones. A partir de hoje, crie com o teclado — essa é a poesia de ser desenvolvedor iOS.
+Você não é mais só "alguém que sabe usar celular". Você pode transformar as ideias da sua cabeça em apps de verdade rodando em centenas de milhões de iPhones. A partir de hoje, crie com o teclado, essa é a poesia de ser desenvolvedor iOS.
 :::
 
 #### Referências

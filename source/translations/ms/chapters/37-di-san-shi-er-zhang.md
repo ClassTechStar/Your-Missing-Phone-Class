@@ -2,17 +2,17 @@
 id: di-san-shi-er-zhang
 num: 32
 part: shi-zhan-pian
-nav: Bab 32:Manual Pertolongan Cemas Keselamatan Telefon
+nav: Bab 32: Hilang, dicuri, atau ditipu? Tiga puluh saat
 toc: default
 kind: chapter
 ---
 
-### Bab 32:Manual Pertolongan Cemas Keselamatan Telefon
+### Bab 32: Hilang, dicuri, atau ditipu? Tiga puluh saat
 
 {class="chapter-intro mb-4"}
 Bab ini ialah sebuah "pelan tindakan kecemasan". Semoga anda tidak perlu menggunakannya, tetapi jika benar-benar menghadapi keadaan telefon hilang, dicuri, atau ditipu, manual ini dapat membantu anda meminimumkan kerugian; apabila bencana seperti gempa bumi atau hujan lebat melanda, telefon juga merupakan alat untuk menerima amaran, menunjukkan lokasi untuk meminta pertolongan, dan mengekalkan hubungan. Disyorkan agar anda membacanya sekali sekarang, kemudian simpan tangkapan skrin langkah-langkah penting, atau cetak dan letakkan di rumah - kerana apabila berlaku kejadian, telefon anda mungkin sudah tidak ada dalam tangan, dan ketika bencana pula bateri mungkin habis atau tiada isyarat.
 
-#### Senario Sifar: Gempa bumi / cuaca melampau - bagaimana telefon menyelamatkan nyawa anda
+Senario Sifar: Gempa bumi / cuaca melampau - bagaimana telefon menyelamatkan nyawa anda
 
 Yang dilindungi ialah keselamatan diri, bukan akaun dan wang. Tetapan amaran diterangkan dalam Bab 13 "Amaran cuaca, amaran bencana alam dan amaran gempa bumi"; di sini hanya diterangkan apa yang perlu dilakukan selepas penggera berbunyi.
 
@@ -82,7 +82,7 @@ Selepas sedar anda ditipu, yang paling penting ialah kekal tenang. Keputusan yan
 5. Hubungi bank/platform pembayaran: beritahu keadaan penipuan, minta akaun terlibat dibekukan. Jika kad kredit dicuri dan digunakan, minta bank memulakan proses bantahan caj (chargeback).
 6. Tukar semua kata laluan: pada peranti selamat yang lain, tukar kata laluan Apple ID/akaun jenama, WeChat, Alipay, dan aplikasi bank anda, serta aktifkan pengesahan dua faktor.
 
-#### Senario Tiga: Telefon dijangkiti virus/trojan - apa yang perlu dibuat?
+Senario Tiga: Telefon dijangkiti virus/trojan - apa yang perlu dibuat?
 
 Jika anda mendapati telefon menunjukkan gejala berikut - iklan muncul tanpa sebab, aplikasi pelik terpasang secara automatik, bil telefon melonjak, data mudah alih habis secara luar biasa - kemungkinan besar telefon dijangkiti perisian hasad:
 
@@ -92,7 +92,7 @@ Jika anda mendapati telefon menunjukkan gejala berikut - iklan muncul tanpa seba
 - Langkah keempat: tetapan semula kilat (penyelesaian terakhir) - jika kaedah di atas tidak berkesan, sandarkan data penting dahulu, kemudian buat tetapan semula kilat. Perhatian: tetapan semula kilat akan memadam semua data; pastikan sandarkan gambar, buku alamat, dan fail penting dahulu.
 - iPhone hampir tidak pernah dijangkiti virus - mekanisme sandbox iOS menyukarkan perisian hasad untuk hidup. Jika iPhone anda bermasalah, kemungkinan besar itu bug sesebuah aplikasi atau masalah tetapan, bukan virus. Tetapan semula kilat dapat menyelesaikan 99% masalah.
 
-#### Senario Empat: Akaun diretas - rebut semula kawalan dengan cepat
+Senario Empat: Akaun diretas - rebut semula kawalan dengan cepat
 
 1. Tukar kata laluan serta-merta: jika anda masih boleh log masuk akaun, tukar kata laluan secepat mungkin. Kata laluan baharu mesti sama sekali berbeza daripada yang lama.
 2. Keluarkan peranti lain: dalam tetapan keselamatan akaun, cari "Pengurusan peranti log masuk", dan log keluarkan semua peranti yang tidak dikenali.
@@ -101,7 +101,7 @@ Jika anda mendapati telefon menunjukkan gejala berikut - iklan muncul tanpa seba
 5. Semak maklumat terikat: periksa sama ada nombor telefon atau e-mel yang terikat pada akaun telah diubah. Jika telah diubah, gunakan fungsi rayuan akaun untuk mendapatkannya semula.
 6. Semak tetapan pembayaran: jika yang diretas ialah WeChat/Alipay, periksa sama ada pembayaran tanpa kata laluan atau potongan automatik telah diubah, dan sama ada kad bank ditambah ke akaun asing.
 
-#### Senario Lima: Menerima mesej ugutan - jangan takut, jangan bayar
+Senario Lima: Menerima mesej ugutan - jangan takut, jangan bayar
 
 Terdapat dua taktik ugutan yang biasa: (1) "Saya ada video/gambar tidak senonoh anda; kalau tidak bayar, saya hantar kepada semua orang dalam buku alamat anda"; (2) "Telefon anda telah dikawal oleh penggodam; kalau tidak bayar, ia akan dikunci". Jika menghadapi keadaan begini:
 
@@ -111,7 +111,7 @@ Terdapat dua taktik ugutan yang biasa: (1) "Saya ada video/gambar tidak senonoh 
 - Tukar kata laluan: jika berasa bimbang, tukar kata laluan akaun utama anda untuk ketenangan hati.
 - Jika benar-benar ada risiko kebocoran privasi: laporkan polis. Polis berpengalaman mengendalikan kes sebegini.
 
-#### Senario Enam: Penipuan AI tukar wajah/AI tiru suara - apa yang dilihat bukan lagi kenyataan
+Senario Enam: Penipuan AI tukar wajah/AI tiru suara - apa yang dilihat bukan lagi kenyataan
 
 Sejak 2024, teknologi AI tukar wajah dan AI tiru suara membolehkan penipu "menjelma" sebagai wajah dan suara keluarga, ketua, atau kawan anda dalam panggilan video. "Mak, saya kena masalah, cepat pindahkan wang" - orang dalam video nampak dan bunyi sama persis seperti anak anda, tetapi sebenarnya palsu. Ini antara kaedah penipuan yang paling sukar dicegah dan paling berbahaya pada masa kini.
 
@@ -131,7 +131,7 @@ Langkah pertama: kenal pasti kelemahan - empat celah biasa pada palsuan AI
 Langkah kedua: tiga cara mengesahkan kebenaran pihak sebelah
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Minta lakukan gerakan tertentu: suruh pihak itu menoleh, menutup wajah, atau menutup mulut dengan tangan sambil membuka-menutup mulut. AI tukar wajah paling mudah "terbongkar" ketika ada halangan atau ketika menoleh sudut besar - wajah akan berubah bentuk atau tidak mengikut gerakan.
+- Minta lakukan gerakan tertentu: suruh pihak itu menoleh, menutup wajah, atau menutup mulut dengan tangan sambil membuka-menutup mulut. AI tukar wajah paling mudah "terbongkar" ketika ada halangan atau ketika ,menoleh sudut besar - wajah akan berubah bentuk atau tidak mengikut gerakan.
 - Tanya soalan yang hanya pihak itu tahu: reka satu soalan palsu, contohnya "Kali lepas anjing kita hantar ke hospital mana?" - jika itu penipu, dia tidak dapat menjawab atau berbelit-belit.
 - Dail semula nombor yang diketahui: matikan panggilan video, dan dail semula terus menggunakan nombor yang tersimpan dalam buku alamat anda. Penipu tidak boleh mengawal nombor telefon sebenar; sekali dail, tipunya terbongkar.
 :::
@@ -148,7 +148,7 @@ Langkah ketiga: proses laporan polis selepas disahkan ditipu
 5. Maklumkan kenalan: penipu mungkin menggunakan video palsu anda untuk menipu orang lain; awalkan dengan menghantar peringatan di Moments atau dalam kumpulan keluarga.
 :::
 
-#### Senario Tujuh: Serangan SIM swap (penculikan SIM) - nombor anda "dicuri"
+Senario Tujuh: Serangan SIM swap (penculikan SIM) - nombor anda "dicuri"
 
 Ini serangan yang tidak banyak orang dengar tentangnya tetapi kesannya sangat besar. SIM swap (penculikan kad SIM) bermaksud penyerang memalsukan maklumat identiti anda, menyamar sebagai anda ke pusat perkhidmatan untuk menggantikan kad SIM baharu. Sebaik sahaja penggantian berjaya, isyarat telefon anda tiba-tiba hilang, manakala telefon penyerang yang memasukkan kad baharu itu boleh menerima semua kod pengesahan SMS anda - Alipay, bank, WeChat, semua pintu terbuka luas.
 

@@ -2,12 +2,12 @@
 id: di-shi-wu-zhang
 num: 15
 part: jin-jie-pian
-nav: Bab 15: Sains Baterai dan Optimalisasi Daya Tahan
+nav: Bab 15: Cas dua kali sehari, baterainya atau cara pakainya?
 toc: default
 kind: chapter
 ---
 
-### Bab 15: Ilmu baterai dan optimasi daya tahan
+### Bab 15: Cas dua kali sehari, baterainya atau cara pakainya?
 
 {class="chapter-intro mb-4"}
 1\. Bagaimana baterai bekerja? Siklus dan kesehatan baterai
@@ -26,7 +26,7 @@ Isi saat digunakan
 - Bagaimana cara melihat?
 - <strong>iPhone: Pengaturan &gt; Baterai &gt; Kesehatan Baterai &amp; Pengisian Daya; Android: umumnya cari "kesehatan baterai" di pengaturan.</strong> 2. Misteri pengisian daya? Pengisian cepat, pengisian nirkabel, dan aturan emas
 
-#### 2. Misteri pengisian daya? Pengisian cepat, pengisian nirkabel, dan aturan emas
+2. Misteri pengisian daya? Pengisian cepat, pengisian nirkabel, dan aturan emas
 
 - <strong>Menggunakan aksesori pengisian cepat asli atau tersertifikasi, kerusakannya sangat kecil. Ponsel dan adaptor pengisi daya memiliki kontrol suhu, akan otomatis menurunkan daya jika terlalu panas.</strong> Pengisian nirkabel
 - <strong>Wireless charging</strong> Aturan emas perawatan
@@ -61,7 +61,7 @@ Anda mungkin perhatikan charger fast charging sekarang semakin kecil, pahlawan d
 :::
 
 {id="di-shi-wu-zhang-kuichong"}
-#### Anda mungkin pernah mengalami situasi ini: ponsel jelas mendukung pengisian cepat, tetapi setelah ganti pengisi daya menjadi sangat lambat. Ini karena pengisian cepat bukan sekadar "daya besar sudah cukup", melainkan membutuhkan adaptor pengisi daya, kabel data, dan ponsel bertiga "berbicara bahasa yang sama" — inilah protokol pengisian cepat.
+Anda mungkin pernah mengalami situasi ini: ponsel jelas mendukung pengisian cepat, tetapi setelah ganti pengisi daya menjadi sangat lambat. Ini karena pengisian cepat bukan sekadar "daya besar sudah cukup", melainkan membutuhkan adaptor pengisi daya, kabel data, dan ponsel bertiga "berbicara bahasa yang sama" — inilah protokol pengisian cepat.
 
 1\. Prinsip dasar pengisian cepat
 
@@ -194,7 +194,7 @@ Standar Qi
 - Jangan gunakan pengisi daya dan kabel data berkualitas rendah, dapat menyebabkan risiko keamanan.
 - Saat mengisi daya, lepaskan casing ponsel yang tebal untuk membantu disipasi panas.
 - Jika pengisi daya atau ponsel panas abnormal atau berbau, segera hentikan penggunaan.
-- 4. Ini adalah tips hemat baterai yang sebenarnya
+- 4. Ini adalah tips hemat baterai yang sebenarnya.
 :::
 
 #### 4. Teknologi Baterai Baru: Baterai Silicon-Carbon Anode
@@ -233,5 +233,5 @@ Jika Anda memperhatikan launch flagship 2024-2026, kata "silicon-carbon anode" h
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Analisis detail konsumsi daya: Lihat grafik dan daftar aplikasi di pengaturan baterai, temukan penyebab utama konsumsi daya.
 2. Buat strategi: Batasi aplikasi yang mengonsumsi daya abnormal di latar belakang.
-3. Bab 16: Sistem akun dan layanan cloud
+3. Bab 16: Sistem akun dan layanan cloud.
 :::

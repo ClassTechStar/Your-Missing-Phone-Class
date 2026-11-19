@@ -10,15 +10,15 @@ kind: chapter
 ### Bab 55: Projek Dua — Aplikasi Semakan Cuaca (Versi Rangkaian)
 
 {class="chapter-intro mb-4"}
-Buku perakaunan ialah 'melatih kungfu dalaman', aplikasi cuaca ialah 'melihat dunia luar' — ia perlu berurusan dengan internet. Dalam projek ini anda akan belajar: memohon API percuma, menghurai JSON, mengendalikan tiga keadaan antara muka 'sedang memuatkan/berjaya/gagal', serta cara menyembunyikan kunci API dengan baik. Selepas menyiapkannya, anda sudah memiliki kebolehan membina apa-apa 'aplikasi berhubung rangkaian' — berita, kadar pertukaran, terjemahan; caranya sama persis.
+Buku perakaunan ialah 'melatih kungfu dalaman', aplikasi cuaca ialah 'melihat dunia luar' — ia perlu berurusan dengan internet. Dalam projek ini anda akan belajar: memohon API percuma, menghurai JSON, mengendalikan tiga keadaan antara muka 'sedang memuatkan/berjaya/gagal', serta cara menyembunyikan kunci API dengan baik. Selepas menyiapkannya, anda sudah memiliki kebolehan membina apa-apa 'aplikasi berhubung rangkaian', berita, kadar pertukaran, terjemahan; caranya sama persis.
 
 #### 1. Memohon API Cuaca Percuma
 
-Untuk latihan peribadi, disyorkan OpenWeatherMap atau QWeather dari China — kedua-duanya ada kuota percuma, daftar sahaja terus boleh guna. Contoh dengan OpenWeatherMap:
+Untuk latihan peribadi, disyorkan OpenWeatherMap atau QWeather dari China, kedua-duanya ada kuota percuma, daftar sahaja terus boleh guna. Contoh dengan OpenWeatherMap:
 
 1. Daftar akaun → jana satu Key (apikey) di halaman API keys;
 2. Versi percuma boleh memanggil antara muka Current Weather (cuaca semasa): api.openweathermap.org/data/2.5/weather? q=beijing&appid=KeyAnda&units=metric;
-3. Cuba sekali dahulu dalam pelayar, lihat rupa JSON yang dipulangkan — ini 'pra-belajar' yang wajib dilakukan sebelum menyambung apa-apa API.
+3. Cuba sekali dahulu dalam pelayar, lihat rupa JSON yang dipulangkan — ini 'pra-belajar' yang wajib dilakukan sebelum menyambung apa-apa API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -138,21 +138,21 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-Beberapa butiran kecil berbaloi dipelajari: firstOrNull() mengambil elemen pertama dengan selamat (senarai mungkin kosong), ?: "Tidak diketahui" memberi teks sandaran — prinsip keselamatan null turun terpakai dalam antara muka. Suhu guna saiz huruf besar 72.sp untuk mengisi ruang, berat fon 'Light' menjadikan nombor nampak anggun; inilah resipi klasik aplikasi jenis cuaca.
+Beberapa butiran kecil berbaloi dipelajari: firstOrNull() mengambil elemen pertama dengan selamat (senarai mungkin kosong), ?: "Tidak diketahui" memberi teks sandaran, prinsip keselamatan null turun terpakai dalam antara muka. Suhu guna saiz huruf besar 72.sp untuk mengisi ruang, berat fon 'Light' menjadikan nombor nampak anggun; inilah resipi klasik aplikasi jenis cuaca.
 
 #### 5. Butiran Antara Muka dan Interaksi
 
 - Kotak carian: TextField di bahagian atas, taip nama bandar dan tekan cari (tetapkan tindakan 'Cari' pada papan kekunci, tekan enter terus carian berjalan);
 - Kad cuaca: suhu huruf besar (26.5°), huraian cuaca (Cerah), kelembapan, nama bandar;
-- Bandar kegemaran: simpan bandar yang kerap dilihat ke dalam DataStore, buka lain kali terus disemak secara automatik — sambil itu ulangkaji Bab 6;
-- Segar semula tarik ke bawah: dalam Compose guna PullToRefreshBox (disediakan Material 3), rasa sentuh terus terasa 'profesional'.
+- Bandar kegemaran: simpan bandar yang kerap dilihat ke dalam DataStore, buka lain kali terus disemak secara automatik, sambil itu ulangkaji Bab 6;
+- Segar semula tarik ke bawah: dalam Compose guna PullToRefreshBox (disediakan Material 3), rasa sentuh terus terasa 'profesional'
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Petua: Imej Menghidupkan Antara Muka
 
 {class="mt-1"}
-Sediakan satu emoji atau ikon (☀️🌧️❄️) untuk setiap jenis cuaca, petakan dengan when(description) — tiga baris kod, rasa 'suasana' antara muka berlipat ganda. Boleh juga memuatkan pustaka ikon cuaca pihak ketiga, tetapi pada peringkat latihan emoji sudah memadai.
+Sediakan satu emoji atau ikon (☀️🌧️❄️) untuk setiap jenis cuaca, petakan dengan when(description): tiga baris kod, rasa 'suasana' antara muka berlipat ganda. Boleh juga memuatkan pustaka ikon cuaca pihak ketiga, tetapi pada peringkat latihan emoji sudah memadai.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -160,16 +160,20 @@ Sediakan satu emoji atau ikon (☀️🌧️❄️) untuk setiap jenis cuaca, pe
 Mari cuba: Senarai Semak Penerimaan Aplikasi Cuaca
 
 {class="mt-1"}
-① Carian biasa memaparkan cuaca; ② putuskan rangkaian, aplikasi memberi ralat dengan anggun tanpa ranap (hidupkan mod kapal terbang untuk menguji!); ③ masukkan bandar yang tidak wujud, mesej tetap mesra; ④ kegemarkan dua bandar, buka semula aplikasi masih ada; ⑤ pusing skrin, keadaan tidak hilang. Lima syarat lulus semua, projek ini barulah boleh bergraduat.
+1. Carian biasa memaparkan cuaca;
+2. putuskan rangkaian, aplikasi memberi ralat dengan anggun tanpa ranap (hidupkan mod kapal terbang untuk menguji!);
+3. masukkan bandar yang tidak wujud, mesej tetap mesra;
+4. kegemarkan dua bandar, buka semula aplikasi masih ada;
+5. pusing skrin, keadaan tidak hilang. Lima syarat lulus semua, projek ini barulah boleh bergraduat.
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 Ringkasan Bab
 
-- Cuba API dalam pelayar dahulu, fahami JSON, barulah tulis kod — 'pra-belajar' tidak pernah rugi
+- Cuba API dalam pelayar dahulu, fahami JSON, barulah tulis kod, 'pra-belajar' tidak pernah rugi
 - API Key disembunyikan dalam local.properties, sama sekali tidak masuk repositori kod
 - Antara muka Retrofit + data class: medan sepadan, JSON dihurai secara automatik
 - Keadaan tiga bahagian Loading/Success/Error ialah penyelesaian serba guna antara muka berhubung rangkaian
-- Tiada rangkaian, input kosong, bandar tidak wujud — pengendalian ralat ialah garis lulus aplikasi berhubung rangkaian
+- Tiada rangkaian, input kosong, bandar tidak wujud, pengendalian ralat ialah garis lulus aplikasi berhubung rangkaian
 :::

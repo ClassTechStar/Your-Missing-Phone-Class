@@ -13,7 +13,7 @@ after_part: fu-lu
 
 - <strong>משתמשי אנדרואיד</strong>: באתרים הרשמיים של מותגי הטלפונים יש מדור "שירות ותמיכה".
 - <strong>כלים כלליים</strong>: Apple – iTunes, Huawei – Huawei Phone Assistant, Xiaomi – Mi Mover.
-- <strong>אתרים ויוצרי תוכן שימושיים:</strong>חיפוש טיפים
+- <strong>אתרים ויוצרי תוכן שימושיים:</strong>חיפוש טיפים.
 
 #### אתרים ויוצרי תוכן שימושיים:
 

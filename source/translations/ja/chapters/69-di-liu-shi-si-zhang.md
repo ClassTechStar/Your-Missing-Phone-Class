@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 データ3点セットの役割分担
 
-合言葉をひとつ覚えましょう：「小さな設定はUserDefaultsへ、まとまったデータはSwiftDataへ、外のデータはURLSessionで」。古いチュートリアルのCore Dataは今も使えます（SwiftDataはその現代版です）。手書きのSQLiteは基本さわらなくてOK——新しい方をそのまま学び、古い道は通らないでください。
+合言葉をひとつ覚えましょう：「小さな設定はUserDefaultsへ、まとまったデータはSwiftDataへ、外のデータはURLSessionで」。古いチュートリアルのCore Dataは今も使えます（SwiftDataはその現代版です）。手書きのSQLiteは基本さわらなくてOK，新しい方をそのまま学び、古い道は通らないでください。
 
 #### 2. UserDefaults：小さな設定を保存する
 
@@ -46,7 +46,7 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-注意したいのは、これはこまごました小さな設定にしか向かないということ——数十、数百件の記録はSwiftDataに任せましょう。UserDefaultsをデータベース代わりに使わないでください（起動が遅くなるうえ、検索も不便です）。
+注意したいのは、これはこまごました小さな設定にしか向かないということ，数十、数百件の記録はSwiftDataに任せましょう。UserDefaultsをデータベース代わりに使わないでください（起動が遅くなるうえ、検索も不便です）。
 
 #### 3. SwiftData：データに「ちゃんとした家」を用意する
 
@@ -107,7 +107,7 @@ struct RecordListView: View {
 ```
 :::
 
-この「@Model＋modelContainer＋@Query」のテンプレートは、そのままどんなプロジェクトにも持ち込めます——フィールド名を差し替えるだけでOK。データが変わると@Queryが画面を自動更新してくれる、なんとも気持ちいい仕掛けです。
+この「@Model＋modelContainer＋@Query」のテンプレートは、そのままどんなプロジェクトにも持ち込めます，フィールド名を差し替えるだけでOK。データが変わると@Queryが画面を自動更新してくれる、なんとも気持ちいい仕掛けです。
 
 #### 4. Codable：JSONを「翻訳」する
 
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "晴れ"
 ```
 :::
 
-鉄則：まず本物の返りJSONを見てから、フィールドを定義すること。「解析に失敗した」系のバグの多くは、フィールド名の書き間違いや型の読み違い（サーバーが"26.5"という文字列を送っているのに、こちらはDoubleと宣言）です——元のJSONをprintして見比べれば、10秒で原因が突き止められます。
+鉄則：まず本物の返りJSONを見てから、フィールドを定義すること。「解析に失敗した」系のバグの多くは、フィールド名の書き間違いや型の読み違い（サーバーが"26.5"という文字列を送っているのに、こちらはDoubleと宣言）です：元のJSONをprintして見比べれば、10秒で原因が突き止められます。
 
 #### 5. URLSession＋async/await：サーバーと会話する
 
@@ -175,7 +175,7 @@ struct WeatherService {
 落とし穴注意：ネットワークの2大鉄則
 
 {class="mt-1"}
-①通信は必ずasync/awaitで。メインスレッドは絶対に止めないこと——画面が固まるのは、クラッシュ並みの最悪体験です。Swiftの構造化並行性なら自然に書けますが、try awaitとdo/catchを忘れずに。②ATSはデフォルトで平文HTTPを禁止します：iOSはHTTPSを求めます。ローカルのhttp://サービスをテストするときだけ、Info.plistで一時的に例外（NSAppTransportSecurity）を開けますが、正式な製品はすべてHTTPSに——審査でもここは見られます。
+①通信は必ずasync/awaitで。メインスレッドは絶対に止めないこと：画面が固まるのは、クラッシュ並みの最悪体験です。Swiftの構造化並行性なら自然に書けますが、try awaitとdo/catchを忘れずに。②ATSはデフォルトで平文HTTPを禁止します：iOSはHTTPSを求めます。ローカルのhttp://サービスをテストするときだけ、Info.plistで一時的に例外（NSAppTransportSecurity）を開けますが、正式な製品はすべてHTTPSに——審査でもここは見られます。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -212,7 +212,7 @@ func friendlyMessage(_ error: Error) -> String {
 ユーザーには「人の言葉」を、ログには「原文」を（errorの中身をprint）。error.localizedDescriptionの英語の呪文を、そのままユーザーに投げつけないこと——製品の品質感は、こうした細部に宿ります。
 
 {class="mt-1"}
-無料の名言API（hitokotoなど）を探して、URLSession＋async/awaitで「今日のひとこと」を取得して画面中央に表示し、「次のひとこと」ボタンを付けます。気に入った文はSwiftDataで「お気に入り」に保存しましょう。この練習は、UserDefaults/SwiftData/Codable/URLSessionをぜんぶ一度に使います——これをやり終えれば、第7・8章は朝メシ前です。
+無料の名言API（hitokotoなど）を探して、URLSession＋async/awaitで「今日のひとこと」を取得して画面中央に表示し、「次のひとこと」ボタンを付けます。気に入った文はSwiftDataで「お気に入り」に保存しましょう。この練習は、UserDefaults/SwiftData/Codable/URLSessionをぜんぶ一度に使います，これをやり終えれば、第7・8章は朝メシ前です。
 :::
 
 ::: div .chapter-summary

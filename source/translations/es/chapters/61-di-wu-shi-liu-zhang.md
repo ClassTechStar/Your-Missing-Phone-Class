@@ -2,17 +2,17 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Capítulo 56: Pulir y publicar: pruebas, depuración y salida a Google Play
+nav: Capítulo 56: Tu App está lista, ahora publícala
 toc: default
 kind: chapter
 ---
 
-### Capítulo 56: Pulir y publicar: pruebas, depuración y salida a Google Play
+### Capítulo 56: Tu App está lista, ahora publícala
 
 {class="chapter-intro mb-4"}
 Ya tienes la App, ¿y ahora qué? Este capítulo responde a las tres tareas que separan "que funcione" de "que esté lista para entregar": cómo depurar con eficacia para encontrar bugs, cómo escribir pruebas que eviten regresiones y cómo subir la App a Google Play para que todo el mundo la descargue. Publicarla no es solo un acto ceremonial: es la línea que separa una obra de un producto.
 
-#### 1. Las tres herramientas de depuración: Logcat, puntos de interrupción e inspector de UI
+1. Las tres herramientas de depuración: Logcat, puntos de interrupción e inspector de UI
 
 ::: div .overflow-x-auto
 ```html
@@ -80,7 +80,7 @@ Android exige que todos los paquetes de instalación estén firmados: es como un
 
 1. Menú Build → Generate Signed Bundle / APK;
 2. Crea el archivo keystore (almacén de claves): define una contraseña y guárdala bien;
-3. Elige release y el formato AAB, y la compilación queda lista.
+3. Elige release y el formato AAB, y la compilación queda lista
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -108,17 +108,17 @@ Figura 6: los seis pasos para publicar en Google Play
 - Registro: una cuota única de 25 USD y una cuenta de Google que funcione;
 - Material: icono de la app (512×512), capturas de pantalla (al menos 2), descripción de funciones y enlace a la política de privacidad (obligatorio si recopilas datos);
 - Formulario de seguridad de datos: declara con honestidad qué datos recopilas; una app de gastos sin conexión puede declarar "cero recopilación";
-- Revisión: la primera publicación de una cuenta nueva suele pasar por revisión humana, que tarda de horas a días; si la rechazan, corrige según los comentarios.
+- Revisión: la primera publicación de una cuenta nueva suele pasar por revisión humana, que tarda de horas a días; si la rechazan, corrige según los comentarios
 
 Nota para usuarios de China: Google Play requiere un entorno de red especial y la distribución en China continental suele hacerse a través de tiendas nacionales (Huawei, Xiaomi, MyApp de Tencent, etc.). El proceso para publicar en esas tiendas es parecido, pero cada una tiene sus propios criterios de revisión; el mismo AAB/APK puede distribuirse en varias tiendas. Para practicar, con lograr publicar en una ya ganas.
 
-#### 5. Cómo crear el material de la tienda: la primera impresión son las descargas
+5. Cómo crear el material de la tienda: la primera impresión son las descargas
 
 La página de la tienda es el escaparate que ven los usuarios al pasear por ella. Tres elementos deciden la primera impresión:
 
 - Icono: 512×512; no uses una captura de pantalla como parche. Si no tienes ojo de diseñador, genera con una herramienta de IA una figura geométrica sencilla; solo vale si se reconoce de un vistazo incluso en tamaño reducido en la pantalla de inicio del móvil;
 - Capturas: al menos 2, mejor entre 4 y 6, mostrando las funciones más importantes; acompaña cada una con una frase en lenguaje humano ("registra un gasto en un segundo" es diez veces mejor que "una solución eficiente de contabilidad");
-- Descripción: la primera frase debe dejar claro "qué es + para quién es"; no acumules calificativos como "el más profesional, el más potente": el posicionamiento en la búsqueda de la tienda depende sobre todo de las palabras clave y de la conversión de descargas; la sinceridad funciona mejor que la exageración.
+- Descripción: la primera frase debe dejar claro "qué es + para quién es"; no acumules calificativos como "el más profesional, el más potente": el posicionamiento en la búsqueda de la tienda depende sobre todo de las palabras clave y de la conversión de descargas; la sinceridad funciona mejor que la exageración
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -128,7 +128,7 @@ Consejo: compara con los de tu mismo gremio
 Antes de publicar, date una vuelta por las diez primeras apps parecidas a la tuya en la tienda y guarda capturas para comparar: ¿qué estilo tienen sus iconos?, ¿qué puntos fuertes muestran sus capturas?, ¿cómo redactan el título? Imitar no es plagiar: aprende las fórmulas y pon tu propio contenido; es la lección que más rápido arranca cualquier producto nuevo.
 :::
 
-#### 6. Lista breve de optimización de rendimiento y reporte de errores
+6. Lista breve de optimización de rendimiento y reporte de errores
 
 Antes de publicar tu App, estas dos tareas merecen media hora cada una:
 
@@ -137,7 +137,7 @@ Antes de publicar tu App, estas dos tareas merecen media hora cada una:
 1. Usa LazyColumn para las listas: jamás montes una lista larga con Column; la carga diferida es la primera lección de rendimiento en Android;
 2. No metas las imágenes en resolución original: usa la librería Coil para reescalar y cachear automáticamente; una imagen original de 5 MB basta para atascar un móvil de gama baja;
 3. Evita el trabajo pesado en el hilo principal: base de datos, red y archivos grandes van dentro de corrutinas;
-4. Mide con el Profiler: el analizador de rendimiento incluido en Android Studio muestra memoria, CPU y consumo de batería. Primero mide, después optimiza; no vayas por intuición.
+4. Mide con el Profiler: el analizador de rendimiento incluido en Android Studio muestra memoria, CPU y consumo de batería. Primero mide, después optimiza; no vayas por intuición
 
 ##### 2. Reporte de errores
 

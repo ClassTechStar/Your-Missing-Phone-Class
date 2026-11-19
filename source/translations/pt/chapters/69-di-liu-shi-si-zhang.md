@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Um app que só “mostra” está morto; app de verdade é o que guarda dados e se conecta à rede. Neste capítulo você vai conhecer o “trio” da camada de dados do iOS: UserDefaults (para pequenas configurações), SwiftData (para dados estruturados) e URLSession (para conversar com servidores), além do Codable para interpretar JSON e do moderno async/await. Com este capítulo dominado, você já escreve apps de verdade, que lembram os hábitos do usuário e atualizam conteúdo em tempo real.
 
-#### 1. Como escolher a solução de armazenamento: comece por esta tabela
+1. Como escolher a solução de armazenamento: comece por esta tabela
 
 ::: div .overflow-x-auto
 ```html
@@ -23,7 +23,7 @@ Um app que só “mostra” está morto; app de verdade é o que guarda dados e 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 A divisão de trabalho do trio de dados
 
-Grave uma máxima: “configuração pequena vai para o UserDefaults, dados em lote vão para o SwiftData, e dados de fora chegam pelo URLSession”. O Core Data dos tutoriais antigos ainda funciona (o SwiftData é o seu casaco moderno), e SQLite escrito à mão você praticamente não vai tocar — aprenda o novo e não trilhe o caminho velho.
+Grave uma máxima: “configuração pequena vai para o UserDefaults, dados em lote vão para o SwiftData, e dados de fora chegam pelo URLSession”. O Core Data dos tutoriais antigos ainda funciona (o SwiftData é o seu casaco moderno), e SQLite escrito à mão você praticamente não vai tocar, aprenda o novo e não trilhe o caminho velho.
 
 #### 2. UserDefaults: guardando pequenas configurações
 
@@ -50,7 +50,7 @@ Lembre que ele só serve para configurações pequenas e esparsas — dezenas ou
 
 #### 3. SwiftData: dando aos dados uma “casa de verdade”
 
-O SwiftData é a solução oficial de banco de dados desde o iOS 17, e simplifica ao máximo “criar tabelas e fazer CRUD” — com uma única anotação @Model, a classe de dados vira uma tabela do banco:
+O SwiftData é a solução oficial de banco de dados desde o iOS 17, e simplifica ao máximo “criar tabelas e fazer CRUD”: com uma única anotação @Model, a classe de dados vira uma tabela do banco:
 
 ::: div .code-block
 :::inline div .code-head
@@ -107,7 +107,7 @@ struct RecordListView: View {
 ```
 :::
 
-Esse molde “@Model + modelContainer + @Query” pode ser copiado integralmente para qualquer projeto seu — basta trocar os nomes dos campos. Quando os dados mudam, o @Query atualiza a interface sozinho. É uma delícia.
+Esse molde “@Model + modelContainer + @Query” pode ser copiado integralmente para qualquer projeto seu: basta trocar os nomes dos campos. Quando os dados mudam, o @Query atualiza a interface sozinho. É uma delícia.
 
 #### 4. Codable: “traduzindo” o JSON
 
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "Ensolarado"
 ```
 :::
 
-Regra de ferro: olhe o JSON real retornado antes de definir os campos. Muitos bugs de “falha na conversão” vêm de nome de campo errado ou tipo chutado errado (o servidor manda a string “26.5” e você declara Double) — imprima o JSON original e compare: dez segundos e você acha o problema.
+Regra de ferro: olhe o JSON real retornado antes de definir os campos. Muitos bugs de “falha na conversão” vêm de nome de campo errado ou tipo chutado errado (o servidor manda a string “26.5” e você declara Double), imprima o JSON original e compare: dez segundos e você acha o problema.
 
 #### 5. URLSession + async/await: conversando com o servidor
 
@@ -175,14 +175,14 @@ struct WeatherService {
 Alerta antiprejuízo: duas regras de ferro da rede
 
 {class="mt-1"}
-① Acesso à rede é sempre com async/await, nunca bloqueando a thread principal — travar a interface é uma experiência de desejar desinstalar. A concorrência estruturada do Swift torna isso natural, mas não esqueça do try await e do do/catch. ② O ATS proíbe HTTP sem criptografia por padrão: o iOS exige HTTPS. Para testar serviços locais em http://, é preciso abrir uma exceção temporária no Info.plist (NSAppTransportSecurity), mas o produto final deve ser 100% HTTPS — a revisão da Apple fica de olho nisso.
+① Acesso à rede é sempre com async/await, nunca bloqueando a thread principal — travar a interface é uma experiência de desejar desinstalar. A concorrência estruturada do Swift torna isso natural, mas não esqueça do try await e do do/catch. ② O ATS proíbe HTTP sem criptografia por padrão: o iOS exige HTTPS. Para testar serviços locais em http://, é preciso abrir uma exceção temporária no Info.plist (NSAppTransportSecurity), mas o produto final deve ser 100% HTTPS, a revisão da Apple fica de olho nisso.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mãos à obra: crie um miniapp “frase do dia”
 
-#### 6. Erros de rede também precisam de “classificação”: não jogue toda falha no colo do usuário
+6. Erros de rede também precisam de “classificação”: não jogue toda falha no colo do usuário
 
 Sem internet, tempo esgotado, 404, erro 500 do servidor... erros diferentes pedem mensagens diferentes para o usuário:
 
@@ -212,7 +212,7 @@ func friendlyMessage(_ error: Error) -> String {
 Mostre ao usuário “linguagem humana” e guarde a “mensagem original” para o log (imprima o error completo). Não jogue no colo do usuário aquele inglês enigmático do error.localizedDescription — o toque de produto mora nesses detalhes.
 
 {class="mt-1"}
-Procure uma API gratuita de citações (algo como hitokoto), use URLSession + async/await para buscar a “frase do dia”, exiba-a no centro da tela e adicione um botão “Outra frase”. Depois, salve as frases favoritas numa “coleção” com SwiftData. Esse exercício usa UserDefaults/SwiftData/Codable/URLSession todos de uma vez — terminando-o, os capítulos 7 e 8 serão moleza.
+Procure uma API gratuita de citações (algo como hitokoto), use URLSession + async/await para buscar a “frase do dia”, exiba-a no centro da tela e adicione um botão “Outra frase”. Depois, salve as frases favoritas numa “coleção” com SwiftData. Esse exercício usa UserDefaults/SwiftData/Codable/URLSession todos de uma vez, terminando-o, os capítulos 7 e 8 serão moleza.
 :::
 
 ::: div .chapter-summary

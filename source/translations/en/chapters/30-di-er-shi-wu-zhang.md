@@ -2,23 +2,23 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Chapter 25: Dealing with Used Phones and Digital Legacies
+nav: Chapter 25: Before Selling Your Old Phone, Do These First
 toc: default
 kind: chapter
 ---
 
-### Chapter 25: Second-hand Phone Disposal and Digital Legacy
+### Chapter 25: Before Selling Your Old Phone, Do These First
 
 {class="chapter-intro mb-4"}
 Execute ultimate "formatting"
 
-#### : Modern phones' "factory reset" usually includes encrypted erasure.
+- Modern phones' "factory reset" usually includes encrypted erasure.
 
-Core principle: Data cleaning isn't "deletion" — it's "overwriting." Many people think dragging photos to the trash and clearing the album is enough, but after the phone changes hands, the new owner can scan with data recovery software and recover old photos, chat history, and ID photos — this kind of "social death" happens every year.
+Core principle: Data cleaning isn't "deletion" — it's "overwriting." Many people think dragging photos to the trash and clearing the album is enough, but after the phone changes hands, the new owner can scan with data recovery software and recover old photos, chat history, and ID photos, this kind of "social death" happens every year.
 
 1. <strong>: After factory reset, fill storage with junk files, then perform another factory reset.</strong>: Complete the last full backup, sign out of all accounts (iCloud, Huawei/Xiaomi/Samsung account, Google account), turn off "Find My Phone" — otherwise the next user will be blocked by Activation Lock.
-2. <strong>Apple "Legacy Contact"</strong>: Modern phones' "factory reset" usually includes encrypted wiping — it destroys the encryption key itself. Once the key is gone, all data on the disk instantly becomes garbled.
-3. <strong>Final "Camouflage" (Only for Old Devices)</strong>: Modern phones (iOS 8+, Android 6+) already have full disk encryption (FBE) by default. Factory reset destroys the encryption key — data is theoretically unrecoverable,<strong>this step is not needed</strong>. Only for very old non-encrypted devices (pre-2015), after factory reset, should you fill the storage with junk files and then perform another factory reset.
+2. <strong>Apple "Legacy Contact"</strong>: Modern phones' "factory reset" usually includes encrypted wiping, it destroys the encryption key itself. Once the key is gone, all data on the disk instantly becomes garbled.
+3. <strong>Final "Camouflage" (Only for Old Devices)</strong>: Modern phones (iOS 8+, Android 6+) already have full disk encryption (FBE) by default. Factory reset destroys the encryption key, data is theoretically unrecoverable,<strong>this step is not needed</strong>. Only for very old non-encrypted devices (pre-2015), after factory reset, should you fill the storage with junk files and then perform another factory reset.
 
 <strong>Brand-Specific Data Wipe Quick Reference Table</strong>: Although the principles are the same, each brand hides "factory reset" in slightly different locations. Key differences are below.
 
@@ -71,21 +71,21 @@ Core principle: Data cleaning isn't "deletion" — it's "overwriting." Many peop
 <i class="fas fa-exclamation-triangle mr-2"></i>The Three Most Overlooked Things
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- <strong>Not Signing Out of Accounts</strong>: Phone gets remotely locked after selling to the next buyer, and you can't get back in either — ultimately you have to take your ID to an official service center to unlock it.
+- <strong>Not Signing Out of Accounts</strong>: Phone gets remotely locked after selling to the next buyer, and you can't get back in either, ultimately you have to take your ID to an official service center to unlock it.
 - <strong>SD Card Not Removed</strong>: Factory reset doesn't format photos on the external SD card — remember to manually remove or separately format it.
 - <strong>USB Drive / OTG Peripheral Not Disconnected</strong>: If peripherals are connected during the wipe, it may accidentally clear their data or cause the wipe to be interrupted.
 :::
 
 #### Manual backup
 
-The data in your phone is no longer "virtual." It carries your money, social relationships, creative works, and even your "digital identity."<strong>After a person passes away, how should these assets be handled?</strong> This is no longer an abstract question — it's a real dilemma facing more and more families: relatives don't know the passwords, platforms won't allow inheritance, and cryptocurrency is lost forever.
+The data in your phone is no longer "virtual." It carries your money, social relationships, creative works, and even your "digital identity."<strong>After a person passes away, how should these assets be handled?</strong> This is no longer an abstract question, it's a real dilemma facing more and more families: relatives don't know the passwords, platforms won't allow inheritance, and cryptocurrency is lost forever.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-gavel mr-2"></i>Legal Basis: Article 49 of the Personal Information Protection Law
 
 {class="mt-1"}
-Article 49 of the Personal Information Protection Law of the People's Republic of China, effective in 2021, clearly states:<strong>When a natural person dies, their close relatives may, for their own legitimate and proper interests, exercise the rights to access, copy, correct, and delete the deceased's personal information as provided in this Chapter, unless the deceased made other arrangements during their lifetime.</strong>
+Article 49 of the Personal Information Protection Law of the People's Republic of China, effective in 2021, clearly states. <strong>When a natural person dies, their close relatives may, for their own legitimate and proper interests, exercise the rights to access, copy, correct, and delete the deceased's personal information as provided in this Chapter. The exception is when the deceased made other arrangements during their lifetime.</strong>
 
 {class="mt-2"}
 This means:
@@ -102,8 +102,8 @@ This means:
 
 The rules for these two most commonly used apps among Chinese people are different:
 
-- <strong>WeChat Account</strong>: According to the Tencent WeChat Software License and Service Agreement, account ownership belongs to Tencent — users only have usage rights,<strong>the account itself cannot be inherited or transferred</strong>. However, the <strong>Wallet balance and Qian funds</strong> are personal property. Close relatives can apply to Tenpay for withdrawal or transfer with a death certificate, proof of kinship, and an inheritance notarization.
-- <strong>Alipay</strong>: The account also cannot be directly inherited, but Alipay balance, Yuebao, and wealth management funds <strong>are inheritable property</strong>. Heirs can handle this through Alipay's customer service hotline or by submitting a death certificate and inheritance notarization offline; Ant Wealth financial products require going through the fund company's process.
+- <strong>WeChat Account</strong>: According to the Tencent WeChat Software License and Service Agreement, account ownership belongs to Tencent, users only have usage rights,<strong>the account itself cannot be inherited or transferred</strong>. However, the <strong>Wallet balance and Qian funds</strong> are personal property. Close relatives can apply to Tenpay for withdrawal or transfer with a death certificate, proof of kinship, and an inheritance notarization.
+- <strong>Alipay</strong>: The account also cannot be directly inherited, but Alipay balance, Yuebao, and wealth management funds <strong>are inheritable property</strong>. Heirs can handle this through Alipay's customer service hotline, or by submitting a death certificate and inheritance notarization offline; Ant Wealth financial products require going through the fund company's process.
 - <strong>Chat History</strong>: Legally classified as personal privacy — platforms won't proactively provide it to family members. If it involves inheritance leads, it can be obtained through litigation or notarization application.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
@@ -112,7 +112,7 @@ The rules for these two most commonly used apps among Chinese people are differe
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Don't directly hand the deceased's account passwords to family members to "keep using"</strong>— this violates platform agreements, and it's harder to prove things if funds are frozen or risk control is triggered.
-- <strong>Don't try to use the deceased's phone to receive verification codes for "withdrawals"</strong>— this may be classified as theft and could violate the law.
+- <strong>Don't try to use the deceased's phone to receive verification codes for "withdrawals"</strong>. This may be classified as theft and could violate the law.
 - <strong>Don't Delay</strong>: Some accounts are automatically deactivated after long periods of inactivity, making fund recovery more difficult.
 :::
 
@@ -127,12 +127,12 @@ Starting from iOS 15.2, Apple launched the "Legacy Contact" feature, allowing us
 4. Send the access key to the other person via SMS, email, or printed copy, and remind them to keep it safe.
 5. Multiple contacts can be added as backup to avoid single-point failure.
 
-The designated person doesn't need an Apple device — they can request access on Apple's official website with the key and death certificate. The entire process typically completes within 7 days.
+The designated person doesn't need an Apple device, they can request access on Apple's official website with the key and death certificate. The entire process typically completes within 7 days.
 
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Google's "Inactive Account Manager": Automatically Handling Digital Aftermath
 
-Google provides the "Inactive Account Manager," which can automatically execute preset actions when the user hasn't logged in for a long time — this is one of the most comprehensive digital legacy mechanisms available.
+Google provides the "Inactive Account Manager," which can automatically execute preset actions when the user hasn't logged in for a long time: this is one of the most comprehensive digital legacy mechanisms available.
 
 1. ). <strong>myaccount.google.com/inactive</strong>, sign in to your Google account.
 2. Set the timeout period: triggers after 3 / 6 / 12 / 18 months of inactivity.
@@ -146,7 +146,7 @@ Google provides the "Inactive Account Manager," which can automatically execute 
 
 Domestic mainstream social platforms handle deceased users' accounts in two ways:<strong>"Memorialization" (preserving the account for remembrance)</strong> verb <strong>"Deletion" (complete removal)</strong>. Family members can apply to platform customer service with a death certificate, proof of kinship, and the applicant's ID.
 
-- <strong>Weibo</strong>: Supports account "memorialization." Relatives apply with a death certificate — the account is locked and can't be logged into, but content is preserved. The profile page displays "This account has been set as a memorial account." Deletion can also be requested, requiring an inheritance notarization.
+- <strong>Weibo</strong>: Supports account "memorialization." Relatives apply with a death certificate, the account is locked and can't be logged into, but content is preserved. The profile page displays "This account has been set as a memorial account." Deletion can also be requested, requiring an inheritance notarization.
 - <strong>Douyin</strong>: Through "Me - Settings - Feedback &amp; Help - Account &amp; Security - Account Deletion" or manual customer service, submit a death certificate, proof of kinship, and applicant ID. After review, the account can be deleted or converted to memorial status.
 - <strong>Bilibili</strong>: Submit the deceased's certificate and proof of kinship through customer service channels. You can request account deletion or preservation as a memorial page; handling of the uploader's historical content requires consideration of copyright declarations.
 - <strong>Xiaohongshu (RED)</strong>: Appeal through official customer service, submit death certificate and proof of kinship, can request account deletion and content removal.
@@ -156,7 +156,7 @@ Domestic mainstream social platforms handle deceased users' accounts in two ways
 <i class="fas fa-lightbulb mr-2"></i>Key Reminders
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Platform rules may be updated — check the latest official customer service guidelines before proceeding.
+- Platform rules may be updated, check the latest official customer service guidelines before proceeding.
 - All certification documents should be scanned and backed up before submission. Keep originals safe.
 - When handling multiple platforms at once, you can apply for a single <strong>inheritance notarization</strong> to save repeated trips.
 :::
@@ -177,7 +177,7 @@ In addition to social accounts, more and more people hold <strong>genuinely valu
 <i class="fas fa-skull-crossbones mr-2"></i>The Real Cost of Cryptocurrency "Disappearance"
 
 {class="mt-1"}
-According to Chainalysis reports, globally <strong>over 3 million Bitcoins</strong> have been permanently lost due to lost private keys — equivalent to one-sixth of the existing total. If you hold crypto assets, be sure to let at least one person you absolutely trust know the <strong>recovery path</strong>— otherwise these assets will sleep forever on the blockchain.
+According to Chainalysis reports, globally <strong>over 3 million Bitcoins</strong> have been permanently lost due to lost private keys, equivalent to one-sixth of the existing total. If you hold crypto assets, be sure to let at least one person you absolutely trust know the <strong>recovery path</strong>. Otherwise these assets will sleep forever on the blockchain.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -194,8 +194,8 @@ Traditional property wills can't manage digital assets. I recommend updating a "
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Social: WeChat (account xxx), Weibo, Douyin, Bilibili, Xiaohongshu, etc.
-- Payment: Alipay, WeChat Pay, various bank card apps
-- Cloud: iCloud, Huawei Cloud, Mi Cloud, Google account, Microsoft account
+- Payment: Alipay, WeChat Pay, various bank card apps.
+- Cloud: iCloud, Huawei Cloud, Mi Cloud, Google account, Microsoft account.
 - Email: QQ Mail, NetEase Mail, Gmail, etc.
 - Other: Cloud drives, subscription services, game accounts, etc.
 
@@ -276,9 +276,9 @@ A single phone contains dozens of metals including gold, silver, copper, and rar
                     </table>
 ```
 
-- <strong>: Convert it into a car navigator, smart home hub, or surveillance camera.</strong>: Most recommended — standardized process, data security guaranteed. Apple, Huawei, Xiaomi, and other brands have "trade-in" entries on their official websites. After assessment, the value can be deducted from the new phone price.
-- <strong>Last backup and log out of all accounts.</strong>: Choose a reputable large recycling platform. After placing an order, SF Express picks up the device, and payment is made after inspection. Be sure to choose a <strong>platform that provides a "data wiping report"</strong>, and keep the receipt.
-- <strong>Charitable Donation</strong>: Contact local rural schools or community organizations — old phones can be converted into educational tablets or phones for the elderly.<strong>Before donating, be sure to perform a complete wipe and remove all SIM/SD cards</strong>.
+- <strong>: Convert it into a car navigator, smart home hub, or surveillance camera.</strong>: Most recommended: standardized process, data security guaranteed. Apple, Huawei, Xiaomi, and other brands have "trade-in" entries on their official websites. After assessment, the value can be deducted from the new phone price.
+- <strong>Last backup and log out of all accounts.</strong>: Choose a reputable large recycling platform. After placing an order, SF Express picks up the device. Payment is made after inspection. Be sure to choose a <strong>platform that provides a "data wiping report"</strong>, and keep the receipt.
+- <strong>Charitable Donation</strong>: Contact local rural schools or community organizations. Old phones can be converted into educational tablets or phones for the elderly.<strong>Before donating, be sure to perform a complete wipe and remove all SIM/SD cards</strong>.
 - <strong>(Optional) Fill storage with junk files, then factory reset again.</strong>: Repurpose as a car navigator, smart home controller, security camera, baby monitor, or digital photo frame. An old phone can serve for several more years.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -295,12 +295,12 @@ A phone's circuit board contains <strong>gold, silver, palladium, copper</strong
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Final complete backup: Upload photos to cloud, copy important files to computer, export and archive chat history.
-2. Sign out of all accounts: iCloud / Huawei / Xiaomi / Google, turn off "Find My Phone."
+2. Sign out of all accounts: iCloud / Huawei / Xiaomi / Google, turn off "Find My Phone.".
 3. Remove SIM and SD cards, disconnect all OTG peripherals.
 4. Perform encrypted factory reset, manually check "Format storage" if necessary.
 5. (Old devices only) Fill storage with junk files, then factory reset again.
 6. Choose its next destination: official trade-in, certified recycling platform, charitable donation, or pass to family.
-7. Sync and update your "digital legacy inventory" — cross out retired devices.
+7. Sync and update your "digital legacy inventory", cross out retired devices.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

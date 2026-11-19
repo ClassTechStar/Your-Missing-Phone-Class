@@ -32,4 +32,4 @@ after_part: fu-lu
 #### Link utili · Altri due «corsi mancanti»：
 
 - <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Un'introduzione all'informatica open source in cinese: da qui è nata l'idea di questo libro.
-- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Un corso gratuito del MIT su shell, Git e riga di comando — cose che a scuola non si insegnano ma si usano ogni giorno.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Un corso gratuito del MIT su shell, Git e riga di comando, cose che a scuola non si insegnano ma si usano ogni giorno.

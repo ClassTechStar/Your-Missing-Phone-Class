@@ -67,7 +67,7 @@ Molti confondono questi due termini al primo contatto; ecco una sintesi chiara:
                     </table>
 ```
 
-In sintesi: <strong>Git gestisce "come registrare le modifiche", GitHub gestisce "dove mettere le modifiche e come collaborare"</strong>. Git è uno strumento che gira in locale; GitHub è una piattaforma che mette i repository Git nel cloud, facilitando collaborazione e visualizzazione. Puoi usare solo Git senza GitHub (ad esempio per il versioning del codice che scrivi tu), ma per usare GitHub devi usare Git (perché GitHub è basato su Git).
+In sintesi: <strong>Git gestisce "come registrare le modifiche". GitHub gestisce "dove mettere le modifiche e come collaborare"</strong>. Git è uno strumento che gira in locale; GitHub è una piattaforma che mette i repository Git nel cloud, facilitando collaborazione e visualizzazione. Puoi usare solo Git senza GitHub (ad esempio per il versioning del codice che scrivi tu), ma per usare GitHub devi usare Git (perché GitHub è basato su Git).
 
 #### 3. Concetti e funzioni chiave di GitHub
 
@@ -97,7 +97,7 @@ GitHub non offre solo archiviazione di codice, ma anche:
 - <strong>Hosting e presentazione del codice</strong>: ogni repository ha una bella pagina web, con syntax highlighting; è la "vetrina" delle tue opere tecniche.
 - <strong>Community open source</strong>: puoi Star (aggiungi ai preferiti) i progetti che ti piacciono, Watch (segui) gli aggiornamenti, Follow (segui) gli sviluppatori, e partecipare alla collaborazione open source globale.
 
-#### 4. Registrazione e primi passi: crea il tuo primo repository in cinque minuti
+4. Registrazione e primi passi: crea il tuo primo repository in cinque minuti
 
 ##### Registrare un account
 
@@ -112,7 +112,7 @@ GitHub non offre solo archiviazione di codice, ma anche:
 2. Inserisci il nome del repository (Repository name), ad esempio <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
 3. Scrivi una breve descrizione (Description), per far capire a cosa serve il repository.
 4. Scegli Public o Private. I repository pubblici sono visibili a tutti, quelli privati solo a te e ai collaboratori. Anche gli account gratuiti supportano un numero illimitato di repository privati.
-5. Spunta "Add a README file" — il README è il "manuale di istruzioni" del progetto, è consigliato averlo in ogni repository.
+5. Spunta "Add a README file", il README è il "manuale di istruzioni" del progetto, è consigliato averlo in ogni repository.
 6. Clicca "Create repository": il tuo primo repository GitHub è nato!
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -152,7 +152,7 @@ Questo flusso garantisce che <strong>qualsiasi codice entri nel branch principal
 
 ##### Studenti a competizioni e progetti di corso
 
-Per gli studenti di Informatica che partecipano ad ACM, hackathon, tesi, GitHub è quasi indispensabile. Può fare da piattaforma di collaborazione e da vetrina per le opere — i giudici delle competizioni possono guardare direttamente il tuo repository, capire la qualità del codice e il processo di collaborazione. Molte aziende in fase di recruiting chiedono di allegare il link al profilo GitHub come prova delle capacità tecniche.
+Per gli studenti di Informatica che partecipano ad ACM, hackathon, tesi, GitHub è quasi indispensabile. Può fare da piattaforma di collaborazione e da vetrina per le opere: i giudici delle competizioni possono guardare direttamente il tuo repository, capire la qualità del codice e il processo di collaborazione. Molte aziende in fase di recruiting chiedono di allegare il link al profilo GitHub come prova delle capacità tecniche.
 
 ##### Knowledge base personale e hosting di appunti
 
@@ -184,7 +184,7 @@ Usa il repository di codice come un cloud disk: quando cambi computer o lavori s
 <i class="fas fa-exclamation-triangle mr-2"></i>Avvertenza di sicurezza
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Non caricare mai su GitHub password, chiavi API, stringhe di connessione al database o altre informazioni sensibili, specialmente nei repository pubblici — una volta trapelate, vengono catturate dai crawler in pochi secondi, con conseguenze gravi.
+- Non caricare mai su GitHub password, chiavi API, stringhe di connessione al database o altre informazioni sensibili, specialmente nei repository pubblici, una volta trapelate, vengono catturate dai crawler in pochi secondi, con conseguenze gravi.
 - Se per sbaglio hai caricato informazioni sensibili, eliminare solo il file non basta (restano nello storico); devi usare <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> o strumenti professionali per pulire la cronologia e cambiare immediatamente le chiavi trapelate.
 - Nemmeno i repository privati sono assolutamente sicuri: le informazioni sensibili vanno gestite con variabili d'ambiente, non nel repository di codice.
 :::
@@ -207,7 +207,7 @@ GitHub Pages ti permette di ospitare gratis un sito web statico; abbinato a gene
 
 #### 9. Conclusioni: perché tutti dovrebbero conoscere GitHub
 
-GitHub non è più solo "lo strumento dei programmatori", è piuttosto un <strong>modo di lavorare dell'era digitale</strong>: il versioning rende tutto tracciabile, il meccanismo di collaborazione fa girare il team in modo efficiente, lo spirito open source fa circolare liberamente la conoscenza. Anche se non scrivi codice, capire i concetti di "commit, branch, merge" ti aiuterà a gestire meglio qualsiasi contenuto che richieda "modifiche ripetute + collaborazione multipla" — dalla tesi ai documenti, dagli appunti ai progetti.
+GitHub non è più solo "lo strumento dei programmatori", è piuttosto un <strong>modo di lavorare dell'era digitale</strong>: il versioning rende tutto tracciabile, il meccanismo di collaborazione fa girare il team in modo efficiente, lo spirito open source fa circolare liberamente la conoscenza. Anche se non scrivi codice, capire i concetti di "commit, branch, merge" ti aiuterà a gestire meglio qualsiasi contenuto che richieda "modifiche ripetute + collaborazione multipla", dalla tesi ai documenti, dagli appunti ai progetti.
 
 Per gli studenti di Informatica, GitHub è ancora più una competenza indispensabile: è il tuo portfolio, la piattaforma di collaborazione, la libreria di risorse di apprendimento e il "curriculum" più convincente in fase di ricerca di lavoro. Apri prima possibile un account, carica i tuoi compiti di corso e i tuoi piccoli progetti, accumula con il tempo: dopo qualche anno avrai un curriculum tecnico che farà brillare gli occhi del recruiter.
 

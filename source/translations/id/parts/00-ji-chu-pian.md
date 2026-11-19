@@ -10,4 +10,4 @@ class: mb-12
 ## 1. Bagian Dasar (Bab 0-7)
 
 {class="chapter-intro mb-4"}
-Ponsel Anda jauh lebih kuat dari yang Anda bayangkan. Bagian ini adalah fondasi dari semua "trik jitu" — kita samakan dulu "bahasanya", lalu mengenal dan mengendalikan perangkat Anda langkah demi langkah. Entah Anda baru mendapat ponsel pertama, atau pemakai lama yang tak pernah menggali dalam, bagian ini akan membuat Anda mengenal kembali kotak ajaib di tangan Anda.
+Ponsel Anda jauh lebih kuat dari yang Anda bayangkan. Bagian ini adalah fondasi dari semua "trik jitu", kita samakan dulu "bahasanya", lalu mengenal dan mengendalikan perangkat Anda langkah demi langkah. Entah Anda baru mendapat ponsel pertama, atau pemakai lama yang tak pernah menggali dalam, bagian ini akan membuat Anda mengenal kembali kotak ajaib di tangan Anda.

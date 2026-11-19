@@ -2,15 +2,15 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: 第五十六章：打磨与发布——上架Google Play
+nav: 第五十六章：App 做好了，怎么上架
 toc: default
 kind: chapter
 ---
 
-### 第五十六章：打磨与发布——测试、调试与上架 Google Play
+### 第五十六章：App 做好了，怎么上架
 
 {class="chapter-intro mb-4"}
-App 做出来了，然后呢？这一章回答"从能跑"到"能交付"的三件事：怎么高效地调试找 bug、怎么写测试防回归、怎么把 App 送上 Google Play 让全世界下载。上架不只是仪式感——它是把一个作品变成产品的分水岭。
+App 做出来了，然后呢？这一章回答"从能跑"到"能交付"的三件事：怎么高效地调试找 bug、怎么写测试防回归、怎么把 App 送上 Google Play 让全世界下载。上架不只是仪式感，它是把一个作品变成产品的分水岭。
 
 #### 一、调试三板斧：Logcat、断点、UI 检查器
 
@@ -33,7 +33,7 @@ App 做出来了，然后呢？这一章回答"从能跑"到"能交付"的三件
 
 #### 二、测试：给代码上保险
 
-手测靠不住——改了这个功能，另一个悄悄坏了。测试就是"后悔药"兼"防弹衣"。安卓测试分三层，新手先吃透第一层：
+手测靠不住，改了这个功能，另一个悄悄坏了。测试就是"后悔药"兼"防弹衣"。安卓测试分三层，新手先吃透第一层：
 
 ::: div .overflow-x-auto
 ```html
@@ -78,8 +78,8 @@ fun normalValueParses() {
 
 安卓要求所有安装包必须<strong>签名</strong>——就像盖公章，证明"这个包是我出的，没被篡改"。调试时 Android Studio 自动用 debug 签名；发布要用自己的 release 签名。流程：
 
-1. 菜单 Build → Generate Signed Bundle / APK；
-2. 创建 keystore 文件（密钥库）——<strong>设置密码并妥善保管</strong>；
+1. 菜单 Build → Generate Signed Bundle / APK。
+2. 创建 keystore 文件（密钥库）<strong>设置密码并妥善保管</strong>。
 3. 选择 release + AAB 格式，构建完成。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
@@ -87,7 +87,7 @@ fun normalValueParses() {
 <i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：keystore 丢了 = App 丢了
 
 {class="mt-1"}
-上架后更新 App 必须用<strong>同一个</strong>签名，否则商店会拒绝更新。keystore 文件和密码一旦丢失，你只能换个新应用重新上架——老用户全都接不上。务必把 keystore 和密码备份到安全的地方（云盘加密 + 记事本），这是安卓开发者最昂贵的教训之一。
+上架后更新 App 必须用<strong>同一个</strong>签名，否则商店会拒绝更新。keystore 文件和密码一旦丢失，你只能换个新应用重新上架，老用户全都接不上。务必把 keystore 和密码备份到安全的地方（云盘加密 + 记事本），这是安卓开发者最昂贵的教训之一。
 :::
 
 #### 四、上架 Google Play 全流程
@@ -105,9 +105,9 @@ fun normalValueParses() {
 图 6：Google Play 上架六步走
 :::
 
-- <strong>注册</strong>：一次性 25 美元注册费，需能用的 Google 账号；
-- <strong>素材</strong>：应用图标（512×512）、截图（至少 2 张）、功能描述、隐私政策链接（收集数据必填）；
-- <strong>数据安全表</strong>：如实申报收集了哪些数据——不联网的记账本可以"零收集"；
+- <strong>注册</strong>：一次性 25 美元注册费，需能用的 Google 账号。
+- <strong>素材</strong>：应用图标（512×512）、截图（至少 2 张）、功能描述、隐私政策链接（收集数据必填）。
+- <strong>数据安全表</strong>：如实申报收集了哪些数据，不联网的记账本可以"零收集"。
 - <strong>审核</strong>：新账号首次上架常被人工审核，数小时到数天不等，被打回就按意见改。
 
 国内用户注意：Google Play 需要特殊网络环境，且中国大陆地区分发通常走国内商店（华为、小米、应用宝等）。<strong>上架国内商店的流程类似，但各商店有自己的审核口味</strong>——同一个 AAB/APK 可以多店分发。作为练手，先走通一家就赢了。
@@ -116,9 +116,9 @@ fun normalValueParses() {
 
 商店页是用户"逛店"时看到的橱窗。三个素材决定第一印象：
 
-- <strong>图标</strong>：512×512，别用截图凑合。没设计能力就用 AI 工具生成一个简洁几何图形，<strong>在手机桌面上缩小后还能一眼认出</strong>才算合格；
-- <strong>截图</strong>：至少 2 张，最好 4-6 张，展示最核心的功能场景；每张配一句人话文案（"一秒记一笔"比"高效的记账解决方案"好十倍）；
-- <strong>描述</strong>：第一句说清"这是什么 + 给谁用"，别堆砌"最专业、最强"——商店搜索权重主要看关键词和下载转化，真诚比夸张有效。
+- <strong>图标</strong>：512×512，别用截图凑合。没设计能力就用 AI 工具生成一个简洁几何图形，<strong>在手机桌面上缩小后还能一眼认出</strong>才算合格。
+- <strong>截图</strong>：至少 2 张，最好 4-6 张，展示最核心的功能场景；每张配一句人话文案（"一秒记一笔"比"高效的记账解决方案"好十倍）。
+- <strong>描述</strong>：第一句说清"这是什么 + 给谁用"，别堆砌"最专业、最强"，商店搜索权重主要看关键词和下载转化，真诚比夸张有效。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -134,10 +134,10 @@ App 上架前，这两件事值得各花半小时：
 
 ##### 1. 性能自查四条
 
-1. <strong>列表用 LazyColumn</strong>：长列表千万别用 Column 硬排——懒加载是安卓性能的第一课；
-2. <strong>图片别硬塞原图</strong>：用 Coil 图片库自动缩放缓存，一张 5MB 原图足以卡爆低端机；
-3. <strong>避免在主线程干重活</strong>：数据库、网络、大文件都在协程里做；
-4. <strong>用 Profiler 量一量</strong>：Android Studio 自带的性能分析器能看内存、CPU、耗电——先测量，再优化，别凭感觉。
+1. <strong>列表用 LazyColumn</strong>：长列表千万别用 Column 硬排：懒加载是安卓性能的第一课。
+2. <strong>图片别硬塞原图</strong>：用 Coil 图片库自动缩放缓存，一张 5MB 原图足以卡爆低端机。
+3. <strong>避免在主线程干重活</strong>：数据库、网络、大文件都在协程里做。
+4. <strong>用 Profiler 量一量</strong>：Android Studio 自带的性能分析器能看内存、CPU、耗电，先测量，再优化，别凭感觉。
 
 ##### 2. 崩溃上报
 
@@ -159,5 +159,5 @@ App 上架前，这两件事值得各花半小时：
 - 读崩溃：从堆栈下往上找自己包名的第一行
 - 测试三层：单元（秒级，先学这个）/仪器/手动
 - 发布必须签名：keystore 和密码备份好，丢了 App 就"换人"了
-- 上架六步：注册 → 素材 → 上传 AAB → 数据安全表 → 审核 → 上架
+- 上架六步：注册、素材、上传 AAB、数据安全表、审核、上架
 :::

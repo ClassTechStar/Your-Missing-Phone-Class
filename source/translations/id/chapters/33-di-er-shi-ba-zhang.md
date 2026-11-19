@@ -2,19 +2,19 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Bab 28: Menggunakan Uang dengan Tepat untuk Ponsel Idaman—Panduan Utama Memilih Ponsel
+nav: Bab 28: Sebelum beli ponsel, pikirkan tiga hal ini
 toc: default
 kind: chapter
 ---
 
-### Bab 28: Belanja Ponsel Impian dengan Uang Tepat — Panduan Beli Ponsel Ultimate
+### Bab 28: Sebelum beli ponsel, pikirkan tiga hal ini
 
 {class="chapter-intro mb-4"}
-Soal beli ponsel, banyak orang akan lihat review seminggu, bandingkan harga sebulan, tapi akhirnya tetap bingung beli flagship 5-6 ribu yuan yang sebenarnya tidak dibutuhkan. Bab ini tidak daftar spec sheet — itu bisa dilihat di situs resmi. Yang ingin saya lakukan adalah memberi Anda satu set "pola pikir memilih ponsel", ke depan apa pun ponsel baru di pasar, Anda bisa menilai sendiri apakah cocok untuk Anda.
+Soal beli ponsel, banyak orang akan lihat review seminggu, bandingkan harga sebulan, tapi akhirnya tetap bingung beli flagship 5-6 ribu yuan yang sebenarnya tidak dibutuhkan. Bab ini tidak daftar spec sheet: itu bisa dilihat di situs resmi. Yang ingin saya lakukan adalah memberi Anda satu set "pola pikir memilih ponsel", ke depan apa pun ponsel baru di pasar, Anda bisa menilai sendiri apakah cocok untuk Anda.
 
 #### 0. Metode Tiga Langkah: Kebutuhan → Budget → Model
 
-Banyak orang tanya online "3000 yuan beli ponsel apa yang bagus", pertanyaan ini sebenarnya tidak bisa dijawab — karena tidak tahu Anda beli ponsel untuk apa. Urutan berpikir yang benar saat beli ponsel seharusnya:
+Banyak orang tanya online "3000 yuan beli ponsel apa yang bagus", pertanyaan ini sebenarnya tidak bisa dijawab, karena tidak tahu Anda beli ponsel untuk apa. Urutan berpikir yang benar saat beli ponsel seharusnya:
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
@@ -26,7 +26,7 @@ Banyak orang tanya online "3000 yuan beli ponsel apa yang bagus", pertanyaan ini
 3. <strong>Terakhir baru pilih model</strong>: bawa urutan kebutuhan dan budget Anda, untuk mencocokkan model.
 :::
 
-#### 1. Cara Membaca Parameter Inti — Tidak Perlu Semua Paham, Lima Item Ini Cukup
+1. Cara Membaca Parameter Inti — Tidak Perlu Semua Paham, Lima Item Ini Cukup
 
 Spec sheet bisa puluhan item data, sebenarnya pengguna biasa hanya perlu fokus pada lima dimensi ini:
 
@@ -71,7 +71,7 @@ Spec sheet bisa puluhan item data, sebenarnya pengguna biasa hanya perlu fokus p
 ```
 :::
 
-#### 2. Rekomendasi per Kelas Budget (Berdasarkan Pasar Pertengahan 2026)
+2. Rekomendasi per Kelas Budget (Berdasarkan Pasar Pertengahan 2026)
 
 Rekomendasi berikut berdasarkan pasar daratan Tiongkok 2026, harga adalah harga resmi awal. Harga spesifik akan berfluktuasi, mengacu pada harga aktual saat pembelian.
 
@@ -176,7 +176,7 @@ Berikut beberapa "profil pemakaian" paling umum, cocokkan saja:
 1. <strong>Jebakan 1: Empat lima lensa tidak sama dengan foto bagus</strong>— pabrikan suka menumpuk jumlah lensa di spec, sering ada dua lensa 200MP "pemanis" (macro + depth), sebenarnya tidak berguna. Melihat kemampuan foto ponsel,<strong>cukup lihat main camera + ultra wide + telephoto</strong> tiga lensa ini sudah cukup. Sisanya bisa dianggap tidak ada.
 2. <strong>Jebakan 2: Jangan terintimidasi 100MP</strong>— piksel tinggi tidak berarti kualitas baik. Ukuran sensor, aperture, tuning algoritma jauh lebih penting dari piksel. Banyak flagship pakai sensor besar 50MP, foto yang dihasilkan jauh lebih baik dari ponsel 100MP harga ribuan yuan.
 3. <strong>Jebakan 3: Jangan beli ponsel kustom operator</strong>— "deposit pulsa gratis ponsel" tampak menguntungkan, tapi ponsel kustom operator update sistem lambat, mungkin ada pre-installed App yang tidak bisa dihapus, dan biasanya operator-locked (hanya bisa pakai kartu operator ini). Tampak hemat, sebenarnya "mengunci" Anda.
-4. <strong>Jebakan 4: "Layar lengkung itu premium" — pemasaran, bukan kebenaran</strong>— layar lengkung dulu adalah simbol flagship, tapi semakin banyak orang menemukan masalahnya: pelindung layar sulit, mis-touch tepi, layar pecah servis mahal. Tren 2026 adalah kembali ke "slightly curved" bahkan "flat". Jangan memilih layar lengkung karena "lengkung berarti premium".
+4. <strong>Jebakan 4: "Layar lengkung itu premium", pemasaran, bukan kebenaran</strong>— layar lengkung dulu adalah simbol flagship, tapi semakin banyak orang menemukan masalahnya: pelindung layar sulit, mis-touch tepi, layar pecah servis mahal. Tren 2026 adalah kembali ke "slightly curved" bahkan "flat". Jangan memilih layar lengkung karena "lengkung berarti premium".
 5. <strong>Jebakan 5: Tidak semua "ponsel AI" benar-benar berguna</strong>— 2026 semua pabrikan berteriak "ponsel AI", tapi banyak hanya mengganti nama voice assistant yang sudah ada. Fitur AI yang benar-benar berguna: terjemahan real-time, AI erase (hapus orang dari foto), AI photo editing, large model inference on-device, ringkasan pintar lokalisasi. Fitur mencolok lainnya pada dasarnya gimmick.
 
 #### 5. Kapan Beli Paling Hemat?
@@ -185,7 +185,7 @@ Berikut beberapa "profil pemakaian" paling umum, cocokkan saja:
 - <strong>Double 11 (akhir Oktober hingga pertengahan November)</strong>: promosi besar paruh kedua, intensitas mirip 618. Periode ini banyak brand flagship generasi baru, baru rilis, flagship generasi sebelumnya paling besar penurunan harganya.
 - <strong>Satu bulan setelah rilis</strong>: saat baru rilis harga original, satu bulan kemudian harga channel (toko pihak ketiga) umumnya lebih murah 200-500.
 - <strong>Dua minggu sebelum Imlek hingga Cap Go Meh</strong>: toko offline clearance "festival belanja tahun baru", bisa menawar dengan staf.
-- <strong>Waktu tidak disarankan</strong>: langsung beli hari rilis — kecuali Anda benar-benar ingin jadi pengguna pertama, jika tidak harga rilis adalah yang paling mahal.
+- <strong>Waktu tidak disarankan</strong>: langsung beli hari rilis, kecuali Anda benar-benar ingin jadi pengguna pertama, jika tidak harga rilis adalah yang paling mahal.
 
 #### 6. Cara Memilih Channel — Beli di Mana yang Terpercaya?
 

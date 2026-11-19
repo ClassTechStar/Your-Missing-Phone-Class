@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Ya tienes la app hecha, ¿y ahora qué? Este capítulo responde a las tres cosas que separan «funciona» de «se puede entregar»: cómo depurar con eficacia para cazar errores, cómo escribir pruebas para evitar regresiones y cómo subir la app al App Store para que la descargue el mundo entero. Publicar no es solo una ceremonia: es la línea que convierte una obra en producto.
 
-#### 1. Las tres armas de la depuración: print, puntos de interrupción y vista previa
+1. Las tres armas de la depuración: print, puntos de interrupción y vista previa
 
 ::: div .overflow-x-auto
 ```html
@@ -111,15 +111,15 @@ Figura 5: los seis pasos para publicar en el App Store
 - Material: icono (1024×1024, sin esquinas redondeadas: Apple lo recorta él solo), capturas (en los tamaños de iPhone), descripción y enlace a la política de privacidad;
 - Cuestionario de privacidad: declara con verdad qué datos recoges; una libreta sin conexión puede declarar «no se recogen datos»;
 - Revisión: el primer envío suele esperar de 1 a 7 días; si te rechazan, corrige punto por punto según las «notas de revisión»: los motivos de rechazo de Apple suelen venir escritos con todo detalle y basta con hacerles caso;
-- TestFlight: antes de publicar, manda la versión de pruebas a tus amigos para las pruebas internas (hasta 10000 personas), recoge una ronda de comentarios y presenta oficialmente después: puro estilo profesional.
+- TestFlight: antes de publicar, manda la versión de pruebas a tus amigos para las pruebas internas (hasta 10000 personas), recoge una ronda de comentarios y presenta oficialmente después: puro estilo profesional
 
-#### 5. Cómo hacer el material de la tienda: la primera impresión son las descargas
+5. Cómo hacer el material de la tienda: la primera impresión son las descargas
 
 La página de la tienda es el escaparate que ve el usuario al «pasear por la tienda». Tres materiales deciden la primera impresión:
 
 - Icono: 1024×1024, no te conformes con una captura. Si no tienes mano de diseñador, genera una figura sencilla con una herramienta de IA; solo aprueba si se reconoce de un vistazo incluso reducido en la pantalla de inicio;
 - Capturas: al menos 2 juegos (en los tamaños de iPhone habituales) mostrando los escenarios más esenciales; en cada una, una frase en lenguaje humano («Anota un gasto en un segundo» vale diez veces más que «Una solución eficiente de contabilidad»);
-- Descripción: la primera frase debe aclarar «qué es + para quién es»; no amontones «lo más profesional, lo más potente»: la sinceridad rinde más que la exageración.
+- Descripción: la primera frase debe aclarar «qué es + para quién es»; no amontones «lo más profesional, lo más potente»: la sinceridad rinde más que la exageración
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -138,7 +138,7 @@ Que no se cuelgue en tus pruebas no quiere decir que no se cuelgue en el teléfo
 1. Listas con LazyVStack / List: no montes una lista larga con un VStack normal; la carga diferida es la primera lección de rendimiento;
 2. No fuerces las imágenes originales: usa AsyncImage (imágenes remotas) y la caché del sistema; una imagen original de 5 MB basta para asfixiar a los modelos viejos;
 3. No hagas trabajo pesado en el hilo principal: la red y los archivos grandes van con async/await;
-4. Mide con Instruments: el analizador de rendimiento que trae Xcode (Time Profiler, chequeo de fugas de memoria): primero mide, luego optimiza, no vayas a corazonadas.
+4. Mide con Instruments: el analizador de rendimiento que trae Xcode (Time Profiler, chequeo de fugas de memoria): primero mide, luego optimiza, no vayas a corazonadas
 
 {class="mt-1"}
 ① Añade 3 pruebas unitarias a parseAmount y otras lógicas (que se pongan verdes con ⌘U); ② caza con un punto de interrupción un cuelgue provocado por ti mismo y arréglalo; ③ con Product → Archive genera un paquete y usa TestFlight para invitar a tus amigos a las pruebas internas; ④ si te sobran fuerzas, regístrate como desarrollador y presenta de verdad la libreta al App Store. Los tres primeros pasos puedes hacerlos esta misma noche.

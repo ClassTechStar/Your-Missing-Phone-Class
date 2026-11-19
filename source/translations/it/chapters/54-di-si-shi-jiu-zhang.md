@@ -14,12 +14,12 @@ Chi vuole lavorare bene deve prima affilare gli strumenti. In questo capitolo al
 
 #### 1. Installare Android Studio
 
-Android Studio è l'ambiente di sviluppo integrato (IDE) ufficiale di Google: è gratuito e ha tutto a bordo — scrivere codice, vedere l'anteprima dell'interfaccia, fare debug, creare i pacchetti. Installazione in quattro passi:
+Android Studio è l'ambiente di sviluppo integrato (IDE) ufficiale di Google: è gratuito e ha tutto a bordo: scrivere codice, vedere l'anteprima dell'interfaccia, fare debug, creare i pacchetti. Installazione in quattro passi:
 
 1. Apri il sito ufficiale developer.android.com/studio e scarica l'ultima versione stabile (ad agosto 2026 la versione successiva a Narwhal, disponibile per Windows/Mac/Linux);
-2. Avvia il pacchetto d'installazione e vai sempre avanti con «Avanti» — l'assistente includerà in automatico l'Android SDK e i componenti dell'emulatore;
+2. Avvia il pacchetto d'installazione e vai sempre avanti con «Avanti», l'assistente includerà in automatico l'Android SDK e i componenti dell'emulatore;
 3. Al primo avvio scarica i componenti dell'SDK come indicato (va bene lasciare le spunte predefinite: servono qualche minuto e qualche GB di spazio);
-4. Finito, vedrai la pagina di benvenuto — complimenti, la «cucina» è pronta.
+4. Finito, vedrai la pagina di benvenuto, complimenti, la «cucina» è pronta
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -42,14 +42,14 @@ Nella pagina di benvenuto clicca su New Project, scegli il modello Empty Activit
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Le tre cose da compilare per creare un progetto
 
-Dopo Finish, Android Studio con Gradle scaricherà in automatico le dipendenze e compilerà il progetto (la prima volta aspetta qualche minuto, poi ogni volta sarà molto più rapido). A build finita hai un'app che si può avviare — anche se per ora sa solo mostrare una riga: "Hello Android!".
+Dopo Finish, Android Studio con Gradle scaricherà in automatico le dipendenze e compilerà il progetto (la prima volta aspetta qualche minuto, poi ogni volta sarà molto più rapido). A build finita hai un'app che si può avviare, anche se per ora sa solo mostrare una riga: "Hello Android!".
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Consiglio: i segreti del nome del pacchetto
 
 {class="mt-1"}
-Il nome del pacchetto (package name) è come la «carta d'identità» dell'app: non può ripetersi in tutto il mondo e, una volta pubblicata l'app, non si può più cambiare. Per gli esercizi personali basta com.example.xxx; per un prodotto vero serve il tuo dominio invertito (per esempio com.tuonome.app). Non pubblicare con com.example — lo store la respinge.
+Il nome del pacchetto (package name) è come la «carta d'identità» dell'app: non può ripetersi in tutto il mondo e, una volta pubblicata l'app, non si può più cambiare. Per gli esercizi personali basta com.example.xxx; per un prodotto vero serve il tuo dominio invertito (per esempio com.tuonome.app). Non pubblicare con com.example, lo store la respinge.
 :::
 
 #### 3. Farlo girare: emulatore e dispositivo reale
@@ -62,12 +62,12 @@ L'emulatore crea un telefono Android virtuale dentro il computer. In Android Stu
 
 ##### 2. Il debug su dispositivo reale (più consigliato)
 
-Il dispositivo reale resta l'ambiente di prova più fedele — la sensazione degli scorrimenti, la rete vera, i sensori veri: l'emulatore non gli si avvicina. E il debug su un telefono Android vero è semplicissimo:
+Il dispositivo reale resta l'ambiente di prova più fedele, la sensazione degli scorrimenti, la rete vera, i sensori veri: l'emulatore non gli si avvicina. E il debug su un telefono Android vero è semplicissimo:
 
 1. Sul telefono apri [Impostazioni] → [Info sul telefono], tocca 7 volte di fila «Numero build» per attivare le «Opzioni sviluppatore»;
 2. In [Opzioni sviluppatore] attiva il Debug USB;
 3. Collega il telefono al computer con il cavo dati e nel popup del telefono scegli «Consenti debug USB»;
-4. Torna in Android Studio: il tuo telefono comparirà nel menu a tendina dei dispositivi in alto; clicca Run.
+4. Torna in Android Studio: il tuo telefono comparirà nel menu a tendina dei dispositivi in alto; clicca Run
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -112,8 +112,8 @@ Figura 2: la struttura del progetto che un principiante deve conoscere (regola p
 :::
 
 - MainActivity.kt: la «porta d'ingresso» dell'app. Quando l'utente tocca l'icona, è la prima cosa che si sveglia. Nel modello attuale si occupa di mostrare "Hello Android!".
-- AndroidManifest.xml: la «carta d'identità» dell'app — dichiara come si chiama l'app, quale icona usa, quali schermate ha e quali permessi richiede (fotocamera, posizione, ecc.).
-- Cartella res/: il magazzino delle risorse, dove stanno immagini, icone, testi e colori. Mettere i testi nei file di risorse invece di scriverli fissi nel codice è una buona abitudine dello sviluppo Android (comodissimo per cambiare lingua o tema).
+- AndroidManifest.xml: la «carta d'identità» dell'app, dichiara come si chiama l'app, quale icona usa, quali schermate ha e quali permessi richiede (fotocamera, posizione, ecc.).
+- Cartella res/: il magazzino delle risorse, dove stanno immagini, icone, testi e colori. Mettere i testi nei file di risorse invece di scriverli fissi nel codice è una buona abitudine dello sviluppo Android, (comodissimo per cambiare lingua o tema).
 - build.gradle.kts: la «ricetta» della build — dichiara la versione minima supportata e da quali librerie dipende il progetto (per esempio Compose).
 
 #### 5. Primo colpo di mano: cambia "Hello" con il tuo nome
@@ -137,9 +137,9 @@ setContent {
 ```
 :::
 
-Congratulazioni: hai appena completato un intero ciclo «modifico il codice → compilo → installo → eseguo». Questo ciclo è la routine di sviluppo di ogni giorno a venire. Già che sei in calore, prova a cambiare qualcos'altro: aumenta la dimensione del testo, cambia colore — nel prossimo capitolo scopriremo da dove nascono queste «magie».
+Congratulazioni: hai appena completato un intero ciclo «modifico il codice → compilo → installo → eseguo». Questo ciclo è la routine di sviluppo di ogni giorno a venire. Già che sei in calore, prova a cambiare qualcos'altro: aumenta la dimensione del testo, cambia colore, nel prossimo capitolo scopriremo da dove nascono queste «magie».
 
-#### 6. Pronto soccorso degli errori comuni: la «sala d'emergenza» delle prime due settimane da principiante
+6. Pronto soccorso degli errori comuni: la «sala d'emergenza» delle prime due settimane da principiante
 
 Nella fase di preparazione dell'ambiente e di prima build molto probabilmente incontrerai i tre errori qui sotto. Niente panico: hanno tutti la loro cura:
 
@@ -157,7 +157,7 @@ Tabella di pronto soccorso per gli errori d'ambiente del principiante
 Consiglio: il metodo per cercare gli errori
 
 {class="mt-1"}
-La prima riga del messaggio d'errore è la più preziosa — copiala così com'è nel motore di ricerca, aggiungendo la parola chiave "android studio". Non cercare domande vaghe tipo «come faccio a installare l'ambiente», ma errori precisi tipo "Gradle sync failed: Could not resolve com.android.tools.build". Solo le domande precise ottengono risposte precise.
+La prima riga del messaggio d'errore è la più preziosa, copiala così com'è nel motore di ricerca, aggiungendo la parola chiave "android studio". Non cercare domande vaghe tipo «come faccio a installare l'ambiente», ma errori precisi tipo "Gradle sync failed: Could not resolve com.android.tools.build". Solo le domande precise ottengono risposte precise.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -165,7 +165,7 @@ La prima riga del messaggio d'errore è la più preziosa — copiala così com'�
 Mani all'opera: completa la tua «checklist» di riti da sviluppatore
 
 {class="mt-1"}
-① Installa Android Studio e fai girare l'emulatore; ② avvia una volta la tua app su un dispositivo reale e salva uno screenshot come ricordo; ③ cambia il testo Hello con il tuo nome; ④ comprimi il progetto e conservane un archivio. Fatti questi quattro passi, potrai annunciare agli amici: anch'io sono uno sviluppatore Android (screenshot alla mano).
+① Installa Android Studio e fai girare l'emulatore. ② avvia una volta la tua app su un dispositivo reale e salva uno screenshot come ricordo. ③ cambia il testo Hello con il tuo nome. ④ comprimi il progetto e conservane un archivio. Fatti questi quattro passi, potrai annunciare agli amici: anch'io sono uno sviluppatore Android (screenshot alla mano).
 :::
 
 ::: div .chapter-summary
@@ -175,6 +175,6 @@ Riepilogo del capitolo
 - Android Studio = IDE ufficiale e gratuito; consigliati 16 GB di RAM + 20 GB di disco + virtualizzazione attiva
 - I tre ingredienti di un nuovo progetto: nome, nome del pacchetto (univoco al mondo, niente pubblicazione con com.example), SDK minimo (da API 26)
 - Due modi di eseguire: l'emulatore (telefono virtuale nel computer) e il dispositivo reale (attiva il debug USB e ricordati di chiuderlo dopo l'uso)
-- La regola del progetto: tocca solo la cartella app/ — MainActivity.kt è la porta d'ingresso, il Manifest è la carta d'identità, res/ è il magazzino delle risorse
+- La regola del progetto: tocca solo la cartella app/, MainActivity.kt è la porta d'ingresso, il Manifest è la carta d'identità, res/ è il magazzino delle risorse
 - La routine di sviluppo = cambi il codice → Run → guardi il risultato, e si riparte
 :::

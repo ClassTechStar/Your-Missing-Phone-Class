@@ -10,13 +10,13 @@ kind: chapter
 ### Bab 59: Mengenal iOS — Ekosistem Apple dan Ekosistem Pengembangan
 
 {class="chapter-intro mb-4"}
-Selamat atas keputusan ini — kamu berubah dari "orang yang memakai iPhone" menjadi "orang yang menulis aplikasi untuk iPhone". Sebelum mulai, mari bentangkan peta dulu: dari mana iOS berasal? Apa arti "taman berdinding" Apple bagi pengembang? Apa saja yang terjadi dari jarimu mengetik di keyboard hingga App mendarat di ponsel pengguna?
+Selamat atas keputusan ini, kamu berubah dari "orang yang memakai iPhone" menjadi "orang yang menulis aplikasi untuk iPhone". Sebelum mulai, mari bentangkan peta dulu: dari mana iOS berasal? Apa arti "taman berdinding" Apple bagi pengembang? Apa saja yang terjadi dari jarimu mengetik di keyboard hingga App mendarat di ponsel pengguna?
 
 #### 1. Asal-usul iOS: Satu ponsel mengubah satu industri
 
-Pada Januari 2007, Steve Jobs mengeluarkan iPhone generasi pertama di panggung peluncuran. Saat itu ia bahkan belum mendukung aplikasi pihak ketiga — sampai 2008, Apple merilis App Store dan iPhone SDK yang membuka pintu bagi pengembang seluruh dunia untuk menulis perangkat lunak iPhone. Dari momen itulah "ekonomi aplikasi" lahir: hingga kini ada jutaan aplikasi di App Store, dan total bagi hasil bagi pengembang menembus ratusan miliar dolar AS.
+Pada Januari 2007, Steve Jobs mengeluarkan iPhone generasi pertama di panggung peluncuran. Saat itu ia bahkan belum mendukung aplikasi pihak ketiga, sampai 2008, Apple merilis App Store dan iPhone SDK yang membuka pintu bagi pengembang seluruh dunia untuk menulis perangkat lunak iPhone. Dari momen itulah "ekonomi aplikasi" lahir: hingga kini ada jutaan aplikasi di App Store, dan total bagi hasil bagi pengembang menembus ratusan miliar dolar AS.
 
-Sistemnya sendiri juga berevolusi: mula-mula bernama iPhone OS, berganti nama menjadi iOS pada 2010; nomor versinya berjalan sampai iOS 17 (2023), lalu pada 2025 Apple mengubah penamaannya mengikuti tahun — iOS 26 dirilis pada 2025, dan per Agustus 2026 versi terkini adalah iOS 27. Nama boleh berubah, tetapi satu hal tak pernah berubah: kebiasaan pengguna iOS membayar dan reputasi kualitas perangkat lunaknya diakui paling baik di ekosistem seluler — App yang sama, pendapatan sisi iOS kerap jauh lebih tinggi daripada sisi Android.
+Sistemnya sendiri juga berevolusi: mula-mula bernama iPhone OS, berganti nama menjadi iOS pada 2010; nomor versinya berjalan sampai iOS 17 (2023), lalu pada 2025 Apple mengubah penamaannya mengikuti tahun, iOS 26 dirilis pada 2025, dan per Agustus 2026 versi terkini adalah iOS 27. Nama boleh berubah, tetapi satu hal tak pernah berubah: kebiasaan pengguna iOS membayar dan reputasi kualitas perangkat lunaknya diakui paling baik di ekosistem seluler, App yang sama, pendapatan sisi iOS kerap jauh lebih tinggi daripada sisi Android.
 
 ::: div .overflow-x-auto
 ```html
@@ -31,22 +31,22 @@ Peristiwa penting pengembangan iOS (per Agustus 2026)
 
 Ekosistem Apple sering digambarkan sebagai "taman berdinding" (Walled Garden) — aturannya banyak dan pengawasannya ketat: App harus lolos peninjauan dulu untuk tayang, pengembangan wajib memakai Mac dan Xcode, distribusi utamanya lewat App Store. Terdengar menyempitkan? Tetapi bagi pengembang, aturan ini menuai dividen yang nyata:
 
-- Fragmentasi perangkat sangat kecil: model iPhone hanya segitu, ukuran layar dan versi sistem sangat seragam — optimalkan untuk 5 model saja, 95% pengguna sudah tercakup (di Android bisa jadi harus puluhan model);
+- Fragmentasi perangkat sangat kecil: model iPhone hanya segitu, ukuran layar dan versi sistem sangat seragam: optimalkan untuk 5 model saja, 95% pengguna sudah tercakup (di Android bisa jadi harus puluhan model);
 - Tingkat pembaruan versi sistem sangat tinggi: dalam beberapa minggu setelah rilis, tujuh-ke-delapan puluh persen pengguna sudah upgrade; API baru bisa dipakai berani tanpa harus menjaga "sistem tua lima tahun silam";
 - Kebiasaan membayar pengguna bagus: pengguna App Store lebih bersedia membayar aplikasi dan pembelian dalam aplikasi;
-- Peninjauan memang ketat, tetapi tokonya bersih: aplikasi tiruan dan perangkat lunak nakal sedikit, produk bagus lebih mudah terlihat.
+- Peninjauan memang ketat, tetapi tokonya bersih: aplikasi tiruan dan perangkat lunak nakal sedikit, produk bagus lebih mudah terlihat
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Perhatian: Bicarakan biayanya lebih dulu
 
 {class="mt-1"}
-Pengembangan iOS punya syarat mutlak: wajib ada Mac (Xcode eksklusif macOS), tayang butuh akun pengembang 99 dolar AS per tahun (akun gratis pengembang perorangan bisa untuk debug perangkat asli secara lokal, tetapi tidak bisa tayang). Hitung dulu investasi ini sebelum berangkat — kabar baiknya, untuk tahap belajar akun gratis sepenuhnya cukup; akan dibahas di Bab 60.
+Pengembangan iOS punya syarat mutlak: wajib ada Mac (Xcode eksklusif macOS), tayang butuh akun pengembang 99 dolar AS per tahun (akun gratis pengembang perorangan bisa untuk debug perangkat asli secara lokal, tetapi tidak bisa tayang). Hitung dulu investasi ini sebelum berangkat, kabar baiknya, untuk tahap belajar akun gratis sepenuhnya cukup; akan dibahas di Bab 60.
 :::
 
 #### 3. Menulis dengan bahasa apa: Objective-C atau Swift?
 
-Sejarah pengembangan iOS juga punya dua "tokoh utama". Objective-C adalah pionir pendiri — dipakai dari 2008 sampai 2014; Swift adalah bahasa baru yang dirilis Apple pada 2014, lalu berevolusi hingga Swift 6 (rilis 2024, memperkenalkan pemeriksaan konkurensi yang ketat). Menjelang 2026, hampir semua proyek baru memakai Swift.
+Sejarah pengembangan iOS juga punya dua "tokoh utama". Objective-C adalah pionir pendiri, dipakai dari 2008 sampai 2014; Swift adalah bahasa baru yang dirilis Apple pada 2014, lalu berevolusi hingga Swift 6 (rilis 2024, memperkenalkan pemeriksaan konkurensi yang ketat). Menjelang 2026, hampir semua proyek baru memakai Swift.
 
 Satu pesan lugas untukmu yang nol dasar: langsung pelajari Swift, Objective-C tak perlu dilirik — kecuali kelak kamu harus merawat kode warisan berusia sepuluh tahun. Keunggulan Swift: sintaks bersih (terbebas dari beban titik koma dan berkas header era bahasa C), mekanisme Optional menghapus "crash null pointer" dari level bahasa, nyambung mulus dengan SwiftUI, dan ada Swift Playgrounds di iPad untuk belajar sambil bermain.
 
@@ -87,7 +87,7 @@ Gambar 1: Alur lengkap sebuah App iOS dari ide sampai tayang (perhatikan tahap "
 
 Konsep kunci dalam alurnya:
 
-- Penandatanganan (Signing): setiap App iOS harus "ditandatangani" dulu agar bisa dipasang — membuktikan "paket ini dari kamu, tak diubah orang". Di tahap belajar, Xcode menandatangani otomatis dengan Apple ID-mu; saat tayang memakai sertifikat pengembang. Dibahas rinci di Bab 67.
+- Penandatanganan (Signing): setiap App iOS harus "ditandatangani" dulu agar bisa dipasang, membuktikan "paket ini dari kamu, tak diubah orang". Di tahap belajar, Xcode menandatangani otomatis dengan Apple ID-mu; saat tayang memakai sertifikat pengembang. Dibahas rinci di Bab 67.
 - Simulator: iPhone virtual di atas Mac, medan utama develop dan debug. Ia berjalan di CPU Mac, jadi sangat lancar — pengalamannya jauh di atas emulator Android.
 - TestFlight: alat "distribusi uji internal" resmi Apple — sebelum tayang, versi uji dikirim ke maksimal 10000 penguji yang memasangnya lewat aplikasi TestFlight. Inilah keanggunan yang khas ekosistem iOS.
 
@@ -102,14 +102,14 @@ Konsep kunci dalam alurnya:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Sekilas tumpukan teknologi utama iOS 2026
 
-Sadar tidak: daftar ini lebih pendek sejengkal daripada milik Android — karena Apple sudah "mengurus" banyak hal. Harga ekosistem tertutup adalah kebebasan, imbalannya ketenangan: tak perlu bingung memilih pustaka jaringan atau database mana; yang diberikan resmi biasanya sudah solusi terbaik.
+Sadar tidak: daftar ini lebih pendek sejengkal daripada milik Android: karena Apple sudah "mengurus" banyak hal. Harga ekosistem tertutup adalah kebebasan, imbalannya ketenangan: tak perlu bingung memilih pustaka jaringan atau database mana; yang diberikan resmi biasanya sudah solusi terbaik.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Intip "identitas Apple" ponselmu
 
 {class="mt-1"}
-Buka [Pengaturan] → [Umum] → [Tentang] di iPhone, catat tiga hal: versi iOS, nama model, kapasitas tersedia. Lalu jelajah santai halaman "Hari Ini" di App Store, perhatikan tangkapan layar dan teks App-App andalan — mulai hari ini, sudut pandangmu saat berkeliling di toko bergeser dari "pengguna" menjadi "pengembang".
+Buka [Pengaturan] → [Umum] → [Tentang] di iPhone, catat tiga hal: versi iOS, nama model, kapasitas tersedia. Lalu jelajah santai halaman "Hari Ini" di App Store, perhatikan tangkapan layar dan teks App-App andalan, mulai hari ini, sudut pandangmu saat berkeliling di toko bergeser dari "pengguna" menjadi "pengembang".
 :::
 
 ::: div .chapter-summary

@@ -2,12 +2,12 @@
 id: di-san-shi-jiu-zhang
 num: 39
 part: ai-biancheng-pian
-nav: Kapitel 39: Kontext-Engineering – damit die KI versteht, was du willst
+nav: Kapitel 39: Die KI versteht dich nicht: Du warst unklar
 toc: default
 kind: chapter
 ---
 
-### Kapitel 39: Kontextengineering – damit KI Ihre Absicht versteht
+### Kapitel 39: Die KI versteht dich nicht: Du warst unklar
 
 {class="chapter-intro mb-4"}
 Kennst Sie das: Ein neues Chat-Fenster, und die KI scheint alles vergessen zu haben? Das ist keine Böswilligkeit, sondern „Vergesslichkeit“ von Natur aus. Dieses Kapitel zeigt, wie man der KI ein „Langzeitgedächtnis“ verpasst – und stellt eine der angesagtesten Entwicklungsparadigmen 2026 vor: spec-driven development.
@@ -80,7 +80,7 @@ Der SDD-Ablauf in fünf Schritten:
 2. Schnittstellen und Datenstrukturen festlegen (in der Spec-Datei);
 3. KI generiert die Implementierung nach Spec;
 4. Tests prüfen, ob das Ergebnis zur Spec passt;
-5. Falls nicht: Spec korrigieren oder KI den Code nachbessern lassen.
+5. Falls nicht: Spec korrigieren oder KI den Code nachbessern lassen
 
 In diesem Ablauf ist die Spec-Datei die „einzige Wahrheitsquelle“ – Code lässt sich neu erzeugen, die Spec muss stimmen.
 

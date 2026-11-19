@@ -10,11 +10,11 @@ kind: chapter
 ### Capitolo 42: Panorama dei modelli di grandi dimensioni e pratica con le API
 
 {class="chapter-intro mb-4"}
-I capitoli precedenti hanno parlato di “come collaborare con l'AI”; questo capitolo risolve una questione più fondamentale: “quale AI usare? E come?”. Nel panorama di agosto 2026 i modelli di grandi dimensioni sono ricchissimi — a livello internazionale si contendono il primato GPT, Claude e Gemini, mentre in Cina fioriscono DeepSeek, Tongyi Qianwen, GLM, Kimi e Doubao. Ogni modello ha il suo carattere e i suoi punti di forza: la scelta giusta raddoppia i risultati con metà dello sforzo, quella sbagliata fa l'opposto. Questo capitolo non ti fa solo conoscere questi modelli, ma ti insegna anche come collegarli alle tue applicazioni tramite API e come scegliere il Token Plan (il piano d'uso) giusto in base alle tue necessità.
+I capitoli precedenti hanno parlato di “come collaborare con l'AI”; questo capitolo risolve una questione più fondamentale: “quale AI usare? E come?”. Nel panorama di agosto 2026 i modelli di grandi dimensioni sono ricchissimi, a livello internazionale si contendono il primato GPT, Claude e Gemini, mentre in Cina fioriscono DeepSeek, Tongyi Qianwen, GLM, Kimi e Doubao. Ogni modello ha il suo carattere e i suoi punti di forza: la scelta giusta raddoppia i risultati con metà dello sforzo, quella sbagliata fa l'opposto. Questo capitolo non ti fa solo conoscere questi modelli, ma ti insegna anche come collegarli alle tue applicazioni tramite API e come scegliere il Token Plan (il piano d'uso) giusto in base alle tue necessità.
 
-#### 1. I modelli internazionali principali: il dominio dei tre grandi
+1. I modelli internazionali principali: il dominio dei tre grandi
 
-Nel mercato internazionale dei modelli di grandi dimensioni di agosto 2026 si è consolidato un equilibrio a tre: OpenAI (serie GPT), Anthropic (serie Claude) e Google (serie Gemini). Ognuno ha una personalità ben marcata — facciamo conoscenza uno per uno.
+Nel mercato internazionale dei modelli di grandi dimensioni di agosto 2026 si è consolidato un equilibrio a tre: OpenAI (serie GPT), Anthropic (serie Claude) e Google (serie Gemini). Ognuno ha una personalità ben marcata, facciamo conoscenza uno per uno.
 
 ##### 1. La serie OpenAI GPT-5.6: l'atleta completo ed equilibrato
 
@@ -29,7 +29,7 @@ OpenAI ha dato il via all'ondata dei modelli di grandi dimensioni e la serie GPT
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Prezzi della serie OpenAI GPT-5.6 (agosto 2026)
 
-Il vantaggio principale della serie GPT è l'equilibrio — ragionamento, programmazione, scrittura, multimodalità: nessun vero punto debole. In più, l'ampio ecosistema di plugin e la community di sviluppatori di OpenAI offrono la documentazione di adattamento e la toolchain più complete. Negli scenari in cui “non sai cosa scegliere”, GPT è la risposta predefinita che “non sbagli nemmeno a occhi chiusi”. Ma i suoi limiti sono: per accedervi dalla Cina serve una rete particolare, l'espressione in cinese ogni tanto ha un “sapore di traduzione” e i prezzi delle API si collocano su livelli medio-alti.
+Il vantaggio principale della serie GPT è l'equilibrio: ragionamento, programmazione, scrittura, multimodalità: nessun vero punto debole. In più, l'ampio ecosistema di plugin e la community di sviluppatori di OpenAI offrono la documentazione di adattamento e la toolchain più complete. Negli scenari in cui “non sai cosa scegliere”. GPT è la risposta predefinita che “non sbagli nemmeno a occhi chiusi”. Ma i suoi limiti sono: per accedervi dalla Cina serve una rete particolare, l'espressione in cinese ogni tanto ha un “sapore di traduzione” e i prezzi delle API si collocano su livelli medio-alti.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -41,9 +41,9 @@ Nell'agosto 2026 OpenAI ha annunciato che il modello predefinito per gli utenti 
 
 ##### 2. La serie Anthropic Claude: il vertice della programmazione e del rigore
 
-Se GPT è l'atleta completo, Claude è il “tetto” nel campo della programmazione. La serie Claude di Anthropic guida da tempo con margine netto nella SWE-bench (benchmark di ingegneria del software), prima al mondo per qualità della generazione di codice e capacità di realizzare progetti a livello ingegneristico. Ancora più raro: il tasso di allucinazioni di Claude (la probabilità di generare informazioni false) è il più basso in assoluto, circa l'1% — il che lo rende particolarmente adatto a scenari di alta precisione come l'accademico e il legale.
+Se GPT è l'atleta completo, Claude è il “tetto” nel campo della programmazione. La serie Claude di Anthropic guida da tempo con margine netto nella SWE-bench (benchmark di ingegneria del software), prima al mondo per qualità della generazione di codice e capacità di realizzare progetti a livello ingegneristico. Ancora più raro: il tasso di allucinazioni di Claude (la probabilità di generare informazioni false) è il più basso in assoluto, circa l'1%, il che lo rende particolarmente adatto a scenari di alta precisione come l'accademico e il legale.
 
-L'altro asso nella manica di Claude è il contesto ultralungo: una finestra di contesto da 1 milione di Token che gli permette di “leggere d'un fiato” centinaia di pagine di contratti o un'intera base di codice senza perdere dettagli. Nel refactoring del codice e nell'analisi di documenti lunghi è praticamente insostituibile. Claude Code, come strumento di programmazione AI da terminale, ha raggiunto a metà 2026 un fatturato annualizzato di 2,5 miliardi di dollari — la prova più evidente di quanto le capacità di programmazione di Claude siano apprezzate.
+L'altro asso nella manica di Claude è il contesto ultralungo: una finestra di contesto da 1 milione di Token , che gli permette di “leggere d'un fiato” centinaia di pagine di contratti o un'intera base di codice senza perdere dettagli. Nel refactoring del codice e nell'analisi di documenti lunghi è praticamente insostituibile. Claude Code, come strumento di programmazione AI da terminale, ha raggiunto a metà 2026 un fatturato annualizzato di 2,5 miliardi di dollari, la prova più evidente di quanto le capacità di programmazione di Claude siano apprezzate.
 
 ::: div .overflow-x-auto
 ```html
@@ -58,7 +58,7 @@ Il punto debole di Claude è il prezzo: l'output di Fable 5 è il più caro tra 
 
 ##### 3. La serie Google Gemini: il re della multimodalità
 
-La serie Gemini di Google nel 2026 è arrivata alla versione 3.1 Pro. L'asso principale di Gemini è la multimodalità nativa — analisi precisa di testo e immagini, riconoscimento OCR delle tabelle senza errori, estrazione efficiente dei fotogrammi video, oltre all'analisi approfondita di audio e video. È legato a fondo all'ecosistema Google (ricerca, email, servizi cloud) e si distingue nel recupero di informazioni in tempo reale e nella comprensione cross-modale. Gemini supporta anche input di contesto ultralungo da 2 milioni di Token ed è attualmente il modello con la finestra di contesto più grande.
+La serie Gemini di Google nel 2026 è arrivata alla versione 3.1 Pro. L'asso principale di Gemini è la multimodalità nativa, analisi precisa di testo e immagini, riconoscimento OCR delle tabelle senza errori, estrazione efficiente dei fotogrammi video, oltre all'analisi approfondita di audio e video. È legato a fondo all'ecosistema Google (ricerca, email, servizi cloud) e si distingue nel recupero di informazioni in tempo reale e nella comprensione cross-modale. Gemini supporta anche input di contesto ultralungo da 2 milioni di Token ed è attualmente il modello con la finestra di contesto più grande.
 
 Gemini si posiziona come “prima scelta per il ragionamento scientifico e gli scenari multimodali”. Se il tuo progetto coinvolge molte analisi di immagini, comprensione di video o calcolo scientifico, Gemini non ha praticamente rivali. Però nella generazione di codice puramente testuale è un po' sotto Claude, e l'espressione in cinese è meno naturale di quella dei modelli nazionali.
 
@@ -85,9 +85,9 @@ Nel 2026 i modelli nazionali sono passati da “inseguitori” a “concorrenti 
 
 ##### 1. DeepSeek V4: il re del rapporto qualità-prezzo
 
-DeepSeek è un fenomeno tra i modelli nazionali. All'inizio del 2025, DeepSeek-V3 ha scosso il mercato posizionandosi come “un decimo del costo di GPT con capacità equivalenti”, tanto che nel settore è stato definito la “soglia fatale dei modelli AI generalisti” — i più economici di lui non sono altrettanto validi, i più costosi non offrono lo stesso volume. Ad agosto 2026 è arrivata la versione ufficiale di DeepSeek V4-Pro: architettura MoE da 1,6 mila miliardi di parametri con circa 49B attivati, supporto per 1 milione di Token di contesto senza degrado, e un rapporto qualità-prezzo nel codice ampiamente considerato il migliore al mondo.
+DeepSeek è un fenomeno tra i modelli nazionali. All'inizio del 2025, DeepSeek-V3 ha scosso il mercato posizionandosi come “un decimo del costo di GPT con capacità equivalenti”, tanto che nel settore è stato definito la “soglia fatale dei modelli AI generalisti”, i più economici di lui non sono altrettanto validi, i più costosi non offrono lo stesso volume. Ad agosto 2026 è arrivata la versione ufficiale di DeepSeek V4-Pro: architettura MoE da 1,6 mila miliardi di parametri con circa 49B attivati, supporto per 1 milione di Token di contesto senza degrado, e un rapporto qualità-prezzo nel codice ampiamente considerato il migliore al mondo.
 
-DeepSeek V4 ha fatto un grande salto nelle capacità Agent — il benchmark DeepSWE è passato da 12.8 a 62.7 (+390%) e NL2Repo da 38.5 a 61.5. Le API aggiungono il doppio protocollo Responses API e Anthropic API, già compatibili con gli strumenti di programmazione principali come Codex e Claude Code. Significa che puoi sostituire le API di Claude con quelle di DeepSeek dentro Claude Code — costi ridotti di diverse volte con un'esperienza quasi identica.
+DeepSeek V4 ha fatto un grande salto nelle capacità Agent, il benchmark DeepSWE è passato da 12.8 a 62.7 (+390%) e NL2Repo da 38.5 a 61.5. Le API aggiungono il doppio protocollo Responses API e Anthropic API. Già compatibili con gli strumenti di programmazione principali come Codex e Claude Code. Significa che puoi sostituire le API di Claude con quelle di DeepSeek dentro Claude Code, costi ridotti di diverse volte con un'esperienza quasi identica.
 
 ::: div .overflow-x-auto
 ```html
@@ -105,7 +105,7 @@ Confronto di prezzo: per 1 milione di Token di input + 1 milione di Token di out
 Avviso per evitare trappole: DeepSeek sta per aumentare i prezzi
 
 {class="mt-1"}
-DeepSeek ha comunicato ufficialmente il 6 agosto 2026 di “prevedere a breve un forte aumento dei prezzi delle API”, quindi i prezzi promozionali potrebbero non durare ancora a lungo. Alcuni media parlano di aumenti fino a 30 volte, ma al 14 agosto l'ufficialità non ha ancora pubblicato il piano di adeguamento definitivo. Inoltre DeepSeek V4 nella versione ufficiale introduce una tariffazione differenziata per fasce orarie — nelle ore di punta il costo delle chiamate raddoppia in pieno. Ti consiglio di seguire gli annunci ufficiali per i prezzi aggiornati.
+DeepSeek ha comunicato ufficialmente il 6 agosto 2026 di “prevedere a breve un forte aumento dei prezzi delle API”. Quindi i prezzi promozionali potrebbero non durare ancora a lungo. Alcuni media parlano di aumenti fino a 30 volte, ma al 14 agosto l'ufficialità non ha ancora pubblicato il piano di adeguamento definitivo. Inoltre DeepSeek V4 nella versione ufficiale introduce una tariffazione differenziata per fasce orarie, nelle ore di punta il costo delle chiamate raddoppia in pieno. Ti consiglio di seguire gli annunci ufficiali per i prezzi aggiornati.
 :::
 
 ##### 2. Tongyi Qianwen Qwen3.7 Max: la scelta enterprise di Alibaba Cloud
@@ -121,15 +121,15 @@ La serie Tongyi Qianwen (Qwen) di Alibaba Cloud poggia sull'ecosistema Alibaba C
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Prezzi a scaglioni della serie Tongyi Qianwen Qwen (agosto 2026)
 
-I prezzi di Qwen seguono una strategia a scaglioni — dal qwen-turbo a costo minimo (output 0,6 yuan per milione di Token) al flagship qwen3.7-max (output 36 yuan per milione di Token), coprendo tutto, dalle domande e risposte leggere al ragionamento complesso. Per le aziende che già usano Alibaba Cloud, Qwen è la scelta di integrazione più comoda.
+I prezzi di Qwen seguono una strategia a scaglioni: dal qwen-turbo a costo minimo (output 0,6 yuan per milione di Token) al flagship qwen3.7-max (output 36 yuan per milione di Token), coprendo tutto, dalle domande e risposte leggere al ragionamento complesso. Per le aziende che già usano Alibaba Cloud, Qwen è la scelta di integrazione più comoda.
 
 ##### 3. GLM-5.1 di Zhipu: primo posto nazionale nella SWE-bench
 
-La serie GLM di Zhipu AI nel 2026 brilla. GLM-5.1 conquista il primo posto nazionale nella SWE-bench: architettura ibrida MoE/densa da 744B, con supporto per 1 milione di Token di contesto. Si distingue per la comprensione semantica precisa del cinese e supporta il deployment privato conforme alle regole nazionali — fondamentale per finanza e pubblica amministrazione, dove i requisiti di sicurezza dei dati sono elevati. I prezzi di GLM-5.1 sono 6 yuan di input e 24 yuan di output per milione di Token, nella fascia intermedia dei modelli nazionali.
+La serie GLM di Zhipu AI nel 2026 brilla. GLM-5.1 conquista il primo posto nazionale nella SWE-bench: architettura ibrida MoE/densa da 744B, con supporto per 1 milione di Token di contesto. Si distingue per la comprensione semantica precisa del cinese e supporta il deployment privato conforme alle regole nazionali, fondamentale per finanza e pubblica amministrazione, dove i requisiti di sicurezza dei dati sono elevati. I prezzi di GLM-5.1 sono 6 yuan di input e 24 yuan di output per milione di Token, nella fascia intermedia dei modelli nazionali.
 
 ##### 4. Kimi K3: il re dei testi ultralunghi
 
-La serie Kimi di Moonshot AI è celebre per la capacità di elaborare testi ultralunghi. Kimi K3, rilasciato a luglio 2026, scala 2,8 mila miliardi di parametri ed entra nella prima fascia mondiale in molte valutazioni su compiti complessi. Lo scenario principale di Kimi è l'analisi di basi di codice lunghe e il recupero potenziato su documenti lunghi — sa gestire il testo di un libro intero o il codice di un intero progetto ed eccelle nelle ricerche tipo “ago nel pagliaio”. I prezzi di Kimi sono relativamente alti (output circa 12-20 yuan per milione di Token), ma nel rapporto qualità-prezzo sui testi lunghi nessuno fa meglio.
+La serie Kimi di Moonshot AI è celebre per la capacità di elaborare testi ultralunghi. Kimi K3, rilasciato a luglio 2026, scala 2,8 mila miliardi di parametri ed entra nella prima fascia mondiale in molte valutazioni su compiti complessi. Lo scenario principale di Kimi è l'analisi di basi di codice lunghe e il recupero potenziato su documenti lunghi, sa gestire il testo di un libro intero o il codice di un intero progetto ed eccelle nelle ricerche tipo “ago nel pagliaio”. I prezzi di Kimi sono relativamente alti (output circa 12-20 yuan per milione di Token), ma nel rapporto qualità-prezzo sui testi lunghi nessuno fa meglio.
 
 ##### 5. Doubao: l'atleta completo di ByteDance
 
@@ -144,7 +144,7 @@ La serie Doubao di ByteDance nel 2026 si conferma stabile. Doubao Seed 2.1 Pro �
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Confronto orizzontale dei cinque grandi modelli nazionali (agosto 2026)
 
-Una tendenza importante: il “divario generazionale” percepito tra i modelli nazionali e GPT/Claude è sparito. Nel ragionamento logico e nelle competizioni matematiche la differenza tra i flagship nazionali e GPT-5 è ormai di una cifra. Nel pensiero architetturale sistematico e nel ragionamento d'ingegneria complessa Claude resta in vantaggio — propone soluzioni architetturali più “ispirate”, mentre i modelli nazionali a volte appaiono “dogmatici”. Ma negli scenari in cinese, nel controllo dei costi e nel deployment conforme, i modelli nazionali hanno un vantaggio schiacciante.
+Una tendenza importante: il “divario generazionale” percepito tra i modelli nazionali e GPT/Claude è sparito. Nel ragionamento logico e nelle competizioni matematiche la differenza tra i flagship nazionali e GPT-5 è ormai di una cifra. Nel pensiero architetturale sistematico e nel ragionamento d'ingegneria complessa Claude resta in vantaggio: propone soluzioni architetturali più “ispirate”, mentre i modelli nazionali a volte appaiono “dogmatici”. Ma negli scenari in cinese, nel controllo dei costi e nel deployment conforme, i modelli nazionali hanno un vantaggio schiacciante.
 
 ::: div .figure
 ```html
@@ -210,10 +210,10 @@ Figura 5: il metodo decisionale delle quattro domande per scegliere il modello
 Suggerimento: strategia combinata
 
 {class="mt-1"}
-Questo metodo non è un dogma — in molti scenari serve combinare più modelli. Una strategia combinata comune: DeepSeek o Qwen per lo sviluppo quotidiano (costi bassi, cinese ottimo), Claude per il design architetturale critico (ragionamento forte, poche allucinazioni), Gemini per l'analisi multimodale (elaborazione di immagini e video). Cambia modello secondo il bisogno invece di “usarne uno per tutta la vita”.
+Questo metodo non è un dogma, in molti scenari serve combinare più modelli. Una strategia combinata comune: DeepSeek o Qwen per lo sviluppo quotidiano (costi bassi, cinese ottimo), Claude per il design architetturale critico (ragionamento forte, poche allucinazioni), Gemini per l'analisi multimodale (elaborazione di immagini e video). Cambia modello secondo il bisogno invece di “usarne uno per tutta la vita”.
 :::
 
-#### 4. Introduzione alle chiamate API: collegare i modelli partendo da zero
+4. Introduzione alle chiamate API: collegare i modelli partendo da zero
 
 Molti tutorial di programmazione AI insegnano solo a usare l'interfaccia di chat, ma la vera “programmazione AI” — far sì che la tua applicazione chiami i modelli di grandi dimensioni — passa dalle API. Le API (Application Programming Interface, interfacce di programmazione delle applicazioni) sono protocolli di comunicazione tra programmi. Tramite API, il tuo codice può invocare le capacità del modello come se chiamasse una funzione.
 
@@ -221,7 +221,7 @@ Molti tutorial di programmazione AI insegnano solo a usare l'interfaccia di chat
 
 Prima di capire le API devi comprendere il concetto di “Token”. Il Token è l'unità base di fatturazione dei modelli di grandi dimensioni: puoi vederlo come “l'unità di lettura e scrittura dell'AI”. Un Token corrisponde all'incirca a 0,75 parole inglesi (4 caratteri) oppure a 0,5-1 carattere cinese. Un testo cinese di 1000 caratteri consuma circa 1500-2000 Token.
 
-I Token non sono parole, né caratteri. I modelli di grandi dimensioni usano un tokenizer dedicato per dividere il testo in Token. La stessa parola può contare Token diversi nei vari modelli — per esempio, la parola “intelligenza artificiale” può valere 3 Token in GPT e 2 in DeepSeek. Le API della maggior parte dei modelli restituiscono il numero di Token effettivamente consumato, che puoi vedere nella risposta API.
+I Token non sono parole, né caratteri. I modelli di grandi dimensioni usano un tokenizer dedicato per dividere il testo in Token. La stessa parola può contare Token diversi nei vari modelli: per esempio, la parola “intelligenza artificiale” può valere 3 Token in GPT e 2 in DeepSeek. Le API della maggior parte dei modelli restituiscono il numero di Token effettivamente consumato, che puoi vedere nella risposta API.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -233,7 +233,7 @@ Stima rapida dei costi in Token
 
 ##### 2. Ottenere una API Key
 
-Il primo passo per usare le API dei modelli di grandi dimensioni è ottenere una API Key — una sequenza di caratteri usata per l'autenticazione. Ogni fornitore di modelli ha la sua piattaforma API: devi registrare un account e creare la API Key. Ecco gli ingressi delle piattaforme API dei modelli principali e le procedure per ottenerla:
+Il primo passo per usare le API dei modelli di grandi dimensioni è ottenere una API Key, una sequenza di caratteri usata per l'autenticazione. Ogni fornitore di modelli ha la sua piattaforma API: devi registrare un account e creare la API Key. Ecco gli ingressi delle piattaforme API dei modelli principali e le procedure per ottenerla:
 
 ::: div .overflow-x-auto
 ```html
@@ -249,12 +249,12 @@ Piattaforme API dei modelli principali e modalità di ottenimento delle Key (ago
 Avviso di sicurezza: la API Key è come la password del portafoglio
 
 {class="mt-1"}
-La API Key equivale alla password del tuo portafoglio — chiunque ne entri in possesso può usare la tua quota per chiamare i modelli. Quindi: non scrivere mai la API Key nel codice (gestiscila con le variabili d'ambiente); non fare mai commit su un repository Git pubblico di codice che contiene la Key; non condividere mai sui social media screenshot con la Key visibile. Se la Key finisce fuori, eliminala subito sulla piattaforma e ricreala.
+La API Key equivale alla password del tuo portafoglio: chiunque ne entri in possesso può usare la tua quota per chiamare i modelli. Quindi: non scrivere mai la API Key nel codice (gestiscila con le variabili d'ambiente); non fare mai commit su un repository Git pubblico di codice che contiene la Key; non condividere mai sui social media screenshot con la Key visibile. Se la Key finisce fuori, eliminala subito sulla piattaforma e ricreala.
 :::
 
 ##### 3. La prima chiamata API
 
-Dopo aver ottenuto la API Key puoi chiamare le API dei modelli con qualsiasi linguaggio di programmazione. Qui sotto un esempio in Python della chiamata più semplice — inviare un messaggio a DeepSeek e ricevere la risposta.
+Dopo aver ottenuto la API Key puoi chiamare le API dei modelli con qualsiasi linguaggio di programmazione. Qui sotto un esempio in Python della chiamata più semplice, inviare un messaggio a DeepSeek e ricevere la risposta.
 
 ::: div .code-block
 :::inline div .code-head
@@ -292,9 +292,9 @@ print(f"Token totali: {response.usage.total_tokens}")
 ```
 :::
 
-La logica essenziale di questo codice è: crea il client (con API Key e indirizzo del modello) → costruisci la lista dei messaggi (system definisce il ruolo, user è l'input dell'utente) → invia la richiesta → ricevi la risposta. Questo schema funziona per quasi tutti i modelli compatibili col formato OpenAI — basta sostituire api_key e base_url per cambiare modello. Per questo molti modelli nazionali scelgono la compatibilità col formato OpenAI SDK: lo sviluppatore cambia solo due righe di codice per passare da un modello all'altro, con un costo di migrazione minimo.
+La logica essenziale di questo codice è: crea il client (con API Key e indirizzo del modello) → costruisci la lista dei messaggi (system definisce il ruolo, user è l'input dell'utente) → invia la richiesta → ricevi la risposta. Questo schema funziona per quasi tutti i modelli compatibili col formato OpenAI: basta sostituire api_key e base_url per cambiare modello. Per questo molti modelli nazionali scelgono la compatibilità col formato OpenAI SDK: lo sviluppatore cambia solo due righe di codice per passare da un modello all'altro, con un costo di migrazione minimo.
 
-Ecco le differenze di codice per passare a un altro modello — nota che bastano due righe:
+Ecco le differenze di codice per passare a un altro modello: nota che bastano due righe:
 
 ::: div .code-block
 :::inline div .code-head
@@ -334,7 +334,7 @@ client = OpenAI(
 
 ##### 4. Gestione delle risposte in streaming
 
-In un'applicazione reale di solito non vuoi aspettare che l'AI finisca tutto prima di mostrare il testo — l'utente aspetterebbe troppo. Le risposte in streaming (Streaming) ti permettono di mostrare il testo parola per parola mentre l'AI lo genera, migliorando parecchio l'esperienza dell'utente. È come una macchina da scrivere: i caratteri compaiono uno a uno e la sensazione per l'utente è completamente diversa.
+In un'applicazione reale di solito non vuoi aspettare che l'AI finisca tutto prima di mostrare il testo, l'utente aspetterebbe troppo. Le risposte in streaming (Streaming) ti permettono di mostrare il testo parola per parola mentre l'AI lo genera, migliorando parecchio l'esperienza dell'utente. È come una macchina da scrivere: i caratteri compaiono uno a uno e la sensazione per l'utente è completamente diversa.
 
 ::: div .code-block
 :::inline div .code-head
@@ -374,7 +374,7 @@ La maggior parte dei fornitori di modelli offre due modalità di fatturazione: a
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Confronto tra le due modalità di fatturazione
 
-Per i principianti conviene partire dal consumo — nessun pagamento anticipato, paghi solo quello che usi. Quando il tuo consumo mensile si stabilizza su un livello (per esempio oltre 50 yuan al mese), valuta il passaggio all'abbonamento per ottenere un prezzo unitario più basso.
+Per i principianti conviene partire dal consumo, nessun pagamento anticipato, paghi solo quello che usi. Quando il tuo consumo mensile si stabilizza su un livello (per esempio oltre 50 yuan al mese), valuta il passaggio all'abbonamento per ottenere un prezzo unitario più basso.
 
 ##### 2. Panoramica degli abbonamenti principali
 
@@ -387,7 +387,7 @@ Per i principianti conviene partire dal consumo — nessun pagamento anticipato,
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Abbonamenti dei principali strumenti AI (agosto 2026)
 
-I piani di abbonamento dei modelli nazionali differiscono un po'. DeepSeek fattura soprattutto a consumo e non ha abbonamenti mensili — ricarichi e paghi in base all'uso effettivo. Tongyi Qianwen offre pacchetti prepagati sulla piattaforma Bailian (comprando una certa quantità di Token a prezzo scontato). Anche Doubao su Volcano Engine ha schemi prepagati simili. Per gli sviluppatori in Cina la combinazione più economica è di solito: DeepSeek a consumo (sviluppo quotidiano) + quota gratuita di Doubao (prove e test).
+I piani di abbonamento dei modelli nazionali differiscono un po'. DeepSeek fattura soprattutto a consumo e non ha abbonamenti mensili, ricarichi e paghi in base all'uso effettivo. Tongyi Qianwen offre pacchetti prepagati sulla piattaforma Bailian (comprando una certa quantità di Token a prezzo scontato). Anche Doubao su Volcano Engine ha schemi prepagati simili. Per gli sviluppatori in Cina la combinazione più economica è di solito: DeepSeek a consumo (sviluppo quotidiano) + quota gratuita di Doubao (prove e test).
 
 ##### 3. Piattaforme di aggregazione API
 
@@ -415,7 +415,7 @@ Non comprare le cosiddette «API Key condivise» su piattaforme come Taobao o Xi
 Scegliere il modello giusto è solo il primo passo: sapere come «spendere meno» è altrettanto importante. Ecco alcune strategie di ottimizzazione dei costi verificate nella pratica:
 
 1. Sfrutta bene i cache hit. Molti modelli offrono la funzione di «cache»: quando la tua richiesta include contenuti già elaborati in precedenza (come il prompt di sistema), quella parte viene fatturata a un prezzo bassissimo. Con DeepSeek il prezzo in caso di cache hit è solo 1/60 di quello normale. Mettendo il prompt di sistema fisso all'inizio dell'elenco dei messaggi massimizzi i cache hit.
-2. Routing a livelli: usa un modello economico per i compiti semplici e uno costoso per quelli complessi. Ad esempio, DeepSeek V4 Flash per la classificazione dei testi (output a 2 yuan per milione di token) e Claude per la progettazione dell'architettura (output a 181 yuan per milione di token). In un progetto l'80% delle chiamate può stare sul modello economico.
+2. Routing a livelli: usa un modello economico per i compiti semplici e uno costoso per quelli complessi. Ad esempio, DeepSeek V4 Flash per la classificazione dei testi, (output a 2 yuan per milione di token) e Claude per la progettazione dell'architettura (output a 181 yuan per milione di token). In un progetto l'80% delle chiamate può stare sul modello economico.
 3. Limita la lunghezza dell'output. Le API fatturano a token di output: più è lungo, più costa. Negli scenari in cui non servono lunghi discorsi, imposta il parametro max_tokens per limitare la lunghezza dell'output ed evitare che l'AI «giri troppo intorno».
 4. Usa la Batch API per le attività non in tempo reale. Se hai tante attività che non richiedono una risposta immediata (come etichettatura di dati in blocco o riassunti di documenti), con la Batch API ottieni il 50% di sconto. Lo offrono sia OpenAI che Azure.
 5. Monitora il consumo di token. La maggior parte delle piattaforme API offre un pannello di statistiche sull'utilizzo. Controlla di tanto in tanto come si distribuiscono i consumi, individua le chiamate che bruciano più token e ottimizzale in modo mirato. Una piccolissima correzione al prompt (per esempio da «spiega in dettaglio» a «spiega in 3 frasi») può risparmiare il 50% dei token.
@@ -429,7 +429,7 @@ Scegliere il modello giusto è solo il primo passo: sapere come «spendere meno�
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Strategie di ottimizzazione dei costi ed effetti (agosto 2026)
 
-#### 6. Pratica: integrare le API dei grandi modelli in un progetto
+6. Pratica: integrare le API dei grandi modelli in un progetto
 
 Chiudiamo il capitolo con un'esercitazione completa: creare un «generatore di riassunti AI». L'utente inserisce un testo lungo e l'app chiama l'API di un grande modello per generare il riassunto. Questa esercitazione mostra l'intero flusso di una chiamata API: configurazione dell'ambiente, chiamata delle API, gestione degli errori, controllo dei costi.
 
@@ -514,7 +514,7 @@ if __name__ == "__main__":
 Questo codice incarna alcune buone pratiche delle chiamate API: la chiave API si legge da una variabile d'ambiente, mai scritta direttamente nel codice; le funzioni hanno documentazione chiara e type hints; max_tokens limita la lunghezza dell'output; temperature è impostato su un valore basso (0,3) per output più stabili; la gestione degli errori è completa; le informazioni sul consumo di token vengono restituite per tracciare i costi. Quando usi l'AI per scrivere questo codice, puoi comunicarle proprio questi requisiti: è perfettamente in grado di realizzarli per te.
 
 :::inline div .quote-line
-La lezione finale del capitolo: i modelli sono le "munizioni", la metodologia è la "tattica". Le munizioni giuste rendono la battaglia più fluida, ma senza una buona tattica nemmeno le munizioni migliori vincono la guerra. Ora che conosci i punti di forza di ogni modello e come usare le API, hai un "arsenale" forbito — ma come combattere la battaglia dipende dai metodi di pensiero dei capitoli precedenti.
+La lezione finale del capitolo: i modelli sono le "munizioni", la metodologia è la "tattica". Le munizioni giuste rendono la battaglia più fluida, ma senza una buona tattica nemmeno le munizioni migliori vincono la guerra. Ora che conosci i punti di forza di ogni modello e come usare le API, hai un "arsenale" forbito, ma come combattere la battaglia dipende dai metodi di pensiero dei capitoli precedenti.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

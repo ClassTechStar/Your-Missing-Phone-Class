@@ -15,7 +15,7 @@ En el capítulo anterior hablamos del "pensamiento computacional", pero para lle
 
 Dicho simplemente, GitHub es una <strong>plataforma de alojamiento y colaboración de código basada en Git</strong>. Se lanzó en 2008, fue adquirida por Microsoft en 2018 y sigue siendo la plataforma de alojamiento de código abierto más grande del mundo, albergando cientos de millones de repositorios que cubren casi todos los lenguajes de programación principales.
 
-Para entenderlo con una analogía:<strong>Git es tu diario en el ordenador, GitHub es una plataforma de blog pública</strong>— puedes publicar tus propios trabajos, seguir proyectos de otros, participar en discusiones y colaboraciones. No es solo un "almacén trasero para programadores", sino más bien una "ciudad tecnológica" construida conjuntamente por desarrolladores de todo el mundo — los proyectos nacen aquí, se iteran, se discuten y se reútilizan.
+Para entenderlo con una analogía:<strong>Git es tu diario en el ordenador, GitHub es una plataforma de blog pública</strong>— puedes publicar tus propios trabajos, seguir proyectos de otros, participar en discusiones y colaboraciones. No es solo un "almacén trasero para programadores", sino más bien una "ciudad tecnológica" construida conjuntamente por desarrolladores de todo el mundo: los proyectos nacen aquí, se iteran, se discuten y se reútilizan.
 
 Para la gente común, GitHub tampoco está fuera de alcance. Muchos no programadores lo usan para alojar notas, libros electrónicos, blogs personales e incluso para respaldar archivos de configuración. Mientras tengas aunque sea un poco de necesidad de "organizar tus cosas y compartirlas", GitHub merece que lo conozcas.
 
@@ -97,7 +97,7 @@ GitHub ofrece no solo almacenamiento de código, sino también:
 - <strong>Alojamiento y presentación de código</strong>: cada repositorio tiene una hermosa pagina web con resaltado de sintaxis; es la "carta de presentación" de tu obra técnica.
 - <strong>Comunidad open source</strong>: puedes Star (Guardar) proyectos que te gusten, Watch (seguir) la actividad de proyectos, Follow (seguir) desarrolladores, participando en la colaboracion open source global.
 
-#### IV. Registro e inicio: Crea tu primer repositorio en 5 minutos
+IV. Registro e inicio: Crea tu primer repositorio en 5 minutos
 
 ##### Registrar cuenta
 
@@ -112,7 +112,7 @@ GitHub ofrece no solo almacenamiento de código, sino también:
 2. Introduce el nombre del repositorio (Repository name), por ejemplo<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
 3. Escribe una breve descripción (Descriptíon) para que otros sepan de que trata este repositorio.
 4. Elige Publico (Public) o Privado (Private). Los repositorios publicos son visibles para todos; los privados solo para ti y tus colaboradores. La cuenta gratuita soporta repositorios privados ilimitados.
-5. Marca "Add a README file" — README es el "manual de instrucciones" del proyecto; se recomienda en cada repositorio.
+5. Marca "Add a README file": README es el "manual de instrucciones" del proyecto; se recomienda en cada repositorio.
 6. Haz clic en "Create repository" y tu primer repositorio GitHub nacera!
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -135,7 +135,7 @@ Para entender el flujo de trabajo de GitHub, recuerda este ciclo:<strong>modific
 
 Para principiantes, recuerda esta fórmula:<strong>"primero pull, luego modificas, al terminar haces add, commit con descripción, finalmente push"</strong>. Adopta este hábito y la colaboracion en equipo sera ordenada.
 
-#### VI. Flujo de colaboración en equipo: cómo funciona Pull Request
+VI. Flujo de colaboración en equipo: cómo funciona Pull Request
 
 Lo más poderoso de GitHub es su mecanismo de colaboracion. Un flujo tipico de colaboracion en equipo es el siguiente:
 
@@ -146,13 +146,13 @@ Lo más poderoso de GitHub es su mecanismo de colaboracion. Un flujo tipico de c
 5. <strong>Revisión de código (Code Review)</strong>: los miembros del equipo revisan tu código, dan opiniones o sugieren modificaciones. Puedes seguir haciendo commits según los comentarios; el PR se actualiza automáticamente.
 6. <strong>Fusionar (Merge)</strong>: tras aprobar la revisión, haz clic en "Merge" para fusionar el código con la rama principal. Tu contribucion entra oficialmente en el proyecto!
 
-Este flujo garantiza que <strong>todo código que entra en la rama principal pasa por revisión</strong>, reduciendo enormemente la probabilidad de errores. Los proyectos open source también usan este mecanismo para aceptar contribuciones de extraños de todo el mundo — puedes enviar un PR a cualquier proyecto open source conocido y, si se acepta, te conviertes en colaborador de ese proyecto.
+Este flujo garantiza que <strong>todo código que entra en la rama principal pasa por revisión</strong>, reduciendo enormemente la probabilidad de errores. Los proyectos open source también usan este mecanismo para aceptar contribuciones de extraños de todo el mundo: puedes enviar un PR a cualquier proyecto open source conocido y, si se acepta, te conviertes en colaborador de ese proyecto.
 
 #### VII. Escenarios típicos de uso de GitHub
 
 ##### Estudíantes: competencias y proyectos academicos
 
-Los estudiantes de informática que participan en ACM, hackathons o trabajos de fin de carrera casi siempre usan GitHub. Sirve tanto como plataforma de colaboracion en equipo como como ventana de exhibicion de trabajos — los jueces pueden ver directamente tu repositorio para evaluar la calidad del código y el proceso de colaboracion. Muchas empresas piden el enlace a tu perfil de GitHub como prueba de capacidad técnica al contratar.
+Los estudiantes de informática que participan en ACM, hackathons o trabajos de fin de carrera casi siempre usan GitHub. Sirve tanto como plataforma de colaboracion en equipo como como ventana de exhibicion de trabajos, los jueces pueden ver directamente tu repositorio para evaluar la calidad del código y el proceso de colaboracion. Muchas empresas piden el enlace a tu perfil de GitHub como prueba de capacidad técnica al contratar.
 
 ##### Base de conocimiento personal y alojamiento de notas
 
@@ -184,7 +184,7 @@ Usa los repositorios como nube; al cambiar de ordenador o trabajar con multiples
 <i class="fas fa-exclamation-triangle mr-2"></i>Recordatorío de seguridad
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Nunca subas contraseñas, claves API, cadenas de conexión a bases de datos u otra información sensible a GitHub, especialmente en repositorios públicos — una vez filtrada, los rastreadores la capturarán al instante con graves consecuencias.
+- Nunca subas contraseñas, claves API, cadenas de conexión a bases de datos u otra información sensible a GitHub, especialmente en repositorios públicos: una vez filtrada, los rastreadores la capturarán al instante con graves consecuencias.
 - Si por error subiste información sensible, no basta con borrar el archivo (todavía está en el historial); usa<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> o herramientas profesionales para limpiar el historial y cambia inmediatamente las claves filtradas.
 - Los repositorios privados tampoco son absolutamente seguros; lo mejor es gestionar la información sensible con variables de entorno, sin incluirla en el repositorio de código.
 :::
@@ -207,7 +207,7 @@ GitHub Pages te permite alojar gratis un sitio estático; combinado con generado
 
 #### IX. Resumen: por qué todos deberían conocer GitHub
 
-GitHub hace tiempo que dejó de ser solo "una herramienta de programadores"; es más bien una <strong>forma de trabajar en la era digital</strong>: el control de versiones hace todo rastreable, los mecanismos de colaboración hacen que los equipos funciónen eficientemente, y el espíritu open source deja fluir libremente el conocimiento. Aunque no escribas código, entender conceptos como "commit, branch, merge" te ayudará a gestionar mejor cualquier contenido que necesite "modificaciones repetidas + colaboración entre varias personas" — desde tesis y documentos hasta notas y propuestas.
+GitHub hace tiempo que dejó de ser solo "una herramienta de programadores"; es más bien una <strong>forma de trabajar en la era digital</strong>: el control de versiones hace todo rastreable, los mecanismos de colaboración hacen que los equipos funciónen eficientemente, y el espíritu open source deja fluir libremente el conocimiento. Aunque no escribas código, entender conceptos como "commit, branch, merge" te ayudará a gestionar mejor cualquier contenido que necesite "modificaciones repetidas + colaboración entre varias personas", desde tesis y documentos hasta notas y propuestas.
 
 Para los estudiantes de informática, GitHub es una hábilidad indispensable: es tu portafolio, plataforma de colaboración, repositorio de recursos de aprendizaje, y también el "currículum" más convincente cuando busques empleo en el futuro. Regístrate pronto, sube tus tareas de curso y pequeños proyectos, acumula poco a poco, y en unos años tendrás un historial técnico que deslumbrará a los entrevistadores.
 

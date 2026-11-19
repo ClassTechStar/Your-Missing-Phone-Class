@@ -61,7 +61,7 @@ class Record {
 小貼士：金額何以用 Double？
 
 {class="mt-1"}
-嚴謹之金融 App 用 Decimal（精確十進制）以避浮點之差（0.1+0.2≠0.3 之舊惑）。練手之項用 Double 足矣；他日若作真金融之品，宜易為 Decimal 或「以分為單位之 Int」——此無數先輩所踐之坑也。
+嚴謹之金融 App 用 Decimal（精確十進制）以避浮點之差（0.1+0.2≠0.3 之舊惑）。練手之項用 Double 足矣；他日若作真金融之品，宜易為 Decimal 或「以分為單位之 Int」，此無數先輩所踐之坑也。
 :::
 
 #### 三、MVVM：界面與邏輯「分家」
@@ -74,7 +74,7 @@ class Record {
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-圖 4：MVVM 三層之構——數據單向而流，各層互不越界
+圖 4：MVVM 三層之構，數據單向而流，各層互不越界
 :::
 
 ::: div .code-block
@@ -116,7 +116,7 @@ class RecordViewModel {
 ```
 :::
 
-界面中 @State private var vm = RecordViewModel(...)，遂徑以 vm.records 渲列表——數據一變，界面自刷。
+界面中 @State private var vm = RecordViewModel(...)，遂徑以 vm.records 渲列表，數據一變，界面自刷。
 
 #### 四、界面：列表頁 + 錄入彈窗
 
@@ -167,13 +167,13 @@ struct RecordListView: View {
 按：輸入之驗勿懈
 
 {class="mt-1"}
-金額輸入框必驗之：空值、負數、"abc" 之類非法輸入皆當攔（以 Double(text) 審之，不遂則返 nil）。App 之崩，其常因之一，即「視用戶之輸為馴良」。謹記：凡用戶所輸，皆當如敵而察之。
+金額輸入框必驗之：空值、負數、"abc" 之類非法輸入皆當攔：以 Double(text) 審之，不遂則返 nil。App 之崩，其常因之一，即「視用戶之輸為馴良」。謹記：凡用戶所輸，皆當如敵而察之。
 :::
 
 #### 五、編、刪與彙總
 
-- 刪：List 之 .onDelete 左滑而刪 + 確認彈窗（誤刪者，記賬類 App 用戶之所深憾也）；
-- 編：點行入編輯彈窗，預填舊值（易一字較重輸為省）；
+- 刪：List 之 .onDelete 左滑而刪 + 確認彈窗（誤刪者，記賬類 App 用戶之所深憾也）。
+- 編：點行入編輯彈窗，預填舊值（易一字較重輸為省）。
 - 彙總：以 filter + reduce 算「本月收入 / 支出 / 結餘」，頂部之卡陳之：
 
 ::: div .code-block
@@ -204,15 +204,15 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 
 基礎版驗過，則自加二道「進階之饌」：
 
-1. 分類統計：增「統計」標籤頁，以 Swift Charts 繪分類支出為餅圖/柱狀圖——蘋果官方圖表之庫，數行碼而圖成；
-2. iCloud 同步：SwiftData 開 iCloud 同步，惟須配數項設置——賬本於 iPhone/iPad 之間自同步，頓覺「高級」矣。
+1. 分類統計：增「統計」標籤頁，以 Swift Charts 繪分類支出為餅圖/柱狀圖，蘋果官方圖表之庫，數行碼而圖成。
+2. iCloud 同步：SwiftData 開 iCloud 同步，惟須配數項設置：賬本於 iPhone/iPad 之間自同步，頓覺「高級」矣。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 來動手：本週成之
 
 {class="mt-1"}
-按「數據層 → ViewModel → 列表頁 → 錄入彈窗 → 彙總卡片」之序而動手，日進一程。困則以報錯原文擲於搜索引擎或 AI（尚憶第七篇《AI編程實戰篇》乎？述問題時，明言「期望之行、實際之行、復現之步」）。成則以之記賬一週——自作之 App 自用之，成就之感將推汝前行。
+按「數據層 → ViewModel → 列表頁 → 錄入彈窗 → 彙總卡片」之序而動手，日進一程。困則以報錯原文擲於搜索引擎或 AI（尚憶第七篇《AI編程實戰篇》乎？述問題時，明言「期望之行、實際之行、復現之步」）。成則以之記賬一週，自作之 App 自用之，成就之感將推汝前行。
 :::
 
 ::: div .chapter-summary

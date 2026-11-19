@@ -2,12 +2,12 @@
 id: fu-lu-b
 num: B
 part: fu-lu
-nav: B附錄B：動手練習小參考
+nav: 附錄B：練習卡住，奈何？
 toc: default
 kind: appendix
 ---
 
-### 附錄B：動手練習小參考
+### 附錄B：練習卡住，奈何？
 
 - <strong>基礎篇練習</strong>：清理手機存儲，目標乃尋出並刪除彼"忘了是啥"之舊視頻、重複截圖與久不用之App。
 - <strong>軟件篇練習</strong>：設定微信之存儲清理，路徑通常爲【我】-【設定】-【通用】-【存儲空間】。

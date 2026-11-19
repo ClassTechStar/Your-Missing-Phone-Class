@@ -56,11 +56,11 @@ Rajah 6: Pokok keputusan pemilihan alat pengaturcaraan AI
 
 Soalan 1: Saya langsung tidak tahu pengaturcaraan, bolehkah saya menggunakan pengaturcaraan AI?
 
-Boleh. Pada 2026, alat pengaturcaraan AI sudah cukup kuat; anda boleh sepenuhnya menerangkan keperluan dalam bahasa semula jadi dan membiarkan AI menjana kod. Tetapi ada dua cadangan: pertama, mulakan dengan alat Builder awan (seperti v0 dan Bolt) yang tidak memerlukan persediaan persekitaran pembangunan; kedua, pelajari konsep asas sambil menggunakan — anda tidak perlu mahir sintaks, tetapi anda perlu dapat "memahami" maksud umum kod yang ditulis AI, barulah penerimaan dapat dilakukan dengan berkesan.
+Boleh. Pada 2026, alat pengaturcaraan AI sudah cukup kuat; anda boleh sepenuhnya menerangkan keperluan dalam bahasa semula jadi dan membiarkan AI menjana kod. Tetapi ada dua cadangan: pertama, mulakan dengan alat Builder awan (seperti v0 dan Bolt) yang tidak memerlukan persediaan persekitaran pembangunan; kedua, pelajari konsep asas sambil menggunakan, anda tidak perlu mahir sintaks, tetapi anda perlu dapat "memahami" maksud umum kod yang ditulis AI, barulah penerimaan dapat dilakukan dengan berkesan.
 
 Soalan 2: Bahasa pengaturcaraan yang mana patut saya pelajari?
 
-Bergantung pada apa yang anda mahu buat. Frontend laman web — JavaScript/TypeScript; pemprosesan data atau AI — Python; backend peringkat perusahaan — Java atau Go. Tetapi lebih penting: pada era pengaturcaraan AI, kepentingan "bahasa" sedang menurun. AI boleh membantu anda mengendalikan butiran sintaks; yang perlu anda fahami ialah "struktur program" — apa itu fungsi, apa itu gelung, apa itu struktur data. Konsep-konsep ini melangkaui bahasa; sekali difahami, bertukar ke bahasa mana pun menjadi cepat.
+Bergantung pada apa yang anda mahu buat. Frontend laman web, JavaScript/TypeScript; pemprosesan data atau AI, Python; backend peringkat perusahaan, Java atau Go. Tetapi lebih penting: pada era pengaturcaraan AI, kepentingan "bahasa" sedang menurun. AI boleh membantu anda mengendalikan butiran sintaks; yang perlu anda fahami ialah "struktur program", apa itu fungsi, apa itu gelung, apa itu struktur data. Konsep-konsep ini melangkaui bahasa; sekali difahami, bertukar ke bahasa mana pun menjadi cepat.
 
 Soalan 3: Adakah kod yang ditulis AI ada isu hak cipta?
 
@@ -68,11 +68,11 @@ Sehingga Ogos 2026, ini masih satu isu undang-undang yang dipertikaikan. Secara 
 
 Soalan 4: Adakah AI akan menggantikan pengaturcara?
 
-Dalam jangka pendek, tidak. Yang digantikan oleh AI bukan kerjaya "pengaturcara", tetapi kerja "mengekod baris demi baris". Sama seperti kalkulator tidak menggantikan ahli matematik, malah membebaskan ahli matematik daripada pengiraan tangan yang menjemukan. Alat pengaturcaraan AI mengalihkan pengaturcara daripada "menulis kod" kepada "memikirkan masalah" — ini sebenarnya meningkatkan had nilai pengaturcara. Daya saing masa depan bukan pada "boleh menulis berapa banyak baris kod", tetapi pada "boleh menyelesaikan masalah seberapa kompleks".
+Dalam jangka pendek, tidak. Yang digantikan oleh AI bukan kerjaya "pengaturcara", tetapi kerja "mengekod baris demi baris". Sama seperti kalkulator tidak menggantikan ahli matematik, malah membebaskan ahli matematik daripada pengiraan tangan yang menjemukan. Alat pengaturcaraan AI mengalihkan pengaturcara daripada "menulis kod" kepada "memikirkan masalah". ini sebenarnya meningkatkan had nilai pengaturcara. Daya saing masa depan bukan pada "boleh menulis berapa banyak baris kod", tetapi pada "boleh menyelesaikan masalah seberapa kompleks".
 
 Soalan 5: Bagaimana menilai sama ada output AI itu betul?
 
-Kaedah pengesahan tiga lapisan. Lapisan pertama: pengesahan fungsi — bolehkah ia berjalan? Betulkah input dan outputnya? Ini yang paling asas. Lapisan kedua: pengesahan sempadan — apa yang berlaku dengan input kosong, input terlalu panjang atau input luar biasa? Ini dapat menemui masalah tersembunyi. Lapisan ketiga: pengesahan seni bina — adakah struktur kod munasabah? Adakah ada yang dikodkan terus? Adakah mudah dikembangkan? Ini memerlukan pertimbangan teknikal tertentu daripada anda. Jika anda tidak dapat menilai lapisan ketiga, sekurang-kurangnya lakukan dua lapisan pertama — boleh berjalan dan sempadan normal sudah mengatasi kebanyakan pemula.
+Kaedah pengesahan tiga lapisan. Lapisan pertama: pengesahan fungsi, bolehkah ia berjalan? Betulkah input dan outputnya? Ini yang paling asas. Lapisan kedua: pengesahan sempadan, apa yang berlaku dengan input kosong, input terlalu panjang atau input luar biasa? Ini dapat menemui masalah tersembunyi. Lapisan ketiga: pengesahan seni bina — adakah struktur kod munasabah? Adakah ada yang dikodkan terus? Adakah mudah dikembangkan? Ini memerlukan pertimbangan teknikal tertentu daripada anda. Jika anda tidak dapat menilai lapisan ketiga, sekurang-kurangnya lakukan dua lapisan pertama, boleh berjalan dan sempadan normal sudah mengatasi kebanyakan pemula.
 
 #### 4. Sumber pembelajaran yang disyorkan
 
@@ -89,14 +89,14 @@ Senarai sumber pembelajaran yang disyorkan
 
 #### 5. Penutup: alat di tangan, metodologi di hati
 
-Kembali kepada kepercayaan teras buku ini: alat beriterasi setiap tiga bulan, metodologi hanya berevolusi setiap tiga tahun. Pada hari ini, Ogos 2026, keupayaan alat pengaturcaraan AI sudah kuat sehingga menakjubkan — anda boleh mencipta satu laman web dengan satu ayat, menjana satu aplikasi full-stack dengan satu perenggan penerangan, dan menyiapkan satu refaktor kompleks dengan satu arahan. Tetapi semakin kuat alat, semakin terserlah pentingnya metodologi — kerana kekuatan alat membesarkan setiap keputusan anda.
+Kembali kepada kepercayaan teras buku ini: alat beriterasi setiap tiga bulan, metodologi hanya berevolusi setiap tiga tahun. Pada hari ini, Ogos 2026, keupayaan alat pengaturcaraan AI sudah kuat sehingga menakjubkan, anda boleh mencipta satu laman web dengan satu ayat, menjana satu aplikasi full-stack dengan satu perenggan penerangan, dan menyiapkan satu refaktor kompleks dengan satu arahan. Tetapi semakin kuat alat, semakin terserlah pentingnya metodologi, kerana kekuatan alat membesarkan setiap keputusan anda.
 
-Jika keperluan anda jelas, AI dapat membantu anda melaksanakannya dengan cekap; jika keperluan anda kabur, AI juga cekap menghasilkan benda yang salah. Jika anda mematuhi kesederhanaan diutamakan, AI dapat membantu anda mengesahkan idea dengan pantas; jika anda tamak untuk menyeluruh, AI juga pantas menimbun hutang teknikal. Jika anda mengubah suai dengan tepat, AI dapat mengoptimumkan kod secara presisi seperti pembedahan; jika arahan anda kabur, AI juga pantas memperkenalkan bug secara besar-besaran.
+Jika keperluan anda jelas, AI dapat membantu anda melaksanakannya dengan cekap; jika keperluan anda kabur, AI juga cekap menghasilkan benda yang salah. Jika anda mematuhi kesederhanaan diutamakan. AI dapat membantu anda mengesahkan idea dengan pantas; jika anda tamak untuk menyeluruh, AI juga pantas menimbun hutang teknikal. Jika anda mengubah suai dengan tepat, AI dapat mengoptimumkan kod secara presisi seperti pembedahan; jika arahan anda kabur, AI juga pantas memperkenalkan bug secara besar-besaran.
 
-Inilah sebab buku ini menggunakan sebahagian besar ruangannya untuk membincangkan metodologi dan bukan operasi alat. Bukan kerana alat tidak penting, tetapi kerana metodologi ialah "pendarab" alat — semakin baik metodologi, semakin besar nilai alat; jika metodologi sifar, alat sekukur mana pun hanyalah sifar didarab dengan apa jua nombor.
+Inilah sebab buku ini menggunakan sebahagian besar ruangannya untuk membincangkan metodologi dan bukan operasi alat. Bukan kerana alat tidak penting, tetapi kerana metodologi ialah "pendarab" alat, semakin baik metodologi, semakin besar nilai alat; jika metodologi sifar, alat sekukur mana pun hanyalah sifar didarab dengan apa jua nombor.
 
 :::inline div .quote-line
-Anda tidak lagi mengekod bersendirian. Anda seorang panglima, AI ialah tentera anda. Kualiti pemikiran anda menentukan kekuatan tempur tentera itu. Mulai hari ini, persenjatai pemikiran dengan metodologi dan perbesar keupayaan dengan alat—itulah keseluruhan rahasia pengekodan AI.
+Anda tidak lagi mengekod bersendirian. Anda seorang panglima, AI ialah tentera anda. Kualiti pemikiran anda menentukan kekuatan tempur tentera itu. Mulai hari ini, persenjatai pemikiran dengan metodologi dan perbesar keupayaan dengan alat,itulah keseluruhan rahasia pengekodan AI.
 :::
 
 #### Rujukan

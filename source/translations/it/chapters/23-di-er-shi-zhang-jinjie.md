@@ -29,9 +29,9 @@ La modalità sviluppatore è un menu nascosto integrato nel sistema del telefono
 
 ##### Prestazioni e fluidità:
 
-- <strong>Regolazione della velocità delle animazioni (Scala animazione finestra / Scala animazione transizione / Scala durata animazione)</strong>: queste tre opzioni controllano la durata delle animazioni quando si apre un'app o si cambia schermata. Il valore predefinito è 1x; portarlo a 0.5x rende il telefono "più veloce" (in realtà la velocità dei programmi non cambia, solo l'animazione è più rapida), mentre disattivarlo significa passare da una schermata all'altra senza animazione. Molti geek lo impostano a 0.5x, per conservare una sensazione di transizione ma sembrare veloci; disattivarlo del tutto rende l'uso brusco e potrebbe nascondere i veri lag, facendoti credere che sia "fluidissimo" quando non lo è.
+- <strong>Regolazione della velocità delle animazioni (Scala animazione finestra / Scala animazione transizione / Scala durata animazione)</strong>. Queste tre opzioni controllano la durata delle animazioni quando si apre un'app o si cambia schermata. Il valore predefinito è 1x; portarlo a 0.5x rende il telefono "più veloce" (in realtà la velocità dei programmi non cambia, solo l'animazione è più rapida), mentre disattivarlo significa passare da una schermata all'altra senza animazione. Molti geek lo impostano a 0.5x, per conservare una sensazione di transizione ma sembrare veloci; disattivarlo del tutto rende l'uso brusco e potrebbe nascondere i veri lag, facendoti credere che sia "fluidissimo" quando non lo è.
 - <strong>Forza rendering GPU (Force GPU Rendering)</strong>: forza tutte le operazioni di disegno 2D a passare alla GPU invece che alla CPU. Su modelli vecchi o con app poco ottimizzate può migliorare la fluidità di scorrimento, ma aumenta il carico della GPU e i consumi. I telefoni moderni usano già massicciamente la GPU per il rendering, quindi questo interruttore ha un impatto limitato sui modelli di fascia media-alta: è più che altro un'opzione storica, l'utente comune può lasciare il default.
-- <strong>Profilo rendering GPU (Profile GPU Rendering)</strong>: mostra sullo schermo un grafico a barre in tempo reale del tempo di rendering di ogni frame; la linea verde orizzontale rappresenta i 16,6 ms (soglia di tempo frame a 60 fps). Se la barra supera la verde significa che c'è stato frame drop. È uno strumento per sviluppatori per diagnosticare i lag delle app; anche l'utente comune può usarlo per capire quali app siano peggio ottimizzate — se per una certa app le barre spesso superano la riga rossa durante lo scorrimento, con tutta probabilità è colpa sua.
+- <strong>Profilo rendering GPU (Profile GPU Rendering)</strong>: mostra sullo schermo un grafico a barre in tempo reale del tempo di rendering di ogni frame; la linea verde orizzontale rappresenta i 16,6 ms (soglia di tempo frame a 60 fps). Se la barra supera la verde significa che c'è stato frame drop. È uno strumento per sviluppatori per diagnosticare i lag delle app; anche l'utente comune può usarlo per capire quali app siano peggio ottimizzate, se per una certa app le barre spesso superano la riga rossa durante lo scorrimento, con tutta probabilità è colpa sua.
 
 ##### Background e autonomia:
 
@@ -46,12 +46,12 @@ La modalità sviluppatore è un menu nascosto integrato nel sistema del telefono
 Le impostazioni della modalità sviluppatore possono compromettere la stabilità del sistema: non modificare le opzioni che non comprendi. Dopo aver attivato il debug USB, fai attenzione quando colleghi il telefono a computer non fidati.
 :::
 
-#### 2. Sblocco OEM: l'"interruttore per il flash" nelle opzioni sviluppatore
+2. Sblocco OEM: l'"interruttore per il flash" nelle opzioni sviluppatore
 
-Tra le opzioni sviluppatore c'è un interruttore poco appariscente ma molto importante — "Sblocco OEM" (in alcuni marchi chiamato "Consenti sblocco OEM" o "Sblocco dispositivo"). L'interruttore in sé non sblocca il BL, ma è una "pre-autorizzazione": solo attivandolo il produttore ti permette di sbloccare il BL tramite il comando fastboot o uno strumento di marca.
+Tra le opzioni sviluppatore c'è un interruttore poco appariscente ma molto importante: "Sblocco OEM" (in alcuni marchi chiamato "Consenti sblocco OEM" o "Sblocco dispositivo"). L'interruttore in sé non sblocca il BL, ma è una "pre-autorizzazione": solo attivandolo il produttore ti permette di sbloccare il BL tramite il comando fastboot o uno strumento di marca.
 
 - <strong>Funzione dell'interruttore</strong>: equivale a dichiarare al produttore "accetto di perdere la garanzia e mi assumo i rischi, sbloccami il BL". Se questo interruttore è spento, qualsiasi comando di sblocco BL viene rifiutato.
-- <strong>Rapporto con il blocco BL</strong>: lo sblocco OEM è la "richiesta di idoneità", lo sblocco BL è l'"operazione effettiva". Il primo si attiva toccando nelle impostazioni del telefono; il secondo richiede di richiedere un codice di sblocco sul sito del produttore ed eseguire un comando fastboot dal computer (ad esempio <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>); entrambi sono indispensabili.
+- <strong>Rapporto con il blocco BL</strong>: lo sblocco OEM è la "richiesta di idoneità", lo sblocco BL è l'"operazione effettiva". Il primo si attiva toccando nelle impostazioni del telefono; il secondo richiede di richiedere un codice di sblocco sul sito del produttore ed eseguire un comando fastboot dal computer, (ad esempio <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>); entrambi sono indispensabili.
 - <strong>Il ripristino di fabbrica lo resetta?</strong> Sì. L'interruttore "Sblocco OEM" torna spento dopo il ripristino di fabbrica, ma il BL, una volta sbloccato, resta in uno stato fisico e non viene bloccato di nuovo dal ripristino: devi eseguire manualmente <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> per bloccarlo di nuovo.
 - <strong>Quando va attivato</strong>: a meno che tu non sia sicuro di voler fare il flash o il Root, lascialo spento. È indipendente dall'interruttore "Debug USB": per il flash di solito vanno attivati entrambi.
 
@@ -165,9 +165,9 @@ I permessi Root equivalgono al superuser di Linux (controllo completo sulla dire
 L'operazione di Root comporta rischi e può trasformare il telefono in un "mattone" (impossibilità di accenderlo). Se sei un neofita, è meglio prima studiare a fondo l'argomento e assicurarti di avere un backup completo. Prima di operare leggi con attenzione il tutorial e verifica il tuo modello e la versione di sistema.
 :::
 
-#### 6. SafetyNet e certificazione Play Integrity: perché dopo il Root le app bancarie non funzionano
+6. SafetyNet e certificazione Play Integrity: perché dopo il Root le app bancarie non funzionano
 
-Molti utenti Root hanno vissuto questo momento di sgomento: dopo il Root hanno installato carichi di moduli, ma aprendo l'app della banca — "Il tuo dispositivo non è sicuro, non può essere usato"; non funziona più neanche Google Pay e persino Netflix rifiuta la riproduzione in HD. Dietro ci sono due meccanismi di certificazione dell'integrità del dispositivo di Google: il vecchio SafetyNet e la nuova API Play Integrity.
+Molti utenti Root hanno vissuto questo momento di sgomento: dopo il Root hanno installato carichi di moduli, ma aprendo l'app della banca: "Il tuo dispositivo non è sicuro, non può essere usato"; non funziona più neanche Google Pay e persino Netflix rifiuta la riproduzione in HD. Dietro ci sono due meccanismi di certificazione dell'integrità del dispositivo di Google: il vecchio SafetyNet e la nuova API Play Integrity.
 
 ##### Cosa sono SafetyNet / Play Integrity:
 
@@ -184,13 +184,13 @@ Molti utenti Root hanno vissuto questo momento di sgomento: dopo il Root hanno i
 
 ##### Perché dopo il Root queste app smettono di funzionare:
 
-L'app invia una richiesta di certificazione ai server di Google tramite l'API Play Integrity; Google controlla diversi indicatori del dispositivo — stato del blocco Bootloader, partizione di sistema modificata, presenza del binario su, SELinux in modalità permissiva, ecc. Qualsiasi anomalia porta il livello restituito a essere più basso o vuoto, e l'app bancaria, vedendo "dispositivo non sicuro", rifiuta il servizio.
+L'app invia una richiesta di certificazione ai server di Google tramite l'API Play Integrity; Google controlla diversi indicatori del dispositivo, stato del blocco Bootloader, partizione di sistema modificata, presenza del binario su, SELinux in modalità permissiva, ecc. Qualsiasi anomalia porta il livello restituito a essere più basso o vuoto, e l'app bancaria, vedendo "dispositivo non sicuro", rifiuta il servizio.
 
 ##### Soluzioni moderne per nascondere: Magisk Hide / Shamiko / Zygisk:
 
 Per godere delle comodità del Root e al tempo stesso poter usare le app bancarie, la community ha sviluppato una serie di soluzioni per "nascondere lo stato di Root". L'idea di base è: far sì che i programmi di rilevamento non vedano un sistema modificato, ma un dispositivo "che sembra normale".
 
-- <strong>Magisk</strong>: la soluzione Systemless Root più diffusa oggi — non modifica la partizione di sistema, ma realizza il Root tramite mount. Il vantaggio di questa impostazione è che le probabilità di fallimento degli aggiornamenti OTA sono basse e la disinstallazione è piuttosto pulita; è la base di tutte le soluzioni di nascondimento successive. Tuttavia, l'uso di Magisk richiede comunque lo sblocco del BL.
+- <strong>Magisk</strong>: la soluzione Systemless Root più diffusa oggi: non modifica la partizione di sistema, ma realizza il Root tramite mount. Il vantaggio di questa impostazione è che le probabilità di fallimento degli aggiornamenti OTA sono basse e la disinstallazione è piuttosto pulita; è la base di tutte le soluzioni di nascondimento successive. Tuttavia, l'uso di Magisk richiede comunque lo sblocco del BL.
 - <strong>Magisk Hide (abbandonato)</strong>: il modulo di nascondimento integrato nelle prime versioni di Magisk, capace di nascondere il Root alle app specificate. Dal 2021 è stato rimosso da Magisk ufficiale, perché Google ha continuato a potenziare i sistemi di rilevamento, in una "caccia al topo" continua.
 - <strong>Zygisk</strong>: nuovo meccanismo introdotto in Magisk 24.0+, simile a Riru, realizza il caricamento dei moduli iniettandosi nel processo Zygote; è più nascosto della modifica diretta del sistema. Attivare Zygisk è il prerequisito per usare le soluzioni moderne di nascondimento.
 - <strong>Shamiko</strong>: il modulo di nascondimento più diffuso oggi, lavora insieme a Zygisk e può nascondere il Root, nascondere Magisk stesso e contraffare lo stato di blocco del Bootloader per le app specificate (in modalità "reverse whitelist"). Shamiko è distribuito tramite il repository LSPosed o GitHub.
@@ -208,7 +208,7 @@ Di tanto in tanto Google aggiorna le regole di rilevamento e i produttori di app
 
 - <strong>Modalità sviluppatore</strong>: puoi attivarla, per sperimentare l'accelerazione delle animazioni, l'analisi del rendering GPU, ecc., ma non modificare a caso le altre opzioni che non comprendi.
 - <strong>Sblocco OEM e blocco BL</strong>: se non intendi fare il flash o il Root, lascia entrambi gli interruttori nello stato predefinito (off), è la scelta più sicura.
-- <strong>ADB</strong>: strumento potente senza Root, usabile anche dai non esperti — ad esempio <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> per disinstallare le app preinstallate. Ma prima di cancellare, verifica sempre che il nome del pacchetto si possa cancellare.
+- <strong>ADB</strong>: strumento potente senza Root, usabile anche dai non esperti: ad esempio <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> per disinstallare le app preinstallate. Ma prima di cancellare, verifica sempre che il nome del pacchetto si possa cancellare.
 - <strong>Root</strong>: per l'utente comune non è consigliato, i rischi superano i vantaggi. Se ti servono davvero alcune funzioni, prima verifica se ci sono alternative che non richiedono il Root (come disinstallare le preinstallate con ADB, o usare Shizuku per sostituire alcune funzioni del Root).
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

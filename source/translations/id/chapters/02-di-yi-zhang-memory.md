@@ -9,7 +9,7 @@ kind: supplement
 ### Lampiran: Analisis ekspansi memori ponsel Android
 
 {class="chapter-intro mb-4"}
-Saat membeli ponsel, Anda sering melihat promosi seperti "12GB+8GB RAM"—seperti mendapat tambahan 8GB RAM secara gratis. Tapi apakah benar bisa membuat ponsel lebih cepat? Apakah justru merusak ponsel? Di bagian ini kita akan jelaskan teknologi "ekspansi memori" secara menyeluruh.
+Saat membeli ponsel, Anda sering melihat promosi seperti "12GB+8GB RAM",seperti mendapat tambahan 8GB RAM secara gratis. Tapi apakah benar bisa membuat ponsel lebih cepat? Apakah justru merusak ponsel? Di bagian ini kita akan jelaskan teknologi "ekspansi memori" secara menyeluruh.
 
 #### 1. Definisi esensi
 
@@ -49,7 +49,7 @@ Ekspansi memori bukan panacea, efek berbeda tergantung model dan skenario penggu
 
 Penamaan berbeda-beda antar merek: Xiaomi menyebut "Memory Extension", Huawei "Memory Fusion", Samsung "RAM Plus", vivo "Extended RAM", OnePlus "Memory Extension". Fitur ini adalah kemampuan native sistem, tidak terikat langsung dengan versi underlying Android.
 
-Path umum mengaktifkan: Masuk [Pengaturan] → [Pengaturan lainnya] → temukan submenu [Memori] atau [Performa] → aktifkan "Ekspansi memori" dan pilih tier kapasitas (biasanya 2GB–7GB), berlaku setelah reboot. Setelah diaktifkan sistem akan menampilkan kombinasi memori seperti "8GB+4GB".
+Path umum mengaktifkan: Masuk [Pengaturan].[Pengaturan lainnya].temukan submenu [Memori] atau [Performa].aktifkan "Ekspansi memori" dan pilih tier kapasitas (biasanya 2GB–7GB), berlaku setelah reboot. Setelah diaktifkan sistem akan menampilkan kombinasi memori seperti "8GB+4GB".
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

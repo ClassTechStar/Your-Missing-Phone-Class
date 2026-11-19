@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 68 : Le chemin de l'avancement — permissions, notifications et architecture moderne
 
 {class="chapter-intro mb-4"}
-Savoir fabriquer une App n'est que le commencement. Ce chapitre discute des marches à franchir entre « savoir faire » et « bien faire » : demander les permissions avec élégance, envoyer des notifications sans devenir insupportable, élever l'architecture d'un cran encore, et — en 2026 — écrire du code iOS en tandem avec l'IA. Chacun de ces sujets se présentera à toi tout de suite dans un vrai projet.
+Savoir fabriquer une App n'est que le commencement. Ce chapitre discute des marches à franchir entre « savoir faire » et « bien faire » : demander les permissions avec élégance, envoyer des notifications sans devenir insupportable, élever l'architecture d'un cran encore, et, en 2026, écrire du code iOS en tandem avec l'IA. Chacun de ces sujets se présentera à toi tout de suite dans un vrai projet.
 
 #### 1. Les permissions : frapper d'abord, entrer ensuite
 
@@ -51,7 +51,7 @@ class LocationModel {
 Attention : les permissions iOS ne passent qu'« une fois »
 
 {class="mt-1"}
-La fenêtre de permission iOS ne s'affiche qu'une seule fois — après un refus, elle ne reviendra jamais. Donc : choisis le moment de la demande « à l'instant où l'utilisateur s'apprête à s'en servir » (et non une salve au lancement), et écris un texte qui explique l'usage. Le guidage d'interface après refus (« active la localisation dans Réglages ») est d'équipement ; ne laisse pas l'utilisateur enfermé dans une impasse.
+La fenêtre de permission iOS ne s'affiche qu'une seule fois, après un refus, elle ne reviendra jamais. Donc : choisis le moment de la demande « à l'instant où l'utilisateur s'apprête à s'en servir » (et non une salve au lancement), et écris un texte qui explique l'usage. Le guidage d'interface après refus (« active la localisation dans Réglages ») est d'équipement ; ne laisse pas l'utilisateur enfermé dans une impasse.
 :::
 
 #### 2. Les notifications : dire des choses utiles au bon moment
@@ -93,25 +93,25 @@ func scheduleDailyReminder() {
 ```
 :::
 
-Attention : la permission de notification d'iOS, elle aussi, ne se demande « qu'une fois », et l'utilisateur peut la couper à tout instant dans les réglages du système — la valeur perçue du contenu des notifications est donc capitale : un seul abus peut te priver de l'utilisateur pour toujours.
+Attention : la permission de notification d'iOS, elle aussi, ne se demande « qu'une fois », et l'utilisateur peut la couper à tout instant dans les réglages du système, la valeur perçue du contenu des notifications est donc capitale : un seul abus peut te priver de l'utilisateur pour toujours.
 
 #### 3. Architecture avancée : MVVM en profondeur et testabilité
 
 Tu as déjà utilisé MVVM au chapitre 65 ; voici trois points avancés pour compléter :
 
-- L'abstraction par protocole : fais dépendre le ViewModel d'un protocole (protocol) plutôt que d'une classe concrète — aux tests, tu peux injecter une « fausse source de données » ; c'est la pierre d'angle de la testabilité ;
+- L'abstraction par protocole : fais dépendre le ViewModel d'un protocole (protocol) plutôt que d'une classe concrète: aux tests, tu peux injecter une « fausse source de données » ; c'est la pierre d'angle de la testabilité ;
 - Responsabilité unique : un ViewModel ne s'occupe que d'une seule chose (celui des comptes ne gère pas la météo) ; quand les fonctions s'entassent, on scinde ;
-- Ne surconçois pas : pour un petit projet en solo, « classe @Observable + abstraction par protocole » suffit amplement. Les architectures lourdes de type VIPER ou Clean Architecture attendront que l'équipe et la complexité sonnent à ta porte — les outils servent un objectif, ils ne servent pas à se pavaner.
+- Ne surconçois pas : pour un petit projet en solo, « classe @Observable + abstraction par protocole » suffit amplement. Les architectures lourdes de type VIPER ou Clean Architecture attendront que l'équipe et la complexité sonnent à ta porte, les outils servent un objectif, ils ne servent pas à se pavaner
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Astuce : les « dividendes de l'écosystème » de SwiftUI
 
 {class="mt-1"}
-L'écosystème iOS cache encore deux façons avancées « réservées à la maison » : les widgets (WidgetKit) laissent l'utilisateur lire l'information sans ouvrir l'App (les « dépenses du mois » du carnet posées sur l'écran d'accueil), et les raccourcis (App Intents) laissent l'utilisateur invoquer tes fonctions par Siri ou l'automatisation. Les deux s'appuient sur des frameworks officiels, peu coûteux à apprivoiser, mais au gain d'expérience utilisateur énorme — sur la route de l'avancement, ce sont des déverrouillages à traiter en priorité.
+L'écosystème iOS cache encore deux façons avancées « réservées à la maison » : les widgets (WidgetKit) laissent l'utilisateur lire l'information sans ouvrir l'App (les « dépenses du mois » du carnet posées sur l'écran d'accueil), et les raccourcis (App Intents) laissent l'utilisateur invoquer tes fonctions par Siri ou l'automatisation. Les deux s'appuient sur des frameworks officiels, peu coûteux à apprivoiser, mais au gain d'expérience utilisateur énorme: sur la route de l'avancement, ce sont des déverrouillages à traiter en priorité.
 :::
 
-#### 4. Les nouveautés de 2026 : le développement iOS assisté par l'IA
+4. Les nouveautés de 2026 : le développement iOS assisté par l'IA
 
 En 2026, l'IA est déjà profondément enchâssée dans le flux de développement Apple. Si tu veux gagner en vitesse, cette combinaison est bien rodée :
 
@@ -124,7 +124,7 @@ En 2026, l'IA est déjà profondément enchâssée dans le flux de développemen
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Les quatre scénarios du développement iOS assisté par l'IA
 
-La méthode concrète — comment donner des instructions à l'IA, comment passer la recette, comment éviter les pièges — occupe onze chapitres complets dans la septième partie de ce livre, « Pratique de la programmation avec l'IA » (chapitres 37-47) ; je te conseille chaudement de lire les deux en parallèle : la syntaxe de Swift pour cette partie, l'art de collaborer avec l'IA pour la septième.
+La méthode concrète, comment donner des instructions à l'IA, comment passer la recette, comment éviter les pièges, occupe onze chapitres complets dans la septième partie de ce livre, « Pratique de la programmation avec l'IA » (chapitres 37-47) ; je te conseille chaudement de lire les deux en parallèle : la syntaxe de Swift pour cette partie, l'art de collaborer avec l'IA pour la septième.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -135,7 +135,7 @@ La méthode concrète — comment donner des instructions à l'IA, comment passe
 Le régime de concurrence de Swift 6 comporte deux règles que tout débutant doit comprendre :
 
 - L'interface ne se met à jour que sur le thread principal : les vues SwiftUI sont @MainActor par défaut ; les rappels réseau reviennent sur le thread principal avant de toucher à l'état (await MainActor.run { ... }, ou bien marque le ViewModel comme @MainActor) ;
-- Les tâches asynchrones se pilotent avec Task : le modificateur .task { } démarre tout seul quand la vue apparaît et s'annule tout seul à sa disparition — c'est la posture standard pour lancer un travail asynchrone en SwiftUI ; évite d'écrire des Task à nu en vrac dans le body.
+- Les tâches asynchrones se pilotent avec Task : le modificateur .task { } démarre tout seul quand la vue apparaît et s'annule tout seul à sa disparition, c'est la posture standard pour lancer un travail asynchrone en SwiftUI ; évite d'écrire des Task à nu en vrac dans le body.
 
 ::: div .code-block
 :::inline div .code-head
@@ -162,7 +162,7 @@ struct WeatherScreen: View {
 ```
 :::
 
-Derrière ces deux règles se tient la conception de Swift 6 « sûr contre les courses de données » — le compilateur te signale l'erreur dès que tu écris de travers, au lieu d'attendre que l'App plante pour le découvrir. Les erreurs du compilateur ne te cherchent pas des noises : elles interceptent les balles à ta place.
+Derrière ces deux règles se tient la conception de Swift 6 « sûr contre les courses de données »: le compilateur te signale l'erreur dès que tu écris de travers, au lieu d'attendre que l'App plante pour le découvrir. Les erreurs du compilateur ne te cherchent pas des noises : elles interceptent les balles à ta place.
 
 {class="mt-1"}
 ① Ajoute au carnet le « rappel de comptes quotidien à 20 h » (permission de notification + notification locale) ; ② transforme la source de données du ViewModel en abstraction par protocole et écris un test unitaire qui injecte de fausses données ; ③ ajoute un widget d'écran d'accueil « dépenses du mois ». Le trio terminé, ton projet aura les allures d'une « troupe régulière ».

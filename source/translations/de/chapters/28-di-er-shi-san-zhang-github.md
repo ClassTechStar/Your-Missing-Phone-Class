@@ -19,7 +19,7 @@ Ein Vergleich:<strong>Git ist das Tagebuch auf deinem Computer, GitHub ist eine 
 
 Auch für Nicht-Programmierer ist GitHub keineswegs unerreichbar. Viele Nicht-Programmierer nutzen es, um Notizen, E-Books, persönliche Blogs oder sogar Konfigurationsdateien zu hosten. Sobald du das Bedürfnis hast, "deine Dinge ordentlich zu strukturieren und zu teilen", lohnt sich ein Blick auf GitHub.
 
-#### Zweitens. Der Unterschied zwischen Git und GitHub (Schlüsselkonzept!)
+Zweitens. Der Unterschied zwischen Git und GitHub (Schlüsselkonzept!)
 
 Viele verwechseln beim ersten Kontakt diese beiden Begriffe. Hier eine Übersicht:
 
@@ -97,7 +97,7 @@ GitHub bietet mehr als nur Code-Speicherung, nämlich auch:
 - <strong>Code-Hosting und Präsentation</strong>: Jedes Repository hat eine ansprechende Web-Ansicht mit Syntax-Highlighting – die "Visitenkarte" deiner technischen Werke.
 - <strong>Open-Source-Community</strong>: Du kannst Projekte mit einem Stern (Star) markieren, Projektaktivitäten beobachten (Watch), Entwicklern folgen (Follow) und an globaler Open-Source-Zusammenarbeit teilnehmen.
 
-#### Viertens. Registrierung und Einstieg: Erstelle in fünf Minuten dein erstes Repository
+Viertens. Registrierung und Einstieg: Erstelle in fünf Minuten dein erstes Repository
 
 ##### Konto registrieren
 
@@ -128,7 +128,7 @@ README.md ist eine Datei im Markdown-Format und der erste Inhalt, den Besucher s
 Um den GitHub-Workflow zu verstehen, merke dir diesen Kreislauf:<strong>Lokale Änderung → Staging → Commit → Push → Cloud-Aktualisierung</strong>.
 
 1. <strong>Dateien ändern</strong>: Auf dem lokalen Computer mit einem Editor Code schreiben oder Dokumente ändern.
-2. <strong>git add</strong>: Geänderte Dateien zum "Staging-Bereich" hinzufügen; das entspricht der Mitteilung an Git: "Diese Änderungen möchte ich aufzeichnen."
+2. <strong>git add</strong>: Geänderte Dateien zum "Staging-Bereich" hinzufügen; das entspricht der Mitteilung an Git: "Diese Änderungen möchte ich aufzeichnen.".
 3. <strong>git commit</strong>: Die Änderungen aus dem Staging-Bereich als "Commit" endgültig festhalten, mit einer Beschreibung wie "Login-Bug behoben". Dieser Schritt findet nur lokal statt.
 4. <strong>git push</strong>: Den lokalen Commit zur GitHub-Cloud hochladen, damit andere ihn sehen können.
 5. <strong>git pull</strong>: Vor Beginn der Arbeit den neuesten Code aus der Cloud holen, um sicherzustellen, dass lokal und die restlichen Teammitglieder synchron sind.

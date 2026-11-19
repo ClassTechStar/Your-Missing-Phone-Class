@@ -2,12 +2,12 @@
 id: di-san-shi-si-zhang
 num: 34
 part: zhan-wang-pian
-nav: Capitolo 34: Guida approfondita alla connessione telefono-auto — La fusione tra smartphone e automobile
+nav: Capitolo 34: Telefono e auto: collegarli senza complicazioni
 toc: default
 kind: chapter
 ---
 
-### Capitolo 34: Guida approfondita alla connettività auto-telefono — la fusione tra telefono e automobile
+### Capitolo 34: Telefono e auto: collegarli senza complicazioni
 
 {class="chapter-intro mb-4"}
 L'auto sta evolvendo da "quattro ruote più un divano" a "quattro ruote più uno smartphone". Che tu guidi un'auto a combustione o a nuova energia, il rapporto tra telefono e infotainment determina l'esperienza di guida. Questo capitolo ti aiuta a chiarire le tre grandi vie della connettività auto-telefono, le caratteristiche dei sistemi infotainment dei vari schieramenti e quei piccoli trucchi che rendono la guida più scorrevole.
@@ -70,7 +70,7 @@ I tre principali schemi di proiezione hanno punti di forza diversi; quando scegl
 ```
 :::
 
-#### 3. Abitacolo HarmonyOS: passaggio senza soluzione di continuità tra telefono e auto
+3. Abitacolo HarmonyOS: passaggio senza soluzione di continuità tra telefono e auto
 
 Se CarPlay è "il telefono proiettato sull'infotainment", l'abitacolo HarmonyOS è "telefono e infotainment sono una cosa sola". La collaborazione tra telefoni Huawei e infotainment di Aito/Luxeed rappresenta il livello più alto attuale di connettività auto-telefono in Cina:
 
@@ -100,12 +100,12 @@ Se il tuo infotainment è troppo vecchio o troppo brutto, puoi usare direttament
 <i class="fas fa-triangle-exclamation mr-2"></i>Promemoria di sicurezza
 
 {class="mt-1"}
-Qualsiasi soluzione si usi, usare il telefono durante la guida è un'infrazione al codice della strada. Il supporto telefono serve solo per "guardare la navigazione", non per "operare il telefono". Impostare la destinazione, cambiare brano e simili va fatto da fermo, oppure col controllo vocale.
+Qualsiasi soluzione si usi, usare il telefono durante la guida è un'infrazione al codice della strada. Il supporto telefono serve solo per "guardare la navigazione". Non per "operare il telefono". Impostare la destinazione, cambiare brano e simili va fatto da fermo, oppure col controllo vocale.
 :::
 
 #### 6. Consigli pratici
 
-- <strong>CarPlay wireless instabile</strong>: ① spegni il Bluetooth dell'infotainment e riparetalo; ② elimina i dispositivi abbinati sull'infotainment e ricollegali; ③ controlla se il telefono è connesso a più dispositivi Bluetooth contemporaneamente causando conflitti; ④ aggiorna il firmware dell'infotainment e il sistema del telefono all'ultima versione; ⑤ in caso contrario, passa a CarPlay cablato, più stabile.
+- <strong>CarPlay wireless instabile</strong>: ① spegni il Bluetooth dell'infotainment e riparetalo. ② elimina i dispositivi abbinati sull'infotainment e ricollegali. ③ controlla se il telefono è connesso a più dispositivi Bluetooth contemporaneamente causando conflitti. ④ aggiorna il firmware dell'infotainment e il sistema del telefono all'ultima versione. ⑤ in caso contrario, passa a CarPlay cablato, più stabile.
 - <strong>Traffico dati dell'infotainment esaurito</strong>: ① apri un hotspot col telefono e collega l'infotainment a quello; ② nelle impostazioni dell'infotainment sposta su Wi-Fi le app ad alto consumo (come video e musica in streaming); ③ pulisci periodicamente la cache delle mappe offline dell'infotainment.
 - <strong>Attivazione automatica della modalità di guida</strong>: ① la "modalità Concentrazione" di iOS può essere impostata per attivarsi automaticamente "alla connessione al Bluetooth dell'auto", silenziando le notifiche non urgenti; ② la "modalità di guida" di Android o app di terzi (come Tasker) possono silenziare e rispondere automaticamente ai messaggi alla connessione Bluetooth; ③ i telefoni Huawei possono impostare il "pagamento intelligente" per passare automaticamente alla riproduzione musicale sull'auto quando si sale.
 
@@ -114,7 +114,7 @@ Qualsiasi soluzione si usi, usare il telefono durante la guida è un'infrazione 
 <i class="fas fa-lightbulb mr-2"></i>Piccoli consigli nella scelta dell'auto
 
 {class="mt-1"}
-Se tieni all'esperienza dell'infotainment, in concessionaria prova con mano: ① porta il tuo telefono e prova la stabilità della connessione CarPlay/HiCar; ② prova la velocità di reazione e il tasso di riconoscimento comandi dell'assistente vocale; ③ controlla se il mercato app ha le applicazioni che usi di solito; ④ informati sulla frequenza degli aggiornamenti OTA futuri — un buon infotainment si costruisce con l'iterazione software.
+Se tieni all'esperienza dell'infotainment, in concessionaria prova con mano: ① porta il tuo telefono e prova la stabilità della connessione CarPlay/HiCar. ② prova la velocità di reazione e il tasso di riconoscimento comandi dell'assistente vocale. ③ controlla se il mercato app ha le applicazioni che usi di solito. ④ informati sulla frequenza degli aggiornamenti OTA futuri — un buon infotainment si costruisce con l'iterazione software.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

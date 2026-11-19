@@ -2,19 +2,19 @@
 id: di-er-shi-san-zhang
 num: 23
 part: chao-yue-pian
-nav: Bab 23: Pengenalan Berpikir Pemrograman dan Otomatisasi
+nav: Bab 23: Biarkan ponsel menangani pekerjaan yang berulang
 toc: default
 kind: chapter
 ---
 
-### Bab 23: Pemikiran Pemrograman dan Pengenalan Otomatisasi
+### Bab 23: Biarkan ponsel menangani pekerjaan yang berulang
 
 {class="chapter-intro mb-4"}
-Pada dua bab sebelumnya, kita membangun "dinding batas" keamanan untuk ponsel dan melihat "otak AI" yang semakin cerdas di dalamnya. Sekarang, mari kita buka salah satu potensi tertinggi ponsel: membuatnya "berpikir" seperti programmer dan secara otomatis menyelesaikan tugas beruntun yang Anda tentukan. Anda mungkin berkata: "Saya tidak bisa menulis kode, apa hubungannya dengan saya?" Tenang, bab ini tidak mengharuskan Anda menulis satu baris kode pun—ponsel modern telah menurunkan ambang "pemrograman" ke tingkat drag-and-drop.
+Pada dua bab sebelumnya, kita membangun "dinding batas" keamanan untuk ponsel dan melihat "otak AI" yang semakin cerdas di dalamnya. Sekarang, mari kita buka salah satu potensi tertinggi ponsel: membuatnya "berpikir" seperti programmer dan secara otomatis menyelesaikan tugas beruntun yang Anda tentukan. Anda mungkin berkata: "Saya tidak bisa menulis kode, apa hubungannya dengan saya?" Tenang, bab ini tidak mengharuskan Anda menulis satu baris kode pun,ponsel modern telah menurunkan ambang "pemrograman" ke tingkat drag-and-drop.
 
 #### 1. Apa Sebenarnya Otomatisasi Itu?
 
-Dalam bahasa sederhana, otomatisasi adalah:<strong>membiarkan ponsel secara otomatis melakukan serangkaian hal untuk Anda saat suatu kondisi terpenuhi.</strong> Anda tidak perlu mengoperasikan secara manual setiap kali, juga tidak perlu mengingat apa yang harus dilakukan—ponsel akan menilai waktunya sendiri dan mengeksekusinya sendiri.
+Dalam bahasa sederhana, otomatisasi adalah:<strong>membiarkan ponsel secara otomatis melakukan serangkaian hal untuk Anda saat suatu kondisi terpenuhi.</strong> Anda tidak perlu mengoperasikan secara manual setiap kali, juga tidak perlu mengingat apa yang harus dilakukan,ponsel akan menilai waktunya sendiri dan mengeksekusinya sendiri.
 
 Contoh: Setiap pagi saat Anda bangun, Anda harus mematikan mode jangan ganggu secara manual, membuka WeChat untuk melihat pesan, membuka App cuaca untuk melihat apa yang harus dipakai hari ini, membuka NetEase Cloud untuk memutar lagu. Jika langkah-langkah ini dikemas menjadi satu alur otomatisasi, diatur ke "eksekusi otomatis setiap pagi jam 7", maka saat Anda bangun, Anda hanya perlu mengambil ponsel, semuanya sudah siap. Bukankah menyenangkan membayangkannya?
 
@@ -36,7 +36,7 @@ Berikut beberapa contoh praktis yang benar-benar berguna, Anda akan mengerti set
 
 ##### Contoh 1: "Alur Selamat Pagi" Satu Klik
 
-Setiap pagi klik sekali (atau bilang ke Siri "selamat pagi"), ponsel akan otomatis: mendapatkan cuaca hari ini → membacakan cuaca dan suhu → menampilkan jadwal kalender hari ini → membuka App musik favorit Anda dan mulai memutar. Langkah operasi: Buat shortcut baru → tambah action "Dapatkan Cuaca Saat Ini" → tambah "Bacakan Teks" → tambah "Dapatkan Acara Kalender" → tambah "Tampilkan Pengingat" → tambah "Buka App" pilih NetEase Cloud Music. Sesederhana itu, sepanjang proses drag-and-drop.
+Setiap pagi klik sekali (atau bilang ke Siri "selamat pagi"), ponsel akan otomatis: mendapatkan cuaca hari ini.membacakan cuaca dan suhu.menampilkan jadwal kalender hari ini.membuka App musik favorit Anda dan mulai memutar. Langkah operasi: Buat shortcut baru.tambah action "Dapatkan Cuaca Saat Ini".tambah "Bacakan Teks".tambah "Dapatkan Acara Kalender".tambah "Tampilkan Pengingat".tambah "Buka App" pilih NetEase Cloud Music. Sesederhana itu, sepanjang proses drag-and-drop.
 
 ##### Contoh 2: "Mode Hemat Baterai" Otomatis
 
@@ -67,7 +67,7 @@ Berikut beberapa skenario klasik praktis Tasker:
 
 - <strong>Otomatis nyalakan Wi-Fi saat tiba di rumah</strong>: Atur kondisi pemicu ke "terhubung ke BTS tertentu" (karena di dekat rumah Anda akan terhubung ke BTS tetap) → tugas "Nyalakan Wi-Fi". Tanpa GPS dan tidak boros daya, ponsel otomatis menyalakan Wi-Fi saat masuk area perumahan.
 - <strong>Mode rapat</strong>: Kondisi pemicu "Judul acara kalender mengandung 'rapat'" → tugas "Setel mode senyap, matikan volume media, balas WeChat otomatis (perlu plugin)". Tidak perlu lagi khawatir ponsel tiba-tiba berdering saat rapat.
-- <strong>Mode melindungi mata tengah malam</strong>: Kondisi pemicu "Waktu 22:00-06:00" → tugas "Aktifkan mode melindungi mata, kurangi kecerahan ke 20%, setel layar ke hitam-putih (mode grayscale)". Layar hitam-putih sangat efektif untuk mengurangi keinginan menonton video pendek—begitu layar menjadi abu-abu, Anda tidak ingin menonton lagi.
+- <strong>Mode melindungi mata tengah malam</strong>: Kondisi pemicu "Waktu 22:00-06:00" → tugas "Aktifkan mode melindungi mata, kurangi kecerahan ke 20%, setel layar ke hitam-putih (mode grayscale)". Layar hitam-putih sangat efektif untuk mengurangi keinginan menonton video pendek,begitu layar menjadi abu-abu, Anda tidak ingin menonton lagi.
 - <strong>Otomatis putar podcast saat earphone dicolok</strong>: Kondisi pemicu "earphone berkabel dicolok / earphone Bluetooth terhubung" → tugas "Buka App Xiaoyuzhou dan mulai putar episode terbaru". Pakai earphone langsung bisa mendengarkan, tanpa perlu membuka kunci ponsel mencari App.
 
 Jika Anda merasa Tasker terlalu sulit, cobalah versi sederhananya:<strong>MacroDroid</strong>. Antarmuka jauh lebih ramah, template lengkap, cocok untuk pengguna yang tidak ingin repot. Selain itu, banyak sistem Android domestik sekarang (MIUI Xiaomi, HarmonyOS Huawei, ColorOS OPPO) memiliki fungsi "skenario" atau "asisten cerdas" bawaan, meskipun tidak sekuat Tasker, untuk otomatisasi sehari-hari sudah lebih dari cukup.
@@ -91,14 +91,14 @@ Otomatisasi tidak selalu mulus, ada beberapa jebakan yang sudah saya lalui untuk
 - <strong>Pemicu lokasi mungkin tidak akurat</strong>: "Tiba/Meninggalkan lokasi" iOS menggunakan teknologi geofencing, akurasi tergantung sinyal GPS dan optimasi sistem. Kadang Anda sudah sampai di rumah 10 menit baru terpicu. Disarankan menggunakan pemicu koneksi Wi-Fi atau BTS sebagai pengganti pemicu lokasi, lebih andal dan lebih hemat daya.
 - <strong>"Automation" Shortcuts perlu otorisasi</strong>: Di iOS, sebagian besar pemicu di tab "Automation" perlu konfirmasi manual untuk berjalan (mekanisme keamanan iOS). Tapi pemicu koneksi Wi-Fi, koneksi Bluetooth, dan alarm berhenti bisa benar-benar berjalan otomatis tanpa konfirmasi.
 - <strong>Tasker perlu mengaktifkan izin aksesibilitas</strong>: Banyak fungsi lanjutan (seperti simulasi klik) memerlukan izin layanan aksesibilitas, ini akan membuat ponsel menampilkan notifikasi permanen di pengaturan. Ini adalah desain keamanan Android, tidak bisa dihilangkan.
-- <strong>Jangan buat otomatisasi terlalu kompleks</strong>: Saat baru mulai otomatisasi, mulailah dengan alur kecil "2-3 action". Jangan langsung membuat alur super 20 langkah—debugging akan membuat Anda gila.
+- <strong>Jangan buat otomatisasi terlalu kompleks</strong>: Saat baru mulai otomatisasi, mulailah dengan alur kecil "2-3 action". Jangan langsung membuat alur super 20 langkah,debugging akan membuat Anda gila.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>Tip: Cara yang Tepat untuk Memulai Otomatisasi
 
 {class="mt-1"}
-Luangkan 5 menit untuk berpikir: Apa 3 hal yang paling sering Anda ulangi di ponsel setiap hari? Misalnya rutinitas pagi, kebiasaan setiap kali menghubungkan earphone Bluetooth, pengaturan sebelum bepergian... mulailah dari hal-hal kecil frekuensi tinggi ini, buat satu otomatisasi sederhana untuk masing-masing. Bahkan jika setiap otomatisasi hanya menghemat 5 detik, akumulasi seiring waktu sangat signifikan. Dan kepuasan setelah membuatnya benar-benar adiktif.
+Luangkan 5 menit untuk berpikir: Apa 3 hal yang paling sering Anda ulangi di ponsel setiap hari? Misalnya rutinitas pagi, kebiasaan setiap kali menghubungkan earphone Bluetooth. pengaturan sebelum bepergian... mulailah dari hal-hal kecil frekuensi tinggi ini, buat satu otomatisasi sederhana untuk masing-masing. Bahkan jika setiap otomatisasi hanya menghemat 5 detik, akumulasi seiring waktu sangat signifikan. Dan kepuasan setelah membuatnya benar-benar adiktif.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

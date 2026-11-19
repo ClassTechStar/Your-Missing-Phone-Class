@@ -29,9 +29,9 @@ Cara mengaktifkan:
 
 ##### Terkait performa dan kelancaran:
 
-- <strong>Adjust kecepatan animasi (Window animation scale / Transition animation scale / Animator duration scale)</strong>: Tiga opsi ini mengontrol durasi animasi saat buka App dan switch page. Default 1x, setel ke 0.5x akan membuat ponsel "terlihat" lebih cepat (sebenarnya kecepatan running program tidak berubah, hanya animasi lebih cepat), setel ke off maka langsung jump tanpa animasi. Kebanyakan geek akan setel 0.5x, tetap ada sense transisi tapi terlihat cepat; fully off akan membuat operasi terlihat kaku, dan mungkin menutupi lag nyata program, justru membuat Anda salah mengira "sangat lancar".
+- <strong>Adjust kecepatan animasi (Window animation scale / Transition animation scale / Animator duration scale)</strong>: Tiga opsi ini mengontrol durasi animasi saat buka App dan switch page. Default 1x, setel ke 0.5x akan membuat ponsel "terlihat" lebih cepat (sebenarnya kecepatan running program tidak berubah. hanya animasi lebih cepat), setel ke off maka langsung jump tanpa animasi. Kebanyakan geek akan setel 0.5x, tetap ada sense transisi tapi terlihat cepat; fully off akan membuat operasi terlihat kaku, dan mungkin menutupi lag nyata program, justru membuat Anda salah mengira "sangat lancar".
 - <strong>Force GPU Rendering</strong>: Memaksa semua drawing 2D via GPU bukan CPU. Pada model lama atau beberapa App yang tidak optimal bisa meningkatkan kelancaran scroll, tapi juga akan menambah beban GPU dan konsumsi daya. Ponsel modern default sudah banyak memakai GPU rendering, saklar ini pada model mid-to-high end dampaknya terbatas, lebih merupakan opsi warisan sejarah, pengguna biasa biarkan default.
-- <strong>Profile GPU Rendering</strong>: Menampilkan di layar dengan bar chart real-time waktu render per frame, garis hijau horizontal mewakili 16.6ms (threshold frame time 60fps). Bar melebihi garis hijau berarti dropped frame. Ini senjata developer untuk troubleshoot lag App, pengguna biasa juga bisa pakai untuk membandingkan App mana yang optimalisasinya buruk — misalnya suatu App saat scroll bar sering melebihi garis merah, itu pada dasarnya salahnya.
+- <strong>Profile GPU Rendering</strong>: Menampilkan di layar dengan bar chart real-time waktu render per frame, garis hijau horizontal mewakili 16.6ms (threshold frame time 60fps). Bar melebihi garis hijau berarti dropped frame. Ini senjata developer untuk troubleshoot lag App, pengguna biasa juga bisa pakai untuk membandingkan App mana yang optimalisasinya buruk: misalnya suatu App saat scroll bar sering melebihi garis merah, itu pada dasarnya salahnya.
 
 ##### Terkait background dan battery life:
 
@@ -48,11 +48,11 @@ Cara mengaktifkan:
 
 #### 2. OEM Unlocking: "Saklar Flashing" di Developer Options
 
-Di Developer Options ada saklar yang tidak mencolok tapi sangat penting — "OEM unlocking" (sebagian merek menyebutnya "OEM unlocking allow" atau "Device unlock"). Saklar ini sendiri tidak akan unlock BL lock, tapi merupakan "prasyarat izin": hanya jika diaktifkan, vendor baru mengizinkan Anda unlock BL via perintah fastboot atau tool vendor.
+Di Developer Options ada saklar yang tidak mencolok tapi sangat penting — "OEM ,unlocking" (sebagian merek menyebutnya "OEM unlocking allow" atau "Device unlock"). Saklar ini sendiri tidak akan unlock BL lock, tapi merupakan "prasyarat izin": hanya jika diaktifkan, vendor baru mengizinkan Anda unlock BL via perintah fastboot atau tool vendor.
 
 - <strong>Fungsi Saklar</strong>: Setara dengan deklarasi ke vendor "saya setuju melepaskan garansi, risiko ditanggung sendiri, tolong izinkan saya unlock BL". Jika saklar ini off, semua perintah unlock BL akan langsung ditolak.
 - <strong>Hubungan dengan BL Lock</strong>: OEM unlocking adalah "mengajukan kualifikasi", BL unlock adalah "operasi aktual". Yang pertama di settings ponsel klik saja, yang kedua perlu ke situs vendor mengajukan unlock code, pakai komputer jalankan perintah fastboot (seperti <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>), keduanya tidak boleh kurang satu pun.
-- <strong>Apakah Factory Reset Akan Reset?</strong>: Ya. Saklar "OEM unlocking" setelah factory reset akan kembali ke status off, tapi BL lock sekali di-unlock adalah status fisik level, tidak akan re-lock karena factory reset — perlu manual execute <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> untuk bisa re-lock.
+- <strong>Apakah Factory Reset Akan Reset?</strong>: Ya. Saklar "OEM unlocking" setelah factory reset akan kembali ke status off, tapi BL lock sekali di-unlock adalah status fisik level, tidak akan re-lock karena factory reset, perlu manual execute <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> untuk bisa re-lock.
 - <strong>Kapan Harus Dibuka</strong>: Kecuali Anda yakin ingin flashing atau Root, jika tidak biarkan off. Ini dan "USB debugging" adalah dua saklar independen, saat flashing biasanya perlu sekaligus dibuka.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -84,7 +84,7 @@ Fungsi BL lock:
 
 #### 4. Perintah ADB Praktis: Kontrol Ponsel via Komputer
 
-ADB kepanjangan Android Debug Bridge, adalah command line tool resmi dari Google, membuat komputer berkomunikasi dengan ponsel Android via USB atau Wi-Fi. Itu sendiri tidak butuh Root, selama ponsel aktifkan "USB debugging" bisa dipakai. Bisa dipahami sebagai "remote control yang memberi instruksi ke ponsel via komputer" — flashing, install App, transfer file, cek log, semua mengandalkannya.
+ADB kepanjangan Android Debug Bridge, adalah command line tool resmi dari Google, membuat komputer berkomunikasi dengan ponsel Android via USB atau Wi-Fi. Itu sendiri tidak butuh Root, selama ponsel aktifkan "USB debugging" bisa dipakai. Bisa dipahami sebagai "remote control yang memberi instruksi ke ponsel via komputer": flashing, install App, transfer file, cek log, semua mengandalkannya.
 
 ##### Cara connect via USB:
 
@@ -135,7 +135,7 @@ Ini salah satu fungsi ADB paling praktis: pakai <code class="bg-gray-100 dark:bg
 <i class="fas fa-info-circle mr-2"></i>Trivia: Apa Arti --user 0
 
 {class="mt-1"}
-Sejak Android 4.2 mendukung multi-user, setiap user punya ID independen (owner adalah 0, additional user mulai dari 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> berarti "hanya uninstall untuk owner saat ini", file APK di system partition masih ada, hanya tidak ditampilkan ke owner. Inilah sebabnya tidak butuh Root — tidak menyentuh file sistem, hanya mengubah "user config". Ini juga perbedaan terbesar dengan uninstall setelah Root: uninstall Root benar-benar hapus dari sistem, semua user tidak lagi punya; uninstall ADB hanya "sembunyi untuk current user".
+Sejak Android 4.2 mendukung multi-user, setiap user punya ID independen (owner adalah 0, additional user mulai dari 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> berarti "hanya uninstall untuk owner saat ini", file APK di system partition masih ada, hanya tidak ditampilkan ke owner. Inilah sebabnya tidak butuh Root, tidak menyentuh file sistem, hanya mengubah "user config". Ini juga perbedaan terbesar dengan uninstall setelah Root: uninstall Root benar-benar hapus dari sistem, semua user tidak lagi punya; uninstall ADB hanya "sembunyi untuk current user".
 :::
 
 #### 5. Root Permission: "Super Administrator" Android
@@ -147,7 +147,7 @@ Root permission setara dengan super user di Linux (punya kontrol penuh atas dire
 - Menggunakan aplikasi fungsi lanjutan (seperti Titanium Backup, Greenify).
 - Memodifikasi antarmuka dan fungsi sistem.
 - Memasang Recovery pihak ketiga dan custom ROM.
-- Risiko Root:
+- Risiko Root:.
 
 ##### Kehilangan garansi
 
@@ -165,9 +165,9 @@ Root permission setara dengan super user di Linux (punya kontrol penuh atas dire
 4\. Saran untuk pengguna biasa
 :::
 
-#### 6. Sertifikasi SafetyNet dan Play Integrity: Mengapa App Bank Tidak Bisa Dipakai Setelah Root
+6. Sertifikasi SafetyNet dan Play Integrity: Mengapa App Bank Tidak Bisa Dipakai Setelah Root
 
-Banyak pengguna Root pernah mengalami momen frustrasi seperti ini: setelah Root dengan antusias install banyak module, hasilnya buka App bank — "Perangkat Anda tidak aman, tidak bisa digunakan", Google Pay juga tidak bisa dipakai, bahkan Netflix menolak playback HD. Di balik ini adalah dua set mekanisme sertifikasi integritas perangkat Google: SafetyNet lama dan Play Integrity API baru.
+Banyak pengguna Root pernah mengalami momen frustrasi seperti ini: setelah Root dengan antusias install banyak module, hasilnya buka App bank, "Perangkat Anda tidak aman, tidak bisa digunakan", Google Pay juga tidak bisa dipakai, bahkan Netflix menolak playback HD. Di balik ini adalah dua set mekanisme sertifikasi integritas perangkat Google: SafetyNet lama dan Play Integrity API baru.
 
 ##### Apa itu SafetyNet / Play Integrity:
 
@@ -184,7 +184,7 @@ Banyak pengguna Root pernah mengalami momen frustrasi seperti ini: setelah Root 
 
 ##### Mengapa App ini tidak berfungsi setelah Root:
 
-App via Play Integrity API mengirim permintaan sertifikasi ke server Google, Google akan cek banyak indikator perangkat — status lock Bootloader, apakah system partition dimodifikasi, apakah ada binary su, apakah SELinux dalam mode permissive, dll. Satu pun anomali akan menyebabkan level sertifikasi yang di-return menurun atau kosong, App bank melihat "perangkat tidak aman", natural menolak layanan.
+App via Play Integrity API mengirim permintaan sertifikasi ke server Google, Google akan cek banyak indikator perangkat, status lock Bootloader, apakah system partition dimodifikasi, apakah ada binary su, apakah SELinux dalam mode permissive, dll. Satu pun anomali akan menyebabkan level sertifikasi yang di-return menurun atau kosong, App bank melihat "perangkat tidak aman", natural menolak layanan.
 
 ##### Solusi penyembunyian modern: Magisk Hide / Shamiko / Zygisk:
 
@@ -208,7 +208,7 @@ Google setiap sekali waktu akan update aturan deteksi, vendor App juga akan ikut
 
 - <strong>: Bisa diaktifkan, rasakan fungsi seperti akselerasi animasi, tetapi jangan mengubah pengaturan lain sembarangan.</strong>: Bisa diaktifkan, rasakan accelerasi animasi, analisis GPU rendering, dll., tapi jangan sembarangan ubah opsi lain yang tidak dipahami.
 - <strong>OEM Unlocking dan BL Lock</strong>: Jika Anda tidak berencana flashing atau Root, kedua saklar biarkan default (off) paling aman.
-- <strong>ADB</strong>: Tool powerful tanpa Root, orang biasa juga bisa pakai — misalnya pakai <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> uninstall pre-installed App. Tapi sebelum hapus pastikan cek jelas apakah package name bisa dihapus.
+- <strong>ADB</strong>: Tool powerful tanpa Root, orang biasa juga bisa pakai: misalnya pakai <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> uninstall pre-installed App. Tapi sebelum hapus pastikan cek jelas apakah package name bisa dihapus.
 - <strong>: Pengguna biasa tidak disarankan Root, risiko lebih besar dari manfaat. Jika benar-benar membutuhkan fungsi tertentu, bisa cari tahu dulu apakah ada alternatif yang tidak membutuhkan Root.</strong>: Pengguna biasa tidak disarankan Root, risiko lebih besar dari manfaat. Jika memang butuh fungsi tertentu, bisa pertama pahami apakah ada alternatif tanpa Root (misalnya pakai ADB uninstall pre-installed, pakai Shizuku menggantikan sebagian fungsi Root).
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -220,5 +220,5 @@ Google setiap sekali waktu akan update aturan deteksi, vendor App juga akan ikut
 2. Kembali ke pengaturan, temukan "Opsi Pengembang" (biasanya di bagian bawah pengaturan atau di "Sistem").
 3. Temukan "Skala Animasi Jendela", "Skala Animasi Transisi", "Skala Durasi Animasi Program", atur semuanya ke 0.5x atau matikan.
 4. Rasakan apakah ponsel menjadi lebih cepat.
-5. Bab 20 Lampiran: Termux — Lingkungan terminal Linux portabel pada perangkat Android
+5. Bab 20 Lampiran: Termux, Lingkungan terminal Linux portabel pada perangkat Android.
 :::

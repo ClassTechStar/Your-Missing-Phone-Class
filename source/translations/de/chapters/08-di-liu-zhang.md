@@ -2,17 +2,17 @@
 id: di-liu-zhang
 num: 06
 part: ji-chu-pian
-nav: Kapitel 6: Dein digitales Leben beschützen
+nav: Kapitel 6: Smartphone verloren? Passwort vergessen?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 6: Beschütze dein digitales Leben – Sicherheit und Datenschutz
+### Kapitel 6: Smartphone verloren? Passwort vergessen?
 
 {class="chapter-intro mb-4"}
 Smartphonesicherheit = Datenschutz + Vermögenssicherheit. In einer Zeit, in der Daten ein Vermögenswert sind, ist der Schutz des Smartphones der Schutz deiner selbst.
 
-#### Eins. Sperrbildschirm: Die erste physische Verteidigungslinie
+Eins. Sperrbildschirm: Die erste physische Verteidigungslinie
 
 Der Sperrbildschirm ist die erste Verteidigungslinie deines Smartphones – und wird am leichtesten übersehen.
 
@@ -29,7 +29,7 @@ Der Sperrbildschirm ist die erste Verteidigungslinie deines Smartphones – und 
 - Biometrische Entsperrung aktivieren.
 - Sperrzeit auf „Sofort" oder kürzeste Zeitspanne einstellen.
 
-#### Zwei. „Mein Smartphone finden": Das ultimative Diebstahlschutz-Werkzeug
+Zwei. „Mein Smartphone finden": Das ultimative Diebstahlschutz-Werkzeug
 
 <strong>Muss aktiviert sein!</strong> Es kann:
 
@@ -102,7 +102,7 @@ KI kann Stimme und Gesicht klonen, ist aber nicht unfehlbar. Es gibt Schwächen 
 
 <strong>Nicht leichtgläubig sein, nichts verraten, nichts antippen, nichts überweisen – bei Zweifel erst verifizieren!</strong> Bei einer „Notlage“ erst 5 Minuten ruhig bleiben – fast jeder Betrug fliegt in genau diesem Moment auf.
 
-#### 5. Schutz vor „Doxxing“ und Social-Engineering: die Privatkette kappen
+5. Schutz vor „Doxxing“ und Social-Engineering: die Privatkette kappen
 
 Der Kern des „Doxxing“ (Social-Engineering-Angriffs) liegt darin,<strong>systematisch digitale Splitter einer Person zu sammeln, zu analysieren und zu einem vollständigen Persönlichkeitsbild zusammenzusetzen</strong>. Entscheidend für den Schutz: klare rote Linien für die eigene Privatsphäre und ein mehrschichtiges Schutzsystem.
 
@@ -177,7 +177,7 @@ Wenn das Smartphone verloren ist, nicht in Panik verfallen – in dieser Reihenf
 - Bestätigungscodes an irgendjemanden weitergeben (auch nicht an „Kundendienst");
 - Auf unbekannte Links in SMS klicken, besonders bei ausländischen Nummern mit 00-Beginn;
 - Unter öffentlichem WLAN Online-Banking oder Zahlungen nutzen;
-- Fremden „Bildschirmfreigabe" oder „Fernsteuerung" gewähren.
+- Fremden „Bildschirmfreigabe" oder „Fernsteuerung" gewähren
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

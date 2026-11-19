@@ -10,7 +10,7 @@ class: mb-12
 ## IX. Parte Prática de Desenvolvimento iOS (Capítulos 59-69)
 
 {class="chapter-intro mb-4"}
-Para a turma da Apple: desde conhecer o ecossistema iOS e instalar o Xcode, passando por Swift e SwiftUI, até dois projetos completos e a publicação na App Store. Fique atento a um requisito duro — é preciso ter um Mac. As Partes 8 e 9 compartilham a mesma forma de pensar em programação; concluir uma torna a outra bem mais rápida. Ao fim dos 11 capítulos, você será capaz de fazer Apps de verdade para as centenas de milhões de iPhone existentes.
+Para a turma da Apple: desde conhecer o ecossistema iOS e instalar o Xcode, passando por Swift e SwiftUI, até dois projetos completos e a publicação na App Store. Fique atento a um requisito duro, é preciso ter um Mac. As Partes 8 e 9 compartilham a mesma forma de pensar em programação; concluir uma torna a outra bem mais rápida. Ao fim dos 11 capítulos, você será capaz de fazer Apps de verdade para as centenas de milhões de iPhone existentes.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

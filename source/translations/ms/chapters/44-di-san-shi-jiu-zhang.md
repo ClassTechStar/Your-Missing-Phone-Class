@@ -2,12 +2,12 @@
 id: di-san-shi-jiu-zhang
 num: 39
 part: ai-biancheng-pian
-nav: Bab 39: Kejuruteraan Konteks—Memastikan AI Memahami Niat Anda
+nav: Bab 39: AI tak faham? Mungkin penerangan anda kurang jelas
 toc: default
 kind: chapter
 ---
 
-### Bab 39: Kejuruteraan konteks - membuat AI memahami niat anda
+### Bab 39: AI tak faham? Mungkin penerangan anda kurang jelas
 
 {class="chapter-intro mb-4"}
 Pernahkah anda mengalami ini: bertukar kepada tetingkap perbualan baharu, dan AI seperti hilang ingatan, lupa segala keadaan asas projek anda? Ini bukan AI sengaja menyakitkan hati anda, tetapi ia memang "pelupa" dari asal. Bab ini mengajar anda memasang satu "sistem ingatan jangka panjang" untuk AI, dan sekali gus mengenali salah satu paradigma pembangunan paling popular 2026 - pembangunan didorong spesifikasi.
@@ -27,7 +27,7 @@ Penyelesaiannya ialah "fail ingatan projek" - satu fail teks tulen yang diletakk
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Konvensyen penamaan fail ingatan projek bagi setiap alat
 
-Walaupun penamaannya berbeza, prinsipnya sama: tulis maklumat yang anda mahu AI "sentiasa ingat" dalam fail ini. Fail ingatan projek yang baik patut mengandungi: gambaran keseluruhan projek (apa projek ini), timbunan teknologi (teknologi apa yang digunakan), piawaian kod (penamaan, inden, gaya komen), struktur direktori (bagaimana kod disusun), dan konvensyen pembangunan (strategi cawangan, piawaian commit, keperluan ujian). CLAUDE.md Karpathy hanya 70 baris, tetapi meliputi semua maklumat utama - ringkas tetapi lengkap.
+Walaupun penamaannya berbeza, prinsipnya sama: tulis maklumat yang anda mahu AI "sentiasa ingat" dalam fail ini. Fail ingatan projek yang baik patut mengandungi: gambaran keseluruhan projek (apa projek ini), timbunan teknologi (teknologi apa yang digunakan), piawaian kod (penamaan. inden, gaya komen), struktur direktori (bagaimana kod disusun), dan konvensyen pembangunan (strategi cawangan, piawaian commit, keperluan ujian). CLAUDE.md Karpathy hanya 70 baris, tetapi meliputi semua maklumat utama - ringkas tetapi lengkap.
 
 ::: div .code-block
 :::inline div .code-head
@@ -80,7 +80,7 @@ Aliran kerja SDD lima langkah:
 2. Takrifkan antara muka dan struktur data (tulis dalam fail spesifikasi);
 3. Biarkan AI menjana pelaksanaan kod berdasarkan spesifikasi;
 4. Jalankan ujian untuk mengesahkan sama ada hasil memenuhi spesifikasi;
-5. Jika tidak memenuhi, baik pulih spesifikasi atau biarkan AI membaiki kodnya.
+5. Jika tidak memenuhi, baik pulih spesifikasi atau biarkan AI membaiki kodnya
 
 Dalam aliran kerja ini, fail spesifikasi ialah "sumber kebenaran tunggal" - kod boleh dijana semula, tetapi spesifikasi mesti betul dahulu.
 
@@ -127,17 +127,17 @@ Strategi pengurusan berlapis tetingkap konteks
 Kejuruteraan konteks bukan sekadar tetapan sekali sahaja, tetapi satu proses penambahbaikan berterusan. Berikut ialah beberapa perkara penting yang telah terbukti berulang kali dalam amalan:
 
 1. Kemas kini fail memori selari dengan perkembangan projek. Apabila memperkenalkan teknologi baharu atau mengubah seni bina, kemas kini fail memori dengan segera, jangan hanya jelaskan secara sementara dalam perbualan.
-2. Gunakan rujukan @ dengan bijak berbanding menampal keseluruhan teks. Kebanyakan alat pengaturcaraan AI menyokong sintaks @file atau @folder, yang menyuntik kandungan fail ke dalam konteks AI di latar belakang — lebih cekap daripada menampal secara manual dan tidak mencemarkan perbualan.
+2. Gunakan rujukan @ dengan bijak berbanding menampal keseluruhan teks. Kebanyakan alat pengaturcaraan AI menyokong sintaks @file atau @folder, yang menyuntik kandungan fail ke dalam konteks AI di latar belakang, lebih cekap daripada menampal secara manual dan tidak mencemarkan perbualan.
 3. Perbualan perlu "pendek dan padat". Satu perbualan hanya mengurus satu tugasan atau satu ciri. Selepas selesai, buka perbualan baharu untuk yang seterusnya. Perbualan panjang bukan sahaja menghabiskan tetingkap konteks, malah boleh membuat AI "hilang tumpuan".
 4. Berikan AI "melihat" hasil, bukan "menerangkan" hasil. Apabila menghadapi bug, rujuk log ralat terus kepada AI dengan @, jangan hanya terangkan dengan kata-kata sendiri "macam ada sebarang ralat". AI lebih berkesan apabila melihat maklumat asli berbanding huraian anda.
-5. Mengarkib dan membersih secara berkala. Perbualan yang telah selesai dan fail sementara akan memenuhi ruang kerja. Membersihkan kandungan yang tidak berkaitan secara berkala serta mengekalkan direktori projek yang kemas juga membantu AI memahami struktur projek dengan lebih cekap.
+5. Mengarkib dan membersih secara berkala. Perbualan yang telah selesai dan fail sementara akan memenuhi ruang kerja. Membersihkan kandungan yang tidak berkaitan secara berkala serta mengekalkan ,direktori projek yang kemas juga membantu AI memahami struktur projek dengan lebih cekap.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mari praktik: Tulis satu fail memori 70 baris untuk projek anda
 
 {class="mt-1"}
-Pilih satu projek yang sedang anda buat (atau ingin buat), dan tulis satu fail CLAUDE.md: gambaran keseluruhan projek (2-3 ayat), tindanan teknologi (senaraikan), peraturan kod (3-5 perkara), struktur direktori (lukis pepohon) dan konvensyen pembangunan (2-3 perkara). Kekalkan dalam 70 baris — selepas menulis, anda akan mendapati pemahaman anda terhadap projek menjadi jauh lebih jelas.
+Pilih satu projek yang sedang anda buat (atau ingin buat), dan tulis satu fail CLAUDE.md: gambaran keseluruhan projek (2-3 ayat), tindanan teknologi (senaraikan), peraturan kod (3-5 perkara), struktur direktori (lukis pepohon) dan konvensyen pembangunan (2-3 perkara). Kekalkan dalam 70 baris: selepas menulis, anda akan mendapati pemahaman anda terhadap projek menjadi jauh lebih jelas.
 :::
 
 ::: div .chapter-summary

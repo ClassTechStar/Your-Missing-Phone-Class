@@ -20,8 +20,8 @@ kind: appendix
 - <strong>3. App-Installation – "Sicherheit zuerst"</strong> Zuerst der offizielle Store
 - <strong>: Apple nutzt den App Store, Android den vorinstallierten App-Store des Herstellers.</strong> Berechtigungen nicht leichtfertig vergeben
 - <strong>: Bei den Berechtigungsanfragen während der Installation überlegen: "Braucht diese App das wirklich?"</strong> Anhang B: Anregungen für praktische Übungen
-- <strong>Grundlagen-Übung</strong>: Smartphone-Speicher aufräumen – Ziel ist es, vergessene alte Videos, doppelte Screenshots und lange ungenutzte Apps zu finden und zu löschen.
-- <strong>Software-Übung</strong>: WeChat-Speicherbereinigung einrichten. Pfad: Ich → Einstellungen → Allgemein → Speicherplatz.
+- <strong>Grundlagen-Übung</strong>: Smartphone-Speicher aufräumen – Ziel ist es, vergessene alte Videos, doppelte Screenshots und lange ungenutzte Apps zu finden und zu löschen
+- <strong>Software-Übung</strong>: WeChat-Speicherbereinigung einrichten. Pfad: Ich → Einstellungen → Allgemein → Speicherplatz
 
 #### 3. App-Installation – "Sicherheit zuerst"
 

@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 數據三件套嘅分工
 
-記一個口訣："小配置入 UserDefaults，成批數據入 SwiftData，出面嘅數據行 URLSession"。舊教程入面嘅 Core Data 依然用得（SwiftData 就係佢嘅現代馬甲），手寫 SQLite 就基本唔使掂——直接學新嘅，咪行舊路。
+記一個口訣："小配置入 UserDefaults，成批數據入 SwiftData，出面嘅數據行 URLSession"。舊教程入面嘅 Core Data 依然用得（SwiftData 就係佢嘅現代馬甲），手寫 SQLite 就基本唔使掂，直接學新嘅，咪行舊路。
 
 #### 二、UserDefaults：存啲小配置
 
@@ -46,11 +46,11 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-注意佢只係適合零散嘅小配置——幾十上百條記錄請交畀 SwiftData，唔好將 UserDefaults 當數據庫咁用（會拖慢啟動、亦都唔方便查詢）。
+注意佢只係適合零散嘅小配置，幾十上百條記錄請交畀 SwiftData，唔好將 UserDefaults 當數據庫咁用（會拖慢啟動、亦都唔方便查詢）。
 
 #### 三、SwiftData：畀數據安個"真正嘅屋企"
 
-SwiftData 係 iOS 17 開始嘅官方數據庫方案，將"建表、增刪改查"簡化到極致——一個 @Model 註解，數據類就變成數據庫表：
+SwiftData 係 iOS 17 開始嘅官方數據庫方案，將"建表、增刪改查"簡化到極致，一個 @Model 註解，數據類就變成數據庫表：
 
 ::: div .code-block
 :::inline div .code-head
@@ -107,11 +107,11 @@ struct RecordListView: View {
 ```
 :::
 
-呢套"@Model + modelContainer + @Query"模板可以原封不動搬入你任何項目——換下字段名就得。數據一變，@Query 自動刷新界面，妙不可言。
+呢套"@Model + modelContainer + @Query"模板可以原封不動搬入你任何項目，換下字段名就得。數據一變，@Query 自動刷新界面，妙不可言。
 
 #### 四、Codable：畀 JSON"翻譯"
 
-伺服器嘅數據大多係 JSON 文本。Swift 嘅 Codable 協議令"JSON ⇄ 結構體"嘅轉換自動發生——字段名對得上，魔法就生效：
+伺服器嘅數據大多係 JSON 文本。Swift 嘅 Codable 協議令"JSON ⇄ 結構體"嘅轉換自動發生：字段名對得上，魔法就生效：
 
 ::: div .code-block
 :::inline div .code-head
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "晴"
 ```
 :::
 
-鐵律：先睇真實返回嘅 JSON，再定義字段。好多"解析失敗"嘅 bug 都係字段名寫錯、類型估錯（伺服器發 "26.5" 字串，你聲明成 Double）——將原始 JSON 打印出嚟對照，十秒定位。
+鐵律：先睇真實返回嘅 JSON，再定義字段。好多"解析失敗"嘅 bug 都係字段名寫錯、類型估錯（伺服器發 "26.5" 字串，你聲明成 Double），將原始 JSON 打印出嚟對照，十秒定位。
 
 #### 五、URLSession + async/await：同伺服器講嘢
 
@@ -175,7 +175,7 @@ struct WeatherService {
 避坑提醒：兩條網絡鐵律
 
 {class="mt-1"}
-① 上網必須 async/await，絕不阻塞主線程——卡住界面係崩潰級體驗。Swift 嘅結構化並發令呢樣嘢變得好自然，但唔好唔記得 try await 同 do/catch。② ATS 預設禁止明文 HTTP：iOS 要求 HTTPS。測試本地 http:// 服務嗰陣需要喺 Info.plist 入面臨時開例外（NSAppTransportSecurity），但正式產品必須全部行 HTTPS——審核都會盯住呢樣。
+① 上網必須 async/await，絕不阻塞主線程：卡住界面係崩潰級體驗。Swift 嘅結構化並發令呢樣嘢變得好自然，但唔好唔記得 try await 同 do/catch。② ATS 預設禁止明文 HTTP：iOS 要求 HTTPS。測試本地 http:// 服務嗰陣需要喺 Info.plist 入面臨時開例外（NSAppTransportSecurity），但正式產品必須全部行 HTTPS，審核都會盯住呢樣。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-畀用戶睇"人話"，畀日誌睇"原話"（print 完整 error）。唔好將 error.localizedDescription 嘅英文天書直接掟畀用戶——產品感就藏喺呢啲細節入面。
+畀用戶睇"人話"，畀日誌睇"原話"（print 完整 error）。唔好將 error.localizedDescription 嘅英文天書直接掟畀用戶，產品感就藏喺呢啲細節入面。
 
 {class="mt-1"}
-搵一個免費嘅名言 API（譬如 hitokoto 呢類），用 URLSession + async/await 拉取"每日一句"，顯示喺螢幕中央，加個"換一句"按鈕。再將鍾意嘅句子用 SwiftData 存入"收藏夾"。呢個練習將 UserDefaults/SwiftData/Codable/URLSession 全部用咗一次——做完佢，第 7、8 章就係小菜一碟。
+搵一個免費嘅名言 API（譬如 hitokoto 呢類），用 URLSession + async/await 拉取"每日一句"，顯示喺螢幕中央，加個"換一句"按鈕。再將鍾意嘅句子用 SwiftData 存入"收藏夾"。呢個練習將 UserDefaults/SwiftData/Codable/URLSession 全部用咗一次，做完佢，第 7、8 章就係小菜一碟。
 :::
 
 ::: div .chapter-summary

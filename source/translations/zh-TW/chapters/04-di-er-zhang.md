@@ -2,12 +2,12 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: 第二章：整理你的數字房間
+nav: 第二章：手機裡的東西，找不到怎麼辦？
 toc: default
 kind: chapter
 ---
 
-### 第二章：整理你的數字房間——檔案管理
+### 第二章：手機裡的東西，找不到怎麼辦？
 
 {class="chapter-intro mb-4"}
 手機用久了會亂，好習慣從管理檔案開始。就像你的房間需要定期整理一樣，你的數字空間也需要打理。一個井井有條的手機，不僅找東西方便，執行也更流暢。
@@ -236,8 +236,8 @@ kind: chapter
 挑一個空閒的週末，按以下順序操作：
 
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
-1. 在檔案管理器中建立 <code>2026Q2_專案A</code> 形式的本月工作資料夾；
-2. 把所有"下載"目錄裡本週的檔案過一遍，留下有用的、歸檔、刪除沒用的；
+1. 在檔案管理器中建立 <code>2026Q2_專案A</code> 形式的本月工作資料夾。
+2. 把所有"下載"目錄裡本週的檔案過一遍，留下有用的、歸檔、刪除沒用的。
 3. 給今年的家庭照片建立 <code>2025家庭</code>、<code>2026家庭</code> 這種年度資料夾。
 :::
 
@@ -254,15 +254,15 @@ kind: chapter
 {class="font-semibold mt-4 mb-1"}
 ##### 3. 圖片安全處理規範
 
-圖片是手機裡最"敏感"的資料型別——一張隨手拍就能暴露你的位置、裝置、時間。我們建議<strong>建立"雙重保護"工作流</strong>：
+圖片是手機裡最"敏感"的資料型別，一張隨手拍就能暴露你的位置、裝置、時間。我們建議<strong>建立"雙重保護"工作流</strong>：
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-image mr-2"></i>傳送證件照/敏感截圖的標準流程
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
-1. <strong>可見資訊打碼</strong>：用系統自帶或第三方工具（如美圖秀秀、Snapseed）<strong>塗抹身份證號中間幾位、車牌號、門牌、姓名、金額</strong>等關鍵欄位；
-2. <strong>後設資料剝離</strong>：傳送前在相簿中點"分享"或"匯出"，系統會詢問是否保留位置資訊，選擇<strong>"不保留"</strong>。這樣拍攝裝置型號、GPS 座標、拍攝時間就不會跟著圖片一起發出去；
+1. <strong>可見資訊打碼</strong>：用系統自帶或第三方工具（如美圖秀秀、Snapseed）<strong>塗抹身份證號中間幾位、車牌號、門牌、姓名、金額</strong>等關鍵欄位。
+2. <strong>後設資料剝離</strong>：傳送前在相簿中點"分享"或"匯出"，系統會詢問是否保留位置資訊，選擇<strong>"不保留"</strong>。這樣拍攝裝置型號、GPS 座標、拍攝時間就不會跟著圖片一起發出去。
 3. <strong>臨時水印</strong>（可選）：在敏感截圖上加"僅供XX辦理使用"的文字水印，避免被濫用。
 :::
 
@@ -275,6 +275,6 @@ kind: chapter
 
 對於需要<strong>長期儲存</strong>的敏感圖片（身份證、銀行卡、戶口本掃描件、護照），建議存入<strong>加密相簿</strong>：
 
-- iPhone：[照片] > 選中照片 > 隱藏（僅 Face ID 驗證後可檢視）；
-- 華為/小米：[相簿] > 長按照片 > "移入保險櫃"；
+- iPhone：[照片] > 選中照片 > 隱藏（僅 Face ID 驗證後可檢視）。
+- 華為/小米：[相簿] > 長按照片 > "移入保險櫃"。
 - 第三方加密 App：<strong>360 安全相簿</strong>、<strong>騰訊相簿管家（隱私相簿）</strong>、<strong>KeepSafe</strong> 等，單獨密碼保護，隱蔽性更好。

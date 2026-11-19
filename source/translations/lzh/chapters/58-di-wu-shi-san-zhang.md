@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十三章：數據之儲與網絡之請
 
 {class="chapter-intro mb-4"}
-App 之僅可「觀」者，死物也；能儲數據、能連網絡者，方為活物。此章識安卓數據層之「三件」：DataStore（儲小配置）、Room（儲結構之數據）、Retrofit（與服務器言），外益其「總調度」——協程。此章既學，汝遂能書真 App 矣，能記用戶之習、能實時更新其內容者也。
+App 之僅可「觀」者，死物也；能儲數據、能連網絡者，方為活物。此章識安卓數據層之「三件」：DataStore（儲小配置）、Room（儲結構之數據）、Retrofit（與服務器言），外益其「總調度」，協程。此章既學，汝遂能書真 App 矣，能記用戶之習、能實時更新其內容者也。
 
 #### 一、儲存之方何擇：先觀此表
 
@@ -23,7 +23,7 @@ App 之僅可「觀」者，死物也；能儲數據、能連網絡者，方為�
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 數據三件之分工
 
-記一口訣：「小配置入 DataStore，成批之數據入 Room，外之數據行 Retrofit」。舊教程所常見之 SharedPreferences，已為 DataStore 所代；SQLite 手書之 SQL，亦已為 Room 所代——逕學其新，毋蹈舊轍。
+記一口訣：「小配置入 DataStore，成批之數據入 Room，外之數據行 Retrofit」。舊教程所常見之 SharedPreferences，已為 DataStore 所代；SQLite 手書之 SQL，亦已為 Room 所代，逕學其新，毋蹈舊轍。
 
 #### 二、DataStore：儲少許小配置
 
@@ -50,11 +50,11 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 ```
 :::
 
-慎之，所返者 Flow 也——能流之數據流也。值一變，凡觀之之處自受新值。此概念（響應式）乃現代安卓之基石，第五十四章將實戰焉。
+慎之，所返者 Flow 也，能流之數據流也。值一變，凡觀之之處自受新值。此概念（響應式）乃現代安卓之基石，第五十四章將實戰焉。
 
 #### 三、Room：為數據安「真家」
 
-記賬之冊有賬成百上千，且欲依類、依月查而計之——此須數據庫也。Room 者，SQLite 官家之封裝，使「建表、查數據」如書 Kotlin 之自然。有三物焉：
+記賬之冊有賬成百上千，且欲依類、依月查而計之：此須數據庫也。Room 者，SQLite 官家之封裝，使「建表、查數據」如書 Kotlin 之自然。有三物焉：
 
 ::: div .code-block
 :::inline div .code-head
@@ -96,7 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 :::
 
-此「三件」之模板可原樣搬入汝之任何項目——易其字段之名足矣。查詢所返者 Flow，界面隨數據自新，妙不可言也。
+此「三件」之模板可原樣搬入汝之任何項目，易其字段之名足矣。查詢所返者 Flow，界面隨數據自新，妙不可言也。
 
 #### 四、Retrofit：與服務器言
 
@@ -131,12 +131,12 @@ val result = api.getWeather("北京")
 避坑之警：網絡鐵律二條
 
 {class="mt-1"}
-① 網絡之請決不可行於主線程——將卡死界面乃至崩潰（NetworkOnMainThreadException）。凡網絡之調必置於協程（viewModelScope.launch）之中。② 明文之 HTTP，默則被禁：自安卓 9 始須 HTTPS。測試之時若欲用 http:// 本地之址，須於 Manifest 顯聲 usesCleartextTraffic——然正式之品必全行 HTTPS。
+① 網絡之請決不可行於主線程，將卡死界面乃至崩潰（NetworkOnMainThreadException）。凡網絡之調必置於協程（viewModelScope.launch）之中。② 明文之 HTTP，默則被禁：自安卓 9 始須 HTTPS。測試之時若欲用 http:// 本地之址，須於 Manifest 顯聲 usesCleartextTraffic，然正式之品必全行 HTTPS。
 :::
 
 #### 五、JSON 之析：為網絡數據作「譯」
 
-服務器所返之數據多為 JSON——一串如「嵌套字典」之文。Retrofit 須一「譯官」化之為 Kotlin 對象。2026 年兩大主流之方：
+服務器所返之數據多為 JSON：一串如「嵌套字典」之文。Retrofit 須一「譯官」化之為 Kotlin 對象。2026 年兩大主流之方：
 
 ::: div .overflow-x-auto
 ```html
@@ -166,11 +166,11 @@ data class WeatherResponse(
 ```
 :::
 
-無論何方，鐵律皆曰：先觀真返之 JSON，後定字段。多「析之敗」之 bug，皆因字段名書誤、嵌套之層猜誤——印原 JSON 而對之，十秒可定。
+無論何方，鐵律皆曰：先觀真返之 JSON，後定字段。多「析之敗」之 bug，皆因字段名書誤、嵌套之層猜誤，印原 JSON 而對之，十秒可定。
 
 #### 六、協程：安卓並發之「通語」
 
-上文屢現之 suspend 與 launch，出於 Kotlin 協程（Coroutine）——安卓官家並發之方也。汝可粗而解之曰：使「須待片時」之操作（網絡、數據庫）不塞界面。
+上文屢現之 suspend 與 launch，出於 Kotlin 協程（Coroutine）：安卓官家並發之方也。汝可粗而解之曰：使「須待片時」之操作（網絡、數據庫）不塞界面。
 
 ::: div .code-block
 :::inline div .code-head
@@ -198,7 +198,7 @@ viewModelScope.launch {
 來動手：作「每日一句」之小應用
 
 {class="mt-1"}
-覓一免費名言之 API（譬如 hitokoto 之屬），以 Retrofit 拉「每日一句」，顯於屏之中央，加「易一句」之鈕（協程中復請之）。復以 Room 存所喜之句於「收藏之夾」。此一習，DataStore/Room/Retrofit/協程盡嘗用之——既成之，則第七、八章如小菜一碟矣。
+覓一免費名言之 API（譬如 hitokoto 之屬），以 Retrofit 拉「每日一句」，顯於屏之中央，加「易一句」之鈕（協程中復請之）。復以 Room 存所喜之句於「收藏之夾」。此一習，DataStore/Room/Retrofit/協程盡嘗用之，既成之，則第七、八章如小菜一碟矣。
 :::
 
 ::: div .chapter-summary

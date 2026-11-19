@@ -2,12 +2,12 @@
 id: jie-yu
 num: i
 part: fu-lu
-nav: iPenutup: Kekal Ingin Tahu, Kekal Berwaspada
+nav: Penutup: Faham cara guna telefon, itu sahaja
 toc: default
 kind: conclusion
 ---
 
-### Penutup: Kekal Ingin Tahu, Kekal Berwaspada
+### Penutup: Faham cara guna telefon, itu sahaja
 
 Tahniah, anda telah membaca sehingga sini.
 

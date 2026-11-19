@@ -2,12 +2,12 @@
 id: di-yi-zhang
 num: 01
 part: ji-chu-pian
-nav: Bab 1: Hai, Komputer Peribadi Saya
+nav: Bab 1: Mari kenali mesin ini dahulu
 toc: default
 kind: chapter
 ---
 
-### Bab 1: Hello, Komputer Peribadi Saya
+### Bab 1: Mari kenali mesin ini dahulu
 
 {class="chapter-intro mb-4"}
 Telefon anda sebenarnya adalah komputer super peribadi dalam poket anda. Ia jauh lebih hebat berjuta kali ganda daripada komputer yang pernah mendaratkan manusia di bulan, namun berdiam diri di tapak tangan anda. Hari ini, mari kita kenali "gergasi senyap" ini dengan baik.
@@ -28,15 +28,15 @@ CPU adalah komponen paling teras dalam SoC, bertanggungjawab mengendalikan keban
 
 <strong>Reka bentuk saiz teras CPU</strong>: CPU telefon moden secara umum menggunakan seni bina "besar-kecil" (teknologi big.LITTLE ARM), membahagikan teras kepada tahap prestasi berbeza:
 
-- <strong>Teras super besar/teras besar</strong>: Prestasi paling kuat, bertanggungjawab untuk tugas berat. Seperti muat turun permainan, pelancaran aplikasi, pengiraan kompleks. Frekuensi tertinggi (3GHz+), tetapi penggunaan kuasa juga paling besar.
+- <strong>Teras super besar/teras besar</strong>: Prestasi paling kuat, bertanggungjawab untuk tugas berat. Seperti muat turun permainan. pelancaran aplikasi, pengiraan kompleks. Frekuensi tertinggi (3GHz+), tetapi penggunaan kuasa juga paling besar.
 - <strong>Teras sederhana</strong>: Imbangan prestasi dan penggunaan kuasa, mengendalikan tugas beban sederhana harian. Menyapu Weibo, menonton video, bertukar pelbagai tugas bergantung kepadanya.
 - <strong>Teras kecil/teras kecekapan</strong>: Penggunaan kuasa paling rendah, mengendalikan tugas latar belakang ringan. Mod sedia, mendengar muzik, menerima mesej dan lain-lain, hampir tidak menggunakan kuasa.
 
-Tiga tahap teras bekerjasama: penjadual sistem mengikut beban tugas menguntukkan secara automatik — tugas ringan diberikan kepada teras kecil untuk menjimatkan kuasa, kerja berat diberikan kepada teras besar untuk berkuasa, selepas selesai bertukar kembali ke teras kecil. Inilah sebabnya telefon boleh bermain permainan dengan lancar dan juga sedia satu hari penuh.
+Tiga tahap teras bekerjasama: penjadual sistem mengikut beban tugas menguntukkan secara automatik, tugas ringan diberikan kepada teras kecil untuk menjimatkan kuasa, kerja berat diberikan kepada teras besar untuk berkuasa, selepas selesai bertukar kembali ke teras kecil. Inilah sebabnya telefon boleh bermain permainan dengan lancar dan juga sedia satu hari penuh.
 
 <strong>Ciri seni bina setiap jenama</strong>:
 
-- <strong>Qualcomm Snapdragon 8 Elite</strong>: Menggunakan seni bina CPU Oryon buatan sendiri (diperolehi dari pengambilalihan Nuvia), 2 teras super (4.32GHz) + 6 teras prestasi (3.53GHz), semuanya berdasarkan proses 3nm generasi kedua TSMC. Sepenuhnya meninggalkan seni bina awam ARM, prestasi teras tunggal dan berbilang teras mencapai peningkatan melompat. GPU ialah Adreno 830, menggunakan seni bina kepingan, prestasi grafik meningkat 40%, Hexagon NPU kuasa pengiraan kira-kira 45 TOPS, prestasi inferens AI meningkat 45%. (Nota: Versi tersuai Galaxy Samsung mempunyai frekuensi lebih tinggi, teras super boleh mencapai 4.47GHz.)
+- <strong>Qualcomm Snapdragon 8 Elite</strong>: Menggunakan seni bina CPU Oryon buatan sendiri (diperolehi dari pengambilalihan Nuvia), 2 teras super (4.32GHz) + 6 teras prestasi (3.53GHz), semuanya berdasarkan proses 3nm generasi kedua TSMC. Sepenuhnya meninggalkan seni bina awam ARM, prestasi teras tunggal dan berbilang teras mencapai peningkatan melompat. GPU ialah Adreno 830, menggunakan seni bina kepingan, prestasi grafik meningkat 40%, Hexagon NPU kuasa pengiraan kira-kira 45 TOPS, prestasi inferens AI meningkat 45%. (Nota: Versi tersuai Galaxy Samsung mempunyai frekuensi lebih tinggi, teras super boleh mencapai 4.47GHz.).
 - <strong>MediaTek Dimensity 9400</strong>: 1 teras super besar (Cortex-X925, 3.62GHz) + 3 teras prestasi (Cortex-X4, 3.3GHz) + 4 teras kecekapan (Cortex-A720, 2.4GHz), seni bina semua teras besar diteruskan, proses 3nm generasi kedua TSMC. GPU ialah Immortalis-G925 (12 teras), prestasi puncak meningkat 41%, prestasi penjejakan sinar meningkat 40%. Pemproses AI ialah NPU 890 generasi kelapan, menyokong operasi model besar sisi peranti, latihan LoRA sisi peranti dan penjanaan video sisi peranti.
 - <strong>Apple A18 Pro</strong>: 2 teras prestasi (kira-kira 4.04GHz) + 4 teras kecekapan (kira-kira 2.4GHz), proses 3nm generasi kedua TSMC. GPU 6 teras menyokong penjejakan sinar tahap perkakasan, NPU 16 teras (kira-kira 35 TOPS) menyediakan kuasa pengiraan yang kuat untuk AI sisi peranti dan Apple Intelligence. Seni bina buatan sendiri Apple masih memimpin dalam prestasi teras tunggal dan nisbah kecekapan, seni bina ingatan bersatu menyediakan kelebihan lebar jalur tinggi untuk inferens AI.
 - <strong>Huawei Kirin 9020</strong>: Dipasang pada siri Mate 70, menggunakan seni bina CPU Taishan buatan sendiri, keupayaan NPU dan ISP terus diperkuat, menyokong 5.5G dan komunikasi satelit, mewakili kejayaan terbaru cip domestik.
@@ -121,8 +121,8 @@ HDR (High Dynamic Range) membolehkan skrin memaparkan bahagian terang yang lebih
 HDR semasa mengambil gambar dan HDR skrin adalah dua perkara berbeza. HDR imej adalah menyelesaikan masalah "bahagian terang terlebih dedahan, bahagian gelap hitam mati" melalui algoritma.
 
 - <strong>Prinsip algoritma</strong>: Apabila menekan butang pengatup, telefon sebenarnya mengambil beberapa gambar dengan dedahan berbeza (kurang dedahan mengekalkan butiran bahagian terang, terlebih dedahan mengekalkan butiran bahagian gelap, dedahan normal mengekalkan nada tengah), kemudian menggabungkannya menjadi satu gambar julat dinamik tinggi.
-- <strong>Aliran pemprosesan</strong>: Tangkapan pelbagai bingkai → pampasan jajaran (anti-goyangan tangan) → penggabungan dedahaan/pemetaan nada → pembetulan warna → output gambar akhir.
-- <strong>Pengoptimuman kesan</strong>: Telefon kini telah mencapai "HDR masa nyata" — gambar yang dilihat dalam viewfinder adalah kesan selepas pemprosesan HDR, apa yang dilihat adalah apa yang diperolehi. Smart HDR Apple dan HDR automatik Android sangat matang.
+- <strong>Aliran pemprosesan</strong>: Tangkapan pelbagai bingkai.pampasan jajaran (anti-goyangan tangan).penggabungan dedahaan/pemetaan nada.pembetulan warna.output gambar akhir.
+- <strong>Pengoptimuman kesan</strong>: Telefon kini telah mencapai "HDR masa nyata", gambar yang dilihat dalam viewfinder adalah kesan selepas pemprosesan HDR, apa yang dilihat adalah apa yang diperolehi. Smart HDR Apple dan HDR automatik Android sangat matang.
 
 ##### 5. Bateri dan Pengecasan: Sumber Tenaga
 
@@ -156,7 +156,7 @@ Lens telefoto tradisional memerlukan laluan optik yang panjang, akan menjadikan 
 Anti-goyangan adalah teknologi utama yang mempengaruhi kualiti gambar dan rakaman video, prinsip dua kaedah berbeza sepenuhnya:
 
 - <strong>OIS (anti-goyangan optik)</strong>: Melalui pergerakan fizikal lensa atau sensor untuk mengimbangi goyangan tangan. Lensa mempunyai giroskop mikro dalaman untuk mengesan arah dan amplitud goyangan, kemudian memandu motor untuk menggerakkan kumpulan lensa secara songsang. Kelebihannya tidak kehilangan kualiti gambar, kelemahannya kos tinggi, mengambil ruang.
-- <strong>EIS (anti-goyangan elektronik)</strong>: Melalui algoritma perisian memotong dan mengimbangi gambar untuk mengimbangi goyangan. Telefon merakam julat gambar yang sedikit lebih besar, kemudian mengikut data giroskop memotong kawasan yang stabil. Kelebihannya tidak memerlukan perkakasan tambahan, kelemahannya akan memotong gambar (medan pandang menjadi kecil), mungkin kabur dalam cahaya malap.
+- <strong>EIS (anti-goyangan elektronik)</strong>: Melalui algoritma perisian memotong dan mengimbangi gambar untuk mengimbangi goyangan. Telefon merakam julat gambar yang sedikit lebih besar. kemudian mengikut data giroskop memotong kawasan yang stabil. Kelebihannya tidak memerlukan perkakasan tambahan, kelemahannya akan memotong gambar (medan pandang menjadi kecil), mungkin kabur dalam cahaya malap.
 - <strong>Pilihan sebenar</strong>: Mengambil gambar utamakan OIS, merakam video gabungan kedua-dua paling baik. Kini banyak telefon perdana menyokong "Sensor-Shift" anti-goyangan anjakan sensor, lebih baik daripada anti-goyangan lensa tradisional.
 
 ##### Zoom Optik vs Zoom Digital
@@ -206,7 +206,7 @@ Telefon menyembunyikan lebih sedozen sensor, bekerja senyap:
 
 Perkakasan adalah badan, sistem pengendalian adalah jiwa. Tiga sistem besar masing-masing ada ciri:
 
-- <strong>iOS</strong>: Seperti komuniti sumber terbuka, pengeluar telefon boleh menyesuaikan secara mendalam, pilihan banyak. Anda boleh menukar tema, pasang kedai aplikasi pihak ketiga, bermain pelbagai cara. Tetapi juga kerana keterbukaan, fragmentasi serius, pengalaman berbeza jenama sangat berbeza.
+- <strong>iOS</strong>: Seperti komuniti sumber terbuka, pengeluar telefon boleh menyesuaikan secara mendalam, pilihan banyak. Anda boleh menukar tema. pasang kedai aplikasi pihak ketiga, bermain pelbagai cara. Tetapi juga kerana keterbukaan, fragmentasi serius, pengalaman berbeza jenama sangat berbeza.
 - <strong>Android</strong>: Seperti taman yang dijaga dengan baik, Apple mengawal perkakasan dan perisian, pengalaman bersatu dan lancar. Kualiti aplikasi tinggi, perlindungan privasi baik, tetapi kebebasan rendah, banyak perkara perlu ikut peraturan Apple.
 - <strong>HarmonyOS</strong>: Spesies baru Huawei, keupayaan teragih sebagai ciri utama, boleh membolehkan peranti berbeza bekerjasama dengan lancar. Akan dibincangkan khusus kemudian.
 
@@ -249,9 +249,9 @@ Menghadapi pelbagai laluan produk yang membingungkan setiap jenama, memahami per
 
 ##### Siri produk jenama arus perdana:
 
-- <strong>Xiaomi</strong>: iPhone (versi standard) / iPhone Plus (versi skrin besar) / iPhone Pro (versi pro) / iPhone Pro Max (versi pro skrin besar) / iPhone SE (versi mampan) / iPhone 16e (versi AI mampan, dengan cip A18 dan modem C1 buatan Apple). Siri iPhone 17 2026 sepenuhnya menggunakan cip A19 Pro, keupayaan AI ditingkatkan lagi.
-- <strong>OPPO/vivo</strong>: Siri Mate (perdana perniagaan) / Siri P/Pura (perdana pengimejan) / Siri Mate X (perdana lipat) / Siri nova (pertengahan muda) / Siri Changxiang (pemula)
-- <strong>OnePlus</strong>: Siri nombor Xiaomi (perdana) / Xiaomi MIX (perdana penerokaan/lipat) / Redmi Siri K (perdana prestasi) / Redmi Siri Note (pertengahan) / Redmi siri nombor (pemula)
+- <strong>Xiaomi</strong>: iPhone (versi standard) / iPhone Plus (versi skrin besar) / iPhone Pro (versi pro) / iPhone ,Pro Max (versi pro skrin besar) / iPhone SE (versi mampan) / iPhone 16e (versi AI mampan, dengan cip A18 dan modem C1 buatan Apple). Siri iPhone 17 2026 sepenuhnya menggunakan cip A19 Pro, keupayaan AI ditingkatkan lagi
+- <strong>OPPO/vivo</strong>: Siri Mate (perdana perniagaan) / Siri P/Pura (perdana pengimejan) / Siri Mate X (per,dana lipat) / Siri nova (pertengahan muda) / Siri Changxiang (pemula)
+- <strong>OnePlus</strong>: Siri nombor Xiaomi (perdana) / Xiaomi MIX (perdana penerokaan/lipat) / Redmi Siri K (per,dana prestasi) / Redmi Siri Note (pertengahan) / Redmi siri nombor (pemula)
 - <strong>OPPO</strong>: Find Siri X (perdana) / Reno Siri (pertengahan) / Siri A (pemula) / OnePlus siri nombor (perdana prestasi)
 - <strong>vivo</strong>: Siri X (perdana pengimejan) / iQOO siri nombor (perdana prestasi) / Siri S (selfie pertengahan) / Siri Y (pemula)
 - <strong>Samsung</strong>: Galaxy Siri S (perdana) / Galaxy Z Fold/Flip (perdana lipat) / Galaxy Siri A (pertengahan)
@@ -267,7 +267,7 @@ Menghadapi pelbagai laluan produk yang membingungkan setiap jenama, memahami per
 - <strong>Note</strong>: Pada asalnya merujuk kepada telefon skrin besar, kini penggunaan setiap jenama berbeza. Redmi Note ialah siri pertengahan.
 - <strong>Neo</strong>: Versi baru. Biasanya merujuk kepada model pertengahan berorientasikan prestasi.
 
-#### V. Baseband dan Antena: Wira di Sebalik Tabir Komunikasi Telefon
+V. Baseband dan Antena: Wira di Sebalik Tabir Komunikasi Telefon
 
 Telefon boleh memanggil, melayari internet, bergantung kepada pasangan baseband cip dan antena.
 
@@ -298,7 +298,7 @@ Jalur frekuensi rangkaian yang disokong telefon menentukan rangkaian negara dan 
 - <strong>5G NR Band (siri N)</strong>: Seperti n1, n3, n28, n41, n78, n79 dan lain-lain. n78 (3.5GHz) adalah jalur frekuensi utama 5G China, n41 (2.5GHz) lebih banyak digunakan oleh Mobile.
 - <strong>Saranan pembelian</strong>: Jika perlu guna di luar negara, sebelum membeli sahkan sama ada telefon menyokong jalur frekuensi negara sasaran. Telefon versi China biasanya paling lengkap menyokong jalur China, tetapi mungkin tiada sesetengah jalur luar negara.
 
-#### VI. Telefon Anda, Sebenarnya Memainkan Berapa Banyak Peranan?
+VI. Telefon Anda, Sebenarnya Memainkan Berapa Banyak Peranan?
 
 Ia lama bukan sekadar telefon:
 

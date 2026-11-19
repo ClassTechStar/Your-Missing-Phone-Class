@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 62: Pengembangan Antarmuka — Pengenalan SwiftUI
 
 {class="chapter-intro mb-4"}
-Antarmuka adalah segala sesuatu yang dilihat pengguna. SwiftUI adalah framework antarmuka deklaratif yang diperkenalkan Apple pada 2019 — kamu cukup "mendeklarasikan" seperti apa tampilan antarmukanya, dan sistem otomatis menangani render, adaptasi dark mode, serta penyesuaian ke berbagai ukuran layar. Pada 2026, SwiftUI sudah menjadi arus utama mutlak untuk proyek baru. Di bab ini, kita belajar "menggambar".
+Antarmuka adalah segala sesuatu yang dilihat pengguna. SwiftUI adalah framework antarmuka deklaratif yang diperkenalkan Apple pada 2019, kamu cukup "mendeklarasikan" seperti apa tampilan antarmukanya, dan sistem otomatis menangani render, adaptasi dark mode, serta penyesuaian ke berbagai ukuran layar. Pada 2026, SwiftUI sudah menjadi arus utama mutlak untuk proyek baru. Di bab ini, kita belajar "menggambar".
 
 #### 1. Gagasan SwiftUI: Deklaratif, Bukan Imperatif
 
@@ -53,13 +53,13 @@ Poin kunci: view = struct yang mengikuti protokol View, properti body mendeskrip
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Empat view dasar SwiftUI
 
-Perhatikan Image(systemName:) — Apple menyediakan pustaka ikon bawaan SF Symbols (ribuan ikon gratis), dan nama seperti "star.fill" langsung menampilkan bintang penuh. Ini bonus tersembunyi pengembangan iOS: membuat antarmuka hampir tidak perlu mencari aset ikon.
+Perhatikan Image(systemName:), Apple menyediakan pustaka ikon bawaan SF Symbols (ribuan ikon gratis), dan nama seperti "star.fill" langsung menampilkan bintang penuh. Ini bonus tersembunyi pengembangan iOS: membuat antarmuka hampir tidak perlu mencari aset ikon.
 
 #### 3. Trio Layout: VStack, HStack, ZStack
 
 - VStack: tersusun vertikal (seperti antre mengambil makanan di kantin);
 - HStack: tersusun horizontal (seperti duduk berjajar);
-- ZStack: ditumpuk (seperti kartu remi ditumpuk, cocok untuk badge dan overlay).
+- ZStack: ditumpuk (seperti kartu remi ditumpuk, cocok untuk badge dan overlay)
 
 ::: div .code-block
 :::inline div .code-head
@@ -89,7 +89,7 @@ VStack(alignment: .leading, spacing: 12) {
 Perhatian: Urutan modifier berpengaruh
 
 {class="mt-1"}
-padding(16).background(abu) dan background(abu).padding(16) hasilnya berbeda — yang pertama "memberi jarak dulu, lalu mewarnai" (latar tidak termasuk jarak), yang kedua "mewarnai dulu, lalu memberi jarak" (latar termasuk jarak). "Garis putih aneh" yang paling sering membingungkan pemula berasal dari sini. Kalau ragu, tukar saja urutannya — pratinjau langsung memberi jawaban.
+padding(16).background(abu) dan background(abu).padding(16) hasilnya berbeda, yang pertama "memberi jarak dulu, lalu mewarnai" (latar tidak termasuk jarak), yang kedua "mewarnai dulu, lalu memberi jarak" (latar termasuk jarak). "Garis putih aneh" yang paling sering membingungkan pemula berasal dari sini. Kalau ragu, tukar saja urutannya: pratinjau langsung memberi jawaban.
 :::
 
 #### 4. State dan Binding: Menghidupkan Antarmuka
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-Kolom input memakai "binding dua arah" — simbol $ mengirimkan "nilai beserta hak mengubahnya" sekaligus:
+Kolom input memakai "binding dua arah", simbol $ mengirimkan "nilai beserta hak mengubahnya" sekaligus:
 
 ::: div .code-block
 :::inline div .code-head
@@ -154,7 +154,7 @@ Gambar 3: Aliran data satu arah "state → antarmuka" pada SwiftUI
 
 - Makro #Preview: tambahkan #Preview { ContentView() } di bagian bawah file, dan kanvas di sebelah kanan langsung merender secara real-time — mengubah kode terlihat hasilnya saat itu juga;
 - Dark mode gratis: gunakan warna sistem (Color(.systemGray6), .primary) alih-alih warna yang ditulis tetap; dark mode otomatis menyesuaikan tanpa kode tambahan;
-- Animasi selesai dalam satu baris: withAnimation { count += 1 } atau tambahkan .animation(.default, value: count) pada view — transisinya mulus.
+- Animasi selesai dalam satu baris: withAnimation { count += 1 } atau tambahkan .animation(.default, value: count) pada view: transisinya mulus
 
 ::: div .code-block
 :::inline div .code-head
@@ -186,14 +186,14 @@ struct AnimatedHeartView: View {
 Tips: Fungsinya Dulu, Animasi Belakangan
 
 {class="mt-1"}
-Celah umum pemula adalah "antarmuka belum benar, tapi sudah sibuk memikirkan animasi". Pastikan fiturnya berjalan dulu, baru tambahkan efek gerak secara seragam di tahap akhir — animasi adalah hiasan pelengkap, fungsi adalah kebutuhan pokok. Ini juga sesuai prinsip kita selama ini: "kesederhanaan di atas segalanya".
+Celah umum pemula adalah "antarmuka belum benar, tapi sudah sibuk memikirkan animasi". Pastikan fiturnya berjalan dulu, baru tambahkan efek gerak secara seragam di tahap akhir, animasi adalah hiasan pelengkap, fungsi adalah kebutuhan pokok. Ini juga sesuai prinsip kita selama ini: "kesederhanaan di atas segalanya".
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Membuat "Tombol Suasana Hati"
 
-#### 6. Contekan Modifier yang Sering Dipakai: Satu Halaman, Antarmuka Beres
+6. Contekan Modifier yang Sering Dipakai: Satu Halaman, Antarmuka Beres
 
 ::: div .overflow-x-auto
 ```html
@@ -204,7 +204,7 @@ Praktik: Membuat "Tombol Suasana Hati"
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Contekan modifier SwiftUI yang sering dipakai
 
-Tidak apa-apa kalau tidak hafal — halaman ini memang untuk dibuka saat perlu. Yang paling sering dipakai sebenarnya hanya empat yang pertama: padding, sudut membulat, warna latar, dan font.
+Tidak apa-apa kalau tidak hafal, halaman ini memang untuk dibuka saat perlu. Yang paling sering dipakai sebenarnya hanya empat yang pertama: padding, sudut membulat, warna latar, dan font.
 
 {class="mt-1"}
 Ubah proyek templat menjadi pengganti suasana hati: satu tombol yang setiap diklik berganti siklus antara 😀 senang → 😢 sedih → 😡 marah, dengan teks dan warna latar ikut berubah. Petunjuk: simpan tiga pasangan (teks + warna) dalam array, simpan indeksnya di @State, dan saat diklik gunakan (index + 1) % 3. Setelah jadi, kirim ke teman untuk dicoba, dan rasakan gelombang pertama "wow kamu bisa bikin App".

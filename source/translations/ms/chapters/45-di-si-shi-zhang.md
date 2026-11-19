@@ -2,19 +2,19 @@
 id: di-si-shi-zhang
 num: 40
 part: ai-biancheng-pian
-nav: Bab 40: Kejuruteraan Keperluan—Mengubah Idea menjadi Arahan AI
+nav: Bab 40: Terangkan dahulu, baru mula
 toc: default
 kind: chapter
 ---
 
-### Bab 40: Kejuruteraan Keperluan — Mengubah Idea Menjadi Arahan yang Boleh Dilaksanakan oleh AI
+### Bab 40: Terangkan dahulu, baru mula
 
 {class="chapter-intro mb-4"}
-Jika kejuruteraan konteks menyelesaikan masalah "membuat AI memahami latar belakang", maka kejuruteraan keperluan menyelesaikan masalah "membuat AI tahu apa yang perlu dibuat kali ini". Inilah bahagian dalam pengaturcaraan AI yang paling menonjolkan perbezaan antara individu — alat yang sama, model yang sama, tetapi ada yang mampu menghasilkan projek yang mengagumkan, ada yang hanya menghasilkan mainan biasa-biasa. Perbezaannya sering kali bukan pada kebolehan teknikal, tetapi pada keupayaan menyatakan keperluan.
+Jika kejuruteraan konteks menyelesaikan masalah "membuat AI memahami latar belakang", maka kejuruteraan keperluan menyelesaikan masalah "membuat AI tahu apa yang perlu dibuat kali ini". Inilah bahagian dalam pengaturcaraan AI yang paling menonjolkan perbezaan antara individu, alat yang sama, model yang sama, tetapi ada yang mampu menghasilkan projek yang mengagumkan, ada yang hanya menghasilkan mainan biasa-biasa. Perbezaannya sering kali bukan pada kebolehan teknikal, tetapi pada keupayaan menyatakan keperluan.
 
 #### 1. Daripada Idea Kabur kepada Keperluan Berstruktur
 
-Setiap projek bermula dengan satu idea yang kabur — "Saya nak buat aplikasi perakaunan", "Saya nak buat laman web peribadi", "Saya nak buat alat senarai tugasan". Idea-idea ini tiada masalah, tetapi jika anda terus menyampaikannya kepada AI, kualiti hasilnya bergantung sepenuhnya pada nasib. Matlamat kejuruteraan keperluan ialah mengubah idea kabur ini menjadi keperluan berstruktur yang boleh dilaksanakan oleh AI dengan tepat.
+Setiap projek bermula dengan satu idea yang kabur: "Saya nak buat aplikasi perakaunan", "Saya nak buat laman web peribadi", "Saya nak buat alat senarai tugasan". Idea-idea ini tiada masalah, tetapi jika anda terus menyampaikannya kepada AI. kualiti hasilnya bergantung sepenuhnya pada nasib. Matlamat kejuruteraan keperluan ialah mengubah idea kabur ini menjadi keperluan berstruktur yang boleh dilaksanakan oleh AI dengan tepat.
 
 Berita baiknya: keperluan berstruktur tidak memerlukan anda menulis PRD setebal puluhan muka surat. Anda hanya perlu menjawab lima soalan, yang kami gelar "lima elemen keperluan":
 
@@ -38,19 +38,19 @@ Ambil "membuat aplikasi perakaunan peribadi" sebagai contoh; satu cara pemecahan
 1. Melaksanakan fungsi asas perekodan pendapatan dan perbelanjaan (boleh tambah, lihat dan padam rekod);
 2. Menambah fungsi kategori (melekatkan label seperti makanan atau pengangkutan pada setiap rekod);
 3. Melaksanakan fungsi ringkasan bulanan (menghitung pendapatan dan perbelanjaan mengikut bulan);
-4. Menambah visualisasi data (memaparkan corak perbelanjaan dengan carta).
+4. Menambah visualisasi data (memaparkan corak perbelanjaan dengan carta)
 
 Setiap langkah ialah satu tambahan ciri yang boleh berjalan dan disahkan secara berasingan.
 
 :::inline div .quote-line
-Hukum emas mengurai keperluan: setiap langkah selesai, projek harus berupa "benda yang boleh guna"—walaupun fungsinya kasar. Jangan sesekali biarkan projek terhenti dalam keadaan "semuanya separuh siar tetapi tak satu pun boleh guna".
+Hukum emas mengurai keperluan: setiap langkah selesai, projek harus berupa "benda yang boleh guna":walaupun fungsinya kasar. Jangan sesekali biarkan projek terhenti dalam keadaan "semuanya separuh siar tetapi tak satu pun boleh guna".
 :::
 
-Cara pemecahan ini mempunyai dua kelebihan. Pertama, ia membolehkan anda sentiasa melihat kemajuan — setiap satu langkah selesai, aplikasi anda bertambah satu ciri, dan maklum balas positif ini amat penting untuk projek jangka panjang (semua orang memang perlukan rasa pencapaian). Kedua, ia menjadikan setiap tugasan AI cukup kecil, mengurangkan risiko "kefahaman AI yang tersasar" — semakin kecil tugasan, semakin tepat kefahaman AI, dan semakin tinggi kualiti hasilnya.
+Cara pemecahan ini mempunyai dua kelebihan. Pertama, ia membolehkan anda sentiasa melihat kemajuan, setiap satu langkah selesai, aplikasi anda bertambah satu ciri, dan maklum balas positif ini amat penting untuk projek jangka panjang (semua orang memang perlukan rasa pencapaian). Kedua, ia menjadikan setiap tugasan AI cukup kecil, mengurangkan risiko "kefahaman AI yang tersasar", semakin kecil tugasan, semakin tepat kefahaman AI, dan semakin tinggi kualiti hasilnya.
 
 #### 3. Templat dan Amalan Penulisan PRD
 
-Bagi projek yang lebih besar (contohnya, aplikasi penuh yang mempunyai bahagian hadapan dan belakang serta beberapa modul ciri), lima elemen keperluan sahaja mungkin tidak mencukupi. Pada ketika ini anda perlu menulis dokumen keperluan projek (PRD) yang lebih rasmi. Satu perkara yang mudah disalahertikan: PRD bukan ditulis untuk AI — ia ditulis untuk anda sendiri, untuk membantu anda menyusun fikiran; barulah anda dapat memberikan arahan yang lebih tepat kepada AI.
+Bagi projek yang lebih besar (contohnya, aplikasi penuh yang mempunyai bahagian hadapan dan belakang serta beberapa modul ciri), lima elemen keperluan sahaja mungkin tidak mencukupi. Pada ketika ini anda perlu menulis dokumen keperluan projek (PRD) yang lebih rasmi. Satu perkara yang mudah disalahertikan: PRD bukan ditulis untuk AI, ia ditulis untuk anda sendiri, untuk membantu anda menyusun fikiran; barulah anda dapat memberikan arahan yang lebih tepat kepada AI.
 
 PRD yang baik tidak perlu panjang, tetapi patut mengandungi enam bahagian: gambaran keseluruhan projek (satu perenggan menjelaskan apa yang dibuat), senarai ciri (apa setiap ciri itu), pelan teknikal (tindanan teknologi yang digunakan dan seni bina kasar), model data (struktur data teras), penerangan antara muka (rupa halaman utama) dan pelan pembangunan (berapa langkah untuk siap).
 
@@ -111,7 +111,7 @@ Langkah kedua, pecahkan keperluan.
 1. Langkah 1: Laksanakan fungsi "rekod entri pembelajaran" (tarikh, kandungan, tempoh);
 2. Langkah 2: Tambah "statistik tempoh pembelajaran" (hari ini, jumlah kumulatif minggu ini);
 3. Langkah 3: Laksanakan paparan "kalendar pembelajaran" (dipaparkan seperti carta sumbangan GitHub);
-4. Langkah 4: Tambah fungsi "ulang kaji pembelajaran" (memaparkan secara rawak rekod pembelajaran suatu hari yang lalu untuk membantu mengulang kaji).
+4. Langkah 4: Tambah fungsi "ulang kaji pembelajaran" (memaparkan secara rawak rekod pembelajaran suatu hari yang lalu untuk membantu mengulang kaji)
 
 Langkah ketiga, tulis satu PRD ringkas. Tidak perlu panjang — pemecahan di atas itu sendiri sudah menjadi isi utama PRD. Susunannya menjadi satu fail .md, letakkan dalam direktori akar projek, sebagai rujukan bersama anda dan AI.
 
@@ -145,7 +145,7 @@ Pilih satu projek kecil yang sudah lama anda perah, luangkan 5 minit untuk mengi
 {class="font-semibold mb-1"}
 Ringkasan Bab Ini
 
-- Lima elemen keperluan: Who / What / Why / How / Constraint — fikir dengan jelas sebelum bercakap
+- Lima elemen keperluan: Who / What / Why / How / Constraint, fikir dengan jelas sebelum bercakap
 - Peraturan emas pemecahan keperluan: selepas setiap langkah selesai, projek tetap "benda yang boleh digunakan"
 - PRD ditulis untuk diri sendiri: gambaran keseluruhan, senarai ciri, pelan teknikal, model data, antara muka, pelan
 - Arahan yang baik = hanya menerangkan langkah semasa + kekangan yang jelas + kata "apa yang dibuat", bukan "bagaimana membuatnya"

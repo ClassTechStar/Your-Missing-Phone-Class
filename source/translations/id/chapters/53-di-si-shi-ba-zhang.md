@@ -2,31 +2,31 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: Bab 48: Mengenal Android—Dari Sistem Operasi hingga Ekosistem Pengembangan
+nav: Bab 48: Bagaimana Android jadi seperti sekarang?
 toc: default
 kind: chapter
 ---
 
-### Bab 48: Mengenal Android — Dari Sistem Operasi hingga Ekosistem Pengembangan
+### Bab 48: Bagaimana Android jadi seperti sekarang?
 
 {class="chapter-intro mb-4"}
-Selamat atas keputusan ini—dari "orang yang memakai ponsel" menjadi "orang yang membuat aplikasi ponsel". Sebelum mulai praktik, mari kita buka petanya dulu: dari mana Android berasal? Mengapa pengembang di seluruh dunia rajin membuat aplikasi untuknya? Apa saja yang terjadi dari jari menyentuh keyboard sampai aplikasinya ada di ponsel pengguna?
+Selamat atas keputusan ini,dari "orang yang memakai ponsel" menjadi "orang yang membuat aplikasi ponsel". Sebelum mulai praktik, mari kita buka petanya dulu: dari mana Android berasal? Mengapa pengembang di seluruh dunia rajin membuat aplikasi untuknya? Apa saja yang terjadi dari jari menyentuh keyboard sampai aplikasinya ada di ponsel pengguna?
 
-#### 1. Silsilah Android: dari "robot kecil" menjadi "sistem terbesar di dunia"
+1. Silsilah Android: dari "robot kecil" menjadi "sistem terbesar di dunia"
 
-Kisah Android dimulai pada 2003—seorang insinyur bernama Andy Rubin mendirikan perusahaan Android dengan tujuan yang sederhana: membuat sistem operasi pintar yang "lebih paham kamera". Kemudian Google mengakuisisinya pada 2005, pada 2007 bersama puluhan vendor mendirikan Open Handset Alliance (OHA), dan pada September 2008 ponsel Android pertama, HTC Dream (G1), resmi dijual.
+Kisah Android dimulai pada 2003,seorang insinyur bernama Andy Rubin mendirikan perusahaan Android dengan tujuan yang sederhana: membuat sistem operasi pintar yang "lebih paham kamera". Kemudian Google mengakuisisinya pada 2005, pada 2007 bersama puluhan vendor mendirikan Open Handset Alliance (OHA), dan pada September 2008 ponsel Android pertama, HTC Dream (G1), resmi dijual.
 
-Cerita setelahnya sudah kamu tahu: sampai 2026, Android adalah sistem operasi mobile dengan pangsa pasar terbesar di dunia, dengan jumlah perangkat aktif dihitung dalam miliaran. Ponselmu, kotak TV, layar besar di mobil, jam pintarmu—kemungkinan besar semuanya menjalankan Android. Apa artinya? Artinya setiap baris kode yang kamu tulis berpeluang dipakai oleh paling banyak orang di dunia.
+Cerita setelahnya sudah kamu tahu: sampai 2026, Android adalah sistem operasi mobile dengan pangsa pasar terbesar di dunia, dengan jumlah perangkat aktif dihitung dalam miliaran. Ponselmu, kotak TV, layar besar di mobil, jam pintarmu:kemungkinan besar semuanya menjalankan Android. Apa artinya? Artinya setiap baris kode yang kamu tulis berpeluang dipakai oleh paling banyak orang di dunia.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Tips: gen open source Android
 
 {class="mt-1"}
-Kode inti Android (AOSP, Android Open Source Project) bersifat open source—vendor mana pun bebas mengambilnya, memodifikasinya, dan menyesuaikannya. Karena itu ada MIUI milik Xiaomi (sekarang bernama HyperOS), lapisan kompatibilitas HarmonyOS milik Huawei, dan One UI milik Samsung. Ini kabar baik bagi pengembang: yang kamu pelajari adalah "pengembangan Android", bukan "pengembangan merek tertentu"—satu keahlian, berlaku di semua merek.
+Kode inti Android (AOSP, Android Open Source Project) bersifat open source,vendor mana pun bebas mengambilnya, memodifikasinya, dan menyesuaikannya. Karena itu ada MIUI milik Xiaomi (sekarang bernama HyperOS). lapisan kompatibilitas HarmonyOS milik Huawei, dan One UI milik Samsung. Ini kabar baik bagi pengembang: yang kamu pelajari adalah "pengembangan Android", bukan "pengembangan merek tertentu",satu keahlian, berlaku di semua merek.
 :::
 
-Evolusi nomor versinya juga menarik: mulai dari Cupcake (kue cup) di versi 1.5, setiap versi besar dinamai dengan nama makanan penutup—Donut, Eclair, Frozen Yogurt, Gingerbread... sampai Android 10 pada 2019 akhirnya berganti menjadi angka murni. Per Agustus 2026, versi resmi terbaru adalah Android 17, sementara "versi dukungan minimum" yang benar-benar perlu kamu pedulikan saat mengembangkan biasanya dipatok aplikasi populer antara Android 8 (API 26) dan Android 10 (API 29)—mendukung perangkat beberapa tahun lalu membuat cakupan penggunamu cukup besar.
+Evolusi nomor versinya juga menarik: mulai dari Cupcake (kue cup) di versi 1.5, setiap versi besar dinamai dengan nama makanan penutup—Donut, Eclair, Frozen Yogurt, Gingerbread... sampai Android 10 pada 2019 akhirnya berganti menjadi angka murni. Per Agustus 2026, versi resmi terbaru adalah Android 17, sementara "versi dukungan minimum" yang benar-benar perlu kamu pedulikan saat mengembangkan biasanya dipatok aplikasi populer ,antara Android 8 (API 26) dan Android 10 (API 29)—mendukung perangkat beberapa tahun lalu membuat cakupan penggunamu cukup besar.
 
 ::: div .overflow-x-auto
 ```html
@@ -85,11 +85,11 @@ Ada dua konsep dalam alur ini yang harus kamu kenal sekarang:
 - APK: format paket instalasi aplikasi Android (.apk), bisa langsung dipasang ke ponsel dengan sekali klik, seperti .exe di Windows. Untuk pengujian sendiri atau sekadar membagikan ke teman, pakailah ini.
 - AAB: Android App Bundle (.aab), "format pengemasan premium" untuk rilis di Google Play. Toko akan memotongnya secara dinamis sesuai model ponsel pengguna sehingga paket yang diunduh tiap orang lebih kecil. Tidak bisa dipasang sendiri, hanya bisa diserahkan ke toko.
 
-Selain itu kamu akan terus mendengar satu istilah: SDK (Software Development Kit, perangkat lunak pengembangan). Inilah satu set "perlengkapan pengembangan" lengkap dari Android resmi—mencakup pustaka API berbagai versi, alat debugging, citra emulator, dan sebagainya. Kelas-kelas seperti Activity dan Button yang kamu panggil saat menulis kode semuanya berasal dari SDK.
+Selain itu kamu akan terus mendengar satu istilah: SDK (Software Development Kit, perangkat lunak pengembangan). Inilah satu set "perlengkapan pengembangan" lengkap dari Android resmi,mencakup pustaka API berbagai versi, alat debugging, citra emulator, dan sebagainya. Kelas-kelas seperti Activity dan Button yang kamu panggil saat menulis kode semuanya berasal dari SDK.
 
-#### 4. Peta penuh tumpukan teknologi Android: "daftar senjata"-mu
+4. Peta penuh tumpukan teknologi Android: "daftar senjata"-mu
 
-Sebelum belajar resmi, kenali dulu konfigurasi standar proyek Android populer tahun 2026—tidak masalah kalau daftar ini belum kamu pahami sekarang; kembali lagi setelah selesai membaca buku ini, semuanya akan terasa jernih:
+Sebelum belajar resmi, kenali dulu konfigurasi standar proyek Android populer tahun 2026:tidak masalah kalau daftar ini belum kamu pahami sekarang; kembali lagi setelah selesai membaca buku ini, semuanya akan terasa jernih:
 
 ::: div .overflow-x-auto
 ```html
@@ -100,11 +100,11 @@ Sebelum belajar resmi, kenali dulu konfigurasi standar proyek Android populer ta
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Sekilas tumpukan teknologi Android populer tahun 2026
 
-Jangan gentar oleh rangkaian istilah berbahasa Inggris ini. Semuanya seperti panci dan wajan di dapur—untuk sekarang kamu cukup tahu "memasak harus masuk dapur"; cara memakai masing-masing akan kita bedah satu per satu di bab-bab berikutnya. Kabar baiknya: saat membuat proyek baru, Android Studio otomatis menyiapkan seluruh rangkaian ini untukmu, dan kamu tinggal memasak.
+Jangan gentar oleh rangkaian istilah berbahasa Inggris ini. Semuanya seperti panci dan wajan di dapur:untuk sekarang kamu cukup tahu "memasak harus masuk dapur"; cara memakai masing-masing akan kita bedah satu per satu di bab-bab berikutnya. Kabar baiknya: saat membuat proyek baru, Android Studio otomatis menyiapkan seluruh rangkaian ini untukmu, dan kamu tinggal memasak.
 
-#### 5. Android vs iOS: "pelajaran memilih kubu" pertama bagi pengembang
+5. Android vs iOS: "pelajaran memilih kubu" pertama bagi pengembang
 
-Mungkin kamu sedang memegang perangkat Android dan Apple sekaligus. Sebagai pengembang, perbedaan pengalaman kedua sisi patut dipahami sejak awal—bukan menentukan sikap "mana yang lebih baik", melainkan menghitung secara realistis "sisi mana yang lebih cocok untukmu memulai":
+Mungkin kamu sedang memegang perangkat Android dan Apple sekaligus. Sebagai pengembang, perbedaan pengalaman kedua sisi patut dipahami sejak awal,bukan menentukan sikap "mana yang lebih baik", melainkan menghitung secara realistis "sisi mana yang lebih cocok untukmu memulai":
 
 ::: div .overflow-x-auto
 ```html
@@ -115,14 +115,14 @@ Mungkin kamu sedang memegang perangkat Android dan Apple sekaligus. Sebagai peng
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan jalur pengembangan Android vs iOS (Agustus 2026)
 
-Jujur saja: kalau komputermu bukan Mac, soal ini tidak perlu dipikirkan lagi—Android adalah satu-satunya pilihan. Kalau kamu punya Mac, Bagian 8 dan Bagian 9 buku ini bisa dibaca berdampingan karena pola pikirnya saling terkait; setelah menguasai salah satunya, mempelajari yang lain akan jauh lebih cepat.
+Jujur saja: kalau komputermu bukan Mac, soal ini tidak perlu dipikirkan lagi,Android adalah satu-satunya pilihan. Kalau kamu punya Mac, Bagian 8 dan Bagian 9 buku ini bisa dibaca berdampingan karena pola pikirnya saling terkait; setelah menguasai salah satunya, mempelajari yang lain akan jauh lebih cepat.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Lihat 'Android' di Dalam Ponselmu
 
 {class="mt-1"}
-Buka [Pengaturan] → [Tentang Ponsel] (atau 'Tentang Perangkat') di ponselmu, cari baris 'Versi Android'—ketuk baris itu beberapa kali berturut-turut, kamu bahkan bisa memunculkan permainan easter egg bawaan sistem. Catat nomor versimu, lalu cocokkan dengan tabel versi di atas untuk melihat generasinya. Ponselmu adalah 'perangkat uji' pertamamu.
+Buka [Pengaturan] → [Tentang Ponsel] (atau 'Tentang Perangkat') di ponselmu, cari baris 'Versi Android',ketuk baris itu beberapa kali berturut-turut, kamu bahkan bisa memunculkan permainan easter egg bawaan sistem. Catat nomor versimu, lalu cocokkan dengan tabel versi di atas untuk melihat generasinya. Ponselmu adalah 'perangkat uji' pertamamu.
 :::
 
 ::: div .chapter-summary

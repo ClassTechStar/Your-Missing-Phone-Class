@@ -12,9 +12,9 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Enhorabuena: si estás leyendo este libro, estás en pleno centro de una revolución de paradigma profesional. El punto de partida fue una frase que un programador publicó en redes sociales en 2025. ¿Te suena dramático? Pues así ocurrió.
 
-#### 1. El nacimiento del Vibe Coding: un movimiento provocado por una frase
+1. El nacimiento del Vibe Coding: un movimiento provocado por una frase
 
-En febrero de 2025, Andrej Karpathy —recuerda este nombre, lo volverás a ver varias veces— publicó en redes sociales un tuit que después se citaría una y otra vez: «Hay una nueva forma de programar que se llama Vibe Coding: te dejas llevar totalmente por las sensaciones (vibes), ignoras los detalles del código y dejas que la IA lo haga todo. Dices lo que ves, copias y pegas, y con que funcione a grandes rasgos basta».
+En febrero de 2025, Andrej Karpathy —recuerda este nombre, lo volverás a ver varias veces, publicó en redes sociales un tuit que después se citaría una y otra vez: «Hay una nueva forma de programar que se llama Vibe Coding: te dejas llevar totalmente por las sensaciones (vibes), ignoras los detalles del código y dejas que la IA lo haga todo. Dices lo que ves, copias y pegas, y con que funcione a grandes rasgos basta».
 
 Ese comentario, que parecía dicho al pasar, bautizó con precisión un cambio de paradigma que ya se estaba produciendo en silencio: el ser humano deja de escribir código línea a línea y pasa a describir su intención en lenguaje natural, y la IA se encarga de la implementación. El tono de Karpathy tenía un punto de burla, pero escondía una idea profunda: cuando la capacidad de generar código de la IA cruza cierto umbral, el cuello de botella de la programación ya no es «¿soy capaz de escribir esta línea?», sino «¿tengo claro lo que quiero hacer?».
 

@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 L'écran du smartphone ne fait que 7 pouces au maximum, mais votre téléviseur en fait 55 et votre projecteur 100. « Projeter » l'image du smartphone sur un grand écran offre une expérience d'une tout autre dimension. Ce chapitre explique la duplication d'écran, la présentation et la connectivité automobile, trois scénarios fréquents, pour étendre les capacités du smartphone vers des écrans plus grands.
 
-#### I. Les trois camps de la duplication d'écran sans fil — ne les confondez pas
+I. Les trois camps de la duplication d'écran sans fil — ne les confondez pas
 
 La duplication d'écran sans fil semble être toujours « l'image du smartphone sur la télé », mais il existe trois technologies sous-jacentes, incompatibles entre elles :
 
@@ -51,18 +51,18 @@ La duplication sans fil est pratique mais a de la latence, ce qui gâche l'expé
 
 #### III. Le smartphone devient ordinateur — mode bureau
 
-Certains smartphones Android prennent en charge le « mode bureau » — connecté à un moniteur, le smartphone affiche une interface de bureau, utilisable avec souris et clavier :
+Certains smartphones Android prennent en charge le « mode bureau »: connecté à un moniteur, le smartphone affiche une interface de bureau, utilisable avec souris et clavier :
 
 - <strong>Samsung DeX</strong> : La fonction phare des smartphones Samsung. Connecté à un moniteur, une interface de bureau apparaît, avec multi-fenêtres, l'expérience la plus proche d'un vrai ordinateur. Avec un clavier et une souris Bluetooth, vous pouvez voyager sans ordinateur portable.
 - <strong>Mode bureau Huawei</strong> : Les séries Huawei Mate/Pura connectées à un moniteur offrent une fonction similaire. Prend en charge le multi-fenêtres, la gestion de fichiers et les applications de bureau.
 - <strong>Motorola Ready For</strong> : Les phares Moto le prennent également en charge, similaire à DeX.
 - <strong>Scénario d'utilisation</strong> : Bureautique légère (e-mails, documents), présentation PPT, vidéo sur grand écran. Pas adapté aux opérations Excel intensives ou au design professionnel.
 
-#### IV. Connectivité automobile — la bonne façon d'utiliser le smartphone en conduisant
+IV. Connectivité automobile — la bonne façon d'utiliser le smartphone en conduisant
 
 Manipuler le smartphone en conduisant est illégal, mais la navigation, la musique et les appels sont indispensables. Le système de connectivité automobile permet d'utiliser les fonctions principales du smartphone sur l'écran de la voiture, le smartphone restant de côté :
 
-- <strong>Apple CarPlay</strong> : Le premier choix des utilisateurs iPhone. Connecté par USB ou sans fil à l'écran de la voiture, une interface simplifiée de l'iPhone apparaît — navigation (Amap/Baidu Maps), musique, téléphone, messages, podcasts. Contrôle vocal Siri mains libres.
+- <strong>Apple CarPlay</strong> : Le premier choix des utilisateurs iPhone. Connecté par USB ou sans fil à l'écran de la voiture, une interface simplifiée de l'iPhone apparaît, navigation (Amap/Baidu Maps), musique, téléphone, messages, podcasts. Contrôle vocal Siri mains libres.
 - <strong>Android Auto</strong> : La solution correspondante pour les utilisateurs Android. Fonctions similaires à CarPlay, prend en charge Google Maps, Spotify, etc. En Chine, certaines fonctions sont indisponibles en raison des restrictions des services Google.
 - <strong>Huawei HiCar</strong> : Solution développée par Huawei, taux de support élevé parmi les véhicules nationaux. Outre la navigation et la musique, elle offre des fonctions spéciales comme les appels vidéo Huawei et la fusion d'images de stationnement.
 - <strong>Baidu CarLife</strong> : Solution multiplateforme, utilisable sur iOS et Android. Moins de fonctions mais grande compatibilité, de nombreux vieux véhicules ne supportent que CarLife.

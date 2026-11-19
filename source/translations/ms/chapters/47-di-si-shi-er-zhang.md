@@ -10,9 +10,9 @@ kind: chapter
 ### Bab 42: Panorama Model Bahasa Besar dan Praktik API
 
 {class="chapter-intro mb-4"}
-Bab-bab sebelum ini bercakap tentang "cara bekerjasama dengan AI"; bab ini menyelesaikan satu soalan yang lebih asas: "gunakan AI yang mana? bagaimana menggunakannya?" Landskap model bahasa besar pada Ogos 2026 sudah sangat pelbagai — di peringkat antarabangsa ada pertarungan tiga kuasa besar iaitu GPT, Claude dan Gemini; di China pula ada DeepSeek, Tongyi Qianwen, GLM, Kimi dan Doubao yang berkembang masing-masing. Setiap model mempunyai personaliti dan kepakaran tersendiri: pilih dengan tepat, kerja menjadi lebih mudah; pilih dengan salah, kerja menjadi lebih sukar. Bab ini bukan sahaja membawa anda mengenali model-model ini, malah mengajar anda cara menyambungkannya ke aplikasi anda sendiri melalui API, serta cara memilih Token Plan (pakej penggunaan) yang sesuai mengikut keperluan anda.
+Bab-bab sebelum ini bercakap tentang "cara bekerjasama dengan AI"; bab ini menyelesaikan satu soalan yang lebih asas: "gunakan AI yang mana? bagaimana menggunakannya?" Landskap model bahasa besar pada Ogos 2026 sudah sangat pelbagai, di peringkat antarabangsa ada pertarungan tiga kuasa besar iaitu GPT, Claude dan Gemini; di China pula ada DeepSeek, Tongyi Qianwen, GLM, Kimi dan Doubao yang berkembang masing-masing. Setiap model mempunyai personaliti dan kepakaran tersendiri: pilih dengan tepat, kerja menjadi lebih mudah; pilih dengan salah, kerja menjadi lebih sukar. Bab ini bukan sahaja membawa anda mengenali model-model ini, malah mengajar anda cara menyambungkannya ke aplikasi anda sendiri melalui API, serta cara memilih Token Plan (pakej penggunaan) yang sesuai mengikut keperluan anda.
 
-#### 1. Model Bahasa Besar Antarabangsa Utama: Landskap Tiga Kuasa
+1. Model Bahasa Besar Antarabangsa Utama: Landskap Tiga Kuasa
 
 Pasaran model bahasa besar antarabangsa pada Ogos 2026 telah membentuk landskap tiga kuasa besar: OpenAI (siri GPT), Anthropic (siri Claude) dan Google (siri Gemini). Setiap syarikat mempunyai ciri yang tersendiri — mari kita kenali satu demi satu.
 
@@ -29,7 +29,7 @@ OpenAI ialah perintis gelombang model bahasa besar, dan siri GPT sehingga kini m
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Harga siri OpenAI GPT-5.6 (Ogos 2026)
 
-Kelebihan teras siri GPT terletak pada "keseimbangan" — penaakulan, pengaturcaraan, penulisan, multimodal; tiada kelemahan yang ketara. Ditambah pula dengan ekosistem sambungan OpenAI yang besar dan komuniti pembangunnya, dokumentasi dan rantaian alatnya paling lengkap. Bagi senario "tidak tahu nak pilih apa", GPT ialah jawapan lalai "pilih dengan mata tertutup pun tidak silap". Tetapi kelemahannya: akses dari China memerlukan rangkaian khas, ungkapan bahasa Cinanya kadangkala berbau "terjemahan", dan harga API berada pada tahap sederhana hingga tinggi.
+Kelebihan teras siri GPT terletak pada "keseimbangan", penaakulan, pengaturcaraan, penulisan, multimodal; tiada kelemahan yang ketara. Ditambah pula dengan ekosistem sambungan OpenAI yang besar dan komuniti pembangunnya. dokumentasi dan rantaian alatnya paling lengkap. Bagi senario "tidak tahu nak pilih apa", GPT ialah jawapan lalai "pilih dengan mata tertutup pun tidak silap". Tetapi kelemahannya: akses dari China memerlukan rangkaian khas, ungkapan bahasa Cinanya kadangkala berbau "terjemahan", dan harga API berada pada tahap sederhana hingga tinggi.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -41,9 +41,9 @@ Pada Ogos 2026, OpenAI mengumumkan model lalai untuk pengguna percuma dinaik tar
 
 ##### 2. Siri Anthropic Claude: Puncak Pengaturcaraan dan Kejituan
 
-Jika GPT ialah atlet serba boleh, maka Claude ialah "puncak" dalam bidang pengaturcaraan. Siri Claude daripada Anthropic mendahului SWE-bench (ujian penanda aras kejuruteraan perisian) secara berterusan dengan jurang yang jauh, dengan kualiti penjanaan kod dan keupayaan melaksanakan projek peringkat kejuruteraan yang terbaik dalam industri. Lebih jarang lagi, kadar halusinasi Claude (kebarangkalian menjana maklumat palsu) paling rendah di seluruh rangkaian, hanya sekitar 1% — menjadikannya sangat sesuai untuk senario ketepatan tinggi seperti akademik dan undang-undang.
+Jika GPT ialah atlet serba boleh, maka Claude ialah "puncak" dalam bidang pengaturcaraan. Siri Claude daripada Anthropic mendahului SWE-bench (ujian penanda aras kejuruteraan perisian) secara berterusan dengan jurang yang jauh, dengan kualiti penjanaan kod dan keupayaan melaksanakan projek peringkat kejuruteraan yang terbaik dalam industri. Lebih jarang lagi, kadar halusinasi Claude (kebarangkalian menjana maklumat palsu) paling rendah di seluruh rangkaian, hanya sekitar 1%, menjadikannya sangat sesuai untuk senario ketepatan tinggi seperti akademik dan undang-undang.
 
-Senjata maut Claude yang satu lagi ialah konteks jangka panjang luar biasa: menyokong tetingkap konteks 1 juta Token, mampu "membaca habis" kontrak beratus-ratus muka surat atau seluruh kod projek sekali gus tanpa terlepas butiran. Ini hampir tiada pengganti dalam senario seperti penstrukturan semula kod dan analisis dokumen panjang. Claude Code, sebagai alat pengaturcaraan AI terminal, mencapai pendapatan tahunan AS$2.5 bilion menjelang pertengahan 2026 — itulah bukti paling kukuh pengiktirafan terhadap keupayaan pengaturcaraan Claude.
+Senjata maut Claude yang satu lagi ialah konteks jangka panjang luar biasa: menyokong tetingkap konteks 1 juta Token, mampu "membaca habis" kontrak beratus-ratus muka surat atau seluruh kod projek sekali gus tanpa terlepas butiran. Ini hampir tiada pengganti dalam senario seperti penstrukturan semula kod dan analisis dokumen panjang. Claude Code, sebagai alat pengaturcaraan AI terminal, mencapai pendapatan tahunan AS$2.5 bilion menjelang pertengahan 2026, itulah bukti paling kukuh pengiktirafan terhadap keupayaan pengaturcaraan Claude.
 
 ::: div .overflow-x-auto
 ```html
@@ -54,11 +54,11 @@ Senjata maut Claude yang satu lagi ialah konteks jangka panjang luar biasa: meny
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Harga siri Anthropic Claude (Ogos 2026; Sonnet 5 pada harga diskaun)
 
-Kelemahan Claude ialah harga — harga output Fable 5 paling tinggi antara semua model, iaitu AS$50 setiap juta Token. Keupayaan multimodalnya (kefahaman imej dan video) juga agak lemah. Bagi pembangun persendirian berkemampuan terhad, Sonnet 5 pada tempoh diskaun sangat menonjol dari segi nilai wang.
+Kelemahan Claude ialah harga, harga output Fable 5 paling tinggi antara semua model, iaitu AS$50 setiap juta Token. Keupayaan multimodalnya (kefahaman imej dan video) juga agak lemah. Bagi pembangun persendirian berkemampuan terhad, Sonnet 5 pada tempoh diskaun sangat menonjol dari segi nilai wang.
 
 ##### 3. Siri Google Gemini: Raja Multimodal
 
-Siri Gemini daripada Google telah berkembang ke versi 3.1 Pro pada 2026. Senjata maut terbesar Gemini ialah multimodal asli — penghuraian imej dan teks yang tepat, pengesanan jadual OCR tanpa ralat, pengekstrakan bingkai video yang cekap, dan turut menyokong penghuraian audio dan video secara mendalam. Ia terikat rapat dengan ekosistem Google (carian, e-mel, perkhidmatan awan) dan menonjol dalam pengambilan maklumat masa nyata serta kefahaman merentas modal. Gemini turut menyokong input konteks sehingga 2 juta Token, iaitu tetingkap konteks terbesar pada masa kini.
+Siri Gemini daripada Google telah berkembang ke versi 3.1 Pro pada 2026. Senjata maut terbesar Gemini ialah multimodal asli: penghuraian imej dan teks yang tepat, pengesanan jadual OCR tanpa ralat, pengekstrakan bingkai video yang cekap, dan turut menyokong penghuraian audio dan video secara mendalam. Ia terikat rapat dengan ekosistem Google (carian, e-mel, perkhidmatan awan) dan menonjol dalam pengambilan maklumat masa nyata serta kefahaman merentas modal. Gemini turut menyokong input konteks sehingga 2 juta Token, iaitu tetingkap konteks terbesar pada masa kini.
 
 Kedudukan Gemini ialah "pilihan utama bagi penaakulan saintifik dan senario multimodal". Jika projek anda melibatkan banyak analisis imej, kefahaman video atau pengiraan saintifik, Gemini hampir tiada penanding. Tetapi dalam penjanaan kod teks tulen ia sedikit kalah daripada Claude, dan ungkapan bahasa Cinanya juga tidak semula jadi seperti model buatan China.
 
@@ -79,7 +79,7 @@ Perhatian: Halangan realiti penggunaan di China
 Bagi pembangun di China, halangan utama GPT, Claude dan Gemini ialah akses rangkaian. Walaupun boleh digunakan secara tidak langsung melalui proksi Azure, platform agregasi API dan sebagainya, kestabilan dan pematuhan perlu dinilai sendiri. Jika projek anda mempunyai keperluan ketat terhadap keselamatan data, disyorkan mengutamakan model buatan China.
 :::
 
-#### 2. Model Bahasa Besar Buatan China Utama: Pelbagai Jenis Berkembang
+2. Model Bahasa Besar Buatan China Utama: Pelbagai Jenis Berkembang
 
 Pada 2026, model bahasa besar buatan China telah bertukar daripada "pengejar" kepada "pelari seiring", malah "mendahului" dalam sesetengah bidang. Berbeza dengan kontroversi "model pembalut" tahun 2023, model utama buatan China pada 2026 sudah setanding dengan model tahap terbaik antarabangsa dalam penaakulan logik, penjanaan kod dan kefahaman bahasa Cina, dengan jurang menyusut kepada bawah 5%. Lebih penting lagi, model buatan China mempunyai kelebihan yang tidak boleh digantikan dalam senario bahasa Cina, kos harga dan pelancaran yang mematuhi peraturan.
 
@@ -87,7 +87,7 @@ Pada 2026, model bahasa besar buatan China telah bertukar daripada "pengejar" ke
 
 DeepSeek ialah kehadiran fenomena dalam kalangan model bahasa besar buatan China. Pada awal 2025, DeepSeek-V3 menggemparkan pasaran dengan kedudukan "sepuluh kali lebih murah daripada GPT tetapi keupayaan setanding", dan digelar industri sebagai "garis pemusnah" model AI sejagat — yang lebih murah tidak sebaik ia, yang lebih mahal pula tidak selimpat ia. Menjelang Ogos 2026, versi rasmi DeepSeek V4-Pro dikeluarkan: seni bina MoE berskala 1.6 trilion parameter dengan pengaktifan sekitar 49B, menyokong konteks 1 juta tanpa kehilangan, dan nilai wangnya bagi kod secara meluas dianggap puncak dunia.
 
-DeepSeek V4 mencapai lompatan besar dalam keupayaan Agent — penanda aras DeepSWE melonjak daripada 12.8 kepada 62.7 (+390%), dan NL2Repo meningkat daripada 38.5 kepada 61.5. API menambah sokongan dwi-protokol Responses API dan Anthropic API, dan telah serasi dengan alat pengaturcaraan arus perdana seperti Codex dan Claude Code. Ini bermakna anda boleh menggunakan API DeepSeek menggantikan API Claude dalam Claude Code — kos menurun beberapa kali ganda, pengalaman hampir sama.
+DeepSeek V4 mencapai lompatan besar dalam keupayaan Agent — penanda aras DeepSWE melonjak daripada 12.8 kepada 62.7 (+390%), dan NL2Repo meningkat daripada 38.5 kepada 61.5. API menambah sokongan dwi-protokol Responses API dan Anthropic API. dan telah serasi dengan alat pengaturcaraan arus perdana seperti Codex dan Claude Code. Ini bermakna anda boleh menggunakan API DeepSeek menggantikan API Claude dalam Claude Code — kos menurun beberapa kali ganda, pengalaman hampir sama.
 
 ::: div .overflow-x-auto
 ```html
@@ -105,12 +105,12 @@ Perbandingan harga: bagi 1 juta Token input + 1 juta Token output yang sama, Dee
 Peringatan elak jerat: Harga DeepSeek akan naik
 
 {class="mt-1"}
-Pihak rasmi DeepSeek telah mengumumkan pada 6 Ogos 2026 "berancangan menaikkan harga API secara besar-besaran dalam masa terdekat", jadi harga promosi mungkin tidak bertahan lama. Sebahagian media mengkhabarkan kenaikan mungkin mencapai 30 kali ganda; sehingga 14 Ogos, pihak rasmi masih belum mengumumkan pelan penetapan harga akhir. Selain itu, versi rasmi DeepSeek V4 memperkenalkan mekanisme harga puncak dan lembah — harga panggilan pada waktu puncak meningkat dua kali ganda. Disyorkan memantau pengumuman rasmi untuk harga terkini.
+Pihak rasmi DeepSeek telah mengumumkan pada 6 Ogos 2026 "berancangan menaikkan harga API secara besar-besaran dalam masa terdekat", jadi harga promosi mungkin tidak bertahan lama. Sebahagian media mengkhabarkan kenaikan mungkin mencapai 30 kali ganda; sehingga 14 Ogos. pihak rasmi masih belum mengumumkan pelan penetapan harga akhir. Selain itu, versi rasmi DeepSeek V4 memperkenalkan mekanisme harga puncak dan lembah: harga panggilan pada waktu puncak meningkat dua kali ganda. Disyorkan memantau pengumuman rasmi untuk harga terkini.
 :::
 
 ##### 2. Tongyi Qianwen Qwen3.7 Max: Pilihan Peringkat Perusahaan Alibaba Cloud
 
-Siri Tongyi Qianwen (Qwen) daripada Alibaba Cloud bersandar pada ekosistem Alibaba Cloud dan mempunyai kelebihan semula jadi dalam pelancaran peringkat perusahaan. Qwen3.7 Max yang dikeluarkan pada Julai 2026 ialah model utama semasa: model padat 235B parameter dengan konteks asli 256K, boleh dikembangkan sehingga 1M. Kelebihan teras Qwen: ekosistem sumber terbuka yang matang (seluruh siri daripada 7B hingga 235B bersumber terbuka), kefahaman senario bahasa Cina yang tepat, serta integrasi mendalam dengan infrastruktur Alibaba Cloud.
+Siri Tongyi Qianwen (Qwen) dari,pada Alibaba Cloud bersandar pada ekosistem Alibaba Cloud dan mempunyai kelebihan semula jadi dalam pelancaran peringkat perusahaan. Qwen3.7 Max yang dikeluarkan pada Julai 2026 ialah model utama semasa: model padat 235B parameter dengan konteks asli 256K, boleh dikembangkan sehingga 1M. Kelebihan teras Qwen: ekosistem sumber terbuka yang matang (seluruh siri daripada 7B hingga 235B bersumber terbuka), kefahaman senario bahasa Cina yang tepat, serta integrasi mendalam dengan infrastruktur Alibaba Cloud.
 
 ::: div .overflow-x-auto
 ```html
@@ -121,15 +121,15 @@ Siri Tongyi Qianwen (Qwen) daripada Alibaba Cloud bersandar pada ekosistem Aliba
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Harga berperingkat siri Tongyi Qianwen Qwen (Ogos 2026)
 
-Harga Qwen menggunakan strategi berperingkat — daripada qwen-turbo berkos sangat rendah (output 0.6 yuan/juta Token) hingga model utama qwen3.7-max (output 36 yuan/juta Token), meliputi keseluruhan keperluan daripada soal jawab ringan hingga penaakulan kompleks. Bagi perusahaan yang sudah menggunakan Alibaba Cloud, Qwen ialah pilihan integrasi paling mudah.
+Harga Qwen menggunakan strategi berperingkat: daripada qwen-turbo berkos sangat rendah (output 0.6 yuan/juta Token) hingga model utama qwen3.7-max (output 36 yuan/juta Token), meliputi keseluruhan keperluan daripada soal jawab ringan hingga penaakulan kompleks. Bagi perusahaan yang sudah menggunakan Alibaba Cloud, Qwen ialah pilihan integrasi paling mudah.
 
 ##### 3. Zhipu GLM-5.1: Yang Pertama SWE-bench Buatan China
 
-Siri GLM daripada Zhipu AI mempamerkan prestasi cemerlang pada 2026. GLM-5.1 meraih keputusan pertama buatan China pada SWE-bench: seni bina hibrid padat MoE 744B, menyokong konteks 1 juta. Kepakarannya ialah kefahaman semantik bahasa Cina yang tepat, serta menyokong pelancaran peribadi yang mematuhi peraturan di China — ini sangat penting bagi senario kewangan dan kerajaan yang menuntut keselamatan data tinggi. Harga GLM-5.1 ialah 6 yuan untuk input dan 24 yuan untuk output setiap juta Token, berada pada tahap pertengahan model buatan China.
+Siri GLM daripada Zhipu AI mempamerkan prestasi cemerlang pada 2026. GLM-5.1 meraih keputusan pertama buatan China pada SWE-bench: seni bina hibrid padat MoE 744B, menyokong konteks 1 juta. Kepakarannya ialah kefahaman semantik bahasa Cina yang tepat, serta menyokong pelancaran peribadi yang mematuhi peraturan di China: ini sangat penting bagi senario kewangan dan kerajaan yang menuntut keselamatan data tinggi. Harga GLM-5.1 ialah 6 yuan untuk input dan 24 yuan untuk output setiap juta Token, berada pada tahap pertengahan model buatan China.
 
 ##### 4. Kimi K3: Raja Teks Jangka Panjang
 
-Siri Kimi daripada Moonshot AI terkenal dengan keupayaan memproses teks jangka panjang luar biasa. Kimi K3 yang dikeluarkan pada Julai 2026 berskala 2.8 trilion parameter dan memasuki gred pertama dunia dalam banyak penilaian tugasan kompleks. Senario teras Kimi ialah analisis kod sumber panjang dan pengambilan semula dokumen panjang yang dipertingkat — ia boleh memproses teks seluruh buku atau kod seluruh projek, dan cemerlang dalam tugasan pengambilan gaya "mencari jarum dalam timbunan jerami". Harga Kimi agak tinggi (output sekitar 12-20 yuan/juta Token), tetapi nilai wangnya dalam senario teks panjang tiada penanding.
+Siri Kimi daripada Moonshot AI terkenal dengan keupayaan memproses teks jangka panjang luar biasa. Kimi K3 yang dikeluarkan pada Julai 2026 berskala 2.8 trilion parameter dan memasuki gred pertama dunia dalam banyak penilaian tugasan kompleks. Senario teras Kimi ialah analisis kod sumber panjang dan pengambilan semula dokumen ,panjang yang dipertingkat — ia boleh memproses teks seluruh buku atau kod seluruh projek, dan cemerlang dalam tugasan pengambilan gaya "mencari jarum dalam timbunan jerami". Harga Kimi agak tinggi (output sekitar 12-20 yuan/juta Token), tetapi nilai wangnya dalam senario teks panjang tiada penanding.
 
 ##### 5. Doubao: Atlet Serba Boleh ByteDance
 
@@ -144,7 +144,7 @@ Siri Doubao daripada ByteDance mempamerkan prestasi stabil pada 2026. Doubao See
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan mendatar lima model buatan China (Ogos 2026)
 
-Satu trend penting: "rasa jurang generasi" antara model buatan China dengan GPT/Claude telah hilang. Dalam penaakulan logik dan pertandingan matematik, jurang skor antara model utama buatan China dengan GPT-5 secara amnya hanya dalam angka satu digit. Dalam pemikiran seni bina berstruktur dan penaakulan kejuruteraan kompleks, Claude masih mendahului — ia mampu memberikan pelan seni bina yang lebih bernyawa dengan kreativiti, manakala model buatan China kadangkala kelihatan "kaku". Tetapi dalam senario bahasa Cina, kawalan kos dan pelancaran yang mematuhi peraturan, model buatan China mempunyai kelebihan yang jauh mengatasi.
+Satu trend penting: "rasa jurang generasi" antara model buatan China dengan GPT/Claude telah hilang. Dalam penaakulan logik dan pertandingan matematik, jurang skor antara model utama buatan China dengan GPT-5 secara amnya hanya dalam angka satu digit. Dalam pemikiran seni bina berstruktur dan penaakulan kejuruteraan kompleks, Claude masih mendahului, ia mampu memberikan pelan seni bina yang lebih bernyawa dengan kreativiti, manakala model buatan China kadangkala kelihatan "kaku". Tetapi dalam senario bahasa Cina, kawalan kos dan pelancaran yang mematuhi peraturan, model buatan China mempunyai kelebihan yang jauh mengatasi.
 
 ::: div .figure
 ```html
@@ -182,7 +182,7 @@ Rajah 4: Perbandingan harga dan prestasi lima model (harga semakin rendah semaki
 
 #### 3. Kerangka Keputusan Pemilihan Model
 
-Selepas memahami ciri setiap model, bagaimana memilih model untuk projek anda? Di sini kami berikan anda "kaedah keputusan empat soalan" — jawab empat soalan ini, dan anda boleh mengunci model yang paling sesuai dengan anda.
+Selepas memahami ciri setiap model, bagaimana memilih model untuk projek anda? Di sini kami berikan anda "kaedah keputusan empat soalan": jawab empat soalan ini, dan anda boleh mengunci model yang paling sesuai dengan anda.
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -213,15 +213,15 @@ Petua: Strategi gabungan
 Kaedah keputusan ini bukan dogma — banyak senario memerlukan gabungan beberapa model. Satu strategi gabungan yang lazim: guna DeepSeek atau Qwen untuk pembangunan harian (kos rendah, bahasa Cina bagus), Claude untuk reka bentuk seni bina kritikal (penaakulan kuat, halusinasi rendah), dan Gemini untuk analisis multimodal (pemprosesan imej dan video). Tukar model mengikut keperluan, bukan "satu model diguna sehingga tamat".
 :::
 
-#### 4. Asas Panggilan API: Menyambungkan Model Bahasa Besar dari Sifar
+4. Asas Panggilan API: Menyambungkan Model Bahasa Besar dari Sifar
 
-Banyak tutorial pengaturcaraan AI hanya mengajar anda menggunakan antara muka sembang, tetapi "pengaturcaraan AI" yang sebenar — membolehkan aplikasi anda memanggil model bahasa besar — perlu melalui API. API (Application Programming Interface, antara muka pengaturcaraan aplikasi) ialah protokol komunikasi antara atur cara. Melalui API, kod anda boleh memanggil keupayaan model bahasa besar seperti memanggil satu fungsi.
+Banyak tutorial pengaturcaraan AI hanya mengajar anda menggunakan antara muka sembang, tetapi "pengaturcaraan AI" yang sebenar: membolehkan aplikasi anda memanggil model bahasa besar, perlu melalui API. API (Application Programming Interface, antara muka pengaturcaraan aplikasi) ialah protokol komunikasi antara atur cara. Melalui API, kod anda boleh memanggil keupayaan model bahasa besar seperti memanggil satu fungsi.
 
 ##### 1. Apakah Itu Token
 
 Sebelum memahami API, anda mesti memahami konsep "Token" dahulu. Token ialah unit asas pengebilan model bahasa besar, boleh difahami sebagai "unit bacaan dan penulisan AI". Satu Token lebih kurang bersamaan: 0.75 patah perkataan (4 aksara) dalam bahasa Inggeris, dan 0.5-1 aksara Cina dalam bahasa Cina. Satu teks bahasa Cina sepanjang 1000 aksara mengguna kira-kira 1500-2000 Token.
 
-Token bukan bilangan perkataan, juga bukan bilangan aksara. Model bahasa besar menggunakan peng-token khusus (Tokenizer) untuk memotong teks menjadi Token. Bilangan Token bagi perkataan yang sama mungkin berbeza antara model — contohnya, "kecerdasan buatan" mungkin 3 Token dalam GPT tetapi 2 dalam DeepSeek. API kebanyakan model memulangkan jumlah Token yang sebenarnya digunakan, dan anda boleh melihatnya dalam respons API.
+Token bukan bilangan perkataan, juga bukan bilangan aksara. Model bahasa besar menggunakan peng-token khusus (Tokenizer) untuk memotong teks menjadi Token. Bilangan Token bagi perkataan yang sama mungkin berbeza antara model: contohnya, "kecerdasan buatan" mungkin 3 Token dalam GPT tetapi 2 dalam DeepSeek. API kebanyakan model memulangkan jumlah Token yang sebenarnya digunakan, dan anda boleh melihatnya dalam respons API.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -233,7 +233,7 @@ Anggaran Kos Token dengan Pantas
 
 ##### 2. Memperoleh API Key
 
-Langkah pertama menggunakan API model bahasa besar ialah memperoleh API Key — satu rentetan kunci untuk pengesahan identiti. Setiap penyedia model mempunyai platform API tersendiri; anda perlu mendaftar akaun dan mencipta API Key. Berikut ialah pintu masuk platform API model-model utama dan proses memperolehnya:
+Langkah pertama menggunakan API model bahasa besar ialah memperoleh API Key: satu rentetan kunci untuk pengesahan identiti. Setiap penyedia model mempunyai platform API tersendiri; anda perlu mendaftar akaun dan mencipta API Key. Berikut ialah pintu masuk platform API model-model utama dan proses memperolehnya:
 
 ::: div .overflow-x-auto
 ```html
@@ -249,12 +249,12 @@ Platform API model utama dan cara memperoleh Key (Ogos 2026)
 Peringatan keselamatan: API Key = kata laluan dompet
 
 {class="mt-1"}
-API Key setara dengan kata laluan dompet anda — sesiapa yang mendapat Key boleh menggunakan kuota anda untuk memanggil model. Oleh itu: jangan sesekali menulis API Key dalam kod (urus dengan pemboleh ubah persekitaran); jangan sesekali memuat naik kod yang mengandungi Key ke repositori Git awam; jangan sesekali berkongsi tangkapan skrin yang mengandungi Key di media sosial. Jika Key bocor, padamkan serta-merta di platform dan cipta semula.
+API Key setara dengan kata laluan dompet anda: sesiapa yang mendapat Key boleh menggunakan kuota anda untuk memanggil model. Oleh itu: jangan sesekali menulis API Key dalam kod (urus dengan pemboleh ubah persekitaran); jangan sesekali memuat naik kod yang mengandungi Key ke repositori Git awam; jangan sesekali berkongsi tangkapan skrin yang mengandungi Key di media sosial. Jika Key bocor, padamkan serta-merta di platform dan cipta semula.
 :::
 
 ##### 3. Panggilan API Pertama
 
-Selepas memperoleh API Key, anda boleh memanggil API model bahasa besar dengan sebarang bahasa pengaturcaraan. Berikut ialah demonstrasi panggilan paling ringkas menggunakan Python — menghantar satu mesej kepada DeepSeek dan menerima balasannya.
+Selepas memperoleh API Key, anda boleh memanggil API model bahasa besar dengan sebarang bahasa pengaturcaraan. Berikut ialah demonstrasi panggilan paling ringkas menggunakan Python: menghantar satu mesej kepada DeepSeek dan menerima balasannya.
 
 ::: div .code-block
 :::inline div .code-head
@@ -294,7 +294,7 @@ print(f"Jumlah Token: {response.usage.total_tokens}")
 
 Logik teras kod ini ialah: cipta klien (membawa API Key dan alamat model) → bina senarai mesej (system menetapkan peranan, user ialah input pengguna) → hantar permintaan → terima balasan. Corak ini hampir sesuai untuk semua model yang serasi dengan format OpenAI — cukup dengan menukar api_key dan base_url untuk bertukar model. Itulah sebabnya banyak model buatan China memilih keserasian dengan format OpenAI SDK: pembangun hanya perlu mengubah dua baris kod untuk bertukar model, kos pemindahan sangat rendah.
 
-Berikut ialah perbezaan kod untuk bertukar kepada model lain — perhatikan hanya dua baris perlu diubah:
+Berikut ialah perbezaan kod untuk bertukar kepada model lain, perhatikan hanya dua baris perlu diubah:
 
 ::: div .code-block
 :::inline div .code-head
@@ -334,7 +334,7 @@ client = OpenAI(
 
 ##### 4. Mengendalikan Respons Strim
 
-Dalam aplikasi sebenar, anda biasanya tidak mahu menunggu AI menulis habis semua kandungan sebelum dipaparkan sekaligus — itu membuat pengguna menunggu terlalu lama. Respons strim (Streaming) membolehkan anda memaparkan aksara demi aksara sebaik AI menjana, meningkatkan pengalaman pengguna dengan besar. Seperti mesin taip, huruf muncul satu demi satu — rasa pengguna benar-benar berbeza.
+Dalam aplikasi sebenar, anda biasanya tidak mahu menunggu AI menulis habis semua kandungan sebelum dipaparkan sekaligus — itu membuat pengguna menunggu terlalu lama. Respons strim (Streaming) membolehkan anda memaparkan aksara demi aksara sebaik AI menjana, meningkatkan pengalaman pengguna dengan besar. Seperti mesin taip, huruf muncul satu demi satu, rasa pengguna benar-benar berbeza.
 
 ::: div .code-block
 :::inline div .code-head
@@ -374,7 +374,7 @@ Kebanyakan penyedia model mempunyai dua cara pengebilan: bayar mengikut pengguna
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan dua cara pengebilan
 
-Bagi pemula, disyorkan bermula dengan bayar mengikut penggunaan — tidak perlu bayar terlebih dahulu, guna berapa bayar sepenuhnya. Apabila penggunaan bulanan anda stabil pada satu tahap (contohnya melebihi 50 yuan sebulan), barulah pertimbangkan bertukar kepada langganan pakej untuk mendapatkan harga unit lebih rendah.
+Bagi pemula, disyorkan bermula dengan bayar mengikut penggunaan: tidak perlu bayar terlebih dahulu, guna berapa bayar sepenuhnya. Apabila penggunaan bulanan anda stabil pada satu tahap (contohnya melebihi 50 yuan sebulan), barulah pertimbangkan bertukar kepada langganan pakej untuk mendapatkan harga unit lebih rendah.
 
 ##### 2. Sekilas Pandang Pakej Langganan Utama
 
@@ -387,7 +387,7 @@ Bagi pemula, disyorkan bermula dengan bayar mengikut penggunaan — tidak perlu 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Pakej langganan alat AI utama (Ogos 2026)
 
-Pelan langganan model di China agak berbeza. DeepSeek terutamanya mengebil mengikut penggunaan dan tidak mempunyai pakej langganan bulanan — anda top up dan caj dibuat mengikut penggunaan sebenar. Tongyi Qianwen menyediakan pakej sumber prabayar di platform Bailian (membeli kuota Token tertentu dengan harga diskaun). Doubao juga mempunyai pelan prabayar serupa di Volcengine. Bagi pembangun di China, gabungan paling ekonomi lazimnya ialah: DeepSeek bayar mengikut penggunaan (pembangunan harian) + kuota percuma Doubao (uji rasa).
+Pelan langganan model di China agak berbeza. DeepSeek terutamanya mengebil mengikut penggunaan dan tidak mempunyai pakej ,langganan bulanan — anda top up dan caj dibuat mengikut penggunaan sebenar. Tongyi Qianwen menyediakan pakej sumber prabayar di platform Bailian (membeli kuota Token tertentu dengan harga diskaun). Doubao juga mempunyai pelan prabayar serupa di Volcengine. Bagi pembangun di China, gabungan paling ekonomi lazimnya ialah: DeepSeek bayar mengikut penggunaan (pembangunan harian) + kuota percuma Doubao (uji rasa).
 
 ##### 3. Platform Agregasi API
 
@@ -407,18 +407,18 @@ Platform pengagregatan API arus utama (Ogos 2026)
 Peringatan elak perangkap: jangan beli "Key kongsi"
 
 {class="mt-1"}
-Jangan membeli API Key "kongsi" yang kononnya murah di platform seperti Taobao atau Xianyu — Key ini biasanya berasal dari sumber yang tidak jelas, boleh disekat pada bila-bila masa, dan membawa risiko kebocoran data. Sentiasa dapatkan API Key melalui platform rasmi atau platform pengagregatan yang sah.
+Jangan membeli API Key "kongsi" yang kononnya murah di platform seperti Taobao atau Xianyu, Key ini biasanya berasal dari sumber yang tidak jelas, boleh disekat pada bila-bila masa, dan membawa risiko kebocoran data. Sentiasa dapatkan API Key melalui platform rasmi atau platform pengagregatan yang sah.
 :::
 
 ##### 4. Strategi pengoptimuman kos
 
 Memilih model yang betul hanyalah langkah pertama; cara "menggunakannya secara jimat" sama pentingnya. Berikut ialah beberapa strategi pengoptimuman kos yang telah terbukti dalam amalan:
 
-1. Guna sepenuhnya cache hit. Banyak model menyediakan fungsi "cache" — apabila permintaan anda mengandungi kandungan yang telah diproses sebelum ini (contohnya arahan sistem), bahagian itu dibilkan pada harga yang sangat rendah. Harga cache hit DeepSeek hanya 1/60 daripada harga biasa. Letakkan arahan sistem yang tetap di awal senarai mesej untuk memaksimumkan cache hit.
-2. Penghalaan berperingkat — gunakan model murah untuk tugasan mudah dan model mahal untuk tugasan kompleks. Contohnya, gunakan DeepSeek V4 Flash untuk klasifikasi teks (output 2 yuan/sejuta Token) dan Claude untuk reka bentuk seni bina (output 181 yuan/sejuta Token). Dalam sesuatu projek, 80% daripada panggilan boleh menggunakan model murah.
+1. Guna sepenuhnya cache hit. Banyak model menyediakan fungsi "cache", apabila permintaan anda mengandungi kandungan yang telah diproses sebelum ini (contohnya arahan sistem), bahagian itu dibilkan pada harga yang sangat rendah. Harga cache hit DeepSeek hanya 1/60 daripada harga biasa. Letakkan arahan sistem yang tetap di awal senarai mesej untuk memaksimumkan cache hit.
+2. Penghalaan berperingkat, gunakan model murah untuk tugasan mudah dan model mahal untuk tugasan kompleks. Contohnya, gunakan DeepSeek V4 Flash untuk klasifikasi teks (output 2 yuan/sejuta ,Token) dan Claude untuk reka bentuk seni bina (output 181 yuan/sejuta Token). Dalam sesuatu projek, 80% daripada panggilan boleh menggunakan model murah.
 3. Hadkan panjang output. API dibilkan mengikut Token output; makin panjang output, makin mahal. Dalam situasi yang tidak memerlukan huraian panjang lebar, tetapkan parameter max_tokens untuk mengehadkan panjang output dan elakkan AI "bercakap berbelit".
 4. Gunakan Batch API untuk tugasan bukan masa nyata. Jika anda mempunyai banyak tugasan yang tidak memerlukan respons segera (contohnya pelabelan data secara pukal atau ringkasan dokumen), gunakan Batch API untuk menikmati diskaun 50%. OpenAI dan Azure kedua-duanya menyediakan fungsi ini.
-5. Pantau penggunaan Token. Kebanyakan platform API menyediakan papan pemuka statistik penggunaan. Semak taburan penggunaan secara berkala, kenal pasti panggilan yang paling banyak menghabiskan Token, dan buat pengoptimuman secara bersasar. Satu pelarasan kecil pada Prompt (contohnya menukar "sila jelaskan dengan terperinci" kepada "sila jelaskan dalam 3 ayat") boleh menjimatkan sehingga 50% Token.
+5. Pantau penggunaan Token. Kebanyakan platform API menyediakan papan pemuka statistik penggunaan. Semak taburan penggunaan secara berkala, kenal pasti panggilan yang paling banyak menghabiskan Token, dan buat pengoptimuman secara bersasar. Satu pelarasan kecil pada Prompt (contohnya menukar "sila jelaskan dengan terperinci" ke,pada "sila jelaskan dalam 3 ayat") boleh menjimatkan sehingga 50% Token.
 
 ::: div .overflow-x-auto
 ```html
@@ -429,9 +429,9 @@ Memilih model yang betul hanyalah langkah pertama; cara "menggunakannya secara j
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Strategi pengoptimuman kos dan kesannya (Ogos 2026)
 
-#### 6. Amalan praktikal: menyepadukan API model besar ke dalam projek
+6. Amalan praktikal: menyepadukan API model besar ke dalam projek
 
-Mari akhiri bab ini dengan satu amalan praktikal yang lengkap — mencipta "Penjana Ringkasan AI": pengguna memasukkan sekeping teks panjang, dan API model besar dipanggil untuk menjana ringkasan. Amalan ini akan menunjukkan aliran lengkap panggilan API: persediaan persekitaran, panggilan API, pengendalian ralat dan kawalan kos.
+Mari akhiri bab ini dengan satu amalan praktikal yang lengkap: mencipta "Penjana Ringkasan AI": pengguna memasukkan sekeping teks panjang, dan API model besar dipanggil untuk menjana ringkasan. Amalan ini akan menunjukkan aliran lengkap panggilan API: persediaan persekitaran, panggilan API, pengendalian ralat dan kawalan kos.
 
 ::: div .code-block
 :::inline div .code-head
@@ -511,10 +511,10 @@ if __name__ == "__main__":
 ```
 :::
 
-Kod ini mencerminkan beberapa amalan terbaik panggilan API: API Key dibaca melalui pemboleh ubah persekitaran dan tidak pernah dikodkan terus dalam kod; fungsi mempunyai dokumentasi dan petunjuk jenis yang jelas; max_tokens ditetapkan untuk mengehadkan panjang output; temperature ditetapkan pada nilai rendah (0.3) untuk output yang lebih stabil; pengendalian ralat yang lengkap disediakan; dan maklumat penggunaan Token dipulangkan untuk penjejakan kos. Apabila anda meminta AI menulis kod seperti ini, beritahulah keperluan-keperluan ini — ia memang mampu melaksanakannya untuk anda.
+Kod ini mencerminkan beberapa amalan terbaik panggilan API: API Key dibaca melalui pemboleh ubah persekitaran dan tidak pernah dikodkan terus dalam kod; fungsi mempunyai dokumentasi dan petunjuk jenis yang jelas; max_tokens ditetapkan untuk mengehadkan panjang output; temperature ditetapkan pada nilai rendah (0.3) untuk output yang lebih stabil; pengendalian ralat yang lengkap disediakan; dan maklumat penggunaan Token dipulangkan untuk penjejakan kos. Apabila anda meminta AI menulis kod seperti ini, beritahulah keperluan-keperluan ini, ia memang mampu melaksanakannya untuk anda.
 
 :::inline div .quote-line
-Pelajaran akhir bab ini: model ialah "peluru", metodologi ialah "taktik". Pilih peluru betul membantu peperangan lebih lancar, tetapi tanpa taktik baik, peluru sebanyak mana pun tidak menang. Selepas mengenali kelebihan setiap model dan cara guna API, anda ada "gudang peluru" yang cukup—tetapi bagaimana memenangkan peperangan tetap bergantung pada metodologi pemikiran yang dipelajari dalam bab-bab sebelumnya.
+Pelajaran akhir bab ini: model ialah "peluru", metodologi ialah "taktik". Pilih peluru betul membantu peperangan lebih lancar, tetapi tanpa taktik baik, peluru sebanyak mana pun tidak menang. Selepas mengenali kelebihan setiap model dan cara guna API, anda ada "gudang peluru" yang cukup,tetapi bagaimana memenangkan peperangan tetap bergantung pada metodologi pemikiran yang dipelajari dalam bab-bab sebelumnya.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

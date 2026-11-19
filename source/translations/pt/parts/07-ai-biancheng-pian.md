@@ -10,7 +10,7 @@ class: mb-12
 ## VII. Parte Prática de Programação com IA (Capítulos 37-47)
 
 {class="chapter-intro mb-4"}
-Se você chegou até aqui, já é um ninja dos celulares. Nesta parte, damos um grande passo adiante: deixar a IA escrever código por você. Em 2025, uma frase de Karpathy acendeu o movimento Vibe Coding; em 2026, a programação com IA evoluiu para a Agentic Engineering — "dê um objetivo à IA e ela planeja, executa e valida sozinha". São 11 capítulos: das cinco grandes regras de pensamento e da engenharia de contexto e requisitos à escolha de ferramentas e modelos, prática com APIs de LLM, três projetos completos e um sistema de garantia de qualidade — para você sair de "saber usar IA" e chegar a "comandar um exército de IAs". Guarde a frase: ferramentas mudam a cada três meses; metodologia evolui a cada três anos. Esta parte ensina a segunda.
+Se você chegou até aqui, já é um ninja dos celulares. Nesta parte, damos um grande passo adiante: deixar a IA escrever código por você. Em 2025, uma frase de Karpathy acendeu o movimento Vibe Coding; em 2026, a programação com IA evoluiu para a Agentic Engineering: "dê um objetivo à IA e ela planeja, executa e valida sozinha". São 11 capítulos: das cinco grandes regras de pensamento e da engenharia de contexto e requisitos à escolha de ferramentas e modelos, prática com APIs de LLM, três projetos completos e um sistema de garantia de qualidade, para você sair de "saber usar IA" e chegar a "comandar um exército de IAs". Guarde a frase: ferramentas mudam a cada três meses; metodologia evolui a cada três anos. Esta parte ensina a segunda.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

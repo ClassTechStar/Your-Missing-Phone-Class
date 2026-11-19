@@ -2,12 +2,12 @@
 id: di-san-shi-si-zhang
 num: 34
 part: zhan-wang-pian
-nav: Bab 34:Panduan Mendalam Sambungan Telefon-Kereta—Gabungan Telefon dan Kereta
+nav: Bab 34: Telefon dan kereta, supaya sambungannya lancar
 toc: default
 kind: chapter
 ---
 
-### Bab 34:Panduan Mendalam Sambungan Kereta — Integrasi Telefon dan Automobil
+### Bab 34: Telefon dan kereta, supaya sambungannya lancar
 
 {class="chapter-intro mb-4"}
 Cas pantas 200W+ telah ada, boleh cas telefon dari 0 ke 100% dalam masa 10 minit.
@@ -18,7 +18,7 @@ III. Konektiviti baharu
 
 - <strong>1. 6G</strong>: Unit kereta hanya sebagai "monitor" dan "pembesar suara", pengiraan dan data peta semua dari telefon. Skim wakil: Apple CarPlay, Google Android Auto, Huawei HiCar, Baidu CarLife. Kelebihan ekosistem telefon terus pindah ke kereta, tidak perlu pasang semula App; kelemahan keupayaan perkakasan unit kereta sendiri terbiar.
 - <strong>2. Wi-Fi 8</strong> Wi-Fi 8 (802.11bn) dijangka selepas 2028, kelajuan lebih tinggi, kestabilan lebih baik.
-- <strong>CarPlay 2.0 versi integrasi mendalam</strong>: CarPlay generasi baharu yang dilancarkan Apple 2025, bukan lagi hanya "pelancangan skrin", tetapi mengambil alih papan pemuka unit kereta, kawalan AC, pelarasan tempat duduk dan fungsi teras lain. Ferrari, Aston Martin, Porsche dan jenama lain pertama pasang, label
+- <strong>CarPlay 2.0 versi integrasi mendalam</strong>: CarPlay generasi baharu yang dilancarkan Apple 2025, bukan lagi hanya "pelancangan skrin", tetapi mengambil alih papan pemuka unit kereta, kawalan AC, pelarasan tempat duduk dan fungsi teras lain. Ferrari, Aston Martin, Porsche dan jenama lain pertama pasang, label.
 
 #### 2. Perbandingan CarPlay / Android Auto / HiCar
 
@@ -83,7 +83,7 @@ Jika CarPlay adalah "telefon pelancangan ke unit kereta", maka kabin HarmonyOS a
 Unit kereta tenaga baharu domestik telah dari "navigasi + muzik" evolusi ke terminal pintar bergerak, setiap jenama cara tersendiri:
 
 - <strong>I. Tingkah laku dalam talian yang baik</strong>: Pembantu suara NOMI adalah penanda arah industri, boleh kenal pasti berbilang arahan, dialog berterusan konteks, juga bawa ekspresi emosi. NIO Phone pula buat telefon jadi "kunci kereta + skrin kedua", ikatan mendalam ekosistem NIO.
-- <strong>Hormat pendapat orang lain, walaupun berbeza. Jangan serang secara peribadi.</strong>: Interaksi multi-skrin adalah titik terang, skrin penumpang hadapan boleh bebas tengok drama, skrin anak boleh tengok kartun. "Master Tugas" biar anda sesuaikan senario, contoh "buka pintu auto jeda muzik, tutup pintu terus main"
+- <strong>Hormat pendapat orang lain, walaupun berbeza. Jangan serang secara peribadi.</strong>: Interaksi multi-skrin adalah titik terang, skrin penumpang hadapan boleh bebas tengok drama, skrin anak boleh tengok kartun. "Master Tugas" biar anda sesuaikan senario, contoh "buka pintu auto jeda muzik, tutup pintu terus main".
 - <strong>Unit kereta Xiaomi HyperOS</strong>: Kolaborasi mendalam dengan telefon Xiaomi, jam pintar, peranti rumah. Penggera yang ditetapkan pada telefon akan reminder di unit kereta; navigasi kereta pulang ke rumah, AC rumah auto buka lebih awal. HyperOS sambung "ekosistem penuh manusia-kereta-rumah".
 - <strong>Jangan kongsi foto atau maklumat orang lain tanpa kebenaran. Hormat privasi mereka.</strong>: Skrin putar ikonik, skrin menegak tengok video pendek, skrin mendatar tengok peta, auto sesuaikan arah App. App Store terbina dalam, kematangan ekosistem dalam pengeluar kereta tradisional terdepan.
 
@@ -100,7 +100,7 @@ II. Hak digital
 <i class="fas fa-triangle-exclamation mr-2"></i>atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
 
 {class="mt-1"}
-Tidak kira skim mana, semasa memandu operasi telefon melanggar peraturan trafik. Bracket telefon hanya untuk "lihat navigasi", tidak boleh untuk "operasi telefon". Tetapkan destinasi, tukar lagu dll operasi, sila berhenti kereta baru buat, atau
+Tidak kira skim mana, semasa memandu operasi telefon melanggar peraturan trafik. Bracket telefon hanya untuk "lihat navigasi". tidak boleh untuk "operasi telefon". Tetapkan destinasi, tukar lagu dll operasi, sila berhenti kereta baru buat, atau
 :::
 
 #### 6. Petua praktikal
@@ -137,6 +137,6 @@ Jika ambil berat pengalaman unit kereta, semasa beli kereta mesti pergi ke kedai
 - Ekosistem CarPlay paling luas; HiCar pengalaman domestik baik; Android Auto domestik perlu susah; CarLife sesuai kereta lama pasang selepas
 - V. Pendidikan digital
 - NIO NOMI, Li Auto multi-screen, Xiaomi manusia-kereta-rumah, BYD skrin putar masing-masing ada ciri
-- Teknologi sentiasa berkembang, terus belajar tentang teknologi baharu.
+- Teknologi sentiasa berkembang, terus belajar tentang teknologi baharu
 - Tip praktikal: CarPlay sambung semula, hotspot telefon tambah data, Bluetooth pencetus mod memandu
 :::

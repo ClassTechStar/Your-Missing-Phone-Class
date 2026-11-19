@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 51: Sviluppare l'interfaccia — introduzione a Jetpack Compose
 
 {class="chapter-intro mb-4"}
-L'interfaccia è tutto ciò che l'utente vede. Prima che arrivasse Compose, le interfacce Android si scrivevano in XML — un grattacapo simile a un esercizio da riempire; nel 2021 Google ha lanciato Jetpack Compose: l'interfaccia si «disegna» direttamente in codice Kotlin, quello che vedi è quello che ottieni, cambi una riga e l'anteprima si aggiorna all'istante. Nel 2026 Compose è assolutamente lo standard dei nuovi progetti. In questo capitolo impariamo a «disegnare».
+L'interfaccia è tutto ciò che l'utente vede. Prima che arrivasse Compose, le interfacce Android si scrivevano in XML, un grattacapo simile a un esercizio da riempire; nel 2021 Google ha lanciato Jetpack Compose: l'interfaccia si «disegna» direttamente in codice Kotlin, quello che vedi è quello che ottieni, cambi una riga e l'anteprima si aggiorna all'istante. Nel 2026 Compose è assolutamente lo standard dei nuovi progetti. In questo capitolo impariamo a «disegnare».
 
 #### 1. L'idea di Compose: l'interfaccia è una funzione
 
@@ -43,7 +43,7 @@ fun HomeScreen() {
 
 Occhio al «cappello» @Composable — dice al compilatore «questo è un mattoncino di interfaccia». I mattoncini si possono annidare all'infinito: questo è tutto il segreto di Compose.
 
-#### 2. I componenti base: testo, pulsante, campo di input, immagine
+2. I componenti base: testo, pulsante, campo di input, immagine
 
 I componenti di Compose sono «mattoncini»: i quattro più comuni sono:
 
@@ -88,7 +88,7 @@ I componenti ci sono: come disporli? Ricorda tre «scatole»:
 
 - Column: li mette in colonna (come la fila alla mensa);
 - Row: li mette in riga (come sedersi uno accanto all'altro);
-- Box: li sovrappone (come carte da gioco impilate, perfetto per badge e coperture).
+- Box: li sovrappone (come carte da gioco impilate, perfetto per badge e coperture)
 
 ::: div .code-block
 :::inline div .code-head
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-Vuoi un layout più bello? Aggiungi ai componenti un Modifier (modificatore) — è come truccare i mattoncini:
+Vuoi un layout più bello? Aggiungi ai componenti un Modifier (modificatore), è come truccare i mattoncini:
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,7 +135,7 @@ Text(
 Attenzione: l'ordine dei Modifier ha il suo perché
 
 {class="mt-1"}
-padding(16.dp).background(Blue) e background(Blue).padding(16.dp) danno risultati diversi — la prima è «prima lo spazio, poi il colore» (lo sfondo non include il margine), la seconda è «prima il colore, poi lo spazio» (lo sfondo include il margine). È qui che i principianti più spesso si ritrovano con «bordi bianchi inspiegabili». Nel dubbio, scambia l'ordine e prova: l'anteprima ti dà subito la risposta.
+padding(16.dp).background(Blue) e background(Blue).padding(16.dp) danno risultati diversi: la prima è «prima lo spazio, poi il colore» (lo sfondo non include il margine), la seconda è «prima il colore, poi lo spazio» (lo sfondo include il margine). È qui che i principianti più spesso si ritrovano con «bordi bianchi inspiegabili». Nel dubbio, scambia l'ordine e prova: l'anteprima ti dà subito la risposta.
 :::
 
 #### 4. Lo stato: far «vivere» l'interfaccia
@@ -178,13 +178,13 @@ Tre righe di codice, e il contatore è vivo. È qui che Compose fa comodo rispet
 Figura 3: il flusso di dati a senso unico «stato → interfaccia» di Compose
 :::
 
-#### 5. Tema e modalità scura: si configura una volta, vale ovunque
+5. Tema e modalità scura: si configura una volta, vale ovunque
 
 Nel progetto modello, MyFirstAppTheme { ... } è il tema. Si basa sulle specifiche di design di Material 3 e ti aiuta a gestire in modo unitario colori, font e forme. Per supportare la modalità scura bastano tre passi:
 
 1. definisci nel tema entrambe le palette chiara/scura (il modello genera già da solo il ColorScheme);
 2. quando il sistema passa alla modalità scura, isSystemInDarkTheme() lo rileva da solo;
-3. usa i colori forniti dal tema (come MaterialTheme.colorScheme.primary) invece di scrivere valori di colore fissi.
+3. usa i colori forniti dal tema (come MaterialTheme.colorScheme.primary) invece di scrivere valori di colore fissi
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -198,9 +198,9 @@ Da Android 12 in poi, «Material You» permette all'app di ricavare i colori dal
 
 Tre «power-up» di Compose per l'esperienza di sviluppo: una volta provati, non torni più indietro:
 
-- L'anteprima @Preview: aggiungi l'annotazione @Preview a una Composable e Android Studio la renderizza subito a destra — vedi il risultato mentre scrivi il codice, senza installare ogni volta sul telefono;
+- L'anteprima @Preview: aggiungi l'annotazione @Preview a una Composable e Android Studio la renderizza subito a destra, vedi il risultato mentre scrivi il codice, senza installare ogni volta sul telefono;
 - Live Edit: la versione 2026 di Android Studio supporta l'«hot update» di alcune modifiche su emulatore/dispositivo reale: ritocchi come cambiare il colore di un testo appaiono sul dispositivo in un batter d'occhio;
-- Le API di animazione: animateFloatAsState, AnimatedVisibility — poche righe per far muovere gli elementi con dolcezza — spesso quella sensazione di «qualità alta» dipende proprio da una ventina di righe così.
+- Le API di animazione: animateFloatAsState, AnimatedVisibility: poche righe per far muovere gli elementi con dolcezza — spesso quella sensazione di «qualità alta» dipende proprio da una ventina di righe così
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 Consiglio: prima le funzioni, poi le animazioni
 
 {class="mt-1"}
-Il difetto tipico dei principianti è «l'interfaccia non è ancora giusta e già si litiga sulle animazioni». Prima fai funzionare le cose, poi aggiungi le animazioni in un colpo solo — è anche il principio «la semplicità prima di tutto»: le animazioni sono la ciliegina sulla torta, le funzioni sono il pane quotidiano.
+Il difetto tipico dei principianti è «l'interfaccia non è ancora giusta e già si litiga sulle animazioni». Prima fai funzionare le cose, poi aggiungi le animazioni in un colpo solo: è anche il principio «la semplicità prima di tutto»: le animazioni sono la ciliegina sulla torta, le funzioni sono il pane quotidiano.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -246,7 +246,7 @@ Riepilogo del capitolo
 - L'idea di Compose: interfaccia = funzione @Composable, annidata come mattoncini
 - I quattro componenti base: Text / Button / TextField / Image
 - Il trio dei layout: Column in colonna, Row in riga, Box sovrapposto
-- Modifier a catena per «truccare»: padding, fillMaxWidth, background, clickable — l'ordine ha un significato
+- Modifier a catena per «truccare»: padding, fillMaxWidth, background, clickable, l'ordine ha un significato
 - Lo stato è l'anima: remember + mutableStateOf, cambi i dati e l'interfaccia si ridisegna da sola
 - Tema con Material 3 + colori dinamici: la modalità scura si configura una volta e vale ovunque
 :::

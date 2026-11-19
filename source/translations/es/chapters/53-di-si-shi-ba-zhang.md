@@ -2,17 +2,17 @@
 id: di-si-shi-ba-zhang
 num: 48
 part: an-zhuo-kai-fa-pian
-nav: Capítulo 48: Conocer Android — del sistema operativo al ecosistema de desarrollo
+nav: Capítulo 48: ¿Cómo llegó Android a ser lo que es hoy?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 48: Conocer Android — del sistema operativo al ecosistema de desarrollo
+### Capítulo 48: ¿Cómo llegó Android a ser lo que es hoy?
 
 {class="chapter-intro mb-4"}
 Enhorabuena por tomar esta decisión: pasas de "persona que usa el móvil" a "persona que hace apps para el móvil". Antes de ponernos en marcha, despleguemos el mapa: ¿de dónde viene Android? ¿Por qué los desarrolladores de todo el mundo le escriben apps? ¿Qué pasa entre que tus dedos teclean el código y la app llega al móvil del usuario?
 
-#### I. Los orígenes de Android: de "pequeño robot" al "sistema más grande del mundo"
+I. Los orígenes de Android: de "pequeño robot" al "sistema más grande del mundo"
 
 La historia de Android empieza en 2003, cuando un ingeniero llamado Andy Rubin fundó la empresa Android con un objetivo sencillo: crear un sistema operativo inteligente que "entendiera mejor la cámara". Google la compró en 2005; en 2007 fundó junto a decenas de fabricantes la Open Handset Alliance (OHA); y en septiembre de 2008 salió a la venta el primer móvil con Android, el HTC Dream (G1).
 
@@ -87,7 +87,7 @@ En esta cadena hay dos conceptos que conviene conocer ya:
 
 Además, escucharás una y otra vez una palabra: SDK (Software Development Kit, kit de desarrollo de software). Es todo el "equipo de desarrollo" que ofrece la plataforma oficial de Android: librerías de API de cada versión, herramientas de depuración, imágenes de emulador, etc. Clases como Activity o Button que llamas al programar vienen todas del SDK.
 
-#### IV. Panorama de la pila tecnológica de Android: tu "lista de armas"
+IV. Panorama de la pila tecnológica de Android: tu "lista de armas"
 
 Antes de estudiar en serio, conoce la configuración estándar de los proyectos Android dominantes en 2026. No pasa nada si ahora no la entiendes: al terminar el libro, volverás aquí y lo verás todo claro:
 
@@ -102,7 +102,7 @@ Vistazo rápido a la pila tecnológica dominante de Android en 2026
 
 Que no te asuste esa sarta de términos en inglés. Son como las ollas y sartenes de una cocina: por ahora basta con saber que "para cocinar hay que entrar en la cocina"; el uso de cada herramienta te lo iré desmenuzando capítulo a capítulo. Y la buena noticia: al crear un proyecto nuevo, Android Studio te configura todo este conjunto automáticamente; tú solo preocúpate de guisar.
 
-#### V. Android frente a iOS: la primera "lección de elegir bando" del desarrollador
+V. Android frente a iOS: la primera "lección de elegir bando" del desarrollador
 
 Puede que tengas entre manos dispositivos Android y Apple a la vez. Como desarrollador, conviene conocer de antemano las diferencias de experiencia entre ambos lados. No es un "cuál es mejor" para tomar partido, sino la cuenta real de "por dónde te conviene empezar":
 

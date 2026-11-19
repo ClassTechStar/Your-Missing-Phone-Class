@@ -10,15 +10,15 @@ kind: chapter
 ### 第六十六章：專案二——天氣查詢 App（網路版）
 
 {class="chapter-intro mb-4"}
-記帳本是"練內功"，天氣 App 是"見世面"——它要和網際網路打交道。這個專案你會學到：申請免費 API、解析 JSON、處理"載入中/成功/失敗"三種介面狀態，以及怎麼把 API 金鑰藏好。做完它，你就具備了做任何"聯網 App"的能力——新聞、匯率、翻譯，套路一模一樣。
+記帳本是"練內功"，天氣 App 是"見世面"，它要和網際網路打交道。這個專案你會學到：申請免費 API、解析 JSON、處理"載入中/成功/失敗"三種介面狀態，以及怎麼把 API 金鑰藏好。做完它，你就具備了做任何"聯網 App"的能力，新聞、匯率、翻譯，套路一模一樣。
 
 #### 一、申請免費天氣 API
 
-個人練手，推薦 OpenWeatherMap 或國內的 和風天氣（QWeather）——都有免費額度，註冊即用。以 OpenWeatherMap 為例：
+個人練手，推薦 OpenWeatherMap 或國內的 和風天氣（QWeather），都有免費額度，註冊即用。以 OpenWeatherMap 為例：
 
-1. 註冊帳號 → 在 API keys 頁面生成一個 Key（apikey）；
-2. 免費版可呼叫 Current Weather 介面：api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric；
-3. 瀏覽器裡先試一次，看看返回的 JSON 長什麼樣——這是接任何 API 前必做的"預習"。
+1. 註冊帳號 → 在 API keys 頁面生成一個 Key（apikey）。
+2. 免費版可呼叫 Current Weather 介面：api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric。
+3. 瀏覽器裡先試一次，看看返回的 JSON 長什麼樣，這是接任何 API 前必做的"預習"。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -143,9 +143,9 @@ struct WeatherContent: View {
 
 #### 五、互動細節與收藏城市
 
-- 搜尋框：頂部 .searchable 修飾符，系統自帶搜尋互動，提交時調 vm.search；
-- 收藏城市：把常看的城市存進 UserDefaults，下次開啟自動查；
-- 下拉重新整理：.refreshable { await vm.search(...) } 一行搞定；
+- 搜尋框：頂部 .searchable 修飾符，系統自帶搜尋互動，提交時調 vm.search。
+- 收藏城市：把常看的城市存進 UserDefaults，下次開啟自動查。
+- 下拉重新整理：.refreshable { await vm.search(...) } 一行搞定。
 - 天氣圖示：用 Image(systemName:) 按描述對映（sun.max / cloud.rain / snowflake），介面立刻活起來。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -164,9 +164,9 @@ OpenWeatherMap 對中文城市名支援一般，搜"北京"可能無結果而 "b
 
 聯網 App 出問題，十有八九在"請求沒發對"或"響應沒解析對"。三個除錯手段：
 
-1. 列印原始資料：把 String(data: data, encoding: .utf8) 列印出來看原始 JSON——欄位名、型別一目瞭然，比猜快十倍；
-2. 抓包工具：Mac 上免費的 Proxyman / 開源 Charles 能截獲 App 的全部請求和響應，像 X 光一樣看清網路層；
-3. 模擬弱網：模擬器選單 Features → Network Link Conditioner（需從開發者網站下載工具），能模擬 3G、高延遲——測出"轉圈半天"的體驗問題。
+1. 列印原始資料：把 String(data: data, encoding: .utf8) 列印出來看原始 JSON：欄位名、型別一目瞭然，比猜快十倍。
+2. 抓包工具：Mac 上免費的 Proxyman / 開源 Charles 能截獲 App 的全部請求和響應，像 X 光一樣看清網路層。
+3. 模擬弱網：模擬器選單 Features → Network Link Conditioner（需從開發者網站下載工具），能模擬 3G、高延遲，測出"轉圈半天"的體驗問題。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -188,5 +188,5 @@ OpenWeatherMap 對中文城市名支援一般，搜"北京"可能無結果而 "b
 - API Key 藏進 xcconfig，絕不進程式碼庫
 - Codable 模型 + URLSession async/await：欄位對上，JSON 自動解析
 - loading/success/error 三段式狀態是聯網介面萬金油
-- 斷網、空輸入、城市不存在——錯誤處理是聯網 App 的及格線
+- 斷網、空輸入、城市不存在，錯誤處理是聯網 App 的及格線
 :::

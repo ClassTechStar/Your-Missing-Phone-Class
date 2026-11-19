@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 54: Progetto 1 — il mio registro delle spese (versione locale)
 
 {class="chapter-intro mb-4"}
-Benvenuto nel tuo primo «progetto serio». Questo registro delle spese, pur senza andare in rete, ha tutto l'occorrente: registra una voce, mostra i movimenti, fa i riepiloghi mensili, permette di cancellare e modificare. Completandolo avrai percorso per intero il flusso «dati → logica → interfaccia». Non avere fretta di copiare il codice — prima pensa bene, poi metti le mani: è il nostro principio di sempre.
+Benvenuto nel tuo primo «progetto serio». Questo registro delle spese, pur senza andare in rete, ha tutto l'occorrente: registra una voce, mostra i movimenti, fa i riepiloghi mensili, permette di cancellare e modificare. Completandolo avrai percorso per intero il flusso «dati → logica → interfaccia». Non avere fretta di copiare il codice, prima pensa bene, poi metti le mani: è il nostro principio di sempre.
 
 #### 1. Pensare ai requisiti: prima poni cinque domande
 
@@ -25,11 +25,11 @@ Prima di iniziare, metti ordine nelle idee con i «cinque elementi dei requisiti
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 I cinque elementi dei requisiti del registro delle spese
 
-Poi scompone il lavoro in piccoli passi, ciascuno «già utilizzabile»: ① crea il livello dati con Room (salva una voce); ② la schermata elenco (vedi i movimenti); ③ la schermata d'inserimento (aggiungi una voce); ④ cancella e modifica; ⑤ la scheda di riepilogo mensile. A ogni passo completato l'app resta un «oggetto che funziona».
+Poi scompone il lavoro in piccoli passi, ciascuno «già utilizzabile»: ① crea il livello dati con Room (salva una voce). ② la schermata elenco (vedi i movimenti). ③ la schermata d'inserimento (aggiungi una voce). ④ cancella e modifica. ⑤ la scheda di riepilogo mensile. A ogni passo completato l'app resta un «oggetto che funziona».
 
 #### 2. Il livello dati: dare alle «voci» una casa
 
-Prima definisci com'è fatta una voce — campi sufficienti, senza ingolosirsi:
+Prima definisci com'è fatta una voce, campi sufficienti, senza ingolosirsi:
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +49,7 @@ data class Record(
 ```
 :::
 
-Nel Dao aggiungi due query «di statistica» — sono l'anima del registro delle spese:
+Nel Dao aggiungi due query «di statistica», sono l'anima del registro delle spese:
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,7 +82,7 @@ interface RecordDao {
 Consiglio: perché l'importo è un Double?
 
 {class="mt-1"}
-Le app finanziarie rigorose usano BigDecimal o «un Int in centesimi» per evitare gli errori della virgola mobile (il vecchio problema 0,1+0,2≠0,3). Per un progetto di esercizio il Double basta; se un giorno fai un prodotto finanziario vero, ricordati di passare ai «centesimi» come unità — è una trappola su cui sono inciampati innumerevoli predecessori.
+Le app finanziarie rigorose usano BigDecimal o «un Int in centesimi» per evitare gli errori della virgola mobile (il vecchio problema 0,1+0,2≠0,3). Per un progetto di esercizio il Double basta; se un giorno fai un prodotto finanziario vero, ricordati di passare ai «centesimi» come unità, è una trappola su cui sono inciampati innumerevoli predecessori.
 :::
 
 #### 3. MVVM: interfaccia e logica «vanno a vivere separate»
@@ -125,11 +125,11 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 :::
 
-Nell'interfaccia (Compose) si usa così: val vm: RecordViewModel = viewModel(), poi val list by vm.records.collectAsState() — appena i dati cambiano, l'elenco si aggiorna da solo e tu non muovi un dito. È la forza del tridente MVVM + Flow + Compose.
+Nell'interfaccia (Compose) si usa così: val vm: RecordViewModel = viewModel(), poi val list by vm.records.collectAsState(), appena i dati cambiano, l'elenco si aggiorna da solo e tu non muovi un dito. È la forza del tridente MVVM + Flow + Compose.
 
 #### 4. L'interfaccia: schermata elenco + schermata d'inserimento
 
-La schermata elenco usa LazyColumn (elenco a caricamento pigro) — qualunque sia la mole di dati non si inceppa:
+La schermata elenco usa LazyColumn (elenco a caricamento pigro): qualunque sia la mole di dati non si inceppa:
 
 ::: div .code-block
 :::inline div .code-head
@@ -178,10 +178,10 @@ Per l'inserimento la via più comoda è AlertDialog (finestra di dialogo): qualc
 Attenzione: con la validazione dell'input non essere pigro
 
 {class="mt-1"}
-Il campo dell'importo va validato sempre: valori vuoti, negativi, input illegale come "abc" — tutto va fermato (controlla con toDoubleOrNull()). Una delle cause più comuni di crash è «prendere l'input dell'utente per un bambino educato». Ricorda: tutto ciò che l'utente digita va ispezionato come se venisse da un nemico.
+Il campo dell'importo va validato sempre: valori vuoti, negativi, input illegale come "abc": tutto va fermato (controlla con toDoubleOrNull()). Una delle cause più comuni di crash è «prendere l'input dell'utente per un bambino educato». Ricorda: tutto ciò che l'utente digita va ispezionato come se venisse da un nemico.
 :::
 
-#### 5. Modifica ed eliminazione: i dati devono «poter entrare e uscire»
+5. Modifica ed eliminazione: i dati devono «poter entrare e uscire»
 
 Un registro che sa solo aggiungere e non cancellare si rovina in tre giorni. Aggiungi due operazioni:
 
@@ -203,7 +203,7 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-Due regole d'esperienza sui dettagli d'interazione: l'eliminazione vuole una conferma in due tempi (per evitare tocchi di troppo), la modifica meglio se precompila i valori originali (correggere un carattere è più comodo che ridigitare tutto). Non sottovalutare questi dettagli — il «sapore di prodotto vero» è costruito proprio con dettagli così.
+Due regole d'esperienza sui dettagli d'interazione: l'eliminazione vuole una conferma in due tempi (per evitare tocchi di troppo), la modifica meglio se precompila i valori originali (correggere un carattere è più comodo che ridigitare tutto). Non sottovalutare questi dettagli, il «sapore di prodotto vero» è costruito proprio con dettagli così.
 
 #### 6. Collaudo: tre livelli di controllo + due sfide avanzate
 
@@ -212,7 +212,7 @@ Finito il progetto, collauda su tre livelli «funzione → casi limite → archi
 Superato il collaudo della versione base, aggiungiti due «portate avanzate»:
 
 1. Filtro mensile: in cima aggiungi il cambio di mese (per esempio 2026-08 ▾) e l'elenco mostra solo i movimenti del mese in corso;
-2. Grafico a torta per categoria: usa il Canvas di Compose o aggiungi una libreria di grafici leggera per disegnare «dove vanno a finire i soldi» in un grafico a torta — fatto questo, il registro comincia ad avere un «aspetto da prodotto».
+2. Grafico a torta per categoria: usa il Canvas di Compose o aggiungi una libreria di grafici leggera per disegnare «dove vanno a finire i soldi» in un grafico a torta, fatto questo, il registro comincia ad avere un «aspetto da prodotto».
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

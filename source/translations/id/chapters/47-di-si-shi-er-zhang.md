@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 42: Panorama Model Besar dan Praktik API
 
 {class="chapter-intro mb-4"}
-Beberapa bab sebelumnya membahas "cara berkolaborasi dengan AI"; bab ini menjawab pertanyaan yang lebih mendasar: "AI mana yang dipakai? Bagaimana memakainya?" Lanskap model besar per Agustus 2026 sudah sangat kaya — di ranah internasional GPT, Claude, dan Gemini bersaing sebagai tiga raksasa; di Tiongkok DeepSeek, Tongyi Qianwen, GLM, Kimi, dan Doubao bermekaran. Setiap model punya karakter dan keahlian khasnya masing-masing: memilih yang tepat membuat pekerjaan jauh lebih efisien, memilih yang salah membuat pekerjaan terasa dua kali berat. Bab ini tidak hanya memperkenalkan model-model tersebut, tetapi juga mengajarkan cara menghubungkannya ke aplikasimu melalui API, serta cara memilih Token Plan (paket kuota) yang sesuai dengan kebutuhanmu.
+Beberapa bab sebelumnya membahas "cara berkolaborasi dengan AI"; bab ini menjawab pertanyaan yang lebih mendasar: "AI mana yang dipakai? Bagaimana memakainya?" Lanskap model besar per Agustus 2026 sudah sangat kaya, di ranah internasional GPT, Claude, dan Gemini bersaing sebagai tiga raksasa; di Tiongkok DeepSeek, Tongyi Qianwen, GLM, Kimi, dan Doubao bermekaran. Setiap model punya karakter dan keahlian khasnya masing-masing: memilih yang tepat membuat pekerjaan jauh lebih efisien. memilih yang salah membuat pekerjaan terasa dua kali berat. Bab ini tidak hanya memperkenalkan model-model tersebut, tetapi juga mengajarkan cara menghubungkannya ke aplikasimu melalui API, serta cara memilih Token Plan (paket kuota) yang sesuai dengan kebutuhanmu.
 
 #### 1. Model Besar Internasional Utama: Format Tiga Raksasa
 
@@ -29,7 +29,7 @@ OpenAI adalah pembuka gelombang model besar, dan seri GPT hingga kini tetap menj
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Harga seri OpenAI GPT-5.6 (Agustus 2026)
 
-Keunggulan inti seri GPT ada pada "keseimbangan" — reasoning, pemrograman, penulisan, multimodal, tidak ada kelemahan yang mencolok. Ditambah ekosistem plugin dan komunitas pengembang OpenAI yang sangat besar, dokumentasi adaptasi dan toolchain-nya paling lengkap. Untuk skenario "bingung mau pilih apa", GPT adalah jawaban default yang "dipilih sambil memejamkan mata pun tidak akan salah". Namun kelemahannya: akses dari Tiongkok membutuhkan jaringan khusus, ungkapan bahasa Tionghoanya kadang terasa "berbau terjemahan", dan harga API-nya berada di level menengah ke atas.
+Keunggulan inti seri GPT ada pada "keseimbangan" — reasoning, pemrograman, penulisan, multimodal, tidak ada kelemahan yang mencolok. Ditambah ekosistem plugin dan komunitas pengembang OpenAI yang sangat besar. dokumentasi adaptasi dan toolchain-nya paling lengkap. Untuk skenario "bingung mau pilih apa", GPT adalah jawaban default yang "dipilih sambil memejamkan mata pun tidak akan salah". Namun kelemahannya: akses dari Tiongkok membutuhkan jaringan khusus, ungkapan bahasa Tionghoanya kadang terasa "berbau terjemahan", dan harga API-nya berada di level menengah ke atas.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -41,7 +41,7 @@ Pada Agustus 2026 OpenAI mengumumkan bahwa model default pengguna gratis dinaikk
 
 ##### 2. Seri Anthropic Claude: Puncak Pemrograman dan Ketelitian
 
-Kalau GPT adalah pemain serba bisa, maka Claude adalah "puncaknya" bidang pemrograman. Seri Claude dari Anthropic secara konsisten memimpin dengan selisih jauh di SWE-bench (benchmark rekayasa perangkat lunak), dengan kualitas pembuatan kode dan kemampuan mewujudkan proyek tingkat engineering terbaik di industrinya. Lebih istimewa lagi, tingkat halusinasi Claude (probabilitas menghasilkan informasi palsu) adalah yang terendah di antara semua model, hanya sekitar 1% — menjadikannya sangat cocok untuk skenario berpresisi tinggi seperti akademik dan hukum.
+Kalau GPT adalah pemain serba bisa, maka Claude adalah "puncaknya" bidang pemrograman. Seri Claude dari Anthropic secara konsisten memimpin dengan selisih jauh di SWE-bench (benchmark rekayasa perangkat lunak), dengan kualitas pembuatan kode dan kemampuan mewujudkan proyek tingkat engineering terbaik di industrinya. Lebih istimewa lagi, tingkat halusinasi Claude (probabilitas menghasilkan informasi palsu) adalah yang terendah di antara semua model, hanya sekitar 1%: menjadikannya sangat cocok untuk skenario berpresisi tinggi seperti akademik dan hukum.
 
 Jurus andalan Claude yang lain adalah konteks super panjang: mendukung jendela konteks 1 juta Token, mampu "membaca habis" kontrak setebal ratusan halaman atau satu basis kode penuh dalam sekali jalan tanpa kelewat satu pun detailnya. Hal ini nyaris tak tergantikan untuk skenario seperti refaktorasi kode dan analisis dokumen panjang. Claude Code sebagai alat pemrograman AI terminal telah mencapai pendapatan tahunan 2,5 miliar dolar AS per pertengahan 2026 — bukti paling kuat bahwa kemampuan pemrograman Claude paling diakui.
 
@@ -54,11 +54,11 @@ Jurus andalan Claude yang lain adalah konteks super panjang: mendukung jendela k
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Harga seri Anthropic Claude (Agustus 2026; Sonnet 5 dengan harga promo)
 
-Kelemahan Claude ada pada harga — harga output Fable 5 adalah yang termahal di antara semua model, 50 dolar AS per juta Token. Kemampuan multimodalnya (pemahaman gambar dan video) juga relatif lemah. Bagi pengembang individu dengan anggaran terbatas, Sonnet 5 selama periode promo menawarkan value yang sangat menonjol.
+Kelemahan Claude ada pada harga: harga output Fable 5 adalah yang termahal di antara semua model, 50 dolar AS per juta Token. Kemampuan multimodalnya (pemahaman gambar dan video) juga relatif lemah. Bagi pengembang individu dengan anggaran terbatas, Sonnet 5 selama periode promo menawarkan value yang sangat menonjol.
 
 ##### 3. Seri Google Gemini: Raja Multimodal
 
-Seri Gemini dari Google pada 2026 telah beriterasi hingga versi 3.1 Pro. Jurus andalan terbesar Gemini adalah multimodal native — analisis teks dan gambar yang presisi, pengenalan tabel OCR tanpa kesalahan, ekstraksi frame video yang efisien, ditambah dukungan analisis mendalam untuk audio dan video. Ia terikat erat dengan ekosistem Google (pencarian, surel, layanan cloud) dan menonjol dalam pencarian informasi real-time serta pemahaman lintas modal. Gemini juga mendukung input konteks super panjang hingga 2 juta Token, menjadikannya model dengan jendela konteks terbesar saat ini.
+Seri Gemini dari Google pada 2026 telah beriterasi hingga versi 3.1 Pro. Jurus andalan terbesar Gemini adalah multimodal native, analisis teks dan gambar yang presisi, pengenalan tabel OCR tanpa kesalahan, ekstraksi frame video yang efisien, ditambah dukungan analisis mendalam untuk audio dan video. Ia terikat erat dengan ekosistem Google (pencarian, surel, layanan cloud) dan menonjol dalam pencarian informasi real-time serta pemahaman lintas modal. Gemini juga mendukung input konteks super panjang hingga 2 juta Token, menjadikannya model dengan jendela konteks terbesar saat ini.
 
 Gemini diposisikan sebagai "pilihan utama untuk reasoning ilmiah dan skenario multimodal". Kalau proyekmu melibatkan analisis gambar dalam jumlah besar, pemahaman video, atau komputasi ilmiah, Gemini nyaris tanpa lawan. Namun dalam pembuatan kode murni teks ia sedikit kalah dari Claude, dan ungkapan bahasa Tionghoanya tidak senatural model buatan Tiongkok.
 
@@ -85,9 +85,9 @@ Model besar buatan Tiongkok tahun 2026 sudah berubah dari "pengejar" menjadi "pe
 
 ##### 1. DeepSeek V4: Raja Value
 
-DeepSeek adalah fenomena di antara model besar buatan Tiongkok. Awal 2025, DeepSeek-V3 mengguncang pasar dengan posisi "seperssepuluh harga GPT tetapi kemampuan setara", dan oleh kalangan industri dijuluki "garis penentu model AI umum" — yang lebih murah tak sebagus ia, yang lebih mahal tak sekelimpahan ia. Per Agustus 2026, versi resmi DeepSeek V4-Pro dirilis: arsitektur MoE dengan 1,6 triliun parameter, sekitar 49B di antaranya aktif, mendukung konteks 1 juta tanpa kehilangan informasi, dan value-nya untuk kode secara luas dianggap puncak dunia.
+DeepSeek adalah fenomena di antara model besar buatan Tiongkok. Awal 2025, DeepSeek-V3 mengguncang pasar dengan posisi "seperssepuluh harga GPT tetapi kemampuan setara", dan oleh kalangan industri dijuluki "garis penentu model AI umum": yang lebih murah tak sebagus ia, yang lebih mahal tak sekelimpahan ia. Per Agustus 2026, versi resmi DeepSeek V4-Pro dirilis: arsitektur MoE dengan 1,6 triliun parameter, sekitar 49B di antaranya aktif, mendukung konteks 1 juta tanpa kehilangan informasi, dan value-nya untuk kode secara luas dianggap puncak dunia.
 
-DeepSeek V4 melompat jauh dalam kemampuan Agent — benchmark DeepSWE melonjak dari 12,8 ke 62,7 (+390%), dan NL2Repo naik dari 38,5 ke 61,5. API-nya kini menambahkan dukungan dua protokol, Responses API dan Anthropic API, dan telah kompatibel dengan alat pemrograman utama seperti Codex dan Claude Code. Artinya, kamu bisa mengganti API Claude dengan API DeepSeek di dalam Claude Code — biaya turun berkali lipat, sementara pengalamannya nyaris sama.
+DeepSeek V4 melompat jauh dalam kemampuan Agent: benchmark DeepSWE melonjak dari 12,8 ke 62,7 (+390%), dan NL2Repo naik dari 38,5 ke 61,5. API-nya kini menambahkan dukungan dua protokol, Responses API dan Anthropic API. dan telah kompatibel dengan alat pemrograman utama seperti Codex dan Claude Code. Artinya, kamu bisa mengganti API Claude dengan API DeepSeek di dalam Claude Code: biaya turun berkali lipat, sementara pengalamannya nyaris sama.
 
 ::: div .overflow-x-auto
 ```html
@@ -105,12 +105,12 @@ Perbandingan harga: untuk input 1 juta Token + output 1 juta Token, DeepSeek V4 
 Waspada Jebakan: DeepSeek Akan Naik Harga
 
 {class="mt-1"}
-Pihak resmi DeepSeek telah mengumumkan pada 6 Agustus 2026 "rencana menaikkan harga API secara besar-besaran dalam waktu dekat"; harga promonya kemungkinan tidak akan bertahan lama. Sejumlah media memberitakan kenaikannya bisa mencapai 30 kali lipat; hingga 14 Agustus pihak resmi belum mengumumkan skema harga finalnya. Selain itu, versi resmi DeepSeek V4 memperkenalkan mekanisme harga puncak-lembah — harga pemanggilan pada jam sibuk langsung menjadi dua kali lipat. Disarankan memantau pengumuman resmi untuk mendapatkan harga terbaru.
+Pihak resmi DeepSeek telah mengumumkan pada 6 Agustus 2026 "rencana menaikkan harga API secara besar-besaran dalam waktu dekat". Harga promonya kemungkinan tidak akan bertahan lama. Sejumlah media memberitakan kenaikannya bisa mencapai 30 kali lipat; hingga 14 Agustus pihak resmi belum mengumumkan skema harga finalnya. Selain itu, versi resmi DeepSeek V4 memperkenalkan mekanisme harga puncak-lembah, harga pemanggilan pada jam sibuk langsung menjadi dua kali lipat. Disarankan memantau pengumuman resmi untuk mendapatkan harga terbaru.
 :::
 
 ##### 2. Tongyi Qianwen Qwen3.7 Max: Pilihan Enterprise dari Alibaba Cloud
 
-Seri Tongyi Qianwen (Qwen) dari Alibaba Cloud bertumpu pada ekosistem Alibaba Cloud dengan keunggulan alami dalam deployment tingkat enterprise. Qwen3.7 Max yang rilis Juli 2026 adalah flagship saat ini: model dens dengan 235B parameter, konteks native 256K, dapat diperluas hingga 1M. Keunggulan inti Qwen: ekosistem open source yang matang (seluruh seri dari 7B hingga 235B open source), pemahaman skenario bahasa Tionghoa yang presisi, serta integrasi mendalam dengan infrastruktur Alibaba Cloud.
+Seri Tongyi Qianwen (Qwen) dari Alibaba Cloud bertumpu pada ekosistem ,Alibaba Cloud dengan keunggulan alami dalam deployment tingkat enterprise. Qwen3.7 Max yang rilis Juli 2026 adalah flagship saat ini: model dens dengan 235B parameter, konteks native 256K, dapat diperluas hingga 1M. Keunggulan inti Qwen: ekosistem open source yang matang (seluruh seri dari 7B hingga 235B open source), pemahaman skenario bahasa Tionghoa yang presisi, serta integrasi mendalam dengan infrastruktur Alibaba Cloud.
 
 ::: div .overflow-x-auto
 ```html
@@ -121,15 +121,15 @@ Seri Tongyi Qianwen (Qwen) dari Alibaba Cloud bertumpu pada ekosistem Alibaba Cl
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Harga bertingkat seri Tongyi Qianwen Qwen (Agustus 2026)
 
-Harga Qwen memakai strategi bertingkat — dari qwen-turbo yang sangat murah (output 0,6 yuan per juta Token) hingga flagship qwen3.7-max (output 36 yuan per juta Token), mencakup seluruh kebutuhan dari tanya jawab ringan hingga reasoning kompleks. Bagi perusahaan yang sudah memakai Alibaba Cloud, Qwen adalah pilihan integrasi yang paling praktis.
+Harga Qwen memakai strategi bertingkat, dari qwen-turbo yang sangat murah (output 0,6 yuan per juta Token) hingga flagship qwen3.7-max (output 36 yuan per juta Token), mencakup seluruh kebutuhan dari tanya jawab ringan hingga reasoning kompleks. Bagi perusahaan yang sudah memakai Alibaba Cloud, Qwen adalah pilihan integrasi yang paling praktis.
 
 ##### 3. Zhipu GLM-5.1: No. 1 SWE-bench Buatan Tiongkok
 
-Seri GLM dari Zhipu AI berkinera cemerlang pada 2026. GLM-5.1 meraih peringkat nomor satu buatan Tiongkok di SWE-bench: arsitektur hibrida MoE-dens 744B dengan dukungan konteks 1 juta. Keunikannya adalah pemahaman semantik bahasa Tionghoa yang presisi serta dukungan deployment privat yang patuh regulasi di Tiongkok — hal yang sangat penting untuk sektor keuangan dan pemerintahan yang menuntut keamanan data tinggi. Harga GLM-5.1 adalah 6 yuan untuk input dan 24 yuan untuk output per juta Token, berada di level menengah model buatan Tiongkok.
+Seri GLM dari Zhipu AI berkinera cemerlang pada 2026. GLM-5.1 meraih peringkat nomor satu buatan Tiongkok di SWE-bench: arsitektur hibrida MoE-dens 744B dengan dukungan konteks 1 juta. Keunikannya adalah pemahaman semantik bahasa Tionghoa yang presisi serta dukungan deployment privat yang patuh regulasi di Tiongkok, hal yang sangat penting untuk sektor keuangan dan pemerintahan yang menuntut keamanan data tinggi. Harga GLM-5.1 adalah 6 yuan untuk input dan 24 yuan untuk output per juta Token, berada di level menengah model buatan Tiongkok.
 
 ##### 4. Kimi K3: Raja Teks Super Panjang
 
-Seri Kimi dari Moonshot AI terkenal dengan kemampuan pemrosesan teks super panjang. Kimi K3 yang dirilis Juli 2026 memiliki 2,8 triliun parameter dan masuk jajaran teratas dunia dalam berbagai evaluasi tugas kompleks. Skenario inti Kimi adalah analisis basis kode panjang dan retrieval-augmented untuk dokumen panjang — ia mampu memproses teks satu buku penuh atau kode satu proyek utuh, serta unggul dalam tugas pencarian bergaya "mencari jarum di tumpukan jerami". Harga Kimi relatif tinggi (output sekitar 12-20 yuan per juta Token), tetapi value-nya untuk skenario teks panjang tak tertandingi.
+Seri Kimi dari Moonshot AI terkenal dengan kemampuan pemrosesan teks super panjang. Kimi K3 yang dirilis Juli 2026 memiliki 2,8 triliun parameter dan masuk jajaran teratas dunia dalam berbagai evaluasi tugas kompleks. Skenario inti Kimi adalah analisis basis kode panjang dan retrieval-augmented untuk dokumen panjang, ia mampu memproses teks satu buku penuh atau kode satu proyek utuh, serta unggul dalam tugas pencarian bergaya "mencari jarum di tumpukan jerami". Harga Kimi relatif tinggi (output sekitar 12-20 yuan per juta Token), tetapi value-nya untuk skenario teks panjang tak tertandingi.
 
 ##### 5. Doubao: Sang Serba Bisa dari ByteDance
 
@@ -144,7 +144,7 @@ Seri Doubao dari ByteDance tampil stabil pada 2026. Doubao Seed 2.1 Pro adalah m
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan horizontal lima model besar buatan Tiongkok (Agustus 2026)
 
-Satu tren penting: "kesan ketinggalan generasi" antara model buatan Tiongkok dan GPT/Claude telah lenyap. Dalam reasoning logis dan kompetisi matematika, selisih skor flagship buatan Tiongkok dengan GPT-5 umumnya hanya satu digit. Dalam berpikir arsitektur sistematis dan reasoning engineering yang kompleks, Claude masih memimpin — ia mampu memberikan solusi arsitektur yang lebih "berjiwa", sementara model buatan Tiongkok kadang tampak "kaku mengikuti aturan". Namun pada skenario bahasa Tionghoa, kendali biaya, dan deployment sesuai regulasi, model buatan Tiongkok memiliki keunggulan yang dominan.
+Satu tren penting: "kesan ketinggalan generasi" antara model buatan Tiongkok dan GPT/Claude telah lenyap. Dalam reasoning logis dan kompetisi matematika, selisih skor flagship buatan Tiongkok dengan GPT-5 umumnya hanya satu digit. Dalam berpikir arsitektur sistematis dan reasoning engineering yang kompleks, Claude masih memimpin: ia mampu memberikan solusi arsitektur yang lebih "berjiwa", sementara model buatan Tiongkok kadang tampak "kaku mengikuti aturan". Namun pada skenario bahasa Tionghoa, kendali biaya, dan deployment sesuai regulasi, model buatan Tiongkok memiliki keunggulan yang dominan.
 
 ::: div .figure
 ```html
@@ -182,7 +182,7 @@ Gambar 4: Perbandingan harga dan performa lima model (semakin murah harga semaki
 
 #### 3. Kerangka Keputusan Memilih Model
 
-Setelah mengenal karakteristik tiap model, bagaimana memilih model untuk proyekmu? Berikan padamu satu "metode keputusan empat pertanyaan" — jawab empat pertanyaan, dan model yang paling cocok untukmu langsung terkunci.
+Setelah mengenal karakteristik tiap model, bagaimana memilih model untuk proyekmu? Berikan padamu satu "metode keputusan empat pertanyaan": jawab empat pertanyaan, dan model yang paling cocok untukmu langsung terkunci.
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -210,18 +210,18 @@ Gambar 5: Metode Keputusan Empat Pertanyaan untuk Memilih Model Besar
 Tips: Strategi Kombinasi
 
 {class="mt-1"}
-Metode ini bukan ajaran mati — banyak skenario justru membutuhkan kombinasi beberapa model. Satu strategi kombinasi yang umum: pakai DeepSeek atau Qwen untuk pengembangan harian (biaya murah, bahasa Tionghoa bagus), Claude untuk desain arsitektur krusial (reasoning kuat, halusinasi rendah), dan Gemini untuk analisis multimodal (pemrosesan gambar dan video). Ganti model sesuai kebutuhan, jangan "satu model dipakai sampai mati".
+Metode ini bukan ajaran mati, banyak skenario justru membutuhkan kombinasi beberapa model. Satu strategi kombinasi yang umum: pakai DeepSeek atau Qwen untuk pengembangan harian (biaya murah, bahasa Tionghoa bagus), Claude untuk desain arsitektur krusial (reasoning kuat, halusinasi rendah), dan Gemini untuk analisis multimodal (pemrosesan gambar dan video). Ganti model sesuai kebutuhan, jangan "satu model dipakai sampai mati".
 :::
 
-#### 4. Dasar-Dasar Panggilan API: Menghubungkan Model Besar dari Nol
+4. Dasar-Dasar Panggilan API: Menghubungkan Model Besar dari Nol
 
-Banyak tutorial pemrograman AI hanya mengajarkan cara memakai antarmuka obrolan, tetapi "pemrograman AI" yang sesungguhnya — membuat aplikasimu memanggil model besar — membutuhkan API. API (Application Programming Interface, antarmuka pemrograman aplikasi) adalah protokol komunikasi antar program. Melalui API, kode kamu bisa memanggil kemampuan model besar seperti memanggil sebuah fungsi.
+Banyak tutorial pemrograman AI hanya mengajarkan cara memakai antarmuka obrolan, tetapi "pemrograman AI" yang sesungguhnya — membuat aplikasimu memanggil model besar, membutuhkan API. API (Application Programming Interface, antarmuka pemrograman aplikasi) adalah protokol komunikasi antar program. Melalui API, kode kamu bisa memanggil kemampuan model besar seperti memanggil sebuah fungsi.
 
 ##### 1. Apa Itu Token
 
-Sebelum mengenal API, kamu wajib memahami dulu konsep "Token". Token adalah satuan dasar penagihan model besar; bisa dipahami sebagai "satuan baca dan tulis AI". Satu Token kira-kira setara dengan 0,75 kata bahasa Inggris (4 karakter), atau 0,5-1 aksara Tionghoa. Satu teks Tionghoa sepanjang 1000 karakter mengonsumsi sekitar 1500-2000 Token.
+Sebelum mengenal API, kamu wajib memahami dulu konsep "Token". Token adalah satuan dasar penagihan model besar; bisa dipahami sebagai "satuan baca dan tulis AI". Satu Token kira-kira setara dengan 0.75 kata bahasa Inggris (4 karakter). atau 0,5-1 aksara Tionghoa. Satu teks Tionghoa sepanjang 1000 karakter mengonsumsi sekitar 1500-2000 Token.
 
-Token bukan jumlah kata dan bukan pula jumlah karakter. Model besar memakai tokenizer khusus untuk memotong teks menjadi Token. Kata yang sama bisa memiliki jumlah Token berbeda di tiap model — misalnya "kecerdasan buatan" dalam bahasa Tionghoa mungkin 3 Token di GPT tetapi 2 Token di DeepSeek. API kebanyakan model mengembalikan jumlah Token yang benar-benar terpakai, dan kamu bisa melihatnya di respons API.
+Token bukan jumlah kata dan bukan pula jumlah karakter. Model besar memakai tokenizer khusus untuk memotong teks menjadi Token. Kata yang sama bisa memiliki jumlah Token berbeda di tiap model: misalnya "kecerdasan buatan" dalam bahasa Tionghoa mungkin 3 Token di GPT tetapi 2 Token di DeepSeek. API kebanyakan model mengembalikan jumlah Token yang benar-benar terpakai, dan kamu bisa melihatnya di respons API.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -233,7 +233,7 @@ Perkiraan Cepat Biaya Token
 
 ##### 2. Mendapatkan API Key
 
-Langkah pertama memakai API model besar adalah mendapatkan API Key — serangkaian kunci untuk autentikasi identitas. Setiap penyedia model punya platform API sendiri; kamu perlu mendaftar akun dan membuat API Key. Berikut pintu masuk platform API model-model utama beserta proses mendapatkannya:
+Langkah pertama memakai API model besar adalah mendapatkan API Key, serangkaian kunci untuk autentikasi identitas. Setiap penyedia model punya platform API sendiri; kamu perlu mendaftar akun dan membuat API Key. Berikut pintu masuk platform API model-model utama beserta proses mendapatkannya:
 
 ::: div .overflow-x-auto
 ```html
@@ -254,7 +254,7 @@ API Key setara dengan kata sandi dompetmu — siapa pun yang mendapatkan Key bis
 
 ##### 3. Panggilan API Pertama
 
-Setelah mendapatkan API Key, kamu bisa memanggil API model besar dengan bahasa pemrograman apa pun. Berikut contoh pemanggilan paling sederhana dengan Python — mengirim satu pesan ke DeepSeek dan menerima balasannya.
+Setelah mendapatkan API Key, kamu bisa memanggil API model besar dengan bahasa pemrograman apa pun. Berikut contoh pemanggilan paling sederhana dengan Python, mengirim satu pesan ke DeepSeek dan menerima balasannya.
 
 ::: div .code-block
 :::inline div .code-head
@@ -294,7 +294,7 @@ print(f"Total Token: {response.usage.total_tokens}")
 
 Logika inti kode ini: buat client (membawa API Key dan alamat model) → susun daftar pesan (system menentukan peran, user adalah input pengguna) → kirim permintaan → terima balasan. Pola ini berlaku hampir untuk semua model yang kompatibel dengan format OpenAI — cukup ganti api_key dan base_url untuk beralih model. Inilah alasan banyak model buatan Tiongkok memilih kompatibel dengan format OpenAI SDK: pengembang cukup mengubah dua baris kode untuk berganti model, biaya migrasinya sangat rendah.
 
-Berikut perbedaan kode saat beralih ke model lain — perhatikan, hanya dua baris yang perlu diubah:
+Berikut perbedaan kode saat beralih ke model lain, perhatikan, hanya dua baris yang perlu diubah:
 
 ::: div .code-block
 :::inline div .code-head
@@ -334,7 +334,7 @@ client = OpenAI(
 
 ##### 4. Menangani Respons Streaming
 
-Dalam aplikasi nyata, kamu biasanya tidak ingin menunggu AI menyelesaikan seluruh isinya sebelum ditampilkan sekaligus — itu membuat pengguna menunggu terlalu lama. Respons streaming (Streaming) memungkinkanmu menampilkan teks kata demi kata bersamaan dengan proses pembuatan oleh AI, meningkatkan pengalaman pengguna secara drastis. Seperti mesin tik, huruf-huruf muncul satu per satu, dan rasanya benar-benar berbeda bagi pengguna.
+Dalam aplikasi nyata, kamu biasanya tidak ingin menunggu AI menyelesaikan seluruh isinya sebelum ditampilkan sekaligus: itu membuat pengguna menunggu terlalu lama. Respons streaming (Streaming) memungkinkanmu menampilkan teks kata demi kata bersamaan dengan proses pembuatan oleh AI, meningkatkan pengalaman pengguna secara drastis. Seperti mesin tik, huruf-huruf muncul satu per satu, dan rasanya benar-benar berbeda bagi pengguna.
 
 ::: div .code-block
 :::inline div .code-head
@@ -374,7 +374,7 @@ Sebagian besar penyedia model punya dua cara penagihan: bayar sesuai pemakaian (
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan dua cara penagihan
 
-Untuk pemula, sebaiknya mulai dari bayar per pemakaian — tanpa perlu bayar di muka, pakai seberapa banyak bayar seberapa banyak. Setelah volume pemakaian bulananmu stabil di satu level (misalnya di atas 50 yuan per bulan), barulah pertimbangkan beralih ke langganan paket untuk mendapatkan harga satuan yang lebih murah.
+Untuk pemula, sebaiknya mulai dari bayar per pemakaian, tanpa perlu bayar di muka, pakai seberapa banyak bayar seberapa banyak. Setelah volume pemakaian bulananmu stabil di satu level (misalnya di atas 50 yuan per bulan), barulah pertimbangkan beralih ke langganan paket untuk mendapatkan harga satuan yang lebih murah.
 
 ##### 2. Ikhtisar Paket Langganan Utama
 
@@ -387,11 +387,11 @@ Untuk pemula, sebaiknya mulai dari bayar per pemakaian — tanpa perlu bayar di 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Paket langganan alat AI utama (Agustus 2026)
 
-Skema langganan model dalam negeri (Tiongkok) sedikit berbeda. DeepSeek terutama memakai bayar per pemakaian tanpa paket langganan bulanan — kamu mengisi saldo dan biaya dipotong sesuai pemakaian nyata. Tongyi Qianwen menyediakan paket sumber daya prabayar di platform Bailian (membeli kuota Token tertentu dengan harga diskon). Doubao di Volcengine juga punya skema prabayar serupa. Bagi pengembang di Tiongkok, kombinasi paling hemat biasanya: DeepSeek bayar per pemakaian (pengembangan harian) + kuota gratis Doubao (uji coba).
+Skema langganan model dalam negeri (Tiongkok) sedikit berbeda. DeepSeek terutama memakai bayar per pemakaian tanpa paket langganan bulanan, kamu mengisi saldo dan biaya dipotong sesuai pemakaian nyata. Tongyi Qianwen menyediakan paket sumber daya prabayar di platform Bailian (membeli kuota Token tertentu dengan harga diskon). Doubao di Volcengine juga punya skema prabayar serupa. Bagi pengembang di Tiongkok, kombinasi paling hemat biasanya: DeepSeek bayar per pemakaian (pengembangan harian) + kuota gratis Doubao (uji coba).
 
 ##### 3. Platform Agregator API
 
-Jika kamu perlu memakai beberapa model sekaligus, platform agregator API adalah pilihan yang praktis. Platform agregator memberikan satu API Key terpadu sehingga kamu bisa memanggil puluhan model dari seluruh dunia tanpa harus mendaftar di tiap platform.
+Jika kamu perlu memakai beberapa model sekaligus, platform agregator API adalah pilihan yang praktis. Platform agregator memberikan satu API Key terpadu se,hingga kamu bisa memanggil puluhan model dari seluruh dunia tanpa harus mendaftar di tiap platform.
 
 ::: div .overflow-x-auto
 ```html
@@ -407,18 +407,18 @@ Platform agregator API populer (Agustus 2026)
 Peringatan jebakan: jangan beli "Key bersama"
 
 {class="mt-1"}
-Jangan membeli yang namanya "API Key bersama" di platform seperti Taobao atau Xianyu—Key semacam ini biasanya berasal dari sumber yang tidak jelas, bisa kapan saja diblokir, dan berisiko membocorkan data. Selalu dapatkan API Key melalui platform resmi atau platform agregator yang kredibel.
+Jangan membeli yang namanya "API Key bersama" di platform seperti Taobao atau Xianyu,Key semacam ini biasanya berasal dari sumber yang tidak jelas, bisa kapan saja diblokir, dan berisiko membocorkan data. Selalu dapatkan API Key melalui platform resmi atau platform agregator yang kredibel.
 :::
 
 ##### 4. Strategi optimasi biaya
 
 Memilih model yang tepat hanyalah langkah pertama; cara "memakainya secara hemat" sama pentingnya. Berikut beberapa strategi optimasi biaya yang sudah teruji di praktik:
 
-1. Manfaatkan cache hit. Banyak model menyediakan fitur "cache"—ketika permintaanmu memuat konten yang sudah pernah diproses sebelumnya (seperti system prompt), bagian itu hanya ditagih dengan harga sangat rendah. Harga cache hit DeepSeek hanya 1/60 dari harga normal. Letakkan system prompt yang tetap di awal daftar pesan agar cache hit maksimal.
-2. Routing berjenjang—pakai model murah untuk tugas sederhana dan model mahal untuk tugas kompleks. Misalnya, pakai DeepSeek V4 Flash untuk klasifikasi teks (output 2 yuan/juta token) dan Claude untuk desain arsitektur (output 181 yuan/juta token). Sekitar 80% panggilan dalam satu proyek bisa memakai model murah.
+1. Manfaatkan cache hit. Banyak model menyediakan fitur "cache":ketika permintaanmu memuat konten yang sudah pernah diproses sebelumnya (seperti system prompt), bagian itu hanya ditagih dengan harga sangat rendah. Harga cache hit DeepSeek hanya 1/60 dari harga normal. Letakkan system prompt yang tetap di awal daftar pesan agar cache hit maksimal.
+2. Routing berjenjang,pakai model murah untuk tugas sederhana dan model mahal untuk tugas kompleks. Misalnya, pakai DeepSeek V4 Flash untuk klasifikasi teks (output 2 yuan/juta token) dan Claude untuk desain arsitektur (output 181 yuan/juta token). Sekitar 80% panggilan dalam satu proyek bisa memakai model murah.
 3. Batasi panjang output. API ditagih berdasarkan token output; semakin panjang, semakin mahal. Pada skenario yang tidak butuh penjelasan panjang lebar, atur parameter max_tokens untuk membatasi panjang output agar AI tidak "terlalu banyak basa-basi".
 4. Gunakan Batch API untuk tugas non-real-time. Jika kamu punya banyak tugas yang tidak butuh respons seketika (misalnya pelabelan data massal atau ringkasan dokumen), Batch API memberikan diskon 50%. OpenAI dan Azure sama-sama menyediakan fitur ini.
-5. Pantau pemakaian token. Sebagian besar platform API menyediakan dasbor statistik pemakaian. Periksa berkala distribusi pemakaiannya, cari panggilan yang paling boros token, lalu optimalkan secara terarah. Satu penyesuaian kecil pada prompt (misalnya mengganti "jelaskan secara rinci" dengan "jelaskan dalam 3 kalimat") bisa menghemat 50% token.
+5. Pantau pemakaian token. Sebagian besar platform API menyediakan dasbor statistik pemakaian. Periksa berkala distribusi pemakaiannya, cari panggilan yang paling boros token, lalu optimalkan secara terarah. Satu penyesuaian kecil pada prompt (misalnya mengganti "jelaskan ,secara rinci" dengan "jelaskan dalam 3 kalimat") bisa menghemat 50% token.
 
 ::: div .overflow-x-auto
 ```html
@@ -431,7 +431,7 @@ Strategi optimasi biaya dan hasilnya (Agustus 2026)
 
 #### 6. Praktik: menghubungkan API model besar ke proyek
 
-Mari akhiri bab ini dengan satu praktik lengkap—membuat "Generator Ringkasan AI": pengguna memasukkan sepotong teks panjang, lalu program memanggil API model besar untuk menghasilkan ringkasan. Praktik ini memperlihatkan alur lengkap pemanggilan API: konfigurasi lingkungan, pemanggilan API, penanganan error, dan kontrol biaya.
+Mari akhiri bab ini dengan satu praktik lengkap,membuat "Generator Ringkasan AI": pengguna memasukkan sepotong teks panjang, lalu program memanggil API model besar untuk menghasilkan ringkasan. Praktik ini memperlihatkan alur lengkap pemanggilan API: konfigurasi lingkungan, pemanggilan API, penanganan error, dan kontrol biaya.
 
 ::: div .code-block
 :::inline div .code-head
@@ -511,10 +511,10 @@ if __name__ == "__main__":
 ```
 :::
 
-Kode ini mencerminkan beberapa praktik terbaik pemanggilan API: API Key dibaca lewat environment variable, tidak pernah ditulis langsung di dalam kode; fungsi dilengkapi dokumentasi dan type hint yang jelas; max_tokens diatur untuk membatasi panjang output; temperature diatur rendah (0.3) agar output lebih stabil; penanganan error lengkap; dan informasi konsumsi token dikembalikan untuk pelacakan biaya. Saat kamu memakai AI untuk menulis kode ini, sampaikan saja persyaratan-persyaratan tersebut—AI sepenuhnya mampu mewujudkannya untukmu.
+Kode ini mencerminkan beberapa praktik terbaik pemanggilan API: API Key dibaca lewat environment variable, tidak pernah ditulis langsung di dalam kode; fungsi dilengkapi dokumentasi dan type hint yang jelas; max_tokens diatur untuk membatasi panjang output; temperature diatur rendah (0.3) agar output lebih stabil; penanganan error lengkap; dan informasi konsumsi token dikembalikan untuk pelacakan biaya. Saat kamu memakai AI untuk menulis kode ini, sampaikan saja persyaratan-persyaratan tersebut,AI sepenuhnya mampu mewujudkannya untukmu.
 
 :::inline div .quote-line
-Pelajaran terakhir bab ini: model adalah "amunisi", metodologi adalah "taktik". Memilih amunisi yang tepat membuat pertempuran lebih lancar, tetapi tanpa taktik yang baik, amunisi sebanyak apa pun tak akan menang. Setelah mengenal karakter tiap model dan cara memakai API, Anda punya "gudang amunisi" yang cukup—tetapi bagaimana memenangkan pertempurannya tetap bergantung pada metodologi berpikir yang dipelajari di bab-bab sebelumnya.
+Pelajaran terakhir bab ini: model adalah "amunisi", metodologi adalah "taktik". Memilih amunisi yang tepat membuat pertempuran lebih lancar, tetapi tanpa taktik yang baik, amunisi sebanyak apa pun tak akan menang. Setelah mengenal karakter tiap model dan cara memakai API, Anda punya "gudang amunisi" yang cukup,tetapi bagaimana memenangkan pertempurannya tetap bergantung pada metodologi berpikir yang dipelajari di bab-bab sebelumnya.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -522,7 +522,7 @@ Pelajaran terakhir bab ini: model adalah "amunisi", metodologi adalah "taktik". 
 Mari praktik: buat panggilan API pertamamu berhasil
 
 {class="mt-1"}
-Daftar di satu platform model dalam negeri (disarankan DeepSeek atau Zhipu—keduanya memberi kuota gratis bagi pengguna baru), buat API Key, tuliskan ke environment variable sistem (bukan ke dalam kode!), lalu jalankan kode "panggilan API pertama" di atas. Pada saat jawaban AI berhasil tercetak, kamu sudah melewati garis batas antara "memakai AI" dan "membangun aplikasi AI".
+Daftar di satu platform model dalam negeri (disarankan DeepSeek atau Zhipu,keduanya memberi kuota gratis bagi pengguna baru), buat API Key, tuliskan ke environment variable sistem (bukan ke dalam kode!), lalu jalankan kode "panggilan API pertama" di atas. Pada saat jawaban AI berhasil tercetak, kamu sudah melewati garis batas antara "memakai AI" dan "membangun aplikasi AI".
 :::
 
 ::: div .chapter-summary
@@ -531,7 +531,7 @@ Ringkasan bab ini
 
 - Tiga raksasa internasional: GPT-5.6 (seimbang dan serba bisa), Claude (puncak kemampuan coding + tingkat halusinasi hanya 1%), Gemini (raja multimodal + konteks 2 juta)
 - Lima raksasa dalam negeri: DeepSeek V4 (raja value for money, perhatikan pengumuman kenaikan harga), Qwen3.7 (kelas enterprise), GLM-5.1 (nomor satu dalam negeri untuk SWE), Kimi K3 (teks super panjang), Doubao (gratis untuk pemula)
-- Metode keputusan empat pertanyaan: di-deploy di mana? untuk coding atau lainnya? butuh konteks super panjang? sensitif terhadap anggaran?
+- Metode keputusan empat pertanyaan: di-deploy di mana, untuk coding atau lainnya, butuh konteks super panjang, sensitif terhadap anggaran?
 - Token adalah satuan penagihan: 1 karakter Mandarin sekitar 1,5-2 token; 1 juta karakter sekitar 1,5 juta token
 - API Key = sandi dompetmu: kelola lewat environment variable, jangan pernah ditulis langsung di kode, jangan diunggah ke Git
 - Model dalam negeri umumnya kompatibel dengan OpenAI SDK: mengganti model cukup dengan mengubah dua baris, api_key dan base_url

@@ -9,7 +9,7 @@ kind: supplement
 ### Anexo: Análisis de expansión de memoria en móviles Android
 
 {class="chapter-intro mb-4"}
-Al comprar un móvil, a menudo ves publicidad como "12GB+8GB RAM"—como si tuvieras 8GB extra de memoria de trabajo. ¿Pero realmente puede hacer el móvil más rápido? ¿Podría incluso dañar el móvil? En esta sección explicamos a fondo la tecnología de "expansión de memoria".
+Al comprar un móvil, a menudo ves publicidad como "12GB+8GB RAM",como si tuvieras 8GB extra de memoria de trabajo. ¿Pero realmente puede hacer el móvil más rápido? ¿Podría incluso dañar el móvil? En esta sección explicamos a fondo la tecnología de "expansión de memoria".
 
 #### 1. Definición esencial
 

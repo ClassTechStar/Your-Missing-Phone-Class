@@ -48,13 +48,13 @@ O telefone se conecta diretamente com satélites de comunicação em órbita par
 A comunicação via satélite requer hardware de antena especial no telefone; nem todos os telefones são compatíveis. Além disso, a comunicação via satélite geralmente requer assinatura de serviço pago, mas a função de SOS de emergência normalmente é gratuita.
 :::
 
-#### II. Comunicação Offline: Nova Forma de Comunicação de Curta Distância
+II. Comunicação Offline: Nova Forma de Comunicação de Curta Distância
 
 "Comunicação Offline" refere-se à tecnologia de comunicação direta entre dois telefones sem rede móvel e sem Wi-Fi.
 
 ##### Princípio Técnico:
 
-Utiliza Bluetooth ou frequências de rádio dedicadas para estabelecer uma conexão ponto a ponto em curta distância (geralmente de centenas de metros a alguns quilômetros).
+Utiliza Bluetooth ou frequências de rádio dedicadas para estabelecer uma conexão ponto a ponto em curta distância, (geralmente de centenas de metros a alguns quilômetros).
 
 ##### Cenários de Aplicação:
 
@@ -68,7 +68,7 @@ Utiliza Bluetooth ou frequências de rádio dedicadas para estabelecer uma conex
 - <strong>Huawei</strong>: App ChangLian suporta chamadas offline.
 - <strong>Xiaomi</strong>: Algumas funcionalidades do Xiaomi Miaoxiang Center.
 
-#### III. Detecção de Acidentes de Carro: Salva-vidas em Momento Crítico
+III. Detecção de Acidentes de Carro: Salva-vidas em Momento Crítico
 
 A detecção de acidentes de carro usa os sensores do telefone para detectar colisões graves e discar automaticamente para o número de emergência.
 
@@ -129,5 +129,5 @@ A tecnologia SparkLink representa a direção futura da comunicação sem fio. C
 1. Pesquise "satélite" nos ajustes para ver se há opções relacionadas à comunicação via satélite.
 2. Pesquise "detecção de acidentes" ou "SOS de emergência" e verifique se está ativado.
 3. Se seu telefone for Huawei, veja se suporta conexão com dispositivos SparkLink.
-4. Conheça o uso dessas funções — elas podem ser úteis em momentos críticos.
+4. Conheça o uso dessas funções: elas podem ser úteis em momentos críticos.
 :::

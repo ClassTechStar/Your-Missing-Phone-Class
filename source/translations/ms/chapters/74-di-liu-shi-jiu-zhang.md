@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 69: Buku Rujukan Pantas dan Sumber
 
 {class="chapter-intro mb-4"}
-Bab ini ialah buku rujukan pantas yang boleh digunakan secara berasingan. Apabila tidak ingat sesuatu gaya penulisan atau perlu membuat keputusan pantas, terus buka di sini. Disyorkan menjadikannya 'kad poket': rujukan pantas kod lazim, soalan lazim, sumber pembelajaran — jangan terlepas satu halaman pun.
+Bab ini ialah buku rujukan pantas yang boleh digunakan secara berasingan. Apabila tidak ingat sesuatu gaya penulisan atau perlu membuat keputusan pantas, terus buka di sini. Disyorkan menjadikannya 'kad poket': rujukan pantas kod lazim, soalan lazim, sumber pembelajaran: jangan terlepas satu halaman pun.
 
 #### 1. Kad rujukan pantas kod lazim
 
@@ -31,11 +31,11 @@ Boleh belajar bahasa, tetapi tidak boleh membuat pembangunan penuh. Swift Playgr
 
 Q2: Berapa kos untuk belajar pembangunan iOS?
 
-Peringkat pembelajaran: 0 kos (Xcode percuma + Apple ID percuma untuk ujian pada peranti sebenar). Peringkat penerbitan: akaun pembangun 99 dolar AS/tahun (kira-kira 700 yuan). Ditambah pelaburan perkakasan sebuah Mac, itulah keseluruhan kosnya. Berbanding pulangannya — walaupun alat kecil di App Store juga mempunyai pengguna berbayar — perakaunan ini berbaloi.
+Peringkat pembelajaran: 0 kos (Xcode percuma + Apple ID percuma untuk ujian pada peranti sebenar). Peringkat penerbitan: akaun pembangun 99 dolar AS/tahun (kira-kira 700 yuan). Ditambah pelaburan perkakasan sebuah Mac, itulah keseluruhan kosnya. Berbanding pulangannya, walaupun alat kecil di App Store juga mempunyai pengguna berbayar, perakaunan ini berbaloi.
 
 Q3: Belajar SwiftUI atau UIKit dahulu?
 
-SwiftUI. Projek baharu, tutorial baharu dan jawatan baharu pada 2026 semuanya berasaskan SwiftUI, dan buku ini menggunakannya dari mula hingga akhir. UIKit ialah rangka kerja generasi sebelumnya dan masih digunakan dalam banyak projek lama — selepas anda mahir SwiftUI, tambah UIKit mengikut keperluan (dokumen rasmi menyediakan tutorial interoperasi); ia mudah dikuasai kemudian. Jangan terbalikkan urutannya.
+SwiftUI. Projek baharu, tutorial baharu dan jawatan baharu pada 2026 semuanya berasaskan SwiftUI, dan buku ini menggunakannya dari mula hingga akhir. UIKit ialah rangka kerja generasi sebelumnya dan masih digunakan dalam banyak projek lama: selepas anda mahir SwiftUI, tambah UIKit mengikut keperluan (dokumen rasmi menyediakan tutorial interoperasi); ia mudah dikuasai kemudian. Jangan terbalikkan urutannya.
 
 Q4: Mudahkah mencari kerja dalam pembangunan iOS?
 
@@ -43,7 +43,7 @@ Keadaan pasaran pada 2026: jawatan peringkat permulaan yang hanya 'boleh melukis
 
 Q5: Apa yang perlu dilakukan jika App ditolak semasa semakan?
 
-Jangan panik, ini perkara biasa—kebarangkalian ditolak pada penghantaran pertama tidak rendah. Sebab penolakan Apple biasanya ditulis dengan sangat terperinci (halaman mana, garis panduan yang mana). Baiki satu demi satu, kemudian balas dengan penerangan dalam App Store Connect dan hantar semula. Tiga sebab penolakan yang paling biasa: kegunaan kebenaran tidak dijelaskan dengan jelas, antara muka mempunyai bug, dan metadata (tangkapan skrin/penerangan) tidak sepadan dengan aplikasi sebenar. Memeriksa ketiga-tiga perkara ini lebih awal boleh menjimatkan satu pusingan penantian.
+Jangan panik, ini perkara biasa,kebarangkalian ditolak pada penghantaran pertama tidak rendah. Sebab penolakan Apple biasanya ditulis dengan sangat terperinci (halaman mana. garis panduan yang mana). Baiki satu demi satu, kemudian balas dengan penerangan dalam App Store Connect dan hantar semula. Tiga sebab penolakan yang paling biasa: kegunaan kebenaran tidak dijelaskan dengan jelas, antara muka mempunyai bug, dan metadata (tangkapan skrin/penerangan) tidak sepadan dengan aplikasi sebenar. Memeriksa ketiga-tiga perkara ini lebih awal boleh menjimatkan satu pusingan penantian.
 
 #### 3. Rujukan Pantas Pintasan Xcode yang Kerap Digunakan
 
@@ -61,7 +61,7 @@ Rujukan Pantas Pintasan Xcode yang Kerap Digunakan
 Tips: Masalah kompilasi misteri? Kosongkan cache dahulu
 
 {class="mt-1"}
-"Semalam boleh jalan, hari ini tak boleh lagi"—daripada sepuluh kejadian aneh sebegini, enam atau tujuh daripadanya berpunca daripada cache binaan yang bercelaru. Kosongkan dengan ⇧⌘K kemudian bina semula, ini boleh menyembuhkan lebih separuh masalah misteri. Kalau masih tidak boleh, mulakan semula Xcode (sekali dengan Mac), dan kalau masih gagal juga, "padam folder DerivedData"—inilah tiga langkah muktamad yang diwarisi secara lisan dalam kalangan pembangun iOS.
+"Semalam boleh jalan, hari ini tak boleh lagi"—daripada sepuluh kejadian aneh sebegini, enam atau tujuh daripadanya berpunca daripada cache binaan yang bercelaru. Kosongkan dengan ⇧⌘K kemudian bina semula, ini boleh menyembuhkan lebih separuh masalah misteri. Kalau masih tidak boleh, mulakan semula Xcode (sekali dengan Mac), dan kalau masih gagal juga, "padam folder DerivedData":inilah tiga langkah muktamad yang diwarisi secara lisan dalam kalangan pembangun iOS.
 :::
 
 #### 4. Sumber Pembelajaran yang Disyorkan
@@ -77,12 +77,12 @@ Senarai Sumber Pembelajaran Pembangunan iOS (Ogos 2026)
 
 #### 5. Penutup: Daripada App Pertama ke App ke-N
 
-Bila dilihat kembali, anda telah bergerak daripada "tidak tahu apa itu SwiftUI" kepada memasang Xcode, mempelajari Swift, melukis antara muka dengan SwiftUI, menyambungkan App kepada pangkalan data dan rangkaian, kemudian menguji, membungkus dan menerbitkannya—sepanjang perjalanan ini, anda telah menamatkan bahagian yang paling sukar dalam perjalanan daripada sifar ke satu.
+Bila dilihat kembali, anda telah bergerak daripada "tidak tahu apa itu SwiftUI" kepada memasang Xcode, mempelajari Swift, melukis antara muka dengan SwiftUI, menyambungkan App kepada pangkalan data dan rangkaian. kemudian menguji, membungkus dan menerbitkannya,sepanjang perjalanan ini, anda telah menamatkan bahagian yang paling sukar dalam perjalanan daripada sifar ke satu.
 
 Dunia teknologi berubah dengan sangat pantas: rangka kerja akan dinaik taraf, alat akan ditukar ganti, dan AI akan mengambil alih lebih banyak kerja "menaip papan kekunci". Tetapi ada satu perkara yang tidak akan lapuk: kebolehan anda menguraikan idea yang kabur menjadi langkah yang jelas, kemudian melaksanakannya langkah demi langkah. Alat ialah pembesar, manakala cara berfikir ialah asas. Pembesar boleh diganti, tetapi asas tidak boleh tergugat.
 
 :::inline div .quote-line
-Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta iPhone. Mulai hari ini, berkarya dengan papan kekunci—itulah romantisme pembangun iOS.
+Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta iPhone. Mulai hari ini, berkarya dengan papan kekunci:itulah romantisme pembangun iOS.
 :::
 
 #### Rujukan

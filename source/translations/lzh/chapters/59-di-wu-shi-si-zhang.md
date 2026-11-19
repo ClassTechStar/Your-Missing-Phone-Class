@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十四章：項目一——吾之記賬冊（本地版）
 
 {class="chapter-intro mb-4"}
-喜迎汝首個「正經之項目」。此記賬冊雖不連網，然五臟俱全：能記一筆之賬、能觀流水、能依月而計、能刪能改。既成之，汝遂全歷「數據 → 邏輯 → 界面」之全程。勿遽抄代碼——先思之明而後動，此吾儕恆守之則也。
+喜迎汝首個「正經之項目」。此記賬冊雖不連網，然五臟俱全：能記一筆之賬、能觀流水、能依月而計、能刪能改。既成之，汝遂全歷「數據 → 邏輯 → 界面」之全程。勿遽抄代碼：先思之明而後動，此吾儕恆守之則也。
 
 #### 一、需求之思：先問五問
 
@@ -29,7 +29,7 @@ kind: chapter
 
 #### 二、數據之層：使「賬」有家
 
-先定一賬之形——字段須足用而毋貪多：
+先定一賬之形：字段須足用而毋貪多：
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +49,7 @@ data class Record(
 ```
 :::
 
-Dao 中加二「統計用」之查詢——此記賬冊之魂也：
+Dao 中加二「統計用」之查詢：此記賬冊之魂也：
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,7 +82,7 @@ interface RecordDao {
 小識：金額何以用 Double？
 
 {class="mt-1"}
-謹嚴之金融 App 當用 BigDecimal 或「以分為單位之 Int」以免浮點之差（0.1+0.2≠0.3 之舊題）。練手之項目用 Double 足矣；他日若作真金融之品，記易「分」為單位——此無數先輩踐而後知之坑也。
+謹嚴之金融 App 當用 BigDecimal 或「以分為單位之 Int」以免浮點之差（0.1+0.2≠0.3 之舊題）。練手之項目用 Double 足矣；他日若作真金融之品，記易「分」為單位：此無數先輩踐而後知之坑也。
 :::
 
 #### 三、MVVM：界面與邏輯「分家」
@@ -95,7 +95,7 @@ interface RecordDao {
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-圖 5：MVVM 三層之構——數據單向而流，層層不相踰
+圖 5：MVVM 三層之構，數據單向而流，層層不相踰
 :::
 
 ::: div .code-block
@@ -125,11 +125,11 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 :::
 
-界面（Compose）中如是用之：val vm: RecordViewModel = viewModel()，繼 val list by vm.records.collectAsState()——數據一變，列表自新，汝無所事。此 MVVM + Flow + Compose 三劍合璧之威也。
+界面（Compose）中如是用之：val vm: RecordViewModel = viewModel()，繼 val list by vm.records.collectAsState()，數據一變，列表自新，汝無所事。此 MVVM + Flow + Compose 三劍合璧之威也。
 
 #### 四、界面：列表之頁 + 錄入之頁
 
-列表之頁用 LazyColumn（懶載之列）——數據雖多不卡：
+列表之頁用 LazyColumn（懶載之列），數據雖多不卡：
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,7 +203,7 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-交互之細，經驗二條：刪必再確認之（防手之滑），編宜預填原值（易一字較重輸省事）。毋輕此二細——產品之感，即此諸細所堆成也。
+交互之細，經驗二條：刪必再確認之（防手之滑），編宜預填原值（易一字較重輸省事）。毋輕此二細，產品之感，即此諸細所堆成也。
 
 #### 六、驗收：三層之檢 + 二進階之挑戰
 
@@ -211,8 +211,8 @@ suspend fun deleteById(id: Long)
 
 基礎之版既過驗收，為己加二道「進階之菜」：
 
-1. 月度之篩選：頂加月份之切換（譬如 2026-08 ▾），列表惟顯當月之流水；
-2. 分類之餅圖：以 Compose 之 Canvas 或引入輕量圖表之庫，繪「錢費何處」為餅圖——既成此，記賬冊遂頗有「產品之樣」矣。
+1. 月度之篩選：頂加月份之切換（譬如 2026-08 ▾），列表惟顯當月之流水。
+2. 分類之餅圖：以 Compose 之 Canvas 或引入輕量圖表之庫，繪「錢費何處」為餅圖，既成此，記賬冊遂頗有「產品之樣」矣。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -36,7 +36,7 @@ Wichtige Fortschritte 2024–2026: Scharnierlebensdauer allgemein mit 500.000 Fa
 Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren nutzt – der Klappbildschirm bringt keinen Vorteil, ist dafür schwerer und dicker.
 
 1. <strong>Personen mit kleinen Händen oder Sehnenscheidenentzündung – Horizontal-Klappbildschirme wiegen aufgeklappt meist 230 g+, einhändiges Halten ist anstrengend.</strong> Bei knappem Budget oder wenn ein Gerät länger als drei Jahre halten soll – Klappbildschirme haben einen niedrigeren Gebrauchtwert als starre Geräte und höhere Reparaturkosten.
-2. <strong>Drittens. Kaufberatung: Achte auf diese Kennzahlen</strong> Lass dich nicht vom Wort "Klapp" blenden. Achte beim Kauf auf:
+2. <strong>Drittens. Kaufberatung: Achte auf diese Kennzahlen</strong> Lass dich nicht vom Wort "Klapp" blenden. Achte beim Kauf auf:.
 3. <strong>Scharnier-Art</strong>: Wassertropfen-Scharnier (flache Knickfalte, lange Lebensdauer, heute Standard) ist besser als U-Scharnier (tiefe Knickfalte, frühe Lösung). Beim Verkäufer nachfragen oder Testberichte prüfen.
 4. <strong>Innenbildschirm-Material</strong>: Muss UTG-Dünnglas sein, nicht die frühere Kunststofffolie. UTG fühlt sich fast wie Glas an; bei Kunststofffolie hinterlässt der Fingernagel Eindrücke und Kratzer.
 
@@ -46,7 +46,7 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - : Im Geschäft selbst aufklappen und ansehen. Akzeptables Niveau 2025: Bei eingeschaltetem Bildschirm frontal kaum sichtbar, im schrägen Licht eine flache Furche erkennbar, beim Darüberstreichen leicht spürbar, aber nicht scharfkantig.
-- Außenbildschirm-Größe
+- Außenbildschirm-Größe.
 - : Bei Horizontal-Klappbildschirmen gilt "je größer, desto besser" (mindestens 6,4 Zoll), damit er zugeklappt wie ein normales Smartphone nutzbar ist. Bei Vertikal-Klappbildschirmen ist ein größerer Außenbildschirm praktischer (ab 4 Zoll für Nachrichten und Navigation).
 :::
 
@@ -67,9 +67,9 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Das ist das "Ass" des Klappbildschirms.
-2. Selfie/Gruppenfoto
+2. Selfie/Gruppenfoto.
 3. : Auf den Tisch gestellt, 90 Grad, oberer Bildschirm als Sucher, unterer als Auslöser – niemand muss um Hilfe bitten.
-4. Zeitraffer/Nachtaufnahme
+4. Zeitraffer/Nachtaufnahme.
 5. : Ebenfalls stabil auf dem Tisch, ein Stativ entfällt.
 :::
 
@@ -87,7 +87,7 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 
 - <strong>3. Außenbildschirm-Schnellblick</strong> Bei zugeklappten Vertikal-Klappbildschirmen kann der Außenbildschirm: Uhrzeit, Benachrichtigungen, Wetter anzeigen, WeChat-Nachrichten beantworten (Sprache-zu-Text oder Schnellantwort), Transitkarte nutzen, Navigation anzeigen, als Spiegel dienen (über die Frontkamera). Nicht jedes Mal aufklappen – stromsparend und bequem.
 - <strong>4. Computer-Modus</strong> Einige Horizontal-Klappbildschirme (Huawei, Samsung) können nach dem Aufklappen in einen "Computer-Modus" wechseln; mit externem Display, Tastatur und Maus ähnelt er einem einfachen PC und reicht für temporäre Dokumentenbearbeitung oder E-Mail-Beantwortung. Kein primäres Produktivitätstool, aber in Notsituationen sehr willkommen.
-- <strong>Fünftens. Pflegehinweise: Den Klappbildschirm länger am Leben halten</strong> Am empfindlichsten sind der Innenbildschirm und das Scharnier. Diese Gewohnheiten verlängern die Lebensdauer deutlich:
+- <strong>Fünftens. Pflegehinweise: Den Klappbildschirm länger am Leben halten</strong> Am empfindlichsten sind der Innenbildschirm und das Scharnier. Diese Gewohnheiten verlängern die Lebensdauer deutlich:.
 - <strong>Bei Kälte nicht gewaltsam aufklappen</strong>: Unter 5 °C wird UTG-Glas spröde; vor dem Aufklappen das Gerät einige Minuten in der Tasche wärmen. Das steht in jedem offiziellen Handbuch, wird aber ignoriert.
 - <strong>Fingernägel/Hartgegenstände vom Innenbildschirm fernhalten</strong>: Der Innenbildschirm hat zwar eine Schutzschicht, ist aber weicher als der Außenbildschirm. Mit dem Fingerballen bedienen, nicht mit dem Fingernagel tippen.
 
@@ -99,7 +99,7 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 
 : Der Innenbildschirm darf nur mit der offiziellen Spezialfolie oder einer UTG-Schutzfolie versehen werden; normale Panzerglas-Folgen beeinträchtigen Klappfunktion und Touch. Folie beim offiziellen Service anbringen lassen.
 
-#### Fünftens. Pflegehinweise: Den Klappbildschirm länger am Leben halten
+Fünftens. Pflegehinweise: Den Klappbildschirm länger am Leben halten
 
 : Zwar ist die Mehrzahl mit IPX8 als wasserdicht ausgewiesen, aber der Staubschutz ist meist gering. Am Strand, auf Baustellen und in ähnlichen Umgebungen vorsichtig sein.
 
@@ -121,13 +121,13 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 - : Nach einem Jahr liegt der Gebrauchtpreis meist bei 50–60 % des Neupreises – schneller als bei starren Geräten.
 :::
 
-#### Sechstens. Preis- und psychologische Vorbereitung des Klappbildschirms
+Sechstens. Preis- und psychologische Vorbereitung des Klappbildschirms
 
 : Innenbildschirm-Reparatur 2.000–4.000 Yuan, Scharnier-Reparatur 500–1.500 Yuan. Vor dem Kauf Garantiebestimmungen prüfen.
 
 - <strong>App-Anpassung uneinheitlich</strong>: Die 2026er Technik kann nicht "komplett spurlos", nur "bei eingeschaltetem Bildschirm vorne kaum sichtbar". Wenn Sie Perfektionist sind und die Falz ständig stört – nicht kaufen.
-- <strong>Der Klappbildschirm ist kein "besseres Smartphone", sondern "ein Smartphone in anderer Form". Kauf ihn, weil du seine einzigartige Form brauchst, nicht weil er fortschrittlicher ist.</strong>– Zur Kaufphilosophie des Klappbildschirms
-- <strong>Siebtens. Auswahl der Marken (Stand 2025)</strong> Keine konkreten Modelle (die veralten), nur Marken-Charakteristika, damit du dich schnell orientieren kannst:
+- <strong>Der Klappbildschirm ist kein "besseres Smartphone", sondern "ein Smartphone in anderer Form". Kauf ihn, weil du seine einzigartige Form brauchst, nicht weil er fortschrittlicher ist.</strong>– Zur Kaufphilosophie des Klappbildschirms.
+- <strong>Siebtens. Auswahl der Marken (Stand 2025)</strong> Keine konkreten Modelle (die veralten), nur Marken-Charakteristika, damit du dich schnell orientieren kannst:.
 - <strong>Huawei Mate X-Serie</strong>: Branchenbenchmark für Horizontal-Klappbildschirme, starke HarmonyOS-Ökosystem-Synergie, Außenbildschirm-Proportionen nahe einem normalen Smartphone, zugeklappt als Hauptgerät nutzbar. Hoher Preis, aber relativ bester Wertverlust.
 - <strong>Samsung Galaxy Z Fold/Flip</strong>: Klappbildschirm-Pionier, Scharnier ausgereift, Z Flip ist der Vertikal-Klapp-Vertreter. Im Inland ist das After-Sales-Netz kleiner, Ersatzteile sind teuer.
 - <strong>Xiaomi MIX Fold/Flip</strong>: Preis-Leistungs-Route, großzügige Ausstattung, relativ günstiger Preis. Geeignet für Nutzer, die Neues ausprobieren möchten, ohne zu viel auszugeben.
@@ -145,9 +145,9 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 : Unter den horizontal faltbaren Geräten eher kompakt, einhändig bedienbar, geeignet für Nutzer, denen große Faltbildschirme zu schwer sind.
 
 - <strong>Huawei Pocket Serie</strong>: Unter den vertikal faltbaren Geräten der größte und praktischste Außenbildschirm; Kosmetikspiegel- und Sonnenschutz-Erkennungsfunktionen für weibliche Nutzer sind detailliert umgesetzt.
-- <strong>Kaufempfehlungen:Bei ausreichendem Budget und Fokus auf das Ökosystem wähle Huawei Mate X; für den ausgereiftesten Scharniermechanismus wähle Samsung Z Fold; für das beste Preis-Leistungs-Verhältnis wähle Xiaomi/vivo; bei vertikalen Faltbildschirmen vergleiche Huawei Pocket und Samsung Z Flip.</strong> Letzter Hinweis
+- <strong>Kaufempfehlungen:Bei ausreichendem Budget und Fokus auf das Ökosystem wähle Huawei Mate X; für den ausgereiftesten Scharniermechanismus wähle Samsung Z Fold; für das beste Preis-Leistungs-Verhältnis wähle Xiaomi/vivo; bei vertikalen Faltbildschirmen vergleiche Huawei Pocket und Samsung Z Flip.</strong> Letzter Hinweis.
 - <strong>Die Faltbildschirm-Technologie entwickelt sich jedes Jahr weiter; dieser Anhang wurde 2025 verfasst. Vor dem Kauf unbedingt die neuesten Tests und Nutzerfeedbacks prüfen, mit Fokus auf: gemessene Scharnierlebensdauer, Falzverhalten und Reparaturrichtlinien für den Innenbildschirm. Ein persönlicher Test im Geschäft ist immer wichtiger als Online-Bewertungen.</strong> Zuletzt gelesen bei: ...
-- <strong>Weiterlesen</strong> Ignorieren
+- <strong>Weiterlesen</strong> Ignorieren.
 - <strong>OPPO Find N-Serie</strong>:Kompaktere Modelle bei horizontalen Klapphandys, Einhaendig bedienbar, Fuer Nutzer, denen grosse Klapphandys zu schwer sind.
 - <strong>HuaweiPocket-Serie</strong>:Bei vertikalen Klapphandys die groesste und praktischste Aussenanzeige, Kosmetikspiegel, Sonnenschutz-Erkennung und weitere frauenorientierte Funktionen sind detailliert umgesetzt.
 

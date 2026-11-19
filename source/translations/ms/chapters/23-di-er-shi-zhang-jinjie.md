@@ -18,7 +18,7 @@ HarmonyOS
 
 ##### : Tetapan &gt; Tentang Telefon &gt; Ketik "Versi HarmonyOS" 7 kali berturut-turut.
 
-- <strong>iOS</strong>: Pengguna biasa tidak boleh mengaktifkan mod pembangun penuh, memerlukan akaun Apple Developer berbayar.
+- <strong>iOS</strong>: Pengguna biasa tidak boleh mengaktifkan mod pembangun penuh, memerlukan akaun Apple Developer berbayar
 - <strong>HarmonyOS</strong> Nyahpepijat USB
 - <strong>Android</strong> Pelarasan kelajuan animasi
 
@@ -29,14 +29,14 @@ HarmonyOS
 
 ##### Cari laluan dalam sistem HarmonyOS: Tetapan → Perihal telefon → Ketik "Nombor binaan" berulang kali.
 
-- <strong>2. Fungsi praktikal dalam Pilihan Pembangun</strong> Kawal kelajuan animasi — Buat telefon "lebih pantas"
-- <strong>Tiga skala kelajuan animasi: Animasi tingkap, Animasi peralihan, Tempoh animasi. Lalai semua 1x, ubah semua ke 0.5x, telefon akan terasa lebih pantas dan responsif.</strong> Hidupkan perkhidmatan USB — Boleh ADB debug
+- <strong>2. Fungsi praktikal dalam Pilihan Pembangun</strong> Kawal kelajuan animasi, Buat telefon "lebih pantas"
+- <strong>Tiga skala kelajuan animasi: Animasi tingkap, Animasi peralihan, Tempoh animasi. Lalai semua 1x, ubah semua ke 0.5x, telefon akan terasa lebih pantas dan responsif.</strong> Hidupkan perkhidmatan USB, Boleh ADB debug
 - <strong>Selepas aktifkan "Debug USB", komputer boleh hubung telefon melalui ADB untuk pelbagai operasi lanjutan (sandaran penuh, skrin cermin, pasang APK dll).</strong>: Paparkan masa render setiap bingkai dalam graf bar real-time pada skrin, garis hijau wakili 16.6ms (ambang masa bingkai 60fps). Bar melebihi garis hijau bermaksud dropped frame. Ini adalah alat pembangun untuk mengesan App lag, pengguna biasa juga boleh guna untuk bandingkan App mana optimasi teruk - lebih
 
 ##### Pilih ART (Android Runtime) dalam pilihan, boleh tingkatkan kelancaran App.
 
 - <strong>Perkara yang perlu diperhatikan</strong> Had proses latar belakang — Jimat kuasa dan memori
-- <strong>"Had proses latar belakang" boleh tetapkan bilangan App maksimum yang serentak berjalan, pilih 4 atau "Tidak ada proses latar belakang", boleh kurangkan penggunaan kuasa dan memori (tetapi mungkin kesan pemberitahuan App).</strong> Tunjukkan sentuhan — Alat bantu tunjuk ajar
+- <strong>"Had proses latar belakang" boleh tetapkan bilangan App maksimum yang serentak berjalan, pilih 4 atau "Tidak ada proses latar belakang", boleh kurangkan penggunaan kuasa dan memori (tetapi mungkin kesan pemberitahuan App).</strong> Tunjukkan sentuhan: Alat bantu tunjuk ajar
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -48,10 +48,10 @@ Perlindungan keselamatan
 
 #### 2. OEM Unlocking: Suis "flash" dalam pilihan pembangun
 
-Dalam pilihan pembangun ada satu suis yang tidak ketara tetapi sangat penting - "OEM Unlocking" (sesetengah jenama panggil "OEM Unlocking Allowed" atau "Device Unlocking"). Suis ini sendiri tidak akan buka kunci BL, tetapi ia adalah "kebenaran awal": hanya buka ia, pengeluar baru benarkan anda buka kunci BL melalui arahan fastboot atau alat jenama.
+Dalam pilihan pembangun ada satu suis yang tidak ketara tetapi sangat penting - "OEM ,Unlocking" (sesetengah jenama panggil "OEM Unlocking Allowed" atau "Device Unlocking"). Suis ini sendiri tidak akan buka kunci BL, tetapi ia adalah "kebenaran awal": hanya buka ia, pengeluar baru benarkan anda buka kunci BL melalui arahan fastboot atau alat jenama.
 
 - <strong>Paparkan kadar penyegaran semasa skrin, boleh sahkan sama ada App sokong kadar penyegaran tinggi.</strong> Warna GPU palsu — Alat debug render
-- <strong>Hubungan dengan kunci BL</strong>: OEM Unlocking adalah "permohonan kelayakan", buka kunci BL adalah "operasi sebenar". Yang pertama hanya klik dalam tetapan telefon, yang kedua perlu pergi ke laman web pengeluar memohon kod buka kunci, guna komputer jalankan arahan fastboot (seperti <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code> Berikut adalah pilihan yang boleh menyebabkan ketidakstabilan sistem jika salah tetapkan,
+- <strong>Hubungan dengan kunci BL</strong>: OEM Unlocking adalah "permohonan kelayakan", buka kunci BL adalah "operasi sebenar". Yang pertama hanya klik dalam tetapan telefon, yang kedua perlu pergi ke laman web pengeluar memohon kod buka kunci, guna komputer jalankan arahan fastboot (seperti <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code> Berikut ,adalah pilihan yang boleh menyebabkan ketidakstabilan sistem jika salah tetapkan,
 - <strong>jangan cuba tanpa kepastian</strong>: Ya. Suis "OEM Unlocking" akan kembali ke status tutup selepas set semula kilang, tetapi kunci BL sekali dibuka adalah status peringkat fizikal, tidak akan kembali terkunci kerana set semula kilang - perlu pelaksanaan manual <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> Fake Telephony: Ujian pengecaman pembawa, boleh sebabkan isu rangkaian.
 - <strong>Tetapkan pemilihan DSP: Boleh sebabkan audio tidak normal.</strong>: Kecuali anda pasti mahu flash atau Root, jika tidak kekal tutup. Ia dan "USB debugging" adalah dua suis berasingan, semasa flash biasanya perlu buka kedua-dua serentak.
 
@@ -69,7 +69,7 @@ Anti-curi
 
 ##### : Walaupun telefon pintar di-flash, tanpa kata laluan akaun asal ia tidak boleh digunakan.
 
-- <strong>Had waranti</strong>: Membuka kunci BL biasanya bermakna kehilangan waranti rasmi.
+- <strong>Had waranti</strong>: Membuka kunci BL biasanya bermakna kehilangan waranti rasmi
 - <strong>Dasar kunci BL setiap jenama:</strong> Xiaomi
 - <strong>: Boleh dibuka kuncinya, perlu mengikat akaun dan menunggu tempoh (7-30 hari).</strong> Huawei
 
@@ -103,13 +103,13 @@ Tetapan → Aksesibiliti → Boleh ubah teks kejutan → Tambah perintah <code c
 
 ##### 4. Imbasan belakang peranti ‑ Logo belakang ketuk dua kali
 
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb install app.apk</code>: Pasang APK dari komputer ke telefon (<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-r</code> Tetapan → Aksesibiliti → Sentuh → Ketuk Belakang → Pilih "Ketuk Dua Kali" atau "Ketuk Tiga Kali"<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> Boleh tetapkan tindakan: Tangkap skrin, buka Pusat Kawalan, buka kamera, jalankan pintasan dll.
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb uninstall com.xxx.xxx</code>5. OCR skrin penuh ‑ Tangkap skrin terus kenalpasti teks
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb install app.apk</code>: Pasang APK dari komputer ke telefon (<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-r</code> Tetapan.Aksesibiliti.Sentuh.Ketuk Belakang.Pilih "Ketuk Dua Kali" atau "Ketuk Tiga Kali"<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> Boleh tetapkan tindakan: Tangkap skrin, buka Pusat Kawalan, buka kamera, jalankan pintasan dll.
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb uninstall com.xxx.xxx</code>5. OCR skrin penuh ‑ Tangkap skrin terus kenalpasti teks.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Selepas tangkap skrin penuh, ketik butang teks dalam pratonton, boleh pilih sebarang teks dalam gambar untuk salin atau cari.</code> Teknologi: Apple panggil "Live Text", diperkenalkan iOS 15, diperkasai iOS 17 dengan keupayaan kenalpasti video.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">6. Pintar Peribadi (Personal Hotspot) ‑ Kongsikan rangkaian tanpa kata laluan</code>: Tarik fail telefon ke komputer (lebih cepat daripada hantar kepada diri WeChat kemudian muat turun).
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code> Tetapan → Hotspot Peribadi → Benarkan Kebolehpadanan Keluarga <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code> III. ADB: Pengendalian aras kawalan Android
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code> Tetapan → Hotspot Peribadi → Benarkan Kebolehpadanan Keluarga <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code> III. ADB: Pengendalian aras kawalan Android.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot bootloader</code>: Restart telefon masuk mod Fastboot (pintu masuk flash).
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot recovery</code>1. Pasang ADB
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot recovery</code>1. Pasang ADB.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages</code> Muat turin Platform Tools Android SDK (platform-tools-latest-windows.zip) dari laman web rasmi Android. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> Ekstrak ke mana-mana direktori, contoh C:\adb. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-3</code> Dalam terminal (CMD/PowerShell/Git Bash) laksanakan adb, jika papar nombor versi bermakna pemasangan berjaya.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">2. Sambung telefon</code>: Nyahpasang App pra-pasang untuk pengguna semasa, tanpa Root, rujuk praktikal di bawah.
 
@@ -146,7 +146,7 @@ Kebenaran Root setara dengan super user dalam Linux (mempunyai kawalan penuh ke 
 
 - Risiko Root:
 - Kehilangan waranti
-- : Kebanyakan pengeluar tidak mewartikan telefon pintar yang telah di-Root.
+- : Kebanyakan pengeluar tidak mewartikan telefon pintar yang telah di-Root
 - Risiko keselamatan
 
 ##### : App hasad mungkin mendapat kebenaran Root, menyebabkan akibat yang serius.
@@ -155,7 +155,7 @@ Kebenaran Root setara dengan super user dalam Linux (mempunyai kawalan penuh ke 
 - <strong>App perbankan tidak boleh digunakan</strong>: Ramai App perbankan dan pembayaran akan menolak berjalan apabila mengesan Root.
 - <strong>Kemas kini OTA gagal</strong>: Mungkin tidak boleh menerima kemas kini sistem rasmi secara normal.
 - <strong>Amaran Serius</strong> Operasi Root mempunyai risiko tertentu, boleh menyebabkan telefon pintar menjadi bata (tidak boleh dihidupkan). Jika anda baru mula, disyorkan untuk memahami pengetahuan berkaitan dengan secukupnya terlebih dahulu, dan pastikan ada sandaran yang lengkap. Sebelum beroperasi sila baca tutorial dengan teliti, sahkan model dan versi sistem telefon pintar anda.
-- <strong>4. Cadangan untuk Pengguna Biasa</strong> Mod pembangun
+- <strong>4. Cadangan untuk Pengguna Biasa</strong> Mod pembangun.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -165,7 +165,7 @@ Kebenaran Root setara dengan super user dalam Linux (mempunyai kawalan penuh ke 
 Kunci BL
 :::
 
-#### 6. Pengesahan SafetyNet dan Play Integrity: Kenapa App bank tidak boleh guna selepas Root
+6. Pengesahan SafetyNet dan Play Integrity: Kenapa App bank tidak boleh guna selepas Root
 
 Ramai pengguna Root pernah hadapi momen ranap ini: selepas Root bersemangat pasang satu kelompok modul, hasilnya buka App bank - "Peranti anda tidak selamat, tidak boleh guna", Google Pay juga tidak boleh guna, bahkan Netflix enggan mainkan HD. Di sebalik ini adalah dua mekanisme pengesahan integriti peranti Google: SafetyNet lama dan Play Integrity API baru.
 
@@ -173,7 +173,7 @@ Ramai pengguna Root pernah hadapi momen ranap ini: selepas Root bersemangat pasa
 
 - <strong>SafetyNet Attestation (versi lama, sejak 2017)</strong>: API pengesahan integriti peranti awal Google, App melaluinya bertanya pelayan Google "peranti ini sama ada lulus ujian keserasian CTS, sama ada dalam status rasmi tidak diubahsuai". Keputusan dibahagikan kepada Basic Attestation (pengesahan asas) dan Strong Attestation (pengesahan kuat, bergantung kunci perkakasan). Google telah umumkan SafetyNet akan beransur-ansur dihentikan selepas 2024.
 - <strong>Kerosakan sistem: Salah ubah boleh sebabkan telefon tidak boleh but (brick).</strong>: Alternatif yang dilancarkan Google, lebih ketat dan lebih menyeluruh daripada SafetyNet. Selain integriti peranti, juga termasuk "integriti aplikasi" (App sama ada diubahsuai) dan "integriti akaun/kebenaran" (akaun pengguna sama ada dipercayai Google). App baru harus berpindah ke Play Integrity.
-- <strong>Kegagalan App: Banking, pembayaran, Netflix DRM dll App akan enggan berjalan.</strong>: App bank, kewangan, pembayaran (seperti Google Pay, bank dalam talian setiap bank, Alipay/WeChat Pay senario tertentu), media streaming (perlindungan hak cipta HD Netflix), anti-pemipat permainan tertentu (seperti permainan Tencent/NetEase), App pejabat enterprise (semakan pematuhan MDM).
+- <strong>Kegagalan App: Banking, pembayaran, Netflix DRM dll App akan enggan berjalan.</strong>: App bank, kewangan, pembayaran (seperti Google Pay, bank dalam talian setiap bank, Alipay/WeChat Pay senario tertentu). media streaming (perlindungan hak cipta HD Netflix), anti-pemipat permainan tertentu (seperti permainan Tencent/NetEase), App pejabat enterprise (semakan pematuhan MDM).
 
 ##### Google laksanakan SafetyNet (kini diganti Play Integrity API) untuk mengesan peranti root. Selepas dikesan, App sensitif (bank, pembayaran) akan enggan berjalan. Magisk boleh sembunyi root melalui modul Zygisk DenyList, tetapi ini permainan kucing-dan-tikus berterusan antara Google dan komuniti root.
 
@@ -192,7 +192,7 @@ Untuk menikmati kemudahan Root sambil masih boleh guna App bank, komuniti telah 
 
 - <strong>SuperSU</strong>: Skim Systemless Root paling utama - tidak ubah partisi sistem, tetapi capai Root melalui mount. Kelebihan reka bentuk ini adalah kebarangkalian kegagalan kemas kini OTA kecil, nyahpasang lebih bersih, adalah asas semua skim sembunyi berikut. Tetapi guna Magisk masih perlu buka kunci BL.
 - <strong>4. Penggera realiti maya</strong>: Modul sembunyi terbina dalam Magisk awal, boleh sembunyikan Root untuk App tertentu. Tetapi sejak 2021 telah dibuang oleh Magisk rasmi, sebab Google berterusan menaiktaraf kaedah pengesanan, kedua-dua pihak terjebak "permainan kucing dan tikus".
-- <strong>Zygisk</strong> Tetapan → Aksesibiliti → Penggera Realiti Maya
+- <strong>Zygisk</strong> Tetapan → Aksesibiliti → Penggera Realiti Maya.
 - <strong>Shamiko</strong>: Modul sembunyi paling utama kini, bekerjasama dengan Zygisk, boleh untuk App tertentu (mod "senarai putih terbalik") sembunyi Root, sembunyi Magisk sendiri, pemalsuan status kunci Bootloader. Shamiko diedarkan melalui repositori LSPosed atau GitHub.
 - <strong>Play Integrity Fix(osm0sis)</strong>: Modul Magisk khusus untuk pengesanan Google Play Integrity, akan ubah cap jari peranti (fingerprint) biar Google fikir peranti anda adalah model rasmi yang tidak Root.
 
@@ -208,7 +208,7 @@ Google setiap satu masa akan kemas kini peraturan pengesanan, pengeluar App juga
 
 - <strong>Root</strong>7. Input suara
 - <strong>OEM Unlocking dan kunci BL</strong>: Jika anda tidak merancang flash atau Root, kedua-dua suis kekal lalai (tutup) paling selamat.
-- <strong>ADB</strong>: Alat berkuasa tanpa Root, orang biasa juga boleh guna - contohnya guna <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> Bab 8: Digital Legacy — Apa yang berlaku kepada akaun selepas kita tiada
+- <strong>ADB</strong>: Alat berkuasa tanpa Root, orang biasa juga boleh guna - contohnya guna <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> Bab 8: Digital Legacy, Apa yang berlaku kepada akaun selepas kita tiada
 - <strong>Kunci Bootloader</strong>: Pengguna biasa tidak disyorkan Root, risiko lebih besar daripada manfaat. Jika benar-benar perlu fungsi tertentu, boleh dahulu faham sama ada ada alternatif tanpa Root (seperti guna ADB nyahpasang pra-pasang, guna Shizuku ganti sebahagian fungsi Root).
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -217,8 +217,8 @@ Google setiap satu masa akan kemas kini peraturan pengesanan, pengeluar App juga
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Rasakan sama ada telefon pintar menjadi lebih pantas.
-2. Lampiran Bab 20: Termux — Persekitaran Terminal Linux Mudah Alih pada Peranti Android
+2. Lampiran Bab 20: Termux: Persekitaran Terminal Linux Mudah Alih pada Peranti Android.
 3. Jika anda rasa mod pembangun masih belum cukup "keras", dan mahu mengalami baris perintah Linux yang lengkap pada telefon pintar, maka Termux adalah untuk anda. Ia tidak memerlukan kebenaran root, dan boleh menjadikan telefon pintar Android biasa menjadi stesen kerja Linux mudah alih, merupakan senjata ampuh bagi pengguna lanjutan untuk menerokai pembangunan dan pentadbiran mudah alih.
-4. 1. Apakah itu Termux
+4. 1. Apakah itu Termux.
 5. Termux adalah emulator terminal sumber terbuka dan aplikasi persekitaran Linux yang direka khusus untuk peranti Android, ia tidak memerlukan kebenaran root untuk menyediakan pengalaman shell Linux yang lengkap pada telefon pintar. Sebagai aplikasi ringan (pakej pemasangan hanya kira-kira 30MB), Termux menyokong ekosistem perisian yang kaya melalui sistem pengurusan pakej APT, membolehkan pengguna menjalankan Python, Node.js, Git, SSH dan alat lain pada peranti mudah alih, malah membina pelayan atau melakukan ujian penembusan.
 :::

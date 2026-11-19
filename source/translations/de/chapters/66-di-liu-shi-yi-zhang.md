@@ -90,7 +90,7 @@ Achtung: ! ist eine Hochrisiko-Operation
 Im Code nickname! zu schreiben (erzwungenes Entpacken) ist, als riefst du dem Compiler zu: „Ich versichere, dass es nicht nil ist“ – liegst du falsch, stürzt die App auf der Stelle ab. Für Einsteiger gilt: möglichst if let / ?? verwenden, nicht !. Wenn Xcode Code vervollständigt, fügt es gelegentlich eigenmächtig ein ! an – denk daran, das zu entfernen.
 :::
 
-#### 3. Funktionen und Closures: Logik in „Schaltflächen“ verpacken
+3. Funktionen und Closures: Logik in „Schaltflächen“ verpacken
 
 Eine Funktion ist ein Stück Logik mit Namen, wie eine Taste auf der Fernbedienung. Eine Closure dagegen ist eine „Funktion ohne Namen“, die du jederzeit weiterreichen kannst:
 

@@ -2,19 +2,19 @@
 id: di-er-shi-san-zhang
 num: 23
 part: chao-yue-pian
-nav: Capitolo 23: Pensiero informatico e prime nozioni di automazione
+nav: Capitolo 23: Lascia al telefono i compiti ripetitivi
 toc: default
 kind: chapter
 ---
 
-### Capitolo 23: Pensiero computazionale e introduzione all'automazione
+### Capitolo 23: Lascia al telefono i compiti ripetitivi
 
 {class="chapter-intro mb-4"}
-Nei due capitoli precedenti abbiamo costruito un "muro di confine" di sicurezza attorno al telefono e ne abbiamo visto il "cervello IA" sempre più intelligente all'interno. Ora sblocchiamo una delle potenzialità ultime del telefono: fargli "pensare" come un programmatore e fargli completare automaticamente una sequenza di compiti che hai impostato. Potresti dire: "Non so scrivere codice, cosa c'entra con me?" Stai tranquillo, in questo capitolo non dovrai scrivere nemmeno una riga di codice — i telefoni moderni hanno abbassato la soglia della "programmazione" fino a renderla fattibile con semplici drag-and-drop.
+Nei due capitoli precedenti abbiamo costruito un "muro di confine" di sicurezza attorno al telefono , e ne abbiamo visto il "cervello IA" sempre più intelligente all'interno. Ora sblocchiamo una delle potenzialità ultime del telefono: fargli "pensare" come un programmatore e fargli completare automaticamente una sequenza di compiti che hai impostato. Potresti dire: "Non so scrivere codice, cosa c'entra con me?" Stai tranquillo, in questo capitolo non dovrai scrivere nemmeno una riga di codice, i telefoni moderni hanno abbassato la soglia della "programmazione" fino a renderla fattibile con semplici drag-and-drop.
 
 #### 1. Cos'è davvero l'automazione?
 
-In parole povere, l'automazione è: <strong>far fare al telefono una serie di cose automaticamente quando si verifica una certa condizione.</strong> Non devi operare manualmente ogni volta, né ricordarti cosa fare — il telefono giudica da solo il momento ed esegue da solo.
+In parole povere, l'automazione è: <strong>far fare al telefono una serie di cose automaticamente quando si verifica una certa condizione.</strong> Non devi operare manualmente ogni volta, né ricordarti cosa fare, il telefono giudica da solo il momento ed esegue da solo.
 
 Un esempio: ogni mattina quando ti svegli devi disattivare manualmente la modalità Non disturbare, aprire WeChat per vedere i messaggi, aprire l'app del meteo per scegliere cosa metterti, aprire NetEase Cloud per far partire una canzone. Se impacchetti questi passaggi in un flusso di automazione, impostato su "esegui automaticamente ogni mattina alle 7", al risveglio ti basta prendere il telefono: è già tutto pronto. Bello, no?
 
@@ -24,19 +24,19 @@ L'automazione in sostanza è una catena logica "se... allora...", l'if-else dell
 2. <strong>Azione da eseguire</strong>: cosa fare concretamente? Può essere inviare un messaggio WeChat, aprire un'app, regolare il volume, cambiare sfondo, riprodurre musica, inviare una notifica... Quasi tutto ciò che fai manualmente sul telefono, l'automazione può farlo.
 3. <strong>Logica intermedia</strong> (facoltativa ma potente): se la situazione è A fai X, altrimenti fai Y. Ad esempio "se è un giorno lavorativo riproduci un podcast di notizie, nel fine settimana riproduci musica": si chiama diramazione condizionale.
 
-#### 2. "Comandi rapidi" di iOS — lo strumento di automazione per gli utenti Apple
+2. "Comandi rapidi" di iOS — lo strumento di automazione per gli utenti Apple
 
 L'app "Comandi rapidi" (Shortcuts) di Apple è preinstallata, non serve scaricarla. Il suo concetto chiave è assemblare le varie operazioni come mattoncini. Vediamo alcuni concetti chiave:
 
 - <strong>"Comando rapido"</strong>: un flusso di automazione completo, che si può eseguire con un tocco o attivare via voce con Siri. Ad esempio, dicendo "Ehi Siri, modalità rientro", esegue automaticamente la sequenza di operazioni che hai impostato.
-- <strong>"Automazione"</strong>: comando eseguito automaticamente in base a un innesco, senza doverlo attivare manualmente. Ad esempio "quando il telefono si connette al Bluetooth dell'auto, apri automaticamente l'app mappe". Le automazioni si impostano nella scheda "Automazione", separata dai "Comandi rapidi".
+- <strong>"Automazione"</strong>: comando eseguito automaticamente in base a un innesco. Senza doverlo attivare manualmente. Ad esempio "quando il telefono si connette al Bluetooth dell'auto, apri automaticamente l'app mappe". Le automazioni si impostano nella scheda "Automazione", separata dai "Comandi rapidi".
 - <strong>"Azione"</strong>: l'unità di esecuzione minima. Aprire un'app è un'azione, inviare un messaggio è un'azione, ottenere il meteo è un'azione, regolare la luminosità è un'azione. Puoi concatenare centinaia o migliaia di azioni.
 
 Ecco alcuni esempi davvero utili, seguili una volta e capirai:
 
 ##### Esempio 1: "Flusso buongiorno" con un tocco
 
-Ogni mattina tocca una volta (o dì a Siri "buongiorno") e il telefono automaticamente: ottiene il meteo di oggi → legge a voce alta meteo e temperatura → mostra gli impegni di calendario di oggi → apre l'app musicale che usi di più e inizia la riproduzione. Passaggi: nuovo comando rapido → aggiungi azione "Ottieni meteo attuale" → aggiungi "Leggi testo" → aggiungi "Ottieni eventi calendario" → aggiungi "Mostra promemoria" → aggiungi "Apri app" e scegli NetEase Cloud Music. Tutto qui, tutto tramite drag-and-drop.
+Ogni mattina tocca una volta (o dì a Siri "buongiorno") e il telefono automaticamente: ottiene il meteo di oggi → legge a voce alta meteo , e temperatura → mostra gli impegni di calendario di oggi → apre l'app musicale che usi di più e inizia la riproduzione. Passaggi: nuovo comando rapido → aggiungi azione "Ottieni meteo attuale" → aggiungi "Leggi testo" → aggiungi "Ottieni eventi calendario" → aggiungi "Mostra promemoria" → aggiungi "Apri app" e scegli NetEase Cloud Music. Tutto qui, tutto tramite drag-and-drop.
 
 ##### Esempio 2: "Modalità risparmio energia" automatica
 
@@ -44,7 +44,7 @@ Nella scheda "Automazione", crea una nuova automazione → scegli "Livello batte
 
 ##### Esempio 3: registrazione contabile automatica dopo scansione
 
-Ogni volta che paghi scansionando il codice con WeChat/Alipay, il telefono legge la notifica di pagamento e registra automaticamente importo e esercente in una nota o in un foglio Numbers. Questo richiede l'uso dell'innesco "ricezione SMS/notifica" nell'automazione dei Comandi rapidi (in iOS 17+ è supportata la lettura delle transazioni Wallet), combinato con l'azione "Aggiungi a Numbers". Per chi vuole tenere i conti ma è troppo pigro per farlo a mano, è una salvezza.
+Ogni volta che paghi scansionando il codice con WeChat/Alipay, il telefono legge la notifica di pagamento e registra automaticamente importo e esercente in una nota o in un foglio Numbers. Questo richiede l'uso dell'innesco "ricezione SMS/notifica" nell'automazione dei Comandi rapidi, (in iOS 17+ è supportata la lettura delle transazioni Wallet), combinato con l'azione "Aggiungi a Numbers". Per chi vuole tenere i conti ma è troppo pigro per farlo a mano, è una salvezza.
 
 C'è anche un uso ingegnoso che molti non conoscono: puoi aggiungere un comando rapido alla schermata Home, trasformandolo in un'icona app. Ad esempio, crea un comando rapido "Taxi per casa", metti l'icona sul desktop: con un tocco apre DiDi e imposta automaticamente la destinazione su casa, molto più veloce che aprire l'app e digitare a mano.
 
@@ -54,7 +54,7 @@ Sul fronte Android la situazione è un po' più complessa, ma anche il tetto è 
 
 ##### Livello base: auto-clicker
 
-Molti telefoni Android integrano un "auto-clicker" o lo si può scaricare dallo store. Il principio è semplicissimo: tu operi a mano una volta, lui registra le coordinate dei tocchi e gli intervalli, poi li riproduce ad alta velocità. Ad esempio, se un'app offre un premio giornaliero di check-in, registri il flusso una volta e poi lo riproduci ogni giorno in automatico. Svantaggio: riconosce solo le coordinate, se il layout dell'interfaccia cambia (ad esempio compare una pubblicità), clicca nel punto sbagliato.
+Molti telefoni Android integrano un "auto-clicker" o lo si può scaricare dallo store. Il principio è semplicissimo: tu operi a mano una volta. Lui registra le coordinate dei tocchi e gli intervalli, poi li riproduce ad alta velocità. Ad esempio, se un'app offre un premio giornaliero di check-in, registri il flusso una volta e poi lo riproduci ogni giorno in automatico. Svantaggio: riconosce solo le coordinate, se il layout dell'interfaccia cambia (ad esempio compare una pubblicità), clicca nel punto sbagliato.
 
 ##### Livello avanzato: Tasker — il re dell'automazione Android
 
@@ -91,14 +91,14 @@ L'automazione non è tutta rose e fiori; alcune trappole le ho già esplorate pe
 - <strong>L'innesco di posizione può non funzionare bene</strong>: l'innesco "arrivo/partenza da una posizione" di iOS usa la tecnologia dei geofence, la precisione dipende dal segnale GPS e dall'ottimizzazione del sistema. A volte si innesca solo dieci minuti dopo che sei arrivato a casa. Meglio usare l'innesco su connessione Wi-Fi o cella al posto di quello di posizione: più affidabile e più risparmiatore di batteria.
 - <strong>L'"automazione" dei Comandi rapidi richiede autorizzazione</strong>: in iOS, la maggior parte degli inneschi nella scheda "Automazione" richiede conferma manuale per essere eseguita (meccanismo di sicurezza di iOS). Ma connessione Wi-Fi, connessione Bluetooth e spegnimento della sveglia sono inneschi che possono girare davvero in automatico, senza conferma.
 - <strong>Tasker richiede l'attivazione dell'accessibilità</strong>: molte funzioni avanzate (come la simulazione dei tocchi) richiedono l'autorizzazione del servizio di accessibilità, che fa comparire una notifica permanente nelle impostazioni. È una scelta di sicurezza di Android, non rimovibile.
-- <strong>Non rendere l'automazione troppo complessa</strong>: alle prime armi inizia con piccoli flussi da "2-3 azioni". Non lanciarti subito in un super-flusso da 20 passaggi — diventeresti pazzo a debuggarlo.
+- <strong>Non rendere l'automazione troppo complessa</strong>: alle prime armi inizia con piccoli flussi da "2-3 azioni". Non lanciarti subito in un super-flusso da 20 passaggi, diventeresti pazzo a debuggarlo.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>Suggerimento: la postura giusta per iniziare con l'automazione
 
 {class="mt-1"}
-Prenditi 5 minuti per pensare: quali sono le 3 cose che ripeti di più sul telefono ogni giorno? Ad esempio le operazioni di routine mattutine, le abitudini dopo aver collegato le cuffie Bluetooth, le impostazioni prima di uscire... Parti da queste piccole cose ad alta frequenza e crea per ciascuna una semplice automazione. Anche se ogni automazione ti risparmia solo 5 secondi, nel lungo periodo è tanto. E la soddisfazione di vedere funzionare il risultato crea davvero dipendenza.
+Prenditi 5 minuti per pensare: quali sono le 3 cose che ripeti di più sul telefono ogni giorno? Ad esempio le operazioni di routine mattutine, le abitudini dopo aver collegato le cuffie Bluetooth, le impostazioni prima di uscire... Parti da queste piccole cose ad alta frequenza e crea per ciascuna una semplice automazione. Anche se ogni automazione ti risparmia solo 5 secondi. Nel lungo periodo è tanto. E la soddisfazione di vedere funzionare il risultato crea davvero dipendenza.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

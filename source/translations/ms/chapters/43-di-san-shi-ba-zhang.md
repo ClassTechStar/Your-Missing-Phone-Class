@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Jika buku ini hanya mampu membuat anda mengingati satu bab, ia mesti bab ini. Lima prinsip pemikiran ialah jantung seluruh buku; semua bab seterusnya - konteks, keperluan, dialog, kualiti - ialah pengembangan lima prinsip ini dalam pelbagai senario. Jangan risau, setiap satu tidak sukar difahami, tetapi setiap satu patut anda "tumbuhkan ke dalam otot" melalui beberapa projek.
 
-Titik permulaan kisah ini menarik: ketika membuka sumber projeknya, Andrej Karpathy menyertakan satu fail CLAUDE.md yang hanya 70 baris, merumuskan empat prinsip teras kerjasama dengan AI. Fail ini memperoleh lebih 70,000 Star di GitHub, menjadi panduan yang paling meluas dipetik oleh pengamal pengaturcaraan AI di seluruh dunia. Empat prinsip ini bukan slogan kosong, tetapi tabiat berfikir yang boleh dilaksanakan, disuling daripada banyak amalan. Buku ini menambah prinsip kelima di atas asasnya - iterasi dan pengesahan - membentuk sistem lima prinsip yang lengkap.
+Titik permulaan kisah ini menarik: ketika membuka sumber projeknya, Andrej Karpathy menyertakan satu fail CLAUDE.md yang hanya 70 baris, merumuskan empat prinsip teras kerjasama dengan AI. Fail ini memperoleh lebih 70,000 Star di GitHub, menjadi panduan yang paling meluas dipetik oleh pengamal pengaturcaraan AI di seluruh dunia. Empat prinsip ini bukan slogan kosong. tetapi tabiat berfikir yang boleh dilaksanakan, disuling daripada banyak amalan. Buku ini menambah prinsip kelima di atas asasnya - iterasi dan pengesahan - membentuk sistem lima prinsip yang lengkap.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -22,9 +22,9 @@ Mengapa fail 70 baris begitu bernilai?
 Apakah makna 70,000 Star? Sebahagian besar projek di GitHub seumur hidupnya tidak akan capai angka itu. Satu fail teks 70 baris dapat memperolehnya, justru membuktikan satu perkara: pada era AI, yang paling langka bukan kod, tetapi kebolehan "memikirkan dengan jelas". 70 baris ini ialah versi termampat daripada "memikirkan dengan jelas".
 :::
 
-#### 1. Prinsip satu: Think Before Coding (berfikir dahulu, kemudian mengekod)
+1. Prinsip satu: Think Before Coding (berfikir dahulu, kemudian mengekod)
 
-Ini prinsip yang paling melawan intuisi antara lima prinsip. Memandangkan AI boleh membantu kita menulis kod, mengapa masih perlu "berfikir dahulu"? Jawapannya mudah: kualiti hasil AI berkorelasi positif dengan kualiti input anda. Jika anda sendiri tidak jelas tentang apa yang hendak dibuat, jawapan AI hanya akan menyebabkan anda terjebak dalam kitaran "baik pulang berulang-ulang" tanpa henti - digelar "AI sesat bersama-sama dengan anda".
+Ini prinsip yang paling melawan intuisi antara lima prinsip. Memandangkan AI boleh membantu kita menulis kod, mengapa masih perlu "berfikir dahulu"? Jawapannya mudah: kualiti hasil AI berkorelasi positif dengan kualiti input anda. Jika anda sendiri tidak jelas tentang apa yang hendak dibuat, jawapan AI hanya akan menyebabkan anda terjebak dalam kitaran "baik pulang ,berulang-ulang" tanpa henti - digelar "AI sesat bersama-sama dengan anda".
 
 "Berfikir dahulu" bermaksud sebelum memberi arahan kepada AI, anda perlu menjawab tiga soalan; ketiga-tiganya membentuk satu "segi tiga pemikiran" yang tiada satu pun boleh diketepikan:
 
@@ -46,7 +46,7 @@ Perbandingan input kabur dan input jelas bagi keperluan yang sama
 Perhatian: berfikir dahulu bukan bermakna menulis dokumen sempurna dahulu
 
 {class="mt-1"}
-"Berfikir dahulu" tidak sama dengan "tulis satu PRD yang sempurna dahulu baru bermula". Ia satu proses berfikir yang pantas tetapi tersusun - meluangkan 30 saat memikirkan tiga soalan di atas dengan jelas jauh lebih cekap daripada meluangkan 30 minit membaiki berulang kali dalam perbualan. Untuk tugas kecil, tiga soalan itu boleh jadi sangat ringkas; untuk projek besar, ia boleh dikembangkan menjadi dokumen keperluan lengkap (lihat Bab 40 untuk butiran).
+"Berfikir dahulu" tidak sama dengan "tulis satu PRD yang sempurna dahulu baru bermula". Ia satu proses berfikir yang pantas tetapi tersusun - meluangkan 30 saat memikirkan tiga soalan di atas dengan jelas jauh lebih cekap dari,pada meluangkan 30 minit membaiki berulang kali dalam perbualan. Untuk tugas kecil, tiga soalan itu boleh jadi sangat ringkas; untuk projek besar, ia boleh dikembangkan menjadi dokumen keperluan lengkap (lihat Bab 40 untuk butiran).
 :::
 
 #### 2. Prinsip dua: Simplicity First (utamakan kesederhanaan)
@@ -60,7 +60,7 @@ Dalam amalan, "utamakan kesederhanaan" bermaksud beberapa tabiat operasi yang ko
 - Setiap kali hanya biarkan AI melaksanakan satu titik fungsi, bukannya menerangkan keseluruhan sistem sekali gus;
 - Utamakan pustaka standard dan penyelesaian mudah, bukannya memperkenalkan kebergantungan yang rumit;
 - Masalah yang boleh diselesaikan dengan 50 baris kod, jangan biarkan AI menulis 500 baris;
-- Apabila hasil AI melampaui jangkaan, beranilah memberitahunya "potong bahagian yang berlebihan".
+- Apabila hasil AI melampaui jangkaan, beranilah memberitahunya "potong bahagian yang berlebihan"
 
 ::: div .overflow-x-auto
 ```html
@@ -75,7 +75,7 @@ Perbandingan penyelesaian berlebihan dan penyelesaian mudah bagi senario biasa
 
 Apabila anda mengiterasi satu projek sedia ada, setiap pindaan patut tepat seperti pembedahan - hanya sentuh bahagian yang patut disentuh, jangan ganggu yang tidak patut. Perkara ini amat penting dalam pengaturcaraan AI, kerana AI ada kecenderungan "sambil lewa membaikit sedikit": anda menyuruhnya membaiki satu bug, ia mungkin sambil itu merestrukturkan separuh fail.
 
-Tuntutan teras "pindaan yang tepat" ialah: setiap arahan kepada AI mesti menyatakan dengan jelas skop dan sempadan pindaan. Beritahunya "hanya pinda fungsi calculate_discount" "jangan sentuh bahagian lain" "kekalkan gaya kod sedia ada". Apabila pindaan AI melampaui skop yang anda minta, minta segera ia mengembalikan bahagian berlebihan.
+Tuntutan teras "pindaan yang tepat" ialah: setiap arahan kepada AI mesti menyatakan dengan jelas skop dan sempadan pindaan. Beritahunya "hanya pinda fungsi calculate_discount" "jangan sentuh bahagian lain" "kekalkan gaya kod sedia ada". Apabila pindaan AI melampaui skop yang anda minta. minta segera ia mengembalikan bahagian berlebihan.
 
 Karpathy menjelaskan perkara ini dengan satu contoh diff (perbandingan perbezaan). Katakan anda meminta AI menambah logik "harga ahli" pada fungsi pengiraan diskaun troli beli-belah: hasil yang baik ialah hanya meminda fungsi itu dan menambah beberapa baris kod; hasil yang buruk ialah merestrukturkan keseluruhan fail - walaupun kod baharu mungkin lebih "anggun", anda tidak dapat pasti sama ada ia memperkenalkan bug baharu. Dalam pengaturcaraan AI, "nampak lebih baik" tidak pernah boleh menjadi alasan untuk menyeleweng daripada arahan.
 
@@ -93,11 +93,15 @@ Bantu saya optimumkan logik pengiraan diskaun projek ini
 Arahan yang baik (skop dinyatakan dengan tepat)
 
 {class="font-mono text-xs leading-relaxed"}
-Hanya pinda fungsi calculate_discount dalam cart.py: 1. Tambahkan logik harga ahli di atas diskaun sedia ada 2. Pengguna ahli menikmati diskaun tambahan 10% 3. Jangan pinda tandatangan fungsi dan fungsi lain 4. Kekalkan gaya penamaan pemboleh ubah sedia ada
+Hanya pinda fungsi calculate_discount dalam cart.py:mboleh ubah sedia ada
+1. Tambahkan logik harga ahli di atas diskaun sedia ada
+2. Pengguna ahli menikmati diskaun tambahan 10%
+3. Jangan pinda tandatangan fungsi dan fungsi lain
+4. Kekalkan gaya penamaan pe
 :::
 :::
 
-#### 4. Prinsip empat: Goal-Driven Execution (pelaksanaan didorong matlamat)
+4. Prinsip empat: Goal-Driven Execution (pelaksanaan didorong matlamat)
 
 Prinsip ini menjawab satu soalan utama: patutkah anda memberi AI arahan "bagaimana melakukannya" atau arahan "apa yang perlu dilakukan"? Jawapan Karpathy ialah yang kedua. Daripada memberitahu AI "cipta satu kelas dahulu, kemudian tambah kaedah, kemudian tulis ujian", lebih baik beritahunya "saya perlukan satu alat yang boleh menghurai fail CSV dan mengira bilangan nilai unik setiap lajur". Biarkan AI menentukan sendiri laluan pelaksanaan, dan anda bertanggungjawab menerima hasilnya.
 
@@ -176,7 +180,7 @@ Bab-bab seterusnya dalam buku ini, pada hakikatnya semuanya mengajar anda bagaim
 Mari praktik: huraikan idea seterusnya anda dengan "segi tiga pemikiran"
 
 {class="mt-1"}
-Pilih satu benda kecil yang anda sentiasa mahu buat tetapi belum mula (contohnya satu laman web kira hari unduran, satu skrip peringatan minum air). Luangkan 3 minit untuk menjawab: (1) Masalah apa yang ia selesaikan? (2) Bagaimana rupanya apabila siap? (3) Apakah kekangannya (masa, teknologi, persekitaran)? Kemudian tulis jawapan itu menjadi satu perenggan. Tahniah, anda telah menyiapkan "Think Before Coding" pertama dalam hidup anda - perenggan itu sendiri ialah satu arahan berkualiti tinggi yang memenuhi syarat.
+Pilih satu benda kecil yang anda sentiasa mahu buat tetapi belum mula (contohnya satu laman web kira hari unduran, satu skrip peringatan minum air). Luangkan 3 minit untuk menjawab: (1) Masalah apa yang ia selesaikan? (2) Bagaimana rupanya apabila siap? (3) Apakah kekangannya (masa, teknologi, persekitaran)? Kemudian tulis jawapan itu menjadi satu perenggan. Tahniah, anda telah menyiapkan "Think Before Coding" pertama dalam hidup anda - ,perenggan itu sendiri ialah satu arahan berkualiti tinggi yang memenuhi syarat.
 :::
 
 ::: div .chapter-summary

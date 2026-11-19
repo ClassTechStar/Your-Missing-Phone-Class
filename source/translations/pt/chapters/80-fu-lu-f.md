@@ -10,7 +10,7 @@ after_part: fu-lu
 ### Apêndice F: Tópico Especial sobre Compra e Uso de Celulares com Tela Dobrável
 
 {class="chapter-intro mb-4"}
-As telas dobráveis já passaram de "tecnologia do futuro" para uma categoria madura "disponível agora". Mas elas diferem bastante dos celulares tradicionais em formato, hábitos de uso e métodos de conservação. Se vale a pena comprar, como escolher e como usar — este capítulo ajudará você a esclarecer tudo.
+As telas dobráveis já passaram de "tecnologia do futuro" para uma categoria madura "disponível agora". Mas elas diferem bastante dos celulares tradicionais em formato. Hábitos de uso e métodos de conservação. Se vale a pena comprar, como escolher e como usar — este capítulo ajudará você a esclarecer tudo.
 
 #### I. Em que estágio estão as telas dobráveis atualmente?
 
@@ -37,7 +37,7 @@ Com base no feedback de usuários reais, estes tipos de pessoas têm alta probab
 
 1. <strong>Usuários intensivos de leitura/processamento de documentos</strong>: Frequentemente leem PDFs, anotam documentos e leem textos longos no celular. A tela interna de quase 7,5 polegadas quando aberta permite ver PDFs A4 sem zoom — uma mudança qualitativa na experiência.
 2. <strong>Usuários corporativos que viajam/participam de reuniões com frequência</strong>: Não querem carregar um tablet mas acham a tela do celular pequena. O dobrável horizontal aberto para ver PPTs, assinar contratos, comparar e-mails em tela dupla é muito mais eficiente que o celular tradicional.
-3. <strong>Pessoas que gostam de criar no "modo suspenso"</strong>: Dobrado a 90 graus apoiado na mesa, metade superior para visor, metade inferior para disparar (selfies/time-lapse), metade superior para vídeo, metade inferior para anotações, metade superior para live, metade inferior para comentários — isso é algo que o celular tradicional não consegue fazer.
+3. <strong>Pessoas que gostam de criar no "modo suspenso"</strong>: Dobrado a 90 graus apoiado na mesa, metade superior para visor, metade inferior para disparar (selfies/time-lapse), metade superior para vídeo, metade inferior para anotações, metade superior para live, metade inferior para comentários, isso é algo que o celular tradicional não consegue fazer.
 4. <strong>Usuárias que buscam portabilidade com tela grande</strong>: O dobrável vertical fechado cabe em bolsas pequenas, aberto é um celular normal, e a tela externa ainda serve como espelho de maquiagem e para ver notificações.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -45,9 +45,9 @@ Com base no feedback de usuários reais, estes tipos de pessoas têm alta probab
 <i class="fas fa-triangle-exclamation mr-2"></i>Estes tipos de pessoas NÃO devem comprar
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Quem usa o celular só para ver vídeos curtos, conversar no WeChat e fazer chamadas — o dobrável não traz nenhum benefício para você, e ainda é mais pesado e grosso.
-- Pessoas com mãos pequenas ou tendinite no pulso — o dobrável horizontal aberto geralmente pesa mais de 230 g, cansativo de segurar com uma mão.
-- Quem tem orçamento apertado e precisa usar o mesmo celular por mais de 4 anos — o valor de revenda dos dobráveis é menor que o dos celulares tradicionais, e o custo de reparo é alto.
+- Quem usa o celular só para ver vídeos curtos, conversar no WeChat e fazer chamadas, o dobrável não traz nenhum benefício para você, e ainda é mais pesado e grosso.
+- Pessoas com mãos pequenas ou tendinite no pulso, o dobrável horizontal aberto geralmente pesa mais de 230 g, cansativo de segurar com uma mão.
+- Quem tem orçamento apertado e precisa usar o mesmo celular por mais de 4 anos, o valor de revenda dos dobráveis é menor que o dos celulares tradicionais, e o custo de reparo é alto.
 :::
 
 #### III. Pontos-chave na compra: observe estes 6 indicadores
@@ -115,13 +115,13 @@ O mais delicado nos dobráveis é a tela interna e a dobradiça. Estes hábitos 
 <i class="fas fa-skull-crossbones mr-2"></i>Cenários comuns de danos à tela interna
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Fechar com cabo de fone/carregador preso — quebra a tela interna diretamente.
+- Fechar com cabo de fone/carregador preso, quebra a tela interna diretamente.
 - Colocar na bolsa misturado com chaves — a tela externa fica intacta, mas a interna sofre rachaduras por pressão das chaves.
 - No inverno, sair do frio para um ambiente aquecido e abrir imediatamente — a diferença de temperatura causa estresse no vidro.
-- Após um ano de uso, achar que "o vinco ficou mais profundo" e remover a película original — remover a película danifica a tela interna junto.
+- Após um ano de uso, achar que "o vinco ficou mais profundo" e remover a película original, remover a película danifica a tela interna junto.
 :::
 
-#### VI. As "armadilhas" e expectativas realistas sobre os dobráveis
+VI. As "armadilhas" e expectativas realistas sobre os dobráveis
 
 Antes de comprar, tenha estas contas em mente:
 
@@ -137,7 +137,7 @@ Antes de comprar, tenha estas contas em mente:
 <i class="fas fa-quote-left mr-2" aria-hidden="true"></i>O dobrável não é "um celular melhor", mas "um celular de outro formato". Compre-o porque você precisa do formato único dele, não porque ele é "mais avançado".
 
 {class="text-right text-sm"}
-—— Filosofia de compra sobre telas dobráveis
+—, Filosofia de compra sobre telas dobráveis
 :::
 
 #### VII. Como escolher entre as principais marcas (2026)

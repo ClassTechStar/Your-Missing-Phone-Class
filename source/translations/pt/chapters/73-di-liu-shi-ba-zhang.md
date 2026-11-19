@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 68: O caminho avançado — permissões, notificações e arquitetura moderna
 
 {class="chapter-intro mb-4"}
-Conseguir fazer um App é só o começo. Este capítulo fala das etapas que levam de "saber fazer" a "fazer bem": como pedir permissões com elegância, como enviar notificações sem incomodar, como elevar a arquitetura mais um nível e — em 2026 — como programar iOS em parceria com a IA. Cada ponto é algo que você vai encontrar de imediato em projetos reais.
+Conseguir fazer um App é só o começo. Este capítulo fala das etapas que levam de "saber fazer" a "fazer bem": como pedir permissões com elegância, como enviar notificações sem incomodar, como elevar a arquitetura mais um nível e, em 2026 — como programar iOS em parceria com a IA. Cada ponto é algo que você vai encontrar de imediato em projetos reais.
 
 #### 1. Permissões: primeiro bata na porta, depois entre
 
@@ -51,12 +51,12 @@ class LocationModel {
 Atenção: a permissão no iOS vale "uma vez só"
 
 {class="mt-1"}
-O pop-up de permissão do iOS aparece apenas uma vez — depois que o usuário recusa, ele nunca mais aparece. Por isso: escolha o momento "em que o usuário está prestes a usar" (e não empilhe pop-ups logo na abertura) e escreva um texto explicando a finalidade. A orientação na tela após uma recusa ("ative a localização em Configurações") é item obrigatório — não deixe o usuário preso em um beco sem saída.
+O pop-up de permissão do iOS aparece apenas uma vez, depois que o usuário recusa, ele nunca mais aparece. Por isso: escolha o momento "em que o usuário está prestes a usar" (e não empilhe pop-ups logo na abertura) e escreva um texto explicando a finalidade. A orientação na tela após uma recusa ("ative a localização em Configurações") é item obrigatório: não deixe o usuário preso em um beco sem saída.
 :::
 
 #### 2. Notificações: dizer algo útil na hora certa
 
-A notificação é o canal do App para alcançar o usuário — e também o recurso mais fácil de ser "bloqueado". No iOS usa-se o framework UserNotifications, com três regras de ouro: enviar só o que é útil, permitir que o usuário desligue e não importunar de madrugada. Uso básico:
+A notificação é o canal do App para alcançar o usuário, e também o recurso mais fácil de ser "bloqueado". No iOS usa-se o framework UserNotifications, com três regras de ouro: enviar só o que é útil, permitir que o usuário desligue e não importunar de madrugada. Uso básico:
 
 ::: div .code-block
 :::inline div .code-head
@@ -93,22 +93,22 @@ func scheduleDailyReminder() {
 ```
 :::
 
-Atenção: a permissão de notificações no iOS também aparece "só uma vez", e o usuário pode desativá-la a qualquer momento nas Configurações — por isso o valor percebido do conteúdo é essencial: um único excesso de envio pode fazer você perder o usuário para sempre.
+Atenção: a permissão de notificações no iOS também aparece "só uma vez", e o usuário pode desativá-la a qualquer momento nas Configurações, por isso o valor percebido do conteúdo é essencial: um único excesso de envio pode fazer você perder o usuário para sempre.
 
-#### 3. Arquitetura avançada: aprofundando o MVVM e a testabilidade
+3. Arquitetura avançada: aprofundando o MVVM e a testabilidade
 
 O Capítulo 65 já usou o MVVM; aqui vão três pontos avançados para complementar:
 
-- Abstração por protocolo: faça o ViewModel depender de um protocol em vez de uma classe concreta — nos testes dá para injetar uma "fonte de dados falsa"; é a base da testabilidade;
+- Abstração por protocolo: faça o ViewModel depender de um protocol em vez de uma classe concreta: nos testes dá para injetar uma "fonte de dados falsa"; é a base da testabilidade;
 - Responsabilidade única: um ViewModel cuida de uma coisa só (o de anotações não cuida do tempo); quando as funções aumentam, separe;
-- Não exagere na engenharia: em um projeto pequeno de uma pessoa só, "classe @Observable + abstração por protocolo" já basta. Arquiteturas pesadas como VIPER e Clean Architecture ficam para quando a equipe e a complexidade baterem à porta — a ferramenta serve para atingir objetivos, não para exibir.
+- Não exagere na engenharia: em um projeto pequeno de uma pessoa só, "classe @Observable + abstração por protocolo" já basta. Arquiteturas pesadas como VIPER e Clean Architecture ficam para quando a equipe e a complexidade baterem à porta, a ferramenta serve para atingir objetivos, não para exibir
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Dica: os "dividendos do ecossistema" do SwiftUI
 
 {class="mt-1"}
-O ecossistema iOS ainda tem dois recursos avançados exclusivos: os widgets (WidgetKit) permitem ver informações sem abrir o App (coloque o "gasto do mês" do livro-caixa na tela inicial) e os atalhos (App Intents) permitem acionar suas funções pela Siri ou por automações. Ambos têm frameworks oficiais, custo de entrada baixo e um ganho enorme na experiência do usuário — no caminho avançado, vale desbloqueá-los primeiro.
+O ecossistema iOS ainda tem dois recursos avançados exclusivos: os widgets (WidgetKit) permitem ver informações sem abrir o App, (coloque o "gasto do mês" do livro-caixa na tela inicial) e os atalhos (App Intents) permitem acionar suas funções pela Siri ou por automações. Ambos têm frameworks oficiais, custo de entrada baixo e um ganho enorme na experiência do usuário, no caminho avançado, vale desbloqueá-los primeiro.
 :::
 
 #### 4. A novidade de 2026: desenvolvimento iOS assistido por IA
@@ -124,7 +124,7 @@ Em 2026, a IA já está profundamente integrada ao fluxo de desenvolvimento da A
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Os quatro cenários do desenvolvimento iOS assistido por IA
 
-A metodologia concreta — como dar instruções à IA, como validar os resultados e como evitar armadilhas — está nos 11 capítulos completos da Parte 7 deste livro, "Prática de Programação com IA" (Capítulos 37-47); a leitura em paralelo é fortemente recomendada: deixe a sintaxe do Swift com esta parte e os segredos da colaboração com IA com a Parte 7.
+A metodologia concreta: como dar instruções à IA, como validar os resultados e como evitar armadilhas, está nos 11 capítulos completos da Parte 7 deste livro, "Prática de Programação com IA" (Capítulos 37-47); a leitura em paralelo é fortemente recomendada: deixe a sintaxe do Swift com esta parte e os segredos da colaboração com IA com a Parte 7.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -135,7 +135,7 @@ Mãos à obra: adicione o "kit de três itens" ao livro-caixa
 O sistema de concorrência do Swift 6 tem duas regras que todo iniciante precisa entender:
 
 - A interface só pode ser atualizada na thread principal: as views do SwiftUI são @MainActor por padrão; nas respostas de rede, volte à thread principal antes de mudar o estado (com await MainActor.run { ... } ou marcando o ViewModel como @MainActor);
-- Gerencie as tarefas assíncronas com Task: o modificador .task { } começa sozinho quando a view aparece e é cancelado automaticamente quando ela desaparece — essa é a forma padrão de iniciar trabalho assíncrono no SwiftUI; nada de espalhar Tasks soltos no body.
+- Gerencie as tarefas assíncronas com Task: o modificador .task { } começa sozinho quando a view aparece e é cancelado automaticamente quando ela desaparece. Essa é a forma padrão de iniciar trabalho assíncrono no SwiftUI; nada de espalhar Tasks soltos no body.
 
 ::: div .code-block
 :::inline div .code-head

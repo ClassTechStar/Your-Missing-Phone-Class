@@ -2,12 +2,12 @@
 id: di-er-shi-er-zhang
 num: 22
 part: chao-yue-pian
-nav: Kapitel 22: Wie KI im Handy arbeitet
+nav: Kapitel 22: Was macht die KI im Smartphone eigentlich?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 22: Wie KI im Handy arbeitet
+### Kapitel 22: Was macht die KI im Smartphone eigentlich?
 
 {class="chapter-intro mb-4"}
 Willkommen auf der coolsten „Magie-Bühne" des Smartphones – der Hauptdarsteller ist: Künstliche Intelligenz. Die Sofort-Fotos, die du täglich machst, der Sprachassistent, der immer parat ist, die Eingabemethode, die dich mit der Zeit immer besser versteht – all das wird von diesem unsichtbaren Gehirn gesteuert.
@@ -26,7 +26,7 @@ Die heutige KI-Fotografie ist eher so, als würde ein professioneller Retuscheur
 
 On-Device-KI behält die Berechnung im Smartphone – schnell, privatsphärenfreundlich, offline-fähig. Cloud-KI benötigt Netz, kann aber komplexere Aufgaben bewältigen.
 
-#### IV. Große KI-Modelle und das Smartphone: Dein intelligenter Begleiter
+IV. Große KI-Modelle und das Smartphone: Dein intelligenter Begleiter
 
 2025-2026 hat der Aufstieg grosser KI-Modelle (wie DeepSeek R1, ChatGPT-5, ERNIE 5.0, Qwen 3 usw.) die Art, wie wir Smartphones nutzen, tiefgreifend veraendert. Das Handy ist nicht mehr bloss ein ausfuehrendes Werkzeug, sondern ein intelligenter Begleiter, der verstehen, schliessen und kreieren kann. On-Device-KI-Chips (NPU-Rechenleistung ueber 80 TOPS) ermoeglichen erstmals das lokale Ausfuehren grosser Modelle auf dem Handy – KI funktioniert auch ohne Internetverbindung.
 
@@ -92,7 +92,7 @@ Damit du die „Superkräfte" der Smartphone-KI anschaulicher erlebst, zeigen wi
 
 <strong>Dahinterliegendes Prinzip</strong>: Ein Computer-Vision-Modell (CV) wandelt den Bildinhalt in Vektoren (Embedding) um und gleicht sie mit der Textanfrage auf Ähnlichkeit ab. Diese „multimodale Suche" ist ein großer Sprung in der Smartphone-Galerie-Verwaltung.
 
-#### VI. Prompt-Optimierung: Lass die KI nach deiner Pfeife tanzen – das Kommunikations-Prinzip
+VI. Prompt-Optimierung: Lass die KI nach deiner Pfeife tanzen – das Kommunikations-Prinzip
 
 Die Qualität der KI-Antworten hängt stark davon ab, wie du „fragst“. Dieselbe Frage bringt bei unterschiedlicher Formulierung völlig unterschiedliche Antworten. Im Folgenden stellen wir dir den <strong>praktischsten und am leichtesten anzuwendenden „Rolle-Hintergrund-Aufgabe-Grenzen“-Kommunikationsansatz</strong>, begleitet von zahlreichen Beispielen.
 
@@ -293,7 +293,7 @@ System-Prompt
 - <strong>Bei wichtigen Entscheidungen (medizinisch, juristisch, finanziell) konsultiere Fachleute anstatt dich auf KI zu verlassen.</strong>: Lege in den KI-Einstellungen deine Identität, Präferenzen und Tabus fest, damit die Antworten besser zu dir passen.
 :::
 
-#### Sieben. Grenzen und Herausforderungen der KI: Wachsame Urteilskraft bewahren
+Sieben. Grenzen und Herausforderungen der KI: Wachsame Urteilskraft bewahren
 
 "Halluzinations"-Problem
 
@@ -311,8 +311,8 @@ System-Prompt
 - Von der KI erstellte Inhalte können ungenau sein ("Halluzination"); wichtige Informationen müssen überprüft werden.
 - Gib keine persönlichen Daten in die KI ein (Personalausweisnummer, Passwörter, Bankdaten usw.).
 - Nutze Prompt (Prompt) geschickt: Je konkreter und klarer die Beschreibung, desto höher die Qualität der KI-Antwort.
-- Mehrstufige Dialogoptimierung
-- Mehrere KIs zusammenarbeiten
+- Mehrstufige Dialogoptimierung.
+- Mehrere KIs zusammenarbeiten.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

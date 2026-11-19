@@ -2,12 +2,12 @@
 id: di-ling-zhang
 num: 00
 part: ji-chu-pian
-nav: Capítulo 0: Hola, antes de empezar
+nav: Capítulo 0: Tres verdades antes de empezar
 toc: default
 kind: chapter
 ---
 
-### Capítulo 0: Hola, antes de empezar
+### Capítulo 0: Tres verdades antes de empezar
 
 {class="mb-3"}
 Antes de la exploración formal, hablemos de algunas reglas básicas para asegurarnos de que entiendes lo que viene. No te apresures, afilar el hacha no retrasa el trabajo de cortar leña.
@@ -16,7 +16,7 @@ Antes de la exploración formal, hablemos de algunas reglas básicas para asegur
 
 Puede ayudarte a entender sistemáticamente cómo usar tu móvil, a comprender la lógica detrás de las funciones, y ya seas del equipo Android o del equipo Apple, la mayoría de las ideas son aplicables. Te guiará en ejercicios prácticos para que pases de "saber usar" a "saber usar bien".
 
-No es el manual de un modelo específico de móvil, ni son noticias de tecnología sobre los últimos productos, ni es una guía para que te enganches al móvil. Sinceramente, si lo que esperas es "cómo ver videos en tu móvil más fluidamente", puede que te decepcione — nos importa más cómo hacer que el móvil realmente te sirva, no lo contrario.
+No es el manual de un modelo específico de móvil, ni son noticias de tecnología sobre los últimos productos, ni es una guía para que te enganches al móvil. Sinceramente, si lo que esperas es "cómo ver videos en tu móvil más fluidamente", puede que te decepcione: nos importa más cómo hacer que el móvil realmente te sirva, no lo contrario.
 
 #### 2. Explicación de nuestras "claves"
 
@@ -33,7 +33,7 @@ Adivina qué, algunas cosas tienen nombres diferentes pero hacen lo mismo. Por e
 
 Además, ahora en el campo de Android también está el sistema HarmonyOS de Huawei, que tiene sus propias carácterísticas, lo trataremos especialmente más adelante. En resumen, sin importar qué móvil uses, este libro puede ayudarte.
 
-#### 4. Capacidad del móvil: ¿por qué compré 128G pero solo hay menos de 110G disponibles?
+4. Capacidad del móvil: ¿por qué compré 128G pero solo hay menos de 110G disponibles?
 
 Las unidades de capacidad las conoces: 1TB = 1024GB, 1GB = 1024MB, 1MB = 1024KB... pero aquí hay una trampa: los fabricantes de discos suelen calcular en base 1000, mientras que el sistema calcula en base 1024, así que el disco "128G" que compras, la capacidad real "se reducirá".
 
@@ -82,6 +82,6 @@ Si pierdes o se rompe el móvil, no solo pierdes hardware de varios miles,<stron
 
 Como cuidar la salud no puede esperar a enfermarse para ver al médico,<strong>la gestión del móvil también debe empezar por los "hábitos diarios"</strong>. Lo que este libro enfatiza repetidamente no es una técnica avanzada concreta, sino estos principios sencillos:
 
-- <strong>Prevención ante todo</strong>: instalar Apps solo desde tiendas oficiales, desensibilizar fotos antes de enviarlas, no repetir contraseñas—estos "pequeños gestos" tienen un coste bajísimo, pero bloquean la mayoría de los riesgos.
+- <strong>Prevención ante todo</strong>: instalar Apps solo desde tiendas oficiales, desensibilizar fotos antes de enviarlas, no repetir contraseñas:estos "pequeños gestos" tienen un coste bajísimo, pero bloquean la mayoría de los riesgos.
 - <strong>Revisión periódica</strong>: organizar la carpeta de descargas una vez al mes, auditoría de permisos cada trimestre, copia de seguridad completa cada semestre—un ritmo fijo es cien veces más efectivo que apagar fuegos.
-- <strong>Dejar una salida</strong>: activar la sincronización en la nube, anotar bien las cuentas y contraseñas, escribir una "lista de legado digital"—para asegurar que cuando ocurra algo imprevisto, tú y tu familia puedan manejarlo con calma.
+- <strong>Dejar una salida</strong>: activar la sincronización en la nube, anotar bien las cuentas y contraseñas, escribir una "lista de legado digital",para asegurar que cuando ocurra algo imprevisto, tú y tu familia puedan manejarlo con calma.

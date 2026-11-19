@@ -2,17 +2,17 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Bab 28: Belanja Wang dengan Betul untuk Telefon Idaman—Panduan Muktamad Memilih Telefon
+nav: Bab 28: Sebelum beli telefon, fikir tiga hal ini
 toc: default
 kind: chapter
 ---
 
-### Bab 28: Belanjakan dengan Bijak, Dapatkan Telefon Idaman — Panduan Membeli Telefon Ultimat
+### Bab 28: Sebelum beli telefon, fikir tiga hal ini
 
 {class="chapter-intro mb-4"}
 Beli telefon ini, ramai orang akan lihat ulasan seminggu lebih awal, banding harga sebulan, hasilnya akhir masih keliru belanjakan lima enam ribu beli satu flagship yang sebenarnya tidak diguna. Bab ini tidak senaraikan jadual parameter - itu semua anda boleh lihat di laman web rasmi. Yang saya mahu buat, adalah beri anda satu "cara pemikiran pilih telefon", selepas ini tidak kira pasaran keluarkan telefon baru apa, anda boleh nilaikan sendiri sama ada sesuai untuk anda.
 
-#### 0. Kaedah pilih telefon tiga langkah: Keperluan → Bajet → Model
+0. Kaedah pilih telefon tiga langkah: Keperluan → Bajet → Model
 
 Sesetengah Android menyokong kad SD untuk tambah storan. Pilih kad SD Class 10 atau lebih tinggi.
 
@@ -21,12 +21,12 @@ Sesetengah Android menyokong kad SD untuk tambah storan. Pilih kad SD Class 10 a
 <i class="fas fa-lightbulb mr-2"></i>2. Adoptable Storage
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. <strong>Android 6+ menyokong "Adoptable Storage" — format kad SD sebagai storan dalaman, gabung dengan storan telefon.</strong>: Fotografi? Main permainan? Jangka hayat bateri? Skrin? Sistem lancar? Atau hanya perlu boleh telefon hantar WeChat sudah cukup? Susun keperluan mengikut keutamaan.
-2. <strong>Sesetengah App boleh dipindah ke kad SD: Tetapan → Aplikasi → Pilih App → Storan → Tukar.</strong> IV. Pencegahan storan penuh
+1. <strong>Android 6+ menyokong "Adoptable Storage", format kad SD sebagai storan dalaman, gabung dengan storan telefon.</strong>: Fotografi? Main permainan? Jangka hayat bateri? Skrin? Sistem lancar? Atau hanya perlu boleh telefon hantar WeChat sudah cukup? Susun keperluan mengikut keutamaan.
+2. <strong>Sesetengah App boleh dipindah ke kad SD: Tetapan → Aplikasi → Pilih App → Storan → Tukar.</strong> IV. Pencegahan storan penuh.
 3. <strong>1. Tetapkan amaran storan</strong> Semak storan secara berkala, tindakan sebelum penuh.
 :::
 
-#### 1. Cara baca spesifikasi teras — Tak perlu faham semua, lima perkara ini sudah cukup
+1. Cara baca spesifikasi teras — Tak perlu faham semua, lima perkara ini sudah cukup
 
 iPhone: Tetapan → App Store → Offload App Tidak Diguna ‑ Buang App tetapi simpan data.
 
@@ -71,7 +71,7 @@ iPhone: Tetapan → App Store → Offload App Tidak Diguna ‑ Buang App tetapi 
 ```
 :::
 
-#### 2. Cadangan mengikut bajet (berdasarkan pasaran pertengahan 2026)
+2. Cadangan mengikut bajet (berdasarkan pasaran pertengahan 2026)
 
 Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 
@@ -174,7 +174,7 @@ Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 
 {class="list-decimal pl-6 mb-3 space-y-2"}
 1. <strong>2. Penyelesaian</strong> Bersihkan port cas: Guna berus lembut atau kayu untuk buang habuk dari port.<strong>Cuba kabel dan pengecas lain: Uji dengan kabel dan pengecas yang diketahui berfungsi.</strong> Cas wayarles: Jika telefon sokong cas wayarles, cuba cas wayarles sebagai alternatif.
-2. <strong>Pusat servis: Jika semua gagal, bawa ke pusat servis untuk semak port cas.</strong>- Piksel tinggi tidak bermakna kualiti gambar baik. Saiz sensor, bukaan, penalaan algoritma lebih penting daripada piksel. Ramai flagship guna sensor besar 50MP, foto yang dihasilkan
+2. <strong>Pusat servis: Jika semua gagal, bawa ke pusat servis untuk semak port cas.</strong>- Piksel tinggi tidak bermakna kualiti gambar baik. Saiz sensor, bukaan, penalaan algoritma lebih penting daripada piksel. Ramai flagship guna sensor besar 50MP, foto yang dihasilkan.
 3. <strong>1. Sebab biasa</strong> Skrin kotor: Kotoran atau minyak pada skrin.
 4. <strong>Pelindung skrin terlalu tebal: Pelindung skrin mengganggu sentuhan.</strong> App ranap: App tertentu sebabkan skrin tidak responsif.
 5. <strong>2. Penyelesaian</strong> Bersihkan skrin: Lap skrin dengan kain lembut dan kering.
@@ -183,13 +183,13 @@ Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 
 - <strong>Force restart: Tekan dan tahan butang kuasa + volume (bergantung pada model).</strong> Set semula kilang: Jika semua gagal, pertimbang set semula kilang.
 - <strong>Bab 19: Tips dan trik produktiviti</strong> Telefon pintar bukan hanya untuk hiburan, ia juga boleh menjadi alat produktiviti yang kuat. Bab ini berkongsi tips dan trik untuk tingkatkan produktiviti dengan telefon.
-- <strong>I. Papan kekunci</strong>1. Papan kekunci pihak ketiga
+- <strong>I. Papan kekunci</strong>1. Papan kekunci pihak ketiga.
 - <strong>Gboard: Papan kekunci Google, sokong swype, carian GIF, terjemahan.</strong> SwiftKey: Papan kekunci Microsoft, sokong ramalan pintar dan tema.
-- <strong>Sogou/Input: Papan kekunci Cina yang popular, sokong input pinyin, handwriting, suara.</strong>2. Teks pintar
+- <strong>Sogou/Input: Papan kekunci Cina yang popular, sokong input pinyin, handwriting, suara.</strong>2. Teks pintar.
 
 #### 6. Cara pilih saluran — Beli di mana lebih dipercayai?
 
-- <strong>Contoh: "email1" → alamat e-mel penuh, "addr1" → alamat rumah penuh.</strong>3. Papan kekunci dwibahasa
+- <strong>Contoh: "email1" → alamat e-mel penuh, "addr1" → alamat rumah penuh.</strong>3. Papan kekunci dwibahasa.
 - <strong>Tetapkan papan kekunci dengan berbilang bahasa, tukar dengan satu ketikan.</strong>: Harga paling rendah, tetapi perlu pilih kedai bertanda "subsidi sepuluh billion". Yang tidak bertanda jangan sentuh. Selepas terima barang ingat rakam video unboxing, ada masalah boleh pulangkan.
 - <strong>Gboard: Tahan kekunci emoji, pilih mod satu tangan untuk kecilkan papan kekunci ke satu sisi.</strong> iPhone: Tahan ikon globe, pilih mod satu tangan (kiri/kanan).
 - <strong>II. Widget</strong>1. Tambah widget <strong>iPhone: Tekan lama skrin utama → Ketik "+" → Pilih widget → Letakkan di skrin.</strong>.
@@ -199,7 +199,7 @@ Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 <i class="fas fa-hands mr-2"></i>Android: Tekan lama skrin utama → Pilih Widget → Letakkan di skrin.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. 2. Widget berguna
+1. 2. Widget berguna.
 2. Cuaca: Papar cuaca semasa dan ramalan.
 3. Kalendar: Papar acara akan datang.
 4. Pergi Bilibili cari "model XX pengalaman guna sebulan" (bukan ulasan hari pertama, tetapi selepas guna sekurang-kurangnya sebulan), tonton dua tiga video.
@@ -214,7 +214,7 @@ Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 - III. Pintasan dan automasi
 - Parameter teras hanya lihat lima: pemproses, skrin, kamera, bateri cas, komitmen kemas kini sistem
 - App Shortcuts: Cipta pintasan untuk automatikan tindakan berbilang langkah.
-- Contoh pintasan: "Pergi kerja" — Buka peta navigasi, mula main podcast, hantar mesej "dalam perjalanan" kepada keluarga.
+- Contoh pintasan: "Pergi kerja": Buka peta navigasi, mula main podcast, hantar mesej "dalam perjalanan" kepada keluarga.
 - Galeri pintasan: Muat turun pintasan yang dicipta oleh komuniti dari App Shortcuts.
 - 2. Tasker / MacroDroid (Android)
 :::

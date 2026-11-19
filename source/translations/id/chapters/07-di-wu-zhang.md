@@ -2,12 +2,12 @@
 id: di-wu-zhang
 num: 05
 part: ji-chu-pian
-nav: Bab 5: Buat ponsel lebih memahami Anda
+nav: Bab 5: Setel ponsel sesuai cara Anda pakainya
 toc: default
 kind: chapter
 ---
 
-### Bab 5: Membuat Ponsel Lebih Memahami Anda — Pengaturan Dasar
+### Bab 5: Setel ponsel sesuai cara Anda pakainya
 
 {class="chapter-intro mb-4"}
 Luangkan beberapa menit untuk mengatur, peningkatan pengalaman sangat besar. Pengaturan ini seperti "menyetem" ponsel, membuatnya lebih sesuai dengan kebiasaan penggunaan Anda.
@@ -36,7 +36,7 @@ Widget layar utama
 
 <strong>: Letakkan cuaca, jadwal, kontrol musik di layar utama, akses langsung. iOS dan Android sama-sama mendukung, tahan lama area kosong layar utama untuk menambahkan.</strong>4. Pengaturan Efisiensi: Jadikan Ponsel "Otak Eksternal" Anda
 
-#### 4. Pengaturan Efisiensi: Jadikan Ponsel "Otak Eksternal" Anda
+4. Pengaturan Efisiensi: Jadikan Ponsel "Otak Eksternal" Anda
 
 1\. Mode Fokus / Jangan Ganggu: Rebut Kembali Perhatian yang Dirampas Notifikasi
 
@@ -44,7 +44,7 @@ Widget layar utama
 
 - <strong>: Bukan "kurangi melihat ponsel", tetapi "fokus saat harus fokus, hubungi lagi saat harus dihubungi".</strong> Saran penggunaan
 - <strong>:</strong>:<br> · Mode tidur: Aktif otomatis, hanya izinkan alarm;<br> · Olahraga / Membaca / Rapat: Sesuaikan dengan aktivitas saat ini.<br> Strategi lanjutan
-- <strong>: Gunakan otomatisasi + pemicu lokasi / waktu, biarkan mode beralih otomatis. Misalnya: iOS Shortcuts dapat mengatur "saat tiba di kantor otomatis masuk mode kerja".</strong>2. Manajemen Notifikasi: Hentikan Titik Merah yang "Memanggil Tanpa Henti"
+- <strong>: Gunakan otomatisasi + pemicu lokasi / waktu. biarkan mode beralih otomatis. Misalnya: iOS Shortcuts dapat mengatur "saat tiba di kantor otomatis masuk mode kerja".</strong>2. Manajemen Notifikasi: Hentikan Titik Merah yang "Memanggil Tanpa Henti"
 
 ##### 2. Manajemen Notifikasi: Hentikan Titik Merah yang "Memanggil Tanpa Henti"
 
@@ -77,12 +77,17 @@ Widget layar utama
 <i class="fas fa-lightbulb mr-2"></i>Saat mendapat ponsel baru atau pembaruan versi besar, disarankan luangkan 10 menit untuk meninjau pengaturan ini:
 
 {class="mt-1 text-sm"}
-① Kata sandi kunci layar + biometrik ② Notifikasi berkelompok + matikan push pemasaran ③ Ukuran font / refresh rate / mode gelap<br> ④ Metode input / browser / email default ⑤ Kontak darurat / kartu medis ⑥ Pengaturan cadangan<br> 5. Aksesibilitas: Kekuatan Teknologi untuk Kebaikan
+1. Kata sandi kunci layar + biometrik;
+2. Notifikasi berkelompok + matikan push pemasaran;
+3. Ukuran font / refresh rate / mode gelap
+4. Metode input / browser / email default;
+5. Kontak darurat / kartu medis;
+6. Pengaturan cadangan<br> 5. Aksesibilitas: Kekuatan Teknologi untuk Kebaikan
 :::
 
 #### 5. Aksesibilitas: Kekuatan Teknologi untuk Kebaikan
 
-teknologi untuk kebaikan <strong>: memungkinkan setiap orang menikmati kehidupan digital secara setara.</strong>1. "Mata" Pengguna Low Vision — Panduan Lengkap Screen Reader
+teknologi untuk kebaikan <strong>: memungkinkan setiap orang menikmati kehidupan digital secara setara.</strong>1. "Mata" Pengguna Low Vision: Panduan Lengkap Screen Reader
 
 ##### 1. "Mata" Pengguna Low Vision — Panduan Lengkap Screen Reader
 
@@ -102,7 +107,7 @@ membacakan semua konten visual di layar <strong>, pengguna mengoperasikan ponsel
 1. Usap dua jari: Scroll halaman penuh atas/bawah/kiri/kanan;
 2. Ketuk dua kali satu jari: Aktifkan elemen fokus saat ini (setara dengan "klik");
 3. Usap tiga jari: Beralih halaman;
-4. Ketuk tiga kali satu jari: Perbesar atau pilih (berbeda dengan ketuk tiga kali biasa).
+4. Ketuk tiga kali satu jari: Perbesar atau pilih (berbeda dengan ketuk tiga kali biasa)
 5. Pengaturan personalisasi
 
 {class="mt-1"}
@@ -123,7 +128,7 @@ membacakan semua konten visual di layar <strong>, pengguna mengoperasikan ponsel
 1. Ketuk dua kali satu jari: Aktifkan elemen;
 2. Usap atas-bawah/kiri-kanan dua jari: Scroll;
 3. Ketuk sekali tiga jari: Masuk mode baca (baca berurutan);
-4. Ketuk sekali empat jari: Jeda/lanjutkan baca.
+4. Ketuk sekali empat jari: Jeda/lanjutkan baca
 5. Pengaturan personalisasi
 
 {class="mt-1"}
@@ -145,7 +150,7 @@ membacakan semua konten visual di layar <strong>, pengguna mengoperasikan ponsel
 
 ##### Filter Warna (Ramah Buta Warna)
 
-- <strong>: Pengguna biasa tidak dapat mengaktifkan mode pengembang lengkap, membutuhkan akun Apple Developer berbayar.</strong> empat mode buta warna merah/hijau/biru/kuning <strong>, serta opsi "Grayscale" dan "Inverse Warna". Disarankan lakukan tes penglihatan warna (bawaan sistem) sebelum memilih filter yang sesuai.</strong> Android
+- <strong>: Pengguna biasa tidak dapat mengaktifkan mode pengembang lengkap, membutuhkan akun Apple Developer berbayar.</strong> empat mode buta warna merah/hijau/biru/kuning <strong>. serta opsi "Grayscale" dan "Inverse Warna". Disarankan lakukan tes penglihatan warna (bawaan sistem) sebelum memilih filter yang sesuai.</strong> Android
 - <strong>Android</strong> tiga mode buta warna <strong>+ sakelar "Inverse Warna".</strong>3. Deskripsi Gambar AI: Biarkan AI Menjadi "Mata" Anda
 
 {class="font-semibold mt-4 mb-1"}
@@ -193,7 +198,7 @@ fungsi speech-to-text tingkat sistem <strong>, sangat berguna bagi pengguna tuna
 1. lingkungan tenang <strong>, jauhi AC, suara mesin;</strong> Pengguna bicara
 2. artikulasi jelas, kecepatan sedang <strong>memiliki tingkat pengenalan tertinggi;</strong> Dialog multi-orang akan menurunkan akurasi, bisa gunakan mode "tampilkan satu orang saja";
 3. Mendukung bahasa Mandarin, Kanton, Inggris, dan bahasa mainstream lainnya,
-4. pengenalan bahasa minoritas relatif rendah <strong>;</strong> Saat bicara ada musik latar atau interferensi suara manusia, pengenalan akan terputus-putus.
+4. pengenalan bahasa minoritas relatif rendah <strong>;</strong> Saat bicara ada musik latar atau interferensi suara manusia, pengenalan akan terputus-putus
 5. 5. Skenario Panggilan Dua Saluran: Speech-to-Text + Text-to-Speech
 :::
 
@@ -226,7 +231,7 @@ tidak bisa mendengar juga tidak bisa bicara <strong>(seperti kehilangan suara me
 - <strong>: iOS [Aksesibilitas] &gt; [Sentuh] &gt; [AssistiveTouch], Android [Aksesibilitas] &gt; [Navigasi Mengambang]. Tombol virtual menggantikan gerakan atau tombol fisik, menyelamatkan saat tombol tidak berfungsi atau operasi satu tangan.</strong> Kontrol Switch
 - <strong>: Mengontrol ponsel melalui sakelar eksternal, klik tunggal, gerakan kepala,</strong> dirancang untuk pengguna disabilitas fisik <strong>. iOS [Aksesibilitas] &gt; [Kontrol Switch], Android [Aksesibilitas] &gt; [Kontrol Sakelar].</strong> Pengenalan suara
 - <strong>(iOS): [Aksesibilitas] &gt; [Pengenalan Suara], setelah aktif ponsel akan "mendengar" bel pintu, tangisan bayi, alarm kebakaran, sirene, dll.,</strong> saat dikenali akan getar + notifikasi layar <strong>, sangat berharga bagi pengguna tunarungu dan saat tidur.</strong> Notifikasi kedip LED
-- <strong>: iOS [Aksesibilitas] &gt; [Audio/Visual] &gt; [Kedip LED untuk Peringatan], Android [Pengaturan] &gt; [Notifikasi] &gt; [Notifikasi Lampu Kilat]. Saat panggilan masuk dan notifikasi lampu kilat berkedip,</strong> bisa dirasakan tanpa suara di lingkungan bising <strong>.</strong>.
+- <strong>: iOS [Aksesibilitas] &gt; [Audio/Visual] &gt; [Kedip LED untuk Peringatan], Android [Pengaturan] &gt; [Notifikasi] &gt; [Notifikasi Lampu Kilat]. Saat panggilan masuk dan notifikasi lampu kilat berkedip,</strong> bisa dirasakan tanpa suara di lingkungan bising <strong>.</strong>
 - <strong>: [Pengaturan] &gt; [Aksesibilitas] &gt; [Audio] &gt; [Audio Mono], menggabungkan saluran kiri-kanan. Pengguna dengan gangguan pendengaran satu telinga tidak akan kehilangan setengah informasi suara.</strong> Filosofi Desain Aksesibilitas Apple
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -247,6 +252,6 @@ Aktifkan
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. VoiceOver / TalkBack <strong>, coba tanpa mata menggunakan usap tiga jari untuk menjelajah WeChat;</strong> Buka
 2. caption real-time <strong>, bicara ke ponsel lihat akurasi pengenalan;</strong> Gunakan
-3. ketuk tiga jari <strong>untuk memperbesar teks hingga 200%, rasakan keseharian pengguna low vision;</strong> Matikan semua fitur sebelumnya, pikirkan "jika saya selalu membutuhkan fitur-fitur ini, seperti apa saya berharap didesain".
+3. ketuk tiga jari <strong>untuk memperbesar teks hingga 200%, rasakan keseharian pengguna low vision;</strong> Matikan semua fitur sebelumnya, pikirkan "jika saya selalu membutuhkan fitur-fitur ini, seperti apa saya berharap didesain"
 4. Bab 6: Melindungi Kehidupan Digital Anda — Keamanan dan Privasi
 :::

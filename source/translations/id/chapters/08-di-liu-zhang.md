@@ -2,12 +2,12 @@
 id: di-liu-zhang
 num: 06
 part: ji-chu-pian
-nav: Bab 6: Menjaga Hidup Digitalmu
+nav: Bab 6: Ponsel hilang, kata sandi terlupa, lalu apa?
 toc: default
 kind: chapter
 ---
 
-### Bab 6: Melindungi Kehidupan Digital Anda — Keamanan dan Privasi
+### Bab 6: Ponsel hilang, kata sandi terlupa, lalu apa?
 
 {class="chapter-intro mb-4"}
 Keamanan ponsel = keamanan privasi + keamanan properti. Di era ketika data adalah aset, melindungi ponsel berarti melindungi diri Anda sendiri.
@@ -27,7 +27,7 @@ Urutan Tingkat Keamanan:
 
 - Aktifkan biometrik.
 - Atur waktu kunci layar menjadi "segera" atau paling singkat.
-- 2. "Temukan Ponsel Saya": Alat Anti-Pencurian Utama
+- 2. "Temukan Ponsel Saya": Alat Anti-Pencurian Utama.
 
 #### 2. "Temukan Ponsel Saya": Alat Anti-Pencurian Utama
 
@@ -36,7 +36,7 @@ Urutan Tingkat Keamanan:
 - <strong>: Ponsel hilang di mana, cari di peta.</strong> Putar suara
 - <strong>: Buat ponsel berdering, cocok untuk mencari di rumah.</strong> Mode hilang
 - <strong>: Kunci ponsel dari jarak jauh dan tampilkan nomor kontak.</strong> Hapus jarak jauh
-- <strong>: Langkah terakhir, hapus semua data (tetapi setelah dihapus tidak bisa dilacak lagi).</strong> Buka [Pengaturan], Apple cari "Find My iPhone", Android cari "Find My Device" atau layanan serupa merek, pastikan statusnya aktif hijau.
+- <strong>: Langkah terakhir, hapus semua data (tetapi setelah dihapus tidak bisa dilacak lagi).</strong> Buka [Pengaturan], Apple cari "Find My iPhone", Android cari "Find My Device" atau layanan serupa merek, pastikan statusnya aktif hijau
 
 3\. Pembaruan Sistem: Tambal Lubang Kerentanan
 
@@ -83,8 +83,8 @@ Metode Verifikasi Gerakan
 
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>: Saat melakukan panggilan video, secara aktif mintalah lawan bicara untuk melakukan serangkaian instruksi gerakan yang telah ditentukan, misalnya "lambaikan tangan dengan cepat di depan wajah", "tunjukkan profil samping dengan kontur telinga terlihat", atau "kedipkan mata dengan cepat 5 kali". Teknologi deepfake AI saat ini, ketika menangani oklusi dinamis yang kompleks, adegan gerakan cepat, dan perubahan pencahayaan,</strong> sangat rentan mengalami gangguan gambar, distorsi wajah, atau pinggiran yang tidak menyatu <strong>dan kelemahan lainnya.</strong> Metode Verifikasi Sandi
-- <strong>: Buat dan gunakan pertanyaan verifikasi pribadi yang telah ditentukan sebelumnya, misalnya "Apa yang Anda pesan saat makan bersama terakhir kali", "Apa hadiah pertama yang saya berikan kepada Anda", dan detail lain yang hanya diketahui oleh kedua belah pihak. Jika lawan bicara terlihat ragu-ragu atau menjawab tidak sesuai pertanyaan, Anda harus</strong> segera mengakhiri panggilan dan memulai protokol keamanan <strong>.</strong>.
-- <strong>: Patuhi dengan ketat prinsip "</strong> Empat Tidak dan Satu Verifikasi <strong>" yang diterbitkan oleh Biro Keamanan Siber Kementerian Keamanan Publik — jangan mudah percaya informasi dari orang asing, jangan sembarangan mentransfer uang, jangan membocorkan informasi pribadi yang sensitif, jangan menyebarkan konten mencurigakan. Saat melibatkan transaksi keuangan apa pun, pastikan untuk</strong> memanggil kembali melalui nomor asli yang sudah diketahui atau mengonfirmasi secara langsung <strong>. Saat melakukan transfer, disarankan memilih mode "transfer dalam 24 jam", untuk menyediakan jendela waktu yang cukup untuk identifikasi penipuan dan pemulihan dana.</strong>3. Pola Penipuan Tradisional yang Umum (Tetap Waspada):
+- <strong>: Buat dan gunakan pertanyaan verifikasi pribadi yang telah ditentukan sebelumnya, misalnya "Apa yang Anda pesan saat makan bersama terakhir kali", "Apa hadiah pertama yang saya berikan kepada Anda", dan detail lain yang hanya diketahui oleh kedua belah pihak. Jika lawan bicara terlihat ragu-ragu atau menjawab tidak sesuai pertanyaan, Anda harus</strong> segera mengakhiri panggilan dan memulai protokol keamanan <strong>.</strong>
+- <strong>: Patuhi dengan ketat prinsip "</strong> Empat Tidak dan Satu Verifikasi <strong>" yang diterbitkan oleh Biro Keamanan Siber Kementerian Keamanan Publik, jangan mudah percaya informasi dari orang asing, jangan sembarangan mentransfer uang, jangan membocorkan informasi pribadi yang sensitif, jangan menyebarkan konten mencurigakan. Saat melibatkan transaksi keuangan apa pun, pastikan untuk</strong> memanggil kembali melalui nomor asli yang sudah diketahui atau mengonfirmasi secara langsung <strong>. Saat melakukan transfer, disarankan memilih mode "transfer dalam 24 jam", untuk menyediakan jendela waktu yang cukup untuk identifikasi penipuan dan pemulihan dana.</strong>3. Pola Penipuan Tradisional yang Umum (Tetap Waspada):
 
 ##### 3. Pola Penipuan Tradisional yang Umum (Tetap Waspada):
 
@@ -96,13 +96,13 @@ Metode Verifikasi Gerakan
 
 - Cegah pencurian kode verifikasi.
 - Deteksi keamanan tautan dalam SMS.
-- 5. Slogan Anti-Penipuan:
+- 5. Slogan Anti-Penipuan:.
 
 ##### 5. Slogan Anti-Penipuan:
 
 <strong>Saat menghadapi "urusan mendesak", tenanglah selama 5 menit terlebih dahulu — hampir semua penipuan akan terungkap pada saat ini.</strong> Lima, Melawan "Doxing" dan Serangan Rekayasa Sosial: Memutus Rantai Kebocoran Privasi
 
-#### Lima, Melawan "Doxing" dan Serangan Rekayasa Sosial: Memutus Rantai Kebocoran Privasi
+Lima, Melawan "Doxing" dan Serangan Rekayasa Sosial: Memutus Rantai Kebocoran Privasi
 
 pengumpulan, analisis, dan penyatuan fragmen digital pribadi secara sistematis untuk membangun profil pribadi yang lengkap <strong>. Kunci pencegahannya adalah menetapkan garis batas yang jelas bagi privasi pribadi dan membangun sistem perlindungan berlapis.</strong>1. Sanitasi Foto
 
@@ -112,7 +112,7 @@ Metode dasar pembersihan EXIF lihat Bab 2 "Manajemen Gambar dan File System". Se
 
 - Android: Beberapa aplikasi galeri (seperti Google Foto) akan menanyakan apakah ingin menyimpan informasi lokasi saat berbagi.
 - Alat umum: ExifTool, Metapho, dll. untuk melihat/mengedit EXIF.
-- 2. Konvergensi Izin Aplikasi
+- 2. Konvergensi Izin Aplikasi.
 
 ##### 2. Konvergensi Izin Aplikasi
 
@@ -151,7 +151,7 @@ Tidak mengubah kata sandi default = membiarkan pintu depan rumah terbuka lebar <
 - <strong>: [Pengaturan] &gt; [Privasi] &gt; [Riwayat Penggunaan Izin], lihat siapa yang memanggil izin sensitif kapan saja.</strong> Batasi Pelacakan Iklan
 - <strong>: Matikan "ID Iklan" atau "Batasi Pelacakan Iklan" di pengaturan sistem, dapat mengurangi "spam iklan tertarget".</strong> Tujuh, Daftar "Pertolongan Pertama" Setelah Ponsel Hilang / Dicuri
 
-#### Tujuh, Daftar "Pertolongan Pertama" Setelah Ponsel Hilang / Dicuri
+Tujuh, Daftar "Pertolongan Pertama" Setelah Ponsel Hilang / Dicuri
 
 Bekukan Kartu SIM Segera
 
@@ -176,7 +176,7 @@ Bekukan Kartu SIM Segera
 - Mengirim kode verifikasi kepada siapa pun (bahkan "layanan pelanggan");
 - Mengklik tautan tidak dikenal dalam SMS, terutama nomor luar negeri yang dimulai dengan 00;
 - Login ke mobile banking atau pembayaran di Wi-Fi publik;
-- Memberikan "berbagi layar" atau "kontrol jarak jauh" kepada orang asing.
+- Memberikan "berbagi layar" atau "kontrol jarak jauh" kepada orang asing
 - Cobalah mengaktifkan dan mensimulasikan "kunci jarak jauh"
 :::
 
@@ -187,5 +187,5 @@ Bekukan Kartu SIM Segera
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Di browser komputer atau ponsel lain, login ke akun layanan cloud yang sesuai (iCloud.com atau situs layanan cloud merek).
 2. Temukan fitur "Temukan Perangkat", coba kirim perintah "Putar Suara" atau simulasi "Kunci" ke ponsel Anda sendiri, biasakan diri dengan seluruh alur operasi.
-3. Bab 7: Analisis Lengkap Fitur Mutakhir
+3. Bab 7: Analisis Lengkap Fitur Mutakhir.
 :::

@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 54: Projek Satu — Buku Perakaunan Saya (Versi Tempatan)
 
 {class="chapter-intro mb-4"}
-Selamat datang ke 'projek serius' pertama anda. Walaupun buku perakaunan ini tidak berhubung rangkaian, ia lengkap dari segala segi: boleh mencatat rekod, melihat senarai transaksi, statistik mengikut bulan, memadam dan mengubah. Selepas menyiapkannya, anda telah melalui sepenuhnya aliran 'data → logik → antara muka'. Jangan terburu-buru menyalin kod — fikir dahulu dengan jelas barulah bertindak; itulah prinsip kita sepanjang buku ini.
+Selamat datang ke 'projek serius' pertama anda. Walaupun buku perakaunan ini tidak berhubung rangkaian, ia lengkap dari segala segi: boleh mencatat rekod, melihat senarai transaksi, statistik mengikut bulan, memadam dan mengubah. Selepas menyiapkannya, anda telah melalui sepenuhnya aliran 'data → logik → antara muka'. Jangan terburu-buru menyalin kod: fikir dahulu dengan jelas barulah bertindak; itulah prinsip kita sepanjang buku ini.
 
 #### 1. Pemikiran Keperluan: Tanya Lima Soalan Dahulu
 
@@ -25,11 +25,16 @@ Sebelum bertindak, gunakan 'lima elemen keperluan' untuk menyusun idea dengan je
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Lima elemen keperluan buku perakaunan
 
-Kemudian pecahkan kepada langkah kecil 'setiap langkah boleh guna': ① bina lapisan data Room (boleh simpan satu rekod); ② halaman senarai (boleh lihat transaksi); ③ halaman input (boleh tambah rekod); ④ padam dan sunting; ⑤ kad ringkasan bulanan. Setiap kali satu langkah siap, aplikasi sentiasa 'benda yang boleh guna'.
+Kemudian pecahkan kepada langkah kecil 'setiap langkah boleh guna':
+1. bina lapisan data Room (boleh simpan satu rekod);
+2. halaman senarai (boleh lihat transaksi);
+3. halaman input (boleh tambah rekod);
+4. padam dan sunting;
+5. kad ringkasan bulanan. Setiap kali satu langkah siap, aplikasi sentiasa 'benda yang boleh guna'.
 
 #### 2. Lapisan Data: Memberi 'Rekod' Sebuah Rumah
 
-Takrifkan dahulu rupa satu rekod — medan cukup guna tetapi jangan tamak:
+Takrifkan dahulu rupa satu rekod, medan cukup guna tetapi jangan tamak:
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +54,7 @@ data class Record(
 ```
 :::
 
-Tambah dua pertanyaan 'untuk statistik' dalam Dao — inilah jiwa buku perakaunan:
+Tambah dua pertanyaan 'untuk statistik' dalam Dao, inilah jiwa buku perakaunan:
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,7 +87,7 @@ interface RecordDao {
 Petua: Kenapa Jumlah Guna Double?
 
 {class="mt-1"}
-Aplikasi kewangan yang teliti akan guna BigDecimal atau 'Int dengan unit sen' untuk mengelakkan ralat titik terapung (masalah lama 0.1+0.2≠0.3). Projek latihan guna Double sudah memadai; jika suatu hari membina produk kewangan sebenar, ingat tukar kepada unit 'sen' — inilah perangkap yang dilanggar oleh ramai pendahulu.
+Aplikasi kewangan yang teliti akan guna BigDecimal atau 'Int dengan unit sen' untuk mengelakkan ralat titik terapung (masalah lama 0.1+0.2≠0.3). Projek latihan guna Double sudah memadai; jika suatu hari membina produk kewangan sebenar, ingat tukar kepada unit 'sen': inilah perangkap yang dilanggar oleh ramai pendahulu.
 :::
 
 #### 3. MVVM: Antara Muka dan Logik Diasingkan
@@ -95,7 +100,7 @@ Terus biarkan antara muka mengendalikan pangkalan data? Boleh berjalan, tetapi k
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Rajah 5: Struktur tiga lapis MVVM — data mengalir satu hala, setiap lapis tidak melampaui bidangnya
+Rajah 5: Struktur tiga lapis MVVM, data mengalir satu hala, setiap lapis tidak melampaui bidangnya
 :::
 
 ::: div .code-block
@@ -125,7 +130,7 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 :::
 
-Guna begini dalam antara muka (Compose): val vm: RecordViewModel = viewModel(), kemudian val list by vm.records.collectAsState() — data berubah, senarai segar semula secara automatik, anda tidak perlu buat apa-apa. Inilah kuasa gabungan MVVM + Flow + Compose.
+Guna begini dalam antara muka (Compose): val vm: RecordViewModel = viewModel(), kemudian val list by vm.records.collectAsState(), data berubah, senarai segar semula secara automatik, anda tidak perlu buat apa-apa. Inilah kuasa gabungan MVVM + Flow + Compose.
 
 #### 4. Antara Muka: Halaman Senarai + Halaman Input
 
@@ -203,7 +208,7 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-Dua pengalaman dalam butiran interaksi: padam mesti ada pengesahan kali kedua (mengelakkan tersalah tekan), sunting sebolehnya praisi nilai asal (mengubah satu aksara lebih jimat daripada menaip semula). Jangan pandang rendah dua butiran ini — rasa 'produk' memang dibina daripada butiran begini.
+Dua pengalaman dalam butiran interaksi: padam mesti ada pengesahan kali kedua (mengelakkan tersalah tekan), sunting sebolehnya praisi nilai asal (mengubah satu aksara lebih jimat daripada menaip semula). Jangan pandang rendah dua butiran ini, rasa 'produk' memang dibina daripada butiran begini.
 
 #### 6. Penerimaan: Semakan Tiga Lapis + Dua Cabaran Lanjutan
 
@@ -212,14 +217,14 @@ Selepas projek siap, buat penerimaan mengikut tiga lapis 'fungsi → sempadan �
 Selepas lulus penerimaan versi asas, tambahkan dua 'hidangan lanjutan' untuk diri sendiri:
 
 1. Tapisan bulanan: tambah penukar bulan di bahagian atas (contohnya 2026-08 ▾), senarai hanya memaparkan transaksi bulan semasa;
-2. Carta pai kategori: guna Canvas Compose atau bawa masuk pustaka carta ringan, lukiskan 'ke mana wang dibelanjakan' menjadi carta pai — selepas siap ini, buku perakaunan sudah ada sedikit 'rupa produk'.
+2. Carta pai kategori: guna Canvas Compose atau bawa masuk pustaka carta ringan, lukiskan 'ke mana wang dibelanjakan' menjadi carta pai, selepas siap ini, buku perakaunan sudah ada sedikit 'rupa produk'.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mari cuba: Siapkan Minggu Ini
 
 {class="mt-1"}
-Bertindak mengikut urutan 'lapisan data → ViewModel → halaman senarai → halaman input → kad ringkasan', satu langkah sehari. Kalau tersangkut, campakkan ralat itu seadanya kepada enjin carian atau AI (masih ingat Bahagian 7 'Praktik Pengaturcaraan AI'? Semasa menghuraikan masalah, jelaskan 'tingkah laku dijangka, tingkah laku sebenar, langkah mengulangi'). Selepas siap, gunakannya mencatat perbelanjaan seminggu — menggunakan aplikasi buatan sendiri, rasa pencapaian akan mendorong anda terus mara.
+Bertindak mengikut urutan 'lapisan data → ViewModel → halaman senarai → halaman input → kad ringkasan', satu langkah sehari. Kalau tersangkut. campakkan ralat itu seadanya kepada enjin carian atau AI (masih ingat Bahagian 7 'Praktik Pengaturcaraan AI'? Semasa menghuraikan masalah, jelaskan 'tingkah laku dijangka, tingkah laku sebenar, langkah mengulangi'). Selepas siap, gunakannya mencatat perbelanjaan seminggu: menggunakan aplikasi buatan sendiri, rasa pencapaian akan mendorong anda terus mara.
 :::
 
 ::: div .chapter-summary

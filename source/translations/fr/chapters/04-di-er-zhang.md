@@ -2,17 +2,17 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: Chapitre 2 : Ranger ta chambre numérique
+nav: Chapitre 2 : Vous ne trouvez rien sur votre smartphone ?
 toc: default
 kind: chapter
 ---
 
-### Chapitre 2 : Rangez votre chambre numérique — gestion des fichiers
+### Chapitre 2 : Vous ne trouvez rien sur votre smartphone ?
 
 {class="chapter-intro mb-4"}
 Le smartphone devient encombré avec le temps ; de bonnes habitudes commencent par la gestion des fichiers. Comme votre pièce a besoin d'être rangée régulièrement, votre espace numérique a aussi besoin d'être entretenu. Un smartphone bien ordonné n'est pas seulement plus pratique pour retrouver les choses, il fonctionne aussi plus fluidement.
 
-#### I. Système de stockage à trois niveaux : votre entrepôt numérique
+I. Système de stockage à trois niveaux : votre entrepôt numérique
 
 {class="list-decimal pl-6 mb-3 space-y-2"}
 1. <strong>Stockage interne</strong>: zone centrale, rapide, le système et les apps s'y trouvent. C'est l'espace le plus précieux de votre smartphone, à gérer avec parcimonie.
@@ -48,7 +48,7 @@ Android est basé sur Linux, le système de fichiers a une certaine structure hi
 - <strong>Stockage interne</strong>: espace privé de l'app, inaccessible aux autres apps. Supprimé lors de la désinstallation de l'app.
 - <strong>Stockage externe</strong>: fichiers stockés par l'app dans la zone accessible à l'utilisateur, tels que photos, téléchargements. Pas nécessairement supprimé lors de la désinstallation de l'app.
 
-#### IV. Sauvegarde et restauration de données : assurez vos données
+IV. Sauvegarde et restauration de données : assurez vos données
 
 Les données n'ont pas de prix, la sauvegarde est une habitude à prendre.
 
@@ -205,7 +205,7 @@ Ouvrez le gestionnaire de fichiers &gt; entrez dans le dossier « Téléchargeme
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### VIII. Gestion des images et du système de fichiers : un patrimoine bien ordonné
+VIII. Gestion des images et du système de fichiers : un patrimoine bien ordonné
 
 La section précédente vous a appris à « connaître les dossiers », mais ce n'est pas suffisant. Cette section traite <strong>comment mettre en place activement une norme de gestion exécutable à long terme</strong>, pour que vos fichiers soient toujours retrouvables, non perdus, non espionnés.
 
@@ -238,7 +238,7 @@ Choisissez un week-end libre, procédez dans l'ordre suivant :
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. Créez dans le gestionnaire de fichiers un dossier professionnel du mois au format <code>2026Q2_Projet A</code> ;
 2. Passez en revue tous les fichiers de la semaine dans le répertoire « Téléchargements », gardez l'utile, archivez, supprimez l'inutile ;
-3. Créez des dossiers annuels pour les photos familiales de cette année au format <code>Famille 2025</code>, le <code>Famille 2026</code> .
+3. Créez des dossiers annuels pour les photos familiales de cette année au format <code>Famille 2025</code>, le <code>Famille 2026</code> 
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -254,7 +254,7 @@ Avec le temps, le smartphone « grossit », souvent à cause des fichiers redond
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Norme de traitement sécurisé des images
 
-Les images sont le type de données le plus « sensible » du smartphone — une photo prise au hasard peut révéler votre position, votre appareil, l'heure. Nous recommandons <strong>d'établir un flux de travail « double protection »</strong>:
+Les images sont le type de données le plus « sensible » du smartphone, une photo prise au hasard peut révéler votre position, votre appareil, l'heure. Nous recommandons <strong>d'établir un flux de travail « double protection »</strong>:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -263,7 +263,7 @@ Les images sont le type de données le plus « sensible » du smartphone — une
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Masquer les informations visibles</strong>: avec l'outil intégré au système ou un outil tiers (comme Meitu XiuXiu, Snapseed)<strong>barrez quelques chiffres du milieu du numéro de carte d'identité, la plaque d'immatriculation, le numéro de porte, le nom, le montant</strong> et autres champs clés ;
 2. <strong>Suppression des métadonnées</strong>: avant l'envoi, dans l'album, cliquez sur « Partager » ou « Exporter », le système demande s'il faut conserver les informations de localisation, choisissez <strong>« Ne pas conserver »</strong>. Ainsi, le modèle d'appareil photo, les coordonnées GPS, l'heure de prise de vue ne suivront pas l'image lors de l'envoi ;
-3. <strong>Filigrane temporaire</strong>(optionnel) : ajoutez sur la capture sensible un filigrane textuel « Uniquement pour usage XX », pour éviter tout abus.
+3. <strong>Filigrane temporaire</strong>(optionnel) : ajoutez sur la capture sensible un filigrane textuel « Uniquement pour usage XX », pour éviter tout abus
 :::
 
 {class="mt-3 mb-2"}
@@ -277,4 +277,4 @@ Pour les images sensibles à <strong>conserver à long terme</strong>(carte d'id
 
 - iPhone : [Photos] &gt; sélectionnez la photo &gt; Masquer (visible uniquement après authentification Face ID) ;
 - Huawei/Xiaomi : [Album] &gt; appui long sur la photo &gt; « Déplacer vers le coffre-fort » ;
-- Apps de chiffrement tierces :<strong>360 Album sécurisée</strong>, le <strong>Gestionnaire d'album Tencent (album privé)</strong>, le <strong>KeepSafe</strong> , etc., protection par mot de passe distinct, discrétion accrue.
+- Apps de chiffrement tierces :<strong>360 Album sécurisée</strong>, le <strong>Gestionnaire d'album Tencent (album privé)</strong>, le <strong>KeepSafe</strong> , etc., protection par mot de passe distinct, discrétion accrue

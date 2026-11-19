@@ -2,17 +2,17 @@
 id: di-yi-zhang
 num: 01
 part: ji-chu-pian
-nav: Capitolo 1: Ciao, il mio computer personale
+nav: Capitolo 1: Conosciamo prima questa macchina
 toc: default
 kind: chapter
 ---
 
-### Capitolo 1: Ciao, il mio computer personale
+### Capitolo 1: Conosciamo prima questa macchina
 
 {class="chapter-intro mb-4"}
 Il tuo cellulare, in realtà, è il supercomputer più personale che tu abbia in tasca. È innumerevoli volte più potente dei computer che hanno portato l'uomo sulla Luna, eppure riposa silenzioso nel palmo della tua mano. Oggi conosciamo a fondo questo "gigante silenzioso".
 
-#### 1. "Cinque organi e sei viscere" dell'hardware del cellulare: analisi approfondita
+1. "Cinque organi e sei viscere" dell'hardware del cellulare: analisi approfondita
 
 Il cellulare è piccolo ma completo. Conosciamo uno per uno questi componenti di precisione, come in una lezione di anatomia.
 
@@ -32,11 +32,11 @@ La CPU è il componente più centrale del SoC, responsabile della maggior parte 
 - <strong>Medium core</strong>: equilibrio prestazioni/consumi, gestisce compiti medi quotidiani. Scorrere Weibo, guardare video, cambiare app: se ne occupa principalmente lui.
 - <strong>Small core / efficiency core</strong>: consumo minimo, per compiti leggeri in background. Standby, ascolto musica, ricezione messaggi, quasi non consuma batteria.
 
-I tre livelli di core collaborano: lo scheduler di sistema assegna automaticamente in base al carico — i compiti leggeri ai small core per risparmiare, i lavori pesanti ai big core a tutta forza, poi si torna ai small core. Ecco perché il cellulare riesce a far girare fluidamente i giochi e a restare in standby tutto il giorno.
+I tre livelli di core collaborano: lo scheduler di sistema assegna automaticamente in base al carico: i compiti leggeri ai small core per risparmiare, i lavori pesanti ai big core a tutta forza, poi si torna ai small core. Ecco perché il cellulare riesce a far girare fluidamente i giochi e a restare in standby tutto il giorno.
 
 <strong>Caratteristiche delle architetture dei vari brand</strong>:
 
-- <strong>Qualcomm Snapdragon 8 Elite</strong>: adotta l'architettura CPU Oryon proprietaria (derivata dall'acquisizione di Nuvia), 2 super core (4.32GHz) + 6 performance core (3.53GHz), tutti basati sul processo N3E di seconda generazione a 3nm di TSMC. Dice addio definitivo all'architettura pubblica ARM, con miglioramenti a salti sia single-core sia multi-core. GPU Adreno 830 con architettura a slice, prestazioni grafiche +40%; Hexagon NPU a circa 45 TOPS, prestazioni di inferenza AI +45%. (Nota: la versione custom Samsung Galaxy ha frequenze più alte, super core fino a 4.47GHz.)
+- <strong>Qualcomm Snapdragon 8 Elite</strong>: adotta l'architettura CPU Oryon proprietaria (derivata dall'acquisizione di Nuvia), 2 super core (4.32GHz) + 6 performance core (3.53GHz), tutti basati sul processo N3E di seconda generazione a 3nm di TSMC. Dice addio definitivo all'architettura pubblica ARM, con miglioramenti a salti sia single-core sia multi-core. GPU Adreno 830 con architettura a slice, prestazioni grafiche +40%; Hexagon NPU a circa 45 TOPS, prestazioni di inferenza AI +45%. (Nota: la versione custom Samsung Galaxy ha frequenze più alte, super core fino a 4.47GHz.).
 - <strong>MediaTek Dimensity 9400</strong>: 1 super core (Cortex-X925, 3.62GHz) + 3 performance core (Cortex-X4, 3.3GHz) + 4 efficiency core (Cortex-A720, 2.4GHz), architettura full-big-core continuata, processo N3E di seconda generazione a 3nm di TSMC. GPU Immortalis-G925 (12 core), prestazioni di picco +41%, ray tracing +40%. Processore AI di ottava generazione NPU 890, supporta LLM on-device, training LoRA on-device e generazione video on-device.
 - <strong>Apple A18 Pro</strong>: 2 performance core (circa 4.04GHz) + 4 efficiency core (circa 2.4GHz), processo N3E di seconda generazione a 3nm di TSMC. GPU a 6 core con ray tracing hardware-level, NPU a 16 core (circa 35 TOPS) che fornisce potenza di calcolo per AI on-device e Apple Intelligence. L'architettura proprietaria Apple resta leader in prestazioni single-core ed efficienza, e l'architettura a memoria unificata offre vantaggi di ampiezza di banda per l'inferenza AI.
 - <strong>HiSilicon Kirin 9020 di Huawei</strong>: montato sulla serie Mate 70, adotta l'architettura CPU Taishan proprietaria, con capacità NPU e ISP continuamente potenziate, supporta 5.5G e comunicazione satellitare, rappresenta l'ultima svolta dei chip nazionali cinesi.
@@ -122,7 +122,7 @@ L'HDR in fotografia e quello dello schermo sono due cose diverse. L'HDR fotograf
 
 - <strong>Principio algoritmico</strong>: allo scatto, il cellulare scatta in realtà più foto con esposizioni diverse (sottoesposizione per conservare i dettagli in luce, sovraesposizione per le ombre, esposizione normale per i toni medi), per poi fonderle in un'unica foto ad alta gamma dinamica.
 - <strong>Flusso</strong>: cattura multi-frame → allineamento e compensazione (anti-shake) → fusione esposizione / tone mapping → correzione colore → output foto finale.
-- <strong>Ottimizzazione</strong>: oggi i cellulari riescono a fare "HDR in tempo reale" — ciò che vedi nel mirino è l'effetto HDR elaborato, WYSIWYG. Smart HDR di Apple e auto HDR di Android sono entrambi molto maturi.
+- <strong>Ottimizzazione</strong>: oggi i cellulari riescono a fare "HDR in tempo reale", ciò che vedi nel mirino è l'effetto HDR elaborato, WYSIWYG. Smart HDR di Apple e auto HDR di Android sono entrambi molto maturi.
 
 ##### 5. Batteria e ricarica: sorgente di energia
 
@@ -156,7 +156,7 @@ I teleobiettivi tradizionali richiedono un percorso ottico lungo, che renderebbe
 Lo stabilizzatore è una tecnologia chiave per la qualità di foto e video; le due modalità hanno principi completamente diversi:
 
 - <strong>OIS (stabilizzazione ottica)</strong>: compensa il tremore della mano muovendo fisicamente le lenti o il sensore. All'interno della lente c'è un micro giroscopio che rileva direzione e ampiezza del tremore, poi un motore sposta il gruppo di lenti in direzione opposta. Pro: nessuna perdita di qualità; contro: costo elevato, occupa spazio.
-- <strong>EIS (stabilizzazione elettronica)</strong>: compensa il tremore ritagliando e spostando l'immagine via software. Il cellulare registra un'area leggermente più grande e, in base ai dati del giroscopio, ritaglia una zona stabile. Pro: nessun hardware aggiuntivo; contro: ritaglia l'immagine (campo visivo più piccolo), in luce debole può sfocare.
+- <strong>EIS (stabilizzazione elettronica)</strong>: compensa il tremore ritagliando e spostando l'immagine via software. Il cellulare registra un'area leggermente più grande. In base ai dati del giroscopio, ritaglia una zona stabile. Pro: nessun hardware aggiuntivo; contro: ritaglia l'immagine (campo visivo più piccolo), in luce debole può sfocare.
 - <strong>Scelta pratica</strong>: in foto privilegia l'OIS, in video la combinazione dei due è la migliore. Oggi molti flagship supportano "Sensor-Shift" (spostamento del sensore), con effetti migliori della tradizionale stabilizzazione delle lenti.
 
 ##### Zoom ottico vs zoom digitale
@@ -243,15 +243,15 @@ L'interfaccia del cellulare è il ponte con il mondo esterno; le interfacce dive
 - <strong>Caratteristiche</strong>: trasmissione di segnale analogico, plug-and-play, senza driver o conversioni. Qualità audio stabile, latenza zero.
 - <strong>Stato attuale</strong>: la maggior parte dei cellulari di punta ha eliminato il jack 3.5mm, serve un adattatore Type-C o auricolari Bluetooth. Alcuni cellulari di fascia media e da gaming lo mantengono.
 
-#### 4. Sistema di prodotti del cellulare e regole di denominazione
+4. Sistema di prodotti del cellulare e regole di denominazione
 
 Di fronte alle linee di prodotto spesso confusionarie dei vari brand, capire le regole di denominazione ti aiuta a posizionare rapidamente il modello adatto a te.
 
 ##### Serie di prodotti dei principali brand:
 
-- <strong>Apple</strong>: iPhone (standard) / iPhone Plus (grande schermo) / iPhone Pro (professionale) / iPhone Pro Max (grande schermo professionale) / iPhone SE (economica) / iPhone 16e (versione AI economica, con chip A18 e baseband C1 proprietaria di Apple). Nel 2026 la serie iPhone 17 monta completamente il chip A19 Pro, con capacità AI ulteriormente migliorate.
-- <strong>Huawei</strong>: serie Mate (flagship business) / serie P/Pura (flagship imaging) / serie Mate X (flagship pieghevole) / serie nova (giovane medio-tier) / serie Enjoy (entry-level)
-- <strong>Xiaomi</strong>: serie numerica Xiaomi (flagship) / Xiaomi MIX (flagship esplorativo/pieghevole) / serie Redmi K (flagship prestazionale) / serie Redmi Note (mid-range) / serie numerica Redmi (entry-level)
+- <strong>Apple</strong>: iPhone (standard) / iPhone Plus (grande schermo), iPhone Pro (professionale) / iPhone Pro Max (grande schermo professionale) / iPhone SE (economica) / iPhone 16e (versione AI economica, con chip A18 e baseband C1 proprietaria di Apple). Nel 2026 la serie iPhone 17 monta completamente il chip A19 Pro, con capacità AI ulteriormente migliorate
+- <strong>Huawei</strong>: serie Mate (flagship business), serie P/Pura (flagship imaging) / serie Mate X (flagship pieghevole) / serie nova (giovane medio-tier) / serie Enjoy (entry-level)
+- <strong>Xiaomi</strong>: serie numerica Xiaomi (flagship), Xiaomi MIX (flagship esplorativo/pieghevole) / serie Redmi K (flagship prestazionale) / serie Redmi Note (mid-range) / serie numerica Redmi (entry-level)
 - <strong>OPPO</strong>: serie Find X (flagship) / serie Reno (mid-range) / serie A (entry-level) / serie numerica OnePlus (flagship prestazionale)
 - <strong>vivo</strong>: serie X (flagship imaging) / serie iQOO numerica (flagship prestazionale) / serie S (selfie mid-range) / serie Y (entry-level)
 - <strong>Samsung</strong>: serie Galaxy S (flagship) / Galaxy Z Fold/Flip (flagship pieghevole) / serie Galaxy A (mid-range)
@@ -267,7 +267,7 @@ Di fronte alle linee di prodotto spesso confusionarie dei vari brand, capire le 
 - <strong>Note</strong>: originariamente indicava cellulari con grande schermo, oggi i brand lo usano in modi diversi. Redmi Note è una serie mid-range.
 - <strong>Neo</strong>: versione nuova. Di solito si riferisce a modelli mid-range orientati alle prestazioni.
 
-#### 5. Baseband e antenne: i protagonisti dietro le quinte della comunicazione
+5. Baseband e antenne: i protagonisti dietro le quinte della comunicazione
 
 Che il cellulare possa chiamare e navigare lo si deve alla coppia formata da chip baseband e antenna.
 

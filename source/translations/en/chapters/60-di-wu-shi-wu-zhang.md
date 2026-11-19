@@ -10,22 +10,22 @@ kind: chapter
 ### Chapter 55: Project 2 — Weather App (Networked Version)
 
 {class="chapter-intro mb-4"}
-The expense tracker was "internal training"; the weather app is "seeing the world" — it has to deal with the internet. In this project you'll learn to: apply for a free API, parse JSON, handle the three UI states of "loading/success/failure," and keep your API key well hidden. Finish it, and you can build any "connected app" — news, exchange rates, translation; the recipe is exactly the same.
+The expense tracker was "internal training"; the weather app is "seeing the world", it has to deal with the internet. In this project you'll learn to: apply for a free API, parse JSON, handle the three UI states of "loading/success/failure," and keep your API key well hidden. Finish it, and you can build any "connected app": news, exchange rates, translation; the recipe is exactly the same.
 
 #### 1. Apply for a Free Weather API
 
-For personal practice, OpenWeatherMap or China's QWeather are good picks — both have free tiers that work right after you sign up. Taking OpenWeatherMap as an example:
+For personal practice, OpenWeatherMap or China's QWeather are good picks, both have free tiers that work right after you sign up. Taking OpenWeatherMap as an example:
 
 1. Sign up for an account → generate a key (apikey) on the API keys page;
 2. The free tier can call the Current Weather endpoint: api.openweathermap.org/data/2.5/weather? q=beijing&appid=YOUR_KEY&units=metric;
-3. Try it in your browser first to see what the returned JSON looks like — this "preview" is a must before wiring up any API.
+3. Try it in your browser first to see what the returned JSON looks like: this "preview" is a must before wiring up any API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Watch out: never hard-code your key into the code
 
 {class="mt-1"}
-An API key is like your "wallet password" — the moment it's committed to GitHub, bots will scrape and abuse it within hours. The right way: put it in local.properties (a file already ignored by gitignore), then read it into your code through Gradle's buildConfig. Search for "best practices for hiding API keys on Android" and follow along.
+An API key is like your "wallet password", the moment it's committed to GitHub, bots will scrape and abuse it within hours. The right way: put it in local.properties (a file already ignored by gitignore), then read it into your code through Gradle's buildConfig. Search for "best practices for hiding API keys on Android" and follow along.
 :::
 
 #### 2. The Network Layer: Retrofit + JSON Parsing
@@ -59,7 +59,7 @@ interface WeatherApi {
 ```
 :::
 
-Gson automatically stuffs the JSON into these data classes — the field names line up, and the magic happens on its own.
+Gson automatically stuffs the JSON into these data classes: the field names line up, and the magic happens on its own.
 
 #### 3. Three UI States: Loading / Success / Failure
 
@@ -138,7 +138,7 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-A few small details worth learning: firstOrNull() safely grabs the first element (the list may be empty), and ?: "Unknown" provides fallback text — the null-safety principle applies in UI code too. The temperature uses a big 72.sp font to anchor the screen, and the Light weight makes the number look elegant — a classic recipe for weather apps.
+A few small details worth learning: firstOrNull() safely grabs the first element (the list may be empty), and ?: "Unknown" provides fallback text — the null-safety principle applies in UI code too. The temperature uses a big 72.sp font to anchor the screen, and the Light weight makes the number look elegant, a classic recipe for weather apps.
 
 #### 5. UI and Interaction Details
 
@@ -152,7 +152,7 @@ A few small details worth learning: firstOrNull() safely grabs the first element
 Tip: images bring the UI to life
 
 {class="mt-1"}
-Give each kind of weather an emoji or icon (☀️🌧️❄️), mapped with when(description) — three lines of code, and the UI feels twice as warm. You could also load a third-party weather icon library, but for practice, emoji is plenty.
+Give each kind of weather an emoji or icon (☀️🌧️❄️), mapped with when(description), three lines of code, and the UI feels twice as warm. You could also load a third-party weather icon library, but for practice, emoji is plenty.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -171,5 +171,5 @@ Chapter Summary
 - Hide the API key in local.properties; never let it into the codebase
 - Retrofit interface + data classes: fields line up, and the JSON parses itself
 - The Loading/Success/Error three-part state pattern is the all-purpose tool for connected screens
-- No connection, empty input, unknown city — error handling is the passing grade for connected apps
+- No connection, empty input, unknown city, error handling is the passing grade for connected apps
 :::

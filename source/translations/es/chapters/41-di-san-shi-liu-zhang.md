@@ -2,12 +2,12 @@
 id: di-san-shi-liu-zhang
 num: 36
 part: er-tong-pian
-nav: Capítulo 36: El móvil y el hogar inteligente — que tu casa se vuelva lista
+nav: Capítulo 36: Cómo conectar todos los dispositivos de casa
 toc: default
 kind: chapter
 ---
 
-### Capítulo 36: El móvil y el hogar inteligente — que tu casa se vuelva lista
+### Capítulo 36: Cómo conectar todos los dispositivos de casa
 
 {class="chapter-intro mb-4"}
 El móvil cumple una función cada vez más importante: ser el «mando a distancia» de toda la casa. Desde una bombilla o un enchufe hasta una cerradura, el hogar inteligente está pasando de «juguete para frikis» a «equipamiento habitual». Este capítulo te ordena las ideas sobre protocolos, ecosistemas, hubs y kits de iniciación, y lo cierra con una lista de seguridad para que la «inteligencia» no se vuelva en tu contra.

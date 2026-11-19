@@ -15,7 +15,7 @@ kind: appendix
 - <strong>Dati</strong>: verifica che IMEI/numero di serie sulla scatola corrisponda a quello della fattura.
 - <strong>Funzioni</strong>: fai una chiamata per provare auricolare e microfono, scatta una foto per controllare la fotocamera.
 
-#### 2. "Promemoria chiave" per attivazione e configurazione iniziale:
+2. "Promemoria chiave" per attivazione e configurazione iniziale:
 
 - <strong>Rete</strong>: prima connettiti a un Wi-Fi stabile.
 - <strong>Account</strong>: accedi al tuo Apple ID, account Huawei, account Xiaomi, ecc.

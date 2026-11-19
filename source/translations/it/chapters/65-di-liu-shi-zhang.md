@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 60: Allestire l'ambiente di sviluppo — Xcode e il primo progetto
 
 {class="chapter-intro mb-4"}
-Chi vuole fare bene il lavoro, prima affili gli attrezzi. In questo capitolo montiamo la «cucina»: installare Xcode, far girare il simulatore, creare il primo progetto iOS della tua vita e poi smontare la struttura del progetto per guardarla bene. Ambiente pronto, vedrai per la prima volta il codice scritto da te trasformarsi in un pulsante su cui toccare — un istante che a molti resta in mente per tutta la vita.
+Chi vuole fare bene il lavoro, prima affili gli attrezzi. In questo capitolo montiamo la «cucina»: installare Xcode, far girare il simulatore, creare il primo progetto iOS della tua vita e poi smontare la struttura del progetto per guardarla bene. Ambiente pronto, vedrai per la prima volta il codice scritto da te trasformarsi in un pulsante su cui toccare, un istante che a molti resta in mente per tutta la vita.
 
 #### 1. Preparare un Mac
 
@@ -37,16 +37,16 @@ Swift Playgrounds, gratuito su iPad, insegna le basi di Swift (senza Mac); si in
 
 Xcode è l'ambiente di sviluppo integrato ufficiale di Apple ed è gratuito. Si installa in tre passi:
 
-1. sul Mac apri App Store, cerca "Xcode" e tocca Installa — attenzione: pesa parecchi GB, scegli un'ora con la rete veloce;
+1. sul Mac apri App Store, cerca "Xcode" e tocca Installa: attenzione: pesa parecchi GB, scegli un'ora con la rete veloce;
 2. al primo avvio dopo l'installazione, accetta l'accordo e lascia finire i componenti (tutto in automatico);
-3. nel menu Xcode → Settings → Locations controlla che Command Line Tools sia selezionato — gli strumenti da riga di comando servono a molti script e strumenti di terze parti.
+3. nel menu Xcode → Settings → Locations controlla che Command Line Tools sia selezionato: gli strumenti da riga di comando servono a molti script e strumenti di terze parti
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Attenzione: il «gioco degli abbinamenti» tra versione e sistema
 
 {class="mt-1"}
-Il nuovo Xcode spesso chiede l'ultimo macOS, mentre i Mac vecchi restano inchiodati a versioni datate. Per la pubblicazione su App Store Apple chiede di compilare con un Xcode abbastanza recente (di norma concede un periodo di respiro). Quindi non rimandare troppo gli aggiornamenti di sistema: gli sviluppatori iOS sono fra i più puntigliosi nell'inseguire le novità.
+Il nuovo Xcode spesso chiede l'ultimo macOS. Mentre i Mac vecchi restano inchiodati a versioni datate. Per la pubblicazione su App Store Apple chiede di compilare con un Xcode abbastanza recente (di norma concede un periodo di respiro). Quindi non rimandare troppo gli aggiornamenti di sistema: gli sviluppatori iOS sono fra i più puntigliosi nell'inseguire le novità.
 :::
 
 #### 3. Creare il tuo primo progetto
@@ -62,7 +62,7 @@ Apri Xcode → Create New Project → scegli iOS → il template App, poi compil
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Le cinque cose da compilare per creare il progetto
 
-Premuto Create, Xcode genera un progetto che parte subito. In alto a sinistra scegli un simulatore (per esempio iPhone 17) e tocca ▶ per eseguire — dopo qualche secondo, sullo schermo del simulatore appare una finestra con scritto "Hello, world!". La tua prima app iOS è appena nata.
+Premuto Create, Xcode genera un progetto che parte subito. In alto a sinistra scegli un simulatore (per esempio iPhone 17) e tocca ▶ per eseguire, dopo qualche secondo, sullo schermo del simulatore appare una finestra con scritto "Hello, world!". La tua prima app iOS è appena nata.
 
 #### 4. Anatomia del progetto: a cosa serve ogni file
 
@@ -97,12 +97,12 @@ A sinistra c'è il navigatore del progetto; da principiante ti basta riconoscere
 Figura 2: la struttura del progetto Xcode che i principianti devono conoscere
 :::
 
-- MyFirstAppApp.swift: l'ingresso del programma, in SwiftUI sono poche righe — «avvia, poi mostra la schermata principale»;
+- MyFirstAppApp.swift: l'ingresso del programma, in SwiftUI sono poche righe, «avvia, poi mostra la schermata principale»;
 - ContentView.swift: la vista della schermata principale; tutto quello che ora vedi sta qui;
-- Assets.xcassets: il magazzino delle risorse — icone, immagini e colori stanno qui;
-- Impostazioni del target: entra toccando l'icona blu del progetto a sinistra; dentro ci sono numero di versione, versione minima di iOS e firma. Qui si impostano anche il nome visibile dell'app e l'icona.
+- Assets.xcassets: il magazzino delle risorse, icone, immagini e colori stanno qui;
+- Impostazioni del target: entra toccando l'icona blu del progetto a sinistra; dentro ci sono numero di versione, versione minima di iOS e firma. Qui si impostano anche il nome visibile dell'app e l'icona
 
-#### 5. Trucchi di efficienza in Xcode: i cinque «potenziamenti da tastiera» per i principianti
+5. Trucchi di efficienza in Xcode: i cinque «potenziamenti da tastiera» per i principianti
 
 Imparati bene questi e sembrerai «molto professionale»:
 
@@ -115,28 +115,28 @@ Imparati bene questi e sembrerai «molto professionale»:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Le scorciatoie Xcode di uso quotidiano (il corredo del principiante)
 
-Due benefit nascosti in più: simulatori aperti insieme (iPhone e iPad in parallelo per confrontare i layout) e la biblioteca di snippet (trascina le righe di codice di uso frequente nel pannello Snippets a destra e la volta dopo le inserisci con un tocco) — usa subito gli strumenti di efficienza e la mano si affina da sé.
+Due benefit nascosti in più: simulatori aperti insieme (iPhone e iPad in parallelo per confrontare i layout) e la biblioteca di snippet, (trascina le righe di codice di uso frequente nel pannello Snippets a destra e la volta dopo le inserisci con un tocco), usa subito gli strumenti di efficienza e la mano si affina da sé.
 
-#### 6. Debug su dispositivo reale: portare l'app dentro il tuo iPhone
+6. Debug su dispositivo reale: portare l'app dentro il tuo iPhone
 
 Il simulatore è comodo, ma il telefono vero è la meta. Con un Apple ID gratuito si può fare debug anche su dispositivo vero:
 
 1. collega l'iPhone col cavo dati (oppure fai il debug senza fili sulla stessa Wi-Fi);
 2. nell'elenco dei dispositivi in alto in Xcode scegli il tuo telefono: al primo giro chiede di accedere con l'Apple ID e prepara la firma in automatico;
 3. sull'iPhone: [Impostazioni] → [Generali] → [VPN e gestione dispositivi] → dai fiducia al tuo certificato da sviluppatore;
-4. tocca ▶ e l'app si installa sul telefono vero.
+4. tocca ▶ e l'app si installa sul telefono vero
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Attenzione: il «limite dei sette giorni» dell'account gratuito
 
 {class="mt-1"}
-Le app firmate con un Apple ID gratuito scadono dopo 7 giorni (basta eseguirle ancora una volta per rinnovarle). È il meccanismo antiabuso di Apple e per la fase di studio va più che bene; l'account sviluppatore a pagamento (99 dollari/anno) non ha questo limite — dettagli al capitolo 67.
+Le app firmate con un Apple ID gratuito scadono dopo 7 giorni (basta eseguirle ancora una volta per rinnovarle). È il meccanismo antiabuso di Apple e per la fase di studio va più che bene; l'account sviluppatore a pagamento (99 dollari/anno) non ha questo limite, dettagli al capitolo 67.
 :::
 
 #### 7. Primo assaggio + pronto soccorso per gli errori comuni
 
-Apri ContentView.swift, sostituisci il testo dentro Text("Hello, world!") col tuo nome e premi ⌘R per rieseguire — dopo qualche secondo sul simulatore compare il tuo nome. Congratulazioni: hai portato a termine il primo ciclo completo «modificare il codice → compilare → installare → eseguire».
+Apri ContentView.swift, sostituisci il testo dentro Text("Hello, world!") col tuo nome e premi ⌘R per rieseguire, dopo qualche secondo sul simulatore compare il tuo nome. Congratulazioni: hai portato a termine il primo ciclo completo «modificare il codice → compilare → installare → eseguire».
 
 ::: div .overflow-x-auto
 ```html
@@ -152,7 +152,7 @@ Tabella di pronto soccorso per gli errori d'ambiente dei principianti
 Mani in pasta: completa la tua checklist dei «riti dello sviluppatore»
 
 {class="mt-1"}
-① Installa Xcode e fai girare il simulatore; ② esegui una volta la tua app sul telefono vero e tieni lo screenshot come ricordo; ③ cambia il testo di Hello col tuo nome; ④ nelle impostazioni del target porta il nome visibile dell'app a «La mia prima app». Fatti questi quattro passi, sei una persona che ha un'opera sua.
+① Installa Xcode e fai girare il simulatore. ② esegui una volta la tua app sul telefono vero e tieni lo screenshot come ricordo. ③ cambia il testo di Hello col tuo nome. ④ nelle impostazioni del target porta il nome visibile dell'app a «La mia prima app». Fatti questi quattro passi, sei una persona che ha un'opera sua.
 :::
 
 ::: div .chapter-summary

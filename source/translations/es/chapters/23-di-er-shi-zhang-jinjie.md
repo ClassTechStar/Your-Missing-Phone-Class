@@ -20,7 +20,7 @@ Apps bancarias inútilizables
 
 - <strong>Android</strong>: es posible que no puedas recibir normalmente las actualizaciones oficiales del sistema.
 - <strong>HarmonyOS</strong> Las operaciones de Root conllevan ciertos riesgos y podrían dejar el móvil "brickeado" (no arranca). Si eres principiante, te recomiendo informarte bien primero y asegúrate de tener una copia de seguridad completa. Antes de operar, lee cuidadosamente el tutoríal y confirma tu modelo y versión del sistema.
-- <strong>iOS</strong> Modo desarrollador
+- <strong>iOS</strong> Modo desarrollador.
 
 ##### Lista de funciones habituales:
 
@@ -46,7 +46,7 @@ Apps bancarias inútilizables
 Siente si el móvil se volvio más rápido.
 :::
 
-#### 2. Desbloqueo OEM: el "interruptor de flasheo" en opciones de desarrollador
+2. Desbloqueo OEM: el "interruptor de flasheo" en opciones de desarrollador
 
 En las opciones de desarrollador hay un interruptor discreto pero importante: "Desbloqueo OEM" (algunas marcas lo llaman "Permitir desbloqueo OEM" o "Desbloqueo de dispositivo"). No desbloquea el BL por si mismo, sino que concede el "permiso previo": solo al activarlo el fabricante permite desbloquear el BL mediante fastboot o su herramienta.
 
@@ -69,7 +69,7 @@ Si crees que el modo desarrollador no es suficientemente "hardcore" y quieres ex
 
 ##### I. Que es Termux
 
-- <strong>Termux es un emulador de terminal y entorno Linux de código abierto disenado para Android. No necesita permisos Root para ofrecer una experiencia completa de shell Linux en el móvil. Como App ligera (unos 30 MB), Termux soporta un rico ecosistema de software via gestor de paquetes APT, permitiendo ejecutar Python, Node.js, Git, SSH e incluso montar servidores o hacer pruebas de penetracion.</strong> La ventaja principal de Termux es su ligereza y alta escalabilidad, adecuada para desarrollo, aprendizaje y administración de sistemas. Combina paquetes estándar con emulación de terminal precisa en una solución de código abierto.
+- <strong>Termux es un emulador de terminal y entorno Linux de código abierto disenado para Android. No necesita permisos Root para ofrecer una experiencia completa de shell Linux en el móvil. Como App ligera (unos 30 MB), Termux soporta un rico ecosistema de software via gestor de paquetes APT, permitiendo ejecutar Python, Node.js, Git, SSH e incluso montar servidores o hacer pruebas de penetracion.</strong> La ventaja principal de Termux es su ligereza y alta escalabilidad, adecuada para desarrollo, aprendizaje y administración de sistemas. Combina paquetes estándar con emulación de terminal precisa en una solución de código abierto
 - <strong>II. Funciones principales y carácterísticas</strong> Entorno Linux completo
 - <strong>Termux incluye Bash, Zsh, fish y otros entornos Shell; soporta Vim, Nano, Emacs y más editores; ofrece una experiencia de línea de comandos cercana a la nativa. Los usuarios pueden instalar 2000+ paquetes con "pkg install", incluyendo GCC, OpenSSH, SQLMap y otras herramientas de desarrollo y seguridad.</strong> Gestor de paquetes potente
 
@@ -79,10 +79,10 @@ Si crees que el modo desarrollador no es suficientemente "hardcore" y quieres ex
 - <strong>Huawei</strong> Herramientas de cifrado
 - <strong>: proporciona herramientas como OpenSSL; soporta cifrado de datos y comunicaciones seguras.</strong> Configuración de servidores
 - <strong>: puedes configurar Nginx o Apache para montar servidores web estáticos.</strong> Integración del sistema y extensiones
-- <strong>Samsung</strong> Llamar a sensores, cámara y otras funciones hardware de Android mediante el plugin Termux:API.
+- <strong>Samsung</strong> Llamar a sensores, cámara y otras funciones hardware de Android mediante el plugin Termux:API
 - <strong>Apple</strong> III. Ecosistema de plugins
 
-#### 4. Comandos ADB utiles: controlar el telefono desde el ordenador
+4. Comandos ADB utiles: controlar el telefono desde el ordenador
 
 ADB (Android Debug Bridge) es una herramienta de linea de comandos oficial de Google que permite al ordenador comunicarse con el telefono por USB o Wi-Fi. No requiere Root; basta con activar "Depuracion USB". Es como un mando a distancia para dar ordenes al telefono: flashear, instalar apps, pasar archivos o ver registros.
 
@@ -165,7 +165,7 @@ El permiso Root equivale al superusuario de Linux (control total sobre / y lectu
 Descargar App
 :::
 
-#### 6. SafetyNet y Play Integrity: por que las apps de banco no funcionan tras hacer Root
+6. SafetyNet y Play Integrity: por que las apps de banco no funcionan tras hacer Root
 
 Muchos usuarios Root han vivido este momento: tras instalar modulos, abren la app del banco y ven "Su dispositivo no es seguro, no se puede usar"; Google Pay tampoco funciona y Netflix se niega a reproducir en HD. Detras estan los dos mecanismos de integridad de Google: el antiguo SafetyNet y el nuevo Play Integrity API.
 
@@ -216,7 +216,7 @@ Google actualiza periódicamente las reglas de detección y los desarrolladores 
 <i class="fas fa-hands mr-2"></i>pkg update &amp;&amp; pkg upgrade
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. para actualizar la lista de paquetes.
+1. para actualizar la lista de paquetes
 2. Optimizacion básica
 3. Cambiar repositorio espejo
 4. :usa el comando

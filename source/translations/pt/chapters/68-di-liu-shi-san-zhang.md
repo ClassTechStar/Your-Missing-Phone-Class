@@ -53,11 +53,11 @@ struct CounterView: View {
 ```
 :::
 
-Conselho direto para iniciantes: para estado privado da tela, @State; para o que cruza telas ou tem lógica, classes com @Observable. O @StateObject/@ObservableObject dos tutoriais antigos é a geração anterior — saber ler basta; em código novo, siga a orientação acima.
+Conselho direto para iniciantes: para estado privado da tela, @State; para o que cruza telas ou tem lógica, classes com @Observable. O @StateObject/@ObservableObject dos tutoriais antigos é a geração anterior, saber ler basta; em código novo, siga a orientação acima.
 
 #### 2. NavigationStack: a “pilha” de navegação entre telas
 
-Desde o iOS 16, a navegação entre várias telas usa o NavigationStack — como uma pilha de pratos: você coloca um em cima e, ao voltar, eles saem um a um:
+Desde o iOS 16, a navegação entre várias telas usa o NavigationStack, como uma pilha de pratos: você coloca um em cima e, ao voltar, eles saem um a um:
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-O NavigationLink é o “link de navegação clicável”; o navigationTitle gera automaticamente o título da barra de navegação e o botão de voltar. Para navegar por código (por exemplo, voltar automaticamente depois de tocar em “Salvar”), use @Environment(\.dismiss) para fechar a tela atual — com essas duas técnicas, 90% das necessidades de navegação estão cobertas.
+O NavigationLink é o “link de navegação clicável”; o navigationTitle gera automaticamente o título da barra de navegação e o botão de voltar. Para navegar por código (por exemplo, voltar automaticamente depois de tocar em “Salvar”), use @Environment(\.dismiss) para fechar a tela atual, com essas duas técnicas, 90% das necessidades de navegação estão cobertas.
 
 #### 3. Janelas modais e abas inferiores: sheet e TabView
 
@@ -141,7 +141,7 @@ Regra de bolso: no fluxo principal, empurre telas com NavigationStack (lista →
 
 #### 4. List: a “lista nacional” do iOS
 
-O componente mais usado e mais com “jeitão Apple” do iOS é o List — já vem com divisórias, exclusão por arrasto e destaque ao toque:
+O componente mais usado e mais com “jeitão Apple” do iOS é o List, já vem com divisórias, exclusão por arrasto e destaque ao toque:
 
 ::: div .code-block
 :::inline div .code-head
@@ -166,7 +166,7 @@ struct RecordListView: View {
 ```
 :::
 
-Lista + NavigationLink + sheet + TabView — combinando esses quatro elementos, você já consegue montar o esqueleto completo de um app: “lista do diário financeiro → abrir o detalhe → tocar no + para abrir a janela de lançamento”. É assim que o projeto do próximo capítulo será construído.
+Lista + NavigationLink + sheet + TabView, combinando esses quatro elementos, você já consegue montar o esqueleto completo de um app: “lista do diário financeiro → abrir o detalhe → tocar no + para abrir a janela de lançamento”. É assim que o projeto do próximo capítulo será construído.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-Usos típicos: atualizar dados ao voltar para o primeiro plano e salvar rascunhos ao ir para o segundo plano. O iOS é bem rigoroso com a execução em segundo plano — um app comum é suspenso (congelado) pouco depois de sair da frente, então não conte com processos pesados escondidos lá; se precisar de tarefas agendadas, use as notificações locais do Capítulo 68, e não um “app residente em segundo plano”.
+Usos típicos: atualizar dados ao voltar para o primeiro plano e salvar rascunhos ao ir para o segundo plano. O iOS é bem rigoroso com a execução em segundo plano: um app comum é suspenso (congelado) pouco depois de sair da frente, então não conte com processos pesados escondidos lá; se precisar de tarefas agendadas, use as notificações locais do Capítulo 68, e não um “app residente em segundo plano”.
 
 {class="mt-1"}
-Monte a versão com dados fictícios do esqueleto do diário financeiro: um TabView com três abas (Registros/Estatísticas/Ajustes) → a tela de registros usa List para exibir dados fictícios, e tocar numa linha abre o detalhe (NavigationStack) → o botão “+” no canto superior direito abre a janela de lançamento em sheet. Sem persistência e sem internet, só para treinar o esqueleto — com ele pronto, encher de dados reais no Capítulo 65 será um pulo.
+Monte a versão com dados fictícios do esqueleto do diário financeiro: um TabView com três abas (Registros/Estatísticas/Ajustes) → a tela de registros usa List para exibir dados fictícios, e tocar numa linha abre o detalhe (NavigationStack) → o botão “+” no canto superior direito abre a janela de lançamento em sheet. Sem persistência e sem internet, só para treinar o esqueleto: com ele pronto, encher de dados reais no Capítulo 65 será um pulo.
 :::
 
 ::: div .chapter-summary

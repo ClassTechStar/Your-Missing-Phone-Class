@@ -2,17 +2,17 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Capítulo 25: Qué hacer con un móvil de segunda mano y la herencia digital
+nav: Capítulo 25: Vender un teléfono viejo: borra tus datos
 toc: default
 kind: chapter
 ---
 
-### Capítulo 25: Tratamiento de móviles de segúnda mano y legado digital
+### Capítulo 25: Vender un teléfono viejo: borra tus datos
 
 {class="chapter-intro mb-4"}
 De "centrado en dispositivo" a "centrado en identidad"
 
-#### : tu caja fuerte de datos personales en la nube es el verdadero centro.
+- tu caja fuerte de datos personales en la nube es el verdadero centro.
 
 Principio fundamental: la limpieza de datos no es "eliminar", sino "sobrescribir". Mucha gente piensa que arrastrar fotos a la papelera de reciclaje y vaciar el álbum es suficiente, pero cuando se transfiere el teléfono, el nuevo propietario usa software de recuperación de datos y recupera fotos antiguas, historial de chat, fotos de documentos de identidad: este tipo de "exposición pública" ocurre cada año.
 
@@ -194,8 +194,8 @@ Los testamentos tradicionales no cubren los activos digitales. Te recomiendo act
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Sociales: WeChat (cuenta xxx), Weibo, Douyin, Bilibili, Xiaohongshu, etc.
-- Pago: Alipay, WeChat Pay, apps bancarias
-- Nube: iCloud, Huawei Cloud, Xiaomi Cloud, cuenta de Google, cuenta de Microsoft
+- Pago: Alipay, WeChat Pay, apps bancarias.
+- Nube: iCloud, Huawei Cloud, Xiaomi Cloud, cuenta de Google, cuenta de Microsoft.
 - Correo: QQ Mail, NetEase Mail, Gmail, etc.
 - Otros: discos de red, servicios de suscripción, cuentas de juegos, etc.
 
@@ -233,7 +233,7 @@ Los testamentos tradicionales no cubren los activos digitales. Te recomiendo act
 Escribir las contraseñas directamente en el testamento conlleva riesgo de fuga, y tras la publicación del testamento todos los herederos podrán verlas.<strong>Es más prudente: en el testamento solo se indica "lista de cuentas + voluntad de disposición + ubicación de custodia de contraseñas", y la contraseña real se transmite al albacea de confianza mediante la contraseña maestra del gestor de contraseñas</strong>. Así se cumplen los requisitos legales y se reduce el riesgo de filtración de contraseñas.
 :::
 
-#### Artículo 3: Nuestro objetivo común es mejorar la eficiencia y la experiencia vital. Si mediante diseños inducentes me haces adicto, tengo derecho a desinstalarte.
+Artículo 3: Nuestro objetivo común es mejorar la eficiencia y la experiencia vital. Si mediante diseños inducentes me haces adicto, tengo derecho a desinstalarte.
 
 Un teléfono móvil contiene oro, plata, cobre, tierras raras y decenas de metales; tirarlo libremente contamina el suelo y desperdicia recursos. Hay tres tipos de canales de reciclaje correctos, cada uno con sus ventajas:
 

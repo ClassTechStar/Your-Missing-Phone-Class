@@ -24,7 +24,7 @@ O Bootloader é o primeiro programa executado quando o celular é ligado. Sua fu
 
 ##### 🔐 Armazenamento e verificação em nível de hardware
 
-O estado de bloqueio do Bootloader (Bloqueado/Desbloqueado) e a chave pública do fabricante geralmente são armazenados em áreas de hardware protegidas (como a partição devinfo da Qualcomm, eFuse ou partição RPMB), para evitar adulteração por software. A cada inicialização, o Bootloader lê o estado desta área segura e, com base nisso, decide se executa a verificação rigorosa de assinatura.
+O estado de bloqueio do Bootloader (Bloqueado/Desbloqueado) e a chave pública do fabricante geralmente são armazenados em áreas de hardware protegidas, (como a partição devinfo da Qualcomm, eFuse ou partição RPMB), para evitar adulteração por software. A cada inicialização, o Bootloader lê o estado desta área segura e, com base nisso, decide se executa a verificação rigorosa de assinatura.
 
 ##### 🔏 Verificação de assinatura digital
 
@@ -83,7 +83,7 @@ Para entender mais intuitivamente os prós e contras do bloqueio do Bootloader, 
 ```
 :::
 
-#### II. Processo detalhado de desbloqueio do Bootloader (exemplo Xiaomi)
+II. Processo detalhado de desbloqueio do Bootloader (exemplo Xiaomi)
 
 1. <strong>Solicitar permissão de desbloqueio</strong>: solicite o desbloqueio no site da ferramenta de desbloqueio Xiaomi.
 2. <strong>Vincular conta</strong>: vincule a conta Xiaomi nas configurações do celular.
@@ -104,7 +104,7 @@ Flashing de ROM refere-se a instalar um novo sistema operacional no celular. Tip
 - <strong>Flash de Recovery de terceiros</strong>: como TWRP, usado para backup/restauração e instalação de ROMs de terceiros.
 - <strong>Flash de ROM de terceiros</strong>: como LineageOS, Pixel Experience, etc., para experimentar sistemas diferentes.
 
-#### V. Samsung Knox: o custo irreversível do desbloqueio do Bootloader
+V. Samsung Knox: o custo irreversível do desbloqueio do Bootloader
 
 Diferente de outros fabricantes Android, o mecanismo de desbloqueio do Bootloader da Samsung possui um design exclusivo de "fusível": <strong>para celulares Samsung, o desbloqueio aciona o fusível Knox, perdendo permanentemente algumas funções de segurança (como Samsung Pay); apaga todos os dados protegidos; afeta a garantia</strong>. Especificamente:
 

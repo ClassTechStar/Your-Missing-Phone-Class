@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Willkommen bei deinem ersten "richtigen Projekt". Dieses Haushaltsbuch geht zwar nicht ins Netz, aber es hat alles, was dazugehört: eine Buchung erfassen, den Verlauf ansehen, monatliche Auswertungen, Löschen und Ändern. Wenn du fertig bist, hast du den kompletten Ablauf "Daten → Logik → Oberfläche" einmal durchlaufen. Und: Nicht sofort den Code abschreiben – erst klar denken, dann anpacken. Das ist unser Prinzip von Anfang an.
 
-#### 1. Über die Anforderungen nachdenken: erst fünf Fragen stellen
+1. Über die Anforderungen nachdenken: erst fünf Fragen stellen
 
 Bevor du loslegst, sortiere deine Idee mit den "fünf Anforderungsfragen":
 
@@ -181,7 +181,7 @@ Achtung: Bei der Eingabeprüfung nicht faulenzen
 Das Betragsfeld musst du unbedingt prüfen: Leere Werte, Negativeingaben, "abc" und Ähnliches sind abzufangen (mit toDoubleOrNull() prüfen). Einer der häufigsten Gründe für App-Abstürze ist, "die Eingaben des Nutzers für brav zu halten". Merke: Behandle alles, was Nutzer eintippen, wie etwas, das du feindlich prüfen musst.
 :::
 
-#### 5. Bearbeiten und Löschen: Daten müssen "rein und raus" können
+5. Bearbeiten und Löschen: Daten müssen "rein und raus" können
 
 Ein Haushaltsbuch, das nur hinzufügen kann, ist nach drei Tagen unbrauchbar. Zwei Operationen noch:
 
@@ -205,7 +205,7 @@ suspend fun deleteById(id: Long)
 
 Zwei Erfahrungsregeln für die Bedienung: Beim Löschen immer eine zweite Bestätigung (gegen Versehen), beim Bearbeiten möglichst die Originalwerte voreintragen (ein Zeichen ändern ist leichter als alles neu tippen). Unterschätz diese Details nicht – "Produktgefühl" besteht genau aus solchen Details.
 
-#### 6. Abnahme: drei Prüfebenen + zwei Fortgeschrittenen-Herausforderungen
+6. Abnahme: drei Prüfebenen + zwei Fortgeschrittenen-Herausforderungen
 
 Wenn das Projekt fertig ist, nimm die Abnahme in drei Ebenen vor: "Funktion → Grenzfälle → Architektur": Kannst du erfassen? Löschen? Sind die Daten nach einem Neustart noch da (Funktion)? Stürzt die App bei Betrag 0 oder negativ ab? Gehen bei einer Bildschirmdrehung Daten verloren (Grenzfälle)? Sind Oberfläche und Daten sauber getrennt, sind Felder hart kodiert (Architektur)?
 

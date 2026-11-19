@@ -12,13 +12,13 @@ kind: chapter
 {class="chapter-intro mb-4"}
 À l'ère numérique, le mot de passe est la clé de votre maison. Mais trop de clés, trop complexes, que faire ? Le gestionnaire de mots de passe est votre « concierge universel des clés ».
 
-#### I. Pourquoi avez-vous besoin d'un gestionnaire de mots de passe ?
+I. Pourquoi avez-vous besoin d'un gestionnaire de mots de passe ?
 
 Une personne moderne a en moyenne des dizaines, voire des centaines de comptes en ligne. Si vous utilisez le même mot de passe pour chaque compte, dès qu'un site est piraté, tous vos comptes sont en danger. Si vous utilisez un mot de passe complexe différent pour chaque compte, impossible de tous les retenir.
 
 Le gestionnaire de mots de passe résout ce dilemme : vous n'avez qu'à retenir un seul mot de passe maître, il retient tous les autres pour vous.
 
-#### II. Principe de fonctionnement du gestionnaire de mots de passe
+II. Principe de fonctionnement du gestionnaire de mots de passe
 
 1. <strong>Stockage chiffré</strong>: tous les mots de passe sont stockés avec un chiffrement haute intensité, seul vous pouvez les déchiffrer.
 2. <strong>Mot de passe maître</strong>: vous définissez un mot de passe maître pour déverrouiller le coffre-fort. Le mot de passe maître lui-même n'est pas stocké sur les serveurs.
@@ -42,22 +42,22 @@ AES (Advanced Encryption Standard) est un algorithme de chiffrement symétrique 
 3. Seul le texte chiffré est téléchargé sur le serveur.
 4. Lors de la prochaine connexion, le serveur renvoie le texte chiffré et le client le déchiffre à nouveau avec le mot de passe principal.
 
-Point clé :<strong>Le mot de passe principal ne quitte jamais votre appareil</strong>, et n'est pas non plus sur le serveur. Donc même si le prestataire est piraté, le pirate n'obtient qu'un ensemble de textes chiffrés indéchiffrables — à moins qu'il ne devine votre mot de passe principal.
+Point clé :<strong>Le mot de passe principal ne quitte jamais votre appareil</strong>, et n'est pas non plus sur le serveur. Donc même si le prestataire est piraté, le pirate n'obtient qu'un ensemble de textes chiffrés indéchiffrables, à moins qu'il ne devine votre mot de passe principal.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>Pourquoi « zéro connaissance » signifie-t-il que le prestataire ne peut pas voir vos mots de passe ?
 
 {class="mt-1"}
-Parce que la clé de déchiffrement est dérivée de votre mot de passe principal, et que celui-ci n'existe que dans votre tête et n'est utilisé que sur votre appareil local. Le serveur du prestataire ne contient ni le mot de passe principal ni la clé de déchiffrement, seulement le texte chiffré. C'est pourquoi les prestataires sérieux comme Bitwarden et 1Password déclarent explicitement « nous ne pouvons pas non plus voir vos mots de passe » — ce n'est pas qu'ils ne le veulent pas, c'est techniquement impossible.
+Parce que la clé de déchiffrement est dérivée de votre mot de passe principal, et que celui-ci n'existe que dans votre tête et n'est utilisé que sur votre appareil local. Le serveur du prestataire ne contient ni le mot de passe principal ni la clé de déchiffrement, seulement le texte chiffré. C'est pourquoi les prestataires sérieux comme Bitwarden et 1Password déclarent explicitement « nous ne pouvons pas non plus voir vos mots de passe », ce n'est pas qu'ils ne le veulent pas, c'est techniquement impossible.
 :::
 
 ##### 3. Fonction de dérivation de clé : PBKDF2 et Argon2
 
-Le mot de passe principal ne peut pas être directement utilisé comme clé de chiffrement — il doit être traité par une « fonction de dérivation de clé ». Le rôle de cette fonction est de <strong>ralentir volontairement le calcul</strong>, afin de rendre le coût d'une attaque par force brute prohibitif.
+Le mot de passe principal ne peut pas être directement utilisé comme clé de chiffrement: il doit être traité par une « fonction de dérivation de clé ». Le rôle de cette fonction est de <strong>ralentir volontairement le calcul</strong>, afin de rendre le coût d'une attaque par force brute prohibitif.
 
 - <strong>PBKDF2</strong> : Standard établi, largement utilisé par le trousseau iCloud, Bitwarden, LastPass, etc. Ralentit le cassage par itérations hachées répétées (généralement plus de 100 000 fois).
-- <strong>Argon2</strong> : Champion du concours de hachage de mots de passe 2015, plus moderne que PBKDF2. Outre la « consommation de calcul », il introduit une « consommation de mémoire » — rendant difficile l'accélération du cassage par du matériel spécialisé comme GPU/ASIC. Bitwarden, KeePassXC, etc. le prennent déjà en charge.
+- <strong>Argon2</strong> : Champion du concours de hachage de mots de passe 2015, plus moderne que PBKDF2. Outre la « consommation de calcul », il introduit une « consommation de mémoire », rendant difficile l'accélération du cassage par du matériel spécialisé comme GPU/ASIC. Bitwarden, KeePassXC, etc. le prennent déjà en charge.
 
 Plus le nombre d'itérations est élevé, plus c'est sécurisé, mais plus le déverrouillage est lent. Les prestataires sérieux publient l'algorithme de dérivation et le nombre d'itérations utilisés, pour permettre l'audit par la communauté de sécurité.
 
@@ -144,7 +144,7 @@ Inquiet de saisir votre mot de passe sur HaveIBeenPwned et de provoquer une nouv
 
 #### VI. Passkey : l'avenir de la connexion sans mot de passe
 
-En 2024-2026, la technologie des mots de passe traverse une révolution —<strong>Passkey (clé d'accès)</strong> devrait éliminer complètement les mots de passe traditionnels. Promu conjointement par Apple, Google et Microsoft, avec le soutien de la FIDO Alliance et du W3C, c'est le plus grand changement de méthode de connexion depuis des décennies.
+En 2024-2026, la technologie des mots de passe traverse une révolution<strong>Passkey (clé d'accès)</strong> devrait éliminer complètement les mots de passe traditionnels. Promu conjointement par Apple, Google et Microsoft, avec le soutien de la FIDO Alliance et du W3C, c'est le plus grand changement de méthode de connexion depuis des décennies.
 
 ##### 1. Qu'est-ce qu'un Passkey ?
 
@@ -203,7 +203,7 @@ Passkey est basé sur la norme FIDO2 / WebAuthn, utilisant <strong>une paire de 
 <i class="fas fa-lightbulb mr-2"></i>La synchronisation multi-appareils est une percée clé
 
 {class="mt-1"}
-La plus grande difficulté des premiers Passkey était d'être « liés à un seul appareil » — il fallait les recréer en changeant de smartphone. À partir de 2023, Apple, Google et Microsoft ont mis en œuvre la synchronisation cloud des Passkey : le trousseau iCloud synchronise entre appareils Apple, Google Password Manager entre appareils Android. 1Password et d'autres tiers ont ouvert la synchronisation inter-écosystèmes. Cela signifie que Passkey est désormais assez mature pour remplacer les mots de passe.
+La plus grande difficulté des premiers Passkey était d'être « liés à un seul appareil », il fallait les recréer en changeant de smartphone. À partir de 2023, Apple, Google et Microsoft ont mis en œuvre la synchronisation cloud des Passkey : le trousseau iCloud synchronise entre appareils Apple, Google Password Manager entre appareils Android. 1Password et d'autres tiers ont ouvert la synchronisation inter-écosystèmes. Cela signifie que Passkey est désormais assez mature pour remplacer les mots de passe.
 :::
 
 ##### 4. Comment créer et utiliser un Passkey sur smartphone
@@ -250,12 +250,12 @@ Ce processus utilise une communication doublement chiffrée par Bluetooth + Inte
 <i class="fas fa-exclamation-triangle mr-2"></i>Recommandations pour la période de transition
 
 {class="mt-1"}
-Passkey n'a pas complètement remplacé les mots de passe — de nombreux sites sont encore au stade « Passkey + mot de passe » coexistant. Recommandation : activez Passkey en priorité pour les comptes à haute valeur, mais <strong>ne supprimez pas immédiatement les mots de passe traditionnels</strong>, gardez-les comme secours ; continuez à utiliser un gestionnaire de mots de passe, car tous les sites ne prennent pas en charge Passkey. Considérez Passkey comme un « puissant complément au gestionnaire de mots de passe » et non comme un « remplacement immédiat ».
+Passkey n'a pas complètement remplacé les mots de passe, de nombreux sites sont encore au stade « Passkey + mot de passe » coexistant. Recommandation : activez Passkey en priorité pour les comptes à haute valeur, mais <strong>ne supprimez pas immédiatement les mots de passe traditionnels</strong>, gardez-les comme secours ; continuez à utiliser un gestionnaire de mots de passe, car tous les sites ne prennent pas en charge Passkey. Considérez Passkey comme un « puissant complément au gestionnaire de mots de passe » et non comme un « remplacement immédiat ».
 :::
 
 #### VII. Clés de sécurité matérielles
 
-Si vos exigences de sécurité sont supérieures à celles de l'utilisateur ordinaire — par exemple, détention d'une grande quantité de cryptomonnaies, statut de cadre/journaliste/activiste, ou protection de comptes d'entreprise critiques — une clé de sécurité matérielle est un choix plus fiable que le code SMS.
+Si vos exigences de sécurité sont supérieures à celles de l'utilisateur ordinaire: par exemple, détention d'une grande quantité de cryptomonnaies, statut de cadre/journaliste/activiste, ou protection de comptes d'entreprise critiques: une clé de sécurité matérielle est un choix plus fiable que le code SMS.
 
 ##### 1. Qu'est-ce qu'une clé de sécurité matérielle ?
 
@@ -277,7 +277,7 @@ Une clé matérielle est un dispositif physique (ressemblant à une clé USB), d
 
 - Comptes d'échanges de cryptomonnaies, récupération de portefeuille.
 - SSO d'entreprise, VPN de télétravail, connexion SSH à des serveurs.
-- E-mail, GitHub, réseaux sociaux et autres « comptes principaux » — une fois compromis, ils permettent de réinitialiser tous les autres comptes.
+- E-mail, GitHub, réseaux sociaux et autres « comptes principaux », une fois compromis, ils permettent de réinitialiser tous les autres comptes.
 - Personnes très sensibles : journalistes, avocats, cadres dirigeants, etc.
 
 ##### 4. Comment configurer une clé matérielle pour l'authentification à deux facteurs
@@ -306,7 +306,7 @@ Le plus grand risque d'une clé matérielle est la « perte ». Recommandations 
 <i class="fas fa-exclamation-triangle mr-2"></i>Prudence sur le canal d'achat
 
 {class="mt-1"}
-Achetez impérativement auprès de la boutique officielle ou d'un revendeur autorisé, n'achetez pas de clés d'occasion ou d'origine inconnue — en théorie, du matériel préconfiguré peut avoir été compromis. Le firmware du YubiKey ne peut pas être mis à jour après l'usine, mais Yubico publie continuellement des bulletins de sécurité, suivez son site officiel.
+Achetez impérativement auprès de la boutique officielle ou d'un revendeur autorisé, n'achetez pas de clés d'occasion ou d'origine inconnue, en théorie, du matériel préconfiguré peut avoir été compromis. Le firmware du YubiKey ne peut pas être mis à jour après l'usine, mais Yubico publie continuellement des bulletins de sécurité, suivez son site officiel.
 :::
 
 #### VIII. Partage de mots de passe en famille / en équipe
@@ -346,12 +346,12 @@ La version gratuite de Bitwarden prend en charge le partage de mots de passe per
 
 - <strong>1Password Teams / Business</strong> : Possibilité de créer plusieurs coffres-forts par département ou groupe de projet, contrôle fin des permissions, auditabilité de toutes les actions d'accès.
 - <strong>Bitwarden Teams / Enterprise</strong> : Solution open source, auto-hébergeable, la version entreprise prend en charge l'intégration SSO et la synchronisation d'annuaire.
-- <strong>Principe de séparation des responsabilités</strong> : Le mot de passe administrateur ne doit pas être détenu par une seule personne — désignez 2-3 « contacts d'urgence » pour garantir la continuité en cas de départ ou de congé du personnel clé.
+- <strong>Principe de séparation des responsabilités</strong> : Le mot de passe administrateur ne doit pas être détenu par une seule personne, désignez 2-3 « contacts d'urgence » pour garantir la continuité en cas de départ ou de congé du personnel clé.
 - <strong>Procédure de départ</strong> : En cas de départ d'un employé, révoquez immédiatement son accès au gestionnaire de mots de passe et, si nécessaire, faites tourner tous les mots de passe hautement sensibles auxquels il a eu accès.
 
 ##### 5. Accès d'urgence (Emergency Access) : au cas où il vous arrive quelque chose
 
-Imaginez un scénario : vous gérez seul tous les comptes familiaux importants, mais vous êtes hospitalisé d'urgence ou décédez, et votre famille ne peut pas se connecter aux comptes bancaires, e-mail et d'assurance.<strong>La fonction « Accès d'urgence »</strong> est précisément conçue pour cela — autoriser un membre de la famille ou un ami de confiance à accéder à votre coffre-fort de mots de passe lorsque vous ne pouvez pas répondre.
+Imaginez un scénario : vous gérez seul tous les comptes familiaux importants, mais vous êtes hospitalisé d'urgence ou décédez, et votre famille ne peut pas se connecter aux comptes bancaires, e-mail et d'assurance.<strong>La fonction « Accès d'urgence »</strong> est précisément conçue pour cela, autoriser un membre de la famille ou un ami de confiance à accéder à votre coffre-fort de mots de passe lorsque vous ne pouvez pas répondre.
 
 <strong>Configuration de l'accès d'urgence Bitwarden :</strong>
 
@@ -363,7 +363,7 @@ Imaginez un scénario : vous gérez seul tous les comptes familiaux importants, 
 
 <strong>Accès d'urgence 1Password :</strong>
 
-1. 1Password ne l'appelle pas directement « accès d'urgence », mais cela peut être réalisé via la fonction « organisation familiale/équipe » — après avoir ajouté les membres de la famille à la version familiale, placez certaines entrées dans le « coffre-fort partagé ».
+1. 1Password ne l'appelle pas directement « accès d'urgence », mais cela peut être réalisé via la fonction « organisation familiale/équipe », après avoir ajouté les membres de la famille à la version familiale, placez certaines entrées dans le « coffre-fort partagé ».
 2. Pour les utilisateurs de la version personnelle, il est recommandé de communiquer le mot de passe principal à un membre de la famille hautement digne de confiance, ou de le consigner dans une enveloppe scellée conservée dans un coffre-fort.
 3. 1Password fournit également un « code de récupération », à imprimer et conserver impérativement lors de l'activation de l'authentification à deux facteurs.
 
@@ -378,7 +378,7 @@ Imaginez un scénario : vous gérez seul tous les comptes familiaux importants, 
 4. Révisez tous les six mois pour confirmer que le contact d'urgence est toujours approprié.
 :::
 
-#### IX. Bonnes pratiques d'utilisation du gestionnaire de mots de passe
+IX. Bonnes pratiques d'utilisation du gestionnaire de mots de passe
 
 - <strong>Définir un mot de passe maître fort</strong>: le mot de passe maître est la dernière ligne de défense, définissez un mot de passe long et complexe, et mémorisez-le bien.
 - <strong>Activer l'authentification à deux facteurs</strong>: activez l'authentification à deux facteurs pour le compte du gestionnaire, ajoutez une couche de protection.

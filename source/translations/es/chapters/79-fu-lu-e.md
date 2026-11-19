@@ -23,21 +23,21 @@ La tecnología avanza a una velocidad pasmosa, y el contenido del libro se basa 
 - Se reescribió el marco de prompts con el esquema «rol-contexto-tarea-restricciones», con 3 casos completos de ejemplo.
 - Se añadieron tres apéndices técnicos de nivel avanzado: Anexo al capítulo 1: análisis de la expansión de memoria en los móviles Android (definición esencial, principios de zRAM/swap, cuellos de botella de velocidad, límites de los casos de uso, denominación y activación según fabricante).
 - Anexo al capítulo 20: Termux, un entorno de terminal Linux portátil en dispositivos Android (funciones esenciales, ecosistema de plugins, instalación y configuración, y escenarios típicos como el desarrollo móvil, la administración de servidores y las pruebas de seguridad).
-- Anexo al capítulo 23: guía de iniciación a GitHub — del alojamiento de código a la plataforma de colaboración (diferencias entre Git y GitHub, conceptos clave, registro y primeros pasos, flujo de colaboración con Pull Requests, avisos de seguridad y opciones de acceso desde China).
+- Anexo al capítulo 23: guía de iniciación a GitHub: del alojamiento de código a la plataforma de colaboración (diferencias entre Git y GitHub, conceptos clave, registro y primeros pasos, flujo de colaboración con Pull Requests, avisos de seguridad y opciones de acceso desde China).
 
 #### Novedades de la versión 1.7
 
 1\. Cuatro capítulos nuevos
 
-- Capítulo 29:Salud digital — análisis del tiempo de pantalla, límites por app, modo No molestar, regla 20-20-20 para cuidar la vista, rescate del cuello, gestión del sueño, «ceguera selectiva» frente a la ansiedad informativa y un reto de salud digital de una semana.
+- Capítulo 29:Salud digital, análisis del tiempo de pantalla, límites por app, modo No molestar, regla 20-20-20 para cuidar la vista, rescate del cuello, gestión del sueño, «ceguera selectiva» frente a la ansiedad informativa y un reto de salud digital de una semana.
 - Capítulo 30: Duplicado de pantalla y coche — comparativa de las tres familias AirPlay / Miracast / DLNA, opciones de conexión por cable, modo escritorio Samsung DeX, los cuatro grandes sistemas para el coche (CarPlay / Android Auto / HiCar / CarLife) y práctica de proyección en salas de reuniones.
-- Capítulo 31: Creación de vídeos cortos — las tres preguntas para elegir tema, la configuración de rodaje en 5 pasos, los cinco movimientos de cámara (acercar, alejar, barrer, desplazar y seguir), el flujo de trabajo de CapCut en seis pasos, las claves para hacer la portada y la filosofía del contenido de que «los 3 primeros segundos deciden la vida o la muerte».
-- Capítulo 32:Manual de primeros auxilios digitales — protocolo de los 30 minutos de oro tras una pérdida, proceso a seguir en las 72 horas tras una estafa, revisión en modo seguro ante infecciones, seis pasos para recuperar una cuenta robada, cómo responder a mensajes de extorsión y cinco cosas para prevenir a diario.
+- Capítulo 31: Creación de vídeos cortos, las tres preguntas para elegir tema, la configuración de rodaje en 5 pasos, los cinco movimientos de cámara (acercar, alejar, barrer, desplazar y seguir), el flujo de trabajo de CapCut en seis pasos, las claves para hacer la portada y la filosofía del contenido de que «los 3 primeros segundos deciden la vida o la muerte».
+- Capítulo 32:Manual de primeros auxilios digitales: protocolo de los 30 minutos de oro tras una pérdida, proceso a seguir en las 72 horas tras una estafa, revisión en modo seguro ante infecciones, seis pasos para recuperar una cuenta robada, cómo responder a mensajes de extorsión y cinco cosas para prevenir a diario.
 
 2\. Dos capítulos nuevos
 
-- Capítulo 27: Accesibilidad para mayores y cariño familiar — tabla comparativa del modo sencillo por marca, las seis estafas más comunes y las tres líneas de defensa, asistencia remota (Changlian / Sunflower), modo Cuidado de WeChat y entrada por voz, y SOS / detección de caídas / recordatorios de medicación.
-- Capítulo 28:Guía de compra — método de tres pasos para elegir móvil, tabla de especificaciones de «solo mirar cinco apartados», recomendaciones en cinco rangos de presupuesto, tabla de elección por siete escenarios, las cinco trampas al comprar un móvil y análisis del momento y los canales de compra.
+- Capítulo 27: Accesibilidad para mayores y cariño familiar, tabla comparativa del modo sencillo por marca, las seis estafas más comunes y las tres líneas de defensa, asistencia remota (Changlian / Sunflower), modo Cuidado de WeChat y entrada por voz, y SOS / detección de caídas / recordatorios de medicación.
+- Capítulo 28:Guía de compra, método de tres pasos para elegir móvil, tabla de especificaciones de «solo mirar cinco apartados», recomendaciones en cinco rangos de presupuesto, tabla de elección por siete escenarios, las cinco trampas al comprar un móvil y análisis del momento y los canales de compra.
 
 3\. Nuevas funciones de lectura en voz alta e interacción
 
@@ -72,21 +72,21 @@ Nueva séptima parte, «Programación con IA en la práctica» (capítulos 37 a 
 
 Nuevas octava parte, «Desarrollo Android en la práctica» (capítulos 48 a 58, 11 capítulos en total) y novena parte, «Desarrollo iOS en la práctica» (capítulos 59 a 69, 11 capítulos en total): ambas plataformas cubren la preparación del entorno (Android Studio / Xcode), la iniciación rápida al lenguaje (Kotlin / Swift), el framework de interfaz (Jetpack Compose / SwiftUI), datos y red, dos proyectos prácticos completos (libreta de cuentas + app del tiempo), pruebas y publicación (Google Play / App Store) y la guía de referencia rápida. Se actualizaron a la vez el índice, la ruta de aprendizaje (de seis a ocho pasos), el mapa de capítulos y el índice de consulta rápida. El contenido procede de «Desarrollo Android desde cero» y «Desarrollo iOS desde cero», edición de agosto de 2026.
 
-#### Ampliaciones de contenido: apps útiles y bloqueo de llamadas molestas
+Ampliaciones de contenido: apps útiles y bloqueo de llamadas molestas
 
 - El capítulo 13 estrena la sección 6, «Herramientas del sistema prácticas»: recopila herramientas de limpieza como Qingzhuo, la limpieza de almacenamiento integrada en el sistema, la app nacional antifraude, el gestor del móvil de cada marca, los servicios antirrobollamadas de los operadores y AdGuard, y plantea el criterio de elección «primero el sistema / complementos oficiales / moderación con terceros».
 - Tabla comparativa del bloqueo de llamadas molestas integrado por marca: cubre las rutas de acceso y las opciones recomendadas de iOS, Xiaomi/Redmi, Huawei/Honor, OPPO/realme/OnePlus, vivo/iQOO y Samsung.
 - El capítulo 8 amplía sus capacidades de bloqueo de llamadas molestas: se añaden explicaciones prácticas sobre identificación de llamadas, listas negras y blancas, filtrado por palabras clave en los SMS, silenciar llamadas de desconocidos en iOS y la conexión con el modo No molestar, con enlaces cruzados al capítulo 13.
 - Recomendación de tres capas de protección: bloqueo del sistema + servicio antirrobollamadas del operador + app nacional antifraude, insistiendo en la lista blanca para evitar bloqueos por error.
 
-#### Ampliaciones de contenido: alertas meteorológicas / alertas de desastres naturales / alertas de terremoto
+Ampliaciones de contenido: alertas meteorológicas / alertas de desastres naturales / alertas de terremoto
 
 - El capítulo 13 estrena la sección 7: alertas meteorológicas (canales meteorológicos oficiales + la app del tiempo del sistema + niveles de colores), alertas de desastres naturales (varios canales meteorológicos y de emergencias) y el principio y los malentendidos de las alertas de terremoto (alertar no es lo mismo que pronosticar).
 - Tabla de activación de alertas de terremoto por marca: accesos habituales y precauciones con los permisos en Xiaomi, Huawei/Honor, la familia OPPO, vivo, iPhone y Samsung.
 - El capítulo 32 añade el «escenario cero»: el orden de protección tras una alerta de terremoto, cómo actuar ante lluvias torrenciales y tifones, y el enlace con el SOS satelital y las comunicaciones sin red; el manual de primeros auxilios queda interconectado con la configuración de alertas del capítulo 13.
 - Conexión de la sección del tiempo: la entrada sobre apps del tiempo en los viajes añade las notificaciones de alerta y el recordatorio de que «si no abres las notificaciones, no las recibirás».
 
-#### Ampliaciones de contenido: colaboración entre dispositivos y herramientas de productividad
+Ampliaciones de contenido: colaboración entre dispositivos y herramientas de productividad
 
 - Sección 8 del capítulo 13: controlar el ordenador desde el móvil (Sunflower, ToDesk) y las líneas rojas antifraude; oficina con IA (Trae / WorkBuddy / Dumate) y flujos de trabajo con el móvil como mando del ordenador; la app de fondos de pantalla animados de miHoYo.
 - Transferencia rápida por red local y portapapeles: LocalSend, Feige (transmisión por LAN), AirDrop; KDE Connect, portapapeles universal y transferencia entre móvil y ordenador de la misma marca.

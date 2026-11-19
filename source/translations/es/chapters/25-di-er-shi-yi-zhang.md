@@ -2,15 +2,15 @@
 id: di-er-shi-yi-zhang
 num: 21
 part: chao-yue-pian
-nav: Capítulo 21: Radiografía de la seguridad de la red móvil y de la información
+nav: Capítulo 21: ¿Se puede conectar al Wi-Fi público?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 21: Radiografía de la seguridad de la red móvil y de la información
+### Capítulo 21: ¿Se puede conectar al Wi-Fi público?
 
 {class="chapter-intro mb-4"}
-Usamos el móvil todos los días para navegar, pagar, chatear... parece muy cómodo. ¿Alguna vez has pensado cuánto "desnuda" está tu información en internet? Sinceramente, la mayoría nunca se lo plantea. Pero cuando algo pasa —cuenta hackeada, tarjeta clonada— ya es tarde para arrepentirse. En este capítulo hablaremos de cómo hacer tu vida digital menos "transparente".
+Usamos el móvil todos los días para navegar, pagar, chatear... parece muy cómodo. ¿Alguna vez has pensado cuánto "desnuda" está tu información en internet? Sinceramente, la mayoría nunca se lo plantea. Pero cuando algo pasa,cuenta hackeada, tarjeta clonada: ya es tarde para arrepentirse. En este capítulo hablaremos de cómo hacer tu vida digital menos "transparente".
 
 #### I. VPN: la "capa de invisibilidad" en la red
 
@@ -23,9 +23,9 @@ Que puede hacer una VPN? En resumen: primero,<strong>protege tu privacidad en Wi
 
 Además, la VPN no es todapoderosa. Solo protege los datos "en tránsito"; si el sitio web de destino no es seguro o tu móvil ya tiene malware, la VPN no puede ayudarte.
 
-#### II. La "trampa dulce" del Wi-Fi publico: más peligrosa de lo que imaginas
+II. La "trampa dulce" del Wi-Fi publico: más peligrosa de lo que imaginas
 
-Pensaras: "es solo conectar a un Wi-Fi gratis, que riesgo puede haber?" Te cuento un caso real: investigadores de seguridad hicieron un experimento en un aeropuerto, montando un punto de acceso Wi-Fi llamado "Starbucks_Free". En menos de una hora, cientos de personas se conectaron. En realidad ese punto era de los investigadores; todo el <strong>Tráfico sin cifrar</strong> que pasaba por el — como paginas HTTP o comunicaciones de Apps sin TLS — podían interceptarlo y verlo.
+Pensaras: "es solo conectar a un Wi-Fi gratis, que riesgo puede haber?" Te cuento un caso real: investigadores de seguridad hicieron un experimento en un aeropuerto, montando un punto de acceso Wi-Fi llamado "Starbucks_Free". En menos de una hora, cientos de personas se conectaron. En realidad ese punto era de los investigadores; todo el <strong>Tráfico sin cifrar</strong> que pasaba por el, como paginas HTTP o comunicaciones de Apps sin TLS, podían interceptarlo y verlo.
 
 Pero hay una premisa clave: hoy en día, la mayoría de tus Apps diarias (WeChat, banca online, Alipay) ya usan cifrado HTTPS. Dicho claramente: aunque el atacante intercepte el paquete de datos, solo verá un montón de caracteres sin sentido,<strong>sin poder leer directamente el contenido de tu chat o tu contraseña de pago</strong>. Sin embargo, aún pueden saber qué sitios web visitas (dominio); si algúna App antigua o página web todavía usa transmisión HTTP en texto plano, el quedará completamente expuesto. Este ataque se llama "ataque de hombre en el medio" (Man-in-the-Middle): el principio es que el atacante se "cuela" entre tú y el router Wi-Fi real. Lo más aterrador es que muchos móviles tienen activada "conexión automática a Wi-Fi conocida"; el atacante solo necesita poner el nombre de su punto de acceso igual al de algún Wi-Fi al que te hayas conectado antes (por ejemplo "ChinaNet" o "CMCC") y tu móvil se conectará automáticamente.
 
@@ -47,7 +47,7 @@ Mencionamos HTTPS; ¿cómo funciona exactamente? Cada vez que visitas un sitio H
 
 Es como ir al banco: presentas tu DNI (certificado), el cajero verifica tu identidad, luego acordáis una contraseña secreta; el resto de la conversación solo vosotros dos la entendéis. Aunque alguien escuche, solo oirá caracteres cifrados.
 
-Pero ojo: HTTPS solo garantiza que el "proceso de transmisión" esta cifrado, no que el sitio web de destino sea de confianza. Los sitios de phishing también pueden usar HTTPS — el candadito solo indica que te conectaste a "un sitio web", no que sea el que querías. Asi que siempre verifica la URL.
+Pero ojo: HTTPS solo garantiza que el "proceso de transmisión" esta cifrado, no que el sitio web de destino sea de confianza. Los sitios de phishing también pueden usar HTTPS: el candadito solo indica que te conectaste a "un sitio web", no que sea el que querías. Asi que siempre verifica la URL.
 
 #### IV. Seguridad DNS: tu "guía telefonico de red" es seguro?
 
@@ -66,7 +66,7 @@ Personalmente recomiendo Cloudflare 1.1.1.1 o Google 8.8.8.8 como servidores DNS
 
 Primero, la conclusión:<strong>el modo incognito es tu cortina de casa, no una capa de invisibilidad.</strong>
 
-Qué hace: no deja rastros locales —al cerrar la ventana incógnito, el navegador no guarda historial, Cookies, fórmularíos ni búsquedas. Útil para buscar algo en un ordenador ajeno o comprar regalos sin que la familia lo vea en el historial.
+Qué hace: no deja rastros locales,al cerrar la ventana incógnito, el navegador no guarda historial, Cookies, fórmularíos ni búsquedas. Útil para buscar algo en un ordenador ajeno o comprar regalos sin que la familia lo vea en el historial.
 
 Qué NO hace:
 
@@ -77,7 +77,7 @@ Qué NO hace:
 
 Asi que recuerda: el modo incognito es un "borrador local", no una "capa de invisibilidad de red". Si realmente necesitas ocultar tus huellas en linea, necesitas una combinación VPN + navegador Tor; pero para el uso diario, con saber esto es suficiente.
 
-#### VI. Privacidad del navegador: no dejes que el navegador te venda
+VI. Privacidad del navegador: no dejes que el navegador te venda
 
 Quizá no te des cuenta, pero el navegador en sí es un enorme recolector de información. Cookies, historial, caché, autocompletar, permisos de ubicación... todo puede filtrar tu privacidad. Algunos consejos:
 
@@ -87,14 +87,14 @@ Quizá no te des cuenta, pero el navegador en sí es un enorme recolector de inf
 - <strong>El buscador también importa</strong>:Usa DuckDuckGo en lugar de Baidu/Google; no guarda tu historial de búsquedas ni crea perfiles de usuario. Sinceramente los resultados no son tan precisos como Google, pero para consultas diarias basta.
 - <strong>Revisa permisos de Apps</strong>:Ve a los ajustes del móvil y revisa qué permisos tiene tu navegador. ¿Realmente necesita acceso a tu ubicación, micrófono o contactos? Casi seguro que no.
 
-#### VII. Lista de seguridad practica: protegete a partir de ahora
+VII. Lista de seguridad practica: protegete a partir de ahora
 
 Después de todo esto, aquí tienes una lista de seguridad simple y directa. Dedicarle media hora mejorará cualitativamente la seguridad de tu móvil:
 
 1. <strong>Desactiva conexión automática Wi-Fi</strong>:iPhone: Ajustes &gt; WLAN. Android: Ajustes de Wi-Fi.
 2. <strong>Cambia a un DNS cifrado</strong>:Android: DNS privado a "dns.google". iPhone: usa App o perfil para configurar DoH 1.1.1.1.
 3. <strong>Activa autenticacion en dos factores (2FA)</strong>:WeChat, Alipay, Apple ID, Google: activa 2FA en todos. El SMS ya es el nivel más bajo de 2FA; mejor usar TOTP (Google Authenticator, Microsoft Authenticator).
-4. <strong>Revisa permisos de Apps</strong>:Revisa los permisos de cada App, especialmente ubicación, contactos, SMS, micrófono y cámara. Descubrirás que algunas Apps de linterna piden tus contactos —desinstálalas de inmediato.
+4. <strong>Revisa permisos de Apps</strong>:Revisa los permisos de cada App, especialmente ubicación, contactos, SMS, micrófono y cámara. Descubrirás que algunas Apps de linterna piden tus contactos,desinstálalas de inmediato.
 5. <strong>Limpieza periódica de datos del navegador</strong>:Programa un recordatorío mensual: limpiar caché y Cookies.
 6. <strong>No uses cables de puntos de carga publicos</strong>:El puerto USB carga y transfiere datos; puntos de carga maliciosos ("Juice Jacking") pueden robar datos mientras cargas. Lleva siempre tu propio cargador y cable.
 

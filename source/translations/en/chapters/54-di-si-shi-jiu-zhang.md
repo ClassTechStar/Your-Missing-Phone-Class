@@ -17,16 +17,16 @@ To do a good job, first sharpen your tools. In this chapter we set up the "kitch
 Android Studio is Google's official integrated development environment (IDE). It's free and a full all-in-one package: writing code, previewing UI, debugging, and packaging all happen inside it. Four steps to install:
 
 1. Open the official site developer.android.com/studio and download the latest stable version (as of August 2026, the release after Narwhal; Windows/Mac/Linux builds are all available);
-2. Run the installer and click "Next" all the way through — the setup wizard automatically includes the Android SDK and emulator components;
+2. Run the installer and click "Next" all the way through: the setup wizard automatically includes the Android SDK and emulator components;
 3. On first launch, download the SDK components as prompted (the default selections are fine; it may take a few minutes and a few GB of space);
-4. When it's done you'll see the welcome screen — congratulations, the "kitchen" is set up.
+4. When it's done you'll see the welcome screen, congratulations, the "kitchen" is set up
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Note: Know the Hardware Requirements
 
 {class="mt-1"}
-Android Studio is a memory hog: 16GB of RAM is recommended (8GB will run, but the emulator can lag), reserve at least 20GB of disk, and your CPU needs virtualization support (enable VT-x/AMD-V in the BIOS). If your computer really is old, use "real device debugging" instead of the emulator (covered in Section 4 of this chapter) — the experience is actually smoother.
+Android Studio is a memory hog: 16GB of RAM is recommended (8GB will run, but the emulator can lag), reserve at least 20GB of disk, and your CPU needs virtualization support (enable VT-x/AMD-V in the BIOS). If your computer really is old, use "real device debugging" instead of the emulator (covered in Section 4 of this chapter): the experience is actually smoother.
 :::
 
 #### II. Creating Your First Project
@@ -49,12 +49,12 @@ After you click Finish, Android Studio uses Gradle to automatically download dep
 Tip: The Ins and Outs of Package Names
 
 {class="mt-1"}
-The package name is like the app's "ID number" — it must be globally unique and can't be changed after publishing. For personal practice, com.example.xxx is fine; for a real product, switch to your own domain in reverse (like com.yourname.appname). Never publish with com.example — the store will reject it.
+The package name is like the app's "ID number": it must be globally unique and can't be changed after publishing. For personal practice, com.example.xxx is fine; for a real product, switch to your own domain in reverse (like com.yourname.appname). Never publish with com.example, the store will reject it.
 :::
 
 #### III. Running It: Emulator and Real Device
 
-The code is written — now you need a "phone" to run it on. You have two choices:
+The code is written, now you need a "phone" to run it on. You have two choices:
 
 ##### 1. The Emulator
 
@@ -62,24 +62,24 @@ An emulator is a virtual Android phone inside your computer. In Android Studio, 
 
 ##### 2. Real Device Debugging (More Recommended)
 
-A real phone is always the truest test environment — swipe feel, real network, real sensors; the emulator can't match any of it. Debugging on a real Android phone is simple:
+A real phone is always the truest test environment, swipe feel, real network, real sensors; the emulator can't match any of it. Debugging on a real Android phone is simple:
 
 1. On the phone, open [Settings] > [About phone] and tap "Build number" 7 times in a row to unlock "Developer options";
 2. In [Developer options], turn on USB debugging;
 3. Connect the phone to the computer with a data cable and choose "Allow USB debugging" in the popup;
-4. Back in Android Studio, your phone appears in the device dropdown in the toolbar — click Run.
+4. Back in Android Studio, your phone appears in the device dropdown in the toolbar: click Run
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Watch Out: Don't Leave USB Debugging On
 
 {class="mt-1"}
-USB debugging is like opening a "back door" to your phone for computers. When charging in public or connecting to a computer you don't trust, be sure to turn USB debugging off so no one can read your data through it. Turn it off after each development session — make it a habit.
+USB debugging is like opening a "back door" to your phone for computers. When charging in public or connecting to a computer you don't trust, be sure to turn USB debugging off so no one can read your data through it. Turn it off after each development session: make it a habit.
 :::
 
 #### IV. Project Structure Explained: What Each File Does
 
-The file tree on the left can make your head spin the first time you open a project. Don't panic — in daily development, 90% of your time is spent with just these few:
+The file tree on the left can make your head spin the first time you open a project. Don't panic, in daily development, 90% of your time is spent with just these few:
 
 ::: div .figure
 ```html
@@ -112,9 +112,9 @@ Figure 2: Project structure every beginner must know (the mantra: only touch the
 :::
 
 - MainActivity.kt: the app's "front door." When a user taps the icon, this is the first thing to wake up. In the current template it's responsible for displaying "Hello Android!".
-- AndroidManifest.xml: the app's "household registry" — it declares what this app is called, which icon it uses, which screens it has, and which permissions it needs (camera, location, etc.).
-- The res/ folder: the resource warehouse, storing images, icons, strings, and colors. Keeping text in resource files instead of hard-coding it into code is a good habit in Android development (it makes switching languages or themes easy).
-- build.gradle.kts: the build recipe — it declares the minimum supported version and which libraries to depend on (like Compose).
+- AndroidManifest.xml: the app's "household registry": it declares what this app is called, which icon it uses, which screens it has, and which permissions it needs (camera, location, etc.).
+- The res/ folder: the resource warehouse, storing images, icons, strings, and colors. Keeping text in resource files instead of hard-coding it into code is a good habit in Android development. It makes switching languages or themes easy.
+- build.gradle.kts: the build recipe, it declares the minimum supported version and which libraries to depend on (like Compose).
 
 #### V. A First Try: Change "Hello" to Your Name
 
@@ -137,11 +137,11 @@ setContent {
 ```
 :::
 
-Congratulations — you've just completed a full "edit code → compile → install → run" cycle. This cycle is your daily development routine from now on. Strike while the iron is hot and change something else: make the font bigger, try another color — the next chapter shows where these "magic powers" come from.
+Congratulations, you've just completed a full "edit code → compile → install → run" cycle. This cycle is your daily development routine from now on. Strike while the iron is hot and change something else: make the font bigger, try another color, the next chapter shows where these "magic powers" come from.
 
-#### VI. First Aid for Common Errors: The Beginner's "ER" for Your First Two Weeks
+VI. First Aid for Common Errors: The Beginner's "ER" for Your First Two Weeks
 
-During environment setup and your first build, you'll most likely hit the three errors below. Don't panic — all of them have antidotes:
+During environment setup and your first build, you'll most likely hit the three errors below. Don't panic: all of them have antidotes:
 
 ::: div .overflow-x-auto
 ```html
@@ -157,7 +157,7 @@ First-Aid Table for Beginner Environment Errors
 Tip: How to Search Error Messages
 
 {class="mt-1"}
-The first line of an error message is the most valuable — copy it verbatim into a search engine and add the keyword "android studio". Don't search vague questions like "why can't I set up my environment"; search specific errors like "Gradle sync failed: Could not resolve com.android.tools.build". Precise questions get precise answers.
+The first line of an error message is the most valuable: copy it verbatim into a search engine and add the keyword "android studio". Don't search vague questions like "why can't I set up my environment"; search specific errors like "Gradle sync failed: Could not resolve com.android.tools.build". Precise questions get precise answers.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -165,7 +165,7 @@ The first line of an error message is the most valuable — copy it verbatim int
 Hands-On: Complete Your "Developer Ritual" Checklist
 
 {class="mt-1"}
-① Install Android Studio and get the emulator running; ② run your app on a real phone once and take a screenshot to keep; ③ change the Hello text to your name; ④ zip up the project as a backup. Once these four steps are done, you can announce to your friends: I'm an Android developer now (screenshot as proof).
+① Install Android Studio and get the emulator running. ② Run your app on a real phone once and take a screenshot to keep. ③ Change the Hello text to your name. ④ Zip up the project as a backup. Once these four steps are done, you can announce to your friends: I'm an Android developer now (screenshot as proof).
 :::
 
 ::: div .chapter-summary
@@ -175,6 +175,6 @@ Chapter Summary
 - Android Studio = the official free IDE; recommended 16GB RAM + 20GB disk + virtualization enabled
 - Three essentials for a new project: name, package name (globally unique, never publish com.example), minimum SDK (API 26 or higher)
 - Two ways to run: the emulator (a virtual phone on your computer) and a real device (enable USB debugging, remember to turn it off after)
-- Project mantra: only touch the app/ folder — MainActivity.kt is the front door, the Manifest is the household registry, res/ is the resource warehouse
+- Project mantra: only touch the app/ folder, MainActivity.kt is the front door, the Manifest is the household registry, res/ is the resource warehouse
 - The developer's daily loop = edit code → Run → check the result, over and over
 :::

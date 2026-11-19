@@ -2,17 +2,17 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Chapter 3: Plugging Your Phone into Its “Lifeline”
+nav: Chapter 3: No Network? Don't Restart Just Yet
 toc: default
 kind: chapter
 ---
 
-### Chapter 3: Plugging Your Phone into Its “Lifeline”
+### Chapter 3: No Network? Don't Restart Just Yet
 
 {class="chapter-intro mb-4"}
-Without a network, a smartphone loses half its "smart." Networks are the lifeline of modern phones—understanding them, using them well, and protecting them is required study for every phone user.
+Without a network, a smartphone loses half its "smart." Networks are the lifeline of modern phones,understanding them, using them well, and protecting them is required study for every phone user.
 
-#### 0. Don't Get Lost Online—Telling Wi-Fi and Mobile Data Apart via "Roads" and "Cars"
+0. Don't Get Lost Online—Telling Wi-Fi and Mobile Data Apart via "Roads" and "Cars"
 
 Many people have both the Wi-Fi and signal icons lit up at the top of their phone screen, but are completely confused about the essential difference between them. The most classic misconception is:<strong>connected to Wi-Fi but pages won't load</strong>—because the router lost its internet connection, and the phone didn't automatically switch back to mobile data. To fully understand this issue, we need to build a "road and car" mental model.
 
@@ -27,12 +27,12 @@ Imagine the internet as a city.<strong>"Roads"</strong> are the channels between
 {class="font-semibold mt-4 mb-1"}
 ##### 1. Essential Difference: Local Channel vs. Remote Highway
 
-Wi-Fi is essentially a <strong>local area network technology</strong>—it's like the road wirelessly laid downstairs in your building, responsible for transmitting data from the router to your phone. But if your broadband bill is unpaid or the fiber cable is broken, the road is still there, but the "highway" beyond is cut off, so naturally you can't go anywhere. Mobile data, on the other hand, is transmitted through carrier 4G/5G base stations—equivalent to driving directly onto the carrier's high-speed dedicated line. As long as there's signal, you can connect directly to the internet.
+Wi-Fi is essentially a <strong>local area network technology</strong>. It is like the road wirelessly laid downstairs in your building, transmitting data from the router to your phone. But if your broadband bill is unpaid or the fiber cable is broken, the road is still there, but the "highway" beyond is cut off, so naturally you can't go anywhere. Mobile data, on the other hand, is transmitted through carrier 4G/5G base stations, equivalent to driving directly onto the carrier's high-speed dedicated line. As long as there's signal, you can connect directly to the internet.
 
 {class="font-semibold mt-4 mb-1"}
 ##### 2. Cost and Scenarios: Fixed Monthly Fee vs. Pay-per-Use
 
-Wi-Fi is usually a one-time investment (monthly broadband fee)—as long as the power is on, the whole family can use it unlimited, making it ideal for high-traffic scenarios like downloading movies and gaming. Mobile data is billed by usage—exceeding your plan may result in throttling or extra charges, making it more suitable for lightweight tasks in mobile scenarios like subways and business trips.
+Wi-Fi is usually a one-time investment (monthly broadband fee):as long as the power is on, the whole family can use it unlimited, making it ideal for high-traffic scenarios like downloading movies and gaming. Mobile data is billed by usage,exceeding your plan may result in throttling or extra charges, making it more suitable for lightweight tasks in mobile scenarios like subways and business trips.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -45,7 +45,7 @@ Open your phone's [Settings] &gt; [Mobile Network] &gt; [Data Management] to see
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Security Considerations: Public Wi-Fi Is a Hidden "Phishing Ground"
 
-In terms of security, mobile data is usually safer than public Wi-Fi. Mobile data is encrypted by the carrier, while public Wi-Fi can indeed be set up by hackers as "fake hotspots" to intercept unencrypted traffic. But let's be clear: in today's world of ubiquitous HTTPS, what attackers can intercept is <strong>which websites you visit</strong>(domains) and <strong>unencrypted HTTP content</strong>; while HTTPS-encrypted data like WeChat messages and banking app login passwords <strong>cannot be directly read</strong>—unless a more complex SSL stripping attack is performed and the user ignores certificate warnings. Even so, when making payments on the go, using mobile data directly is still the safest choice.
+In terms of security, mobile data is usually safer than public Wi-Fi. Mobile data is encrypted by the carrier, while public Wi-Fi can indeed be set up by hackers as "fake hotspots" to intercept unencrypted traffic. But let's be clear: in today's world of ubiquitous HTTPS, what attackers can intercept is <strong>which websites you visit</strong>(domains) and <strong>unencrypted HTTP content</strong>; while HTTPS-encrypted data like WeChat messages and banking app login passwords <strong>cannot be directly read</strong>, unless a more complex SSL stripping attack is performed and the user ignores certificate warnings. Even so, when making payments on the go, using mobile data directly is still the safest choice.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -77,7 +77,7 @@ Mobile networks are the foundation of staying connected anywhere. From 2G to 5G,
 
 - <strong>What data is</strong>: The amount of data generated when your phone goes online. Video and images use the most data; text and voice use relatively little.
 - <strong>Data-saving tips</strong>: Turn on "Data Saver" in settings, and update apps or watch HD video over Wi-Fi.
-- <strong>Signal bars ≠ speed</strong>: Strong signal only means a good connection—speed also depends on how busy the base station is and how far you are from it.
+- <strong>Signal bars ≠ speed</strong>: Strong signal only means a good connection,speed also depends on how busy the base station is and how far you are from it.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -89,7 +89,7 @@ Using mobile data abroad can result in astronomical bills! Before going abroad, 
 
 #### II. Wi-Fi: Connection, Sharing, and Security
 
-Wi-Fi is the main connection for homes and offices—fast and doesn't use mobile data. But Wi-Fi is constantly evolving, and the differences between standards are significant.
+Wi-Fi is the main connection for homes and offices:fast and doesn't use mobile data. But Wi-Fi is constantly evolving, and the differences between standards are significant.
 
 ##### Connecting to Wi-Fi:
 
@@ -158,7 +158,7 @@ Wi-Fi standards are set by IEEE, and each generation brings significant improvem
 
 - <strong>Wi-Fi 6 key technologies</strong>: OFDMA (Orthogonal Frequency-Division Multiple Access) allows multiple devices to transmit simultaneously; MU-MIMO (Multi-User Multiple Input Multiple Output) improves multi-device concurrency efficiency; TWT (Target Wake Time) makes devices more power-efficient.
 - <strong>Wi-Fi 6E</strong>: Built on Wi-Fi 6, it adds the 6GHz band, providing more channels and reducing interference. Requires support from both the phone and the router.
-- <strong>Wi-Fi 7</strong>802.11be
+- <strong>Wi-Fi 7</strong>802.11be.
 - <strong>2.4GHz vs 5GHz</strong>: 2.4GHz has better wall penetration but slower speed and more interference; 5GHz is faster but weaker at penetrating walls. The 6GHz band of Wi-Fi 6E/7 is the fastest but weakest at wall penetration, suitable for use within the same room.
 
 ##### Public Wi-Fi risks:
@@ -170,9 +170,9 @@ Public Wi-Fi may have hackers eavesdropping on data or setting up phishing hotsp
 - Don't auto-connect to unfamiliar Wi-Fi.
 - Use HTTPS websites (look for the lock icon in the address bar).
 
-#### III. Bluetooth: The All-Rounder of Short-Range Wireless Communication
+III. Bluetooth: The All-Rounder of Short-Range Wireless Communication
 
-Bluetooth is probably one of the most frequently used wireless technologies on your phone—wireless earbuds, smart watches, car systems, keyboards and mice all rely on it to connect.
+Bluetooth is probably one of the most frequently used wireless technologies on your phone,wireless earbuds, smart watches, car systems, keyboards and mice all rely on it to connect.
 
 ##### Technical principles:
 
@@ -197,17 +197,17 @@ Bluetooth operates in the 2.4GHz ISM band and uses Frequency-Hopping Spread Spec
 - <strong>Location services</strong>: Bluetooth beacons for indoor navigation, item tracking (like Apple AirTag).
 - <strong>Smart home</strong>: Bluetooth Mesh networks control light bulbs, smart locks, and more.
 
-#### IV. Infrared Remote Control: Phone Becomes a Universal Remote
+IV. Infrared Remote Control: Phone Becomes a Universal Remote
 
 Infrared remote control is one of the oldest wireless control technologies, but it's still practical on phones. Some Android phones (such as certain Xiaomi and Huawei models) have built-in infrared emitters that can remote-control TVs, air conditioners, set-top boxes, and other appliances.
 
 ##### Working principle:
 
-An infrared remote works by emitting infrared light pulses at a specific frequency (usually 38kHz) through an infrared LED, and the infrared receiver in the appliance decodes these pulses to carry out the corresponding actions. Different brands use different encoding protocols—common ones include NEC, RC5, RC6, and SONY. The infrared app on your phone ships with a code library for each brand, so picking the brand and model matches the right code.
+An infrared remote works by emitting infrared light pulses at a specific frequency (usually 38kHz) through an infrared LED, and the infrared receiver in the appliance decodes these pulses to carry out the corresponding actions. Different brands use different encoding protocols,common ones include NEC, RC5, RC6, and SONY. The infrared app on your phone ships with a code library for each brand, so picking the brand and model matches the right code.
 
 ##### Limitations:
 
-- <strong>Directionality</strong>: Infrared travels in straight lines and must be aimed at the device—cannot pass through walls.
+- <strong>Directionality</strong>: Infrared travels in straight lines and must be aimed at the device,cannot pass through walls.
 - <strong>Short range</strong>: Effective distance is generally 5-8 meters.
 - <strong>No Apple support</strong>: iPhone has no infrared emitter and cannot use this feature.
 
@@ -225,15 +225,15 @@ NFC evolved from RFID technology and supports three working modes:
 
 ##### Security mechanisms:
 
-- <strong>Ultra-short distance</strong>: The communication distance within 10 cm is itself a physical security guarantee—remote eavesdropping is virtually impossible.
+- <strong>Ultra-short distance</strong>: The communication distance within 10 cm is itself a physical security guarantee,remote eavesdropping is virtually impossible.
 - <strong>Secure chip</strong>: The phone has a built-in independent Secure Element (SE) or uses HCE (Host Card Emulation). Payment keys are stored in the secure area and cannot be extracted even if the phone is rooted.
-- <strong>Fingerprint/Face verification</strong>: Payments require biometric confirmation—even if the phone is lost, it cannot be used for fraudulent transactions.
-- <strong>Tokenization</strong>: Apple Pay, Huawei Pay, etc., do not transmit real card numbers but use one-time tokens—even if intercepted, they cannot be reused.
+- <strong>Fingerprint/Face verification</strong>: Payments require biometric confirmation,even if the phone is lost, it cannot be used for fraudulent transactions.
+- <strong>Tokenization</strong>: Apple Pay, Huawei Pay, etc., do not transmit real card numbers but use one-time tokens:even if intercepted, they cannot be reused.
 
 ##### Typical applications:
 
 - <strong>Transit cards/Access cards</strong>: Write physical card information into the phone—just tap your phone.
-- <strong>Mobile payments</strong>: Apple Pay, Huawei Pay, etc.—bind your bank card to your phone and pay with a tap.
+- <strong>Mobile payments</strong>: Apple Pay, Huawei Pay, etc..bind your bank card to your phone and pay with a tap.
 - <strong>Device pairing</strong>: Tap to quickly pair Bluetooth earbuds and speakers.
 - <strong>Identity verification</strong>: NFC ID card reading, electronic driver's license verification.
 
@@ -242,8 +242,8 @@ NFC evolved from RFID technology and supports three working modes:
 When you have plenty of data, you can turn on the hotspot for tablets and computers.
 
 - <strong>How to enable</strong>: Settings &gt; Personal Hotspot/Tethering, turn it on.
-- <strong>Things to note</strong>: It drains battery and data—remember to set a strong password and limit the number of connected devices.
-- <strong>USB tethering</strong>: Connect to a computer with a cable—more stable and faster than wireless hotspot.
+- <strong>Things to note</strong>: It drains battery and data,remember to set a strong password and limit the number of connected devices.
+- <strong>USB tethering</strong>: Connect to a computer with a cable,more stable and faster than wireless hotspot.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

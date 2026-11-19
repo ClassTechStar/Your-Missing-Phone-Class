@@ -2,12 +2,12 @@
 id: di-si-zhang
 num: 04
 part: ji-chu-pian
-nav: Chapter 4: Installing and Managing Apps
+nav: Chapter 4: Before You Install an App, Take a Closer Look
 toc: default
 kind: chapter
 ---
 
-### Chapter 4: Installing and Managing Apps
+### Chapter 4: Before You Install an App, Take a Closer Look
 
 {class="chapter-intro mb-4"}
 Apps make your phone capable of anything, but they need to be managed. Just like you'd assign a new employee a desk and permissions, installing apps requires a standardized process.
@@ -20,7 +20,7 @@ Apps make your phone capable of anything, but they need to be managed. Just like
 
 Core security value: reviewed, guaranteed updates, payment security. Action guideline:<strong>prioritize downloading only from official stores!</strong>
 
-#### II. Pure/Protection Mode: Turn On Your Phone's "Antivirus Wall"
+II. Pure/Protection Mode: Turn On Your Phone's "Antivirus Wall"
 
 Mainstream domestic brands (Huawei, Xiaomi, OPPO, vivo, Honor) all have a built-in <strong>Pure Mode</strong> or <strong>Protection Mode</strong>—a system-level security switch.<strong>Strongly recommended for all users to enable</strong>.
 
@@ -30,7 +30,7 @@ The core function of Pure Mode (also called "Protection Mode") is to <strong>blo
 
 ##### 2. Who it's for
 
-- <strong>Elderly users</strong>: Can't tell "official" from "fake" ads—Pure Mode is the most reliable safeguard.
+- <strong>Elderly users</strong>: Can't tell "official" from "fake" ads,Pure Mode is the most reliable safeguard.
 - <strong>Users insensitive to app permissions</strong>: Don't need to install niche apps, beta versions, or foreign-region games.
 - <strong>All users who want to improve device security</strong>: Even for power users, having it on is better than off—if you have a temporary need, just turn it off briefly.
 
@@ -38,19 +38,19 @@ The core function of Pure Mode (also called "Protection Mode") is to <strong>blo
 
 - <strong>Huawei/HarmonyOS</strong>: [Settings] &gt; [System &amp; Updates] &gt; <strong>[Pure Mode]</strong>, select "Enable."
 - <strong>Xiaomi</strong>: [Settings] &gt; [Privacy Protection] &gt; <strong>[Protect Privacy]</strong> , or [Settings] &gt; [App Settings] &gt; [App Installation], turn off "Install unknown apps."
-- <strong>OPPO/vivo</strong>: [Settings] &gt; [Security] &gt; <strong>[Install Apps from External Sources]</strong>, turn off each authorization one by one.
+- <strong>OPPO/vivo</strong>: [Settings] &gt; [Security] &gt; <strong>[Install Apps from External Sources]</strong>, turn off each authorization one by one
 
 {class="font-semibold mt-4 mb-1"}
 ##### 4. App Store Security Detection Mechanisms
 
-App stores aren't just for show—there's a complete security pipeline behind them:
+App stores aren't just for show,there's a complete security pipeline behind them:
 
 - <strong>Virus scanning</strong>: Each app is jointly scanned by multiple antivirus engines before listing, to identify known trojan and virus signatures.
 - <strong>Permission review</strong>: The store reviews whether the permissions an app requests are "reasonable"—a flashlight app asking for contacts? Directly rejected or delisted.
-- <strong>Developer certification</strong>: Listing requires enterprise qualification, personal ID, or credit card verification. If problems arise, someone can be held accountable—not a "black app."
+- <strong>Developer certification</strong>: Listing requires enterprise qualification, personal ID, or credit card verification. If problems arise, someone can be held accountable—not a "black app.".
 - <strong>Continuous monitoring</strong>: Listed apps are also continuously rescanned, and newly discovered malicious behavior results in forced delisting.
 
-#### III. Third-Party Sources and "Electronic Parasites": Extremely High Risk!
+III. Third-Party Sources and "Electronic Parasites": Extremely High Risk!
 
 Downloading apps from webpages or unknown links may bundle viruses, steal privacy, or commit payment fraud. Here we specifically mention a new concept:<strong>"electronic parasites."</strong>.
 
@@ -64,10 +64,10 @@ This refers to <strong>.</strong>—you think you "saved money," but actually "g
 {class="list-disc pl-6 mt-2 space-y-1 text-sm"}
 - "Cracked," "free," "ad-free" versions of paid software;
 - "Like-farming," "red packet grabbing," "game cheats" and other gray-area tools;
-- So-called "internal versions" of apps recommended by "small ads" in group chats.
+- So-called "internal versions" of apps recommended by "small ads" in group chats
 
 {class="mt-2"}
-These programs appear usable, but behind the scenes they may be <strong>stealing contacts, reading SMS, eavesdropping on the microphone, mining in the background</strong>. Pure Mode is the <strong>first line of defense</strong> against them—simply not letting you install them.
+These programs appear usable, but behind the scenes they may be <strong>stealing contacts, reading SMS, eavesdropping on the microphone, mining in the background</strong>. Pure Mode is the <strong>first line of defense</strong> against them,simply not letting you install them.
 :::
 
 ##### Second line of defense recommendations:
@@ -175,7 +175,7 @@ You may notice that the app size shown in the app store differs from the space i
 Modern app optimization methods:
 
 - <strong>App Bundle (Android)</strong>: Google Play's dynamic delivery technology. Users only download resources suited to their device when downloading (e.g., only images for the corresponding screen resolution), greatly reducing download size.
-- <strong>App Thinning (iOS)</strong>: Similar technology—Apple automatically trims unneeded resources based on the device.
+- <strong>App Thinning (iOS)</strong>: Similar technology:Apple automatically trims unneeded resources based on the device.
 - <strong>On-demand download</strong>: Large apps like games can download the core package first, then download resource packs later.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4

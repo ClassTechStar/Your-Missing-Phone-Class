@@ -2,23 +2,23 @@
 id: di-san-shi-er-zhang
 num: 32
 part: shi-zhan-pian
-nav: Chapter 32:Phone Security First-Aid Handbook
+nav: Chapter 32: Trouble? Thirty Seconds to Limit the Damage
 toc: default
 kind: chapter
 ---
 
-### Chapter 32:Phone Safety Emergency Handbook
+### Chapter 32: Trouble? Thirty Seconds to Limit the Damage
 
 {class="chapter-intro mb-4"}
-This chapter is an emergency plan. We hope you never need it — but if your phone is lost, stolen, or used in a scam, it will help you cut the damage. In earthquakes, rainstorms, and other disasters, a phone is also how you get warnings, share your location, and stay in touch. Read it through now, screenshot the key steps or print it and keep it at home — because in an emergency your phone may already be gone, and in a disaster it may be dead or offline.
+This chapter is an emergency plan. We hope you never need it, but if your phone is lost, stolen, or used in a scam, it will help you cut the damage. In earthquakes, rainstorms, and other disasters, a phone is also how you get warnings, share your location, and stay in touch. Read it through now, screenshot the key steps or print it and keep it at home, because in an emergency your phone may already be gone, and in a disaster it may be dead or offline.
 
-#### Scenario 0: Earthquake / extreme weather — how your phone helps you stay alive
+Scenario 0: Earthquake / extreme weather — how your phone helps you stay alive
 
 This is about personal safety, not accounts and money. For warning setup, see Chapter 13, "Weather alerts, disaster warnings, and earthquake early warnings." Here we only cover what to do after the alarm sounds.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Earthquake alarm: Drop, cover, hold — don't just film it
+Earthquake alarm: Drop, cover, hold, don't just film it
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Take cover nearby: Drop, cover, hold on (under a table, inside corners of load-bearing walls, next to sturdy furniture). Protect head and neck. Stay away from glass, exterior walls, and hanging lights.
@@ -26,7 +26,7 @@ Earthquake alarm: Drop, cover, hold — don't just film it
 3. Evacuate in order after shaking stops: Use the stairs, watch for aftershocks and falling objects. Reach open ground away from poles, billboards, and unstable buildings.
 4. Use your phone wisely: Short messages to emergency contacts ("I'm at XX, safe/hurt, need help") save more battery than long calls. Prefer text/SMS/WeChat when you can.
 5. No signal? See Chapter 7 on satellite SOS / satellite messaging (on supported models), or try higher/open ground. In some cases, network-free Bluetooth walkie-talkie apps help too.
-6. Turn off non-essential features: In an emergency, toggle airplane mode on a timer, turn off Bluetooth scanning, lower brightness — stretch battery life by hours. Save the last bar for "I'm safe" and rescue messages.
+6. Turn off non-essential features: In an emergency, toggle airplane mode on a timer, turn off Bluetooth scanning, lower brightness, stretch battery life by hours. Save the last bar for "I'm safe" and rescue messages.
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
@@ -35,7 +35,7 @@ Rainstorm / typhoon / flash flood: Act during the warning stage
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - On a red alert: Stay indoors as much as possible. Avoid underground spaces, underpasses, riverbanks, and steep slopes.
-- Trapped outdoors: Move to higher floors of sturdy buildings. Don't wade through floodwater (missing manhole covers and live wires). When calling 119/110, give landmarks and water level.
+- Trapped outdoors: Move to higher floors of sturdy buildings. Don't wade through floodwater, because of missing manhole covers and live wires. When calling 119/110, give landmarks and water level.
 - Before traveling: Check weather apps and local alert accounts. On long drives, avoid mountain roads along water and cliffs.
 - Family plan: Agree that "if we lose contact, use the last WeChat/SMS location" so nobody burns battery on endless calls.
 :::
@@ -63,7 +63,7 @@ Standard 30-minute playbook
 1. Borrow a phone and call your own number (minute 1): It may just be nearby; a kind stranger can return it.
 2. Lock the phone remotely (minutes 2–5): On another phone or computer, sign in to Find My:
 3. Android brands: Huawei cloud.huawei.com / Xiaomi i.mi.com / OPPO cloud.oppo.com, etc.
-4. Suspend the SIM (minutes 5–10): Call your carrier (China Mobile 10086 / Unicom 10010 / Telecom 10000) and report the phone lost to suspend the SIM. This is the most critical step — if scammers get your SIM, they receive your codes and can reset every password.
+4. Suspend the SIM (minutes 5–10): Call your carrier (China Mobile 10086 / Unicom 10010 / Telecom 10000) and report the phone lost to suspend the SIM. This is the most critical step, if scammers get your SIM, they receive your codes and can reset every password.
 5. Freeze payment accounts (minutes 10–20):
 6. WeChat: Report to police at 110, then contact WeChat support, or WeChat Security Center > Freeze account
 7. Banking apps: Call the number on the back of your bank card and ask to freeze online banking
@@ -86,11 +86,11 @@ If you realize you've been scammed, staying calm is critical. Panic leads to bad
 
 If your phone shows strange pop-ups, installs weird apps on its own, or your bill/data spikes — it's likely malware:
 
-- Step 1: Enter safe mode — on Android, power off with the power button, then power on and hold volume-down after the vibration until "Safe mode" appears. Third-party apps are disabled in safe mode, making cleanup easier.
-- Step 2: Uninstall suspicious apps — in safe mode, Settings > Apps, sort by date, remove unknown recent installs.
-- Step 3: Scan with a security app — install "Tencent Mobile Manager" or "360 Mobile Security" and run a full scan.
-- Step 4: Factory reset (last resort) — if nothing works, back up important data and factory reset. Warning: A factory reset erases everything. Back up photos, contacts, and key files first.
-- iPhones almost never "get viruses" — iOS's sandbox makes malware hard to survive. If your iPhone acts up, it's usually an app bug or a settings issue. A factory reset fixes 99% of problems.
+- Step 1: Enter safe mode: on Android, power off with the power button, then power on and hold volume-down after the vibration until "Safe mode" appears. Third-party apps are disabled in safe mode, making cleanup easier.
+- Step 2: Uninstall suspicious apps: in safe mode, Settings > Apps, sort by date, remove unknown recent installs.
+- Step 3: Scan with a security app, install "Tencent Mobile Manager" or "360 Mobile Security" and run a full scan.
+- Step 4: Factory reset (last resort), if nothing works, back up important data and factory reset. Warning: A factory reset erases everything. Back up photos, contacts, and key files first.
+- iPhones almost never "get viruses", iOS's sandbox makes malware hard to survive. If your iPhone acts up, it's usually an app bug or a settings issue. A factory reset fixes 99% of problems.
 
 #### Scenario 4: Account hijacked — take back control fast
 
@@ -111,17 +111,17 @@ Two common scripts: ① "I have your private video/photos; pay or I'll send them
 - Change passwords: If it eases your mind, change passwords on your main accounts.
 - If there's a real privacy leak risk: Report to police. They have experience with these cases.
 
-#### Scenario 6: Deepfake video / voice cloning scams — seeing is no longer believing
+Scenario 6: Deepfake video / voice cloning scams — seeing is no longer believing
 
-Since 2024, deepface and voice cloning let scammers "become" your family, boss, or friends on video calls. "Mom, I'm in trouble, send money" — the person looks and sounds exactly like your son, but it's fake. This is one of the hardest and most dangerous scams right now.
+Since 2024, deepface and voice cloning let scammers "become" your family, boss, or friends on video calls. "Mom, I'm in trouble, send money", the person looks and sounds exactly like your son, but it's fake. This is one of the hardest and most dangerous scams right now.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Step 1: Spot the tells — four common giveaways in AI fakes
+Step 1: Spot the tells, four common giveaways in AI fakes
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Abnormal blinking: Real people blink 15–20 times a minute; AI faces often blink too little or with stiff rhythm.
-- Lips out of sync: Watch the mouth against the audio — there's often a fraction-of-a-second lag.
+- Lips out of sync: Watch the mouth against the audio, there's often a fraction-of-a-second lag.
 - Blurry face edges: Hairlines, ears, and hair edges may show "fuzzy" fringes or flicker.
 - Inconsistent lighting: Highlights and shadows on the face don't match the background light, or features "slide" wrong when the head turns.
 :::
@@ -131,18 +131,18 @@ Step 1: Spot the tells — four common giveaways in AI fakes
 Step 2: Three ways to check if they're real
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Ask for a specific action: Turn the head, cover the face, block the mouth then open and close it. Deepfakes break on occlusion and big head turns — faces warp or lag behind motion.
+- Ask for a specific action: Turn the head, cover the face, block the mouth then open and close it. Deepfakes break on occlusion and big head turns: faces warp or lag behind motion.
 - Ask only they would know: Invent a fake question like "which clinic did we take the dog to last time?" Scammers can't answer or will stall.
-- Call back on a known number: Hang up and dial the number saved in your contacts. Scammers can't control the real phone number — the truth comes out immediately.
+- Call back on a known number: Hang up and dial the number saved in your contacts. Scammers can't control the real phone number, the truth comes out immediately.
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Step 3: If you already lost money — report it
+Step 3: If you already lost money, report it
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Stop transfers now: No matter how "urgent," pause. Anyone pushing "transfer fast, don't hang up" is almost certainly a scammer.
-2. Keep every piece of evidence: Screen-record and screenshot video call frames, chats, their account, transfer receipts — key material for technical investigation.
+2. Keep every piece of evidence: Screen-record and screenshot video call frames, chats, their account, transfer receipts, key material for technical investigation.
 3. Call 96110: Say it's a "deepfake voice/video" scam; operators can start emergency stop-payment.
 4. Call 110: Bring all evidence to the station and explain AI forgery was used — this helps police classify the case.
 5. Warn family and friends: Scammers may use your fake video on others. Post a heads-up in Moments or the family group chat.
@@ -150,32 +150,32 @@ Step 3: If you already lost money — report it
 
 #### Scenario 7: SIM swap — your number gets "stolen"
 
-Many people haven't heard of this attack, but it's devastating. A SIM swap means an attacker fakes your identity and gets a replacement SIM at a store. Once that succeeds, your phone suddenly loses service, while their phone with the new SIM receives every SMS code — Alipay, banks, WeChat all wide open.
+Many people haven't heard of this attack, but it's devastating. A SIM swap means an attacker fakes your identity and gets a replacement SIM at a store. Once that succeeds, your phone suddenly loses service, while their phone with the new SIM receives every SMS code, Alipay, banks, WeChat all wide open.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 How to notice: Three warning signs of a SIM swap
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Phone suddenly shows "No service" / "No SIM" even though you didn't touch the card and restarting doesn't help — often the moment of the swap.
-- Carrier texts say "SIM replacement successful" or "service change successful" — but you never requested it.
+- Phone suddenly shows "No service" / "No SIM" even though you didn't touch the card and restarting doesn't help: often the moment of the swap.
+- Carrier texts say "SIM replacement successful" or "service change successful", but you never requested it.
 - You suddenly stop getting verification codes — and other texts too, because SMS has been hijacked to their card.
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-Protection — put a lock on your SIM too
+Protection, put a lock on your SIM too
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Set a SIM PIN: Path Settings > Phone > SIM PIN. After enabling, every restart or SIM swap needs the PIN. Even if they get the card, they can't use it.
+- Set a SIM PIN: Path Settings > Phone > SIM PIN. After enabling, every restart or SIM swap needs the PIN. Even if they get the card, they still can't use it without the PIN.
 - Enable carrier two-step verification: In China Mobile/Unicom/Telecom apps, find "Security Center" or "Service verification," turn on replacement-SIM alerts and a second password for service changes. Then staff will demand extra ID checks if someone tries to replace your SIM.
 - Don't rely on SMS for important accounts: For banks, Apple ID, and other high-value accounts, prefer authenticator apps (Google Authenticator, Microsoft Authenticator) or hardware keys over SMS codes.
-- Watermark ID copies: When a business needs a copy, write "For XX use only" — attackers often impersonate you with leaked ID info.
+- Watermark ID copies: When a business needs a copy, write "For XX use only": attackers often impersonate you with leaked ID info.
 :::
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-If it already happened — speed is everything
+If it already happened, speed is everything
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Call your carrier immediately to suspend: Mobile 10086 / Unicom 10010 / Telecom 10000. Freeze SIM replacement and stop the attacker from using your number.
@@ -188,7 +188,7 @@ If it already happened — speed is everything
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-Prevention beats cure — five daily habits
+Prevention beats cure, five daily habits
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Lock screen passcode + two-factor authentication — both on
@@ -205,7 +205,7 @@ Hands-on: Make your own emergency contact card
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. On a piece of paper, write: carrier support (Mobile 10086 / Unicom 10010 / Telecom 10000), bank support, 96110 anti-fraud hotline, 110 police, family numbers.
 2. Write the registration email and backup contact for your Apple ID / brand account.
-3. Keep that paper in your wallet or on the fridge — not only on your phone, because in an emergency your phone may be gone.
+3. Keep that paper in your wallet or on the fridge: not only on your phone, because in an emergency your phone may be gone.
 4. Check now: Is "Find My Phone" on? Is the SIM PIN set?
 :::
 

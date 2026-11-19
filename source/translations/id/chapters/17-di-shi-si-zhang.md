@@ -31,7 +31,7 @@ Memahami prinsip enkripsi password manager membantu Anda menilai apakah suatu la
 
 ##### 1. Enkripsi AES-256
 
-AES (Advanced Encryption Standard) adalah algoritma enkripsi simetris yang diakui oleh NIST (National Institute of Standards and Technology) Amerika Serikat, banyak digunakan oleh bank, militer, dan pemerintah. "256" berarti panjang key 256 bit — secara teori butuh waktu melebihi usia alam semesta untuk brute force. Password manager mainstream (1Password, Bitwarden, KeePass, dll.) semua memakai AES-256 untuk mengenkripsi vault password Anda.
+AES (Advanced Encryption Standard) adalah algoritma enkripsi simetris yang ,diakui oleh NIST (National Institute of Standards and Technology) Amerika Serikat, banyak digunakan oleh bank, militer, dan pemerintah. "256" berarti panjang key 256 bit — secara teori butuh waktu melebihi usia alam semesta untuk brute force. Password manager mainstream (1Password, Bitwarden, KeePass, dll.) semua memakai AES-256 untuk mengenkripsi vault password Anda.
 
 ##### 2. Arsitektur Zero-Knowledge
 
@@ -42,22 +42,22 @@ AES (Advanced Encryption Standard) adalah algoritma enkripsi simetris yang diaku
 3. Hanya ciphertext yang dienkripsi yang diupload ke server.
 4. Saat login berikutnya, server mengirim ciphertext, klien lagi-lagi dekripsi dengan master password.
 
-Poin kunci:<strong>Master password itu sendiri tidak pernah meninggalkan perangkat Anda</strong>, di server juga tidak ada. Jadi bahkan jika penyedia layanan diretas, hacker hanya mendapatkan setumpuk ciphertext yang tidak bisa didekripsi — kecuali mereka bisa menebak master password Anda.
+Poin kunci:<strong>Master password itu sendiri tidak pernah meninggalkan perangkat Anda</strong>, di server juga tidak ada. Jadi bahkan jika penyedia layanan diretas, hacker hanya mendapatkan setumpuk ciphertext yang tidak bisa didekripsi, kecuali mereka bisa menebak master password Anda.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>Mengapa "zero-knowledge" berarti penyedia layanan juga tidak bisa melihat password Anda?
 
 {class="mt-1"}
-Karena decryption key di-derive dari master password Anda, dan master password hanya ada di pikiran Anda, hanya digunakan di perangkat lokal Anda. Server penyedia layanan tidak punya master password, tidak punya decryption key, hanya ciphertext. Inilah sebabnya penyedia layanan resmi seperti Bitwarden, 1Password secara eksplisit menyatakan "kami juga tidak bisa melihat password Anda" — bukan tidak mau lihat, tapi secara teknis tidak bisa.
+Karena decryption key di-derive dari master password Anda, dan master password hanya ada di pikiran Anda, hanya digunakan di perangkat lokal Anda. Server penyedia layanan tidak punya master password, tidak punya decryption key, hanya ciphertext. Inilah sebabnya penyedia layanan resmi seperti Bitwarden, 1Password secara eksplisit menyatakan "kami juga tidak bisa melihat password Anda", bukan tidak mau lihat, tapi secara teknis tidak bisa.
 :::
 
 ##### 3. Key Derivation Function: PBKDF2 dan Argon2
 
-Master password tidak bisa langsung dipakai sebagai encryption key — perlu diproses melalui "key derivation function". Fungsi ini bertugas <strong>Sengaja memperlambat komputasi</strong>, membuat biaya brute force hacker menjadi tidak feasibel.
+Master password tidak bisa langsung dipakai sebagai encryption key: perlu diproses melalui "key derivation function". Fungsi ini bertugas <strong>Sengaja memperlambat komputasi</strong>, membuat biaya brute force hacker menjadi tidak feasibel.
 
 - <strong>PBKDF2</strong>: Standar lama, digunakan luas oleh iCloud Keychain, Bitwarden, LastPass, dll. Melalui iterasi berulang (biasanya 100.000+ kali) hash untuk memperlambat cracking.
-- <strong>Argon2</strong>: Juara Password Hashing Competition 2015, lebih modern dari PBKDF2. Selain "konsumsi compute" juga memperkenalkan "konsumsi memori" — membuat hardware khusus seperti GPU/ASIC juga sulit mempercepat cracking. Bitwarden, KeePassXC, dll. sudah mendukung.
+- <strong>Argon2</strong>: Juara Password Hashing Competition 2015, lebih modern dari PBKDF2. Selain "konsumsi compute" juga memperkenalkan "konsumsi memori" — ,membuat hardware khusus seperti GPU/ASIC juga sulit mempercepat cracking. Bitwarden, KeePassXC, dll. sudah mendukung.
 
 Semakin tinggi jumlah iterasi semakin aman, tapi kecepatan unlock juga melambat. Penyedia layanan resmi akan mempublikasikan algoritma derivation dan jumlah iterasi yang digunakan, untuk memudahkan audit komunitas keamanan.
 
@@ -74,7 +74,7 @@ Agustus 2022, password manager lama LastPass mengumumkan environment development
 <i class="fas fa-exclamation-triangle mr-2"></i>Yang dipelajari dari insiden LastPass
 
 {class="mt-1"}
-Pertama, master password harus panjang dan unik (disarankan 16+ karakter, termasuk huruf besar/kecil, angka, simbol); kedua, prioritaskan penyedia layanan yang mendukung Argon2id dengan iterasi tinggi; ketiga, untuk akun high-value (bank, email) pastikan aktifkan verifikasi dua faktor independen, jangan hanya andalkan password manager.
+Pertama, master password harus panjang dan unik (disarankan 16+ karakter, termasuk huruf besar/kecil, angka, simbol); kedua, prioritaskan penyedia layanan yang mendukung Argon2id dengan iterasi tinggi; ketiga. untuk akun high-value (bank, email) pastikan aktifkan verifikasi dua faktor independen, jangan hanya andalkan password manager.
 :::
 
 #### 4. Rekomendasi Password Manager Mainstream
@@ -112,7 +112,7 @@ Kesimpulan:<strong>"Panjang + randomitas" lebih penting dari "simbol kompleks"</
 Dipelihara oleh security researcher Troy Hunt <a href="https://haveibeenpwned.com" class="text-primary hover:underline" target="_blank" rel="noopener">haveibeenpwned.com</a> mencatat akun dan password yang bocor dari berbagai insiden kebocoran data besar. Anda bisa:
 
 1. Masukkan email, cek apakah akun Anda terekspos dalam suatu kebocoran.
-2. Pakai fitur Pwned Passwords untuk query apakah suatu password ada di database kebocoran yang diketahui (password manager dan browser sudah built-in query ini).
+2. Pakai fitur Pwned Passwords untuk query apakah suatu password ada di database ,kebocoran yang diketahui (password manager dan browser sudah built-in query ini).
 
 Jika suatu password muncul di database kebocoran,<strong>meskipun terlihat sekompleks apa pun harus segera diganti</strong>— karena dictionary attack akan prioritas mencoba password yang diketahui ini.
 
@@ -144,7 +144,7 @@ Khawatir input password di HaveIBeenPwned akan bocor lagi? Tidak perlu khawatir.
 
 #### 6. Passkey: Masa Depan Login Tanpa Password
 
-2024-2026, teknologi password sedang mengalami revolusi —<strong>Passkey</strong> diharapkan bisa sepenuhnya menggantikan password tradisional. Apple, Google, Microsoft tiga platform besar mendorong bersama, didukung oleh FIDO Alliance dan W3C, ini adalah perubahan terbesar dalam cara login selama puluhan tahun.
+2024-2026, teknologi password sedang mengalami revolusi<strong>Passkey</strong> diharapkan bisa sepenuhnya menggantikan password tradisional. Apple, Google, Microsoft tiga platform besar mendorong bersama, didukung oleh FIDO Alliance dan W3C, ini adalah perubahan terbesar dalam cara login selama puluhan tahun.
 
 ##### 1. Apa itu Passkey?
 
@@ -203,7 +203,7 @@ Passkey berbasis standar FIDO2 / WebAuthn, memakai <strong>key pair di perangkat
 <i class="fas fa-lightbulb mr-2"></i>Sinkronisasi cross-device adalah terobosan kunci
 
 {class="mt-1"}
-Pain point terbesar Passkey awal adalah "terikat satu perangkat" — ganti ponsel harus buat ulang. Sejak 2023 Apple, Google, Microsoft mengimplementasikan sinkronisasi cloud Passkey: iCloud Keychain sync antar perangkat Apple, Google Password Manager sync antar perangkat Android. 1Password dan pihak ketiga lain membuka sinkronisasi cross-ecosystem. Artinya Passkey sudah memiliki praktikalitas untuk menggantikan password.
+Pain point terbesar Passkey awal adalah "terikat satu perangkat", ganti ponsel harus buat ulang. Sejak 2023 Apple, Google, Microsoft mengimplementasikan sinkronisasi cloud Passkey: iCloud Keychain sync antar perangkat Apple, Google Password Manager sync antar perangkat Android. 1Password dan pihak ketiga lain membuka sinkronisasi cross-ecosystem. Artinya Passkey sudah memiliki praktikalitas untuk menggantikan password.
 :::
 
 ##### 4. Cara Membuat dan Menggunakan Passkey di Ponsel
@@ -250,12 +250,12 @@ Proses ini melalui komunikasi double encryption Bluetooth + internet, private ke
 <i class="fas fa-exclamation-triangle mr-2"></i>Saran Masa Transisi
 
 {class="mt-1"}
-Passkey belum sepenuhnya menggantikan password — banyak situs masih dalam tahap "Passkey + password" berdampingan. Saran: akun high-value prioritaskan aktifkan Passkey, tapi <strong>jangan langsung hapus password tradisional</strong>, simpan sebagai cadangan; bersamaan terus gunakan password manager, karena tidak semua situs mendukung Passkey. Anggap Passkey sebagai "suplemen kuat password manager" bukan "pengganti langsung".
+Passkey belum sepenuhnya menggantikan password, banyak situs masih dalam tahap "Passkey + password" berdampingan. Saran: akun high-value prioritaskan aktifkan Passkey, tapi <strong>jangan langsung hapus password tradisional</strong>, simpan sebagai cadangan; bersamaan terus gunakan password manager, karena tidak semua situs mendukung Passkey. Anggap Passkey sebagai "suplemen kuat password manager" bukan "pengganti langsung".
 :::
 
 #### 7. Hardware Security Key
 
-Jika requirement keamanan Anda lebih tinggi dari pengguna biasa — misalnya memegang banyak cryptocurrency, adalah eksekutif/jurnalis/aktivis, atau melindungi akun inti perusahaan — hardware security key adalah pilihan yang lebih andal dibanding SMS verification code.
+Jika requirement keamanan Anda lebih tinggi dari pengguna biasa, misalnya memegang banyak cryptocurrency, adalah eksekutif/jurnalis/aktivis, atau melindungi akun inti perusahaan, hardware security key adalah pilihan yang lebih andal dibanding SMS verification code.
 
 ##### 1. Apa itu Hardware Security Key?
 
@@ -311,7 +311,7 @@ Pastikan beli dari toko resmi atau agen resmi, jangan beli key bekas atau sumber
 
 #### 8. Sharing Password Keluarga/Tim
 
-Dalam skenario keluarga, Netflix, Wi-Fi rumah, backend router, password smart lock perlu dipakai bersama keluarga; dalam skenario tim, server, database, akun media sosial perlu kolaborasi multipihak.<strong>Mengirim password via WeChat atau menulis di shared document adalah praktik berisiko tinggi</strong>— sekali riwayat chat atau permission document bocor, password juga bocor.
+Dalam skenario keluarga, Netflix, Wi-Fi rumah, backend router, password smart lock perlu dipakai bersama keluarga; dalam skenario tim, server, database. akun media sosial perlu kolaborasi multipihak.<strong>Mengirim password via WeChat atau menulis di shared document adalah ,praktik berisiko tinggi</strong>— sekali riwayat chat atau permission document bocor, password juga bocor.
 
 ##### 1. "Shared Vault" 1Password
 
@@ -346,12 +346,12 @@ Versi gratis Bitwarden mendukung sharing password personal (via fitur "Send" sha
 
 - <strong>1Password Teams / Business</strong>: Bisa membuat multiple vault per departemen, project team, permission control fine-grained, semua perilaku akses bisa diaudit.
 - <strong>Bitwarden Teams / Enterprise</strong>: Solusi open-source, bisa self-hosted, versi enterprise mendukung SSO integration, directory sync.
-- <strong>Prinsip Separation of Duties</strong>: Password admin tidak boleh hanya dipegang satu orang — setel 2-3 "emergency contact", pastikan saat personil kunci resign/cuti bisnis tidak terputus.
+- <strong>Prinsip Separation of Duties</strong>: Password admin tidak boleh hanya dipegang satu orang, setel 2-3 "emergency contact", pastikan saat personil kunci resign/cuti bisnis tidak terputus.
 - <strong>Proses Resign</strong>: Saat karyawan resign segera cabut akses password manager-nya, jika perlu rotasi semua password sensitif tinggi yang perlu disentuhnya.
 
 ##### 5. Emergency Access: Jika Terjadi Sesuatu pada Anda
 
-Bayangkan skenario: Anda mengelola sendiri semua akun penting keluarga, tapi tiba-tiba dirawat di rumah sakit atau meninggal, keluarga tidak bisa login ke bank, email, akun asuransi.<strong>Fitur "Emergency Access"</strong> dirancang untuk hal ini — otorisasi seorang keluarga/teman terpercaya, untuk mendapatkan vault password Anda saat Anda tidak bisa merespons.
+Bayangkan skenario: Anda mengelola sendiri semua akun penting keluarga, tapi tiba-tiba dirawat di rumah sakit atau meninggal, keluarga tidak bisa login ke bank, email, akun asuransi.<strong>Fitur "Emergency Access"</strong> dirancang untuk hal ini, otorisasi seorang keluarga/teman terpercaya, untuk mendapatkan vault password Anda saat Anda tidak bisa merespons.
 
 <strong>Setting Emergency Access Bitwarden:</strong>
 
@@ -403,5 +403,5 @@ Coba Sekarang: Mulai Menggunakan Password Manager
 2. Impor kata sandi yang ada (jika ada) atau mulai tambah kata sandi baru.
 3. Install ekstensi browser atau aplikasi ponsel, rasakan fitur auto-fill.
 4. Periksa laporan security audit, temukan kata sandi yang perlu diperbaiki.
-5. III. Bagian Lanjutan (Bab 15-20)
+5. III. Bagian Lanjutan (Bab 15-20).
 :::

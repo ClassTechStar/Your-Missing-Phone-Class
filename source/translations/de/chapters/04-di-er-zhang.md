@@ -2,15 +2,15 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: Kapitel 2: Räum dein digitales Zimmer auf
+nav: Kapitel 2: Etwas auf dem Smartphone nicht gefunden?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 2: Räum dein digitales Zimmer auf
+### Kapitel 2: Etwas auf dem Smartphone nicht gefunden?
 
 {class="chapter-intro mb-4"}
-Mit der Zeit wird ein Smartphone unordentlich — gute Gewohnheiten beginnen mit der Dateiverwaltung. Wie dein Zimmer regelmäßig aufgeräumt werden muss, braucht auch dein digitaler Raum Pflege. Ein aufgeräumtes Smartphone findet Dinge nicht nur schneller, sondern läuft auch flüssiger.
+Mit der Zeit wird ein Smartphone unordentlich: gute Gewohnheiten beginnen mit der Dateiverwaltung. Wie dein Zimmer regelmäßig aufgeräumt werden muss, braucht auch dein digitaler Raum Pflege. Ein aufgeräumtes Smartphone findet Dinge nicht nur schneller, sondern läuft auch flüssiger.
 
 #### Eins. Das dreistufige Speichersystem: Dein digitales Lager
 
@@ -25,7 +25,7 @@ Zwei. Lerne den Dateimanager kennen
 
 ##### Android hat meist eine [Dateien]- oder [Dateimanager]-App, iOS die integrierte [Dateien]-App. Sie sind dein „Explorer" für alle Dateien auf dem Smartphone.
 
-- <strong>Bedeutung gängiger Ordner:</strong> DCIM
+- <strong>Bedeutung gängiger Ordner:</strong> DCIM.
 - <strong>: Fotos und Videos der Kamera.</strong>: Andere Bilder, wie Screenshots und gespeicherte Bilder.
 - <strong>Download</strong>: Vom Browser heruntergeladene Dateien.
 - <strong>Music</strong>: Musikdateien.
@@ -48,7 +48,7 @@ Android basiert auf Linux und hat eine gewisse Hierarchie im Dateisystem. Auch w
 - <strong>Interner Speicher</strong>: Der private Bereich einer App, für andere Apps unzugänglich. Wird beim Deinstallieren gelöscht.
 - <strong>Externer Speicher</strong>: Dateien, die eine App im nutzerzugänglichen Bereich ablegt, etwa Fotos und Downloads. Beim Deinstallieren nicht zwangsläufig gelöscht.
 
-#### 4. Backup und Wiederherstellung: eine Versicherung für deine Daten
+4. Backup und Wiederherstellung: eine Versicherung für deine Daten
 
 Daten sind unbezahlbar – Backups sind eine Gewohnheit, die du dir angewöhnen musst.
 
@@ -205,7 +205,7 @@ Dateimanager öffnen > in den Ordner „Downloads“ gehen. Was liegt da drin? U
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### 8. Foto- und Dateiverwaltung: ordentliche Vermögensverwaltung
+8. Foto- und Dateiverwaltung: ordentliche Vermögensverwaltung
 
 Im letzten Abschnitt hast du „Ordner verstehen“ gelernt – aber verstehen allein reicht nicht. In diesem Abschnitt geht es darum,<strong>wie du eine dauerhaft tragfähige Verwaltungsregel aufbaust</strong>, damit deine Dateien jederzeit auffindbar, nicht verloren und nicht ausspioniert sind.
 
@@ -236,7 +236,7 @@ Das Chaos entsteht aus Regellosigkeit. Eine Regel aufzustellen ist einfach – e
 Such dir ein freies Wochenende aus und gehe in dieser Reihenfolge vor:
 
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
-1. Lege im Dateimanager einen Arbeitsordner für diesen Monat im Format <code>2026Q2_ProjektA</code> :
+1. Lege im Dateimanager einen Arbeitsordner für diesen Monat im Format <code>2026Q2_ProjektA</code> :.
 2. Gehe alle Dateien dieser Woche im „Download"-Verzeichnis durch: Nützliches behalten und archivieren, Nutzloses löschen.
 3. Erstelle für die Familienfotos dieses Jahr Ordner wie <code>2025_Familie</code> oder <code>2026_Familie</code> .
 :::
@@ -244,7 +244,7 @@ Such dir ein freies Wochenende aus und gehe in dieser Reihenfolge vor:
 {class="font-semibold mt-4 mb-1"}
 ##### 2. Strategien für redundante Dateien
 
-Mit der Zeit wird ein Smartphone „dicker" — meist sind redundante Dateien schuld.
+Mit der Zeit wird ein Smartphone „dicker", meist sind redundante Dateien schuld.
 
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>Automatische 72-Stunden-Aufräumung</strong>: Temporäre Dateien, die über soziale Apps wie WeChat oder QQ empfangen werden (Sticker, Chat-Bilder, Kurzvideos), sind nach einmal Ansehen meist nutzlos. Unter [WeChat] → [Einstellungen] → [Allgemein] → [Speicherplatz] die „automatische Bereinigung" aktivieren und die Aufbewahrung auf 72 Stunden setzen. Das Smartphone ist sofort aufgeräumter, ohne wichtige Aufzeichnungen zu verlieren.
@@ -262,14 +262,14 @@ Bilder sind der „sensibelste“ Datentyp im Handy – ein einziger Schnappschu
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Sichtbare Informationen verpixeln</strong>: Mit systemeigenen oder Drittanbieter-Tools (wie Meitu XiuXiu, Snapseed)<strong>die mittleren Ziffern der Personalausweisnummer, das Kennzeichen, die Hausnummer, den Namen und Beträge</strong> schwärzen.
-2. <strong>Metadaten entfernen</strong>: Beim Teilen im Album „Teilen" oder „Exportieren" wählen — das System fragt, ob Standortinformationen erhalten bleiben sollen,<strong>„Nicht erhalten"</strong> wählen. So werden Aufnahmegerät, GPS-Koordinaten und Aufnahmezeit nicht mit dem Bild verschickt.
+2. <strong>Metadaten entfernen</strong>: Beim Teilen im Album „Teilen" oder „Exportieren" wählen, das System fragt, ob Standortinformationen erhalten bleiben sollen,<strong>„Nicht erhalten"</strong> wählen. So werden Aufnahmegerät, GPS-Koordinaten und Aufnahmezeit nicht mit dem Bild verschickt.
 3. <strong>Temporäres Wasserzeichen</strong>(optional): Auf sensiblen Screenshots ein Textwasserzeichen wie „Nur zur Verwendung für XX" anbringen, um Missbrauch zu vermeiden.
 :::
 
 {class="mt-3 mb-2"}
 .
 
-- <strong>Systemeigen</strong>: Unter iOS [Einstellungen] → [Datenschutz &amp; Sicherheit] → [Kamera] lässt sich „Genaue Standortbestimmung" deaktivieren; beim Teilen mit „Nur aktuelles Foto" werden <strong>die meisten EXIF-Daten automatisch entfernt</strong>:
+- <strong>Systemeigen</strong>: Unter iOS [Einstellungen] → [Datenschutz &amp; Sicherheit] → [Kamera] lässt sich „Genaue Standortbestimmung" deaktivieren; beim Teilen mit „Nur aktuelles Foto" werden <strong>die meisten EXIF-Daten automatisch entfernt</strong>:.
 - <strong>Android</strong>: Die Album-Apps der meisten Marken fragen beim „Teilen", ob die Standortinformationen entfernt werden sollen — einfach anhaken.
 - <strong>Professionelle Tools</strong>: ExifTool (Desktop), Metapho (iOS), Photo Metadata Remover (Android) können alle Metadaten restlos löschen.
 

@@ -2,12 +2,12 @@
 id: di-wu-zhang
 num: 05
 part: ji-chu-pian
-nav: Capitolo 5: Rendi il cellulare più comprensivo
+nav: Capitolo 5: Regolate il telefono come preferite
 toc: default
 kind: chapter
 ---
 
-### Capitolo 5: Rendi il telefono più simile a te — Impostazioni di base
+### Capitolo 5: Regolate il telefono come preferite
 
 {class="chapter-intro mb-4"}
 Qualche minuto di impostazioni e l'esperienza migliora enormemente. Sono come "accordare" il telefono, per adattarlo alle tue abitudini d'uso.
@@ -36,7 +36,7 @@ Cambia il wallpaper con uno bello (statico o animato) e l'umore cambia. I telefo
 
 <strong>Widget sulla home</strong>: metti meteo, agenda e controllo musica sulla home, per arrivarci in un tocco. Lo supportano sia iOS che Android; tieni premuto su un'area vuota della home per aggiungerli.
 
-#### 4. Impostazioni di efficienza: trasforma il telefono nel tuo "cervello esterno"
+4. Impostazioni di efficienza: trasforma il telefono nel tuo "cervello esterno"
 
 Sono funzionalità "una volta impostate non torni più indietro": ciascuna può migliorare sensibilmente l'efficienza quotidiana.
 
@@ -77,12 +77,12 @@ Sono funzionalità "una volta impostate non torni più indietro": ciascuna può 
 <i class="fas fa-lightbulb mr-2"></i>Checklist "primo giorno di lavoro"
 
 {class="mt-1 text-sm"}
-Con un telefono nuovo o dopo un grande aggiornamento, dedica 10 minuti a queste impostazioni:<br> ① Password di blocco + biometria ② Raggruppamento notifiche + disattivazione push marketing ③ Dimensione caratteri / frequenza di aggiornamento / modalità scura<br> ④ Tastiera / browser / client mail predefiniti ⑤ Contatti di emergenza / cartella clinica ⑥ Impostazioni di backup
+Con un telefono nuovo o dopo un grande aggiornamento, dedica 10 minuti a queste impostazioni:<br> ① Password di blocco + biometria. ② Raggruppamento notifiche + disattivazione push marketing. ③ Dimensione caratteri / frequenza di aggiornamento, modalità scura<br>. ④ Tastiera / browser / client mail predefiniti. ⑤ Contatti di emergenza / cartella clinica. ⑥ Impostazioni di backup
 :::
 
-#### 5. Accessibilità e inclusività: la forza della tecnologia per il bene
+5. Accessibilità e inclusività: la forza della tecnologia per il bene
 
-Non farti intimidire dal nome "accessibilità": queste funzioni sono per tutti. Inizialmente pensate per persone con disabilità, sono utili anche per gli altri — mani occupate con i pacchi, cuffie rotte in metropolitana, caratteri piccoli con gli occhiali da vista… possono salvare la situazione. In fondo, il design accessibile riflette la filosofia della <strong>tecnologia per il bene</strong>: permettere a chiunque di godere in modo paritario della vita digitale.
+Non farti intimidire dal nome "accessibilità": queste funzioni sono per tutti. Inizialmente pensate per persone con disabilità, sono utili anche per gli altri: mani occupate con i pacchi, cuffie rotte in metropolitana, caratteri piccoli con gli occhiali da vista… possono salvare la situazione. In fondo, il design accessibile riflette la filosofia della <strong>tecnologia per il bene</strong>: permettere a chiunque di godere in modo paritario della vita digitale.
 
 ##### 1. Gli "occhi" degli ipovedenti — Guida completa agli screen reader
 
@@ -103,7 +103,7 @@ Lo screen reader è lo strumento centrale per gli ipovedenti: <strong>legge ad a
 2. Scorri con due dita: scorri la pagina intera su/giù o sinistra/destra;
 3. Doppio tocco con un dito: attiva l'elemento attivo (equivalente al "tap");
 4. Scorri con tre dita: cambia pagina;
-5. Triplo tocco con un dito: zoom o selezione (diverso dal triplo tap normale).
+5. Triplo tocco con un dito: zoom o selezione (diverso dal triplo tap normale)
 
 {class="mt-1"}
 <strong>Personalizzazione</strong>: [VoiceOver] > [Voce] permette di regolare la <strong>velocità di lettura</strong> (default circa 50%, portarla a 70-80% per un ascolto più fluido), il <strong>tono</strong> e di cambiare voce. iOS include "Voce avanzata" e "Controllore vocale": la prima riduce respiri e pause, per un ascolto più naturale.
@@ -124,7 +124,7 @@ Lo screen reader è lo strumento centrale per gli ipovedenti: <strong>legge ad a
 2. Doppio tocco con un dito: attiva l'elemento;
 3. Scorri su/giù o sinistra/destra con due dita: scorri;
 4. Tap con tre dita: entra in modalità lettura (lettura continua);
-5. Tap con quattro dita: pausa/riprendi la lettura.
+5. Tap con quattro dita: pausa/riprendi la lettura
 
 {class="mt-1"}
 <strong>Personalizzazione</strong>: [TalkBack] > [Impostazioni text-to-speech] permette di regolare <strong>velocità</strong> e <strong>tono</strong>, nonché di cambiare <strong>motore vocale</strong> (consigliato il motore Google Text-to-Speech per una lettura più naturale).
@@ -168,7 +168,7 @@ Quando lo screen reader incontra un'immagine, la pratica tradizionale è saltarl
 <i class="fas fa-lightbulb mr-2"></i>Scenario d'uso
 
 {class="mt-1"}
-Prova a chiedere di una foto di strada "quante persone ci sono in questa immagine? Cosa stanno facendo?", oppure apri un'app di delivery e fai leggere dall'AI il nome dei piatti nel menu — <strong>questa è la vera "tecnologia che rende la vita più paritaria"</strong>.
+Prova a chiedere di una foto di strada "quante persone ci sono in questa immagine? Cosa stanno facendo?", oppure apri un'app di delivery e fai leggere dall'AI il nome dei piatti nel menu <strong>questa è la vera "tecnologia che rende la vita più paritaria"</strong>.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -194,7 +194,7 @@ I sottotitoli live (Live Captions) sono una funzione <strong>di sistema di speec
 2. l'accuratezza è massima quando chi parla <strong>articola bene e mantiene un ritmo medio</strong>;
 3. le conversazioni a più voci riducono l'accuratezza, puoi usare la modalità "mostra solo una persona";
 4. supporta lingue principali come cinese mandarino, cantonese, inglese; <strong>lingue minori hanno accuratezza più bassa</strong>;
-5. musica di fondo o voci interferenti rendono il riconoscimento discontinuo.
+5. musica di fondo o voci interferenti rendono il riconoscimento discontinuo
 :::
 
 ##### 5. Doppio canale in chiamata: speech-to-text + text-to-speech
@@ -217,7 +217,7 @@ Quando l'utente <strong>non sente e non può parlare</strong> (afonia improvvisa
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>RTT (Real-Time Text)</strong>: entrambi gli interlocutori devono supportarlo, il testo compare mentre si digita, senza ritardo; già supportato dai principali operatori;
 - <strong>TTY (telescrivente)</strong>: richiede un dispositivo TTY dedicato, sempre più sostituito da RTT;
-- la <strong>funzione voice-to-text</strong> di WeChat/QQ è un'alternativa: tieni premuto sul messaggio vocale → "Converti in testo".
+- la <strong>funzione voice-to-text</strong> di WeChat/QQ è un'alternativa: tieni premuto sul messaggio vocale → "Converti in testo"
 :::
 
 ##### 6. Funzioni "piccole ma utili" per tutti
@@ -248,5 +248,5 @@ Trova un momento libero e fai queste prove:
 1. Attiva <strong>VoiceOver / TalkBack</strong> e prova a scorrere WeChat con tre dita, senza usare gli occhi;
 2. Attiva i <strong>sottotitoli live</strong> e parla al telefono per valutare l'accuratezza;
 3. <strong>Tocca con tre dita</strong> per ingrandire un testo al 200% e vivere la quotidianità di un ipovedente;
-4. Disattiva tutto e pensa: "se avessi sempre bisogno di queste funzioni, come vorrei che fossero progettate".
+4. Disattiva tutto e pensa: "se avessi sempre bisogno di queste funzioni, come vorrei che fossero progettate"
 :::

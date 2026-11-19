@@ -10,7 +10,7 @@ kind: chapter
 ### Capitolo 61: Swift in fretta — il primo linguaggio dello sviluppo Apple
 
 {class="chapter-intro mb-4"}
-In questo capitolo impariamo davvero il linguaggio. Niente timore — Swift è famoso per essere «amichevole coi principianti» e non serve imparare a mente il manuale di sintassi: prendendo il 20% della grammatica, leggi e scrivi l'80% del codice quotidiano. Il resto lo cerchi mentre costruisci i progetti. Ricorda il nostro principio di studio: capire > memorizzare, saper usare > padroneggiare.
+In questo capitolo impariamo davvero il linguaggio. Niente timore: Swift è famoso per essere «amichevole coi principianti» e non serve imparare a mente il manuale di sintassi: prendendo il 20% della grammatica, leggi e scrivi l'80% del codice quotidiano. Il resto lo cerchi mentre costruisci i progetti. Ricorda il nostro principio di studio: capire > memorizzare, saper usare > padroneggiare.
 
 #### 1. Variabili e tipi: dare un nome ai dati
 
@@ -51,12 +51,12 @@ I tipi di base di uso quotidiano in Swift
 Consiglio: la regola «prima let»
 
 {class="mt-1"}
-La regola ferrea della community Swift: per default usa let, e ricorri a var solo quando serve davvero. Dove basterebbe let, se metti var Xcode ti avverte in giallo. Questa abitudine ti risparmia tutta una famiglia di bug da «variabile cambiata per sbaglio» — meno cose cambiano nel codice, più è facile ragionarci.
+La regola ferrea della community Swift: per default usa let, e ricorri a var solo quando serve davvero. Dove basterebbe let, se metti var Xcode ti avverte in giallo. Questa abitudine ti risparmia tutta una famiglia di bug da «variabile cambiata per sbaglio», meno cose cambiano nel codice, più è facile ragionarci.
 :::
 
-#### 2. I valori opzionali (Optional): il «talismano anti-crash» di Swift
+2. I valori opzionali (Optional): il «talismano anti-crash» di Swift
 
-È il concetto più importante di Swift, e non c'è il secondo. In una frase: quando un valore può «non esserci», Swift ti obbliga a gestirlo — a livello di linguaggio fa sparire il «crash da puntatore nullo», l'incubo di tutto il mestiere.
+È il concetto più importante di Swift, e non c'è il secondo. In una frase: quando un valore può «non esserci», Swift ti obbliga a gestirlo, a livello di linguaggio fa sparire il «crash da puntatore nullo», l'incubo di tutto il mestiere.
 
 ::: div .code-block
 :::inline div .code-head

@@ -31,7 +31,7 @@ Entender os princípios de criptografia do gerenciador de senhas ajuda a avaliar
 
 ##### 1. Criptografia AES-256
 
-O AES (Advanced Encryption Standard, Padrão de Criptografia Avançada) é um algoritmo de criptografia simétrica reconhecido pelo NIST (Instituto Nacional de Padrões e Tecnologia dos EUA), amplamente usado por bancos, forças armadas e governos. O "256" refere-se ao comprimento da chave, de 256 bits — teoricamente, seria necessário mais tempo do que a idade do universo para quebrá-la por força bruta. Os principais gerenciadores de senhas (1Password, Bitwarden, KeePass, etc.) usam AES-256 para criptografar seu cofre de senhas.
+O AES (Advanced Encryption Standard, Padrão de Criptografia Avançada) é um algoritmo de criptografia simétrica reconhecido pelo NIST (Instituto Nacional de Padrões e Tecnologia dos EUA), amplamente usado por bancos, forças armadas e governos. O "256" refere-se ao comprimento da chave, de 256 bits: teoricamente, seria necessário mais tempo do que a idade do universo para quebrá-la por força bruta. Os principais gerenciadores de senhas (1Password, Bitwarden, KeePass, etc.) usam AES-256 para criptografar seu cofre de senhas.
 
 ##### 2. Arquitetura de Conhecimento Zero (Zero-Knowledge Architecture)
 
@@ -42,19 +42,19 @@ O AES (Advanced Encryption Standard, Padrão de Criptografia Avançada) é um al
 3. Apenas o texto cifrado é enviado ao servidor.
 4. No próximo login, o servidor envia o texto cifrado de volta, e o cliente descriptografa novamente com a senha mestra.
 
-Ponto-chave: <strong>a senha mestra nunca sai do seu dispositivo</strong>; ela também não está no servidor. Portanto, mesmo que o provedor seja invadido, o hacker só obtém um monte de texto cifrado indecifrável — a menos que consiga adivinhar sua senha mestra.
+Ponto-chave: <strong>a senha mestra nunca sai do seu dispositivo</strong>; ela também não está no servidor. Portanto, mesmo que o provedor seja invadido, o hacker só obtém um monte de texto cifrado indecifrável, a menos que consiga adivinhar sua senha mestra.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>Por que "conhecimento zero" significa que nem o provedor consegue ver suas senhas?
 
 {class="mt-1"}
-Porque a chave de descriptografia é derivada da sua senha mestra, e a senha mestra só existe na sua mente e só é usada no seu dispositivo local. No servidor do provedor, não há nem a senha mestra, nem a chave de descriptografia — apenas texto cifrado. É por isso que provedores sérios como Bitwarden e 1Password declaram explicitamente que "nós também não podemos ver suas senhas" — não é que eles não queiram ver, é que tecnicamente é impossível.
+Porque a chave de descriptografia é derivada da sua senha mestra, e a senha mestra só existe na sua mente e só é usada no seu dispositivo local. No servidor do provedor, não há nem a senha mestra, nem a chave de descriptografia — apenas texto cifrado. É por isso que provedores sérios como Bitwarden e 1Password declaram explicitamente que "nós também não podemos ver suas senhas". Não é que eles não queiram ver, é que tecnicamente é impossível.
 :::
 
 ##### 3. Funções de Derivação de Chave: PBKDF2 e Argon2
 
-A senha mestra não pode ser usada diretamente como chave de criptografia — ela precisa passar por uma "função de derivação de chave". O papel dessa função é <strong>tornar o cálculo deliberadamente mais lento</strong>, elevando o custo da quebra por força bruta a um nível inviável.
+A senha mestra não pode ser usada diretamente como chave de criptografia, ela precisa passar por uma "função de derivação de chave". O papel dessa função é <strong>tornar o cálculo deliberadamente mais lento</strong>, elevando o custo da quebra por força bruta a um nível inviável.
 
 - <strong>PBKDF2</strong>: padrão veterano, amplamente usado pelo iCloud Keychain, Bitwarden, LastPass e outros. Desacelera a quebra por meio de iterações repetidas de hash (geralmente acima de 100 mil vezes).
 - <strong>Argon2</strong>: vencedor do concurso de hash de senhas de 2015, mais moderno que o PBKDF2. Além do "consumo de poder computacional", introduz também o "consumo de memória" — dificultando a aceleração da quebra até mesmo por hardware dedicado como GPU/ASIC. Bitwarden, KeePassXC e outros já oferecem suporte.
@@ -65,7 +65,7 @@ Quanto maior o número de iterações, mais seguro, mas o desbloqueio também fi
 
 Em agosto de 2022, o veterano gerenciador de senhas LastPass anunciou que seu ambiente de desenvolvimento havia sido invadido; em novembro do mesmo ano, divulgou ainda que os hackers haviam levado os backups dos cofres de senhas dos usuários (texto cifrado). As principais lições do incidente:
 
-- <strong>A arquitetura de conhecimento zero segurou a linha de defesa</strong>: como o cofre em si é criptografado, os hackers obtiveram o texto cifrado, mas não conseguiram decifrá-lo — desde que a senha mestra do usuário fosse forte o suficiente.
+- <strong>A arquitetura de conhecimento zero segurou a linha de defesa</strong>: como o cofre em si é criptografado, os hackers obtiveram o texto cifrado, mas não conseguiram decifrá-lo, desde que a senha mestra do usuário fosse forte o suficiente.
 - <strong>Usuários com senha mestra fraca são os mais vulneráveis</strong>: os hackers podem fazer quebra por força bruta offline das senhas mestras fracas; portanto, usuários que usam senha mestra fraca ou reutilizada correm risco real.
 - <strong>Os metadados também vazaram</strong>: embora o conteúdo das senhas esteja criptografado, os metadados, como URLs dos sites e anotações, podem não estar criptografados, expondo quais serviços o usuário utilizava.
 
@@ -112,7 +112,7 @@ Conclusão: <strong>"comprimento + aleatoriedade" é mais importante do que "sí
 Mantido pelo pesquisador de segurança Troy Hunt, o <a href="https://haveibeenpwned.com" class="text-primary hover:underline" target="_blank" rel="noopener">haveibeenpwned.com</a> reúne contas e senhas que vazaram em sucessivos grandes incidentes de vazamento de dados. Você pode:
 
 1. Digitar seu e-mail e verificar se sua conta foi exposta em algum vazamento.
-2. Usar a função Pwned Passwords para consultar se uma determinada senha está na base de dados de senhas vazadas conhecidas (os gerenciadores de senha e navegadores já têm essa consulta integrada).
+2. Usar a função Pwned Passwords para consultar se uma determinada senha está na base de dados de senhas vazadas conhecidas, (os gerenciadores de senha e navegadores já têm essa consulta integrada).
 
 Se uma senha aparecer na base de dados de vazamentos, <strong>não importa o quão complexa ela pareça, deve ser trocada imediatamente</strong> — porque o ataque por dicionário tentará essas senhas conhecidas primeiro.
 
@@ -144,7 +144,7 @@ Preocupado em digitar sua senha no HaveIBeenPwned e ela vazar de novo? Não prec
 
 #### VI. Passkey: O futuro do login sem senha
 
-De 2024 a 2026, a tecnologia de senhas está passando por uma revolução — o <strong>Passkey (Chave de Acesso)</strong> promete eliminar completamente as senhas tradicionais. Apple, Google e Microsoft estão impulsionando juntos, com o endosso da FIDO Alliance e do W3C (World Wide Web Consortium). Esta é a maior mudança na forma de login em décadas.
+De 2024 a 2026, a tecnologia de senhas está passando por uma revolução: o <strong>Passkey (Chave de Acesso)</strong> promete eliminar completamente as senhas tradicionais. Apple, Google e Microsoft estão impulsionando juntos, com o endosso da FIDO Alliance e do W3C (World Wide Web Consortium). Esta é a maior mudança na forma de login em décadas.
 
 ##### 1. O que é Passkey?
 
@@ -193,7 +193,7 @@ O Passkey é baseado no padrão FIDO2 / WebAuthn, substituindo senhas por um <st
 
 ##### 3. Suporte nas plataformas
 
-- <strong>Apple iCloud Keychain Passkey</strong>: Suporte nativo no iOS 16+ / macOS Ventura+. As Passkeys podem ser sincronizadas entre todos os dispositivos com o mesmo Apple ID. Ao fazer login em um novo dispositivo, não é necessário recriar.
+- <strong>Apple iCloud Keychain Passkey</strong>: Suporte nativo no iOS 16+ / macOS Ventura+. As Passkeys podem ser sincronizadas entre todos os dispositivos com o mesmo Apple ID. Ao fazer login em um novo dispositivo. Não é necessário recriar.
 - <strong>Google Password Manager Passkey</strong>: Suporte nativo no Android + Chrome. As Passkeys ficam armazenadas na conta Google, com sincronização entre dispositivos Android. Desde 2023, as contas pessoais do Google já suportam login com Passkey.
 - <strong>Microsoft</strong>: Windows 11 / Edge já suportam Passkey. Conta Microsoft, Outlook, Office e outros serviços estão liberando gradualmente o login por Passkey, com gerenciamento pelo Microsoft Authenticator.
 - <strong>1Password / Bitwarden</strong>: Já suportam criação, armazenamento e sincronização multiplataforma de Passkeys, libertando você de um único ecossistema.
@@ -203,7 +203,7 @@ O Passkey é baseado no padrão FIDO2 / WebAuthn, substituindo senhas por um <st
 <i class="fas fa-lightbulb mr-2"></i>A sincronização entre dispositivos é o avanço chave
 
 {class="mt-1"}
-O maior ponto fraco inicial das Passkeys era a "vinculação a um único dispositivo" — trocar de telefone significava recriar tudo. A partir de 2023, Apple, Google e Microsoft implementaram a sincronização em nuvem das Passkeys: iCloud Keychain sincroniza entre dispositivos Apple, Google Password Manager sincroniza entre dispositivos Android. Soluções de terceiros como 1Password permitem a sincronização entre ecossistemas. Isso significa que as Passkeys já têm a praticidade necessária para substituir as senhas.
+O maior ponto fraco inicial das Passkeys era a "vinculação a um único dispositivo", trocar de telefone significava recriar tudo. A partir de 2023, Apple, Google e Microsoft implementaram a sincronização em nuvem das Passkeys: iCloud Keychain sincroniza entre dispositivos Apple, Google Password Manager sincroniza entre dispositivos Android. Soluções de terceiros como 1Password permitem a sincronização entre ecossistemas. Isso significa que as Passkeys já têm a praticidade necessária para substituir as senhas.
 :::
 
 ##### 4. Como criar e usar Passkey no celular
@@ -250,12 +250,12 @@ Esse processo utiliza comunicação criptografada dupla via Bluetooth + Internet
 <i class="fas fa-exclamation-triangle mr-2"></i>Sugestões para o período de transição
 
 {class="mt-1"}
-O Passkey ainda não substituiu completamente as senhas — muitos sites ainda estão na fase de coexistência "Passkey + senha". Sugestão: ative o Passkey prioritariamente para contas de alto valor, mas <strong>não exclua imediatamente a senha tradicional</strong>, mantenha como backup. Continue usando o gerenciador de senhas, pois nem todos os sites suportam Passkey. Veja o Passkey como um "complemento poderoso ao gerenciador de senhas", não como uma "substituição imediata".
+O Passkey ainda não substituiu completamente as senhas, muitos sites ainda estão na fase de coexistência "Passkey + senha". Sugestão: ative o Passkey prioritariamente para contas de alto valor, mas <strong>não exclua imediatamente a senha tradicional</strong>, mantenha como backup. Continue usando o gerenciador de senhas, pois nem todos os sites suportam Passkey. Veja o Passkey como um "complemento poderoso ao gerenciador de senhas", não como uma "substituição imediata".
 :::
 
 #### VII. Chave de segurança por hardware
 
-Se suas exigências de segurança estão acima do usuário comum — como ter muitas criptomoedas, ser executivo/jornalista/ativista, ou proteger contas corporativas essenciais — a chave de segurança por hardware é uma opção mais confiável que o código SMS.
+Se suas exigências de segurança estão acima do usuário comum: como ter muitas criptomoedas, ser executivo/jornalista/ativista, ou proteger contas corporativas essenciais, a chave de segurança por hardware é uma opção mais confiável que o código SMS.
 
 ##### 1. O que é uma chave de segurança por hardware?
 
@@ -306,12 +306,12 @@ O maior risco da chave de hardware é "perdê-la". Sugestões: ① Registre duas
 <i class="fas fa-exclamation-triangle mr-2"></i>Cuidado com o canal de compra
 
 {class="mt-1"}
-Compre sempre na loja oficial ou em revendedores autorizados. Não compre chaves de segunda mão ou de origem desconhecida — em teoria, hardware pré-configurado pode ter backdoors implantados. O firmware da YubiKey não pode ser atualizado após a fabricação, mas a Yubico publica continuamente avisos de segurança; basta acompanhar o site oficial.
+Compre sempre na loja oficial ou em revendedores autorizados. Não compre chaves de segunda mão ou de origem desconhecida: em teoria, hardware pré-configurado pode ter backdoors implantados. O firmware da YubiKey não pode ser atualizado após a fabricação, mas a Yubico publica continuamente avisos de segurança; basta acompanhar o site oficial.
 :::
 
 #### VIII. Compartilhamento de senhas em família/equipe
 
-No ambiente familiar, senhas de Netflix, Wi-Fi doméstico, painel do roteador e fechadura inteligente precisam ser compartilhadas por toda a família. No ambiente de equipe, senhas de servidores, bancos de dados e contas de redes sociais precisam de colaboração entre várias pessoas. <strong>Enviar senhas pelo WeChat ou escrevê-las em documentos compartilhados são práticas de alto risco</strong> — se o histórico de conversas ou a permissão do documento vazar, a senha também vaza.
+No ambiente familiar, senhas de Netflix, Wi-Fi doméstico, painel do roteador e fechadura inteligente precisam ser compartilhadas por toda a família. No ambiente de equipe, senhas de servidores, bancos de dados e contas de redes sociais precisam de colaboração entre várias pessoas. <strong>Enviar senhas pelo WeChat ou escrevê-las em documentos compartilhados são práticas de alto risco</strong>. Se o histórico de conversas ou a permissão do documento vazar, a senha também vaza.
 
 ##### 1. O "Cofre compartilhado" (Vault) do 1Password
 
@@ -325,7 +325,7 @@ Familiares ou membros da equipe não precisam compartilhar a senha mestra. Cada 
 
 ##### 2. A função "Organização" do Bitwarden
 
-A versão gratuita do Bitwarden suporta compartilhamento de senhas pessoais (compartilhamento limitado por tempo de uma única senha via função "Send"). A versão paga permite criar "Organizações", compartilhando itens com familiares ou colegas de equipe, com permissões detalhadas. O Bitwarden também oferece opção de auto-hospedagem, adequada para empresas com altas exigências de soberania de dados.
+A versão gratuita do Bitwarden suporta compartilhamento de senhas pessoais (compartilhamento limitado por tempo de uma única senha via função "Send"). A versão paga permite criar "Organizações". Compartilhando itens com familiares ou colegas de equipe, com permissões detalhadas. O Bitwarden também oferece opção de auto-hospedagem, adequada para empresas com altas exigências de soberania de dados.
 
 ##### 3. Ambiente familiar: forma segura de compartilhar senhas de Netflix, Wi-Fi etc.
 
@@ -346,12 +346,12 @@ O 1Password Families custa cerca de 4,99 USD/mês, suporta até 5 membros da fam
 
 - <strong>1Password Teams / Business</strong>: Permite criar múltiplos cofres por departamento ou grupo de projeto, com controle granular de permissões e auditoria de todos os acessos.
 - <strong>Bitwarden Teams / Enterprise</strong>: Solução de código aberto, com opção de auto-hospedagem. A versão Enterprise suporta integração SSO e sincronização de diretório.
-- <strong>Princípio de separação de responsabilidades</strong>: A senha de administrador não deve ser conhecida por apenas uma pessoa — defina 2 a 3 "contatos de emergência" para garantir que o negócio não pare quando alguém essencial sair ou estiver de férias.
+- <strong>Princípio de separação de responsabilidades</strong>: A senha de administrador não deve ser conhecida por apenas uma pessoa, defina 2 a 3 "contatos de emergência" para garantir que o negócio não pare quando alguém essencial sair ou estiver de férias.
 - <strong>Processo de desligamento</strong>: Ao sair de um funcionário, revogue imediatamente o acesso ao gerenciador de senhas e, se necessário, faça a rotação de todas as senhas sensíveis que ele tenha acessado.
 
 ##### 5. Acesso de Emergência (Emergency Access): se algo acontecer com você
 
-Imagine este cenário: você gerencia sozinho todas as contas importantes da família, mas sofre um acidente e é hospitalizado ou infelizmente falece. Sua família não consegue acessar contas bancárias, e-mails ou seguros. <strong>A função "Acesso de Emergência"</strong> foi projetada exatamente para isso — autorizar um familiar/amigo de confiança a obter acesso ao seu cofre de senhas quando você não puder responder.
+Imagine este cenário: você gerencia sozinho todas as contas importantes da família, mas sofre um acidente e é hospitalizado ou infelizmente falece. Sua família não consegue acessar contas bancárias, e-mails ou seguros. <strong>A função "Acesso de Emergência"</strong> foi projetada exatamente para isso, autorizar um familiar/amigo de confiança a obter acesso ao seu cofre de senhas quando você não puder responder.
 
 <strong>Configuração do Acesso de Emergência no Bitwarden:</strong>
 
@@ -363,7 +363,7 @@ Imagine este cenário: você gerencia sozinho todas as contas importantes da fam
 
 <strong>Acesso de Emergência no 1Password:</strong>
 
-1. O 1Password não chama diretamente de "Acesso de Emergência", mas é possível implementar pela função "Organização Família/Equipe" — adicione a família à versão Família e coloque alguns itens no "Cofre compartilhado".
+1. O 1Password não chama diretamente de "Acesso de Emergência", mas é possível implementar pela função "Organização Família/Equipe", adicione a família à versão Família e coloque alguns itens no "Cofre compartilhado".
 2. Para usuários da versão pessoal, recomenda-se informar a senha mestra a um familiar de alta confiança ou escrevê-la em um envelope lacrado guardado em um cofre.
 3. O 1Password também fornece um "Código de recuperação". Ao ativar a autenticação de dois fatores, imprima e guarde-o.
 

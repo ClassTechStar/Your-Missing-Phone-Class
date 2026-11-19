@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Auch das größte Handydisplay hat nur 7 Zoll, aber Ihr Fernseher hat 55 und Ihr Beamer 100 Zoll. Das Handybild auf einen großen Bildschirm zu "werfen", ist eine ganz andere Dimension. Dieses Kapitel erklärt die drei häufigen Szenarien Bildschirmübertragung, Präsentation und Auto-Anbindung und hilft Ihnen, die Fähigkeiten des Handys auf größere Bildschirme auszudehnen.
 
-#### I. Drei Lager der kabellosen Übertragung —— nicht verwechseln
+I. Drei Lager der kabellosen Übertragung —— nicht verwechseln
 
 Kabellose Übertragung sieht immer so aus: "Handybild auf den Fernseher". Aber die zugrunde liegenden Technologien sind drei verschiedene, nicht kompatible:
 
@@ -58,7 +58,7 @@ Einige Android-Handys unterstützen den "Desktop-Modus" – nach dem Verbinden m
 - <strong>Motorola Ready For</strong>: Moto-Flaggschiffe unterstützen es ebenfalls, ähnlich wie DeX.
 - <strong>sRGB</strong>: Leichtes Büro (E-Mails, Dokumente ändern), PPT präsentieren, Videos auf großem Bildschirm sehen. Nicht geeignet für komplexes Excel oder professionelles Design.
 
-#### IV. Auto-Anbindung —— die richtige Art, das Handy im Auto zu nutzen
+IV. Auto-Anbindung —— die richtige Art, das Handy im Auto zu nutzen
 
 Das Bedienen des Handys während der Fahrt ist verboten, aber Navigation, Musik und Telefon sind unverzichtbar. Auto-Anbindungssysteme lassen Sie die Kernfunktionen des Handys auf dem Bordbildschirm nutzen, während das Handy selbst unangetastet bleibt:
 
@@ -75,7 +75,7 @@ Das Bedienen des Handys während der Fahrt ist verboten, aber Navigation, Musik 
 Unabhängig vom System sollten Sie beim Fahren immer Sprachsteuerung verwenden. Navigation vor der Fahrt einrichten, Playlist vorher wählen, den Bordbildschirm nicht während der Fahrt bedienen.
 :::
 
-#### V. Bildschirmübertragung im Konferenzraum —— nicht mehr gestresst
+V. Bildschirmübertragung im Konferenzraum —— nicht mehr gestresst
 
 Besprechungen sind der häufigste Anwendungsfall für Übertragung und auch der fehleranfälligste. Hier sind praktische Tipps:
 

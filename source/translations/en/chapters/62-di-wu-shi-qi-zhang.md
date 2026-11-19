@@ -10,11 +10,11 @@ kind: chapter
 ### Chapter 57: The Road Ahead — Permissions, Notifications, and Modern Architecture
 
 {class="chapter-intro mb-4"}
-Being able to build an app is only the start. This chapter covers the hurdles between "can build" and "builds well": how to ask for permissions gracefully, how to send notifications without annoying people, how to lift your architecture another level, and — in 2026 — how to pair with AI to write Android code. Every one of these will show up in your real projects right away.
+Being able to build an app is only the start. This chapter covers the hurdles between "can build" and "builds well": how to ask for permissions gracefully, how to send notifications without annoying people, how to lift your architecture another level, and, in 2026, how to pair with AI to write Android code. Every one of these will show up in your real projects right away.
 
 #### 1. Runtime Permissions: Knock First, Then Come In
 
-Camera, location, contacts, notifications... for these "sensitive zones," Android requires the app to ask the user at runtime (Android 6 and up). The rules: declare first (the Manifest), then request (in code), and degrade gracefully if the user refuses. In Compose, the easiest path is rememberPermissionState from the official Accompanist library:
+Camera, location, contacts, notifications... for these "sensitive zones," Android requires the app to ask the user at runtime (Android 6 and up). The rules are simple. Declare first (the Manifest), then request (in code), and degrade gracefully if the user refuses. In Compose, the easiest path is rememberPermissionState from the official Accompanist library:
 
 ::: div .code-block
 :::inline div .code-head
@@ -51,7 +51,7 @@ Once the user checks "don't ask again," launchPermissionRequest won't pop up any
 
 #### 2. Notifications: Saying Useful Things at the Right Time
 
-Notifications are the channel apps use to reach users — and the feature users block first. Three disciplines for notifications: only send useful things, let users turn them off, and never pester at midnight. The basic usage:
+Notifications are the channel apps use to reach users, and the feature users block first. Three disciplines for notifications: only send useful things, let users turn them off, and never pester at midnight. The basic usage:
 
 ::: div .code-block
 :::inline div .code-head
@@ -83,21 +83,21 @@ if (ActivityCompat.checkSelfPermission(this,
 ```
 :::
 
-For scheduled tasks (like "remind me to log expenses at 20:00 every day"), use WorkManager — the officially recommended "background scheduling butler" that guarantees tasks run at the right moment, with no need to fuss over battery optimization yourself. For alarm-type needs, it's always the right choice.
+For scheduled tasks (like "remind me to log expenses at 20:00 every day"), use WorkManager, the officially recommended "background scheduling butler" that guarantees tasks run at the right moment, with no need to fuss over battery optimization yourself. For alarm-type needs, it's always the right choice.
 
-#### 3. Architecture, Next Level: Dependency Injection and Modularity
+3. Architecture, Next Level: Dependency Injection and Modularity
 
 As the project grows, two "sweet troubles" come knocking:
 
-- Messy object creation: every screen builds its own database, its own API — use Hilt (a dependency injection framework) to manage them centrally, so "whoever needs something just asks and it's handed over";
-- Code piling into a mountain: single-module projects get slower and slower to change — split into multiple modules (app / core / feature-xxx) so each feature is developed and tested independently.
+- Messy object creation: every screen builds its own database, its own API, use Hilt (a dependency injection framework) to manage them centrally, so "whoever needs something just asks and it's handed over";
+- Code piling into a mountain: single-module projects get slower and slower to change, split into multiple modules (app / core / feature-xxx) so each feature is developed and tested independently.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Tip: don't over-engineer
 
 {class="mt-1"}
-Hilt and modularity are both good tools, but don't rush them into a solo project. For the tracker, a single module plus manual dependency creation is entirely enough. Bring them in when the code passes tens of thousands of lines, compilation starts to slow down, or several people begin collaborating — and only as needed. Tools serve goals; they're not for showing off — that's also the "simplicity first" principle from our AI coding book.
+Hilt and modularity are both good tools, but don't rush them into a solo project. For the tracker, a single module plus manual dependency creation is entirely enough. Bring them in when the code passes tens of thousands of lines, compilation starts to slow down, or several people begin collaborating, and only as needed. Tools serve goals; they're not for showing off: that's also the "simplicity first" principle from our AI coding book.
 :::
 
 #### 4. The 2026 Way: AI-Assisted Android Development
@@ -113,7 +113,7 @@ In 2026, AI is deeply embedded in the Android development workflow. If you want 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Four scenarios for AI-assisted Android development
 
-The full methodology — how to give AI instructions, how to review its work, how to avoid pitfalls — spans 11 complete chapters in Part 7 of this book, "AI Coding in Practice" (Chapters 37-47), which I strongly recommend reading alongside: leave the Android syntax to this part, and the AI collaboration know-how to Part 7.
+The full methodology, how to give AI instructions, how to review its work, how to avoid pitfalls, spans 11 complete chapters in Part 7 of this book, "AI Coding in Practice" (Chapters 37-47), which I strongly recommend reading alongside: leave the Android syntax to this part, and the AI collaboration know-how to Part 7.
 
 #### 5. Compose Performance Tuning and Debugging Tools
 
@@ -121,9 +121,9 @@ Writing Compose is a joy, but "too much recomposition" can also lag. Three pract
 
 - Stabilize parameters: add @Immutable to data classes or use derivedStateOf to keep unrelated state changes from triggering large recompositions;
 - Remember to use keys: items(list, key = { it.id }) makes list additions and deletions touch only the items that should change — without a key, deleting one item may redraw the whole list;
-- Layout Inspector's Compose mode: watch each Composable's recomposition count in real time — you can see at a glance who recomposes too often, and optimize those hotspots.
+- Layout Inspector's Compose mode: watch each Composable's recomposition count in real time — you can see at a glance who recomposes too often, and optimize those hotspots
 
-Also turn on the Compose compiler reports (metrics) to generate a report of "which components are unstable" — on the road to mastery, data is always more reliable than gut feeling.
+Also turn on the Compose compiler reports (metrics) to generate a report of "which components are unstable", on the road to mastery, data is always more reliable than gut feeling.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -140,6 +140,6 @@ Chapter Summary
 - Sensitive permissions: declare in the Manifest + request at runtime + guide gracefully after a refusal
 - Three notification disciplines: only useful things, can be turned off, no pestering; channel + permission, both required
 - Use WorkManager for scheduled tasks; don't reinvent the wheel
-- Hilt manages objects, modularity manages code — hold off on both for small solo projects
+- Hilt manages objects, modularity manages code: hold off on both for small solo projects
 - Four AI-assisted scenarios: writing code, research, writing tests, fixing bugs; the methodology is in Part 7 (Chapters 37-47)
 :::

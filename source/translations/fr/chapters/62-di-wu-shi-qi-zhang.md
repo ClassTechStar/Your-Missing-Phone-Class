@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 57 : Le chemin de la maîtrise — permissions, notifications et architecture moderne
 
 {class="chapter-intro mb-4"}
-Savoir fabriquer une app n’est que le début. Ce chapitre aborde les marches qui mènent de « savoir faire » à « bien faire » : demander des permissions avec élégance, envoyer des notifications sans agacer, hisser l’architecture d’un étage, et — en 2026 — coder Android en duo avec l’IA. Chaque point est un obstacle que tu rencontreras très vite dans un vrai projet.
+Savoir fabriquer une app n’est que le début. Ce chapitre aborde les marches qui mènent de « savoir faire » à « bien faire » : demander des permissions avec élégance, envoyer des notifications sans agacer, hisser l’architecture d’un étage, et — en 2026, coder Android en duo avec l’IA. Chaque point est un obstacle que tu rencontreras très vite dans un vrai projet.
 
 #### 1. Les permissions à l’exécution : frapper avant d’entrer
 
@@ -46,7 +46,7 @@ fun CameraButton() {
 Attention : que faire en cas de refus définitif ?
 
 {class="mt-1"}
-Une fois que l’utilisateur a coché « ne plus demander », launchPermissionRequest n’affiche plus de fenêtre. Il faut alors le guider vers les réglages du système pour une activation manuelle (avec un Intent vers la page de réglages de l’app) et expliquer dans l’interface « à quoi servira cette permission ». Un ton bienveillant augmente nettement l’envie de l’utilisateur d’accorder la permission — le texte de demande de permission mérite d’être rédigé avec soin.
+Une fois que l’utilisateur a coché « ne plus demander », launchPermissionRequest n’affiche plus de fenêtre. Il faut alors le guider vers les réglages du système pour une activation manuelle (avec un Intent vers la page de réglages de l’app) et expliquer dans l’interface « à quoi servira cette permission ». Un ton bienveillant augmente nettement l’envie de l’utilisateur d’accorder la permission, le texte de demande de permission mérite d’être rédigé avec soin.
 :::
 
 #### 2. Les notifications : dire des choses utiles au bon moment
@@ -83,13 +83,13 @@ if (ActivityCompat.checkSelfPermission(this,
 ```
 :::
 
-Pour les tâches planifiées (par exemple « rappeler de noter ses dépenses chaque jour à 20 h »), utilise WorkManager — c’est le « majordome de l’ordonnancement en arrière-plan » recommandé par Google : il garantit que la tâche s’exécute au bon moment, sans que tu aies à te soucier de l’optimisation de batterie. Pour tout besoin de type réveil, c’est le bon choix, à coup sûr.
+Pour les tâches planifiées (par exemple « rappeler de noter ses dépenses chaque jour à 20 h »), utilise WorkManager: c’est le « majordome de l’ordonnancement en arrière-plan » recommandé par Google : il garantit que la tâche s’exécute au bon moment, sans que tu aies à te soucier de l’optimisation de batterie. Pour tout besoin de type réveil, c’est le bon choix, à coup sûr.
 
-#### 3. Architecture avancée : injection de dépendances et modularisation
+3. Architecture avancée : injection de dépendances et modularisation
 
 Quand le projet grossit, deux « douces misères » se présentent :
 
-- La création d’objets part en vrille : chaque écran crée sa propre base de données, son propre API — utilise Hilt (framework d’injection de dépendances) pour tout centraliser : « qui veut quoi n’a qu’à demander, et on lui tend » ;
+- La création d’objets part en vrille : chaque écran crée sa propre base de données, son propre API, utilise Hilt (framework d’injection de dépendances) pour tout centraliser : « qui veut quoi n’a qu’à demander, et on lui tend » ;
 - Le code s’entasse en montagne : un projet mono-module devient de plus en plus lent à modifier — découpe-le en multi-modules (app / core / feature-xxx), chaque fonctionnalité se développant et se testant de façon indépendante.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -97,10 +97,10 @@ Quand le projet grossit, deux « douces misères » se présentent :
 Astuce : ne surconçois pas
 
 {class="mt-1"}
-Hilt et la modularisation sont de bons outils, mais ne t’y précipite pas sur un projet solo. Le carnet de comptes en un seul module + création manuelle des dépendances suffit largement. Attends que le code dépasse quelques dizaines de milliers de lignes, que la compilation ralentisse ou que tu passes à plusieurs, et introduis-les selon les besoins. Les outils servent l’objectif, ils ne servent pas à épater — c’est aussi le principe de « simplicité d’abord » de notre livre sur le codage avec l’IA.
+Hilt et la modularisation sont de bons outils, mais ne t’y précipite pas sur un projet solo. Le carnet de comptes en un seul module + création manuelle des dépendances suffit largement. Attends que le code dépasse quelques dizaines de milliers de lignes, que la compilation ralentisse ou que tu passes à plusieurs, et introduis-les selon les besoins. Les outils servent l’objectif, ils ne servent pas à épater: c’est aussi le principe de « simplicité d’abord » de notre livre sur le codage avec l’IA.
 :::
 
-#### 4. La nouveauté de 2026 : le développement Android assisté par l’IA
+4. La nouveauté de 2026 : le développement Android assisté par l’IA
 
 En 2026, l’IA est déjà profondément encastrée dans le flux de développement Android. Si tu veux accélérer, cette combinaison est bien rodée :
 
@@ -113,17 +113,17 @@ En 2026, l’IA est déjà profondément encastrée dans le flux de développeme
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Les quatre scénarios du développement Android assisté par l’IA
 
-La méthodologie concrète — comment donner des instructions à l’IA, comment réceptionner les livraisons, comment éviter les pièges — est développée sur 11 chapitres complets dans la septième partie de ce livre, « L’IA en pratique » (chapitres 37 à 47) ; sa lecture en parallèle est vivement conseillée : la syntaxe Android ici, l’art de collaborer avec l’IA dans la septième partie.
+La méthodologie concrète, comment donner des instructions à l’IA, comment réceptionner les livraisons, comment éviter les pièges, est développée sur 11 chapitres complets dans la septième partie de ce livre, « L’IA en pratique » (chapitres 37 à 47) ; sa lecture en parallèle est vivement conseillée : la syntaxe Android ici, l’art de collaborer avec l’IA dans la septième partie.
 
-#### 5. Optimisation des performances Compose et outils de débogage
+5. Optimisation des performances Compose et outils de débogage
 
 Écrire avec Compose est un plaisir, mais un « excès de recomposition » peut provoquer des à-coups. Trois astuces pratiques :
 
 - Stabilise les paramètres : ajoute @Immutable à tes data classes ou utilise derivedStateOf pour éviter que des changements d’état sans rapport ne déclenchent de vastes recompositions ;
 - Pense à utiliser key : items(list, key = { it.id }) fait que les ajouts et suppressions ne touchent que les éléments concernés — sans key, supprimer un élément peut redessiner toute la liste ;
-- Le mode Compose de Layout Inspector : il montre en temps réel le nombre de recompositions de chaque Composable — tu vois d’un coup d’œil qui se recompose trop souvent, et tu optimises ces points chauds.
+- Le mode Compose de Layout Inspector : il montre en temps réel le nombre de recompositions de chaque Composable — tu vois d’un coup d’œil qui se recompose trop souvent, et tu optimises ces points chauds
 
-Active aussi le rapport du compilateur Compose (Metrics) : il génère un rapport sur « quels composants sont instables » — sur la route de la maîtrise, les données sont toujours plus fiables que les impressions.
+Active aussi le rapport du compilateur Compose (Metrics) : il génère un rapport sur « quels composants sont instables », sur la route de la maîtrise, les données sont toujours plus fiables que les impressions.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -140,6 +140,6 @@ Résumé du chapitre
 - Permissions sensibles : déclaration dans le Manifest + demande à l’exécution + orientation élégante en cas de refus
 - Les trois règles des notifications : n’envoyer que l’utile, pouvoir couper, ne pas harceler ; canal + permission, rien ne manque
 - Tâches planifiées : WorkManager, ne réinvente pas la roue
-- Hilt gère les objets, la modularisation gère le code — pas la peine de s’y précipiter sur un petit projet solo
+- Hilt gère les objets, la modularisation gère le code, pas la peine de s’y précipiter sur un petit projet solo
 - Quatre scénarios d’assistance IA : coder, chercher la doc, écrire les tests, corriger les bugs ; la méthodologie est dans la septième partie (chapitres 37 à 47)
 :::

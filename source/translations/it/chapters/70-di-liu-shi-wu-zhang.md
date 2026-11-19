@@ -23,11 +23,11 @@ Benvenuto nel tuo primo "progetto serio". Questo registro delle spese, pur senza
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 I cinque elementi dei requisiti del registro delle spese
 
-Poi scomponi il lavoro in piccoli passi "utili fin da subito": ① creare il livello dati con SwiftData (salvare una voce); ② la pagina elenco (vedere i movimenti); ③ la finestra di inserimento (aggiungere una voce); ④ eliminazione e modifica; ⑤ la card del riepilogo mensile. A ogni passo completato l'app resta una "cosa utilizzabile".
+Poi scomponi il lavoro in piccoli passi "utili fin da subito": ① creare il livello dati con SwiftData (salvare una voce). ② la pagina elenco (vedere i movimenti). ③ la finestra di inserimento (aggiungere una voce). ④ eliminazione e modifica. ⑤ la card del riepilogo mensile. A ogni passo completato l'app resta una "cosa utilizzabile".
 
 #### 2. Il livello dati: dare una casa alle "voci"
 
-Prima definisci come è fatta una voce di conto — servono campi sufficienti, ma senza esagerare:
+Prima definisci come è fatta una voce di conto, servono campi sufficienti, ma senza esagerare:
 
 ::: div .code-block
 :::inline div .code-head
@@ -74,7 +74,7 @@ Far agire il database direttamente dall'interfaccia? Funziona, ma il codice dell
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figura 4: la struttura a tre livelli di MVVM — i dati fluiscono a senso unico e nessun livello invade il campo degli altri
+Figura 4: la struttura a tre livelli di MVVM, i dati fluiscono a senso unico e nessun livello invade il campo degli altri
 :::
 
 ::: div .code-block
@@ -172,7 +172,7 @@ Il campo dell'importo va sempre validato: blocca valori vuoti, negativi e input 
 
 #### 5. Modifica, eliminazione e riepilogo
 
-- Eliminazione: .onDelete di List cancella con uno scorrimento a sinistra + finestra di conferma (l'eliminazione per sbaglio è ciò che gli utenti delle app di contabilità detestano di più);
+- Eliminazione: .onDelete di List cancella con uno scorrimento a sinistra + finestra di conferma, (l'eliminazione per sbaglio è ciò che gli utenti delle app di contabilità detestano di più);
 - Modifica: toccando la riga si apre la finestra di modifica con i valori originali già compilati (correggere una parola è più comodo che ridigitare tutto);
 - Riepilogo: calcola "entrate / uscite / saldo del mese" con filter + reduce e mostrali in una card in alto:
 
@@ -204,8 +204,8 @@ A progetto finito, collaudalo su tre livelli "funzioni → casi limite → archi
 
 Superato il collaudo della versione base, aggiungiti due "portate avanzate":
 
-1. Statistiche per categoria: aggiungi una scheda "Statistiche" e disegna le uscite per categoria come grafico a torta/a barre con Swift Charts — la libreria grafica ufficiale di Apple fa grafici con poche righe di codice;
-2. Sincronizzazione iCloud: attivare la sincronizzazione iCloud in SwiftData richiede solo qualche impostazione — il registro si sincronizza da solo tra iPhone e iPad e all'improvviso sembra "professionale".
+1. Statistiche per categoria: aggiungi una scheda "Statistiche" e disegna le uscite per categoria come grafico a torta/a barre con Swift Charts. La libreria grafica ufficiale di Apple fa grafici con poche righe di codice;
+2. Sincronizzazione iCloud: attivare la sincronizzazione iCloud in SwiftData richiede solo qualche impostazione: il registro si sincronizza da solo tra iPhone e iPad e all'improvviso sembra "professionale".
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 54: Proyek 1—Aplikasi Catatan Keuangan Saya (Versi Lokal)
 
 {class="chapter-intro mb-4"}
-Selamat datang di 'proyek serius' pertamamu. Aplikasi catatan keuangan ini walau tidak terhubung internet, isinya lengkap: bisa mencatat pemasukan-pengeluaran, melihat riwayat, statistik per bulan, menghapus dan mengubah. Selesai mengerjakannya, kamu sudah menjalani alur lengkap 'data → logika → antarmuka'. Jangan buru-buru menyalin kode—pikirkan dulu baru bekerja, itu prinsip kita selama ini.
+Selamat datang di 'proyek serius' pertamamu. Aplikasi catatan keuangan ini walau tidak terhubung internet, isinya lengkap: bisa mencatat pemasukan-pengeluaran, melihat riwayat, statistik per bulan, menghapus dan mengubah. Selesai mengerjakannya, kamu sudah menjalani alur lengkap 'data → logika → antarmuka'. Jangan buru-buru menyalin kode,pikirkan dulu baru bekerja, itu prinsip kita selama ini.
 
 #### 1. Memikirkan Kebutuhan: Tanya Lima Pertanyaan Dulu
 
@@ -25,11 +25,16 @@ Sebelum mulai bekerja, gunakan 'lima unsur kebutuhan' untuk merapikan idemu:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Lima unsur kebutuhan aplikasi catatan keuangan
 
-Lalu pecah menjadi langkah-langkah kecil yang 'setiap langkahnya bisa dipakai': ① bangun lapisan data Room (bisa menyimpan satu catatan); ② halaman daftar (bisa melihat riwayat); ③ halaman input (bisa menambah catatan); ④ hapus dan ubah; ⑤ kartu rekap bulanan. Setiap langkah selesai, aplikasinya selalu 'sesuatu yang bisa dipakai'.
+Lalu pecah menjadi langkah-langkah kecil yang 'setiap langkahnya bisa dipakai':
+1. bangun lapisan data Room (bisa menyimpan satu catatan);
+2. halaman daftar (bisa melihat riwayat);
+3. halaman input (bisa menambah catatan);
+4. hapus dan ubah;
+5. kartu rekap bulanan. Setiap langkah selesai, aplikasinya selalu 'sesuatu yang bisa dipakai'.
 
 #### 2. Lapisan Data: Memberi 'Catatan Keuangan' Sebuah Rumah
 
-Pertama definisikan seperti apa bentuk satu catatan—kolomnya cukup untuk kebutuhan tapi jangan serakah:
+Pertama definisikan seperti apa bentuk satu catatan,kolomnya cukup untuk kebutuhan tapi jangan serakah:
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +54,7 @@ data class Record(
 ```
 :::
 
-Di Dao tambahkan dua kueri 'untuk statistik'—inilah jiwa aplikasi catatan keuangan:
+Di Dao tambahkan dua kueri 'untuk statistik',inilah jiwa aplikasi catatan keuangan:
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,7 +87,7 @@ interface RecordDao {
 Tips: Kenapa Nominalnya Pakai Double?
 
 {class="mt-1"}
-Aplikasi finansial yang serius akan memakai BigDecimal atau 'Int dengan satuan sen' untuk menghindari galat floating point (masalah lama 0.1+0.2≠0.3). Untuk proyek latihan, Double sudah cukup; kalau suatu hari membuat produk finansial sungguhan, ingat ganti dengan satuan 'sen'—jebakan yang sudah banyak dilewati para pendahulu.
+Aplikasi finansial yang serius akan memakai BigDecimal atau 'Int dengan satuan sen' untuk menghindari galat floating point (masalah lama 0.1+0.2≠0.3). Untuk proyek latihan, Double sudah cukup; kalau suatu hari membuat produk finansial sungguhan, ingat ganti dengan satuan 'sen',jebakan yang sudah banyak dilewati para pendahulu.
 :::
 
 #### 3. MVVM: Antarmuka dan Logika 'Pisah Rumah'
@@ -95,7 +100,7 @@ Biar antarmuka langsung mengoperasikan database? Bisa jalan, tapi kode antarmuka
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Gambar 5: Struktur tiga lapis MVVM—data mengalir satu arah, tiap lapis tidak melintasi batas
+Gambar 5: Struktur tiga lapis MVVM,data mengalir satu arah, tiap lapis tidak melintasi batas
 :::
 
 ::: div .code-block
@@ -125,11 +130,11 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 :::
 
-Di antarmuka (Compose) dipakai begini: val vm: RecordViewModel = viewModel(), lalu val list by vm.records.collectAsState()—begitu data berubah, daftar otomatis menyegarkan, kamu tidak perlu berbuat apa-apa. Inilah kekuatan gabungan MVVM + Flow + Compose.
+Di antarmuka (Compose) dipakai begini: val vm: RecordViewModel = viewModel(), lalu val list by vm.records.collectAsState(),begitu data berubah, daftar otomatis menyegarkan, kamu tidak perlu berbuat apa-apa. Inilah kekuatan gabungan MVVM + Flow + Compose.
 
 #### 4. Antarmuka: Halaman Daftar + Halaman Input
 
-Halaman daftar memakai LazyColumn (daftar lazy-loading)—datanya sebanyak apa pun tidak akan patah-patah:
+Halaman daftar memakai LazyColumn (daftar lazy-loading),datanya sebanyak apa pun tidak akan patah-patah:
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,23 +208,23 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-Dua pengalaman soal detail interaksi: hapus wajib konfirmasi dua kali (mencegah jari selip), ubah sebisa mungkin sudah terisi nilai lama (mengubah satu kata lebih hemat daripada mengetik ulang). Jangan remehkan dua detail ini—rasa 'produk' memang ditumpuk dari detail-detail begini.
+Dua pengalaman soal detail interaksi: hapus wajib konfirmasi dua kali (mencegah jari selip), ubah sebisa mungkin sudah terisi nilai lama (mengubah satu kata lebih hemat daripada mengetik ulang). Jangan remehkan dua detail ini:rasa 'produk' memang ditumpuk dari detail-detail begini.
 
-#### 6. Serah Terima: Pemeriksaan Tiga Lapis + Dua Tantangan Lanjutan
+6. Serah Terima: Pemeriksaan Tiga Lapis + Dua Tantangan Lanjutan
 
 Setelah proyek selesai, lakukan serah terima tiga lapis 'fungsi → batas → arsitektur': bisa mencatat tidak, bisa menghapus tidak, data masih ada tidak setelah aplikasi dibuka ulang (fungsi); apakah crash saat nominal diisi 0 atau negatif, apakah data hilang saat layar diputar (batas); apakah antarmuka dan data tercampur, apakah ada kolom yang ditulis mati (arsitektur).
 
 Setelah versi dasar lolos serah terima, beri dirimu dua 'hidangan lanjutan':
 
 1. Filter bulanan: tambahkan sakelar bulan di bagian atas (misalnya 2026-08 ▾), daftar hanya menampilkan riwayat bulan itu;
-2. Diagram lingkaran kategori: pakai Canvas milik Compose atau pustaka grafik ringan, gambar 'uang habis ke mana' sebagai diagram lingkaran—setelah jadi ini, aplikasi catatan keuanganmu mulai terasa seperti 'produk'.
+2. Diagram lingkaran kategori: pakai Canvas milik Compose atau pustaka grafik ringan, gambar 'uang habis ke mana' sebagai diagram lingkaran:setelah jadi ini, aplikasi catatan keuanganmu mulai terasa seperti 'produk'.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Praktik: Selesaikan Minggu Ini
 
 {class="mt-1"}
-Bekerja dengan urutan 'lapisan data → ViewModel → halaman daftar → halaman input → kartu rekap', satu langkah per hari. Kalau macet, lempar errornya apa adanya ke mesin pencari atau AI (masih ingat Bagian 7 'Praktik Pemrograman AI'? Saat menjelaskan masalah, sebutkan dengan jelas 'perilaku yang diharapkan, perilaku nyata, langkah reproduksi'). Setelah selesai, pakai untuk mencatat keuangan selama seminggu—memakai aplikasi buatan sendiri, rasa bangganya akan mendorongmu terus melangkah.
+Bekerja dengan urutan 'lapisan data → ViewModel → halaman daftar → halaman input → kartu rekap', satu langkah per hari. Kalau macet. lempar errornya apa adanya ke mesin pencari atau AI (masih ingat Bagian 7 'Praktik Pemrograman AI'? Saat menjelaskan masalah, sebutkan dengan jelas 'perilaku yang diharapkan, perilaku nyata, langkah reproduksi'). Setelah selesai, pakai untuk mencatat keuangan selama seminggu,memakai aplikasi buatan sendiri, rasa bangganya akan mendorongmu terus melangkah.
 :::
 
 ::: div .chapter-summary

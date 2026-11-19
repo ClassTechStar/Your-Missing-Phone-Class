@@ -10,7 +10,7 @@ class: mb-12
 ## 제8편 〈안드로이드 개발 실전편〉(48~58장)
 
 {class="chapter-intro mb-4"}
-제7편에서 AI에게 코드를 시켜 짜는 법을 배웠다면, 이번 편에서는 그 실력을 안드로이드에 쏟아 부어요: 안드로이드 알아보기, Android Studio 설치부터 Kotlin, Jetpack Compose, 그리고 완성 프로젝트 두 개와 Google Play 출시까지요. 과정 내내 Mac은 필요 없어요——Windows만으로 충분해요. 11개 장을 마치면 3억 명의 휴대전화에 들어갈 진짜 앱을 만들 수 있어요.
+제7편에서 AI에게 코드를 시켜 짜는 법을 배웠다면, 이번 편에서는 그 실력을 안드로이드에 쏟아 부어요: 안드로이드 알아보기, Android Studio 설치부터 Kotlin, Jetpack Compose, 그리고 완성 프로젝트 두 개와 Google Play 출시까지요. 과정 내내 Mac은 필요 없어요:,Windows만으로 충분해요. 11개 장을 마치면 3억 명의 휴대전화에 들어갈 진짜 앱을 만들 수 있어요.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}

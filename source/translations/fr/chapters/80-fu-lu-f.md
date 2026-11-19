@@ -10,7 +10,7 @@ after_part: fu-lu
 ### Annexe F : Guide d'achat et d'utilisation des smartphones à écran pliable
 
 {class="chapter-intro mb-4"}
-L'écran pliable est passé de la « technologie du futur » à une catégorie mature « qu'on peut acheter maintenant ». Mais il diffère beaucoup des smartphones à barre en termes de format, d'habitudes d'utilisation et d'entretien. Vaut-il le coup, comment choisir, comment utiliser — ce guide vous aide à y voir clair.
+L'écran pliable est passé de la « technologie du futur » à une catégorie mature « qu'on peut acheter maintenant ». Mais il diffère beaucoup des smartphones à barre en termes de format, d'habitudes d'utilisation et d'entretien. Vaut-il le coup, comment choisir, comment utiliser, ce guide vous aide à y voir clair.
 
 #### I. Où en est l'écran pliable aujourd'hui ?
 
@@ -37,7 +37,7 @@ Selon les retours d'utilisateurs réels, ces catégories ont une forte probabili
 
 1. <strong>Lecteurs intensifs / traiteurs de documents</strong>:Lisez souvent des PDF, annotez des documents, lisez de longs articles sur le smartphone. L’écran interne de près de 7,5 pouces une fois déplié permet de lire des PDF A4 sans zoom, une expérience transformée.
 2. <strong>Utilisateurs professionnels souvent en déplacement/en réunion</strong>:Ne voulez pas emporter une tablette mais trouvez l’écran du smartphone trop petit. Le pliable horizontal déplié permet de voir des PPT, signer des contrats, comparer des e-mails sur deux écrans, bien plus efficace qu’un smartphone à barre.
-3. <strong>Créatifs aimant le mode semi-plié</strong>:Pliez à 90° sur la table : moitié supérieure pour le cadrage, moitié inférieure pour le déclencheur (selfie/vidéo en accéléré) ; moitié supérieure pour la vidéo, moitié inférieure pour les notes ; moitié supérieure pour le live, moitié inférieure pour les commentaires — une ergonomie impossible sur un smartphone à barre.
+3. <strong>Créatifs aimant le mode semi-plié</strong>:Pliez à 90° sur la table : moitié supérieure pour le cadrage, moitié inférieure pour le déclencheur (selfie/vidéo en accéléré) ; moitié supérieure pour la vidéo, moitié inférieure pour les notes ; moitié supérieure pour le live, moitié inférieure pour les commentaires, une ergonomie impossible sur un smartphone à barre.
 4. <strong>Utilisatrices recherchant portabilité et grand écran</strong>:Le pliable vertical fermé se glisse dans un petit sac, déplié c’est un smartphone normal, l’écran externe sert aussi de miroir et affiche les notifications.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -45,9 +45,9 @@ Selon les retours d'utilisateurs réels, ces catégories ont une forte probabili
 <i class="fas fa-triangle-exclamation mr-2"></i>Ces catégories ne doivent pas acheter
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Si vous n'utilisez le smartphone que pour les courtes vidéos, WeChat et les appels — l'écran pliable n'apporte rien, au contraire il est plus lourd et plus épais.
-- Mains petites ou tendinite au poignet — l'écran pliable horizontal déplié pèse généralement 230g+, la prise en main à une main est fatigante.
-- Budget serré, un smartphone pour 4 ans ou plus — la valeur de revente des pliables décroît plus vite que les smartphones à barre, et les coûts de réparation sont élevés.
+- Si vous n'utilisez le smartphone que pour les courtes vidéos, WeChat et les appels, l'écran pliable n'apporte rien, au contraire il est plus lourd et plus épais.
+- Mains petites ou tendinite au poignet, l'écran pliable horizontal déplié pèse généralement 230g+, la prise en main à une main est fatigante.
+- Budget serré, un smartphone pour 4 ans ou plus, la valeur de revente des pliables décroît plus vite que les smartphones à barre, et les coûts de réparation sont élevés.
 :::
 
 #### III. Critères d'achat : regardez ces 6 indicateurs
@@ -99,7 +99,7 @@ Le pliable vertical fermé, l'écran externe permet : voir l'heure/notifications
 
 Certains pliables horizontaux (Huawei, Samsung) peuvent basculer en « mode ordinateur » une fois dépliés, avec un écran externe et un clavier/souris, ça fonctionne comme un PC simplifié, suffisant pour traiter temporairement des documents ou répondre aux e-mails. Pas un outil de productivité principal, mais bien pratique en dépannage.
 
-#### V. Conseils d'entretien : faire durer l'écran pliable plus longtemps
+V. Conseils d'entretien : faire durer l'écran pliable plus longtemps
 
 Ce qui est le plus fragile sur un pliable, c'est l'écran interne et la charnière, ces habitudes peuvent significativement prolonger leur durée de vie :
 
@@ -115,10 +115,10 @@ Ce qui est le plus fragile sur un pliable, c'est l'écran interne et la charniè
 <i class="fas fa-skull-crossbones mr-2"></i>Scénarios fréquents d'endommagement de l'écran interne
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Câble d'écouteurs/de charge coincé en fermant — fissure directe de l'écran interne.
+- Câble d'écouteurs/de charge coincé en fermant, fissure directe de l'écran interne.
 - Mélangé avec des clés dans le sac — l'écran externe va bien, l'écran interne se fissure sous la pression des clés.
-- Ouverture/fermeture immédiate en passant du froid au chaud — le différentiel thermique provoque des contraintes dans le verre.
-- Au bout d'un an, on trouve que « le pli s'est creusé » et on décolle le film d'origine — le décollage peut endommager l'écran interne avec.
+- Ouverture/fermeture immédiate en passant du froid au chaud, le différentiel thermique provoque des contraintes dans le verre.
+- Au bout d'un an, on trouve que « le pli s'est creusé » et on décolle le film d'origine: le décollage peut endommager l'écran interne avec.
 :::
 
 #### VI. Les « pièges » de l'écran pliable et attentes réalistes
@@ -137,7 +137,7 @@ Avant d'acheter, ayez ces comptes en tête :
 <i class="fas fa-quote-left mr-2" aria-hidden="true"></i>L'écran pliable n'est pas un « meilleur smartphone », mais un « smartphone d'une autre forme ». On l'achète parce qu'on a besoin de sa forme unique, pas parce qu'il est « plus avancé ».
 
 {class="text-right text-sm"}
-—— De la philosophie d'achat des écrans pliables
+—: De la philosophie d'achat des écrans pliables
 :::
 
 #### VII. Comment choisir parmi les grandes marques (2026)

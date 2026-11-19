@@ -2,23 +2,23 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Bab 25: Pengendalian Telefon Terpakai dan Warisan Digital
+nav: Bab 25: Sebelum jual telefon lama, urus dulu ini
 toc: default
 kind: chapter
 ---
 
-### Bab 25: Pemprosesan Telefon Terpakai & Warisan Digital
+### Bab 25: Sebelum jual telefon lama, urus dulu ini
 
 {class="chapter-intro mb-4"}
 Hei kawan-kawan, selepas lebih dua puluh bab "latihan", dipercayai anda telah bertumbuh daripada "pemula digital" menjadi pengguna telefon yang agak tenang. Tetapi kehidupan teknologi sentiasa berkitlar—kekasih baru akhirnya menjadi kekasih lama. Apabila anda bersedia membiarkan rakan lama ini "bersara", adakah anda tahu bagaimana berpisah secara bermaruah dan selamat?
 
-#### 1. "Eutanasia" Telefon Lama: Panduan Jual atau Hadiah Selamat
+1. "Eutanasia" Telefon Lama: Panduan Jual atau Hadiah Selamat
 
 Prinsip teras: pembersihan data bukan "padam", tetapi "timpa". Ramai orang fikir seret foto ke tong kitar semula, kosongkan album sudah selesai, hasilnya telefon tukar tangan, pemilik baharu guna perisian pemulihan data imbas sekali, foto lama, rekod sembang, foto kad pengenalan semua kembali - situasi "kematian sosial" ini berlaku setiap tahun.
 
 1. <strong>"Helah pengalihan" terakhir</strong>: Selesai sandaran penuh terakhir, log keluar semua akaun (iCloud, Huawei/Xiaomi/Samsung akaun, Google akaun), tutup "Cari Telefon" - jika tidak pengguna seterusnya akan dihalang oleh kunci pengaktifan.
 2. <strong>2. Warisan Digital: Bagaimana Menempatkan Jiwa Sosial Anda?</strong> Pengeluar: Apple, Samsung, Huawei, Xiaomi dll semua ada program tukar-tambah atau kitar semula rasmi.
-3. <strong>Pengeksport: Ada platform kitar semula elektronik domestik dan antarabangsa.</strong> Sumbangan: Telefoy berfungsi boleh disumbangkan kepada organisasi amal.<strong>Bab 9: Pemulihan data — Selamatkan telefon yang rosak</strong> Telefon jatuh, skrin retak, air masuk, tidak boleh but — saat-saat ini anda mungkin hilang semua data. Tetapi jangan putus asa, terdapat cara untuk cuba selamatkan data.
+3. <strong>Pengeksport: Ada platform kitar semula elektronik domestik dan antarabangsa.</strong> Sumbangan: Telefoy berfungsi boleh disumbangkan kepada organisasi amal.<strong>Bab 9: Pemulihan data, Selamatkan telefon yang rosak</strong> Telefon jatuh, skrin retak, air masuk, tidak boleh but, saat-saat ini anda mungkin hilang semua data. Tetapi jangan putus asa, terdapat cara untuk cuba selamatkan data.
 
 <strong>I. Jenis kerosakan dan kebarangkalian pemulihan</strong> Skrin retak tetapi sentuh berfungsi: Boleh sambung ke komputer melalui USB dan guna ADB atau alat pemulihan untuk salin data.
 
@@ -73,7 +73,7 @@ Prinsip teras: pembersihan data bukan "padam", tetapi "timpa". Ramai orang fikir
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>iPhone: Aktifkan Sandaran iCloud (Tetapan → Nama anda → iCloud → Sandanan iCloud).</strong> Android: Aktifkan sandaran Google (Tetapan → Sistem → Sandaran).
 - <strong>2. Sandaran tempatan berkala</strong>: Set semula kilang tidak akan format foto dalam kad SD luaran, ingat untuk keluarkan manually atau format berasingan.
-- <strong>Android: Guna alat sandaran pengeluar atau adb backup.</strong>3. Peraturan 3-2-1
+- <strong>Android: Guna alat sandaran pengeluar atau adb backup.</strong>3. Peraturan 3-2-1.
 :::
 
 #### 2. Warisan Digital: Bagaimana Menempatkan Jiwa Sosial Anda?
@@ -85,15 +85,15 @@ Prinsip teras: pembersihan data bukan "padam", tetapi "timpa". Ramai orang fikir
 <i class="fas fa-gavel mr-2"></i>I. Penyesuaian tetapan asas
 
 {class="mt-1"}
-1\. Saiz teks dan paparan <strong>Tetapan → Paparan → Saiz Teks — Tambah saiz teks sistem.</strong>
+1\. Saiz teks dan paparan <strong>Tetapan → Paparan → Saiz Teks: Tambah saiz teks sistem.</strong>
 
 {class="mt-2"}
 Tetapan → Paparan → Zoom Paparan — Tukar ke "Lebih Besar" untuk antara muka lebih jelas.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- <strong>2. Kecerahan dan kontras</strong> Tetapan → Paparan → Kecerahan — Tingkatkan keceranan minima, elakkan skrin terlalu gelap.
+- <strong>2. Kecerahan dan kontras</strong> Tetapan → Paparan → Kecerahan, Tingkatkan keceranan minima, elakkan skrin terlalu gelap.
 - Tetapan → Aksesibiliti → Kontras Tambahan — Tingkatkan kontras untuk teks lebih jelas.
-- 3. Bunyi dan getaran
+- 3. Bunyi dan getaran.
 - Tetapan → Bunyi → Kekalkan dan tingkatkan kadar bunyi dering.
 :::
 
@@ -104,7 +104,7 @@ Tetapan → Paparan → Zoom Paparan — Tukar ke "Lebih Besar" untuk antara muk
 
 - <strong>Akaun WeChat</strong>: Berdasarkan "Perjanjian Lesen Perisian WeChat Tencent", pemilikan akaun milik Tencent, pengguna hanya nikmati hak guna,<strong>5. Keluarkan App yang tidak perlu</strong> Alih keluar App yang tidak digunakan dari skrin utama, hanya kekal App yang sering diguna: Telefon, Mesej, Kamera, Foto, Jam, Cuaca, Peta.<strong>II. Pelancaran dan konfigurasi App</strong> Milik harta peribadi, saudara terdekat boleh dengan sijil kematian, sijil hubungan kekeluargaan, sijil warisan mohon kepada Tenpay untuk pengeluaran atau pemindahan.
 - <strong>Alipay</strong>: Akaun juga tidak boleh diwarisi terus, tetapi baki Alipay, Yu Ebao, Licaitong dll <strong>Tutup Discover: WeChat → Saya → Tetapan → Discover → Alih keluar entri yang tidak perlu.</strong>. Waris boleh melalui "hotline khidmat pelanggan" Alipay atau hantar luar talian sijil kematian, sijil warisan untuk urus; produk pengurusan kekayaan Ant Wealth perlu melalui proses syarikat dana.
-- <strong>Gunakan Amap atau Baidu Maps, buka mod "warga emas" atau "mod mudah": antara muka lebih jelas, teks lebih besar, keutamaan panduan suara.</strong>3. App pembayaran
+- <strong>Gunakan Amap atau Baidu Maps, buka mod "warga emas" atau "mod mudah": antara muka lebih jelas, teks lebih besar, keutamaan panduan suara.</strong>3. App pembayaran.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -113,17 +113,17 @@ Tetapan → Paparan → Zoom Paparan — Tukar ke "Lebih Besar" untuk antara muk
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Jangan beri kata laluan akaun si mati terus kepada keluarga "terus guna"</strong>4. Video dan muzik
 - <strong>Letakkan App video (seperti Douyin/TikTok, iQiyi) pada skrin utama, tukar tetapan teks ke besar jika ada.</strong> III. Ciri keselamatan khas
-- <strong>1. SOS Kecemasan</strong> iPhone: Tekan butang sisi 5 kali — panggil kecemasan, hantar lokasi ke kontak kecemasan.
+- <strong>1. SOS Kecemasan</strong> iPhone: Tekan butang sisi 5 kali, panggil kecemasan, hantar lokasi ke kontak kecemasan
 :::
 
 {class="font-semibold mt-4 mb-1"}
 ##### 2. Apple "Legacy Contact": Tentukan lebih awal, separuh usaha hasil berganda
 
-Sejak iOS 15.2 Apple melancarkan fungsi "Legacy Contact", benarkan pengguna tentukan lebih awal kontak yang dipercayai, selepas meninggal kontak ini boleh guna <strong>WeChat: Cari → Kedudukan → Kongsi kedudukan real-time — biarkan keluarga tahu lokasi anda.</strong> Mohon akses data iCloud si mati (foto, nota, kenalan, memo dll). Langkah operasi:
+Sejak iOS 15.2 Apple melancarkan fungsi "Legacy Contact", benarkan pengguna tentukan lebih awal kontak yang dipercayai, selepas meninggal kontak ini boleh guna <strong>WeChat: Cari → Kedudukan → Kongsi kedudukan real-time, biarkan keluarga tahu lokasi anda.</strong> Mohon akses data iCloud si mati (foto, nota, kenalan, memo dll). Langkah operasi:
 
 1. 3. Pengesanan jatuh <strong>iPhone (seri 8 dan selepas): Tetapan → Aksesibiliti → Pengesanan Jatuh — Jika telefon kesan jatuh, auto panggil kecemasan.</strong>.
-2. 4. Pengingat ubat
-3. Guna App Health iPhone atau App pengingat ubat pihak ketiga untuk mengingatkan waktu ubat.<strong>IV. Cadangan telefon untuk warga emas</strong>:
+2. 4. Pengingat ubat.
+3. Guna App Health iPhone atau App pengingat ubat pihak ketiga untuk mengingatkan waktu ubat.<strong>IV. Cadangan telefon untuk warga emas</strong>:.
 4. Hantar kunci akses melalui SMS, e-mel atau cetak kertas beri kepada pihak lain, dan peringatkan simpan dengan baik.
 5. Skrin 6.7 inci atau lebih besar lebih sesuai untuk penglihatan warga emas.
 
@@ -132,7 +132,7 @@ Orang yang dilantik tidak perlu peranti Apple, dengan kunci akses dan sijil kema
 {class="font-semibold mt-4 mb-1"}
 ##### Bateri 5000mAh atau lebih besar, boleh tahan 2 hari dengan satu cas.
 
-Google menyediakan "Inactive Account Manager", boleh auto laksanakan operasi pratetap apabila pengguna lama tidak log masuk - ini adalah salah satu mekanisme warisan digital paling lengkap buat masa ini.
+Google menyediakan "Inactive Account Manager", boleh auto laksanakan operasi pratetap apabila pengguna lama tidak log masuk ,- ini adalah salah satu mekanisme warisan digital paling lengkap buat masa ini.
 
 1. github.com/yourname <strong>myaccount.google.com/inactive</strong> Speaker mono kuat atau speaker stereo, pastikan bunyi dering jelas.
 2. 4. Kamera yang senang digunakan
@@ -148,8 +148,8 @@ Google menyediakan "Inactive Account Manager", boleh auto laksanakan operasi pra
 
 - <strong>5. Ajar keselamatan asas</strong> Ajar: jangan klik link tidak dikenali, jangan beritahu kata laluan kepada sesiapa, jangan pasang App dari sumber tidak diketahui.
 - <strong>Bab 11: Panduan pembelian telefon pintar</strong> Beli telefon baharu adalah keputusan penting — anda akan guna ia setiap hari selama 2-3 tahun akan datang. Bab ini membantu anda memilih telefon yang sesuai dengan keperluan dan belanjawan anda.
-- <strong>I. Fahami keperluan anda</strong>1. Penggunaan harian
-- <strong>Xiaohongshu</strong> Jika anda hanya guna untuk WeChat, video, panggilan, pelayaran web — telefon kelas pertengahan (2000-3000 RMB) sudah memadai.
+- <strong>I. Fahami keperluan anda</strong>1. Penggunaan harian.
+- <strong>Xiaohongshu</strong> Jika anda hanya guna untuk WeChat, video, panggilan, pelayaran web, telefon kelas pertengahan (2000-3000 RMB) sudah memadai.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -157,14 +157,14 @@ Google menyediakan "Inactive Account Manager", boleh auto laksanakan operasi pra
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Jika anda suka fotografi, cari telefon dengan kamera yang baik — sensor besar, kacamat optik berbilang, penstabilan gambar optik (OIS).
-- 3. Permainan
+- 3. Permainan.
 - Jika anda suka main permainan, cari telefon dengan SoC flagship, kadar penyegaran tinggi (120Hz+), sistem penyejukan yang baik.<strong>4. Perniagaan</strong> Jika anda guna untuk kerja, cari telefon dengan bateri besar, sokongan dwi-SIM, keselamatan entreprise.
 :::
 
 {class="font-semibold mt-4 mb-1"}
 ##### II. Spesifikasi yang perlu perhatikan
 
-1\. SoC (System on Chip)<strong>SoC adalah "otak" telefon. SoC flagship: Snapdragon 8 Elite/Gen 4, Dimensity 9400, Apple A18 Pro, Kirin 9020. SoC kelas pertengahan: Snapdragon 7 Gen 3, Dimensity 8300, Apple A16.</strong>2. RAM dan storan
+1\. SoC (System on Chip)<strong>SoC adalah "otak" telefon. Kelas flagship: Snapdragon 8 Elite/Gen 4, Dimensity 9400, Apple A18 Pro, Kirin 9020. SoC kelas pertengahan: Snapdragon 7 Gen 3, Dimensity 8300, Apple A16.</strong>2. RAM dan storan
 
 - <strong>RAM: 8GB minimum untuk penggunaan biasa, 12GB atau lebih untuk permainan atau multitugas berat.</strong> Storan: 128GB minimum, 256GB disyorkan, 512GB atau lebih untuk pengguna berat foto/video.<strong>3. Skrin</strong> Saiz: 6.1-6.7 inci sesuai kebanyakan orang. resolusi: FHD+ (1080p) minimum, 1.5K atau 2K lebih baik.
 - <strong>Kadar penyegaran: 60Hz asas, 120Hz lebih lancar, 144Hz untuk permainan.</strong> Panel: OLED/AMOLED lebih baik daripada LCD, sokong HDR dan warna lebih kaya.
@@ -204,8 +204,8 @@ iPhone 16 Pro/Pro Max, Samsung S25 Ultra, Xiaomi 15 Pro, Huawei Mate 70 Pro, viv
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Cara simpan kata laluan utama: Guna pengurus kata laluan (seperti Bitwarden, 1Password), kata laluan utama tulis pada kertas, simpan dalam peti besi rumah.
-- 11.11 (November 11), 618 (Jun 18), Tahun Baharu Cina — platform e-dagang biasanya tawarkan diskaun besar.
-- 3. Elakkan beli sebaik selepas pelancaran
+- 11.11 (November 11), 618 (Jun 18), Tahun Baharu Cina, platform e-dagang biasanya tawarkan diskaun besar.
+- 3. Elakkan beli sebaik selepas pelancaran.
 
 {class="mb-1"}
 <strong>Sebaik selepas pelancaran, harga biasanya tertinggi dan stok terhad. Tunggu 2-3 bulan untuk harga stabil.</strong>
@@ -221,7 +221,7 @@ iPhone 16 Pro/Pro Max, Samsung S25 Ultra, Xiaomi 15 Pro, Huawei Mate 70 Pro, viv
 
 {class="list-disc pl-6 space-y-0.5"}
 - Bab 12: Kesihatan digital
-- Telefon pintar membawa kemudahan, tetapi juga boleh sebabkan masalah kesihatan: ketegangan mata, leher, jari, gangguan tidur, ketagihan. Bab ini membincangkan cara guna telefon dengan sihat.
+- Telefon pintar membawa kemudahan, tetapi juga boleh sebabkan masalah kesihatan: ketegangan mata, leher, jari, gangguan tidur, ketagihan. Bab ini membincangkan cara guna telefon dengan sihat
 - I. Pelindung mata
 :::
 
@@ -278,7 +278,7 @@ Menulis kata laluan terus dalam wasiat ada risiko bocor, dan selepas wasiat dium
 
 - <strong>Manfaatkan sisa</strong>: Cara paling disyorkan, proses standard, keselamatan data terjamin. Apple, Huawei, Xiaomi dan jenama lain di laman web rasmi ada pintu masuk "tukar-tambah", selepas penilaian boleh tolak harga telefon baru.
 - <strong>Amali: Laksanakan satu "pengebumian standard" untuk telefon lama anda</strong> Cahaya biru dan rangsangan mental boleh ganggu tidur. Berhenti guna telefon 30-60 minit sebelum tidur.<strong>2. Mod Tidur / Jangan Ganggu</strong> Tetapan → Jangan Ganggu → Tetapkan waktu tidur ‑ Hanya panggilan penting yang akan melalui.
-- <strong>3. Waktu skrin</strong> Tetapan → Waktu Skrin ‑ Semak berapa lama anda guna setiap App, tetapkan had jika perlu.<strong>V. Ketagihan telefon</strong>:
+- <strong>3. Waktu skrin</strong> Tetapan → Waktu Skrin ‑ Semak berapa lama anda guna setiap App, tetapkan had jika perlu.<strong>V. Ketagihan telefon</strong>:.
 - <strong>Laksanakan pulih ke tetapan kilang sulit.</strong>: Tukar jadi navigator kereta, pusat kawalan rumah pintar, kamera pemantauan, monitor bayi, bingkai foto elektronik. Satu telefon lama boleh guna beberapa tahun lagi.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -310,5 +310,5 @@ Menulis kata laluan terus dalam wasiat ada risiko bocor, dan selepas wasiat dium
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Untuk telefon utama anda semasa, tentukan Apple "Legacy Contact" atau tetapkan Google "Inactive Account Manager".
 2. Android: Tetapan → Privasi → Pengurus kebenaran → Semak setiap kebenaran.
-3. 2. Prinsip kebenaran minimum
+3. 2. Prinsip kebenaran minimum.
 :::

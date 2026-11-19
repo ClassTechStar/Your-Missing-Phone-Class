@@ -14,7 +14,7 @@ Félicitations : en ouvrant ce livre, vous êtes au cœur d'une révolution prof
 
 #### I. Naissance du Vibe Coding : un mouvement né d'une phrase
 
-En février 2025, Andrej Karpathy — retenez ce nom, il reviendra souvent — a publié un tweet devenu célèbre : « Il y a une nouvelle façon de programmer appelée Vibe Coding : on se fie entièrement aux vibes, on ignore les détails du code et on laisse l'IA tout faire. On dit ce qu'on voit, on copie-colle, et tant que ça marche. »
+En février 2025, Andrej Karpathy, retenez ce nom, il reviendra souvent — a publié un tweet devenu célèbre : « Il y a une nouvelle façon de programmer appelée Vibe Coding : on se fie entièrement aux vibes, on ignore les détails du code et on laisse l'IA tout faire. On dit ce qu'on voit, on copie-colle, et tant que ça marche. »
 
 Cette remarque en apparence anodine a nommé avec précision un glissement de paradigme déjà en cours : l'humain n'écrit plus le code ligne par ligne, mais décrit son intention en langage naturel ; l'IA réalise l'implémentation. Le ton de Karpathy était badin, mais l'intuition est profonde : quand la génération de code par l'IA franchit un certain seuil, le goulot d'étranglement n'est plus « puis-je écrire cette ligne ? », mais « sais-je clairement ce que je veux ? ».
 
@@ -23,16 +23,16 @@ Cette remarque en apparence anodine a nommé avec précision un glissement de pa
 Astuce : que signifie « vibe » ?
 
 {class="mt-1"}
-Vibe signifie littéralement « ambiance, feeling ». Le Vibe Coding, c'est « programmer en dirigeant l'IA au feeling » — vous décrivez ce que vous voulez, l'IA réalise. Retenez ce mot : c'est l'acte de naissance de la révolution.
+Vibe signifie littéralement « ambiance, feeling ». Le Vibe Coding, c'est « programmer en dirigeant l'IA au feeling », vous décrivez ce que vous voulez, l'IA réalise. Retenez ce mot : c'est l'acte de naissance de la révolution.
 :::
 
 Depuis, le mot « coder » s'est scindé : coder autrefois, c'était traduire un design en syntaxe ; coder aujourd'hui, c'est traduire une intention en instructions. Le premier épreuve les doigts, le second le cerveau.
 
-Le Vibe Coding est vite passé de la plaisanterie au concept d'ingénierie sérieux. À la mi-2026, il est devenu une méthodologie complète — expression des besoins, gestion du contexte, validation itérative, assurance qualité. On a aussi compris que « se fier au feeling » n'est que le stade débutant ; une programmation IA efficace exige une pensée systématique. C'est précisément ce que ce livre vous apporte.
+Le Vibe Coding est vite passé de la plaisanterie au concept d'ingénierie sérieux. À la mi-2026, il est devenu une méthodologie complète, expression des besoins, gestion du contexte, validation itérative, assurance qualité. On a aussi compris que « se fier au feeling » n'est que le stade débutant ; une programmation IA efficace exige une pensée systématique. C'est précisément ce que ce livre vous apporte.
 
 #### II. État des lieux en 2026 : l'ère de l'Agentic Engineering
 
-En août 2026, le domaine de la programmation IA a connu plusieurs itérations de paradigme. Le Vibe Coding fut l'étincelle initiale, mais on a vite vu que se fier au feeling pour discuter avec l'IA donnait un code très irrégulier — parfois éblouissant, parfois catastrophique. Le paradigme a alors évolué : de la simple conversation à l'ingénierie d'agents structurés.
+En août 2026, le domaine de la programmation IA a connu plusieurs itérations de paradigme. Le Vibe Coding fut l'étincelle initiale, mais on a vite vu que se fier au feeling pour discuter avec l'IA donnait un code très irrégulier: parfois éblouissant, parfois catastrophique. Le paradigme a alors évolué : de la simple conversation à l'ingénierie d'agents structurés.
 
 Encore Karpathy, début 2026 : il a proposé l'Agentic Engineering. Contrairement au Vibe Coding (« on dit, ça génère »), l'Agentic Engineering impose : donner un objectif à l'IA pour qu'elle planifie ses étapes, appelle des outils, vérifie les résultats et itère. L'IA n'est plus un simple générateur de code, mais un agent qui perçoit son environnement, décide et agit.
 
@@ -89,7 +89,7 @@ La formation traditionnelle fait de vous un Coder : comprendre la syntaxe, mémo
 
 Le cœur du changement n'est pas « savez-vous coder », mais « savez-vous clairement ce qu'il faut faire ». Un bon chef d'orchestre n'est pas forcément le meilleur soldat, mais il maîtrise l'objectif, le terrain et le déploiement. De même, un bon praticien IA n'a pas besoin de maîtriser chaque syntaxe, mais il doit maîtriser les objectifs du projet, ses contraintes d'architecture et ses standards de qualité.
 
-Ce tableau mérite deux lectures — il résume tout le changement de rôle :
+Ce tableau mérite deux lectures, il résume tout le changement de rôle :
 
 ::: div .overflow-x-auto
 ```html
@@ -100,7 +100,7 @@ Ce tableau mérite deux lectures — il résume tout le changement de rôle :
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Comparaison des dimensions Coder traditionnel vs Conductor IA
 
-Cela ne veut pas dire que le savoir technique est inutile. Bien au contraire : savoir lire le code de l'IA permet de le revoir et de le corriger ; comprendre structures de données et algorithmes permet de juger la pertinence de ses solutions. Le savoir fixe votre « plafond de commandement » — mais son rôle passe de l'outil d'exécution au fondement du jugement.
+Cela ne veut pas dire que le savoir technique est inutile. Bien au contraire : savoir lire le code de l'IA permet de le revoir et de le corriger ; comprendre structures de données et algorithmes permet de juger la pertinence de ses solutions. Le savoir fixe votre « plafond de commandement », mais son rôle passe de l'outil d'exécution au fondement du jugement.
 
 #### IV. Pourquoi la méthodologie prime sur les outils
 
@@ -108,9 +108,9 @@ Cela ne veut pas dire que le savoir technique est inutile. Bien au contraire : s
 Les outils évoluent tous les trois mois, la méthodologie met trois ans à évoluer. Apprendre à manipuler un outil peut devenir obsolète en trois mois ; maîtriser une façon de penser reste valable trois ans plus tard.
 :::
 
-Beaucoup commencent par demander « quel est le meilleur outil ? » ou « quel est le modèle le plus puissant ? ». Ces questions ne sont pas inutiles, mais mal hiérarchisées. Le paysage d'août 2026 n'a plus rien à voir avec celui d'août 2025 — Trae, Qoder montent et descendent, Cursor passe d'extension à IDE indépendant puis à Cursor 3, Claude Code devient le choix dominant en terminal. Mais derrière ces bouleversements, les principes des praticiens qui réussissent n'ont presque pas changé.
+Beaucoup commencent par demander « quel est le meilleur outil ? » ou « quel est le modèle le plus puissant ? ». Ces questions ne sont pas inutiles, mais mal hiérarchisées. Le paysage d'août 2026 n'a plus rien à voir avec celui d'août 2025, Trae, Qoder montent et descendent, Cursor passe d'extension à IDE indépendant puis à Cursor 3, Claude Code devient le choix dominant en terminal. Mais derrière ces bouleversements, les principes des praticiens qui réussissent n'ont presque pas changé.
 
-C'est pourquoi ce livre ne gaspille pas ses pages à détailler un outil — ces contenus seraient périmés une fois écrits. Toute son énergie va à une méthodologie éprouvée : penser les besoins, communiquer avec l'IA, vérifier les livrables, itérer sans cesse. Avec cette méthodologie, vous maîtrisez n'importe quel outil ; en n'apprenant qu'un outil, vous repartez de zéro à chaque changement.
+C'est pourquoi ce livre ne gaspille pas ses pages à détailler un outil, ces contenus seraient périmés une fois écrits. Toute son énergie va à une méthodologie éprouvée : penser les besoins, communiquer avec l'IA, vérifier les livrables, itérer sans cesse. Avec cette méthodologie, vous maîtrisez n'importe quel outil ; en n'apprenant qu'un outil, vous repartez de zéro à chaque changement.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -125,7 +125,7 @@ Si vous débutez, ne vous laissez pas intimider par le mot « méthodologie ». 
 À vous de jouer : prenez une « photo de rôle »
 
 {class="mt-1"}
-Sur une feuille, répondez : ① Comment utilisez-vous aujourd'hui l'IA pour coder (si vous l'avez déjà fait) ? ② Vous ressemblez plutôt au « Coder » ou au « Conductor » du tableau ? ③ Comment aimeriez-vous décrire votre façon de travailler dans trois mois ? Glissez la feuille dans le livre et relisez-la après le chapitre 47 — le changement est plus rapide qu'on ne le croit.
+Sur une feuille, répondez : ① Comment utilisez-vous aujourd'hui l'IA pour coder (si vous l'avez déjà fait) ? ② Vous ressemblez plutôt au « Coder » ou au « Conductor » du tableau ? ③ Comment aimeriez-vous décrire votre façon de travailler dans trois mois ? Glissez la feuille dans le livre et relisez-la après le chapitre 47, le changement est plus rapide qu'on ne le croit.
 :::
 
 ::: div .chapter-summary
@@ -135,6 +135,6 @@ Résumé du chapitre
 - En 2025, Karpathy a nommé « Vibe Coding » la révolution : coder par intention en langage naturel plutôt que ligne par ligne
 - En 2026, l'Agentic Engineering : objectif fixé, délégation, l'IA planifie et exécute, l'humain valide
 - Le mode Agent de Cursor 3 dépasse la complétion Tab ; Claude Code atteint 2,5 milliards de dollars de revenu annualisé
-- Votre nouveau rôle : Conductor — définir le terrain, fixer les règles, répartir les tâches, valider
-- Les outils changent tous les trois mois, la méthodologie tous les trois ans — apprenez la méthodologie, pas la manipulation
+- Votre nouveau rôle : Conductor, définir le terrain, fixer les règles, répartir les tâches, valider
+- Les outils changent tous les trois mois, la méthodologie tous les trois ans, apprenez la méthodologie, pas la manipulation
 :::

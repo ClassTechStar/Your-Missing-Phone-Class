@@ -14,9 +14,9 @@ Tahniah kerana membuat keputusan ini — daripada "pengguna iPhone" kepada "oran
 
 #### 1. Asal usul iOS: sebuah telefon mengubah satu industri
 
-Pada Januari 2007, Steve Jobs mengeluarkan iPhone generasi pertama pada sidang media. Pada masa itu ia bahkan tidak menyokong aplikasi pihak ketiga — sehinggalah 2008, Apple melancarkan App Store dan iPhone SDK, membenarkan pembangun seluruh dunia menulis perisian untuk iPhone. Pada saat itu, "ekonomi aplikasi" dilahirkan: hingga hari ini, terdapat berjuta-juta aplikasi di App Store, dengan bahagian kumulatif kepada pembangun melebihi ratusan bilion dolar AS.
+Pada Januari 2007, Steve Jobs mengeluarkan iPhone generasi pertama pada sidang media. Pada masa itu ia bahkan tidak menyokong aplikasi pihak ketiga — sehinggalah 2008, Apple melancarkan App Store dan iPhone SDK, membenarkan pembangun seluruh dunia menulis perisian untuk iPhone. Waktu itu, "ekonomi aplikasi" dilahirkan: hingga hari ini, terdapat berjuta-juta aplikasi di App Store, dengan bahagian kumulatif kepada pembangun melebihi ratusan bilion dolar AS.
 
-Sistem itu sendiri turut berevolusi: pada asalnya bernama iPhone OS, ditukar nama kepada iOS pada 2010; nombor versi berjalan hingga iOS 17 (2023), kemudian pada 2025, Apple menukar penamaan mengikut tahun — iOS 26 dikeluarkan pada 2025, dan versi semasa pada Ogos 2026 ialah iOS 27. Nama boleh berubah, tetapi satu perkara tidak pernah berubah: tabiat membayar pengguna iOS dan reputasi kualiti perisianya diakui terbaik dalam ekosistem mudah alih — aplikasi yang sama, hasil di iOS sering jauh lebih tinggi daripada di Android.
+Sistem itu sendiri turut berevolusi: pada asalnya bernama iPhone OS, ditukar nama kepada iOS pada 2010; nombor versi berjalan hingga iOS 17 (2023), kemudian pada 2025, Apple menukar penamaan mengikut tahun: iOS 26 dikeluarkan pada 2025, dan versi semasa pada Ogos 2026 ialah iOS 27. Nama boleh berubah, tetapi satu perkara tidak pernah berubah: tabiat membayar pengguna iOS dan reputasi kualiti perisianya diakui terbaik dalam ekosistem mudah alih — aplikasi yang sama, hasil di iOS sering jauh lebih tinggi daripada di Android.
 
 ::: div .overflow-x-auto
 ```html
@@ -27,28 +27,28 @@ Sistem itu sendiri turut berevolusi: pada asalnya bernama iPhone OS, ditukar nam
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Kronologi pembangunan iOS (sehingga Ogos 2026)
 
-#### 2. Taman berdinding: "peraturan" dan "dividen" ekosistem Apple
+2. Taman berdinding: "peraturan" dan "dividen" ekosistem Apple
 
-Ekosistem Apple sering digambarkan sebagai "Taman Berdinding" (Walled Garden) — banyak peraturan dan diurus dengan ketat: aplikasi mesti melalui semakan sebelum diterbitkan, pembangunan mesti menggunakan Mac dan Xcode, pengedaran utamanya melalui App Store. Bunyinya sesak? Tetapi bagi pembangun, peraturan ini membawa dividen berbentuk wang sebenar:
+Ekosistem Apple sering digambarkan sebagai "Taman Berdinding" (Walled Garden), banyak peraturan dan diurus dengan ketat: aplikasi mesti melalui semakan sebelum diterbitkan, pembangunan mesti menggunakan Mac dan Xcode, pengedaran utamanya melalui App Store. Bunyinya sesak? Tetapi bagi pembangun, peraturan ini membawa dividen berbentuk wang sebenar:
 
-- Pecahan peranti sangat kecil: model iPhone hanya beberapa jenis sahaja, saiz skrin dan versi sistem sangat seragam — dengan menyokong 5 model sahaja, anda sudah meliputi 95% pengguna (Android mungkin perlu menyokong puluhan model);
+- Pecahan peranti sangat kecil: model iPhone hanya beberapa jenis sahaja, saiz skrin dan versi sistem sangat seragam, dengan menyokong 5 model sahaja, anda sudah meliputi 95% pengguna (Android mungkin perlu menyokong puluhan model);
 - Kadar kemas kini versi sistem sangat tinggi: dalam beberapa minggu selepas sistem baharu dikeluarkan, tujuh hingga lapan daripada sepuluh pengguna sudah menaik taraf; API baharu boleh digunakan dengan yakin tanpa perlu menjaga "sistem lama lima tahun lepas";
 - Tabiat membayar pengguna baik: pengguna App Store lebih sanggup membelanjakan wang untuk aplikasi dan pembelian dalam apl;
-- Semakan memang ketat, tetapi kedainya bersih: tiruan dan perisian jahat jarang, produk baik lebih mudah dilihat.
+- Semakan memang ketat, tetapi kedainya bersih: tiruan dan perisian jahat jarang, produk baik lebih mudah dilihat
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Perhatian: jelas dahulu tentang kos
 
 {class="mt-1"}
-Pembangunan iOS mempunyai syarat wajib: mesti ada sebuah Mac (Xcode eksklusif macOS), penerbitan memerlukan akaun pembangun 99 dolar AS setahun (akaun pembangun peribadi percuma boleh debug pada peranti sebenar secara tempatan, tetapi tidak boleh menerbitkan). Fikirkan pelaburan ini dengan matang sebelum memulakan — tetapi berita baiknya, pada peringkat pembelajaran akaun percuma sudah cukup, akan diterangkan dalam Bab 60.
+Pembangunan iOS mempunyai syarat wajib: mesti ada sebuah Mac (Xcode eksklusif macOS), penerbitan memerlukan akaun pembangun 99 dolar AS setahun (akaun pembangun peribadi percuma boleh debug pada peranti sebenar secara tempatan, tetapi tidak boleh menerbitkan). Fikirkan pelaburan ini dengan matang sebelum memulakan: tetapi berita baiknya, pada peringkat pembelajaran akaun percuma sudah cukup, akan diterangkan dalam Bab 60.
 :::
 
 #### 3. Bahasa apa yang digunakan: Objective-C atau Swift?
 
-Dalam sejarah pembangunan iOS juga ada dua "watak utama". Objective-C ialah veteran pengasas — digunakan dari 2008 hingga 2014; Swift ialah bahasa baharu yang dikeluarkan Apple pada 2014, kemudian berevolusi hingga Swift 6 (dikeluarkan 2024, memperkenalkan semakan konkurensi yang ketat), dan pada 2026, projek baharu hampir semuanya menggunakan Swift.
+Dalam sejarah pembangunan iOS juga ada dua "watak utama". Objective-C ialah veteran pengasas: digunakan dari 2008 hingga 2014; Swift ialah bahasa baharu yang dikeluarkan Apple pada 2014, kemudian berevolusi hingga Swift 6 (dikeluarkan 2024, memperkenalkan semakan konkurensi yang ketat), dan pada 2026, projek baharu hampir semuanya menggunakan Swift.
 
-Nasihat jujur untuk anda yang tiada asas: terus belajar Swift, Objective-C tak perlu dilihat pun — melainkan selepas bekerja anda perlu menyelenggara kod warisan sepuluh tahun lepas. Kelebihan Swift: sintaks bersih (tanpa beban titik koma dan fail header zaman bahasa C), mekanisme Optional membasmi "ranapan penunjuk kosong" pada peringkat bahasa, berpadu tanpa jahitan dengan SwiftUI, dan ada Swift Playgrounds di iPad untuk belajar sambil bermain.
+Nasihat jujur untuk anda yang tiada asas: terus belajar Swift, Objective-C tak perlu dilihat pun, melainkan selepas bekerja anda perlu menyelenggara kod warisan sepuluh tahun lepas. Kelebihan Swift: sintaks bersih (tanpa beban titik koma dan fail header zaman bahasa C), mekanisme Optional membasmi "ranapan penunjuk kosong" pada peringkat bahasa, berpadu tanpa jahitan dengan SwiftUI, dan ada Swift Playgrounds di iPad untuk belajar sambil bermain.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -87,11 +87,11 @@ Rajah 1: Aliran penuh sebuah aplikasi iOS daripada idea hingga diterbitkan (perh
 
 Konsep utama dalam aliran ini:
 
-- Tandatangan (Signing): setiap aplikasi iOS mesti "ditandatangani" sebelum boleh dipasang — membuktikan "pakej ini datang daripada anda dan tidak diubah suai". Pada peringkat pembelajaran, Xcode menandatangani secara automatik dengan Apple ID anda; semasa menerbitkan, gunakan sijil pembangun. Diterangkan terperinci dalam Bab 67.
+- Tandatangan (Signing): setiap aplikasi iOS mesti "ditandatangani" sebelum boleh dipasang, membuktikan "pakej ini datang daripada anda dan tidak diubah suai". Pada peringkat pembelajaran, Xcode menandatangani secara automatik dengan Apple ID anda; semasa menerbitkan, gunakan sijil pembangun. Diterangkan terperinci dalam Bab 67.
 - Simulator: iPhone maya di atas Mac, medan utama pembangunan dan debug. Ia berjalan pada CPU Mac, jadi sangat lancar; pengalamannya jauh lebih baik daripada emulator Android.
-- TestFlight: alat "pengedaran ujian dalaman" rasmi Apple — sebelum penerbitan, hantar versi ujian kepada sehingga 10000 pengguna ujian, yang memasang dan mencubanya melalui aplikasi TestFlight. Ini keanggunan yang hanya ada dalam ekosistem iOS.
+- TestFlight: alat "pengedaran ujian dalaman" rasmi Apple: sebelum penerbitan, hantar versi ujian kepada sehingga 10000 pengguna ujian, yang memasang dan mencubanya melalui aplikasi TestFlight. Ini keanggunan yang hanya ada dalam ekosistem iOS.
 
-#### 5. Gambaran penuh tindanan teknologi iOS: "senarai senjata" anda
+5. Gambaran penuh tindanan teknologi iOS: "senarai senjata" anda
 
 ::: div .overflow-x-auto
 ```html
@@ -102,7 +102,7 @@ Konsep utama dalam aliran ini:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Gambaran pantas tindanan teknologi utama iOS 2026
 
-Ada perasan? Senarai ini lebih pendek sedikit daripada Android — kerana Apple telah "menguruskan" banyak perkara. Kos ekosistem tertutup ialah kebebasan; balasannya ialah ketenangan: tak perlu bingung memilih pustaka rangkaian atau pangkalan data yang mana, yang diberikan secara rasmi sering kali penyelesaian terbaik.
+Ada perasan? Senarai ini lebih pendek sedikit daripada Android: kerana Apple telah "menguruskan" banyak perkara. Kos ekosistem tertutup ialah kebebasan; balasannya ialah ketenangan: tak perlu bingung memilih pustaka rangkaian atau pangkalan data yang mana, yang diberikan secara rasmi sering kali penyelesaian terbaik.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -57,7 +57,7 @@ Saran blak-blakan untuk pemula: yang privat satu halaman pakai @State, yang lint
 
 #### 2. NavigationStack: "Tumpukan" untuk Pindah Halaman
 
-Sejak iOS 16, navigasi multi-halaman memakai NavigationStack — seperti tumpukan piring: satu masuk, satu ditaruh; saat kembali, dikeluarkan satu per satu:
+Sejak iOS 16, navigasi multi-halaman memakai NavigationStack: seperti tumpukan piring: satu masuk, satu ditaruh; saat kembali, dikeluarkan satu per satu:
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink adalah "tautan pindah halaman yang bisa diklik"; navigationTitle otomatis membuat judul bilah navigasi dan tombol kembali. Untuk pindah halaman secara terprogram (misalnya otomatis kembali setelah menekan "Simpan"), gunakan @Environment(\.dismiss) untuk menutup halaman saat ini — dengan dua cara ini digabung, 90% kebutuhan navigasi sudah tercakup.
+NavigationLink adalah "tautan pindah halaman yang bisa diklik"; navigationTitle otomatis membuat judul bilah navigasi dan tombol kembali. Untuk pindah halaman secara terprogram (misalnya otomatis kembali setelah menekan "Simpan"), gunakan @Environment(\.dismiss) untuk menutup halaman saat ini: dengan dua cara ini digabung, 90% kebutuhan navigasi sudah tercakup.
 
 #### 3. Popup dan Tab Bawah: sheet dan TabView
 
@@ -141,7 +141,7 @@ Aturan praktis: alur utama memakai NavigationStack untuk mendorong halaman (daft
 
 #### 4. List: "Daftar Andalan" iOS
 
-Komponen paling sering dipakai sekaligus paling khas Apple di iOS adalah List — garis pemisah, hapus dengan geser, dan sorotan saat diklik sudah tersedia secara bawaan:
+Komponen paling sering dipakai sekaligus paling khas Apple di iOS adalah List, garis pemisah, hapus dengan geser, dan sorotan saat diklik sudah tersedia secara bawaan:
 
 ::: div .code-block
 :::inline div .code-head
@@ -166,7 +166,7 @@ struct RecordListView: View {
 ```
 :::
 
-Daftar + NavigationLink + sheet + TabView — gabungkan empat hal ini dan kamu sudah bisa membangun kerangka App lengkap "daftar catatan → buka detail → tekan + untuk entri". Proyek buku catatan keuangan di bab berikutnya dibangun persis seperti ini.
+Daftar + NavigationLink + sheet + TabView, gabungkan empat hal ini dan kamu sudah bisa membangun kerangka App lengkap "daftar catatan → buka detail → tekan + untuk entri". Proyek buku catatan keuangan di bab berikutnya dibangun persis seperti ini.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-Kegunaan khas: menyegarkan data saat kembali ke latar depan, menyimpan draf saat masuk latar belakang. iOS sangat ketat soal berjalan di latar belakang — App biasa segera ditangguhkan (dibekukan) tidak lama setelah masuk latar belakang, jadi jangan berharap bisa diam-diam mengerjakan tugas berat di sana; untuk tugas terjadwal, gunakan notifikasi lokal dari Bab 68, bukan "tetap hidup di latar belakang".
+Kegunaan khas: menyegarkan data saat kembali ke latar depan, menyimpan draf saat masuk latar belakang. iOS sangat ketat soal berjalan di latar belakang, App biasa segera ditangguhkan (dibekukan) tidak lama setelah masuk latar belakang, jadi jangan berharap bisa diam-diam mengerjakan tugas berat di sana; untuk tugas terjadwal, gunakan notifikasi lokal dari Bab 68, bukan "tetap hidup di latar belakang".
 
 {class="mt-1"}
-Buat kerangka buku catatan keuangan versi data palsu: TabView dengan tiga tab (buku catatan/statistik/pengaturan) → halaman buku catatan memakai List untuk menampilkan data palsu, ketuk baris untuk ke detail (NavigationStack) → tombol "+" di pojok kanan atas memunculkan sheet entri. Tanpa menyimpan data, tanpa internet, murni latihan kerangka — setelah kerangka ini jadi, mengisi data sungguhan di Bab 65 akan berjalan mulus.
+Buat kerangka buku catatan keuangan versi data palsu: TabView dengan tiga tab (buku catatan/statistik/pengaturan) → halaman buku catatan memakai List untuk menampilkan data palsu, ketuk baris untuk ke detail (NavigationStack) → tombol "+" di pojok kanan atas memunculkan sheet entri. Tanpa menyimpan data, tanpa internet, murni latihan kerangka, setelah kerangka ini jadi, mengisi data sungguhan di Bab 65 akan berjalan mulus.
 :::
 
 ::: div .chapter-summary

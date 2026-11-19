@@ -57,8 +57,8 @@ SwiftUI 四大基礎視圖
 
 #### 三、佈局三件套：VStack、HStack、ZStack
 
-- VStack：縱而列之（若列隊取餐）；
-- HStack：橫而列之（若並肩而坐）；
+- VStack：縱而列之（若列隊取餐）。
+- HStack：橫而列之（若並肩而坐）。
 - ZStack：疊而置之（若撲克之牌相壘，宜作角標、遮罩）。
 
 ::: div .code-block
@@ -89,7 +89,7 @@ VStack(alignment: .leading, spacing: 12) {
 按：修飾符次序有講究
 
 {class="mt-1"}
-padding(16).background(灰) 與 background(灰).padding(16)，其效迥異——前者先留白而後塗色（背景不含邊距），後者先塗色而後留白（背景兼含邊距）。新手所見怪異之白邊，多源於此。倘有疑，互易其序，預覽立示其答。
+padding(16).background(灰) 與 background(灰).padding(16)，其效迥異：前者先留白而後塗色（背景不含邊距），後者先塗色而後留白（背景兼含邊距）。新手所見怪異之白邊，多源於此。倘有疑，互易其序，預覽立示其答。
 :::
 
 #### 四、狀態與綁定：使界面「活」起來
@@ -117,7 +117,7 @@ struct CounterView: View {
 ```
 :::
 
-輸入框須用「雙向綁定」——$ 符號將「值與修改之權」一併傳入：
+輸入框須用「雙向綁定」，$ 符號將「值與修改之權」一併傳入：
 
 ::: div .code-block
 :::inline div .code-head
@@ -152,8 +152,8 @@ struct InputView: View {
 
 #### 五、預覽、主題與動畫：SwiftUI 之「外掛」
 
-- #Preview 宏：於檔案之末加 #Preview { ContentView() }，右側畫布即時渲染——改碼所見即所得；
-- 深色模式免費：用系統顏色（Color(.systemGray6)、.primary）而非寫死之色，深色模式自能相配，不多書一行；
+- #Preview 宏：於檔案之末加 #Preview { ContentView() }，右側畫布即時渲染：改碼所見即所得。
+- 深色模式免費：用系統顏色（Color(.systemGray6)、.primary）而非寫死之色，深色模式自能相配，不多書一行。
 - 動畫一行可成：withAnimation { count += 1 }，或予視圖加 .animation(.default, value: count)——過渡絲滑。
 
 ::: div .code-block
@@ -204,7 +204,7 @@ struct AnimatedHeartView: View {
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 SwiftUI 常用修飾符速查
 
-記之不住亦無妨——此頁正為查檢而設。用之最多者，實惟前四：padding、圓角、背景、字體。
+記之不住亦無妨，此頁正為查檢而設。用之最多者，實惟前四：padding、圓角、背景、字體。
 
 {class="mt-1"}
 改模板之項為心情輪換器：一按鈕，點之則於 😀開心 → 😢難過 → 😡生氣 之間循環遞換，文字與背景之色隨之而變。提示：以陣列貯三組（文字+顏色），@State 貯其下標，點時用 (index + 1) % 3。成則示諸友朋，可得第一聲「哇，汝能作 App 矣」之歎。

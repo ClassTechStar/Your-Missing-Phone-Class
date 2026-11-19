@@ -2,17 +2,17 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: Capítulo 2: Ordena tu habitación digital
+nav: Capítulo 2: ¿No encuentras algo en tu teléfono?
 toc: default
 kind: chapter
 ---
 
-### Capítulo 2: Ordena tu habitación digital — Gestión de archivos
+### Capítulo 2: ¿No encuentras algo en tu teléfono?
 
 {class="chapter-intro mb-4"}
 Con el uso prolongado, el teléfono se desordena; los buenos hábitos empiezan por la gestión de archivos. Igual que tu habitación necesita ordenarse periódicamente, tu espacio digital también requiere mantenimiento. Un teléfono bien organizado no solo facilita encontrar cosas, sino que también funciona con mayor fluidez.
 
-#### I. Sistema de almacenamiento de tres niveles: tu almacén digital
+I. Sistema de almacenamiento de tres niveles: tu almacén digital
 
 {class="list-decimal pl-6 mb-3 space-y-2"}
 1. <strong>Almacenamiento interno</strong>: zona central, alta velocidad, aquí están el sistema y las App. Es el espacio más valioso de tu teléfono, hay que administrarlo con cuidado.
@@ -48,7 +48,7 @@ Android se basa en Linux y su sistema de archivos tiene cierta estructura jerár
 - <strong>Almacenamiento interno</strong>: espacio privado de la App, otras App no pueden acceder. Se elimina al desinstalar la App.
 - <strong>Almacenamiento externo</strong>: archivos que la App guarda en la zona accesible para el usuario, como fotos y descargas. No siempre se eliminan al desinstalar la App.
 
-#### IV. Copia de seguridad y restauración de datos: asegura tus datos
+IV. Copia de seguridad y restauración de datos: asegura tus datos
 
 Los datos no tienen precio; hacer copias de seguridad es un hábito imprescindible.
 
@@ -205,7 +205,7 @@ Abre el administrador de archivos &gt; entra en la carpeta "Descargas". Mira qu�
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### VIII. Gestión de imágenes y sistema de archivos: mantén tus activos en orden
+VIII. Gestión de imágenes y sistema de archivos: mantén tus activos en orden
 
 En la sección anterior aprendimos a "conocer las carpetas", pero conocer no es suficiente. Esta sección trata sobre <strong>cómo establecer activamente un conjunto de normas de gestión aplicables a largo plazo</strong>, para que tus archivos siempre se puedan encontrar, no se pierdan ni sean espiados.
 
@@ -238,7 +238,7 @@ Elige un fin de semana libre y sigue este orden:
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. Crea en el administrador de archivos una carpeta de trabajo de este mes con el formato <code>2026Q2_ProyectoA</code> ;
 2. Revisa todos los archivos de esta semana en el directorío "Descargas", conserva lo útil, archívalo y elimina lo inútil;
-3. Crea carpetas anuales para las fotos familiares de este año, como <code>2025Familia</code>, <code>2026Familia</code> .
+3. Crea carpetas anuales para las fotos familiares de este año, como <code>2025Familia</code>, <code>2026Familia</code> 
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -263,7 +263,7 @@ Las imágenes son el tipo de dato más "sensible" del teléfono: una foto casual
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Difuminar la información visible</strong>: con herramientas del sistema o de terceros (como Meitu XiuXiu, Snapseed)<strong>cifra los dígitos centrales del número de identificación, las matrículas, los números de puerta, los nombres y los importes</strong>;
 2. <strong>Eliminar metadatos</strong>: antes de enviar, en el álbum pulsa "Compartir" o "Exportar"; el sistema preguntará si deseas conservar la información de ubicación, elige <strong>"No conservar"</strong>. Así, el modelo del dispositivo, las coordenadas GPS y la hora de toma no se enviarán junto con la imagen;
-3. <strong>Marca de agua temporal</strong>(opcional): añade a las capturas sensibles una marca de agua de texto tipo "Solo para trámite XX", para evitar usos indebidos.
+3. <strong>Marca de agua temporal</strong>(opcional): añade a las capturas sensibles una marca de agua de texto tipo "Solo para trámite XX", para evitar usos indebidos
 :::
 
 {class="mt-3 mb-2"}
@@ -277,4 +277,4 @@ Para imágenes sensibles que necesites <strong>conservar a largo plazo</strong>(
 
 - iPhone: [Fotos] &gt; selecciona la foto &gt; Ocultar (solo visible tras verificar Face ID);
 - Huawei/Xiaomi: [Álbum] &gt; mantén pulsada la foto &gt; "Mover a la caja fuerte";
-- App de cifrado de terceros:<strong>360 Álbum seguro</strong>, <strong>Administrador de álbumes de Tencent (álbum privado)</strong>, <strong>KeepSafe</strong> , entre otros, con protección por contraseña independiente y mayor discreción.
+- App de cifrado de terceros:<strong>360 Álbum seguro</strong>, <strong>Administrador de álbumes de Tencent (álbum privado)</strong>, <strong>KeepSafe</strong> , entre otros, con protección por contraseña independiente y mayor discreción

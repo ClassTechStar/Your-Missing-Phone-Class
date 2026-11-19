@@ -2,21 +2,21 @@
 id: di-si-shi-zhang
 num: 40
 part: ai-biancheng-pian
-nav: Chapter 40: Requirements Engineering — Turning Ideas into AI Instructions
+nav: Chapter 40: Say It Clearly Before You Start
 toc: default
 kind: chapter
 ---
 
-### Chapter 40: Requirements Engineering — Turn Ideas into AI-Ready Instructions
+### Chapter 40: Say It Clearly Before You Start
 
 {class="chapter-intro mb-4"}
-If context engineering helps AI understand the background, requirements engineering helps AI know what to do this time. It's where people differ most in AI coding — same tools, same models, yet some ship stunning projects while others only make mediocre toys. The gap is rarely raw technical skill; it's the ability to express requirements.
+If context engineering helps AI understand the background, requirements engineering helps AI know what to do this time. It's where people differ most in AI coding, same tools, same models, yet some ship stunning projects while others only make mediocre toys. The gap is rarely raw technical skill; it's the ability to express requirements.
 
 #### 1. From fuzzy idea to structured requirements
 
-Every project starts as a fuzzy idea — "I want a budgeting app," "a personal website," "a to-do list." Nothing wrong with that, but toss it straight to AI and quality is pure luck. Requirements engineering turns that fuzzy idea into something AI can execute precisely.
+Every project starts as a fuzzy idea, "I want a budgeting app," "a personal website," "a to-do list." Nothing wrong with that, but toss it straight to AI and quality is pure luck. Requirements engineering turns that fuzzy idea into something AI can execute precisely.
 
-Good news: structured requirements don't need a multi-page PRD. Just answer five questions — the "five requirement elements":
+Good news: structured requirements don't need a multi-page PRD. Just answer five questions, the "five requirement elements":
 
 ::: div .overflow-x-auto
 ```html
@@ -27,7 +27,7 @@ Good news: structured requirements don't need a multi-page PRD. Just answer five
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 The five requirement elements with example
 
-You don't need a formal document for these five — even a quick mental pass is enough. The key is building the habit of "think clearly before you speak." Once you can answer these five clearly, your requirement descriptions naturally become structured.
+You don't need a formal document for these five, even a quick mental pass is enough. The key is building the habit of "think clearly before you speak." Once you can answer these five clearly, your requirement descriptions naturally become structured.
 
 #### 2. The art of layered requirement breakdown
 
@@ -38,19 +38,19 @@ For "build a personal budgeting app," a sensible breakdown:
 1. Implement basic transaction recording (add, view, delete entries);
 2. Add categories (tag entries as dining, transport, etc.);
 3. Implement monthly summaries (income and expenses by month);
-4. Add data visualization (charts for spending structure).
+4. Add data visualization (charts for spending structure)
 
 Each step is a feature increment that runs and verifies on its own.
 
 :::inline div .quote-line
-The golden rule of breaking down requirements: after every step, the project should still be a "thing that works" — even if crudely. Never let the project sit in a state where "everything is half done but nothing works."
+The golden rule of breaking down requirements: after every step, the project should still be a "thing that works": even if crudely. Never let the project sit in a state where "everything is half done but nothing works."
 :::
 
-Two benefits. First, you always see progress — every step adds a feature, and that positive feedback matters for long projects (humans need wins). Second, each AI task stays small, lowering the risk of misunderstanding — smaller tasks, clearer understanding, better output.
+Two benefits. First, you always see progress, every step adds a feature, and that positive feedback matters for long projects (humans need wins). Second, each AI task stays small, lowering the risk of misunderstanding, smaller tasks, clearer understanding, better output.
 
 #### 3. PRD writing template and practice
 
-For larger projects (full-stack apps with frontend, backend, and multiple modules), the five elements may not be enough. You'll need a more formal PRD. One common misconception: a PRD is not for AI to read — it's for you, to clarify your thinking so you can give AI more precise instructions.
+For larger projects (full-stack apps with frontend, backend, and multiple modules), the five elements may not be enough. You'll need a more formal PRD. One common misconception: a PRD is not for AI to read, it's for you, to clarify your thinking so you can give AI more precise instructions.
 
 A good PRD doesn't need to be long, but should cover six parts: project overview (one paragraph on what it is), feature list (each feature defined), technical plan (stack and rough architecture), data model (core structures), interface description (what main screens look like), and development plan (steps to finish).
 
@@ -92,11 +92,11 @@ Step 5: data export
 ```
 :::
 
-Note the writing style: concise lists and structured formatting instead of long essays. Each feature has a clear definition; data models use simple type descriptions. This style is easy for you to read and easy for AI to understand precisely when you hand it over.
+Note the writing style: concise lists and structured formatting instead of long essays. Each feature has a clear definition, and data models use simple type descriptions. This style is easy for you to read. It is also easy for AI to understand precisely when you hand it over.
 
 #### 4. Hands-on: full walkthrough from idea to plan
 
-Theory is boring — let's walk through a complete requirements engineering example. Suppose your idea is: "I want a study tracker that records what I learned each day."
+Theory is boring, let's walk through a complete requirements engineering example. Suppose your idea is: "I want a study tracker that records what I learned each day."
 
 Step 1: Run through the five requirement elements.
 
@@ -111,9 +111,9 @@ Step 2: Break down the requirements.
 1. Step 1: Implement "record study entries" (date, content, duration);
 2. Step 2: Add "study time stats" (today, this week total);
 3. Step 3: Implement a "study calendar" view (like a GitHub contribution graph);
-4. Step 4: Add "study review" (randomly show a past day's entries for revision).
+4. Step 4: Add "study review" (randomly show a past day's entries for revision)
 
-Step 3: Write a short PRD. It doesn't need to be long — the breakdown above is already the PRD body. Organize it into a .md file in the project root as the shared reference for you and AI.
+Step 3: Write a short PRD. It doesn't need to be long: the breakdown above is already the PRD body. Organize it into a .md file in the project root as the shared reference for you and AI.
 
 Step 4: Start developing the first step. A prompt to AI could be:
 
@@ -145,9 +145,9 @@ Pick a small project you've been brewing and spend 5 minutes filling a card: Who
 {class="font-semibold mb-1"}
 Chapter recap
 
-- Five requirement elements: Who / What / Why / How / Constraint — think before you speak
+- Five requirement elements: Who / What / Why / How / Constraint, think before you speak
 - Golden rule of breakdown: after every step the project is "something that works"
 - A PRD is for you: overview, features, technical plan, data model, UI, plan
 - Good prompt = only the current step + clear constraints + what, not how
-- Full walkthrough template: five elements → breakdown → PRD → prompt — four steps
+- Full walkthrough template: five elements → breakdown → PRD → prompt: four steps
 :::

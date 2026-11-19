@@ -2,12 +2,12 @@
 id: di-san-shi-wu-zhang
 num: 35
 part: er-tong-pian
-nav: Capítulo 35: Niños y móvil — guía educativa para la era digital
+nav: Capítulo 35: Dale un teléfono a tu hijo: ponle las reglas
 toc: default
 kind: chapter
 ---
 
-### Capítulo 35: Niños y móviles — Guía educativa para la era digital
+### Capítulo 35: Dale un teléfono a tu hijo: ponle las reglas
 
 {class="chapter-intro mb-4"}
 : El objetivo se ensucia con el uso y las fotos salen borrosas. Límpialo con un paño suave antes de tomar fotos importantes.
@@ -34,12 +34,12 @@ kind: chapter
 : Usa la app de Fotos para editar: recorta, ajusta el brillo y el contraste, aplica filtros. Una edición rápida mejora mucho la foto.
 
 - <strong>Haz copia de seguridad de tus fotos</strong>: Las fotos son recuerdos irreemplazables. Activa la copia de seguridad automática (iCloud / Google Photos / copia local del fabricante) para no perderlas.
-- <strong>X. Diez consejos para el almacenamiento</strong> El almacenamiento del teléfono se llena rápidamente con fotos, vídeos y apps. Estos diez consejos te ayudan a gestionarlo:
+- <strong>X. Diez consejos para el almacenamiento</strong> El almacenamiento del teléfono se llena rápidamente con fotos, vídeos y apps. Estos diez consejos te ayudan a gestionarlo:.
 - <strong>Desinstala las apps que no uses</strong>: Cada app instalada consume almacenamiento. Desinstala las apps que no uses; puedes reinstalarlas cuando las necesites.
 
 Borra las fotos y vídeos duplicados <strong>: Usa la función "Duplicados" de la app de Fotos (iPhone) o apps de terceros para encontrar y borrar fotos y vídeos duplicados.</strong> Vacía la caché de las apps
 
-#### : Ajustes &gt; Apps &gt; [app] &gt; Almacenamiento &gt; Borrar caché. Esto libera espacio sin borrar datos de la app.
+- Ajustes &gt; Apps &gt; [app] &gt; Almacenamiento &gt; Borrar caché. Esto libera espacio sin borrar datos de la app.
 
 Borra los mensajes antiguos
 
@@ -54,7 +54,7 @@ Borra los mensajes antiguos
 
 - <strong>Google Family Link</strong>: En la app de Música o Vídeo, activa "Optimizar almacenamiento" para que el teléfono borre automáticamente los contenidos que no hayas reproducido en mucho tiempo.
 - <strong>Revisa el almacenamiento una vez al mes</strong>: Ajustes &gt; Almacenamiento. Revisa qué ocupa más espacio y actúa en consecuencia. Un teléfono con espacio libre funciona más rápido.
-- <strong>XI. Diez habilidades de comunicación</strong> El teléfono es, ante todo, una herramienta de comunicación. Estos diez consejos mejoran tu comunicación:
+- <strong>XI. Diez habilidades de comunicación</strong> El teléfono es, ante todo, una herramienta de comunicación. Estos diez consejos mejoran tu comunicación:.
 - <strong>Usa "mensajes de voz" para explicaciones largas</strong>: Si una explicación es demasiado larga para escribirla, envía un mensaje de voz en WeChat. Pero no excedas los 60 segundos; si es más largo, llama.
 
 ::: div .overflow-x-auto
@@ -86,7 +86,7 @@ Borra los mensajes antiguos
 Aprende a usar "traducción automática"
 :::
 
-#### : La app de Traducción del iPhone y Google Translate permiten traducir texto, voz y conversaciones en tiempo real. Útil para viajar al extranjero o comunicarte con personas que hablan otros idiomas.
+- La app de Traducción del iPhone y Google Translate permiten traducir texto, voz y conversaciones en tiempo real. Útil para viajar al extranjero o comunicarte con personas que hablan otros idiomas.
 
 XII. Diez habilidades de aprendizaje <strong>El teléfono es también una poderosa herramienta de aprendizaje. Estos diez consejos te ayudan a aprender con el teléfono:</strong>:
 
@@ -121,9 +121,9 @@ XIII. Diez habilidades de vida
 {class="list-disc pl-6 mt-1 space-y-1"}
 - El teléfono puede simplificar muchas tareas cotidianas. Estos diez consejos te ayudan a mejorar tu vida:
 - Usa apps de mapas para navegar
-- : Gaode Maps y Baidu Maps te permiten navegar en coche, a pie y en transporte público. Descarga los mapas offline para usarlos sin conexión.
+- : Gaode Maps y Baidu Maps te permiten navegar en coche, a pie y en transporte público. Descarga los mapas offline para usarlos sin conexión
 - Usa apps de transporte
-- : Apps como Gaode y Baidu Maps muestran horarios de autobús, metro y tren. Úsalas para planificar tus trayectos.
+- : Apps como Gaode y Baidu Maps muestran horarios de autobús, metro y tren. Úsalas para planificar tus trayectos
 :::
 
 #### Usa apps de comida a domicilio
@@ -148,7 +148,7 @@ XIII. Diez habilidades de vida
 : La app de Traducción del iPhone y Google Translate permiten traducir texto, voz y conversaciones en tiempo real. Útil para viajar al extranjero.
 
 - <strong>Usa apps de scanner de documentos</strong>: El iPhone tiene un escáner de documentos integrado en Notas. Android también tiene apps de escaneo (como CamScanner); digitaliza documentos en cualquier momento.
-- <strong>XIV. Diez habilidades de entretenimiento</strong> El teléfono es también una gran herramienta de entretenimiento. Estos diez consejos te ayudan a disfrutar más:
+- <strong>XIV. Diez habilidades de entretenimiento</strong> El teléfono es también una gran herramienta de entretenimiento. Estos diez consejos te ayudan a disfrutar más:.
 - <strong>Usa apps de streaming de música</strong>: NetEase Cloud Music, QQ Music y Spotify te permiten escuchar millones de canciones. Crea playlists y descarga música para escuchar sin conexión.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

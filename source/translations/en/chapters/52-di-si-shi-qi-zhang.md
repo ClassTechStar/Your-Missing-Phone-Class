@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 47: Quick Reference and Resources
 
 {class="chapter-intro mb-4"}
-This chapter is a quick-reference manual that works on its own. When you can't quite remember a principle or need to make a fast decision, flip straight here. Treat it as a "pocket card": the five principles at a glance, a tool decision tree, common questions, and learning resources — every page included.
+This chapter is a quick-reference manual that works on its own. When you can't quite remember a principle or need to make a fast decision, flip straight here. Treat it as a "pocket card": the five principles at a glance, a tool decision tree, common questions, and learning resources: every page included.
 
 #### I. Mental Model Cheat Sheet
 
@@ -25,7 +25,7 @@ Cheat Sheet: The Five Thinking Principles
 
 #### II. The Tool-Choice Decision Tree
 
-When you need to pick an AI coding tool, follow the decision path below. Note: this isn't a ranking of "which is best" — it's a framework for judging "which is best for you."
+When you need to pick an AI coding tool, follow the decision path below. Note: this isn't a ranking of "which is best", it's a framework for judging "which is best for you."
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -54,13 +54,13 @@ Figure 6: Decision tree for choosing an AI coding tool
 
 #### III. FAQ: Common Questions
 
-Q1: I don't know how to program at all — can I still do AI coding?
+Q1: I don't know how to program at all: can I still do AI coding?
 
-Yes. AI coding tools in 2026 are strong enough that you can describe what you want in plain language and have the AI generate the code. Two suggestions: first, start with cloud Builder tools (like v0 and Bolt), which need no development environment setup; second, learn basic concepts as you go — you don't need to master the syntax, but you do need to "read" the general meaning of the code the AI writes, so you can check its work effectively.
+Yes. AI coding tools in 2026 are strong enough that you can describe what you want in plain language and have the AI generate the code. Two suggestions: first, start with cloud Builder tools (like v0 and Bolt), which need no development environment setup; second, learn basic concepts as you go, you don't need to master the syntax, but you do need to "read" the general meaning of the code the AI writes, so you can check its work effectively.
 
 Q2: Which programming language should I learn?
 
-It depends on what you want to build. Website front end — JavaScript/TypeScript; data processing or AI — Python; enterprise back end — Java or Go. But more importantly: in the AI coding era, the importance of "which language" is falling. AI can handle the syntax details for you; what you need to understand is "the structure of programs" — what a function is, what a loop is, what a data structure is. These concepts carry across languages, and once you understand them, picking up any language is fast.
+It depends on what you want to build. Website front end, JavaScript/TypeScript; data processing or AI — Python; enterprise back end: Java or Go. But more importantly: in the AI coding era, the importance of "which language" is falling. AI can handle the syntax details for you; what you need to understand is "the structure of programs", what a function is, what a loop is, what a data structure is. These concepts carry across languages, and once you understand them, picking up any language is fast.
 
 Q3: Is there a copyright issue with AI-written code?
 
@@ -68,11 +68,11 @@ As of August 2026 this is still a contested legal question. Generally speaking, 
 
 Q4: Will AI replace programmers?
 
-Not in the short term. What AI replaces isn't the "programmer" as a profession but the task of "coding line by line." Just as the calculator didn't replace mathematicians — it freed them from tedious hand computation. AI coding tools shift programmers from "writing code" to "thinking through problems" — which actually raises the ceiling on a programmer's value. Future competitiveness won't lie in "how many lines of code you can write" but in "how complex a problem you can solve."
+Not in the short term. What AI replaces isn't the "programmer" as a profession but the task of "coding line by line." Just as the calculator didn't replace mathematicians, it freed them from tedious hand computation. AI coding tools shift programmers from "writing code" to "thinking through problems": which actually raises the ceiling on a programmer's value. Future competitiveness won't lie in "how many lines of code you can write" but in "how complex a problem you can solve."
 
 Q5: How do I judge whether the AI's output is correct?
 
-Use the three-layer verification method. Layer one: functional verification — does it run? Are the inputs and outputs right? This is the most basic. Layer two: boundary verification — what happens with empty input, extra-long input, weird input? This surfaces hidden problems. Layer three: architecture verification — is the code structure sound? Any hard-coded values? Is it easy to extend? This takes some technical judgment of your own. If you can't judge layer three, at least do the first two — running fine with sane boundaries already puts you ahead of most beginners.
+Use the three-layer verification method. Layer one: functional verification, does it run? Are the inputs and outputs right? This is the most basic. Layer two: boundary verification: what happens with empty input, extra-long input, weird input? This surfaces hidden problems. Layer three: architecture verification, is the code structure sound? Any hard-coded values? Is it easy to extend? This takes some technical judgment of your own. If you can't judge layer three, at least do the first two, running fine with sane boundaries already puts you ahead of most beginners.
 
 #### IV. Recommended Learning Resources
 
@@ -89,14 +89,14 @@ Recommended Learning Resources List
 
 #### V. Closing Thoughts: Tools in Hand, Methodology in Mind
 
-Let's come back to this book's core belief: tools iterate every three months; methodology evolves only every three years. Today, in August 2026, AI coding tools are astonishingly powerful — you can create a website with one sentence, generate a full-stack app from a short description, finish a complex refactor with a single instruction. But the more powerful the tools, the more methodology stands out — because powerful tools amplify every one of your decisions.
+Let's come back to this book's core belief: tools iterate every three months; methodology evolves only every three years. Today, in August 2026, AI coding tools are astonishingly powerful, you can create a website with one sentence, generate a full-stack app from a short description, finish a complex refactor with a single instruction. But the more powerful the tools, the more methodology stands out: because powerful tools amplify every one of your decisions.
 
-If your requirements are clear, AI helps you build them efficiently; if they're vague, AI efficiently builds the wrong thing. If you follow Simplicity First, AI helps you validate ideas quickly; if you want everything at once, AI quickly piles up technical debt for you. If you make precise changes, AI optimizes your code with surgical precision; if your instructions are fuzzy, AI boldly introduces bugs for you.
+If your requirements are clear, AI helps you build them efficiently; if they're vague, AI efficiently builds the wrong thing. Follow Simplicity First, and AI helps you validate ideas quickly. Want everything at once, and AI quickly piles up technical debt for you. If you make precise changes, AI optimizes your code with surgical precision; if your instructions are fuzzy, AI boldly introduces bugs for you.
 
-That's why this book spent most of its pages on methodology rather than tool operations. Not because tools don't matter, but because methodology is the tool's "multiplier" — the better your methodology, the more your tools are worth; with zero methodology, even the strongest tool is just zero times anything.
+That's why this book spent most of its pages on methodology rather than tool operations. Not because tools don't matter, but because methodology is the tool's "multiplier": the better your methodology, the more your tools are worth; with zero methodology, even the strongest tool is just zero times anything.
 
 :::inline div .quote-line
-You're no longer coding alone. You are the commander and AI is your army; the quality of your thinking determines your army's fighting power. From today, arm your mind with methodology and amplify your ability with tools — that's the whole secret of AI coding.
+You're no longer coding alone. You are the commander and AI is your army; the quality of your thinking determines your army's fighting power. From today, arm your mind with methodology and amplify your ability with tools, that's the whole secret of AI coding.
 :::
 
 #### References

@@ -2,12 +2,12 @@
 id: di-er-shi-yi-zhang
 num: 21
 part: chao-yue-pian
-nav: Kapitel 21: Mobilfunk und Informationssicherheit vertieft
+nav: Kapitel 21: Darf man öffentliches WLAN wirklich nutzen?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 21: Mobilfunk und Informationssicherheit vertieft
+### Kapitel 21: Darf man öffentliches WLAN wirklich nutzen?
 
 {class="chapter-intro mb-4"}
 Wir nutzen täglich das Smartphone zum Surfen, Bezahlen, Chatten – das fühlt sich sehr bequem an. Aber hast du schon einmal darüber nachgedacht, ob deine Chatverläufe, Zahlungspasswörter und Fotos im Netz „nackt" herumlaufen? Ehrlich: Die meisten denken nie darüber nach, aber wenn etwas passiert – Account gehackt, Bankkarte leergeräumt – ist es zu spät für Reue. In diesem Kapitel besprechen wir, wie du dein digitales Leben weniger „transparent" machst.
@@ -23,7 +23,7 @@ Was kann ein VPN also? Kurz gesagt: Erstens,<strong>deine Privatsphäre im öffe
 
 Außerdem ist ein VPN kein Allheilmittel. Es schützt nur die Daten „auf dem Transportweg" – wenn die Zielwebsite selbst unsicher ist oder auf deinem Smartphone bereits Malware installiert ist, kann dir auch ein VPN nicht helfen.
 
-#### II. Öffentliches Wi-Fi – die „süße Falle", gefährlicher als du denkst
+II. Öffentliches Wi-Fi – die „süße Falle", gefährlicher als du denkst
 
 Du denkst vielleicht, kostenloses Wi-Fi sei doch harmlos? Eine wahre Geschichte: Sicherheitsforscher stellten am Flughafen einen Hotspot namens „Starbucks_Free" auf – innerhalb einer Stunde verbanden sich über hundert Personen. Tatsächlich war der Hotspot von den Forschern selbst eingerichtet, und der gesamte <strong>unverschlüsselte Datenverkehr</strong>– z. B. HTTP-Webseiten, App-Kommunikation ohne TLS – konnte tatsächlich mitgelesen und eingesehen werden.
 
@@ -77,7 +77,7 @@ Was er nicht kann:
 
 Also merken: Der Inkognito-Modus ist „lokales Löschen", kein „Netz-Tarnumhang". Wenn du deine Surfspuren wirklich verbergen willst, brauchst du eine Kombination wie VPN + Tor-Browser. Für den Alltag reicht es aber, das hier zu wissen.
 
-#### VI. Browser-Datenschutz: Lass deinen Browser dich nicht verkaufen
+VI. Browser-Datenschutz: Lass deinen Browser dich nicht verkaufen
 
 Vielleicht merkst du es gar nicht, aber der Browser selbst ist eine riesige Datensammelstelle – Cookies, Surf-Historie, Cache, Auto-Ausfüllen, Standortberechtigungen – jedes einzelne kann deine Privatsphäre verraten. Ein paar Empfehlungen:
 
@@ -87,7 +87,7 @@ Vielleicht merkst du es gar nicht, aber der Browser selbst ist eine riesige Date
 - <strong>Auch die Suchmaschine zählt</strong>: DuckDuckGo statt Baidu/Google verwenden – sie zeichnet keine Suchhistorie auf und erstellt kein Nutzerprofil. Die Suchergebnisse sind ehrlich gesagt nicht so präzise wie bei Google, aber für alltägliche Recherchen reicht es.
 - <strong>App-Berechtigungen prüfen</strong>: In den Smartphone-Einstellungen prüfen, welche Berechtigungen dein Browser hat – braucht er wirklich Standort, Mikrofon, Kontakte? Wahrscheinlich nicht.
 
-#### VII. Praktische Sicherheits-Checkliste: Schütze dich ab jetzt
+VII. Praktische Sicherheits-Checkliste: Schütze dich ab jetzt
 
 Nach all dem Reden hier eine einfach-brisante Sicherheits-Checkliste – eine halbe Stunde investieren, und deine Smartphone-Sicherheit macht einen Quantensprung:
 

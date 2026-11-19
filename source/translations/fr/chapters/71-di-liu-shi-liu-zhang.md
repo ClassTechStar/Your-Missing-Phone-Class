@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 66 : Projet 2 — l'App météo (version réseau)
 
 {class="chapter-intro mb-4"}
-Le carnet de comptes, c'était « forger son fond » ; l'App météo, c'est « voir du pays » — elle doit se frotter à Internet. Avec ce projet, tu apprendras à : demander une API gratuite, analyser le JSON, gérer les trois états d'interface « chargement / succès / échec », et bien planquer ta clé d'API. Une fois terminé, tu seras capable de faire n'importe quelle App « connectée » — actualités, taux de change, traduction : la recette est rigoureusement la même.
+Le carnet de comptes, c'était « forger son fond » ; l'App météo, c'est « voir du pays », elle doit se frotter à Internet. Avec ce projet, tu apprendras à : demander une API gratuite, analyser le JSON, gérer les trois états d'interface « chargement / succès / échec », et bien planquer ta clé d'API. Une fois terminé, tu seras capable de faire n'importe quelle App « connectée », actualités, taux de change, traduction : la recette est rigoureusement la même.
 
 #### 1. Demander une API météo gratuite
 
@@ -18,7 +18,7 @@ Pour s'entraîner à titre personnel, mise sur OpenWeatherMap ou, côté chinois
 
 1. Crée un compte → génère une clé (apikey) dans la page API keys ;
 2. La version gratuite peut appeler l'interface Current Weather : api.openweathermap.org/data/2.5/weather? q=beijing&appid=taCle&units=metric ;
-3. Essaie d'abord une fois dans le navigateur, pour voir la tête du JSON renvoyé — c'est le « devoir préparatoire » à faire avant de brancher n'importe quelle API.
+3. Essaie d'abord une fois dans le navigateur, pour voir la tête du JSON renvoyé — c'est le « devoir préparatoire » à faire avant de brancher n'importe quelle API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -108,7 +108,7 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 
 Ce triptyque loading/success/error est le « gabarit passe-partout » des interfaces connectées : apprends-le par cœur, et décline-le plus tard pour toutes tes Apps en ligne.
 
-#### 4. Le code d'interface en conditions réelles : peindre la météo
+4. Le code d'interface en conditions réelles : peindre la météo
 
 ::: div .code-block
 :::inline div .code-head
@@ -146,7 +146,7 @@ Quelques petits détails à apprendre : first? prend sans danger le premier él�
 - Champ de recherche : le modificateur .searchable en haut, avec l'interaction de recherche du système, appelle vm.search à la validation ;
 - Villes favorites : range les villes consultées souvent dans UserDefaults, et la recherche repart toute seule à la prochaine ouverture ;
 - Tirer pour rafraîchir : .refreshable { await vm.search(...) } règle la question en une ligne ;
-- Icônes météo : fais la correspondance par description avec Image(systemName:) (sun.max / cloud.rain / snowflake), et l'interface s'éveille aussitôt.
+- Icônes météo : fais la correspondance par description avec Image(systemName:) (sun.max / cloud.rain / snowflake), et l'interface s'éveille aussitôt
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -160,13 +160,13 @@ OpenWeatherMap gère moyennement les noms de villes chinois : chercher « Pékin
 {class="font-semibold"}
 À toi de jouer : la liste de recette de l'App météo
 
-#### 6. Déboguer les requêtes réseau : impression, capture et réseau lent simulé
+6. Déboguer les requêtes réseau : impression, capture et réseau lent simulé
 
 Quand une App connectée déraille, neuf fois sur dix c'est « la requête mal envoyée » ou « la réponse mal analysée ». Trois instruments de débogage :
 
-1. Imprimer les données brutes : imprime String(data: data, encoding: .utf8) pour voir le JSON d'origine — noms de champs et types en un clin d'œil, dix fois plus vite qu'en devinant ;
+1. Imprimer les données brutes : imprime String(data: data, encoding: .utf8) pour voir le JSON d'origine, noms de champs et types en un clin d'œil, dix fois plus vite qu'en devinant ;
 2. Outils de capture : Proxyman (gratuit sur Mac) ou l'open source Charles interceptent toutes les requêtes et réponses de l'App, et rendent la couche réseau lisible comme une radiographie ;
-3. Simuler un réseau faible : dans le menu du simulateur, Features → Network Link Conditioner (un outil à télécharger sur le site des développeurs) permet de simuler de la 3G, de la forte latence — et de débusquer les expériences « qui tournent en rond un temps fou ».
+3. Simuler un réseau faible : dans le menu du simulateur, Features → Network Link Conditioner (un outil à télécharger sur le site des développeurs) permet de simuler de la 3G, de la forte latence: et de débusquer les expériences « qui tournent en rond un temps fou »
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -184,9 +184,9 @@ Si la requête déclenche une erreur "App Transport Security" dès l'envoi, c'es
 {class="font-semibold mb-1"}
 Résumé du chapitre
 
-- Essaie d'abord l'API dans le navigateur, comprends le JSON, ensuite seulement écris le code — le « devoir préparatoire » n'est jamais une perte
+- Essaie d'abord l'API dans le navigateur, comprends le JSON, ensuite seulement écris le code, le « devoir préparatoire » n'est jamais une perte
 - La clé d'API cachée dans le xcconfig, jamais dans le dépôt de code
 - Modèle Codable + URLSession async/await : champs concordants, le JSON s'analyse tout seul
 - Le triptyque d'états loading/success/error, le passe-partout des interfaces connectées
-- Réseau coupé, saisie vide, ville inexistante — bien traiter les erreurs est la note de passage d'une App connectée
+- Réseau coupé, saisie vide, ville inexistante, bien traiter les erreurs est la note de passage d'une App connectée
 :::

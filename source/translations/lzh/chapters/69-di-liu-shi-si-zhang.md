@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 數據三件之分工
 
-記一口訣：「小配置入 UserDefaults，成批數據入 SwiftData，外來數據行 URLSession」。舊籍之 Core Data 猶可用（SwiftData 即其今之馬甲），手書 SQLite 則大抵不須觸——徑學其新，勿履舊轍。
+記一口訣：「小配置入 UserDefaults，成批數據入 SwiftData，外來數據行 URLSession」。舊籍之 Core Data 猶可用（SwiftData 即其今之馬甲），手書 SQLite 則大抵不須觸，徑學其新，勿履舊轍。
 
 #### 二、UserDefaults：貯些小配置
 
@@ -46,11 +46,11 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-惟其僅宜零散之小配置——數十上百之記錄請付 SwiftData，勿以 UserDefaults 為數據庫而用（將緩啟動、且不便查詢）。
+惟其僅宜零散之小配置，數十上百之記錄請付 SwiftData，勿以 UserDefaults 為數據庫而用（將緩啟動、且不便查詢）。
 
 #### 三、SwiftData：為數據安「真家」
 
-SwiftData 者，iOS 17 以降官方數據庫之方也，使「建表、增刪改查」簡至其極——一 @Model 之註，數據類遂為數據庫之表：
+SwiftData 者，iOS 17 以降官方數據庫之方也，使「建表、增刪改查」簡至其極，一 @Model 之註，數據類遂為數據庫之表：
 
 ::: div .code-block
 :::inline div .code-head
@@ -111,7 +111,7 @@ struct RecordListView: View {
 
 #### 四、Codable：為 JSON「譯」
 
-伺服器之數多為 JSON 之文。Swift 之 Codable 協議，使「JSON ⇄ 結構體」之轉換自發——字段名相合，魔法即效：
+伺服器之數多為 JSON 之文。Swift 之 Codable 協議，使「JSON ⇄ 結構體」之轉換自發，字段名相合，魔法即效：
 
 ::: div .code-block
 :::inline div .code-head
@@ -136,7 +136,7 @@ print(result.weather[0].description)   // "晴"
 ```
 :::
 
-鐵律：先觀實返之 JSON，後定字段。多「解析不遂」之 bug，皆字段名書誤、類型猜誤（伺服器發 "26.5" 之字串，汝聲為 Double）——印原 JSON 相對照，十秒可定。
+鐵律：先觀實返之 JSON，後定字段。多「解析不遂」之 bug，皆字段名書誤、類型猜誤（伺服器發 "26.5" 之字串，汝聲為 Double），印原 JSON 相對照，十秒可定。
 
 #### 五、URLSession + async/await：與伺服器言
 
@@ -175,7 +175,7 @@ struct WeatherService {
 避坑之警：網絡二鐵律
 
 {class="mt-1"}
-① 連網必 async/await，絕不阻主線程——界面滯塞，崩潰級之驗也。Swift 結構化之並發使之自然，然勿忘 try await 與 do/catch。② ATS 默禁明文 HTTP：iOS 責以 HTTPS。試本地 http:// 之服時，須於 Info.plist 暫開例外（NSAppTransportSecurity），然正式之品必全行 HTTPS——審核亦監此。
+① 連網必 async/await，絕不阻主線程，界面滯塞，崩潰級之驗也。Swift 結構化之並發使之自然，然勿忘 try await 與 do/catch。② ATS 默禁明文 HTTP：iOS 責以 HTTPS。試本地 http:// 之服時，須於 Info.plist 暫開例外（NSAppTransportSecurity），然正式之品必全行 HTTPS——審核亦監此。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-予用戶以「人言」，予日誌以「原言」（print 完整 error）。勿以 error.localizedDescription 之英文天書直擲於用戶——產品之感，正藏於此等細節。
+予用戶以「人言」，予日誌以「原言」（print 完整 error）。勿以 error.localizedDescription 之英文天書直擲於用戶，產品之感，正藏於此等細節。
 
 {class="mt-1"}
-覓一免費名言之 API（如 hitokoto 之屬），以 URLSession + async/await 取「每日一句」，陳於屏心，加「換一句」之鈕。復以 SwiftData 貯所愛之句於「收藏之夾」。此習遍用 UserDefaults/SwiftData/Codable/URLSession——成之，則第 7、8 章直小菜一碟耳。
+覓一免費名言之 API（如 hitokoto 之屬），以 URLSession + async/await 取「每日一句」，陳於屏心，加「換一句」之鈕。復以 SwiftData 貯所愛之句於「收藏之夾」。此習遍用 UserDefaults/SwiftData/Codable/URLSession，成之，則第 7、8 章直小菜一碟耳。
 :::
 
 ::: div .chapter-summary

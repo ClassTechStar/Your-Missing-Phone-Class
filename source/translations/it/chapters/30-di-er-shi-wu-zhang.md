@@ -2,22 +2,22 @@
 id: di-er-shi-wu-zhang
 num: 25
 part: chao-yue-pian
-nav: Capitolo 25: Gestire gli smartphone usati e l'eredità digitale
+nav: Capitolo 25: Vendi il vecchio telefono? Fai prima queste cose
 toc: default
 kind: chapter
 ---
 
-### Capitolo 25: Gestione del telefono usato ed eredità digitale
+### Capitolo 25: Vendi il vecchio telefono? Fai prima queste cose
 
 {class="chapter-intro mb-4"}
 Ehi ragazzi, dopo oltre venti capitoli di "addestramento", dovresti essere cresciuto da "novizio digitale" a un utilizzatore di telefoni abbastanza disinvolto. Ma la vita tecnologica ha i suoi cicli — il nuovo amore diventa vecchio. Quando decidi di "ritirare" il tuo vecchio compagno, sai come salutarlo in modo dignitoso e sicuro?
 
-#### 1. "Eutanasia" del vecchio telefono: guida alla vendita o donazione sicura
+1. "Eutanasia" del vecchio telefono: guida alla vendita o donazione sicura
 
-Principio chiave: la pulizia dei dati non è "eliminazione", ma "sovrascrittura". Molti pensano che spostando le foto nel cestino e svuotando l'album sia tutto a posto; poi, dopo la cessione, il nuovo proprietario con un software di recupero dati ritrova vecchie foto, cronologia chat, foto della carta d'identità — queste "figuracce sociali" si ripetono ogni anno.
+Principio chiave: la pulizia dei dati non è "eliminazione", ma "sovrascrittura". Molti pensano che spostando le foto nel cestino e svuotando l'album sia tutto a posto; poi, dopo la cessione, il nuovo proprietario con un software di recupero dati ritrova vecchie foto, cronologia chat, foto della carta d'identità, queste "figuracce sociali" si ripetono ogni anno.
 
-1. <strong>"Pulizia generale" fai da te</strong>: completa l'ultimo backup integrale, esci da tutti gli account (iCloud, Huawei/Xiaomi/Samsung, Google), disattiva "Trova il mio telefono" — altrimenti il prossimo utente sarà bloccato dal blocco attivazione.
-2. <strong>"Formattazione" finale</strong>: il "ripristino di fabbrica" dei telefoni moderni di solito include una cancellazione crittografata — distrugge la chiave di cifratura stessa; una volta persa la chiave, tutti i dati sul disco diventano immediatamente illeggibili.
+1. <strong>"Pulizia generale" fai da te</strong>: completa l'ultimo backup integrale, esci da tutti gli account (iCloud, Huawei/Xiaomi/Samsung, Google), disattiva "Trova il mio telefono", altrimenti il prossimo utente sarà bloccato dal blocco attivazione.
+2. <strong>"Formattazione" finale</strong>: il "ripristino di fabbrica" dei telefoni moderni di solito include una cancellazione crittografata, distrugge la chiave di cifratura stessa; una volta persa la chiave, tutti i dati sul disco diventano immediatamente illeggibili.
 3. <strong>Ultimo "trucco di mascheramento" (solo per vecchi dispositivi)</strong>: i telefoni moderni (iOS 8+, Android 6+) hanno già la crittografia completa del disco (FBE) predefinita; il ripristino di fabbrica distrugge la chiave di cifratura, i dati sono teoricamente irreversibili, <strong>questo passaggio non serve</strong>. Solo per dispositivi molto vecchi non crittografati (anteriore al 2015) può essere necessario, dopo il ripristino di fabbrica, riempire la memoria con file spazzatura e poi eseguire di nuovo il ripristino.
 
 <strong>Tabella di consultazione rapida dei percorsi di cancellazione dati per brand</strong>: pur essendo simili i principi, ogni brand nasconde il "ripristino di fabbrica" in posizioni leggermente diverse; le differenze chiave sono le seguenti.
@@ -132,7 +132,7 @@ La persona designata non ha bisogno di un dispositivo Apple: con chiave e certif
 {class="font-semibold mt-4 mb-1"}
 ##### 3. "Gestione account inattivo" di Google: gestire il dopo di noi in automatico
 
-Google offre l'"Inactive Account Manager", in grado di eseguire automaticamente operazioni presetstate dopo un lungo periodo di inattività dell'utente — è uno dei meccanismi di eredità digitale più completi attualmente disponibili.
+Google offre l'"Inactive Account Manager", in grado di eseguire automaticamente operazioni presetstate dopo un lungo periodo di inattività dell'utente: è uno dei meccanismi di eredità digitale più completi attualmente disponibili.
 
 1. Visita <strong>myaccount.google.com/inactive</strong>, accedi al tuo account Google.
 2. Imposta il periodo di timeout: 3 / 6 / 12 / 18 mesi di inattività prima dell'attivazione.
@@ -166,7 +166,7 @@ Le principali piattaforme social cinesi trattano gli account dei defunti in due 
 
 Oltre agli account social, sempre più persone detengono <strong>asset digitali di vero valore</strong>, la cui successione è più complessa:
 
-- <strong>Criptovalute (Bitcoin, Ethereum, ecc.)</strong>: sul principio "la chiave privata è la proprietà", <strong>senza chiave privata l'asset è perso</strong>. Gli eredi non possono "ricorrere" on-chain con documenti legali. Consiglio: conservare la seed phrase/chiave privata in frammenti in più posizioni fisiche sicure (come cassetta di sicurezza in banca + cassaforte di casa) e indicare nel testamento le modalità di accesso.
+- <strong>Criptovalute (Bitcoin, Ethereum, ecc.)</strong>: sul principio "la chiave privata è la proprietà", <strong>senza chiave privata l'asset è perso</strong>. Gli eredi non possono "ricorrere" on-chain con documenti legali. Consiglio: conservare la seed phrase/chiave privata in frammenti in più posizioni fisiche sicure, (come cassetta di sicurezza in banca + cassaforte di casa) e indicare nel testamento le modalità di accesso.
 - <strong>Account sugli exchange</strong>: come i conti bancari, si può chiedere agli exchange (come Binance, OKX) la gestione con atto notarile di successione, ma le procedure su exchange cross-border sono lunghe.
 - <strong>Domini</strong>: sono beni ereditabili; gli eredi possono trasferirli presso il registrar (come Alibaba Cloud, GoDaddy) presentando l'atto notarile di successione.
 - <strong>Diritti di proprietà intellettuale (articoli originali, video, brevetti, diritti d'autore del software)</strong>: i diritti patrimoniali del diritto d'autore sono ereditabili (i diritti morali no); il diritto ai proventi spetta agli eredi fino a 50 anni dopo la morte dell'autore.
@@ -177,7 +177,7 @@ Oltre agli account social, sempre più persone detengono <strong>asset digitali 
 <i class="fas fa-skull-crossbones mr-2"></i>Il vero costo della "scomparsa" delle criptovalute
 
 {class="mt-1"}
-Secondo un rapporto Chainalysis, nel mondo sono già andati persi per sempre <strong>oltre 3 milioni di Bitcoin</strong> a causa di chiavi private smarrite, pari a circa un sesto del totale esistente. Se detieni criptoattività, assicurati che almeno una persona di assoluta fiducia conosca il <strong>percorso di recupero</strong> — altrimenti queste ricchezze resteranno per sempre addormentate sulla blockchain.
+Secondo un rapporto Chainalysis, nel mondo sono già andati persi per sempre <strong>oltre 3 milioni di Bitcoin</strong> a causa di chiavi private smarrite, pari a circa un sesto del totale esistente. Se detieni criptoattività, assicurati che almeno una persona di assoluta fiducia conosca il <strong>percorso di recupero</strong>. Altrimenti queste ricchezze resteranno per sempre addormentate sulla blockchain.
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -194,8 +194,8 @@ Il testamento patrimoniale tradizionale non copre gli asset digitali. Si consigl
 
 {class="list-disc pl-6 mb-2 space-y-0.5"}
 - Social: WeChat (account xxx), Weibo, Douyin, Bilibili, Xiaohongshu, ecc.
-- Pagamenti: Alipay, WeChat Pay, app delle varie banche
-- Cloud: iCloud, Huawei Cloud, Mi Cloud, account Google, account Microsoft
+- Pagamenti: Alipay, WeChat Pay, app delle varie banche.
+- Cloud: iCloud, Huawei Cloud, Mi Cloud, account Google, account Microsoft.
 - Email: QQ Mail, NetEase Mail, Gmail, ecc.
 - Altro: netdisk, servizi in abbonamento, account di gioco, ecc.
 
@@ -230,7 +230,7 @@ Il testamento patrimoniale tradizionale non copre gli asset digitali. Si consigl
 <i class="fas fa-exclamation-triangle mr-2"></i>Nota legale sulle "password"
 
 {class="mt-1"}
-Scrivere le password direttamente nel testamento comporta rischi di fughe di informazioni; una volta pubblicato, tutti gli eredi potrebbero vederle. <strong>È più prudente: nel testamento inserire solo "elenco account + volontà + luogo di custodia delle password", e trasmettere la vera password — tramite la master password del password manager — solo all'esecutore fiduciario</strong>. Così si rispettano le esigenze legali e si riduce il rischio di fughe.
+Scrivere le password direttamente nel testamento comporta rischi di fughe di informazioni; una volta pubblicato, tutti gli eredi potrebbero vederle. <strong>È più prudente: nel testamento inserire solo "elenco account + volontà + luogo di custodia delle password", e trasmettere la vera password — tramite la master password del password manager, solo all'esecutore fiduciario</strong>. Così si rispettano le esigenze legali e si riduce il rischio di fughe.
 :::
 
 #### 3. L'ultimo viaggio ecosostenibile
@@ -309,6 +309,6 @@ Il circuito di un telefono contiene metalli preziosi come <strong>oro, argento, 
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Per il tuo telefono principale, designa un "contatto per l'eredità" Apple o imposta l'"Inactive Account Manager" di Google.
-2. Usa il modello di questa sezione per redigere un "Allegato per la gestione degli asset digitali personali" e accordati con la famiglia sul luogo di conservazione.
+2. Usa il modello di questa sezione per redigere un "Allegato per la gestione degli asset digitali personali" , e accordati con la famiglia sul luogo di conservazione.
 3. Verifica se in casa ci sono 2 o più vecchi telefoni inutilizzati e prenota un ritiro ufficiale o su piattaforma regolare.
 :::

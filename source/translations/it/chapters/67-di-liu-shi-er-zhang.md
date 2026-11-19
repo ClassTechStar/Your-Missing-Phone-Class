@@ -42,7 +42,7 @@ struct ContentView: View {
 
 Punti chiave: una vista è uno struct conforme al protocollo View, la proprietà body descrive l'interfaccia, e i .modificatori() si concatenano a catena come una "truccatura". Questo è tutto il fondamento di SwiftUI.
 
-#### 2. Le viste di base: testo, pulsanti, campi di input, immagini
+2. Le viste di base: testo, pulsanti, campi di input, immagini
 
 ::: div .overflow-x-auto
 ```html
@@ -59,7 +59,7 @@ Nota bene Image(systemName:): Apple include la libreria di icone SF Symbols (mig
 
 - VStack: dispone in verticale (come la fila alla mensa);
 - HStack: dispone in orizzontale (come sedersi fianco a fianco);
-- ZStack: sovrappone (come carte da gioco impilate, ideale per badge e coperture).
+- ZStack: sovrappone (come carte da gioco impilate, ideale per badge e coperture)
 
 ::: div .code-block
 :::inline div .code-head
@@ -150,11 +150,11 @@ struct InputView: View {
 Figura 3: il flusso di dati a senso unico "stato → interfaccia" di SwiftUI
 :::
 
-#### 5. Anteprime, tema e animazioni: i "potenziamenti" di SwiftUI
+5. Anteprime, tema e animazioni: i "potenziamenti" di SwiftUI
 
 - La macro #Preview: aggiungi in fondo al file #Preview { ContentView() } e il canvas a destra esegue il rendering in tempo reale: modifichi il codice e vedi subito l'effetto;
 - Modalità scura gratis: usa i colori di sistema (Color(.systemGray6), .primary) invece dei colori fissi e l'adattamento alla modalità scura avviene da solo, senza scrivere una riga in più;
-- Animazioni in una riga: withAnimation { count += 1 } oppure aggiungi .animation(.default, value: count) alla vista: transizioni scorrevoli al punto giusto.
+- Animazioni in una riga: withAnimation { count += 1 } oppure aggiungi .animation(.default, value: count) alla vista: transizioni scorrevoli al punto giusto
 
 ::: div .code-block
 :::inline div .code-head
@@ -193,7 +193,7 @@ Il difetto tipico dei principianti è "mettersi a dibattere le animazioni prima 
 {class="font-semibold"}
 Mettiti alla prova: crea un "pulsante dell'umore"
 
-#### 6. Scheda rapida dei modificatori più usati: una pagina a portata di mano e l'interfaccia non è più un problema
+6. Scheda rapida dei modificatori più usati: una pagina a portata di mano e l'interfaccia non è più un problema
 
 ::: div .overflow-x-auto
 ```html

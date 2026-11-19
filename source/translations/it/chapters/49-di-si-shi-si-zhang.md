@@ -12,13 +12,13 @@ kind: chapter
 {class="chapter-intro mb-4"}
 La teoria è finita, ora si passa alle mani. Questo capitolo non è un tutorial da «copia e incolla», ma un metodo operativo su «come pensare, come chiedere, come verificare». Useremo tre progetti di difficoltà diversa per mostrare l'intero processo di ragionamento che porta dai requisiti al prodotto finito. Qualunque strumento tu usi, questo flusso vale lo stesso.
 
-#### 1. Progetto 1: un sito di strumenti personali minimalista (livello base)
+1. Progetto 1: un sito di strumenti personali minimalista (livello base)
 
 ##### 1. Pensare ai requisiti
 
 Obiettivo: creare una pagina web di strumenti personali che mostri l'ingresso di 3-4 piccoli strumenti utili. È un progetto di solo frontend, senza backend né database. L'importante non è quanto sono complicati gli strumenti, ma vivere l'intero percorso «dai requisiti al prodotto finito».
 
-Seguendo i cinque elementi dei requisiti: Who — uso personale. What — una pagina web che mostra l'ingresso degli strumenti. Why — raccogliere gli strumenti di uso quotidiano in un'unica pagina per averli comodi da raggiungere. How — un singolo file HTML+CSS+JS, senza framework. Constraint — completare entro 30 minuti, senza deploy.
+Seguendo i cinque elementi dei requisiti: Who, uso personale. What — una pagina web che mostra l'ingresso degli strumenti. Why — raccogliere gli strumenti di uso quotidiano in un'unica pagina per averli comodi da raggiungere. How — un singolo file HTML+CSS+JS, senza framework. Constraint — completare entro 30 minuti, senza deploy.
 
 ##### 2. Dare le istruzioni
 
@@ -52,7 +52,7 @@ Quando l'AI consegna il codice, fai l'accettazione con la verifica a tre livelli
 
 Se vuoi realizzare anche la funzione di qualche card (e non solo l'ingresso), puoi aggiungerla a poco a poco: a ogni giro aggiungi la funzione di uno strumento, la verifichi e poi passi al successivo. È proprio l'applicazione pratica della strategia dei «piccoli passi veloci».
 
-#### 2. Progetto 2: un sistema di contabilità full stack (livello intermedio)
+2. Progetto 2: un sistema di contabilità full stack (livello intermedio)
 
 ##### 1. Pensare ai requisiti e scrivere il PRD
 
@@ -125,15 +125,15 @@ Fornisci la struttura completa del codice backend.
 ```
 :::
 
-Nota i tratti di questa istruzione: descrive solo il passo in corso (lo scheletro del backend), senza intrecciare richieste sul frontend; elenca esplicitamente campi e interfacce (dando all'AI vincoli a sufficienza), ma lascia all'AI i dettagli realizzativi; segue il principio Goal-Driven Execution — dice «cosa fare» e non «come farlo».
+Nota i tratti di questa istruzione: descrive solo il passo in corso (lo scheletro del backend), senza intrecciare richieste sul frontend; elenca esplicitamente campi e interfacce (dando all'AI vincoli a sufficienza), ma lascia all'AI i dettagli realizzativi; segue il principio Goal-Driven Execution, dice «cosa fare» e non «come farlo».
 
 Appena l'AI consegna il codice, verifica subito: avvia il server e prova con curl o Postman che ogni interfaccia risponda correttamente. Se tutto torna, apri un nuovo dialogo per lo Step 2 (pagine di base del frontend). A ogni passo si ripete il ciclo «istruzione-verifica-nuovo dialogo».
 
-#### 3. Progetto 3: un'applicazione potenziata dall'AI (livello avanzato)
+3. Progetto 3: un'applicazione potenziata dall'AI (livello avanzato)
 
 ##### 1. Immaginare il progetto
 
-Obiettivo: un'applicazione collegata alle API dei grandi modelli — per esempio un «assistente di studio AI»: l'utente inserisce il materiale da studiare e l'AI genera il riassunto, collega i concetti, consiglia risorse per lo studio. La particolarità del progetto è questa: la tua applicazione in prima persona chiama l'AI, e quindi devi affrontare problemi nuovi come le chiamate API, il prompt engineering e la gestione degli errori.
+Obiettivo: un'applicazione collegata alle API dei grandi modelli: per esempio un «assistente di studio AI»: l'utente inserisce il materiale da studiare e l'AI genera il riassunto, collega i concetti, consiglia risorse per lo studio. La particolarità del progetto è questa: la tua applicazione in prima persona chiama l'AI, e quindi devi affrontare problemi nuovi come le chiamate API, il prompt engineering e la gestione degli errori.
 
 La lezione più importante che questo progetto ti insegna è: quando «usi l'AI per scrivere codice che chiama l'AI», devi fare particolare attenzione al prompt engineering. Anche i prompt che la tua applicazione usa per chiamare le API dei grandi modelli devono rispettare i principi discussi in questa guida: chiarezza, essenzialità, orientamento all'obiettivo.
 
@@ -144,9 +144,9 @@ Questo progetto tocca alcuni punti tecnici che non hai incontrato nei due proget
 - Gestione delle chiavi API: le chiavi non vanno mai scritte direttamente nel codice, si gestiscono con le variabili d'ambiente;
 - Gestione delle risposte in streaming: le risposte dei grandi modelli di solito arrivano in streaming e vanno mostrate parola dopo parola;
 - Controllo del consumo di token: i grandi modelli fatturano a token, quindi il consumo va controllato a livello di applicazione;
-- Gestione dei template di prompt: funzioni diverse usano template di prompt diversi, e vanno gestiti in modo strutturato.
+- Gestione dei template di prompt: funzioni diverse usano template di prompt diversi, e vanno gestiti in modo strutturato
 
-Tutti questi punti tecnici puoi farli realizzare dall'AI, ma devi capirne il «perché» — perché le chiavi non si scrivono nel codice? Perché servono le risposte in streaming? Perché il consumo di token va controllato? Solo capendo il «perché» potrai giudicare se la soluzione proposta dall'AI è sensata.
+Tutti questi punti tecnici puoi farli realizzare dall'AI, ma devi capirne il «perché», perché le chiavi non si scrivono nel codice? Perché servono le risposte in streaming? Perché il consumo di token va controllato? Solo capendo il «perché» potrai giudicare se la soluzione proposta dall'AI è sensata.
 
 #### 4. La checklist operativa universale
 
@@ -175,7 +175,7 @@ Riepilogo del capitolo
 
 - Progetto 1 (base): sito di strumenti in puro frontend — per percorrere l'intero flusso, completabile in 30 minuti
 - Progetto 2 (intermedio): sistema di contabilità full stack — PRD + file di memoria + realizzazione in 5 passi, ogni passo «utilizzabile»
-- Progetto 3 (avanzato): assistente di studio AI — usare l'AI per scrivere codice che chiama l'AI, con attenzione al prompt engineering
+- Progetto 3 (avanzato): assistente di studio AI, usare l'AI per scrivere codice che chiama l'AI, con attenzione al prompt engineering
 - Il flusso universale in 8 passi: requisiti → scomposizione → PRD → file di memoria → realizzazione passo a passo → test → revisione → iterazione
 - Ogni passo segue il ciclo «istruzione-verifica-nuovo dialogo»
 :::

@@ -10,11 +10,11 @@ kind: chapter
 ### Chapitre 42 : Panorama des grands modèles et pratique de l'API
 
 {class="chapter-intro mb-4"}
-Les chapitres précédents portaient sur « comment collaborer avec l'IA » ; celui-ci répond à une question plus fondamentale : « quel IA choisir, et comment l'utiliser ? » Le paysage des grands modèles en août 2026 est d'une richesse extrême — à l'international, la rivalité des trois géants GPT, Claude et Gemini ; en Chine, une floraison de DeepSeek, Tongyi Qianwen, GLM, Kimi et Doubao. Chaque modèle a son tempérament et ses points forts : bien choisir, c'est un effort moitié moindre pour un résultat double ; mal choisir, l'inverse. Ce chapitre te présente ces modèles, t'apprend à les connecter à tes applications via une API et t'aide à choisir le Token Plan (forfait d'usage) adapté à tes besoins.
+Les chapitres précédents portaient sur « comment collaborer avec l'IA » ; celui-ci répond à une question plus fondamentale : « quel IA choisir, et comment l'utiliser ? » Le paysage des grands modèles en août 2026 est d'une richesse extrême, à l'international, la rivalité des trois géants GPT, Claude et Gemini ; en Chine, une floraison de DeepSeek, Tongyi Qianwen, GLM, Kimi et Doubao. Chaque modèle a son tempérament et ses points forts : bien choisir, c'est un effort moitié moindre pour un résultat double ; mal choisir, l'inverse. Ce chapitre te présente ces modèles, t'apprend à les connecter à tes applications via une API et t'aide à choisir le Token Plan (forfait d'usage) adapté à tes besoins.
 
 #### 1. Les grands modèles internationaux : un trio de tête
 
-En août 2026, le marché international des grands modèles s'organise autour d'un trio : OpenAI (série GPT), Anthropic (série Claude) et Google (série Gemini). Chacun a une identité bien marquée — faisons connaissance un par un.
+En août 2026, le marché international des grands modèles s'organise autour d'un trio : OpenAI (série GPT), Anthropic (série Claude) et Google (série Gemini). Chacun a une identité bien marquée: faisons connaissance un par un.
 
 ##### 1. La série OpenAI GPT-5.6 : le généraliste au profil sans faille
 
@@ -29,7 +29,7 @@ OpenAI a déclenché la vague des grands modèles, et la série GPT demeure le p
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Tarifs de la série OpenAI GPT-5.6 (août 2026)
 
-L'atout majeur de la série GPT, c'est son équilibre — raisonnement, code, écriture, multimodal : aucun point faible marqué. Ajoute l'immense écosystème de plugins et la communauté de développeurs d'OpenAI : la documentation et la chaîne d'outils sont les plus complètes du marché. Pour les cas où « on ne sait pas quoi choisir », GPT est la réponse par défaut, celle qu'on peut choisir les yeux fermés. Ses faiblesses : l'accès depuis la Chine exige un réseau particulier, l'expression chinoise sonne parfois « traduite », et le prix de l'API se situe dans le haut du panier.
+L'atout majeur de la série GPT, c'est son équilibre, raisonnement, code, écriture, multimodal : aucun point faible marqué. Ajoute l'immense écosystème de plugins et la communauté de développeurs d'OpenAI : la documentation et la chaîne d'outils sont les plus complètes du marché. Pour les cas où « on ne sait pas quoi choisir », GPT est la réponse par défaut, celle qu'on peut choisir les yeux fermés. Ses faiblesses : l'accès depuis la Chine exige un réseau particulier, l'expression chinoise sonne parfois « traduite », et le prix de l'API se situe dans le haut du panier.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -43,7 +43,7 @@ En août 2026, OpenAI a annoncé que le modèle par défaut des utilisateurs gra
 
 Si GPT est le polyvalent, Claude est le « sommet » du domaine de la programmation. La série Claude d'Anthropic domine depuis longtemps, avec une avance écrasante, le SWE-bench (benchmark d'ingénierie logicielle) : première du secteur pour la qualité de génération de code et la capacité à mener des projets de niveau ingénierie. Détail précieux : le taux d'hallucination de Claude (probabilité de produire de fausses informations) est le plus bas du marché, environ 1 % — parfait pour les scénarios de haute précision comme la recherche ou le juridique.
 
-L'autre arme secrète de Claude est son très long contexte : une fenêtre de 1 million de Token, capable d'« avaler » d'un coup des centaines de pages de contrat ou une bibliothèque de code entière sans perdre un détail. Presque irremplaçable pour le refactoring de code ou l'analyse de longs documents. Claude Code, l'outil de programmation IA en terminal, atteignait mi-2026 un revenu annualisé de 2,5 milliards de dollars — la meilleure preuve de la reconnaissance des talents de Claude en programmation.
+L'autre arme secrète de Claude est son très long contexte : une fenêtre de 1 million de Token, capable d'« avaler » d'un coup des centaines de pages de contrat ou une bibliothèque de code entière sans perdre un détail. Presque irremplaçable pour le refactoring de code ou l'analyse de longs documents. Claude Code, l'outil de programmation IA en terminal, atteignait mi-2026 un revenu annualisé de 2,5 milliards de dollars, la meilleure preuve de la reconnaissance des talents de Claude en programmation.
 
 ::: div .overflow-x-auto
 ```html
@@ -85,7 +85,7 @@ En 2026, les grands modèles chinois ne sont plus des « poursuivants » mais de
 
 ##### 1. DeepSeek V4 : le roi du rapport qualité-prix
 
-DeepSeek est un phénomène parmi les grands modèles chinois. Début 2025, DeepSeek-V3 a secoué le marché avec son positionnement « dix fois moins cher que GPT pour une capacité équivalente », au point que le milieu parle de sa « ligne d'élimination de l'IA générale » : moins cher que lui, c'est moins bon ; plus cher, rien ne délivre autant de volume. En août 2026 est sortie la version officielle de DeepSeek V4-Pro : architecture MoE de 1,6 billion de paramètres avec environ 49B activés, contexte sans perte d'1 million de Token — son rapport qualité-prix en code est largement considéré comme le plafond mondial.
+DeepSeek est un phénomène parmi les grands modèles chinois. Début 2025, DeepSeek-V3 a secoué le marché avec son positionnement « dix fois moins cher que GPT pour une capacité équivalente », au point que le milieu parle de sa « ligne d'élimination de l'IA générale » : moins cher que lui, c'est moins bon ; plus cher, rien ne délivre autant de volume. En août 2026 est sortie la version officielle de DeepSeek V4-Pro : architecture MoE de 1,6 billion de paramètres avec environ 49B activés, contexte sans perte d'1 million de Token, son rapport qualité-prix en code est largement considéré comme le plafond mondial.
 
 DeepSeek V4 a fait un bond considérable en capacités d'Agent : le benchmark DeepSWE est passé de 12,8 à 62,7 (+390 %) et NL2Repo de 38,5 à 61,5. Son API ajoute la prise en charge du double protocole Responses API et Anthropic API, qui le rend compatible avec les grands outils de programmation comme Codex et Claude Code. Autrement dit, tu peux remplacer l'API de Claude par celle de DeepSeek dans Claude Code — pour un coût divisé plusieurs fois, avec une expérience presque identique.
 
@@ -121,11 +121,11 @@ La série Qwen (Tongyi Qianwen) d'Alibaba Cloud s'appuie sur son écosystème cl
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Tarification par paliers de la série Qwen de Tongyi Qianwen (août 2026)
 
-Qwen pratique une tarification par paliers — du très économique qwen-turbo (sortie à 0,6 yuan/million de Token) au vaisseau amiral qwen3.7-max (sortie à 36 yuans/million de Token), couvrant tous les besoins, de la simple Q&R au raisonnement complexe. Pour les entreprises déjà sur Alibaba Cloud, Qwen est l'option d'intégration la plus naturelle.
+Qwen pratique une tarification par paliers, du très économique qwen-turbo (sortie à 0,6 yuan/million de Token) au vaisseau amiral qwen3.7-max (sortie à 36 yuans/million de Token), couvrant tous les besoins, de la simple Q&R au raisonnement complexe. Pour les entreprises déjà sur Alibaba Cloud, Qwen est l'option d'intégration la plus naturelle.
 
 ##### 3. GLM-5.1 de Zhipu : premier chinois au SWE-bench
 
-La série GLM de Zhipu AI brille en 2026. GLM-5.1 décroche la première place chinoise au SWE-bench : architecture hybride dense MoE de 744B, contexte d'1 million de Token. Il se distingue par une compréhension sémantique du chinois très précise et un déploiement privé conforme aux règles chinoises — essentiel pour la finance et l'administration, très exigeantes en sécurité des données. GLM-5.1 est facturé 6 yuans en entrée et 24 yuans en sortie par million de Token, soit le milieu du panier chinois.
+La série GLM de Zhipu AI brille en 2026. GLM-5.1 décroche la première place chinoise au SWE-bench : architecture hybride dense MoE de 744B, contexte d'1 million de Token. Il se distingue par une compréhension sémantique du chinois très précise et un déploiement privé conforme aux règles chinoises, essentiel pour la finance et l'administration, très exigeantes en sécurité des données. GLM-5.1 est facturé 6 yuans en entrée et 24 yuans en sortie par million de Token, soit le milieu du panier chinois.
 
 ##### 4. Kimi K3 : le roi du très long texte
 
@@ -210,18 +210,18 @@ Figure 5 : la méthode des quatre questions pour choisir un grand modèle
 Astuce : la stratégie de combinaison
 
 {class="mt-1"}
-Cette méthode n'est pas un dogme — beaucoup de scénarios demandent de combiner plusieurs modèles. Une combinaison courante : DeepSeek ou Qwen pour le développement quotidien (coût bas, bon en chinois), Claude pour les décisions d'architecture critiques (raisonnement puissant, peu d'hallucinations), Gemini pour l'analyse multimodale (traitement des images et vidéos). Change de modèle selon le besoin, au lieu de « faire vivre un seul modèle jusqu'au bout ».
+Cette méthode n'est pas un dogme, beaucoup de scénarios demandent de combiner plusieurs modèles. Une combinaison courante : DeepSeek ou Qwen pour le développement quotidien (coût bas, bon en chinois), Claude pour les décisions d'architecture critiques (raisonnement puissant, peu d'hallucinations), Gemini pour l'analyse multimodale (traitement des images et vidéos). Change de modèle selon le besoin, au lieu de « faire vivre un seul modèle jusqu'au bout ».
 :::
 
-#### 4. Premiers pas avec l'API : brancher un grand modèle à partir de zéro
+4. Premiers pas avec l'API : brancher un grand modèle à partir de zéro
 
-Beaucoup de tutos de programmation IA se limitent à l'interface de discussion, mais la vraie « programmation IA » — faire appeler un grand modèle par ton application — passe par une API. Une API (Application Programming Interface) est un protocole de communication entre programmes. Via l'API, ton code peut mobiliser la puissance d'un grand modèle comme s'il appelait une simple fonction.
+Beaucoup de tutos de programmation IA se limitent à l'interface de discussion, mais la vraie « programmation IA », faire appeler un grand modèle par ton application — passe par une API. Une API (Application Programming Interface) est un protocole de communication entre programmes. Via l'API, ton code peut mobiliser la puissance d'un grand modèle comme s'il appelait une simple fonction.
 
 ##### 1. Qu'est-ce qu'un Token
 
 Avant d'aborder l'API, il faut comprendre la notion de « Token ». Le Token est l'unité de facturation de base des grands modèles — l'« unité de lecture et d'écriture de l'IA ». Un Token correspond environ à 0,75 mot anglais (4 caractères) ou à 0,5 à 1 caractère chinois. Un texte chinois de 1000 caractères consomme à peu près 1500 à 2000 Token.
 
-Un Token n'est ni un mot ni un caractère. Les grands modèles découpent le texte en Token grâce à un tokenizer dédié. Le même mot peut donner un nombre différent de Token selon le modèle — un même terme peut ainsi valoir 3 Token dans GPT et 2 dans DeepSeek. La plupart des API renvoient le nombre de Token réellement consommé : tu peux le vérifier dans la réponse de l'API.
+Un Token n'est ni un mot ni un caractère. Les grands modèles découpent le texte en Token grâce à un tokenizer dédié. Le même mot peut donner un nombre différent de Token selon le modèle, un même terme peut ainsi valoir 3 Token dans GPT et 2 dans DeepSeek. La plupart des API renvoient le nombre de Token réellement consommé : tu peux le vérifier dans la réponse de l'API.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -233,7 +233,7 @@ Un million de caractères chinois équivaut à environ 1,5 million de Token. Tra
 
 ##### 2. Obtenir une clé API
 
-La première étape pour utiliser l'API d'un grand modèle est d'obtenir une clé API — une chaîne secrète servant à l'authentification. Chaque fournisseur de modèles a sa propre plateforme API : crée un compte puis génère ta clé API. Voici les portails API des modèles principaux et la marche à suivre :
+La première étape pour utiliser l'API d'un grand modèle est d'obtenir une clé API, une chaîne secrète servant à l'authentification. Chaque fournisseur de modèles a sa propre plateforme API : crée un compte puis génère ta clé API. Voici les portails API des modèles principaux et la marche à suivre :
 
 ::: div .overflow-x-auto
 ```html
@@ -249,12 +249,12 @@ Plateformes API des grands modèles et obtention des clés (août 2026)
 Conseil sécurité : ta clé API = le mot de passe de ton portefeuille
 
 {class="mt-1"}
-La clé API vaut le mot de passe de ton portefeuille — quiconque la détient peut consommer ton quota. Donc : n'écris jamais une clé API dans le code (gère-la par variables d'environnement) ; ne pousse jamais de code contenant la clé vers un dépôt Git public ; ne partage jamais de capture d'écran où elle apparaît. Si la clé fuit, supprime-la immédiatement sur la plateforme et recrée-en une.
+La clé API vaut le mot de passe de ton portefeuille, quiconque la détient peut consommer ton quota. Donc : n'écris jamais une clé API dans le code (gère-la par variables d'environnement) ; ne pousse jamais de code contenant la clé vers un dépôt Git public ; ne partage jamais de capture d'écran où elle apparaît. Si la clé fuit, supprime-la immédiatement sur la plateforme et recrée-en une.
 :::
 
 ##### 3. Ton premier appel d'API
 
-Une fois la clé API en main, tu peux appeler l'API d'un grand modèle dans n'importe quel langage de programmation. Voici en Python l'appel le plus simple — envoyer un message à DeepSeek et récupérer sa réponse.
+Une fois la clé API en main, tu peux appeler l'API d'un grand modèle dans n'importe quel langage de programmation. Voici en Python l'appel le plus simple, envoyer un message à DeepSeek et récupérer sa réponse.
 
 ::: div .code-block
 :::inline div .code-head
@@ -334,7 +334,7 @@ client = OpenAI(
 
 ##### 4. Traiter les réponses en flux
 
-En pratique, tu ne veux généralement pas attendre que l'IA ait tout écrit avant d'afficher d'un bloc — l'utilisateur attendrait trop. La réponse en flux (streaming) affiche le texte mot à mot pendant que l'IA génère, ce qui améliore nettement l'expérience : comme sur une machine à écrire, les caractères jaillissent un à un, et la sensation est tout autre.
+En pratique, tu ne veux généralement pas attendre que l'IA ait tout écrit avant d'afficher d'un bloc, l'utilisateur attendrait trop. La réponse en flux (streaming) affiche le texte mot à mot pendant que l'IA génère, ce qui améliore nettement l'expérience : comme sur une machine à écrire, les caractères jaillissent un à un, et la sensation est tout autre.
 
 ::: div .code-block
 :::inline div .code-head
@@ -374,7 +374,7 @@ La plupart des fournisseurs proposent deux modes de facturation : le paiement à
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Comparaison des deux modes de facturation
 
-Pour débuter, commence par le paiement à l'usage — aucun prépaiement, tu ne dépenses que ce que tu consommes. Quand ton volume mensuel se stabilise (par exemple au-delà de 50 yuans par mois), envisage de passer à l'abonnement pour un prix unitaire plus bas.
+Pour débuter, commence par le paiement à l'usage, aucun prépaiement, tu ne dépenses que ce que tu consommes. Quand ton volume mensuel se stabilise (par exemple au-delà de 50 yuans par mois), envisage de passer à l'abonnement pour un prix unitaire plus bas.
 
 ##### 2. Tour d'horizon des abonnements principaux
 
@@ -429,7 +429,7 @@ Choisir le bon modèle n'est que la première étape : savoir « dépenser malin
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Stratégies d'optimisation des coûts et leurs effets (août 2026)
 
-#### 6. En pratique : intégrer l'API d'un grand modèle dans un projet
+6. En pratique : intégrer l'API d'un grand modèle dans un projet
 
 Terminons ce chapitre par un exercice complet : créer un « générateur de résumés IA ». L'utilisateur saisit un long texte, on appelle l'API d'un grand modèle pour en produire un résumé. Cet exercice montre le parcours complet d'un appel d'API : configuration de l'environnement, appel, gestion des erreurs, maîtrise des coûts.
 
@@ -511,7 +511,7 @@ if __name__ == "__main__":
 ```
 :::
 
-Ce code illustre plusieurs bonnes pratiques de l'appel d'API : la clé API est lue depuis une variable d'environnement, jamais codée en dur ; la fonction est bien documentée, avec des annotations de type ; max_tokens limite la longueur de la sortie ; temperature est réglée bas (0,3) pour des réponses plus stables ; la gestion des erreurs est complète ; les informations de consommation de tokens sont renvoyées pour suivre les coûts. Quand tu demandes à l'IA d'écrire ce code, tu peux lui transmettre ces exigences — elle est tout à fait capable de les implémenter.
+Ce code illustre plusieurs bonnes pratiques de l'appel d'API : la clé API est lue depuis une variable d'environnement, jamais codée en dur ; la fonction est bien documentée, avec des annotations de type ; max_tokens limite la longueur de la sortie ; temperature est réglée bas (0,3) pour des réponses plus stables ; la gestion des erreurs est complète ; les informations de consommation de tokens sont renvoyées pour suivre les coûts. Quand tu demandes à l'IA d'écrire ce code, tu peux lui transmettre ces exigences: elle est tout à fait capable de les implémenter.
 
 :::inline div .quote-line
 La leçon finale de ce chapitre : les modèles sont les "munitions", la méthodologie est la "tactique". Bien choisir ses munitions facilite le combat, mais sans bonne tactique, les meilleures munitions ne gagnent pas la guerre. Tu connais désormais les spécificités de chaque modèle et l'usage de leur API : ton "arsenal" est complet – comment mener ce combat, c'est la méthodologie des chapitres précédents qui te le dira.

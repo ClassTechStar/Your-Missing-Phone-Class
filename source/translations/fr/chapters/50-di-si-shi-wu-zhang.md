@@ -2,21 +2,21 @@
 id: di-si-shi-wu-zhang
 num: 45
 part: ai-biancheng-pian
-nav: Chapitre 45 : Assurance qualité — rendre fiable le code de l'IA
+nav: Chapitre 45 : L'IA a écrit, mais ce n'est pas fini
 toc: default
 kind: chapter
 ---
 
-### Chapitre 45 : L'assurance qualité — rendre fiable le code écrit par l'IA
+### Chapitre 45 : L'IA a écrit, mais ce n'est pas fini
 
 {class="chapter-intro mb-4"}
-Le code écrit par l'IA a une particularité : il « a l'air juste » — variables bien nommées, commentaires complets, logique claire. Mais « avoir l'air juste » ne veut pas dire « être juste ». Les problèmes cachés dans le code IA sont souvent plus difficiles à repérer que dans un code écrit à la main, car sa qualité de surface est telle qu'elle endort la vigilance. Ce chapitre t'apprend à mettre en place un véritable dispositif d'assurance qualité pour le code IA — trois lignes de défense (tests, relecture, gestion de versions) pour transformer l'« avoir l'air juste » en « être juste ».
+Le code écrit par l'IA a une particularité : il « a l'air juste », variables bien nommées, commentaires complets, logique claire. Mais « avoir l'air juste » ne veut pas dire « être juste ». Les problèmes cachés dans le code IA sont souvent plus difficiles à repérer que dans un code écrit à la main, car sa qualité de surface est telle qu'elle endort la vigilance. Ce chapitre t'apprend à mettre en place un véritable dispositif d'assurance qualité pour le code IA, trois lignes de défense (tests, relecture, gestion de versions) pour transformer l'« avoir l'air juste » en « être juste ».
 
 #### 1. Piloter par les tests : fais écrire les tests par l'IA
 
-Les tests sont la première ligne de défense de la qualité en programmation IA. Bonne nouvelle : faire écrire des tests par l'IA est plus simple et plus fiable que lui faire écrire du code fonctionnel — car le comportement attendu d'un test est explicite, ce qui limite le risque d'un code « qui a l'air juste sans l'être ».
+Les tests sont la première ligne de défense de la qualité en programmation IA. Bonne nouvelle : faire écrire des tests par l'IA est plus simple et plus fiable que lui faire écrire du code fonctionnel, car le comportement attendu d'un test est explicite, ce qui limite le risque d'un code « qui a l'air juste sans l'être ».
 
-Le processus de programmation IA pilotée par les tests : d'abord, l'IA écrit le code fonctionnel ; une fois les fonctions de base validées, elle écrit immédiatement les cas de test. Ces cas doivent couvrir le chemin normal, les cas limites et les cas d'erreur. Ensuite, l'IA corrige le code fonctionnel d'après les résultats des tests. L'intérêt du processus : une fois écrits, les tests deviennent un outil de vérification permanent — toute modification ultérieure peut être contrôlée en les relançant, pour confirmer qu'aucune régression ne s'est glissée.
+Le processus de programmation IA pilotée par les tests : d'abord, l'IA écrit le code fonctionnel ; une fois les fonctions de base validées, elle écrit immédiatement les cas de test. Ces cas doivent couvrir le chemin normal, les cas limites et les cas d'erreur. Ensuite, l'IA corrige le code fonctionnel d'après les résultats des tests. L'intérêt du processus : une fois écrits, les tests deviennent un outil de vérification permanent, toute modification ultérieure peut être contrôlée en les relançant, pour confirmer qu'aucune régression ne s'est glissée.
 
 ::: div .code-block
 :::inline div .code-head
@@ -56,11 +56,11 @@ Même avec des tests, tu dois relire toi-même le code produit par l'IA. Relire 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Les dimensions clés de la relecture du code IA
 
-Pas besoin de tout vérifier toi-même point par point — demande à l'IA de faire une première passe. Par exemple : « Relis ce code sous l'angle sécurité, gestion d'erreurs et performance, et signale les problèmes potentiels. » La capacité d'auto-relecture de l'IA progresse sans cesse : elle ne remplace pas l'humain, mais filtre la plupart des problèmes évidents.
+Pas besoin de tout vérifier toi-même point par point, demande à l'IA de faire une première passe. Par exemple : « Relis ce code sous l'angle sécurité, gestion d'erreurs et performance, et signale les problèmes potentiels. » La capacité d'auto-relecture de l'IA progresse sans cesse : elle ne remplace pas l'humain, mais filtre la plupart des problèmes évidents.
 
-#### 3. Le contrôle de versions : le rôle de Git en programmation IA
+3. Le contrôle de versions : le rôle de Git en programmation IA
 
-Git joue un rôle encore plus important en programmation IA qu'en programmation classique. Chaque modification de l'IA peut introduire des changements imprévisibles : il te faut un remède antiregret fiable — et le contrôle de versions, c'est exactement ça.
+Git joue un rôle encore plus important en programmation IA qu'en programmation classique. Chaque modification de l'IA peut introduire des changements imprévisibles : il te faut un remède antiregret fiable: et le contrôle de versions, c'est exactement ça.
 
 La meilleure pratique Git en programmation IA : « commit fréquent, avancement par petits pas ». Dès qu'un point de fonctionnalité vérifiable est terminé, committe. Ainsi, si une modification de l'IA pose problème, tu peux revenir précisément au dernier état utilisable, sans jeter tout le travail.
 
@@ -69,7 +69,7 @@ Autre astuce précieuse : « l'isolation par branche ». Pour une modification a
 1. Avant chaque modification par l'IA, vérifie que l'espace de travail est propre (aucun changement non commité). Ainsi, si le résultat ne te plaît pas, un simple git checkout . suffit pour revenir en arrière.
 2. Après chaque modification de l'IA, dès que la vérification passe, commite immédiatement. Le message de commit décrit ce que la modification apporte, par exemple « feat : ajout de l'inscription des utilisateurs ».
 3. Pour une grande refactorisation, crée d'abord une branche : git checkout -b refactor/auth-system. Termine les modifications sur cette branche et fusionne une fois les tests passés.
-4. Prends l'habitude de consulter le diff. Après chaque modification de l'IA, regarde avec git diff ce qui a précisément changé. Cela t'aide à repérer les problèmes — et à apprendre en lisant le code.
+4. Prends l'habitude de consulter le diff. Après chaque modification de l'IA, regarde avec git diff ce qui a précisément changé. Cela t'aide à repérer les problèmes, et à apprendre en lisant le code.
 
 #### 4. Les pièges classiques et comment les éviter
 
@@ -77,26 +77,26 @@ En programmation IA, quelques pièges reviennent sans cesse et presque tous les 
 
 ##### 1. Piège n° 1 : la confiance aveugle
 
-« Le code écrit par l'IA a l'air très professionnel, il ne peut pas y avoir de souci ? » — c'est le piège le plus dangereux. Le code généré par l'IA est impeccable en surface — noms normalisés, commentaires complets, structure claire — et cette « impression de professionnalisme » endort la vigilance. Mais la propreté de surface ne garantit pas la justesse de la logique. L'antidote : valide toujours par les tests, jamais à l'œil.
+« Le code écrit par l'IA a l'air très professionnel, il ne peut pas y avoir de souci ? », c'est le piège le plus dangereux. Le code généré par l'IA est impeccable en surface, noms normalisés, commentaires complets, structure claire — et cette « impression de professionnalisme » endort la vigilance. Mais la propreté de surface ne garantit pas la justesse de la logique. L'antidote : valide toujours par les tests, jamais à l'œil.
 
 ##### 2. Piège n° 2 : le gonflement
 
-« Puisque l'IA écrit le code pour moi, autant faire des fonctionnalités bien complètes ? » — voilà la recette du code gonflé. L'IA adore en « faire trop » : tu lui demandes une page de connexion, elle te livre un système de gestion d'utilisateurs complet. Les fonctions superflues ajoutent de la complexité et multiplient les risques de bug. L'antidote : applique strictement le principe « Simplicity First » et dis clairement à l'IA « fais uniquement cette fonctionnalité, n'ajoute rien de plus ».
+« Puisque l'IA écrit le code pour moi, autant faire des fonctionnalités bien complètes ? », voilà la recette du code gonflé. L'IA adore en « faire trop » : tu lui demandes une page de connexion, elle te livre un système de gestion d'utilisateurs complet. Les fonctions superflues ajoutent de la complexité et multiplient les risques de bug. L'antidote : applique strictement le principe « Simplicity First » et dis clairement à l'IA « fais uniquement cette fonctionnalité, n'ajoute rien de plus ».
 
 ##### 3. Piège n° 3 : la compréhension
 
-« L'IA comprendra ce que je veux dire, non ? » — pas forcément. Sa capacité de compréhension est grande, mais face à un besoin flou, elle « devine ». Quand elle devine faux, le code produit est faux. Pire : ce code erroné a souvent « l'air très cohérent », ce qui te fait croire à tort qu'elle a compris. L'antidote : donne assez de détails concrets dans tes instructions pour réduire la place laissée à la devinette.
+« L'IA comprendra ce que je veux dire, non ? », pas forcément. Sa capacité de compréhension est grande, mais face à un besoin flou, elle « devine ». Quand elle devine faux, le code produit est faux. Pire : ce code erroné a souvent « l'air très cohérent », ce qui te fait croire à tort qu'elle a compris. L'antidote : donne assez de détails concrets dans tes instructions pour réduire la place laissée à la devinette.
 
 ##### 4. Piège n° 4 : le contexte
 
-« Je l'ai déjà dit dans une conversation précédente, l'IA s'en souviendra, non ? » — très probablement non. Quand la conversation s'allonge ou qu'une nouvelle session s'ouvre, l'IA perd le contexte du début. Si une contrainte clé n'a pas été consignée dans le fichier mémoire du projet, elle sera très probablement ignorée dans les modifications suivantes. L'antidote : écris les contraintes clés dans le fichier mémoire du projet, ne compte pas sur la mémoire de la conversation.
+« Je l'ai déjà dit dans une conversation précédente, l'IA s'en souviendra, non ? », très probablement non. Quand la conversation s'allonge ou qu'une nouvelle session s'ouvre, l'IA perd le contexte du début. Si une contrainte clé n'a pas été consignée dans le fichier mémoire du projet, elle sera très probablement ignorée dans les modifications suivantes. L'antidote : écris les contraintes clés dans le fichier mémoire du projet, ne compte pas sur la mémoire de la conversation.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Les quatre pièges en un clin d'œil
 
 {class="mt-1"}
-La confiance aveugle — méfie-toi de ce qui « a l'air juste » ; le gonflement — l'IA adore en « faire trop » ; la compréhension — face au flou, elle « devine » ; le contexte — la mémoire de la conversation « oublie ». Les antidotes : valider par les tests, couper le superflu, donner assez de détails, consigner dans le fichier mémoire.
+La confiance aveugle: méfie-toi de ce qui « a l'air juste » ; le gonflement — l'IA adore en « faire trop » ; la compréhension, face au flou, elle « devine » ; le contexte: la mémoire de la conversation « oublie ». Les antidotes : valider par les tests, couper le superflu, donner assez de détails, consigner dans le fichier mémoire.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -111,7 +111,7 @@ Si tu as déjà commencé le projet 1 (le site d'outils) : 1) demande à l'IA d'
 {class="font-semibold mb-1"}
 L'essentiel du chapitre
 
-- Le code IA « qui a l'air juste » ≠ « qui est juste » — une trop belle surface endort la vigilance
+- Le code IA « qui a l'air juste » ≠ « qui est juste », une trop belle surface endort la vigilance
 - Fais écrire les tests par l'IA : liste explicitement les cas normaux / limites / erreurs pour éviter le « test au choix »
 - Relis selon cinq dimensions : sécurité, gestion d'erreurs, performance, maintenabilité, dépendances
 - Git, ton remède antiregret : commits fréquents, petits pas, branches isolées, diff au quotidien

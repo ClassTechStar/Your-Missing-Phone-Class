@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 51: Building the UI — Getting Started with Jetpack Compose
 
 {class="chapter-intro mb-4"}
-The UI is everything the user sees. Before Compose came along, Android UIs were written in XML — as tedious as fill-in-the-blank exercises. In 2021 Google introduced Jetpack Compose: you "draw" the UI directly in Kotlin code, what you see is what you get, and the preview refreshes the moment you change a line of code. By 2026, Compose is the clear mainstream for new projects. This chapter is where we learn to "draw."
+The UI is everything the user sees. Before Compose came along, Android UIs were written in XML: as tedious as fill-in-the-blank exercises. In 2021 Google introduced Jetpack Compose: you "draw" the UI directly in Kotlin code, what you see is what you get, and the preview refreshes the moment you change a line of code. By 2026, Compose is the clear mainstream for new projects. This chapter is where we learn to "draw."
 
 #### I. Compose's Big Idea: The UI Is a Function
 
@@ -41,7 +41,7 @@ fun HomeScreen() {
 ```
 :::
 
-Note the @Composable "hat" — it tells the compiler "this is a UI building block." Blocks can nest infinitely; that's the whole secret of Compose.
+Note the @Composable "hat", it tells the compiler "this is a UI building block." Blocks can nest infinitely; that's the whole secret of Compose.
 
 #### II. Basic Components: Text, Button, Input Field, Image
 
@@ -84,11 +84,11 @@ In those two lines for the input field you'll spot remember { mutableStateOf("")
 
 #### III. The Layout Trio: Column, Row, Box
 
-You have the components — how do you arrange them? Remember three "boxes":
+You have the components, how do you arrange them? Remember three "boxes":
 
 - Column: stacks things vertically (like a line at the cafeteria counter);
 - Row: lines things up horizontally (like sitting side by side);
-- Box: stacks things on top of each other (like a pile of playing cards — great for badges and overlays).
+- Box: stacks things on top of each other (like a pile of playing cards, great for badges and overlays)
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,12 +135,12 @@ Text(
 Note: Modifier Order Matters
 
 {class="mt-1"}
-padding(16.dp).background(Blue) and background(Blue).padding(16.dp) give different results — the first is "spacing first, then paint" (the background excludes the padding), the second is "paint first, then spacing" (the background includes the padding). This is where beginners most often paint themselves a "mysterious white border." When unsure, swap the order — the preview instantly tells you the answer.
+padding(16.dp).background(Blue) and background(Blue).padding(16.dp) give different results: the first is "spacing first, then paint" (the background excludes the padding), the second is "paint first, then spacing" (the background includes the padding). This is where beginners most often paint themselves a "mysterious white border." When unsure, swap the order, the preview instantly tells you the answer.
 :::
 
 #### IV. State: Bringing the UI to Life
 
-A static UI is boring. To make a number go up by 1 when a button is clicked, or let an input field accept typing, you need state. Compose's rule: the UI always faithfully reflects the state — when the state changes, the UI redraws automatically.
+A static UI is boring. To make a number go up by 1 when a button is clicked, or let an input field accept typing, you need state. Compose's rule: the UI always faithfully reflects the state, when the state changes, the UI redraws automatically.
 
 ::: div .code-block
 :::inline div .code-head
@@ -163,7 +163,7 @@ fun Counter() {
 ```
 :::
 
-Three lines of code, one live counter. This is where Compose feels better than the old way: no manually "refreshing the UI" — just change the data. Remember the two key functions: remember (keeps a value from being wiped when the UI recomposes) and mutableStateOf (tells Compose "redraw when this value changes").
+Three lines of code, one live counter. This is where Compose feels better than the old way: no manually "refreshing the UI", just change the data. Remember the two key functions: remember (keeps a value from being wiped when the UI recomposes) and mutableStateOf (tells Compose "redraw when this value changes").
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -184,23 +184,23 @@ The MyFirstAppTheme { ... } in the template project is the theme. Based on the M
 
 1. Define both a light and a dark color scheme in the theme (the template already generates the ColorScheme);
 2. When the system switches to dark mode, isSystemInDarkTheme() detects it automatically;
-3. Use the colors the theme provides (like MaterialTheme.colorScheme.primary) instead of hard-coded color values.
+3. Use the colors the theme provides (like MaterialTheme.colorScheme.primary) instead of hard-coded color values
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Tip: Material 3 Dynamic Color
 
 {class="mt-1"}
-Starting with Android 12, "Material You" lets an app pull colors from your wallpaper. Compose templates support it by default (dynamicColor). Your app will "change outfits" on different users' phones — that's the romance of modern Android.
+Starting with Android 12, "Material You" lets an app pull colors from your wallpaper. Compose templates support it by default (dynamicColor). Your app will "change outfits" on different users' phones, that's the romance of modern Android.
 :::
 
-#### VI. Preview, Animation, and Live Edit: Compose's "Cheat Codes"
+VI. Preview, Animation, and Live Edit: Compose's "Cheat Codes"
 
 Three "cheat codes" for Compose's developer experience — once you use them, there's no going back:
 
-- @Preview: add the @Preview annotation to a Composable and Android Studio instantly renders the UI on the right side — what you see is what you get as you edit, no need to install on a phone every time;
-- Live Edit: the 2026 Android Studio supports "hot updating" certain changes on the emulator or a real device — small tweaks like changing text color appear on the device in seconds;
-- Animation APIs: animateFloatAsState and AnimatedVisibility let elements transition smoothly in a few lines of code — that "premium feel" is often just these few dozen lines away.
+- @Preview: add the @Preview annotation to a Composable and Android Studio instantly renders the UI on the right side, what you see is what you get as you edit, no need to install on a phone every time;
+- Live Edit: the 2026 Android Studio supports "hot updating" certain changes on the emulator or a real device: small tweaks like changing text color appear on the device in seconds;
+- Animation APIs: animateFloatAsState and AnimatedVisibility let elements transition smoothly in a few lines of code: that "premium feel" is often just these few dozen lines away
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 Tip: Function First, Animation Later
 
 {class="mt-1"}
-A common beginner mistake is fussing over animations before the UI even works. Get the feature running first, then add motion at the end — that's the Simplicity First principle too: animations are the icing on the cake, features are the cake itself.
+A common beginner mistake is fussing over animations before the UI even works. Get the feature running first, then add motion at the end, that's the Simplicity First principle too: animations are the icing on the cake, features are the cake itself.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -246,7 +246,7 @@ Chapter Summary
 - Compose's idea: the UI = @Composable functions, nested like building blocks
 - Four basic components: Text / Button / TextField / Image
 - The layout trio: Column stacks vertically, Row lines up horizontally, Box stacks on top
-- Modifier chains apply "makeup" in sequence: padding, fillMaxWidth, background, clickable — order matters
-- State is the soul: remember + mutableStateOf — change the data and the UI redraws itself
+- Modifier chains apply "makeup" in sequence: padding, fillMaxWidth, background, clickable, order matters
+- State is the soul: remember + mutableStateOf, change the data and the UI redraws itself
 - Theming with Material 3 + dynamic color: configure dark mode once and it applies everywhere
 :::

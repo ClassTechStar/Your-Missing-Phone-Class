@@ -2,12 +2,12 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: 第二章：整理爾之數字房間
+nav: 第二章：手機中之物，尋之不得，奈何？
 toc: default
 kind: chapter
 ---
 
-### 第二章：整理汝之數字之室——文件管理
+### 第二章：手機中之物，尋之不得，奈何？
 
 {class="chapter-intro mb-4"}
 手機用久則亂，善習始於文件之管理。猶汝之室須定時整理，汝之數字空間亦須打理。井然有序之手機，尋物既便，運行亦暢。
@@ -236,8 +236,8 @@ kind: chapter
 本月任務清單
 
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
-1. 于文件管理器中建 <code>2026Q2_項目A</code> 形之本月工作文件夾；
-2. 形之本月工作文件夾；
+1. 于文件管理器中建 <code>2026Q2_項目A</code> 形之本月工作文件夾。
+2. 形之本月工作文件夾。
 3. 爲今年之家庭照建 <code>2025家庭</code>、<code>2026家庭</code> 此形之年度文件夾。
 :::
 
@@ -254,15 +254,15 @@ kind: chapter
 {class="font-semibold mt-4 mb-1"}
 ##### 3. 圖之安全處理之規
 
-圖乃手機中最"敏感"之數據類型——一張隨手之拍即能暴露汝之位置、設備、時間。吾等建議<strong>建"雙重保護"之工作流</strong>：
+圖乃手機中最"敏感"之數據類型，一張隨手之拍即能暴露汝之位置、設備、時間。吾等建議<strong>建"雙重保護"之工作流</strong>：
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-image mr-2"></i>發送證件照/敏感截圖之標準流程
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
-1. <strong>可見信息打碼</strong>：用系統自帶或第三方之具（如美圖秀秀、Snapseed）<strong>塗抹身份證號之中間數位、車牌號、門牌、姓名、金額</strong>等關鍵字段；
-2. <strong>元數據之剝離</strong>：發送前於相冊中點"分享"或"導出"，系統將問是否保留位置之信息，擇<strong>"不保留"</strong>。如此拍攝之設備型號、GPS座標、拍攝之時間即不隨圖同發；
+1. <strong>可見信息打碼</strong>：用系統自帶或第三方之具（如美圖秀秀、Snapseed）<strong>塗抹身份證號之中間數位、車牌號、門牌、姓名、金額</strong>等關鍵字段。
+2. <strong>元數據之剝離</strong>：發送前於相冊中點"分享"或"導出"，系統將問是否保留位置之信息，擇<strong>"不保留"</strong>。如此拍攝之設備型號、GPS座標、拍攝之時間即不隨圖同發。
 3. <strong>臨時水印</strong>（可選）：于敏感截圖上加"僅供XX辦理使用"之文字水印，避被濫用。
 :::
 
@@ -275,6 +275,6 @@ kind: chapter
 
 對於需<strong>長期保存</strong>之敏感圖（身份證、銀行卡、戶口本之掃描件、護照），建議存於<strong>加密相冊</strong>：
 
-- iPhone：[照片] &gt; 選中照片 &gt; 隱藏（僅Face ID驗證後可覽）；
-- iPhone：[照片] &gt; 選中照片 &gt; 隱藏（僅Face ID驗證後可覽）；
+- iPhone：[照片] &gt; 選中照片 &gt; 隱藏（僅Face ID驗證後可覽）。
+- iPhone：[照片] &gt; 選中照片 &gt; 隱藏（僅Face ID驗證後可覽）。
 - 第三方加密App：<strong>360安全相冊</strong>、<strong>騰訊相冊管家（隱私相冊）</strong>、<strong>KeepSafe</strong> 等，單獨密碼保護，隱蔽性更佳。

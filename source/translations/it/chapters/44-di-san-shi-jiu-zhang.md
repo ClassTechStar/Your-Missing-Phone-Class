@@ -2,19 +2,19 @@
 id: di-san-shi-jiu-zhang
 num: 39
 part: ai-biancheng-pian
-nav: Capitolo 39: Context engineering — Far capire le tue intenzioni all'AI
+nav: Capitolo 39: L'AI non capisce? Forse non hai detto bene
 toc: default
 kind: chapter
 ---
 
-### Capitolo 39: Ingegneria del contesto — far capire all'AI le tue intenzioni
+### Capitolo 39: L'AI non capisce? Forse non hai detto bene
 
 {class="chapter-intro mb-4"}
 Ti è mai capitato che aprendo una nuova finestra di chat l'AI sembrasse amnesica e dimenticasse tutto del tuo progetto? Non lo fa apposta: è «smemorata» per natura. Questo capitolo ti insegna a installarle un «sistema di memoria a lungo termine» e ti presenta uno dei paradigmi di sviluppo più caldi del 2026: lo sviluppo guidato dalle specifiche.
 
-#### 1. Il file di memoria di progetto: la «memoria a lungo termine» dell'AI
+1. Il file di memoria di progetto: la «memoria a lungo termine» dell'AI
 
-I modelli AI hanno un limite fondamentale: la memoria è «a breve termine». A ogni nuova conversazione l'AI sa zero del tuo progetto. Devi ripeterle «usiamo React», «il backend è Node.js», «il database è PostgreSQL», «lo stile del codice usa doppi apici». Non solo inefficiente, ma facile da dimenticare — come formare ogni giorno un nuovo collega.
+I modelli AI hanno un limite fondamentale: la memoria è «a breve termine». A ogni nuova conversazione l'AI sa zero del tuo progetto. Devi ripeterle «usiamo React», «il backend è Node.js», «il database è PostgreSQL», «lo stile del codice usa doppi apici». Non solo inefficiente, ma facile da dimenticare: come formare ogni giorno un nuovo collega.
 
 La soluzione è il «file di memoria di progetto»: un file di testo nella root del progetto che gli strumenti AI leggono automaticamente a ogni conversazione. Ogni strumento ha la propria convenzione di nome:
 
@@ -80,7 +80,7 @@ Il flusso dell'SDD in cinque passi:
 2. Definisci interfacce e strutture dati (nel file di specifiche);
 3. Lascia che l'AI generi il codice dalle specifiche;
 4. Esegui i test per verificare la conformità alle specifiche;
-5. Se non è conforme, correggi le specifiche o fai correggere il codice all'AI.
+5. Se non è conforme, correggi le specifiche o fai correggere il codice all'AI
 
 In questo flusso il file di specifiche è la «fonte di verità unica»: il codice si può rigenerare, le specifiche devono essere giuste prima.
 
@@ -109,7 +109,7 @@ Il vantaggio dell'SDD: le specifiche sono più stabili del codice. Quando cambia
 
 #### 3. Gestione della finestra di contesto
 
-Anche con il file di memoria di progetto, in chat può emergere il problema del «contesto insufficiente». La finestra di contesto dei modelli AI (la quantità di informazioni elaborabili contemporaneamente) è limitata. Quando la conversazione è troppo lunga e i file citati troppi, l'AI «dimentica» le informazioni iniziali e la qualità cala — come una chiacchierata di sei ore con un amico che ha già dimenticato cosa gli avevi detto all'inizio.
+Anche con il file di memoria di progetto, in chat può emergere il problema del «contesto insufficiente». La finestra di contesto dei modelli AI (la quantità di informazioni elaborabili contemporaneamente) è limitata. Quando la conversazione è troppo lunga e i file citati troppi, l'AI «dimentica» le informazioni iniziali e la qualità cala, come una chiacchierata di sei ore con un amico che ha già dimenticato cosa gli avevi detto all'inizio.
 
 La strategia centrale è il «riferimento a livelli»:
 
@@ -130,7 +130,7 @@ L'ingegneria del contesto non è una configurazione da fare una volta sola, ma u
 2. Usa bene i riferimenti @ invece di incollare testi interi. La maggior parte degli strumenti di programmazione AI supporta la sintassi @file o @folder, che inietta in background il contenuto del file nel contesto dell'AI: è più efficiente dell'incollaggio manuale e non inquina la conversazione.
 3. Le conversazioni devono essere brevi e incisive. Una conversazione gestisce un solo compito o una sola funzionalità. Finito? Apri una nuova conversazione per il successivo. Le conversazioni lunghe non solo consumano la finestra di contesto, ma fanno anche “distrarre” l'AI.
 4. Fai “vedere” all'AI i risultati invece di “descriverli”. Quando incontri un bug, cita direttamente il log degli errori con @ invece di raccontarlo a parole tue con un vago “c'è tipo un errore”. Per l'AI è molto più efficace vedere le informazioni originali che la tua parafrasi.
-5. Pulizia e archiviazione periodiche. Le conversazioni concluse e i file temporanei occupano spazio di lavoro. Pulire di tanto in tanto ciò che non serve e tenere ordinata la directory del progetto aiuta anche l'AI a capire la struttura del progetto in modo più efficiente.
+5. Pulizia e archiviazione periodiche. Le conversazioni concluse e i file temporanei occupano spazio di lavoro. Pulire di tanto in tanto ciò che non serve , e tenere ordinata la directory del progetto aiuta anche l'AI a capire la struttura del progetto in modo più efficiente.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -10,7 +10,7 @@ after_part: fu-lu
 ### Appendice F: Speciale acquisto e uso degli schermi pieghevoli
 
 {class="chapter-intro mb-4"}
-Lo schermo pieghevole è passato da "tecnologia del futuro" a categoria matura "che si può comprare ora". Ma rispetto a un telefono a barra differisce molto per forma, abitudini d'uso e manutenzione: vale la pena comprarlo, come sceglierlo, come usarlo — questo capitolo ti aiuta a fare chiarezza.
+Lo schermo pieghevole è passato da "tecnologia del futuro" a categoria matura "che si può comprare ora". Ma rispetto a un telefono a barra differisce molto per forma, abitudini d'uso e manutenzione: vale la pena comprarlo, come sceglierlo, come usarlo: questo capitolo ti aiuta a fare chiarezza.
 
 #### 1. A che punto sono oggi gli schermi pieghevoli?
 
@@ -37,7 +37,7 @@ In base ai feedback reali degli utenti, queste categorie hanno un'alta probabili
 
 1. <strong>Lettori pesanti / elaboratori di documenti</strong>: chi legge spesso PDF sul telefono, annota documenti, legge articoli lunghi. Lo schermo interno da quasi 7,5 pollici una volta aperto permette di leggere PDF A4 senza zoom, un salto di qualità.
 2. <strong>Utenti business che viaggiano / vanno spesso a riunioni</strong>: non vogliono portarsi il tablet ma trovano piccolo lo schermo del telefono. Il pieghevole orizzontale aperto per guardare PPT, firmare contratti, confrontare email su due schermi è molto più efficiente di un telefono a barra.
-3. <strong>Creativi amanti della modalità "sospesa"</strong>: piegato a 90° sul tavolo, schermo superiore per l'inquadratura e inferiore per lo scatto (selfie / time-lapse), schermo superiore per il video e inferiore per appunti, schermo superiore per la live e inferiore per i commenti — una forma che un telefono a barra non può offrire.
+3. <strong>Creativi amanti della modalità "sospesa"</strong>: piegato a 90° sul tavolo, schermo superiore per l'inquadratura e inferiore per lo scatto (selfie / time-lapse), schermo superiore per il video e inferiore per appunti, schermo superiore per la live e inferiore per i commenti: una forma che un telefono a barra non può offrire.
 4. <strong>Utenti donne che cercano portabilità e grande schermo</strong>: il pieghevole verticale chiuso entra in una piccola borsa, aperto è un telefono normale, lo schermo esterno funge anche da specchietto e mostra notifiche.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -45,9 +45,9 @@ In base ai feedback reali degli utenti, queste categorie hanno un'alta probabili
 <i class="fas fa-triangle-exclamation mr-2"></i>Queste categorie non dovrebbero comprarlo
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Chi usa il telefono solo per brevi video, WeChat e telefonate — il pieghevole non apporta nulla, anzi è più pesante e spesso.
-- Chi ha mani piccole o tendiniti ai polsi — i pieghevoli orizzontali aperti pesano comunemente 230 g+, reggerli con una mano stanca.
-- Budget stretto, un telefono da usare per 4+ anni — il valore di rivendita del pieghevole è inferiore al telefono a barra e i costi di riparazione sono alti.
+- Chi usa il telefono solo per brevi video, WeChat e telefonate, il pieghevole non apporta nulla, anzi è più pesante e spesso.
+- Chi ha mani piccole o tendiniti ai polsi, i pieghevoli orizzontali aperti pesano comunemente 230 g+, reggerli con una mano stanca.
+- Budget stretto, un telefono da usare per 4+ anni: il valore di rivendita del pieghevole è inferiore al telefono a barra e i costi di riparazione sono alti.
 :::
 
 #### 3. Punti chiave per l'acquisto: guarda questi 6 indicatori
@@ -115,10 +115,10 @@ La parte più delicata del pieghevole è lo schermo interno e la cerniera; quest
 <i class="fas fa-skull-crossbones mr-2"></i>Scenari ad alto rischio di danneggiamento dello schermo interno
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Chiudere tenendo dentro il cavo delle cuffia / di ricarica — fessura diretta dello schermo interno.
+- Chiudere tenendo dentro il cavo delle cuffia / di ricarica, fessura diretta dello schermo interno.
 - In borsa mescolati con le chiavi — lo schermo esterno non ha problemi, quello interno viene incrinato dalle chiavi.
-- In inverno, aprire e chiudere subito dopo essere entrati dal freddo in una stanza calda — il salto termico altera le tensioni del vetro.
-- Dopo un anno, pensare che "la piega si è approfondita" e staccare la pellicola originale — staccandola si può danneggiare lo schermo interno.
+- In inverno, aprire e chiudere subito dopo essere entrati dal freddo in una stanza calda, il salto termico altera le tensioni del vetro.
+- Dopo un anno, pensare che "la piega si è approfondita" e staccare la pellicola originale: staccandola si può danneggiare lo schermo interno.
 :::
 
 #### 6. Le "trappole" del pieghevole e aspettative mentali

@@ -2,12 +2,12 @@
 id: di-er-shi-liu-zhang
 num: 26
 part: chao-yue-pian
-nav: Capitolo 26: Le frontiere attuali della tecnologia mobile
+nav: Capitolo 26: Le nuove tecnologie possono aspettare
 toc: default
 kind: chapter
 ---
 
-### Capitolo 26: Le frontiere tecnologiche dei telefoni attuali
+### Capitolo 26: Le nuove tecnologie possono aspettare
 
 {class="chapter-intro mb-4"}
 Dopo aver parlato della "fine della vita" dei telefoni usati, riportiamo lo sguardo al presente. Il periodo 2024-2026 è una fase di esplosione concentrata delle tecnologie telefonistiche: l'IA è passata dal cloud alla tasca, la comunicazione satellitare è scesa dai top di gamma alla fascia media, gli schermi pieghevoli sono passati da "novità da provare" a "uso quotidiano", e la tecnologia delle batterie ha conosciuto una svolta a livello di materiale senza precedenti da anni. In questo capitolo esaminiamo queste frontiere tecnologiche in corso, per aiutarti a decidere "se cambiare telefono ora" e "quale telefono scegliere".
@@ -18,13 +18,13 @@ Dal 2024, quasi tutti i produttori Android hanno lanciato sui loro top di gamma 
 
 - <strong>Grandi modelli on-device</strong>: il telefono è in grado di eseguire localmente modelli linguistici con circa 7B di parametri (come le versioni leggere di Qwen, Llama, DeepSeek), completando riassunti di testo, traduzioni, generazione di testi senza dipendere dal cloud. Metodo di verifica: se in modalità aereo le funzioni IA sono ancora disponibili, si tratta di modelli on-device.
 - <strong>Potenza di calcolo NPU (TOPS)</strong>: la potenza della NPU (Neural Processing Unit) si misura in TOPS (trilioni di operazioni al secondo). I chip di punta del 2024 (come Snapdragon 8 Gen3, Dimensity 9300) hanno una potenza NPU tra 40 e 70 TOPS; le nuove generazioni 2025-2026 superano diffusamente i 100 TOPS, la soglia hardware per eseguire grandi modelli on-device.
-- <strong>Scenari AI Agent</strong>: non solo "domande e risposte", ma anche la capacità di eseguire catene di task tra App diverse — ad esempio "organizza le foto della riunione di ieri in un album e condividilo con Mario", e il sistema richiama automaticamente Galleria, File, WeChat e altre App per completare l'operazione. Questo è il tratto distintivo che separa un telefono IA da un "telefono con assistente IA".
+- <strong>Scenari AI Agent</strong>: non solo "domande e risposte", ma anche la capacità di eseguire catene di task tra App diverse, ad esempio "organizza le foto della riunione di ieri in un album e condividilo con Mario", e il sistema richiama automaticamente Galleria, File, WeChat e altre App per completare l'operazione. Questo è il tratto distintivo che separa un telefono IA da un "telefono con assistente IA".
 
-#### 2. Confronto delle strategie IA dei produttori: chi fa sul serio, chi si limita a etichettare?
+2. Confronto delle strategie IA dei produttori: chi fa sul serio, chi si limita a etichettare?
 
 Le strategie IA dei vari brand differiscono notevolmente, e vale la pena prestare attenzione all'acquisto:
 
-- <strong>Apple Apple Intelligence (iOS 18+)</strong>: si concentra sull'integrazione di app a livello di sistema — riassunti email, priorità notifiche, revisione scrittura, fotoritocco IA in Galleria. Prediligendo modelli on-device, i task complessi vengono inviati al Private Cloud Compute. Vantaggi: protezione della privacy e fluidità di sistema; svantaggi: lento ad arrivare per gli scenari in cinese, alcune funzioni supportate solo progressivamente dal 2025.
+- <strong>Apple Apple Intelligence (iOS 18+)</strong>: si concentra sull'integrazione di app a livello di sistema, riassunti email, priorità notifiche, revisione scrittura, fotoritocco IA in Galleria. Prediligendo modelli on-device, i task complessi vengono inviati al Private Cloud Compute. Vantaggi: protezione della privacy e fluidità di sistema; svantaggi: lento ad arrivare per gli scenari in cinese, alcune funzioni supportate solo progressivamente dal 2025.
 - <strong>Google Gemini Nano</strong>: integrato nei Pixel 8/9, supporta "Cerca cerchiando", Magic Compose, riassunto registrazioni. Gemini Nano è un vero modello piccolo on-device, amichevole verso l'ecosistema open source, ed è l'implementazione di riferimento per i telefoni IA Android.
 - <strong>Modello Pangu di Huawei</strong>: integrato nell'assistente Xiaoyi di HarmonyOS, supporta generazione di testi on-device, fotoritocco IA, rimozione oggetti IA (eliminare i passanti), riassunto chiamate. Con HarmonyOS NEXT 5.0 l'integrazione a livello di sistema è stata ulteriormente approfondita, fondendo le capacità IA con il sistema.
 - <strong>Modello Surge di Xiaomi (MiLM)</strong>: integrato in HyperOS, supporta ritratti IA, riassunti IA, pittore IA, super-risoluzione. Xiaomi segue una strategia "on-device + cloud collaborativo": modelli leggeri on-device, task pesanti sul cloud.
@@ -32,16 +32,16 @@ Le strategie IA dei vari brand differiscono notevolmente, e vale la pena prestar
 
 <strong>Consigli d'acquisto</strong>: se usi spesso l'IA per elaborare documenti di lavoro o organizzare informazioni, privilegia dispositivi con forte potenza di calcolo on-device e integrazione sistemica delle funzioni IA; se usi solo occasionalmente il fotoritocco IA, i telefoni di fascia media sono già sufficienti.
 
-#### 3. Comunicazione satellitare: da "novità" di punta a standard di fascia media
+3. Comunicazione satellitare: da "novità" di punta a standard di fascia media
 
 La comunicazione satellitare è una delle tecnologie più sostanziose discese in fascia media degli ultimi due anni. Quando nel 2022 Huawei Mate 60 e iPhone 14 l'hanno lanciata, era ancora esclusiva dei top di gamma; nel 2025 è già scesa alla fascia 2000-3000 yuan.
 
-- <strong>Messaggi brevi Beidou in fascia media</strong>: la funzione di messaggi brevi del satellite Beidou (può inviare SMS fino a 1000 caratteri cinesi + posizione) è stata portata su modelli di fascia media come Redmi, realme, iQOO, senza canone mensile, gratuita. Adatta a escursionismo, viaggi in auto e simili.
+- <strong>Messaggi brevi Beidou in fascia media</strong>: la funzione di messaggi brevi del satellite Beidou, (può inviare SMS fino a 1000 caratteri cinesi + posizione) è stata portata su modelli di fascia media come Redmi, realme, iQOO, senza canone mensile, gratuita. Adatta a escursionismo, viaggi in auto e simili.
 - <strong>Chiamate via satellite Tiantong</strong>: Huawei Mate 60/70, Honor Magic6 e altri supportano la chiamata satellitare Tiantong-1, con possibilità di chiamare/ricevere telefonate satellitari e inviare messaggi satellitari. Richiede l'attivazione di un pacchetto satellitare dell'operatore (circa 10-200 yuan al mese), adatto a chi entra spesso in zone disabitate.
 - <strong>Messaggi satellitari iPhone (SOS)</strong>: iPhone 14 e successivi supportano SOS via satellite, possono inviare messaggi di testo ai servizi di emergenza e condividere la posizione. Servizio gratuito per 2 anni, rinnovabile a pagamento in alcune regioni.
-- <strong>Consiglio pratico</strong>: gli utenti urbani non ne hanno quasi mai bisogno, ma per gli appassionati di outdoor e chi viaggia spesso per lavoro in zone remote è fortemente raccomandato scegliere modelli con funzioni satellitari — nei momenti cruciali può salvare la vita.
+- <strong>Consiglio pratico</strong>: gli utenti urbani non ne hanno quasi mai bisogno, ma per gli appassionati di outdoor e chi viaggia spesso per lavoro in zone remote è fortemente raccomandato scegliere modelli con funzioni satellitari, nei momenti cruciali può salvare la vita.
 
-#### 4. Maturità dell'ecosistema degli schermi pieghevoli: si può usare come telefono principale?
+4. Maturità dell'ecosistema degli schermi pieghevoli: si può usare come telefono principale?
 
 Gli schermi pieghevoli sono passati da "novità tecnologica" a "pronti all'uso quotidiano". Per valutare la maturità di un pieghevole, si guardano tre aspetti: durabilità hardware, adattamento delle App, ecosistema di interazione.
 
@@ -53,7 +53,7 @@ Gli schermi pieghevoli sono passati da "novità tecnologica" a "pronti all'uso q
 
 <strong>Consigli d'acquisto</strong>: se sei un utente intensivo di lettura, documenti e video, lo schermo pieghevole orizzontale vale la pena; se cerchi portabilità e status sociale, quello verticale è più adatto. Si consiglia di provarlo in negozio per almeno 30 minuti prima di decidere.
 
-#### 5. 6G e Wi-Fi 7: velocità e confini della connettività di nuova generazione
+5. 6G e Wi-Fi 7: velocità e confini della connettività di nuova generazione
 
 Anche se il 6G non è ancora davvero arrivato, le tecnologie correlate sono già in cammino:
 
@@ -61,7 +61,7 @@ Anche se il 6G non è ancora davvero arrivato, le tecnologie correlate sono già
 - <strong>Wi-Fi 7 (802.11be)</strong>: dal 2024 è standard sui top di gamma, velocità teorica di picco fino a 46 Gbps (4 volte il Wi-Fi 6), supporta banda 320MHz, 4K-QAM, MLO (Multi-Link Operation). Nelle prove con router Wi-Fi 7, i top di gamme raggiungono 2-5 Gbps, 2-3 volte più veloci del Wi-Fi 6E. Se passi a un telefono Wi-Fi 7, ricorda di abbinare un router Wi-Fi 7 per sfruttarne tutte le prestazioni.
 - <strong>Bluetooth 5.4 e LE Audio</strong>: i nuovi telefoni 2024-2026 supportano diffusamente Bluetooth 5.4 e LE Audio (audio a basso consumo), possono collegare simultaneamente due paia di cuffie per ascoltare la stessa canzone, e Auracast permette a più persone in luoghi pubblici di ascoltare in sincrono la stessa sorgente audio.
 
-#### 6. Batterie al silicio-carbonio: l'autonomia conosce finalmente una svolta a livello di materiale
+6. Batterie al silicio-carbonio: l'autonomia conosce finalmente una svolta a livello di materiale
 
 L'autonomia dei telefoni è stata criticata per anni come "una carica al giorno"; dal 2024 la diffusione della tecnologia delle batterie ad anodo silicio-carbonio ha portato un miglioramento sostanziale.
 
@@ -70,7 +70,7 @@ L'autonomia dei telefoni è stata criticata per anni come "una carica al giorno"
 - <strong>Ricarica rapida da 100W in abbinamento</strong>: l'anodo silicio-carbonio è compatibile con la ricarica rapida; 100W/120W che caricano completamente in 17 minuti non sono più notizia. Nel 2025 alcuni modelli supportano 150W-240W, con carica all'80% in 10 minuti.
 - <strong>Consigli d'acquisto</strong>: se sei un utente intensivo, privilegia modelli post-2024 con la combinazione "anodo silicio-carbonio + ricarica rapida 100W", l'ansia da autonomia si ridurrà drasticamente.
 
-#### 7. Panoramica del capitolo: una frase per ricordare queste frontiere
+7. Panoramica del capitolo: una frase per ricordare queste frontiere
 
 - Telefoni IA, tre criteri: grandi modelli on-device, potenza NPU in TOPS, scenari AI Agent tra App.
 - Comunicazione satellitare: messaggi brevi Beidou in fascia media, chiamate Tiantong ancora esclusive dei top di gamma.

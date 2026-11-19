@@ -2,17 +2,17 @@
 id: di-san-shi-san-zhang
 num: 33
 part: zhan-wang-pian
-nav: Kapitel 33: Zukunftsausblick – Die naechste Etappe des Smartphones
+nav: Kapitel 33: Wie sieht das Handy in zehn Jahren aus?
 toc: default
 kind: chapter
 ---
 
-### Kapitel 33: Zukunftsausblick – Die naechste Etappe des Smartphones
+### Kapitel 33: Wie sieht das Handy in zehn Jahren aus?
 
 {class="chapter-intro mb-4"}
 Das Handy wird nicht ueber Nacht verschwinden, aber seine dominante Stellung koennte von einer neuen Geraetegeneration aufgeteilt werden. In diesem Kapitel besprechen wir drei Dinge: Wie sehen die Geraete der naechsten Generation aus, wie wird das Handy als neues Fundament der Identitaet »unsichtbar«, und welche ethischen Fragen muessen wir im Voraus bedenken.
 
-#### 1. AR/VR und Spatial Computing: Der »zweite Desktop« neben dem Handy
+1. AR/VR und Spatial Computing: Der »zweite Desktop« neben dem Handy
 
 Der Wettbewerb um die naechste Geraetegeneration hat begonnen. Die wahrscheinlichsten Kandidaten, die Handy-Nutzungszeit aufzuteilen, sind AR/VR- und Spatial-Computing-Geraete:
 
@@ -28,7 +28,7 @@ Gedanken selbst werden zum Interaktionsmedium, aber dieser Weg ist laenger als g
 - <strong>Nicht-invasive BCI</strong>: Mehrere Firmen entwickeln nicht-invasive Kopfbedeckungen (wie Kernel, OpenBCI), die ohne Operation Gehirnsignale lesen, aber viel ungenauer sind als invasive. Noch weit entfernt vom "Gedanken-Tippen".
 - <strong>Verbraucher-Ausblick</strong>: BCI ist 10–20 Jahre von der Handy-Interaktion für Endverbraucher entfernt. Kurzfristig könnte es zuerst bei Barrierefreiheit und Aufmerksamkeits-Monitoring eingesetzt werden. Ethik- und Privatsphäre-Fragen ("Wem gehören meine Gehirnwellen?") werden vor der technischen Reife zum Streitpunkt.
 
-#### 3. Das »Verschwinden« des Handys und das neue Fundament der Identitaet
+3. Das »Verschwinden« des Handys und das neue Fundament der Identitaet
 
 Eine andere kuenftige Entwicklungsrichtung des Handys koennte das »Verschwinden« sein – als allgegenwaertiger »unsichtbarer Helfer« wird es zum einzigen Fundament deiner digitalen Identitaet:
 
@@ -46,12 +46,12 @@ Schreibe für dich und dein Smartphone eine kurze "Nutzungsvereinbarung", die eu
 - §1 Meine Aufmerksamkeitszeit gehört mir. Du sollst bei der Arbeit / in der Zeit mit der Familie von selbst in den "Nicht-stören"-Zustand wechseln.
 - §2 Meine persönlichen Daten sind mein Eigentum. Deine Hauptaufgabe ist sichere Verschlüsselung und komfortable Synchronisation.
 
-#### 5. Verbunden bleiben und trotzdem unabhaengig – deine Philosophie des digitalen Lebens
+5. Verbunden bleiben und trotzdem unabhaengig – deine Philosophie des digitalen Lebens
 
 Egal wie sich die Technik entwickelt – diese Prinzipien digitalen Lebens werden auch in 10 Jahren noch gelten:
 
 1. Fünftens. Anhang
-2. Geschafft! Nach dem "langen Marsch" durch die vorangegangenen über zwanzig Kapitel bist du vom "Smartphone-Anfänger" erfolgreich aufgestiegen und beherrschst die Kernkompetenzen vom Einstieg bis zur Meisterschaft. Dieser Anhang ist wie ein Taschenhandbuch und ein Ressourcenschatz für dich.
+2. Geschafft! Nach dem "langen Marsch" durch die vorangegangenen über zwanzig Kapitel bist du vom "Smartphone-Anfänger" erfolgreich aufgestiegen und beherrschst die Kernkompetenzen vom Einstieg bis zur Meisterschaft. Dieser Anhang ist wie ein Taschenhandbuch und ein Ressourcenschatz für dich
 3. Anhang A: "Babysitter"-Ablauf für ein neues Smartphone
 4. 1. Auspacken und Prüfen in drei Schritten
 5. Äußerliches prüfen
@@ -65,7 +65,7 @@ Schreibe fuer dich und dein Handy (und kuenftige AR-Brillen, AI-Assistenten) ein
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - : IMEI/Seriennummer auf der Verpackung mit der auf der Rechnung vergleichen.
-- Funktionen testen
+- Funktionen testen.
 - : Einen Anruf tätigen, um Hörer und Mikrofon zu prüfen; ein Foto machen, um die Kamera zu testen.
 :::
 

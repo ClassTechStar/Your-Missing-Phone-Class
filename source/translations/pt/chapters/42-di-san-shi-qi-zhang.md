@@ -14,7 +14,7 @@ Parabéns: ao abrir este livro, você está bem no centro de uma revolução de 
 
 #### 1. O nascimento do Vibe Coding: um movimento de uma frase
 
-Em fevereiro de 2025, Andrej Karpathy — guarde este nome, ele ainda aparece várias vezes — publicou um tweet que viraria referência: "Existe um jeito novo de programar chamado Vibe Coding: você vai só no feeling, ignora os detalhes do código e deixa a IA fazer tudo. Diz o que vê, copia e cola; se funcionar, tá ótimo."
+Em fevereiro de 2025, Andrej Karpathy, guarde este nome, ele ainda aparece várias vezes: publicou um tweet que viraria referência: "Existe um jeito novo de programar chamado Vibe Coding: você vai só no feeling, ignora os detalhes do código e deixa a IA fazer tudo. Diz o que vê, copia e cola; se funcionar, tá ótimo."
 
 A frase, aparentemente de improviso, batizou com precisão uma mudança de paradigma que já estava acontecendo: em vez de escrever código linha a linha, os humanos descrevem a intenção em linguagem natural e a IA implementa. O tom era brincalhão, mas a percepção era profunda: quando a geração de código pela IA cruza um certo limiar, o gargalo deixa de ser "consigo escrever esta linha?" e passa a ser "sei pensar com clareza sobre o que quero?".
 
@@ -23,16 +23,16 @@ A frase, aparentemente de improviso, batizou com precisão uma mudança de parad
 Dica: o que é "vibe"?
 
 {class="mt-1"}
-Vibe é "clima, sensação". Vibe Coding é "programar guiando a IA pelo feeling" — você descreve o que quer e a IA implementa. Guarde o termo: é a certidão de nascimento da revolução.
+Vibe é "clima, sensação". Vibe Coding é "programar guiando a IA pelo feeling": você descreve o que quer e a IA implementa. Guarde o termo: é a certidão de nascimento da revolução.
 :::
 
 A partir daí, "codificar" se dividiu em dois sentidos: codificar tradicionalmente é traduzir o design para a sintaxe; codificar novo é traduzir a intenção em instruções. O primeiro testa os dedos; o segundo, a cabeça.
 
-Vibe Coding rapidamente deixou de ser piada e virou conceito de engenharia. Por volta de meados de 2026, já era uma metodologia completa — expressão de requisitos, gestão de contexto, iteração, verificação e qualidade. A gente também percebeu: "programar no feeling" é só a porta de entrada; programação eficiente com IA exige um modo sistemático de pensar. É exatamente isso que este livro vai te dar.
+Vibe Coding rapidamente deixou de ser piada e virou conceito de engenharia. Por volta de meados de 2026, já era uma metodologia completa: expressão de requisitos, gestão de contexto, iteração, verificação e qualidade. A gente também percebeu: "programar no feeling" é só a porta de entrada; programação eficiente com IA exige um modo sistemático de pensar. É exatamente isso que este livro vai te dar.
 
 #### 2. O cenário em 2026: a era da Agentic Engineering
 
-Em agosto de 2026, a programação com IA já tinha passado por várias revoluções de paradigma. O Vibe Coding foi a faísca inicial, mas logo ficou claro: só "conversar no feeling" com a IA gera código instável — às vezes brilhante, às vezes um desastre. O paradigma então evoluiu: da programação conversacional simples para a engenharia estruturada de Agentes.
+Em agosto de 2026, a programação com IA já tinha passado por várias revoluções de paradigma. O Vibe Coding foi a faísca inicial, mas logo ficou claro: só "conversar no feeling" com a IA gera código instável, às vezes brilhante, às vezes um desastre. O paradigma então evoluiu: da programação conversacional simples para a engenharia estruturada de Agentes.
 
 Karpathy de novo: no início de 2026, ele propôs o conceito de Agentic Engineering. Diferente do "diz e gera" do Vibe Coding, a Agentic Engineering defende: dê um objetivo à IA e deixe que ela planeje os passos, use ferramentas, valide resultados e corrija em ciclo. A IA deixa de ser um gerador de código e vira um agente que percebe o ambiente, decide e age.
 
@@ -89,7 +89,7 @@ O ensino tradicional de programação forma um Coder: entender sintaxe, decorar 
 
 O cerne não é "saber escrever código", e sim "pensar com clareza o que se quer fazer". Um bom general não precisa ser o melhor soldado, mas precisa dominar o objetivo da campanha, o terreno e o posicionamento das tropas. Do mesmo modo, quem programa bem com IA não precisa decorar a sintaxe de cada linguagem, mas precisa compreender o objetivo do projeto, as restrições de arquitetura e os padrões de qualidade.
 
-Vale olhar esta tabela duas vezes — ela resume toda a mudança de papel:
+Vale olhar esta tabela duas vezes, ela resume toda a mudança de papel:
 
 ::: div .overflow-x-auto
 ```html
@@ -100,7 +100,7 @@ Vale olhar esta tabela duas vezes — ela resume toda a mudança de papel:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Comparação entre o Coder tradicional e o Conductor de IA
 
-Isso não quer dizer que conhecimento de programação não importa. Pelo contrário: só quem lê o código da IA consegue revisar e corrigir com eficácia; só quem entende estruturas de dados e algoritmos julga se a solução faz sentido. Seu repertório define o "teto de comando" — mas o papel do conhecimento migra de "ferramenta de execução" para "base de julgamento".
+Isso não quer dizer que conhecimento de programação não importa. Pelo contrário: só quem lê o código da IA consegue revisar e corrigir com eficácia; só quem entende estruturas de dados e algoritmos julga se a solução faz sentido. Seu repertório define o "teto de comando": mas o papel do conhecimento migra de "ferramenta de execução" para "base de julgamento".
 
 #### 4. Por que a metodologia vale mais que a ferramenta
 
@@ -108,7 +108,7 @@ Isso não quer dizer que conhecimento de programação não importa. Pelo contr�
 Ferramentas mudam a cada três meses; a metodologia evolui a cada três anos. Aprender a operar uma ferramenta pode ficar desatualizado em três meses; dominar um jeito de pensar ainda vale daqui a três anos.
 :::
 
-Muita gente que começa em programação com IA já pergunta de cara: "qual é a melhor ferramenta?", "qual é o modelo mais forte?". São perguntas válidas, mas na ordem errada. O mercado de agosto de 2026 não tem nada a ver com o de agosto de 2025 — Trae, Qoder e outros sobem e descem; o Cursor virou de plugin a IDE independente e chegou ao Cursor 3; o Claude Code saiu de experimento e virou padrão no terminal. Mas, por trás dessa turbulência, os princípios de quem tem sucesso quase não mudaram.
+Muita gente que começa em programação com IA já pergunta de cara: "qual é a melhor ferramenta?", "qual é o modelo mais forte?". São perguntas válidas, mas na ordem errada. O mercado de agosto de 2026 não tem nada a ver com o de agosto de 2025, Trae, Qoder e outros sobem e descem; o Cursor virou de plugin a IDE independente e chegou ao Cursor 3; o Claude Code saiu de experimento e virou padrão no terminal. Mas, por trás dessa turbulência, os princípios de quem tem sucesso quase não mudaram.
 
 Por isso este livro não gasta páginas ensinando cliques de uma ferramenta específica — isso envelhece rápido. O foco está em uma metodologia comprovada: como pensar requisitos, como conversar com a IA, como validar entregas, como iterar. Com ela, você se adapta a qualquer ferramenta; sem ela, cada troca recomeça do zero.
 
@@ -125,7 +125,7 @@ Se você é iniciante, não se assuste com a palavra "metodologia". Não é filo
 Mão na massa: tire uma "foto de papel" de quem você é hoje
 
 {class="mt-1"}
-Pegue um papel e responda: ① Como você usa a IA para escrever código hoje (se já usou)? ② Você se parece mais com o "Coder" ou com o "Conductor" da tabela? ③ Daqui a três meses, como você gostaria de descrever o seu jeito de trabalhar? Guarde o papel no livro e releia depois do Capítulo 47 — a mudança vai ser mais rápida do que você imagina.
+Pegue um papel e responda: ① Como você usa a IA para escrever código hoje (se já usou)? ② Você se parece mais com o "Coder" ou com o "Conductor" da tabela? ③ Daqui a três meses, como você gostaria de descrever o seu jeito de trabalhar? Guarde o papel no livro e releia depois do Capítulo 47, a mudança vai ser mais rápida do que você imagina.
 :::
 
 ::: div .chapter-summary
@@ -136,5 +136,5 @@ Resumo do capítulo
 - Em 2026, evoluímos para a Agentic Engineering: objetivo + autonomia, a IA planeja e executa, o humano valida
 - No Cursor 3, o modo Agent ultrapassou o Tab; o Claude Code chegou a US$ 2,5 bi anuais
 - Seu novo papel é Conductor: definir o campo, as regras, as tarefas e validar os resultados
-- Ferramentas mudam a cada três meses; metodologia, a cada três anos — aprenda método, não cliques
+- Ferramentas mudam a cada três meses; metodologia, a cada três anos, aprenda método, não cliques
 :::

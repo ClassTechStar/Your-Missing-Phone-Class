@@ -27,7 +27,7 @@ Sekilas pandang empat komponen Android
 
 Pada peringkat pemula, 95% masa anda dihabiskan berurusan dengan Activity; Service dan BroadcastReceiver digunakan semasa memainkan muzik atau menghantar pemberitahuan; ContentProvider paling jarang digunakan (sistem sudah membungkus data yang lazim). Juga perhatikan: keempat-empat komponen mesti 'mendaftar' dalam AndroidManifest.xml; tanpa pendaftaran, sistem tidak jumpa mereka.
 
-#### 2. Kitaran Hayat Activity: 'Peta Harta Karun' Pertama Pembangunan Android
+2. Kitaran Hayat Activity: 'Peta Harta Karun' Pertama Pembangunan Android
 
 Aplikasi pada telefon boleh terganggu bila-bila masa: panggilan telefon masuk, pengguna bertukar ke WeChat untuk membalas mesej, memori sistem tidak cukup lalu mematikan anda… Sepanjang hayat Activity, ia melawati rajah ini secara berulang:
 
@@ -122,7 +122,7 @@ Petua: Kalau Halaman Makin Banyak Macam Mana?
 Apabila projek membesar, kumpulkan semua laluan halaman dalam satu fail (contohnya AppNavGraph.kt) untuk diurus secara pusat; jangan biarkan logik 'pergi ke mana' berselerak merentas halaman. Ini langkah pertama dari 'boleh berjalan' ke 'boleh diselenggara'.
 :::
 
-#### 5. Sambil Membiasa Diri: Apa Itu Fragment (dan Kenapa Buku Ini Tidak Mengajarnya)
+5. Sambil Membiasa Diri: Apa Itu Fragment (dan Kenapa Buku Ini Tidak Mengajarnya)
 
 Semasa merujuk tutorial lama, anda pasti akan bertemu Fragment — ia 'cekak antara muka boleh guna semula' dalam Activity, wira utama dalam seni bina berbilang halaman lama. Tetapi di era Compose, halaman cukup menggunakan fungsi Composable + laluan Navigation, dan pihak rasmi pun sudah melemahkan kedudukan Fragment. Maka buku ini tidak memasukkannya ke dalam laluan utama.
 

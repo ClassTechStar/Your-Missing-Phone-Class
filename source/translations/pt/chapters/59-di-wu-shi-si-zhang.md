@@ -25,11 +25,11 @@ Antes de pôr a mão na massa, organize a ideia com os 'cinco elementos de requi
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Os cinco elementos de requisito do controle de gastos
 
-Depois, divida em passos pequenos em que 'cada etapa já serve para algo': ① criar a camada de dados com Room (conseguir salvar um lançamento); ② tela de lista (conseguir ver o extrato); ③ tela de entrada (conseguir adicionar); ④ excluir e editar; ⑤ cartão de resumo mensal. Ao fim de cada passo, o App já é uma 'coisa utilizável'.
+Depois, divida em passos pequenos em que 'cada etapa já serve para algo': ① criar a camada de dados com Room (conseguir salvar um lançamento). ② tela de lista (conseguir ver o extrato). ③ tela de entrada (conseguir adicionar). ④ excluir e editar. ⑤ cartão de resumo mensal. Ao fim de cada passo, o App já é uma 'coisa utilizável'.
 
 #### 2. Camada de dados: dando aos 'lançamentos' um lar
 
-Primeiro defina como é um lançamento — campos suficientes, mas sem gula:
+Primeiro defina como é um lançamento, campos suficientes, mas sem gula:
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,7 +49,7 @@ data class Record(
 ```
 :::
 
-No Dao, acrescente duas consultas 'de estatística' — elas são a alma do controle de gastos:
+No Dao, acrescente duas consultas 'de estatística', elas são a alma do controle de gastos:
 
 ::: div .code-block
 :::inline div .code-head
@@ -82,7 +82,7 @@ interface RecordDao {
 Dica: por que usar Double para o valor?
 
 {class="mt-1"}
-Apps financeiros rigorosos usam BigDecimal ou 'Int em centavos' para evitar erros de ponto flutuante (o velho problema de 0,1+0,2≠0,3). Para um projeto de estudo, Double basta; se um dia você fizer um produto financeiro de verdade, lembre de trocar para centavos como unidade — é uma armadilha que inúmeros antecessores pisaram.
+Apps financeiros rigorosos usam BigDecimal ou 'Int em centavos' para evitar erros de ponto flutuante (o velho problema de 0,1+0,2≠0,3). Para um projeto de estudo, Double basta; se um dia você fizer um produto financeiro de verdade, lembre de trocar para centavos como unidade: é uma armadilha que inúmeros antecessores pisaram.
 :::
 
 #### 3. MVVM: interface e lógica 'morando separadas'
@@ -95,7 +95,7 @@ Deixar a interface operar o banco direto? Funciona, mas o código da tela fica e
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figura 5: A estrutura de três camadas do MVVM — os dados fluem em um único sentido e cada camada não invade a outra
+Figura 5: A estrutura de três camadas do MVVM, os dados fluem em um único sentido e cada camada não invade a outra
 :::
 
 ::: div .code-block
@@ -125,11 +125,11 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 :::
 
-Na interface (Compose), use assim: val vm: RecordViewModel = viewModel() e depois val list by vm.records.collectAsState() — assim que os dados mudam, a lista se atualiza sozinha e você não precisa fazer nada. Esse é o poder da união de MVVM + Flow + Compose.
+Na interface (Compose), use assim: val vm: RecordViewModel = viewModel() e depois val list by vm.records.collectAsState(), assim que os dados mudam, a lista se atualiza sozinha e você não precisa fazer nada. Esse é o poder da união de MVVM + Flow + Compose.
 
 #### 4. Interface: tela de lista + tela de entrada
 
-Na tela de lista, use LazyColumn (lista de carregamento preguiçoso) — nem com muitos dados ela engasga:
+Na tela de lista, use LazyColumn (lista de carregamento preguiçoso), nem com muitos dados ela engasga:
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,23 +203,23 @@ suspend fun deleteById(id: Long)
 ```
 :::
 
-Duas lições sobre detalhes de interação: excluir exige confirmação dupla (para evitar dedos escorregadios) e editar deve preencher previamente o valor original (corrigir uma letra é mais fácil que digitar tudo de novo). Não menospreze esses detalhes — é deles que nasce a sensação de produto.
+Duas lições sobre detalhes de interação: excluir exige confirmação dupla, (para evitar dedos escorregadios) e editar deve preencher previamente o valor original (corrigir uma letra é mais fácil que digitar tudo de novo). Não menospreze esses detalhes, é deles que nasce a sensação de produto.
 
-#### 6. Aceitação: três níveis de checagem + dois desafios avançados
+6. Aceitação: três níveis de checagem + dois desafios avançados
 
 Projeto terminado, faça a aceitação em três níveis 'função → limite → arquitetura': dá para registrar? dá para excluir? ao reabrir o App, os dados continuam lá (função); digitar 0 ou negativo no valor derruba o App? girar a tela perde dados? (limites); interface e dados estão misturados? campos estão hardcoded? (arquitetura).
 
 Depois de passar na aceitação da versão básica, sirva-se de dois 'pratos avançados':
 
 1. Filtro por mês: adicione no topo um seletor de mês (por exemplo, 2026-08 ▾) e a lista mostra só o extrato do mês;
-2. Gráfico de pizza por categoria: use o Canvas do Compose ou uma biblioteca de gráficos leve para desenhar 'para onde foi o dinheiro' numa pizza — com isso pronto, o controle de gastos ganha cara de 'produto'.
+2. Gráfico de pizza por categoria: use o Canvas do Compose ou uma biblioteca de gráficos leve para desenhar 'para onde foi o dinheiro' numa pizza, com isso pronto, o controle de gastos ganha cara de 'produto'.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mãos à obra: termine-o nesta semana
 
 {class="mt-1"}
-Trabalhe na ordem 'camada de dados → ViewModel → tela de lista → tela de entrada → cartão de resumo', um passo por dia. Se travar, jogue a mensagem de erro tal como está no buscador ou na IA (lembra da Parte 7, 'Prática de Programação com IA'? Ao descrever o problema, deixe claros 'comportamento esperado, comportamento real e passos para reproduzir'). Depois de pronto, use-o para registrar seus gastos por uma semana — usar um App que você mesmo fez dá uma sensação de conquista que empurra você a seguir em frente.
+Trabalhe na ordem 'camada de dados → ViewModel → tela de lista → tela de entrada → cartão de resumo'. Um passo por dia. Se travar, jogue a mensagem de erro tal como está no buscador ou na IA (lembra da Parte 7, 'Prática de Programação com IA'? Ao descrever o problema, deixe claros 'comportamento esperado, comportamento real e passos para reproduzir'). Depois de pronto, use-o para registrar seus gastos por uma semana, usar um App que você mesmo fez dá uma sensação de conquista que empurra você a seguir em frente.
 :::
 
 ::: div .chapter-summary

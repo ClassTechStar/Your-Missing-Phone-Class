@@ -10,21 +10,21 @@ kind: chapter
 ### Capítulo 38: As cinco grandes regras de pensamento da programação com IA
 
 {class="chapter-intro mb-4"}
-Se deste livro você só puder guardar um capítulo, que seja este. As cinco regras são o coração da obra; tudo o que vem depois — contexto, requisitos, prompt, qualidade — é a aplicação delas em cada cenário. Fique tranquilo: nenhuma é difícil, mas todas merecem ser "internalizadas" com alguns projetos.
+Se deste livro você só puder guardar um capítulo, que seja este. As cinco regras são o coração da obra; tudo o que vem depois: contexto, requisitos, prompt, qualidade, é a aplicação delas em cada cenário. Fique tranquilo: nenhuma é difícil, mas todas merecem ser "internalizadas" com alguns projetos.
 
-A história começa de um jeito curioso: ao abrir o projeto, Andrej Karpathy anexou um CLAUDE.md de só 70 linhas com quatro princípios de colaboração com IA. O arquivo recebeu mais de 70.000 Stars no GitHub e virou a referência mais citada entre quem programa com IA. Não são slogans vazios: são hábitos mentais práticos, destilados da prática. Este livro acrescenta o quinto — iteração e verificação — completando as cinco regras.
+A história começa de um jeito curioso: ao abrir o projeto, Andrej Karpathy anexou um CLAUDE.md de só 70 linhas com quatro princípios de colaboração com IA. O arquivo recebeu mais de 70.000 Stars no GitHub e virou a referência mais citada entre quem programa com IA. Não são slogans vazios: são hábitos mentais práticos, destilados da prática. Este livro acrescenta o quinto, iteração e verificação: completando as cinco regras.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Por que 70 linhas valem tanto?
 
 {class="mt-1"}
-70.000 Stars? A maioria dos projetos no GitHub nunca chega perto disso. Que um arquivo de 70 linhas alcance esse número prova uma coisa: na era da IA, o mais raro não é código — é a capacidade de "pensar com clareza". Essas 70 linhas são a versão concentrada desse pensamento.
+70.000 Stars? A maioria dos projetos no GitHub nunca chega perto disso. Que um arquivo de 70 linhas alcance esse número prova uma coisa: na era da IA, o mais raro não é código: é a capacidade de "pensar com clareza". Essas 70 linhas são a versão concentrada desse pensamento.
 :::
 
 #### 1. Regra 1: Think Before Coding (pense antes de codar)
 
-É a regra mais contra-intuitiva das cinco. Se a IA escreve o código, por que "pensar antes"? Resposta simples: a qualidade da saída é proporcional à da entrada. Se você mesmo não sabe o que quer, a IA só te leva a um ciclo infinito de "muda e muda de novo" — o famoso "a IA se perde junto com você".
+É a regra mais contra-intuitiva das cinco. Se a IA escreve o código, por que "pensar antes"? Resposta simples: a qualidade da saída é proporcional à da entrada. Se você mesmo não sabe o que quer, a IA só te leva a um ciclo infinito de "muda e muda de novo": o famoso "a IA se perde junto com você".
 
 "Pensar antes" significa responder três perguntas antes de dar a instrução; juntas, formam o "triângulo do pensamento":
 
@@ -49,7 +49,7 @@ Atenção: pensar antes ≠ escrever um documento perfeito
 "Pensar antes" não é "fazer um PRD perfeito e só então começar". É um processo rápido e organizado: 30 segundos para clarear as três perguntas valem mais do que 30 minutos de vaivém no chat. Em tarefas pequenas, as respostas podem ser curtas; em projetos grandes, viram um documento de requisitos completo (Capítulo 40).
 :::
 
-#### 2. Regra 2: Simplicity First (simplicidade em primeiro lugar)
+2. Regra 2: Simplicity First (simplicidade em primeiro lugar)
 
 A maior armadilha da programação com IA não é "não conseguir fazer", e sim "fazer demais". Se você pede "um sistema de usuários", a IA pode gerar autenticação, permissões, papéis, logs de auditoria, exportação… quando você só queria uma tela de login. Excesso de geração é a principal causa de código inchado.
 
@@ -60,7 +60,7 @@ Na prática, significa alguns hábitos:
 - Peça à IA uma função de cada vez, não o sistema inteiro de uma vez;
 - Prefira a biblioteca padrão e soluções simples a dependências complexas;
 - Se cabe em 50 linhas, não deixe a IA escrever 500;
-- Se a entrega passou do escopo, mande cortar o excesso sem medo.
+- Se a entrega passou do escopo, mande cortar o excesso sem medo
 
 ::: div .overflow-x-auto
 ```html
@@ -73,11 +73,11 @@ Soluções exageradas vs. simples em cenários comuns
 
 #### 3. Regra 3: Surgical Changes (modificações cirúrgicas)
 
-Ao iterar um projeto existente, cada mudança deve ser cirúrgica: mexa só onde precisa. Em programação com IA, isso é crucial — a IA adora "aproveitar e melhorar mais um pouco": você pede para corrigir um bug e ela refaz metade do arquivo.
+Ao iterar um projeto existente, cada mudança deve ser cirúrgica: mexa só onde precisa. Em programação com IA, isso é crucial, a IA adora "aproveitar e melhorar mais um pouco": você pede para corrigir um bug e ela refaz metade do arquivo.
 
 O coração da regra: toda instrução deve fixar o escopo e os limites da mudança. Diga "modifique só a função calculate_discount", "não mexa no resto", "mantenha o estilo atual". Se a IA ultrapassar o pedido, mande reverter o excesso na hora.
 
-Karpathy ilustra com um exemplo de diff: pedir à IA para adicionar "preço de membro" à função de desconto do carrinho. A boa entrega altera só essa função e acrescenta poucas linhas; a má entrega refaz o arquivo inteiro — o código novo pode até parecer "mais elegante", mas você não sabe se introduziu bugs. Em programação com IA, "parecer melhor" nunca é motivo para sair do pedido.
+Karpathy ilustra com um exemplo de diff: pedir à IA para adicionar "preço de membro" à função de desconto do carrinho. A boa entrega altera só essa função e acrescenta poucas linhas; a má entrega refaz o arquivo inteiro, o código novo pode até parecer "mais elegante", mas você não sabe se introduziu bugs. Em programação com IA, "parecer melhor" nunca é motivo para sair do pedido.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -97,18 +97,18 @@ Modifique apenas a função calculate_discount em cart.py: | 1. Adicione lógica
 :::
 :::
 
-#### 4. Regra 4: Goal-Driven Execution (execução orientada a objetivo)
+4. Regra 4: Goal-Driven Execution (execução orientada a objetivo)
 
 Esta regra responde a uma pergunta-chave: instruir a IA sobre "como fazer" ou sobre "o que fazer"? Karpathy prefere a segunda. Em vez de "crie uma classe, depois adicione métodos, depois escreva testes", diga "preciso de uma ferramenta que leia um CSV e conte os valores únicos de cada coluna". A IA escolhe o caminho; você valida o resultado.
 
-Os benefícios são duplos. Para a IA, há mais autonomia para escolher a melhor implementação em vez de seguir seus passos intermediários; para você, a atenção sai do "como" e vai para o "está certo?" — exatamente o papel de um Conductor.
+Os benefícios são duplos. Para a IA, há mais autonomia para escolher a melhor implementação em vez de seguir seus passos intermediários; para você, a atenção sai do "como" e vai para o "está certo?", exatamente o papel de um Conductor.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Atenção: orientado a objetivo ≠ deixar solto
 
 {class="mt-1"}
-Depois da execução, você valida com rigor: o resultado atende ao pedido? Casos de borda foram tratados? Há overdesign óbvio? Se algo saiu errado, dê feedback concreto — não "refaça", e sim "com lista vazia o código lança IndexError; adicione verificação de nulo".
+Depois da execução, você valida com rigor: o resultado atende ao pedido? Casos de borda foram tratados? Há overdesign óbvio? Se algo saiu errado, dê feedback concreto, não "refaça", e sim "com lista vazia o código lança IndexError; adicione verificação de nulo".
 :::
 
 ::: div .overflow-x-auto
@@ -157,7 +157,7 @@ Por volta de meados de 2026, o conceito Harness Engineering começou a populariz
 <strong>A capacidade de um agent = capacidade do modelo × qualidade do harness</strong>
 :::
 
-A capacidade do modelo é o teto intelectual da IA; o Harness é o "ambiente de trabalho" em volta do modelo — gestão de contexto, integração de ferramentas, orquestração de fluxo, sistema de memória etc.
+A capacidade do modelo é o teto intelectual da IA; o Harness é o "ambiente de trabalho" em volta do modelo: gestão de contexto, integração de ferramentas, orquestração de fluxo, sistema de memória etc.
 
 Isso explica uma dúvida comum: por que, com o mesmo GPT-4 ou Claude, uns fazem projetos incríveis e outros saem com código medíocre? A diferença não está no modelo, e sim no Harness. Um bom Harness tem: especificação clara do projeto, ferramentas bem integradas, contexto organizado e fluxo de verificação sólido. O modelo define o teto; o Harness define quanto dele você alcança.
 
@@ -176,7 +176,7 @@ Os próximos capítulos ensinam a construir esse Harness: Capítulo 39, contexto
 Mão na massa: use o "triângulo do pensamento" na sua próxima ideia
 
 {class="mt-1"}
-Escolha um projetinho que você adia há tempo (uma página de contagem regressiva, um script de lembrete de beber água). Em 3 minutos responda: ① que problema resolve? ② como fica pronto? ③ quais restrições (tempo, tecnologia, ambiente)? Escreva as respostas em um parágrafo. Parabéns: você acabou de fazer o seu primeiro "Think Before Coding" — e esse parágrafo já é uma instrução de qualidade.
+Escolha um projetinho que você adia há tempo (uma página de contagem regressiva, um script de lembrete de beber água). Em 3 minutos responda: ① que problema resolve? ② como fica pronto? ③ quais restrições (tempo, tecnologia, ambiente)? Escreva as respostas em um parágrafo. Parabéns: você acabou de fazer o seu primeiro "Think Before Coding", e esse parágrafo já é uma instrução de qualidade.
 :::
 
 ::: div .chapter-summary
@@ -185,9 +185,9 @@ Resumo do capítulo
 
 - As cinco regras vêm do CLAUDE.md de 70 linhas de Karpathy (70 mil Stars); este livro acrescenta a quinta: "iterar e verificar"
 - Think Before Coding: responda três perguntas — o que fazer? como fica o resultado? quais limites?
-- Simplicity First: a maior armadilha é "fazer demais" — para calcular desconto não se precisa de um e-commerce
+- Simplicity First: a maior armadilha é "fazer demais": para calcular desconto não se precisa de um e-commerce
 - Surgical Changes: mudanças cirúrgicas, sem o "aproveitar e melhorar" da IA
-- Goal-Driven Execution: diga o que fazer, não como fazer — deixe a IA escolher o caminho
+- Goal-Driven Execution: diga o que fazer, não como fazer, deixe a IA escolher o caminho
 - Iterate and Verify: três camadas (funcional/borda/arquitetura) + feedback concreto, em ciclo
 - Harness Engineering: capacidade = modelo × Harness; trate a IA como "estagiário genial" e monte o ambiente
 :::

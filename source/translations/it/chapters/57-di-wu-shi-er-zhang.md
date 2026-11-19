@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Se Compose è il «volto» dell'app, questo capitolo parla del suo «scheletro». Il sistema Android ha quattro componenti fondamentali, e tutte le app sono assemblate con loro; il più importante, l'Activity, ha una «mappa del ciclo di vita» che ogni sviluppatore Android deve incidersi in testa. A capitolo finito capirai misteri antichi come «perché quando torno dallo sfondo la mia app ha perso lo stato».
 
-#### 1. I quattro componenti principali: le «colonne portanti» di Android
+1. I quattro componenti principali: le «colonne portanti» di Android
 
 Android definisce ufficialmente quattro componenti fondamentali, ognuno addetto a un tipo di lavoro:
 
@@ -25,9 +25,9 @@ Android definisce ufficialmente quattro componenti fondamentali, ognuno addetto 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Colpo d'occhio sui quattro componenti di Android
 
-Da principiante passerai il 95% del tempo con gli Activity; Service e BroadcastReceiver servono quando fai riproduzione musicale o notifiche push; ContentProvider si usa meno di tutti (il sistema ha già incapsulato i dati più comuni). Un'avvertenza in più: tutti e quattro i componenti vanno «iscritti all'anagrafe» in AndroidManifest.xml — senza iscrizione il sistema non li trova.
+Da principiante passerai il 95% del tempo con gli Activity; Service e BroadcastReceiver servono quando fai riproduzione musicale o notifiche push; ContentProvider si usa meno di tutti (il sistema ha già incapsulato i dati più comuni). Un'avvertenza in più: tutti e quattro i componenti vanno «iscritti all'anagrafe» in AndroidManifest.xml, senza iscrizione il sistema non li trova.
 
-#### 2. Il ciclo di vita dell'Activity: la prima «mappa del tesoro» dello sviluppo Android
+2. Il ciclo di vita dell'Activity: la prima «mappa del tesoro» dello sviluppo Android
 
 Un'app sul telefono può essere interrotta in qualunque momento: arriva una chiamata, l'utente passa a WeChat per rispondere, la memoria del sistema non basta e ti chiude... La vita di un Activity è un viaggio in circolo su questa mappa:
 
@@ -62,10 +62,10 @@ Gli usi tipici dei sei callback del ciclo di vita
 Attenzione alle trappole: ruotare lo schermo «uccide» l'Activity
 
 {class="mt-1"}
-L'incidente più classico da principiante: l'app ruota lo schermo e il testo del campo di input sparisce tutto. Il motivo: di default la rotazione dello schermo distrugge e ricrea l'Activity (rifacendo il giro onDestroy → onCreate). La soluzione: salvare lo stato con rememberSaveable (il sostituto di remember in Compose), che alla ricostruzione si ritrova da solo i valori. Lo useremo e riuseremo nei capitoli 6 e 7.
+L'incidente più classico da principiante. L'app ruota lo schermo e il testo del campo di input sparisce tutto. Il motivo: di default la rotazione dello schermo distrugge e ricrea l'Activity (rifacendo il giro onDestroy → onCreate). La soluzione: salvare lo stato con rememberSaveable (il sostituto di remember in Compose), che alla ricostruzione si ritrova da solo i valori. Lo useremo e riuseremo nei capitoli 6 e 7.
 :::
 
-#### 3. Intent: il «biglietto» per muoversi dentro e fuori dall'app
+3. Intent: il «biglietto» per muoversi dentro e fuori dall'app
 
 L'Intent (intenzione) è il «biglietto» con cui i componenti comunicano. Per saltare da una schermata all'altra, o per aprire il browser o far partire la fotocamera, devi sempre «prendere il biglietto e salire a bordo»:
 
@@ -122,11 +122,11 @@ Consiglio: e quando le schermate diventano tante?
 Quando il progetto cresce, raccogli tutte le rotte delle schermate in un unico file (per esempio AppNavGraph.kt) e governale da un solo posto: non lasciare la logica «dove si va» sparsa tra le schermate. È il primo passo dal «funziona» al «si può mantenere».
 :::
 
-#### 5. Per inciso: cos'è un Fragment (e perché questo libro non lo insegna)
+5. Per inciso: cos'è un Fragment (e perché questo libro non lo insegna)
 
-Frugando nei vecchi tutorial ti imbatterai di sicuro nel Fragment — un «frammento d'interfaccia riutilizzabile» dentro un Activity, protagonista assoluto delle vecchie architetture a più pagine. Ma nell'era Compose le schermate si fanno direttamente con funzioni Composable + rotte di Navigation, e anche ufficialmente il Fragment è stato ridimensionato. Per questo il libro non lo mette nel percorso principale.
+Frugando nei vecchi tutorial ti imbatterai di sicuro nel Fragment: un «frammento d'interfaccia riutilizzabile» dentro un Activity, protagonista assoluto delle vecchie architetture a più pagine. Ma nell'era Compose le schermate si fanno direttamente con funzioni Composable + rotte di Navigation, e anche ufficialmente il Fragment è stato ridimensionato. Per questo il libro non lo mette nel percorso principale.
 
-Il mio consiglio: nei nuovi progetti non usare Fragment di tua iniziativa; ma quando leggi codice vecchio o te lo chiedono a un colloquio, ti basta sapere che è un «frammento d'interfaccia incastonato nell'Activity». Nelle risorse per studiare scegli sempre materiale successivo al 2023 — il «vecchio almanacco» dello stack Android si aggiorna più in fretta di quel che si pensa.
+Il mio consiglio: nei nuovi progetti non usare Fragment di tua iniziativa; ma quando leggi codice vecchio o te lo chiedono a un colloquio, ti basta sapere che è un «frammento d'interfaccia incastonato nell'Activity». Nelle risorse per studiare scegli sempre materiale successivo al 2023, il «vecchio almanacco» dello stack Android si aggiorna più in fretta di quel che si pensa.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -51,7 +51,7 @@ kind: chapter
 
 #### 三、スマホがパソコンに——デスクトップモード
 
-一部のAndroidスマホは"デスクトップモード"に対応——モニターに接続すると、パソコンのデスクトップに似たUIを出力し、マウスとキーボードで操作できる：
+一部のAndroidスマホは"デスクトップモード"に対応：モニターに接続すると、パソコンのデスクトップに似たUIを出力し、マウスとキーボードで操作できる：
 
 - <strong>Samsung DeX</strong>：Samsungフラッグシップの看板機能。モニター接続後にデスクトップUIが起動し、マルチウィンドウ操作が可能。本当のパソコンに最も近い体験。Bluetoothキーボード/マウスと組み合わせれば、出張時にノートPCを持たずに済む。
 - <strong>Huaweiデスクトップモード</strong>：Huawei Mateシリーズ/Puraシリーズがモニター接続後に類似機能あり。マルチウィンドウ、ファイル管理、オフィスAppに対応。
@@ -62,7 +62,7 @@ kind: chapter
 
 運転中のスマホ操作は違法だが、ナビ、音楽、電話は必須だ。カースル連携システムで車載画面上でスマホのコア機能を使い、スマホは置いて触らないでおける：
 
-- <strong>Apple CarPlay</strong>：iPhoneユーザーの第一選択。USBまたはワイヤレスでカースルに接続、車載画面にiPhoneのシンプルUIが表示される——ナビ（Amap/Baidu Map）、音楽、電話、メッセージ、ポッドキャスト。Siri音声操作で完全ハンズフリー。
+- <strong>Apple CarPlay</strong>：iPhoneユーザーの第一選択。USBまたはワイヤレスでカースルに接続、車載画面にiPhoneのシンプルUIが表示される，ナビ（Amap/Baidu Map）、音楽、電話、メッセージ、ポッドキャスト。Siri音声操作で完全ハンズフリー。
 - <strong>Android Auto</strong>：Androidユーザー向けの対応策。機能はCarPlayに類似、Google Maps、Spotifyなどに対応。国内はGoogleサービス制限により一部機能使用不可。
 - <strong>Huawei HiCar</strong>：Huawei自社開発方案、国内車種のサポート率が高い。ナビ・音楽のほか、Huaweiビデオ通話、駐車映像統合などの独自機能も使える。
 - <strong>Baidu CarLife</strong>：クロスプラットフォーム方案、iOSとAndroidの両方で使用可能。機能は少ないが互換性が広く、多くの旧型車種はCarLifeのみ対応。

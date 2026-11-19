@@ -20,7 +20,7 @@ El primer error de mucha gente al grabar vídeos es "coger el teléfono y grabar
 2. <strong>¿Qué valor puedo aportar?</strong>; hacer reír (entretenimiento), enseñar algo (conocimiento), dar hambre (gastronomía), enternecer (emoción). Al menos uno.
 3. <strong>¿En qué plataforma puedo publicar regularmente?</strong>; Douyin/Kuaishou (entretenimiento general), Xiaohongshu (estilo de vida), Bilibili (contenido en profundidad), Video Account (círculo social). Elige una plataforma principal y no publiques en todas a la vez.
 
-#### II. Ajustes básicos de grabación con el teléfono - 5 cosas antes de empezar
+II. Ajustes básicos de grabación con el teléfono - 5 cosas antes de empezar
 
 1. <strong>Resolución 1080P, 30fps</strong>: Este es el estándar de las plataformas de vídeos cortos. Los archivos 4K son demasiado grandes y suben lento; 60fps no tiene ventaja en redes sociales y hace los archivos más grandes.
 2. <strong>Limpia el objetivo</strong>: La primera y más importante. Antes de grabar, limpia el objetivo con la ropa; la imagen se aclarará inmediatamente un nivel.
@@ -28,7 +28,7 @@ El primer error de mucha gente al grabar vídeos es "coger el teléfono y grabar
 4. <strong>¿Horizontal o vertical?</strong>; para Douyin/Kuaishou/Video Account/Xiaohongshu <strong>graba en vertical</strong>(9:16); para Bilibili/YouTube <strong>graba en horizontal</strong>(16:9). Decide la orientación según la plataforma.
 5. <strong>Activa la cuadrícula</strong>: Ajustes &gt; Cámara &gt; Cuadrícula. La base de la composición con la regla de tercios; te ayuda a encontrar rápidamente el centro visual.
 
-#### III. Cinco movimientos de cámara - haz que la imagen "se mueva"
+III. Cinco movimientos de cámara - haz que la imagen "se mueva"
 
 El mayor problema de los principiantes es que la imagen es demasiado "estática": todo el rato de pie sin moverse. Aprende estos cinco movimientos básicos y la imagen parecerá profesional al instante:
 
@@ -37,7 +37,7 @@ El mayor problema de los principiantes es que la imagen es demasiado "estática"
 - <strong>Pull (alejar)</strong>: El teléfono se aleja lentamente del sujeto. Muestra la relación entre el sujeto y el entorno.
 - <strong>: El teléfono se desplaza lateralmente manteniendo la misma distancia del sujeto. Como cuando miras el paisaje por la ventanilla del tren.</strong>: El teléfono sube o baja a lo largo del sujeto. Ideal para mostrar la altura de un edificio o el cuerpo de una persona.
 - <strong>: El teléfono rota en el eje horizontal o vertical, como si movieras la cabeza. Crea dinamismo.</strong> Al grabar vídeos cortos con el teléfono, el mejor "estabilizador" no es una herramienta, sino tus dos manos. Mantén los codos pegados al cuerpo como soporte, mantén la respiración al grabar, camina con pasos cortos y rodillas flexionadas para reducir las sacudidas.
-- <strong>Si necesitas grabar escenas en movimiento, considera comprar un gimbal de mano (unos 200-500 yuanes). Pero recuerda: para principiantes, dominar primero los movimientos con las manos es más importante que comprar un gimbal.</strong> IV. Edición - las herramientas que necesitas en el teléfono
+- <strong>Si necesitas grabar escenas en movimiento, considera comprar un gimbal de mano (unos 200-500 yuanes). Pero recuerda: para principiantes, dominar primero los movimientos con las manos es más importante que comprar un gimbal.</strong> IV. Edición - las herramientas que necesitas en el teléfono.
 
 <strong>La edición ya no requiere un ordenador. Estas apps te permiten editar vídeos de calidad directamente en el teléfono:</strong> CapCut (Jianying)
 
@@ -52,7 +52,7 @@ Jianying Pro (versión de PC)
 5. <strong>Añade música: elige música de la biblioteca incorporada o importa música local; ajusta el volumen de la música y el del vídeo original.</strong> Añade una portada y un título, exporta (selecciona 1080P, 30fps) y publica.
 6. <strong>VI. Estructura de un vídeo corto de 1 minuto - fórmula probada</strong> Un vídeo corto no se graba de cualquier manera; tiene una estructura que retiene la atención del espectador:
 
-#### V. La importancia de la miniatura: el 70% decide si verlo solo por la miniatura
+V. La importancia de la miniatura: el 70% decide si verlo solo por la miniatura
 
 : Debes captar la atención del espectador en los primeros 3 segundos. Puede ser una pregunta, una sorpresa, una promesa o un conflicto. "Hoy te enseño...", "¿Sabías que...?", "Esto fue lo que pasó". Sin un buen gancho, el espectador pasa al siguiente vídeo.
 
@@ -73,11 +73,11 @@ Jianying Pro (versión de PC)
 <i class="fas fa-hands mr-2"></i>Usa "B-roll" (imágenes de apoyo)
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. : Cuando hables de algo, inserta imágenes o vídeos de ese objeto para ilustrarlo. Por ejemplo, al mencionar un producto, muestra el producto; al mencionar un lugar, muestra el lugar.
+1. : Cuando hables de algo, inserta imágenes o vídeos de ese objeto para ilustrarlo. Por ejemplo, al mencionar un producto, muestra el producto; al mencionar un lugar, muestra el lugar
 2. VIII. Directo con el teléfono - todo lo que necesitas saber
 3. El directo con el teléfono es cada vez más popular; ya sea para vender, enseñar o interactuar con los seguidores. Estos son los puntos clave:
 4. Luz
-5. : La luz es lo más importante en directo. Sitúate frente a una ventana para aprovechar la luz natural; si grabas de noche, compra un ring light (unos 50-100 yuanes). La luz frontal hace que la piel se vea bien.
+5. : La luz es lo más importante en directo. Sitúate frente a una ventana para aprovechar la luz natural; si grabas de noche, compra un ring light (unos 50-100 yuanes). La luz frontal hace que la piel se vea bien
 :::
 
 ::: div .chapter-summary
@@ -86,8 +86,8 @@ Jianying Pro (versión de PC)
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Sonido
-- : Usa auriculares con micrófono (los que vienen con el teléfono sirven) en lugar del micrófono integrado del teléfono. El sonido claro es más importante que la imagen nítida.
+- : Usa auriculares con micrófono (los que vienen con el teléfono sirven) en lugar del micrófono integrado del teléfono. El sonido claro es más importante que la imagen nítida
 - Estabilidad
-- : Apoya el teléfono en un trípode o una pila de libros; no lo sostengas con la mano durante todo el directo.
+- : Apoya el teléfono en un trípode o una pila de libros; no lo sostengas con la mano durante todo el directo
 - Red
 :::

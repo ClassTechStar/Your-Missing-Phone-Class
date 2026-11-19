@@ -16,15 +16,15 @@ kind: chapter
 
 Ramai orang tangkap video kesilapan pertama adalah "angkat telefon terus tangkap", tangkap habis tidak tahu untuk siapa. Sebelum mula tangkap, dahulu jawab tiga soalan:
 
-1. <strong>Guna stylus untuk nota tulisan tangan, lukisan, edit foto.</strong>- Tangkap untuk anak tengok, tangkap untuk rakan sebaya tengok, tangkap untuk warga emas tengok, gaya kandungan berbeza.
+1. <strong>Guna stylus untuk nota tulisan tangan, lukisan, edit foto.</strong>- Tangkap untuk anak tengok, tangkap untuk rakan sebaya tengok, tangkap untuk warga emas tengok, gaya kandungan berbeza
 2. <strong>AI (Kecerdasan Buatan) telah menjadi sebahagian besar telefon pintar moden. Bab ini membincangkan ciri AI yang ada pada telefon dan cara menggunakannya.</strong> I. Asas AI telefon
 3. <strong>1. NPU (Neural Processing Unit)</strong>- Douyin/Kuaishou (hiburan umum), Xiaohongshu (gaya hidup), Bilibili (kandungan mendalam), Video Account (bulatan sosial). Pilih satu pangkalan utama mendalami, jangan mula-mula semua platform
 
-#### 2. Tetapan asas rakaman telefon — 5 perkara wajib sebelum merakam
+2. Tetapan asas rakaman telefon — 5 perkara wajib sebelum merakam
 
 1. <strong>2. AI pada peranti vs AI awan</strong>: Ini adalah standard platform video pendek. Fail 4K terlalu besar muat naik perlahan, 60fps di platform sosial tiada kelebihan sebaliknya fail lebih besar.
-2. <strong>AI awan: Diproses di pelayan, lebih berkuasa, tetapi perlu sambungan internet dan kurang privasi.</strong>3. Model bahasa besar (LLM) pada telefon
-3. <strong>Telefon flagship 2024-2026 mula menjalankan LM (seperti Gemini Nano, Apple Intelligence) pada peranti untuk tugas seperti ringkasan teks, janaan imej, penterjemahan.</strong> II. Ciri AI telefon
+2. <strong>AI awan: Diproses di pelayan, lebih berkuasa, tetapi perlu sambungan internet dan kurang privasi.</strong>3. Model bahasa besar (LLM) pada telefon.
+3. <strong>Telefon flagship 2024-2026 mula menjalankan LM (seperti Gemini Nano, Apple Intelligence) pada peranti untuk tugas seperti ringkasan teks, janaan imej, penterjemahan.</strong> II. Ciri AI telefon.
 4. <strong>1. Fotografi AI</strong>- Hantar Douyin/Kuaishou/Video Account/Xiaohongshu <strong>HDR AI: AI proses berbilang dedahan untuk gambar HDR yang lebih baik.</strong>(9:16), hantar Bilibili/YouTube <strong>2. AI dalam video</strong> Penstabilan video: AI stabilkan video walaupun berjalan.
 5. <strong>Pengasingan subjek: AI pisahkan subjek dari latar untuk efek bokeh atau ganti latar.</strong>: Tetapan &gt; Kamera &gt; Garis grid. Asas komposisi rule of thirds, bantu anda cepat cari pusat graviti gambar.
 
@@ -50,14 +50,14 @@ Degupan jantung tidak normal: AI kesan degupan jantung tidak normal dan maklum.
 3. <strong>8. Apple Intelligence</strong>: Antara dua segmen video ketik butang "transisi", pilih satu kesan transisi mudah. Cadangan pemula guna "dissolve" atau "fade to black", jangan guna transisi 3D berbelit-belit.
 4. <strong>Writing Tools: Alat penulisan AI untuk ringkasan, pembetulan, perubahan nada.</strong> Image Playground: Jana imej berdasarkan deskripsi teks.
 5. <strong>Genmoji: Jana emoji tersuai berdasarkan deskripsi teks.</strong>: Pustaka muzik JianYing ada banyak muzik bebas hak cipta. Pilih satu BGM rentak dan kandungan sepadan, volum laras ke kira-kira 1/3 audio asal video.
-6. <strong>ChatGPT integrasi: Sokong ChatGPT untuk soalan kompleks.</strong>9. Galaxy AI (Samsung)
+6. <strong>ChatGPT integrasi: Sokong ChatGPT untuk soalan kompleks.</strong>9. Galaxy AI (Samsung).
 
-#### 5. Kepentingan muka depan — 70% orang putuskan tonton atau tidak hanya dari muka depan
+5. Kepentingan muka depan — 70% orang putuskan tonton atau tidak hanya dari muka depan
 
 Cover video pendek adalah "muka", tentukan orang mahu klik masuk atau tidak. Beberapa perkara buat cover:
 
 - <strong>Live Translate: Terjemah perbualan telefon real-time.</strong>: Tulis kandungan teras video dengan fon besar, contoh "3 minit belajar pembaikan foto telefon". Fon mesti besar, warna terang, ada kontras dengan latar belakang.
-- <strong>Photo Assist: Edit foto dengan AI, termasuk generative fill.</strong>10. Google Gemini
+- <strong>Photo Assist: Edit foto dengan AI, termasuk generative fill.</strong>10. Google Gemini.
 - <strong>Gemini adalah model AI Google, disepadukan dalam Android:</strong> Gemini Nano: Model pada peranti untuk tugas asas, privasi.
 - <strong>Gemini Pro/Ultra: Model awan untuk tugas kompleks.</strong> Magic Compose: AI jana draf mesej dengan pelbagai nada.
 
@@ -73,11 +73,11 @@ Cover video pendek adalah "muka", tentukan orang mahu klik masuk atau tidak. Beb
 <i class="fas fa-hands mr-2"></i>Praktikal: Tangkap satu video pendek 30 saat
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. 2. Guna AI untuk produktiviti
+1. 2. Guna AI untuk produktiviti.
 2. Ringkasan: Guna AI untuk ringkaskan artikel panjang, e-mel, dokumen.
 3. Penterjemahan: Guna AI untuk terjemah teks, suara, imej.
 4. Penulisan: Guna AI untuk bantu tulis, betulkan, ubah nada teks.
-5. 3. Guna AI untuk fotografi
+5. 3. Guna AI untuk fotografi.
 :::
 
 ::: div .chapter-summary
@@ -88,6 +88,6 @@ Cover video pendek adalah "muka", tentukan orang mahu klik masuk atau tidak. Beb
 - Biarkan AI pilih scene: Buka kamera, biarkan AI kenalpasti scene dan optimumkan.
 - Guna mod malam AI: Untuk foto malam yang lebih jelas.
 - Edit foto dengan AI: Guna alat edit AI untuk buang objek, ganti latar, tambah efek.
-- 4. Guna AI untuk kesihatan
-- 3 saat pertama tentukan hidup mati, satu video hanya cakap satu perkara, konsisten lebih penting daripada bakat
+- 4. Guna AI untuk kesihatan.
+- 3 saat pertama tentukan hidup mati, satu video hanya cakap satu perkara, konsisten lebih penting daripada bakat.
 :::

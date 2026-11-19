@@ -10,23 +10,23 @@ kind: chapter
 ### Chapter 38: Five Thinking Principles of AI Coding
 
 {class="chapter-intro mb-4"}
-If this book makes you remember only one chapter, make it this one. The five thinking principles are the book's heart. Everything after — context, requirements, prompts, quality — expands these five in different scenarios. Don't worry: none are hard to grasp, but each deserves a few projects to sink into muscle memory.
+If this book makes you remember only one chapter, make it this one. The five thinking principles are the book's heart. Everything after, context, requirements, prompts, quality, expands these five in different scenarios. Don't worry: none are hard to grasp, but each deserves a few projects to sink into muscle memory.
 
-The story starts with a fun origin: when Andrej Karpathy open-sourced his project, he attached a 70-line CLAUDE.md summarizing four core principles for working with AI. That file earned 70,000+ GitHub Stars and became the most widely cited playbook for AI coding practitioners worldwide. These four principles aren't empty slogans — they're actionable thinking habits distilled from massive practice. This book adds a fifth — Iterate and Verify — completing the five-principle system.
+The story starts with a fun origin: when Andrej Karpathy open-sourced his project, he attached a 70-line CLAUDE.md summarizing four core principles for working with AI. It earned 70,000+ GitHub Stars, and became the most widely cited playbook for AI coding practitioners worldwide. These four principles aren't empty slogans. They are actionable thinking habits distilled from massive practice. On top of these four, this book adds a fifth, Iterate and Verify, completing the five-principle system.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Why is a 70-line file so valuable?
 
 {class="mt-1"}
-What do 70,000 Stars mean? Most GitHub projects never get close. That a 70-line text file earned them proves one thing: in the AI era the scarcest resource isn't code — it's the ability to "think clearly." Those 70 lines are a concentrated form of clarity.
+What do 70,000 Stars mean? Most GitHub projects never get close. That a 70-line text file earned them proves one thing: in the AI era the scarcest resource isn't code, it's the ability to "think clearly." Those 70 lines are a concentrated form of clarity.
 :::
 
 #### 1. Principle 1: Think Before Coding
 
-This is the most counterintuitive of the five. If AI can write code for us, why think first? Simple: AI output quality tracks your input quality. If you haven't figured out what you want, AI's answers will trap you in endless revision loops — aka "AI getting lost with you."
+This is the most counterintuitive of the five. If AI can write code for us, why think first? Simple enough: AI output quality tracks your input quality. If you haven't figured out what you want, AI's answers will trap you in endless revision loops, aka "AI getting lost with you."
 
-"Think first" means answering three questions before prompting AI — an inseparable "thinking triangle":
+"Think first" means answering three questions before prompting AI, an inseparable "thinking triangle":
 
 1. What problem am I solving? (Goal)
 2. What should the result look like? (Acceptance criteria)
@@ -46,12 +46,12 @@ Vague vs. clear input for the same request
 Note: Think first ≠ write a perfect spec first
 
 {class="mt-1"}
-"Think first" doesn't mean "write a perfect PRD before starting." It's a quick but structured thinking pass — 30 seconds on those three questions beats 30 minutes of back-and-forth in chat. Small tasks need short answers; big projects can expand them into full requirement docs (see Chapter 40).
+"Think first" doesn't mean "write a perfect PRD before starting." It's a quick but structured thinking pass: 30 seconds on those three questions beats 30 minutes of back-and-forth in chat. Small tasks need short answers; big projects can expand them into full requirement docs (see Chapter 40).
 :::
 
 #### 2. Principle 2: Simplicity First
 
-The biggest trap in AI coding isn't "can't build it" — it's "builds too much." Ask AI for a "user management system" and it may generate auth, permissions, roles, audit logs, data export — when all you need is a simple login page. Overbuilding is the main cause of bloated AI code.
+The biggest trap in AI coding isn't "can't build it": it's "builds too much." Ask AI for a "user management system" and it may generate auth, permissions, roles, audit logs, data export, when all you need is a simple login page. Overbuilding is the main cause of bloated AI code.
 
 "Simplicity First" means following the "minimum viable" rule every time you prompt: implement the core with the least code, solve the problem with the simplest design, validate the idea with the fewest features. Karpathy put it well: "If you need a discounted price, you don't need an e-commerce engine."
 
@@ -60,7 +60,7 @@ In practice, Simplicity First means a few concrete habits:
 - Have AI implement one feature at a time, not the entire system in one prompt;
 - Prefer standard libraries and simple designs over heavy dependencies;
 - If 50 lines can solve it, don't let AI write 500;
-- When AI's output goes beyond scope, boldly tell it to cut the extras.
+- When AI's output goes beyond scope, boldly tell it to cut the extras
 
 ::: div .overflow-x-auto
 ```html
@@ -73,11 +73,11 @@ Overbuilt vs. simple approaches for common scenarios
 
 #### 3. Principle 3: Surgical Changes
 
-When iterating an existing project, every change should be surgical — touch only what must change. This matters especially in AI coding because AI loves to "tidy up while it's in there": you ask it to fix one bug and it refactors half a file.
+When iterating an existing project, every change should be surgical, touch only what must change. This matters especially in AI coding because AI loves to "tidy up while it's in there": you ask it to fix one bug and it refactors half a file.
 
 Surgical Changes means every prompt explicitly states the scope and boundaries: "Only modify the calculate_discount function," "don't touch anything else," "keep the existing code style." If AI goes beyond scope, immediately tell it to revert the extras.
 
-Karpathy illustrated this with a diff example. Say you ask AI to add "member pricing" to a cart discount function. Good output: only that function changes, a few lines added. Bad output: the whole file is refactored — the new code might look "cleaner," but you can't be sure it didn't introduce bugs. In AI coding, "looks better" is never a reason to ignore instructions.
+Karpathy illustrated this with a diff example. Say you ask AI to add "member pricing" to a cart discount function. Good output: only that function changes, a few lines added. Bad output: the whole file is refactored, the new code might look "cleaner," but you can't be sure it didn't introduce bugs. In AI coding, "looks better" is never a reason to ignore instructions.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -101,14 +101,14 @@ Only modify the calculate_discount function in cart.py: 1. Add member pricing on
 
 This principle answers a key question: should you tell AI "how to do it" or "what to do"? Karpathy's answer is the latter. Instead of "create a class, then add methods, then write tests," say "I need a tool that parses a CSV and counts unique values per column." Let AI pick the implementation path; you accept the result.
 
-Goal-driven execution has a double payoff. AI gets room to choose the best path instead of being boxed in by your middle steps. You shift attention from "how" to "is the result right" — exactly what a conductor should do.
+Goal-driven execution has a double payoff. AI gets room to choose the best path instead of being boxed in by your middle steps. You shift attention from "how" to "is the result right", exactly what a conductor should do.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Note: Goal-driven ≠ hands-off
 
 {class="mt-1"}
-You still need strict acceptance after AI runs: Does the result meet the need? Are edge cases handled? Any obvious overengineering? If it's off, give specific feedback — not "redo it," but "this raises IndexError on empty list input; please add a null/empty check."
+You still need strict acceptance after AI runs: Does the result meet the need? Are edge cases handled? Any obvious overengineering? If it's off, give specific feedback, not "redo it," but "this raises IndexError on empty list input; please add a null/empty check."
 :::
 
 ::: div .overflow-x-auto
@@ -124,7 +124,7 @@ Imperative vs. goal-based instructions
 
 This is the fifth principle this book adds to Karpathy's four. Core belief: AI's first output is almost never final. Effective AI coding is a generate → verify → correct loop, not one-shot prompt → output.
 
-"Iterate and Verify" isn't passive "try again if wrong" — it's a structured validation flow. After each AI output, verify on three levels:
+"Iterate and Verify" isn't passive "try again if wrong", it's a structured validation flow. After each AI output, verify on three levels:
 
 - Level 1 · Functional: Does it run? Are inputs and outputs right?
 - Level 2 · Boundary: What about empty, oversized, or invalid inputs?
@@ -157,16 +157,16 @@ In mid-2026, Harness Engineering started trending in the AI coding community. Th
 <strong>An agent's capability = model capability × harness quality</strong>
 :::
 
-Model capability is the brain's intelligence ceiling; the Harness is the "work environment" around it — context management, tool integration, workflow orchestration, memory systems, and more.
+Model capability is the brain's intelligence ceiling; the Harness is the "work environment" around it, context management, tool integration, workflow orchestration, memory systems, and more.
 
-This explains a common puzzle: with the same GPT-4 or Claude, why do some people ship stunning projects while others get mediocre code? The difference isn't the model — it's the harness. A good harness includes clear project spec files, sensible tool integration, organized conversation context, and solid verification flow. The model sets the ceiling; the harness decides how much of it you can use.
+This explains a common puzzle: with the same GPT-4 or Claude, why do some people ship stunning projects while others get mediocre code? The difference isn't the model, it's the harness. A good harness includes clear project spec files, sensible tool integration, organized conversation context, and solid verification flow. The model sets the ceiling; the harness decides how much of it you can use.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 The genius intern analogy
 
 {class="mt-1"}
-Think of the model as a genius intern — sky-high IQ, but without project docs, tool guidance, deadlines, and acceptance criteria, they won't ship great work. Harness Engineering is the craft of "setting up a genius intern's workspace."
+Think of the model as a genius intern, sky-high IQ, but without project docs, tool guidance, deadlines, and acceptance criteria, they won't ship great work. Harness Engineering is the craft of "setting up a genius intern's workspace."
 :::
 
 The rest of this book is essentially about building a good harness: Chapter 39 teaches context management (project memory), Chapter 40 requirements (PRD), Chapter 43 conversation technique (prompt layering), Chapter 45 quality assurance (verification flow). Together, that's your harness.
@@ -184,10 +184,10 @@ Pick a small thing you've wanted to build but never started (a countdown page, a
 Chapter recap
 
 - Five principles from Karpathy's 70-line CLAUDE.md (70K+ Stars); this book adds "Iterate and Verify"
-- Think Before Coding: Answer three questions first — what, what result, what constraints?
-- Simplicity First: AI's biggest trap is building too much — a discount doesn't need an e-commerce engine
+- Think Before Coding: Answer three questions first: what, what result, what constraints?
+- Simplicity First: AI's biggest trap is building too much, a discount doesn't need an e-commerce engine
 - Surgical Changes: Change with surgical precision; refuse AI's "while I'm in here" refactors
-- Goal-Driven Execution: Say what, not how — let AI choose the path
+- Goal-Driven Execution: Say what, not how, let AI choose the path
 - Iterate and Verify: Three-level checks (functional/boundary/architecture) + specific feedback, loop
-- Harness Engineering: Ability = Model × Harness — manage AI like a genius intern's workspace
+- Harness Engineering: Ability = Model × Harness, manage AI like a genius intern's workspace
 :::

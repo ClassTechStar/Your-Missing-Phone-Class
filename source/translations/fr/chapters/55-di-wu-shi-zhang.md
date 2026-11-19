@@ -10,7 +10,7 @@ kind: chapter
 ### Chapitre 50 : Kotlin en un rien de temps — le premier langage du développement Android
 
 {class="chapter-intro mb-4"}
-Dans ce chapitre, on se met sérieusement au langage. Pas de stress — Kotlin est réputé « adapté aux débutants », et pas besoin d'apprendre la grammaire par cœur : avec 20 % de la syntaxe maîtrisée, tu comprends et écris déjà 80 % du code du quotidien. Le reste, tu le consulteras en travaillant sur tes projets. Retiens notre principe d'apprentissage : comprendre vaut mieux que mémoriser, savoir utiliser vaut mieux que tout maîtriser.
+Dans ce chapitre, on se met sérieusement au langage. Pas de stress, Kotlin est réputé « adapté aux débutants », et pas besoin d'apprendre la grammaire par cœur : avec 20 % de la syntaxe maîtrisée, tu comprends et écris déjà 80 % du code du quotidien. Le reste, tu le consulteras en travaillant sur tes projets. Retiens notre principe d'apprentissage : comprendre vaut mieux que mémoriser, savoir utiliser vaut mieux que tout maîtriser.
 
 #### 1. Variables et types : donner un nom aux données
 
@@ -49,12 +49,12 @@ Les types de base courants de Kotlin
 Petit conseil : la règle du val d'abord
 
 {class="mt-1"}
-La règle d'or de la communauté Kotlin : utilise val par défaut, et var seulement si c'est vraiment nécessaire. Si tu emploies var là où val suffirait, l'IDE te le signalera en jaune. Cette habitude élimine toute une catégorie de bugs de « variable modifiée par accident » — moins le code change, plus il est facile à raisonner.
+La règle d'or de la communauté Kotlin : utilise val par défaut, et var seulement si c'est vraiment nécessaire. Si tu emploies var là où val suffirait, l'IDE te le signalera en jaune. Cette habitude élimine toute une catégorie de bugs de « variable modifiée par accident », moins le code change, plus il est facile à raisonner.
 :::
 
 #### 2. Les fonctions : emballer la logique en « boutons »
 
-Une fonction est un morceau de logique qui porte un nom, comme un bouton de télécommande — on appuie (on l'appelle) et une suite d'actions s'exécute. En Kotlin, on la déclare avec fun :
+Une fonction est un morceau de logique qui porte un nom, comme un bouton de télécommande: on appuie (on l'appelle) et une suite d'actions s'exécute. En Kotlin, on la déclare avec fun :
 
 ::: div .code-block
 :::inline div .code-head
@@ -75,9 +75,9 @@ println(add(3, 5))            // sortie : 8
 ```
 :::
 
-Quelques points clés : les paramètres s'écrivent entre parenthèses (le nom d'abord, le type ensuite, séparés par deux points) ; le type de retour s'écrit après la parenthèse fermante ; le gabarit de chaîne $nomVariable est la commodité signature de Kotlin — plus besoin de concaténer « chaîne + variable » comme en Java.
+Quelques points clés : les paramètres s'écrivent entre parenthèses (le nom d'abord, le type ensuite, séparés par deux points) ; le type de retour s'écrit après la parenthèse fermante ; le gabarit de chaîne $nomVariable est la commodité signature de Kotlin, plus besoin de concaténer « chaîne + variable » comme en Java.
 
-#### 3. Conditions et boucles : donner de la « réflexion » au programme
+3. Conditions et boucles : donner de la « réflexion » au programme
 
 L'intelligence d'un programme tient à deux choses : savoir décider (if/when) et savoir répéter (for/while).
 
@@ -115,7 +115,7 @@ when est la structure multi-branches la plus utilisée de Kotlin ; en développe
 
 #### 4. La null safety : le « gilet de sauvetage » de Kotlin
 
-Le bug le plus célèbre de l'ère Java s'appelle NullPointerException (exception de pointeur null) — le programme accède à quelque chose qui « n'existe pas » et plante immédiatement. Statistiquement, il trône depuis toujours en tête du classement des plantages Android. Kotlin le règle au niveau du langage : les valeurs nulles sont interdites par défaut.
+Le bug le plus célèbre de l'ère Java s'appelle NullPointerException (exception de pointeur null), le programme accède à quelque chose qui « n'existe pas » et plante immédiatement. Statistiquement, il trône depuis toujours en tête du classement des plantages Android. Kotlin le règle au niveau du langage : les valeurs nulles sont interdites par défaut.
 
 ::: div .code-block
 :::inline div .code-head
@@ -141,12 +141,12 @@ println(len)
 Attention : ne confonds pas ? et ?:
 
 {class="mt-1"}
-String? signifie « peut être null », et a ?: b signifie « si a est null, utilise b » (sa silhouette évoque la banane d'Elvis Presley, d'où le nom d'opérateur Elvis). Quand tu commences à coder, si le compilateur te signale une « erreur liée à null », c'est dans neuf cas sur dix que tu as oublié de traiter un type nullable — c'est le langage qui te protège.
+String? signifie « peut être null », et a ?: b signifie « si a est null, utilise b » (sa silhouette évoque la banane d'Elvis Presley, d'où le nom d'opérateur Elvis). Quand tu commences à coder, si le compilateur te signale une « erreur liée à null », c'est dans neuf cas sur dix que tu as oublié de traiter un type nullable, c'est le langage qui te protège.
 :::
 
 #### 5. Classes et objets : le moule à « pièces »
 
-La classe est le « moule » de l'objet, l'objet est le « produit fini » de la classe. Tout dans Android — écrans, boutons, données — est un objet. Kotlin possède une pépite nommée data class (classe de données), conçue justement pour « contenir des données » : une ligne vaut des dizaines de lignes de Java :
+La classe est le « moule » de l'objet, l'objet est le « produit fini » de la classe. Tout dans Android, écrans, boutons, données: est un objet. Kotlin possède une pépite nommée data class (classe de données), conçue justement pour « contenir des données » : une ligne vaut des dizaines de lignes de Java :
 
 ::: div .code-block
 :::inline div .code-head
@@ -172,9 +172,9 @@ val twin = me.copy(name = "Hugo")   // copie et modifie un champ
 
 Quand tu feras ton carnet de comptes, chaque écriture sera une data class : data class Record(val amount: Double, val category: String, val date: String). Vois-tu : tu es déjà capable d'écrire la structure de code d'un vrai projet.
 
-#### 6. Lambdas et fonctions d'ordre supérieur : le « sucre syntaxique » de Kotlin
+6. Lambdas et fonctions d'ordre supérieur : le « sucre syntaxique » de Kotlin
 
-Dans le code Android, tu verras chaque jour des fonctions « sans nom » comme { ... }, appelées lambdas (fonctions anonymes). Button avec onClick = { count++ } est un lambda — on emballe « quoi faire au clic » en un paquet et on le tend au bouton.
+Dans le code Android, tu verras chaque jour des fonctions « sans nom » comme { ... }, appelées lambdas (fonctions anonymes). Button avec onClick = { count++ } est un lambda, on emballe « quoi faire au clic » en un paquet et on le tend au bouton.
 
 ::: div .code-block
 :::inline div .code-head

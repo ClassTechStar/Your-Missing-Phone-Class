@@ -2,12 +2,12 @@
 id: di-san-shi-wu-zhang
 num: 35
 part: er-tong-pian
-nav: Bab 35: Anak-anak dan Ponsel—Panduan Pendidikan di Era Digital
+nav: Bab 35: Memberi anak ponsel, aturan mainnya apa?
 toc: default
 kind: chapter
 ---
 
-### Bab 35: Anak-anak dan Ponsel — Panduan Pendidikan Era Digital
+### Bab 35: Memberi anak ponsel, aturan mainnya apa?
 
 {class="chapter-intro mb-4"}
 Bab ini tidak bilang "ponsel adalah monster", juga tidak kampanye "semakin cepat kontak semakin pintar". Kami beri perangkat per segmen usia, setel aturan, ajar literasi, lindungi kesehatan, langkah demi langkah.
@@ -107,7 +107,7 @@ Banyak anak menggunakan KTP orang tua untuk mendaftarkan akun game agar lolos da
 Teknologi bisa memblokir 90% risiko, sisanya 10% bergantung pada penilaian anak. Daripada melarang "tidak boleh internet", yang lebih penting adalah mengajari mereka "cara berinternet":
 
 - <strong>Privacy protection</strong>: tidak memberi tahu nama asli, sekolah, alamat rumah kepada orang asing; tidak mengirim foto pribadi, KTP, foto keluarga; fitur lokasi dinonaktifkan secara default, hanya diaktifkan saat digunakan.
-- <strong>Mengenali dan menangani cyberbullying</strong>: dihina, dikucilkan, diedit foto secara jahat semua termasuk perundungan. Beritahu anak saat mengalaminya jangan membalas dengan makian, jangan menghapus bukti, segera beritahu orang tua. Di WeChat bisa tahan pesan untuk melaporkan, platform akan menindaklanjuti akun pelaku.
+- <strong>Mengenali dan menangani cyberbullying</strong>: dihina, dikucilkan, diedit foto secara jahat semua termasuk perundungan. Beritahu anak saat mengalaminya jangan membalas dengan makian. jangan menghapus bukti, segera beritahu orang tua. Di WeChat bisa tahan pesan untuk melaporkan, platform akan menindaklanjuti akun pelaku.
 - <strong>Kritis terhadap konten</strong>: ajari anak membedakan "fakta" dan "opini", kenali clickbait dan judul sensasional; pahami bahwa algoritma hanya merekomendasikan apa yang ingin kamu lihat, bukan mewakili dunia secara utuh; semua iklan "hadiah gratis" jangan dipercaya.
 - <strong>Keamanan online</strong>: jangan klik link asing, jangan scan QR code tidak jelas asalnya, jangan download App dari luar toko resmi; kata sandi jangan dibagikan kepada siapa pun (termasuk "teman baik"); siapa pun yang meminta kode verifikasi anggap saja penipu.
 
@@ -131,7 +131,7 @@ Menuliskan aturan, kedua pihak menandatangani dan menempelnya di tempat yang ter
 Mata, leher, tidur anak semua dalam masa perkembangan, kerusakan ponsel pada tubuh lebih besar dari dewasa:
 
 - <strong>Saran screen time</strong>: 3-6 tahun harian tidak lebih dari 1 jam; 6-12 tahun edukasi tidak dibatasi, hiburan tidak lebih dari 1 jam; 12 tahun+ negosiasi dengan anak, tapi hiburan tidak lebih dari 2 jam.
-- <strong>Kebiasaan pelindung mata</strong>: Patuhi "aturan 20-20-20" — setiap melihat layar 20 menit, angkat kepala lihat 20 kaki (sekitar 6 meter) ke luar 20 detik; 1 jam sebelum tidur tidak lihat ponsel, blue light akan menekan melatonin mempengaruhi tidur.
+- <strong>Kebiasaan pelindung mata</strong>: Patuhi "aturan 20-20-20", setiap melihat layar 20 menit, angkat kepala lihat 20 kaki (sekitar 6 meter) ke luar 20 detik; 1 jam sebelum tidur tidak lihat ponsel, blue light akan menekan melatonin mempengaruhi tidur.
 - <strong>Manajemen postur</strong>: Layar ponsel sejajar dengan mata, jangan menunduk membungkuk; pemakaian kontinu tidak lebih dari 30 menit harus berdiri bergerak.
 - <strong>Aturan bersama orang tua anak</strong>: Ruang makan, kamar tidur, ruang belajar setel "zona bebas ponsel"; saat keluarga bersama nonton film, aktivitas outdoor, ponsel disimpan seragam, jadikan "letakkan ponsel" sebagai budaya keluarga bukan hukuman bagi anak.
 
@@ -156,7 +156,7 @@ Bagian ini mudah diabaikan, tapi sangat penting. Aset digital anak (akun, foto, 
 <i class="fas fa-triangle-exclamation mr-2"></i>Hati-hati sisi lain "warisan digital anak"
 
 {class="mt-1"}
-Anak sejak lahir sudah "direkam" — foto tumbuh kembang yang di-post orang tua, video dari TK, data kesehatan smart watch. Data ini sekali upload sulit dihapus total. Sebelum post pikirkan: 10 tahun lagi apakah anak akan merasa malu karena foto ini? Hormati kepribadian digital anak, mulai dari menahan "post anak".
+Anak sejak lahir sudah "direkam": foto tumbuh kembang yang di-post orang tua, video dari TK, data kesehatan smart watch. Data ini sekali upload sulit dihapus total. Sebelum post pikirkan: 10 tahun lagi apakah anak akan merasa malu karena foto ini? Hormati kepribadian digital anak, mulai dari menahan "post anak".
 :::
 
 ::: div .chapter-summary
@@ -169,6 +169,6 @@ Anak sejak lahir sudah "direkam" — foto tumbuh kembang yang di-post orang tua,
 - iOS Screen Time dan Android Family Link/parental control brand adalah dua lapis pertahanan teknis, dipakai bersama lebih stabil
 - Mode remaja dan anti-kecanduan game adalah persyaratan regulasi, tapi butuh orang tua aktif aktifkan dan jaga password
 - Literasi digital lebih penting dari blocking teknis: ajar anak recognize bullying, lindungi privasi, kritis terhadap konten
-- Kebiasaan sehat mulai dari orang tua — Anda letakkan ponsel, anak baru akan letakkan
+- Kebiasaan sehat mulai dari orang tua: Anda letakkan ponsel, anak baru akan letakkan
 - Warisan digital dan privasi anak adalah isu baru, sejak awal harus setel "legacy contact" dan tahan post anak
 :::

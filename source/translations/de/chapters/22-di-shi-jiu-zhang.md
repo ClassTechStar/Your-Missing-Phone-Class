@@ -2,12 +2,12 @@
 id: di-shi-jiu-zhang
 num: 19
 part: jin-jie-pian
-nav: Kapitel 19: Fehlerbehebung und Selbsthilfe
+nav: Kapitel 19: Kaputt? Nicht sofort reparieren
 toc: default
 kind: chapter
 ---
 
-### Kapitel 19: Fehlerbehebung und Selbsthilfe
+### Kapitel 19: Kaputt? Nicht sofort reparieren
 
 {class="chapter-intro mb-4"}
 Eine App stürzt beim Öffnen ab, oder sie friert plötzlich ein. Der Ablauf ist wie eine ärztliche Befragung – Schritt für Schritt vorgehen:
@@ -25,7 +25,7 @@ Eine App stürzt beim Öffnen ab, oder sie friert plötzlich ein. Der Ablauf ist
 
 <strong>„Lädt nicht" ist ein Problem, das besonders leicht Angst macht, aber oft liegt die Ursache bei den Zubehörteilen, nicht am defekten Smartphone.</strong> Zuerst Ladeanschluss prüfen
 
-#### : Mit einer Zahnstange oder einem nicht leitenden kleinen Werkzeug vorsichtig Staub und Fussel aus dem Ladeanschluss herauskratzen. Das ist mir selbst passiert – ein Faden aus der Tasche hatte sich genau im Ladeanschluss verfangen, beim Einstecken dachte ich an Kontaktprobleme, nach dem Herausnehmen war alles gut.
+- Mit einer Zahnstange oder einem nicht leitenden kleinen Werkzeug vorsichtig Staub und Fussel aus dem Ladeanschluss herauskratzen. Das ist mir selbst passiert – ein Faden aus der Tasche hatte sich genau im Ladeanschluss verfangen, beim Einstecken dachte ich an Kontaktprobleme, nach dem Herausnehmen war alles gut.
 
 Anderes Kabel und anderes Ladegerät probieren
 
@@ -35,7 +35,7 @@ Anderes Kabel und anderes Ladegerät probieren
 4. <strong>Draußen funktioniert mobile Daten einwandfrei, aber zu Hause lässt sich Wi-Fi nicht verbinden; oder Wi-Fi ist verbunden, aber es gibt kein Internet. In dieser Reihenfolge vorgehen:</strong> Flugmodus ein/aus
 5. <strong>: Kontrollzentrum nach unten ziehen, Flugmodus einschalten, 5 Sekunden warten, wieder ausschalten. Das ist, als würde das Smartphone neu nach dem Netz suchen – sehr effektiv.</strong> Wi-Fi „vergessen" und neu verbinden
 
-#### : In den Wi-Fi-Einstellungen auf das Ausrufezeichen neben dem Netzwerknamen tippen (bei Android das Zahnrad), „Dieses Netzwerk ignorieren" / „Vergessen" wählen und dann das Passwort neu eingeben.
+- In den Wi-Fi-Einstellungen auf das Ausrufezeichen neben dem Netzwerknamen tippen (bei Android das Zahnrad), „Dieses Netzwerk ignorieren" / „Vergessen" wählen und dann das Passwort neu eingeben.
 
 Router neu starten
 
@@ -49,7 +49,7 @@ Router neu starten
 : Wenn bei geringer Helligkeit geflackert wird, kann es am PWM-Dimming liegen, häufig bei OLED-Bildschirmen. In den Einstellungen „DC-Dimming" / „Anti-Flackern" suchen und aktivieren – danach wird es viel besser. Nicht alle Smartphones haben diese Funktion.
 
 1. <strong>Ein Bereich des Bildschirms ist komplett schwarz/bleibt hell</strong>: Das ist ernster – wahrscheinlich physische Beschädigung des Bildschirms, der ausgetauscht werden muss. Bei nicht-authorisierten Reparaturen sind Bildschirmfarbe und -helligkeit meist schlechter als beim Original, und die Wasserdichtigkeit leidet.
-2. <strong>VI. Lässt sich nicht einschalten, hängt beim Logo – keine Panik</strong> Diese Situation lässt einen am schnellsten das Herz schneller schlagen, aber ruhig bleiben – probiere zuerst Folgendes:
+2. <strong>VI. Lässt sich nicht einschalten, hängt beim Logo – keine Panik</strong> Diese Situation lässt einen am schnellsten das Herz schneller schlagen, aber ruhig bleiben – probiere zuerst Folgendes:.
 3. <strong>Eine halbe Stunde laden, dann versuchen</strong>: Oft ist der Akku einfach komplett entleert. Original-Ladegerät anschließen, mindestens 30 Minuten warten, dann versuchen einzuschalten. Manche Smartphones reagieren nach vollständiger Entleerung erst, wenn eine bestimmte Ladung erreicht ist.
 4. <strong>Erzwungener Neustart</strong>: iPhone mit Full-Screen: einmal Lauter, einmal Leiser, dann die Seitentaste gedrückt halten, bis das Apple-Logo erscheint (evtl. 10–15 Sekunden gedrückt halten). Android-Methode: Ein-/Austaste länger als 10 Sekunden gedrückt halten, bis es vibriert oder der Bildschirm angeht.
 
@@ -64,7 +64,7 @@ Router neu starten
 
 : Wenn der Lautsprecher Wasser bekommen hat – nicht mit dem Heißluftföhn trocknen! Mit Zellentuch die Oberfläche abtrocknen und dann an der Luft trocknen lassen. Im Netz gibt es „Wasser-ablassen-Apps", die etwas bringen können (niedrige Frequenzen abspielen, um Wasser herauszuschütteln) – probier es aus.
 
-- <strong>VIII. Autorisierte Werkstatt aufsuchen – diese Fallen vermeiden</strong> Wenn alle oben genannten Methoden nicht geholfen haben, musst du in die professionelle Werkstatt. Aber der Reparaturmarkt ist tückisch – hier sind meine eigenen Erfahrungen und Lehren:
+- <strong>VIII. Autorisierte Werkstatt aufsuchen – diese Fallen vermeiden</strong> Wenn alle oben genannten Methoden nicht geholfen haben, musst du in die professionelle Werkstatt. Aber der Reparaturmarkt ist tückisch – hier sind meine eigenen Erfahrungen und Lehren:.
 - <strong>Die echte Autorisierung finden, nicht eine, die so aussieht</strong>: Auf der Marken-Website (Apple.com.cn, Huawei.com.cn usw.) die Liste der „autorisierten Service-Center" suchen. Ein Laden am Straßenrand mit Apple-Logo, der nicht autorisiert ist, verwendet vielleicht keine Originalteile – nach der Reparatur ist deine Wasserdichtigkeit futsch.
 - <strong>Vor der Reparatur unbedingt tun</strong>: Alle Daten sichern (verlass dich nicht darauf, dass bei der Reparatur nichts verloren geht), alle wichtigen Accounts ausloggen (Apple ID, WeChat, Alipay), „Mein Smartphone finden" deaktivieren. Manche Werkstätten verlangen das Sperrbildschirmpasswort – das ist ein Datenschutzrisiko. Am besten selbst vorher die Accounts ausloggen und dann abgeben.
 - <strong>Bildschirmwechsel</strong>: Nicht-offizielle Bildschirme gibt es als „Original-gepresst" (Originalglas getauscht), „Nachgepresst" (nicht-original Glas) und „Zusammengebaut" (alles nicht-original). Die Preise unterscheiden sich um ein Vielfaches, aber auch Anzeigequalität und Haltbarkeit. Wenn das Smartphone noch in der Garantie ist, unbedingt den offiziellen Weg gehen.
@@ -82,8 +82,8 @@ Router neu starten
 - <strong>Ladeanschluss reinigen</strong>: Ein kleines Werkzeug suchen (Zahnstange oder SIM-Nadel), vorsichtig den Staub aus dem Ladeanschluss entfernen.
 - <strong>Wi-Fi neu verbinden</strong>: In den Wi-Fi-Einstellungen das aktuelle Wi-Fi „vergessen" und mit neu eingegebenem Passwort verbinden.
 - <strong>Flugmodus ein/aus</strong>: Kontrollzentrum nach unten ziehen, Flugmodus einschalten, 5 Sekunden im Kopf zählen, ausschalten und prüfen, ob das Netz zurück ist.
-- <strong>Mache Screenshots dieser Operationsschritte oder schreibe sie in die Notizen-App. Wenn ein Problem auftritt, musst du nicht hektisch suchen – schau einfach in den Notizen nach.</strong> Kapitel 20:Entwicklermodus und erweiterte Berechtigungen
-- <strong>Dieses Kapitel ist für Nutzer gedacht, die die „versteckten Funktionen" ihres Smartphones tiefer erkunden möchten. Entwicklermodus, Root-Rechte, BL-Sperre – diese sehr geekig klingenden Konzepte sind tatsächlich gar nicht so weit von normalen Nutzern entfernt.</strong> I. Entwicklermodus: Versteckte Einstellungen freischalten
+- <strong>Mache Screenshots dieser Operationsschritte oder schreibe sie in die Notizen-App. Wenn ein Problem auftritt, musst du nicht hektisch suchen – schau einfach in den Notizen nach.</strong> Kapitel 20:Entwicklermodus und erweiterte Berechtigungen.
+- <strong>Dieses Kapitel ist für Nutzer gedacht, die die „versteckten Funktionen" ihres Smartphones tiefer erkunden möchten. Entwicklermodus, Root-Rechte, BL-Sperre – diese sehr geekig klingenden Konzepte sind tatsächlich gar nicht so weit von normalen Nutzern entfernt.</strong> I. Entwicklermodus: Versteckte Einstellungen freischalten.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -101,6 +101,6 @@ So aktivierst du ihn:
 1. <strong>Die echte Autorisierung finden, nicht eine, die so aussieht</strong> HarmonyOS
 2. <strong>: Einstellungen → Über das Telefon → 7-mal auf „HarmonyOS-Version" tippen.</strong> iOS
 3. <strong>: Normale Nutzer können den vollständigen Entwicklermodus nicht aktivieren – dafür ist ein kostenpflichtiges Apple-Developer-Konto nötig.</strong> Häufige Funktionen:
-4. <strong>USB-Debugging</strong>: Verbindung zum Computer für fortgeschrittene Operationen wie Flashen, Datenwiederherstellung.
+4. <strong>USB-Debugging</strong>: Verbindung zum Computer für fortgeschrittene Operationen wie Flashen, Datenwiederherstellung
 5. Animationsgeschwindigkeit anpassen
 :::

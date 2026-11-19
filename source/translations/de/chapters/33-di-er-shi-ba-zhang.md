@@ -2,12 +2,12 @@
 id: di-er-shi-ba-zhang
 num: 28
 part: shi-zhan-pian
-nav: Kapitel 28: Richtig Geld ausgeben fürs Wunsch-Handy – die ultimative Kaufberatung
+nav: Kapitel 28: Vor dem Kauf: erst diese drei Dinge klären
 toc: default
 kind: chapter
 ---
 
-### Kapitel 28: Geld klug ausgeben fuer das Wunschgeraet – Der ultimative Smartphone-Kaufguide
+### Kapitel 28: Vor dem Kauf: erst diese drei Dinge klären
 
 {class="chapter-intro mb-4"}
 Beim Handykauf schauen viele eine Woche lang Testberichte an und vergleichen einen Monat lang Preise, um am Ende doch verwirrt 5.000–6.000 Yuan für ein Flaggschiff auszugeben, das sie gar nicht brauchen. Dieses Kapitel listet keine Parametertabellen – die finden Sie auf der Herstellerwebsite. Was ich Ihnen geben möchte, ist eine "Kauflogik", mit der Sie bei jedem neuen Modell selbst beurteilen können, ob es zu Ihnen passt.
@@ -26,7 +26,7 @@ Viele fragen im Internet: "Welches Handy für 3.000 Yuan?" Diese Frage lässt si
 3. <strong>Erst zum Schluss das Modell wählen</strong>: Nehmen Sie Ihre priorisierten Bedürfnisse und Ihr Budget und suchen Sie passende Modelle.
 :::
 
-#### I. Wie man Kernparameter liest —— Sie müssen nicht alles verstehen, diese fünf Punkte genügen
+I. Wie man Kernparameter liest —— Sie müssen nicht alles verstehen, diese fünf Punkte genügen
 
 Parametertabellen haben oft Dutzende von Daten. Normale Nutzer müssen nur auf diese fünf Dimensionen achten:
 
@@ -71,7 +71,7 @@ Parametertabellen haben oft Dutzende von Daten. Normale Nutzer müssen nur auf d
 ```
 :::
 
-#### II. Empfehlungen nach Budget (basierend auf dem Markt Mitte 2026)
+II. Empfehlungen nach Budget (basierend auf dem Markt Mitte 2026)
 
 Die folgenden Empfehlungen basieren auf dem chinesischen Festlandmarkt Mitte 2026. Die Preise sind offizielle Startpreise. Tatsächliche Preise können schwanken – maßgeblich ist der Preis zum Kaufzeitpunkt.
 
@@ -115,7 +115,7 @@ Die folgenden Empfehlungen basieren auf dem chinesischen Festlandmarkt Mitte 202
 
 <strong>Kaufempfehlung</strong>: In dieser Preisklasse schrumpfen die Unterschiede zwischen den Herstellern; es kommt hauptsaechlich auf die Praeferenz fuer ein bestimmtes System an. Fotos: vivo oder Huawei. Videos: iPhone. Display und S Pen: Samsung. Ausgewogenheit: Xiaomi. Ehrlich gesagt gilt in dieser Preisklasse:<strong>Du darfst egoistisch sein – nimm einfach das Geraet, das dir am besten gefaellt</strong>.
 
-#### 3. Auswahl nach Anwendungsfall – Was sind deine Anforderungen?
+3. Auswahl nach Anwendungsfall – Was sind deine Anforderungen?
 
 Hier sind die haeufigsten »Nutzerprofile« – einfach die passende Beschreibung finden:
 
@@ -176,8 +176,8 @@ Hier sind die haeufigsten »Nutzerprofile« – einfach die passende Beschreibun
 1. <strong>Fallstrick 1: Vier oder fuenf Linsen heisst nicht »gute Kamera«</strong>– Hersteller geben gerne hohe Linsenzahlen an. Oft sind zwei davon 200-MP-»Platzhalter-Linsen« (Makro + Tiefeninfo), die praktisch unnuetz sind. Fuer die Kameraqualitaet eines Handys reicht es,<strong>nur Hauptkamera + Ultraweitwinkel + Tele</strong> zu betrachten. Alles andere kann man ignorieren.
 2. <strong>Fallstrick 2: Nicht von 100 Megapixel blenden lassen</strong>– Hohe Pixelzahl bedeutet nicht gute Bildqualitaet. Sensorgroesse, Blaende undalgorithmischeische Optimierung sind viel wichtiger. Viele Flaggschiff-Geraete mit 50-MP-Sensoren und grosso Sensor machen deutlich bessere Fotos als manche 100-MP-Einsteigergeraete.
 3. <strong>Fallstrick 3: Keine Provider-Lock-Geraete kaufen</strong>– »Guthaben aufladen und Handy geschenkt bekommen« klingt verlockend, aber Provider-Geraete bekommen Systemupdates langsam, haben oft vorinstallierte Apps, die sich nicht loeschen lassen, und sind meist Provider-locked (funktionieren nur mit SIM-Karte dieses Anbieters). Man spart scheinbar Geld, wird aber »gebunden«.
-4. <strong>Fallstrick 4: »Gebogenes Display ist hochwertig« – das ist Marketing, keine Wahrheit</strong>—— Gebogene Displays waren einst das Markenzeichen von Flaggschiffen, aber immer mehr Menschen erkennen ihre Probleme: Schutzfolie schwer anzubringen, Fehlberührungen am Rand, teure Reparatur bei Bruch. Der Trend 2026 geht zurück zu "leicht gebogen" oder "komplett flach". Wählen Sie kein gebogenes Display nur, weil "gebogen = hochwertig" klingt.
-5. <strong>Falle 5: Nicht jedes "AI-Handy" ist wirklich nützlich</strong>—— 2026 rufen alle Hersteller "AI-Handy", aber viele haben nur den bestehenden Sprachassistenten umbenannt. Wirklich nützliche AI-Funktionen sind: Echtzeitübersetzung, AI-Entfernung (Personen aus Fotos entfernen), AI-Bildbearbeitung, On-Device-LLM-Inferenz, lokale intelligente Zusammenfassungen. Andere auffällige Funktionen sind meistens nur Gimmicks.
+4. <strong>Fallstrick 4: »Gebogenes Display ist hochwertig« – das ist Marketing, keine Wahrheit</strong>—, Gebogene Displays waren einst das Markenzeichen von Flaggschiffen, aber immer mehr Menschen erkennen ihre Probleme: Schutzfolie schwer anzubringen, Fehlberührungen am Rand, teure Reparatur bei Bruch. Der Trend 2026 geht zurück zu "leicht gebogen" oder "komplett flach". Wählen Sie kein gebogenes Display nur, weil "gebogen = hochwertig" klingt.
+5. <strong>Falle 5: Nicht jedes "AI-Handy" ist wirklich nützlich</strong>—, 2026 rufen alle Hersteller "AI-Handy", aber viele haben nur den bestehenden Sprachassistenten umbenannt. Wirklich nützliche AI-Funktionen sind: Echtzeitübersetzung, AI-Entfernung (Personen aus Fotos entfernen), AI-Bildbearbeitung, On-Device-LLM-Inferenz, lokale intelligente Zusammenfassungen. Andere auffällige Funktionen sind meistens nur Gimmicks.
 
 #### 5. Wann ist der Kauf am guenstigsten?
 
@@ -185,7 +185,7 @@ Hier sind die haeufigsten »Nutzerprofile« – einfach die passende Beschreibun
 - <strong>Doppel-11 (Ende Oktober bis Mitte November)</strong>: Die große Aktion im zweiten Halbjahr, ähnlich stark wie 618. Viele Marken veröffentlichen neue Flaggschiffe, und die vorherige Generation fällt am stärksten im Preis.
 - <strong>Ein Monat nach Modellveröffentlichung</strong>: Bei Veröffentlichung Originalpreis, einen Monat später sind Drittanbieter-Preise meist 200–500 Yuan günstiger.
 - <strong>Zwei Wochen vor Frühlingsfest bis Laternenfest</strong>: Offline-Geschäfte räumen Lager im "Neujahrs-Einkaufsfest" – man kann mit dem Personal feilschen.
-- <strong>Nicht empfohlene Zeitpunkte</strong>: Am Tag der Neu-Vorstellung als Erster bestellen —— außer Sie wollen wirklich zu den ersten Nutzern gehören, sonst ist der Erstpreis der höchste.
+- <strong>Nicht empfohlene Zeitpunkte</strong>: Am Tag der Neu-Vorstellung als Erster bestellen,, außer Sie wollen wirklich zu den ersten Nutzern gehören, sonst ist der Erstpreis der höchste.
 
 #### VI. Welcher Vertriebskanal —— wo kauft man sicher ein?
 

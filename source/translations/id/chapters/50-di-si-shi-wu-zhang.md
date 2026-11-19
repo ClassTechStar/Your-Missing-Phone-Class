@@ -2,21 +2,21 @@
 id: di-si-shi-wu-zhang
 num: 45
 part: ai-biancheng-pian
-nav: Bab 45: Jaminan Kualitas—Membuat Kode AI Lebih Andal
+nav: Bab 45: Ditulis AI, belum tentu selesai
 toc: default
 kind: chapter
 ---
 
-### Bab 45: Jaminan Kualitas — Membuat Kode Buatan AI Menjadi Andal
+### Bab 45: Ditulis AI, belum tentu selesai
 
 {class="chapter-intro mb-4"}
-Kode buatan AI punya satu ciri: biasanya "kelihatannya benar"—penamaan variabel rapi, komentar lengkap, logika jernih. Tapi "kelihatannya benar" tidak sama dengan "benar sungguhan". Masalah yang tersembunyi dalam kode AI sering lebih sulit ditemukan daripada dalam kode tulisan tangan, karena kualitas permukaannya terlalu tinggi sehingga mudah membuat orang lengah. Bab ini mengajarkan cara membangun sistem jaminan kualitas yang efektif untuk kode AI—dengan tiga lini pertahanan (pengujian, tinjauan, dan kontrol versi), "kelihatannya benar" diubah menjadi "benar sungguhan".
+Kode buatan AI punya satu ciri: biasanya "kelihatannya benar",penamaan variabel rapi, komentar lengkap, logika jernih. Tapi "kelihatannya benar" tidak sama dengan "benar sungguhan". Masalah yang tersembunyi dalam kode AI sering lebih sulit ditemukan daripada dalam kode tulisan tangan, karena kualitas permukaannya terlalu tinggi sehingga mudah membuat orang lengah. Bab ini mengajarkan cara membangun sistem jaminan kualitas yang efektif untuk kode AI,dengan tiga lini pertahanan (pengujian, tinjauan, dan kontrol versi), "kelihatannya benar" diubah menjadi "benar sungguhan".
 
 #### 1. Berbasis pengujian: minta AI menulis pengujian
 
-Pengujian adalah lini pertahanan pertama jaminan kualitas pemrograman AI. Kabar baiknya: meminta AI menulis pengujian lebih mudah dan lebih andal daripada memintanya menulis kode fitur—karena perilaku yang diharapkan dari pengujian sudah jelas, sehingga kode "kelihatannya benar tapi sebenarnya salah" jarang muncul.
+Pengujian adalah lini pertahanan pertama jaminan kualitas pemrograman AI. Kabar baiknya: meminta AI menulis pengujian lebih mudah dan lebih andal daripada memintanya menulis kode fitur:karena perilaku yang diharapkan dari pengujian sudah jelas, sehingga kode "kelihatannya benar tapi sebenarnya salah" jarang muncul.
 
-Alur pemrograman AI berbasis pengujian: minta AI menulis kode fitur dulu, setelah fungsi dasarnya terverifikasi, langsung minta ia menulis kasus uji. Kasus uji harus mencakup jalur normal, kasus batas, dan kasus pengecualian. Setelah itu minta AI mengoreksi kode fitur berdasarkan umpan balik pengujian. Keunggulan alur ini: begitu pengujian selesai ditulis, ia menjadi alat verifikasi yang terus-menerus—setiap perubahan berikutnya bisa dipastikan tidak menimbulkan regresi cukup dengan menjalankan pengujian.
+Alur pemrograman AI berbasis pengujian: minta AI menulis kode fitur dulu, setelah fungsi dasarnya terverifikasi, langsung minta ia menulis kasus uji. Kasus uji harus mencakup jalur normal, kasus batas, dan kasus pengecualian. Setelah itu minta AI mengoreksi kode fitur berdasarkan umpan balik pengujian. Keunggulan alur ini: begitu pengujian selesai ditulis, ia menjadi alat verifikasi yang terus-menerus,setiap perubahan berikutnya bisa dipastikan tidak menimbulkan regresi cukup dengan menjalankan pengujian.
 
 ::: div .code-block
 :::inline div .code-head
@@ -56,11 +56,11 @@ Meskipun sudah ada cakupan pengujian, kamu tetap perlu meninjau secara manual ko
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Dimensi kunci tinjauan kode AI
 
-Saat meninjau, kamu tidak harus memeriksa semuanya sendiri—minta AI membantu melakukan putaran tinjauan pertama. Instruksinya misalnya: "Tinjau keamanan, penanganan error, dan kinerja kode ini, tunjukkan potensi masalahnya." Kemampuan AI meninjau kodenya sendiri terus meningkat; meskipun belum bisa menggantikan tinjauan manual sepenuhnya, ia dapat menyaring sebagian besar masalah yang mencolok.
+Saat meninjau, kamu tidak harus memeriksa semuanya sendiri,minta AI membantu melakukan putaran tinjauan pertama. Instruksinya misalnya: "Tinjau keamanan, penanganan error, dan kinerja kode ini, tunjukkan potensi masalahnya." Kemampuan AI meninjau kodenya sendiri terus meningkat; meskipun belum bisa menggantikan tinjauan manual sepenuhnya, ia dapat menyaring sebagian besar masalah yang mencolok.
 
 #### 3. Kontrol versi: peran Git dalam pemrograman AI
 
-Peran Git dalam pemrograman AI lebih penting daripada dalam pemrograman tradisional. Karena setiap perubahan AI bisa menimbulkan perubahan yang tak terduga, kamu butuh satu "obat penyesalan" yang andal—kontrol versi itulah obat penyesalannya.
+Peran Git dalam pemrograman AI lebih penting daripada dalam pemrograman tradisional. Karena setiap perubahan AI bisa menimbulkan perubahan yang tak terduga, kamu butuh satu "obat penyesalan" yang andal,kontrol versi itulah obat penyesalannya.
 
 Praktik terbaik Git dalam pemrograman AI adalah "commit sering, maju bertahap kecil". Setiap satu titik fitur yang bisa diverifikasi selesai, langsung commit. Dengan begitu, saat salah satu perubahan AI bermasalah, kamu bisa mundur tepat ke keadaan terakhir yang masih berfungsi, tanpa harus membuang seluruh pekerjaan.
 
@@ -77,26 +77,26 @@ Ada beberapa jebakan yang muncul berulang kali dalam pemrograman AI dan hampir s
 
 ##### 1. Jebakan pertama: jebakan kepercayaan
 
-"Kode buatan AI kelihatan sangat profesional, pasti tidak ada masalah, kan?"—inilah jebakan paling berbahaya. Kode yang dihasilkan AI sangat rapi di permukaan—penamaannya baku, komentarnya lengkap, strukturnya jernih—"kesan profesional di permukaan" semacam ini membuat orang lengah. Tapi kerapian permukaan tidak berarti logikanya benar. Penawarnya: selalu verifikasi lewat pengujian, jangan menilai dari "kelihatannya benar atau tidak".
+"Kode buatan AI kelihatan sangat profesional, pasti tidak ada masalah, kan?",inilah jebakan paling berbahaya. Kode yang dihasilkan AI sangat rapi di permukaan:penamaannya baku, komentarnya lengkap, strukturnya jernih,"kesan profesional di permukaan" semacam ini membuat orang lengah. Tapi kerapian permukaan tidak berarti logikanya benar. Penawarnya: selalu verifikasi lewat pengujian, jangan menilai dari "kelihatannya benar atau tidak".
 
 ##### 2. Jebakan kedua: jebakan pembengkakan
 
-"Kalau AI bisa membantu menulis kode, kenapa tidak sekaligus membuat fiturnya lengkap?"—ini akan memunculkan pembengkakan kode. AI sangat pandai "memberi lebih": kamu minta satu halaman login, ia menyerahkan satu sistem manajemen pengguna yang lengkap. Fitur-fitur berlebih tidak hanya menambah kompleksitas, tetapi juga menambah peluang munculnya bug. Penawarnya: patuhi prinsip Simplicity First secara ketat, dan tegaskan kepada AI "cukup fitur ini saja, jangan tambahkan apa pun".
+"Kalau AI bisa membantu menulis kode, kenapa tidak sekaligus membuat fiturnya lengkap?",ini akan memunculkan pembengkakan kode. AI sangat pandai "memberi lebih": kamu minta satu halaman login. ia menyerahkan satu sistem manajemen pengguna yang lengkap. Fitur-fitur berlebih tidak hanya menambah kompleksitas, tetapi juga menambah peluang munculnya bug. Penawarnya: patuhi prinsip Simplicity First secara ketat, dan tegaskan kepada AI "cukup fitur ini saja, jangan tambahkan apa pun".
 
 ##### 3. Jebakan ketiga: jebakan pemahaman
 
-"AI pasti paham maksud saya, kan?"—belum tentu. Kemampuan pemahaman AI memang kuat, tetapi terhadap kebutuhan yang samar ia tetap akan "menebak". Ketika tebakannya meleset, kode yang dihasilkan pun salah. Yang lebih merepotkan, kode yang salah tebak itu biasanya "kelihatan sangat masuk akal", membuatmu mengira ia paham. Penawarnya: berikan detail spesifik yang cukup dalam instruksimu, kurangi ruang bagi AI untuk "menebak".
+"AI pasti paham maksud saya, kan?":belum tentu. Kemampuan pemahaman AI memang kuat, tetapi terhadap kebutuhan yang samar ia tetap akan "menebak". Ketika tebakannya meleset, kode yang dihasilkan pun salah. Yang lebih merepotkan, kode yang salah tebak itu biasanya "kelihatan sangat masuk akal", membuatmu mengira ia paham. Penawarnya: berikan detail spesifik yang cukup dalam instruksimu, kurangi ruang bagi AI untuk "menebak".
 
 ##### 4. Jebakan keempat: jebakan konteks
 
-"Saya sudah bilang di percakapan sebelumnya, AI pasti masih ingat, kan?"—kemungkinan besar tidak ingat. Seiring percakapan memanjang atau sesi baru dibuka, AI akan kehilangan konteks awal. Kalau satu batasan penting tidak dituliskan ke berkas memori proyek, kemungkinan besar ia terabaikan pada perubahan-perubahan berikutnya. Penawarnya: tuliskan batasan kunci ke berkas memori proyek, jangan mengandalkan ingatan percakapan.
+"Saya sudah bilang di percakapan sebelumnya, AI pasti masih ingat, kan?",kemungkinan besar tidak ingat. Seiring percakapan memanjang atau sesi baru dibuka, AI akan kehilangan konteks awal. Kalau satu batasan penting tidak dituliskan ke berkas memori proyek, kemungkinan besar ia terabaikan pada perubahan-perubahan berikutnya. Penawarnya: tuliskan batasan kunci ke berkas memori proyek, jangan mengandalkan ingatan percakapan.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Ringkasan empat jebakan utama
 
 {class="mt-1"}
-Jebakan kepercayaan—jangan percaya yang "kelihatannya benar"; jebakan pembengkakan—AI suka "memberi lebih"; jebakan pemahaman—kebutuhan yang samar akan ia "tebak"; jebakan konteks—ingatan percakapan pasti "lupa". Penawarnya masing-masing: verifikasi lewat pengujian, buang yang berlebihan, beri detail secukupnya, tulis ke berkas memori.
+Jebakan kepercayaan,jangan percaya yang "kelihatannya benar"; jebakan pembengkakan,AI suka "memberi lebih"; jebakan pemahaman,kebutuhan yang samar akan ia "tebak"; jebakan konteks,ingatan percakapan pasti "lupa". Penawarnya masing-masing: verifikasi lewat pengujian, buang yang berlebihan, beri detail secukupnya, tulis ke berkas memori.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -111,7 +111,7 @@ Jika kamu sudah mulai mengerjakan Proyek Satu (situs alat): ① minta AI menulis
 {class="font-semibold mb-1"}
 Ringkasan bab ini
 
-- Kode AI "kelihatannya benar" ≠ "benar sungguhan"—kualitas permukaan yang terlalu tinggi justru membuat orang lengah
+- Kode AI "kelihatannya benar" ≠ "benar sungguhan":kualitas permukaan yang terlalu tinggi justru membuat orang lengah
 - Minta AI menulis pengujian: sebutkan eksplisit tiga kategori kasus (normal/batas/pengecualian) agar tidak terjadi "pengujian pilih-pilih"
 - Lima dimensi tinjauan: keamanan, penanganan error, kinerja, kemudahan perawatan, manajemen dependensi
 - Git adalah "obat penyesalan": commit sering, maju bertahap kecil, isolasi cabang, sering lihat diff

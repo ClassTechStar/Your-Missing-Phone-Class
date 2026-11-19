@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 61: Swift em ritmo acelerado — a primeira linguagem do desenvolvimento Apple
 
 {class="chapter-intro mb-4"}
-Neste capítulo vamos finalmente estudar a linguagem. Sem pânico — o Swift é famoso por ser “amigável com iniciantes”, e você não precisa decorar um livro de sintaxe: dominando 20% da gramática, você já entende e escreve 80% do código do dia a dia. O resto, você consulta conforme os projetos avançam. Lembre do nosso princípio de aprendizado: entender > decorar, saber usar > ser mestre.
+Neste capítulo vamos finalmente estudar a linguagem. Sem pânico, o Swift é famoso por ser “amigável com iniciantes”, e você não precisa decorar um livro de sintaxe: dominando 20% da gramática, você já entende e escreve 80% do código do dia a dia. O resto, você consulta conforme os projetos avançam. Lembre do nosso princípio de aprendizado: entender > decorar, saber usar > ser mestre.
 
 #### 1. Variáveis e tipos: dando nomes aos dados
 
@@ -51,12 +51,12 @@ Tipos básicos mais usados do Swift
 Dica: a regra do “let primeiro”
 
 {class="mt-1"}
-Regra de ferro da comunidade Swift: use let por padrão e só recorra ao var quando for realmente necessário. Se você usar var onde daria para usar let, o Xcode avisa com um alerta amarelo. Esse hábito elimina toda uma família de bugs de “variável alterada sem querer” — quanto menos o código muda, mais fácil raciocinar sobre ele.
+Regra de ferro da comunidade Swift: use let por padrão e só recorra ao var quando for realmente necessário. Se você usar var onde daria para usar let, o Xcode avisa com um alerta amarelo. Esse hábito elimina toda uma família de bugs de “variável alterada sem querer”: quanto menos o código muda, mais fácil raciocinar sobre ele.
 :::
 
 #### 2. Opcionais (Optional): o amuleto anticrash do Swift
 
-Este é o conceito mais importante do Swift, sem concorrência. Em uma frase: quando um valor pode “não existir”, o Swift te obriga a lidar com isso — eliminando, no nível da linguagem, o pesadelo da indústria chamado “crash de ponteiro nulo”.
+Este é o conceito mais importante do Swift, sem concorrência. Em uma frase: quando um valor pode “não existir”, o Swift te obriga a lidar com isso, eliminando, no nível da linguagem, o pesadelo da indústria chamado “crash de ponteiro nulo”.
 
 ::: div .code-block
 :::inline div .code-head
@@ -87,7 +87,7 @@ print(len)
 Atenção: o ! é uma “operação de alto risco”
 
 {class="mt-1"}
-Escrever nickname! no código (desempacotamento forçado) é como gritar para o compilador “eu garanto que não é nil” — se você errar, o app trava na hora. Princípio para iniciantes: prefira sempre if let / ?? e evite o !. Às vezes o autocomplete do Xcode adiciona um ! sem cerimônia; lembre de trocá-lo.
+Escrever nickname! no código (desempacotamento forçado) é como gritar para o compilador “eu garanto que não é nil”: se você errar, o app trava na hora. Princípio para iniciantes: prefira sempre if let / ?? e evite o !. Às vezes o autocomplete do Xcode adiciona um ! sem cerimônia; lembre de trocá-lo.
 :::
 
 #### 3. Funções e closures: empacotando a lógica em “botões”
@@ -118,7 +118,7 @@ let big = numbers.filter { $0 > 2 }    // filtro
 
 No SwiftUI, closures estão em toda parte: as chaves depois de Button("Toque aqui") { ... } formam uma closure. Grave bem os “golpes combinados” de coleções map, filter e sorted — no futuro, 90% do processamento de listas será combinação deles.
 
-#### 4. Structs e protocolos: o sistema de “blocos de montar” do Swift
+4. Structs e protocolos: o sistema de “blocos de montar” do Swift
 
 A preferência oficial do Swift é clara: use struct primeiro e recorra à class apenas quando precisar de herança. Structs são “tipos de valor” — ao copiar, cada um segue seu caminho, o que naturalmente elimina uma família de bugs:
 
@@ -147,9 +147,9 @@ struct Record: Identifiable { ... }   // conformar-se a um protocolo = prometer 
 ```
 :::
 
-No SwiftUI, quase tudo é struct (View é um protocolo). Se isso não ficou claro agora, sem problema: você vai se deparar com isso todos os dias no Capítulo 62 — no mundo do Swift, abrace o struct primeiro.
+No SwiftUI, quase tudo é struct (View é um protocolo). Se isso não ficou claro agora, sem problema: você vai se deparar com isso todos os dias no Capítulo 62, no mundo do Swift, abrace o struct primeiro.
 
-#### 5. Cartão de consulta rápida da sintaxe, escrito para quem parte do zero
+5. Cartão de consulta rápida da sintaxe, escrito para quem parte do zero
 
 ::: div .overflow-x-auto
 ```html
@@ -165,7 +165,7 @@ Cartão de consulta rápida da sintaxe Swift (edição iniciante)
 Mãos à obra: brinque 15 minutos com Swift no Playgrounds
 
 {class="mt-1"}
-Se você tem Mac, abra o Xcode > Playground; se não tem, use o Swift Playgrounds no iPad ou o playground na versão web. Rode cada trecho de código deste capítulo, mude números e textos e provoque alguns erros de propósito para ver como o Xcode avisa. Esses 15 minutos de “brincar primeiro, estudar depois” vão deixar o Capítulo 62 duas vezes mais fácil.
+Se você tem Mac, abra o Xcode > Playground; se não tem, use o Swift Playgrounds no iPad ou o playground na versão web. Rode cada trecho de código deste capítulo. Mude números e textos e provoque alguns erros de propósito para ver como o Xcode avisa. Esses 15 minutos de “brincar primeiro, estudar depois” vão deixar o Capítulo 62 duas vezes mais fácil.
 :::
 
 ::: div .chapter-summary

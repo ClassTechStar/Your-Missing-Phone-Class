@@ -2,19 +2,19 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Capítulo 3: Conecte o celular à sua "linha vital"
+nav: Capítulo 3: Sem rede? Não reinicie ainda
 toc: default
 kind: chapter
 ---
 
-### Capítulo 3: Conecte Seu Celular à "Linha da Vida" — Redes
+### Capítulo 3: Sem rede? Não reinicie ainda
 
 {class="chapter-intro mb-4"}
 Sem internet, o smartphone fica "meio burro". A rede é a linha da vida do celular moderno; entendê-la, usá-la bem e protegê-la é uma lição obrigatória para todo usuário de celular.
 
-#### 0. Conectado sem Confusão — Distinguindo a "Estrada" e o "Carro" do Wi-Fi e dos Dados Móveis
+0. Conectado sem Confusão — Distinguindo a "Estrada" e o "Carro" do Wi-Fi e dos Dados Móveis
 
-Muitas pessoas veem os ícones de Wi-Fi e sinal acesos simultaneamente no topo da tela do celular, mas não entendem a diferença essencial entre os dois. O equívoco mais clássico é: <strong>estar conectado ao Wi-Fi mas não conseguir carregar páginas</strong> — porque o roteador perdeu a internet e o celular não mudou automaticamente para os dados móveis. Para entender isso completamente, precisamos construir um modelo cognitivo de "estrada e carro".
+Muitas pessoas veem os ícones de Wi-Fi e sinal acesos simultaneamente no topo da tela do celular, mas não entendem a diferença essencial entre os dois. O equívoco mais clássico é: <strong>estar conectado ao Wi-Fi mas não conseguir carregar páginas</strong> — , porque o roteador perdeu a internet e o celular não mudou automaticamente para os dados móveis. Para entender isso completamente, precisamos construir um modelo cognitivo de "estrada e carro".
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -27,7 +27,7 @@ Imagine a internet como uma cidade. A <strong>"estrada"</strong> é o caminho en
 {class="font-semibold mt-4 mb-1"}
 ##### 1. Diferença Essencial: Canal Local vs Rodovia Remota
 
-O Wi-Fi é essencialmente uma <strong>tecnologia de rede local</strong>; é como uma estrada sem fio pavimentada embaixo do seu prédio, responsável por transmitir dados do roteador para o celular. Mas se a banda larga estiver em atraso ou o cabo de fibra óptica rompido, a estrada ainda está lá, mas a "rodovia" externa está cortada — naturalmente, não se vai a lugar nenhum. Já os dados móveis (rede celular) são transmitidos pelas estações base 4G/5G da operadora, como se você entrasse diretamente na via expressa da operadora; enquanto houver sinal, você está diretamente conectado à internet.
+O Wi-Fi é essencialmente uma <strong>tecnologia de rede local</strong>. É como uma estrada sem fio pavimentada embaixo do seu prédio, responsável por transmitir dados do roteador para o celular. Mas se a banda larga estiver em atraso ou o cabo de fibra óptica rompido, a estrada ainda está lá, mas a "rodovia" externa está cortada: naturalmente, não se vai a lugar nenhum. Já os dados móveis (rede celular) são transmitidos pelas estações base 4G/5G da operadora, como se você entrasse diretamente na via expressa da operadora; enquanto houver sinal, você está diretamente conectado à internet.
 
 {class="font-semibold mt-4 mb-1"}
 ##### 2. Custo e Cenário: Mensalidade Fixa vs Cobrança por Uso
@@ -170,9 +170,9 @@ O Wi-Fi público pode ter hackers espionando dados ou configurando pontos de ace
 - Não se conecte automaticamente a Wi-Fi desconhecido.
 - Use sites HTTPS (ícone de cadeado na barra de endereço).
 
-#### 3. Bluetooth: O Campeão Versátil da Comunicação Sem Fio de Curto Alcance
+3. Bluetooth: O Campeão Versátil da Comunicação Sem Fio de Curto Alcance
 
-O Bluetooth é provavelmente uma das tecnologias sem fio que você mais usa no celular — fones de ouvido sem fio, relógios inteligentes, sistemas automotivos, teclados e mouses, todos dependem dele.
+O Bluetooth é provavelmente uma das tecnologias sem fio que você mais usa no celular: fones de ouvido sem fio, relógios inteligentes, sistemas automotivos, teclados e mouses, todos dependem dele.
 
 ##### Princípio técnico:
 
@@ -197,13 +197,13 @@ O Bluetooth opera na banda ISM de 2,4GHz, usando a técnica de espalhamento espe
 - <strong>Serviços de localização</strong>: Beacons Bluetooth para navegação interna e rastreamento de itens (como Apple AirTag).
 - <strong>Casa inteligente</strong>: Rede Bluetooth Mesh para controlar lâmpadas, fechaduras, etc.
 
-#### 4. Controle Remoto Infravermelho: Transforme Seu Celular em um Controle Remoto Universal
+4. Controle Remoto Infravermelho: Transforme Seu Celular em um Controle Remoto Universal
 
 O controle remoto infravermelho é uma das mais antigas tecnologias de controle sem fio, mas ainda é prático no celular. Alguns celulares Android (como certos modelos da Xiaomi e Huawei) possuem emissor infravermelho embutido, podendo controlar TVs, ar-condicionados, decodificadores e outros eletrodomésticos.
 
 ##### Princípio de funcionamento:
 
-O controle remoto infravermelho emite sinais de pulso de luz infravermelha em uma frequência específica (geralmente 38kHz) por meio de um diodo emissor de luz infravermelha. O receptor infravermelho do eletrodoméstico decodifica esses pulsos e executa a operação correspondente. Diferentes marcas usam diferentes protocolos de codificação; os mais comuns são NEC, RC5, RC6, SONY, etc. O aplicativo infravermelho no celular contém uma biblioteca de códigos de várias marcas; basta selecionar a marca e o modelo para compatibilidade.
+O controle remoto infravermelho emite sinais de pulso de luz infravermelha em uma frequência específica, (geralmente 38kHz) por meio de um diodo emissor de luz infravermelha. O receptor infravermelho do eletrodoméstico decodifica esses pulsos e executa a operação correspondente. Diferentes marcas usam diferentes protocolos de codificação; os mais comuns são NEC, RC5, RC6, SONY, etc. O aplicativo infravermelho no celular contém uma biblioteca de códigos de várias marcas; basta selecionar a marca e o modelo para compatibilidade.
 
 ##### Limitações:
 
@@ -221,7 +221,7 @@ O NFC evoluiu da tecnologia RFID e suporta três modos de operação:
 
 - <strong>Modo Leitura/Escrita</strong>: O telefone lê informações de tags NFC, como ler um adesivo NFC para acionar uma ação.
 - <strong>Modo Ponto a Ponto</strong>: Dois dispositivos NFC transferem dados entre si, como o Android Beam (descontinuado).
-- <strong>Modo de Emulação de Cartão</strong>: O telefone emula um cartão inteligente. Este é o modo mais comum — cartões de transporte, cartões de acesso e cartões bancários usam este modo.
+- <strong>Modo de Emulação de Cartão</strong>: O telefone emula um cartão inteligente. Este é o modo mais comum, cartões de transporte, cartões de acesso e cartões bancários usam este modo.
 
 ##### Mecanismos de Segurança:
 

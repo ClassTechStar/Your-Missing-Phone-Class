@@ -2,17 +2,17 @@
 id: di-yi-zhang
 num: 01
 part: ji-chu-pian
-nav: Chapitre 1 : Bonjour, mon ordinateur personnel
+nav: Chapitre 1 : Apprenons d'abord à connaître votre smartphone
 toc: default
 kind: chapter
 ---
 
-### Chapitre 1 : Bonjour, mon ordinateur personnel
+### Chapitre 1 : Apprenons d'abord à connaître votre smartphone
 
 {class="chapter-intro mb-4"}
 Votre smartphone est en réalité le superordinateur le plus personnel de votre poche. Il est infiniment plus puissant que l'ordinateur qui a envoyé l'homme sur la Lune, et pourtant il repose silencieusement dans le creux de votre main. Aujourd'hui, allons à la rencontre de ce « géant silencieux ».
 
-#### I. Les « organes internes » du matériel du smartphone : analyse approfondie
+I. Les « organes internes » du matériel du smartphone : analyse approfondie
 
 Aussi petit soit-il, le smartphone a tous ses organes. Comme lors d'un cours d'anatomie, découvrons un par un ces composants de précision.
 
@@ -32,11 +32,11 @@ Le CPU est le composant le plus central du SoC, chargé de traiter la grande maj
 - <strong>Cœur moyen</strong>: équilibre performance/consommation, traite les tâches de charge intermédiaire courantes. Scroller sur Weibo, regarder des vidéos, basculer entre applications s'appuient principalement sur lui.
 - <strong>Petit cœur / cœur d'efficacité</strong>: consommation minimale, traite les tâches légères en arrière-plan. Veille, musique, réception de messages, etc., presque sans consommation électrique.
 
-Les trois niveaux de cœurs travaillent ensemble : l'ordonnanceur du système alloue automatiquement selon la charge — les tâches légères aux petits cœurs pour économiser, les gros travaux aux gros cœurs pour attaquer fort, puis retour aux petits cœurs une fois terminé. C'est pourquoi le smartphone peut faire tourner fluidement des jeux tout en restant en veille toute la journée.
+Les trois niveaux de cœurs travaillent ensemble : l'ordonnanceur du système alloue automatiquement selon la charge: les tâches légères aux petits cœurs pour économiser, les gros travaux aux gros cœurs pour attaquer fort, puis retour aux petits cœurs une fois terminé. C'est pourquoi le smartphone peut faire tourner fluidement des jeux tout en restant en veille toute la journée.
 
 <strong>Caractéristiques d'architecture par marque</strong>:
 
-- <strong>Qualcomm Snapdragon 8 Elite</strong>: adopte l'architecture CPU Oryon propriétaire (issue de l'acquisition de Nuvia), 2 super cœurs (4,32 GHz) + 6 cœurs de performance (3,53 GHz), tous basés sur le procédé 3 nm de deuxième génération de TSMC. Adieu définitivement l'architecture ARM publique, les performances monocœur et multicœur font un bond en avant. Le GPU Adreno 830 adopte une architecture en tranches, les performances graphiques progressent de 40 %, le NPU Hexagon atteint environ 45 TOPS, les performances d'inférence IA augmentent de 45 %. (Note : la version personnalisée Galaxy de Samsung a des fréquences plus élevées, le super cœur pouvant atteindre 4,47 GHz.)
+- <strong>Qualcomm Snapdragon 8 Elite</strong>: adopte l'architecture CPU Oryon propriétaire (issue de l'acquisition de Nuvia), 2 super cœurs (4,32 GHz) + 6 cœurs de performance (3,53 GHz), tous basés sur le procédé 3 nm de deuxième génération de TSMC. Adieu définitivement l'architecture ARM publique, les performances monocœur et multicœur font un bond en avant. Le GPU Adreno 830 adopte une architecture en tranches, les performances graphiques progressent de 40 %, le NPU Hexagon atteint environ 45 TOPS, les performances d'inférence IA augmentent de 45 %. (Note : la version personnalisée Galaxy de Samsung a des fréquences plus élevées, le super cœur pouvant atteindre 4,47 GHz.).
 - <strong>MediaTek Dimensity 9400</strong>: 1 super cœur (Cortex-X925, 3,62 GHz) + 3 cœurs de performance (Cortex-X4, 3,3 GHz) + 4 cœurs d'efficacité (Cortex-A720, 2,4 GHz), poursuite de l'architecture tous gros cœurs, procédé 3 nm de deuxième génération de TSMC. GPU Immortalis-G925 (12 cœurs), performances de pointe en hausse de 41 %, performances de lancer de rayons en hausse de 40 %. Le processeur IA est le NPU 890 de huitième génération, qui prend en charge l'exécution de grands modèles d'IA en local, l'entraînement LoRA local et la génération vidéo locale.
 - <strong>Apple A18 Pro</strong>: 2 cœurs de performance (environ 4,04 GHz) + 4 cœurs d'efficacité (environ 2,4 GHz), procédé 3 nm de deuxième génération de TSMC. Le GPU 6 cœurs prend en charge le lancer de rayons matériel, le NPU 16 cœurs (environ 35 TOPS) fournit une puissance de calcul importante pour l'IA locale et Apple Intelligence. L'architecture propriétaire d'Apple reste en tête sur les performances monocœurs et le ratio performance/consommation, l'architecture mémoire unifiée offrant un avantage de bande passante pour l'inférence IA.
 - <strong>HiSilicon Kirin 9020 de Huawei</strong>: embarqué sur la série Mate 70, adopte l'architecture CPU Taishan propriétaire, les capacités NPU et ISP continuent de se renforcer, prend en charge la 5.5G et la communication par satellite, représentant la dernière percée des puces nationales.
@@ -122,7 +122,7 @@ Le HDR en photo et le HDR d'écran sont deux choses différentes. Le HDR d'image
 
 - <strong>Principe algorithmique</strong>: lorsque vous appuyez sur le déclencheur, le smartphone prend en réalité plusieurs photos à différentes expositions (sous-exposée pour préserver les détails clairs, surexposée pour préserver les détails sombres, exposition normale pour préserver les tons moyens), puis les synthétise en une seule photo à plage dynamique élevée.
 - <strong>Processus de traitement</strong>: capture multi-images → alignement et compensation (anti-tremblement) → fusion d'exposition / mappage de tons → correction des couleurs → sortie de la photo finale.
-- <strong>Optimisation de l'effet</strong>: les smartphones actuels peuvent déjà faire du « HDR en temps réel » — ce que vous voyez dans le viseur est l'image après traitement HDR, WYSIWYG. Le Smart HDR d'Apple et le HDR automatique d'Android sont très aboutis.
+- <strong>Optimisation de l'effet</strong>: les smartphones actuels peuvent déjà faire du « HDR en temps réel », ce que vous voyez dans le viseur est l'image après traitement HDR, WYSIWYG. Le Smart HDR d'Apple et le HDR automatique d'Android sont très aboutis.
 
 ##### 5. Batterie et charge : source d'énergie
 
@@ -249,7 +249,7 @@ Face à la gamme éblouissante de chaque marque, comprendre les règles de nomma
 
 ##### Séries de produits des grandes marques :
 
-- <strong>Apple</strong> : iPhone (standard) / iPhone Plus (grand écran) / iPhone Pro (professionnel) / iPhone Pro Max (grand écran professionnel) / iPhone SE (économique) / iPhone 16e (économique avec IA, équipé de la puce A18 et du modem C1 conçu par Apple). En 2026, la série iPhone 17 est équipée de la puce A19 Pro, avec des capacités IA encore améliorées.
+- <strong>Apple</strong> : iPhone (standard) / iPhone Plus (grand écran) / iPhone Pro (professionnel) / iPhone Pro Max (grand écran professionnel) / iPhone SE (économique) / iPhone 16e (économique avec IA, équipé de la puce A18 et du modem C1 conçu par Apple). En 2026, la série iPhone 17 est équipée de la puce A19 Pro, avec des capacités IA encore améliorées
 - <strong>Huawei</strong>: série Mate (phare business) / série P/Pura (phare photographique) / série Mate X (phare pliable) / série nova (milieu de gamme jeune) / série Enjoy (entrée de gamme)
 - <strong>Xiaomi</strong>: série numérique Xiaomi (phare) / Xiaomi MIX (phare d'exploration/pliable) / série Redmi K (phare de performance) / série Redmi Note (milieu de gamme) / série numérique Redmi (entrée de gamme)
 - <strong>OPPO</strong>: série Find X (phare) / série Reno (milieu de gamme) / série A (entrée de gamme) / série numérique OnePlus (phare de performance)
@@ -267,7 +267,7 @@ Face à la gamme éblouissante de chaque marque, comprendre les règles de nomma
 - <strong>Note</strong>: désignait à l'origine un smartphone à grand écran, aujourd'hui l'usage varie selon les marques. Redmi Note est une série milieu de gamme.
 - <strong>Neo</strong>: version novatrice. Désigne généralement un modèle milieu de gamme orienté performance.
 
-#### V. Baseband et antennes : les héros méconnus de la communication
+V. Baseband et antennes : les héros méconnus de la communication
 
 Si le smartphone peut appeler et aller sur Internet, c'est grâce au duo baseband + antenne.
 

@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 61: Swift Quick Start—Apple's Top Development Language
 
 {class="chapter-intro mb-4"}
-In this chapter we officially start learning the language. Don't worry—Swift is famous for being "beginner-friendly," and you don't need to memorize a grammar book: once you've mastered 20% of the syntax, you can read and write 80% of everyday code. Look up the rest as you go, while working on projects. Remember our learning principle: understanding beats memorizing, and being able to use it beats being an expert.
+In this chapter we officially start learning the language. Don't worry:Swift is famous for being "beginner-friendly," and you don't need to memorize a grammar book: once you've mastered 20% of the syntax, you can read and write 80% of everyday code. Look up the rest as you go, while working on projects. Remember our learning principle: understanding beats memorizing, and being able to use it beats being an expert.
 
 #### 1. Variables and Types: Giving Data a Name
 
@@ -51,7 +51,7 @@ Common basic types in Swift
 Tip: The let-First Principle
 
 {class="mt-1"}
-An iron rule of the Swift community: use let by default, and only use var when it's truly necessary. If you use var where let would do, Xcode will warn you with yellow text. This habit saves you from a whole family of "variable got changed by accident" bugs—the less your code changes, the easier it is to reason about.
+An iron rule of the Swift community: use let by default, and only use var when it's truly necessary. If you use var where let would do, Xcode will warn you with yellow text. This habit saves you from a whole family of "variable got changed by accident" bugs,the less your code changes, the easier it is to reason about.
 :::
 
 #### 2. Optionals: Swift's "Anti-Crash Charm"
@@ -87,7 +87,7 @@ print(len)
 Note: ! Is a "High-Risk Operation"
 
 {class="mt-1"}
-Writing nickname! in code (force unwrapping) is like shouting at the compiler, "I guarantee it's not nil"—guess wrong once, and the app crashes on the spot. Beginner rule: use if let / ?? wherever possible, and never use !. When Xcode autocompletes your code it occasionally slips in a !—remember to swap it out.
+Writing nickname! in code (force unwrapping) is like shouting at the compiler, "I guarantee it's not nil",guess wrong once, and the app crashes on the spot. Beginner rule: use if let / ?? wherever possible, and never use !. When Xcode autocompletes your code it occasionally slips in a !.remember to swap it out.
 :::
 
 #### 3. Functions and Closures: Packing Logic into "Buttons"
@@ -116,11 +116,11 @@ let big = numbers.filter { $0 > 2 }    // filter
 ```
 :::
 
-Closures are everywhere in SwiftUI: the braces after Button("Tap me") { ... } are a closure. Please commit these "collection combo moves" to memory—map, filter, and sorted—because 90% of the list handling you'll ever do is just combinations of them.
+Closures are everywhere in SwiftUI: the braces after Button("Tap me") { ... } are a closure. Please commit these "collection combo moves" to memory:map, filter, and sorted,because 90% of the list handling you'll ever do is just combinations of them.
 
 #### 4. Structs and Protocols: Swift's "LEGO" System
 
-Swift's official preference is clear: prefer structs, and use classes only when you need inheritance. A struct is a "value type"—each copy lives its own separate life, which naturally cuts out a whole family of bugs:
+Swift's official preference is clear: prefer structs, and use classes only when you need inheritance. A struct is a "value type",each copy lives its own separate life, which naturally cuts out a whole family of bugs:
 
 ::: div .code-block
 :::inline div .code-head
@@ -147,7 +147,7 @@ struct Record: Identifiable { ... }   // conforming to a protocol = promising to
 ```
 :::
 
-Almost everything in SwiftUI is a struct (View is a protocol). It's fine if that sentence doesn't click yet—you'll run into it every day in Chapter 62. In the world of Swift, embrace the struct first.
+Almost everything in SwiftUI is a struct (View is a protocol). It's fine if that sentence doesn't click yet:you'll run into it every day in Chapter 62. In the world of Swift, embrace the struct first.
 
 #### 5. A Syntax Cheat Sheet for Absolute Beginners
 
@@ -173,7 +173,7 @@ If you have a Mac, open Xcode > Playground; if not, use Swift Playgrounds on the
 Chapter summary
 
 - let first, var with care; types are inferred automatically, but you can also declare them explicitly after a colon
-- Optionals are the soul of Swift: if a value might be missing, you must handle it—if let / ?? are your protective charm, and ! is a high-risk move
+- Optionals are the soul of Swift: if a value might be missing, you must handle it:if let / ?? are your protective charm, and ! is a high-risk move
 - Function calls carry argument names; a closure = a function without a name, and they're everywhere in SwiftUI
 - Prefer structs and conform to protocols; almost everything in SwiftUI is a struct
 - 20% of the syntax does 80% of the work: learn to use it first, master it later

@@ -2,15 +2,15 @@
 id: di-si-shi-zhang
 num: 40
 part: ai-biancheng-pian
-nav: Bab 40: Requirements Engineering—Mengubah Ide Menjadi Instruksi AI
+nav: Bab 40: Jelaskan dulu dengan jelas, baru mulai
 toc: default
 kind: chapter
 ---
 
-### Bab 40: Rekayasa Kebutuhan — Mengubah Ide Menjadi Instruksi yang Bisa Dieksekusi AI
+### Bab 40: Jelaskan dulu dengan jelas, baru mulai
 
 {class="chapter-intro mb-4"}
-Jika rekayasa konteks menjawab "membuat AI memahami latar belakang", maka rekayasa kebutuhan menjawab "membuat AI tahu apa yang spesifik harus dikerjakan kali ini". Inilah bagian dari pemrograman AI yang paling menunjukkan perbedaan antar manusia — dengan alat yang sama dan model yang sama, ada yang bisa membuat proyek yang menakjubkan, ada pula yang hanya mampu membuat mainan biasa-biasa saja. Perbedaannya seringkali bukan pada kemampuan teknis, melainkan pada kemampuan mengungkapkan kebutuhan.
+Jika rekayasa konteks menjawab "membuat AI memahami latar belakang", maka rekayasa kebutuhan menjawab "membuat AI tahu apa yang spesifik harus dikerjakan kali ini". Inilah bagian dari pemrograman AI yang paling menunjukkan perbedaan antar manusia: dengan alat yang sama dan model yang sama, ada yang bisa membuat proyek yang menakjubkan, ada pula yang hanya mampu membuat mainan biasa-biasa saja. Perbedaannya seringkali bukan pada kemampuan teknis, melainkan pada kemampuan mengungkapkan kebutuhan.
 
 #### 1. Dari Ide Kabur ke Kebutuhan Terstruktur
 
@@ -38,19 +38,19 @@ Ambil contoh "membuat aplikasi pencatat keuangan pribadi"; cara memecah yang mas
 1. Membuat fungsi dasar pencatatan pemasukan-pengeluaran (bisa menambah, melihat, dan menghapus catatan);
 2. Menambahkan fungsi kategori (menempelkan label seperti makanan, transportasi, dan lainnya pada tiap catatan);
 3. Membuat fungsi ringkasan bulanan (menghitung pemasukan-pengeluaran per bulan);
-4. Menambahkan visualisasi data (menampilkan pola pengeluaran dalam bentuk grafik).
+4. Menambahkan visualisasi data (menampilkan pola pengeluaran dalam bentuk grafik)
 
 Setiap langkah adalah penambahan fitur yang bisa dijalankan dan diverifikasi secara mandiri.
 
 :::inline div .quote-line
-Aturan emas merinci kebutuhan: setiap langkah selesai, proyek harus berupa "sesuatu yang bisa dipakai"—sekalipun fiturnya masih sederhana. Jangan pernah membiarkan proyek terjebak dalam kondisi "semuanya setengah jadi tetapi tak ada yang bisa dipakai".
+Aturan emas merinci kebutuhan: setiap langkah selesai, proyek harus berupa "sesuatu yang bisa dipakai",sekalipun fiturnya masih sederhana. Jangan pernah membiarkan proyek terjebak dalam kondisi "semuanya setengah jadi tetapi tak ada yang bisa dipakai".
 :::
 
-Cara memecah seperti ini punya dua keuntungan. Pertama, kamu selalu bisa melihat kemajuan — setiap satu langkah selesai, aplikasimu bertambah satu fitur; umpan balik positif seperti ini sangat penting untuk proyek jangka panjang (semua orang memang butuh rasa pencapaian). Kedua, setiap tugas AI menjadi cukup kecil sehingga risiko "AI salah paham" menurun — semakin kecil tugasnya, semakin akurat pemahaman AI dan semakin tinggi kualitas hasilnya.
+Cara memecah seperti ini punya dua keuntungan. Pertama, kamu selalu bisa melihat kemajuan, setiap satu langkah selesai, aplikasimu bertambah satu fitur; umpan balik positif seperti ini sangat penting untuk proyek jangka panjang (semua orang memang butuh rasa pencapaian). Kedua, setiap tugas AI menjadi cukup kecil sehingga risiko "AI salah paham" menurun, semakin kecil tugasnya, semakin akurat pemahaman AI dan semakin tinggi kualitas hasilnya.
 
 #### 3. Template Penulisan PRD dan Praktiknya
 
-Untuk proyek yang lebih besar (misalnya aplikasi full-stack dengan frontend, backend, dan beberapa modul fitur), Lima Elemen Kebutuhan saja mungkin belum cukup. Pada saat itu kamu perlu menulis dokumen kebutuhan proyek (PRD) yang lebih formal. Satu hal yang sering disalahpahami: PRD bukan ditulis untuk dibaca AI — ia ditulis untuk dirimu sendiri, untuk membantumu merapikan alur pikir; baru setelah itu kamu bisa memberikan instruksi yang lebih presisi kepada AI.
+Untuk proyek yang lebih besar (misalnya aplikasi full-stack dengan frontend, backend, dan beberapa modul fitur), Lima Elemen Kebutuhan saja mungkin belum cukup. Pada saat itu kamu perlu menulis dokumen kebutuhan proyek (PRD) yang lebih formal. Satu hal yang sering disalahpahami: PRD bukan ditulis untuk dibaca AI, ia ditulis untuk dirimu sendiri, untuk membantumu merapikan alur pikir; baru setelah itu kamu bisa memberikan instruksi yang lebih presisi kepada AI.
 
 PRD yang baik tidak perlu panjang, tetapi harus memuat enam bagian: gambaran umum proyek (satu paragraf yang menjelaskan apa yang dibuat), daftar fitur (apa isi setiap fitur), rencana teknis (tech stack dan arsitektur kira-kira seperti apa), model data (struktur data inti), deskripsi antarmuka (seperti apa tampilan halaman-halaman utama), dan rencana pengembangan (selesai dalam beberapa tahap apa saja).
 
@@ -111,9 +111,9 @@ Langkah kedua, pecah kebutuhannya.
 1. Langkah 1: buat fitur "catat entri belajar" (tanggal, materi, durasi);
 2. Langkah 2: tambahkan "statistik durasi belajar" (hari ini, total minggu ini);
 3. Langkah 3: buat tampilan "kalender belajar" (ditampilkan seperti graf kontribusi GitHub);
-4. Langkah 4: tambahkan fitur "tinjauan belajar" (menampilkan catatan belajar dari suatu hari di masa lalu secara acak, untuk membantu mengulang pelajaran).
+4. Langkah 4: tambahkan fitur "tinjauan belajar" (menampilkan catatan belajar dari suatu hari di masa lalu secara acak, untuk membantu mengulang pelajaran)
 
-Langkah ketiga, tulis PRD singkat. Tidak perlu panjang — pemecahan di atas sendiri sudah membentuk isi utama PRD. Rapikan menjadi satu file .md, letakkan di direktori akar proyek, sebagai referensi bersama antara kamu dan AI.
+Langkah ketiga, tulis PRD singkat. Tidak perlu panjang: pemecahan di atas sendiri sudah membentuk isi utama PRD. Rapikan menjadi satu file .md, letakkan di direktori akar proyek, sebagai referensi bersama antara kamu dan AI.
 
 Langkah keempat, mulai kembangkan langkah pertama. Instruksi untuk AI bisa seperti ini:
 
@@ -145,7 +145,7 @@ Pilih satu proyek kecil yang sudah lama kamu pikirkan, luangkan 5 menit untuk me
 {class="font-semibold mb-1"}
 Ringkasan Bab Ini
 
-- Lima Elemen Kebutuhan: Who / What / Why / How / Constraint — pikirkan dulu dengan jelas baru bicara
+- Lima Elemen Kebutuhan: Who / What / Why / How / Constraint, pikirkan dulu dengan jelas baru bicara
 - Aturan emas pemecahan kebutuhan: setelah setiap langkah selesai, proyek selalu berupa "sesuatu yang bisa dipakai"
 - PRD ditulis untuk dirimu sendiri: gambaran umum, daftar fitur, rencana teknis, model data, antarmuka, jadwal
 - Instruksi bagus = hanya mendeskripsikan langkah saat ini + batasan yang jelas + menyebut "apa yang dibuat" tanpa "bagaimana caranya"

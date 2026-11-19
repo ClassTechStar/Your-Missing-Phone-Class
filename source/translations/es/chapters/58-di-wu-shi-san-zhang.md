@@ -168,7 +168,7 @@ data class WeatherResponse(
 
 Con cualquiera de las dos, la ley es la misma: mira primero el JSON real que llega y define los campos después. Muchos bugs de "fallo de parseo" vienen de nombres de campo mal escritos o de niveles de anidamiento mal adivinados; imprime el JSON en crudo y coteja: en diez segundos lo tienes.
 
-#### 6. Corrutinas: el "idioma común" de la concurrencia en Android
+6. Corrutinas: el "idioma común" de la concurrencia en Android
 
 Los suspend y launch que han ido saliendo arriba vienen de las corrutinas de Kotlin (Coroutine), la solución oficial de concurrencia de Android. Puedes entenderlo a lo burro así: hace que las operaciones "que obligan a esperar" (red, base de datos) no bloqueen la interfaz.
 

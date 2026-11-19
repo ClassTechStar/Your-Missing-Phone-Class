@@ -10,9 +10,9 @@ kind: chapter
 ### Capitolo 7: Analisi completa delle funzioni avanzate
 
 {class="chapter-intro mb-4"}
-La tecnologia evolve di giorno in giorno e anche le funzioni del telefono continuano a progredire. Comunicazione satellitare, comunicazione senza rete, rilevamento incidenti, tecnologia SparkLink... queste funzioni che sembrano fantascientifiche sono ormai entrate nella nostra vita. Scopriamo insieme queste tecnologie all'avanguardia.
+La tecnologia evolve di giorno in giorno e anche le funzioni del telefono continuano a progredire. Comunicazione satellitare, comunicazione senza rete. Rilevamento incidenti, tecnologia SparkLink... queste funzioni che sembrano fantascientifiche sono ormai entrate nella nostra vita. Scopriamo insieme queste tecnologie all'avanguardia.
 
-#### 1. Comunicazione satellitare: chiedere aiuto anche senza segnale
+1. Comunicazione satellitare: chiedere aiuto anche senza segnale
 
 La comunicazione satellitare è una grande innovazione nel campo dei telefoni degli ultimi anni. Quando ti trovi in zone remote, in montagna o in una foresta e il telefono non ha assolutamente segnale, la comunicazione satellitare può essere l'ancora di salvezza.
 
@@ -48,13 +48,13 @@ Il telefono si collega direttamente a un satellite di comunicazione in orbita pe
 La comunicazione satellitare richiede un'antenna hardware speciale sul telefono, non tutti i telefoni la supportano. Inoltre, di solito richiede un abbonamento a pagamento, ma la funzione di SOS di emergenza è generalmente gratuita.
 :::
 
-#### 2. Comunicazione senza rete: un nuovo modo di comunicazione a breve distanza
+2. Comunicazione senza rete: un nuovo modo di comunicazione a breve distanza
 
 Per "comunicazione senza rete" si intende la tecnologia che permette a due telefoni di comunicare direttamente in assenza di rete mobile e Wi-Fi.
 
 ##### Principio tecnico:
 
-Utilizza Bluetooth o frequenze radio dedicate per stabilire una connessione punto a punto a breve distanza (in genere da poche centinaia di metri a pochi chilometri).
+Utilizza Bluetooth o frequenze radio dedicate per stabilire una connessione punto a punto a breve distanza, (in genere da poche centinaia di metri a pochi chilometri).
 
 ##### Scenari applicativi:
 
@@ -70,7 +70,7 @@ Utilizza Bluetooth o frequenze radio dedicate per stabilire una connessione punt
 
 #### 3. Rilevamento incidenti: salva la vita nei momenti cruciali
 
-Il rilevamento incidenti è una funzione che utilizza i sensori del telefono per rilevare gravi incidenti stradali e chiamare automaticamente i numeri di emergenza.
+Il rilevamento incidenti è una funzione che utilizza i sensori del telefono per rilevare gravi incidenti stradali , e chiamare automaticamente i numeri di emergenza.
 
 ##### Principio di funzionamento:
 
@@ -91,7 +91,7 @@ Il telefono utilizza accelerometro, giroscopio, barometro, microfono e altri sen
 - Può attivarsi per errore (ad esempio sulle montagne russe o durante attività fisica intensa), basta annullare tempestivamente.
 - Dipende da sensori e algoritmi, non è affidabile al 100%, ma è una tutela in più.
 
-#### 4. Tecnologia SparkLink: la connettività wireless di nuova generazione
+4. Tecnologia SparkLink: la connettività wireless di nuova generazione
 
 SparkLink è una nuova tecnologia di comunicazione wireless sviluppata sotto la guida di Huawei, con l'obiettivo di sostituire il Bluetooth e il Wi-Fi in alcuni scenari. Su indicatori chiave eguaglia o supera le soluzioni esistenti: la velocità di interfaccia può raggiungere 900Mbps (molto superiore ai 50Mbps del Bluetooth), latenza fino a 20μs (il Bluetooth circa 15ms), una singola rete supporta fino a 4096 dispositivi connessi contemporaneamente (il Bluetooth in genere meno di 8).
 

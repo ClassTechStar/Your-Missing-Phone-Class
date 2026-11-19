@@ -53,11 +53,11 @@ struct CounterView: View {
 ```
 :::
 
-Blunt advice for beginners: use @State for state private to one screen, and @Observable classes for anything shared across screens or involving logic. The @StateObject/@ObservableObject in older tutorials are the previous generation—being able to read them is enough; write new code the way described above.
+Blunt advice for beginners: use @State for state private to one screen, and @Observable classes for anything shared across screens or involving logic. The @StateObject/@ObservableObject in older tutorials are the previous generation,being able to read them is enough; write new code the way described above.
 
 #### 2. NavigationStack: The "Stack" Behind Screen Jumps
 
-Since iOS 16, multi-screen navigation uses NavigationStack—like a stack of plates: push one on, and pop them off one by one as you go back:
+Since iOS 16, multi-screen navigation uses NavigationStack,like a stack of plates: push one on, and pop them off one by one as you go back:
 
 ::: div .code-block
 :::inline div .code-head
@@ -92,7 +92,7 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink is a "tappable link to another screen"; navigationTitle automatically generates the navigation bar title and the back button. When you need programmatic navigation (say, returning automatically after tapping "Save"), use @Environment(\.dismiss) to close the current screen—together, these two tricks cover 90% of your navigation needs.
+NavigationLink is a "tappable link to another screen"; navigationTitle automatically generates the navigation bar title and the back button. When you need programmatic navigation (say, returning automatically after tapping "Save"), use @Environment(\.dismiss) to close the current screen,together, these two tricks cover 90% of your navigation needs.
 
 #### 3. Pop-Ups and Bottom Tabs: sheet and TabView
 
@@ -141,7 +141,7 @@ Rules of thumb: use NavigationStack to push screens for the main flow (list → 
 
 #### 4. List: iOS's Go-To List
 
-The most used—and most "Apple-flavored"—component on iOS is List: it comes with dividers, swipe-to-delete, and tap highlighting out of the box:
+The most used,and most "Apple-flavored",component on iOS is List: it comes with dividers, swipe-to-delete, and tap highlighting out of the box:
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-Typical uses: refresh data when coming back to the foreground, save drafts when heading to the background. iOS runs a tight ship on background activity—an ordinary app gets suspended (frozen) shortly after going to the background, so don't expect to secretly do heavy work back there; if you truly need scheduled tasks, use the local notifications from Chapter 68 instead of "staying alive in the background."
+Typical uses: refresh data when coming back to the foreground, save drafts when heading to the background. iOS runs a tight ship on background activity,an ordinary app gets suspended (frozen) shortly after going to the background, so don't expect to secretly do heavy work back there; if you truly need scheduled tasks, use the local notifications from Chapter 68 instead of "staying alive in the background."
 
 {class="mt-1"}
-Build a fake-data skeleton of the expense tracker: a TabView with three tabs (Ledger / Stats / Settings) → the Ledger screen shows fake data in a List, and tapping a row jumps to the details (NavigationStack) → the "+" button in the top-right opens the entry sheet. No saving, no internet—pure skeleton practice. Get this skeleton right, and filling it with real data in Chapter 65 will be a smooth ride.
+Build a fake-data skeleton of the expense tracker: a TabView with three tabs (Ledger / Stats / Settings) → the Ledger screen shows fake data in a List, and tapping a row jumps to the details (NavigationStack) → the "+" button in the top-right opens the entry sheet. No saving, no internet,pure skeleton practice. Get this skeleton right, and filling it with real data in Chapter 65 will be a smooth ride.
 :::
 
 ::: div .chapter-summary

@@ -2,15 +2,15 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: Bab 2: Merapikan Ruang Digitalmu
+nav: Bab 2: Ada yang hilang di dalam ponsel?
 toc: default
 kind: chapter
 ---
 
-### Bab 2: Rapikan ruangan digital Anda—Manajemen file
+### Bab 2: Ada yang hilang di dalam ponsel?
 
 {class="chapter-intro mb-4"}
-Ponsel dipakai lama akan berantakan, kebiasaan baik dimulai dari mengelola file. Sama seperti kamar Anda perlu dirapikan secara berkala, ruang digital Anda juga perlu dirawat. Ponsel yang tertata rapi, tidak hanya memudahkan mencari barang, juga berjalan lebih lancar.
+Ponsel dipakai lama akan berantakan, kebiasaan baik dimulai dari mengelola file. Sama seperti kamar Anda perlu dirapikan secara berkala. ruang digital Anda juga perlu dirawat. Ponsel yang tertata rapi, tidak hanya memudahkan mencari barang, juga berjalan lebih lancar.
 
 #### 1. Sistem penyimpanan tiga lapis: Gudang digital Anda
 
@@ -205,7 +205,7 @@ Buka file manager &gt; masuk folder "Download". Lihat apa saja isinya? Hapus yan
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### 8. Manajemen gambar dan file system: Jadikan aset tertata rapi
+8. Manajemen gambar dan file system: Jadikan aset tertata rapi
 
 Bagian sebelumnya kita belajar "mengenal folder", tapi sekadar mengenal tidak cukup. Bagian ini akan membahas <strong>bagaimana secara aktif membangun satu set standar manajemen yang bisa dijalankan jangka panjang</strong>, agar file Anda selalu bisa ditemukan, tidak hilang, tidak diintip.
 
@@ -238,7 +238,7 @@ Pilih satu akhir pekan yang luang, operasikan dengan urutan berikut:
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. Buat folder kerja bulan ini dengan format <code>2026Q2_ProyekA</code> di file manager;
 2. Telusuri semua file minggu ini di direktori "Download", simpan yang berguna, arsipkan, hapus yang tidak berguna;
-3. Buat folder tahunan seperti <code>2025Keluarga</code>,<code>2026Keluarga</code> untuk foto keluarga tahun ini.
+3. Buat folder tahunan seperti <code>2025Keluarga</code>,<code>2026Keluarga</code> untuk foto keluarga tahun ini
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -254,7 +254,7 @@ Ponsel dipakai lama akan "bertambah gemuk", kebanyakan karena file redundan yang
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Standar penanganan keamanan gambar
 
-Gambar adalah tipe data paling "sensitif" di ponsel—satu foto sembarangan bisa membocorkan lokasi, perangkat, waktu Anda. Kami menyarankan <strong>membangun workflow "perlindungan ganda"</strong>:
+Gambar adalah tipe data paling "sensitif" di ponsel:satu foto sembarangan bisa membocorkan lokasi, perangkat, waktu Anda. Kami menyarankan <strong>membangun workflow "perlindungan ganda"</strong>:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -263,7 +263,7 @@ Gambar adalah tipe data paling "sensitif" di ponsel—satu foto sembarangan bisa
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Pixelasi informasi yang terlihat</strong>: Dengan tool bawaan sistem atau pihak ketiga (seperti Meitu XiuXiu, Snapseed)<strong>coret beberapa digit tengah nomor KTP, nomor plat, nomor rumah, nama, jumlah</strong> dan field kunci lainnya;
 2. <strong>Pengupasan metadata</strong>: Sebelum mengirim, di album klik "Share" atau "Export", sistem akan menanyakan apakah ingin menyimpan informasi lokasi, pilih <strong>"Tidak Simpan"</strong>. Dengan begitu model perangkat pengambil, koordinat GPS, waktu pengambilan tidak akan ikut terkirim bersama gambar;
-3. <strong>Watermark sementara</strong>(opsional): Tambahkan watermark teks "Hanya untuk pengurusan XX" pada screenshot sensitif, hindari penyalahgunaan.
+3. <strong>Watermark sementara</strong>(opsional): Tambahkan watermark teks "Hanya untuk pengurusan XX" pada screenshot sensitif, hindari penyalahgunaan
 :::
 
 {class="mt-3 mb-2"}
@@ -277,4 +277,4 @@ Untuk gambar sensitif yang perlu <strong>disimpan jangka panjang</strong>(KTP, k
 
 - iPhone: [Foto] &gt; pilih foto &gt; Hide (hanya bisa dilihat setelah verifikasi Face ID);
 - Huawei/Xiaomi: [Album] &gt; long press foto &gt; "Pindahkan ke Brankas";
-- Aplikasi enkripsi pihak ketiga:<strong>360 Secure Album</strong>,<strong>Tencent Album Manager (Album Privat)</strong>,<strong>KeepSafe</strong> , dll, perlindungan kata sandi terpisah, lebih tersembunyi.
+- Aplikasi enkripsi pihak ketiga:<strong>360 Secure Album</strong>,<strong>Tencent Album Manager (Album Privat)</strong>,<strong>KeepSafe</strong> , dll, perlindungan kata sandi terpisah, lebih tersembunyi

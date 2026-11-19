@@ -22,22 +22,22 @@ Teknologi berkembang begitu cepat; isi buku ini didasarkan pada teknologi dan pr
 - Memperluas bab aksesibilitas (operasi lengkap VoiceOver/TalkBack, pembesaran dan filter warna, deskripsi gambar berbasis AI, teks langsung/real-time, saluran ganda panggilan RTT/TTY).
 - Menulis ulang kerangka prompt dengan pendekatan "Peran-Latar Belakang-Tugas-Batasan", dilengkapi 3 contoh skenario lengkap.
 - Menambahkan tiga lampiran teknologi tingkat lanjut: Tambahan Bab 1: Penjelasan perluasan memori ponsel Android (definisi hakiki, prinsip zRAM/swap, hambatan kecepatan, batas skenario penggunaan, penamaan tiap pabrikan dan cara mengaktifkannya).
-- Tambahan Bab 20: Termux—lingkungan terminal Linux portabel di perangkat Android (fitur inti, ekosistem plugin, instalasi dan konfigurasi, serta skenario khas seperti pengembangan mobile, operasional server, dan pengujian keamanan).
-- Tambahan Bab 23: Panduan Pemula GitHub—dari hosting kode hingga platform kolaborasi (membedakan Git vs GitHub, konsep inti, cara mendaftar dan memulai, alur kolaborasi Pull Request, pengingat keamanan, dan solusi akses dari dalam negeri).
+- Tambahan Bab 20: Termux,lingkungan terminal Linux portabel di perangkat Android (fitur inti, ekosistem plugin, instalasi dan konfigurasi, serta skenario khas seperti pengembangan mobile, operasional server, dan pengujian keamanan).
+- Tambahan Bab 23: Panduan Pemula GitHub,dari hosting kode hingga platform kolaborasi (membedakan Git vs GitHub, konsep inti, cara mendaftar dan memulai, alur kolaborasi Pull Request, pengingat keamanan, dan solusi akses dari dalam negeri).
 
 #### Poin Pembaruan Versi 1.7
 
 1\. Empat bab baru
 
-- Bab 29:Kesehatan Digital—analisis waktu penggunaan layar, batas App, mode Jangan Ganggu, aturan 20-20-20 untuk kesehatan mata, penyelamatan leher, manajemen tidur, kecemasan informasi dan "kebutaan selektif", serta tantangan kesehatan digital seminggu.
-- Bab 30: Screencasting dan Mobil—perbandingan tiga kubu AirPlay / Miracast / DLNA, solusi screencasting berkabel, mode desktop Samsung DeX, empat solusi koneksi mobil CarPlay / Android Auto / HiCar / CarLife, serta praktik screencasting di ruang rapat.
-- Bab 31: Pembuatan Video Pendek—tiga pertanyaan pemilihan topik, 5 langkah pengaturan syuting, lima teknik gerak kamera (mendorong, menarik, mengayun, menggeser, mengikuti), alur kerja enam langkah CapCut, kunci pembuatan sampul, serta prinsip konten "3 detik pertama menentukan hidup-mati".
-- Bab 32: Panduan P3K Keamanan—SOP 30 menit emas saat ponsel hilang, alur penanganan 72 jam setelah tertipu, pemeriksaan lewat safe mode saat terinfeksi malware, enam langkah merebut kembali akun yang dibajak, cara menghadapi pesan pemerasan, serta lima hal pencegahan harian.
+- Bab 29:Kesehatan Digital:analisis waktu penggunaan layar, batas App, mode Jangan Ganggu, aturan 20-20-20 untuk kesehatan mata, penyelamatan leher, manajemen tidur, kecemasan informasi dan "kebutaan selektif", serta tantangan kesehatan digital seminggu.
+- Bab 30: Screencasting dan Mobil:perbandingan tiga kubu AirPlay / Miracast / DLNA, solusi screencasting berkabel, mode desktop Samsung DeX, empat solusi koneksi mobil CarPlay / Android Auto / HiCar / CarLife, serta praktik screencasting di ruang rapat.
+- Bab 31: Pembuatan Video Pendek,tiga pertanyaan pemilihan topik, 5 langkah pengaturan syuting, lima teknik gerak kamera (mendorong, menarik, mengayun. menggeser, mengikuti), alur kerja enam langkah CapCut, kunci pembuatan sampul, serta prinsip konten "3 detik pertama menentukan hidup-mati".
+- Bab 32: Panduan P3K Keamanan,SOP 30 menit emas saat ponsel hilang, alur penanganan 72 jam setelah tertipu, pemeriksaan lewat safe mode saat terinfeksi malware, enam langkah merebut kembali akun yang dibajak, cara menghadapi pesan pemerasan, serta lima hal pencegahan harian.
 
 2\. Dua bab baru
 
-- Bab 27: Ramah Lansia dan Kebersamaan Keluarga—tabel perbandingan mode sederhana antar merek, enam modus penipuan dan tiga lini pertahanan, bantuan jarak jauh (Huawei MeeLink/Sunflower), mode Peduli WeChat dan input suara, serta SOS / deteksi jatuh / pengingat minum obat.
-- Bab 28:Panduan Membeli Ponsel—metode memilih ponsel tiga langkah, tabel spesifikasi "cukup perhatikan lima hal", rekomendasi lima tingkat anggaran, tabel pemilihan untuk tujuh skenario, lima jebakan saat membeli, serta analisis waktu dan saluran pembelian.
+- Bab 27: Ramah Lansia dan Kebersamaan Keluarga:tabel perbandingan mode sederhana antar merek, enam modus penipuan dan tiga lini pertahanan, bantuan jarak jauh (Huawei MeeLink/Sunflower), mode Peduli WeChat dan input suara, serta SOS / deteksi jatuh / pengingat minum obat.
+- Bab 28:Panduan Membeli Ponsel:metode memilih ponsel tiga langkah, tabel spesifikasi "cukup perhatikan lima hal", rekomendasi lima tingkat anggaran, tabel pemilihan untuk tujuh skenario, lima jebakan saat membeli, serta analisis waktu dan saluran pembelian.
 
 3\. Fitur pembacaan dan interaksi baru
 
@@ -68,9 +68,9 @@ Daftar isi, jalur belajar (empat langkah→lima langkah), peta bab, nomor versi 
 
 #### Poin Pembaruan Versi 1.8
 
-Menambahkan Bagian Ketujuh "Praktik Pemrograman AI" (Bab 37-47, total 11 bab): revolusi paradigma dan Agentic Engineering, lima prinsip berpikir pemrograman AI, context engineering dan specification-driven development (SDD), requirements engineering, panorama alat pemrograman AI 2026, panorama model besar dan praktik API, conversation engineering, alur lengkap proyek dari 0 ke 1, jaminan kualitas, jalan menuju tingkat lanjut (kolaborasi MCP/multi-Agent), serta buku panduan cepat. Daftar isi, jalur belajar (lima langkah→enam langkah), peta bab, dan indeks panduan cepat diperbarui serentak. Konten bersumber dari "Metodologi Berpikir Pemrograman AI: Panduan dari Nol hingga Praktik Full Stack" edisi Agustus 2026.
+Menambahkan Bagian Ketujuh "Praktik Pemrograman AI" (Bab 37-47, total 11 bab): revolusi paradigma dan Agentic Engineering, lima prinsip berpikir pemrograman AI, context engineering dan specification-driven development (SDD), requirements engineering. panorama alat pemrograman AI 2026, panorama model besar dan praktik API, conversation engineering, alur lengkap proyek dari 0 ke 1, jaminan kualitas, jalan menuju tingkat lanjut (kolaborasi MCP/multi-Agent), serta buku panduan cepat. Daftar isi, jalur belajar (lima langkah→enam langkah), peta bab, dan indeks panduan cepat diperbarui serentak. Konten bersumber dari "Metodologi Berpikir Pemrograman AI: Panduan dari Nol hingga Praktik Full Stack" edisi Agustus 2026.
 
-Menambahkan Bagian Kedelapan "Praktik Pengembangan Android" (Bab 48-58, total 11 bab) dan Bagian Kesembilan "Praktik Pengembangan iOS" (Bab 59-69, total 11 bab): kedua platform mencakup penyiapan lingkungan (Android Studio / Xcode), kursus kilat bahasa (Kotlin / Swift), framework antarmuka (Jetpack Compose / SwiftUI), data dan jaringan, dua proyek praktik lengkap (aplikasi pembukuan + cek cuaca), pengujian dan penerbitan (Google Play / App Store), serta buku panduan cepat. Daftar isi, jalur belajar (enam langkah→delapan langkah), peta bab, dan indeks panduan cepat diperbarui serentak. Konten bersumber dari "Pengembangan Android dari Nol" dan "Pengembangan iOS dari Nol" edisi Agustus 2026.
+Menambahkan Bagian Kedelapan "Praktik Pengembangan Android" (Bab 48-58, total 11 bab) dan Bagian Kesembilan "Praktik Pengembangan iOS" (Bab 59-69, total 11 bab): kedua platform mencakup penyiapan lingkungan (Android Studio / Xcode). kursus kilat bahasa (Kotlin / Swift), framework antarmuka (Jetpack Compose / SwiftUI), data dan jaringan, dua proyek praktik lengkap (aplikasi pembukuan + cek cuaca), pengujian dan penerbitan (Google Play / App Store), serta buku panduan cepat. Daftar isi, jalur belajar (enam langkah→delapan langkah), peta bab, dan indeks panduan cepat diperbarui serentak. Konten bersumber dari "Pengembangan Android dari Nol" dan "Pengembangan iOS dari Nol" edisi Agustus 2026.
 
 #### Tambahan Konten: Aplikasi Berguna dan Penyaringan Gangguan
 
@@ -79,14 +79,14 @@ Menambahkan Bagian Kedelapan "Praktik Pengembangan Android" (Bab 48-58, total 11
 - Perluasan kemampuan penyaringan gangguan di Bab 8: ditambahkan penjelasan praktis tentang identifikasi penelepon, daftar hitam/putih, filter kata kunci SMS, senyapkan panggilan tak dikenal di iOS, keterkaitan mode Jangan Ganggu, dan lainnya, serta saling tertaut dengan Bab 13.
 - Saran perlindungan tiga lapis: penyaringan sistem + anti-gangguan operator + National Anti-Fraud Center, dengan menekankan daftar putih agar kontak penting tidak terblokir salah.
 
-#### Tambahan Konten: Peringatan Cuaca / Peringatan Bencana Alam / Peringatan Gempa
+Tambahan Konten: Peringatan Cuaca / Peringatan Bencana Alam / Peringatan Gempa
 
 - Bab 13 menambahkan bagian ketujuh: peringatan cuaca (kanal resmi meteorologi + App cuaca bawaan sistem + tingkatan warna), peringatan bencana alam (berbagai kanal meteorologi/tanggap darurat), serta prinsip dan miskonsepsi peringatan gempa (peringatan dini ≠ prakiraan).
 - Tabel pengaktifan peringatan gempa per merek: jalur umum dan catatan soal izin untuk Xiaomi, Huawei/HONOR, keluarga OPPO, vivo, iPhone, Samsung, dan lainnya.
 - Bab 32 menambahkan "Skenario Nol": urutan menyelamatkan diri setelah peringatan gempa, penanganan hujan ekstrem/taifun, serta keterkaitan dengan SOS satelit / komunikasi tanpa jaringan; panduan P3K dan pengaturan peringatan di Bab 13 saling tertaut.
-- Keterkaitan subbab cuaca: entri App cuaca pada bagian perjalanan diperkaya dengan notifikasi peringatan serta pengingat "notifikasi harus diaktifkan agar peringatan bisa diterima".
+- Keterkaitan subbab cuaca: entri App cuaca pada bagian perjalanan diperkaya dengan notifikasi peringatan ,serta pengingat "notifikasi harus diaktifkan agar peringatan bisa diterima".
 
-#### Tambahan Konten: Kolaborasi Lintas Perangkat dan Alat Produktivitas
+Tambahan Konten: Kolaborasi Lintas Perangkat dan Alat Produktivitas
 
 - Bab 13 bagian kedelapan: mengendalikan komputer dari ponsel (Sunflower, ToDesk) dan batas merah anti-penipuan; kantor AI (Trae / WorkBuddy / Dumate) dan alur kerja mengendalikan komputer dari ponsel; serta wallpaper dinamis Artificial Desktop dari miHoYo.
 - Kirim cepat jaringan lokal dan papan klip: LocalSend, Feige Chuanshu, AirDrop; KDE Connect, papan klip universal, serta transfer antara ponsel dan komputer satu merek.

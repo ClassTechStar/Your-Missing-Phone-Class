@@ -2,12 +2,12 @@
 id: di-yi-zhang
 num: 01
 part: ji-chu-pian
-nav: Chapter 1: Hello, My Personal Computer
+nav: Chapter 1: Let's Get to Know This Machine
 toc: default
 kind: chapter
 ---
 
-### Chapter 1: Hello, My Personal Computer
+### Chapter 1: Let's Get to Know This Machine
 
 {class="chapter-intro mb-4"}
 Your phone is actually the most personal supercomputer in your pocket. It is countless times more powerful than the computers that once sent humans to the Moon, yet it rests quietly in your palm. Today, let's get to know this "silent giant."
@@ -18,9 +18,9 @@ Small as it is, the phone has all the vital organs. Let's get to know these prec
 
 ##### 1. SoC (System on Chip): The Phone's "Brain + Heart"
 
-SoC stands for System on Chip, which translates to "cramming the entire system onto a single chip." It's not just the CPU (Central Processing Unit)—it integrates the CPU, GPU (Graphics Processing Unit), NPU (Neural Processing Unit), ISP (Image Signal Processor), baseband (responsible for communication), and more all together.
+SoC stands for System on Chip, which translates to "cramming the entire system onto a single chip." It's not just the CPU (Central Processing Unit),it integrates the CPU, GPU (Graphics Processing Unit), NPU (Neural Processing Unit), ISP (Image Signal Processor), baseband (responsible for communication), and more all together.
 
-It's like building a city's government building, power plant, communication center, and police station all in one tower—extremely efficient.
+It's like building a city's government building, power plant, communication center, and police station all in one tower:extremely efficient.
 
 ##### CPU: The Core of General-Purpose Computing
 
@@ -28,15 +28,15 @@ The CPU is the most central component of the SoC, responsible for handling the v
 
 <strong>CPU Big-LITTLE Core Design</strong>: Modern phone CPUs generally adopt a "big.LITTLE" core architecture (ARM's big.LITTLE technology), dividing cores into different performance tiers:
 
-- <strong>Super core / Big core</strong>: Strongest performance, handles heavy-duty tasks. Such as game loading, app launching, complex computations. Highest frequency (3GHz+), but also highest power consumption.
+- <strong>Super core / Big core</strong>: Strongest performance, handles heavy-duty tasks. Such as game loading, app launching, complex computations. Runs at the highest frequency (3GHz+), but also burns the most power of the three.
 - <strong>Medium core</strong>: Balances performance and power, handles everyday medium-load tasks. Scrolling Weibo, watching videos, and multitasking mainly rely on it.
 - <strong>Small core / Efficiency core</strong>: Lowest power consumption, handles lightweight background tasks. Standby, listening to music, receiving messages—almost no power draw.
 
-The three tiers of cores work together: the system scheduler automatically assigns tasks based on load—lightweight tasks go to small cores to save power, heavy work goes to big cores to crank through it, then switches back to small cores when done. This is why a phone can both run games smoothly and stay on standby all day.
+The three tiers of cores work together: the system scheduler automatically assigns tasks based on load,lightweight tasks go to small cores to save power, heavy work goes to big cores to crank through it, then switches back to small cores when done. This is why a phone can both run games smoothly and stay on standby all day.
 
 <strong>Brand Architecture Characteristics</strong>:
 
-- <strong>Qualcomm Snapdragon 8 Elite</strong>: Uses the self-developed Oryon CPU architecture (derived from the Nuvia acquisition), 2 super cores (4.32GHz) + 6 performance cores (3.53GHz), all based on TSMC's second-generation 3nm process. Completely departs from ARM's public architecture, with leapfrog improvements in both single-core and multi-core performance. GPU is Adreno 830 with a slice architecture, graphics performance up 40%; Hexagon NPU has about 45 TOPS of computing power, AI inference performance up 45%. (Note: Samsung Galaxy custom version has higher frequencies, with super cores up to 4.47GHz.)
+- <strong>Qualcomm Snapdragon 8 Elite</strong>: Uses the self-developed Oryon CPU architecture (derived from the Nuvia acquisition), 2 super cores (4.32GHz) + 6 performance cores (3.53GHz), all based on TSMC's second-generation 3nm process. Completely departs from ARM's public architecture, with leapfrog improvements in both single-core and multi-core performance. GPU is Adreno 830 with a slice architecture, graphics performance up 40%; Hexagon NPU has about 45 TOPS of computing power, AI inference performance up 45%. (Note: Samsung Galaxy custom version has higher frequencies, with super cores up to 4.47GHz.).
 - <strong>MediaTek Dimensity 9400</strong>: 1 super core (Cortex-X925, 3.62GHz) + 3 performance cores (Cortex-X4, 3.3GHz) + 4 efficiency cores (Cortex-A720, 2.4GHz), continuing the all-big-core architecture, TSMC's second-generation 3nm process. GPU is Immortalis-G925 (12-core), peak performance up 41%, ray tracing performance up 40%. AI processor is the 8th-generation NPU 890, supporting on-device LLM operation, on-device LoRA training, and on-device video generation.
 - <strong>Apple A18 Pro</strong>: 2 performance cores (~4.04GHz) + 4 efficiency cores (~2.4GHz), TSMC's second-generation 3nm process. 6-core GPU supports hardware ray tracing; 16-core NPU (~35 TOPS) provides powerful computing for on-device AI and Apple Intelligence. Apple's self-developed architecture still leads in single-core performance and energy efficiency, and the unified memory architecture provides high-bandwidth advantages for AI inference.
 - <strong>Huawei Kirin 9020</strong>: Equipped on the Mate 70 series, uses the self-developed Taishan CPU architecture, with continuously enhanced NPU and ISP capabilities, supports 5.5G and satellite communication, representing the latest breakthrough in domestic chips.
@@ -86,7 +86,7 @@ The ISP processes the raw data from the camera, turning light signals into beaut
 
 ##### 2. RAM: The Temporary Workbench
 
-RAM is like your desk—the bigger it is, the more files you can spread out at once. 12GB is the current mainstream, 16GB suits heavy users, and 24GB+ is for gamers and geeks.
+RAM is like your desk,the bigger it is, the more files you can spread out at once. 12GB is the current mainstream, 16GB suits heavy users, and 24GB+ is for gamers and geeks.
 
 RAM type also matters: LPDDR5 is faster and more power-efficient than LPDDR4X. Although Apple's RAM isn't large, system optimization is good, so it appears "sufficient."
 
@@ -94,7 +94,7 @@ RAM type also matters: LPDDR5 is faster and more power-efficient than LPDDR4X. A
 
 ##### 3. Storage (ROM/Flash): The Long-Term Warehouse
 
-Storage is like your bookcase—the place that holds all your photos, videos, and apps. The mainstream now is UFS 3.1 or UFS 4.0, several times faster than the older eMMC.
+Storage is like your bookcase,the place that holds all your photos, videos, and apps. The mainstream now is UFS 3.1 or UFS 4.0, several times faster than the older eMMC.
 
 <strong>Why does storage speed matter?</strong> It determines app opening speed, game loading speed, and photo saving speed. After long use, slow storage makes the phone increasingly laggy.
 
@@ -105,7 +105,7 @@ The screen is the main window for interaction between you and your phone; its qu
 - <strong>Material</strong>: OLED has vivid colors, high contrast, and is more power-efficient (pixels don't emit light when displaying black), but may have flicker at low brightness that strains the eyes; LCD is more eye-friendly and lower cost, but contrast and color aren't as good as OLED.
 - <strong>Resolution</strong>: 1080P is mainstream, 2K is sharper but more power-hungry. Apple's "Retina display" concept means: at a certain distance, the human eye cannot distinguish individual pixels.
 - <strong>Refresh rate</strong>: 60Hz is standard, 90Hz/120Hz is smoother, silky-smooth when scrolling. High refresh rates consume more power, so many phones support adaptive refresh rate (LTPO), dynamically adjusting based on content.
-- <strong>Touch sampling rate</strong>: Affects touch response speed; gamers should pay attention—the higher, the more responsive.
+- <strong>Touch sampling rate</strong>: Affects touch response speed; gamers should pay attention,the higher, the more responsive.
 - <strong>Dimming method</strong>: DC dimming is more eye-friendly than PWM dimming, less likely to tire the eyes at low brightness. Many phones now support high-frequency PWM dimming, also for eye protection.
 
 ##### Screen HDR Technology
@@ -122,15 +122,15 @@ HDR in photography and screen HDR are two different things. Photography HDR uses
 
 - <strong>Algorithm principle</strong>: When you press the shutter, the phone actually takes multiple photos at different exposures (underexposed to preserve highlight detail, overexposed to preserve shadow detail, normal exposure to preserve midtones), then synthesizes them into a single high dynamic range photo.
 - <strong>Processing pipeline</strong>: Multi-frame capture → alignment compensation (anti-shake) → exposure fusion / tone mapping → color correction → output final photo.
-- <strong>Effect optimization</strong>: Modern phones can already achieve "real-time HDR"—what you see in the viewfinder is the HDR-processed result, WYSIWYG. Apple's Smart HDR and Android's auto HDR are both very mature.
+- <strong>Effect optimization</strong>: Modern phones can already achieve "real-time HDR":what you see in the viewfinder is the HDR-processed result, WYSIWYG. Apple's Smart HDR and Android's auto HDR are both very mature.
 
 ##### 5. Battery and Charging: The Source of Energy
 
 The battery is the phone's most "short-lived" component, visibly aging after two or three years. Mainstream capacity now is 5500-7500mAh.
 
-- <strong>Charging power</strong>: The Android camp has already raced to 100W or even 200W, fully charging in a dozen minutes; Apple is still hovering at 20-30W. Does fast charging damage the battery? Using original accessories is generally fine—the phone has temperature protection.
+- <strong>Charging power</strong>: The Android camp has already raced to 100W or even 200W, fully charging in a dozen minutes; Apple is still hovering at 20-30W. Does fast charging damage the battery? Using original accessories is generally fine,the phone has temperature protection.
 - <strong>Wireless charging</strong>: Convenient but inefficient and generates heat. Suitable for casual charging at the office, not suitable when you're rushing out.
-- <strong>Reverse charging</strong>: The phone becomes a power bank, charging earphones and watches—useful for emergencies.
+- <strong>Reverse charging</strong>: The phone becomes a power bank, charging earphones and watches,useful for emergencies.
 
 ##### 6. Camera: The Magic of Light and Shadow
 
@@ -149,7 +149,7 @@ Traditional telephoto lenses require a long optical path, which would make the p
 
 - <strong>Structural principle</strong>: Light enters through the lens → prism refracts 90 degrees → passes through the lens group along the phone's width → reaches the sensor. It's like laying a vertical telescope on its side.
 - <strong>Optical characteristics</strong>: High optical zoom multiplier (5x-10x), image quality far exceeding digital zoom. But the sensor is usually smaller than the main camera, with average low-light performance.
-- <strong>Imaging advantages</strong>: Shooting the moon, distant buildings, and stage close-ups—beyond the reach of ordinary phones.
+- <strong>Imaging advantages</strong>: Shooting the moon, distant buildings, and stage close-ups,beyond the reach of ordinary phones.
 
 ##### OIS Optical Stabilization vs EIS Electronic Stabilization
 
@@ -171,7 +171,7 @@ Stabilization is a key technology affecting photo and video quality; the two met
 
 - <strong>Single speaker</strong>: Only one sound unit at the bottom, sound biased to one side, no sense of stereo. Common in mid-to-low-end phones.
 - <strong>Dual speakers (Stereo)</strong>: One speaker each at the top and bottom, forming a stereo sound field. When watching videos or listening to music, left and right channels are distinct, with much stronger immersion. Using the earpiece as the top speaker is a common solution.
-- <strong>Sound quality difference</strong>: Dual speakers aren't just "louder"—the key is spatial sense and layering. Watching blockbusters with a single speaker always feels like something's missing.
+- <strong>Sound quality difference</strong>: Dual speakers aren't just "louder",the key is spatial sense and layering. Watching blockbusters with a single speaker always feels like something's missing.
 
 <strong>Gaming phone dedicated display chip</strong>:
 
@@ -198,7 +198,7 @@ There are over a dozen sensors hidden inside the phone, working silently:
 - <strong>Proximity sensor</strong>: Turns off the screen when the phone is close to your ear during a call.
 - <strong>Fingerprint sensor</strong>: Mainstream now is under-display optical or ultrasonic fingerprint.
 - <strong>Face recognition</strong>: Apple's Face ID uses 3D structured light, with high security; many Android phones use 2D photo recognition, with average security.
-- <strong>That "System Update" button you tap in [Settings]—that's it.</strong>: Near Field Communication, for transit cards, access cards, bank cards.
+- <strong>That "System Update" button you tap in [Settings],that's it.</strong>: Near Field Communication, for transit cards, access cards, bank cards.
 - <strong>Barometer</strong>: Measures altitude, can even detect when you climb stairs.
 - <strong>Hall sensor</strong>: Detects the opening and closing of magnetic cases.
 
@@ -206,11 +206,11 @@ There are over a dozen sensors hidden inside the phone, working silently:
 
 Hardware is the body; the operating system is the soul. The three major systems each have their own characteristics:
 
-- <strong>Android</strong>: Like an open-source community, phone manufacturers can deeply customize it, offering many choices. You can change themes, install third-party app stores, and tinker with various tricks. But because of its openness, fragmentation is severe, with significant experience differences between brands.
+- <strong>Android</strong>: Like an open-source community, phone manufacturers can deeply customize it, offering many choices. You can change themes, install third-party app stores, and tweak the system. But because of its openness, fragmentation is severe, with significant experience differences between brands.
 - <strong>iOS</strong>: Like a carefully tended garden, Apple controls both hardware and software, with a unified and smooth experience. App quality is high, privacy protection is good, but freedom is low—many things must follow Apple's rules.
 - <strong>HarmonyOS</strong>: Huawei's new species, focusing on distributed capabilities, allowing different devices to collaborate seamlessly. We'll cover it specifically later.
 
-All three have extremely rich ecosystems—just choose the lifestyle you prefer. There's no absolute good or bad, only what suits you.
+All three have extremely rich ecosystems,just choose the lifestyle you prefer. There's no absolute good or bad, only what suits you.
 
 #### 3. Phone Ports Explained
 
@@ -249,9 +249,9 @@ Faced with the dazzling product lines of various brands, understanding naming co
 
 ##### Mainstream Brand Product Lines:
 
-- <strong>Apple</strong>: iPhone (standard) / iPhone Plus (large screen) / iPhone Pro (professional) / iPhone Pro Max (large screen professional) / iPhone SE (budget) / iPhone 16e (budget AI version, equipped with A18 chip and Apple's self-developed C1 baseband). The 2026 iPhone 17 lineup is fully equipped with the A19 Pro chip, with further enhanced AI capabilities.
-- <strong>Huawei</strong>: Mate series (Business flagship) / P/Pura series (Imaging flagship) / Mate X series (Foldable flagship) / nova series (Youth mid-range) / Enjoy series (Entry-level)
-- <strong>Xiaomi</strong>: Xiaomi Digital series (Flagship) / Xiaomi MIX (Exploration flagship/Foldable) / Redmi K series (Performance flagship) / Redmi Note series (Mid-range) / Redmi Digital series (Entry-level)
+- <strong>Apple</strong>: iPhone (standard), iPhone Plus (large screen), iPhone Pro (professional), iPhone Pro Max (large screen professional), iPhone SE (budget), iPhone 16e (budget AI version, equipped with A18 chip and Apple's self-developed C1 baseband). The 2026 iPhone 17 lineup is fully equipped with the A19 Pro chip, with further enhanced AI capabilities
+- <strong>Huawei</strong>: Mate series (Business flagship), P/Pura series (Imaging flagship), Mate X series (Foldable flagship), nova series (Youth mid-range), Enjoy series (Entry-level)
+- <strong>Xiaomi</strong>: Xiaomi Digital series (Flagship), Xiaomi MIX (Exploration flagship/Foldable), Redmi K series (Performance flagship), Redmi Note series (Mid-range), Redmi Digital series (Entry-level)
 - <strong>OPPO</strong>: Find X series (Flagship) / Reno series (Mid-range) / A series (Entry-level) / OnePlus Digital series (Performance flagship)
 - <strong>vivo</strong>: X series (Imaging flagship) / iQOO Digital series (Performance flagship) / S series (Selfie mid-range) / Y series (Entry-level)
 - <strong>Samsung</strong>: Galaxy S series (Flagship) / Galaxy Z Fold/Flip (Foldable flagship) / Galaxy A series (Mid-range)
@@ -267,7 +267,7 @@ Faced with the dazzling product lines of various brands, understanding naming co
 - <strong>Note</strong>: Originally referred to large-screen phones, now used differently by various brands. Redmi Note is a mid-range series.
 - <strong>Neo</strong>: The new sharp version. Usually refers to performance-oriented mid-range models.
 
-#### 5. Baseband and Antenna: The Unsung Heroes of Phone Communication
+5. Baseband and Antenna: The Unsung Heroes of Phone Communication
 
 Your phone can make calls and access the internet thanks to the partnership of the baseband chip and antenna.
 
@@ -287,7 +287,7 @@ Phone antennas are hidden inside the body, usually arranged around the frame. An
 
 - <strong>: Currently the widest coverage, sufficient speed (theoretically up to 100Mbps+), relatively low power consumption.</strong>: Theoretical peak rate 1Gbps downlink / 500Mbps uplink (Cat.18), actual experience usually 50-150Mbps. Widest coverage, sufficient for use.
 - <strong>5G NR</strong>: Theoretical peak rate 10Gbps+ downlink. Sub-6GHz band has better coverage; mmWave millimeter wave is extremely fast but has very limited coverage.
-- <strong>5G-A (5G Advanced)</strong>: An enhanced version of 5G, also known as 5.5G. Downlink speeds can reach 10Gbps, uplink 1Gbps, with significantly improved connection density and positioning accuracy. Since 2024, China Mobile, China Telecom, and China Unicom have been deploying 5G-A networks in key cities. Flagship phones like the Huawei Mate 70/80 series and Xiaomi 15/16 series already support 5G-A. 5G-A also brings "integrated communication and sensing" capabilities, where base stations can simultaneously communicate and sense the environment, providing infrastructure for low-altitude economy (drone delivery) and vehicle-to-everything (V2X).
+- <strong>5G-A (5G Advanced)</strong>: An enhanced version of 5G, also known as 5.5G. Downlink speeds can reach 10Gbps, uplink 1Gbps. Connection density and positioning accuracy also improve significantly. Since 2024, China Mobile, China Telecom, and China Unicom have been deploying 5G-A networks in key cities. Flagship phones like the Huawei Mate 70/80 series and Xiaomi 15/16 series already support 5G-A. 5G-A also brings "integrated communication and sensing" capabilities, where base stations can simultaneously communicate and sense the environment, providing infrastructure for low-altitude economy (drone delivery) and vehicle-to-everything (V2X).
 
 ##### Network Band Classification:
 
@@ -313,7 +313,7 @@ It has long been more than just a phone:
 9. <strong>Digital ID</strong>: Electronic ID cards, electronic driver's license, health codes...
 10. <strong>Entertainment center</strong>: Music, videos, e-books, podcasts...
 
-Think about it—how much life is packed into one tiny device! So, learning to use it well is learning to live better.
+Think about it,how much life is packed into one tiny device! So, learning to use it well is learning to live better.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

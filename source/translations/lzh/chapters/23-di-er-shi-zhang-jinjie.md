@@ -48,7 +48,7 @@ kind: supplement
 
 #### 二、OEM解鎖：開發者項裏之"刷機開關"
 
-於開發者選項裏有一個不太起眼但甚重要之開關——"OEM解鎖"（部分品牌叫"OEM解鎖允許"或"設備解鎖"）。此開關本身未能解鎖BL鎖，但它乃一個"前置許可"：只有打開它，廠商方允許汝通過fastboot命令或品牌工具去解鎖BL。
+於開發者選項裏有一個不太起眼但甚重要之開關："OEM解鎖"（部分品牌叫"OEM解鎖允許"或"設備解鎖"）。此開關本身未能解鎖BL鎖，但它乃一個"前置許可"：只有打開它，廠商方允許汝通過fastboot命令或品牌工具去解鎖BL。
 
 - <strong>開關之作用</strong>：相當於向廠商聲明"吾同意放棄保修、自負風險，請允許吾解鎖BL"。若此開關乃關閉之，任何解鎖BL之命令都將爲直接拒絕。
 - <strong>與BL鎖之關係</strong>：OEM解鎖乃"申請資格"，BL解鎖方乃"實際操作"。前者於手機設置裏點一下遂行，後者須去廠商官網申請解鎖碼、用電腦跑fastboot命令（如  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>），二者缺一不可。
@@ -84,7 +84,7 @@ Bootloader乃手機啓動時加載操作系統之程序。BL鎖即廠商爲安�
 
 #### 四、ADB實用命令：通過電腦控制手機
 
-ADB 全稱 Android Debug Bridge（安卓調試橋），乃 Google 官方所出之命令行工具，使電腦經 USB 或 Wi-Fi 與安卓手機相通。其本身不需 Root，但使手機啟"USB調試"即可用。可視之為"以電腦馭手機之遙控"——刷機、裝App、傳文件、查日誌，皆賴之。
+ADB 全稱 Android Debug Bridge（安卓調試橋），乃 Google 官方所出之命令行工具，使電腦經 USB 或 Wi-Fi 與安卓手機相通。其本身不需 Root，但使手機啟"USB調試"即可用。可視之為"以電腦馭手機之遙控"，刷機、裝App、傳文件、查日誌，皆賴之。
 
 ##### 何以通過 USB 連接：
 
@@ -135,7 +135,7 @@ Windows 用戶若  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb d
 <i class="fas fa-info-circle mr-2"></i>小知識：--user 0 乃何意思
 
 {class="mt-1"}
-安卓 4.2 之後支持多用戶，每個用戶有獨立之 ID（機主乃 0，附加用戶自 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code>  表示"唯對當前機主卸載"，系統分區裏之 APK 文件依然存在，只是不賜機主顯示矣。這就是何故它不須 Root——沒動系統文件，只是改矣"用戶配置"。這亦乃它與 Root 後卸載最大之區別：Root 卸載乃真正自系統裏刪掉，所有用戶皆不再有；ADB 卸載只是"對當前用戶隱藏"。
+安卓 4.2 之後支持多用戶，每個用戶有獨立之 ID（機主乃 0，附加用戶自 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code>  表示"唯對當前機主卸載"，系統分區裏之 APK 文件依然存在，只是不賜機主顯示矣。這就是何故它不須 Root，沒動系統文件，只是改矣"用戶配置"。這亦乃它與 Root 後卸載最大之區別：Root 卸載乃真正自系統裏刪掉，所有用戶皆不再有；ADB 卸載只是"對當前用戶隱藏"。
 :::
 
 #### 五、Root權限：安卓之"超級管員"
@@ -167,13 +167,13 @@ Root操作有一定風險，或令手機變磚（不能開機）。若汝乃新�
 
 #### 六、SafetyNet與Play Integrity認證：何故Root後銀行App不可用
 
-甚多Root用戶皆遇至過此樣之崩潰瞬間：Root之後興致勃勃地裝矣一堆模塊，結果打開銀行App——"您之設備不安全，無法使用"，Google Pay亦用不了，連Netflix皆拒絕高清播放。此背後乃Google之兩套設備完整性認證機制：舊之 SafetyNet 與新之 Play Integrity API。
+甚多Root用戶皆遇至過此樣之崩潰瞬間：Root之後興致勃勃地裝矣一堆模塊，結果打開銀行App，"您之設備不安全，無法使用"，Google Pay亦用不了，連Netflix皆拒絕高清播放。此背後乃Google之兩套設備完整性認證機制：舊之 SafetyNet 與新之 Play Integrity API。
 
 ##### 何乃 SafetyNet / Play Integrity：
 
 - <strong>SafetyNet Attestation（舊版，2017年起）</strong>：Google 早期推出之設備完整性檢查 API，應用通過它向 Google 服務器查詢"此臺設備為否通過 CTS 兼容性測試、為否處於未修改之官方狀態"。返回結果分爲 Basic Attestation（基礎校驗）與 Strong Attestation（強校驗，依賴硬件密鑰）。Google 已宣佈 SafetyNet 將於 2024 年後逐步停用。
 - <strong>Play Integrity API（新版，2022年起）</strong>：Google 推出之替代方案，比 SafetyNet 更嚴格亦更全面。除矣設備完整性，尚包括"應用完整性"（App 為否爲篡改）與"賬號/授權完整性"（用戶賬號為否爲 Google 信任）。新 App 應遷移至 Play Integrity。
-- <strong>誰來用</strong>：銀行、金融、支付類 App（如 Google Pay、各銀行之網銀、支付寶/微信支付之部分場景）、流媒體（Netflix 高清版權保護）、部分遊戲反作弊（如騰訊/網易之部分遊戲）、企業辦公 App（MDM 設備合規性檢查）。
+- <strong>誰來用</strong>：銀行、金融、支付類 App（如 Google Pay、各銀行之網銀、支付寶/微信支付之部分場景）。流媒體（Netflix 高清版權保護）、部分遊戲反作弊（如騰訊/網易之部分遊戲）、企業辦公 App（MDM 設備合規性檢查）。
 
 ##### Play Integrity 之三級認證結果：
 
@@ -184,13 +184,13 @@ Root操作有一定風險，或令手機變磚（不能開機）。若汝乃新�
 
 ##### 何故 Root 後此 App 將失效：
 
-應用通過 Play Integrity API 向 Google 服務器發起認證請求，Google 將檢查設備之多項指標——Bootloader 鎖定狀態、系統分區為否爲修改、為否存在 su 二進制文件、SELinux 為否處於寬鬆模式等。任何一項異常皆將導致返回之認證級別降低或爲空，銀行 App 一觀"設備不安全"，自然遂拒絕服務矣。
+應用通過 Play Integrity API 向 Google 服務器發起認證請求，Google 將檢查設備之多項指標，Bootloader 鎖定狀態、系統分區為否爲修改、為否存在 su 二進制文件、SELinux 為否處於寬鬆模式等。任何一項異常皆將導致返回之認證級別降低或爲空，銀行 App 一觀"設備不安全"，自然遂拒絕服務矣。
 
 ##### 今隱策：Magisk Hide / Shamiko / Zygisk：
 
 爲了於享受 Root 便利之同時還能用銀行 App，社區開發矣一系列"隱藏 Root 狀態"之方案。核心思路皆乃：使檢測程序看到之非一個爲修改過之系統，而乃一個"看起來正常"之設備。
 
-- <strong>Magisk</strong>：當前最主流之 Systemless Root 方案——不修改系統分區，而乃通過掛載之方式實現 Root。此樣設計之好處乃 OTA 更新失敗之幾率小、卸載比較乾淨，乃後續所有隱藏方案之基礎。但使用 Magisk 仍然須解鎖 BL 鎖。
+- <strong>Magisk</strong>：當前最主流之 Systemless Root 方案，不修改系統分區，而乃通過掛載之方式實現 Root。此樣設計之好處乃 OTA 更新失敗之幾率小、卸載比較乾淨，乃後續所有隱藏方案之基礎。但使用 Magisk 仍然須解鎖 BL 鎖。
 - <strong>Magisk Hide（已停更）</strong>：Magisk 早期內置之隱藏模塊，能對指定 App 隱藏 Root。但 2021 年起已爲 Magisk 官方移除，原因乃 Google 持續升級檢測手段，雙方陷入"貓鼠遊戲"。
 - <strong>Zygisk</strong>：Magisk 24.0+ 引入之新機制，類似 Riru，通過注入 Zygote 進程實現模塊加載，比直接修改系統更隱蔽。開啓 Zygisk 乃使用現代隱藏方案之前提。
 - <strong>Shamiko</strong>：當前最主流之隱藏模塊，配合 Zygisk 工作，可爲指定 App（"反向白名單"模式）隱藏 Root、隱藏 Magisk 自身、僞造 Bootloader 鎖定狀態。Shamiko 通過 LSPosed 倉庫或 GitHub 分發。
@@ -208,7 +208,7 @@ Google 每隔一段時間遂將更新檢測規則，App 廠商亦將與進升級
 
 - <strong>開發者模式</strong>：可開啓，體驗一下動畫加速、GPU 呈現分析等功能，但勿亂改其他不理解之選項。
 - <strong>OEM 解鎖與 BL 鎖</strong>：若汝不打算刷機或 Root，兩個開關皆保持默認（關閉）狀態最安全。
-- <strong>ADB</strong>：免 Root 之強大工具，普通人也能用——比如用  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code>  卸載預裝 App。但刪之前一定要查清楚包名能不可刪。
+- <strong>ADB</strong>：免 Root 之強大工具，普通人也能用，比如用  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code>  卸載預裝 App。但刪之前一定要查清楚包名能不可刪。
 - <strong>Root</strong>：普通用戶不建議 Root，風險大於收益。若確實須某些功能，可先了解有無不須 Root 之替代方案（比如用 ADB 卸載預裝、用 Shizuku 替代部分 Root 功能）。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

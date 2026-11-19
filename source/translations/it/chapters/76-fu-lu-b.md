@@ -1,13 +1,13 @@
 ---
 id: fu-lu-b
 num: B
-nav: BAppendice B: Piccolo riferimento per esercizi pratici
+nav: Appendice B: Ti sei bloccato su un esercizio?
 toc: default
 kind: appendix
 after_part: fu-lu
 ---
 
-### Appendice B: Piccoli esercizi pratici
+### Appendice B: Ti sei bloccato su un esercizio?
 
 - <strong>Esercizio Fondamenti</strong>: pulisci la memoria del telefono; l'obiettivo è trovare ed eliminare quei vecchi video "dimenticati", screenshot doppi e app inutilizzate da tempo.
 - <strong>Esercizio Software</strong>: configura la pulizia della memoria di WeChat; il percorso di solito è [Io] - [Impostazioni] - [Generali] - [Spazio di archiviazione].

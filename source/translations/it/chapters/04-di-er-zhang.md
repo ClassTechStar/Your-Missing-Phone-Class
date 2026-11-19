@@ -2,17 +2,17 @@
 id: di-er-zhang
 num: 02
 part: ji-chu-pian
-nav: Capitolo 2: Metti in ordine la tua stanza digitale
+nav: Capitolo 2: Non trovi qualcosa sul telefono?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 2: Riordina la tua stanza digitale — Gestione dei file
+### Capitolo 2: Non trovi qualcosa sul telefono?
 
 {class="chapter-intro mb-4"}
-Con il tempo il telefono si riempie di confusione; le buone abitudini iniziano dalla gestione dei file. Proprio come la tua stanza ha bisogno di essere riordinata periodicamente, anche il tuo spazio digitale va tenuto in ordine. Un telefono ben organizzato non solo rende più facile trovare le cose, ma anche più fluido il funzionamento.
+Con il tempo il telefono si riempie di confusione; le buone abitudini iniziano dalla gestione dei file. Proprio come la tua stanza ha bisogno di essere riordinata periodicamente. Anche il tuo spazio digitale va tenuto in ordine. Un telefono ben organizzato non solo rende più facile trovare le cose, ma anche più fluido il funzionamento.
 
-#### 1. Il sistema di archiviazione a tre livelli: il tuo magazzino digitale
+1. Il sistema di archiviazione a tre livelli: il tuo magazzino digitale
 
 {class="list-decimal pl-6 mb-3 space-y-2"}
 1. <strong>Memoria del dispositivo</strong>: area principale, veloce, dove si trovano sistema e app. È lo spazio più prezioso del tuo telefono, va usato con cura.
@@ -205,7 +205,7 @@ Apri il gestore file > entra nella cartella "Download". Vedi cosa c'è dentro? E
 :::
 
 {class="text-lg font-semibold mt-6 mb-2"}
-#### 8. Gestione delle immagini e del file system: rendi i tuoi asset ordinati
+8. Gestione delle immagini e del file system: rendi i tuoi asset ordinati
 
 Nella sezione precedente abbiamo imparato a "riconoscere le cartelle", ma non basta. In questa sezione spiegheremo <strong>come costruire attivamente un insieme di regole di gestione eseguibili nel lungo periodo</strong>, in modo che i tuoi file siano sempre reperibili, non persi e non spiati.
 
@@ -238,7 +238,7 @@ Scegli un weekend libero e procedi in questo ordine:
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. Crea nel gestore file la cartella di lavoro del mese nel formato <code>2026Q2_ProgettoA</code>;
 2. Passa in rassegna tutti i file di questa settimana nella cartella "Download": conserva l'utile, archivia ed elimina l'inutile;
-3. Crea cartelle annuali per le foto di famiglia di quest'anno, come <code>2025_famiglia</code>, <code>2026_famiglia</code>.
+3. Crea cartelle annuali per le foto di famiglia di quest'anno, come <code>2025_famiglia</code>, <code>2026_famiglia</code>
 :::
 
 {class="font-semibold mt-4 mb-1"}
@@ -263,7 +263,7 @@ Le immagini sono il tipo di dato più "sensibile" sul telefono: una foto qualsia
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Maschera le informazioni visibili</strong>: con strumenti di sistema o di terzi (come Meitu XiuXiu, Snapseed) <strong>offri le cifre centrali del numero di carta d'identità, la targa, il numero civico, il nome, l'importo</strong> e altri campi chiave;
 2. <strong>Rimuovi i metadati</strong>: prima dell'invio, nella galleria tocca "Condividi" o "Esporta"; il sistema chiederà se mantenere le informazioni di posizione, scegli <strong>"Non mantenere"</strong>. In questo modo modello del dispositivo, coordinate GPS e ora di scatto non seguiranno l'immagine;
-3. <strong>Filigrana temporanea</strong> (opzionale): aggiungi agli screenshot sensibili una filigrana testuale come "Solo per uso di pratica XX", per evitare abusi.
+3. <strong>Filigrana temporanea</strong> (opzionale): aggiungi agli screenshot sensibili una filigrana testuale come "Solo per uso di pratica XX", per evitare abusi
 :::
 
 {class="mt-3 mb-2"}
@@ -277,4 +277,4 @@ Per le immagini sensibili da <strong>conservare a lungo</strong> (carta d'identi
 
 - iPhone: [Foto] > seleziona la foto > Nascondi (visibile solo dopo verifica Face ID);
 - Huawei/Xiaomi: [Galleria] > tieni premuto sulla foto > "Sposta nella cassaforte";
-- App di crittografia di terze parti: <strong>360 Safe Album</strong>, <strong>Tencent Album Manager (album privato)</strong>, <strong>KeepSafe</strong> ecc., con password separata e maggiore occultabilità.
+- App di crittografia di terze parti: <strong>360 Safe Album</strong>, <strong>Tencent Album Manager (album privato)</strong>, <strong>KeepSafe</strong> ecc., con password separata e maggiore occultabilità

@@ -15,7 +15,7 @@ kind: appendix
 - <strong>Vérifier les informations</strong>:Vérifiez que l’IMEI/numéro de série sur la boîte correspond à celui sur la facture.
 - <strong>Tester les fonctions</strong>:Passez un appel pour tester l’écouteur et le micro, prenez une photo pour vérifier la caméra.
 
-#### 2. Activation et configuration initiale — « rappels importants » :
+2. Activation et configuration initiale — « rappels importants » :
 
 - <strong>Réseau</strong>:Connectez d'abord un Wi-Fi stable.
 - <strong>Compte</strong>:Connectez votre Apple ID, compte Huawei, compte Xiaomi, etc.

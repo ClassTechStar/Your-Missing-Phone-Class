@@ -28,12 +28,12 @@ I tre strumenti del debug
 Consiglio: come leggere un crash?
 
 {class="mt-1"}
-Quando Swift crasha, la console stampa "Fatal error" con la causa e Xcode si ferma sulla riga incriminata evidenziandola. I crash passati su dispositivo reale si consultano in Xcode → Window → Organizer → Crashes (serve un account a pagamento). Cerca prima di tutto "la prima frase della causa dell'errore + swiftui": solo una domanda precisa produce una risposta precisa.
+Quando Swift crasha, la console stampa "Fatal error" con la causa e Xcode si ferma sulla riga incriminata evidenziandola. I crash passati su dispositivo reale si consultano in Xcode → Window → Organizer → Crashes (serve un account a pagamento). Cerca prima di tutto "la prima frase della causa dell'errore + swiftui". Solo una domanda precisa produce una risposta precisa.
 :::
 
 #### 2. I test: l'assicurazione del codice
 
-I test a mano non sono affidabili — correggi una funzione e un'altra si rompe senza farsi notare. I test sono la "pillola dei rimpianti" e il "giubbotto antiproiettile". Su iOS si usa il framework XCTest, in due varianti:
+I test a mano non sono affidabili, correggi una funzione e un'altra si rompe senza farsi notare. I test sono la "pillola dei rimpianti" e il "giubbotto antiproiettile". Su iOS si usa il framework XCTest, in due varianti:
 
 ::: div .overflow-x-auto
 ```html
@@ -77,7 +77,7 @@ Eseguire i test: ⌘U. Quando è tutto verde puoi modificare il codice con seren
 
 #### 3. Firma e pacchetto: mettere il "sigillo" all'app
 
-Ogni app iOS deve essere firmata per poter essere installata — prova che "questo pacchetto viene da te e non è stato manomesso". I rapporti di gerarchia:
+Ogni app iOS deve essere firmata per poter essere installata, prova che "questo pacchetto viene da te e non è stato manomesso". I rapporti di gerarchia:
 
 - Fase di apprendimento: Apple ID gratuito + firma automatica di Xcode (Personal Team), funziona su dispositivo reale ma va rinnovata ogni 7 giorni;
 - Fase di distribuzione: un account sviluppatore a pagamento (99 dollari/anno) emette certificati e profili di provisioning, indispensabili per lo store e per l'installazione di lungo periodo.
@@ -108,24 +108,24 @@ Figura 5: i sei passi per l'approdo sull'App Store
 :::
 
 - Registrazione: developer.apple.com, account personale 99 dollari/anno;
-- Materiali: icona (1024×1024, senza angoli arrotondati — li taglia Apple), screenshot (per le varie dimensioni di iPhone), descrizione, link all'informativa sulla privacy;
-- Questionario sulla privacy: dichiara con onestà quali dati raccogli — un registro delle spese senza rete può dichiarare "nessun dato raccolto";
-- Revisione: alla prima sottomissione l'attesa è spesso di 1-7 giorni; se vieni respinto, correggi punto per punto secondo le "note di revisione" — le motivazioni del rifiuto di Apple sono di solito scritte in modo molto specifico, basta metterle in pratica;
-- TestFlight: prima della pubblicazione, manda la versione di prova agli amici per il beta testing (fino a 10000 persone), raccogli un giro di feedback e poi sottometti ufficialmente: tutto da professionisti.
+- Materiali: icona (1024×1024, senza angoli arrotondati, li taglia Apple), screenshot (per le varie dimensioni di iPhone), descrizione, link all'informativa sulla privacy;
+- Questionario sulla privacy: dichiara con onestà quali dati raccogli, un registro delle spese senza rete può dichiarare "nessun dato raccolto";
+- Revisione: alla prima sottomissione l'attesa è spesso di 1-7 giorni; se vieni respinto, correggi punto per punto secondo le "note di revisione", le motivazioni del rifiuto di Apple sono di solito scritte in modo molto specifico, basta metterle in pratica;
+- TestFlight: prima della pubblicazione, manda la versione di prova agli amici per il beta testing (fino a 10000 persone), raccogli un giro di feedback e poi sottometti ufficialmente: tutto da professionisti
 
-#### 5. Come fare i materiali dello store: la prima impressione vale i download
+5. Come fare i materiali dello store: la prima impressione vale i download
 
 La pagina dello store è la vetrina che l'utente vede mentre "gira per i negozi". Tre materiali decidono la prima impressione:
 
 - Icona: 1024×1024, non improvvisare con uno screenshot. Se non hai competenze di design, genera una forma essenziale con uno strumento di IA: è valida solo se, ridotta sul desktop, resta riconoscibile a colpo d'occhio;
 - Screenshot: almeno 2 set (per le dimensioni principali di iPhone), che mostrino le scene funzionali più importanti; a ognuno una frase in parole semplici ("Registra una voce in un secondo" vale dieci volte "Efficiente soluzione di contabilità");
-- Descrizione: la prima frase chiarisca "cos'è + per chi è", senza accumulare "il più professionale, il più potente" — la sincerità funziona meglio dell'esagerazione.
+- Descrizione: la prima frase chiarisca "cos'è + per chi è", senza accumulare "il più professionale, il più potente" — la sincerità funziona meglio dell'esagerazione
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mettiti alla prova: "consegna" una volta il registro delle spese
 
-#### 6. Segnalazione dei crash e piccola lista per l'ottimizzazione delle prestazioni
+6. Segnalazione dei crash e piccola lista per l'ottimizzazione delle prestazioni
 
 Prima di portare l'app sullo store, queste due cose meritano mezz'ora ciascuna:
 
@@ -136,9 +136,9 @@ Se non crasha nei tuoi test, non significa che non crashi sul telefono dell'uten
 ##### 2. I quattro controlli delle prestazioni
 
 1. Per gli elenchi usa LazyVStack / List: non impaginare liste lunghe con un normale VStack — il caricamento pigro è la prima lezione di prestazioni;
-2. Non imporre le immagini originali: usa AsyncImage (immagini remote) e la cache di sistema — un originale da 5MB basta a bloccare i modelli più datati;
+2. Non imporre le immagini originali: usa AsyncImage (immagini remote) e la cache di sistema: un originale da 5MB basta a bloccare i modelli più datati;
 3. Niente lavori pesanti sul thread principale: rete e file grandi passano per async/await;
-4. Misura con Instruments: il profiler incluso in Xcode (Time Profiler, controllo delle perdite di memoria) — prima misura, poi ottimizza, non fidarti delle sensazioni.
+4. Misura con Instruments: il profiler incluso in Xcode (Time Profiler, controllo delle perdite di memoria), prima misura, poi ottimizza, non fidarti delle sensazioni
 
 {class="mt-1"}
 ① Aggiungi 3 test unitari alla logica di parseAmount e simili (verdi con ⌘U); ② con un breakpoint cattura con le tue mani un crash provocato da te e risolvilo; ③ crea un pacchetto con Product → Archive e usa TestFlight per invitare gli amici al beta testing; ④ se hai energie in più, registrati come sviluppatore e sottometti davvero il registro delle spese allo store. I primi tre passi si possono completare stasera.

@@ -1,21 +1,21 @@
 ---
 id: jie-yu
 num: i
-nav: iConclusion : Rester curieux, rester lucide
+nav: Conclusion : Comprendre son téléphone, c'est tout
 toc: default
 kind: conclusion
 after_part: fu-lu
 ---
 
-### Conclusion : Rester curieux, rester lucide
+### Conclusion : Comprendre son téléphone, c'est tout
 
 Félicitations d'être allé jusqu'au bout.
 
-Ce livre a démonté le matériel du smartphone jusqu'à l'écosystème logiciel, des réglages quotidiens au mode développeur, de la sécurité au patrimoine numérique. S'il vous a aidé à résoudre un seul problème concret — ne serait-ce que désactiver une autorisation superflue ou prendre une fois l'habitude de sauvegarder — ces mots n'ont pas été écrits en vain.
+Ce livre a démonté le matériel du smartphone jusqu'à l'écosystème logiciel, des réglages quotidiens au mode développeur, de la sécurité au patrimoine numérique. S'il vous a aidé à résoudre un seul problème concret, ne serait-ce que désactiver une autorisation superflue ou prendre une fois l'habitude de sauvegarder: ces mots n'ont pas été écrits en vain.
 
 Mais plus important que toute technique, deux choses :
 
-- <strong>Rester curieux</strong> : Le smartphone évolue chaque année, l'IA évolue, les pliables évoluent, la communication par satellite évolue. Les étapes apprises aujourd'hui seront peut-être obsolètes demain, mais la curiosité de « vouloir savoir pourquoi » ne sera jamais dépassée. Poser une question de plus — « à quoi sert cette autorisation », « où sont stockées ces données », « cette fonction va-t-elle fuiter ma vie privée » — est plus utile que de mémoriser cent procédures.
+- <strong>Rester curieux</strong> : Le smartphone évolue chaque année, l'IA évolue, les pliables évoluent, la communication par satellite évolue. Les étapes apprises aujourd'hui seront peut-être obsolètes demain, mais la curiosité de « vouloir savoir pourquoi » ne sera jamais dépassée. Poser une question de plus, « à quoi sert cette autorisation », « où sont stockées ces données », « cette fonction va-t-elle fuiter ma vie privée »: est plus utile que de mémoriser cent procédures.
 - <strong>Rester lucide</strong> : Le smartphone est un outil, pas un maître. Il est conçu pour capter votre attention, occuper votre temps et guider votre consommation. L'utiliser est votre choix ; être utilisé par lui est une perte de contrôle. Regardez régulièrement votre temps d'écran, demandez-vous « suis-je en train d'utiliser le smartphone pour faire quelque chose, ou le smartphone me consume-t-il ? ». Ce n'est pas de la sensiblerie, c'est un instinct de survie à l'ère numérique.
 
 La technologie change, mais les besoins humains ne changent pas — nous avons besoin de sécurité, de connexion et de respect. Le smartphone n'est qu'un support. Le véritable « cours sur le smartphone » n'est pas dans ce livre, mais à l'instant où vous déverrouillez l'écran chaque jour.

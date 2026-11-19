@@ -2,12 +2,12 @@
 id: di-san-shi-si-zhang
 num: 34
 part: zhan-wang-pian
-nav: Bab 34:Panduan Mendalam Konektivitas Ponsel dan Mobil—Perpaduan Ponsel dan Mobil
+nav: Bab 34: Ponsel dan mobil, biar sambungannya mulus
 toc: default
 kind: chapter
 ---
 
-### Bab 34:Panduan Mendalam Koneksi Mobil — Integrasi Ponsel dan Mobil
+### Bab 34: Ponsel dan mobil, biar sambungannya mulus
 
 {class="chapter-intro mb-4"}
 Mobil sedang berevolusi dari "empat roda plus sofa" menjadi "empat roda plus ponsel pintar". Apakah Anda mengemudi mobil bensin atau energi baru, hubungan ponsel dan head unit menentukan pengalaman berkendara Anda. Bab ini membantu Anda memperjelas tiga rute car connectivity, karakteristik sistem head unit masing-masing faksi, dan tips kecil yang membuat berkendara lebih mulus.
@@ -105,7 +105,12 @@ Apa pun solusi yang dipakai, mengoperasikan ponsel saat berkendara melanggar atu
 
 #### 6. Tips Praktis
 
-- <strong>Koneksi CarPlay nirkabel tidak stabil</strong>: ①Matikan Bluetooth head unit lalu re-pair; ②Hapus record perangkat paired di head unit lalu reconnect; ③Cek apakah ponsel simultan terhubung multiple Bluetooth menyebabkan konflik; ④Update firmware head unit dan sistem ponsel ke versi terbaru; ⑤Jika tidak bisa, ganti ke CarPlay berkabel, lebih stabil.
+- <strong>Koneksi CarPlay nirkabel tidak stabil</strong>:
+1. Matikan Bluetooth head unit lalu re-pair;
+2. Hapus record perangkat paired di head unit lalu reconnect;
+3. Cek apakah ponsel simultan terhubung multiple Bluetooth menyebabkan konflik;
+4. Update firmware head unit dan sistem ponsel ke versi terbaru;
+5. Jika tidak bisa, ganti ke CarPlay berkabel, lebih stabil.
 - <strong>Kuota data head unit habis</strong>: ①Ponsel buat hotspot, head unit sambung hotspot ponsel untuk internet; ②Di pengaturan head unit alihkan aplikasi "boros data" (seperti video, musik online) ke Wi-Fi; ③Secara berkala bersihkan cache peta offline head unit.
 - <strong>Trigger otomatis mode berkendara</strong>: ①iOS "Focus Mode" setel "aktif otomatis saat sambung Bluetooth mobil", auto block notifikasi non-darurat; ②Android "Driving Mode" atau App pihak ketiga (seperti Tasker) bisa realisasi sambung Bluetooth auto mute, auto reply pesan; ③Ponsel Huawei bisa setel "Smart Payment", naik mobil auto switch ke head unit play musik.
 
@@ -114,7 +119,11 @@ Apa pun solusi yang dipakai, mengoperasikan ponsel saat berkendara melanggar atu
 <i class="fas fa-lightbulb mr-2"></i>Saran kecil saat beli mobil
 
 {class="mt-1"}
-Jika peduli pengalaman head unit, saat beli mobil harus tes di dealer: ①Bawa ponsel sendiri cek apakah koneksi CarPlay/HiCar stabil; ②Cek kecepatan respons voice assistant dan recognition rate instruksi; ③Lihat app market ada App yang sering Anda pakai atau tidak; ④Perhatikan frekuensi OTA update berikutnya — head unit yang baik diiterasi melalui software.
+Jika peduli pengalaman head unit, saat beli mobil harus tes di dealer:
+1. Bawa ponsel sendiri cek apakah koneksi CarPlay/HiCar stabil;
+2. Cek kecepatan respons voice assistant dan recognition rate instruksi;
+3. Lihat app market ada App yang sering Anda pakai atau tidak;
+4. Perhatikan frekuensi OTA update berikutnya, head unit yang baik diiterasi melalui software.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

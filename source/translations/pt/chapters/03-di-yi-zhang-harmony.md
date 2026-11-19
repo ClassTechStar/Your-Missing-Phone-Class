@@ -21,7 +21,7 @@ Por exemplo: você está assistindo a um vídeo no celular e quer ver na tela gr
 
 #### 2. HarmonyOS 4.3: A Versão Madura Baseada em AOSP
 
-O HarmonyOS 4.3 é a versão atualmente amplamente implantada nos celulares Huawei. É importante esclarecer que o HarmonyOS 4.3 é compatível com o framework de código do Android Open Source Project (AOSP), portanto, pode executar totalmente aplicativos Android — a maioria dos aplicativos que você baixa na loja de aplicativos Huawei ainda são essencialmente aplicativos Android, rodando através da camada de compatibilidade do HarmonyOS. Mas o HarmonyOS 4.3 não é uma simples capa sobre o Android; ele adiciona muitas tecnologias proprietárias da Huawei, como capacidade distribuída e o motor Ark, sobre a base do AOSP.
+O HarmonyOS 4.3 é a versão atualmente amplamente implantada nos celulares Huawei. É importante esclarecer que o HarmonyOS 4.3 é compatível com o framework de código do Android Open Source Project (AOSP), portanto, pode executar totalmente aplicativos Android: a maioria dos aplicativos que você baixa na loja de aplicativos Huawei ainda são essencialmente aplicativos Android, rodando através da camada de compatibilidade do HarmonyOS. Mas o HarmonyOS 4.3 não é uma simples capa sobre o Android; ele adiciona muitas tecnologias proprietárias da Huawei, como capacidade distribuída e o motor Ark, sobre a base do AOSP.
 
 ##### Características principais:
 
@@ -39,7 +39,7 @@ O HarmonyOS 4.3 é a versão atualmente amplamente implantada nos celulares Huaw
 - <strong>Super Área de Transferência</strong>: Uma área de armazenamento temporário onde você pode guardar texto, imagens e arquivos e depois arrastar para usar em qualquer aplicativo. O compartilhamento entre aplicativos se torna incrivelmente fluido.
 - <strong>Pesquisa Inteligente</strong>: Pesquisa global que pode buscar aplicativos, arquivos, configurações e páginas web.
 
-#### 3. HarmonyOS NEXT (HarmonyOS 6): O Verdadeiro Ponto de Partida do Sistema Operacional Autônomo da Huawei
+3. HarmonyOS NEXT (HarmonyOS 6): O Verdadeiro Ponto de Partida do Sistema Operacional Autônomo da Huawei
 
 O HarmonyOS NEXT (HarmonyOS NEXT 5.0) tem uma diferença fundamental em relação ao HarmonyOS 4.3 — ele adota o microkernel proprietário da Huawei, não dependendo mais do kernel Linux e do código AOSP, e também <strong>não suporta mais diretamente aplicativos Android</strong>. Este é o passo crucial do HarmonyOS de "forma transitória compatível com Android" para "sistema operacional completamente independente".
 

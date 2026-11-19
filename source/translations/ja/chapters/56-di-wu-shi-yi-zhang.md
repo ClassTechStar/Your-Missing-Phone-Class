@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十一章：UI開発——Jetpack Compose入門
 
 {class="chapter-intro mb-4"}
-UIとは、ユーザーの目に見えるすべてのものです。Composeが登場する前、AndroidのUIはXMLで書かれていました——穴埋め問題のように面倒な作業です。2021年、GoogleはJetpack Composeを発表しました。Kotlinコードで直接UIを「描く」方式で、書いたものがそのまま形になり、コードを1行変えればプレビューがすぐ更新されます。2026年の今、Composeは新規プロジェクトの揺るぎない主流です。この章では、「お絵描き」を学びます。
+UIとは、ユーザーの目に見えるすべてのものです。Composeが登場する前、AndroidのUIはXMLで書かれていました，穴埋め問題のように面倒な作業です。2021年、GoogleはJetpack Composeを発表しました。Kotlinコードで直接UIを「描く」方式で、書いたものがそのまま形になり、コードを1行変えればプレビューがすぐ更新されます。2026年の今、Composeは新規プロジェクトの揺るぎない主流です。この章では、「お絵描き」を学びます。
 
 #### 1. Composeの発想：UI＝関数
 
@@ -80,7 +80,7 @@ fun BasicWidgets() {
 ```
 :::
 
-入力欄の2行に出てきたremember { mutableStateOf("") }——これがComposeの「状態」の魔法です。この章の第5節でじっくり解説します。今は、顔見知りになってもらえれば十分です。
+入力欄の2行に出てきたremember { mutableStateOf("") }，これがComposeの「状態」の魔法です。この章の第5節でじっくり解説します。今は、顔見知りになってもらえれば十分です。
 
 #### 3. レイアウトの3点セット：Column、Row、Box
 
@@ -163,7 +163,7 @@ fun Counter() {
 ```
 :::
 
-3行のコードで、生きているカウンターのできあがりです。ここが従来の書き方よりComposeが気持ちいいところです。UIを手動で「更新」する必要はなく、データを変えるだけでよい。大事な2つの関数を覚えましょう。remember（画面の再構成で値が消えないようにする）と、mutableStateOf（「この値が変わったら描き直して」とComposeに伝える）です。
+3行のコードで。生きているカウンターのできあがりです。ここが従来の書き方よりComposeが気持ちいいところです。UIを手動で「更新」する必要はなく、データを変えるだけでよい。大事な2つの関数を覚えましょう。remember（画面の再構成で値が消えないようにする）と、mutableStateOf（「この値が変わったら描き直して」とComposeに伝える）です。
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -246,7 +246,7 @@ fun AnimatedBox() {
 - Composeの発想：UI＝@Composable関数。積み木のように組み合わせる
 - 4大コンポーネント：Text／Button／TextField／Image
 - レイアウト3点セット：Columnは縦並び、Rowは横並び、Boxは重ね置き
-- Modifierはチェーンで「メイク」：padding、fillMaxWidth、background、clickable——順番に意味がある
+- Modifierはチェーンで「メイク」：padding、fillMaxWidth、background、clickable，順番に意味がある
 - 状態こそ魂：remember＋mutableStateOf。データを変えればUIは自動で描き直される
 - テーマはMaterial 3＋ダイナミックカラー。ダークモードは1回の設定で全体に効く
 :::

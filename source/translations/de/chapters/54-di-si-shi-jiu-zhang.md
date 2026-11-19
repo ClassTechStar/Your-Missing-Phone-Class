@@ -19,7 +19,7 @@ Android Studio ist die offizielle integrierte Entwicklungsumgebung (IDE) von Goo
 1. Öffne die offizielle Website developer.android.com/studio und lade die neueste stabile Version herunter (im August 2026 die Version nach Narwhal; für Windows/Mac/Linux verfügbar);
 2. Starte das Installationspaket und klicke dich mit "Weiter" durch – der Assistent bringt Android SDK und Emulator-Komponenten automatisch mit;
 3. Beim ersten Start lädst du nach Aufforderung die SDK-Komponenten herunter (die Standardauswahl passt; das kann ein paar Minuten und einige GB Speicher brauchen);
-4. Danach siehst du die Willkommensseite – Glückwunsch, die "Küche" steht.
+4. Danach siehst du die Willkommensseite – Glückwunsch, die "Küche" steht
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -67,7 +67,7 @@ Ein echtes Gerät ist und bleibt die realistischste Testumgebung – Wischgefüh
 1. Öffne auf dem Telefon [Einstellungen] → [Über das Telefon] und tippe 7-mal hintereinander auf "Buildnummer", um die "Entwickleroptionen" freizuschalten;
 2. Aktiviere in den [Entwickleroptionen] USB-Debugging;
 3. Verbinde das Telefon per Datenkabel mit dem Computer und tippe im Pop-up des Telefons "USB-Debugging erlauben" an;
-4. Zurück in Android Studio erscheint dein Telefon in der Geräte-Dropdownliste der Symbolleiste – klicke auf Run.
+4. Zurück in Android Studio erscheint dein Telefon in der Geräte-Dropdownliste der Symbolleiste – klicke auf Run
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -139,7 +139,7 @@ setContent {
 
 Glückwunsch – du hast soeben einen vollständigen Zyklus "Code ändern → kompilieren → installieren → ausführen" hinter dich gebracht. Dieser Zyklus ist der Entwickleralltag der kommenden Tage. Mach gleich weiter: Ändere noch etwas anderes – vergrößere die Schrift, wechsle die Farbe. Im nächsten Kapitel lernst du, woher diese "Magie" kommt.
 
-#### 6. Erste Hilfe bei häufigen Fehlermeldungen: die "Notaufnahme" für die ersten zwei Wochen
+6. Erste Hilfe bei häufigen Fehlermeldungen: die "Notaufnahme" für die ersten zwei Wochen
 
 Beim Aufsetzen der Umgebung und beim ersten Build wirst du mit hoher Wahrscheinlichkeit auf die folgenden drei Fehler stoßen. Keine Panik – für alle gibt es ein Gegenmittel:
 

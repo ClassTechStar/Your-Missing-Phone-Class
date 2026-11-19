@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Je pensais aussi autrefois que travailler sur smartphone c'était « se débrouiller », jusqu'au jour où j'ai oublié mon ordinateur en déplacement et j'ai réussi à modifier un appel d'offres et signer un contrat uniquement avec mon smartphone. Honnêtement, le goulot d'étranglement du travail mobile n'est souvent pas le smartphone lui-même, mais votre méconnaissance de ses capacités.
 
-#### 1. Traitement de documents : éditer et créer au creux de la main
+1. Traitement de documents : éditer et créer au creux de la main
 
 Éditer des documents sur l'écran d'un smartphone, ça ne fait pas la même sensation que sur ordinateur. Le plus gros problème est le petit écran, les doigts épais, la mise en page qui dérape facilement. Mais quelques astuces améliorent nettement l'expérience :
 
@@ -22,26 +22,26 @@ Je pensais aussi autrefois que travailler sur smartphone c'était « se débroui
 
 <strong>Flux de travail pratique</strong>: Mon habitude actuelle — les fichiers importants sur OneDrive, l'édition quotidienne avec WPS, la collaboration d'équipe sur Shimo Documents. Depuis que mes fichiers sont dans le cloud, je n'ai plus jamais eu la gêne du « clé USB oubliée ».
 
-#### 2. Applications de prise de notes : de la note rapide au système de connaissances
+2. Applications de prise de notes : de la note rapide au système de connaissances
 
-Pour prendre des notes, beaucoup de gens veulent d'abord mettre en place un système complexe, puis abandonnent au bout de trois jours. Mon conseil : commencez léger — adoptez d'abord l'habitude de « noter », puis réfléchissez à la « gestion ».
+Pour prendre des notes, beaucoup de gens veulent d'abord mettre en place un système complexe, puis abandonnent au bout de trois jours. Mon conseil : commencez léger: adoptez d'abord l'habitude de « noter », puis réfléchissez à la « gestion ».
 
-- <strong>Notes rapides — le système intégré suffit</strong>: L'application Notes iOS se lance extrêmement vite, et prend en charge le scan de documents, l'écriture manuscrite, l'enregistrement vocal. Les applications de notes de chaque marque Android ne sont pas en reste, elles se lancent rapidement même depuis l'écran de verrouillage. Ces outils sont parfaits pour noter des idées temporaires, des listes de courses, des points de réunion. La clé est la rapidité de lancement, vous notez dès que l'idée vient, sans attendre le chargement de l'application.
-- <strong>Lecture différée — collecter l'information</strong>: La fonction « Fenêtre flottante » de WeChat est en fait un outil caché. Vous voyez un bon article sans le temps de le lire, cliquez sur « Fenêtre flottante » en haut à droite, il se réduit en un petit point collé au bord de l'écran, accessible à tout moment. Bien plus pratique que de transférer vers « Assistant de transfert de fichiers ». De plus, des outils de lecture différée comme Cubox ou Pocket peuvent collecter sur toutes les plateformes les bons contenus trouvés n'importe où.
-- <strong>Construire un système — Notion et Feishu</strong>: Quand vous trouvez que vos notes éparses deviennent difficiles à retrouver, passez à Notion. C'est vraiment flexible — vous pouvez créer une « base de données de notes de lecture », organisée automatiquement par titre, auteur, note ; ou construire un « tableau de projet » visualisant la progression des tâches. La « table multidimensionnelle » de Feishu est similaire, avec un accès plus rapide en Chine. J'utilise Notion pour gérer tous mes supports d'écriture, notes d'apprentissage et progression de projets, depuis plus de trois ans.
+- <strong>Notes rapides, le système intégré suffit</strong>: L'application Notes iOS se lance extrêmement vite, et prend en charge le scan de documents, l'écriture manuscrite, l'enregistrement vocal. Les applications de notes de chaque marque Android ne sont pas en reste, elles se lancent rapidement même depuis l'écran de verrouillage. Ces outils sont parfaits pour noter des idées temporaires, des listes de courses, des points de réunion. La clé est la rapidité de lancement, vous notez dès que l'idée vient, sans attendre le chargement de l'application.
+- <strong>Lecture différée: collecter l'information</strong>: La fonction « Fenêtre flottante » de WeChat est en fait un outil caché. Vous voyez un bon article sans le temps de le lire, cliquez sur « Fenêtre flottante » en haut à droite, il se réduit en un petit point collé au bord de l'écran, accessible à tout moment. Bien plus pratique que de transférer vers « Assistant de transfert de fichiers ». De plus, des outils de lecture différée comme Cubox ou Pocket peuvent collecter sur toutes les plateformes les bons contenus trouvés n'importe où.
+- <strong>Construire un système, Notion et Feishu</strong>: Quand vous trouvez que vos notes éparses deviennent difficiles à retrouver, passez à Notion. C'est vraiment flexible — vous pouvez créer une « base de données de notes de lecture », organisée automatiquement par titre, auteur, note ; ou construire un « tableau de projet » visualisant la progression des tâches. La « table multidimensionnelle » de Feishu est similaire, avec un accès plus rapide en Chine. J'utilise Notion pour gérer tous mes supports d'écriture, notes d'apprentissage et progression de projets, depuis plus de trois ans.
 
 <strong>Une stratégie de prise de notes pratique</strong>: Mon habitude personnelle est le « trépied » — idées temporaires dans les notes système (lancement instantané), articles à lire dans la fenêtre flottante WeChat (pratique), connaissances à accumuler sur le long terme dans Notion (systématisé). Ne cherchez pas d'emblée à tout mettre dans un seul outil, c'est le meilleur moyen d'abandonner.
 
-#### 3. Numérisation et OCR : faire entrer le monde papier dans le smartphone
+3. Numérisation et OCR : faire entrer le monde papier dans le smartphone
 
 La numérisation par smartphone, bien maîtrisée, fait vraiment gagner beaucoup de trajets au magasin d'imprimerie. La dernière fois que j'ai fait un visa, j'avais besoin de versions électroniques de plein de documents, tout a été fait au smartphone.
 
-- <strong>Utilisateurs iPhone</strong>: La fonction de scan intégrée à Notes iOS est déjà très bonne. Ouvrez Notes → touchez l'icône appareil photo → sélectionnez « Scanner un document », visez le document, il détecte automatiquement le cadre et corrige la perspective. Après la prise de vue, vous pouvez ajuster les couleurs — le mode « Noir et blanc » donne un résultat proche d'un scanner, « Niveaux de gris » convient aux documents avec des images.
+- <strong>Utilisateurs iPhone</strong>: La fonction de scan intégrée à Notes iOS est déjà très bonne. Ouvrez Notes → touchez l'icône appareil photo → sélectionnez « Scanner un document », visez le document, il détecte automatiquement le cadre et corrige la perspective. Après la prise de vue, vous pouvez ajuster les couleurs, le mode « Noir et blanc » donne un résultat proche d'un scanner, « Niveaux de gris » convient aux documents avec des images.
 - <strong>Utilisateurs Android</strong>: Beaucoup d'appareils photo de marque intègrent un mode « Scan de document ». Si vous ne le trouvez pas, téléchargez Microsoft Lens depuis la boutique d'applications (gratuit, et intégré à OneDrive).
-- <strong>OCR reconnaissance de texte</strong>: Pour extraire le texte d'un scan pour l'éditer, il faut l'OCR. La fonction « Extraire le texte » intégrée à WeChat est la plus simple — appuyez longuement sur l'image pour l'utiliser, le taux de reconnaissance est correct. Pour un traitement en masse, utilisez l'application Baimiao ou Quanneng Saomiao Wang. Pour la reconnaissance du chinois, le moteur OCR de Baidu donne de bons résultats ; la fonction image vers texte de WPS est également très précise.
+- <strong>OCR reconnaissance de texte</strong>: Pour extraire le texte d'un scan pour l'éditer, il faut l'OCR. La fonction « Extraire le texte » intégrée à WeChat est la plus simple, appuyez longuement sur l'image pour l'utiliser, le taux de reconnaissance est correct. Pour un traitement en masse, utilisez l'application Baimiao ou Quanneng Saomiao Wang. Pour la reconnaissance du chinois, le moteur OCR de Baidu donne de bons résultats ; la fonction image vers texte de WPS est également très précise.
 - <strong>Astuce de scan</strong>: Placez le document dans un endroit bien éclairé, idéalement avec une lampe de bureau éclairant de côté, pour éviter que votre ombre ne se projette sur le document. Si le document est corné, aplatissez-le avant de prendre la photo. Les documents de plusieurs pages peuvent être scannés en continu puis fusionnés en un seul PDF, pas besoin de les enregistrer page par page.
 
-#### 4. Comment choisir un cloud : pas le meilleur, seulement le plus adapté
+4. Comment choisir un cloud : pas le meilleur, seulement le plus adapté
 
 J'ai longtemps réfléchi au choix du cloud, et j'ai finalement compris que tout dépend de votre « écosystème principal ».
 

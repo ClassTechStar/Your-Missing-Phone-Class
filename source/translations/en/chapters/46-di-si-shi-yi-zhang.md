@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 41: The 2026 AI Coding Tools Landscape
 
 {class="chapter-intro mb-4"}
-A heads-up first: this chapter is a snapshot of the August 2026 tool landscape. It'll be outdated in six months — and that's exactly the first lesson. The goal isn't "which tool to use," but a judgment framework for how to choose tools. Understand each tool's design philosophy and you can pick what fits anytime.
+A heads-up first: this chapter is a snapshot of the August 2026 tool landscape. It will be outdated in six months. That is exactly the first lesson. The goal isn't "which tool to use," but a judgment framework for how to choose tools. Understand each tool's design philosophy and you can pick what fits anytime.
 
 #### 1. Three schools and a choice framework
 
@@ -27,9 +27,9 @@ Three schools of AI coding tools
 
 Choosing isn't about "which is best" but "which fits your current situation." Three practical dimensions:
 
-- How's your coding foundation? Beginners → cloud builders. Some experience → IDE-native AI. Advanced → terminal agents.
-- What stage is your project at? From scratch → cloud builders. Iterating → IDE-native AI. Maintenance/refactor → terminal agents.
-- What's your deployment need? Quick validation → cloud builders. Serious projects → IDE-native AI. Automated pipelines → terminal agents.
+- How's your coding foundation? Beginners should start with cloud builders. If you already have some experience, IDE-native AI is the better fit. Advanced coders should run terminal agents.
+- What stage is your project at? Starting from scratch, use cloud builders. While you are still iterating, IDE-native AI is the better fit. For maintenance or refactoring, run terminal agents.
+- What's your deployment need? For a quick validation, the cloud builders are enough. Serious work calls for IDE-native AI. Automated pipelines call for terminal agents.
 
 #### 2. IDE-native AI school
 
@@ -37,11 +37,11 @@ IDE-native AI is the mainstream school: AI capabilities embedded in your code ed
 
 ##### 1. Cursor 3
 
-Cursor is the world's most widely used AI coding IDE. Cursor 3, released April 2026, marked a turning point: Agent mode usage overtook Tab completion — developers shifted from "AI completes my code" to "AI finishes my task." Key Cursor 3 features include multi-file editing (AI changes several files to complete a task), context awareness (understands project structure and dependencies), and deep terminal integration (AI runs commands and sees output right in the editor).
+Cursor is the world's most widely used AI coding IDE. Cursor 3, released April 2026, marked a turning point: Agent mode usage overtook Tab completion, developers shifted from "AI completes my code" to "AI finishes my task." Key Cursor 3 features include multi-file editing (AI changes several files to complete a task), context awareness (understands project structure and dependencies), and deep terminal integration (AI runs commands and sees output right in the editor).
 
 ##### 2. Trae
 
-Trae is ByteDance's AI coding IDE with a strong user base in China. Its SOLO mode (also called Builder mode) is the classic "create a project from one sentence" — describe the need and AI handles init to code generation. Trae shines in Chinese support and domestic network adaptation; great for Chinese users to start fast.
+Trae is ByteDance's AI coding IDE with a strong user base in China. Its SOLO mode (also called Builder mode) is the classic "create a project from one sentence": describe the need and AI handles init to code generation. Trae shines in Chinese support and domestic network adaptation; great for Chinese users to start fast.
 
 ##### 3. Other tools
 
@@ -49,32 +49,32 @@ Windsurf (formerly Codeium) is known for smooth completions — great for develo
 
 #### 3. Terminal agent school
 
-Terminal agents are the fastest-growing school of 2026. Core idea: AI shouldn't be just an editor plugin — it should operate the whole development environment like a developer: read/write files, run commands, check output, install dependencies. Claude Code leads this school.
+Terminal agents are the fastest-growing school of 2026. Core idea: AI shouldn't be just an editor plugin, it should operate the whole development environment like a developer: read/write files, run commands, check output, install dependencies. Claude Code leads this school.
 
 ##### 1. Claude Code
 
-Claude Code is Anthropic's terminal AI coding tool, reaching $2.5 billion annualized revenue by mid-2026. It works completely differently from a classic IDE: describe the task in natural language in the terminal, and Claude Code reads files, edits code, runs tests, checks results, and iterates — without opening an editor.
+Claude Code is Anthropic's terminal AI coding tool, reaching $2.5 billion annualized revenue by mid-2026. It works completely differently from a classic IDE: describe the task in natural language in the terminal, and Claude Code reads files, edits code, runs tests, checks results, and iterates, without opening an editor.
 
 Claude Code's edge is full-project awareness: it isn't limited to editor windows and can browse the whole project tree and understand file dependencies. It also supports CLAUDE.md project memory files so AI knows the background at session start. For large refactors, batch edits, and test writing, terminal agents beat IDE plugins.
 
 ##### 2. Codex CLI and Aider
 
-OpenAI's Codex CLI offers a similar terminal experience and supports /import to bring in existing codebases for AI to understand. Aider is an open-source terminal AI coding tool supporting many models (GPT, Claude, DeepSeek, and more) — great if you like switching models. Different flavors, same idea: give AI full development-environment control in the terminal.
+OpenAI's Codex CLI offers a similar terminal experience and supports /import to bring in existing codebases for AI to understand. Aider is an open-source terminal AI coding tool supporting many models (GPT, Claude, DeepSeek, and more), great if you like switching models. Different flavors, same idea: give AI full development-environment control in the terminal.
 
 #### 4. Cloud builder school
 
-Cloud builders are the most beginner-friendly school. No installs — open a browser, describe the need, and AI creates a full project in the cloud with instant preview.
+Cloud builders are the most beginner-friendly school. No installs, open a browser, describe the need, and AI creates a full project in the cloud with instant preview.
 
-- v0 (by Vercel): Great at frontend UI components and pages — perfect for quick web prototypes.
+- v0 (by Vercel): Great at frontend UI components and pages, perfect for quick web prototypes.
 - Bolt: Creates full-stack apps from one sentence, including frontend, backend, and database.
-- Replit Agent: Works in Replit's cloud IDE — creates projects and can run and deploy in the cloud.
+- Replit Agent: Works in Replit's cloud IDE, creates projects and can run and deploy in the cloud.
 
-Shared advantage: zero setup — open the browser and go. Limitation: when projects grow complex, cloud editing is less flexible than a local IDE. Best for the 0-to-1 prototype stage: validate ideas quickly in a cloud builder, then move to a local IDE for deeper development.
+Shared advantage: zero setup, open the browser and go. Limitation: when projects grow complex, cloud editing is less flexible than a local IDE. Best for the 0-to-1 prototype stage: validate ideas quickly in a cloud builder, then move to a local IDE for deeper development.
 
 #### 5. Tools change; methodology doesn't
 
 :::inline div .quote-line
-If every AI coding tool disappeared tomorrow, three habits should remain: think it through before you act, take one small step at a time, and verify when done. Tools are amplifiers; methodology is the foundation. Amplifiers can be swapped out — the foundation must not shake.
+If every AI coding tool disappeared tomorrow, three habits should remain: think it through before you act, take one small step at a time, and verify when done. Tools are amplifiers; methodology is the foundation. Amplifiers can be swapped out, the foundation must not shake.
 :::
 
 Look at 2024–2026: GitHub Copilot ruled 2024, Cursor took over in 2025, Claude Code surged in 2026. Every new tool brings "this time is different" claims, yet the people who use new tools well are the ones with solid methodology. They adapt in days; people who only memorized buttons start from scratch each time.
@@ -86,7 +86,7 @@ Suggested path: start with any one tool, practice the five thinking principles, 
 Hands-on: Assemble your own tool kit
 
 {class="mt-1"}
-Locate yourself on the three dimensions (coding foundation, project stage, deployment need). Beginner → try Bolt or v0 for a page. Some experience → use Cursor or Trae for an iteration task. Feeling ambitious → run Claude Code in the terminal. Then answer: which school fits your current stage best?
+Locate yourself on the three dimensions (coding foundation, project stage, deployment need) before you pick a tool. A beginner should try Bolt or v0 for a page. With some experience, use Cursor or Trae for an iteration task. Feeling ambitious, run Claude Code in the terminal. Then answer the question. Which school fits your current stage best?
 :::
 
 ::: div .chapter-summary

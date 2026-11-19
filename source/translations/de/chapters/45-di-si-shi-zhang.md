@@ -2,12 +2,12 @@
 id: di-si-shi-zhang
 num: 40
 part: ai-biancheng-pian
-nav: Kapitel 40: Requirements-Engineering – aus Ideen KI-Anweisungen machen
+nav: Kapitel 40: Erst klar sagen, dann anfangen
 toc: default
 kind: chapter
 ---
 
-### Kapitel 40: Anforderungsengineering – aus Ideen ausführbare Anweisungen für die KI machen
+### Kapitel 40: Erst klar sagen, dann anfangen
 
 {class="chapter-intro mb-4"}
 Während es beim Kontext-Engineering darum geht, dass die KI den Hintergrund versteht, sorgt das Anforderungsengineering dafür, dass die KI weiß, was diesmal konkret zu tun ist. Dieser Schritt zeigt beim KI-Programmieren am deutlichsten die Unterschiede zwischen Menschen: Mit denselben Tools und demselben Modell erschafft der eine verblüffende Projekte, der andere bringt nur mittelmäßiges Spielzeug zustande. Der Unterschied liegt selten im technischen Können – sondern darin, wie gut jemand Anforderungen formulieren kann.
@@ -38,7 +38,7 @@ Am Beispiel „Eine private Haushaltsbuch-App bauen“ wäre eine sinnvolle Zerl
 1. Die Grundfunktion zum Erfassen von Einnahmen und Ausgaben umsetzen (Einträge hinzufügen, ansehen, löschen);
 2. Kategorien ergänzen (jeden Eintrag mit Etiketten wie Essen, Verkehr und Co. versehen);
 3. Die monatliche Zusammenfassung umsetzen (Einnahmen und Ausgaben pro Monat auswerten);
-4. Datenvisualisierung ergänzen (die Ausgabenstruktur in Diagrammen zeigen).
+4. Datenvisualisierung ergänzen (die Ausgabenstruktur in Diagrammen zeigen)
 
 Jeder Schritt ist ein Funktions-Zuwachs, der sich eigenständig ausführen und prüfen lässt.
 
@@ -111,7 +111,7 @@ Zweiter Schritt: die Anforderungen zerlegen.
 1. Schritt 1: Die Funktion „Lerneintrag erfassen“ umsetzen (Datum, Inhalt, Dauer);
 2. Schritt 2: „Lernzeit-Statistik“ ergänzen (heute, Woche kumuliert);
 3. Schritt 3: Die Ansicht „Lernkalender“ umsetzen (angezeigt wie der GitHub-Beitragsgraph);
-4. Schritt 4: Die Funktion „Lernrückblick“ ergänzen (zeigt zufällig Einträge eines vergangenen Tages zum Wiederholen).
+4. Schritt 4: Die Funktion „Lernrückblick“ ergänzen (zeigt zufällig Einträge eines vergangenen Tages zum Wiederholen)
 
 Dritter Schritt: ein kurzes PRD schreiben. Es muss nicht lang sein – die Zerlegung oben bildet schon den Kern des PRD. Bring es in eine .md-Datei und lege sie ins Projektstammverzeichnis, als gemeinsame Referenz für dich und die KI.
 

@@ -2,12 +2,12 @@
 id: di-si-shi-san-zhang
 num: 43
 part: ai-biancheng-pian
-nav: Capítulo 43: Ingeniería del diálogo — técnicas de conversación para colaborar con eficiencia con la IA
+nav: Capítulo 43: Habla con la IA como para que te entienda
 toc: default
 kind: chapter
 ---
 
-### Capítulo 43: Ingeniería del diálogo — técnicas de conversación para colaborar con eficiencia con la IA
+### Capítulo 43: Habla con la IA como para que te entienda
 
 {class="chapter-intro mb-4"}
 El diálogo es la forma central de interacción en la programación con IA. Pero ojo: "diálogo" no es lo mismo que "charlar": una conversación eficiente de programación con IA es una técnica de comunicación con estructura, y la llamamos "ingeniería del diálogo". Estudia cómo obtener el código de máxima calidad con el mínimo número de turnos de conversación. Dicho sin rodeos: este capítulo te enseña a "expresarte con claridad" con la IA.
@@ -35,7 +35,7 @@ Consejo: las tres claves de la retroalimentación
 Una plantilla práctica de retroalimentación es "señalar el problema + decir qué esperas + aportar contexto". Por ejemplo: "el manejo de errores de la línea 25 solo usa console.log (señala el problema), en producción debería usarse un gestor de errores unificado y devolver mensajes comprensibles para el usuario (dices qué esperas), en el proyecto hay una función handleError que puedes usar (aportas contexto)". Este tipo de retroalimentación es diez veces más eficaz que un "arregla el manejo de errores".
 :::
 
-#### II. Diálogos de depuración: cómo describir un error para que la IA lo localice rápido
+II. Diálogos de depuración: cómo describir un error para que la IA lo localice rápido
 
 La depuración es uno de los escenarios más frecuentes de la programación con IA. Cuando te encuentres con un bug, la manera de describirle el problema a la IA decide directamente si puede ayudarte a localizarlo y arreglarlo rápido. Estos son los cuatro puntos clave del diálogo de depuración:
 
@@ -62,7 +62,7 @@ Al pulsar el botón de iniciar sesión, la página no reacciona. Comportamiento 
 :::
 :::
 
-#### III. Estrategias de iteración: pasos pequeños y rápidos frente a la gran refactorización
+III. Estrategias de iteración: pasos pequeños y rápidos frente a la gran refactorización
 
 En la programación con IA hay dos estrategias básicas de iteración, válidas para escenarios distintos. Entender sus diferencias te ayudará a elegir bien en cada situación.
 

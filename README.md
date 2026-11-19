@@ -1,8 +1,8 @@
 # 你缺失的那门手机课
 
-![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20节·367.8%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
+![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20节·371.3%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
 
-面向普通人的手机使用指南。最新中文版 v1.9 十五篇 105 章（第 0 章写到第 105 章，含 7 个专题附节、结语与附录 A–H，共 120 个内容区块），367.8 万字——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
+面向普通人的手机使用指南。最新中文版 v1.9 十五篇 105 章（第 0 章写到第 105 章，含 7 个专题附节、结语与附录 A–H，共 120 个内容区块），371.3 万字——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
 - **多语言入口**：[index.html](index.html)（按浏览器语言跳转）
@@ -27,7 +27,7 @@ Markdown 源稿（source/，逐章）
         └──▶ MCP Server（mcp/server.py）──▶ Claude 等 AI 客户端直查全书结构/全文
 
 v1.9/（最新中文版，120 个内容区块）曾在这条流水线之外直接维护：
-逐章扩写至约 3 万字（全书 43.5 万 → 367.8 万字）。2026-11-17 起源稿
+逐章扩写至约 3 万字（全书 43.5 万 → 371.3 万字）。2026-11-17 起源稿
 回写完成（source/v1.9/），`build --verify` 等价性已成为 CI 必过门禁。
 源稿之上再派生三条增量链路：
         ├──▶ bookkit split：121 个分章页 + sitemap/JSON-LD（章节级 URL，页级预算 300KB）
@@ -76,7 +76,7 @@ v1.9/（最新中文版，120 个内容区块）曾在这条流水线之外直�
 
 ## 在线阅读
 
-### v1.9 · 最新中文版 — 120 个内容区块 · 367.8 万字
+### v1.9 · 最新中文版 — 120 个内容区块 · 371.3 万字
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>（站点首页即 v1.9）
 - **仓库文件**：[v1.9/zh-CN.html](v1.9/zh-CN.html)（单文件 HTML，离线可开）
@@ -153,7 +153,7 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 
 | 目录 | 说明 |
 |------|------|
-| `v1.9/` | 最新中文版：120 个内容区块，逐章约 3 万字（367.8 万字） |
+| `v1.9/` | 最新中文版：120 个内容区块，逐章约 3 万字（371.3 万字） |
 | `v1.8/` | 19 种语言的单文件 HTML（完整翻译版，84 章） |
 | `source/` | 中文源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json`；v1.9 源稿见 `source/v1.9/`（120 区块，已回写） |
 | `source/translations/` | 另外 18 种语言的翻译源稿，与成品逐章等价 |
@@ -185,6 +185,25 @@ python scripts/html_audit.py               # 全量审计（顺序/编号/排版
 - 翻译从成品反解而来，`python scripts/extract_translations.py` 会逐章校验保真度。
 - 质检有两道闸门：`html_audit.py` 管 HTML，`pdf_audit.py` 管 PDF 书签与编号。
 
+### 去 AI 味管线（v1.9 内容治理）
+
+```bash
+python scripts/ai_flavor_score.py source/v1.9/chapters --out state/flavor_report.html
+#   逐章 AI 味诊断器。只用于找最差的章，不用于验收（Goodhart：分数变门禁就会被优化掉）
+python scripts/voice_lint.py --fix         # 第一层文本手术：句式/黑名单/列表收尾
+python scripts/apply_titles.py --fix       # 章标题模板破除 + 同步标题互引
+python scripts/inject_version_anchor.py --fix   # 给含操作路径的章加版本锚点
+python scripts/build_path_db.py            # 从源稿生成 path_db.json（操作路径单一真源）
+python scripts/path_check.py               # 路径库巡检：字段/覆盖率/过期/一致性
+python scripts/deai_check.py --dir source/v1.9/chapters   # 单章结构体检
+python scripts/update_claims.py --fix      # 内容改完刷新字数宣称
+```
+
+- 声音基准见 [VOICE.md](VOICE.md)，证据注入规范见 [docs/deai/evidence_spec.md](docs/deai/evidence_spec.md)，
+  工程记录见 [docs/deai/DEAI_REPORT.md](docs/deai/DEAI_REPORT.md)。
+- **路径库不等于实机复测**：`path_db.json` 记录的是**核对基准版本**，
+  全书没做逐台设备的逐条复测，这条线不越。
+
 ## 已知问题
 
 - v1.5–v1.7 已归档。其中 v1.7 有六种语言（it/ko/pt/ru/yue/zh-TW）缺第 37–41 章，
@@ -195,6 +214,10 @@ python scripts/html_audit.py               # 全量审计（顺序/编号/排版
 
 - 项目 QQ 群：1074995524
 - 哔哩哔哩：[@ClassTechStar](https://space.bilibili.com/702063384)
+- **发现错误**：走 [勘误页 errata.html](errata.html)（含报错模板与已修条目清单），
+  或直接到 QQ 群提。勘误提交后中位 7 天内给出回应，每季度一个修订版。
+- **各语言版本的可靠程度不一样**：简体中文是人工审校版，其余为机翻 + 抽查，
+  分级见 [languages.html](languages.html)——本书不假装 19 种语言同样可靠。
 - 参与贡献（勘误 / 翻译 / 工具链）见 [CONTRIBUTING.md](CONTRIBUTING.md)；
   翻译走增量管线（[docs/i18n/weblate-guide.md](docs/i18n/weblate-guide.md)），只翻变更段
 - 许可模式正在评估双许可（正文 CC BY-SA + 代码 Apache-2.0），

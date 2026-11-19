@@ -2,17 +2,17 @@
 id: di-san-zhang
 num: 03
 part: ji-chu-pian
-nav: Chapitre 3 : Brancher le téléphone à sa « ligne de vie »
+nav: Chapitre 3 : Pas de réseau ? Ne redémarrez pas encore
 toc: default
 kind: chapter
 ---
 
-### Chapitre 3 : Branchez votre smartphone à la « ligne de vie » — le réseau
+### Chapitre 3 : Pas de réseau ? Ne redémarrez pas encore
 
 {class="chapter-intro mb-4"}
 Sans réseau, le smartphone perd la moitié de son intelligence. Le réseau est la ligne de vie du smartphone moderne ; le comprendre, bien l'utiliser, le protéger, est un cours obligatoire pour chaque utilisateur.
 
-#### 0. Ne vous perdez plus en vous connectant — distinguez la « route » et les « voitures » du Wi-Fi et des données
+0. Ne vous perdez plus en vous connectant — distinguez la « route » et les « voitures » du Wi-Fi et des données
 
 Beaucoup de gens ont les icônes Wi-Fi et signal allumées simultanément en haut de l'écran, mais ne comprennent pas la différence essentielle. L'erreur classique est :<strong>connecté au Wi-Fi mais impossible de charger une page</strong>— parce que le routeur a perdu la connexion Internet, et le smartphone n'est pas automatiquement revenu aux données mobiles. Pour bien comprendre ce problème, nous devons construire un modèle cognitif « route et voitures ».
 
@@ -170,9 +170,9 @@ Le Wi-Fi public peut être victime d'écoute piratesque ou de points d'accès de
 - Ne vous connectez pas automatiquement aux Wi-Fi inconnus.
 - Utilisez des sites HTTPS (icône de cadenas dans la barre d'adresse).
 
-#### 3. Bluetooth : le joueur polyvalent de la communication sans fil courte distance
+3. Bluetooth : le joueur polyvalent de la communication sans fil courte distance
 
-Le Bluetooth est probablement l'une des technologies sans fil les plus utilisées sur votre smartphone — écouteurs sans fil, montre connectée, système embarqué, clavier et souris, tous se connectent via lui.
+Le Bluetooth est probablement l'une des technologies sans fil les plus utilisées sur votre smartphone, écouteurs sans fil, montre connectée, système embarqué, clavier et souris, tous se connectent via lui.
 
 ##### Principe technique :
 
@@ -197,7 +197,7 @@ Le Bluetooth fonctionne dans la bande ISM 2,4 GHz, utilisant la technique d'éta
 - <strong>Services de localisation</strong>: Les balises Bluetooth (Beacon) pour la navigation intérieure, le suivi d'objets (comme l'Apple AirTag).
 - <strong>Maison connectée</strong>: Réseau Bluetooth Mesh pour contrôler les ampoules, serrures, etc.
 
-#### 4. Télécommande infrarouge : le smartphone se transforme en télécommande universelle
+4. Télécommande infrarouge : le smartphone se transforme en télécommande universelle
 
 La télécommande infrarouge est l'une des plus anciennes technologies de contrôle sans fil, mais elle reste pratique sur les smartphones. Certains smartphones Android (comme certains modèles Xiaomi et Huawei) intègrent un émetteur infrarouge permettant de télécommander les téléviseurs, climatiseurs, décodeurs et autres appareils électroménagers.
 
@@ -221,7 +221,7 @@ Le NFC est dérivé de la technologie RFID et prend en charge trois modes de fon
 
 - <strong>Mode lecture/écriture</strong>: Le smartphone lit les informations d'une étiquette NFC, comme la lecture d'un autocollant NFC pour déclencher une action.
 - <strong>Mode point à point</strong>: Deux appareils NFC se transmettent des données, comme Android Beam (abandonné).
-- <strong>Mode émulation de carte</strong>: Le smartphone simule une carte à puce, c'est le mode le plus utilisé — carte de transport, carte d'accès, carte bancaire utilisent toutes ce mode.
+- <strong>Mode émulation de carte</strong>: Le smartphone simule une carte à puce, c'est le mode le plus utilisé: carte de transport, carte d'accès, carte bancaire utilisent toutes ce mode.
 
 ##### Mécanismes de sécurité :
 
@@ -237,7 +237,7 @@ Le NFC est dérivé de la technologie RFID et prend en charge trois modes de fon
 - <strong>Association d'appareils</strong>: Appairage rapide Bluetooth d'un toucher NFC pour écouteurs, enceintes.
 - <strong>Authentification d'identité</strong>: Lecture de carte d'identité NFC, vérification de permis de conduire électronique.
 
-#### 6. Point d'accès personnel : transformer le smartphone en routeur Wi-Fi
+6. Point d'accès personnel : transformer le smartphone en routeur Wi-Fi
 
 Quand vous avez beaucoup de données mobiles, vous pouvez activer le point d'accès pour la tablette ou l'ordinateur.
 

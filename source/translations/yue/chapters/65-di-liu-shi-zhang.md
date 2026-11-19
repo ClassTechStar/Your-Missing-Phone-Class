@@ -37,16 +37,16 @@ iPad 上面免費嘅 Swift Playgrounds 可以學 Swift 語言基礎（唔使 Mac
 
 Xcode 係蘋果官方嘅集成開發環境，免費。三步裝好：
 
-1. 喺 Mac 打開 App Store，搜「Xcode」，㩒安裝——留意佢有成幾個 GB，搵個網速好嘅時段；
-2. 裝完第一次啟動，同意協議、裝完組件（自動完成）；
-3. 選單 Xcode → Settings → Locations，確認 Command Line Tools 已經揀咗——命令行工具係好多腳本同第三方工具嘅前提。
+1. 喺 Mac 打開 App Store，搜「Xcode」，㩒安裝，留意佢有成幾個 GB，搵個網速好嘅時段。
+2. 裝完第一次啟動，同意協議、裝完組件（自動完成）。
+3. 選單 Xcode → Settings → Locations，確認 Command Line Tools 已經揀咗，命令行工具係好多腳本同第三方工具嘅前提。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 注意：版本同系統嘅「配對遊戲」
 
 {class="mt-1"}
-新 Xcode 好多時都要求最新 macOS，舊 Mac 就會卡喺舊版本。上架 App Store 嗰陣，蘋果會要求用較新嘅 Xcode 構建（通常會畀一段寬限期）。所以系統更新唔好拖太耐——iOS 開發者係「追新版」最勤力嘅一群人。
+新 Xcode 好多時都要求最新 macOS，舊 Mac 就會卡喺舊版本。上架 App Store 嗰陣，蘋果會要求用較新嘅 Xcode 構建（通常會畀一段寬限期）。所以系統更新唔好拖太耐：iOS 開發者係「追新版」最勤力嘅一群人。
 :::
 
 #### 三、建立你嘅第一個項目
@@ -62,7 +62,7 @@ Xcode 係蘋果官方嘅集成開發環境，免費。三步裝好：
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 建立項目要填嘅五樣嘢
 
-㩒 Create 之後，Xcode 會生成一個可以直接行嘅項目。左上角揀一部模擬器（例如 iPhone 17），㩒 ▶ 運行——幾秒之後，模擬器屏幕上面會出現一個寫住 "Hello, world!" 嘅窗口。你嘅第一個 iOS App 已經誕生咗喇。
+㩒 Create 之後，Xcode 會生成一個可以直接行嘅項目。左上角揀一部模擬器（例如 iPhone 17），㩒 ▶ 運行：幾秒之後，模擬器屏幕上面會出現一個寫住 "Hello, world!" 嘅窗口。你嘅第一個 iOS App 已經誕生咗喇。
 
 #### 四、工程結構拆解：每個檔案係做乜嘢嘅
 
@@ -97,9 +97,9 @@ Xcode 係蘋果官方嘅集成開發環境，免費。三步裝好：
 圖 2：新手必識嘅 Xcode 工程結構
 :::
 
-- MyFirstAppApp.swift：程式入口，喺 SwiftUI 入面佢只有幾行——「啟動，跟住顯示主界面」；
-- ContentView.swift：主界面視圖，你而家見到嘅一切都在呢度；
-- Assets.xcassets：資源倉庫——圖標、圖片、顏色都擺喺呢度；
+- MyFirstAppApp.swift：程式入口，喺 SwiftUI 入面佢只有幾行，「啟動，跟住顯示主界面」。
+- ContentView.swift：主界面視圖，你而家見到嘅一切都在呢度。
+- Assets.xcassets：資源倉庫，圖標、圖片、顏色都擺喺呢度。
 - Target 設定：㩒左邊藍色工程圖標入去，版本號、最低 iOS 版本、簽名都在入面。App 顯示名、圖標都係喺呢度配置。
 
 #### 五、Xcode 效率技巧：新手嘅五個「快捷鍵外掛」
@@ -115,15 +115,15 @@ Xcode 係蘋果官方嘅集成開發環境，免費。三步裝好：
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Xcode 高頻快捷鍵（新手五件套）
 
-另外兩個隱藏福利：多開模擬器（同時行 iPhone 同 iPad 對比佈局）同代碼片段庫（將常用嘅幾行代碼拖入右邊 Snippets 面板，下次一鍵插入）——效率工具先用起上嚟，手感自然就上嚟喇。
+另外兩個隱藏福利：多開模擬器（同時行 iPhone 同 iPad 對比佈局）同代碼片段庫（將常用嘅幾行代碼拖入右邊 Snippets 面板，下次一鍵插入），效率工具先用起上嚟，手感自然就上嚟喇。
 
 #### 六、真機除錯：將 App 裝入你嘅 iPhone
 
 模擬器雖然好，但真機先係終點。用免費 Apple ID 都可以真機除錯：
 
-1. 數據線駁上 iPhone（或者同 Wi-Fi 無線除錯）；
-2. Xcode 頂部設備列表揀你部手機，第一次會提示登入 Apple ID 並且自動配置簽名；
-3. iPhone 上面 [設定] → [一般] → [VPN與設備管理] → 信任你嘅開發者證書；
+1. 數據線駁上 iPhone（或者同 Wi-Fi 無線除錯）。
+2. Xcode 頂部設備列表揀你部手機，第一次會提示登入 Apple ID 並且自動配置簽名。
+3. iPhone 上面 [設定] → [一般] → [VPN與設備管理] → 信任你嘅開發者證書。
 4. 㩒 ▶，App 就裝入真機。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -131,12 +131,12 @@ Xcode 高頻快捷鍵（新手五件套）
 注意：免費賬號嘅「七日限制」
 
 {class="mt-1"}
-免費 Apple ID 簽名嘅 App 7 日之後會失效（重新運行一次就可以續期）。呢個係蘋果嘅防濫用機制，學習階段完全夠用；付費開發者賬號（99 美元/年）就冇呢個限制，第 67 章會詳細講。
+免費 Apple ID 簽名嘅 App 7 日之後會失效（重新運行一次就可以續期）。呢個係蘋果嘅防濫用機制。學習階段完全夠用；付費開發者賬號（99 美元/年）就冇呢個限制，第 67 章會詳細講。
 :::
 
 #### 七、小試牛刀 + 常見報錯急救
 
-打開 ContentView.swift，將 Text("Hello, world!") 入面嘅字換成你個名，㩒 ⌘R 重新運行——幾秒之後模擬器上面就會顯示你個名。恭喜，你完成咗第一次完整嘅「改代碼 → 編譯 → 安裝 → 運行」循環。
+打開 ContentView.swift，將 Text("Hello, world!") 入面嘅字換成你個名，㩒 ⌘R 重新運行：幾秒之後模擬器上面就會顯示你個名。恭喜，你完成咗第一次完整嘅「改代碼 → 編譯 → 安裝 → 運行」循環。
 
 ::: div .overflow-x-auto
 ```html

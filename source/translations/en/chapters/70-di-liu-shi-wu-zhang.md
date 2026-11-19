@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 65: Project One—My Expense Tracker (Local Version)
 
 {class="chapter-intro mb-4"}
-Welcome to your first "serious project." This expense tracker never touches the internet, but it's complete in every part: you can record a transaction, view the running history, see monthly totals, and edit or delete entries. Finishing it means you've walked the whole "data → logic → interface" path end to end. Don't rush to copy code—think it through first, then build. That's our standing principle.
+Welcome to your first "serious project." This expense tracker never touches the internet, but it's complete in every part: you can record a transaction, view the running history, see monthly totals, and edit or delete entries. Finishing it means you've walked the whole "data → logic → interface" path end to end. Don't rush to copy code:think it through first, then build. That's our standing principle.
 
 #### 1. Thinking About Requirements: Ask Five Questions First
 
@@ -27,7 +27,7 @@ Then break it into small steps where "every step is usable": 1) build the SwiftD
 
 #### 2. The Data Layer: Giving Transactions a Home
 
-First, define what a transaction looks like—enough fields to do the job, but don't get greedy:
+First, define what a transaction looks like,enough fields to do the job, but don't get greedy:
 
 ::: div .code-block
 :::inline div .code-head
@@ -61,7 +61,7 @@ class Record {
 Tip: Why Use Double for Amounts?
 
 {class="mt-1"}
-Rigorous financial apps use Decimal (exact decimal arithmetic) to avoid floating-point errors (the old 0.1 + 0.2 ≠ 0.3 problem). Double is plenty for a practice project; if you ever build a real financial product, remember to switch to Decimal or "an Int counted in cents"—a pitfall countless developers before you have stumbled into.
+Rigorous financial apps use Decimal (exact decimal arithmetic) to avoid floating-point errors (the old 0.1 + 0.2 ≠ 0.3 problem). Double is plenty for a practice project; if you ever build a real financial product, remember to switch to Decimal or "an Int counted in cents":a pitfall countless developers before you have stumbled into.
 :::
 
 #### 3. MVVM: When Interface and Logic "Move Apart"
@@ -74,7 +74,7 @@ Let the interface talk to the database directly? It runs, but the interface code
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figure 4: MVVM's three layers—data flows in one direction, and no layer oversteps its bounds
+Figure 4: MVVM's three layers,data flows in one direction, and no layer oversteps its bounds
 :::
 
 ::: div .code-block
@@ -116,7 +116,7 @@ class RecordViewModel {
 ```
 :::
 
-In the interface, write @State private var vm = RecordViewModel(...), then render the list straight from vm.records—the moment the data changes, the interface refreshes automatically.
+In the interface, write @State private var vm = RecordViewModel(...), then render the list straight from vm.records,the moment the data changes, the interface refreshes automatically.
 
 #### 4. The Interface: List Screen + Entry Sheet
 
@@ -167,7 +167,7 @@ Entry sheet essentials: use .keyboardType(.decimalPad) for the amount field (a n
 Note: Don't Get Lazy with Input Validation
 
 {class="mt-1"}
-Always validate the amount field: block empty values, negative numbers, and invalid input like "abc" (check with Double(text), which returns nil on failure). One of the most common reasons apps crash is "treating the user's input like a well-behaved child." Remember: treat everything the user types as hostile until proven otherwise.
+Always validate the amount field: block empty values, negative numbers, and invalid input like "abc" — check with Double(text), which returns nil on failure. One of the most common reasons apps crash is "treating the user's input like a well-behaved child." Remember: treat everything the user types as hostile until proven otherwise.
 :::
 
 #### 5. Editing, Deleting, and Summaries
@@ -200,7 +200,7 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 
 #### 6. Acceptance: A Three-Layer Check + Two Advanced Challenges
 
-When the project is done, run acceptance across three layers—"function → edge cases → architecture": can you record and delete, and does the data survive restarting the app (function); does entering 0 or a negative amount crash it (edge cases); are interface and data mixed together, and are any fields hard-coded (architecture)?
+When the project is done, run acceptance across three layers:"function → edge cases → architecture": can you record and delete, and does the data survive restarting the app (function); does entering 0 or a negative amount crash it (edge cases); are interface and data mixed together, and are any fields hard-coded (architecture)?
 
 Once the basic version passes acceptance, serve yourself two "advanced dishes":
 
@@ -212,7 +212,7 @@ Once the basic version passes acceptance, serve yourself two "advanced dishes":
 Get hands-on: finish it this week
 
 {class="mt-1"}
-Work in the order "data layer → ViewModel → list page → entry sheet → summary card," one step a day. If you get stuck, paste the error message straight into a search engine or an AI (remember Part 7, "Hands-On AI Coding"? When describing a problem, clearly state the "expected behavior, actual behavior, and steps to reproduce"). Once it's done, use it to track a week of expenses—using an app you built yourself gives you a sense of accomplishment that will push you forward.
+Work in the order "data layer → ViewModel → list page → entry sheet → summary card". One step a day. If you get stuck, paste the error message straight into a search engine or an AI (remember Part 7, "Hands-On AI Coding"?). When describing a problem, clearly state the "expected behavior, actual behavior, and steps to reproduce". Once it's done, use it to track a week of expenses. Using an app you built yourself gives you a sense of accomplishment that will push you forward.
 :::
 
 ::: div .chapter-summary

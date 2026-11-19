@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十一章：Swift 快速上手——苹果开发的第一语言
 
 {class="chapter-intro mb-4"}
-这一章咱们正式学语言。别紧张——Swift 是出了名的"对新手友好"，而且你不需要背语法书：先掌握 20% 的语法，就能看懂和写出 80% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：<strong>看懂 > 记住，会用 > 精通</strong>。
+这一章咱们正式学语言。别紧张，Swift 是出了名的"对新手友好"，而且你不需要背语法书：先掌握 20% 的语法，就能看懂和写出 80% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：<strong>看懂 > 记住，会用 > 精通</strong>。
 
 #### 一、变量与类型：给数据起名字
 
@@ -51,7 +51,7 @@ Swift 常用基础类型
 <i class="fas fa-lightbulb mr-2"></i>小贴士：let 优先原则
 
 {class="mt-1"}
-Swift 社区的铁律：<strong>默认用 let，确有必要再用 var</strong>。能用 let 的地方用 var，Xcode 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug——代码越少变化，越容易推理。
+Swift 社区的铁律：<strong>默认用 let，确有必要再用 var</strong>。能用 let 的地方用 var，Xcode 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug：代码越少变化，越容易推理。
 :::
 
 #### 二、可选值（Optional）：Swift 的"防崩护身符"
@@ -87,7 +87,7 @@ print(len)
 <i class="fas fa-exclamation-triangle mr-2"></i>注意：! 是"高危操作"
 
 {class="mt-1"}
-代码里写 <code class="inline">nickname!</code>（强制解包）等于对编译器喊"我保证它不是 nil"——一旦猜错，App 当场崩溃。新手期原则：<strong>尽量用 if let / ?? ，不用 !</strong>。Xcode 补全代码时偶尔会顺手加 !，记得改掉它。
+代码里写 <code class="inline">nickname!</code>（强制解包）等于对编译器喊"我保证它不是 nil"：一旦猜错，App 当场崩溃。新手期原则：<strong>尽量用 if let / ?? ，不用 !</strong>。Xcode 补全代码时偶尔会顺手加 !，记得改掉它。
 :::
 
 #### 三、函数与闭包：把逻辑打包成"按钮"
@@ -116,11 +116,11 @@ let big = numbers.filter { $0 > 2 }    // 筛选
 ```
 :::
 
-SwiftUI 里闭包无处不在：按钮的 <code class="inline">Button("点我") { ... }</code> 后面的大括号就是一个闭包。<code class="inline">map</code>、<code class="inline">filter</code>、<code class="inline">sorted</code> 这几个"集合连招"请记牢——未来 90% 的列表处理都是它们的组合。
+SwiftUI 里闭包无处不在：按钮的 <code class="inline">Button("点我") { ... }</code> 后面的大括号就是一个闭包。<code class="inline">map</code>、<code class="inline">filter</code>、<code class="inline">sorted</code> 这几个"集合连招"请记牢，未来 90% 的列表处理都是它们的组合。
 
 #### 四、结构体与协议：Swift 的"乐高"体系
 
-Swift 的官方偏好很明确：<strong>优先用结构体（struct），需要继承时才用类（class）</strong>。结构体是"值类型"——复制时各过各的，天然少一类 bug：
+Swift 的官方偏好很明确：<strong>优先用结构体（struct），需要继承时才用类（class）</strong>。结构体是"值类型"，复制时各过各的，天然少一类 bug：
 
 ::: div .code-block
 :::inline div .code-head
@@ -147,7 +147,7 @@ struct Record: Identifiable { ... }   // 遵守协议 = 承诺实现其要求
 ```
 :::
 
-SwiftUI 里几乎一切都是 struct（View 就是协议）。这句现在不懂没关系，第 62 章会天天见面——<strong>在 Swift 的世界里，先拥抱 struct</strong>。
+SwiftUI 里几乎一切都是 struct（View 就是协议）。这句现在不懂没关系，第 62 章会天天见面<strong>在 Swift 的世界里，先拥抱 struct</strong>。
 
 #### 五、写给零基础的语法速查卡
 

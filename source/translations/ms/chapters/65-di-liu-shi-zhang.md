@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 60: Menyiapkan persekitaran pembangunan — Xcode dan projek pertama
 
 {class="chapter-intro mb-4"}
-Untuk kerja yang baik, pertajam dahulu alatnya. Dalam bab ini kita "menyiapkan dapur": memasang Xcode, memastikan simulator berjalan, mencipta projek iOS pertama dalam hidup anda, kemudian mengurai struktur projek sehingga jelas. Selepas persekitaran siap, anda akan buat pertama kali melihat kod yang anda tulis menjadi butang yang boleh ditekan — detik ini, ramai orang ingat seumur hidup.
+Untuk kerja yang baik, pertajam dahulu alatnya. Dalam bab ini kita "menyiapkan dapur": memasang Xcode, memastikan simulator berjalan, mencipta projek iOS pertama dalam hidup anda, kemudian mengurai struktur projek sehingga jelas. Selepas persekitaran siap, anda akan buat pertama kali melihat kod yang anda tulis menjadi butang yang boleh ditekan, detik ini, ramai orang ingat seumur hidup.
 
 #### 1. Sediakan sebuah Mac
 
@@ -37,9 +37,9 @@ Swift Playgrounds yang percuma di iPad boleh mengajar asas bahasa Swift (tanpa M
 
 Xcode ialah persekitaran pembangunan bersepadu rasmi Apple, percuma. Tiga langkah untuk memasang:
 
-1. Di Mac, buka App Store, cari "Xcode", tekan pasang — ingat, saiznya beberapa GB, pilih waktu yang rangkaiannya laju;
+1. Di Mac, buka App Store, cari "Xcode", tekan pasang, ingat, saiznya beberapa GB, pilih waktu yang rangkaiannya laju;
 2. Selepas terpasang, lancarkan buat kali pertama, setuju dengan perjanjian dan biar komponen selesai dipasang (berlaku secara automatik);
-3. Menu Xcode → Settings → Locations, pastikan Command Line Tools telah dipilih — alat baris arahan ialah prasyarat bagi banyak skrip dan alat pihak ketiga.
+3. Menu Xcode → Settings → Locations, pastikan Command Line Tools telah dipilih, alat baris arahan ialah prasyarat bagi banyak skrip dan alat pihak ketiga
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -62,7 +62,7 @@ Buka Xcode → Create New Project → pilih iOS → templat App, kemudian isi:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Lima perkara yang diisi semasa mencipta projek
 
-Selepas menekan Create, Xcode akan menjana projek yang boleh terus dijalankan. Pilih satu simulator di penjuru kiri atas (contohnya iPhone 17), tekan ▶ untuk menjalankan — beberapa saat kemudian, di skrin simulator muncul satu tetingkap bertulis "Hello, world!". Aplikasi iOS pertama anda telah dilahirkan.
+Selepas menekan Create, Xcode akan menjana projek yang boleh terus dijalankan. Pilih satu simulator di penjuru kiri atas (contohnya iPhone 17), tekan ▶ untuk menjalankan, beberapa saat kemudian, di skrin simulator muncul satu tetingkap bertulis "Hello, world!". Aplikasi iOS pertama anda telah dilahirkan.
 
 #### 4. Mengurai struktur projek: apa fungsi setiap fail
 
@@ -97,12 +97,12 @@ Di sebelah kiri ialah navigator projek; pemula hanya perlu mengenali beberapa in
 Rajah 2: Struktur projek Xcode yang wajib difahami pemula
 :::
 
-- MyFirstAppApp.swift: pintu masuk program; dalam SwiftUI ia hanya beberapa baris — "mula, kemudian paparkan antara muka utama";
+- MyFirstAppApp.swift: pintu masuk program; dalam SwiftUI ia hanya beberapa baris: "mula, kemudian paparkan antara muka utama";
 - ContentView.swift: paparan antara muka utama; semua yang anda lihat sekarang ada di sini;
-- Assets.xcassets: gudang sumber — ikon, imej dan warna diletakkan di sini;
-- Tetapan Target: tekan ikon projek biru di sebelah kiri untuk masuk; nombor versi, versi iOS minimum dan tandatangan semuanya di dalamnya. Nama paparan aplikasi dan ikon juga dikonfigur di sini.
+- Assets.xcassets: gudang sumber: ikon, imej dan warna diletakkan di sini;
+- Tetapan Target: tekan ikon projek biru di sebelah kiri untuk masuk; nombor versi, versi iOS minimum dan tandatangan semuanya di dalamnya. Nama paparan aplikasi dan ikon juga dikonfigur di sini
 
-#### 5. Petua kecekapan Xcode: lima "senjata rahsia pintasan" pemula
+5. Petua kecekapan Xcode: lima "senjata rahsia pintasan" pemula
 
 Kuasai yang berikut, dan anda akan kelihatan "sangat profesional":
 
@@ -115,16 +115,16 @@ Kuasai yang berikut, dan anda akan kelihatan "sangat profesional":
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Pintasan papan kekunci Xcode yang kerap digunakan (lima serangkai pemula)
 
-Dua faedah tersembunyi lagi: menjalankan beberapa simulator serentak (jalankan iPhone dan iPad pada masa yang sama untuk membandingkan susun atur) dan pustaka petikan kod (seret beberapa baris kod biasa ke panel Snippets di sebelah kanan, lain kali sisipkan dengan satu tekanan) — gunakan dahulu alat kecekapan ini, dan kemahiran tangan akan datang dengan sendirinya.
+Dua faedah tersembunyi lagi: menjalankan beberapa simulator serentak (jalankan iPhone dan iPad pada masa yang sama untuk membandingkan ,susun atur) dan pustaka petikan kod (seret beberapa baris kod biasa ke panel Snippets di sebelah kanan, lain kali sisipkan dengan satu tekanan) — gunakan dahulu alat kecekapan ini, dan kemahiran tangan akan datang dengan sendirinya.
 
-#### 6. Debug pada peranti sebenar: memasang aplikasi ke dalam iPhone anda
+6. Debug pada peranti sebenar: memasang aplikasi ke dalam iPhone anda
 
 Walaupun simulator bagus, peranti sebenar tetap destinasi akhir. Dengan Apple ID percuma pun boleh debug pada peranti sebenar:
 
 1. Sambungkan iPhone dengan kabel data (atau debug secara wayarles melalui Wi-Fi yang sama);
 2. Dalam senarai peranti di bahagian atas Xcode, pilih telefon anda; kali pertama akan diminta log masuk Apple ID dan tandatangan dikonfigur secara automatik;
 3. Di iPhone, [Tetapan] → [Am] → [VPN & Pengurusan Peranti] → percayai sijil pembangun anda;
-4. Tekan ▶, dan aplikasi terpasang pada peranti sebenar.
+4. Tekan ▶, dan aplikasi terpasang pada peranti sebenar
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -152,7 +152,10 @@ Jadual pertolongan cemas ralat persekitaran untuk pemula
 Praktik: lengkapkan senarai "ritual pembangunan" anda
 
 {class="mt-1"}
-① Pasang Xcode dan pastikan simulator berjalan; ② jalankan aplikasi anda sekali pada peranti sebenar dan simpan tangkapan skrin sebagai kenangan; ③ tukar teks Hello kepada nama anda; ④ dalam tetapan Target, tukar nama paparan aplikasi kepada "Aplikasi Pertama Saya". Selepas empat langkah ini, anda sudah ialah orang yang berkarya.
+1. Pasang Xcode dan pastikan simulator berjalan;
+2. jalankan aplikasi anda sekali pada peranti sebenar dan simpan tangkapan skrin sebagai kenangan;
+3. tukar teks Hello kepada nama anda;
+4. dalam tetapan Target, tukar nama paparan aplikasi kepada "Aplikasi Pertama Saya". Selepas empat langkah ini, anda sudah ialah orang yang berkarya.
 :::
 
 ::: div .chapter-summary

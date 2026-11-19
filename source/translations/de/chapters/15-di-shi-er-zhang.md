@@ -31,7 +31,7 @@ Wer Podcasts nie gehört hat, hält sie für irrelevant – wer einmal damit anf
 - <strong>Apple Podcasts</strong>: Bei iPhone vorinstalliert, keine zusätzliche App nötig. Am besten mit CarPlay integriert – beim Fahren sehr praktisch.
 - <strong>Hör-Tipps</strong>: Die meisten Podcast-Apps unterstützen 1,2-fache oder 1,5-fache Wiedergabe – wenn man sich daran gewöhnt hat, spart das viel Zeit. Ich höre Chinesisch mit 1,2-facher und Englisch mit 1,5-facher Geschwindigkeit. Außerdem sollten Sie „Neue Folgen automatisch herunterladen, nach dem Hören löschen" aktivieren, damit sich Ihr Smartphone nicht mit gehörten Audiodateien füllt.
 
-#### 3. Videos schauen: Vom Player zum Streaming – der richtige Weg
+3. Videos schauen: Vom Player zum Streaming – der richtige Weg
 
 Viele wissen nicht: Das Smartphone kann weit mehr Formate abspielen, als Streaming-Apps anbieten. Ein guter lokaler Player löst viele Probleme.
 
@@ -49,7 +49,7 @@ Manche sagen, Lesen auf dem Smartphone schade den Augen und lenke ab – das sti
 - <strong>Apple Books</strong>: Bei iPhone vorinstalliert, geeignet für EPUB und PDF. Sehr schlichte Oberfläche, angenehme Seitenwendeanimation. Wenn Sie E-Books aus dem Internet herunterladen, genügt „Teilen nach Bücher", um sie zu importieren.
 - <strong>Lese-Empfehlungen</strong>: Egal welche App – stellen Sie den Hintergrund auf warmgelb (Augen schonen), vergrößern Sie die Schrift und erhöhen Sie den Zeilenabstand. Abends „Dunkelmodus" aktivieren – schwarzer Hintergrund, weiße Schrift schonen die Augen. Bitte nicht weißer Hintergrund, schwarze Schrift, kleine Schriftart bei schwachem Licht – die Augenermüdung summiert sich.
 
-#### 5. Smartphone-Spiele: Mit Spaß spielen, ohne die Hände zu überlasten
+5. Smartphone-Spiele: Mit Spaß spielen, ohne die Hände zu überlasten
 
 Meine Einstellung zu Smartphone-Spielen: Spielen ist in Ordnung, aber lassen Sie es nicht sich über Sie bestimmen. Mit den richtigen Werkzeugen spielen Sie bequemer und vernachlässigen nichts Wichtiges.
 

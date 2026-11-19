@@ -2,12 +2,12 @@
 id: di-shi-liu-zhang
 num: 16
 part: jin-jie-pian
-nav: Capitolo 16: Account e servizi cloud
+nav: Capitolo 16: Cambiando telefono: quali account puoi perdere?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 16: Sistema di account e servizi cloud
+### Capitolo 16: Cambiando telefono: quali account puoi perdere?
 
 {class="chapter-intro mb-4"}
 Un mio amico lo scorso anno ha avuto il telefono rubato. Il suo primo pensiero non è stato "quanto costa il telefono", ma "potrò recuperare le foto che ho dentro?". Purtroppo non aveva attivato il backup sul cloud. Il telefono è un bene esteriore, ma i dati nell'account, una volta persi, non tornano più. In questo capitolo parliamo di come stipulare una vera assicurazione per la tua vita digitale.
@@ -27,7 +27,7 @@ Se usi un telefono Apple, tutto quanto sopra è legato al tuo Apple ID. Se usi A
 #### 2. Tre cose da fare subito, adesso
 
 1. <strong>Attiva la verifica in due fattori</strong>: che tu usi Apple o Android, la prima cosa da fare è andare nelle impostazioni dell'account e attivare la "verifica in due fattori" o "verifica in due passaggi". È come aggiungere un catenaccio alla porta: non basta la password, serve anche un codice inviato al tuo telefono. Anche se qualcuno su Internet indovina la tua password, senza il tuo telefono non entra.
-2. <strong>Associa un metodo di recupero affidabile</strong>: la 2FA è sicura, ma c'è un rischio: cosa fai se perdi proprio il tuo telefono? Per questo il sistema ti chiederà di impostare una "chiave di recupero" o "email/telefono di backup". È l'unica via per riottenere l'account in caso di emergenza: meglio scriverla su carta, non tenerla nel telefono.
+2. <strong>Associa un metodo di recupero affidabile</strong>: la 2FA è sicura, ma c'è un rischio: cosa fai se perdi proprio il tuo telefono? Per questo il sistema ti chiederà di impostare una "chiave di recupero" o "email/telefono di backup". È l'unica via per riottenere l'account in caso di emergenza: meglio scriverla su carta. Non tenerla nel telefono.
 3. <strong>Verifica che "Trova il mio telefono" sia attivo</strong>: questa funzione, in caso di smarrimento, ti aiuta a localizzare, bloccare, far suonare e persino cancellare da remoto tutti i dati. È l'ultima linea di difesa. Molti la saltano all'acquisto del telefono e poi, quando serve, scoprono di non averla attivata: troppo tardi.
 
 #### 3. iCloud: l'"aria" per gli utenti Apple

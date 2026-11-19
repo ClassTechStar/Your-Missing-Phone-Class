@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 58: Panduan Cepat dan Sumber Belajar
 
 {class="chapter-intro mb-4"}
-Bab ini adalah panduan cepat yang bisa dipakai berdiri sendiri. Saat kamu lupa suatu cara penulisan atau perlu keputusan cepat, langsung buka bagian ini. Jadikan sebagai "kartu saku": kartu cepat kode yang sering dipakai, pertanyaan umum, sumber belajar — tak ada yang terlewat.
+Bab ini adalah panduan cepat yang bisa dipakai berdiri sendiri. Saat kamu lupa suatu cara penulisan atau perlu keputusan cepat, langsung buka bagian ini. Jadikan sebagai "kartu saku": kartu cepat kode yang sering dipakai, pertanyaan umum, sumber belajar, tak ada yang terlewat.
 
 #### 1. Kartu cepat kode yang sering dipakai
 
@@ -31,11 +31,11 @@ Ikuti jalur buku ini: minggu 1-2 menyiapkan lingkungan dan dasar Kotlin; minggu 
 
 Q2: Apakah Java masih perlu dipelajari?
 
-Tidak perlu. Proyek baru, tutorial baru, dan lowongan baru hampir semuanya berbasis Kotlin. Java dalam jumlah besar hanya kamu temui saat "merawat proyek berusia sepuluh tahun". Setelah menguasai Kotlin, menambah Java bila pekerjaan menuntut akan cepat saja — keduanya di lapisan bawah berbagi ekosistem mesin virtual yang sama.
+Tidak perlu. Proyek baru, tutorial baru, dan lowongan baru hampir semuanya berbasis Kotlin. Java dalam jumlah besar hanya kamu temui saat "merawat proyek berusia sepuluh tahun". Setelah menguasai Kotlin, menambah Java bila pekerjaan menuntut akan cepat saja: keduanya di lapisan bawah berbagi ekosistem mesin virtual yang sama.
 
 Q3: Emulator atau perangkat asli?
 
-Emulator memang praktis untuk develop dan debug (snapshot, banyak model perangkat), tetapi verifikasi akhir harus lewat perangkat asli — rabaan, performa, jaringan nyata, dan sensor tak tergantikan emulator. Bila memungkinkan, membeli satu ponsel kelas menengah sebagai perangkat uji adalah investasi paling hemat.
+Emulator memang praktis untuk develop dan debug (snapshot, banyak model perangkat), tetapi verifikasi akhir harus lewat perangkat asli: rabaan, performa, jaringan nyata, dan sensor tak tergantikan emulator. Bila memungkinkan, membeli satu ponsel kelas menengah sebagai perangkat uji adalah investasi paling hemat.
 
 Q4: Apakah mudah mencari kerja sebagai pengembang Android?
 
@@ -74,12 +74,12 @@ Kartu cepat perintah Gradle yang sering dipakai
 Tips: Kalau build bermasalah, jalankan clean dulu
 
 {class="mt-1"}
-Kejadian gaib "kemarin bisa jalan, hari ini tidak" enam dari sepuluh kali disebabkan cache build yang kacau. ./gradlew clean lalu build ulang menyembuhkan sebagian besar masalah misterius. Kalau masih belum, restart Android Studio — jurus ini sebaiknya diminum bersama File → Invalidate Caches.
+Kejadian gaib "kemarin bisa jalan, hari ini tidak" enam dari sepuluh kali disebabkan cache build yang kacau. ./gradlew clean lalu build ulang menyembuhkan sebagian besar masalah misterius. Kalau masih belum, restart Android Studio, jurus ini sebaiknya diminum bersama File → Invalidate Caches.
 :::
 
 #### 5. Penutup: Dari App pertama ke App ke-N
 
-Ditarik ke belakang, kamu berangkat dari "tidak tahu Activity itu apa", lalu menyiapkan lingkungan, menguasai Kotlin, menggambar antarmuka dengan Compose, menghubungkan App ke database dan jaringan, sampai menguji, mengemas, dan tayang — di jalan ini kamu sudah melewati bagian tersulit dari nol ke satu.
+Ditarik ke belakang, kamu berangkat dari "tidak tahu Activity itu apa", lalu menyiapkan lingkungan, menguasai Kotlin, menggambar antarmuka dengan Compose. menghubungkan App ke database dan jaringan, sampai menguji, mengemas, dan tayang — di jalan ini kamu sudah melewati bagian tersulit dari nol ke satu.
 
 Dunia teknologi berubah cepat: framework di-upgrade, alat berganti generasi, AI mengambil alih makin banyak kerja "mengetik di keyboard". Tetapi ada satu hal yang tidak usang: kemampuanmu mengurai ide yang kabur menjadi langkah-langkah yang jelas, lalu mewujudkannya langkah demi langkah. Alat adalah penguat, cara berpikir adalah fondasi. Penguat bisa diganti, fondasi tidak boleh goyah.
 

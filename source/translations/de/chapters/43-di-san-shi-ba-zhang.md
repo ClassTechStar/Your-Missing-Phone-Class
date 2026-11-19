@@ -22,7 +22,7 @@ Warum ist eine 70-Zeilen-Datei so viel wert?
 Was bedeuten 70.000 Stars? Die meisten GitHub-Projekte erreichen das nie. Dass eine 70-Zeilen-Datei es schafft, zeigt: Im KI-Zeitalter ist nicht Code knapp, sondern die Fähigkeit, klar zu denken. Diese 70 Zeilen sind die destillierte Form dieses „Klar-Denkens“.
 :::
 
-#### 1. Prinzip 1: Think Before Coding (erst denken, dann kodieren)
+1. Prinzip 1: Think Before Coding (erst denken, dann kodieren)
 
 Das kontraintuitivste der fünf Prinzipien. Wenn KI uns beim Programmieren hilft, warum noch „erst denken“? Ganz einfach: Die Qualität der KI-Ausgabe hängt von Ihrer Eingabe ab. Wenn Sie selbst nicht wissen, was Sie wollen, geraten Sie in endlose „Änderungsschleifen“ – im Volksmund „KI irrt gemeinsam mit Ihnen“.
 
@@ -71,7 +71,7 @@ In der Praxis heißt das konkrete Gewohnheiten:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Überdimensionierte vs. einfache Lösungen in typischen Szenarien
 
-#### 3. Prinzip 3: Surgical Changes (chirurgisch präzise Änderungen)
+3. Prinzip 3: Surgical Changes (chirurgisch präzise Änderungen)
 
 Beim Iterieren eines bestehenden Projekts sollte jede Änderung präzise sein wie eine Operation – nur das Nötige anfassen. Besonders wichtig in der KI-Programmierung, weil KI zum „Nebenbei-Mitändern“ neigt: Ein Bugfix wird leicht zur halben Datei-Refactorierung.
 
@@ -97,7 +97,7 @@ Gute Anweisung (präziser Umfang)
 :::
 :::
 
-#### 4. Prinzip 4: Goal-Driven Execution (zielgetriebene Ausführung)
+4. Prinzip 4: Goal-Driven Execution (zielgetriebene Ausführung)
 
 Diese Regel beantwortet eine Schlüsselfrage: Soll man der KI sagen, „wie“ sie arbeiten soll, oder „was“ herauskommen soll? Karpathys Antwort: das Letztere. Statt „Erst eine Klasse anlegen, dann Methoden, dann Tests“ besser: „Ich brauche ein Werkzeug, das CSV-Dateien einliest und je Spalte die Anzahl eindeutiger Werte zählt“. Die KI wählt den Weg, Sie nehmen das Ergebnis ab.
 

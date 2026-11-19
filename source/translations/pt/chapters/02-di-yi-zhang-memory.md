@@ -39,7 +39,7 @@ A limitação fundamental desta tecnologia está na diferença de velocidade. O 
 
 A expansão de memória não é uma solução mágica; os resultados variam conforme o modelo e o cenário de uso:
 
-- <strong>Situações úteis</strong>: Modelos com 6GB de RAM física + UFS 3.1 ou superior, com espaço livre ≥30GB. Ao ativar 3GB de expansão, podem manter 3-4 aplicativos a mais em segundo plano, reduzindo a taxa de recarga em 68%. Adequado para entregadores de comida, motoristas de aplicativo e outros usuários de multitarefa intensiva.
+- <strong>Situações úteis</strong>: Modelos com 6GB de RAM física + UFS 3.1 ou superior. Com espaço livre ≥30GB. Ao ativar 3GB de expansão, podem manter 3-4 aplicativos a mais em segundo plano, reduzindo a taxa de recarga em 68%. Adequado para entregadores de comida, motoristas de aplicativo e outros usuários de multitarefa intensiva.
 - <strong>Cenários diários</strong>: Melhora significativa para múltiplas contas do WeChat, preservação de abas do navegador, resposta a mensagens de mensageiros instantâneos. O tempo de inicialização a frio de aplicativos em segundo plano é notavelmente reduzido.
 - <strong>Cenários limitados</strong>: Melhora limitada para carregamento de jogos pesados, edição de vídeo 4K e outros cenários de alta largura de banda.
 - <strong>Situações prejudiciais</strong>: Modelos com 8GB de RAM + UFS 2.2 e espaço livre insuficiente. Ao ativar, a flutuação da taxa de quadros em jogos aumenta, assistir a vídeos curtos consome mais bateria e a alternância trava.

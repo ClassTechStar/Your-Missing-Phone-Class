@@ -2,12 +2,12 @@
 id: di-ling-zhang
 num: 00
 part: ji-chu-pian
-nav: Capítulo 0: Olá, antes de começar
+nav: Capítulo 0: Três coisas a dizer antes de começar
 toc: default
 kind: chapter
 ---
 
-### Capítulo 0: Olá, antes de começar
+### Capítulo 0: Três coisas a dizer antes de começar
 
 {class="mb-3"}
 Antes de explorarmos oficialmente, vamos falar sobre algumas regras básicas para garantir que compreende tudo o que se segue. Sem pressa, afiar a lâmina não atrasa o corte.
@@ -33,7 +33,7 @@ Adivinhe, algumas coisas têm nomes diferentes, mas fazem o mesmo. Por exemplo: 
 
 Além disso, atualmente no campo Android existe também o sistema HarmonyOS da Huawei, com as suas próprias características, que abordaremos mais adiante. Em resumo, qualquer que seja o celular que utilize, este livro pode ajudá-lo.
 
-#### IV. Capacidade do celular: porque é que comprei 128G mas só tenho menos de 110G disponíveis?
+IV. Capacidade do celular: porque é que comprei 128G mas só tenho menos de 110G disponíveis?
 
 Todos conhecem as unidades de capacidade: 1TB = 1024GB, 1GB = 1024MB, 1MB = 1024KB... mas há uma armadilha: os fabricantes de discos costumam calcular em base 1000, enquanto o sistema calcula em base 1024, por isso o disco "128G" que comprou terá uma capacidade real "reduzida".
 
@@ -82,6 +82,6 @@ Se o celular se perder ou avariar, não perde apenas alguns milhares de yuans em
 
 Assim como cuidar da saúde não significa esperar ficar doente para consultar um médico, <strong>a gestão do celular também deve começar pelos "hábitos diários"</strong>. Este livro enfatiza repetidamente não uma técnica avançada específica, mas estes princípios simples:
 
-- <strong>Prevenção em primeiro lugar</strong>: Instale aplicativos apenas pelas lojas oficiais, remova metadados das fotos antes de enviar, não repita senhas — essas "pequenas ações" têm custo mínimo, mas bloqueiam a grande maioria dos riscos.
-- <strong>Check-up regular</strong>: Organize a pasta de downloads uma vez por mês, faça uma auditoria de permissões a cada trimestre, um backup completo a cada semestre — um ritmo fixo é cem vezes mais eficaz do que apagar incêndios de improviso.
-- <strong>Ter um plano de contingência</strong>: Ative a sincronização na nuvem, anote bem as contas e senhas, escreva uma "lista de herança digital" — garanta que você e sua família possam lidar com imprevistos com tranquilidade.
+- <strong>Prevenção em primeiro lugar</strong>: Instale aplicativos apenas pelas lojas oficiais, remova metadados das fotos antes de enviar, não repita senhas, essas "pequenas ações" têm custo mínimo, mas bloqueiam a grande maioria dos riscos.
+- <strong>Check-up regular</strong>: Organize a pasta de downloads uma vez por mês, faça uma auditoria de permissões a cada trimestre, um backup completo a cada semestre, um ritmo fixo é cem vezes mais eficaz do que apagar incêndios de improviso.
+- <strong>Ter um plano de contingência</strong>: Ative a sincronização na nuvem, anote bem as contas e senhas, escreva uma "lista de herança digital", garanta que você e sua família possam lidar com imprevistos com tranquilidade.

@@ -2,15 +2,15 @@
 id: di-wu-shi-liu-zhang
 num: 56
 part: an-zhuo-kai-fa-pian
-nav: Bab 56: Memoles dan Menerbitkan—Masuk ke Google Play
+nav: Bab 56: App sudah selesai, tinggal tayang
 toc: default
 kind: chapter
 ---
 
-### Bab 56: Pemolesan dan Rilis—Menguji, Men-debug, dan Naik ke Google Play
+### Bab 56: App sudah selesai, tinggal tayang
 
 {class="chapter-intro mb-4"}
-Aplikasinya sudah jadi, terus? Bab ini menjawab tiga hal untuk berpindah dari 'bisa jalan' ke 'bisa diserahkan': cara men-debug untuk menemukan bug secara efisien, cara menulis pengujian untuk mencegah regresi, dan cara mengirim aplikasi ke Google Play agar diunduh orang seluruh dunia. Naik toko bukan sekadar seremoni—itulah garis batas yang mengubah sebuah karya menjadi produk.
+Aplikasinya sudah jadi, terus? Bab ini menjawab tiga hal untuk berpindah dari 'bisa jalan' ke 'bisa diserahkan': cara men-debug untuk menemukan bug secara efisien, cara menulis pengujian untuk mencegah regresi, dan cara mengirim aplikasi ke Google Play agar diunduh orang seluruh dunia. Naik toko bukan sekadar seremoni,itulah garis batas yang mengubah sebuah karya menjadi produk.
 
 #### 1. Tiga Jurus Debugging: Logcat, Breakpoint, Inspektur UI
 
@@ -28,12 +28,12 @@ Tiga jurus andalan debugging
 Tips: Cara membaca pesan error
 
 {class="mt-1"}
-Setelah crash, Logcat akan menampilkan stacktrace merah. Cari dari bawah ke atas baris pertama yang diawali nama paketmu sendiri (misalnya com.example.yourapp) — baris itulah biasanya lokasi kejadian. Periksa dulu "jenis Exception"-nya (null pointer? salah konversi tipe?), lalu lihat "at ... filemu:nomorbaris". Trik ini menyelesaikan 80% crash.
+Setelah crash, Logcat akan menampilkan stacktrace merah. Cari dari bawah ke atas baris pertama yang diawali nama paketmu sendiri (misalnya com.example.yourapp), baris itulah biasanya lokasi kejadian. Periksa dulu "jenis Exception"-nya (null pointer? salah konversi tipe?), lalu lihat "at ... filemu:nomorbaris". Trik ini menyelesaikan 80% crash.
 :::
 
 #### 2. Pengujian: Memberi "asuransi" pada kode
 
-Pengujian manual tidak bisa diandalkan — perbaiki satu fitur, fitur lain diam-diam rusak. Test adalah "obat penyesalan" sekaligus "rompi anti peluru". Test Android terbagi tiga lapis; pemula cukup kuasai lapis pertama dulu:
+Pengujian manual tidak bisa diandalkan, perbaiki satu fitur, fitur lain diam-diam rusak. Test adalah "obat penyesalan" sekaligus "rompi anti peluru". Test Android terbagi tiga lapis; pemula cukup kuasai lapis pertama dulu:
 
 ::: div .overflow-x-auto
 ```html
@@ -76,18 +76,18 @@ Validasi nominal dan perhitungan statistik di aplikasi catatan keuangan semuanya
 
 #### 3. Menandatangani dan mengemas: Memberi "stempel" pada App
 
-Android mewajibkan semua paket instalasi ditandatangani — seperti mencap cap resmi yang membuktikan "paket ini keluaran saya dan tidak diubah orang". Saat debugging, Android Studio otomatis memakai tanda tangan debug; untuk rilis kamu harus memakai tanda tangan release sendiri. Prosesnya:
+Android mewajibkan semua paket instalasi ditandatangani, seperti mencap cap resmi yang membuktikan "paket ini keluaran saya dan tidak diubah orang". Saat debugging, Android Studio otomatis memakai tanda tangan debug; untuk rilis kamu harus memakai tanda tangan release sendiri. Prosesnya:
 
 1. Menu Build → Generate Signed Bundle / APK;
-2. Buat file keystore (gudang kunci) — atur kata sandinya dan simpan dengan baik;
-3. Pilih format release + AAB, dan build selesai.
+2. Buat file keystore (gudang kunci), atur kata sandinya dan simpan dengan baik;
+3. Pilih format release + AAB, dan build selesai
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Peringatan jebakan: keystore hilang = App hilang
 
 {class="mt-1"}
-Setelah tayang, pembaruan App wajib memakai tanda tangan yang sama, jika tidak toko akan menolak pembaruannya. Begitu file keystore dan kata sandinya hilang, kamu hanya bisa membuat aplikasi baru dan mengunggah ulang dari nol — pengguna lama tidak bisa terhubung sama sekali. Pastikan mencadangkan keystore dan kata sandi di tempat yang aman (cloud drive terenkripsi + aplikasi catatan); ini salah satu pelajaran paling mahal bagi pengembang Android.
+Setelah tayang, pembaruan App wajib memakai tanda tangan yang sama, jika tidak toko akan menolak pembaruannya. Begitu file keystore dan kata sandinya hilang, kamu hanya bisa membuat aplikasi baru dan mengunggah ulang dari nol, pengguna lama tidak bisa terhubung sama sekali. Pastikan mencadangkan keystore dan kata sandi di tempat yang aman (cloud drive terenkripsi + aplikasi catatan); ini salah satu pelajaran paling mahal bagi pengembang Android.
 :::
 
 #### 4. Alur lengkap tayang di Google Play
@@ -107,25 +107,25 @@ Gambar 6: Enam langkah tayang di Google Play
 
 - Pendaftaran: biaya pendaftaran sekali bayar 25 dolar AS, perlu akun Google yang bisa dipakai;
 - Aset: ikon aplikasi (512×512), tangkapan layar (minimal 2), deskripsi fitur, tautan kebijakan privasi (wajib bila mengumpulkan data);
-- Formulir keamanan data: nyatakan dengan jujur data apa saja yang dikumpulkan — aplikasi catatan keuangan tanpa koneksi internet bisa "nol pengumpulan";
-- Peninjauan: unggahan pertama akun baru sering ditinjau manusia, durasinya berkisar beberapa jam hingga beberapa hari; kalau ditolak, perbaiki sesuai masukannya.
+- Formulir keamanan data: nyatakan dengan jujur data apa saja yang dikumpulkan: aplikasi catatan keuangan tanpa koneksi internet bisa "nol pengumpulan";
+- Peninjauan: unggahan pertama akun baru sering ditinjau manusia, durasinya berkisar beberapa jam hingga beberapa hari; kalau ditolak, perbaiki sesuai masukannya
 
-Catatan untuk pengguna di Tiongkok: Google Play membutuhkan lingkungan jaringan khusus, dan distribusi di Tiongkok daratan biasanya lewat toko lokal (Huawei, Xiaomi, Yingyongbao, dll.). Proses tayang di toko lokal serupa, tetapi tiap toko punya selera peninjauannya sendiri — satu AAB/APK yang sama bisa didistribusikan ke banyak toko. Untuk latihan, berhasil menuntaskan satu toko saja sudah kemenangan.
+Catatan untuk pengguna di Tiongkok: Google Play membutuhkan lingkungan jaringan khusus, dan distribusi di Tiongkok daratan biasanya lewat toko lokal (Huawei, Xiaomi, Yingyongbao, dll.). Proses tayang di toko lokal serupa, tetapi tiap toko punya selera peninjauannya sendiri: satu AAB/APK yang sama bisa didistribusikan ke banyak toko. Untuk latihan, berhasil menuntaskan satu toko saja sudah kemenangan.
 
 #### 5. Menyiapkan aset toko: Kesan pertama adalah jumlah unduhan
 
 Halaman toko adalah etalase yang dilihat pengguna saat "berkeliling di toko". Tiga aset menentukan kesan pertama:
 
 - Ikon: 512×512, jangan asal pakai tangkapan layar. Kalau tidak punya kemampuan desain, pakai alat AI untuk membuat bentuk geometris sederhana; baru memenuhi syarat jika ikon tetap dikenali sekali lihat setelah diperkecil di layar utama ponsel;
-- Tangkapan layar: minimal 2, sebaiknya 4-6, menampilkan skenario fitur paling inti; tiap gambar diberi satu kalimat bahasa sehari-hari ("catat satu catatan dalam sekejap" sepuluh kali lebih baik daripada "solusi pencatatan keuangan yang efisien");
-- Deskripsi: kalimat pertama harus menjelaskan "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat" — bobot pencarian toko utamanya melihat kata kunci dan konversi unduhan; kejujuran lebih efektif daripada bombastis.
+- Tangkapan layar: minimal 2, sebaiknya 4-6, menampilkan skenario fitur paling inti; tiap gambar diberi satu kalimat bahasa sehari-hari ("catat satu catatan dalam sekejap" sepuluh kali lebih baik dari,pada "solusi pencatatan keuangan yang efisien");
+- Deskripsi: kalimat pertama harus menjelaskan "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat", bobot pencarian toko utamanya melihat kata kunci dan konversi unduhan; kejujuran lebih efektif daripada bombastis
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Tips: Lihat-lihat sejawat (A/B)
 
 {class="mt-1"}
-Sebelum tayang, kelilingi sepuluh besar App sejenis di toko dan bandingkan lewat tangkapan layar: gaya ikon mereka seperti apa? Titik jual apa yang ditonjolkan tangkapan layarnya? Bagaimana judulnya ditulis? Meniru bukan mencontek — pelajari polanya, ganti dengan kontenmu sendiri; ini pelajaran tercepat untuk cold start semua produk.
+Sebelum tayang, kelilingi sepuluh besar App sejenis di toko dan bandingkan lewat tangkapan layar: gaya ikon mereka seperti apa? Titik jual apa yang ditonjolkan tangkapan layarnya? Bagaimana judulnya ditulis? Meniru bukan mencontek, pelajari polanya, ganti dengan kontenmu sendiri; ini pelajaran tercepat untuk cold start semua produk.
 :::
 
 #### 6. Daftar singkat optimasi performa dan pelaporan crash
@@ -134,10 +134,10 @@ Sebelum App tayang, dua hal ini layak masing-masing diberi setengah jam:
 
 ##### 1. Empat butir pemeriksaan performa
 
-1. Gunakan LazyColumn untuk daftar: jangan pernah menyusun daftar panjang dengan Column paksa — lazy loading adalah pelajaran pertama performa Android;
+1. Gunakan LazyColumn untuk daftar: jangan pernah menyusun daftar panjang dengan Column paksa, lazy loading adalah pelajaran pertama performa Android;
 2. Jangan memuat gambar asli mentah-mentah: pakai pustaka gambar Coil untuk memperkecil dan menyimpan cache otomatis; satu gambar asli 5MB cukup membuat ponsel kelas bawah tersendat habis;
 3. Hindari kerja berat di thread utama: database, jaringan, dan file besar kerjakan di dalam coroutine;
-4. Ukur dengan Profiler: profiler bawaan Android Studio bisa memantau memori, CPU, dan konsumsi baterai — ukur dulu, baru optimasi, jangan pakai perasaan.
+4. Ukur dengan Profiler: profiler bawaan Android Studio bisa memantau memori, CPU, dan konsumsi baterai, ukur dulu, baru optimasi, jangan pakai perasaan
 
 ##### 2. Pelaporan crash
 
@@ -148,7 +148,10 @@ Tidak crash saat kamu menguji bukan berarti tidak crash di ponsel pengguna. Sebe
 Praktik: "Serahkan" aplikasi catatan keuanganmu sekali
 
 {class="mt-1"}
-① Tambahkan 3 unit test untuk logika seperti parseAmount; ② gunakan Logcat untuk menangkap sendiri satu crash buatanmu lalu perbaiki; ③ hasilkan satu APK bertanda tangan release dan kirim ke teman untuk dipasang (di sinilah "rasa karya" terasa); ④ kalau masih ada tenaga, daftar akun pengembang dan benar-benar ajukan aplikasi catatan keuanganmu untuk tayang. Tiga butir pertama bisa selesai malam ini.
+1. Tambahkan 3 unit test untuk logika seperti parseAmount;
+2. gunakan Logcat untuk menangkap sendiri satu crash buatanmu lalu perbaiki;
+3. hasilkan satu APK bertanda tangan release dan kirim ke teman untuk dipasang (di sinilah "rasa karya" terasa);
+4. kalau masih ada tenaga, daftar akun pengembang dan benar-benar ajukan aplikasi catatan keuanganmu untuk tayang. Tiga butir pertama bisa selesai malam ini.
 :::
 
 ::: div .chapter-summary
@@ -159,5 +162,11 @@ Ringkasan bab
 - Membaca crash: dari stacktrace, cari dari bawah ke atas baris pertama yang memuat nama paketmu sendiri
 - Tiga lapis pengujian: unit (hitungan detik, pelajari ini dulu) / instrumented / manual
 - Rilis wajib ditandatangani: cadangkan baik-baik keystore dan kata sandi; hilang berarti App "berganti orang"
-- Enam langkah tayang: daftar → aset → unggah AAB → formulir keamanan data → peninjauan → tayang
+Enam langkah tayang：
+1. daftar
+2. aset
+3. unggah AAB
+4. formulir keamanan data
+5. peninjauan
+6. tayang
 :::

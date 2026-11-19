@@ -12,7 +12,7 @@ kind: chapter
 {class="chapter-intro mb-4"}
 Tahniah, anda yang membuka buku ini sedang berdiri di tengah-tengah revolusi paradigma kerjaya. Titik permulaan revolusi ini ialah satu ayat yang dihantar seorang pengaturcara di media sosial pada tahun 2025. Kedengaran agak dramatik? Tetapi itulah hakikatnya.
 
-#### 1. Kelahiran Vibe Coding: gerakan yang dicetuskan oleh satu ayat
+1. Kelahiran Vibe Coding: gerakan yang dicetuskan oleh satu ayat
 
 Pada Februari 2025, Andrej Karpathy - sila ingat nama ini dahulu, anda akan berjumpa dia beberapa kali lagi kemudian - menghantar satu twit yang kemudiannya banyak kali dipetik di media sosial: "Ada cara pengaturcaraan baharu yang dipanggil Vibe Coding, anda bergantung sepenuhnya pada perasaan (vibes), abaikan butiran kod, biarkan AI menguruskan segalanya. Apa yang anda nampak itulah yang anda katakan, salin dan tampal, asalkan boleh berfungsi."
 
@@ -28,7 +28,7 @@ Vibe secara harfiah bermaksud "suasana, perasaan". Vibe Coding ialah "mengarah A
 
 Dari saat itu, maksud perkataan "pengekodan" mula terbelah: pengekodan tradisional menterjemahkan reka bentuk kepada sintaks; pengekodan baharu menterjemahkan niat kepada arahan. Yang pertama menguji jari, yang kedua menguji otak.
 
-Perkataan Vibe Coding dengan cepat bertukar daripada gurauan kepada konsep kejuruteraan yang serius. Menjelang pertengahan 2026, ia telah berevolusi daripada satu jenaka di media sosial kepada satu sistem metodologi lengkap - merangkumi keseluruhan proses daripada penyataan keperluan, pengurusan konteks, pengesahan iteratif hingga jaminan kualiti. Orang juga sedar: "ikut perasaan" hanyalah keadaan peringkat permulaan; pengaturcaraan AI yang benar-benar cekap memerlukan cara berfikir yang tersusun. Dan cara berfikir inilah yang buku ini hendak berikan kepada anda.
+Perkataan Vibe Coding dengan cepat bertukar daripada gurauan kepada konsep kejuruteraan yang serius. Menjelang pertengahan 2026, ia telah berevolusi daripada satu jenaka di media sosial ke,pada satu sistem metodologi lengkap - merangkumi keseluruhan proses daripada penyataan keperluan, pengurusan konteks, pengesahan iteratif hingga jaminan kualiti. Orang juga sedar: "ikut perasaan" hanyalah keadaan peringkat permulaan; pengaturcaraan AI yang benar-benar cekap memerlukan cara berfikir yang tersusun. Dan cara berfikir inilah yang buku ini hendak berikan kepada anda.
 
 #### 2. Keadaan 2026: era Agentic Engineering
 
@@ -83,7 +83,7 @@ Rajah 1: Trend perubahan kadar penggunaan mod interaksi pengaturcaraan AI (angga
 
 Tetapi secara jujur: perubahan alat dan model hanyalah yang kelihatan di permukaan. Sama ada anda guna Cursor atau Claude Code, sama ada model asasnya GPT-5 atau Claude 4.5, pengamal pengaturcaraan AI yang berjaya semuanya mengikuti satu metodologi asas yang sama. Inilah yang panduan ini hendak ajarkan kepada anda.
 
-#### 3. Peralihan pemahaman teras: daripada Coder kepada Conductor
+3. Peralihan pemahaman teras: daripada Coder kepada Conductor
 
 Pendidikan pengaturcaraan tradisional mengajar anda bagaimana menjadi seorang Coder - memahami sintaks, menghafal API, menyahpepijat ralat logik. Pada era pengaturcaraan AI, peranan ini sedang ditakrifkan semula. Anda tidak lagi perlu menulis setiap baris kod dengan tangan sendiri, tetapi anda perlu menjadi seorang "konduktor" (Conductor): menentukan medan perang, membuat peraturan, membahagikan tugas, dan menerima hasil.
 
@@ -100,7 +100,7 @@ Jadual ini patut anda lihat lebih sekali - ia meringkaskan keseluruhan intipati 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan dimensi kebolehan antara Coder tradisional dan Konduktor AI
 
-Ini sama sekali bukan bermakna pengetahuan pengaturcaraan tidak penting lagi. Sebaliknya: apabila anda dapat memahami kod yang ditulis AI, barulah anda boleh menyemak dan membaikinya dengan berkesan; apabila anda memahami struktur data dan algoritma, barulah anda dapat menilai sama ada penyelesaian AI munasabah. Simpanan pengetahuan menentukan "had pengarahan" anda - tetapi peranan pengetahuan bertukar daripada "alat pelaksanaan" kepada "asas pertimbangan".
+Ini sama sekali bukan bermakna pengetahuan pengaturcaraan tidak penting lagi. Sebaliknya: apabila anda dapat memahami kod yang ditulis AI, barulah anda boleh menyemak dan membaikinya dengan berkesan; apabila anda memahami struktur data dan algoritma, barulah anda dapat menilai sama ada penyelesaian AI munasabah. Simpanan pengetahuan menentukan "had pengarahan" anda - tetapi peranan pengetahuan bertukar dari,pada "alat pelaksanaan" kepada "asas pertimbangan".
 
 #### 4. Mengapa metodologi lebih penting daripada alat
 
@@ -110,7 +110,7 @@ Alat berulang setiap tiga bulan, metodologi berevolusi setiap tiga tahun. Mengua
 
 Banyak orang apabila mula belajar pengaturcaraan AI, perkara pertama yang ditanya ialah "alat mana paling bagus" "model mana paling kuat". Soalan-soalan ini bukannya tidak penting, tetapi ia bertanya dengan keutamaan yang salah. Landskap alat pada Ogos 2026 sudah sama sekali berbeza daripada Ogos 2025 - alat seperti Trae dan Qoder berganti naik turun, Cursor bertukar daripada plugin kepada IDE berdikari lalu berevolusi ke Cursor 3, Claude Code bertukar daripada projek eksperimen kepada pilihan utama pengaturcaraan terminal. Tetapi di sebalik perubahan hebat ini, prinsip pemikiran yang diikuti pengamal yang berjaya hampir tidak berubah.
 
-Itulah sebabnya buku ini tidak akan menghabiskan halaman untuk mengajar operasi khusus sesuatu alat - kandungan sebegitu akan lapuk sebaik selesai ditulis. Sebaliknya, seluruh tumpuan buku ini diletakkan pada satu metodologi pemikiran yang telah terbukti: bagaimana memikirkan keperluan, bagaimana berkomunikasi dengan AI, bagaimana mengesahkan hasil, bagaimana mengiterasi secara berterusan. Dengan menguasai metodologi ini, anda boleh cepat mahir dengan apa-apa alat sekalipun ditukar; jika hanya belajar operasi alat, bertukar alat bermakna bermula dari sifar.
+Itulah sebabnya buku ini tidak akan menghabiskan halaman untuk mengajar operasi ,khusus sesuatu alat - kandungan sebegitu akan lapuk sebaik selesai ditulis. Sebaliknya, seluruh tumpuan buku ini diletakkan pada satu metodologi pemikiran yang telah terbukti: bagaimana memikirkan keperluan, bagaimana berkomunikasi dengan AI, bagaimana mengesahkan hasil, bagaimana mengiterasi secara berterusan. Dengan menguasai metodologi ini, anda boleh cepat mahir dengan apa-apa alat sekalipun ditukar; jika hanya belajar operasi alat, bertukar alat bermakna bermula dari sifar.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

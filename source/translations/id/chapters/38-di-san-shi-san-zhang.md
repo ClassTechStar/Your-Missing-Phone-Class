@@ -2,17 +2,17 @@
 id: di-san-shi-san-zhang
 num: 33
 part: zhan-wang-pian
-nav: Bab 33: Prospek Masa Depan — Perjalanan Berikutnya Ponsel
+nav: Bab 33: Seperti apa ponsel sepuluh tahun lagi?
 toc: default
 kind: chapter
 ---
 
-### Bab 33: Prospek Masa Depan — Perjalanan Berikutnya Ponsel
+### Bab 33: Seperti apa ponsel sepuluh tahun lagi?
 
 {class="chapter-intro mb-4"}
 Ponsel tidak akan hilang semalam, tapi "dominasi absolutnya" mungkin dialihkan oleh perangkat generasi baru. Bab ini kita bahas tiga hal: seperti apa perangkat generasi berikutnya, bagaimana ponsel "menyembunyikan diri" menjadi fondasi identitas baru, dan isu etika yang harus kita pikirkan lebih dulu.
 
-#### 1. AR/VR dan Spatial Computing: "Desktop Kedua" di Luar Ponsel
+1. AR/VR dan Spatial Computing: "Desktop Kedua" di Luar Ponsel
 
 Persaingan perangkat generasi berikutnya sudah dimulai, yang paling mungkin mengalihkan waktu ponsel adalah perangkat AR/VR dan spatial computing:
 
@@ -30,7 +30,7 @@ Pikiran itu sendiri akan menjadi media interaksi, tapi jalan ini lebih panjang d
 
 #### 3. "Menyembunyikan Diri" Ponsel dan Fondasi Identitas Baru
 
-Arah evolusi masa depan ponsel yang lain mungkin adalah "menyembunyikan diri" — berubah menjadi "dalang di balik layar" yang ada di mana-mana, menjadi satu-satunya fondasi identitas digital Anda:
+Arah evolusi masa depan ponsel yang lain mungkin adalah "menyembunyikan diri": berubah menjadi "dalang di balik layar" yang ada di mana-mana, menjadi satu-satunya fondasi identitas digital Anda:
 
 - <strong>Autentikasi dua faktor berbasis cloud</strong>: Seketika selesaikan verifikasi "Anda adalah Anda", login layanan apa pun tanpa input manual kode verifikasi.
 - <strong>Warisan digital menjadi pengaturan pabrik</strong>: Saat aktivasi ponsel baru preset skema pewarisan aset digital, membuat "urusan setelah meninggal" menjadi default pabrik.
@@ -46,7 +46,7 @@ Satu pertanyaan ultimate selalu ada: Apakah kita "dewa" yang diberdayakan teknol
 - Saat algoritma lebih paham apa yang ingin Anda lihat daripada diri Anda sendiri, seberapa banyak "suka" Anda yang spontan?
 - Saat Anda menyalakan layar tanpa sadar setiap beberapa menit, apakah ini kebiasaan Anda atau "perilaku adiktif" yang dirancang?
 
-#### 5. Tetap Terhubung, Juga Tetap Mandiri — Filosofi Kehidupan Digital Anda
+5. Tetap Terhubung, Juga Tetap Mandiri — Filosofi Kehidupan Digital Anda
 
 Apa pun teknologi berevolusi, beberapa filosofi kehidupan digital berikut, 10 tahun lagi tetap berlaku:
 

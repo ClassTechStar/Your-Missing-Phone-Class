@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十章：築開發之環境——Xcode 與第一個項目
 
 {class="chapter-intro mb-4"}
-工欲善其事，必先利其器。此章吾儕先築「庖廚」：裝成 Xcode、跑通模擬器、創人生第一個 iOS 項目，再拆工程之結構而觀之明白。環境既成，爾將初見己所書之代碼化為可點之鈕——此一瞬，多人記之終身。
+工欲善其事，必先利其器。此章吾儕先築「庖廚」：裝成 Xcode、跑通模擬器、創人生第一個 iOS 項目，再拆工程之結構而觀之明白。環境既成，爾將初見己所書之代碼化為可點之鈕，此一瞬，多人記之終身。
 
 #### 一、備 Mac 一台
 
@@ -37,16 +37,16 @@ iPad 之上免費之 Swift Playgrounds 可學 Swift 語言之基（不必 Mac）
 
 Xcode 者，蘋果官方集成開發之環境也，免費。三步裝成：
 
-1. 於 Mac 開 App Store，搜「Xcode」，點而安裝之——注意其有好幾 GB 之巨，擇網速善之時段；
-2. 裝畢首次啟動，允其協議、裝畢組件（自動而成）；
-3. 菜單 Xcode → Settings → Locations，確認 Command Line Tools 已選——命令行之器，乃多腳本與第三方之器之前提也。
+1. 於 Mac 開 App Store，搜「Xcode」，點而安裝之，注意其有好幾 GB 之巨，擇網速善之時段。
+2. 裝畢首次啟動，允其協議、裝畢組件（自動而成）。
+3. 菜單 Xcode → Settings → Locations，確認 Command Line Tools 已選：命令行之器，乃多腳本與第三方之器之前提也。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 注意：版本與系統之「匹配遊戲」
 
 {class="mt-1"}
-新 Xcode 往往須最新之 macOS，舊 Mac 則滯於舊版。上架 App Store 之時，蘋果必求以較新之 Xcode 構建（通常予一寬限之期）。故系統之更新勿拖太久——iOS 開發者乃「追新版」至勤之一群也。
+新 Xcode 往往須最新之 macOS，舊 Mac 則滯於舊版。上架 App Store 之時，蘋果必求以較新之 Xcode 構建（通常予一寬限之期）。故系統之更新勿拖太久，iOS 開發者乃「追新版」至勤之一群也。
 :::
 
 #### 三、創爾之第一個項目
@@ -62,7 +62,7 @@ Xcode 者，蘋果官方集成開發之環境也，免費。三步裝成：
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 創建項目所填之五事
 
-點 Create 之後，Xcode 將生一可徑行之項目。左上角擇模擬器一台（如 iPhone 17），點 ▶ 而運行——數秒之後，模擬器之屏現一書「Hello, world!」之窗。爾之第一個 iOS App 誕生矣。
+點 Create 之後，Xcode 將生一可徑行之項目。左上角擇模擬器一台（如 iPhone 17），點 ▶ 而運行，數秒之後，模擬器之屏現一書「Hello, world!」之窗。爾之第一個 iOS App 誕生矣。
 
 #### 四、拆工程之結構：每文件何為
 
@@ -97,9 +97,9 @@ Xcode 者，蘋果官方集成開發之環境也，免費。三步裝成：
 圖二：新手必懂之 Xcode 工程結構
 :::
 
-- MyFirstAppApp.swift：程序之入口，SwiftUI 之中惟數行——「啟之，而後示主界面」；
-- ContentView.swift：主界面之視圖，爾今所見皆在此；
-- Assets.xcassets：資源之倉——圖標、圖、色皆置於此；
+- MyFirstAppApp.swift：程序之入口，SwiftUI 之中惟數行——「啟之，而後示主界面」。
+- ContentView.swift：主界面之視圖，爾今所見皆在此。
+- Assets.xcassets：資源之倉，圖標、圖、色皆置於此。
 - Target 之設置：點左側藍色工程之圖標而入，版本之號、至低 iOS 之版本、簽名皆在其中。App 顯示之名、圖標亦於此配置。
 
 #### 五、Xcode 效率之技：新手之五「快捷鍵外掛」
@@ -121,9 +121,9 @@ Xcode 高頻快捷鍵（新手五件套）
 
 模擬器雖善，真機方為終點。以免費之 Apple ID 亦可真機調試：
 
-1. 以數據之線連 iPhone（或同 Wi-Fi 無線調試）；
-2. Xcode 頂部設備之列表擇爾之機，首次將提示登 Apple ID 而自動配置簽名；
-3. iPhone 之上［設定］→［一般］→［VPN與設備管理］→ 信爾開發者之證書；
+1. 以數據之線連 iPhone（或同 Wi-Fi 無線調試）。
+2. Xcode 頂部設備之列表擇爾之機，首次將提示登 Apple ID 而自動配置簽名。
+3. iPhone 之上［設定］→［一般］→［VPN與設備管理］→ 信爾開發者之證書。
 4. 點 ▶，App 入真機矣。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4

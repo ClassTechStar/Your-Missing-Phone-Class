@@ -2,12 +2,12 @@
 id: di-san-shi-liu-zhang
 num: 36
 part: er-tong-pian
-nav: Kapitel 36:Handy und Smart Home – das Zuhause cleverer machen
+nav: Kapitel 36: Alle Geräte im Haus verbinden
 toc: default
 kind: chapter
 ---
 
-### Kapitel 36: Smartphone und Smart Home – das Zuhause wird clever
+### Kapitel 36: Alle Geräte im Haus verbinden
 
 {class="chapter-intro mb-4"}
 Das Smartphone übernimmt eine immer wichtigere Rolle: die Fernbedienung für das ganze Haus. Von Lampe und Steckdose bis zur Türschloss-Sperre wird Smart Home vom „Spielzeug für Nerds“ zur „Haushaltsausstattung“. Dieses Kapitel ordnet Protokolle, Ökosysteme, Zentraleinheiten und Einsteiger-Sets und schließt mit einer Sicherheitsliste ab, damit Sie nicht selbst zum Opfer der „Intelligenz“ werden.

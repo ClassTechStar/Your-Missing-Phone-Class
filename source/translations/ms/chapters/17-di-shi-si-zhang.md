@@ -22,8 +22,8 @@ Kata laluan utama
 
 1. <strong>Isi automatik</strong>: Pada antara muka log masuk laman web atau App, pengurus kata laluan automatik isi kata laluan akaun.
 2. <strong>Jana kata laluan</strong>: Boleh jana kata laluan rawak, kompleks, tingkatkan keselamatan.
-3. <strong>3. Cadangan pengurus kata laluan utama</strong> Terbina dalam sistem:
-4. <strong>iCloud Keychain</strong>: Pilihan utama pengguna ekosistem Apple. Integrasi tanpa jurang dengan Safari, App, percuma, selamat. Kekurangannya penggunaan merentas platform tak senang.
+3. <strong>3. Cadangan pengurus kata laluan utama</strong> Terbina dalam sistem:.
+4. <strong>iCloud Keychain</strong>: Pilihan utama pengguna ekosistem Apple. Integrasi tanpa jurang dengan Safari. App, percuma, selamat. Kekurangannya penggunaan merentas platform tak senang.
 
 #### III. Pengenalan prinsip penyulitan
 
@@ -31,7 +31,7 @@ Fahami prinsip penyulitan pengurus kata laluan, boleh bantu anda tentukan sama a
 
 ##### 1. Penyulitan AES-256
 
-AES (Advanced Encryption Standard) adalah algoritma penyulitan simetri yang diiktiraf oleh NIST (Institut Standard dan Teknologi Kebangsaan AS), digunakan secara meluas oleh bank, tentera, kerajaan. "256" merujuk panjang kunci 256 bit — secara teori perlu masa melebihi umur alam semesta untuk pecah secara paksa. Pengurus kata laluan utama (1Password, Bitwarden, KeePass dll) semua guna AES-256 untuk menyulitkan perpustakaan kata laluan anda.
+AES (Advanced Encryption Standard) adalah algoritma penyulitan simetri yang diiktiraf oleh NIST (Institut Standard dan Teknologi Kebangsaan AS), digunakan secara meluas oleh bank, tentera, kerajaan. "256" merujuk panjang kunci 256 bit, secara teori perlu masa melebihi umur alam semesta untuk pecah secara paksa. Pengurus kata laluan utama (1Password, Bitwarden, KeePass dll) semua guna AES-256 untuk menyulitkan perpustakaan kata laluan anda.
 
 ##### 2. Senibina pengetahuan sifar (Zero-Knowledge Architecture)
 
@@ -42,22 +42,22 @@ AES (Advanced Encryption Standard) adalah algoritma penyulitan simetri yang diik
 3. Hanya teks tersulit sahaja dimuat naik ke pelayan.
 4. Log masuk seterusnya, pelayan hantar teks tersulit, klien guna kata laluan utama penyahsulit semula.
 
-Perkara utama:<strong>Kata laluan utama tidak pernah meninggalkan peranti anda</strong>, pelayan juga tiada. Jadi walaupun pembekal dihack, hacker dapat hanya teks tersulit yang tidak boleh disahsulit — kecuali mereka boleh teka kata laluan utama anda.
+Perkara utama:<strong>Kata laluan utama tidak pernah meninggalkan peranti anda</strong>, pelayan juga tiada. Jadi walaupun pembekal dihack, hacker dapat hanya teks tersulit yang tidak boleh disahsulit, kecuali mereka boleh teka kata laluan utama anda.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
 <i class="fas fa-lightbulb mr-2"></i>Mengapa "pengetahuan sifar" bermakna pembekal juga tidak nampak kata laluan anda?
 
 {class="mt-1"}
-Kerana kunci penyahsulit diterbitkan dari kata laluan utama anda, manakala kata laluan utama hanya wujud dalam fikiran anda, hanya diguna pada peranti tempatan. Pelayan pembekal tiada kata laluan utama, tiada kunci penyahsulit, hanya teks tersulit. Inilah sebabnya Bitwarden, 1Password dll pembekal sah semuanya nyatakan "kami juga tidak boleh nampak kata laluan anda" — bukan mereka tidak mahu nampak, tetapi secara teknikal tidak boleh.
+Kerana kunci penyahsulit diterbitkan dari kata laluan utama anda, manakala kata laluan utama hanya wujud dalam fikiran anda, hanya diguna pada peranti tempatan. Pelayan pembekal tiada kata laluan utama, tiada kunci penyahsulit, hanya teks tersulit. Inilah sebabnya Bitwarden, 1Password dll pembekal sah semuanya nyatakan "kami juga tidak boleh nampak kata laluan anda", bukan mereka tidak mahu nampak, tetapi secara teknikal tidak boleh.
 :::
 
 ##### 3. Fungsi terbitan kunci: PBKDF2 dan Argon2
 
-Kata laluan utama tidak boleh diguna terus sebagai kunci penyulitan — ia perlu melalui "fungsi terbitan kunci". Fungsi ini bertujuan <strong>Sengaja buat pengiraan perlahan</strong>, buat kos pecah paksa hacker terlalu tinggi untuk praktikal.
+Kata laluan utama tidak boleh diguna terus sebagai kunci penyulitan, ia perlu melalui "fungsi terbitan kunci". Fungsi ini bertujuan <strong>Sengaja buat pengiraan perlahan</strong>, buat kos pecah paksa hacker terlalu tinggi untuk praktikal.
 
 - <strong>PBKDF2</strong>: Standard lama, diguna secara meluas oleh iCloud Keychain, Bitwarden, LastPass dll. Melalui iterasi berulang (biasanya 100,000 kali ke atas) hash untuk melambatkan pecah.
-- <strong>Argon2</strong>: Juara pertandingan hash kata laluan 2015, lebih moden daripada PBKDF2. Selain "penggunaan kuasa pengiraan" juga perkenalkan "penggunaan memori" — buat GPU/ASIC dll perkakasan khas juga susah pecah. Bitwarden, KeePassXC dll telah menyokong.
+- <strong>Argon2</strong>: Juara pertandingan hash kata laluan 2015, lebih moden daripada PBKDF2. Selain "penggunaan kuasa pengiraan" juga perkenalkan "penggunaan memori", buat GPU/ASIC dll perkakasan khas juga susah pecah. Bitwarden, KeePassXC dll telah menyokong.
 
 Bilangan iterasi lebih tinggi lebih selamat, tetapi kelajuan buka kunci juga lebih perlahan. Pembekal sah akan umumkan algoritma terbitan dan bilangan iterasi, untuk audit komuniti keselamatan.
 
@@ -65,7 +65,7 @@ Bilangan iterasi lebih tinggi lebih selamat, tetapi kelajuan buka kunci juga leb
 
 Ogos 2022, pengurus kata laluan lama LastPass umumkan persekitaran pembangunannya diceroboh; November tahun sama mendedahkan, hacker ambil sandaran perpustakaan kata laluan pengguna (teks tersulit). Pengajaran utama:
 
-- <strong>Senibina pengetahuan sifar pertahankan garis asas</strong>: Kerana perpustakaan kata laluan itu sendiri tersulit, hacker dapat teks tersulit tetapi tidak boleh nyahsulit — syaratnya kata laluan utama pengguna cukup kuat.
+- <strong>Senibina pengetahuan sifar pertahankan garis asas</strong>: Kerana perpustakaan kata laluan itu sendiri tersulit, hacker dapat teks tersulit tetapi tidak boleh nyahsulit, syaratnya kata laluan utama pengguna cukup kuat.
 - <strong>Pengguna kata laluan utama lemah paling bahaya</strong>: Hacker boleh pecah paksa luar talian kata laluan utama lemah, jadi pengguna kata laluan utama lemah atau berulang menghadapi risiko sebenar.
 - <strong>Metadata juga bocor</strong>: Walaupun kandungan kata laluan tersulit, tetapi URL laman, nota dll metadata mungkin tidak tersulit, akan dedahkan perkhidmatan mana pengguna guna.
 
@@ -74,14 +74,14 @@ Ogos 2022, pengurus kata laluan lama LastPass umumkan persekitaran pembangunanny
 <i class="fas fa-exclamation-triangle mr-2"></i>Belajaran dari LastPass
 
 {class="mt-1"}
-Pertama, kata laluan utama mesti panjang dan unik (disyorkan 16 karakter ke atas, termasuk huruf besar/kecil, nombor, simbol); Kedua, utamakan pembekal yang menyokong Argon2id, bilangan iterasi tinggi; Ketiga, akaun nilai tinggi (bank, e-mel) mesti aktifkan pengesahan kedua berasingan, jangan hanya bergantung pengurus kata laluan.
+Pertama, kata laluan utama mesti panjang dan unik (disyorkan 16 karakter ke atas, termasuk huruf besar/kecil, nombor, simbol); Kedua, utamakan pembekal yang menyokong Argon2id. bilangan iterasi tinggi; Ketiga, akaun nilai tinggi (bank, e-mel) mesti aktifkan pengesahan kedua berasingan, jangan hanya bergantung pengurus kata laluan.
 :::
 
 #### IV. Cadangan pengurus kata laluan utama
 
 ##### : Senang untuk pengguna Android. Integrasi dengan Chrome, sistem Android, percuma.
 
-- <strong>Huawei Password Vault</strong>: Terbina dalam sistem HarmonyOS, sesuai untuk pengguna Huawei.
+- <strong>Huawei Password Vault</strong>: Terbina dalam sistem HarmonyOS, sesuai untuk pengguna Huawei
 - <strong>Alat profesional pihak ketiga:</strong> Bitwarden
 - <strong>: Sumber terbuka percuma, fungsi kuat, menyokong semua platform. Sangat dicadangkan untuk pengguna yang mengutamakan privasi.</strong>1Password
 
@@ -112,7 +112,7 @@ Kesimpulan:<strong>"Panjang + rawak" lebih penting daripada "simbol kompleks"</s
 Diselenggara oleh penyelidik keselamatan Troy Hunt <a href="https://haveibeenpwned.com" class="text-primary hover:underline" target="_blank" rel="noopener">haveibeenpwned.com</a> Mengandungi akaun dan kata laluan yang bocor dalam kebocoran data besar lepas. Anda boleh:
 
 1. Masukkan e-mel, semak akaun anda sama ada terdedah dalam kebocoran tertentu.
-2. Guna fungsi Pwned Passwords semak kata laluan sama ada dalam pangkalan data bocor diketahui (pengurus kata laluan dan browser telah terbina dalam pertanyaan ini).
+2. Guna fungsi Pwned Passwords semak kata laluan sama ada dalam pangkalan data bocor ,diketahui (pengurus kata laluan dan browser telah terbina dalam pertanyaan ini).
 
 Jika kata laluan muncul dalam pangkalan data bocor,<strong>tidak kira nampak betapa kompleks mesti tukar serta-merta</strong>— kerana serangan kamus akan utamakan kata laluan diketahui ini.
 
@@ -144,7 +144,7 @@ Bimbang masukkan kata laluan di HaveIBeenPwned akan bocor lagi? Jangan bimbang. 
 
 #### VI. Passkey: Login tanpa kata laluan masa depan
 
-2024-2026, teknologi kata laluan sedang mengalami revolusi —<strong>Passkey (kunci laluan)</strong> berpotensi ganti sepenuhnya kata laluan tradisional. Apple, Google, Microsoft tiga platform utama bersama dorong, disokong oleh FIDO Alliance dan W3C, ini perubahan cara login terbesar dalam beberapa dekad.
+2024-2026, teknologi kata laluan sedang mengalami revolusi<strong>Passkey (kunci laluan)</strong> berpotensi ganti sepenuhnya kata laluan tradisional. Apple, Google, Microsoft tiga platform utama bersama dorong, disokong oleh FIDO Alliance dan W3C, ini perubahan cara login terbesar dalam beberapa dekad.
 
 ##### 1. Apakah Passkey?
 
@@ -203,7 +203,7 @@ Passkey berasaskan standard FIDO2 / WebAuthn, guna <strong>Pasangan kunci pada p
 <i class="fas fa-lightbulb mr-2"></i>Segerak merentas peranti adalah pencapaian utama
 
 {class="mt-1"}
-Masalah terbesar Passkey awal adalah "terikat satu peranti" — tukar telefon perlu cipta semula. Sejak 2023 Apple, Google, Microsoft capai segerak awan Passkey: iCloud Keychain segerak merentas Apple, Google Password Manager segerak merentas Android. 1Password dll pihak ketiga pula hubungkan segerak merentas ekosistem. Ini bermakna Passkey telah ada kepraktikal untuk ganti kata laluan.
+Masalah terbesar Passkey awal adalah "terikat satu peranti": tukar telefon perlu cipta semula. Sejak 2023 Apple, Google, Microsoft capai segerak awan Passkey: iCloud Keychain segerak merentas Apple, Google Password Manager segerak merentas Android. 1Password dll pihak ketiga pula hubungkan segerak merentas ekosistem. Ini bermakna Passkey telah ada kepraktikal untuk ganti kata laluan.
 :::
 
 ##### 4. Cara cipta dan guna Passkey pada telefon
@@ -250,12 +250,12 @@ Proses ini melalui komunikasi penyulitan dwi Bluetooth+Internet, kunci peribadi 
 <i class="fas fa-exclamation-triangle mr-2"></i>Cadangan peralihan
 
 {class="mt-1"}
-Passkey belum ganti sepenuhnya kata laluan — banyak laman masih dalam fasa "Passkey + kata laluan" wujud serentak. Cadangan: akaun nilai tinggi utamakan aktifkan Passkey, tetapi <strong>jangan terus padam kata laluan tradisional</strong>, kekal sebagai sandaran; pada masa yang sama terus guna pengurus kata laluan, kerana tidak semua laman sokong Passkey. Anggap Passkey sebagai "tambahan kuat pengurus kata laluan" bukan "ganti serta-merta".
+Passkey belum ganti sepenuhnya kata laluan, banyak laman masih dalam fasa "Passkey + kata laluan" wujud serentak. Cadangan: akaun nilai tinggi utamakan aktifkan Passkey, tetapi <strong>jangan terus padam kata laluan tradisional</strong>, kekal sebagai sandaran; pada masa yang sama terus guna pengurus kata laluan, kerana tidak semua laman sokong Passkey. Anggap Passkey sebagai "tambahan kuat pengurus kata laluan" bukan "ganti serta-merta".
 :::
 
 #### VII. Kunci keselamatan perkakasan
 
-Jika keperluan keselamatan anda lebih tinggi daripada pengguna biasa — contoh pegang jumlah besar cryptocurrency, adalah eksekutif/wartulis/aktivis, atau lindungi akaun teras entreprise — kunci keselamatan perkakasan adalah pilihan lebih boleh dipercayai daripada SMS pengesahan.
+Jika keperluan keselamatan anda lebih tinggi daripada pengguna biasa: contoh pegang jumlah besar cryptocurrency, adalah eksekutif/wartulis/aktivis, atau lindungi akaun teras entreprise, kunci keselamatan perkakasan adalah pilihan lebih boleh dipercayai daripada SMS pengesahan.
 
 ##### 1. Apakah kunci keselamatan perkakasan?
 
@@ -277,7 +277,7 @@ Kunci perkakasan adalah peranti fizikal (rupa flash drive), cip keselamatan dala
 
 - Akaun bursa cryptocurrency, pemulihan dompet.
 - SSO entreprise, VPN kerja jauh, SSH log masuk pelayan.
-- E-mel, GitHub, media sosial dll "akaun utama" — sekali ceroboh boleh reset semua akaun lain.
+- E-mel, GitHub, media sosial dll "akaun utama", sekali ceroboh boleh reset semua akaun lain.
 - Wartawan, peguam, eksekutif dll orang sensitif tinggi.
 
 ##### 4. Cara konfigur kunci perkakasan sebagai pengesahan kedua
@@ -311,7 +311,7 @@ Mesti beli dari kedai rasmi atau ejen sah, jangan beli kunci terpakai atau sumbe
 
 #### VIII. Perkongsian kata laluan keluarga/pasukan
 
-Dalam senario keluarga, Netflix, WiFi rumah, router backend, kunci pintar perlu berkongsi keluarga; senario pasukan, pelayan, pangkalan data, akaun media sosial perlu kerjasama berbilang orang.<strong>Hantar kata laluan melalui WeChat, tulis dalam dokumen kongsi adalah amalan berisiko tinggi</strong>— sekali rekod sembang atau kebenaran dokumen bocor, kata laluan bocor.
+Dalam senario keluarga, Netflix, WiFi rumah, router backend, kunci pintar perlu berkongsi keluarga; senario pasukan, pelayan, pangkalan data. akaun media sosial perlu kerjasama berbilang orang.<strong>Hantar kata laluan melalui WeChat, tulis dalam dokumen kongsi adalah amalan berisiko tinggi</strong>— sekali rekod sembang atau kebenaran dokumen bocor, kata laluan bocor.
 
 ##### 1. "Vault kongsi" 1Password
 
@@ -339,19 +339,19 @@ Versi percuma Bitwarden sokong perkongsian kata laluan peribadi (melalui fungsi 
 <i class="fas fa-lightbulb mr-2"></i>Nilai untuk wang 1Password Families
 
 {class="mt-1"}
-1Password Families kira-kira $4.99/bulan, sokong maksimum 5 ahli keluarga, setiap orang ada vault peribadi berasingan + 4 vault kongsi. Kira-kira kurang $1/bulan setiap orang, adalah skim perkongsian keluarga pengalaman terbaik sekarang. Bitwarden versi keluarga $10/tahun sokong 6 orang, nilai untuk wang lebih tinggi, tetapi pengalaman antara muka sedikit kurang.
+1Password Families kira-kira $4.99/bulan, sokong maksimum 5 ahli keluarga, setiap orang ada vault peribadi berasingan + 4 vault kongsi. Kira-kira kurang $1/bulan setiap orang. adalah skim perkongsian keluarga pengalaman terbaik sekarang. Bitwarden versi keluarga $10/tahun sokong 6 orang, nilai untuk wang lebih tinggi, tetapi pengalaman antara muka sedikit kurang.
 :::
 
 ##### 4. Senario pasukan: Perkongsian kata laluan pelayan/pangkalan data
 
 - <strong>1Password Teams / Business</strong>: Boleh cipta berbilang vault mengikut jabatan, kumpulan projek, kawalan kebenaran butiran, semua tingkah laku akses boleh diaudit.
 - <strong>Bitwarden Teams / Enterprise</strong>: Skim sumber terbuka, boleh self-hosted, versi entreprise sokong integrasi SSO, segerak direktori.
-- <strong>Prinsip pemisahan tanggungjawab</strong>: Kata laluan pentadbir tidak patut hanya satu orang pegang — tetapkan 2-3 "contact emergency", pastikan perniagaan tidak terputus apabila personel kunci bertugas/bercuti.
+- <strong>Prinsip pemisahan tanggungjawab</strong>: Kata laluan pentadbir tidak patut hanya satu orang pegang, tetapkan 2-3 "contact emergency", pastikan perniagaan tidak terputus apabila personel kunci bertugas/bercuti.
 - <strong>Proses peletakan jawatan</strong>: Apabila peletakan jawatan, serta-merta tarik balik kebenaran pengurus kata laluan, perlu pusing semua kata laluan sensitif tinggi yang dia sentuh.
 
 ##### 5. Akses Kecemasan (Emergency Access): Jika anda ada masalah
 
-Bayangkan senario: Anda urus sendiri semua akaun penting keluarga, tetapi kemalangan masuk hospital atau meninggal, keluarga tidak boleh log masuk bank, e-mel, akaun insurans.<strong>Fungsi "Akses Kecemasan"</strong> direka untuk ini — benarkan keluarga/rakan dipercayai, apabila anda tidak boleh respons, dapat perpustakaan kata laluan anda.
+Bayangkan senario: Anda urus sendiri semua akaun penting keluarga, tetapi kemalangan masuk hospital atau meninggal, keluarga tidak boleh log masuk bank, e-mel, akaun insurans.<strong>Fungsi "Akses Kecemasan"</strong> direka untuk ini: benarkan keluarga/rakan dipercayai, apabila anda tidak boleh respons, dapat perpustakaan kata laluan anda.
 
 <strong>Tetapan akses kecemasan Bitwarden:</strong>
 
@@ -363,7 +363,7 @@ Bayangkan senario: Anda urus sendiri semua akaun penting keluarga, tetapi kemala
 
 <strong>Akses kecemasan 1Password:</strong>
 
-1. 1Password tidak terus panggil "akses kecemasan", tetapi melalui fungsi "organisasi keluarga/pasukan" boleh capai — masukkan keluarga ke versi keluarga, letak sebahagian item ke "vault kongsi".
+1. 1Password tidak terus panggil "akses kecemasan", tetapi melalui fungsi "organisasi keluarga/pasukan" boleh capai, masukkan keluarga ke versi keluarga, letak sebahagian item ke "vault kongsi".
 2. Untuk pengguna versi peribadi, disyorkan beritahu kata laluan utama kepada keluarga yang sangat dipercayai, atau tulis dalam sampul dimeterai simpan di safe.
 3. 1Password juga sediakan "recovery code", apabila aktifkan dwi-faktor mesti cetak simpan.
 
@@ -400,8 +400,8 @@ Import kata laluan sedia ada (jika ada) atau mula tambah kata laluan baharu.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Semak laporan audit keselamatan, cari kata laluan yang perlu diperbaiki.
-2. III. Bahagian Lanjutan (Bab 15-20)
+2. III. Bahagian Lanjutan (Bab 15-20).
 3. Selepas menguasai asas dan aplikasi perisian, mari kita terokai fungsi lanjutan telefon pintar dengan lebih mendalam. Kandungan ini akan membantu anda menjadi pakar telefon pintar sejati, malah membuka kunci beberapa "kemahiran tersembunyi".
-4. Bab 15: Sains Bateri &amp; Pengoptimuman Ketahanan
+4. Bab 15: Sains Bateri &amp; Pengoptimuman Ketahanan.
 5. Bateri ialah "jantung tenaga" telefon pintar anda. Bab ini membantu anda memahami perangai bateri, belajar teknik cas dan ketahanan secara saintifik, dan mengucapkan selamat tinggal kepada kebimbangan paras bateri.
 :::

@@ -2,15 +2,15 @@
 id: di-er-shi-jiu-zhang
 num: 29
 part: shi-zhan-pian
-nav: Capitolo 29: Benessere digitale — Costruire un rapporto sano con lo smartphone
+nav: Capitolo 29: Quanto tempo usi davvero il telefono?
 toc: default
 kind: chapter
 ---
 
-### Capitolo 29: Salute digitale — Costruire una relazione sana con il telefono
+### Capitolo 29: Quanto tempo usi davvero il telefono?
 
 {class="chapter-intro mb-4"}
-Ti è mai capitato: volevi scorrere i brevi video per 5 minuti e, alzando lo sguardo, sono passate due ore? O scrollare a letto la sera, sempre più sveglio, e addormentarti solo alle due di notte? Il telefono ha cambiato la nostra vita, ma sta anche divorando il nostro tempo e la nostra salute, silenziosamente. Questo capitolo non ti chiede di "smettere", ma di riprendere il controllo del telefono.
+Ti è mai capitato: volevi scorrere i brevi video per 5 minuti. Alzando lo sguardo, sono passate due ore? O scrollare a letto la sera, sempre più sveglio, e addormentarti solo alle due di notte? Il telefono ha cambiato la nostra vita, ma sta anche divorando il nostro tempo e la nostra salute, silenziosamente. Questo capitolo non ti chiede di "smettere", ma di riprendere il controllo del telefono.
 
 #### 1. Guarda il tuo "tempo schermo" — i numeri fanno riflettere
 
@@ -21,7 +21,7 @@ Prima di cambiare, capisci la situazione attuale. Nel telefono c'è una funzione
 
 <strong>L'80% di chi lo guarda per la prima volta resta scioccato</strong>. Un amico, dopo averlo visto, ha scoperto di passare oltre 4 ore al giorno su Douyin: 28 ore a settimana, come un part-time. Questo "shock numerico" è il primo passo del cambiamento.
 
-#### 2. Imposta un "limite di utilizzo" per le App — un limitatore per te stesso
+2. Imposta un "limite di utilizzo" per le App — un limitatore per te stesso
 
 Una volta capito il problema, puoi impostare limiti mirati. Non serve disinstallare tutto, basta dare a ciascuna App una "quota giornaliera":
 
@@ -29,15 +29,15 @@ Una volta capito il problema, puoi impostare limiti mirati. Non serve disinstall
 2. <strong>Android</strong>: Impostazioni > Benessere digitale > Timer app. Seleziona l'App e imposta il limite giornaliero; allo scadere, l'icona diventa grigia.
 3. <strong>Suggerimento</strong>: imposta una password di limite che non usi di frequente e non facile da ricordare. Se è troppo facile, non potrai fare a meno di "prorogare" ogni volta, e il limite diventa inutile.
 
-#### 3. L'uso corretto della "Modalità non disturbare" — non spegne le notifiche, spegne l'ansia
+3. L'uso corretto della "Modalità non disturbare" — non spegne le notifiche, spegne l'ansia
 
 Il telefono di molti suona decine di volte al giorno, e ogni trillo interrompe l'attenzione. Pensi di "dare solo un'occhiata", ma ogni interruzione richiede 15-20 minuti per riprendere la concentrazione. La modalità non disturbare non ti "isola", ma ti aiuta a riprendere il controllo dell'attenzione.
 
 - <strong>Attivazione programmata</strong>: imposta la modalità non disturbare dalle 22:00 alle 7:00. Così a letto una notifica spam non ti sveglia.
 - <strong>Consenti alle chiamate importanti di passare</strong>: nelle impostazioni, metti "Chiamate consentite" su "Contatti preferiti" o "Chiamate ripetute" (una seconda chiamata entro 3 minuti squilla). Così non perdi le emergenze dei familiari, ma non sei disturbato dai call center.
-- <strong>Modalità concentrata per il lavoro</strong>: la "Modalità concentrazione" di iPhone permette di creare scenari personalizzati — ad esempio "Lavoro" consente solo le notifiche delle App lavorative, "Lettura" le silenzia tutte.
+- <strong>Modalità concentrata per il lavoro</strong>: la "Modalità concentrazione" di iPhone permette di creare scenari personalizzati, ad esempio "Lavoro" consente solo le notifiche delle App lavorative, "Lettura" le silenzia tutte.
 
-#### 4. La salute degli occhi non dipende da un'App ma dalle abitudini — la regola 20-20-20
+4. La salute degli occhi non dipende da un'App ma dalle abitudini — la regola 20-20-20
 
 A lungo andare sullo schermo, gli occhi si seccano e si stancano. La modalità di protezione occhi (filtro luce blu) aiuta, ma ciò che conta davvero è cambiare abitudini visive:
 
@@ -58,15 +58,15 @@ Ogni <strong>20 minuti</strong> di schermo, sposta lo sguardo a <strong>20 piedi
 Quando chini la testa sul telefono, il collo sopporta una pressione 5-6 volte quella normale. A lungo andare la curva cervicale si raddrizza, compaiono osteofiti, vertigini e formicolii alle mani. Ecco alcune semplici abitudini per migliorare:
 
 - <strong>Alza il telefono</strong>: cerca di tenerlo all'altezza degli occhi, invece di guardarlo in grembo. Il braccio si stanca, ma il collo ringrazia.
-- <strong>Ogni 30 minuti muovi il collo</strong>: gira piano la testa a sinistra fino in fondo, fermati 3 secondi, torna al centro; poi a destra, 3 secondi. Ripeti 5 volte. Quindi fai l'esercizio del carattere 米 — scrivi con il mento nell'aria il carattere cinese 米 ("riso").
+- <strong>Ogni 30 minuti muovi il collo</strong>: gira piano la testa a sinistra fino in fondo, fermati 3 secondi, torna al centro; poi a destra, 3 secondi. Ripeti 5 volte. Quindi fai l'esercizio del carattere 米, scrivi con il mento nell'aria il carattere cinese 米 ("riso").
 - <strong>Stai in piedi al muro 3 minuti</strong>: nuca, scapole, glutei e talloni contro il muro, 3 minuti al giorno: corregge efficacemente la postura curva.
 
-#### 6. Sonno e telefono — l'abitudine da cambiare in camera da letto
+6. Sonno e telefono — l'abitudine da cambiare in camera da letto
 
 La luce blu dello schermo inibisce la melatonina, rendendoti "sempre più sveglio". Molti pensano "guardando guardando mi addormento", in realtà la luce blu inganna il cervello e, una volta posato il telefono, non riesci a dormire. Ecco alcuni consigli:
 
 - <strong>Un'ora prima di dormire, niente telefono</strong>: il consiglio più efficace e più difficile. Se non ci riesci, attiva almeno "Night Shift / modalità protezione occhi" per ridurre al minimo la luce blu.
-- <strong>Telefono fuori portata</strong>: metti il caricabatterie dall'altra parte della camera, non sul comodino. Così eviti di prenderlo per scorrere e, quando suona la sveglia, devi alzarti per spegnerla — due piccioni con una fava.
+- <strong>Telefono fuori portata</strong>: metti il caricabatterie dall'altra parte della camera, non sul comodino. Così eviti di prenderlo per scorrere e, quando suona la sveglia, devi alzarti per spegnerla: due piccioni con una fava.
 - <strong>Attiva la "modalità sonno"</strong>: la "modalità concentrazione Sonno" di iPhone blocca lo schermo e semplifica la schermata di blocco durante le ore di sonno; anche Android ha funzioni simili.
 - <strong>Usa una sveglia, non il telefono</strong>: compra una sveglia da pochi euro, non usare il telefono: scoprirai che senza lo "sguardo all'ora e poi una scrollata" dormirai meglio.
 
@@ -75,7 +75,7 @@ La luce blu dello schermo inibisce la melatonina, rendendoti "sempre più svegli
 La quantità di informazioni che riceviamo ogni giorno equivale a quella che un antico riceveva in una vita. Ma il nostro cervello non è progettato per tanto: l'overload informativo genera ansia, dispersione dell'attenzione, affaticamento decisionale. La soluzione non è "ottenere di più", ma "schermare attivamente":
 
 - <strong>Smetti di seguire</strong>: apri la lista degli account pubblici, degli UPzhu, dei blogger che segui e chiediti: "Nell'ultimo mese ho ottenuto un valore reale da loro?" Se no, smetti di seguirli. Le fonti contano per qualità, non quantità.
-- <strong>Disattiva le notifiche non necessarie</strong>: oltre a WeChat, telefono, SMS, calendario, disattiva le notifiche di tutte le altre App. Le notizie non servono push — quando le vai a cercare, le vedi.
+- <strong>Disattiva le notifiche non necessarie</strong>: oltre a WeChat, telefono, SMS, calendario, disattiva le notifiche di tutte le altre App. Le notizie non servono push, quando le vai a cercare, le vedi.
 - <strong>Istituisci una "giornata di digiuno informativo"</strong>: scegli un giorno a settimana (es. domenica), senza notizie sul telefono né brevi video. Scoprirai che il cielo non cade, e lunedì starai molto meglio.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -88,7 +88,7 @@ La quantità di informazioni che riceviamo ogni giorno equivale a quella che un 
 3. Dopodomani: programma la modalità non disturbare (22:00-07:00), con i contatti preferiti consentiti.
 4. Quarto giorno: niente telefono per un'ora prima di dormire, caricabatterie dall'altra parte della camera.
 5. Quinto giorno: smetti di seguire 5 account o blogger che non guardi più.
-6. Sesto giorno: prova una giornata intera di "digiuno informativo" — senza notizie né brevi video.
+6. Sesto giorno: prova una giornata intera di "digiuno informativo": senza notizie né brevi video.
 7. Settimo giorno: guarda il report del Tempo di utilizzo della settimana e confrontalo con quella precedente.
 :::
 

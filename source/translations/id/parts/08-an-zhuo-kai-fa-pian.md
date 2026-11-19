@@ -10,7 +10,7 @@ class: mb-12
 ## 8. Bagian Praktik Pengembangan Android (Bab 48-58)
 
 {class="chapter-intro mb-4"}
-Bagian ketujuh sudah mengajarkanmu memimpin AI menulis kode; kini kita turunkan ilmu itu ke dunia Android: mulai dari mengenal Android, memasang Android Studio, lalu Kotlin dan Jetpack Compose, sampai dua proyek lengkap dan rilis ke Google Play. Sepanjang jalan tidak butuh Mac—Windows saja cukup. Lewati 11 bab ini, dan kamu bisa membuat aplikasi sungguhan yang terpasang di ponsel tiga ratus juta orang.
+Bagian ketujuh sudah mengajarkanmu memimpin AI menulis kode; kini kita turunkan ilmu itu ke dunia Android: mulai dari mengenal Android, memasang Android Studio, lalu Kotlin dan Jetpack Compose, sampai dua proyek lengkap dan rilis ke Google Play. Sepanjang jalan tidak butuh Mac:Windows saja cukup. Lewati 11 bab ini, dan kamu bisa membuat aplikasi sungguhan yang terpasang di ponsel tiga ratus juta orang.
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
