@@ -280,14 +280,31 @@ def main():
         f = dest / rel
         if not f.is_file():
             continue
-        m = re.search(r'<link rel="canonical" href="([^"]+)"',
-                      f.read_text(encoding='utf-8'))
-        got = m.group(1) if m else ''
-        if got != canon_root:
-            canon_bad.append(f'{rel}: canonical={got or "(缺失)"} 应为 {canon_root}')
+        h = f.read_text(encoding='utf-8')
+        tags = re.findall(r'<link rel="canonical" href="([^"]+)"', h)
+        if len(tags) != 1:
+            canon_bad.append(f'{rel}: canonical 有 {len(tags)} 个（必须恰好 1 个）')
+        elif tags[0] != canon_root:
+            canon_bad.append(f'{rel}: canonical={tags[0]} 应为 {canon_root}')
+    # 分章页：每页恰好一个 canonical，且指向自己
+    # （书页 head 里的 canonical 会被分章页继承，不清掉就会有两个，
+    #   搜索引擎取第一个 —— 121 个章节页全被判成站点根的副本）
+    split_dir = dest / 'v1.9' / 'zh-CN'
+    n_checked = 0
+    for f in sorted(split_dir.glob('*.html')):
+        h = f.read_text(encoding='utf-8')
+        tags = re.findall(r'<link rel="canonical" href="([^"]+)"', h)
+        want = site_base() + '/v1.9/zh-CN/' + f.name
+        if len(tags) != 1:
+            canon_bad.append(f'v1.9/zh-CN/{f.name}: canonical 有 {len(tags)} 个')
+        elif tags[0] != want:
+            canon_bad.append(f'v1.9/zh-CN/{f.name}: canonical={tags[0]} 应为 {want}')
+        n_checked += 1
     if canon_bad:
-        print('!! canonical 不统一：\n   ' + '\n   '.join(canon_bad))
+        print('!! canonical 不统一：\n   ' + '\n   '.join(canon_bad[:10])
+              + (f'\n   …共 {len(canon_bad)} 处' if len(canon_bad) > 10 else ''))
         return 1
+    print(f'[canonical] 站点根与单文件书页 → {canon_root}；分章页 {n_checked} 页各自指向自己')
 
     # 自检 6：站点上的题库必须与站点发布的书同版，且章节 id 在书页里存在
     # （站点实供的语言必须对齐；其他语言的题库按各自版本对齐，但章节 id

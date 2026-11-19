@@ -26,6 +26,7 @@ PAGE_BUDGET = {"max_html_kb": 300, "max_dom_tags": 5000}
 
 RE_TITLE = re.compile(r'<title>[\s\S]*?</title>')
 RE_HREF = re.compile(r'href="#([\w:.-]+)"')
+RE_CANONICAL = re.compile(r'\s*<link rel="canonical"[^>]*>')
 RE_STYLE = re.compile(r'<style[\s\S]*?</style>')
 RE_SCRIPT = re.compile(r'<script(?![^>]*\bsrc=)[^>]*>[\s\S]*?</script>')
 RE_SCRIPT_BODY = re.compile(r'<script[^>]*>([\s\S]*?)</script>')
@@ -153,6 +154,11 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     top_start = head.find('</nav>', top_start)
     top_start = (top_start + len('</nav>')) if top_start >= 0 else 0
     head_slim, top_matter = head[:top_start], head[top_start:]
+    # 书页 head 里带 canonical（指向站点根，因为书页在站点上与站点根是同一本书）。
+    # 分章页是另外的 URL，必须换成指向自己——留着旧的会出现两个 canonical，
+    # 搜索引擎取第一个，等于把 121 个章节页全判成站点根的副本。
+    head_slim = RE_CANONICAL.sub('', head_slim)
+    top_matter = RE_CANONICAL.sub('', top_matter)
 
     idmap = _id_page_map(tree, pos, chapter_spans)
     order = [cid for cid in _book_chapter_order(book) if cid in chapter_spans]
@@ -190,6 +196,7 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     book_title = book.get('title') or '你缺失的那门手机课'
     pages = {}
     budget_bad = []
+    canon_bad = []
 
     # 共享壳层一次性外置 CSS/JS 与路径改写（所有页共用同一套资产）
     assets = {}
@@ -233,6 +240,11 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         pages[name] = (kb, tags)
         if kb > PAGE_BUDGET['max_html_kb'] or tags > PAGE_BUDGET['max_dom_tags']:
             budget_bad.append((name, kb, tags))
+        # 每页必须恰好一个 canonical：两个 canonical 时搜索引擎取第一个，
+        # 会被书页继承来的那个（站点根）盖掉，章节页就被判成重复内容。
+        n_canon = len(re.findall(r'<link rel="canonical"[^>]*>', html))
+        if n_canon != 1:
+            canon_bad.append((name, n_canon))
     # ---- 书首页：顶部区 + 全书目录 ----
     toc_lines = ['<section class="mb-12"><h2 class="text-2xl font-bold text-dark dark:text-gray-200 '
                  'mb-6 pb-2 border-b-2 border-primary">全书目录</h2>']
@@ -294,4 +306,5 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     return {'version': version, 'lang': lang, 'pages': len(pages),
             'out': str(page_dir), 'budget': PAGE_BUDGET,
             'over_budget': budget_bad,
+            'bad_canonical': canon_bad,
             'page_stats': pages}

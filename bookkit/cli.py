@@ -195,6 +195,7 @@ def main(argv=None) -> int:
         from . import split as S
         result = S.split(mf.root, args.lang, args.book, args.out)
         over = result['over_budget']
+        bad_canon = result.get('bad_canonical') or []
         if args.json:
             print(json.dumps(result, ensure_ascii=False, indent=2))
         else:
@@ -203,8 +204,12 @@ def main(argv=None) -> int:
                   f"{result['budget']['max_dom_tags']} 标签")
             for name, kb, tags in over:
                 print(f"  !! 超预算 {name}: {kb}KB / {tags} 标签")
-            print("  结论：" + ("PASS" if not over else f"FAIL（{len(over)} 页超预算）"))
-        if args.strict_budget and over:
+            for name, n in bad_canon:
+                print(f"  !! canonical 数量异常 {name}: {n} 个（必须恰好 1 个）")
+            print("  结论：" + ("PASS" if not over and not bad_canon
+                              else f"FAIL（{len(over)} 页超预算，"
+                                   f"{len(bad_canon)} 页 canonical 异常）"))
+        if args.strict_budget and (over or bad_canon):
             return 1
         return 0
 
