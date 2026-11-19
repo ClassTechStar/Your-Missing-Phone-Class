@@ -38,6 +38,28 @@ PATH_FIXES = [('../sw.js', '../../sw.js'),
               ('../errata.html', '../../errata.html'),
               ('../languages.html', '../../languages.html')]
 
+# SW 注册：脚本路径 + scope
+RE_SW_REGISTER = re.compile(
+    r"(navigator\.serviceWorker\.register\(\s*)(['\"])([^'\"]*sw\.js)\2"
+    r"(\s*,\s*\{\s*scope:\s*)(['\"])([^'\"]*)\5")
+
+
+def fix_sw_scope(html: str) -> str:
+    """把 Service Worker 的 scope 对齐到 sw.js 所在目录。
+
+    scope 必须覆盖 sw.js 脚本自身，否则浏览器直接拒绝注册
+    （SecurityError: the script is not under the scope），离线阅读随之失效；
+    而且注册失败只会被 .catch 里的 console.warn 吞掉，冒烟测试抓不到。
+    脚本在站点根时 scope='./'，在 v1.9/ 时 '../'，在 v1.9/zh-CN/ 时 '../../'。
+    """
+    def sub(m):
+        script = m.group(3)
+        depth = script.count('/')          # 'sw.js'→0；'../sw.js'→1；'../../sw.js'→2
+        scope = './' if depth == 0 else '../' * depth
+        return (f'{m.group(1)}{m.group(2)}{script}{m.group(2)}'
+                f'{m.group(4)}{m.group(5)}{scope}{m.group(5)}')
+    return RE_SW_REGISTER.sub(sub, html)
+
 
 def _externalize(page: str, assets: dict) -> str:
     """把大块 <style>/<script> 抽到共享资产（外置后浏览器跨页复用缓存）。"""
@@ -178,12 +200,17 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         head_slim = head_slim.replace(a, b)
         top_matter = top_matter.replace(a, b)
         tail = tail.replace(a, b)
+    # SW scope 必须在路径降级之后算：scope 要与降级后的 sw.js 路径同深
+    head_slim = fix_sw_scope(head_slim)
+    top_matter = fix_sw_scope(top_matter)
+    tail = fix_sw_scope(tail)
     tail = tail.replace('</body>',
                         '<script src="assets/book.js" defer></script>\n</body>', 1)
     (page_dir / 'assets').mkdir(exist_ok=True)
     for name, body in assets.items():
         for a, b in PATH_FIXES:      # 外置 JS 里的相对路径同样要降级
             body = body.replace(a, b)
+        body = fix_sw_scope(body)
         (page_dir / 'assets' / name).write_text(body, encoding='utf-8', newline='\n')
 
     # 输出根 = 可直接部署的自包含站点树：补齐 PWA 资产（sw/manifest/图标/公告）

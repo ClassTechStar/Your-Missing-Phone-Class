@@ -57,6 +57,37 @@ def check_pwa(page, base):
                     problems.append(f"图标不可达 {ic['src']} ({r.status})")
     except Exception as e:
         problems.append(f'manifest 解析失败：{str(e)[:60]}')
+
+    # SW 的 scope 必须与 sw.js 脚本同深：scope 比脚本浅时浏览器直接拒绝注册
+    #（SecurityError），而注册失败只被 .catch 的 console.warn 吞掉，
+    # 「console 零 error」与 navigator.serviceWorker.ready 都发现不了
+    #（ready 是同源级的，别的页面注册成功就会让它 resolve）。
+    swreg = page.evaluate("""async () => {
+        const RE = /serviceWorker\\.register\\(\\s*['"]([^'"]*sw\\.js)['"]\\s*,\\s*\\{\\s*scope:\\s*['"]([^'"]*)['"]/;
+        const html = document.documentElement.innerHTML || '';
+        let m = html.match(RE);
+        if (!m) {
+            // 分章页把内联脚本外置到了 assets/book.js
+            const s = document.querySelector('script[src*="book.js"]');
+            if (s) {
+                try { m = (await (await fetch(s.src)).text()).match(RE); } catch (e) {}
+            }
+        }
+        if (!m) return {ok: true, note: 'no-explicit-scope'};
+        const script = m[1], scope = m[2];
+        const want = script.includes('/') ? '../'.repeat(script.split('/').length - 1) : './';
+        if (scope !== want) return {ok: false, why: 'scope=' + scope + ' 应为 ' + want};
+        // 真注册一次：scope 与脚本路径不匹配时浏览器会抛 SecurityError
+        try {
+            await navigator.serviceWorker.register(script, {scope: scope});
+            return {ok: true};
+        } catch (e) {
+            return {ok: false, why: '注册被拒绝：' + (e && e.name ? e.name : String(e))};
+        }
+    }""")
+    if not swreg.get('ok'):
+        problems.append(f"SW scope：{swreg.get('why', '未知')}")
+
     sw = page.evaluate("""async () => {
         // SW 从注册到 active 需要几秒（安装 + 激活），不能加载完就查
         const race = new Promise((_, rej) =>

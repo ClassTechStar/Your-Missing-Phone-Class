@@ -11,6 +11,11 @@
 所以复制时必须把这三处相对路径降一级，否则 Service Worker 注册 404、
 manifest 与图标全不可达（PWA 静默失效）。
 
+Service Worker 的 scope 必须与 sw.js 脚本同深，否则浏览器直接拒绝注册
+（SecurityError：脚本不在 scope 路径内），离线阅读随之失效；注册失败只被
+.catch 里的 console.warn 吞掉，冒烟测试的「console 零 error」抓不到。
+site 根页 scope 应为 './'，v1.9/ 单文件为 '../'，v1.9/zh-CN/ 分章页为 '../../'。
+
 用法：
     python scripts/sync_site.py                       # 用默认站点路径
     python scripts/sync_site.py --dest <站点仓库路径>
@@ -18,12 +23,16 @@ manifest 与图标全不可达（PWA 静默失效）。
 """
 
 import argparse
+import json
 import re
 import shutil
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from bookkit.split import fix_sw_scope  # noqa: E402
+
 DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 站点根要带的 PWA 资产
 # announcements.json 是页面运行时 fetch 的公告数据，缺了会在控制台打 404
@@ -45,9 +54,67 @@ REWRITES = [
 
 
 def rewrite(html: str) -> str:
+    """书页 → 站点根：相对路径降一级，并把 SW scope 对齐到 sw.js 所在目录。"""
     for a, b in REWRITES:
         html = html.replace(a, b)
-    return html
+    return fix_sw_scope(html)
+
+
+def site_base() -> str:
+    """站点根 URL（manifest/languages.json 的 site_url，去尾斜杠）。"""
+    man = ROOT / 'manifest' / 'languages.json'
+    if not man.is_file():
+        return ''
+    try:
+        return (json.loads(man.read_text(encoding='utf-8')).get('site_url') or '').rstrip('/')
+    except Exception:
+        return ''
+
+
+def patch_sitemap(xml: str, base: str) -> str:
+    """把站点顶层页补进 sitemap。
+
+    bookkit split 只认识分章页，首页/勘误页/语言分级页/单文件书页不在其中；
+    漏了它们，搜索引擎就看不到这几页。
+    """
+    if not base:
+        return xml
+    top = [f'{base}/',                       # 站点首页（书页本体）
+           f'{base}/errata.html',             # 勘误页
+           f'{base}/languages.html',         # 语言诚实分级页
+           f'{base}/v1.9/zh-CN.html']        # 单文件整本书（v1.9）
+    have = set(re.findall(r'<loc>([^<]+)</loc>', xml))
+    add = [u for u in top if u not in have]
+    if not add:
+        return xml
+    block = ''.join(f'  <url><loc>{u}</loc></url>\n' for u in add)
+    if '</urlset>' not in xml:
+        return xml
+    return xml.replace('</urlset>', block + '</urlset>')
+
+
+def fix_manifest(man_text: str, dest: Path) -> str:
+    """按站点实际发布的内容裁剪 manifest 的快捷方式。
+
+    题库自测页（quiz.html + quiz/）只在仓库里，站点没发布；manifest 里留着
+    指向它的快捷方式，用户长按图标会跳到 404。保留的快捷方式必须真的在站点上存在。
+    """
+    try:
+        data = json.loads(man_text)
+    except Exception:
+        return man_text
+    scs = data.get('shortcuts') or []
+    kept, dropped = [], []
+    for s in scs:
+        rel = (s.get('url') or '').split('#')[0]
+        rel = rel[2:] if rel.startswith('./') else rel.lstrip('/')
+        (kept if rel and (dest / rel).is_file() else dropped).append(s)
+    for s in dropped:
+        print(f'  ! manifest 快捷方式在站点上不可达，已移除：{s.get("name")} → {s.get("url")}')
+    if not dropped:
+        return man_text
+    data['shortcuts'] = kept
+    return json.dumps(data, ensure_ascii=False, indent=2) + '\n'
 
 
 def main():
@@ -113,6 +180,8 @@ def main():
 
     (dest / 'index.html').write_text(html, encoding='utf-8', newline='')
     for a in ASSETS:
+        if a == 'manifest.webmanifest':
+            continue          # manifest 最后单独写（要按站点内容裁剪快捷方式）
         shutil.copy2(ROOT / a, dest / a)
     if (ROOT / COVER[0]).is_file():
         shutil.copy2(ROOT / COVER[0], dest / COVER[1])
@@ -130,16 +199,78 @@ def main():
 
     # 分章页与 sitemap
     shutil.copytree(split_root / 'v1.9', dest / 'v1.9', dirs_exist_ok=True)
-    shutil.copy2(split_root / 'sitemap.xml', dest / 'sitemap.xml')
 
-    # 自检：站点 index.html 里不能再出现 ../
+    # 单文件整本书（站点上 /v1.9/zh-CN.html）：它比站点根深一层，
+    # ../sw.js、../errata.html 这类路径本来就是对的，只需修 SW scope。
+    # 以前这里漏写，站点上留着上一版的旧书页（还带破损的嵌套 <p> 标记）。
+    (dest / 'v1.9' / 'zh-CN.html').write_text(
+        fix_sw_scope(src_html.read_text(encoding='utf-8')),
+        encoding='utf-8', newline='')
+    plan.append(('v1.9/zh-CN.html', '单文件整本书'))
+
+    # sitemap：split 只写分章页，顶层页在这里补进去
+    sm = patch_sitemap((split_root / 'sitemap.xml').read_text(encoding='utf-8'),
+                       site_base())
+    (dest / 'sitemap.xml').write_text(sm, encoding='utf-8', newline='')
+
+    # manifest：快捷方式按站点实际发布的内容裁剪（放在最后写，
+    # 这样才能看到 v1.9/zh-CN.html 是否已就位）
+    man = fix_manifest((ROOT / 'manifest.webmanifest').read_text(encoding='utf-8'), dest)
+    (dest / 'manifest.webmanifest').write_text(man, encoding='utf-8', newline='')
+
+    # 自检 1：站点 index.html 里不能再出现 ../
     out = (dest / 'index.html').read_text(encoding='utf-8')
     bad = [a for a, _ in REWRITES if a in out]
     if bad:
         print(f'!! 写盘后仍有未降级路径：{bad}')
         return 1
+
+    # 自检 2：SW 的 scope 必须与 sw.js 脚本同深（否则浏览器拒绝注册）
+    scope_bad = []
+    for rel in ('index.html', 'v1.9/zh-CN.html',
+                'v1.9/zh-CN/index.html', 'v1.9/zh-CN/di-ba-zhang.html'):
+        f = dest / rel
+        if not f.is_file():
+            continue
+        h = f.read_text(encoding='utf-8')
+        m = re.search(r"serviceWorker\.register\(\s*['\"]([^'\"]*sw\.js)['\"]"
+                      r"\s*,\s*\{\s*scope:\s*['\"]([^'\"]*)['\"]", h)
+        if not m:
+            scope_bad.append(f'{rel}: 未找到 SW 注册')
+            continue
+        script, scope = m.group(1), m.group(2)
+        want = './' if '/' not in script else '../' * script.count('/')
+        if scope != want:
+            scope_bad.append(f'{rel}: scope={scope} 应为 {want}')
+    if scope_bad:
+        print('!! SW scope 不对：\n   ' + '\n   '.join(scope_bad))
+        return 1
+
+    # 自检 3：单文件书页必须与源一致（防止站点留着上一版旧书页）
+    src_sha = src_html.read_text(encoding='utf-8')
+    if (dest / 'v1.9' / 'zh-CN.html').read_text(encoding='utf-8') != fix_sw_scope(src_sha):
+        print('!! v1.9/zh-CN.html 与源不一致')
+        return 1
+
+    # 自检 4：manifest 的快捷方式、start_url 在站点上都必须存在
+    man = json.loads((dest / 'manifest.webmanifest').read_text(encoding='utf-8'))
+    man_bad = []
+    for sc in man.get('shortcuts', []):
+        r = (sc.get('url') or '').split('#')[0]
+        r = r[2:] if r.startswith('./') else r.lstrip('/')
+        if not r or not (dest / r).is_file():
+            man_bad.append(f'快捷方式 {sc.get("name")} → {sc.get("url")}')
+    for key in ('start_url',):
+        r = (man.get(key) or '').split('#')[0]
+        r = r[2:] if r.startswith('./') else r.lstrip('/')
+        if r and not (dest / r).is_file():
+            man_bad.append(f'{key} → {man.get(key)}')
+    if man_bad:
+        print('!! manifest 指向站点上不存在的页面：\n   ' + '\n   '.join(man_bad))
+        return 1
+
     print(f'\n已同步到 {dest}')
-    print('下一步：git add -A && git commit && git push（走 SSH，见维护手册）')
+    print('下一步：git add -A && git commit && git push（见维护手册）')
     return 0
 
 
