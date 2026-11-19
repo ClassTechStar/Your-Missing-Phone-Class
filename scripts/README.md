@@ -150,8 +150,8 @@ python -m bookkit release --release-version v1.8   # → dist/release/
 | `python scripts/extract_translations.py` | 18 语言翻译反解到 `source/translations/<lang>/` 并逐章验证（应 18/18 全保真） |
 | `python scripts/web_smoke.py` | Playwright 浏览器冒烟：20 页 console 零报错 + 侧栏锚点全解析 + h3 计数（曾抓到折叠丢 id 的真 bug） |
 | `python scripts/gen_cover.py` | 生成传播封面三件套（OG 1200×630 / 小红书 1080×1440 / B 站 1920×1080），HTML 排版截图而非 AI 生图；改章数或版本号后要重跑 |
-| `python scripts/sync_site.py` | 把 `v1.8/zh-CN.html` + PWA 资产 + 分享卡片 `cover-og.png` 同步到站点仓库（相对路径降一级）；`og:image` 指向站点根，漏拷就没有缩略图 |
+| `python scripts/sync_site.py` | 把 `v1.9/zh-CN.html` + PWA 资产 + 自测页题库 + 分享卡片 `cover-og.png` 同步到站点仓库（相对路径降一级 + canonical/SW scope/题库对齐四项自检）；`og:image` 指向站点根，漏拷就没有缩略图 |
 | `python mcp/server.py` | 本书结构 MCP 服务器（list_parts / list_chapters / get_chapter / search / stats），`.mcp.json` 已配置 |
-| `quiz.html` + `quiz/zh-CN.json` | 章节自测答题页与题库（基础篇 8 章 24 题，题库按语言扩展） |
+| `quiz.html` + `quiz/zh-CN.json` | 章节自测答题页与题库（zh-CN 对齐 v1.9：120 章 360 题；ja 对齐 v1.8 译本：77 章 174 题） |
 
 CI 的 `audit` job 已包含 html_audit / verify_pdf_toc / extract_translations / web_smoke 四道闸门。

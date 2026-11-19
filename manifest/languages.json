@@ -3,6 +3,12 @@
   "description": "语言与版本单一数据源（bookkit 读取）。语言元数据在此维护；各版本包含哪些 HTML 由目录扫描发现，避免双重维护。",
   "default_version": "v1.8",
   "site_url": "https://classtechstar.github.io/Yihggh.github.io/",
+  "site_book": {
+    "version": "v1.9",
+    "lang": "zh-CN",
+    "canonical": "/",
+    "note": "站点发布的书（v1.9 中文）及其规范 URL：站点根。站点根 index.html 与 /v1.9/zh-CN.html 是同一本书的两份副本，canonical 统一指向站点根；未在此声明的版本/语言不发 canonical。"
+  },
   "og_image": "cover-og.png",
   "languages": {
     "zh-CN": {

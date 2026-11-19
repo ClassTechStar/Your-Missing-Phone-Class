@@ -182,6 +182,35 @@ def social_meta(root: Path, lang: str) -> tuple:
     return locale, image
 
 
+def canonical_tag(root: Path, book: dict, lang: str) -> str:
+    """生成 <link rel="canonical">，没有可信规范地址时返回空串（整段不输出）。
+
+    为什么要有：站点根 index.html 与 /v1.9/zh-CN.html 是同一本书的逐字节副本
+    （前者由 sync_site.py 从后者降级路径而来），两个 URL 都在索引里 = 重复内容。
+    规范地址只能是站点根——它是 manifest 的 start_url，也是读者真正会分享的地址；
+    /v1.9/zh-CN.html 是同书的单文件镜像，canonical 指回根。
+
+    哪个版本/语言配发根地址，由 manifest 的 site_book 段声明（不在代码里写死）：
+    没在站点上发布过的版本（例如 19 种译文的 v1.8 页面，站点上并不存在）一律不发
+    canonical——指到一个 404 的 canonical 毫无意义，不如不发。
+    """
+    try:
+        mf = MF.load_manifest(root)
+    except MF.ManifestError:
+        return ''
+    sb = mf.data.get('site_book') or {}
+    if not sb:
+        return ''
+    if book.get('version') != sb.get('version') or lang != sb.get('lang'):
+        return ''
+    site = (mf.data.get('site_url') or '').rstrip('/')
+    if not site:
+        return ''
+    path = (sb.get('canonical') or '/').strip()
+    url = site + '/' + path.lstrip('/') if path.strip('/') else site + '/'
+    return f'<link rel="canonical" href="{url}">'
+
+
 def render_toc(book: dict) -> str:
     chapters = {c['id']: c for c in book['chapters']}
     out = []
@@ -216,6 +245,12 @@ def build(root: Path, lang: str = 'zh-CN', out: Path = None, book_path: Path = N
     if not shell_path.is_file():
         shell_path = (root / 'source') / book['template']
     shell = shell_path.read_text(encoding='utf-8')
+    # canonical 注入在这里做，不走模板占位符：本书有 20 份模板副本
+    # （每种语言一份，RTL/字体各不相同），改模板等于改 20 个文件，
+    # 而真正需要 canonical 的只有站点上发布的那一版。
+    canon = canonical_tag(root, book, lang)
+    if canon:
+        shell = shell.replace('</head>', f'    {canon}\n</head>', 1)
 
     # 章节 front matter 是 TOC 的唯一数据源：先全部读入，再渲染
     for ch in book['chapters']:

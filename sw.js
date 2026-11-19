@@ -16,7 +16,7 @@
  */
 'use strict';
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = 'phoneclass-' + VERSION;
 const SHELL = [
   './',
@@ -24,9 +24,10 @@ const SHELL = [
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
+  './quiz.html',
 ];
-// 自测页与题库不进预缓存：站点根部署时未必带这两个文件，
-// 预缓存会打出一串 404。用户访问时按需缓存即可。
+// 题库 JSON（quiz/zh-CN.json，约 200KB）不进预缓存：壳层要小，
+// 用户点开自测页时同源 GET 会顺手缓存它，第二次起就能离线用。
 // 只有这些跨域域名允许进缓存（其余一概不碰，避免缓存污染）
 const CORS_OK = [
   'https://cdn.tailwindcss.com',

@@ -152,10 +152,24 @@ def main():
                 n_h3 = page.evaluate("document.querySelectorAll('.content-section > h3').length") \
                     if expect_h3 else None
                 pwa = check_pwa(page, base)
-                ok = (not errors) and (not missing) and (not pwa) \
+                # 自测页的功能断言：题库 fetch 失败时页面不报错、只是空着，
+                # 「console 零 error」看不出来，所以单独数章节卡片。
+                quiz_bad = None
+                if path.endswith('quiz.html'):
+                    page.wait_for_timeout(600)
+                    q = page.evaluate("""() => ({
+                        chips: document.querySelectorAll('#grid .chip').length,
+                        info: (document.getElementById('bankInfo') || {}).textContent || '',
+                        grid: (document.getElementById('grid') || {}).textContent || ''
+                    })""")
+                    if q['chips'] < 50:
+                        quiz_bad = f'题库未渲染（chips={q["chips"]}，{q["grid"][:40]}）'
+                ok = (not errors) and (not missing) and (not pwa) and (not quiz_bad) \
                     and (expect_h3 is None or n_h3 == expect_h3)
                 status = '✓' if ok else '✗'
                 detail = []
+                if quiz_bad:
+                    detail.append(quiz_bad)
                 if errors:
                     detail.append(f'console×{len(errors)}: {errors[0][:60]}')
                 if missing:

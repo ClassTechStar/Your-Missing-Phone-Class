@@ -10,9 +10,12 @@
      → 副标题是精炼比喻，用于「哪项被这样形容」一型
   3. 章导读首句    → 凑不满每章题量时补一章主题题
 
+版本：题库必须与某一版书的源稿对齐（v1.9 = 120 章，v1.8 = 84 章），
+章节 id 是书页锚点，错版会让题目指向不存在的章节。--version 决定取哪版源稿。
+
 用法：
-    python scripts/gen_quiz.py                 # 生成 quiz/zh-CN.json
-    python scripts/gen_quiz.py --lang en       # 生成 quiz/en.json
+    python scripts/gen_quiz.py                          # v1.9 → quiz/zh-CN.json
+    python scripts/gen_quiz.py --version v1.8 --lang ja --out quiz/ja.json
     python scripts/gen_quiz.py --per-chapter 3 --out quiz/zh-CN.json
 """
 
@@ -202,10 +205,14 @@ def table_facts(md: str):
     return out
 
 
-def load_chapters(lang: str):
-    """返回 [(id, nav, md), ...]，按 book.json 顺序（P1-1：走 bookkit.content 门面）。"""
+def load_chapters(lang: str, version: str = 'v1.9'):
+    """返回 [(id, nav, md), ...]，按 book.json 顺序（P1-1：走 bookkit.content 门面）。
+
+    version 决定取哪一版源稿：v1.9 = source/v1.9（120 章），
+    v1.8 = source/ 与 source/translations/<lang>/（84 章，19 语言）。
+    """
     out = []
-    for m in C.chapters(lang):
+    for m in C.chapters(lang, version=version):
         p = ROOT / m['file']
         if not p.is_file():
             continue
@@ -250,8 +257,8 @@ def _table_question(row: str, col: str) -> str:
     return f'「{row}」的{col}是什么？'
 
 
-def build(lang: str, per_chapter: int = 3):
-    chapters = load_chapters(lang)
+def build(lang: str, per_chapter: int = 3, version: str = 'v1.9'):
+    chapters = load_chapters(lang, version)
     strong_all, head_all, intro_all = {}, {}, {}
     for cid, nav, md in chapters:
         for t, d in pairs_strong(md):
@@ -274,7 +281,7 @@ def build(lang: str, per_chapter: int = 3):
 
     out_chapters = []
     for cid, nav, md in chapters:
-        rng = random.Random(f'{lang}:{cid}')
+        rng = random.Random(f'{version}:{lang}:{cid}')
         sp, hp = pairs_strong(md), pairs_heading(md)
         qs = []
 
@@ -338,8 +345,9 @@ def build(lang: str, per_chapter: int = 3):
     nq = sum(len(c['questions']) for c in out_chapters)
     return {'schemaVersion': 1,
             'lang': lang,
+            'bookVersion': version,
             'note': '《你缺失的那门手机课》章节自测 · 由 scripts/gen_quiz.py 从源稿'
-                    '自动生成，题目锚定书中真实内容（术语定义、标题比喻、章导读）。',
+                    f'（{version}）自动生成，题目锚定书中真实内容（术语定义、标题比喻、章导读）。',
             'chapters': out_chapters}, nq
 
 
@@ -348,14 +356,16 @@ def main():
     ap.add_argument('--lang', default='zh-CN')
     ap.add_argument('--per-chapter', type=int, default=3)
     ap.add_argument('--out', type=Path, default=None)
+    ap.add_argument('--version', default='v1.9',
+                    help='题库对齐的书籍版本：v1.9（120 章，中文）/ v1.8（84 章，19 语言）')
     args = ap.parse_args()
     out = args.out or (ROOT / 'quiz' / f'{args.lang}.json')
-    data, nq = build(args.lang, args.per_chapter)
+    data, nq = build(args.lang, args.per_chapter, args.version)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n',
                    encoding='utf-8', newline='\n')
     rel = out.relative_to(ROOT) if out.is_relative_to(ROOT) else out
-    print(f'{rel}: {len(data["chapters"])} 章，{nq} 题')
+    print(f'{rel}: {args.version} / {len(data["chapters"])} 章，{nq} 题')
     # 自检：选项数、答案索引、选项不重复、题干非空
     bad = []
     for c in data['chapters']:

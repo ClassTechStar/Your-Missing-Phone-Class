@@ -84,11 +84,14 @@ manifest 与图标全不可达，PWA **静默失效**（页面照常能看，但
 
 ### 5.2 PWA 相关约束
 
-- `sw.js` 的预缓存清单**只放站点一定有的文件**。放过 `quiz.html` 会在站点根打出 404
-  （站点仓库没带自测页），装 SW 时控制台一片红。
+- `sw.js` 的预缓存清单**只放站点一定有的文件**。题库 JSON（约 200KB）不进预缓存：
+  壳层要小，用户点开自测页时同源 GET 会顺手缓存它。`quiz.html` 自 2026-11-20 起
+  站点已发布，可以预缓存（此前站点没带自测页，放进去装 SW 时会打一片 404）。
 - 改缓存策略后要 bump `VERSION`，否则老客户端一直吃旧缓存。
-- `scripts/web_smoke.py` 已含 PWA 断言（manifest 可解析 + 图标可达 + SW active），
-  CI 会跑；本地跑需要 `pip install playwright && python -m playwright install chromium`。
+- `scripts/web_smoke.py` 已含 PWA 断言（manifest 可解析 + 图标可达 + SW active
+  + SW scope 与 sw.js 同深），CI 的 audit job 会跑；
+  本地跑需要 `pip install playwright && python -m playwright install chromium`。
+  注意它**不在** `scripts/deai_gate.py` 的 68 项里，发布前要单独跑。
 
 ## 六、md 方言要点（bookkit/markdown.py）
 

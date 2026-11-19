@@ -97,6 +97,7 @@ footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:28p
 <header>
   <h1>章节自测</h1>
   <p>《你缺失的那门手机课》· 每章 3 题，答完即时批改</p>
+  <p style="margin-top:4px" id="bankInfo"></p>
   <p style="margin-top:8px"><button class="back" id="revBtn" style="display:none"><i class="fas fa-rotate-right" aria-hidden="true"></i> 开始复习（<span id="revCount">0</span> 题到期）</button></p>
 </header>
 
@@ -134,7 +135,7 @@ footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:28p
 </section>
 
 <footer>
-  <p><a href="index.html">← 返回书目</a> · <a href="v1.8/zh-CN.html#di-ling-zhang">去读书</a></p>
+  <p><a href="index.html">← 返回书目</a> · <a href="v1.9/zh-CN.html#di-ling-zhang">去读书</a></p>
   <p style="margin-top:6px"><a href="#" id="reset">清空我的进度</a></p>
 </footer>
 
@@ -188,6 +189,10 @@ async function boot() {
   }
   app.data = await res.json();
   app.chapters = app.data.chapters;
+  // 题库版本与章数写明在页面上：题库与书的版本错位会让章节 id 变成死链，
+  // 读者一眼就该知道自己答的是哪一版。
+  const bv = app.data.bookVersion || '';
+  $('bankInfo').textContent = (bv ? `题库版本 ${bv} · ` : '') + `共 ${app.chapters.length} 章`;
   renderOverview();
   renderGrid();
   // 支持 #chapter-id 直接进入

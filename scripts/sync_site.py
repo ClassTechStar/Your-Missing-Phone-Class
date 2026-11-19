@@ -36,9 +36,11 @@ from bookkit.split import fix_sw_scope  # noqa: E402
 DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 站点根要带的 PWA 资产
 # announcements.json 是页面运行时 fetch 的公告数据，缺了会在控制台打 404
+# quiz.html + quiz/ 是章节自测页与题库，题库章节 id 是书页锚点，
+# 必须与站点上发布的那一版书对齐（当前 v1.9）——错版会点进死链。
 ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json',
-          'errata.html', 'languages.html']
-ASSET_DIRS = ['icons']
+          'errata.html', 'languages.html', 'quiz.html']
+ASSET_DIRS = ['icons', 'quiz']
 # 书页里的 og:image 是绝对地址（manifest 的 site_url + cover-og.png），
 # 图必须一起部署到站点根，否则分享卡片抓不到图。
 COVER = ('docs/promotion/assets/cover-og.png', 'cover-og.png')
@@ -82,6 +84,7 @@ def patch_sitemap(xml: str, base: str) -> str:
     top = [f'{base}/',                       # 站点首页（书页本体）
            f'{base}/errata.html',             # 勘误页
            f'{base}/languages.html',         # 语言诚实分级页
+           f'{base}/quiz.html',               # 章节自测页
            f'{base}/v1.9/zh-CN.html']        # 单文件整本书（v1.9）
     have = set(re.findall(r'<loc>([^<]+)</loc>', xml))
     add = [u for u in top if u not in have]
@@ -267,6 +270,61 @@ def main():
             man_bad.append(f'{key} → {man.get(key)}')
     if man_bad:
         print('!! manifest 指向站点上不存在的页面：\n   ' + '\n   '.join(man_bad))
+        return 1
+
+    # 自检 5：canonical 必须在站点根与单文件书页上指向同一个规范 URL
+    # （这两页是同一本书的两份副本，canonical 不统一 = 重复内容进索引）
+    canon_root = site_base() + '/'
+    canon_bad = []
+    for rel in ('index.html', 'v1.9/zh-CN.html'):
+        f = dest / rel
+        if not f.is_file():
+            continue
+        m = re.search(r'<link rel="canonical" href="([^"]+)"',
+                      f.read_text(encoding='utf-8'))
+        got = m.group(1) if m else ''
+        if got != canon_root:
+            canon_bad.append(f'{rel}: canonical={got or "(缺失)"} 应为 {canon_root}')
+    if canon_bad:
+        print('!! canonical 不统一：\n   ' + '\n   '.join(canon_bad))
+        return 1
+
+    # 自检 6：站点上的题库必须与站点发布的书同版，且章节 id 在书页里存在
+    # （站点实供的语言必须对齐；其他语言的题库按各自版本对齐，但章节 id
+    #   在站点这本 v1.9 里同样要能解析——否则读者点进去是死链）
+    quiz_bad = []
+    qm = dest / 'quiz' / 'manifest.json'
+    if not qm.is_file():
+        quiz_bad.append('quiz/manifest.json 缺失')
+    else:
+        banks = json.loads(qm.read_text(encoding='utf-8')).get('banks') or {}
+        site_book = json.loads((ROOT / 'manifest' / 'languages.json')
+                               .read_text(encoding='utf-8')).get('site_book') or {}
+        book_html = dest / 'v1.9' / 'zh-CN.html'
+        anchors = set()
+        if book_html.is_file():
+            anchors = set(re.findall(r'id="([^"]+)"',
+                                     book_html.read_text(encoding='utf-8')))
+        for lang, spec in banks.items():
+            f = dest / 'quiz' / f'{lang}.json'
+            if not f.is_file():
+                quiz_bad.append(f'题库 {lang}.json 缺失')
+                continue
+            bank = json.loads(f.read_text(encoding='utf-8'))
+            if bank.get('bookVersion') != spec.get('bookVersion'):
+                quiz_bad.append(f'{lang}.json bookVersion={bank.get("bookVersion")} '
+                                f'与 manifest 登记的 {spec.get("bookVersion")} 不一致')
+            if lang == site_book.get('lang'):
+                # 站点自测页加载的就是这一份，必须与站点发布的书同版
+                if spec.get('bookVersion') != site_book.get('version'):
+                    quiz_bad.append(f'{lang}.json 对齐 {spec.get("bookVersion")}，'
+                                    f'但站点发布的是 {site_book.get("version")}')
+            miss = [c.get('id') for c in bank.get('chapters') or []
+                    if c.get('id') not in anchors]
+            if miss:
+                quiz_bad.append(f'{lang}.json 有 {len(miss)} 个章节 id 在书页里不存在')
+    if quiz_bad:
+        print('!! 题库与站点不一致：\n   ' + '\n   '.join(quiz_bad))
         return 1
 
     print(f'\n已同步到 {dest}')
