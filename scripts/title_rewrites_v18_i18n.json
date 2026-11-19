@@ -1,0 +1,3104 @@
+{
+  "_meta": {
+    "purpose": "v1.8 译文章标题（按文件位置与中文版一一对应）。",
+    "source": "state/i18n_titles/<lang>.tsv（worker 填第 4 列）",
+    "generated_by": "scripts/tsv_to_i18n_titles.py",
+    "note": "章号前缀与分隔符按各语言现有译文的写法，勿改。"
+  },
+  "ar": {
+    "00-di-ling-zhang.md": {
+      "title": "الفصل 0: ثلاث حقائق نقولها قبل أن نبدأ",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "الفصل 0: مرحباً، قبل أن نبدأ"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "الفصل 1: تعال نتعرّف على هذا الجهاز",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "الفصل 1: مرحباً، حاسوبي الشخصي"
+    },
+    "04-di-er-zhang.md": {
+      "title": "الفصل 2: لا تجد ما تحتاجه على هاتفك، ماذا تفعل؟",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "الفصل 2: رتّب غرفتك الرقمية — إدارة الملفات"
+    },
+    "05-di-san-zhang.md": {
+      "title": "الفصل 3: الشبكة لا تعمل، لا تستعجل إعادة التشغيل",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "الفصل 3: اربط هاتفك بـ \"خط الحياة\" — الشبكة"
+    },
+    "06-di-si-zhang.md": {
+      "title": "الفصل 4: قبل تثبيت أي تطبيق، انظر إليه ثلاث مرات",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "الفصل 4: تثبيت التطبيقات وإدارتها — \"حقيبة المهارات\" لهاتفك"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "الفصل 5: اضبط هاتفك بالطريقة التي تريحك",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "الفصل 5: اجعل هاتفك يفهمك أكثر — الإعدادات الأساسية"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "الفصل 6: ضاع الهاتف ونسيت كلمة المرور، خُذ هذه الخطوات",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "الفصل 6: احمِ حياتك الرقمية — الأمان والخصوصية"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "الفصل 11: الصورة الجيدة أهم من كثرة الصور",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "الفصل 11: التصوير وإدارة الصور"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "الفصل 13: أي التطبيقات تستحق التثبيت، وأيها يجب أن تتجنبه؟",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "الفصل 13: توصيات تطبيقات الأدوات"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "الفصل 15: مرّتا شحن في اليوم، البطارية أم عاداتك؟",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "الفصل 15: علم البطارية وتحسين مدة الاستخدام"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "الفصل 16: تبديل الهاتف، هذه الحسابات تُفقد وهذه لا تُفقد",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "الفصل 16: نظام الحسابات والخدمات السحابية"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "الفصل 18: خُذ نسخة احتياطية، لا في اليوم الذي تحتاجها",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "الفصل 18: النسخ الاحتياطي للبيانات وترحيلها"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "الفصل 19: الهاتف تعطّل، لا تتسرع في إصلاحه",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "الفصل 19: تشخيص الأعطال والإنقاذ الذاتي"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "الفصل 21: هل تتصل فعلاً بـ Wi-Fi العام؟",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "الفصل 21: تعمّق في شبكات الهاتف المحمول وأمن المعلومات"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "الفصل 22: ما الذي يفعله الذكاء الاصطناعي في هاتفك فعلاً؟",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "الفصل 22: كيف يعمل الذكاء الاصطناعي في الهاتف"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "الفصل 23: خلّ الهاتف ينفّذ المهام المتتالية عنك",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "الفصل 23: التفكير البرمجي ومبادئ الأتمتة"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "الفصل 25: قبل أن تبيع هاتفك القديم، افعل هذه الأشياء",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "الفصل 25: معالجة الهواتف المستعملة والتراث الرقمي"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "الفصل 26: التقنيات الجديدة، انتظر",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "الفصل 26: حدود تقنية الهاتف الحالية"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "الفصل 27: اضبط هاتف والديك",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "الفصل 27: يستخدمه الآباء بسهولة — دليل شامل لهاتف مناسب لكبار السن"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "الفصل 28: قبل أن تشتري الهاتف، احسم هذه الثلاثة",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "الفصل 28: أنفق بحكمة لتحصل على هاتفك المثالي — الدليل الشامل لشراء الهاتف"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "الفصل 29: هل تعرف حقاً كم ساعة تقضي على هاتفك؟",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "الفصل 29: الصحة الرقمية — إقامة علاقة صحية مع الهاتف"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "الفصل 32: من المُلح، ثلاثون ثانية لإيقاف النزيف",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "الفصل 32: دليل الإسعافات الأولية لأمان الهاتف"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "الفصل 33: كيف سيبدو الهاتف بعد عشر سنوات؟",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "الفصل 33: نظرة مستقبلية — المحطة القادمة للهاتف"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "الفصل 34: الهاتف والسيارة، اربط بينهما بلا تعقيد",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "الفصل 34: دليل متعمق لاتصال السيارة — اندماج الهاتف مع السيارة"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "الفصل 35: تعطِ طفلك هاتفاً، ثم اتفقوا على القواعد",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "الفصل 35: الأطفال والهاتف — دليل التربية في العصر الرقمي"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "الفصل 36: الأجهزة الكثيرة في البيت، اربطها بهاتفك",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "الفصل 36: الهاتف والمنزل الذكي — اجعل منزلك ذكيًا"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "الفصل 39: الذكاء الاصطناعي لم يفهم، غالباً لأنك لم تشرح",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "الفصل 39: هندسة السياق — اجعل الذكاء الاصطناعي يفهم نيتك"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "الفصل 40: وضّح المتطلبات أولاً، ثم شرع في التنفيذ",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "الفصل 40: هندسة المتطلبات — تحويل الأفكار إلى تعليمات يستطيع الذكاء الاصطناعي تنفيذها"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "الفصل 43: تحدّث مع الذكاء الاصطناعي حتى يفهمك",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "الفصل 43: هندسة الحوار — تقنيات الحوار للتعاون الفعال مع الذكاء الاصطناعي"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "الفصل 45: كتب الذكاء الاصطناعي، لكن لم ينتهِ",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "الفصل 45: ضمان الجودة — اجعل كود الذكاء الاصطناعي موثوقا"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "الفصل 48: كيف تطوّر أندرويد حتى صار هكذا؟",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "الفصل 48: التعرف على أندرويد — من نظام التشغيل إلى منظومة التطوير"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "الفصل 56: تطبيقك جاهز، انشره على Google Play",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "الفصل 56: الصقل والنشر — الاختبار وتصحيح الأخطاء والنشر على Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "الملحق B: علقت في التمرين؟",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "الملحق B: مرجع تمارين عملية"
+    },
+    "81-jie-yu.md": {
+      "title": "خاتمة: افهم هاتفك، هذا كل ما في الأمر",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "خاتمة: ابقَ فضولياً، ابقَ يقظاً"
+    }
+  },
+  "de": {
+    "00-di-ling-zhang.md": {
+      "title": "Kapitel 0: Drei Dinge, bevor es losgeht",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Kapitel 0: Hallo, bevor es losgeht"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Kapitel 1: Erst einmal das Smartphone kennenlernen",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Kapitel 1: Hallo, mein persönlicher Computer"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Kapitel 2: Etwas auf dem Smartphone nicht gefunden?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Kapitel 2: Räum dein digitales Zimmer auf"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Kapitel 3: Kein Netz? Nicht sofort neu starten",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Kapitel 3: Das Handy an die „Lebensader“ anschließen"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Kapitel 4: Bevor du eine App installierst: erst hinsehen",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Kapitel 4: Apps installieren und verwalten – der „Fähigkeitsrucksack\" des Smartphones"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Kapitel 5: Mach das Smartphone so, wie es dir passt",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Kapitel 5: Das Smartphone besser verstehen lassen – Grundeinstellungen"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Kapitel 6: Smartphone verloren? Passwort vergessen?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Kapitel 6: Beschütze dein digitales Leben – Sicherheit und Datenschutz"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Kapitel 11: Lieber ein gutes Foto als viele mittelmäßige",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Kapitel 11: Fotografie und Bildverwaltung"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Kapitel 13: Welche Apps lohnen sich, welche nicht?",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Kapitel 13: Empfehlungen für Werkzeug-Apps"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Kapitel 15: Zweimal am Tag laden: Akku oder Gewohnheit?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Kapitel 15: Batterietechnologie und Akkulaufzeit-Optimierung"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Kapitel 16: Handywechsel: Welche Konten kann man verlieren?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Kapitel 16: Kontosysteme und Cloud-Dienste"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Kapitel 18: Backup jetzt, nicht erst, wenn's dringend wird",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Kapitel 18: Daten-Backup und -Migration"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Kapitel 19: Kaputt? Nicht sofort reparieren",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Kapitel 19: Fehlerbehebung und Selbsthilfe"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Kapitel 21: Darf man öffentliches WLAN wirklich nutzen?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Kapitel 21: Mobilfunk und Informationssicherheit vertieft"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Kapitel 22: Was macht die KI im Smartphone eigentlich?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Kapitel 22: Wie KI im Handy arbeitet"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Kapitel 23: Lass das Handy die Wiederholungsarbeit machen",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Kapitel 23: Programmier-Denken und Automatisierung für Einsteiger"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Kapitel 25: Altes Handy verkaufen? Erst diese Schritte",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Kapitel 25: Gebrauchttelefone und digitales Erbe"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Kapitel 26: Neue Technik kann warten",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Kapitel 26: Aktuelle Fronten der Smartphone-Technologie"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Kapitel 27: Handy für Mama und Papa einrichten",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Kapitel 27: Auch fuer Mama und Papa kinderleicht – Der komplette Ratgeber fuer altersgerechte Smartphone-Nutzung"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Kapitel 28: Vor dem Kauf: erst diese drei Dinge klären",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Kapitel 28: Geld klug ausgeben fuer das Wunschgeraet – Der ultimative Smartphone-Kaufguide"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Kapitel 29: Wissen Sie, wie lange Sie das Handy nutzen?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Kapitel 29:Digitale Gesundheit – Eine gesunde Beziehung zum Smartphone aufbauen"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Kapitel 32: Notfall? 30 Sekunden, den Schaden zu begrenzen",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Kapitel 32: Notfallhandbuch für Smartphone-Sicherheit"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Kapitel 33: Wie sieht das Handy in zehn Jahren aus?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Kapitel 33: Zukunftsausblick – Die naechste Etappe des Smartphones"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Kapitel 34: Handy und Auto: verbinden ohne Theater",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Kapitel 34: Tiefer Leitfaden zur Auto-Konnektivitaet – Verschmelzung von Smartphone und Auto"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Kapitel 35: Dem Kind ein Handy geben: Regeln setzen",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Kapitel 35: Kinder und Smartphones – Erziehungsleitfaden fuer das digitale Zeitalter"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Kapitel 36: Alle Geräte im Haus verbinden",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Kapitel 36: Smartphone und Smart Home – das Zuhause wird clever"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Kapitel 39: Die KI versteht dich nicht: Du warst unklar",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Kapitel 39: Kontextengineering – damit KI Ihre Absicht versteht"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Kapitel 40: Erst klar sagen, dann anfangen",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Kapitel 40: Anforderungsengineering – aus Ideen ausführbare Anweisungen für die KI machen"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Kapitel 43: So redest du mit der KI, dass sie zuhört",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Kapitel 43: Dialog-Engineering – Dialogtechniken für effiziente Zusammenarbeit mit der KI"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Kapitel 45: KI-Code geschrieben? Dann ist es nicht fertig",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Kapitel 45: Qualitätssicherung – KI-Code zuverlässig machen"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Kapitel 48: Wie wurde Android das, was es heute ist?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Kapitel 48: Android kennenlernen – Vom Betriebssystem zum Entwickler-Ökosystem"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Kapitel 56: App fertig? Jetzt in den Google Play Store",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Kapitel 56: Feinschliff und Veröffentlichung – Testen, Debuggen und der Weg in den Google Play Store"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Anhang B: Bei einer Übung feststeckt?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Anhang B: Anregungen für praktische Übungen"
+    },
+    "81-jie-yu.md": {
+      "title": "Epilog: Das Handy verstehen, mehr ist es nicht",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Epilog: Neugierig bleiben, achtsam bleiben"
+    }
+  },
+  "el": {
+    "00-di-ling-zhang.md": {
+      "title": "Κεφάλαιο 0: Τρεις ειλικρινείς λέξεις πριν ξεκινήσουμε",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Κεφάλαιο 0: Γεια σας, πριν ξεκινήσουμε"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Κεφάλαιο 1: Ας γνωρίσουμε τον σιωπηλό γίγαντα",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Κεφάλαιο 1: Γεια σου, ο προσωπικός μου υπολογιστής"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Κεφάλαιο 2: Δεν βρίσκετε κάτι στο κινητό σας;",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Κεφάλαιο 2: Οργανώστε το ψηφιακό σας δωμάτιο — Διαχείριση αρχείων"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Κεφάλαιο 3: Χωρίς δίκτυο, μην βιάζεστε να επανεκκινήσετε",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Κεφάλαιο 3: Συνδέστε το κινητό με τη «γραμμή ζωής» — Δίκτυο"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Κεφάλαιο 4: Πριν εγκαταστήσετε εφαρμογή, δείτε την πρώτα",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Κεφάλαιο 4: Εγκατάσταση και διαχείριση App — τα «skill packs» του κινητού"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Κεφάλαιο 5: Ρυθμίστε το κινητό όπως σας βολεύει",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Κεφάλαιο 5: Κάντε το κινητό να σας κατανοεί — Βασικές ρυθμίσεις"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Κεφάλαιο 6: Χάσατε το κινητό ή ξεχάσατε τον κωδικό;",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Κεφάλαιο 6: Προστατέψτε την ψηφιακή σας ζωή — Ασφάλεια και απόρρητο"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Κεφάλαιο 11: Μια καλή φωτογραφία αξίζει περισσότερο",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Κεφάλαιο 11: Φωτογραφία και διαχείριση εικόνων"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Κεφάλαιο 13: Ποιες εφαρμογές αξίζουν και ποιες όχι;",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Κεφάλαιο 13: Προτάσεις εφαρμογών εργαλείων"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Κεφάλαιο 15: Δύο φορτίσεις την ημέρα, μπαταρία ή χρήση;",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Κεφάλαιο 15: Επιστήμη μπαταρίας και βελτιστοποίηση διάρκειας"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Κεφάλαιο 16: Αλλάζετε κινητό, ποιοι λογαριασμοί χάνονται;",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Κεφάλαιο 16: Συστήματα λογαριασμών και υπηρεσίες cloud"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Κεφάλαιο 18: Μην περιμένεις τη μέρα που θα το θυμηθείς",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Κεφάλαιο 18: Αντίγραφα ασφαλείας δεδομένων και μεταφορά"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Κεφάλαιο 19: Χαλάει; Μην βιάσεστε να το φτιάξετε",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Κεφάλαιο 19: Εντοπισμός βλαβών και αυτοβοήθεια"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Κεφάλαιο 21: Να συνδεθείτε σε δημόσιο Wi-Fi;",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Κεφάλαιο 21: Βαθιά εξερεύνηση κινητών δικτύων και ασφάλειας πληροφοριών"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Κεφάλαιο 22: Τι κάνει η AI μέσα στο κινητό σου;",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Κεφάλαιο 22: Πώς λειτουργεί η AI στο κινητό"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Κεφάλαιο 23: Άσε το κινητό να χειρίζεται τις επαναλήψεις",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Κεφάλαιο 23: Προγραμματιστική σκέψη και εισαγωγή στον αυτοματισμό"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Κεφάλαιο 25: Πριν πουλήσεις το παλιό κινητό, κάνε πρώτα αυτά",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Κεφάλαιο 25: Διαχείριση μεταχειρισμένων κινητών και ψηφιακή κληρονομιά"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Κεφάλαιο 26: Οι νέες τεχνολογίες περιμένουν",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Κεφάλαιο 26: Σύγχρονες τεχνολογικές εξελίξεις στα κινητά"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Κεφάλαιο 27: Ρυθμίστε το κινητό των γονέων σας",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Κεφάλαιο 27: Οι γονείς μπορούν κι αυτοί — πλήρης οδηγός προσβασιμότητας"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Κεφάλαιο 28: Πριν αγοράσετε, αποφασίστε πρώτα αυτά τα τρία",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Κεφάλαιο 28: Επενδύστε σωστά τα χρήματά σας για το ιδανικό κινητό — Ο τελικός οδηγός αγοράς"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Κεφάλαιο 29: Πόση ώρα τελικά χρησιμοποιείτε το κινητό;",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Κεφάλαιο 29: Ψηφιακή υγεία — Χτίστε μια υγιή σχέση με το κινητό σας"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Κεφάλαιο 32: Χάθηκε ή κλάπηκε; 30 δευτερόλεπτα για τη ζημιά",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Κεφάλαιο 32: Το βιβλίο έκτακτης ανάγκης για την ασφάλεια του κινητού"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Κεφάλαιο 33: Πώς θα είναι το κινητό σε δέκα χρόνια;",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Κεφάλαιο 33: Μελλοντικές προοπτικές — Το επόμενο βήμα των κινητών"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Κεφάλαιο 34: Κινητό και αυτοκίνητο, πώς τα συνδέεις",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Κεφάλαιο 34: Οδηγός σε βάθος για τη διασύνδεση κινητού-αυτοκινήτου — Η σύγκλιση κινητού και αυτοκινήτου"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Κεφάλαιο 35: Ένα κινητό για το παιδί, κανόνες από την αρχή",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Κεφάλαιο 35: Παιδιά και κινητά — Εκπαιδευτικός οδηγός για την ψηφιακή εποχή"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Κεφάλαιο 36: Όλες οι συσκευές στο σπίτι, πώς τις συνδέεις;",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Κεφάλαιο 36: Το κινητό και το έξυπνο σπίτι — κάνε το σπίτι έξυπνο"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Κεφάλαιο 39: Δεν καταλαβαίνει η AI; Μήπως δεν είπες καθαρά",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Κεφάλαιο 39: Μηχανική συμφραζομένων — να καταλαβαίνει η AI τι εννοείς"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Κεφάλαιο 40: Εξήγησε πρώτα καθαρά, μετά ξεκίνα",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Κεφάλαιο 40: Μηχανική απαιτήσεων — από την ιδέα σε οδηγίες που η AI μπορεί να εκτελέσει"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Κεφάλαιο 43: Μίλα με την AI ώστε να σε καταλάβει",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Κεφάλαιο 43: Μηχανική συνομιλίας — τεχνικές διαλόγου για αποδοτική συνεργασία με την AI"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Κεφάλαιο 45: Η AI έγραψε, δεν τελείωσε",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Κεφάλαιο 45: Διασφάλιση ποιότητας — κάνοντας τον κώδικα της AI αξιόπιστο"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Κεφάλαιο 48: Πώς έγινε το Android να είναι όπως είναι;",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Κεφάλαιο 48: Γνωριμία με το Android — από το λειτουργικό σύστημα στο οικοσύστημα ανάπτυξης"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Κεφάλαιο 56: Έφτιαξες την εφαρμογή, τώρα δημοσίευσέ την",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Κεφάλαιο 56: Γυάλισμα και δημοσίευση — δοκιμές, αποσφαλμάτωση και ανάρτηση στο Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Παράρτημα B: Κολλήσατε σε μια άσκηση;",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Παράρτημα B: Μικρές πρακτικές αναφορές"
+    },
+    "81-jie-yu.md": {
+      "title": "Επίλογος: Να καταλάβετε το κινητό σας, μόνο αυτό",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Επίλογος: Μείνετε περίεργοι, μείνετε ξεκάθαροι"
+    }
+  },
+  "en": {
+    "00-di-ling-zhang.md": {
+      "title": "Chapter 0: Three Things to Say Before We Start",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Chapter 0: Hi, Before We Begin"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Chapter 1: Let's Get to Know This Machine",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Chapter 1: Hello, My Personal Computer"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Chapter 2: Can't Find Something on Your Phone?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Chapter 2: Organize Your Digital Room—File Management"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Chapter 3: No Network? Don't Restart Just Yet",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Chapter 3: Plugging Your Phone into Its “Lifeline”"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Chapter 4: Before You Install an App, Take a Closer Look",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Chapter 4: Installing and Managing Apps"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Chapter 5: Set Up Your Phone So It Feels Right",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Chapter 5: Make Your Phone Understand You Better"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Chapter 6: Lost Your Phone? Forgot Your Password?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Chapter 6: Guarding Your Digital Life"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Chapter 11: Better Shots Matter More Than More Shots",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Chapter 11: Photography and Image Management"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Chapter 13: Which Apps Are Worth It, and Which to Skip",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Chapter 13: Recommended Utility Apps"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Chapter 15: Charging Twice a Day: Battery or Habits?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Chapter 15: Battery Science and Battery Life Optimization"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Chapter 16: Switching Phones, Which Accounts Can You Lose?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Chapter 16: Account Systems and Cloud Services"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Chapter 18: Back Up Now, Not on the Day You Need It",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Chapter 18: Data Backup and Migration"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Chapter 19: Broken? Don't Rush to Fix It",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Chapter 19: Troubleshooting and Self-Rescue"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Chapter 21: Should You Actually Connect to Public Wi-Fi?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Chapter 21: In-depth Exploration of Mobile Networks and Information Security"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Chapter 22: What Is AI Actually Doing in Your Phone?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Chapter 22: How AI Works in Phones"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Chapter 23: Let Your Phone Handle the Repetitive Stuff",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Chapter 23: Programming Thinking and Automation Enlightenment"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Chapter 25: Before Selling Your Old Phone, Do These First",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Chapter 25: Second-hand Phone Disposal and Digital Legacy"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Chapter 26: New Tech Can Wait",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Chapter 26: Current Smartphone Technology Frontier"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Chapter 27: Setting Up Your Parents' Phone",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Chapter 27: Making Phones Easy for Parents — Complete Senior-Friendly Guide"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Chapter 28: Before You Buy, Settle These Three Things First",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Chapter 28: Spend Wisely on Your Dream Phone — The Ultimate Smartphone Buying Guide"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Chapter 29: Do You Really Know How Long You Use Your Phone?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Chapter 29:Digital Wellbeing — Building a Healthy Relationship with Your Phone"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Chapter 32: Trouble? Thirty Seconds to Limit the Damage",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Chapter 32:Phone Safety Emergency Handbook"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Chapter 33: What Will Phones Look Like in the Next Decade?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Chapter 33: Future Outlook — The Next Journey of Smartphones"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Chapter 34: Phone and Car, Connecting Without the Fuss",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Chapter 34:In-Depth Guide to Car-Phone Connectivity — The Fusion of Phone and Automobile"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Chapter 35: Giving Your Kid a Phone, Setting the Rules",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Chapter 35: Children and Phones — An Educational Guide for the Digital Age"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Chapter 36: Connecting All the Devices in Your Home",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Chapter 36: Phones and Smart Home — Make Your House Think"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Chapter 39: AI Doesn't Get It, So Say It More Clearly",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Chapter 39: Context Engineering — Make AI Understand You"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Chapter 40: Say It Clearly Before You Start",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Chapter 40: Requirements Engineering — Turn Ideas into AI-Ready Instructions"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Chapter 43: Talking to AI So It Actually Listens",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Chapter 43: Conversation Engineering — How to Talk with AI Effectively"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Chapter 45: AI Wrote It, Now Make It Work",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Chapter 45: Quality Assurance — Making AI-Written Code Reliable"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Chapter 48: How Did Android Become What It Is Today?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Chapter 48: Getting to Know Android — From Operating System to Development Ecosystem"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Chapter 56: Your App Is Done, Now Get It Published",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Chapter 56: Polish and Release — Testing, Debugging, and Publishing on Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Appendix B: Stuck on an Exercise?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Appendix B: Hands-On Practice Reference"
+    },
+    "81-jie-yu.md": {
+      "title": "Conclusion: Figure Out Your Phone, That's All It Takes",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Conclusion: Stay Curious, Stay Clear-Headed"
+    }
+  },
+  "es": {
+    "00-di-ling-zhang.md": {
+      "title": "Capítulo 0: Tres verdades antes de empezar",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Capítulo 0: Hola, antes de empezar"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Capítulo 1: Conozcamos primero tu móvil",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Capítulo 1: Hola, mi computadora personal"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Capítulo 2: ¿No encuentras algo en tu teléfono?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Capítulo 2: Ordena tu habitación digital — Gestión de archivos"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Capítulo 3: Sin conexión, no reinicies todavía",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Capítulo 3: Conecta tu teléfono a la \"línea de vida\" — Redes"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Capítulo 4: Antes de instalar una App, mírala bien",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Capítulo 4: Instalar y gestionar App — las \"habilidades\" del teléfono"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Capítulo 5: Ajusta el teléfono a tu gusto",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Capítulo 5: Haz que el teléfono te entienda mejor — Ajustes básicos"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Capítulo 6: ¿Teléfono perdido? ¿Contraseña olvidada?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Capítulo 6: Protege tu vida digital — Seguridad y privacidad"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Capítulo 11: Mejor una foto que cien",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Capítulo 11: Fotografía y gestión de imágenes"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Capítulo 13: ¿Qué Apps instalar y cuáles evitar?",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Capítulo 13: Apps de herramientas recomendadas"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Capítulo 15: ¿Dos cargas al día: batería o mal uso?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Capítulo 15: La ciencia de la batería y la optimización de la autonomía"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Capítulo 16: Cambias de móvil: ¿qué cuentas pierdes?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Capítulo 16: Sistema de cuentas y servicios en la nube"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Capítulo 18: Haz la copia de seguridad ahora, no después",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Capítulo 18: Respaldo y migración de datos"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Capítulo 19: ¿Está roto? No lo repares todavía",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Capítulo 19: Diagnóstico de fallos y autopreparación"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Capítulo 21: ¿Se puede conectar al Wi-Fi público?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Capítulo 21: Radiografía de la seguridad de la red móvil y de la información"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Capítulo 22: ¿Qué hace realmente la IA en tu móvil?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Capítulo 22: Cómo funciona la IA en el móvil"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Capítulo 23: Que el móvil se ocupe de lo repetitivo",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Capítulo 23: Pensamiento de programación e iniciación a la automatización"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Capítulo 25: Vender un teléfono viejo: borra tus datos",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Capítulo 25: Tratamiento de móviles de segúnda mano y legado digital"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Capítulo 26: Las nuevas tecnologías pueden esperar",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Capítulo 26: Fronteras tecnológicas actuales del móvil"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Capítulo 27: Ajusta el teléfono de tus padres",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Capítulo 27: Tus padres también pueden usarlo fácilmente - Guía completa de adaptación para mayores"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Capítulo 28: Antes de comprar, aclara estas tres cosas",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Capítulo 28: Gastar bien para comprar el móvil ideal — Guía definitiva de compra"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Capítulo 29: ¿Cuánto tiempo usas realmente el teléfono?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Capítulo 29:Salud digital — Estableciendo una relación saludable con el móvil"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Capítulo 32: ¿Problema? Treinta segundos para acotar el daño",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Capítulo 32:Manual de primeros auxilios para la seguridad del móvil"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Capítulo 33: ¿Cómo será el móvil dentro de diez años?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Capítulo 33: Perspectivas futuras — El próximo recorrido del móvil"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Capítulo 34: Teléfono y coche: conectar sin líos",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Capítulo 34:Guía detallada de conectividad móvil-automóvil — La fusión del teléfono y el coche"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Capítulo 35: Dale un teléfono a tu hijo: ponle las reglas",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Capítulo 35: Niños y móviles — Guía educativa para la era digital"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Capítulo 36: Cómo conectar todos los dispositivos de casa",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Capítulo 36: El móvil y el hogar inteligente — que tu casa se vuelva lista"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Capítulo 39: La IA no te entiende: no fuiste claro",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Capítulo 39: Ingeniería de contexto — que la IA entienda tu intención"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Capítulo 40: Explícalo primero, y luego a la acción",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Capítulo 40: Ingeniería de requisitos: convertir ideas en instrucciones que la IA pueda ejecutar"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Capítulo 43: Habla con la IA como para que te entienda",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Capítulo 43: Ingeniería del diálogo — técnicas de conversación para colaborar con eficiencia con la IA"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Capítulo 45: La IA escribe, pero el trabajo no acaba",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Capítulo 45: Garantía de calidad — que el código escrito por la IA sea fiable"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Capítulo 48: ¿Cómo llegó Android a ser lo que es hoy?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Capítulo 48: Conocer Android — del sistema operativo al ecosistema de desarrollo"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Capítulo 56: Tu App está lista, ahora publícala",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Capítulo 56: Pulir y publicar: pruebas, depuración y salida a Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Apéndice B: ¿Te has quedado atascado con un ejercicio?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Apéndice B: Referencia de ejercicios prácticos"
+    },
+    "81-jie-yu.md": {
+      "title": "Epílogo: Entender el teléfono, eso es todo",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Epílogo: Mantén la curiosidad, mantén la lucidez"
+    }
+  },
+  "fr": {
+    "00-di-ling-zhang.md": {
+      "title": "Chapitre 0 : Trois petites choses à dire d'abord",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Chapitre 0 : Salut, avant de commencer"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Chapitre 1 : Apprenons d'abord à connaître votre smartphone",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Chapitre 1 : Bonjour, mon ordinateur personnel"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Chapitre 2 : Vous ne trouvez rien sur votre smartphone ?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Chapitre 2 : Rangez votre chambre numérique — gestion des fichiers"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Chapitre 3 : Pas de réseau ? Ne redémarrez pas encore",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Chapitre 3 : Branchez votre smartphone à la « ligne de vie » — le réseau"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Chapitre 4 : Avant d'installer une app, regardez-la bien",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Chapitre 4 : Installer et gérer les applications — le « pack de compétences » du smartphone"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Chapitre 5 : Réglez votre smartphone comme il vous plaît",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Chapitre 5 : Faire en sorte que votre smartphone vous comprenne mieux — paramètres de base"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Chapitre 6 : Smartphone perdu ? Mot de passe oublié ?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Chapitre 6 : Protéger votre vie numérique — sécurité et vie privée"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Chapitre 11 : Mieux shooter que shooter beaucoup",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Chapitre 11 : Photographie et gestion des images"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Chapitre 13 : Quelles apps installer, et lesquelles éviter ?",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Chapitre 13 : Recommandations d'applications utilitaires"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Chapitre 15 : Deux recharges par jour : batterie ou usage ?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Chapitre 15 : Science de la batterie et optimisation de l'autonomie"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Chapitre 16 : Changer de téléphone : quels comptes garder ?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Chapitre 16 : Système de comptes et services cloud"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Chapitre 18 : Sauvegardez maintenant, pas quand ça compte",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Chapitre 18 : Sauvegarde et migration des données"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Chapitre 19 : Panne ? Ne vous précipitez pas à réparer",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Chapitre 19 : Dépannage et sauvetage"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Chapitre 21 : Peut-on se connecter à un Wi-Fi public ?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Chapitre 21 : Exploration approfondie des réseaux mobiles et de la sécurité de l'information"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Chapitre 22 : Que fait vraiment l'IA dans le smartphone ?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Chapitre 22 : Comment l'IA fonctionne dans le smartphone"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Chapitre 23 : Que le smartphone fasse les tâches répétitives",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Chapitre 23 : Pensée programmation et initiation à l'automatisation"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Chapitre 25 : Avant de revendre : les gestes à faire d'abord",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Chapitre 25 : Traitement des smartphones d'occasion et patrimoine numérique"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Chapitre 26 : Les nouvelles technologies peuvent attendre",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Chapitre 26 : L'avant-garde technologique actuelle des smartphones"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Chapitre 27 : Régler le smartphone de vos parents",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Chapitre 27 : Smartphone facile pour vos parents — guide complet d'accessibilité pour les seniors"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Chapitre 28 : Avant d'acheter, clarifiez ces trois points",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Chapitre 28 : Dépenser juste pour acheter le bon — Guide ultime d'achat de smartphone"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Chapitre 29 : Combien de temps l'utilisez-vous vraiment ?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Chapitre 29 : Santé numérique — Construire une relation saine avec votre smartphone"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Chapitre 32 : Problème ? 30 secondes pour limiter les dégâts",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Chapitre 32 : Manuel d'urgence de la sécurité mobile"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Chapitre 33 : Comment sera le smartphone dans dix ans ?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Chapitre 33 : Perspectives futures — La prochaine étape du smartphone"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Chapitre 34 : Téléphone et voiture : connecter sans galère",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Chapitre 34 : Guide approfondi de connectivité automobile — La fusion du smartphone et de la voiture"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Chapitre 35 : Donner un smartphone à un enfant : les règles",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Chapitre 35 : Les enfants et le smartphone — Guide éducatif à l'ère du numérique"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Chapitre 36 : Relier tous les appareils de la maison",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Chapitre 36 : Téléphone et maison intelligente — une maison qui pense"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Chapitre 39 : L'IA ne comprend pas : c'est mal expliqué",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Chapitre 39 : Ingénierie du contexte — faire comprendre votre intention à l'IA"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Chapitre 40 : Dites-le clairement, puis passez à l'action",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Chapitre 40 : L'ingénierie des exigences — transformer ses idées en instructions que l'IA peut exécuter"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Chapitre 43 : Parlez à l'IA pour qu'elle vous comprenne",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Chapitre 43 : L'ingénierie du dialogue — bien communiquer avec l'IA"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Chapitre 45 : L'IA a écrit, mais ce n'est pas fini",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Chapitre 45 : L'assurance qualité — rendre fiable le code écrit par l'IA"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Chapitre 48 : Comment Android est devenu ce qu'il est ?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Chapitre 48 : Découvrir Android — du système d'exploitation à l'écosystème de développement"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Chapitre 56 : Votre app est prête, mettez-la en ligne",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Chapitre 56 : Peaufiner et publier — tests, débogage et mise en ligne sur Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Annexe B : Bloqué sur un exercice ?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Annexe B : Petit guide d'exercices pratiques"
+    },
+    "81-jie-yu.md": {
+      "title": "Conclusion : Comprendre son téléphone, c'est tout",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Conclusion : Rester curieux, rester lucide"
+    }
+  },
+  "he": {
+    "00-di-ling-zhang.md": {
+      "title": "פרק 0: שלושה דברים לפני שמתחילים",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "פרק 0: היי, לפני שמתחילים"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "פרק 1: בואו נכיר את המכשיר הזה",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "פרק 1: שלום, המחשב האישי שלי"
+    },
+    "04-di-er-zhang.md": {
+      "title": "פרק 2: מה עושים כשלא מוצאים קובץ בטלפון؟",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "פרק 2: סדר את החדר הדיגיטלי שלך — ניהול קבצים"
+    },
+    "05-di-san-zhang.md": {
+      "title": "פרק 3：הרשת לא עובדת, אל תאתחל מחדש כל כך מהר",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "פרק 3：חיבור הטלפון ל\"קו החיים\"——האינטרנט"
+    },
+    "06-di-si-zhang.md": {
+      "title": "פרק 4: לפני ההתקנה, תסתכלו על האפליקציה שלוש פעמים",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "פרק 4: התקנה וניהול של אפליקציות — \"ערכת הכישורים\" של הטלפון"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "פרק 5: התאימו את הטלפון לעצמכם",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "פרק 5: תן לטלפון להבין אותך טוב יותר – הגדרות בסיסיות"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "פרק 6: הטלפון אבד, הסיסמה נשכחה, מה עכשיו؟",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "פרק 6: הגן על חייך הדיגיטליים – אבטחה ופרטיות"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "פרק 11: תמונה טובה חשובה יותר מהרבה תמונות",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "פרק 11: צילום וניהול תמונות"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "פרק 13: אילו אפליקציות שוות את ההתקנה, ואילו לא؟",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "פרק 13: המלצות על אפליקציות כלים"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "פרק 15: טענים פעמיים ביום, הסוללה או הרגלי השימוש؟",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "פרק 15: מדע הסוללה ואופטימיזציית חיי סוללה"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "פרק 16: עוברים לטלפון חדש, אילו חשבונות נופלים ואילו נשארים؟",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "פרק 16: מערכת חשבונות ושירותי ענן"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "פרק 18: גיבוי עכשיו, לא ביום שבו תצטרכו אותו",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "פרק 18: גיבוי והעברת נתונים"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "פרק 19: כשהטלפון מקבל תקלה, אל תמהרו לתקן",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "פרק 19: אבחון תקלות והצלה עצמית"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "פרק 21: באמת כדאי להתחבר ל-Wi-Fi ציבורי؟",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "פרק 21: מבט מעמיק ברשתות ניידות ואבטחת מידע"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "פרק 22: מה באמת עושה ה-AI בטלפון שלכם؟",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "פרק 22: כיצד AI עובד בטלפון"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "פרק 23: תנו לטלפון לבצע משימות רציפות במקומכם",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "פרק 23: חשיבה תכנותית ואוטומציה למתחילים"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "פרק 25: לפני מכירת הטלפון הישן, תעשו את הדברים האלה",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "פרק 25: טיפול בטלפון יד שנייה ומורשת דיגיטלית"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "פרק 26: הטכנולוגיה החדשה יכולה לחכות",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "פרק 26: חזית הטכנולוגיה העכשווית בטלפונים"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "פרק 27: מגדירים להורים את הטלפון",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "פרק 27: מדריך לקשישים"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "פרק 28: לפני הקנייה, חשבו על שלושה דברים",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "פרק 28: להוציא את הכסף נכון – מדריך הקנייה הסופי לטלפון"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "פרק 29: באמת יודעים כמה זמן מסך אתם צורכים؟",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "פרק 29: בריאות דיגיטלית – לבנות יחסים בריאים עם הטלפון"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "פרק 32: במקרה חירום, שלושים שניות להגביל את הנזק",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "פרק 32: מדריך חירום לאבטחת הטלפון"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "פרק 33: איך ייראה הטלפון בעוד עשר שנים؟",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "פרק 33: מבט לעתיד – הצעד הבא של הטלפון"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "פרק 34: הטלפון והרכב, מחברים בלי להתאמץ",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "פרק 34: מדריך מעמיק לחיבור רכב – מיזוג הטלפון עם המכונית"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "פרק 35: נותנים לילד טלפון, וקובעים את הכללים",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "פרק 35: ילדים וטלפונים – מדריך חינוכי לעידן הדיגיטלי"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "פרק 36: כל המכשירים בבית, ומחברים ביניהם",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "פרק 36: טלפון ובית חכם — להפוך את הבית לחכם"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "פרק 39: כשה-AI לא מבין, אולי פשוט לא הסברתם נכון",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "פרק 39: הנדסת הקשר — לגרום ל-AI להבין את כוונתכם"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "פרק 40: נוסחים את הדרישות לפני שמתחילים",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "פרק 40: הנדסת דרישות — מהפיכת רעיונות להוראות שה-AI יכול לבצע"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "פרק 43: מדברים עם AI ככה שהוא באמת מבין",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "פרק 43: הנדסת שיחה — טכניקות שיחה לשיתוף פעולה יעיל עם AI"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "פרק 45: ה-AI כתב, וזו רק ההתחלה",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "פרק 45: הבטחת איכות — לגרום לקוד שה-AI כותב להיות אמין"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "פרק 48: איך אנדרואיד הגיע להיות כזה؟",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "פרק 48: להכיר את אנדרואיד — ממערכת ההפעלה ועד לאקוסיסטם הפיתוח"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "פרק 56: האפליקציה מוכנה, מעלים אותה ל-Google Play",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "פרק 56: ליטוש והוצאה לאור – בדיקות, ניפוי באגים ועלייה ל-Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "נספח B: נתקעתם בתרגיל؟",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "נספח B: מדריך קטן לתרגול מעשי"
+    },
+    "81-jie-yu.md": {
+      "title": "דברי סיכום: להבין את הטלפון, זה כל מה שצריך",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "דברי סיכום: שמרו על סקרנות, שמרו על צלילות"
+    }
+  },
+  "id": {
+    "00-di-ling-zhang.md": {
+      "title": "Bab 0: Tiga hal jujur sebelum kita mulai",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Bab 0: Hai, sebelum memulai"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Bab 1: Mari kenali dulu mesin ini",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Bab 1: Halo, komputer pribadiku"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Bab 2: Ada yang hilang di dalam ponsel?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Bab 2: Rapikan ruangan digital Anda—Manajemen file"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Bab 3: Kalau jaringan putus, jangan buru-buru mulai ulang",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Bab 3: Menghubungkan Ponsel ke \"Pancaran Kehidupan\" — Jaringan"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Bab 4: Sebelum pasang aplikasi, lihat-lihat dulu",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Bab 4: Memasang dan Mengelola Aplikasi — \"Paket Keterampilan\" Ponsel"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Bab 5: Setel ponsel sesuai cara Anda pakainya",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Bab 5: Membuat Ponsel Lebih Memahami Anda — Pengaturan Dasar"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Bab 6: Ponsel hilang, kata sandi terlupa, lalu apa?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Bab 6: Melindungi Kehidupan Digital Anda — Keamanan dan Privasi"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Bab 11: Hasil bagus lebih penting daripada foto banyak",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Bab 11: Fotografi dan manajemen gambar"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Bab 13: App mana yang layak dipasang, mana yang dilewati?",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Bab 13: Rekomendasi App Alat Bantu"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Bab 15: Cas dua kali sehari, baterainya atau cara pakainya?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Bab 15: Ilmu baterai dan optimasi daya tahan"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Bab 16: Ganti ponsel, akun mana yang boleh hilang?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Bab 16: Sistem akun dan layanan cloud"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Bab 18: Cadangkan sekarang, jangan tunggu sampai terlupa",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Bab 18: Pencadangan dan migrasi data"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Bab 19: Rusak? Jangan buru-buru bawa ke perbaikan",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Bab 19: Pemecahan masalah dan penyelamatan diri"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Bab 21: Boleh konek ke Wi-Fi publik?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Bab 21: Pendalaman jaringan mobile dan keamanan informasi"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Bab 22: Sebenarnya apa yang AI lakukan di ponsel Anda?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Bab 22: Bagaimana AI bekerja di ponsel"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Bab 23: Biarkan ponsel menangani pekerjaan yang berulang",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Bab 23: Pemikiran Pemrograman dan Pengenalan Otomatisasi"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Bab 25: Sebelum menjual ponsel lama, urus dulu ini",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Bab 25: Penanganan Ponsel Bekas dan Warisan Digital"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Bab 26: Teknologi baru masih bisa menunggu",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Bab 26: Teknologi Ponsel Terkini"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Bab 27: Setel ponsel untuk orang tua",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Bab 27: Orang Tua Juga Bisa Pakai dengan Mudah — Panduan Lengkap Ponsel Ramah Lansia"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Bab 28: Sebelum beli ponsel, pikirkan tiga hal ini",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Bab 28: Belanja Ponsel Impian dengan Uang Tepat — Panduan Beli Ponsel Ultimate"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Bab 29: Berapa lama sebenarnya Anda memakai ponsel?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Bab 29:Kesehatan Digital — Membangun Hubungan Sehat dengan Ponsel"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Bab 32: Hilang, dicuri, atau ditipu? Tiga puluh detik",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Bab 32: Buku Panduan Pertolongan Pertama Keamanan Ponsel"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Bab 33: Seperti apa ponsel sepuluh tahun lagi?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Bab 33: Prospek Masa Depan — Perjalanan Berikutnya Ponsel"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Bab 34: Ponsel dan mobil, biar sambungannya mulus",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Bab 34:Panduan Mendalam Koneksi Mobil — Integrasi Ponsel dan Mobil"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Bab 35: Memberi anak ponsel, aturan mainnya apa?",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Bab 35: Anak-anak dan Ponsel — Panduan Pendidikan Era Digital"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Bab 36: Semua perangkat di rumah, mau dihubungkan bagaimana?",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Bab 36:Ponsel dan Rumah Pintar—Membuat Rumah Lebih Cerdas"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Bab 39: AI tidak paham? Mungkin penjelasan Anda kurang jelas",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Bab 39: Rekayasa Konteks—Membuat AI Memahami Maksud Anda"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Bab 40: Jelaskan dulu dengan jelas, baru mulai",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Bab 40: Rekayasa Kebutuhan — Mengubah Ide Menjadi Instruksi yang Bisa Dieksekusi AI"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Bab 43: Ngobrol dengan AI supaya dia ngerti",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Bab 43: Rekayasa Percakapan — Teknik Berdialog untuk Kolaborasi Efisien dengan AI"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Bab 45: Ditulis AI, belum tentu selesai",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Bab 45: Jaminan Kualitas — Membuat Kode Buatan AI Menjadi Andal"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Bab 48: Bagaimana Android jadi seperti sekarang?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Bab 48: Mengenal Android — Dari Sistem Operasi hingga Ekosistem Pengembangan"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Bab 56: App sudah selesai, tinggal tayang",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Bab 56: Pemolesan dan Rilis—Menguji, Men-debug, dan Naik ke Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Lampiran B: Macet di tengah latihan?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Lampiran B: Referensi Latihan Praktik"
+    },
+    "81-jie-yu.md": {
+      "title": "Penutup: Paham saja cara pakai ponsel, itu cukup",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Penutup: Tetap Ingin Tahu, Tetap Jernih"
+    }
+  },
+  "it": {
+    "00-di-ling-zhang.md": {
+      "title": "Capitolo 0: Tre cose da dire prima di cominciare",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Capitolo 0: Ehi, prima di iniziare"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Capitolo 1: Conosciamo prima questa macchina",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Capitolo 1: Ciao, il mio computer personale"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Capitolo 2: Non trovi qualcosa sul telefono?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Capitolo 2: Riordina la tua stanza digitale — Gestione dei file"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Capitolo 3: Niente rete? Non riavviare subito",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Capitolo 3: Collegare il telefono alla \"linea di vita\" — La rete"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Capitolo 4: Prima di installare un'app, date un'occhiata",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Capitolo 4: Installare e gestire le app — il \"kit di competenze\" del telefono"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Capitolo 5: Regolate il telefono come preferite",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Capitolo 5: Rendi il telefono più simile a te — Impostazioni di base"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Capitolo 6: Telefono perso? Password dimenticata?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Capitolo 6: Proteggi la tua vita digitale — Sicurezza e privacy"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Capitolo 11: Meglio una foto bella che dieci brutte",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Capitolo 11: Fotografia e gestione delle immagini"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Capitolo 13: Quali app vale la pena installare e quali no",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Capitolo 13: App di utilità consigliate"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Capitolo 15: Due ricariche al giorno: batteria o abitudini?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Capitolo 15: Scienza della batteria e ottimizzazione dell'autonomia"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Capitolo 16: Cambiando telefono: quali account puoi perdere?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Capitolo 16: Sistema di account e servizi cloud"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Capitolo 18: Fai il backup adesso, non quando servirà",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Capitolo 18: Backup e migrazione dei dati"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Capitolo 19: Rotto? Non affrettarti a riparare",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Capitolo 19: Risoluzione dei problemi e autosoccorso"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Capitolo 21: Si può collegare al Wi-Fi pubblico?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Capitolo 21: Approfondimento su reti mobili e sicurezza dell'informazione"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Capitolo 22: Cosa fa davvero l'IA nel tuo telefono?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Capitolo 22: Come funziona l'IA nel telefono"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Capitolo 23: Lascia al telefono i compiti ripetitivi",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Capitolo 23: Pensiero computazionale e introduzione all'automazione"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Capitolo 25: Vendi il vecchio telefono? Fai prima queste cose",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Capitolo 25: Gestione del telefono usato ed eredità digitale"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Capitolo 26: Le nuove tecnologie possono aspettare",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Capitolo 26: Le frontiere tecnologiche dei telefoni attuali"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Capitolo 27: Configura il telefono per i tuoi genitori",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Capitolo 27: Il telefono facile anche per i genitori — Guida completa all'adattamento per gli anziani"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Capitolo 28: Prima di comprare, chiarisci queste tre cose",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Capitolo 28: Spendere bene per il telefono desiderato — Guida definitiva all'acquisto"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Capitolo 29: Quanto tempo usi davvero il telefono?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Capitolo 29: Salute digitale — Costruire una relazione sana con il telefono"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Capitolo 32: Problemi? Trenta secondi per limitare i danni",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Capitolo 32: Manuale di pronto soccorso per la sicurezza del telefono"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Capitolo 33: Come sarà il telefono tra dieci anni?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Capitolo 33: Prospettive future — il prossimo viaggio del telefono"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Capitolo 34: Telefono e auto: collegarli senza complicazioni",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Capitolo 34: Guida approfondita alla connettività auto-telefono — la fusione tra telefono e automobile"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Capitolo 35: Dai il telefono a tuo figlio: poni le regole",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Capitolo 35: Bambini e telefoni — guida all'educazione nell'era digitale"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Capitolo 36: Come collegare tutti i dispositivi di casa",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Capitolo 36: Telefono e casa intelligente — rendi la casa smart"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Capitolo 39: L'AI non capisce? Forse non hai detto bene",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Capitolo 39: Ingegneria del contesto — far capire all'AI le tue intenzioni"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Capitolo 40: Prima dillo chiaro, poi agisci",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Capitolo 40: Ingegneria dei requisiti — trasformare le idee in istruzioni eseguibili dall'AI"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Capitolo 43: Come parlare all'AI perché ti capisca",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Capitolo 43: Ingegneria del dialogo — la tecnica di conversazione per collaborare in modo efficace con l'AI"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Capitolo 45: L'AI ha scritto, ma il lavoro non è finito",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Capitolo 45: Garanzia di qualità — rendere affidabile il codice scritto dall'AI"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Capitolo 48: Come è diventato Android quello che è oggi?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Capitolo 48: Conoscere Android — dal sistema operativo all'ecosistema di sviluppo"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Capitolo 56: La tua app è pronta, ora pubblicala",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Capitolo 56: Rifinire e pubblicare — test, debug e lancio su Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Appendice B: Ti sei bloccato su un esercizio?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Appendice B: Piccoli esercizi pratici"
+    },
+    "81-jie-yu.md": {
+      "title": "Conclusione: Capire il telefono, tutto qui",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Conclusione: Resta curioso, resta lucido"
+    }
+  },
+  "ja": {
+    "00-di-ling-zhang.md": {
+      "title": "第零章：始める前に、三つだけ本音で",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "第零章：やあ、始める前に"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "第一章：まず、このマシンを知ろう",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "第一章：こんにちは、私のパーソナルコンピューター"
+    },
+    "04-di-er-zhang.md": {
+      "title": "第二章：スマホ内のもの、見つからないときは？",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "第二章：デジタルルームを整理する——ファイル管理"
+    },
+    "05-di-san-zhang.md": {
+      "title": "第三章：ネットにつながらない、再起動はあとで",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "第三章：スマホに「ライフライン」をつなぐ——ネットワーク"
+    },
+    "06-di-si-zhang.md": {
+      "title": "第四章：アプリを入れる前に、ひととおり見よう",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "第四章：アプリのインストールと管理——スマートフォンの「スキルパック」"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "第五章：スマホをいつもの使い方に合わせて設定",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "第五章：スマートフォンをもっと理解させる——基本設定"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "第六章：スマホをなくした日、パスワードを忘れた日",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "第六章：デジタルライフを守る——セキュリティとプライバシー"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "第十一章：多く撮るより、上手に撮るほうが大事",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "第十一章：撮影と画像管理"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "第十三章：入れるべきAppと、避けるべきApp",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "第十三章：ツール系アプリのおすすめ"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "第十五章：一日二度充電、電池か使い方のどっち？",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "第十五章：バッテリーの科学と連続駆動時間の最適化"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "第十六章：機種変更、なくしてもいいアカウントはどれ？",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "第十六章：アカウント体系とクラウドサービス"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "第十八章：バックアップは「忘れた日」にしないで",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "第十八章：データバックアップと移行"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "第十九章：壊れた？まず焦らず、原因を探る",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "第十九章：トラブルシューティングと自己救助"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "第二十一章：公共Wi-Fi、接続していいのか？",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "第二十一章：モバイルネットワークと情報セキュリティの深掘り"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "第二十二章：AIがスマホで実際に何をしているのか？",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "第二十二章：AIはスマホでどう働くのか"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "第二十三章：同じ作業はスマホに任せる",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "第二十三章：プログラミング的思考とオートメーション入門"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "第二十五章：中古スマホを売る前に、済ませておくこと",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "第二十五章：中古スマートフォンの処理とデジタル遺産"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "第二十六章：新しい技術は待ち",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "第二十六章：今のスマホ技術の最前線"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "第二十七章：両親のスマホを整える",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "第二十七章：お父さんお母さんもラクラク——スマホのシニア向け完全ガイド"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "第二十八章：買う前に、決めておく三つのこと",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "第二十八章：お金を賢く使ってお気に入りを買う——スマホ選びの究極ガイド"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "第二十九章：スマホを何時間使っているか、自分でも知らない",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "第二十九章：デジタルヘルス——スマホとの健康的な関係づくり"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "第三十二章：異変が起きたら、30秒で被害を止める",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "第三十二章：スマホ安全救急マニュアル"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "第三十三章：次の10年、スマホはどう変わる？",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "第三十三章：未来展望——スマホの次のステップ"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "第三十四章：スマホと車、手軽につなぐには",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "第三十四章：車載連携ディープガイド——スマホとクルマの融合"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "第三十五章：子どもにスマホを渡すときのルール",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "第三十五章：子どもとスマホ——デジタル時代の教育ガイド"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "第三十六章：家中のデバイス、まとめてつなぐ",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "第三十六章：スマホとスマートホーム——家を賢くする"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "第三十九章：AIに伝わらないのは、言い方のせいかも",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "第三十九章：コンテキストエンジニアリング——AIにあなたの意図をわからせる"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "第四十章：動かす前に、はっきり伝える",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "第四十章：要件エンジニアリング——アイデアをAIが実行できる指示に変える"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "第四十三章：AIに話して伝わる話し方",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "第四十三章：対話エンジニアリング——AIと効率的に協働するための対話技術"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "第四十五章：AIが書いただけでは完成じゃない",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "第四十五章：品質保証——AIが書いたコードを信頼できるものに"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "第四十八章：Androidはどうやって今の形になったのか",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "第四十八章：Androidを知る——OSから開発エコシステムまで"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "第五十六章：Appをストアに出すまで",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "第五十六章：仕上げとリリース——テスト、デバッグ、Google Playへの出品"
+    },
+    "76-fu-lu-b.md": {
+      "title": "付録B：実践で詰まったらどうする？",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "付録B：実践練習の参考"
+    },
+    "81-jie-yu.md": {
+      "title": "おわりに：スマホを理解すれば、それだけだ",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "おわりに：好奇心を持ち続け、清醒でいる"
+    }
+  },
+  "ko": {
+    "00-di-ling-zhang.md": {
+      "title": "제0장: 시작 전에 할 세 가지 솔직한 말",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "제0장: 안녕, 시작하기 전에"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "제1장: 이 기기를 먼저 알아보기",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "제1장: 안녕, 나의 개인 컴퓨터"
+    },
+    "04-di-er-zhang.md": {
+      "title": "제2장: 스마트폰에서 찾지 못하면?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "제2장: 디지털 방을 정리하세요 - 파일 관리"
+    },
+    "05-di-san-zhang.md": {
+      "title": "제3장: 연결이 안 되면, 재부팅부터 하지 마세요",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "제3장: 스마트폰에 \"생명선\" 연결하기 - 네트워크"
+    },
+    "06-di-si-zhang.md": {
+      "title": "제4장: 앱을 설치하기 전에, 먼저 한 번 살펴보기",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "제4장: 앱 설치 및 관리 - 스마트폰의 \"기술 패키지\""
+    },
+    "07-di-wu-zhang.md": {
+      "title": "제5장: 쓰기 편한대로 스마트폰 설정하기",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "제5장: 스마트폰이 나를 더 잘 이해하도록 - 기본 설정"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "제6장: 기기를 잃고, 비밀번호를 잊었을 때",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "제6장: 당신의 디지털 라이프 지키기 - 보안 및 프라이버시"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "제11장: 많이 찍는 것보다, 잘 찍는 것이 중요",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "제11장: 사진 촬영과 이미지 관리"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "제13장: 어떤 앱을 설치하고, 어떤 앱은 피할까",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "제13장: 유틸리티 앱 추천"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "제15장: 하루 두 번 충전, 배터리인가 사용법인가",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "제15장: 배터리 과학과 배터리 타임 최적화"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "제16장: 기기를 바꿀 때, 어떤 계정을 지워도 되는가",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "제16장: 계정 체계와 클라우드 서비스"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "제18장: 백업은 잊어버리는 날까지 기다리지 마세요",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "제18장: 데이터 백업과 이전"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "제19장: 고장 났다면? 먼저 고장부터 살피세요",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "제19장: 고장 진단과 자가 구조"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "제21장: 공용 Wi-Fi, 정말 연결해도 될까?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "제21장: 모바일 네트워크와 정보 보안 심층 탐구"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "제22장: AI는 스마트폰에서 실제로 뭘 하는가",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "제22장: AI는 스마트폰에서 어떻게 작동하는가"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "제23장: 반복되는 일은 스마트폰에 맡기기",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "제23장: 프로그래밍 사고방식과 자동화 입문"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "제25장: 중고폰을 넘기기 전에, 끝내야 할 것들",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "제25장: 중고 스마트폰 처리와 디지털 유산"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "제26장: 새로운 기술은 기다리면 된다",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "제26장: 현재 스마트폰 기술 최전선"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "제27장: 부모님 스마트폰 설정하기",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "제27장: 부모님도 쉽게 사용——시니어 친화 스마트폰 완전 가이드"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "제28장: 구매 전에, 먼저 정해둘 세 가지",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "제28장: 돈을 알맞게 써서 마음에 드는 기기 사기——스마트폰 구매 궁극 가이드"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "제29장: 스마트폰을 얼마나 쓰는지, 사실 모릅니다",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "제29장: 디지털 건강——스마트폰과 건강한 관계 구축"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "제32장: 문제가 생기면, 30초 만에 손실 막기",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "제32장: 휴대폰 보안 응급 처치 매뉴얼"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "제33장: 다음 10년, 스마트폰은 어떻게 될까",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "제33장:미래 전망——스마트폰의 다음 여정"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "제34장: 스마트폰과 자동차, 자연스럽게 연결하기",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "제34장: 차량 연동 심층 가이드——스마트폰과 자동차의 융합"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "제35장: 아이에게 스마트폰을 줄 때의 규칙",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "제35장: 어린이와 스마트폰——디지털 시대의 교육 가이드"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "제36장: 집에 있는 기기들, 하나로 연결하는 법",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "제36장: 휴대폰과 스마트홈 — 집을 똑똑하게"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "제39장: AI가 알아듣지 못한다면, 내가 설명이 부족했나",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "제39장: 컨텍스트 엔지니어링 — AI가 내 의도를 이해하게 만들기"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "제40장: 시작하기 전에, 먼저 명확히 말하기",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "제40장: 요구사항 엔지니어링 — 아이디어를 AI가 실행 가능한 지시로 바꾸기"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "제43장: AI가 알아듣도록 말하는 법",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "제43장: 대화 엔지니어링 — AI와 효율적으로 협업하는 대화 기술"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "제45장: AI가 쓴 코드는 끝이 아니다",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "제45장: 품질 보증 — AI가 쓴 코드를 믿을 수 있게 만들기"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "제48장: Android는 어떻게 자꾸 여기까지 왔나",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "제48장: 안드로이드 알아보기——운영체제에서 개발 생태계까지"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "제56장: 앱을 만들었다면, 이제 출시까지",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "제56장: 갈고닦기와 출시 — 테스트, 디버깅, Google Play 출시"
+    },
+    "76-fu-lu-b.md": {
+      "title": "부록 B: 연습이 막혔을 때, 어떻게 할까",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "부록 B:실습 연습 참고 자료"
+    },
+    "81-jie-yu.md": {
+      "title": "맺음말: 스마트폰을 이해하면, 거기서 끝입니다",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "맺음말: 호기심을 유지하고, 깨어 있으세요"
+    }
+  },
+  "lzh": {
+    "00-di-ling-zhang.md": {
+      "title": "第零章：且慢，先說三句實話",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "第零章：噫，始之前"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "第一章：先識此機",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "第一章：敬禮，吾之私用電腦"
+    },
+    "04-di-er-zhang.md": {
+      "title": "第二章：手機中之物，尋之不得，奈何？",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "第二章：整理汝之數字之室——文件管理"
+    },
+    "05-di-san-zhang.md": {
+      "title": "第三章：網連不上，且莫急着重啟",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "第三章：使手機接\"生命之線\"——網絡"
+    },
+    "06-di-si-zhang.md": {
+      "title": "第四章：裝App之前，先看三眼",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "第四章：安裝與管理App——手機之\"技能包\""
+    },
+    "07-di-wu-zhang.md": {
+      "title": "第五章：使手機合汝所便",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "第五章：使手機更知汝意——基礎設置"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "第六章：手機遺失、密碼忘記之時",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "第六章：守護汝之數字生活——安全與隱私"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "第十一章：拍得好，比拍得多更要緊",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "第十一章：攝影與圖像管理"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "第十三章：何App宜裝，何App不宜裝？",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "第十三章：工具類App推薦"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "第十五章：日充二次，電池之過乎，抑用法之失乎？",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "第十五章：電池之理與續航之優化"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "第十六章：換機之時，賬號孰可捨、孰不可捨",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "第十六章：賬號體系與雲端之務"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "第十八章：備份，切莫待到想不起之日",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "第十八章：數據備份與遷移"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "第十九章：壞矣奈何：先莫急修",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "第十九章：故障排查與自救"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "第二十一章：公共 Wi-Fi 果可連乎？",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "第二十一章：移動網絡與信息安全深探"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "第二十二章：AI在君手機中，究作何事？",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "第二十二章：AI如何於手機中工作"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "第二十三章：使手機代君作重複之事",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "第二十三章：編程之思與自動化啓蒙"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "第二十五章：舊手機賣出之前，先做這幾件事",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "第二十五章：二手手機處理與數字遺產"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "第二十六章：此等新技，且待之",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "第二十六章：當下手機技術前沿"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "第二十七章：代父母調手機",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "第二十七章：父母亦能輕鬆用——適老化手機完全指南"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "第二十八章：買機之前，先想清此三事",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "第二十八章：花對錢買至心儀機——手機選購終極指南"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "第二十九章：手機用幾何時，汝其不知乎？",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "第二十九章：數字健康——與手機建立健康關係"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "第三十二章：事出奈何：三十秒止其損",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "第三十二章：手機安全急救手冊"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "第三十三章：下一十年，手機將成何狀？",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "第三十三章：未來展望——手機之下一程"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "第三十四章：手機與車，須連得順手",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "第三十四章：車機互聯深指南——手機與汽車之融合"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "第三十五章：予子一部手機，規矩何以定之？",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "第三十五章：兒童與手機——數字時代之教育指南"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "第三十六章：家中諸器，究如何連之？",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "第三十六章：手機與智能家居——使家生智"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "第三十九章：AI不解爾意，多半爾未說清",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "第三十九章：上下文之工——使 AI 解爾之意"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "第四十章：先說清楚，再動手",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "第四十章：需求之工——化念為 AI 可行之令"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "第四十三章：與AI對話，何以令其聽得明？",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "第四十三章：對話工程——與AI高效協作之對話技術"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "第四十五章：AI寫完，未竟",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "第四十五章：質量保障——使AI所寫之代碼可靠"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "第四十八章：安卓何以長成今日之貌？",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "第四十八章：認識安卓——從操作系統到開發生態"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "第五十六章：App既成，繼之奈何？",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "第五十六章：琢磨與發佈——測試、調試與上架 Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "附錄B：練習卡住，奈何？",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "附錄B：動手練習小參考"
+    },
+    "81-jie-yu.md": {
+      "title": "結語：手機用明，如此而已",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "結語：持好奇，持清醒"
+    }
+  },
+  "ms": {
+    "00-di-ling-zhang.md": {
+      "title": "Bab 0: Tiga perkara jujur sebelum mula",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Bab 0: Hai, Sebelum Mula"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Bab 1: Mari kenali mesin ini dahulu",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Bab 1: Hello, Komputer Peribadi Saya"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Bab 2: Ada sesuatu dalam telefon yang hilang?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Bab 2: Kemas Bilik Digital Anda — Pengurusan Fail"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Bab 3: Rangkaian putus? Jangan tergesa-gesa mula semula",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Bab 3: Sambungkan Telefon ke \"Garis Hayat\" — Rangkaian"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Bab 4: Sebelum pasang aplikasi, lihat dulu",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Bab 4: Pasang dan Urus Aplikasi — \"Pakej Kemahiran\" Telefon"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Bab 5: Tetapkan telefon ikut cara anda guna",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Bab 5: Buat Telefon Lebih Memahami Anda — Tetapan Asas"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Bab 6: Telefon hilang, kata laluan terlupa, lalu apa?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Bab 6: Lindungi Kehidupan Digital Anda — Keselamatan & Privasi"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Bab 11: Gambar bagus lebih penting daripada banyak gambar",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Bab 11: Fotografi & Pengurusan Gambar"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Bab 13: Aplikasi mana yang berbaloi, mana yang perlu elak",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Bab 13: Cadangan Aplikasi Alat"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Bab 15: Cas dua kali sehari, bateri atau cara guna?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Bab 15: Sains Bateri & Pengoptimuman Ketahanan"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Bab 16: Tukar telefon, akaun mana yang boleh hilang?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Bab 16: Sistem Akaun & Perkhidmatan Awan"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Bab 18: Sandarkan sekarang, jangan tunggu sudah lupa",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Bab 18: Sandaran Data &amp; Pemindahan"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Bab 19: Rosak? Jangan tergesa-gesa membaiki",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Bab 19: Pengesanan Kerosakan &amp; Penyelamatan Diri"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Bab 21: Boleh sambung ke Wi-Fi awam?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Bab 21: Pendalaman Rangkaian Bergerak & Keselamatan Maklumat"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Bab 22: Sebenarnya AI buat apa dalam telefon anda?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Bab 22: Cara AI Berfungsi dalam Telefon"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Bab 23: Biarkan telefon urus kerja berulang",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Bab 23: Pemikiran Pengaturcaraan &amp; Pengenalan Automasi"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Bab 25: Sebelum jual telefon lama, urus dulu ini",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Bab 25: Pemprosesan Telefon Terpakai & Warisan Digital"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Bab 26: Teknologi baru boleh tunggu",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Bab 26: Hadapan Teknologi Telefon Semasa"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Bab 27: Tetapkan telefon untuk ibu bapa",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Bab 27: Ibu bapa juga boleh guna dengan mudah - Panduan lengkap penyesuaian warga emas telefon"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Bab 28: Sebelum beli telefon, fikir tiga hal ini",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Bab 28: Belanjakan dengan Bijak, Dapatkan Telefon Idaman — Panduan Membeli Telefon Ultimat"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Bab 29: Berapa lama sebenarnya anda guna telefon?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Bab 29:Kesihatan Digital — Wujudkan Hubungan Sihat dengan Telefon"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Bab 32: Hilang, dicuri, atau ditipu? Tiga puluh saat",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Bab 32:Manual Pertolongan Cemas Keselamatan Telefon"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Bab 33: Telefon akan jadi apa dalam sepuluh tahun?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Bab 33: Pandangan Hadapan — Perjalanan Seterusnya Telefon"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Bab 34: Telefon dan kereta, supaya sambungannya lancar",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Bab 34:Panduan Mendalam Sambungan Kereta — Integrasi Telefon dan Automobil"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Bab 35: Beri anak telefon, aturan mainnya apa?",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Bab 35: Kanak-kanak dan Telefon — Panduan Pendidikan Era Digital"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Bab 36: Semua peranti rumah, sambung macam mana?",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Bab 36:Telefon dan rumah pintar - menjadikan rumah anda pintar"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Bab 39: AI tak faham? Mungkin penerangan anda kurang jelas",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Bab 39: Kejuruteraan konteks - membuat AI memahami niat anda"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Bab 40: Terangkan dahulu, baru mula",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Bab 40: Kejuruteraan Keperluan — Mengubah Idea Menjadi Arahan yang Boleh Dilaksanakan oleh AI"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Bab 43: Bercakap dengan AI supaya dia faham",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Bab 43: Kejuruteraan Perbualan — Teknik Berbual untuk Kerjasama Cekap dengan AI"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Bab 45: AI sudah tulis, belum tentu siap",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Bab 45: Jaminan Kualiti — Menjadikan Kod AI Boleh Dipercayai"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Bab 48: Bagaimana Android menjadi seperti sekarang?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Bab 48: Mengenali Android — Daripada Sistem Operasi kepada Ekosistem Pembangunan"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Bab 56: Aplikasi sudah siap, sekarang terbit",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Bab 56: Pengilatan dan Penerbitan — Ujian, Penyahpepijatan dan Penerbitan di Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Lampiran B: Tersekat dalam latihan?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Lampiran B: Rujukan Latihan Amali"
+    },
+    "81-jie-yu.md": {
+      "title": "Penutup: Faham cara guna telefon, itu sahaja",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Penutup: Kekal Ingin Tahu, Kekal Berwaspada"
+    }
+  },
+  "pt": {
+    "00-di-ling-zhang.md": {
+      "title": "Capítulo 0: Três coisas a dizer antes de começar",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Capítulo 0: Olá, antes de começar"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Capítulo 1: Vamos conhecer esta máquina primeiro",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Capítulo 1: Olá, Meu Computador Pessoal"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Capítulo 2: Não achou alguma coisa no celular?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Capítulo 2: Organize Seu Quarto Digital — Gerenciamento de Arquivos"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Capítulo 3: Sem rede? Não reinicie ainda",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Capítulo 3: Conecte Seu Celular à \"Linha da Vida\" — Redes"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Capítulo 4: Antes de instalar um app, dê uma olhada",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Capítulo 4: Instalar e Gerenciar Apps — O \"Pacote de Habilidades\" do Smartphone"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Capítulo 5: Deixe o celular do seu jeito",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Capítulo 5: Deixe o Smartphone Mais Inteligente — Configurações Básicas"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Capítulo 6: Perdeu o celular? Esqueceu a senha?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Capítulo 6: Proteja Sua Vida Digital — Segurança e Privacidade"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Capítulo 11: Uma foto boa vale mais que dez ruins",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Capítulo 11: Fotografia e Gerenciamento de Imagens"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Capítulo 13: Quais apps valem a pena e quais evitar",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Capítulo 13: Recomendações de apps de ferramentas"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Capítulo 15: Duas cargas por dia: é a bateria ou o uso?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Capítulo 15: Ciência da bateria e otimização da autonomia"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Capítulo 16: Ao trocar de celular, quais contas você perde?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Capítulo 16: Sistema de contas e serviços em nuvem"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Capítulo 18: Faça o backup agora, não quando precisar",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Capítulo 18: Backup e migração de dados"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Capítulo 19: Quebrou? Não saia consertando agora",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Capítulo 19: Solução de problemas e autoajuda"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Capítulo 21: Dá para se conectar ao Wi-Fi público?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Capítulo 21: Redes móveis e segurança da informação em profundidade"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Capítulo 22: O que a IA realmente faz no seu celular?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Capítulo 22: Como a IA funciona no celular"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Capítulo 23: Deixe o celular cuidar do trabalho repetitivo",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Capítulo 23: Pensamento de programação e iniciação à automação"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Capítulo 25: Vai vender o celular usado? Faça essas coisas",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Capítulo 25: Descarte de celulares usados e herança digital"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Capítulo 26: As novas tecnologias podem esperar",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Capítulo 26: Fronteiras atuais da tecnologia mobile"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Capítulo 27: Ajuste o celular para os seus pais",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Capítulo 27: Para os pais também usarem com facilidade — Guia completo de acessibilidade para idosos no celular"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Capítulo 28: Antes de comprar, resolva estas três coisas",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Capítulo 28: Gaste certo e compre o celular ideal — Guia definitivo de compra de celular"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Capítulo 29: Quanto tempo você usa o celular de verdade?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Capítulo 29: Saúde digital — estabelecendo uma relação saudável com o celular"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Capítulo 32: Problema? Trinta segundos para conter o dano",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Capítulo 32: Manual de emergência de segurança do celular"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Capítulo 33: Como será o celular nos próximos dez anos?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Capítulo 33: Perspectivas futuras — a próxima etapa do celular"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Capítulo 34: Celular e carro: como conectar sem complicação",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Capítulo 34: Guia aprofundado de conectividade veicular — a fusão entre celular e carro"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Capítulo 35: Um celular para o filho: como definir as regras",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Capítulo 35: Crianças e celular — guia educacional na era digital"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Capítulo 36: Como conectar todos os aparelhos de casa",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Capítulo 36: Celular e casa inteligente — torne a casa esperta"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Capítulo 39: A IA não entendeu? Talvez você não foi claro",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Capítulo 39: Engenharia de contexto — fazer a IA entender a sua intenção"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Capítulo 40: Explique primeiro, depois faça",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Capítulo 40: Engenharia de requisitos — transformar ideias em instruções executáveis pela IA"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Capítulo 43: Como falar com a IA para ela entender",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Capítulo 43: Engenharia de diálogo — técnicas de conversa para colaborar com a IA com eficiência"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Capítulo 45: A IA escreveu, mas não acabou",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Capítulo 45: Garantia de qualidade — deixando confiável o código escrito pela IA"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Capítulo 48: Como o Android virou o que é hoje?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Capítulo 48: Conhecendo o Android — do sistema operacional ao ecossistema de desenvolvimento"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Capítulo 56: O app está pronto, agora publique",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Capítulo 56: Polimento e publicação — testes, depuração e publicação na Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Apêndice B: Travou em um exercício?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Apêndice B: Referência Rápida de Exercícios Práticos"
+    },
+    "81-jie-yu.md": {
+      "title": "Conclusão: Entender o celular, é só isso",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Conclusão: Mantenha a Curiosidade, Mantenha a Lucidez"
+    }
+  },
+  "ru": {
+    "00-di-ling-zhang.md": {
+      "title": "Глава 0: Три честных слова перед стартом",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "Глава 0: Привет, прежде чем начать"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "Глава 1: Сначала познакомимся с этой машиной",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "Глава 1: Привет, мой личный компьютер"
+    },
+    "04-di-er-zhang.md": {
+      "title": "Глава 2: Не можете найти нужное на телефоне?",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "Глава 2: Наведи порядок в своей цифровой комнате — управление файлами"
+    },
+    "05-di-san-zhang.md": {
+      "title": "Глава 3: Нет сети? Не спешите перезагружать",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "Глава 3: Подключаем телефон к «линии жизни» — Сеть"
+    },
+    "06-di-si-zhang.md": {
+      "title": "Глава 4: Перед установкой приложений посмотрите поближе",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "Глава 4: Установка и управление приложениями — «Набор навыков» телефона"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "Глава 5: Настройте телефон под себя",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "Глава 5: Пусть телефон понимает вас лучше — Базовые настройки"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "Глава 6: Потеряли телефон? Забыли пароль?",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "Глава 6: Защита вашей цифровой жизни — Безопасность и конфиденциальность"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "Глава 11: Лучше снять хорошо, чем снять больше",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "Глава 11: Фотография и управление снимками"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "Глава 13: Какие приложения ставить, а какие лучше не ставить",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "Глава 13: Рекомендации приложений-инструментов"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "Глава 15: Два заряда в день: батарея или привычки?",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "Глава 15: Наука о батареях и оптимизация автономной работы"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "Глава 16: Смена телефона: какие учётные записи можно потерять?",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "Глава 16: Система учётных записей и облачные сервисы"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "Глава 18: Сделайте копию, пока не забыли",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "Глава 18: Резервное копирование и миграция данных"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "Глава 19: Сломалось? Не спешите чинить",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "Глава 19: Диагностика неисправностей и самостоятельное спасение"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "Глава 21: Можно ли подключаться к публичному Wi-Fi?",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "Глава 21: Глубокое погружение в мобильные сети и информационную безопасность"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "Глава 22: Что AI на самом деле делает в вашем телефоне?",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "Глава 22: Как AI работает в вашем телефоне"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "Глава 23: Пусть телефон возьмёт на себя повторяющуюся работу",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "Глава 23: Программное мышление и введение в автоматизацию"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "Глава 25: Продаёте старый телефон? Начните с этих шагов",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "Глава 25: Утилизация б/у телефона и цифровое наследие"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "Глава 26: Новые технологии могут подождать",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "Глава 26: Передовые технологии смартфонов сегодня"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "Глава 27: Настройте телефон для родителей",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "Глава 27: Родителям тоже будет легко — полное руководство по адаптации телефона для пожилых"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "Глава 28: Покупая телефон, сначала решите вот эти три вещи",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "Глава 28: Покупаем с умом — финальное руководство по выбору смартфона"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "Глава 29: Сколько времени вы правда проводите с телефоном?",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "Глава 29: Цифровое здоровье — как выстроить здоровые отношения со смартфоном"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "Глава 32: Проблемы? Тридцать секунд, чтобы ограничить ущерб",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "Глава 32: Экстренная помощь по безопасности телефона"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "Глава 33: Каким будет телефон в следующем десятилетии?",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "Глава 33: Взгляд в будущее — куда идёт смартфон"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "Глава 34: Телефон и автомобиль: соединяем без лишних хлопот",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "Глава 34: Глубокое руководство по автомобильной интеграции"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "Глава 35: Детям телефон: как установить правила",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "Глава 35: Дети и смартфоны"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "Глава 36: Как соединить все устройства дома",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "Глава 36: Телефон и умный дом — делаем дом умнее"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "Глава 39. ИИ не понял? Скорее всего, вы сказали неясно",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "Глава 39. Инженерия контекста — помогите ИИ понять ваши намерения"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "Глава 40. Сначала скажите всё как есть, потом действуйте",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "Глава 40. Инженерия требований — превратите идеи в инструкции, выполнимые для ИИ"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "Глава 43: Как говорить с AI, чтобы он понимал",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "Глава 43: Инженерия диалога — техника эффективного общения с AI"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "Глава 45: ИИ написал, но это ещё не конец",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "Глава 45: Гарантия качества — делаем код от ИИ надёжным"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "Глава 48: Как Android стал таким, какой он есть?",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "Глава 48: Знакомство с Android — от операционной системы до экосистемы разработки"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "Глава 56. Приложение готово? Выпустите его в Google Play",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "Глава 56. Шлифовка и публикация — тесты, отладка и выход в Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "Приложение B: Застряли на упражнении?",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "Приложение B: Практические упражнения"
+    },
+    "81-jie-yu.md": {
+      "title": "Заключение: Разберитесь в телефоне, и этого хватит",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "Заключение: Сохраняйте любопытство, сохраняйте ясность"
+    }
+  },
+  "th": {
+    "00-di-ling-zhang.md": {
+      "title": "บทที่ 0: สามเรื่องที่ต้องพูดก่อนเริ่ม",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "บทที่ 0: สวัสดี ก่อนเริ่มต้น"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "บทที่ 1: มาทำความรู้จักเครื่องนี้กัน",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "บทที่ 1: สวัสดี คอมพิวเตอร์ส่วนตัวของฉัน"
+    },
+    "04-di-er-zhang.md": {
+      "title": "บทที่ 2: หาไฟล์ในโทรศัพท์ไม่เจอ จะทำอย่างไร？",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "บทที่ 2: จัดระเบียบห้องดิจิทัลของคุณ — การจัดการไฟล์"
+    },
+    "05-di-san-zhang.md": {
+      "title": "บทที่ 3: ต่อเน็ตไม่ได้ อย่าเพิ่งรีบูต",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "บทที่ 3: เชื่อมโทรศัพท์กับ \"เส้นชีวิต\" — เครือข่าย"
+    },
+    "06-di-si-zhang.md": {
+      "title": "บทที่ 4: ก่อนติดตั้งแอป ลองมองให้ดีสักสามครั้ง",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "บทที่ 4: ติดตั้งและจัดการแอป — \"ชุดทักษะ\" ของโทรศัพท์"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "บทที่ 5: ปรับโทรศัพท์ให้เข้ากับมือคุณ",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "บทที่ 5: ทำให้โทรศัพท์เข้าใจคุณมากขึ้น — การตั้งค่าพื้นฐาน"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "บทที่ 6: โทรศัพท์หาย รหัสผ่านลืม จะช่วยตัวเองยังไง",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "บทที่ 6: คุ้มครองชีวิตดิจิทัลของคุณ — ความปลอดภัยและความเป็นส่วนตัว"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "บทที่ 11: ถ่ายดีสำคัญกว่าถ่ายเยอะ",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "บทที่ 11: การถ่ายภาพและการจัดการรูปภาพ"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "บทที่ 13: แอปไหนควรลง อันไหนไม่ต้องลง？",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "บทที่ 13: แนะนำแอปประเภทเครื่องมือ"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "บทที่ 15: ชาร์จวันละสองครั้ง เป็นเรื่องแบตหรือวิธีใช้？",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "บทที่ 15: วิทยาศาสตร์แบตเตอรี่กับการยืดอายุการใช้งาน"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "บทที่ 16: เปลี่ยนเครื่องใหม่ บัญชีไหนทิ้งได้ อันไหนต้องเก็บ",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "บทที่ 16: ระบบบัญชีและบริการคลาวด์"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "บทที่ 18: สำรองข้อมูลตั้งแต่วันนี้ อย่ารอจนต้องใช้",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "บทที่ 18: การสำรองข้อมูลและการย้ายข้อมูล"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "บทที่ 19: เครื่องมีปัญหา อย่าเพิ่งรีบซ่อม",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "บทที่ 19: การไล่หาปัญหาและช่วยเหลือตัวเอง"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "บทที่ 21: ควรต่อ Wi-Fi สาธารณะจริงหรือเปล่า？",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "บทที่ 21: เจาะลึกความปลอดภัยเครือข่ายมือถือกับความเป็นส่วนตัว"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "บทที่ 22: AI ในโทรศัพท์ทำอะไรกันแน่？",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "บทที่ 22: AI ทำงานอย่างไรในโทรศัพท์มือถือ"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "บทที่ 23: ให้โทรศัพท์ทำงานต่อเนื่องแทนเรา",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "บทที่ 23: วิธีคิดแบบโปรแกรมเมอร์และการเริ่มต้นการทำงานอัตโนมัติ"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "บทที่ 25: ก่อนขายมือถือเก่า ต้องทำสิ่งเหล่านี้",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "บทที่ 25: การจัดการมือถือมือสองและมรดกดิจิทัล"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "บทที่ 26:เทคโนโลยีใหม่ ค่อยรอก่อน",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "บทที่ 26:แนวโน้มเทคโนโลยีโทรศัพท์ในปัจจุบัน"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "บทที่ 27: ปรับมือถือให้พ่อแม่ใช้",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "บทที่ 27: พ่อแม่ก็ใช้ง่าย—คู่มือปรับแต่งมือถือสำหรับผู้สูงอายุอย่างครบถ้วน"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "บทที่ 28:ก่อนซื้อ คิดให้ชัดเรื่องสามข้อ",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "บทที่ 28:ใช้เงินอย่างคุ้มค่า ซื้อเครื่องที่ใช่—คู่มือเลือกซื้อโทรศัพท์ขั้นเทพ"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "บทที่ 29:คุณรู้จริงไหมว่าใช้เวลาหน้าจอมานานแค่ไหน",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "บทที่ 29:สุขภาพดิจิทัล—สร้างความสัมพันธ์ที่ดีกับโทรศัพท์"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "บทที่ 32: เกิดเรื่อง หยุดความเสียหายในสามสิบวินาที",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "บทที่ 32: คู่มือฉุกเฉินด้านความปลอดภัยมือถือ"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "บทที่ 33:อีกสิบปีข้างหน้า โทรศัพท์จะเป็นแบบไหน？",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "บทที่ 33:มองอนาคต—ก้าวต่อไปของโทรศัพท์"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "บทที่ 34:โทรศัพท์กับรถยนต์ เชื่อมต่อให้ลื่นไหล",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "บทที่ 34:คู่มือเชื่อมต่อรถยนต์ขั้นลึก—การผสานระหว่างโทรศัพท์และรถยนต์"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "บทที่ 35:ให้ลูกมีมือถือแล้วตั้งกฎยังไง",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "บทที่ 35:เด็กกับโทรศัพท์—คู่มือการศึกษาในยุคดิจิทัล"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "บทที่ 36: อุปกรณ์ในบ้านทั้งหมด เชื่อมกันยังไง",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "บทที่ 36: มือถือกับสมาร์ทโฮม - ทำให้บ้านฉลาดขึ้น"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "บทที่ 39: AI ไม่เข้าใจ ส่วนใหญ่เพราะเราพูดไม่ชัด",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "บทที่ 39: วิศวกรรมบริบท - ทำให้ AI เข้าใจความตั้งใจของคุณ"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "บทที่ 40: บอกความต้องการให้ชัดก่อน แล้วค่อยลงมือ",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "บทที่ 40: Requirement Engineering — เปลี่ยนไอเดียให้เป็นคำสั่งที่ AI ทำตามได้"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "บทที่ 43: คุยกับ AI ยังไงให้มันเข้าใจ",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "บทที่ 43: วิศวกรรมบทสนทนา—เทคนิคพูดคุยกับ AI อย่างมีประสิทธิภาพ"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "บทที่ 45: AI เขียนแล้ว ยังไม่เสร็จ",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "บทที่ 45: การประกันคุณภาพ—ทำให้โค้ดที่ AI เขียนไว้ใจได้"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "บทที่ 48: แอนดרอยด์โตมาแบบไหนมาถึงจุดนี้？",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "บทที่ 48: ทำความรู้จัก Android—จากระบบปฏิบัติการสู่ระบบนิเวศนักพัฒนา"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "บทที่ 56: แอปทำเสร็จแล้ว เอาขึ้น Google Play",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "บทที่ 56: ขัดเกลาและเผยแพร่ — ทดสอบ ดีบัก และขึ้น Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "ภาคผนวก B: ทำแบบฝึกหัดแล้วติด จะทำอย่างไร？",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "ภาคผนวก B: แนวทางฝึกหัดลงมือทำ"
+    },
+    "81-jie-yu.md": {
+      "title": "บทส่งท้าย: ใช้โทรศัพท์ให้เป็น แค่นี้ก็พอ",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "บทส่งท้าย: คงความอยากรู้ คงความตื่นตัว"
+    }
+  },
+  "yue": {
+    "00-di-ling-zhang.md": {
+      "title": "第零章：開始之前，先講三句真話",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "第零章：嗨，開始之前"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "第一章：先認識吓呢部機",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "第一章：你好，我嘅私人電腦"
+    },
+    "04-di-er-zhang.md": {
+      "title": "第二章：手機入面嘅嘢，搵唔到點算？",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "第二章：整理你嘅數碼房間——檔案管理"
+    },
+    "05-di-san-zhang.md": {
+      "title": "第三章：連唔上網，唔好急住重啟",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "第三章：等手機接上「生命線」——網絡"
+    },
+    "06-di-si-zhang.md": {
+      "title": "第四章：裝App之前，先睇三眼",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "第四章：安裝同管理App——手機嘅「技能包」"
+    },
+    "07-di-wu-zhang.md": {
+      "title": "第五章：將手機調成你順手嘅樣",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "第五章：等手機更懂你——基礎設定"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "第六章：手機唔見咗、密碼唔記得嗰日",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "第六章：守護你嘅數碼生活——安全與私隱"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "第十一章：影得靚，比影得多更要緊",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "第十一章：攝影與圖片管理"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "第十三章：邊啲 App 值得裝，邊啲唔好裝？",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "第十三章：工具類 App 推薦"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "第十五章：一日充兩次，係電池唔掂定係用錯方法？",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "第十五章：電池科學與續航優化"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "第十六章：換機時，邊啲帳號可以唔要，邊啲唔可以",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "第十六章：帳號體系與雲服務"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "第十八章：備份，唔好等到諗唔起嗰日",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "第十八章：數據備份與遷移"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "第十九章：壞咗點算：唔好急住修",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "第十九章：故障排查與自救"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "第二十一章：公共 Wi-Fi 到底可唔可以連？",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "第二十一章：移動網絡與資訊安全深探"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "第二十二章：AI 喺你手機入面到底做啲乜？",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "第二十二章：AI點樣喺手機中工作"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "第二十三章：等手機幫你做重複嘅嘢",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "第二十三章：編程思維與自動化啟蒙"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "第二十五章：二手手機賣出去之前，先做呢幾件事",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "第二十五章：二手手機處理與數字遺產"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "第二十六章：呢啲新技術，唔使急",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "第二十六章：當下手機技術前沿"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "第二十七章：幫爸媽調手機",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "第二十七章：爸媽都能輕鬆用——適老化手機完全指南"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "第二十八章：買手機之前，先諗清楚呢三件事",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "第二十八章：花對錢買到心儀機——手機選購終極指南"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "第二十九章：你知唔知道自己用咗幾耐手機？",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "第二十九章：數字健康——同手機建立健康關係"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "第三十二章：出事點算：三十秒將損失降到最低",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "第三十二章：手機安全急救手冊"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "第三十三章：下一個十年，手機會變成點樣？",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "第三十三章：未來展望——手機嘅下一程"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "第三十四章：手機同車，點連先順手",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "第三十四章：車機互聯深度指南——手機與汽車嘅融合"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "第三十五章：畀小朋友一部手機，規矩點樣定？",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "第三十五章：兒童與手機——數字時代嘅教育指南"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "第三十六章：屋企嗰堆設備，到底點連",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "第三十六章：手機同智能家居——令屋企變聰明"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "第三十九章：AI 聽唔明你，多半係你未講清楚",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "第三十九章：上下文工程——令 AI 理解你嘅意圖"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "第四十章：先講清楚，再動手",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "第四十章：需求工程——將想法變成 AI 可執行嘅指令"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "第四十三章：同 AI 傾偈，點講先聽得明",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "第四十三章：對話工程——同AI高效協作嘅對話技術"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "第四十五章：AI 寫完唔算完",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "第四十五章：質素保障——令AI寫嘅代碼可靠"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "第四十八章：安卓係點樣變成而家咁？",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "第四十八章：認識安卓——由操作系統到開發生態"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "第五十六章：App 做好咗，點上架？",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "第五十六章：打磨同發布——測試、除錯同上架 Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "附錄B：練習卡住咗點算？",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "附錄B：動手練習小參考"
+    },
+    "81-jie-yu.md": {
+      "title": "結語：把手機用明白，就係咁回事",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "結語：保持好奇，保持清醒"
+    }
+  },
+  "zh-TW": {
+    "00-di-ling-zhang.md": {
+      "title": "第零章：開始之前，先說三句實話",
+      "zh_title": "第零章：开始之前，先说三句实话",
+      "current": "第零章：嗨，開始之前"
+    },
+    "01-di-yi-zhang.md": {
+      "title": "第一章：先來認識這台機器",
+      "zh_title": "第一章：先认识这台机器",
+      "current": "第一章：你好，我的私人電腦"
+    },
+    "04-di-er-zhang.md": {
+      "title": "第二章：手機裡的東西，找不到怎麼辦？",
+      "zh_title": "第二章：手机里的东西，找不到了怎么办？",
+      "current": "第二章：整理你的數字房間——檔案管理"
+    },
+    "05-di-san-zhang.md": {
+      "title": "第三章：連不上網，先別急著重啟",
+      "zh_title": "第三章：连不上网，先别急着重启",
+      "current": "第三章：讓手機接上\"生命線\"——網路"
+    },
+    "06-di-si-zhang.md": {
+      "title": "第四章：裝軟體之前，先看三眼",
+      "zh_title": "第四章：装软件之前，先看三眼",
+      "current": "第四章：安裝和管理App——手機的\"技能包\""
+    },
+    "07-di-wu-zhang.md": {
+      "title": "第五章：把手機調成你順手的樣子",
+      "zh_title": "第五章：把手机调成你顺手的样子",
+      "current": "第五章：讓手機更懂你——基礎設定"
+    },
+    "08-di-liu-zhang.md": {
+      "title": "第六章：手機丟了、密碼忘了的那天",
+      "zh_title": "第六章：手机丢了、密码忘了，怎么救",
+      "current": "第六章：守護你的數字生活——安全與隱私"
+    },
+    "13-di-shi-yi-zhang.md": {
+      "title": "第十一章：拍得好看，比拍得多更要緊",
+      "zh_title": "第十一章：拍得好看，比拍得多更要紧",
+      "current": "第十一章：攝影與圖片管理"
+    },
+    "16-di-shi-san-zhang.md": {
+      "title": "第十三章：哪些 App 值得裝，哪些別裝？",
+      "zh_title": "第十三章：哪些 App 值得装，哪些别装",
+      "current": "第十三章：工具類App推薦"
+    },
+    "18-di-shi-wu-zhang.md": {
+      "title": "第十五章：一天兩充，是電池不行還是用法不對？",
+      "zh_title": "第十五章：一天两充，是电池不行还是用法不对？",
+      "current": "第十五章：電池科學與續航最佳化"
+    },
+    "19-di-shi-liu-zhang.md": {
+      "title": "第十六章：換機時，哪些賬號能丟、哪些不能",
+      "zh_title": "第十六章：换机时，哪些账号能丢、哪些不能",
+      "current": "第十六章：賬號體系與雲服務"
+    },
+    "21-di-shi-ba-zhang.md": {
+      "title": "第十八章：備份，別等到想不起來那天",
+      "zh_title": "第十八章：备份，别等到想不起来那天",
+      "current": "第十八章：資料備份與遷移"
+    },
+    "22-di-shi-jiu-zhang.md": {
+      "title": "第十九章：壞了怎麼辦：先別急著修",
+      "zh_title": "第十九章：坏了怎么办：先别急着修",
+      "current": "第十九章：故障排查與自救"
+    },
+    "25-di-er-shi-yi-zhang.md": {
+      "title": "第二十一章：公共 Wi-Fi 到底能不能連？",
+      "zh_title": "第二十一章：公共 Wi-Fi 到底能不能连",
+      "current": "第二十一章：行動網路與資訊保安深探"
+    },
+    "26-di-er-shi-er-zhang.md": {
+      "title": "第二十二章：AI 在你手機裡到底幹了什麼？",
+      "zh_title": "第二十二章：AI 在你手机里到底干了什么",
+      "current": "第二十二章：AI如何在手機中工作"
+    },
+    "27-di-er-shi-san-zhang.md": {
+      "title": "第二十三章：讓手機替你做重複的事",
+      "zh_title": "第二十三章：让手机替你干重复活",
+      "current": "第二十三章：程式設計思維與自動化啟蒙"
+    },
+    "30-di-er-shi-wu-zhang.md": {
+      "title": "第二十五章：二手手機賣出去之前，先做這幾件事",
+      "zh_title": "第二十五章：旧手机卖出去之前，先做这几件事",
+      "current": "第二十五章：二手手機處理與數字遺產"
+    },
+    "31-di-er-shi-liu-zhang.md": {
+      "title": "第二十六章：這些新技術，先等等",
+      "zh_title": "第二十六章：这些新技术，先等等",
+      "current": "第二十六章：當下手機技術前沿"
+    },
+    "32-di-er-shi-qi-zhang.md": {
+      "title": "第二十七章：幫爸媽調手機",
+      "zh_title": "第二十七章：给爸妈调手机",
+      "current": "第二十七章：爸媽也能輕鬆用——適老化手機完全指南"
+    },
+    "33-di-er-shi-ba-zhang.md": {
+      "title": "第二十八章：買手機前，先想清楚這三件事",
+      "zh_title": "第二十八章：买手机前，先想清楚这三件事",
+      "current": "第二十八章：花對錢買到心儀機——手機選購終極指南"
+    },
+    "34-di-er-shi-jiu-zhang.md": {
+      "title": "第二十九章：你知道自己用了多久手機嗎？",
+      "zh_title": "第二十九章：手机用了多少时间，你其实不知道",
+      "current": "第二十九章：數字健康——和手機建立健康關係"
+    },
+    "37-di-san-shi-er-zhang.md": {
+      "title": "第三十二章：出事怎麼辦：三十秒把損失降到最低",
+      "zh_title": "第三十二章：出事了怎么办：三十秒止损",
+      "current": "第三十二章：手機安全急救手冊"
+    },
+    "38-di-san-shi-san-zhang.md": {
+      "title": "第三十三章：下一個十年，手機會變成什麼樣？",
+      "zh_title": "第三十三章：下一个十年，手机会变成什么样",
+      "current": "第三十三章：未來展望——手機的下一程"
+    },
+    "39-di-san-shi-si-zhang.md": {
+      "title": "第三十四章：手機和車，怎麼連才順手",
+      "zh_title": "第三十四章：手机和车，怎么连才顺手",
+      "current": "第三十四章：車機互聯深度指南——手機與汽車的融合"
+    },
+    "40-di-san-shi-wu-zhang.md": {
+      "title": "第三十五章：給孩子一部手機，怎麼定規矩",
+      "zh_title": "第三十五章：给孩子一部手机，怎么定规矩",
+      "current": "第三十五章：兒童與手機——數字時代的教育指南"
+    },
+    "41-di-san-shi-liu-zhang.md": {
+      "title": "第三十六章：家裡那堆裝置，到底怎麼連",
+      "zh_title": "第三十六章：家里那堆设备，到底怎么连",
+      "current": "第三十六章：手機與智慧家居——讓家變聰明"
+    },
+    "44-di-san-shi-jiu-zhang.md": {
+      "title": "第三十九章：AI 聽不懂你，多半是你沒說清",
+      "zh_title": "第三十九章：AI 听不懂你，多半是你没说清",
+      "current": "第三十九章：上下文工程——讓AI理解你的意圖"
+    },
+    "45-di-si-shi-zhang.md": {
+      "title": "第四十章：先說清楚，再動手",
+      "zh_title": "第四十章：先说清楚，再动手",
+      "current": "第四十章：需求工程——把想法變成AI可執行的指令"
+    },
+    "48-di-si-shi-san-zhang.md": {
+      "title": "第四十三章：跟 AI 說話，怎麼說它才聽得懂",
+      "zh_title": "第四十三章：跟 AI 说话，怎么说它才听得懂",
+      "current": "第四十三章：對話工程——與AI高效協作的對話技術"
+    },
+    "50-di-si-shi-wu-zhang.md": {
+      "title": "第四十五章：AI 寫完不算完",
+      "zh_title": "第四十五章：AI 写完不算完",
+      "current": "第四十五章：品質保障——讓AI寫的程式碼可靠"
+    },
+    "53-di-si-shi-ba-zhang.md": {
+      "title": "第四十八章：安卓是怎麼長成現在這樣的？",
+      "zh_title": "第四十八章：安卓是怎么长成现在这样的",
+      "current": "第四十八章：認識安卓——從作業系統到開發生態"
+    },
+    "61-di-wu-shi-liu-zhang.md": {
+      "title": "第五十六章：App 做好了，怎麼上架",
+      "zh_title": "第五十六章：App 做好了，怎么上架",
+      "current": "第五十六章：打磨與發佈——測試、除錯與上架 Google Play"
+    },
+    "76-fu-lu-b.md": {
+      "title": "附錄B：練習卡住了怎麼辦？",
+      "zh_title": "附录B：练习卡住了怎么办",
+      "current": "附錄B：動手練習小參考"
+    },
+    "81-jie-yu.md": {
+      "title": "結語：把手機用明白，就這麼點事",
+      "zh_title": "结语：把手机用明白，就这么点事",
+      "current": "結語：保持好奇，保持清醒"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "purpose": "v1.8 章标题模板破除（方案 §4.3）。全书 84 个标题里有 37 个是「主标题——副标题」，本表换掉其中 34 个（约 40%）。",
+    "rules": [
+      "章号前缀（第X章：/附录X：/结语：）必须原样保留——它参与目录与跨章引用",
+      "保留 60% 的「主标题——副标题」结构：教学书用它本身是清楚的，不一刀切",
+      "标题改动同步写回 frontmatter 的 nav 字段（TOC 与侧栏读 nav，页面大标题读 ### 行）",
+      "不改「附：」「第X章附：」这类专题附节——它们的标题本来就是技术名词，读者按名词检索"
+    ],
+    "styles": ["极简式", "口语式", "问句式", "场景式"],
+    "translation_note": "18 种译文的标题按同一文件位置同步替换（见 scripts/title_rewrites_v18_i18n.json）。"
+  },
+
+  "00-di-ling-zhang.md":           { "title": "第零章：开始之前，先说三句实话", "style": "口语式" },
+  "01-di-yi-zhang.md":             { "title": "第一章：先认识这台机器", "style": "口语式" },
+  "04-di-er-zhang.md":             { "title": "第二章：手机里的东西，找不到了怎么办？", "style": "问句式" },
+  "05-di-san-zhang.md":            { "title": "第三章：连不上网，先别急着重启", "style": "口语式" },
+  "06-di-si-zhang.md":             { "title": "第四章：装软件之前，先看三眼", "style": "场景式" },
+  "07-di-wu-zhang.md":             { "title": "第五章：把手机调成你顺手的样子", "style": "口语式" },
+  "08-di-liu-zhang.md":            { "title": "第六章：手机丢了、密码忘了，怎么救", "style": "场景式" },
+  "13-di-shi-yi-zhang.md":         { "title": "第十一章：拍得好看，比拍得多更要紧", "style": "口语式" },
+  "16-di-shi-san-zhang.md":        { "title": "第十三章：哪些 App 值得装，哪些别装", "style": "问句式" },
+  "18-di-shi-wu-zhang.md":         { "title": "第十五章：一天两充，是电池不行还是用法不对？", "style": "问句式" },
+  "19-di-shi-liu-zhang.md":        { "title": "第十六章：换机时，哪些账号能丢、哪些不能", "style": "场景式" },
+  "21-di-shi-ba-zhang.md":         { "title": "第十八章：备份，别等到想不起来那天", "style": "口语式" },
+  "22-di-shi-jiu-zhang.md":        { "title": "第十九章：坏了怎么办：先别急着修", "style": "口语式" },
+  "25-di-er-shi-yi-zhang.md":      { "title": "第二十一章：公共 Wi-Fi 到底能不能连", "style": "问句式" },
+  "26-di-er-shi-er-zhang.md":      { "title": "第二十二章：AI 在你手机里到底干了什么", "style": "问句式" },
+  "27-di-er-shi-san-zhang.md":     { "title": "第二十三章：让手机替你干重复活", "style": "口语式" },
+  "30-di-er-shi-wu-zhang.md":      { "title": "第二十五章：旧手机卖出去之前，先做这几件事", "style": "场景式" },
+  "31-di-er-shi-liu-zhang.md":     { "title": "第二十六章：这些新技术，先等等", "style": "极简式" },
+  "32-di-er-shi-qi-zhang.md":      { "title": "第二十七章：给爸妈调手机", "style": "极简式" },
+  "33-di-er-shi-ba-zhang.md":      { "title": "第二十八章：买手机前，先想清楚这三件事", "style": "场景式" },
+  "34-di-er-shi-jiu-zhang.md":     { "title": "第二十九章：手机用了多少时间，你其实不知道", "style": "问句式" },
+  "37-di-san-shi-er-zhang.md":     { "title": "第三十二章：出事了怎么办：三十秒止损", "style": "场景式" },
+  "38-di-san-shi-san-zhang.md":    { "title": "第三十三章：下一个十年，手机会变成什么样", "style": "问句式" },
+  "39-di-san-shi-si-zhang.md":     { "title": "第三十四章：手机和车，怎么连才顺手", "style": "口语式" },
+  "40-di-san-shi-wu-zhang.md":     { "title": "第三十五章：给孩子一部手机，怎么定规矩", "style": "场景式" },
+  "41-di-san-shi-liu-zhang.md":    { "title": "第三十六章：家里那堆设备，到底怎么连", "style": "口语式" },
+  "44-di-san-shi-jiu-zhang.md":    { "title": "第三十九章：AI 听不懂你，多半是你没说清", "style": "口语式" },
+  "45-di-si-shi-zhang.md":         { "title": "第四十章：先说清楚，再动手", "style": "口语式" },
+  "48-di-si-shi-san-zhang.md":     { "title": "第四十三章：跟 AI 说话，怎么说它才听得懂", "style": "口语式" },
+  "50-di-si-shi-wu-zhang.md":      { "title": "第四十五章：AI 写完不算完", "style": "极简式" },
+  "53-di-si-shi-ba-zhang.md":      { "title": "第四十八章：安卓是怎么长成现在这样的", "style": "问句式" },
+  "61-di-wu-shi-liu-zhang.md":     { "title": "第五十六章：App 做好了，怎么上架", "style": "口语式" },
+  "76-fu-lu-b.md":                 { "title": "附录B：练习卡住了怎么办", "style": "问句式" },
+  "81-jie-yu.md":                  { "title": "结语：把手机用明白，就这么点事", "style": "口语式" }
+}
