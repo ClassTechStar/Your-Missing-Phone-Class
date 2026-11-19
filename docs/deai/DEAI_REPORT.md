@@ -487,3 +487,31 @@ v1.8 的 18 种译文里，大量章节的"小节标题"**根本不是标题，�
 3. **路径库需要有人负责。** 现在它是从源稿生成的，生成得出来不等于有人维护。
    每年 iOS / 鸿蒙 / 安卓大版本后跑一次 `path_check.py`，
    把 `needs-confirm` 的条目复查一遍——这件事有人做，路径库才是活的。
+
+---
+
+## 17. 上线站点时挖出来的四个坑（2026-11-20）
+
+把 v1.9 推到 GitHub Pages 的时候，顺手把发布链路也体检了一遍。
+四个问题都不是内容问题，是**发布链路自己的**，而且每一个都会静默失效——
+页面上看不出坏，日志里也不报错。
+
+| # | 问题 | 为什么没被现有门禁抓到 | 修法 |
+| --- | --- | --- | --- |
+| 1 | Service Worker 的 `scope` 比 `sw.js` 脚本浅（站点根 `scope:'../'`、分章页 `scope:'../'`），浏览器直接拒绝注册，PWA 离线阅读实际是失效的 | 注册失败被 `.catch` 里的 `console.warn` 吞掉，冒烟测试只查 console **error**；`navigator.serviceWorker.ready` 是**同源级**的，别的页面注册成功就会让它 resolve | `bookkit.split.fix_sw_scope()` 按脚本路径深度推导 scope；`web_smoke.py` 加显式断言（并真注册一次，看浏览器认不认） |
+| 2 | 站点上的 `v1.9/zh-CN.html` 从不更新——`sync_site.py` 只写站点根 `index.html` | 没人比对两个 URL 的内容；旧书页还带着嵌套未闭合 `<p>` 的破损标记，但浏览器会自动纠正，肉眼和 DOM 计数都看不出来 | 同步时一并写入；加自检：与源逐字节一致 |
+| 3 | `sitemap.xml` 只收录分章页，首页/勘误页/语言分级页/单文件书页都不在 | sitemap 由 `bookkit split` 生成，它只知道分章页 | `sync_site.py` 补顶层页；自检：sitemap 条数 == 磁盘页数 |
+| 4 | `manifest.webmanifest` 的两条快捷方式在站点上都是 404（`v1.8` 站点没有、`quiz.html` 站点不发布）；`description` 还写着 v1.8 的「84 章、11 篇」；`id` 写成 `"/"` 落在站点 scope 之外 | manifest 不是 HTML，没有被任何审计脚本覆盖 | 同步时按站点实际发布内容裁剪快捷方式；description 用 `update_claims.py` 实测值 |
+
+**这四个坑的共同点：都是"发布后没人再看"的位置。**
+内容层的检查（lint / html_audit / 逐章等价）全绿，站点却是坏的。
+所以现在补了两道闸：
+
+```bash
+py -3 scripts/sync_site.py      # 同步时自检 4 项（路径降级 / SW scope / 书页一致 / manifest 可达）
+py -3 scripts/web_smoke.py      # 27 页浏览器冒烟（含 SW scope 断言）——注意它不在 deai_gate.py 里
+```
+
+> ⚠️ **`web_smoke.py` 不在 `deai_gate.py` 的 68 项里**，必须单独跑。
+> 这是这一轮最值得记住的一条：门禁全绿 ≠ 站点是好的。
+
