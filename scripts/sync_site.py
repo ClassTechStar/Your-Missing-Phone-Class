@@ -86,7 +86,8 @@ def patch_sitemap(xml: str, base: str) -> str:
            f'{base}/errata.html',             # 勘误页
            f'{base}/languages.html',         # 语言诚实分级页
            f'{base}/quiz.html',               # 章节自测页
-           f'{base}/v1.9/zh-CN.html']        # 单文件整本书（v1.9）
+           f'{base}/v1.9/zh-CN/',             # 分章目录（首页主入口）
+           f'{base}/v1.9/zh-CN.html']        # 单文件整本书（离线备选）
     have = set(re.findall(r'<loc>([^<]+)</loc>', xml))
     add = [u for u in top if u not in have]
     if not add:
@@ -138,13 +139,19 @@ def main():
         print(f'源文件缺失：{src_html}')
         return 1
 
-    html = rewrite(src_html.read_text(encoding='utf-8'))
-    left = [a for a, _ in REWRITES if a in html]
+    # 首页是「分章优先」的落地页，不再是 13MB 单文件本身：
+    # 主入口 → v1.9/zh-CN/（每章一页，首屏 ~180KB），单文件只作为离线备选。
+    landing = ROOT / 'site-landing.html'
+    if not landing.is_file():
+        print(f'源文件缺失：{landing}')
+        return 1
+    landing_html = landing.read_text(encoding='utf-8')
+    left = [a for a, _ in REWRITES if a in landing_html]
     if left:
-        print(f'!! 仍有未降级的相对路径：{left}')
+        print(f'!! 落地页含未降级的相对路径：{left}')
         return 1
 
-    plan = [('index.html', f'{len(html):,} 字符')]
+    plan = [('index.html', f'{len(landing_html):,} 字符（落地页）')]
     for a in ASSETS:
         if not (ROOT / a).is_file():
             print(f'!! 缺少资产：{a}')
@@ -182,7 +189,7 @@ def main():
         print('（dry-run，未写盘）')
         return 0
 
-    (dest / 'index.html').write_text(html, encoding='utf-8', newline='')
+    (dest / 'index.html').write_text(landing_html, encoding='utf-8', newline='')
     for a in ASSETS:
         if a == 'manifest.webmanifest':
             continue          # manifest 最后单独写（要按站点内容裁剪快捷方式）
@@ -207,9 +214,12 @@ def main():
     # 单文件整本书（站点上 /v1.9/zh-CN.html）：它比站点根深一层，
     # ../sw.js、../errata.html 这类路径本来就是对的，只需修 SW scope。
     # 以前这里漏写，站点上留着上一版的旧书页（还带破损的嵌套 <p> 标记）。
-    (dest / 'v1.9' / 'zh-CN.html').write_text(
-        fix_sw_scope(src_html.read_text(encoding='utf-8')),
-        encoding='utf-8', newline='')
+    book_url = site_base() + '/v1.9/zh-CN.html'
+    book_html = fix_sw_scope(src_html.read_text(encoding='utf-8'))
+    # 首页改成落地页后，单文件不再是「站点根的副本」，canonical 必须指向自己
+    book_html = re.sub(r'<link rel="canonical" href="[^"]*"',
+                       f'<link rel="canonical" href="{book_url}"', book_html, count=1)
+    (dest / 'v1.9' / 'zh-CN.html').write_text(book_html, encoding='utf-8', newline='')
     plan.append(('v1.9/zh-CN.html', '单文件整本书'))
 
     # sitemap：split 只写分章页，顶层页在这里补进去
@@ -251,23 +261,32 @@ def main():
         return 1
 
     # 自检 3：单文件书页必须与源一致（防止站点留着上一版旧书页）
-    src_sha = src_html.read_text(encoding='utf-8')
-    if (dest / 'v1.9' / 'zh-CN.html').read_text(encoding='utf-8') != fix_sw_scope(src_sha):
+    # canonical 由自检 5 单独校验（站点版指向自身、源版指向根），比对时剔除
+    def _no_canon(h: str) -> str:
+        return re.sub(r'<link rel="canonical" href="[^"]*">', '', h)
+    src_sha = fix_sw_scope(src_html.read_text(encoding='utf-8'))
+    if _no_canon((dest / 'v1.9' / 'zh-CN.html').read_text(encoding='utf-8')) != _no_canon(src_sha):
         print('!! v1.9/zh-CN.html 与源不一致')
         return 1
 
     # 自检 4：manifest 的快捷方式、start_url 在站点上都必须存在
     man = json.loads((dest / 'manifest.webmanifest').read_text(encoding='utf-8'))
     man_bad = []
+
+    def _site_exists(rel: str) -> bool:
+        """manifest 里的 URL 可能是目录（分章目录），按 index.html 判存在。"""
+        t = dest / rel
+        return t.is_file() or (t / 'index.html').is_file()
+
     for sc in man.get('shortcuts', []):
         r = (sc.get('url') or '').split('#')[0]
         r = r[2:] if r.startswith('./') else r.lstrip('/')
-        if not r or not (dest / r).is_file():
+        if not r or not _site_exists(r):
             man_bad.append(f'快捷方式 {sc.get("name")} → {sc.get("url")}')
     for key in ('start_url',):
         r = (man.get(key) or '').split('#')[0]
         r = r[2:] if r.startswith('./') else r.lstrip('/')
-        if r and not (dest / r).is_file():
+        if r and not _site_exists(r):
             man_bad.append(f'{key} → {man.get(key)}')
     if man_bad:
         print('!! manifest 指向站点上不存在的页面：\n   ' + '\n   '.join(man_bad))
@@ -277,7 +296,10 @@ def main():
     # （这两页是同一本书的两份副本，canonical 不统一 = 重复内容进索引）
     canon_root = site_base() + '/'
     canon_bad = []
-    for rel in ('index.html', 'v1.9/zh-CN.html'):
+    # 首页（落地页）指向站点根；单文件书页指向自身——两者已是不同内容，
+    # 若仍让书页 canonical 指回根，搜索引擎会把 13MB 书页判成首页副本。
+    for rel, want in (('index.html', canon_root),
+                      ('v1.9/zh-CN.html', site_base() + '/v1.9/zh-CN.html')):
         f = dest / rel
         if not f.is_file():
             continue
@@ -285,8 +307,8 @@ def main():
         tags = re.findall(r'<link rel="canonical" href="([^"]+)"', h)
         if len(tags) != 1:
             canon_bad.append(f'{rel}: canonical 有 {len(tags)} 个（必须恰好 1 个）')
-        elif tags[0] != canon_root:
-            canon_bad.append(f'{rel}: canonical={tags[0]} 应为 {canon_root}')
+        elif tags[0] != want:
+            canon_bad.append(f'{rel}: canonical={tags[0]} 应为 {want}')
     # 分章页：每页恰好一个 canonical，且指向自己
     # （书页 head 里的 canonical 会被分章页继承，不清掉就会有两个，
     #   搜索引擎取第一个 —— 121 个章节页全被判成站点根的副本）
@@ -305,7 +327,8 @@ def main():
         print('!! canonical 不统一：\n   ' + '\n   '.join(canon_bad[:10])
               + (f'\n   …共 {len(canon_bad)} 处' if len(canon_bad) > 10 else ''))
         return 1
-    print(f'[canonical] 站点根与单文件书页 → {canon_root}；分章页 {n_checked} 页各自指向自己')
+    print(f'[canonical] 落地页 → {canon_root}；单文件书页 → {book_url}；'
+          f'分章页 {n_checked} 页各自指向自己')
 
     # 自检 6：站点上的题库必须与站点发布的书同版，且章节 id 在书页里存在
     # （站点实供的语言必须对齐；其他语言的题库按各自版本对齐，但章节 id

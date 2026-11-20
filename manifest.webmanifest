@@ -3,7 +3,7 @@
   "short_name": "手机课",
   "description": "120 章、16 篇 + 附录，从认识手机硬件一路讲到用 AI 写出你的第一个 App——写给所有人的数字素养课。",
   "id": "./",
-  "start_url": "./index.html",
+  "start_url": "./v1.9/zh-CN/",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
@@ -11,7 +11,10 @@
   "theme_color": "#4f46e5",
   "lang": "zh-CN",
   "dir": "ltr",
-  "categories": ["education", "books"],
+  "categories": [
+    "education",
+    "books"
+  ],
   "icons": [
     {
       "src": "./icons/icon-192.png",
@@ -42,14 +45,24 @@
     {
       "name": "开始阅读第零章",
       "short_name": "开始阅读",
-      "url": "./v1.9/zh-CN.html#di-ling-zhang",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+      "url": "./v1.9/zh-CN/di-ling-zhang.html",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "章节自测",
       "short_name": "自测",
       "url": "./quiz.html",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>你缺失的那门手机课 · v1.9 · 在线阅读</title>
+<meta name="description" content="一本写给普通人的手机素养开源书。120 章、15 篇、19 种语言，从看懂一台手机到亲手做出一个 App。公益、免费、开源。">
+<meta name="theme-color" content="#0B0E13" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7FAFA" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="book">
+<meta property="og:title" content="你缺失的那门手机课 · v1.9">
+<meta property="og:description" content="120 章、15 篇、19 种语言。从看懂一台手机，到亲手做出一个 App。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://classtechstar.github.io/Yihggh.github.io/">
+<link rel="canonical" href="https://classtechstar.github.io/Yihggh.github.io/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F8A8A'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%230F8A8A'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%230F8A8A'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/MiSans-subset.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:MiSans;src:url("fonts/MiSans-subset.woff2") format("woff2"),url("fonts/MiSans-Normal.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+:root{
+  --ink:#16333A; --body:#3F5A63; --muted:#7B9098; --line:#D3E2E2;
+  --bg:#F7FAFA; --card:#FFFFFF; --accent:#0F8A8A; --accent-ink:#0B6E70; --warm:#F0873B;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --ink:#E7EFEF; --body:#B9CCCC; --muted:#7E9696; --line:#243838;
+         --bg:#0B1516; --card:#12201F; --accent:#3FB3B3; --accent-ink:#7FD6D6; --warm:#F0873B; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);
+  font-family:MiSans,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+.wrap{width:min(760px,calc(100% - 2.5rem));margin:0 auto}
+header{padding:1.4rem 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.brand{color:var(--ink);font-weight:600;text-decoration:none;letter-spacing:.02em}
+.brand small{color:var(--muted);font-weight:400;margin-left:.5rem;font-size:.8rem}
+header nav a{color:var(--muted);text-decoration:none;font-size:.85rem;margin-left:1.1rem}
+header nav a:hover{color:var(--accent)}
+main{flex:1;padding:4rem 0 3rem}
+h1{color:var(--ink);font-size:clamp(2rem,6vw,3rem);line-height:1.25;margin:0 0 .9rem;letter-spacing:.02em}
+.lede{font-size:clamp(1rem,2.4vw,1.12rem);color:var(--body);margin:0 0 .6rem}
+.stats{color:var(--muted);font-size:.9rem;margin:0 0 2.4rem}
+.stats b{color:var(--accent-ink);font-weight:600}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:.9rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:.6rem;
+  text-decoration:none;font-weight:600;font-size:1rem;border:1px solid transparent;transition:.18s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-ink)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--card)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn .size{font-weight:400;font-size:.8rem;opacity:.75}
+.hint{color:var(--muted);font-size:.85rem;margin:0 0 3rem}
+.hint code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.82em;
+  background:var(--line);padding:.1rem .35rem;border-radius:.25rem;color:var(--body)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2.6rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:1.1rem 1.2rem;
+  text-decoration:none;color:inherit;display:block;transition:.18s}
+.card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.card h2{font-size:.95rem;color:var(--ink);margin:0 0 .3rem;font-weight:600}
+.card p{margin:0;color:var(--muted);font-size:.84rem}
+.card .tag{float:right;color:var(--warm);font-size:.72rem;font-weight:600}
+footer{border-top:1px solid var(--line);padding:1.6rem 0 2.2rem;color:var(--muted);font-size:.82rem}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--accent)}
+footer .row{display:flex;gap:1.2rem;flex-wrap:wrap;margin-bottom:.5rem}
+@media (prefers-reduced-motion:reduce){.btn,.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">你缺失的那门手机课<small>v1.9</small></a>
+    <nav>
+      <a href="languages.html">19 种语言</a>
+      <a href="quiz.html">章节自测</a>
+      <a href="errata.html">勘误</a>
+      <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>你缺失的那门手机课</h1>
+    <p class="lede">手机是用会的，不是看会的。这本书讲清楚一台手机里到底装了什么、哪些东西丢了能找回来、遇到陌生来电和链接怎么办。</p>
+    <p class="stats"><b>120</b> 章 · <b>15</b> 篇 · <b>353.7</b> 万字 · <b>19</b> 种语言 · 公益免费，永久开源</p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="v1.9/zh-CN/">开始阅读</a>
+      <a class="btn btn-ghost" href="v1.9/zh-CN.html">下载单文件<span class="size">（13 MB）</span></a>
+    </div>
+    <p class="hint">分章阅读：每章一页，手机流量打开约 <code>180 KB</code>，翻到哪读哪。<br>
+      单文件：整本 120 章打成一个 HTML，适合离线保存或拷进 U 盘；首次打开要加载全部内容，会慢一些。</p>
+
+    <div class="grid">
+      <a class="card" href="v1.9/zh-CN/">
+        <span class="tag">推荐</span>
+        <h2>分章目录</h2>
+        <p>120 章按篇分组，点进去就是那一章</p>
+      </a>
+      <a class="card" href="v1.9/zh-CN.html">
+        <h2>单文件整本</h2>
+        <p>一个文件包含全部内容，可离线</p>
+      </a>
+      <a class="card" href="languages.html">
+        <h2>19 种语言</h2>
+        <p>含粤语、繁体、文言文彩蛋</p>
+      </a>
+      <a class="card" href="quiz.html">
+        <h2>章节自测</h2>
+        <p>读完一章，做几道题</p>
+      </a>
+      <a class="card" href="errata.html">
+        <h2>勘误与修订</h2>
+        <p>发现错误就在这里提</p>
+      </a>
+      <a class="card" href="https://github.com/ClassTechStar/Your-Missing-Phone-Class">
+        <h2>开源仓库</h2>
+        <p>源稿、脚本、APK 全公开</p>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class">github.com/ClassTechStar</a>
+      <a href="https://space.bilibili.com/">B 站 @ClassTechStar</a>
+      <span>QQ 群 1074995524</span>
+    </div>
+    <div>CC BY-NC-SA 4.0 · 公益 · 免费 · 永远开源 · CLASS TECH STAR</div>
+  </div>
+</footer>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js', { scope: './' }).catch(function () {});
+  });
+}
+</script>
+</body>
+</html>
