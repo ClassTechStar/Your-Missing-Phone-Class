@@ -31,13 +31,17 @@ RE_STYLE = re.compile(r'<style[\s\S]*?</style>')
 RE_SCRIPT = re.compile(r'<script(?![^>]*\bsrc=)[^>]*>[\s\S]*?</script>')
 RE_SCRIPT_BODY = re.compile(r'<script[^>]*>([\s\S]*?)</script>')
 
-# 单文件里的相对路径比站点根深一层，分章页再深一层
+# 单文件里的相对路径比站点根深一层，分章页再深一层。
+# 字体例外：章节页把字体随页面树复制到 <page>/fonts/，HTML 里的预加载链接
+# （href= 形式）要降到页内；CSS 里的 url('../fonts/…') 相对 assets/ 解析
+# 本来就是对的，所以这里只匹配 href= 前缀，不动 url()。
 PATH_FIXES = [('../sw.js', '../../sw.js'),
               ('../manifest.webmanifest', '../../manifest.webmanifest'),
               ('../icons/', '../../icons/'),
               ('../announcements.json', '../../announcements.json'),
               ('../errata.html', '../../errata.html'),
-              ('../languages.html', '../../languages.html')]
+              ('../languages.html', '../../languages.html'),
+              ('href="../fonts/', 'href="fonts/')]
 
 # SW 注册：脚本路径 + scope
 RE_SW_REGISTER = re.compile(

@@ -132,10 +132,13 @@ def main():
         page.route('**/*', lambda route: route.fulfill(status=200, body='window.tailwind = window.tailwind || {};')
                    if route.request.url.startswith('http') and '127.0.0.1' not in route.request.url
                    else route.continue_())
+        # console 监听只注册一次：闭包按名字晚绑定，循环里每页重复注册会让
+        # 同一条错误被 N 个历史处理器各记一遍（第 20 页的一条 404 会显示 ×20）。
+        current = {'errors': []}
+        page.on('console', lambda m: current['errors'].append(m.text) if m.type == 'error' else None)
+        page.on('pageerror', lambda e: current['errors'].append(str(e)))
         for path, expect_h3 in targets:
-            errors = []
-            page.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
-            page.on('pageerror', lambda e: errors.append(str(e)))
+            errors = current['errors'] = []
             url = f'{base}/{path}'
             try:
                 page.goto(url, wait_until='domcontentloaded', timeout=30000)
@@ -184,7 +187,6 @@ def main():
             except Exception as e:
                 print(f'✗ {path}: 加载失败 {str(e)[:80]}')
                 fails.append(path)
-            errors.clear()
         browser.close()
     print(f'\n== {len(targets)} 页，失败 {len(fails)}')
     sys.exit(1 if fails else 0)
