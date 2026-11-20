@@ -13809,4 +13809,43 @@ func scheduleDailyReminder() {
  });
  }
  </script>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/><feGaussianBlur in="noise" stdDeviation="2" result="soft"/><feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg></body></html>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/><feGaussianBlur in="noise" stdDeviation="2" result="soft"/><feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg><script>
+/* Update checker: source = GitHub Releases (book channel: tags starting with v<digit>). */
+(function(){
+"use strict";
+var PAGE_VERSION="v1.8";
+var REPO="ClassTechStar/Your-Missing-Phone-Class";
+function cmpVer(a,b){a=String(a).replace(/^v/,"");b=String(b).replace(/^v/,"");var A=a.split(/[-.]/),B=b.split(/[-.]/),i,x,y;for(i=0;i<Math.max(A.length,B.length);i++){x=parseInt(A[i]||"0",10);y=parseInt(B[i]||"0",10);if(x!==y)return x-y;}return 0;}
+function show(tag,url){
+var b=document.createElement("div");
+b.style.cssText="position:fixed;left:12px;bottom:12px;z-index:99990;background:#4f46e5;color:#fff;padding:10px 14px;border-radius:999px;font:14px/1.4 system-ui,sans-serif;box-shadow:0 6px 20px rgba(0,0,0,.25);display:flex;gap:10px;align-items:center;max-width:92vw";
+var t=document.createElement("span");t.textContent="New version "+tag+" is available";
+var a=document.createElement("a");a.href=url;a.target="_blank";a.rel="noopener";
+a.textContent="View update";a.style.cssText="color:#fff;text-decoration:underline;font-weight:600";
+var x=document.createElement("button");x.type="button";x.textContent="×";x.setAttribute("aria-label","Close");
+x.style.cssText="background:rgba(255,255,255,.25);border:0;color:#fff;width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:14px;line-height:1";
+x.onclick=function(){b.remove();try{var s=JSON.parse(localStorage.getItem("pc-gh-update")||"{}");s.d=tag;localStorage.setItem("pc-gh-update",JSON.stringify(s));}catch(e){}};
+b.appendChild(t);b.appendChild(a);b.appendChild(x);
+document.body.appendChild(b);
+setTimeout(function(){if(b.parentNode)b.parentNode.removeChild(b);},60000);
+}
+try{
+if(location.protocol==="file:")return;
+var st=null;try{st=JSON.parse(localStorage.getItem("pc-gh-update")||"null");}catch(e){}
+var now=Date.now();
+if(st&&st.v===PAGE_VERSION&&now-(st.t||0)<86400e3)return;
+var done=function(){try{localStorage.setItem("pc-gh-update",JSON.stringify({t:now,v:PAGE_VERSION}));}catch(e){}};
+fetch("https://api.github.com/repos/"+REPO+"/releases?per_page=30",{headers:{"Accept":"application/vnd.github+json"}}).then(function(r){return r.ok?r.json():[];}).then(function(list){
+if(!Array.isArray(list))return done();
+for(var i=0;i<list.length;i++){
+var tag=String(list[i]&&list[i].tag_name||"");
+if(/^v\d/.test(tag)){
+if(cmpVer(tag,PAGE_VERSION)>0&&(!st||st.d!==tag))show(tag,list[i].html_url||("https://github.com/"+REPO+"/releases/tag/"+tag));
+break;
+}
+}
+done();
+}).catch(function(){done();});
+}catch(e){}
+})();
+</script></body></html>

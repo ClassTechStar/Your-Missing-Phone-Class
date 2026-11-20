@@ -7,7 +7,7 @@
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
 - **多语言入口**：[index.html](index.html)（按浏览器语言跳转）
 - **PDF 下载**：见 [PDF 下载](#pdf-下载)
-- **Android 应用**：19 种语言各有独立 APK，见 [apk-v1.8-r2 Release](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r2)（书名统一版，versionCode 2 可覆盖旧包）
+- **Android 应用**：19 种语言各有独立 APK，见 [apk-v1.8-r4 Release](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r4)（书名统一版，versionCode 4 可覆盖旧包）
 
 内容与代码采用 CC BY-NC-SA 4.0 许可。
 
@@ -88,25 +88,25 @@ v1.9/（最新中文版，120 章）曾在这条流水线之外直接维护：
 
 | 语言 | 在线阅读 | APK 安装包 |
 |------|----------|------------|
-| 简体中文 | [zh-CN.html](v1.8/zh-CN.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-zh-CN.apk) |
-| 繁體中文 | [zh-TW.html](v1.8/zh-TW.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-zh-TW.apk) |
-| 粵語 | [yue.html](v1.8/yue.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-yue.apk) |
-| English | [en.html](v1.8/en.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-en.apk) |
-| 한국어 | [ko.html](v1.8/ko.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-ko.apk) |
-| 日本語 | [ja.html](v1.8/ja.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-ja.apk) |
-| Русский | [ru.html](v1.8/ru.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-ru.apk) |
-| Italiano | [it.html](v1.8/it.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-it.apk) |
-| Português | [pt.html](v1.8/pt.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-pt.apk) |
-| Español | [es.html](v1.8/es.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-es.apk) |
-| Français | [fr.html](v1.8/fr.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-fr.apk) |
-| Deutsch | [de.html](v1.8/de.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-de.apk) |
-| العربية | [ar.html](v1.8/ar.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-ar.apk) |
-| עברית | [he.html](v1.8/he.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-he.apk) |
-| ภาษาไทย | [th.html](v1.8/th.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-th.apk) |
-| Bahasa Indonesia | [id.html](v1.8/id.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-id.apk) |
-| Bahasa Melayu | [ms.html](v1.8/ms.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-ms.apk) |
-| Ελληνικά | [el.html](v1.8/el.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-el.apk) |
-| 文言文 | [lzh.html](v1.8/lzh.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r2/MissingPhoneClass-1.8-lzh.apk) |
+| 简体中文 | [zh-CN.html](v1.8/zh-CN.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-zh-CN.apk) |
+| 繁體中文 | [zh-TW.html](v1.8/zh-TW.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-zh-TW.apk) |
+| 粵語 | [yue.html](v1.8/yue.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-yue.apk) |
+| English | [en.html](v1.8/en.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-en.apk) |
+| 한국어 | [ko.html](v1.8/ko.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-ko.apk) |
+| 日本語 | [ja.html](v1.8/ja.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-ja.apk) |
+| Русский | [ru.html](v1.8/ru.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-ru.apk) |
+| Italiano | [it.html](v1.8/it.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-it.apk) |
+| Português | [pt.html](v1.8/pt.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-pt.apk) |
+| Español | [es.html](v1.8/es.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-es.apk) |
+| Français | [fr.html](v1.8/fr.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-fr.apk) |
+| Deutsch | [de.html](v1.8/de.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-de.apk) |
+| العربية | [ar.html](v1.8/ar.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-ar.apk) |
+| עברית | [he.html](v1.8/he.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-he.apk) |
+| ภาษาไทย | [th.html](v1.8/th.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-th.apk) |
+| Bahasa Indonesia | [id.html](v1.8/id.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-id.apk) |
+| Bahasa Melayu | [ms.html](v1.8/ms.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-ms.apk) |
+| Ελληνικά | [el.html](v1.8/el.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-el.apk) |
+| 文言文 | [lzh.html](v1.8/lzh.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/apk-v1.8-r4/MissingPhoneClass-1.8-lzh.apk) |
 
 每种语言都是完整的 84 章单文件 HTML，可以离线打开。阿拉伯语和希伯来语做了从右到左排版。
 
@@ -145,7 +145,14 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 
 19 种语言各一个独立应用（基于 v1.8），包名不同，可以同时装。正文内嵌在包里，离线能看；联网时才加载完整排版样式。需要 Android 5.0 以上。
 
-下载见上面的语言表，或 [Releases](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/v1.8)。
+下载见上面的语言表，或 [apk-v1.8-r4 Release](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r4)。
+
+**检查更新 · 自动更新**（r4 起内置）：
+
+- 应用启动后自动检查更新（24 小时节流），也可点应用内左下角「更新」按钮手动检查
+- 更新源默认是本仓库 GitHub Release 的 `apk-v*` 通道：发现新版本时弹窗展示发布说明，一键下载对应语言的 APK 并调起系统安装确认（Android 7.0+ 走 PackageInstaller 会话，更早版本走系统安装器）
+- 「稍后再说」记住当前修订号，自动检查不再重复弹窗；仅向 api.github.com / github.com 发起查询与下载请求，不收集任何数据
+- 渠道约定：tag `apk-v<书版号>-r<修订号>`（修订号 = versionCode），资产 `MissingPhoneClass-<书版号>-<lang>.apk`；网页端书版更新提示走 `v*` 通道，与应用通道互不影响
 
 ---
 
