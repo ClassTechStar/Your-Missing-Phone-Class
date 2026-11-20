@@ -1,138 +1,11 @@
- <!DOCTYPE html>
-<html lang="zh-CN" class="no-js">
-<head>
-    <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="你缺失的那门手机课 · 从入门到精通，全面掌控你的数字生活">
-    <meta name="keywords" content="手机教程,数码必修课,智能手机,安卓,iOS,鸿蒙,手机技巧,数字生活,AI大模型,AI编程,大模型API,Prompt工程,安卓开发,iOS开发,Swift,Kotlin,SwiftUI,Jetpack Compose,计算摄影,信息安全,密码管理,自动化,手机选购">
-    <meta name="author" content="数字生活向导">
-    <meta name="theme-color" content="var(--accent-book)" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="var(--accent-deep)" media="(prefers-color-scheme: dark)">
-    <meta name="robots" content="index, follow">
-    <meta name="format-detection" content="telephone=no">
-    <meta property="og:type" content="book">
-    <meta property="og:title" content="你缺失的那门手机课 · v1.9">
-    <meta property="og:description" content="从入门到精通，全面掌控你的数字生活">
-    <meta property="og:locale" content="zh_CN">
-    <meta property="og:image" content="https://classtechstar.github.io/Yihggh.github.io/icons/icon-512.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="你缺失的那门手机课">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="你缺失的那门手机课 · v1.9">
-    <meta name="twitter:description" content="从入门到精通，全面掌控你的数字生活">
-    <meta name="twitter:image" content="https://classtechstar.github.io/Yihggh.github.io/icons/icon-512.png">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="../icons/icon-192.png">
-    <link rel="manifest" href="../manifest.webmanifest">
-    <title>你缺失的那门手机课 · v1.9</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: 'var(--accent-book)',
-                        secondary: '#6B7280',
-                        light: '#F3F4F6',
-                        dark: '#1F2937',
-                        accent: '#7c3aed',
-                    },
-                    fontFamily: {
-                        sans: ['PingFang SC', 'Microsoft YaHei', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-    /* Hallmark · 色彩令牌（高频字面量收编，原值不动仅收编） */
-    :root {
-        --accent-book: #4F46E5;
-        --accent-soft: #818CF8;
-        --accent-deep: #1E1B4B;
-        --accent-wash: #EEF2FF;
-        --ink: #0B0E13;
-        --ink-2: #374151;
-        --ink-3: var(--surface-dark-2);
-        --ink-inverse: #F2F6FC;
-        --muted: #9CA3AF;
-        --muted-2: #6B7280;
-        --muted-3: #4B5563;
-        --line: #E5E7EB;
-        --line-2: #D1D5DB;
-        --surface: #FDFDFE;
-        --surface-2: #F3F4F6;
-        --surface-3: #EEF2F5;
-        --surface-4: #F5F6F8;
-        --surface-dark: #1F2937;
-        --surface-dark-2: #111827;
-        --surface-dark-3: #1E2A36;
-        --surface-dark-4: #1A2230;
-        --surface-dark-5: #354152;
-        --ok: #27AE60;
-        --gold: #D4A017;
-        --sky: #0EA5E9;
-        --wash-warm: #FDF8EF;
-        --sky-deep: #075985;
-        --wash-dark: #3D2E0F;
-        --surface-5: #F0F4F8;
-        --surface-6: #FAFAFA;
-        --line-3: #E0E0E0;
-        --surface-7: #F9FAFB;
-        --sky-wash: #E0F2FE;
-        --gold-2: #FBBF24;
-        --surface-dark-6: #1E293B;
-    }
-/* Hallmark · built: the project (v1.8/v1.9 中文书页) · redesign: polish · critique: P4 H4 E4 S4 R4 V3 · weakest: V，同模板 21 页共用本样式；已去两端对齐/渐变卡/transition-colors，保留本书蓝色系与 95ch 版心 */
-:root {
-    /* Hallmark 令牌：微着色的纸与墨（纯 var(--ink-inverse)/var(--ink) 不再出现），主色沿用本书蓝 */
-    --paper: #FDFDFE;
-    --ink: #0B0E13;
-    --ink-inverse: #F2F6FC;
-}
-
-/* Hallmark · 质量门兜底：焦点可见、动态降级、横向溢出裁切 */
-:focus-visible {
-    outline: 2px solid #165DFF;
-    outline-offset: 2px;
-}
-html, body {
-    overflow-x: clip;
-}
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-        @layer utilities {
-            .scrollbar-hide {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-            .scrollbar-hide::-webkit-scrollbar {
-                display: none;
-            }
-            .text-balance {
-                text-wrap: balance;
-            }
-            .focus-ring:focus-visible {
-                outline: 2px solid var(--accent-book);
-                outline-offset: 2px;
-            }
-        }
-    </style>
-    <style>
+ <!DOCTYPE html><html lang="zh-CN" class="no-js"><head>
+ <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="description" content="你缺失的那门手机课 · 从入门到精通，全面掌控你的数字生活"><meta name="keywords" content="手机教程,数码必修课,智能手机,安卓,iOS,鸿蒙,手机技巧,数字生活,AI大模型,AI编程,大模型API,Prompt工程,安卓开发,iOS开发,Swift,Kotlin,SwiftUI,Jetpack Compose,计算摄影,信息安全,密码管理,自动化,手机选购"><meta name="author" content="数字生活向导"><meta name="theme-color" content="var(--accent-book)" media="(prefers-color-scheme: light)"><meta name="theme-color" content="var(--accent-deep)" media="(prefers-color-scheme: dark)"><meta name="robots" content="index, follow"><meta name="format-detection" content="telephone=no"><meta property="og:type" content="book"><meta property="og:title" content="你缺失的那门手机课 · v1.9"><meta property="og:description" content="从入门到精通，全面掌控你的数字生活"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://classtechstar.github.io/Yihggh.github.io/icons/icon-512.png"><meta property="og:image:width" content="512"><meta property="og:image:height" content="512"><meta property="og:image:alt" content="你缺失的那门手机课"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="你缺失的那门手机课 · v1.9"><meta name="twitter:description" content="从入门到精通，全面掌控你的数字生活"><meta name="twitter:image" content="https://classtechstar.github.io/Yihggh.github.io/icons/icon-512.png"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E"><link rel="apple-touch-icon" href="../icons/icon-192.png"><link rel="manifest" href="../manifest.webmanifest"><title>你缺失的那门手机课 · v1.9</title>
+ <style>
         @font-face {
             font-family: MiSans;
-            src: url("../fonts/MiSans-Normal.ttf") format("truetype");
+            src: url("../fonts/MiSans-subset.woff2") format("woff2"),
+            url("../fonts/MiSans-Normal.ttf") format("truetype");
             font-weight: 400;
             font-style: normal;
             font-display: swap;
@@ -1519,6 +1392,8 @@ html, body {
 /* P2-2 懒渲染：长表格/代码块按需渲染（浏览器原生，回滚=移除本样式） */
 html:not(.safe) .content-section table,
 html:not(.safe) .content-section pre { content-visibility: auto; contain-intrinsic-size: auto 480px; }
+        /* 表格同理：591 个表格全量参与布局是首屏主要开销，离屏跳过（auto 记住实测高度） */
+        html:not(.safe) .content-section table { content-visibility: auto; contain-intrinsic-size: auto 200px; }
 @media print {
   html .content-section table, html .content-section pre { content-visibility: visible; }
 }
@@ -1669,7 +1544,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   }
 })();
 </script>
-    <script id="liquid-glass-bundle">
+ <script id="liquid-glass-bundle">
     /* ═══ Liquid Glass（P3：借鉴 liquid-glass-js / callstack liquid-glass / Kyant0 backdrop）═══
      * 特性检测 → html.lg-ready；用户偏好 rp:liquidGlass → html.lg-off；
      * Chromium 增强 → html.lg-adv（backdrop-filter 引用 #lg-displace SVG 折射滤镜）。
@@ -1711,69 +1586,18 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
       } catch (e) { /* 增强层不可用则停留在毛玻璃 */ }
     })();
     </script>
-    
+ 
 
+
+<link rel="preload" href="../fonts/MiSans-subset.woff2" as="font" type="font/woff2" crossorigin>
+<style id="static-vendor-css">
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:MiSans,Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Microsoft YaHei,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.visible{visibility:visible}.invisible{visibility:hidden}.collapse{visibility:collapse}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.-bottom-4{bottom:-1rem}.-left-4{left:-1rem}.-right-4{right:-1rem}.-top-4{top:-1rem}.left-0{left:0}.left-1\/2{left:50%}.top-0{top:0}.top-16{top:4rem}.isolate{isolation:isolate}.z-10{z-index:10}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.mx-1{margin-left:.25rem;margin-right:.25rem}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:.5rem;margin-bottom:.5rem}.my-3{margin-top:.75rem;margin-bottom:.75rem}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-1{margin-right:.25rem}.mr-1\.5{margin-right:.375rem}.mr-2{margin-right:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.contents{display:contents}.hidden{display:none}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-20{height:5rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-\[500px\]{height:500px}.h-\[calc\(100vh-4rem\)\]{height:calc(100vh - 4rem)}.h-full{height:100%}.h-px{height:1px}.min-h-dvh{min-height:100dvh}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-20{width:5rem}.w-32{width:8rem}.w-64{width:16rem}.w-72{width:18rem}.w-8{width:2rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-\[8rem\]{max-width:8rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.flex-shrink{flex-shrink:1}.flex-shrink-0{flex-shrink:0}.shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.grow{flex-grow:1}.border-collapse{border-collapse:collapse}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-x-full{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-full{--tw-translate-x:-100%}.-rotate-90{--tw-rotate:-90deg}.-rotate-90,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize{resize:both}.list-decimal{list-style-type:decimal}.list-disc{list-style-type:disc}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-0\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.125rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.125rem*var(--tw-space-y-reverse))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.text-wrap{text-wrap:wrap}.text-balance{text-wrap:balance}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[3rem\]{border-radius:3rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.rounded-b-2xl{border-bottom-right-radius:1rem;border-bottom-left-radius:1rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-l-4{border-left-width:4px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-t-4{border-top-width:4px}.border-amber-100{--tw-border-opacity:1;border-color:rgb(254 243 199/var(--tw-border-opacity,1))}.border-amber-500{--tw-border-opacity:1;border-color:rgb(245 158 11/var(--tw-border-opacity,1))}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254/var(--tw-border-opacity,1))}.border-blue-300{--tw-border-opacity:1;border-color:rgb(147 197 253/var(--tw-border-opacity,1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183/var(--tw-border-opacity,1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246/var(--tw-border-opacity,1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235/var(--tw-border-opacity,1))}.border-gray-200\/70{border-color:rgba(229,231,235,.7)}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity,1))}.border-gray-400{--tw-border-opacity:1;border-color:rgb(156 163 175/var(--tw-border-opacity,1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81/var(--tw-border-opacity,1))}.border-green-100{--tw-border-opacity:1;border-color:rgb(220 252 231/var(--tw-border-opacity,1))}.border-green-300{--tw-border-opacity:1;border-color:rgb(134 239 172/var(--tw-border-opacity,1))}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94/var(--tw-border-opacity,1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255/var(--tw-border-opacity,1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254/var(--tw-border-opacity,1))}.border-indigo-300{--tw-border-opacity:1;border-color:rgb(165 180 252/var(--tw-border-opacity,1))}.border-primary{--tw-border-opacity:1;border-color:rgb(79 70 229/var(--tw-border-opacity,1))}.border-primary\/20{border-color:rgba(79,70,229,.2)}.border-primary\/30{border-color:rgba(79,70,229,.3)}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202/var(--tw-border-opacity,1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68/var(--tw-border-opacity,1))}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.border-yellow-300{--tw-border-opacity:1;border-color:rgb(253 224 71/var(--tw-border-opacity,1))}.border-l-blue-500{--tw-border-opacity:1;border-left-color:rgb(59 130 246/var(--tw-border-opacity,1))}.border-t-green-500{--tw-border-opacity:1;border-top-color:rgb(34 197 94/var(--tw-border-opacity,1))}.border-t-red-500{--tw-border-opacity:1;border-top-color:rgb(239 68 68/var(--tw-border-opacity,1))}.bg-accent{--tw-bg-opacity:1;background-color:rgb(124 58 237/var(--tw-bg-opacity,1))}.bg-accent\/10{background-color:rgba(124,58,237,.1)}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-black\/50{background-color:rgba(0,0,0,.5)}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.bg-dark{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity,1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-500\/10{background-color:rgba(16,185,129,.1)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity,1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity,1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39/var(--tw-bg-opacity,1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231/var(--tw-bg-opacity,1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244/var(--tw-bg-opacity,1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94/var(--tw-bg-opacity,1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity,1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}.bg-indigo-500\/10{background-color:rgba(99,102,241,.1)}.bg-light{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213/var(--tw-bg-opacity,1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-primary\/5{background-color:rgba(79,70,229,.05)}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255/var(--tw-bg-opacity,1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226/var(--tw-bg-opacity,1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68/var(--tw-bg-opacity,1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/15{background-color:hsla(0,0%,100%,.15)}.bg-white\/20{background-color:hsla(0,0%,100%,.2)}.bg-white\/80{background-color:hsla(0,0%,100%,.8)}.bg-white\/95{background-color:hsla(0,0%,100%,.95)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-amber-50{--tw-gradient-from:#fffbeb var(--tw-gradient-from-position);--tw-gradient-to:rgba(255,251,235,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-amber-500{--tw-gradient-from:#f59e0b var(--tw-gradient-from-position);--tw-gradient-to:rgba(245,158,11,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(59,130,246,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgba(37,99,235,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-cyan-50{--tw-gradient-from:#ecfeff var(--tw-gradient-from-position);--tw-gradient-to:rgba(236,254,255,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-cyan-500{--tw-gradient-from:#06b6d4 var(--tw-gradient-from-position);--tw-gradient-to:rgba(6,182,212,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-400{--tw-gradient-from:#34d399 var(--tw-gradient-from-position);--tw-gradient-to:rgba(52,211,153,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-50{--tw-gradient-from:#ecfdf5 var(--tw-gradient-from-position);--tw-gradient-to:rgba(236,253,245,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-emerald-500{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgba(16,185,129,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-fuchsia-50{--tw-gradient-from:#fdf4ff var(--tw-gradient-from-position);--tw-gradient-to:rgba(253,244,255,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-green-50{--tw-gradient-from:#f0fdf4 var(--tw-gradient-from-position);--tw-gradient-to:rgba(240,253,244,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-indigo-50{--tw-gradient-from:#eef2ff var(--tw-gradient-from-position);--tw-gradient-to:rgba(238,242,255,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-indigo-500{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgba(99,102,241,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-lime-50{--tw-gradient-from:#f7fee7 var(--tw-gradient-from-position);--tw-gradient-to:hsla(78,92%,95%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-orange-50{--tw-gradient-from:#fff7ed var(--tw-gradient-from-position);--tw-gradient-to:rgba(255,247,237,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-orange-500{--tw-gradient-from:#f97316 var(--tw-gradient-from-position);--tw-gradient-to:rgba(249,115,22,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-pink-50{--tw-gradient-from:#fdf2f8 var(--tw-gradient-from-position);--tw-gradient-to:rgba(253,242,248,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-primary{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgba(79,70,229,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-purple-500{--tw-gradient-from:#a855f7 var(--tw-gradient-from-position);--tw-gradient-to:rgba(168,85,247,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-red-50{--tw-gradient-from:#fef2f2 var(--tw-gradient-from-position);--tw-gradient-to:hsla(0,86%,97%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-rose-50{--tw-gradient-from:#fff1f2 var(--tw-gradient-from-position);--tw-gradient-to:rgba(255,241,242,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-rose-500{--tw-gradient-from:#f43f5e var(--tw-gradient-from-position);--tw-gradient-to:rgba(244,63,94,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-sky-50{--tw-gradient-from:#f0f9ff var(--tw-gradient-from-position);--tw-gradient-to:rgba(240,249,255,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-stone-50{--tw-gradient-from:#fafaf9 var(--tw-gradient-from-position);--tw-gradient-to:hsla(60,9%,98%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-stone-500{--tw-gradient-from:#78716c var(--tw-gradient-from-position);--tw-gradient-to:hsla(25,5%,45%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-teal-50{--tw-gradient-from:#f0fdfa var(--tw-gradient-from-position);--tw-gradient-to:rgba(240,253,250,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-teal-500{--tw-gradient-from:#14b8a6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(20,184,166,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-violet-50{--tw-gradient-from:#f5f3ff var(--tw-gradient-from-position);--tw-gradient-to:rgba(245,243,255,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-accent{--tw-gradient-to:#7c3aed var(--tw-gradient-to-position)}.to-amber-100{--tw-gradient-to:#fef3c7 var(--tw-gradient-to-position)}.to-amber-600{--tw-gradient-to:#d97706 var(--tw-gradient-to-position)}.to-blue-600{--tw-gradient-to:#2563eb var(--tw-gradient-to-position)}.to-blue-900{--tw-gradient-to:#1e3a8a var(--tw-gradient-to-position)}.to-cyan-100{--tw-gradient-to:#cffafe var(--tw-gradient-to-position)}.to-cyan-600{--tw-gradient-to:#0891b2 var(--tw-gradient-to-position)}.to-emerald-600{--tw-gradient-to:#059669 var(--tw-gradient-to-position)}.to-fuchsia-100{--tw-gradient-to:#fae8ff var(--tw-gradient-to-position)}.to-green-100{--tw-gradient-to:#dcfce7 var(--tw-gradient-to-position)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-lime-100{--tw-gradient-to:#ecfccb var(--tw-gradient-to-position)}.to-orange-100{--tw-gradient-to:#ffedd5 var(--tw-gradient-to-position)}.to-orange-600{--tw-gradient-to:#ea580c var(--tw-gradient-to-position)}.to-pink-100{--tw-gradient-to:#fce7f3 var(--tw-gradient-to-position)}.to-purple-50{--tw-gradient-to:#faf5ff var(--tw-gradient-to-position)}.to-purple-600{--tw-gradient-to:#9333ea var(--tw-gradient-to-position)}.to-red-100{--tw-gradient-to:#fee2e2 var(--tw-gradient-to-position)}.to-rose-100{--tw-gradient-to:#ffe4e6 var(--tw-gradient-to-position)}.to-rose-600{--tw-gradient-to:#e11d48 var(--tw-gradient-to-position)}.to-sky-100{--tw-gradient-to:#e0f2fe var(--tw-gradient-to-position)}.to-stone-100{--tw-gradient-to:#f5f5f4 var(--tw-gradient-to-position)}.to-stone-600{--tw-gradient-to:#57534e var(--tw-gradient-to-position)}.to-teal-100{--tw-gradient-to:#ccfbf1 var(--tw-gradient-to-position)}.to-teal-50{--tw-gradient-to:#f0fdfa var(--tw-gradient-to-position)}.to-teal-500{--tw-gradient-to:#14b8a6 var(--tw-gradient-to-position)}.to-teal-600{--tw-gradient-to:#0d9488 var(--tw-gradient-to-position)}.to-violet-100{--tw-gradient-to:#ede9fe var(--tw-gradient-to-position)}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-2{padding-bottom:.5rem}.pb-3{padding-bottom:.75rem}.pl-0{padding-left:0}.pl-12{padding-left:3rem}.pl-4{padding-left:1rem}.pl-5{padding-left:1.25rem}.pl-6{padding-left:1.5rem}.pt-16{padding-top:4rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.lowercase{text-transform:lowercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.text-accent{--tw-text-opacity:1;color:rgb(124 58 237/var(--tw-text-opacity,1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9/var(--tw-text-opacity,1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15/var(--tw-text-opacity,1))}.text-blue-100\/90{color:rgba(219,234,254,.9)}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254/var(--tw-text-opacity,1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253/var(--tw-text-opacity,1))}.text-blue-300\/80{color:rgba(147,197,253,.8)}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.text-cyan-500{--tw-text-opacity:1;color:rgb(6 182 212/var(--tw-text-opacity,1))}.text-dark{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity,1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity,1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55/var(--tw-text-opacity,1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94/var(--tw-text-opacity,1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74/var(--tw-text-opacity,1))}.text-green-900{--tw-text-opacity:1;color:rgb(20 83 45/var(--tw-text-opacity,1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241/var(--tw-text-opacity,1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202/var(--tw-text-opacity,1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129/var(--tw-text-opacity,1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22/var(--tw-text-opacity,1))}.text-primary{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.text-primary\/20{color:rgba(79,70,229,.2)}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234/var(--tw-text-opacity,1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113/var(--tw-text-opacity,1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity,1))}.text-red-900{--tw-text-opacity:1;color:rgb(127 29 29/var(--tw-text-opacity,1))}.text-rose-500{--tw-text-opacity:1;color:rgb(244 63 94/var(--tw-text-opacity,1))}.text-secondary{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-stone-500{--tw-text-opacity:1;color:rgb(120 113 108/var(--tw-text-opacity,1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-70{opacity:.7}.opacity-80{opacity:.8}.opacity-90{opacity:.9}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-white\/20{--tw-shadow-color:hsla(0,0%,100%,.2);--tw-shadow:var(--tw-shadow-colored)}.outline{outline-style:solid}.ring{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.blur{--tw-blur:blur(8px)}.blur,.grayscale{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-blur-md{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-blur-sm,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}.scrollbar-hide::-webkit-scrollbar{display:none}.text-balance{text-wrap:balance}.focus-ring:focus-visible{outline:2px solid #4f46e5;outline-offset:2px}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.hover\:bg-gray-100:hover,.hover\:bg-light:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity,1))}.hover\:bg-white\/20:hover{background-color:hsla(0,0%,100%,.2)}.hover\:bg-white\/25:hover{background-color:hsla(0,0%,100%,.25)}.hover\:text-blue-300:hover{--tw-text-opacity:1;color:rgb(147 197 253/var(--tw-text-opacity,1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:opacity-90:hover{opacity:.9}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.hover\:shadow-lg:hover,.hover\:shadow-xl:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.focus\:border-primary:focus{--tw-border-opacity:1;border-color:rgb(79 70 229/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group\/toc:hover .group-hover\/toc\:text-primary{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.dark\:inline:is(.dark *){display:inline}.dark\:hidden:is(.dark *){display:none}.dark\:border-gray-600:is(.dark *){--tw-border-opacity:1;border-color:rgb(75 85 99/var(--tw-border-opacity,1))}.dark\:border-gray-700:is(.dark *){--tw-border-opacity:1;border-color:rgb(55 65 81/var(--tw-border-opacity,1))}.dark\:bg-amber-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(69 26 3/var(--tw-bg-opacity,1))}.dark\:bg-gray-700:is(.dark *){--tw-bg-opacity:1;background-color:rgb(55 65 81/var(--tw-bg-opacity,1))}.dark\:bg-gray-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity,1))}.dark\:bg-gray-800\/95:is(.dark *){background-color:rgba(31,41,55,.95)}.dark\:bg-gray-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(17 24 39/var(--tw-bg-opacity,1))}.dark\:bg-green-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(5 46 22/var(--tw-bg-opacity,1))}.dark\:bg-indigo-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(30 27 75/var(--tw-bg-opacity,1))}.dark\:bg-red-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(69 10 10/var(--tw-bg-opacity,1))}.dark\:from-gray-800:is(.dark *){--tw-gradient-from:#1f2937 var(--tw-gradient-from-position);--tw-gradient-to:rgba(31,41,55,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.dark\:to-gray-900:is(.dark *){--tw-gradient-to:#111827 var(--tw-gradient-to-position)}.dark\:stroke-gray-700:is(.dark *){stroke:#374151}.dark\:text-amber-200:is(.dark *){--tw-text-opacity:1;color:rgb(253 230 138/var(--tw-text-opacity,1))}.dark\:text-amber-400:is(.dark *){--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.dark\:text-emerald-400:is(.dark *){--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.dark\:text-gray-200:is(.dark *){--tw-text-opacity:1;color:rgb(229 231 235/var(--tw-text-opacity,1))}.dark\:text-gray-300:is(.dark *){--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.dark\:text-gray-400:is(.dark *){--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.dark\:text-gray-500:is(.dark *){--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.dark\:text-green-200:is(.dark *){--tw-text-opacity:1;color:rgb(187 247 208/var(--tw-text-opacity,1))}.dark\:text-indigo-200:is(.dark *){--tw-text-opacity:1;color:rgb(199 210 254/var(--tw-text-opacity,1))}.dark\:text-red-200:is(.dark *){--tw-text-opacity:1;color:rgb(254 202 202/var(--tw-text-opacity,1))}.dark\:hover\:bg-gray-700:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(55 65 81/var(--tw-bg-opacity,1))}.dark\:hover\:text-gray-200:hover:is(.dark *){--tw-text-opacity:1;color:rgb(229 231 235/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:inline-flex{display:inline-flex}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}}@media (min-width:768px){.md\:flex{display:flex}.md\:inline-flex{display:inline-flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:gap-2{gap:.5rem}.md\:p-12{padding:3rem}.md\:px-10{padding-left:2.5rem;padding-right:2.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:1024px){.lg\:col-span-2{grid-column:span 2/span 2}.lg\:ml-72{margin-left:18rem}.lg\:hidden{display:none}.lg\:translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-start{justify-content:flex-start}.lg\:text-left{text-align:left}.lg\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width:1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url(../fonts/fa/fa-brands-400.woff2) format("woff2")}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(../fonts/fa/fa-regular-400.woff2) format("woff2")}@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url(../fonts/fa/fa-solid-900.woff2) format("woff2")}@font-face{font-family:"Font Awesome 5 Brands";font-display:block;font-weight:400;src:url(../fonts/fa/fa-brands-400.woff2) format("woff2")}@font-face{font-family:"Font Awesome 5 Free";font-display:block;font-weight:900;src:url(../fonts/fa/fa-solid-900.woff2) format("woff2")}@font-face{font-family:"Font Awesome 5 Free";font-display:block;font-weight:400;src:url(../fonts/fa/fa-regular-400.woff2) format("woff2")}@font-face{font-family:"FontAwesome";font-display:block;src:url(../fonts/fa/fa-solid-900.woff2) format("woff2")}@font-face{font-family:"FontAwesome";font-display:block;src:url(../fonts/fa/fa-brands-400.woff2) format("woff2")}@font-face{font-family:"FontAwesome";font-display:block;src:url(../fonts/fa/fa-regular-400.woff2) format("woff2");unicode-range:u+f003,u+f006,u+f014,u+f016-f017,u+f01a-f01b,u+f01d,u+f022,u+f03e,u+f044,u+f046,u+f05c-f05d,u+f06e,u+f070,u+f087-f088,u+f08a,u+f094,u+f096-f097,u+f09d,u+f0a0,u+f0a2,u+f0a4-f0a7,u+f0c5,u+f0c7,u+f0e5-f0e6,u+f0eb,u+f0f6-f0f8,u+f10c,u+f114-f115,u+f118-f11a,u+f11c-f11d,u+f133,u+f147,u+f14e,u+f150-f152,u+f185-f186,u+f18e,u+f190-f192,u+f196,u+f1c1-f1c9,u+f1d9,u+f1db,u+f1e3,u+f1ea,u+f1f7,u+f1f9,u+f20a,u+f247-f248,u+f24a,u+f24d,u+f255-f25b,u+f25d,u+f271-f274,u+f278,u+f27b,u+f28c,u+f28e,u+f29c,u+f2b5,u+f2b7,u+f2ba,u+f2bc,u+f2be,u+f2c0-f2c1,u+f2c3,u+f2d0,u+f2d2,u+f2d4,u+f2dc}@font-face{font-family:"FontAwesome";font-display:block;src:url(../webfonts/fa-v4compatibility.woff2) format("woff2");unicode-range:u+f041,u+f047,u+f065-f066,u+f07d-f07e,u+f080,u+f08b,u+f08e,u+f090,u+f09a,u+f0ac,u+f0ae,u+f0b2,u+f0d0,u+f0d6,u+f0e4,u+f0ec,u+f10a-f10b,u+f123,u+f13e,u+f148-f149,u+f14c,u+f156,u+f15e,u+f160-f161,u+f163,u+f175-f178,u+f195,u+f1f8,u+f219,u+f27a}.fa,.fa-brands,.fa-classic,.fa-regular,.fa-sharp,.fa-solid,.fab,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}.fa-classic,.fa-regular,.fa-solid,.far,.fas{font-family:"Font Awesome 6 Free"}.fa-brands,.fab{font-family:"Font Awesome 6 Brands"}.fa-file-alt:before,.fa-file-lines:before,.fa-file-text:before{content:"\f15c"}.fa-forward-step:before,.fa-step-forward:before{content:"\f051"}.fa-flag-checkered:before{content:"\f11e"}.fa-clipboard-list:before{content:"\f46d"}.fa-gavel:before,.fa-legal:before{content:"\f0e3"}.fa-binoculars:before{content:"\f1e5"}.fa-compass:before{content:"\f14e"}.fa-laptop-code:before{content:"\f5fc"}.fa-bars:before,.fa-navicon:before{content:"\f0c9"}.fa-lightbulb:before{content:"\f0eb"}.fa-circle-exclamation:before,.fa-exclamation-circle:before{content:"\f06a"}.fa-cloud-showers-heavy:before{content:"\f740"}.fa-list-squares:before,.fa-list:before{content:"\f03a"}.fa-hourglass-2:before,.fa-hourglass-half:before{content:"\f252"}.fa-plug:before{content:"\f1e6"}.fa-chevron-up:before{content:"\f077"}.fa-stamp:before{content:"\f5bf"}.fa-bookmark:before{content:"\f02e"}.fa-bullseye:before{content:"\f140"}.fa-magic-wand-sparkles:before,.fa-wand-magic-sparkles:before{content:"\e2ca"}.fa-globe:before{content:"\f0ac"}.fa-star:before{content:"\f005"}.fa-box:before{content:"\f466"}.fa-heart-pulse:before,.fa-heartbeat:before{content:"\f21e"}.fa-microchip:before{content:"\f2db"}.fa-crown:before{content:"\f521"}.fa-fire:before{content:"\f06d"}.fa-wifi-3:before,.fa-wifi-strong:before,.fa-wifi:before{content:"\f1eb"}.fa-image:before{content:"\f03e"}.fa-microphone:before{content:"\f130"}.fa-check-circle:before,.fa-circle-check:before{content:"\f058"}.fa-universal-access:before{content:"\f29a"}.fa-pause:before{content:"\f04c"}.fa-cloud-arrow-up:before,.fa-cloud-upload-alt:before,.fa-cloud-upload:before{content:"\f0ee"}.fa-palette:before{content:"\f53f"}.fa-seedling:before,.fa-sprout:before{content:"\f4d8"}.fa-cloud-arrow-down:before,.fa-cloud-download-alt:before,.fa-cloud-download:before{content:"\f0ed"}.fa-arrows-rotate:before,.fa-refresh:before,.fa-sync:before{content:"\f021"}.fa-shield-alt:before,.fa-shield-halved:before{content:"\f3ed"}.fa-layer-group:before{content:"\f5fd"}.fa-language:before{content:"\f1ab"}.fa-puzzle-piece:before{content:"\f12e"}.fa-code:before{content:"\f121"}.fa-leaf:before{content:"\f06c"}.fa-road:before{content:"\f018"}.fa-chart-pie:before,.fa-pie-chart:before{content:"\f200"}.fa-chart-line:before,.fa-line-chart:before{content:"\f201"}.fa-arrow-right:before{content:"\f061"}.fa-screwdriver-wrench:before,.fa-tools:before{content:"\f7d9"}.fa-heart:before{content:"\f004"}.fa-house-crack:before{content:"\e3b1"}.fa-mobile-alt:before,.fa-mobile-screen-button:before{content:"\f3cd"}.fa-volume-high:before,.fa-volume-up:before{content:"\f028"}.fa-wrench:before{content:"\f0ad"}.fa-circle-question:before,.fa-question-circle:before{content:"\f059"}.fa-route:before{content:"\f4d7"}.fa-eye:before{content:"\f06e"}.fa-pen:before{content:"\f304"}.fa-signal-5:before,.fa-signal-perfect:before,.fa-signal:before{content:"\f012"}.fa-comment-dots:before,.fa-commenting:before{content:"\f4ad"}.fa-hand-pointer:before{content:"\f25a"}.fa-arrow-right-rotate:before,.fa-arrow-rotate-forward:before,.fa-arrow-rotate-right:before,.fa-redo:before{content:"\f01e"}.fa-location-crosshairs:before,.fa-location:before{content:"\f601"}.fa-phone:before{content:"\f095"}.fa-trash:before{content:"\f1f8"}.fa-headphones:before{content:"\f025"}.fa-arrow-left:before{content:"\f060"}.fa-file-pdf:before{content:"\f1c1"}.fa-user-secret:before{content:"\f21b"}.fa-table-cells-large:before,.fa-th-large:before{content:"\f009"}.fa-birthday-cake:before,.fa-cake-candles:before,.fa-cake:before{content:"\f1fd"}.fa-mountain:before{content:"\f6fc"}.fa-circle-info:before,.fa-info-circle:before{content:"\f05a"}.fa-camera-alt:before,.fa-camera:before{content:"\f030"}.fa-calendar-check:before{content:"\f274"}.fa-landmark:before{content:"\f66f"}.fa-hard-drive:before,.fa-hdd:before{content:"\f0a0"}.fa-droplet-slash:before,.fa-tint-slash:before{content:"\f5c7"}.fa-cart-shopping:before,.fa-shopping-cart:before{content:"\f07a"}.fa-clock-four:before,.fa-clock:before{content:"\f017"}.fa-backward-step:before,.fa-step-backward:before{content:"\f048"}.fa-keyboard:before{content:"\f11c"}.fa-mobile-android-alt:before,.fa-mobile-screen:before{content:"\f3cf"}.fa-coins:before{content:"\f51e"}.fa-flask:before{content:"\f0c3"}.fa-closed-captioning:before{content:"\f20a"}.fa-download:before{content:"\f019"}.fa-file-circle-check:before{content:"\e5a0"}.fa-redo-alt:before,.fa-rotate-forward:before,.fa-rotate-right:before{content:"\f2f9"}.fa-upload:before{content:"\f093"}.fa-bolt:before,.fa-zap:before{content:"\f0e7"}.fa-vault:before{content:"\e2c5"}.fa-sun:before{content:"\f185"}.fa-first-aid:before,.fa-kit-medical:before{content:"\f479"}.fa-bug:before{content:"\f188"}.fa-hands-helping:before,.fa-handshake-angle:before{content:"\f4c4"}.fa-droplet:before,.fa-tint:before{content:"\f043"}.fa-gauge-high:before,.fa-tachometer-alt-fast:before,.fa-tachometer-alt:before{content:"\f625"}.fa-play:before{content:"\f04b"}.fa-magnifying-glass:before,.fa-search:before{content:"\f002"}.fa-chevron-down:before{content:"\f078"}.fa-skull-crossbones:before{content:"\f714"}.fa-list-dots:before,.fa-list-ul:before{content:"\f0ca"}.fa-arrow-up:before{content:"\f062"}.fa-television:before,.fa-tv-alt:before,.fa-tv:before{content:"\f26c"}.fa-list-check:before,.fa-tasks:before{content:"\f0ae"}.fa-user-shield:before{content:"\f505"}.fa-adjust:before,.fa-circle-half-stroke:before{content:"\f042"}.fa-diagram-project:before,.fa-project-diagram:before{content:"\f542"}.fa-copy:before{content:"\f0c5"}.fa-close:before,.fa-multiply:before,.fa-remove:before,.fa-times:before,.fa-xmark:before{content:"\f00d"}.fa-quote-left-alt:before,.fa-quote-left:before{content:"\f10d"}.fa-map:before{content:"\f279"}.fa-rocket:before{content:"\f135"}.fa-hammer:before{content:"\f6e3"}.fa-robot:before{content:"\f544"}.fa-magic:before,.fa-wand-magic:before{content:"\f0d0"}.fa-moon:before{content:"\f186"}.fa-book:before{content:"\f02d"}.fa-check:before{content:"\f00c"}.fa-briefcase:before{content:"\f0b1"}.fa-book-open:before{content:"\f518"}.fa-exclamation-triangle:before,.fa-triangle-exclamation:before,.fa-warning:before{content:"\f071"}.fa-database:before{content:"\f1c0"}.fa-exchange-alt:before,.fa-right-left:before{content:"\f362"}.fa-hands:before,.fa-sign-language:before,.fa-signing:before{content:"\f2a7"}.fa-brain:before{content:"\f5dc"}.fa-circle-xmark:before,.fa-times-circle:before,.fa-xmark-circle:before{content:"\f057"}.fa-magnifying-glass-plus:before,.fa-search-plus:before{content:"\f00e"}.fa-file-invoice:before{content:"\f570"}.fa-coffee:before,.fa-mug-saucer:before{content:"\f0f4"}.fa-print:before{content:"\f02f"}.fa-video-camera:before,.fa-video:before{content:"\f03d"}.fa-graduation-cap:before,.fa-mortar-board:before{content:"\f19d"}.fa-sr-only,.fa-sr-only-focusable:not(:focus),.sr-only,.sr-only-focusable:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fa-brands,.fab{font-weight:400}.fa-apple:before{content:"\f179"}.fa-android:before{content:"\f17b"}.fa-github:before{content:"\f09b"}.fa-regular,.far{font-weight:400}.fa-solid,.fas{font-weight:900}
+</style>
     <link rel="canonical" href="https://classtechstar.github.io/Yihggh.github.io/">
-</head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
-    <a class="skip-link focus-ring" href="#content">跳到主要内容</a>
-    <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-colors duration-300" role="banner">
-        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-3 min-w-0">
-                <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="打开目录菜单" aria-expanded="false" aria-controls="sidebar">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <a href="#top" class="flex items-center gap-2 min-w-0" aria-label="返回首页">
-                    <span class="hidden sm:inline-flex w-8 h-8 rounded-md bg-gradient-to-br from-primary to-accent text-white items-center justify-center text-sm font-bold flex-shrink-0" aria-hidden="true">
-                        <i class="fas fa-mobile-screen"></i>
-                    </span>
-                    <h1 class="text-base md:text-lg font-bold text-primary truncate">搞定手机 · 数码必修课</h1>
-                </a>
-            </div>
-            <nav class="flex items-center gap-1 md:gap-2" aria-label="主操作">
-                <a href="#ji-chu-pian" class="hidden md:inline-flex items-center gap-1 text-sm text-secondary dark:text-gray-400 hover:text-primary px-2 py-1 rounded-md transition-colors focus-ring" title="从基础开始">
-                    <i class="fas fa-graduation-cap" aria-hidden="true"></i><span>开始学习</span>
-                </a>
-                <button id="search-toggle" class="text-lg p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="搜索 (Ctrl+K)" aria-label="搜索内容">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </button>
-                <div class="hidden md:flex items-center border border-gray-200 dark:border-gray-600 rounded-md overflow-hidden" role="group" aria-label="字号调整">
-                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="decrease" title="缩小字体" aria-label="缩小字体">A-</button>
-                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="reset" title="重置字号" aria-label="重置字号">A</button>
-                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="increase" title="放大字体" aria-label="放大字体">A+</button>
-                </div>
-                <button id="theme-toggle" class="theme-toggle text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="切换深色/浅色模式" aria-label="切换深色/浅色模式">
-                    <i class="fas fa-moon dark:hidden" aria-hidden="true"></i>
-                    <i class="fas fa-sun hidden dark:inline" aria-hidden="true"></i>
-                </button>
-                <button id="print-btn" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary p-2 rounded-md transition-colors focus-ring" title="打印 / 导出PDF" aria-label="打印或导出PDF">
-                    <i class="fas fa-print" aria-hidden="true"></i>
-                </button>
-                <a href="#top" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary transition-colors focus-ring px-2 py-1 rounded-md" aria-label="回到顶部">
-                    <i class="fas fa-arrow-up mr-1" aria-hidden="true"></i>顶部
-                </a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="flex min-h-screen pt-16 relative">
-        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0" role="navigation" aria-label="文章目录">
-            <nav class="p-4">
-                <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
-                    <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                        <span aria-hidden="true" class="fas fa-list-ul text-primary" aria-hidden="true"></span>学习目录
-                    </h2>
-                    <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-                        <span id="reading-progress-text">0 / 38 章</span>
-                        <span id="reading-percent" class="font-semibold text-primary">0%</span>
-                    </div>
-                    <div class="toc-progress-bar mt-1.5" id="toc-progress-bar" style="transform: scaleX(0);" aria-hidden="true"></div>
-                </div>
-                <div class="mb-3 px-1">
-                    <input type="text" id="toc-filter" placeholder="筛选章节..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="筛选章节">
-                </div>
-                <ul class="space-y-1 text-sm" id="toc-list"><!-- 基础篇 -->
+</head><body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200"><a class="skip-link focus-ring" href="#content">跳到主要内容</a><div id="reading-progress" style="width:0%" aria-hidden="true"></div><header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-colors duration-300" role="banner"><div class="container mx-auto px-4 h-16 flex items-center justify-between"><div class="flex items-center gap-3 min-w-0"><button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="打开目录菜单" aria-expanded="false" aria-controls="sidebar"><i class="fas fa-bars"></i></button><a href="#top" class="flex items-center gap-2 min-w-0" aria-label="返回首页"><span class="hidden sm:inline-flex w-8 h-8 rounded-md bg-gradient-to-br from-primary to-accent text-white items-center justify-center text-sm font-bold flex-shrink-0" aria-hidden="true"><i class="fas fa-mobile-screen"></i></span><h1 class="text-base md:text-lg font-bold text-primary truncate">搞定手机 · 数码必修课</h1></a></div><nav class="flex items-center gap-1 md:gap-2" aria-label="主操作"><a href="#ji-chu-pian" class="hidden md:inline-flex items-center gap-1 text-sm text-secondary dark:text-gray-400 hover:text-primary px-2 py-1 rounded-md transition-colors focus-ring" title="从基础开始"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>开始学习</span></a><button id="search-toggle" class="text-lg p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="搜索 (Ctrl+K)" aria-label="搜索内容"><i class="fas fa-search" aria-hidden="true"></i></button><div class="hidden md:flex items-center border border-gray-200 dark:border-gray-600 rounded-md overflow-hidden" role="group" aria-label="字号调整"><button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="decrease" title="缩小字体" aria-label="缩小字体">A-</button><button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="reset" title="重置字号" aria-label="重置字号">A</button><button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="increase" title="放大字体" aria-label="放大字体">A+</button></div><button id="theme-toggle" class="theme-toggle text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="切换深色/浅色模式" aria-label="切换深色/浅色模式"><i class="fas fa-moon dark:hidden" aria-hidden="true"></i><i class="fas fa-sun hidden dark:inline" aria-hidden="true"></i></button><button id="print-btn" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary p-2 rounded-md transition-colors focus-ring" title="打印 / 导出PDF" aria-label="打印或导出PDF"><i class="fas fa-print" aria-hidden="true"></i></button><a href="#top" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary transition-colors focus-ring px-2 py-1 rounded-md" aria-label="回到顶部"><i class="fas fa-arrow-up mr-1" aria-hidden="true"></i>顶部
+ </a></nav></div></header><div class="flex min-h-screen pt-16 relative"><aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0" role="navigation" aria-label="文章目录"><nav class="p-4"><div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700"><h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2"><span aria-hidden="true" class="fas fa-list-ul text-primary" aria-hidden="true"></span>学习目录
+ </h2><div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1"><span id="reading-progress-text">0 / 38 章</span><span id="reading-percent" class="font-semibold text-primary">0%</span></div><div class="toc-progress-bar mt-1.5" id="toc-progress-bar" style="transform: scaleX(0);" aria-hidden="true"></div></div><div class="mb-3 px-1"><input type="text" id="toc-filter" placeholder="筛选章节..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="筛选章节"></div><ul class="space-y-1 text-sm" id="toc-list"><!-- 基础篇 -->
                     <li class="toc-parent" data-group="ji-chu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">一、基础篇（第0-7章）</a>
@@ -2082,239 +1906,15 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
                             <li><a href="#fu-lu-h" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">H</span>附录H：版本路线图</a></li>
                         </ul>
                     </li>
-</ul>
-            </nav>
-        </aside>
+</ul></nav></aside><div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div><div id="search-overlay" class="search-overlay" role="dialog" aria-label="搜索"><div class="search-panel"><div class="search-input-wrapper"><i class="fas fa-search text-gray-400"></i><input type="text" id="search-input" placeholder="搜索内容..." autocomplete="off" aria-label="搜索关键词"><button id="search-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭搜索">ESC</button></div><div id="search-results" class="search-results scrollbar-hide"><div class="p-4 text-center text-gray-400 text-sm">输入关键词开始搜索</div></div></div></div><main id="content" class="w-full lg:ml-72 px-5 md:px-10 py-8 bg-white dark:bg-gray-800 min-h-screen"><div class="content-col"><a id="top"></a><!-- 顶部面包屑 --><nav class="breadcrumb no-print" aria-label="位置"><a href="#top">首页</a><span class="sep" aria-hidden="true">›</span><span class="text-gray-700 dark:text-gray-300">数码必修课 · v1.9</span></nav><!-- Hero 横幅 --><section class="hero-banner mb-8" aria-labelledby="hero-title"><div class="flex flex-wrap items-center gap-2 mb-3"><span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>105 章 + 8 附录</span><span class="stat-pill"><i class="fas fa-clock" aria-hidden="true"></i>约 40-55 小时</span><span class="stat-pill"><i class="fas fa-signal" aria-hidden="true"></i>由浅入深</span></div><h1 id="hero-title" class="text-3xl md:text-4xl font-bold mb-2">你缺失的那门手机课</h1><p class="text-base md:text-lg opacity-90 mb-4 text-balance">从口袋里的"私人电脑"出发，系统化掌握硬件、系统、网络、安全、AI 与未来趋势。</p><div class="flex flex-wrap gap-2"><a href="#ji-chu-pian" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-4 py-2 rounded-md hover:bg-blue-50 transition-colors focus-ring text-sm"><i class="fas fa-graduation-cap" aria-hidden="true"></i>从基础开始
+ </a><a href="#ruan-jian-pian" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm"><i class="fas fa-th-large" aria-hidden="true"></i>查看篇章
+ </a><a href="#fu-lu-c" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm"><i class="fas fa-book-open" aria-hidden="true"></i>术语速查
+ </a></div></section><!-- 怎么用这本书 --><section class="reading-guide-card" aria-labelledby="how-to-use-title"><h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-compass text-primary" aria-hidden="true"></span>怎么用这本书？
+ </h2><div class="grid md:grid-cols-2 gap-3 text-sm"><div><p class="font-semibold text-primary mb-1"><i class="fas fa-bullseye mr-1" aria-hidden="true"></i>本书目标</p><p class="text-gray-700 dark:text-gray-300">用一本"会说话、能动手"的小书，帮你把手机从"会用"变成"懂用"，从"被动接收"变成"主动驾驭"。</p></div><div><p class="font-semibold text-primary mb-1"><i class="fas fa-route mr-1" aria-hidden="true"></i>阅读路线</p><p class="text-gray-700 dark:text-gray-300">共分十五篇：<strong>基础→软件→进阶→超越→实战→展望与车联→AI编程→安卓→iOS→鸿蒙→可穿戴→旅行→健康→AI短视频→短剧</strong>，涵盖105章内容。小白可顺序阅读；有经验者可直接跳到感兴趣章节。v1.8 新增三大开发实战篇（第37-69章），v1.9 新增五大生活与创作篇（第81-105章），带你从数码用户一路成长为创作者与全平台开发者。</p></div><div><p class="font-semibold text-primary mb-1"><i class="fas fa-hand-pointer mr-1" aria-hidden="true"></i>符号说明</p><p class="text-gray-700 dark:text-gray-300"><span class="kbd">[按钮]</span> 代表屏幕上的具体按钮；<span class="kbd">&gt;</span> 代表操作顺序；<strong>加粗</strong>是必须牢记的关键点。</p></div><div><p class="font-semibold text-primary mb-1"><i class="fas fa-magic mr-1" aria-hidden="true"></i>互动技巧</p><p class="text-gray-700 dark:text-gray-300">顶部 <span class="kbd">Ctrl+K</span> 搜索； <span class="kbd">A+/A-</span> 调字号； <span class="kbd">R</span> 语音朗读；支持浅色/深色切换与打印导出 PDF。</p></div></div></section><!-- 学习路径八步走 --><section class="mb-8" aria-labelledby="learning-path-title"><h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">学习路径：八步打基础</h2><p class="text-sm text-gray-600 dark:text-gray-400 mb-3">本书按"从认识到精通再到实战"的认知规律编排，每一篇都是下一篇的基石。</p><div class="learning-path"><a href="#ji-chu-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">1</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">基础篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 0 - 7 章</p><p class="text-sm text-gray-700 dark:text-gray-300">认识你的手机：硬件、系统、文件、网络、App、安全、前沿功能。</p><span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>入门</span></a><a href="#ruan-jian-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">2</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">软件篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 8 - 14 章</p><p class="text-sm text-gray-700 dark:text-gray-300">玩转各类 App：通信、办公、支付、摄影、影音娱乐、密码管理。</p><span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>入门</span></a><a href="#jin-jie-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">3</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">进阶篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 15 - 20 章</p><p class="text-sm text-gray-700 dark:text-gray-300">解锁高手技能：电池科学、账号云服务、备份迁移、故障自救。</p><span class="difficulty-tag difficulty-intermediate mt-2 inline-block"><i class="fas fa-mountain" aria-hidden="true"></i>进阶</span></a><a href="#chao-yue-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">4</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">超越篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 21 - 26 章</p><p class="text-sm text-gray-700 dark:text-gray-300">触达技术前沿：信息安全、AI 大模型、编程思维与未来数字生活。</p><span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span></a><a href="#shi-zhan-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">5</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">实战篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 27 - 32 章</p><p class="text-sm text-gray-700 dark:text-gray-300">落地应用：教爸妈用手机、选购手机、数字健康、投屏车载、短视频创作、安全急救。</p><span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>入门</span></a><a href="#ai-biancheng-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">6</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">AI编程实战篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 37 - 47 章</p><p class="text-sm text-gray-700 dark:text-gray-300">指挥AI写代码：从范式革命、五大思维原则到工具模型选型、API实战与完整项目。</p><span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span></a><a href="#an-zhuo-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">7</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">安卓开发实战篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 48 - 58 章</p><p class="text-sm text-gray-700 dark:text-gray-300">指挥AI写安卓App：Kotlin、Jetpack Compose、两个完整项目、上架Google Play。</p><span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span></a><a href="#ios-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;"><div class="step-num">8</div><h3 class="font-bold text-base mt-2 mb-1 text-primary">iOS开发实战篇</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 59 - 69 章</p><p class="text-sm text-gray-700 dark:text-gray-300">指挥AI写苹果App：Swift、SwiftUI、两个完整项目、上架App Store。</p><span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span></a></div><p class="text-sm text-gray-600 dark:text-gray-400 mt-3">第 33–36 章是「展望与车联」「儿童与手机」两个专题；第 70–105 章是鸿蒙开发与五大生活创作篇。这些篇章彼此独立，按兴趣直接跳读即可，不必按顺序。</p></section><!-- 章节地图速查表 --><section class="reading-guide-card" aria-labelledby="chapter-map-title"><h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-map text-primary" aria-hidden="true"></span>章节地图速查
+ </h2><p class="text-sm text-gray-600 dark:text-gray-400 mb-3">按学习目标快速定位章节。</p><div class="grid md:grid-cols-2 gap-2 text-sm"><div class="flex items-start gap-2"><i class="fas fa-microchip text-primary mt-1" aria-hidden="true"></i><span><strong>想搞懂硬件</strong> → <a href="#di-yi-zhang" class="text-primary hover:underline">第 1 章</a> · <a href="#di-san-zhang" class="text-primary hover:underline">第 3 章</a>（网络与基带）</span></div><div class="flex items-start gap-2"><i class="fas fa-shield-halved text-primary mt-1" aria-hidden="true"></i><span><strong>关心隐私安全</strong> → <a href="#di-liu-zhang" class="text-primary hover:underline">第 6 章</a> · <a href="#di-shi-si-zhang" class="text-primary hover:underline">第 14 章</a> · <a href="#di-er-shi-yi-zhang" class="text-primary hover:underline">第 21 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-camera text-primary mt-1" aria-hidden="true"></i><span><strong>想拍好照片</strong> → <a href="#di-shi-yi-zhang" class="text-primary hover:underline">第 11 章</a> + <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">第 11 章附</a></span></div><div class="flex items-start gap-2"><i class="fas fa-robot text-primary mt-1" aria-hidden="true"></i><span><strong>玩转 AI 助手</strong> → <a href="#di-er-shi-er-zhang" class="text-primary hover:underline">第 22 章</a> · <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">第 7 章</a>（前沿）</span></div><div class="flex items-start gap-2"><i class="fas fa-code text-primary mt-1" aria-hidden="true"></i><span><strong>想指挥 AI 写代码</strong> → <a href="#ai-biancheng-pian" class="text-primary hover:underline">第 37 - 47 章</a>：范式革命、五大原则、工具与模型选型、API 实战与完整项目</span></div><div class="flex items-start gap-2"><i class="fab fa-android text-primary mt-1" aria-hidden="true"></i><span><strong>想学安卓开发</strong> → <a href="#an-zhuo-kai-fa-pian" class="text-primary hover:underline">第 48 - 58 章</a>：Kotlin、Compose、两个项目与上架 Google Play</span></div><div class="flex items-start gap-2"><i class="fab fa-apple text-primary mt-1" aria-hidden="true"></i><span><strong>想学iOS开发</strong> → <a href="#ios-kai-fa-pian" class="text-primary hover:underline">第 59 - 69 章</a>：Swift、SwiftUI、两个项目与上架 App Store</span></div><div class="flex items-start gap-2"><i class="fas fa-bolt text-primary mt-1" aria-hidden="true"></i><span><strong>电池续航焦虑</strong> → <a href="#di-shi-wu-zhang" class="text-primary hover:underline">第 15 章</a> + <a href="#di-shi-wu-zhang-kuichong" class="text-primary hover:underline">快充协议</a></span></div><div class="flex items-start gap-2"><i class="fas fa-bug text-primary mt-1" aria-hidden="true"></i><span><strong>手机出故障</strong> → <a href="#di-shi-jiu-zhang" class="text-primary hover:underline">第 19 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-arrows-rotate text-primary mt-1" aria-hidden="true"></i><span><strong>换机/数据迁移</strong> → <a href="#di-shi-ba-zhang" class="text-primary hover:underline">第 18 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-wand-magic-sparkles text-primary mt-1" aria-hidden="true"></i><span><strong>探索自动化</strong> → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">第 23 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-mobile-screen text-primary mt-1" aria-hidden="true"></i><span><strong>折叠屏怎么选</strong> → <a href="#fu-lu-f" class="text-primary hover:underline">附录 F</a></span></div><div class="flex items-start gap-2"><i class="fas fa-heart text-primary mt-1" aria-hidden="true"></i><span><strong>帮爸妈用手机</strong> → <a href="#di-er-shi-qi-zhang" class="text-primary hover:underline">第 27 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-cart-shopping text-primary mt-1" aria-hidden="true"></i><span><strong>想买手机</strong> → <a href="#di-er-shi-ba-zhang" class="text-primary hover:underline">第 28 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-heart-pulse text-primary mt-1" aria-hidden="true"></i><span><strong>数字健康/防沉迷</strong> → <a href="#di-er-shi-jiu-zhang" class="text-primary hover:underline">第 29 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-tv text-primary mt-1" aria-hidden="true"></i><span><strong>投屏/车载</strong> → <a href="#di-san-shi-zhang" class="text-primary hover:underline">第 30 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-video text-primary mt-1" aria-hidden="true"></i><span><strong>拍短视频</strong> → <a href="#di-san-shi-yi-zhang" class="text-primary hover:underline">第 31 章</a></span></div><div class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-primary mt-1" aria-hidden="true"></i><span><strong>手机丢了/被骗了</strong> → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">第 32 章</a></span></div></div></section><!-- 写在最后：本书不教什么 --><div class="highlight-quote"><p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>本书不教你怎么"刷视频更爽"，而是想帮你弄懂：手机为什么会这样工作？它能做什么、不能做什么？以及如何让它真正为你所用，而不是反过来奴役你的注意力与时间。</p><p class="text-right text-sm">—— 关于本书的初心</p></div><!-- 交互式自检清单 + 阅读仪表盘 --><section class="mb-8" aria-labelledby="dashboard-title"><h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2"><span aria-hidden="true" class="fas fa-gauge-high text-primary" aria-hidden="true"></span>学习仪表盘
+ </h2><p class="text-sm text-gray-600 dark:text-gray-400 mb-3">追踪你的阅读进度，检查手机健康状态。</p><div class="grid md:grid-cols-2 gap-4"><!-- 阅读进度卡片 --><div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 border border-indigo-100 dark:border-gray-700"><h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-chart-pie text-primary" aria-hidden="true"></span>阅读进度</h3><div class="flex items-center gap-4"><div class="relative w-20 h-20 flex-shrink-0"><svg viewBox="0 0 80 80" class="w-full h-full -rotate-90" aria-hidden="true"><circle cx="40" cy="40" r="34" stroke-width="8" class="dark:stroke-gray-700"/ style="stroke:var(--line);fill:none;"><circle id="progress-ring-fg" cx="40" cy="40" r="34" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="stroke:var(--accent-book);fill:none;transition: stroke-dashoffset 0.5s ease"/></svg><span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span></div><div class="flex-1 text-sm space-y-1"><div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">已读章节</span><span id="read-count" class="font-semibold">0 / 38</span></div><div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">书签数</span><span id="bookmark-count" class="font-semibold">0</span></div><div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">上次读到</span><span id="last-chapter" class="font-semibold text-xs truncate max-w-[8rem]">—</span></div></div></div></div><!-- 手机健康自检卡片 --><div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900"><h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></span>手机健康自检</h3><p class="text-xs text-gray-500 dark:text-gray-400 mb-2">勾选你已经做到的项目，看看你的手机"健康分"：</p><div id="checklist-items" class="space-y-1.5 text-sm"><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>锁屏密码已设置（非1234/0000）</span></label><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>已开启双重认证（Apple ID/品牌账号）</span></label><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>"查找我的手机"已打开</span></label><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>照片有云备份（至少一份）</span></label><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>微信聊天记录已备份到电脑</span></label><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>支付App已开启指纹/面容支付</span></label><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>已安装"国家反诈中心"App</span></label><label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>免密支付已清理不需要的签约</span></label></div><div class="mt-3 flex items-center justify-between"><span class="text-xs text-gray-500 dark:text-gray-400">健康分</span><span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span></div><div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden"><div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-colors duration-500" style="width: 0%"></div></div><p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">完成自检，了解你的手机安全状况</p></div></div></section><!-- 原"top" 内容保持兼容 --><div class="sr-only" aria-hidden="true">v1.9 · 一本真正面向普通人的数码必修课</div>
 
-        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
-
-        <div id="search-overlay" class="search-overlay" role="dialog" aria-label="搜索">
-            <div class="search-panel">
-                <div class="search-input-wrapper">
-                    <i class="fas fa-search text-gray-400"></i>
-                    <input type="text" id="search-input" placeholder="搜索内容..." autocomplete="off" aria-label="搜索关键词">
-                    <button id="search-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭搜索">ESC</button>
-                </div>
-                <div id="search-results" class="search-results scrollbar-hide">
-                    <div class="p-4 text-center text-gray-400 text-sm">输入关键词开始搜索</div>
-                </div>
-            </div>
-        </div>
-
-        <main id="content" class="w-full lg:ml-72 px-5 md:px-10 py-8 bg-white dark:bg-gray-800 min-h-screen">
-            <div class="content-col">
-            <a id="top"></a>
-
-            <!-- 顶部面包屑 -->
-            <nav class="breadcrumb no-print" aria-label="位置">
-                <a href="#top">首页</a>
-                <span class="sep" aria-hidden="true">›</span>
-                <span class="text-gray-700 dark:text-gray-300">数码必修课 · v1.9</span>
-            </nav>
-
-            <!-- Hero 横幅 -->
-            <section class="hero-banner mb-8" aria-labelledby="hero-title">
-                <div class="flex flex-wrap items-center gap-2 mb-3">
-                    <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>105 章 + 8 附录</span>
-                    <span class="stat-pill"><i class="fas fa-clock" aria-hidden="true"></i>约 40-55 小时</span>
-                    <span class="stat-pill"><i class="fas fa-signal" aria-hidden="true"></i>由浅入深</span>
-                </div>
-                <h1 id="hero-title" class="text-3xl md:text-4xl font-bold mb-2">你缺失的那门手机课</h1>
-                <p class="text-base md:text-lg opacity-90 mb-4 text-balance">从口袋里的"私人电脑"出发，系统化掌握硬件、系统、网络、安全、AI 与未来趋势。</p>
-                <div class="flex flex-wrap gap-2">
-                    <a href="#ji-chu-pian" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-4 py-2 rounded-md hover:bg-blue-50 transition-colors focus-ring text-sm">
-                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>从基础开始
-                    </a>
-                    <a href="#ruan-jian-pian" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">
-                        <i class="fas fa-th-large" aria-hidden="true"></i>查看篇章
-                    </a>
-                    <a href="#fu-lu-c" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">
-                        <i class="fas fa-book-open" aria-hidden="true"></i>术语速查
-                    </a>
-                </div>
-            </section>
-
-            <!-- 怎么用这本书 -->
-            <section class="reading-guide-card" aria-labelledby="how-to-use-title">
-                <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <span aria-hidden="true" class="fas fa-compass text-primary" aria-hidden="true"></span>怎么用这本书？
-                </h2>
-                <div class="grid md:grid-cols-2 gap-3 text-sm">
-                    <div>
-                        <p class="font-semibold text-primary mb-1"><i class="fas fa-bullseye mr-1" aria-hidden="true"></i>本书目标</p>
-                        <p class="text-gray-700 dark:text-gray-300">用一本"会说话、能动手"的小书，帮你把手机从"会用"变成"懂用"，从"被动接收"变成"主动驾驭"。</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-primary mb-1"><i class="fas fa-route mr-1" aria-hidden="true"></i>阅读路线</p>
-                        <p class="text-gray-700 dark:text-gray-300">共分十五篇：<strong>基础→软件→进阶→超越→实战→展望与车联→AI编程→安卓→iOS→鸿蒙→可穿戴→旅行→健康→AI短视频→短剧</strong>，涵盖105章内容。小白可顺序阅读；有经验者可直接跳到感兴趣章节。v1.8 新增三大开发实战篇（第37-69章），v1.9 新增五大生活与创作篇（第81-105章），带你从数码用户一路成长为创作者与全平台开发者。</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-primary mb-1"><i class="fas fa-hand-pointer mr-1" aria-hidden="true"></i>符号说明</p>
-                        <p class="text-gray-700 dark:text-gray-300"><span class="kbd">[按钮]</span> 代表屏幕上的具体按钮；<span class="kbd">&gt;</span> 代表操作顺序；<strong>加粗</strong>是必须牢记的关键点。</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold text-primary mb-1"><i class="fas fa-magic mr-1" aria-hidden="true"></i>互动技巧</p>
-                        <p class="text-gray-700 dark:text-gray-300">顶部 <span class="kbd">Ctrl+K</span> 搜索； <span class="kbd">A+/A-</span> 调字号； <span class="kbd">R</span> 语音朗读；支持浅色/深色切换与打印导出 PDF。</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 学习路径八步走 -->
-            <section class="mb-8" aria-labelledby="learning-path-title">
-                <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">学习路径：八步打基础</h2>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">本书按"从认识到精通再到实战"的认知规律编排，每一篇都是下一篇的基石。</p>
-                <div class="learning-path">
-                    <a href="#ji-chu-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">1</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">基础篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 0 - 7 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">认识你的手机：硬件、系统、文件、网络、App、安全、前沿功能。</p>
-                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>入门</span>
-                    </a>
-                    <a href="#ruan-jian-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">2</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">软件篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 8 - 14 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">玩转各类 App：通信、办公、支付、摄影、影音娱乐、密码管理。</p>
-                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>入门</span>
-                    </a>
-                    <a href="#jin-jie-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">3</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">进阶篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 15 - 20 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">解锁高手技能：电池科学、账号云服务、备份迁移、故障自救。</p>
-                        <span class="difficulty-tag difficulty-intermediate mt-2 inline-block"><i class="fas fa-mountain" aria-hidden="true"></i>进阶</span>
-                    </a>
-                    <a href="#chao-yue-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">4</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">超越篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 21 - 26 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">触达技术前沿：信息安全、AI 大模型、编程思维与未来数字生活。</p>
-                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span>
-                    </a>
-                    <a href="#shi-zhan-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">5</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">实战篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 27 - 32 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">落地应用：教爸妈用手机、选购手机、数字健康、投屏车载、短视频创作、安全急救。</p>
-                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>入门</span>
-                    </a>
-                    <a href="#ai-biancheng-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">6</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">AI编程实战篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 37 - 47 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">指挥AI写代码：从范式革命、五大思维原则到工具模型选型、API实战与完整项目。</p>
-                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span>
-                    </a>
-                    <a href="#an-zhuo-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">7</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">安卓开发实战篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 48 - 58 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">指挥AI写安卓App：Kotlin、Jetpack Compose、两个完整项目、上架Google Play。</p>
-                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span>
-                    </a>
-                    <a href="#ios-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
-                        <div class="step-num">8</div>
-                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">iOS开发实战篇</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">第 59 - 69 章</p>
-                        <p class="text-sm text-gray-700 dark:text-gray-300">指挥AI写苹果App：Swift、SwiftUI、两个完整项目、上架App Store。</p>
-                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>高阶</span>
-                    </a>
-                </div>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">第 33–36 章是「展望与车联」「儿童与手机」两个专题；第 70–105 章是鸿蒙开发与五大生活创作篇。这些篇章彼此独立，按兴趣直接跳读即可，不必按顺序。</p>
-            </section>
-
-            <!-- 章节地图速查表 -->
-            <section class="reading-guide-card" aria-labelledby="chapter-map-title">
-                <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <span aria-hidden="true" class="fas fa-map text-primary" aria-hidden="true"></span>章节地图速查
-                </h2>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">按学习目标快速定位章节。</p>
-                <div class="grid md:grid-cols-2 gap-2 text-sm">
-                    <div class="flex items-start gap-2"><i class="fas fa-microchip text-primary mt-1" aria-hidden="true"></i><span><strong>想搞懂硬件</strong> → <a href="#di-yi-zhang" class="text-primary hover:underline">第 1 章</a> · <a href="#di-san-zhang" class="text-primary hover:underline">第 3 章</a>（网络与基带）</span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-shield-halved text-primary mt-1" aria-hidden="true"></i><span><strong>关心隐私安全</strong> → <a href="#di-liu-zhang" class="text-primary hover:underline">第 6 章</a> · <a href="#di-shi-si-zhang" class="text-primary hover:underline">第 14 章</a> · <a href="#di-er-shi-yi-zhang" class="text-primary hover:underline">第 21 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-camera text-primary mt-1" aria-hidden="true"></i><span><strong>想拍好照片</strong> → <a href="#di-shi-yi-zhang" class="text-primary hover:underline">第 11 章</a> + <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">第 11 章附</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-robot text-primary mt-1" aria-hidden="true"></i><span><strong>玩转 AI 助手</strong> → <a href="#di-er-shi-er-zhang" class="text-primary hover:underline">第 22 章</a> · <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">第 7 章</a>（前沿）</span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-code text-primary mt-1" aria-hidden="true"></i><span><strong>想指挥 AI 写代码</strong> → <a href="#ai-biancheng-pian" class="text-primary hover:underline">第 37 - 47 章</a>：范式革命、五大原则、工具与模型选型、API 实战与完整项目</span></div>
-                    <div class="flex items-start gap-2"><i class="fab fa-android text-primary mt-1" aria-hidden="true"></i><span><strong>想学安卓开发</strong> → <a href="#an-zhuo-kai-fa-pian" class="text-primary hover:underline">第 48 - 58 章</a>：Kotlin、Compose、两个项目与上架 Google Play</span></div>
-                    <div class="flex items-start gap-2"><i class="fab fa-apple text-primary mt-1" aria-hidden="true"></i><span><strong>想学iOS开发</strong> → <a href="#ios-kai-fa-pian" class="text-primary hover:underline">第 59 - 69 章</a>：Swift、SwiftUI、两个项目与上架 App Store</span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-bolt text-primary mt-1" aria-hidden="true"></i><span><strong>电池续航焦虑</strong> → <a href="#di-shi-wu-zhang" class="text-primary hover:underline">第 15 章</a> + <a href="#di-shi-wu-zhang-kuichong" class="text-primary hover:underline">快充协议</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-bug text-primary mt-1" aria-hidden="true"></i><span><strong>手机出故障</strong> → <a href="#di-shi-jiu-zhang" class="text-primary hover:underline">第 19 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-arrows-rotate text-primary mt-1" aria-hidden="true"></i><span><strong>换机/数据迁移</strong> → <a href="#di-shi-ba-zhang" class="text-primary hover:underline">第 18 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-wand-magic-sparkles text-primary mt-1" aria-hidden="true"></i><span><strong>探索自动化</strong> → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">第 23 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-mobile-screen text-primary mt-1" aria-hidden="true"></i><span><strong>折叠屏怎么选</strong> → <a href="#fu-lu-f" class="text-primary hover:underline">附录 F</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-heart text-primary mt-1" aria-hidden="true"></i><span><strong>帮爸妈用手机</strong> → <a href="#di-er-shi-qi-zhang" class="text-primary hover:underline">第 27 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-cart-shopping text-primary mt-1" aria-hidden="true"></i><span><strong>想买手机</strong> → <a href="#di-er-shi-ba-zhang" class="text-primary hover:underline">第 28 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-heart-pulse text-primary mt-1" aria-hidden="true"></i><span><strong>数字健康/防沉迷</strong> → <a href="#di-er-shi-jiu-zhang" class="text-primary hover:underline">第 29 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-tv text-primary mt-1" aria-hidden="true"></i><span><strong>投屏/车载</strong> → <a href="#di-san-shi-zhang" class="text-primary hover:underline">第 30 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-video text-primary mt-1" aria-hidden="true"></i><span><strong>拍短视频</strong> → <a href="#di-san-shi-yi-zhang" class="text-primary hover:underline">第 31 章</a></span></div>
-                    <div class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-primary mt-1" aria-hidden="true"></i><span><strong>手机丢了/被骗了</strong> → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">第 32 章</a></span></div>
-                </div>
-            </section>
-
-            <!-- 写在最后：本书不教什么 -->
-            <div class="highlight-quote">
-                <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>本书不教你怎么"刷视频更爽"，而是想帮你弄懂：手机为什么会这样工作？它能做什么、不能做什么？以及如何让它真正为你所用，而不是反过来奴役你的注意力与时间。</p>
-                <p class="text-right text-sm">—— 关于本书的初心</p>
-            </div>
-
-            <!-- 交互式自检清单 + 阅读仪表盘 -->
-            <section class="mb-8" aria-labelledby="dashboard-title">
-                <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                    <span aria-hidden="true" class="fas fa-gauge-high text-primary" aria-hidden="true"></span>学习仪表盘
-                </h2>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">追踪你的阅读进度，检查手机健康状态。</p>
-                <div class="grid md:grid-cols-2 gap-4">
-
-                    <!-- 阅读进度卡片 -->
-                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 border border-indigo-100 dark:border-gray-700">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-chart-pie text-primary" aria-hidden="true"></span>阅读进度</h3>
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-20 h-20 flex-shrink-0">
-                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90" aria-hidden="true">
-                                    <circle cx="40" cy="40" r="34" stroke-width="8" class="dark:stroke-gray-700"/ style="stroke:var(--line);fill:none;">
-                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="stroke:var(--accent-book);fill:none;transition: stroke-dashoffset 0.5s ease"/>
-                                </svg>
-                                <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
-                            </div>
-                            <div class="flex-1 text-sm space-y-1">
-                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">已读章节</span><span id="read-count" class="font-semibold">0 / 38</span></div>
-                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">书签数</span><span id="bookmark-count" class="font-semibold">0</span></div>
-                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">上次读到</span><span id="last-chapter" class="font-semibold text-xs truncate max-w-[8rem]">—</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 手机健康自检卡片 -->
-                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></span>手机健康自检</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">勾选你已经做到的项目，看看你的手机"健康分"：</p>
-                        <div id="checklist-items" class="space-y-1.5 text-sm">
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>锁屏密码已设置（非1234/0000）</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>已开启双重认证（Apple ID/品牌账号）</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>"查找我的手机"已打开</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>照片有云备份（至少一份）</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>微信聊天记录已备份到电脑</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>支付App已开启指纹/面容支付</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>已安装"国家反诈中心"App</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>免密支付已清理不需要的签约</span></label>
-                        </div>
-                        <div class="mt-3 flex items-center justify-between">
-                            <span class="text-xs text-gray-500 dark:text-gray-400">健康分</span>
-                            <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
-                        </div>
-                        <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-colors duration-500" style="width: 0%"></div>
-                        </div>
-                        <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">完成自检，了解你的手机安全状况</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 原"top" 内容保持兼容 -->
-            <div class="sr-only" aria-hidden="true">v1.9 · 一本真正面向普通人的数码必修课</div>
-
-            <section id="ji-chu-pian" class="mb-12">
+ <section id="ji-chu-pian" class="mb-12">
 
 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">一、基础篇（第0-7章）</h2>
 <p class="chapter-intro mb-4">你的手机远比你想象的更强大。这部分内容是所有"神操作"的地基，咱们先统一"语言"，再一步步认识并掌控你的设备。无论你是刚拿到第一部智能手机的新手，还是用了多年却从未搞懂过的老用户，这一篇都会让你重新认识手中这台神奇的小盒子。</p>
@@ -38736,7 +38336,7 @@ class SaveRecordTest {
 <h4 class="text-lg font-semibold mt-4 mb-2">四、上架 Google Play 全流程</h4>
 <div class="figure">
 <div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> 上传 AAB</span></div>
-<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填数据安全表</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 审核（数小时~数天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-party-horn mr-1"></i> 上架</span></div>
+<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填数据安全表</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 审核（数小时~数天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> 上架</span></div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">图 6：Google Play 上架六步走</p>
 </div>
 <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -46106,7 +45706,7 @@ struct AmountValidationTests {
 <h4 class="text-lg font-semibold mt-4 mb-2">四、上架 App Store 全流程</h4>
 <div class="figure">
 <div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> 上传构建包</span></div>
-<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填隐私与审核信息</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 苹果审核（1-7 天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-party-horn mr-1"></i> 上架</span></div>
+<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填隐私与审核信息</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 苹果审核（1-7 天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> 上架</span></div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">图 5：App Store 上架六步走</p>
 </div>
 <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -73926,139 +73526,11 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre>
                 </div>
 
             </section>
-            </div>
-        </main>
-    </div>
-
-    <!-- 快捷工具：浮动按钮组 -->
-    <div id="quick-tools" class="quick-tools no-print" aria-label="快捷工具">
-        <button id="quick-glass" class="quick-tool-btn" title="液态玻璃效果 (开/关)" aria-label="切换液态玻璃效果" aria-pressed="true">
-            <i class="fas fa-droplet" aria-hidden="true"></i>
-        </button>
-                <button id="quick-search" class="quick-tool-btn" title="搜索 (Ctrl+K)" aria-label="搜索">
-            <i class="fas fa-search" aria-hidden="true"></i>
-        </button>
-        <button id="quick-theme" class="quick-tool-btn" title="切换深色/浅色" aria-label="切换主题">
-            <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
-        </button>
-        <button id="quick-print" class="quick-tool-btn" title="打印 / 导出PDF" aria-label="打印或导出">
-            <i class="fas fa-print" aria-hidden="true"></i>
-        </button>
-        <button id="quick-toc" class="quick-tool-btn" title="目录" aria-label="打开目录">
-            <i class="fas fa-list" aria-hidden="true"></i>
-        </button>
-        <button id="quick-tts" class="quick-tool-btn" title="语音朗读" aria-label="语音朗读">
-            <i class="fas fa-headphones" aria-hidden="true"></i>
-        </button>
-        <button id="quick-shortcuts" class="quick-tool-btn" title="键盘快捷键 (?)" aria-label="快捷键面板">
-            <i class="fas fa-keyboard" aria-hidden="true"></i>
-        </button>
-        <button id="quick-backup" class="quick-tool-btn" title="备份/恢复进度" aria-label="备份进度">
-            <i class="fas fa-cloud-arrow-up" aria-hidden="true"></i>
-        </button>
-    </div>
-
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-      <defs>
-        <filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
-          <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
-          <feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/>
-        </filter>
-      </defs>
-    </svg>
-    <!-- 快捷键面板 -->
-    <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="键盘快捷键">
-        <div class="search-panel" style="max-width:480px">
-            <div class="search-input-wrapper">
-                <i class="fas fa-keyboard text-gray-400"></i>
-                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">键盘快捷键</span>
-                <button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭">ESC</button>
-            </div>
-            <div class="p-4 space-y-2 text-sm">
-                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">搜索内容</span><span class="kbd">Ctrl + K</span></div>
-                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">切换深色/浅色</span><span class="kbd">T</span></div>
-                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">语音朗读 播放/暂停</span><span class="kbd">R</span></div>
-                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">停止朗读</span><span class="kbd">ESC</span></div>
-                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">打开快捷键面板</span><span class="kbd">?</span></div>
-                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">字号调大 / 调小</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div>
-                <div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">打印 / 导出PDF</span><span class="kbd">Ctrl + P</span></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 备份/恢复弹窗 -->
-    <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="备份与恢复">
-        <div class="search-panel" style="max-width:520px">
-            <div class="search-input-wrapper">
-                <i class="fas fa-cloud-arrow-up text-gray-400"></i>
-                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">阅读进度备份与恢复</span>
-                <button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭">ESC</button>
-            </div>
-            <div class="p-5 space-y-4 text-sm">
-                <div class="info-box rounded-lg p-3">
-                    <p class="text-xs">备份包含：已读章节、书签、阅读位置、字号偏好、健康自检结果。数据保存在浏览器本地，更换浏览器或清除缓存后丢失，建议定期导出备份。</p>
-                </div>
-                <div>
-                    <button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                        <i class="fas fa-download"></i> 导出备份文件
-                    </button>
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">下载一个 JSON 文件，保存到安全位置</p>
-                </div>
-                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
-                    <button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                        <i class="fas fa-upload"></i> 导入备份恢复
-                    </button>
-                    <input type="file" id="backup-import-input" accept=".json" class="hidden">
-                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">选择之前导出的备份文件恢复进度</p>
-                </div>
-                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
-                    <button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                        <i class="fas fa-trash"></i> 清除所有阅读数据
-                    </button>
-                    <p class="text-xs text-red-400 mt-1 text-center">不可恢复！请先导出备份</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 阅读连续天数提示 -->
-    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),#7c3aed);color:var(--ink-inverse);border:none;">
-        <i class="fas fa-fire" aria-hidden="true" style="color:var(--gold-2)"></i>
-        <span id="streak-toast-text">连续阅读第 X 天！</span>
-    </div>
-
-    <!-- 语音朗读控件栏 -->
-    <div id="tts-controls" class="tts-controls" role="region" aria-label="语音朗读控制" aria-live="polite">
-        <span class="tts-chapter-label" id="tts-label" title="当前朗读章节">未开始</span>
-        <button class="tts-btn" id="tts-prev" title="上一段" aria-label="上一段"><i class="fas fa-step-backward"></i></button>
-        <button class="tts-btn play-btn" id="tts-play" title="播放/暂停" aria-label="播放朗读"><i class="fas fa-play"></i></button>
-        <button class="tts-btn" id="tts-next" title="下一段" aria-label="下一段"><i class="fas fa-step-forward"></i></button>
-        <button class="tts-btn" id="tts-speed-down" title="减速" aria-label="减速">−</button>
-        <span class="tts-speed-badge" id="tts-speed-display">1.0x</span>
-        <button class="tts-btn" id="tts-speed-up" title="加速" aria-label="加速">+</button>
-        <button class="tts-btn" id="tts-stop" title="停止朗读" aria-label="停止朗读"><i class="fas fa-times"></i></button>
-    </div>
-
-    <!-- 回到顶部按钮 -->
-    <button id="back-to-top" class="opacity-0 invisible" aria-label="回到顶部">
-        <svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true">
-            <circle class="bg" cx="20" cy="20" r="18"/>
-            <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
-        </svg>
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-    </button>
-
-    <!-- 阅读位置恢复提示 -->
-    <div id="restore-toast" class="restore-position-toast" role="alert">
-        <i class="fas fa-bookmark" aria-hidden="true"></i>
-        <span id="restore-toast-text">上次读到：...</span>
-        <button class="btn-restore" id="restore-btn">继续阅读</button>
-        <button class="btn-dismiss" id="dismiss-btn">忽略</button>
-    </div>
-
-    <!-- JS脚本 -->
-    <script>
+ </div></main></div><!-- 快捷工具：浮动按钮组 --><div id="quick-tools" class="quick-tools no-print" aria-label="快捷工具"><button id="quick-glass" class="quick-tool-btn" title="液态玻璃效果 (开/关)" aria-label="切换液态玻璃效果" aria-pressed="true"><i class="fas fa-droplet" aria-hidden="true"></i></button><button id="quick-search" class="quick-tool-btn" title="搜索 (Ctrl+K)" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></button><button id="quick-theme" class="quick-tool-btn" title="切换深色/浅色" aria-label="切换主题"><i class="fas fa-circle-half-stroke" aria-hidden="true"></i></button><button id="quick-print" class="quick-tool-btn" title="打印 / 导出PDF" aria-label="打印或导出"><i class="fas fa-print" aria-hidden="true"></i></button><button id="quick-toc" class="quick-tool-btn" title="目录" aria-label="打开目录"><i class="fas fa-list" aria-hidden="true"></i></button><button id="quick-tts" class="quick-tool-btn" title="语音朗读" aria-label="语音朗读"><i class="fas fa-headphones" aria-hidden="true"></i></button><button id="quick-shortcuts" class="quick-tool-btn" title="键盘快捷键 (?)" aria-label="快捷键面板"><i class="fas fa-keyboard" aria-hidden="true"></i></button><button id="quick-backup" class="quick-tool-btn" title="备份/恢复进度" aria-label="备份进度"><i class="fas fa-cloud-arrow-up" aria-hidden="true"></i></button></div><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/><feGaussianBlur in="noise" stdDeviation="2" result="soft"/><feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg><!-- 快捷键面板 --><div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="键盘快捷键"><div class="search-panel" style="max-width:480px"><div class="search-input-wrapper"><i class="fas fa-keyboard text-gray-400"></i><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">键盘快捷键</span><button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭">ESC</button></div><div class="p-4 space-y-2 text-sm"><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">搜索内容</span><span class="kbd">Ctrl + K</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">切换深色/浅色</span><span class="kbd">T</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">语音朗读 播放/暂停</span><span class="kbd">R</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">停止朗读</span><span class="kbd">ESC</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">打开快捷键面板</span><span class="kbd">?</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">字号调大 / 调小</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div><div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">打印 / 导出PDF</span><span class="kbd">Ctrl + P</span></div></div></div></div><!-- 备份/恢复弹窗 --><div id="backup-overlay" class="search-overlay" role="dialog" aria-label="备份与恢复"><div class="search-panel" style="max-width:520px"><div class="search-input-wrapper"><i class="fas fa-cloud-arrow-up text-gray-400"></i><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">阅读进度备份与恢复</span><button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭">ESC</button></div><div class="p-5 space-y-4 text-sm"><div class="info-box rounded-lg p-3"><p class="text-xs">备份包含：已读章节、书签、阅读位置、字号偏好、健康自检结果。数据保存在浏览器本地，更换浏览器或清除缓存后丢失，建议定期导出备份。</p></div><div><button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"><i class="fas fa-download"></i> 导出备份文件
+ </button><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">下载一个 JSON 文件，保存到安全位置</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"><i class="fas fa-upload"></i> 导入备份恢复
+ </button><input type="file" id="backup-import-input" accept=".json" class="hidden"><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">选择之前导出的备份文件恢复进度</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"><i class="fas fa-trash"></i> 清除所有阅读数据
+ </button><p class="text-xs text-red-400 mt-1 text-center">不可恢复！请先导出备份</p></div></div></div></div><!-- 阅读连续天数提示 --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),#7c3aed);color:var(--ink-inverse);border:none;"><i class="fas fa-fire" aria-hidden="true" style="color:var(--gold-2)"></i><span id="streak-toast-text">连续阅读第 X 天！</span></div><!-- 语音朗读控件栏 --><div id="tts-controls" class="tts-controls" role="region" aria-label="语音朗读控制" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="当前朗读章节">未开始</span><button class="tts-btn" id="tts-prev" title="上一段" aria-label="上一段"><i class="fas fa-step-backward"></i></button><button class="tts-btn play-btn" id="tts-play" title="播放/暂停" aria-label="播放朗读"><i class="fas fa-play"></i></button><button class="tts-btn" id="tts-next" title="下一段" aria-label="下一段"><i class="fas fa-step-forward"></i></button><button class="tts-btn" id="tts-speed-down" title="减速" aria-label="减速">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="加速" aria-label="加速">+</button><button class="tts-btn" id="tts-stop" title="停止朗读" aria-label="停止朗读"><i class="fas fa-times"></i></button></div><!-- 回到顶部按钮 --><button id="back-to-top" class="opacity-0 invisible" aria-label="回到顶部"><svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg><i class="fas fa-arrow-up" aria-hidden="true"></i></button><!-- 阅读位置恢复提示 --><div id="restore-toast" class="restore-position-toast" role="alert"><i class="fas fa-bookmark" aria-hidden="true"></i><span id="restore-toast-text">上次读到：...</span><button class="btn-restore" id="restore-btn">继续阅读</button><button class="btn-dismiss" id="dismiss-btn">忽略</button></div><!-- JS脚本 -->
+ <script>
         (function() {
             'use strict';
 
@@ -75224,7 +74696,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre>
                 if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
                 if (healthBarEl) healthBarEl.style.width = healthPct + '%';
                 if (healthMsgEl) {
-                    if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>满分！你的手机安全状况优秀';
+                    if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-halved mr-1"></i>满分！你的手机安全状况优秀';
                     else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = '及格，建议优先处理未勾选的安全项';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>你的手机存在安全隐患，请尽快完善';
@@ -75434,7 +74906,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre>
             tryRestorePosition();
         })();
     </script>
-    <script>
+ <script>
         /* Service Worker：离线阅读。只在 http(s) 下注册，file:// 打开时跳过。 */
         if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
             window.addEventListener('load', function () {
@@ -75443,5 +74915,4 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre>
             });
         }
     </script>
-</body>
-</html>
+</body></html>
