@@ -192,11 +192,16 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     page_dir.mkdir(parents=True, exist_ok=True)
     assets = {}
 
-    def page_shell(slim_head: str, title: str, canonical: str, ld: dict) -> str:
+    def page_shell(slim_head: str, title: str, canonical: str, ld: dict,
+                   prefetch: str = '') -> str:
         h = RE_TITLE.sub(f'<title>{title}</title>', slim_head, count=1)
+        # 下一章 prefetch（方案 §5.2）：读完点「下一章」零网络等待。
+        # iOS Safari 忽略 prefetch——回访场景由 SW 缓存兜住，收益在安卓/桌面。
+        pre = f'<link rel="prefetch" href="{prefetch}">\n' if prefetch else ''
         h = h.replace('</head>',
                       f'<link rel="canonical" href="{canonical}">\n'
                       f'{_json_ld(ld)}\n'
+                      f'{pre}'
                       f'<link rel="stylesheet" href="assets/book.css">\n</head>', 1)
         return h
 
@@ -310,7 +315,9 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         ld = {"@context": "https://schema.org", "@type": "Chapter",
               "name": meta[cid]['title'], "url": url,
               "isPartOf": {"@type": "Book", "name": book_title, "inLanguage": lang}}
-        page = page_shell(head_slim, title, url, ld) + '\n' + body + prevnext + tail
+        page = page_shell(head_slim, title, url, ld,
+                          prefetch=f'{next_id}.html' if next_id else '') \
+            + '\n' + body + prevnext + tail
         page = _rewrite_hrefs(page, idmap, cid, frozenset(part_first))
         emit(f'{cid}.html', page)
 
