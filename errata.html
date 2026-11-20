@@ -69,6 +69,19 @@ a.btn.gray{background:#4b5563}
 它证明的是<strong>内容有人负责</strong>：错误报给谁、谁来改、多久改完、改在哪里，都写在这里。
 </div>
 
+<div class="note ok" id="errata-stats">
+<strong>时效公示</strong>：累计已处理 <b>4</b> 条勘误 · 最近修订 <b>2026-11-20</b><span id="errata-days"></span><br>
+<span class="sub">「响应时间」从口号变成指标：数字随每次勘误修订更新，「几天前」按你打开本页的时间实时计算。</span>
+</div>
+<script>
+(function () {
+ var el = document.getElementById('errata-days');
+ var t = new Date('2026-11-20T00:00:00+08:00').getTime();
+ var days = Math.floor((Date.now() - t) / 86400000);
+ if (el && days >= 0) el.textContent = '（' + days + ' 天前）';
+})();
+</script>
+
 <h2>四种错误，四种处理方式</h2>
 <table>
 <thead><tr><th>类型</th><th>典型样子</th><th>你该怎么办</th><th>我们怎么处理</th></tr></thead>
