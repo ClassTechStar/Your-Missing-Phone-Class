@@ -197,6 +197,83 @@ def hreflang_block(alts: dict, x_default: str = '') -> str:
     return '\n'.join(lines) + '\n'
 
 
+def load_paths(root: Path, chapter_ids) -> list:
+    """策展路径（方案 §7）：manifest/path.json 只存章 ID 与编辑定的文案，
+    章标题/导读构建时从源稿取——零内容复制、零翻译分叉。
+
+    章 ID 不在本书里直接报错（构建门禁），不静默跳过：路径是编辑决策，
+    拼错 id 静默消失会让「给爸妈的 10 章」悄悄变成 9 章。
+    """
+    f = root / 'manifest' / 'path.json'
+    if not f.is_file():
+        return []
+    paths = json.loads(f.read_text(encoding='utf-8'))
+    for p in paths:
+        for key in ('id', 'title', 'subtitle', 'audience', 'chapters'):
+            if not p.get(key):
+                raise ValueError(f"path.json 的「{p.get('id', '?')}」缺少字段 {key}")
+        missing = [c for c in p['chapters'] if c not in chapter_ids]
+        if missing:
+            raise ValueError(f"path.json 的「{p['title']}」含未知章 id: {missing}")
+        if len(set(p['chapters'])) != len(p['chapters']):
+            raise ValueError(f"path.json 的「{p['title']}」含重复章 id")
+    return paths
+
+
+# 路径内导航脚本（方案 §7.3）：?path=<路径 id> 进入时章尾上一章/下一章按路径顺序。
+# __PATHS__ = {路径 id: {t: 路径名, c: [章 id…]}}；章标题从侧栏目录实时取，不重复存。
+PATH_NAV_JS = '''<script>
+(function () {
+ var P = __PATHS__;
+ var q = new URLSearchParams(location.search).get('path');
+ if (!q || !P[q]) return;
+ var list = P[q].c;
+ var sec = document.querySelector('.content-section');
+ if (!sec) return;
+ var i = list.indexOf(sec.id);
+ if (i < 0) return;
+ var nav = document.getElementById('chapter-nav');
+ if (!nav) return;
+ function titleOf(id) {
+ var a = document.querySelector('#toc-list a[href="#' + id + '"]');
+ if (!a) return id;
+ var t = a.cloneNode(true), s = t.querySelector('span');
+ if (s) s.remove();
+ return t.textContent.trim();
+ }
+ function ensure(kind) {
+ var el = document.getElementById(kind + '-link');
+ if (!el) {
+ el = document.createElement('a');
+ el.id = kind + '-link';
+ el.className = 'text-primary hover:underline';
+ if (kind === 'prev') nav.insertBefore(el, nav.firstChild);
+ else nav.appendChild(el);
+ }
+ return el;
+ }
+ var prev = document.getElementById('prev-link');
+ var next = document.getElementById('next-link');
+ if (i > 0) {
+ var a = ensure('prev');
+ a.href = list[i - 1] + '.html?path=' + encodeURIComponent(q);
+ a.textContent = '← ' + titleOf(list[i - 1]);
+ } else if (prev) {
+ prev.href = q + '.html';
+ prev.textContent = '← 回到「' + P[q].t + '」';
+ }
+ if (i < list.length - 1) {
+ var b = ensure('next');
+ b.href = list[i + 1] + '.html?path=' + encodeURIComponent(q);
+ b.textContent = titleOf(list[i + 1]) + ' →';
+ } else if (next) {
+ next.href = q + '.html';
+ next.textContent = '读完「' + P[q].t + '」，回路径 →';
+ }
+})();
+</script>'''
+
+
 def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
           out: Path = None) -> dict:
     book = B.load_book(root, book_path, lang)
@@ -238,11 +315,18 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
             part_first[pid] = ch['id']
     idmap.update(part_first)
 
-    # 章节元数据（标题取 front matter nav）
+    # 章节元数据（标题取 front matter nav）与导读首句（路径页复用，方案 §7.3）
     meta = {}
     for ch in book['chapters']:
         m, _ = B._read_md(root, ch['file'])
         meta[ch['id']] = {'title': m.get('nav') or ch['id']}
+    descs = {}
+    paths = load_paths(root, set(order))
+    path_nav_js = ''
+    if paths:
+        pdata = {p['id']: {'t': p['title'], 'c': p['chapters']} for p in paths}
+        path_nav_js = PATH_NAV_JS.replace('__PATHS__',
+                                          json.dumps(pdata, ensure_ascii=False))
 
     site = ((json.loads((root / 'manifest' / 'languages.json').read_text(encoding='utf-8'))
              .get('site_url') or '').rstrip('/'))
@@ -365,6 +449,26 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         toc_lines.append(f'<p class="mb-2"><a href="{cid}.html" '
                          f'class="text-primary hover:underline">{t}</a></p>')
     toc_lines.append('</section>')
+    # 策展路径卡片区（方案 §7.3）：放在全书目录之前——先回答「我该从哪读」
+    path_cards = ''
+    if paths:
+        cards = []
+        for p in paths:
+            cards.append(
+                f'<a href="{p["id"]}.html" class="path-step block focus-ring" '
+                f'style="text-decoration:none;color:inherit;">'
+                f'<h3 class="font-bold text-base mt-2 mb-1 text-primary">{p["title"]}</h3>'
+                f'<p class="text-xs text-gray-500 dark:text-gray-400 mb-1">'
+                f'{len(p["chapters"])} 章 · {p["audience"]}</p>'
+                f'<p class="text-sm text-gray-700 dark:text-gray-300">{p["subtitle"]}</p></a>')
+        path_cards = (
+            '<section class="mb-8" aria-labelledby="curated-paths-title">'
+            '<h2 id="curated-paths-title" class="text-xl font-bold text-dark '
+            'dark:text-gray-200 mb-1">策展路径：按目标读</h2>'
+            '<p class="text-sm text-gray-600 dark:text-gray-400 mb-3">'
+            '不必从头读到尾。挑一条适合你的路线，路径里的「下一章」永远是你该读的下一章；'
+            '读完路径尽头，就是完整目录。</p>'
+            '<div class="learning-path">' + ''.join(cards) + '</div></section>\n')
     idx_url = f'{site}/{version}/{lang}/index.html' if site else ''
     idx_head = page_shell(head_slim, f'{book_title} · {version}',
                           idx_url,
@@ -373,7 +477,7 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
                            "url": idx_url, "hasPart": len(order)},
                           hreflang=hreflang_block(alts_for(), x_default=idx_url))
     emit('index.html', _rewrite_hrefs(
-        idx_head + top_matter + '\n' + '\n'.join(toc_lines) + tail,
+        idx_head + top_matter + '\n' + path_cards + '\n'.join(toc_lines) + tail,
         idmap, 'index', frozenset(part_first)))
 
     # ---- 章节页 ----
@@ -387,12 +491,12 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         next_id = order[i + 1] if i + 1 < len(order) else None
         nav_bits = []
         if prev_id:
-            nav_bits.append(f'<a href="{prev_id}.html" class="text-primary hover:underline">'
+            nav_bits.append(f'<a id="prev-link" href="{prev_id}.html" class="text-primary hover:underline">'
                             f'← {meta[prev_id]["title"]}</a>')
         if next_id:
-            nav_bits.append(f'<a href="{next_id}.html" class="text-primary hover:underline">'
+            nav_bits.append(f'<a id="next-link" href="{next_id}.html" class="text-primary hover:underline">'
                             f'{meta[next_id]["title"]} →</a>')
-        prevnext = ('\n<nav class="flex flex-wrap justify-between gap-4 mt-10 mb-6">'
+        prevnext = ('\n<nav id="chapter-nav" class="flex flex-wrap justify-between gap-4 mt-10 mb-6">'
                     + '<span></span>'.join(nav_bits) + '</nav>')
         title = f'{meta[cid]["title"]} · {book_title}'
         url = f'{site}/{version}/{lang}/{cid}.html' if site else ''
@@ -404,12 +508,69 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
               'og:description': og_description(body),
               'og:type': 'article',
               'og:url': url}
+        descs[cid] = og['og:description']
         page = page_shell(head_slim, title, url, ld,
                           prefetch=f'{next_id}.html' if next_id else '', og=og,
                           hreflang=hreflang_block(alts_for(cid), x_default=url)) \
-            + '\n' + body + prevnext + tail
+            + '\n' + body + prevnext + (path_nav_js if paths else '') + tail
         page = _rewrite_hrefs(page, idmap, cid, frozenset(part_first))
         emit(f'{cid}.html', page)
+
+    # ---- 策展路径页（方案 §7.2-7.3）：顺序清单 + 每章一行导读 + 进度联动 ----
+    # 进度与全书共用一套已读记录（phoneCourse_completed），按路径过滤显示 n/N——
+    # 「读完路径尽头就是完整目录，升舱不降级」。
+    path_progress_js = '''<script>
+(function () {
+ var ids = __IDS__;
+ var KEY = 'phoneCourse_completed';
+ var arr = [];
+ try { arr = JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) {}
+ var n = 0;
+ ids.forEach(function (id) { if (arr.indexOf(id) >= 0) n++; });
+ var t = document.getElementById('path-progress-text');
+ var b = document.getElementById('path-progress-bar');
+ if (t) t.textContent = n + ' / ' + ids.length;
+ if (b) b.style.transform = 'scaleX(' + (ids.length ? n / ids.length : 0) + ')';
+})();
+</script>'''
+    for p in paths:
+        pid, n = p['id'], len(p['chapters'])
+        items = []
+        for i, cid in enumerate(p['chapters'], 1):
+            d = descs.get(cid, '')
+            items.append(
+                f'<li class="mb-4"><a href="{cid}.html?path={pid}" '
+                f'class="text-primary hover:underline font-semibold">'
+                f'{i:02d} · {meta[cid]["title"]}</a>'
+                + (f'<p class="text-sm text-gray-600 dark:text-gray-400 mb-0">{d}</p>'
+                   if d else '')
+                + '</li>')
+        pbody = (
+            f'<section class="mb-8"><h2 class="text-2xl font-bold text-dark '
+            f'dark:text-gray-200 mb-1">{p["title"]}</h2>'
+            f'<p class="text-sm text-gray-600 dark:text-gray-400 mb-3">{p["subtitle"]}'
+            f' · 适合：{p["audience"]}</p>'
+            f'<div class="reading-guide-card">'
+            f'<div class="flex items-center justify-between text-sm mb-2">'
+            f'<span>路径进度</span>'
+            f'<span id="path-progress-text" class="font-semibold text-primary">— / {n}</span></div>'
+            f'<div class="toc-progress-bar" id="path-progress-bar" '
+            f'style="transform:scaleX(0);" aria-hidden="true"></div>'
+            f'<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">'
+            f'与全书进度共用一套记录：章节里点「标记已读」，这里就会累计。'
+            f'读完路径尽头，就是完整目录。</p></div>'
+            f'<ol class="mt-4">' + '\n'.join(items) + '</ol>'
+            f'<p class="mt-6"><a href="index.html" class="text-primary hover:underline">'
+            f'想换条路？完整目录在这里 →</a></p></section>')
+        pbody += path_progress_js.replace('__IDS__',
+                                          json.dumps(p['chapters'], ensure_ascii=False))
+        purl = f'{site}/{version}/{lang}/{pid}.html' if site else ''
+        pld = {"@context": "https://schema.org", "@type": "ItemList",
+               "name": p['title'], "description": p['subtitle'],
+               "numberOfItems": n, "url": purl}
+        ppage = page_shell(head_slim, f'{p["title"]} · {book_title}', purl, pld) \
+            + '\n' + pbody + tail
+        emit(f'{pid}.html', _rewrite_hrefs(ppage, idmap, pid, frozenset(part_first)))
 
     # ---- sitemap ----
     if site:
@@ -418,6 +579,8 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         # 各语言单文件入口（方案 §6.4：其余语言不能在 sitemap 里 0 条）；
         # 顶层壳页面（站点首页/勘误/语言页/quiz/单文件）由 sync_site 补入。
         urls += [f'{site}/v1.8/{c}.html' for c in sorted(v18_files)]
+        # 策展路径页
+        urls += [f'{site}/{version}/{lang}/{p["id"]}.html' for p in paths]
         sm = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
         sm += [f'  <url><loc>{u}</loc></url>' for u in urls]

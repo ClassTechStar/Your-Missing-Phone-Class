@@ -30,7 +30,7 @@ v1.9/（最新中文版，120 章）曾在这条流水线之外直接维护：
 逐章扩写至约 3 万字（全书 43.5 万 → 371.3 万字）。2026-11-17 起源稿
 回写完成（source/v1.9/），`build --verify` 等价性已成为 CI 必过门禁。
 源稿之上再派生三条增量链路：
-        ├──▶ bookkit split：121 个分章页 + sitemap/JSON-LD（章节级 URL，页级预算 300KB）
+        ├──▶ bookkit split：121 个分章页 + 3 条策展路径页 + sitemap/JSON-LD（章节级 URL，页级预算 300KB）
         ├──▶ bookkit quick：《给爸妈的 20 分钟速读版》（速读层合集）
         └──▶ bookkit tm + manifest/glossary：段落级增量翻译（TM 记忆库 + 18 语术语表）
 ```

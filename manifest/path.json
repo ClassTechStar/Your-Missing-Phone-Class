@@ -1,0 +1,56 @@
+[
+  {
+    "id": "qi-tian-ru-men",
+    "title": "七天入门",
+    "subtitle": "新机到手第一周，把手机配到位",
+    "audience": "刚拿到新手机",
+    "chapters": [
+      "di-ling-zhang",
+      "fu-lu-a",
+      "di-yi-zhang",
+      "di-er-zhang",
+      "di-san-zhang",
+      "di-si-zhang",
+      "di-wu-zhang",
+      "di-liu-zhang",
+      "di-qi-zhang-jichu",
+      "di-ba-zhang",
+      "di-shi-zhang",
+      "di-shi-yi-zhang"
+    ]
+  },
+  {
+    "id": "gei-ba-ma-de-shi-zhang",
+    "title": "给爸妈的 10 章",
+    "subtitle": "照着做就行，做完手机就安全了",
+    "audience": "长辈新机到手 / 你帮长辈配机",
+    "chapters": [
+      "di-er-shi-qi-zhang",
+      "fu-lu-a",
+      "di-wu-zhang",
+      "di-ba-zhang",
+      "di-liu-zhang",
+      "di-shi-si-zhang",
+      "di-san-shi-er-zhang",
+      "di-er-zhang",
+      "di-shi-zhang",
+      "di-shi-ba-zhang"
+    ]
+  },
+  {
+    "id": "huan-ji-shou-ce",
+    "title": "换机手册",
+    "subtitle": "旧机到新机，数据一根线都不丢",
+    "audience": "准备换手机",
+    "chapters": [
+      "di-er-shi-ba-zhang",
+      "fu-lu-a",
+      "di-yi-zhang",
+      "di-shi-liu-zhang",
+      "di-shi-ba-zhang",
+      "di-er-zhang",
+      "di-er-shi-wu-zhang",
+      "di-san-shi-er-zhang"
+    ]
+  }
+]

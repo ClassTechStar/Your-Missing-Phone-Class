@@ -147,6 +147,40 @@ class TestChapterOg:
         assert 'content="书名"' not in out
 
 
+class TestPaths:
+    """策展路径（方案 §7）：path.json 只存章 id，拼错必须报错不静默。"""
+
+    def test_load_paths_rejects_unknown_chapter(self, tmp_path):
+        m = tmp_path / 'manifest'
+        m.mkdir()
+        (m / 'path.json').write_text(
+            '[{"id":"x","title":"t","subtitle":"s","audience":"a",'
+            '"chapters":["nope"]}]', encoding='utf-8')
+        import pytest
+        with pytest.raises(ValueError, match='nope'):
+            S.load_paths(tmp_path, {'di-yi-zhang'})
+
+    def test_load_paths_rejects_duplicates(self, tmp_path):
+        m = tmp_path / 'manifest'
+        m.mkdir()
+        (m / 'path.json').write_text(
+            '[{"id":"x","title":"t","subtitle":"s","audience":"a",'
+            '"chapters":["di-yi-zhang","di-yi-zhang"]}]', encoding='utf-8')
+        import pytest
+        with pytest.raises(ValueError, match='重复'):
+            S.load_paths(tmp_path, {'di-yi-zhang'})
+
+    def test_repo_path_json_valid(self):
+        """仓库里的三条预置路径必须与 v1.9 章节表保持同步（回归锚）。"""
+        import json
+        from pathlib import Path
+        root = Path(__file__).resolve().parents[1]
+        book = json.loads((root / 'source' / 'v1.9' / 'book.json').read_text(encoding='utf-8'))
+        ids = {c['id'] for c in book['chapters']}
+        paths = S.load_paths(root, ids)
+        assert [len(p['chapters']) for p in paths] == [12, 10, 8]
+
+
 class TestHreflang:
     """hreflang 互链（方案 §6.3）：多语言备选互链，孤本不发。"""
 
