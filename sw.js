@@ -9,14 +9,13 @@
  * - 同源 GET：stale-while-revalidate（秒开 + 后台更新）。
  * - 页面导航：network-first，失败回退缓存（保证改版后能拿到新版，
  *   断网时仍可打开）。
- * - 跨域 CDN（Tailwind / Font Awesome）：cache-first，opaque 响应也存，
- *   断网时样式不塌。
+ * - 无跨域依赖：Tailwind 已预编译、Font Awesome 已本地子集化，全部同源。
  *
  * 改版本号 CACHE 即可让所有客户端重新预热并清掉旧缓存。
  */
 'use strict';
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = 'phoneclass-' + VERSION;
 const SHELL = [
   './',
@@ -25,14 +24,14 @@ const SHELL = [
   './icons/icon-192.png',
   './icons/icon-512.png',
   './quiz.html',
+  // 字体只有 14KB（woff2 子集），预缓存后首屏正文与图标不再等网络
+  './fonts/MiSans-subset.woff2',
+  './fonts/fa/fa-solid-900.subset.woff2',
 ];
 // 题库 JSON（quiz/zh-CN.json，约 200KB）不进预缓存：壳层要小，
 // 用户点开自测页时同源 GET 会顺手缓存它，第二次起就能离线用。
 // 只有这些跨域域名允许进缓存（其余一概不碰，避免缓存污染）
-const CORS_OK = [
-  'https://cdn.tailwindcss.com',
-  'https://cdnjs.cloudflare.com',
-];
+const CORS_OK = [];   // 已无跨域依赖（Tailwind 预编译、图标本地子集化）
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {

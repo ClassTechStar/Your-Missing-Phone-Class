@@ -216,13 +216,19 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     import shutil
     (page_dir / 'assets').mkdir(exist_ok=True)
     # MiSans：CSS 里的 @font-face 用 ../fonts/ 相对路径，字体随页面树一起输出
-    font_src = root / 'fonts' / 'MiSans-Normal.ttf'
-    if not font_src.is_file():          # 兼容旧布局
-        font_src = root / 'assets' / 'fonts' / 'MiSans-Normal.ttf'
-    if font_src.is_file():
-        fonts_out = page_dir / 'fonts'
-        fonts_out.mkdir(exist_ok=True)
-        shutil.copy2(font_src, fonts_out / 'MiSans-Normal.ttf')
+    fonts_out = page_dir / 'fonts'
+    # 正文字体：woff2 子集优先，TTF 仅作兜底（CSS 里双源声明，浏览器不会下 TTF）
+    for name in ('MiSans-subset.woff2', 'MiSans-Normal.ttf'):
+        src = root / 'fonts' / name
+        if not src.is_file() and name.endswith('.ttf'):
+            src = root / 'assets' / 'fonts' / name   # 兼容旧布局
+        if src.is_file():
+            fonts_out.mkdir(exist_ok=True)
+            shutil.copy2(src, fonts_out / name)
+    # 图标字体：FA 子集在 fonts/fa/，分章页 CSS 引用 ../fonts/fa/，必须一起分发
+    fa_src = root / 'fonts' / 'fa'
+    if fa_src.is_dir():
+        shutil.copytree(fa_src, fonts_out / 'fa', dirs_exist_ok=True)
     for name, body in assets.items():
         for a, b in PATH_FIXES:      # 外置 JS 里的相对路径同样要降级
             body = body.replace(a, b)
