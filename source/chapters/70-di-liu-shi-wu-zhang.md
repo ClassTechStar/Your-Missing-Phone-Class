@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十五章：项目一——我的记账本（本地版）
 
 {class="chapter-intro mb-4"}
-欢迎来到你的第一个"正经项目"。这个记账本虽然不联网，但五脏俱全：能记一笔账、能看流水、能按月统计、能删改。做完它，你就完整走了一遍"数据 → 逻辑 → 界面"的全流程。别急着抄代码<strong>先想清楚再动手</strong>，这是咱们一贯的原则。
+欢迎来到你的第一个「正经项目」。这个记账本虽然不联网，但五脏俱全：能记一笔账、能看流水、能按月统计、能删改。做完它，你就完整走了一遍「数据 → 逻辑 → 界面」的全流程。别急着抄代码<strong>先想清楚再动手</strong>，这是咱们一贯的原则。
 
 #### 一、需求思考：先问五个问题
 
@@ -23,9 +23,9 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 记账本需求五要素
 
-然后拆解成"每一步都能用"的小步骤：① 建 SwiftData 数据层（能存一笔账）；② 列表页（能看流水）；③ 录入弹窗（能加账）；④ 删除与编辑；⑤ 月度汇总卡片。每完成一步，App 都是一个"能用的东西"。
+然后拆解成「每一步都能用」的小步骤：① 建 SwiftData 数据层（能存一笔账）；② 列表页（能看流水）；③ 录入弹窗（能加账）；④ 删除与编辑；⑤ 月度汇总卡片。每完成一步，App 都是一个「能用的东西」。
 
-#### 二、数据层：让"账"有个家
+#### 二、数据层：让「账」有个家
 
 先定义一笔账长什么样——字段要够用但别贪多：
 
@@ -61,10 +61,10 @@ class Record {
 小贴士：金额为什么用 Double？
 
 {class="mt-1"}
-严谨的金融 App 会用 Decimal（精确十进制）来避免浮点误差（0.1+0.2≠0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成 <code class="inline">Decimal</code> 或"以分为单位的 Int"，这是无数前辈踩出来的坑。
+严谨的金融 App 会用 Decimal（精确十进制）来避免浮点误差（0.1+0.2≠0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成 <code class="inline">Decimal</code> 或「以分为单位的 Int」，这是无数前辈踩出来的坑。
 :::
 
-#### 三、MVVM：界面与逻辑"分家"
+#### 三、MVVM：界面与逻辑「分家」
 
 直接让界面操作数据库？能跑，但界面代码会又臭又长。MVVM 架构让各司其职：<strong>View（界面）只管画，ViewModel（逻辑中枢）管数据，Model（SwiftData）管存储</strong>。
 
@@ -160,21 +160,21 @@ struct RecordListView: View {
 ```
 :::
 
-录入弹窗要点：金额输入框键盘用 <code class="inline">.keyboardType(.decimalPad)</code>（数字键盘），收入/支出用分段控件（Picker），分类用菜单选择，点"保存"调 <code class="inline">vm.add(...)</code> 并 <code class="inline">dismiss()</code> 关窗。
+录入弹窗要点：金额输入框键盘用 <code class="inline">.keyboardType(.decimalPad)</code>（数字键盘），收入/支出用分段控件（Picker），分类用菜单选择，点「保存」调 <code class="inline">vm.add(...)</code> 并 <code class="inline">dismiss()</code> 关窗。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 注意：输入校验别偷懒
 
 {class="mt-1"}
-金额输入框一定要校验：空值、负数、"abc"这类非法输入都要拦住，用 <code class="inline">Double(text)</code> 判断，失败返回 nil。App 崩掉最常见的原因之一就是"把用户的输入当成了乖孩子"。记住：<strong>用户输入的一切，都要当敌人审查</strong>。
+金额输入框一定要校验：空值、负数、「abc」这类非法输入都要拦住，用 <code class="inline">Double(text)</code> 判断，失败返回 nil。App 崩掉最常见的原因之一就是「把用户的输入当成了乖孩子」。记住：<strong>用户输入的一切，都要当敌人审查</strong>。
 :::
 
 #### 五、编辑、删除与汇总
 
 - <strong>删除</strong>：List 的 .onDelete 左滑删除 + 确认弹窗（误删是记账类 App 用户最痛恨的事）。
 - <strong>编辑</strong>：点行进编辑弹窗，预填原值（改一个字比重新输入省事）。
-- <strong>汇总</strong>：用 <code class="inline">filter</code> + <code class="inline">reduce</code> 算"本月收入 / 支出 / 结余"，顶部卡片展示：
+- <strong>汇总</strong>：用 <code class="inline">filter</code> + <code class="inline">reduce</code> 算「本月收入 / 支出 / 结余」，顶部卡片展示：
 
 ::: div .code-block
 :::inline div .code-head
@@ -200,26 +200,26 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 
 #### 六、验收：三层检查 + 两个进阶挑战
 
-项目做完，按"功能 → 边界 → 架构"三层验收：能不能记、能不能删、重启 App 数据还在不在（功能）；金额输 0 或负数会不会崩（边界）；界面和数据有没有混在一起、字段有没有硬编码（架构）。
+项目做完，按「功能 → 边界 → 架构」三层验收：能不能记、能不能删、重启 App 数据还在不在（功能）；金额输 0 或负数会不会崩（边界）；界面和数据有没有混在一起、字段有没有硬编码（架构）。
 
-基础版验收通过后，给自己加两道"进阶菜"：
+基础版验收通过后，给自己加两道「进阶菜」：
 
-1. <strong>分类统计</strong>：加一个"统计"标签页，用 <strong>Swift Charts</strong> 把分类支出画成饼图/柱状图：苹果官方图表库，几行代码出图。
-2. <strong>iCloud 同步</strong>：SwiftData 开 iCloud 同步只需配几项设置，账本在 iPhone/iPad 之间自动同步，瞬间"高级"起来。
+1. <strong>分类统计</strong>：加一个「统计」标签页，用 <strong>Swift Charts</strong> 把分类支出画成饼图/柱状图：苹果官方图表库，几行代码出图。
+2. <strong>iCloud 同步</strong>：SwiftData 开 iCloud 同步只需配几项设置，账本在 iPhone/iPad 之间自动同步，瞬间「高级」起来。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 来动手：本周完成它
 
 {class="mt-1"}
-按"数据层、ViewModel、列表页、录入弹窗、汇总卡片"的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清"期望行为、实际行为、复现步骤"）。完成后用它记一周账——自己做的 App 用起来，成就感会推着你继续往前走。
+按「数据层、ViewModel、列表页、录入弹窗、汇总卡片」的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清「期望行为、实际行为、复现步骤」）。完成后用它记一周账——自己做的 App 用起来，成就感会推着你继续往前走。
 :::
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
 本章小结
 
-- 需求五要素 → 拆成"每步能用"的小步骤，再动手
+- 需求五要素 → 拆成「每步能用」的小步骤，再动手
 - 数据层：@Model 模型 + modelContainer 容器 + FetchDescriptor 查询
 - MVVM 分工：View 只管画，@Observable 的 ViewModel 管逻辑，SwiftData 管存储
 - 界面：List + Section + toolbar + sheet 录入弹窗

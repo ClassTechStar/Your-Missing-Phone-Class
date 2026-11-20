@@ -7,7 +7,7 @@ toc: default
 kind: appendix
 ---
 
-### 附录C：极简术语"黑话"对照表
+### 附录C：极简术语「黑话」对照表
 
 ::: div .overflow-x-auto
 ```html

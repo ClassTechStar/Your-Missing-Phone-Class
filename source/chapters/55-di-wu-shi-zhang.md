@@ -10,11 +10,11 @@ kind: chapter
 ### 第五十章：Kotlin 快速上手——安卓开发的第一语言
 
 {class="chapter-intro mb-4"}
-这一章咱们正式学语言。别紧张：Kotlin 是出了名的"对新手友好"，而且你不需要背语法书：先掌握 20% 的语法，就能看懂和写出 80% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：<strong>看懂 > 记住，会用 > 精通</strong>。
+这一章咱们正式学语言。别紧张：Kotlin 是出了名的「对新手友好」，而且你不需要背语法书：先掌握 20% 的语法，就能看懂和写出 80% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：<strong>看懂 > 记住，会用 > 精通</strong>。
 
 #### 一、变量与类型：给数据起名字
 
-程序就是"数据 + 逻辑"。变量，就是给数据起个名字存起来。Kotlin 有两种声明方式：
+程序就是「数据 + 逻辑」。变量，就是给数据起个名字存起来。Kotlin 有两种声明方式：
 
 ::: div .code-block
 :::inline div .code-head
@@ -49,10 +49,10 @@ Kotlin 常用基础类型
 小贴士：val 优先原则
 
 {class="mt-1"}
-Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>。能用 val 的地方用 var，IDE 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug，代码越少变化，越容易推理。
+Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>。能用 val 的地方用 var，IDE 会黄字警告你。这个习惯能帮你少掉一大类「变量被意外修改」的 bug，代码越少变化，越容易推理。
 :::
 
-#### 二、函数：把逻辑打包成"按钮"
+#### 二、函数：把逻辑打包成「按钮」
 
 函数是一段有名字的逻辑，像遥控器上的按钮——按一下（调用），就执行一串动作。Kotlin 里用 <code class="inline">fun</code> 声明：
 
@@ -75,9 +75,9 @@ println(add(3, 5)) // 输出：8
 ```
 :::
 
-几个要点：参数写在括号里（名字在前、类型在后，用冒号隔开）；返回类型写在括号后；<strong>字符串模板</strong> <code class="inline">$变量名</code> 是 Kotlin 的招牌便利，不用再像 Java 那样"字符串 + 变量"地拼来拼去。
+几个要点：参数写在括号里（名字在前、类型在后，用冒号隔开）；返回类型写在括号后；<strong>字符串模板</strong> <code class="inline">$变量名</code> 是 Kotlin 的招牌便利，不用再像 Java 那样「字符串 + 变量」地拼来拼去。
 
-#### 三、条件与循环：让程序会"思考"
+#### 三、条件与循环：让程序会「思考」
 
 程序的智能来自两件事：<strong>会判断</strong>（if/when）和<strong>会重复</strong>（for/while）。
 
@@ -113,9 +113,9 @@ for (fruit in fruits) {
 
 <code class="inline">when</code> 是 Kotlin 里最常用的多分支写法，安卓开发里你会天天用到它（比如根据状态显示不同界面）。
 
-#### 四、空安全：Kotlin 的"保命符"
+#### 四、空安全：Kotlin 的「保命符」
 
-Java 时代最著名的 bug 叫 <strong>NullPointerException（空指针异常）</strong>——程序访问了一个"什么都没有"的东西，直接崩溃。据统计它是安卓崩溃排行榜的常年第一。Kotlin 从语言层面解决了它：<strong>默认不允许空值</strong>。
+Java 时代最著名的 bug 叫 <strong>NullPointerException（空指针异常）</strong>——程序访问了一个「什么都没有」的东西，直接崩溃。据统计它是安卓崩溃排行榜的常年第一。Kotlin 从语言层面解决了它：<strong>默认不允许空值</strong>。
 
 ::: div .code-block
 :::inline div .code-head
@@ -141,12 +141,12 @@ println(len)
 注意：? 和 ?: 别搞混
 
 {class="mt-1"}
-<code class="inline">String?</code> 是"允许为空"，<code class="inline">a ?: b</code> 是"a 为空时用 b"（长得像猫王发型，所以叫 Elvis 操作符）。刚开始写代码时，看到编译器报"null 相关错误"，八成是你忘了处理可空类型——这正是语言在保护你。
+<code class="inline">String?</code> 是「允许为空」，<code class="inline">a ?: b</code> 是「a 为空时用 b」（长得像猫王发型，所以叫 Elvis 操作符）。刚开始写代码时，看到编译器报「null 相关错误」，八成是你忘了处理可空类型——这正是语言在保护你。
 :::
 
-#### 五、类与对象：造"零件"的模具
+#### 五、类与对象：造「零件」的模具
 
-类是对象的"模具"，对象是类的"成品"。安卓里的一切，页面、按钮、数据——都是对象。Kotlin 里有个神器叫 <strong>data class</strong>（数据类），专门用来"装数据"，一行顶 Java 几十行：
+类是对象的「模具」，对象是类的「成品」。安卓里的一切，页面、按钮、数据——都是对象。Kotlin 里有个神器叫 <strong>data class</strong>（数据类），专门用来「装数据」，一行顶 Java 几十行：
 
 ::: div .code-block
 :::inline div .code-head
@@ -172,9 +172,9 @@ val twin = me.copy(name = "张三丰") // 复制并改一个字段
 
 以后你做记账本，一笔账就是一个 data class：<code class="inline">data class Record(val amount: Double, val category: String, val date: String)</code>。看，你已经能写出真实项目的代码结构了。
 
-#### 六、lambda 与高阶函数：Kotlin 的"语法糖"
+#### 六、lambda 与高阶函数：Kotlin 的「语法糖」
 
-安卓代码里你会天天看到 <code class="inline">{ ... }</code> 这种"没名字的函数"，它叫 <strong>lambda（匿名函数）</strong>。Button 的 <code class="inline">onClick = { count++ }</code> 就是一个 lambda，把"点击后做什么"打包成一坨，递给按钮。
+安卓代码里你会天天看到 <code class="inline">{ ... }</code> 这种「没名字的函数」，它叫 <strong>lambda（匿名函数）</strong>。Button 的 <code class="inline">onClick = { count++ }</code> 就是一个 lambda，把「点击后做什么」打包成一坨，递给按钮。
 
 ::: div .code-block
 :::inline div .code-head
@@ -196,7 +196,7 @@ val bigBills = bills.filter { it > 50 }.sorted()
 ```
 :::
 
-几个高频"集合连招"记一下：<code class="inline">filter</code>（筛选）、<code class="inline">map</code>（变换）、<code class="inline">sorted</code>（排序）、<code class="inline">sum</code>（求和）。你未来 90% 的列表处理，都是这四招的组合。Kotlin 的哲学就是：<strong>能用一句话说清楚的逻辑，绝不写五句</strong>。
+几个高频「集合连招」记一下：<code class="inline">filter</code>（筛选）、<code class="inline">map</code>（变换）、<code class="inline">sorted</code>（排序）、<code class="inline">sum</code>（求和）。你未来 90% 的列表处理，都是这四招的组合。Kotlin 的哲学就是：<strong>能用一句话说清楚的逻辑，绝不写五句</strong>。
 
 #### 七、写给零基础的语法速查卡
 
@@ -216,7 +216,7 @@ Kotlin 语法速查卡（新手版）
 来动手：不装任何软件，先玩 10 分钟 Kotlin
 
 {class="mt-1"}
-浏览器打开 play.kotlinlang.org（Kotlin 官方在线演练场），把本章的每一段代码都粘进去跑一遍，改改数字和文字，看看输出怎么变。这个"先玩后学"的 10 分钟，会让你第 51 章上手时轻松一倍。
+浏览器打开 play.kotlinlang.org（Kotlin 官方在线演练场），把本章的每一段代码都粘进去跑一遍，改改数字和文字，看看输出怎么变。这个「先玩后学」的 10 分钟，会让你第 51 章上手时轻松一倍。
 :::
 
 ::: div .chapter-summary
@@ -225,7 +225,7 @@ Kotlin 语法速查卡（新手版）
 
 - val 优先，var 慎用；类型可自动推断，冒号后显式声明也行
 - 函数 = 打包的逻辑；字符串模板 $ 是招牌便利
-- if/when 判断，for 循环；when 是安卓开发里的"多面手"
+- if/when 判断，for 循环；when 是安卓开发里的「多面手」
 - 空安全是 Kotlin 的保命符：普通类型拒绝 null，可空类型必须 ? / ?: 处理
 - data class 是装数据的盒子，一个字段一行，真实项目天天用
 - 20% 语法干 80% 的活：先会用，再精通

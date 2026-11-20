@@ -10,9 +10,9 @@ kind: chapter
 ### 第五十二章：四大组件与 Activity 生命周期
 
 {class="chapter-intro mb-4"}
-如果说 Compose 是 App 的"脸"，那这一章讲的就是 App 的"骨架"。安卓系统有四大基本组件，所有 App 都是由它们拼成的；而其中最重要的 Activity，有一张每个安卓开发者都必须刻在脑子里的"生命周期图"。本章学完，你就能理解"为什么切个后台回来，我的 App 状态就没了"这类千古之谜。
+如果说 Compose 是 App 的「脸」，那这一章讲的就是 App 的「骨架」。安卓系统有四大基本组件，所有 App 都是由它们拼成的；而其中最重要的 Activity，有一张每个安卓开发者都必须刻在脑子里的「生命周期图」。本章学完，你就能理解「为什么切个后台回来，我的 App 状态就没了」这类千古之谜。
 
-#### 一、四大组件：安卓的"四梁八柱"
+#### 一、四大组件：安卓的「四梁八柱」
 
 安卓官方定义了四种基本组件，分别负责一类工作：
 
@@ -25,9 +25,9 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 安卓四大组件速览
 
-新手阶段你 95% 的时间都在跟 <strong>Activity</strong> 打交道；Service 和 BroadcastReceiver 做音乐播放、消息推送时会用到；ContentProvider 用得最少（系统已把常用数据封好了）。另外注意：四大组件都要在 <strong>AndroidManifest.xml</strong> 里"登记户口"，不登记系统就找不到它们。
+新手阶段你 95% 的时间都在跟 <strong>Activity</strong> 打交道；Service 和 BroadcastReceiver 做音乐播放、消息推送时会用到；ContentProvider 用得最少（系统已把常用数据封好了）。另外注意：四大组件都要在 <strong>AndroidManifest.xml</strong> 里「登记户口」，不登记系统就找不到它们。
 
-#### 二、Activity 生命周期：安卓开发的第一张"藏宝图"
+#### 二、Activity 生命周期：安卓开发的第一张「藏宝图」
 
 手机上的 App 随时可能被打断：来电话了、用户切去回微信、系统内存不够把你杀了……Activity 的一生，就是在这张图上循环旅行：
 
@@ -59,15 +59,15 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-避坑提醒：屏幕旋转会"杀死"Activity
+避坑提醒：屏幕旋转会「杀死」Activity
 
 {class="mt-1"}
 新手最经典的翻车现场：App 转一下屏幕，输入框里的字全没了。原因：旋转屏幕默认会销毁并重建 Activity（走一遍 onDestroy → onCreate）。解法：用 <code class="inline">rememberSaveable</code> 保存状态（Compose 里替代 remember），它会在重建时自动把值找回来。第 6、7 章会反复用到。
 :::
 
-#### 三、Intent：App 里外通行的"车票"
+#### 三、Intent：App 里外通行的「车票」
 
-Intent（意图）是组件之间通信的"车票"。你想从一个页面跳到另一个页面，或者打开浏览器、调起相机，都要"买票上车"：
+Intent（意图）是组件之间通信的「车票」。你想从一个页面跳到另一个页面，或者打开浏览器、调起相机，都要「买票上车」：
 
 ::: div .code-block
 :::inline div .code-head
@@ -119,21 +119,21 @@ navController.popBackStack() // 返回上一页
 小贴士：页面多了怎么办？
 
 {class="mt-1"}
-项目长大后，把所有页面路由集中写在一个文件里（比如 <code class="inline">AppNavGraph.kt</code>），统一管理，别让"跳转到哪"的逻辑散落在各个页面。这是从"能跑"走向"可维护"的第一步。
+项目长大后，把所有页面路由集中写在一个文件里（比如 <code class="inline">AppNavGraph.kt</code>），统一管理，别让「跳转到哪」的逻辑散落在各个页面。这是从「能跑」走向「可维护」的第一步。
 :::
 
 #### 五、顺带认识：Fragment 是什么（以及为什么本书没教）
 
-查老教程时你一定会撞见 <strong>Fragment</strong>——它是 Activity 里的"可复用界面片段"，在老式多页面架构里是绝对主角。但 Compose 时代，页面直接用 Composable 函数 + Navigation 路由就够了，官方也已弱化 Fragment 的地位。本书因此没把它放进主线。
+查老教程时你一定会撞见 <strong>Fragment</strong>——它是 Activity 里的「可复用界面片段」，在老式多页面架构里是绝对主角。但 Compose 时代，页面直接用 Composable 函数 + Navigation 路由就够了，官方也已弱化 Fragment 的地位。本书因此没把它放进主线。
 
-给你的建议：<strong>新项目不主动用 Fragment</strong>；但读老代码、面试被问到时，知道它是"Activity 里嵌的界面片段"即可。学习资源永远优先选 2023 年以后的，安卓技术栈的"老黄历"更新得比想象中快。
+给你的建议：<strong>新项目不主动用 Fragment</strong>；但读老代码、面试被问到时，知道它是「Activity 里嵌的界面片段」即可。学习资源永远优先选 2023 年以后的，安卓技术栈的「老黄历」更新得比想象中快。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-来动手：给计数器装上"记忆"
+来动手：给计数器装上「记忆」
 
 {class="mt-1"}
-把第 51 章的计数器改造一下：① 把 remember 换成 rememberSaveable，旋转屏幕验证数字还在；② 加一个"关于"按钮，用 Navigation 跳到第二个页面显示版本号，正好练一遍页面跳转；③ 在两个页面的 onCreate/onPause 里打印日志，用 Logcat 看调用顺序。做完这三步，生命周期就不再是纸上谈兵。
+把第 51 章的计数器改造一下：① 把 remember 换成 rememberSaveable，旋转屏幕验证数字还在；② 加一个「关于」按钮，用 Navigation 跳到第二个页面显示版本号，正好练一遍页面跳转；③ 在两个页面的 onCreate/onPause 里打印日志，用 Logcat 看调用顺序。做完这三步，生命周期就不再是纸上谈兵。
 :::
 
 ::: div .chapter-summary
@@ -143,6 +143,6 @@ navController.popBackStack() // 返回上一页
 - 四大组件：Activity（门面）、Service（后台）、BroadcastReceiver（喇叭）、ContentProvider（资料柜）
 - 生命周期六回调：onCreate、onStart、onResume、onPause、onStop、onDestroy
 - 旋转屏幕会销毁重建 Activity：用 rememberSaveable 保住状态
-- Intent 是"车票"：显式跳自家页面，隐式调系统能力
+- Intent 是「车票」：显式跳自家页面，隐式调系统能力
 - 多页面用 Navigation Compose：NavHost + composable 路由
 :::

@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十章：搭建开发环境——Xcode 与第一个项目
 
 {class="chapter-intro mb-4"}
-工欲善其事，必先利其器。这一章咱们把"厨房"搭好：装好 Xcode、跑通模拟器、创建人生第一个 iOS 项目，再把工程结构拆开看个明白。装好环境之后，你会第一次看到自己写的代码变成一个能点的按钮——这个瞬间，很多人会记一辈子。
+工欲善其事，必先利其器。这一章咱们把「厨房」搭好：装好 Xcode、跑通模拟器、创建人生第一个 iOS 项目，再把工程结构拆开看个明白。装好环境之后，你会第一次看到自己写的代码变成一个能点的按钮——这个瞬间，很多人会记一辈子。
 
 #### 一、准备一台 Mac
 
@@ -37,16 +37,16 @@ iPad 上免费的 <strong>Swift Playgrounds</strong> 能学 Swift 语言基础�
 
 Xcode 是苹果官方的集成开发环境，免费。三步装好：
 
-1. Mac 上打开 <strong>App Store</strong>，搜索 "Xcode"，点安装：注意它有好几个 GB，找个网速好的时段。
+1. Mac 上打开 <strong>App Store</strong>，搜索 「Xcode」，点安装：注意它有好几个 GB，找个网速好的时段。
 2. 装完首次启动，同意协议、装完组件（自动完成）。
 3. 菜单 Xcode → Settings → Locations，确认 <strong>Command Line Tools</strong> 已选中，命令行工具是很多脚本和第三方工具的前提。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-注意：版本和系统的"匹配游戏"
+注意：版本和系统的「匹配游戏」
 
 {class="mt-1"}
-新 Xcode 往往要求最新 macOS，旧 Mac 则会卡在老版本。上架 App Store 时，苹果会要求用<strong>较新的 Xcode</strong> 构建（通常给一个宽限期）。所以系统更新别拖太久，iOS 开发者是"追新版"最勤快的一群人。
+新 Xcode 往往要求最新 macOS，旧 Mac 则会卡在老版本。上架 App Store 时，苹果会要求用<strong>较新的 Xcode</strong> 构建（通常给一个宽限期）。所以系统更新别拖太久，iOS 开发者是「追新版」最勤快的一群人。
 :::
 
 #### 三、创建你的第一个项目
@@ -62,7 +62,7 @@ Xcode 是苹果官方的集成开发环境，免费。三步装好：
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 创建项目要填的五件事
 
-点 Create 后，Xcode 会生成一个能直接跑的项目。左上角选一台模拟器（比如 iPhone 17），点 ▶ 运行，几秒后，模拟器屏幕上出现一个写着 "Hello, world!" 的窗口。<strong>你的第一个 iOS App 已经诞生了</strong>。
+点 Create 后，Xcode 会生成一个能直接跑的项目。左上角选一台模拟器（比如 iPhone 17），点 ▶ 运行，几秒后，模拟器屏幕上出现一个写着 「Hello, world!」 的窗口。<strong>你的第一个 iOS App 已经诞生了</strong>。
 
 #### 四、工程结构拆解：每个文件是干嘛的
 
@@ -97,14 +97,14 @@ Xcode 是苹果官方的集成开发环境，免费。三步装好：
 图 2：新手必懂的 Xcode 工程结构
 :::
 
-- <strong>MyFirstAppApp.swift</strong>：程序入口，SwiftUI 里它只有几行："启动，然后显示主界面"。
+- <strong>MyFirstAppApp.swift</strong>：程序入口，SwiftUI 里它只有几行：「启动，然后显示主界面」。
 - <strong>ContentView.swift</strong>：主界面视图，你现在看到的一切都在这里。
 - <strong>Assets.xcassets</strong>：资源仓库——图标、图片、颜色都放这。
 - <strong>Target 设置</strong>：点左侧蓝色工程图标进去，版本号、最低 iOS 版本、签名都在里面。App 显示名、图标也在这配置。
 
-#### 五、Xcode 效率技巧：新手的五个"快捷键外挂"
+#### 五、Xcode 效率技巧：新手的五个「快捷键外挂」
 
-用熟这几个，你会显得"很专业"：
+用熟这几个，你会显得「很专业」：
 
 ::: div .overflow-x-auto
 ```html
@@ -128,7 +128,7 @@ Xcode 高频快捷键（新手五件套）
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-注意：免费账号的"七天限制"
+注意：免费账号的「七天限制」
 
 {class="mt-1"}
 免费 Apple ID 签名的 App <strong>7 天后会失效</strong>（重新运行一次即可续期）。这是苹果的防滥用机制，学习阶段够用；付费开发者账号（99 美元/年）则没有这个限制，第 67 章细说。
@@ -136,7 +136,7 @@ Xcode 高频快捷键（新手五件套）
 
 #### 七、小试牛刀 + 常见报错急救
 
-打开 ContentView.swift，把 <code class="inline">Text("Hello, world!")</code> 里的字换成你的名字，按 <kbd>⌘R</kbd> 重新运行，几秒后模拟器上就显示你的名字。恭喜，你完成了第一次完整的"改代码 → 编译 → 安装 → 运行"循环。
+打开 ContentView.swift，把 <code class="inline">Text(「Hello, world!」)</code> 里的字换成你的名字，按 <kbd>⌘R</kbd> 重新运行，几秒后模拟器上就显示你的名字。恭喜，你完成了第一次完整的「改代码 → 编译 → 安装 → 运行」循环。
 
 ::: div .overflow-x-auto
 ```html
@@ -149,10 +149,10 @@ Xcode 高频快捷键（新手五件套）
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-来动手：完成你的"开发仪式感"清单
+来动手：完成你的「开发仪式感」清单
 
 {class="mt-1"}
-① 装好 Xcode 并跑通模拟器；② 用真机跑一次自己的 App 并截图留念；③ 把 Hello 文字改成你的名字；④ 到 Target 设置里把 App 显示名改成"我的第一个App"。做完这四步，你就是有作品的人了。
+① 装好 Xcode 并跑通模拟器；② 用真机跑一次自己的 App 并截图留念；③ 把 Hello 文字改成你的名字；④ 到 Target 设置里把 App 显示名改成「我的第一个App」。做完这四步，你就是有作品的人了。
 :::
 
 ::: div .chapter-summary

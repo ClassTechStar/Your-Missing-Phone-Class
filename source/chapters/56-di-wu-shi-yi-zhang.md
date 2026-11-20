@@ -10,11 +10,11 @@ kind: chapter
 ### 第五十一章：界面开发——Jetpack Compose 入门
 
 {class="chapter-intro mb-4"}
-界面是用户看到的一切。在 Compose 出现之前，安卓界面用 XML 写，像填空题一样繁琐；2021 年谷歌推出了 <strong>Jetpack Compose</strong>：直接用 Kotlin 代码"画"界面，所见即所得，改一行代码预览立刻刷新。到 2026 年，Compose 已是新项目的绝对主流。这一章，咱们学会"画画"。
+界面是用户看到的一切。在 Compose 出现之前，安卓界面用 XML 写，像填空题一样繁琐；2021 年谷歌推出了 <strong>Jetpack Compose</strong>：直接用 Kotlin 代码「画」界面，所见即所得，改一行代码预览立刻刷新。到 2026 年，Compose 已是新项目的绝对主流。这一章，咱们学会「画画」。
 
 #### 一、Compose 的思想：界面就是函数
 
-Compose 的核心思想一句话：<strong>界面 = 函数</strong>。每个能显示在屏幕上的东西（文字、按钮、图片）都是一个"可组合函数"（Composable），用 <code class="inline">@Composable</code> 标记。把它们像积木一样嵌套起来，就是界面。
+Compose 的核心思想一句话：<strong>界面 = 函数</strong>。每个能显示在屏幕上的东西（文字、按钮、图片）都是一个「可组合函数」（Composable），用 <code class="inline">@Composable</code> 标记。把它们像积木一样嵌套起来，就是界面。
 
 ::: div .code-block
 :::inline div .code-head
@@ -41,11 +41,11 @@ fun HomeScreen() {
 ```
 :::
 
-注意 <code class="inline">@Composable</code> 这个"帽子"——它告诉编译器"这是一个界面积木"。积木可以无限嵌套，这就是 Compose 的全部秘密。
+注意 <code class="inline">@Composable</code> 这个「帽子」——它告诉编译器「这是一个界面积木」。积木可以无限嵌套，这就是 Compose 的全部秘密。
 
 #### 二、基础组件：文字、按钮、输入框、图片
 
-Compose 的组件就是"积木块"，最常见的四种：
+Compose 的组件就是「积木块」，最常见的四种：
 
 ::: div .overflow-x-auto
 ```html
@@ -84,7 +84,7 @@ fun BasicWidgets() {
 
 #### 三、布局三件套：Column、Row、Box
 
-组件有了，怎么摆放？记住三个"盒子"：
+组件有了，怎么摆放？记住三个「盒子」：
 
 - <strong>Column</strong>：竖着排（像排队打饭）。
 - <strong>Row</strong>：横着排（像并排坐）。
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-想让布局更好看？给组件加 <strong>Modifier</strong>（修饰符），它就像给积木"上妆"：
+想让布局更好看？给组件加 <strong>Modifier</strong>（修饰符），它就像给积木「上妆」：
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,10 +135,10 @@ Text(
 注意：Modifier 的顺序有讲究
 
 {class="mt-1"}
-<code class="inline">padding(16.dp).background(Blue)</code> 和 <code class="inline">background(Blue).padding(16.dp)</code> 效果不同——前者是"先留白再涂色"（背景不含边距），后者是"先涂色再留白"（背景包含边距）。新手最容易在这上面画错"奇怪的白边"。不确定时，调换顺序试试，预览立刻告诉你答案。
+<code class="inline">padding(16.dp).background(Blue)</code> 和 <code class="inline">background(Blue).padding(16.dp)</code> 效果不同——前者是「先留白再涂色」（背景不含边距），后者是「先涂色再留白」（背景包含边距）。新手最容易在这上面画错「奇怪的白边」。不确定时，调换顺序试试，预览立刻告诉你答案。
 :::
 
-#### 四、状态：让界面"活"起来
+#### 四、状态：让界面「活」起来
 
 静态界面没意思。想让按钮点击后数字 +1、输入框能打字，就需要<strong>状态（State）</strong>。Compose 的规则：<strong>界面永远忠实反映状态，状态变了，界面自动重画</strong>。
 
@@ -163,7 +163,7 @@ fun Counter() {
 ```
 :::
 
-三行代码，一个活的计数器。这就是 Compose 比老式写法爽的地方：<strong>不用手动"刷新界面"，改数据就行</strong>。记住两个关键函数：<code class="inline">remember</code>（让值在界面重组时不被清空）和 <code class="inline">mutableStateOf</code>（告诉 Compose"这个值变了要重画"）。
+三行代码，一个活的计数器。这就是 Compose 比老式写法爽的地方：<strong>不用手动「刷新界面」，改数据就行</strong>。记住两个关键函数：<code class="inline">remember</code>（让值在界面重组时不被清空）和 <code class="inline">mutableStateOf</code>（告诉 Compose「这个值变了要重画」）。
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -175,7 +175,7 @@ fun Counter() {
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-图 3：Compose 的"状态 → 界面"单向数据流
+图 3：Compose 的「状态 → 界面」单向数据流
 :::
 
 #### 五、主题与深色模式：一次配置，全局生效
@@ -191,16 +191,16 @@ fun Counter() {
 小贴士：Material 3 动态取色
 
 {class="mt-1"}
-Android 12 起的"Material You"能让 App 从你的壁纸里提取颜色。Compose 模板默认支持（<code class="inline">dynamicColor</code>）。你的 App 在不同用户手机上会"自动换装"，这就是现代安卓的浪漫。
+Android 12 起的「Material You」能让 App 从你的壁纸里提取颜色。Compose 模板默认支持（<code class="inline">dynamicColor</code>）。你的 App 在不同用户手机上会「自动换装」，这就是现代安卓的浪漫。
 :::
 
-#### 六、预览、动画与实时编辑：Compose 的"外挂"
+#### 六、预览、动画与实时编辑：Compose 的「外挂」
 
-Compose 三个开发体验上的"外挂"，用上就回不去：
+Compose 三个开发体验上的「外挂」，用上就回不去：
 
 - <strong>@Preview 预览</strong>：给 Composable 加 <code class="inline">@Preview</code> 注解，Android Studio 右侧立刻渲染出界面，改代码所见即所得，不用每次装到手机上。
-- <strong>实时编辑（Live Edit）</strong>：2026 年的 Android Studio 支持在模拟器/真机上"热更新"部分改动，改文字颜色之类的小调整，设备上秒变。
-- <strong>动画 API</strong>：<code class="inline">animateFloatAsState</code>、<code class="inline">AnimatedVisibility</code> 几行代码就能让元素平滑过渡——"高级感"往往就差这几十行。
+- <strong>实时编辑（Live Edit）</strong>：2026 年的 Android Studio 支持在模拟器/真机上「热更新」部分改动，改文字颜色之类的小调整，设备上秒变。
+- <strong>动画 API</strong>：<code class="inline">animateFloatAsState</code>、<code class="inline">AnimatedVisibility</code> 几行代码就能让元素平滑过渡——「高级感」往往就差这几十行。
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,15 +228,15 @@ fun AnimatedBox() {
 小贴士：先功能后动画
 
 {class="mt-1"}
-新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效，这也是"简单至上"原则：<strong>动画是锦上添花，功能是雪中送炭</strong>。
+新手常犯的毛病是「界面还没做对，就开始纠结动画」。先让功能跑通，最后再统一加动效，这也是「简单至上」原则：<strong>动画是锦上添花，功能是雪中送炭</strong>。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-来动手：做一个"心情按钮"
+来动手：做一个「心情按钮」
 
 {class="mt-1"}
-把模板项目改成一个心情切换器：一个按钮，点击后在 😀开心 → 😢难过 → 😡生气 之间循环切换，文字和背景色跟着变。提示：用 <code class="inline">when</code> 根据状态选文案和颜色。做完发给朋友玩，收获第一波"哇你会做 App 了"。
+把模板项目改成一个心情切换器：一个按钮，点击后在 😀开心 → 😢难过 → 😡生气 之间循环切换，文字和背景色跟着变。提示：用 <code class="inline">when</code> 根据状态选文案和颜色。做完发给朋友玩，收获第一波「哇你会做 App 了」。
 :::
 
 ::: div .chapter-summary
@@ -246,7 +246,7 @@ fun AnimatedBox() {
 - Compose 思想：界面 = @Composable 函数，积木式嵌套
 - 四大组件：Text / Button / TextField / Image
 - 布局三件套：Column 竖排、Row 横排、Box 叠放
-- Modifier 链式"上妆"：padding、fillMaxWidth、background、clickable——顺序有意义
+- Modifier 链式「上妆」：padding、fillMaxWidth、background、clickable——顺序有意义
 - 状态是灵魂：remember + mutableStateOf，改数据界面自动重画
 - 主题用 Material 3 + 动态取色，深色模式一次配置全局生效
 :::

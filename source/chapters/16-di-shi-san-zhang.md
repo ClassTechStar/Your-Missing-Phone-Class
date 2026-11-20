@@ -16,7 +16,7 @@ kind: chapter
 
 #### 一、效率工具：管理你的时间与注意力
 
-效率工具是数字生活的"骨架"，帮助你把零散的想法、任务、资料整理得井井有条。下面按场景分类推荐。
+效率工具是数字生活的「骨架」，帮助你把零散的想法、任务、资料整理得井井有条。下面按场景分类推荐。
 
 ##### 1. 待办清单（任务管理）
 
@@ -28,24 +28,24 @@ kind: chapter
  - <strong>番茄钟</strong>：在任务上直接开专注，统计本周「真正做完了多少」。
  - <strong>与手机功能联动</strong>：语音助手说「提醒我…」可进系统提醒；重要截止日同时开系统日历双保险。
 - <strong>Todoist</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求极简、跨平台用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>界面克制清爽，项目层级清晰（任务→子任务→子子任务），karma 积分激励习惯养成。
-- <strong>Microsoft To Do</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>办公党、Outlook用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>完全免费、无广告，"我的一天"功能每天清空、减轻心理负担，与微软生态深度集成。
+- <strong>Microsoft To Do</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>办公党、Outlook用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>完全免费、无广告，「我的一天」功能每天清空、减轻心理负担，与微软生态深度集成。
 - <strong>系统便签/提醒事项</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>不想装第三方App的轻度用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>原生体验、零延迟，Siri/小爱语音直接添加，与系统 widget 联动。
 
 ##### 2. 番茄钟（专注力训练）
 
-- <strong>Forest</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>管不住手、易刷手机的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>专注时种树，提前离开 App 树会枯死，用"虚拟生命"建立正向反馈，可与好友合种。
+- <strong>Forest</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>管不住手、易刷手机的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>专注时种树，提前离开 App 树会枯死，用「虚拟生命」建立正向反馈，可与好友合种。
 - <strong>潮汐</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要白噪音辅助专注/入睡的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>自然音效（雨声、海浪、森林）+番茄钟+冥想三合一，界面极简治愈。
 - <strong>原则</strong>：经典 25 分钟专注 + 5 分钟休息，可根据自身状态调整为 50/10 或 90/20。
 
 ##### 3. 日历（时间可视化）
 
 - <strong>系统日历</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>原生推送最稳、耗电极低，可与 Siri/小爱语音添加。
-- <strong>Google Calendar</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>多设备用户、需要与他人共享日程者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"目标"功能自动帮你安排健身/学习时间，与 Gmail 智能识别邮件中的事件。
+- <strong>Google Calendar</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>多设备用户、需要与他人共享日程者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>「目标」功能自动帮你安排健身/学习时间，与 Gmail 智能识别邮件中的事件。
 
 ##### 4. 笔记类（知识沉淀）
 
 - <strong>Notion</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要把笔记、任务、数据库、wiki 统一管理的人；学生党、自由职业者、团队协作。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>全能知识库，Block 模块化编辑，可搭建个人主页、阅读清单、项目看板，模板生态丰富。
-- <strong>Obsidian</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>深度知识管理者、研究者、写作人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>本地 Markdown 存储，双向链接 + 关系图谱，让你的笔记形成"第二大脑"，数据完全归你所有。
+- <strong>Obsidian</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>深度知识管理者、研究者、写作人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>本地 Markdown 存储，双向链接 + 关系图谱，让你的笔记形成「第二大脑」，数据完全归你所有。
 - <strong>flomo</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>想记录碎片灵感却不想写长文的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>卡片式笔记，类似发朋友圈一样记录想法，支持 # 标签分类，按时间线回溯。
 - <strong>苹果备忘录</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>iPhone/Mac 用户、轻度记录需求。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>启动快、支持扫描文档/手绘/清单/iCloud 同步，免费且与系统深度集成。
 - <strong>印象笔记</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要大量网页剪藏、资料归档的资深用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>网页剪藏插件强大，OCR 识别图片文字，老牌稳定，但高级版需付费。
@@ -68,7 +68,7 @@ kind: chapter
 
 #### 二、健康运动
 
-健康类 App 是手机最被低估的"私人助理"——它们能持续追踪你的睡眠、心率、运动量，比偶尔去一次医院更能反映长期状态。
+健康类 App 是手机最被低估的「私人助理」——它们能持续追踪你的睡眠、心率、运动量，比偶尔去一次医院更能反映长期状态。
 
 ##### 1. 运动健身
 
@@ -84,7 +84,7 @@ kind: chapter
 
 ##### 3. 冥想放松
 
-- <strong>Calm</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>压力大的上班族、入睡困难者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"每日平静"冥想引导 + 睡眠故事（由名人朗读），界面唯美，英文内容丰富。
+- <strong>Calm</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>压力大的上班族、入睡困难者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>「每日平静」冥想引导 + 睡眠故事（由名人朗读），界面唯美，英文内容丰富。
 - <strong>潮汐</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要白噪音专注/入睡的中文用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>国产精品，自然音效 + 冥想课程 + 番茄钟，中文引导更亲切。
 - <strong>小睡眠</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要助眠音效、记录梦话/呼噜声的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>很多白噪音可叠加组合（雨声+风扇+篝火），睡前定时关闭，梦话录音有趣又实用。
 
@@ -99,7 +99,7 @@ kind: chapter
 
 ##### 6. 数据中枢
 
-- <strong>苹果健康/Google Fit</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有智能手机用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>汇聚来自手机、手环及第三方健康 App 的所有数据（步数、心率、睡眠、经期等），是统一的"健康档案中心"。
+- <strong>苹果健康/Google Fit</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有智能手机用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>汇聚来自手机、手环及第三方健康 App 的所有数据（步数、心率、睡眠、经期等），是统一的「健康档案中心」。
 
 #### 三、旅行出行
 
@@ -130,7 +130,7 @@ kind: chapter
 <p class="stance-box-note">（无利益相关。我没有对每一款翻译 App 做长期横评，以上是按功能重叠度做的判断。）</p>
 </div>
 
-- <strong>谷歌翻译</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>出国旅行者、跨语言学习者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"对话"实时双向翻译、"相机"即时取词翻译是旅行神器，支持离线语言包下载。
+- <strong>谷歌翻译</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>出国旅行者、跨语言学习者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>「对话」实时双向翻译、「相机」即时取词翻译是旅行神器，支持离线语言包下载。
 
 ##### 4. 汇率换算
 
@@ -139,22 +139,22 @@ kind: chapter
 ##### 5. 天气
 
 - <strong>系统天气 / 中国天气网</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有人，查预报与官方气象预警的首选。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>厂商天气 App 与「中国天气」等官方渠道对接气象台预警，暴雨、台风、高温等预警会以横幅/通知推送，权威性高。
-- <strong>彩云天气</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要精准到分钟级降雨预报的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"未来两小时是否下雨"准确度业内领先，降雨带动态地图直观可见，下雨前主动推送提醒。
+- <strong>彩云天气</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要精准到分钟级降雨预报的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>「未来两小时是否下雨」准确度业内领先，降雨带动态地图直观可见，下雨前主动推送提醒。
 - <strong>Carrot Weather</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求趣味性与丰富 widget 的天气发烧友。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>毒舌 AI 语音播报天气、超多自定义 widget 桌面组件、雷达图专业，付费版功能更全。
 - <strong>预警要点</strong>：天气类 App 要<strong>允许通知</strong>才收得到预警；预警分蓝、黄、橙、红四级，红色表示灾害性天气风险最高，应按提示调整出行。更多开启方式见本章第七节「天气预警 / 自然灾害预警 / 地震预警」。
 
 ##### 6. 旅行攻略
 
 - <strong>马蜂窝</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>喜欢做详细攻略、自驾游/深度游的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>用户原创游记内容丰富，目的地玩法/路线/避坑指南详尽，可下载离线攻略。
-- <strong>小红书</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>想看真实体验、找小众打卡点/美食的年轻旅行者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>图文短视频形式直观，"XX 城市 3 天攻略"等内容更新快、时效性强，搜索体验好。
+- <strong>小红书</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>想看真实体验、找小众打卡点/美食的年轻旅行者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>图文短视频形式直观，「XX 城市 3 天攻略」等内容更新快、时效性强，搜索体验好。
 
 #### 四、自动化工具启蒙
 
-自动化是"用一次配置换长期省事"的杠杆，能把你每天重复的几十次操作压缩成零。本节只做概念启蒙，具体玩法与详细教程请见 <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">第二十三章：编程思维与自动化启蒙</a>。
+自动化是「用一次配置换长期省事」的杠杆，能把你每天重复的几十次操作压缩成零。本节只做概念启蒙，具体玩法与详细教程请见 <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">第二十三章：编程思维与自动化启蒙</a>。
 
-- <strong>iOS"快捷指令"</strong>：苹果官方自动化工具，无需编程，可一键完成"到家开 WiFi+亮度调低+播报天气"等组合动作。
-- <strong>安卓自动化</strong>：系统级场景联动（如小米"自动任务"、华为"情景智能"）上手最简单；Tasker 功能强大但学习曲线陡峭，适合极客。
-- <strong>核心思路</strong>：先识别"每天都要重复做的操作"，再想"能否用一个触发条件 + 多个动作替代"。详细示例与进阶玩法见第 23 章。
+- <strong>iOS「快捷指令」</strong>：苹果官方自动化工具，无需编程，可一键完成「到家开 WiFi+亮度调低+播报天气」等组合动作。
+- <strong>安卓自动化</strong>：系统级场景联动（如小米「自动任务」、华为「情景智能」）上手最简单；Tasker 功能强大但学习曲线陡峭，适合极客。
+- <strong>核心思路</strong>：先识别「每天都要重复做的操作」，再想「能否用一个触发条件 + 多个动作替代」。详细示例与进阶玩法见第 23 章。
 
 #### 五、浏览器与搜索引擎：你的信息入口
 
@@ -180,13 +180,13 @@ kind: chapter
 ##### 高效信息检索指南：
 
 - <strong>善用AI搜索</strong>Bing的AI摘要、Edge的Copilot可以直接回答问题，帮你从很多结果中提炼关键信息，比逐条点击链接高效得多。
-- <strong>识别虚假信息与广告</strong>：搜索结果中标注"广告"或"赞助"的条目是付费推广，不是自然搜索结果。注意甄别信息来源的权威性，优先选择官方网站、知名媒体的内容。
-- <strong>正确下载应用</strong>：在搜索引擎中输入"应用名+官网"，如"微信官网"，优先点击带有官方域名标识的结果。不要从第三方下载站安装软件，它们经常捆绑流氓软件。
+- <strong>识别虚假信息与广告</strong>：搜索结果中标注「广告」或「赞助」的条目是付费推广，不是自然搜索结果。注意甄别信息来源的权威性，优先选择官方网站、知名媒体的内容。
+- <strong>正确下载应用</strong>：在搜索引擎中输入「应用名+官网」，如「微信官网」，优先点击带有官方域名标识的结果。不要从第三方下载站安装软件，它们经常捆绑流氓软件。
 - <strong>官网鉴别技巧</strong>：下载Windows 11应该访问microsoft.com，下载Chrome应该访问google.com。看域名是否与品牌一致，是最基本的鉴别方法。
 
 ##### 网站域名知识：
 
-域名是网站的"门牌号"，读懂它能帮你判断网站的性质和来源：
+域名是网站的「门牌号」，读懂它能帮你判断网站的性质和来源：
 
 - <strong>常见后缀含义</strong>：
  - .com — 商业机构，最常见
@@ -212,7 +212,7 @@ kind: chapter
 ##### 隐私浏览器：
 
 - <strong>Brave</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>注重隐私、不希望被广告追踪的日常浏览者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>基于 Chromium 内核，开箱即用屏蔽广告与追踪器，自带 Tor 隐身模式，速度比 Chrome 快、内存占用更低。
-- <strong>DuckDuckGo</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>希望"搜一个词不被全网追着推广告"的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>自带同名搜索引擎（不记录搜索历史），一键清除所有浏览痕迹（"燃烧按钮"），跨平台体验统一。
+- <strong>DuckDuckGo</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>希望「搜一个词不被全网追着推广告」的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>自带同名搜索引擎（不记录搜索历史），一键清除所有浏览痕迹（「燃烧按钮」），跨平台体验统一。
 
 ##### 浏览器对比一览：
 
@@ -257,7 +257,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-试着创建一个"睡前放松"的自动化流程
+试着创建一个「睡前放松」的自动化流程
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 创建触发条件：特定时间（如22:30）。
@@ -284,10 +284,10 @@ kind: chapter
 
 <div class="case-box">
 <div class="case-box-head">翻车现场</div>
-<p>手机自带"手机管家"，用户又装了一个第三方清理 App。结果两个都在后台跑，一个弹"已清理完毕"，另一个弹"发现若干可优化项"，手机反而更卡。</p>
-<p class="case-box-quote">"我刚清完，它又弹出来一堆垃圾。"</p>
+<p>手机自带「手机管家」，用户又装了一个第三方清理 App。结果两个都在后台跑，一个弹「已清理完毕」，另一个弹「发现若干可优化项」，手机反而更卡。</p>
+<p class="case-box-quote">「我刚清完，它又弹出来一堆垃圾。」</p>
 <p class="case-box-src">场景来源：全书通用场景（非特定读者）</p>
-<p><strong>怎么办</strong>：品牌自带的那套留着，它懂自家 App 的缓存结构，误删风险最低。第三方那个卸载掉：它常驻后台白耗电，权限还会跟系统打架，越清越卡。真要清理，先看系统存储里的"应用"和"其他"各占多少，再决定删谁。</p>
+<p><strong>怎么办</strong>：品牌自带的那套留着，它懂自家 App 的缓存结构，误删风险最低。第三方那个卸载掉：它常驻后台白耗电，权限还会跟系统打架，越清越卡。真要清理，先看系统存储里的「应用」和「其他」各占多少，再决定删谁。</p>
 </div>
 
 - <strong>清浊</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>安卓用户，希望轻量清理缓存、残留文件、空文件夹，又不想被「手机管家」全家桶打扰的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>体积小、无广告干扰，支持深度扫描应用残留、大文件定位、存储占用分析；比商业「一键加速」更克制，适合拿来做定期维护。<span class="text-gray-500 dark:text-gray-400">注意：</span>清理前先确认路径，微信、相册、文档目录不要盲目全选；系统级缓存尽量优先用品牌自带存储清理，第三方工具只作补充。

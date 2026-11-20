@@ -441,7 +441,7 @@
     "v1.8": {
       "badge_classes": "inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-600",
       "badge_icon": "fas fa-star",
-      "badge_text": "最新版本 v1.8",
+      "badge_text": "v1.8 · 19 种语言完整翻译版",
       "card_extra": "border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg",
       "label_classes": "text-emerald-600",
       "label_suffix": "最新"
@@ -449,7 +449,7 @@
     "v1.9": {
       "badge_classes": "inline-block px-4 py-1.5 bg-indigo-500/10 text-indigo-600",
       "badge_icon": "fas fa-flask",
-      "badge_text": "v1.9 预览（中文先行）",
+      "badge_text": "v1.9 · 最新中文版（中文先行）",
       "card_extra": "border-2 border-indigo-200 rounded-xl p-5 hover:shadow-lg",
       "label_classes": "text-indigo-600",
       "label_suffix": "预览"

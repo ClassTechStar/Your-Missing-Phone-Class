@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十四章：数据存储与网络请求
 
 {class="chapter-intro mb-4"}
-一个只能"看"的 App 是死的；能存数据、能连网络的 App 才是活的。这一章认识 iOS 数据层的"三件套"：UserDefaults（存小配置）、SwiftData（存结构化数据）、URLSession（和服务器对话），外加解析 JSON 的 Codable 和现代化的 async/await。学完这章，你就能写会记住用户习惯、会实时更新内容的真 App 了。
+一个只能「看」的 App 是死的；能存数据、能连网络的 App 才是活的。这一章认识 iOS 数据层的「三件套」：UserDefaults（存小配置）、SwiftData（存结构化数据）、URLSession（和服务器对话），外加解析 JSON 的 Codable 和现代化的 async/await。学完这章，你就能写会记住用户习惯、会实时更新内容的真 App 了。
 
 #### 一、存储方案怎么选：先看这张表
 
@@ -23,7 +23,7 @@ kind: chapter
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 数据三件套的分工
 
-记一个口诀：<strong>"小配置进 UserDefaults，成批数据进 SwiftData，外面的数据走 URLSession"</strong>。旧教程里的 Core Data 依然能用（SwiftData 就是它的现代马甲），手写 SQLite 则基本不用碰，直接学新的，别走老路。
+记一个口诀：<strong>「小配置进 UserDefaults，成批数据进 SwiftData，外面的数据走 URLSession」</strong>。旧教程里的 Core Data 依然能用（SwiftData 就是它的现代马甲），手写 SQLite 则基本不用碰，直接学新的，别走老路。
 
 #### 二、UserDefaults：存点小配置
 
@@ -48,9 +48,9 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 
 注意它只适合<strong>零散的小配置</strong>——几十上百条记录请交给 SwiftData，别把 UserDefaults 当数据库用（会拖慢启动、也不便查询）。
 
-#### 三、SwiftData：给数据安个"真正的家"
+#### 三、SwiftData：给数据安个「真正的家」
 
-SwiftData 是 iOS 17 起的官方数据库方案，把"建表、增删改查"简化到了极致<strong>一个 @Model 注解，数据类就变成数据库表</strong>：
+SwiftData 是 iOS 17 起的官方数据库方案，把「建表、增删改查」简化到了极致<strong>一个 @Model 注解，数据类就变成数据库表</strong>：
 
 ::: div .code-block
 :::inline div .code-head
@@ -107,11 +107,11 @@ struct RecordListView: View {
 ```
 :::
 
-这套"@Model + modelContainer + @Query"模板可以原样搬进你的任何项目，换换字段名就行。数据一变，@Query 自动刷新界面，妙不可言。
+这套「@Model + modelContainer + @Query」模板可以原样搬进你的任何项目，换换字段名就行。数据一变，@Query 自动刷新界面，妙不可言。
 
-#### 四、Codable：给 JSON"翻译"
+#### 四、Codable：给 JSON「翻译」
 
-服务器的数据大多是 JSON 文本。Swift 的 <strong>Codable</strong> 协议让"JSON ⇄ 结构体"的转换自动发生——字段名对得上，魔法就生效：
+服务器的数据大多是 JSON 文本。Swift 的 <strong>Codable</strong> 协议让「JSON ⇄ 结构体」的转换自动发生——字段名对得上，魔法就生效：
 
 ::: div .code-block
 :::inline div .code-head
@@ -136,11 +136,11 @@ print(result.weather[0].description) // "晴"
 ```
 :::
 
-铁律：<strong>先看真实返回的 JSON，再定义字段</strong>。很多"解析失败"的 bug 都是字段名写错、类型猜错（服务器发 "26.5" 字符串，你声明成 Double），把原始 JSON 打印出来对照，十秒定位。
+铁律：<strong>先看真实返回的 JSON，再定义字段</strong>。很多「解析失败」的 bug 都是字段名写错、类型猜错（服务器发 「26.5」 字符串，你声明成 Double），把原始 JSON 打印出来对照，十秒定位。
 
 #### 五、URLSession + async/await：和服务器说话
 
-iOS 联网用系统自带的 <strong>URLSession</strong>，配合 Swift 的 <strong>async/await</strong>（异步函数），"等网络"就像"等快递"一样自然：
+iOS 联网用系统自带的 <strong>URLSession</strong>，配合 Swift 的 <strong>async/await</strong>（异步函数），「等网络」就像「等快递」一样自然：
 
 ::: div .code-block
 :::inline div .code-head
@@ -180,9 +180,9 @@ struct WeatherService {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-来动手：做一个"每日一句"小应用
+来动手：做一个「每日一句」小应用
 
-#### 六、网络错误也要"分级"：别把一切报错都丢给用户
+#### 六、网络错误也要「分级」：别把一切报错都丢给用户
 
 断网、超时、404、服务器 500……不同的错，用户该看到的话不一样：
 
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-给用户看"人话"，给日志看"原话"（print 完整 error）。别把 <code class="inline">error.localizedDescription</code> 的英文天书直接甩给用户：产品感就藏在这些细节里。
+给用户看「人话」，给日志看「原话」（print 完整 error）。别把 <code class="inline">error.localizedDescription</code> 的英文天书直接甩给用户：产品感就藏在这些细节里。
 
 {class="mt-1"}
-找一个免费的名言 API（比如 hitokoto 之类），用 URLSession + async/await 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮。再把喜欢的句子用 SwiftData 存进"收藏夹"。这个练习把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍，做完它，第 7、8 章就是小菜一碟。
+找一个免费的名言 API（比如 hitokoto 之类），用 URLSession + async/await 拉取「每日一句」，显示在屏幕中央，加个「换一句」按钮。再把喜欢的句子用 SwiftData 存进「收藏夹」。这个练习把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍，做完它，第 7、8 章就是小菜一碟。
 :::
 
 ::: div .chapter-summary
@@ -221,7 +221,7 @@ func friendlyMessage(_ error: Error) -> String {
 
 - 口诀：小配置进 UserDefaults，成批数据进 SwiftData，外面的数据走 URLSession
 - SwiftData 三板斧：@Model 声明表、modelContainer 挂容器、@Query 读 + context.insert 写
-- Codable 自动"翻译" JSON：字段对得上，魔法就生效
+- Codable 自动「翻译」 JSON：字段对得上，魔法就生效
 - URLSession + async/await：联网像等快递；do/catch 处理失败
 - 两条铁律：不阻塞主线程；正式产品必须 HTTPS（ATS）
 :::

@@ -9,7 +9,7 @@ kind: supplement
 ### 第二十章附：Termux——Android设备上的便携式Linux终端环境
 
 {class="chapter-intro mb-4"}
-如果你觉得开发者模式还不够"硬核"，想要在手机上体验完整的Linux命令行，那么Termux正是为你准备的。它无需root权限，就能把一台普通的安卓手机变成一台便携的Linux工作站，是进阶用户探索移动端开发与运维的利器。
+如果你觉得开发者模式还不够「硬核」，想要在手机上体验完整的Linux命令行，那么Termux正是为你准备的。它无需root权限，就能把一台普通的安卓手机变成一台便携的Linux工作站，是进阶用户探索移动端开发与运维的利器。
 
 #### 一、什么是Termux
 
@@ -21,7 +21,7 @@ Termux的核心优势在于轻量化和高度可扩展性，适合开发、学�
 
 ##### 完整的Linux环境
 
-Termux<strong>仅内置Bash</strong>这一种Shell。如果想使用Zsh或fish等其他Shell，需要通过包管理器手动安装，例如：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>或<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。同时Termux支持Vim、Nano、Emacs等编辑器，提供接近原生的命令行体验，输入手感跟真终端差不了多少。用户可以通过"pkg install"安装2000+软件包，包括GCC、OpenSSH、SQLMap等开发和安全工具。
+Termux<strong>仅内置Bash</strong>这一种Shell。如果想使用Zsh或fish等其他Shell，需要通过包管理器手动安装，例如：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>或<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。同时Termux支持Vim、Nano、Emacs等编辑器，提供接近原生的命令行体验，输入手感跟真终端差不了多少。用户可以通过「pkg install」安装2000+软件包，包括GCC、OpenSSH、SQLMap等开发和安全工具。
 
 ##### 强大的包管理
 
@@ -93,7 +93,7 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 ##### 安装步骤
 
 1. <strong>下载应用</strong>：从官方渠道（F-Droid或GitHub）下载安装Termux，无需root权限。
-2. <strong>初始化系统</strong>：首次启动后等待"Installing bootstrap packages"完成。
+2. <strong>初始化系统</strong>：首次启动后等待「Installing bootstrap packages」完成。
 3. <strong>获取存储权限</strong>：执行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>获取手机文件系统权限。
 4. <strong>更新软件源</strong>：执行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>更新软件包列表。
 
@@ -115,7 +115,7 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 
 ##### 学习Linux操作
 
-提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> 设置 rwxr-xr-x 权限位、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> 修改文件归属、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> 查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的"三组九位"权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
+提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> 设置 rwxr-xr-x 权限位、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> 修改文件归属、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> 查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的「三组九位」权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
 
 ##### 🔐 网络安全测试
 
@@ -130,7 +130,7 @@ Termux的最新稳定版本是v0.118.2，适用于Android ≥ 7的设备。需�
 总结
 
 {class="mt-1"}
-Termux将强大的Linux终端体验带到了Android设备上，让手机成为一台便携的开发和学习工具。无论是开发者、系统管理员还是技术爱好者，都可以利用Termux在移动设备上享受完整的命令行体验，实现"口袋里的Linux"这一理念。
+Termux将强大的Linux终端体验带到了Android设备上，让手机成为一台便携的开发和学习工具。无论是开发者、系统管理员还是技术爱好者，都可以利用Termux在移动设备上享受完整的命令行体验，实现「口袋里的Linux」这一理念。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -141,5 +141,5 @@ Termux将强大的Linux终端体验带到了Android设备上，让手机成为�
 1. 从F-Droid下载并安装Termux，首次启动等待初始化完成。
 2. 执行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>更新软件包。
 3. 安装Python：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>。
-4. 输入<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>，感受在手机上运行代码的乐趣。
+4. 输入<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c 「print('Hello from Termux!')」</code>，感受在手机上运行代码的乐趣。
 :::

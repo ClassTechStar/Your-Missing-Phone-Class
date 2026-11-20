@@ -10,7 +10,7 @@ kind: chapter
 ### 第六十六章：项目二——天气查询 App（网络版）
 
 {class="chapter-intro mb-4"}
-记账本是"练内功"，天气 App 是"见世面"——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理"加载中/成功/失败"三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何"联网 App"的能力，新闻、汇率、翻译，套路一模一样。
+记账本是「练内功」，天气 App 是「见世面」——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理「加载中/成功/失败」三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何「联网 App」的能力，新闻、汇率、翻译，套路一模一样。
 
 #### 一、申请免费天气 API
 
@@ -18,14 +18,14 @@ kind: chapter
 
 1. 注册账号 → 在 API keys 页面生成一个 Key（<code class="inline">apikey</code>）。
 2. 免费版可调用 Current Weather 接口：<code class="inline">api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric</code>。
-3. 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
+3. 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的「预习」。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 避坑提醒：密钥绝不能写死在代码里
 
 {class="mt-1"}
-API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。iOS 的正确做法：放进 <code class="inline">Config.xcconfig</code>（配置文件，已被 gitignore 忽略），通过 Info.plist 读入代码。搜索"iOS xcconfig 管理密钥"照着改即可。
+API Key 相当于你的「钱包密码」，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。iOS 的正确做法：放进 <code class="inline">Config.xcconfig</code>（配置文件，已被 gitignore 忽略），通过 Info.plist 读入代码。搜索「iOS xcconfig 管理密钥」照着改即可。
 :::
 
 #### 二、网络层：URLSession + Codable
@@ -67,7 +67,7 @@ struct WeatherService {
 
 #### 三、三种界面状态：加载中 / 成功 / 失败
 
-联网 App 的灵魂在于"状态管理"。网络慢、断网、城市名打错……每种情况界面都要给用户交代。用<strong>枚举 + switch</strong> 优雅地表示：
+联网 App 的灵魂在于「状态管理」。网络慢、断网、城市名打错……每种情况界面都要给用户交代。用<strong>枚举 + switch</strong> 优雅地表示：
 
 ::: div .code-block
 :::inline div .code-head
@@ -106,7 +106,7 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 ```
 :::
 
-这个 <code class="inline">loading/success/error</code> 三段式是联网界面的"万金油模板"，先背下来，以后所有联网 App 照葫芦画瓢。
+这个 <code class="inline">loading/success/error</code> 三段式是联网界面的「万金油模板」，先背下来，以后所有联网 App 照葫芦画瓢。
 
 #### 四、实战界面代码：把天气画出来
 
@@ -139,7 +139,7 @@ struct WeatherContent: View {
 ```
 :::
 
-几个小细节值得学：<code class="inline">first?</code> 安全取第一个元素（列表可能为空），<code class="inline">?? "未知"</code> 给兜底文案；76 号细字重的温度数字是天气类 App 的经典配方；<code class="inline">Label</code> 是"图标+文字"的官方组件，比手拼 HStack 更规范。
+几个小细节值得学：<code class="inline">first?</code> 安全取第一个元素（列表可能为空），<code class="inline">?? 「未知」</code> 给兜底文案；76 号细字重的温度数字是天气类 App 的经典配方；<code class="inline">Label</code> 是「图标+文字」的官方组件，比手拼 HStack 更规范。
 
 #### 五、交互细节与收藏城市
 
@@ -150,10 +150,10 @@ struct WeatherContent: View {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-小贴士：中文城市的"梗"
+小贴士：中文城市的「梗」
 
 {class="mt-1"}
-OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "beijing" 正常。产品化做法是内置一份"城市名 → 英文/坐标"映射表，或接国内天气服务。练手阶段先支持拼音/英文城市名即可，别和它较劲。
+OpenWeatherMap 对中文城市名支持一般，搜「北京」可能无结果而 「beijing」 正常。产品化做法是内置一份「城市名 → 英文/坐标」映射表，或接国内天气服务。练手阶段先支持拼音/英文城市名即可，别和它较劲。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -162,18 +162,18 @@ OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "b
 
 #### 六、网络请求怎么调试：打印、抓包与模拟慢网
 
-联网 App 出问题，十有八九在"请求没发对"或"响应没解析对"。三个调试手段：
+联网 App 出问题，十有八九在「请求没发对」或「响应没解析对」。三个调试手段：
 
 1. <strong>打印原始数据</strong>：把 <code class="inline">String(data: data, encoding: .utf8)</code> 打印出来看原始 JSON：字段名、类型一目了然，比猜快十倍。
 2. <strong>抓包工具</strong>：Mac 上免费的 Proxyman / 开源 Charles 能截获 App 的全部请求和响应，像 X 光一样看清网络层。
-3. <strong>模拟弱网</strong>：模拟器菜单 Features → Network Link Conditioner（需从开发者网站下载工具），能模拟 3G、高延迟，测出"转圈半天"的体验问题。
+3. <strong>模拟弱网</strong>：模拟器菜单 Features → Network Link Conditioner（需从开发者网站下载工具），能模拟 3G、高延迟，测出「转圈半天」的体验问题。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 小贴士：请求没过 ATS？
 
 {class="mt-1"}
-如果请求一发出就报 "App Transport Security" 错误，八成是用了 http:// 明文地址。正式接口必须 HTTPS；本地调试临时开例外（Info.plist 加 NSAllowsLocalNetworking），上架前记得清干净。
+如果请求一发出就报 「App Transport Security」 错误，八成是用了 http:// 明文地址。正式接口必须 HTTPS；本地调试临时开例外（Info.plist 加 NSAllowsLocalNetworking），上架前记得清干净。
 :::
 
 {class="mt-1"}
@@ -184,7 +184,7 @@ OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "b
 {class="font-semibold mb-1"}
 本章小结
 
-- 先浏览器试 API、看懂 JSON，再写代码："预习"永远不亏
+- 先浏览器试 API、看懂 JSON，再写代码：「预习」永远不亏
 - API Key 藏进 xcconfig，绝不进代码库
 - Codable 模型 + URLSession async/await：字段对上，JSON 自动解析
 - loading/success/error 三段式状态是联网界面万金油

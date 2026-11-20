@@ -14,35 +14,22 @@ START = '            <!-- AUTOGEN:languages-{ver} START - 由 python -m bookkit 
 END = '            <!-- AUTOGEN:languages-{ver} END -->'
 
 BLOCK = """{start}
-            <div class="mb-12 fade-in">
-                <div class="text-center mb-8">
-                    <span class="{badge_classes} rounded-full text-sm font-semibold">
-                        <i class="{badge_icon} mr-1"></i>{badge_text}
-                    </span>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <section class="cw-versions">
+                <h3>{badge_text}</h3>
+                <ul class="cw-cards">
 
 {cards}
-                </div>
-            </div>
+                </ul>
+            </section>
 {end}"""
 
-CARD = """                <a href="{ver}/{code}.html" class="lang-card block {bg} {card_extra}">
-                    <div class="flex items-center gap-3 mb-2">
-                        {badge}
-                        <div>
-                            <h4 class="font-bold text-dark">{name}</h4>
-                            <p class="text-xs {label_classes} font-semibold">{label}</p>
-                        </div>
-                    </div>
-                    <p class="text-sm text-gray-600">{desc}</p>
+CARD = """                <li>
+                    <a href="{ver}/{code}.html">{name}</a><span class="cw-label">{label}</span>
+                    <p class="cw-desc">{desc}</p>
                     {tier}
-                </a>"""
+                </li>"""
 
-TIER_HTML = """<p class="text-xs mt-3 pt-2 border-t border-gray-200/70" title="{note}">
-                        <span class="text-amber-500 tracking-tight">{stars}</span>
-                        <span class="text-gray-500">{label}</span>
-                    </p>"""
+TIER_HTML = """<p class="cw-tier" title="{note}">{stars} {label}</p>"""
 
 RE_BLOCK = re.compile(r'[ \t]*<!-- AUTOGEN:languages-(?P<ver>v[\d.]+) START[^>]*-->'
                       r'[\s\S]*?<!-- AUTOGEN:languages-(?P=ver) END -->')
@@ -57,19 +44,7 @@ def _card(mf, version: str, code: str) -> str:
         desc = f'{meta.get("name", code)} {version}'
     suffix = card.get('label_suffix', '')
     label = f'{version} {suffix}'.strip()
-    # 语言的视觉徽标：优先 manifest badge 配置（文字徽章/FA 图标，去 emoji 化），
-    # 缺省回退 flag emoji。bg 为完整 Tailwind 背景类（渐变或单色）。
-    badge = meta.get('badge')
-    if badge and badge.get('fa'):
-        badge_html = ('<span class="text-3xl"><i class="' + badge['fa']
-                      + '" aria-hidden="true"></i></span>')
-    elif badge and badge.get('text'):
-        badge_html = ('<span class="' + badge.get('classes',
-                      'text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5')
-                      + '">' + badge['text'] + '</span>')
-    else:
-        badge_html = '<span class="text-3xl">' + meta.get('flag', '🌐') + '</span>'
-    # 审校分级：AI 的恶习是假装所有语言同等完美，这里如实标出实际投入
+    # 审校分级：如实标出各语言的实际投入，不假装同等完美
     q = meta.get('quality') or {}
     tier = TIER_HTML.format(
         stars=q.get('stars', ''),
@@ -78,12 +53,7 @@ def _card(mf, version: str, code: str) -> str:
     ) if q else ''
     return CARD.format(
         ver=version, code=code,
-        badge=badge_html,
-        bg=meta.get('gradient', 'bg-slate-50'),
-        card_extra=card.get('card_extra', 'border border-gray-200 rounded-xl p-5 hover:shadow-lg'),
-        flag=meta.get('flag', '🌐'),
         name=meta.get('name', code),
-        label_classes=card.get('label_classes', 'text-gray-500'),
         label=label, desc=desc, tier=tier)
 
 

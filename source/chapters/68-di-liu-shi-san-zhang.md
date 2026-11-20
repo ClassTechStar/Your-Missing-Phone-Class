@@ -10,11 +10,11 @@ kind: chapter
 ### 第六十三章：视图、状态与导航
 
 {class="chapter-intro mb-4"}
-单页面的玩具已经会做了。这一章解决两个"长大"问题：怎么在多个页面之间跳来跳去（导航），以及数据在页面之间怎么流动（状态管理）。学完本章，你就能搭出"列表 → 详情 → 编辑"这种经典的多页面 App 骨架。
+单页面的玩具已经会做了。这一章解决两个「长大」问题：怎么在多个页面之间跳来跳去（导航），以及数据在页面之间怎么流动（状态管理）。学完本章，你就能搭出「列表 → 详情 → 编辑」这种经典的多页面 App 骨架。
 
-#### 一、状态管理的"数据流全景"
+#### 一、状态管理的「数据流全景」
 
-SwiftUI 的状态工具不止 @State 一个。先看这张全景图，搞懂"什么时候用哪个"：
+SwiftUI 的状态工具不止 @State 一个。先看这张全景图，搞懂「什么时候用哪个」：
 
 ::: div .overflow-x-auto
 ```html
@@ -55,7 +55,7 @@ struct CounterView: View {
 
 给新手的粗暴建议：<strong>页面私有的用 @State，跨页面/有逻辑的用 @Observable 类</strong>。老教程里的 @StateObject/@ObservableObject 是上一代写法，能读懂即可，新代码按上面来。
 
-#### 二、NavigationStack：页面跳转的"栈"
+#### 二、NavigationStack：页面跳转的「栈」
 
 iOS 16 起，多页面导航用 <strong>NavigationStack</strong>——像一摞盘子，推一个进一个，返回时逐个弹出：
 
@@ -92,11 +92,11 @@ struct DetailView: View {
 ```
 :::
 
-NavigationLink 就是"能点的跳转链接"；<code class="inline">navigationTitle</code> 自动生成导航栏标题和返回按钮。要<strong>编程式跳转</strong>（比如点完"保存"自动返回）时，用 <code class="inline">@Environment(\.dismiss)</code> 关闭当前页面，这两招配合，90% 的导航需求就齐了。
+NavigationLink 就是「能点的跳转链接」；<code class="inline">navigationTitle</code> 自动生成导航栏标题和返回按钮。要<strong>编程式跳转</strong>（比如点完「保存」自动返回）时，用 <code class="inline">@Environment(\.dismiss)</code> 关闭当前页面，这两招配合，90% 的导航需求就齐了。
 
 #### 三、弹窗与底部标签：sheet 与 TabView
 
-除了"推页面"，还有两种经典交互：
+除了「推页面」，还有两种经典交互：
 
 ::: div .code-block
 :::inline div .code-head
@@ -139,9 +139,9 @@ struct MainTabView: View {
 经验法则：<strong>主流程用 NavigationStack 推页面（列表→详情），临时操作用 sheet 弹窗（新增、编辑、确认），并列的几大块用 TabView（底部标签）</strong>。三者组合，就是绝大多数 App 的骨架。
 :::
 
-#### 四、List：iOS 的"国民列表"
+#### 四、List：iOS 的「国民列表」
 
-iOS 上最常用、最有"苹果味"的组件就是 <strong>List</strong>——天然带分割线、滑动删除、点击高亮：
+iOS 上最常用、最有「苹果味」的组件就是 <strong>List</strong>——天然带分割线、滑动删除、点击高亮：
 
 ::: div .code-block
 :::inline div .code-head
@@ -166,15 +166,15 @@ struct RecordListView: View {
 ```
 :::
 
-列表 + NavigationLink + sheet + TabView——把这四样组合起来，你已经能搭出"账本列表 → 点开详情 → 点+弹录入"的完整 App 骨架了。下一章的记账本项目，就是这么搭的。
+列表 + NavigationLink + sheet + TabView——把这四样组合起来，你已经能搭出「账本列表 → 点开详情 → 点+弹录入」的完整 App 骨架了。下一章的记账本项目，就是这么搭的。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-来动手：搭一个"三页骨架"
+来动手：搭一个「三页骨架」
 
 #### 五、程序生命周期：前台与后台
 
-和安卓的 Activity 生命周期类似，iOS App 也有"出生、前台、后台、死亡"的状态变化。SwiftUI 里用 <code class="inline">scenePhase</code> 环境值观察：
+和安卓的 Activity 生命周期类似，iOS App 也有「出生、前台、后台、死亡」的状态变化。SwiftUI 里用 <code class="inline">scenePhase</code> 环境值观察：
 
 ::: div .code-block
 :::inline div .code-head
@@ -203,10 +203,10 @@ struct MyApp: App {
 ```
 :::
 
-典型用途：<strong>回前台时刷新数据，进后台时保存草稿</strong>。iOS 对后台运行管得很严，普通 App 进后台后很快被挂起（冻结），别指望在后台偷偷干重活；真要定时任务，用第 68 章的本地通知，而不是"后台常驻"。
+典型用途：<strong>回前台时刷新数据，进后台时保存草稿</strong>。iOS 对后台运行管得很严，普通 App 进后台后很快被挂起（冻结），别指望在后台偷偷干重活；真要定时任务，用第 68 章的本地通知，而不是「后台常驻」。
 
 {class="mt-1"}
-做一个假数据版本的记账本骨架：TabView 三个标签（账本/统计/设置）→ 账本页用 List 显示假数据、点行跳详情（NavigationStack）→ 右上角"+"按钮弹录入 sheet。不存数据、不联网，纯练骨架：这个骨架做好，第 65 章往里填真数据就是水到渠成。
+做一个假数据版本的记账本骨架：TabView 三个标签（账本/统计/设置）→ 账本页用 List 显示假数据、点行跳详情（NavigationStack）→ 右上角「+」按钮弹录入 sheet。不存数据、不联网，纯练骨架：这个骨架做好，第 65 章往里填真数据就是水到渠成。
 :::
 
 ::: div .chapter-summary
@@ -217,5 +217,5 @@ struct MyApp: App {
 - 新项目用 @Observable 宏写视图模型；老教程的 @ObservableObject 能读即可
 - NavigationStack 推页面；@Environment(\.dismiss) 编程式返回
 - 主流程推页面、临时操作弹 sheet、并列大块用 TabView
-- List 是"国民列表"：分割线、滑动删除开箱即用
+- List 是「国民列表」：分割线、滑动删除开箱即用
 :::

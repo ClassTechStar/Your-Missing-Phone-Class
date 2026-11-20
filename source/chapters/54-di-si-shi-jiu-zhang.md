@@ -10,23 +10,23 @@ kind: chapter
 ### 第四十九章：搭建开发环境——Android Studio 与第一个项目
 
 {class="chapter-intro mb-4"}
-工欲善其事，必先利其器。这一章咱们把"厨房"搭好：装好 Android Studio、跑通模拟器、创建人生第一个安卓项目，再把工程结构拆开看个明白。装好环境之后，你会第一次看到自己写的代码变成一个能点的按钮，这个瞬间，很多人会记一辈子。
+工欲善其事，必先利其器。这一章咱们把「厨房」搭好：装好 Android Studio、跑通模拟器、创建人生第一个安卓项目，再把工程结构拆开看个明白。装好环境之后，你会第一次看到自己写的代码变成一个能点的按钮，这个瞬间，很多人会记一辈子。
 
 #### 一、安装 Android Studio
 
 Android Studio 是谷歌官方的集成开发环境（IDE），免费，功能全家桶：写代码、看界面预览、调试、打包全在里面。安装四步：
 
 1. 打开官网 developer.android.com/studio，下载最新稳定版（2026 年 8 月是 Narwhal 之后的版本，Windows/Mac/Linux 都有）。
-2. 运行安装包，一路"下一步"，安装向导会自动带上 <strong>Android SDK</strong> 和模拟器组件。
+2. 运行安装包，一路「下一步」，安装向导会自动带上 <strong>Android SDK</strong> 和模拟器组件。
 3. 首次启动时按提示下载 SDK 组件（默认勾选就好，可能需要几分钟和几个 GB 的空间）。
-4. 完成后你会看到欢迎页，恭喜，"厨房"搭好了。
+4. 完成后你会看到欢迎页，恭喜，「厨房」搭好了。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 注意：硬件要求心里有数
 
 {class="mt-1"}
-可以用"真机调试"代替模拟器（本章第三节会讲）
+可以用「真机调试」代替模拟器（本章第三节会讲）
 :::
 
 #### 二、创建你的第一个项目
@@ -42,31 +42,31 @@ Android Studio 是谷歌官方的集成开发环境（IDE），免费，功能�
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 创建项目要填的三件事
 
-点 Finish 后，Android Studio 会用 Gradle 自动下载依赖、构建项目（第一次要等几分钟，之后每次会快很多）。构建完成后，你就有了一个能跑的 App，虽然它还只会显示一行"Hello Android!"。
+点 Finish 后，Android Studio 会用 Gradle 自动下载依赖、构建项目（第一次要等几分钟，之后每次会快很多）。构建完成后，你就有了一个能跑的 App，虽然它还只会显示一行「Hello Android!」。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 小贴士：包名的门道
 
 {class="mt-1"}
-包名（package name）就像 App 的"身份证号"，全球不能重复，上架后就不能改了。个人练习用 <code class="inline">com.example.xxx</code> 就行；正式产品要换成你自己的域名反写（比如 <code class="inline">com.你的名字.应用名</code>）。别用 <code class="inline">com.example</code> 上架——商店会拒收。
+包名（package name）就像 App 的「身份证号」，全球不能重复，上架后就不能改了。个人练习用 <code class="inline">com.example.xxx</code> 就行；正式产品要换成你自己的域名反写（比如 <code class="inline">com.你的名字.应用名</code>）。别用 <code class="inline">com.example</code> 上架——商店会拒收。
 :::
 
 #### 三、跑起来：模拟器与真机
 
-代码写好了，得找个"手机"来跑。你有两个选择：
+代码写好了，得找个「手机」来跑。你有两个选择：
 
 ##### 1. 模拟器（Emulator）
 
-模拟器是在电脑里虚拟出一台安卓手机。在 Android Studio 里打开 <kbd>Device Manager</kbd>，选 <kbd>Create Device</kbd>，挑一台设备（推荐 Pixel 系列），再选一个系统镜像（带 Google APIs 的），下载、启动。然后点工具栏的绿色三角 <kbd>Run</kbd>，几秒钟后，"手机"屏幕上就会出现你的 App。
+模拟器是在电脑里虚拟出一台安卓手机。在 Android Studio 里打开 <kbd>Device Manager</kbd>，选 <kbd>Create Device</kbd>，挑一台设备（推荐 Pixel 系列），再选一个系统镜像（带 Google APIs 的），下载、启动。然后点工具栏的绿色三角 <kbd>Run</kbd>，几秒钟后，「手机」屏幕上就会出现你的 App。
 
 ##### 2. 真机调试（更推荐）
 
 真机永远是最真实的测试环境：滑动手感、真网络、真传感器，模拟器都比不了。安卓真机调试很简单：
 
-1. 手机上打开 [设置] → [关于手机]，连点"版本号" 7 次，开启"开发者选项"。
+1. 手机上打开 [设置] → [关于手机]，连点「版本号」 7 次，开启「开发者选项」。
 2. 在 [开发者选项] 里打开 <strong>USB 调试</strong>。
-3. 用数据线连电脑，手机弹窗选"允许 USB 调试"。
+3. 用数据线连电脑，手机弹窗选「允许 USB 调试」。
 4. 回到 Android Studio，工具栏的设备下拉列表里就会出现你的手机，点 Run。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
@@ -74,7 +74,7 @@ Android Studio 是谷歌官方的集成开发环境（IDE），免费，功能�
 避坑提醒：USB 调试别常开
 
 {class="mt-1"}
-USB 调试相当于给电脑开了"后门"。在公共场合充电、连接不信任的电脑时，务必关闭 USB 调试，防止别人通过它读取你的数据。平时开发用完就关，养成习惯。
+USB 调试相当于给电脑开了「后门」。在公共场合充电、连接不信任的电脑时，务必关闭 USB 调试，防止别人通过它读取你的数据。平时开发用完就关，养成习惯。
 :::
 
 #### 四、工程结构拆解：每个文件是干嘛的
@@ -111,14 +111,14 @@ USB 调试相当于给电脑开了"后门"。在公共场合充电、连接不�
 图 2：新手必懂的工程结构（口诀：只碰 app/ 目录）
 :::
 
-- <strong>MainActivity.kt</strong>：App 的"大门"。用户点开图标，第一个被唤醒的就是它。现在的模板里它负责显示"Hello Android!"。
-- <strong>AndroidManifest.xml</strong>：App 的"户口本"——声明这个 App 叫什么、图标是哪个、有哪些页面、要用哪些权限（相机、定位等）。
+- <strong>MainActivity.kt</strong>：App 的「大门」。用户点开图标，第一个被唤醒的就是它。现在的模板里它负责显示「Hello Android!」。
+- <strong>AndroidManifest.xml</strong>：App 的「户口本」——声明这个 App 叫什么、图标是哪个、有哪些页面、要用哪些权限（相机、定位等）。
 - <strong>res/ 目录</strong>：资源仓库，存图片、图标、字符串、颜色。把文字放资源文件而不是写死在代码里，是安卓开发的好习惯（换语言、换主题都方便）。
 - <strong>build.gradle.kts</strong>：构建配方，声明最低支持版本、依赖哪些库（比如 Compose）。
 
-#### 五、小试牛刀：把"Hello"换成你的名字
+#### 五、小试牛刀：把「Hello」换成你的名字
 
-打开 MainActivity.kt，你会看到 Compose 模板生成的代码。找到 <code class="inline">Text("Hello Android!")</code> 这一行，把引号里的字换成你的名字，比如 <code class="inline">Text("你好，张三！这是我的第一个App")</code>，然后按 <kbd>Ctrl+R</kbd>（Mac 是 <kbd>Cmd+R</kbd>）重新运行。几秒后，模拟器上就显示了你的名字。
+打开 MainActivity.kt，你会看到 Compose 模板生成的代码。找到 <code class="inline">Text(「Hello Android!」)</code> 这一行，把引号里的字换成你的名字，比如 <code class="inline">Text(「你好，张三！这是我的第一个App」)</code>，然后按 <kbd>Ctrl+R</kbd>（Mac 是 <kbd>Cmd+R</kbd>）重新运行。几秒后，模拟器上就显示了你的名字。
 
 ::: div .code-block
 :::inline div .code-head
@@ -137,9 +137,9 @@ setContent {
 ```
 :::
 
-恭喜，你已经完成了一次完整的"改代码 → 编译 → 安装 → 运行"循环。这个循环，就是未来每一天的开发日常。趁热打铁，试着再改点别的：把字号调大、换个颜色，下一章我们就会学到这些"魔法"是怎么来的。
+恭喜，你已经完成了一次完整的「改代码 → 编译 → 安装 → 运行」循环。这个循环，就是未来每一天的开发日常。趁热打铁，试着再改点别的：把字号调大、换个颜色，下一章我们就会学到这些「魔法」是怎么来的。
 
-#### 六、常见报错急救：新手前两周的"急诊室"
+#### 六、常见报错急救：新手前两周的「急诊室」
 
 环境搭建和首次构建阶段，你会大概率遇到下面三种报错。别慌，都有解药：
 
@@ -157,12 +157,12 @@ setContent {
 小贴士：搜报错的方法论
 
 {class="mt-1"}
-报错信息第一行是最有价值的，把它原样复制进搜索引擎，加"android studio"关键词。别搜"我装不上环境怎么办"这种笼统问题，搜"Gradle sync failed: Could not resolve com.android.tools.build"这种具体错误。精确的问题，才有精确的答案。
+报错信息第一行是最有价值的，把它原样复制进搜索引擎，加「android studio」关键词。别搜「我装不上环境怎么办」这种笼统问题，搜「Gradle sync failed: Could not resolve com.android.tools.build」这种具体错误。精确的问题，才有精确的答案。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-来动手：完成你的"开发仪式感"清单
+来动手：完成你的「开发仪式感」清单
 
 {class="mt-1"}
 ① 装好 Android Studio 并跑通模拟器；② 用真机跑一次自己的 App 并截图留念；③ 把 Hello 文字改成你的名字；④ 把项目压缩存个档。做完这四步，你就可以在朋友圈宣布：我也是安卓开发者了（截图为证）。
