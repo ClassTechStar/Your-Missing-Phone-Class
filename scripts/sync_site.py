@@ -38,8 +38,9 @@ DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # announcements.json 是页面运行时 fetch 的公告数据，缺了会在控制台打 404
 # quiz.html + quiz/ 是章节自测页与题库，题库章节 id 是书页锚点，
 # 必须与站点上发布的那一版书对齐（当前 v1.9）——错版会点进死链。
+# robots.txt 是搜索引擎入口（方案 §6.4，sitemap 坐标写在里面）。
 ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json',
-          'errata.html', 'languages.html', 'quiz.html']
+          'errata.html', 'languages.html', 'quiz.html', 'robots.txt']
 ASSET_DIRS = ['icons', 'quiz', 'fonts']
 # 书页里的 og:image 是绝对地址（manifest 的 site_url + cover-og.png），
 # 图必须一起部署到站点根，否则分享卡片抓不到图。
@@ -222,10 +223,20 @@ def main():
     (dest / 'v1.9' / 'zh-CN.html').write_text(book_html, encoding='utf-8', newline='')
     plan.append(('v1.9/zh-CN.html', '单文件整本书'))
 
-    # sitemap：split 只写分章页，顶层页在这里补进去
+    # sitemap：split 只写分章页与语言入口，顶层页在这里补进去
     sm = patch_sitemap((split_root / 'sitemap.xml').read_text(encoding='utf-8'),
                        site_base())
     (dest / 'sitemap.xml').write_text(sm, encoding='utf-8', newline='')
+
+    # 19 种语言单文件入口（方案 §6.4：其余语言不能对搜索引擎 0 条、
+    # 对读者不可读）：每语言一个完整单文件，hreflang 的备选也指向这里。
+    v18_files = sorted((ROOT / 'v1.8').glob('*.html'))
+    (dest / 'v1.8').mkdir(exist_ok=True)
+    for f in v18_files:
+        html = fix_sw_scope(f.read_text(encoding='utf-8'))
+        (dest / 'v1.8' / f.name).write_text(html, encoding='utf-8', newline='')
+    plan.append((f'v1.8/（{len(v18_files)} 语言单文件）', '复制'))
+    print(f'  → v1.8/（{len(v18_files)} 语言单文件）           复制')
 
     # manifest：快捷方式按站点实际发布的内容裁剪（放在最后写，
     # 这样才能看到 v1.9/zh-CN.html 是否已就位）

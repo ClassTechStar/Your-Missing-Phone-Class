@@ -147,6 +147,21 @@ class TestChapterOg:
         assert 'content="书名"' not in out
 
 
+class TestHreflang:
+    """hreflang 互链（方案 §6.3）：多语言备选互链，孤本不发。"""
+
+    def test_hreflang_block_full(self):
+        alts = {'zh-CN': 'https://s/v1.9/zh-CN/x.html',
+                'en': 'https://s/v1.8/en.html#x'}
+        out = S.hreflang_block(alts, x_default='https://s/v1.9/zh-CN/x.html')
+        assert 'hreflang="zh-CN" href="https://s/v1.9/zh-CN/x.html"' in out
+        assert 'hreflang="en" href="https://s/v1.8/en.html#x"' in out
+        assert 'hreflang="x-default"' in out
+
+    def test_hreflang_block_single_alternate_skipped(self):
+        assert S.hreflang_block({'zh-CN': 'https://s/x.html'}) == ''
+
+
 class TestSplitAssets:
     def test_externalize_moves_big_blocks_only(self):
         assets = {}

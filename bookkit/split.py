@@ -182,6 +182,21 @@ def _json_ld(data: dict) -> str:
             + '</script>')
 
 
+def hreflang_block(alts: dict, x_default: str = '') -> str:
+    """hreflang 互链块（方案 §6.3）：同一内容的各语言入口互链；不足 2 个不发。
+
+    hreflang 语义要求互为翻译的等价页面，孤零零一条自我标注没有意义，
+    所以备选不足时整块省略，等译文页面落地自然出现。
+    """
+    if len(alts) < 2:
+        return ''
+    lines = [f'<link rel="alternate" hreflang="{code}" href="{url}">'
+             for code, url in alts.items()]
+    if x_default:
+        lines.append(f'<link rel="alternate" hreflang="x-default" href="{x_default}">')
+    return '\n'.join(lines) + '\n'
+
+
 def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
           out: Path = None) -> dict:
     book = B.load_book(root, book_path, lang)
@@ -232,13 +247,34 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     site = ((json.loads((root / 'manifest' / 'languages.json').read_text(encoding='utf-8'))
              .get('site_url') or '').rstrip('/'))
 
+    # ---- hreflang 备选表（方案 §6.3）----
+    # v1.9 的逐章译文尚在制作；现阶段备选指向 v1.8 各语言单文件的同 id 锚点
+    # （v1.8 无此章或无该语言成品则不发），将来 v1.9/<lang>/ 章节页落地，
+    # 把 alts_for 换成逐章 URL 即可，互链结构不变。
+    _mf = json.loads((root / 'manifest' / 'languages.json').read_text(encoding='utf-8'))
+    langs_meta = _mf.get('languages', {})
+    v18_ids = {c['id'] for c in json.loads((root / 'source' / 'book.json')
+                                           .read_text(encoding='utf-8'))['chapters']}
+    v18_files = {c for c in langs_meta if (root / 'v1.8' / f'{c}.html').is_file()}
+
+    def alts_for(cid: str = '') -> dict:
+        out = {}
+        for code, lm in langs_meta.items():
+            hl = lm.get('html_lang') or code
+            if code == lang:
+                out[hl] = (f'{site}/{version}/{lang}/{cid}.html' if cid
+                           else f'{site}/{version}/{lang}/index.html')
+            elif code in v18_files and (not cid or cid in v18_ids):
+                out[hl] = f'{site}/v1.8/{code}.html' + (f'#{cid}' if cid else '')
+        return out
+
     out = Path(out) if out else (root / 'dist' / 'site')
     page_dir = out / version / lang
     page_dir.mkdir(parents=True, exist_ok=True)
     assets = {}
 
     def page_shell(slim_head: str, title: str, canonical: str, ld: dict,
-                   prefetch: str = '', og: dict = None) -> str:
+                   prefetch: str = '', og: dict = None, hreflang: str = '') -> str:
         h = RE_TITLE.sub(f'<title>{title}</title>', slim_head, count=1)
         if og:
             h = _set_og(h, og)
@@ -248,7 +284,7 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         h = h.replace('</head>',
                       f'<link rel="canonical" href="{canonical}">\n'
                       f'{_json_ld(ld)}\n'
-                      f'{pre}'
+                      f'{pre}{hreflang}'
                       f'<link rel="stylesheet" href="assets/book.css">\n</head>', 1)
         return h
 
@@ -334,7 +370,8 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
                           idx_url,
                           {"@context": "https://schema.org", "@type": "Book",
                            "name": book_title, "inLanguage": lang,
-                           "url": idx_url, "hasPart": len(order)})
+                           "url": idx_url, "hasPart": len(order)},
+                          hreflang=hreflang_block(alts_for(), x_default=idx_url))
     emit('index.html', _rewrite_hrefs(
         idx_head + top_matter + '\n' + '\n'.join(toc_lines) + tail,
         idmap, 'index', frozenset(part_first)))
@@ -368,7 +405,8 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
               'og:type': 'article',
               'og:url': url}
         page = page_shell(head_slim, title, url, ld,
-                          prefetch=f'{next_id}.html' if next_id else '', og=og) \
+                          prefetch=f'{next_id}.html' if next_id else '', og=og,
+                          hreflang=hreflang_block(alts_for(cid), x_default=url)) \
             + '\n' + body + prevnext + tail
         page = _rewrite_hrefs(page, idmap, cid, frozenset(part_first))
         emit(f'{cid}.html', page)
@@ -377,6 +415,9 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     if site:
         urls = [f'{site}/{version}/{lang}/index.html'] + \
                [f'{site}/{version}/{lang}/{cid}.html' for cid in order]
+        # 各语言单文件入口（方案 §6.4：其余语言不能在 sitemap 里 0 条）；
+        # 顶层壳页面（站点首页/勘误/语言页/quiz/单文件）由 sync_site 补入。
+        urls += [f'{site}/v1.8/{c}.html' for c in sorted(v18_files)]
         sm = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
         sm += [f'  <url><loc>{u}</loc></url>' for u in urls]
