@@ -213,7 +213,14 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     tail = fix_sw_scope(tail)
     tail = tail.replace('</body>',
                         '<script src="assets/book.js" defer></script>\n</body>', 1)
+    import shutil
     (page_dir / 'assets').mkdir(exist_ok=True)
+    # MiSans：CSS 里的 @font-face 用 ../fonts/ 相对路径，字体随页面树一起输出
+    font_src = root / 'assets' / 'fonts' / 'MiSans-Normal.ttf'
+    if font_src.is_file():
+        fonts_out = page_dir / 'fonts'
+        fonts_out.mkdir(exist_ok=True)
+        shutil.copy2(font_src, fonts_out / 'MiSans-Normal.ttf')
     for name, body in assets.items():
         for a, b in PATH_FIXES:      # 外置 JS 里的相对路径同样要降级
             body = body.replace(a, b)
@@ -222,7 +229,6 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
 
     # 输出根 = 可直接部署的自包含站点树：补齐 PWA 资产（sw/manifest/图标/公告）
     # 以及勘误页与语言分级页（章末「报告错误」入口指向它们）
-    import shutil
     for fname in ('sw.js', 'manifest.webmanifest', 'announcements.json',
                   'errata.html', 'languages.html'):
         src = root / fname

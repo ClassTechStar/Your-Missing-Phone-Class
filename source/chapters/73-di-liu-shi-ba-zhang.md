@@ -124,7 +124,7 @@ iOS 生态还有两个"只此一家"的进阶玩法：<strong>小组件（Widget
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 AI 辅助 iOS 开发的四个场景
 
-具体方法论——怎么给 AI 下指令、怎么验收、怎么避坑——完整的 11 章内容在本书第七篇《AI编程实战篇》（第37-47章）里，强烈建议配合阅读：<strong>Swift 语法交给本篇，AI 协作的心法交给第七篇</strong>。
+具体方法论，怎么给 AI 下指令、怎么验收、怎么避坑，完整的 11 章内容在本书第七篇《AI编程实战篇》（第37-47章）里，强烈建议配合阅读：<strong>Swift 语法交给本篇，AI 协作的心法交给第七篇</strong>。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

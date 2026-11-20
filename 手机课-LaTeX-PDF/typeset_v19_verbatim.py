@@ -27,7 +27,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 REPO = Path(r'C:\Users\18948\Documents\GitHub\Your-Missing-Phone-Class')
-HTML = REPO / '你缺失的那门手机课V1.9Fixed.html'
+HTML = REPO / 'v1.9' / 'zh-CN.html'
 BASE = Path(r'C:\Users\18948\AppData\Local\Temp\v19verbatim')
 OUT_PDF = REPO / '手机课-LaTeX-PDF' / 'pdf' / 'v1.9-verbatim'
 MIKTEX = r'C:\Program Files\MiKTeX\miktex\bin\x64'

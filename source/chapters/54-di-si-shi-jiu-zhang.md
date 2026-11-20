@@ -49,7 +49,7 @@ Android Studio 是谷歌官方的集成开发环境（IDE），免费，功能�
 <i class="fas fa-lightbulb mr-2"></i>小贴士：包名的门道
 
 {class="mt-1"}
-包名（package name）就像 App 的"身份证号"，全球不能重复，上架后就不能改了。个人练习用 <code class="inline">com.example.xxx</code> 就行；正式产品要换成你自己的域名反写（比如 <code class="inline">com.你的名字.应用名</code>）。别用 <code class="inline">com.example</code> 上架——商店会拒收。
+包名（package name）就像 App 的"身份证号"，全球不能重复，上架后就不能改了。个人练习用 <code class="inline">com.example.xxx</code> 就行；正式产品要换成你自己的域名反写（比如 <code class="inline">com.你的名字.应用名</code>）。别用 <code class="inline">com.example</code> 上架：商店会拒收。
 :::
 
 #### 三、跑起来：模拟器与真机
@@ -112,7 +112,7 @@ USB 调试相当于给电脑开了"后门"。在公共场合充电、连接不�
 :::
 
 - <strong>MainActivity.kt</strong>：App 的"大门"。用户点开图标，第一个被唤醒的就是它。现在的模板里它负责显示"Hello Android!"。
-- <strong>AndroidManifest.xml</strong>：App 的"户口本"——声明这个 App 叫什么、图标是哪个、有哪些页面、要用哪些权限（相机、定位等）。
+- <strong>AndroidManifest.xml</strong>：App 的"户口本"，声明这个 App 叫什么、图标是哪个、有哪些页面、要用哪些权限（相机、定位等）。
 - <strong>res/ 目录</strong>：资源仓库，存图片、图标、字符串、颜色。把文字放资源文件而不是写死在代码里，是安卓开发的好习惯（换语言、换主题都方便）。
 - <strong>build.gradle.kts</strong>：构建配方，声明最低支持版本、依赖哪些库（比如 Compose）。
 

@@ -31,7 +31,7 @@ kind: supplement
 
 - <strong>动画速度调节（窗口动画缩放 / 过渡动画缩放 / 动画程序时长缩放）</strong>：这三个选项控制打开App、切换页面时的动画时长。默认是1x，调到0.5x会让手机"看起来"更快（实际上程序运行速度没变，只是动画变快了），调到关闭则直接无动画跳转。多数极客会设为0.5x，既保留过渡感又显快；完全关闭会让操作显得生硬，并且可能掩盖程序真实的卡顿，反而让你误以为"很流畅"。
 - <strong>强制GPU渲染（Force GPU Rendering）</strong>：强制所有2D绘图通过GPU而非CPU处理。在老旧机型或某些App优化不佳时能提升滚动流畅度，但也会增加GPU负载和耗电。现代手机默认已大量使用GPU渲染，这个开关对中高端机型影响有限，更多是历史遗留选项，普通用户保持默认即可。
-- <strong>显示GPU呈现模式分析（Profile GPU Rendering）</strong>：在屏幕上以柱状图实时显示每帧的渲染耗时，绿色横线代表16.6ms（60fps的帧时间阈值）。柱子超过绿线就说明掉帧了。这是开发者排查App卡顿的利器，普通用户也可以用它来对比哪个App优化得差——比如某个App滚动时柱子经常飙到红线以上，那基本就是它的锅。
+- <strong>显示GPU呈现模式分析（Profile GPU Rendering）</strong>：在屏幕上以柱状图实时显示每帧的渲染耗时，绿色横线代表16.6ms（60fps的帧时间阈值）。柱子超过绿线就说明掉帧了。这是开发者排查App卡顿的利器，普通用户也可以用它来对比哪个App优化得差，比如某个App滚动时柱子经常飙到红线以上，那基本就是它的锅。
 
 ##### 后台与续航相关：
 
@@ -52,7 +52,7 @@ kind: supplement
 
 - <strong>开关的作用</strong>：相当于向厂商声明"我同意放弃保修、自负风险，请允许我解锁BL"。如果这个开关是关闭的，任何解锁BL的命令都会被直接拒绝。
 - <strong>与BL锁的关系</strong>：OEM解锁是"申请资格"，BL解锁才是"实际操作"。前者在手机设置里点一下就行，后者需要去厂商官网申请解锁码、用电脑跑fastboot命令（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>），二者缺一不可。
-- <strong>恢复出厂设置会重置吗</strong>：会。"OEM解锁"开关在恢复出厂后会回到关闭状态，但BL锁一旦解锁就是物理级别的状态，不会因为恢复出厂而重新上锁——需要手动执行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> 才能重新上锁。
+- <strong>恢复出厂设置会重置吗</strong>：会。"OEM解锁"开关在恢复出厂后会回到关闭状态，但BL锁一旦解锁就是物理级别的状态，不会因为恢复出厂而重新上锁：需要手动执行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> 才能重新上锁。
 - <strong>什么时候应该打开</strong>：除非你确定要刷机或Root，否则保持关闭。它和"USB调试"是两个独立开关，刷机时通常需要同时打开。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -184,7 +184,7 @@ Root操作有一定风险，可能导致手机变砖（无法开机）。如果�
 
 ##### 为什么 Root 后这些 App 会失效：
 
-应用通过 Play Integrity API 向 Google 服务器发起认证请求，Google 会检查设备的多项指标——Bootloader 锁定状态、系统分区是否被修改、是否存在 su 二进制文件、SELinux 是否处于宽松模式等。任何一项异常都会导致返回的认证级别降低或为空，银行 App 一看"设备不安全"，自然就拒绝服务了。
+应用通过 Play Integrity API 向 Google 服务器发起认证请求，Google 会检查设备的多项指标：Bootloader 锁定状态、系统分区是否被修改、是否存在 su 二进制文件、SELinux 是否处于宽松模式等。任何一项异常都会导致返回的认证级别降低或为空，银行 App 一看"设备不安全"，自然就拒绝服务了。
 
 ##### 现代隐藏方案：Magisk Hide / Shamiko / Zygisk：
 

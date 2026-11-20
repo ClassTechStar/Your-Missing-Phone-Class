@@ -143,9 +143,9 @@ println(scores.sum())       // 255（求和，第 54 章的记账本要用）
 ```
 :::
 
-三个新手必须刻进脑子的事实。<strong>第一，下标从 0 开始</strong>：第一个元素是 <code class="inline">fruits[0]</code> 不是 <code class="inline">fruits[1]</code>——全世界程序员都被这个惯例绊过一脚，绊一次就记住了。<strong>第二，listOf 创建的是只读列表</strong>：往 fruits 里"添加"元素会编译报错。想要能增删的列表，用 <code class="inline">mutableListOf(...)</code>，配合 <code class="inline">add()</code>、<code class="inline">remove()</code> 使用。看出规律没有？可读写的版本在名字里就写了 "mutable"——Kotlin 把"会不会变"又写进了名字里，跟 val/var 一脉相承。<strong>第三，列表里的元素类型必须一致</strong>：<code class="inline">listOf(1, 2, 3)</code> 是 Int 列表，往里塞字符串会被编译器拦下。泛型 T 的意思就是"这个盒子里装的都是 T 这种类型"。
+三个新手必须刻进脑子的事实。<strong>第一，下标从 0 开始</strong>：第一个元素是 <code class="inline">fruits[0]</code> 不是 <code class="inline">fruits[1]</code>——全世界程序员都被这个惯例绊过一脚，绊一次就记住了。<strong>第二，listOf 创建的是只读列表</strong>：往 fruits 里"添加"元素会编译报错。想要能增删的列表，用 <code class="inline">mutableListOf(...)</code>，配合 <code class="inline">add()</code>、<code class="inline">remove()</code> 使用。看出规律没有？可读写的版本在名字里就写了 "mutable"，Kotlin 把"会不会变"又写进了名字里，跟 val/var 一脉相承。<strong>第三，列表里的元素类型必须一致</strong>：<code class="inline">listOf(1, 2, 3)</code> 是 Int 列表，往里塞字符串会被编译器拦下。泛型 T 的意思就是"这个盒子里装的都是 T 这种类型"。
 
-除了 List，还有两个近亲混个脸熟：<strong>Set</strong>（<code class="inline">setOf(...)</code>）不允许重复元素，适合装"去重后的标签"；<strong>Map</strong>（<code class="inline">mapOf("姓名" to "张三", "城市" to "杭州")</code>）是键值对，适合装"一个东西的多个属性"。本节先把 List 玩熟。Set 和 Map 遇到时再补——它们在本书项目里出场的机会比 List 少。
+除了 List，还有两个近亲混个脸熟：<strong>Set</strong>（<code class="inline">setOf(...)</code>）不允许重复元素，适合装"去重后的标签"；<strong>Map</strong>（<code class="inline">mapOf("姓名" to "张三", "城市" to "杭州")</code>）是键值对，适合装"一个东西的多个属性"。本节先把 List 玩熟。Set 和 Map 遇到时再补，它们在本书项目里出场的机会比 List 少。
 
 List 的几个查询动作顺手记齐：<code class="inline">fruits.indexOf("香蕉")</code> 找位置（找不到返回 -1），<code class="inline">"香蕉" in fruits</code> 判断在不在（返回 Boolean，比 contains 更顺口的写法），<code class="inline">fruits.first()</code> 和 <code class="inline">fruits.last()</code> 拿头尾，<code class="inline">fruits.isEmpty()</code> 问是否为空。这些方法在 List 上几乎都有对应版本，记住"东西都在列表的方法里"这个感觉，具体名字用时查补全列表就行，代码补全会教你一切。
 
@@ -191,7 +191,7 @@ println(add(3, 5))            // 输出：8
 
 "返回类型写在哪"这个记忆点容易忘，给你一个顺口的读法：<strong>从左往右读一遍，就是函数的说明书</strong>——"fun greet，输入 name（String），输出 String"。把签名当句子读，看陌生代码时特别管用：先读函数签名，猜它干什么，再看函数体验证，这个顺序和"先看封面再看正文"一样自然。
 
-表达式函数体（单行简写）值得多说两句：函数体只有一行时，花括号和 return 都能省，等号右边就是返回值。省掉的还有返回类型声明——编译器能从 <code class="inline">a + b</code> 推断出返回 Int，跟 val 的类型推断一个道理。什么时候不省？逻辑超过一行、或者你想让"返回什么"写明在纸面上（第八节会讲这是好习惯），就老老实实用花括号。
+表达式函数体（单行简写）值得多说两句：函数体只有一行时，花括号和 return 都能省，等号右边就是返回值。省掉的还有返回类型声明，编译器能从 <code class="inline">a + b</code> 推断出返回 Int，跟 val 的类型推断一个道理。什么时候不省？逻辑超过一行、或者你想让"返回什么"写明在纸面上（第八节会讲这是好习惯），就老老实实用花括号。
 
 来写一个"真事"函数，感受一下函数怎么把现实问题装进去。场景：周五聚餐，四个人 AA，总消费 216.4 元，各付多少？写成人话是"总价除以人数"，写成函数：
 
@@ -210,7 +210,7 @@ println("每人应付：$share 元")   // 每人应付：54.1 元
 ```
 :::
 
-这个函数小到不值一提，但注意它做对了三件事：参数有名字（看调用就知道传什么）、返回类型明确（Double，钱要用小数）、逻辑只有一行（没有多余动作）。真实项目里的函数就是这样的放大版——名字说清楚自己干嘛，参数说明白需要什么，函数体只做一件事。以后你写一百行的函数时，随时问自己一句："它还能不能拆成几个 splitBill 这样的零件？"拆到不能再拆，你的代码就比九成新手干净了。
+这个函数小到不值一提，但注意它做对了三件事：参数有名字（看调用就知道传什么）、返回类型明确（Double，钱要用小数）、逻辑只有一行（没有多余动作）。真实项目里的函数就是这样的放大版，名字说清楚自己干嘛，参数说明白需要什么，函数体只做一件事。以后你写一百行的函数时，随时问自己一句："它还能不能拆成几个 splitBill 这样的零件？"拆到不能再拆，你的代码就比九成新手干净了。
 
 还有一个特殊的返回类型会遇到：<strong>Unit</strong>。函数不返回任何东西时，返回类型是 Unit（可以不写，编译器自动补）。它就像 Swift 里的 Void，"我干完活就走，不带回东西"。打印日志、更新界面这类函数十有八九返回 Unit。
 
@@ -345,7 +345,7 @@ for (i in 1..10 step 2) println(i)  // 1 3 5 7 9（隔一个）
 
 循环控制词只有两个，借用很多语言的传统：<strong>break</strong>（跳出整个循环）和 <strong>continue</strong>（跳过本轮、进下一轮）。找东西找到就停用 break，过滤掉不合适的用 continue。while 循环（"满足条件就一直做"）在安卓业务代码里出现频率不高，认识即可：<code class="inline">while (条件) { ... }</code>。
 
-最后提醒一个现代 Kotlin 的事实：<strong>很多"循环"其实可以不用循环写</strong>。想给每个水果打印一行？<code class="inline">fruits.forEach { println(it) }</code>。想挑出所有带"果"字的？<code class="inline">fruits.filter { it.contains("果") }</code>。这些"集合连招"是第六节的主角，for 循环帮你建立直觉，连招帮你写出更简洁的正式代码——两者都要会，先会 for，再拥抱连招。
+最后提醒一个现代 Kotlin 的事实：<strong>很多"循环"其实可以不用循环写</strong>。想给每个水果打印一行？<code class="inline">fruits.forEach { println(it) }</code>。想挑出所有带"果"字的？<code class="inline">fruits.filter { it.contains("果") }</code>。这些"集合连招"是第六节的主角，for 循环帮你建立直觉，连招帮你写出更简洁的正式代码，两者都要会，先会 for，再拥抱连招。
 
 #### 四、空安全：Kotlin 的"保命符"
 
@@ -602,14 +602,14 @@ fun render(state: UiState): String = when (state) {
 这一节的对照最有意思，因为 Swift 给出的方案和 Kotlin 不同但目标一致，"把数据建模做简单、把状态穷尽做安全"：
 
 - <strong>data class ≈ struct</strong>：Swift 的结构体（struct）自动获得按值的相等比较和"成员逐一构造"，日常装数据用它。Kotlin 用 data class 达成同样的体验。区别在内存语义（Swift struct 是值类型、复制即拷贝；Kotlin data class 是引用类型、copy 才产生新对象），初学阶段感受不到，先不深究。
-- <strong>密封类 ≈ 带关联值的 enum</strong>：Swift 的 enum 可以为每种情况"携带数据"（associated values）：<code class="inline">enum UiState { case loading; case success([String]); case error(String) }</code>。Kotlin 的 sealed class + data class 子类是同一件事的另一种写法。两边都靠 switch/when 做穷尽检查——漏分支编译报错的行为两边一致。
+- <strong>密封类 ≈ 带关联值的 enum</strong>：Swift 的 enum 可以为每种情况"携带数据"（associated values）：<code class="inline">enum UiState { case loading; case success([String]); case error(String) }</code>。Kotlin 的 sealed class + data class 子类是同一件事的另一种写法。两边都靠 switch/when 做穷尽检查，漏分支编译报错的行为两边一致。
 - <strong>协程预告 ≈ async/await</strong>：下一节讲协程时你会再对一次表，Swift 的 async/await 和 Kotlin 的 suspend 概念同源，都是"让等待不阻塞"。先记住这条线索。
 
 总结成一个记忆框架：<strong>Kotlin 用"类"的世界解决这两件事（data class 装数据、sealed class 圈状态），Swift 用"值与枚举"的世界解决（struct 装数据、enum 圈状态）。</strong>路线不同，终点相同。所以"学了两门语言会不会乱"的担心可以放下了——它们在你脑子里会自动形成一张对照网，越学越牢。
 
 #### 六、lambda 与高阶函数：Kotlin 的"语法糖"
 
-安卓代码里你会天天看到 <code class="inline">{ ... }</code> 这种"没名字的函数"，它叫 <strong>lambda（匿名函数）</strong>。Button 的 <code class="inline">onClick = { count++ }</code> 就是一个 lambda——把"点击后做什么"打包成一坨，递给按钮。
+安卓代码里你会天天看到 <code class="inline">{ ... }</code> 这种"没名字的函数"，它叫 <strong>lambda（匿名函数）</strong>。Button 的 <code class="inline">onClick = { count++ }</code> 就是一个 lambda，把"点击后做什么"打包成一坨，递给按钮。
 
 ::: div .code-block
 :::inline div .code-head
@@ -758,7 +758,7 @@ fun main() = runBlocking {
 ```
 :::
 
-三个新面孔，各给一句话解释。<strong>suspend</strong>：能"暂停再恢复"的函数标记，本例里 delay 就是标准库的 suspend 函数——它暂停的是当前协程，不是整个程序。<strong>launch</strong>："开一个后台任务"，花括号里的东西去别处跑，本行立刻往下走。<strong>runBlocking</strong>："开一个能等协程的容器"，Playground 和 main 函数里用它兜底；真实安卓项目里你几乎不用它，界面有专门的容器（viewModelScope，第 53 章的主角）。现在只需要建立直觉：<strong>慢活儿丢进 launch，界面该干嘛干嘛，活儿干完自动回来</strong>。
+三个新面孔，各给一句话解释。<strong>suspend</strong>：能"暂停再恢复"的函数标记，本例里 delay 就是标准库的 suspend 函数，它暂停的是当前协程，不是整个程序。<strong>launch</strong>："开一个后台任务"，花括号里的东西去别处跑，本行立刻往下走。<strong>runBlocking</strong>："开一个能等协程的容器"，Playground 和 main 函数里用它兜底；真实安卓项目里你几乎不用它，界面有专门的容器（viewModelScope，第 53 章的主角）。现在只需要建立直觉：<strong>慢活儿丢进 launch，界面该干嘛干嘛，活儿干完自动回来</strong>。
 
 协程的完整故事（作用域、异常、Flow）是第 53 章的主菜，这里只上一盘开胃菜，够你在 Playground 里玩"同时跑三个 delay、看谁先打印"的小实验即可。与 Swift 对照：协程 ≈ Swift 的 async/await，suspend 函数 ≈ async 函数，launch ≈ Task。两边都是"用同步的写法干异步的活"，这是现代语言的又一次殊途同归，也是本章最后一次对照：你会发现每次对照，"现代语言进化论"都在加强。
 
@@ -767,7 +767,7 @@ fun main() = runBlocking {
 <i class="fas fa-lightbulb mr-2"></i>小贴士：协程最容易记错的一件事
 
 {class="mt-1"}
-协程不等于多线程，它是"可暂停的任务"。大多数时候你不需要关心它跑在哪个线程上——框架已经替你安排好了（界面相关的活儿在主线程，网络文件在后台线程，第 53 章细说）。新手阶段对协程的过度关心，九成九是提前焦虑。
+协程不等于多线程，它是"可暂停的任务"。大多数时候你不需要关心它跑在哪个线程上，框架已经替你安排好了（界面相关的活儿在主线程，网络文件在后台线程，第 53 章细说）。新手阶段对协程的过度关心，九成九是提前焦虑。
 :::
 
 为什么"别挡界面"这件事如此重要，值得单独用语言特性来解决？给你一个画面：界面绘制由主线程负责，主线程每秒要画几十帧：就像翻页动画，翻得够快才流畅。如果主线程被一个"等 2 秒的网络请求"占住，动画就翻不动了：手指滑动没反应、按钮按下去没动静、系统弹"应用未响应"。用户体验里最致命的几种差评，全都指向这一个原因。所以现代语言纷纷把"让等待不挡路"做成语言级能力：Kotlin 的协程、Swift 的 async/await、Dart 的 async/await，出发点一模一样。
@@ -808,14 +808,14 @@ Playground 一周练习路径（每天 20-30 分钟）
 
 这张表的用法有三个讲究。第一，<strong>先写再看</strong>：每天的任务先自己敲，卡住了再翻本章对应小节，最后才对照本章示例。第二，<strong>允许抄自己的</strong>：第 6、7 天大量复用前面的代码，复用是真实开发的常态，不是作弊。第三，<strong>第 7 天的成品存档</strong>：Playground 支持保存和分享链接（右上角 Share），把你的迷你记账本链接存下来，这是你学习过程的第一个"作品"。
 
-七天之后怎么走？答案在下一章，同样的语法，开始给界面用。你会发现第 51 章的 Compose 代码读起来亲切得可疑：满屏的 val、lambda、具名参数——对，全是你这两周练过的东西。语言学习到界面开发，不是换赛道，是换场景。
+七天之后怎么走？答案在下一章，同样的语法，开始给界面用。你会发现第 51 章的 Compose 代码读起来亲切得可疑：满屏的 val、lambda、具名参数，对，全是你这两周练过的东西。语言学习到界面开发，不是换赛道，是换场景。
 
 #### 八、Kotlin 2.x 值得留意的变化
 
 最后交代一下版本：这一章学的语法主干多年没变，但编译器换了代，Kotlin 2.x 背后的 K2 编译器。几处体验差异值得知道，尤其是从旧教程里抄代码的时候：
 
 - <strong>K2 编译器</strong>：编译更快、类型推断与错误信息更清楚；旧项目升级后，个别边界写法可能报新警告，按提示补上显式类型就好。
-- <strong>Compose 插件由 Kotlin 管</strong>：<code class="inline">org.jetbrains.kotlin.plugin.compose</code> 与 Kotlin 版本绑定，别再手动指定编译器扩展版本——上一章装环境时也提过这条。
+- <strong>Compose 插件由 Kotlin 管</strong>：<code class="inline">org.jetbrains.kotlin.plugin.compose</code> 与 Kotlin 版本绑定，别再手动指定编译器扩展版本：上一章装环境时也提过这条。
 - <strong>显式类型是好习惯</strong>：空安全之外，给公开函数写明返回类型、给回调写明参数类型，既方便人读，也方便智能体改。
 - <strong>协程仍是异步主线</strong>：suspend + CoroutineScope 的组合没变；注意在 ViewModel 作用域里启动，别用全局作用域。
 - <strong>与 ArkTS 的对照</strong>：后面鸿蒙篇的 ArkTS 同样强调显式类型与严格模式；两边都学的话，这一点是共通的。
@@ -851,7 +851,7 @@ K2 时代的报错信息已经相当"说人话"，但英文报错依然会吓到
 - <strong>误区一：以为 data class 的字段要写成 var 才能改。</strong>其实恰恰相反，data class 的字段默认 val，改数据靠 copy 造新对象。写成 var 虽然编译器不拦，但会破坏"数据不可变"的默契，界面开发里会踩到状态混乱的坑。
 - <strong>误区二：以为 lambda 是"语法玩具"，正式项目里要少用。</strong>恰恰相反，连招（filter/map）、回调（onClick）、Compose 的界面声明，全都是 lambda。它是正式项目的主力写法，不是玩具。
 - <strong>误区三：以为密封类就是"普通类的父类"，随便继承。</strong>密封类的全部价值在于"子类穷尽且圈定"，子类必须和它写在同一个包的同一层结构里，圈外继承直接编译报错。正因为圈死了，when 才敢做穷尽检查。别把它当普通继承用。
-- <strong>误区四：以为扩展函数会"污染"别人的类。</strong>扩展函数的作用域由你导入的方式决定——不 import 就看不见，完全无害。它不修改原类的字节码，只是"在你自己的文件里多了一个函数"。可以放心大胆地写。
+- <strong>误区四：以为扩展函数会"污染"别人的类。</strong>扩展函数的作用域由你导入的方式决定：不 import 就看不见，完全无害。它不修改原类的字节码，只是"在你自己的文件里多了一个函数"。可以放心大胆地写。
 - <strong>误区五：以为 fold 比 sum 高级，处处该用 fold。</strong>fold 是 sum 的"通用版"，通用意味着啰嗦。简单求和用 sum，只有"要带着中间值做复杂累积"（比如累乘、按条件跳着加）才请出 fold。用最顺手的工具，不炫技。
 
 #### 实战演练：迷你记账本（Playground 完整版）
@@ -907,7 +907,7 @@ when (report) {
 
 三十行出头的代码里，val、字符串模板、data class、扩展函数、四招连招、组合技；sealed class、when 穷尽检查全部到场：这一章教的东西，一件不少。跑起来看看输出，然后用"三遍法"通读一遍：第一遍看骨架，第二遍跟 total 这条数据从 sum 到 report 的旅程，第三遍抠你不熟的写法。
 
-这份合练还有第二层价值：<strong>它是第 54 章真实记账本 App 的"无界面预演"</strong>。到时候你会发现，真实项目只是把 listOf 换成了数据库、把 println 换成了界面显示，中间的数据加工逻辑和这里的三十行几乎逐行对应。语法课上出的力气，每一分都会在项目课上还给你——这就是"先学语言再看项目"路线的回报方式。
+这份合练还有第二层价值：<strong>它是第 54 章真实记账本 App 的"无界面预演"</strong>。到时候你会发现，真实项目只是把 listOf 换成了数据库、把 println 换成了界面显示，中间的数据加工逻辑和这里的三十行几乎逐行对应。语法课上出的力气，每一分都会在项目课上还给你，这就是"先学语言再看项目"路线的回报方式。
 
 改这份合练的三个挑战，比照抄一遍收获大十倍：加一个"分类"筛选函数，输入分类名返回该类的所有记录（filter 一行的事）；给 Record 加一个 val 的时间字段，让大额列表按时间排（sortedByDescending 换个字段）；让空状态的提示更贴心：不要"本周还没有记账"，换成鼓励性的文案。改代码比写代码快，也比写代码涨功力。这三处小改动各只需一两行。
 

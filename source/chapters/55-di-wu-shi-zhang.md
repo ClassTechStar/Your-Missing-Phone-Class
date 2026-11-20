@@ -54,7 +54,7 @@ Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>
 
 #### 二、函数：把逻辑打包成"按钮"
 
-函数是一段有名字的逻辑，像遥控器上的按钮——按一下（调用），就执行一串动作。Kotlin 里用 <code class="inline">fun</code> 声明：
+函数是一段有名字的逻辑，像遥控器上的按钮，按一下（调用），就执行一串动作。Kotlin 里用 <code class="inline">fun</code> 声明：
 
 ::: div .code-block
 :::inline div .code-head
@@ -146,7 +146,7 @@ println(len)
 
 #### 五、类与对象：造"零件"的模具
 
-类是对象的"模具"，对象是类的"成品"。安卓里的一切，页面、按钮、数据——都是对象。Kotlin 里有个神器叫 <strong>data class</strong>（数据类），专门用来"装数据"，一行顶 Java 几十行：
+类是对象的"模具"，对象是类的"成品"。安卓里的一切，页面、按钮、数据，都是对象。Kotlin 里有个神器叫 <strong>data class</strong>（数据类），专门用来"装数据"，一行顶 Java 几十行：
 
 ::: div .code-block
 :::inline div .code-head

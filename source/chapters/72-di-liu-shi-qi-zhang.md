@@ -77,7 +77,7 @@ final class AmountTests: XCTestCase {
 
 #### 三、签名与打包：给 App 盖上"印章"
 
-每个 iOS App 都必须<strong>签名</strong>才能安装——证明"这个包出自你，没被篡改"。层级关系：
+每个 iOS App 都必须<strong>签名</strong>才能安装：证明"这个包出自你，没被篡改"。层级关系：
 
 - <strong>学习阶段</strong>：免费 Apple ID + Xcode 自动签名（Personal Team），真机可跑，7 天续期一次。
 - <strong>分发阶段</strong>：付费开发者账号（99 美元/年）签发证书与描述文件，才能上架和长期安装。
@@ -108,7 +108,7 @@ final class AmountTests: XCTestCase {
 :::
 
 - <strong>注册</strong>：developer.apple.com，个人账号 99 美元/年。
-- <strong>素材</strong>：图标（1024×1024，别带圆角——苹果自己切）、截图（iPhone 各尺寸）、描述、隐私政策链接。
+- <strong>素材</strong>：图标（1024×1024，别带圆角，苹果自己切）、截图（iPhone 各尺寸）、描述、隐私政策链接。
 - <strong>隐私问卷</strong>：如实申报收集了哪些数据：不联网的记账本可以"不收集任何数据"。
 - <strong>审核</strong>：首次提交常有 1-7 天等待，被拒就按"审核备注"逐条改：苹果的拒绝理由通常写得非常具体，照做即可。
 - <strong>TestFlight</strong>：上架前先把测试版发给朋友内测（最多 10000 人），收集一轮反馈再正式提交，专业范儿十足。
@@ -119,7 +119,7 @@ final class AmountTests: XCTestCase {
 
 - <strong>图标</strong>：1024×1024，别用截图凑合。没设计能力就用 AI 工具生成一个简洁图形，<strong>在桌面上缩小后还能一眼认出</strong>才算合格。
 - <strong>截图</strong>：至少 2 套（iPhone 主流尺寸），展示最核心的功能场景；每张配一句人话文案（"一秒记一笔"比"高效的记账解决方案"好十倍）。
-- <strong>描述</strong>：第一句说清"这是什么 + 给谁用"，别堆砌"最专业、最强"——真诚比夸张有效。
+- <strong>描述</strong>：第一句说清"这是什么 + 给谁用"，别堆砌"最专业、最强"，真诚比夸张有效。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

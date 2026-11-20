@@ -144,7 +144,7 @@ fun WeatherContent(data: WeatherResponse) {
 
 - <strong>搜索框</strong>：顶部 TextField，输城市名点搜索（键盘上设"搜索"动作，回车即搜）。
 - <strong>天气卡片</strong>：大字号温度（26.5°）、天气描述（晴）、湿度、城市名。
-- <strong>收藏城市</strong>：把常看的城市存进 DataStore，下次打开自动查——顺手复习第 6 章。
+- <strong>收藏城市</strong>：把常看的城市存进 DataStore，下次打开自动查，顺手复习第 6 章。
 - <strong>下拉刷新</strong>：Compose 里用 <code class="inline">PullToRefreshBox</code>（Material 3 提供），手感立刻"专业"起来。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -152,7 +152,7 @@ fun WeatherContent(data: WeatherResponse) {
 <i class="fas fa-lightbulb mr-2"></i>小贴士：图片让界面活起来
 
 {class="mt-1"}
-给每种天气配一个 emoji 或图标（☀️🌧️❄️），用 <code class="inline">when(description)</code> 映射——三行代码，界面温度感翻倍。也可以加载第三方的天气图标库，但练手阶段 emoji 足够。
+给每种天气配一个 emoji 或图标（☀️🌧️❄️），用 <code class="inline">when(description)</code> 映射，三行代码，界面温度感翻倍。也可以加载第三方的天气图标库，但练手阶段 emoji 足够。
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

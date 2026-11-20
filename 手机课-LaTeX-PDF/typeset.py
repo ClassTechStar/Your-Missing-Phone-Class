@@ -44,9 +44,12 @@ CJK_LANGS = {'zh-CN', 'zh-TW', 'yue', 'lzh', 'ja', 'ko'}
 NOTO_LANGS = {'zh-CN', 'zh-TW', 'yue', 'lzh', 'ja'}
 # 需要 TrueType 脚本特性的语言：主字体必须自带该文字的字形
 SCRIPT_FONTS = {
-    'th': ('LEELAWAD.TTF', 'Script=Thai'),
-    'ar': ('arial.ttf', 'Script=Arabic'),
-    'he': ('arial.ttf', 'Script=Hebrew'),
+    # 用户指定：所有语言的正文优先使用 MiSans 家族（多语言包按文字体系分字体）
+    'th': ('MiSansThai-Normal.ttf', 'Script=Thai'),
+    'ar': ('MiSansArabic-Normal.ttf', 'Script=Arabic'),
+    'he': ('MiSansLatin-Normal.ttf', 'Script=Hebrew'),  # 包内无希伯来专用，Latin 兜底
+    'el': ('MiSansLatin-Normal.ttf', ''),
+    'ru': ('MiSansLatin-Normal.ttf', ''),
 }
 # 需要连字符断词的语言（长复合词多，缺断词点会整行溢出页边）
 # 语言名对应 polyglossia 的 gloss-*.ldf，内部载入 hyph-utf8 的断词模式
@@ -80,6 +83,15 @@ SYMBOL_NOTO.update({
     '\u30fb': '\u00b7',      # ・ → ·
     '\u301c': '\uff5e',      # 〜 → ～
     '\ufe0f': '',
+    '\u2303': 'Ctrl',       # ⌃ Control 键，Noto 缺字形
+    '\u2325': 'Alt',        # ⌥ Option 键，Noto 缺字形
+    '\u25b3': '三角',       # △ 无字形，改文字描述
+    '\u2606': '★',          # ☆ 无字形，用同类星号
+    '\u2717': '×',          # ✗ → ×
+    # MiSans-Normal 单字体兜底：该字体不含下列字形，按语义换可显示字
+    '\u2194': '→', '\u21e7': 'Shift', '\u2318': 'Cmd', '\u25b6': '播放',
+    '\u2600': '晴', '\u260e': '电话', '\u2665': '红心',
+    '\u26a0': '注意', '\u2756': '×'
 })
 # 圈号：Noto 只收了 ①，其余 ②–⑳ 缺字形 → 统一改成 (n)，与其它字体栈保持一致
 for _i in range(1, 21):
@@ -145,11 +157,11 @@ def _wrap_rtl(tex: str) -> str:
 
 # ------------------------------------------------------------------ 图形字体
 FIG_FONT = {
-    'zh-CN': ('NotoSansSC-Regular.ttf', 'NotoSansSC-Bold.ttf'),
-    'zh-TW': ('NotoSansSC-Regular.ttf', 'NotoSansSC-Bold.ttf'),
-    'yue':   ('NotoSansSC-Regular.ttf', 'NotoSansSC-Bold.ttf'),
-    'lzh':   ('NotoSansSC-Regular.ttf', 'NotoSansSC-Bold.ttf'),
-    'ja':    ('NotoSansSC-Regular.ttf', 'NotoSansSC-Bold.ttf'),
+    'zh-CN': ('MiSans-Normal.ttf', 'MiSans-Normal.ttf'),
+    'zh-TW': ('MisansTC-Normal.ttf', 'MisansTC-Normal.ttf'),
+    'yue':   ('MisansTC-Normal.ttf', 'MisansTC-Normal.ttf'),
+    'lzh':   ('MiSans-Normal.ttf', 'MiSans-Normal.ttf'),
+    'ja':    ('MiSans-Normal.ttf', 'MiSans-Normal.ttf'),
     'ko':    (r'C:\Windows\Fonts\malgun.ttf', r'C:\Windows\Fonts\malgunbd.ttf'),
     'th':    (r'C:\Windows\Fonts\LEELAWAD.TTF', r'C:\Windows\Fonts\LEELAWAD.TTF'),
     'ar':    (r'C:\Windows\Fonts\arial.ttf', r'C:\Windows\Fonts\arialbd.ttf'),
@@ -486,15 +498,16 @@ def font_block(lang: str) -> list:
 
     if lang in NOTO_LANGS:
         out += [
-            r'\setCJKmainfont{NotoSansSC-Regular.ttf}[Path=\fontdir,'
-            r'BoldFont=NotoSansSC-Bold.ttf,BoldFeatures={Path=\fontdir},'
+            r'\setCJKmainfont{MiSans-Normal.ttf}[Path=\fontdir,'
+            r'BoldFont=MiSans-Normal.ttf,BoldFeatures={Path=\fontdir},'
             r'ItalicFont=simkai.ttf,ItalicFeatures={Path=\windir},'
             r'BoldItalicFont=simkai.ttf,BoldItalicFeatures={Path=\windir}]',
-            r'\setCJKsansfont{NotoSansSC-Medium.ttf}[Path=\fontdir,'
-            r'BoldFont=NotoSansSC-Bold.ttf,BoldFeatures={Path=\fontdir}]',
-            r'\setCJKmonofont{NotoSansSC-Regular.ttf}[Path=\fontdir]',
-            r'\setmainfont{segoeui.ttf}' + seg,
-            r'\setsansfont{segoeui.ttf}' + seg,
+            r'\setCJKsansfont{MiSans-Normal.ttf}[Path=\fontdir,'
+            r'BoldFont=MiSans-Normal.ttf,BoldFeatures={Path=\fontdir}]',
+            r'\setCJKmonofont{MiSans-Normal.ttf}[Path=\fontdir]',
+            r'\setmainfont{MiSans-Normal.ttf}[Path=\fontdir]',
+            r'\setsansfont{MiSans-Normal.ttf}[Path=\fontdir]',
+
             r'\setmonofont{consola.ttf}' + cons,
             r'\xeCJKDeclareCharClass{CJK}{' + CHARCLASS_NOTO + '}',
         ]
@@ -513,17 +526,18 @@ def font_block(lang: str) -> list:
     if lang in SCRIPT_FONTS:
         # Arial / Leelawadee 的斜体缺阿拉伯、泰文字形 → 斜体映射到正体
         fname, feat = SCRIPT_FONTS[lang]
-        bold = 'arialbd.ttf' if lang in ('ar', 'he') else fname
-        opt = (r'[Path=\windir,BoldFont=' + bold + r',BoldFeatures={Path=\windir},'
-               r'ItalicFont=' + fname + r',ItalicFeatures={Path=\windir},'
-               r'BoldItalicFont=' + bold + r',BoldItalicFeatures={Path=\windir},'
+        bold = fname  # 用户指定单一 Normal 文件，粗体由引擎合成
+        opt = (r'[Path=\fontdir,BoldFont=' + bold + r',BoldFeatures={Path=\fontdir},'
+               r'ItalicFont=' + fname + r',ItalicFeatures={Path=\fontdir},'
+               r'BoldItalicFont=' + bold + r',BoldItalicFeatures={Path=\fontdir},'
                + feat + ']')
         out += [r'\setmainfont{' + fname + '}' + opt,
                 r'\setsansfont{' + fname + '}' + opt,
                 r'\setmonofont{' + fname + '}' + opt]
     else:
-        out += [r'\setmainfont{segoeui.ttf}' + seg,
-                r'\setsansfont{segoeui.ttf}' + seg,
+        out += [r'\setmainfont{MiSans-Normal.ttf}[Path=\fontdir]',
+                r'\setsansfont{MiSans-Normal.ttf}[Path=\fontdir]',
+
                 r'\setmonofont{consola.ttf}' + cons]
     out.append(r'\xeCJKDeclareCharClass{CJK}{' + CHARCLASS_OTHER + '}')
     return out
