@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<script>(function(){try{var m=localStorage.getItem('pc-theme');if(m==='dark')document.documentElement.classList.add('dark');else if(m==='light')document.documentElement.classList.add('light');}catch(e){}})();</script><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="你缺失的那门手机课 · 手机是用会的，不是看会的。120 个内容区块，353.8 万字，从找回误删照片讲到亲手做出第一个 App。">
 <meta name="author" content="ClassTechStar">
 <meta name="robots" content="index, follow">
@@ -20,8 +21,15 @@
     --ink:#1a1a1a;--surface:#ffffff;
     --hint-bg:#f1f2f3;--hint-warn:#fff8ec;--hint-warn-line:#ffc266;
   }
+  html.dark{
+      --link:#66b5f2;--link-visited:#8f96e8;
+      --g1:#111827;--g2:#1f2937;--g3:#374151;--g5:#6b7280;--g8:#d1d5db;
+      --ink:#e5e7eb;--surface:#111827;
+      --hint-bg:#1f2937;--hint-warn:#2d2413;
+      color-scheme:dark;
+  }
   @media (prefers-color-scheme:dark){
-    :root{
+    html:not(.light):not(.dark){
       --link:#66b5f2;--link-visited:#8f96e8;
       --g1:#111827;--g2:#1f2937;--g3:#374151;--g5:#6b7280;--g8:#d1d5db;
       --ink:#e5e7eb;--surface:#111827;
@@ -48,6 +56,13 @@
   header.top nav{display:flex;gap:1.2rem}
   header.top nav a{color:var(--g8);text-decoration:none;font-size:.92rem}
   header.top nav a:hover{color:var(--link)}
+  .theme-toggle{display:flex;gap:.25rem;align-items:center}
+  .theme-toggle button{
+    border:1px solid var(--g2);background:var(--surface);color:var(--g8);
+    border-radius:.375rem;width:1.9rem;height:1.7rem;cursor:pointer;
+    font-size:.95rem;line-height:1;padding:0;
+  }
+  .theme-toggle button.on{background:var(--link);color:#fff;border-color:var(--link)}
   main{max-width:46rem;margin:0 auto;padding:2.6rem 1rem 4rem}
   h1{font-size:1.9rem;font-weight:600;line-height:1.35;margin:0 0 1rem}
   h2{font-size:1.3rem;font-weight:600;margin:2.6rem 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--g2)}
@@ -88,12 +103,40 @@
   footer a{color:var(--link)}
   hr{border:0;border-top:1px solid var(--g2);margin:2.4rem 0}
   </style>
+<script>(function(){try{var m=localStorage.getItem('pc-theme');if(m==='dark')document.documentElement.classList.add('dark');else if(m==='light')document.documentElement.classList.add('light');}catch(e){}})();</script>
 </head>
 <body>
 <header class="top"><div class="bar">
   <a class="brand" href="#top">你缺失的那门<br>手机课</a>
   <nav><a href="#top">首页</a><a href="#目录">目录</a><a href="#版本">版本</a><a href="#反馈">反馈</a></nav>
+  <div class="theme-toggle" role="group" aria-label="主题切换">
+    <button type="button" data-t="light" title="浅色">☀</button>
+    <button type="button" data-t="auto" title="跟随系统">◐</button>
+    <button type="button" data-t="dark" title="深色">☾</button>
+  </div>
 </div></header>
+<script>
+(function(){
+  "use strict";
+  var btns = document.querySelectorAll('.theme-toggle button');
+  function mark(){
+    var m = 'auto';
+    try { m = localStorage.getItem('pc-theme') || 'auto'; } catch(e){}
+    btns.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-t') === m); });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.getAttribute('data-t');
+      try { localStorage.setItem('pc-theme', v); } catch(e){}
+      var h = document.documentElement;
+      h.classList.toggle('dark', v === 'dark');
+      h.classList.toggle('light', v === 'light');
+      mark();
+    });
+  });
+  mark();
+})();
+</script>
 <main id="top">
   <h1>你缺失的那门手机课（网页版）</h1>
   <p>这是一份写给普通人的手机使用课程。它平易近人，娓娓道来：从找回误删的照片、识破一条诈骗短信讲起，到把手机调成顺手的工具，再到亲手做出第一个 App——安卓、iOS、鸿蒙三个平台都走一遍。</p>
@@ -475,6 +518,28 @@ if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
             .catch(function (err) { console.warn('SW 注册失败：', err); });
     });
 }
+</script>
+<script>
+(function(){
+  "use strict";
+  var btns = document.querySelectorAll('.theme-toggle button');
+  function mark(){
+    var m = 'auto';
+    try { m = localStorage.getItem('pc-theme') || 'auto'; } catch(e){}
+    btns.forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-t') === m); });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.getAttribute('data-t');
+      try { localStorage.setItem('pc-theme', v); } catch(e){}
+      var h = document.documentElement;
+      h.classList.toggle('dark', v === 'dark');
+      h.classList.toggle('light', v === 'light');
+      mark();
+    });
+  });
+  mark();
+})();
 </script>
 </body>
 </html>
