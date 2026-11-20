@@ -16,6 +16,7 @@
 
 import json
 import re
+from html import escape as _esc
 from pathlib import Path
 
 from . import build as B
@@ -50,6 +51,50 @@ PATH_FIXES = [('../sw.js', '../../sw.js'),
 RE_SW_REGISTER = re.compile(
     r"(navigator\.serviceWorker\.register\(\s*)(['\"])([^'\"]*sw\.js)\2"
     r"(\s*,\s*\{\s*scope:\s*)(['\"])([^'\"]*)\5")
+
+# ---- 章节级分享卡（方案 §6.2）----
+# 章首导读 = 带 chapter-intro class 的段落（class 在 <p> 自身或外层 div 上）
+RE_INTRO_P = re.compile(r'<p[^>]*class="chapter-intro[^"]*"[^>]*>([\s\S]*?)</p>')
+RE_DIV_INTRO_P = re.compile(r'class="chapter-intro[^"]*"[\s\S]*?<p[^>]*>([\s\S]*?)</p>')
+RE_FIRST_P = re.compile(r'<p[^>]*>([\s\S]*?)</p>')
+RE_META_OG = {p: re.compile(r'(<meta property="%s" content=")[^"]*(")' % p)
+              for p in ('og:title', 'og:description', 'og:type')}
+
+
+def og_description(body: str) -> str:
+    """章节分享描述 = 章首导读第一句（方案 §6.2「{本章导览首句或 60 字导读}」）。
+
+    微信分享卡片此前全站共用一句通用文案，第 22 章分享出去没有章节信息；
+    这里从章首 chapter-intro 段落取第一句（兜底：正文第一个 <p>），超长截断。
+    """
+    m = (RE_INTRO_P.search(body) or RE_DIV_INTRO_P.search(body)
+         or RE_FIRST_P.search(body))
+    if not m:
+        return ''
+    text = re.sub(r'<[^>]+>', '', m.group(1))
+    text = re.sub(r'\s+', ' ', text).strip()
+    for i, ch in enumerate(text):
+        if ch in '。！？':
+            text = text[:i + 1]
+            break
+    return (text[:78] + '…') if len(text) > 80 else text
+
+
+def _set_og(html: str, og: dict) -> str:
+    """章节页 OG 覆盖：og:title=章标题、og:description=导读首句、
+    og:type=article、og:url=章节 URL。缺的标签就地补在 og:type 之前。"""
+    for prop, content in og.items():
+        if not content or prop == 'og:url':
+            continue
+        rx = RE_META_OG.get(prop)
+        if rx and rx.search(html):
+            html = rx.sub(lambda m, c=_esc(content, quote=True): m.group(1) + c + m.group(2),
+                          html, count=1)
+    if og.get('og:url') and 'property="og:url"' not in html:
+        html = html.replace('<meta property="og:type"',
+                            f'<meta property="og:url" content="{og["og:url"]}">'
+                            f'<meta property="og:type"', 1)
+    return html
 
 
 def fix_sw_scope(html: str) -> str:
@@ -193,8 +238,10 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     assets = {}
 
     def page_shell(slim_head: str, title: str, canonical: str, ld: dict,
-                   prefetch: str = '') -> str:
+                   prefetch: str = '', og: dict = None) -> str:
         h = RE_TITLE.sub(f'<title>{title}</title>', slim_head, count=1)
+        if og:
+            h = _set_og(h, og)
         # 下一章 prefetch（方案 §5.2）：读完点「下一章」零网络等待。
         # iOS Safari 忽略 prefetch——回访场景由 SW 缓存兜住，收益在安卓/桌面。
         pre = f'<link rel="prefetch" href="{prefetch}">\n' if prefetch else ''
@@ -315,8 +362,13 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         ld = {"@context": "https://schema.org", "@type": "Chapter",
               "name": meta[cid]['title'], "url": url,
               "isPartOf": {"@type": "Book", "name": book_title, "inLanguage": lang}}
+        # 章节级分享卡（方案 §6.2）：分享出去的是章标题 + 导读首句，不再是书名
+        og = {'og:title': meta[cid]['title'],
+              'og:description': og_description(body),
+              'og:type': 'article',
+              'og:url': url}
         page = page_shell(head_slim, title, url, ld,
-                          prefetch=f'{next_id}.html' if next_id else '') \
+                          prefetch=f'{next_id}.html' if next_id else '', og=og) \
             + '\n' + body + prevnext + tail
         page = _rewrite_hrefs(page, idmap, cid, frozenset(part_first))
         emit(f'{cid}.html', page)

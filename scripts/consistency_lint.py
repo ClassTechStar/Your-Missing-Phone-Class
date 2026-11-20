@@ -187,6 +187,14 @@ def main() -> int:
     check(failures, 'languages.html', r'这本书有 (\d+) 个语言版本',
           n_langs, '语言分级页 语言数')
 
+    # ---------- v1.9/zh-CN.html（书页分享卡文案）----------
+    check(failures, Path('v1.9') / 'zh-CN.html',
+          r'property="og:description" content="手机是用会的，不是看会的。(\d+) 章',
+          n_chapters, '书页 og:description 章数')
+    check_absent(failures, Path('v1.9') / 'zh-CN.html', '掌控你的数字生活', 'S 级黑名单句')
+    check_absent(failures, 'site-landing.html', '掌控你的数字生活', 'S 级黑名单句')
+    check_absent(failures, 'README.md', '掌控你的数字生活', 'S 级黑名单句')
+
     if failures:
         print('\n'.join(failures))
         print(f'\n共 {len(failures)} 处不一致——一律以 {BOOK_REL} 与 {BASELINE_HTML} 为准修复')

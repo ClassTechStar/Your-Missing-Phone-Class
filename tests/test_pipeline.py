@@ -112,6 +112,41 @@ class TestSplitRewrite:
         assert 'href="index.html#whatever"' in out
 
 
+class TestChapterOg:
+    """章节级分享卡（方案 §6.2）：描述取导读首句，OG 逐章覆盖。"""
+
+    def test_og_description_intro_first_sentence(self):
+        body = '<div class="chapter-intro mb-3"><p>第一句。第二句不该出现。</p></div>'
+        assert S.og_description(body) == '第一句。'
+
+    def test_og_description_intro_class_on_p(self):
+        """实际渲染形态：class 挂在 <p> 自身，不能抓到下一段的句子。"""
+        body = ('<p class="chapter-intro mb-4">导读首句。导读第二句。</p>'
+                '<p>下一段不该出现。</p>')
+        assert S.og_description(body) == '导读首句。'
+
+    def test_og_description_falls_back_to_first_p(self):
+        assert S.og_description('<p>兜底句子！</p>') == '兜底句子！'
+
+    def test_og_description_caps_length(self):
+        d = S.og_description('<p>' + '长' * 120 + '</p>')
+        assert len(d) <= 80 and d.endswith('…')
+
+    def test_set_og_overrides_and_injects_url(self):
+        html = ('<head><meta property="og:type" content="book">'
+                '<meta property="og:title" content="书名">'
+                '<meta property="og:description" content="通用"></head>')
+        out = S._set_og(html, {'og:title': '第二十二章：AI 在你手机里到底干了什么',
+                               'og:description': '导读首句。',
+                               'og:type': 'article',
+                               'og:url': 'https://x/di-er-shi-er-zhang.html'})
+        assert 'content="第二十二章：AI 在你手机里到底干了什么"' in out
+        assert 'content="导读首句。"' in out
+        assert 'content="article"' in out
+        assert 'property="og:url" content="https://x/di-er-shi-er-zhang.html"' in out
+        assert 'content="书名"' not in out
+
+
 class TestSplitAssets:
     def test_externalize_moves_big_blocks_only(self):
         assets = {}
