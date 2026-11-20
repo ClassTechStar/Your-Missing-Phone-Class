@@ -122,7 +122,9 @@ def main():
     # 分章页（bookkit split 构建存在时纳入冒烟）：书首页 + 首个章节页
     if (ROOT / 'dist' / 'site' / 'v1.9' / 'zh-CN' / 'index.html').is_file():
         targets += [('dist/site/v1.9/zh-CN/index.html', None),
-                    ('dist/site/v1.9/zh-CN/di-ling-zhang.html', 1)]
+                    ('dist/site/v1.9/zh-CN/di-ling-zhang.html', 1),
+                    # 策展路径页（方案 §7）：进度联动 JS 也要零 console error
+                    ('dist/site/v1.9/zh-CN/gei-ba-ma-de-shi-zhang.html', None)]
     fails = []
     with sync_playwright() as pw:
         browser = pw.chromium.launch()

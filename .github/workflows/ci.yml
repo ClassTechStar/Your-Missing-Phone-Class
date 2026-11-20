@@ -87,6 +87,9 @@ jobs:
       - name: 分章化构建（章节页 + sitemap/JSON-LD，页级预算 300KB/5000 标签硬门禁）
         run: python -m bookkit split --book source/v1.9/book.json --strict-budget
 
+      - name: 站点基建 lint（robots/sitemap 覆盖/OG 唯一/prefetch/hreflang/勘误公示/死链）
+        run: python scripts/site_lint.py
+
       - name: 构建幂等（两次构建字节一致）
         run: |
           python -m bookkit build --out dist/a.html
