@@ -41,7 +41,7 @@ fun HomeScreen() {
 ```
 :::
 
-注意 <code class="inline">@Composable</code> 这个"帽子"：它告诉编译器"这是一个界面积木"。积木可以无限嵌套，这就是 Compose 的全部秘密。
+注意 <code class="inline">@Composable</code> 这个"帽子"——它告诉编译器"这是一个界面积木"。积木可以无限嵌套，这就是 Compose 的全部秘密。
 
 #### 二、基础组件：文字、按钮、输入框、图片
 
@@ -200,7 +200,7 @@ Compose 三个开发体验上的"外挂"，用上就回不去：
 
 - <strong>@Preview 预览</strong>：给 Composable 加 <code class="inline">@Preview</code> 注解，Android Studio 右侧立刻渲染出界面，改代码所见即所得，不用每次装到手机上。
 - <strong>实时编辑（Live Edit）</strong>：2026 年的 Android Studio 支持在模拟器/真机上"热更新"部分改动，改文字颜色之类的小调整，设备上秒变。
-- <strong>动画 API</strong>：<code class="inline">animateFloatAsState</code>、<code class="inline">AnimatedVisibility</code> 几行代码就能让元素平滑过渡，"高级感"往往就差这几十行。
+- <strong>动画 API</strong>：<code class="inline">animateFloatAsState</code>、<code class="inline">AnimatedVisibility</code> 几行代码就能让元素平滑过渡——"高级感"往往就差这几十行。
 
 ::: div .code-block
 :::inline div .code-head
@@ -246,7 +246,7 @@ fun AnimatedBox() {
 - Compose 思想：界面 = @Composable 函数，积木式嵌套
 - 四大组件：Text / Button / TextField / Image
 - 布局三件套：Column 竖排、Row 横排、Box 叠放
-- Modifier 链式"上妆"：padding、fillMaxWidth、background、clickable：顺序有意义
+- Modifier 链式"上妆"：padding、fillMaxWidth、background、clickable——顺序有意义
 - 状态是灵魂：remember + mutableStateOf，改数据界面自动重画
 - 主题用 Material 3 + 动态取色，深色模式一次配置全局生效
 :::

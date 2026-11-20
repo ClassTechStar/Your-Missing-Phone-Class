@@ -98,7 +98,7 @@ kind: chapter
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>更省电、音质更好</strong>：采用全新的LC3编码，比老标准的SBC音质更好、功耗更低，耳机续航明显延长。
 - <strong>双路音频</strong>：左右耳塞独立传输，单耳模式切换不掉线。
-- <strong>Auracast广播音频</strong>：LE Audio的招牌功能。一个手机/电视可以同时向<strong>无数副</strong>耳机广播音频，机场候机厅、博物馆、健身房、教室里都能用一个发射源，多人用自己的耳机听同一画面。
+- <strong>Auracast广播音频</strong>：LE Audio的招牌功能。一个手机/电视可以同时向<strong>无数副</strong>耳机广播音频——机场候机厅、博物馆、健身房、教室里都能用一个发射源，多人用自己的耳机听同一画面。
 - <strong>现状</strong>：2024-2026年新上市的旗舰耳机和手机普遍支持LE Audio，老设备需硬件升级无法软件解锁。买新耳机时可以留意是否支持LE Audio/Auracast标识。
 :::
 

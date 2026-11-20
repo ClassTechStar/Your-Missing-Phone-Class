@@ -104,7 +104,7 @@ DNS（域名系统）就像是互联网的电话本：你输入"baidu.com"，DNS
 1. <strong>关掉Wi-Fi自动连接</strong>：iPhone在设置-无线局域网里，安卓在Wi-Fi设置里。
 2. <strong>换一个加密DNS</strong>：安卓直接设置私人DNS为"dns.google"，iPhone用App或描述文件设置1.1.1.1的DoH。
 3. <strong>开启双因素认证（2FA）</strong>：微信、支付宝、Apple ID、Google账号，能开2FA的都开。短信验证码已经是最低级别的2FA了，能用TOTP（如Google Authenticator、Microsoft Authenticator）更好。
-4. <strong>查一遍App权限</strong>：把每个App的权限过一遍，特别是位置、通讯录、短信、麦克风、相机这五项。你会发现有些手电筒App居然要你的通讯录，赶紧卸载。
+4. <strong>查一遍App权限</strong>：把每个App的权限过一遍，特别是位置、通讯录、短信、麦克风、相机这五项。你会发现有些手电筒App居然要你的通讯录——赶紧卸载。
 5. <strong>定期清理浏览器数据</strong>：设置个日历提醒，每月一次，清缓存、Cookies。
 6. <strong>不要用公共充电桩的数据线</strong>：USB口既能充电也能传数据，恶意充电桩（叫"Juice Jacking"）可以趁你充电时偷数据。出门带自己的充电头和线。
 

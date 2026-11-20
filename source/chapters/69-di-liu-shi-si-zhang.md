@@ -111,7 +111,7 @@ struct RecordListView: View {
 
 #### 四、Codable：给 JSON"翻译"
 
-服务器的数据大多是 JSON 文本。Swift 的 <strong>Codable</strong> 协议让"JSON ⇄ 结构体"的转换自动发生，字段名对得上，魔法就生效：
+服务器的数据大多是 JSON 文本。Swift 的 <strong>Codable</strong> 协议让"JSON ⇄ 结构体"的转换自动发生——字段名对得上，魔法就生效：
 
 ::: div .code-block
 :::inline div .code-head

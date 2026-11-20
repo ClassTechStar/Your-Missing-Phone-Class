@@ -10,7 +10,7 @@ kind: chapter
 ### 第五十七章：进阶之路——权限、通知与现代架构
 
 {class="chapter-intro mb-4"}
-能做出 App 只是开始。这一章聊聊从"会做"到"做好"的几道坎：怎么优雅地申请权限、怎么发通知不讨人厌、怎么把架构再往上抬一层，以及，在 2026 年，怎么和 AI 搭档写安卓代码。每一条都是你在真实项目里马上会遇到的。
+能做出 App 只是开始。这一章聊聊从"会做"到"做好"的几道坎：怎么优雅地申请权限、怎么发通知不讨人厌、怎么把架构再往上抬一层，以及——在 2026 年，怎么和 AI 搭档写安卓代码。每一条都是你在真实项目里马上会遇到的。
 
 #### 一、运行时权限：先敲门，再进门
 
@@ -97,7 +97,7 @@ if (ActivityCompat.checkSelfPermission(this,
 <i class="fas fa-lightbulb mr-2"></i>小贴士：别过度设计
 
 {class="mt-1"}
-Hilt 和模块化都是好工具，但<strong>单人项目先别急着上</strong>。记账本单模块 + 手动创建依赖完全够用。等代码量超过几万行、编译开始变慢、多人协作时，再按需引入。工具是服务目标的，不是用来炫耀的，这也是咱们 AI 编程书里的"简单至上"原则。
+Hilt 和模块化都是好工具，但<strong>单人项目先别急着上</strong>。记账本单模块 + 手动创建依赖完全够用。等代码量超过几万行、编译开始变慢、多人协作时，再按需引入。工具是服务目标的，不是用来炫耀的——这也是咱们 AI 编程书里的"简单至上"原则。
 :::
 
 #### 四、2026 年的新玩法：AI 辅助安卓开发
@@ -120,7 +120,7 @@ AI 辅助安卓开发的四个场景
 Compose 写起来爽，但"重组过多"也会卡。三个实用技巧：
 
 - <strong>稳定参数</strong>：给数据类加 <code class="inline">@Immutable</code> 或使用 <code class="inline">derivedStateOf</code>，避免无关状态变化触发大面积重组。
-- <strong>记得用 key</strong>：<code class="inline">items(list, key = { it.id })</code> 让列表增删时只动该动的项：不加 key，删除一项可能整表重画。
+- <strong>记得用 key</strong>：<code class="inline">items(list, key = { it.id })</code> 让列表增删时只动该动的项——不加 key，删除一项可能整表重画。
 - <strong>Layout Inspector 的 Compose 模式</strong>：实时看每个 Composable 的重组次数，谁频繁重组一目了然，照着热点优化。
 
 另外把 <code class="inline">Compose 编译器报告</code>（Metrics）打开，能生成一份"哪些组件不稳定"的报告，进阶路上，数据永远比感觉可靠。

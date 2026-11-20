@@ -18,7 +18,7 @@ kind: chapter
 ##### 本章速读（5 分钟版）
 这一章讲 App 的"骨架"。上一章的 Compose 是脸面，这一章是撑起它的骨架：安卓靠四大组件拼出所有 App，Activity 是门面（用户看得见的界面），Service 是后台干活的隐形人，BroadcastReceiver 是传达室的喇叭，ContentProvider 是跨 App 共享的资料柜。其中最重要的 Activity，有一张每个安卓开发者都得刻在脑子里的"生命周期图"。这一章概念密度高，但一次学会终身受用：生命周期、Intent 这些东西在 iOS 和鸿蒙篇里都有几乎一样的对应物，学一遍等于学了三遍。
 
-最关键的有两件事。一是把生命周期六回调记熟：onCreate 创建、onStart 可见、onResume 可交互，往回走是 onPause 暂停、onStop 不可见、onDestroy 销毁。旋转屏幕会走完"销毁再重建"一整套，所以表单填一半转个屏就全没了：不是 bug，是没做状态保存。<strong>扛旋转用 rememberSaveable，扛进程被杀用 ViewModel 加 SavedStateHandle</strong>；轻量数据在 onPause 存，批量写数据库放 onStop。二是 Intent 这张"车票"：显式 Intent 跳自家页面，隐式 Intent 调系统能力比如打电话、开网页；隐式调用前必须用 resolveActivity 查有没有 App 能响应，否则应用直接崩溃。顺带补两条高频问答里的经验：保存数据，轻量的放 onPause、批量写库放 onStop，别让用户等；应用被系统杀掉前不会给你"临终遗言"的机会，关键状态要在前台时就持久化，别指望被杀前的回调。
+最关键的有两件事。一是把生命周期六回调记熟：onCreate 创建、onStart 可见、onResume 可交互，往回走是 onPause 暂停、onStop 不可见、onDestroy 销毁。旋转屏幕会走完"销毁再重建"一整套，所以表单填一半转个屏就全没了——不是 bug，是没做状态保存。<strong>扛旋转用 rememberSaveable，扛进程被杀用 ViewModel 加 SavedStateHandle</strong>；轻量数据在 onPause 存，批量写数据库放 onStop。二是 Intent 这张"车票"：显式 Intent 跳自家页面，隐式 Intent 调系统能力比如打电话、开网页；隐式调用前必须用 resolveActivity 查有没有 App 能响应，否则应用直接崩溃。顺带补两条高频问答里的经验：保存数据，轻量的放 onPause、批量写库放 onStop，别让用户等；应用被系统杀掉前不会给你"临终遗言"的机会，关键状态要在前台时就持久化，别指望被杀前的回调。
 
 今天就能做的最小动作：在你正在练的项目里，给 Activity 的六个回调各加一行日志，然后按 Home 键切后台再回来、再旋转一次屏幕，亲眼看一遍回调顺序。这个"生命周期日志"观察法是本章的动手项，动手十分钟胜过读半小时。顺手把表单草稿改成 rememberSaveable 保存。体验一次"转屏不再丢字"。这些动手项都不挑项目，在现有练习上加就行；章里还备了自测十题和术语速查表，学完自查一遍更踏实。
 
@@ -51,7 +51,7 @@ kind: chapter
 
 ##### Activity：门面的门道
 
-Activity 的工作方式你可能已经在第 51 章感受到一角：Compose 项目里虽然界面都是 Composable 函数，但它们仍然"住"在一个 Activity 里。MainActivity 就是整个应用的入口容器。你可以把 Activity 理解为"系统分配给你的画布窗口"：系统决定什么时候创建它、显示它、遮住它、销毁它，而你在每个时机里做该做的事。一个 App 可以有多个 Activity（比如登录页一个、主页一个、详情页一个），它们之间通过 Intent 跳转，这是第三节的内容。
+Activity 的工作方式你可能已经在第 51 章感受到一角：Compose 项目里虽然界面都是 Composable 函数，但它们仍然"住"在一个 Activity 里。MainActivity 就是整个应用的入口容器。你可以把 Activity 理解为"系统分配给你的画布窗口"：系统决定什么时候创建它、显示它、遮住它、销毁它，而你在每个时机里做该做的事。一个 App 可以有多个 Activity（比如登录页一个、主页一个、详情页一个），它们之间通过 Intent 跳转——这是第三节的内容。
 
 新手阶段你 95% 的时间都在跟 <strong>Activity</strong> 打交道；Service 和 BroadcastReceiver 做音乐播放、消息推送时会用到；ContentProvider 用得最少（系统已把常用数据封好了）。另外注意：四大组件都要在 <strong>AndroidManifest.xml</strong> 里"登记户口"，不登记系统就找不到它们。
 
@@ -65,7 +65,7 @@ Service 还分两种运行模式：普通 Service（随时可能被系统回收�
 
 ##### BroadcastReceiver 与 ContentProvider：认识即可
 
-BroadcastReceiver 的现代用法已经收窄：以前 App 们到处监听系统广播（网络变化、电量变化），现在系统对这些广播的发放越来越克制（省电考虑）。你实际会用的场景多是"应用内通信"，用本地广播在自己的组件之间传消息。ContentProvider 则是跨应用共享数据的正规通道：联系人和短信这些系统数据，系统已经内置了 Provider，你的 App 通过统一的 API 去读（要权限）。自己写 Provider 的场景很少见，通常只在"你想把数据开放给别的 App"时才需要。
+BroadcastReceiver 的现代用法已经收窄：以前 App 们到处监听系统广播（网络变化、电量变化），现在系统对这些广播的发放越来越克制（省电考虑）。你实际会用的场景多是"应用内通信"，用本地广播在自己的组件之间传消息。ContentProvider 则是跨应用共享数据的正规通道：联系人和短信这些系统数据，系统已经内置了 Provider，你的 App 通过统一的 API 去读（要权限）。自己写 Provider 的场景很少见——通常只在"你想把数据开放给别的 App"时才需要。
 
 #### 二、Activity 生命周期：安卓开发的第一张"藏宝图"
 
@@ -138,7 +138,7 @@ startActivity(web)   // 系统会打开浏览器/或让你选
 
 两种方式各有用途：<strong>显式</strong>用于自己 App 内部的页面跳转；<strong>隐式</strong>用于调用系统或其他 App 的能力（开网页、打电话、分享）。Compose 项目里，在 Composable 中用 <code class="inline">LocalContext.current</code> 拿到 Context 就能 <code class="inline">startActivity</code>。
 
-隐式 Intent 有个重要的"契约"细节：你只声明"我要看网页"。系统会找所有能干这件事的 App 让用户选，如果装了多个浏览器就会弹选择框。反过来，你的 App 也可以"被别人调起"：在 Manifest 里声明"我能处理分享图片"这类能力，别的 App 分享时你的应用就会出现在列表里。这个"发布能力"的机制在鸿蒙（第 74 章的 skills 声明）和 iOS（URL Scheme）里都有对应物："组件通信"的跨平台思路也是相通的。
+隐式 Intent 有个重要的"契约"细节：你只声明"我要看网页"。系统会找所有能干这件事的 App 让用户选——如果装了多个浏览器就会弹选择框。反过来，你的 App 也可以"被别人调起"：在 Manifest 里声明"我能处理分享图片"这类能力，别的 App 分享时你的应用就会出现在列表里。这个"发布能力"的机制在鸿蒙（第 74 章的 skills 声明）和 iOS（URL Scheme）里都有对应物："组件通信"的跨平台思路也是相通的。
 
 putExtra 捎带的"行李"也有边界要记住：它适合传小数据（字符串、数字），不适合传大对象（Bitmap 图片这种动辄几 MB 的东西）：大对象应该先存到存储或内存缓存，Intent 里只传一个"取货凭证"（比如文件路径或 ID）。滥用 Intent 传大对象，是新手常见的性能事故来源。
 
@@ -192,7 +192,7 @@ Fragment 的"过时轨迹"还有个学习上的启示：技术栈的更新换代
 
 - <strong>Activity 仍是大门</strong>：旋转屏幕、切后台、被系统回收，走的是 Activity 生命周期；Compose 只是挂在它上面的界面。
 - <strong>用生命周期感知的状态</strong>：ViewModel 承载业务状态，界面重组不会丢数据；<code class="inline">collectAsStateWithLifecycle</code> 一类 API 让订阅跟着生命周期走，避免后台泄漏。
-- <strong>配置变更</strong>：本章第二节的避坑提醒说了 rememberSaveable；更进一步的常规解法是 ViewModel，旋转重建时 remember 会丢、ViewModel 不会。要跨重建保留的东西，放 ViewModel 或 savedStateHandle。
+- <strong>配置变更</strong>：本章第二节的避坑提醒说了 rememberSaveable；更进一步的常规解法是 ViewModel——旋转重建时 remember 会丢、ViewModel 不会。要跨重建保留的东西，放 ViewModel 或 savedStateHandle。
 - <strong>权限请求</strong>：危险权限仍在运行时申请，只是入口从 Activity 回调换成了 <code class="inline">rememberLauncherForActivityResult</code>。
 - <strong>Service / BroadcastReceiver / ContentProvider</strong>：后台任务、系统广播、跨应用数据共享仍靠它们；新代码里，可延迟的后台工作多交给 WorkManager 处理。
 
@@ -307,7 +307,7 @@ val notification = NotificationCompat.Builder(context, "music")
 ```
 :::
 
-通知渠道是安卓 8.0 起的强制度设计：每个渠道一个独立的优先级与提醒方式，用户可以在系统设置里逐渠道关闭，所以"渠道规划"是产品级决策：音乐播放、下载进度、消息提醒各建一个渠道，别把所有通知塞进一个渠道让用户"要么全开要么全关"。这个设计思路在鸿蒙（第 74 章）和 iOS（第 68 章）里同样存在，只是 API 不同。
+通知渠道是安卓 8.0 起的强制度设计：每个渠道一个独立的优先级与提醒方式，用户可以在系统设置里逐渠道关闭——所以"渠道规划"是产品级决策：音乐播放、下载进度、消息提醒各建一个渠道，别把所有通知塞进一个渠道让用户"要么全开要么全关"。这个设计思路在鸿蒙（第 74 章）和 iOS（第 68 章）里同样存在，只是 API 不同。
 
 通知还有一条"礼貌守则"：只在"用户关心且需要打断"时才发。营销推送、每日签到提醒这类内容，用一次就删一次用户：安卓 13 起通知权限本身就是运行时申请的，用户不给你的通知权限，什么通知都发不出去。权限的珍贵程度，决定了通知的克制程度。
 
@@ -420,7 +420,7 @@ Compose + Navigation 的世界里，这些 Flag 大多数被 Navigation 组件�
 - <strong>Q2：旋转屏幕发生了什么？怎么处理？</strong>答：销毁重建（走完整生命周期循环），状态用 rememberSaveable/ViewModel/savedStateHandle 保住。答出"三层保存"是加分项。
 - <strong>Q3：onSaveInstanceState 什么时候调用？</strong>答：Activity "可能被系统回收"之前（按主页键、进入其他应用）：旋转重建时也会调用。它与 onStop 的区别：onSaveInstanceState 的 Bundle 有大小限制（约 1MB 级别），只放关键恢复数据。
 - <strong>Q4：什么情况下 App 会被系统杀掉？杀掉前有回调吗？</strong>答：内存不足时按"优先级"从低到高杀（后台的先死）。被杀是"无声"的，没有回调，所以关键数据的持久化不能指望"临终回调"，要在前台时就做好。
-- <strong>Q5：singleTask 的 Activity 收到新 Intent 会怎样？</strong>答：不新建实例，而是把该实例带到前台、清除其上面的 Activity，并通过 onNewIntent 传递新 Intent，注意此时不会走 onCreate，处理新数据要在 onNewIntent 里。
+- <strong>Q5：singleTask 的 Activity 收到新 Intent 会怎样？</strong>答：不新建实例，而是把该实例带到前台、清除其上面的 Activity，并通过 onNewIntent 传递新 Intent——注意此时不会走 onCreate，处理新数据要在 onNewIntent 里。
 
 面试答题的通用技巧也送你一个：每个答案都用"一句话结论 + 具体场景 + 修复方案"三段式回答，比背概念描述显得懂行得多。这些答题能力其实就是排障能力的变装：能把原理讲清楚的开发者，排查问题也快。
 
@@ -447,7 +447,7 @@ Compose + Navigation 的世界里，这些 Flag 大多数被 Navigation 组件�
 
 重试策略由 Result 决定：success 完成、failure 不再重试、retry 进入指数退避（默认 30 秒起、每次翻倍、上限由 BackoffPolicy 配置）。失败任务的合理姿势是：临时性错误（网络断开）返回 retry，永久性错误（参数非法）返回 failure，乱用 retry 会让一个注定失败的任务永远重试下去。
 
-链式任务（WorkContinuation）让多个任务按顺序执行："下载 → 解析 → 入库"三条任务串成一条链。前一个成功才执行后一个。这在"多步骤数据处理"场景非常好用，每一步都是独立的 Worker（可单独测试），链式组织保证了执行顺序与失败中断。最后提醒一个工程细节：周期性任务的最小间隔是 15 分钟，这是系统的硬下限，更短间隔的需求要考虑 AlarmManager 或前台服务。
+链式任务（WorkContinuation）让多个任务按顺序执行："下载 → 解析 → 入库"三条任务串成一条链。前一个成功才执行后一个。这在"多步骤数据处理"场景非常好用，每一步都是独立的 Worker（可单独测试），链式组织保证了执行顺序与失败中断。最后提醒一个工程细节：周期性任务的最小间隔是 15 分钟——这是系统的硬下限，更短间隔的需求要考虑 AlarmManager 或前台服务。
 
 #### 二十二、进程优先级与"保活"的真相
 
@@ -491,7 +491,7 @@ Compose + Navigation 的世界里，这些 Flag 大多数被 Navigation 组件�
 
 深链接是 Intent 家族的"高阶玩法"：用户点一条短信里的链接，直接跳进你应用内的某个具体页面：不是打开应用首页，是精确到"那个商品详情"或"那条订单"。它是电商、资讯类应用的核心竞争力：转化路径每少一步，成交率都会显著上升。
 
-实现分两层。<strong>基础层：自定义 Scheme</strong>——在 Manifest 的 intent-filter 里声明 myapp:// 这类自定义协议，链接形如 myapp://product/42。简单，但浏览器可能拦截非 http 协议的链接。<strong>进阶层：App Links</strong>——用 https://yourdomain.com/product/42 的标准网址，并在网站根目录放置一个"资产声明文件"（assetlinks.json）证明域名归属。验证通过后，系统直接打开你的应用而跳过选择框，体验最顺滑，也是大厂的标准做法。
+实现分两层。<strong>基础层：自定义 Scheme</strong>——在 Manifest 的 intent-filter 里声明 myapp:// 这类自定义协议，链接形如 myapp://product/42。简单，但浏览器可能拦截非 http 协议的链接。<strong>进阶层：App Links</strong>——用 https://yourdomain.com/product/42 的标准网址，并在网站根目录放置一个"资产声明文件"（assetlinks.json）证明域名归属。验证通过后，系统直接打开你的应用而跳过选择框——体验最顺滑，也是大厂的标准做法。
 
 接住深链接的技术要点：深链接会拉起你的 Activity 并通过 Intent 传入完整链接，你需要在 onCreate 和 onNewIntent（应用已在后台时再次触发走这里）两处解析链接并导航到对应页面。两处都要处理，因为"冷启动"与"热启动"的入口不同。解析后的导航用 Navigation 跳转到目标页面，把链接的路径参数映射成导航参数，就完成了"网页 URL → 应用内页面"的翻译。
 
@@ -547,7 +547,7 @@ fun CounterScreen(viewModel: CounterViewModel = viewModel()) {
 
 这段"生产级"代码与第 51 章的"教学级"代码有三个本质区别。第一，<strong>状态与 UI 分离</strong>：计数逻辑住在 ViewModel 里。界面只负责"渲染状态 + 调用方法"，单元测试可以直接测 ViewModel 而不需要界面。第二，<strong>只读暴露</strong>：对外暴露的是 StateFlow（只读），修改只能通过方法，外部无法"绕过逻辑"乱改状态。第三，<strong>生命周期安全</strong>：collectAsStateWithLifecycle 让订阅只在界面可见时激活，切到后台自动停止，避免后台刷新浪费资源或引发崩溃。
 
-把这套模式记住：它是本书安卓篇所有后续项目（记账本、天气助手）的标准结构。第 53 章的数据层会以同样的分层思路接进来，ViewModel 调用仓库，仓库调用数据源，各层职责分明。
+把这套模式记住：它是本书安卓篇所有后续项目（记账本、天气助手）的标准结构。第 53 章的数据层会以同样的分层思路接进来——ViewModel 调用仓库，仓库调用数据源，各层职责分明。
 
 #### 二十八、常见 bug 集锦：五个真实翻车与修复
 
@@ -595,7 +595,7 @@ fun CounterScreen(viewModel: CounterViewModel = viewModel()) {
 
 本章的待办清单和计数器还有一个"不完美"：数据放在内存里，应用彻底退出就没了。这不是遗漏，数据持久化是下一章的主角：Preferences、RelationalStore（SQLite）、文件系统三套方案各管一类数据，第 76 章的鸿蒙待办清单会把同样的分层思想用在 ArkTS 里。
 
-你已经准备好了：本章建立的 ViewModel 结构正是"挂载数据层"的标准位置，ViewModel 调用仓库，仓库操作数据库或发起网络请求，界面只管渲染。下一章见。
+你已经准备好了：本章建立的 ViewModel 结构正是"挂载数据层"的标准位置——ViewModel 调用仓库，仓库操作数据库或发起网络请求，界面只管渲染。下一章见。
 
 #### 三十一、Lifecycle 库：生命周期感知组件的基石
 
@@ -663,7 +663,7 @@ override fun onStop() {
 ```
 :::
 
-这三层实现用了本章与第 51 章的四个概念：ViewModel（状态容器）、onStop（保存时机）、Preferences（轻量持久化）、lifecycleScope（生命周期感知的协程）。一个真实功能，四个知识点各就各位，这就是"框架式学习"的成果：每个知识点都在系统里找到了自己的位置。
+这三层实现用了本章与第 51 章的四个概念：ViewModel（状态容器）、onStop（保存时机）、Preferences（轻量持久化）、lifecycleScope（生命周期感知的协程）。一个真实功能，四个知识点各就各位——这就是"框架式学习"的成果：每个知识点都在系统里找到了自己的位置。
 
 #### 三十三、本章知识在真实项目里的应用清单
 
@@ -680,7 +680,7 @@ override fun onStop() {
 
 #### 三十四、Compose 与生命周期的"新契约"：副作用 API 全家福
 
-本章讲的生命周期是 Activity 层的，Compose 层还有一套"副作用 API"，它们是 Composable 与外部世界（网络、存储、传感器）打交道的正规渠道，也各自绑定了生命周期。五个常用副作用，各自的用途与触发时机：
+本章讲的生命周期是 Activity 层的，Compose 层还有一套"副作用 API"——它们是 Composable 与外部世界（网络、存储、传感器）打交道的正规渠道，也各自绑定了生命周期。五个常用副作用，各自的用途与触发时机：
 
 - <strong>LaunchedEffect(key)</strong>：进入组合时启动协程，key 变化时重启协程，离开组合时取消。异步请求的标准写法，"当 city 参数变化时重新请求天气"就是 LaunchedEffect(city)。
 - <strong>rememberCoroutineScope</strong>：在事件回调里启动协程（比如按钮点击时提交表单）。LaunchedEffect 是"组合驱动"，这个是"事件驱动"，两者别混用。
@@ -740,7 +740,7 @@ class CounterViewModelTest {
 
 四个测试覆盖了"正常路径、多次操作、边界重置"三类场景。测试的名字用反引号写成中文句子，这是 Kotlin 的特性，测试名即"需求描述"，读测试就是读需求。ViewModel 的测试不需要模拟器、不需要 Android 框架，纯 JVM 上毫秒级完成，这就是"把逻辑放 ViewModel"的另一个红利：可测试性。
 
-测试的运行方式：在 Android Studio 里点击测试类旁边的绿色三角即可。测试文件放在 src/test/java 目录（注意不是 androidTest，那是仪器测试，需要真机或模拟器）。第 45 章的质量保障方法论在这里的落地就是：核心逻辑都有单元测试，改代码前先跑一遍，测试全绿再提交。
+测试的运行方式：在 Android Studio 里点击测试类旁边的绿色三角即可。测试文件放在 src/test/java 目录（注意不是 androidTest——那是仪器测试，需要真机或模拟器）。第 45 章的质量保障方法论在这里的落地就是：核心逻辑都有单元测试，改代码前先跑一遍，测试全绿再提交。
 
 #### 三十六、本章学习复盘：从"概念清单"到"能力清单"
 
@@ -766,7 +766,7 @@ class CounterViewModelTest {
 
 用法上一句话就能说清：ViewModel 的构造函数里接收 <code>savedStateHandle: SavedStateHandle</code>，把"丢了会很疼"的 UI 态（当前选中的标签页、正在输入的搜索词、列表滚动到的筛选条件）用 <code>handle["key"] = value</code> 存进去，恢复时直接读。它能存的数据量很小（Binder 事务限制在 1MB 上下文内，实际建议只存几百 KB 以内的键值对），所以定位明确：<strong>只存"钥匙"，不存"行李"</strong>——表单全文存 DataStore，搜索关键词存 SavedStateHandle。
 
-三个容易犯的错：一，把大对象塞进去导致恢复时 TransactionTooLargeException 崩溃，日志里只给一行晦涩的提示，很多新手卡在这里一晚上——记住保险柜只收小件；二，把可以从数据库重算出来的数据也存进去，导致"保险柜里的"和"数据库里的"两份数据互相矛盾，恢复后界面状态撕裂：能重算的不存；三，忘了它随进程恢复而不是随 Activity 恢复。测试时以为没生效：用下面第四十节的"不保留活动"开关才能测出真实效果。
+三个容易犯的错：一，把大对象塞进去导致恢复时 TransactionTooLargeException 崩溃，日志里只给一行晦涩的提示，很多新手卡在这里一晚上——记住保险柜只收小件；二，把可以从数据库重算出来的数据也存进去，导致"保险柜里的"和"数据库里的"两份数据互相矛盾，恢复后界面状态撕裂：能重算的不存；三，忘了它随进程恢复而不是随 Activity 恢复。测试时以为没生效——用下面第四十节的"不保留活动"开关才能测出真实效果。
 
 #### 三十八、Activity Result API：告别 onActivityResult 的现代方式
 
@@ -780,7 +780,7 @@ class CounterViewModelTest {
 
 从 Android 14 引入、15 之后逐步成为默认，"预测性返回"（Predictive Back）改变了返回键的观感：上滑返回时，系统会先给你一个当前页面缩小、露出上一页的"预览动画"，你松手才算真的返回，就像 iOS 上早就习惯的那种"看到要回到哪"的手势体验。
 
-对开发者的影响集中在三件事。第一，拦截返回不再用重写 <code>onBackPressed()</code>，而要用 OnBackPressedDispatcher 注册回调：老写法在新目标版本上会被忽略，表现为"我的双击退出逻辑突然失效了"。第二，只有声明了 <code>android:enableOnBackInvokedCallback="true"</code> 的应用才启用预测性行为，老应用暂时还能用旧行为，但方向已经确定：迟早强制。第三，自定义的"确认退出"对话框、抽屉关闭、搜索页清空：这些拦截逻辑都应该迁移到 Dispatcher，并保证每个回调只处理自己范围内的返回事件，避免两个模块抢同一个返回键。
+对开发者的影响集中在三件事。第一，拦截返回不再用重写 <code>onBackPressed()</code>，而要用 OnBackPressedDispatcher 注册回调——老写法在新目标版本上会被忽略，表现为"我的双击退出逻辑突然失效了"。第二，只有声明了 <code>android:enableOnBackInvokedCallback="true"</code> 的应用才启用预测性行为，老应用暂时还能用旧行为，但方向已经确定：迟早强制。第三，自定义的"确认退出"对话框、抽屉关闭、搜索页清空：这些拦截逻辑都应该迁移到 Dispatcher，并保证每个回调只处理自己范围内的返回事件，避免两个模块抢同一个返回键。
 
 给新手的教学建议：新项目从一开始就统一用 Dispatcher 写返回逻辑，别再抄老教程的 onBackPressed；老项目迁移时全局搜"onBackPressed"，逐个改造并用手势真机验证预览动画正常，这项改造不大，但它决定你的 App 在新系统上"手感"是否跟得上时代。
 
