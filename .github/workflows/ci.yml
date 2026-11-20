@@ -33,6 +33,9 @@ jobs:
       - name: README 与 index.html 宣称值校验（章数/区块数/语言数/链接）
         run: python -m bookkit check --claims
 
+      - name: 元数据单一真源核对（章数/篇数/字数/语言数跨文件一致）
+        run: python scripts/consistency_lint.py
+
       - name: index.html 卡片块与 manifest 一致性（AUTOGEN 漂移检测）
         if: always()
         run: python -m bookkit index --check

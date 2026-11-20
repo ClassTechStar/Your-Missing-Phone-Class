@@ -45,7 +45,7 @@ TOOLS = [
     },
     {
         "name": "get_chapter",
-        "description": "读取一章正文（Markdown 源稿）。chapter_id 可传章节 id、''第20章'' 或 ''20''；lang 可选，默认 zh-CN；version 默认 v1.8，传 v1.9 读最新中文版（353.8 万字深编稿）",
+        "description": "读取一章正文（Markdown 源稿）。chapter_id 可传章节 id、''第20章'' 或 ''20''；lang 可选，默认 zh-CN；version 默认 v1.8，传 v1.9 读最新中文版（371.3 万字深编稿）",
         "inputSchema": {
             "type": "object",
             "properties": {

@@ -72,6 +72,16 @@ def main() -> int:
     langs = data["languages"]
     disclosure = data.get("language_quality_disclosure", "")
 
+    # 页面里出现的版本数全部由注册表推导，不许手写——
+    # 曾经这里的「20 个语言版本」与全站「19 种语言」对不上（注册表里
+    # 登记了一个既无源稿也无成品的语言）。数字跟着数据走，这类事故就没了。
+    def stars_of(meta):
+        return (meta.get("quality") or {}).get("stars", "")
+
+    n_total = len(langs)
+    n_machine = sum(1 for m in langs.values() if stars_of(m) == "★★")
+    n_special = n_total - n_machine          # 认真弄过的（含文化彩蛋）
+
     rows = []
     for code, meta in sorted(langs.items(),
                              key=lambda x: (TIER_ORDER.get(x[1].get("quality", {}).get("stars", "★"), 9),
@@ -100,7 +110,7 @@ def main() -> int:
 <div class="wrap">
 
 <header>
-  <h1>这本书有 20 个语言版本，它们不是同样可靠的</h1>
+  <h1>这本书有 {n_total} 个语言版本，它们不是同样可靠的</h1>
   <p class="sub">《你缺失的那门手机课》· 多语言审校分级 · 数据源：<code>manifest/languages.json</code></p>
 </header>
 
@@ -125,7 +135,7 @@ def main() -> int:
 <tbody>
 <tr><td class="stars">★★★★★</td><td>简体中文：可以当准本照着做。路径、版本、结论都有人对过账。</td></tr>
 <tr><td class="stars">★★★</td><td>繁體中文 / 粵語 / English：结构完整，个别用词可能不如中文版顺。术语已统一。</td></tr>
-<tr><td class="stars">★★</td><td>其余 15 种：机器翻译 + 术语表统一，<strong>没有逐章人工校对</strong>。当参考可以，当准本请回中文版。</td></tr>
+<tr><td class="stars">★★</td><td>其余 {n_machine} 种：机器翻译 + 术语表统一，<strong>没有逐章人工校对</strong>。当参考可以，当准本请回中文版。</td></tr>
 <tr><td class="stars">☆</td><td>文言文：语言表演与文化彩蛋，不承担教学用途。</td></tr>
 </tbody>
 </table>
@@ -134,15 +144,15 @@ def main() -> int:
 
 <h3>1. 去 AI 味只做中文真源</h3>
 <p>这一版的去 AI 味改造（句式、案例、立场、版本锚点、勘误）全部落在中文版。
-18 种外语是<strong>翻译</strong>，不是并行创作。翻译里保留一点工整是正常的——
-读者对翻译腔的容忍度本来就高，硬把口语塞进 19 种语言里只会更糟。</p>
+{n_total - 1} 种外语是<strong>翻译</strong>，不是并行创作。翻译里保留一点工整是正常的——
+读者对翻译腔的容忍度本来就高，硬把口语塞进 {n_total} 种语言里只会更糟。</p>
 
-<h3>2. 不假装 19 种语言同等完美</h3>
+<h3>2. 不假装 {n_total} 种语言同等完美</h3>
 <div class="quote">
 最要命的不是机器味，是<strong>假装</strong>。<br>
 一个训练有素的模型会自然地假设"我应该把每种语言都写好"，
-于是 19 个版本看起来一样精致、一样完整——而其中 15 个从来没被母语者逐句读过。<br>
-人不会这样。人会说：这 5 种我认真弄了，那 15 种我只能保证结构在、术语对。
+于是 {n_total} 个版本看起来一样精致、一样完整——而其中 {n_machine} 个从来没被母语者逐句读过。<br>
+人不会这样。人会说：这 {n_special} 种我认真弄了，那 {n_machine} 种我只能保证结构在、术语对。
 </div>
 <p>所以这张表是<strong>主动交代</strong>，不是免责声明。分级低不代表翻译差，
 它只代表我们在那一版上投入的<strong>人工时间</strong>少。</p>

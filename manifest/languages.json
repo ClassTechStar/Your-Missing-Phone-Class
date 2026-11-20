@@ -369,20 +369,6 @@
         "label": "文化彩蛋",
         "note": "文言文版是语言表演，不承担教学用途；风格化本就是它的预期"
       }
-    },
-    "vi": {
-      "name": "Tiếng Việt",
-      "html_lang": "vi",
-      "dir": "ltr",
-      "script": "Latn",
-      "priority": 20,
-      "flag": "🇻🇳",
-      "gradient": "bg-gradient-to-br from-teal-50 to-teal-100",
-      "quality": {
-        "stars": "★★",
-        "label": "机器翻译版，质量不承诺",
-        "note": "机器翻译 + 术语表统一，未做逐章人工校对；请把中文版当作准本"
-      }
     }
   },
   "cjk_allowance": {

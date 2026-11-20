@@ -10,7 +10,7 @@ from . import textutil as T
 from .model import ERROR, Issue
 
 RE_README_HEADLINE = re.compile(
-    r'最新版本\s*\((?P<ver>v[\d.]+)\)\s*[—\-–]\s*(?P<langs>\d+)\s*种语言\s*[·、]\s*(?P<sections>\d+)\s*个内容区块')
+    r'最新版本\s*\((?P<ver>v[\d.]+)\)\s*[—\-–]\s*(?P<langs>\d+)\s*种语言\s*[·、]\s*(?P<sections>\d+)\s*章')
 RE_README_LANG_LINK = re.compile(r'\[[^\]]*\]\((?:\./)?(?P<ver>v[\d.]+)/(?P<code>[\w-]+)\.html\)')
 RE_APK = re.compile(r'releases/download/(?P<ver>v[\d.]+)/(?P<asset>[\w.\-]+\.apk)')
 RE_INDEX_STAT = re.compile(
@@ -59,7 +59,7 @@ def check_claims(root: Path, mf) -> list:
         m = RE_README_HEADLINE.search(rd)
         if not m:
             issues.append(Issue("claims", ERROR,
-                                "README 未找到「最新版本 (vX) — N 种语言 · M 个内容区块」标题",
+                                "README 未找到「最新版本 (vX) — N 种语言 · M 章」标题",
                                 file=readme_rel))
         else:
             if m.group('ver') != version:
@@ -72,7 +72,7 @@ def check_claims(root: Path, mf) -> list:
                                     file=readme_rel))
             if int(m.group('sections')) != expected_sections:
                 issues.append(Issue("claims", ERROR,
-                                    f"README 宣称 {m.group('sections')} 个内容区块，实际 {expected_sections}",
+                                    f"README 宣称 {m.group('sections')} 章，实际 {expected_sections}",
                                     file=readme_rel))
 
         # 语言表：每个链接必须存在，且数量与语言数一致
@@ -107,10 +107,10 @@ def check_claims(root: Path, mf) -> list:
 
         # 章数/字数宣称值：badge 与正文 ↔ 最新版基线实测（字数 = 可见文本去空白）
         for label, rx, want in (
-            ('badge 章节数', re.compile(r'badge/章节-(\d+)%20节'), str(newest_real["sections"])),
-            ('badge 字数', re.compile(r'badge/章节-\d+%20节·([\d.]+)%20万字'), newest_wan),
+            ('badge 章节数', re.compile(r'badge/章节-(\d+)%20章'), str(newest_real["sections"])),
+            ('badge 字数', re.compile(r'badge/章节-\d+%20章·([\d.]+)%20万字'), newest_wan),
             ('v1.9 小节字数', re.compile(r'### v1\.9[^\n]*?([\d.]+)\s*万字'), newest_wan),
-            ('导语字数', re.compile(r'共 \d+ 个内容区块），([\d.]+) 万字'), newest_wan),
+            ('导语字数', re.compile(r'共 \d+ 章 · \d+ 篇 · ([\d.]+) 万字'), newest_wan),
             ('仓库表字数', re.compile(r'（([\d.]+) 万字）'), newest_wan),
         ):
             if not want:
