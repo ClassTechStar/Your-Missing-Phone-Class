@@ -76,7 +76,7 @@ SYMBOL_NOTO.update({
     '\u21a9': '\u2190',      # ↩ → ←
     '\u2699': '\u203b',      # ⚙ → ※
     '\u2705': '\u2713',      # ✅ → ✓
-    '\u2764': '\u2665',      # ❤ → ♥
+    '\u2764': '心',      # ❤ → 心（MiSans 无 ♥ 字形）
     '\u2744': '',            # ❄ 无字形，与其它 emoji 一样丢弃
     '\u25be': '\u25bc',      # ▾ → ▼
     '\u2219': '\u00b7',      # ∙ → ·
@@ -87,6 +87,9 @@ SYMBOL_NOTO.update({
     '\u2325': 'Alt',        # ⌥ Option 键，Noto 缺字形
     '\u25b3': '三角',       # △ 无字形，改文字描述
     '\u2606': '★',          # ☆ 无字形，用同类星号
+    # 中文正文偶现的阿拉伯语 App 名：MiSans 中文版无该字形，转写为拉丁（字体保持 MiSans）
+    '\u0627': 'a', '\u0628': 'b', '\u0629': 'h', '\u0631': 'r',
+    '\u0639': '3', '\u0644': 'l', '\u064a': 'y',
     '\u2717': '×',          # ✗ → ×
     # MiSans-Normal 单字体兜底：该字体不含下列字形，按语义换可显示字
     '\u2194': '→', '\u21e7': 'Shift', '\u2318': 'Cmd', '\u25b6': '播放',
@@ -125,9 +128,9 @@ RE_EMOJI_OTHER = re.compile(
     '\U00002B00-\U00002BFF]')
 
 # 把西文字体缺字形的符号划入 CJK 类，交由中文字体渲染（两个字体栈分别覆盖）
-CHARCLASS_NOTO = ('"26A0,"2756,"25B6,"2605,"2713,"203B,"2103,"2318,"21E7,'
+CHARCLASS_NOTO = ('"2605,"2713,"203B,"2103,"2318,"21E7,'
                   '"2502,"251C,"2514,"21C4,"2192,"2190,"2191,"2194,'
-                  '"25CF,"25C6,"25CB,"3007,"25B2,"25A0,"25BC,"2665,"2600,"260E')
+                  '"25CF,"25C6,"25CB,"3007,"25B2,"25A0,"25BC')
 CHARCLASS_OTHER = '"2192,"2190,"2191,"2194,"203B,"2103,"25C6,"25B2,"25CF,"25BC'
 
 
@@ -500,8 +503,8 @@ def font_block(lang: str) -> list:
         out += [
             r'\setCJKmainfont{MiSans-Normal.ttf}[Path=\fontdir,'
             r'BoldFont=MiSans-Normal.ttf,BoldFeatures={Path=\fontdir},'
-            r'ItalicFont=simkai.ttf,ItalicFeatures={Path=\windir},'
-            r'BoldItalicFont=simkai.ttf,BoldItalicFeatures={Path=\windir}]',
+            r'ItalicFont=MiSans-Normal.ttf,ItalicFeatures={Path=\fontdir},'
+            r'BoldItalicFont=MiSans-Normal.ttf,BoldItalicFeatures={Path=\fontdir}]',
             r'\setCJKsansfont{MiSans-Normal.ttf}[Path=\fontdir,'
             r'BoldFont=MiSans-Normal.ttf,BoldFeatures={Path=\fontdir}]',
             r'\setCJKmonofont{MiSans-Normal.ttf}[Path=\fontdir]',
@@ -519,9 +522,9 @@ def font_block(lang: str) -> list:
                 r'\setCJKsansfont{malgun.ttf}' + cjk,
                 r'\setCJKmonofont{malgun.ttf}' + cjk]
     else:
-        out += [r'\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}',
-                r'\setCJKsansfont{SimHei}',
-                r'\setCJKmonofont{SimSun}']
+        out += [r'\setCJKmainfont{MiSans-Normal.ttf}[Path=\fontdir]',
+                r'\setCJKsansfont{MiSans-Normal.ttf}[Path=\fontdir]',
+                r'\setCJKmonofont{MiSans-Normal.ttf}[Path=\fontdir]']
 
     if lang in SCRIPT_FONTS:
         # Arial / Leelawadee 的斜体缺阿拉伯、泰文字形 → 斜体映射到正体
@@ -547,7 +550,8 @@ def font_block(lang: str) -> list:
 
 def preamble(lang: str, meta: dict) -> list:
     u = ui_of(lang)
-    icon = ({'info': '\u2756', 'warn': '\u26a0', 'prac': '\u25b6', 'sum': '\u2605'}
+    # MiSans-Normal 不含 ❖/⚠/▶，提示框图标用其可显示的同族字形
+    icon = ({'info': '◆', 'warn': '!', 'prac': '>', 'sum': '★'}
             if lang in NOTO_LANGS else
             {'info': '\u25c6', 'warn': '\u25b2', 'prac': '\u25cf', 'sum': '\u203b'})
     P = []
