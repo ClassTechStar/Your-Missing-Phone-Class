@@ -216,7 +216,9 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     import shutil
     (page_dir / 'assets').mkdir(exist_ok=True)
     # MiSans：CSS 里的 @font-face 用 ../fonts/ 相对路径，字体随页面树一起输出
-    font_src = root / 'assets' / 'fonts' / 'MiSans-Normal.ttf'
+    font_src = root / 'fonts' / 'MiSans-Normal.ttf'
+    if not font_src.is_file():          # 兼容旧布局
+        font_src = root / 'assets' / 'fonts' / 'MiSans-Normal.ttf'
     if font_src.is_file():
         fonts_out = page_dir / 'fonts'
         fonts_out.mkdir(exist_ok=True)

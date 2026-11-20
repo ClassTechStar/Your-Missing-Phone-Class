@@ -40,7 +40,7 @@ DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 必须与站点上发布的那一版书对齐（当前 v1.9）——错版会点进死链。
 ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json',
           'errata.html', 'languages.html', 'quiz.html']
-ASSET_DIRS = ['icons', 'quiz']
+ASSET_DIRS = ['icons', 'quiz', 'fonts']
 # 书页里的 og:image 是绝对地址（manifest 的 site_url + cover-og.png），
 # 图必须一起部署到站点根，否则分享卡片抓不到图。
 COVER = ('docs/promotion/assets/cover-og.png', 'cover-og.png')
@@ -52,6 +52,7 @@ REWRITES = [
     ('../icons/', 'icons/'),
     ('../errata.html', 'errata.html'),
     ('../languages.html', 'languages.html'),
+    ('../fonts/', 'fonts/'),   # MiSans 字体：书页 ../fonts/ → 站点根 fonts/
 ]
 
 
