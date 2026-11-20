@@ -55,7 +55,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>升級鴻蒙NEXT前必讀
+升級鴻蒙NEXT前必讀
 
 {class="mt-1"}
 升級到鴻蒙NEXT後，你嘅手機將無法運行安卓應用。請務必喺升級前確認：①你常用嘅App已有鴻蒙原生版本，②你嘅工作或生活中冇必須依賴安卓應用嘅場景。升級後無法回退到鴻蒙4.3。
@@ -94,7 +94,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事項
+注意事項
 
 {class="mt-1"}
 鴻蒙系統喺度不斷更新迭代，唔同版本可能有啲差異。本文描述基於鴻蒙4.3同6嘅主要特性，具體功能請以你嘅手機實際版本為準。建議保持系統更新，以獲得最新功能同安全補丁。
@@ -102,7 +102,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>而家就試：體驗鴻蒙特色功能
+而家就試：體驗鴻蒙特色功能
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打開控制中心，揾到「超級終端」，睇下週圍有冇其他鴻蒙設備。

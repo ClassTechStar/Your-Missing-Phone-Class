@@ -25,7 +25,7 @@ Avanços-chave de 2024-2026: vida útil da dobradiça geralmente classificada pa
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Julgamento em uma frase
+Julgamento em uma frase
 
 {class="mt-1"}
 Se o seu celular tradicional atual atende perfeitamente e você não sofre com a "tela pequena demais", não compre um dobrável. É um dispositivo "cereja do bolo", não um dispositivo "salva-vidas".
@@ -42,7 +42,7 @@ Com base no feedback de usuários reais, estes tipos de pessoas têm alta probab
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Estes tipos de pessoas NÃO devem comprar
+Estes tipos de pessoas NÃO devem comprar
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Quem usa o celular só para ver vídeos curtos, conversar no WeChat e fazer chamadas, o dobrável não traz nenhum benefício para você, e ainda é mais pesado e grosso.
@@ -63,7 +63,7 @@ Não se deixe deslumbrar pela palavra "dobrável". Ao comprar, foque em:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Lista de verificação na loja física
+Lista de verificação na loja física
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abra e feche 10 vezes com as mãos, sinta se o amortecimento da dobradiça é suave e se há ruídos estranhos.
@@ -112,7 +112,7 @@ O mais delicado nos dobráveis é a tela interna e a dobradiça. Estes hábitos 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Cenários comuns de danos à tela interna
+Cenários comuns de danos à tela interna
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Fechar com cabo de fone/carregador preso, quebra a tela interna diretamente.
@@ -134,7 +134,7 @@ Antes de comprar, tenha estas contas em mente:
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>O dobrável não é "um celular melhor", mas "um celular de outro formato". Compre-o porque você precisa do formato único dele, não porque ele é "mais avançado".
+O dobrável não é "um celular melhor", mas "um celular de outro formato". Compre-o porque você precisa do formato único dele, não porque ele é "mais avançado".
 
 {class="text-right text-sm"}
 —, Filosofia de compra sobre telas dobráveis
@@ -155,7 +155,7 @@ Sugestão de compra: Orçamento alto e busca ecossistema → Huawei Mate X; quer
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Último lembrete
+Último lembrete
 
 {class="mt-1"}
 A tecnologia de telas dobráveis evolui a cada ano. Este apêndice foi escrito em 2026. Antes de comprar, consulte as análises e feedbacks de usuários mais recentes, focando em três pontos: teste real de vida útil da dobradiça, desempenho do vinco, política de reparo da tela interna. Experimentar pessoalmente na loja sempre vale mais do que ver análises.

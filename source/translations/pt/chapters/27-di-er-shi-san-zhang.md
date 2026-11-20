@@ -95,7 +95,7 @@ Fazer automação não é sempre um mar de rosas. Aqui estão algumas armadilhas
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Dica: a postura correta para começar com automação
+Dica: a postura correta para começar com automação
 
 {class="mt-1"}
 Primeiro, gaste 5 minutos pensando: quais são as 3 coisas que você mais repete no celular todo dia? Por exemplo, a rotina matinal, o hábito ao conectar fones Bluetooth, as configurações antes de sair de casa... Comece por essas pequenas tarefas de alta frequência e crie uma automação simples para cada uma. Mesmo que cada automação economize apenas 5 segundos, ao longo do tempo o acúmulo é significativo. E a satisfação depois de criar — vicia de verdade.
@@ -103,7 +103,7 @@ Primeiro, gaste 5 minutos pensando: quais são as 3 coisas que você mais repete
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pratique: três desafios de automação para iniciantes
+Pratique: três desafios de automação para iniciantes
 
 {class="mt-1 mb-2"}
 Escolha o mais adequado para você e complete, depois disso você já terá começado:
@@ -116,7 +116,7 @@ Escolha o mais adequado para você e complete, depois disso você já terá come
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Exemplo 3: Automação "Rotina de bom dia"
+Exemplo 3: Automação "Rotina de bom dia"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Cenário</strong>: todo dia às 7:00 anunciar automaticamente a previsão do tempo + desativar silencioso + abrir notícias.

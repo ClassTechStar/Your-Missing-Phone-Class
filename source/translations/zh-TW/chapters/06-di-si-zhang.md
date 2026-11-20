@@ -56,7 +56,7 @@ App讓手機無所不能，但也要管好它們。就像你會給新員工安�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>什麼是"電子寄生蟲"？
+什麼是"電子寄生蟲"？
 
 {class="mt-1"}
 指的是那些<strong>被植入木馬的"破解版"軟體</strong>——你以為是"省了錢"，實際是"中了招"。常見形式：
@@ -96,20 +96,20 @@ App要許可權（比如通訊錄、位置）有時合理（地圖要位置）�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>許可權選項</strong>："始終允許"、"僅在使用時允許"、"禁止"、"每次詢問"。</li>
-                        <li><strong>管理原則</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>最小化：非必要不給。</li>
-                                <li>事後審計：定期去許可權設定裡看看誰在"越權"。</li>
-                                <li>情境化：像打車軟體，只在用時給位置許可權。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>許可權選項</strong>："始終允許"、"僅在使用時允許"、"禁止"、"每次詢問"。</li>
+ <li><strong>管理原則</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>最小化：非必要不給。</li>
+ <li>事後審計：定期去許可權設定裡看看誰在"越權"。</li>
+ <li>情境化：像打車軟體，只在用時給位置許可權。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>重點盯防的許可權
+重點盯防的許可權
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 通訊錄/簡訊：可能被用來發垃圾簡訊。
@@ -152,16 +152,16 @@ IPA（iOS App Store Package）同樣是壓縮包，結構略有不同：
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>安卓簽名</strong>：開發者用私鑰對APK進行簽名，系統安裝時用公鑰驗證。如果APK被篡改（比如植入病毒），簽名就會失效，系統會拒絕安裝。Google Play還要求App Signing，由Google保管簽名金鑰，進一步保護應用安全。</li>
-                        <li><strong>iOS簽名</strong>：蘋果的稽核更嚴格。每個IPA必須有蘋果頒發的證書籤名，否則無法安裝。這就是為什麼iOS只能從App Store或企業證書安裝應用。企業證書籤名的應用有效期有限，且蘋果可以隨時吊銷。</li>
-                        <li><strong>簽名的作用</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>驗證來源：確認應用確實來自聲稱的開發者。</li>
-                                <li>驗證完整性：確保應用在傳輸過程中未被篡改。</li>
-                                <li>防止冒充：惡意應用無法偽裝成其他應用。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>安卓簽名</strong>：開發者用私鑰對APK進行簽名，系統安裝時用公鑰驗證。如果APK被篡改（比如植入病毒），簽名就會失效，系統會拒絕安裝。Google Play還要求App Signing，由Google保管簽名金鑰，進一步保護應用安全。</li>
+ <li><strong>iOS簽名</strong>：蘋果的稽核更嚴格。每個IPA必須有蘋果頒發的證書籤名，否則無法安裝。這就是為什麼iOS只能從App Store或企業證書安裝應用。企業證書籤名的應用有效期有限，且蘋果可以隨時吊銷。</li>
+ <li><strong>簽名的作用</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>驗證來源：確認應用確實來自聲稱的開發者。</li>
+ <li>驗證完整性：確保應用在傳輸過程中未被篡改。</li>
+ <li>防止冒充：惡意應用無法偽裝成其他應用。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. 安裝包大小與最佳化
@@ -180,7 +180,7 @@ IPA（iOS App Store Package）同樣是壓縮包，結構略有不同：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：為什麼有的App安裝包特別大？
+小知識：為什麼有的App安裝包特別大？
 
 {class="mt-1"}
 遊戲類App通常最大，因為包含大量高畫質貼圖、3D模型、音訊檔案。社交類App也比較大，因為要支援各種功能模組。工具類App通常最小。如果你發現某個工具類App特別大，要警惕是否捆綁了不必要的功能。
@@ -188,7 +188,7 @@ IPA（iOS App Store Package）同樣是壓縮包，結構略有不同：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>實操環節：審查3個App的許可權
+實操環節：審查3個App的許可權
 
 {class="mt-1"}
 選3個常用App（如社交、購物、工具類），進入 [設定] 的應用許可權管理頁，逐項審查，把不必要的敏感許可權關掉或改成"僅在使用時允許"。

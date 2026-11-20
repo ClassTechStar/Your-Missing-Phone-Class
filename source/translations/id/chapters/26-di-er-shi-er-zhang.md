@@ -98,7 +98,7 @@ pemikiran komunikasi "Peran-Latar Belakang-Tugas-Batasan" yang paling praktis da
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Banyak orang menggunakan AI seperti menggunakan Baidu—memasukkan beberapa kata kunci. Tapi AI bukan mesin pencari, ia adalah model bahasa yang "memahami bacaan lalu menjawab".
+Banyak orang menggunakan AI seperti menggunakan Baidu—memasukkan beberapa kata kunci. Tapi AI bukan mesin pencari, ia adalah model bahasa yang "memahami bacaan lalu menjawab".
 
 {class="mt-1"}
 Beri lebih banyak konteks, jelaskan apa yang Anda inginkan, batasi agar tidak menyimpang <strong>, ia bisa memberi hasil yang tepat. Kerangka adalah menerjemahkan "seperti apa jawaban yang baik" di pikiran Anda menjadi instruksi yang bisa dipahami AI.</strong>1. Peran (Role): Beri Tahu AI Siapa Dirinya
@@ -198,39 +198,39 @@ Menulis prompt yang baik bukan hal sekali jadi,<strong>setelah selesai, periksa 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Gejala</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Solusi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Jawaban terlalu umum, tidak praktis</td>
-                                    <td class="border border-gray-300 px-3 py-2">Tambahkan latar belakang (siapa Anda/skenario apa)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Jawaban terlalu akademis/terlalu resmi</td>
-                                    <td class="border border-gray-300 px-3 py-2">Tambahkan batasan nada + daftar penolakan "bahasa birokrasi"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Jawaban menyimpang/tidak menjawab pertanyaan</td>
-                                    <td class="border border-gray-300 px-3 py-2">Ulangi tugas dengan kata kerja, dan minta "hanya jawab ini" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Jawaban terlalu panjang, tidak bisa diselesaikan</td>
-                                    <td class="border border-gray-300 px-3 py-2">Batasan jumlah kata yang keras (dalam 200 kata)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI bicara dengan sok tahu tapi salah</td>
-                                    <td class="border border-gray-300 px-3 py-2">Tambahkan "jika tidak yakin, tandai 'saya tidak yakin'" + verifikasi fakta penting sendiri</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Versi pertama tidak memuaskan</td>
-                                    <td class="border border-gray-300 px-3 py-2">Jangan tulis ulang, tambahkan "lebih ... lagi" di akhir prompt asli</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Gejala</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Solusi</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Jawaban terlalu umum, tidak praktis</td>
+ <td class="border border-gray-300 px-3 py-2">Tambahkan latar belakang (siapa Anda/skenario apa)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Jawaban terlalu akademis/terlalu resmi</td>
+ <td class="border border-gray-300 px-3 py-2">Tambahkan batasan nada + daftar penolakan "bahasa birokrasi"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Jawaban menyimpang/tidak menjawab pertanyaan</td>
+ <td class="border border-gray-300 px-3 py-2">Ulangi tugas dengan kata kerja, dan minta "hanya jawab ini" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Jawaban terlalu panjang, tidak bisa diselesaikan</td>
+ <td class="border border-gray-300 px-3 py-2">Batasan jumlah kata yang keras (dalam 200 kata)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI bicara dengan sok tahu tapi salah</td>
+ <td class="border border-gray-300 px-3 py-2">Tambahkan "jika tidak yakin, tandai 'saya tidak yakin'" + verifikasi fakta penting sendiri</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Versi pertama tidak memuaskan</td>
+ <td class="border border-gray-300 px-3 py-2">Jangan tulis ulang, tambahkan "lebih ... lagi" di akhir prompt asli</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Menulis prompt yang baik bukan hal sekali jadi,<strong>setelah selesai, periksa 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Skenario 1: Asisten Kehidupan (Saran menu sarapan)
+Skenario 1: Asisten Kehidupan (Saran menu sarapan)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -257,7 +257,7 @@ Anda adalah blogger sarapan yang ahli dalam paduan nutrisi (<strong>Peran</stron
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Skenario 2: Bantuan Belajar (Persiapan ujian CET-6 bahasa Inggris)
+Skenario 2: Bantuan Belajar (Persiapan ujian CET-6 bahasa Inggris)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -275,7 +275,7 @@ Anda adalah <strong>guru CET-6 bahasa Inggris yang berpengalaman</strong>(Peran)
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Skenario 3: Efisiensi Kerja (Penyusunan notulen rapat)
+Skenario 3: Efisiensi Kerja (Penyusunan notulen rapat)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -293,7 +293,7 @@ Anda adalah <strong>asisten administrasi senior</strong>(Peran). Saya baru saja 
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Tingkat Lanjut: Jadikan AI "Asisten Pribadi" Anda
+Tingkat Lanjut: Jadikan AI "Asisten Pribadi" Anda
 
 {class="mt-1"}
 Coba penggunaan lanjutan ini, rasakan kekuatan AI yang sebenarnya:
@@ -317,7 +317,7 @@ AI memang kuat, tetapi bukan "serba bisa". Memahami keterbatasannya dengan jerni
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Tip Penggunaan AI
+Tip Penggunaan AI
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Konten yang dihasilkan AI mungkin tidak akurat (masalah "halusinasi"), informasi penting harus diverifikasi.
@@ -329,7 +329,7 @@ AI memang kuat, tetapi bukan "serba bisa". Memahami keterbatasannya dengan jerni
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari Tantang: Tiga Soal Praktik AI
+Mari Tantang: Tiga Soal Praktik AI
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Tantangan 1: Instruksi kompleks</strong>: Katakan pada asisten suara: "Besok pagi jam 7 ingatkan saya bawa payung, dan pindahkan kalender jam 3 sore hari ini ke jam 4." Lihat apakah ia bisa menyelesaikan operasi multi-langkah sekaligus.
@@ -339,7 +339,7 @@ AI memang kuat, tetapi bukan "serba bisa". Memahami keterbatasannya dengan jerni
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Studi Kasus 2: Alur Lengkap Migrasi Data Ganti Ponsel
+Studi Kasus 2: Alur Lengkap Migrasi Data Ganti Ponsel
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Skenario</strong>: iPhone 13 → Xiaomi 15 ganti ponsel lintas merek.

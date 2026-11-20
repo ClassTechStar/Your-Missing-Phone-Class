@@ -100,7 +100,7 @@ ISP anda
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: Buka senarai Wi-Fi, "lupakan" semua titik panas yang tidak dikenali, jarang digunakan, atau nama yang pelik.
+: Buka senarai Wi-Fi, "lupakan" semua titik panas yang tidak dikenali, jarang digunakan, atau nama yang pelik.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Pembersihan besar kebenaran</strong>: Masuk ke Tetapan &gt; Privasi/Pengurusan Kebenaran, semak kebenaran App satu persatu. Tandai App yang meminta kebenaran tidak munasabah (contohnya kalkulator meminta senarai kenalan), pertimbangkan untuk menyahpasang atau gunakan pengganti.

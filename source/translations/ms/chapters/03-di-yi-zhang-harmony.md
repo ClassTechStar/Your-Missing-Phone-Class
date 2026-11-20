@@ -55,7 +55,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0) berbeza secara asas dengan HarmonyOS 4.3, ia
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Wajib Baca Sebelum Menaik taraf ke HarmonyOS NEXT
+Wajib Baca Sebelum Menaik taraf ke HarmonyOS NEXT
 
 {class="mt-1"}
 Selepas menaik taraf ke HarmonyOS NEXT, telefon anda tidak akan dapat menjalankan aplikasi Android. Sila pastikan sebelum menaik taraf: ① App yang sering anda guna ada versi HarmonyOS natif; ② Kerja atau kehidupan anda tiada senario yang mesti bergantung kepada aplikasi Android. Tidak boleh kembali ke HarmonyOS 4.3 selepas menaik taraf.
@@ -94,7 +94,7 @@ Pasaran aplikasi HarmonyOS telah mempunyai jutaan aplikasi, App utama asasnya ad
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Fungsi kunci BL:
+Fungsi kunci BL:
 
 {class="mt-1"}
 Sistem HarmonyOS sentiasa dikemas kini dan diulang, versi berbeza mungkin ada sedikit perbezaan. Penerangan dalam artikel ini berdasarkan ciri utama HarmonyOS 4.3 dan 6, fungsi khusus sila rujuk versi sebenar telefon anda. Cadangkan kekal kemas kini sistem, untuk mendapatkan fungsi terkini dan tampung keselamatan.
@@ -102,7 +102,7 @@ Sistem HarmonyOS sentiasa dikemas kini dan diulang, versi berbeza mungkin ada se
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cuba Sekarang: Alami Ciri Khas HarmonyOS
+Cuba Sekarang: Alami Ciri Khas HarmonyOS
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka pusat kawalan, cari "Super Terminal", lihat sama ada ada peranti HarmonyOS lain di sekeliling.

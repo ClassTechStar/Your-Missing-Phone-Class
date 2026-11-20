@@ -55,7 +55,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>买手机的小建议
+买手机的小建议
 
 {class="mt-1"}
 现在128GB的手机基本不够用了，256GB起步比较稳妥。如果你喜欢拍照、玩游戏，建议直接上512GB甚至更大。记住，存储空间这东西，宁可富余，不可捉襟见肘。
@@ -63,7 +63,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：看看你的手机"身份证"
+来动手：看看你的手机"身份证"
 
 {class="mt-1"}
 打开 [设置]，找到关于手机（或类似选项），记下：手机型号、系统版本、总存储空间和剩余空间。这是了解它的第一步。顺便看看电池健康度，心里有个数。
@@ -76,7 +76,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>为什么这很重要？
+为什么这很重要？
 
 {class="mt-1"}
 如果手机丢了或坏了，你损失的不仅是几千块钱的硬件，<strong>更可能是多年积累的不可再生数据</strong>——孩子的成长照片、过世亲人的语音、没备份的重要合同。科学地整理与防护习惯，能从三个维度保护你：

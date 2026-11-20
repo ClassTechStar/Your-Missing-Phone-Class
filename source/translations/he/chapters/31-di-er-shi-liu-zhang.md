@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>תרגול: "רשימת דרישות"
+תרגול: "רשימת דרישות"
 
 {class="mt-1"}
 כתוב "חובה/בונוס/לא", AI/לוויין/מתקפל/Wi-Fi 7/טעינה/סוללה. בחנות, תדע מה אמיתי.
@@ -93,7 +93,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI Phone: מודל מקומי, NPU TOPS, AI Agent

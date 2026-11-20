@@ -101,16 +101,16 @@ startActivity(web) // Το σύστημα θα ανοίξει browser/ή θα σ
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "Άγνωστο")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "Άγνωστο")
+ }
 }
 
 // Πλοήγηση μέσα στη σελίδα:
-navController.navigate("detail/Γιώργος")     // με παράμετρο
-navController.popBackStack()              // πίσω στην προηγούμενη
+navController.navigate("detail/Γιώργος") // με παράμετρο
+navController.popBackStack() // πίσω στην προηγούμενη
 ```
 :::
 

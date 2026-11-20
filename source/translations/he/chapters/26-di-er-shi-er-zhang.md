@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>תן לו יותר הקשר, הסבר מה אתה רוצה, הגבל אותו שלא יסטה
+תן לו יותר הקשר, הסבר מה אתה רוצה, הגבל אותו שלא יסטה
 
 {class="mt-1"}
 , והוא ייתן לך תוצאות מדויקות. המסגרת היא לתרגם את "איך נראית תשובה טובה" בראש שלך להוראות ש-AI יכול להבין.<strong>1. תפקיד (Role): תגיד ל-AI מי הוא</strong>תן ל-AI "זהות" ספציפית, והוא יפעיל את הידע וסגנון הביטוי המקצועי בתחום המתאים.
@@ -198,39 +198,39 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">תשובה כללית מדי, לא שימושית</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">הוסף רקע (מי אתה/איזה תרחיש)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">תשובה אקדמית/רשמית מדי</td>
-                                    <td class="border border-gray-300 px-3 py-2">הוסף מגבלת טון + רשימת סירוב ל"פקידות"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">תשובה סוטה/לא עונה על השאלה</td>
-                                    <td class="border border-gray-300 px-3 py-2">נסח מחדש את המשימה בפועל, ודרוש "ענה רק על זה"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">תשובה ארוכה מדי, לא מסיימים לקרוא</td>
-                                    <td class="border border-gray-300 px-3 py-2">מגבלה קשיחה של מספר מילים (עד 200 מילה) </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI ממציא ברצינות</td>
-                                    <td class="border border-gray-300 px-3 py-2">הוסף "אם לא בטוח, סמן 'אני לא בטוח'" + בדיקה עצמית של עובדות חשובות</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">לא מרוצה מהגרסה הראשונה</td>
-                                    <td class="border border-gray-300 px-3 py-2">אל תכתוב מחדש, הוסף לפרומפט המקורי "עוד קצת..."</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">7. שלושה תרחישים מלאים לדוגמה</td>
-                                    <td class="border border-gray-300 px-3 py-2">תרחיש 1: עוזר חיים (המלצות לארוחת בוקר)</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">תשובה כללית מדי, לא שימושית</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">הוסף רקע (מי אתה/איזה תרחיש)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">תשובה אקדמית/רשמית מדי</td>
+ <td class="border border-gray-300 px-3 py-2">הוסף מגבלת טון + רשימת סירוב ל"פקידות"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">תשובה סוטה/לא עונה על השאלה</td>
+ <td class="border border-gray-300 px-3 py-2">נסח מחדש את המשימה בפועל, ודרוש "ענה רק על זה"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">תשובה ארוכה מדי, לא מסיימים לקרוא</td>
+ <td class="border border-gray-300 px-3 py-2">מגבלה קשיחה של מספר מילים (עד 200 מילה) </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI ממציא ברצינות</td>
+ <td class="border border-gray-300 px-3 py-2">הוסף "אם לא בטוח, סמן 'אני לא בטוח'" + בדיקה עצמית של עובדות חשובות</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">לא מרוצה מהגרסה הראשונה</td>
+ <td class="border border-gray-300 px-3 py-2">אל תכתוב מחדש, הוסף לפרומפט המקורי "עוד קצת..."</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">7. שלושה תרחישים מלאים לדוגמה</td>
+ <td class="border border-gray-300 px-3 py-2">תרחיש 1: עוזר חיים (המלצות לארוחת בוקר)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>תרחיש 1: עוזר לחיי היומיום (המלצות לארוחת בוקר)
+תרחיש 1: עוזר לחיי היומיום (המלצות לארוחת בוקר)
 
 {class="mt-1"}
 <strong>פרומפט</strong>:
@@ -257,7 +257,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>תרחיש 2: סיוע לימודי (הכנה לבחינת CET-6 באנגלית)
+תרחיש 2: סיוע לימודי (הכנה לבחינת CET-6 באנגלית)
 
 {class="mt-1"}
 <strong>פרומפט</strong>:
@@ -275,7 +275,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>תרחיש 3: יעילות בעבודה (סיכום פרוטוקול ישיבה)
+תרחיש 3: יעילות בעבודה (סיכום פרוטוקול ישיבה)
 
 {class="mt-1"}
 <strong>פרומפט</strong>:
@@ -290,7 +290,7 @@ kind: chapter
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>שימוש מתקדם: הפוך את AI ל"עוזר אישי" שלך
+שימוש מתקדם: הפוך את AI ל"עוזר אישי" שלך
 
 {class="mt-1"}
 נסה את השימושים המתקדמים האלה, וחווה את הכוח האמיתי של AI:
@@ -316,7 +316,7 @@ AI חזק, אבל בהחלט לא "יכול הכל". הכרה צלולה של מ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>אל תזין ל-AI מידע אישי רגיש (מספר תעודת זהות, סיסמאות, פרטי בנק וכו').
+אל תזין ל-AI מידע אישי רגיש (מספר תעודת זהות, סיסמאות, פרטי בנק וכו').
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - השתמש נכון בפרומפט: ככל שהתיאור ספציפי וברור יותר, איכות התשובה של AI גבוהה יותר.
@@ -328,7 +328,7 @@ AI חזק, אבל בהחלט לא "יכול הכל". הכרה צלולה של מ
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: אמור לעוזר הקולי: "מחר בבוקר ב-7 תזכיר לי לקחת מטריה, ותעביר את פגישת היומן של היום ב-15:00 ל-16:00." ראה אם הוא יכול לבצע פעולות מרובות שלבים בבת אחת.
+: אמור לעוזר הקולי: "מחר בבוקר ב-7 תזכיר לי לקחת מטריה, ותעביר את פגישת היומן של היום ב-15:00 ל-16:00." ראה אם הוא יכול לבצע פעולות מרובות שלבים בבת אחת.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>אתגר 2: עריכת תמונות AI</strong>: צלם תמונת תיירות עם עוברי אורח, השתמש ב"הסרה קסומה" או "מחק AI", נקה את עוברי האורח. צפה ב"המצאה" של AI לרקע.
@@ -338,7 +338,7 @@ AI חזק, אבל בהחלט לא "יכול הכל". הכרה צלולה של מ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>מקרה 2: תהליך מלא להעברת נתונים בין מכשירים
+מקרה 2: תהליך מלא להעברת נתונים בין מכשירים
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>תרחיש</strong>:iPhone 13 &gt; Xiaomi 15 חוצה מותג.

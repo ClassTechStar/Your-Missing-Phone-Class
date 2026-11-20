@@ -25,46 +25,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">หัวข้อเปรียบเทียบ</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แก่นแท้</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เครื่องมือควบคุมเวอร์ชัน (ซอฟต์แวร์)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แพลตฟอร์มจัดเก็บโค้ด (เว็บไซต์)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ทำงานอยู่ที่ไหน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บนคอมพิวเตอร์ของตัวเอง</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บนคลาวด์ (เข้าผ่านเบราว์เซอร์)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">หน้าที่หลัก</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บันทึกการเปลี่ยนแปลงทุกครั้งของไฟล์ (แก้อย่างไร ใครแก้ แก้เมื่อไร)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอารีโป Git ขึ้นคลาวด์ เก็บ โชว์ และทำงานร่วมกันได้สะดวก</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องใช้เน็ตไหม</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไม่ต้อง ใช้แบบออฟไลน์ได้</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องต่อเน็ตเพื่อเข้าใช้</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เจ้าของ</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ซอฟต์แวร์โอเพนซอร์ส สร้างโดย Linus Torvalds (พ่อของ Linux)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผลิตภัณฑ์ในสังกัดไมโครซอฟต์</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คู่แข่งสายเดียวกัน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">หัวข้อเปรียบเทียบ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แก่นแท้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เครื่องมือควบคุมเวอร์ชัน (ซอฟต์แวร์)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แพลตฟอร์มจัดเก็บโค้ด (เว็บไซต์)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ทำงานอยู่ที่ไหน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บนคอมพิวเตอร์ของตัวเอง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บนคลาวด์ (เข้าผ่านเบราว์เซอร์)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">หน้าที่หลัก</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บันทึกการเปลี่ยนแปลงทุกครั้งของไฟล์ (แก้อย่างไร ใครแก้ แก้เมื่อไร)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอารีโป Git ขึ้นคลาวด์ เก็บ โชว์ และทำงานร่วมกันได้สะดวก</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องใช้เน็ตไหม</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไม่ต้อง ใช้แบบออฟไลน์ได้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องต่อเน็ตเพื่อเข้าใช้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เจ้าของ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ซอฟต์แวร์โอเพนซอร์ส สร้างโดย Linus Torvalds (พ่อของ Linux)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผลิตภัณฑ์ในสังกัดไมโครซอฟต์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คู่แข่งสายเดียวกัน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 พูดสั้น ๆ:<strong>Git ดูแล "การบันทึกการเปลี่ยนแปลงอย่างไร" ส่วน GitHub ดูแล "การเปลี่ยนแปลงเก็บไว้ที่ไหนและร่วมงานกันอย่างไร"</strong> Git คือเครื่องมือ ทำงานอยู่บนเครื่องเรา GitHub คือแพลตฟอร์มที่เอารีโป Git ขึ้นคลาวด์ เพื่อความสะดวก,ในการร่วมมือและโชว์ผลงาน คุณใช้ Git อย่างเดียวโดยไม่ใช้ GitHub ก็ได้ (เช่น ทำเวอร์ชันเก็บโค้ดส่วนตัว) แต่ถ้าใช้ GitHub ต้องใช้ Git แน่นอน (เพราะ GitHub สร้างบนพื้นฐานของ Git นั่นเอง)
@@ -117,7 +117,7 @@ GitHub ให้มาไม่ใช่แค่ที่เก็บโค้�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>รู้ไว้ใช่ว่า: README คืออะไร
+รู้ไว้ใช่ว่า: README คืออะไร
 
 {class="mt-1"}
 README.md คือไฟล์รูปแบบ Markdown ที่คนอื่นเห็นเป็นอย่างแรกเมื่อเปิดรีโปของคุณ README ที่ดีมักมี: แนะนำโปรเจกต์ วิธีติดตั้ง ตัวอย่างการใช้งาน สัญญาอนุญาต และช่องทางติดต่อ เขียน README ให้เก่งเป็นมารยาทพื้นฐานของโปรแกรมเมอร์ และเป็นประตูด่านแรกที่ตัดสินว่าคนอื่นจะใช้งานโปรเจกต์ของคุณได้หรือไม่
@@ -181,7 +181,7 @@ GitHub คือฐานทัพหลักของกระแสโอเ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>คำเตือนด้านความปลอดภัย
+คำเตือนด้านความปลอดภัย
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - ห้ามคอมมิตรหัสผ่าน คีย์ API สตริงเชื่อมต่อฐานข้อมูล หรือข้อมูลละเอียดอ่อนอื่นขึ้น GitHub เด็ดขาด ยิ่งเป็นรีโปสาธารณะยิ่งอันตราย: พอรั่วไหล เหล่าบอทไต่เว็บจะกวาดไปภายในเสี้ยววินาที ผลที่ตามมาร้ายแรงมาก
@@ -191,7 +191,7 @@ GitHub คือฐานทัพหลักของกระแสโอเ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>ข้อควรรู้เรื่องการเข้าถึง GitHub จากในจีน
+ข้อควรรู้เรื่องการเข้าถึง GitHub จากในจีน
 
 {class="mt-1"}
 การเข้าถึง GitHub จากในจีนบางช่วงก็ไม่เสถียร อาจเจอเปิดไม่ได้หรือโคลนช้า ลองทำดู: ① ใช้มิเรอร์สายในประเทศ (เช่น GitClone, ghproxy) เร่งความเร็วการโคลน ② ตั้งค่า Hosts หรือใช้พร็อกซี ③ ถ้างานหลักเน้นทำงานร่วมกันในประเทศ ก็พิจารณาตัวแทนสายจีนอย่าง <strong>Gitee (Mayun)</strong> ฟีเจอร์ใกล้เคียงกันและเข้าถึงไวกว่า หลายทีมโฮสต์ทั้ง GitHub และ Gitee พร้อมกัน ได้ทั้งความสากลและความเร็วในประเทศ
@@ -199,7 +199,7 @@ GitHub คือฐานทัพหลักของกระแสโอเ�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>เทคนิคขั้นสูง: สร้างบล็อกส่วนตัวฟรีด้วย GitHub Pages
+เทคนิคขั้นสูง: สร้างบล็อกส่วนตัวฟรีด้วย GitHub Pages
 
 {class="mt-1"}
 GitHub Pages ให้คุณโฮสต์เว็บสถิตได้ฟรี คู่กับตัวสร้างเว็บสถิตอย่าง Jekyll, Hexo, Hugo ก็ตั้งบล็อกส่วนตัวได้ง่าย ๆ เขียนบทความ Markdown เสร็จพุชเข้ารีโป บล็อกก็อัปเดตเอง แถมมี HTTPS และรองรับโดเมนของตัวเองด้วย บล็อกของบล็อกเกอร์สายเทคนิคนับไม่ถ้วนตั้งมาแบบนี้ ไม่มีค่าใช้จ่าย ไม่มีโฆษณา ควบคุมเวอร์ชันได้
@@ -213,7 +213,7 @@ GitHub ไม่ใช่แค่ "เครื่องมือของโ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>มาลงมือกัน: เปิดประสบการณ์แรกกับ GitHub
+มาลงมือกัน: เปิดประสบการณ์แรกกับ GitHub
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ลงทะเบียนบัญชี GitHub แล้วตกแต่งโปรไฟล์ให้ครบ (รูปหน้าปก แนะนำตัว สายเทคนิคที่สนใจ)

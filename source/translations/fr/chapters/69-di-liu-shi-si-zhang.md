@@ -63,46 +63,46 @@ import SwiftData
 // 1. @Model : cette classe devient automatiquement une "table"
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. on branche le conteneur au point d'entrée de l'app
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // base de données prête
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // base de données prête
+ }
 }
 
 // 3. dans la vue on lit avec @Query et on écrit avec @Environment
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) yuan")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) yuan")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // enregistrer
-        try? context.save()   // persister sur disque
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // enregistrer
+ try? context.save() // persister sur disque
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ Les données des serveurs sont pour l'essentiel du texte JSON. Le protocole Coda
 ```
 // JSON: {"name":"Paris","main":{"temp":26.5},"weather":[{"description":"Ensoleillé"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "Ensoleillé"
+print(result.weather[0].description) // "Ensoleillé"
 ```
 :::
 
@@ -149,23 +149,23 @@ Pour se brancher, iOS emploie URLSession fourni avec le système ; associé à a
 
 ```
 struct WeatherService {
-    // fonction async : async marque "j'ai besoin d'attendre un moment", throws marque "peut échouer"
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // fonction async : async marque "j'ai besoin d'attendre un moment", throws marque "peut échouer"
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // point d'appel (dans .task) :
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "Paris")
-        // mettre à jour l'interface…
-    } catch {
-        print("Erreur : \(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "Paris")
+ // mettre à jour l'interface…
+ } catch {
+ print("Erreur : \(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ Réseau coupé, délai dépassé, 404, erreur 500 du serveur… chaque erreur ap
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "Réseau coupé, tu vérifies la connexion ?"
-        case .timedOut:               return "Délai dépassé, tu réessailles plus tard ?"
-        case .cannotFindHost:         return "Serveur introuvable"
-        default:                      return "Problème de réseau : \(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "Format de données incorrect (l'API a peut-être changé)"
-    }
-    return "Erreur : \(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "Réseau coupé, tu vérifies la connexion ?"
+ case .timedOut: return "Délai dépassé, tu réessailles plus tard ?"
+ case .cannotFindHost: return "Serveur introuvable"
+ default: return "Problème de réseau : \(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "Format de données incorrect (l'API a peut-être changé)"
+ }
+ return "Erreur : \(error.localizedDescription)"
 }
 ```
 :::

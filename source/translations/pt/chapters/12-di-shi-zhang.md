@@ -64,7 +64,7 @@ Houve grandes mudanças nos últimos anos. Muitas coisas que antes exigiam ir ao
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Lembre-se Disso para Evitar Fraudes e Ficar Tranquilo
+Lembre-se Disso para Evitar Fraudes e Ficar Tranquilo
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Autoridades policiais, judiciais, bancos e atendimento ao cliente nunca pedirão para você transferir dinheiro para uma "conta segura".
@@ -75,7 +75,7 @@ Houve grandes mudanças nos últimos anos. Muitas coisas que antes exigiam ir ao
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Faça Agora: Um Check-up de Segurança no Seu App de Pagamento
+Faça Agora: Um Check-up de Segurança no Seu App de Pagamento
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abra o Alipay e o WeChat e confirme se o pagamento por impressão digital / reconhecimento facial está ativado.

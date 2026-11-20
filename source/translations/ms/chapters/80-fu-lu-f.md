@@ -25,7 +25,7 @@ Kemajuan utama 2024-2026: Hayat engsel umumnya diberi nilai 500,000 kali lipat (
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Pembaca/dokumen berat
+Pembaca/dokumen berat
 
 {class="mt-1"}
 :Kerap membaca PDF, membuat anotasi dokumen, membaca artikel panjang di telefon. Skrin dalaman hampir 7.5 inci selepas dibuka, membaca PDF A4 tanpa zum, pengalaman berubah kualiti.
@@ -42,7 +42,7 @@ Kemajuan utama 2024-2026: Hayat engsel umumnya diberi nilai 500,000 kali lipat (
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Tiga, Poin pembelian: Lihat 6 penunjuk ini
+Tiga, Poin pembelian: Lihat 6 penunjuk ini
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Jangan terpedaya oleh perkataan "lipat", fokuskan semasa membeli:
@@ -63,7 +63,7 @@ Kemajuan utama 2024-2026: Hayat engsel umumnya diberi nilai 500,000 kali lipat (
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cuba mod tergantung: lipat 90 darjah letak di atas meja, cuba ambil foto dan tonton video.
+Cuba mod tergantung: lipat 90 darjah letak di atas meja, cuba ambil foto dan tonton video.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Tanya dengan jelas harga pembaikan skrin dalaman berasingan dan polisi waranti
@@ -112,7 +112,7 @@ Bahagian paling sensitif skrin lipat adalah skrin dalaman dan engsel, kebiasaan 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Selepas setahun diguna rasa "kedutan makin dalam" lalu mengoyak filem kilang — mengoyak filem akan merosakkan skrin dalaman sekali.
+Selepas setahun diguna rasa "kedutan makin dalam" lalu mengoyak filem kilang — mengoyak filem akan merosakkan skrin dalaman sekali.
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Enam, "Perangkap" skrin lipat dan jangkaan mental
@@ -134,7 +134,7 @@ Bahagian paling sensitif skrin lipat adalah skrin dalaman dan engsel, kebiasaan 
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Siri Huawei Mate X
+Siri Huawei Mate X
 
 {class="text-right text-sm"}
 :Penanda aras lipatan melintang, sinergi ekosistem HarmonyOS kuat, nisbah skrin luar hampir seperti telefon biasa, dilipat boleh digunakan sebagai telefon utama. Harga tinggi tetapi nilai jual semula relatif terbaik.
@@ -155,7 +155,7 @@ Terus membaca
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Peringatan Akhir
+Peringatan Akhir
 
 {class="mt-1"}
 Teknologi skrin lipat sentiasa diiterasi setiap tahun, lampiran ini ditulis pada 2026. Sebelum beli semestinya semak ulasan terkini dan maklum balas pengguna, fokus pada: Ujian hayat engsel, prestasi kedutan, polisi pembaikan skrin dalam tiga perkara ini. Pergi ke kedai fizikal sentuh selalu lebih penting daripada lihat ulasan.

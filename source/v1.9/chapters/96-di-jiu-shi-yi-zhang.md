@@ -206,7 +206,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 同步不等于备份。数据进了聚合层，只代表它能在这台设备的 App 之间流动；换机、丢机时能不能找回来，取决于你有没有开云端备份。两件事都做，才算稳妥。
@@ -481,7 +481,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：从“自动记录”开始，别从“手动打卡”开始
+小贴士：从“自动记录”开始，别从“手动打卡”开始
 
 {class="mt-1"}
 健康记录失败的头号原因是“要手动填”。正确姿势是全用自动采集：步数、睡眠、心率全自动，你只负责偶尔看一眼趋势。工具先服务懒人，再服务自律的人。
@@ -597,7 +597,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 截屏分享要裁边。体检报告截屏往往带着姓名、身份证号、就诊卡号，发出去之前裁掉无关部分，你分享的是“那个箭头”，不是整份档案。
@@ -713,7 +713,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 给自己定一个“每周十五分钟”：固定周日晚上，打开聚合层把一周的步数、睡眠、心率扫一遍。每天盯着数字看只会制造焦虑，一周一次既有仪式感又够用。
@@ -944,7 +944,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 设备给的是线索，不是结论。真有不舒服，去医院，别反复测到出现一个“正常”的数值才安心。
@@ -952,7 +952,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：搭好你的“健康中枢”
+来动手：搭好你的“健康中枢”
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 打开聚合层（健康/Health Connect），把现有 App 的读写权限配好。
@@ -962,7 +962,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 四层结构：采集→聚合→应用→决策，聚合层是枢纽
 - 所有 App 数据授权进健康/Health Connect，换设备不丢数据

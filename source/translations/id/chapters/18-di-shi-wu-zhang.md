@@ -34,7 +34,7 @@ Isi saat digunakan
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Fitur "80% Charging Limit" iPhone — Mengubah Golden Rule Menjadi System Setting
+Fitur "80% Charging Limit" iPhone — Mengubah Golden Rule Menjadi System Setting
 
 {class="mt-1"}
 Seri iPhone 15/16 (iOS 17+) sudah membuat "aturan 20%-80%" menjadi fitur sistem. Setelah diaktifkan, ponsel charge sampai 80% akan otomatis berhenti charging, sehingga memperlambat penuaan baterai secara signifikan. Jalur setting:
@@ -48,7 +48,7 @@ Arti tiga opsi: ①<strong>No Limit</strong>— charge sampai 100%; ②<strong>O
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>Charger GaN — Partner Terbaik untuk Business Trip
+Charger GaN — Partner Terbaik untuk Business Trip
 
 {class="mt-1"}
 Anda mungkin perhatikan charger fast charging sekarang semakin kecil, pahlawan di baliknya adalah <strong>GaN (Gallium Nitride)</strong> bahan semikonduktor tipe baru ini. Dibandingkan charger berbasis silikon tradisional, charger GaN punya beberapa keunggulan jelas:
@@ -127,47 +127,47 @@ Tahap handshake
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Daya Maksimum</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur teknologi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kompatibilitas</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">USB PD 3.1</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tegangan rendah arus besar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terluas</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tegangan tinggi dapat disesuaikan</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat Qualcomm</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tegangan rendah arus besar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Khusus keluarga OPPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengisian cepat Apple</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protokol PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Protokol pengisian nirkabel</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Daya Maksimum</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur teknologi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kompatibilitas</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">USB PD 3.1</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tegangan rendah arus besar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terluas</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tegangan tinggi dapat disesuaikan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat Qualcomm</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tegangan rendah arus besar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Khusus keluarga OPPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengisian cepat Apple</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protokol PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Protokol pengisian nirkabel</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ Standar Qi
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Hindari bermain game besar saat mengisi daya, akan memperburuk panas.
+Hindari bermain game besar saat mengisi daya, akan memperburuk panas.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Jangan gunakan pengisi daya dan kabel data berkualitas rendah, dapat menyebabkan risiko keamanan.
@@ -207,7 +207,7 @@ Jika Anda memperhatikan launch flagship 2024-2026, kata "silicon-carbon anode" h
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Model apa saja yang sudah memakai?
+Model apa saja yang sudah memakai?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: Seri Magic pertama komersialisasi silicon-carbon anode, Magic6 Pro, seri Magic7, foldable Magic V3 semua memakai.
@@ -228,7 +228,7 @@ Jika Anda memperhatikan launch flagship 2024-2026, kata "silicon-carbon anode" h
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Periksa kesehatan baterai: Temukan dan catat kapasitas maksimum baterai Anda.
+Periksa kesehatan baterai: Temukan dan catat kapasitas maksimum baterai Anda.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Analisis detail konsumsi daya: Lihat grafik dan daftar aplikasi di pengaturan baterai, temukan penyebab utama konsumsi daya.

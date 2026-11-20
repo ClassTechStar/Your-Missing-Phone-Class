@@ -40,7 +40,7 @@ Developer Mode is a hidden menu built into the phone system, containing many fea
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Notes
+Notes
 
 {class="mt-1"}
 : Prevents malicious software from being flashed into the system.
@@ -57,7 +57,7 @@ In Developer Options, there's an inconspicuous but important toggle — "OEM Unl
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Trivia: Why Do Manufacturers Include This Toggle
+Trivia: Why Do Manufacturers Include This Toggle
 
 {class="mt-1"}
 Early Android didn't have this toggle, so malware could silently flash the system as long as it got permissions. Google later required all Android manufacturers to include the "OEM Unlocking" toggle in Developer Options, as a "user informed consent" confirmation. This is why even if you've unlocked the BL, reflashing will still fail if the OEM Unlocking toggle is turned off.
@@ -95,7 +95,7 @@ ADB stands for Android Debug Bridge, an official Google command-line tool that l
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Don't Ignore Driver and Authorization Popups
+Don't Ignore Driver and Authorization Popups
 
 {class="mt-1"}
 If Windows users see <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> showing "unauthorized" or not listing the device at all, it's usually because the driver isn't installed properly or you forgot to tap "Allow" on the phone. Samsung/Xiaomi and other brands can install their respective "USB Drivers" or "Phone Assistant" to fix the driver; Mac and Linux generally don't need drivers. If you accidentally dismissed the phone popup, just unplug and replug the data cable and it will pop up again.
@@ -124,7 +124,7 @@ This is one of ADB's most practical features: using the <code class="bg-gray-100
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Never Delete Critical System Packages
+Never Delete Critical System Packages
 
 {class="mt-1"}
 Although "pm uninstall --user 0" is a safe method that doesn't require Root, deleting critical system apps (such as <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> status bar,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> phone,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> settings) can cause serious problems like system crashes, black screens, and inability to boot. Before deleting, Google "can this package name be deleted", better to delete less than to delete wrong. Recommend deleting only one or two at a time and confirming everything is fine before continuing.
@@ -132,7 +132,7 @@ Although "pm uninstall --user 0" is a safe method that doesn't require Root, del
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Trivia: What Does --user 0 Mean?
+Trivia: What Does --user 0 Mean?
 
 {class="mt-1"}
 Android 4.2+ supports multi-user, where each user has an independent ID (the owner is 0, additional users start from 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> means "uninstall for the current owner only", the APK file in the system partition still exists, it's just not shown to the owner. That's why it doesn't need Root, it doesn't touch system files, it just changes the "user configuration." This is also the biggest difference from Root uninstalling: Root uninstalling actually deletes from the system, so no user has it anymore; ADB uninstalling just "hides it for the current user."
@@ -159,7 +159,7 @@ Root access is equivalent to the superuser in Linux (full control over the / dir
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>BL lock
+BL lock
 
 {class="mt-1"}
 : If you don't plan to flash, keeping it locked is safer.
@@ -198,7 +198,7 @@ To enjoy Root convenience while still using banking apps, the community has deve
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>The Cat-and-Mouse Game Never Ends
+The Cat-and-Mouse Game Never Ends
 
 {class="mt-1"}
 Google updates detection rules periodically, and app developers follow up with Play Integrity upgrades. A hiding solution that works today may be detected tomorrow. If you fully rely on banking/payment apps (such as daily transfers, QR code payments), the safest choice remains: don't Root, don't unlock the BL. Hiding solutions are more suitable for a "main phone without Root + backup phone for Root experimentation" enthusiast setup.
@@ -213,7 +213,7 @@ Google updates detection rules periodically, and app developers follow up with P
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Enable Developer Mode and Adjust Animation Speed
+Hands-On: Enable Developer Mode and Adjust Animation Speed
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Go to Settings &gt; About Phone.

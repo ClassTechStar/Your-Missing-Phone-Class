@@ -222,7 +222,7 @@ TruSleep 的睡眠报告包含睡眠结构（深睡/浅睡/快速眼动/清醒�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：给爸妈配表的正确姿势
+小贴士：给爸妈配表的正确姿势
 
 {class="mt-1"}
 华为手表的"家人共享"+"跌倒/心率异常提醒"组合，是给异地父母的实用方案：手表绑在你的运动健康家庭空间里，异常数据第一时间看到。记得帮长辈把"久坐提醒"打开、把通知白名单只留电话和短信，功能越少，长辈越用得住。
@@ -292,7 +292,7 @@ eSIM 独立通话是华为表"脱离手机"的关键能力，办理前确认三�
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：非华为手机的功能边界
+避坑提醒：非华为手机的功能边界
 
 {class="mt-1"}
 配非华为安卓手机时，个别深度功能（如 eSIM 独立通话的部分机型支持、畅连通话等）可能不可用，以"华为设备支持"页面列的兼容清单为准。核心健康与运动功能不受影响，先查清单再下单可以避免退货麻烦。国产手表生态强在功能多，也正因如此要逐项确认「我这部手机能不能用」。
@@ -321,7 +321,7 @@ eSIM 独立通话是华为表"脱离手机"的关键能力，办理前确认三�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：跑一次"结构化跑步"
+来动手：跑一次"结构化跑步"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 在运动健康 App 里选一个入门跑步课程（如"轻松跑 30 分钟"），戴表跟练一次。
@@ -675,7 +675,7 @@ FAQ 到这里就收住了。你会发现答案里反复出现三类关键词：�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - GT 长续航是大多数人的答案，Ultimate 面向专业户外
 - 华为手表不挑手机，健康算法（Tru 系列）是核心卖点；配 iPhone 功能裁剪多，先查兼容清单

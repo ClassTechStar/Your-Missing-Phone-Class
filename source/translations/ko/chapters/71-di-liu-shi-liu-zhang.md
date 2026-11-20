@@ -43,27 +43,27 @@ API Key는 당신의 '지갑 비밀번호'와 같아요. 코드에 넣어 GitHub
 ```
 // JSON: {"weather":[{"description":"맑음"}],"main":{"temp":26.5,"humidity":40},"name":"베이징"}
 struct WeatherResponse: Codable {
-    let weather: [Weather]
-    let main: Main
-    let name: String
+ let weather: [Weather]
+ let main: Main
+ let name: String
 }
 struct Weather: Codable { let description: String }
 struct Main: Codable { let temp: Double; let humidity: Int }
 
 struct WeatherService {
-    let key: String   // xcconfig에서 읽어 들임
+ let key: String // xcconfig에서 읽어 들임
 
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
-        comps.queryItems = [
-            URLQueryItem(name: "q", value: city),
-            URLQueryItem(name: "appid", value: key),
-            URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "lang", value: "ko")
-        ]
-        let (data, _) = try await URLSession.shared.data(from: comps.url!)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+ comps.queryItems = [
+ URLQueryItem(name: "q", value: city),
+ URLQueryItem(name: "appid", value: key),
+ URLQueryItem(name: "units", value: "metric"),
+ URLQueryItem(name: "lang", value: "ko")
+ ]
+ let (data, _) = try await URLSession.shared.data(from: comps.url!)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 ```
 :::
@@ -80,25 +80,25 @@ struct WeatherService {
 
 ```
 enum LoadState {
-    case loading                  // 로딩 표시
-    case success(WeatherResponse) // 성공
-    case error(String)            // 실패
+ case loading // 로딩 표시
+ case success(WeatherResponse) // 성공
+ case error(String) // 실패
 }
 
 @Observable
 class WeatherViewModel {
-    var state: LoadState = .loading
-    private let service = WeatherService(key: Config.apiKey)
+ var state: LoadState = .loading
+ private let service = WeatherService(key: Config.apiKey)
 
-    func search(city: String) async {
-        state = .loading
-        do {
-            let data = try await service.fetchWeather(city: city)
-            state = .success(data)
-        } catch {
-            state = .error("그 도시를 찾을 수 없어요. 다른 이름으로 시도해 볼까요?")
-        }
-    }
+ func search(city: String) async {
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ state = .success(data)
+ } catch {
+ state = .error("그 도시를 찾을 수 없어요. 다른 이름으로 시도해 볼까요?")
+ }
+ }
 }
 
 // 화면 안에서:
@@ -121,24 +121,24 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 
 ```
 struct WeatherContent: View {
-    let data: WeatherResponse
+ let data: WeatherResponse
 
-    var body: some View {
-        VStack(spacing: 12) {
-            Text(data.name)
-                .font(.title.bold())
-            Text("\(Int(data.main.temp))°C")
-                .font(.system(size: 76, weight: .thin))
-            Text(data.weather.first?.description ?? "알 수 없음")
-                .font(.title3)
-                .foregroundColor(.secondary)
-            HStack(spacing: 24) {
-                Label("습도 \(data.main.humidity)%", systemImage: "humidity")
-                Label("체감 \(Int(data.main.temp))°C", systemImage: "thermometer")
-            }
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 12) {
+ Text(data.name)
+ .font(.title.bold())
+ Text("\(Int(data.main.temp))°C")
+ .font(.system(size: 76, weight: .thin))
+ Text(data.weather.first?.description ?? "알 수 없음")
+ .font(.title3)
+ .foregroundColor(.secondary)
+ HStack(spacing: 24) {
+ Label("습도 \(data.main.humidity)%", systemImage: "humidity")
+ Label("체감 \(Int(data.main.temp))°C", systemImage: "thermometer")
+ }
+ }
+ .padding()
+ }
 }
 ```
 :::

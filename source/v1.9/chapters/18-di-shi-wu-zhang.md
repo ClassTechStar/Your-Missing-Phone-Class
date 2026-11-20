@@ -132,7 +132,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>iPhone"80%充电限制"功能——把黄金法则变成系统设置
+iPhone"80%充电限制"功能——把黄金法则变成系统设置
 
 {class="mt-1"}
 iPhone 15系列及之后的机型（iOS 17以上，包括iPhone 17全系）已经把"20%-80%法则"做成了系统功能。开启后，手机充到80%会自动停止充电，从而大幅延缓电池老化。设置路径：
@@ -212,7 +212,7 @@ iPhone 15系列及之后的机型（iOS 17以上，包括iPhone 17全系）已�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>GaN充电器——出差党的好搭档
+GaN充电器——出差党的好搭档
 
 {class="mt-1"}
 你可能注意到现在的快充头越做越小，背后功臣是<strong>GaN（氮化镓）</strong>这种新型半导体材料。相比传统硅基充电器，GaN充电器有几个明显优势：
@@ -329,47 +329,47 @@ UFCS（融合快充）就是冲着"私有协议林立"来的国内统一标准�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高功率</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术路线</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">兼容性</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高压/多档位</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最广泛</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高压可调</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高通机型</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低压大电流</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO系专用</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电荷泵</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/荣耀</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果快充</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">约 27-40W（17 系列最高）</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD协议</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高功率</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术路线</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">兼容性</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高压/多档位</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最广泛</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高压可调</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高通机型</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低压大电流</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO系专用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电荷泵</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/荣耀</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果快充</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">约 27-40W（17 系列最高）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD协议</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -439,7 +439,7 @@ UFCS（融合快充）就是冲着"私有协议林立"来的国内统一标准�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>快充安全提示
+快充安全提示
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 边充边玩真正的问题是热，损害来自高温而非「边充」本身。发热明显时先取下厚壳、避开阳光直晒、暂停高负载应用，比纠结「能不能边充边玩」有用得多。
@@ -493,7 +493,7 @@ GaN 的意义正在这里：<strong>它把高频化的代价压低了</strong>�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 GaN 不是「让充电变快的魔法材料」，它是<strong>让开关电源敢跑更高频率</strong>的那块拼图。频率高 → 变压器电容小 → 体积小；损耗低 → 少发热 → 小体积里才装得下更大功率。两件事是同一条因果链。
@@ -567,7 +567,7 @@ GaN 头在旅行里的另一个好处常被忽略：<strong>宽压输入</strong
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>别把两笔账算混
+别把两笔账算混
 
 {class="mt-1"}
 充电头省下的电，是<strong>从插座到手机</strong>这一段；续航长短，是<strong>电池容量减去手机耗电</strong>这一笔。前者再漂亮，也不会让电池多装进一毫安时。想让手机撑得久，还是得回到后面那节讲屏幕、信号、后台和电池本身的内容上去。
@@ -620,7 +620,7 @@ GaN 头在旅行里的另一个好处常被忽略：<strong>宽压输入</strong
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>哪些机型用上了？
+哪些机型用上了？
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>荣耀</strong>：Magic系列率先商用硅碳负极，Magic6 Pro、Magic7系列、Magic V3折叠屏均采用。
@@ -751,7 +751,7 @@ GaN 头在旅行里的另一个好处常被忽略：<strong>宽压输入</strong
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 电池是消耗品。目标不是让它永远不掉容量，是避免长期高温与满电，让它两年后还够用一天。
@@ -759,7 +759,7 @@ GaN 头在旅行里的另一个好处常被忽略：<strong>宽压输入</strong
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来检查一下：给你的电池做个体检
+来检查一下：给你的电池做个体检
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 查看健康度：找到并记下你的电池最大容量。

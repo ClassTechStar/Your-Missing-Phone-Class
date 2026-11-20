@@ -43,7 +43,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>כלל 20-20-20
+כלל 20-20-20
 
 {class="mt-1"}
 כל<strong>20 דקות</strong>, העבר מבט ל<strong>20 רגל (כ-6 מ')</strong> למשך<strong>20 שניות</strong>. פעולה פשוטה המרפה את שריר העין.
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>פעולה: אתגר בריאות דיגיטלית לשבוע
+פעולה: אתגר בריאות דיגיטלית לשבוע
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. היום: פתח זמן מסך/בריאות, בדוק נתוני שבוע.
@@ -94,7 +94,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - בדוק נתונים, הכרת המצב היא הצעד הראשון

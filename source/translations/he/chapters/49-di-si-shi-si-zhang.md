@@ -34,10 +34,10 @@ kind: chapter
 1. HTML בקובץ יחיד (CSS ו-JS מוטמעים), בלי פריימוורקים
 2. ערכת נושא כהה, סטייל מודרני ומינימליסטי
 3. הצג 4 כרטיסי גישה לכלים:
-   - מקצר טקסטים
-   - סופר מילים
-   - בוחר צבעים
-   - מחולל קודי QR
+ - מקצר טקסטים
+ - סופר מילים
+ - בוחר צבעים
+ - מחולל קודי QR
 4. לכל כרטיס אייקון, כותרת ותיאור קצר
 5. לכרטיסים יש אנימציית ריחוף
 6. פריסה רספונסיבית, שמישה בנייד
@@ -109,17 +109,17 @@ Record { id, amount, type, category, note, date }
 1. שרת Express, פורט 3001
 2. מסד נתונים SQLite, שם הטבלה records
 3. שדות הטבלה records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. נקודות קצה CRUD:
-   GET /api/records - לקבל את כל הרשומות
-   POST /api/records - להוסיף רשומה
-   PUT /api/records/:id - לעדכן רשומה
-   DELETE /api/records/:id - למחוק רשומה
+ GET /api/records - לקבל את כל הרשומות
+ POST /api/records - להוסיף רשומה
+ PUT /api/records/:id - לעדכן רשומה
+ DELETE /api/records/:id - למחוק רשומה
 5. מידלוור לטיפול בשגיאות
 תן לי את מבנה הקוד המלא של הבק.
 ```

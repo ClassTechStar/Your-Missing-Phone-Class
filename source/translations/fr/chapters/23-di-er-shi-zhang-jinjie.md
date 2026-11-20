@@ -40,7 +40,7 @@ Le mode développeur est un menu caché intégré au système du téléphone, co
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Précautions
+Précautions
 
 {class="mt-1"}
 Les réglages du mode développeur peuvent affecter la stabilité du système, ne modifiez pas les options que vous ne comprenez pas. Après avoir activé le débogage USB, soyez prudent lors de la connexion à un ordinateur, ne vous connectez pas à des ordinateurs non fiables.
@@ -57,7 +57,7 @@ Dans les options de développement se trouve un interrupteur discret mais import
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Le saviez-vous : pourquoi les fabricants ont-ils ajouté cet interrupteur ?
+Le saviez-vous : pourquoi les fabricants ont-ils ajouté cet interrupteur ?
 
 {class="mt-1"}
 Les premières versions d'Android ne disposaient pas de cet interrupteur, les logiciels malveillants pouvaient flasher secrètement le système dès qu'ils obtenaient les permissions. Google a ensuite exigé que tous les fabricants Android intègrent un interrupteur « Déverrouillage OEM » dans les options de développement, comme une confirmation de « consentement éclairé de l'utilisateur ». C'est pourquoi, même si vous avez déverrouillé le BL, si l'interrupteur OEM est fermé, le reflash échouera.
@@ -95,7 +95,7 @@ ADB signifie Android Debug Bridge, un outil en ligne de commande officiellement 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>N'ignorez pas les pilotes et la fenêtre d'autorisation
+N'ignorez pas les pilotes et la fenêtre d'autorisation
 
 {class="mt-1"}
 Si les utilisateurs Windows voient <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> afficher « unauthorized » ou ne pas lister du tout l'appareil, c'est probablement parce que les pilotes ne sont pas correctement installés ou que vous avez oublié de cliquer sur « Autoriser » sur le smartphone. Les marques comme Samsung/Xiaomi peuvent installer leurs « pilotes USB » ou « assistants smartphone » respectifs pour compléter les pilotes ; Mac et Linux sont généralement sans pilote. Si vous avez accidentellement fermé la fenêtre contextuelle du smartphone, débranchez et rebranchez le câble pour la faire réapparaître.
@@ -124,7 +124,7 @@ C'est l'une des fonctions ADB les plus pratiques : utiliser la commande <code cl
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Ne supprimez jamais les packages système critiques
+Ne supprimez jamais les packages système critiques
 
 {class="mt-1"}
 Bien que « pm uninstall --user 0 » soit une méthode sûre sans Root, supprimer aveuglément des applications système critiques (comme <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> barre d'état,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> téléphone,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> réglages) peut provoquer des crashs système, des écrans noirs, des impossibilités de démarrage et d'autres problèmes graves. Avant de supprimer, faites une recherche Google pour « ce nom de package peut-il être supprimé », mieux vaut supprimer moins que de se tromper. Il est recommandé de n'en supprimer qu'un ou deux à la fois, de confirmer qu'il n'y a pas de problème, puis de continuer.
@@ -132,7 +132,7 @@ Bien que « pm uninstall --user 0 » soit une méthode sûre sans Root, supprime
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Le saviez-vous : que signifie --user 0 ?
+Le saviez-vous : que signifie --user 0 ?
 
 {class="mt-1"}
 Depuis Android 4.2, le multi-utilisateur est pris en charge, chaque utilisateur a un ID indépendant (le propriétaire est 0, les utilisateurs supplémentaires commencent à 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> signifie « désinstaller uniquement pour le propriétaire actuel », le fichier APK dans la partition système existe toujours, il est simplement masqué pour le propriétaire. C'est pourquoi il ne nécessite pas de Root — aucun fichier système n'est modifié, seule la « configuration utilisateur » est changée. C'est aussi la plus grande différence avec la désinstallation après Root : la désinstallation après Root supprime réellement du système, aucun utilisateur ne l'a plus ; la désinstallation ADB ne fait que « masquer pour l'utilisateur actuel ».
@@ -159,7 +159,7 @@ Les permissions Root équivalent au superutilisateur sous Linux (contrôle total
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Avertissement sérieux
+Avertissement sérieux
 
 {class="mt-1"}
 L'opération de Root comporte des risques, peut rendre le téléphone inutilisable (brique). Si vous êtes débutant, il est conseillé de bien vous renseigner au préalable et de vous assurer d'avoir une sauvegarde complète. Avant toute opération, lisez attentivement le tutoriel, confirmez votre modèle de téléphone et la version du système.
@@ -198,7 +198,7 @@ Pour profiter de la commodité du Root tout en continuant à utiliser les applic
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Le jeu du chat et de la souris ne finira jamais
+Le jeu du chat et de la souris ne finira jamais
 
 {class="mt-1"}
 Google met à jour les règles de détection de temps en temps, et les éditeurs d'applications suivent en améliorant la vérification Play Integrity. Une solution de masquage qui fonctionne aujourd'hui peut être identifiée demain. Si vous dépendez entièrement des applications bancaires/de paiement (par exemple, transferts quotidiens, paiements par code QR), le choix le plus sûr reste de ne pas rooter et de ne pas déverrouiller le BL. Les solutions de masquage conviennent mieux à une configuration de joueur du type « smartphone principal non rooté + smartphone de secours rooté ».
@@ -213,7 +213,7 @@ Google met à jour les règles de détection de temps en temps, et les éditeurs
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>À faire : activez le mode développeur et ajustez la vitesse d'animation
+À faire : activez le mode développeur et ajustez la vitesse d'animation
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Allez dans Réglages &gt; À propos du téléphone.

@@ -100,7 +100,7 @@ Depois de tudo isso, aqui vai um checklist de segurança simples e direto. Gaste
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Faça agora: um "check-up de segurança" no seu celular
+Faça agora: um "check-up de segurança" no seu celular
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Upgrade de DNS</strong>: Android: Configurações > Conexão e compartilhamento > DNS privado > digite "one.one.one.one" ou "dns.google". iPhone: busque no Safari "1.1.1.1 DNS profile" e instale o perfil, ou baixe o app 1.1.1.1 da Cloudflare.

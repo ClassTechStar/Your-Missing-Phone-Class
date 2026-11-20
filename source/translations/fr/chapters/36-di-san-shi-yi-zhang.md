@@ -70,7 +70,7 @@ La couverture d'une courte vidéo est la « vitrine », elle détermine si les g
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercice : filmez une courte vidéo de 30 secondes
+Exercice : filmez une courte vidéo de 30 secondes
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Choisissez un petit sujet que vous maîtrisez (par exemple « comment agrandir la police du smartphone »).
@@ -82,7 +82,7 @@ La couverture d'une courte vidéo est la « vitrine », elle détermine si les g
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Résumé du chapitre
+Résumé du chapitre
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Réfléchissez avant de filmer : qui est l'audience, quelle valeur apporter, sur quelle plateforme publier

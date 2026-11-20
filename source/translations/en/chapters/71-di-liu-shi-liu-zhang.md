@@ -40,27 +40,27 @@ First define the model based on the JSON the API returns, then write the service
 ```
 // JSON: {"weather":[{"description":"Sunny"}],"main":{"temp":26.5,"humidity":40},"name":"Beijing"}
 struct WeatherResponse: Codable {
-    let weather: [Weather]
-    let main: Main
-    let name: String
+ let weather: [Weather]
+ let main: Main
+ let name: String
 }
 struct Weather: Codable { let description: String }
 struct Main: Codable { let temp: Double; let humidity: Int }
 
 struct WeatherService {
-    let key: String   // read in from xcconfig
+ let key: String // read in from xcconfig
 
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
-        comps.queryItems = [
-            URLQueryItem(name: "q", value: city),
-            URLQueryItem(name: "appid", value: key),
-            URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "lang", value: "en")
-        ]
-        let (data, _) = try await URLSession.shared.data(from: comps.url!)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+ comps.queryItems = [
+ URLQueryItem(name: "q", value: city),
+ URLQueryItem(name: "appid", value: key),
+ URLQueryItem(name: "units", value: "metric"),
+ URLQueryItem(name: "lang", value: "en")
+ ]
+ let (data, _) = try await URLSession.shared.data(from: comps.url!)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 ```
 :::
@@ -76,25 +76,25 @@ The soul of a networked app is "state management." Slow network, no connection, 
 
 ```
 enum LoadState {
-    case loading                  // spinner showing
-    case success(WeatherResponse) // success
-    case error(String)            // failure
+ case loading // spinner showing
+ case success(WeatherResponse) // success
+ case error(String) // failure
 }
 
 @Observable
 class WeatherViewModel {
-    var state: LoadState = .loading
-    private let service = WeatherService(key: Config.apiKey)
+ var state: LoadState = .loading
+ private let service = WeatherService(key: Config.apiKey)
 
-    func search(city: String) async {
-        state = .loading
-        do {
-            let data = try await service.fetchWeather(city: city)
-            state = .success(data)
-        } catch {
-            state = .error("Can't find that city — try another name?")
-        }
-    }
+ func search(city: String) async {
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ state = .success(data)
+ } catch {
+ state = .error("Can't find that city — try another name?")
+ }
+ }
 }
 
 // In the UI:
@@ -117,24 +117,24 @@ This loading/success/error three-part pattern is the "all-purpose template" for 
 
 ```
 struct WeatherContent: View {
-    let data: WeatherResponse
+ let data: WeatherResponse
 
-    var body: some View {
-        VStack(spacing: 12) {
-            Text(data.name)
-                .font(.title.bold())
-            Text("\(Int(data.main.temp))°C")
-                .font(.system(size: 76, weight: .thin))
-            Text(data.weather.first?.description ?? "Unknown")
-                .font(.title3)
-                .foregroundColor(.secondary)
-            HStack(spacing: 24) {
-                Label("Humidity \(data.main.humidity)%", systemImage: "humidity")
-                Label("Feels like \(Int(data.main.temp))°C", systemImage: "thermometer")
-            }
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 12) {
+ Text(data.name)
+ .font(.title.bold())
+ Text("\(Int(data.main.temp))°C")
+ .font(.system(size: 76, weight: .thin))
+ Text(data.weather.first?.description ?? "Unknown")
+ .font(.title3)
+ .foregroundColor(.secondary)
+ HStack(spacing: 24) {
+ Label("Humidity \(data.main.humidity)%", systemImage: "humidity")
+ Label("Feels like \(Int(data.main.temp))°C", systemImage: "thermometer")
+ }
+ }
+ .padding()
+ }
 }
 ```
 :::

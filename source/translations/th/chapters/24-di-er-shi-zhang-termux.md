@@ -45,44 +45,44 @@ Termux<strong>มีเพียง Bash</strong>Shell ชนิดเดีย�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ชื่อปลั๊กอิน</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คำอธิบายฟังก์ชัน</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: ทำให้โปรแกรมบรรทัดคำสั่งเรียกใช้ฟังก์ชัน Android API ได้</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: อนุญาตให้รันสคริปต์ตอนเปิดเครื่อง</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: ให้หน้าต่างเทอร์มินัลแบบลอยได้</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: เปิดให้ปรับแต่งชุดสีและฟอนต์ของเทอร์มินัล</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: รวมสคริปต์ Termux เข้ากับแอปอัตโนมัติอย่าง Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: อนุญาตให้รันสคริปต์จากวิดเจ็ตบนหน้าจอหลัก</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ชื่อปลั๊กอิน</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คำอธิบายฟังก์ชัน</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: ทำให้โปรแกรมบรรทัดคำสั่งเรียกใช้ฟังก์ชัน Android API ได้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: อนุญาตให้รันสคริปต์ตอนเปิดเครื่อง</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: ให้หน้าต่างเทอร์มินัลแบบลอยได้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: เปิดให้ปรับแต่งชุดสีและฟอนต์ของเทอร์มินัล</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: รวมสคริปต์ Termux เข้ากับแอปอัตโนมัติอย่าง Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: อนุญาตให้รันสคริปต์จากวิดเจ็ตบนหน้าจอหลัก</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ข้อควรรู้สำคัญ
+ข้อควรรู้สำคัญ
 
 {class="mt-1"}
 Termux และปลั๊กอินต้องติดตั้งจากแหล่งเดียวกัน เพราะมันแชร์ sharedUserId เดียวกัน การติดตั้งปนกันจากหลายแหล่ง (เช่น F-Droid กับ GitHub) จะทำให้ติดตั้งผิดพลาด
@@ -127,7 +127,7 @@ Termux เวอร์ชันเสถียรล่าสุดคือ v0.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>สรุป
+สรุป
 
 {class="mt-1"}
 Termux นำประสบการณ์เทอร์มินัล Linux อันทรงพลังมาสู่อุปกรณ์ Android ทำให้มือถือกลายเป็นเครื่องมือพัฒนาและเรียนรู้แบบพกพา ไม่ว่าคุณจะเป็นนักพัฒนา ผู้ดูแลระบบ หรือสายเทค ทุกคนใช้ Termux สัมผัสประสบการณ์บรรทัดคำสั่งครบวงจรบนอุปกรณ์เคลื่อนที่ได้ ทำให้ "Linux ในกระเป๋า" เป็นจริงขึ้นมาได้
@@ -135,7 +135,7 @@ Termux นำประสบการณ์เทอร์มินัล Linux 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: รันคำสั่ง Linux คำสั่งแรกบนมือถือให้ผ่าน
+ลงมือทำ: รันคำสั่ง Linux คำสั่งแรกบนมือถือให้ผ่าน
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : ดาวน์โหลดและติดตั้ง Termux จาก F-Droid เปิดครั้งแรกรอการตั้งค่าเริ่มต้นให้เสร็จ

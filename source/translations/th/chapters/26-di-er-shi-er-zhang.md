@@ -98,7 +98,7 @@ AI บนเครื่องเก็บการประมวลผลไ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>ทำไมต้องมีกรอบ?
+ทำไมต้องมีกรอบ?
 
 {class="mt-1"}
 คนจำนวนมากใช้ AI เหมือนใช้ Baidu — พิมพ์คำสำคัญไม่กี่คำแล้วรอผล แต่ AI ไม่ใช่เสิร์ชเอนจิน มันคือโมเดลภาษาที่ "อ่านจับใจความแล้วจึงตอบ"<strong>ให้บริบทมากขึ้น บอกให้ชัดว่าต้องการอะไร และกำหนดขอบเขตไม่ให้เพี้ยน</strong> เมื่ออย่างนั้นมันจะให้ผลลัพธ์ที่แม่นยำ กรอบพรอมป์ก็คือการแปล "คำตอบที่ดีในหัวของคุณ" ให้กลายเป็นคำสั่งที่ AI เข้าใจ
@@ -198,39 +198,39 @@ AI บนเครื่องเก็บการประมวลผลไ�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">อาการ</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">วิธีแก้</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">คำตอบกว้างเกินไป ใช้ไม่ได้จริง</td>
-                                    <td class="border border-gray-300 px-3 py-2">เพิ่มพื้นหลัง (คุณคือใคร/อยู่ในสถานการณ์แบบไหน)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">คำตอบเป็นวิชาการ/ทางการเกินไป</td>
-                                    <td class="border border-gray-300 px-3 py-2">ใส่ข้อจำกัดน้ำเสียง + สั่งห้ามภาษาทางการแบบราชการ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">คำตอบออกนอกเรื่อง/ตอบไม่ตรงคำถาม</td>
-                                    <td class="border border-gray-300 px-3 py-2">พูดงานซ้ำด้วยกริยาชัดเจน และสั่งว่า "ตอบแค่เรื่องนี้เท่านั้น" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">คำตอบยาวเกินอ่านไม่จบ</td>
-                                    <td class="border border-gray-300 px-3 py-2">กำหนดจำนวนคำแบบตายตัว (ไม่เกิน 200 คำ)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI พูดมั่วอย่างมั่นใจเต็มร้อย</td>
-                                    <td class="border border-gray-300 px-3 py-2">ใส่คำสั่ง "ถ้าไม่แน่ใจ ให้ระบุว่า 'ไม่แน่ใจ'" + ตรวจสอบข้อเท็จจริงสำคัญด้วยตัวเอง</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">เวอร์ชันแรกไม่ถูกใจ</td>
-                                    <td class="border border-gray-300 px-3 py-2">อย่ารีไรต์ทั้งก้อน ให้ต่อท้ายพรอมป์เดิมด้วย "ทำให้...มากขึ้น"</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">อาการ</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">วิธีแก้</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">คำตอบกว้างเกินไป ใช้ไม่ได้จริง</td>
+ <td class="border border-gray-300 px-3 py-2">เพิ่มพื้นหลัง (คุณคือใคร/อยู่ในสถานการณ์แบบไหน)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">คำตอบเป็นวิชาการ/ทางการเกินไป</td>
+ <td class="border border-gray-300 px-3 py-2">ใส่ข้อจำกัดน้ำเสียง + สั่งห้ามภาษาทางการแบบราชการ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">คำตอบออกนอกเรื่อง/ตอบไม่ตรงคำถาม</td>
+ <td class="border border-gray-300 px-3 py-2">พูดงานซ้ำด้วยกริยาชัดเจน และสั่งว่า "ตอบแค่เรื่องนี้เท่านั้น" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">คำตอบยาวเกินอ่านไม่จบ</td>
+ <td class="border border-gray-300 px-3 py-2">กำหนดจำนวนคำแบบตายตัว (ไม่เกิน 200 คำ)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI พูดมั่วอย่างมั่นใจเต็มร้อย</td>
+ <td class="border border-gray-300 px-3 py-2">ใส่คำสั่ง "ถ้าไม่แน่ใจ ให้ระบุว่า 'ไม่แน่ใจ'" + ตรวจสอบข้อเท็จจริงสำคัญด้วยตัวเอง</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">เวอร์ชันแรกไม่ถูกใจ</td>
+ <td class="border border-gray-300 px-3 py-2">อย่ารีไรต์ทั้งก้อน ให้ต่อท้ายพรอมป์เดิมด้วย "ทำให้...มากขึ้น"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ AI บนเครื่องเก็บการประมวลผลไ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>สถานการณ์ที่ 1: ผู้ช่วยชีวิตประจำวัน (คำแนะนำจัดเมนูมื้อเช้า)
+สถานการณ์ที่ 1: ผู้ช่วยชีวิตประจำวัน (คำแนะนำจัดเมนูมื้อเช้า)
 
 {class="mt-1"}
 <strong>พรอมป์</strong>:
@@ -257,7 +257,7 @@ AI บนเครื่องเก็บการประมวลผลไ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>สถานการณ์ที่ 2: ผู้ช่วยเรื่องการเรียน (ติวสอบ CET-6)
+สถานการณ์ที่ 2: ผู้ช่วยเรื่องการเรียน (ติวสอบ CET-6)
 
 {class="mt-1"}
 <strong>พรอมป์</strong>:
@@ -275,7 +275,7 @@ AI บนเครื่องเก็บการประมวลผลไ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>สถานการณ์ที่ 3: เพิ่มประสิทธิภาพงานออฟฟิศ (จัดระเบียบมโนทัศน์ที่ประชุม)
+สถานการณ์ที่ 3: เพิ่มประสิทธิภาพงานออฟฟิศ (จัดระเบียบมโนทัศน์ที่ประชุม)
 
 {class="mt-1"}
 <strong>พรอมป์</strong>:
@@ -293,7 +293,7 @@ AI บนเครื่องเก็บการประมวลผลไ�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>เทคนิคขั้นสูง: ทำให้ AI เป็น "ผู้ช่วยส่วนตัว" ของคุณ
+เทคนิคขั้นสูง: ทำให้ AI เป็น "ผู้ช่วยส่วนตัว" ของคุณ
 
 {class="mt-1"}
 ลองใช้เทคนิคขั้นสูงเหล่านี้ แล้วจะได้เห็นฝีมือจริงของ AI:
@@ -317,7 +317,7 @@ AI เก่งจริง แต่ไม่ใช่ "ทำได้ทุ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>เคล็ดลับการใช้ AI
+เคล็ดลับการใช้ AI
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - เนื้อหาที่ AI สร้างอาจไม่แม่น (ปัญหา "ภาพหลอน") ข้อมูลสำคัญต้องตรวจสอบเสมอ
@@ -329,7 +329,7 @@ AI เก่งจริง แต่ไม่ใช่ "ทำได้ทุ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>มาลองท้าดู: โจทย์ AI ฝึกปฏิบัติสามข้อ
+มาลองท้าดู: โจทย์ AI ฝึกปฏิบัติสามข้อ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>โจทย์ที่ 1: คำสั่งหลายขั้นตอน</strong>: พูดกับผู้ช่วยเสียงว่า: "พรุ่งนี้เช้า 7 โมงเตือนฉันให้พกร่ม และเปลี่ยนนัดในปฏิทินบ่าย 3 โมงวันนี้ไปเป็น 4 โมง" แล้วดูว่ามันทำหลายขั้นตอนในครั้งเดียวจบไหม
@@ -339,7 +339,7 @@ AI เก่งจริง แต่ไม่ใช่ "ทำได้ทุ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>กรณีศึกษา 2: ขั้นตอนย้ายข้อมูลเวลาเปลี่ยนเครื่องฉบับครบถ้วน
+กรณีศึกษา 2: ขั้นตอนย้ายข้อมูลเวลาเปลี่ยนเครื่องฉบับครบถ้วน
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>สถานการณ์</strong>: เปลี่ยนจาก iPhone 13 ไปเป็น Xiaomi 15 แบบข้ามแบรนด์

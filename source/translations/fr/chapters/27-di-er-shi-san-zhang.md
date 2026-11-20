@@ -95,7 +95,7 @@ L'automatisation n'est pas toujours un long fleuve tranquille, voici quelques pi
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Astuce : la bonne posture pour débuter en automatisation
+Astuce : la bonne posture pour débuter en automatisation
 
 {class="mt-1"}
 Prenez d'abord 5 minutes pour réfléchir : quelles sont les 3 choses que vous répétez le plus sur votre smartphone chaque jour ? Par exemple, votre routine matinale, vos habitudes après la connexion du casque Bluetooth, vos réglages avant de sortir… Commencez par ces petites tâches à haute fréquence, créez une automatisation simple pour chacune. Même si chaque automatisation ne vous fait gagner que 5 secondes, à la longue c'est considérable. Et la satisfaction une fois que c'est fait, c'est vraiment addictif.
@@ -103,7 +103,7 @@ Prenez d'abord 5 minutes pour réfléchir : quelles sont les 3 choses que vous r
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Entraînez-vous : trois défis d'automatisation pour débutants
+Entraînez-vous : trois défis d'automatisation pour débutants
 
 {class="mt-1 mb-2"}
 Choisissez celui qui vous convient le mieux, une fois terminé vous serez initié :
@@ -116,7 +116,7 @@ Choisissez celui qui vous convient le mieux, une fois terminé vous serez initi�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Cas 3 : Automatisation du « rituel du matin »
+Cas 3 : Automatisation du « rituel du matin »
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scénario</strong> : Chaque jour à 7:00, annonce automatique de la météo + désactivation du mode silencieux + ouverture des actualités.

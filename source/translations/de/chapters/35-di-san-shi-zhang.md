@@ -19,19 +19,19 @@ Kabellose Übertragung sieht immer so aus: "Handybild auf den Fernseher". Aber d
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Technologie</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Wer nutzt</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Merkmale</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple-Ökosystem, flüssigste Erfahrung. Benötigt Apple TV oder AirPlay-fähigen Fernseher</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android-Handys</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct Direktverbindung, kein Router nötig. Standardmäßig bei Android "kabellose Übertragung"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alle Plattformen</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Push nur Mediendateien (Video/Musik/Bild), kein Spiegeln. Gut, um Videos auf dem TV abzuspielen</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Technologie</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Wer nutzt</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Merkmale</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple-Ökosystem, flüssigste Erfahrung. Benötigt Apple TV oder AirPlay-fähigen Fernseher</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android-Handys</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct Direktverbindung, kein Router nötig. Standardmäßig bei Android "kabellose Übertragung"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alle Plattformen</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Push nur Mediendateien (Video/Musik/Bild), kein Spiegeln. Gut, um Videos auf dem TV abzuspielen</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Das Bedienen des Handys während der Fahrt ist verboten, aber Navigation, Musik 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Sicherheitshinweis
+Sicherheitshinweis
 
 {class="mt-1"}
 Unabhängig vom System sollten Sie beim Fahren immer Sprachsteuerung verwenden. Navigation vor der Fahrt einrichten, Playlist vorher wählen, den Bordbildschirm nicht während der Fahrt bedienen.
@@ -86,7 +86,7 @@ Besprechungen sind der häufigste Anwendungsfall für Übertragung und auch der 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praxis: Einmal vom Handy auf den Fernseher übertragen
+Praxis: Einmal vom Handy auf den Fernseher übertragen
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Du solltest also vor allem die erste und dritte Kategorie schützen.
@@ -98,7 +98,7 @@ Besprechungen sind der häufigste Anwendungsfall für Übertragung und auch der 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Kapitelzusammenfassung
+Kapitelzusammenfassung
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Drei Lager der kabellosen Übertragung: AirPlay (Apple), Miracast (Android), DLNA (plattformübergreifend)

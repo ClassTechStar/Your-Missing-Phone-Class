@@ -56,7 +56,7 @@ App使手機無所不能，然亦須管之。猶汝予新員工安排工位、�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>何爲"電子寄生蟲"？
+何爲"電子寄生蟲"？
 
 {class="mt-1"}
 指彼等<strong>被植木馬之"破解版"軟件</strong>——汝以爲"省了錢"，實則"中了招"。常見之形：
@@ -96,20 +96,20 @@ App要權（如通訊錄、位置）有時合（地圖要位置），有時不�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>權限之擇</strong>："始終允"、"僅用時允"、"禁止"、"每問"。</li>
-                        <li><strong>管之則</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>最小化：非必不與。</li>
-                                <li>最小化：非必不與。</li>
-                                <li>情境化：似打車軟件，惟用時予位置之權。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>權限之擇</strong>："始終允"、"僅用時允"、"禁止"、"每問"。</li>
+ <li><strong>管之則</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>最小化：非必不與。</li>
+ <li>最小化：非必不與。</li>
+ <li>情境化：似打車軟件，惟用時予位置之權。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>重點盯防之權
+重點盯防之權
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 通訊錄/短信：或被用以發垃圾短信。
@@ -152,16 +152,16 @@ IPA（iOS App Store Package）同爲壓縮包，結構略異：
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>安卓之籤</strong>：開發者以私鑰對APK籤，系統裝時以公鑰驗。若APK被篡（如植病毒），簽名即失效，系統拒裝。Google Play猶須App Signing，由Google保管簽名之鑰，進一步護應用之安。</li>
-                        <li><strong>iOS之籤</strong>：蘋果之審更嚴。每IPA必具蘋果所頒之證書籤，否則不能裝。此即iOS惟自App Store或企業證書裝應用之由。企業證書籤之應用有效期有限，且蘋果可隨吊銷。</li>
-                        <li><strong>籤之作</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>驗源：認應用確來自所聲之開發者。</li>
-                                <li>驗完：保應用於傳中未被篡。</li>
-                                <li>驗完：保應用於傳中未被篡。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>安卓之籤</strong>：開發者以私鑰對APK籤，系統裝時以公鑰驗。若APK被篡（如植病毒），簽名即失效，系統拒裝。Google Play猶須App Signing，由Google保管簽名之鑰，進一步護應用之安。</li>
+ <li><strong>iOS之籤</strong>：蘋果之審更嚴。每IPA必具蘋果所頒之證書籤，否則不能裝。此即iOS惟自App Store或企業證書裝應用之由。企業證書籤之應用有效期有限，且蘋果可隨吊銷。</li>
+ <li><strong>籤之作</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>驗源：認應用確來自所聲之開發者。</li>
+ <li>驗完：保應用於傳中未被篡。</li>
+ <li>驗完：保應用於傳中未被篡。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. 安裝包之大與優化
@@ -180,7 +180,7 @@ IPA（iOS App Store Package）同爲壓縮包，結構略異：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：何有之App安裝包特大？
+小知識：何有之App安裝包特大？
 
 {class="mt-1"}
 小知識：何有之App安裝包特大？
@@ -188,7 +188,7 @@ IPA（iOS App Store Package）同爲壓縮包，結構略異：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>實操之環：審三App之權
+實操之環：審三App之權
 
 {class="mt-1"}
 實操之環：審三App之權

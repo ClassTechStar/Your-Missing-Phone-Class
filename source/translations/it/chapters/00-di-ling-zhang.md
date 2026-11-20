@@ -45,7 +45,7 @@ Ma i motivi principali del "restringimento" della capacità del cellulare sono t
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Piccolo consiglio per l'acquisto
+Piccolo consiglio per l'acquisto
 
 {class="mt-1"}
 Oggi 128 GB sono ormai insufficienti; partire da 256 GB è più prudente. Se ti piace scattare foto o giocare, valuta direttamente 512 GB o più. Ricorda, per lo spazio di archiviazione. Meglio abbondare che essere a corto.
@@ -53,7 +53,7 @@ Oggi 128 GB sono ormai insufficienti; partire da 256 GB è più prudente. Se ti 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fai pratica: guarda la "carta d'identità" del tuo cellulare
+Fai pratica: guarda la "carta d'identità" del tuo cellulare
 
 {class="mt-1"}
 Apri [Impostazioni], trova Info sul telefono (o opzione simile) e annota: modello, versione di sistema, spazio di archiviazione totale e residuo. Questo è il primo passo per conoscerlo. Già che ci sei, controlla lo stato di salute della batteria per avere un'idea.
@@ -66,7 +66,7 @@ Prima di iniziare con le conoscenze specifiche, stabiliamo una cognizione di bas
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>Perché è importante?
+Perché è importante?
 
 {class="mt-1"}
 Se il cellulare viene perso o si guasta, perdi non solo qualche migliaio di euro di hardware, <strong>ma probabilmente anni di dati non riproducibili</strong> — le foto della crescita dei figli, le voci di parenti scomparsi, contratti importanti senza backup. Abitudini di organizzazione e protezione scientifiche possono proteggerti su tre dimensioni:

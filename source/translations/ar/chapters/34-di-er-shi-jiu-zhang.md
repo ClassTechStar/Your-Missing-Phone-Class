@@ -43,7 +43,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>قاعدة 20-20-20
+قاعدة 20-20-20
 
 {class="mt-1"}
 كل<strong>20 دقيقة</strong>نظر للشاشة، انقل نظرك لـ<strong>20 قدماً (حوالي 6 أمتار)</strong>بعيداً، لمدة<strong>20 ثانية</strong>. هذا الإجراء البسيط يخفف إجهاد العضلة الهدبية بفعالية.
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: تحدي الصحة الرقمية لأسبوع
+جرّب: تحدي الصحة الرقمية لأسبوع
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. اليوم: افتح وقت استخدام الشاشة/الصحة الرقمية، راجع بيانات الأسبوع الماضي.
@@ -94,7 +94,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - راجع بيانات وقت الشاشة أولاً، إدراك الواقع هو الخطوة الأولى للتغيير

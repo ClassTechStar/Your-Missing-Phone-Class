@@ -208,41 +208,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เบราว์เซอร์</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเด่น</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เหมาะกับใคร</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แกน Chromium + Copilot AI ในตัว สรุปเว็บ/แปล/สนทนาได้</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คนทำงานที่เน้นประสิทธิภาพ ผู้ใช้ AI หนัก ๆ (แนะนำเป็นตัวหลัก)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผสานกับระบบนิเวศ Apple อย่างลึกซึ้ง ประหยัดแบต มีประสิทธิภาพ ปกป้องความเป็นส่วนตัวแรง</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ iPhone/Mac ที่ให้ความสำคัญกับอายุแบตและการเชื่อมโยงระบบ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ใช้มากที่สุดในโลก ระบบนิเวศปลั๊กอินอุดมสมบูรณ์ที่สุด</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ขั้นสูงที่ต้องการปลั๊กอินจำนวนมาก คนที่ซิงก์ข้ามอุปกรณ์</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกโฆษณาและตัวติดตามตั้งแต่แกะกล่อง เร็วกว่า</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ที่ใส่ใจความเป็นส่วนตัว อยากบล็อกโฆษณาโดยไม่ติดปลั๊กอิน</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เครื่องมือค้นหาชื่อเดียวกันไม่บันทึกประวัติ ล้างร่องรอยในคลิกเดียว</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ที่อ่อนไหวต่อความเป็นส่วนตัว ไม่อยากถูกติดตามแบบส่วนบุคคล</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เบราว์เซอร์</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเด่น</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เหมาะกับใคร</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แกน Chromium + Copilot AI ในตัว สรุปเว็บ/แปล/สนทนาได้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คนทำงานที่เน้นประสิทธิภาพ ผู้ใช้ AI หนัก ๆ (แนะนำเป็นตัวหลัก)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผสานกับระบบนิเวศ Apple อย่างลึกซึ้ง ประหยัดแบต มีประสิทธิภาพ ปกป้องความเป็นส่วนตัวแรง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ iPhone/Mac ที่ให้ความสำคัญกับอายุแบตและการเชื่อมโยงระบบ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ใช้มากที่สุดในโลก ระบบนิเวศปลั๊กอินอุดมสมบูรณ์ที่สุด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ขั้นสูงที่ต้องการปลั๊กอินจำนวนมาก คนที่ซิงก์ข้ามอุปกรณ์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกโฆษณาและตัวติดตามตั้งแต่แกะกล่อง เร็วกว่า</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ที่ใส่ใจความเป็นส่วนตัว อยากบล็อกโฆษณาโดยไม่ติดปลั๊กอิน</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เครื่องมือค้นหาชื่อเดียวกันไม่บันทึกประวัติ ล้างร่องรอยในคลิกเดียว</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้ที่อ่อนไหวต่อความเป็นส่วนตัว ไม่อยากถูกติดตามแบบส่วนบุคคล</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -291,46 +291,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แพลตฟอร์ม</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เส้นทางเข้า</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รายการที่แนะนำให้เปิด</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[การตั้งค่า] > [โทรศัพท์] / [ข้อความ]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปิดเสียงสายจากคนแปลกหน้า รายชื่อที่ถูกบล็อก "กรองผู้ส่งที่ไม่รู้จัก" ในข้อความ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปโทรศัพท์ > การตั้งค่า > บล็อกสายรบกวน หรือ ศูนย์ความปลอดภัย</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกอัจฉริยะ เบอร์แปลกหน้าดังครั้งเดียวแล้วตัด กรองคำสำคัญในข้อความ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โทรศัพท์ > บล็อกสายรบกวน Mobile Manager > บล็อกสายรบกวน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระบุสายเข้า บัญชีดำ บล็อกข้อความอัจฉริยะ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปโทรศัพท์ > บล็อกสายรบกวน หรือ เครื่องนี้ > บล็อกสายรบกวน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกสายเข้า ระบุสายหลอกลวง กฎบล็อกข้อความ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โทรศัพท์ > บล็อกสายรบกวน i Manager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกสายรบกวน เตือนสายหลอกลวง กรองข้อความ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โทรศัพท์ > การตั้งค่า > บล็อกหมายเลข / แสดงสายเข้าและสายขยะ</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกหมายเลขที่ไม่รู้จัก ระบุสายขยะ (การรองรับต่างกันตามพื้นที่)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แพลตฟอร์ม</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เส้นทางเข้า</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รายการที่แนะนำให้เปิด</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[การตั้งค่า] > [โทรศัพท์] / [ข้อความ]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปิดเสียงสายจากคนแปลกหน้า รายชื่อที่ถูกบล็อก "กรองผู้ส่งที่ไม่รู้จัก" ในข้อความ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปโทรศัพท์ > การตั้งค่า > บล็อกสายรบกวน หรือ ศูนย์ความปลอดภัย</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกอัจฉริยะ เบอร์แปลกหน้าดังครั้งเดียวแล้วตัด กรองคำสำคัญในข้อความ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โทรศัพท์ > บล็อกสายรบกวน Mobile Manager > บล็อกสายรบกวน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระบุสายเข้า บัญชีดำ บล็อกข้อความอัจฉริยะ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปโทรศัพท์ > บล็อกสายรบกวน หรือ เครื่องนี้ > บล็อกสายรบกวน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกสายเข้า ระบุสายหลอกลวง กฎบล็อกข้อความ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โทรศัพท์ > บล็อกสายรบกวน i Manager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกสายรบกวน เตือนสายหลอกลวง กรองข้อความ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โทรศัพท์ > การตั้งค่า > บล็อกหมายเลข / แสดงสายเข้าและสายขยะ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บล็อกหมายเลขที่ไม่รู้จัก ระบุสายขยะ (การรองรับต่างกันตามพื้นที่)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -394,46 +394,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แพลตฟอร์ม</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ทางเข้าทั่วไป</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คำอธิบาย</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mobile Manager / ศูนย์ความปลอดภัย > เตือนแผ่นดินไหว หรือ ค้นหา "แผ่นดินไหว" ในการตั้งค่า</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บางเวอร์ชันมีบริการเตือนภัยในระบบ ต้องต่อเน็ตและเปิดตำแหน่ง</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การตั้งค่า > ความปลอดภัย > แจ้งเตือนเหตุฉุกเฉิน / เตือนแผ่นดินไหว</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ชื่ออาจเป็น "แจ้งเตือนเหตุฉุกเฉิน" ครอบคลุมแผ่นดินไหวด้วย</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การตั้งค่า > ความปลอดภัย (SOS ติดต่อฉุกเฉิน) > เตือนแผ่นดินไหว</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บางรุ่นขึ้นกับบริการในพื้นที่</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปสภาพอากาศ หรือ การตั้งค่า > ความปลอดภัย/อื่น ๆ > เตือนแผ่นดินไหว</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ยึดเมนูของเวอร์ชันระบบจริง</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ในการตั้งค่าระบบมักไม่มีสวิตช์ในตัวครบถ้วน ติดตั้งแอปเตือนแผ่นดินไหวที่เชื่อถือได้และอนุญาตการแจ้งเตือน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปต้องทำงานเบื้องหลังและมีสิทธิ์ตำแหน่ง อย่าให้โหมดห้ามรบกวนของระบบบล็อกการเตือน</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung เป็นต้น</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การตั้งค่า > ความปลอดภัยและเหตุฉุกเฉิน / การเตือนฉุกเฉินไร้สาย</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"การเตือนฉุกเฉิน" ครอบคลุมต่างกันตามพื้นที่และผู้ให้บริการ</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แพลตฟอร์ม</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ทางเข้าทั่วไป</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คำอธิบาย</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mobile Manager / ศูนย์ความปลอดภัย > เตือนแผ่นดินไหว หรือ ค้นหา "แผ่นดินไหว" ในการตั้งค่า</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บางเวอร์ชันมีบริการเตือนภัยในระบบ ต้องต่อเน็ตและเปิดตำแหน่ง</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การตั้งค่า > ความปลอดภัย > แจ้งเตือนเหตุฉุกเฉิน / เตือนแผ่นดินไหว</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ชื่ออาจเป็น "แจ้งเตือนเหตุฉุกเฉิน" ครอบคลุมแผ่นดินไหวด้วย</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การตั้งค่า > ความปลอดภัย (SOS ติดต่อฉุกเฉิน) > เตือนแผ่นดินไหว</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บางรุ่นขึ้นกับบริการในพื้นที่</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปสภาพอากาศ หรือ การตั้งค่า > ความปลอดภัย/อื่น ๆ > เตือนแผ่นดินไหว</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ยึดเมนูของเวอร์ชันระบบจริง</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ในการตั้งค่าระบบมักไม่มีสวิตช์ในตัวครบถ้วน ติดตั้งแอปเตือนแผ่นดินไหวที่เชื่อถือได้และอนุญาตการแจ้งเตือน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปต้องทำงานเบื้องหลังและมีสิทธิ์ตำแหน่ง อย่าให้โหมดห้ามรบกวนของระบบบล็อกการเตือน</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung เป็นต้น</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การตั้งค่า > ความปลอดภัยและเหตุฉุกเฉิน / การเตือนฉุกเฉินไร้สาย</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"การเตือนฉุกเฉิน" ครอบคลุมต่างกันตามพื้นที่และผู้ให้บริการ</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

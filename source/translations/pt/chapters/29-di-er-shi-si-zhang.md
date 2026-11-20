@@ -45,41 +45,41 @@ Para entender mais intuitivamente os prós e contras do bloqueio do Bootloader, 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Função principal</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Estado bloqueado (padrão)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Estado após desbloqueio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Segurança do sistema</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impede a instalação de sistemas não oficiais não assinados, protegendo a integridade e a segurança de baixo nível do sistema<br><span class="text-emerald-600 dark:text-emerald-400">✅ Alta segurança: carrega apenas imagens com assinatura oficial, resistindo eficazmente à adulteração por firmware malicioso</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Segurança reduzida: permite instalação de ROMs de terceiros, o mecanismo de verificação de integridade do sistema fica inativo; malware com privilégios Root pode adulterar profundamente o sistema</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Estabilidade do sistema</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garante que o celular execute o sistema oficial testado e otimizado pelo fabricante, assegurando estabilidade e fluidez<br><span class="text-emerald-600 dark:text-emerald-400">✅ Estável: usa firmware oficial, funcionalidades completas, atualizações OTA confiáveis</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risco aumentado: ROMs de terceiros podem ter problemas de compatibilidade, causando travamentos, brick, mau funcionamento de hardware (câmera, carregamento rápido), e falhas em atualizações OTA</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Direitos de garantia</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O fabricante fornece sistema oficial estável com o Bootloader bloqueado para oferecer serviço de garantia<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garantia válida: desfrute do serviço de garantia oficial gratuito (danos não causados por mau uso)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garantia anulada: a grande maioria dos fabricantes considera o desbloqueio do Bootloader como renúncia voluntária à garantia; mesmo ao rebloquear, o histórico de desbloqueio pode ser detectado e a garantia recusada</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Segurança de dados</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O processo de desbloqueio geralmente força a exclusão de dados, impedindo que dados antigos sejam explorados maliciosamente no novo ambiente<br><span class="text-emerald-600 dark:text-emerald-400">✅ Dados seguros: no uso diário, o bloqueio do Bootloader limita a capacidade de programas maliciosos modificarem a partição do sistema</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risco de dados: o desbloqueio força a exclusão de todos os dados do usuário; se não criptografado corretamente após o desbloqueio, o armazenamento pode ficar inseguro; em caso de perda, é mais fácil extrair dados por flashing</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Restrições funcionais</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garante o funcionamento normal de funções que dependem de ambiente seguro (como pagamentos, apps bancários)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Funcionalidade completa: todas as funções oficiais operam normalmente</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Funcionalidade limitada: alguns apps sensíveis à segurança (como Google Pay, apps bancários) podem se recusar a executar ao detectar o estado de desbloqueio do Bootloader; serviços DRM podem ser rebaixados, afetando a reprodução de vídeo em alta definição</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Função principal</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Estado bloqueado (padrão)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Estado após desbloqueio</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Segurança do sistema</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impede a instalação de sistemas não oficiais não assinados, protegendo a integridade e a segurança de baixo nível do sistema<br><span class="text-emerald-600 dark:text-emerald-400">✅ Alta segurança: carrega apenas imagens com assinatura oficial, resistindo eficazmente à adulteração por firmware malicioso</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Segurança reduzida: permite instalação de ROMs de terceiros, o mecanismo de verificação de integridade do sistema fica inativo; malware com privilégios Root pode adulterar profundamente o sistema</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Estabilidade do sistema</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garante que o celular execute o sistema oficial testado e otimizado pelo fabricante, assegurando estabilidade e fluidez<br><span class="text-emerald-600 dark:text-emerald-400">✅ Estável: usa firmware oficial, funcionalidades completas, atualizações OTA confiáveis</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risco aumentado: ROMs de terceiros podem ter problemas de compatibilidade, causando travamentos, brick, mau funcionamento de hardware (câmera, carregamento rápido), e falhas em atualizações OTA</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Direitos de garantia</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O fabricante fornece sistema oficial estável com o Bootloader bloqueado para oferecer serviço de garantia<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garantia válida: desfrute do serviço de garantia oficial gratuito (danos não causados por mau uso)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garantia anulada: a grande maioria dos fabricantes considera o desbloqueio do Bootloader como renúncia voluntária à garantia; mesmo ao rebloquear, o histórico de desbloqueio pode ser detectado e a garantia recusada</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Segurança de dados</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O processo de desbloqueio geralmente força a exclusão de dados, impedindo que dados antigos sejam explorados maliciosamente no novo ambiente<br><span class="text-emerald-600 dark:text-emerald-400">✅ Dados seguros: no uso diário, o bloqueio do Bootloader limita a capacidade de programas maliciosos modificarem a partição do sistema</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risco de dados: o desbloqueio força a exclusão de todos os dados do usuário; se não criptografado corretamente após o desbloqueio, o armazenamento pode ficar inseguro; em caso de perda, é mais fácil extrair dados por flashing</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Restrições funcionais</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garante o funcionamento normal de funções que dependem de ambiente seguro (como pagamentos, apps bancários)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Funcionalidade completa: todas as funções oficiais operam normalmente</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Funcionalidade limitada: alguns apps sensíveis à segurança (como Google Pay, apps bancários) podem se recusar a executar ao detectar o estado de desbloqueio do Bootloader; serviços DRM podem ser rebaixados, afetando a reprodução de vídeo em alta definição</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ Diferente de outros fabricantes Android, o mecanismo de desbloqueio do Bootloade
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Pense duas vezes antes de agir
+Pense duas vezes antes de agir
 
 {class="mt-1"}
 O fusível Knox da Samsung é <strong>irreversível</strong>. Uma vez acionado, não há como voltar ao estado original de fábrica. Se você deseja apenas usar funcionalidades que originalmente exigiriam Root, verifique primeiro se existem alternativas que não necessitem de Root.
@@ -123,7 +123,7 @@ O fusível Knox da Samsung é <strong>irreversível</strong>. Uma vez acionado, 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Aviso importante
+Aviso importante
 
 {class="mt-1"}
 Flashing de ROM envolve riscos, proceda com cautela. Pode resultar em:
@@ -140,7 +140,7 @@ Antes de fazer o flashing, faça um backup completo, leia atentamente os tutoria
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Recursos recomendados
+Recursos recomendados
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>: a maior comunidade de desenvolvedores Android do mundo, com abundantes tutoriais de flashing e recursos de ROM.
@@ -152,7 +152,7 @@ Antes de fazer o flashing, faça um backup completo, leia atentamente os tutoria
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: Após desbloquear o Bootloader, é possível restaurá-lo?
+Q1: Após desbloquear o Bootloader, é possível restaurá-lo?
 
 {class="mb-2 pl-6"}
 <strong>R:</strong> Sim, é possível rebloquear. Geralmente é necessário fazer o flash do pacote de recuperação oficial completo (fastboot) e usar um script de flashing específico (como <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code> da Xiaomi) para rebloquear. Mas atenção: após rebloquear, alguns fusíveis de segurança acionados pelo desbloqueio (como o Knox da Samsung) podem ser irreversíveis.
@@ -160,7 +160,7 @@ Antes de fazer o flashing, faça um backup completo, leia atentamente os tutoria
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: Como obter Root após o desbloqueio?
+Q2: Como obter Root após o desbloqueio?
 
 {class="mb-2 pl-6"}
 <strong>R:</strong> Desbloquear o Bootloader é apenas o primeiro passo. O Root geralmente requer:

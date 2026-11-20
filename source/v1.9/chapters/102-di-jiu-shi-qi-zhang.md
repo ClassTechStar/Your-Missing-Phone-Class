@@ -141,7 +141,7 @@ AI 生成的稿子长什么样？框架工整、语句通顺，但通篇没有�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 图文成片的成片里，图库素材的授权问题最容易被忽略："剪映里能搜到的素材"不等于"可以随意商用"。涉及商业推广的视频，素材、音乐、字体三样都要确认授权范围，拿不准就换成自己拍的。平台规则细节见第 100 章。
@@ -219,7 +219,7 @@ AI 生成的稿子长什么样？框架工整、语句通顺，但通篇没有�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：字幕断句=节奏
+小贴士：字幕断句=节奏
 
 {class="mt-1"}
 把长句手动断成 5-10 字一屏，跟语音节奏对齐，观感立刻"专业"。字幕出现时机尽量"踩点"，剪映里拖动字幕条对齐语音波形即可。
@@ -305,7 +305,7 @@ AI 配音最大的破绽不是音色，是"一马平川"，从头到尾一个情
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先定稿，再配音
+小贴士：先定稿，再配音
 
 {class="mt-1"}
 配音生成之后，每改一个字，那一段都要重新生成，时间轴也可能跟着变。顺序永远是：文案定稿 → 配音 → 字幕 → 素材。顺序反了，全是返工。
@@ -453,7 +453,7 @@ AI 配音最大的破绽不是音色，是"一马平川"，从头到尾一个情
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：产出第一条 AI 辅助视频
+来动手：产出第一条 AI 辅助视频
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 选一个你熟的小话题，让 AI 写 200 字口播稿，人工改成口语短句。
@@ -621,7 +621,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：三张置顶备忘录
+小贴士：三张置顶备忘录
 
 {class="mt-1"}
 到这一节为止，你的备忘录里应该有三篇置顶：选题库（第一节）、词表（本节）、校验清单（第五节）。三张表加起来不到一小时的工作量，却决定了你做片速度的上限。
@@ -665,7 +665,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把"机器味"全赖给音色。八成的机器味来自"全片一个节奏"——稿子改短、标点调活、分段标情绪，比换十个音色都管用。先改稿，再换音色，顺序反了就是白折腾。
@@ -726,7 +726,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 找一段横屏旧素材（旧 vlog、直播回放都行），用"上下留白"方案手动做一条竖屏版，全程不用裁切功能。做完这一条，你对"竖屏构图"的理解会上一个台阶。
@@ -762,7 +762,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 发现导出的成片有小问题，当场改、当场重导。别抱着"先发出去，回头再说"的心态，发布后删片重发的代价，比发布前重导一次大得多，时间上和心理上都是。
@@ -825,7 +825,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：每周十五分钟"双清"
+小贴士：每周十五分钟"双清"
 
 {class="mt-1"}
 固定一个时间做两件事：清选题库（第一节的方法）、维护词表（第十一节的方法），顺手把本周评论区的好问题丢进选题库。十五分钟，换来下周知道自己要做什么。
@@ -895,7 +895,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 片尾模板别原样套用——模板自带的默认文字（别人家的关注语、署名、水印）必须清干净。第一节的模板一节讲过操作，这里是它最常翻车的位置：成片发出去半小时，才发现片尾挂的是别人的名字。
@@ -919,7 +919,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 工具是别人的，流程是自己的。功能会改版，你踩过的坑、建好的表、跑顺的流程，谁也拿不走。
@@ -960,7 +960,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 今天拍三段常用空镜（窗外的天空、楼下的街道、你的桌面），按"内容_场景"命名存好，这是你素材库的第一块砖。下周做片时，你会感谢今天这十分钟。
@@ -982,7 +982,7 @@ AI 识别的错误其实分两种。<strong>随机错</strong>：临时口胡、
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 图文成片=60 分初稿，稿子写短、模板做骨架，初稿更准
 - 智能字幕三连：识别→校对术语（先建词表）→样式与断句踩节奏

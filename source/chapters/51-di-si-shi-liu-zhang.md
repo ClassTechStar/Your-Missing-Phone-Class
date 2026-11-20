@@ -36,7 +36,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：一个人也能玩"多 Agent"
+小贴士：一个人也能玩"多 Agent"
 
 {class="mt-1"}
 对于个人开发者来说，你不需要搭建复杂的多 Agent 系统，你可以"扮演"不同的角色来模拟多 Agent 协作。比如：先用一个对话让 AI 写功能代码；然后开一个新对话（提供 CLAUDE.md 上下文），让 AI"作为代码审查者审查这段代码"；最后再开一个对话让 AI"根据审查意见修正代码"。这种"一人多角"的方式，能获得多 Agent 协作的大部分好处，而不需要复杂的基础设施。
@@ -56,7 +56,7 @@ AI 编程是一个快速变化的领域。今天的好办法，明天可能就�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：开一个"踩坑笔记本"
+来动手：开一个"踩坑笔记本"
 
 {class="mt-1"}
 今天就建一个文档（笔记软件或 .md 文件都行），写下你到目前为止最想记住的三条 AI 编程心得，哪怕是"记得先想清楚再问"。以后每次踩坑、每次学到新招，都往里面记一条。半年后回看，你会感谢今天的自己。
@@ -64,7 +64,7 @@ AI 编程是一个快速变化的领域。今天的好办法，明天可能就�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - MCP 是 AI 与工具之间的通信标准：让 AI 能执行命令、查数据库、调 API
 - 自定义工作流/Skills 的核心价值是"一致性"：把好办法编码成指令模板

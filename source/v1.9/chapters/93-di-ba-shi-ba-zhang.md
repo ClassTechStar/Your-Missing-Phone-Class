@@ -68,7 +68,7 @@ Organic Maps 的下载更简单粗暴：搜索国家或地区名 → 下载整�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先收藏，后导航
+小贴士：先收藏，后导航
 
 {class="mt-1"}
 每晚花两分钟把"明天的酒店、车站、餐厅"在地图里收藏（星标），并给酒店收藏加备注（当地语言写法+电话）。第二天没网也能直接从收藏列表发起离线导航——这个习惯救过无数人"深夜找酒店"的急。再加一道保险：把酒店地址用当地语言存成一条纯文本。收藏列表也可能点开失败，文字永远能看，网络全断时直接给司机看。
@@ -834,7 +834,7 @@ T-24h（第八十六章的时间表）做四件事：刷新离线区域包（确
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：做一次"无网城市演练"
+来动手：做一次"无网城市演练"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 为目的地城市下载 Google Maps 离线包 + Organic Maps 整国包，检查范围覆盖机场和住处。
@@ -856,7 +856,7 @@ T-24h（第八十六章的时间表）做四件事：刷新离线区域包（确
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 双地图管去哪，打车 App 管怎么去；收藏夹提前标好，时间线自动记账——离线体系管的是"没网也不慌"，收藏体系管的是"去了不白跑"。
@@ -866,7 +866,7 @@ T-24h（第八十六章的时间表）做四件事：刷新离线区域包（确
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 双地图策略：Google Maps 离线包主力（范围覆盖全程、注意有效期）+ Organic Maps 备胎
 - 每晚收藏明天的关键地点，酒店备注当地语言写法，另存一条纯文本地址

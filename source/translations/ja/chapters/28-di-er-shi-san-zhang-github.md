@@ -25,46 +25,46 @@ GitHub
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本質</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">バージョン管理ツール（ソフトウェア）</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">コードホスティングプラットフォーム（ウェブサイト）</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">実行場所</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ローカルパソコン上</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">クラウド（ブラウザでアクセス）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心の役割</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ファイルの各変更を記録（何を変更したか、誰が変更したか、いつ変更したか）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gitリポジトリをクラウドに置き、保存・表示・コラボレーションを容易に</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ネットワーク要否</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不要、オフラインで使用可能</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ネットワーク接続が必要</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">帰属</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オープンソースソフトウェア、Linus Torvalds（Linuxの父）が作成</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft傘下製品</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同等の競合製品</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN、Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab、Gitee（碼雲）、Bitbucket</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単に言うと：</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gitは「変更をどう記録するか」を管理し、GitHubは「変更をどこに置き、どうコラボレーションするか」を管理します</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">。Gitはツールでローカル実行、GitHubはプラットフォームでGitリポジトリをクラウドに置き、コラボレーションと表示を容易にします。Gitだけを使ってGitHubを使わないこともできます（例えば自分でコードを書いてバージョン管理するだけ）が、GitHubを使うには必ずGitが必要です（GitHubはGitに基づいているため）。</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本質</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">バージョン管理ツール（ソフトウェア）</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">コードホスティングプラットフォーム（ウェブサイト）</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">実行場所</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ローカルパソコン上</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">クラウド（ブラウザでアクセス）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心の役割</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ファイルの各変更を記録（何を変更したか、誰が変更したか、いつ変更したか）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gitリポジトリをクラウドに置き、保存・表示・コラボレーションを容易に</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ネットワーク要否</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不要、オフラインで使用可能</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ネットワーク接続が必要</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">帰属</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オープンソースソフトウェア、Linus Torvalds（Linuxの父）が作成</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft傘下製品</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同等の競合製品</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN、Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab、Gitee（碼雲）、Bitbucket</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単に言うと：</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gitは「変更をどう記録するか」を管理し、GitHubは「変更をどこに置き、どうコラボレーションするか」を管理します</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">。Gitはツールでローカル実行、GitHubはプラットフォームでGitリポジトリをクラウドに置き、コラボレーションと表示を容易にします。Gitだけを使ってGitHubを使わないこともできます（例えば自分でコードを書いてバージョン管理するだけ）が、GitHubを使うには必ずGitが必要です（GitHubはGitに基づいているため）。</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 三、GitHubの核心概念と機能<strong>📁 基礎概念</strong>作業を始める前に、いくつかの高頻度ワードを知っておきましょう。そうしないとGitHubのインターフェースを見ても混乱するだけです：
@@ -117,7 +117,7 @@ GitHub
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>ローカルで修正 → ステージ → コミット → プッシュ → クラウド更新
+ローカルで修正 → ステージ → コミット → プッシュ → クラウド更新
 
 {class="mt-1"}
 。各ステップを分かりやすく説明します：
@@ -181,7 +181,7 @@ GitHub Actionsを活用し、「コードをpushしたら、自動テスト＋�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>セキュリティに関する注意
+セキュリティに関する注意
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 非公開リポジトリも絶対に安全ではありません。機密情報は環境変数で管理し、コードリポジトリに入れないのが最善です。
@@ -191,7 +191,7 @@ GitHub Actionsを活用し、「コードをpushしたら、自動テスト＋�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>応用編：GitHub Pagesで無料個人ブログを構築
+応用編：GitHub Pagesで無料個人ブログを構築
 
 {class="mt-1"}
 GitHub Pagesを使えば無料で静的ウェブサイトをホスティングでき、Jekyll、Hexo、Hugoなどの静的サイトジェネレーターと組み合わせれば、個人ブログを簡単に構築できます。Markdown記事を書いてリポジトリにpushするだけでブログが自動更新され、HTTPSとカスタムドメインも標準装備です。無数の技術ブロガーのブログがこの方法で構築され、コストゼロ、広告なし。バージョン管理可能です。<strong>九、まとめ：なぜ誰もがGitHubを知るべきか</strong>GitHubはもはや「プログラマーのツール」ではなく、
@@ -199,7 +199,7 @@ GitHub Pagesを使えば無料で静的ウェブサイトをホスティング�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>デジタル時代の仕事方式
+デジタル時代の仕事方式
 
 {class="mt-1"}
 です：バージョン管理がすべてを追跡可能にし、コラボレーションメカニズムがチームを効率的に運営し、オープンソース精神が知識を自由に流通させます。コードを書かなくても、「コミット、ブランチ、マージ」という概念を理解すれば、「反復修正＋多人数コラボレーション」が必要なあらゆるコンテンツの管理に役立ちます，論文からドキュメント、ノートから企画書まで。
@@ -213,7 +213,7 @@ GitHub Pagesを使えば無料で静的ウェブサイトをホスティング�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>リポジトリに入り、README.mdの編集ボタン（鉛筆アイコン）をクリックし、Markdownで自己紹介を書いて変更をコミット。
+リポジトリに入り、README.mdの編集ボタン（鉛筆アイコン）をクリックし、Markdownで自己紹介を書いて変更をコミット。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. GitHubの検索バーで興味のあるキーワード（例：

@@ -39,12 +39,12 @@ kind: chapter
 ```
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val type: String,        // "income" έσοδο | "expense" έξοδο
-    val amount: Double,      // Ποσό (γιουάν)
-    val category: String,    // Κατηγορία: φαγητό, μετακινήσεις, μισθός……
-    val note: String = "",   // Σημείωση (προαιρετικό)
-    val date: String         // "2026-08-15"
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val type: String, // "income" έσοδο | "expense" έξοδο
+ val amount: Double, // Ποσό (γιουάν)
+ val category: String, // Κατηγορία: φαγητό, μετακινήσεις, μισθός……
+ val note: String = "", // Σημείωση (προαιρετικό)
+ val date: String // "2026-08-15"
 )
 ```
 :::
@@ -59,20 +59,20 @@ data class Record(
 ```
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
-    fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
+ @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+ fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
-    suspend fun monthIncome(month: String): Double   // month σε μορφή "2026-08"
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+ suspend fun monthIncome(month: String): Double // month σε μορφή "2026-08"
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
-    suspend fun monthExpense(month: String): Double
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+ suspend fun monthExpense(month: String): Double
 }
 ```
 :::
@@ -91,7 +91,7 @@ interface RecordDao {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View (οθόνη Compose)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel (κατάσταση και λογική)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model (στρώμα δεδομένων Room)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View (οθόνη Compose)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel (κατάσταση και λογική)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model (στρώμα δεδομένων Room)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -106,21 +106,21 @@ interface RecordDao {
 ```
 class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 
-    // Μετατροπή Flow σε κατάσταση παρατηρήσιμη από την οθόνη
-    val records = dao.getAll()
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+ // Μετατροπή Flow σε κατάσταση παρατηρήσιμη από την οθόνη
+ val records = dao.getAll()
+ .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    // Ενέργεια χρήστη: κλήση συνάρτησης suspend
-    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
-        viewModelScope.launch {
-            dao.insert(Record(type = type, amount = amount,
-                category = category, note = note, date = date))
-        }
-    }
+ // Ενέργεια χρήστη: κλήση συνάρτησης suspend
+ fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+ viewModelScope.launch {
+ dao.insert(Record(type = type, amount = amount,
+ category = category, note = note, date = date))
+ }
+ }
 
-    fun deleteRecord(record: Record) {
-        viewModelScope.launch { dao.delete(record) }
-    }
+ fun deleteRecord(record: Record) {
+ viewModelScope.launch { dao.delete(record) }
+ }
 }
 ```
 :::
@@ -139,34 +139,34 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 @Composable
 fun RecordListScreen(vm: RecordViewModel) {
-    val records by vm.records.collectAsState()
+ val records by vm.records.collectAsState()
 
-    Column {
-        // Κάρτα σύνοψης πάνω (έσοδα-έξοδα=υπόλοιπο)
-        SummaryCard(records)
+ Column {
+ // Κάρτα σύνοψης πάνω (έσοδα-έξοδα=υπόλοιπο)
+ SummaryCard(records)
 
-        // Λίστα κινήσεων
-        LazyColumn {
-            items(records, key = { it.id }) { record -&gt;
-                RecordRow(record) { vm.deleteRecord(record) }
-            }
-        }
+ // Λίστα κινήσεων
+ LazyColumn {
+ items(records, key = { it.id }) { record -&gt;
+ RecordRow(record) { vm.deleteRecord(record) }
+ }
+ }
 
-        // Πλωτό κουμπί "Καταγραφή" → διάλογος εισαγωγής
-        FloatingActionButton(onClick = { showAddDialog = true }) {
-            Text("+")
-        }
-    }
+ // Πλωτό κουμπί "Καταγραφή" → διάλογος εισαγωγής
+ FloatingActionButton(onClick = { showAddDialog = true }) {
+ Text("+")
+ }
+ }
 }
 
 @Composable
 fun RecordRow(record: Record, onDelete: () -&gt; Unit) {
-    Row(Modifier.fillMaxWidth().padding(12.dp)) {
-        Text(record.category, fontWeight = FontWeight.Bold)
-        Spacer(Modifier.weight(1f))
-        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
-             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
-    }
+ Row(Modifier.fillMaxWidth().padding(12.dp)) {
+ Text(record.category, fontWeight = FontWeight.Bold)
+ Spacer(Modifier.weight(1f))
+ Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+ color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+ }
 }
 ```
 :::

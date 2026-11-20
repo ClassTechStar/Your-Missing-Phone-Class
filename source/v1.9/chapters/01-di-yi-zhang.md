@@ -177,7 +177,7 @@ NPU（Neural Processing Unit）是专门为神经网络运算设计的处理器�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 ALU 是"按指令算一次"的通用部件；FPU 专管浮点，向量单元把很多个 ALU 排成一排听同一条指令，MAC 阵列则干脆把运算固定成乘加、铺成一整片。以后听到"某芯片有几千个 ALU"，先问一句：说的是真 ALU，还是把向量 lane 和 MAC 也算进去了？
@@ -218,7 +218,7 @@ ALU 是"按指令算一次"的通用部件；FPU 专管浮点，向量单元把�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>别把 NPU 说成"一堆 ALU"
+别把 NPU 说成"一堆 ALU"
 
 {class="mt-1"}
 ALU 是"一条指令来，做一次通用运算"；MAC 阵列是"一份数据流进来，整片阵列同时把乘加做完"。NPU 有 ALU，但那是配角。把两者画等号，就会误以为 NPU 只是"ALU 更多的 CPU"，也就解释不了为什么它跑矩阵快、跑个带一大堆分支的普通程序反而慢。
@@ -365,7 +365,7 @@ HDR（High Dynamic Range）让屏幕同时展现更亮的亮部和更暗的暗�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 背照式解决的是"光进得来吗"，堆栈式解决的是"数读得出来吗"。前者主要帮画质，后者主要帮速度。把堆栈式当成"画质升级"是常见的误读，后面讲误区时还会再说一次。
@@ -542,7 +542,7 @@ HDR（High Dynamic Range）让屏幕同时展现更亮的亮部和更暗的暗�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 应用交的是"意图"。驱动交的是"命令"，硬件要的是"此刻能跑的活"。中间那些信号量、fence 和屏障，就是把"意图"安全地变成"结果"的红绿灯。异步快，是因为排队和等信号不占着 CPU 死等，不是因为可以不管顺序。
@@ -908,7 +908,7 @@ BP 的活分两类。一类是<strong>把数据搬过无线信道</strong>：发
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>实操一下：了解硬件配置
+实操一下：了解硬件配置
 
 {class="mt-1"}
 在 [设置] 里，看看能不能找到处理器型号、运行内存（RAM）和机身存储（ROM）的具体大小。对你手机的能力有个数。安卓用户可以下载"安兔兔"或"DevCheck"查看详细硬件信息。

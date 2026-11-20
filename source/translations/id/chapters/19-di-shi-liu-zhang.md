@@ -44,7 +44,7 @@ Bersihkan
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: Tiga Paket Privasi yang Hanya untuk Pengguna Berbayar
+iCloud+: Tiga Paket Privasi yang Hanya untuk Pengguna Berbayar
 
 {class="mt-1"}
 Selama upgrade ke tier berbayar iCloud mana pun (50GB/200GB/2TB, dll.), otomatis menjadi <strong>iCloud+</strong> pengguna, membuka tiga fitur perlindungan privasi:
@@ -60,7 +60,7 @@ Catatan: Private Relay tidak tersedia di beberapa negara/wilayah, pengguna domes
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud Advanced Data Protection (ADP) — Enkripsi End-to-End Sejati
+iCloud Advanced Data Protection (ADP) — Enkripsi End-to-End Sejati
 
 {class="mt-1"}
 Akhir 2022 Apple meluncurkan <strong>iCloud Advanced Data Protection (ADP)</strong>, memperluas enkripsi end-to-end (E2EE) dari data sedikit seperti kesehatan dan password sebelumnya, ke <strong>mayoritas data iCloud</strong>— foto, notes, iCloud backup, info perangkat, dll. total 23 kategori data.
@@ -99,7 +99,7 @@ Konsekuensi akun diretas lebih serius dari yang Anda bayangkan
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Jika peretas mendapatkan kata sandi akun Anda, mereka dapat: mengunci ponsel Anda dari jarak jauh dan meminta tebusan, melihat foto dan kontak Anda, menggunakan metode pembayaran Anda untuk membeli barang. Lebih bermasalah lagi, jika akun Anda terikat terlalu banyak hal, mendapatkan kembali akun itu sendiri adalah mimpi buruk. Jadi, autentikasi dua faktor, aktifkan sekarang juga.
+Jika peretas mendapatkan kata sandi akun Anda, mereka dapat: mengunci ponsel Anda dari jarak jauh dan meminta tebusan, melihat foto dan kontak Anda, menggunakan metode pembayaran Anda untuk membeli barang. Lebih bermasalah lagi, jika akun Anda terikat terlalu banyak hal, mendapatkan kembali akun itu sendiri adalah mimpi buruk. Jadi, autentikasi dua faktor, aktifkan sekarang juga.
 
 {class="mt-1"}
 Praktik: Lakukan pemeriksaan menyeluruh pada akun Anda
@@ -107,7 +107,7 @@ Praktik: Lakukan pemeriksaan menyeluruh pada akun Anda
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Buka pengaturan ponsel, masuk ke halaman akun, konfirmasikan autentikasi dua faktor sudah aktif.
+Buka pengaturan ponsel, masuk ke halaman akun, konfirmasikan autentikasi dua faktor sudah aktif.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Periksa apakah "nomor telepon tepercaya" dan "kunci pemulihan" sudah diatur, catat kunci di kertas.

@@ -22,7 +22,7 @@ Technology changes, but human needs don't: we need security, connection, and res
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>One Last Exercise
+One Last Exercise
 
 {class="mt-1"}
 Close this book, pick up your phone, and do one thing:<strong>Take 30 seconds to think: what three things in your phone would you "truly regret losing"?</strong> Then, make sure they're backed up. This book was worth it.

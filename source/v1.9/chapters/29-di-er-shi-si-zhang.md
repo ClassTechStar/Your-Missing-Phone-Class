@@ -126,41 +126,41 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心作用</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">锁定状态（默认）</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解锁后状态</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统安全</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防止刷入未签名的非官方系统，保护系统完整性与底层安全<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高安全：仅加载官方签名镜像，有效抵御恶意固件篡改</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 安全降低：允许刷入第三方 ROM，系统完整性校验机制失效，恶意软件若获取 Root 权限可深度篡改系统</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统稳定性</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保手机运行经过厂商测试和优化的官方系统，保障稳定流畅<br><span class="text-emerald-600 dark:text-emerald-400">✅ 稳定：使用官方固件，功能完整，OTA 升级可靠</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 风险增加：第三方 ROM 可能存在兼容性问题，可能导致系统崩溃、变砖、硬件功能异常（如摄像头、快充），OTA 更新可能失败</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保修权益</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厂商通过锁定 BL 提供稳定的官方系统，以提供保修服务<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保修有效：享受官方免费保修服务（非人为损坏）</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保修失效：绝大多数厂商将解锁 BL 视为主动放弃保修的行为，即使重新上锁，也可能被检测出历史解锁记录而拒保</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">数据安全</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁过程通常强制清除数据，防止旧数据在新系统环境下被恶意利用<br><span class="text-emerald-600 dark:text-emerald-400">✅ 数据安全：日常使用中，BL 锁限制了恶意程序对系统分区的修改能力</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 数据风险：解锁时会强制清除所有用户数据；若解锁后未正确加密，数据存储可能不安全；丢失后更易被刷机提取数据</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">功能限制</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保依赖安全环境的功能（如支付、银行 App）正常运行<br><span class="text-emerald-600 dark:text-emerald-400">✅ 功能完整：所有官方功能均可正常使用</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 功能受限：部分安全敏感应用（如 Google Pay、银行 App）可能因检测到 BL 解锁状态而拒绝运行；DRM 服务可能降级，影响高清视频播放</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心作用</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">锁定状态（默认）</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解锁后状态</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统安全</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防止刷入未签名的非官方系统，保护系统完整性与底层安全<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高安全：仅加载官方签名镜像，有效抵御恶意固件篡改</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 安全降低：允许刷入第三方 ROM，系统完整性校验机制失效，恶意软件若获取 Root 权限可深度篡改系统</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统稳定性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保手机运行经过厂商测试和优化的官方系统，保障稳定流畅<br><span class="text-emerald-600 dark:text-emerald-400">✅ 稳定：使用官方固件，功能完整，OTA 升级可靠</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 风险增加：第三方 ROM 可能存在兼容性问题，可能导致系统崩溃、变砖、硬件功能异常（如摄像头、快充），OTA 更新可能失败</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保修权益</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厂商通过锁定 BL 提供稳定的官方系统，以提供保修服务<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保修有效：享受官方免费保修服务（非人为损坏）</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保修失效：绝大多数厂商将解锁 BL 视为主动放弃保修的行为，即使重新上锁，也可能被检测出历史解锁记录而拒保</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">数据安全</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁过程通常强制清除数据，防止旧数据在新系统环境下被恶意利用<br><span class="text-emerald-600 dark:text-emerald-400">✅ 数据安全：日常使用中，BL 锁限制了恶意程序对系统分区的修改能力</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 数据风险：解锁时会强制清除所有用户数据；若解锁后未正确加密，数据存储可能不安全；丢失后更易被刷机提取数据</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">功能限制</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保依赖安全环境的功能（如支付、银行 App）正常运行<br><span class="text-emerald-600 dark:text-emerald-400">✅ 功能完整：所有官方功能均可正常使用</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 功能受限：部分安全敏感应用（如 Google Pay、银行 App）可能因检测到 BL 解锁状态而拒绝运行；DRM 服务可能降级，影响高清视频播放</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 解锁BL本身不会让手机变快、变省电、信号变好。它只是把"你能不能动系统"这张许可证发给你——至于拿证之后做什么、值不值，取决于你后面要做的事。
@@ -261,7 +261,7 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 解锁当天准备一张纸或者一个备忘录：记录你用的工具版本、每一步的屏幕提示、报错信息。将来万一要救砖、要回原厂、要问社区，这些记录比你的记忆可靠得多。
@@ -346,7 +346,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 今天只做侦察不动手：找到你机型的社区版块，抄下三个信息，机型代号、社区主流Root路线、最近一次"翻车后成功救回"的帖子链接。把这三样存进备忘录，做完这一步，你对"我该不该继续"就有一半答案了。
@@ -453,7 +453,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>三思而后行
+三思而后行
 
 {class="mt-1"}
 三星的 Knox 熔断是<strong>不可逆</strong>的，一旦触发就回不去原厂状态。如果你只是想用一些原本需要 Root 的功能，建议先查查有没有不需要 Root 的替代方案——很多原本要Root才能做的事，现在用系统自带的自动化、开发者选项、ADB授权（见第二十章）或Termux（见第二十章附）就能做到，不必动引导加载程序。
@@ -461,7 +461,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>重要警告
+重要警告
 
 {class="mt-1"}
 刷机有风险，操作需谨慎。可能导致：
@@ -478,7 +478,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 动手前问一句：我要的这个功能，值不值得让支付、银行和保修一起承担风险？
@@ -486,7 +486,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>推荐资源
+推荐资源
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>：全球最大的安卓开发者社区，有丰富的刷机教程和ROM资源。
@@ -498,7 +498,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1：解锁BL锁后还能恢复吗？
+Q1：解锁BL锁后还能恢复吗？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>可以重新上锁。通常需要刷入官方完整的线刷包，并使用特定的刷机脚本（如小米的 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>）即可重新上锁。但注意，重新上锁后，因解锁而触发的一些安全熔断（如三星的Knox）可能无法逆转。
@@ -506,7 +506,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2：解锁后如何Root？
+Q2：解锁后如何Root？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>解锁BL锁只是第一步。Root通常需要：
@@ -518,7 +518,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q3：Root了手机会更容易中毒吗？
+Q3：Root了手机会更容易中毒吗？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>权限本身不产生病毒，但它改变了"出事之后的破坏半径"：普通App出错，影响的是自己那点地盘；拿到Root授权的恶意程序，碰的是整个系统。所以问题不是"会不会中毒"，而是"授权纪律好不好"。管好授权弹窗与应用来源，风险可控；见弹窗就允许，Root就是放大器。
@@ -526,7 +526,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q4：解锁BL后银行App闪退，还有救吗？
+Q4：解锁BL后银行App闪退，还有救吗？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>先把DenyList和"隐藏Magisk应用"都配置好，一部分App这样就够用了。还在闹的，要看它是不是强完整性级别的检测——那一级要求硬件密钥背书，软件伪装基本无解（SafetyNet已于2025年初关停，现在是Play Integrity的时代）。务实的选择只有两个：留一台锁定状态的设备专门处理支付与银行，或者接受这台设备不装那类App。
@@ -534,7 +534,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q5：Root、解锁BL、刷机，到底是不是一回事？
+Q5：Root、解锁BL、刷机，到底是不是一回事？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>不是。第三节专门辨析过：解锁BL是拿"改装资格"，Root是改装后到手的"最高权限"，刷机是整套更换系统。三件事各有各的代价，别把一份需求做成了三份手术。
@@ -542,7 +542,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q6：解锁要清空数据，我把东西都传云盘行不行？
+Q6：解锁要清空数据，我把东西都传云盘行不行？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>云盘解决的是"文件"，解决不了"应用与状态"：聊天记录、App登录态、游戏进度，多数不在普通云盘里。正确姿势是组合拳：文件上云盘；聊天记录走各自的官方迁移工具；应用与数据用换机克隆或Root备份工具（见后面场景三）。
@@ -550,7 +550,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q7：手机变砖了怎么办？"砖"分几种？
+Q7：手机变砖了怎么办？"砖"分几种？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>分两种。软砖：开不了机，但能进fastboot、Recovery或下载模式——用官方线刷包整包救回，绝大多数都有救。硬砖：连下载模式都进不去、电脑完全不识别——这基本超出普通用户的能力范围，走售后。降低变砖概率的老三样：电量充足、镜像版本匹配、教程与机型对应。
@@ -558,7 +558,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q8：Magisk更新了要跟着动吗？模块失灵怎么办？
+Q8：Magisk更新了要跟着动吗？模块失灵怎么办？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>Magisk本体的常规更新，App内点一下就行，一般不需要重新修补镜像（涉及大版本变化时，按它的官方说明来）。模块失灵先查兼容性——系统大版本更新之后最容易出问题。处理顺序：停用模块，确认系统本身正常，再找替代或等作者更新。别在系统刚更新完、模块还没适配的时间窗口里硬折腾。
@@ -566,7 +566,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q9：Root之后，系统OTA更新还能正常收吗？
+Q9：Root之后，系统OTA更新还能正常收吗？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>大多数情况会变复杂：Root环境可能拦住OTA，装完更新Root还可能失效。常见路径是：卸载模块，在Magisk里还原boot，装OTA，再用新系统的boot镜像重新修补刷回（不同方案细节不同，以Magisk官方文档为准）。嫌麻烦的人，这一条本身就是最实的劝退理由。
@@ -574,7 +574,7 @@ KernelSU走得更底层：把Root能力做进内核。对普通用户的差别�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q10：解锁或Root，影响卖二手吗？
+Q10：解锁或Root，影响卖二手吗？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>影响。验机时解锁状态是常规检查项，解锁过的机器普遍要压价，三星的Knox熔断更是明牌。打算出手的，出手前怎么处理、怎么如实描述，第二十五章会讲出售前怎么处理。
@@ -642,14 +642,14 @@ iOS的世界里没有公开的BL解锁机制。你找不到那个开关，这是
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你的需求</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Root的玩法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">免Root的替代</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载预装App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root卸载器连根拔</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ADB卸载（见第二十章），覆盖大部分目标</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全局屏蔽广告</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root改系统hosts</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地VPN类过滤App、DNS过滤</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">冻结流氓后台</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root冻结工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ADB冻结或系统自带的后台管控</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完整备份应用数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root备份工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厂商换机克隆、各App官方迁移</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高级自动化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tasker的Root动作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tasker加ADB授权（见第二十章）</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你的需求</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Root的玩法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">免Root的替代</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载预装App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root卸载器连根拔</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ADB卸载（见第二十章），覆盖大部分目标</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全局屏蔽广告</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root改系统hosts</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地VPN类过滤App、DNS过滤</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">冻结流氓后台</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root冻结工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ADB冻结或系统自带的后台管控</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完整备份应用数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root备份工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厂商换机克隆、各App官方迁移</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高级自动化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tasker的Root动作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tasker加ADB授权（见第二十章）</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -665,7 +665,7 @@ iOS的世界里没有公开的BL解锁机制。你找不到那个开关，这是
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 动手前把你的头号理由写在备忘录第一行，再设一个一周后的提醒。一周后回看那行字：还想做，就是真需求；不想做了，这一周帮你省下的，是一整台手机的折腾成本。
@@ -718,7 +718,7 @@ Root之后，你的安全责任是实打实升级的。授权弹窗就是家门�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 最危险的心态是"我Root了，所以什么都能装"。恰好相反：你放弃了系统的默认保护，装任何东西之前都要多问一句"我信得过它吗"。拿不准的，先放到没有Root的设备上试，别拿有Root的主力机当小白鼠。
@@ -750,12 +750,12 @@ Root之后，你的安全责任是实打实升级的。授权弹窗就是家门�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ROM</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">风格取向</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">自定义程度</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">LineageOS</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近原生，克制</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">适中，选项够用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想要"接近原生加稳定"的人</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">crDroid</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生底子加大自定义</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">喜欢调细节的玩家</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Evolution X</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pixel风体验</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">喜欢Pixel观感的人</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ROM</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">风格取向</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">自定义程度</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">LineageOS</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近原生，克制</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">适中，选项够用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想要"接近原生加稳定"的人</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">crDroid</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生底子加大自定义</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">喜欢调细节的玩家</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Evolution X</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pixel风体验</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">喜欢Pixel观感的人</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -971,7 +971,7 @@ Root不是一次性工程，而是长期关系。每月花二十分钟做一轮�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 给你留个周末作业：挑一台你敢折腾的设备（最好是退役机），完成三件事，空手进一次fastboot再正常退出；空手进一次Recovery再正常退出；把本章的"准备清单"抄成你自己的版本，补上你的账号、机型代号与备份位置。做完这三件事，你就完成了从"读者"到"准玩家"的过渡：后面的每一步，都会比你想象中稳。
@@ -984,18 +984,18 @@ Root不是一次性工程，而是长期关系。每月花二十分钟做一轮�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">症状</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">可能的原因</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一动作</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁工具识别不到设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多半是数据线、接口或驱动的问题，不是手机坏了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换一根靠谱的数据线、换一个USB口、重装官方驱动，再重连一次</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷入补丁后Root没生效</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">boot镜像与当前系统版本不匹配</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核对系统版本号，重新提取与版本一致的镜像，修补后再刷入</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开机卡在开机画面很久</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新系统首次启动在重建数据，属正常现象</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">再等几分钟到十几分钟，不要长按电源强制重启</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装完模块开不了机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模块冲突、不兼容或模块本身有问题</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开机时按住音量下进安全模式，进去删掉新装的模块</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">银行或支付App突然罢工</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">环境变化触发了完整性检测</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">检查DenyList与隐藏配置；若是硬件级强检测，接受现实别硬刚</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卡在开机画面反复重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷入的内容与机型或分区不匹配</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进fastboot，用官方线刷包整包救回</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OTA更新失败或入口消失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root环境拦住了更新</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">走"还原boot、更新、重新修补"的流程，参照进阶一节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电脑完全不识别设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可能是硬砖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">联系官方售后，别自行拆解，也别反复通电试机</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NFC、指纹等功能突然异常</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模块或精简操作误伤了系统组件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">回想最近动过什么，解冻、停用或回滚对应的改动</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">症状</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">可能的原因</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一动作</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁工具识别不到设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多半是数据线、接口或驱动的问题，不是手机坏了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换一根靠谱的数据线、换一个USB口、重装官方驱动，再重连一次</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷入补丁后Root没生效</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">boot镜像与当前系统版本不匹配</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核对系统版本号，重新提取与版本一致的镜像，修补后再刷入</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开机卡在开机画面很久</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新系统首次启动在重建数据，属正常现象</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">再等几分钟到十几分钟，不要长按电源强制重启</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装完模块开不了机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模块冲突、不兼容或模块本身有问题</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开机时按住音量下进安全模式，进去删掉新装的模块</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">银行或支付App突然罢工</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">环境变化触发了完整性检测</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">检查DenyList与隐藏配置；若是硬件级强检测，接受现实别硬刚</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卡在开机画面反复重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷入的内容与机型或分区不匹配</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进fastboot，用官方线刷包整包救回</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OTA更新失败或入口消失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root环境拦住了更新</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">走"还原boot、更新、重新修补"的流程，参照进阶一节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电脑完全不识别设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可能是硬砖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">联系官方售后，别自行拆解，也别反复通电试机</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NFC、指纹等功能突然异常</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模块或精简操作误伤了系统组件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">回想最近动过什么，解冻、停用或回滚对应的改动</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1034,7 +1034,7 @@ Root不是一次性工程，而是长期关系。每月花二十分钟做一轮�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 收藏本章的正确姿势：把三张表格（锁定与解锁对比、免Root替代、故障速查）单独截图存进相册的"工具"文件夹，把"准备清单"和"一页纸"抄进备忘录。下次无论是自己动手还是帮朋友参谋，打开相册就能用：这一章的价值，本来就该在动手的那一刻兑现。
@@ -1042,7 +1042,7 @@ Root不是一次性工程，而是长期关系。每月花二十分钟做一轮�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 折腾一圈，你真正买到的是"选择权"，知道每条路的代价之后，还能安心用回原厂状态的人，才是这条路上走得最远的人。

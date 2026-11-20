@@ -25,7 +25,7 @@ after_part: fu-lu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>2. למי מתאים לקנות טלפון מתקפל?
+2. למי מתאים לקנות טלפון מתקפל?
 
 {class="mt-1"}
 על סמך משוב משתמשים אמיתי, הסבירות שאנשים מהסוגים הבאים יאהבו טלפון מתקפל גבוהה:
@@ -42,7 +42,7 @@ after_part: fu-lu
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>מי שיש לו ידיים קטנות או דלקת גידים בפרק כף היד — טלפון מתקפל אופקי שוקל בדרך כלל 230 גרם ויותר, קשה להחזיק ביד אחת.
+מי שיש לו ידיים קטנות או דלקת גידים בפרק כף היד — טלפון מתקפל אופקי שוקל בדרך כלל 230 גרם ויותר, קשה להחזיק ביד אחת.
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - מי שתקציבו מוגבל וצריך טלפון ל-4 שנים ויותר — ערך המכירה החוזרת של טלפון מתקפל נמוך משל טלפון רגיל, ועלות התיקון גבוהה
@@ -63,7 +63,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>לאחר הפתיחה, הסתכל על הקמט מול אור אלכסוני, ואז מלפנים כשהמסך דולק.
+לאחר הפתיחה, הסתכל על הקמט מול אור אלכסוני, ואז מלפנים כשהמסך דולק.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. החזק ביד אחת את הטלפון הפתוח למשך 30 שניות, הרגש אם המשקל נסבל.
@@ -112,7 +112,7 @@ after_part: fu-lu
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>בתיק עם מפתחות — המסך החיצוני בסדר, אבל המסך הפנימי נסדק מהמפתחות.
+בתיק עם מפתחות — המסך החיצוני בסדר, אבל המסך הפנימי נסדק מהמפתחות.
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - בחורף, מעבר מקור לחדר חם ופתיחה מיידית, הפרש טמפרטורות גורם לשינוי במתח הזכוכית.
@@ -134,7 +134,7 @@ after_part: fu-lu
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>7. איך לבחור בין המותגים המובילים (2025)
+7. איך לבחור בין המותגים המובילים (2025)
 
 {class="text-right text-sm"}
 בלי דגמים ספציפיים (שמתיישנים), רק אופי המותג, כדי לעזור לך להתמקד במהירות:
@@ -155,7 +155,7 @@ after_part: fu-lu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>תזכורת אחרונה
+תזכורת אחרונה
 
 {class="mt-1"}
 2026\. בדוק: ציר/קמט/תיקון. נסה.

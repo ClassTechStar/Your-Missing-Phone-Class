@@ -61,7 +61,7 @@ Telefon sekarang asasnya telah menggantikan MP3, alat kawalan jauh TV, Kindle da
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Dalam WeChat Reading cari satu buku yang mahu baca, tetapkan latar belakang warna hangat dan mod mata jaga, laraskan font ke saiz yang sesuai untuk anda.
+Dalam WeChat Reading cari satu buku yang mahu baca, tetapkan latar belakang warna hangat dan mod mata jaga, laraskan font ke saiz yang sesuai untuk anda.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Jika anda main permainan, buka mod permainan tengok ada tetapan apa yang boleh dioptimumkan (gangguan, keutamaan kadar bingkai dll.)

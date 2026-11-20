@@ -45,41 +45,41 @@ Pour mieux comprendre les avantages et les inconvénients du verrouillage BL, no
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Rôle principal</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">État verrouillé (par défaut)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">État après déverrouillage</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sécurité du système</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Empêche le flash de systèmes non officiels non signés, protège l'intégrité du système et la sécurité de bas niveau<br><span class="text-emerald-600 dark:text-emerald-400">✅ Sécurité élevée : charge uniquement les images signées officielles, protège efficacement contre la modification malveillante du firmware</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Sécurité réduite : permet de flasher des ROM tierces, le mécanisme de vérification d'intégrité du système est désactivé, un logiciel malveillant obtenant les permissions Root peut modifier le système en profondeur</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Stabilité du système</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantit que le smartphone exécute le système officiel testé et optimisé par le fabricant, assurant stabilité et fluidité<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stable : utilise le firmware officiel, fonctionnalités complètes, mises à jour OTA fiables</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risque accru : les ROM tierces peuvent présenter des problèmes de compatibilité, pouvant provoquer des crashs système, un brickage, des dysfonctionnements matériels (par exemple caméra, charge rapide), et des échecs de mise à jour OTA</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Droits de garantie</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le fabricant verrouille le BL pour fournir un système officiel stable, afin d'offrir le service de garantie<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garantie valide : bénéficie du service de garantie gratuit officiel (hors dommages intentionnels)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garantie invalide : la grande majorité des fabricants considèrent le déverrouillage du BL comme une renonciation volontaire à la garantie, même en cas de reverrouillage, l'historique de déverrouillage peut être détecté et la garantie refusée</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sécurité des données</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le processus de déverrouillage efface généralement les données de force, pour empêcher que les anciennes données soient exploitées malveillamment dans le nouvel environnement système<br><span class="text-emerald-600 dark:text-emerald-400">✅ Données sécurisées : en usage quotidien, le verrouillage BL limite la capacité des programmes malveillants à modifier la partition système</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risque pour les données : le déverrouillage efforce l'effacement de toutes les données utilisateur ; si le chiffrement n'est pas correctement configuré après le déverrouillage, le stockage des données peut être non sécurisé ; en cas de perte, les données sont plus facilement extractibles par flash</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Restrictions fonctionnelles</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantit le fonctionnement normal des fonctions dépendant d'un environnement sécurisé (par exemple paiement, applications bancaires)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Fonctions complètes : toutes les fonctions officielles peuvent être utilisées normalement</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Fonctions limitées : certaines applications sensibles à la sécurité (par exemple Google Pay, applications bancaires) peuvent refuser de fonctionner en détectant l'état de déverrouillage du BL ; les services DRM peuvent être dégradés, affectant la lecture vidéo HD</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Rôle principal</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">État verrouillé (par défaut)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">État après déverrouillage</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sécurité du système</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Empêche le flash de systèmes non officiels non signés, protège l'intégrité du système et la sécurité de bas niveau<br><span class="text-emerald-600 dark:text-emerald-400">✅ Sécurité élevée : charge uniquement les images signées officielles, protège efficacement contre la modification malveillante du firmware</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Sécurité réduite : permet de flasher des ROM tierces, le mécanisme de vérification d'intégrité du système est désactivé, un logiciel malveillant obtenant les permissions Root peut modifier le système en profondeur</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Stabilité du système</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantit que le smartphone exécute le système officiel testé et optimisé par le fabricant, assurant stabilité et fluidité<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stable : utilise le firmware officiel, fonctionnalités complètes, mises à jour OTA fiables</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risque accru : les ROM tierces peuvent présenter des problèmes de compatibilité, pouvant provoquer des crashs système, un brickage, des dysfonctionnements matériels (par exemple caméra, charge rapide), et des échecs de mise à jour OTA</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Droits de garantie</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le fabricant verrouille le BL pour fournir un système officiel stable, afin d'offrir le service de garantie<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garantie valide : bénéficie du service de garantie gratuit officiel (hors dommages intentionnels)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garantie invalide : la grande majorité des fabricants considèrent le déverrouillage du BL comme une renonciation volontaire à la garantie, même en cas de reverrouillage, l'historique de déverrouillage peut être détecté et la garantie refusée</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sécurité des données</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le processus de déverrouillage efface généralement les données de force, pour empêcher que les anciennes données soient exploitées malveillamment dans le nouvel environnement système<br><span class="text-emerald-600 dark:text-emerald-400">✅ Données sécurisées : en usage quotidien, le verrouillage BL limite la capacité des programmes malveillants à modifier la partition système</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risque pour les données : le déverrouillage efforce l'effacement de toutes les données utilisateur ; si le chiffrement n'est pas correctement configuré après le déverrouillage, le stockage des données peut être non sécurisé ; en cas de perte, les données sont plus facilement extractibles par flash</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Restrictions fonctionnelles</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantit le fonctionnement normal des fonctions dépendant d'un environnement sécurisé (par exemple paiement, applications bancaires)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Fonctions complètes : toutes les fonctions officielles peuvent être utilisées normalement</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Fonctions limitées : certaines applications sensibles à la sécurité (par exemple Google Pay, applications bancaires) peuvent refuser de fonctionner en détectant l'état de déverrouillage du BL ; les services DRM peuvent être dégradés, affectant la lecture vidéo HD</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ Contrairement aux autres fabricants Android, le mécanisme de déverrouillage du
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Réfléchissez à deux fois avant d'agir
+Réfléchissez à deux fois avant d'agir
 
 {class="mt-1"}
 La fusion Knox de Samsung est <strong>irréversible</strong>, une fois déclenchée, il est impossible de revenir à l'état d'usine. Si vous souhaitez simplement utiliser certaines fonctions nécessitant normalement le Root, il est recommandé de vérifier d'abord s'il existe des alternatives ne nécessitant pas de Root.
@@ -123,7 +123,7 @@ La fusion Knox de Samsung est <strong>irréversible</strong>, une fois déclench
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Avertissement important
+Avertissement important
 
 {class="mt-1"}
 Le flashage comporte des risques, procédez avec prudence. Cela peut entraîner :
@@ -140,7 +140,7 @@ Avant le flashage, faites impérativement une sauvegarde complète, lisez attent
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Ressources recommandées
+Ressources recommandées
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>:La plus grande communauté de développeurs Android au monde, riche en tutoriels de flashage et ressources de ROM.
@@ -152,7 +152,7 @@ Avant le flashage, faites impérativement une sauvegarde complète, lisez attent
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1 : Peut-on revenir en arrière après avoir déverrouillé le BL ?
+Q1 : Peut-on revenir en arrière après avoir déverrouillé le BL ?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Oui, il est possible de reverrouiller. Il faut généralement flasher le package complet de flash filaire officiel et utiliser un script de flash spécifique (par exemple, celui de Xiaomi <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>) pour reverrouiller. Mais notez que même après reverrouillage, certaines sécurités déclenchées par le déverrouillage (telles que le Knox de Samsung) peuvent être irréversibles.
@@ -160,7 +160,7 @@ Avant le flashage, faites impérativement une sauvegarde complète, lisez attent
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2 : Comment rooter après le déverrouillage ?
+Q2 : Comment rooter après le déverrouillage ?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Le déverrouillage du BL n'est que la première étape. Le Root nécessite généralement :

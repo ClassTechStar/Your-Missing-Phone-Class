@@ -87,7 +87,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>萬能第一招：重啓手機
+萬能第一招：重啓手機
 
 {class="mt-1"}
 萬能第一招：重啓手機
@@ -95,7 +95,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>今即記之：此等救命之操作當爛熟於心
+今即記之：此等救命之操作當爛熟於心
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>強制重啓</strong>：全面屏iPhone按音量加 → 音量減 → 長按電源鍵至現Logo。安卓長按電源鍵10-15秒直至震動。

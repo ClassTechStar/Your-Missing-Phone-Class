@@ -64,7 +64,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Запомните эти правила — защитите себя от мошенников
+Запомните эти правила — защитите себя от мошенников
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Правоохранительные органы, банки и службы поддержки никогда не попросят вас перевести деньги на «безопасный счёт».
@@ -75,7 +75,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Сделайте прямо сейчас: проверка безопасности ваших платёжных приложений
+Сделайте прямо сейчас: проверка безопасности ваших платёжных приложений
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Откройте Alipay и WeChat, убедитесь, что включена оплата по отпечатку/лицу.

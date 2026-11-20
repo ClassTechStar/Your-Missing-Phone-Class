@@ -44,8 +44,8 @@ Alipay와 위챗의 "결제 설정"에서 "비밀번호 없는 결제/자동 차
 최초 1회는 안면 인식 검증이 필요하며, 이후 사용 시마다 동적 코드 생성.
 </li> <li><strong>사회보험 조회</strong>: "장상12333" 앱을 다운로드하거나 Alipay의 "시민 센터"를 사용하여 사회보험 납부 기록, 연금 계좌 잔액, 실업급여 신청 등을 조회할 수 있습니다.
 </li> <li><strong>소득세</strong>: 매년 3~6월 소득세 종합 정산은 "개인 소득세" 앱으로 해결할 수 있습니다. 신고 가능한 특별 추가 공제(자녀 교육, 주택담보대출 이자, 부양 노인 등)를 꼭 확인하시기 바랍니다.
-이러한 공제를 통해 세금을 적게 내거나 환급받을 수 있습니다.</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>이 몇 가지 사항을 기억하여 사기 방지</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>공안/검찰/법원, 은행, 고객 서비스는 "안전 계좌"로 이체하라고 요구하지 않습니다.
+이러한 공제를 통해 세금을 적게 내거나 환급받을 수 있습니다.</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold">이 몇 가지 사항을 기억하여 사기 방지</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>공안/검찰/법원, 은행, 고객 서비스는 "안전 계좌"로 이체하라고 요구하지 않습니다.
 </li> <li>결제 코드 캡처본을 보내달라는 사람은 모두 사기꾼입니다.</li> <li>낯선 링크는 클릭하지 마세요. 특히 "ETC 만료", "사회보험 카드 정지"와 같은 SMS는 주의하세요.
-</li> <li>온라인 쇼핑 환불은 원래 경로로 반환되며, 은행 카드 번호를 제공할 필요가 없습니다.</li> </ul> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>지금 해보기: 결제 앱 보안 점검</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>Alipay와 위챗을 열어 지문/얼굴 결제가 활성화되어 있는지 확인.
+</li> <li>온라인 쇼핑 환불은 원래 경로로 반환되며, 은행 카드 번호를 제공할 필요가 없습니다.</li> </ul> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold">지금 해보기: 결제 앱 보안 점검</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>Alipay와 위챗을 열어 지문/얼굴 결제가 활성화되어 있는지 확인.
 </li> <li>"보안 잠금" 기능을 찾아 활성화.</li> <li>"비밀번호 없는 결제/자동 차감" 목록을 확인하고, 더 이상 필요하지 않은 서비스 해지.</li> <li>"로그인 기기" 목록을 확인하고, 모르는 기기 제거.
 </li> <li>의료보험 전자 자격 증명을 활성화하여, 다음 병원에 갈 때 실물 카드를 가져갈 필요가 없도록.</li> </ol> </div> </p></p></p></p></p></p></p>

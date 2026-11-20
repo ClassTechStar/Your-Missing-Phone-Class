@@ -74,7 +74,7 @@ These are "once set, never go back" features,each one can significantly boost yo
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"First Day of Work" Checklist
+"First Day of Work" Checklist
 
 {class="mt-1 text-sm"}
 After getting a new phone or a major version update, spend 10 minutes going through these settings:<br> ① Lock screen password + biometrics. ② Notification grouping + turn off marketing pushes. ③ Font size, refresh rate, dark mode<br> ④ Default input method, browser, email. ⑤ Emergency contacts, medical ID. ⑥ Backup settings
@@ -90,7 +90,7 @@ Screen readers are the core tool for visually impaired users to use phones. It r
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS VoiceOver
+iOS VoiceOver
 
 {class="mt-1"}
 <strong>How to enable</strong>: [Settings] &gt; [Accessibility] &gt; [VoiceOver], turn on the switch. You can also triple-click the side button (or Home button) to quickly toggle.
@@ -111,7 +111,7 @@ Screen readers are the core tool for visually impaired users to use phones. It r
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>Android TalkBack
+Android TalkBack
 
 {class="mt-1"}
 <strong>How to enable</strong>: [Settings] &gt; [Accessibility] &gt; [TalkBack], turn on the switch. Or long-press both volume keys for 3 seconds to quickly enable (supported by some brands).
@@ -155,7 +155,7 @@ When a screen reader encounters an image, the traditional approach is to skip it
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>AI Image Description Support by System
+AI Image Description Support by System
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: Enable "Image Descriptions" in [Settings] &gt; [Accessibility] &gt; [VoiceOver] &gt; [Speech Descriptions]. The system calls a <strong>local AI model</strong> to automatically generate text descriptions of images (requires iPhone 12 or later).
@@ -165,7 +165,7 @@ When a screen reader encounters an image, the traditional approach is to skip it
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Use Cases
+Use Cases
 
 {class="mt-1"}
 Try asking about a street photo, "How many people are in this image? What are they doing?", or open a food delivery app and let AI read out the dish names in the menu image<strong>this is true "tech making life more equal"</strong>.
@@ -178,7 +178,7 @@ Live Captions is a <strong>system-level speech-to-text</strong> feature—especi
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>Enabling and Optimizing Live Captions
+Enabling and Optimizing Live Captions
 
 {class="mt-1"}
 <strong>iOS</strong>: [Settings] &gt; [Accessibility] &gt; [Live Captions], turn on the switch. The system detects all device audio (calls, videos, podcasts, FaceTime, voice memos) and automatically displays captions at the top of the screen.
@@ -203,7 +203,7 @@ When users <strong>can neither hear nor speak</strong>(such as sudden voice loss
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>Real-Time Call Transcription (TTY / RTT)
+Real-Time Call Transcription (TTY / RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [Settings] &gt; [Accessibility] &gt; [RTT/TTY], after enabling, a keyboard appears on screen during calls—the other party's speech is transcribed to text in real time, and <strong>your typed text is also read aloud</strong> to them.
@@ -231,7 +231,7 @@ When users <strong>can neither hear nor speak</strong>(such as sudden voice loss
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>Apple's Accessibility Design Philosophy
+Apple's Accessibility Design Philosophy
 
 {class="mt-1"}
 Apple invests heavily in accessibility, updating and adding assistive features every year. Apple’s website has a dedicated accessibility page detailing how to use each feature. iOS accessibility is typically more complete and more polished than Android’s, which is a major reason many users with disabilities choose Apple.
@@ -239,7 +239,7 @@ Apple invests heavily in accessibility, updating and adding assistive features e
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Spend 30 Seconds to Experience
+Spend 30 Seconds to Experience
 
 {class="mt-1"}
 Find some free time and do the following experiences:

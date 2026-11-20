@@ -27,46 +27,46 @@ Tiga solusi cast mainstream masing-masing fokus berbeda, saat pilih mobil atau p
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Solusi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sistem ponsel didukung</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Model mobil didukung</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelengkapan fitur</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ketersediaan domestik</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hanya iPhone</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sangat luas, sebagian besar model mendukung</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, peta/musik/telepon/pesan semua bisa</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baik, native tersedia</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (ponsel domestik butuh install service framework)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup luas, joint venture/impor lebih banyak</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, setara CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Biasa, butuh VPN untuk aktivasi</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terutama ponsel Huawei, sebagian mendukung Android lain</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mobil domestik dan sebagian joint venture</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup tinggi, bisa sync dengan HarmonyOS Cabin</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sangat baik, ekosistem lokal</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS dan Android bisa</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup luas, model lama aftermarket umum</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sedang, update lebih lambat</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sangat baik, ekosistem lokal</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Solusi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sistem ponsel didukung</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Model mobil didukung</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelengkapan fitur</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ketersediaan domestik</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hanya iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sangat luas, sebagian besar model mendukung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, peta/musik/telepon/pesan semua bisa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baik, native tersedia</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (ponsel domestik butuh install service framework)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup luas, joint venture/impor lebih banyak</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, setara CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Biasa, butuh VPN untuk aktivasi</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terutama ponsel Huawei, sebagian mendukung Android lain</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mobil domestik dan sebagian joint venture</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup tinggi, bisa sync dengan HarmonyOS Cabin</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sangat baik, ekosistem lokal</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS dan Android bisa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup luas, model lama aftermarket umum</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sedang, update lebih lambat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sangat baik, ekosistem lokal</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ Jika head unit mobil terlalu tua atau terlalu sulit dipakai, bisakah langsung pa
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Peringatan Keamanan
+Peringatan Keamanan
 
 {class="mt-1"}
 Apa pun solusi yang dipakai, mengoperasikan ponsel saat berkendara melanggar aturan lalu lintas. Holder ponsel hanya untuk "lihat navigasi", tidak untuk "operasi ponsel". Setel tujuan, ganti lagu dan operasi lain, pastikan setelah parkir, atau gunakan kontrol suara.
@@ -116,7 +116,7 @@ Apa pun solusi yang dipakai, mengoperasikan ponsel saat berkendara melanggar atu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Saran kecil saat beli mobil
+Saran kecil saat beli mobil
 
 {class="mt-1"}
 Jika peduli pengalaman head unit, saat beli mobil harus tes di dealer:
@@ -128,7 +128,7 @@ Jika peduli pengalaman head unit, saat beli mobil harus tes di dealer:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Optimalkan pengalaman car connectivity Anda
+Praktik: Optimalkan pengalaman car connectivity Anda
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Konfirmasi solusi connectivity yang didukung ponsel dan head unit Anda (CarPlay / HiCar / Android Auto / CarLife).
@@ -139,7 +139,7 @@ Jika peduli pengalaman head unit, saat beli mobil harus tes di dealer:
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tiga rute car connectivity: cast (CarPlay dll), integrasi mendalam (HarmonyOS Cabin dll), CarPlay 2.0 integrasi mendalam

@@ -207,7 +207,7 @@ AI Agent是各家发布会上最有想象力的部分：你说一句"帮我把�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：AI功能的试机清单
+小贴士：AI功能的试机清单
 
 {class="mt-1"}
 线下试机别只滑桌面。花十分钟按这个清单过一遍：飞行模式下试一次摘要、拍张带路人的照片试AI消除、录段话试转写摘要、拍张说明书试识图问答、问一句"把这张照片分享给微信里最近联系的人"看Agent走到哪一步。试完你就知道，宣传页上的AI和这台机器里的AI，是不是同一个东西。
@@ -235,34 +235,34 @@ AI Agent是各家发布会上最有想象力的部分：你说一句"帮我把�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">能做什么</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">门槛与费用</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">北斗短报文</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发送1000汉字以内的短信与位置信息</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多数机型无需月租、免费使用，视机型与系统而定</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">徒步、露营、自驾游的普通用户</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天通卫星通话</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拨打/接听卫星电话、收发卫星消息</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需开通运营商卫星套餐（约每月10-200元），机型限旗舰</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">常进无人区、高原、远海的频繁使用者</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone卫星SOS</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向紧急服务机构发文字消息并共享位置</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新机免费2年，部分地区续费可用；境内可用性以苹果官方说明为准</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone用户、以应急兜底为目的的人</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">能做什么</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">门槛与费用</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">北斗短报文</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发送1000汉字以内的短信与位置信息</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多数机型无需月租、免费使用，视机型与系统而定</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">徒步、露营、自驾游的普通用户</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天通卫星通话</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拨打/接听卫星电话、收发卫星消息</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需开通运营商卫星套餐（约每月10-200元），机型限旗舰</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">常进无人区、高原、远海的频繁使用者</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone卫星SOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向紧急服务机构发文字消息并共享位置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新机免费2年，部分地区续费可用；境内可用性以苹果官方说明为准</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone用户、以应急兜底为目的的人</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -549,45 +549,45 @@ AI也进了影像流水线：AI消除把路人从照片里抹掉，AI扩图把�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">观察对象</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">当前状态</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">值得留意的信号</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6G标准</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2027年启动标准编写，第一版规范预计2028年底冻结，2030年前后商用</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3GPP会议动态与厂商白皮书，消费级产品暂不用等</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端侧AI Agent</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旗舰可用，成功率视场景而定</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方App的适配广度、多步任务准确率的变化</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卫星通信</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短报文已下放中端，通话仍在旗舰</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">资费下沉、手机直连星座的商用进度，以官方发布为准</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折叠屏形态</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四形态并存，三折叠起售价已从两万元档降至一万八以内</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">轻薄化进度、三折叠的价格与供货、卷曲屏是否量产</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池材料</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硅碳负极已在旗舰普及</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">下放中端机型的速度、能量密度的下一步提升</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无孔化</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国行eSIM自2025年10月批复后陆续开通</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM机型数量、运营商办理便利度、无线充电功率</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">观察对象</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">当前状态</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">值得留意的信号</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6G标准</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2027年启动标准编写，第一版规范预计2028年底冻结，2030年前后商用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3GPP会议动态与厂商白皮书，消费级产品暂不用等</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端侧AI Agent</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旗舰可用，成功率视场景而定</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方App的适配广度、多步任务准确率的变化</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卫星通信</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短报文已下放中端，通话仍在旗舰</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">资费下沉、手机直连星座的商用进度，以官方发布为准</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折叠屏形态</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四形态并存，三折叠起售价已从两万元档降至一万八以内</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">轻薄化进度、三折叠的价格与供货、卷曲屏是否量产</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池材料</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硅碳负极已在旗舰普及</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">下放中端机型的速度、能量密度的下一步提升</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无孔化</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国行eSIM自2025年10月批复后陆续开通</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM机型数量、运营商办理便利度、无线充电功率</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -729,7 +729,7 @@ AI也进了影像流水线：AI消除把路人从照片里抹掉，AI扩图把�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：给你的下一台手机做一份"技术需求清单"
+来试试：给你的下一台手机做一份"技术需求清单"
 
 {class="mt-1"}
 拿出一张纸，按"必备/加分/不需要"三档，列出你对AI、卫星、折叠屏、Wi-Fi 7、快充、电池容量的需求。这样下次去线下店时，导购推荐的"卖点"你能迅速判断是真需求还是被推销。例如：
@@ -742,7 +742,7 @@ AI也进了影像流水线：AI消除把路人从照片里抹掉，AI扩图把�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI手机三大判断标准：端侧大模型、NPU TOPS、AI Agent场景

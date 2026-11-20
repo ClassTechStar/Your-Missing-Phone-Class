@@ -55,7 +55,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0) שונה באופן מהותי מ-HarmonyOS 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>חובה לקרוא לפני שדרוג ל-HarmonyOS NEXT
+חובה לקרוא לפני שדרוג ל-HarmonyOS NEXT
 
 {class="mt-1"}
 לאחר שדרוג ל-HarmonyOS NEXT, הטלפון שלך לא יוכל להריץ יישומי Android. אנא ודא לפני השדרוג: ① לאפליקציות הנפוצות שלך יש כבר גרסת HarmonyOS מקורית; ② אין בעבודה או בחייך תרחישים המחייבים הסתמכות על יישומי Android. לא ניתן לחזור ל-HarmonyOS 4.3 לאחר השדרוג.
@@ -94,7 +94,7 @@ HarmonyOS אינה רק מערכת טלפון, אלא אקוסיסטם המכס�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>הערות חשובות
+הערות חשובות
 
 {class="mt-1"}
 מערכת HarmonyOS מתעדכנת ומשתדרגת כל הזמן, וייתכנו הבדלים בין גרסאות שונות. תיאור זה מבוסס על המאפיינים העיקריים של HarmonyOS 4.3 ו-6. אנא הסתמך על הגרסה בפועל בטלפון שלך. מומלץ לעדכן את המערכת באופן שוטף כדי לקבל את התכונות העדכניות ועדכוני האבטחה.
@@ -102,7 +102,7 @@ HarmonyOS אינה רק מערכת טלפון, אלא אקוסיסטם המכס�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>נסה עכשיו: חווה את התכונות הייחודיות של HarmonyOS
+נסה עכשיו: חווה את התכונות הייחודיות של HarmonyOS
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. פתח את מרכז הבקרה, מצא את "מסוף-על", ובדוק אם יש מכשירי HarmonyOS אחרים בסביבה.

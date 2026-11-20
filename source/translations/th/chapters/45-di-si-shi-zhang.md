@@ -76,12 +76,12 @@ PRD ที่ดีไม่จำเป็นต้องยาว แต่ค
 - บิลด์: Vite
 ## โมเดลข้อมูล
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## แผนพัฒนา
 Step 1: ฟังก์ชันบันทึกพื้นฐาน (CRUD)

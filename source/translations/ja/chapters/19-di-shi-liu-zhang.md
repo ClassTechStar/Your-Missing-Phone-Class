@@ -44,7 +44,7 @@ Appleは無料で5GBを提供しますが、正直1回のバックアップに�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+：有料ユーザーだけが使えるプライバシー三種の神器
+iCloud+：有料ユーザーだけが使えるプライバシー三種の神器
 
 {class="mt-1"}
 有料 iCloud プラン（50GB/200GB/2TB など）にアップグレードすると、自動的に<strong>iCloud+</strong>ユーザーになり、3つのプライバシー保護機能が解放されます：
@@ -60,7 +60,7 @@ Appleは無料で5GBを提供しますが、正直1回のバックアップに�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud 高度データ保護（ADP）——真のエンドツーエンド暗号化
+iCloud 高度データ保護（ADP）——真のエンドツーエンド暗号化
 
 {class="mt-1"}
 2022年末、Apple は<strong>iCloud 高度データ保護（Advanced Data Protection, ADP）</strong>を発表し、エンドツーエンド暗号化（E2EE）を従来の健康、パスワードなどの限られたデータから<strong>iCloud データの大部分</strong>——写真、メモ、iCloud バックアップ、デバイス情報など計23種類のデータに拡大しました。
@@ -99,7 +99,7 @@ Appleの「ファミリー共有」は家族とApp購入、音楽、映画、iCl
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ハッカーがあなたのアカウントパスワードを入手した場合、可能なのは：スマホをリモートロックして身代金要求、あなたの写真や連絡先を閲覧、あなたの決済方法で買い物。さらに厄介なのは、アカウントに多くを紐付けすぎていると、アカウント回復自体が悪夢。だから二要素認証を今すぐ有効化を。
+ハッカーがあなたのアカウントパスワードを入手した場合、可能なのは：スマホをリモートロックして身代金要求、あなたの写真や連絡先を閲覧、あなたの決済方法で買い物。さらに厄介なのは、アカウントに多くを紐付けすぎていると、アカウント回復自体が悪夢。だから二要素認証を今すぐ有効化を。
 
 {class="mt-1"}
 実践：アカウントに包括的な健康診断を実施
@@ -107,7 +107,7 @@ Appleの「ファミリー共有」は家族とApp購入、音楽、映画、iCl
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>スマホ設定を開き、アカウントページに入り、二要素認証が有効か確認。
+スマホ設定を開き、アカウントページに入り、二要素認証が有効か確認。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 「信頼できる電話番号」と「復元キー」が設定されているか確認、キーは紙に記録。

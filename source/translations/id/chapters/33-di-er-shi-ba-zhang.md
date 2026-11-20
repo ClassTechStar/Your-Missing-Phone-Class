@@ -18,7 +18,7 @@ Banyak orang tanya online "3000 yuan beli ponsel apa yang bagus", pertanyaan ini
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tiga langkah memilih ponsel
+Tiga langkah memilih ponsel
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Pertama pikirkan apa yang paling Anda pedulikan</strong>: foto? main game? daya tahan baterai? layar? sistem lancar? atau cuma butuh telepon dan WeChat? Urutkan kebutuhan.
@@ -33,41 +33,41 @@ Spec sheet bisa puluhan item data, sebenarnya pengguna biasa hanya perlu fokus p
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara lihat</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ringkasan satu kalimat</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Prosesor (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menentukan berapa lama ponsel bisa lancar dipakai. Standar 2026: Snapdragon 8 Elite Gen5/Dimensity 9500 ke atas = top; Snapdragon 8s Gen4/Dimensity 8400 = mid-high; Snapdragon 7+ Gen4/Dimensity 7350 = cukup tiga tahun. Di bawah Snapdragon seri 6 disarankan berhati-hati.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Beli baru bukan lama, SoC menentukan berapa tahun ponsel tidak lag</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Layar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED lebih baik warnanya dan lebih hemat daya dari LCD; refresh rate 120Hz jauh lebih lancar scroll dari 60Hz; resolusi minimal 1080P ke atas. PWM dimming frekuensi tinggi (1920Hz+) lebih ramah mata.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + dimming frekuensi tinggi = batas lulus layar yang bagus</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">: Jika di rumah ada orang tua, anak atau hewan peliharaan, di ponsel bisa melihat kondisi rumah kapan saja.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Jangan lihat jumlah piksel, lihat ukuran sensor</strong>. Sensor besar setingkat lebih unggul, ukuran sensor jauh lebih penting dari piksel. Ultra wide praktis; telephoto (3x optical zoom ke atas) untuk foto jarak jauh; macro lens kebanyakan sekadar pemanis.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor utama besar + telephoto praktis &gt; banyak lensa pemanis</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Baterai dan pengisian</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh adalah batas lulus dasar, 5000mAh+ sehari sekali cas sangat stabil. Pengisian cepat lihat watt: 60W+ dianggap cepat, 100W+ sangat cepat. Pengisian nirkabel praktis tapi lambat.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + pengisian cepat 60W = kombinasi tanpa kecemasan</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Janji update sistem</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menentukan berapa lama ponsel bisa aman dipakai. Apple umumnya beri 5-6 tahun update sistem; Samsung flagship beri 4 tahun sistem + 5 tahun update keamanan; Google Pixel beri 7 tahun; ponsel mid-range domestik janji update umumnya lebih pendek (2-3 tahun).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ingin pakai lama, pilih merek dengan janji update panjang</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara lihat</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ringkasan satu kalimat</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Prosesor (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menentukan berapa lama ponsel bisa lancar dipakai. Standar 2026: Snapdragon 8 Elite Gen5/Dimensity 9500 ke atas = top; Snapdragon 8s Gen4/Dimensity 8400 = mid-high; Snapdragon 7+ Gen4/Dimensity 7350 = cukup tiga tahun. Di bawah Snapdragon seri 6 disarankan berhati-hati.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Beli baru bukan lama, SoC menentukan berapa tahun ponsel tidak lag</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Layar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED lebih baik warnanya dan lebih hemat daya dari LCD; refresh rate 120Hz jauh lebih lancar scroll dari 60Hz; resolusi minimal 1080P ke atas. PWM dimming frekuensi tinggi (1920Hz+) lebih ramah mata.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + dimming frekuensi tinggi = batas lulus layar yang bagus</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">: Jika di rumah ada orang tua, anak atau hewan peliharaan, di ponsel bisa melihat kondisi rumah kapan saja.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Jangan lihat jumlah piksel, lihat ukuran sensor</strong>. Sensor besar setingkat lebih unggul, ukuran sensor jauh lebih penting dari piksel. Ultra wide praktis; telephoto (3x optical zoom ke atas) untuk foto jarak jauh; macro lens kebanyakan sekadar pemanis.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor utama besar + telephoto praktis &gt; banyak lensa pemanis</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Baterai dan pengisian</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh adalah batas lulus dasar, 5000mAh+ sehari sekali cas sangat stabil. Pengisian cepat lihat watt: 60W+ dianggap cepat, 100W+ sangat cepat. Pengisian nirkabel praktis tapi lambat.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + pengisian cepat 60W = kombinasi tanpa kecemasan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Janji update sistem</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menentukan berapa lama ponsel bisa aman dipakai. Apple umumnya beri 5-6 tahun update sistem; Samsung flagship beri 4 tahun sistem + 5 tahun update keamanan; Google Pixel beri 7 tahun; ponsel mid-range domestik janji update umumnya lebih pendek (2-3 tahun).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ingin pakai lama, pilih merek dengan janji update panjang</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ Berikut beberapa "profil pemakaian" paling umum, cocokkan saja:
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Coba bertanya pada foto street photography "berapa orang di gambar ini? apa yang mereka lakukan?", atau buka aplikasi ojek/pesan makanan, biarkan AI membaca nama menu di gambar menu —</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fokus lihat apa</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Arah rekomendasi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Ahli foto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor utama besar (1 inci terbaik), OIS, telephoto (3x optical zoom+), image chip</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">seri vivo X, seri Huawei Pura/Mate, seri Xiaomi Ultra</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamer</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Prosesor top, touch sampling rate tinggi, sistem pendingin, baterai besar + pengisian cepat</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">seri iQOO digital, ROG Phone, Red Magic, seri Redmi K</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Daya tahan prioritas</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baterai 5500mAh+, prosesor efisien, layar LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">seri Honor Magic, OnePlus, Redmi Note versi baterai besar</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Pemakaian lansia</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode sederhana, font besar, volume besar, baterai besar, banyak pusat servis</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, seri OPPO A, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Ponsel siswa</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Value for money tinggi, tahan lama, baterai besar, ada parental control</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Pengguna ekosistem Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sudah punya Mac/iPad/AirPods, beli iPhone adalah satu-satunya solusi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standar (value for money) atau Pro (pengalaman penuh)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Perjalanan luar negeri</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dukungan eSIM, cakupan frekuensi global lengkap, layanan Google</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, seri Samsung S, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Coba bertanya pada foto street photography "berapa orang di gambar ini? apa yang mereka lakukan?", atau buka aplikasi ojek/pesan makanan, biarkan AI membaca nama menu di gambar menu —</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fokus lihat apa</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Arah rekomendasi</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Ahli foto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor utama besar (1 inci terbaik), OIS, telephoto (3x optical zoom+), image chip</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">seri vivo X, seri Huawei Pura/Mate, seri Xiaomi Ultra</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamer</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Prosesor top, touch sampling rate tinggi, sistem pendingin, baterai besar + pengisian cepat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">seri iQOO digital, ROG Phone, Red Magic, seri Redmi K</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Daya tahan prioritas</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baterai 5500mAh+, prosesor efisien, layar LTPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">seri Honor Magic, OnePlus, Redmi Note versi baterai besar</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Pemakaian lansia</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode sederhana, font besar, volume besar, baterai besar, banyak pusat servis</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, seri OPPO A, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Ponsel siswa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Value for money tinggi, tahan lama, baterai besar, ada parental control</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Pengguna ekosistem Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sudah punya Mac/iPad/AirPods, beli iPhone adalah satu-satunya solusi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standar (value for money) atau Pro (pengalaman penuh)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Perjalanan luar negeri</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dukungan eSIM, cakupan frekuensi global lengkap, layanan Google</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, seri Samsung S, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ Berikut beberapa "profil pemakaian" paling umum, cocokkan saja:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Gunakan metode ini untuk memilih satu ponsel
+Praktik: Gunakan metode ini untuk memilih satu ponsel
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ambil selembar kertas, tulis dua kebutuhan inti Anda (misal: baterai nomor satu, foto nomor dua).
@@ -208,7 +208,7 @@ Berikut beberapa "profil pemakaian" paling umum, cocokkan saja:
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tiga langkah pilih ponsel: pikirkan kebutuhan → tetapkan budget → terakhir pilih model

@@ -87,7 +87,7 @@ Se hai provato tutti i metodi sopra e non funziona nulla, devi rivolgerti a un'a
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>La mossa universale numero uno: riavvia il telefono
+La mossa universale numero uno: riavvia il telefono
 
 {class="mt-1"}
 Qualunque problema tu stia affrontando — lag, crash, nessuna connessione, audio anomalo, prima riavvia il telefono. Sembra una scusa, ma per esperienza almeno sei piccoli guasti su dieci si risolvono con il riavvio. Il telefono è come il computer: dopo molto tempo la memoria si riempie di pasticci vari, e riavviare significa svuotare e ricominciare. Quindi, la prossima volta che il telefono ha un problema, non cercare subito "cosa fare": riavvia e poi guarda.
@@ -95,7 +95,7 @@ Qualunque problema tu stia affrontando — lag, crash, nessuna connessione, audi
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Memorizza subito: queste operazioni salvavita vanno conosciute a memoria
+Memorizza subito: queste operazioni salvavita vanno conosciute a memoria
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Riavvio forzato</strong>: su iPhone full-screen premi volume su → volume giù → tieni premuto il tasto di accensione finché non compare il logo. Su Android tieni premuto il tasto di accensione per 10-15 secondi finché non vibra.

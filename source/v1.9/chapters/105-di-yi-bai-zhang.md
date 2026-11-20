@@ -804,7 +804,7 @@ AI 标注这件事，已经不只是平台约定。《人工智能生成合成�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：启动你的"10 条计划"
+来动手：启动你的"10 条计划"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 用五步工作流做出第 1 条视频并发布（发布前四项核对别忘了）。
@@ -814,7 +814,7 @@ AI 标注这件事，已经不只是平台约定。《人工智能生成合成�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 五步工作流：选题/脚本/制作/发布/复盘，周更可执行
 - 选题先写一句话，脚本走"钩子—展开—收尾"三段

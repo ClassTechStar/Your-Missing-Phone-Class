@@ -45,44 +45,44 @@ Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">機能説明</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux:API</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">コマンドラインプログラムにAndroid API機能を公開</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイス起動時のスクリプト実行を許可</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">フローティングターミナルウィンドウを提供</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ターミナルでカラースキームとフォントカスタマイズを有効化</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">TermuxスクリプトをTasker自動化アプリと統合</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ホーム画面ウィジェットからスクリプト実行を許可</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重要なヒント</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">機能説明</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux:API</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">コマンドラインプログラムにAndroid API機能を公開</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイス起動時のスクリプト実行を許可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">フローティングターミナルウィンドウを提供</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ターミナルでカラースキームとフォントカスタマイズを有効化</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">TermuxスクリプトをTasker自動化アプリと統合</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ホーム画面ウィジェットからスクリプト実行を許可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重要なヒント</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Termuxとそのプラグインは同じソースからインストールする必要があります、同じsharedUserIdを共有するため。異なるソース（F-DroidとGitHubなど）からの混在インストールはインストールエラーになります。
+Termuxとそのプラグインは同じソースからインストールする必要があります、同じsharedUserIdを共有するため。異なるソース（F-DroidとGitHubなど）からの混在インストールはインストールエラーになります。
 
 {class="mt-1"}
 四、インストールと設定ガイド
@@ -127,7 +127,7 @@ Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Termuxは強力なLinuxターミナル体験をAndroidデバイスにもたらし、スマホをポータブルな開発・学習ツールにします。開発者、システム管理者、技術愛好家のいずれも、Termuxを活用してモバイルデバイスで完全なコマンドライン体験を楽しみ、「ポケットの中のLinux」という理念を実現できます。
+Termuxは強力なLinuxターミナル体験をAndroidデバイスにもたらし、スマホをポータブルな開発・学習ツールにします。開発者、システム管理者、技術愛好家のいずれも、Termuxを活用してモバイルデバイスで完全なコマンドライン体験を楽しみ、「ポケットの中のLinux」という理念を実現できます。
 
 {class="mt-1"}
 やってみよう：スマホで最初のLinuxコマンドを実行
@@ -135,7 +135,7 @@ Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>F-DroidからTermuxをダウンロードインストール、初回起動で初期化完了を待つ。
+F-DroidからTermuxをダウンロードインストール、初回起動で初期化完了を待つ。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. pkg update &amp;&amp; pkg upgrade

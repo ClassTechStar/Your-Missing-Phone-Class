@@ -149,31 +149,31 @@ DeepSeek V4 עשתה קפיצת מדרגה גדולה ביכולות ה-Agent, �
 ::: div .figure
 ```html
 <svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="0" y="0" width="620" height="290" style="fill:var(--ink-inverse)" rx="8"/>
-      <line x1="70" y1="230" x2="590" y2="230" stroke="var(--muted)" stroke-width="1.5"/>
-      <line x1="70" y1="230" x2="70" y2="20" stroke="var(--muted)" stroke-width="1.5"/>
-      <line x1="70" y1="60" x2="590" y2="60" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="116" x2="590" y2="116" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="173" x2="590" y2="173" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="234" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
-      <text x="62" y="120" font-size="10" fill="var(--muted-2)" text-anchor="end">50</text>
-      <text x="62" y="64" font-size="10" fill="var(--muted-2)" text-anchor="end">100</text>
-      <text x="340" y="262" font-size="10.5" fill="var(--ink-2)" text-anchor="middle">מחיר פלט (יואן/מיליון טוקנים)</text>
-      <!-- bars: price -->
-      <rect x="95" y="218" width="60" height="12" fill="var(--accent-book)"/><text x="125" y="212" font-size="9" fill="var(--ink-2)" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">DeepSeek</text>
-      <rect x="195" y="146" width="60" height="84" fill="var(--accent-book)"/><text x="225" y="140" font-size="9" fill="var(--ink-2)" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Qwen</text>
-      <rect x="295" y="182" width="60" height="48" fill="var(--accent-book)"/><text x="325" y="176" font-size="9" fill="var(--ink-2)" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">GLM</text>
-      <rect x="395" y="200" width="60" height="30" fill="var(--accent-book)"/><text x="425" y="194" font-size="9" fill="var(--ink-2)" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Kimi</text>
-      <rect x="495" y="170" width="60" height="60" fill="var(--accent-book)"/><text x="525" y="164" font-size="9" fill="var(--ink-2)" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Doubao</text>
-      <!-- scores -->
-      <circle cx="125" cy="118" r="5" fill="var(--gold)"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
-      <circle cx="225" cy="110" r="5" fill="var(--gold)"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
-      <circle cx="325" cy="105" r="5" fill="var(--gold)"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
-      <circle cx="425" cy="112" r="5" fill="var(--gold)"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
-      <circle cx="525" cy="116" r="5" fill="var(--gold)"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
-      <rect x="90" y="30" width="12" height="12" fill="var(--accent-book)"/><text x="108" y="41" font-size="9.5" fill="var(--ink-2)">מחיר פלט (נמוך יותר = טוב יותר)</text>
-      <circle cx="170" cy="36" r="5" fill="var(--gold)"/><text x="182" y="40" font-size="9.5" fill="var(--ink-2)">ציון כולל (גבוה יותר = טוב יותר)</text>
-    </svg>
+ <rect x="0" y="0" width="620" height="290" style="fill:var(--ink-inverse)" rx="8"/>
+ <line x1="70" y1="230" x2="590" y2="230" stroke="var(--muted)" stroke-width="1.5"/>
+ <line x1="70" y1="230" x2="70" y2="20" stroke="var(--muted)" stroke-width="1.5"/>
+ <line x1="70" y1="60" x2="590" y2="60" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+ <line x1="70" y1="116" x2="590" y2="116" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+ <line x1="70" y1="173" x2="590" y2="173" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+ <text x="62" y="234" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+ <text x="62" y="120" font-size="10" fill="var(--muted-2)" text-anchor="end">50</text>
+ <text x="62" y="64" font-size="10" fill="var(--muted-2)" text-anchor="end">100</text>
+ <text x="340" y="262" font-size="10.5" fill="var(--ink-2)" text-anchor="middle">מחיר פלט (יואן/מיליון טוקנים)</text>
+ <!-- bars: price -->
+ <rect x="95" y="218" width="60" height="12" fill="var(--accent-book)"/><text x="125" y="212" font-size="9" fill="var(--ink-2)" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">DeepSeek</text>
+ <rect x="195" y="146" width="60" height="84" fill="var(--accent-book)"/><text x="225" y="140" font-size="9" fill="var(--ink-2)" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Qwen</text>
+ <rect x="295" y="182" width="60" height="48" fill="var(--accent-book)"/><text x="325" y="176" font-size="9" fill="var(--ink-2)" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">GLM</text>
+ <rect x="395" y="200" width="60" height="30" fill="var(--accent-book)"/><text x="425" y="194" font-size="9" fill="var(--ink-2)" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Kimi</text>
+ <rect x="495" y="170" width="60" height="60" fill="var(--accent-book)"/><text x="525" y="164" font-size="9" fill="var(--ink-2)" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Doubao</text>
+ <!-- scores -->
+ <circle cx="125" cy="118" r="5" fill="var(--gold)"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
+ <circle cx="225" cy="110" r="5" fill="var(--gold)"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
+ <circle cx="325" cy="105" r="5" fill="var(--gold)"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
+ <circle cx="425" cy="112" r="5" fill="var(--gold)"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
+ <circle cx="525" cy="116" r="5" fill="var(--gold)"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
+ <rect x="90" y="30" width="12" height="12" fill="var(--accent-book)"/><text x="108" y="41" font-size="9.5" fill="var(--ink-2)">מחיר פלט (נמוך יותר = טוב יותר)</text>
+ <circle cx="170" cy="36" r="5" fill="var(--gold)"/><text x="182" y="40" font-size="9.5" fill="var(--ink-2)">ציון כולל (גבוה יותר = טוב יותר)</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -186,19 +186,19 @@ DeepSeek V4 עשתה קפיצת מדרגה גדולה ביכולות ה-Agent, �
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-globe mr-1"></i> הפרויקט שלך נפרס בסין או בינלאומי?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">בסין → בחר מודלים מקומיים</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">בינלאומי → אפשר לבחור מודלים זרים</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> הפרויקט שלך נפרס בסין או בינלאומי?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">בסין → בחר מודלים מקומיים</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">בינלאומי → אפשר לבחור מודלים זרים</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-laptop-code mr-1"></i> המשימה המרכזית היא תכנות או משהו אחר?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">תכנות → Claude או DeepSeek</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">משהו אחר → המשך לבחון</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> המשימה המרכזית היא תכנות או משהו אחר?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">תכנות → Claude או DeepSeek</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">משהו אחר → המשך לבחון</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-book mr-1"></i> צריך הקשר ארוך מאוד (&gt;500 אלף טוקנים)?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">כן → Gemini או Kimi</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">לא צריך → המשך לבחון</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> צריך הקשר ארוך מאוד (&gt;500 אלף טוקנים)?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">כן → Gemini או Kimi</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">לא צריך → המשך לבחון</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-coins mr-1"></i> התקציב דחוק?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">דחוק → DeepSeek או Qwen-turbo</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">לא דחוק → GPT-5.6 או Claude</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> התקציב דחוק?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">דחוק → DeepSeek או Qwen-turbo</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">לא דחוק → GPT-5.6 או Claude</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -269,17 +269,17 @@ import os
 
 # 1. יצירת הקליינט (מפתח ה-API נקרא ממשתנה הסביבה)
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 
 # 2. שליחת הבקשה
 response = client.chat.completions.create(
-    model="deepseek-chat",  # ציון המודל
-    messages=[
-        {"role": "system", "content": "אתה עוזר תכנות בפייתון."},
-        {"role": "user", "content": "כתוב פונקציית מיון מהיר."}
-    ]
+ model="deepseek-chat", # ציון המודל
+ messages=[
+ {"role": "system", "content": "אתה עוזר תכנות בפייתון."},
+ {"role": "user", "content": "כתוב פונקציית מיון מהיר."}
+ ]
 )
 
 # 3. קבלת התשובה
@@ -304,29 +304,29 @@ print(f"סך הטוקנים: {response.usage.total_tokens}")
 ```
 # DeepSeek
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 # model="deepseek-chat"
 
 # Qwen (פלטפורמת Bailian)
 client = OpenAI(
-    api_key=os.environ.get("DASHSCOPE_API_KEY"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+ api_key=os.environ.get("DASHSCOPE_API_KEY"),
+ base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 )
 # model="qwen-plus"
 
 # GLM של Zhipu
 client = OpenAI(
-    api_key=os.environ.get("GLM_API_KEY"),
-    base_url="https://open.bigmodel.cn/api/paas/v4"
+ api_key=os.environ.get("GLM_API_KEY"),
+ base_url="https://open.bigmodel.cn/api/paas/v4"
 )
 # model="glm-4"
 
 # OpenAI GPT
 client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY"),
-    # base_url ברירת המחדל מספיק
+ api_key=os.environ.get("OPENAI_API_KEY"),
+ # base_url ברירת המחדל מספיק
 )
 # model="gpt-5.6-terra"
 ```
@@ -344,17 +344,17 @@ client = OpenAI(
 ```
 # תשובה בסטרימינג: פלט מילה אחר מילה
 stream = client.chat.completions.create(
-    model="deepseek-chat",
-    messages=[
-        {"role": "user", "content": "כתוב מדריך למיון בועות בפייתון"}
-    ],
-    stream=True  # הפעלת סטרימינג
+ model="deepseek-chat",
+ messages=[
+ {"role": "user", "content": "כתוב מדריך למיון בועות בפייתון"}
+ ],
+ stream=True # הפעלת סטרימינג
 )
 
 # קבלה והדפסה בבלוקים
 for chunk in stream:
-    if chunk.choices[0].delta.content is not None:
-        print(chunk.choices[0].delta.content, end="", flush=True)
+ if chunk.choices[0].delta.content is not None:
+ print(chunk.choices[0].delta.content, end="", flush=True)
 # הפלט יופיע אות אחר אות, כמו מכונת כתיבה
 ```
 :::
@@ -445,69 +445,69 @@ from openai import OpenAI
 
 # 1. הגדרה (מפתח ה-API נקרא ממשתנה הסביבה, לעולם לא מקודד בקוד)
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 
 def summarize(text: str, max_length: int = 200) -> dict:
-    """מייצר תקציר של הטקסט
+ """מייצר תקציר של הטקסט
 
-    Args:
-        text: הטקסט המקורי לתקצור
-        max_length: אורך מרבי לתקציר (מספר טוקנים)
+ Args:
+ text: הטקסט המקורי לתקצור
+ max_length: אורך מרבי לתקציר (מספר טוקנים)
 
-    Returns:
-        dict: כולל את התקציר ונתוני צריכת הטוקנים
-    """
-    try:
-        response = client.chat.completions.create(
-            model="deepseek-chat",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "אתה מחולל תקצירים."
-                               "סכם את הטקסט של המשתמש בשפה צלולה ותמציתית."
-                               "התקציר לא עולה על 3 משפטים."
-                },
-                {
-                    "role": "user",
-                    "content": f"סכם את הטקסט הבא:\n\n{text}"
-                }
-            ],
-            max_tokens=max_length,  # מגביל את אורך הפלט
-            temperature=0.3  # טמפרטורה נמוכה = יציב יותר
-        )
+ Returns:
+ dict: כולל את התקציר ונתוני צריכת הטוקנים
+ """
+ try:
+ response = client.chat.completions.create(
+ model="deepseek-chat",
+ messages=[
+ {
+ "role": "system",
+ "content": "אתה מחולל תקצירים."
+ "סכם את הטקסט של המשתמש בשפה צלולה ותמציתית."
+ "התקציר לא עולה על 3 משפטים."
+ },
+ {
+ "role": "user",
+ "content": f"סכם את הטקסט הבא:\n\n{text}"
+ }
+ ],
+ max_tokens=max_length, # מגביל את אורך הפלט
+ temperature=0.3 # טמפרטורה נמוכה = יציב יותר
+ )
 
-        return {
-            "success": True,
-            "summary": response.choices[0].message.content,
-            "input_tokens": response.usage.prompt_tokens,
-            "output_tokens": response.usage.completion_tokens,
-            "total_tokens": response.usage.total_tokens
-        }
+ return {
+ "success": True,
+ "summary": response.choices[0].message.content,
+ "input_tokens": response.usage.prompt_tokens,
+ "output_tokens": response.usage.completion_tokens,
+ "total_tokens": response.usage.total_tokens
+ }
 
-    except Exception as e:
-        return {
-            "success": False,
-            "error": str(e)
-        }
+ except Exception as e:
+ return {
+ "success": False,
+ "error": str(e)
+ }
 
 # 2. דוגמת שימוש
 if __name__ == "__main__":
-    long_text = """
-    (הדבק כאן טקסט ארוך...)
-    """
+ long_text = """
+ (הדבק כאן טקסט ארוך...)
+ """
 
-    result = summarize(long_text)
+ result = summarize(long_text)
 
-    if result["success"]:
-        print(f"תקציר: {result['summary']}")
-        print(f"טוקנים שנצרכו: {result['total_tokens']}")
-        # אומדן עלות: DeepSeek V4 Flash
-        cost = result['total_tokens'] * 0.000004  # ≈ 0.4 סנט לכל 1000 טוקנים
-        print(f"עלות משוערת: {cost:.4f} יואן")
-    else:
-        print(f"שגיאה: {result['error']}")
+ if result["success"]:
+ print(f"תקציר: {result['summary']}")
+ print(f"טוקנים שנצרכו: {result['total_tokens']}")
+ # אומדן עלות: DeepSeek V4 Flash
+ cost = result['total_tokens'] * 0.000004 # ≈ 0.4 סנט לכל 1000 טוקנים
+ print(f"עלות משוערת: {cost:.4f} יואן")
+ else:
+ print(f"שגיאה: {result['error']}")
 ```
 :::
 

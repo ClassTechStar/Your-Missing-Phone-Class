@@ -36,35 +36,35 @@ Protocols are the "language"; ecosystems are the "club." Even with Matter, you'l
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ecosystem</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Strengths</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Weaknesses</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Best for</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Strongest privacy (mostly local), smooth iPhone/Siri/Shortcuts integration</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fewer, pricier devices; needs HomePod or Apple TV as hub</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple households that value privacy and polish</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Widest device range, best value, solid Xiao AI</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">More closed ecosystem, more cloud data, more ads</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Budget buyers who want one-stop whole-home setup</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Seamless with HarmonyOS phone/tablet/watch; device range growing fast</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fewer overseas devices; ecosystem still catching up</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei phone users who want Super Device multi-device flow</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ecosystem</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Strengths</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Weaknesses</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Best for</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Strongest privacy (mostly local), smooth iPhone/Siri/Shortcuts integration</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fewer, pricier devices; needs HomePod or Apple TV as hub</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple households that value privacy and polish</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Widest device range, best value, solid Xiao AI</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">More closed ecosystem, more cloud data, more ads</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Budget buyers who want one-stop whole-home setup</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Seamless with HarmonyOS phone/tablet/watch; device range growing fast</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fewer overseas devices; ecosystem still catching up</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei phone users who want Super Device multi-device flow</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

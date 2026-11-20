@@ -27,16 +27,16 @@ kind: chapter
 
 @Composable
 fun CameraButton() {
-    val permission = rememberPermissionState(
-        permission = android.Manifest.permission.CAMERA
-    )
-    Button(onClick = {
-        when {
-            permission.status.isGranted -&gt; openCamera()
-            permission.status.shouldShowRationale -&gt; showExplainDialog()
-            else -&gt; permission.launchPermissionRequest()
-        }
-    }) { Text("التقاط صورة") }
+ val permission = rememberPermissionState(
+ permission = android.Manifest.permission.CAMERA
+ )
+ Button(onClick = {
+ when {
+ permission.status.isGranted -&gt; openCamera()
+ permission.status.shouldShowRationale -&gt; showExplainDialog()
+ else -&gt; permission.launchPermissionRequest()
+ }
+ }) { Text("التقاط صورة") }
 }
 ```
 :::
@@ -63,22 +63,22 @@ fun CameraButton() {
 
 // 1. إنشاء قناة الإشعارات (إلزامي في Android 8+)
 val channel = NotificationChannel(
-    "reminder", "تذكيرات", NotificationManager.IMPORTANCE_DEFAULT
+ "reminder", "تذكيرات", NotificationManager.IMPORTANCE_DEFAULT
 )
 val manager = getSystemService(NotificationManager::class.java)
 manager.createNotificationChannel(channel)
 
 // 2. إرسال الإشعار
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("تذكير بتسجيل المصروفات")
-    .setContentText("لم تسجل أي مصروفات اليوم بعد")
-    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("تذكير بتسجيل المصروفات")
+ .setContentText("لم تسجل أي مصروفات اليوم بعد")
+ .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+ .build()
 if (ActivityCompat.checkSelfPermission(this,
-        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+ Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 ) {
-    manager.notify(1, notification)
+ manager.notify(1, notification)
 }
 ```
 :::

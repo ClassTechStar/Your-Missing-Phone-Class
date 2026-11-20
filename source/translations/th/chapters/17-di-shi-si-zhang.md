@@ -46,7 +46,7 @@ AES (Advanced Encryption Standard) คืออัลกอริทึมกา
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>ทำไม "Zero Knowledge" ถึงหมายความว่าผู้ให้บริการก็มองเห็นรหัสผ่านของคุณไม่ได้?
+ทำไม "Zero Knowledge" ถึงหมายความว่าผู้ให้บริการก็มองเห็นรหัสผ่านของคุณไม่ได้?
 
 {class="mt-1"}
 เพราะคีย์ถอดรหัสถูกสร้างขึ้นจากรหัสผ่านหลักของคุณ ซึ่งรหัสผ่านหลักนั้นมีอยู่เพียงในความทรงจำของคุณและใช้งานบนอุปกรณ์ของคุณเท่านั้น บนเซิร์ฟเวอร์ของผู้ให้บริการไม่มีทั้งรหัสผ่านหลักและคีย์ถอดรหัส มีเพียงข้อความเข้ารหัสเท่านั้น นี่คือเหตุผลที่ผู้ให้บริการที่ได้มาตรฐานอย่าง Bitwarden, 1Password และอื่นๆ ระบุชัดเจนว่า "พวกเราก็มองเห็นรหัสผ่านของคุณไม่ได้เช่นกัน", ไม่ใช่ว่าพวกเขาไม่อยากดู แต่ทำไม่ได้ในทางเทคนิค
@@ -71,7 +71,7 @@ AES (Advanced Encryption Standard) คืออัลกอริทึมกา
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>สิ่งที่ได้เรียนรู้จากเหตุการณ์ LastPass
+สิ่งที่ได้เรียนรู้จากเหตุการณ์ LastPass
 
 {class="mt-1"}
 หนึ่ง รหัสผ่านหลักต้องยาวและไม่ซ้ำใคร (แนะนำให้มากกว่า 16 หลัก ประกอบด้วยตัวพิมพ์เล็ก ตัวพิมพ์ใหญ่ ตัวเลข และสัญลักษณ์); สอง ควรเลือกผู้ให้บริการที่รองรับ Argon2id และมีจำนวนรอบการทำซ้ำสูงเป็นอันดับแรก; สาม สำหรับบัญชีที่มีความสำคัญสูง (ธนาคาร, อีเมล) ต้องเปิดใช้งานการยืนยันตัวตนสองขั้นตอนแยกต่างหาก อย่าพึ่งพาผู้จัดการรหัสผ่านเพียงอย่างเดียว
@@ -118,7 +118,7 @@ AES (Advanced Encryption Standard) คืออัลกอริทึมกา
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>หลักการค้นหาแบบ k-Anonymity
+หลักการค้นหาแบบ k-Anonymity
 
 {class="mt-1"}
 กังวลว่าการกรอกรหัสผ่านใน HaveIBeenPwned จะรั่วไหลอีกครั้ง? ไม่ต้องกังวล การค้นหาสมัยใหม่ใช้โปรโตคอล "k-Anonymity": เบราว์เซอร์จะส่งเพียง 5 หลักแรกของแฮชรหัสผ่านไปยังเซิร์ฟเวอร์ จากนั้นเซิร์ฟเวอร์จะส่งรายการแฮชที่ขึ้นต้นด้วย 5 หลักนั้นกลับมาทั้งหมด แล้วจึงเปรียบเทียบบนเครื่องของคุณ กล่าวคือ เซิร์ฟเวอร์จะไม่มีวันเห็นแฮชรหัสผ่านฉบับเต็มของคุณ การตรวจจับรหัสผ่านที่รั่วไหลของ 1Password และ Bitwarden ก็ทำงานแบบนี้
@@ -133,7 +133,7 @@ AES (Advanced Encryption Standard) คืออัลกอริทึมกา
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ตรวจสอบตอนนี้: รหัสผ่านของคุณปลอดภัยหรือไม่
+ตรวจสอบตอนนี้: รหัสผ่านของคุณปลอดภัยหรือไม่
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เปิด haveibeenpwned.com แล้วกรอกอีเมลที่ใช้บ่อย เพื่อดูว่าปรากฏในเหตุการณ์การรั่วไหลใดบ้าง
@@ -159,36 +159,36 @@ Passkey อิงตามมาตรฐาน FIDO2 / WebAuthn โดยใช
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">มิติข้อมูล</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รหัสผ่านแบบดั้งเดิม</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ป้องกันฟิชชิง</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แย่ เว็บไซต์ฟิชชิงสามารถขโมยรหัสผ่านได้</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ป้องกันฟิชชิงได้โดยธรรมชาติ กุญแจส่วนตัวจะเซ็นกำกับเฉพาะโดเมนจริงเท่านั้น</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ผลกระทบจากการรั่วไหลของเซิร์ฟเวอร์</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แฮชรหัสผ่านอาจถูกแกะรอยได้</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เซิร์ฟเวอร์เก็บเพียงกุญแจสาธารณะ การรั่วไหลไม่มีผลกระทบ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความสะดวกสบาย</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องจำ/พิมพ์/จัดการ</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เข้าสู่ระบบใน 1 วินาทีด้วย Face ID/ลายนิ้วมือ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">โจมตีซ้ำ (Replay Attack)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อาจถูกดักจับและเล่นซ้ำโดยคนกลาง</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ลายเซ็นการเข้าสู่ระบบแต่ละครั้งใช้ครั้งเดียว ไม่สามารถนำไปเล่นซ้ำได้</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">มิติข้อมูล</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รหัสผ่านแบบดั้งเดิม</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ป้องกันฟิชชิง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แย่ เว็บไซต์ฟิชชิงสามารถขโมยรหัสผ่านได้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ป้องกันฟิชชิงได้โดยธรรมชาติ กุญแจส่วนตัวจะเซ็นกำกับเฉพาะโดเมนจริงเท่านั้น</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ผลกระทบจากการรั่วไหลของเซิร์ฟเวอร์</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แฮชรหัสผ่านอาจถูกแกะรอยได้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เซิร์ฟเวอร์เก็บเพียงกุญแจสาธารณะ การรั่วไหลไม่มีผลกระทบ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความสะดวกสบาย</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องจำ/พิมพ์/จัดการ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เข้าสู่ระบบใน 1 วินาทีด้วย Face ID/ลายนิ้วมือ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">โจมตีซ้ำ (Replay Attack)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อาจถูกดักจับและเล่นซ้ำโดยคนกลาง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ลายเซ็นการเข้าสู่ระบบแต่ละครั้งใช้ครั้งเดียว ไม่สามารถนำไปเล่นซ้ำได้</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. การรองรับในแต่ละแพลตฟอร์ม
@@ -200,7 +200,7 @@ Passkey อิงตามมาตรฐาน FIDO2 / WebAuthn โดยใช
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>การซิงค์ข้ามอุปกรณ์ถือเป็นความก้าวหน้าที่สำคัญที่สุด
+การซิงค์ข้ามอุปกรณ์ถือเป็นความก้าวหน้าที่สำคัญที่สุด
 
 {class="mt-1"}
 จุดอ่อนที่ใหญ่ที่สุดของ Passkey ในช่วงแรกคือ "ผูกกับอุปกรณ์เครื่องเดียว", เปลี่ยนมือถือก็ต้องสร้างใหม่ ตั้งแต่ปี 2023 Apple, Google และ Microsoft ได้ทำการซิงค์ Passkey ผ่านคลาวด์: iCloud ซิงค์ Keychain ข้ามอุปกรณ์ Apple, Google Password Manager ซิงค์ข้ามอุปกรณ์ Android ส่วนบริการของบุคคลที่สามอย่าง 1Password ก็เชื่อมต่อการซิงค์ข้ามระบบนิเวศได้แล้ว นั่นหมายความว่า Passkey มีความพร้อมในการใช้งานจริงเพื่อทดแทนรหัสผ่านแล้ว
@@ -236,7 +236,7 @@ Passkey อิงตามมาตรฐาน FIDO2 / WebAuthn โดยใช
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองเลยตอนนี้: สัมผัสประสบการณ์การเข้าสู่ระบบไร้รหัสผ่าน
+ลองเลยตอนนี้: สัมผัสประสบการณ์การเข้าสู่ระบบไร้รหัสผ่าน
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เข้าสู่ระบบบัญชี Google → ความปลอดภัย → Passkey → เพิ่ม Passkey เพื่อทดลองเข้าสู่ระบบด้วย Face ID/ลายนิ้วมือ
@@ -247,7 +247,7 @@ Passkey อิงตามมาตรฐาน FIDO2 / WebAuthn โดยใช
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>คำแนะนำช่วงการเปลี่ยนผ่าน
+คำแนะนำช่วงการเปลี่ยนผ่าน
 
 {class="mt-1"}
 Passkey ยังไม่ได้ทดแทนรหัสผ่านแบบเต็มรูปแบบ — เว็บไซต์หลายแห่งยังอยู่ในช่วง "Passkey + รหัสผ่าน" ที่มีให้ใช้พร้อมกัน ขอแนะนำ: เปิดใช้งาน Passkey สำหรับบัญชีที่มีความสำคัญสูงก่อน แต่<strong>อย่าลบรหัสผ่านเดิมทิ้งทันที</strong>ให้เก็บไว้เป็นตัวสำรอง พร้อมทั้งยังคงใช้ Password Manager ต่อไป เพราะเว็บไซต์ไม่ได้รองรับ Passkey ทั้งหมด ให้มอง Passkey เป็น "สิ่งที่เสริมความแข็งแกร่งให้ Password Manager" มากกว่า "การทดแทนทันที"
@@ -295,7 +295,7 @@ Passkey ยังไม่ได้ทดแทนรหัสผ่านแบ
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>กลยุทธ์คู่คีย์
+กลยุทธ์คู่คีย์
 
 {class="mt-1"}
 ความเสี่ยงที่ใหญ่ที่สุดของ Hardware Key คือ "การสูญหาย" ขอแนะนำ: ① ลงทะเบียนคีย์ที่แตกต่างกัน 2 อันพร้อมกัน; ② หนึ่งอันพกติดตัว (คล้องกับพวงกุญแจ), อีกอันเก็บไว้ในตู้เซฟที่บ้านหรือตู้นิรภัยของธนาคาร; ③ เว็บไซต์บางแห่งอนุญาตให้พิมพ์ "รหัสกู้คืนสำรอง" ออกมาเก็บแบบออฟไลน์ได้ วิธีนี้จะทำให้แม้คีย์หลักหาย คุณก็จะไม่ถูกล็อกออกจากบัญชีอย่างถาวร
@@ -303,7 +303,7 @@ Passkey ยังไม่ได้ทดแทนรหัสผ่านแบ
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ระมัดระวังในการเลือกช่องทางซื้อ
+ระมัดระวังในการเลือกช่องทางซื้อ
 
 {class="mt-1"}
 ต้องซื้อจากร้านค้าทางการหรือตัวแทนจำหน่ายที่ได้รับอนุญาตเท่านั้น ห้ามซื้อคีย์มือสองหรือที่มาไม่ชัดเจน,ตามทฤษฎีแล้ว ฮาร์ดแวร์ที่ถูกตั้งค่ามาก่อนอาจถูกแทรกช่องโหว่แบ็กดอร์ไว้แล้ว เฟิร์มแวร์ของ YubiKey ไม่สามารถอัปเดตได้หลังจากออกจากโรงงาน แต่ Yubico จะส่งประกาศความปลอดภัยอย่างต่อเนื่อง เพียงแค่ติดตามเว็บไซต์ทางการของพวกเขาก็พอ
@@ -336,7 +336,7 @@ Passkey ยังไม่ได้ทดแทนรหัสผ่านแบ
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>ความคุ้มค่าของ 1Password เวอร์ชันครอบครัว
+ความคุ้มค่าของ 1Password เวอร์ชันครอบครัว
 
 {class="mt-1"}
 1Password Families ราคาประมาณ 4.99 ดอลลาร์สหรัฐ/เดือน รองรับสมาชิกในครอบครัวสูงสุด 5 คน แต่ละคนจะมีตู้นิรภัยส่วนตัวอิสระ + ตู้นิรภัยร่วม 4 ใบ คิดเป็นค่าเฉลี่ยต่อคนไม่ถึง 1 ดอลลาร์สหรัฐ/เดือน ถือเป็นโซลูชันที่ดีที่สุดสำหรับการแชร์ในครอบครัวในขณะนี้ เวอร์ชันครอบครัวของ Bitwarden ราคา 10 ดอลลาร์สหรัฐ/ปี รองรับ 6 คน คุ้มค่ากว่า แต่ประสบการณ์การใช้งานอินเทอร์เฟซอาจจะด้อยกว่าเล็กน้อย
@@ -369,7 +369,7 @@ Passkey ยังไม่ได้ทดแทนรหัสผ่านแบ
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ตั้งค่าตอนนี้: เตรียม "กุญแจสำรอง" ไว้ให้คนในครอบครัว
+ตั้งค่าตอนนี้: เตรียม "กุญแจสำรอง" ไว้ให้คนในครอบครัว
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เลือกคนในครอบครัวที่ไว้วางใจหนึ่งคนเป็น "ผู้ติดต่อฉุกเฉิน"
@@ -388,7 +388,7 @@ Passkey ยังไม่ได้ทดแทนรหัสผ่านแบ
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>คำเตือนสำคัญ
+คำเตือนสำคัญ
 
 {class="mt-1"}
 ตัวจัดการรหัสผ่านสะดวกจริง แต่ก็มีความเสี่ยง: ถ้ารหัสผ่านหลักรั่วไหล รหัสผ่านทั้งหมดก็ถูกเปิดโปง ดังนั้นรหัสผ่านหลักห้ามใช้ซ้ำกับรหัสผ่านอื่นเด็ดขาด และห้ามเขียนไว้ในที่ที่คนหาเจอง่าย อีกอย่าง แนะนำให้เลือกผู้ให้บริการที่มีสถิติด้านความปลอดภัยดี
@@ -396,7 +396,7 @@ Passkey ยังไม่ได้ทดแทนรหัสผ่านแบ
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองเลยตอนนี้: เริ่มใช้ตัวจัดการรหัสผ่าน
+ลองเลยตอนนี้: เริ่มใช้ตัวจัดการรหัสผ่าน
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : เลือกตัวจัดการรหัสผ่านหนึ่งตัว (แนะนำ Bitwarden หรือตัวที่มากับระบบ)

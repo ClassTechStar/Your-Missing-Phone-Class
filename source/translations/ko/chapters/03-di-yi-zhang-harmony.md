@@ -62,7 +62,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0)는 HarmonyOS 4.3과 근본적인 차이가 �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>HarmonyOS NEXT 업그레이드 전 필독
+HarmonyOS NEXT 업그레이드 전 필독
 
 {class="mt-1"}
 HarmonyOS NEXT로 업그레이드하면, 스마트폰은 더 이상 안드로이드 앱을 실행할 수 없습니다.
@@ -97,7 +97,7 @@ HarmonyOS 실용 팁</h4> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong
 </li> <li><strong>슈퍼 중계소</strong>: 텍스트/이미지/파일을 길게 누르고 "중계소로 복사"를 선택한 다음, 다른 앱에서 길게 누르고 붙여넣기 또는 드래그하여 꺼내기.
 </li> <li><strong>서비스 카드</strong>: 앱 아이콘을 위로 쓸어밀어 카드를 펼치고, 카드를 길게 누르면 크기 조정 또는 데스크톱에 추가 가능.
 </li> <li><strong>스마트 멀티 윈도우</strong>: 화면 좌우 가장자리에서 안쪽으로 쓸어밀고 멈추어 사이드바를 열고, 앱을 클릭하여 부유 창으로 열기.
-</li> <li><strong>프라이버시 보호</strong>: 설정 > 프라이버시, 앱 권한 사용 기록 조회, 퍼지 위치 등 설정 가능.</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>주의 사항</p> <p class="mt-1">HarmonyOS 시스템은 계속 업데이트되고 발전 중이며, 버전에 따라 약간의 차이가 있을 수 있음.
+</li> <li><strong>프라이버시 보호</strong>: 설정 > 프라이버시, 앱 권한 사용 기록 조회, 퍼지 위치 등 설정 가능.</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold">주의 사항</p> <p class="mt-1">HarmonyOS 시스템은 계속 업데이트되고 발전 중이며, 버전에 따라 약간의 차이가 있을 수 있음.
 본문의 설명은 HarmonyOS 4.3과 6의 주요 특성을 기반으로 하며, 구체적인 기능은 스마트폰의 실제 버전을 기준으로 해야 함. 최신 기능 및 보안 패치를 받기 위해 시스템 업데이트를 유지하는 것을 권장.
-</p></div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>지금 해보기: HarmonyOS 특징 기능 체험</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>제어 센터를 열고, "슈퍼 터미널"을 찾아 주변에 다른 HarmonyOS 기기가 있는지 확인.</li> <li>"슈퍼 중계소" 시도: 텍스트 한 조각을 중계소에 복사한 다음, 메모장에서 드래그하여 꺼내기.
+</p></div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold">지금 해보기: HarmonyOS 특징 기능 체험</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>제어 센터를 열고, "슈퍼 터미널"을 찾아 주변에 다른 HarmonyOS 기기가 있는지 확인.</li> <li>"슈퍼 중계소" 시도: 텍스트 한 조각을 중계소에 복사한 다음, 메모장에서 드래그하여 꺼내기.
 </li> <li>자주 사용하는 앱 아이콘을 몇 개 위로 쓸어밀어 서비스 카드에 어떤 내용이 표시되는지 확인.</li> <li>설정 > 프라이버시로 이동하여 최근 어떤 앱이 민감 권한을 사용했는지 확인.</li> </ol> </div>

@@ -22,16 +22,16 @@ Ein Programm ist „Daten + Logik“. Eine Variable gibt den Daten einen Namen u
 :::
 
 ```
-let name = "Max"        // let: Konstante (standardmäßig empfohlen)
-var age = 18             // var: Variable (später änderbar)
+let name = "Max" // let: Konstante (standardmäßig empfohlen)
+var age = 18 // var: Variable (später änderbar)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var ist änderbar
-// name = "Lena"         // <i class="fas fa-times-circle mr-1"></i> let ist nicht änderbar: Kompilierfehler
+age = 19 // var ist änderbar
+// name = "Lena" // let ist nicht änderbar: Kompilierfehler
 
-let score: Int = 100     // der Typ lässt sich auch explizit angeben
-let pi = 3.14            // ohne Angabe wird er automatisch abgeleitet
+let score: Int = 100 // der Typ lässt sich auch explizit angeben
+let pi = 3.14 // ohne Angabe wird er automatisch abgeleitet
 
-print("Hallo \(name)")   // String-Interpolation: Backslash + Klammern
+print("Hallo \(name)") // String-Interpolation: Backslash + Klammern
 ```
 :::
 
@@ -64,20 +64,20 @@ Das ist das wichtigste Konzept in Swift, punktum. In einem Satz: Kann ein Wert u
 :::
 
 ```
-var name: String = "Max"   // normaler Typ: darf nie nil sein
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> Kompilierfehler: stoppt dich sofort
+var name: String = "Max" // normaler Typ: darf nie nil sein
+// name = nil // Kompilierfehler: stoppt dich sofort
 
-var nickname: String? = nil  // mit Fragezeichen: nil erlaubt (Optional)
+var nickname: String? = nil // mit Fragezeichen: nil erlaubt (Optional)
 nickname = "Tommy"
 
 // bei Optionals musst du sie "auspacken":
-if let n = nickname {        // if let: sicheres Auspacken
-    print("Hallo \(n)")
+if let n = nickname { // if let: sicheres Auspacken
+ print("Hallo \(n)")
 } else {
-    print("Noch kein Spitzname")
+ print("Noch kein Spitzname")
 }
 
-let len = nickname?.count ?? 0   // ?? Standardwert (Nil-Coalescing-Operator)
+let len = nickname?.count ?? 0 // ?? Standardwert (Nil-Coalescing-Operator)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ Eine Funktion ist ein Stück Logik mit Namen, wie eine Taste auf der Fernbedienu
 ```
 // Funktion: Name vorne; Parameter und Rückgabetyp dahinter
 func greet(name: String) -> String {
-    return "Hallo, \(name)!"
+ return "Hallo, \(name)!"
 }
-print(greet(name: "Max"))     // beim Aufruf mit Parameternamen
+print(greet(name: "Max")) // beim Aufruf mit Parameternamen
 
 // Closure: direkt vor Ort definiert, leicht und direkt
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = das aktuelle Element
+let doubled = numbers.map { $0 * 2 } // $0 = das aktuelle Element
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // filtern
+let big = numbers.filter { $0 > 2 } // filtern
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ Swifts offizielle Präferenz ist eindeutig: Bevorzugt Structs verwenden; erst we
 ```
 // das Struct: die Daten-Box
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // das Struct bringt seinen "Memberwise Initializer" mit: direkt erstellbar
+ // das Struct bringt seinen "Memberwise Initializer" mit: direkt erstellbar
 }
 let r = Record(amount: 25.5, category: "Essen", date: Date())
 
 // Protokoll: der Vertrag, "welche Fähigkeiten vorhanden sein müssen"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // das Protokoll übernehmen = zusagen, seine Anforderungen zu erfüllen
+struct Record: Identifiable { ... } // das Protokoll übernehmen = zusagen, seine Anforderungen zu erfüllen
 ```
 :::
 

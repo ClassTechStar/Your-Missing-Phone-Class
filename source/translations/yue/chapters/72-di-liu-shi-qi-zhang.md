@@ -54,21 +54,21 @@ import XCTest
 
 // 把"金額字串轉數字"呢種邏輯抽成純函數
 func parseAmount(_ input: String) -> Double? {
-    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
-          v > 0 else { return nil }
-    return v
+ guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+ v > 0 else { return nil }
+ return v
 }
 
 final class AmountTests: XCTestCase {
-    func testEmptyInputReturnsNil() {
-        XCTAssertNil(parseAmount(""))
-    }
-    func testNegativeReturnsNil() {
-        XCTAssertNil(parseAmount("-5"))
-    }
-    func testNormalValueParses() {
-        XCTAssertEqual(parseAmount("12.5"), 12.5)
-    }
+ func testEmptyInputReturnsNil() {
+ XCTAssertNil(parseAmount(""))
+ }
+ func testNegativeReturnsNil() {
+ XCTAssertNil(parseAmount("-5"))
+ }
+ func testNormalValueParses() {
+ XCTAssertEqual(parseAmount("12.5"), 12.5)
+ }
 }
 ```
 :::
@@ -96,11 +96,11 @@ final class AmountTests: XCTestCase {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 註冊開發者賬號</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> 準備商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> 上傳構建包</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 註冊開發者賬號</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 準備商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 上傳構建包</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填隱私與審覈資訊</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 蘋果審覈（1-7 天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> 上架</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 填隱私與審覈資訊</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> 蘋果審覈（1-7 天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 上架</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

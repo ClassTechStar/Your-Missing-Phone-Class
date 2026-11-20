@@ -19,19 +19,19 @@ La duplication d'écran sans fil semble être toujours « l'image du smartphone 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Technologie</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Qui l'utilise</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caractéristiques</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Écosystème Apple, l'expérience la plus fluide. Nécessite Apple TV ou un téléviseur compatible AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Smartphones Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Connexion directe Wi-Fi Direct, pas besoin de routeur. La « duplication sans fil » des smartphones Android l'utilise par défaut</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Toutes plateformes</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pousse uniquement les fichiers multimédias (vidéo/musique/image), ne duplique pas l'écran. Idéal pour pousser une vidéo vers la télé</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Technologie</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Qui l'utilise</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caractéristiques</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Écosystème Apple, l'expérience la plus fluide. Nécessite Apple TV ou un téléviseur compatible AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Smartphones Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Connexion directe Wi-Fi Direct, pas besoin de routeur. La « duplication sans fil » des smartphones Android l'utilise par défaut</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Toutes plateformes</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pousse uniquement les fichiers multimédias (vidéo/musique/image), ne duplique pas l'écran. Idéal pour pousser une vidéo vers la télé</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Manipuler le smartphone en conduisant est illégal, mais la navigation, la musiq
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Rappel de sécurité
+Rappel de sécurité
 
 {class="mt-1"}
 Quelle que soit la solution de connectivité automobile, utilisez autant que possible le contrôle vocal en conduisant. Définissez la destination à l'avance, choisissez la playlist avant de rouler, ne manipulez pas l'écran de la voiture en roulant.
@@ -86,7 +86,7 @@ Les réunions sont le scénario le plus fréquent pour la duplication d'écran, 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercice : effectuez une duplication du smartphone vers le téléviseur
+Exercice : effectuez une duplication du smartphone vers le téléviseur
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Assurez-vous que le smartphone et la TV sont sur le même WiFi.
@@ -98,7 +98,7 @@ Les réunions sont le scénario le plus fréquent pour la duplication d'écran, 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Résumé du chapitre
+Résumé du chapitre
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Trois camps de duplication sans fil : AirPlay (Apple), Miracast (Android), DLNA (push multimédia multiplateforme)

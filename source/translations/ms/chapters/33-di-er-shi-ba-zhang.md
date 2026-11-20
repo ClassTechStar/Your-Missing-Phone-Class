@@ -18,7 +18,7 @@ Sesetengah Android menyokong kad SD untuk tambah storan. Pilih kad SD Class 10 a
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>2. Adoptable Storage
+2. Adoptable Storage
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Android 6+ menyokong "Adoptable Storage", format kad SD sebagai storan dalaman, gabung dengan storan telefon.</strong>: Fotografi? Main permainan? Jangka hayat bateri? Skrin? Sistem lancar? Atau hanya perlu boleh telefon hantar WeChat sudah cukup? Susun keperluan mengikut keutamaan.
@@ -33,41 +33,41 @@ iPhone: Tetapan → App Store → Offload App Tidak Diguna ‑ Buang App tetapi 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. Had simpanan WeChat</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">WeChat: Saya → Tetapan → Storan → Had storan ‑ Tetapkan had saiz WeChat.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Pemproses (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Guna App pembersih seperti CCleaner atau fungsi terbina dalam pengeluar untuk buang cache secara automatik.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Beli baru bukan lama, SoC tentukan berapa tahun telefon anda boleh guna tanpa lag</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Telefon kadang-kadang hadapi masalah: perlahan, panas, bateri cepat habis, App ranap. Bab ini membincangkan penyelesaian untuk masalah biasa.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED berbanding LCD warna lebih baik, lebih jimat kuasa; kadar segar 120Hz berbanding 60Hz skrol lebih lancar; resolusi sekurang-kurangnya 1080P ke atas. PWM modulasi frekuensi tinggi (1920Hz ke atas) lebih mesra mata.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+PWM frekuensi tinggi = garis lulus skrin baik</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Banyak peranti dan mementingkan nisbah harga-prestasi → Ekosistem Xiaomi Mi Home paling lengkap, lampu, soket, robot pembersih semuanya ada.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Storan penuh: Storan lebih dari 90% akan sebabkan telefon perlahan.</strong> Terlalu banyak App latar belakang: App yang berjalan dalam latar belakang ambil RAM dan CPU.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sistem lama: OS lama mungkin tidak dioptimumkan untuk perkakasan baru.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">2. Penyelesaian</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh adalah garis lulus asas, 5000mAh ke atas cas sekali sehari sangat stabil. Cas pantas lihat watt: 60W ke atas dianggap pantas, 100W ke atas sangat pantas. Cas wayarles mudah tetapi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tutup App latar belakang: Tutup App yang tidak digunakan dari app switcher.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kemas kini OS: Pastikan OS dalam versi terbaru.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tentukan telefon boleh selamat guna berapa lama. Apple biasanya beri 5-6 tahun kemas kini sistem; Samsung flagship beri 4 tahun sistem + 5 tahun kemas kini keselamatan; Google Pixel beri 7 tahun; telefon kelas pertengahan domestik komitmen kemas kini umumnya pendek (2-3 tahun).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">II. Telefon panas</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. Had simpanan WeChat</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">WeChat: Saya → Tetapan → Storan → Had storan ‑ Tetapkan had saiz WeChat.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Pemproses (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Guna App pembersih seperti CCleaner atau fungsi terbina dalam pengeluar untuk buang cache secara automatik.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Beli baru bukan lama, SoC tentukan berapa tahun telefon anda boleh guna tanpa lag</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Telefon kadang-kadang hadapi masalah: perlahan, panas, bateri cepat habis, App ranap. Bab ini membincangkan penyelesaian untuk masalah biasa.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED berbanding LCD warna lebih baik, lebih jimat kuasa; kadar segar 120Hz berbanding 60Hz skrol lebih lancar; resolusi sekurang-kurangnya 1080P ke atas. PWM modulasi frekuensi tinggi (1920Hz ke atas) lebih mesra mata.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+PWM frekuensi tinggi = garis lulus skrin baik</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Banyak peranti dan mementingkan nisbah harga-prestasi → Ekosistem Xiaomi Mi Home paling lengkap, lampu, soket, robot pembersih semuanya ada.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Storan penuh: Storan lebih dari 90% akan sebabkan telefon perlahan.</strong> Terlalu banyak App latar belakang: App yang berjalan dalam latar belakang ambil RAM dan CPU.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sistem lama: OS lama mungkin tidak dioptimumkan untuk perkakasan baru.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">2. Penyelesaian</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh adalah garis lulus asas, 5000mAh ke atas cas sekali sehari sangat stabil. Cas pantas lihat watt: 60W ke atas dianggap pantas, 100W ke atas sangat pantas. Cas wayarles mudah tetapi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tutup App latar belakang: Tutup App yang tidak digunakan dari app switcher.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kemas kini OS: Pastikan OS dalam versi terbaru.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tentukan telefon boleh selamat guna berapa lama. Apple biasanya beri 5-6 tahun kemas kini sistem; Samsung flagship beri 4 tahun sistem + 5 tahun kemas kini keselamatan; Google Pixel beri 7 tahun; telefon kelas pertengahan domestik komitmen kemas kini umumnya pendek (2-3 tahun).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">II. Telefon panas</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">4. "Telinga" Pengguna Pekak — Panduan Lengkap Sarikata Masa Nyata</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kata laluan salah: Pastikan kata laluan Wi-Fi betul.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Router bermasalah: Router mungkin perlu direstart.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Pakar fotografi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Penyelesaian</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Siri vivo X, siri Huawei Pura/Mate, siri Xiaomi Ultra</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Pemain permainan</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemproses top, kadar sampel sentuh tinggi, sistem dissipasi haba, bateri besar + cas pantas</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Set semula tetapan rangkaian: Tetapan → Umum → Set Semula → Set Semula Tetapan Rangkaian (iPhone).</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Prioriti jangka hayat bateri</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bateri 5500mAh ke atas, pemproses kecekapan baik, skrin LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Siri Honor Magic, OnePlus, Redmi Note versi bateri besar</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👳 Pengguna warga emas</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mod mudah, fon besar, volum besar, bateri besar, banyak pusat servis</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Changxiang, Honor Play, siri OPPO A, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Telefon pelajar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nisbah harga-prestasi tinggi, tahan lama, bateri besar, ada kawalan ibu bapa</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Pengguna ekosistem Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Set semula tetapan rangkaian: Sama seperti penyelesaian Wi-Fi.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VII. Tidak boleh cas</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Travel ke luar negara</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Port cas kotor: Debu atau kotoran dalam port USB-C/Lightning.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, siri Samsung S, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">4. "Telinga" Pengguna Pekak — Panduan Lengkap Sarikata Masa Nyata</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kata laluan salah: Pastikan kata laluan Wi-Fi betul.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Router bermasalah: Router mungkin perlu direstart.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Pakar fotografi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Penyelesaian</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Siri vivo X, siri Huawei Pura/Mate, siri Xiaomi Ultra</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Pemain permainan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemproses top, kadar sampel sentuh tinggi, sistem dissipasi haba, bateri besar + cas pantas</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Set semula tetapan rangkaian: Tetapan → Umum → Set Semula → Set Semula Tetapan Rangkaian (iPhone).</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Prioriti jangka hayat bateri</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bateri 5500mAh ke atas, pemproses kecekapan baik, skrin LTPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Siri Honor Magic, OnePlus, Redmi Note versi bateri besar</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👳 Pengguna warga emas</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mod mudah, fon besar, volum besar, bateri besar, banyak pusat servis</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Changxiang, Honor Play, siri OPPO A, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Telefon pelajar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nisbah harga-prestasi tinggi, tahan lama, bateri besar, ada kawalan ibu bapa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Pengguna ekosistem Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Set semula tetapan rangkaian: Sama seperti penyelesaian Wi-Fi.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VII. Tidak boleh cas</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Travel ke luar negara</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Port cas kotor: Debu atau kotoran dalam port USB-C/Lightning.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, siri Samsung S, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Android: Tekan lama skrin utama → Pilih Widget → Letakkan di skrin.
+Android: Tekan lama skrin utama → Pilih Widget → Letakkan di skrin.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 2. Widget berguna.
@@ -208,7 +208,7 @@ Cas sambil guna: Cas dan guna telefon serentak menghasilkan haba.
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - III. Pintasan dan automasi

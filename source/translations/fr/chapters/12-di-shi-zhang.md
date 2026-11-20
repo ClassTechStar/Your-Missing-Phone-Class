@@ -64,7 +64,7 @@ Les changements ces dernières années sont considérables, beaucoup de démarch
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Retenez ces règles, pour vous protéger des arnaques
+Retenez ces règles, pour vous protéger des arnaques
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Les autorités judiciaires, les banques et le service client ne vous demanderont jamais de transférer vers un « compte sécurisé ».
@@ -75,7 +75,7 @@ Les changements ces dernières années sont considérables, beaucoup de démarch
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Faites-le maintenant : effectuez un bilan de sécurité de vos applications de paiement
+Faites-le maintenant : effectuez un bilan de sécurité de vos applications de paiement
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez Alipay et WeChat, confirmez que le paiement par empreinte/visage est activé.

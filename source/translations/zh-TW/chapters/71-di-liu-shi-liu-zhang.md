@@ -40,27 +40,27 @@ API Key 相當於你的"錢包密碼"，寫進程式碼一提交到 GitHub，幾
 ```
 // JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
 struct WeatherResponse: Codable {
-    let weather: [Weather]
-    let main: Main
-    let name: String
+ let weather: [Weather]
+ let main: Main
+ let name: String
 }
 struct Weather: Codable { let description: String }
 struct Main: Codable { let temp: Double; let humidity: Int }
 
 struct WeatherService {
-    let key: String   // 從 xcconfig 讀入
+ let key: String // 從 xcconfig 讀入
 
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
-        comps.queryItems = [
-            URLQueryItem(name: "q", value: city),
-            URLQueryItem(name: "appid", value: key),
-            URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "lang", value: "zh_cn")
-        ]
-        let (data, _) = try await URLSession.shared.data(from: comps.url!)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+ comps.queryItems = [
+ URLQueryItem(name: "q", value: city),
+ URLQueryItem(name: "appid", value: key),
+ URLQueryItem(name: "units", value: "metric"),
+ URLQueryItem(name: "lang", value: "zh_cn")
+ ]
+ let (data, _) = try await URLSession.shared.data(from: comps.url!)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 ```
 :::
@@ -76,25 +76,25 @@ struct WeatherService {
 
 ```
 enum LoadState {
-    case loading                  // 轉圈中
-    case success(WeatherResponse) // 成功
-    case error(String)            // 失敗
+ case loading // 轉圈中
+ case success(WeatherResponse) // 成功
+ case error(String) // 失敗
 }
 
 @Observable
 class WeatherViewModel {
-    var state: LoadState = .loading
-    private let service = WeatherService(key: Config.apiKey)
+ var state: LoadState = .loading
+ private let service = WeatherService(key: Config.apiKey)
 
-    func search(city: String) async {
-        state = .loading
-        do {
-            let data = try await service.fetchWeather(city: city)
-            state = .success(data)
-        } catch {
-            state = .error("查不到這個城市，換個名字試試？")
-        }
-    }
+ func search(city: String) async {
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ state = .success(data)
+ } catch {
+ state = .error("查不到這個城市，換個名字試試？")
+ }
+ }
 }
 
 // 介面裡：
@@ -117,24 +117,24 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 
 ```
 struct WeatherContent: View {
-    let data: WeatherResponse
+ let data: WeatherResponse
 
-    var body: some View {
-        VStack(spacing: 12) {
-            Text(data.name)
-                .font(.title.bold())
-            Text("\(Int(data.main.temp))°C")
-                .font(.system(size: 76, weight: .thin))
-            Text(data.weather.first?.description ?? "未知")
-                .font(.title3)
-                .foregroundColor(.secondary)
-            HStack(spacing: 24) {
-                Label("溼度 \(data.main.humidity)%", systemImage: "humidity")
-                Label("體感 \(Int(data.main.temp))°C", systemImage: "thermometer")
-            }
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 12) {
+ Text(data.name)
+ .font(.title.bold())
+ Text("\(Int(data.main.temp))°C")
+ .font(.system(size: 76, weight: .thin))
+ Text(data.weather.first?.description ?? "未知")
+ .font(.title3)
+ .foregroundColor(.secondary)
+ HStack(spacing: 24) {
+ Label("溼度 \(data.main.humidity)%", systemImage: "humidity")
+ Label("體感 \(Int(data.main.temp))°C", systemImage: "thermometer")
+ }
+ }
+ .padding()
+ }
 }
 ```
 :::

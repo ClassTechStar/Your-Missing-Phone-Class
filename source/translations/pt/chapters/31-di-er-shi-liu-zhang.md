@@ -80,7 +80,7 @@ VII. Resumo do capítulo: lembre-se destas fronteiras em uma frase
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Experimente: faça uma "lista de requisitos técnicos" para seu próximo celular
+Experimente: faça uma "lista de requisitos técnicos" para seu próximo celular
 
 {class="mt-1"}
 Pegue uma folha de papel e, nas categorias "Essencial / Diferencial / Desnecessário", liste suas necessidades quanto a IA, satélite, tela dobrável, Wi-Fi 7, carregamento rápido e capacidade de bateria. Assim, na próxima vez que for a uma loja física, você conseguirá julgar rapidamente se os "diferenciais" recomendados pelo vendedor são necessidades reais ou apenas tentativa de venda. Por exemplo:
@@ -93,7 +93,7 @@ Pegue uma folha de papel e, nas categorias "Essencial / Diferencial / Desnecess�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo
+Resumo do capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Três critérios do celular com IA: modelo on-device, TOPS da NPU, cenários de AI Agent

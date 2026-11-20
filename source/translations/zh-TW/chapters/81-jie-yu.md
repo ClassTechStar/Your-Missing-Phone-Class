@@ -22,7 +22,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>最後一個練習
+最後一個練習
 
 {class="mt-1"}
 合上這本書，拿起你的手機，做一件事：<strong>用30秒想想，你的手機裡有哪三樣東西是"丟了會真正心疼"的？</strong>然後，確保它們被備份了。這本書就值了。

@@ -69,14 +69,14 @@ kind: supplement
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">拍什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议组合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常记录、发朋友圈</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1080P + 30fps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件小、发热低，手机屏幕看足够清晰</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子跑跳、宠物、运动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4K 或 1080P + 60fps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高帧率少丢动作细节，后期还能放慢</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旅行 Vlog</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4K + 30fps（想要电影感可用 24fps）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">细节保留多，剪辑有裁切余量</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">慢动作素材</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高帧率模式（120fps/240fps，视机型）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">回放时变慢镜头，注意光线要足</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专业后期流程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4K + ProRes（支持的机型）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">保留最大编辑空间，建议配外接存储</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">拍什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议组合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常记录、发朋友圈</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1080P + 30fps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件小、发热低，手机屏幕看足够清晰</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子跑跳、宠物、运动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4K 或 1080P + 60fps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高帧率少丢动作细节，后期还能放慢</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旅行 Vlog</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4K + 30fps（想要电影感可用 24fps）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">细节保留多，剪辑有裁切余量</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">慢动作素材</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高帧率模式（120fps/240fps，视机型）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">回放时变慢镜头，注意光线要足</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专业后期流程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4K + ProRes（支持的机型）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">保留最大编辑空间，建议配外接存储</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -184,13 +184,13 @@ RAW 视频把"中间商"进一步砍掉了。普通视频在机内就完成了�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">格式</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最大优势</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主要短板</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">H.264</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">兼容性极好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件较大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发给别人看的人</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">H.265</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同画质体积小一半左右</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老设备可能不兼容</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自留素材的日常用户</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ProRes</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后期编辑空间大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件极大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有专业剪辑流程的创作者</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ProRes RAW</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">曝光白平衡后期可改</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件极其巨大、依赖专业软件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高端专业制作</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">格式</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最大优势</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主要短板</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">H.264</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">兼容性极好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件较大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发给别人看的人</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">H.265</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同画质体积小一半左右</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老设备可能不兼容</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自留素材的日常用户</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ProRes</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后期编辑空间大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件极大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有专业剪辑流程的创作者</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ProRes RAW</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">曝光白平衡后期可改</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件极其巨大、依赖专业软件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高端专业制作</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -271,7 +271,7 @@ sRGB 是互联网的通用语言：网上绝大多数图片按它制作，任何
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>实用建议
+实用建议
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 日常拍摄：1080P/4K + 30fps + H.265编码，平衡画质和文件大小。
@@ -283,7 +283,7 @@ sRGB 是互联网的通用语言：网上绝大多数图片按它制作，任何
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>去探索一下：你的手机视频设置
+去探索一下：你的手机视频设置
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开相机App，切换到视频模式。
@@ -558,23 +558,23 @@ AI 消除和 AI 扩图值得多说两句，因为它们和多帧合成不是一�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">术语</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话解释</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">普通用户需要关心的程度</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分辨率</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">画面由多少像素拼成，管清晰度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——按观看设备选</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">帧率</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一秒翻多少张画面，管流畅度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——拍运动必须懂</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">码率</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每秒写入多少数据，管细节保留</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——知道它影响画质即可</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编码格式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频的打包方式，管体积和兼容</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——H.265 自留、H.264 外发</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HDR</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同时保留亮部和暗部细节的技术体系</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——注意播放链路</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAW</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">未经处理的原始数据，管后期空间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——重要场景值得开</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多帧合成</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍多张叠一张，降噪扩动态范围</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——解释夜景模式的行为</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">等效焦距</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换算后的镜头视角，管构图</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——选镜头的依据</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光圈</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进光的孔径，f 值越小越大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——夜景和虚化的硬件基础</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信号的放大倍数，越高噪点越多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低——自动挡会处理</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快门速度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进光时间，慢了拖影快了凝固</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——懂了能解释大多数糊片</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">像素融合</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多像素并一个，兼顾亮度与细节</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低——知道默认照片是融合的就行</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白平衡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把白色还原成白色的过程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——偏色时知道原因</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防抖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬件或算法抵消手抖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——该上三脚架别硬扛</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">术语</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话解释</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">普通用户需要关心的程度</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分辨率</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">画面由多少像素拼成，管清晰度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——按观看设备选</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">帧率</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一秒翻多少张画面，管流畅度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——拍运动必须懂</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">码率</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每秒写入多少数据，管细节保留</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——知道它影响画质即可</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编码格式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频的打包方式，管体积和兼容</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——H.265 自留、H.264 外发</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HDR</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同时保留亮部和暗部细节的技术体系</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——注意播放链路</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAW</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">未经处理的原始数据，管后期空间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——重要场景值得开</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多帧合成</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍多张叠一张，降噪扩动态范围</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——解释夜景模式的行为</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">等效焦距</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换算后的镜头视角，管构图</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高——选镜头的依据</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光圈</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进光的孔径，f 值越小越大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——夜景和虚化的硬件基础</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信号的放大倍数，越高噪点越多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低——自动挡会处理</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快门速度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进光时间，慢了拖影快了凝固</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——懂了能解释大多数糊片</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">像素融合</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多像素并一个，兼顾亮度与细节</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低——知道默认照片是融合的就行</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白平衡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把白色还原成白色的过程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——偏色时知道原因</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防抖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬件或算法抵消手抖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中——该上三脚架别硬扛</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -661,7 +661,7 @@ AI 消除和 AI 扩图值得多说两句，因为它们和多帧合成不是一�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>静态摄影实用建议
+静态摄影实用建议
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 日常拍摄：HEIF/JPEG默认即可，文件小、画质够用。
@@ -673,7 +673,7 @@ AI 消除和 AI 扩图值得多说两句，因为它们和多帧合成不是一�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 先想「这张照片要给谁看、会不会放大」，再决定用哪档设置，比背参数表有效。
@@ -681,7 +681,7 @@ AI 消除和 AI 扩图值得多说两句，因为它们和多帧合成不是一�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手试试：摸清你的相机能力
+动手试试：摸清你的相机能力
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 查看你的手机是否支持RAW拍摄（设置→相机→格式），试着开启并拍摄一张，对比同一场景的JPEG和RAW文件大小。
@@ -692,7 +692,7 @@ AI 消除和 AI 扩图值得多说两句，因为它们和多帧合成不是一�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 视频三要素各司其职：分辨率管清晰、帧率管流畅、码率管细节；按"在哪看"选档，别无脑拉满

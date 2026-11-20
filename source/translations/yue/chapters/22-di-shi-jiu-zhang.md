@@ -87,7 +87,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>萬能第一招：重啟手機
+萬能第一招：重啟手機
 
 {class="mt-1"}
 唔管你遇到乜嘢問題——卡頓、閃退、連唔上網、聲音異常——先重啟一下手機。呢句話聽落似係敷衍，但以我自己嘅經驗。至少有六成嘅小毛病重啟之後就好喇。手機同電腦一樣，跑得耐記憶體入面會積累各種亂七八糟嘅嘢，重啟就係清空重來。所以，下次手機出問題，先唔好急住搜「點算」，重啟完咗再睇下。
@@ -95,7 +95,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>而家就記：呢啲救命操作要爛熟於心
+而家就記：呢啲救命操作要爛熟於心
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>強制重啟</strong>：全面屏iPhone撳音量加 → 音量減 → 長撳電源鍵到出現Logo。安卓長撳電源鍵10-15秒直到震動。

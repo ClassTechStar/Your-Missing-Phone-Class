@@ -64,7 +64,7 @@ In den letzten Jahren hat sich viel verändert – viele Dinge, für die man fr�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Merken Sie sich diese Punkte, um Betrug zu vermeiden
+Merken Sie sich diese Punkte, um Betrug zu vermeiden
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Polizei, Staatsanwaltschaft, Banken oder Kundenservice werden Sie niemals auffordern, auf ein „Sicherheitskonto" zu überweisen.
@@ -75,7 +75,7 @@ In den letzten Jahren hat sich viel verändert – viele Dinge, für die man fr�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt tun: Führen Sie eine Sicherheitsüberprüfung Ihrer Zahlungs-Apps durch
+Jetzt tun: Führen Sie eine Sicherheitsüberprüfung Ihrer Zahlungs-Apps durch
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Öffnen Sie Alipay und WeChat und bestätigen Sie, dass Fingerabdruck-/Gesichtszahlung aktiviert ist.

@@ -67,7 +67,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب الآن: ابنِ سير عمل المكتب المتنقل الخاص بك
+جرّب الآن: ابنِ سير عمل المكتب المتنقل الخاص بك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. اختر تطبيق المستندات الرئيسي (WPS أو Microsoft 365)، وسجّل الدخول واربطه بالتخزين السحابي.

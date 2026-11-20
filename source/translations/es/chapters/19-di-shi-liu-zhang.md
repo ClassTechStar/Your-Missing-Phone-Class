@@ -44,7 +44,7 @@ Aviso importante: la biblioteca de fotos de iCloud no es "disco en la nube", es 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: el trio de privacidad solo para suscriptores de pago
+iCloud+: el trio de privacidad solo para suscriptores de pago
 
 {class="mt-1"}
 Al pasar a cualquier nivel de pago de iCloud (50 GB, 200 GB, 2 TB, etc.) te conviertes automaticamente en <strong>iCloud+</strong> y desbloqueas tres funciones de privacidad:
@@ -60,7 +60,7 @@ Nota: Private Relay no esta disponible en algunos paises o regiones; los usuario
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>Proteccion avanzada de datos de iCloud (ADP): cifrado de extremo a extremo real
+Proteccion avanzada de datos de iCloud (ADP): cifrado de extremo a extremo real
 
 {class="mt-1"}
 A finales de 2022 Apple lanzo <strong>Proteccion avanzada de datos de iCloud (Advanced Data Protection, ADP)</strong>, ampliando el cifrado de extremo a extremo (E2EE) de los pocos datos anteriores (salud, contrasenas) a <strong>la mayor parte de los datos de iCloud</strong>-- fotos, notas, copias de seguridad de iCloud, informacion del dispositivo, 23 categorias en total.
@@ -99,7 +99,7 @@ Un escenario muy práctico: Configura Familia compartida en el móvil de tus pad
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Las consecuencias de que roben tu cuenta son más graves de lo que imaginas
+Las consecuencias de que roben tu cuenta son más graves de lo que imaginas
 
 {class="mt-1"}
 Si un hacker obtiene tu contraseña puede: bloquear remotamente tu móvil y exigir rescate, ver tus fotos y contactos, comprar cosas con tus métodos de pago. Peor aún: si tu cuenta está vinculada a muchas cosas, recuperarla es una pesadilla. Así que activa la 2FA, ya mismo.
@@ -107,7 +107,7 @@ Si un hacker obtiene tu contraseña puede: bloquear remotamente tu móvil y exig
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica: haz un chequeo completo de tu cuenta
+Practica: haz un chequeo completo de tu cuenta
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abre los ajustes del móvil, ve a la página de cuenta y confirma que la autenticación de dos factores está activada.

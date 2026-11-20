@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事項
+注意事項
 
 {class="mt-1"}
 開發者模式入面嘅設定可能會影響系統穩定性，唔明嘅選項唔好亂改。開啟USB調試後，連接電腦嗰陣要小心，唔好連接唔信任嘅電腦。
@@ -57,7 +57,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：點解廠商要設定呢個開關
+小知識：點解廠商要設定呢個開關
 
 {class="mt-1"}
 早期安卓冇呢個開關。惡意軟件淨係攞到權限就可以偷偷刷入系統。Google後來要求所有安卓廠商喺開發者選項中加入「OEM解鎖」開關，作為一道「用戶知情同意」嘅確認。呢個都係點解即便你解咗BL鎖，如果OEM解鎖開關被關閉，重新刷機仍然會失敗。
@@ -95,7 +95,7 @@ ADB 全稱 Android Debug Bridge（安卓調試橋），係 Google 官方提供�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>驅動同授權彈窗唔好忽略
+驅動同授權彈窗唔好忽略
 
 {class="mt-1"}
 Windows 用戶如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> 顯示 "unauthorized" 或根本唔列出設備，多半係驅動冇裝好或者唔記得喺手機上撳「允許」。三星/小米等品牌可以裝各自嘅「USB驅動」或「手機助手」嚟補齊驅動；Mac 同 Linux 一般免驅。如果手機彈窗被你手滑撳冇咗，拔插一下數據線就會重新彈出嚟。
@@ -124,7 +124,7 @@ Windows 用戶如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>千萬唔好亂刪系統核心包
+千萬唔好亂刪系統核心包
 
 {class="mt-1"}
 "pm uninstall --user 0"雖然係免 Root 嘅安全方式，但亂刪關鍵系統應用（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> 狀態欄、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> 電話、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> 設定）會導致系統崩潰、黑屏、無法開機等嚴重問題。刪之前先 Google 一下「呢個包名可唔可以刪」，寧可少刪唔好錯刪。建議一次淨係刪一兩個，確認冇問題再繼續。
@@ -132,7 +132,7 @@ Windows 用戶如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：--user 0 係乜嘢意思
+小知識：--user 0 係乜嘢意思
 
 {class="mt-1"}
 安卓 4.2 之後支援多用戶，每個用戶有獨立嘅 ID（機主係 0，附加用戶由 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示「淨係對當前機主卸載」。系統分區入面嘅 APK 檔案依然存在，淨係唔畀機主顯示。呢個就係點解佢唔需要 Root，冇鬱系統檔案，淨係改咗「用戶配置」。呢個都係佢同 Root 後卸載最大嘅區別：Root 卸載係真正由系統入面刪掉，所有用戶都唔再有；ADB 卸載淨係「對當前用戶隱藏」。
@@ -159,7 +159,7 @@ Root權限相當於Linux中嘅超級用戶（對/目錄擁有完全控制權，�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>嚴重警告
+嚴重警告
 
 {class="mt-1"}
 Root操作有一定風險，可能導致手機變磚（無法開機）。如果你係新手，建議先充分了解相關知識，並確保有完整嘅備份。操作前請仔細閲讀教程，確認你嘅機型同系統版本。
@@ -198,7 +198,7 @@ Root操作有一定風險，可能導致手機變磚（無法開機）。如果�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>貓鼠遊戲永遠唔會結束
+貓鼠遊戲永遠唔會結束
 
 {class="mt-1"}
 Google 每隔一段時間就會更新檢測規則，App 廠商都會跟進升級 Play Integrity 校驗。今日仲可以用嘅隱藏方案，聽日可能就被識別。如果你完全依賴銀行/支付 App（比如日常轉賬、掃碼付款），最穩妥嘅選擇仍然係：唔好 Root、唔好解 BL 鎖。隱藏方案更適合「主力機唔 Root + 後備機玩 Root」嘅玩家配置。
@@ -213,7 +213,7 @@ Google 每隔一段時間就會更新檢測規則，App 廠商都會跟進升級
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>嚟動手：開啟開發者模式並調整動畫速度
+嚟動手：開啟開發者模式並調整動畫速度
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 進入設定 > 關於手機。

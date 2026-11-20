@@ -102,7 +102,7 @@ HDR10
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>日常撮影：1080P/4K + 30fps + H.265エンコード、画質とファイルサイズのバランス。
+日常撮影：1080P/4K + 30fps + H.265エンコード、画質とファイルサイズのバランス。
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - スポーツ撮影：1080P/4K + 60fps、滑らかさを確保。
@@ -113,7 +113,7 @@ HDR10
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>カメラAppを開き、動画モードに切り替え。
+カメラAppを開き、動画モードに切り替え。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 解像度とフレームレートのオプションを確認し、異なる組み合わせを試す。
@@ -241,7 +241,7 @@ AIは単に画像全体を一律に処理するのではなく、まず画面に
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>静止画撮影の実用アドバイス
+静止画撮影の実用アドバイス
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 日常撮影：HEIF/JPEGのデフォルトで十分。ファイルが小さく、画質も実用十分。
@@ -253,7 +253,7 @@ AIは単に画像全体を一律に処理するのではなく、まず画面に
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>試してみよう：あなたのカメラの能力を把握する
+試してみよう：あなたのカメラの能力を把握する
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. スマホがRAW撮影に対応しているか確認（設定→カメラ→フォーマット）。有効にして1枚撮影し、同じシーンのJPEGとRAWのファイルサイズを比較。

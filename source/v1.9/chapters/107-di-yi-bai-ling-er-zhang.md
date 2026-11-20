@@ -511,7 +511,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：题材红线要背熟
+避坑提醒：题材红线要背熟
 
 {class="mt-1"}
 短剧审查与网络视听内容管理规则一致：低俗擦边、暴力血腥、封建迷信、渲染赌博犯罪、恶意丑化特定群体等题材不能碰；"重生""穿越"也要避免宣扬宿命论与极端价值观。剧本过不了审，制作再好也是零，动笔前先读第 105 章的平台政策。再记一句：备案后的剧名、结局、集数改动也要重新报审，剧本定稿再开机，别边拍边改结局。
@@ -519,7 +519,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：写你的第 1 集
+来动手：写你的第 1 集
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 用"三拍一钩"模板写一集 1.5 分钟剧本（标准剧本格式：场号/景别/人物/对白）。
@@ -636,7 +636,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：给剧本建一个"结构病历本"
+小贴士：给剧本建一个"结构病历本"
 
 {class="mt-1"}
 每次稿子被拒或数据不好，把病灶记进一个本子：铺垫超时、反转空降、钩子抽象……用本章前文的病名来记。下次交稿前翻一遍病历本，重点检查自己"惯犯"的那几项。病历本攒厚了，你会发现自己的病灶高度集中，那几条，就是你的改稿优先级。
@@ -943,7 +943,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 三拍一钩：黄金 3 秒 / 铺垫 / 反转 / 再压 / 钩子
 - 情绪曲线压→爆→压→悬，追的是过山车不是逻辑

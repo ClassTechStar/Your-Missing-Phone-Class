@@ -24,51 +24,51 @@ Principe fondamental : le nettoyage des données n'est pas une « suppression »
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marque</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Entrée d'effacement</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Différences clés et points d'attention</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Système et mises à jour &gt; Réinitialisation &gt; Réinitialisation d'usine</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il faut d'abord se déconnecter du compte Huawei et désactiver « Localiser mon appareil », sinon le verrou d'activation se déclenche ; en mode pur, une vérification par mot de passe peut être nécessaire.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Mon appareil &gt; Réinitialisation d'usine</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En bas se trouvent les options « Formater la carte SD virtuelle » et « Effacer tout le contenu et les réglages », les deux doivent être cochées ; avant de se déconnecter du compte Xiaomi, désactivez « Localiser l'appareil ».</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Autres réglages &gt; Restaurer le smartphone &gt; Effacer complètement toutes les données</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS propose un mode « effacement complet » qui couvre plusieurs fois le stockage ; la saisie du code de déverrouillage est requise pour confirmer.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Gestion du système &gt; Sauvegarde et réinitialisation &gt; Effacer toutes les données</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cochez « Formater le stockage du smartphone » pour nettoyer la zone de la carte SD ; il faut se déconnecter du compte vivo et désactiver « Localiser le smartphone ».</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Gestion générale &gt; Réinitialisation &gt; Réinitialisation d'usine</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il faut d'abord supprimer le compte Samsung et désactiver « Localiser mon appareil » ; certains modèles ont une option « écrasement automatique », dont l'activation est recommandée.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Général &gt; Transférer ou réinitialiser l'iPhone &gt; Effacer tout le contenu et les réglages</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il faut impérativement se déconnecter de l'Apple ID au préalable, sinon le prochain utilisateur sera bloqué par le verrou d'activation iCloud ; iOS 15+ prend en charge « conserver les données iCloud lors de la déconnexion » pour consultation ultérieure.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marque</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Entrée d'effacement</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Différences clés et points d'attention</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Système et mises à jour &gt; Réinitialisation &gt; Réinitialisation d'usine</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il faut d'abord se déconnecter du compte Huawei et désactiver « Localiser mon appareil », sinon le verrou d'activation se déclenche ; en mode pur, une vérification par mot de passe peut être nécessaire.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Mon appareil &gt; Réinitialisation d'usine</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En bas se trouvent les options « Formater la carte SD virtuelle » et « Effacer tout le contenu et les réglages », les deux doivent être cochées ; avant de se déconnecter du compte Xiaomi, désactivez « Localiser l'appareil ».</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Autres réglages &gt; Restaurer le smartphone &gt; Effacer complètement toutes les données</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS propose un mode « effacement complet » qui couvre plusieurs fois le stockage ; la saisie du code de déverrouillage est requise pour confirmer.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Gestion du système &gt; Sauvegarde et réinitialisation &gt; Effacer toutes les données</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cochez « Formater le stockage du smartphone » pour nettoyer la zone de la carte SD ; il faut se déconnecter du compte vivo et désactiver « Localiser le smartphone ».</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Gestion générale &gt; Réinitialisation &gt; Réinitialisation d'usine</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il faut d'abord supprimer le compte Samsung et désactiver « Localiser mon appareil » ; certains modèles ont une option « écrasement automatique », dont l'activation est recommandée.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Général &gt; Transférer ou réinitialiser l'iPhone &gt; Effacer tout le contenu et les réglages</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il faut impérativement se déconnecter de l'Apple ID au préalable, sinon le prochain utilisateur sera bloqué par le verrou d'activation iCloud ; iOS 15+ prend en charge « conserver les données iCloud lors de la déconnexion » pour consultation ultérieure.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Les trois choses les plus facilement oubliées
+Les trois choses les plus facilement oubliées
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Compte non déconnecté</strong> : Le smartphone est verrouillé à distance après la vente, et vous ne pouvez plus y accéder non plus, vous devez finalement vous rendre au service après-vente officiel avec votre pièce d'identité pour le faire déverrouiller.
@@ -82,7 +82,7 @@ Les données dans le smartphone ne sont plus « virtuelles » depuis longtemps. 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>Base juridique : article 49 de la loi sur la protection des informations personnelles
+Base juridique : article 49 de la loi sur la protection des informations personnelles
 
 {class="mt-1"}
 L'article 49 de la « Loi de la République populaire de Chine sur la protection des informations personnelles », entrée en vigueur en 2021, stipule clairement :<strong>En cas de décès d'une personne physique, ses proches parents peuvent, pour leurs propres intérêts légitimes et légaux, exercer les droits de consultation, de copie, de correction et de suppression des informations personnelles du défunt tels que définis dans ce chapitre ; sauf arrangement contraire pris par le défunt de son vivant.</strong>
@@ -108,7 +108,7 @@ Ces deux applications les plus utilisées par les Chinois ont des règles diffé
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Ce qu'il ne faut absolument pas faire
+Ce qu'il ne faut absolument pas faire
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Ne remettez pas directement les mots de passe du compte du défunt à la famille pour « continuer à l'utiliser »</strong> — cela enfreint le contrat de la plateforme, et en cas de gel des fonds ou de déclenchement du contrôle des risques, la charge de la preuve est encore plus difficile.
@@ -153,7 +153,7 @@ Les principales plateformes de réseaux sociaux nationales traitent les comptes 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Rappel important
+Rappel important
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Les règles de chaque plateforme peuvent évoluer, consultez les dernières instructions du service client officiel avant de procéder.
@@ -174,7 +174,7 @@ Outre les comptes de réseaux sociaux, de plus en plus de personnes détiennent 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Le coût réel de la « disparition » des cryptomonnaies
+Le coût réel de la « disparition » des cryptomonnaies
 
 {class="mt-1"}
 Selon un rapport de Chainalysis, plus de <strong>3 millions de bitcoins</strong> sont déjà perdus à jamais dans le monde en raison de clés privées perdues, soit un sixième du total existant. Si vous détenez des actifs cryptographiques, assurez-vous qu'au moins une personne en qui vous avez une confiance absolue connaisse le <strong>chemin de récupération</strong> — sinon, ces richesses resteront endormies pour toujours sur la blockchain.
@@ -227,7 +227,7 @@ Le testament patrimonial traditionnel ne peut pas gérer les actifs numériques.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Avertissement juridique concernant les « mots de passe »
+Avertissement juridique concernant les « mots de passe »
 
 {class="mt-1"}
 Écrire les mots de passe directement dans le testament présente un risque de fuite, et après la publication du testament, tous les héritiers pourront les voir.<strong>Une approche plus sûre consiste à : n'inscrire dans le testament que la « liste des comptes + volonté de disposition + emplacement de gestion des mots de passe », et à transmettre séparément le mot de passe principal du gestionnaire de mots de passe à l'exécuteur de confiance</strong>. Cela répond aux exigences juridiques tout en réduisant le risque de fuite de mots de passe.
@@ -239,41 +239,41 @@ Un smartphone contient des dizaines de métaux tels que l'or, l'argent, le cuivr
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Canal</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Prix de reprise</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sécurité des données</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Scénario d'utilisation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Reprise officielle (Huawei/Apple/Xiaomi, etc.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moyen, souvent accompagné de bons de réduction</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le plus élevé, processus officiel normalisé</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le plus avantageux quand vous envisagez de changer pour la même marque</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Plateformes de recyclage tierces (Aihuishou, Zhuanzhuan, Huishoubao, etc.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Légèrement supérieur, possibilité de comparer les prix</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez élevé, avec rapport d'effacement des données</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Si vous souhaitez encaisser directement sans dépendre d'une marque</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Don caritatif (écoles rurales, associations, etc.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aucun retour financier</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Effacement complet à faire soi-même</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">L'appareil est encore utilisable et vous voulez faire une bonne action</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réutilisation (transformation personnelle)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Économise le coût d'un nouvel appareil</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le propriétaire d'origine continue à l'utiliser, sans risque</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Les performances de l'appareil sont correctes, et vous avez un besoin de transformation à la maison</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Canal</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Prix de reprise</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sécurité des données</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Scénario d'utilisation</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Reprise officielle (Huawei/Apple/Xiaomi, etc.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moyen, souvent accompagné de bons de réduction</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le plus élevé, processus officiel normalisé</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le plus avantageux quand vous envisagez de changer pour la même marque</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Plateformes de recyclage tierces (Aihuishou, Zhuanzhuan, Huishoubao, etc.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Légèrement supérieur, possibilité de comparer les prix</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez élevé, avec rapport d'effacement des données</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Si vous souhaitez encaisser directement sans dépendre d'une marque</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Don caritatif (écoles rurales, associations, etc.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aucun retour financier</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Effacement complet à faire soi-même</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">L'appareil est encore utilisable et vous voulez faire une bonne action</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réutilisation (transformation personnelle)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Économise le coût d'un nouvel appareil</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le propriétaire d'origine continue à l'utiliser, sans risque</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Les performances de l'appareil sont correctes, et vous avez un besoin de transformation à la maison</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>Reprise/échange officiel</strong> : La méthode la plus recommandée, processus normalisé et sécurité des données garantie. Les sites officiels d'Apple, Huawei, Xiaomi, etc. proposent une entrée « reprise », l'estimation peut déduire du prix d'un nouvel appareil.
@@ -283,7 +283,7 @@ Un smartphone contient des dizaines de métaux tels que l'or, l'argent, le cuivr
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>La vérité sur les déchets électroniques
+La vérité sur les déchets électroniques
 
 {class="mt-1"}
 La carte de circuit imprimé d'un smartphone contient <strong>de l'or, de l'argent, du palladium et du cuivre</strong> et autres métaux précieux ; chaque tonne de cartes de circuit imprimé usagées contient des dizaines de fois plus d'or que le minerai aurifère. Mais en cas de mise en décharge sauvage, le plomb, le mercure et le cadmium qu'elles contiennent s'infiltrent dans les sols et les nappes phréatiques, polluant pendant des décennies.<strong>Un recyclage correct protège l'environnement et permet la régénération des métaux rares.</strong>
@@ -291,7 +291,7 @@ La carte de circuit imprimé d'un smartphone contient <strong>de l'or, de l'arge
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pratique : organisez des « funérailles standard » pour votre vieux smartphone
+Pratique : organisez des « funérailles standard » pour votre vieux smartphone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Dernière sauvegarde complète : photos téléchargées dans le cloud, fichiers importants copiés sur l'ordinateur, historique des discussions exporté et archivé.
@@ -305,7 +305,7 @@ La carte de circuit imprimé d'un smartphone contient <strong>de l'or, de l'arge
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Liste des tâches du mois
+Liste des tâches du mois
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Désignez un « contact de succession » Apple ou configurez le « gestionnaire de compte inactif » Google pour votre smartphone principal actuel.

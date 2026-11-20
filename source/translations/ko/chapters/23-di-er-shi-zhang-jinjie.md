@@ -46,7 +46,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>주의사항
+주의사항
 
 {class="mt-1"}
 개발자 모드의 설정은 시스템 안정성에 영향을 미칠 수 있으므로, 잘 모르는 옵션은 함부로 변경하지 마세요.
@@ -67,7 +67,7 @@ USB 디버깅을 켠 후에는 컴퓨터에 연결할 때 주의하고, 신뢰�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>알림: 제조사가 왜 이 스위치를 설정하는가
+알림: 제조사가 왜 이 스위치를 설정하는가
 
 {class="mt-1"}
 초기 안드로이드에는 이 스위치가 없어서, 악성 소프트웨어가 권한만 얻으면 몰래 시스템을 플래싱할 수 있었습니다.
@@ -109,7 +109,7 @@ Root가 필요하지 않으며, 스마트폰에서 "USB 디버깅"을 켜기만 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>드라이버와 인증 팝업을 무시하지 마세요
+드라이버와 인증 팝업을 무시하지 마세요
 
 {class="mt-1"}
 Windows 사용자가 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>에서 "unauthorized"가 표시되거나 기기가 아예 나열되지 않으면, 대부분 드라이버가 제대로 설치되지 않았거나 스마트폰에서 "허용"을 클릭하지 않은 것입니다.
@@ -141,7 +141,7 @@ Windows 사용자가 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>시스템 핵심 패키지를 함부로 삭제하지 마세요
+시스템 핵심 패키지를 함부로 삭제하지 마세요
 
 {class="mt-1"}
 "pm uninstall --user 0"은 Root가 필요 없는 안전한 방법이지만, 핵심 시스템 앱을 함부로 삭제하면(예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> 상태 표시줄, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> 전화, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> 설정) 시스템 충돌, 검은 화면, 부팅 불가 등 심각한 문제를 일으킵니다.
@@ -151,7 +151,7 @@ Windows 사용자가 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>알림: --user 0의 의미
+알림: --user 0의 의미
 
 {class="mt-1"}
 안드로이드 4.2 이후 다중 사용자가 지원되며, 각 사용자는 고유한 ID를 가집니다(기기 소유자는 0, 추가 사용자는 10부터 시작).
@@ -183,7 +183,7 @@ Root 권한을 얻으면 시스템 파일 수정, 사전 설치된 앱 제거, R
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>심각한 경고
+심각한 경고
 
 {class="mt-1"}
 Root 작업에는 일정 위험이 있으며, 스마트폰이 벽돌(부팅 불가)이 될 수 있습니다. 초보자라면 먼저 관련 지식을 충분히 이해하고, 완전한 백업을 확보하세요.
@@ -223,12 +223,12 @@ Root 작업에는 일정 위험이 있으며, 스마트폰이 벽돌(부팅 불�
 </li> <li><strong>Zygisk</strong>: Magisk 24.0+에서 도입된 새로운 메커니즘으로, Riru와 유사하며 Zygote 프로세스에 주입하여 모듈을 로드하는 방식으로, 시스템을 직접 수정하는 것보다 더 은밀합니다.
 Zygisk를 켜는 것은 현대적 숨김 방안을 사용하는 전제 조건입니다.</li> <li><strong>Shamiko</strong>: 현재 가장 주류인 숨김 모듈로, Zygisk와 함께 작동하며, 지정된 앱("역방향 화이트리스트" 모드)에 대해 Root 숨김, Magisk 자체 숨김, Bootloader 잠금 상태 위조가 가능합니다.
 Shamiko는 LSPosed 저장소 또는 GitHub를 통해 배포됩니다.</li> <li><strong>Play Integrity Fix(osm0sis)</strong>: Google Play Integrity 감지를 특화 대상으로 하는 Magisk 모듈로, 기기 지문(fingerprint)을 수정하여 Google이 기기를 Root되지 않은 공식 기기로 인식하게 합니다.
-</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>고양이와 쥐 게임은 절대 끝나지 않습니다</p> <p class="mt-1">Google은 주기적으로 감지 규칙을 업데이트하고, 앱 제조사도 Play Integrity 검증을 업그레이드합니다. 오늘 작동하는 숨김이 내일은 인식될 수 있습니다.
+</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold">고양이와 쥐 게임은 절대 끝나지 않습니다</p> <p class="mt-1">Google은 주기적으로 감지 규칙을 업데이트하고, 앱 제조사도 Play Integrity 검증을 업그레이드합니다. 오늘 작동하는 숨김이 내일은 인식될 수 있습니다.
 은행/결제 앱에 전적으로 의존하는 경우(예: 일상적인 계좌 이체, QR 결제), 가장 안정적인 선택은 여전히: Root하지 않기, BL 잠금 해제하지 않기. 숨김이 더 적합한 구성은 "주력기는 Root하지 않음 + 보조기로 Root 놀이"입니다.
 </p></div> <h4 class="text-lg font-semibold mt-4 mb-2">일곱, 일반 사용자를 위한 권장사항</h4> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>개발자 모드</strong>: 켤 수 있으며, 애니메이션 가속, GPU 렌더링 분석 등의 기능을 경험해 볼 수 있지만, 이해할 수 없는 다른 옵션은 함부로 변경하지 마세요.
 </li> <li><strong>OEM 잠금 해제와 BL 잠금</strong>: 플래싱이나 Root를 할 계획이 없다면, 두 스위치 모두 기본값(꺼짐) 상태로 유지하는 것이 가장 안전합니다.
 </li> <li><strong>ADB</strong>: Root가 필요 없는 강력한 도구로, 일반인도 사용할 수 있습니다, 예를 들어 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code>으로 사전 설치된 앱을 제거할 수 있습니다. 하지만 삭제하기 전에 반드시 패키지 이름을 조사하세요.
 </li> <li><strong>Root</strong>: 일반 사용자에게는 Root를 권장하지 않으며, 위험이 이점보다 큽니다. 특정 기능이 정말 필요한 경우, 먼저 Root가 필요 없는 대안이 있는지 확인하세요(예: ADB로 사전 설치 앱 제거, Shizuku로 일부 Root 기능 대체).
-</li> </ul> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>직접 해보기: 개발자 모드를 켜고 애니메이션 속도 조정</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>설정 > 휴대전화 정보로 진입.</li> <li>"빌드 번호"를 7회 연속 탭하여 개발자 모드가 활성화되었다는 알림이 나타날 때까지.
+</li> </ul> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold">직접 해보기: 개발자 모드를 켜고 애니메이션 속도 조정</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>설정 > 휴대전화 정보로 진입.</li> <li>"빌드 번호"를 7회 연속 탭하여 개발자 모드가 활성화되었다는 알림이 나타날 때까지.
 </li> <li>설정으로 돌아가 "개발자 옵션" 찾기(보통 설정 하단 또는 "시스템" 안에 있음).</li> <li>"창 애니메이션 배율", "전환 애니메이션 배율", "애니메이터 기간 배율"을 찾아 모두 0.5x로 설정하거나 끄기.
 </li> <li>스마트폰이 빨라졌는지 느껴보세요.</li> </ol> </div> </p>

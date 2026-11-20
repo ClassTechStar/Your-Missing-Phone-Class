@@ -100,7 +100,7 @@ DNS (نظام أسماء النطاقات) يشبه دليل هاتف الإنت
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>افعل ذلك الآن: أجرِ "فحص أمان" لهاتفك
+افعل ذلك الآن: أجرِ "فحص أمان" لهاتفك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>ترقية DNS</strong>: Android: الإعدادات &gt; الاتصال والمشاركة &gt; DNS الخاص &gt; أدخل "one.one.one.one" أو "dns.google". iPhone: ابحث في Safari عن "1.1.1.1 DNS profile" لتثبيت ملف الوصف، أو نزّل تطبيق 1.1.1.1 من Cloudflare.

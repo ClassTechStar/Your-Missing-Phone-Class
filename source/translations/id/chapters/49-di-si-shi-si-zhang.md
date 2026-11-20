@@ -34,10 +34,10 @@ Buatkan satu halaman web situs alat pribadi dengan ketentuan:
 1. HTML satu file (CSS dan JS inline), tanpa framework
 2. Tema gelap, gaya minimalis modern
 3. Tampilkan 4 kartu pintu masuk alat:
-   - alat peringkas teks
-   - alat penghitung kata
-   - alat pemilih warna
-   - generator kode QR
+ - alat peringkas teks
+ - alat penghitung kata
+ - alat pemilih warna
+ - generator kode QR
 4. Tiap kartu punya ikon, judul, dan deskripsi singkat
 5. Kartu punya animasi saat di-hover
 6. Responsif, bisa dipakai di ponsel
@@ -109,17 +109,17 @@ Persyaratan:
 1. Server Express, port 3001
 2. Database SQLite, nama tabel records
 3. Field tabel records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. API CRUD:
-   GET /api/records - ambil semua catatan
-   POST /api/records - tambah catatan
-   PUT /api/records/:id - perbarui catatan
-   DELETE /api/records/:id - hapus catatan
+ GET /api/records - ambil semua catatan
+ POST /api/records - tambah catatan
+ PUT /api/records/:id - perbarui catatan
+ DELETE /api/records/:id - hapus catatan
 5. Middleware penanganan error
 Berikan struktur kode backend yang lengkap.
 ```

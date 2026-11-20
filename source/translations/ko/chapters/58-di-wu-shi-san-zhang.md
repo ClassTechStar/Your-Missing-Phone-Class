@@ -41,14 +41,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // 쓰기: 값 저장
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // 읽기: 꺼내 오기(Flow가 변화를 자동 알림)
 val themeFlow: Flow<Boolean> = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -69,33 +69,33 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 // 1. Entity: 표 구조(한 표 = data class 하나)
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. Dao: 조작 인터페이스(생성·조회·수정·삭제)
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. Database: 총조립
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -114,16 +114,16 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 // 1. 인터페이스 정의: HTTP 요청을 함수로 기술
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. 인스턴스 생성
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. 함수 호출하듯 사용(코루틴 안에서)
 val result = api.getWeather("베이징")
@@ -161,9 +161,9 @@ JSON 파싱 두 가지 방식
 // 데이터 클래스에 @Serializable 어노테이션 추가
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // Retrofit에 맞는 Converter 연결(Retrofit 2.11+ 공식 지원 기준):
@@ -185,13 +185,13 @@ data class WeatherResponse(
 ```
 // ViewModel에서 코루틴 시작
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend: 자동으로 중단하고 기다려요
-    // 화면 상태 업데이트……
+ val records = dao.getAll().first() // suspend: 자동으로 중단하고 기다려요
+ // 화면 상태 업데이트……
 }
 
 // 키워드 암기 노트:
-// suspend   — "기다려야 해요, 다른 일 막지 마세요"
-// launch    — "일 시작!"
+// suspend — "기다려야 해요, 다른 일 막지 마세요"
+// launch — "일 시작!"
 // viewModelScope — 화면을 따라다니는 "작업실"로, 화면이 소멸하면 자동 마감
 ```
 :::

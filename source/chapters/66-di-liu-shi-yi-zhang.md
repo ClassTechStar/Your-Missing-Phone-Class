@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "张三"        // let：常量（推荐默认用这个）
-var age = 18             // var：变量（以后还能改）
+let name = "张三" // let：常量（推荐默认用这个）
+var age = 18 // var：变量（以后还能改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> let 不能改，编译报错
+age = 19 // var 可以改
+// name = "李四" // let 不能改，编译报错
 
-let score: Int = 100     // 也可以显式写明类型
-let pi = 3.14            // 不写也能自动推断
+let score: Int = 100 // 也可以显式写明类型
+let pi = 3.14 // 不写也能自动推断
 
-print("你好，\(name)")   // 字符串插值：反斜杠 + 括号
+print("你好，\(name)") // 字符串插值：反斜杠 + 括号
 ```
 :::
 
@@ -48,7 +48,7 @@ Swift 常用基础类型
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：let 优先原则
+小贴士：let 优先原则
 
 {class="mt-1"}
 Swift 社区的铁律：<strong>默认用 let，确有必要再用 var</strong>。能用 let 的地方用 var，Xcode 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug：代码越少变化，越容易推理。
@@ -64,27 +64,27 @@ Swift 社区的铁律：<strong>默认用 let，确有必要再用 var</strong>�
 :::
 
 ```
-var name: String = "张三"   // 普通类型：绝不允许是 nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> 编译错误，直接拦住
+var name: String = "张三" // 普通类型：绝不允许是 nil
+// name = nil // 编译错误，直接拦住
 
-var nickname: String? = nil  // 加个问号：允许为 nil（可选值）
+var nickname: String? = nil // 加个问号：允许为 nil（可选值）
 nickname = "三儿"
 
 // 使用可选值，必须"解包"：
-if let n = nickname {        // if let：安全解包
-    print("你好，\(n)")
+if let n = nickname { // if let：安全解包
+ print("你好，\(n)")
 } else {
-    print("还没有昵称")
+ print("还没有昵称")
 }
 
-let len = nickname?.count ?? 0   // ?? 给默认值（空合运算符）
+let len = nickname?.count ?? 0 // ?? 给默认值（空合运算符）
 print(len)
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：! 是"高危操作"
+注意：! 是"高危操作"
 
 {class="mt-1"}
 代码里写 <code class="inline">nickname!</code>（强制解包）等于对编译器喊"我保证它不是 nil"：一旦猜错，App 当场崩溃。新手期原则：<strong>尽量用 if let / ?? ，不用 !</strong>。Xcode 补全代码时偶尔会顺手加 !，记得改掉它。
@@ -102,16 +102,16 @@ print(len)
 ```
 // 函数：名字在前，参数和返回类型在后
 func greet(name: String) -> String {
-    return "你好，\(name)！"
+ return "你好，\(name)！"
 }
-print(greet(name: "张三"))     // 调用时要带参数名
+print(greet(name: "张三")) // 调用时要带参数名
 
 // 闭包：就地定义，轻快直接
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = 当前元素
+let doubled = numbers.map { $0 * 2 } // $0 = 当前元素
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // 筛选
+let big = numbers.filter { $0 > 2 } // 筛选
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ Swift 的官方偏好很明确：<strong>优先用结构体（struct），需要
 ```
 // 结构体：装数据的盒子
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // 结构体自带"成员逐一构造器"：直接就能创建
+ // 结构体自带"成员逐一构造器"：直接就能创建
 }
 let r = Record(amount: 25.5, category: "餐饮", date: Date())
 
 // 协议：约定"必须具备哪些能力"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // 遵守协议 = 承诺实现其要求
+struct Record: Identifiable { ... } // 遵守协议 = 承诺实现其要求
 ```
 :::
 
@@ -162,7 +162,7 @@ Swift 语法速查卡（新手版）
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：在 Playgrounds 里玩 15 分钟 Swift
+来动手：在 Playgrounds 里玩 15 分钟 Swift
 
 {class="mt-1"}
 有 Mac 就打开 Xcode → Playground；没 Mac 就用 iPad 上的 Swift Playgrounds 或网页版演练场。把本章每一段代码都跑一遍，改改数字和文字，故意制造几个错误看看 Xcode 怎么提示。这个"先玩后学"的 15 分钟，会让你第 62 章上手时轻松一倍。
@@ -170,7 +170,7 @@ Swift 语法速查卡（新手版）
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - let 优先，var 慎用；类型自动推断，冒号后显式声明也行
 - 可选值是 Swift 的灵魂：可能为空必须处理，if let / ?? 是护身符，! 是高危操作

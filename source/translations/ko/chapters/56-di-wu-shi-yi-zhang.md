@@ -26,19 +26,19 @@ Compose의 핵심 발상을 한 문장으로 말하면: 화면 = 함수예요. �
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "안녕, $name!")     // "글자 블록" 하나
+ Text(text = "안녕, $name!") // "글자 블록" 하나
 }
 
 // 중첩 조합: 큰 블록 안에 작은 블록
 @Composable
 fun HomeScreen() {
-    Column {                          // 세로 배치
-        Greeting(name = 김철수)
-        Greeting(name = 이영희)
-        Button(onClick = { /* 클릭 시 동작 */ }) {
-            Text("눌러 보세요")
-        }
-    }
+ Column { // 세로 배치
+ Greeting(name = 김철수)
+ Greeting(name = 이영희)
+ Button(onClick = { /* 클릭 시 동작 */ }) {
+ Text("눌러 보세요")
+ }
+ }
 }
 ```
 :::
@@ -66,18 +66,18 @@ Compose의 네 가지 기본 컴포넌트
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "이것은 문자예요")
-        Button(onClick = { println("클릭됨") }) {
-            Text("버튼")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("무언가를 입력해 보세요") }
-        )
-    }
+ Column {
+ Text(text = "이것은 문자예요")
+ Button(onClick = { println("클릭됨") }) {
+ Text("버튼")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("무언가를 입력해 보세요") }
+ )
+ }
 }
 ```
 :::
@@ -99,15 +99,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("첫 줄")
-    Row {
-        Text("왼쪽")
-        Text("오른쪽")
-    }
-    Box {
-        Text("아래층")
-        Text("그 위에 겹치는 배지")
-    }
+ Text("첫 줄")
+ Row {
+ Text("왼쪽")
+ Text("오른쪽")
+ }
+ Box {
+ Text("아래층")
+ Text("그 위에 겹치는 배지")
+ }
 }
 ```
 :::
@@ -121,12 +121,12 @@ Column {
 
 ```
 Text(
-    text = "예쁜 문자",
-    modifier = Modifier
-        .padding(16.dp)          // 사방 여백
-        .fillMaxWidth()          // 가로를 가득 채우기
-        .background(Color.Blue)  // 배경색
-        .clickable { /* 클릭 */ }// 클릭 가능
+ text = "예쁜 문자",
+ modifier = Modifier
+ .padding(16.dp) // 사방 여백
+ .fillMaxWidth() // 가로를 가득 채우기
+ .background(Color.Blue) // 배경색
+ .clickable { /* 클릭 */ }// 클릭 가능
 )
 // 체이닝 호출: 하나씩 이어서, 순서에 의미가 있어요(padding 먼저, 배경 나중 — 배경은 여백을 포함하지 않아요)
 ```
@@ -154,15 +154,15 @@ Compose의 규칙: 화면은 언제나 상태를 충실하게 반영하고, 상�
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf: 변하는 값을 기억
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf: 변하는 값을 기억
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "$count번 눌렀어요")
-        Button(onClick = { count++ }) {   // 상태 변경
-            Text("눌러 보세요 +1")                // 화면이 자동으로 새로 고침돼요
-        }
-    }
+ Column {
+ Text(text = "$count번 눌렀어요")
+ Button(onClick = { count++ }) { // 상태 변경
+ Text("눌러 보세요 +1") // 화면이 자동으로 새로 고침돼요
+ }
+ }
 }
 ```
 :::
@@ -172,11 +172,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> 사용자 클릭</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 상태 변경(count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 사용자 클릭</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 상태 변경(count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose가 변화를 감지</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 화면 자동 다시 그리기(리컴포지션)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose가 변화를 감지</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 화면 자동 다시 그리기(리컴포지션)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -216,15 +216,15 @@ fun Counter() {
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // 값이 바뀌면 목표값으로 자동으로 부드럽게 전환
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // 값이 바뀌면 목표값으로 자동으로 부드럽게 전환
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

@@ -34,10 +34,10 @@ Please create a personal toolbox web page with these requirements:
 1. Single-file HTML (inline CSS and JS), no frameworks
 2. Dark theme, modern minimalist style
 3. Show 4 tool entry cards:
-   - Text summarizer
-   - Word counter
-   - Color picker
-   - QR code generator
+ - Text summarizer
+ - Word counter
+ - Color picker
+ - QR code generator
 4. Each card has an icon, a title and a short description
 5. Cards have a hover animation
 6. Responsive layout, usable on phones
@@ -109,17 +109,17 @@ Requirements:
 1. Express server, port 3001
 2. SQLite database, table name records
 3. Fields of the records table:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. CRUD endpoints:
-   GET /api/records - get all records
-   POST /api/records - add a record
-   PUT /api/records/:id - update a record
-   DELETE /api/records/:id - delete a record
+ GET /api/records - get all records
+ POST /api/records - add a record
+ PUT /api/records/:id - update a record
+ DELETE /api/records/:id - delete a record
 5. Error-handling middleware
 Please give the complete backend code structure.
 ```

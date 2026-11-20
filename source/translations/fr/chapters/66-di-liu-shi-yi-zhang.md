@@ -22,16 +22,16 @@ Un programme, c’est « données + logique ». Une variable, c’est un nom don
 :::
 
 ```
-let name = "Léa"        // let : constante (à privilégier par défaut)
-var age = 18             // var : variable (modifiable plus tard)
+let name = "Léa" // let : constante (à privilégier par défaut)
+var age = 18 // var : variable (modifiable plus tard)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var peut être modifié
-// name = "Emma"         // <i class="fas fa-times-circle mr-1"></i> let ne peut pas être modifié : erreur de compilation
+age = 19 // var peut être modifié
+// name = "Emma" // let ne peut pas être modifié : erreur de compilation
 
-let score: Int = 100     // on peut aussi préciser le type explicitement
-let pi = 3.14            // sans l'écrire, il est déduit automatiquement
+let score: Int = 100 // on peut aussi préciser le type explicitement
+let pi = 3.14 // sans l'écrire, il est déduit automatiquement
 
-print("Bonjour \(name)")   // interpolation de chaîne : antislash + parenthèses
+print("Bonjour \(name)") // interpolation de chaîne : antislash + parenthèses
 ```
 :::
 
@@ -64,20 +64,20 @@ C'est le concept le plus important de Swift, et de loin. En une phrase : quand u
 :::
 
 ```
-var name: String = "Léa"   // type normal : ne peut jamais être nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> erreur de compilation : ça te bloque direct
+var name: String = "Léa" // type normal : ne peut jamais être nil
+// name = nil // erreur de compilation : ça te bloque direct
 
-var nickname: String? = nil  // ajoute un point d'interrogation : autorise nil (optional)
+var nickname: String? = nil // ajoute un point d'interrogation : autorise nil (optional)
 nickname = "Tommy"
 
 // avec les optionals, il faut les "déballer" :
-if let n = nickname {        // if let : déballage sûr
-    print("Bonjour \(n)")
+if let n = nickname { // if let : déballage sûr
+ print("Bonjour \(n)")
 } else {
-    print("Pas encore de surnom")
+ print("Pas encore de surnom")
 }
 
-let len = nickname?.count ?? 0   // ?? valeur par défaut (opérateur de coalescence)
+let len = nickname?.count ?? 0 // ?? valeur par défaut (opérateur de coalescence)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ Une fonction, c'est une logique qui porte un nom, comme un bouton sur une télé
 ```
 // fonction : le nom devant ; paramètres et type de retour derrière
 func greet(name: String) -> String {
-    return "Bonjour, \(name) !"
+ return "Bonjour, \(name) !"
 }
-print(greet(name: "Léa"))     // à l'appel, avec le nom du paramètre
+print(greet(name: "Léa")) // à l'appel, avec le nom du paramètre
 
 // closure : définie sur place, légère et directe
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = l'élément courant
+let doubled = numbers.map { $0 * 2 } // $0 = l'élément courant
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // filtrer
+let big = numbers.filter { $0 > 2 } // filtrer
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ La préférence officielle de Swift est claire : privilégie les structures (str
 ```
 // le struct : la boîte à données
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // le struct embarque son "memberwise initializer" : création directe possible
+ // le struct embarque son "memberwise initializer" : création directe possible
 }
 let r = Record(amount: 25.5, category: "repas", date: Date())
 
 // protocole : le contrat de "quelles capacités il doit avoir"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // adopter le protocole = promettre de remplir ses exigences
+struct Record: Identifiable { ... } // adopter le protocole = promettre de remplir ses exigences
 ```
 :::
 

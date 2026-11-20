@@ -49,7 +49,7 @@ class: mb-12
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>לשלוח קוד אימות לאף אחד (אפילו לא ל"שירות לקוחות");
+לשלוח קוד אימות לאף אחד (אפילו לא ל"שירות לקוחות");
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - ללחוץ על קישורים לא מוכרים בהודעות SMS, במיוחד ממספרים בינלאומיים המתחילים ב-00;
@@ -61,7 +61,7 @@ class: mb-12
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בדפדפן במחשב או בטלפון אחר, התחבר לחשבון שירות הענן המתאים (iCloud.com או אתר שירות הענן של המותג).
+בדפדפן במחשב או בטלפון אחר, התחבר לחשבון שירות הענן המתאים (iCloud.com או אתר שירות הענן של המותג).
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. מצא את פונקציית "מצא מכשיר", נסה להפעיל "השמעת צליל" או לדמות פקודת "נעילה" על הטלפון שלך, כדי להכיר את התהליך כולו.

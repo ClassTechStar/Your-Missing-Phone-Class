@@ -90,7 +90,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>微信聊天記錄特別注意
+微信聊天記錄特別注意
 
 {class="mt-1"}
 微信聊天記錄無法通過任何手機換機工具遷移！佢唔喺整機備份嘅覆蓋範圍內。必須用微信自帶嘅「聊天記錄遷移」功能，或備份到電腦版微信。好多人喺換完新手機之後先發現聊天記錄全冇咗，嗰個時候已經遲喇——舊手機可能已經恢復出廠設定咗。
@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>練一練：做一次完整嘅備份演練
+練一練：做一次完整嘅備份演練
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 檢查iCloud雲備份或品牌雲備份係咪開啟，確認上一次備份時間。

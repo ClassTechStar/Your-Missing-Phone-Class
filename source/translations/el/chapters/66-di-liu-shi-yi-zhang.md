@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "Γιώργος"        // let: σταθερά (προτείνεται ως προεπιλογή)
-var age = 18             // var: μεταβλητή (μπορεί να αλλάξει μετά)
+let name = "Γιώργος" // let: σταθερά (προτείνεται ως προεπιλογή)
+var age = 18 // var: μεταβλητή (μπορεί να αλλάξει μετά)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var αλλάζει
-// name = "Νίκος"         // <i class="fas fa-times-circle mr-1"></i> let δεν αλλάζει, σφάλμα μεταγλώττισης
+age = 19 // var αλλάζει
+// name = "Νίκος" // let δεν αλλάζει, σφάλμα μεταγλώττισης
 
-let score: Int = 100     // μπορείς και να γράψεις τον τύπο ρητά
-let pi = 3.14            // και χωρίς αυτόν γίνεται αυτόματη εξαγωγή
+let score: Int = 100 // μπορείς και να γράψεις τον τύπο ρητά
+let pi = 3.14 // και χωρίς αυτόν γίνεται αυτόματη εξαγωγή
 
-print("Γεια σου, \(name)")   // ενσωμάτωση αλφαριθμητικού: ανάστροφη κάθετος + παρένθεση
+print("Γεια σου, \(name)") // ενσωμάτωση αλφαριθμητικού: ανάστροφη κάθετος + παρένθεση
 ```
 :::
 
@@ -64,20 +64,20 @@ print("Γεια σου, \(name)")   // ενσωμάτωση αλφαριθμητ
 :::
 
 ```
-var name: String = "Γιώργος"   // Συνηθισμένος τύπος: ποτέ nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> Σε σταματάει κατευθείαν ο compiler
+var name: String = "Γιώργος" // Συνηθισμένος τύπος: ποτέ nil
+// name = nil // Σε σταματάει κατευθείαν ο compiler
 
-var nickname: String? = nil  // με ερωτηματικό: επιτρέπεται nil (optional)
+var nickname: String? = nil // με ερωτηματικό: επιτρέπεται nil (optional)
 nickname = "Μπαμπής"
 
 // Με optional, πρέπει να "ξετυλίξεις" πρώτα:
-if let n = nickname {        // if let: ασφαλές ξετύλιγμα
-    print("Γεια σου, \(n)")
+if let n = nickname { // if let: ασφαλές ξετύλιγμα
+ print("Γεια σου, \(n)")
 } else {
-    print("Δεν έχει ακόμα παρατσούκλι")
+ print("Δεν έχει ακόμα παρατσούκλι")
 }
 
-let len = nickname?.count ?? 0   // ?? δίνει προεπιλογή (nil coalescing)
+let len = nickname?.count ?? 0 // ?? δίνει προεπιλογή (nil coalescing)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // Συνάρτηση: το όνομα μπροστά, παράμετροι και τύπος επιστροφής πίσω
 func greet(name: String) -> String {
-    return "Γεια σου, \(name)!"
+ return "Γεια σου, \(name)!"
 }
-print(greet(name: "Γιώργος"))     // Στην κλήση πρέπει να αναφέρεται το όνομα της παραμέτρου
+print(greet(name: "Γιώργος")) // Στην κλήση πρέπει να αναφέρεται το όνομα της παραμέτρου
 
 // Closure: ορισμός επί τόπου, κομψά και άμεσα
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = τρέχον στοιχείο
+let doubled = numbers.map { $0 * 2 } // $0 = τρέχον στοιχείο
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // Φιλτράρισμα
+let big = numbers.filter { $0 > 2 } // Φιλτράρισμα
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ let big = numbers.filter { $0 > 2 }    // Φιλτράρισμα
 ```
 // Struct: κουτί με δεδομένα
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // Το struct έχει έτοιμο "memberwise initializer": δημιουργείται κατευθείαν
+ // Το struct έχει έτοιμο "memberwise initializer": δημιουργείται κατευθείαν
 }
 let r = Record(amount: 25.5, category: "Φαγητό", date: Date())
 
 // Protocol: συμφωνία για "ποιες ικανότητες πρέπει να έχει"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // Συμμόρφωση με protocol = υπόσχεση υλοποίησης των απαιτήσεων
+struct Record: Identifiable { ... } // Συμμόρφωση με protocol = υπόσχεση υλοποίησης των απαιτήσεων
 ```
 :::
 

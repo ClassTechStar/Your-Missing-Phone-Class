@@ -307,7 +307,7 @@ HRV，心率变异性，说的是相邻两次心跳之间时间差的波动。�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别拿单点血氧做任何重大决定
+避坑提醒：别拿单点血氧做任何重大决定
 
 {class="mt-1"}
 血氧读数只在"条件正确、状态安静、趋势一致"的时候才有参考价值。一次读数不好就取消行程、就断定自己得了病，反过来一次读数正常就硬扛着明显的不舒服，两个方向都是错的。数据是参考之一，身体的感受和医生的意见永远排在设备前面。
@@ -442,7 +442,7 @@ HRV，心率变异性，说的是相邻两次心跳之间时间差的波动。�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 血氧读数回答的是"现在这一刻"，健康回答的是"最近这一段"。看趋势的人心里有底，抠单点的人天天心慌。
@@ -515,7 +515,7 @@ HRV，心率变异性，说的是相邻两次心跳之间时间差的波动。�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：把"用药提醒"交给系统
+小贴士：把"用药提醒"交给系统
 
 {class="mt-1"}
 苹果"健康"App 内置"用药"功能（可设服药时间+提醒），安卓可用 Health 系组件或专门的吃药提醒 App。给爸妈设置好"每天 8:00/20:00 服药提醒"，比口头叮嘱可靠一百倍，提醒要能震到手腕上（手表联动）。
@@ -619,7 +619,7 @@ HRV，心率变异性，说的是相邻两次心跳之间时间差的波动。�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：给家里建一份"健康台账"
+来动手：给家里建一份"健康台账"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 确认长辈手表开了心率异常提醒。
@@ -759,7 +759,7 @@ HRV，心率变异性，说的是相邻两次心跳之间时间差的波动。�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 设备负责记得，你负责关心，医生负责判断，全家负责别拖。
@@ -999,7 +999,7 @@ HRV，心率变异性，说的是相邻两次心跳之间时间差的波动。�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 静息心率看个人趋势：基线突升是提醒，不是诊断
 - 开好过高/过低提醒，是最救命的设置；异常提示先安静重测，持续异常带着记录就医

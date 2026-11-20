@@ -95,7 +95,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>도전: 다음 스마트폰을 위한 "기술 요구 목록" 작성
+도전: 다음 스마트폰을 위한 "기술 요구 목록" 작성
 
 {class="mt-1"}
 종이 한 장을 꺼내 "필수/가산/불필요" 세 단계로 AI, 위성, 폴더블, Wi-Fi 7, 급속 충전, 배터리 용량에 대한 요구를 적어보세요.
@@ -109,7 +109,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>본 챕터 요약
+본 챕터 요약
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI 스마트폰 세 가지 판단 기준: 단말기 대규모 모델, NPU TOPS, AI Agent 시나리오

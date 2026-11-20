@@ -22,7 +22,7 @@ Teknologi berubah, tapi kebutuhan manusia tidak berubah, kita butuh rasa aman, b
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Latihan Terakhir
+Latihan Terakhir
 
 {class="mt-1"}
 Tutup buku ini, ambil ponsel Anda, lakukan satu hal:<strong>Pakai 30 detik pikirkan, di ponsel Anda ada tiga hal apa yang "hilang akan benar-benar sakit hati"?</strong> Lalu, pastikan mereka sudah di-backup. Buku ini sudah berharga.

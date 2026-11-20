@@ -66,7 +66,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>เทคโนโลยี UWB (Ultra-Wideband) — "การรับรู้พื้นที่" ที่แม่นยำกว่า Bluetooth
+เทคโนโลยี UWB (Ultra-Wideband) — "การรับรู้พื้นที่" ที่แม่นยำกว่า Bluetooth
 
 {class="mt-1"}
 นอกจาก Bluetooth แล้ว ในมือถือรุ่นใหม่ยังมีชิป UWB (Ultra-Wideband) ซ่อนอยู่อีก 1 ตัว ความสามารถของมันคือ<strong>การวัดระยะทางและการระบุตำแหน่งในพื้นที่อย่างแม่นยำ</strong>—สามารถคำนวณได้ว่าอุปกรณ์อีกเครื่องอยู่ห่างจากคุณแค่ไหนและอยู่ทิศทางใด โดยมีความแม่นยำระดับเซนติเมตร Bluetooth บอกได้แค่ว่า "อยู่ใกล้ๆ" แต่ UWB สามารถบอกได้ว่า "อยู่ด้านหน้าซ้ายของคุณ 1.2 เมตร" การใช้งานทั่วไป:
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio และ Auracast — มาตรฐานใหม่ของเสียง Bluetooth
+LE Audio และ Auracast — มาตรฐานใหม่ของเสียง Bluetooth
 
 {class="mt-1"}
 เสียง Bluetooth แบบดั้งเดิม (A2DP) ที่ใช้กันมายี่สิบปีกำลังถูกแทนที่โดย<strong>LE Audio</strong>(เสียงพลังงานต่ำ) ซึ่งเป็นมาตรฐานเสียงรุ่นใหม่ตั้งแต่ Bluetooth 5.2 เป็นต้นไป:
@@ -110,7 +110,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>มาลองดู: ฉายหน้าจอมือถือขึ้นทีวี แล้วตั้งค่าสถานการณ์อัจฉริยะหนึ่งอย่าง
+มาลองดู: ฉายหน้าจอมือถือขึ้นทีวี แล้วตั้งค่าสถานการณ์อัจฉริยะหนึ่งอย่าง
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : ยืนยันว่ามือถือกับทีวีต่อ Wi-Fi เดียวกัน
@@ -122,7 +122,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>เคส 1: การปรับแต่งแบตเตอรี่ให้ใช้งานได้นานขึ้น
+เคส 1: การปรับแต่งแบตเตอรี่ให้ใช้งานได้นานขึ้น
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>สถานการณ์</strong>:ผู้ใช้ Xiaomi 14 แบตเตอรี่ไม่ค่อยทน ใช้ไปครึ่งวันก็หมด

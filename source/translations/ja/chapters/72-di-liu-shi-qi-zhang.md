@@ -54,21 +54,21 @@ import XCTest
 
 // 「金額文字列を数値へ変換」するロジックを純粋関数として切り出す
 func parseAmount(_ input: String) -> Double? {
-    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
-          v > 0 else { return nil }
-    return v
+ guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+ v > 0 else { return nil }
+ return v
 }
 
 final class AmountTests: XCTestCase {
-    func testEmptyInputReturnsNil() {
-        XCTAssertNil(parseAmount(""))
-    }
-    func testNegativeReturnsNil() {
-        XCTAssertNil(parseAmount("-5"))
-    }
-    func testNormalValueParses() {
-        XCTAssertEqual(parseAmount("12.5"), 12.5)
-    }
+ func testEmptyInputReturnsNil() {
+ XCTAssertNil(parseAmount(""))
+ }
+ func testNegativeReturnsNil() {
+ XCTAssertNil(parseAmount("-5"))
+ }
+ func testNormalValueParses() {
+ XCTAssertEqual(parseAmount("12.5"), 12.5)
+ }
 }
 ```
 :::
@@ -96,11 +96,11 @@ iOS の App はすべて署名しなければインストールできません�
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 開発者アカウントを登録</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> ストア用素材を準備</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> ビルドパッケージをアップロード</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 開発者アカウントを登録</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> ストア用素材を準備</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> ビルドパッケージをアップロード</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> プライバシーと審査情報を記入</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> Appleの審査（1〜7日）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> ストアにリリース</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> プライバシーと審査情報を記入</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Appleの審査（1〜7日）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> ストアにリリース</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

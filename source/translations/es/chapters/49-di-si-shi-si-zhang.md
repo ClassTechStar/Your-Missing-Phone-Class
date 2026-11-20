@@ -34,10 +34,10 @@ Crea una web personal de herramientas con estos requisitos:
 1. HTML de un solo archivo (CSS y JS en línea), sin frameworks
 2. Tema oscuro, estilo moderno y minimalista
 3. Muestra 4 tarjetas de acceso a herramientas:
-   - Resumidor de texto
-   - Contador de palabras
-   - Selector de color
-   - Generador de códigos QR
+ - Resumidor de texto
+ - Contador de palabras
+ - Selector de color
+ - Generador de códigos QR
 4. Cada tarjeta con icono, título y descripción breve
 5. Las tarjetas tienen animación al pasar el ratón
 6. Diseño responsive, usable en el móvil
@@ -109,17 +109,17 @@ Requisitos:
 1. Servidor Express, puerto 3001
 2. Base de datos SQLite, tabla records
 3. Campos de la tabla records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. Endpoints CRUD:
-   GET /api/records - obtener todos los registros
-   POST /api/records - añadir un registro
-   PUT /api/records/:id - actualizar un registro
-   DELETE /api/records/:id - borrar un registro
+ GET /api/records - obtener todos los registros
+ POST /api/records - añadir un registro
+ PUT /api/records/:id - actualizar un registro
+ DELETE /api/records/:id - borrar un registro
 5. Middleware de gestión de errores
 Dame la estructura completa del código del backend.
 ```

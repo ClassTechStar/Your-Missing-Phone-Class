@@ -42,7 +42,7 @@ Das Smartphone verbindet sich direkt mit einem Kommunikationssatelliten in der U
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Ultra
+Ultra
 
 {class="mt-1"}
 Die Satellitenkommunikation erfordert eine spezielle Hardware-Antenne im Smartphone – nicht alle Modelle unterstützen sie. Außerdem ist für die Satellitenkommunikation normalerweise ein kostenpflichtiges Abonnement erforderlich, die Notruffunktion ist jedoch in der Regel kostenlos.
@@ -115,7 +115,7 @@ Aktuell hauptsächlich Huawei-Ökosystem-Geräte, z. B. Huawei Mate 60-Serie, be
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Technischer Ausblick
+Technischer Ausblick
 
 {class="mt-1"}
 SparkLink repräsentiert die Zukunft der drahtlosen Kommunikation. Mit dem Beitritt weiterer Hersteller werden wir voraussichtlich mehr SparkLink-fähige Geräte sehen und ein besseres drahtloses Erlebnis genießen.
@@ -123,7 +123,7 @@ SparkLink repräsentiert die Zukunft der drahtlosen Kommunikation. Mit dem Beitr
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prüfe: Wird dein Smartphone unterstützt?
+Prüfe: Wird dein Smartphone unterstützt?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Suche in den Einstellungen nach „Satellit" und prüfe, ob Optionen zur Satellitenkommunikation vorhanden sind.

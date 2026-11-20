@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "Иван"        // let: константа (по умолчанию берём её)
-var age = 18             // var: переменная (можно менять потом)
+let name = "Иван" // let: константа (по умолчанию берём её)
+var age = 18 // var: переменная (можно менять потом)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var можно изменить
-// name = "Мария"         // <i class="fas fa-times-circle mr-1"></i> let изменить нельзя — ошибка компиляции
+age = 19 // var можно изменить
+// name = "Мария" // let изменить нельзя — ошибка компиляции
 
-let score: Int = 100     // тип можно указать и явно
-let pi = 3.14            // можно не писать — выведется сам
+let score: Int = 100 // тип можно указать и явно
+let pi = 3.14 // можно не писать — выведется сам
 
-print("Привет, \(name)")   // строковая интерполяция: обратный слэш + скобки
+print("Привет, \(name)") // строковая интерполяция: обратный слэш + скобки
 ```
 :::
 
@@ -64,20 +64,20 @@ print("Привет, \(name)")   // строковая интерполяция:
 :::
 
 ```
-var name: String = "Иван"   // обычный тип: nil не допускается
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> ошибка компиляции — вас сразу остановят
+var name: String = "Иван" // обычный тип: nil не допускается
+// name = nil // ошибка компиляции — вас сразу остановят
 
-var nickname: String? = nil  // добавляем вопросик: nil разрешён (опционал)
+var nickname: String? = nil // добавляем вопросик: nil разрешён (опционал)
 nickname = "Ваня"
 
 // Опционал нужно «распаковать»:
-if let n = nickname {        // if let: безопасная распаковка
-    print("Привет, \(n)")
+if let n = nickname { // if let: безопасная распаковка
+ print("Привет, \(n)")
 } else {
-    print("Никнейма ещё нет")
+ print("Никнейма ещё нет")
 }
 
-let len = nickname?.count ?? 0   // ?? подставляет значение по умолчанию (оператор nil-coalescing)
+let len = nickname?.count ?? 0 // ?? подставляет значение по умолчанию (оператор nil-coalescing)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // Функции: имя впереди, параметры и возвращаемый тип после
 func greet(name: String) -> String {
-    return "Привет, \(name)!"
+ return "Привет, \(name)!"
 }
-print(greet(name: "Иван"))     // при вызове нужно указывать имя параметра
+print(greet(name: "Иван")) // при вызове нужно указывать имя параметра
 
 // Замыкания: определяем на месте, коротко и прямо
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = текущий элемент
+let doubled = numbers.map { $0 * 2 } // $0 = текущий элемент
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // фильтрация
+let big = numbers.filter { $0 > 2 } // фильтрация
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ let big = numbers.filter { $0 > 2 }    // фильтрация
 ```
 // Структура: коробка для данных
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // У структуры есть встроенный «инициализатор по членам»: создавать можно сразу
+ // У структуры есть встроенный «инициализатор по членам»: создавать можно сразу
 }
 let r = Record(amount: 25.5, category: "Еда", date: Date())
 
 // Протокол: договорённость «какие способности обязательны»
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // соответствие протоколу = обещание выполнить его требования
+struct Record: Identifiable { ... } // соответствие протоколу = обещание выполнить его требования
 ```
 :::
 

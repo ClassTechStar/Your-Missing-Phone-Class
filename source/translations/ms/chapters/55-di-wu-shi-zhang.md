@@ -22,14 +22,14 @@ Program ialah 'data + logik'. Pemboleh ubah ialah memberi nama kepada data dan m
 :::
 
 ```
-val name = "Zhang San"        // val: pemboleh ubah baca sahaja (digalakkan sebagai lalai)
-var age = 18             // var: pemboleh ubah boleh ubah (boleh ditukar kemudian)
+val name = "Zhang San" // val: pemboleh ubah baca sahaja (digalakkan sebagai lalai)
+var age = 18 // var: pemboleh ubah boleh ubah (boleh ditukar kemudian)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var boleh diubah
-// name = "Li Si"         // <i class="fas fa-times-circle mr-1"></i> val tidak boleh diubah, ralat semasa kompilasi
+age = 19 // var boleh diubah
+// name = "Li Si" // val tidak boleh diubah, ralat semasa kompilasi
 
-val score: Int = 100     // juga boleh tulis jenisnya secara jelas
-val pi = 3.14            // tidak ditulis pun boleh dikesan automatik
+val score: Int = 100 // juga boleh tulis jenisnya secara jelas
+val pi = 3.14 // tidak ditulis pun boleh dikesan automatik
 ```
 :::
 
@@ -63,15 +63,15 @@ Fungsi ialah satu logik yang bernama, seperti butang pada alat kawalan jauh, tek
 
 ```
 fun greet(name: String): String {
-    return "Hai, $name!"     // simbol $ menyisipkan pemboleh ubah ke dalam rentetan
+ return "Hai, $name!" // simbol $ menyisipkan pemboleh ubah ke dalam rentetan
 }
 
-println(greet("Zhang San"))        // Output: Hai, Zhang San!
+println(greet("Zhang San")) // Output: Hai, Zhang San!
 
 // Fungsi satu baris boleh ditulis ringkas sebagai ungkapan
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // Output: 8
+println(add(3, 5)) // Output: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ Kepintaran program datang daripada dua perkara: tahu menilai (if/when) dan tahu 
 // Penilaian: if / else
 val age = 17
 if (age >= 18) {
-    println("Dewasa")
+ println("Dewasa")
 } else {
-    println("Belum dewasa")
+ println("Belum dewasa")
 }
 
 // Pelbagai cabang: when (jauh lebih selesa daripada switch)
 val score = 85
 val level = when {
-    score >= 90 -> "Cemerlang"
-    score >= 60 -> "Lulus"
-    else -> "Terus berusaha!"
+ score >= 90 -> "Cemerlang"
+ score >= 60 -> "Lulus"
+ else -> "Terus berusaha!"
 }
 
 // Ulangan: gelung for
 val fruits = listOf("epal", "pisang", "oren")
 for (fruit in fruits) {
-    println("Aku suka makan$fruit")
+ println("Aku suka makan$fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ Pepijat paling terkenal zaman Java dipanggil NullPointerException (pengecualian 
 :::
 
 ```
-var name: String = "Zhang San"   // Jenis biasa: langsung tidak boleh null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> Ditahan terus oleh pengkompil
+var name: String = "Zhang San" // Jenis biasa: langsung tidak boleh null
+// name = null // Ditahan terus oleh pengkompil
 
 var nickname: String? = null // beri tanda soal: membenarkan null
 nickname = "San Er"
 
 // Semasa guna jenis nullable, mesti ditangani dengan selamat:
-println(nickname?.length)    // safe call: null kekal pulangkan null, tidak runtuh
-val len = nickname?.length ?: 0   // Elvis operator: jika null beri nilai lalai
+println(nickname?.length) // safe call: null kekal pulangkan null, tidak runtuh
+val len = nickname?.length ?: 0 // Elvis operator: jika null beri nilai lalai
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ Kelas ialah 'acuan' objek, objek ialah 'hasil siap' kelas. Segala benda dalam An
 ```
 // Kelas biasa: acuan
 class Dog(val name: String) {
-    fun bark() = println("$name menyalak!")
+ fun bark() = println("$name menyalak!")
 }
 
-val dog = Dog("Anggor")      // Buat objek
-dog.bark()                 // Anggor menyalak!
+val dog = Dog("Anggor") // Buat objek
+dog.bark() // Anggor menyalak!
 
 // data class: kotak penyimpan data (automatik ada equals/copy dll.)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "Zhang San", "zhangsan@example.com")
-val twin = me.copy(name = "Zhang Sanfeng")   // Salin sambil ubah satu medan
+val twin = me.copy(name = "Zhang Sanfeng") // Salin sambil ubah satu medan
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // Gaya lambda: takrif terus di situ, ringkas
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = elemen semasa
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = elemen semasa
 
 // Tapis + ubah berantai (sangat biasa dalam projek sebenar)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

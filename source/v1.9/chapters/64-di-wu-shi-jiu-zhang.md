@@ -67,7 +67,7 @@ iOS 开发大事记（截至 2026 年 11 月）
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：先说清楚成本
+注意：先说清楚成本
 
 {class="mt-1"}
 iOS 开发有硬门槛：<strong>必须有一台 Mac</strong>（Xcode 是 macOS 独占），上架需要 99 美元/年的开发者账号（个人开发者免费账号可以本地真机调试，但不能上架）。想清楚这笔投入再启程，不过好消息是，学习阶段用免费账号完全够用，第 60 章会讲。
@@ -82,7 +82,7 @@ iOS 开发历史上也有两位"主角"。Objective-C 是开国元老：从 2008
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
 {class="vs-title"}
-<i class="fas fa-times-circle mr-1"></i> Objective-C 风格（上古遗迹）
+ Objective-C 风格（上古遗迹）
 
 {class="font-mono text-xs leading-relaxed"}
 NSString *name = @"张三";<br>[name stringByAppendingString:@"你好"];<br>// 方括号 + 指针 + 分号三件套
@@ -90,7 +90,7 @@ NSString *name = @"张三";<br>[name stringByAppendingString:@"你好"];<br>// �
 
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
 {class="vs-title"}
-<i class="fas fa-check-circle mr-1"></i> Swift 风格（现代清爽）
+ Swift 风格（现代清爽）
 
 {class="font-mono text-xs leading-relaxed"}
 var name = "张三"<br>name += "你好"<br>// 像自然语言一样直白
@@ -105,7 +105,7 @@ Swift 的 Optional 机制值得多讲两句，因为它是 iOS 面试与实战�
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码（Swift + SwiftUI）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-upload mr-1"></i> 提交审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">🏪 App Store 上架</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 写代码（Swift + SwiftUI）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 提交审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">🏪 App Store 上架</span>
 :::
 :::
 
@@ -168,7 +168,7 @@ Swift 的 Optional 机制值得多讲两句，因为它是 iOS 面试与实战�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 打开 iPhone 自带的"天气"或"计时器"，挑一个功能问自己：如果只能"抬腕看一眼"，它应该长什么样？这就是"手机 App + 手表配套"的经典设计思路。把这个想法记在你的项目笔记里，学完界面章节后你就有能力把它做出来。
@@ -176,7 +176,7 @@ Swift 的 Optional 机制值得多讲两句，因为它是 iOS 面试与实战�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 全家桶不是让你一次全做，而是让你知道：每条路都通，而且起点是同一个工程。
@@ -208,7 +208,7 @@ Intel 芯片的 Mac、苹果自研芯片的 Mac、各代 iPhone，CPU 指令集�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 别猜性能，测性能。"我觉得这段代码慢"是错觉高发区，眼睛会骗人，下一节的 Instruments 不会。
@@ -242,7 +242,7 @@ Xcode 自带的性能分析套件，入口是菜单栏 Product → Profile。界
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 外部测试员里可能藏着你的第一批真实用户，TestFlight 版本也要认真做，图标、名称、崩溃自测一样都不能省。第一印象只有一次。
@@ -279,7 +279,7 @@ Xcode 自带的性能分析套件，入口是菜单栏 Product → Profile。界
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 定价用"一杯奶茶"做思考单位：价格越低，用户决策越轻。但别走极端白送，免费用户的维护成本也是成本。
@@ -325,7 +325,7 @@ Xcode 自带的性能分析套件，入口是菜单栏 Product → Profile。界
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 DUNS 编码申请是免费的，市面上任何"代办收费"都值得多留个心眼。要赶上架时间的话提前办，排队周期不等人的时候是真的不等。
@@ -363,7 +363,7 @@ DUNS 编码申请是免费的，市面上任何"代办收费"都值得多留个�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 复制粘贴式的敷衍回复只会拉长战线。在回复里写清楚"改了哪、审核员怎么验证"，一次说清，比来回三轮快得多。
@@ -421,7 +421,7 @@ DUNS 编码申请是免费的，市面上任何"代办收费"都值得多留个�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 别拿网上流传的"iOS 用户都是高消费"当真理——品类、地区、价格带的差异都很大。上架之后，你自己的后台数据永远比二手报告值钱。
@@ -462,7 +462,7 @@ DUNS 编码申请是免费的，市面上任何"代办收费"都值得多留个�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 回复差评有个可套用的三段式：感谢反馈 + 确认问题（复现了吗、什么机型）+ 给出解决路径或时间。别辩解，别背诵客服话术，具体的回应本身就是产品口碑。
@@ -470,7 +470,7 @@ DUNS 编码申请是免费的，市面上任何"代办收费"都值得多留个�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 现在就写一句话定位，贴在显示器边上："它帮____（谁）在____（场景）下解决____（问题）"。写不出来，说明题材还没想清楚，别急着开工；写得出来，环境搭建那章见。
@@ -478,7 +478,7 @@ DUNS 编码申请是免费的，市面上任何"代办收费"都值得多留个�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 先上架一个不完美的 App，胜过收藏一百篇教程。
@@ -526,7 +526,7 @@ iOS 的系统大版本一年一次，跟着 WWDC 的节奏走，商店审核政�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 两个刻板印象都丢掉："iOS 用户人傻钱多"和"安卓用户不值钱"。品类、地区、价格带随时能推翻它们，产品决策跟着你自己的数据走。
@@ -569,7 +569,7 @@ iOS 的系统大版本一年一次，跟着 WWDC 的节奏走，商店审核政�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 从清单里挑出你之前最信的一条，去苹果官方文档找到原文出处，亲手验证一次。亲手戳破过一个误区的人，对剩下九个的免疫力会翻倍。
@@ -577,7 +577,7 @@ iOS 的系统大版本一年一次，跟着 WWDC 的节奏走，商店审核政�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把这份清单打印出来贴在工位上。每次你产生"是不是不用管 X"的念头时，先来这里对一遍答案，能省下大半搜索时间。
@@ -618,7 +618,7 @@ App Store 每个应用的页面下方都有一个"隐私"栏目，列出这款 A
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 通知权限别在首次启动就要。等用户完成第一次关键动作（比如记完第一笔账）再弹，并且明确告诉他"开了通知，订阅到期前一天会提醒你"：通知是拿价值换的，不是拿弹窗抢的。
@@ -655,7 +655,7 @@ App 的数据放在哪，决定你后半年睡不睡得好。这个问题在写�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 涉及用户数据的功能，删除与导出要和创建一样好使。"我的数据在哪、怎么带走、怎么删干净"这三个问题答不上来的产品，撑不过认真用户的第三封邮件。
@@ -683,7 +683,7 @@ iOS 生态里有一批词，安卓篇里没怎么出现过：小组件（Widget�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 打开 iPhone 的"快捷指令"App，翻一遍底部的"快捷指令中心"，看看别人是怎么把日常动作自动化拼起来的。再想想：你的第一个 App 能提供哪一块"积木"？记下来，它可能就是你产品的差异化卖点。
@@ -720,7 +720,7 @@ iOS 生态里有一批词，安卓篇里没怎么出现过：小组件（Widget�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 用户为解决的问题付费，不为"接入了大模型"付费。先问这个 AI 功能砍掉一半，产品还成立吗？成立，说明它是点缀，晚点做；不成立，说明它是核心，第一版就要把它做扎实。
@@ -740,7 +740,7 @@ iOS 生态里有一批词，安卓篇里没怎么出现过：小组件（Widget�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 AI 功能同样要如实写进隐私标签与隐私政策，数据送去云端处理这件事，必须让用户在上手前就知道。这一条在审核清单里的位置，比你想的高。
@@ -773,7 +773,7 @@ AI 功能同样要如实写进隐私标签与隐私政策，数据送去云端�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 上线后发现严重问题，别硬扛：小问题提交修复版本，必要时申请加急审核；伤及数据与付费的大问题，可以先把有问题的版本从销售里撤下来，修复后再上。处理越果断，差评越少。
@@ -804,7 +804,7 @@ AI 功能同样要如实写进隐私标签与隐私政策，数据送去云端�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 银行与税务信息在账号开通后尽早填：它有审核周期，等 App 开始产生收入才去填，到账就要多等几周。具体流程与所需材料以官方页面为准。
@@ -812,7 +812,7 @@ AI 功能同样要如实写进隐私标签与隐私政策，数据送去云端�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把开发者账号密码交给任何"代上架""代过审"的第三方服务。账号在你名下，出的事故与违规记录也记在你名下。
@@ -838,7 +838,7 @@ AI 功能同样要如实写进隐私标签与隐私政策，数据送去云端�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把这张速查表截图存进手机相册。后面的实操章节里每次"这词又来了"，你都能在五秒内对上号，省下的搜索时间够多写两行代码。
@@ -868,7 +868,7 @@ AI 功能同样要如实写进隐私标签与隐私政策，数据送去云端�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - iOS 生态四大红利：设备统一、版本更新快、付费习惯好、商店干净
 - 硬门槛两样：Mac（Xcode 独占）+ 上架 99 美元/年（学习阶段免费够用）

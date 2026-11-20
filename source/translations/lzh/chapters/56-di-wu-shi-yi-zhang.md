@@ -24,19 +24,19 @@ Compose 核心之思，一言蔽之：界面 = 函數。凡可顯於屏者（文
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "汝好，$name！")     // 一"文字之積木"
+ Text(text = "汝好，$name！") // 一"文字之積木"
 }
 
 // 嵌套而組：大積木套小積木
 @Composable
 fun HomeScreen() {
-    Column {                          // 豎而列之
-        Greeting(name = "張三")
-        Greeting(name = "李四")
-        Button(onClick = { /* 點之何為 */ }) {
-            Text("點我")
-        }
-    }
+ Column { // 豎而列之
+ Greeting(name = "張三")
+ Greeting(name = "李四")
+ Button(onClick = { /* 點之何為 */ }) {
+ Text("點我")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ Compose 四大基礎組件
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "此乃一段文字")
-        Button(onClick = { println("被點擊了") }) {
-            Text("按鈕")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("輸入若干") }
-        )
-    }
+ Column {
+ Text(text = "此乃一段文字")
+ Button(onClick = { println("被點擊了") }) {
+ Text("按鈕")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("輸入若干") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("第一行")
-    Row {
-        Text("左邊")
-        Text("右邊")
-    }
-    Box {
-        Text("底層")
-        Text("疊於上之角標")
-    }
+ Text("第一行")
+ Row {
+ Text("左邊")
+ Text("右邊")
+ }
+ Box {
+ Text("底層")
+ Text("疊於上之角標")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "美之文字",
-    modifier = Modifier
-        .padding(16.dp)          // 四周留白
-        .fillMaxWidth()          // 滿其寬
-        .background(Color.Blue)  // 背景色
-        .clickable { /* 點擊 */ }// 可點擊
+ text = "美之文字",
+ modifier = Modifier
+ .padding(16.dp) // 四周留白
+ .fillMaxWidth() // 滿其寬
+ .background(Color.Blue) // 背景色
+ .clickable { /* 點擊 */ }// 可點擊
 )
 // 鏈式調用：相繼而行，序有其義（先 padding 後背景，背景不含邊距）
 ```
@@ -150,15 +150,15 @@ padding(16.dp).background(Blue) 與 background(Blue).padding(16.dp) 其效不同
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf：記此將變之值
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf：記此將變之值
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "汝點了 $count 次")
-        Button(onClick = { count++ }) {   // 改狀態
-            Text("點我 +1")                // 界面自動刷新
-        }
-    }
+ Column {
+ Text(text = "汝點了 $count 次")
+ Button(onClick = { count++ }) { // 改狀態
+ Text("點我 +1") // 界面自動刷新
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> 用戶點擊</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 狀態改變（count++）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 用戶點擊</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 狀態改變（count++）</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose 感知到變化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 自動重畫界面（重組）</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose 感知到變化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 自動重畫界面（重組）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ Compose 開發體驗之「外掛」有三，一用則不可復返：
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // 值變則自平滑至標之
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // 值變則自平滑至標之
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

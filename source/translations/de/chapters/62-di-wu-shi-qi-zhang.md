@@ -27,16 +27,16 @@ Kamera, Standort, Kontakte, Benachrichtigungen ... Diese „sensiblen Zonen“ m
 
 @Composable
 fun CameraButton() {
-    val permission = rememberPermissionState(
-        permission = android.Manifest.permission.CAMERA
-    )
-    Button(onClick = {
-        when {
-            permission.status.isGranted -&gt; openCamera()
-            permission.status.shouldShowRationale -&gt; showExplainDialog()
-            else -&gt; permission.launchPermissionRequest()
-        }
-    }) { Text("Foto aufnehmen") }
+ val permission = rememberPermissionState(
+ permission = android.Manifest.permission.CAMERA
+ )
+ Button(onClick = {
+ when {
+ permission.status.isGranted -&gt; openCamera()
+ permission.status.shouldShowRationale -&gt; showExplainDialog()
+ else -&gt; permission.launchPermissionRequest()
+ }
+ }) { Text("Foto aufnehmen") }
 }
 ```
 :::
@@ -63,22 +63,22 @@ Benachrichtigungen sind der Kanal, über den eine App Nutzer erreicht – und zu
 
 // 1. Benachrichtigungskanal anlegen (ab Android 8 Pflicht)
 val channel = NotificationChannel(
-    "reminder", "Erinnerungen", NotificationManager.IMPORTANCE_DEFAULT
+ "reminder", "Erinnerungen", NotificationManager.IMPORTANCE_DEFAULT
 )
 val manager = getSystemService(NotificationManager::class.java)
 manager.createNotificationChannel(channel)
 
 // 2. Benachrichtigung senden
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("Ausgaben-Erinnerung")
-    .setContentText("Heute hast du noch nichts erfasst")
-    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("Ausgaben-Erinnerung")
+ .setContentText("Heute hast du noch nichts erfasst")
+ .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+ .build()
 if (ActivityCompat.checkSelfPermission(this,
-        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+ Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 ) {
-    manager.notify(1, notification)
+ manager.notify(1, notification)
 }
 ```
 :::

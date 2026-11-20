@@ -67,7 +67,7 @@ Todo el proceso, de principio a fin, duró unos cuarenta minutos, sin encender l
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prueba: monta tu flujo de ofimática móvil
+Prueba: monta tu flujo de ofimática móvil
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Elige tu App principal de documentos (WPS o Microsoft 365), inicia sesión y vincula el disco en la nube.

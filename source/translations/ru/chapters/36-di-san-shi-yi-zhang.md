@@ -70,7 +70,7 @@ CapCut (китайская версия Jianying), лучший инструме
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: снимите 30-секундное короткое видео
+Практика: снимите 30-секундное короткое видео
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Выберите небольшое знание, в котором разбираетесь (например, «как увеличить шрифт на телефоне»).
@@ -82,7 +82,7 @@ CapCut (китайская версия Jianying), лучший инструме
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Итоги главы
+Итоги главы
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Перед съёмкой решите: кто аудитория, какую ценность даёте, на какой платформе публикуете

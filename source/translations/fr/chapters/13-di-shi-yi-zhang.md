@@ -61,7 +61,7 @@ L'album du smartphone est rempli de milliers de photos, en chercher une précise
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Entraînez-vous : effectuez un cycle complet photo + retouche + organisation sur le smartphone
+Entraînez-vous : effectuez un cycle complet photo + retouche + organisation sur le smartphone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Activez la « grille » dans les paramètres de l'appareil photo, trouvez un endroit avec une lumière naturelle et prenez trois photos (n'oubliez pas d'essuyer l'objectif, ajustez l'exposition).

@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "張三"        // let：常量（推薦預設用呢個）
-var age = 18             // var：變數（之後仲可以改）
+let name = "張三" // let：常量（推薦預設用呢個）
+var age = 18 // var：變數（之後仲可以改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> let 唔可以改，編譯報錯
+age = 19 // var 可以改
+// name = "李四" // let 唔可以改，編譯報錯
 
-let score: Int = 100     // 都可以明確寫明類型
-let pi = 3.14            // 唔寫都會自動推斷
+let score: Int = 100 // 都可以明確寫明類型
+let pi = 3.14 // 唔寫都會自動推斷
 
-print("你好，\(name)")   // 字串插值：反斜槓 + 括號
+print("你好，\(name)") // 字串插值：反斜槓 + 括號
 ```
 :::
 
@@ -64,20 +64,20 @@ Swift 社區嘅鐵律：預設用 let，真係有需要先用 var。可以用 le
 :::
 
 ```
-var name: String = "張三"   // 普通類型：絕對唔會係 nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> 編譯錯誤，直接擋住
+var name: String = "張三" // 普通類型：絕對唔會係 nil
+// name = nil // 編譯錯誤，直接擋住
 
-var nickname: String? = nil  // 加個問號：允許爲 nil（可選值）
+var nickname: String? = nil // 加個問號：允許爲 nil（可選值）
 nickname = "三兒"
 
 // 用可選值，必須"解包"：
-if let n = nickname {        // if let：安全解包
-    print("你好，\(n)")
+if let n = nickname { // if let：安全解包
+ print("你好，\(n)")
 } else {
-    print("仲未有暱稱")
+ print("仲未有暱稱")
 }
 
-let len = nickname?.count ?? 0   // ?? 畀預設值（空合運算符）
+let len = nickname?.count ?? 0 // ?? 畀預設值（空合運算符）
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // 函數：名字喺前，參數同返回類型喺後
 func greet(name: String) -> String {
-    return "你好，\(name)！"
+ return "你好，\(name)！"
 }
-print(greet(name: "張三"))     // 調用時要帶參數名
+print(greet(name: "張三")) // 調用時要帶參數名
 
 // 閉包：就地定義，輕快直接
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = 當前元素
+let doubled = numbers.map { $0 * 2 } // $0 = 當前元素
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // 篩選
+let big = numbers.filter { $0 > 2 } // 篩選
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ Swift 官方嘅偏好好明確：優先用結構體（struct），要到需要�
 ```
 // 結構體：裝數據嘅盒
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // 結構體自帶"逐一成員構造器"：直接就建到
+ // 結構體自帶"逐一成員構造器"：直接就建到
 }
 let r = Record(amount: 25.5, category: "餐飲", date: Date())
 
 // 協議：約定"必須具備邊啲能力"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // 遵守協議 = 承諾實現其要求
+struct Record: Identifiable { ... } // 遵守協議 = 承諾實現其要求
 ```
 :::
 

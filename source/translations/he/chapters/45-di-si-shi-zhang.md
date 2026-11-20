@@ -76,12 +76,12 @@ PRD טוב לא צריך להיות ארוך, אבל עליו לכלול שיש�
 - Build: Vite
 ## מודל נתונים
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## תוכנית פיתוח
 Step 1: רישום בסיסי (CRUD)

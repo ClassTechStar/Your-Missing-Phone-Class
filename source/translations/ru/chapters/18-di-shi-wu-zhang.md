@@ -34,7 +34,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Функция iPhone «Ограничение 80%» — золотое правило как системная настройка
+Функция iPhone «Ограничение 80%» — золотое правило как системная настройка
 
 {class="mt-1"}
 В iPhone серии 15/16 (iOS 17 и выше) правило «20%–80%» реализовано как системная функция. После включения зарядка автоматически останавливается на 80%, значительно замедляя старение батареи. Путь настройки:
@@ -48,7 +48,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>Зарядные устройства GaN — идеальный спутник в командировках
+Зарядные устройства GaN — идеальный спутник в командировках
 
 {class="mt-1"}
 Вы, возможно, заметили, что современные блоки быстрой зарядки становятся всё меньше. За это стоит благодарить <strong>GaN (нитрид галлия)</strong> — новый полупроводниковый материал. По сравнению с традиционными кремниевыми зарядными устройствами, GaN имеет несколько явных преимуществ:
@@ -127,47 +127,47 @@ III. Полный разбор протоколов быстрой зарядк�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Протокол</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Макс. мощность</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Технология</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Совместимость</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 Вт</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Высокое напряжение / несколько уровней</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Наиболее широкий</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 Вт+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Регулируемое высокое напряжение</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Модели на Qualcomm</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 Вт</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Низкое напряжение, большой ток</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Только OPPO-серия</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 Вт</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge Pump</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Быстрая зарядка Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Протокол PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Протокол</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Макс. мощность</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Технология</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Совместимость</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 Вт</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Высокое напряжение / несколько уровней</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Наиболее широкий</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 Вт+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Регулируемое высокое напряжение</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Модели на Qualcomm</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 Вт</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Низкое напряжение, большой ток</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Только OPPO-серия</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 Вт</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge Pump</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Быстрая зарядка Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Протокол PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ III. Полный разбор протоколов быстрой зарядк�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Советы по безопасности быстрой зарядки
+Советы по безопасности быстрой зарядки
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Избегайте играть в тяжёлые игры во время зарядки: это усиливает нагрев.
@@ -207,7 +207,7 @@ IV. Новые технологии батарей: кремний-углеро�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>В каких моделях используется?
+В каких моделях используется?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: серия Magic первой внедрила SiC-аноды в коммерческие продукты, Magic6 Pro, Magic7, складной Magic V3.
@@ -228,7 +228,7 @@ IV. Новые технологии батарей: кремний-углеро�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Проверьте: сделайте осмотр вашей батареи
+Проверьте: сделайте осмотр вашей батареи
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Проверьте здоровье: найдите и запишите максимальную ёмкость вашей батареи.

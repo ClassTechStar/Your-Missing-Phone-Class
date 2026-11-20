@@ -82,7 +82,7 @@ Mac 用户流程更短：把下载的 <kbd>.dmg</kbd> 里的图标拖进 Applica
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：硬件要求心里有数
+注意：硬件要求心里有数
 
 {class="mt-1"}
 Android Studio 是个"吃内存"的家伙：建议 <strong>16GB 内存</strong>起步（8GB 也能跑，但模拟器一开会比较卡）、磁盘预留 <strong>20GB 以上</strong>、CPU 支持虚拟化（BIOS 里开启 VT-x/AMD-V）。如果电脑确实老旧，可以用"真机调试"代替模拟器（本章第四节会讲），体验反而更流畅。
@@ -148,7 +148,7 @@ Minimum SDK 这个下拉框值得多说两句。你选的数字越小，能装�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：包名的门道
+小贴士：包名的门道
 
 {class="mt-1"}
 包名（package name）就像 App 的"身份证号"，全球不能重复，上架后就不能改了。个人练习用 <code class="inline">com.example.xxx</code> 就行；正式产品要换成你自己的域名反写（比如 <code class="inline">com.你的名字.应用名</code>）。别用 <code class="inline">com.example</code> 上架：商店会拒收。
@@ -234,7 +234,7 @@ New Project 的第一屏是一堆模板缩略图，新手容易在这里犯选�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：USB 调试别常开
+避坑提醒：USB 调试别常开
 
 {class="mt-1"}
 USB 调试相当于给电脑开了"后门"。在公共场合充电、连接不信任的电脑时，务必关闭 USB 调试，防止别人通过它读取你的数据。平时开发用完就关，养成习惯。
@@ -263,7 +263,7 @@ Device Manager 里每台 AVD 的条目右边还有个下拉菜单，藏着几个
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：一台就够，别囤 AVD
+小贴士：一台就够，别囤 AVD
 
 {class="mt-1"}
 新手常犯的错误是照着教程囤五六台 AVD："万一要测别的版本呢？"实际上学习阶段一台主力 + 换镜像测试就够了。每个 AVD 都吃磁盘、吃内存，囤多了 IDE 反而变卡。真要跨版本测试，建一个、测完、删掉，几分钟的事。
@@ -343,7 +343,7 @@ Device Manager 里每台 AVD 的条目右边还有个下拉菜单，藏着几个
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 环境搭建的成功标准只有一个：绿色三角点下去，你的 App 出现在某块屏幕上。其他一切：内存条、动物代号、报错黑话：都只是路上的风景。
@@ -378,27 +378,27 @@ Device Manager 里每台 AVD 的条目右边还有个下拉菜单，藏着几个
 ::: div .figure
 ```html
 <svg aria-hidden="true" style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="300" rx="8" style="fill:var(--surface-6)" />
-      <text x="20" y="30" font-size="13" font-weight="bold" style="fill:var(--ink-3)">MyFirstApp/ 项目根目录</text>
-      <rect x="30" y="45" width="540" height="230" rx="6" style="fill:var(--ink-inverse);stroke:var(--line-2)" />
-      <text x="45" y="70" font-size="11" font-weight="bold" style="fill:var(--accent-book)">app/ ← 你写代码的地方</text>
-      <rect x="60" y="82" width="240" height="178" rx="5" style="fill:var(--accent-wash)" />
-      <text x="70" y="102" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">src/main/</text>
-      <text x="80" y="120" font-size="10" style="fill:#374151">├ java/…/MainActivity.kt  ← 逻辑代码</text>
-      <text x="80" y="138" font-size="10" style="fill:#374151">├ res/  ← 资源（图片、文字、颜色）</text>
-      <text x="80" y="156" font-size="10" style="fill:#374151">└ AndroidManifest.xml  ← 应用"户口本"</text>
-      <text x="70" y="180" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">build.gradle.kts</text>
-      <text x="80" y="198" font-size="10" style="fill:var(--muted-2)">声明依赖的库（SDK 版本、Compose 等）</text>
-      <text x="70" y="222" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">src/androidTest/ 与 test/</text>
-      <text x="80" y="240" font-size="10" style="fill:var(--muted-2)">自动化测试代码（第 56 章用）</text>
-      <rect x="320" y="82" width="230" height="178" rx="5" style="fill:#f0fdf4" />
-      <text x="330" y="102" font-size="10" font-weight="bold" style="fill:#065f46">根目录的其他文件</text>
-      <text x="340" y="122" font-size="10" style="fill:#374151">gradle/ + gradlew.bat  ← 构建脚本</text>
-      <text x="340" y="142" font-size="10" style="fill:#374151">settings.gradle.kts  ← 项目设置</text>
-      <text x="340" y="162" font-size="10" style="fill:var(--muted-2)">（新手的口诀：只碰 app/ 目录，</text>
-      <text x="340" y="180" font-size="10" style="fill:var(--muted-2)">其余的先当"黑盒"，别乱动）</text>
-      <text x="340" y="208" font-size="10" style="fill:var(--muted)">.gitignore  ← 版本控制忽略清单</text>
-    </svg>
+ <rect x="0" y="0" width="600" height="300" rx="8" style="fill:var(--surface-6)" />
+ <text x="20" y="30" font-size="13" font-weight="bold" style="fill:var(--ink-3)">MyFirstApp/ 项目根目录</text>
+ <rect x="30" y="45" width="540" height="230" rx="6" style="fill:var(--ink-inverse);stroke:var(--line-2)" />
+ <text x="45" y="70" font-size="11" font-weight="bold" style="fill:var(--accent-book)">app/ ← 你写代码的地方</text>
+ <rect x="60" y="82" width="240" height="178" rx="5" style="fill:var(--accent-wash)" />
+ <text x="70" y="102" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">src/main/</text>
+ <text x="80" y="120" font-size="10" style="fill:#374151">├ java/…/MainActivity.kt ← 逻辑代码</text>
+ <text x="80" y="138" font-size="10" style="fill:#374151">├ res/ ← 资源（图片、文字、颜色）</text>
+ <text x="80" y="156" font-size="10" style="fill:#374151">└ AndroidManifest.xml ← 应用"户口本"</text>
+ <text x="70" y="180" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">build.gradle.kts</text>
+ <text x="80" y="198" font-size="10" style="fill:var(--muted-2)">声明依赖的库（SDK 版本、Compose 等）</text>
+ <text x="70" y="222" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">src/androidTest/ 与 test/</text>
+ <text x="80" y="240" font-size="10" style="fill:var(--muted-2)">自动化测试代码（第 56 章用）</text>
+ <rect x="320" y="82" width="230" height="178" rx="5" style="fill:#f0fdf4" />
+ <text x="330" y="102" font-size="10" font-weight="bold" style="fill:#065f46">根目录的其他文件</text>
+ <text x="340" y="122" font-size="10" style="fill:#374151">gradle/ + gradlew.bat ← 构建脚本</text>
+ <text x="340" y="142" font-size="10" style="fill:#374151">settings.gradle.kts ← 项目设置</text>
+ <text x="340" y="162" font-size="10" style="fill:var(--muted-2)">（新手的口诀：只碰 app/ 目录，</text>
+ <text x="340" y="180" font-size="10" style="fill:var(--muted-2)">其余的先当"黑盒"，别乱动）</text>
+ <text x="340" y="208" font-size="10" style="fill:var(--muted)">.gitignore ← 版本控制忽略清单</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -434,8 +434,8 @@ res/ 是你最早要熟悉的一块地盘。打开它，会看到几个子文件
 
 ```
 &lt;resources&gt;
-    &lt;string name="app_name"&gt;My First App&lt;/string&gt;
-    &lt;string name="welcome_text"&gt;你好，张三！这是我的第一个App&lt;/string&gt;
+ &lt;string name="app_name"&gt;My First App&lt;/string&gt;
+ &lt;string name="welcome_text"&gt;你好，张三！这是我的第一个App&lt;/string&gt;
 &lt;/resources&gt;
 ```
 :::
@@ -446,7 +446,7 @@ res/ 是你最早要熟悉的一块地盘。打开它，会看到几个子文件
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：别把资源文件改名改出大事
+注意：别把资源文件改名改出大事
 
 {class="mt-1"}
 资源文件名只能小写字母、数字和下划线，大写字母或空格会让整个项目编不过，报错还指不到文件本身。给资源命名时用"用途_描述"的格式，比如 <code class="inline">icon_back</code>、<code class="inline">text_welcome</code>，一周后你自己还能看懂。
@@ -463,20 +463,20 @@ Manifest 文件平时不需要你频繁编辑，但每次加新页面、新权�
 
 ```
 &lt;manifest ...&gt;
-    &lt;application
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/主题..."&gt;
+ &lt;application
+ android:icon="@mipmap/ic_launcher"
+ android:label="@string/app_name"
+ android:theme="@style/主题..."&gt;
 
-        &lt;activity
-            android:name=".MainActivity"
-            android:exported="true"&gt;
-            &lt;intent-filter&gt;
-                &lt;action android:name="android.intent.action.MAIN" /&gt;
-                &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
-            &lt;/intent-filter&gt;
-        &lt;/activity&gt;
-    &lt;/application&gt;
+ &lt;activity
+ android:name=".MainActivity"
+ android:exported="true"&gt;
+ &lt;intent-filter&gt;
+ &lt;action android:name="android.intent.action.MAIN" /&gt;
+ &lt;category android:name="android.intent.category.LAUNCHER" /&gt;
+ &lt;/intent-filter&gt;
+ &lt;/activity&gt;
+ &lt;/application&gt;
 &lt;/manifest&gt;
 ```
 :::
@@ -506,36 +506,36 @@ Manifest 文件平时不需要你频繁编辑，但每次加新页面、新权�
 
 ```
 plugins {
-    alias(libs.plugins.android.application)  // 安卓应用插件
-    alias(libs.plugins.kotlin.android)       // Kotlin 语言插件
-    alias(libs.plugins.kotlin.compose)       // Compose 编译插件（跟 Kotlin 版本走）
+ alias(libs.plugins.android.application) // 安卓应用插件
+ alias(libs.plugins.kotlin.android) // Kotlin 语言插件
+ alias(libs.plugins.kotlin.compose) // Compose 编译插件（跟 Kotlin 版本走）
 }
 
 android {
-    namespace = "com.example.myfirstapp"     // 包名（从 Manifest 搬来的那个）
-    compileSdk = 36                          // 编译目标 API（以向导生成为准）
+ namespace = "com.example.myfirstapp" // 包名（从 Manifest 搬来的那个）
+ compileSdk = 36 // 编译目标 API（以向导生成为准）
 
-    defaultConfig {
-        applicationId = "com.example.myfirstapp"  // 商店里的唯一身份
-        minSdk = 26                          // 最低支持 Android 8.0
-        targetSdk = 36                       // 目标 API（跟随商店政策逐年抬高）
-        versionCode = 1                      // 内部版本号，每次上架递增
-        versionName = "1.0"                  // 用户看到的版本名
-    }
+ defaultConfig {
+ applicationId = "com.example.myfirstapp" // 商店里的唯一身份
+ minSdk = 26 // 最低支持 Android 8.0
+ targetSdk = 36 // 目标 API（跟随商店政策逐年抬高）
+ versionCode = 1 // 内部版本号，每次上架递增
+ versionName = "1.0" // 用户看到的版本名
+ }
 
-    buildTypes {
-        release {                            // 正式包：默认开启压缩混淆
-            isMinifyEnabled = true
-        }
-    }
+ buildTypes {
+ release { // 正式包：默认开启压缩混淆
+ isMinifyEnabled = true
+ }
+ }
 }
 
 dependencies {
-    // Compose 全家桶的版本交给 BOM 统一定价
-    implementation(platform("androidx.compose:compose-bom:2026.08.00"))
-    implementation("androidx.compose.ui:ui")          // 注意：不写版本号
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.activity:activity-compose")
+ // Compose 全家桶的版本交给 BOM 统一定价
+ implementation(platform("androidx.compose:compose-bom:2026.08.00"))
+ implementation("androidx.compose.ui:ui") // 注意：不写版本号
+ implementation("androidx.compose.material3:material3")
+ implementation("androidx.activity:activity-compose")
 }
 ```
 :::
@@ -559,12 +559,12 @@ dependencies {
 
 ```
 setContent {
-    MyFirstAppTheme {
-        Surface(modifier = Modifier.fillMaxSize()) {
-            // ▼ 把这里改成你自己的文字
-            Text("你好，张三！这是我的第一个App")
-        }
-    }
+ MyFirstAppTheme {
+ Surface(modifier = Modifier.fillMaxSize()) {
+ // ▼ 把这里改成你自己的文字
+ Text("你好，张三！这是我的第一个App")
+ }
+ }
 }
 ```
 :::
@@ -640,7 +640,7 @@ setContent {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：搜报错的方法论
+小贴士：搜报错的方法论
 
 {class="mt-1"}
 报错信息第一行是最有价值的，把它原样复制进搜索引擎，加"android studio"关键词。别搜"我装不上环境怎么办"这种笼统问题，搜"Gradle sync failed: Could not resolve com.android.tools.build"这种具体错误。精确的问题，才有精确的答案。
@@ -670,7 +670,7 @@ setContent {
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 把这张表当索引，不要当答案：动手前打开官网看一眼当前稳定版，比背版本号可靠。
@@ -747,7 +747,7 @@ setContent {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：完成你的"开发仪式感"清单
+来动手：完成你的"开发仪式感"清单
 
 {class="mt-1"}
 ① 装好 Android Studio 并跑通模拟器；② 用真机跑一次自己的 App 并截图留念；③ 把 Hello 文字改成你的名字；④ 把项目压缩存个档。做完这四步，你就可以在朋友圈宣布：我也是安卓开发者了（截图为证）。
@@ -755,7 +755,7 @@ setContent {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - Android Studio = 官方免费 IDE；建议 16GB 内存 + 20GB 磁盘 + 开虚拟化
 - 新建项目三要素：名字、包名（全球唯一，com.example 别上架）、最低 SDK（API 26 起）

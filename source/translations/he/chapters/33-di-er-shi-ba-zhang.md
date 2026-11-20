@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>3 צעדים
+3 צעדים
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>מה חשוב לך</strong>:צילום? משחק? סוללה? מסך? סדר.
@@ -33,41 +33,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ממד</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">איך</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סיכום</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">SoC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספר שנים. 2026: Snapdragon 8 Elite Gen5/Dimensity 9500=עליון; 8s Gen4/8400=בינוני-גבוה; 7+ Gen4/7350=3 שנים. &lt;6: זהיר.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC = שנים</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">מסך</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED &gt; LCD; 120Hz &gt; 60Hz; 1080P+; PWM 1920Hz+.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+PWM = מינימום</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">איזה אקוסיסטם לבחור? בקיצור:</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>לא מגה-פיקסל, סנסור</strong>סנסור &gt; פיקסל. אולטרה-רחב; טלה 3x+; מאקרו = מילוי.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סנסור גדול + טלה &gt; עדשות מילוי</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">סוללה וטעינה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh מינימום, 5000mAh+ יומי. 60W+ מהיר, 100W+ סופר. אלחוטי איטי.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + 60W = בלי חרדה</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">עדכוני מערכת</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 5-6 שנים; Samsung 4+5; Pixel 7; סיני 2-3.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רוצה הרבה? עדכונים ארוכים</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ממד</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">איך</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סיכום</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">SoC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספר שנים. 2026: Snapdragon 8 Elite Gen5/Dimensity 9500=עליון; 8s Gen4/8400=בינוני-גבוה; 7+ Gen4/7350=3 שנים. &lt;6: זהיר.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC = שנים</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">מסך</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED &gt; LCD; 120Hz &gt; 60Hz; 1080P+; PWM 1920Hz+.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+PWM = מינימום</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">איזה אקוסיסטם לבחור? בקיצור:</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>לא מגה-פיקסל, סנסור</strong>סנסור &gt; פיקסל. אולטרה-רחב; טלה 3x+; מאקרו = מילוי.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סנסור גדול + טלה &gt; עדשות מילוי</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">סוללה וטעינה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh מינימום, 5000mAh+ יומי. 60W+ מהיר, 100W+ סופר. אלחוטי איטי.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + 60W = בלי חרדה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">עדכוני מערכת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 5-6 שנים; Samsung 4+5; Pixel 7; סיני 2-3.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רוצה הרבה? עדכונים ארוכים</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">זו באמת "טכנולוגיה שהופכת את החיים לשוויוניים יותר"</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מה חשוב</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">המלצה</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 צלם</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סנסור 1", OIS, טלה 3x+, ISP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X, Huawei Pura/Mate, Xiaomi Ultra</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 גיימר</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC עליון, סמלי מגע, קירור, סוללה+טעינה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO, ROG Phone, Red Magic, Redmi K</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 סוללה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh+, SoC יעיל, LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic, OnePlus, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 קשיש</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט, פונט, ווליום, סוללה, שירות</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei, Honor Play, OPPO A, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 תלמיד</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יחס, עמיד, סוללה, בקרת הורים</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יש Mac/iPad/AirPods, iPhone הוא הפתרון היחיד</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 רגיל (משתלם) או Pro (חוויה מלאה)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 נסיעה לחו"ל</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמיכת eSIM, כיסוי תדרים עולמי, Google</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">זו באמת "טכנולוגיה שהופכת את החיים לשוויוניים יותר"</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מה חשוב</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">המלצה</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 צלם</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סנסור 1", OIS, טלה 3x+, ISP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X, Huawei Pura/Mate, Xiaomi Ultra</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 גיימר</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC עליון, סמלי מגע, קירור, סוללה+טעינה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO, ROG Phone, Red Magic, Redmi K</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 סוללה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh+, SoC יעיל, LTPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic, OnePlus, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 קשיש</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט, פונט, ווליום, סוללה, שירות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei, Honor Play, OPPO A, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 תלמיד</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יחס, עמיד, סוללה, בקרת הורים</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יש Mac/iPad/AirPods, iPhone הוא הפתרון היחיד</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 רגיל (משתלם) או Pro (חוויה מלאה)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 נסיעה לחו"ל</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמיכת eSIM, כיסוי תדרים עולמי, Google</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>פעולה: בחר טלפון בשיטה זו
+פעולה: בחר טלפון בשיטה זו
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. כתוב שני צרכים עיקריים (כמו: סוללה ראשון, צילום שני).
@@ -208,7 +208,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - שלושה כלים: צרכים &gt; תקציב &gt; דגם

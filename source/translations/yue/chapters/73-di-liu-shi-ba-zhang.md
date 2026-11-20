@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* 引導去設定入面開 */
-        default: /* 已授權，開搞 */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* 引導去設定入面開 */
+ default: /* 已授權，開搞 */
+ }
+ }
 }
 
 // 3. 被拒之後優雅降級：畀提示 + 跳去設定
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. 申請通知權限（彈一次窗）
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "已授權" : "被拒絕")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "已授權" : "被拒絕")
+ }
 
 // 2. 安排一條"每日 20:00 記賬提醒"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "記賬提醒"
-    content.body = "今日仲未記賬喎"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "記賬提醒"
+ content.body = "今日仲未記賬喎"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ Swift 6 嘅並發體系有兩條新手必識嘅規則：
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // 出現就開始，消失就取消
-            await vm.search(city: "北京")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // 出現就開始，消失就取消
+ await vm.search(city: "北京")
+ }
+ }
 }
 ```
 :::

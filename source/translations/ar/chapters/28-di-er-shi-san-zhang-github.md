@@ -25,46 +25,46 @@ Git<strong>GitHub</strong>الجوهر
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">تسجيل كل تغيير في الملفات (كيف تغير، من غيّر، متى)</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">وضع مستودعات Git في السحابة لتسهيل التخزين والعرض والتعاون</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">هل يحتاج إلى إنترنت</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لا يحتاج، يعمل دون اتصال</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحتاج إلى اتصال للوصول</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الملكية</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">برنامج مفتوح المصدر، أنشأه Linus Torvalds (أبو Linux)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منتج مملوك لـ Microsoft</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منافسون من نفس الفئة</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN وMercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab وGitee (مايون) وBitbucket</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ببساطة:</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Git يدير "كيفية تسجيل التغييرات"، و GitHub يدير "أين توضع التغييرات وكيف نتعاون"</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">. Git أداة تعمل محليًا؛ و GitHub منصة تضع مستودعات Git في السحابة لتسهيل التعاون والعرض. يمكنك استخدام Git فقط دون GitHub (مثل كتابة الأكواد وإدارة إصداراتها بنفسك)، لكن استخدام GitHub يتطلب استخدام Git (لأن GitHub مبني على Git).</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ثالثًا: المفاهيم والوظائف الأساسية في GitHub</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">📁 مفاهيم أساسية</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قبل البدء، تعرف على بعض الكلمات المتكررة، وإلا ستكون واجهة GitHub محيرة:</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المستودع (Repository، اختصارًا Repo)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: كل مشروع يقابله مستودع، يحتوي على جميع ملفات الأكواد لهذا المشروع والإصدارات التاريخية والوثائق. يمكن فهمه على أنه "مجلد المشروع".</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الالتزام (Commit)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: سجل تعديل واحد على الكود. يرافق كل Commit رسالة توضيحية تسجل "ما الذي تغير هذه المرة، ولماذا". هذا هو أساس قدرة Git/GitHub على "السفر عبر الزمن".</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">تسجيل كل تغيير في الملفات (كيف تغير، من غيّر، متى)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">وضع مستودعات Git في السحابة لتسهيل التخزين والعرض والتعاون</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">هل يحتاج إلى إنترنت</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لا يحتاج، يعمل دون اتصال</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحتاج إلى اتصال للوصول</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الملكية</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">برنامج مفتوح المصدر، أنشأه Linus Torvalds (أبو Linux)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منتج مملوك لـ Microsoft</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منافسون من نفس الفئة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN وMercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab وGitee (مايون) وBitbucket</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ببساطة:</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Git يدير "كيفية تسجيل التغييرات"، و GitHub يدير "أين توضع التغييرات وكيف نتعاون"</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">. Git أداة تعمل محليًا؛ و GitHub منصة تضع مستودعات Git في السحابة لتسهيل التعاون والعرض. يمكنك استخدام Git فقط دون GitHub (مثل كتابة الأكواد وإدارة إصداراتها بنفسك)، لكن استخدام GitHub يتطلب استخدام Git (لأن GitHub مبني على Git).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ثالثًا: المفاهيم والوظائف الأساسية في GitHub</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">📁 مفاهيم أساسية</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قبل البدء، تعرف على بعض الكلمات المتكررة، وإلا ستكون واجهة GitHub محيرة:</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المستودع (Repository، اختصارًا Repo)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: كل مشروع يقابله مستودع، يحتوي على جميع ملفات الأكواد لهذا المشروع والإصدارات التاريخية والوثائق. يمكن فهمه على أنه "مجلد المشروع".</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الالتزام (Commit)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: سجل تعديل واحد على الكود. يرافق كل Commit رسالة توضيحية تسجل "ما الذي تغير هذه المرة، ولماذا". هذا هو أساس قدرة Git/GitHub على "السفر عبر الزمن".</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 الفرع (Branch)<strong>: خط تطوير مستقل منفصل عن المسار الرئيسي. على سبيل المثال، إذا أردت إضافة ميزة جديدة، يمكنك فتح فرع للتطوير المنفصل، ثم الدمج مع المسار الرئيسي بعد الانتهاء، دون التأثير على الآخرين.</strong>الاستنساخ (Clone)
@@ -117,7 +117,7 @@ Git<strong>GitHub</strong>الجوهر
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>git commit
+git commit
 
 {class="mt-1"}
 : تسجيل تغييرات منطقة التحضير رسميًا كـ "التزام"، مع رسالة توضيحية، مثل "إصلاح خطأ تسجيل الدخول". تُنجز هذه الخطوة محليًا فقط.
@@ -181,7 +181,7 @@ Git<strong>GitHub</strong>الجوهر
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
+مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - يسمح لك GitHub Pages باستضافة موقع ثابت مجانًا، وبالتعاون مع مولدات المواقع الثابتة مثل Jekyll وHexo وHugo، يمكنك بناء مدونة شخصية بسهولة. اكتب مقال Markdown وادفعه إلى المستودع، فتتحدث المدونة تلقائيًا، وتأتي مع HTTPS واسم نطاق مخصص. هكذا بُنيت مدونات عدد لا يحصى من المدونين التقنيين، بتكلفة صفرية وبدون إعلانات وإصدارات قابلة للتحكم.
@@ -191,7 +191,7 @@ Git<strong>GitHub</strong>الجوهر
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>بالنسبة لطلاب علوم الحاسوب، GitHub مهارة أساسية: إنها معرض أعمالك ومنصة تعاونك ومكتبة مصادر تعلمك، وأيضًا "سيرة ذاتية" مقنعة عند البحث عن عمل. سجّل حسابًا مبكرًا، وارفع واجباتك المقررية ومشاريعك الصغيرة، وتراكم ببطء، وبعد بضع سنوات ستملك سيرة تقنية تبهر المحاورين.
+بالنسبة لطلاب علوم الحاسوب، GitHub مهارة أساسية: إنها معرض أعمالك ومنصة تعاونك ومكتبة مصادر تعلمك، وأيضًا "سيرة ذاتية" مقنعة عند البحث عن عمل. سجّل حسابًا مبكرًا، وارفع واجباتك المقررية ومشاريعك الصغيرة، وتراكم ببطء، وبعد بضع سنوات ستملك سيرة تقنية تبهر المحاورين.
 
 {class="mt-1"}
 جرّب: أكمل تجربتك الأولى في GitHub<strong>سجّل حساب GitHub، وأكمل ملفك الشخصي (الصورة الرمزية، المقدمة، المجالات التقنية التي تهمك).</strong>أنشئ مستودعًا عامًا باسم
@@ -199,7 +199,7 @@ Git<strong>GitHub</strong>الجوهر
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>hello-github
+hello-github
 
 {class="mt-1"}
 ، وحدد "Add a README file".
@@ -213,7 +213,7 @@ Git<strong>GitHub</strong>الجوهر
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>الفصل 24: تحليل متعمق لصلاحيات Root وقفل BL
+الفصل 24: تحليل متعمق لصلاحيات Root وقفل BL
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. هذا الفصل توسع متعمق لمحتوى الفصل 20، وهو مناسب للمستخدمين الذين يريدون فهم آليات الهاتف الأساسية فعلًا، أو حتى تجربة فلاش النظام. يُرجى ملاحظة أن هذه العمليات تنطوي على مخاطر معينة، فتصرف بحذر

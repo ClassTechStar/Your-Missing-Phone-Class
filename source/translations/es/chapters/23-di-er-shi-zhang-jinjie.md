@@ -40,7 +40,7 @@ Apps bancarias inútilizables
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Precauciones
+Precauciones
 
 {class="mt-1"}
 Siente si el móvil se volvio más rápido.
@@ -57,7 +57,7 @@ En las opciones de desarrollador hay un interruptor discreto pero importante: "D
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosidad: por que el fabricante anade este interruptor
+Curiosidad: por que el fabricante anade este interruptor
 
 {class="mt-1"}
 Antes no existia este interruptor y el malware con permisos podia flashear el sistema a escondidas. Google obligo despues a todos los fabricantes a incluir "Desbloqueo OEM" en las opciones de desarrollador como confirmacion del "consentimiento del usuario". Por eso, aunque el BL este desbloqueado, si el OEM esta apagado, el flasheo falla.
@@ -95,7 +95,7 @@ ADB (Android Debug Bridge) es una herramienta de linea de comandos oficial de Go
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>No ignores los drivers ni el cuadro de autorizacion
+No ignores los drivers ni el cuadro de autorizacion
 
 {class="mt-1"}
 Si los usuarios de Windows ven <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> muestra "unauthorized" o no lista el dispositivo, suele ser por falta de driver o por no haber pulsado "Permitir" en el telefono. Samsung/Xiaomi y otras marcas tienen sus "drivers USB" o "asistentes" para completarlos; en Mac y Linux no suele hacer falta. Si descartas el cuadro por error, vuelve a conectar el cable y volvera a aparecer.
@@ -124,7 +124,7 @@ Es una de las funciones mas utiles de ADB: con <code class="bg-gray-100 dark:bg-
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Nunca borres paquetes basicos del sistema
+Nunca borres paquetes basicos del sistema
 
 {class="mt-1"}
 "pm uninstall --user 0" es un metodo seguro sin Root, pero borrar apps criticas del sistema (como <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> la barra de estado,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> el telefono,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> los ajustes) puede provocar cuelgues, pantalla negra o imposibilidad de encender. Antes de borrar, busca en Google "se puede borrar este paquete". Borra pocos cada vez y comprueba que todo va bien.
@@ -132,7 +132,7 @@ Es una de las funciones mas utiles de ADB: con <code class="bg-gray-100 dark:bg-
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosidad: que significa --user 0
+Curiosidad: que significa --user 0
 
 {class="mt-1"}
 Desde Android 4.2 se soportan varios usuarios; cada uno tiene un ID (el propietario es 0 y los invitados empiezan en 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> significa "desinstalar solo para el propietario"; el APK sigue en la particion del sistema pero no se muestra. Por eso no necesita Root: no toca los archivos del sistema, solo cambia la configuracion del usuario. Se diferencia del Root en que este borra de verdad para todos los usuarios; ADB solo "oculta al usuario actual".
@@ -159,7 +159,7 @@ El permiso Root equivale al superusuario de Linux (control total sobre / y lectu
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Pasos de instalación
+Pasos de instalación
 
 {class="mt-1"}
 Descargar App
@@ -198,7 +198,7 @@ Para poder usar apps bancarias sin perder las ventajas del Root, la comunidad ha
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>El juego del gato y el ratón nunca terminará
+El juego del gato y el ratón nunca terminará
 
 {class="mt-1"}
 Google actualiza periódicamente las reglas de detección y los desarrolladores de apps también mejoran la verificación de Play Integrity. Los métodos de ocultación que funcionan hoy pueden ser detectados mañana. Si dependes completamente de apps bancarias o de pago (como transferencias diarias, pagos con código QR), la opción más segura sigue siendo: no hacer Root, no desbloquear el bootloader. Los métodos de ocultación son más adecuados para una configuración de "teléfono principal sin Root + teléfono de respaldo con Root".
@@ -213,7 +213,7 @@ Google actualiza periódicamente las reglas de detección y los desarrolladores 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>pkg update &amp;&amp; pkg upgrade
+pkg update &amp;&amp; pkg upgrade
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. para actualizar la lista de paquetes

@@ -67,7 +67,7 @@ Create a new page in Notion or Feishu, and try building a simple "work log" temp
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Chapter 10: Mobile Payment and Life Services
+Chapter 10: Mobile Payment and Life Services
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. To be honest, my parents' generation was initially resistant to the idea of "paying with a phone". "If the money is in the phone, what if it gets stolen?" This concern is very normal, but the reality is: the cash in your pocket has a much higher chance of being lost than mobile payment being fraudulently charged. Mobile payment is not about storing money in your phone: it's just a key, a key that opens your bank account.

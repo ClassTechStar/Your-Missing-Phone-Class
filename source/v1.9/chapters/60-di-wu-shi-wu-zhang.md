@@ -52,12 +52,12 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">服务</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">文档与控制台</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话点评</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OpenWeatherMap</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">英文文档，接口风格直白，社区示例多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">练手最经典的入门选择，国内访问速度视网络环境而定</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和风天气（QWeather）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中文文档，控制台全中文</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国内城市数据细（有预警、生活指数这类本地化内容），国内读者的顺手之选</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">心知天气</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中文文档</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费额度够练手，和风之外的备选，接口思路类似</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">服务</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">文档与控制台</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话点评</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OpenWeatherMap</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">英文文档，接口风格直白，社区示例多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">练手最经典的入门选择，国内访问速度视网络环境而定</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和风天气（QWeather）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中文文档，控制台全中文</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国内城市数据细（有预警、生活指数这类本地化内容），国内读者的顺手之选</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">心知天气</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中文文档</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费额度够练手，和风之外的备选，接口思路类似</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -90,21 +90,21 @@ kind: chapter
 
 ```
 {
-  "coord": {"lon": 116.4, "lat": 39.9},
-  "weather": [
-    {"id": 800, "main": "Clear", "description": "晴", "icon": "01d"}
-  ],
-  "main": {
-    "temp": 26.5,
-    "feels_like": 27.1,
-    "temp_min": 24.0,
-    "temp_max": 29.0,
-    "pressure": 1010,
-    "humidity": 40
-  },
-  "wind": {"speed": 3.2, "deg": 120},
-  "sys": {"country": "CN", "sunrise": 1730000000, "sunset": 1730040000},
-  "name": "Beijing"
+ "coord": {"lon": 116.4, "lat": 39.9},
+ "weather": [
+ {"id": 800, "main": "Clear", "description": "晴", "icon": "01d"}
+ ],
+ "main": {
+ "temp": 26.5,
+ "feels_like": 27.1,
+ "temp_min": 24.0,
+ "temp_max": 29.0,
+ "pressure": 1010,
+ "humidity": 40
+ },
+ "wind": {"speed": 3.2, "deg": 120},
+ "sys": {"country": "CN", "sunrise": 1730000000, "sunset": 1730040000},
+ "name": "Beijing"
 }
 ```
 :::
@@ -126,13 +126,13 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">参数</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你填什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">不填或填错会怎样</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">q</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">城市名（如 beijing、shanghai）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">请求直接报错，什么都查不到</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">appid</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你的 Key</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">错一个字母就 401，服务器拒之门外</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">units</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">metric（摄氏）或 imperial（华氏）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认给你开尔文——看到 300 多"度"别以为自己查的是火星</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">lang</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">zh_cn 等语言代码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气描述默认英文，界面瞬间变"双语教学"</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">参数</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你填什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">不填或填错会怎样</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">q</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">城市名（如 beijing、shanghai）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">请求直接报错，什么都查不到</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">appid</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你的 Key</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">错一个字母就 401，服务器拒之门外</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">units</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">metric（摄氏）或 imperial（华氏）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认给你开尔文——看到 300 多"度"别以为自己查的是火星</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">lang</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">zh_cn 等语言代码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气描述默认英文，界面瞬间变"双语教学"</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -177,26 +177,26 @@ WEATHER_KEY=你刚才复制的那串Key
 :::
 
 ```
-import java.util.Properties   // 放在文件最顶部
+import java.util.Properties // 放在文件最顶部
 
 val localProps = Properties()
 val localFile = rootProject.file("local.properties")
 if (localFile.exists()) {
-    localProps.load(localFile.inputStream())
+ localProps.load(localFile.inputStream())
 }
 
 android {
-    // 较新的 Gradle 插件版本默认不再自动生成 BuildConfig，要手动打开
-    buildFeatures {
-        buildConfig = true
-    }
-    defaultConfig {
-        buildConfigField(
-            "String",
-            "WEATHER_KEY",
-            "\"${localProps.getProperty("WEATHER_KEY") ?: ""}\""
-        )
-    }
+ // 较新的 Gradle 插件版本默认不再自动生成 BuildConfig，要手动打开
+ buildFeatures {
+ buildConfig = true
+ }
+ defaultConfig {
+ buildConfigField(
+ "String",
+ "WEATHER_KEY",
+ "\"${localProps.getProperty("WEATHER_KEY") ?: ""}\""
+ )
+ }
 }
 ```
 :::
@@ -225,21 +225,21 @@ android {
 ```
 // JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "zh_cn"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "zh_cn"
+ ): WeatherResponse
 }
 ```
 :::
@@ -267,10 +267,10 @@ Retrofit 把这些杂活按注解分派：<code class="inline">@GET</code> 声�
 
 ```
 dependencies {
-    // 三个库的最新稳定版本号，以各自官方文档为准，别抄旧教程里的老版本
-    implementation("com.squareup.retrofit2:retrofit:填最新稳定版")
-    implementation("com.squareup.retrofit2:converter-gson:填最新稳定版")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:填最新稳定版")
+ // 三个库的最新稳定版本号，以各自官方文档为准，别抄旧教程里的老版本
+ implementation("com.squareup.retrofit2:retrofit:填最新稳定版")
+ implementation("com.squareup.retrofit2:converter-gson:填最新稳定版")
+ implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:填最新稳定版")
 }
 ```
 :::
@@ -288,15 +288,15 @@ dependencies {
 
 ```
 val retrofit = Retrofit.Builder()
-    .baseUrl("https://api.openweathermap.org/")   // 结尾的斜杠不能少
-    .addConverterFactory(GsonConverterFactory.create())
-    .client(
-        OkHttpClient.Builder()
-            .connectTimeout(15, TimeUnit.SECONDS)
-            .readTimeout(15, TimeUnit.SECONDS)
-            .build()
-    )
-    .build()
+ .baseUrl("https://api.openweathermap.org/") // 结尾的斜杠不能少
+ .addConverterFactory(GsonConverterFactory.create())
+ .client(
+ OkHttpClient.Builder()
+ .connectTimeout(15, TimeUnit.SECONDS)
+ .readTimeout(15, TimeUnit.SECONDS)
+ .build()
+ )
+ .build()
 
 val api = retrofit.create(WeatherApi::class.java)
 ```
@@ -317,7 +317,7 @@ Gson 靠字段名匹配：JSON 里叫 description，data class 里也叫 descrip
 
 ```
 data class Weather(
-    @SerializedName("description") val desc: String
+ @SerializedName("description") val desc: String
 )
 ```
 :::
@@ -338,27 +338,27 @@ JSON 里叫 description，你代码里叫 desc，中间靠注解翻译。这招�
 :::
 
 ```
-package com.example.weatherapp   // 改成你项目的包名
+package com.example.weatherapp // 改成你项目的包名
 
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "zh_cn"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "zh_cn"
+ ): WeatherResponse
 }
 ```
 :::
@@ -402,12 +402,12 @@ INTERNET 权限只要在 Manifest 里加一行，放在 application 标签外面
 
 ```
 viewModelScope.launch {
-    try {
-        val r = api.getWeather("beijing", BuildConfig.WEATHER_KEY)
-        Log.d("WeatherTest", "城市=${r.name} 温度=${r.main.temp}")
-    } catch (e: Exception) {
-        Log.e("WeatherTest", "失败了", e)
-    }
+ try {
+ val r = api.getWeather("beijing", BuildConfig.WEATHER_KEY)
+ Log.d("WeatherTest", "城市=${r.name} 温度=${r.main.temp}")
+ } catch (e: Exception) {
+ Log.e("WeatherTest", "失败了", e)
+ }
 }
 ```
 :::
@@ -425,28 +425,28 @@ viewModelScope.launch {
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // 转圈中
-    data class Success(val data: WeatherResponse) : UiState()  // 成功
-    data class Error(val message: String) : UiState()          // 失败
+ object Loading : UiState() // 转圈中
+ data class Success(val data: WeatherResponse) : UiState() // 成功
+ data class Error(val message: String) : UiState() // 失败
 }
 
 // ViewModel 里：
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("查不到这个城市，换个名字试试？")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("查不到这个城市，换个名字试试？")
+ }
+ }
 }
 
 // 界面里：
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // 转圈
-    is UiState.Success -&gt; WeatherContent(s.data)        // 展示
-    is UiState.Error -&gt; Text(s.message)                 // 报错
+ is UiState.Loading -&gt; CircularProgressIndicator() // 转圈
+ is UiState.Success -&gt; WeatherContent(s.data) // 展示
+ is UiState.Error -&gt; Text(s.message) // 报错
 }
 ```
 :::
@@ -470,19 +470,19 @@ sealed class 的核心好处是"穷举"：它的子类只能写在同一个文�
 
 ```
 class WeatherViewModel : ViewModel() {
-    private val _state = MutableStateFlow&lt;UiState&gt;(UiState.Loading)
-    val state = _state.asStateFlow()   // 对外只读，改状态只走内部
+ private val _state = MutableStateFlow&lt;UiState&gt;(UiState.Loading)
+ val state = _state.asStateFlow() // 对外只读，改状态只走内部
 
-    fun search(city: String) {
-        viewModelScope.launch {
-            _state.value = UiState.Loading
-            _state.value = try {
-                UiState.Success(api.getWeather(city))
-            } catch (e: Exception) {
-                UiState.Error(toMessage(e))
-            }
-        }
-    }
+ fun search(city: String) {
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error(toMessage(e))
+ }
+ }
+ }
 }
 ```
 :::
@@ -510,14 +510,14 @@ class WeatherViewModel : ViewModel() {
 
 ```
 fun toMessage(e: Exception): String = when (e) {
-    is IOException -&gt; "网络连不上，检查一下 Wi-Fi 或流量"
-    is HttpException -&gt; when (e.code()) {
-        401 -&gt; "密钥没配对，去控制台核对一下 Key"
-        404 -&gt; "找不到这个城市，换个拼写试试"
-        429 -&gt; "请求太频繁啦，休息一会儿再来"
-        else -&gt; "服务开小差了，稍后再试"
-    }
-    else -&gt; "出了点意外：${e.localizedMessage ?: "未知错误"}"
+ is IOException -&gt; "网络连不上，检查一下 Wi-Fi 或流量"
+ is HttpException -&gt; when (e.code()) {
+ 401 -&gt; "密钥没配对，去控制台核对一下 Key"
+ 404 -&gt; "找不到这个城市，换个拼写试试"
+ 429 -&gt; "请求太频繁啦，休息一会儿再来"
+ else -&gt; "服务开小差了，稍后再试"
+ }
+ else -&gt; "出了点意外：${e.localizedMessage ?: "未知错误"}"
 }
 ```
 :::
@@ -550,28 +550,28 @@ fun toMessage(e: Exception): String = when (e) {
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "未知",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 湿度 ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ 当前气温 ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "未知",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 湿度 ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ 当前气温 ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::
@@ -611,9 +611,9 @@ Modifier 是 Compose 里每个组件的"设置面板"，大小、边距、背景
 @Preview(showBackground = true)
 @Composable
 private fun WeatherPreview() {
-    WeatherContent(
-        WeatherResponse(listOf(Weather("晴")), Main(26.5, 40), "北京")
-    )
+ WeatherContent(
+ WeatherResponse(listOf(Weather("晴")), Main(26.5, 40), "北京")
+ )
 }
 ```
 :::
@@ -639,14 +639,14 @@ Preview 还能同时摆好几个：一个亮色主题、一个深色主题、一
 
 ```
 TextField(
-    value = city,
-    onValueChange = { city = it },
-    label = { Text("输入城市名") },
-    singleLine = true,
-    keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-    keyboardActions = KeyboardActions(onSearch = {
-        viewModel.search(city)
-    })
+ value = city,
+ onValueChange = { city = it },
+ label = { Text("输入城市名") },
+ singleLine = true,
+ keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+ keyboardActions = KeyboardActions(onSearch = {
+ viewModel.search(city)
+ })
 )
 ```
 :::
@@ -669,12 +669,12 @@ val CITY_KEY = stringPreferencesKey("cities")
 
 // 存：列表拼成一个字符串
 suspend fun saveCities(cities: List&lt;String&gt;) {
-    context.dataStore.edit { it[CITY_KEY] = cities.joinToString(",") }
+ context.dataStore.edit { it[CITY_KEY] = cities.joinToString(",") }
 }
 
 // 取：拆回列表，没有收藏时给个默认城市
 val citiesFlow = context.dataStore.data
-    .map { it[CITY_KEY]?.split(",") ?: listOf("beijing") }
+ .map { it[CITY_KEY]?.split(",") ?: listOf("beijing") }
 ```
 :::
 
@@ -698,21 +698,21 @@ private var lastGood: WeatherResponse? = null
 private var lastTime: Long = 0L
 
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        try {
-            val r = api.getWeather(city)
-            lastGood = r
-            lastTime = System.currentTimeMillis()
-            _state.value = UiState.Success(r)
-        } catch (e: Exception) {
-            val cached = lastGood
-            _state.value = if (cached != null)
-                UiState.Success(cached)          // 旧数据顶上
-            else
-                UiState.Error(toMessage(e))      // 没缓存才报错
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ try {
+ val r = api.getWeather(city)
+ lastGood = r
+ lastTime = System.currentTimeMillis()
+ _state.value = UiState.Success(r)
+ } catch (e: Exception) {
+ val cached = lastGood
+ _state.value = if (cached != null)
+ UiState.Success(cached) // 旧数据顶上
+ else
+ UiState.Error(toMessage(e)) // 没缓存才报错
+ }
+ }
 }
 ```
 :::
@@ -736,13 +736,13 @@ fun search(city: String) {
 var refreshing by remember { mutableStateOf(false) }
 
 PullToRefreshBox(
-    isRefreshing = refreshing,
-    onRefresh = {
-        refreshing = true
-        viewModel.search(currentCity)   // 请求完成后把 refreshing 置回 false
-    }
+ isRefreshing = refreshing,
+ onRefresh = {
+ refreshing = true
+ viewModel.search(currentCity) // 请求完成后把 refreshing 置回 false
+ }
 ) {
-    // 原来的天气内容原封不动放这里
+ // 原来的天气内容原封不动放这里
 }
 ```
 :::
@@ -751,7 +751,7 @@ PullToRefreshBox(
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：图片让界面活起来
+小贴士：图片让界面活起来
 
 {class="mt-1"}
 给每种天气配一个 emoji 或图标（☀️🌧️❄️），用 <code class="inline">when(description)</code> 映射，三行代码，界面温度感翻倍。也可以加载第三方的天气图标库，但练手阶段 emoji 足够。
@@ -759,7 +759,7 @@ PullToRefreshBox(
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：天气 App 验收清单
+来动手：天气 App 验收清单
 
 {class="mt-1"}
 ① 正常搜索出天气；② 断开网络，App 优雅报错不崩溃（开飞行模式测！——网络项目的验收标准得包括"断网时是什么样"，只测成功路径等于没测）；③ 输一个不存在的城市，提示友好；④ 收藏两个城市，重启 App 还在；⑤ 转屏不丢状态。五条全过，这个项目才算毕业。
@@ -782,12 +782,12 @@ PullToRefreshBox(
 
 ```
 val client = OkHttpClient.Builder()
-    .addInterceptor(HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.BODY
-    })
-    .connectTimeout(15, TimeUnit.SECONDS)
-    .readTimeout(15, TimeUnit.SECONDS)
-    .build()
+ .addInterceptor(HttpLoggingInterceptor().apply {
+ level = HttpLoggingInterceptor.Level.BODY
+ })
+ .connectTimeout(15, TimeUnit.SECONDS)
+ .readTimeout(15, TimeUnit.SECONDS)
+ .build()
 
 // 把这个 client 传给 Retrofit.Builder().client(client)
 ```
@@ -826,15 +826,15 @@ val client = OkHttpClient.Builder()
 private var job: Job? = null
 
 fun search(city: String) {
-    job?.cancel()          // 上一发还没落地，直接作废
-    job = viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error(toMessage(e))
-        }
-    }
+ job?.cancel() // 上一发还没落地，直接作废
+ job = viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error(toMessage(e))
+ }
+ }
 }
 ```
 :::
@@ -897,13 +897,13 @@ COARSE 是大致位置，FINE 是精确定位。天气 App 申请 COARSE 就够�
 
 ```
 val permissionLauncher = rememberLauncherForActivityResult(
-    ActivityResultContracts.RequestPermission()
+ ActivityResultContracts.RequestPermission()
 ) { granted -&gt;
-    if (granted) viewModel.locate() else viewModel.useManualCity()
+ if (granted) viewModel.locate() else viewModel.useManualCity()
 }
 
 Button(onClick = {
-    permissionLauncher.launch(Manifest.permission.ACCESS_COARSE_LOCATION)
+ permissionLauncher.launch(Manifest.permission.ACCESS_COARSE_LOCATION)
 }) { Text("自动定位") }
 ```
 :::
@@ -921,12 +921,12 @@ Button(onClick = {
 
 ```
 suspend fun reverseGeocode(lat: Double, lon: Double): String? =
-    withContext(Dispatchers.IO) {
-        val geocoder = Geocoder(context, Locale.getDefault())
-        // 反查可能查不到，返回空列表要兜底；不同系统版本有同步/异步两种写法
-        geocoder.getFromLocation(lat, lon, 1)
-            ?.firstOrNull()?.locality
-    }
+ withContext(Dispatchers.IO) {
+ val geocoder = Geocoder(context, Locale.getDefault())
+ // 反查可能查不到，返回空列表要兜底；不同系统版本有同步/异步两种写法
+ geocoder.getFromLocation(lat, lon, 1)
+ ?.firstOrNull()?.locality
+ }
 ```
 :::
 
@@ -962,7 +962,7 @@ suspend fun reverseGeocode(lat: Double, lon: Double): String? =
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 联网 App 四件套：接口 + 数据模型 + 三态界面 + 缓存兜底：别的都是修饰。
@@ -975,15 +975,15 @@ suspend fun reverseGeocode(lat: Double, lon: Double): String? =
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android 侧（本章）</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS 侧常见做法</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络请求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit 声明接口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">URLSession（系统自带）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JSON 解析</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gson 反射映射</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Codable 协议自动编解码</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sealed class 三态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">enum 带关联值</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">声明式界面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jetpack Compose</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SwiftUI</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">轻量存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DataStore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UserDefaults</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限声明</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Manifest</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Info.plist</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android 侧（本章）</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS 侧常见做法</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络请求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit 声明接口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">URLSession（系统自带）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JSON 解析</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gson 反射映射</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Codable 协议自动编解码</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sealed class 三态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">enum 带关联值</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">声明式界面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jetpack Compose</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SwiftUI</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">轻量存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DataStore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UserDefaults</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限声明</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Manifest</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Info.plist</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1059,12 +1059,12 @@ suspend fun reverseGeocode(lat: Double, lon: Double): String? =
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么做</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">能活多久</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内存缓存</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ViewModel 里一个变量记住最近结果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 进程活着就有效，杀掉即失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">练手起步，会话内断网兜底</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">落盘缓存</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把返回的 JSON 原文存进 DataStore 或文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重启也在，卸载才没</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单城市天气，要求冷启动就有内容</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据库（Room）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">建表存数据，一个城市一行或多行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长期</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多城市管理、历史趋势这类结构化需求</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么做</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">能活多久</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内存缓存</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ViewModel 里一个变量记住最近结果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 进程活着就有效，杀掉即失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">练手起步，会话内断网兜底</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">落盘缓存</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把返回的 JSON 原文存进 DataStore 或文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重启也在，卸载才没</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单城市天气，要求冷启动就有内容</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据库（Room）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">建表存数据，一个城市一行或多行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长期</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多城市管理、历史趋势这类结构化需求</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1106,16 +1106,16 @@ suspend fun reverseGeocode(lat: Double, lon: Double): String? =
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">文件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">职责</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidManifest.xml</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限声明：INTERNET 一行，做定位再加定位权限——别多也别少</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">build.gradle.kts（模块级）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit、Gson、协程三件套依赖，加 buildConfigField 注入 Key</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">local.properties</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Key 的家，被 gitignore 挡在仓库外面</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WeatherApi.kt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接口定义 + 数据模型，练手阶段合一个文件足够</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UiState.kt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sealed class 三态（或四态、五态），全 App 状态的"户口本"</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WeatherViewModel.kt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">search、缓存回落、异常翻译，业务逻辑全在这</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MainActivity / 界面文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Composable 只负责"画"和收集状态，不碰网络</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">文件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">职责</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidManifest.xml</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限声明：INTERNET 一行，做定位再加定位权限——别多也别少</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">build.gradle.kts（模块级）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit、Gson、协程三件套依赖，加 buildConfigField 注入 Key</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">local.properties</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Key 的家，被 gitignore 挡在仓库外面</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WeatherApi.kt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接口定义 + 数据模型，练手阶段合一个文件足够</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UiState.kt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sealed class 三态（或四态、五态），全 App 状态的"户口本"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WeatherViewModel.kt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">search、缓存回落、异常翻译，业务逻辑全在这</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MainActivity / 界面文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Composable 只负责"画"和收集状态，不碰网络</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1147,23 +1147,23 @@ suspend fun reverseGeocode(lat: Double, lon: Double): String? =
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">术语</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话解释</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">API</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务商开的"窗口"，你的程序按规定格式问它要数据</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端点（Endpoint）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一个具体的接口地址，比如"当前天气"那条 URL</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JSON</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务器返回的文本格式，大括号套中括号，全是键值对</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列化 / 反序列化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">对象变 JSON、JSON 变对象的两道工序，Gson 干的就是这个</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">状态码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务器用三位数字表态：404 没找到、429 太频繁、5xx 它的错</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把"接口定义"翻译成真实 HTTP 请求的框架</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OkHttp</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit 底下真正干网络活的库</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">协程 / suspend</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 的"可暂停函数"，联网等待时界面照常活着</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">StateFlow</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能被界面观察的数据流，值一变界面自动刷新</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sealed class</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">子类穷举的类，配 when 让编译器替你查漏</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DataStore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">轻量键值存储，收藏城市和设置放这里</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拦截器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">请求出去、响应回来的路上的"检查站"，加日志、加公共参数都用它</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费额度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务商给的免费调用次数，按天或按月计，数字以官方为准</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">限流</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超了额度被服务器暂时拒绝，通常返回 429</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">术语</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话解释</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">API</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务商开的"窗口"，你的程序按规定格式问它要数据</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端点（Endpoint）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一个具体的接口地址，比如"当前天气"那条 URL</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JSON</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务器返回的文本格式，大括号套中括号，全是键值对</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列化 / 反序列化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">对象变 JSON、JSON 变对象的两道工序，Gson 干的就是这个</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">状态码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务器用三位数字表态：404 没找到、429 太频繁、5xx 它的错</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把"接口定义"翻译成真实 HTTP 请求的框架</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OkHttp</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit 底下真正干网络活的库</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">协程 / suspend</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 的"可暂停函数"，联网等待时界面照常活着</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">StateFlow</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能被界面观察的数据流，值一变界面自动刷新</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sealed class</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">子类穷举的类，配 when 让编译器替你查漏</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DataStore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">轻量键值存储，收藏城市和设置放这里</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拦截器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">请求出去、响应回来的路上的"检查站"，加日志、加公共参数都用它</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费额度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务商给的免费调用次数，按天或按月计，数字以官方为准</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">限流</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超了额度被服务器暂时拒绝，通常返回 429</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1207,7 +1207,7 @@ suspend fun reverseGeocode(lat: Double, lon: Double): String? =
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 先浏览器试 API、看懂 JSON，再写代码，"预习"永远不亏
 - API Key 藏进 local.properties，绝不进代码库

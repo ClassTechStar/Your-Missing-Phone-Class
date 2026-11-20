@@ -160,7 +160,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2" aria-hidden="true"></i>开完专注后做一次"漏接测试"
+开完专注后做一次"漏接测试"
 
 {class="mt-1"}
 第一次启用专注联动，当天用一个备用号码（或让家人配合）分别打一次电话、发一条消息，验证白名单和拦截是否按你的预期工作。规则没验证过的专注模式，等于没配。
@@ -268,7 +268,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：低电量策略
+小贴士：低电量策略
 
 {class="mt-1"}
 自动化别忘了"兜底"：给手表设一个 20% 低电量自动化，关 Always-On 显示、只留心率+通知，撑到下班。续航焦虑的解法不是省着用。续航焦虑的解法是让设备在低电量时"自动降级"。
@@ -471,7 +471,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>入口名字对不上怎么办
+入口名字对不上怎么办
 
 {class="mt-1"}
 系统更新会挪菜单、改名字：本节写的入口是普遍路径，具体名称与层级以你设备上的实际界面和官方帮助文档为准。找不到时，用系统设置的搜索框直接搜"勿扰""专注""自动化""表盘"，比逐层翻菜单快。
@@ -538,7 +538,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一天走完的感受
+一天走完的感受
 
 {class="mt-1"}
 七个场景里你只掏了两次手机，其中一次还是为了充电。其余的提醒与决策都发生在手腕上——这就是"编好的系统"的样子：不是某个功能炫，是每个时间点都恰好有设备替你看着。
@@ -606,7 +606,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2" aria-hidden="true"></i>自动化翻车应急三步
+自动化翻车应急三步
 
 {class="mt-1"}
 自动化出问题，先别全关。第一步，打开自动化列表按时间倒序找"刚刚触发"的那条；第二步，单独关掉它观察半天，确认是不是它闯的祸。第三步，改条件或删除，并在清单里记一笔。一上来把自动化全关，等于把整套系统退回出厂，损失的是之前搭好的全部效率。
@@ -812,7 +812,7 @@ FAQ 快速索引
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：本周搭好三张表盘 + 一条自动化
+来动手：本周搭好三张表盘 + 一条自动化
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 按工作/运动/生活三个场景各配一张表盘，各留 2-3 个复杂功能。
@@ -822,7 +822,7 @@ FAQ 快速索引
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 一个场景一张表盘：工作/运动/生活三盘轮换
 - 每张表盘只放三个信息，克制比功能多更重要

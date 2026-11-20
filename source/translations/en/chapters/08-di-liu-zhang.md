@@ -54,7 +54,7 @@ In today's era of rapid AI development, the traditional "seeing is believing" co
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① AI Face-Swap and Voice Cloning Fraud
+① AI Face-Swap and Voice Cloning Fraud
 
 {class="mt-1"}
 Criminals illegally collect high-definition photos published by targets on social media or just a few seconds of voice samples, and use AI deepfake technology to clone "friend/family videos" or "voices" realistic enough to deceive. Common scripts include:<strong>sudden car accidents, emergency loans, kidnapping</strong>, etc. This type of fraud exploits emotional bonds like family and friendship, making it <strong>extremely deceptive</strong>.
@@ -62,7 +62,7 @@ Criminals illegally collect high-definition photos published by targets on socia
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② Impersonating Authority / Customer Service Fraud
+② Impersonating Authority / Customer Service Fraud
 
 {class="mt-1"}
 AI technology can precisely simulate the voices and tones of official customer service and law enforcement personnel, and even synthesize highly realistic fake transfer screenshots, electronic documents, arrest warrants, and other files. By <strong>creating panic or authority pressure</strong>.
@@ -70,7 +70,7 @@ AI technology can precisely simulate the voices and tones of official customer s
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ AI Investment and Wealth Management Fraud
+③ AI Investment and Wealth Management Fraud
 
 {class="mt-1"}
 Through AI algorithms, fraudsters forge "guaranteed profit" fake return screenshots, virtual quantitative stock-picking software interfaces, or "master-level" investment analysis reports. Using high returns as bait, they sell expensive investment services or induce victims to transfer funds into trading accounts they control,<strong>ultimately absconding with the money</strong>.
@@ -127,7 +127,7 @@ IoT devices like smart cameras, smart door locks, and smart speakers must have t
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Real Case Warning
+Real Case Warning
 
 {class="mt-1"}
 In 2022, police in a certain area reported that hackers cracked the default passwords of a brand of home cameras, stealing bedroom footage from thousands of households and selling it online (many users never changed them).<strong>Not changing the default password = leaving your front door wide open</strong>.
@@ -170,7 +170,7 @@ Don't panic if your phone is lost,follow these steps in order:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Things You Must Never Do
+Things You Must Never Do
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Use weak passwords like birthdays / 123456 / qwerty;
@@ -182,7 +182,7 @@ Don't panic if your phone is lost,follow these steps in order:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Try Enabling and Simulating "Remote Lock"
+Try Enabling and Simulating "Remote Lock"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Make sure your "Find My Phone" feature is enabled.

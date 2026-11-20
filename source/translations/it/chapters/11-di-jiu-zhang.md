@@ -67,7 +67,7 @@ L'intero processo è durato circa quaranta minuti, senza mai accendere il comput
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: costruisci il tuo flusso di lavoro mobile
+Prova: costruisci il tuo flusso di lavoro mobile
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Scegli la tua app di documenti principale (WPS o Microsoft 365), accedi e collega il cloud.

@@ -337,7 +337,7 @@ AI 生成的结果有随机性，同样的提示词生成两次，画面也不�
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：AI 视频的四个"露馅点"
+避坑提醒：AI 视频的四个"露馅点"
 
 {class="mt-1"}
 ① 手部与手指细节；② 文字与招牌（生成的字基本是乱码）；③ 人物快速运动的面部；④ 镜面与反射，镜子里的影像常常穿帮。规避法：镜头里避开特写手、避开需要文字的画面、人物动作放慢放小，画面里有镜子、水面、玻璃反光时重点检查。露馅镜头剪掉或重生成，别硬用。
@@ -857,7 +857,7 @@ AI 生成素材的正确用法是"接缝"：<strong>片头 3-5 秒吸睛镜头</
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：生成一条 15 秒片头
+来动手：生成一条 15 秒片头
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 用五要素公式写 3 条不同镜头语言的提示词，各生成一次。
@@ -871,7 +871,7 @@ AI 生成素材的正确用法是"接缝"：<strong>片头 3-5 秒吸睛镜头</
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 提示词五要素：主体+动作+场景+光线氛围+镜头语言
 - 一次只要一个变化，像做实验一样迭代

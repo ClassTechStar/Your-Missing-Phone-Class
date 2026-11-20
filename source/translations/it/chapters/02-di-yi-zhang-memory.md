@@ -53,7 +53,7 @@ Il percorso tipico di attivazione: entra in [Impostazioni] → [Altre impostazio
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Avvertenze
+Avvertenze
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - L'espansione memoria occupa parte dello storage del telefono; assicurati che lo storage residuo sia almeno 20-30GB, altrimenti potrebbe compromettere la fluidità del sistema.
@@ -63,7 +63,7 @@ Il percorso tipico di attivazione: entra in [Impostazioni] → [Altre impostazio
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>In sintesi
+In sintesi
 
 {class="mt-1"}
 L'espansione memoria è una tecnologia matura di ottimizzazione a livello sistema, che può migliorare le capacità multi-tasking e la sopravvivenza in background dei modelli medio-bassi senza modificare l'hardware, ma è limitata dal divario di velocità tra flash e RAM fisica e non è una "pozione magica". Se attivarla o meno e con quale capacità, dipende dalla dimensione della RAM fisica del modello, dalle specifiche della flash, dallo spazio residuo e dalle abitudini d'uso.
@@ -71,7 +71,7 @@ L'espansione memoria è una tecnologia matura di ottimizzazione a livello sistem
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fai pratica: verifica se il tuo cellulare ha l'espansione memoria
+Fai pratica: verifica se il tuo cellulare ha l'espansione memoria
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apri [Impostazioni], cerca "Espansione memoria", "Fusione memoria", "RAM Plus" o "Extended RAM".

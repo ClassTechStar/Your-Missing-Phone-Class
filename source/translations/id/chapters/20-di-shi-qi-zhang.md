@@ -66,7 +66,7 @@ Pasangan sangat sederhana
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>Teknologi UWB Ultra-Wideband — "Sense of Space" yang Lebih Akurat dari Bluetooth
+Teknologi UWB Ultra-Wideband — "Sense of Space" yang Lebih Akurat dari Bluetooth
 
 {class="mt-1"}
 Selain Bluetooth, di ponsel baru juga tersembunyi chip UWB (Ultra-Wideband). Kemampuannya adalah <strong>pengukuran jarak presisi dan posisi spasial</strong>— bisa menghitung seberapa jauh perangkat lain dari Anda, di arah mana, akurasi sampai tingkat sentimeter. Bluetooth hanya bisa memberi tahu "di dekat", UWB bisa memberi tahu "di 1.2 meter depan kiri Anda". Aplikasi umum:
@@ -80,7 +80,7 @@ Selain Bluetooth, di ponsel baru juga tersembunyi chip UWB (Ultra-Wideband). Kem
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio dan Auracast — Standar Generasi Baru Audio Bluetooth
+LE Audio dan Auracast — Standar Generasi Baru Audio Bluetooth
 
 {class="mt-1"}
 Audio Bluetooth klasik (A2DP) yang dipakai dua puluh tahun sedang digantikan oleh <strong>LE Audio</strong>(Low Energy Audio), ini standar audio generasi baru sejak Bluetooth 5.2:
@@ -110,7 +110,7 @@ Sebelum transmisi layar di tempat umum, periksa dulu apakah ada pesan pribadi di
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pastikan ponsel dan TV terhubung Wi-Fi yang sama.
+Pastikan ponsel dan TV terhubung Wi-Fi yang sama.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Di TV temukan fungsi "Screen Mirroring" atau "AirPlay" dan aktifkan.
@@ -122,7 +122,7 @@ Sebelum transmisi layar di tempat umum, periksa dulu apakah ada pesan pribadi di
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Studi Kasus 1: Praktik Optimasi Battery Life
+Studi Kasus 1: Praktik Optimasi Battery Life
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Skenario</strong>: Pengguna Xiaomi 14 battery life buruk, setengah hari sudah habis.

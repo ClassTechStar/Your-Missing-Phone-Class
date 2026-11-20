@@ -35,20 +35,20 @@ SwiftUI 狀態之具全景（2026 年，@Observable 已為主流）
 import Observation
 
 @Observable
-class CounterModel {                 // 視圖模型
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // 視圖模型
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // 持有模型
+ @State private var model = CounterModel() // 持有模型
 
-    var body: some View {
-        VStack {
-            Text("汝點了 \(model.count) 次")
-            Button("點我") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("汝點了 \(model.count) 次")
+ Button("點我") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ iOS 16 以降，多頁導航用 NavigationStack：若一疊盤，推一入一，
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("張三之賬本") {
-                    DetailView(name: "張三之賬本")   // 目標頁面
-                }
-                NavigationLink("李四之賬本") {
-                    DetailView(name: "李四之賬本")
-                }
-            }
-            .navigationTitle("賬本列表")   // 頂部大標題
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("張三之賬本") {
+ DetailView(name: "張三之賬本") // 目標頁面
+ }
+ NavigationLink("李四之賬本") {
+ DetailView(name: "李四之賬本")
+ }
+ }
+ .navigationTitle("賬本列表") // 頂部大標題
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("\(name) 之詳情頁")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("\(name) 之詳情頁")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ NavigationLink 即「可點之跳轉連結」；navigationTitle 自生導航欄�
 ```
 // 1. 底部彈出半屏/全屏（錄入表單最愛）
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("記一筆") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // 彈出之錄入頁
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("記一筆") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // 彈出之錄入頁
+ }
+ }
 }
 
 // 2. 底部標籤欄（App 之"骨架"）
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("賬本", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("統計", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("設置", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("賬本", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("統計", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("設置", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ iOS 最常用而最具「蘋果味」之組件即 List，天生帶分割線、�
 
 ```
 struct RecordListView: View {
-    @State private var records = ["午餐 25.5", "地鐵 6.0", "薪俸 +8000"]
+ @State private var records = ["午餐 25.5", "地鐵 6.0", "薪俸 +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // 左滑而刪
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // 左滑而刪
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("返前臺，復刷新")
-            case .inactive:  print("過渡中（來電/切後臺瞬間）")
-            case .background: print("入後臺，存草稿")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("返前臺，復刷新")
+ case .inactive: print("過渡中（來電/切後臺瞬間）")
+ case .background: print("入後臺，存草稿")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::
@@ -211,7 +211,7 @@ struct MyApp: App {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小結
+本章小結
 
 - 狀態四具：@State（頁私有）、@Binding（借用）、@Observable（邏輯）、.environment（全局）
 - 新項以 @Observable 宏作視圖模型；舊籍之 @ObservableObject 能讀即可

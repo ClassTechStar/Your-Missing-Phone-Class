@@ -93,13 +93,13 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">变焦方式</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">画质表现</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用场景</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">0.5x 超广角</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生光学镜头，无损失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">建筑内景、大场面、狭小空间</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1x 主摄</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生光学镜头，画质最好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认选择，光线一般时尤其用它</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2x-3x</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光学品质变焦，画质接近光学</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人像特写、拍远处细节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双指拉伸/更大倍数</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数码裁切，明显下降</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应急记录，不追求画质</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">变焦方式</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">画质表现</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用场景</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">0.5x 超广角</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生光学镜头，无损失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">建筑内景、大场面、狭小空间</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1x 主摄</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生光学镜头，画质最好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认选择，光线一般时尤其用它</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2x-3x</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光学品质变焦，画质接近光学</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人像特写、拍远处细节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双指拉伸/更大倍数</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数码裁切，明显下降</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应急记录，不追求画质</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -155,15 +155,15 @@ iPhone在"设置→相机"里打开"网格"；安卓普遍在相机App的设置�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">光线条件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要点</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正午大太阳</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光硬、影子短而重</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍人躲到阴影边缘，拍景靠色彩取胜</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清晨/傍晚</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">斜射、偏暖、影子长</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">黄金时段，拍什么都好看，抓紧拍</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阴天</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">均匀柔和像柔光箱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍人像的好天气，少带天空构图</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">室内黄昏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">靠窗一侧亮、屋里暗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人面向窗户坐，脸上有最便宜的好光</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">夜景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光少、反差大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">夜景模式+稳住2-4秒，别开闪光灯</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逆光</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光源在主体正后方</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拉曝光拍清人脸，或压曝光拍剪影</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">光线条件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要点</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正午大太阳</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光硬、影子短而重</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍人躲到阴影边缘，拍景靠色彩取胜</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清晨/傍晚</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">斜射、偏暖、影子长</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">黄金时段，拍什么都好看，抓紧拍</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阴天</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">均匀柔和像柔光箱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍人像的好天气，少带天空构图</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">室内黄昏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">靠窗一侧亮、屋里暗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人面向窗户坐，脸上有最便宜的好光</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">夜景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光少、反差大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">夜景模式+稳住2-4秒，别开闪光灯</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逆光</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光源在主体正后方</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拉曝光拍清人脸，或压曝光拍剪影</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -354,7 +354,7 @@ Snapseed的"局部"功能值得单独讲，因为它代表了一种修图思路�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 照片是最容易被忽视的个人数据：一张图里可能同时有脸、位置、时间和你的家。
@@ -582,7 +582,7 @@ Snapseed的"局部"功能值得单独讲，因为它代表了一种修图思路�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 卖二手、转租房子拍图挂网上的时候，最常泄露的不是脸，是门牌号、楼栋号和快递单上的手机号。挂图前把这几样裁掉或打码，看图的人里，绝大多数是买家，但你只需要防住那一个。
@@ -664,7 +664,7 @@ Snapseed的"局部"功能值得单独讲，因为它代表了一种修图思路�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>练一练：用手机完成一次完整的拍照+修图+整理
+练一练：用手机完成一次完整的拍照+修图+整理
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开相机设置里的"网格线"，找一个有自然光的地方拍三张照片（注意擦镜头、调曝光）。
@@ -675,7 +675,7 @@ Snapseed的"局部"功能值得单独讲，因为它代表了一种修图思路�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 四条基础习惯：擦镜头、调曝光（点按后上下滑动）、少用闪光灯、变焦用按钮不拉伸

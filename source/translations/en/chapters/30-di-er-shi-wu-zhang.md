@@ -24,51 +24,51 @@ Core principle: Data cleaning isn't "deletion" — it's "overwriting." Many peop
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Brand</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Wipe Entry Point</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Key Differences &amp; Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System &amp; Updates &gt; Reset &gt; Factory Reset</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must sign out of Huawei account and turn off "Find My Phone" first, otherwise Activation Lock will trigger; may require password verification in Pure Mode.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; My Device &gt; Factory Reset</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">At the bottom, there are "Format Virtual SD Card" and "Clear All Content &amp; Settings" options — both must be checked; turn off "Find Device" before signing out of Xiaomi account.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Additional Settings &gt; Restore Phone &gt; Completely Clear All Data</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS provides a "thorough clear" mode that overwrites storage multiple times; requires lock screen password confirmation.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System Management &gt; Backup &amp; Reset &gt; Clear All Data</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must check "Format Phone Storage" to clean the SD card area; must sign out of vivo account and turn off "Find Phone."</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General Management &gt; Reset &gt; Factory Reset</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must remove Samsung account and turn off "Find My Mobile" first; some models have an "auto-overwrite" option, recommended to enable.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General &gt; Transfer or Reset iPhone &gt; Erase All Content and Settings</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must sign out of Apple ID first, otherwise the next user will be blocked by iCloud Activation Lock; iOS 15+ supports "Keep iCloud Data When Signing Out" for later reference.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Brand</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Wipe Entry Point</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Key Differences &amp; Notes</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System &amp; Updates &gt; Reset &gt; Factory Reset</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must sign out of Huawei account and turn off "Find My Phone" first, otherwise Activation Lock will trigger; may require password verification in Pure Mode.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; My Device &gt; Factory Reset</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">At the bottom, there are "Format Virtual SD Card" and "Clear All Content &amp; Settings" options — both must be checked; turn off "Find Device" before signing out of Xiaomi account.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Additional Settings &gt; Restore Phone &gt; Completely Clear All Data</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS provides a "thorough clear" mode that overwrites storage multiple times; requires lock screen password confirmation.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System Management &gt; Backup &amp; Reset &gt; Clear All Data</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must check "Format Phone Storage" to clean the SD card area; must sign out of vivo account and turn off "Find Phone."</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General Management &gt; Reset &gt; Factory Reset</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must remove Samsung account and turn off "Find My Mobile" first; some models have an "auto-overwrite" option, recommended to enable.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General &gt; Transfer or Reset iPhone &gt; Erase All Content and Settings</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must sign out of Apple ID first, otherwise the next user will be blocked by iCloud Activation Lock; iOS 15+ supports "Keep iCloud Data When Signing Out" for later reference.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>The Three Most Overlooked Things
+The Three Most Overlooked Things
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Not Signing Out of Accounts</strong>: Phone gets remotely locked after selling to the next buyer, and you can't get back in either, ultimately you have to take your ID to an official service center to unlock it.
@@ -82,7 +82,7 @@ The data in your phone is no longer "virtual." It carries your money, social rel
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>Legal Basis: Article 49 of the Personal Information Protection Law
+Legal Basis: Article 49 of the Personal Information Protection Law
 
 {class="mt-1"}
 Article 49 of the Personal Information Protection Law of the People's Republic of China, effective in 2021, clearly states. <strong>When a natural person dies, their close relatives may, for their own legitimate and proper interests, exercise the rights to access, copy, correct, and delete the deceased's personal information as provided in this Chapter. The exception is when the deceased made other arrangements during their lifetime.</strong>
@@ -108,7 +108,7 @@ The rules for these two most commonly used apps among Chinese people are differe
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Enable "screen sharing" or "remote control" for strangers.
+Enable "screen sharing" or "remote control" for strangers.
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Don't directly hand the deceased's account passwords to family members to "keep using"</strong>— this violates platform agreements, and it's harder to prove things if funds are frozen or risk control is triggered.
@@ -153,7 +153,7 @@ Domestic mainstream social platforms handle deceased users' accounts in two ways
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Key Reminders
+Key Reminders
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Platform rules may be updated, check the latest official customer service guidelines before proceeding.
@@ -174,7 +174,7 @@ In addition to social accounts, more and more people hold <strong>genuinely valu
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>The Real Cost of Cryptocurrency "Disappearance"
+The Real Cost of Cryptocurrency "Disappearance"
 
 {class="mt-1"}
 According to Chainalysis reports, globally <strong>over 3 million Bitcoins</strong> have been permanently lost due to lost private keys, equivalent to one-sixth of the existing total. If you hold crypto assets, be sure to let at least one person you absolutely trust know the <strong>recovery path</strong>. Otherwise these assets will sleep forever on the blockchain.
@@ -227,7 +227,7 @@ Traditional property wills can't manage digital assets. I recommend updating a "
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Legal Note on "Passwords"
+Legal Note on "Passwords"
 
 {class="mt-1"}
 Writing passwords directly into a will poses leak risks, and all heirs can see them once the will is probated.<strong>A safer approach: the will only contains "account inventory + disposition wishes + password custody location." Actual passwords are transmitted separately to the trusted executor via the password manager's master password</strong>. This satisfies legal requirements while reducing password leak risks.
@@ -239,41 +239,41 @@ A single phone contains dozens of metals including gold, silver, copper, and rar
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Channel</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Recycle Value</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Data Security</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">What is RAW</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Official Trade-in (Huawei/Apple/Xiaomi, etc.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Medium, often with subsidy vouchers</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Highest, official standardized process</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Most cost-effective when upgrading to same brand</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Third-Party Recycling Platforms (Aihuishou, Zhuanzhuan, Huishoubao, etc.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Slightly higher, can compare prices</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly high, with data wiping report</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Want direct cash, not brand-locked</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charitable Donation (e.g., rural schools, charity organizations)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">No financial return</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must thoroughly wipe data yourself</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Device still usable, want to do good</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Repurpose (Keep and Modify)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Save money on new devices</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Original owner continues using, no risk</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Device still performs well, household has repurposing needs</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Channel</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Recycle Value</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Data Security</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">What is RAW</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Official Trade-in (Huawei/Apple/Xiaomi, etc.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Medium, often with subsidy vouchers</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Highest, official standardized process</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Most cost-effective when upgrading to same brand</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Third-Party Recycling Platforms (Aihuishou, Zhuanzhuan, Huishoubao, etc.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Slightly higher, can compare prices</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly high, with data wiping report</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Want direct cash, not brand-locked</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charitable Donation (e.g., rural schools, charity organizations)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">No financial return</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Must thoroughly wipe data yourself</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Device still usable, want to do good</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Repurpose (Keep and Modify)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Save money on new devices</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Original owner continues using, no risk</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Device still performs well, household has repurposing needs</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>: Convert it into a car navigator, smart home hub, or surveillance camera.</strong>: Most recommended: standardized process, data security guaranteed. Apple, Huawei, Xiaomi, and other brands have "trade-in" entries on their official websites. After assessment, the value can be deducted from the new phone price.
@@ -283,7 +283,7 @@ A single phone contains dozens of metals including gold, silver, copper, and rar
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>The Truth About E-Waste
+The Truth About E-Waste
 
 {class="mt-1"}
 A phone's circuit board contains <strong>gold, silver, palladium, copper</strong> and other precious metals. Per ton of scrap circuit boards contains tens of times more gold than gold ore. But if discarded carelessly, the lead, mercury, and cadmium will leach into soil and groundwater, polluting for decades.<strong>Proper recycling protects the environment and allows scarce metals to be recycled.</strong>
@@ -291,7 +291,7 @@ A phone's circuit board contains <strong>gold, silver, palladium, copper</strong
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Chapter 26: Future Phones and Digital Life
+Chapter 26: Future Phones and Digital Life
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Final complete backup: Upload photos to cloud, copy important files to computer, export and archive chat history.
@@ -305,7 +305,7 @@ A phone's circuit board contains <strong>gold, silver, palladium, copper</strong
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>This Month's Task List
+This Month's Task List
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Designate an Apple "Legacy Contact" or set up Google "Inactive Account Manager" for your current primary phone.

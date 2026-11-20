@@ -128,7 +128,7 @@ App 是手机的"技能包"，装什么、从哪装、怎么管，决定了手�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：山寨App的四个破绽
+避坑提醒：山寨App的四个破绽
 
 {class="mt-1"}
 遇到下面任何一条，先停下别装：
@@ -202,7 +202,7 @@ App 是手机的"技能包"，装什么、从哪装、怎么管，决定了手�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 挑一个你还没装过的正规App（比如天气预报、笔记类），按上面八步完整走一遍。重点练习第 6 步：对着每一个权限弹窗，说出"它为什么要这个权限"再点允许或拒绝。练熟这一次，以后每次安装都是这套动作的重复。
@@ -330,7 +330,7 @@ iPhone 用户别急着划走——你没有"纯净模式"这个开关，是因�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：临时放行的三条纪律
+避坑提醒：临时放行的三条纪律
 
 {class="mt-1"}
 第一，只给需要的那次放行，别顺手"全放开"；第二，装完当场恢复开关，拖到"明天再说"基本等于没关。第三，放行期间装的每一个App，都值得多看一眼它的权限申请：防线短暂离岗的时间，就是坏人瞄准的窗口。
@@ -350,7 +350,7 @@ iPhone 用户别急着划走——你没有"纯净模式"这个开关，是因�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：开完之后来一次实地验收
+来动手：开完之后来一次实地验收
 
 {class="mt-1"}
 开完纯净模式，做两个小实验确认它在工作：一，在手机浏览器里搜一个"下载 XX 安装包"的网页，点下载按钮，看看会不会被拦或提示；二，让家人从微信给你发一个测试安装包（比如某个应用的官方安装包），点击安装，确认弹出拦截提示。两个实验都看到"被拦"，防线就算正式挂牌上岗了。
@@ -393,7 +393,7 @@ iPhone 用户别急着划走——你没有"纯净模式"这个开关，是因�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 官方商店帮你把关，纯净模式帮你守门，两道都上，夜里睡觉才踏实。
@@ -411,7 +411,7 @@ iPhone 用户别急着划走——你没有"纯净模式"这个开关，是因�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>什么是"电子寄生虫"？
+什么是"电子寄生虫"？
 
 {class="mt-1"}
 指的是那些<strong>被植入木马的"破解版"软件</strong>——你以为是"省了钱"，实际是"中了招"。常见形式：
@@ -516,7 +516,7 @@ iOS 的审核和沙盒机制让风险低很多，但"iPhone 不会中毒"是误�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>术语小抄
+术语小抄
 
 {class="mt-1"}
 恶意软件是统称，病毒、木马、蠕虫各有严格定义（蠕虫能自传播、病毒要寄生文件、木马靠伪装）：日常混用没关系，但记住一句话：手机上"自我复制传播"的几乎没有，防的重点不是"传染"，是"别把它亲手装进来"。
@@ -552,7 +552,7 @@ iOS 的审核和沙盒机制让风险低很多，但"iPhone 不会中毒"是误�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>卸载它有讲究，顺序别反
+卸载它有讲究，顺序别反
 
 {class="mt-1"}
 先取消设备管理器激活（否则卸载按钮一直是灰的），再撤销无障碍授权，然后正常卸载，卸完再跑一次全盘扫描。手机被锁屏勒索时更不能慌：先断网、绝不转账，用另一台干净设备改关键账号密码，最后再考虑备份资料后恢复出厂。这三节的完整急救流程，第六章和第三十二章有更细的清单。
@@ -568,7 +568,7 @@ iOS 的审核和沙盒机制让风险低很多，但"iPhone 不会中毒"是误�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：三分钟点名检查
+来动手：三分钟点名检查
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 设置里搜"设备管理"，逐个确认激活的设备管理应用，有不认识的，按本节流程处理。
@@ -626,7 +626,7 @@ iOS 的审核和沙盒机制让风险低很多，但"iPhone 不会中毒"是误�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给订阅管理做一次"对账"
+来动手：给订阅管理做一次"对账"
 
 {class="mt-1"}
 现在就打开 iOS 的 [设置] > [Apple 账户] > [订阅]，或安卓商店的订阅页，逐条看：每一项是什么时候开的、多少钱、下次扣费日。凡是你想不起来为什么开的，当场退订。这个动作一年做两次，省下的钱大概率够买一年视频会员。
@@ -673,22 +673,22 @@ App要权限（比如通讯录、位置）有时合理（地图要位置），�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>权限选项</strong>："始终允许"、"仅在使用时允许"、"仅本次允许"（这次一退出就自动收回）、"禁止"。拿不准时，优先用后两种。</li>
-                        <li><strong>管理原则</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>最小化：非必要不给。</li>
-                                <li>事后审计：每季度在 [设置] > [权限管理] 里按权限反查一遍应用——比如查"谁有麦克风权限"，往往能翻出几个早就不用的 App。</li>
-                                <li>情境化：像打车软件，只在用时给位置权限。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>权限选项</strong>："始终允许"、"仅在使用时允许"、"仅本次允许"（这次一退出就自动收回）、"禁止"。拿不准时，优先用后两种。</li>
+ <li><strong>管理原则</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>最小化：非必要不给。</li>
+ <li>事后审计：每季度在 [设置] > [权限管理] 里按权限反查一遍应用——比如查"谁有麦克风权限"，往往能翻出几个早就不用的 App。</li>
+ <li>情境化：像打车软件，只在用时给位置权限。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 这三条原则里，"事后审计"是普通人最容易忽略、收益又最大的一条——下面把它拆成一套可以直接照做的流程。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>重点盯防的权限
+重点盯防的权限
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 通讯录/短信：可能被用来发垃圾短信。
@@ -789,16 +789,16 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>安卓签名</strong>：开发者用私钥对APK进行签名，系统安装时用公钥验证。如果APK被篡改（比如植入病毒），签名就会失效，系统会拒绝安装。Google Play还要求App Signing，由Google保管签名密钥，进一步保护应用安全。</li>
-                        <li><strong>iOS签名</strong>：苹果的审核更严格。每个IPA必须有苹果颁发的证书签名，否则无法安装。这就是为什么iOS通常只能从App Store、TestFlight或经苹果签名的渠道安装应用（欧盟另有第三方商店）。企业证书签名的应用有效期有限，且苹果可以随时吊销。</li>
-                        <li><strong>签名的作用</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>验证来源：确认应用确实来自声称的开发者。</li>
-                                <li>验证完整性：确保应用在传输过程中未被篡改。</li>
-                                <li>防止冒充：恶意应用无法伪装成其他应用。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>安卓签名</strong>：开发者用私钥对APK进行签名，系统安装时用公钥验证。如果APK被篡改（比如植入病毒），签名就会失效，系统会拒绝安装。Google Play还要求App Signing，由Google保管签名密钥，进一步保护应用安全。</li>
+ <li><strong>iOS签名</strong>：苹果的审核更严格。每个IPA必须有苹果颁发的证书签名，否则无法安装。这就是为什么iOS通常只能从App Store、TestFlight或经苹果签名的渠道安装应用（欧盟另有第三方商店）。企业证书签名的应用有效期有限，且苹果可以随时吊销。</li>
+ <li><strong>签名的作用</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>验证来源：确认应用确实来自声称的开发者。</li>
+ <li>验证完整性：确保应用在传输过程中未被篡改。</li>
+ <li>防止冒充：恶意应用无法伪装成其他应用。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 用一个生活比喻把签名讲透：安装包像一件寄给你的包裹，签名就是包裹上的封条+寄件人印章。<strong>印章验寄件人</strong>（来源），<strong>封条验路上没人拆过</strong>（完整性）。你在第三节见过的"破解版"，本质上就是有人把包裹拆开、塞进私货、再用自己的印章重新封了一遍，印章变了，和寄件人对不上，这就是"签名对不上"的实义。系统拦它，拦得有理有据。
@@ -825,7 +825,7 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识：为什么有的App安装包特别大？
+小知识：为什么有的App安装包特别大？
 
 {class="mt-1"}
 游戏类App通常最大，因为包含大量高清贴图、3D模型、音频文件。社交类App也比较大，因为要支持各种功能模块。工具类App通常最小。如果你发现某个工具类App特别大，要警惕是否捆绑了不必要的功能。
@@ -835,7 +835,7 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>实操环节：审查3个App的权限
+实操环节：审查3个App的权限
 
 {class="mt-1"}
 选3个常用App（如社交、购物、工具类），进入 [设置] 的应用权限管理页，逐项审查，把不必要的敏感权限关掉或改成"仅在使用时允许"。
@@ -896,7 +896,7 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 装App的事，一句话就能装下：从哪进（商店）、谁能进（纯净模式）、进来干什么（权限）、留多久（更新与卸载）——四个问题答清楚，你的手机就是干净的。
@@ -904,7 +904,7 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 优先只用官方商店下载：审核、更新、支付三道保险，加上你自己核对开发者的第四道

@@ -83,7 +83,7 @@ OpenAI 的 Codex CLI 提供了类似的终端编程体验，并支持 /import �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给你自己配一套"兵器组合"
+来动手：给你自己配一套"兵器组合"
 
 {class="mt-1"}
 用三个判断维度（编程基础、项目阶段、部署需求）给自己定位：如果你是零基础 → 试试 Bolt 或 v0 做一个页面；有基础 → 用 Cursor 或 Trae 做一个迭代任务；想挑战 → 在终端里跑一次 Claude Code。然后回答：哪种流派最符合你当前的阶段？
@@ -91,7 +91,7 @@ OpenAI 的 Codex CLI 提供了类似的终端编程体验，并支持 /import �
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 三大流派：IDE 内置 AI（日常开发）、终端 Agent（项目级操作）、云端 Builder（零基础原型）
 - 选工具看三问：编程基础？项目阶段？部署需求？

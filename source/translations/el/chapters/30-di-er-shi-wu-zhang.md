@@ -24,51 +24,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μάρκα</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Είσοδος διαγραφής</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Βασικές διαφορές και σημειώσεις</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Σύστημα και ενημερώσεις &gt; Επαναφορά &gt; Επαναφορά εργοστασιακών</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">απενεργοποίηση "εύρεση", Κωδικός επαλήθευση.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Η συσκευή μου &gt; Επαναφορά εργοστασιακών</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Μορφοποίηση εικονικό SD""Εκκαθάριση Ρυθμίσεις ", απενεργοποίηση"εύρεση Συσκευή".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Άλλες ρυθμίσεις &gt; Επαναφορά &gt; Πλήρης διαγραφή</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS "Εκκαθάριση",Αποθήκευση; είσοδος Κωδικός επιβεβαίωση.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Διαχείριση συστήματος &gt; Αντίγραφο και επαναφορά &gt; Διαγραφή όλων</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Μορφοποίηση Αποθήκευση "Καθαρισμός SD; vivo, απενεργοποίηση"εύρεση".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Γενική διαχείριση &gt; Επαναφορά &gt; Επαναφορά εργοστασιακών</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung απενεργοποίηση "εύρεση";"αυτόματο",Συμβουλές Ενεργοποίηση.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; &gt; iPhone &gt; Ρυθμίσεις</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple ID, Χρήστης iCloud; iOS 15+"iCloud Δεδομένα".</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μάρκα</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Είσοδος διαγραφής</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Βασικές διαφορές και σημειώσεις</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Σύστημα και ενημερώσεις &gt; Επαναφορά &gt; Επαναφορά εργοστασιακών</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">απενεργοποίηση "εύρεση", Κωδικός επαλήθευση.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Η συσκευή μου &gt; Επαναφορά εργοστασιακών</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Μορφοποίηση εικονικό SD""Εκκαθάριση Ρυθμίσεις ", απενεργοποίηση"εύρεση Συσκευή".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Άλλες ρυθμίσεις &gt; Επαναφορά &gt; Πλήρης διαγραφή</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS "Εκκαθάριση",Αποθήκευση; είσοδος Κωδικός επιβεβαίωση.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Διαχείριση συστήματος &gt; Αντίγραφο και επαναφορά &gt; Διαγραφή όλων</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Μορφοποίηση Αποθήκευση "Καθαρισμός SD; vivo, απενεργοποίηση"εύρεση".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Γενική διαχείριση &gt; Επαναφορά &gt; Επαναφορά εργοστασιακών</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung απενεργοποίηση "εύρεση";"αυτόματο",Συμβουλές Ενεργοποίηση.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; &gt; iPhone &gt; Ρυθμίσεις</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple ID, Χρήστης iCloud; iOS 15+"iCloud Δεδομένα".</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Τα τρία πιο παραβλεπόμενα
+Τα τρία πιο παραβλεπόμενα
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Μη αποσύνδεση λογαριασμού</strong>:απομακρυσμένο Κλείδωμα, επίσημο Ξεκλείδωμα.
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>Νομική βάση: Άρθρο 49 του Νόμου Προστασίας Προσωπικών Δεδομένων
+Νομική βάση: Άρθρο 49 του Νόμου Προστασίας Προσωπικών Δεδομένων
 
 {class="mt-1"}
 2021"άτομο"49:<strong>, άτομοκεφάλαιο, Αντιγραφή, Διαγραφή. </strong>
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Ποτέ μην κάνετε
+Ποτέ μην κάνετε
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Μην δίνετε τον κωδικό του εκλιπόντος στην οικογένεια για «συνέχεια χρήσης»</strong>— παραβιάζει τους όρους, τα χρήματα μπορεί να παγώσουν.
@@ -153,7 +153,7 @@ Google" (Inactive Account Manager)",Χρήστης αυτόματο—,ψηφι�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Κρίσιμες υπενθυμίσεις
+Κρίσιμες υπενθυμίσεις
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Οι κανόνες ενημερώνονται, ελέγξτε τις τελευταίες οδηγίες.
@@ -174,7 +174,7 @@ Google" (Inactive Account Manager)",Χρήστης αυτόματο—,ψηφι�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Το πραγματικό κόστος της «εξαφάνισης» κρυπτονομισμάτων
+Το πραγματικό κόστος της «εξαφάνισης» κρυπτονομισμάτων
 
 {class="mt-1"}
 Σύμφωνα με Chainalysis, παγκοσμίως <strong>πάνω από 3 εκατομμύρια Bitcoin</strong>. Κρυπτογράφηση,<strong>Διαδρομή ανάκτησης</strong>— αλλιώς αυτά τα περιουσιακά στοιχεία θα παραμείνουν για πάντα στο blockchain.
@@ -227,7 +227,7 @@ Google" (Inactive Account Manager)",Χρήστης αυτόματο—,ψηφι�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Νομική υπόδειξη για «κωδικούς»
+Νομική υπόδειξη για «κωδικούς»
 
 {class="mt-1"}
 Κωδικός. <strong>:" + + Κωδικός",Κωδικός Διαχειριστής κωδικών Κωδικός</strong>. Έτσι τηρείται ο νόμος και μειώνεται ο κίνδυνος διαρροής.
@@ -239,41 +239,41 @@ Google" (Inactive Account Manager)",Χρήστης αυτόματο—,ψηφι�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Κανάλι</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τιμή ανακύκλωσης</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ασφάλεια δεδομένων</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σενάρια χρήσης</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Επίσημο trade-in (Huawei/Apple/Xiaomi)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μεσαία, συχνά με κουπόνια</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλότερη, τυποποιημένη διαδικασία</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Καλύτερο όταν αλλάζετε ίδια μάρκα</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πλατφόρμες τρίτων (Aihuishou, Zhuanzhuan)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ελαφρώς υψηλότερη, σύγκριση τιμών</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλή, με αναφορά διαγραφής</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Για άμεση ρευστότητα</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Δωρεά (σχολεία, οργανισμοί)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Καμία οικονομική απόδοση</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απαιτείται πλήρης διαγραφή</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Συσκευή λειτουργική, επιθυμία για καλό</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αξιοποίηση (αυτό-ανακαίνια)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εξοικονόμηση νέας αγοράς</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ιδιοκτήτης συνεχίζει, κανένας κίνδυνος</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αποδεκτή απόδοση, ανάγκη ανακαίνιας</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Κανάλι</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τιμή ανακύκλωσης</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ασφάλεια δεδομένων</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σενάρια χρήσης</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Επίσημο trade-in (Huawei/Apple/Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μεσαία, συχνά με κουπόνια</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλότερη, τυποποιημένη διαδικασία</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Καλύτερο όταν αλλάζετε ίδια μάρκα</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πλατφόρμες τρίτων (Aihuishou, Zhuanzhuan)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ελαφρώς υψηλότερη, σύγκριση τιμών</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλή, με αναφορά διαγραφής</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Για άμεση ρευστότητα</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Δωρεά (σχολεία, οργανισμοί)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Καμία οικονομική απόδοση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απαιτείται πλήρης διαγραφή</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Συσκευή λειτουργική, επιθυμία για καλό</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αξιοποίηση (αυτό-ανακαίνια)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εξοικονόμηση νέας αγοράς</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ιδιοκτήτης συνεχίζει, κανένας κίνδυνος</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αποδεκτή απόδοση, ανάγκη ανακαίνιας</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>Επίσημη ανακύκλωση/Ανταλλαγή με παλιό</strong>:, Δεδομένα Ασφάλεια., Μάρκα "".
@@ -283,7 +283,7 @@ Google" (Inactive Account Manager)",Χρήστης αυτόματο—,ψηφι�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>Η αλήθεια για τα ηλεκτρονικά απόβλητα
+Η αλήθεια για τα ηλεκτρονικά απόβλητα
 
 {class="mt-1"}
 Ένα κινητό περιέχει <strong>χρυσό, ασήμι, παλλάδιο, χαλκό</strong> και άλλα πολύτιμα μέταλλα. Κάθε τόνος παλιών πλακετών κυκλωμάτων περιέχει δεκάδες φορές περισσότερο χρυσό από το χρυσαφωρυχείο. Αν όμως απορρίπτονται άκριτα, ο μόλυβδος, ο υδράργυρος και το κάδμιο που περιέχουν θα διεισδύσουν στο έδαφος και στα υπόγεια ύδατα, προκαλώντας ρύπανση που διαρκεί δεκαετίες.<strong>Σωστή ανακύκλωση προστατεύει το περιβάλλον και ανακυκλώνει μέταλλα.</strong>
@@ -291,7 +291,7 @@ Google" (Inactive Account Manager)",Χρήστης αυτόματο—,ψηφι�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>hands-on: Για το παλιό σου κινητό κάνε μια "Κανονική κηδεία"
+hands-on: Για το παλιό σου κινητό κάνε μια "Κανονική κηδεία"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. αντίγραφο ασφαλείας: Φωτογραφία Μεταφόρτωση cloud, Αρχείο Αντιγραφή, καταγραφή Εξαγωγή.
@@ -305,7 +305,7 @@ Google" (Inactive Account Manager)",Χρήστης αυτόματο—,ψηφι�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Λίστα εργασία αυτού του μήνα
+Λίστα εργασία αυτού του μήνα
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apple"Επαφή "Ρυθμίσεις Google"".

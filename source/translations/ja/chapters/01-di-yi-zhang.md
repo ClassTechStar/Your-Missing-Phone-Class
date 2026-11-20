@@ -317,7 +317,7 @@ HDR（High Dynamic Range）は画面に明るい部分と暗い部分を同時�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>実践してみよう：ハードウェア構成を理解する
+実践してみよう：ハードウェア構成を理解する
 
 {class="mt-1"}
 [設定]で、プロセッサの型番、RAM、ストレージ（ROM）の具体的な容量を見つけられるか試してみよう。スマートフォンの能力を把握しておく。Androidユーザーは「安兔兔」や「DevCheck」をダウンロードして詳細なハードウェア情報を確認できる。

@@ -46,7 +46,7 @@ AES (Advanced Encryption Standard) הוא אלגוריתם הצפנה סימטר
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>למה "Zero-Knowledge" אומר שהספק לא רואה את הסיסמה?
+למה "Zero-Knowledge" אומר שהספק לא רואה את הסיסמה?
 
 {class="mt-1"}
 מפתח הפענוח נגזר מהסיסמה הראשית שלך, שנמצאת רק בראשך ובמכשיר המקומי. השרת של הספק אינו מכיל גם את הסיסמה הראשית וגם לא את מפתח הפענוח - רק טקסט מוצפן. לכן ספקים כמו Bitwarden ו-1Password מצהירים במפורש "גם אנחנו לא יכולים לראות את הסיסמאות שלך" - לא מפני שהם לא רוצים, אלא כי טכנית זה בלתי אפשרי.
@@ -71,7 +71,7 @@ AES (Advanced Encryption Standard) הוא אלגוריתם הצפנה סימטר
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>לקחים מתקרית LastPass
+לקחים מתקרית LastPass
 
 {class="mt-1"}
 1) סיסמה ארוכה וייחודית (16+, גדול/קטן/מספר/סמל); 2) העדף Argon2id, איטרציות גבוהות; 3) 2FA עצמאי לחשבונות רגישים (בנק, דוא"ל), אל תסתמך רק על מנהל סיסמאות.
@@ -118,7 +118,7 @@ AES (Advanced Encryption Standard) הוא אלגוריתם הצפנה סימטר
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>עיקרון שאילתת k-Anonymity
+עיקרון שאילתת k-Anonymity
 
 {class="mt-1"}
 דואג שהזנת הסיסמה ב-HaveIBeenPwned תגרום לדליפה נוספת? אל תדאג. שאילתות מודרניות משתמשות בפרוטוקול "k-אנונימיות": הדפדפן שולח רק את 5 התווים הראשונים של ה-hash לשרת, השרת מחזיר רשימת hashes שמתחילים ב-5 תווים אלה, וההשוואה נעשית מקומית. כלומר, השרת לעולם לא רואה את ה-hash המלא של הסיסמה. "בדיקת סיסמאות שדלפו" של 1Password ו-Bitwarden פועלות בדיוק כך.
@@ -133,7 +133,7 @@ AES (Advanced Encryption Standard) הוא אלגוריתם הצפנה סימטר
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בדוק עכשיו: האם הסיסמה שלך בטוחה
+בדוק עכשיו: האם הסיסמה שלך בטוחה
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. פתח haveibeenpwned.com, הזן דוא"ל, בדוק דליפות.
@@ -159,36 +159,36 @@ Passkey מבוסס FIDO2/WebAuthn, משתמש<strong>זוג מפתחות על ה
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ממד</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סיסמה מסורתית</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">עמידות לדיוג</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חלש, אתר דיוג יכול לגנוב סיסמה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">עמיד טבעית לדיוג, מפתח פרטי חותם רק על דומיין אמיתי</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">השפעת דליפת שרת</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גיבוב סיסמה עלול להיפרץ</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">השרת שומר רק מפתח ציבורי, דליפה ללא השפעה</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">נוחות</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דורש זיכרון/הקלדה/ניהול</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">התחברות בשנייה עם Face ID/טביעת אצבע</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">התקפת השמעה חוזרת</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">עלולה להיחטף ולהיות מושמעת חזרה על ידי אדם באמצע</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כל חתימה חד-פעמית, לא ניתנת להשמעה חוזרת</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ממד</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סיסמה מסורתית</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">עמידות לדיוג</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חלש, אתר דיוג יכול לגנוב סיסמה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">עמיד טבעית לדיוג, מפתח פרטי חותם רק על דומיין אמיתי</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">השפעת דליפת שרת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גיבוב סיסמה עלול להיפרץ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">השרת שומר רק מפתח ציבורי, דליפה ללא השפעה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">נוחות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דורש זיכרון/הקלדה/ניהול</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">התחברות בשנייה עם Face ID/טביעת אצבע</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">התקפת השמעה חוזרת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">עלולה להיחטף ולהיות מושמעת חזרה על ידי אדם באמצע</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כל חתימה חד-פעמית, לא ניתנת להשמעה חוזרת</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. תמיכת פלטפורמות
@@ -200,7 +200,7 @@ Passkey מבוסס FIDO2/WebAuthn, משתמש<strong>זוג מפתחות על ה
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>סנכרון חוצה-מכשירים הוא פריצת דרך מרכזית
+סנכרון חוצה-מכשירים הוא פריצת דרך מרכזית
 
 {class="mt-1"}
 הבעיה הגדולה ביותר של Passkey בגרסאותיו המוקדמות הייתה "קשירה למכשיר יחיד" - החלפת טלפון דרשה יצירה מחדש. החל מ-2023, Apple, Google ו-Microsoft יישמו סנכרון ענן של Passkey: iCloud Keychain מסנכרן בין מכשירי Apple, Google Password Manager מסנכרן בין מכשירי Android. 1Password וספקים אחרים חיברו סנכרון חוצה-אקוסיסטמים. משמעות הדבר: ל-Passkey יש עתיד כתחליף מעשי לסיסמאות.
@@ -236,7 +236,7 @@ Bluetooth+אינטרנט מוצפן, המפתח לא עוזב את ה-iPhone.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>נסה עכשיו: חווית התחברות ללא סיסמה
+נסה עכשיו: חווית התחברות ללא סיסמה
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Google &gt; אבטחה &gt; Passkey &gt; הוסף, Face ID/טביעת אצבע.
@@ -247,7 +247,7 @@ Bluetooth+אינטרנט מוצפן, המפתח לא עוזב את ה-iPhone.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>המלצה לתקופת מעבר
+המלצה לתקופת מעבר
 
 {class="mt-1"}
 Passkey לא מחליף לגמרי - אתרים ב"Passkey+סיסמה". המלצה: חשבונות רגישים קודם, אך<strong>אל תמחק מיד סיסמאות מסורתיות</strong>, כגיבוי; המשך להשתמש במנהל סיסמאות. Passkey = "תוספת חזקה" לא "החלפה".
@@ -295,7 +295,7 @@ Google + YubiKey:
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>אסטרטגיית מפתח כפול
+אסטרטגיית מפתח כפול
 
 {class="mt-1"}
 הסיכון: "איבוד". 1) שני מפתחות; 2) אחד עליך (קליפ), אחד בכספת; 3) קודי גיבוי מודפסים. איבוד = לא נעילה.
@@ -303,7 +303,7 @@ Google + YubiKey:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>יש להיזהר בערוץ הרכישה
+יש להיזהר בערוץ הרכישה
 
 {class="mt-1"}
 קנה רשמי, לא יד שנייה - עלול להיות backdoor. קושחה לא מתעדכנת, אך Yubico מפרסמת אזהרות.
@@ -336,7 +336,7 @@ Bitwarden חינם: Send (שיתוף זמני); בתשלום: ארגון, הרש
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>יחס עלות-תועלת של 1Password משפחתי
+יחס עלות-תועלת של 1Password משפחתי
 
 {class="mt-1"}
 1Password Families עולה כ-4.99 USD לחודש, תומך בעד 5 בני משפחה, לכל אחד כספת פרטית עצמאית + 4 כספות משותפות. בחישוב זה פחות מ-1 USD לאדם לחודש - זהו פתרון שיתוף המשפחתי עם החוויה הטובה ביותר כיום. Bitwarden Family עולה 10 USD לשנה ותומך ב-6 אנשים, עם יחס איכות-מחיר גבוה יותר, אך חוויית הממשק מעט נחותה.
@@ -369,7 +369,7 @@ Bitwarden חינם: Send (שיתוף זמני); בתשלום: ארגון, הרש
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>הגדר עכשיו: השאר "מפתח גיבוי" למשפחה
+הגדר עכשיו: השאר "מפתח גיבוי" למשפחה
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. בחר בן משפחה מהימן כ"איש קשר לחירום".
@@ -388,7 +388,7 @@ Bitwarden חינם: Send (שיתוף זמני); בתשלום: ארגון, הרש
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>נסה עכשיו:התחל להשתמש במנהל סיסמאות
+נסה עכשיו:התחל להשתמש במנהל סיסמאות
 
 {class="mt-1"}
 בחר מנהל סיסמאות (מומלץ Bitwarden או המובנה במערכת).
@@ -396,7 +396,7 @@ Bitwarden חינם: Send (שיתוף זמני); בתשלום: ארגון, הרש
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>הירשם לחשבון, הגדר סיסמת מאסטר חזקה.
+הירשם לחשבון, הגדר סיסמת מאסטר חזקה.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ייבא סיסמאות קיימות (אם יש) או התחל להוסיף סיסמאות חדשות.

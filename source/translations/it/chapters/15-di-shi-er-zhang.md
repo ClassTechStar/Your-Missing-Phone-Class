@@ -61,7 +61,7 @@ Il mio atteggiamento verso i giochi su telefono è: giocare va bene, ma non lasc
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: costruisci il tuo sistema di intrattenimento mobile
+Prova: costruisci il tuo sistema di intrattenimento mobile
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Nell'App musicale, scarica i tuoi 3 album o playlist preferiti, in modo da poterli ascoltare offline.

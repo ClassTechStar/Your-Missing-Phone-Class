@@ -161,8 +161,8 @@ UserDefaults 的键是裸字符串，敲错一个字母，读回来就是 nil，
 
 ```
 enum Keys {
-    static let isDarkMode = "isDarkMode"
-    static let favoriteCity = "favoriteCity"
+ static let isDarkMode = "isDarkMode"
+ static let favoriteCity = "favoriteCity"
 }
 
 // 用的时候
@@ -184,11 +184,11 @@ let dark = UserDefaults.standard.bool(forKey: Keys.isDarkMode)
 
 ```
 struct SettingsView: View {
-    @AppStorage("notify") private var notify = true
+ @AppStorage("notify") private var notify = true
 
-    var body: some View {
-        Toggle("记账提醒", isOn: $notify)   // 拨一下，自动存盘
-    }
+ var body: some View {
+ Toggle("记账提醒", isOn: $notify) // 拨一下，自动存盘
+ }
 }
 ```
 :::
@@ -228,46 +228,46 @@ import SwiftData
 // 1. @Model：这个类自动变成"表"
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. App 入口挂上容器
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // 数据库就绪
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // 数据库就绪
+ }
 }
 
 // 3. 视图里用 @Query 读、@Environment 写
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) 元")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) 元")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // 存
-        try? context.save()   // 落盘
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // 存
+ try? context.save() // 落盘
+ }
 }
 ```
 :::
@@ -292,14 +292,14 @@ struct RecordListView: View {
 ```
 // 删：从列表左滑删除那行来
 func delete(_ record: Record) {
-    context.delete(record)
-    try? context.save()
+ context.delete(record)
+ try? context.save()
 }
 
 // 改：直接改对象的属性，再保存
 func markPaid(_ record: Record) {
-    record.note = "已结清"
-    try? context.save()
+ record.note = "已结清"
+ try? context.save()
 }
 ```
 :::
@@ -320,7 +320,7 @@ func markPaid(_ record: Record) {
 ```
 // 只看"餐饮"分类的账目
 @Query(filter: #Predicate<Record> { $0.category == "餐饮" },
-       sort: \Record.date, order: .reverse)
+ sort: \Record.date, order: .reverse)
 var foodRecords: [Record]
 ```
 :::
@@ -363,9 +363,9 @@ var foodRecords: [Record]
 ```
 // JSON: {"name":"北京","main":{"temp":26.5},"weather":[{"description":"晴"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -374,7 +374,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "晴"
+print(result.weather[0].description) // "晴"
 ```
 :::
 
@@ -398,13 +398,13 @@ print(result.weather[0].description)   // "晴"
 ```
 // JSON: {"city_name":"北京","temp_c":"26.5"}
 struct Weather: Codable {
-    let cityName: String     // Swift 习惯驼峰
-    let tempC: Double
+ let cityName: String // Swift 习惯驼峰
+ let tempC: Double
 
-    enum CodingKeys: String, CodingKey {
-        case cityName = "city_name"   // 对上 JSON 的下划线名
-        case tempC = "temp_c"
-    }
+ enum CodingKeys: String, CodingKey {
+ case cityName = "city_name" // 对上 JSON 的下划线名
+ case tempC = "temp_c"
+ }
 }
 ```
 :::
@@ -443,23 +443,23 @@ iOS 联网用系统自带的 <strong>URLSession</strong>，配合 Swift 的 <str
 
 ```
 struct WeatherService {
-    // 异步函数：async 标记"我要等一会儿"，throws 标记"可能失败"
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // 异步函数：async 标记"我要等一会儿"，throws 标记"可能失败"
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // 调用处（在 .task 里）：
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "北京")
-        // 更新界面……
-    } catch {
-        print("出错了：\(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "北京")
+ // 更新界面……
+ } catch {
+ print("出错了：\(error)")
+ }
 }
 ```
 :::
@@ -488,8 +488,8 @@ struct WeatherService {
 ```
 let (data, response) = try await URLSession.shared.data(from: url)
 guard let http = response as? HTTPURLResponse,
-      (200...299).contains(http.statusCode) else {
-    throw URLError(.badServerResponse)   // 不是 2xx，当失败处理
+ (200...299).contains(http.statusCode) else {
+ throw URLError(.badServerResponse) // 不是 2xx，当失败处理
 }
 return try JSONDecoder().decode(WeatherResponse.self, from: data)
 ```
@@ -508,36 +508,36 @@ return try JSONDecoder().decode(WeatherResponse.self, from: data)
 
 ```
 enum LoadState {
-    case loading
-    case loaded(WeatherResponse)
-    case failed(String)
+ case loading
+ case loaded(WeatherResponse)
+ case failed(String)
 }
 
 struct WeatherView: View {
-    @State private var state: LoadState = .loading
+ @State private var state: LoadState = .loading
 
-    var body: some View {
-        Group {
-            switch state {
-            case .loading:              Text("加载中……")
-            case .loaded(let weather):  Text("\(weather.name) \(weather.main.temp)°")
-            case .failed(let message):  Text(message)
-            }
-        }
-        .task {
-            state = .loading
-            do {
-                let (data, response) = try await URLSession.shared.data(from: url)
-                guard let http = response as? HTTPURLResponse,
-                      (200...299).contains(http.statusCode) else {
-                    state = .failed("服务器没答对，稍后再试"); return
-                }
-                state = .loaded(try JSONDecoder().decode(WeatherResponse.self, from: data))
-            } catch {
-                state = .failed("网络出了点问题，检查一下连接？")
-            }
-        }
-    }
+ var body: some View {
+ Group {
+ switch state {
+ case .loading: Text("加载中……")
+ case .loaded(let weather): Text("\(weather.name) \(weather.main.temp)°")
+ case .failed(let message): Text(message)
+ }
+ }
+ .task {
+ state = .loading
+ do {
+ let (data, response) = try await URLSession.shared.data(from: url)
+ guard let http = response as? HTTPURLResponse,
+ (200...299).contains(http.statusCode) else {
+ state = .failed("服务器没答对，稍后再试"); return
+ }
+ state = .loaded(try JSONDecoder().decode(WeatherResponse.self, from: data))
+ } catch {
+ state = .failed("网络出了点问题，检查一下连接？")
+ }
+ }
+ }
 }
 ```
 :::
@@ -546,7 +546,7 @@ struct WeatherView: View {
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：两条网络铁律
+避坑提醒：两条网络铁律
 
 {class="mt-1"}
 ① <strong>联网必须 async/await，绝不阻塞主线程</strong>——卡住界面是崩溃级体验。Swift 的结构化并发让这变得很自然，但别忘了 <code class="inline">try await</code> 和 <code class="inline">do/catch</code>。② <strong>ATS 默认禁止明文 HTTP</strong>：iOS 要求 HTTPS。测试本地 http:// 服务时需要在 Info.plist 里临时开例外（NSAppTransportSecurity），但正式产品必须全走 HTTPS，审核也会盯这个。
@@ -554,7 +554,7 @@ struct WeatherView: View {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做一个"每日一句"小应用
+来动手：做一个"每日一句"小应用
 
 #### 六、网络错误也要"分级"：别把一切报错都丢给用户
 
@@ -567,18 +567,18 @@ struct WeatherView: View {
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "网络断了，检查一下连接？"
-        case .timedOut:               return "请求超时，稍后再试？"
-        case .cannotFindHost:         return "服务器找不到了"
-        default:                      return "网络出问题了：\(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "数据格式不对（可能是接口变了）"
-    }
-    return "出错了：\(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "网络断了，检查一下连接？"
+ case .timedOut: return "请求超时，稍后再试？"
+ case .cannotFindHost: return "服务器找不到了"
+ default: return "网络出问题了：\(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "数据格式不对（可能是接口变了）"
+ }
+ return "出错了：\(error.localizedDescription)"
 }
 ```
 :::
@@ -687,30 +687,30 @@ func friendlyMessage(_ error: Error) -> String {
 struct Quote: Codable { let text: String }
 
 struct QuoteView: View {
-    let quoteURL = URL(string: "https://api.example.com/daily")!
-    @AppStorage("lastQuote") private var lastQuote = ""
-    @AppStorage("lastFetch") private var lastFetch = 0.0
-    @State private var offline = false
+ let quoteURL = URL(string: "https://api.example.com/daily")!
+ @AppStorage("lastQuote") private var lastQuote = ""
+ @AppStorage("lastFetch") private var lastFetch = 0.0
+ @State private var offline = false
 
-    var body: some View {
-        VStack {
-            Text(lastQuote.isEmpty ? "还没有句子" : lastQuote)
-            if offline { Text("当前离线，显示的是上次内容") }
-            Button("换一句") { Task { await load() } }
-        }
-        .task { await load() }
-    }
+ var body: some View {
+ VStack {
+ Text(lastQuote.isEmpty ? "还没有句子" : lastQuote)
+ if offline { Text("当前离线，显示的是上次内容") }
+ Button("换一句") { Task { await load() } }
+ }
+ .task { await load() }
+ }
 
-    func load() async {
-        do {
-            let (data, _) = try await URLSession.shared.data(from: quoteURL)
-            lastQuote = (try? JSONDecoder().decode(Quote.self, from: data))?.text ?? lastQuote
-            lastFetch = Date().timeIntervalSince1970
-            offline = false
-        } catch {
-            offline = true          // 没网：继续用缓存，别清空
-        }
-    }
+ func load() async {
+ do {
+ let (data, _) = try await URLSession.shared.data(from: quoteURL)
+ lastQuote = (try? JSONDecoder().decode(Quote.self, from: data))?.text ?? lastQuote
+ lastFetch = Date().timeIntervalSince1970
+ offline = false
+ } catch {
+ offline = true // 没网：继续用缓存，别清空
+ }
+ }
 }
 ```
 :::
@@ -740,15 +740,15 @@ struct QuoteView: View {
 
 ```
 var cacheAgeText: String {
-    guard lastFetch > 0 else { return "" }
-    let minutes = Int(Date().timeIntervalSince1970 - lastFetch) / 60
-    if minutes < 1 { return "刚刚更新" }
-    return "更新于 \(minutes) 分钟前"
+ guard lastFetch > 0 else { return "" }
+ let minutes = Int(Date().timeIntervalSince1970 - lastFetch) / 60
+ if minutes < 1 { return "刚刚更新" }
+ return "更新于 \(minutes) 分钟前"
 }
 
 Text(cacheAgeText)
-    .font(.caption)
-    .foregroundStyle(.secondary)
+ .font(.caption)
+ .foregroundStyle(.secondary)
 ```
 :::
 
@@ -782,19 +782,19 @@ async/await 用起来自然，但新手期有四个高频小坑，提前知道�
 
 ```
 enum AppError: Error {
-    case offline          // 断网
-    case server(Int)      // 服务器状态码异常，带上号码
-    case badData          // 数据读不懂
-    case unknown
+ case offline // 断网
+ case server(Int) // 服务器状态码异常，带上号码
+ case badData // 数据读不懂
+ case unknown
 
-    var message: String {
-        switch self {
-        case .offline:        return "网络断了，检查一下连接？"
-        case .server(let c):  return "服务器开小差了（\(c)），稍后再试"
-        case .badData:        return "数据格式不对，我们正在修"
-        case .unknown:        return "出了点小问题，再试一次？"
-        }
-    }
+ var message: String {
+ switch self {
+ case .offline: return "网络断了，检查一下连接？"
+ case .server(let c): return "服务器开小差了（\(c)），稍后再试"
+ case .badData: return "数据格式不对，我们正在修"
+ case .unknown: return "出了点小问题，再试一次？"
+ }
+ }
 }
 ```
 :::
@@ -957,7 +957,7 @@ enum AppError: Error {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 小配置进 UserDefaults，成批数据进 SwiftData，外面的数据走 URLSession，而网络层最值钱的部分，是失败时用户看到什么。
@@ -965,7 +965,7 @@ enum AppError: Error {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 口诀：小配置进 UserDefaults，成批数据进 SwiftData，外面的数据走 URLSession
 - SwiftData 三板斧：@Model 声明表、modelContainer 挂容器、@Query 读 + context.insert 写

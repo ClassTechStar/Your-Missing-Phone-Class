@@ -27,16 +27,16 @@ kind: chapter
 
 @Composable
 fun CameraButton() {
-    val permission = rememberPermissionState(
-        permission = android.Manifest.permission.CAMERA
-    )
-    Button(onClick = {
-        when {
-            permission.status.isGranted -&gt; openCamera()
-            permission.status.shouldShowRationale -&gt; showExplainDialog()
-            else -&gt; permission.launchPermissionRequest()
-        }
-    }) { Text("撮影") }
+ val permission = rememberPermissionState(
+ permission = android.Manifest.permission.CAMERA
+ )
+ Button(onClick = {
+ when {
+ permission.status.isGranted -&gt; openCamera()
+ permission.status.shouldShowRationale -&gt; showExplainDialog()
+ else -&gt; permission.launchPermissionRequest()
+ }
+ }) { Text("撮影") }
 }
 ```
 :::
@@ -63,22 +63,22 @@ fun CameraButton() {
 
 // 1. 通知チャンネルを作成（Android 8+で必須）
 val channel = NotificationChannel(
-    "reminder", "リマインダー", NotificationManager.IMPORTANCE_DEFAULT
+ "reminder", "リマインダー", NotificationManager.IMPORTANCE_DEFAULT
 )
 val manager = getSystemService(NotificationManager::class.java)
 manager.createNotificationChannel(channel)
 
 // 2. 通知を送る
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("記帳リマインダー")
-    .setContentText("今日はまだ記帳していないよ")
-    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("記帳リマインダー")
+ .setContentText("今日はまだ記帳していないよ")
+ .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+ .build()
 if (ActivityCompat.checkSelfPermission(this,
-        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+ Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 ) {
-    manager.notify(1, notification)
+ manager.notify(1, notification)
 }
 ```
 :::

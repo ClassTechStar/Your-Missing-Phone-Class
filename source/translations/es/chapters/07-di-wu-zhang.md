@@ -74,7 +74,7 @@ Esta parte reúne funciones "que una vez configuradas no hay vuelta atrás"; cad
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Lista de comprobación del "primer día de trabajo"
+Lista de comprobación del "primer día de trabajo"
 
 {class="mt-1 text-sm"}
 Al estrenar un teléfono o tras una gran actualización, dedica 10 minutos a repasar estos ajustes:<br> ① Contraseña de bloqueo + biometría ② Agrupar notificaciones + desactivar marketing ③ Tamaño de fuente / tasa de refresco / modo oscuro<br> ④ Teclado / navegador / correo predeterminados ⑤ Contacto de emergencia / tarjeta médica ⑥ Ajustes de copia de seguridad
@@ -90,7 +90,7 @@ El lector de pantalla es la herramienta central para que las personas con discap
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS VoiceOver
+iOS VoiceOver
 
 {class="mt-1"}
 <strong>Ruta de activación</strong>: [Configuración] &gt; [Accesibilidad] &gt; [VoiceOver], activa el interruptor. También puedes pulsar tres veces el botón lateral (o el botón de inicio) para activarlo/desactivarlo rápidamente.
@@ -111,7 +111,7 @@ El lector de pantalla es la herramienta central para que las personas con discap
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>Android TalkBack
+Android TalkBack
 
 {class="mt-1"}
 <strong>Ruta de activación</strong>: [Configuración] &gt; [Accesibilidad] &gt; [TalkBack], activa el interruptor. O mantén pulsadas las teclas de volumen arriba y abajo durante 3 segundos para activarlo rápidamente (algunas marcas lo admiten).
@@ -155,7 +155,7 @@ Cuando el lector de pantalla se topa con una imagen, lo habitual era saltarla o 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>Soporte de descripción de imágenes con IA por sistema
+Soporte de descripción de imágenes con IA por sistema
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: en [Configuración] &gt; [Accesibilidad] &gt; [VoiceOver] &gt; [Descripciones de voz], activa "Descripciones de imágenes". El sistema invoca un <strong>modelo de IA local</strong> para generar automáticamente descripciiones textuales (requiere iPhone 12 o superior).
@@ -165,7 +165,7 @@ Cuando el lector de pantalla se topa con una imagen, lo habitual era saltarla o 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Escenarios de uso
+Escenarios de uso
 
 {class="mt-1"}
 Prueba a preguntar sobre una foto de calle "¿cuántas personas hay en esta imagen? ¿Qué están haciendo?", o abre una App de comida a domicilio y deja que la IA lea los nombres de los platos del menú en imagen<strong>esto es verdaderamente "la tecnología hace la vida más igualitaria"</strong>.
@@ -178,7 +178,7 @@ Los subtítulos en tiempo real (Live Captíons) son una función <strong>a nivel
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>Activación y optimización de subtítulos en tiempo real
+Activación y optimización de subtítulos en tiempo real
 
 {class="mt-1"}
 <strong>iOS</strong>: [Configuración] &gt; [Accesibilidad] &gt; [Subtítulos en tiempo real], activa el interruptor. El sistema detecta todo el audio del dispositivo (llamadas, videos, podcasts, FaceTime, notas de voz) y muestra los subtítulos automáticamente en la parte superior de la pantalla.
@@ -203,7 +203,7 @@ Cuando el usuario <strong>ni puede oír ni puede hablar</strong>(afonía súbita
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>Transcripción en tiempo real de llamadas (TTY / RTT)
+Transcripción en tiempo real de llamadas (TTY / RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [Configuración] &gt; [Accesibilidad] &gt; [RTT/TTY], al activarlo, durante la llamada aparece un teclado en pantalla; la voz del interlocutor se transcribe a texto en tiempo real y <strong>lo que tú escribas se lee en voz alta</strong> al interlocutor.
@@ -231,7 +231,7 @@ Cuando el usuario <strong>ni puede oír ni puede hablar</strong>(afonía súbita
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>Filosofía de accesibilidad de Apple
+Filosofía de accesibilidad de Apple
 
 {class="mt-1"}
 Apple invierte mucho en accesibilidad y cada año actualiza y añade funciones. La web oficial de Apple tiene una página específica de accesibilidad que detalla el uso de cada función. Las funciones de accesibilidad de iOS suelen ser más completas y fluidas que las de Android, una razón importante por la que muchos usuarios con discapacidad eligen Apple.
@@ -239,7 +239,7 @@ Apple invierte mucho en accesibilidad y cada año actualiza y añade funciones. 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Dedica 30 segundos a probarlo
+Dedica 30 segundos a probarlo
 
 {class="mt-1"}
 Busca un rato libre y haz estas pruebas:

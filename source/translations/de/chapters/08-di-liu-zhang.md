@@ -54,7 +54,7 @@ In einer Zeit rasant fortschreitender KI-Technik ist die traditionelle Überzeug
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① KI-Tausch von Gesicht und Stimme (Deepfake-Betrug)
+① KI-Tausch von Gesicht und Stimme (Deepfake-Betrug)
 
 {class="mt-1"}
 Täter sammeln illegal hochauflösende Fotos von Zielpersonen aus sozialen Medien oder nur wenige Sekunden Sprachprobe und klonen mit KI-Deepfake-Technik ein täuschend echtes „Familien-Video“ oder eine „Stimme“. Typische Drehbücher:<strong>plötzlicher Unfall, dringendes Darlehen, Entführung</strong> und Ähnliches. Solche Betrügereien nutzen die emotionale Bindung von Familie und Freundschaft und sind <strong>extrem täuschungsstark</strong>.
@@ -62,7 +62,7 @@ Täter sammeln illegal hochauflösende Fotos von Zielpersonen aus sozialen Medie
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② Falscher Amtsträger / falscher Kundenservice
+② Falscher Amtsträger / falscher Kundenservice
 
 {class="mt-1"}
 KI kann Stimme und Tonfall von offiziellen Kundendiensten, Polizei und Staatsanwaltschaft präzise imitieren und sogar hochgradig echt wirkende gefälschte Überweisungs-Screenshots, elektronische Amtsdokumente oder Fahndungsschreiben erzeugen. Über <strong>Panikmache oder Autoritätsdruck</strong> wird das Opfer zur Überweisung oder zur Bildschirmfreigabe verleitet – und die Kontodaten sind weg.
@@ -70,7 +70,7 @@ KI kann Stimme und Tonfall von offiziellen Kundendiensten, Polizei und Staatsanw
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ KI-Anlagebetrug
+③ KI-Anlagebetrug
 
 {class="mt-1"}
 Mit KI-Algorithmen werden „garantierter Gewinn“-Screenshots, Interfaces angeblicher Quanten-Auswahlsoftware oder „Meister“-Analysen gefälscht. Mit derlockenden hohen Rendite werden teure Anlagedienste verkauft oder das Opfer bringt sein Geld auf ein Konto der Täter –<strong>am Ende verschwinden sie mit dem Geld</strong>.
@@ -127,7 +127,7 @@ IoT-Geräte wie Smartkameras, Smartlocks und Smartlautsprecher müssen beim erst
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Warnung aus der Praxis
+Warnung aus der Praxis
 
 {class="mt-1"}
 2022 meldete die Polizei eines Bezirks, dass Hacker durch das Knacken des Standardpassworts einer Haushaltskamera-Marke (viele Nutzer hatten es nie geändert) Tausende von Schlafzimmerszenen gestohlen und online verkauft hatten.<strong>Standardpasswort nicht ändern = die Haustür sperrangelweit offen</strong>.
@@ -170,7 +170,7 @@ Wenn das Smartphone verloren ist, nicht in Panik verfallen – in dieser Reihenf
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Was du niemals tun solltest
+Was du niemals tun solltest
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Schwache Passwörter wie Geburtsdatum / 123456 / qwerty verwenden;
@@ -182,7 +182,7 @@ Wenn das Smartphone verloren ist, nicht in Panik verfallen – in dieser Reihenf
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Versuche, „Sperren aus der Ferne" zu aktivieren und zu simulieren
+Versuche, „Sperren aus der Ferne" zu aktivieren und zu simulieren
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Stelle sicher, dass die Funktion „Mein Smartphone finden" aktiviert ist.

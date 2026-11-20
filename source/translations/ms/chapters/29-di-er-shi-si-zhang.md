@@ -45,41 +45,41 @@ Pilih data mana yang boleh dikongsi dengan kontak (Foto, Gmail, Drive dll).
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tetapkan sama ada padam akaun selepas berkongsi data.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. Cara ia berfungsi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jika akaun tidak log masuk selama tempoh yang ditetapkan, Google hantar pemberitahuan kepada kontak.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kontak akan menerima link untuk muat turun data yang dipilih.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jika tetapkan padam akaun, akaun akan dipadam selepas tempoh tambahan 3 bulan.<br><span class="text-emerald-600 dark:text-emerald-400">IV. Facebook Memorial Account</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Keselamatan menurun: Benarkan flash ROM pihak ketiga, mekanisme pengesahan integriti sistem gagal, perisian hasad jika dapat kebenaran Root boleh ubahsuai sistem secara mendalam</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">1. Cara menetapkan Legacy Contact</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Log masuk Facebook → Tetapan → Memorialization Settings<br><span class="text-emerald-600 dark:text-emerald-400">Pilih rakan sebagai Legacy Contact.</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Legacy Contact boleh: menulis pos akhir, mengemas kini foto profil, membalas permintaan kawan.</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Legacy Contact tidak boleh: log masuk sebagai pemilik, baca mesej peribadi, padam pos lama.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Akaun memorial<br><span class="text-emerald-600 dark:text-emerald-400">Selepas kematian, akaun ditukar ke status "Memorial" — kata "Remembering" ditambah berdekatan nama.</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Tidak boleh log masuk, tidak muncul dalam saranan kawan, tidak ada iklan.</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">V. Langkah-langkah digital legacy yang anda boleh ambil sekarang</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Senarai akaun penting<br><span class="text-emerald-600 dark:text-emerald-400">Buat senarai semua akaun penting: e-mel, bank, media sosial, langganan, simpanan foto.</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Risiko data: Unlock akan paksa padam semua data pengguna; jika tidak disulit dengan betul selepas unlock, storan data mungkin tidak selamat; selepas hilang lebih mudah di flash untuk ekstrak data</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">2. Tetapkan kontak warisan</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pastikan fungsi yang bergantung pada persekitaran selamat (seperti pembayaran, App bank) berjalan normal<br><span class="text-emerald-600 dark:text-emerald-400">Untuk akaun yang tidak sokong, beritahu keluarga cara mengakses (melalui pengurus kata laluan atau nota fizikal).</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Fungsi terhad: Sesetengah aplikasi sensitif keselamatan (seperti Google Pay, App bank) mungkin enggan berjalan disebabkan pengesanan status BL unlock; perkhidmatan DRM mungkin diturunkan, kesan pemainanan video HD</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tetapkan sama ada padam akaun selepas berkongsi data.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. Cara ia berfungsi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jika akaun tidak log masuk selama tempoh yang ditetapkan, Google hantar pemberitahuan kepada kontak.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kontak akan menerima link untuk muat turun data yang dipilih.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jika tetapkan padam akaun, akaun akan dipadam selepas tempoh tambahan 3 bulan.<br><span class="text-emerald-600 dark:text-emerald-400">IV. Facebook Memorial Account</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Keselamatan menurun: Benarkan flash ROM pihak ketiga, mekanisme pengesahan integriti sistem gagal, perisian hasad jika dapat kebenaran Root boleh ubahsuai sistem secara mendalam</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">1. Cara menetapkan Legacy Contact</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Log masuk Facebook → Tetapan → Memorialization Settings<br><span class="text-emerald-600 dark:text-emerald-400">Pilih rakan sebagai Legacy Contact.</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Legacy Contact boleh: menulis pos akhir, mengemas kini foto profil, membalas permintaan kawan.</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Legacy Contact tidak boleh: log masuk sebagai pemilik, baca mesej peribadi, padam pos lama.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Akaun memorial<br><span class="text-emerald-600 dark:text-emerald-400">Selepas kematian, akaun ditukar ke status "Memorial" — kata "Remembering" ditambah berdekatan nama.</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Tidak boleh log masuk, tidak muncul dalam saranan kawan, tidak ada iklan.</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">V. Langkah-langkah digital legacy yang anda boleh ambil sekarang</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Senarai akaun penting<br><span class="text-emerald-600 dark:text-emerald-400">Buat senarai semua akaun penting: e-mel, bank, media sosial, langganan, simpanan foto.</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Risiko data: Unlock akan paksa padam semua data pengguna; jika tidak disulit dengan betul selepas unlock, storan data mungkin tidak selamat; selepas hilang lebih mudah di flash untuk ekstrak data</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">2. Tetapkan kontak warisan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pastikan fungsi yang bergantung pada persekitaran selamat (seperti pembayaran, App bank) berjalan normal<br><span class="text-emerald-600 dark:text-emerald-400">Untuk akaun yang tidak sokong, beritahu keluarga cara mengakses (melalui pengurus kata laluan atau nota fizikal).</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">Fungsi terhad: Sesetengah aplikasi sensitif keselamatan (seperti Google Pay, App bank) mungkin enggan berjalan disebabkan pengesanan status BL unlock; perkhidmatan DRM mungkin diturunkan, kesan pemainanan video HD</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ Berbeza dengan pengeluar Android lain, mekanisme buka kunci BL telefon Samsung a
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Android ke iPhone: Guna App "Move to iOS" Apple.
+Android ke iPhone: Guna App "Move to iOS" Apple.
 
 {class="mt-1"}
 Knox trip Samsung adalah <strong>Foto: Sandaran iCloud/Google Photos, atau salin terus melalui kabel USB.</strong>, sekali dicetus tidak boleh kembali ke status kilang. Jika anda hanya mahu guna fungsi yang asalnya memerlukan Root, cadangan dahulu semak sama ada ada alternatif tanpa Root.
@@ -123,7 +123,7 @@ Knox trip Samsung adalah <strong>Foto: Sandaran iCloud/Google Photos, atau salin
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Data hilang
+Data hilang
 
 {class="mt-1"}
 Fungsi pembayaran tidak normal
@@ -140,7 +140,7 @@ Coolapk
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>: Komuniti digital terkenal dalam negara, mempunyai banyak tutorial dan perbincangan dalam bahasa Cina.
+: Komuniti digital terkenal dalam negara, mempunyai banyak tutorial dan perbincangan dalam bahasa Cina.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Forum setiap model</strong>: Seperti komuniti Xiaomi, komuniti OnePlus dll., mempunyai tutorial rasmi dan bukan rasmi.
@@ -152,7 +152,7 @@ Coolapk
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: Selepas buka kunci BL boleh pulih?
+Q1: Selepas buka kunci BL boleh pulih?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Boleh kunci semula. Biasanya perlu flash pakej wayar rasmi lengkap, dan guna skrip flash tertentu (seperti Xiaomi <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>) boleh kunci semula. Tetapi perhatikan, selepas kunci semula, sesetengah trip keselamatan yang dicetus oleh buka kunci (seperti Knox Samsung) mungkin tidak boleh balik.
@@ -160,7 +160,7 @@ Coolapk
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: Selepas buka kunci bagaimana Root?
+Q2: Selepas buka kunci bagaimana Root?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Buka kunci BL hanya langkah pertama. Root biasanya perlukan:

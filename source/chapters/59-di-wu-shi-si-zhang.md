@@ -39,12 +39,12 @@ kind: chapter
 ```
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val type: String,        // "income" 收入 | "expense" 支出
-    val amount: Double,      // 金额（元）
-    val category: String,    // 分类：餐饮、交通、工资……
-    val note: String = "",   // 备注（可选）
-    val date: String         // "2026-08-15"
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val type: String, // "income" 收入 | "expense" 支出
+ val amount: Double, // 金额（元）
+ val category: String, // 分类：餐饮、交通、工资……
+ val note: String = "", // 备注（可选）
+ val date: String // "2026-08-15"
 )
 ```
 :::
@@ -59,27 +59,27 @@ Dao 里加两条"统计用"的查询，这是记账本的灵魂：
 ```
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
-    fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
+ @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+ fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
-    suspend fun monthIncome(month: String): Double   // month 形如 "2026-08"
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+ suspend fun monthIncome(month: String): Double // month 形如 "2026-08"
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
-    suspend fun monthExpense(month: String): Double
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+ suspend fun monthExpense(month: String): Double
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：金额为什么用 Double？
+小贴士：金额为什么用 Double？
 
 {class="mt-1"}
 严谨的金融 App 会用 BigDecimal 或"以分为单位的 Int"来避免浮点误差（0.1+0.2≠0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成"分"为单位：这是无数前辈踩出来的坑。
@@ -91,7 +91,7 @@ interface RecordDao {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View（Compose 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel（状态与逻辑）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model（Room 数据层）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View（Compose 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel（状态与逻辑）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model（Room 数据层）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -106,21 +106,21 @@ interface RecordDao {
 ```
 class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 
-    // 把 Flow 转成界面能观察的状态
-    val records = dao.getAll()
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+ // 把 Flow 转成界面能观察的状态
+ val records = dao.getAll()
+ .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    // 用户操作：调用 suspend 函数
-    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
-        viewModelScope.launch {
-            dao.insert(Record(type = type, amount = amount,
-                category = category, note = note, date = date))
-        }
-    }
+ // 用户操作：调用 suspend 函数
+ fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+ viewModelScope.launch {
+ dao.insert(Record(type = type, amount = amount,
+ category = category, note = note, date = date))
+ }
+ }
 
-    fun deleteRecord(record: Record) {
-        viewModelScope.launch { dao.delete(record) }
-    }
+ fun deleteRecord(record: Record) {
+ viewModelScope.launch { dao.delete(record) }
+ }
 }
 ```
 :::
@@ -139,34 +139,34 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 @Composable
 fun RecordListScreen(vm: RecordViewModel) {
-    val records by vm.records.collectAsState()
+ val records by vm.records.collectAsState()
 
-    Column {
-        // 顶部汇总卡片（收入-支出=结余）
-        SummaryCard(records)
+ Column {
+ // 顶部汇总卡片（收入-支出=结余）
+ SummaryCard(records)
 
-        // 流水列表
-        LazyColumn {
-            items(records, key = { it.id }) { record -&gt;
-                RecordRow(record) { vm.deleteRecord(record) }
-            }
-        }
+ // 流水列表
+ LazyColumn {
+ items(records, key = { it.id }) { record -&gt;
+ RecordRow(record) { vm.deleteRecord(record) }
+ }
+ }
 
-        // 悬浮"记一笔"按钮 → 弹录入对话框
-        FloatingActionButton(onClick = { showAddDialog = true }) {
-            Text("+")
-        }
-    }
+ // 悬浮"记一笔"按钮 → 弹录入对话框
+ FloatingActionButton(onClick = { showAddDialog = true }) {
+ Text("+")
+ }
+ }
 }
 
 @Composable
 fun RecordRow(record: Record, onDelete: () -&gt; Unit) {
-    Row(Modifier.fillMaxWidth().padding(12.dp)) {
-        Text(record.category, fontWeight = FontWeight.Bold)
-        Spacer(Modifier.weight(1f))
-        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
-             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
-    }
+ Row(Modifier.fillMaxWidth().padding(12.dp)) {
+ Text(record.category, fontWeight = FontWeight.Bold)
+ Spacer(Modifier.weight(1f))
+ Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+ color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+ }
 }
 ```
 :::
@@ -175,7 +175,7 @@ fun RecordRow(record: Record, onDelete: () -&gt; Unit) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：输入校验别偷懒
+注意：输入校验别偷懒
 
 {class="mt-1"}
 金额输入框一定要校验：空值、负数、"abc"这类非法输入都要拦住（用 <code class="inline">toDoubleOrNull()</code> 判断）。App 崩掉最常见的原因之一就是"把用户的输入当成了乖孩子"。记住：<strong>用户输入的一切，都要当敌人审查</strong>。
@@ -216,7 +216,7 @@ suspend fun deleteById(id: Long)
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：本周完成它
+来动手：本周完成它
 
 {class="mt-1"}
 按"数据层、ViewModel、列表页、录入页、汇总卡片"的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清"期望行为、实际行为、复现步骤"）。完成后用它记一周账，自己做的 App 用起来，成就感会推着你继续往前走。
@@ -224,7 +224,7 @@ suspend fun deleteById(id: Long)
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 需求五要素 → 拆成"每步能用"的小步骤，再动手
 - 数据层：Record 实体 + Dao（含月份统计 SQL）+ Database

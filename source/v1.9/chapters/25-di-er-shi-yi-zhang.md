@@ -77,38 +77,38 @@ VPN，全称虚拟专用网络（Virtual Private Network）。你可以把它想
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">看什么</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无日志政策的第三方审计</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">宣称不记录谁都行，有独立审计报告的才算数</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公司注册地与透明度报告</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出事时配合谁、交出什么数据，注册地和相关报告说了算</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持的协议</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">至少有 OpenVPN 和 WireGuard 可选</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">断网保护（kill switch）</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VPN 掉线的瞬间自动断网，防止流量裸奔</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分流设置</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">哪些 App 走 VPN、哪些不走，自己挑</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连接设备数与速度</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按自己设备数和常用场景挑</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">看什么</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无日志政策的第三方审计</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">宣称不记录谁都行，有独立审计报告的才算数</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公司注册地与透明度报告</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出事时配合谁、交出什么数据，注册地和相关报告说了算</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持的协议</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">至少有 OpenVPN 和 WireGuard 可选</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">断网保护（kill switch）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VPN 掉线的瞬间自动断网，防止流量裸奔</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分流设置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">哪些 App 走 VPN、哪些不走，自己挑</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连接设备数与速度</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按自己设备数和常用场景挑</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -472,30 +472,30 @@ HTTPS 保证的是"你和网站之间"没人偷看，端到端加密（E2EE）�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形态</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么用</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">弱点</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短信验证码</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">登录时收一条短信</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怕 SIM 卡被劫持，也怕验证码被要被骗</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">TOTP 认证器</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">认证器 App 里每半分钟刷新一次的六位码</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换手机前要记得迁移</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬件安全钥匙</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插一下或碰一下实体小钥匙</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要花钱、要随身带</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形态</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么用</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">弱点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短信验证码</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">登录时收一条短信</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怕 SIM 卡被劫持，也怕验证码被要被骗</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">TOTP 认证器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">认证器 App 里每半分钟刷新一次的六位码</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换手机前要记得迁移</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬件安全钥匙</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插一下或碰一下实体小钥匙</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要花钱、要随身带</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -550,35 +550,35 @@ iOS 没有系统级的私人 DNS 开关。需要安装描述文件，或使用�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">DoH</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">DoT</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">传输载体</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTTPS 流量</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专门的 TLS 连接</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端口</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和网页一样走 443</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">独立端口 853</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐蔽性</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">混在网页流量里难以区分</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能看出你在用 DoT，但看不到查询内容</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机配置</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多用 App 或描述文件</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓"私人 DNS"直接填主机名</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">DoH</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">DoT</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">传输载体</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTTPS 流量</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专门的 TLS 连接</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端口</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和网页一样走 443</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">独立端口 853</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐蔽性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">混在网页流量里难以区分</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能看出你在用 DoT，但看不到查询内容</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机配置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多用 App 或描述文件</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓"私人 DNS"直接填主机名</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -619,35 +619,35 @@ iOS 没有系统级的私人 DNS 开关。需要安装描述文件，或使用�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">来源</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">风险</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要点</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统官方应用商店</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">认准开发者名字，翻一眼评论和下载量</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网直接下载 APK</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确认真官网（用钓鱼那节的方法），装完立刻关掉"未知来源"开关</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方"应用市场"</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安装包可能被重新打包，尽量不用</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">群文件、二维码、短信链接</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极高</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认当恶意对待，无论对方说得多急</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">来源</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">风险</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统官方应用商店</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">认准开发者名字，翻一眼评论和下载量</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网直接下载 APK</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确认真官网（用钓鱼那节的方法），装完立刻关掉"未知来源"开关</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方"应用市场"</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安装包可能被重新打包，尽量不用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">群文件、二维码、短信链接</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极高</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认当恶意对待，无论对方说得多急</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -837,7 +837,7 @@ iOS 没有系统级的私人 DNS 开关。需要安装描述文件，或使用�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 隐私不是「什么都不发」，是让散落在各处的碎片不足以拼出一个完整的你。
@@ -891,7 +891,7 @@ iOS 没有系统级的私人 DNS 开关。需要安装描述文件，或使用�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就做：给你的手机做一次"安全体检"
+现在就做：给你的手机做一次"安全体检"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>DNS升级</strong>：安卓：设置 > 连接与共享 > 私人DNS > 填入"one.one.one.one"或"dns.google"。iPhone：用Safari搜索"1.1.1.1 DNS profile"安装描述文件，或下载Cloudflare的1.1.1.1 App。

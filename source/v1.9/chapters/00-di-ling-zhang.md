@@ -249,7 +249,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 想知道你手里的版本是不是最新的？在 GitHub 搜索书名就能找到本书仓库，仓库的更新记录会写明最近修订了哪些章节。如果你读到的内容和网上最新版对不上，以仓库版本为准。
@@ -307,7 +307,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 短视频平台上流传不少"当年手机多耐用、现在的手机故意做差"的怀旧叙事，听着解气，但大多经不起推敲，电池、屏幕、芯片这些年是实打实在进步的。遇到这类内容看个乐就行，别拿它当换手机或者骂厂商的依据。
@@ -333,7 +333,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 直播间和短视频广告里那些"工厂直供""旗舰配置只要几百块"的超低价新机，基本别碰，要么是翻新机，要么是山寨机，连正经售后都找不到。买手机认准品牌官网、官方旗舰店和正规门店；真想省钱，第二十五章的二手内容会教你安全地淘。
@@ -399,7 +399,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 查自己手机的系统信息：安卓一般在【设置】→【关于手机】，iPhone 在【设置】→【通用】→【关于本机】。型号、系统版本都在这一页。以后打售后电话、上网搜教程、在本书仓库提反馈，都先报这一页的信息。
@@ -448,7 +448,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 现在就做一个动作：打开【设置】，点顶部的搜索框，输入"备份"两个字。能找到备份入口的，记下路径；找不到的，别慌，这正是后面章节要教你的东西之一。
@@ -502,7 +502,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别拿真金白银去验证上面任何一条误区。"试试看会不会被骗"这种实验，没人付得起代价。有疑问就回到同一个动作：核实——挂掉电话、关掉链接，用官方 App 或官方客服电话自己查一遍。
@@ -555,7 +555,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 手机卡顿多数是能治的小毛病，少数才是真的老了，先看病，再考虑换人。
@@ -597,7 +597,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 手机没你想的那么脆弱，大胆用；也没你想的那么聪明，别全信它的推荐。
@@ -645,7 +645,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 给长辈发消息，记得字调大（大部分聊天 App 的设置里都有"字体大小"）；重要事项别只用语音。文字可以反复看，语音听一遍就过了。这也是第二十七章适老化沟通会用到的基本心法。
@@ -702,7 +702,7 @@ A 的手机装满几屏 App，每个都会一点点，新 App 一出就下载，
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 挑一个你最不熟的常用 App，把三处地方找出来：设置入口、通知开关、帮助或客服入口。三处都能找到，这个 App 你就算"入门"了。以后每装新 App，都用这三处当检查清单。
@@ -733,7 +733,7 @@ A 的手机装满几屏 App，每个都会一点点，新 App 一出就下载，
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 提反馈时不要附带敏感信息：验证码、密码、身份证号、支付界面截图，一律不发。反馈界面差异，截图能看到结构就行，姓名、手机号、账号这些内容用遮挡工具盖掉再提交。
@@ -779,7 +779,7 @@ A 的手机装满几屏 App，每个都会一点点，新 App 一出就下载，
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 这本书教"方法论"而非"操作手册"：界面会变，原则不过时
 - 覆盖安卓、iOS、鸿蒙三大体系，核心思路通用，具体步骤会标注差异

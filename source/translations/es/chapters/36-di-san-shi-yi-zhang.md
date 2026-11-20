@@ -70,7 +70,7 @@ V. La importancia de la miniatura: el 70% decide si verlo solo por la miniatura
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Usa "B-roll" (imágenes de apoyo)
+Usa "B-roll" (imágenes de apoyo)
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : Cuando hables de algo, inserta imágenes o vídeos de ese objeto para ilustrarlo. Por ejemplo, al mencionar un producto, muestra el producto; al mencionar un lugar, muestra el lugar
@@ -82,7 +82,7 @@ V. La importancia de la miniatura: el 70% decide si verlo solo por la miniatura
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Sonido

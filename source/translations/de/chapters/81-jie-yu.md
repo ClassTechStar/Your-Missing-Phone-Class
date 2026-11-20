@@ -22,7 +22,7 @@ Die Technik ändert sich, aber die menschlichen Bedürfnisse nicht – wir brauc
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Die letzte Übung
+Die letzte Übung
 
 {class="mt-1"}
 Schließen Sie dieses Buch, nehmen Sie Ihr Handy und tun Sie Folgendes:<strong>Denken Sie 30 Sekunden nach: Welche drei Dinge auf Ihrem Handy würden Sie "wirklich schmerzen", wenn sie weg wären?</strong> Dann stellen Sie sicher, dass sie gesichert sind. Dann hat sich das Buch gelohnt.

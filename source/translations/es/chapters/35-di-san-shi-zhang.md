@@ -19,19 +19,19 @@ La proyección inalámbrica parece "la imagen del teléfono en la TV", pero hay 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tecnología</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Quién la usa</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Características</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecosistema Apple, la experiencia más fluida. Requiere Apple TV o TV compatible con AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfonos Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Conexión directa Wi-Fi Direct, sin necesidad de router. La "proyección inalámbrica" de Android usa esto por defecto</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Todas las plataformas</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Solo envía archivos multimedia (vídeo/música/fotos), no duplica la pantalla. Adecuado para enviar vídeo a la TV</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tecnología</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Quién la usa</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Características</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecosistema Apple, la experiencia más fluida. Requiere Apple TV o TV compatible con AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfonos Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Conexión directa Wi-Fi Direct, sin necesidad de router. La "proyección inalámbrica" de Android usa esto por defecto</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Todas las plataformas</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Solo envía archivos multimedia (vídeo/música/fotos), no duplica la pantalla. Adecuado para enviar vídeo a la TV</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Operar el teléfono mientras conduces es ilegal, pero navegar, escuchar música 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Alerta de seguridad
+Alerta de seguridad
 
 {class="mt-1"}
 Sea cual sea la solución de conectividad del coche, mientras conduces deberías usar el control por voz en la medida de lo posible. Configura el destino de navegación con antelación y selecciona la playlist antes de empezar; no operes la pantalla del coche mientras conduces.
@@ -86,7 +86,7 @@ Las reuniones son el escenario más frecuente de proyección y también donde m�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Práctica: completa una proyección de teléfono a TV
+Práctica: completa una proyección de teléfono a TV
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Cambio de plataforma cruzado (Android a iPhone o viceversa).
@@ -98,7 +98,7 @@ Las reuniones son el escenario más frecuente de proyección y también donde m�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tres campos de proyección inalámbrica: AirPlay (Apple), Miracast (Android), DLNA (multimedia push multiplataforma)

@@ -39,14 +39,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // escribir: guardar un valor
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // leer: sacar el valor (Flow avisa solo de los cambios)
 val themeFlow: Flow<Boolean> = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -65,33 +65,33 @@ La app de gastos acumula cientos o miles de apuntes y necesita consultar y resum
 // 1. Entity: la estructura de la tabla (una tabla = un data class)
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. Dao: la interfaz de operaciones (alta, baja, cambio, consulta)
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. Database: el ensamblaje final
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -110,16 +110,16 @@ El tiempo, las noticias, los tipos de cambio... esos datos no viven en el móvil
 ```
 // 1. definir la interfaz: describe las peticiones HTTP como funciones
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. crear la instancia
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. llamar como si fuera una función (dentro de una corrutina)
 val result = api.getWeather("Madrid")
@@ -156,9 +156,9 @@ Las dos grandes opciones para parsear JSON
 // anota el data class con @Serializable
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // Retrofit se le acopla el Converter correspondiente (ejemplo con el soporte oficial de Retrofit 2.11+):
@@ -180,13 +180,13 @@ Los suspend y launch que han ido saliendo arriba vienen de las corrutinas de Kot
 ```
 // arranca una corrutina dentro del ViewModel
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend: se suspende y espera automáticamente
-    // actualizar el estado de la interfaz…
+ val records = dao.getAll().first() // suspend: se suspende y espera automáticamente
+ // actualizar el estado de la interfaz…
 }
 
 // chuleta de palabras clave:
-// suspend   —— "tengo que esperar, no bloquee a los demás"
-// launch    —— "¡al trabajo!"
+// suspend —— "tengo que esperar, no bloquee a los demás"
+// launch —— "¡al trabajo!"
 // viewModelScope —— el "taller" que sigue a la pantalla; se recoge solo al destruirse esta
 ```
 :::

@@ -208,41 +208,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المتصفح</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المزايا الأساسية</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الفئة المستهدفة</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">محرك Chromium + Copilot AI مدمج، يمكنه تلخيص الصفحات/الترجمة/المحادثة</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">موظفو المكاتب الباحثون عن الكفاءة ومستخدمو الذكاء الاصطناعي المكثفون (موصى به كرئيسي)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تكامل عميق مع منظومة Apple، موفر للطاقة وفعّال، وحماية قوية للخصوصية</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستخدمو iPhone/Mac، المهتمون بالبطارية والتكامل مع النظام</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأكثر استخدامًا عالميًا، وأغنى منظومة إضافات</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المستخدمون المتقدمون الذين يحتاجون إلى إضافات كثيرة، ومحبو المزامنة عبر الأجهزة</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحظر الإعلانات والمتتبعات جاهزًا، وأسرع</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المهتمون بالخصوصية الذين يريدون حظر الإعلانات دون إضافات</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">محرك بحث بالاسم نفسه لا يسجل التاريخ، ومسح بنقرة واحدة</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المستخدمون الحساسون للخصوصية الذين لا يريدون التتبع المخصص</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المتصفح</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المزايا الأساسية</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الفئة المستهدفة</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">محرك Chromium + Copilot AI مدمج، يمكنه تلخيص الصفحات/الترجمة/المحادثة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">موظفو المكاتب الباحثون عن الكفاءة ومستخدمو الذكاء الاصطناعي المكثفون (موصى به كرئيسي)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تكامل عميق مع منظومة Apple، موفر للطاقة وفعّال، وحماية قوية للخصوصية</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستخدمو iPhone/Mac، المهتمون بالبطارية والتكامل مع النظام</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأكثر استخدامًا عالميًا، وأغنى منظومة إضافات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المستخدمون المتقدمون الذين يحتاجون إلى إضافات كثيرة، ومحبو المزامنة عبر الأجهزة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحظر الإعلانات والمتتبعات جاهزًا، وأسرع</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المهتمون بالخصوصية الذين يريدون حظر الإعلانات دون إضافات</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">محرك بحث بالاسم نفسه لا يسجل التاريخ، ومسح بنقرة واحدة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المستخدمون الحساسون للخصوصية الذين لا يريدون التتبع المخصص</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -291,46 +291,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المنصة</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">مسار الدخول</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الخيارات الموصى بتفعيلها</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[الإعدادات] > [الهاتف] / [الرسائل]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">كتم المكالمات غير المعروفة؛ جهات الاتصال المحظورة؛ «تصفية المرسلين غير المعروفين» في الرسائل</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق الهاتف > الإعدادات > حظر المزعجات؛ أو مركز الأمان</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الحظر الذكي، وقطع المكالمات غير المعروفة بعد رنينة واحدة، وتصفية الرسائل بالكلمات المفتاحية</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الهاتف > حظر المزعجات؛ مدير الهاتف > حظر المزعجات</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">التعرف على المتصل، والقائمة السوداء، والحظر الذكي للرسائل</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق الهاتف > حظر المزعجات؛ أو هذا الجهاز > حظر المزعجات</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حظر المكالمات، والتعرف على المكالمات الاحتيالية، وقواعد حظر الرسائل</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الهاتف > حظر المكالمات المزعجة؛ i Manager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حظر المزعجات، وتحذيرات المكالمات الاحتيالية، وتصفية الرسائل</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الهاتف > الإعدادات > حظر الأرقام / معرفة المتصل والمكالمات المزعجة</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حظر الأرقام غير المعروفة، والتعرف على المكالمات المزعجة (يختلف الدعم حسب المنطقة)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المنصة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">مسار الدخول</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الخيارات الموصى بتفعيلها</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[الإعدادات] > [الهاتف] / [الرسائل]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">كتم المكالمات غير المعروفة؛ جهات الاتصال المحظورة؛ «تصفية المرسلين غير المعروفين» في الرسائل</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق الهاتف > الإعدادات > حظر المزعجات؛ أو مركز الأمان</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الحظر الذكي، وقطع المكالمات غير المعروفة بعد رنينة واحدة، وتصفية الرسائل بالكلمات المفتاحية</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الهاتف > حظر المزعجات؛ مدير الهاتف > حظر المزعجات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">التعرف على المتصل، والقائمة السوداء، والحظر الذكي للرسائل</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق الهاتف > حظر المزعجات؛ أو هذا الجهاز > حظر المزعجات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حظر المكالمات، والتعرف على المكالمات الاحتيالية، وقواعد حظر الرسائل</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الهاتف > حظر المكالمات المزعجة؛ i Manager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حظر المزعجات، وتحذيرات المكالمات الاحتيالية، وتصفية الرسائل</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الهاتف > الإعدادات > حظر الأرقام / معرفة المتصل والمكالمات المزعجة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حظر الأرقام غير المعروفة، والتعرف على المكالمات المزعجة (يختلف الدعم حسب المنطقة)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -394,46 +394,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المنصة</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المداخل الشائعة</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الوصف</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدير الهاتف / مركز الأمان > تحذير الزلازل؛ أو ابحث في الإعدادات عن «زلزال»</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بعض الإصدارات تتضمن خدمة تحذير مدمجة، وتحتاج إلى اتصال بالإنترنت وتفعيل تحديد الموقع</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات > الأمان > إشعارات التحذير الطارئ / تحذير الزلازل</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قد يُسمى «إشعارات التحذير الطارئ»، ويشمل الزلازل وغيرها</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات > الأمان (اتصال SOS الطارئ) > تحذير الزلازل</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بعض الطرازات تعتمد على تغطية الخدمة في المنطقة</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق الطقس أو الإعدادات > الأمان/المزيد > تحذير الزلازل</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">استند إلى القوائم الفعلية لإصدار النظام</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عادةً لا يوجد مفتاح مدمج كامل في إعدادات النظام؛ ثبّت تطبيق تحذير زلازل موثوقًا واسمح بالإشعارات</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحتاج التطبيق إلى العمل في الخلفية وصلاحيات تحديد الموقع؛ ولا تمنعه إشعارات وضع عدم الإزعاج</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung وغيرها</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات > الأمان والطوارئ / إنذارات الطوارئ اللاسلكية</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تختلف تغطية «إنذارات الطوارئ» حسب المنطقة وشركة الاتصالات</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المنصة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المداخل الشائعة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الوصف</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدير الهاتف / مركز الأمان > تحذير الزلازل؛ أو ابحث في الإعدادات عن «زلزال»</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بعض الإصدارات تتضمن خدمة تحذير مدمجة، وتحتاج إلى اتصال بالإنترنت وتفعيل تحديد الموقع</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات > الأمان > إشعارات التحذير الطارئ / تحذير الزلازل</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قد يُسمى «إشعارات التحذير الطارئ»، ويشمل الزلازل وغيرها</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات > الأمان (اتصال SOS الطارئ) > تحذير الزلازل</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بعض الطرازات تعتمد على تغطية الخدمة في المنطقة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق الطقس أو الإعدادات > الأمان/المزيد > تحذير الزلازل</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">استند إلى القوائم الفعلية لإصدار النظام</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عادةً لا يوجد مفتاح مدمج كامل في إعدادات النظام؛ ثبّت تطبيق تحذير زلازل موثوقًا واسمح بالإشعارات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحتاج التطبيق إلى العمل في الخلفية وصلاحيات تحديد الموقع؛ ولا تمنعه إشعارات وضع عدم الإزعاج</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung وغيرها</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات > الأمان والطوارئ / إنذارات الطوارئ اللاسلكية</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تختلف تغطية «إنذارات الطوارئ» حسب المنطقة وشركة الاتصالات</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

@@ -19,19 +19,19 @@ O espelhamento sem fio parece ser sempre "do celular para a TV", mas há três t
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tecnologia</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Quem usa</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Características</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecossistema Apple, a experiência mais fluida. Requer Apple TV ou TV compatível com AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Celulares Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Conexão direta via Wi-Fi Direct, não requer roteador. O "espelhamento sem fio" padrão do Android usa este</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Todas as plataformas</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apenas transmite arquivos de mídia (vídeo/música/fotos), não espelha a tela. Ideal para enviar vídeos para a TV</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tecnologia</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Quem usa</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Características</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecossistema Apple, a experiência mais fluida. Requer Apple TV ou TV compatível com AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Celulares Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Conexão direta via Wi-Fi Direct, não requer roteador. O "espelhamento sem fio" padrão do Android usa este</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Todas as plataformas</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apenas transmite arquivos de mídia (vídeo/música/fotos), não espelha a tela. Ideal para enviar vídeos para a TV</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Operar o celular enquanto dirige é ilegal, mas navegação, música e chamadas 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Alerta de segurança
+Alerta de segurança
 
 {class="mt-1"}
 Independentemente da solução de conectividade veicular usada, sempre priorize o controle por voz ao dirigir. Defina o destino da navegação com antecedência, escolha a playlist de música antes de sair e não opere a tela do veículo enquanto estiver em movimento.
@@ -86,7 +86,7 @@ Reuniões são o cenário mais frequente de espelhamento e também o mais propen
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: Faça um espelhamento do celular para a TV
+Mãos à obra: Faça um espelhamento do celular para a TV
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Certifique-se de que o celular e a TV estão na mesma rede Wi-Fi.
@@ -98,7 +98,7 @@ Reuniões são o cenário mais frequente de espelhamento e também o mais propen
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo
+Resumo do capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Três campos do espelhamento sem fio: AirPlay (Apple), Miracast (Android), DLNA (transmissão de mídia multiplataforma)

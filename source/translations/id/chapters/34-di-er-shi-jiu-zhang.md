@@ -43,7 +43,7 @@ Lama melihat layar ponsel, mata kering dan pegal pasti terjadi. Mode pelindung m
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>Aturan 20-20-20
+Aturan 20-20-20
 
 {class="mt-1"}
 Setiap melihat layar <strong>20 menit</strong>, alihkan pandangan ke <strong>20 kaki (sekitar 6 meter)</strong> ke luar, tahan <strong>20 detik</strong>. Gerakan sederhana ini efektif meredakan kelelahan otot siliaris.
@@ -80,7 +80,7 @@ Jumlah informasi yang kita terima setiap hari adalah jumlah yang diterima orang 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Tantangan Kesehatan Digital Satu Minggu
+Praktik: Tantangan Kesehatan Digital Satu Minggu
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Hari ini: Buka Screen Time / Digital Wellbeing, lihat data pemakaian minggu lalu.
@@ -94,7 +94,7 @@ Jumlah informasi yang kita terima setiap hari adalah jumlah yang diterima orang 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Pertama lihat data Screen Time, memahami situasi adalah langkah pertama perubahan

@@ -27,16 +27,16 @@ O fluxo da programação com IA orientada a testes é: primeiro deixe a IA escre
 Escreva testes unitários para a função calculate_discount.
 Os casos de teste devem cobrir:
 1. Caminho normal:
-   - item de 100 yuan com 20% de desconto -> 80
-   - item de 200 yuan com 50% de desconto -> 100
+ - item de 100 yuan com 20% de desconto -> 80
+ - item de 200 yuan com 50% de desconto -> 100
 2. Casos limite:
-   - item de 0 yuan com 20% de desconto -> 0
-   - item de 100 yuan com 0% de desconto -> 100 (sem desconto)
-   - item de 100 yuan com 10% de desconto -> 100 (preço cheio)
+ - item de 0 yuan com 20% de desconto -> 0
+ - item de 100 yuan com 0% de desconto -> 100 (sem desconto)
+ - item de 100 yuan com 10% de desconto -> 100 (preço cheio)
 3. Casos de erro:
-   - preço negativo -> deve lançar erro
-   - desconto > 1 -> deve lançar erro
-   - entrada não numérica -> deve lançar erro
+ - preço negativo -> deve lançar erro
+ - desconto > 1 -> deve lançar erro
+ - entrada não numérica -> deve lançar erro
 Use o framework Vitest e dê o arquivo de testes completo.
 ```
 :::

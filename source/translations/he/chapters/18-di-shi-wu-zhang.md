@@ -34,7 +34,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>iPhone "80% הגבלת טעינה" - חוק הזהב כהגדרה
+iPhone "80% הגבלת טעינה" - חוק הזהב כהגדרה
 
 {class="mt-1"}
 iPhone 15/16 (iOS 17+) - "20%-80%" כתכונה. עצירה ב-80%, מאריך חיי סוללה. נתיב:
@@ -48,7 +48,7 @@ iPhone 15/16 (iOS 17+) - "20%-80%" כתכונה. עצירה ב-80%, מאריך �
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>מטען GaN – שותף מושלם לנסיעות עסקים
+מטען GaN – שותף מושלם לנסיעות עסקים
 
 {class="mt-1"}
 שמת לב שמטענים קטנים? הגיבור:<strong>GaN (גליום חנקן)</strong>חומר חדש. יתרונות GaN על סיליקון:
@@ -127,47 +127,47 @@ iPhone 15/16 (iOS 17+) - "20%-80%" כתכונה. עצירה ב-80%, מאריך �
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">נתיב טכנולוגי</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תאימות</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">VOOC 1.0</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">240W</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מתח גבוה/ריבוי רמות</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בלעדי לסדרת OPPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מתח גבוה מתכוונן</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מכשירי Qualcomm</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">זרם גבוה במתח נמוך</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בלעדי לסדרת OPPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משאבת מטען</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טעינה מהירה של Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פרוטוקול PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. פרוטוקולי טעינה אלחוטית</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לטעינה אלחוטית יש גם תקני פרוטוקול משלה:</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">נתיב טכנולוגי</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תאימות</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">VOOC 1.0</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">240W</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מתח גבוה/ריבוי רמות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בלעדי לסדרת OPPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מתח גבוה מתכוונן</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מכשירי Qualcomm</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">זרם גבוה במתח נמוך</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בלעדי לסדרת OPPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משאבת מטען</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טעינה מהירה של Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פרוטוקול PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. פרוטוקולי טעינה אלחוטית</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לטעינה אלחוטית יש גם תקני פרוטוקול משלה:</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ iPhone 15/16 (iOS 17+) - "20%-80%" כתכונה. עצירה ב-80%, מאריך �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>אל תשתמש במטענים וכבלים באיכות ירודה, עלולים ליצור סכנות בטיחות.
+אל תשתמש במטענים וכבלים באיכות ירודה, עלולים ליצור סכנות בטיחות.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - הסר נרתיק טלפון כבד בזמן טעינה, כדי לעזור לפיזור חום.
@@ -207,7 +207,7 @@ iPhone 15/16 (iOS 17+) - "20%-80%" כתכונה. עצירה ב-80%, מאריך �
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>אילו דגמים כבר משתמשים?
+אילו דגמים כבר משתמשים?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>:Magic ראשון, Magic6 Pro/7/V3.
@@ -228,7 +228,7 @@ iPhone 15/16 (iOS 17+) - "20%-80%" כתכונה. עצירה ב-80%, מאריך �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>נתח את פרטי צריכת החשמל: הסתכל בתרשימים וברשימות האפליקציות בהגדרות הסוללה, מצא את האשמים בצריכת חשמל.
+נתח את פרטי צריכת החשמל: הסתכל בתרשימים וברשימות האפליקציות בהגדרות הסוללה, מצא את האשמים בצריכת חשמל.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. נסח אסטרטגיה: הגבל אפליקציות שצורכות חשמל חריג ברקע.

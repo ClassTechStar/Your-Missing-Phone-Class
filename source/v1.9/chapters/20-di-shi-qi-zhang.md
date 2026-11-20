@@ -77,7 +77,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 「能连上」和「好用」是两件事。真正决定体验的是切换是否无感、数据是否同步，而不是有没有这个功能。
@@ -402,7 +402,7 @@ iPhone 也能接入 Phone Link，但深度有限，主要是通知、通话和�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 智能家居的顺序是：先有一个高频痛点，再买一个对症设备，最后才谈自动化。倒过来的人，家里堆满了吃灰的智能设备。
@@ -462,7 +462,7 @@ iPhone 也能接入 Phone Link，但深度有限，主要是通知、通话和�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 设备联动的终极形态，是家里每个东西都待在该待的位置：灯自己知道什么时候亮，车自己知道你去哪，手机安静得像个真正的主管。
@@ -511,7 +511,7 @@ iPhone 也能接入 Phone Link，但深度有限，主要是通知、通话和�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB超宽带技术——比蓝牙更精准的"空间感"
+UWB超宽带技术——比蓝牙更精准的"空间感"
 
 {class="mt-1"}
 除了蓝牙，新款手机里还藏着一颗UWB（Ultra-Wideband，超宽带）芯片。它的能力是<strong>精确测距和空间定位</strong>——能算出另一个设备离你多远、在哪个方向，精度可达厘米级。蓝牙只能告诉你"在附近"，UWB能告诉你"在你左前方1.2米"。常见应用：
@@ -525,7 +525,7 @@ iPhone 也能接入 Phone Link，但深度有限，主要是通知、通话和�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio与Auracast——蓝牙音频的新一代标准
+LE Audio与Auracast——蓝牙音频的新一代标准
 
 {class="mt-1"}
 用了二十年的经典蓝牙音频（A2DP）正在被<strong>LE Audio</strong>（低功耗音频）取代，这是蓝牙5.2以后的新一代音频标准：
@@ -828,7 +828,7 @@ Type-C 接口的手机，很多可以直接插 U 盘或读卡器（早年 Lightn
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 好的联动是"感觉不到它的存在"：该出现时自动出现，该安静时彻底安静。需要你惦记的联动，都还没配好。
@@ -873,7 +873,7 @@ Type-C 接口的手机，很多可以直接插 U 盘或读卡器（早年 Lightn
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：把手机屏幕投到电视上，并设置一个智能场景
+来试试：把手机屏幕投到电视上，并设置一个智能场景
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 确保手机和电视连同一个Wi-Fi。
@@ -885,7 +885,7 @@ Type-C 接口的手机，很多可以直接插 U 盘或读卡器（早年 Lightn
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例：把"联动"用成日常
+案例：把"联动"用成日常
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>场景</strong>：出门总忘带手机，家里还有平板和耳机，设备各玩各的。

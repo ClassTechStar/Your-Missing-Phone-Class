@@ -20,7 +20,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-house-crack mr-2"></i>地震警报响了：先躲后撤，别只顾着拍视频
+地震警报响了：先躲后撤，别只顾着拍视频
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>就近避险</strong>：趴下、掩护、抓牢（桌下、承重墙角、坚固家具旁），护住头颈；远离玻璃、外墙、吊灯。
@@ -33,7 +33,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-cloud-showers-heavy mr-2"></i>暴雨 / 台风 / 山洪：预警阶段就要行动
+暴雨 / 台风 / 山洪：预警阶段就要行动
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - 看到<strong>红色预警</strong>：尽量减少外出，远离地下空间、下穿桥、河道、陡坡。
@@ -44,7 +44,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>平时就做好的 4 件事
+平时就做好的 4 件事
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 开启系统地震预警 / 正规预警 App，并允许其突破静音。
@@ -67,28 +67,28 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>丢失后30分钟标准操作流程
+丢失后30分钟标准操作流程
 
 ```html
 <ol class="list-decimal pl-6 mt-1 space-y-1">
-                            <li><strong>借别人手机拨打自己号码</strong>（第1分钟）：可能只是掉在附近，好心人接了就能拿回来。</li>
-                            <li><strong>远程锁定手机</strong>（第2-5分钟）：用别人的手机或电脑登录查找服务：
-                                <ul class="list-disc pl-6 mt-1">
-                                    <li>iPhone：iCloud.com > 查找 > 选你的设备 > 标记为丢失</li>
-                                    <li>安卓各品牌：华为cloud.huawei.com / 小米i.mi.com / OPPO cloud.oppo.com 等</li>
-                                </ul>
-                            </li>
-                            <li><strong>挂失SIM卡</strong>（第5-10分钟）：打运营商客服电话（移动10086/联通10010/电信10000），报手机丢失要求暂停SIM卡服务。这一步最关键——骗子拿到你的SIM卡就能接收验证码，重置你所有密码。</li>
-                            <li><strong>冻结支付账户</strong>（第10-20分钟）：
-                                <ul class="list-disc pl-6 mt-1">
-                                    <li>支付宝：95188 挂失，或在别人手机上登录支付宝 > 我的 > 设置 > 安全中心 > 紧急冻结</li>
-                                    <li>微信：110 报警后联系微信客服，或在微信安全中心 > 冻结账号</li>
-                                    <li>银行App：拨打银行卡背面的客服电话，要求冻结网银</li>
-                                </ul>
-                            </li>
-                            <li><strong>通知亲友</strong>（第20-25分钟）：在朋友圈或让家人帮忙发消息，通知亲友手机丢失，防止骗子用你的身份骗别人。</li>
-                            <li><strong>报警</strong>（第25-30分钟）：拨打110或去最近的派出所报案，拿到报案回执。后续保险理赔、银行纠纷都需要这个回执。</li>
-                        </ol>
+ <li><strong>借别人手机拨打自己号码</strong>（第1分钟）：可能只是掉在附近，好心人接了就能拿回来。</li>
+ <li><strong>远程锁定手机</strong>（第2-5分钟）：用别人的手机或电脑登录查找服务：
+ <ul class="list-disc pl-6 mt-1">
+ <li>iPhone：iCloud.com > 查找 > 选你的设备 > 标记为丢失</li>
+ <li>安卓各品牌：华为cloud.huawei.com / 小米i.mi.com / OPPO cloud.oppo.com 等</li>
+ </ul>
+ </li>
+ <li><strong>挂失SIM卡</strong>（第5-10分钟）：打运营商客服电话（移动10086/联通10010/电信10000），报手机丢失要求暂停SIM卡服务。这一步最关键——骗子拿到你的SIM卡就能接收验证码，重置你所有密码。</li>
+ <li><strong>冻结支付账户</strong>（第10-20分钟）：
+ <ul class="list-disc pl-6 mt-1">
+ <li>支付宝：95188 挂失，或在别人手机上登录支付宝 > 我的 > 设置 > 安全中心 > 紧急冻结</li>
+ <li>微信：110 报警后联系微信客服，或在微信安全中心 > 冻结账号</li>
+ <li>银行App：拨打银行卡背面的客服电话，要求冻结网银</li>
+ </ul>
+ </li>
+ <li><strong>通知亲友</strong>（第20-25分钟）：在朋友圈或让家人帮忙发消息，通知亲友手机丢失，防止骗子用你的身份骗别人。</li>
+ <li><strong>报警</strong>（第25-30分钟）：拨打110或去最近的派出所报案，拿到报案回执。后续保险理赔、银行纠纷都需要这个回执。</li>
+ </ol>
 ```
 :::
 
@@ -138,7 +138,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>第一步：识别破绽——AI伪造的四个常见漏洞
+第一步：识别破绽——AI伪造的四个常见漏洞
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>眨眼频率异常</strong>：真人每分钟眨眼15-20次，AI换脸往往眨眼过少或节奏僵硬。
@@ -149,7 +149,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>第二步：三招验证对方真假
+第二步：三招验证对方真假
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>要求做特定动作</strong>：让对方<strong>转头、捂脸、用手挡住嘴巴</strong>再做开合动作。AI换脸在遮挡和大角度转头时最容易"露馅"——脸会变形或跟不上动作。
@@ -159,7 +159,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>第三步：确认被骗后的报警流程
+第三步：确认被骗后的报警流程
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>立即停止转账</strong>：再"急"也先停一下，凡是催你"快转账、别挂电话"的，几乎都是骗子。
@@ -175,7 +175,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>怎么发现？SIM swap的三个预警信号
+怎么发现？SIM swap的三个预警信号
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 手机突然显示<strong>"无服务"/"无SIM卡"</strong>，但你明明没动过卡，重启也没用：这往往是被劫持的瞬间。
@@ -185,7 +185,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>防护措施——把SIM卡也"上锁"
+防护措施——把SIM卡也"上锁"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>设置SIM卡PIN码</strong>：路径 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">设置 &gt; 电话 &gt; SIM卡PIN码</code>。开启后，每次手机重启或换卡，都要输PIN才能用这张卡。攻击者就算拿到卡也用不了。
@@ -196,7 +196,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>被劫持后的应急处理——速度就是一切
+被劫持后的应急处理——速度就是一切
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>立即拨打运营商客服挂失</strong>：移动10086 / 联通10010 / 电信10000，要求立即<strong>停机并冻结补卡业务</strong>，阻止攻击者继续使用你的号码。
@@ -209,7 +209,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>预防胜于治疗——日常5件事
+预防胜于治疗——日常5件事
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 锁屏密码 + 双重认证，两个都开
@@ -221,7 +221,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：做一份属于你的"应急联系卡"
+动手：做一份属于你的"应急联系卡"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 找一张纸，写下以下号码：运营商客服（移动10086/联通10010/电信10000）、银行客服、96110反诈专线、110报警电话、家人电话。
@@ -232,7 +232,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 手机丢失黄金30分钟：借手机拨打，远程锁定，挂失SIM卡，冻结支付，通知亲友，最后报警。

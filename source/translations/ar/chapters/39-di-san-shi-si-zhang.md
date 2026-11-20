@@ -27,46 +27,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الحل</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">نظام الهاتف المدعوم</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">السيارات المدعومة</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ثراء الوظائف</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التوفر في الصين</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone فقط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">واسع جداً، أغلب السيارات تدعمه</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ، خرائط/موسيقى/هاتف/رسائل</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جيد، متاح أصلاً</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (الهواتف المحلية تحتاج إطار خدمات)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">واسع نسبياً، السيارات المشتركة/المستوردة أكثر</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ، يعادل CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">متوسط، يحتاج VPN للتفعيل</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">هواتف Huawei أساساً، بعض Android الأخرى</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">السيارات المحلية وبعض المشتركة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ نسبياً، يتفاعل مع قمرة HarmonyOS</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جيد جداً، منظومة محلية</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS وAndroid كلاهما</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">واسع نسبياً، شائع للتثبيت اللاحق في السيارات القديمة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">متوسط، التحديث بطيء</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جيد جداً، منظومة محلية</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الحل</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">نظام الهاتف المدعوم</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">السيارات المدعومة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ثراء الوظائف</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التوفر في الصين</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone فقط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">واسع جداً، أغلب السيارات تدعمه</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ، خرائط/موسيقى/هاتف/رسائل</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جيد، متاح أصلاً</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (الهواتف المحلية تحتاج إطار خدمات)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">واسع نسبياً، السيارات المشتركة/المستوردة أكثر</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ، يعادل CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">متوسط، يحتاج VPN للتفعيل</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">هواتف Huawei أساساً، بعض Android الأخرى</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">السيارات المحلية وبعض المشتركة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ نسبياً، يتفاعل مع قمرة HarmonyOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جيد جداً، منظومة محلية</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS وAndroid كلاهما</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">واسع نسبياً، شائع للتثبيت اللاحق في السيارات القديمة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">متوسط، التحديث بطيء</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جيد جداً، منظومة محلية</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
+مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
 
 {class="mt-1"}
 أياً كان الحل، استخدام الهاتف أثناء القيادة مخالف للمرور. حامل الهاتف لـ"رؤية التنقل" فقط، وليس لـ"تشغيل الهاتف". ضبط الوجهة أو تبديل الأغنية، توقف أولاً أو استخدم التحكم الصوتي.
@@ -116,7 +116,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>نصيحة عند اختيار السيارة
+نصيحة عند اختيار السيارة
 
 {class="mt-1"}
 إذا كنت تهتم بتجربة نظام السيارة، اختبر في المعرض:
@@ -128,7 +128,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: حسّن تجربة اتصال سيارتك
+جرّب: حسّن تجربة اتصال سيارتك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. تأكد من حلول الاتصال التي يدعمها هاتفك ونظام سيارتك (CarPlay / HiCar / Android Auto / CarLife).
@@ -139,7 +139,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ثلاثة مسارات لاتصال السيارة: بث الشاشة (CarPlay وغيرها)، اندماج عميق (قمرة HarmonyOS)، CarPlay 2.0 اندماج عميق

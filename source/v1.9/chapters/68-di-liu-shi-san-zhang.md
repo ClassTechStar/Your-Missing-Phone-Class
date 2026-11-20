@@ -58,20 +58,20 @@ SwiftUI 状态工具全景（2026 年，@Observable 已是主流）
 import Observation
 
 @Observable
-class CounterModel {                 // 视图模型
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // 视图模型
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // 持有模型
+ @State private var model = CounterModel() // 持有模型
 
-    var body: some View {
-        VStack {
-            Text("你点了 \(model.count) 次")
-            Button("点我") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("你点了 \(model.count) 次")
+ Button("点我") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -126,16 +126,16 @@ Swift 6.2 时代的需求对照表：按需求找工具，顺带看清要躲的�
 
 ```
 struct BadCounterView: View {
-    var count = 0                    // 少了 @State，埋雷
+ var count = 0 // 少了 @State，埋雷
 
-    var body: some View {
-        VStack {
-            Text("你点了 \(count) 次")
-            Button("点我") {
-                count += 1           // 改了，但界面纹丝不动
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("你点了 \(count) 次")
+ Button("点我") {
+ count += 1 // 改了，但界面纹丝不动
+ }
+ }
+ }
 }
 ```
 :::
@@ -165,22 +165,22 @@ struct BadCounterView: View {
 
 ```
 struct ToggleRow: View {
-    let title: String
-    @Binding var isOn: Bool          // 借来的状态
+ let title: String
+ @Binding var isOn: Bool // 借来的状态
 
-    var body: some View {
-        Toggle(title, isOn: $isOn)
-            .padding()
-    }
+ var body: some View {
+ Toggle(title, isOn: $isOn)
+ .padding()
+ }
 }
 
 // 父视图里这样用：
 struct SettingsView: View {
-    @State private var notify = true
+ @State private var notify = true
 
-    var body: some View {
-        ToggleRow(title: "记账提醒", isOn: $notify)   // $ 把引用递过去
-    }
+ var body: some View {
+ ToggleRow(title: "记账提醒", isOn: $notify) // $ 把引用递过去
+ }
 }
 ```
 :::
@@ -232,11 +232,11 @@ struct SettingsView: View {
 
 ```
 struct ThemeCard: View {
-    @Environment(\.colorScheme) private var scheme
+ @Environment(\.colorScheme) private var scheme
 
-    var body: some View {
-        Text(scheme == .dark ? "当前深色模式" : "当前浅色模式")
-    }
+ var body: some View {
+ Text(scheme == .dark ? "当前深色模式" : "当前浅色模式")
+ }
 }
 ```
 :::
@@ -251,7 +251,7 @@ struct ThemeCard: View {
 ```
 // 注入（App 入口或任意父视图）
 WindowGroup {
-    ContentView()
+ ContentView()
 }
 .environment(AppSettings())
 
@@ -304,28 +304,28 @@ iOS 16 起，多页面导航用 <strong>NavigationStack</strong>——像一摞�
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("张三的账本") {
-                    DetailView(name: "张三的账本")   // 目标页面
-                }
-                NavigationLink("李四的账本") {
-                    DetailView(name: "李四的账本")
-                }
-            }
-            .navigationTitle("账本列表")   // 顶部大标题
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("张三的账本") {
+ DetailView(name: "张三的账本") // 目标页面
+ }
+ NavigationLink("李四的账本") {
+ DetailView(name: "李四的账本")
+ }
+ }
+ .navigationTitle("账本列表") // 顶部大标题
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("\(name) 的详情页")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("\(name) 的详情页")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -354,30 +354,30 @@ NavigationLink 就是"能点的跳转链接"；<code class="inline">navigationTi
 :::
 
 ```
-enum Page: Hashable {                 // 所有目的地列成清单
-    case detail(name: String)
-    case settings
+enum Page: Hashable { // 所有目的地列成清单
+ case detail(name: String)
+ case settings
 }
 
 struct BookListView: View {
-    @State private var path: [Page] = []   // 路径就是个数组
+ @State private var path: [Page] = [] // 路径就是个数组
 
-    var body: some View {
-        NavigationStack(path: $path) {
-            List {
-                NavigationLink(value: Page.detail(name: "张三的账本")) {
-                    Text("张三的账本")
-                }
-                Button("去设置") { path.append(.settings) }   // 编程式推入
-            }
-            .navigationDestination(for: Page.self) { page in
-                switch page {
-                case .detail(let name): DetailView(name: name)
-                case .settings:         SettingsView()
-                }
-            }
-        }
-    }
+ var body: some View {
+ NavigationStack(path: $path) {
+ List {
+ NavigationLink(value: Page.detail(name: "张三的账本")) {
+ Text("张三的账本")
+ }
+ Button("去设置") { path.append(.settings) } // 编程式推入
+ }
+ .navigationDestination(for: Page.self) { page in
+ switch page {
+ case .detail(let name): DetailView(name: name)
+ case .settings: SettingsView()
+ }
+ }
+ }
+ }
 }
 ```
 :::
@@ -395,19 +395,19 @@ struct BookListView: View {
 
 ```
 struct EditSheet: View {
-    @Environment(\.dismiss) private var dismiss
-    @State private var title = ""
+ @Environment(\.dismiss) private var dismiss
+ @State private var title = ""
 
-    var body: some View {
-        Form {
-            TextField("标题", text: $title)
-            Button("保存") {
-                // 先落袋，再关门
-                dismiss()
-            }
-            .disabled(title.isEmpty)
-        }
-    }
+ var body: some View {
+ Form {
+ TextField("标题", text: $title)
+ Button("保存") {
+ // 先落袋，再关门
+ dismiss()
+ }
+ .disabled(title.isEmpty)
+ }
+ }
 }
 ```
 :::
@@ -427,15 +427,15 @@ struct EditSheet: View {
 
 ```
 RecordListView()
-    .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-                showAdd = true        // 触发弹录入 sheet
-            } label: {
-                Image(systemName: "plus")
-            }
-        }
-    }
+ .toolbar {
+ ToolbarItem(placement: .navigationBarTrailing) {
+ Button {
+ showAdd = true // 触发弹录入 sheet
+ } label: {
+ Image(systemName: "plus")
+ }
+ }
+ }
 ```
 :::
 
@@ -498,34 +498,34 @@ NavigationStack 和 sheet 都能展示一个新页面。新手常在两者之间
 ```
 // 1. 底部弹出半屏/全屏（录入表单最爱）
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("记一笔") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // 弹出的录入页
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("记一笔") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // 弹出的录入页
+ }
+ }
 }
 
 // 2. 底部标签栏（App 的"骨架"）
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("账本", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("统计", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("设置", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("账本", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("统计", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("设置", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：什么时候用哪种？
+小贴士：什么时候用哪种？
 
 {class="mt-1"}
 经验法则：<strong>主流程用 NavigationStack 推页面（列表→详情），临时操作用 sheet 弹窗（新增、编辑、确认），并列的几大块用 TabView（底部标签）</strong>。三者组合，就是绝大多数 App 的骨架。
@@ -560,19 +560,19 @@ struct MainTabView: View {
 
 ```
 struct RecordRow: View {
-    @State private var showDelete = false
+ @State private var showDelete = false
 
-    var body: some View {
-        Button("删除这条账目") { showDelete = true }
-            .alert("删除账目", isPresented: $showDelete) {
-                Button("删除", role: .destructive) {
-                    // 真正执行删除
-                }
-                Button("取消", role: .cancel) { }
-            } message: {
-                Text("删除后这条记录无法找回")
-            }
-    }
+ var body: some View {
+ Button("删除这条账目") { showDelete = true }
+ .alert("删除账目", isPresented: $showDelete) {
+ Button("删除", role: .destructive) {
+ // 真正执行删除
+ }
+ Button("取消", role: .cancel) { }
+ } message: {
+ Text("删除后这条记录无法找回")
+ }
+ }
 }
 ```
 :::
@@ -602,18 +602,18 @@ iOS 上最常用、最有"苹果味"的组件就是 <strong>List</strong>——�
 
 ```
 struct RecordListView: View {
-    @State private var records = ["午饭 25.5", "地铁 6.0", "工资 +8000"]
+ @State private var records = ["午饭 25.5", "地铁 6.0", "工资 +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // 左滑删除
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // 左滑删除
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -631,22 +631,22 @@ List 是容器，ForEach 是"把数组摊平成一排排内容"的模具，两�
 
 ```
 struct Record: Identifiable {
-    let id = UUID()          // 身份牌，全局唯一
-    let title: String        // "午饭"
-    let amount: Double       // 25.5
+ let id = UUID() // 身份牌，全局唯一
+ let title: String // "午饭"
+ let amount: Double // 25.5
 }
 
 struct RecordListView: View {
-    @State private var records: [Record] = [
-        Record(title: "午饭", amount: 25.5),
-        Record(title: "地铁", amount: 6.0)
-    ]
+ @State private var records: [Record] = [
+ Record(title: "午饭", amount: 25.5),
+ Record(title: "地铁", amount: 6.0)
+ ]
 
-    var body: some View {
-        List(records) { r in                 // 有 id，不用再写 id: \.self
-            Text("\(r.title) \(r.amount)")
-        }
-    }
+ var body: some View {
+ List(records) { r in // 有 id，不用再写 id: \.self
+ Text("\(r.title) \(r.amount)")
+ }
+ }
 }
 ```
 :::
@@ -664,17 +664,17 @@ struct RecordListView: View {
 
 ```
 List {
-    ForEach(records) { r in
-        RecordRow(record: r)
-    }
-    .onMove { source, destination in        // 长按拖动排序
-        records.move(fromOffsets: source, toOffset: destination)
-    }
-    .swipeActions {
-        Button("置顶") { /* 置顶逻辑 */ }
-            .tint(.gray)
-        Button("删除", role: .destructive) { /* 删除逻辑 */ }
-    }
+ ForEach(records) { r in
+ RecordRow(record: r)
+ }
+ .onMove { source, destination in // 长按拖动排序
+ records.move(fromOffsets: source, toOffset: destination)
+ }
+ .swipeActions {
+ Button("置顶") { /* 置顶逻辑 */ }
+ .tint(.gray)
+ Button("删除", role: .destructive) { /* 删除逻辑 */ }
+ }
 }
 ```
 :::
@@ -692,21 +692,21 @@ List {
 
 ```
 struct RecordListView: View {
-    @State private var searchText = ""
-    @State private var records: [Record] = []
+ @State private var searchText = ""
+ @State private var records: [Record] = []
 
-    var body: some View {
-        List {
-            Section("今天") {
-                ForEach(todayRecords) { RecordRow(record: $0) }
-            }
-            Section("昨天") {
-                ForEach(yesterdayRecords) { RecordRow(record: $0) }
-            }
-        }
-        .listStyle(.insetGrouped)
-        .searchable(text: $searchText, prompt: "搜账目或备注")
-    }
+ var body: some View {
+ List {
+ Section("今天") {
+ ForEach(todayRecords) { RecordRow(record: $0) }
+ }
+ Section("昨天") {
+ ForEach(yesterdayRecords) { RecordRow(record: $0) }
+ }
+ }
+ .listStyle(.insetGrouped)
+ .searchable(text: $searchText, prompt: "搜账目或备注")
+ }
 }
 ```
 :::
@@ -724,23 +724,23 @@ searchText 一变，你按它过滤数据源，列表自动跟着变，又是"�
 
 ```
 struct RecordRow: View {
-    let record: Record
+ let record: Record
 
-    var body: some View {
-        HStack {
-            Image(systemName: record.icon)
-                .foregroundStyle(.secondary)
-            VStack(alignment: .leading) {
-                Text(record.title)
-                Text(record.note)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-            Spacer()
-            Text(record.amount, format: .currency(code: "CNY"))
-                .foregroundStyle(record.amount >= 0 ? .green : .primary)
-        }
-    }
+ var body: some View {
+ HStack {
+ Image(systemName: record.icon)
+ .foregroundStyle(.secondary)
+ VStack(alignment: .leading) {
+ Text(record.title)
+ Text(record.note)
+ .font(.caption)
+ .foregroundStyle(.secondary)
+ }
+ Spacer()
+ Text(record.amount, format: .currency(code: "CNY"))
+ .foregroundStyle(record.amount >= 0 ? .green : .primary)
+ }
+ }
 }
 ```
 :::
@@ -758,9 +758,9 @@ struct RecordRow: View {
 
 ```
 List { /* 行内容 */ }
-    .refreshable {
-        await loadRecords()      // 下拉时执行，转圈自动消失
-    }
+ .refreshable {
+ await loadRecords() // 下拉时执行，转圈自动消失
+ }
 ```
 :::
 
@@ -782,7 +782,7 @@ List { /* 行内容 */ }
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：搭一个"三页骨架"
+来动手：搭一个"三页骨架"
 
 #### 五、程序生命周期：前台与后台
 
@@ -796,21 +796,21 @@ List { /* 行内容 */ }
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("回到前台，恢复刷新")
-            case .inactive:  print("过渡中（来电/切后台瞬间）")
-            case .background: print("进后台，保存草稿")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("回到前台，恢复刷新")
+ case .inactive: print("过渡中（来电/切后台瞬间）")
+ case .background: print("进后台，保存草稿")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::
@@ -850,28 +850,28 @@ struct MyApp: App {
 
 ```
 struct AddRecordView: View {
-    @State private var amountText = ""
-    @State private var category = "餐饮"
-    @State private var note = ""
+ @State private var amountText = ""
+ @State private var category = "餐饮"
+ @State private var note = ""
 
-    let categories = ["餐饮", "交通", "购物", "娱乐"]
+ let categories = ["餐饮", "交通", "购物", "娱乐"]
 
-    var body: some View {
-        Form {
-            Section("金额") {
-                TextField("0.00", text: $amountText)
-                    .keyboardType(.decimalPad)       // 数字键盘
-            }
-            Section("分类") {
-                Picker("分类", selection: $category) {
-                    ForEach(categories, id: \.self) { Text($0) }
-                }
-            }
-            Section("备注") {
-                TextField("选填", text: $note)
-            }
-        }
-    }
+ var body: some View {
+ Form {
+ Section("金额") {
+ TextField("0.00", text: $amountText)
+ .keyboardType(.decimalPad) // 数字键盘
+ }
+ Section("分类") {
+ Picker("分类", selection: $category) {
+ ForEach(categories, id: \.self) { Text($0) }
+ }
+ }
+ Section("备注") {
+ TextField("选填", text: $note)
+ }
+ }
+ }
 }
 ```
 :::
@@ -896,11 +896,11 @@ Form 里的行会自动排成系统样式的分组卡片，Section 就是节头�
 ```
 // 金额合法：能转成数字且大于 0
 var amountIsValid: Bool {
-    (Double(amountText) ?? 0) > 0
+ (Double(amountText) ?? 0) > 0
 }
 
 Button("保存") {
-    // 校验通过才走到这里，放心保存
+ // 校验通过才走到这里，放心保存
 }
 .disabled(!amountIsValid)
 ```
@@ -1083,7 +1083,7 @@ SwiftUI 的画布预览不止能看一张图：同一个视图可以配多套预
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 你不是在"操作界面"，你是在"改状态，让框架替你重画界面"，状态住对地方，导航顺着用户预期，界面就永远不会和你作对。
@@ -1091,7 +1091,7 @@ SwiftUI 的画布预览不止能看一张图：同一个视图可以配多套预
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 状态四工具：@State（页面私有）、@Binding（借用）、@Observable（逻辑）、.environment（全局）
 - 新项目用 @Observable 宏写视图模型；老教程的 @ObservableObject 能读即可

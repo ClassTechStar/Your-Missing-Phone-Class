@@ -24,51 +24,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מותג</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">כניסת מחיקה</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">הבדלים מרכזיים ונקודות לתשומת לב</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; מערכת ועדכון &gt; איפוס &gt; איפוס יצרן</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יש להתנתק מחשבון Huawei ולכבות "מצא את הטלפון", אחרת נעילת הפעלה; במצב טהור אולי נדרש סיסמה.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; המכשיר שלי &gt; שחזור להגדרות יצרן</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בתחתית "פרמוט כרטיס SD וירטואלי" ו"מחק הכל", סמן את שניהם; לפני ניתוק חשבון Xiaomi כבה "מצא מכשיר".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; הגדרות נוספות &gt; שחזור &gt; מחיקה יסודית</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS מציע "מחיקה יסודית", מחליף מספר פעמים; נדרש סיסמת מסך נעילה.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; ניהול מערכת &gt; גיבוי ואיפוס &gt; מחק הכל</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סמן "פרמוט" ל-SD; התנתק vivo, כבה "מצא".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; ניהול כללי &gt; איפוס &gt; יצרן</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הסר Samsung, כבה "מצא"; "כיסוי" מומלץ.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אנדרואיד</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; כללי &gt; העבר/אפס &gt; מחק הכל</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נתק Apple ID, אחרת נעילת הפעלה; iOS 15+ "שמור נתוני iCloud".</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מותג</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">כניסת מחיקה</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">הבדלים מרכזיים ונקודות לתשומת לב</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; מערכת ועדכון &gt; איפוס &gt; איפוס יצרן</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יש להתנתק מחשבון Huawei ולכבות "מצא את הטלפון", אחרת נעילת הפעלה; במצב טהור אולי נדרש סיסמה.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; המכשיר שלי &gt; שחזור להגדרות יצרן</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בתחתית "פרמוט כרטיס SD וירטואלי" ו"מחק הכל", סמן את שניהם; לפני ניתוק חשבון Xiaomi כבה "מצא מכשיר".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; הגדרות נוספות &gt; שחזור &gt; מחיקה יסודית</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS מציע "מחיקה יסודית", מחליף מספר פעמים; נדרש סיסמת מסך נעילה.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; ניהול מערכת &gt; גיבוי ואיפוס &gt; מחק הכל</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סמן "פרמוט" ל-SD; התנתק vivo, כבה "מצא".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; ניהול כללי &gt; איפוס &gt; יצרן</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הסר Samsung, כבה "מצא"; "כיסוי" מומלץ.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אנדרואיד</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; כללי &gt; העבר/אפס &gt; מחק הכל</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נתק Apple ID, אחרת נעילת הפעלה; iOS 15+ "שמור נתוני iCloud".</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>שלושת הדברים שהכי קל לפספס
+שלושת הדברים שהכי קל לפספס
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>לא התנתקת מהחשבון</strong>:נמכר וננעל, רק ת"ז בשירות.
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>בסיס חוקי: חוק הגנת מידע אישי סעיף 49
+בסיס חוקי: חוק הגנת מידע אישי סעיף 49
 
 {class="mt-1"}
 חוק הגנת מידע 2021, סעיף 49:<strong>בפטירת אדם, קרובים לצורך אינטרס חוקי יכולים לצפות/להעתיק/לתקן/למחוק; אם המנוח קבע אחרת, מאחר.</strong>
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>לשלוח קוד אימות לאף אחד (אפילו לא ל"שירות לקוחות");
+לשלוח קוד אימות לאף אחד (אפילו לא ל"שירות לקוחות");
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>אל תמסור ישירות את סיסמת החשבון של הנפטר למשפחה "להמשיך להשתמש"</strong>—מפר הסכם, הקפאה/סיכון.
@@ -153,7 +153,7 @@ Google: Inactive Account Manager, מבצע אוטומטית - המנגנון ה�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>תזכורת חשובה
+תזכורת חשובה
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - כללים מתעדכנים, בדוק.
@@ -174,7 +174,7 @@ Google: Inactive Account Manager, מבצע אוטומטית - המנגנון ה�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>המחיר האמיתי של "היעלמות" מטבעות קריפטו
+המחיר האמיתי של "היעלמות" מטבעות קריפטו
 
 {class="mt-1"}
 לפי דוח Chainalysis, בעולם כבר<strong>מעל 3 מיליון Bitcoin</strong>מפתח אבוד = אבוד, ~1/6. אם יש קריפטו, מלל לאדם מהימן<strong>נתיב שחזור</strong>– אחרת העושר הזה יישאר רדום לנצח ב-blockchain.
@@ -227,7 +227,7 @@ Google: Inactive Account Manager, מבצע אוטומטית - המנגנון ה�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>הערה משפטית על "סיסמאות"
+הערה משפטית על "סיסמאות"
 
 {class="mt-1"}
 סיסמה בצוואה = סיכון, כולם רואים.<strong>בטוח יותר: צוואה = רשימה + רצון + מיקום, סיסמה דרך מנהל למבצע</strong>. חוקי + בטוח.
@@ -239,41 +239,41 @@ Google: Inactive Account Manager, מבצע אוטומטית - המנגנון ה�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ערוץ</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מחיר מיחזור</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">אבטחת נתונים</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. HDR: טכנולוגיית טווח דינמי גבוה</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">החלפה רשמית (Huawei/Apple/Xiaomi וכו')</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בינוני, לעיתים עם שוברי הנחה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגבוה ביותר, תהליך רשמי מסודר</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתלם ביותר כשמחליפים לאותו מותג</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פלטפורמות מיחזור צד-שלישי (Aihuishou, Zhuanzhuan וכו')</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מעט גבוה יותר, ניתן להשוות מחירים</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה יחסית, כולל דוח מחיקת נתונים</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רוצים לממש ישירות, ללא התחייבות למותג</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תרומה לצדקה (בתי ספר כפריים, עמותות)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ללא תמורה כלכלית</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יש למחוק לחלוטין בעצמך</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">המכשיר עדיין תקין, רוצים לתרום</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ניצול משני (המרה עצמית)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חיסכון ברכישת מכשיר חדש</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בעל המכשיר המקורי ממשיך להשתמש, ללא סיכון</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ביצועי המכשיר סבירים, יש צורך ביתי בהמרה</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ערוץ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מחיר מיחזור</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">אבטחת נתונים</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. HDR: טכנולוגיית טווח דינמי גבוה</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">החלפה רשמית (Huawei/Apple/Xiaomi וכו')</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בינוני, לעיתים עם שוברי הנחה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגבוה ביותר, תהליך רשמי מסודר</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתלם ביותר כשמחליפים לאותו מותג</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פלטפורמות מיחזור צד-שלישי (Aihuishou, Zhuanzhuan וכו')</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מעט גבוה יותר, ניתן להשוות מחירים</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה יחסית, כולל דוח מחיקת נתונים</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רוצים לממש ישירות, ללא התחייבות למותג</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תרומה לצדקה (בתי ספר כפריים, עמותות)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ללא תמורה כלכלית</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יש למחוק לחלוטין בעצמך</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">המכשיר עדיין תקין, רוצים לתרום</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ניצול משני (המרה עצמית)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חיסכון ברכישת מכשיר חדש</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בעל המכשיר המקורי ממשיך להשתמש, ללא סיכון</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ביצועי המכשיר סבירים, יש צורך ביתי בהמרה</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>פלטפורמות מיחזור מוסדרות</strong>:מומלץ, מסודר, בטוח. Apple/Huawei/Xiaomi "trade-in".
@@ -283,7 +283,7 @@ Google: Inactive Account Manager, מבצע אוטומטית - המנגנון ה�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>האמת על פסולת אלקטרונית
+האמת על פסולת אלקטרונית
 
 {class="mt-1"}
 בלוח המעגלים של טלפון אחד יש<strong>זהב, כסף, פלדיום, נחושת</strong>זהב, מעגל = עפרה x10. זריקה = עופרת/כספית/קדמיום, עשרות שנים.<strong>מחזור = סביבה + מתכות.</strong>
@@ -291,7 +291,7 @@ Google: Inactive Account Manager, מבצע אוטומטית - המנגנון ה�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בצעו איפוס מוצפן להגדרות יצרן.
+בצעו איפוס מוצפן להגדרות יצרן.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. גיבוי אחרון: ענן, מחשב, צ'אט.
@@ -305,7 +305,7 @@ Google: Inactive Account Manager, מבצע אוטומטית - המנגנון ה�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>;
+;
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Legacy Contact / Inactive Manager.

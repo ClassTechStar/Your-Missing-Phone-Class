@@ -46,7 +46,7 @@ Key Point:<strong>The master password itself never leaves your device</strong>, 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Why does "zero-knowledge" mean the service provider can't see your passwords either?
+Why does "zero-knowledge" mean the service provider can't see your passwords either?
 
 {class="mt-1"}
 Because the decryption key is derived from your master password, which exists only in your mind and is used only on your local device. The service provider's server has neither the master password nor the decryption key — only ciphertext. That's why legitimate providers like Bitwarden and 1Password explicitly state "we cannot see your passwords either", it's not that they don't want to, it's that they technically can't.
@@ -71,7 +71,7 @@ In August 2022, the veteran password manager LastPass announced that its develop
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Lessons Learned from LastPass
+Lessons Learned from LastPass
 
 {class="mt-1"}
 First, your master password must be long and unique (16+ characters recommended, with upper/lower case, digits, and symbols); second, prioritize providers that support Argon2id with high iteration counts; third, always enable independent two-factor authentication for high-value accounts (bank, email) — don't rely solely on a password manager.
@@ -118,7 +118,7 @@ If a password appears in the leaked database,<strong>no matter how complex it lo
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>k-Anonymity Query Principle
+k-Anonymity Query Principle
 
 {class="mt-1"}
 Worried that entering your password on HaveIBeenPwned will cause another leak? No need to worry. Modern queries use the "k-anonymity" protocol: the browser only sends the first 5 characters of the password hash to the server, the server returns all hashes starting with those 5 characters, and the comparison is done locally. In other words, the server never sees your complete password hash. 1Password and Bitwarden's "leaked password detection" both work this way.
@@ -133,7 +133,7 @@ Worried that entering your password on HaveIBeenPwned will cause another leak? N
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Check Now: Are Your Passwords Safe?
+Check Now: Are Your Passwords Safe?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Go to haveibeenpwned.com, enter your commonly used email, and see which breach events it appeared in.
@@ -159,36 +159,36 @@ Passkey is based on the FIDO2 / WebAuthn standard, using <strong>on-device key p
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Traditional Password</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Phishing Resistance</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Poor, phishing sites can steal passwords</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturally phishing-resistant, private key only signs for real domains</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Server Breach Impact</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Password hashes may be cracked</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Server only stores public key, no impact from breach</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Convenience</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requires memorization/entry/management</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/fingerprint login in one second</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Replay Attack</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">May be intercepted and replayed by man-in-the-middle</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Each signature is one-time, cannot be replayed</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Traditional Password</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Phishing Resistance</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Poor, phishing sites can steal passwords</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturally phishing-resistant, private key only signs for real domains</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Server Breach Impact</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Password hashes may be cracked</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Server only stores public key, no impact from breach</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Convenience</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requires memorization/entry/management</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/fingerprint login in one second</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Replay Attack</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">May be intercepted and replayed by man-in-the-middle</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Each signature is one-time, cannot be replayed</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Platform Support Status
@@ -200,7 +200,7 @@ Passkey is based on the FIDO2 / WebAuthn standard, using <strong>on-device key p
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Cross-Device Sync Is the Key Breakthrough
+Cross-Device Sync Is the Key Breakthrough
 
 {class="mt-1"}
 The biggest pain point of early Passkey was being "bound to a single device", you had to recreate it when switching phones. Starting in 2023, Apple, Google, and Microsoft implemented cloud sync for Passkeys: iCloud Keychain syncs across Apple devices, Google Password Manager syncs across Android devices. Third parties like 1Password have enabled cross-ecosystem sync. This means Passkey is now practical enough to replace passwords.
@@ -236,7 +236,7 @@ This process uses dual encrypted communication via Bluetooth + internet, the Pas
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Try It Now: Experience Passwordless Login
+Try It Now: Experience Passwordless Login
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Sign in to your Google Account → Security → Passkeys → Add a passkey, experience Face ID/fingerprint login.
@@ -247,7 +247,7 @@ This process uses dual encrypted communication via Bluetooth + internet, the Pas
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Transition Period Recommendations
+Transition Period Recommendations
 
 {class="mt-1"}
 Passkey hasn't completely replaced passwords, many websites are still in a "Passkey + password" coexistence phase. Recommendation: prioritize enabling Passkey for high-value accounts, but <strong>don't immediately delete traditional passwords</strong>, keep them as backup; continue using your password manager, since not all websites support Passkey. Treat Passkey as a "powerful supplement to password managers" rather than an "immediate replacement."
@@ -295,7 +295,7 @@ Websites with mainstream support: Google, GitHub, Microsoft, Apple ID, Facebook,
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Dual-Key Strategy
+Dual-Key Strategy
 
 {class="mt-1"}
 The biggest risk of hardware keys is "loss." Recommendations: ① Register two different keys simultaneously; ② Carry one with you (on a keychain) and store one in a home safe or bank deposit box; ③ Some websites allow printing "backup recovery codes" for offline storage. This way, even if the primary key is lost, you won't be permanently locked out of your accounts.
@@ -303,7 +303,7 @@ The biggest risk of hardware keys is "loss." Recommendations: ① Register two d
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Be Careful with Purchase Channels
+Be Careful with Purchase Channels
 
 {class="mt-1"}
 Always purchase from official stores or authorized dealers, don't buy used or keys from unknown sources, as pre-configured hardware could theoretically have been implanted with a backdoor. YubiKey firmware cannot be updated after manufacturing, but Yubico continuously publishes security advisories — follow their official website.
@@ -336,7 +336,7 @@ Bitwarden's free version supports individual password sharing (via the "Send" fe
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>1Password Families Value for Money
+1Password Families Value for Money
 
 {class="mt-1"}
 1Password Families costs about $4.99/month, supporting up to 5 family members, each with an independent personal vault + 4 shared vaults. That's less than $1/person/month, currently the best family sharing experience. Bitwarden's family plan at $10/year supports 6 people, offering better value but with a slightly less polished interface.
@@ -369,7 +369,7 @@ Imagine a scenario: you alone manage all the family's important accounts, but yo
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Set Up Now: Leave a "Spare Key" for Your Family
+Set Up Now: Leave a "Spare Key" for Your Family
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Choose a trusted family member as your "emergency contact.".
@@ -388,7 +388,7 @@ Imagine a scenario: you alone manage all the family's important accounts, but yo
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Important Reminder
+Important Reminder
 
 {class="mt-1"}
 Password managers are convenient but come with risks: if your master password leaks, all your passwords are exposed. So your master password must never reuse any other password, nor be written somewhere easily found. Also, choose a provider with a good security track record.
@@ -396,7 +396,7 @@ Password managers are convenient but come with risks: if your master password le
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Try It Now: Get Started with a Password Manager
+Try It Now: Get Started with a Password Manager
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Pick a password manager (Bitwarden or your system’s built-in one is recommended).

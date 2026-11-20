@@ -40,27 +40,27 @@ API Key 猶汝「錢囊之密碼」，一入碼而提交於 GitHub，數時之�
 ```
 // JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
 struct WeatherResponse: Codable {
-    let weather: [Weather]
-    let main: Main
-    let name: String
+ let weather: [Weather]
+ let main: Main
+ let name: String
 }
 struct Weather: Codable { let description: String }
 struct Main: Codable { let temp: Double; let humidity: Int }
 
 struct WeatherService {
-    let key: String   // 從 xcconfig 讀入
+ let key: String // 從 xcconfig 讀入
 
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
-        comps.queryItems = [
-            URLQueryItem(name: "q", value: city),
-            URLQueryItem(name: "appid", value: key),
-            URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "lang", value: "zh_cn")
-        ]
-        let (data, _) = try await URLSession.shared.data(from: comps.url!)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+ comps.queryItems = [
+ URLQueryItem(name: "q", value: city),
+ URLQueryItem(name: "appid", value: key),
+ URLQueryItem(name: "units", value: "metric"),
+ URLQueryItem(name: "lang", value: "zh_cn")
+ ]
+ let (data, _) = try await URLSession.shared.data(from: comps.url!)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 ```
 :::
@@ -76,25 +76,25 @@ struct WeatherService {
 
 ```
 enum LoadState {
-    case loading                  // 旋轉中
-    case success(WeatherResponse) // 成功
-    case error(String)            // 失敗
+ case loading // 旋轉中
+ case success(WeatherResponse) // 成功
+ case error(String) // 失敗
 }
 
 @Observable
 class WeatherViewModel {
-    var state: LoadState = .loading
-    private let service = WeatherService(key: Config.apiKey)
+ var state: LoadState = .loading
+ private let service = WeatherService(key: Config.apiKey)
 
-    func search(city: String) async {
-        state = .loading
-        do {
-            let data = try await service.fetchWeather(city: city)
-            state = .success(data)
-        } catch {
-            state = .error("查無此城，易其名再試之？")
-        }
-    }
+ func search(city: String) async {
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ state = .success(data)
+ } catch {
+ state = .error("查無此城，易其名再試之？")
+ }
+ }
 }
 
 // 界面中：
@@ -117,24 +117,24 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 
 ```
 struct WeatherContent: View {
-    let data: WeatherResponse
+ let data: WeatherResponse
 
-    var body: some View {
-        VStack(spacing: 12) {
-            Text(data.name)
-                .font(.title.bold())
-            Text("\(Int(data.main.temp))°C")
-                .font(.system(size: 76, weight: .thin))
-            Text(data.weather.first?.description ?? "未知")
-                .font(.title3)
-                .foregroundColor(.secondary)
-            HStack(spacing: 24) {
-                Label("溼度 \(data.main.humidity)%", systemImage: "humidity")
-                Label("體感 \(Int(data.main.temp))°C", systemImage: "thermometer")
-            }
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 12) {
+ Text(data.name)
+ .font(.title.bold())
+ Text("\(Int(data.main.temp))°C")
+ .font(.system(size: 76, weight: .thin))
+ Text(data.weather.first?.description ?? "未知")
+ .font(.title3)
+ .foregroundColor(.secondary)
+ HStack(spacing: 24) {
+ Label("溼度 \(data.main.humidity)%", systemImage: "humidity")
+ Label("體感 \(Int(data.main.temp))°C", systemImage: "thermometer")
+ }
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -182,7 +182,7 @@ OpenWeatherMap 於中文城名之助平平，搜「北京」或無所得而 "bei
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小結
+本章小結
 
 - 先於瀏覽器試 API、讀懂 JSON，而後書碼——「預習」終無所虧
 - API Key 藏於 xcconfig，絕不入碼庫

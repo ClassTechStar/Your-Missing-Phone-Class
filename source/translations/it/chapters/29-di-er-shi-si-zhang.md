@@ -45,41 +45,41 @@ Per capire in modo più intuitivo pro e contro del BL lock, usiamo una tabella c
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Funzione chiave</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Stato bloccato (default)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Stato dopo lo sblocco</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sicurezza di sistema</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impedisce di flashare sistemi non ufficiali non firmati, proteggendo l'integrità del sistema e la sicurezza di basso livello<br><span class="text-emerald-600 dark:text-emerald-400">✅ Alta sicurezza: carica solo immagini firmate ufficialmente, respingendo efficacemente le manomissioni malevole del firmware</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Sicurezza ridotta: consente di flashare ROM di terze parti, il meccanismo di verifica dell'integrità del sistema viene meno; se un malware ottiene i permessi Root può alterare profondamente il sistema</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Stabilità del sistema</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantisce che il telefono esegua il sistema ufficiale testato e ottimizzato dal produttore, assicurando stabilità e scorrevolezza<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stabile: usa firmware ufficiali, funzioni complete, aggiornamenti OTA affidabili</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Più rischi: le ROM di terze parti possono avere problemi di compatibilità, possono causare crash, brick, malfunzionamenti hardware (come fotocamera, ricarica rapida), gli aggiornamenti OTA possono fallire</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Diritti di garanzia</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il produttore fornisce un sistema ufficiale stabile bloccando il BL, per offrire il servizio di garanzia<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garanzia valida: goditi la garanzia gratuita ufficiale (danni non dolosi)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garanzia persa: la maggior parte dei produttori considera lo sblocco del BL come rinuncia volontaria alla garanzia; anche ribloccando, lo storico di sblocco può essere rilevato e la garanzia rifiutata</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sicurezza dei dati</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il processo di sblocco di solito cancella i dati, per evitare che i vecchi dati siano sfruttati malevolmente nel nuovo ambiente di sistema<br><span class="text-emerald-600 dark:text-emerald-400">✅ Dati sicuri: nell'uso quotidiano, il BL lock limita la capacità dei malware di modificare le partizioni di sistema</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Rischio per i dati: lo sblocco cancella forzatamente tutti i dati utente; se dopo lo sblocco non cifri correttamente, la memorizzazione dei dati può essere insicura; in caso di smarrimento, i dati sono più facilmente estraibili tramite flashing</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Limitazioni funzionali</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantisce il funzionamento di funzioni che dipendono da un ambiente sicuro (come pagamenti, app bancarie)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Funzioni complete: tutte le funzioni ufficiali sono utilizzabili</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Funzioni limitate: alcune app sensibili alla sicurezza (come Google Pay, app bancarie) possono rifiutarsi di girare rilevando lo stato di BL sbloccato; i servizi DRM possono essere declassati, con impatto sulla riproduzione di video ad alta definizione</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Funzione chiave</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Stato bloccato (default)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Stato dopo lo sblocco</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sicurezza di sistema</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impedisce di flashare sistemi non ufficiali non firmati, proteggendo l'integrità del sistema e la sicurezza di basso livello<br><span class="text-emerald-600 dark:text-emerald-400">✅ Alta sicurezza: carica solo immagini firmate ufficialmente, respingendo efficacemente le manomissioni malevole del firmware</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Sicurezza ridotta: consente di flashare ROM di terze parti, il meccanismo di verifica dell'integrità del sistema viene meno; se un malware ottiene i permessi Root può alterare profondamente il sistema</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Stabilità del sistema</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantisce che il telefono esegua il sistema ufficiale testato e ottimizzato dal produttore, assicurando stabilità e scorrevolezza<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stabile: usa firmware ufficiali, funzioni complete, aggiornamenti OTA affidabili</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Più rischi: le ROM di terze parti possono avere problemi di compatibilità, possono causare crash, brick, malfunzionamenti hardware (come fotocamera, ricarica rapida), gli aggiornamenti OTA possono fallire</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Diritti di garanzia</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il produttore fornisce un sistema ufficiale stabile bloccando il BL, per offrire il servizio di garanzia<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garanzia valida: goditi la garanzia gratuita ufficiale (danni non dolosi)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garanzia persa: la maggior parte dei produttori considera lo sblocco del BL come rinuncia volontaria alla garanzia; anche ribloccando, lo storico di sblocco può essere rilevato e la garanzia rifiutata</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Sicurezza dei dati</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Il processo di sblocco di solito cancella i dati, per evitare che i vecchi dati siano sfruttati malevolmente nel nuovo ambiente di sistema<br><span class="text-emerald-600 dark:text-emerald-400">✅ Dati sicuri: nell'uso quotidiano, il BL lock limita la capacità dei malware di modificare le partizioni di sistema</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Rischio per i dati: lo sblocco cancella forzatamente tutti i dati utente; se dopo lo sblocco non cifri correttamente, la memorizzazione dei dati può essere insicura; in caso di smarrimento, i dati sono più facilmente estraibili tramite flashing</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Limitazioni funzionali</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Garantisce il funzionamento di funzioni che dipendono da un ambiente sicuro (come pagamenti, app bancarie)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Funzioni complete: tutte le funzioni ufficiali sono utilizzabili</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Funzioni limitate: alcune app sensibili alla sicurezza (come Google Pay, app bancarie) possono rifiutarsi di girare rilevando lo stato di BL sbloccato; i servizi DRM possono essere declassati, con impatto sulla riproduzione di video ad alta definizione</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ A differenza di altri produttori Android, il meccanismo di sblocco BL dei telefo
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Pensa due volte prima di agire
+Pensa due volte prima di agire
 
 {class="mt-1"}
 Il fuse Knox di Samsung è <strong>irreversibile</strong>: una volta innescato non si torna allo stato di fabbrica. Se vuoi solo usare funzioni che di solito richiedono il Root, ti conviene prima cercare alternative che non lo richiedano.
@@ -123,7 +123,7 @@ Il fuse Knox di Samsung è <strong>irreversibile</strong>: una volta innescato n
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Avvertenza importante
+Avvertenza importante
 
 {class="mt-1"}
 Il flashing comporta rischi, procedi con cautela. Può causare:
@@ -140,7 +140,7 @@ Prima del flashing fai un backup completo, leggi con attenzione il tutorial e ve
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Risorse consigliate
+Risorse consigliate
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>: la più grande community di sviluppatori Android al mondo, con tutorial di flashing e risorse ROM.
@@ -152,7 +152,7 @@ Prima del flashing fai un backup completo, leggi con attenzione il tutorial e ve
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: si può tornare indietro dopo lo sblocco del BL?
+Q1: si può tornare indietro dopo lo sblocco del BL?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> è possibile ribloccare. In genere serve flashare il pacchetto ufficiale completo di flashing cablato e usare uno script di flashing specifico (come <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code> di Xiaomi). Attenzione: dopo il riblocco, alcuni fuse di sicurezza innescati dallo sblocco (come Knox di Samsung) potrebbero non essere reversibili.
@@ -160,7 +160,7 @@ Prima del flashing fai un backup completo, leggi con attenzione il tutorial e ve
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: come si fa il Root dopo lo sblocco?
+Q2: come si fa il Root dopo lo sblocco?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> lo sblocco del BL è solo il primo passo. Il Root di solito richiede:

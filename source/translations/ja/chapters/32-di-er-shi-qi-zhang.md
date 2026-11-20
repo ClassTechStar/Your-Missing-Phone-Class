@@ -32,22 +32,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ブランド</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">モード名</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">オンにする方法</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アクセシビリティ（専用の簡単モードはないが、個別に大きく設定可能）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 表示と明るさ &gt; 文字サイズ、最大までドラッグ。さらに"アクセシビリティ &gt; 表示と文字サイズ"で"太字テキスト""ボタン形状"をオン</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple急速充電</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; システムと更新 &gt; 簡単モード &gt; オン</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">シンプルモード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; その他の設定 &gt; シンプルモード &gt; オン</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 特殊機能 &gt; 簡単モード</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">シンプルデスクトップ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; デスクトップ、ロック画面と壁紙 &gt; シンプルデスクトップ</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 表示 &gt; 簡単モード</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ブランド</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">モード名</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">オンにする方法</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アクセシビリティ（専用の簡単モードはないが、個別に大きく設定可能）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 表示と明るさ &gt; 文字サイズ、最大までドラッグ。さらに"アクセシビリティ &gt; 表示と文字サイズ"で"太字テキスト""ボタン形状"をオン</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple急速充電</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; システムと更新 &gt; 簡単モード &gt; オン</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">シンプルモード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; その他の設定 &gt; シンプルモード &gt; オン</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 特殊機能 &gt; 簡単モード</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">シンプルデスクトップ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; デスクトップ、ロック画面と壁紙 &gt; シンプルデスクトップ</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 表示 &gt; 簡単モード</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>実践：お年寄りのスマホを"リフォーム"しよう
+実践：お年寄りのスマホを"リフォーム"しよう
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 簡単モードをオンにする（上記のブランド別表通りに操作）。
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>お年寄り向け"防詐欺のお呪い"（印刷して電話の横に貼る）
+お年寄り向け"防詐欺のお呪い"（印刷して電話の横に貼る）
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>知らない電話で送金要求 → 切る！</strong>
@@ -151,7 +151,7 @@ WeChatはお年寄りが最もよく使うAppだが、UIが密集しすぎてい
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - まず簡単モードをオンにするか手動で文字/アイコンを大きくし、環境を整えれば問題の大半は解決する

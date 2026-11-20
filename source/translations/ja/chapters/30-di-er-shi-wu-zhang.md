@@ -24,51 +24,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ブランド</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">消去エントリー</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主な違いと注意事項</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; システムと更新 &gt; リセット &gt; 初期化</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">事前にHuaweiアカウントからサインアウトし「スマホを探す」をオフにする必要があります。そうしないとアクティベーションロックがトリガーされます。純正モードではパスワード認証が必要な場合があります。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; マイデバイス &gt; 初期化</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">下部に「仮想SDカードをフォーマット」と「すべてのコンテンツと設定を消去」の両オプションがあり、両方ともチェックする必要があります。Xiaomiアカウントからサインアウトする前に「デバイスを探す」をオフにしてください。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; その他の設定 &gt; スマホをリセット &gt; すべてのデータを完全に消去</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOSは「完全消去」モードを提供し、ストレージを複数回上書きします。ロック画面のパスワード入力で確認が必要です。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; システム管理 &gt; バックアップとリセット &gt; すべてのデータを消去</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「スマホのストレージをフォーマット」にチェックを入れるとSDカード領域も消去されます。vivoアカウントからサインアウトし、「スマホを探す」をオフにしてください。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 一般管理 &gt; リセット &gt; 初期化</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">事前にSamsungアカウントを削除し「スマホを探す」をオフにする必要があります。一部機種には「自動上書き」オプションがあり、有効化を推奨します。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 一般 &gt; 転送またはiPhoneをリセット &gt; すべてのコンテンツと設定を消去</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">事前にApple IDからサインアウト必須。そうしないと次のユーザーがiCloudアクティベーションロックで締め出されます。iOS 15+は「サインアウト時にiCloudデータを保持」に対応し、後で確認できます。</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ブランド</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">消去エントリー</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主な違いと注意事項</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; システムと更新 &gt; リセット &gt; 初期化</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">事前にHuaweiアカウントからサインアウトし「スマホを探す」をオフにする必要があります。そうしないとアクティベーションロックがトリガーされます。純正モードではパスワード認証が必要な場合があります。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; マイデバイス &gt; 初期化</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">下部に「仮想SDカードをフォーマット」と「すべてのコンテンツと設定を消去」の両オプションがあり、両方ともチェックする必要があります。Xiaomiアカウントからサインアウトする前に「デバイスを探す」をオフにしてください。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; その他の設定 &gt; スマホをリセット &gt; すべてのデータを完全に消去</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOSは「完全消去」モードを提供し、ストレージを複数回上書きします。ロック画面のパスワード入力で確認が必要です。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; システム管理 &gt; バックアップとリセット &gt; すべてのデータを消去</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「スマホのストレージをフォーマット」にチェックを入れるとSDカード領域も消去されます。vivoアカウントからサインアウトし、「スマホを探す」をオフにしてください。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 一般管理 &gt; リセット &gt; 初期化</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">事前にSamsungアカウントを削除し「スマホを探す」をオフにする必要があります。一部機種には「自動上書き」オプションがあり、有効化を推奨します。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 &gt; 一般 &gt; 転送またはiPhoneをリセット &gt; すべてのコンテンツと設定を消去</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">事前にApple IDからサインアウト必須。そうしないと次のユーザーがiCloudアクティベーションロックで締め出されます。iOS 15+は「サインアウト時にiCloudデータを保持」に対応し、後で確認できます。</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>最も見落とされやすい3つのこと
+最も見落とされやすい3つのこと
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>アカウントからサインアウトしていない</strong>：スマホを買い手に売却した後に遠隔ロックされ、自分でも解除できず、最終的に身分証を持って公式サポートに行くしかなくなります。
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>法的根拠：個人情報保護法第49条
+法的根拠：個人情報保護法第49条
 
 {class="mt-1"}
 2021年に施行された「中華人民共和国個人情報保護法」第49条は明確に規定しています：<strong>自然人が死亡した場合、その近親者は自身の合法かつ正当な利益のために、死者の関連個人情報について本章に規定する閲覧、複製、訂正、削除等の権利を行使できる。ただし、死者が生前別の取り決めをした場合を除く。</strong>
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>見知らぬ人に「画面共有」や「リモートコントロール」を有効化。
+見知らぬ人に「画面共有」や「リモートコントロール」を有効化。
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>死者のアカウントのパスワードを家族に直接渡して「そのま、ま使い続ける」のは避ける</strong>——プラットフォーム契約違反となり、資金が凍結されたりリスク管理がトリガーされた際に立証がより困難になります。
@@ -153,7 +153,7 @@ Googleは「非アクティブアカウントマネージャー（Inactive Accou
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>重要なリマインダー
+重要なリマインダー
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 各プラットフォームのルールは更新されるため、手続き前に公式カスタマーサービスの最新ガイダンスを確認してください。
@@ -174,7 +174,7 @@ Googleは「非アクティブアカウントマネージャー（Inactive Accou
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>暗号資産が「消滅」する真のコスト
+暗号資産が「消滅」する真のコスト
 
 {class="mt-1"}
 Chainalysisのレポートによると、世界中で既に<strong>300万枚以上のBitcoin</strong>が秘密鍵の紛失により永遠に回収不可能で、現存総量の6分の1に相当します。暗号資産を保有している場合、少なくとも1人の絶対的に信頼できる人に<strong>復元パス</strong>を知らせてください：さもなければこれらの富は永遠にブロックチェーン上で眠り続けます。
@@ -227,7 +227,7 @@ Chainalysisのレポートによると、世界中で既に<strong>300万枚以�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>「パスワード」に関する法的注意
+「パスワード」に関する法的注意
 
 {class="mt-1"}
 パスワードを遺言に直接書き込むと漏洩リスクがあり、遺言公開後はすべての相続人が見られます。<strong>より安全な方法は：遺言には「アカウントリスト + 処分の意思 + パスワード保管場所」のみを書き、実際のパスワードはパスワードマネージャーのマスターパスワードで信頼する執行人に別途伝える</strong>。これにより法的要件を満たしつつ、パスワード漏洩リスクを低減できます。
@@ -239,41 +239,41 @@ Chainalysisのレポートによると、世界中で既に<strong>300万枚以�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ルート</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">買取価格</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">データセキュリティ</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">：ハイエンドプロフェッショナル制作。iPhone 15 ProシリーズはApple ProRes動画撮影に対応（最大4K 60fps）しますが、ProRes RAW形式は現状外部録画デバイスとの組み合わせが必要で、スマホ単体での直接撮影は未対応。</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公式下取り（Huawei/Apple/Xiaomiなど）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中程度、補助券が併用されることが多い</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最高、公式の標準フローあり</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同ブランドの新機種に買い替える予定なら最もお得</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">サードパーティ回収プラットフォーム（愛回収、転転、回収宝など）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">やや高い、価格比較可能</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的高い、データ消去レポートあり</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">直接現金化したい、ブランドに縛られたくない</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公益寄付（農村学校、慈善団体など）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">経済的リターンなし</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自分で完全消去が必要</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスがまだ使える、善行をしたい</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">再利用（自宅で改造）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新デバイス費用を節約</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">元の所有者が使い続ける、リスクなし</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスの性能がまだ十分、家庭で改造ニーズがある</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ルート</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">買取価格</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">データセキュリティ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">：ハイエンドプロフェッショナル制作。iPhone 15 ProシリーズはApple ProRes動画撮影に対応（最大4K 60fps）しますが、ProRes RAW形式は現状外部録画デバイスとの組み合わせが必要で、スマホ単体での直接撮影は未対応。</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公式下取り（Huawei/Apple/Xiaomiなど）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中程度、補助券が併用されることが多い</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最高、公式の標準フローあり</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同ブランドの新機種に買い替える予定なら最もお得</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">サードパーティ回収プラットフォーム（愛回収、転転、回収宝など）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">やや高い、価格比較可能</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的高い、データ消去レポートあり</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">直接現金化したい、ブランドに縛られたくない</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公益寄付（農村学校、慈善団体など）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">経済的リターンなし</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自分で完全消去が必要</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスがまだ使える、善行をしたい</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">再利用（自宅で改造）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新デバイス費用を節約</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">元の所有者が使い続ける、リスクなし</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスの性能がまだ十分、家庭で改造ニーズがある</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>：最も確実な方法、定期的に貴重なデータをローカルハードディスクにダウンロード。</strong>：最も推奨される方法で、フローが標準化され。データセキュリティが保証されます。Apple、Huawei、Xiaomiなどのブランド公式サイトに「下取り」の入り口があり、評価後に新機種代に充当できます。
@@ -283,7 +283,7 @@ Chainalysisのレポートによると、世界中で既に<strong>300万枚以�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>電子ゴミの真実
+電子ゴミの真実
 
 {class="mt-1"}
 スマホ1台の回路基板には<strong>金、銀、パラジウム、銅</strong>などの貴金属が含まれ、廃棄回路基板1トンあたりの金含有量は金鉱石の数十倍です。しかし無断廃棄すると、鉛、水銀、カドミウムが土壌と地下水に浸透し、汚染は数十年続きます。<strong>正しくリサイクルすれば、環境を保護し、希少金属を循環再生できます。</strong>
@@ -291,7 +291,7 @@ Chainalysisのレポートによると、世界中で既に<strong>300万枚以�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>活用
+活用
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 最後の完全バックアップ：写真をクラウドにアップロード、重要ファイルをパソコンにコピー、チャット履歴をエクスポートして保存。
@@ -305,7 +305,7 @@ Chainalysisのレポートによると、世界中で既に<strong>300万枚以�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>今月のタスクリスト
+今月のタスクリスト
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 現在のメインスマホにApple「レガシーコンタクト」を指定、またはGoogle「非アクティブアカウントマネージャー」を設定。

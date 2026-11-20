@@ -43,7 +43,7 @@ Mirar la pantalla del teléfono durante mucho tiempo causa sequedad y cansancio 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>Regla 20-20-20
+Regla 20-20-20
 
 {class="mt-1"}
 Cada <strong>20 minutos</strong> mirando la pantalla, desvía la mirada a algo a <strong>20 pies (unos 6 metros)</strong> de distancia y mantenla durante <strong>20 segundos</strong>. Este simple gesto alivia eficazmente la fatiga del músculo ciliar.
@@ -80,7 +80,7 @@ La cantidad de información que recibimos cada día es la que una persona antigu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Práctica: reto de bienestar digital de una semana
+Práctica: reto de bienestar digital de una semana
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Hoy: abre Tiempo de uso / Bienestar digital y revisa tus datos de uso de la semana pasada.
@@ -94,7 +94,7 @@ La cantidad de información que recibimos cada día es la que una persona antigu
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Primero mira tus datos de tiempo de pantalla; reconocer la situación actual es el primer paso para el cambio

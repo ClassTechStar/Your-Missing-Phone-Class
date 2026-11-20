@@ -77,7 +77,7 @@ App让手机无所不能，但也要管好它们。就像你会给新员工安�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>什么是"电子寄生虫"？
+什么是"电子寄生虫"？
 
 {class="mt-1"}
 指的是那些<strong>被植入木马的"破解版"软件</strong>——你以为是"省了钱"，实际是"中了招"。常见形式：
@@ -117,20 +117,20 @@ App要权限（比如通讯录、位置）有时合理（地图要位置），�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>权限选项</strong>："始终允许"、"仅在使用时允许"、"禁止"、"每次询问"。</li>
-                        <li><strong>管理原则</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>最小化：非必要不给。</li>
-                                <li>事后审计：定期去权限设置里看看谁在"越权"。</li>
-                                <li>情境化：像打车软件，只在用时给位置权限。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>权限选项</strong>："始终允许"、"仅在使用时允许"、"禁止"、"每次询问"。</li>
+ <li><strong>管理原则</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>最小化：非必要不给。</li>
+ <li>事后审计：定期去权限设置里看看谁在"越权"。</li>
+ <li>情境化：像打车软件，只在用时给位置权限。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>重点盯防的权限
+重点盯防的权限
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 通讯录/短信：可能被用来发垃圾短信。
@@ -173,16 +173,16 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>安卓签名</strong>：开发者用私钥对APK进行签名，系统安装时用公钥验证。如果APK被篡改（比如植入病毒），签名就会失效，系统会拒绝安装。Google Play还要求App Signing，由Google保管签名密钥，进一步保护应用安全。</li>
-                        <li><strong>iOS签名</strong>：苹果的审核更严格。每个IPA必须有苹果颁发的证书签名，否则无法安装。这就是为什么iOS只能从App Store或企业证书安装应用。企业证书签名的应用有效期有限，且苹果可以随时吊销。</li>
-                        <li><strong>签名的作用</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>验证来源：确认应用确实来自声称的开发者。</li>
-                                <li>验证完整性：确保应用在传输过程中未被篡改。</li>
-                                <li>防止冒充：恶意应用无法伪装成其他应用。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>安卓签名</strong>：开发者用私钥对APK进行签名，系统安装时用公钥验证。如果APK被篡改（比如植入病毒），签名就会失效，系统会拒绝安装。Google Play还要求App Signing，由Google保管签名密钥，进一步保护应用安全。</li>
+ <li><strong>iOS签名</strong>：苹果的审核更严格。每个IPA必须有苹果颁发的证书签名，否则无法安装。这就是为什么iOS只能从App Store或企业证书安装应用。企业证书签名的应用有效期有限，且苹果可以随时吊销。</li>
+ <li><strong>签名的作用</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>验证来源：确认应用确实来自声称的开发者。</li>
+ <li>验证完整性：确保应用在传输过程中未被篡改。</li>
+ <li>防止冒充：恶意应用无法伪装成其他应用。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. 安装包大小与优化
@@ -201,7 +201,7 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识：为什么有的App安装包特别大？
+小知识：为什么有的App安装包特别大？
 
 {class="mt-1"}
 游戏类App通常最大，因为包含大量高清贴图、3D模型、音频文件。社交类App也比较大，因为要支持各种功能模块。工具类App通常最小。如果你发现某个工具类App特别大，要警惕是否捆绑了不必要的功能。
@@ -209,7 +209,7 @@ IPA（iOS App Store Package）同样是压缩包，结构略有不同：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>实操环节：审查3个App的权限
+实操环节：审查3个App的权限
 
 {class="mt-1"}
 选3个常用App（如社交、购物、工具类），进入 [设置] 的应用权限管理页，逐项审查，把不必要的敏感权限关掉或改成"仅在使用时允许"。

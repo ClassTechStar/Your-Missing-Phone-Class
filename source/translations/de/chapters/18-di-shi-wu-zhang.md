@@ -34,7 +34,7 @@ Kabelloses Laden
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>iPhone „80%-Ladelimit": Die goldene Regel wird zur Systemeinstellung
+iPhone „80%-Ladelimit": Die goldene Regel wird zur Systemeinstellung
 
 {class="mt-1"}
 Die iPhone 15/16-Serie (ab iOS 17) hat die „20%-80%-Regel" als Systemfunktion integriert. Wenn aktiviert, stoppt das Laden bei 80 % und verlangsamt die Akkualterung erheblich. Einstellungspfad:
@@ -48,7 +48,7 @@ Bedeutung der drei Optionen: 1.<strong>Unbegrenzt</strong>– laedt bis 100 %; 2
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>GaN-Lader – Der Begleiter fuer Geschaeftsreisende
+GaN-Lader – Der Begleiter fuer Geschaeftsreisende
 
 {class="mt-1"}
 Dir ist vielleicht aufgefallen, dass Schnelllader immer kleiner werden. Der Treiber dahinter ist <strong>GaN (Galliumnitrid)</strong>– ein neuartiges Halbleitermaterial. Gegenueber herkoemmlichen Silizium-Ladern haben GaN-Lader einige klare Vorteile:
@@ -127,47 +127,47 @@ Spannungsstufen
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">OPPO-Familie exklusiv</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">SuperCharge</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">100 W</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ladungspumpe</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi2-Standard</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27 W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD-Protokoll</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Kabelloses Laden – Protokolle</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auch das kabellose Laden hat eigene Standards:</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi-Standard</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Von der WPC (Wireless Power Consortium) festgelegt, der universellste Standard. Basis-Qi unterstützt 5 W–15 W.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi2-Standard</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: 2023 veröffentlicht, führt magnetische Positionierung ein (ähnlich Apple MagSafe), unterstützt 15 W+.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Private Protokolle</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Jede Marke hat eigene Hochleistungs-Wireless-Charger, z. B. Xiaomi 50 W Wireless, Huawei 50 W Wireless – spezielle Ladegeräte erforderlich.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5. Kaufberatung Schnellladen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protokoll-Abgleich prüfen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Beim Kauf eines Ladegeräts bestätigen, dass es das Schnellladeprotokoll Ihres Smartphones unterstützt. Drittanbieter-Ladegeräte sind meist mit den unterstützten Protokollen gekennzeichnet.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auf das Kabel achten</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Hochleistungs-Schnellladen erfordert spezielle Kabel. Normale Kabel unterstützen oft nur bis zu 10 W.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auf Zertifizierung achten</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Apple-Nutzer sollten MFi-zertifizierte Kabel wählen; Android-Nutzer Originalzubehör oder bekannte Drittanbieter.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">OPPO-Familie exklusiv</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">SuperCharge</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">100 W</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ladungspumpe</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi2-Standard</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27 W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD-Protokoll</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Kabelloses Laden – Protokolle</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auch das kabellose Laden hat eigene Standards:</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi-Standard</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Von der WPC (Wireless Power Consortium) festgelegt, der universellste Standard. Basis-Qi unterstützt 5 W–15 W.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi2-Standard</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: 2023 veröffentlicht, führt magnetische Positionierung ein (ähnlich Apple MagSafe), unterstützt 15 W+.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Private Protokolle</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Jede Marke hat eigene Hochleistungs-Wireless-Charger, z. B. Xiaomi 50 W Wireless, Huawei 50 W Wireless – spezielle Ladegeräte erforderlich.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5. Kaufberatung Schnellladen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protokoll-Abgleich prüfen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Beim Kauf eines Ladegeräts bestätigen, dass es das Schnellladeprotokoll Ihres Smartphones unterstützt. Drittanbieter-Ladegeräte sind meist mit den unterstützten Protokollen gekennzeichnet.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auf das Kabel achten</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Hochleistungs-Schnellladen erfordert spezielle Kabel. Normale Kabel unterstützen oft nur bis zu 10 W.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auf Zertifizierung achten</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Apple-Nutzer sollten MFi-zertifizierte Kabel wählen; Android-Nutzer Originalzubehör oder bekannte Drittanbieter.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ Spannungsstufen
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>: iPhone unter Einstellungen → Allgemein → Hintergrund-App-Aktualisierung; Android in den Akku-Einstellungen der jeweiligen App.
+: iPhone unter Einstellungen → Allgemein → Hintergrund-App-Aktualisierung; Android in den Akku-Einstellungen der jeweiligen App.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Prüfen Sie: Eine Gesundheits-Untersuchung für Ihren Akku.
@@ -207,7 +207,7 @@ Wenn du die Praesentationen der Flaggschiff-Smartphones 2024-2026 verfolgt hast,
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Welche Modelle verwenden es bereits?
+Welche Modelle verwenden es bereits?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: Die Magic-Serie hat Silizium-Kohlenstoff-Anoden erstmals kommerziell eingesetzt; Magic6 Pro, Magic7-Serie und Magic V3 verwenden sie.
@@ -228,7 +228,7 @@ Wenn du die Praesentationen der Flaggschiff-Smartphones 2024-2026 verfolgt hast,
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: Bezahlte Apps und In-App-Käufe im Wert von Hunderten Yuan.
+: Bezahlte Apps und In-App-Käufe im Wert von Hunderten Yuan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Smartphone finden.

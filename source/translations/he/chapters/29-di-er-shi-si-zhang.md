@@ -45,41 +45,41 @@ BL = החוליה הראשונה. אימות → טעינת kernel → שרשר�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תפקיד מרכזי</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מצב נעול (ברירת מחדל)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מצב לאחר פתיחה</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">אבטחת מערכת</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מניעת צריבת ROM לא רשמי, הגנת שלמות<br><span class="text-emerald-600 dark:text-emerald-400">✅ בטוח: רק רשמי, נגד חבלה</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ פחות בטוח: ROM צד ג', אימות מבוטל, Root = חבלה</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">יציבות מערכת</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מערכת רשמי, יציב<br><span class="text-emerald-600 dark:text-emerald-400">✅ יציב: רשמי, OTA</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ סיכון: ROM צד ג', קריסה/brick, חומרה, OTA נכשל</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">זכויות אחריות</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">BL נעול = אחריות<br><span class="text-emerald-600 dark:text-emerald-400">✅ אחריות: רשמי</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ אחריות בוטלה: BL = ויתור, גם נעילה מחדש ניתן לזהות</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">אבטחת נתונים</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פתיחה = מחיקת נתונים<br><span class="text-emerald-600 dark:text-emerald-400">✅ בטוח: BL מגביל חבלה</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ סיכון: מחיקה, הצפנה, איבוד = חילוץ</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">מגבלות פונקציה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תשלום/בנק עובד<br><span class="text-emerald-600 dark:text-emerald-400">✅ פונקציונליות מלאה: כל הפונקציות הרשמיות פעילות</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ מוגבל: Google Pay/בנק דוחים, DRM יורד</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תפקיד מרכזי</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מצב נעול (ברירת מחדל)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מצב לאחר פתיחה</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">אבטחת מערכת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מניעת צריבת ROM לא רשמי, הגנת שלמות<br><span class="text-emerald-600 dark:text-emerald-400">✅ בטוח: רק רשמי, נגד חבלה</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ פחות בטוח: ROM צד ג', אימות מבוטל, Root = חבלה</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">יציבות מערכת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מערכת רשמי, יציב<br><span class="text-emerald-600 dark:text-emerald-400">✅ יציב: רשמי, OTA</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ סיכון: ROM צד ג', קריסה/brick, חומרה, OTA נכשל</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">זכויות אחריות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">BL נעול = אחריות<br><span class="text-emerald-600 dark:text-emerald-400">✅ אחריות: רשמי</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ אחריות בוטלה: BL = ויתור, גם נעילה מחדש ניתן לזהות</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">אבטחת נתונים</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פתיחה = מחיקת נתונים<br><span class="text-emerald-600 dark:text-emerald-400">✅ בטוח: BL מגביל חבלה</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ סיכון: מחיקה, הצפנה, איבוד = חילוץ</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">מגבלות פונקציה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תשלום/בנק עובד<br><span class="text-emerald-600 dark:text-emerald-400">✅ פונקציונליות מלאה: כל הפונקציות הרשמיות פעילות</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ מוגבל: Google Pay/בנק דוחים, DRM יורד</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ Samsung: "נתיק" ייחודי:<strong>Samsung: Knox נשרף, Samsung Pay א�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>חשבו פעמיים לפני שתפעלו
+חשבו פעמיים לפני שתפעלו
 
 {class="mt-1"}
 הנתיך של Samsung Knox הוא<strong>בלתי הפיך</strong>לאחר ההפעלה לא ניתן לחזור למצב יצרן. אם רק רצית פונקציות הדורשות Root, מומלץ לבדוק חלופות ללא Root.
@@ -123,7 +123,7 @@ Samsung: "נתיק" ייחודי:<strong>Samsung: Knox נשרף, Samsung Pay א�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>הטלפון הופך ל"לבנה" (לא נדלק)
+הטלפון הופך ל"לבנה" (לא נדלק)
 
 {class="mt-1"}
 אובדן אחריות
@@ -140,7 +140,7 @@ XDA Developers
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>: קהילת מפתחי האנדרואיד הגדולה בעולם, עם שפע מדריכי הבהוב ומשאבי ROM.
+: קהילת מפתחי האנדרואיד הגדולה בעולם, עם שפע מדריכי הבהוב ומשאבי ROM.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Coolapk (CoolAPK)</strong>: קהילה דיגיטלית ידועה, עם מדריכים ודיונים רבים.
@@ -152,7 +152,7 @@ XDA Developers
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: האם ניתן לשחזר לאחר פתיחת נעילת BL?
+Q1: האם ניתן לשחזר לאחר פתיחת נעילת BL?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong>ניתן לנעול מחדש. בדרך כלל נדרש לצרוב חבילת יצרן מלאה ולהשתמש בסקריפט צריבה (כמו של Xiaomi) <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>) כדי לנעול. אך שים לב, נעילה מחדש לא מבטלת נתיכי אבטחה (כמו Knox של Samsung).
@@ -160,7 +160,7 @@ XDA Developers
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: איך מבצעים Root לאחר פתיחה?
+Q2: איך מבצעים Root לאחר פתיחה?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong>פתיחת BL היא רק הצעד הראשון. Root בדרך כלל דורש:

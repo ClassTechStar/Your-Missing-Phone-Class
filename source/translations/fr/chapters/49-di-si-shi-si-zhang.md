@@ -34,10 +34,10 @@ Crée une page web personnelle d'outils avec ces exigences :
 1. HTML en un seul fichier (CSS et JS en ligne), sans framework
 2. Thème sombre, style moderne et minimaliste
 3. Affiche 4 cartes d'accès aux outils :
-   - Résumeur de texte
-   - Compteur de mots
-   - Sélecteur de couleur
-   - Générateur de QR codes
+ - Résumeur de texte
+ - Compteur de mots
+ - Sélecteur de couleur
+ - Générateur de QR codes
 4. Chaque carte avec icône, titre et description courte
 5. Les cartes ont une animation au survol
 6. Mise en page responsive, utilisable sur mobile
@@ -109,17 +109,17 @@ Exigences :
 1. Serveur Express, port 3001
 2. Base de données SQLite, table records
 3. Champs de la table records :
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. Endpoints CRUD :
-   GET /api/records - récupérer toutes les entrées
-   POST /api/records - ajouter une entrée
-   PUT /api/records/:id - mettre à jour une entrée
-   DELETE /api/records/:id - supprimer une entrée
+ GET /api/records - récupérer toutes les entrées
+ POST /api/records - ajouter une entrée
+ PUT /api/records/:id - mettre à jour une entrée
+ DELETE /api/records/:id - supprimer une entrée
 5. Middleware de gestion des erreurs
 Donne la structure complète du code backend.
 ```

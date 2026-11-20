@@ -34,10 +34,10 @@ kind: chapter
 1. HTML ไฟล์เดียว (ฝัง CSS และ JS) ไม่ใช้เฟรมเวิร์ก
 2. ธีมมืด สไตล์มินิมอลสมัยใหม่
 3. แสดงการ์ดเครื่องมือ 4 ตัว:
-   - เครื่องมือสรุปข้อความ
-   - เครื่องมือนับคำ
-   - เครื่องมือเลือกสี
-   - เครื่องมือสร้าง QR Code
+ - เครื่องมือสรุปข้อความ
+ - เครื่องมือนับคำ
+ - เครื่องมือเลือกสี
+ - เครื่องมือสร้าง QR Code
 4. แต่ละการ์ดมีไอคอน ชื่อ และคำอธิบายสั้น ๆ
 5. การ์ดมีแอนิเมชันตอนชี้เมาส์
 6. เรสปอนซีฟ ใช้บนมือถือได้
@@ -109,17 +109,17 @@ Record { id, amount, type, category, note, date }
 1. เซิร์ฟเวอร์ Express พอร์ต 3001
 2. ฐานข้อมูล SQLite ชื่อตาราง records
 3. ฟิลด์ตาราง records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. API CRUD:
-   GET /api/records - ดึงรายการทั้งหมด
-   POST /api/records - เพิ่มรายการ
-   PUT /api/records/:id - แก้ไขรายการ
-   DELETE /api/records/:id - ลบรายการ
+ GET /api/records - ดึงรายการทั้งหมด
+ POST /api/records - เพิ่มรายการ
+ PUT /api/records/:id - แก้ไขรายการ
+ DELETE /api/records/:id - ลบรายการ
 5. Middleware จัดการข้อผิดพลาด
 ขอโครงโค้ดแบ็กเอนด์แบบเต็มมาให้หน่อย
 ```

@@ -35,20 +35,20 @@ The SwiftUI state toolbox at a glance (2026, @Observable is now mainstream)
 import Observation
 
 @Observable
-class CounterModel {                 // the view model
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // the view model
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // holds the model
+ @State private var model = CounterModel() // holds the model
 
-    var body: some View {
-        VStack {
-            Text("You tapped \(model.count) times")
-            Button("Tap me") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("You tapped \(model.count) times")
+ Button("Tap me") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ Since iOS 16, multi-screen navigation uses NavigationStack,like a stack of plate
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Alex's ledger") {
-                    DetailView(name: "Alex's ledger")   // destination screen
-                }
-                NavigationLink("Sam's ledger") {
-                    DetailView(name: "Sam's ledger")
-                }
-            }
-            .navigationTitle("Ledger list")   // large title at the top
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("Alex's ledger") {
+ DetailView(name: "Alex's ledger") // destination screen
+ }
+ NavigationLink("Sam's ledger") {
+ DetailView(name: "Sam's ledger")
+ }
+ }
+ .navigationTitle("Ledger list") // large title at the top
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("\(name) details")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("\(name) details")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ Besides "pushing screens," there are two more classic interactions:
 ```
 // 1. Slides up half/full screen (the favorite for entry forms)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("Add entry") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // the entry sheet
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("Add entry") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // the entry sheet
+ }
+ }
 }
 
 // 2. The bottom tab bar (the app's "skeleton")
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("Ledger", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("Stats", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("Settings", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("Ledger", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("Stats", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("Settings", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ The most used,and most "Apple-flavored",component on iOS is List: it comes with 
 
 ```
 struct RecordListView: View {
-    @State private var records = ["Lunch 25.5", "Metro 6.0", "Salary +8000"]
+ @State private var records = ["Lunch 25.5", "Metro 6.0", "Salary +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // swipe left to delete
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // swipe left to delete
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ Much like Android's Activity lifecycle, iOS apps also move through "born, foregr
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("Back in the foreground, resuming refresh")
-            case .inactive:  print("Transitioning (call / just backgrounded)")
-            case .background: print("Went to background, saving draft")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("Back in the foreground, resuming refresh")
+ case .inactive: print("Transitioning (call / just backgrounded)")
+ case .background: print("Went to background, saving draft")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

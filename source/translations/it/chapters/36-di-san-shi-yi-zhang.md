@@ -70,7 +70,7 @@ La copertina del breve video è la "vetrina", decide se gli utenti cliccano. Alc
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fai: gira un breve video di 30 secondi
+Fai: gira un breve video di 30 secondi
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Scegli una piccola conoscenza che padeggi (es. "come ingrandire i caratteri del telefono").
@@ -82,7 +82,7 @@ La copertina del breve video è la "vetrina", decide se gli utenti cliccano. Alc
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Riepilogo del capitolo
+Riepilogo del capitolo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Prima di girare: chi è il pubblico, che valore offri, su quale piattaforma pubblichi

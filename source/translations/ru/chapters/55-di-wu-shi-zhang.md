@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = Иван        // val: переменная только для чтения (по умолчанию берём её)
-var age = 18             // var: изменяемая переменная (можно менять позже)
+val name = Иван // val: переменная только для чтения (по умолчанию берём её)
+var age = 18 // var: изменяемая переменная (можно менять позже)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var можно изменить
-// name = "Мария"         // <i class="fas fa-times-circle mr-1"></i> val изменить нельзя — ошибка компиляции
+age = 19 // var можно изменить
+// name = "Мария" // val изменить нельзя — ошибка компиляции
 
-val score: Int = 100     // тип можно указать и явно
-val pi = 3.14            // можно не писать — выведется сам
+val score: Int = 100 // тип можно указать и явно
+val pi = 3.14 // можно не писать — выведется сам
 ```
 :::
 
@@ -63,15 +63,15 @@ val pi = 3.14            // можно не писать — выведется 
 
 ```
 fun greet(name: String): String {
-    return "Привет, $name!"     // знак $ вставляет переменную в строку
+ return "Привет, $name!" // знак $ вставляет переменную в строку
 }
 
-println(greet(Иван))        // вывод: Привет, Иван!
+println(greet(Иван)) // вывод: Привет, Иван!
 
 // однострочную функцию можно записать выражением
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // вывод: 8
+println(add(3, 5)) // вывод: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // вывод: 8
 // Ветвление: if / else
 val age = 17
 if (age >= 18) {
-    println("взрослый")
+ println("взрослый")
 } else {
-    println("несовершеннолетний")
+ println("несовершеннолетний")
 }
 
 // Множественный выбор: when (в сто раз удобнее switch)
 val score = 85
 val level = when {
-    score >= 90 -> "отлично"
-    score >= 60 -> "зачёт"
-    else -> "Так держать!"
+ score >= 90 -> "отлично"
+ score >= 60 -> "зачёт"
+ else -> "Так держать!"
 }
 
 // Повторение: цикл for
 val fruits = listOf("яблоко", "банан", "апельсин")
 for (fruit in fruits) {
-    println("Я люблю $fruit")
+ println("Я люблю $fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ when: самый ходовой в Kotlin способ записать множ
 :::
 
 ```
-var name: String = "Иван"   // обычный тип: null не допускается
-// name = null                // <i class="fas fa-times-circle mr-1"></i> ошибка компиляции — вас сразу остановят
+var name: String = "Иван" // обычный тип: null не допускается
+// name = null // ошибка компиляции — вас сразу остановят
 
 var nickname: String? = null // добавляем вопросик: null разрешён
 nickname = "Ваня"
 
 // С nullable-типами нужно обращаться безопасно:
-println(nickname?.length)    // безопасный вызов: вернёт null, не падая
-val len = nickname?.length ?: 0   // оператор Элвиса: значение по умолчанию при null
+println(nickname?.length) // безопасный вызов: вернёт null, не падая
+val len = nickname?.length ?: 0 // оператор Элвиса: значение по умолчанию при null
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ String? означает «может быть пустым», а a ?: b: «ес
 ```
 // Обычный класс: форма
 class Dog(val name: String) {
-    fun bark() = println("$name: Гав!")
+ fun bark() = println("$name: Гав!")
 }
 
-val dog = Dog("Шарик")      // создаём объект
-dog.bark()                 // Шарик: Гав!
+val dog = Dog("Шарик") // создаём объект
+dog.bark() // Шарик: Гав!
 
 // data class: коробка для данных (с готовыми equals/copy и т.д.)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, Иван, "zhangsan@example.com")
-val twin = me.copy(name = "Иванушка")   // копируем и меняем одно поле
+val twin = me.copy(name = "Иванушка") // копируем и меняем одно поле
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // Через lambda: определяем на месте, коротко и прямо
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = текущий элемент
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = текущий элемент
 
 // Комбо «фильтр + преобразование» (крайне часто в реальных проектах)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

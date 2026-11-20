@@ -27,46 +27,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支手機系統</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支車型</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">能豐度</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">國內可用性</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">僅 iPhone</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極廣，絕大多數車型支</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，地圖/音樂/電話/消息均可</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">好，原生可用</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（國內手機需裝服框架）</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較廣，合資/進口車居多</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，與CarPlay相當</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通常，需科學上網激活</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華爲HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華爲手機爲主，部支其他安卓</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">國產車與部合資車型</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較高，可與鴻蒙座艙聯動</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">甚好，本土生態</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 與 Android 均可</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較廣，舊車型後裝常見</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中，更新較慢</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">甚好，本土生態</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支手機系統</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支車型</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">能豐度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">國內可用性</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">僅 iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極廣，絕大多數車型支</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，地圖/音樂/電話/消息均可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">好，原生可用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（國內手機需裝服框架）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較廣，合資/進口車居多</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，與CarPlay相當</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通常，需科學上網激活</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華爲HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華爲手機爲主，部支其他安卓</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">國產車與部合資車型</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較高，可與鴻蒙座艙聯動</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">甚好，本土生態</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 與 Android 均可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較廣，舊車型後裝常見</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中，更新較慢</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">甚好，本土生態</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>安全提醒
+安全提醒
 
 {class="mt-1"}
 無論用哪種方案，駕駛時操作手機皆違反交規。手機支架只能用以"觀導航"，不可用以"操作手機"。設置目的地、切換歌曲等操作，請務必停車後再作，或使用語音控制。
@@ -111,7 +111,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>選車時之小建議
+選車時之小建議
 
 {class="mt-1"}
 若於乎車機體驗，選車時務必去4S店實測：①帶自己之手機試CarPlay/HiCar連接為否穩定；②試語音助手之反應速度與指令識別率；③觀應用市場有無汝常用之App；④關注後續OTA升級頻率，好車機乃用軟件迭代出來之。
@@ -119,7 +119,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手：優化汝之車機互聯體驗
+動手：優化汝之車機互聯體驗
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 確認汝之手機與車機支持之互聯方案（CarPlay / HiCar / Android Auto / CarLife）。

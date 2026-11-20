@@ -61,7 +61,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>嚟動手：打造你嘅手機娛樂系統
+嚟動手：打造你嘅手機娛樂系統
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 喺音樂App入面下載你最鍾意嘅3張專輯或歌單，確保離線可聽。

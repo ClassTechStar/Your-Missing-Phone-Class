@@ -39,14 +39,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // כתיבה: לשמור ערך
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // קריאה: להוציא את הערך (‏Flow מודיע על שינויים אוטומטית)
 val themeFlow: Flow<Boolean> = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -65,33 +65,33 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 // 1. ‏Entity: מבנה הטבלה (טבלה אחת = data class אחד)
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. ‏Dao: ממשק הפעולות (הוספה, מחיקה, עדכון, שליפה)
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. ‏Database: ההרכבה הסופית
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -110,16 +110,16 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 // 1. להגדיר את הממשק: לתאר בקשות HTTP כפונקציות
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. יצירת המופע
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. לקרוא כמו לפונקציה רגילה (בתוך קורוטינה)
 val result = api.getWeather("תל אביב")
@@ -156,9 +156,9 @@ val result = api.getWeather("תל אביב")
 // הוסף את האנוטציה @Serializable ל-data class
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // מחברים ל-Retrofit את ה-Converter המתאים (דוגמה עם התמיכה הרשמית של Retrofit 2.11+):
@@ -180,13 +180,13 @@ data class WeatherResponse(
 ```
 // הפעלת קורוטינה בתוך ה-ViewModel
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend: מושהה וממתין אוטומטית
-    // לעדכן את מצב הממשק…
+ val records = dao.getAll().first() // suspend: מושהה וממתין אוטומטית
+ // לעדכן את מצב הממשק…
 }
 
 // פתק זיכרון למילות המפתח:
-// suspend   —— "אני צריך לחכות, אל תחסום לאחרים"
-// launch    —— "קדימה, לעבודה!"
+// suspend —— "אני צריך לחכות, אל תחסום לאחרים"
+// launch —— "קדימה, לעבודה!"
 // viewModelScope —— "סדנת העבודה" שהולכת אחרי המסך; נסגרת מעצמה כשהמסך נהרס
 ```
 :::

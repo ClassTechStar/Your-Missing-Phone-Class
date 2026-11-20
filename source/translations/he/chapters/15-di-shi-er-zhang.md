@@ -61,7 +61,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>לך ל-XiaoYu או פודקאסטים של אפל, הירשם ל-3 ערוצים מעניינים, הורד פרק אחד להאזנה.
+לך ל-XiaoYu או פודקאסטים של אפל, הירשם ל-3 ערוצים מעניינים, הורד פרק אחד להאזנה.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. התקן נגן VLC, נסה לנגן קובץ וידאו שהעתקת מהמחשב.

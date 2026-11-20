@@ -22,7 +22,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>تمرين أخير
+تمرين أخير
 
 {class="mt-1"}
 أغلق هذا الكتاب، احمل هاتفك، افعل شيئاً واحداً:<strong>فكّر 30 ثانية، ما الأشياء الثلاثة في هاتفك التي "فقدانها يؤلمك حقاً"؟</strong>ثم تأكد من نسخها احتياطياً. هذا الكتاب يستحق.

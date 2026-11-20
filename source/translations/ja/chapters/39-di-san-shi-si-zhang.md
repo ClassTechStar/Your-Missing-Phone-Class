@@ -27,46 +27,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方式</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">対応スマホOS</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">対応車種</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">機能の豊富さ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">国内での利用性</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhoneのみ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極めて広い、大部分の車種が対応</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高い、マップ/音楽/電話/メッセージすべて可能</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">良い、ネイティブで利用可能</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（国内スマホはサービスフレームワークのインストールが必要）</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的広い、合合弁/輸入車が中心</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高い、CarPlayと同等</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般、VPNでのアクティベーションが必要</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huaweiスマホ中心、一部他のAndroidも対応</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国産車と一部合弁車種</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的高い、HarmonyOSコックピットと連携可能</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">とても良い、ローカルエコシステム</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOSとAndroidの両方に対応</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的広い、旧型車の後付けで一般的</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中程度、更新が遅い</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">とても良い、ローカルエコシステム</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方式</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">対応スマホOS</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">対応車種</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">機能の豊富さ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">国内での利用性</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhoneのみ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極めて広い、大部分の車種が対応</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高い、マップ/音楽/電話/メッセージすべて可能</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">良い、ネイティブで利用可能</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（国内スマホはサービスフレームワークのインストールが必要）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的広い、合合弁/輸入車が中心</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高い、CarPlayと同等</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般、VPNでのアクティベーションが必要</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huaweiスマホ中心、一部他のAndroidも対応</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国産車と一部合弁車種</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的高い、HarmonyOSコックピットと連携可能</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">とても良い、ローカルエコシステム</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOSとAndroidの両方に対応</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比較的広い、旧型車の後付けで一般的</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中程度、更新が遅い</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">とても良い、ローカルエコシステム</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ CarPlayが"スマホをカースルにキャスト"だとすれば、HarmonyOS�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>セキュリティに関する注意
+セキュリティに関する注意
 
 {class="mt-1"}
 どの方法を使っても、運転中のスマホ操作は交通規則違反です。スマホホルダーは「ナビを見る」ためのみに使用し、「スマホを操作する」ためには使えません。目的地の設定、楽曲の切り替えなどの操作は、必ず停車してから行うか、音声操作を使用してください。
@@ -111,7 +111,7 @@ CarPlayが"スマホをカースルにキャスト"だとすれば、HarmonyOS�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>車選びのアドバイス
+車選びのアドバイス
 
 {class="mt-1"}
 カースル体験を重視する場合、車選びの際は必ずディーラーで実測する：①自分のスマホを持参しCarPlay/HiCarの接続が安定しているかテスト；②音声アシスタントの反応速度とコマンド認識率を試す；③アプリストアによく使うAppがあるか確認；④今後のOTAアップデート頻度を確認，良いカースルはソフトウェアの反復で作られる。
@@ -119,7 +119,7 @@ CarPlayが"スマホをカースルにキャスト"だとすれば、HarmonyOS�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>実践：カースル連携体験を最適化する
+実践：カースル連携体験を最適化する
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. スマホとカースルが対応する連携方案（CarPlay / HiCar / Android Auto / CarLife）を確認。
@@ -130,7 +130,7 @@ CarPlayが"スマホをカースルにキャスト"だとすれば、HarmonyOS�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - カースル連携の三大ルート：キャスト（CarPlayなど）、深い融合（HarmonyOSコックピットなど）、CarPlay 2.0深い統合

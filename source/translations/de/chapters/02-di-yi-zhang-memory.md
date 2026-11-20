@@ -53,7 +53,7 @@ Der Aktivierungspfad lautet meist: [Einstellungen] → [Weitere Einstellungen] �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>4. Anwendungsszenarien und Grenzen des Nutzens
+4. Anwendungsszenarien und Grenzen des Nutzens
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Die Arbeitsspeicher-Erweiterung belegt einen Teil des internen Speichers. Stelle sicher, dass mindestens 20-30GB frei bleiben, sonst kann die Systemflüssigkeit beeinträchtigt werden.
@@ -63,7 +63,7 @@ Der Aktivierungspfad lautet meist: [Einstellungen] → [Weitere Einstellungen] �
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Zusammenfassung
+Zusammenfassung
 
 {class="mt-1"}
 Die Arbeitsspeicher-Erweiterung ist eine ausgereifte systemnahe Optimierungstechnologie, die bei unveränderter Hardware die Multitasking-Fähigkeit und die Hintergrund-Aktivhalte-Rate von Mittelklasse-Modellen verbessern kann. Sie ist jedoch durch die gewaltige Geschwindigkeitslücke zwischen Flash-Speicher und physischem Arbeitsspeicher begrenzt und „kein Wundermittel". Ob und in welcher Größe sie aktiviert wird, sollte unter Berücksichtigung des physischen Arbeitsspeichers, der Flash-Spezifikation, des freien Speichers und der eigenen Nutzungsgewohnheiten entschieden werden.
@@ -71,7 +71,7 @@ Die Arbeitsspeicher-Erweiterung ist eine ausgereifte systemnahe Optimierungstech
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt ausprobieren: Hat dein Smartphone eine Arbeitsspeicher-Erweiterung?
+Jetzt ausprobieren: Hat dein Smartphone eine Arbeitsspeicher-Erweiterung?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Öffne [Einstellungen] und suche nach „Speichererweiterung", „Speicherverschmelzung", „RAM Plus" oder „Extended RAM".

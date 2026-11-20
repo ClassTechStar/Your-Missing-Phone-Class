@@ -66,7 +66,7 @@ Lampu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>Teknologi UWB Ultra-Wideband — "Rasa ruang" lebih tepat daripada Bluetooth
+Teknologi UWB Ultra-Wideband — "Rasa ruang" lebih tepat daripada Bluetooth
 
 {class="mt-1"}
 Selain Bluetooth, telefon baharu juga ada cip UWB (Ultra-Wideband). Keupayaannya adalah <strong>Pengukuran jarak tepat dan penentuan kedudukan ruang</strong>— boleh kira peranti lain berapa jauh dari anda, di arah mana, ketepatan boleh capai sentimeter. Bluetooth hanya boleh beritahu "berdekatan", UWB boleh beritahu "1.2 meter di hadapan kiri anda". Aplikasi biasa:
@@ -80,7 +80,7 @@ Selain Bluetooth, telefon baharu juga ada cip UWB (Ultra-Wideband). Keupayaannya
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio dan Auracast — Standard generasi baharu audio Bluetooth
+LE Audio dan Auracast — Standard generasi baharu audio Bluetooth
 
 {class="mt-1"}
 Audio Bluetooth klasik (A2DP) yang diguna dua puluh tahun sedang diganti <strong>LE Audio</strong>(Audio Tenaga Rendah), ini standard audio generasi baharu selepas Bluetooth 5.2:
@@ -110,7 +110,7 @@ Mari cuba: Unjuk skrin telefon pintar ke TV, dan tetapkan satu senario pintar
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pilih satu foto kegemaran anda dan unjuk ke TV, biar ahli keluarga melihatnya.
+Pilih satu foto kegemaran anda dan unjuk ke TV, biar ahli keluarga melihatnya.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Jika anda mempunyai peranti rumah pintar, cuba cipta "Mod Keluar Rumah" dalam App telefon pintar: satu ketik matikan lampu, matikan penyaman udara, mulakan robot pembersih vakum
@@ -122,7 +122,7 @@ Mari cuba: Unjuk skrin telefon pintar ke TV, dan tetapkan satu senario pintar
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Kes 1: Pengoptimuman jangka hayat bateri praktikal
+Kes 1: Pengoptimuman jangka hayat bateri praktikal
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Kesan praktikal: Wi-Fi 7 router telah mula dijual, tetapi telefon perlu sokong. iPhone 15 Pro/16 siri, Xiaomi 14, Samsung S24 Ultra dll flagship 2024 telah sokong Wi-Fi 7; peranti lebih awal disokong melalui kemas kini OS. Jika ada router Wi-Fi 7, boleh nikmati kelajuan rangkaian lebih cepat dan lebih stabil.</strong>: Pengguna Xiaomi 14 jangka hayat bateri rendah, separuh hari sudah tiada bateri.

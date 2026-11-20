@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>「夠用就好」原則
+「夠用就好」原則
 
 {class="mt-1"}
 仔嘅第一部手機唔需要旗艦。處理器嘅「過剩效能」往往被用嚟跑遊戲。選一臺電池夠大、效能中等、螢幕護眼嘅千元機或官方翻新機，反而更有利管控。預算參考：1500-2500元區間即可滿足絕大多數學生需求。
@@ -60,27 +60,27 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS 螢幕使用時間</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">安卓 Family Link / 品牌方案</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App限額</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援，按類別</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援，按App</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">停用時間</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援（品牌方案略有差異）</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">內容過濾</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系統級，較徹底</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依賴品牌，參差不齊</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">遠程管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家庭共享</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / 品牌雲</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安裝App審批</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需家長批准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link 支援</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS 螢幕使用時間</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">安卓 Family Link / 品牌方案</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App限額</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援，按類別</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援，按App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">停用時間</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支援（品牌方案略有差異）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">內容過濾</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系統級，較徹底</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依賴品牌，參差不齊</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">遠程管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家庭共享</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / 品牌雲</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安裝App審批</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需家長批准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link 支援</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>家長控制唔係「一勞永逸」
+家長控制唔係「一勞永逸」
 
 {class="mt-1"}
 仔總能搵到繞過嘅方法（網上搜「點樣破解螢幕使用時間」嘅教程一大把）。技術手段淨係底線，真正嘅防線係親子溝通同信任。建議每月同仔一齊復盤使用報告，而唔係單方面監控。
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>實名認證唔好用家長身份證「借號」
+實名認證唔好用家長身份證「借號」
 
 {class="mt-1"}
 好多仔用家長身份證註冊遊戲帳號繞過防沉迷，呢個既違反用戶協議，亦等仔失去保護。家長應保管好自己嘅支付密碼與身份資訊，唔好為咗慳事「借號」畀仔。
@@ -113,7 +113,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手：同仔一齊簽一份《手機使用公約》
+動手：同仔一齊簽一份《手機使用公約》
 
 {class="mt-1"}
 將規則寫低、雙方簽字貼喺顯眼處，比口頭約定有效得多。建議包含：
@@ -137,7 +137,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>家長係最好嘅「防火牆」
+家長係最好嘅「防火牆」
 
 {class="mt-1"}
 研究表明，父母自身手機使用時長與仔呈強正相關。要求仔唔睇手機，自己卻掃短影片到深夜，規則就會失效。改變仔，先由放低自己嘅手機開始。
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>警惕「兒童數字遺產」嘅另一面
+警惕「兒童數字遺產」嘅另一面
 
 {class="mt-1"}
 仔由出世起就喺度被「記錄」，家長曬嘅成長相、幼兒園發嘅影片、智能手錶嘅健康數據。呢啲數據一旦上傳就難以徹底刪除。發布前諗一諗：十年後仔會唔會因為呢張相感到尷尬？尊重仔嘅數字人格，由剋制「曬娃」開始。
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小結
+本章小結
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 畀手機嘅年齡冇標準答案，但3-6歲盡量唔碰、13歲前用兒童手錶或功能機過渡

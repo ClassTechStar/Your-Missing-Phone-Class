@@ -70,7 +70,7 @@ A capa do vídeo curto é a "fachada" que determina se as pessoas vão ou não c
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: Grave um vídeo curto de 30 segundos
+Mãos à obra: Grave um vídeo curto de 30 segundos
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Escolha um pequeno conhecimento que você domina (como "como aumentar a fonte do celular").
@@ -82,7 +82,7 @@ A capa do vídeo curto é a "fachada" que determina se as pessoas vão ou não c
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo
+Resumo do capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Antes de gravar, defina: quem é o público, que valor oferecer, em qual plataforma publicar

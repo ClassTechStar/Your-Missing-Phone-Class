@@ -68,14 +68,14 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">App</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最值得用的功能</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">关键设置在哪</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网易云音乐</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">场景歌单搜索、评论区、私人FM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">侧边栏 → 设置：音质、缓存上限、桌面歌词</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QQ音乐</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全量曲库、歌手页资料、听歌识曲</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">我的 → 设置：音质档位、仅WiFi下载</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损与杜比全景声、多设备接力</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统设置 → 音乐：音质、下载、自动加入资料库</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spotify</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日推、每周发现、跨平台歌单文化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置：数据节省模式、下载音质</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">汽水音乐</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费推荐流、抖音热歌同步</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置：流量提醒、离线设置</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">App</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最值得用的功能</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">关键设置在哪</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网易云音乐</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">场景歌单搜索、评论区、私人FM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">侧边栏 → 设置：音质、缓存上限、桌面歌词</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QQ音乐</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全量曲库、歌手页资料、听歌识曲</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">我的 → 设置：音质档位、仅WiFi下载</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损与杜比全景声、多设备接力</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统设置 → 音乐：音质、下载、自动加入资料库</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spotify</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日推、每周发现、跨平台歌单文化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置：数据节省模式、下载音质</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">汽水音乐</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费推荐流、抖音热歌同步</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置：流量提醒、离线设置</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -212,14 +212,14 @@ K 歌和音乐社交提一句就够：想唱两嗓子，主流的 K 歌 App（�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">内容类型</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">首选方式</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话理由</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正在追的剧集</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频 App + 电视投屏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大屏观感，进度云端同步</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电脑里的老电影</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer 本地播放</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不受平台下架和转码影响</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">教程与学习视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">B站/视频 App + 收藏夹</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">倍速、章节、反复看</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通勤路上的碎片内容</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短视频/中视频 + 限额</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时间短，闸门必须先装好</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全家一起看的节目</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电视大屏 + 少儿模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内容可控，全家同一块屏</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">内容类型</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">首选方式</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话理由</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正在追的剧集</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频 App + 电视投屏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大屏观感，进度云端同步</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电脑里的老电影</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer 本地播放</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不受平台下架和转码影响</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">教程与学习视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">B站/视频 App + 收藏夹</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">倍速、章节、反复看</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通勤路上的碎片内容</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短视频/中视频 + 限额</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时间短，闸门必须先装好</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全家一起看的节目</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电视大屏 + 少儿模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内容可控，全家同一块屏</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -280,12 +280,12 @@ Kindle 的情况值得单独交代清楚。中国区书城已经关闭，新买�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设备</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">强项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">永远随身、查词方便、App 生态全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕小、通知多、易分心</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">碎片时间读者</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大屏、PDF 和漫画体验好、分屏记笔记</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长时间阅读眼睛累、睡前诱惑多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图文书、教材、漫画读者</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">墨水屏阅读器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">类纸观感、久读不累、户外可读</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷新慢、图文混排弱、功能少</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日读半小时以上的纯文字读者</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设备</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">强项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">永远随身、查词方便、App 生态全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕小、通知多、易分心</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">碎片时间读者</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大屏、PDF 和漫画体验好、分屏记笔记</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长时间阅读眼睛累、睡前诱惑多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图文书、教材、漫画读者</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">墨水屏阅读器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">类纸观感、久读不累、户外可读</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷新慢、图文混排弱、功能少</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日读半小时以上的纯文字读者</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -452,7 +452,7 @@ AI 摘要类功能（视频要点总结、播客文字速览）的正确用法�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 娱乐App最常制造的不是快乐，是「空间不足」和「忘了取消的订阅」。
@@ -460,7 +460,7 @@ AI 摘要类功能（视频要点总结、播客文字速览）的正确用法�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：打造你的手机娱乐系统
+来动手：打造你的手机娱乐系统
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 在音乐App里下载你最喜欢的3张专辑或歌单，确保离线可听。
@@ -472,7 +472,7 @@ AI 摘要类功能（视频要点总结、播客文字速览）的正确用法�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 音乐 App 选型的三问：版权在哪、逛着听还是点着听、花多少钱；汽水可当免费发现流，收藏放版权全的平台

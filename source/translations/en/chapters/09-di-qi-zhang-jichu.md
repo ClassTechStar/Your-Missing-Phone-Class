@@ -42,7 +42,7 @@ Supported models:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Uses Bluetooth or dedicated radio frequencies to establish point-to-point connections over short distances (usually a few hundred meters to a few kilometers).
+Uses Bluetooth or dedicated radio frequencies to establish point-to-point connections over short distances (usually a few hundred meters to a few kilometers).
 
 {class="mt-1"}
 Application scenarios:
@@ -115,7 +115,7 @@ Search for "crash detection" or "emergency SOS" to check if it's enabled.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>If your phone is Huawei, see if it supports SparkLink device connections.
+If your phone is Huawei, see if it supports SparkLink device connections.
 
 {class="mt-1"}
 Learn how to use these features,they may come in handy at critical moments.

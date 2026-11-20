@@ -67,7 +67,7 @@ Tout le processus a duré environ quarante minutes, sans jamais ouvrir l'ordinat
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez : construisez votre flux de travail mobile
+Essayez : construisez votre flux de travail mobile
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Choisissez votre application document principale (WPS ou Microsoft 365), connectez-vous et associez le cloud.

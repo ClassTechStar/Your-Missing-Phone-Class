@@ -55,7 +55,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0) dan HarmonyOS 4.3 memiliki perbedaan mendasa
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Wajib baca sebelum upgrade ke HarmonyOS NEXT
+Wajib baca sebelum upgrade ke HarmonyOS NEXT
 
 {class="mt-1"}
 Setelah upgrade ke HarmonyOS NEXT, ponsel Anda tidak akan bisa menjalankan aplikasi Android. Harap pastikan sebelum upgrade: ① Aplikasi yang sering Anda gunakan sudah punya versi native HarmonyOS; ② Pekerjaan atau kehidupan Anda tidak ada skenario yang harus bergantung pada aplikasi Android. Setelah upgrade tidak bisa rollback ke HarmonyOS 4.3.
@@ -94,7 +94,7 @@ AppGallery HarmonyOS sudah memiliki jutaan aplikasi, App mainstream pada dasarny
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Pengaturan dalam mode pengembang dapat mempengaruhi stabilitas sistem, opsi yang tidak dipahami jangan diubah sembarangan. Setelah mengaktifkan debugging USB, berhati-hatilah saat menghubungkan ke komputer, jangan hubungkan ke komputer yang tidak dipercaya.
+Pengaturan dalam mode pengembang dapat mempengaruhi stabilitas sistem, opsi yang tidak dipahami jangan diubah sembarangan. Setelah mengaktifkan debugging USB, berhati-hatilah saat menghubungkan ke komputer, jangan hubungkan ke komputer yang tidak dipercaya.
 
 {class="mt-1"}
 Sistem HarmonyOS terus update dan iterasi, versi berbeda mungkin ada beberapa perbedaan. Deskripsi artikel ini berdasarkan fitur utama HarmonyOS 4.3 dan 6, fungsi spesifik harap merujuk pada versi aktual ponsel Anda. Disarankan menjaga sistem update, untuk mendapatkan fitur terbaru dan security patch.
@@ -102,7 +102,7 @@ Sistem HarmonyOS terus update dan iterasi, versi berbeda mungkin ada beberapa pe
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Coba sekarang: Rasakan fitur khas HarmonyOS
+Coba sekarang: Rasakan fitur khas HarmonyOS
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka control center, temukan "Super Terminal", lihat apakah ada perangkat HarmonyOS lain di sekitar.

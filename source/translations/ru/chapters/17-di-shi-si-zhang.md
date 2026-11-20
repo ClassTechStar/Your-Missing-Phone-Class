@@ -46,7 +46,7 @@ AES (Advanced Encryption Standard) — симметричный алгоритм
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Почему «нулевое знание» означает, что сервис тоже не видит ваши пароли?
+Почему «нулевое знание» означает, что сервис тоже не видит ваши пароли?
 
 {class="mt-1"}
 Потому что ключ расшифровки извлекается из вашего мастер-пароля, а мастер-пароль существует только в вашей голове и используется только на вашем локальном устройстве. На серверах провайдера нет ни мастер-пароля, ни ключа расшифровки: только шифротекст. Именно поэтому такие надёжные сервисы, как Bitwarden и 1Password, прямо заявляют: «Мы тоже не можем видеть ваши пароли», не потому, что не хотят, а потому, что технически не могут.
@@ -71,7 +71,7 @@ AES (Advanced Encryption Standard) — симметричный алгоритм
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Чему нас учит инцидент с LastPass
+Чему нас учит инцидент с LastPass
 
 {class="mt-1"}
 Во-первых, мастер-пароль должен быть длинным и уникальным (рекомендуется не менее 16 символов, включая заглавные и строчные буквы, цифры и символы). Во-вторых, отдавайте предпочтение сервисам, поддерживающим Argon2id с высоким числом итераций. В-третьих, для наиболее ценных учётных записей (банк, почта) обязательно включите отдельную двухфакторную аутентификацию, не полагайтесь только на менеджер паролей.
@@ -118,7 +118,7 @@ AES (Advanced Encryption Standard) — симметричный алгоритм
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Принцип запроса k-Anonymity
+Принцип запроса k-Anonymity
 
 {class="mt-1"}
 Беспокоитесь, что ввод пароля на HaveIBeenPwned может снова привести к утечке? Не стоит. Современные запросы используют протокол «k-анонимности»: браузер отправляет на сервер только первые 5 символов хеша пароля, сервер возвращает список всех хешей, начинающихся с этих 5 символов, а сравнение происходит локально. То есть сервер никогда не видит полный хеш вашего пароля. Именно так работают функции «обнаружения утёкших паролей» в 1Password и Bitwarden.
@@ -133,7 +133,7 @@ AES (Advanced Encryption Standard) — симметричный алгоритм
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Проверьте прямо сейчас: безопасны ли ваши пароли
+Проверьте прямо сейчас: безопасны ли ваши пароли
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Откройте haveibeenpwned.com, введите ваш основной email и посмотрите, в каких утечках он фигурирует.
@@ -159,36 +159,36 @@ Passkey основан на стандартах FIDO2 / WebAuthn и замен�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Аспект</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Традиционные пароли</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Защита от фишинга</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Слабая, фишинговые сайты могут украсть пароль</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Врождённая защита от фишинга, закрытый ключ подписывает только для подлинного домена</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Влияние утечки на сервере</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хеш пароля может быть взломан</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сервер хранит только открытый ключ, утечка не наносит вреда</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Удобство</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно запоминать/вводить/управлять</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Вход за секунду по Face ID/отпечатку пальца</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Атаки повторного воспроизведения</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Могут быть перехвачены и воспроизведены</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Каждая подпись одноразовая, невозможно воспроизвести</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Аспект</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Традиционные пароли</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Защита от фишинга</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Слабая, фишинговые сайты могут украсть пароль</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Врождённая защита от фишинга, закрытый ключ подписывает только для подлинного домена</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Влияние утечки на сервере</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хеш пароля может быть взломан</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сервер хранит только открытый ключ, утечка не наносит вреда</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Удобство</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно запоминать/вводить/управлять</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Вход за секунду по Face ID/отпечатку пальца</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Атаки повторного воспроизведения</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Могут быть перехвачены и воспроизведены</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Каждая подпись одноразовая, невозможно воспроизвести</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Поддержка на разных платформах
@@ -200,7 +200,7 @@ Passkey основан на стандартах FIDO2 / WebAuthn и замен�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Кросс-платформенная синхронизация — ключевой прорыв
+Кросс-платформенная синхронизация — ключевой прорыв
 
 {class="mt-1"}
 Главной проблемой ранних Passkey была «привязка к одному устройству», при смене телефона приходилось создавать всё заново. С 2023 года Apple, Google и Microsoft реализовали облачную синхронизацию Passkey: Связка ключей iCloud синхронизирует между устройствами Apple, Google Password Manager, между устройствами Android. Сторонние решения, такие как 1Password, обеспечивают кросс-экосистемную синхронизацию. Это означает, что Passkey уже пригодны для практической замены паролей.
@@ -236,7 +236,7 @@ Passkey основан на стандартах FIDO2 / WebAuthn и замен�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Попробуйте прямо сейчас: испытайте беспарольный вход
+Попробуйте прямо сейчас: испытайте беспарольный вход
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Войдите в аккаунт Google → Безопасность → Ключи доступа → Добавить ключ доступа, испытайте вход по Face ID/отпечатку пальца.
@@ -247,7 +247,7 @@ Passkey основан на стандартах FIDO2 / WebAuthn и замен�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Рекомендации на переходный период
+Рекомендации на переходный период
 
 {class="mt-1"}
 Passkey ещё не полностью заменил пароли: многие сайты находятся в стадии «Passkey + пароль». Рекомендация: для наиболее ценных учётных записей включайте Passkey в первую очередь, но <strong>не удаляйте сразу традиционный пароль</strong> — оставьте его как резервный; продолжайте использовать менеджер паролей, так как не все сайты поддерживают Passkey. Рассматривайте Passkey как «мощное дополнение к менеджеру паролей», а не как «немедленную замену».
@@ -295,7 +295,7 @@ Passkey ещё не полностью заменил пароли: многие
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Стратегия двух ключей
+Стратегия двух ключей
 
 {class="mt-1"}
 Самый большой риск аппаратного ключа, «потеря». Рекомендация: ① зарегистрируйте два разных ключа одновременно; ② один носите с собой (на брелоке), другой храните в домашнем сейфе или банковской ячейке; ③ некоторые сайты позволяют распечатать «резервные коды восстановления» и хранить их офлайн. Так вы не будете навсегда заблокированы вне аккаунта, даже если потеряете основной ключ.
@@ -303,7 +303,7 @@ Passkey ещё не полностью заменил пароли: многие
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Будьте осторожны с каналом покупки
+Будьте осторожны с каналом покупки
 
 {class="mt-1"}
 Обязательно покупайте в официальном магазине или у авторизованного дилера, не покупайте подержанные ключи или ключи неизвестного происхождения: теоретически предварительно настроенное оборудование может содержать бэкдор. Прошивку YubiKey нельзя обновить после выпуска, но Yubico постоянно публикует бюллетени безопасности, следите за их официальным сайтом.
@@ -336,7 +336,7 @@ Passkey ещё не полностью заменил пароли: многие
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Соотношение цены и качества семейной версии 1Password
+Соотношение цены и качества семейной версии 1Password
 
 {class="mt-1"}
 1Password Families стоит около 4,99 доллара в месяц и поддерживает до 5 членов семьи, каждый имеет независимое личное хранилище + 4 общих хранилища. В пересчёте на человека это менее 1 доллара в месяц — лучший вариант для семейного обмена. Семейная версия Bitwarden стоит 10 долларов в год на 6 человек, ещё выгоднее, но интерфейс немного уступает.
@@ -369,7 +369,7 @@ Passkey ещё не полностью заменил пароли: многие
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Настройте прямо сейчас: оставьте семье «запасной ключ»
+Настройте прямо сейчас: оставьте семье «запасной ключ»
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Выберите доверенного члена семьи в качестве «экстренного контакта».
@@ -388,7 +388,7 @@ Passkey ещё не полностью заменил пароли: многие
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Важное напоминание
+Важное напоминание
 
 {class="mt-1"}
 Менеджер паролей удобен, но несёт и риски: если мастер-пароль будет раскрыт, все пароли окажутся под угрозой. Поэтому мастер-пароль ни в коем случае не должен совпадать с другими паролями и не должен быть записан в легкодоступном месте. Кроме того, рекомендуется выбирать сервис с хорошей репутацией в области безопасности.
@@ -396,7 +396,7 @@ Passkey ещё не полностью заменил пароли: многие
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Попробуйте прямо сейчас: начните использовать менеджер паролей
+Попробуйте прямо сейчас: начните использовать менеджер паролей
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Выберите менеджер паролей (рекомендуется Bitwarden или встроенный в систему).

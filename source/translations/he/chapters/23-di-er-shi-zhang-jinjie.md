@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>הערות חשובות
+הערות חשובות
 
 {class="mt-1"}
 Bootloader הוא התוכנית שטוענת את מערכת ההפעלה באתחול הטלפון. נעילת BL היא מנעול שהיצרנים מוסיפים מטעמי אבטחה, למנוע מהמשתמש לצרוב מערכות לא רשמיות.
@@ -57,7 +57,7 @@ Bootloader הוא התוכנית שטוענת את מערכת ההפעלה בא�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>ידיעון: למה יצרנים מגדירים את המתג הזה
+ידיעון: למה יצרנים מגדירים את המתג הזה
 
 {class="mt-1"}
 בישנים לא היה, תוכנה זדונית יכלה לצרוב. Google דרש "OEM Unlock" כ"הסכמה". לכן גם BL פתוח, אם OEM סגור, צריבה נכשלת.
@@ -95,7 +95,7 @@ ADB = Android Debug Bridge, כלי שורת פקודה רשמי של Google המ
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>אל תתעלם מדרייבר וחלון הרשאה
+אל תתעלם מדרייבר וחלון הרשאה
 
 {class="mt-1"}
 משתמשי Windows אם <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> "unauthorized" או שהמכשיר לא מופיע כלל, כנראה הדרייבר לא מותקן או שכחת ללחוץ "אפשר" בטלפון. Samsung/Xiaomi ומותגים אחרים מספקים "USB Driver" או "Phone Assistant"; Mac ו-Linux בדרך כלל לא דורשים דרייבר. אם חלון האישור נעלם, נתק וחבר מחדש את הכבל.
@@ -124,7 +124,7 @@ ADB = Android Debug Bridge, כלי שורת פקודה רשמי של Google המ
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>אל תמחק חבילות ליבה של המערכת!
+אל תמחק חבילות ליבה של המערכת!
 
 {class="mt-1"}
 "pm uninstall" בלי Root, אך מחיקת App קריטי ( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> סרגל מצב,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> טלפון,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> ) = קריסה, מסך שחור. Google לפני מחיקה. מעט בכל פעם.
@@ -132,7 +132,7 @@ ADB = Android Debug Bridge, כלי שורת פקודה רשמי של Google המ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>ידיעון: מה המשמעות של --user 0
+ידיעון: מה המשמעות של --user 0
 
 {class="mt-1"}
 Android 4.2+ רב-משתמש, ID (בעלים 0, נוסף 10+).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> "הסרה רק לבעלים הנוכחי" - קובץ ה-APK במחיצת המערכת עדיין קיים, פשוט לא מוצג לבעלים. לכן אינו דורש Root - לא נגע בקבצי מערכת, רק שינה "הגדרות משתמש". זה ההבדל מ-Root: Root מוחק באמת מהמערכת, כל המשתמשים לא רואים; ADB רק "מסתיר למשתמש הנוכחי".
@@ -159,7 +159,7 @@ Root מקביל לסופר-יוזר ב-Linux (שליטה מלאה ב-/ , קרי�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>ארבע, המלצות למשתמשים רגילים
+ארבע, המלצות למשתמשים רגילים
 
 {class="mt-1"}
 מצב מפתח
@@ -198,7 +198,7 @@ App שולח בקשה לשרת Google דרך Play Integrity API, Google בודק
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>משחק החתול והעכבר לעולם לא יסתיים
+משחק החתול והעכבר לעולם לא יסתיים
 
 {class="mt-1"}
 Google מעדכן כללים מעת לעת, ויצרני App עוקבים ומשדרגים Play Integrity. מה שעובד היום עשוי להיחשף מחר. אם אתה תלוי לחלוטין ב-App בנק/תשלום, הבחירה הבטוחה: אל תעשה Root, אל תפתח BL. שיטות הסתרה מתאימות יותר ל"מכשיר ראשי בלי Root + מכשיר גיבוי עם Root".
@@ -213,7 +213,7 @@ Google מעדכן כללים מעת לעת, ויצרני App עוקבים ומש
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>לחץ 7 פעמים על "מספר גרסה", עד שמופיע שמצב מפתח הופעל.
+לחץ 7 פעמים על "מספר גרסה", עד שמופיע שמצב מפתח הופעל.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. חזור להגדרות, מצא "אפשרויות מפתח" (בדרך כלל בתחתית ההגדרות או ב"מערכת").

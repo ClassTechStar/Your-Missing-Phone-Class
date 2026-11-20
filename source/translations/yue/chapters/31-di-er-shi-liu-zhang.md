@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>嚟試嚇：畀你嘅下一臺手機做一份「技術需求清單」
+嚟試嚇：畀你嘅下一臺手機做一份「技術需求清單」
 
 {class="mt-1"}
 攞出一張紙，按「必備/加分/唔需要」三檔，列出你對AI、衞星、摺疊屏、Wi-Fi 7、快充、電池容量嘅需求。咁樣下次去線下舖時，導購推薦嘅「賣點」你能迅速判斷係真需求定係被推銷。例如：
@@ -93,7 +93,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小結
+本章小結
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI手機三大判斷標準：端側大模型、NPU TOPS、AI Agent場景

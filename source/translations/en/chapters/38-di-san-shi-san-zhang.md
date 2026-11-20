@@ -58,7 +58,7 @@ No matter how technology evolves, these digital life philosophies will still app
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>V. Appendices
+V. Appendices
 
 {class="mt-1"}
 Write a simple "terms of service" for yourself and your phone (and future AR glasses and AI assistants) to define your relationship. For example:
@@ -71,7 +71,7 @@ Write a simple "terms of service" for yourself and your phone (and future AR gla
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro and AR glasses are new computing entry points beyond phones, but won't replace phones in the short term

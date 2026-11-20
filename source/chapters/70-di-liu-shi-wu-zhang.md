@@ -39,26 +39,26 @@ import SwiftData
 
 @Model
 class Record {
-    var type: String      // "income" 收入 | "expense" 支出
-    var amount: Double    // 金额（元）
-    var category: String  // 分类：餐饮、交通、工资……
-    var note: String      // 备注（可选）
-    var date: Date        // 记账日期
+ var type: String // "income" 收入 | "expense" 支出
+ var amount: Double // 金额（元）
+ var category: String // 分类：餐饮、交通、工资……
+ var note: String // 备注（可选）
+ var date: Date // 记账日期
 
-    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
-        self.type = type
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+ self.type = type
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：金额为什么用 Double？
+小贴士：金额为什么用 Double？
 
 {class="mt-1"}
 严谨的金融 App 会用 Decimal（精确十进制）来避免浮点误差（0.1+0.2≠0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成 <code class="inline">Decimal</code> 或"以分为单位的 Int"，这是无数前辈踩出来的坑。
@@ -70,7 +70,7 @@ class Record {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View（SwiftUI 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel（@Observable 逻辑中枢）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model（SwiftData 数据层）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View（SwiftUI 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel（@Observable 逻辑中枢）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model（SwiftData 数据层）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -87,31 +87,31 @@ import Observation
 
 @Observable
 class RecordViewModel {
-    var records: [Record] = []
-    private let context: ModelContext
+ var records: [Record] = []
+ private let context: ModelContext
 
-    init(context: ModelContext) { self.context = context }
+ init(context: ModelContext) { self.context = context }
 
-    func load() {
-        // SwiftData 的 #Predicate 筛选 + 排序
-        let descriptor = FetchDescriptor<Record>(
-            sortBy: [SortDescriptor(\.date, order: .reverse)]
-        )
-        records = (try? context.fetch(descriptor)) ?? []
-    }
+ func load() {
+ // SwiftData 的 #Predicate 筛选 + 排序
+ let descriptor = FetchDescriptor<Record>(
+ sortBy: [SortDescriptor(\.date, order: .reverse)]
+ )
+ records = (try? context.fetch(descriptor)) ?? []
+ }
 
-    func add(type: String, amount: Double, category: String, note: String) {
-        let r = Record(type: type, amount: amount, category: category, note: note)
-        context.insert(r)
-        try? context.save()
-        load()                       // 重新加载，界面刷新
-    }
+ func add(type: String, amount: Double, category: String, note: String) {
+ let r = Record(type: type, amount: amount, category: category, note: note)
+ context.insert(r)
+ try? context.save()
+ load() // 重新加载，界面刷新
+ }
 
-    func delete(_ record: Record) {
-        context.delete(record)
-        try? context.save()
-        load()
-    }
+ func delete(_ record: Record) {
+ context.delete(record)
+ try? context.save()
+ load()
+ }
 }
 ```
 :::
@@ -127,35 +127,35 @@ class RecordViewModel {
 
 ```
 struct RecordListView: View {
-    @State private var vm: RecordViewModel
-    @State private var showAdd = false
+ @State private var vm: RecordViewModel
+ @State private var showAdd = false
 
-    var body: some View {
-        NavigationStack {
-            List {
-                Section("本月结余") {          // 汇总卡片
-                    SummaryRow(records: vm.records)
-                }
-                Section("流水") {
-                    ForEach(vm.records) { r in
-                        RecordRow(record: r)
-                    }
-                    .onDelete { idx in
-                        idx.forEach { vm.delete(vm.records[$0]) }
-                    }
-                }
-            }
-            .navigationTitle("我的记账本")
-            .toolbar {
-                Button { showAdd = true } label: {
-                    Image(systemName: "plus")
-                }
-            }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView(vm: vm)          // 录入弹窗
-            }
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ Section("本月结余") { // 汇总卡片
+ SummaryRow(records: vm.records)
+ }
+ Section("流水") {
+ ForEach(vm.records) { r in
+ RecordRow(record: r)
+ }
+ .onDelete { idx in
+ idx.forEach { vm.delete(vm.records[$0]) }
+ }
+ }
+ }
+ .navigationTitle("我的记账本")
+ .toolbar {
+ Button { showAdd = true } label: {
+ Image(systemName: "plus")
+ }
+ }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView(vm: vm) // 录入弹窗
+ }
+ }
+ }
 }
 ```
 :::
@@ -164,7 +164,7 @@ struct RecordListView: View {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：输入校验别偷懒
+注意：输入校验别偷懒
 
 {class="mt-1"}
 金额输入框一定要校验：空值、负数、"abc"这类非法输入都要拦住，用 <code class="inline">Double(text)</code> 判断，失败返回 nil。App 崩掉最常见的原因之一就是"把用户的输入当成了乖孩子"。记住：<strong>用户输入的一切，都要当敌人审查</strong>。
@@ -183,17 +183,17 @@ struct RecordListView: View {
 
 ```
 func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
-    let cal = Calendar.current
-    let monthRecords = records.filter {
-        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
-    }
-    let income = monthRecords
-        .filter { $0.type == "income" }
-        .reduce(0) { $0 + $1.amount }
-    let expense = monthRecords
-        .filter { $0.type == "expense" }
-        .reduce(0) { $0 + $1.amount }
-    return (income, expense)
+ let cal = Calendar.current
+ let monthRecords = records.filter {
+ cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+ }
+ let income = monthRecords
+ .filter { $0.type == "income" }
+ .reduce(0) { $0 + $1.amount }
+ let expense = monthRecords
+ .filter { $0.type == "expense" }
+ .reduce(0) { $0 + $1.amount }
+ return (income, expense)
 }
 ```
 :::
@@ -209,7 +209,7 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：本周完成它
+来动手：本周完成它
 
 {class="mt-1"}
 按"数据层、ViewModel、列表页、录入弹窗、汇总卡片"的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清"期望行为、实际行为、复现步骤"）。完成后用它记一周账——自己做的 App 用起来，成就感会推着你继续往前走。
@@ -217,7 +217,7 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 需求五要素 → 拆成"每步能用"的小步骤，再动手
 - 数据层：@Model 模型 + modelContainer 容器 + FetchDescriptor 查询

@@ -80,7 +80,7 @@ Foldable"""".Foldable,:,App.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκιμάστε: Φτιάξτε μια «λίστα τεχνικών αναγκών» για το επόμενο κινητό
+Δοκιμάστε: Φτιάξτε μια «λίστα τεχνικών αναγκών» για το επόμενο κινητό
 
 {class="mt-1"}
 ,"//",AI, Δορυφόρος, Foldable, Wi-Fi 7, Μπαταρία.,"".:
@@ -93,7 +93,7 @@ Foldable"""".Foldable,:,App.
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI:,NPU TOPS, AI Agent Σενάριο

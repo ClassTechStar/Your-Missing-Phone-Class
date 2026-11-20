@@ -23,14 +23,14 @@ kind: chapter
 :::
 
 ```
-val name = 김철수        // val: 읽기 전용 변수(기본으로 추천)
-var age = 18             // var: 변경 가능한 변수(나중에 또 바꿀 수 있어요)
+val name = 김철수 // val: 읽기 전용 변수(기본으로 추천)
+var age = 18 // var: 변경 가능한 변수(나중에 또 바꿀 수 있어요)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var는 바꿀 수 있어요
-// name = 이영희         // <i class="fas fa-times-circle mr-1"></i> val은 바꿀 수 없어요, 컴파일 오류
+age = 19 // var는 바꿀 수 있어요
+// name = 이영희 // val은 바꿀 수 없어요, 컴파일 오류
 
-val score: Int = 100     // 타입을 직접 쓸 수도 있어요
-val pi = 3.14            // 생략해도 자동으로 추론해요
+val score: Int = 100 // 타입을 직접 쓸 수도 있어요
+val pi = 3.14 // 생략해도 자동으로 추론해요
 ```
 :::
 
@@ -65,15 +65,15 @@ Kotlin 커뮤니티의 철칙: 기본은 val, 정말 필요할 때만 var. val�
 
 ```
 fun greet(name: String): String {
-    return "안녕, $name!"     // $ 기호가 변수를 문자열에 끼워 넣어요
+ return "안녕, $name!" // $ 기호가 변수를 문자열에 끼워 넣어요
 }
 
-println(greet(김철수))        // 출력: 안녕, 김철수!
+println(greet(김철수)) // 출력: 안녕, 김철수!
 
 // 한 줄 함수는 식으로 간단히 쓸 수 있어요
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // 출력: 8
+println(add(3, 5)) // 출력: 8
 ```
 :::
 
@@ -93,23 +93,23 @@ println(add(3, 5))            // 출력: 8
 // 판단: if / else
 val age = 17
 if (age >= 18) {
-    println("어른")
+ println("어른")
 } else {
-    println("미성년자")
+ println("미성년자")
 }
 
 // 다분기: when(switch보다 백배 편해요)
 val score = 85
 val level = when {
-    score >= 90 -> "우수"
-    score >= 60 -> "보통"
-    else -> "분발하세요!"
+ score >= 90 -> "우수"
+ score >= 60 -> "보통"
+ else -> "분발하세요!"
 }
 
 // 반복: for 루프
 val fruits = listOf("사과", "바나나", "오렌지")
 for (fruit in fruits) {
-    println("$fruit 좋아해요")
+ println("$fruit 좋아해요")
 }
 ```
 :::
@@ -127,15 +127,15 @@ Kotlin은 언어 차원에서 이 문제를 해결했어요: 기본적으로 널
 :::
 
 ```
-var name: String = 김철수   // 일반 타입: 절대 null이면 안 돼요
-// name = null                // <i class="fas fa-times-circle mr-1"></i> 컴파일 오류가 바로 잡아 줘요
+var name: String = 김철수 // 일반 타입: 절대 null이면 안 돼요
+// name = null // 컴파일 오류가 바로 잡아 줘요
 
 var nickname: String? = null // 물음표 하나: null 허용
 nickname = "순이"
 
 // 널 가능 타입을 쓸 때는 반드시 안전하게 다뤄야 해요:
-println(nickname?.length)    // 안전 호출: null이면 null을 돌려주고 크래시 없음
-val len = nickname?.length ?: 0   // Elvis 연산자: null일 때 기본값
+println(nickname?.length) // 안전 호출: null이면 null을 돌려주고 크래시 없음
+val len = nickname?.length ?: 0 // Elvis 연산자: null일 때 기본값
 println(len)
 ```
 :::
@@ -163,17 +163,17 @@ Kotlin에는 data class(데이터 클래스)라는 신기한 도구가 있는데
 ```
 // 일반 클래스: 틀
 class Dog(val name: String) {
-    fun bark() = println("$name 멍멍!")
+ fun bark() = println("$name 멍멍!")
 }
 
-val dog = Dog("바둑이")      // 객체 생성
-dog.bark()                 // 바둑이: 멍멍!
+val dog = Dog("바둑이") // 객체 생성
+dog.bark() // 바둑이: 멍멍!
 
 // data class: 데이터를 담는 상자(equals/copy 등 자동 제공)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, 김철수, "zhangsan@example.com")
-val twin = me.copy(name = "김철수2")   // 복사하고 한 필드만 변경
+val twin = me.copy(name = "김철수2") // 복사하고 한 필드만 변경
 ```
 :::
 
@@ -194,7 +194,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // lambda 방식: 그 자리에서 정의, 가볍고 직접적
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = 현재 원소
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = 현재 원소
 
 // 필터 + 변환 연계(실제 프로젝트에서 아주 흔함)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

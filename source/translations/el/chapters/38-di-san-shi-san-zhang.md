@@ -58,7 +58,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκίμασε: Διαμόρφωσε το "Όροι χρήσης προσωπικών ψηφιακών συσκευών"
+Δοκίμασε: Διαμόρφωσε το "Όροι χρήσης προσωπικών ψηφιακών συσκευών"
 
 {class="mt-1"}
 Γράψτε έναν απλό "όρο service" για εσάς και το κινητό σας (καθώς και μελλοντικά γυαλιά AR, βοηθούς AI) για να ορίσετε τη σχέση σας. Για παράδειγμα:
@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro και γυαλιά AR είναι νέες πύλες υπολογισμού πέρα από το κινητό, αλλά βραχυπρόθεσμα δυσκολεύονται να το αντικαταστήσουν

@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>核心比喻：路與車
+核心比喻：路與車
 
 {class="mt-1"}
 把網際網路想象成一座城市。<strong>"路"</strong>是你手機到網際網路之間的通道，<strong>"車"</strong>是跑在路上的資料。Wi-Fi和流量是兩條不同的路，但資料（車）本身是一樣的。
@@ -36,7 +36,7 @@ Wi-Fi通常是一次性投入（寬頻月費），只要電費不斷，全家人
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>來試試：檢查你的流量套餐
+來試試：檢查你的流量套餐
 
 {class="mt-1"}
 開啟手機的 [設定] > [行動網路] > [流量管理]，看看你本月還剩多少流量、哪些App最耗流量。心裡有數，出門才不慌。
@@ -49,7 +49,7 @@ Wi-Fi通常是一次性投入（寬頻月費），只要電費不斷，全家人
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>安全提醒
+安全提醒
 
 {class="mt-1"}
 在機場、商場、咖啡廳等公共場所，不要連線名字可疑的免費Wi-Fi（如"Free_WiFi_2024"）。即使連了，也絕不要在上面登入銀行App或輸入密碼。
@@ -81,7 +81,7 @@ iPhone使用者則更直觀：Wi-Fi圖示亮著就是在用Wi-Fi，不亮時看�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>重要警告：出國前關閉【資料漫遊】！
+重要警告：出國前關閉【資料漫遊】！
 
 {class="mt-1"}
 在國外使用移動資料可能產生天價賬單！出國前務必在設定裡關閉資料漫遊，或者提前購買當地流量卡/國際漫遊套餐。
@@ -106,53 +106,53 @@ Wi-Fi標準由IEEE制定，每一代都有顯著提升：
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">標準</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">協議</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">頻段</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特點</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老舊標準，覆蓋還行</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">目前最普及，速度夠用</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多裝置效能強，延遲低</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">增加6GHz頻段，不擁堵</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極速傳輸，多鏈路聚合</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">標準</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">協議</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">頻段</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特點</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老舊標準，覆蓋還行</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">目前最普及，速度夠用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多裝置效能強，延遲低</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">增加6GHz頻段，不擁堵</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極速傳輸，多鏈路聚合</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ NFC基於RFID技術演變而來，支援三種工作模式：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手試試：設定並管理熱點
+動手試試：設定並管理熱點
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 開啟 [設定]，找到"個人熱點"或"網路共享"，開啟它，設好名稱和密碼。

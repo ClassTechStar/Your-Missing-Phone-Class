@@ -317,7 +317,7 @@ HDR（High Dynamic Range）让屏幕同时展现更亮的亮部和更暗的暗�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>实操一下：了解硬件配置
+实操一下：了解硬件配置
 
 {class="mt-1"}
 在 [设置] 里，看看能不能找到处理器型号、运行内存（RAM）和机身存储（ROM）的具体大小。对你手机的能力有个数。安卓用户可以下载"安兔兔"或"DevCheck"查看详细硬件信息。

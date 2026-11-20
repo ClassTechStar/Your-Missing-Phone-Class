@@ -70,7 +70,7 @@ A short video's thumbnail is its "storefront", it determines whether people clic
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Shoot a 30-Second Short Video
+Hands-On: Shoot a 30-Second Short Video
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Pick a small topic you know well (e.g., "How to make phone fonts larger").
@@ -82,7 +82,7 @@ A short video's thumbnail is its "storefront", it determines whether people clic
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Think before shooting: who's the audience, what value you provide, which platform to post on

@@ -74,7 +74,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"上工第一日"檢之單
+"上工第一日"檢之單
 
 {class="mt-1 text-sm"}
 "上工第一日"檢之單<br> ① 鎖屏密碼加生物識；② 通知分組加閉營銷推；③ 字體之大/刷新之率/深色之模<br> ④ 默認輸入法/瀏覽器/郵件；⑤ 緊聯人/醫療卡；⑥ 備份設置
@@ -90,7 +90,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS 旁白（VoiceOver）
+iOS 旁白（VoiceOver）
 
 {class="mt-1"}
 <strong>開啓之徑</strong>：[設置] &gt; [輔助功能] &gt; [旁白]，開開關。亦可三擊側邊鍵（或主屏鍵）速開。
@@ -111,7 +111,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>、切不同語音包。iOS自帶"增強語音"與"語音控制器"，前者能減呼吸聲與停頓，聽感更自然。
+、切不同語音包。iOS自帶"增強語音"與"語音控制器"，前者能減呼吸聲與停頓，聽感更自然。
 
 {class="mt-1"}
 <strong>開啓之徑</strong>：[設置] &gt; [輔助功能] &gt; [TalkBack]，開開關。或長按音量上下鍵三秒速啓（部分品牌支持）。
@@ -155,7 +155,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>諸系統 AI 圖像之述支持之況
+諸系統 AI 圖像之述支持之況
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>：於 [設置] &gt; [輔助功能] &gt; [旁白] &gt; [語音描述] 中開"圖像之述"。系統將調<strong>本地 AI 之模</strong>自動生圖之文述（須 iPhone 12 及以上）。
@@ -165,7 +165,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>使用之場
+使用之場
 
 {class="mt-1"}
 使用之場<strong>此乃真之"科技使生活更平等"</strong>。
@@ -178,7 +178,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>實時字幕之開與優化
+實時字幕之開與優化
 
 {class="mt-1"}
 <strong>iOS</strong>：[設置] &gt; [輔助功能] &gt; [實時字幕]，開開關。系統將檢設備所有音頻（通話、視頻、播客、FaceTime、語音備忘），自動顯字幕於屏上。
@@ -203,7 +203,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>通話之實時轉譯（TTY / RTT）
+通話之實時轉譯（TTY / RTT）
 
 {class="mt-1"}
 <strong>iOS</strong>：[設置] &gt; [輔助功能] &gt; [RTT/TTY]，開後通話時屏上顯鍵盤，對方之音被實時打成字，<strong>汝所打之字亦被念出</strong>予對方聽。
@@ -231,7 +231,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>蘋果之無障設之哲學
+蘋果之無障設之哲學
 
 {class="mt-1"}
 蘋果之無障設之哲學
@@ -239,7 +239,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>花三十秒略體驗之
+花三十秒略體驗之
 
 {class="mt-1"}
 花三十秒略體驗之

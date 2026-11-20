@@ -54,7 +54,7 @@ Con lo sviluppo rapidissimo dell'AI, il modello cognitivo tradizionale "vedere p
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① Truffa con face-swap e clonazione vocale AI
+① Truffa con face-swap e clonazione vocale AI
 
 {class="mt-1"}
 I criminali raccolgono illegalmente foto ad alta risoluzione pubblicate sui social o campioni vocali di pochi secondi e, con il deepfake, clonano "video di amici/parenti" o "voci" quasi indistinguibili dal vero. Copioni frequenti: <strong>incidente stradale, prestito urgente, rapimento</strong>. Queste truffe sfruttano legami affettivi e <strong>sono molto ingannevoli</strong>.
@@ -62,7 +62,7 @@ I criminali raccolgono illegalmente foto ad alta risoluzione pubblicate sui soci
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② Falsificazione di autorità / servizio clienti
+② Falsificazione di autorità / servizio clienti
 
 {class="mt-1"}
 L'AI può simulare con precisione voce e tono di addetti al servizio clienti ufficiali o di funzionari di polizia/giustizia, e persino comporre screenshot di bonifici, documenti ufficiali, mandati d'arresto altamente realistici; <strong>creando panico o pressione autoritaria</strong>, inducono la vittima a trasferire denaro o ad attivare la condivisione schermo, sottraendo informazioni sull'account.
@@ -70,7 +70,7 @@ L'AI può simulare con precisione voce e tono di addetti al servizio clienti uff
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ Truffa di investimenti AI
+③ Truffa di investimenti AI
 
 {class="mt-1"}
 Tramite algoritmi AI vengono falsificati "screenshot di guadagni sicuri", interfacce di software di trading quantistico o "report di analisi da maestro", adescando con alti rendimenti, vendendo servizi di investimento costosi o spingendo la vittima a trasferire fondi su conti di trading controllati dai criminali, per poi <strong>scaricare tutto e sparire</strong>.
@@ -127,7 +127,7 @@ Telecamere smart, serrature smart, casse smart e altri dispositivi IoT al primo 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Avvertenza da caso reale
+Avvertenza da caso reale
 
 {class="mt-1"}
 Nel 2022, la polizia di una località ha riferito che hacker, decifrando la password predefinita di telecamere domestiche di una certa marca (molti utenti non l'avevano mai modificata), hanno sottratto immagini delle camere da letto di migliaia di famiglie e le hanno vendute online.<strong>Non cambiare la password predefinita = lasciare la porta di casa spalancata</strong>.
@@ -170,7 +170,7 @@ Se hai perso il telefono non farti prendere dal panico, segui quest'ordine:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Cose da non fare mai
+Cose da non fare mai
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Usare password deboli come compleanno / 123456 / qwerty;
@@ -182,7 +182,7 @@ Se hai perso il telefono non farti prendere dal panico, segui quest'ordine:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova ad attivare e simulare il "blocco remoto"
+Prova ad attivare e simulare il "blocco remoto"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Assicurati che la funzione "Trova il mio telefono" sia attiva.

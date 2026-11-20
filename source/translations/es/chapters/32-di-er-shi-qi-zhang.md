@@ -32,22 +32,22 @@ Los teléfonos actuales suelen tener integrado un "modo simple" (llamado "modo c
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marca</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nombre del modo</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Método de activación</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sinceramente, es normal que el móvil empiece a irse lento tras un ano de uso. La causa no necesariamente es que este roto; más a menudo es "acumulacion de basura": archivos basura, procesos en segúndo plano, espacio de almacenamiento llenandose poco a poco.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accesibilidad (sin modo simple separado, pero se puede ajustar individualmente)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Pantalla y brillo &gt; Tamaño del texto, arrastra al máximo. Luego entra en "Accesibilidad &gt; Pantalla y tamaño del texto" y activa "Texto en negrita" y "Forma de botones"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tengo un amigo al que le robaron el móvil el año pasado. Su primera preocupación no fue "cuánto vale el móvil", sino "¿podré recuperar mis fotos?". Lamentablemente, no había activado la copia de seguridad en la nube. El móvil es un objeto material, pero los datos de tu cuenta son cosas que, si se pierden, no vuelven nunca. En este capítulo hablaremos de cómo asegurar tu vida digital de verdad.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Sistema y actualizaciones &gt; Modo simple &gt; Activar</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo minimalista</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Más ajustes &gt; Modo minimalista &gt; Activar</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Funciones especiales &gt; Modo simple</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Escritorio simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Escritorio, pantalla de bloqueo y fondo de pantalla &gt; Escritorio simple</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Pantalla &gt; Modo simple</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marca</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nombre del modo</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Método de activación</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sinceramente, es normal que el móvil empiece a irse lento tras un ano de uso. La causa no necesariamente es que este roto; más a menudo es "acumulacion de basura": archivos basura, procesos en segúndo plano, espacio de almacenamiento llenandose poco a poco.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accesibilidad (sin modo simple separado, pero se puede ajustar individualmente)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Pantalla y brillo &gt; Tamaño del texto, arrastra al máximo. Luego entra en "Accesibilidad &gt; Pantalla y tamaño del texto" y activa "Texto en negrita" y "Forma de botones"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tengo un amigo al que le robaron el móvil el año pasado. Su primera preocupación no fue "cuánto vale el móvil", sino "¿podré recuperar mis fotos?". Lamentablemente, no había activado la copia de seguridad en la nube. El móvil es un objeto material, pero los datos de tu cuenta son cosas que, si se pierden, no vuelven nunca. En este capítulo hablaremos de cómo asegurar tu vida digital de verdad.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Sistema y actualizaciones &gt; Modo simple &gt; Activar</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo minimalista</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Más ajustes &gt; Modo minimalista &gt; Activar</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Funciones especiales &gt; Modo simple</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Escritorio simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Escritorio, pantalla de bloqueo y fondo de pantalla &gt; Escritorio simple</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Pantalla &gt; Modo simple</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Algunos mayores no quieren usar el modo simple porque les parece demasiado "para
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Práctica: ayuda a los mayores a "decorar" su teléfono
+Práctica: ayuda a los mayores a "decorar" su teléfono
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Activa el modo simple (sigue la tabla de marcas anterior).
@@ -96,7 +96,7 @@ Los ancianos son las principales víctimas del fraude telefónico. No es que sea
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"Eslogan antifraude" para los mayores (imprímelo y pégalo junto al teléfono)
+"Eslogan antifraude" para los mayores (imprímelo y pégalo junto al teléfono)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Llamada desconocida pidiendo transferencia → ¡Cuelga!</strong>
@@ -151,7 +151,7 @@ VIII. Funciones relacionadas con la salud - el teléfono no es solo una herramie
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Primero activa el modo simple o ajusta manualmente la fuente/iconos grandes; con el entorno bien ajustado, la mitad de los problemas desaparecen

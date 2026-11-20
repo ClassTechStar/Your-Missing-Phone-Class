@@ -83,7 +83,7 @@ SMS 인증 코드는 이미 최저 수준의 2FA이며, TOTP(예: Google Authent
 </li> <li><strong>앱 권한 한 번 확인</strong>: 각 앱의 권한을 한 번 검토하세요, 특히 위치, 주소록, SMS, 마이크, 카메라의 5가지 항목.
 손전등 앱이 주소록을 요구하는 경우가 있다는 것을 알게 될 것입니다, 즉시 삭제하세요.</li> <li><strong>주기적으로 브라우저 데이터 정리</strong>: 캘린더 알림을 설정하여, 매월 한 번 캐시, 쿠키를 정리하세요.
 </li> <li><strong>공용 충전 스테이션의 데이터 케이블 사용 금지</strong>: USB 포트는 충전과 데이터 전송이 모두 가능하며, 악성 충전 스테이션("Juice Jacking"이라고 함)은 충전 중에 데이터를 훔칠 수 있습니다.
-외출 시 자신의 충전기와 케이블을 휴대하세요.</li> </ol> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>지금 하기: 스마트폰에 "보안 건강 검진" 실시</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li><strong>DNS 업그레이드</strong>: 안드로이드: 설정 > 연결 및 공유 > 개인 DNS > "one.one.one.one" 또는 "dns.google" 입력. iPhone: Safari에서 "1.1.1.1 DNS profile" 검색하여 프로파일 설치, 또는 Cloudflare의 1.1.1.1 앱 다운로드.
+외출 시 자신의 충전기와 케이블을 휴대하세요.</li> </ol> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold">지금 하기: 스마트폰에 "보안 건강 검진" 실시</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li><strong>DNS 업그레이드</strong>: 안드로이드: 설정 > 연결 및 공유 > 개인 DNS > "one.one.one.one" 또는 "dns.google" 입력. iPhone: Safari에서 "1.1.1.1 DNS profile" 검색하여 프로파일 설치, 또는 Cloudflare의 1.1.1.1 앱 다운로드.
 </li> <li><strong>Wi-Fi 감사</strong>: Wi-Fi 목록을 열어, 모르거나 자주 사용하지 않거나 이름이 이상한 핫스팟을 모두 "잊어버리세요".</li> <li><strong>권한 대청소</strong>: 설정 > 프라이버시/권한 관리로 들어가, 앱별로 권한을 검토.
 권한 요구가 불합리한 앱(예: 계산기가 주소록 요구)은 표시하고, 삭제하거나 대안을 고려.
 </li> <li><strong>계정 보안 확인</strong>: Apple ID 또는 Google 계정의 보안 페이지를 열어, 알 수 없는 기기 로그인이 있는지 확인하고, 2FA가 활성화되었는지 확인하며, 복구 연락처가 신뢰할 수 있는지 확인.</li> </ol> </div> </p></p></p></p>

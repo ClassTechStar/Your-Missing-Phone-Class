@@ -21,10 +21,10 @@ Bootloader는 스마트폰이 시작될 때 첫 번째로 실행되는 프로그
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>서명 검증</strong>: BL 잠금은 부팅 이미지의 디지털 서명을 검증하며, 제조사 서명된 시스템만 부팅할 수 있습니다.</li>
-                        <strong>다운그레이드 방지</strong>: 사용자가 알려진 취약점을 이용하기 위해 구 버전 시스템을 플래싱하는 것을 방지.
-                        <li><strong>데이터 보호</strong>: 새 시스템을 플래싱해도, 원래 계정 비밀번호 없이는 사용자 데이터에 접근할 수 없습니다.</li>
-                    </ul>
+ <li><strong>서명 검증</strong>: BL 잠금은 부팅 이미지의 디지털 서명을 검증하며, 제조사 서명된 시스템만 부팅할 수 있습니다.</li>
+ <strong>다운그레이드 방지</strong>: 사용자가 알려진 취약점을 이용하기 위해 구 버전 시스템을 플래싱하는 것을 방지.
+ <li><strong>데이터 보호</strong>: 새 시스템을 플래싱해도, 원래 계정 비밀번호 없이는 사용자 데이터에 접근할 수 없습니다.</li>
+ </ul>
 ```
 
 ##### 🔐 하드웨어 수준 저장과 검증
@@ -51,41 +51,41 @@ BL 잠금의 장단점을 더 직관적으로 이해하기 위해 5가지 핵심
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">핵심 역할</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">잠금 상태(기본값)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">잠금 해제 후 상태</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">시스템보안</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">서명되지 않은 비공식 시스템 플래싱을 방지하고 시스템 무결성과 저수준 보안을 보호<br><span class="text-emerald-600 dark:text-emerald-400">✅ 높은 보안: 공식 서명 이미지만 로드하여 악성 펌웨어 변조를 효과적으로 방어</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 보안 저하: 타사 ROM 플래싱 허용, 시스템 무결성 검증 메커니즘 무효화, 악성 소프트웨어가 Root 권한을 얻으면 시스템을 깊이 변조할 수 있음</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">시스템 안정성</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트폰이 제조사가 테스트하고 최적화한 공식 시스템에서 실행되어 안정적이고 원활한 작동을 보장<br><span class="text-emerald-600 dark:text-emerald-400">✅ 안정적: 공식 펌웨어 사용, 기능 완전, OTA 업그레이드 신뢰성</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 위험 증가: 타사 ROM은 호환성 문제가 있을 수 있으며, 시스템 충돌, 벽돌, 하드웨어 기능 이상(예: 카메라, 급속 충전)을 유발할 수 있고, OTA 업데이트가 실패할 수 있음</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">보증 혜택</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">제조사는 BL 잠금을 통해 안정적인 공식 시스템을 제공하여 보증 서비스를 제공<br><span class="text-emerald-600 dark:text-emerald-400">✅ 보증 유효: 공식 무료 보증 서비스 이용 가능(인적 손상 외)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 보증 무효: 대부분의 제조사는 BL 잠금 해제를 자발적 보증 포기로 간주하며, 재잠금하더라도 과거 잠금 해제 기록이 감지되어 보증이 거부될 수 있음</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">데이터보안</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">잠금 해제 과정에서는 일반적으로 데이터 강제 삭제가 이루어져 구 데이터가 새 시스템 환경에서 악용되는 것을 방지<br><span class="text-emerald-600 dark:text-emerald-400">✅ 데이터 보안: 일상 사용에서 BL 잠금은 악성 프로그램의 시스템 파티션 수정 능력을 제한</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 데이터 위험: 잠금 해제 시 모든 사용자 데이터 강제 삭제; 잠금 해제 후 올바르게 암호화하지 않으면 데이터 저장이 안전하지 않을 수 있음; 분실 후 플래싱하여 데이터를 더 쉽게 추출할 수 있음</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">기능 제한</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">보안 환경에 의존하는 기능(예: 결제, 은행 앱)의 정상 작동을 보장<br><span class="text-emerald-600 dark:text-emerald-400">✅ 기능 완전: 모든 공식 기능 정상 사용 가능</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 기능 제한: 일부 보안 민감 앱(예: Google Pay, 은행 앱)은 BL 잠금 해제 상태를 감지하고 실행을 거부할 수 있음; DRM 서비스가 저하되어 HD 영상 재생에 영향</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">핵심 역할</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">잠금 상태(기본값)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">잠금 해제 후 상태</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">시스템보안</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">서명되지 않은 비공식 시스템 플래싱을 방지하고 시스템 무결성과 저수준 보안을 보호<br><span class="text-emerald-600 dark:text-emerald-400">✅ 높은 보안: 공식 서명 이미지만 로드하여 악성 펌웨어 변조를 효과적으로 방어</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 보안 저하: 타사 ROM 플래싱 허용, 시스템 무결성 검증 메커니즘 무효화, 악성 소프트웨어가 Root 권한을 얻으면 시스템을 깊이 변조할 수 있음</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">시스템 안정성</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트폰이 제조사가 테스트하고 최적화한 공식 시스템에서 실행되어 안정적이고 원활한 작동을 보장<br><span class="text-emerald-600 dark:text-emerald-400">✅ 안정적: 공식 펌웨어 사용, 기능 완전, OTA 업그레이드 신뢰성</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 위험 증가: 타사 ROM은 호환성 문제가 있을 수 있으며, 시스템 충돌, 벽돌, 하드웨어 기능 이상(예: 카메라, 급속 충전)을 유발할 수 있고, OTA 업데이트가 실패할 수 있음</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">보증 혜택</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">제조사는 BL 잠금을 통해 안정적인 공식 시스템을 제공하여 보증 서비스를 제공<br><span class="text-emerald-600 dark:text-emerald-400">✅ 보증 유효: 공식 무료 보증 서비스 이용 가능(인적 손상 외)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 보증 무효: 대부분의 제조사는 BL 잠금 해제를 자발적 보증 포기로 간주하며, 재잠금하더라도 과거 잠금 해제 기록이 감지되어 보증이 거부될 수 있음</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">데이터보안</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">잠금 해제 과정에서는 일반적으로 데이터 강제 삭제가 이루어져 구 데이터가 새 시스템 환경에서 악용되는 것을 방지<br><span class="text-emerald-600 dark:text-emerald-400">✅ 데이터 보안: 일상 사용에서 BL 잠금은 악성 프로그램의 시스템 파티션 수정 능력을 제한</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 데이터 위험: 잠금 해제 시 모든 사용자 데이터 강제 삭제; 잠금 해제 후 올바르게 암호화하지 않으면 데이터 저장이 안전하지 않을 수 있음; 분실 후 플래싱하여 데이터를 더 쉽게 추출할 수 있음</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">기능 제한</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">보안 환경에 의존하는 기능(예: 결제, 은행 앱)의 정상 작동을 보장<br><span class="text-emerald-600 dark:text-emerald-400">✅ 기능 완전: 모든 공식 기능 정상 사용 가능</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 기능 제한: 일부 보안 민감 앱(예: Google Pay, 은행 앱)은 BL 잠금 해제 상태를 감지하고 실행을 거부할 수 있음; DRM 서비스가 저하되어 HD 영상 재생에 영향</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,7 +122,7 @@ BL 잠금의 장단점을 더 직관적으로 이해하기 위해 5가지 핵심
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>신중하게 생각하기
+신중하게 생각하기
 
 {class="mt-1"}
 삼성의 Knox 퓨즈는 <strong>비가역적</strong>으로, 한 번 발동되면 공장 상태로 돌아갈 수 없습니다. 단지 Root가 필요한 일부 기능만 사용하고 싶다면, Root가 필요 없는 대체 방안이 있는지 먼저 확인하는 것이 좋습니다.
@@ -130,7 +130,7 @@ BL 잠금의 장단점을 더 직관적으로 이해하기 위해 5가지 핵심
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>중요 경고
+중요 경고
 
 {class="mt-1"}
 플래싱에는 위험이 있으며, 신중하게 작업해야 합니다. 다음을 유발할 수 있습니다:
@@ -147,7 +147,7 @@ BL 잠금의 장단점을 더 직관적으로 이해하기 위해 5가지 핵심
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>추천 리소스
+추천 리소스
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>: 세계 최대의 안드로이드 개발자 커뮤니티, 풍부한 플래싱 튜토리얼과 ROM 리소스 제공.
@@ -159,7 +159,7 @@ BL 잠금의 장단점을 더 직관적으로 이해하기 위해 5가지 핵심
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: BL 잠금 해제 후 복구 가능한가요?
+Q1: BL 잠금 해제 후 복구 가능한가요?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> 재잠금 가능합니다. 일반적으로 공식 전체 라인즈 패키지를 플래싱하고 특정 플래싱 스크립트(예: 샤오미의 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>)를 사용하여 재잠금할 수 있습니다. 단, 재잠금 후에도 잠금 해제로 인해 트리거된 일부 보안 퓨즈(예: 삼성의 Knox)는 되돌릴 수 없을 수 있습니다.
@@ -167,7 +167,7 @@ BL 잠금의 장단점을 더 직관적으로 이해하기 위해 5가지 핵심
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: 잠금 해제 후 Root를 얻는 방법은?
+Q2: 잠금 해제 후 Root를 얻는 방법은?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> BL 잠금 해제는 첫 번째 단계일 뿐입니다. Root는 일반적으로 다음이 필요합니다:

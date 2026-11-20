@@ -54,7 +54,7 @@ Tentu saja, pembaruan versi besar (misalnya iOS 17 ke iOS 18) mungkin memiliki m
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>Pelaku mengumpulkan secara ilegal foto resolusi tinggi yang dipublikasikan target di media sosial atau hanya butuh beberapa detik sampel suara, menggunakan teknologi deepfake AI untuk mengkloning "video kerabat" atau "suara" yang cukup meyakinkan. Skenario umum meliputi:
+Pelaku mengumpulkan secara ilegal foto resolusi tinggi yang dipublikasikan target di media sosial atau hanya butuh beberapa detik sampel suara, menggunakan teknologi deepfake AI untuk mengkloning "video kerabat" atau "suara" yang cukup meyakinkan. Skenario umum meliputi:
 
 {class="mt-1"}
 kecelakaan mendadak, pinjaman darurat, penculikan <strong>, dll. Penipuan seperti ini memanfaatkan ikatan emosional keluarga dan pertemanan,</strong> daya tipu sangat tinggi <strong>.</strong>.
@@ -62,7 +62,7 @@ kecelakaan mendadak, pinjaman darurat, penculikan <strong>, dll. Penipuan sepert
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>Teknologi AI dapat secara presisi mensimulasikan suara dan nada pelanggan resmi, petugas kejaksaan/kepolisian/pengadilan, bahkan bisa menyintesis tangkapan layar transfer palsu yang sangat realistis, dokumen resmi elektronik, surat perintah penangkapan, dan dokumen lain, melalui
+Teknologi AI dapat secara presisi mensimulasikan suara dan nada pelanggan resmi, petugas kejaksaan/kepolisian/pengadilan, bahkan bisa menyintesis tangkapan layar transfer palsu yang sangat realistis, dokumen resmi elektronik, surat perintah penangkapan, dan dokumen lain, melalui
 
 {class="mt-1"}
 menciptakan kepanikan atau tekanan otoritas <strong>, menginduksi korban mentransfer atau mengaktifkan fitur berbagi layar, sehingga mencuri informasi rekening.</strong>③ Penipuan Investasi AI
@@ -70,7 +70,7 @@ menciptakan kepanikan atau tekanan otoritas <strong>, menginduksi korban mentran
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>Melalui algoritma AI memalsukan tangkapan layar penghasilan "pasti untung tidak rugi", antarmuka perangkat lunak pemilihan saham kuantitatif virtual, atau laporan analisis investasi "tingkat master", dengan imbalan tinggi sebagai umpan, menjual layanan investasi mahal atau menginduksi korban mentransfer dana ke rekening dagang yang mereka kendalikan,
+Melalui algoritma AI memalsukan tangkapan layar penghasilan "pasti untung tidak rugi", antarmuka perangkat lunak pemilihan saham kuantitatif virtual, atau laporan analisis investasi "tingkat master", dengan imbalan tinggi sebagai umpan, menjual layanan investasi mahal atau menginduksi korban mentransfer dana ke rekening dagang yang mereka kendalikan,
 
 {class="mt-1"}
 akhirnya kabur dengan dana <strong>.</strong>.
@@ -127,7 +127,7 @@ segera mengubah kata sandi login default <strong>saat pertama kali digunakan, de
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Pada tahun 2022, polisi suatu daerah melaporkan bahwa peretas berhasil meretas kata sandi default kamera rumah merek tertentu (banyak pengguna tidak pernah mengubahnya), merekam gambar kamar tidur ribuan keluarga dan menjualnya secara online.
+Pada tahun 2022, polisi suatu daerah melaporkan bahwa peretas berhasil meretas kata sandi default kamera rumah merek tertentu (banyak pengguna tidak pernah mengubahnya), merekam gambar kamar tidur ribuan keluarga dan menjualnya secara online.
 
 {class="mt-1"}
 Tidak mengubah kata sandi default = membiarkan pintu depan rumah terbuka lebar <strong>.</strong>.
@@ -170,7 +170,7 @@ Bekukan Kartu SIM Segera
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Menggunakan kata sandi lemah seperti tanggal lahir / 123456 / qwerty;
+Menggunakan kata sandi lemah seperti tanggal lahir / 123456 / qwerty;
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Mengirim kode verifikasi kepada siapa pun (bahkan "layanan pelanggan");
@@ -182,7 +182,7 @@ Bekukan Kartu SIM Segera
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pastikan fitur "Temukan Ponsel Saya" Anda sudah diaktifkan.
+Pastikan fitur "Temukan Ponsel Saya" Anda sudah diaktifkan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Di browser komputer atau ponsel lain, login ke akun layanan cloud yang sesuai (iCloud.com atau situs layanan cloud merek).

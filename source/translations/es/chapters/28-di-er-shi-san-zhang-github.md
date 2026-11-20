@@ -25,46 +25,46 @@ Mucha gente confunde estos dos términos al contacto por primera vez; aquí te a
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Elemento de comparación</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturaleza</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Herramienta de control de versiones (software)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Plataforma de alojamiento de código (sitio web)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ubicación de ejecución</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En ordenador local</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En la nube (acceso por navegador)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Responsabilidad principal</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Registra cada cambio de archivo (qué cambió, quién lo cambió, cuándo)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pone repositorios Git en la nube para facilitar almacenamiento, visualización y colaboración</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">¿Requiere internet?</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">No, funciona sin conexión</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requiere conexión a internet</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pertenencia</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Software de código abierto, creado por Linus Torvalds (padre de Linux)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Producto de Microsoft</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Competidores similares</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Elemento de comparación</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturaleza</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Herramienta de control de versiones (software)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Plataforma de alojamiento de código (sitio web)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ubicación de ejecución</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En ordenador local</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En la nube (acceso por navegador)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Responsabilidad principal</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Registra cada cambio de archivo (qué cambió, quién lo cambió, cuándo)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pone repositorios Git en la nube para facilitar almacenamiento, visualización y colaboración</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">¿Requiere internet?</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">No, funciona sin conexión</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requiere conexión a internet</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pertenencia</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Software de código abierto, creado por Linus Torvalds (padre de Linux)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Producto de Microsoft</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Competidores similares</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 En resumen:<strong>Git gestióna "como registrar cambios", GitHub gestióna "donde guardar los cambios y como colaborar"</strong>. Git es una herramienta que funciona localmente; GitHub es una plataforma que pone repositorios Git en la nube para facilitar colaboracion y visualización. Puedes usar Git sin GitHub (por ejemplo para gestionar versiones de tu propio código), pero si usas GitHub debes usar obligatoriamente Git (porque GitHub se basa en Git).
@@ -117,7 +117,7 @@ IV. Registro e inicio: Crea tu primer repositorio en 5 minutos
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Mini-dato: que es README
+Mini-dato: que es README
 
 {class="mt-1"}
 README.md es un archivo en formato Markdown, lo primero que ven otros al abrir tu repositorio. Un buen README suele contener: descripción del proyecto, método de instalación, ejemplos de uso, licencia, contacto. Escribir un buen README es una competencia básica de programador y la primera barrera para que otros usen tu proyecto.
@@ -181,7 +181,7 @@ Usa los repositorios como nube; al cambiar de ordenador o trabajar con multiples
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Recordatorío de seguridad
+Recordatorío de seguridad
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Nunca subas contraseñas, claves API, cadenas de conexión a bases de datos u otra información sensible a GitHub, especialmente en repositorios públicos: una vez filtrada, los rastreadores la capturarán al instante con graves consecuencias.
@@ -191,7 +191,7 @@ Usa los repositorios como nube; al cambiar de ordenador o trabajar con multiples
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Notas importantes: acceso a GitHub desde China
+Notas importantes: acceso a GitHub desde China
 
 {class="mt-1"}
 El acceso a GitHub desde China a veces es inestable; puede que no se abra o que el clonado sea lento. Puedes intentar: ① Usar sitios mirror nacionales (como GitClone, ghproxy) para acelerar el clonado; ② Configurar Hosts o usar proxy; ③ Si colaboras principalmente dentro de China, también puedes considerar la alternativa nacional <strong>Gitee</strong>, con funciones similares y acceso rápido. Muchos equipos alojan simultáneamente en GitHub y Gitee, equilibrando internacionalización y velocidad doméstica.
@@ -199,7 +199,7 @@ El acceso a GitHub desde China a veces es inestable; puede que no se abra o que 
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Nivel intermedio: crea tu blog personal gratis con GitHub Pages
+Nivel intermedio: crea tu blog personal gratis con GitHub Pages
 
 {class="mt-1"}
 GitHub Pages te permite alojar gratis un sitio estático; combinado con generadores de sitios estáticos como Jekyll, Hexo o Hugo, puedes crear fácilmente un blog personal. Escribe artículos en Markdown, haz push al repositorio y el blog se actualiza automáticamente, con HTTPS y dominio personalizado incluidos. Innumerables blogs de tecnólogos están construidos así: costo cero, sin anuncios, con control de versiones.
@@ -213,7 +213,7 @@ Para los estudiantes de informática, GitHub es una hábilidad indispensable: es
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Práctica: completa tu primera experiencia con GitHub
+Práctica: completa tu primera experiencia con GitHub
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Regístrate en una cuenta de GitHub, completa tu perfil (avatar, biografía, áreas tecnológicas de interés).

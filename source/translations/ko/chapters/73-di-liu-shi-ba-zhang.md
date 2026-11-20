@@ -32,15 +32,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* 설정에서 켜도록 안내 */
-        default: /* 이미 승인됨, 진행 */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* 설정에서 켜도록 안내 */
+ default: /* 이미 승인됨, 진행 */
+ }
+ }
 }
 
 // 3. 거부되면 우아하게 저하: 안내 표시 + 설정으로 이동
@@ -73,27 +73,27 @@ import UserNotifications
 
 // 1. 알림 권한 요청(한 번 팝업)
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "승인됨" : "거부됨")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "승인됨" : "거부됨")
+ }
 
 // 2. "매일 20:00 가계부 알림" 예약
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "가계부 알림"
-    content.body = "오늘 가계부 기록이 아직 없어요"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "가계부 알림"
+ content.body = "오늘 가계부 기록이 아직 없어요"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -152,20 +152,20 @@ Swift 6의 동시성 체계에는 초보자가 꼭 알아야 할 규칙이 두 �
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // 나타나면 시작, 사라지면 취소
-            await vm.search(city: "베이징")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // 나타나면 시작, 사라지면 취소
+ await vm.search(city: "베이징")
+ }
+ }
 }
 ```
 :::

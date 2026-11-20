@@ -25,17 +25,17 @@ Die klassische Oberflächenentwicklung ist imperativ: Du kommandierst Schritt f�
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body: beschreibt, "wie die Oberfläche aussieht"
-        VStack {               // vertikal gestapelt
-            Text("Hallo, Welt!")
-                .font(.largeTitle)      // Modifier: große Überschrift
-            Button("Klick mich") {
-                print("Geklickt!")
-            }
-            .buttonStyle(.borderedProminent)  // ausgefüllter blauer Button
-        }
-        .padding()
-    }
+ var body: some View { // body: beschreibt, "wie die Oberfläche aussieht"
+ VStack { // vertikal gestapelt
+ Text("Hallo, Welt!")
+ .font(.largeTitle) // Modifier: große Überschrift
+ Button("Klick mich") {
+ print("Geklickt!")
+ }
+ .buttonStyle(.borderedProminent) // ausgefüllter blauer Button
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -68,17 +68,17 @@ Beachte Image(systemName:) – Apple liefert die SF-Symbols-Symbolbibliothek mit
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("Rechnung")
-        Spacer()                 // elastischer Abstand: schiebt das Rechte ans Ende
-        Text("-25.5 Yuan").foregroundColor(.red)
-    }
-    Divider()                    // Trennlinie
-    Text("Notiz: Mittagessen")
+ HStack {
+ Text("Rechnung")
+ Spacer() // elastischer Abstand: schiebt das Rechte ans Ende
+ Text("-25.5 Yuan").foregroundColor(.red)
+ }
+ Divider() // Trennlinie
+ Text("Notiz: Mittagessen")
 }
-.padding(16)                     // Abstand an allen Seiten
+.padding(16) // Abstand an allen Seiten
 .background(Color(.systemGray6)) // heller grauer Hintergrund
-.cornerRadius(12)                // abgerundete Ecken
+.cornerRadius(12) // abgerundete Ecken
 
 // die Reihenfolge der Modifier zählt: erst padding, dann background; der Hintergrund ohne Rand
 ```
@@ -103,16 +103,16 @@ Eine statische Oberfläche ist langweilig. SwiftUIs Regel: Die Oberfläche spieg
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State: ändert sich dieser Wert, muss neu gezeichnet werden
+ @State private var count = 0 // @State: ändert sich dieser Wert, muss neu gezeichnet werden
 
-    var body: some View {
-        VStack {
-            Text("Du hast \(count) Mal geklickt")
-            Button("Klick +1") {
-                count += 1          // Zustand ändern, die Oberfläche aktualisiert sich automatisch
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Du hast \(count) Mal geklickt")
+ Button("Klick +1") {
+ count += 1 // Zustand ändern, die Oberfläche aktualisiert sich automatisch
+ }
+ }
+ }
 }
 ```
 :::
@@ -126,24 +126,24 @@ Textfelder brauchen eine „bidirektionale Bindung“ – das $-Zeichen übergib
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("Etwas eingeben", text: $text)  // Zweiwege-Bindung mit $
-            .textFieldStyle(.roundedBorder)
-        Text("Du hast eingegeben: \(text)")   // aktualisiert sich live während der Eingabe
-    }
+ var body: some View {
+ TextField("Etwas eingeben", text: $text) // Zweiwege-Bindung mit $
+ .textFieldStyle(.roundedBorder)
+ Text("Du hast eingegeben: \(text)") // aktualisiert sich live während der Eingabe
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> Nutzeraktion</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> Zustand ändert sich (count += 1)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Nutzeraktion</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Zustand ändert sich (count += 1)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI bemerkt die Änderung</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> Zeichnet neu (body wird neu berechnet)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI bemerkt die Änderung</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Zeichnet neu (body wird neu berechnet)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -163,20 +163,20 @@ Abbildung 3: SwiftUIs unidirektionaler Datenfluss von „Zustand → Oberfläche
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::

@@ -64,7 +64,7 @@ Voucher Elektronik Asuransi Kesehatan
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Polisi, jaksa, bank, dan customer service tidak akan meminta Anda transfer ke "akun aman".
+Polisi, jaksa, bank, dan customer service tidak akan meminta Anda transfer ke "akun aman".
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Siapa pun yang meminta Anda screenshot kode pembayaran dan kirimkan, adalah penipu.
@@ -75,7 +75,7 @@ Voucher Elektronik Asuransi Kesehatan
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Buka Alipay dan WeChat, pastikan pembayaran sidik jari/wajah telah diaktifkan.
+Buka Alipay dan WeChat, pastikan pembayaran sidik jari/wajah telah diaktifkan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Temukan fitur "Security Lock" dan aktifkan.

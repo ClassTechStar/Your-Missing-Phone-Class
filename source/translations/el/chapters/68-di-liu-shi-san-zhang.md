@@ -35,20 +35,20 @@ kind: chapter
 import Observation
 
 @Observable
-class CounterModel {                 // View model
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // View model
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // Κρατά το μοντέλο
+ @State private var model = CounterModel() // Κρατά το μοντέλο
 
-    var body: some View {
-        VStack {
-            Text("Έχεις πατήσει \(model.count) φορές")
-            Button("Πάτα με") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Έχεις πατήσει \(model.count) φορές")
+ Button("Πάτα με") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ struct CounterView: View {
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Το λογιστήριο του Γιώργου") {
-                    DetailView(name: "Το λογιστήριο του Γιώργου")   // σελίδα προορισμού
-                }
-                NavigationLink("Το λογιστήριο του Νίκου") {
-                    DetailView(name: "Το λογιστήριο του Νίκου")
-                }
-            }
-            .navigationTitle("Λίστα λογιστηρίων")   // μεγάλος τίτλος πάνω
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("Το λογιστήριο του Γιώργου") {
+ DetailView(name: "Το λογιστήριο του Γιώργου") // σελίδα προορισμού
+ }
+ NavigationLink("Το λογιστήριο του Νίκου") {
+ DetailView(name: "Το λογιστήριο του Νίκου")
+ }
+ }
+ .navigationTitle("Λίστα λογιστηρίων") // μεγάλος τίτλος πάνω
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("Σελίδα λεπτομερειών \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("Σελίδα λεπτομερειών \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ struct DetailView: View {
 ```
 // 1. Pop μισής/ολοκλήρωσης οθόνης από κάτω (αγαπημένο για φόρμες)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("Καταγραφή") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // Η σελίδα εισαγωγής που εμφανίζεται
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("Καταγραφή") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // Η σελίδα εισαγωγής που εμφανίζεται
+ }
+ }
 }
 
 // 2. Μπάρα καρτελών κάτω (ο "σκελετός" της εφαρμογής)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("Λογιστήριο", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("Στατιστικά", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("Ρυθμίσεις", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("Λογιστήριο", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("Στατιστικά", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("Ρυθμίσεις", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ struct MainTabView: View {
 
 ```
 struct RecordListView: View {
-    @State private var records = ["Μεσημεριανό 25.5", "Μετρό 6.0", "Μισθός +8000"]
+ @State private var records = ["Μεσημεριανό 25.5", "Μετρό 6.0", "Μισθός +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // σβούρισμα αριστερά για διαγραφή
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // σβούρισμα αριστερά για διαγραφή
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("Πίσω σε πρώτο πλάνο, συνέχεια ανανέωσης")
-            case .inactive:  print("Σε μετάβαση (κλήση/στιγμή ταμπλέτας)")
-            case .background: print("Σε φόντο, αποθήκευση προσχέδιου")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("Πίσω σε πρώτο πλάνο, συνέχεια ανανέωσης")
+ case .inactive: print("Σε μετάβαση (κλήση/στιγμή ταμπλέτας)")
+ case .background: print("Σε φόντο, αποθήκευση προσχέδιου")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

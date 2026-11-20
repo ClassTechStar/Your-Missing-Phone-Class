@@ -19,19 +19,19 @@ Screen cast nirkabel tampak semua "tampilan ponsel ke TV", tapi teknologi dasarn
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Teknologi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Siapa pakai</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Karakteristik</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem Apple, pengalaman paling lancar. Butuh Apple TV atau TV yang mendukung AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ponsel Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sambungan langsung Wi-Fi Direct, tidak butuh router. "Screen cast" ponsel Android default pakai ini</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Semua platform</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hanya push file media (video/musik/foto), tidak mirror layar. Cocok untuk push video ke TV untuk diputar</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Teknologi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Siapa pakai</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Karakteristik</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem Apple, pengalaman paling lancar. Butuh Apple TV atau TV yang mendukung AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ponsel Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sambungan langsung Wi-Fi Direct, tidak butuh router. "Screen cast" ponsel Android default pakai ini</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Semua platform</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hanya push file media (video/musik/foto), tidak mirror layar. Cocok untuk push video ke TV untuk diputar</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Mengoperasikan ponsel saat berkendara itu melanggar hukum, tapi navigasi, dengar
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Peringatan Keamanan
+Peringatan Keamanan
 
 {class="mt-1"}
 Apa pun solusi car connectivity, saat berkendara harus semaksimal mungkin pakai kontrol suara. Navigasi setel tujuan sebelumnya, musik pilih playlist sebelumnya, jangan operasi layar head unit saat berkendara.
@@ -86,7 +86,7 @@ Rapat adalah skenario screen cast paling sering, juga skenario paling mudah berm
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Selesaikan satu kali screen cast ponsel ke TV
+Praktik: Selesaikan satu kali screen cast ponsel ke TV
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Di TV temukan fungsi "Screen Mirroring" atau "AirPlay" dan aktifkan.
@@ -98,7 +98,7 @@ Rapat adalah skenario screen cast paling sering, juga skenario paling mudah berm
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tiga kubu screen cast nirkabel: AirPlay (Apple), Miracast (Android), DLNA (cross-platform push media)

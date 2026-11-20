@@ -19,19 +19,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Технология</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Кто использует</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Особенности</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Экосистема Apple, самый плавный опыт. Требуется Apple TV или телевизор с поддержкой AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android-смартфоны</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Прямое подключение Wi-Fi Direct, маршрутизатор не нужен. На Android-смартфонах «беспроводная трансляция экрана» по умолчанию использует именно его</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Все платформы</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Передаёт только медиафайлы (видео/музыка/фото), не дублирует экран. Подходит для передачи видео на телевизор для воспроизведения</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Технология</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Кто использует</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Особенности</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Экосистема Apple, самый плавный опыт. Требуется Apple TV или телевизор с поддержкой AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android-смартфоны</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Прямое подключение Wi-Fi Direct, маршрутизатор не нужен. На Android-смартфонах «беспроводная трансляция экрана» по умолчанию использует именно его</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Все платформы</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Передаёт только медиафайлы (видео/музыка/фото), не дублирует экран. Подходит для передачи видео на телевизор для воспроизведения</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ IV. Автомобильная интеграция — правильный с�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Напоминание о безопасности
+Напоминание о безопасности
 
 {class="mt-1"}
 При любом варианте автомобильной интеграции за рулём следует по возможности использовать голосовое управление. Заранее задавайте пункт назначения в навигаторе, заранее выбирайте плейлист, не управляйте экраном мультимедиа во время движения.
@@ -86,7 +86,7 @@ IV. Автомобильная интеграция — правильный с�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: выполните трансляцию экрана с телефона на телевизор
+Практика: выполните трансляцию экрана с телефона на телевизор
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Убедитесь, что телефон и телевизор подключены к одной сети Wi-Fi.
@@ -98,7 +98,7 @@ IV. Автомобильная интеграция — правильный с�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Итоги главы
+Итоги главы
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Три лагеря беспроводной трансляции: AirPlay (Apple), Miracast (Android), DLNA (кроссплатформенная передача медиа)

@@ -53,7 +53,7 @@ O caminho geral de ativação é: Entre em [Configurações] → [Mais configura
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Observações
+Observações
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - A expansão de memória ocupará parte do espaço de armazenamento interno. Certifique-se de que o armazenamento livre não seja inferior a 20-30GB, caso contrário, pode afetar a fluidez do sistema.
@@ -63,7 +63,7 @@ O caminho geral de ativação é: Entre em [Configurações] → [Mais configura
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Resumo
+Resumo
 
 {class="mt-1"}
 A expansão de memória é uma tecnologia madura de otimização em nível de sistema, capaz de melhorar a capacidade de multitarefa e a taxa de preservação em segundo plano de modelos de gama baixa e média sem alterar o hardware. No entanto, é limitada pela enorme diferença de velocidade entre o flash e a memória física, não sendo uma "cura milagrosa". Ativar ou não, e em qual tamanho, deve ser decidido com base no tamanho da RAM física do seu modelo, na especificação do flash, no espaço de armazenamento livre e nos hábitos de uso.
@@ -71,7 +71,7 @@ A expansão de memória é uma tecnologia madura de otimização em nível de si
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: Veja se seu celular tem expansão de memória
+Mãos à obra: Veja se seu celular tem expansão de memória
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abra [Configurações], pesquise por "expansão de memória", "fusão de memória", "RAM Plus" ou "Extended RAM".

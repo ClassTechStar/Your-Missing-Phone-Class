@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：拍一条30秒的短视频
+动手：拍一条30秒的短视频
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 选一个你擅长的小知识（比如"怎么把手机字体调大"）。
@@ -92,7 +92,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 拍之前想清楚：观众是谁、提供什么价值、在哪个平台发

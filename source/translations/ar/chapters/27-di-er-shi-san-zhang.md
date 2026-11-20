@@ -95,7 +95,7 @@ MacroDroid
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>ملحق الفصل 23: دليل البدء في GitHub — من استضافة الأكواد إلى منصة التعاون
+ملحق الفصل 23: دليل البدء في GitHub — من استضافة الأكواد إلى منصة التعاون
 
 {class="mt-1"}
 في الفصل السابق تحدثنا عن "التفكير البرمجي"، ولترجمة هذا التفكير إلى واقع والعمل مع آخرين في مشاريع، لا مفر من اسم, GitHub. سواء كنت طالب علوم حاسوب تشارك في مسابقات، أو تريد حفظ أعمالك البرمجية، أو تريد ببساطة رؤية ما يفعله المطورون حول العالم، فإن GitHub منصة يجب أن تعرفها. في هذا القسم سنبدأ من المفاهيم الأساسية لمساعدتك في بناء فهم واضح.
@@ -103,7 +103,7 @@ MacroDroid
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>أولًا: ما هو GitHub بالضبط؟
+أولًا: ما هو GitHub بالضبط؟
 
 {class="mt-1 mb-2"}
 ببساطة، GitHub هو
@@ -116,7 +116,7 @@ MacroDroid
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>حالة 3: أتمتة "روتين الصباح"
+حالة 3: أتمتة "روتين الصباح"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>السيناريو</strong>: كل يوم 7:00 بث تلقائي للطقس + إيقاف الكتم + فتح الأخبار.

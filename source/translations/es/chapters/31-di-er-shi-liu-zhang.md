@@ -80,7 +80,7 @@ VII. Resumen del capítulo: recuerda estas tendencias en una frase
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pruébalo: haz una "lista de requisitos técnicos" para tu próximo teléfono
+Pruébalo: haz una "lista de requisitos técnicos" para tu próximo teléfono
 
 {class="mt-1"}
 Coge un papel y, en tres categorías "imprescindible/bonus/no necesario", lista tus necesidades de IA, satélite, pantalla plegable, Wi-Fi 7, carga rápida y capacidad de batería. Así, la próxima vez que vayas a una tienda, podrás juzgar rápidamente si las "características" que te recomienda el comercial son necesidades reales o ventas forzadas. Por ejemplo:
@@ -93,7 +93,7 @@ Coge un papel y, en tres categorías "imprescindible/bonus/no necesario", lista 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tres criterios para AI phone: modelo grande en el dispositivo, NPU TOPS, escenarios de AI Agent

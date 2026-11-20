@@ -58,7 +58,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองดูสิ: ร่าง "ข้อกำหนดการใช้อุปกรณ์ดิจิทัลส่วนบุคคล" ของคุณ
+ลองดูสิ: ร่าง "ข้อกำหนดการใช้อุปกรณ์ดิจิทัลส่วนบุคคล" ของคุณ
 
 {class="mt-1"}
 เขียน "ข้อกำหนดการให้บริการ" ง่าย ๆ สำหรับคุณและสมาร์ทโฟน (รวมถึงแว่น AR และผู้ช่วย AI ในอนาคต) เพื่อกำหนดความสัมพันธ์ระหว่างคุณ ตัวอย่างเช่น:
@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro และแว่น AR เป็นช่องทางเข้าถึงการประมวลผลใหม่นอกเหนือจากสมาร์ทโฟน แต่ในระยะสั้นยังไม่สามารถแทนที่สมาร์ทโฟนได้

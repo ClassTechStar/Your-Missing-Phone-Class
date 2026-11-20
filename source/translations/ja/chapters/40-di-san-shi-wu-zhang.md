@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"十分でよい"原則
+"十分でよい"原則
 
 {class="mt-1"}
 子どもの最初のスマホはフラッグシップである必要はない。プロセッサの"過剰性能"は往々にしてゲームに使われる。バッテリーが十分、性能中程度、目に優しい画面の千元機や公式リファービッシュ機を選ぶ方が管理しやすい。予算の目安：1500-2500元で大多数の学生のニーズを満たせる。
@@ -60,27 +60,27 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">機能</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS スクリーンタイム</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / ブランド方案</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App制限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応、カテゴリ別</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応、App別</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">使用停止時間</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応（ブランド方案により若干差異）</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">コンテンツフィルタ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">システムレベル、比較的徹底</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ブランド依存、ばらつきあり</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">リモート管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ファミリー共有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / ブランドクラウド</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Appインストール承認</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">親の承認が必要</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link対応</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">機能</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS スクリーンタイム</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / ブランド方案</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App制限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応、カテゴリ別</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応、App別</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">使用停止時間</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">対応（ブランド方案により若干差異）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">コンテンツフィルタ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">システムレベル、比較的徹底</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ブランド依存、ばらつきあり</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">リモート管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ファミリー共有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / ブランドクラウド</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Appインストール承認</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">親の承認が必要</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link対応</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>ペアレンタルコントロールは"一度設定で永遠"ではない
+ペアレンタルコントロールは"一度設定で永遠"ではない
 
 {class="mt-1"}
 子どもは必ず回避方法を見つける（ネットで"スクリーンタイムの破り方"のチュートリアルが大量にある）。技術的手段は最低限のラインにすぎず。本当の防線は親子のコミュニケーションと信頼だ。毎月子どもと一緒に利用レポートを振り返ることを推奨し、一方的な監視は避ける。
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>実名認証に親の身分証で"アカウントを借りる"のはダメ
+実名認証に親の身分証で"アカウントを借りる"のはダメ
 
 {class="mt-1"}
 多くの子どもが親の身分証でゲームアカウントを登録して依存防止を回避していますが、これは利用契約違反であると同時に、子どもを保護から遠ざけます。親は自分の決済パスワードと身分情報を厳重に管理し、手間を省くために「アカウントを貸す」ことは避けてください。
@@ -113,7 +113,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>実践：子どもと一緒に《スマホ利用規約》に署名する
+実践：子どもと一緒に《スマホ利用規約》に署名する
 
 {class="mt-1"}
 ルールを書き出し、双方が署名して目立つところに貼るのは、口頭の約束よりはるかに効果的。以下を含めることを推奨：
@@ -137,7 +137,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>親が最高の"ファイアウォール"
+親が最高の"ファイアウォール"
 
 {class="mt-1"}
 研究によれば、親自身のスマホ利用時間は子どもと強い正の相関がある。子どもにスマホを見ないよう要求しながら自分は深夜まで短動画をスクロールすれば、ルールは無効になる。子どもを変えるには、まず自分のスマホを置くことから。
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>"子どものデジタル遺産"のもう一面に警戒
+"子どものデジタル遺産"のもう一面に警戒
 
 {class="mt-1"}
 子どもは誕生から"記録"されている，親がアップした成長写真、幼稚園が送った動画、スマートウォッチの健康データ。これらのデータは一度アップロードされると完全削除が困難。投稿前に考えよう：十年後、子どもはこの写真で恥ずかしい思いをしないか？子どものデジタル人格を尊重し。"子ども投稿"を控えることから始める。
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - スマホを与える年齢に標準答はないが、3-6歳はできるだけ触れさせない、13歳前はキッズウォッチやフィーチャーフォンで過渡

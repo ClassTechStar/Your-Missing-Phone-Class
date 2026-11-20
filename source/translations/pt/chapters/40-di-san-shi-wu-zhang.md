@@ -23,7 +23,7 @@ Não há resposta padrão, mas há linhas de base por idade. Dar cedo demais: o 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Princípio do "bom o suficiente"
+Princípio do "bom o suficiente"
 
 {class="mt-1"}
 O primeiro celular da criança não precisa ser um flagship. O "desempenho excedente" do processador geralmente é usado para rodar jogos. Escolha um celular com bateria grande, desempenho médio e tela com proteção ocular na faixa de 1.000-2.500 RMB, ou um aparelho recondicionado oficial: isso é mais favorável ao controle. Orçamento de referência: 1.500-2.500 RMB atende à grande maioria das necessidades estudantis.
@@ -60,27 +60,27 @@ Antes de entregar o dispositivo à criança, a primeira coisa não é ligar, mas
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Função</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Tempo de Uso</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Solução da marca</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Limites de Apps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim, por categoria</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim, por app</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tempo de Inatividade</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim (varia por marca)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filtro de conteúdo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nível de sistema, mais completo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Depende da marca, qualidade variável</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gerenciamento remoto</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compartilhamento Familiar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Nuvem da marca</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aprovação de instalação de apps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requer aprovação dos pais</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link compatível</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Função</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Tempo de Uso</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Solução da marca</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Limites de Apps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim, por categoria</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim, por app</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tempo de Inatividade</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sim (varia por marca)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filtro de conteúdo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nível de sistema, mais completo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Depende da marca, qualidade variável</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gerenciamento remoto</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compartilhamento Familiar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Nuvem da marca</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aprovação de instalação de apps</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requer aprovação dos pais</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link compatível</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Controle parental não é "definitivo"
+Controle parental não é "definitivo"
 
 {class="mt-1"}
 As crianças sempre encontram maneiras de burlar (há inúmeros tutoriais na internet de "como quebrar o Tempo de Uso"). Medidas técnicas são apenas a linha de defesa básica. A verdadeira barreira é a comunicação e a confiança entre pais e filhos. Recomenda-se revisar mensalmente os relatórios de uso junto com a criança, em vez de monitorar unilateralmente.
@@ -96,7 +96,7 @@ As principais plataformas de conteúdo têm um "Modo Adolescente" integrado. Qua
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Não use o documento de identidade dos pais para "emprestar" autenticação
+Não use o documento de identidade dos pais para "emprestar" autenticação
 
 {class="mt-1"}
 Muitas crianças usam o documento de identidade dos pais para registrar contas de jogos e burlar o sistema antiviício. Isso viola os termos de uso e priva a criança de proteção. Os pais devem guardar suas senhas de pagamento e informações de identidade, e não "emprestar" a conta por conveniência.
@@ -113,7 +113,7 @@ A tecnologia pode bloquear 90% dos riscos, os outros 10% dependem da capacidade 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: Assine um "Acordo de Uso do Celular" com seu filho
+Mãos à obra: Assine um "Acordo de Uso do Celular" com seu filho
 
 {class="mt-1"}
 Colocar as regras por escrito, com assinatura de ambos e afixado em local visível, é muito mais eficaz do que acordos verbais. Sugere-se incluir:
@@ -137,7 +137,7 @@ Os olhos, a coluna cervical e o sono das crianças estão em fase de desenvolvim
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Os pais são o melhor "firewall"
+Os pais são o melhor "firewall"
 
 {class="mt-1"}
 Pesquisas mostram que o tempo de uso do celular pelos pais tem forte correlação positiva com o dos filhos. Exigir que a criança não use o celular enquanto você mesmo navega em vídeos curtos até tarde da noite torna as regras ineficazes. Para mudar a criança, comece largando seu próprio celular.
@@ -153,7 +153,7 @@ Esta seção é facilmente negligenciada, mas é muito importante. Os ativos dig
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Alerta sobre o outro lado da "herança digital infantil"
+Alerta sobre o outro lado da "herança digital infantil"
 
 {class="mt-1"}
 As crianças vêm sendo "registradas" desde o nascimento, fotos de crescimento postadas pelos pais, vídeos enviados pela escola, dados de saúde do relógio inteligente. Uma vez carregados, esses dados são difíceis de excluir completamente. Antes de publicar, pense: daqui a dez anos. A criança ficaria constrangida com esta foto? Respeitar a personalidade digital da criança começa com a moderação ao "expor os filhos".
@@ -161,7 +161,7 @@ As crianças vêm sendo "registradas" desde o nascimento, fotos de crescimento p
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo
+Resumo do capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Não há idade padrão para dar o celular, mas evite ao máximo o contato entre 3-6 anos; antes dos 13, use relógio infantil ou celular básico como transição

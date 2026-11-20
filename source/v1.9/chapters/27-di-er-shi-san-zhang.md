@@ -55,7 +55,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 自动化的难点从来不是工具，是把模糊的「我每次都要弄一下」说成明确的触发条件和动作。
@@ -208,20 +208,20 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">触发器</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注意点</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定时勿扰、早安播报、周报提醒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">选清楚重复日期，别让周末也上班</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">闹钟</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">闹钟响起后自动播报天气和日程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">认系统自带闹钟，第三方App的铃不认</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">到达/离开地点</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">到家提醒取快递、到公司静音</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖地理围栏，延迟和漂移属正常</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连公司网络静音、到家相关动作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路由器改名就失灵，认名字不认地方</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连车载蓝牙开导航、连耳机播播客</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备要提前配对，列表里选得到才有效</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NFC</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">床头一碰进勿扰、门口一碰到家模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主动碰才触发，不会误触；贴纸几块钱一张</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电量/充电器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低电量省电、充满提醒拔充电器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阈值别设太密，不然通知轰炸</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专注模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进入工作专注时自动静音</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跟手动静音规则容易打架，留一个就好</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">打开打车App时自动复制家庭地址</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">别绑打开率极高的App，比如微信</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信息</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快递短信提取取件码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">关键词要收窄，不然广告短信全触发</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">交易</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Pay刷卡后自动记账（iOS 17起）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只认Apple Wallet刷卡，扫码读不到</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">触发器</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注意点</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定时勿扰、早安播报、周报提醒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">选清楚重复日期，别让周末也上班</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">闹钟</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">闹钟响起后自动播报天气和日程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">认系统自带闹钟，第三方App的铃不认</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">到达/离开地点</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">到家提醒取快递、到公司静音</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖地理围栏，延迟和漂移属正常</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连公司网络静音、到家相关动作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路由器改名就失灵，认名字不认地方</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连车载蓝牙开导航、连耳机播播客</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备要提前配对，列表里选得到才有效</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NFC</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">床头一碰进勿扰、门口一碰到家模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主动碰才触发，不会误触；贴纸几块钱一张</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电量/充电器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低电量省电、充满提醒拔充电器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阈值别设太密，不然通知轰炸</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专注模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进入工作专注时自动静音</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跟手动静音规则容易打架，留一个就好</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">打开打车App时自动复制家庭地址</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">别绑打开率极高的App，比如微信</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信息</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快递短信提取取件码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">关键词要收窄，不然广告短信全触发</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">交易</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Pay刷卡后自动记账（iOS 17起）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只认Apple Wallet刷卡，扫码读不到</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -244,7 +244,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 指令的名字就是它的说明书：短、动词开头、说人话。「发今日安排」永远强过「未命名快捷指令3」。
@@ -295,13 +295,13 @@ Tasker是安卓平台上公认最强的自动化工具，常年霸榜。说实�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tasker</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">MacroDroid</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">系统自带场景</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上手难度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">陡，要啃概念</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">平缓，点选为主</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">零门槛</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">触发器和动作数量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几十种触发器，动作极多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">常用场景覆盖很全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只有时间、地点等少数几类</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">灵活度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">变量、条件、插件生态，天花板最高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有约束机制，够日常用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逻辑只有一两层</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">适合谁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">愿意折腾的进阶玩家</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">绝大多数安卓用户</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不想装任何第三方工具的人</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tasker</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">MacroDroid</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">系统自带场景</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上手难度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">陡，要啃概念</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">平缓，点选为主</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">零门槛</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">触发器和动作数量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几十种触发器，动作极多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">常用场景覆盖很全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只有时间、地点等少数几类</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">灵活度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">变量、条件、插件生态，天花板最高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有约束机制，够日常用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逻辑只有一两层</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">适合谁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">愿意折腾的进阶玩家</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">绝大多数安卓用户</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不想装任何第三方工具的人</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -366,7 +366,7 @@ Tasker是安卓平台上公认最强的自动化工具，常年霸榜。说实�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 触发器认的是"名字"和"数值"，不是你的生活概念。改了Wi-Fi名、换了车机蓝牙、日历换了账号，相关规则就集体失灵，而且它们不会提醒你失灵了，只会默默躺平。换季、换设备、换账号之后，顺手把相关自动化过一遍。
@@ -452,7 +452,7 @@ Tasker是安卓平台上公认最强的自动化工具，常年霸榜。说实�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 凡是标榜"自动抢红包""自动抢单""破解Wi-Fi"的工具，本质都在向你要最高权限：省下的那几块钱，买单的可能是你的账号、支付和通讯录。自动化工具的正路只有两条：系统自带，或者官方应用商店里口碑明确的知名工具。
@@ -539,15 +539,15 @@ vivo 把类似功能放在 Jovi 智慧场景这一族里，叫法同样随版本
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设置里搜什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话玩法</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智慧助手 / 场景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">情景智能做提醒，场景搭触发规则</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自动化 / 训练</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定时任务现成，小爱训练计划自定义</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自动化 / 智能服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定时、条件、一键指令三件套</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">场景 / 自动化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智慧场景里翻现成规则</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模式 / 日常程序</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自带方案里完成度较高的一档</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快捷指令</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第二节已详讲</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设置里搜什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话玩法</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智慧助手 / 场景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">情景智能做提醒，场景搭触发规则</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自动化 / 训练</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定时任务现成，小爱训练计划自定义</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自动化 / 智能服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定时、条件、一键指令三件套</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">场景 / 自动化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智慧场景里翻现成规则</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模式 / 日常程序</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自带方案里完成度较高的一档</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快捷指令</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第二节已详讲</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -634,16 +634,16 @@ vivo 把类似功能放在 Jovi 智慧场景这一族里，叫法同样随版本
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">编程概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你在这一章已经会的东西</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">顺序执行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动作块从上到下排队跑</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">条件分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"如果／其他情况／结束条件"</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">循环</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"重复"动作、定时任务的日历循环</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">变量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">魔法变量、剪贴板、运行时输入</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">函数</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"运行快捷指令"的嵌套调用</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">调试</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三板斧排查法</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">复制留底、改前备份</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">编程概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你在这一章已经会的东西</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">顺序执行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动作块从上到下排队跑</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">条件分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"如果／其他情况／结束条件"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">循环</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"重复"动作、定时任务的日历循环</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">变量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">魔法变量、剪贴板、运行时输入</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">函数</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"运行快捷指令"的嵌套调用</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">调试</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三板斧排查法</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">复制留底、改前备份</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -784,7 +784,7 @@ vivo 把类似功能放在 Jovi 智慧场景这一族里，叫法同样随版本
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 规则不在多，在于每一条你都敢信它。删掉一条不可靠的规则，比新加十条聪明的更接近自动化的本意。
@@ -792,7 +792,7 @@ vivo 把类似功能放在 Jovi 智慧场景这一族里，叫法同样随版本
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：从「最烦的那件事」开始
+小贴士：从「最烦的那件事」开始
 
 {class="mt-1"}
 别一上来就规划宏大的自动化系统。先花5分钟想一下：你每天在手机上重复最多、最烦的是哪一件事？是连上公司Wi-Fi要手动静音，还是到家要开灯、每天要备份一次照片？挑一件，把它做成自动化。跑通它：一条真正跑通的规则，比十条配了一半的强。而且做出来之后的满足感，真的会上瘾。
@@ -800,7 +800,7 @@ vivo 把类似功能放在 Jovi 智慧场景这一族里，叫法同样随版本
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>练一练：三个入门自动化挑战
+练一练：三个入门自动化挑战
 
 {class="mt-1 mb-2"}
 选一个最适合你的完成，做完你就入门了：
@@ -813,7 +813,7 @@ vivo 把类似功能放在 Jovi 智慧场景这一族里，叫法同样随版本
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例 3：自动化"早安流程"
+案例 3：自动化"早安流程"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>场景</strong>：每天 7:00 自动播报天气 + 关闭静音 + 打开新闻。

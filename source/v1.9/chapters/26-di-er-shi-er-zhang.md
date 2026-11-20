@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 拍夜景别手抖。多帧合成的对齐环节最怕两件事：镜头乱晃、画面里的东西乱动。手一晃，灯光变成光带，走动的人变成半透明的"鬼影"。想拍清楚，双手端稳一到两秒再放下；想故意拍车流的灯光轨迹，反而是让曝光久一点，同一套原理，反着用就是创作。
@@ -85,7 +85,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 拍夜景要让画面里"有光"：路灯光、车灯、店铺招牌都是好素材。AI的本事是把现有的光"用"好，不是凭空造光，一片死黑的画面，谁也救不了。
@@ -130,7 +130,7 @@ AI优化偶尔也会用力过猛：人脸磨得没有毛孔，食物红得发假
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 拍人像先看背景。AI虚化能救构图，救不了杂乱，背景里一根斜穿的电线杆，虚化之后还是一根模糊的电线杆。挪半步换个机位，比任何后期都管用。
@@ -157,7 +157,7 @@ AI优化偶尔也会用力过猛：人脸磨得没有毛孔，食物红得发假
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 对同一个场景连拍三张：一张全自动、一张关掉AI场景优化、一张人像模式。回家放在一起看差异，找到你喜欢的口味，再决定那个AI开关是开还是关。
@@ -243,7 +243,7 @@ AI优化偶尔也会用力过猛：人脸磨得没有毛孔，食物红得发假
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 好的语音助手不是背指令的机器，是听得懂"人话"的同事，你说话越自然越省事，就说明它进化得越到位。
@@ -272,7 +272,7 @@ AI优化偶尔也会用力过猛：人脸磨得没有毛孔，食物红得发假
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 只用语音完成一个完整任务链：唤醒助手→查天气→定一个明天的提醒→给家人发条消息。全程不碰屏幕，记录哪一步它没听懂、你重复了几遍——那就是你和它之间的"接缝"，换个说法把缝抹平。
@@ -344,7 +344,7 @@ OPPO和vivo也把各自的系统助手接入了大模型能力（名称与具体
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 同样的「AI」两个字，隐私代价可能差一整个数量级。动手前先问一句：这段内容离开手机了吗？
@@ -401,7 +401,7 @@ OPPO和vivo也把各自的系统助手接入了大模型能力（名称与具体
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 端侧管"我的事"，云端管"天下的事"，记住这条分诊线，AI用得又爽又安心。
@@ -456,7 +456,7 @@ AI相机不只是拍照。打开相机的取词、扫描类功能（名称视机
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 年检最好的时机是系统大版本更新之后，更新常常带来新的AI功能，也可能悄悄改掉你的开关设置。
@@ -670,7 +670,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>为什么需要框架？
+为什么需要框架？
 
 {class="mt-1"}
 很多人用 AI 像用百度一样，敲几个关键词进去。但 AI 不是搜索引擎，它是一个"阅读理解后回答"的语言模型。<strong>给它更多上下文、说清你要什么、限制它别跑偏</strong>，它就能给你精准的结果，框架就是把你脑子里的"好答案长什么样"翻译成 AI 能理解的指令。
@@ -770,39 +770,39 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">症状</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">解法</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太泛、不实用</td>
-                                    <td class="border border-gray-300 px-3 py-2">加背景（你是谁/什么场景）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太学术/太官方</td>
-                                    <td class="border border-gray-300 px-3 py-2">加语气限制 + 拒绝"官话"清单</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答跑题/答非所问</td>
-                                    <td class="border border-gray-300 px-3 py-2">把任务用动词重新说一遍，并要求"只回答这个" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太长看不完</td>
-                                    <td class="border border-gray-300 px-3 py-2">硬性限制字数（200 字内）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI 一本正经胡说</td>
-                                    <td class="border border-gray-300 px-3 py-2">加"如不确定请标注'我不确定'" + 重要事实自查</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">第一版不满意</td>
-                                    <td class="border border-gray-300 px-3 py-2">不要重写，在原提示词后追加"再…一些"</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">症状</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">解法</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太泛、不实用</td>
+ <td class="border border-gray-300 px-3 py-2">加背景（你是谁/什么场景）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太学术/太官方</td>
+ <td class="border border-gray-300 px-3 py-2">加语气限制 + 拒绝"官话"清单</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答跑题/答非所问</td>
+ <td class="border border-gray-300 px-3 py-2">把任务用动词重新说一遍，并要求"只回答这个" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太长看不完</td>
+ <td class="border border-gray-300 px-3 py-2">硬性限制字数（200 字内）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI 一本正经胡说</td>
+ <td class="border border-gray-300 px-3 py-2">加"如不确定请标注'我不确定'" + 重要事实自查</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">第一版不满意</td>
+ <td class="border border-gray-300 px-3 py-2">不要重写，在原提示词后追加"再…一些"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -811,7 +811,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>场景一：生活助手（早餐搭配建议）
+场景一：生活助手（早餐搭配建议）
 
 {class="mt-1"}
 <strong>提示词</strong>：
@@ -825,7 +825,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>场景二：学习辅助（英语六级备考）
+场景二：学习辅助（英语六级备考）
 
 {class="mt-1"}
 <strong>提示词</strong>：
@@ -839,7 +839,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>场景三：工作效率（会议纪要整理）
+场景三：工作效率（会议纪要整理）
 
 {class="mt-1"}
 <strong>提示词</strong>：
@@ -853,7 +853,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>进阶玩法：让 AI 成为你的"私人助理"
+进阶玩法：让 AI 成为你的"私人助理"
 
 {class="mt-1"}
 试试这些进阶用法，体验 AI 的真正实力：
@@ -897,7 +897,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-birthday-cake mr-2"></i>完整案例：一条用满六件套的提示词
+完整案例：一条用满六件套的提示词
 
 {class="mt-1 text-sm" style="font-family: monospace; background: #f5f5f5; padding: 8px; border-radius: 4px;"}
 你是一位常年给品牌写朋友圈的文案作者（<strong>角色</strong>）。帮我给我妈写一条60岁生日的朋友圈配文（<strong>请求</strong>）。背景：我是女儿，在外地工作，我妈爱花、性格要强、不爱张罗过寿（<strong>背景</strong>）。输出：两条，每条不超过50字，一条走温情、一条走幽默（<strong>输出</strong>）。语气：真挚，别用"岁月""时光"这类词（<strong>语气</strong>）。示例，照这种感觉写："我妈60岁了，依然嫌弃我爸泡的茶太浓。"（<strong>示例</strong>）。
@@ -922,7 +922,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 给你自己写一条"自我介绍提示词"：用四件套或六件套，让AI基于你的情况写一段50字的个人简介，用在小区团购群或兴趣社团报名里。写完回看：哪一条信息要是没给，答案立刻变味？那条就是你的"关键槽位"。
@@ -956,7 +956,7 @@ AI虽然强大，但绝非"无所不能"。清醒地认识它的局限，才能�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 AI负责出草稿，你负责核事实：分工越清楚，被坑越少。
@@ -1001,7 +1001,7 @@ AI不是让骗局变多了，是让骗局变"真"了。多一道核实，就少�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>AI使用小贴士
+AI使用小贴士
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - AI生成的内容可能不准确（"幻觉"问题），重要信息务必核实。
@@ -1013,7 +1013,7 @@ AI不是让骗局变多了，是让骗局变"真"了。多一道核实，就少�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来挑战：三道AI实战题
+来挑战：三道AI实战题
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>挑战一：复杂指令</strong>：对语音助手说："明早7点提醒我带伞，并把今天下午3点的日历改到4点。" 看看它能否一次完成多步操作。
@@ -1023,7 +1023,7 @@ AI不是让骗局变多了，是让骗局变"真"了。多一道核实，就少�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例：开一次"飞行模式 AI 体验"
+案例：开一次"飞行模式 AI 体验"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>场景</strong>：想知道你的手机里哪些 AI 功能不靠网也能用。
@@ -1150,7 +1150,7 @@ AI不是让骗局变多了，是让骗局变"真"了。多一道核实，就少�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>进阶玩家自查
+进阶玩家自查
 
 {class="mt-1"}
 七件全做到了？再试这三件：① 给爸妈远程配好语音助手并回访一次，② 用"喂材料+划范围"的问法处理一份正式文件；③ 把自己的AI流水线（哪几个功能、按什么顺序）写下来。做完这三件，你已经超过绝大多数用户。
@@ -1186,7 +1186,7 @@ AI不是让骗局变多了，是让骗局变"真"了。多一道核实，就少�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI相机三步走：识别场景、多帧合成、智能优化；夜景端稳一两秒，消除和扩图是"后悔药"

@@ -74,7 +74,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>① ロック画面パスワード + 生体認証 ② 通知グループ化 + マーケティングプッシュをオフ ③ フォントサイズ / リフレッシュレート / ダークモード
+① ロック画面パスワード + 生体認証 ② 通知グループ化 + マーケティングプッシュをオフ ③ フォントサイズ / リフレッシュレート / ダークモード
 
 {class="mt-1 text-sm"}
 ④ デフォルトの入力メソッド / ブラウザ / メール ⑤ 緊急連絡先 / メディカルID ⑥ バックアップ設定<br> 五、アクセシビリティ機能：テクノロジーが善である力<br> 「アクセシビリティ機能」という名前に恐れる必要はない。これらの機能は誰でも使える。元々は障害者のために設計されたが、一般人にも役立つ，一時的に手を怪我した、赤ちゃんを抱えている、地下鉄でイヤホンが壊れて聞こえない、老眼鏡で小さな文字を見る……。どのような状況でも助けになる。結局のところ、アクセシビリティデザインは
@@ -90,7 +90,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>：[設定] &gt; [アクセシビリティ] &gt; [VoiceOver]、スイッチをオン。サイドボタン（またはホームボタン）を3回クリックして素早く切り替えも可能。
+：[設定] &gt; [アクセシビリティ] &gt; [VoiceOver]、スイッチをオン。サイドボタン（またはホームボタン）を3回クリックして素早く切り替えも可能。
 
 {class="mt-1"}
 <strong>基本ジェスチャー</strong>：
@@ -111,7 +111,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>：[設定] &gt; [アクセシビリティ] &gt; [TalkBack]、スイッチをオン。または音量上下キーを3秒間長押しで素早く起動（一部ブランドがサポート）。
+：[設定] &gt; [アクセシビリティ] &gt; [TalkBack]、スイッチをオン。または音量上下キーを3秒間長押しで素早く起動（一部ブランドがサポート）。
 
 {class="mt-1"}
 <strong>基本ジェスチャー</strong>：
@@ -155,7 +155,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>：[設定] &gt; [アクセシビリティ] &gt; [VoiceOver] &gt; [音声記述]で「画像記述」をオン。システムは
+：[設定] &gt; [アクセシビリティ] &gt; [VoiceOver] &gt; [音声記述]で「画像記述」をオン。システムは
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>ローカルAIモデル</strong>を呼び出して画像のテキスト記述を自動生成（iPhone 12以降が必要）。<strong>新版TalkBackアプリ</strong>：Google TalkBackは比較的新しいバージョンで
@@ -165,7 +165,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>これこそが真の「テクノロジーが生活をより平等にする」
+これこそが真の「テクノロジーが生活をより平等にする」
 
 {class="mt-1"}
 。<strong>4. 聴覚障害者の「耳」，リアルタイム字幕完全ガイド</strong>。
@@ -178,7 +178,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>：[設定] &gt; [アクセシビリティ] &gt; [リアルタイム字幕]、スイッチをオン。システムはデバイスのすべての音声（通話、動画、ポッドキャスト、FaceTime、ボイスメモ）を検出し、自動的に画面上部に字幕を表示。
+：[設定] &gt; [アクセシビリティ] &gt; [リアルタイム字幕]、スイッチをオン。システムはデバイスのすべての音声（通話、動画、ポッドキャスト、FaceTime、ボイスメモ）を検出し、自動的に画面上部に字幕を表示。
 
 {class="mt-1"}
 <strong>iOS</strong>：
@@ -203,7 +203,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>：[設定] &gt; [アクセシビリティ] &gt; [RTT/TTY]、有効化すると通話中に画面にキーボードが表示され、相手の音声がリアルタイムにテキスト化され、
+：[設定] &gt; [アクセシビリティ] &gt; [RTT/TTY]、有効化すると通話中に画面にキーボードが表示され、相手の音声がリアルタイムにテキスト化され、
 
 {class="mt-1"}
 <strong>iOS</strong>。<strong>入力した文字も相手に読み上げられます</strong>：[設定] &gt; [アクセシビリティ] &gt; [リアルタイム文字起こし] + [音声通知]。「リアルタイム文字起こし」は相手の発話をリアルタイムにテキスト表示；「音声通知」は音声が不便な時にあなたの入力を音声で再生。
@@ -231,7 +231,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>30秒で体験してみよう
+30秒で体験してみよう
 
 {class="mt-1"}
 空き時間を見つけて、以下の体験をしよう：
@@ -239,7 +239,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>VoiceOver / TalkBack
+VoiceOver / TalkBack
 
 {class="mt-1"}
 をオンにし、目に頼らず3本指でスワイプしてWeChatを閲覧してみる；

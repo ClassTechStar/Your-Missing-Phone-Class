@@ -25,46 +25,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Аспект</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Суть</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Инструмент контроля версий (ПО)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Платформа хостинга кода (сайт)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Где работает</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">На локальном компьютере</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">В облаке (доступ через браузер)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Главная задача</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Записывать каждое изменение файлов (что, кто и когда изменил)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Разместить Git-репозиторий в облаке для хранения, демонстрации и сотрудничества</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужна ли сеть</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нет, работает офлайн</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно подключение для доступа</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Принадлежность</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Open-source ПО, создано Linus Torvalds (отцом Linux)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Продукт Microsoft</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аналоги</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Аспект</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Суть</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Инструмент контроля версий (ПО)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Платформа хостинга кода (сайт)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Где работает</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">На локальном компьютере</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">В облаке (доступ через браузер)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Главная задача</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Записывать каждое изменение файлов (что, кто и когда изменил)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Разместить Git-репозиторий в облаке для хранения, демонстрации и сотрудничества</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужна ли сеть</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нет, работает офлайн</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно подключение для доступа</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Принадлежность</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Open-source ПО, создано Linus Torvalds (отцом Linux)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Продукт Microsoft</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аналоги</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 Простыми словами: <strong>Git управляет «как записывать изменения», а GitHub, «где хранить изменения и как сотрудничать»</strong>. Git, инструмент, работает локально. GitHub, платформа, размещает Git-репозиторий в облаке для сотрудничества и демонстрации. Можно использовать Git без GitHub (например, для локального контроля версий), но использовать GitHub без Git нельзя (GitHub основан на Git).
@@ -117,7 +117,7 @@ GitHub предоставляет не только хранение кода, �
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Факт: что такое README
+Факт: что такое README
 
 {class="mt-1"}
 README.md — файл в формате Markdown, первое, что видят при открытии репозитория. Хороший README обычно содержит: описание проекта, инструкции по установке, примеры использования, лицензию, контакты. Грамотный README, базовая компетенция программиста и первое препятствие для того, чтобы проект начали использовать другие.
@@ -181,7 +181,7 @@ GitHub, центр мирового open-source движения. Можно For
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Предупреждение безопасности
+Предупреждение безопасности
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Никогда не коммитьте пароли, API-ключи, строки подключения к БД и другую чувствительную информацию в GitHub, особенно в публичные репозитории, утечка будет мгновенно найдена краулерами, последствия серьёзны.
@@ -191,7 +191,7 @@ GitHub, центр мирового open-source движения. Можно For
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Доступ к GitHub из Китая
+Доступ к GitHub из Китая
 
 {class="mt-1"}
 Доступ к GitHub из Китая иногда нестабилен: страница может не открываться, клонирование, идти медленно. Попробуйте: ① используйте китайские зеркала (GitClone, ghproxy) для ускорения клонирования; ② настройте Hosts или используйте прокси; ③ если основная аудитория в Китае, рассмотрите китайскую альтернативу <strong>Gitee</strong> — функционал аналогичен, скорость доступа выше. Многие команды одновременно ведут репозитории на GitHub и Gitee, совмещая интернациональность и скорость в Китае.
@@ -199,7 +199,7 @@ GitHub, центр мирового open-source движения. Можно For
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Продвинутый приём: бесплатный личный блог на GitHub Pages
+Продвинутый приём: бесплатный личный блог на GitHub Pages
 
 {class="mt-1"}
 GitHub Pages позволяет бесплатно хостить статический сайт; в связке с генераторами вроде Jekyll, Hexo, Hugo легко создать личный блог. Написали Markdown-статью, push в репозиторий. Блог обновляется автоматически, с HTTPS и кастомным доменом. У бесчисленного множества технических блогеров блог так и устроен: нулевая стоимость, без рекламы, с контролем версий.
@@ -213,7 +213,7 @@ GitHub давно перестал быть «инструментом толь�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Попробуйте: завершите своё первое знакомство с GitHub
+Попробуйте: завершите своё первое знакомство с GitHub
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Зарегистрируйте аккаунт на GitHub, заполните профиль (аватар, кратко о себе, интересующие технологии).

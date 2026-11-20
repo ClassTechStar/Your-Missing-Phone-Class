@@ -100,7 +100,7 @@ VI. Ιδιωτικότητα browser: μην αφήσετε τον browser να 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Κάντε τώρα: "έλεγχο ασφαλείας" στο κινητό
+Κάντε τώρα: "έλεγχο ασφαλείας" στο κινητό
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Αναβάθμιση DNS</strong>: Android: Ρυθμίσεις &gt; Συνδέσεις &amp; Κοινή χρήση &gt; Ιδιωτικό DNS &gt; συμπληρώστε «one.one.one.one» ή «dns.google». iPhone: στο Safari αναζητήστε «1.1.1.1 DNS profile», εγκαταστήστε το προφίλ, ή κατεβάστε την App 1.1.1.1 του Cloudflare.

@@ -45,7 +45,7 @@ Tapi sebab utama kapasiti telefon anda menyusut ada tiga:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Saranan Membeli Telefon
+Saranan Membeli Telefon
 
 {class="mt-1"}
 Telefon 128GB kini pada asasnya tidak mencukupi, 256GB sebagai permulaan lebih selamat. Jika anda suka mengambil gambar, bermain permainan. cadangan terus ke 512GB atau lebih besar. Ingat, ruang storan ini, lebih baik berlebihan daripada tidak mencukupi.
@@ -53,7 +53,7 @@ Telefon 128GB kini pada asasnya tidak mencukupi, 256GB sebagai permulaan lebih s
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari Berlatih: Lihat "Kad Pengenalan" Telefon Anda
+Mari Berlatih: Lihat "Kad Pengenalan" Telefon Anda
 
 {class="mt-1"}
 Buka [Tetapan], cari Perihal Telefon (atau pilihan serupa), catat: model telefon, versi sistem, jumlah ruang storan dan ruang yang tinggal. Ini adalah langkah pertama untuk mengenalinya. Semak juga kesihatan bateri, supaya anda ada gambaran.
@@ -66,7 +66,7 @@ Sebelum memulakan pengetahuan khusus, mari kita bina persefahaman teras:<strong>
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>Mengapa Ini Penting?
+Mengapa Ini Penting?
 
 {class="mt-1"}
 Jika telefon hilang atau rosak, anda kehilangan bukan sahaja perkakasan bernilai beberapa ribu yuan,<strong>tetapi lebih besar kemungkinan data tidak boleh diperbaharui yang terkumpul selama bertahun-tahun</strong>— gambar pertumbuhan anak, suara saudara yang telah meninggal, kontrak penting yang tidak disandarkan. Tabiat penyusunan dan perlindungan saintifik boleh melindungi anda dari tiga dimensi:

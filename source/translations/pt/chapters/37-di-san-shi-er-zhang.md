@@ -61,10 +61,10 @@ Procedimento padrão nos 30 minutos seguintes
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ligue para o seu número com o celular de outra pessoa (minuto 1): talvez tenha caído perto e alguém de bem atenda.
-2. Bloqueie o aparelho remotamente (minutos 2–5): use outro celular ou o computador para entrar no serviço de localização: |   |  iPhone: iCloud.com > Buscar > escolha o aparelho > Marcar como perdido
+2. Bloqueie o aparelho remotamente (minutos 2–5): use outro celular ou o computador para entrar no serviço de localização: | | iPhone: iCloud.com > Buscar > escolha o aparelho > Marcar como perdido
 3. Android por marca: Huawei cloud.huawei.com / Xiaomi i.mi.com / OPPO cloud.oppo.com etc.
 4. Bloqueie o SIM (minutos 5–10): ligue para a operadora (China Mobile 10086 / Unicom 10010 / Telecom 10000) e peça a suspensão do SIM. É o passo mais crítico — quem tiver o seu chip recebe os códigos e redefine todas as senhas.
-5. Congele pagamentos (minutos 10–20): |   |  Alipay: 95188 ou, no celular de outra pessoa, Alipay > Eu > Configurações > Central de Segurança > Congelamento de emergência
+5. Congele pagamentos (minutos 10–20): | | Alipay: 95188 ou, no celular de outra pessoa, Alipay > Eu > Configurações > Central de Segurança > Congelamento de emergência
 6. WeChat: registre o boletim e fale com o suporte do WeChat, ou use Central de Segurança do WeChat > Congelar conta
 7. App do banco: ligue para o número no verso do cartão e peça o congelamento do internet banking
 8. Avise familiares e amigos (minutos 20–25): publique nos Moments ou peça a alguém da família para avisar que o celular sumiu, evitando golpes com a sua identidade.

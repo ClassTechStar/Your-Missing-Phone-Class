@@ -55,7 +55,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0) กับ HarmonyOS 4.3 มีความ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ต้องอ่านก่อนอัปเกรดเป็น HarmonyOS NEXT
+ต้องอ่านก่อนอัปเกรดเป็น HarmonyOS NEXT
 
 {class="mt-1"}
 หลังอัปเกรดเป็น HarmonyOS NEXT โทรศัพท์ของคุณจะรันแอปแอนดรอยด์ไม่ได้อีก โปรดยืนยันก่อนอัปเกรดว่า: ① แอปที่ใช้บ่อยมีเวอร์ชันดั้งเดิมบน HarmonyOS แล้ว ② งานหรือชีวิตของคุณไม่มีสถานการณ์ที่จำเป็นต้องพึ่งแอปแอนดรอยด์ และหลังอัปเกรดจะย้อนกลับไป HarmonyOS 4.3 ไม่ได้
@@ -94,7 +94,7 @@ AppGallery ของ HarmonyOS มีแอปให้เลือกใช้�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ข้อควรระวัง
+ข้อควรระวัง
 
 {class="mt-1"}
 ระบบ HarmonyOS อัปเดตต่อเนื่องไม่หยุด แต่ละเวอร์ชันอาจต่างกันบ้าง เนื้อหานี้อธิบายตามคุณสมบัติหลักของ HarmonyOS 4.3 และ 6 ส่วนฟังก์ชันเฉพาะโปรดอ้างอิงจากเวอร์ชันจริงบนโทรศัพท์ของคุณ แนะนำให้อัปเดตระบบเสมอเพื่อรับฟังก์ชันใหม่และแพตช์ความปลอดภัยล่าสุด
@@ -102,7 +102,7 @@ AppGallery ของ HarmonyOS มีแอปให้เลือกใช้�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองเลย: สัมผัสฟังก์ชันเด่นของ HarmonyOS
+ลองเลย: สัมผัสฟังก์ชันเด่นของ HarmonyOS
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เปิดศูนย์ควบคุม หา "ซูเปอร์เทอร์มินัล" ดูว่ารอบๆ มีอุปกรณ์ HarmonyOS อื่นหรือไม่

@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>التشبيه الأساسي: الطريق والسيارة
+التشبيه الأساسي: الطريق والسيارة
 
 {class="mt-1"}
 تخيل الإنترنت كمدينة.<strong>"الطريق"</strong>هو القناة بين هاتفك والإنترنت،<strong>"السيارة"</strong>هي البيانات التي تسير على الطريق. Wi-Fi والبيانات الخلوية طريقان مختلفان، لكن البيانات (السيارة) نفسها.
@@ -36,7 +36,7 @@ Wi-Fi عادةً استثمار لمرة واحدة (رسوم النطاق ال�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>جرب: تحقق من باقة بياناتك
+جرب: تحقق من باقة بياناتك
 
 {class="mt-1"}
 افتح [الإعدادات] &gt; [شبكة الهاتف المحمول] &gt; [إدارة البيانات] في هاتفك، انظر كم البيانات المتبقية لك هذا الشهر، وأي التطبيقات تستهلك البيانات أكثر. كن على دراية، فلا تقلق عند الخروج.
@@ -49,7 +49,7 @@ Wi-Fi عادةً استثمار لمرة واحدة (رسوم النطاق ال�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
+مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
 
 {class="mt-1"}
 في الأماكن العامة مثل المطارات والمولات والمقاهي، لا تتصل بشبكات Wi-Fi مجانية ذات أسماء مشبوهة (مثل "Free_WiFi_2024"). وحتى لو اتصلت، فلا تقم أبداً بتسجيل الدخول إلى تطبيقات البنوك أو إدخال كلمات المرور عبرها.
@@ -81,7 +81,7 @@ Wi-Fi عادةً استثمار لمرة واحدة (رسوم النطاق ال�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>تحذير مهم: أوقف[تجوال البيانات]قبل السفر للخارج!
+تحذير مهم: أوقف[تجوال البيانات]قبل السفر للخارج!
 
 {class="mt-1"}
 قد يؤدي استخدام بيانات الهاتف المحمول في الخارج إلى فواتير باهظة جداً! قبل السفر، تأكد من إيقاف تجوال البيانات في الإعدادات، أو اشترِ مسبقاً بطاقة بيانات محلية أو باقة تجوال دولية.
@@ -106,53 +106,53 @@ Wi-Fi هو الوسيلة الرئيسية للاتصال بالإنترنت ف�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المعيار</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البروتوكول</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">النطاق الترددي</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">أقصى سرعة</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الميزات</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">معيار قديم، التغطية مقبولة</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأكثر انتشاراً حالياً، السرعة كافية</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أداء قوي مع الأجهزة المتعددة، زمن استجابة منخفض</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">إضافة نطاق 6GHz، أقل ازدحاماً</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">نقل فائق السرعة، تجميع متعدد الروابط</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المعيار</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البروتوكول</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">النطاق الترددي</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">أقصى سرعة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الميزات</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">معيار قديم، التغطية مقبولة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأكثر انتشاراً حالياً، السرعة كافية</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أداء قوي مع الأجهزة المتعددة، زمن استجابة منخفض</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">إضافة نطاق 6GHz، أقل ازدحاماً</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">نقل فائق السرعة، تجميع متعدد الروابط</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ NFC (Near Field Communication، الاتصال قريب المدى) تقنية �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب بنفسك: إعداد نقطة اتصال وإدارتها
+جرّب بنفسك: إعداد نقطة اتصال وإدارتها
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. افتح [الإعدادات]، وابحث عن "نقطة الاتصال الشخصية" أو "مشاركة الشبكة"، وفعّلها، وعيّن الاسم وكلمة المرور.

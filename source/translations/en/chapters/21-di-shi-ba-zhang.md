@@ -88,7 +88,7 @@ Manually back up photos: Use a data cable to connect to the computer, copy the D
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Back up contacts: iPhone users export vCard from iCloud.com; Android users export .vcf file in Contacts app settings.
+Back up contacts: iPhone users export vCard from iCloud.com; Android users export .vcf file in Contacts app settings.
 
 {class="mt-1"}
 Back up WeChat chat history: Open WeChat → Me → Settings → General → Chat History Migration &amp; Backup → Back up to computer.

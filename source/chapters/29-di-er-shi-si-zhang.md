@@ -45,41 +45,41 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心作用</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">锁定状态（默认）</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解锁后状态</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统安全</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防止刷入未签名的非官方系统，保护系统完整性与底层安全<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高安全：仅加载官方签名镜像，有效抵御恶意固件篡改</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 安全降低：允许刷入第三方 ROM，系统完整性校验机制失效，恶意软件若获取 Root 权限可深度篡改系统</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统稳定性</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保手机运行经过厂商测试和优化的官方系统，保障稳定流畅<br><span class="text-emerald-600 dark:text-emerald-400">✅ 稳定：使用官方固件，功能完整，OTA 升级可靠</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 风险增加：第三方 ROM 可能存在兼容性问题，可能导致系统崩溃、变砖、硬件功能异常（如摄像头、快充），OTA 更新可能失败</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保修权益</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厂商通过锁定 BL 提供稳定的官方系统，以提供保修服务<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保修有效：享受官方免费保修服务（非人为损坏）</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保修失效：绝大多数厂商将解锁 BL 视为主动放弃保修的行为，即使重新上锁，也可能被检测出历史解锁记录而拒保</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">数据安全</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁过程通常强制清除数据，防止旧数据在新系统环境下被恶意利用<br><span class="text-emerald-600 dark:text-emerald-400">✅ 数据安全：日常使用中，BL 锁限制了恶意程序对系统分区的修改能力</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 数据风险：解锁时会强制清除所有用户数据；若解锁后未正确加密，数据存储可能不安全；丢失后更易被刷机提取数据</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">功能限制</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保依赖安全环境的功能（如支付、银行 App）正常运行<br><span class="text-emerald-600 dark:text-emerald-400">✅ 功能完整：所有官方功能均可正常使用</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 功能受限：部分安全敏感应用（如 Google Pay、银行 App）可能因检测到 BL 解锁状态而拒绝运行；DRM 服务可能降级，影响高清视频播放</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心作用</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">锁定状态（默认）</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解锁后状态</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统安全</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防止刷入未签名的非官方系统，保护系统完整性与底层安全<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高安全：仅加载官方签名镜像，有效抵御恶意固件篡改</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 安全降低：允许刷入第三方 ROM，系统完整性校验机制失效，恶意软件若获取 Root 权限可深度篡改系统</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统稳定性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保手机运行经过厂商测试和优化的官方系统，保障稳定流畅<br><span class="text-emerald-600 dark:text-emerald-400">✅ 稳定：使用官方固件，功能完整，OTA 升级可靠</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 风险增加：第三方 ROM 可能存在兼容性问题，可能导致系统崩溃、变砖、硬件功能异常（如摄像头、快充），OTA 更新可能失败</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保修权益</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厂商通过锁定 BL 提供稳定的官方系统，以提供保修服务<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保修有效：享受官方免费保修服务（非人为损坏）</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保修失效：绝大多数厂商将解锁 BL 视为主动放弃保修的行为，即使重新上锁，也可能被检测出历史解锁记录而拒保</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">数据安全</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁过程通常强制清除数据，防止旧数据在新系统环境下被恶意利用<br><span class="text-emerald-600 dark:text-emerald-400">✅ 数据安全：日常使用中，BL 锁限制了恶意程序对系统分区的修改能力</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 数据风险：解锁时会强制清除所有用户数据；若解锁后未正确加密，数据存储可能不安全；丢失后更易被刷机提取数据</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">功能限制</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确保依赖安全环境的功能（如支付、银行 App）正常运行<br><span class="text-emerald-600 dark:text-emerald-400">✅ 功能完整：所有官方功能均可正常使用</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 功能受限：部分安全敏感应用（如 Google Pay、银行 App）可能因检测到 BL 解锁状态而拒绝运行；DRM 服务可能降级，影响高清视频播放</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>三思而后行
+三思而后行
 
 {class="mt-1"}
 三星的 Knox 熔断是<strong>不可逆</strong>的，一旦触发就回不去原厂状态。如果你只是想用一些原本需要 Root 的功能，建议先查查有没有不需要 Root 的替代方案。
@@ -123,7 +123,7 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>重要警告
+重要警告
 
 {class="mt-1"}
 刷机有风险，操作需谨慎。可能导致：
@@ -140,7 +140,7 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>推荐资源
+推荐资源
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>：全球最大的安卓开发者社区，有丰富的刷机教程和ROM资源。
@@ -152,7 +152,7 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1：解锁BL锁后还能恢复吗？
+Q1：解锁BL锁后还能恢复吗？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>可以重新上锁。通常需要刷入官方完整的线刷包，并使用特定的刷机脚本（如小米的 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>）即可重新上锁。但注意，重新上锁后，因解锁而触发的一些安全熔断（如三星的Knox）可能无法逆转。
@@ -160,7 +160,7 @@ BL锁是整个安全启动链的第一环。它验证通过后，才会加载并
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2：解锁后如何Root？
+Q2：解锁后如何Root？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>解锁BL锁只是第一步。Root通常需要：

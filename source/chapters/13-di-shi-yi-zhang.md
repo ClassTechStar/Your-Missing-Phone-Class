@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>练一练：用手机完成一次完整的拍照+修图+整理
+练一练：用手机完成一次完整的拍照+修图+整理
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开相机设置里的"网格线"，找一个有自然光的地方拍三张照片（注意擦镜头、调曝光）。

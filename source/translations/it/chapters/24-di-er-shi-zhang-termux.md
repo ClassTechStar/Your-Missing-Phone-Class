@@ -45,44 +45,44 @@ L'applicazione principale di Termux può essere estesa con alcune app plugin opz
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nome plugin</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Descrizione funzione</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Espone le funzioni delle API Android ai programmi a riga di comando</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Permette di eseguire script all'avvio del dispositivo</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fornisce una finestra terminale flottante</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Abilita schemi di colore e personalizzazione dei font per il terminale</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Integrazione degli script Termux con l'app di automazione Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Permette di eseguire script da un widget sulla schermata home</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nome plugin</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Descrizione funzione</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Espone le funzioni delle API Android ai programmi a riga di comando</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Permette di eseguire script all'avvio del dispositivo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fornisce una finestra terminale flottante</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Abilita schemi di colore e personalizzazione dei font per il terminale</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Integrazione degli script Termux con l'app di automazione Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Permette di eseguire script da un widget sulla schermata home</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Promemoria importante
+Promemoria importante
 
 {class="mt-1"}
 Termux e i suoi plugin vanno installati dalla stessa fonte, perché condividono lo stesso sharedUserId. Installazioni miste da fonti diverse (ad esempio F-Droid e GitHub) provocano errori di installazione.
@@ -127,7 +127,7 @@ L'ultima versione stabile di Termux è la v0.118.2, per dispositivi con Android 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>In sintesi
+In sintesi
 
 {class="mt-1"}
 Termux porta la potente esperienza del terminale Linux sui dispositivi Android , e trasforma il telefono in uno strumento portatile di sviluppo e apprendimento. Che tu sia uno sviluppatore, un amministratore di sistema o un appassionato di tecnologia, con Termux puoi godere di un'esperienza a riga di comando completa su dispositivo mobile, realizzando l'idea di un "Linux in tasca".
@@ -135,7 +135,7 @@ Termux porta la potente esperienza del terminale Linux sui dispositivi Android ,
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: esegui il tuo primo comando Linux sul telefono
+Prova: esegui il tuo primo comando Linux sul telefono
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Scarica e installa Termux da F-Droid, attendi il completamento dell'inizializzazione al primo avvio.

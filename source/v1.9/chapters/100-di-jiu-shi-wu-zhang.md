@@ -188,7 +188,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：预测不是保证
+避坑提醒：预测不是保证
 
 {class="mt-1"}
 App 的"下次经期预测"基于历史平均，压力大、作息乱、生病都会让周期漂移，预测误差是常态。把它当"日程参考"，有备而来就好；备孕、用药、就医这类决策，不要只押在 App 的预测上；若周期长期紊乱（连续数月明显异常），该看医生看医生，App 替代不了妇科门诊。
@@ -449,7 +449,7 @@ App 的"下次经期预测"基于历史平均，压力大、作息乱、生病�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：把"情绪打卡"挂进刷牙流程
+小贴士：把"情绪打卡"挂进刷牙流程
 
 {class="mt-1"}
 新习惯挂在旧习惯上最容易坚持：每晚刷牙后顺手做 30 秒情绪记录。频率比强度重要——选一个能坚持三个月的节奏就好，一天打卡十次反而制造新的焦虑。一个月后回看，你对自己的了解会超过过去十年的"感觉"。
@@ -738,7 +738,7 @@ App 的"下次经期预测"基于历史平均，压力大、作息乱、生病�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：建两条"30 秒微习惯"
+来动手：建两条"30 秒微习惯"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 开启周期追踪/心境记录（或为家人设好），只记基础项。
@@ -794,7 +794,7 @@ App 的"下次经期预测"基于历史平均，压力大、作息乱、生病�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别用"小号"心态对待周期 App
+避坑提醒：别用"小号"心态对待周期 App
 
 {class="mt-1"}
 有人为了省事，用不常用的邮箱随手注册一个账号就开始记。账号越随意，将来找回数据、注销账号、证明"这是我"就越麻烦。周期数据值得一个正经账号：手机号注册、开两步验证、密码独立：它配得上和银行 App 同级的待遇。
@@ -826,7 +826,7 @@ App 的"下次经期预测"基于历史平均，压力大、作息乱、生病�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：给"最低档"设一个保底提醒
+小贴士：给"最低档"设一个保底提醒
 
 {class="mt-1"}
 一档记录的唯一要求是"别忘"，所以在日历里给经期预测日前后设一条只写"看一眼"的提醒。哪怕整月只点两次"开始/结束"，这一年你在医生面前也不是空白，保底档是整条记录曲线的底，有底，趋势就永远画得出来。
@@ -871,7 +871,7 @@ App 的"下次经期预测"基于历史平均，压力大、作息乱、生病�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：认领你的组合
+来动手：认领你的组合
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 从四套组合里认领一套属于你的，本周只做它的第一周动作。
@@ -883,7 +883,7 @@ App 的"下次经期预测"基于历史平均，压力大、作息乱、生病�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 周期追踪记全"经期+症状+睡眠"，三个月出个人模式
 - 预测是参考不是保证，备孕/用药/就医别只靠它，长期紊乱要看医生

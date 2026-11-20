@@ -63,7 +63,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事项
+注意事项
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 内存拓展会占用部分机身存储空间，请确保剩余存储不少于20-30GB，否则可能影响系统流畅度。
@@ -73,7 +73,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小结
+小结
 
 {class="mt-1"}
 内存拓展是一项成熟的系统级优化技术，能在硬件不变的前提下提升中低端机型的多任务能力与后台保活率，但它受限于闪存与物理内存的巨大速度鸿沟，并非"万能神药"。是否开启、开多大，需结合自身机型的物理内存大小、闪存规格、剩余存储空间及使用习惯来判断。
@@ -81,7 +81,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：看看你的手机有没有内存拓展
+来动手：看看你的手机有没有内存拓展
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开【设置】，搜索"内存扩展"、"内存融合"、"RAM Plus"或"Extended RAM"。

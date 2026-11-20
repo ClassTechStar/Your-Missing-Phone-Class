@@ -77,12 +77,12 @@ kind: chapter
 ```
 // דרך 1: Intent מפורש – מציינים בבירור לאיזה מסך ללכת
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "דני")     // לוקח "מזוודות" לדרך (הנתונים)
+intent.putExtra("name", "דני") // לוקח "מזוודות" לדרך (הנתונים)
 startActivity(intent)
 
 // דרך 2: Intent גלוי-מרומז – אומרים רק מה לעשות והמערכת מוצאת מי יעשה
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // המערכת תפתח את הדפדפן (או תבקש ממך לבחור)
+startActivity(web) // המערכת תפתח את הדפדפן (או תבקש ממך לבחור)
 ```
 :::
 
@@ -101,16 +101,16 @@ startActivity(web)   // המערכת תפתח את הדפדפן (או תבקש �
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "לא ידוע")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "לא ידוע")
+ }
 }
 
 // כדי לנווט מתוך המסך:
-navController.navigate("detail/דני")     // עם פרמטר
-navController.popBackStack()              // חזרה למסך הקודם
+navController.navigate("detail/דני") // עם פרמטר
+navController.popBackStack() // חזרה למסך הקודם
 ```
 :::
 

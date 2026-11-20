@@ -27,16 +27,16 @@ Le processus de programmation IA pilotée par les tests : d'abord, l'IA écrit l
 Écris des tests unitaires pour la fonction calculate_discount.
 Les cas de test doivent couvrir :
 1. Chemin normal :
-   - 100 yuan à 20 % de remise -> 80
-   - 200 yuan à 50 % de remise -> 100
+ - 100 yuan à 20 % de remise -> 80
+ - 200 yuan à 50 % de remise -> 100
 2. Cas limites :
-   - 0 yuan à 20 % de remise -> 0
-   - 100 yuan sans remise -> 100 (aucune réduction)
-   - 100 yuan au prix complet -> 100 (plein tarif)
+ - 0 yuan à 20 % de remise -> 0
+ - 100 yuan sans remise -> 100 (aucune réduction)
+ - 100 yuan au prix complet -> 100 (plein tarif)
 3. Cas d'erreur :
-   - prix négatif -> doit lever une erreur
-   - remise > 1 -> doit lever une erreur
-   - entrée non numérique -> Doit lever une erreur
+ - prix négatif -> doit lever une erreur
+ - remise > 1 -> doit lever une erreur
+ - entrée non numérique -> Doit lever une erreur
 Utilise le framework Vitest et donne le fichier de tests complet.
 ```
 :::

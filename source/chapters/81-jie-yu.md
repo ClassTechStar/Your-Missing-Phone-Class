@@ -22,7 +22,7 @@ kind: conclusion
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>最后一个练习
+最后一个练习
 
 {class="mt-1"}
 合上这本书，拿起你的手机，做一件事：<strong>用30秒想想，你的手机里有哪三样东西是"丢了会真正心疼"的？</strong>然后，确保它们被备份了。这本书就值了。

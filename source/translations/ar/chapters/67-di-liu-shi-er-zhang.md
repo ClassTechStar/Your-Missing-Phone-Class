@@ -25,17 +25,17 @@ kind: chapter
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body: يصف "كيف تبدو الواجهة"
-        VStack {               // مرتبة رأسيًا
-            Text("مرحبًا يا عالم!")
-                .font(.largeTitle)      // معدِّل: عنوان كبير
-            Button("اضغط هنا") {
-                print("تم الضغط!")
-            }
-            .buttonStyle(.borderedProminent)  // زر أزرق ممتلئ
-        }
-        .padding()
-    }
+ var body: some View { // body: يصف "كيف تبدو الواجهة"
+ VStack { // مرتبة رأسيًا
+ Text("مرحبًا يا عالم!")
+ .font(.largeTitle) // معدِّل: عنوان كبير
+ Button("اضغط هنا") {
+ print("تم الضغط!")
+ }
+ .buttonStyle(.borderedProminent) // زر أزرق ممتلئ
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -68,17 +68,17 @@ struct ContentView: View {
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("الحساب")
-        Spacer()                 // مساحة مرنة: تدفع ما على اليمين إلى النهاية
-        Text("-25.5 يوان").foregroundColor(.red)
-    }
-    Divider()                    // خط فاصل
-    Text("ملاحظة: الغداء")
+ HStack {
+ Text("الحساب")
+ Spacer() // مساحة مرنة: تدفع ما على اليمين إلى النهاية
+ Text("-25.5 يوان").foregroundColor(.red)
+ }
+ Divider() // خط فاصل
+ Text("ملاحظة: الغداء")
 }
-.padding(16)                     // هامش من كل الجهات
+.padding(16) // هامش من كل الجهات
 .background(Color(.systemGray6)) // خلفية رمادية فاتحة
-.cornerRadius(12)                // زوايا مستديرة
+.cornerRadius(12) // زوايا مستديرة
 
 // ترتيب المعدلات مهم: padding أولًا ثم background؛ الخلفية لا تشمل الهامش
 ```
@@ -103,16 +103,16 @@ VStack(alignment: .leading, spacing: 12) {
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State: إذا تغيرت هذه القيمة يجب إعادة الرسم
+ @State private var count = 0 // @State: إذا تغيرت هذه القيمة يجب إعادة الرسم
 
-    var body: some View {
-        VStack {
-            Text("ضغطت \(count) مرات")
-            Button("اضغط +1") {
-                count += 1          // غيّر الحالة وستتحدث الواجهة تلقائيًا
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("ضغطت \(count) مرات")
+ Button("اضغط +1") {
+ count += 1 // غيّر الحالة وستتحدث الواجهة تلقائيًا
+ }
+ }
+ }
 }
 ```
 :::
@@ -126,24 +126,24 @@ struct CounterView: View {
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("اكتب شيئًا", text: $text)  // ربط ثنائي الاتجاه بـ $
-            .textFieldStyle(.roundedBorder)
-        Text("كتبت: \(text)")   // يتحدث فوريًا أثناء الكتابة
-    }
+ var body: some View {
+ TextField("اكتب شيئًا", text: $text) // ربط ثنائي الاتجاه بـ $
+ .textFieldStyle(.roundedBorder)
+ Text("كتبت: \(text)") // يتحدث فوريًا أثناء الكتابة
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> عملية المستخدم</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> الحالة تتغير (count += 1)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> عملية المستخدم</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> الحالة تتغير (count += 1)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI يلاحظ التغير</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> يعيد رسم الواجهة (إعادة حساب body)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI يلاحظ التغير</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> يعيد رسم الواجهة (إعادة حساب body)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -163,20 +163,20 @@ struct InputView: View {
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::

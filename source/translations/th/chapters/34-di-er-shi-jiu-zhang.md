@@ -43,7 +43,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>กฎ 20-20-20
+กฎ 20-20-20
 
 {class="mt-1"}
 ทุกครั้งที่ดูหน้าจอ<strong>20 นาที</strong>, ให้เลื่อนสายตาไปยังจุดที่ห่างออกไป<strong>20 ฟุต (ประมาณ 6 เมตร)</strong>และมองไว้ประมาณ<strong>20 วินาที</strong> การกระทำง่ายๆ นี้สามารถบรรเทาความเมื่อยล้าของกล้ามเนื้อเรียมแก้วได้อย่างมีประสิทธิภาพ
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: ความท้าทายสุขภาพดิจิทัล 1 สัปดาห์
+ลงมือทำ: ความท้าทายสุขภาพดิจิทัล 1 สัปดาห์
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. วันนี้: เปิดเวลาการใช้งานหน้าจอ/สุขภาพดิจิทัล ตรวจสอบข้อมูลการใช้งานของคุณในสัปดาห์ที่แล้ว
@@ -94,7 +94,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ดูข้อมูลเวลาการใช้งานหน้าจอก่อน การยอมรับสภาพปัจจุบันคือก้าวแรกของการเปลี่ยนแปลง

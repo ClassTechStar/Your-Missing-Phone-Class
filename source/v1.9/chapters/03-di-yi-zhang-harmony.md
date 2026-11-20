@@ -68,7 +68,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 判断你的手机属于哪个阶段，最简单的办法不是看网上的争论。最简单的办法是看两个事实：还能不能安装 APK 安卓安装包；设置里的系统版本号长什么样。前者是 4.x 形态的标志，后者帮你确认是不是 5/6/7 的新形态。两分钟就能确认，比读十篇评测都管用。
@@ -172,7 +172,7 @@ HarmonyOS 6 在 2025 年 10 月 22 日发布，首批 90 多款机型开启公�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 网上流传的所谓"一键强升鸿蒙"工具、来路不明的升级安装包，一律不要碰。官方升级只有两条正路：设置里的系统更新，和官方渠道的报名推送。装了来路不明的包，轻则被夹带的恶意软件偷走账号，重则变砖丢数据，这不是危言耸听，每年都有人交这笔学费。
@@ -296,7 +296,7 @@ HarmonyOS 6 在 2025 年 10 月 22 日发布，首批 90 多款机型开启公�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 软总线让设备互相认识，超级终端让能力互通有无，流转让任务跟着人走，记住这三句话，鸿蒙的跨设备功能你就懂了一半。
@@ -331,7 +331,7 @@ HarmonyOS 6 在 2025 年 10 月 22 日发布，首批 90 多款机型开启公�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>升级鸿蒙NEXT前必读
+升级鸿蒙NEXT前必读
 
 {class="mt-1"}
 升级到鸿蒙NEXT后，你的手机将无法运行安卓应用，请务必在升级前确认：①你常用的App已有鸿蒙原生版本；②你的工作或生活中没有必须依赖安卓应用的场景。升级后可以回退（华为提供"系统回退"通道），但会清空全部数据且部分机型有回退期限——务必先备份。
@@ -399,7 +399,7 @@ HarmonyOS 6 在 2025 年 10 月 22 日发布，首批 90 多款机型开启公�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 微内核是"每班岗都专业、出事不连坐"，方舟是"菜提前备好"，确定性时延是"给救护车留专用道"：三个比喻凑齐，NEXT 的技术底座你就有画面了。
@@ -427,7 +427,7 @@ ArkUI 是鸿蒙的界面框架，核心是"声明式"三个字。传统的界面
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 如果只记一条选型建议：新学鸿蒙开发，直接学 ArkTS + ArkUI 的声明式写法，不要从旧的界面方案入门，新生态的简历和教程都朝这个方向集中，别把时间花在正在退场的东西上。
@@ -474,7 +474,7 @@ ArkUI 是鸿蒙的界面框架，核心是"声明式"三个字。传统的界面
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 查某个应用有没有鸿蒙原生版，最快的办法是在华为应用市场里直接搜应用名，看开发者署名和应用详情页标的原生标识。不要依赖搜索引擎的旧文章，生态每天都在变，文章过时得比你想象快。
@@ -596,7 +596,7 @@ AI 这条线，三家方向趋同、深度不同。安卓阵营由各厂商各�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事项
+注意事项
 
 {class="mt-1"}
 鸿蒙系统在不断更新迭代，不同版本可能有些差异。本文描述基于鸿蒙4.3和6的主要特性，具体功能请以你的手机实际版本为准。建议保持系统更新，以获得最新功能和安全补丁。
@@ -662,7 +662,7 @@ AI 这条线，三家方向趋同、深度不同。安卓阵营由各厂商各�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就试：体验鸿蒙特色功能
+现在就试：体验鸿蒙特色功能
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开控制中心，找到"超级终端"，看看周围有没有其他鸿蒙设备。
@@ -673,7 +673,7 @@ AI 这条线，三家方向趋同、深度不同。安卓阵营由各厂商各�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 心智模型一句话：一群设备，一台终端，软总线负责发现与连接，超级终端负责能力互通，流转与接续让任务跟着人走

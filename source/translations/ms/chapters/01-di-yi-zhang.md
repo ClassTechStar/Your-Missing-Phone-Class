@@ -317,7 +317,7 @@ Fikirkan, peranti kecil, berapa banyak kehidupan yang dipikul! Jadi, belajar men
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Fahami Konfigurasi Perkakasan
+Praktik: Fahami Konfigurasi Perkakasan
 
 {class="mt-1"}
 Dalam [Tetapan], lihat sama ada boleh mencari model pemproses, saiz khusus RAM dan ROM. Ada gambaran tentang keupayaan telefon anda. Pengguna Android boleh muat turun "AnTuTu" atau "DevCheck" untuk melihat maklumat perkakasan terperinci.

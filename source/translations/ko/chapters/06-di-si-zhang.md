@@ -57,7 +57,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>"전자 기생충"이란 무엇인가요?
+"전자 기생충"이란 무엇인가요?
 
 {class="mt-1"}
 <strong>트로이 목마가 심어진 "크랙 버전" 소프트웨어</strong>를 말합니다 - "돈을 절약한 줄" 알았지만 실제로는 "당한 것"입니다. 흔한 형태:
@@ -98,20 +98,20 @@ kind: chapter
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>권한 옵션</strong>: "항상 허용", "사용 중에만 허용", "거부", "매번 물어보기".</li>
-                        <li><strong>관리 원칙</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>최소화: 필요 없으면 주지 않습니다.</li>
-                                <li>사후 감사: 정기적으로 권한 설정을 확인하여 "권한 남용"이 있는지 봅니다.</li>
-                                <li>상황별: 택시 호출 앱처럼, 사용할 때만 위치 권한을 줍니다.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>권한 옵션</strong>: "항상 허용", "사용 중에만 허용", "거부", "매번 물어보기".</li>
+ <li><strong>관리 원칙</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>최소화: 필요 없으면 주지 않습니다.</li>
+ <li>사후 감사: 정기적으로 권한 설정을 확인하여 "권한 남용"이 있는지 봅니다.</li>
+ <li>상황별: 택시 호출 앱처럼, 사용할 때만 위치 권한을 줍니다.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>중점 감시 권한
+중점 감시 권한
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 주소록/SMS: 스팸 문자를 보내는 데 사용될 수 있습니다.
@@ -154,16 +154,16 @@ IPA(iOS App Store Package)도 마찬가지로 압축 패키지이며, 구조가 
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>안드로이드 서명</strong>: 개발자가 개인 키로 APK에 서명하고, 시스템은 설치 시 공개 키로 검증합니다. APK가 변조된 경우(예: 바이러스가 삽입된 경우) 서명이 무효화되어 시스템이 설치를 거부합니다. Google Play는 App Signing을 추가로 요구하여, Google이 서명 키를 보관하여 앱 보안을 더욱 강화합니다.</li>
-                        <li><strong>iOS 서명</strong>: Apple의 심사가 더 엄격합니다. 각 IPA는 Apple이 발급한 인증서로 서명되어야 하며, 그렇지 않으면 설치할 수 없습니다. 이것이 iOS가 App Store 또는 기업 인증서로만 앱을 설치할 수 있는 이유입니다. 기업 인증서로 서명된 앱은 유효 기간이 제한적이며, Apple은 언제든지 취소할 수 있습니다.</li>
-                        <li><strong>서명의 역할</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>출처 검증: 앱이 주장하는 개발자로부터 온 것임을 확인.</li>
-                                <li>무결성 검증: 전송 과정에서 앱이 변조되지 않았음을 보장.</li>
-                                <li>위장 방지: 악성 앱이 다른 앱을 가장할 수 없음.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>안드로이드 서명</strong>: 개발자가 개인 키로 APK에 서명하고, 시스템은 설치 시 공개 키로 검증합니다. APK가 변조된 경우(예: 바이러스가 삽입된 경우) 서명이 무효화되어 시스템이 설치를 거부합니다. Google Play는 App Signing을 추가로 요구하여, Google이 서명 키를 보관하여 앱 보안을 더욱 강화합니다.</li>
+ <li><strong>iOS 서명</strong>: Apple의 심사가 더 엄격합니다. 각 IPA는 Apple이 발급한 인증서로 서명되어야 하며, 그렇지 않으면 설치할 수 없습니다. 이것이 iOS가 App Store 또는 기업 인증서로만 앱을 설치할 수 있는 이유입니다. 기업 인증서로 서명된 앱은 유효 기간이 제한적이며, Apple은 언제든지 취소할 수 있습니다.</li>
+ <li><strong>서명의 역할</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>출처 검증: 앱이 주장하는 개발자로부터 온 것임을 확인.</li>
+ <li>무결성 검증: 전송 과정에서 앱이 변조되지 않았음을 보장.</li>
+ <li>위장 방지: 악성 앱이 다른 앱을 가장할 수 없음.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. 설치 패키지 크기 및 최적화
@@ -182,7 +182,7 @@ IPA(iOS App Store Package)도 마찬가지로 압축 패키지이며, 구조가 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>알아두기: 어떤 앱의 설치 패키지가 특히 큰 이유는?
+알아두기: 어떤 앱의 설치 패키지가 특히 큰 이유는?
 
 {class="mt-1"}
 게임 앱은 일반적으로 가장 큰데, 대량의 HD 텍스처, 3D 모델, 오디오 파일이 포함되어 있기 때문입니다. 소셜 앱도 다양한 기능 모듈을 지원해야 하므로 비교적 큽니다. 도구 앱은 일반적으로 가장 작습니다.
@@ -191,7 +191,7 @@ IPA(iOS App Store Package)도 마찬가지로 압축 패키지이며, 구조가 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 3개 앱의 권한 검토
+실습: 3개 앱의 권한 검토
 
 {class="mt-1"}
 자주 사용하는 3개 앱(예: 소셜, 쇼핑, 도구)을 선택하여, [설정]의 앱 권한 관리 페이지로 들어가 항목을 검토하고, 불필요한 민감한 권한을 끄거나 "사용 중에만 허용"으로 변경합니다.

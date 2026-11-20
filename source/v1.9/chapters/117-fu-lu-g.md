@@ -111,7 +111,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把这张索引当书签用。纸质书就复印一页夹进去；电子版给这一页加个书签。它是全书唯一一页"指向每一章"的地方，值得占一个书签位。
@@ -119,7 +119,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 现在就试一次：想一个你最近真遇到过的手机问题，哪怕只是"照片怎么传到电脑上"，在第二节的拼音分组里找它，顺着箭头跳过去，只看那章的小结和盒子，掐个表。超过两分钟还没解决，回来换个关键词再试一次，这个动作本身，就是这张索引的正确打开方式。
@@ -434,24 +434,24 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">场景</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主章</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话路径</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">挂失、冻结、改密码，按急救清单走</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要出国</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清单、eSIM、汇率、翻译，四站接力</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给孩子配手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先定规则，再开机，最后装App</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">照片占满存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先释放空间，再谈清理</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想做个App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">方法论、需求、全流程三步走</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">疑似AI换脸诈骗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">挂断、回拨核实、96110</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换了新手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱、迁移、旧机退役流水线</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电特别慢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逐个排除线、头、插座、接口</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">流量不够用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">找内鬼，关后台</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈远程排障</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先拍照发图，再上远控</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想拍短视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三行脚本，再开机拍</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怀疑中毒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">断网、查账、改密码</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要退货</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">证据先行，再谈售后</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份聊天记录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十八章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3-2-1，电脑端先来一遍</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想卖旧机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份、退出账号、恢复出厂</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">场景</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主章</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话路径</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">挂失、冻结、改密码，按急救清单走</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要出国</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清单、eSIM、汇率、翻译，四站接力</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给孩子配手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先定规则，再开机，最后装App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">照片占满存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先释放空间，再谈清理</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想做个App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">方法论、需求、全流程三步走</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">疑似AI换脸诈骗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">挂断、回拨核实、96110</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换了新手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱、迁移、旧机退役流水线</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电特别慢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逐个排除线、头、插座、接口</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">流量不够用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">找内鬼，关后台</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈远程排障</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先拍照发图，再上远控</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想拍短视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三行脚本，再开机拍</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怀疑中毒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">断网、查账、改密码</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要退货</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">证据先行，再谈售后</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份聊天记录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十八章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3-2-1，电脑端先来一遍</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想卖旧机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份、退出账号、恢复出厂</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -627,7 +627,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 从这十五个场景里挑一个你三个月内真会遇到的，把对应的章节号写在便签上贴在手机背面。别笑：这一步把"要用的时候现找"变成"要用的时候已经等着了"，急救场景尤其值。挑不出来？那就挑"手机丢了"，没人觉得这事会轮到自己，轮到的时候都是第一次。
@@ -670,12 +670,12 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">紧急情况</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主章</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一件事</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机刚丢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">借手机，挂失 SIM</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号疑似被盗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">干净设备，先改邮箱密码</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机进水</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十九章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">立刻关机，别通电</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">紧急情况</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主章</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一件事</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机刚丢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">借手机，挂失 SIM</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号疑似被盗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">干净设备，先改邮箱密码</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机进水</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十九章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">立刻关机，别通电</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -726,7 +726,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 三份单子共用一条铁律：动作顺序比动作本身重要。挂失在改密码前，断网在查账前。关机在擦水前。乱序的"热心操作"，经常把可逆的损失变成不可逆的。判断某步该不该提前，就问一句：做了这步，后面的步会不会更好做？会，就提前；不会，就按单子走。
@@ -830,7 +830,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 把自己对进七条路线里最像的那一条。在目录里把那几站折个角。家里不止一台手机的，给每台手机的主人各折一组。下次不知道"接下来该学什么"，翻折角的那几页就行，不用再想。
@@ -843,25 +843,25 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">内容块</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">章节范围</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话说明</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开篇与基础</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零～五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从"开始之前"到把手机用顺手：文件、网络、App、基础设置</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通信与生活</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六～十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全隐私、电话短信、办公学习、支付与生活服务</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">影像与工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十一～十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍照、影音娱乐、工具类App</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号与系统进阶</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四～二十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码、电池、云服务、设备联动、备份、故障排查、开发者模式</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全深探与编程启蒙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十一～二十三章附</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络安全、AI原理、编程思维、GitHub入门</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高阶玩机与选择</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十四～二十八章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root与BL锁、二手与数字遗产、技术前沿、适老化、选购</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">健康关系与应急</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九～三十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字健康、投屏演示、短视频入门、安全急救、未来展望</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出行与家庭</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十四～三十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">车机互联、儿童与手机、智能家居</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 编程篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七～四十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从范式到资源，指挥 AI 写代码的完整方法</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓开发篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四十八～五十八章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 与 Compose，从环境搭建到上架</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 开发篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第五十九～六十九章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Swift 与 SwiftUI，从环境搭建到上架</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">鸿蒙开发篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第七十～八十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ArkTS 与 ArkUI，从环境搭建到上架</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可穿戴与旅行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十一～九十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手表戒指、行前清单、eSIM、离线地图、海外支付、翻译</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">健康管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九十一～九十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">运动记录、睡眠、心率血氧、女性与心理健康</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短视频与短剧</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九十六～一百零五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 工具、工作流与平台规则、竖屏短剧全链路</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录与结语</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A～H、结语</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱、练习、术语、资源、致谢、折叠屏、索引、路线图</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">内容块</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">章节范围</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话说明</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开篇与基础</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零～五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从"开始之前"到把手机用顺手：文件、网络、App、基础设置</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通信与生活</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六～十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全隐私、电话短信、办公学习、支付与生活服务</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">影像与工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十一～十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拍照、影音娱乐、工具类App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号与系统进阶</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四～二十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码、电池、云服务、设备联动、备份、故障排查、开发者模式</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全深探与编程启蒙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十一～二十三章附</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络安全、AI原理、编程思维、GitHub入门</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高阶玩机与选择</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十四～二十八章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root与BL锁、二手与数字遗产、技术前沿、适老化、选购</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">健康关系与应急</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九～三十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字健康、投屏演示、短视频入门、安全急救、未来展望</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出行与家庭</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十四～三十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">车机互联、儿童与手机、智能家居</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 编程篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七～四十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从范式到资源，指挥 AI 写代码的完整方法</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓开发篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四十八～五十八章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 与 Compose，从环境搭建到上架</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 开发篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第五十九～六十九章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Swift 与 SwiftUI，从环境搭建到上架</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">鸿蒙开发篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第七十～八十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ArkTS 与 ArkUI，从环境搭建到上架</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可穿戴与旅行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十一～九十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手表戒指、行前清单、eSIM、离线地图、海外支付、翻译</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">健康管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九十一～九十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">运动记录、睡眠、心率血氧、女性与心理健康</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短视频与短剧</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九十六～一百零五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 工具、工作流与平台规则、竖屏短剧全链路</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录与结语</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A～H、结语</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱、练习、术语、资源、致谢、折叠屏、索引、路线图</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -891,17 +891,17 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">附录</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">管什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候翻</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新手机开箱"保姆级"流程：拆封、验机、激活、迁移，一步一步带</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刚拿到新机、帮别人装机、验机怕翻车的时候</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录B</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动手练习小参考：各章配套练习的思路提示</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学完一章想练手、不知道练什么的时候</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录C</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极简术语"黑话"对照表：全书术语的白话翻译</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正文里冒出一个没见过的词的时候</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录D</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">靠谱资源去哪里找：官网、下载渠道、学习资料清单</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要下载怕下到假货、想往深处学的时候</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录E</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">感谢与说明：这本书怎么来的、怎么参与改进</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想反馈勘误、想贡献条目的时候</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录F</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折叠屏选购与使用专题</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动了买折叠屏的念头、想知道怎么保养的时候</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全书速查索引（就是这一页）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任何时候想"快速找到某章"的时候</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录H</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本路线图：各版改了什么、接下来计划改什么</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发现内容和旧版对不上、想知道更新计划的时候</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">附录</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">管什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候翻</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新手机开箱"保姆级"流程：拆封、验机、激活、迁移，一步一步带</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刚拿到新机、帮别人装机、验机怕翻车的时候</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录B</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动手练习小参考：各章配套练习的思路提示</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学完一章想练手、不知道练什么的时候</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录C</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极简术语"黑话"对照表：全书术语的白话翻译</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正文里冒出一个没见过的词的时候</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录D</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">靠谱资源去哪里找：官网、下载渠道、学习资料清单</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要下载怕下到假货、想往深处学的时候</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录E</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">感谢与说明：这本书怎么来的、怎么参与改进</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想反馈勘误、想贡献条目的时候</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录F</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折叠屏选购与使用专题</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动了买折叠屏的念头、想知道怎么保养的时候</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全书速查索引（就是这一页）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任何时候想"快速找到某章"的时候</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录H</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本路线图：各版改了什么、接下来计划改什么</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发现内容和旧版对不上、想知道更新计划的时候</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -913,17 +913,17 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">看正文哪里</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">配哪个附录</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一次开箱激活</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一章、第五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学完一章想练手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录B</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正文里遇到黑话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录C</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想下载某个软件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四章（App安装与管理）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录D</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想反馈勘误或补条目</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录E</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动了买折叠屏的念头</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十八章（选购指南）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录F</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想快速定位某章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录G（本页）</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想知道更新计划</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录H</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">看正文哪里</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">配哪个附录</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一次开箱激活</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一章、第五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学完一章想练手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录B</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正文里遇到黑话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意一章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录C</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想下载某个软件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四章（App安装与管理）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录D</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想反馈勘误或补条目</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录E</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">动了买折叠屏的念头</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十八章（选购指南）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录F</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想快速定位某章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录G（本页）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想知道更新计划</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录H</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -961,7 +961,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 附录E 不是资源页。它管的是"这本书的来历和改进渠道"；找资源请去附录D。两页挨着，功能不同。
@@ -1036,7 +1036,7 @@ kind: appendix
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 索引不是用来通读的。真遇到事时，能三十秒翻到那一页，它就完成了任务。
@@ -1044,7 +1044,7 @@ kind: appendix
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 索引是查的，不是读的：按词查、按事查、按篇浏览，三种查法对应三种处境，还能串成一次完整的查证。
 - 条目格式是"关键词 → 第X章"，一个词指向多章时先看括注；查到章先看小结和盒子，再回正文扫加粗，30 秒层大多够用。

@@ -27,16 +27,16 @@ Caméra, localisation, contacts, notifications… pour ces « zones sensibles »
 
 @Composable
 fun CameraButton() {
-    val permission = rememberPermissionState(
-        permission = android.Manifest.permission.CAMERA
-    )
-    Button(onClick = {
-        when {
-            permission.status.isGranted -&gt; openCamera()
-            permission.status.shouldShowRationale -&gt; showExplainDialog()
-            else -&gt; permission.launchPermissionRequest()
-        }
-    }) { Text("Prendre une photo") }
+ val permission = rememberPermissionState(
+ permission = android.Manifest.permission.CAMERA
+ )
+ Button(onClick = {
+ when {
+ permission.status.isGranted -&gt; openCamera()
+ permission.status.shouldShowRationale -&gt; showExplainDialog()
+ else -&gt; permission.launchPermissionRequest()
+ }
+ }) { Text("Prendre une photo") }
 }
 ```
 :::
@@ -63,22 +63,22 @@ Les notifications sont le canal par lequel l’app atteint l’utilisateur, et a
 
 // 1. créer le canal de notification (obligatoire sur Android 8+)
 val channel = NotificationChannel(
-    "reminder", "Rappels", NotificationManager.IMPORTANCE_DEFAULT
+ "reminder", "Rappels", NotificationManager.IMPORTANCE_DEFAULT
 )
 val manager = getSystemService(NotificationManager::class.java)
 manager.createNotificationChannel(channel)
 
 // 2. envoyer la notification
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("Rappel de dépenses")
-    .setContentText("Tu n'as encore rien noté aujourd'hui")
-    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("Rappel de dépenses")
+ .setContentText("Tu n'as encore rien noté aujourd'hui")
+ .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+ .build()
 if (ActivityCompat.checkSelfPermission(this,
-        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+ Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 ) {
-    manager.notify(1, notification)
+ manager.notify(1, notification)
 }
 ```
 :::

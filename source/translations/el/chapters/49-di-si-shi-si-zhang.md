@@ -34,10 +34,10 @@ kind: chapter
 1. Ένα αρχείο HTML (CSS και JS ενσωματωμένα), χωρίς framework
 2. Σκούρο θέμα, μοντέρνο μινιμαλιστικό στυλ
 3. 4 κάρτες εργαλείων:
-   - εργαλείο σύνοψης κειμένου
-   - μετρητής λέξεων
-   - επιλογέας χρωμάτων
-   - γεννήτρια QR
+ - εργαλείο σύνοψης κειμένου
+ - μετρητής λέξεων
+ - επιλογέας χρωμάτων
+ - γεννήτρια QR
 4. Κάθε κάρτα με εικονίδιο, τίτλο και σύντομη περιγραφή
 5. Οι κάρτες με animation στο hover
 6. Responsive, usable σε κινητό
@@ -109,17 +109,17 @@ Record { id, amount, type, category, note, date }
 1. Server Express, port 3001
 2. Βάση SQLite, πίνακας records
 3. Πεδία πίνακα records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. API CRUD:
-   GET /api/records - ανάκτηση όλων
-   POST /api/records - προσθήκη
-   PUT /api/records/:id - ενημέρωση
-   DELETE /api/records/:id - διαγραφή
+ GET /api/records - ανάκτηση όλων
+ POST /api/records - προσθήκη
+ PUT /api/records/:id - ενημέρωση
+ DELETE /api/records/:id - διαγραφή
 5. Middleware διαχείρισης σφαλμάτων
 Δώσε πλήρη δομή κώδικα backend.
 ```

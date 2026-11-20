@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>تحذيرات
+تحذيرات
 
 {class="mt-1"}
 إعدادات وضع المطور قد تؤثر على استقرار النظام، لا تغيّر ما لا تفهمه. بعد تفعيل تصحيح USB، كن حذراً عند الاتصال بالحاسوب، لا تتصل بحواسيب غير موثوقة.
@@ -57,7 +57,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>معلومة: لماذا تضع الشركات هذا المفتاح
+معلومة: لماذا تضع الشركات هذا المفتاح
 
 {class="mt-1"}
 في Android المبكر لم يكن هذا المفتاح موجوداً، والبرمجيات الخبيثة بمجرد حصولها على الصلاحية يمكنها وميض النظام سراً.لاحقاً طالبت Google جميع شركات Android بإضافة مفتاح "OEM Unlock" في خيارات المطور، كتأكيد "موافقة المستخدم المعلنة". لهذا حتى لو فتحت قفل BL، إذا كان مفتاح OEM Unlock مغلقاً، سيفشل الوميض مرة أخرى.
@@ -95,7 +95,7 @@ ADB اختصار لـ Android Debug Bridge (جسر تصحيح Android)، أدا�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>لا تتجاهل التعريف والتنبيه
+لا تتجاهل التعريف والتنبيه
 
 {class="mt-1"}
 إذا عرض مستخدم Windows <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> "unauthorized" أو لم يدرج الجهاز أصلاً، فالسبب غالباً عدم تثبيت التعريف أو نسيان الضغط على "السماح" على الهاتف. Samsung/Xiaomi وغيرها يمكن تثبيت "USB Driver" أو "مساعد الهاتف" الخاص بها لتكملة التعريف؛ Mac و Linux عموماً بلا تعريف. إذا أغلقت التنبيه بالخطأ، افصل وأعد كابل البيانات ليظهر مرة أخرى.
@@ -124,7 +124,7 @@ ADB اختصار لـ Android Debug Bridge (جسر تصحيح Android)، أدا�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>لا تحذف حزم النظام الأساسية بشكل عشوائي
+لا تحذف حزم النظام الأساسية بشكل عشوائي
 
 {class="mt-1"}
 رغم أن "pm uninstall --user 0" طريقة آمنة بدون Root، إلا أن حذف تطبيقات نظام أساسية (مثل <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> شريط الحالة،<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> الهاتف،<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> الإعدادات) يؤدي لمشاكل خطيرة كانهيار النظام وشاشة سوداء وعدم القدرة على الإقلاع. قبل الحذف ابحث في Google "هل يمكن حذف اسم هذه الحزمة"، والأفضل التقليص عن الخطأ. يُنصح بحذف واحد أو اثنين في كل مرة، والتأكد من عدم وجود مشاكل قبل المتابعة.
@@ -132,7 +132,7 @@ ADB اختصار لـ Android Debug Bridge (جسر تصحيح Android)، أدا�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>معلومة: ماذا يعني --user 0
+معلومة: ماذا يعني --user 0
 
 {class="mt-1"}
 بعد Android 4.2 دعم تعدد المستخدمين، لكل مستخدم ID مستقل (المالك 0، المستخدمون الإضافيون من 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> يعني "إزالة التثبيت لمالك الجهاز الحالي فقط"، ملف APK في قسم النظام لا يزال موجوداً، فقط لا يُعرض للمالك. لهذا لا يحتاج Root, لم يمس ملفات النظام، فقط عدّل "تكوين المستخدم". وهذا أكبر فرق عن الإزالة بعد Root: إزالة Root تحذف فعلياً من النظام ولن يحصل عليها أي مستخدم؛ إزالة ADB "تخفي للمستخدم الحالي" فقط.
@@ -159,7 +159,7 @@ ADB اختصار لـ Android Debug Bridge (جسر تصحيح Android)، أدا�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>تحذير شديد
+تحذير شديد
 
 {class="mt-1"}
 عملية Root تنطوي على مخاطر، قد تجعل الهاتف قالباً (لا يقلع). إذا كنت مبتدئاً، يُنصح بفهم الموضوع جيداً أولاً، والتأكد من وجود نسخة احتياطية كاملة. اقرأ الشرح بعناية قبل العمل، وتأكد من طراز جهازك وإصدار النظام.
@@ -198,7 +198,7 @@ ADB اختصار لـ Android Debug Bridge (جسر تصحيح Android)، أدا�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>لعبة القط والفأر لن تنتهي أبداً
+لعبة القط والفأر لن تنتهي أبداً
 
 {class="mt-1"}
 Google تحدّث قواعد الكشف بشكل دوري، وشركات التطبيقات تتابع بترقية تحقق Play Integrity. حلول الإخفاء التي تعمل اليوم قد تُكتشف غداً. إذا كنت تعتمد كلياً على تطبيقات البنوك/المدفوعات (مثل التحويلات اليومية والدفع بالمسح)، فالخيار الأكثر أماناً: لا تفتح Root، لا تفتح قفل BL. حلول الإخفاء أنسب للاعبين "الهاتف الرئيسي بدون Root + الهاتف الاحتياطي للتجربة".
@@ -213,7 +213,7 @@ Google تحدّث قواعد الكشف بشكل دوري، وشركات الت�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: فعّل وضع المطور واضبط سرعة الرسوم المتحركة
+جرّب: فعّل وضع المطور واضبط سرعة الرسوم المتحركة
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ادخل الإعدادات &gt; حول الهاتف.

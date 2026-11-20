@@ -18,7 +18,7 @@ Beaucoup de gens ont les icônes Wi-Fi et signal allumées simultanément en hau
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>Métaphore centrale : route et voitures
+Métaphore centrale : route et voitures
 
 {class="mt-1"}
 Imaginez Internet comme une ville. La <strong>« route »</strong> est le chemin entre votre smartphone et Internet, les <strong>« voitures »</strong> sont les données qui roulent sur la route. Le Wi-Fi et les données mobiles sont deux routes différentes, mais les données (voitures) sont les mêmes.
@@ -36,7 +36,7 @@ Le Wi-Fi est généralement un investissement unique (forfait mensuel de la box)
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>Essayez : vérifiez votre forfait de données
+Essayez : vérifiez votre forfait de données
 
 {class="mt-1"}
 Ouvrez [Réglages] &gt; [Réseau mobile] &gt; [Gestion des données] sur votre smartphone, regardez combien de données il vous reste ce mois-ci et quelles apps consomment le plus. Savoir où l'on en est permet de sortir serein.
@@ -49,7 +49,7 @@ En matière de sécurité, les données mobiles sont généralement plus sûres 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Rappel de sécurité
+Rappel de sécurité
 
 {class="mt-1"}
 Dans les lieux publics tels que aéroports, centres commerciaux, cafés, ne vous connectez pas aux Wi-Fi gratuits au nom suspect (ex. « Free_WiFi_2024 »). Même si vous êtes connecté, ne vous y connectez jamais à une app bancaire et n'y saisissez jamais de mot de passe.
@@ -81,7 +81,7 @@ Le réseau mobile est la base de votre connexion partout. De la 2G à la 5G, la 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Avertissement important : désactivez [Itinérance de données] avant de partir à l'étranger !
+Avertissement important : désactivez [Itinérance de données] avant de partir à l'étranger !
 
 {class="mt-1"}
 Utiliser les données mobiles à l'étranger peut générer des factures astronomiques ! Avant de partir à l'étranger, désactivez absolument l'itinérance de données dans les réglages, ou achetez à l'avance une carte SIM locale / un forfait d'itinérance internationale.
@@ -106,53 +106,53 @@ Les normes Wi-Fi sont définies par l'IEEE, chaque génération apportant des am
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Norme</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocole</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Bande de fréquence</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Débit maximum</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caractéristiques</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5 GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600 Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ancienne norme, couverture correcte</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5 GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3,5 Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La plus répandue actuellement, débit suffisant</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5 GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Performances multi-appareils, faible latence</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5/6 GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajout de la bande 6 GHz, moins de congestion</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5/6 GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46 Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Transmission ultra-rapide, agrégation multi-lien</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Norme</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocole</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Bande de fréquence</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Débit maximum</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caractéristiques</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5 GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600 Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ancienne norme, couverture correcte</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5 GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3,5 Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La plus répandue actuellement, débit suffisant</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5 GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Performances multi-appareils, faible latence</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5/6 GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajout de la bande 6 GHz, moins de congestion</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2,4/5/6 GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46 Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Transmission ultra-rapide, agrégation multi-lien</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ Quand vous avez beaucoup de données mobiles, vous pouvez activer le point d'acc
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez : configurer et gérer le point d'accès
+Essayez : configurer et gérer le point d'accès
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez [Paramètres], trouvez « Point d'accès personnel » ou « Partage de connexion », activez-le, définissez le nom et le mot de passe.

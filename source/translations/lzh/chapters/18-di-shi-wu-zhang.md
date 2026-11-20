@@ -34,7 +34,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>iPhone"80%充電限制"功能——以黃金法則變成系統設置
+iPhone"80%充電限制"功能——以黃金法則變成系統設置
 
 {class="mt-1"}
 iPhone 15/16系列（iOS 17以上）已以"20%-80%法則"作成矣系統功能。開啓後，手機充至80%將自動停止充電，從而大幅延緩電池老化。設置路徑：
@@ -48,7 +48,7 @@ iPhone 15/16系列（iOS 17以上）已以"20%-80%法則"作成矣系統功能�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>GaN充電器——出差黨之好搭檔
+GaN充電器——出差黨之好搭檔
 
 {class="mt-1"}
 汝或注意至現在之快充頭越作越小，背後功臣乃<strong>GaN（氮化鎵）</strong>這種新型半導體材。相較傳統硅基充電器，GaN充電器有幾個明顯優勢：
@@ -127,47 +127,47 @@ iPhone 15/16系列（iOS 17以上）已以"20%-80%法則"作成矣系統功能�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">標準</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">協議</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高功率</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術路線</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高壓/多檔位</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最廣泛</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高壓可調</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高通機型</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低壓大電流</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO系專用</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電荷泵</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華爲/榮耀</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蘋果快充</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD協議</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">標準</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">協議</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高功率</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術路線</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高壓/多檔位</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最廣泛</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高壓可調</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高通機型</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低壓大電流</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO系專用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電荷泵</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華爲/榮耀</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蘋果快充</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD協議</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ iPhone 15/16系列（iOS 17以上）已以"20%-80%法則"作成矣系統功能�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>快充安全提示
+快充安全提示
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 避邊充邊玩大型遊戲，將加劇發熱。
@@ -207,7 +207,7 @@ iPhone 15/16系列（iOS 17以上）已以"20%-80%法則"作成矣系統功能�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>何機型用上矣？
+何機型用上矣？
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>榮耀</strong>：Magic系列率先商用硅碳負極，Magic6 Pro、Magic7系列、Magic V3折屏均用。
@@ -228,7 +228,7 @@ iPhone 15/16系列（iOS 17以上）已以"20%-80%法則"作成矣系統功能�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>查之：爲君之電池作個體檢
+查之：爲君之電池作個體檢
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 視健康度：覓並記下君之電池最大容量。

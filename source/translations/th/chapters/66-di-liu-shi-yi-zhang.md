@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "ซานผวน"        // let: ค่าคงที่ (แนะนำให้ใช้เป็นค่าเริ่มต้น)
-var age = 18             // var: ตัวแปร (แก้ภายหลังได้)
+let name = "ซานผวน" // let: ค่าคงที่ (แนะนำให้ใช้เป็นค่าเริ่มต้น)
+var age = 18 // var: ตัวแปร (แก้ภายหลังได้)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var แก้ได้
-// name = "ลี่ซือ"         // <i class="fas fa-times-circle mr-1"></i> let แก้ไม่ได้ คอมไพล์แล้ว error ทันที
+age = 19 // var แก้ได้
+// name = "ลี่ซือ" // let แก้ไม่ได้ คอมไพล์แล้ว error ทันที
 
-let score: Int = 100     // จะเขียนไทป์ชัด ๆ ก็ได้
-let pi = 3.14            // ไม่เขียนก็เดาเองได้
+let score: Int = 100 // จะเขียนไทป์ชัด ๆ ก็ได้
+let pi = 3.14 // ไม่เขียนก็เดาเองได้
 
-print("สวัสดี \(name)")   // สอดข้อความ: เครื่องหมายแบ็กสแลช + วงเล็บ
+print("สวัสดี \(name)") // สอดข้อความ: เครื่องหมายแบ็กสแลช + วงเล็บ
 ```
 :::
 
@@ -64,20 +64,20 @@ print("สวัสดี \(name)")   // สอดข้อความ: เค�
 :::
 
 ```
-var name: String = "ซานผวน"   // ไทป์ปกติ: ห้ามเป็น nil เด็ดขาด
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> แก้ก่อน ไม่งั้นคอมไพเลอร์ตีกลับทันที
+var name: String = "ซานผวน" // ไทป์ปกติ: ห้ามเป็น nil เด็ดขาด
+// name = nil // แก้ก่อน ไม่งั้นคอมไพเลอร์ตีกลับทันที
 
-var nickname: String? = nil  // ใส่เครื่องหมายคำถาม: อนุญาตให้เป็น nil (optional)
+var nickname: String? = nil // ใส่เครื่องหมายคำถาม: อนุญาตให้เป็น nil (optional)
 nickname = "ซานเอ๋อร์"
 
 // ใช้ optional ต้อง "แกะกล่อง" ก่อน:
-if let n = nickname {        // if let: แกะแบบปลอดภัย
-    print("สวัสดี \(n)")
+if let n = nickname { // if let: แกะแบบปลอดภัย
+ print("สวัสดี \(n)")
 } else {
-    print("ยังไม่มีชื่อเล่น")
+ print("ยังไม่มีชื่อเล่น")
 }
 
-let len = nickname?.count ?? 0   // ?? ให้ค่าเริ่มต้น (nil coalescing)
+let len = nickname?.count ?? 0 // ?? ให้ค่าเริ่มต้น (nil coalescing)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // ฟังก์ชัน: ชื่อมาก่อน พารามิเตอร์และไทป์คืนค่ามาหลัง
 func greet(name: String) -> String {
-    return "สวัสดี \(name)!"
+ return "สวัสดี \(name)!"
 }
-print(greet(name: "ซานผวน"))     // ตอนเรียกต้องระบุชื่อพารามิเตอร์
+print(greet(name: "ซานผวน")) // ตอนเรียกต้องระบุชื่อพารามิเตอร์
 
 // คลูเซอร์: นิยามเลยตรงนั้น กระชับไว
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = ตัวปัจจุบัน
+let doubled = numbers.map { $0 * 2 } // $0 = ตัวปัจจุบัน
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // กรอง
+let big = numbers.filter { $0 > 2 } // กรอง
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ let big = numbers.filter { $0 > 2 }    // กรอง
 ```
 // struct: กล่องใส่ข้อมูล
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // struct มี "memberwise initializer" ให้พร้อม: สร้างได้เลย
+ // struct มี "memberwise initializer" ให้พร้อม: สร้างได้เลย
 }
 let r = Record(amount: 25.5, category: "อาหาร", date: Date())
 
 // protocol: สัญญาว่า "ต้องมีความสามารถอะไรบ้าง"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // เชื่อฟัง protocol = สัญญาว่าจะทำตามที่กำหนด
+struct Record: Identifiable { ... } // เชื่อฟัง protocol = สัญญาว่าจะทำตามที่กำหนด
 ```
 :::
 

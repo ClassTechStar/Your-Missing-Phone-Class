@@ -25,7 +25,7 @@ App 做出来了，然后呢？这一章回答"从能跑"到"能交付"的三件
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：报错怎么读？
+小贴士：报错怎么读？
 
 {class="mt-1"}
 崩溃后 Logcat 里会有红色堆栈（Stacktrace），从下往上找 <strong>第一个自己包名开头的行</strong>（比如 com.example.yourapp），那行基本就是案发现场。先看"Exception 类型"（空指针？类型转换？），再看"at ... 你的文件:行号"。这招能解决 80% 的崩溃。
@@ -52,22 +52,22 @@ App 做出来了，然后呢？这一章回答"从能跑"到"能交付"的三件
 ```
 // 把"金额字符串转数字"这种逻辑抽成纯函数
 fun parseAmount(input: String): Double? {
-    val v = input.trim().toDoubleOrNull()
-    return if (v != null && v > 0) v else null
+ val v = input.trim().toDoubleOrNull()
+ return if (v != null && v > 0) v else null
 }
 
 // 测试它（JUnit4）
 @Test
 fun emptyInputReturnsNull() {
-    assertEquals(null, parseAmount(""))
+ assertEquals(null, parseAmount(""))
 }
 @Test
 fun negativeReturnsNull() {
-    assertEquals(null, parseAmount("-5"))
+ assertEquals(null, parseAmount("-5"))
 }
 @Test
 fun normalValueParses() {
-    assertEquals(12.5, parseAmount("12.5"))
+ assertEquals(12.5, parseAmount("12.5"))
 }
 ```
 :::
@@ -84,7 +84,7 @@ fun normalValueParses() {
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：keystore 丢了 = App 丢了
+避坑提醒：keystore 丢了 = App 丢了
 
 {class="mt-1"}
 上架后更新 App 必须用<strong>同一个</strong>签名，否则商店会拒绝更新。keystore 文件和密码一旦丢失，你只能换个新应用重新上架，老用户全都接不上。务必把 keystore 和密码备份到安全的地方（云盘加密 + 记事本），这是安卓开发者最昂贵的教训之一。
@@ -94,11 +94,11 @@ fun normalValueParses() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> 上传 AAB</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 上传 AAB</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填数据安全表</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 审核（数小时~数天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> 上架</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 填数据安全表</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 审核（数小时~数天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 上架</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -122,7 +122,7 @@ fun normalValueParses() {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：A/B 看看同行
+小贴士：A/B 看看同行
 
 {class="mt-1"}
 上架前逛一圈商店里同类 App 的前十名，截图对比：他们图标什么风格？截图讲什么卖点？标题怎么写？<strong>模仿不是抄袭</strong>——学套路、换自己的内容，这是所有产品冷启动最快的一课。
@@ -145,7 +145,7 @@ App 上架前，这两件事值得各花半小时：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：把记账本"交付"一次
+来动手：把记账本"交付"一次
 
 {class="mt-1"}
 ① 给 parseAmount 等逻辑补 3 个单元测试；② 用 Logcat 亲手抓一个自己制造的崩溃并修好；③ 生成一个 release 签名的 APK，发给朋友安装（这才是"作品"的仪式感）；④ 有余力就注册开发者账号，把记账本真正提交上架。前三条今晚就能做完。
@@ -153,7 +153,7 @@ App 上架前，这两件事值得各花半小时：
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 调试三板斧：Logcat 看日志、断点看变量、Layout Inspector 看界面
 - 读崩溃：从堆栈下往上找自己包名的第一行

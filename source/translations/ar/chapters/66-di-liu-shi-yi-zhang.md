@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "أحمد"        // let: ثابت (يُفضَّل افتراضيًا)
-var age = 18             // var: متغير (يمكن تعديله لاحقًا)
+let name = "أحمد" // let: ثابت (يُفضَّل افتراضيًا)
+var age = 18 // var: متغير (يمكن تعديله لاحقًا)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var يمكن تغييره
-// name = "سارة"         // <i class="fas fa-times-circle mr-1"></i> let لا يمكن تغييره، خطأ في الترجمة
+age = 19 // var يمكن تغييره
+// name = "سارة" // let لا يمكن تغييره، خطأ في الترجمة
 
-let score: Int = 100     // يمكن أيضًا تحديد النوع صراحة
-let pi = 3.14            // إن لم تكتبه سيُستنتج تلقائيًا
+let score: Int = 100 // يمكن أيضًا تحديد النوع صراحة
+let pi = 3.14 // إن لم تكتبه سيُستنتج تلقائيًا
 
-print("مرحبًا \(name)")   // استيفاء النصوص: شرطة مائلة معكوسة + أقواس
+print("مرحبًا \(name)") // استيفاء النصوص: شرطة مائلة معكوسة + أقواس
 ```
 :::
 
@@ -64,20 +64,20 @@ print("مرحبًا \(name)")   // استيفاء النصوص: شرطة مائ�
 :::
 
 ```
-var name: String = "أحمد"   // نوع عادي: لا يجوز أن يكون nil أبدًا
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> خطأ ترجمة: يوقفك فورًا
+var name: String = "أحمد" // نوع عادي: لا يجوز أن يكون nil أبدًا
+// name = nil // خطأ ترجمة: يوقفك فورًا
 
-var nickname: String? = nil  // أضف علامة استفهام: يسمح بـ nil (قيمة اختيارية)
+var nickname: String? = nil // أضف علامة استفهام: يسمح بـ nil (قيمة اختيارية)
 nickname = "تومي"
 
 // مع القيم الاختيارية يجب "فك التغليف":
-if let n = nickname {        // if let: فك تغليف آمن
-    print("مرحبًا \(n)")
+if let n = nickname { // if let: فك تغليف آمن
+ print("مرحبًا \(n)")
 } else {
-    print("لا يوجد لقب بعد")
+ print("لا يوجد لقب بعد")
 }
 
-let len = nickname?.count ?? 0   // ?? قيمة افتراضية (معامل الدمج الفارغ)
+let len = nickname?.count ?? 0 // ?? قيمة افتراضية (معامل الدمج الفارغ)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // دالة: الاسم في المقدمة؛ الوسائط ونوع الإرجاع في الخلف
 func greet(name: String) -> String {
-    return "مرحبًا، \(name)!"
+ return "مرحبًا، \(name)!"
 }
-print(greet(name: "أحمد"))     // عند الاستدعاء مع اسم الوسيط
+print(greet(name: "أحمد")) // عند الاستدعاء مع اسم الوسيط
 
 // closure: تُعرَّف في المكان، خفيفة ومباشرة
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = العنصر الحالي
+let doubled = numbers.map { $0 * 2 } // $0 = العنصر الحالي
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // تصفية
+let big = numbers.filter { $0 > 2 } // تصفية
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ let big = numbers.filter { $0 > 2 }    // تصفية
 ```
 // الهيكل: صندوق البيانات
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // الهيكل يأتي مع "مُهيئ الأعضاء بالترتيب": يمكن إنشاؤه مباشرة
+ // الهيكل يأتي مع "مُهيئ الأعضاء بالترتيب": يمكن إنشاؤه مباشرة
 }
 let r = Record(amount: 25.5, category: "طعام", date: Date())
 
 // بروتوكول: اتفاق على "ما القدرات التي يجب توفرها"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // اعتماد البروتوكول = الالتزام بتنفيذ متطلباته
+struct Record: Identifiable { ... } // اعتماد البروتوكول = الالتزام بتنفيذ متطلباته
 ```
 :::
 

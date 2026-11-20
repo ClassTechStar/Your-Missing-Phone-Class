@@ -19,19 +19,19 @@ Il casting wireless sembra sempre "schermo del telefono alla TV", ma le tecnolog
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tecnologia</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Chi la usa</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caratteristiche</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecosistema Apple, l'esperienza più fluida. Richiede Apple TV o una TV che supporti AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefoni Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct diretto, non serve router. Il "casting wireless" di Android di default usa questo</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tutte le piattaforme</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Trasmette solo file multimediali (video/musica/foto), non replica lo schermo. Ottimo per inviare video alla TV</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tecnologia</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Chi la usa</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caratteristiche</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecosistema Apple, l'esperienza più fluida. Richiede Apple TV o una TV che supporti AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefoni Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct diretto, non serve router. Il "casting wireless" di Android di default usa questo</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tutte le piattaforme</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Trasmette solo file multimediali (video/musica/foto), non replica lo schermo. Ottimo per inviare video alla TV</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Usare il telefono alla guida è illegale, ma navigazione, musica e chiamate sono
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Promemoria di sicurezza
+Promemoria di sicurezza
 
 {class="mt-1"}
 Qualsiasi soluzione di connettività auto, alla guida usa per quanto possibile il controllo vocale. Imposta la destinazione di navigazione in anticipo, seleziona la playlist prima di partire, non operare lo schermo dell'auto in marcia.
@@ -86,7 +86,7 @@ Le riunioni sono lo scenario più frequente di casting, e anche il più problema
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fai: completa un casting dal telefono alla TV
+Fai: completa un casting dal telefono alla TV
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Assicurati che telefono e TV siano sulla stessa rete Wi-Fi.
@@ -98,7 +98,7 @@ Le riunioni sono lo scenario più frequente di casting, e anche il più problema
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Riepilogo del capitolo
+Riepilogo del capitolo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tre famiglie di casting wireless: AirPlay (Apple), Miracast (Android), DLNA (cross-platform per media)

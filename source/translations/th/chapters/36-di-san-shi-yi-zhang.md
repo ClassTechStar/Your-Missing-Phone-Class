@@ -70,7 +70,7 @@ Jianying (เวอร์ชันในประเทศของ CapCut) เ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: ถ่ายวิดีโอสั้น 30 วินาที
+ลงมือทำ: ถ่ายวิดีโอสั้น 30 วินาที
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เลือกความรู้เล็กๆ ที่คุณถนัด (เช่น "วิธีปรับขยายขนาดตัวอักษรบนมือถือ")
@@ -82,7 +82,7 @@ Jianying (เวอร์ชันในประเทศของ CapCut) เ�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ก่อนถ่ายต้องคิดให้ชัดเจน: ผู้ชมคือใคร ให้คุณค่าอะไร และโพสต์บนแพลตฟอร์มไหน

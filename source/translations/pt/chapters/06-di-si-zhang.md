@@ -56,7 +56,7 @@ Baixar apps de páginas web ou links suspeitos pode trazer vírus, roubar privac
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>O que são "Parasitas Eletrônicos"?
+O que são "Parasitas Eletrônicos"?
 
 {class="mt-1"}
 Referem-se a <strong>softwares "crackeados" com cavalos de Troia embutidos</strong> — você pensa que "economizou dinheiro", mas na verdade "foi infectado". Formas comuns:
@@ -96,20 +96,20 @@ Apps pedem permissões (como contatos, localização). Às vezes é razoável (m
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Opções de permissão</strong>: "Permitir sempre", "Permitir apenas durante o uso", "Negar", "Perguntar sempre".</li>
-                        <li><strong>Princípios de gestão</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Minimização: não conceda o que não for necessário.</li>
-                                <li>Auditoria posterior: verifique periodicamente nas configurações de permissões quem está "extrapolando".</li>
-                                <li>Contextualização: como apps de transporte, dê permissão de localização apenas durante o uso.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Opções de permissão</strong>: "Permitir sempre", "Permitir apenas durante o uso", "Negar", "Perguntar sempre".</li>
+ <li><strong>Princípios de gestão</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Minimização: não conceda o que não for necessário.</li>
+ <li>Auditoria posterior: verifique periodicamente nas configurações de permissões quem está "extrapolando".</li>
+ <li>Contextualização: como apps de transporte, dê permissão de localização apenas durante o uso.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Permissões que merecem atenção especial
+Permissões que merecem atenção especial
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Contatos/SMS: podem ser usados para enviar spam.
@@ -152,16 +152,16 @@ Por que os apps baixados de lojas oficiais são mais seguros? A verificação de
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Assinatura Android</strong>: O desenvolvedor assina o APK com uma chave privada. O sistema verifica com a chave pública durante a instalação. Se o APK for adulterado (por exemplo, com injeção de vírus), a assinatura se torna inválida e o sistema recusa a instalação. O Google Play também exige o App Signing, com o Google armazenando a chave de assinatura, protegendo ainda mais a segurança do app.</li>
-                        <li><strong>Assinatura iOS</strong>: A revisão da Apple é mais rigorosa. Cada IPA deve ser assinado com um certificado emitido pela Apple, caso contrário não pode ser instalado. É por isso que o iOS só permite instalar apps da App Store ou via certificado empresarial. Apps assinados com certificado empresarial têm validade limitada e a Apple pode revogá-los a qualquer momento.</li>
-                        <li><strong>Função da assinatura</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Verificar a origem: confirmar que o app realmente vem do desenvolvedor declarado.</li>
-                                <li>Verificar a integridade: garantir que o app não foi adulterado durante a transmissão.</li>
-                                <li>Prevenir falsificação: apps maliciosos não podem se passar por outros apps.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Assinatura Android</strong>: O desenvolvedor assina o APK com uma chave privada. O sistema verifica com a chave pública durante a instalação. Se o APK for adulterado (por exemplo, com injeção de vírus), a assinatura se torna inválida e o sistema recusa a instalação. O Google Play também exige o App Signing, com o Google armazenando a chave de assinatura, protegendo ainda mais a segurança do app.</li>
+ <li><strong>Assinatura iOS</strong>: A revisão da Apple é mais rigorosa. Cada IPA deve ser assinado com um certificado emitido pela Apple, caso contrário não pode ser instalado. É por isso que o iOS só permite instalar apps da App Store ou via certificado empresarial. Apps assinados com certificado empresarial têm validade limitada e a Apple pode revogá-los a qualquer momento.</li>
+ <li><strong>Função da assinatura</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Verificar a origem: confirmar que o app realmente vem do desenvolvedor declarado.</li>
+ <li>Verificar a integridade: garantir que o app não foi adulterado durante a transmissão.</li>
+ <li>Prevenir falsificação: apps maliciosos não podem se passar por outros apps.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. Tamanho do pacote de instalação e otimização
@@ -180,7 +180,7 @@ Técnicas de otimização dos apps modernos:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosidade: Por que alguns apps têm pacotes de instalação tão grandes?
+Curiosidade: Por que alguns apps têm pacotes de instalação tão grandes?
 
 {class="mt-1"}
 Apps de jogos costumam ser os maiores, pois contêm muitas texturas em alta definição, modelos 3D e arquivos de áudio. Apps de redes sociais também são relativamente grandes, pois precisam suportar vários módulos funcionais. Os apps utilitários costumam ser os menores. Se você encontrar um app utilitário particularmente grande, desconfie: pode estar empacotado com funcionalidades desnecessárias.
@@ -188,7 +188,7 @@ Apps de jogos costumam ser os maiores, pois contêm muitas texturas em alta defi
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prática: Audite as permissões de 3 apps
+Prática: Audite as permissões de 3 apps
 
 {class="mt-1"}
 Escolha 3 apps comuns (como redes sociais, compras, utilitários), vá até a página de gerenciamento de permissões em [Ajustes], revise item por item e desative ou altere para "Permitir apenas durante o uso" as permissões sensíveis desnecessárias.

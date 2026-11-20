@@ -27,16 +27,16 @@ Kamera, lokasi, kontak, notifikasi... "zona sensitif" ini wajib diminta App kepa
 
 @Composable
 fun CameraButton() {
-    val permission = rememberPermissionState(
-        permission = android.Manifest.permission.CAMERA
-    )
-    Button(onClick = {
-        when {
-            permission.status.isGranted -&gt; openCamera()
-            permission.status.shouldShowRationale -&gt; showExplainDialog()
-            else -&gt; permission.launchPermissionRequest()
-        }
-    }) { Text("Jepret") }
+ val permission = rememberPermissionState(
+ permission = android.Manifest.permission.CAMERA
+ )
+ Button(onClick = {
+ when {
+ permission.status.isGranted -&gt; openCamera()
+ permission.status.shouldShowRationale -&gt; showExplainDialog()
+ else -&gt; permission.launchPermissionRequest()
+ }
+ }) { Text("Jepret") }
 }
 ```
 :::
@@ -63,22 +63,22 @@ Notifikasi adalah saluran App menjangkau pengguna, sekaligus fitur yang paling g
 
 // 1. Buat channel notifikasi (wajib di Android 8+)
 val channel = NotificationChannel(
-    "reminder", "Pengingat", NotificationManager.IMPORTANCE_DEFAULT
+ "reminder", "Pengingat", NotificationManager.IMPORTANCE_DEFAULT
 )
 val manager = getSystemService(NotificationManager::class.java)
 manager.createNotificationChannel(channel)
 
 // 2. Kirim notifikasi
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("Pengingat mencatat")
-    .setContentText("Hari ini belum mencatat, lho")
-    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("Pengingat mencatat")
+ .setContentText("Hari ini belum mencatat, lho")
+ .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+ .build()
 if (ActivityCompat.checkSelfPermission(this,
-        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+ Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 ) {
-    manager.notify(1, notification)
+ manager.notify(1, notification)
 }
 ```
 :::

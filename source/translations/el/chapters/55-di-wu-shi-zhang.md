@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "Γιώργος"        // val: μεταβλητή μόνο για ανάγνωση (προτείνεται ως προεπιλογή)
-var age = 18             // var: μεταβλητή που αλλάζει (μπορεί να ξαναγραφτεί)
+val name = "Γιώργος" // val: μεταβλητή μόνο για ανάγνωση (προτείνεται ως προεπιλογή)
+var age = 18 // var: μεταβλητή που αλλάζει (μπορεί να ξαναγραφτεί)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var αλλάζει
-// name = "Νίκος"         // <i class="fas fa-times-circle mr-1"></i> val δεν αλλάζει, σφάλμα μεταγλώττισης
+age = 19 // var αλλάζει
+// name = "Νίκος" // val δεν αλλάζει, σφάλμα μεταγλώττισης
 
-val score: Int = 100     // μπορείς και να γράψεις τον τύπο ρητά
-val pi = 3.14            // και χωρίς αυτόν γίνεται αυτόματη εξαγωγή
+val score: Int = 100 // μπορείς και να γράψεις τον τύπο ρητά
+val pi = 3.14 // και χωρίς αυτόν γίνεται αυτόματη εξαγωγή
 ```
 :::
 
@@ -63,15 +63,15 @@ val pi = 3.14            // και χωρίς αυτόν γίνεται αυτό
 
 ```
 fun greet(name: String): String {
-    return "Γεια σου, $name!"     // το σύμβολο $ εισάγει τη μεταβλητή στο αλφαριθμητικό
+ return "Γεια σου, $name!" // το σύμβολο $ εισάγει τη μεταβλητή στο αλφαριθμητικό
 }
 
-println(greet("Γιώργος"))        // Έξοδος: Γεια σου, Γιώργο!
+println(greet("Γιώργος")) // Έξοδος: Γεια σου, Γιώργο!
 
 // Μονογραμμικές συναρτήσεις γράφονται ως εκφράσεις
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // Έξοδος: 8
+println(add(3, 5)) // Έξοδος: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // Έξοδος: 8
 // Έλεγχος: if / else
 val age = 17
 if (age >= 18) {
-    println("Ενήλικας")
+ println("Ενήλικας")
 } else {
-    println("Ανήλικος")
+ println("Ανήλικος")
 }
 
 // Πολλαπλοί κλάδοι: when (εκατοντάδες φορές πιο βολικό από το switch)
 val score = 85
 val level = when {
-    score >= 90 -> "Άριστα"
-    score >= 60 -> "Βάση"
-    else -> "Συνέχεια, μπροστά!"
+ score >= 90 -> "Άριστα"
+ score >= 60 -> "Βάση"
+ else -> "Συνέχεια, μπροστά!"
 }
 
 // Επανάληψη: βρόχος for
 val fruits = listOf("μήλο", "μπανάνα", "πορτοκάλι")
 for (fruit in fruits) {
-    println("Μου αρέσει να τρώω$fruit")
+ println("Μου αρέσει να τρώω$fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ for (fruit in fruits) {
 :::
 
 ```
-var name: String = "Γιώργος"   // Συνηθισμένος τύπος: ποτέ null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> Σε σταματάει κατευθείαν ο compiler
+var name: String = "Γιώργος" // Συνηθισμένος τύπος: ποτέ null
+// name = null // Σε σταματάει κατευθείαν ο compiler
 
 var nickname: String? = null // με ερωτηματικό: επιτρέπεται null
 nickname = "Μπαμπής"
 
 // Με nullable type, η διαχείριση πρέπει να είναι ασφαλής:
-println(nickname?.length)    // safe call: null επιστρέφει null, χωρίς κρασ
-val len = nickname?.length ?: 0   // Elvis operator: σε null δίνει προεπιλογή
+println(nickname?.length) // safe call: null επιστρέφει null, χωρίς κρασ
+val len = nickname?.length ?: 0 // Elvis operator: σε null δίνει προεπιλογή
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ println(len)
 ```
 // Συνηθισμένη κλάση: καλούπι
 class Dog(val name: String) {
-    fun bark() = println("$name γαβ γαβ!")
+ fun bark() = println("$name γαβ γαβ!")
 }
 
-val dog = Dog("Λάκης")      // Δημιουργία αντικειμένου
-dog.bark()                 // Λάκης γαβ γαβ!
+val dog = Dog("Λάκης") // Δημιουργία αντικειμένου
+dog.bark() // Λάκης γαβ γαβ!
 
 // data class: κουτί με δεδομένα (έτοιμα equals/copy κ.λπ.)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "Γιώργος", "zhangsan@example.com")
-val twin = me.copy(name = "Γιώργος Παπαδόπουλος")   // Αντιγραφή με αλλαγή ενός πεδίου
+val twin = me.copy(name = "Γιώργος Παπαδόπουλος") // Αντιγραφή με αλλαγή ενός πεδίου
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // Με lambda: ορισμός επί τόπου, κομψά και άμεσα
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = τρέχον στοιχείο
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = τρέχον στοιχείο
 
 // Φίλτρο + μετασχηματισμός σε σύνδεση (πολύ συνηθισμένο σε πραγματικά έργα)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

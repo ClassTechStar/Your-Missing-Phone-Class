@@ -67,7 +67,7 @@ Der gesamte Prozess dauerte vom Anfang bis zum Ende etwa vierzig Minuten, ganz o
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Probieren Sie es aus: Bauen Sie Ihren mobilen Arbeitsworkflow auf
+Probieren Sie es aus: Bauen Sie Ihren mobilen Arbeitsworkflow auf
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Wählen Sie Ihre Haupt-Dokumenten-App (WPS oder Microsoft 365), melden Sie sich an und verknüpfen Sie den Cloud-Speicher.

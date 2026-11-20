@@ -19,19 +19,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τεχνολογία</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ποιος το χρησιμοποιεί</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Χαρακτηριστικά</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Οικοσύστημα Apple, η πιο ομαλή εμπειρία. Απαιτεί Apple TV ή τηλεόραση με υποστήριξη AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κινητό Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct. "ασύρματο Κασκολήψη οθόνης"προεπιλογή</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πλατφόρμα</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχείο(Βίντεο/Μουσική/),Image Οθόνη.Βίντεο Αναπαραγωγή</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τεχνολογία</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ποιος το χρησιμοποιεί</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Χαρακτηριστικά</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Οικοσύστημα Apple, η πιο ομαλή εμπειρία. Απαιτεί Apple TV ή τηλεόραση με υποστήριξη AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κινητό Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct. "ασύρματο Κασκολήψη οθόνης"προεπιλογή</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πλατφόρμα</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχείο(Βίντεο/Μουσική/),Image Οθόνη.Βίντεο Αναπαραγωγή</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Υπενθύμιση ασφαλείας
+Υπενθύμιση ασφαλείας
 
 {class="mt-1"}
 Λύση, Φωνή.Πλοήγηση, Μουσική, Οθόνη.
@@ -86,7 +86,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πρακτική: Κασκολήψη οθόνης
+Πρακτική: Κασκολήψη οθόνης
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Σιγουρευτείτε ότι κινητό και τηλεόραση είναι στο ίδιο Wi-Fi.
@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ασύρματο Κασκολήψη οθόνης:AirPlay(),Miracast(),DLNA(Πλατφόρμα)

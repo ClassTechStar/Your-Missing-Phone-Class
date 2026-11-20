@@ -100,7 +100,7 @@ DNS (система доменных имён), это телефонный сп
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Сделайте прямо сейчас: проведите «медосмотр безопасности» вашего телефона
+Сделайте прямо сейчас: проведите «медосмотр безопасности» вашего телефона
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Обновление DNS</strong>: Android: Настройки → Подключение и общий доступ → Частный DNS → введите «one.one.one.one» или «dns.google». iPhone: найдите в Safari «1.1.1.1 DNS profile» и установите профиль, либо скачайте приложение Cloudflare 1.1.1.1.

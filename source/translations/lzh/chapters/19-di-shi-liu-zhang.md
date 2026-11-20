@@ -44,7 +44,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+：付費用戶才能享受之隱私三件套
+iCloud+：付費用戶才能享受之隱私三件套
 
 {class="mt-1"}
 只要升級到任意付費iCloud檔位（50GB/200GB/2TB等），遂自動成爲<strong>iCloud+</strong>用戶，解鎖三個隱私護能：
@@ -60,7 +60,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud高級數據保護（ADP）——真正之端至端加密
+iCloud高級數據保護（ADP）——真正之端至端加密
 
 {class="mt-1"}
 2022年底蘋果推出矣<strong>iCloud高級數據護（Advanced Data Protection，ADP）</strong>，以端至端加密（E2EE）自原來之健康、密碼等少數數據，擴展至了<strong>絕大部iCloud數據</strong>——照片、備忘錄、iCloud雲備份、設信息等共23類數據。
@@ -99,7 +99,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>賬號被盜之後果遠較君所想爲重
+賬號被盜之後果遠較君所想爲重
 
 {class="mt-1"}
 賬號被盜之後果遠較君所想爲重
@@ -107,7 +107,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>實操：爲君之賬號作一次全面體檢
+實操：爲君之賬號作一次全面體檢
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 開手機設置，入賬號頁，確認雙重認證已啓。

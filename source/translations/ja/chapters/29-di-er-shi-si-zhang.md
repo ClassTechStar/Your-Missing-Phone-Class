@@ -45,41 +45,41 @@ BL ロックの利害をより直感的に理解するため、5つのコア次�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心機能</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ロック状態（デフォルト）</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解除後の状態</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">システムセキュリティ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">未署名の非公式システムのフラッシュを防止し、システム完全性と低層セキュリティを保護<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高セキュリティ：公式署名イメージのみロード、悪意あるファームウェア改ざんを効果的に防御</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ セキュリティ低下：サードパーティ ROM のフラッシュを許可、システム完全性検証メカニズムが無効化、マルウェアが Root 権限を取得するとシステムを深く改ざん可能</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">システム安定性</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">メーカーがテスト・最適化した公式システムの実行を保証し、安定性と快適さを確保<br><span class="text-emerald-600 dark:text-emerald-400">✅ 安定：公式ファームウェア使用、機能完備、OTA 更新が信頼できる</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ リスク増大：サードパーティ ROM に互換性問題がある可能性、システムクラッシュ、文鎮化、ハードウェア機能異常（カメラ、急速充電など）、OTA 更新失敗の可能性</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保証権益</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">メーカーは BL ロックで安定した公式システムを提供し、保証サービスを提供<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保証有効：公式無料保証サービスを享受（非意図的損傷）</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保証無効：ほとんどのメーカーは BL 解除を能動的な保証放棄とみなします。再ロックしても履歴解除記録が検出されれば保証拒否される可能性</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">データセキュリティ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解除プロセスは通常データの強制消去を行い、旧データが新システム環境で悪用されるのを防止<br><span class="text-emerald-600 dark:text-emerald-400">✅ データ安全：日常使用中、BL ロックがマルウェアのシステムパーティション変更能力を制限</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ データリスク：解除時に全ユーザーデータが強制消去；解除後に正しく暗号化しないとデータ保存が不安定；紛失後にフラッシュでデータを抽出されやすい</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">機能制限</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">セキュア環境に依存する機能（決済、銀行 App など）の正常動作を保証<br><span class="text-emerald-600 dark:text-emerald-400">✅ 機能完備：すべての公式機能が正常に使用可能</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 機能制限：一部セキュリティ敏感 App（Google Pay、銀行 App など）が BL 解除状態を検出して実行を拒否する可能性；DRM サービスがダウングレードされ、高画質動画再生に影響</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心機能</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ロック状態（デフォルト）</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解除後の状態</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">システムセキュリティ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">未署名の非公式システムのフラッシュを防止し、システム完全性と低層セキュリティを保護<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高セキュリティ：公式署名イメージのみロード、悪意あるファームウェア改ざんを効果的に防御</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ セキュリティ低下：サードパーティ ROM のフラッシュを許可、システム完全性検証メカニズムが無効化、マルウェアが Root 権限を取得するとシステムを深く改ざん可能</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">システム安定性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">メーカーがテスト・最適化した公式システムの実行を保証し、安定性と快適さを確保<br><span class="text-emerald-600 dark:text-emerald-400">✅ 安定：公式ファームウェア使用、機能完備、OTA 更新が信頼できる</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ リスク増大：サードパーティ ROM に互換性問題がある可能性、システムクラッシュ、文鎮化、ハードウェア機能異常（カメラ、急速充電など）、OTA 更新失敗の可能性</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保証権益</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">メーカーは BL ロックで安定した公式システムを提供し、保証サービスを提供<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保証有効：公式無料保証サービスを享受（非意図的損傷）</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保証無効：ほとんどのメーカーは BL 解除を能動的な保証放棄とみなします。再ロックしても履歴解除記録が検出されれば保証拒否される可能性</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">データセキュリティ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解除プロセスは通常データの強制消去を行い、旧データが新システム環境で悪用されるのを防止<br><span class="text-emerald-600 dark:text-emerald-400">✅ データ安全：日常使用中、BL ロックがマルウェアのシステムパーティション変更能力を制限</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ データリスク：解除時に全ユーザーデータが強制消去；解除後に正しく暗号化しないとデータ保存が不安定；紛失後にフラッシュでデータを抽出されやすい</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">機能制限</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">セキュア環境に依存する機能（決済、銀行 App など）の正常動作を保証<br><span class="text-emerald-600 dark:text-emerald-400">✅ 機能完備：すべての公式機能が正常に使用可能</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 機能制限：一部セキュリティ敏感 App（Google Pay、銀行 App など）が BL 解除状態を検出して実行を拒否する可能性；DRM サービスがダウングレードされ、高画質動画再生に影響</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ BL ロックの利害をより直感的に理解するため、5つのコア次�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>行動する前に慎重に
+行動する前に慎重に
 
 {class="mt-1"}
 SamsungのKnoxヒューズは<strong>不可逆的</strong>で、一度トリガーされると元の工場状態には戻せません。Root権限が必要な機能を使いたいだけなら、Root不要の代替手段があるかまず調べてください。
@@ -123,7 +123,7 @@ SamsungのKnoxヒューズは<strong>不可逆的</strong>で、一度トリガ�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>サードパーティROM焼き
+サードパーティROM焼き
 
 {class="mt-1"}
 ：LineageOS、Pixel Experienceなど、異なるシステムを体験。
@@ -140,7 +140,7 @@ SamsungのKnoxヒューズは<strong>不可逆的</strong>で、一度トリガ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>決済機能の異常
+決済機能の異常
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>ROM焼きの前に必ず完全なバックアップを行い、チュートリアルを注意深く読み、機種とバージョンの一致を確認してください。</strong>おすすめリソース。
@@ -152,7 +152,7 @@ SamsungのKnoxヒューズは<strong>不可逆的</strong>で、一度トリガ�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1：BLロック解除後に元に戻せますか？
+Q1：BLロック解除後に元に戻せますか？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>再ロック可能です。通常、公式の完全なフラッシュパッケージを書き込み、特定のフラッシュスクリプト（Xiaomiの <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>）を使って再ロックします。ただし、再ロック後も、解除によってトリガーされたセキュリティヒューズ（SamsungのKnoxなど）は元に戻らない場合があります。
@@ -160,7 +160,7 @@ SamsungのKnoxヒューズは<strong>不可逆的</strong>で、一度トリガ�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2：ロック解除後にRoot化するには？
+Q2：ロック解除後にRoot化するには？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>BLロック解除は最初のステップにすぎません。Root化には通常以下が必要です：

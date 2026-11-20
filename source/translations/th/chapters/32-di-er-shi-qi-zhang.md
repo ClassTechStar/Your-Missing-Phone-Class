@@ -32,22 +32,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แบรนด์</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ชื่อโหมด</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">วิธีเปิด</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การช่วยการเข้าถึง (ไม่มีโหมดใช้งานง่ายแยกต่างหาก แต่ปรับให้ใหญ่ขึ้นทีละรายการได้)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การแสดงผลและความสว่าง &gt; ขนาดตัวอักษร ปรับไปที่ใหญ่สุด จากนั้นเข้าไปที่ "การช่วยการเข้าถึง &gt; การแสดงผลและขนาดตัวอักษร" เปิด "ข้อความตัวหนา" "รูปร่างปุ่ม"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ระบบและการอัปเดต &gt; โหมดใช้งานง่าย &gt; เปิดใช้งาน</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดขั้นต่ำ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การตั้งค่าเพิ่มเติม &gt; โหมดขั้นต่ำ &gt; เปิดใช้งาน</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ฟังก์ชันเด่น &gt; โหมดใช้งานง่าย</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดเดสก์ท็อปง่ายๆ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; หน้าจอหลัก, หน้าจอล็อกและวอลเปเปอร์ &gt; โหมดเดสก์ท็อปง่ายๆ</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การแสดงผล &gt; โหมดใช้งานง่าย</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แบรนด์</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ชื่อโหมด</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">วิธีเปิด</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การช่วยการเข้าถึง (ไม่มีโหมดใช้งานง่ายแยกต่างหาก แต่ปรับให้ใหญ่ขึ้นทีละรายการได้)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การแสดงผลและความสว่าง &gt; ขนาดตัวอักษร ปรับไปที่ใหญ่สุด จากนั้นเข้าไปที่ "การช่วยการเข้าถึง &gt; การแสดงผลและขนาดตัวอักษร" เปิด "ข้อความตัวหนา" "รูปร่างปุ่ม"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ระบบและการอัปเดต &gt; โหมดใช้งานง่าย &gt; เปิดใช้งาน</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดขั้นต่ำ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การตั้งค่าเพิ่มเติม &gt; โหมดขั้นต่ำ &gt; เปิดใช้งาน</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ฟังก์ชันเด่น &gt; โหมดใช้งานง่าย</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดเดสก์ท็อปง่ายๆ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; หน้าจอหลัก, หน้าจอล็อกและวอลเปเปอร์ &gt; โหมดเดสก์ท็อปง่ายๆ</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การแสดงผล &gt; โหมดใช้งานง่าย</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: ช่วยผู้ใหญ่ "ตกแต่ง" โทรศัพท์ใหม่
+ลงมือทำ: ช่วยผู้ใหญ่ "ตกแต่ง" โทรศัพท์ใหม่
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เปิดโหมดใช้งานง่าย (ทำตามตารางแบรนด์ด้านบน)
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"คำขวัญป้องกันการหลอกลวง" สำหรับผู้สูงอายุ (พิมพ์ออกมาแปะไว้ข้างโทรศัพท์)
+"คำขวัญป้องกันการหลอกลวง" สำหรับผู้สูงอายุ (พิมพ์ออกมาแปะไว้ข้างโทรศัพท์)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>โทรศัพท์แปลกหน้าขอให้โอนเงิน → วางสาย!</strong>
@@ -151,7 +151,7 @@ WeChat เป็น App ที่ผู้สูงอายุใช้บ่�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - เปิดโหมดง่ายๆ หรือปรับขนาดตัวอักษร/ไอคอนให้ใหญ่ขึ้นก่อน ปรับสภาพแวดล้อมให้ดีปัญหาก็จะหมดไปเกินครึ่ง

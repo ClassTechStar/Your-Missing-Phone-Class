@@ -44,7 +44,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+：付費用戶先可以享受嘅私隱三件套
+iCloud+：付費用戶先可以享受嘅私隱三件套
 
 {class="mt-1"}
 只要升級到任意付費iCloud檔位（50GB/200GB/2TB等），就自動成為<strong>iCloud+</strong>用戶，解鎖三個私隱保護功能：
@@ -60,7 +60,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud高級數據保護（ADP）——真正嘅端到端加密
+iCloud高級數據保護（ADP）——真正嘅端到端加密
 
 {class="mt-1"}
 2022年底蘋果推出咗<strong>iCloud高級數據保護（Advanced Data Protection，ADP）</strong>，將端到端加密（E2EE）由原本嘅健康、密碼等少數數據，擴展到<strong>大部分iCloud數據</strong>——相、備忘錄、iCloud雲備份、設備資訊等共23類數據。
@@ -99,7 +99,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>帳號被盜嘅後果比你想像嘅要嚴重
+帳號被盜嘅後果比你想像嘅要嚴重
 
 {class="mt-1"}
 如果黑客攞到你嘅帳號密碼，佢可以：遠端鎖定你嘅手機並勒索贖金、查看你嘅相同通訊錄、用你嘅支付方式買嘢。更麻煩嘅係，如果你嘅帳號綁定咗太多嘢，揾返帳號本身就係一場噩夢。所以，雙重認證，而家就去開。
@@ -107,7 +107,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>實操：畀你嘅帳號做一次全面體檢
+實操：畀你嘅帳號做一次全面體檢
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打開手機設定，進入帳號頁面，確認雙重認證已開啟。

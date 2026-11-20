@@ -102,7 +102,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>คำแนะนำที่ใช้ได้จริง
+คำแนะนำที่ใช้ได้จริง
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - : ถ่ายทั่วไป: 1080P/4K + 30fps + เข้ารหัส H.265 สมดุลระหว่างคุณภาพภาพกับขนาดไฟล์
@@ -113,7 +113,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองไปสำรวจดู: การตั้งค่าวิดีโอบนมือถือของคุณ
+ลองไปสำรวจดู: การตั้งค่าวิดีโอบนมือถือของคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : เปิดแอปกล้อง สลับไปที่โหมดวิดีโอ
@@ -241,7 +241,7 @@ AI ไม่ได้ประมวลผลทั้งภาพแบบเ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>คำแนะนำปฏิบัติสำหรับการถ่ายภาพนิ่ง
+คำแนะนำปฏิบัติสำหรับการถ่ายภาพนิ่ง
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - การถ่ายภาพประจำวัน: ใช้ค่าเริ่มต้น HEIF/JPEG ก็เพียงพอ ไฟล์มีขนาดเล็กและคุณภาพภาพใช้ได้
@@ -253,7 +253,7 @@ AI ไม่ได้ประมวลผลทั้งภาพแบบเ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองลงมือทำ: สำรวจความสามารถของกล้องคุณ
+ลองลงมือทำ: สำรวจความสามารถของกล้องคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ตรวจสอบว่าโทรศัพท์ของคุณรองรับการถ่ายภาพ RAW หรือไม่ (การตั้งค่า→กล้อง→รูปแบบ) ลองเปิดใช้งานและถ่ายภาพหนึ่งภาพ เปรียบเทียบขนาดไฟล์ JPEG และ RAW ของฉากเดียวกัน

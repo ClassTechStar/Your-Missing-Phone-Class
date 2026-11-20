@@ -18,7 +18,7 @@ Many people have both the Wi-Fi and signal icons lit up at the top of their phon
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>Core Metaphor: Roads and Cars
+Core Metaphor: Roads and Cars
 
 {class="mt-1"}
 Imagine the internet as a city.<strong>"Roads"</strong> are the channels between your phone and the internet, and <strong>"cars"</strong> are the data traveling on the roads. Wi-Fi and mobile data are two different roads, but the data (cars) itself is the same.
@@ -36,7 +36,7 @@ Wi-Fi is usually a one-time investment (monthly broadband fee):as long as the po
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>Try It: Check Your Data Plan
+Try It: Check Your Data Plan
 
 {class="mt-1"}
 Open your phone's [Settings] &gt; [Mobile Network] &gt; [Data Management] to see how much data you have left this month and which apps use the most. Knowing your numbers means you won't panic when you go out.
@@ -49,7 +49,7 @@ In terms of security, mobile data is usually safer than public Wi-Fi. Mobile dat
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Security Reminder
+Security Reminder
 
 {class="mt-1"}
 At airports, malls, cafés, and other public places, do not connect to free Wi-Fi with suspicious names (such as "Free_WiFi_2024"). Even if you do connect, never sign in to banking apps or enter passwords on it.
@@ -81,7 +81,7 @@ Mobile networks are the foundation of staying connected anywhere. From 2G to 5G,
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Important Warning: Turn off [Data Roaming] Before Going Abroad!
+Important Warning: Turn off [Data Roaming] Before Going Abroad!
 
 {class="mt-1"}
 Using mobile data abroad can result in astronomical bills! Before going abroad, be sure to turn off data roaming in settings, or purchase a local data card/international roaming plan in advance.
@@ -106,53 +106,53 @@ Wi-Fi standards are set by IEEE, and each generation brings significant improvem
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standard</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocol</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Band</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Max Speed</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Features</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Legacy standard, decent coverage</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Currently the most widespread, sufficient speed</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Strong multi-device performance, low latency</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adds 6GHz band, less congestion</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ultra-fast transmission, multi-link aggregation</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standard</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocol</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Band</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Max Speed</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Features</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Legacy standard, decent coverage</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Currently the most widespread, sufficient speed</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Strong multi-device performance, low latency</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adds 6GHz band, less congestion</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ultra-fast transmission, multi-link aggregation</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ When you have plenty of data, you can turn on the hotspot for tablets and comput
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Set Up and Manage a Hotspot
+Hands-On: Set Up and Manage a Hotspot
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Open [Settings], find "Personal Hotspot" or "Tethering," turn it on, and set the name and password.

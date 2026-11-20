@@ -35,20 +35,20 @@ kind: chapter
 import Observation
 
 @Observable
-class CounterModel {                 // วิวโมเดล
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // วิวโมเดล
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // ถือโมเดลไว้
+ @State private var model = CounterModel() // ถือโมเดลไว้
 
-    var body: some View {
-        VStack {
-            Text("คุณแตะไป \(model.count) ครั้ง")
-            Button("แตะฉัน") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("คุณแตะไป \(model.count) ครั้ง")
+ Button("แตะฉัน") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ struct CounterView: View {
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("สมุดของซานผวน") {
-                    DetailView(name: "สมุดของซานผวน")   // หน้าปลายทาง
-                }
-                NavigationLink("สมุดของลี่ซือ") {
-                    DetailView(name: "สมุดของลี่ซือ")
-                }
-            }
-            .navigationTitle("รายชื่อสมุดบัญชี")   // หัวเรื่องใหญ่ด้านบน
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("สมุดของซานผวน") {
+ DetailView(name: "สมุดของซานผวน") // หน้าปลายทาง
+ }
+ NavigationLink("สมุดของลี่ซือ") {
+ DetailView(name: "สมุดของลี่ซือ")
+ }
+ }
+ .navigationTitle("รายชื่อสมุดบัญชี") // หัวเรื่องใหญ่ด้านบน
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("หน้ารายละเอียดของ \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("หน้ารายละเอียดของ \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ NavigationLink ก็คือ'ลิงก์เปลี่ยนหน้า�
 ```
 // 1. ป๊อปครึ่งจอ/เต็มจอจากด้านล่าง (ฟอร์มบันทึกชอบใช้)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("จดรายการ") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // หน้าบันทึกที่ป๊อปขึ้นมา
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("จดรายการ") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // หน้าบันทึกที่ป๊อปขึ้นมา
+ }
+ }
 }
 
 // 2. แถบแท็บด้านล่าง ("โครง" ของแอป)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("สมุดบัญชี", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("สถิติ", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("ตั้งค่า", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("สมุดบัญชี", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("สถิติ", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("ตั้งค่า", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ struct MainTabView: View {
 
 ```
 struct RecordListView: View {
-    @State private var records = ["มื้อกลางวัน 25.5", "รถไฟใต้ดิน 6.0", "เงินเดือน +8000"]
+ @State private var records = ["มื้อกลางวัน 25.5", "รถไฟใต้ดิน 6.0", "เงินเดือน +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // ปัดซ้ายเพื่อลบ
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // ปัดซ้ายเพื่อลบ
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("กลับมาพื้นหน้า กู้การรีเฟรชต่อ")
-            case .inactive:  print("อยู่ระหว่างเปลี่ยน (สายเข้า/พึ่งสลับไปพื้นหลัง)")
-            case .background: print("ลงพื้นหลัง บันทึกฉบับร่าง")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("กลับมาพื้นหน้า กู้การรีเฟรชต่อ")
+ case .inactive: print("อยู่ระหว่างเปลี่ยน (สายเข้า/พึ่งสลับไปพื้นหลัง)")
+ case .background: print("ลงพื้นหลัง บันทึกฉบับร่าง")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

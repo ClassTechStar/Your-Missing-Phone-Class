@@ -100,7 +100,7 @@ DNS over TLS（DoT）
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Wi-Fi監査
+Wi-Fi監査
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>：Wi-Fiリストを開き、知らない、使わない、名前の怪しいホットスポットをすべて「忘れる」。</strong>権限大掃除

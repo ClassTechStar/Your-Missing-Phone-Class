@@ -59,20 +59,20 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">年龄段</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">给什么设备</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">开什么限制</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">谈什么规则</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学龄前 3-6 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家长的旧平板或电视大屏，共享不专属</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单App锁定＋时长锁，按"次"算（一次一刻钟内）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">建立"看完交还"的仪式，讲"眼睛要休息"</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小学低年级 6-9 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">继续借用，网课可配专用旧平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备级家长控制＋白名单App，浏览器关闭或只留儿童搜索</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先申请后使用、用完归还；个人信息不给外人</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小学高年级 9-12 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">儿童手表或功能机优先；确需智能机则先设管控再交付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">限额、停用时间、安装审批全开，支付通道全部关闭</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"三不"约定：不与陌生网友见面、不发隐私照片、不共享定位</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">初中 12-15 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能机（够用就好），独立账号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从"全锁"转向"限额＋月度复盘"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">共同签使用公约，明确超时与夜用的后果，讨论欺凌与骗局</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">年龄段</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">给什么设备</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">开什么限制</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">谈什么规则</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学龄前 3-6 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家长的旧平板或电视大屏，共享不专属</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单App锁定＋时长锁，按"次"算（一次一刻钟内）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">建立"看完交还"的仪式，讲"眼睛要休息"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小学低年级 6-9 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">继续借用，网课可配专用旧平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备级家长控制＋白名单App，浏览器关闭或只留儿童搜索</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先申请后使用、用完归还；个人信息不给外人</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小学高年级 9-12 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">儿童手表或功能机优先；确需智能机则先设管控再交付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">限额、停用时间、安装审批全开，支付通道全部关闭</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"三不"约定：不与陌生网友见面、不发隐私照片、不共享定位</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">初中 12-15 岁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能机（够用就好），独立账号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从"全锁"转向"限额＋月度复盘"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">共同签使用公约，明确超时与夜用的后果，讨论欺凌与骗局</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -131,7 +131,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 先有需求清单，再有设备清单，顺序反了，买回来的就永远是别人家孩子的手机。
@@ -146,7 +146,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"够用就好"原则
+"够用就好"原则
 
 {class="mt-1"}
 孩子的第一台手机不需要旗舰。处理器的"过剩性能"往往被用来跑游戏。选一台电池够大、性能中等、屏幕护眼的千元机或官方翻新机，反而更利于管控。预算参考：1500-2500元区间即可满足绝大多数学生需求。
@@ -178,7 +178,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>手表也有"社交陷阱"
+手表也有"社交陷阱"
 
 {class="mt-1"}
 "碰一碰加好友"让孩子有了自己的社交圈，这是卖点，也是坑：有孩子为了好友列表更长缠着家长换最新款，也有孩子在手表圈里攀比谁的表功能多。给手表之前把话说明白：手表是联络工具，不是社交货币；不加陌生人，攀比型需求一律不满足。这句丑话说在前头，比事后没收手表体面得多。
@@ -202,7 +202,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：今晚就能做的三件事
+动手：今晚就能做的三件事
 
 {class="mt-1"}
 不用等设备到手，今晚就能把地基打好：
@@ -306,22 +306,22 @@ OPPO 在设置里搜"儿童空间"，vivo 搜"儿童模式"（部分版本藏在
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌方案</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口路径</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心能力</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合场景</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 屏幕使用时间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 &gt; 屏幕使用时间（家人共享远程管理）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时长、限额、内容分级、购买前询问</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子用 iPhone/iPad 的家庭</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Google Family Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程时长、设备锁定、活动报告</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有谷歌服务的国际版设备</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为健康使用手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 &gt; 健康使用手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子模式、家长密码、应用限额、远程助手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为设备为主的家庭</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米儿童空间/亲情守护</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜"儿童空间"；亲情守护App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白名单沙盒、远程时长与锁屏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">共享设备＋老人带娃的家庭</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO 儿童空间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜"儿童空间"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白名单、时长、退出验证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学龄前共享设备</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo 儿童模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜"儿童模式"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上，入口略有差异</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌方案</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口路径</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心能力</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合场景</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 屏幕使用时间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 &gt; 屏幕使用时间（家人共享远程管理）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时长、限额、内容分级、购买前询问</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子用 iPhone/iPad 的家庭</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Google Family Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程时长、设备锁定、活动报告</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有谷歌服务的国际版设备</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为健康使用手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 &gt; 健康使用手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子模式、家长密码、应用限额、远程助手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为设备为主的家庭</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米儿童空间/亲情守护</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜"儿童空间"；亲情守护App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白名单沙盒、远程时长与锁屏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">共享设备＋老人带娃的家庭</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO 儿童空间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜"儿童空间"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白名单、时长、退出验证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学龄前共享设备</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo 儿童模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜"儿童模式"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上，入口略有差异</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -331,27 +331,27 @@ OPPO 在设置里搜"儿童空间"，vivo 搜"儿童模式"（部分版本藏在
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS 屏幕使用时间</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">安卓 Family Link / 品牌方案</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App限额</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持，按类别</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持，按App</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">停用时间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持（品牌方案略有差异）</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内容过滤</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统级，较彻底</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖品牌，参差不齐</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家庭共享</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / 品牌云</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安装App审批</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需家长批准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link 支持</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS 屏幕使用时间</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">安卓 Family Link / 品牌方案</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App限额</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持，按类别</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持，按App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">停用时间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持（品牌方案略有差异）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内容过滤</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统级，较彻底</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖品牌，参差不齐</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家庭共享</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / 品牌云</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安装App审批</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需家长批准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link 支持</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>家长控制不是"一劳永逸"
+家长控制不是"一劳永逸"
 
 {class="mt-1"}
 孩子总能找到绕过的方法（网上搜"如何破解屏幕使用时间"的教程一大把）。技术手段只是底线，真正的防线是亲子沟通和信任。把家长控制当"底座"就好，屏幕时间、内容分级、购买限制都设上，但更重要的是和孩子说清"为什么"：规则不讲道理，孩子只会琢磨怎么绕。建议每月与孩子一起复盘使用报告，而不是单方面监控。
@@ -403,7 +403,7 @@ OPPO 在设置里搜"儿童空间"，vivo 搜"儿童模式"（部分版本藏在
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>实名认证别用家长身份证"借号"
+实名认证别用家长身份证"借号"
 
 {class="mt-1"}
 很多孩子用家长身份证注册游戏账号绕过防沉迷，这既违反用户协议，也让孩子失去保护。家长应保管好自己的支付密码与身份信息，不要为图省事"借号"给孩子。
@@ -474,7 +474,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：和孩子一起签一份《手机使用公约》
+动手：和孩子一起签一份《手机使用公约》
 
 {class="mt-1"}
 把规则写下来、双方签字贴在显眼处，比口头约定有效得多。建议包含：
@@ -525,7 +525,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：全家一周健康挑战
+动手：全家一周健康挑战
 
 {class="mt-1"}
 挑战全员参加、全员记分，家长算一队：一，每天屏幕间隙完成至少三轮"20-20-20"，客厅冰箱上贴打卡表；二，睡前一小时手机进客厅的充电筐，谁破例谁负责第二天晚饭后的洗碗；三，周末安排一次半天无屏幕的户外活动；四，顺手把这学期的视力检查约上，给孩子建一份视力档案，记录每次检查的变化。坚持一周，大多数家庭会自动续期。
@@ -537,7 +537,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>家长是最好的"防火墙"
+家长是最好的"防火墙"
 
 {class="mt-1"}
 研究表明，父母自身手机使用时长与孩子呈强正相关。要求孩子不看手机，自己却刷短视频到深夜，规则就会失效。改变孩子，先从放下自己的手机开始：第二十九章的数字健康那一套，对全家都适用，不只管孩子。
@@ -557,7 +557,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>警惕"儿童数字遗产"的另一面
+警惕"儿童数字遗产"的另一面
 
 {class="mt-1"}
 孩子从出生起就在被"记录"，家长晒的成长照、幼儿园发的视频、智能手表的健康数据。这些数据一旦上传就难以彻底删除。发布前想一想：十年后孩子会不会因为这张照片感到尴尬？尊重孩子的数字人格，从克制"晒娃"开始。
@@ -570,18 +570,18 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">通道</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型场景</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">加固或关闭路径（以当前版本为准）</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免密支付/自动续费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小额反复扣款，几个月后才发现</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信：我 &gt; 服务 &gt; 钱包 &gt; 支付设置 &gt; 免密支付；支付宝：我的 &gt; 设置 &gt; 支付设置 &gt; 免密支付/自动扣款</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已保存的支付方式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">游戏内购买直接扣款，无需输密码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果：屏幕使用时间 &gt; 内容和隐私访问限制 &gt; App内购买设为"不允许"；华为/小米等在账号的付款与账单里移除卡片或开启每次验证</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生物支付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子拿着家长的脸或指纹完成转账</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付宝：我的 &gt; 设置 &gt; 支付设置里关闭生物支付；家长手机绝不录入孩子的指纹面容</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">通道</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型场景</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">加固或关闭路径（以当前版本为准）</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免密支付/自动续费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小额反复扣款，几个月后才发现</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信：我 &gt; 服务 &gt; 钱包 &gt; 支付设置 &gt; 免密支付；支付宝：我的 &gt; 设置 &gt; 支付设置 &gt; 免密支付/自动扣款</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已保存的支付方式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">游戏内购买直接扣款，无需输密码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果：屏幕使用时间 &gt; 内容和隐私访问限制 &gt; App内购买设为"不允许"；华为/小米等在账号的付款与账单里移除卡片或开启每次验证</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生物支付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">孩子拿着家长的脸或指纹完成转账</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付宝：我的 &gt; 设置 &gt; 支付设置里关闭生物支付；家长手机绝不录入孩子的指纹面容</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -616,7 +616,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>"低价代充"是另一个坑
+"低价代充"是另一个坑
 
 {class="mt-1"}
 孩子钱不够时，网上"五折代充""低价点卡"看起来像救命稻草，实际多半是黑卡渠道或纯诈骗：轻则充值被追回、账号封禁，重则扫码付了钱、皮肤没影，账号还被盗。跟孩子讲明：官方渠道之外的一切代充，省下的钱都会以另一种方式收回去。
@@ -624,7 +624,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>每季度一次的5分钟自检动线
+每季度一次的5分钟自检动线
 
 {class="mt-1"}
 四个地方各过一遍：微信免密支付列表、支付宝免密扣款列表、孩子设备保存的支付方式、全家人的生物支付开关。账单里出现"游戏币""金币""钻石"字样的项目，当场问清楚来源。五分钟，换来的是整季度的心安。
@@ -670,7 +670,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>事后处理最忌两件事
+事后处理最忌两件事
 
 {class="mt-1"}
 一是劈头盖脸骂到孩子不敢再说实话——被骗的孩子怕的不是骗子，是回家这一关；二是不当回事、不了了之。既纵容了下一步，也错过了最好的安全教育时机。正确顺序：先安抚（"你被骗不是你蠢，是骗术专业"），再止损，最后一起把这次的教训写进公约。
@@ -739,7 +739,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 规则的最高境界，不是孩子不违约，而是他违约之后，还愿意跟你谈。
@@ -766,7 +766,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：本周末的一次家庭会议
+动手：本周末的一次家庭会议
 
 {class="mt-1"}
 议程只有三项，控制在半小时内：一，大人先认领一条自己要改的手机习惯，写进公约的"家长承诺"栏；二，把"无手机区"贴上便利贴：餐桌、床头、书房门口；三，约定第一次十分钟复盘的时间，写进日历。散会后各自执行，下周复盘见。
@@ -820,7 +820,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：今晚20分钟，把这一章用起来
+动手：今晚20分钟，把这一章用起来
 
 {class="mt-1"}
 三件事，今晚就能做完：一，打开你自己的微信和支付宝，把免密支付/自动扣款列表清理一遍；二，在孩子常用（或即将给他）的设备上，把屏幕使用时间或品牌家长控制从头设置一遍，密码用孩子猜不到的组合；三，翻回第九节，把三次谈话法用起来，这周末，和孩子开一个15分钟的"手机公约启动会"。设备晚给一周没关系，防线晚设一天都不行。
@@ -828,7 +828,7 @@ AI 生成的图片和视频已经能骗过大人，教会孩子"怀疑"比教会
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 给手机的年龄没有标准答案，但3-6岁尽量不碰、13岁前用儿童手表或功能机过渡

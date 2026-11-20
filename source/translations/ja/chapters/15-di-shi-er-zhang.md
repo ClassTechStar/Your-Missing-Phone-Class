@@ -61,7 +61,7 @@ WeChat読書
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>音楽Appでお気に入りのアルバムやプレイリスト3つをダウンロードし、オフライン再生を確保。
+音楽Appでお気に入りのアルバムやプレイリスト3つをダウンロードし、オフライン再生を確保。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 小宇宙またはAppleポッドキャストで興味あるチャンネル3つを登録し、1エピソードをダウンロードして試聴。

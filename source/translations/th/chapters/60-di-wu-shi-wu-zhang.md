@@ -40,21 +40,21 @@ API Key เทียบเท่า "รหัสกระเป๋าเงิ�
 ```
 // JSON: {"weather":[{"description":"แจ่มใส"}],"main":{"temp":26.5,"humidity":40},"name":"ปักกิ่ง"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "zh_cn"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "zh_cn"
+ ): WeatherResponse
 }
 ```
 :::
@@ -72,28 +72,28 @@ Gson จะยัด JSON ลง data class เหล่านี้ให้เ
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // กำลังหมุน
-    data class Success(val data: WeatherResponse) : UiState()  // สำเร็จ
-    data class Error(val message: String) : UiState()          // ล้มเหลว
+ object Loading : UiState() // กำลังหมุน
+ data class Success(val data: WeatherResponse) : UiState() // สำเร็จ
+ data class Error(val message: String) : UiState() // ล้มเหลว
 }
 
 // ใน ViewModel:
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("หาเมืองนี้ไม่เจอ ลองชื่ออื่นไหม?")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("หาเมืองนี้ไม่เจอ ลองชื่ออื่นไหม?")
+ }
+ }
 }
 
 // ในหน้าจอ:
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // หมุนรอ
-    is UiState.Success -&gt; WeatherContent(s.data)        // แสดงผล
-    is UiState.Error -&gt; Text(s.message)                 // แสดงข้อผิดพลาด
+ is UiState.Loading -&gt; CircularProgressIndicator() // หมุนรอ
+ is UiState.Success -&gt; WeatherContent(s.data) // แสดงผล
+ is UiState.Error -&gt; Text(s.message) // แสดงข้อผิดพลาด
 }
 ```
 :::
@@ -112,28 +112,28 @@ when (val s = state) {
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "ไม่ทราบ",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 ความชื้น ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ รู้สึกเหมือน ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "ไม่ทราบ",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 ความชื้น ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ รู้สึกเหมือน ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::

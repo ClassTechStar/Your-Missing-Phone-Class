@@ -25,7 +25,7 @@ Progressi chiave del 2024-2026: durata della cerniera dichiarata comunemente 500
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Giudizio in una frase
+Giudizio in una frase
 
 {class="mt-1"}
 Se oggi un telefono a barra ti basta completamente e non hai il punto dolente di "schermo non abbastanza grande", non comprare il pieghevole. È un dispositivo che "aggiunge fiori al brodo", non uno che "porta carboni al freddo".
@@ -42,7 +42,7 @@ In base ai feedback reali degli utenti, queste categorie hanno un'alta probabili
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Queste categorie non dovrebbero comprarlo
+Queste categorie non dovrebbero comprarlo
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Chi usa il telefono solo per brevi video, WeChat e telefonate, il pieghevole non apporta nulla, anzi è più pesante e spesso.
@@ -63,7 +63,7 @@ Non farti abbagliare dalla parola "pieghevole", in fase di acquisto guarda sopra
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Checklist per la prova in negozio
+Checklist per la prova in negozio
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apri e chiudi 10 volte con le tue mani, senti se lo smorzamento della cerniera è fluido e se ci sono rumori anomali.
@@ -112,7 +112,7 @@ La parte più delicata del pieghevole è lo schermo interno e la cerniera; quest
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Scenari ad alto rischio di danneggiamento dello schermo interno
+Scenari ad alto rischio di danneggiamento dello schermo interno
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Chiudere tenendo dentro il cavo delle cuffia / di ricarica, fessura diretta dello schermo interno.
@@ -134,7 +134,7 @@ Prima di comprare, devi fare i conti con questi punti:
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Il pieghevole non è un "telefono migliore", ma "un'altra forma di telefono". Lo compri perché hai bisogno della sua forma unica, non perché è "più avanzato".
+Il pieghevole non è un "telefono migliore", ma "un'altra forma di telefono". Lo compri perché hai bisogno della sua forma unica, non perché è "più avanzato".
 
 {class="text-right text-sm"}
 — Filosofia di acquisto dei pieghevoli
@@ -155,7 +155,7 @@ Consigli d'acquisto: budget ampio e priorità all'ecosistema scegli Huawei Mate 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Ultimo avvertimento
+Ultimo avvertimento
 
 {class="mt-1"}
 La tecnologia pieghevole itera ogni anno; questa appendice è scritta nel 2026. Prima di comprare consulta le ultime recensioni e i feedback degli utenti, con attenzione a tre punti: test reali della durata della cerniera, comportamento della piega, politica di riparazione dello schermo interno. Toccarlo di persona in negozio conta sempre più delle recensioni.

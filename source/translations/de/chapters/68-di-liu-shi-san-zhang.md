@@ -35,20 +35,20 @@ SwiftUI hat mehr als nur @State als State-Werkzeug. Sieh dir zuerst diese Übers
 import Observation
 
 @Observable
-class CounterModel {                 // das View Model
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // das View Model
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // hält das Modell
+ @State private var model = CounterModel() // hält das Modell
 
-    var body: some View {
-        VStack {
-            Text("Du hast \(model.count) Mal geklickt")
-            Button("Klick mich") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Du hast \(model.count) Mal geklickt")
+ Button("Klick mich") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ Ab iOS 16 übernimmt NavigationStack die Mehrseiten-Navigation – wie ein Stape
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Max' Ausgabenbuch") {
-                    DetailView(name: "Max' Ausgabenbuch")   // Zielseite
-                }
-                NavigationLink("Lenas Ausgabenbuch") {
-                    DetailView(name: "Lenas Ausgabenbuch")
-                }
-            }
-            .navigationTitle("Liste der Ausgabenbücher")   // große Überschrift oben
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("Max' Ausgabenbuch") {
+ DetailView(name: "Max' Ausgabenbuch") // Zielseite
+ }
+ NavigationLink("Lenas Ausgabenbuch") {
+ DetailView(name: "Lenas Ausgabenbuch")
+ }
+ }
+ .navigationTitle("Liste der Ausgabenbücher") // große Überschrift oben
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("Details zu \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("Details zu \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ Neben dem „Seitenschieben“ gibt es zwei klassische Interaktionsformen:
 ```
 // 1. Sheet von unten, halber oder ganzer Bildschirm (der Liebling von Eingabeformularen)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("Ausgabe erfassen") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // die sich öffnende Erfassungsansicht
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("Ausgabe erfassen") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // die sich öffnende Erfassungsansicht
+ }
+ }
 }
 
 // 2. untere Tab-Leiste (das "Skelett" der App)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("Buch", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("Statistik", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("Einstellungen", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("Buch", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("Statistik", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("Einstellungen", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ Der meistgenutzte und am typischsten „apple-artige“ Baustein unter iOS ist L
 
 ```
 struct RecordListView: View {
-    @State private var records = ["Mittagessen 25.5", "U-Bahn 6.0", "Gehalt +8000"]
+ @State private var records = ["Mittagessen 25.5", "U-Bahn 6.0", "Gehalt +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // nach links wischen zum Löschen
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // nach links wischen zum Löschen
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ Jetzt bist du dran: Baue ein „Drei-Seiten-Gerüst“
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("wieder vorn: Aktualisierung fortsetzen")
-            case .inactive:  print("im Übergang (Anruf oder Moment des Wechsels nach hinten)")
-            case .background: print("in den Hintergrund: Entwurf sichern")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("wieder vorn: Aktualisierung fortsetzen")
+ case .inactive: print("im Übergang (Anruf oder Moment des Wechsels nach hinten)")
+ case .background: print("in den Hintergrund: Entwurf sichern")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

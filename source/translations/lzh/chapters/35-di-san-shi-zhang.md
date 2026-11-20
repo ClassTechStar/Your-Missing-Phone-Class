@@ -19,19 +19,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">誰用</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蘋果生態，體驗最流暢。須Apple TV或支持AirPlay之電視</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓手機</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct直連，不須路由器。安卓手機"無線投屏"默認用此</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">凡平臺</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">唯推送媒體文件（視頻/音樂/圖片），不鏡像屏幕。適合推視頻至電視上播放</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">誰用</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蘋果生態，體驗最流暢。須Apple TV或支持AirPlay之電視</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓手機</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct直連，不須路由器。安卓手機"無線投屏"默認用此</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">凡平臺</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">唯推送媒體文件（視頻/音樂/圖片），不鏡像屏幕。適合推視頻至電視上播放</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>安全提醒
+安全提醒
 
 {class="mt-1"}
 無論哪種車載互聯方案，開車時皆應儘量使用語音控制。導航提前設好目的地，音樂提前選好歌單，勿於行駛中操作車機屏幕。
@@ -86,7 +86,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手：完成一次手機至電視之投屏
+動手：完成一次手機至電視之投屏
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 確保手機與電視連同一Wi-Fi。

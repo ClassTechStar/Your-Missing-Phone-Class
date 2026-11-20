@@ -23,7 +23,7 @@ Il n'y a pas de réponse standard, mais il existe une base d'âge. Trop tôt, le
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Principe « assez, c'est assez »
+Principe « assez, c'est assez »
 
 {class="mt-1"}
 Le premier smartphone d'un enfant n'a pas besoin d'être un modèle phare. Les performances « excédentaires » du processeur servent souvent à jouer. Un smartphone à environ 1000 yuans avec une batterie suffisante, des performances moyennes et un écran protecteur des yeux, ou un reconditionné officiel, facilite au contraire le contrôle. Budget de référence : 1500-2500 yuans suffisent pour la plupart des élèves.
@@ -60,27 +60,27 @@ Avant de donner l'appareil à l'enfant, la première chose n'est pas de l'allume
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fonction</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Temps d'écran</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / solution de marque</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Limites d'utilisation</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge, par catégorie</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge, par application</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Temps d'arrêt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge (varie selon la marque)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filtrage de contenu</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Au niveau système, assez complet</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dépend de la marque, inégal</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gestion à distance</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Partage familial</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / cloud de marque</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Approbation d'installation</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Approbation parentale requise</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link le prend en charge</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fonction</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Temps d'écran</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / solution de marque</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Limites d'utilisation</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge, par catégorie</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge, par application</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Temps d'arrêt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pris en charge (varie selon la marque)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filtrage de contenu</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Au niveau système, assez complet</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dépend de la marque, inégal</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gestion à distance</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Partage familial</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / cloud de marque</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Approbation d'installation</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Approbation parentale requise</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link le prend en charge</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Le contrôle parental n'est pas « une fois pour toutes »
+Le contrôle parental n'est pas « une fois pour toutes »
 
 {class="mt-1"}
 Les enfants trouvent toujours des moyens de contourner (les tutoriels « comment contourner le temps d'écran » abondent en ligne). La technique n'est qu'une ligne de fond, la vraie défense est la communication et la confiance parent-enfant. Il est recommandé de revoir le rapport d'utilisation avec l'enfant chaque mois, plutôt que de surveiller unilatéralement.
@@ -96,7 +96,7 @@ Les principales plateformes de contenu intègrent un « mode adolescent » qui, 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>N'utilisez pas la pièce d'identité des parents pour « emprunter un compte »
+N'utilisez pas la pièce d'identité des parents pour « emprunter un compte »
 
 {class="mt-1"}
 Beaucoup d'enfants utilisent la pièce d'identité de leurs parents pour enregistrer un compte de jeu et contourner l'anti-addiction, ce qui enfreint le contrat utilisateur et prive l'enfant de protection. Les parents doivent garder leurs mots de passe de paiement et informations d'identité, et ne pas « prêter de compte » par commodité.
@@ -113,7 +113,7 @@ La technologie peut bloquer 90 % des risques, les 10 % restants dépendent du ju
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercice : signez un « contrat d'utilisation du smartphone » avec votre enfant
+Exercice : signez un « contrat d'utilisation du smartphone » avec votre enfant
 
 {class="mt-1"}
 Écrire les règles, les signer ensemble et les afficher bien en vue est bien plus efficace qu'un accord verbal. Suggestions :
@@ -137,7 +137,7 @@ Les yeux, la colonne cervicale et le sommeil des enfants sont en pleine croissan
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Les parents sont le meilleur « pare-feu »
+Les parents sont le meilleur « pare-feu »
 
 {class="mt-1"}
 Les recherches montrent une forte corrélation entre le temps d'usage du smartphone par les parents et celui des enfants. Exiger que l'enfant ne regarde pas le smartphone tout en scrollant des courtes vidéos jusqu'à tard le soir rend les règles inefficaces. Pour changer l'enfant, commencez par poser votre propre smartphone.
@@ -153,7 +153,7 @@ Cette section est souvent négligée mais importante. Les actifs numériques des
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>L'autre face du « patrimoine numérique des enfants »
+L'autre face du « patrimoine numérique des enfants »
 
 {class="mt-1"}
 Les enfants sont « enregistrés » dès la naissance, photos de croissance publiées par les parents, vidéos envoyées par la maternelle, données de santé de la montre connectée. Ces données, une fois téléchargées, sont difficiles à supprimer complètement. Avant de publier, demandez-vous : dans dix ans, cette photo gênera-t-elle l'enfant ? Respecter la personnalité numérique de l'enfant commence par s'abstenir de tout publier.
@@ -161,7 +161,7 @@ Les enfants sont « enregistrés » dès la naissance, photos de croissance publ
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Résumé du chapitre
+Résumé du chapitre
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - L'âge pour donner un smartphone n'a pas de réponse standard, mais 3-6 ans évitent, avant 13 ans transition par montre ou téléphone fonctionnel

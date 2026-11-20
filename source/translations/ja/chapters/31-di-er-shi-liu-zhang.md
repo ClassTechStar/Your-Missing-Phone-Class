@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>試してみよう：次のスマホに「技術ニーズリスト」を作る
+試してみよう：次のスマホに「技術ニーズリスト」を作る
 
 {class="mt-1"}
 紙を1枚出し、「必須/プラス/不要」の3段階で、AI、衛星、折りたたみ画面、Wi-Fi 7、急速充電、バッテリー容量へのニーズをリストアップ。次に実店舗に行った時、店員が推奨する「セールスポイント」が本当のニーズスか押し売りかを素早く判断できます。例えば：
@@ -93,7 +93,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AIスマホの3大判断基準：オンデバイス大モデル、NPU TOPS、AI Agentシーン

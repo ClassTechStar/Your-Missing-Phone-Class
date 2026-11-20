@@ -50,7 +50,7 @@ after_part: hongmeng-kai-fa-pian
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>常见坑：Node.js 版本
+常见坑：Node.js 版本
 
 {class="mt-1"}
 DevEco 的构建工具链依赖特定版本的 Node.js。如果本机已装过 Node，建议让 DevEco 使用它内置推荐的版本（安装向导会提示），避免全局版本冲突，这是新手最常见的第一个报错来源。
@@ -114,22 +114,22 @@ entry 这个词也解释一下：一个应用可以有多个"模块"（module）
 @Entry
 @Component
 struct Index {
-  @State message: string = '你好，鸿蒙！'
+ @State message: string = '你好，鸿蒙！'
 
-  build() {
-    Column({ space: 16 }) {
-      Text(this.message)
-        .fontSize(32)
-        .fontWeight(FontWeight.Bold)
-      Button('点我')
-        .onClick(() =&gt; {
-          this.message = '你点了按钮 🎉'
-        })
-    }
-    .width('100%')
-    .height('100%')
-    .justifyContent(FlexAlign.Center)
-  }
+ build() {
+ Column({ space: 16 }) {
+ Text(this.message)
+ .fontSize(32)
+ .fontWeight(FontWeight.Bold)
+ Button('点我')
+ .onClick(() =&gt; {
+ this.message = '你点了按钮 🎉'
+ })
+ }
+ .width('100%')
+ .height('100%')
+ .justifyContent(FlexAlign.Center)
+ }
 }
 ```
 :::
@@ -171,7 +171,7 @@ API Change Assistant 值得多说两句：它是鸿蒙生态"负责任地淘汰�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：跑通你的第一个应用
+来动手：跑通你的第一个应用
 
 {class="mt-1"}
 1\. 点 Previewer 打开预览器，看到"你好，鸿蒙！"；2. 把 message 改成你的名字，看预览器秒级刷新；3. 点按钮，看文字变化：恭喜，状态驱动的体验你已经拥有了；4. （可选）开 USB 调试连真机，点 Run 装到手机上。
@@ -307,7 +307,7 @@ API Change Assistant 值得多说两句：它是鸿蒙生态"负责任地淘汰�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 报错截图发群里问"有人遇到过吗"，是效率最低的求助方式：别人看不清你屏幕上的小字，还得等在线。先复制报错原文自己搜一轮，带着"我试过 A 和 B 都不行"再问人，问题通常五分钟就有答案。具体怎么搜，第十一节的三步法接着讲。
@@ -358,7 +358,7 @@ API Change Assistant 值得多说两句：它是鸿蒙生态"负责任地淘汰�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 模拟器"灵异三连"的处置顺序：先冷启动（丢弃快照重来），再重启 hdc 服务，最后删镜像重建。八成的怪问题死在第一关。顺序别反，删镜像重建是杀伤力最大的一步，重来的下载时间和初始化向导，能省则省。
@@ -378,7 +378,7 @@ API Change Assistant 值得多说两句：它是鸿蒙生态"负责任地淘汰�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 模拟器能测的是"系统行为"，不是"硬件行为"。传感器、通话、短信、真实摄像头、真实性能表现，这些模拟器给不了真值。上架前（第 78 章）的回归测试一定要在真机上做一遍，模拟器全绿不等于真机没问题。
@@ -461,8 +461,8 @@ API Change Assistant 值得多说两句：它是鸿蒙生态"负责任地淘汰�
 :::
 
 ```
-hdc list targets        # 设备在不在？返回序列号就是在线，[Empty] 就是没连上
-hdc -h                  # 忘了 hdc 有什么功能，看这个，自带中文说明
+hdc list targets # 设备在不在？返回序列号就是在线，[Empty] 就是没连上
+hdc -h # 忘了 hdc 有什么功能，看这个，自带中文说明
 # 日志查看：优先用 DevEco 底部 Log 窗口（可按设备/进程/级别过滤）；
 # 命令行刷日志的参数，以官方文档和 hdc -h 的说明为准。
 ```
@@ -470,7 +470,7 @@ hdc -h                  # 忘了 hdc 有什么功能，看这个，自带中文�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 借别人的华为手机测试，两件事必须做：测完退出你在那台手机上登录过的任何账号；提醒机主把 USB 调试和无线调试关掉。USB 调试开着又连过你的电脑，这台手机的权限边界就变了，帮人测试是好事，别给人家留安全隐患。
@@ -502,7 +502,7 @@ hdc -h                  # 忘了 hdc 有什么功能，看这个，自带中文�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 AI 能替你写代码，不能替你理解报错：理解那一步省掉，第二天它就回来找你。
@@ -610,7 +610,7 @@ IDE 里那个构建按钮旁边，藏着两个模式：debug（调试版，带�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 报错不是失败，是环境在跟你说话，会翻译它，你就出师了。
@@ -766,7 +766,7 @@ IDE 里那个构建按钮旁边，藏着两个模式：debug（调试版，带�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把整个 DevEco 或 SDK 目录打包拷到新机器"图省事"。搬过去的环境大概率报一堆路径错误，排查它们的时间远超重装，而且你分不清哪个错是"搬坏的"，哪个是"新机器本来就有"的，问题叠加问题。环境用装的不用搬的，项目用拉的（Git）不用拷的（U 盘）。
@@ -863,7 +863,7 @@ IDE 里那个构建按钮旁边，藏着两个模式：debug（调试版，带�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 三个平台，一套骨架，八道工序，学的是工序，背的只是名字。
@@ -871,7 +871,7 @@ IDE 里那个构建按钮旁边，藏着两个模式：debug（调试版，带�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：把这张表变成你的
+来动手：把这张表变成你的
 
 {class="mt-1"}
 1\. 把上面的对照表抄进你的环境笔记，留一列"我的体感"；2. 每学完一个新章节（72、73、75、78），回到表里补一行心得；3. 三平台都碰过之后，试着不看原表默写一遍，默写得出来的部分，才是真正长在你身上的知识。
@@ -879,7 +879,7 @@ IDE 里那个构建按钮旁边，藏着两个模式：debug（调试版，带�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - DevEco Studio 基于 IntelliJ，Windows/Mac 都能开发，无 Mac 门槛
 - 目录对照：ets/ 是代码、resources/ 是资源、module.json5 是清单

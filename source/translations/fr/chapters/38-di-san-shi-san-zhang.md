@@ -58,7 +58,7 @@ Quelle que soit l'évolution technologique, ces principes de vie numérique rest
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez : rédigez vos « Conditions d'utilisation de l'appareil numérique personnel »
+Essayez : rédigez vos « Conditions d'utilisation de l'appareil numérique personnel »
 
 {class="mt-1"}
 Rédigez pour vous et votre smartphone (ainsi que vos futures lunettes AR, assistant IA) de simples « conditions d'utilisation » pour définir votre relation. Par exemple :
@@ -71,7 +71,7 @@ Rédigez pour vous et votre smartphone (ainsi que vos futures lunettes AR, assis
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Résumé du chapitre
+Résumé du chapitre
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Le Vision Pro et les lunettes AR sont de nouveaux points d'accès au calcul au-delà du smartphone, mais ne le remplaceront pas à court terme

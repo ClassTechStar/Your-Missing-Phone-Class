@@ -27,16 +27,16 @@ Il flusso della programmazione AI guidata dai test è questo: prima fai scrivere
 Scrivi unit test per la funzione calculate_discount.
 I casi di test devono coprire:
 1. Percorso normale:
-   - articolo da 100 yuan con il 20% di sconto -> 80
-   - articolo da 200 yuan con il 50% di sconto -> 100
+ - articolo da 100 yuan con il 20% di sconto -> 80
+ - articolo da 200 yuan con il 50% di sconto -> 100
 2. Casi limite:
-   - articolo da 0 yuan con il 20% di sconto -> 0
-   - articolo da 100 yuan con lo 0% di sconto -> 100 (nessuno sconto)
-   - articolo da 100 yuan con il 10% di sconto -> 100 (prezzo pieno)
+ - articolo da 0 yuan con il 20% di sconto -> 0
+ - articolo da 100 yuan con lo 0% di sconto -> 100 (nessuno sconto)
+ - articolo da 100 yuan con il 10% di sconto -> 100 (prezzo pieno)
 3. Casi di errore:
-   - prezzo negativo -> deve lanciare un errore
-   - sconto > 1 -> deve lanciare un errore
-   - input non numerico -> deve lanciare un errore
+ - prezzo negativo -> deve lanciare un errore
+ - sconto > 1 -> deve lanciare un errore
+ - input non numerico -> deve lanciare un errore
 Usa il framework Vitest e fornisci il file di test completo.
 ```
 :::

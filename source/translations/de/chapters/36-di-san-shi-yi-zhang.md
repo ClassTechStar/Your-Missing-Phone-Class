@@ -70,7 +70,7 @@ Das Thumbnail eines Kurzvideos ist die "Schaufenster" – es entscheidet, ob jem
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praxis: Ein 30-Sekunden-Kurzvideo drehen
+Praxis: Ein 30-Sekunden-Kurzvideo drehen
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Wählen Sie ein kleines Thema, das Sie gut kennen (z. B. "Wie man die Handy-Schrift vergrößert").
@@ -82,7 +82,7 @@ Das Thumbnail eines Kurzvideos ist die "Schaufenster" – es entscheidet, ob jem
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Kapitelzusammenfassung
+Kapitelzusammenfassung
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vor dem Dreh überlegen: Wer ist das Publikum, welchen Wert bieten Sie, auf welcher Plattform

@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第59-60章打地基（认识 iOS + 安装 Xcode）→ 第61-62章练内功（Swift + SwiftUI）→ 第63-64章挑武器（视图导航 + 数据与网络）→ 第65-67章上战场（两个完整项目 + 上架 App Store）→ 第68-69章登台阶（进阶之路 + 速查手册）。零基础建议顺序阅读；想快点做出东西，直接跳第65章跟着做项目。

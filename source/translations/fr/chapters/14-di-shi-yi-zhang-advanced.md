@@ -102,7 +102,7 @@ Lors du tournage de vidéos HDR, vous avez besoin d'un écran prenant en charge 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Conseils pratiques
+Conseils pratiques
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Usage quotidien : 1080P/4K + 30fps + encodage H.265, équilibre entre qualité d'image et taille de fichier.
@@ -113,7 +113,7 @@ Lors du tournage de vidéos HDR, vous avez besoin d'un écran prenant en charge 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>À explorer : vos paramètres vidéo sur smartphone
+À explorer : vos paramètres vidéo sur smartphone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez l'application appareil photo, passez en mode vidéo.
@@ -241,7 +241,7 @@ Outre la photographie quotidienne, le smartphone propose plusieurs modes spécia
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Conseils pratiques pour la photographie statique
+Conseils pratiques pour la photographie statique
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Photographie quotidienne : HEIF/JPEG par défaut suffit, fichiers petits et qualité adéquate.
@@ -253,7 +253,7 @@ Outre la photographie quotidienne, le smartphone propose plusieurs modes spécia
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>À essayer : Explorez les capacités de votre appareil photo
+À essayer : Explorez les capacités de votre appareil photo
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Vérifiez si votre smartphone prend en charge la prise de vue RAW (Réglages → Appareil photo → Formats), activez-la et prenez une photo, puis comparez la taille des fichiers JPEG et RAW de la même scène.

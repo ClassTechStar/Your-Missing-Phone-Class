@@ -46,7 +46,7 @@ Perkara utama:<strong>Kata laluan utama tidak pernah meninggalkan peranti anda</
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Mengapa "pengetahuan sifar" bermakna pembekal juga tidak nampak kata laluan anda?
+Mengapa "pengetahuan sifar" bermakna pembekal juga tidak nampak kata laluan anda?
 
 {class="mt-1"}
 Kerana kunci penyahsulit diterbitkan dari kata laluan utama anda, manakala kata laluan utama hanya wujud dalam fikiran anda, hanya diguna pada peranti tempatan. Pelayan pembekal tiada kata laluan utama, tiada kunci penyahsulit, hanya teks tersulit. Inilah sebabnya Bitwarden, 1Password dll pembekal sah semuanya nyatakan "kami juga tidak boleh nampak kata laluan anda", bukan mereka tidak mahu nampak, tetapi secara teknikal tidak boleh.
@@ -71,7 +71,7 @@ Ogos 2022, pengurus kata laluan lama LastPass umumkan persekitaran pembangunanny
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Belajaran dari LastPass
+Belajaran dari LastPass
 
 {class="mt-1"}
 Pertama, kata laluan utama mesti panjang dan unik (disyorkan 16 karakter ke atas, termasuk huruf besar/kecil, nombor, simbol); Kedua, utamakan pembekal yang menyokong Argon2id. bilangan iterasi tinggi; Ketiga, akaun nilai tinggi (bank, e-mel) mesti aktifkan pengesahan kedua berasingan, jangan hanya bergantung pengurus kata laluan.
@@ -118,7 +118,7 @@ Jika kata laluan muncul dalam pangkalan data bocor,<strong>tidak kira nampak bet
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Prinsip pertanyaan k-Anonimiti
+Prinsip pertanyaan k-Anonimiti
 
 {class="mt-1"}
 Bimbang masukkan kata laluan di HaveIBeenPwned akan bocor lagi? Jangan bimbang. Pertanyaan moden guna protokol "k-anonimiti": browser hanya hantar 5 bit pertama hash kata laluan ke pelayan, pelayan pulangkan senarai hash bermula dengan 5 bit ini, banding secara tempatan. Maksudnya, pelayan tidak pernah nampak hash kata laluan penuh anda. 1Password, Bitwarden "pengesanan kata laluan bocor" semua berfungsi seperti ini.
@@ -133,7 +133,7 @@ Bimbang masukkan kata laluan di HaveIBeenPwned akan bocor lagi? Jangan bimbang. 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Sekarang semak: Adakah kata laluan anda selamat
+Sekarang semak: Adakah kata laluan anda selamat
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka haveibeenpwned.com, masukkan e-mel biasa anda, lihat muncul dalam kebocoran mana.
@@ -159,36 +159,36 @@ Passkey berasaskan standard FIDO2 / WebAuthn, guna <strong>Pasangan kunci pada p
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kata laluan tradisional</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Anti pancingan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lemah, laman pancingan boleh curi kata laluan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Semula jadi anti pancingan, kunci peribadi hanya tandatangan untuk domain sebenar</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kesan kebocoran pelayan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hash kata laluan mungkin dipecah</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pelayan hanya simpan kunci awam, bocor tiada kesan</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kemudahan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu ingat/taip/urus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/cap jari log masuk satu saat</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Serangan ulangan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mungkin ditangkap middleman ulang</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap tandatangan sekali guna, tidak boleh ulang</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kata laluan tradisional</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Anti pancingan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lemah, laman pancingan boleh curi kata laluan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Semula jadi anti pancingan, kunci peribadi hanya tandatangan untuk domain sebenar</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kesan kebocoran pelayan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hash kata laluan mungkin dipecah</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pelayan hanya simpan kunci awam, bocor tiada kesan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kemudahan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu ingat/taip/urus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/cap jari log masuk satu saat</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Serangan ulangan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mungkin ditangkap middleman ulang</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap tandatangan sekali guna, tidak boleh ulang</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Status sokongan setiap platform
@@ -200,7 +200,7 @@ Passkey berasaskan standard FIDO2 / WebAuthn, guna <strong>Pasangan kunci pada p
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Segerak merentas peranti adalah pencapaian utama
+Segerak merentas peranti adalah pencapaian utama
 
 {class="mt-1"}
 Masalah terbesar Passkey awal adalah "terikat satu peranti": tukar telefon perlu cipta semula. Sejak 2023 Apple, Google, Microsoft capai segerak awan Passkey: iCloud Keychain segerak merentas Apple, Google Password Manager segerak merentas Android. 1Password dll pihak ketiga pula hubungkan segerak merentas ekosistem. Ini bermakna Passkey telah ada kepraktikal untuk ganti kata laluan.
@@ -236,7 +236,7 @@ Proses ini melalui komunikasi penyulitan dwi Bluetooth+Internet, kunci peribadi 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cuba sekarang: Alami login tanpa kata laluan
+Cuba sekarang: Alami login tanpa kata laluan
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Log masuk akaun Google → Keselamatan → Passkey → Tambah Passkey, alami Face ID/cap jari log masuk.
@@ -247,7 +247,7 @@ Proses ini melalui komunikasi penyulitan dwi Bluetooth+Internet, kunci peribadi 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Cadangan peralihan
+Cadangan peralihan
 
 {class="mt-1"}
 Passkey belum ganti sepenuhnya kata laluan, banyak laman masih dalam fasa "Passkey + kata laluan" wujud serentak. Cadangan: akaun nilai tinggi utamakan aktifkan Passkey, tetapi <strong>jangan terus padam kata laluan tradisional</strong>, kekal sebagai sandaran; pada masa yang sama terus guna pengurus kata laluan, kerana tidak semua laman sokong Passkey. Anggap Passkey sebagai "tambahan kuat pengurus kata laluan" bukan "ganti serta-merta".
@@ -295,7 +295,7 @@ Laman utama yang menyokong: Google, GitHub, Microsoft, Apple ID, Facebook, Twitt
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Strategi dwi-kunci
+Strategi dwi-kunci
 
 {class="mt-1"}
 Risiko terbesar kunci perkakasan adalah "hilang". Cadangan: ② serentak daftar dua kunci berbeza; ③ satu bawa (keychain), satu simpan di rumah dalam safe atau bank deposit box; ④ sesetengah laman benarkan "kod pemulihan sandaran" dicetak simpan luar talian. Ini jika kunci utama hilang, juga tidak akan dikunci keluar akaun secara kekal.
@@ -303,7 +303,7 @@ Risiko terbesar kunci perkakasan adalah "hilang". Cadangan: ② serentak daftar 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Saluran pembelian perlu berhati-hati
+Saluran pembelian perlu berhati-hati
 
 {class="mt-1"}
 Mesti beli dari kedai rasmi atau ejen sah, jangan beli kunci terpakai atau sumber tidak diketahui — secara teori perkakasan yang telah diprapasang mungkin telah ditanam pintu belakang. Firmware YubiKey tidak boleh dikemas kini selepas kilang, tetapi Yubico akan terus tolak pengumuman keselamatan, ikut laman web rasmi mereka.
@@ -336,7 +336,7 @@ Versi percuma Bitwarden sokong perkongsian kata laluan peribadi (melalui fungsi 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Nilai untuk wang 1Password Families
+Nilai untuk wang 1Password Families
 
 {class="mt-1"}
 1Password Families kira-kira $4.99/bulan, sokong maksimum 5 ahli keluarga, setiap orang ada vault peribadi berasingan + 4 vault kongsi. Kira-kira kurang $1/bulan setiap orang. adalah skim perkongsian keluarga pengalaman terbaik sekarang. Bitwarden versi keluarga $10/tahun sokong 6 orang, nilai untuk wang lebih tinggi, tetapi pengalaman antara muka sedikit kurang.
@@ -369,7 +369,7 @@ Bayangkan senario: Anda urus sendiri semua akaun penting keluarga, tetapi kemala
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Sekarang tetapkan: Tinggalkan "kunci sandaran" untuk keluarga
+Sekarang tetapkan: Tinggalkan "kunci sandaran" untuk keluarga
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Pilih keluarga yang dipercayai sebagai "contact kecemasan".
@@ -388,7 +388,7 @@ Bayangkan senario: Anda urus sendiri semua akaun penting keluarga, tetapi kemala
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Daftar akaun, tetapkan satu kata laluan utama yang kuat.
+Daftar akaun, tetapkan satu kata laluan utama yang kuat.
 
 {class="mt-1"}
 Import kata laluan sedia ada (jika ada) atau mula tambah kata laluan baharu.
@@ -396,7 +396,7 @@ Import kata laluan sedia ada (jika ada) atau mula tambah kata laluan baharu.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pasang pemalam pelayar atau App telefon, alami fungsi isi automatik.
+Pasang pemalam pelayar atau App telefon, alami fungsi isi automatik.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Semak laporan audit keselamatan, cari kata laluan yang perlu diperbaiki.

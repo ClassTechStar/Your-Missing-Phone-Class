@@ -58,7 +58,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>:افحص جسم الهاتف والشاشة بحثًا عن خدوش أو اصطدامات.
+:افحص جسم الهاتف والشاشة بحثًا عن خدوش أو اصطدامات.
 
 {class="mt-1"}
 اكتب "شروط خدمة" بسيطة لك ولهاتفك (ونظارة AR ومساعد AI المستقبلية)، لتعريف علاقتكما. مثلاً:
@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro ونظارات AR مدخل حوسبة جديد خارج الهاتف، لكن صعب استبداله قصيرة المدى

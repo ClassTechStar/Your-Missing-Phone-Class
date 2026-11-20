@@ -48,7 +48,7 @@ AES（高级加密标准）是美国国家标准与技术研究院（NIST）认�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>为什么"零知识"意味着服务商也看不到你的密码？
+为什么"零知识"意味着服务商也看不到你的密码？
 
 {class="mt-1"}
 因为解密密钥由你的主密码派生，而主密码只存在于你脑中、只在你本地设备上使用。服务商的服务器上既没有主密码，也没有解密密钥，只有密文。这就是为什么 Bitwarden、1Password 等正规服务商都明确声明"我们也无法看到你的密码"：不是他们不想看，是技术上做不到。
@@ -73,7 +73,7 @@ AES（高级加密标准）是美国国家标准与技术研究院（NIST）认�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>从 LastPass 事件学到的
+从 LastPass 事件学到的
 
 {class="mt-1"}
 第一，主密码必须长且独特（建议 16 位以上，包含大小写、数字、符号）；第二，优先选择支持 Argon2id、迭代次数高的服务商；第三，对高价值账号（银行、邮箱）务必开启独立的二次验证，不要只依赖密码管理器。
@@ -139,7 +139,7 @@ AES（高级加密标准）是美国国家标准与技术研究院（NIST）认�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>k-Anonymity 查询原理
+k-Anonymity 查询原理
 
 {class="mt-1"}
 担心在 HaveIBeenPwned 输入密码会再次泄露？不必担心。现代查询采用"k-匿名"协议：浏览器只把密码哈希的前 5 位发给服务器，服务器返回所有以这 5 位开头的哈希列表，本地再比对。也就是说，服务器永远看不到你的完整密码哈希。1Password、Bitwarden 的"已泄露密码检测"都是这样工作的。
@@ -154,7 +154,7 @@ AES（高级加密标准）是美国国家标准与技术研究院（NIST）认�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就查：你的密码是否安全
+现在就查：你的密码是否安全
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开 haveibeenpwned.com，输入你的常用邮箱，看看出现在哪些泄露事件中。
@@ -180,36 +180,36 @@ Passkey 基于 FIDO2 / WebAuthn 标准，用<strong>设备上的密钥对</stron
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">传统密码</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">抗钓鱼</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">差，钓鱼网站可窃取密码</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天然抗钓鱼，私钥只对真实域名签名</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">服务器泄露影响</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码哈希可能被破解</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务器只存公钥，泄露无影响</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">便捷性</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需记忆/输入/管理</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/指纹一秒登录</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">重放攻击</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可能被中间人截获重放</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每次签名一次性，无法重放</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">传统密码</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">抗钓鱼</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">差，钓鱼网站可窃取密码</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天然抗钓鱼，私钥只对真实域名签名</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">服务器泄露影响</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码哈希可能被破解</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务器只存公钥，泄露无影响</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">便捷性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需记忆/输入/管理</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/指纹一秒登录</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">重放攻击</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可能被中间人截获重放</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每次签名一次性，无法重放</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. 各平台支持情况
@@ -221,7 +221,7 @@ Passkey 基于 FIDO2 / WebAuthn 标准，用<strong>设备上的密钥对</stron
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>跨设备同步是关键突破
+跨设备同步是关键突破
 
 {class="mt-1"}
 早期 Passkey 的最大痛点是"绑定单台设备"——换手机就要重新创建。2023 年起 Apple、Google、Microsoft 实现了 Passkey 的云端同步：iCloud 钥匙串同步跨 Apple 设备，Google 密码管理器同步跨安卓设备。1Password 等第三方则打通了跨生态同步。这意味着 Passkey 已具备替代密码的实用性。
@@ -257,7 +257,7 @@ Passkey 基于 FIDO2 / WebAuthn 标准，用<strong>设备上的密钥对</stron
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就试：体验无密码登录
+现在就试：体验无密码登录
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 登录 Google 账号 → 安全 → 通行密钥 → 添加通行密钥，体验 Face ID/指纹登录。
@@ -268,7 +268,7 @@ Passkey 基于 FIDO2 / WebAuthn 标准，用<strong>设备上的密钥对</stron
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>过渡期建议
+过渡期建议
 
 {class="mt-1"}
 Passkey 并未完全取代密码——许多网站仍处于"Passkey + 密码"并存阶段。建议：高价值账号优先开启 Passkey，但<strong>不要立即删除传统密码</strong>，留作备用。密码管理器还得继续用。因为不是所有网站都支持 Passkey。把 Passkey 看作"密码管理器的强力补充"，而不是"立刻替换"。
@@ -316,7 +316,7 @@ Passkey 并未完全取代密码——许多网站仍处于"Passkey + 密码"并
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>双密钥策略
+双密钥策略
 
 {class="mt-1"}
 硬件密钥最大的风险是"丢失"。建议：① 同时注册两把不同的密钥；② 一把随身携带（钥匙扣），一把存放在家中保险柜或银行保管箱；③ 部分网站允许把"备用恢复码"打印出来离线保存。主密钥真丢了，也不至于被锁在门外。
@@ -324,7 +324,7 @@ Passkey 并未完全取代密码——许多网站仍处于"Passkey + 密码"并
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>购买渠道要谨慎
+购买渠道要谨慎
 
 {class="mt-1"}
 务必从官方店铺或授权代理购买，不要买二手或来源不明的密钥，理论上预置过的硬件可能已被植入后门。YubiKey 的固件在出厂后无法更新，但 Yubico 会持续推送安全公告，关注其官网即可。
@@ -357,7 +357,7 @@ Bitwarden 的免费版支持个人密码共享（通过"发送 Send"功能限时
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>1Password 家庭版的性价比
+1Password 家庭版的性价比
 
 {class="mt-1"}
 1Password Families 约 4.99 美元/月，支持最多 5 位家庭成员，每人都有独立的私人保险库 + 4 个共享保险库。算下来人均不到 1 美元/月，是目前家庭共享体验最好的方案。Bitwarden 的家庭版 10 美元/年支持 6 人，性价比更高，但界面体验略逊。
@@ -390,7 +390,7 @@ Bitwarden 的免费版支持个人密码共享（通过"发送 Send"功能限时
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就设：为家人留一把"备用钥匙"
+现在就设：为家人留一把"备用钥匙"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 选定一位信任的家人作为"紧急联系人"。
@@ -409,7 +409,7 @@ Bitwarden 的免费版支持个人密码共享（通过"发送 Send"功能限时
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>重要提醒
+重要提醒
 
 {class="mt-1"}
 密码管理器虽然方便，但也有风险：如果主密码泄露，所有密码都暴露了。所以主密码绝对不能和其他密码相同，也不能写在容易被找到的地方。另外，建议选择有良好安全记录的服务商。
@@ -417,7 +417,7 @@ Bitwarden 的免费版支持个人密码共享（通过"发送 Send"功能限时
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就试：开始使用密码管理器
+现在就试：开始使用密码管理器
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 选择一个密码管理器（推荐Bitwarden或系统自带）。

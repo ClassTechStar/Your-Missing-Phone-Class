@@ -55,12 +55,12 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">放什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">不放大什么</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">机身存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App、正在处理的工作、最近三个月的照片</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多年积攒的旧视频、整季下载的电视剧</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SD卡（如有）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">媒体库、旧素材、离线地图</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App（装在卡上容易出各种怪毛病）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">云存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">照片的完整副本、重要文档、聊天记录备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你不愿意放到任何服务器上的敏感文件</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">放什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">不放大什么</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">机身存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App、正在处理的工作、最近三个月的照片</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多年积攒的旧视频、整季下载的电视剧</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SD卡（如有）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">媒体库、旧素材、离线地图</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App（装在卡上容易出各种怪毛病）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">云存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">照片的完整副本、重要文档、聊天记录备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你不愿意放到任何服务器上的敏感文件</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -133,7 +133,7 @@ iPhone 的 [文件] App 逻辑稍有不同：它不只是本机视图，还把 i
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 在文件管理器里长按一个文件夹，通常会出现"收藏"或"置顶"的选项。把"下载"、你的工作文件夹、截图文件夹置顶，以后不用每次都从根目录点进去，这是文件管理器里性价比最高的十秒钟设置。
@@ -174,7 +174,7 @@ iPhone 的 [文件] App 逻辑稍有不同：它不只是本机视图，还把 i
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把目录整理做成"收藏夹竞赛"，在文件管理器里收藏了几十个文件夹、快捷方式满天飞，最后自己都记不清哪个指哪儿。收藏位留给最高频的两三个目录就够了，多了等于没收藏。
@@ -182,7 +182,7 @@ iPhone 的 [文件] App 逻辑稍有不同：它不只是本机视图，还把 i
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：十分钟搭好格局
+来动手：十分钟搭好格局
 
 {class="mt-1"}
 打开文件管理器，在内部存储根目录新建四个文件夹：工作、生活、学习、归档。然后把"下载"里能一眼分类的文件拖进去（长按多选、移动），说不清的统一丢进"归档"，整个过程应该不超过十分钟——超过十分钟说明你在纠结分类。纠结的直接进"归档"，以后再说。
@@ -235,7 +235,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 不确定文件是从哪来的？在文件管理器里长按该文件，选"详情"或"属性"，能看到它的完整路径和修改时间。路径的开头（DCIM、Download、Android/data）就是它的来路标签。
@@ -284,7 +284,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 备份做完不等于备份成功。第一次设置云备份后，隔几天去备份页面看一眼"上次备份时间"和备份大小——时间是最近的、大小是合理的（比如好几个GB），才算真的在转。很多人开关开了半年，其实一直在"等待Wi-Fi"状态，一次都没成功过。
@@ -313,7 +313,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 换机的完整意义是"人搬到新家，家具一件不落"，云备份负责保险，换机工具负责运输，微信迁移负责私人信件，逐项验收负责安心，旧机销毁负责清白。
@@ -368,7 +368,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 "把敏感文件发给自己"不等于安全。微信文件传输助手、邮箱草稿、聊天记录里的"仅自己可见"，本质上都是把文件放在了另一个服务器上，而且入口和你的聊天记录在一起，一翻就能看到。敏感文件的归置只有两条正路：加密目录，或者干脆不存。
@@ -398,7 +398,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：十五分钟大扫除
+来动手：十五分钟大扫除
 
 {class="mt-1"}
 现在就做一轮：打开 [设置] > [存储]，看占比；打开文件管理器按大小排序，删掉前三个"无感"的大文件；进微信 [存储空间] 清一次缓存；相册里搜"截图"，删掉上个月的。做完回来看一眼剩余空间，把数字记在心里，下次再低过它，就知道该动手了。
@@ -411,12 +411,12 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层级</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型文件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">处理方式</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">直接删</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">缓存、过期安装包、连拍废片、模糊截图、广告图</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">当场删，不心疼；清空回收站释放空间</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先归档再删</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧视频、聊天里的文件、票据扫描件、项目资料</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">转存云端或电脑，确认能打开后，再删手机里的</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">永不删</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">证件扫描件（在加密目录）、家人照片原件、合同签字版</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只许搬家，不许删除；且必须存在于至少两处</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层级</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型文件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">处理方式</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">直接删</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">缓存、过期安装包、连拍废片、模糊截图、广告图</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">当场删，不心疼；清空回收站释放空间</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先归档再删</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧视频、聊天里的文件、票据扫描件、项目资料</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">转存云端或电脑，确认能打开后，再删手机里的</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">永不删</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">证件扫描件（在加密目录）、家人照片原件、合同签字版</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只许搬家，不许删除；且必须存在于至少两处</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -441,7 +441,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 "收藏"不等于"备份"。收藏的内容仍然跟着你的微信账号和缓存策略走，收藏列表本身也可能因账号异常、误操作而变动。真正重要的资料，另存到系统文件目录或云盘才是终点站。收藏是书签，不是保险柜。
@@ -456,113 +456,113 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">格式</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类型</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特性</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐打开方式</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图片</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有损压缩，体积小，兼容性最好。手机拍照默认格式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意图片查看器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图片</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损压缩，支持透明背景。截图、图标常用。体积比JPG大。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意图片查看器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有损压缩，体积小，兼容性极好。最通用的音频格式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意音乐播放器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损压缩，音质与CD一致，体积比MP3大3-5倍。发烧友首选。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放器/专业播放App</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无压缩原始音频，音质最好但体积巨大。专业录音常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AAC编码，比MP3同码率音质更好。苹果生态常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/音乐播放器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用的视频封装格式，兼容性极好。手机录制的视频默认格式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意视频播放器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开源封装格式，支持多音轨、多字幕。电影资源常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文档</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Word文档。DOCX是压缩格式，体积更小。DOC是旧版格式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">演示</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PowerPoint演示文稿。PPTX是压缩格式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">表格</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel电子表格。XLSX是压缩格式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文档</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨平台格式，排版固定不可编辑。合同、论文、电子书常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用的压缩格式，跨平台兼容好。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统自带/解压App</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩率比ZIP高，但需要专用软件解压。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解压App</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">镜像</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光盘镜像文件，完整复制光盘内容。系统安装包常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解压App/虚拟光驱</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页文件，用浏览器打开。保存的网页常用此格式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">浏览器</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">格式</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类型</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特性</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐打开方式</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图片</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有损压缩，体积小，兼容性最好。手机拍照默认格式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意图片查看器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图片</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损压缩，支持透明背景。截图、图标常用。体积比JPG大。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意图片查看器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有损压缩，体积小，兼容性极好。最通用的音频格式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意音乐播放器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损压缩，音质与CD一致，体积比MP3大3-5倍。发烧友首选。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放器/专业播放App</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无压缩原始音频，音质最好但体积巨大。专业录音常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AAC编码，比MP3同码率音质更好。苹果生态常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/音乐播放器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用的视频封装格式，兼容性极好。手机录制的视频默认格式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意视频播放器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开源封装格式，支持多音轨、多字幕。电影资源常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文档</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Word文档。DOCX是压缩格式，体积更小。DOC是旧版格式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">演示</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PowerPoint演示文稿。PPTX是压缩格式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">表格</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel电子表格。XLSX是压缩格式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文档</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨平台格式，排版固定不可编辑。合同、论文、电子书常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用的压缩格式，跨平台兼容好。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统自带/解压App</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩率比ZIP高，但需要专用软件解压。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解压App</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">镜像</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光盘镜像文件，完整复制光盘内容。系统安装包常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解压App/虚拟光驱</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页文件，用浏览器打开。保存的网页常用此格式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">浏览器</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -574,7 +574,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>练一练：整理"下载"文件夹
+练一练：整理"下载"文件夹
 
 {class="mt-1"}
 打开文件管理器 > 进入"下载"文件夹。看看里面都有啥？把没用的删掉，有用的分门别类（比如新建"工作资料"、"表情包"文件夹放进去）。顺便看看存储空间，了解哪些类型文件占用最多。
@@ -616,7 +616,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：装上你的自动排风扇
+来动手：装上你的自动排风扇
 
 {class="mt-1"}
 今天花五分钟做三件事：开微信的"原图/原视频 14 天后自动清理"，打开相册确认智能分类已启用并给两位家人的脸命名；去云备份页面确认"上次备份时间"在一周以内。三件事做完，你的手机就开始自己打扫卫生了。
@@ -636,21 +636,21 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>"时间+事件"命名法</strong>：文件夹名字里带时间戳和事件描述，方便日后回忆与检索。例如 <code>202606_旅行票据</code>、<code>2025年终总结</code>、<code>2024孩子生日</code>。这样既能看到时间线，也能一眼知道内容。</li>
-                        <li><strong>三级分类体系</strong>：
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>一级</strong>：按文件类型（文档 / 图片 / 视频 / 音频）</li>
-                                <li><strong>二级</strong>：按使用场景（工作 / 生活 / 学习）</li>
-                                <li><strong>三级</strong>：按具体事件或项目（如"2026Q2_项目A"）</li>
-                            </ul>
-                        </li>
-                        <li><strong>月度清理计划</strong>：每月固定一个日期（建议发工资那天或月初1号），对"下载"目录进行集中整理：<strong>归档有用的、删除无用的、转存珍贵的</strong>。一年 12 次小整理，比攒一年大扫除轻松得多。</li>
-                    </ul>
+ <li><strong>"时间+事件"命名法</strong>：文件夹名字里带时间戳和事件描述，方便日后回忆与检索。例如 <code>202606_旅行票据</code>、<code>2025年终总结</code>、<code>2024孩子生日</code>。这样既能看到时间线，也能一眼知道内容。</li>
+ <li><strong>三级分类体系</strong>：
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>一级</strong>：按文件类型（文档 / 图片 / 视频 / 音频）</li>
+ <li><strong>二级</strong>：按使用场景（工作 / 生活 / 学习）</li>
+ <li><strong>三级</strong>：按具体事件或项目（如"2026Q2_项目A"）</li>
+ </ul>
+ </li>
+ <li><strong>月度清理计划</strong>：每月固定一个日期（建议发工资那天或月初1号），对"下载"目录进行集中整理：<strong>归档有用的、删除无用的、转存珍贵的</strong>。一年 12 次小整理，比攒一年大扫除轻松得多。</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>本月任务清单
+本月任务清单
 
 {class="mt-1"}
 挑一个空闲的周末，按以下顺序操作：
@@ -682,7 +682,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>发送证件照/敏感截图的标准流程
+发送证件照/敏感截图的标准流程
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>可见信息打码</strong>：用系统自带或第三方工具（如美图秀秀、Snapseed）<strong>涂抹身份证号中间几位、车牌号、门牌、姓名、金额</strong>等关键字段。
@@ -728,7 +728,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把常用工作文件的云盘链接或快捷方式固定在手机负一屏或电脑桌面，需要时一步直达。同步工具的价值不在"技术多先进"，而在"每次取用都少花一分钟"。
@@ -757,7 +757,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把年度大整理和日历绑定：在手机日历里建一个每年 12 月底重复的"手机年终整理"事件，附上这份清单的备忘录链接。到点手机自己提醒你，你就不会"想起来的时候已经三月份了"。
@@ -818,7 +818,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 文件管理的全部秘密就三句话：格局一次定好，新文件当天归位，重要的东西永远存两处。
@@ -826,7 +826,7 @@ iOS 的结构理念类似但更封闭：每个App的数据都在自己的沙盒�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 三层存储分工：机身放"正在用的"，SD卡（如有）放媒体，云端分清"同步"与"备份"两个概念

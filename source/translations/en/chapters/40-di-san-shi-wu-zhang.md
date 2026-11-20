@@ -23,7 +23,7 @@ There's no standard answer, but there are age baselines. Giving a phone too earl
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>The "Good Enough" Principle
+The "Good Enough" Principle
 
 {class="mt-1"}
 A child's first phone doesn't need to be a flagship. "Excess performance" processors often end up running games. Choose a mid-range phone with adequate battery, eye-friendly screen, or an official refurbished model: easier to manage. Budget reference: 1,500-2,500 yuan covers most students' needs.
@@ -60,27 +60,27 @@ Before giving the device to the child, the first thing isn't turning it on: it's
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Feature</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Screen Time</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Brand Solutions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Limits</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported, by category</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported, per app</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Downtime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported (brand solutions vary slightly)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Content Filtering</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">System-level, more thorough</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Depends on brand, varies</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Remote Management</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Brand Cloud</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Install Approval</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requires parent approval</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link supports it</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Feature</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Screen Time</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Brand Solutions</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Limits</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported, by category</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported, per app</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Downtime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Supported (brand solutions vary slightly)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Content Filtering</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">System-level, more thorough</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Depends on brand, varies</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Remote Management</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Brand Cloud</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Install Approval</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requires parent approval</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link supports it</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Parental Controls Aren't "Once and Done"
+Parental Controls Aren't "Once and Done"
 
 {class="mt-1"}
 Kids can always find ways to bypass them (search "how to crack Screen Time" online: tons of tutorials). Technical measures are just the baseline. The real defense is parent-child communication and trust. I recommend reviewing the usage reports together with your child every month, rather than monitoring unilaterally.
@@ -96,7 +96,7 @@ Major content platforms have built-in "Youth Mode", when enabled, it limits usag
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Don't Use Parents' IDs for Real-Name Authentication to "Borrow Accounts"
+Don't Use Parents' IDs for Real-Name Authentication to "Borrow Accounts"
 
 {class="mt-1"}
 Many kids use parents' IDs to register game accounts and bypass anti-addiction. This violates user agreements and removes protections. Parents should safeguard their payment passwords and identity information — don't "lend accounts" to children for convenience.
@@ -113,7 +113,7 @@ Technology can block 90% of risks — the remaining 10% depends on the child's j
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Sign a "Phone Usage Agreement" with Your Child
+Hands-On: Sign a "Phone Usage Agreement" with Your Child
 
 {class="mt-1"}
 Writing rules down, both parties signing, and posting them prominently is far more effective than verbal agreements. Recommended contents:
@@ -137,7 +137,7 @@ Children's eyes, neck, and sleep are still developing, phone damage is greater t
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Parents Are the Best "Firewall"
+Parents Are the Best "Firewall"
 
 {class="mt-1"}
 Research shows a strong positive correlation between parents' phone usage time and children's. Demanding that children stay off their phones while scrolling short videos until late at night yourself makes the rules ineffective. To change your child, start by putting down your own phone.
@@ -153,7 +153,7 @@ This section is easily overlooked but very important. Children's digital assets 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>The Other Side of "Children's Digital Legacy"
+The Other Side of "Children's Digital Legacy"
 
 {class="mt-1"}
 Children are being "recorded" from birth, growth photos posted by parents, videos from kindergarten, health data from smartwatches. Once uploaded, this data is hard to completely delete. Before posting, think: Will the child feel embarrassed by this photo in ten years? Respecting your child's digital identity starts with restraining from "sharenting."
@@ -161,7 +161,7 @@ Children are being "recorded" from birth, growth photos posted by parents, video
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - There's no standard age to give a phone, but ages 3-6 should avoid it, and before 13 use a kids' watch or feature phone as transition

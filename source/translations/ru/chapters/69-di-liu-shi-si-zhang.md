@@ -63,46 +63,46 @@ import SwiftData
 // 1. @Model: этот класс автоматически становится «таблицей»
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. Подключаем контейнер в точке входа приложения
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // база готова
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // база готова
+ }
 }
 
 // 3. В представлениях читаем через @Query, пишем через @Environment
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) юаня")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) юаня")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // сохраняем
-        try? context.save()   // записываем на диск
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // сохраняем
+ try? context.save() // записываем на диск
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ struct RecordListView: View {
 ```
 // JSON: {"name":"Пекин","main":{"temp":26.5},"weather":[{"description":"Ясно"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "Ясно"
+print(result.weather[0].description) // "Ясно"
 ```
 :::
 
@@ -149,23 +149,23 @@ print(result.weather[0].description)   // "Ясно"
 
 ```
 struct WeatherService {
-    // Асинхронные функции: async — «нужно чуть подождать», throws — «может выбросить ошибку»
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // Асинхронные функции: async — «нужно чуть подождать», throws — «может выбросить ошибку»
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // Место вызова (внутри .task):
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "Пекин")
-        // обновляем интерфейс…
-    } catch {
-        print("Что-то пошло не так: \(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "Пекин")
+ // обновляем интерфейс…
+ } catch {
+ print("Что-то пошло не так: \(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ struct WeatherService {
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "Сеть пропала — проверить подключение?"
-        case .timedOut:               return "Запрос не успел — попробовать позже?"
-        case .cannotFindHost:         return "Сервер не найден"
-        default:                      return "Проблема с сетью: \(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "Неожиданный формат данных (возможно, API изменился)"
-    }
-    return "Что-то пошло не так: \(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "Сеть пропала — проверить подключение?"
+ case .timedOut: return "Запрос не успел — попробовать позже?"
+ case .cannotFindHost: return "Сервер не найден"
+ default: return "Проблема с сетью: \(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "Неожиданный формат данных (возможно, API изменился)"
+ }
+ return "Что-то пошло не так: \(error.localizedDescription)"
 }
 ```
 :::

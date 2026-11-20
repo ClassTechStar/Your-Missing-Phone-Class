@@ -45,7 +45,7 @@ Dass der Speicher deines Handys schrumpft, hat vor allem drei Gründe:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Kleiner Tipp für den Smartphone-Kauf
+Kleiner Tipp für den Smartphone-Kauf
 
 {class="mt-1"}
 128 GB sind heute kaum noch ausreichend, 256 GB sind ein guter Start. Wer gerne fotografiert oder spielt, sollte direkt zu 512 GB oder mehr greifen. Denk dran: Lieber etwas mehr Speicher als zu wenig.
@@ -53,7 +53,7 @@ Dass der Speicher deines Handys schrumpft, hat vor allem drei Gründe:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mach mit: Schau dir den "Ausweis" deines Smartphones an
+Mach mit: Schau dir den "Ausweis" deines Smartphones an
 
 {class="mt-1"}
 Öffne [Einstellungen], suche "Über das Telefon" (oder ähnlich) und notiere: Modell, Systemversion, Speicherplatz und freier Speicher. Das ist der erste Schritt, um es kennenzulernen. Wirf auch einen Blick auf die Akkugesundheit, damit du Bescheid weißt.
@@ -66,7 +66,7 @@ Bevor wir ins Detail gehen, wollen wir eine Kern-Erkenntnis festhalten:<strong>D
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>Warum ist das wichtig?
+Warum ist das wichtig?
 
 {class="mt-1"}
 Wenn das Smartphone verloren geht oder kaputt ist, verlierst du nicht nur Hardware im Wert von einigen tausend Yuan.<strong>Oft sind es über Jahre angesammelte, nicht erneuerbare Daten</strong>– Wachstumsfotos der Kinder, Sprachnachrichten verstorbener Angehöriger, wichtige Verträge ohne Backup. Strukturierte Pflege- und Schutzgewohnheiten schützen dich auf drei Ebenen:

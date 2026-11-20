@@ -317,7 +317,7 @@ Denk mal darüber nach: ein kleines Gerät, das so viel vom Leben trägt! Deshal
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praxis: Hardware-Konfiguration kennenlernen
+Praxis: Hardware-Konfiguration kennenlernen
 
 {class="mt-1"}
 Schau unter [Einstellungen] nach, ob du Prozessor-Modell, Arbeitsspeicher (RAM) und internen Speicher (ROM) in der genauen Größe findest. So bekommst du ein Gefühl für die Fähigkeiten deines Smartphones. Android-Nutzer können „AnTuTu" oder „DevCheck" herunterladen, um detaillierte Hardware-Informationen einzusehen.

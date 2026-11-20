@@ -23,7 +23,7 @@ Tidak ada jawaban standar, tapi ada baseline usia. Terlalu cepat kasih ponsel, p
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Prinsip "Cukup Dipakai Saja"
+Prinsip "Cukup Dipakai Saja"
 
 {class="mt-1"}
 Ponsel pertama anak tidak perlu flagship. "Performa berlebih" prosesor sering dipakai untuk main game. Pilih ponsel ribuan yuan dengan baterai cukup besar, performa sedang, layar pelindung mata atau refurbished resmi, justru lebih mudah dikontrol. Referensi budget: rentang 1500-2500 yuan sudah bisa memenuhi kebutuhan sebagian besar siswa.
@@ -60,27 +60,27 @@ Sebelum perangkat diberikan ke anak, hal pertama bukan nyalakan, tapi setel pare
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fitur</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Screen Time</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Solusi Brand</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Limit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mendukung, per kategori</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mendukung, per App</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Downtime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mendukung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Didukung (bervariasi tergantung merek)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filter konten</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tingkat sistem, lebih menyeluruh</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tergantung merek, kualitas tidak merata</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Manajemen jarak jauh</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / cloud merek</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Persetujuan instalasi App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu persetujuan orang tua</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Didukung oleh Family Link</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fitur</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Screen Time</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Solusi Brand</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Limit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mendukung, per kategori</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mendukung, per App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Downtime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mendukung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Didukung (bervariasi tergantung merek)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filter konten</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tingkat sistem, lebih menyeluruh</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tergantung merek, kualitas tidak merata</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Manajemen jarak jauh</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / cloud merek</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Persetujuan instalasi App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu persetujuan orang tua</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Didukung oleh Family Link</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Kendali orang tua bukan solusi "sekali pakai selamanya"
+Kendali orang tua bukan solusi "sekali pakai selamanya"
 
 {class="mt-1"}
 Anak selalu bisa menemukan cara untuk mengakali (cari "cara membobol Screen Time" di internet, tutorialnya banyak sekali). Teknologi hanya garis pertahanan terakhir, benteng yang sesungguhnya adalah komunikasi dan kepercayaan antara orang tua dan anak. Disarankan setiap bulan meninjau laporan pemakaian bersama anak, bukan sekadar memantau sepihak.
@@ -96,7 +96,7 @@ Platform konten utama memiliki "Mode Remaja" bawaan. Jika diaktifkan, akan memba
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Verifikasi identitas jangan gunakan KTP orang tua untuk "meminjam akun"
+Verifikasi identitas jangan gunakan KTP orang tua untuk "meminjam akun"
 
 {class="mt-1"}
 Banyak anak menggunakan KTP orang tua untuk mendaftarkan akun game agar lolos dari sistem anti-kecanduan. Ini melanggar perjanjian pengguna sekaligus membuat anak kehilangan perlindungan. Orang tua harus menjaga kata sandi pembayaran dan informasi identitas dengan baik, jangan "meminjamkan akun" kepada anak demi kepraktisan.
@@ -113,7 +113,7 @@ Teknologi bisa memblokir 90% risiko, sisanya 10% bergantung pada penilaian anak.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Buat "Perjanjian Penggunaan Ponsel" bersama anak
+Praktik: Buat "Perjanjian Penggunaan Ponsel" bersama anak
 
 {class="mt-1"}
 Menuliskan aturan, kedua pihak menandatangani dan menempelnya di tempat yang terlihat jelas, jauh lebih efektif daripada kesepakatan lisan. Saranan isi:
@@ -137,7 +137,7 @@ Mata, leher, tidur anak semua dalam masa perkembangan, kerusakan ponsel pada tub
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Orang tua adalah "firewall" terbaik
+Orang tua adalah "firewall" terbaik
 
 {class="mt-1"}
 Riset menunjukkan, durasi pemakaian ponsel orang tua sendiri berkorelasi positif kuat dengan anak. Meminta anak tidak lihat ponsel, diri sendiri scroll video pendek sampai larut, aturan akan gagal. Mengubah anak, mulai dari meletakkan ponsel sendiri.
@@ -153,7 +153,7 @@ Bagian ini mudah diabaikan, tapi sangat penting. Aset digital anak (akun, foto, 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Hati-hati sisi lain "warisan digital anak"
+Hati-hati sisi lain "warisan digital anak"
 
 {class="mt-1"}
 Anak sejak lahir sudah "direkam": foto tumbuh kembang yang di-post orang tua, video dari TK, data kesehatan smart watch. Data ini sekali upload sulit dihapus total. Sebelum post pikirkan: 10 tahun lagi apakah anak akan merasa malu karena foto ini? Hormati kepribadian digital anak, mulai dari menahan "post anak".
@@ -161,7 +161,7 @@ Anak sejak lahir sudah "direkam": foto tumbuh kembang yang di-post orang tua, vi
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Usia kasih ponsel tidak ada jawaban standar, tapi 3-6 tahun usahakan tidak sentuh, sebelum 13 tahun pakai jam tangan anak atau feature phone transisi

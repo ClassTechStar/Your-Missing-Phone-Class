@@ -77,12 +77,12 @@ An Intent is the "ticket" components use to talk to each other. Whether you want
 ```
 // Method 1: explicit Intent — you name the exact destination screen
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", Alex)     // carrying "luggage" (data) along for the ride
+intent.putExtra("name", Alex) // carrying "luggage" (data) along for the ride
 startActivity(intent)
 
 // Method 2: implicit Intent — you say what to do, the system finds who does it
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // the system opens a browser / or lets you choose
+startActivity(web) // the system opens a browser / or lets you choose
 ```
 :::
 
@@ -101,16 +101,16 @@ Real apps have more than one screen. The navigation solution officially recommen
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "Unknown")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "Unknown")
+ }
 }
 
 // Navigating from a screen:
-navController.navigate("detail/Alex")     // with arguments
-navController.popBackStack()              // go back
+navController.navigate("detail/Alex") // with arguments
+navController.popBackStack() // go back
 ```
 :::
 

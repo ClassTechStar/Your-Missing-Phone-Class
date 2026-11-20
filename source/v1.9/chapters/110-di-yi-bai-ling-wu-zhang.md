@@ -188,7 +188,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别拿"过审秘诀"当依据。社群里流传的各类"技巧"时效性很差，规则细化快，照搬旧经验被拒是常态。一切以创作者中心里的官方原文为准，这正是附录 D 说的"一手来源"，看二手转述等于把方向盘交给别人。
@@ -453,7 +453,7 @@ IAA 跑出数据之后，什么时候可以试 IAP？别凭野心决定，看信
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 定模式时给自己设一条"止损线"：第一部剧打算花多少钱、多少时间，开工前写下来，到线就停。短剧最怕的不是失败，是失败之后不肯认账、继续加注。
@@ -702,7 +702,7 @@ IAA 跑出数据之后，什么时候可以试 IAP？别凭野心决定，看信
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 任何"先交钱"的合作都要警惕：培训费、包装费、扶持金"激活费"、签约保证金：正规 MCN 挣的是分成，不是你的入门费。让你先掏钱的"签约"，多半不是生意，是生意对你下手。
@@ -900,7 +900,7 @@ IAA 跑出数据之后，什么时候可以试 IAP？别凭野心决定，看信
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 创作可以快，合规不能赶。发布前把规则读一遍的时间，比事后申诉便宜得多。
@@ -908,7 +908,7 @@ IAA 跑出数据之后，什么时候可以试 IAP？别凭野心决定，看信
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：完成你的"入局评估"
+来动手：完成你的"入局评估"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 按本篇五步自查：你能稳定投入哪个角色（写/拍/剪/运营）？
@@ -919,7 +919,7 @@ IAA 跑出数据之后，什么时候可以试 IAP？别凭野心决定，看信
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 分类分层审核+白名单机制，先备案后上线
 - 平台备案通道代理个人/工作室，剧本定稿再开机

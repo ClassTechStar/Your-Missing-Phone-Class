@@ -61,7 +61,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בחר את התמונה הטובה ביותר ובצע התאמות בסיסיות ב-Snapseed (בהירות, ניגודיות, חיתוך).
+בחר את התמונה הטובה ביותר ובצע התאמות בסיסיות ב-Snapseed (בהירות, ניגודיות, חיתוך).
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. צור אלבום ייעודי לתמונה הזו וקרא לו "היצירות שלי".

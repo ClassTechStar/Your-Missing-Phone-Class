@@ -76,12 +76,12 @@ kind: chapter
 - ビルド：Vite
 ## データモデル
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## 開発プラン
 Step 1: 基本の記録機能 (CRUD)

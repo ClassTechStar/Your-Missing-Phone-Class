@@ -322,7 +322,7 @@ HDR（High Dynamic Range）使屏幕同時展現更亮之亮部與更暗之暗�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>實操一番：了解硬件配置
+實操一番：了解硬件配置
 
 {class="mt-1"}
 實操一番：了解硬件配置

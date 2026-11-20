@@ -43,7 +43,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>Правило 20-20-20
+Правило 20-20-20
 
 {class="mt-1"}
 Каждые <strong>20 минут</strong> работы за экраном переводите взгляд на объект в <strong>20 футах (около 6 метров)</strong> от вас и держите его <strong>20 секунд</strong>. Это простое действие эффективно снимает усталость ресничной мышцы.
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: недельный челлендж цифрового здоровья
+Практика: недельный челлендж цифрового здоровья
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Сегодня: откройте «Экранное время» или «Цифровое благополучие» и посмотрите статистику использования за прошлую неделю.
@@ -94,7 +94,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Итоги главы
+Итоги главы
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Сначала посмотрите данные об экранном времени, осознание текущего состояния это первый шаг к изменениям

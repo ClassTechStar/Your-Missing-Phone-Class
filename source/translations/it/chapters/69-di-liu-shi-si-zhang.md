@@ -63,46 +63,46 @@ import SwiftData
 // 1. @Model: questa classe diventa automaticamente una "tabella"
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. Collega il contenitore all'ingresso dell'app
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // database pronto
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // database pronto
+ }
 }
 
 // 3. Nelle view leggi con @Query e scrivi con @Environment
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) yuan")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) yuan")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // inserisce
-        try? context.save()   // salva su disco
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // inserisce
+ try? context.save() // salva su disco
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ I dati dei server sono per lo più testo JSON. Il protocollo Codable di Swift fa
 ```
 // JSON: {"name":"Pechino","main":{"temp":26.5},"weather":[{"description":"Sereno"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "Sereno"
+print(result.weather[0].description) // "Sereno"
 ```
 :::
 
@@ -149,23 +149,23 @@ Su iOS la rete si gestisce con URLSession, incluso nel sistema, insieme ad async
 
 ```
 struct WeatherService {
-    // Funzioni asincrone: async significa "devo aspettare un attimo", throws significa "può fallire"
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // Funzioni asincrone: async significa "devo aspettare un attimo", throws significa "può fallire"
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // Punto di chiamata (dentro .task):
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "Pechino")
-        // aggiorna l'interfaccia...
-    } catch {
-        print("Qualcosa è andato storto: \(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "Pechino")
+ // aggiorna l'interfaccia...
+ } catch {
+ print("Qualcosa è andato storto: \(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ Rete assente, timeout, 404, errore 500 del server… Per ogni errore diverso, l'
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "Rete assente — controlli la connessione?"
-        case .timedOut:               return "Richiesta scaduta — riprovare più tardi?"
-        case .cannotFindHost:         return "Server non trovato"
-        default:                      return "Problema di rete: \(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "Formato dati inatteso (l'API potrebbe essere cambiata)"
-    }
-    return "Qualcosa è andato storto: \(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "Rete assente — controlli la connessione?"
+ case .timedOut: return "Richiesta scaduta — riprovare più tardi?"
+ case .cannotFindHost: return "Server non trovato"
+ default: return "Problema di rete: \(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "Formato dati inatteso (l'API potrebbe essere cambiata)"
+ }
+ return "Qualcosa è andato storto: \(error.localizedDescription)"
 }
 ```
 :::

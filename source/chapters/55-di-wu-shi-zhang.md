@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "张三"        // val：只读变量（推荐默认用这个）
-var age = 18             // var：可变变量（以后还能改）
+val name = "张三" // val：只读变量（推荐默认用这个）
+var age = 18 // var：可变变量（以后还能改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> val 不能改，编译会报错
+age = 19 // var 可以改
+// name = "李四" // val 不能改，编译会报错
 
-val score: Int = 100     // 也可以显式写明类型
-val pi = 3.14            // 不写也能自动推断
+val score: Int = 100 // 也可以显式写明类型
+val pi = 3.14 // 不写也能自动推断
 ```
 :::
 
@@ -46,7 +46,7 @@ Kotlin 常用基础类型
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：val 优先原则
+小贴士：val 优先原则
 
 {class="mt-1"}
 Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>。能用 val 的地方用 var，IDE 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug，代码越少变化，越容易推理。
@@ -63,15 +63,15 @@ Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>
 
 ```
 fun greet(name: String): String {
-    return "你好，$name！"     // $ 符号把变量插进字符串
+ return "你好，$name！" // $ 符号把变量插进字符串
 }
 
-println(greet("张三"))        // 输出：你好，张三！
+println(greet("张三")) // 输出：你好，张三！
 
 // 单行函数可以简写成表达式
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // 输出：8
+println(add(3, 5)) // 输出：8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // 输出：8
 // 判断：if / else
 val age = 17
 if (age >= 18) {
-    println("成年人")
+ println("成年人")
 } else {
-    println("未成年")
+ println("未成年")
 }
 
 // 多分支：when（比 switch 好用一百倍）
 val score = 85
 val level = when {
-    score >= 90 -> "优秀"
-    score >= 60 -> "及格"
-    else -> "再接再厉"
+ score >= 90 -> "优秀"
+ score >= 60 -> "及格"
+ else -> "再接再厉"
 }
 
 // 重复：for 循环
 val fruits = listOf("苹果", "香蕉", "橙子")
 for (fruit in fruits) {
-    println("我爱吃$fruit")
+ println("我爱吃$fruit")
 }
 ```
 :::
@@ -123,22 +123,22 @@ Java 时代最著名的 bug 叫 <strong>NullPointerException（空指针异常�
 :::
 
 ```
-var name: String = "张三"   // 普通类型：绝不允许是 null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> 编译错误，直接把你拦住
+var name: String = "张三" // 普通类型：绝不允许是 null
+// name = null // 编译错误，直接把你拦住
 
 var nickname: String? = null // 加个问号：允许为 null
 nickname = "三儿"
 
 // 使用可空类型时，必须安全地处理：
-println(nickname?.length)    // 安全调用：null 就返回 null，不崩
-val len = nickname?.length ?: 0   // Elvis 操作符：null 时给默认值
+println(nickname?.length) // 安全调用：null 就返回 null，不崩
+val len = nickname?.length ?: 0 // Elvis 操作符：null 时给默认值
 println(len)
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：? 和 ?: 别搞混
+注意：? 和 ?: 别搞混
 
 {class="mt-1"}
 <code class="inline">String?</code> 是"允许为空"，<code class="inline">a ?: b</code> 是"a 为空时用 b"（长得像猫王发型，所以叫 Elvis 操作符）。刚开始写代码时，看到编译器报"null 相关错误"，八成是你忘了处理可空类型——这正是语言在保护你。
@@ -156,17 +156,17 @@ println(len)
 ```
 // 普通类：模具
 class Dog(val name: String) {
-    fun bark() = println("$name 汪汪！")
+ fun bark() = println("$name 汪汪！")
 }
 
-val dog = Dog("旺财")      // 造对象
-dog.bark()                 // 旺财 汪汪！
+val dog = Dog("旺财") // 造对象
+dog.bark() // 旺财 汪汪！
 
 // data class：装数据的盒子（自动带 equals/copy 等）
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "张三", "zhangsan@example.com")
-val twin = me.copy(name = "张三丰")   // 复制并改一个字段
+val twin = me.copy(name = "张三丰") // 复制并改一个字段
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // lambda 写法：就地定义，轻快直接
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = 当前元素
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = 当前元素
 
 // 筛选 + 变换连招（真实项目里极常见）
 val bills = listOf(12.5, 88.0, 5.0, 200.0)
@@ -213,7 +213,7 @@ Kotlin 语法速查卡（新手版）
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：不装任何软件，先玩 10 分钟 Kotlin
+来动手：不装任何软件，先玩 10 分钟 Kotlin
 
 {class="mt-1"}
 浏览器打开 play.kotlinlang.org（Kotlin 官方在线演练场），把本章的每一段代码都粘进去跑一遍，改改数字和文字，看看输出怎么变。这个"先玩后学"的 10 分钟，会让你第 51 章上手时轻松一倍。
@@ -221,7 +221,7 @@ Kotlin 语法速查卡（新手版）
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - val 优先，var 慎用；类型可自动推断，冒号后显式声明也行
 - 函数 = 打包的逻辑；字符串模板 $ 是招牌便利

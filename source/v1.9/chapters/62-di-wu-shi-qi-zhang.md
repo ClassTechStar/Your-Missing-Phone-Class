@@ -50,24 +50,24 @@ kind: chapter
 
 @Composable
 fun CameraButton() {
-    val context = LocalContext.current
-    var granted by remember {
-        mutableStateOf(ContextCompat.checkSelfPermission(
-            context, android.Manifest.permission.CAMERA) ==
-            PackageManager.PERMISSION_GRANTED)
-    }
-    val launcher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { ok -&gt; granted = ok }
-    Button(onClick = {
-        when {
-            granted -&gt; openCamera()
-            ActivityCompat.shouldShowRequestPermissionRationale(
-                context as Activity, android.Manifest.permission.CAMERA)
-                -&gt; showExplainDialog()
-            else -&gt; launcher.launch(android.Manifest.permission.CAMERA)
-        }
-    }) { Text("拍照") }
+ val context = LocalContext.current
+ var granted by remember {
+ mutableStateOf(ContextCompat.checkSelfPermission(
+ context, android.Manifest.permission.CAMERA) ==
+ PackageManager.PERMISSION_GRANTED)
+ }
+ val launcher = rememberLauncherForActivityResult(
+ ActivityResultContracts.RequestPermission()
+ ) { ok -&gt; granted = ok }
+ Button(onClick = {
+ when {
+ granted -&gt; openCamera()
+ ActivityCompat.shouldShowRequestPermissionRationale(
+ context as Activity, android.Manifest.permission.CAMERA)
+ -&gt; showExplainDialog()
+ else -&gt; launcher.launch(android.Manifest.permission.CAMERA)
+ }
+ }) { Text("拍照") }
 }
 // imports：androidx.activity.compose.rememberLauncherForActivityResult、
 // androidx.activity.result.contract.ActivityResultContracts、
@@ -77,7 +77,7 @@ fun CameraButton() {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：被永久拒绝怎么办？
+注意：被永久拒绝怎么办？
 
 {class="mt-1"}
 用户勾了"不再询问"后，再次调用 <code class="inline">launcher.launch(...)</code> 不会再弹窗。此时应引导用户去系统设置里手动开启（用 <code class="inline">Intent</code> 跳到应用设置页），并在界面里说明"这个权限用来做什么"。态度好一点，用户开权限的意愿会高很多<strong>申请权限的文案，值得认真写</strong>。
@@ -140,10 +140,10 @@ fun CameraButton() {
 
 ```
 when {
-    hasPermission -&gt; useIt()                 // 已授权：直接干活
-    shouldShowRationale -&gt; explainThenAsk()  // 拒绝过一次：先讲理由再问
-    askedBefore -&gt; guideToSettings()         // 问过仍被拒：引导去设置页
-    else -&gt; launcher.launch(permission)      // 从没问过：直接申请
+ hasPermission -&gt; useIt() // 已授权：直接干活
+ shouldShowRationale -&gt; explainThenAsk() // 拒绝过一次：先讲理由再问
+ askedBefore -&gt; guideToSettings() // 问过仍被拒：引导去设置页
+ else -&gt; launcher.launch(permission) // 从没问过：直接申请
 }
 ```
 :::
@@ -192,22 +192,22 @@ when {
 
 // 1. 创建通知渠道（Android 8+ 必须）
 val channel = NotificationChannel(
-    "reminder", "提醒", NotificationManager.IMPORTANCE_DEFAULT
+ "reminder", "提醒", NotificationManager.IMPORTANCE_DEFAULT
 )
 val manager = getSystemService(NotificationManager::class.java)
 manager.createNotificationChannel(channel)
 
 // 2. 发通知
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("记账提醒")
-    .setContentText("今天还没记账哦")
-    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("记账提醒")
+ .setContentText("今天还没记账哦")
+ .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+ .build()
 if (ActivityCompat.checkSelfPermission(this,
-        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+ Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 ) {
-    manager.notify(1, notification)
+ manager.notify(1, notification)
 }
 ```
 :::
@@ -238,16 +238,16 @@ if (ActivityCompat.checkSelfPermission(this,
 ```
 val intent = Intent(this, MainActivity::class.java)
 val pending = PendingIntent.getActivity(
-    this, 0, intent,
-    PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+ this, 0, intent,
+ PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
 )
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("记账提醒")
-    .setContentText("今天还没记账哦")
-    .setContentIntent(pending)
-    .setAutoCancel(true)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("记账提醒")
+ .setContentText("今天还没记账哦")
+ .setContentIntent(pending)
+ .setAutoCancel(true)
+ .build()
 ```
 :::
 
@@ -292,7 +292,7 @@ val notification = NotificationCompat.Builder(this, "reminder")
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：别过度设计
+小贴士：别过度设计
 
 {class="mt-1"}
 Hilt 和模块化都是好工具，但<strong>单人项目先别急着上</strong>。记账本单模块 + 手动创建依赖完全够用。等代码量超过几万行、编译开始变慢、多人协作时，再按需引入，到时候 Koin 这类更轻的替代品也值得看一眼，把对象的构造交给容器，测试时还能换成假实现。架构不是层数越多越好，能让你"改一处不牵连三处"就够了。工具是服务目标的，不是用来炫耀的——这也是咱们 AI 编程书里的"简单至上"原则。
@@ -342,35 +342,35 @@ ViewModel 有一个让新手惊喜的特性：旋转屏幕这类"配置变化"�
 
 ```
 data class LedgerUiState(
-    val records: List&lt;Record&gt; = emptyList(),
-    val totalAmount: Double = 0.0,
-    val loading: Boolean = false
+ val records: List&lt;Record&gt; = emptyList(),
+ val totalAmount: Double = 0.0,
+ val loading: Boolean = false
 )
 
 class LedgerViewModel(private val repo: LedgerRepository) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(LedgerUiState())
-    val uiState: StateFlow&lt;LedgerUiState&gt; = _uiState.asStateFlow()
+ private val _uiState = MutableStateFlow(LedgerUiState())
+ val uiState: StateFlow&lt;LedgerUiState&gt; = _uiState.asStateFlow()
 
-    init { loadRecords() }
+ init { loadRecords() }
 
-    fun loadRecords() {
-        viewModelScope.launch {
-            _uiState.update { it.copy(loading = true) }
-            val list = repo.getAllRecords()
-            _uiState.update {
-                it.copy(records = list, totalAmount = list.sumOf { r -&gt; r.amount },
-                        loading = false)
-            }
-        }
-    }
+ fun loadRecords() {
+ viewModelScope.launch {
+ _uiState.update { it.copy(loading = true) }
+ val list = repo.getAllRecords()
+ _uiState.update {
+ it.copy(records = list, totalAmount = list.sumOf { r -&gt; r.amount },
+ loading = false)
+ }
+ }
+ }
 
-    fun addRecord(amount: Double, note: String) {
-        viewModelScope.launch {
-            repo.insert(Record(amount = amount, note = note))
-            loadRecords()
-        }
-    }
+ fun addRecord(amount: Double, note: String) {
+ viewModelScope.launch {
+ repo.insert(Record(amount = amount, note = note))
+ loadRecords()
+ }
+ }
 }
 ```
 :::
@@ -402,15 +402,15 @@ class LedgerViewModel(private val repo: LedgerRepository) : ViewModel() {
 
 ```
 class AppContainer(database: AppDatabase) {
-    val ledgerRepository = LedgerRepository(database.ledgerDao())
+ val ledgerRepository = LedgerRepository(database.ledgerDao())
 }
 
 class LedgerApp : Application() {
-    lateinit var container: AppContainer
-    override fun onCreate() {
-        super.onCreate()
-        container = AppContainer(AppDatabase.getDatabase(this))
-    }
+ lateinit var container: AppContainer
+ override fun onCreate() {
+ super.onCreate()
+ container = AppContainer(AppDatabase.getDatabase(this))
+ }
 }
 ```
 :::
@@ -561,7 +561,7 @@ Layout Inspector 的 Compose 重组计数值得单独说一个用法：把它当
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给记账本加"三件套"
+来动手：给记账本加"三件套"
 
 {class="mt-1"}
 ① 给记账本加"每天 20:00 记账提醒"（WorkManager + 通知渠道 + Android 13 通知权限）；② 把数据库和 API 的创建改成 Hilt 注入；③ 试着用 AI 工具让"月度筛选"功能提速实现，然后按三层验收法检查产出。三件套做完，你的项目就有"正规军"的样子了。
@@ -585,18 +585,18 @@ Layout Inspector 的 Compose 重组计数值得单独说一个用法：把它当
 
 ```
 class ReminderWorker(context: Context, params: WorkerParameters) :
-    Worker(context, params) {
-    override fun doWork(): Result {
-        // 复用第二节的通知代码：查权限 → 构造通知 → 发出
-        return Result.success()
-    }
+ Worker(context, params) {
+ override fun doWork(): Result {
+ // 复用第二节的通知代码：查权限 → 构造通知 → 发出
+ return Result.success()
+ }
 }
 
 val request = PeriodicWorkRequestBuilder&lt;ReminderWorker&gt;(1, TimeUnit.DAYS).build()
 WorkManager.getInstance(context).enqueueUniquePeriodicWork(
-    "daily_reminder",          // 唯一名字，防止重复注册
-    ExistingPeriodicWorkPolicy.KEEP,
-    request
+ "daily_reminder", // 唯一名字，防止重复注册
+ ExistingPeriodicWorkPolicy.KEEP,
+ request
 )
 ```
 :::
@@ -795,7 +795,7 @@ WorkManager.getInstance(context).enqueueUniquePeriodicWork(
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 敏感权限：Manifest 声明 + 运行时申请 + 被拒后优雅引导
 - 通知三纪律：只发有用的、能关、不骚扰；渠道 + 权限缺一不可

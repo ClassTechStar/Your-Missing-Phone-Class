@@ -45,41 +45,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الدور الأساسي</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">حالة القفل (الافتراضية)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">حالة ما بعد الفتح</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">أمان النظام</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منع وميض أنظمة غير رسمية غير موقعة، حماية سلامة النظام والأمان الأساسي<br><span class="text-emerald-600 dark:text-emerald-400">✅ أمان عالٍ: تحميل الصور الموقعة رسمياً فقط، مقاومة فعالة للعبث بالبرامج الثابتة الخبيثة</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ أمان منخفض: السماح بميض ROM خارجي، آلية فحص سلامة النظام تتعطل، البرمجيات الخبيثة إذا حصلت على Root يمكنها العبث العميق بالنظام</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">استقرار النظام</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضمان تشغيل الهاتف للنظام الرسمي المختبر والمُحسّن من الشركة، ضمان الاستقرار والسلاسة<br><span class="text-emerald-600 dark:text-emerald-400">✅ مستقر: استخدام البرامج الثابتة الرسمية، وظائف كاملة، تحديثات OTA موثوقة</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ زيادة المخاطر: ROM الخارجي قد يكون به مشاكل توافق، قد يؤدي لانهيار النظام وتحول الجهاز لقرميد، وأعطال وظائف العتاد (مثل الكاميرا والشحن السريع)، وقد تفشل تحديثات OTA</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">حقوق الضمان</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الشركة توفر نظاماً رسمياً مستقراً عبر قفل BL لتقديم خدمة الضمان<br><span class="text-emerald-600 dark:text-emerald-400">✅ الضمان ساري: التمتع بخدمة الضمان المجانية الرسمية (للأضرار غير المتعمدة)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ الضمان يبطل: أغلب الشركات تعتبر فتح BL تنازلاً طوعياً عن الضمان، حتى بعد إعادة القفل قد يُكشف سجل الفتح ويرفض الضمان</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">أمان البيانات</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عملية الفتح تمسح البيانات إجبارياً عادة، لمنع استخدام البيانات القديمة في بيئة النظام الجديد بشكل خبيث<br><span class="text-emerald-600 dark:text-emerald-400">✅ أمان البيانات: في الاستخدام اليومي، قفل BL يحد من قدرة البرامج الخبيثة على تعديل قسم النظام</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ مخاطر البيانات: الفتح يمسح جميع بيانات المستخدم إجبارياً؛ إذا لم يُشفّر بشكل صحيح بعد الفتح، قد يكون تخزين البيانات غير آمن؛ بعد الفقدان يسهل استخراج البيانات عبر الوميض</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">قيود الوظائف</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضمان عمل الوظائف المعتمدة على البيئة الآمنة (مثل المدفوعات وتطبيقات البنوك) بشكل طبيعي<br><span class="text-emerald-600 dark:text-emerald-400">✅ وظائف كاملة: جميع الوظائف الرسمية يمكن استخدامها بشكل طبيعي</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ وظائف محدودة: بعض التطبيقات الحساسة أمنياً (مثل Google Pay وتطبيقات البنوك) قد ترفض العمل due للكشف عن حالة فتح BL؛ قد تتدهور خدمات DRM، مما يؤثر على تشغيل الفيديو بدقة عالية</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الدور الأساسي</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">حالة القفل (الافتراضية)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">حالة ما بعد الفتح</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">أمان النظام</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منع وميض أنظمة غير رسمية غير موقعة، حماية سلامة النظام والأمان الأساسي<br><span class="text-emerald-600 dark:text-emerald-400">✅ أمان عالٍ: تحميل الصور الموقعة رسمياً فقط، مقاومة فعالة للعبث بالبرامج الثابتة الخبيثة</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ أمان منخفض: السماح بميض ROM خارجي، آلية فحص سلامة النظام تتعطل، البرمجيات الخبيثة إذا حصلت على Root يمكنها العبث العميق بالنظام</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">استقرار النظام</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضمان تشغيل الهاتف للنظام الرسمي المختبر والمُحسّن من الشركة، ضمان الاستقرار والسلاسة<br><span class="text-emerald-600 dark:text-emerald-400">✅ مستقر: استخدام البرامج الثابتة الرسمية، وظائف كاملة، تحديثات OTA موثوقة</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ زيادة المخاطر: ROM الخارجي قد يكون به مشاكل توافق، قد يؤدي لانهيار النظام وتحول الجهاز لقرميد، وأعطال وظائف العتاد (مثل الكاميرا والشحن السريع)، وقد تفشل تحديثات OTA</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">حقوق الضمان</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الشركة توفر نظاماً رسمياً مستقراً عبر قفل BL لتقديم خدمة الضمان<br><span class="text-emerald-600 dark:text-emerald-400">✅ الضمان ساري: التمتع بخدمة الضمان المجانية الرسمية (للأضرار غير المتعمدة)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ الضمان يبطل: أغلب الشركات تعتبر فتح BL تنازلاً طوعياً عن الضمان، حتى بعد إعادة القفل قد يُكشف سجل الفتح ويرفض الضمان</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">أمان البيانات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عملية الفتح تمسح البيانات إجبارياً عادة، لمنع استخدام البيانات القديمة في بيئة النظام الجديد بشكل خبيث<br><span class="text-emerald-600 dark:text-emerald-400">✅ أمان البيانات: في الاستخدام اليومي، قفل BL يحد من قدرة البرامج الخبيثة على تعديل قسم النظام</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ مخاطر البيانات: الفتح يمسح جميع بيانات المستخدم إجبارياً؛ إذا لم يُشفّر بشكل صحيح بعد الفتح، قد يكون تخزين البيانات غير آمن؛ بعد الفقدان يسهل استخراج البيانات عبر الوميض</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">قيود الوظائف</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضمان عمل الوظائف المعتمدة على البيئة الآمنة (مثل المدفوعات وتطبيقات البنوك) بشكل طبيعي<br><span class="text-emerald-600 dark:text-emerald-400">✅ وظائف كاملة: جميع الوظائف الرسمية يمكن استخدامها بشكل طبيعي</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ وظائف محدودة: بعض التطبيقات الحساسة أمنياً (مثل Google Pay وتطبيقات البنوك) قد ترفض العمل due للكشف عن حالة فتح BL؛ قد تتدهور خدمات DRM، مما يؤثر على تشغيل الفيديو بدقة عالية</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>فكر مرتين قبل التصرف
+فكر مرتين قبل التصرف
 
 {class="mt-1"}
 فصل Knox في Samsung<strong>غير قابل للعكس</strong>بمجرد تفعيله لا يمكن العودة لحالة المصنع. إذا كنت تريد فقط وظائف تتطلب Root، يُنصح أولاً بالبحث عن بدائل لا تحتاج Root.
@@ -123,7 +123,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Coolapk
+Coolapk
 
 {class="mt-1"}
 : مجتمع رقميات معروف محليًا، به الكثير من الدروس والنقاشات بالصينية.
@@ -140,7 +140,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>المبدأ الأساسي: تنظيف البيانات ليس "حذفًا"، بل "كتابة فوق".
+المبدأ الأساسي: تنظيف البيانات ليس "حذفًا"، بل "كتابة فوق".
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>"التنظيف الشامل" الذاتي</strong>: أكمل آخر نسخة احتياطية كاملة، وسجّل الخروج من جميع الحسابات.
@@ -152,7 +152,7 @@ kind: chapter
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: هل يمكن استعادة قفل BL بعد فتحه؟
+Q1: هل يمكن استعادة قفل BL بعد فتحه؟
 
 {class="mb-2 pl-6"}
 <strong>A:</strong>يمكن إعادة القفل. عادةً يتطلب وميض حزمة وميض سلكية رسمية كاملة، واستخدام سكربت وميض محدد (مثل <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>) لإعادة القفل. لكن انتبه، بعد إعادة القفل، بعض الفواصل الأمنية المُفعّلة بالفتح (مثل Knox في Samsung) قد لا يمكن عكسها.
@@ -160,7 +160,7 @@ kind: chapter
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: كيف أحصل على Root بعد فتح القفل؟
+Q2: كيف أحصل على Root بعد فتح القفل؟
 
 {class="mb-2 pl-6"}
 <strong>A:</strong>فتح قفل BL هو الخطوة الأولى فقط. Root عادةً يتطلب:

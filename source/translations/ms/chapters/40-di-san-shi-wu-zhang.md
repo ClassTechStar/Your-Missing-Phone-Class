@@ -23,7 +23,7 @@ Tiada jawapan standard, tetapi ada garis asas umur. Terlalu awal beri telefon, l
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Apabila bateri cepat habis, telefon tiba-tiba mati walaupun bateri ada, atau bateri membengkak. Bawa ke pusat servis rasmi untuk tukar bateri.
+Apabila bateri cepat habis, telefon tiba-tiba mati walaupun bateri ada, atau bateri membengkak. Bawa ke pusat servis rasmi untuk tukar bateri.
 
 {class="mt-1"}
 Telefon pertama anak tidak perlu flagship. "Prestasi berlebihan" pemproses selalunya digunakan untuk main permainan. Pilih satu telefon bateri cukup besar, prestasi sederhana, skrin mesra mata mesin ribu atau telefon refurbished rasmi, sebaliknya lebih mudah kawal. Rujukan belanjawan: julat 1500-2500 RMB boleh memenuhi keperluan majoriti pelajar.
@@ -60,27 +60,27 @@ Sebelum beri peranti kepada anak, perkara pertama bukan buka, tetapi tetapkan ka
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. Adakah 5G berbahaya kepada kesihatan?</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tidak. 5G guna gelombang radio tidak mengion, sama seperti 4G, Wi-Fi, radio. Kajian saintifik tidak menunjukkan bahaya kepada kesihatan.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. Bolehkah saya guna telefon sambil hujan?</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAW adalah format fail yang menyimpan semua data dari sensor kamera, tanpa pemampatan. Sesuai untuk edit lanjutan, tetapi fail lebih besar dan perlu diproses.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon dengan IP67/IP68 boleh tahan air, tetapi jangan guna dalam hujan lebat atau di dalam air untuk masa lama.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Adakah mod pesawat perlu semasa terbang?</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HDR (High Dynamic Range) sesuai untuk scene dengan kontras tinggi (langit cerah + foreground gelap). Tidak sesuai untuk scene bergerak atau scene dengan kontras rendah.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ya, atau guna mod Wi-Fi jika syarikat penerbangan menyokong. Mod pesawat matikan semua isyarat radio yang boleh ganggu sistem penerbangan.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5. Bolehkah saya tinggalkan telefon dalam kereta?</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jangan. Suhu dalam kereta yang diparkir boleh capai 60°C atau lebih, boleh rosakkan bateri dan skrin.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6. Berapa kerap perlu restart telefon?</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Disyorkan restart sekali seminggu untuk buang cache, bebaskan RAM, dan selesaikan isu sementara.</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">7. Adakah saya perlu tutup App latar belakang?</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android: Tidak wajib jika anda pasang App hanya dari Google Play dan elakkan pelayaran web berbahaya. Jika anda kerap pasang App dari sumber tidak diketahui, pertimbang antivirus.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tidak perlu. OS moden (iOS dan Android) urus App latar belakang dengan cekap. Tutup App sebenarnya boleh guna lebih banyak bateri kerana App perlu dimuat semula.</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">8. Bolehkah saya guna pengecas lain jenama?</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Boleh, jika pengecas menyokong protokol yang sama (USB-PD, Quick Charge dll). Pengecas murah dari jenama tidak diketahui mungkin berbahaya.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9. Adakah mod gelap jimat bateri?</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. Adakah 5G berbahaya kepada kesihatan?</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tidak. 5G guna gelombang radio tidak mengion, sama seperti 4G, Wi-Fi, radio. Kajian saintifik tidak menunjukkan bahaya kepada kesihatan.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. Bolehkah saya guna telefon sambil hujan?</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAW adalah format fail yang menyimpan semua data dari sensor kamera, tanpa pemampatan. Sesuai untuk edit lanjutan, tetapi fail lebih besar dan perlu diproses.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon dengan IP67/IP68 boleh tahan air, tetapi jangan guna dalam hujan lebat atau di dalam air untuk masa lama.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Adakah mod pesawat perlu semasa terbang?</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HDR (High Dynamic Range) sesuai untuk scene dengan kontras tinggi (langit cerah + foreground gelap). Tidak sesuai untuk scene bergerak atau scene dengan kontras rendah.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ya, atau guna mod Wi-Fi jika syarikat penerbangan menyokong. Mod pesawat matikan semua isyarat radio yang boleh ganggu sistem penerbangan.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5. Bolehkah saya tinggalkan telefon dalam kereta?</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jangan. Suhu dalam kereta yang diparkir boleh capai 60°C atau lebih, boleh rosakkan bateri dan skrin.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6. Berapa kerap perlu restart telefon?</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Disyorkan restart sekali seminggu untuk buang cache, bebaskan RAM, dan selesaikan isu sementara.</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">7. Adakah saya perlu tutup App latar belakang?</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android: Tidak wajib jika anda pasang App hanya dari Google Play dan elakkan pelayaran web berbahaya. Jika anda kerap pasang App dari sumber tidak diketahui, pertimbang antivirus.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tidak perlu. OS moden (iOS dan Android) urus App latar belakang dengan cekap. Tutup App sebenarnya boleh guna lebih banyak bateri kerana App perlu dimuat semula.</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">8. Bolehkah saya guna pengecas lain jenama?</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Boleh, jika pengecas menyokong protokol yang sama (USB-PD, Quick Charge dll). Pengecas murah dari jenama tidak diketahui mungkin berbahaya.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9. Adakah mod gelap jimat bateri?</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Kawalan ibu bapa bukan "sekali untuk selama"
+Kawalan ibu bapa bukan "sekali untuk selama"
 
 {class="mt-1"}
 Anak selalu boleh cari cara untuk skip (online cari "cara crack Masa Skrin" tutorial banyak). Teknik hanya garis bawah, pertahanan sebenar adalah komunikasi keluarga dan kepercayaan. Cadangkan setiap bulan dengan anak
@@ -96,7 +96,7 @@ Bab 27: Penghujung, Telefon pintar adalah alat, bukan tuan <strong>Perlu ibu bap
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Pengesahan nama sebenar jangan guna kad pengenalan ibu bapa "pinjam akaun"
+Pengesahan nama sebenar jangan guna kad pengenalan ibu bapa "pinjam akaun"
 
 {class="mt-1"}
 Ramai anak guna kad pengenalan ibu bapa daftar akaun permainan skip anti-ketagihan, ini melanggar perjanjian pengguna, juga buat anak hilang perlindungan. Ibu bapa patut jaga kata laluan pembayaran dan maklumat pengenalan, jangan
@@ -113,7 +113,7 @@ Teknik boleh halang 90% risiko, baki 10% bergantung pertimbangan anak. Berbandin
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktikal: Tandatangani "Konvensyen Guna Telefon" dengan anak
+Praktikal: Tandatangani "Konvensyen Guna Telefon" dengan anak
 
 {class="mt-1"}
 Praktik keselamatan, penyelamatan kecemasan, dan masa depan telefon pintar.
@@ -137,7 +137,7 @@ Mata, leher servikal, tidur anak semua dalam tempoh perkembangan, telefon kesan 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Ibu bapa adalah "firewall" terbaik
+Ibu bapa adalah "firewall" terbaik
 
 {class="mt-1"}
 Kajian menunjukkan, masa guna telefon ibu bapa sendiri dan anak berkorelasi positif kuat. Minta anak tidak lihat telefon, diri sendiri tetapi skrol video pendek hingga larut malam, peraturan akan gagal. Ubah anak, mula dari letak
@@ -153,7 +153,7 @@ Bahagian ini mudah diabaikan, tetapi sangat penting. Aset digital anak (akaun, f
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Wi-Fi 6/7: Standard Wi-Fi generasi baharu, kelajuan dan kestabilan lebih tinggi.
+Wi-Fi 6/7: Standard Wi-Fi generasi baharu, kelajuan dan kestabilan lebih tinggi.
 
 {class="mt-1"}
 Anak dari lahir sudah direkod - foto pertumbuhan ibu bapa pos, video taman kanak-kanak hantar, data kesihatan jam pintar. Data ini sekali muat naik sukar padam sepenuhnya. Sebelum pos fikir: sepuluh tahun lagi anak akan
@@ -161,7 +161,7 @@ Anak dari lahir sudah direkod - foto pertumbuhan ibu bapa pos, video taman kanak
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - USB-C: Port USB generasi baharu, reversible, sokong kuasa tinggi dan data pantas.

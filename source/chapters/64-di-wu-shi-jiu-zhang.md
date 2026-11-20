@@ -38,7 +38,7 @@ iOS 开发大事记（截至 2026 年 8 月）
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：先说清楚成本
+注意：先说清楚成本
 
 {class="mt-1"}
 iOS 开发有硬门槛：<strong>必须有一台 Mac</strong>（Xcode 是 macOS 独占），上架需要 99 美元/年的开发者账号（个人开发者免费账号可以本地真机调试，但不能上架）。想清楚这笔投入再启程，不过好消息是，学习阶段用免费账号完全够用，第 60 章会讲。
@@ -53,7 +53,7 @@ iOS 开发历史上也有两位"主角"。Objective-C 是开国元老：从 2008
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
 {class="vs-title"}
-<i class="fas fa-times-circle mr-1"></i> Objective-C 风格（上古遗迹）
+ Objective-C 风格（上古遗迹）
 
 {class="font-mono text-xs leading-relaxed"}
 NSString *name = @"张三";<br>[name stringByAppendingString:@"你好"];<br>// 方括号 + 指针 + 分号三件套
@@ -61,7 +61,7 @@ NSString *name = @"张三";<br>[name stringByAppendingString:@"你好"];<br>// �
 
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
 {class="vs-title"}
-<i class="fas fa-check-circle mr-1"></i> Swift 风格（现代清爽）
+ Swift 风格（现代清爽）
 
 {class="font-mono text-xs leading-relaxed"}
 var name = "张三"<br>name += "你好"<br>// 像自然语言一样直白
@@ -74,11 +74,11 @@ var name = "张三"<br>name += "你好"<br>// 像自然语言一样直白
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码（Swift + SwiftUI）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 写代码（Swift + SwiftUI）</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hammer mr-1"></i> 编译签名</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-flask mr-1"></i> 测试（模拟器+真机）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-stamp mr-1"></i> 苹果审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> 上架 App Store</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 编译签名</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 测试（模拟器+真机）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> 苹果审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 上架 App Store</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -106,7 +106,7 @@ var name = "张三"<br>name += "你好"<br>// 像自然语言一样直白
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：看看你手机的"苹果户口"
+来动手：看看你手机的"苹果户口"
 
 {class="mt-1"}
 打开 iPhone 的 [设置] → [通用] → [关于本机]，记下三样：iOS 版本、机型名称、可用容量。再去 App Store 的"今天"页随便逛逛，注意那些精品 App 的截图和文案，从今天起，你逛商店的视角要从"用户"切换到"开发者"了。
@@ -114,7 +114,7 @@ var name = "张三"<br>name += "你好"<br>// 像自然语言一样直白
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 2008 年 App Store 上线，"应用经济"诞生；2026 年当前版本 iOS 27
 - 围墙花园的账：规矩多，但设备少、版本新、用户肯花钱、商店干净
@@ -122,9 +122,9 @@ var name = "张三"<br>name += "你好"<br>// 像自然语言一样直白
 - 语言直接学 Swift；Objective-C 只属于遗产代码
 - 流水线比安卓多一环：苹果审核；TestFlight 是内测分发神器
 - 2026 标准技术栈：
-  - 界面：Swift 6 + SwiftUI
-  - 架构：MVVM
-  - 数据：SwiftData
-  - 网络：URLSession
-  - 开发环境：Xcode
+ - 界面：Swift 6 + SwiftUI
+ - 架构：MVVM
+ - 数据：SwiftData
+ - 网络：URLSession
+ - 开发环境：Xcode
 :::

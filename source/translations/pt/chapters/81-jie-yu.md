@@ -22,7 +22,7 @@ A tecnologia muda, mas as necessidades humanas não mudam, precisamos de seguran
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Um último exercício
+Um último exercício
 
 {class="mt-1"}
 Feche este livro, pegue seu celular e faça uma coisa: <strong>Pense por 30 segundos: quais são as três coisas no seu celular que "realmente doeria perder"?</strong> Depois, certifique-se de que elas estão com backup. Este livro terá valido a pena.

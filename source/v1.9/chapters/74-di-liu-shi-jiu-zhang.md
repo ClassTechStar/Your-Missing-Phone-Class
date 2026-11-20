@@ -184,25 +184,25 @@ SwiftUI 常用修饰符速查
 
 ```
 struct ContentView: View {
-    @State private var 待办 = ["买牛奶", "还书", "预约体检"]
-    @State private var 显示弹窗 = false
-    @State private var 选中 = ""
+ @State private var 待办 = ["买牛奶", "还书", "预约体检"]
+ @State private var 显示弹窗 = false
+ @State private var 选中 = ""
 
-    var body: some View {
-        NavigationStack {
-            List(待办, id: \.self) { 项目 in
-                Button(项目) {
-                    选中 = 项目
-                    显示弹窗 = true
-                }
-            }
-            .navigationTitle("我的清单")
-            .sheet(isPresented: $显示弹窗) {
-                Text("你点的是：\(选中)")
-                    .presentationDetents([.medium])
-            }
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List(待办, id: \.self) { 项目 in
+ Button(项目) {
+ 选中 = 项目
+ 显示弹窗 = true
+ }
+ }
+ .navigationTitle("我的清单")
+ .sheet(isPresented: $显示弹窗) {
+ Text("你点的是：\(选中)")
+ .presentationDetents([.medium])
+ }
+ }
+ }
 }
 ```
 :::
@@ -217,7 +217,7 @@ struct ContentView: View {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：建一张你自己的"第二行速查卡"
+来动手：建一张你自己的"第二行速查卡"
 
 {class="mt-1"}
 新建一个备忘录（手机上就行），只记"你这一周真的查过两次以上"的写法。一周后回头看。这张私人清单多半只有十几行，那就是你真正的高频区。别人的手册再厚，也不如这张薄薄的私人清单贴近你的实际使用。
@@ -326,7 +326,7 @@ Xcode 高频快捷键速查
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：编译玄学先清缓存
+小贴士：编译玄学先清缓存
 
 {class="mt-1"}
 "昨天还能跑今天就不行"的灵异事件，十有六七是构建缓存错乱。<kbd>⇧⌘K</kbd> 清理后重新构建，能治愈一大半玄学问题。还不行就重启 Xcode（连 Mac 一起），再不行就"删掉 DerivedData 文件夹"，这是 iOS 开发者口口相传的终极三连。
@@ -380,7 +380,7 @@ LLDB 调试常用命令（在底部控制台输入）
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别用 print 刷屏代替调试器
+避坑提醒：别用 print 刷屏代替调试器
 
 {class="mt-1"}
 很多人一遇 bug 就往代码里塞十几个 print。不是不行，是低效：改一次跑一次，忘删了还会污染控制台。断点加 <code class="inline">po</code> 的组合，不用改一行代码就能看到一切。练三次就上手。print 留给"长时间运行时到底输出了什么"这类场景更合适。
@@ -444,7 +444,7 @@ LLDB 调试常用命令（在底部控制台输入）
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：求救别整段截图
+避坑提醒：求救别整段截图
 
 {class="mt-1"}
 整段红字里九成是噪音。提问前先做三件事：读最里层那行错误、看它指向哪个文件哪一行、用自己的话复述一遍"它说什么丢了或不匹配"。做完这三件，一半的问题自己就解了；剩下的一半，你也能问出一个别人愿意回答的好问题。
@@ -515,7 +515,7 @@ App 闪退时，Xcode 会在底部控制台甩出一串以 <code class="inline">
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：拿不准就先画"格子图"
+小贴士：拿不准就先画"格子图"
 
 {class="mt-1"}
 打开任何你想复刻的界面，先用笔在截图上画格子：最外层是竖排还是横排？哪一块会滚动？哪两块叠在一起？三分钟画完，代码的结构基本就是这张格子图。这个习惯比背一百个修饰符都管用。
@@ -582,7 +582,7 @@ Xcode 里按 <kbd>⇧⌘0</kbd> 就能唤出内置的文档窗口，不用切浏
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：把文档搜索当搜索引擎用
+小贴士：把文档搜索当搜索引擎用
 
 {class="mt-1"}
 文档窗口的搜索框支持"功能描述"式的搜索：输入"拍照""通知""内购"这类中文意图可能命中率不高，换成"camera""notification""storekit"这类关键词试试。搜出来的结果按类型分组，框架名旁边的小徽标能帮你一眼认出它属于哪个系统家族。
@@ -717,7 +717,7 @@ App Store Connect 高频术语速查（界面措辞以官方后台为准）
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：审核状态随身查
+小贴士：审核状态随身查
 
 {class="mt-1"}
 iPhone 上有官方的 App Store Connect 应用，能随时看审核进度、回复开发者回复、收到状态变更通知。提审后的那几天你会忍不住反复刷新——装上它，让推送替你盯，该干嘛干嘛去。
@@ -755,7 +755,7 @@ iPhone 上有官方的 App Store Connect 应用，能随时看审核进度、回
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：今晚就写下你的第一行学习计划
+来动手：今晚就写下你的第一行学习计划
 
 {class="mt-1"}
 拿出日历，给接下来一周排三个"学习时段"（每个不少于三十分钟），并给每段写一个具体产出："跑通官方 SwiftUI 教程第二部分""给记账页加个圆角卡片""把 LLDB 三条命令试一遍"。产出要具体到能自查"做完没"。下周日复盘：完成了几条？没完成的原因是时间还是难度？调整后继续。
@@ -791,7 +791,7 @@ iPhone 上有官方的 App Store Connect 应用，能随时看审核进度、回
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：把清单做成 App 里的一个页面
+小贴士：把清单做成 App 里的一个页面
 
 {class="mt-1"}
 把这份清单做成你自己的第一个"工具 App"：一个 List、每行一个复选框、数据用 SwiftData 存起来。既练习了主线的所有知识点，又让清单跟着你的项目走，一鱼两吃。
@@ -928,7 +928,7 @@ App"有点卡"是新手作品的通病，而且病因高度集中。排查顺序
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别用"翻译软件直出"的文案上架
+避坑提醒：别用"翻译软件直出"的文案上架
 
 {class="mt-1"}
 机翻的界面文案是差评重灾区。按钮上的直译常常意思全偏。界面文案宁短勿长、宁用系统惯用词（"完成""编辑""分享"）勿自造。真要多语言，找母语者过一遍，或者先只发你写得最好的那一种语言。

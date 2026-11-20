@@ -22,7 +22,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：密钥绝不能写死在代码里
+避坑提醒：密钥绝不能写死在代码里
 
 {class="mt-1"}
 API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。iOS 的正确做法：放进 <code class="inline">Config.xcconfig</code>（配置文件，已被 gitignore 忽略），通过 Info.plist 读入代码。搜索"iOS xcconfig 管理密钥"照着改即可。
@@ -40,27 +40,27 @@ API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小
 ```
 // JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
 struct WeatherResponse: Codable {
-    let weather: [Weather]
-    let main: Main
-    let name: String
+ let weather: [Weather]
+ let main: Main
+ let name: String
 }
 struct Weather: Codable { let description: String }
 struct Main: Codable { let temp: Double; let humidity: Int }
 
 struct WeatherService {
-    let key: String   // 从 xcconfig 读入
+ let key: String // 从 xcconfig 读入
 
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
-        comps.queryItems = [
-            URLQueryItem(name: "q", value: city),
-            URLQueryItem(name: "appid", value: key),
-            URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "lang", value: "zh_cn")
-        ]
-        let (data, _) = try await URLSession.shared.data(from: comps.url!)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+ comps.queryItems = [
+ URLQueryItem(name: "q", value: city),
+ URLQueryItem(name: "appid", value: key),
+ URLQueryItem(name: "units", value: "metric"),
+ URLQueryItem(name: "lang", value: "zh_cn")
+ ]
+ let (data, _) = try await URLSession.shared.data(from: comps.url!)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 ```
 :::
@@ -76,25 +76,25 @@ struct WeatherService {
 
 ```
 enum LoadState {
-    case loading                  // 转圈中
-    case success(WeatherResponse) // 成功
-    case error(String)            // 失败
+ case loading // 转圈中
+ case success(WeatherResponse) // 成功
+ case error(String) // 失败
 }
 
 @Observable
 class WeatherViewModel {
-    var state: LoadState = .loading
-    private let service = WeatherService(key: Config.apiKey)
+ var state: LoadState = .loading
+ private let service = WeatherService(key: Config.apiKey)
 
-    func search(city: String) async {
-        state = .loading
-        do {
-            let data = try await service.fetchWeather(city: city)
-            state = .success(data)
-        } catch {
-            state = .error("查不到这个城市，换个名字试试？")
-        }
-    }
+ func search(city: String) async {
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ state = .success(data)
+ } catch {
+ state = .error("查不到这个城市，换个名字试试？")
+ }
+ }
 }
 
 // 界面里：
@@ -117,24 +117,24 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 
 ```
 struct WeatherContent: View {
-    let data: WeatherResponse
+ let data: WeatherResponse
 
-    var body: some View {
-        VStack(spacing: 12) {
-            Text(data.name)
-                .font(.title.bold())
-            Text("\(Int(data.main.temp))°C")
-                .font(.system(size: 76, weight: .thin))
-            Text(data.weather.first?.description ?? "未知")
-                .font(.title3)
-                .foregroundColor(.secondary)
-            HStack(spacing: 24) {
-                Label("湿度 \(data.main.humidity)%", systemImage: "humidity")
-                Label("体感 \(Int(data.main.temp))°C", systemImage: "thermometer")
-            }
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 12) {
+ Text(data.name)
+ .font(.title.bold())
+ Text("\(Int(data.main.temp))°C")
+ .font(.system(size: 76, weight: .thin))
+ Text(data.weather.first?.description ?? "未知")
+ .font(.title3)
+ .foregroundColor(.secondary)
+ HStack(spacing: 24) {
+ Label("湿度 \(data.main.humidity)%", systemImage: "humidity")
+ Label("体感 \(Int(data.main.temp))°C", systemImage: "thermometer")
+ }
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -150,7 +150,7 @@ struct WeatherContent: View {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：中文城市的"梗"
+小贴士：中文城市的"梗"
 
 {class="mt-1"}
 OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "beijing" 正常。产品化做法是内置一份"城市名 → 英文/坐标"映射表，或接国内天气服务。练手阶段先支持拼音/英文城市名即可，别和它较劲。
@@ -158,7 +158,7 @@ OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "b
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：天气 App 验收清单
+来动手：天气 App 验收清单
 
 #### 六、网络请求怎么调试：打印、抓包与模拟慢网
 
@@ -170,7 +170,7 @@ OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "b
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：请求没过 ATS？
+小贴士：请求没过 ATS？
 
 {class="mt-1"}
 如果请求一发出就报 "App Transport Security" 错误，八成是用了 http:// 明文地址。正式接口必须 HTTPS；本地调试临时开例外（Info.plist 加 NSAllowsLocalNetworking），上架前记得清干净。
@@ -182,7 +182,7 @@ OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "b
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 先浏览器试 API、看懂 JSON，再写代码："预习"永远不亏
 - API Key 藏进 xcconfig，绝不进代码库

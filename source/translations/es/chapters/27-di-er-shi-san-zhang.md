@@ -95,7 +95,7 @@ La automatización tampoco es un camino de rosas; aquí te adelanto algúnos obs
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Consejo:La postura correcta para un Principiante en automatización
+Consejo:La postura correcta para un Principiante en automatización
 
 {class="mt-1"}
 Dedica primero 5 minutos a pensar: cuales son las 3 cosas que más repites en tu móvil cada día? Por ejemplo: tu rutina matinal de cada día, tus hábitos al conectar los auriculares Bluetooth, tu configuración antes de salir... Empieza por estas pequenas tareas frecuentes y crea una automatización simple para cada una. Aunque cada una solo te ahorre 5 segundos, con el tiempo suma mucho. Y la satisfacción de crearlas es realmente adictiva.
@@ -103,7 +103,7 @@ Dedica primero 5 minutos a pensar: cuales son las 3 cosas que más repites en tu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica: tres desafios de automatización para Principiantes
+Practica: tres desafios de automatización para Principiantes
 
 {class="mt-1 mb-2"}
 Elige el que mejor se adapte a ti; cuando lo completes, ya seras Principiante:
@@ -116,7 +116,7 @@ Elige el que mejor se adapte a ti; cuando lo completes, ya seras Principiante:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Caso 3: Automatización del "flujo de buenos días"
+Caso 3: Automatización del "flujo de buenos días"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Escenario</strong>: Todos los días a las 7:00, pronóstico del tiempo automático + silencio desactivado + abrir noticias.

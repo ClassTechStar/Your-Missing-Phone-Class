@@ -48,7 +48,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>스마트폰 구매 팁
+스마트폰 구매 팁
 
 {class="mt-1"}
 지금은 128GB 스마트폰이 기본적으로 부족하며, 256GB부터 시작하는 것이 안정적입니다. 사진 촬영이나 게임을 좋아한다면 512GB 이상으로 바로 가는 것을 권장합니다. 저장 공간은 넉넉하게, 빠듯하게 가지 마세요.
@@ -56,7 +56,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>직접 해보기: 스마트폰 "신분증" 확인하기
+직접 해보기: 스마트폰 "신분증" 확인하기
 
 {class="mt-1"}
 [설정]을 열고, 휴대전화 정보 (또는 유사한 옵션)를 찾아 다음을 기록하세요: 스마트폰 모델, 시스템 버전, 총 저장 공간, 남은 저장 공간. 이것이 스마트폰을 이해하는 첫 번째 단계입니다.
@@ -72,7 +72,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>왜 이것이 중요한가요?
+왜 이것이 중요한가요?
 
 {class="mt-1"}
 스마트폰을 분실하거나 고장나면, 손실되는 것은 단지 수천 원의 하드웨어만이 아니라 <strong>오랜 세월 동안 ,축적된 재생 불가능한 데이터</strong>일 가능성이 더 큽니다 - 자녀의 성장 사진, 돌아가신 가족의 음성, 백업되지 않은 중요한 계약서.

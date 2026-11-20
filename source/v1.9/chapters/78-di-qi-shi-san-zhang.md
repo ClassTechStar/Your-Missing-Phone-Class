@@ -45,18 +45,18 @@ ArkUI 的布局容器极少但够用：<strong>Column</strong>（纵向排）、
 
 ```
 Column({ space: 12 }) {
-  Text('标题').fontSize(20).fontWeight(FontWeight.Bold)
-  Row({ space: 8 }) {
-    Text('标签').backgroundColor('#eef')
-    Text('时间').backgroundColor('#efe')
-  }
-  .width('100%')
-  .justifyContent(FlexAlign.SpaceBetween)
+ Text('标题').fontSize(20).fontWeight(FontWeight.Bold)
+ Row({ space: 8 }) {
+ Text('标签').backgroundColor('#eef')
+ Text('时间').backgroundColor('#efe')
+ }
+ .width('100%')
+ .justifyContent(FlexAlign.SpaceBetween)
 
-  Stack({ alignContent: Alignment.BottomEnd }) {
-    Image($r('app.media.photo')).width('100%')
-    Text('水印').fontSize(12).padding(4)
-  }
+ Stack({ alignContent: Alignment.BottomEnd }) {
+ Image($r('app.media.photo')).width('100%')
+ Text('水印').fontSize(12).padding(4)
+ }
 }
 .padding(16)
 ```
@@ -86,32 +86,32 @@ ArkUI 的状态管理是三层结构，选对装饰器就成功一半：<strong>
 ```
 @Component
 struct SettingItem {
-  @Prop title: string = ''
-  @State isOn: boolean = false
+ @Prop title: string = ''
+ @State isOn: boolean = false
 
-  build() {
-    Row() {
-      Text(this.title).fontSize(16).layoutWeight(1)
-      Toggle({ type: ToggleType.Switch, isOn: this.isOn })
-        .onChange((on: boolean) =&gt; { this.isOn = on })
-    }
-    .width('100%')
-    .padding(12)
-  }
+ build() {
+ Row() {
+ Text(this.title).fontSize(16).layoutWeight(1)
+ Toggle({ type: ToggleType.Switch, isOn: this.isOn })
+ .onChange((on: boolean) =&gt; { this.isOn = on })
+ }
+ .width('100%')
+ .padding(12)
+ }
 }
 
 @Entry
 @Component
 struct SettingsPage {
-  @State items: string[] = ['Wi-Fi', '蓝牙', '勿扰模式']
+ @State items: string[] = ['Wi-Fi', '蓝牙', '勿扰模式']
 
-  build() {
-    Column() {
-      ForEach(this.items, (item: string) =&gt; {
-        SettingItem({ title: item })
-      })
-    }
-  }
+ build() {
+ Column() {
+ ForEach(this.items, (item: string) =&gt; {
+ SettingItem({ title: item })
+ })
+ }
+ }
 }
 ```
 :::
@@ -156,7 +156,7 @@ Navigation 的"路由表"模式值得提前理解：与其在每个页面里写�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做出"设置页"
+来动手：做出"设置页"
 
 {class="mt-1"}
 用 Column + SettingItem 复刻手机设置首页的三行（Wi-Fi、蓝牙、显示），再给每行加一个箭头图标（Row 里追加 Image 或 Text('›')）。完成后用预览器看效果，布局、状态、组件复用三个概念你已经全部用上了。
@@ -200,11 +200,11 @@ Text 看着没技术含量，坑却不少。长文本的处理是第一名：<st
 
 ```
 Text('这是一段可能特别长的介绍文案，超出两行就要截断')
-  .fontSize(14)
-  .maxLines(2)
-  .textOverflow({ overflow: TextOverflow.Ellipsis })
-  .lineHeight(20)
-  .textAlign(TextAlign.Start)
+ .fontSize(14)
+ .maxLines(2)
+ .textOverflow({ overflow: TextOverflow.Ellipsis })
+ .lineHeight(20)
+ .textAlign(TextAlign.Start)
 ```
 :::
 
@@ -225,18 +225,18 @@ Image 的坑在尺寸。它默认按原始分辨率显示，一张 4000 像素�
 
 ```
 Column({ space: 12 }) {
-  TextInput({ placeholder: '手机号' })
-    .type(InputType.Normal)
-    .maxLength(11)
-    .onChange((v: string) =&gt; { this.phone = v })
+ TextInput({ placeholder: '手机号' })
+ .type(InputType.Normal)
+ .maxLength(11)
+ .onChange((v: string) =&gt; { this.phone = v })
 
-  TextInput({ placeholder: '密码' })
-    .type(InputType.Password)
-    .onChange((v: string) =&gt; { this.pwd = v })
+ TextInput({ placeholder: '密码' })
+ .type(InputType.Password)
+ .onChange((v: string) =&gt; { this.pwd = v })
 
-  Button('登 录', { type: ButtonType.Capsule })
-    .width('100%')
-    .onClick(() =&gt; { this.doLogin() })
+ Button('登 录', { type: ButtonType.Capsule })
+ .width('100%')
+ .onClick(() =&gt; { this.doLogin() })
 }
 ```
 :::
@@ -253,7 +253,7 @@ Progress 显示确定进度（下载百分比），LoadingProgress 是那个一�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 所有组件共享一套"通用属性"：尺寸。内外边距、背景、圆角、透明度、可见性（visibility）、点击事件（onClick）……不管是什么组件，这些方法都能链上去。记住了这一点，你就不用逐个组件背属性——通用的一套走天下，组件特有的那几个才是要查文档的。
@@ -272,31 +272,31 @@ LazyForEach 和 ForEach 的用法差别在于：它要求你提供一个"数据�
 
 ```
 class MsgDataSource implements IDataSource {
-  private list: Msg[] = []
-  private listeners: DataChangeListener[] = []
+ private list: Msg[] = []
+ private listeners: DataChangeListener[] = []
 
-  totalCount(): number { return this.list.length }
-  getData(i: number): Msg { return this.list[i] }
+ totalCount(): number { return this.list.length }
+ getData(i: number): Msg { return this.list[i] }
 
-  registerDataChangeListener(l: DataChangeListener) {
-    this.listeners.push(l)
-  }
-  unregisterDataChangeListener(l: DataChangeListener) {
-    this.listeners = this.listeners.filter(x =&gt; x !== l)
-  }
+ registerDataChangeListener(l: DataChangeListener) {
+ this.listeners.push(l)
+ }
+ unregisterDataChangeListener(l: DataChangeListener) {
+ this.listeners = this.listeners.filter(x =&gt; x !== l)
+ }
 
-  pushFront(m: Msg) {
-    this.list.unshift(m)
-    this.listeners.forEach(l =&gt; l.onDataAdd(0))
-  }
+ pushFront(m: Msg) {
+ this.list.unshift(m)
+ this.listeners.forEach(l =&gt; l.onDataAdd(0))
+ }
 }
 
 List() {
-  LazyForEach(this.dataSource, (m: Msg) =&gt; {
-    ListItem() {
-      MsgRow({ msg: m })
-    }
-  }, (m: Msg) =&gt; m.id)
+ LazyForEach(this.dataSource, (m: Msg) =&gt; {
+ ListItem() {
+ MsgRow({ msg: m })
+ }
+ }, (m: Msg) =&gt; m.id)
 }
 .cachedCount(5)
 ```
@@ -319,14 +319,14 @@ List() {
 
 ```
 Refresh({ refreshing: this.isRefreshing }) {
-  List() {
-    LazyForEach(this.dataSource, (m: Msg) =&gt; {
-      ListItem() { MsgRow({ msg: m }) }
-    }, (m: Msg) =&gt; m.id)
-  }
+ List() {
+ LazyForEach(this.dataSource, (m: Msg) =&gt; {
+ ListItem() { MsgRow({ msg: m }) }
+ }, (m: Msg) =&gt; m.id)
+ }
 }
 .onRefreshing(() =&gt; {
-  this.reload()   // 完成后把 isRefreshing 置回 false
+ this.reload() // 完成后把 isRefreshing 置回 false
 })
 ```
 :::
@@ -335,7 +335,7 @@ Refresh({ refreshing: this.isRefreshing }) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 cachedCount 不是越大越好。它决定"屏幕外提前多建几条"，设太大会让一次滚动的创建成本暴涨，低端机上反而掉帧。默认值通常就够，真机卡了再调，调完用真机验证，预览器不代表真机手感。
@@ -352,19 +352,19 @@ cachedCount 不是越大越好。它决定"屏幕外提前多建几条"，设太
 
 ```
 build() {
-  Column() {
-    Text('订单详情')
-      .onClick(() =&gt; {
-        this.getUIContext().animateTo(
-          { duration: 250, curve: Curve.EaseInOut },
-          () =&gt; { this.expanded = !this.expanded }
-        )
-      })
-    if (this.expanded) {
-      Text('这里是一大段展开后才显示的内容……')
-        .transition(TransitionEffect.OPACITY)
-    }
-  }
+ Column() {
+ Text('订单详情')
+ .onClick(() =&gt; {
+ this.getUIContext().animateTo(
+ { duration: 250, curve: Curve.EaseInOut },
+ () =&gt; { this.expanded = !this.expanded }
+ )
+ })
+ if (this.expanded) {
+ Text('这里是一大段展开后才显示的内容……')
+ .transition(TransitionEffect.OPACITY)
+ }
+ }
 }
 ```
 :::
@@ -386,17 +386,17 @@ animateTo 是"包住状态变化"，.animation() 则是贴在组件上："这个
 
 ```
 Image($r('app.media.card'))
-  .translate({ x: this.offsetX, y: this.offsetY })
-  .gesture(
-    PanGesture()
-      .onActionUpdate((e: GestureEvent) =&gt; {
-        this.offsetX = e.offsetX
-        this.offsetY = e.offsetY
-      })
-      .onActionEnd(() =&gt; {
-        // 松手后决定吸附回弹还是留在原地
-      })
-  )
+ .translate({ x: this.offsetX, y: this.offsetY })
+ .gesture(
+ PanGesture()
+ .onActionUpdate((e: GestureEvent) =&gt; {
+ this.offsetX = e.offsetX
+ this.offsetY = e.offsetY
+ })
+ .onActionEnd(() =&gt; {
+ // 松手后决定吸附回弹还是留在原地
+ })
+ )
 ```
 :::
 
@@ -404,7 +404,7 @@ Image($r('app.media.card'))
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 动画克制比炫技重要。入场动画一两百毫秒、退场更快一点，是最不容易让用户烦的区间；系统自带的页面切换动画别去覆盖它。判断标准很简单：动画结束后用户的下一步操作有没有被拖慢？被拖慢了，就砍时长。
@@ -426,17 +426,17 @@ Image($r('app.media.card'))
 ```
 @Builder
 function Tag(text: string) {
-  Text(text)
-    .fontSize(12)
-    .padding({ left: 6, right: 6 })
-    .backgroundColor('#eef')
-    .borderRadius(4)
+ Text(text)
+ .fontSize(12)
+ .padding({ left: 6, right: 6 })
+ .backgroundColor('#eef')
+ .borderRadius(4)
 }
 
 Row() {
-  Tag('新品')
-  Tag('包邮')
-  Text('无线降噪耳机').fontSize(16)
+ Tag('新品')
+ Tag('包邮')
+ Text('无线降噪耳机').fontSize(16)
 }
 ```
 :::
@@ -466,10 +466,10 @@ Row() {
 
 ```
 {
-  "color": [
-    { "name": "page_bg", "value": "#FFFFFF" },
-    { "name": "text_main", "value": "#1A1A1A" }
-  ]
+ "color": [
+ { "name": "page_bg", "value": "#FFFFFF" },
+ { "name": "text_main", "value": "#1A1A1A" }
+ ]
 }
 ```
 :::
@@ -481,10 +481,10 @@ Row() {
 
 ```
 {
-  "color": [
-    { "name": "page_bg", "value": "#121212" },
-    { "name": "text_main", "value": "#E6E6E6" }
-  ]
+ "color": [
+ { "name": "page_bg", "value": "#121212" },
+ { "name": "text_main", "value": "#E6E6E6" }
+ ]
 }
 ```
 :::
@@ -502,14 +502,14 @@ Row() {
 
 ```
 GridRow({
-  breakpoints: { sm: 0, md: 480, lg: 720 }  // 区间以官方文档为准
+ breakpoints: { sm: 0, md: 480, lg: 720 } // 区间以官方文档为准
 }) {
-  GridCol({ span: { sm: 12, md: 6, lg: 4 } }) {
-    CardOne()
-  }
-  GridCol({ span: { sm: 12, md: 6, lg: 4 } }) {
-    CardTwo()
-  }
+ GridCol({ span: { sm: 12, md: 6, lg: 4 } }) {
+ CardOne()
+ }
+ GridCol({ span: { sm: 12, md: 6, lg: 4 } }) {
+ CardTwo()
+ }
 }
 ```
 :::
@@ -518,7 +518,7 @@ GridRow({
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 把你之前写的任意一页的硬编码颜色全部抽到 color.json（base + dark 各一份），然后在模拟器或真机的设置里切换深色模式，来回切几次，检查有没有"钉在原地"的颜色。这一步做完，你的第一个"适配过关"的页面就诞生了。
@@ -538,7 +538,7 @@ GridRow({
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 Profiler 里看"掉帧的那一刻在执行什么函数"，比看平均值有用得多。平均值好看不代表不卡，卡顿是瞬时的，用户滑一下手的那半秒里掉了帧，就是掉了。定位到那个时间点，看它调用了谁。
@@ -563,16 +563,16 @@ Profiler 里看"掉帧的那一刻在执行什么函数"，比看平均值有用
 
 ```
 class HourWeather {
-  time: string = ''
-  temp: number = 0
-  icon: Resource = $r('app.media.ic_sunny')
+ time: string = ''
+ temp: number = 0
+ icon: Resource = $r('app.media.ic_sunny')
 }
 
 class WeatherData {
-  city: string = ''
-  currentTemp: number = 0
-  desc: string = ''
-  hourly: HourWeather[] = []
+ city: string = ''
+ currentTemp: number = 0
+ desc: string = ''
+ hourly: HourWeather[] = []
 }
 ```
 :::
@@ -590,40 +590,40 @@ class WeatherData {
 @Entry
 @Component
 struct WeatherDetail {
-  @State data: WeatherData = new WeatherData()
+ @State data: WeatherData = new WeatherData()
 
-  build() {
-    Column() {
-      // 顶部：城市 + 更新时间
-      Column() {
-        Text(this.data.city).fontSize(24).fontWeight(FontWeight.Bold)
-        Text('刚刚更新').fontSize(12).opacity(0.6)
-      }
+ build() {
+ Column() {
+ // 顶部：城市 + 更新时间
+ Column() {
+ Text(this.data.city).fontSize(24).fontWeight(FontWeight.Bold)
+ Text('刚刚更新').fontSize(12).opacity(0.6)
+ }
 
-      // 当前温度 + 描述
-      Column() {
-        Text(`${this.data.currentTemp}°`).fontSize(72).fontWeight(FontWeight.Thin)
-        Text(this.data.desc).fontSize(16)
-      }
+ // 当前温度 + 描述
+ Column() {
+ Text(`${this.data.currentTemp}°`).fontSize(72).fontWeight(FontWeight.Thin)
+ Text(this.data.desc).fontSize(16)
+ }
 
-      // 小时预报：横向滚动
-      Scroll() {
-        Row({ space: 16 }) {
-          ForEach(this.data.hourly, (h: HourWeather) =&gt; {
-            Column({ space: 4 }) {
-              Text(h.time).fontSize(12)
-              Image(h.icon).width(24).height(24)
-              Text(`${h.temp}°`).fontSize(14)
-            }
-          }, (h: HourWeather) =&gt; h.time)
-        }.padding({ left: 16, right: 16 })
-      }.scrollable(ScrollDirection.Horizontal)
+ // 小时预报：横向滚动
+ Scroll() {
+ Row({ space: 16 }) {
+ ForEach(this.data.hourly, (h: HourWeather) =&gt; {
+ Column({ space: 4 }) {
+ Text(h.time).fontSize(12)
+ Image(h.icon).width(24).height(24)
+ Text(`${h.temp}°`).fontSize(14)
+ }
+ }, (h: HourWeather) =&gt; h.time)
+ }.padding({ left: 16, right: 16 })
+ }.scrollable(ScrollDirection.Horizontal)
 
-      // 七日预报、底部卡片同理往下排
-    }
-    .width('100%').height('100%')
-    .backgroundColor($r('app.color.page_bg'))
-  }
+ // 七日预报、底部卡片同理往下排
+ }
+ .width('100%').height('100%')
+ .backgroundColor($r('app.color.page_bg'))
+ }
 }
 ```
 :::
@@ -636,7 +636,7 @@ struct WeatherDetail {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 先划结构、再定数据、后写代码；先站住骨架、再填肉、最后动效。设计稿翻译的顺序错了，返工是必然的。
@@ -681,10 +681,10 @@ Toast 由系统的 promptAction 提供，一行代码弹一条短消息，几秒
 import { promptAction } from '@kit.ArkUI'
 
 Button('保存')
-  .onClick(() =&gt; {
-    this.save()
-    promptAction.showToast({ message: '已保存' })
-  })
+ .onClick(() =&gt; {
+ this.save()
+ promptAction.showToast({ message: '已保存' })
+ })
 ```
 :::
 
@@ -701,20 +701,20 @@ Button('保存')
 
 ```
 Button('删除')
-  .onClick(() =&gt; {
-    AlertDialog.show({
-      title: '删除确认',
-      message: '删除后无法恢复，确定要删除这条记录吗？',
-      primaryButton: {
-        value: '取消',
-        action: () =&gt; {}
-      },
-      secondaryButton: {
-        value: '删除',
-        action: () =&gt; { this.doDelete() }
-      }
-    })
-  })
+ .onClick(() =&gt; {
+ AlertDialog.show({
+ title: '删除确认',
+ message: '删除后无法恢复，确定要删除这条记录吗？',
+ primaryButton: {
+ value: '取消',
+ action: () =&gt; {}
+ },
+ secondaryButton: {
+ value: '删除',
+ action: () =&gt; { this.doDelete() }
+ }
+ })
+ })
 ```
 :::
 
@@ -731,14 +731,14 @@ Button('删除')
 
 ```
 Image($r('app.media.ic_more'))
-  .onClick(() =&gt; {})
-  .bindMenu([
-    { value: '置顶', action: () =&gt; { this.pin() } },
-    { value: '删除', action: () =&gt; { this.remove() } }
-  ])
+ .onClick(() =&gt; {})
+ .bindMenu([
+ { value: '置顶', action: () =&gt; { this.pin() } },
+ { value: '删除', action: () =&gt; { this.remove() } }
+ ])
 
 Image($r('app.media.ic_help'))
-  .bindPopup(this.showTip, { message: '开启后，离线也能收听已下载的内容' })
+ .bindPopup(this.showTip, { message: '开启后，离线也能收听已下载的内容' })
 ```
 :::
 
@@ -757,19 +757,19 @@ bindPopup 的第一个参数是布尔状态：true 时气泡出现，false 时�
 @State isShow: boolean = false
 
 Column() {
-  Button('分享')
-    .onClick(() =&gt; { this.isShow = true })
+ Button('分享')
+ .onClick(() =&gt; { this.isShow = true })
 }
 .bindSheet($$this.isShow, this.shareSheet(), {
-  height: 320
+ height: 320
 })
 
 @Builder
 shareSheet() {
-  Column() {
-    Text('分享到…').fontSize(16)
-    // 渠道图标行
-  }
+ Column() {
+ Text('分享到…').fontSize(16)
+ // 渠道图标行
+ }
 }
 ```
 :::
@@ -778,7 +778,7 @@ shareSheet() {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 对话框套对话框是设计事故：弹窗里点按钮又弹一个弹窗。用户会迷路。层级最多一层；真有复杂流程，关掉弹窗跳转到正经页面去做。
@@ -797,31 +797,31 @@ shareSheet() {
 @Entry
 @Component
 struct MainPage {
-  @Builder
-  tabBuilder(title: string, icon: Resource) {
-    Column({ space: 2 }) {
-      Image(icon).width(24).height(24)
-      Text(title).fontSize(10)
-    }
-  }
+ @Builder
+ tabBuilder(title: string, icon: Resource) {
+ Column({ space: 2 }) {
+ Image(icon).width(24).height(24)
+ Text(title).fontSize(10)
+ }
+ }
 
-  build() {
-    Tabs({ barPosition: BarPosition.End }) {
-      TabContent() {
-        HomePage()
-      }.tabBar(this.tabBuilder('首页', $r('app.media.ic_home')))
+ build() {
+ Tabs({ barPosition: BarPosition.End }) {
+ TabContent() {
+ HomePage()
+ }.tabBar(this.tabBuilder('首页', $r('app.media.ic_home')))
 
-      TabContent() {
-        DiscoverPage()
-      }.tabBar(this.tabBuilder('发现', $r('app.media.ic_discover')))
+ TabContent() {
+ DiscoverPage()
+ }.tabBar(this.tabBuilder('发现', $r('app.media.ic_discover')))
 
-      TabContent() {
-        ProfilePage()
-      }.tabBar(this.tabBuilder('我的', $r('app.media.ic_me')))
-    }
-    .scrollable(false)
-    .onChange((i: number) =&gt; { this.currentTab = i })
-  }
+ TabContent() {
+ ProfilePage()
+ }.tabBar(this.tabBuilder('我的', $r('app.media.ic_me')))
+ }
+ .scrollable(false)
+ .onChange((i: number) =&gt; { this.currentTab = i })
+ }
 }
 ```
 :::
@@ -836,7 +836,7 @@ scrollable(false) 值得单独说：Tabs 默认支持"内容区左右滑切换�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 底部页签的数量以三到五个为宜。两个显得空，超过五个每个图标太小还难点中。要是功能真的多，把"低频的大杂烩"收进"我的"或用半模态面板承载，别全摊在页签栏上。
@@ -855,46 +855,46 @@ scrollable(false) 值得单独说：Tabs 默认支持"内容区左右滑切换�
 @Entry
 @Component
 struct FeedbackPage {
-  @State title: string = ''
-  @State content: string = ''
-  @State titleError: string = ''
-  @State submitting: boolean = false
+ @State title: string = ''
+ @State content: string = ''
+ @State titleError: string = ''
+ @State submitting: boolean = false
 
-  validateTitle(): boolean {
-    if (this.title.trim().length === 0) {
-      this.titleError = '标题不能为空'
-      return false
-    }
-    this.titleError = ''
-    return true
-  }
+ validateTitle(): boolean {
+ if (this.title.trim().length === 0) {
+ this.titleError = '标题不能为空'
+ return false
+ }
+ this.titleError = ''
+ return true
+ }
 
-  submit() {
-    if (!this.validateTitle()) { return }
-    this.submitting = true
-    this.doSubmit()   // 完成后把 submitting 置回 false
-  }
+ submit() {
+ if (!this.validateTitle()) { return }
+ this.submitting = true
+ this.doSubmit() // 完成后把 submitting 置回 false
+ }
 
-  build() {
-    Column({ space: 12 }) {
-      TextInput({ placeholder: '一句话描述问题' })
-        .onChange((v: string) =&gt; { this.title = v })
-        .onBlur(() =&gt; { this.validateTitle() })
+ build() {
+ Column({ space: 12 }) {
+ TextInput({ placeholder: '一句话描述问题' })
+ .onChange((v: string) =&gt; { this.title = v })
+ .onBlur(() =&gt; { this.validateTitle() })
 
-      if (this.titleError !== '') {
-        Text(this.titleError).fontSize(12).fontColor(Color.Red)
-      }
+ if (this.titleError !== '') {
+ Text(this.titleError).fontSize(12).fontColor(Color.Red)
+ }
 
-      TextArea({ placeholder: '详细说明（选填）' })
-        .height(120)
-        .onChange((v: string) =&gt; { this.content = v })
+ TextArea({ placeholder: '详细说明（选填）' })
+ .height(120)
+ .onChange((v: string) =&gt; { this.content = v })
 
-      Button(this.submitting ? '提交中…' : '提交')
-        .enabled(!this.submitting)
-        .onClick(() =&gt; { this.submit() })
-    }
-    .padding(16)
-  }
+ Button(this.submitting ? '提交中…' : '提交')
+ .enabled(!this.submitting)
+ .onClick(() =&gt; { this.submit() })
+ }
+ .padding(16)
+ }
 }
 ```
 :::
@@ -905,7 +905,7 @@ struct FeedbackPage {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 键盘遮挡是表单页的第二大投诉（第一大是校验时机）。底部按钮紧贴屏幕底的布局，键盘一弹就被盖住。测试表单页时务必在真机上把每个输入框都点一遍，确认输入焦点始终可见；被挡了就查键盘避让配置（本章第十一节症状七）。
@@ -925,7 +925,7 @@ struct FeedbackPage {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 改别人的代码前先确认装饰器代际，V1 体系（@State/@Prop/@Link）的文件里别引入 @Local/@Param 这种 V2 装饰器，同代混用会出各种诡异的"不刷新"。先看清这个文件整体用的是哪一代，沿用同代写法。
@@ -947,7 +947,7 @@ struct FeedbackPage {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 今天就做第一天的练习：新建一个工程，只写一个页面、三行设置项，跑在预览器里。写完对照本章第一节的"布局三件套"，数一数你用了几个容器、几次链式调用，这就是你 ArkUI 手感的第一块积木。
@@ -968,12 +968,12 @@ struct FeedbackPage {
 
 ```
 Row() {
-  Image($r('app.media.ic_wifi')).width(24).height(24)
-  Text('WLAN').fontSize(16).layoutWeight(1).margin({ left: 12 })
-  Toggle({ type: ToggleType.Switch, isOn: this.isOn })
-    .onChange((on: boolean) =&gt; { this.isOn = on })
+ Image($r('app.media.ic_wifi')).width(24).height(24)
+ Text('WLAN').fontSize(16).layoutWeight(1).margin({ left: 12 })
+ Toggle({ type: ToggleType.Switch, isOn: this.isOn })
+ .onChange((on: boolean) =&gt; { this.isOn = on })
 }
-.width('100%')   // 行高不写死：让内容撑开
+.width('100%') // 行高不写死：让内容撑开
 ```
 :::
 
@@ -990,10 +990,10 @@ Row() {
 
 ```
 Image($r('app.media.ic_delete'))
-  .width(24).height(24)
-  .onClick(() =&gt; { this.remove() })
-  .accessibilityText('删除这条记录')
-  .accessibilityDescription('点击后删除当前记录，不可恢复')
+ .width(24).height(24)
+ .onClick(() =&gt; { this.remove() })
+ .accessibilityText('删除这条记录')
+ .accessibilityDescription('点击后删除当前记录，不可恢复')
 ```
 :::
 
@@ -1005,7 +1005,7 @@ Image($r('app.media.ic_delete'))
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 两步体检你手头的项目：一，系统设置把字号调到最大，打开自己写的每一页截图存档；二，想象自己是视障用户，只靠听，你的图标按钮们会念出什么？两个体检都不过关的话，本章就是你的急救手册。
@@ -1032,7 +1032,7 @@ Image($r('app.media.ic_delete'))
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把这十道关存成自己的检查清单文件，每次交付前照着勾。清单的价值不在复杂，在你永远不会在赶工的深夜里漏掉它，人靠不住的时候，靠清单。
@@ -1092,7 +1092,7 @@ Image($r('app.media.ic_delete'))
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把这张表存到随手能翻到的地方——浏览器书签、打印贴墙都行。它的价值不在内容深，在"永远够得着"：术语的第一次恐慌，多数发生在深夜查文档的第三屏。
@@ -1116,7 +1116,7 @@ Image($r('app.media.ic_delete'))
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 界面能力的保鲜方式只有一个：持续写。哪怕每周只花二十分钟把练手页面翻新一次——换个布局、加个动效，手感就不会掉。工具会更新、API 会演进，但"结构、状态、资源"这三层的划分方式，足够你用到这本书再版好几轮。
@@ -1150,7 +1150,7 @@ Image($r('app.media.ic_delete'))
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 布局三件套：（Column/Row/Stack + justifyContent/alignItems），Flexbox 同构
 - 列表 List + ForEach，网格 Grid；layoutWeight 相当于 flex:1

@@ -25,46 +25,46 @@ Git
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מהות</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">כלי בקרת גרסאות (תוכנה)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פלטפורמת אחסון קוד (אתר)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מיקום ריצה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">על המחשב המקומי</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בענן (גישה דרך דפדפן)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אחריות ליבה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תיעוד כל שינוי בקובץ (איך שינו, מי שינה, מתי שינו)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">העלאת מאגרי Git לענן, לנוחות אחסון, הצגה ושיתוף פעולה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">האם צריך רשת</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לא צריך, זמין במצב לא מקוון</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">צריך חיבור לאינטרנט</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שייכות</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תוכנת קוד פתוח, נוצרה על ידי Linus Torvalds (אבי Linux)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מוצר בבעלות מיקרוסופט</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מתחרים דומים</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee (Gitee), Bitbucket</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בקיצור:</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Git מנהל "איך לתעד שינויים", GitHub מנהל "איפה השינויים נמצאים ואיך לשתף פעולה"</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מהות</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">כלי בקרת גרסאות (תוכנה)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פלטפורמת אחסון קוד (אתר)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מיקום ריצה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">על המחשב המקומי</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בענן (גישה דרך דפדפן)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אחריות ליבה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תיעוד כל שינוי בקובץ (איך שינו, מי שינה, מתי שינו)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">העלאת מאגרי Git לענן, לנוחות אחסון, הצגה ושיתוף פעולה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">האם צריך רשת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לא צריך, זמין במצב לא מקוון</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">צריך חיבור לאינטרנט</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שייכות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תוכנת קוד פתוח, נוצרה על ידי Linus Torvalds (אבי Linux)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מוצר בבעלות מיקרוסופט</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מתחרים דומים</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee (Gitee), Bitbucket</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בקיצור:</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Git מנהל "איך לתעד שינויים", GitHub מנהל "איפה השינויים נמצאים ואיך לשתף פעולה"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 . Git הוא כלי, שרץ מקומית; GitHub היא פלטפורמה, שמעלה מאגרי Git לענן, לנוחות שיתוף פעולה והצגה. אתה יכול להשתמש רק ב-Git בלי GitHub (למשל לכתוב קוד לבד עם ניהול גרסאות), אבל כדי להשתמש ב-GitHub חייבים להשתמש ב-Git (כי GitHub מבוססת על Git).<strong>3. מושגי ליבה ופונקציות של GitHub</strong>📁 מושגי יסוד
@@ -118,7 +118,7 @@ Git
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>5. זרימת עבודה בסיסית: ממקומי לענן
+5. זרימת עבודה בסיסית: ממקומי לענן
 
 {class="mt-1"}
 כדי להבין את זרימת העבודה של GitHub, המפתח הוא לזכור את המחזור הזה:
@@ -182,7 +182,7 @@ GitHub היא הזירה המרכזית של תנועת הקוד הפתוח הע
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
+אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - git filter-branch
@@ -192,7 +192,7 @@ GitHub היא הזירה המרכזית של תנועת הקוד הפתוח הע
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Gitee (Gitee)
+Gitee (Gitee)
 
 {class="mt-1"}
 , עם פונקציונליות דומה ומהירות גישה טובה. צוותים רבים מארחים במקביל ב-GitHub וב-Gitee, משלבים בין-לאומיות ומהירות מקומית.<strong>טריק מתקדם: בניית בלוג אישי חינמי עם GitHub Pages</strong>GitHub Pages מאפשר לך לארח אתר סטטי בחינם, בשילוב עם מחוללי אתרים סטטיים כמו Jekyll, Hexo, Hugo, אפשר לבנות בקלות בלוג אישי. כותבים פוסט Markdown, דוחפים למאגר, הבלוג מתעדכן אוטומטית, עם HTTPS ושם מתחם מותאם אישית מובנים. אינספור בלוגרים טכניים בנו כך את הבלוגים שלהם, אפס עלות, ללא פרסומות, שליטה מלאה בגרסאות.
@@ -200,7 +200,7 @@ GitHub היא הזירה המרכזית של תנועת הקוד הפתוח הע
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>9. סיכום: למה כל אחד צריך להכיר את GitHub
+9. סיכום: למה כל אחד צריך להכיר את GitHub
 
 {class="mt-1"}
 GitHub מזמן הפסיקה להיות רק "כלי למתכנתים", היא יותר כמו
@@ -214,7 +214,7 @@ GitHub מזמן הפסיקה להיות רק "כלי למתכנתים", היא �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>צור מאגר ציבורי בשם
+צור מאגר ציבורי בשם
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. hello-github

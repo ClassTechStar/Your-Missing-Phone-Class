@@ -103,7 +103,7 @@ BroadcastReceiver 的现代用法已经收窄：以前 App 们到处监听系统
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：屏幕旋转会"杀死"Activity
+避坑提醒：屏幕旋转会"杀死"Activity
 
 {class="mt-1"}
 新手最经典的翻车现场：App 转一下屏幕，输入框里的字全没了。原因：旋转屏幕默认会销毁并重建 Activity（走一遍 onDestroy → onCreate）。解法：用 <code class="inline">rememberSaveable</code> 保存状态（Compose 里替代 remember），它会在重建时自动把值找回来。第 53、54 章会反复用到。
@@ -127,12 +127,12 @@ Intent（意图）是组件之间通信的"车票"。你想从一个页面跳到
 ```
 // 方式一：显式 Intent——明确指定去哪个页面
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "张三")     // 车上捎带"行李"（数据）
+intent.putExtra("name", "张三") // 车上捎带"行李"（数据）
 startActivity(intent)
 
 // 方式二：隐式 Intent——只说要干什么，系统找谁干
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // 系统会打开浏览器/或让你选
+startActivity(web) // 系统会打开浏览器/或让你选
 ```
 :::
 
@@ -155,22 +155,22 @@ putExtra 捎带的"行李"也有边界要记住：它适合传小数据（字符
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "未知")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "未知")
+ }
 }
 
 // 在页面里跳转：
-navController.navigate("detail/张三")     // 带参数
-navController.popBackStack()              // 返回上一页
+navController.navigate("detail/张三") // 带参数
+navController.popBackStack() // 返回上一页
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：页面多了怎么办？
+小贴士：页面多了怎么办？
 
 {class="mt-1"}
 项目长大后，把所有页面路由集中写在一个文件里（比如 <code class="inline">AppNavGraph.kt</code>），统一管理，别让"跳转到哪"的逻辑散落在各个页面。这是从"能跑"走向"可维护"的第一步。
@@ -200,7 +200,7 @@ ViewModel 值得单独强调，因为它是 Compose 时代的"状态保险箱"�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 框架换了界面层，系统层没换。生命周期不过时，只是入口从回调变成了可组合函数里的副作用 API。
@@ -208,7 +208,7 @@ ViewModel 值得单独强调，因为它是 Compose 时代的"状态保险箱"�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给计数器装上"记忆"
+来动手：给计数器装上"记忆"
 
 {class="mt-1"}
 把第 51 章的计数器改造一下：① 把 remember 换成 rememberSaveable，旋转屏幕验证数字还在；② 加一个"关于"按钮，用 Navigation 跳到第二个页面显示版本号；③ 在两个页面的 onCreate/onPause 里打印日志（Log.d），用 Logcat 观察生命周期调用顺序。做完这三步，生命周期就不再是纸上谈兵。
@@ -253,29 +253,29 @@ WorkManager 还有一个新手盲区：它处理的是"应用的排队任务"，
 ```
 // 1. 定义任务（继承 CoroutineWorker，用协程写异步逻辑）
 class SyncWorker(context: Context, params: WorkerParameters) :
-    CoroutineWorker(context, params) {
-    override suspend fun doWork(): Result {
-        return try {
-            syncData()               // 你的同步逻辑
-            Result.success()
-        } catch (e: Exception) {
-            Result.retry()           // 失败自动重试
-        }
-    }
+ CoroutineWorker(context, params) {
+ override suspend fun doWork(): Result {
+ return try {
+ syncData() // 你的同步逻辑
+ Result.success()
+ } catch (e: Exception) {
+ Result.retry() // 失败自动重试
+ }
+ }
 }
 
 // 2. 定义约束（仅在 Wi-Fi + 充电时执行）
 val constraints = Constraints.Builder()
-    .setRequiredNetworkType(NetworkType.UNMETERED)
-    .setRequiresCharging(true)
-    .build()
+ .setRequiredNetworkType(NetworkType.UNMETERED)
+ .setRequiresCharging(true)
+ .build()
 
 // 3. 入队（周期性：每 6 小时一次）
 val request = PeriodicWorkRequestBuilder&lt;SyncWorker&gt;(6, TimeUnit.HOURS)
-    .setConstraints(constraints)
-    .build()
+ .setConstraints(constraints)
+ .build()
 WorkManager.getInstance(context).enqueueUniquePeriodicWork(
-    "daily_sync", ExistingPeriodicWorkPolicy.KEEP, request)
+ "daily_sync", ExistingPeriodicWorkPolicy.KEEP, request)
 ```
 :::
 
@@ -293,17 +293,17 @@ WorkManager.getInstance(context).enqueueUniquePeriodicWork(
 ```
 // 创建渠道（应用首次启动时做一次即可）
 val channel = NotificationChannel(
-    "music", "音乐播放",
-    NotificationManager.IMPORTANCE_LOW)   // 播放类通知用低优先级，不响不震
+ "music", "音乐播放",
+ NotificationManager.IMPORTANCE_LOW) // 播放类通知用低优先级，不响不震
 notificationManager.createNotificationChannel(channel)
 
 // 发通知（前台 Service 里）
 val notification = NotificationCompat.Builder(context, "music")
-    .setContentTitle("正在播放")
-    .setContentText("歌曲名 - 歌手")
-    .setSmallIcon(R.drawable.ic_music)
-    .setOngoing(true)                      // 常驻，不可滑掉
-    .build()
+ .setContentTitle("正在播放")
+ .setContentText("歌曲名 - 歌手")
+ .setSmallIcon(R.drawable.ic_music)
+ .setOngoing(true) // 常驻，不可滑掉
+ .build()
 ```
 :::
 
@@ -508,16 +508,16 @@ Compose + Navigation 的世界里，这些 Flag 大多数被 Navigation 组件�
 
 ```
 class CounterViewModel : ViewModel() {
-    private val _count = MutableStateFlow(0)
-    val count: StateFlow&lt;Int&gt; = _count.asStateFlow()   // 对外只读
+ private val _count = MutableStateFlow(0)
+ val count: StateFlow&lt;Int&gt; = _count.asStateFlow() // 对外只读
 
-    fun increment() {
-        _count.value += 1
-    }
+ fun increment() {
+ _count.value += 1
+ }
 
-    fun reset() {
-        _count.value = 0
-    }
+ fun reset() {
+ _count.value = 0
+ }
 }
 ```
 :::
@@ -530,17 +530,17 @@ class CounterViewModel : ViewModel() {
 ```
 @Composable
 fun CounterScreen(viewModel: CounterViewModel = viewModel()) {
-    val count by viewModel.count.collectAsStateWithLifecycle()
+ val count by viewModel.count.collectAsStateWithLifecycle()
 
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text("点击了 ${count} 次", style = MaterialTheme.typography.headlineMedium)
-        Button(onClick = { viewModel.increment() }) {
-            Text("点我")
-        }
-        TextButton(onClick = { viewModel.reset() }) {
-            Text("归零")
-        }
-    }
+ Column(horizontalAlignment = Alignment.CenterHorizontally) {
+ Text("点击了 ${count} 次", style = MaterialTheme.typography.headlineMedium)
+ Button(onClick = { viewModel.increment() }) {
+ Text("点我")
+ }
+ TextButton(onClick = { viewModel.reset() }) {
+ Text("归零")
+ }
+ }
 }
 ```
 :::
@@ -608,23 +608,23 @@ fun CounterScreen(viewModel: CounterViewModel = viewModel()) {
 
 ```
 class MyLocationListener(
-    private val context: Context,
-    private val lifecycle: Lifecycle,
-    private val callback: (Location) -&gt; Unit
+ private val context: Context,
+ private val lifecycle: Lifecycle,
+ private val callback: (Location) -&gt; Unit
 ) : DefaultLifecycleObserver {
 
-    override fun onStart(owner: LifecycleOwner) {
-        // 生命周期开始时自动启动监听
-        startListening()
-    }
+ override fun onStart(owner: LifecycleOwner) {
+ // 生命周期开始时自动启动监听
+ startListening()
+ }
 
-    override fun onStop(owner: LifecycleOwner) {
-        // 生命周期结束时自动停止——不需要手动在 Activity 里调
-        stopListening()
-    }
+ override fun onStop(owner: LifecycleOwner) {
+ // 生命周期结束时自动停止——不需要手动在 Activity 里调
+ stopListening()
+ }
 
-    private fun startListening() { /* ... */ }
-    private fun stopListening() { /* ... */ }
+ private fun startListening() { /* ... */ }
+ private fun stopListening() { /* ... */ }
 }
 
 // 在 Activity 里一行挂载：
@@ -651,14 +651,14 @@ Lifecycle 还有两个状态查询能力：lifecycle.currentState（当前状态
 
 ```
 override fun onStop() {
-    super.onStop()
-    // 从 ViewModel 取当前表单内容，写入 Preferences
-    lifecycleScope.launch {
-        preferences.edit()
-            .putString("draft_title", viewModel.title.value)
-            .putString("draft_body", viewModel.body.value)
-            .apply()
-    }
+ super.onStop()
+ // 从 ViewModel 取当前表单内容，写入 Preferences
+ lifecycleScope.launch {
+ preferences.edit()
+ .putString("draft_title", viewModel.title.value)
+ .putString("draft_body", viewModel.body.value)
+ .apply()
+ }
 }
 ```
 :::
@@ -703,37 +703,37 @@ override fun onStop() {
 
 ```
 class CounterViewModelTest {
-    private lateinit var viewModel: CounterViewModel
+ private lateinit var viewModel: CounterViewModel
 
-    @Before
-    fun setup() {
-        viewModel = CounterViewModel()
-    }
+ @Before
+ fun setup() {
+ viewModel = CounterViewModel()
+ }
 
-    @Test
-    fun `初始值为零`() {
-        assertEquals(0, viewModel.count.value)
-    }
+ @Test
+ fun `初始值为零`() {
+ assertEquals(0, viewModel.count.value)
+ }
 
-    @Test
-    fun `点击一次后为一`() {
-        viewModel.increment()
-        assertEquals(1, viewModel.count.value)
-    }
+ @Test
+ fun `点击一次后为一`() {
+ viewModel.increment()
+ assertEquals(1, viewModel.count.value)
+ }
 
-    @Test
-    fun `连续点击三次后为三`() {
-        repeat(3) { viewModel.increment() }
-        assertEquals(3, viewModel.count.value)
-    }
+ @Test
+ fun `连续点击三次后为三`() {
+ repeat(3) { viewModel.increment() }
+ assertEquals(3, viewModel.count.value)
+ }
 
-    @Test
-    fun `重置后归零`() {
-        viewModel.increment()
-        viewModel.increment()
-        viewModel.reset()
-        assertEquals(0, viewModel.count.value)
-    }
+ @Test
+ fun `重置后归零`() {
+ viewModel.increment()
+ viewModel.increment()
+ viewModel.reset()
+ assertEquals(0, viewModel.count.value)
+ }
 }
 ```
 :::
@@ -796,7 +796,7 @@ class CounterViewModelTest {
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 小状态进 SavedStateHandle，大状态进 DataStore，跨页面请求走 Activity Result，返回拦截统一 OnBackPressedDispatcher；提交前开着"不保留活动"折腾一遍，生命周期这关就算真过了。
@@ -808,7 +808,7 @@ class CounterViewModelTest {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 四大组件：Activity（门面）、Service（后台）、BroadcastReceiver（喇叭）、ContentProvider（资料柜）
 - 生命周期六回调：onCreate，onStart，onResume，onPause，onStop，onDestroy

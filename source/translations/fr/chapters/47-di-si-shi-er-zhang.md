@@ -149,31 +149,31 @@ Une tendance importante : le « sentiment d'écart de génération » entre mod�
 ::: div .figure
 ```html
 <svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="0" y="0" width="620" height="290" style="fill:var(--ink-inverse)" rx="8"/>
-      <line x1="70" y1="230" x2="590" y2="230" stroke="var(--muted)" stroke-width="1.5"/>
-      <line x1="70" y1="230" x2="70" y2="20" stroke="var(--muted)" stroke-width="1.5"/>
-      <line x1="70" y1="60" x2="590" y2="60" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="116" x2="590" y2="116" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="173" x2="590" y2="173" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="234" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
-      <text x="62" y="120" font-size="10" fill="var(--muted-2)" text-anchor="end">50</text>
-      <text x="62" y="64" font-size="10" fill="var(--muted-2)" text-anchor="end">100</text>
-      <text x="340" y="262" font-size="10.5" fill="var(--ink-2)" text-anchor="middle">Prix de sortie (yuan/million de tokens)</text>
-      <!-- bars: price -->
-      <rect x="95" y="218" width="60" height="12" fill="var(--accent-book)"/><text x="125" y="212" font-size="9" fill="var(--ink-2)" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">DeepSeek</text>
-      <rect x="195" y="146" width="60" height="84" fill="var(--accent-book)"/><text x="225" y="140" font-size="9" fill="var(--ink-2)" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Qwen</text>
-      <rect x="295" y="182" width="60" height="48" fill="var(--accent-book)"/><text x="325" y="176" font-size="9" fill="var(--ink-2)" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">GLM</text>
-      <rect x="395" y="200" width="60" height="30" fill="var(--accent-book)"/><text x="425" y="194" font-size="9" fill="var(--ink-2)" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Kimi</text>
-      <rect x="495" y="170" width="60" height="60" fill="var(--accent-book)"/><text x="525" y="164" font-size="9" fill="var(--ink-2)" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Doubao</text>
-      <!-- scores -->
-      <circle cx="125" cy="118" r="5" fill="var(--gold)"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
-      <circle cx="225" cy="110" r="5" fill="var(--gold)"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
-      <circle cx="325" cy="105" r="5" fill="var(--gold)"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
-      <circle cx="425" cy="112" r="5" fill="var(--gold)"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
-      <circle cx="525" cy="116" r="5" fill="var(--gold)"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
-      <rect x="90" y="30" width="12" height="12" fill="var(--accent-book)"/><text x="108" y="41" font-size="9.5" fill="var(--ink-2)">Prix de sortie (plus bas = mieux)</text>
-      <circle cx="170" cy="36" r="5" fill="var(--gold)"/><text x="182" y="40" font-size="9.5" fill="var(--ink-2)">Score global (plus haut = mieux)</text>
-    </svg>
+ <rect x="0" y="0" width="620" height="290" style="fill:var(--ink-inverse)" rx="8"/>
+ <line x1="70" y1="230" x2="590" y2="230" stroke="var(--muted)" stroke-width="1.5"/>
+ <line x1="70" y1="230" x2="70" y2="20" stroke="var(--muted)" stroke-width="1.5"/>
+ <line x1="70" y1="60" x2="590" y2="60" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+ <line x1="70" y1="116" x2="590" y2="116" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+ <line x1="70" y1="173" x2="590" y2="173" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+ <text x="62" y="234" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+ <text x="62" y="120" font-size="10" fill="var(--muted-2)" text-anchor="end">50</text>
+ <text x="62" y="64" font-size="10" fill="var(--muted-2)" text-anchor="end">100</text>
+ <text x="340" y="262" font-size="10.5" fill="var(--ink-2)" text-anchor="middle">Prix de sortie (yuan/million de tokens)</text>
+ <!-- bars: price -->
+ <rect x="95" y="218" width="60" height="12" fill="var(--accent-book)"/><text x="125" y="212" font-size="9" fill="var(--ink-2)" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">DeepSeek</text>
+ <rect x="195" y="146" width="60" height="84" fill="var(--accent-book)"/><text x="225" y="140" font-size="9" fill="var(--ink-2)" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Qwen</text>
+ <rect x="295" y="182" width="60" height="48" fill="var(--accent-book)"/><text x="325" y="176" font-size="9" fill="var(--ink-2)" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">GLM</text>
+ <rect x="395" y="200" width="60" height="30" fill="var(--accent-book)"/><text x="425" y="194" font-size="9" fill="var(--ink-2)" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Kimi</text>
+ <rect x="495" y="170" width="60" height="60" fill="var(--accent-book)"/><text x="525" y="164" font-size="9" fill="var(--ink-2)" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Doubao</text>
+ <!-- scores -->
+ <circle cx="125" cy="118" r="5" fill="var(--gold)"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
+ <circle cx="225" cy="110" r="5" fill="var(--gold)"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
+ <circle cx="325" cy="105" r="5" fill="var(--gold)"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
+ <circle cx="425" cy="112" r="5" fill="var(--gold)"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
+ <circle cx="525" cy="116" r="5" fill="var(--gold)"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
+ <rect x="90" y="30" width="12" height="12" fill="var(--accent-book)"/><text x="108" y="41" font-size="9.5" fill="var(--ink-2)">Prix de sortie (plus bas = mieux)</text>
+ <circle cx="170" cy="36" r="5" fill="var(--gold)"/><text x="182" y="40" font-size="9.5" fill="var(--ink-2)">Score global (plus haut = mieux)</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -186,19 +186,19 @@ Une fois les caractéristiques de chaque modèle en tête, comment choisir pour 
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-globe mr-1"></i> Ton projet est-il déployé en Chine ou à l'international ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">En Chine → choisis des modèles nationaux</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">International → modèles étrangers possibles</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Ton projet est-il déployé en Chine ou à l'international ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">En Chine → choisis des modèles nationaux</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">International → modèles étrangers possibles</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-laptop-code mr-1"></i> La tâche principale est-elle de coder ou autre chose ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Coder → Claude ou DeepSeek</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">Autre chose → continue l'évaluation</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> La tâche principale est-elle de coder ou autre chose ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Coder → Claude ou DeepSeek</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">Autre chose → continue l'évaluation</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-book mr-1"></i> Besoin d'un contexte très long (&gt;500 000 tokens) ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Oui → Gemini ou Kimi</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">Pas besoin → continue l'évaluation</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Besoin d'un contexte très long (&gt;500 000 tokens) ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Oui → Gemini ou Kimi</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">Pas besoin → continue l'évaluation</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-coins mr-1"></i> Budget serré ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Serré → DeepSeek ou Qwen-turbo</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Peu sensible → GPT-5.6 ou Claude</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Budget serré ?</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Serré → DeepSeek ou Qwen-turbo</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">Peu sensible → GPT-5.6 ou Claude</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -269,17 +269,17 @@ import os
 
 # 1. créer le client (la clé API se lit dans la variable d'environnement)
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 
 # 2. envoyer la requête
 response = client.chat.completions.create(
-    model="deepseek-chat",  # modèle choisi
-    messages=[
-        {"role": "system", "content": "Tu es un assistant de programmation Python."},
-        {"role": "user", "content": "Écris une fonction de tri rapide."}
-    ]
+ model="deepseek-chat", # modèle choisi
+ messages=[
+ {"role": "system", "content": "Tu es un assistant de programmation Python."},
+ {"role": "user", "content": "Écris une fonction de tri rapide."}
+ ]
 )
 
 # 3. récupérer la réponse
@@ -304,29 +304,29 @@ Voici les différences de code pour passer à un autre modèle — remarque qu'i
 ```
 # DeepSeek
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 # model="deepseek-chat"
 
 # Qwen (plateforme Bailian)
 client = OpenAI(
-    api_key=os.environ.get("DASHSCOPE_API_KEY"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+ api_key=os.environ.get("DASHSCOPE_API_KEY"),
+ base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 )
 # model="qwen-plus"
 
 # GLM de Zhipu
 client = OpenAI(
-    api_key=os.environ.get("GLM_API_KEY"),
-    base_url="https://open.bigmodel.cn/api/paas/v4"
+ api_key=os.environ.get("GLM_API_KEY"),
+ base_url="https://open.bigmodel.cn/api/paas/v4"
 )
 # model="glm-4"
 
 # OpenAI GPT
 client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY"),
-    # le base_url par défaut suffit
+ api_key=os.environ.get("OPENAI_API_KEY"),
+ # le base_url par défaut suffit
 )
 # model="gpt-5.6-terra"
 ```
@@ -344,17 +344,17 @@ En pratique, tu ne veux généralement pas attendre que l'IA ait tout écrit ava
 ```
 # Réponse en streaming : sortie mot à mot
 stream = client.chat.completions.create(
-    model="deepseek-chat",
-    messages=[
-        {"role": "user", "content": "Écris un tutoriel du tri à bulles en Python"}
-    ],
-    stream=True  # active le streaming
+ model="deepseek-chat",
+ messages=[
+ {"role": "user", "content": "Écris un tutoriel du tri à bulles en Python"}
+ ],
+ stream=True # active le streaming
 )
 
 # reçoit et affiche par blocs
 for chunk in stream:
-    if chunk.choices[0].delta.content is not None:
-        print(chunk.choices[0].delta.content, end="", flush=True)
+ if chunk.choices[0].delta.content is not None:
+ print(chunk.choices[0].delta.content, end="", flush=True)
 # la sortie s'affichera lettre par lettre, comme une machine à écrire
 ```
 :::
@@ -445,69 +445,69 @@ from openai import OpenAI
 
 # 1. Configuration (la clé API se lit dans la variable d'environnement, jamais en dur)
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 
 def summarize(text: str, max_length: int = 200) -> dict:
-    """Génère un résumé du texte
+ """Génère un résumé du texte
 
-    Args:
-        text: texte source à résumer
-        max_length: longueur maximale du résumé (en tokens)
+ Args:
+ text: texte source à résumer
+ max_length: longueur maximale du résumé (en tokens)
 
-    Returns:
-        dict: inclut le résumé et les infos de consommation de tokens
-    """
-    try:
-        response = client.chat.completions.create(
-            model="deepseek-chat",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "Tu es un générateur de résumés."
-                               "Résume le texte de l'utilisateur en un langage clair et concis."
-                               "Le résumé ne dépasse pas 3 phrases."
-                },
-                {
-                    "role": "user",
-                    "content": f"Résume le texte suivant :\n\n{text}"
-                }
-            ],
-            max_tokens=max_length,  # limite la longueur de la sortie
-            temperature=0.3  # température basse = plus stable
-        )
+ Returns:
+ dict: inclut le résumé et les infos de consommation de tokens
+ """
+ try:
+ response = client.chat.completions.create(
+ model="deepseek-chat",
+ messages=[
+ {
+ "role": "system",
+ "content": "Tu es un générateur de résumés."
+ "Résume le texte de l'utilisateur en un langage clair et concis."
+ "Le résumé ne dépasse pas 3 phrases."
+ },
+ {
+ "role": "user",
+ "content": f"Résume le texte suivant :\n\n{text}"
+ }
+ ],
+ max_tokens=max_length, # limite la longueur de la sortie
+ temperature=0.3 # température basse = plus stable
+ )
 
-        return {
-            "success": True,
-            "summary": response.choices[0].message.content,
-            "input_tokens": response.usage.prompt_tokens,
-            "output_tokens": response.usage.completion_tokens,
-            "total_tokens": response.usage.total_tokens
-        }
+ return {
+ "success": True,
+ "summary": response.choices[0].message.content,
+ "input_tokens": response.usage.prompt_tokens,
+ "output_tokens": response.usage.completion_tokens,
+ "total_tokens": response.usage.total_tokens
+ }
 
-    except Exception as e:
-        return {
-            "success": False,
-            "error": str(e)
-        }
+ except Exception as e:
+ return {
+ "success": False,
+ "error": str(e)
+ }
 
 # 2. exemple d'utilisation
 if __name__ == "__main__":
-    long_text = """
-    (colle ici un long texte...)
-    """
+ long_text = """
+ (colle ici un long texte...)
+ """
 
-    result = summarize(long_text)
+ result = summarize(long_text)
 
-    if result["success"]:
-        print(f"Résumé : {result['summary']}")
-        print(f"Tokens consommés : {result['total_tokens']}")
-        # Coût estimé : DeepSeek V4 Flash
-        cost = result['total_tokens'] * 0.000004  # ≈ 0,4 centime pour 1000 tokens
-        print(f"Coût estimé : {cost:.4f} yuan")
-    else:
-        print(f"Erreur : {result['error']}")
+ if result["success"]:
+ print(f"Résumé : {result['summary']}")
+ print(f"Tokens consommés : {result['total_tokens']}")
+ # Coût estimé : DeepSeek V4 Flash
+ cost = result['total_tokens'] * 0.000004 # ≈ 0,4 centime pour 1000 tokens
+ print(f"Coût estimé : {cost:.4f} yuan")
+ else:
+ print(f"Erreur : {result['error']}")
 ```
 :::
 

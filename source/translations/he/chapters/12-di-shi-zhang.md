@@ -64,7 +64,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>כל מי שמבקש ממך לצלם צילום מסך של קוד התשלום שלך – הוא רמאי.
+כל מי שמבקש ממך לצלם צילום מסך של קוד התשלום שלך – הוא רמאי.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - אל תלחץ על קישורים לא מוכרים, במיוחד הודעות כמו "פג תוקף ETC" או "כרטיס ביטוח לאומי הושבת".
@@ -75,7 +75,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>מצא את פונקציית "מנעול אבטחה" והפעל אותה.
+מצא את פונקציית "מנעול אבטחה" והפעל אותה.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. בדוק את רשימת "תשלום ללא סיסמה/חיוב אוטומטי" וכבה שירותים שאינך צריך עוד.

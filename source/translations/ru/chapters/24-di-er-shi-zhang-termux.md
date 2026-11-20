@@ -45,44 +45,44 @@ Termux <strong>встроенно включает только Bash</strong> в
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Название плагина</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Описание функции</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Предоставляет программам командной строки доступ к функциям Android API</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Позволяет запускать скрипты при загрузке устройства</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Предоставляет плавающее окно терминала</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Включает цветовые схемы и настройку шрифтов для терминала</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Интегрирует скрипты Termux с приложением автоматизации Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Позволяет запускать скрипты из виджета на главном экране</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Название плагина</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Описание функции</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Предоставляет программам командной строки доступ к функциям Android API</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Позволяет запускать скрипты при загрузке устройства</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Предоставляет плавающее окно терминала</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Включает цветовые схемы и настройку шрифтов для терминала</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Интегрирует скрипты Termux с приложением автоматизации Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Позволяет запускать скрипты из виджета на главном экране</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Важное замечание
+Важное замечание
 
 {class="mt-1"}
 Termux и его плагины должны быть установлены из одного и того же источника, поскольку они используют общий sharedUserId. Смешивание установки из разных источников (например, F-Droid и GitHub) приведёт к ошибке установки.
@@ -127,7 +127,7 @@ Termux и его плагины должны быть установлены и�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Резюме
+Резюме
 
 {class="mt-1"}
 Termux принёс мощный опыт Linux-терминала на устройства Android, превратив телефон в портативный инструмент разработки и обучения. Разработчики, системные администраторы и технические энтузиасты могут использовать Termux для полноценного опыта командной строки на мобильном устройстве, реализуя концепцию «Linux в кармане».
@@ -135,7 +135,7 @@ Termux принёс мощный опыт Linux-терминала на устр
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Попробуйте: выполните первую Linux-команду на телефоне
+Попробуйте: выполните первую Linux-команду на телефоне
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Скачайте и установите Termux с F-Droid, при первом запуске дождитесь завершения инициализации.

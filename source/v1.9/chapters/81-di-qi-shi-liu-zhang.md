@@ -48,34 +48,34 @@ import { relationalStore } from '@kit.ArkData'
 import { Context } from '@kit.AbilityKit'
 
 export interface Todo {
-  id: number
-  title: string
-  done: boolean
+ id: number
+ title: string
+ done: boolean
 }
 
 export class TodoDb {
-  private rdb: relationalStore.RdbStore | null = null
+ private rdb: relationalStore.RdbStore | null = null
 
-  async init(context: Context) {
-    this.rdb = await relationalStore.getRdbStore(context, {
-      name: 'todo.db',
-      securityLevel: relationalStore.SecurityLevel.S1
-    })
-    await this.rdb.executeSql(
-      'CREATE TABLE IF NOT EXISTS todo ' +
-      '(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, done INTEGER DEFAULT 0)')
-  }
+ async init(context: Context) {
+ this.rdb = await relationalStore.getRdbStore(context, {
+ name: 'todo.db',
+ securityLevel: relationalStore.SecurityLevel.S1
+ })
+ await this.rdb.executeSql(
+ 'CREATE TABLE IF NOT EXISTS todo ' +
+ '(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, done INTEGER DEFAULT 0)')
+ }
 
-  async list(): Promise&lt;Todo[]&gt; {
-    let out: Todo[] = []
-    let rs = await this.rdb?.querySql(
-      'SELECT id, title, done FROM todo ORDER BY id DESC')
-    while (rs?.goToNextRow()) {
-      out.push({
-        id: rs.getLong(rs.getColumnIndex('id')),
-        title: rs.getString(rs.getColumnIndex('title')),
-        done: rs.getLong(rs.getColumnIndex('done')) === 1
-      })
+ async list(): Promise&lt;Todo[]&gt; {
+ let out: Todo[] = []
+ let rs = await this.rdb?.querySql(
+ 'SELECT id, title, done FROM todo ORDER BY id DESC')
+ while (rs?.goToNextRow()) {
+ out.push({
+ id: rs.getLong(rs.getColumnIndex('id')),
+ title: rs.getString(rs.getColumnIndex('title')),
+ done: rs.getLong(rs.getColumnIndex('done')) === 1
+ })
 ```
 :::
 
@@ -102,43 +102,43 @@ import { Todo, TodoDb } from '../model/TodoModel'
 @Entry
 @Component
 struct TodoPage {
-  @State todos: Todo[] = []
-  @State input: string = ''
-  private db: TodoDb = new TodoDb()
+ @State todos: Todo[] = []
+ @State input: string = ''
+ private db: TodoDb = new TodoDb()
 
-  aboutToAppear() {
-    this.db.init(this.getUIContext().getHostContext()).then(async () =&gt; {
-      this.todos = await this.db.list()
-    })
-  }
+ aboutToAppear() {
+ this.db.init(this.getUIContext().getHostContext()).then(async () =&gt; {
+ this.todos = await this.db.list()
+ })
+ }
 
-  build() {
-    Column() {
-      List({ space: 8 }) {
-        ForEach(this.todos, (t: Todo) =&gt; {
-          ListItem() {
-            Row() {
-              Checkbox().select(t.done)
-                .onChange((v: boolean) =&gt; {
-                  this.db.toggle(t.id, v).then(async () =&gt; {
-                    this.todos = await this.db.list()
-                  })
-                })
-              Text(t.title)
-                .decoration({
-                  type: t.done ? TextDecorationType.LineThrough
-                               : TextDecorationType.None
-                })
-                .layoutWeight(1)
-            }
-            .width('100%').padding(12)
-          }
-        }, (t: Todo) =&gt; t.id.toString())
-      }
-      .layoutWeight(1)
-    }
-    .height('100%')
-  }
+ build() {
+ Column() {
+ List({ space: 8 }) {
+ ForEach(this.todos, (t: Todo) =&gt; {
+ ListItem() {
+ Row() {
+ Checkbox().select(t.done)
+ .onChange((v: boolean) =&gt; {
+ this.db.toggle(t.id, v).then(async () =&gt; {
+ this.todos = await this.db.list()
+ })
+ })
+ Text(t.title)
+ .decoration({
+ type: t.done ? TextDecorationType.LineThrough
+ : TextDecorationType.None
+ })
+ .layoutWeight(1)
+ }
+ .width('100%').padding(12)
+ }
+ }, (t: Todo) =&gt; t.id.toString())
+ }
+ .layoutWeight(1)
+ }
+ .height('100%')
+ }
 }
 ```
 :::
@@ -155,7 +155,7 @@ ForEach 有三个参数：数据源、渲染函数、键生成器。前两个好
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：列表"玄学问题"，七成出在键上
+避坑提醒：列表"玄学问题"，七成出在键上
 
 {class="mt-1"}
 勾选状态莫名串行、删除后动画乱跳、偶发两次 onChange，遇到这类说不清道不明的列表问题，先别怀疑人生，回头检查键生成器。把它换成唯一的 id，这类玄学问题大半当场消失。这一条值回本章票价。
@@ -172,17 +172,17 @@ ForEach 有三个参数：数据源、渲染函数、键生成器。前两个好
 
 ```
 if (this.todos.length === 0) {
-  Column() {
-    Text('☑').fontSize(48).opacity(0.4)
-    Text('还没有待办，添加第一条吧').margin({ top: 8 })
-    Button('添加待办').margin({ top: 16 })
-      .onClick(() =&gt; { this.showInput() })
-  }
-  .justifyContent(FlexAlign.Center)
-  .layoutWeight(1)
-  .width('100%')
+ Column() {
+ Text('☑').fontSize(48).opacity(0.4)
+ Text('还没有待办，添加第一条吧').margin({ top: 8 })
+ Button('添加待办').margin({ top: 16 })
+ .onClick(() =&gt; { this.showInput() })
+ }
+ .justifyContent(FlexAlign.Center)
+ .layoutWeight(1)
+ .width('100%')
 } else {
-  List({ space: 8 }) { /* 前面的列表 */ }.layoutWeight(1)
+ List({ space: 8 }) { /* 前面的列表 */ }.layoutWeight(1)
 }
 ```
 :::
@@ -208,23 +208,23 @@ Checkbox 上有两个方向的数据流：<code class="inline">.select(t.done)</
 
 ```
 ListItem() {
-  // ……行内容：Checkbox + Text……
+ // ……行内容：Checkbox + Text……
 }
 .swipeAction({
-  end: {
-    builder: () =&gt; {
-      Text('删除')
-        .fontColor(Color.White)
-        .backgroundColor(Color.Red)
-        .borderRadius(8)
-        .padding({ left: 14, right: 14 })
-        .onClick(() =&gt; {
-          this.db.remove(t.id).then(async () =&gt; {
-            this.todos = await this.db.list()
-          })
-        })
-    }
-  }
+ end: {
+ builder: () =&gt; {
+ Text('删除')
+ .fontColor(Color.White)
+ .backgroundColor(Color.Red)
+ .borderRadius(8)
+ .padding({ left: 14, right: 14 })
+ .onClick(() =&gt; {
+ this.db.remove(t.id).then(async () =&gt; {
+ this.todos = await this.db.list()
+ })
+ })
+ }
+ }
 })
 ```
 :::
@@ -298,35 +298,35 @@ ArkUI 里做输入弹窗有好几条路：AlertDialog 放自定义内容、Custo
 ```
 @CustomDialog
 struct TodoInputDialog {
-  controller?: CustomDialogController
-  onConfirm: (title: string) =&gt; void = () =&gt; {}
-  @State text: string = ''
+ controller?: CustomDialogController
+ onConfirm: (title: string) =&gt; void = () =&gt; {}
+ @State text: string = ''
 
-  build() {
-    Column() {
-      Text('添加待办').fontSize(18).fontWeight(FontWeight.Bold)
-      TextInput({ placeholder: '要做什么？' })
-        .margin({ top: 12 })
-        .onChange((v: string) =&gt; { this.text = v })
-        .onSubmit(() =&gt; { this.confirm() })
-      Row({ space: 12 }) {
-        Button('取消')
-          .backgroundColor(Color.Gray)
-          .onClick(() =&gt; { this.controller?.close() })
-        Button('添加')
-          .onClick(() =&gt; { this.confirm() })
-      }
-      .margin({ top: 16 })
-      .justifyContent(FlexAlign.End)
-      .width('100%')
-    }
-    .padding(16)
-  }
+ build() {
+ Column() {
+ Text('添加待办').fontSize(18).fontWeight(FontWeight.Bold)
+ TextInput({ placeholder: '要做什么？' })
+ .margin({ top: 12 })
+ .onChange((v: string) =&gt; { this.text = v })
+ .onSubmit(() =&gt; { this.confirm() })
+ Row({ space: 12 }) {
+ Button('取消')
+ .backgroundColor(Color.Gray)
+ .onClick(() =&gt; { this.controller?.close() })
+ Button('添加')
+ .onClick(() =&gt; { this.confirm() })
+ }
+ .margin({ top: 16 })
+ .justifyContent(FlexAlign.End)
+ .width('100%')
+ }
+ .padding(16)
+ }
 
-  confirm() {
-    this.onConfirm(this.text)
-    this.controller?.close()
-  }
+ confirm() {
+ this.onConfirm(this.text)
+ this.controller?.close()
+ }
 }
 ```
 :::
@@ -340,13 +340,13 @@ struct TodoInputDialog {
 
 ```
 dialogController: CustomDialogController = new CustomDialogController({
-  builder: TodoInputDialog({
-    onConfirm: (title: string) =&gt; { this.addTodo(title) }
-  })
+ builder: TodoInputDialog({
+ onConfirm: (title: string) =&gt; { this.addTodo(title) }
+ })
 })
 
 showInput() {
-  this.dialogController.open()
+ this.dialogController.open()
 }
 ```
 :::
@@ -364,17 +364,17 @@ showInput() {
 
 ```
 async addTodo(raw: string) {
-  const title: string = raw.trim()
-  if (title === '') {
-    this.toast('先写点内容再添加吧')
-    return
-  }
-  if (title.length &gt; 50) {          // 阈值是示例，自己定
-    this.toast('标题太长了，拆成几条更清爽')
-    return
-  }
-  await this.db.add(title)
-  this.todos = await this.db.list()
+ const title: string = raw.trim()
+ if (title === '') {
+ this.toast('先写点内容再添加吧')
+ return
+ }
+ if (title.length &gt; 50) { // 阈值是示例，自己定
+ this.toast('标题太长了，拆成几条更清爽')
+ return
+ }
+ await this.db.add(title)
+ this.todos = await this.db.list()
 }
 ```
 :::
@@ -407,7 +407,7 @@ TextInput 的 onSubmit 已经把回车接成了提交，但软键盘还有几个
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：输入框的两个"灵异现象"
+避坑提醒：输入框的两个"灵异现象"
 
 {class="mt-1"}
 现象一：光标莫名跳动、文字忽长忽短——多半是 onChange 里回写 @State 再绑回 text 属性引发的重绘冲突，遇到时试着让输入框自己持有文字，提交时再取值。现象二：弹窗弹出后输入框拉不起键盘——检查弹窗是不是在页面还没完全就绪时就打开了，把 open() 挪到点击事件里而不是生命周期回调里。这两类现象随版本表现不一，以实机为准。
@@ -428,7 +428,7 @@ TextInput 的 onSubmit 已经把回车接成了提交，但软键盘还有几个
 
 ```
 ListItem() {
-  // ……行内容……
+ // ……行内容……
 }
 .transition(TransitionEffect.OPACITY.animation({ duration: 250 }))
 ```
@@ -460,21 +460,21 @@ ListItem() {
 
 ```
 confirmClearDone() {
-  this.getUIContext().showAlertDialog({
-    message: '把已完成的所有待办清掉？',
-    primaryButton: {
-      value: '取消',
-      action: () =&gt; {}
-    },
-    secondaryButton: {
-      value: '清掉',
-      action: () =&gt; {
-        this.db.removeDone().then(async () =&gt; {
-          this.todos = await this.db.list()
-        })
-      }
-    }
-  })
+ this.getUIContext().showAlertDialog({
+ message: '把已完成的所有待办清掉？',
+ primaryButton: {
+ value: '取消',
+ action: () =&gt; {}
+ },
+ secondaryButton: {
+ value: '清掉',
+ action: () =&gt; {
+ this.db.removeDone().then(async () =&gt; {
+ this.todos = await this.db.list()
+ })
+ }
+ }
+ })
 }
 ```
 :::
@@ -490,14 +490,14 @@ confirmClearDone() {
 
 ```
 async removeDone() {
-  await this.rdb?.executeSql('DELETE FROM todo WHERE done = 1')
+ await this.rdb?.executeSql('DELETE FROM todo WHERE done = 1')
 }
 
 async removeMany(ids: number[]) {
-  // 逐条删也可以，量小没毛病；想走一条 SQL 就拼占位符
-  for (const id of ids) {
-    await this.rdb?.executeSql('DELETE FROM todo WHERE id = ?', [id])
-  }
+ // 逐条删也可以，量小没毛病；想走一条 SQL 就拼占位符
+ for (const id of ids) {
+ await this.rdb?.executeSql('DELETE FROM todo WHERE id = ?', [id])
+ }
 }
 ```
 :::
@@ -508,7 +508,7 @@ async removeMany(ids: number[]) {
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：动画和确认框，都先问"用户此刻在想什么"
+小贴士：动画和确认框，都先问"用户此刻在想什么"
 
 {class="mt-1"}
 加任何效果前先代入用户：勾选完成时他心里是"干掉一件事"的爽感，动画就顺着这个方向做：删除线扫过、行下沉变灰；删除出错时他心里是"完了删错了"，这时候要给的不是动画，是一条退路。效果不是越多越好，是对得上情绪才好。
@@ -529,11 +529,11 @@ async removeMany(ids: number[]) {
 
 ```
 Row() {
-  // ……行内容……
+ // ……行内容……
 }
 .gesture(
-  LongPressGesture()
-    .onAction(() =&gt; { this.showEdit(t) })
+ LongPressGesture()
+ .onAction(() =&gt; { this.showEdit(t) })
 )
 ```
 :::
@@ -547,8 +547,8 @@ showEdit 里复用第三节的 TodoInputDialog，但有一个差别：编辑要�
 
 ```
 async update(id: number, title: string) {
-  await this.rdb?.executeSql(
-    'UPDATE todo SET title = ? WHERE id = ?', [title, id])
+ await this.rdb?.executeSql(
+ 'UPDATE todo SET title = ? WHERE id = ?', [title, id])
 }
 ```
 :::
@@ -570,22 +570,22 @@ async update(id: number, title: string) {
 
 ```
 async init(context: Context) {
-  this.rdb = await relationalStore.getRdbStore(context, {
-    name: 'todo.db',
-    securityLevel: relationalStore.SecurityLevel.S1
-  })
-  await this.rdb.executeSql(
-    'CREATE TABLE IF NOT EXISTS todo ' +
-    '(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, ' +
-    'done INTEGER DEFAULT 0)')
-  // 迁移：给老库补 priority 列。生产做法是先查表结构确认缺列再补，
-  // 简化版直接试着加，列已存在会报错，捕获后忽略即可
-  try {
-    await this.rdb.executeSql(
-      'ALTER TABLE todo ADD COLUMN priority INTEGER DEFAULT 0')
-  } catch (e) {
-    // 列已经存在，说明是新版库，跳过
-  }
+ this.rdb = await relationalStore.getRdbStore(context, {
+ name: 'todo.db',
+ securityLevel: relationalStore.SecurityLevel.S1
+ })
+ await this.rdb.executeSql(
+ 'CREATE TABLE IF NOT EXISTS todo ' +
+ '(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, ' +
+ 'done INTEGER DEFAULT 0)')
+ // 迁移：给老库补 priority 列。生产做法是先查表结构确认缺列再补，
+ // 简化版直接试着加，列已存在会报错，捕获后忽略即可
+ try {
+ await this.rdb.executeSql(
+ 'ALTER TABLE todo ADD COLUMN priority INTEGER DEFAULT 0')
+ } catch (e) {
+ // 列已经存在，说明是新版库，跳过
+ }
 }
 ```
 :::
@@ -596,7 +596,7 @@ async init(context: Context) {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：把编辑做成完整闭环
+来动手：把编辑做成完整闭环
 
 {class="mt-1"}
 照本节路线动手：长按行弹出复用的输入对话框，预填原标题，确认后走 update 落库、回查刷新。做完顺手用命令行过一遍流程：<code class="inline">hdc list targets</code> 看设备、<code class="inline">hdc install</code> 装包、<code class="inline">hdc shell aa start</code> 拉起应用：命令行比在 IDE 里来回点快得多。最后故意改模型再跑一次老库（先装旧版造数据，再装新版），亲眼看看"no such column"长什么样，你对迁移的理解才算长在身上。
@@ -617,21 +617,21 @@ async init(context: Context) {
 
 ```
 export interface TodoStat {
-  total: number
-  done: number
+ total: number
+ done: number
 }
 
 async stat(): Promise&lt;TodoStat&gt; {
-  let out: TodoStat = { total: 0, done: 0 }
-  let rs = await this.rdb?.querySql(
-    'SELECT COUNT(*) AS total, SUM(done) AS done FROM todo')
-  if (rs?.goToNextRow()) {
-    out.total = rs.getLong(rs.getColumnIndex('total'))
-    let d = rs.getLong(rs.getColumnIndex('done'))
-    out.done = d === null ? 0 : d   // 空表时 SUM 返回空值
-  }
-  rs?.close()
-  return out
+ let out: TodoStat = { total: 0, done: 0 }
+ let rs = await this.rdb?.querySql(
+ 'SELECT COUNT(*) AS total, SUM(done) AS done FROM todo')
+ if (rs?.goToNextRow()) {
+ out.total = rs.getLong(rs.getColumnIndex('total'))
+ let d = rs.getLong(rs.getColumnIndex('done'))
+ out.done = d === null ? 0 : d // 空表时 SUM 返回空值
+ }
+ rs?.close()
+ return out
 }
 ```
 :::
@@ -645,17 +645,17 @@ async stat(): Promise&lt;TodoStat&gt; {
 
 ```
 Row({ space: 12 }) {
-  Progress({ value: this.stat.done, total: this.stat.total || 1,
-             type: ProgressType.Ring })
-    .width(44).height(44)
-  Column() {
-    Text(`${this.stat.done}/${this.stat.total} 已完成`)
-      .fontSize(16)
-    Text(this.stat.total &gt; 0 &amp;&amp; this.stat.done === this.stat.total
-         ? '今天全清完啦' : '再接再厉')
-      .fontSize(13).opacity(0.6)
-  }
-  .alignItems(HorizontalAlign.Start)
+ Progress({ value: this.stat.done, total: this.stat.total || 1,
+ type: ProgressType.Ring })
+ .width(44).height(44)
+ Column() {
+ Text(`${this.stat.done}/${this.stat.total} 已完成`)
+ .fontSize(16)
+ Text(this.stat.total &gt; 0 &amp;&amp; this.stat.done === this.stat.total
+ ? '今天全清完啦' : '再接再厉')
+ .fontSize(13).opacity(0.6)
+ }
+ .alignItems(HorizontalAlign.Start)
 }
 .width('100%')
 .padding(12)
@@ -728,7 +728,7 @@ total 为 0 时给分母兜个底，避免除零类的显示异常；全部完�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：发给自己用之前的五分钟自查
+小贴士：发给自己用之前的五分钟自查
 
 {class="mt-1"}
 字号调到最大滚一遍；切深色模式截两张图对比；开读屏闭眼走一遍主流程；飞一次飞行模式确认本地功能照常（这应用本来就该离线能用）；杀掉应用重开，确认数据还在。五分钟，五项全过，你就可以把它当真应用用了。
@@ -997,7 +997,7 @@ total 为 0 时给分母兜个底，避免除零类的显示异常；全部完�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢：先跑通闭环，再换好零件
+一句话记牢：先跑通闭环，再换好零件
 
 {class="mt-1"}
 新项目别追求一步到位：先用最笨的办法把"输入 → 状态 → 界面 → 存储"闭环跑通，然后一次换一个零件：弹窗换掉行内输入、滑动换掉行内按钮、资源色换掉写死的颜色。每一刀都小到随时能停，每一步应用都保持能用。这就是本章的全部章法。
@@ -1005,7 +1005,7 @@ total 为 0 时给分母兜个底，避免除零类的显示异常；全部完�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 数据层独立成类：init/list/add/toggle/remove 五个方法覆盖全操作
 - @State todos 是唯一界面数据源，改库后统一回查刷新

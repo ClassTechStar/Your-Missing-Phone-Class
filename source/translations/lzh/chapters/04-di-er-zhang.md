@@ -86,119 +86,119 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">格式</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">類</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">類</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特性</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有損壓縮，體小，兼容性極佳。最通用之音頻格式。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意音樂播放器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無損壓縮，音質與CD同，體比MP3大三至五倍。發燒友之首擇。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音樂播放器/專業播放App</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無壓縮之原始音頻，音質至佳而體巨。專業錄音常用。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音樂播放器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AAC之編碼，同碼率下音質勝於MP3。蘋果生態常用。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/音樂播放器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">視頻</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用之視頻封裝格式，兼容性極佳。手機錄視頻之默認格式。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意視頻播放器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">視頻</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開源之封裝格式，支持多音軌、多字幕。電影資源常用。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文檔</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel電子表格。XLSX乃壓縮格式。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">演示</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel電子表格。XLSX乃壓縮格式。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">表格</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel電子表格。XLSX乃壓縮格式。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文檔</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨平臺之格式，排版固定不可編輯。合同、論文、電子書常用。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壓縮</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用之壓縮格式，跨平臺兼容性佳。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系統自帶/解壓App</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壓縮</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壓縮率高於ZIP，然須專用軟件解壓。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解壓App</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">鏡像</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光盤鏡像之文件，完整複製光盤之內容。系統安裝包常用。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解壓App/虛擬光驅</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">網頁</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">網頁之文件，用瀏覽器開之。所存之網頁常用此格式。</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">格式</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">類</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">類</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特性</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圖</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意圖覽器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有損壓縮，體小，兼容性極佳。最通用之音頻格式。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意音樂播放器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無損壓縮，音質與CD同，體比MP3大三至五倍。發燒友之首擇。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音樂播放器/專業播放App</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無壓縮之原始音頻，音質至佳而體巨。專業錄音常用。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音樂播放器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AAC之編碼，同碼率下音質勝於MP3。蘋果生態常用。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/音樂播放器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">視頻</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用之視頻封裝格式，兼容性極佳。手機錄視頻之默認格式。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相冊/任意視頻播放器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">視頻</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開源之封裝格式，支持多音軌、多字幕。電影資源常用。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文檔</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel電子表格。XLSX乃壓縮格式。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">演示</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel電子表格。XLSX乃壓縮格式。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">表格</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel電子表格。XLSX乃壓縮格式。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文檔</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨平臺之格式，排版固定不可編輯。合同、論文、電子書常用。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壓縮</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用之壓縮格式，跨平臺兼容性佳。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系統自帶/解壓App</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壓縮</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壓縮率高於ZIP，然須專用軟件解壓。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解壓App</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">鏡像</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光盤鏡像之文件，完整複製光盤之內容。系統安裝包常用。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解壓App/虛擬光驅</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">網頁</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">網頁之文件，用瀏覽器開之。所存之網頁常用此格式。</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>練一練：整理"下載"文件夾
+練一練：整理"下載"文件夾
 
 {class="mt-1"}
 練一練：整理"下載"文件夾
@@ -216,21 +216,21 @@ kind: chapter
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>"時間+事件"命名之法</strong>：文件夾之名帶時間戳與事件之述，便於日後回憶與檢索。如 <code>202606_旅行票據</code>、<code>2025年終總結</code>、<code>2024孩子生日</code>。如此既見時間之線，亦可一目知其內容。</li>
-                        <li><strong>三級分類之體</strong>：
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>一級</strong>：按文件之類（文檔 / 圖 / 視頻 / 音）</li>
-                                <li><strong>二級</strong>：按使用之場（工作 / 生活 / 學習）</li>
-                                <li><strong>三級</strong>：按具體之事件或項目（如"2026Q2_項目A"）</li>
-                            </ul>
-                        </li>
-                        <li><strong>月度清理之計劃</strong>：每月固定一日（建議發薪之日或月初一日），對"下載"目錄集中整理：<strong>有用者歸檔、無用者刪、珍貴者轉存</strong>。一年十二次小整理，勝於積一年而大掃除。</li>
-                    </ul>
+ <li><strong>"時間+事件"命名之法</strong>：文件夾之名帶時間戳與事件之述，便於日後回憶與檢索。如 <code>202606_旅行票據</code>、<code>2025年終總結</code>、<code>2024孩子生日</code>。如此既見時間之線，亦可一目知其內容。</li>
+ <li><strong>三級分類之體</strong>：
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>一級</strong>：按文件之類（文檔 / 圖 / 視頻 / 音）</li>
+ <li><strong>二級</strong>：按使用之場（工作 / 生活 / 學習）</li>
+ <li><strong>三級</strong>：按具體之事件或項目（如"2026Q2_項目A"）</li>
+ </ul>
+ </li>
+ <li><strong>月度清理之計劃</strong>：每月固定一日（建議發薪之日或月初一日），對"下載"目錄集中整理：<strong>有用者歸檔、無用者刪、珍貴者轉存</strong>。一年十二次小整理，勝於積一年而大掃除。</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>本月任務清單
+本月任務清單
 
 {class="mt-1"}
 本月任務清單
@@ -258,7 +258,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>發送證件照/敏感截圖之標準流程
+發送證件照/敏感截圖之標準流程
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>可見信息打碼</strong>：用系統自帶或第三方之具（如美圖秀秀、Snapseed）<strong>塗抹身份證號之中間數位、車牌號、門牌、姓名、金額</strong>等關鍵字段。

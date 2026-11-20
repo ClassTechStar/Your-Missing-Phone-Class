@@ -95,7 +95,7 @@ Tasker requires accessibility permission
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>: iOS: In the Shortcuts App, create a new shortcut → add "Get Current Weather" → "Speak Text" → "Open App and select NetEase Cloud Music." After completion, you can say "Good morning" to Siri to trigger it. Android: In Tasker, create a new task → add "Get Weather" → "Speak" → "Open App" → set trigger time to 7:00 every day.
+: iOS: In the Shortcuts App, create a new shortcut → add "Get Current Weather" → "Speak Text" → "Open App and select NetEase Cloud Music." After completion, you can say "Good morning" to Siri to trigger it. Android: In Tasker, create a new task → add "Get Weather" → "Speak" → "Open App" → set trigger time to 7:00 every day.
 
 {class="mt-1"}
 Challenge 2: Low Battery Auto Power Saving
@@ -103,7 +103,7 @@ Challenge 2: Low Battery Auto Power Saving
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: iOS: Automation tab → New → "Battery Level" → below 25% → add "Set Low Power Mode On" + "Set Brightness 25%." Android: Tasker new Profile → State → Power → Battery 0-25% → Task "Power Saving Mode On" + "Lower Brightness."
+: iOS: Automation tab → New → "Battery Level" → below 25% → add "Set Low Power Mode On" + "Set Brightness 25%." Android: Tasker new Profile → State → Power → Battery 0-25% → Task "Power Saving Mode On" + "Lower Brightness."
 
 {class="mt-1 mb-2"}
 Challenge 3: Connect Car Bluetooth Auto Navigation
@@ -114,7 +114,7 @@ Challenge 3: Connect Car Bluetooth Auto Navigation
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Case 3: Automated "Good Morning Routine"
+Case 3: Automated "Good Morning Routine"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: Automatically announce weather + turn off silent mode + open news at 7:00 every day.

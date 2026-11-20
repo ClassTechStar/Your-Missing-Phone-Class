@@ -25,7 +25,7 @@ Wichtige Fortschritte 2024–2026: Scharnierlebensdauer allgemein mit 500.000 Fa
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tragbarkeits- und Großbildschirm-Fans
+Tragbarkeits- und Großbildschirm-Fans
 
 {class="mt-1"}
 : Vertikal-Klappbildschirme passen zugeklappt in kleine Taschen, sind aufgeklappt normale Smartphones und können den Außenbildschirm als Spiegel oder für Benachrichtigungen nutzen.
@@ -42,7 +42,7 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Knickfalten-Erscheinung
+Knickfalten-Erscheinung
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - : Im Geschäft selbst aufklappen und ansehen. Akzeptables Niveau 2025: Bei eingeschaltetem Bildschirm frontal kaum sichtbar, im schrägen Licht eine flache Furche erkennbar, beim Darüberstreichen leicht spürbar, aber nicht scharfkantig.
@@ -63,7 +63,7 @@ Wer das Smartphone nur zum Kurzvideo-Scrollen, WeChat-Chatten und Telefonieren n
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>2. Aufsteller-Modus (90 Grad gefaltet)
+2. Aufsteller-Modus (90 Grad gefaltet)
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Das ist das "Ass" des Klappbildschirms.
@@ -112,7 +112,7 @@ Fünftens. Pflegehinweise: Den Klappbildschirm länger am Leben halten
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>: Horizontal-Klappbildschirme wiegen aufgeklappt 230 g+, einhändiges Halten ist anstrengender als beim starren Gerät; zugeklappt 12–14 mm dick – die Hosentasche wird dicker.
+: Horizontal-Klappbildschirme wiegen aufgeklappt 230 g+, einhändiges Halten ist anstrengender als beim starren Gerät; zugeklappt 12–14 mm dick – die Hosentasche wird dicker.
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Akkulaufzeit meist kürzer
@@ -134,7 +134,7 @@ Sechstens. Preis- und psychologische Vorbereitung des Klappbildschirms
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>vivo X Fold Serie
+vivo X Fold Serie
 
 {class="text-right text-sm"}
 : Unter den horizontal faltbaren Geräten hat das Verhältnis von Außen- zu Innenbildschirm die größte Ähnlichkeit mit einem normalen Smartphone; zugeklappt als Barren-Handy bietet es ein gutes Nutzungserlebnis.
@@ -155,7 +155,7 @@ Kaufempfehlungen:Bei ausreichendem Budget und Fokus auf Oekosystem: HuaweiMate X
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Letzte Erinnerung
+Letzte Erinnerung
 
 {class="mt-1"}
 Faltbare Displays entwickeln sich jedes Jahr weiter. Dieser Anhang wurde 2026 verfasst. Vor dem Kauf unbedingt aktuelle Testberichte und Nutzer-Feedback prüfen – Schwerpunkte: Scharnierlebensdauer im Test, Falz-Darstellung, Reparaturrichtlinie für Innenbildschirm. Selber Anfassen im Laden ist immer wichtiger als Testberichte.

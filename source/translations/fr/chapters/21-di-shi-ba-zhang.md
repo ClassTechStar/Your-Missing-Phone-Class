@@ -90,7 +90,7 @@ Pour une personne ordinaire, faire « une dans le cloud, une sur l'ordinateur »
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Attention particulière à l'historique WeChat
+Attention particulière à l'historique WeChat
 
 {class="mt-1"}
 L'historique WeChat ne peut pas être migré par aucun outil de migration de téléphone ! Il n'est pas couvert par la sauvegarde complète de l'appareil. Vous devez utiliser la fonction « migration de l'historique des discussions » intégrée à WeChat, ou le sauvegarder sur WeChat pour ordinateur. Beaucoup de gens découvrent après être passés au nouveau téléphone que l'historique a disparu, et il est trop tard — l'ancien téléphone a peut-être déjà été réinitialisé aux paramètres d'usine.
@@ -98,7 +98,7 @@ L'historique WeChat ne peut pas être migré par aucun outil de migration de té
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercez-vous : faites un exercice de sauvegarde complet
+Exercez-vous : faites un exercice de sauvegarde complet
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Vérifiez si la sauvegarde cloud iCloud ou la sauvegarde cloud de la marque est activée, confirmez la date de la dernière sauvegarde.

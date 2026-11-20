@@ -208,41 +208,41 @@ Domain adalah "alamat rumah" sebuah situs. Memahaminya membantu Anda menilai sif
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Browser</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keunggulan utama</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Untuk siapa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Inti Chromium + Copilot AI bawaan—merangkum halaman/menerjemahkan/berdialog</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pekerja kantoran yang mengejar efisiensi, pengguna berat AI (direkomendasikan sebagai utama)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terintegrasi erat dengan ekosistem Apple, hemat daya, privasi kuat</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna iPhone/Mac yang mengutamakan daya tahan baterai dan integrasi sistem</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Penggunaan global tertinggi, ekosistem ekstensi paling kaya</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna lanjutan yang butuh banyak ekstensi, dan yang suka sinkronisasi lintas perangkat</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Langsung memblokir iklan dan pelacak sejak awal, lebih cepat</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang peduli privasi dan ingin blokir iklan tanpa memasang ekstensi</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mesin pencari sendiri tanpa riwayat, sekali klik hapus jejak</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna sensitif privasi yang tidak ingin dilacak personal</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Browser</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keunggulan utama</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Untuk siapa</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Inti Chromium + Copilot AI bawaan—merangkum halaman/menerjemahkan/berdialog</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pekerja kantoran yang mengejar efisiensi, pengguna berat AI (direkomendasikan sebagai utama)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terintegrasi erat dengan ekosistem Apple, hemat daya, privasi kuat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna iPhone/Mac yang mengutamakan daya tahan baterai dan integrasi sistem</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Penggunaan global tertinggi, ekosistem ekstensi paling kaya</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna lanjutan yang butuh banyak ekstensi, dan yang suka sinkronisasi lintas perangkat</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Langsung memblokir iklan dan pelacak sejak awal, lebih cepat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang peduli privasi dan ingin blokir iklan tanpa memasang ekstensi</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mesin pencari sendiri tanpa riwayat, sekali klik hapus jejak</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna sensitif privasi yang tidak ingin dilacak personal</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -291,46 +291,46 @@ Berikut jalur per merek. Nama fitur bisa sedikit berbeda antarversi sistem,cari 
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur menu</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Opsi yang disarankan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Pengaturan] > [Telepon] / [Pesan]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bisukan panggilan tak dikenal; kontak yang diblokir; "Saring pengirim tak dikenal" di Pesan</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Telepon > Pengaturan > Pemblokiran Gangguan; atau Pusat Keamanan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir pintar, nomor asing sekali dering lalu putus, filter kata kunci SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telepon > Pemblokiran Gangguan; Phone Manager > Pemblokiran Gangguan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Identifikasi pemanggil, daftar hitam, blokir SMS pintar</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Telepon > Pemblokiran Gangguan; atau Perangkat Ini > Pemblokiran Gangguan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir panggilan, identifikasi panggilan penipuan, aturan blokir SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telepon > Blokir Panggilan Gangguan; i Manager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir gangguan, peringatan panggilan penipuan, filter pesan</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telepon > Pengaturan > Blokir Nomor / ID Pemanggil & Spam</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir nomor tak dikenal, identifikasi panggilan spam (dukungan berbeda per wilayah)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur menu</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Opsi yang disarankan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Pengaturan] > [Telepon] / [Pesan]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bisukan panggilan tak dikenal; kontak yang diblokir; "Saring pengirim tak dikenal" di Pesan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Telepon > Pengaturan > Pemblokiran Gangguan; atau Pusat Keamanan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir pintar, nomor asing sekali dering lalu putus, filter kata kunci SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telepon > Pemblokiran Gangguan; Phone Manager > Pemblokiran Gangguan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Identifikasi pemanggil, daftar hitam, blokir SMS pintar</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Telepon > Pemblokiran Gangguan; atau Perangkat Ini > Pemblokiran Gangguan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir panggilan, identifikasi panggilan penipuan, aturan blokir SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telepon > Blokir Panggilan Gangguan; i Manager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir gangguan, peringatan panggilan penipuan, filter pesan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telepon > Pengaturan > Blokir Nomor / ID Pemanggil & Spam</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blokir nomor tak dikenal, identifikasi panggilan spam (dukungan berbeda per wilayah)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -394,46 +394,46 @@ Jalur berikut bisa sedikit berbeda antarversi sistem,cari langsung di Pengaturan
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur umum</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone Manager / Pusat Keamanan > Peringatan Gempa; atau cari "gempa" di Pengaturan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sebagian versi sistem sudah punya layanan peringatan bawaan—perlu internet dan lokasi aktif</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan > Keamanan > Notifikasi Peringatan Darurat / Peringatan Gempa</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Namanya bisa "Notifikasi Peringatan Darurat", mencakup gempa dll.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan > Keamanan (SOS Kontak Darurat) > Peringatan Gempa</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sebagian model tergantung cakupan layanan wilayah</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Cuaca atau Pengaturan > Keamanan/Lainnya > Peringatan Gempa</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ikuti menu versi sistem yang sebenarnya</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Biasanya belum ada sakelar bawaan lengkap; pasang App peringatan gempa yang tepercaya dan izinkan notifikasi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App perlu izin berjalan di latar belakang dan lokasi; jangan sampai Jangan Ganggu memblokir peringatannya</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung dll.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan > Keamanan & Keadaan Darurat / Peringatan Darurat Nirkabel</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cakupan "Peringatan Darurat" berbeda per wilayah dan operator</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur umum</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keterangan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone Manager / Pusat Keamanan > Peringatan Gempa; atau cari "gempa" di Pengaturan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sebagian versi sistem sudah punya layanan peringatan bawaan—perlu internet dan lokasi aktif</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan > Keamanan > Notifikasi Peringatan Darurat / Peringatan Gempa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Namanya bisa "Notifikasi Peringatan Darurat", mencakup gempa dll.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan > Keamanan (SOS Kontak Darurat) > Peringatan Gempa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sebagian model tergantung cakupan layanan wilayah</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Cuaca atau Pengaturan > Keamanan/Lainnya > Peringatan Gempa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ikuti menu versi sistem yang sebenarnya</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Biasanya belum ada sakelar bawaan lengkap; pasang App peringatan gempa yang tepercaya dan izinkan notifikasi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App perlu izin berjalan di latar belakang dan lokasi; jangan sampai Jangan Ganggu memblokir peringatannya</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung dll.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan > Keamanan & Keadaan Darurat / Peringatan Darurat Nirkabel</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cakupan "Peringatan Darurat" berbeda per wilayah dan operator</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

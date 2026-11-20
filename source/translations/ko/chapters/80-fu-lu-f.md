@@ -26,7 +26,7 @@ after_part: fu-lu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>한 마디 판단
+한 마디 판단
 
 {class="mt-1"}
 만약 지금 일반 폰으로 완전히 충분하고, "화면이 충분히 크지 않다"는 통증이 없다면, 폴더블을 사지 마세요. 그것은 "금상첨화"의 기기이며, "설중송탄"의 기기가 아닙니다.
@@ -44,7 +44,7 @@ after_part: fu-lu
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>이 몇 가지 유형의 사람들은 사지 마세요
+이 몇 가지 유형의 사람들은 사지 마세요
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 스마트폰을 숏폼 영상 보기, 위챗, 전화에만 사용하는 경우:,폴더블은 당신에게 어떤 이득도 주지 않으며, 오히려 더 무겁고 두꺼움.
@@ -67,7 +67,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>오프라인 체험 체크리스트
+오프라인 체험 체크리스트
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 직접 10번 개폐하면서 힌지 감이 매끄러운지, 이상한 소리는 없는지 느껴보세요.
@@ -121,7 +121,7 @@ after_part: fu-lu
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>내측 화면 파손 다발 시나리오
+내측 화면 파손 다발 시나리오
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 접을 때 이어폰 선/충전 케이블이 끼임:—직접 내부 화면이 깨짐.
@@ -144,7 +144,7 @@ after_part: fu-lu
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>폴더블은 "더 좋은 스마트폰"이 아니라 "또 다른 형태의 스마트폰"입니다. "더 진보되어서가 아니라" 그 고유한 형태가 필요하기 때문에 구매하세요.
+폴더블은 "더 좋은 스마트폰"이 아니라 "또 다른 형태의 스마트폰"입니다. "더 진보되어서가 아니라" 그 고유한 형태가 필요하기 때문에 구매하세요.
 
 {class="text-right text-sm"}
 — 폴더블 구매 철학에 대하여
@@ -166,7 +166,7 @@ after_part: fu-lu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>마지막 알림
+마지막 알림
 
 {class="mt-1"}
 폴더블 기술은 매년 발전하며, 본 부록은 2026년에 작성되었습니다.

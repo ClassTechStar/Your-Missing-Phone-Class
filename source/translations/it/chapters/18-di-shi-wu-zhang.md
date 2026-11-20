@@ -34,7 +34,7 @@ La batteria del telefono (agli ioni di litio o al polimero di litio) è come una
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Funzione "Limite 80%" di iPhone — la regola d'oro diventa un'impostazione di sistema
+Funzione "Limite 80%" di iPhone — la regola d'oro diventa un'impostazione di sistema
 
 {class="mt-1"}
 Sugli iPhone 15/16 (iOS 17 o superiore) la "regola del 20-80%" è diventata una funzione di sistema. Una volta attivata, il telefono si ferma automaticamente all'80%, rallentando notevolmente l'invecchiamento della batteria. Percorso:
@@ -48,7 +48,7 @@ Significato delle tre opzioni: ①<strong>Senza limiti</strong>—ricarica al 10
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>Caricabatterie GaN — il compagno ideale per chi viaggia
+Caricabatterie GaN — il compagno ideale per chi viaggia
 
 {class="mt-1"}
 Avrai notato che i caricabatterie rapidi sono sempre più piccoli: il protagonista è il <strong>GaN (nitruro di gallio)</strong>, un nuovo materiale semiconduttore. Rispetto ai caricabatterie tradizionali al silicio, quelli in GaN offrono diversi vantaggi evidenti:
@@ -127,47 +127,47 @@ Flusso di lavoro della ricarica rapida:
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocollo</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Potenza massima</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Strada tecnica</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Compatibilità</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensione/multilivello</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La più ampia</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensione regolabile</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modelli Qualcomm</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bassa tensione ad alta corrente</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Esclusiva OPPO e affini</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ricarica Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protocollo PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocollo</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Potenza massima</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Strada tecnica</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Compatibilità</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensione/multilivello</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La più ampia</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensione regolabile</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modelli Qualcomm</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bassa tensione ad alta corrente</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Esclusiva OPPO e affini</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ricarica Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protocollo PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ Anche la ricarica wireless ha i suoi standard di protocollo:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Suggerimenti di sicurezza per la ricarica rapida
+Suggerimenti di sicurezza per la ricarica rapida
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Evita di giocare a giochi pesanti durante la ricarica, aumenterebbe il calore.
@@ -207,7 +207,7 @@ Se hai seguito le presentazioni dei flagship del 2024-2026, la parola "anodo in 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Quali modelli li usano?
+Quali modelli li usano?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: la serie Magic ha introdotto per prima l'anodo in silicio-carbonio; Magic6 Pro, serie Magic7 e il pieghevole Magic V3 lo adottano.
@@ -228,7 +228,7 @@ Se hai seguito le presentazioni dei flagship del 2024-2026, la parola "anodo in 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Verifica: fai un check-up alla tua batteria
+Verifica: fai un check-up alla tua batteria
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifica lo stato di salute: trova e annota la capacità massima della tua batteria.

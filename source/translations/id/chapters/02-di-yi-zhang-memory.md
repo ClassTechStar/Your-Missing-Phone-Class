@@ -53,7 +53,7 @@ Path umum mengaktifkan: Masuk [Pengaturan].[Pengaturan lainnya].temukan submenu 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Pengaturan dalam mode pengembang dapat mempengaruhi stabilitas sistem, opsi yang tidak dipahami jangan diubah sembarangan. Setelah mengaktifkan debugging USB, berhati-hatilah saat menghubungkan ke komputer, jangan hubungkan ke komputer yang tidak dipercaya.
+Pengaturan dalam mode pengembang dapat mempengaruhi stabilitas sistem, opsi yang tidak dipahami jangan diubah sembarangan. Setelah mengaktifkan debugging USB, berhati-hatilah saat menghubungkan ke komputer, jangan hubungkan ke komputer yang tidak dipercaya.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Ekspansi memori akan menempati sebagian ruang penyimpanan bodi, pastikan penyimpanan tersisa tidak kurang dari 20-30GB, jika tidak bisa mempengaruhi kelancaran sistem.
@@ -63,7 +63,7 @@ Path umum mengaktifkan: Masuk [Pengaturan].[Pengaturan lainnya].temukan submenu 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Rangkuman
+Rangkuman
 
 {class="mt-1"}
 Ekspansi memori adalah teknologi optimisasi system-level yang matang, bisa meningkatkan kemampuan multi-tasking dan rate keep-alive latar belakang model mid-low end tanpa mengubah hardware, tapi terbatas oleh kesenjangan kecepatan besar antara flash dan RAM fisik, bukan "obat ajaib universal". Apakah diaktifkan, seberapa besar, perlu dipertimbangkan berdasarkan ukuran RAM fisik model, spesifikasi flash, ruang penyimpanan tersisa dan kebiasaan penggunaan.
@@ -71,7 +71,7 @@ Ekspansi memori adalah teknologi optimisasi system-level yang matang, bisa menin
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari praktik: Lihat apakah ponsel Anda punya ekspansi memori
+Mari praktik: Lihat apakah ponsel Anda punya ekspansi memori
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka [Pengaturan], cari "Memory Extension", "Memory Fusion", "RAM Plus" atau "Extended RAM".

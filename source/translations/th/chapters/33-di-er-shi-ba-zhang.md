@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>3 ขั้นตอนเลือกโทรศัพท์
+3 ขั้นตอนเลือกโทรศัพท์
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>คิดให้ออกก่อนว่าคุณสนใจอะไรมากที่สุด</strong>:ถ่ายภาพ? เล่นเกม? แบตเตอรี่? หน้าจอ? ระบบลื่นไหล? หรือแค่โทรและส่ง WeChat ได้ก็พอ? ให้จัดลำดับความต้องการ
@@ -33,41 +33,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">มิติข้อมูล</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">วิธีดู</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สรุปในหนึ่งประโยค</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">โปรเซสเซอร์ (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กำหนดว่าโทรศัพท์จะใช้งานลื่นไหลได้กี่ปี มาตรฐานปี 2026: Snapdragon 8 Elite Gen5 / Dimensity 9500 ขึ้นไป = ระดับท็อป; Snapdragon 8s Gen4 / Dimensity 8400 = ระดับกลาง-ระดับสูง; Snapdragon 7+ Gen4 / Dimensity 7350 = ใช้งานได้ 3 ปี ถ้าต่ำกว่าซีรีส์ Snapdragon 6 แนะนำให้พิจารณาให้ดี</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ซื้อของใหม่ไม่ซื้อของเก่า SoC กำหนดว่าโทรศัพท์ของคุณจะใช้งานได้กี่ปีโดยไม่กระตุก</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">หน้าจอ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED มีสีสันดีกว่าและประหยัดไฟกว่า LCD; อัตรารีเฟรช 120Hz เลื่อนจอลื่นไหลกว่า 60Hz เยอะมาก; ความละเอียดขั้นต่ำควรเป็น 1080P ขึ้นไป การปรับความสว่างแบบ PWM ความถี่สูง (1920Hz ขึ้นไป) จะดีต่อสายตามากกว่า</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + ปรับแสง PWM ความถี่สูง = มาตรฐานขั้นต่ำของหน้าจอที่ดี</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">บลูทูธลำโพง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>ดูขนาดเซ็นเซอร์ ไม่ใช่จำนวนพิกเซล</strong>เซ็นเซอร์ใหญ่กว่าย่อมดีกว่า ขนาดเซ็นเซอร์สำคัญกว่าจำนวนพิกเซลเยอะมาก กล้องเลนส์มุมกว้างพิเศษใช้งานได้จริง; กล้องซูม (ซูมออปติคอล 3x ขึ้นไป) สำหรับถ่ายวัตถุไกลๆ; กล้องมาโครส่วนใหญ่มีไว้ทำเลขเท่านั้น</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เซ็นเซอร์ใหญ่ + ซูมใช้งานได้จริง &gt; กล้องหลายตัวที่ทำเลข</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">แบตเตอรี่และการชาร์จ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh เป็นเกณฑ์ขั้นต่ำ, 5000mAh ขึ้นไปชาร์จวันละครั้งอุ่นใจได้เลย การชาร์จเร็วดูที่วัตต์: 60W ขึ้นไปถือว่าเร็ว, 100W ขึ้นไปเร็วมาก การชาร์จไร้สายสะดวกแต่ช้า</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + ชาร์จไว 60W = คอมโบไร้กังวล</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">การรับประกันอัปเดตระบบ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กำหนดว่าโทรศัพท์จะใช้งานได้อย่างปลอดภัยนานแค่ไหน Apple มักให้อัปเดตระบบ 5-6 ปี; แฟลกชิป Samsung ให้อัปเดตระบบ 4 ปี + อัปเดตความปลอดภัย 5 ปี; Google Pixel ให้ 7 ปี; สมาร์ทโฟนระดับกลางจากแบรนด์จีนมักให้การรับประกันอัปเดตสั้นกว่า (2-3 ปี)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อยากใช้นานๆ เลือกแบรนด์ที่รับประกันอัปเดตระบบนานๆ</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">มิติข้อมูล</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">วิธีดู</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สรุปในหนึ่งประโยค</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">โปรเซสเซอร์ (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กำหนดว่าโทรศัพท์จะใช้งานลื่นไหลได้กี่ปี มาตรฐานปี 2026: Snapdragon 8 Elite Gen5 / Dimensity 9500 ขึ้นไป = ระดับท็อป; Snapdragon 8s Gen4 / Dimensity 8400 = ระดับกลาง-ระดับสูง; Snapdragon 7+ Gen4 / Dimensity 7350 = ใช้งานได้ 3 ปี ถ้าต่ำกว่าซีรีส์ Snapdragon 6 แนะนำให้พิจารณาให้ดี</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ซื้อของใหม่ไม่ซื้อของเก่า SoC กำหนดว่าโทรศัพท์ของคุณจะใช้งานได้กี่ปีโดยไม่กระตุก</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">หน้าจอ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED มีสีสันดีกว่าและประหยัดไฟกว่า LCD; อัตรารีเฟรช 120Hz เลื่อนจอลื่นไหลกว่า 60Hz เยอะมาก; ความละเอียดขั้นต่ำควรเป็น 1080P ขึ้นไป การปรับความสว่างแบบ PWM ความถี่สูง (1920Hz ขึ้นไป) จะดีต่อสายตามากกว่า</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + ปรับแสง PWM ความถี่สูง = มาตรฐานขั้นต่ำของหน้าจอที่ดี</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">บลูทูธลำโพง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>ดูขนาดเซ็นเซอร์ ไม่ใช่จำนวนพิกเซล</strong>เซ็นเซอร์ใหญ่กว่าย่อมดีกว่า ขนาดเซ็นเซอร์สำคัญกว่าจำนวนพิกเซลเยอะมาก กล้องเลนส์มุมกว้างพิเศษใช้งานได้จริง; กล้องซูม (ซูมออปติคอล 3x ขึ้นไป) สำหรับถ่ายวัตถุไกลๆ; กล้องมาโครส่วนใหญ่มีไว้ทำเลขเท่านั้น</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เซ็นเซอร์ใหญ่ + ซูมใช้งานได้จริง &gt; กล้องหลายตัวที่ทำเลข</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">แบตเตอรี่และการชาร์จ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh เป็นเกณฑ์ขั้นต่ำ, 5000mAh ขึ้นไปชาร์จวันละครั้งอุ่นใจได้เลย การชาร์จเร็วดูที่วัตต์: 60W ขึ้นไปถือว่าเร็ว, 100W ขึ้นไปเร็วมาก การชาร์จไร้สายสะดวกแต่ช้า</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + ชาร์จไว 60W = คอมโบไร้กังวล</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">การรับประกันอัปเดตระบบ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กำหนดว่าโทรศัพท์จะใช้งานได้อย่างปลอดภัยนานแค่ไหน Apple มักให้อัปเดตระบบ 5-6 ปี; แฟลกชิป Samsung ให้อัปเดตระบบ 4 ปี + อัปเดตความปลอดภัย 5 ปี; Google Pixel ให้ 7 ปี; สมาร์ทโฟนระดับกลางจากแบรนด์จีนมักให้การรับประกันอัปเดตสั้นกว่า (2-3 ปี)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อยากใช้นานๆ เลือกแบรนด์ที่รับประกันอัปเดตระบบนานๆ</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สถานการณ์การใช้งาน</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สิ่งที่ควรดูเป็นหลัก</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ทิศทางที่แนะนำ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 สายถ่ายภาพ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เซ็นเซอร์หลักขนาดใหญ่ (1 นิ้วดีที่สุด), กันสั่นออปติคอล, ซูม (ซูมออปติคอล 3x ขึ้นไป), ชิปประมวลผลภาพ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X ซีรีส์, Huawei Pura/Mate ซีรีส์, Xiaomi Ultra ซีรีส์</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 สายเกมเมอร์</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรเซสเซอร์ระดับท็อป, อัตราการสุ่มสัมผัสสูง, ระบบระบายความร้อน, แบตเตอรี่ใหญ่ + ชาร์จไว</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO ซีรีส์ตัวเลข, ROG Phone, Red Magic, Redmi K ซีรีส์</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 เน้นแบตเตอรี่</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แบตเตอรี่ 5500mAh ขึ้นไป, โปรเซสเซอร์ประหยัดพลังงาน, หน้าจอ LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic Series, OnePlus, Redmi Note เวอร์ชันแบตใหญ่</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 ผู้สูงอายุใช้งาน</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย, ฟอนต์ใหญ่, เสียงดัง, แบตเตอรี่ใหญ่, มีจุดบริการหลังการขายมาก</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, OPPO A Series, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 นักเรียน/นักศึกษา</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คุ้มค่า, ทนทาน, แบตเตอรี่ใหญ่, มีฟังก์ชันควบคุมโดยผู้ปกครอง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 ผู้ใช้ในระบบนิเวศ Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ถ้ามี Mac/iPad/AirPods อยู่แล้ว การซื้อ iPhone คือคำตอบเดียว</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 เวอร์ชันมาตรฐาน (คุ้มค่า) หรือเวอร์ชัน Pro (ประสบการณ์เต็มรูปแบบ)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 เดินทางไปต่างประเทศ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ eSIM, รองรับคลื่นความถี่ทั่วโลกครบถ้วน, มีบริการ Google</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S Series, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สถานการณ์การใช้งาน</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สิ่งที่ควรดูเป็นหลัก</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ทิศทางที่แนะนำ</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 สายถ่ายภาพ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เซ็นเซอร์หลักขนาดใหญ่ (1 นิ้วดีที่สุด), กันสั่นออปติคอล, ซูม (ซูมออปติคอล 3x ขึ้นไป), ชิปประมวลผลภาพ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X ซีรีส์, Huawei Pura/Mate ซีรีส์, Xiaomi Ultra ซีรีส์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 สายเกมเมอร์</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรเซสเซอร์ระดับท็อป, อัตราการสุ่มสัมผัสสูง, ระบบระบายความร้อน, แบตเตอรี่ใหญ่ + ชาร์จไว</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO ซีรีส์ตัวเลข, ROG Phone, Red Magic, Redmi K ซีรีส์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 เน้นแบตเตอรี่</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แบตเตอรี่ 5500mAh ขึ้นไป, โปรเซสเซอร์ประหยัดพลังงาน, หน้าจอ LTPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic Series, OnePlus, Redmi Note เวอร์ชันแบตใหญ่</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 ผู้สูงอายุใช้งาน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โหมดใช้งานง่าย, ฟอนต์ใหญ่, เสียงดัง, แบตเตอรี่ใหญ่, มีจุดบริการหลังการขายมาก</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, OPPO A Series, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 นักเรียน/นักศึกษา</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คุ้มค่า, ทนทาน, แบตเตอรี่ใหญ่, มีฟังก์ชันควบคุมโดยผู้ปกครอง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 ผู้ใช้ในระบบนิเวศ Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ถ้ามี Mac/iPad/AirPods อยู่แล้ว การซื้อ iPhone คือคำตอบเดียว</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 เวอร์ชันมาตรฐาน (คุ้มค่า) หรือเวอร์ชัน Pro (ประสบการณ์เต็มรูปแบบ)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 เดินทางไปต่างประเทศ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ eSIM, รองรับคลื่นความถี่ทั่วโลกครบถ้วน, มีบริการ Google</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S Series, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: ใช้วิธีนี้เลือกมือถือสักเครื่อง
+ลงมือทำ: ใช้วิธีนี้เลือกมือถือสักเครื่อง
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. หยิบกระดาษมาแผ่น แล้วเขียนความต้องการหลัก 2 อย่างของคุณลงไป (เช่น: แบตเตอรี่เป็นอันดับหนึ่ง, กล้องเป็นอันดับสอง)
@@ -208,7 +208,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 3 ขั้นตอนเลือกสมาร์ทโฟน: คิดความต้องการก่อน → กำหนดงบประมาณ → เลือกรุ่น

@@ -39,22 +39,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">브랜드</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">모드 이름</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">켜는 방법</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">접근성 사용(별도 간편 모드 없음, 항목별로 크게 조절 가능)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 디스플레이 및 밝기 > 글자 크기, 최대까지 끌기. 그리고 "접근성 > 디스플레이 및 글자 크기"에서 "굵은 텍스트", "버튼 모양" 켜기</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 및 업데이트 > 간편 모드 > 켜기</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">샤오미/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">극간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 추가 설정 > 극간편 모드 > 켜기</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 특징 기능 > 간편 모드</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 데스크톱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 데스크톱, 잠금 화면 및 배경화면 > 간편 데스크톱</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">삼성</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 디스플레이 > 간편 모드</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">브랜드</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">모드 이름</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">켜는 방법</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">접근성 사용(별도 간편 모드 없음, 항목별로 크게 조절 가능)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 디스플레이 및 밝기 > 글자 크기, 최대까지 끌기. 그리고 "접근성 > 디스플레이 및 글자 크기"에서 "굵은 텍스트", "버튼 모양" 켜기</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 및 업데이트 > 간편 모드 > 켜기</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">샤오미/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">극간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 추가 설정 > 극간편 모드 > 켜기</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 특징 기능 > 간편 모드</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 데스크톱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 데스크톱, 잠금 화면 및 배경화면 > 간편 데스크톱</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">삼성</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 디스플레이 > 간편 모드</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -74,7 +74,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 어르신의 스마트폰 "인테리어" 도와주기
+실습: 어르신의 스마트폰 "인테리어" 도와주기
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 간편 모드 켜기(위의 브랜드 표에 따라 조작).
@@ -109,17 +109,17 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>어르신의 "사기 방지 구호"(인쇄하여 전화 옆에 붙여두기)
+어르신의 "사기 방지 구호"(인쇄하여 전화 옆에 붙여두기)
 
 ```html
 <ul class="list-none pl-0 mt-1 space-y-1">
-                            <li>☎ <strong>모르는 전화가 송금 요청 → 끊기!</strong></li>
-                            <li>🔗 <strong>문자 링크가 클릭 요구 → 삭제!</strong></li>
-                            <strong>고수익 원금 보장 → 차단!</strong>
-                            <li>📱 <strong>원격 제어 소프트웨어 설치 요구 → 즉시 끊기!</strong></li>
-                            <li>👮 <strong>진짜 경찰은 전화로 사건을 처리하지 않으며 돈을 요구하지 않습니다!</strong></li>
-                            <li>❤ <strong>잘 모르겠으면, 먼저 자녀에게 전화해서 물어보기.</strong></li>
-                        </ul>
+ <li>☎ <strong>모르는 전화가 송금 요청 → 끊기!</strong></li>
+ <li>🔗 <strong>문자 링크가 클릭 요구 → 삭제!</strong></li>
+ <strong>고수익 원금 보장 → 차단!</strong>
+ <li>📱 <strong>원격 제어 소프트웨어 설치 요구 → 즉시 끊기!</strong></li>
+ <li>👮 <strong>진짜 경찰은 전화로 사건을 처리하지 않으며 돈을 요구하지 않습니다!</strong></li>
+ <li>❤ <strong>잘 모르겠으면, 먼저 자녀에게 전화해서 물어보기.</strong></li>
+ </ul>
 ```
 :::
 
@@ -165,4 +165,4 @@ iPhone과 일부 안드로이드 스마트폰은 MFi(Made for iPhone) 보청기�
 미리 어르신에게 설정해주기,:iPhone: "설정 > 긴급 SOS", 안드로이드: "설정 > 보안 > 긴급 도움 요청". 가르치기 전에 먼저 한 번 연습, 긴장하여 잘못 누르는 경우 방지.
 </li> <li><strong>낙상 감지</strong>: Apple Watch에 이 기능이 있어, 낙상 감지 후 일정 시간 움직이지 않으면 자동으로 응급 전화에 다이얼하고 가족에게 알림. 예산이 있다면 어르신에게 하나 지급, 결정적 순간에 생명을 구할 수 있음.
 </li> <li><strong>복용 알림</strong>: iPhone의 "건강" 앱에 내장된 복용 알림 기능, 약 이름, 시간, 용량 설정하면, 시간 되면 알림 팝업. 안드로이드는 "타이머 알람" 사용 또는 "복용 알림"류 앱 다운로드.
-</li> </ul> <div class="chapter-summary"> <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>본 챕터 요약</p> <ul class="list-disc pl-5 text-sm space-y-0.5"> <li>먼저 간편 모드 켜기 또는 수동으로 글꼴/아이콘 키우기, 환경이 잘 조정되면 절반 이상의 문제 해결</li> <li>어르신과 함께 스마트폰 쓰는 세 가지 철칙: 재촉하지 말 것, 비유 사용. 글로 적어주기</li> <li>6가지 흔한 사기를 반복 알리고. 3가지 방어선을 잘 세우면 90% 사기 막을 수 있음</li> <li>원격 지원으로 외지에 있어도 부모님 스마트폰 수리 도움</li> <li>,위챗의 "관심 모드"+"음성 입력"은 어르신에게 가장 실용적인 두 가지 기능</li> <li>SOS 긴급 도움 요청과 낙상 감지, 결정적 순간에 생명을 구하는 설정에 5분 투자할 가치 있음</li> </ul> </div>
+</li> </ul> <div class="chapter-summary"> <p class="font-semibold mb-1">본 챕터 요약</p> <ul class="list-disc pl-5 text-sm space-y-0.5"> <li>먼저 간편 모드 켜기 또는 수동으로 글꼴/아이콘 키우기, 환경이 잘 조정되면 절반 이상의 문제 해결</li> <li>어르신과 함께 스마트폰 쓰는 세 가지 철칙: 재촉하지 말 것, 비유 사용. 글로 적어주기</li> <li>6가지 흔한 사기를 반복 알리고. 3가지 방어선을 잘 세우면 90% 사기 막을 수 있음</li> <li>원격 지원으로 외지에 있어도 부모님 스마트폰 수리 도움</li> <li>,위챗의 "관심 모드"+"음성 입력"은 어르신에게 가장 실용적인 두 가지 기능</li> <li>SOS 긴급 도움 요청과 낙상 감지, 결정적 순간에 생명을 구하는 설정에 5분 투자할 가치 있음</li> </ul> </div>

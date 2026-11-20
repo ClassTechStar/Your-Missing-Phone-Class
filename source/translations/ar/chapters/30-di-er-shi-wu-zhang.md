@@ -24,51 +24,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">العلامة</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">مدخل المسح</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الاختلافات والملاحظات الرئيسية</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; النظام والتحديث &gt; إعادة تعيين &gt; الاستعادة للمصنع</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب الخروج من حساب Huawei وإغلاق "Find My Phone" أولاً، وإلا يُفعّل قفل التنشيط؛ قد يتطلب التحقق بكلمة المرور في الوضع النقي.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; جهازي &gt; الاستعادة للمصنع</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">في الأسفل خيارا "تهيئة SD card الافتراضية" و"مسح جميع المحتويات والإعدادات"، يجب تحديد كليهما؛ أغلق "Find Device" قبل الخروج من حساب Xiaomi.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; إعدادات أخرى &gt; استعادة الهاتف &gt; مسح جميع البيانات بالكامل</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS يوفر وضع "المسح الكامل"، يغطي التخزين عدة مرات؛ يتطلب إدخال كلمة مرور قفل الشاشة للتأكيد.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; إدارة النظام &gt; النسخ الاحتياطي وإعادة التعيين &gt; مسح جميع البيانات</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تحديد "تهيئة تخزين الهاتف" يمسح منطقة SD card؛ يجب الخروج من حساب vivo وإغلاق "Find Phone".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; الإدارة العامة &gt; إعادة تعيين &gt; الاستعادة للمصنع</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب إزالة حساب Samsung وإغلاق "Find My Phone" أولاً؛ بعض الموديلات لها خيار "تغطية تلقائية"، يُنصح بتفعيله.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; عام &gt; نقل أو استعادة iPhone &gt; مسح جميع المحتويات والإعدادات</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب الخروج من Apple ID أولاً، وإلا يُحجب المستخدم التالي بقفل تنشيط iCloud؛ iOS 15+ يدعم "الاحتفاظ ببيانات iCloud عند الخروج" للمراجعة لاحقاً.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">العلامة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">مدخل المسح</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الاختلافات والملاحظات الرئيسية</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; النظام والتحديث &gt; إعادة تعيين &gt; الاستعادة للمصنع</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب الخروج من حساب Huawei وإغلاق "Find My Phone" أولاً، وإلا يُفعّل قفل التنشيط؛ قد يتطلب التحقق بكلمة المرور في الوضع النقي.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; جهازي &gt; الاستعادة للمصنع</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">في الأسفل خيارا "تهيئة SD card الافتراضية" و"مسح جميع المحتويات والإعدادات"، يجب تحديد كليهما؛ أغلق "Find Device" قبل الخروج من حساب Xiaomi.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; إعدادات أخرى &gt; استعادة الهاتف &gt; مسح جميع البيانات بالكامل</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS يوفر وضع "المسح الكامل"، يغطي التخزين عدة مرات؛ يتطلب إدخال كلمة مرور قفل الشاشة للتأكيد.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; إدارة النظام &gt; النسخ الاحتياطي وإعادة التعيين &gt; مسح جميع البيانات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تحديد "تهيئة تخزين الهاتف" يمسح منطقة SD card؛ يجب الخروج من حساب vivo وإغلاق "Find Phone".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; الإدارة العامة &gt; إعادة تعيين &gt; الاستعادة للمصنع</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب إزالة حساب Samsung وإغلاق "Find My Phone" أولاً؛ بعض الموديلات لها خيار "تغطية تلقائية"، يُنصح بتفعيله.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; عام &gt; نقل أو استعادة iPhone &gt; مسح جميع المحتويات والإعدادات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب الخروج من Apple ID أولاً، وإلا يُحجب المستخدم التالي بقفل تنشيط iCloud؛ iOS 15+ يدعم "الاحتفاظ ببيانات iCloud عند الخروج" للمراجعة لاحقاً.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ثلاثة أشياء يسهل تجاهلها أكثر
+ثلاثة أشياء يسهل تجاهلها أكثر
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>عدم الخروج من الحساب</strong>: الهاتف يُقفل عن بُعد بعد بيعه، ولا تستطيع الخروج أيضاً، وفي النهاية تضطر لزيارة خدمة ما بعد البيع الرسمية بالهوية لفتح القفل.
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>الأساس القانوني: المادة 49 من قانون حماية المعلومات الشخصية
+الأساس القانوني: المادة 49 من قانون حماية المعلومات الشخصية
 
 {class="mt-1"}
 ينص قانون حماية المعلومات الشخصية لجمهورية الصين الشعبية الذي دخل حيز التنفيذ 2021 في المادة 49 بوضوح:<strong>عند وفاة شخص طبيعي، يجوز لأقاربه من الدرجة الأولى لمصلحته المشروعة والعادلة ممارسة الحقوق المنصوص عليها في هذا الفصل بشأن معلومات المتوفى الشخصية، مثل الاطلاع والنسخ والتصحيح والحذف؛ إلا إذا كان للمتوفى ترتيب آخر قبل وفاته.</strong>
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>أشياء يجب ألا تفعلها أبداً
+أشياء يجب ألا تفعلها أبداً
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>لا تسلم كلمة مرور حساب المتوفى للأسرة لـ "الاستخدام المباشر"</strong>— هذا يخالف اتفاقية المنصة، وعند تجميد الأموال أو تفعيل الرقابة المخاطر يكون الإثبات أصعب.
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>تذكير رئيسي
+تذكير رئيسي
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - قواعد كل منصة تتحدث، راجع أحدث إرشادات خدمة العملاء الرسمية قبل المعالجة.
@@ -174,7 +174,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>السعر الحقيقي لـ "اختفاء" العملات المشفرة
+السعر الحقيقي لـ "اختفاء" العملات المشفرة
 
 {class="mt-1"}
 وفقاً لتقرير Chainalysis، هناك عالمياً<strong>أكثر من 3 ملايين Bitcoin</strong>لا يمكن استعادتها أبداً بسبب فقدان المفاتيح الخاصة، أي ما يعادل سدس الكمية الحالية. إذا كنت تمتلك أصولاً مشفّرة، احرص على إخبار شخص واحد على الأقل تثق به تماماً بـ<strong>طريق الاستعادة</strong>— وإلا ستبقى هذه الثروة نائمة على البلوكتشين إلى الأبد.
@@ -227,7 +227,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>تلميح قانوني حول "كلمات المرور"
+تلميح قانوني حول "كلمات المرور"
 
 {class="mt-1"}
 كتابة كلمات المرور مباشرة في الوصية ينطوي على خطر التسريب، وبعد إعلان الوصية يمكن لجميع الورثة رؤيتها.<strong>الطريقة الأكثر أماناً: اكتب في الوصية "قائمة الحسابات + نية المعالجة + موقع حفظ كلمات المرور" فقط، ومرر كلمة المرور الحقيقية عبر كلمة المرور الرئيسية لمدير كلمات المرور بشكل منفصل لمنفذ الثقة</strong>. هكذا يحقق المتطلبات القانونية ويخفض خطر تسريب كلمات المرور.
@@ -239,41 +239,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">القناة</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">سعر الإعادة</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">أمان البيانات</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">سيناريوهات الاستخدام</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعادة بجهاز قديم رسمي (Huawei/Apple/Xiaomi وغيرها)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">متوسط، يُضاف إليه قسائم دعم غالباً</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأعلى، إجراءات رسمية موحدة</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأكثر جدوى عند التخطيط لتبديل هاتف نفس العلامة</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منصات إعادة التدوير الخارجية (Aihuishou وZhuanzhuan وHuishoubao وغيرها)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أعلى قليلاً، يمكن مقارنة الأسعار</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ، يوجد تقرير مسح بيانات</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لمن يريد تحويل نقدي مباشر دون الارتباط بعلامة</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">التبرع العام (مثل مدارس الريف والمؤسسات الخيرية)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لا عائد اقتصادي</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب المسح الكامل ذاتياً</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهاز لا يزال صالحاً للاستخدام، تريد فعل خير</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">استغلال المتبقي (الإبقاء والتعديل)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">توفير ثمن جهاز جديد</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المالك الأصلي يستمر في الاستخدام، بلا مخاطر</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أداء الجهاز لا يزال جيداً، هناك حاجة للتعديل في المنزل</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">القناة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">سعر الإعادة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">أمان البيانات</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">سيناريوهات الاستخدام</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعادة بجهاز قديم رسمي (Huawei/Apple/Xiaomi وغيرها)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">متوسط، يُضاف إليه قسائم دعم غالباً</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأعلى، إجراءات رسمية موحدة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأكثر جدوى عند التخطيط لتبديل هاتف نفس العلامة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منصات إعادة التدوير الخارجية (Aihuishou وZhuanzhuan وHuishoubao وغيرها)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أعلى قليلاً، يمكن مقارنة الأسعار</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عالٍ، يوجد تقرير مسح بيانات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لمن يريد تحويل نقدي مباشر دون الارتباط بعلامة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">التبرع العام (مثل مدارس الريف والمؤسسات الخيرية)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لا عائد اقتصادي</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يجب المسح الكامل ذاتياً</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهاز لا يزال صالحاً للاستخدام، تريد فعل خير</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">استغلال المتبقي (الإبقاء والتعديل)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">توفير ثمن جهاز جديد</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المالك الأصلي يستمر في الاستخدام، بلا مخاطر</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أداء الجهاز لا يزال جيداً، هناك حاجة للتعديل في المنزل</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>اختر محطته التالية: إعادة التدوير الرسمي، أو منصة معتمدة، أو إهداء.</strong>: الطريقة الأكثر توصية، إجراءات موحدة، وأمان البيانات مضمون. مواقع Apple وHuawei وXiaomi وغيرها لها مدخل "trade-in"، وبعد التقييم يمكن خصمه من ثمن الجهاز الجديد.
@@ -283,7 +283,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>حقيقة النفايات الإلكترونية
+حقيقة النفايات الإلكترونية
 
 {class="mt-1"}
 تحتوي لوحة دائرة الهاتف على<strong>ذهب وفضة وبلاديوم ونحاس</strong>وغيرها من المعادن الثمينة، وكل طن من اللوحات المستعملة يحوي ذهباً يعادل عشرات الأضعاف ما في خام الذهب. لكن إذا رُميت عشوائياً، فإن الرصاص والزئبق والكادميوم فيها تتسرب للتربة والمياه الجوفية، والتلوث يستمر لعقود.<strong>الإعادة للتدوير الصحيحة تحمي البيئة وتتيح إعادة تدوير المعادن النادرة.</strong>
@@ -291,7 +291,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>نظارات الواقع المعزز (AR)
+نظارات الواقع المعزز (AR)
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. آخر نسخة احتياطية كاملة: رفع الصور للسحابة ونسخ الملفات المهمة للحاسوب وتصدير سجلات الدردشة.
@@ -305,7 +305,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>قائمة مهام هذا الشهر
+قائمة مهام هذا الشهر
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. تعيين "جهة اتصال الميراث" من Apple أو ضبط "مدير الحساب غير النشط" من Google لهاتفك الرئيسي.

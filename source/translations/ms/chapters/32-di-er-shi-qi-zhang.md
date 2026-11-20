@@ -32,22 +32,22 @@ Telefon sekarang asas semua ada terbina dalam "mod mudah" (sesetengah panggil "m
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Skrin retak dan sentuh tidak berfungsi: Perlu sambung penyesuai USB-OTG dan tetikus, atau guna kabel sambung ke TV/monitor dengan input HDMI.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">1. Komposisi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Peraturan sepertiga: Bahagikan skrin kepada sembilan kotak, letakkan subjek pada garisan silang.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kelebihan terbesar sandaran awan ialah "tidak perlu anda risau", selesai secara automatik. Kelemahan terbesar ialah pemulihan memerlukan masa muat turun yang lama, dan ruang percuma biasanya tidak mencukupi.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Pencahayaan</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Rakam dengan cahaya semula jadi dari tingkap, atau guna lampu LED. Elakkan rakam menentang cahaya (backlight).</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Stabilkan kamera</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Guna tripod atau stabilize tangan dengan menyandar pada dinding atau objek.</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Percubaan pelbagai angle: paras mata, dari atas, dari bawah, angle sisi.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">III. Penyuntingan video</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. App penyuntingan telefon</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Stabilkan kamera</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">CapCut: App penyuntingan video percuma popular, sokong template, muzik, kesan, transisi.</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iMovie: App penyuntingan Apple, mesra pengguna, sokong 4K.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VN Video Editor: App penyuntingan percuma dengan ciri lanjutan.</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Stabilkan kamera</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Teknik penyuntingan asas</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Skrin retak dan sentuh tidak berfungsi: Perlu sambung penyesuai USB-OTG dan tetikus, atau guna kabel sambung ke TV/monitor dengan input HDMI.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">1. Komposisi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Peraturan sepertiga: Bahagikan skrin kepada sembilan kotak, letakkan subjek pada garisan silang.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kelebihan terbesar sandaran awan ialah "tidak perlu anda risau", selesai secara automatik. Kelemahan terbesar ialah pemulihan memerlukan masa muat turun yang lama, dan ruang percuma biasanya tidak mencukupi.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Pencahayaan</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Rakam dengan cahaya semula jadi dari tingkap, atau guna lampu LED. Elakkan rakam menentang cahaya (backlight).</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Stabilkan kamera</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Guna tripod atau stabilize tangan dengan menyandar pada dinding atau objek.</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Percubaan pelbagai angle: paras mata, dari atas, dari bawah, angle sisi.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">III. Penyuntingan video</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. App penyuntingan telefon</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Stabilkan kamera</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">CapCut: App penyuntingan video percuma popular, sokong template, muzik, kesan, transisi.</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iMovie: App penyuntingan Apple, mesra pengguna, sokong 4K.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VN Video Editor: App penyuntingan percuma dengan ciri lanjutan.</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Stabilkan kamera</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Teknik penyuntingan asas</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Muzik: Pilih muzik yang sesuai dengan mood video, larangkan kadar bunyi muzik da
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Video mendatar 16:9, sesuai untuk kandungan lebih panjang dan terperinci.
+Video mendatar 16:9, sesuai untuk kandungan lebih panjang dan terperinci.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 4. Xiaohongshu
@@ -96,7 +96,7 @@ Warga emas adalah kawasan teruk penipuan telekom. Bukan kewaspadaan mereka renda
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Google Photos: Kongsi album dengan pautan, boleh tetapkan kebenaran.
+Google Photos: Kongsi album dengan pautan, boleh tetapkan kebenaran.
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>2. AirDrop / Nearby Share</strong>
@@ -151,7 +151,7 @@ Ramai warga emas ada masalah pendengaran, tetapi tidak tahu telefon boleh bekerj
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - WeChat: Saya → Tetapan → Storan → Kosongkan WeChat ‑ Buang cache dan fail sementara.

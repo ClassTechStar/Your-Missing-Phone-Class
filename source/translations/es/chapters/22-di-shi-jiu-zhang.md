@@ -87,7 +87,7 @@ Xiaomi
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>: los dispositivos iOS no tienen el concepto tradicional de bloqueo BL, pero tienen mecanismos de seguridad similares.
+: los dispositivos iOS no tienen el concepto tradicional de bloqueo BL, pero tienen mecanismos de seguridad similares.
 
 {class="mt-1"}
 III. Permisos Root: el "superadministrador" de Android
@@ -95,7 +95,7 @@ III. Permisos Root: el "superadministrador" de Android
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Los permisos Root son equivalentes al Administrador de Windows; es el nivel máximo de permisos en Android. Tras obtener permisos Root, puedes modificar archivos del sistema, desinstalar Apps preinstaladas y usar Apps avanzadas que requieren Root.
+Los permisos Root son equivalentes al Administrador de Windows; es el nivel máximo de permisos en Android. Tras obtener permisos Root, puedes modificar archivos del sistema, desinstalar Apps preinstaladas y usar Apps avanzadas que requieren Root.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Ventajas de Root:</strong> Desinstalar Apps preinstaladas que no se pueden desinstalar normalmente.

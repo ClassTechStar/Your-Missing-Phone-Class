@@ -40,35 +40,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">생태계</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">장점</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">단점</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">대상 사용자</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">프라이버시 최강(로컬 처리 중심), iPhone/Siri/단축어 연동 매끄러움</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 적고 비쌈, HomePod 또는 Apple TV가 허브 필요</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">온 집이 애플 기기, 프라이버시와 체감을 중시하는 사용자</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home(샤오미)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 가장 풍부, 가성비 최고, Xiao AI 음성 비서가 편리</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">생태계가 상대적으로 폐쇄적, 데이터가 대개 클라우드, 광고가 많음</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">예산이 한정적이고 집 전체를 한 번에 맞추고 싶은 입문 사용자</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink(하모니OS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">하모니OS 휴대폰/태블릿/워치와 매끄러운 연속성, 기기 수 빠르게 증가</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">해외 기기 지원이 적음, 생태계가 아직 추격 중</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 휴대폰 사용자, "슈퍼 디바이스" 다중 기기 협업을 중시하는 분</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">생태계</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">장점</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">단점</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">대상 사용자</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">프라이버시 최강(로컬 처리 중심), iPhone/Siri/단축어 연동 매끄러움</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 적고 비쌈, HomePod 또는 Apple TV가 허브 필요</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">온 집이 애플 기기, 프라이버시와 체감을 중시하는 사용자</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home(샤오미)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 가장 풍부, 가성비 최고, Xiao AI 음성 비서가 편리</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">생태계가 상대적으로 폐쇄적, 데이터가 대개 클라우드, 광고가 많음</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">예산이 한정적이고 집 전체를 한 번에 맞추고 싶은 입문 사용자</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink(하모니OS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">하모니OS 휴대폰/태블릿/워치와 매끄러운 연속성, 기기 수 빠르게 증가</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">해외 기기 지원이 적음, 생태계가 아직 추격 중</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 휴대폰 사용자, "슈퍼 디바이스" 다중 기기 협업을 중시하는 분</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

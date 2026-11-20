@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* להפנות להגדרות כדי להפעיל */
-        default: /* אושר, קדימה */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* להפנות להגדרות כדי להפעיל */
+ default: /* אושר, קדימה */
+ }
+ }
 }
 
 // 3. ירידה אלגנטית אחרי סירוב: להציג הודעה ולקפוץ להגדרות
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. לבקש הרשאת התראות (חלונית פעם אחת)
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "אושר" : "נדחה")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "אושר" : "נדחה")
+ }
 
 // 2. לתזמן "תזכורת רישום הוצאות ב-20:00 בכל יום"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "תזכורת לרישום הוצאות"
-    content.body = "עדיין לא רשמת כלום היום"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "תזכורת לרישום הוצאות"
+ content.body = "עדיין לא רשמת כלום היום"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ func scheduleDailyReminder() {
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // מתחיל בהופעה ומבוטל בהיעלמות
-            await vm.search(city: "תל אביב")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // מתחיל בהופעה ומבוטל בהיעלמות
+ await vm.search(city: "תל אביב")
+ }
+ }
 }
 ```
 :::

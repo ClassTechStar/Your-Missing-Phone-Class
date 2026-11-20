@@ -98,7 +98,7 @@ Give it more context, clearly state what you want, and constrain it from going o
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Give AI a specific "identity," and it will draw on the professional knowledge and expression style of the corresponding field.
+Give AI a specific "identity," and it will draw on the professional knowledge and expression style of the corresponding field.
 
 {class="mt-1"}
 The more specific the role setting, the more professional the output <strong>.</strong> Practical examples:
@@ -198,39 +198,39 @@ Include background rather than isolated <strong>: Tell AI "who I am, why I'm ask
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Add tone constraints + reject "bureaucratic language" list</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Answer off-topic/not answering the question</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Restate the task with verbs and require "only answer this"</td>
-                                    <td class="border border-gray-300 px-3 py-2">Answer too long to finish reading</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Hard limit on word count (within 200 words)</td>
-                                    <td class="border border-gray-300 px-3 py-2">AI speaks nonsense with a straight face</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Add "if uncertain, mark 'I'm not sure'" + self-check important facts</td>
-                                    <td class="border border-gray-300 px-3 py-2">Not satisfied with the first version </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Don't rewrite; append "a bit more..." to the original prompt</td>
-                                    <td class="border border-gray-300 px-3 py-2">7. Three Complete Scenario Cases</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Scenario 1: Life Assistant (Breakfast Pairing Suggestions)</td>
-                                    <td class="border border-gray-300 px-3 py-2">Prompt</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">:</td>
-                                    <td class="border border-gray-300 px-3 py-2">You are a breakfast blogger who excels at nutritional pairing (</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Add tone constraints + reject "bureaucratic language" list</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Answer off-topic/not answering the question</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Restate the task with verbs and require "only answer this"</td>
+ <td class="border border-gray-300 px-3 py-2">Answer too long to finish reading</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Hard limit on word count (within 200 words)</td>
+ <td class="border border-gray-300 px-3 py-2">AI speaks nonsense with a straight face</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Add "if uncertain, mark 'I'm not sure'" + self-check important facts</td>
+ <td class="border border-gray-300 px-3 py-2">Not satisfied with the first version </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Don't rewrite; append "a bit more..." to the original prompt</td>
+ <td class="border border-gray-300 px-3 py-2">7. Three Complete Scenario Cases</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Scenario 1: Life Assistant (Breakfast Pairing Suggestions)</td>
+ <td class="border border-gray-300 px-3 py-2">Prompt</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">:</td>
+ <td class="border border-gray-300 px-3 py-2">You are a breakfast blogger who excels at nutritional pairing (</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Include background rather than isolated <strong>: Tell AI "who I am, why I'm ask
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>). I am an office worker mom with only 15 minutes every morning to make breakfast, with a 6-year-old child and a 60-year-old mother-in-law at home (
+). I am an office worker mom with only 15 minutes every morning to make breakfast, with a 6-year-old child and a 60-year-old mother-in-law at home (
 
 {class="mt-1"}
 <strong>discussing the Q2 marketing promotion plan</strong>:
@@ -253,7 +253,7 @@ list 7 days of non-repeating breakfast pairings <strong>(</strong> Task <strong>
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>(Role). I am an ordinary undergraduate student,
+(Role). I am an ordinary undergraduate student,
 
 {class="mt-1"}
 <strong>discussing the Q2 marketing promotion plan</strong>:
@@ -267,7 +267,7 @@ Please organize the following meeting notes into structured minutes <strong>(Tas
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>(Role). I just finished a 1-hour department meeting,
+(Role). I just finished a 1-hour department meeting,
 
 {class="mt-1"}
 <strong>discussing the Q2 marketing promotion plan</strong>:
@@ -281,7 +281,7 @@ Please organize the following meeting notes into structured minutes <strong>(Tas
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>: Have AI "think step by step"; answer quality is usually higher: "Please analyze this math problem step by step."
+: Have AI "think step by step"; answer quality is usually higher: "Please analyze this math problem step by step."
 
 {class="mt-1"}
 Multi-AI collaboration
@@ -305,7 +305,7 @@ Limited reasoning ability
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>For key decisions (medical, legal, financial), consult professionals rather than relying on AI.
+For key decisions (medical, legal, financial), consult professionals rather than relying on AI.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Advanced Techniques: Make AI Your "Personal Assistant"
@@ -317,7 +317,7 @@ Limited reasoning ability
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Challenge 3: Prompt Optimization
+Challenge 3: Prompt Optimization
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: First use a simple prompt "write a travel guide" to ask AI, then use the CRISPE framework to write a detailed prompt. Compare the quality difference of the two answers.</strong> Chapter 23: Programming Thinking and Automation Enlightenment
@@ -327,7 +327,7 @@ Limited reasoning ability
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Case 2: Complete Phone Replacement Data Migration
+Case 2: Complete Phone Replacement Data Migration
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: iPhone 13 → Xiaomi 15 cross-brand phone replacement.

@@ -54,7 +54,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① AI 換臉擬聲詐騙
+① AI 換臉擬聲詐騙
 
 {class="mt-1"}
 不法分子通過非法蒐集目標對象喺社交媒體發佈嘅高清相片或僅需幾秒鐘嘅語音樣本，利用AI深度偽造技術克隆出足以亂真嘅「親友影片」或「語音」。常見劇本包括：<strong>突發車禍、緊急借款、遭遇綁架</strong>等。呢類詐騙利用親情、友情等情感紐帶，<strong>迷惑性極高</strong>。
@@ -62,7 +62,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② 冒充權威 / 客服詐騙
+② 冒充權威 / 客服詐騙
 
 {class="mt-1"}
 AI技術能夠精準模擬官方客服、公檢法機關人員嘅聲音同語調，甚至可以合成高度逼真嘅虛假轉賬截圖、電子公文、通緝令等檔案，通過<strong>製造恐慌心理或權威壓力</strong>，誘導受害者轉賬或開啟螢幕共享功能，從而竊取賬戶資訊。
@@ -70,7 +70,7 @@ AI技術能夠精準模擬官方客服、公檢法機關人員嘅聲音同語調
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ AI 投資理財詐騙
+③ AI 投資理財詐騙
 
 {class="mt-1"}
 通過AI算法偽造「穩賺唔賠」嘅虛假收益截圖、虛擬量化選股軟件介面或「大師級」投資分析報告，以高額回報為誘餌，售賣高價投資服務或誘導受害者將資金轉入佢控制嘅交易賬戶，<strong>最終捲款走人</strong>。
@@ -127,7 +127,7 @@ AI可以克隆聲音同面容，但都唔係無懈可擊，有幾個破綻可以
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>真實案例警示
+真實案例警示
 
 {class="mt-1"}
 2022年某地警方通報，黑客通過破解某品牌家用攝像頭嘅預設密碼（好多用戶從未修改），竊取咗上千戶家庭嘅睡房畫面並喺網上兜售。<strong>唔改預設密碼 = 將屋企大門敞開</strong>。
@@ -170,7 +170,7 @@ AI可以克隆聲音同面容，但都唔係無懈可擊，有幾個破綻可以
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>千萬唔好做嘅事
+千萬唔好做嘅事
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - 用生日 / 123456 / qwerty 等弱密碼。
@@ -182,7 +182,7 @@ AI可以克隆聲音同面容，但都唔係無懈可擊，有幾個破綻可以
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>試下啟用並模擬「遠程鎖定」
+試下啟用並模擬「遠程鎖定」
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 確保你嘅「查找我嘅手機」功能已開啟。

@@ -54,7 +54,7 @@ Avec le développement rapide des technologies IA, le modèle cognitif tradition
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① Arnaque par usurpation de visage et de voix par IA
+① Arnaque par usurpation de visage et de voix par IA
 
 {class="mt-1"}
 Les malfaiteurs collectent illégalement des photos haute définition publiées par la cible sur les réseaux sociaux ou quelques secondes d'échantillon vocal, puis utilisent la technologie de deepfake IA pour cloner une « vidéo de proche » ou une « voix » suffisamment convaincante. Scénarios courants :<strong>accident de voiture urgent, prêt d'urgence, enlèvement</strong>, etc. Ce type d'arnaque exploite les liens affectifs familiaux et amicaux, avec une <strong>force de tromperie extrêmement élevée</strong>.
@@ -62,7 +62,7 @@ Les malfaiteurs collectent illégalement des photos haute définition publiées 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② Usurpation d'autorité / arnaque au service client
+② Usurpation d'autorité / arnaque au service client
 
 {class="mt-1"}
 La technologie IA peut simuler avec précision la voix et le ton du personnel du service client officiel, des autorités judiciaires et policières, et même synthétiser des captures d'écran de virement très réalistes, des documents administratifs électroniques, des mandats d'arrêt, etc., en <strong>créant un climat de panique ou une pression d'autorité</strong>, incitant la victime à transférer de l'argent ou à activer le partage d'écran, volant ainsi les informations du compte.
@@ -70,7 +70,7 @@ La technologie IA peut simuler avec précision la voix et le ton du personnel du
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ Arnaque IA à l'investissement financier
+③ Arnaque IA à l'investissement financier
 
 {class="mt-1"}
 Via des algorithmes IA, falsification de captures d'écran de rendements « garantis sans risque », d'interfaces de logiciels de trading quantitatif virtuels ou de rapports d'analyse d'investissement de « niveau maître », avec la promesse de rendements élevés comme appât, vente de services d'investissement onéreux ou incitation des victimes à transférer des fonds vers des comptes de trading sous leur contrôle, pour <strong>finalement disparaître avec l'argent</strong>.
@@ -127,7 +127,7 @@ Les caméras connectées, serrures connectées, enceintes connectées et autres 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Avertissement basé sur un cas réel
+Avertissement basé sur un cas réel
 
 {class="mt-1"}
 En 2022, la police d'une localité a signalé que des pirates avaient cracké les mots de passe par défaut de caméras de surveillance domestiques d'une marque (beaucoup d'utilisateurs ne les avaient jamais modifiés), volant les images de chambres de milliers de foyers et les revendant en ligne.<strong>Ne pas changer le mot de passe par défaut = laisser la porte de chez soi grande ouverte</strong>.
@@ -170,7 +170,7 @@ Ne paniquez pas si vous perdez votre smartphone, suivez cet ordre :
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Ce qu'il ne faut absolument pas faire
+Ce qu'il ne faut absolument pas faire
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Utiliser des mots de passe faibles comme date de naissance / 123456 / qwerty ;
@@ -182,7 +182,7 @@ Ne paniquez pas si vous perdez votre smartphone, suivez cet ordre :
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez d'activer et de simuler un « verrouillage à distance »
+Essayez d'activer et de simuler un « verrouillage à distance »
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Assurez-vous que la fonction « Localiser mon smartphone » est activée.

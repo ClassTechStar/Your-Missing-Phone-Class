@@ -37,7 +37,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：安卓的开源基因
+小贴士：安卓的开源基因
 
 {class="mt-1"}
 安卓的核心代码（AOSP，Android Open Source Project）是开源的——任何厂商都能拿去修改定制。所以小米有澎湃 OS、三星有 One UI；华为则另起炉灶，鸿蒙已经走出了自己的路线（本节末尾专门聊它）。这对开发者是好事：<strong>你学的是"安卓开发"，不是"某个品牌的开发"</strong>，一套功夫，全网通吃。
@@ -147,7 +147,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：数一数你身边的安卓
+来动手：数一数你身边的安卓
 
 {class="mt-1"}
 环顾你的家：手机几台？平板？电视或电视盒子？手表？耳机充电仓有没有屏？车载屏？把找到的安卓设备记下来，标上"能升级到什么版本"。这个五分钟的小游戏会给你两个收获：直观感受"处处是安卓"，以及攒出你未来的真机测试矩阵，学习阶段用不上全部，但它们都是你的潜在测试设备。
@@ -176,7 +176,7 @@ kind: chapter
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
 {class="vs-title"}
-<i class="fas fa-times-circle mr-1"></i> Java 风格（啰嗦版）
+ Java 风格（啰嗦版）
 
 {class="font-mono text-xs leading-relaxed"}
 public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&nbsp;protected void onCreate(Bundle b) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b);<br>&nbsp;&nbsp;&nbsp;&nbsp; setContentView(R.layout.activity);<br>&nbsp;&nbsp;}<br>}
@@ -184,7 +184,7 @@ public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&
 
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
 {class="vs-title"}
-<i class="fas fa-check-circle mr-1"></i> Kotlin 风格（清爽版）
+ Kotlin 风格（清爽版）
 
 {class="font-mono text-xs leading-relaxed"}
 class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(b: Bundle?) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b)<br>&nbsp;&nbsp;&nbsp;&nbsp;setContent { App() }<br>&nbsp;&nbsp;}<br>}
@@ -216,7 +216,7 @@ class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(
 
 ```
 fun 最低价(价格列表: List&lt;Double&gt;): Double? {
-    return 价格列表.minOrNull()
+ return 价格列表.minOrNull()
 }
 ```
 :::
@@ -245,11 +245,11 @@ fun 最低价(价格列表: List&lt;Double&gt;): Double? {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 写代码</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hammer mr-1"></i> 编译打包（APK/AAB）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-flask mr-1"></i> 测试（模拟器+真机）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-rocket mr-1"></i> 发布（商店/安装包）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 编译打包（APK/AAB）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 测试（模拟器+真机）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 发布（商店/安装包）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -379,7 +379,7 @@ fun 最低价(价格列表: List&lt;Double&gt;): Double? {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：简历上最值钱的一行
+小贴士：简历上最值钱的一行
 
 {class="mt-1"}
 无论走哪条路，"上架过一个自己的 App"都是简历上最硬的一行，它同时证明了你会写代码、能走完全流程、而且愿意对真实用户负责。从今天起就带着这个目标学，每一章的动手环节都是在为这一行铺路。
@@ -422,12 +422,12 @@ Jetpack 常用组件速览（完整清单以官方文档为准）
 
 ```
 class CounterViewModel : ViewModel() {
-    private var _count = 0
-    val count: Int get() = _count
+ private var _count = 0
+ val count: Int get() = _count
 
-    fun 点击加一() {
-        _count += 1
-    }
+ fun 点击加一() {
+ _count += 1
+ }
 }
 ```
 :::
@@ -438,7 +438,7 @@ Jetpack 背后还有一个值得点破的设计哲学：<strong>谷歌把"大家
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：认出"官方出品"
+小贴士：认出"官方出品"
 
 {class="mt-1"}
 搜方案时你会看到大量第三方库。判断优先级的简单规则：Jetpack 有对应组件的，优先用官方的；没有的，再看第三方库的维护活跃度与口碑。官方组件意味着长期更新、文档齐全、与系统新版本兼容——这三样第三方库很难保证。
@@ -632,7 +632,7 @@ Compose 的写法是一句话："Text(text = "订单数：$x")"，文字直接�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：包名和签名是"身份证"
+避坑提醒：包名和签名是"身份证"
 
 {class="mt-1"}
 包名（Application ID）和签名文件决定商店怎么认你的 App。上线后再改包名，商店会当成全新应用；签名文件丢了，更新都发不出去。学习期用临时配置无所谓，一旦认真上架，就把这两样当身份证保管好——备份、别外传、别随手重建。
@@ -752,7 +752,7 @@ Compose 的写法是一句话："Text(text = "订单数：$x")"，文字直接�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：给未来的你留一封信
+小贴士：给未来的你留一封信
 
 {class="mt-1"}
 今天在建第一个项目之前，写三行字放进备忘录：我为什么要学安卓、我想做的第一个 App 是什么、学完后我想成为什么样的人。三个月后卡住想放弃时打开看：这种时刻一定会来，而这封信比任何鸡汤都管用，因为落款是你自己。
@@ -835,7 +835,7 @@ Compose 的写法是一句话："Text(text = "订单数：$x")"，文字直接�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 安卓 2008 年诞生，2026 年是全球市场份额最大的移动系统，活跃设备数十亿
 - 最新正式版 Android 17；主流 App 最低支持 Android 8-10，用户盘子才够大

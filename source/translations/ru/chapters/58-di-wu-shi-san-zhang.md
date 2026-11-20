@@ -39,14 +39,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // Запись: сохраняем значение
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // Чтение: достаём (Flow сам сообщит об изменениях)
 val themeFlow: Flow<Boolean> = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -65,33 +65,33 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 // 1. Entity: структура таблицы (одна таблица = один data class)
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. Dao: интерфейс операций (CRUD)
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. Database: общая сборка
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -110,16 +110,16 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 // 1. Определяем интерфейс: описываем HTTP-запросы как функции
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. Создаём экземпляр
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. Вызываем как обычную функцию (в корутине)
 val result = api.getWeather("Пекин")
@@ -156,9 +156,9 @@ val result = api.getWeather("Пекин")
 // Добавляем data-классу аннотацию @Serializable
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // Подключаем к Retrofit соответствующий Converter (официальная поддержка с Retrofit 2.11+):
@@ -180,13 +180,13 @@ data class WeatherResponse(
 ```
 // Запускаем корутину в ViewModel
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend: сам приостановится и подождёт
-    // обновляем состояние интерфейса…
+ val records = dao.getAll().first() // suspend: сам приостановится и подождёт
+ // обновляем состояние интерфейса…
 }
 
 // Шпаргалка по ключевым словам:
-// suspend   — «мне надо подождать, не мешайте другим»
-// launch    — «За работу!»
+// suspend — «мне надо подождать, не мешайте другим»
+// launch — «За работу!»
 // viewModelScope — «рабочая», привязанная к экрану; закрывается сама при уничтожении экрана
 ```
 :::

@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第70-71章打地基（认识鸿蒙 + DevEco Studio 环境）→ 第72-73章练内功（ArkTS + ArkUI 声明式界面）→ 第74-75章挑武器（应用模型 + 数据与网络）→ 第76-77章上战场（两个完整项目）→ 第78章上架华为应用市场 → 第79-80章登台阶（进阶之路 + 速查手册）。有前两篇基础的建议顺序阅读；ArkTS 的 TypeScript 血统会让 Swift/Kotlin 老手倍感亲切。

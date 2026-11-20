@@ -35,7 +35,7 @@ TOC_HEAD = '{comment}\n' \
            '                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">\n' \
            '                            <a href="#{pid}" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">{nav}</a>\n' \
            '                            <button class="toc-toggle-btn" type="button" aria-label="展开/收起{short}" data-target="child-{group}">\n' \
-           '                                <i class="fas fa-chevron-down toc-toggle-icon text-xs transition-transform duration-300"></i>\n' \
+           '                                <span class="toc-toggle-icon fa-chevron-down text-xs inline-block transition-transform duration-300" aria-hidden="true">▾</span>\n' \
            '                            </button>\n' \
            '                        </div>\n' \
            '                        <ul id="child-{group}" class="toc-child open pl-4 space-y-0.5 mt-1">\n'

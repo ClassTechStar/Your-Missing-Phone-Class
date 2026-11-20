@@ -34,7 +34,7 @@ II. Μυθολογία φόρτισης; Γρήγορη, ασύρματη και
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Λειτουργία «περιορισμός 80%» iPhone — ο χρυσός κανόνας γίνεται ρύθμιση
+Λειτουργία «περιορισμός 80%» iPhone — ο χρυσός κανόνας γίνεται ρύθμιση
 
 {class="mt-1"}
 iPhone 15/16(iOS 17)"20%-80%"Σύστημα Λειτουργία.ενεργοποίηση,80%αυτόματο Διακοπή Φόρτιση, Μπαταρία.Ρυθμίσεις:
@@ -48,7 +48,7 @@ iPhone 15/16(iOS 17)"20%-80%"Σύστημα Λειτουργία.ενεργοπ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>Φορτιστής GaN — ιδανικός για ταξίδια
+Φορτιστής GaN — ιδανικός για ταξίδια
 
 {class="mt-1"}
 Μάλλον προσέξατε ότι οι φορτιστές γίνονται όλο και μικρότεροι, χάρη στο <strong>GaN (νιτρίδιο του γαλλίου)</strong>.Φορτιστής, GaN Φορτιστής:
@@ -127,47 +127,47 @@ III. Πλήρης ανάλυση πρωτοκόλλων γρήγορης φόρ�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πρωτόκολλο</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μέγιστη ισχύς</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τεχνολογική διαδρομή</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Συμβατότητα</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">υψηλή τάση/πολλαπλές βαθμίδες</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">πιο διαδεδομένο</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">υψηλή τάση, ρυθμιζόμενη</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μοντέλα Qualcomm</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">χαμηλή τάση, υψηλό ρεύμα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αποκλειστικό για σειρά OPPO</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αντλία φορτίου</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple γρήγορη φόρτιση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πρωτόκολλο PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πρωτόκολλο</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μέγιστη ισχύς</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τεχνολογική διαδρομή</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Συμβατότητα</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">υψηλή τάση/πολλαπλές βαθμίδες</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">πιο διαδεδομένο</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">υψηλή τάση, ρυθμιζόμενη</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μοντέλα Qualcomm</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">χαμηλή τάση, υψηλό ρεύμα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αποκλειστικό για σειρά OPPO</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αντλία φορτίου</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple γρήγορη φόρτιση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πρωτόκολλο PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ III. Πλήρης ανάλυση πρωτοκόλλων γρήγορης φόρ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Συμβουλές ασφαλείας γρήγορης φόρτισης
+Συμβουλές ασφαλείας γρήγορης φόρτισης
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Αποφύγετε παιχνίδι κατά τη φόρτιση, αυξάνει θερμοκρασία.
@@ -207,7 +207,7 @@ III. Πλήρης ανάλυση πρωτοκόλλων γρήγορης φόρ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Ποια μοντέλα χρησιμοποιούν;
+Ποια μοντέλα χρησιμοποιούν;
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>:Magic, Magic6 Pro, Magic7, Magic V3Foldable.
@@ -228,7 +228,7 @@ III. Πλήρης ανάλυση πρωτοκόλλων γρήγορης φόρ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Έλεγχος: κάντε check-up στη μπαταρία
+Έλεγχος: κάντε check-up στη μπαταρία
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Δείτε υγεία: σημειώστε τη μέγιστη χωρητικότητα.

@@ -32,22 +32,22 @@ Os celulares atuais basicamente vêm com um "Modo Simplificado" integrado (algun
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marca</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nome do modo</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Como ativar</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Uso assistivo (não há um modo simplificado separado, mas é possível ajustar item por item)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Tela e Brilho > Tamanho do Texto, arraste ao máximo. Depois em "Acessibilidade > Tela e Tamanho do Texto", ative "Texto em Negrito" e "Formatos de Botão"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Simplificado</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Sistema e atualizações > Modo Simplificado > Ativar</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Minimalista</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Mais configurações > Modo Minimalista > Ativar</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Simplificado</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Recursos especiais > Modo Simplificado</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tela Inicial Simplificada</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Tela inicial, tela de bloqueio e papel de parede > Tela Inicial Simplificada</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Simplificado</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Tela > Modo Simplificado</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marca</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nome do modo</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Como ativar</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Uso assistivo (não há um modo simplificado separado, mas é possível ajustar item por item)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Tela e Brilho > Tamanho do Texto, arraste ao máximo. Depois em "Acessibilidade > Tela e Tamanho do Texto", ative "Texto em Negrito" e "Formatos de Botão"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Simplificado</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Sistema e atualizações > Modo Simplificado > Ativar</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Minimalista</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Mais configurações > Modo Minimalista > Ativar</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Simplificado</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Recursos especiais > Modo Simplificado</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tela Inicial Simplificada</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Tela inicial, tela de bloqueio e papel de parede > Tela Inicial Simplificada</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo Simplificado</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Config. > Tela > Modo Simplificado</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Alguns idosos não querem usar o Modo Simplificado, achando a interface muito "a
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: ajude um idoso a "decorar" o celular
+Mãos à obra: ajude um idoso a "decorar" o celular
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ative o Modo Simplificado (conforme a tabela de marcas acima).
@@ -96,7 +96,7 @@ Idosos são o principal alvo de fraudes por telecomunicações. Não é que eles
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"Mantra antifraude" para os mais velhos (imprima e cole ao lado do telefone)
+"Mantra antifraude" para os mais velhos (imprima e cole ao lado do telefone)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Chamada de desconhecido pedindo transferência → Desligue!</strong>
@@ -151,7 +151,7 @@ VIII. Funções relacionadas à saúde — o celular não é só uma ferramenta 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo
+Resumo do capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Primeiro ative o Modo Simplificado ou ajuste manualmente fonte/ícones para maior. Com o ambiente ajustado, metade dos problemas desaparece

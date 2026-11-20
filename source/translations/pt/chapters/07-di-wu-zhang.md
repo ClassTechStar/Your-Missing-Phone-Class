@@ -74,7 +74,7 @@ Esta seção traz funções das quais "uma vez que você as configura, não cons
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Checklist do "Primeiro Dia de Trabalho"
+Checklist do "Primeiro Dia de Trabalho"
 
 {class="mt-1 text-sm"}
 Ao pegar um telefone novo ou após uma grande atualização de versão, reserve 10 minutos para revisar estas configurações:<br> ① Senha de bloqueio + biometria. ② Agrupamento de notificações + desativar push de marketing. ③ Tamanho da fonte, Taxa de atualização / Modo escuro<br>. ④ Teclado / Navegador / E-mail padrão. ⑤ Contato de emergência / Ficha médica. ⑥ Configurações de backup
@@ -90,7 +90,7 @@ O leitor de tela é a ferramenta central para usuários com deficiência visual 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS VoiceOver
+iOS VoiceOver
 
 {class="mt-1"}
 <strong>Caminho de ativação</strong>: [Ajustes] > [Acessibilidade] > [VoiceOver], ative o interruptor. Também pode ser ativado/desativado rapidamente com três toques no botão lateral (ou botão de Início).
@@ -111,7 +111,7 @@ O leitor de tela é a ferramenta central para usuários com deficiência visual 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>Android TalkBack
+Android TalkBack
 
 {class="mt-1"}
 <strong>Caminho de ativação</strong>: [Ajustes] > [Acessibilidade] > [TalkBack], ative o interruptor. Ou pressione e segure as teclas de volume para cima e para baixo por 3 segundos para ativação rápida (suportado por algumas marcas).
@@ -155,7 +155,7 @@ Quando o leitor de tela encontra uma imagem, a abordagem tradicional é pular ou
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>Suporte à Descrição de Imagens por IA em Cada Sistema
+Suporte à Descrição de Imagens por IA em Cada Sistema
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: Em [Ajustes] > [Acessibilidade] > [VoiceOver] > [Descrição de Fala], ative "Descrição de Imagens". O sistema usará um <strong>modelo de IA local</strong> para gerar automaticamente descrições de texto das imagens (requer iPhone 12 ou superior).
@@ -165,7 +165,7 @@ Quando o leitor de tela encontra uma imagem, a abordagem tradicional é pular ou
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Cenários de Uso
+Cenários de Uso
 
 {class="mt-1"}
 Tente, diante de uma foto de rua, perguntar "Quantas pessoas há nesta imagem? O que elas estão fazendo?", ou abra um app de delivery e peça à IA para ler os nomes dos pratos no menu em imagem <strong>isso é verdadeiramente "tecnologia tornando a vida mais igualitária"</strong>.
@@ -178,7 +178,7 @@ As Legendas em Tempo Real (Live Captions) são uma função de <strong>conversã
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>Ativação e Otimização das Legendas em Tempo Real
+Ativação e Otimização das Legendas em Tempo Real
 
 {class="mt-1"}
 <strong>iOS</strong>: [Ajustes] > [Acessibilidade] > [Legendas em Tempo Real], ative o interruptor. O sistema detectará todo o áudio do dispositivo (chamadas, vídeos, podcasts, FaceTime, memorandos de voz) e exibirá automaticamente as legendas na parte superior da tela.
@@ -203,7 +203,7 @@ Quando o usuário <strong>não consegue ouvir nem falar</strong> (como perda sú
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>Tradução de Chamadas em Tempo Real (TTY / RTT)
+Tradução de Chamadas em Tempo Real (TTY / RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [Ajustes] > [Acessibilidade] > [RTT/TTY]. Após ativar, durante a chamada, um teclado será exibido na tela. A fala do interlocutor é convertida em texto em tempo real, e <strong>o texto que você digita será lido em voz alta</strong> para o interlocutor.
@@ -231,7 +231,7 @@ Quando o usuário <strong>não consegue ouvir nem falar</strong> (como perda sú
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>A Filosofia de Design Acessível da Apple
+A Filosofia de Design Acessível da Apple
 
 {class="mt-1"}
 A Apple investe enormemente em acessibilidade, atualizando e adicionando novos recursos de acessibilidade todos os anos. O site oficial da Apple possui uma página dedicada à acessibilidade. Detalhando o uso de cada função. Os recursos de acessibilidade do iOS costumam ser mais completos e a experiência mais fluida do que no Android. Esta é uma razão importante pela qual muitos usuários com deficiência escolhem a Apple.
@@ -239,7 +239,7 @@ A Apple investe enormemente em acessibilidade, atualizando e adicionando novos r
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Experimente por 30 segundos
+Experimente por 30 segundos
 
 {class="mt-1"}
 Reserve um momento livre para experimentar o seguinte:

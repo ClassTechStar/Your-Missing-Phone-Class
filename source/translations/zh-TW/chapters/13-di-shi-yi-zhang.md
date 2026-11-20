@@ -61,7 +61,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>練一練：用手機完成一次完整的拍照+修圖+整理
+練一練：用手機完成一次完整的拍照+修圖+整理
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 開啟相機設定裡的"網格線"，找一個有自然光的地方拍三張照片（注意擦鏡頭、調曝光）。

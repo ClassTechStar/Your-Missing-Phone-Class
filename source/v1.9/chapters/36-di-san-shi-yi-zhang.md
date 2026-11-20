@@ -68,7 +68,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 最亏的买法是"装备先行"：设备买齐、配件成套，结果拍了三条就吃灰。给自己定个规矩，用手拍满十条视频，再回头看这份清单，你会发现要买的可能只剩一件。
@@ -195,7 +195,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 开拍前默念四个字：擦、稳、光、声，擦镜头、想稳定、看光线、试声音。四个字都过了，再按录制键。
@@ -294,7 +294,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 公共场合拍摄三条底线：不怼着陌生人的脸拍（拍到路人正脸，发布前打个码或换机位）；遵守场所规定（商场、学校、展馆有的区域禁止拍摄，先看标识或问工作人员）；不占道、不堵路、不影响别人做生意。拍摄者和围观者互相体谅，路人才不会在你的镜头里皱眉。
@@ -302,7 +302,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 给这一节排个练习表：周一练推拉，周二练摇移，周三练跟，周四把五招串进一条一分钟的小片。一周下来，手就不一样了。
@@ -347,7 +347,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 给口播定一个固定的"开场句式"，每条都用同一句式起头——比如固定一句"今天帮你解决一个问题"。观众听到第一个字就知道你要干嘛，这本身就是账号的记忆点。
@@ -492,7 +492,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别急着清理相册里"拍废"的原始素材：部分情况下，剪辑草稿引用的素材被删除后，草稿会失效或丢画面。先确认这条视频已经导出、发布、不再回头改，再动手清理。
@@ -543,7 +543,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 封面是给别人看的：你自己觉得好看不算数，划过的路人愿意停一停才算数。
@@ -668,7 +668,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 训练期给自己一个"允许难看"的心理许可：第一条视频的功能不是惊艳，是存在。账号的历史就是从"难看的第一条"开始滚动的。
@@ -807,7 +807,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 每个月给账号拍一张"体检照"：截图主页、记下作品数和粉丝数、写一句本月最大的心得。一年后回看这十二张截图，你会得到一份最真实的成长记录。
@@ -815,7 +815,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 短视频这件事，赢的不是最有天赋的人，而是第六十条视频还愿意认真拍的人。
@@ -1015,7 +1015,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：拍一条30秒的短视频
+动手：拍一条30秒的短视频
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 选一个你擅长的小知识（比如"怎么把手机字体调大"）。
@@ -1027,7 +1027,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 拍之前想清楚：观众是谁、提供什么价值、在哪个平台发

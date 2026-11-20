@@ -55,7 +55,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0) est fondamentalement différent de HarmonyOS
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>À lire avant la mise à niveau vers HarmonyOS NEXT
+À lire avant la mise à niveau vers HarmonyOS NEXT
 
 {class="mt-1"}
 Après la mise à niveau vers HarmonyOS NEXT, votre smartphone ne pourra plus exécuter d'applications Android. Avant la mise à niveau, vérifiez absolument : ① vos apps usuelles ont déjà une version native HarmonyOS ; ② votre travail ou votre vie quotidienne n'a pas de scénario absolument dépendant des applications Android. Après la mise à niveau, impossible de revenir à HarmonyOS 4.3.
@@ -94,7 +94,7 @@ Le magasin d'applications HarmonyOS propose des millions d'applications ; les ap
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Précautions
+Précautions
 
 {class="mt-1"}
 HarmonyOS est en constante évolution, les différentes versions peuvent présenter quelques différences. Cette description se base sur les principales caractéristiques de HarmonyOS 4.3 et 6, pour les fonctionnalités spécifiques, référez-vous à la version réelle de votre smartphone. Il est recommandé de maintenir le système à jour pour bénéficier des dernières fonctionnalités et des correctifs de sécurité.
@@ -102,7 +102,7 @@ HarmonyOS est en constante évolution, les différentes versions peuvent présen
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez maintenant : découvrez les fonctionnalités phares de HarmonyOS
+Essayez maintenant : découvrez les fonctionnalités phares de HarmonyOS
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez le centre de contrôle, cherchez « Super terminal », voyez s'il y a d'autres appareils HarmonyOS à proximité.

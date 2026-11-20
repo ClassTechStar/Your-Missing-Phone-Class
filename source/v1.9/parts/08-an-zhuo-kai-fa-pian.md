@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第48-49章打地基（认识安卓 + 环境搭建）→ 第50-51章练内功（Kotlin + Jetpack Compose）→ 第52-53章挑武器（四大组件 + 数据与网络）→ 第54-56章上战场（两个完整项目 + 上架 Google Play）→ 第57-58章登台阶（进阶之路 + 速查手册）。零基础建议顺序阅读；想快点做出东西，直接跳第54章跟着做项目。

@@ -70,7 +70,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 现在就试一次：在这一页里用页面搜索找"UFS"，看它是不是仓库的传送带。找到一次，这张表的用法你就全会了，剩下的三十多个词，等你哪天撞上再说。
@@ -83,124 +83,124 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">你可能听到的词</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">其实就是指……</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">一句话解释</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">SoC / 芯片</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的大脑和心脏</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">决定手机快不快、游戏卡不卡的核心部件。2026年的顶级档是骁龙 8 Elite Gen 5 和天玑 9500，看配置先对一对这一档。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">RAM (运存)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"短期工作桌"</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">桌越大，能同时开的App就越多，切换越流畅。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">ROM (存储)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"大仓库"</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">存照片、视频、App的地方。128G、256G说的就是它。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED / LCD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">屏幕的两种材质</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED色彩更艳、更省电；LCD更护眼、成本低。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">NFC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">近距离无线通讯</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">让你手机能变身公交卡、门禁卡、银行卡的"贴贴"功能。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OTA更新</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">无线系统升级</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">在【设置】里点的那个"系统更新"，就是它。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Root</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">安卓超级管理员权限</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">获得后可以修改系统文件，但也有风险。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">BL锁</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Bootloader锁</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">厂商加的安全锁，解锁后才能刷机。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">NPU</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">神经网络处理器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">专门处理AI任务的芯片，比CPU快几十倍、功耗更低。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">端侧 AI / 云端 AI</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">在手机本地跑 / 要联网传数据</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">AI在手机上直接运行，不需要联网，速度快、隐私好；对应的「云端AI」要把数据传出去处理。同一个「AI」功能，走端侧还是云端，隐私代价差很多。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Qi2</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">新一代无线充电标准</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">带磁吸定位的无线充电，类似MagSafe，充电更方便。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">eSIM</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">嵌入式SIM卡</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">没有实体卡的SIM，直接写入手机，换运营商不用换卡。注意：国内号码的eSIM和境外旅行买的一次性数据套餐不是一回事，第八十七章有展开。</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">自适应刷新率技术</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">屏幕刷新率根据内容自动调节（1-120Hz），流畅又省电。</td>
-                                </tr>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">你可能听到的词</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">其实就是指……</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">一句话解释</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">SoC / 芯片</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的大脑和心脏</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">决定手机快不快、游戏卡不卡的核心部件。2026年的顶级档是骁龙 8 Elite Gen 5 和天玑 9500，看配置先对一对这一档。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">RAM (运存)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"短期工作桌"</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">桌越大，能同时开的App就越多，切换越流畅。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">ROM (存储)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"大仓库"</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">存照片、视频、App的地方。128G、256G说的就是它。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED / LCD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">屏幕的两种材质</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED色彩更艳、更省电；LCD更护眼、成本低。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">NFC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">近距离无线通讯</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">让你手机能变身公交卡、门禁卡、银行卡的"贴贴"功能。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OTA更新</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">无线系统升级</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">在【设置】里点的那个"系统更新"，就是它。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Root</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">安卓超级管理员权限</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">获得后可以修改系统文件，但也有风险。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">BL锁</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Bootloader锁</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">厂商加的安全锁，解锁后才能刷机。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">NPU</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">神经网络处理器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">专门处理AI任务的芯片，比CPU快几十倍、功耗更低。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">端侧 AI / 云端 AI</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">在手机本地跑 / 要联网传数据</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">AI在手机上直接运行，不需要联网，速度快、隐私好；对应的「云端AI」要把数据传出去处理。同一个「AI」功能，走端侧还是云端，隐私代价差很多。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Qi2</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">新一代无线充电标准</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">带磁吸定位的无线充电，类似MagSafe，充电更方便。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">eSIM</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">嵌入式SIM卡</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">没有实体卡的SIM，直接写入手机，换运营商不用换卡。注意：国内号码的eSIM和境外旅行买的一次性数据套餐不是一回事，第八十七章有展开。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">LTPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">自适应刷新率技术</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">屏幕刷新率根据内容自动调节（1-120Hz），流畅又省电。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">新一代Wi-Fi标准</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">2026年的中高端手机基本都已支持；下一代的Wi-Fi 8（802.11bn）还在标准化中，买手机不用专门等它。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">新一代Wi-Fi标准</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">2026年的中高端手机基本都已支持；下一代的Wi-Fi 8（802.11bn）还在标准化中，买手机不用专门等它。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">PPG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手表测心率血氧的光学传感</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">用光反射推算血流量变化，是「信号推算」不是医疗测量；数据有参考价值，别拿它当诊断。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">PPG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手表测心率血氧的光学传感</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">用光反射推算血流量变化，是「信号推算」不是医疗测量；数据有参考价值，别拿它当诊断。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">单导联ECG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手表的心电图功能</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">只看一个方向的电活动，和医院的12导联心电图不是一回事；有异常提示，去医院复查。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">单导联ECG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手表的心电图功能</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">只看一个方向的电活动，和医院的12导联心电图不是一回事；有异常提示，去医院复查。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">一号双终端</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手表和手机共用一个号码</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">eSIM的一种用法：手表共享手机的同一个号码，开通条件与支持机型以运营商清单为准。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">一号双终端</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手表和手机共用一个号码</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">eSIM的一种用法：手表共享手机的同一个号码，开通条件与支持机型以运营商清单为准。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">UTG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">折叠屏用的超薄柔性玻璃</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">减轻折痕，但不等于没有折痕；仍是柔性屏，比普通玻璃怕硬物压。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">UTG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">折叠屏用的超薄柔性玻璃</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">减轻折痕，但不等于没有折痕；仍是柔性屏，比普通玻璃怕硬物压。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">MCP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">智能体接外部系统的统一接口</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">让AI工具能连上文件、数据库这些外部系统；它是接口标准，不是某个具体工具，第四十六章有展开。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">MCP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">智能体接外部系统的统一接口</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">让AI工具能连上文件、数据库这些外部系统；它是接口标准，不是某个具体工具，第四十六章有展开。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">AGENTS.md / CLAUDE.md</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">写进仓库的项目约定文件</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">把「这个项目要守什么规矩」写成文件放进仓库，换个工具也不用重写规则；第三十九章讲上下文工程时用过它。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">AGENTS.md / CLAUDE.md</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">写进仓库的项目约定文件</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">把「这个项目要守什么规矩」写成文件放进仓库，换个工具也不用重写规则；第三十九章讲上下文工程时用过它。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">spec-driven</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">先写规格再让智能体写代码</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">规格不是长文档，是没歧义的约束；第三十九章的SDD讲的就是它。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">spec-driven</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">先写规格再让智能体写代码</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">规格不是长文档，是没歧义的约束；第三十九章的SDD讲的就是它。</td>
+ </tr>
 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">vibe coding</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">完全不看代码凭感觉推进</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">与agentic engineering的分界线在「人有没有验收」；第三十七章把这条线讲得很清楚。</td>
-                                </tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">vibe coding</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">完全不看代码凭感觉推进</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">与agentic engineering的分界线在「人有没有验收」；第三十七章把这条线讲得很清楚。</td>
+ </tr>
 
 <tr>
 <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">卫星通信（SOS / 天通）</td>
@@ -338,13 +338,13 @@ kind: appendix
 <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">App 上架前请用户先试用，凭邀请安装；第六十七章讲苹果发布流程时会遇到它。</td>
 </tr>
 </tbody>
-                        </table>
+ </table>
 ```
 :::
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 遇到不懂的词，先分清它是「硬件」「协议」「服务」还是「工作方式」，查起来会快很多。
@@ -357,16 +357,16 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">家族</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">家族成员</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话串记</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">算力家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC、GPU、NPU、基带、GHz</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一颗芯片里的分工：主心骨、画师、AI 小灶、通信官，GHz 是心跳。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED、LCD、LTPO、UTG、Hz、nit、px、英寸</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怎么发光、会不会变速、柔不柔、刷多快、多亮、多细、多大。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ROM、UFS、eMMC、zRAM、GB</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仓库多大、传送带多快、要不要借仓库当台面。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">mAh、W、PD、Qi2、USB-C</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">水壶多大、龙头多猛、说什么方言、能不能磁吸。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7、5G-A、eSIM、NFC、蓝牙、热点、VoLTE、卫星通信</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里快车、外面马路、隐形卡、贴贴、短绳、插线板、高清通话、救命通道。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限、双重认证、云备份、查找设备、纯净模式、钓鱼、撞库、端到端加密</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进门许可、第二道门、底稿、寻呼机、闸机、陷阱、撞门、暗号信。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开发家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SDK、API、编译、签名、上架、TestFlight、安装包、模拟器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">工具箱、窗口、翻译、印章、把关、试吃、装箱成品、虚拟手机。</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">家族</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">家族成员</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话串记</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">算力家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC、GPU、NPU、基带、GHz</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一颗芯片里的分工：主心骨、画师、AI 小灶、通信官，GHz 是心跳。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED、LCD、LTPO、UTG、Hz、nit、px、英寸</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怎么发光、会不会变速、柔不柔、刷多快、多亮、多细、多大。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ROM、UFS、eMMC、zRAM、GB</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仓库多大、传送带多快、要不要借仓库当台面。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">mAh、W、PD、Qi2、USB-C</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">水壶多大、龙头多猛、说什么方言、能不能磁吸。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7、5G-A、eSIM、NFC、蓝牙、热点、VoLTE、卫星通信</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里快车、外面马路、隐形卡、贴贴、短绳、插线板、高清通话、救命通道。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限、双重认证、云备份、查找设备、纯净模式、钓鱼、撞库、端到端加密</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进门许可、第二道门、底稿、寻呼机、闸机、陷阱、撞门、暗号信。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开发家族</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SDK、API、编译、签名、上架、TestFlight、安装包、模拟器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">工具箱、窗口、翻译、印章、把关、试吃、装箱成品、虚拟手机。</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -603,7 +603,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 今天回去检查你最常用的三个账号：邮箱、支付、聊天。哪一个还没开双重认证，就把它开上。这三把锁的性价比，超过本书里任何一条购买建议。
@@ -1242,7 +1242,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 打开购物 App，任选一台在售手机，把参数页里的五个黑话词翻成大白话，讲给家人听。卡壳的那个词，回本附录查一遍再讲，讲得出，才算真会。
@@ -1255,18 +1255,18 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">单位</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">它在量什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">量级手感（生活版）</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GB / MB</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储容量和流量的常用单位</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一首歌几 MB，一部高清电影几个 GB，一个月刷短视频几十 GB；估存储、估流量，用这个数感就够。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">英寸（in）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕对角线的长度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字大屏幕大，但手感还要看机身宽度、重量和边框；同一英寸数，窄边框的能小一圈。参数页会写，线下摸一遍最实在。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GHz</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">芯片的"心跳频率"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字大心跳快，但步幅（核心设计）和体力（散热）同样决定快慢；别只比这一个数。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">mAh</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池的"水壶容量"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字大装电多；可大水壶配上漏水的水管（费电的屏幕和后台），照样一天两充。比电池要连整机一起比。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">W</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电功率，充电头的"劲儿"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字越大理论越猛；实际功率是手机、充电头、线三方谈判的结果，一方不配合就到不了标称值。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">px</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕画面的"小格子"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">格子越多画面越细；隔着正常距离看，超过一定程度肉眼差别就小了，别为分辨率单项加价。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">nit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕亮度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字越大，太阳底下越看得清；分清"峰值亮度"（小范围短时间的顶点）和"全局亮度"（整屏持续水平），宣传页爱用前者。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">lm</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光通量，"一共发多少光"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">投影仪、灯泡的常见指标；数字大不代表画面亮，还要看投多大一面墙。</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hz</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"每秒多少次"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷新率 60 就是每秒刷 60 张，120 就是 120 张，滑动跟手差别明显；也更费电，所以才有 LTPO 自动调。</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">单位</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">它在量什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">量级手感（生活版）</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GB / MB</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储容量和流量的常用单位</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一首歌几 MB，一部高清电影几个 GB，一个月刷短视频几十 GB；估存储、估流量，用这个数感就够。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">英寸（in）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕对角线的长度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字大屏幕大，但手感还要看机身宽度、重量和边框；同一英寸数，窄边框的能小一圈。参数页会写，线下摸一遍最实在。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GHz</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">芯片的"心跳频率"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字大心跳快，但步幅（核心设计）和体力（散热）同样决定快慢；别只比这一个数。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">mAh</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池的"水壶容量"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字大装电多；可大水壶配上漏水的水管（费电的屏幕和后台），照样一天两充。比电池要连整机一起比。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">W</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电功率，充电头的"劲儿"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字越大理论越猛；实际功率是手机、充电头、线三方谈判的结果，一方不配合就到不了标称值。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">px</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕画面的"小格子"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">格子越多画面越细；隔着正常距离看，超过一定程度肉眼差别就小了，别为分辨率单项加价。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">nit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕亮度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字越大，太阳底下越看得清；分清"峰值亮度"（小范围短时间的顶点）和"全局亮度"（整屏持续水平），宣传页爱用前者。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">lm</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光通量，"一共发多少光"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">投影仪、灯泡的常见指标；数字大不代表画面亮，还要看投多大一面墙。</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hz</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"每秒多少次"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷新率 60 就是每秒刷 60 张，120 就是 120 张，滑动跟手差别明显；也更费电，所以才有 LTPO 自动调。</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1277,7 +1277,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 看到任何参数先问一句"测试条件是什么"。峰值亮度、实验室网速、特定游戏的帧率，都是"最好情况下"的数字；宣传页默认你不会问第二句。
@@ -1290,19 +1290,19 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你要办的事</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">先认这些词</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪深解</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">买手机、换手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC、RAM/ROM、UFS、OLED/LCD、IP68、PD 快充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三节和第十节，再配第二十八章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈配机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纯净模式、无障碍、权限、查找设备、双重认证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节、第六节，清单在第二十七章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢了或被盗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查找设备、双重认证、SIM卡PIN</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节，流程看第三十二章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出国旅行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM、一号双终端、卫星通信、PD 快充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第五节，清单看第八十六章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">柜台听推销</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旗舰芯、大底传感器、自研芯片、百瓦快充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">聊天怕被看</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端到端加密、锁屏密码、设备管理器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开始跑步戴表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPG、单导联ECG、一号双终端</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八节，数据怎么用看第九十四章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想做口播视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字人、端侧AI与云端AI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节，产线看第九十九章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程帮爸妈修手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无障碍、权限、纯净模式、云备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节、第六节，方法看第二十七章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">送修或出二手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列号、IMEI、云备份、查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A讲核对，旧机处置看第二十五章</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你要办的事</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">先认这些词</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪深解</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">买手机、换手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SoC、RAM/ROM、UFS、OLED/LCD、IP68、PD 快充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三节和第十节，再配第二十八章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈配机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纯净模式、无障碍、权限、查找设备、双重认证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节、第六节，清单在第二十七章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢了或被盗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查找设备、双重认证、SIM卡PIN</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节，流程看第三十二章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出国旅行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM、一号双终端、卫星通信、PD 快充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第五节，清单看第八十六章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">柜台听推销</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旗舰芯、大底传感器、自研芯片、百瓦快充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">聊天怕被看</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">端到端加密、锁屏密码、设备管理器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开始跑步戴表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPG、单导联ECG、一号双终端</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八节，数据怎么用看第九十四章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想做口播视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字人、端侧AI与云端AI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节，产线看第九十九章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程帮爸妈修手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无障碍、权限、纯净模式、云备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节、第六节，方法看第二十七章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">送修或出二手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列号、IMEI、云备份、查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录A讲核对，旧机处置看第二十五章</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1368,7 +1368,7 @@ kind: appendix
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 术语是别人起的名字，理解才是你的本事，名字会忘，本事不会。
@@ -1376,7 +1376,7 @@ kind: appendix
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 术语先分四类：硬件、协议、服务、工作方式：归类对了，查表快一半。
 - 硬件翻来覆去是几大件：芯片、运存、存储、屏幕、传感器、基带；GPU、防抖、定位、红外遥控都是它们的左膀右臂。

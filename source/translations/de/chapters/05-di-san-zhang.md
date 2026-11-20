@@ -18,7 +18,7 @@ WLAN ist verbunden, aber Seiten laden nicht <strong>— weil der Router offline 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>Kernanalogie: Straßen und Fahrzeuge
+Kernanalogie: Straßen und Fahrzeuge
 
 {class="mt-1"}
 „Straße"<strong>ist der Kanal zwischen deinem Smartphone und dem Internet, die</strong>„Fahrzeuge"<strong>,</strong> sind die Fahrzeuge, die darauf unterwegs sind. WLAN und Mobilfunk sind zwei verschiedene Straßen, doch die Daten (Fahrzeuge) sind dieselben.
@@ -36,7 +36,7 @@ WLAN ist meist eine einmalige Investition (Breitband-Monatsgebühr) — solange 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>Probier es aus: Prüfe deinen Mobilfunktarif
+Probier es aus: Prüfe deinen Mobilfunktarif
 
 {class="mt-1"}
 Öffne auf dem Smartphone [Einstellungen] → [Mobilfunknetz] → [Datenverwaltung] und schau, wie viel Datenvolumen du diesen Monat noch hast und welche Apps am meisten verbrauchen. Wer Bescheid weiß, hat unterwegs keinen Stress.
@@ -49,7 +49,7 @@ Hinsichtlich der Sicherheit sind Mobilfunkdaten in der Regel sicherer als öffen
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Sicherheitshinweis
+Sicherheitshinweis
 
 {class="mt-1"}
 Verbinde dich an Flughäfen, in Einkaufszentren oder Cafés nicht mit kostenlosen WLANs mit verdächtigen Namen (wie „Free_WiFi_2024"). Und selbst wenn du verbunden bist, melde dich dort niemals in einer Bank-App an oder gib Passwörter ein.
@@ -81,7 +81,7 @@ Das Mobilfunknetz ist die Basis, um überall und jederzeit online zu gehen. Von 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Wichtige Warnung: Vor der Reise „Datenroaming“ ausschalten!
+Wichtige Warnung: Vor der Reise „Datenroaming“ ausschalten!
 
 {class="mt-1"}
 Mobile Daten im Ausland können himmlische Rechnungen verursachen! Schalte vor der Abreise in den Einstellungen das Datenroaming aus oder kaufe vorab eine lokale SIM/eSIM oder einen internationalen Roaming-Tarif.
@@ -106,53 +106,53 @@ WLAN-Standards werden von der IEEE festgelegt, jede Generation bringt deutliche 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standard</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protokoll</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Frequenzband</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Höchstrate</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Wichtige Warnung: Schalte vor der Auslandsreise Datenroaming aus!</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alter Standard, noch ordentliche Abdeckung</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Weitestgehend verbreitet, Tempo ausreichend</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stark bei vielen Geräten, niedrige Latenz</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Führt MLO (Multi-Link Operation) ein, kann mehrere Frequenzbänder gleichzeitig nutzen und die Latenz deutlich senken. 320MHz ultrabreite Kanäle sorgen für einen Geschwindigkeitssprung. Ab 2024 unterstützen Flagship-Chips wie Snapdragon 8 Gen3/8 Elite, Dimensity 9300/9400 u. a. Wi-Fi 7. Modelle wie das Xiaomi 15, das Huawei Mate 70 und das Samsung S25 können Wi-Fi-7-Netze nutzen (in Kombination mit einem Wi-Fi-7-Router).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: 2.4GHz durchdringt Wände besser, ist aber langsamer und störanfälliger; 5GHz ist schneller, aber durchdringt Wände schlechter. Das 6GHz-Band von Wi-Fi 6E/7 ist am schnellsten, durchdringt aber am schlechtesten — geeignet für die Nutzung im selben Raum.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: 2.4GHz durchdringt Wände besser, ist aber langsamer und störanfälliger; 5GHz ist schneller, aber durchdringt Wände schlechter. Das 6GHz-Band von Wi-Fi 6E/7 ist am schnellsten, durchdringt aber am schlechtesten — geeignet für die Nutzung im selben Raum.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46 Gbit/s</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Höchstgeschwindigkeit, Multi-Link-Bündelung</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standard</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protokoll</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Frequenzband</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Höchstrate</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Wichtige Warnung: Schalte vor der Auslandsreise Datenroaming aus!</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alter Standard, noch ordentliche Abdeckung</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Weitestgehend verbreitet, Tempo ausreichend</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stark bei vielen Geräten, niedrige Latenz</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Führt MLO (Multi-Link Operation) ein, kann mehrere Frequenzbänder gleichzeitig nutzen und die Latenz deutlich senken. 320MHz ultrabreite Kanäle sorgen für einen Geschwindigkeitssprung. Ab 2024 unterstützen Flagship-Chips wie Snapdragon 8 Gen3/8 Elite, Dimensity 9300/9400 u. a. Wi-Fi 7. Modelle wie das Xiaomi 15, das Huawei Mate 70 und das Samsung S25 können Wi-Fi-7-Netze nutzen (in Kombination mit einem Wi-Fi-7-Router).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: 2.4GHz durchdringt Wände besser, ist aber langsamer und störanfälliger; 5GHz ist schneller, aber durchdringt Wände schlechter. Das 6GHz-Band von Wi-Fi 6E/7 ist am schnellsten, durchdringt aber am schlechtesten — geeignet für die Nutzung im selben Raum.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: 2.4GHz durchdringt Wände besser, ist aber langsamer und störanfälliger; 5GHz ist schneller, aber durchdringt Wände schlechter. Das 6GHz-Band von Wi-Fi 6E/7 ist am schnellsten, durchdringt aber am schlechtesten — geeignet für die Nutzung im selben Raum.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46 Gbit/s</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Höchstgeschwindigkeit, Multi-Link-Bündelung</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ Wenn du selbst viel Datenvolumen hast, kannst du den Hotspot für Tablet oder Co
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Selbst ausprobieren: Hotspot einrichten und verwalten
+Selbst ausprobieren: Hotspot einrichten und verwalten
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Öffne [Einstellungen], finde „Persönlicher Hotspot" oder „Netzwerkfreigabe", aktiviere ihn und lege Namen und Passwort fest.

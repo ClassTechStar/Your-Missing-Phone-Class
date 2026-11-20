@@ -98,7 +98,7 @@ y <strong>"en que condiciones</strong>. Para el mismo problema, la explicación 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>3. Tarea (Task): dile claramente a la IA que hacer
+3. Tarea (Task): dile claramente a la IA que hacer
 
 {class="mt-1"}
 Este paso debe <strong>empezar con verbos</strong>(escribe, lista, compara, traduce, explica, resume...), describiendo la tarea de forma
@@ -198,39 +198,39 @@ Restricciones adecuadas <strong>: longitud, estilo, exclusiones; con solo una de
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">(</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Solución</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">).</td>
-                                    <td class="border border-gray-300 px-3 py-2">Organiza las siguientes notas de reunión en un acta estructurada</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">(</td>
-                                    <td class="border border-gray-300 px-3 py-2">Tarea</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">). Requisitos: ① Dividir en "Acuerdos / Pendientes / Riesgos y objeciones" ② Pendientes con responsable y plazo (si no se menciona, escribe "por confirmar") ③ Max. 600 palabras ④ Salida en markdown (</td>
-                                    <td class="border border-gray-300 px-3 py-2">reformula la tarea empezando con un verbo y pide "responde solo a esto" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">).</td>
-                                    <td class="border border-gray-300 px-3 py-2">limita estrictamente la extensión (200 palabras como máximo)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">:El rol define la perspectiva administrativa, el contexto da el tema de reunión, la tarea específica salida estructurada, las 4 restricciones hacen el resultado directamente reutilizable.</td>
-                                    <td class="border border-gray-300 px-3 py-2">Nivel intermedio: haz que la IA sea tu "asistente personal"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Prueba estos usos de nivel Intermedio para experimentar el verdadero poder de la IA:</td>
-                                    <td class="border border-gray-300 px-3 py-2">Optimizacion de diálogo multiple</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">(</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Solución</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">).</td>
+ <td class="border border-gray-300 px-3 py-2">Organiza las siguientes notas de reunión en un acta estructurada</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">(</td>
+ <td class="border border-gray-300 px-3 py-2">Tarea</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">). Requisitos: ① Dividir en "Acuerdos / Pendientes / Riesgos y objeciones" ② Pendientes con responsable y plazo (si no se menciona, escribe "por confirmar") ③ Max. 600 palabras ④ Salida en markdown (</td>
+ <td class="border border-gray-300 px-3 py-2">reformula la tarea empezando con un verbo y pide "responde solo a esto" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">).</td>
+ <td class="border border-gray-300 px-3 py-2">limita estrictamente la extensión (200 palabras como máximo)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">:El rol define la perspectiva administrativa, el contexto da el tema de reunión, la tarea específica salida estructurada, las 4 restricciones hacen el resultado directamente reutilizable.</td>
+ <td class="border border-gray-300 px-3 py-2">Nivel intermedio: haz que la IA sea tu "asistente personal"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Prueba estos usos de nivel Intermedio para experimentar el verdadero poder de la IA:</td>
+ <td class="border border-gray-300 px-3 py-2">Optimizacion de diálogo multiple</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Restricciones adecuadas <strong>: longitud, estilo, exclusiones; con solo una de
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Pensamiento encadenado (CoT)
+Pensamiento encadenado (CoT)
 
 {class="mt-1"}
 <strong>Pensamiento encadenado (CoT)</strong>:
@@ -253,7 +253,7 @@ Restricciones adecuadas <strong>: longitud, estilo, exclusiones; con solo una de
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Sesgos y valores
+Sesgos y valores
 
 {class="mt-1"}
 <strong>Pensamiento encadenado (CoT)</strong>:
@@ -267,7 +267,7 @@ Colaboración multi-IA <strong>No introduzcas información personal privada en l
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>: cuando no estés satisfecho con la respuesta de la IA, di: "Esto es demasiado técnico, explícalo de nuevo con palabras que entienda un niño".
+: cuando no estés satisfecho con la respuesta de la IA, di: "Esto es demasiado técnico, explícalo de nuevo con palabras que entienda un niño".
 
 {class="mt-1"}
 <strong>Pensamiento encadenado (CoT)</strong>:
@@ -281,7 +281,7 @@ Colaboración multi-IA <strong>: usa A para el borrador, B para pulir, C para tr
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Desafío 3: Optimización de prompts
+Desafío 3: Optimización de prompts
 
 {class="mt-1"}
 : primero pregunta a la IA con un prompt simple: "escribe una guía de viaje", luego usa el marco CRISPE para escribir un prompt detallado. Compara la diferencia de calidad entre las dos respuestas.
@@ -305,7 +305,7 @@ VII. Limitaciones y desafíos de la IA: mantén un criterio claro
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>"Accion"
+"Accion"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - : la unidad mínima de ejecucion. Abrir una App es una acción, enviar un mensaje es una acción, obtener el clima es una acción, ajustar el brillo es una acción. Puedes encadenar cientos o miles de acciones
@@ -317,7 +317,7 @@ VII. Limitaciones y desafíos de la IA: mantén un criterio claro
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Perfil (Profile)
+Perfil (Profile)
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: define "cuándo activar". Los triggers pueden ser: tiempo, ubicación, estado de conexión Wi-Fi, Bluetooth, recepción de notificaciones específicas, estado de batería, orientación de pantalla... Tasker soporta una cantidad absurda de triggers: decenas de tipos.</strong> Tarea (Task)
@@ -327,7 +327,7 @@ VII. Limitaciones y desafíos de la IA: mantén un criterio claro
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Caso 2: Flujo completo de migración de datos al cambiar de móvil
+Caso 2: Flujo completo de migración de datos al cambiar de móvil
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Escenario</strong>: iPhone 13 a Xiaomi 15, cambio entre marcas.

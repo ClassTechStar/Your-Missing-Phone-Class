@@ -42,7 +42,7 @@ O telefone se conecta diretamente com satélites de comunicação em órbita par
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosidade
+Curiosidade
 
 {class="mt-1"}
 A comunicação via satélite requer hardware de antena especial no telefone; nem todos os telefones são compatíveis. Além disso, a comunicação via satélite geralmente requer assinatura de serviço pago, mas a função de SOS de emergência normalmente é gratuita.
@@ -115,7 +115,7 @@ Atualmente, são principalmente dispositivos do ecossistema Huawei, como a linha
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Perspectivas Tecnológicas
+Perspectivas Tecnológicas
 
 {class="mt-1"}
 A tecnologia SparkLink representa a direção futura da comunicação sem fio. Com a adesão de mais fabricantes, poderemos ver mais dispositivos compatíveis com SparkLink, desfrutando de uma experiência sem fio superior.
@@ -123,7 +123,7 @@ A tecnologia SparkLink representa a direção futura da comunicação sem fio. C
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Verifique: Seu telefone suporta essas funções?
+Verifique: Seu telefone suporta essas funções?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Pesquise "satélite" nos ajustes para ver se há opções relacionadas à comunicação via satélite.

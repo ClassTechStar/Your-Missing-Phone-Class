@@ -61,7 +61,7 @@ Meine Einstellung zu Smartphone-Spielen: Spielen ist in Ordnung, aber lassen Sie
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Legen Sie los: Richten Sie Ihr Smartphone-Unterhaltungssystem ein
+Legen Sie los: Richten Sie Ihr Smartphone-Unterhaltungssystem ein
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Laden Sie in der Musik-App Ihr liebstes Album oder Ihre Lieblings-Playlist herunter, um offline hören zu können.

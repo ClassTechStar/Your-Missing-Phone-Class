@@ -43,7 +43,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>20-20-20法則
+20-20-20法則
 
 {class="mt-1"}
 每觀屏幕<strong>20分</strong>，以視線移至<strong>20英尺（約6米）</strong>以外之處，保持<strong>20秒</strong>。此簡單之動作能有效緩解睫狀肌疲勞。
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手：一週數健康挑戰
+動手：一週數健康挑戰
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 今天：打開屏幕使用時間/數字健康，查看汝上週之使用數據。

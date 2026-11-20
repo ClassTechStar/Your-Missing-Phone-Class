@@ -23,7 +23,7 @@ Non c'è una risposta standard, ma c'è una baseline di età. Se lo dai troppo p
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Principio "abbasta e avanza"
+Principio "abbasta e avanza"
 
 {class="mt-1"}
 Il primo telefono del bambino non deve essere un flagship. Le "prestazioni eccedenti" del processore spesso finiscono per far girare giochi. Scegliere un telefono di fascia media con buona batteria, schermo riposante e prezzo sui 1000 yuan, oppure un ricondizionato ufficiale, agevola il controllo. Budget di riferimento: 1500-2500 yuan bastano per la stragrande maggioranza degli studenti.
@@ -60,27 +60,27 @@ Prima di consegnare il dispositivo al bambino, la prima cosa non è accenderlo, 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Funzione</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Tempo di utilizzo</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / soluzioni di marca</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Limiti app</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì, per categoria</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì, per app</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tempo di inattività</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì (con differenze tra marchi)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filtro contenuti</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">a livello di sistema, più radicale</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">dipende dalla marca, disomogeneo</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gestione remota</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">In famiglia</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / cloud di marca</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Approvazione installazione app</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">richiede approvazione del genitore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">supportato da Family Link</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Funzione</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Tempo di utilizzo</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / soluzioni di marca</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Limiti app</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì, per categoria</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì, per app</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tempo di inattività</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sì (con differenze tra marchi)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Filtro contenuti</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">a livello di sistema, più radicale</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">dipende dalla marca, disomogeneo</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gestione remota</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">In famiglia</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / cloud di marca</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Approvazione installazione app</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">richiede approvazione del genitore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">supportato da Family Link</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Il controllo parentale non è "una volta per tutte"
+Il controllo parentale non è "una volta per tutte"
 
 {class="mt-1"}
 I bambini trovano sempre il modo di aggirarlo (cercando online "come sbloccare il tempo di utilizzo" si trova una marea di tutorial). I mezzi tecnici sono solo una baseline; la vera difesa è la comunicazione e la fiducia genitore-figlio. Si consiglia di rivedere insieme il report d'uso ogni mese, invece di monitorare unilateralmente.
@@ -96,7 +96,7 @@ Le principali piattaforme di contenuti hanno una "modalità adolescente" integra
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Non usare la carta d'identità del genitore per il "prestito account"
+Non usare la carta d'identità del genitore per il "prestito account"
 
 {class="mt-1"}
 Molti bambini registrano i conti gioco con la carta d'identità dei genitori per aggirare l'anti-dipendenza. Questo viola il contratto utente e fa perdere al bambino la protezione. I genitori dovrebbero custodire le proprie password di pagamento e i propri dati identificativi e non "prestare" account al bambino per comodità.
@@ -113,7 +113,7 @@ La tecnologia intercetta il 90% dei rischi; il restante 10% dipende dal giudizio
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fai: firma con tuo figlio un "Patto di utilizzo del telefono"
+Fai: firma con tuo figlio un "Patto di utilizzo del telefono"
 
 {class="mt-1"}
 Scrivere le regole, firmarle entrambi e affiggerle in vista è molto più efficace di un accordo verbale. Si suggerisce di includere:
@@ -137,7 +137,7 @@ Occhi, collo e sonno del bambino sono in fase di sviluppo e il telefono li danne
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Il genitore è il miglior "firewall"
+Il genitore è il miglior "firewall"
 
 {class="mt-1"}
 Le ricerche mostrano che il tempo di utilizzo del telefono da parte dei genitori è fortemente correlato a quello dei figli. Pretendere che il bambino non guardi il telefono mentre tu scori brevi video fino a tarda notte rende le regole inefficaci. Per cambiare il bambino, comincia dal mettere giù il tuo telefono.
@@ -153,7 +153,7 @@ Questa sezione è spesso trascurata, ma importante. I beni digitali del bambino 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Attenzione all'altra faccia dell'"eredità digitale dei bambini"
+Attenzione all'altra faccia dell'"eredità digitale dei bambini"
 
 {class="mt-1"}
 Il bambino viene "registrato" fin dalla nascita — foto di crescita pubblicate dai genitori, video inviati dall'asilo, dati di salute dell'orologio intelligente. Una volta caricati, questi dati sono difficili da eliminare del tutto. Prima di pubblicare, pensaci: tra dieci anni il bambino si vergognerà di questa foto? Rispettare la personalità digitale del bambino comincia dal trattenersi dal "postare il bambino".
@@ -161,7 +161,7 @@ Il bambino viene "registrato" fin dalla nascita — foto di crescita pubblicate 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Riepilogo del capitolo
+Riepilogo del capitolo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Non c'è risposta standard sull'età, ma 3-6 anni possibilmente senza, prima dei 13 usare l'orologio per bambini o un feature phone come transizione

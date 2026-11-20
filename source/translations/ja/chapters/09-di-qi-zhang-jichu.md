@@ -42,7 +42,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Bluetoothや専用の無線周波数を利用し、近距離（通常数百メートルから数キロメートル）でポイントツーポイント接続を確立。
+Bluetoothや専用の無線周波数を利用し、近距離（通常数百メートルから数キロメートル）でポイントツーポイント接続を確立。
 
 {class="mt-1"}
 応用シーン：
@@ -115,7 +115,7 @@ Apple
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>スマートフォンがHuaweiの場合、星閃デバイス接続をサポートしているか確認。
+スマートフォンがHuaweiの場合、星閃デバイス接続をサポートしているか確認。
 
 {class="mt-1"}
 これらの機能の使用方法を理解し、いざという時に役立てる。
@@ -123,7 +123,7 @@ Apple
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>二、ソフトウェア編（第8-14章）
+二、ソフトウェア編（第8-14章）
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 基本操作をマスターした後、各種アプリの使用テクニックを深く理解しよう。通信からオフィス、決済からエンターテインメントまで、これらの章はあなたを真のスマートフォン達人にする。

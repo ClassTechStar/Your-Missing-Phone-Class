@@ -64,7 +64,7 @@ Negli ultimi anni i cambiamenti sono stati enormi: molte pratiche che prima rich
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Ricorda queste regole per difenderti dalle truffe
+Ricorda queste regole per difenderti dalle truffe
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Polizia, magistratura, banche e servizio clienti non ti chiederanno mai di trasferire denaro su un "conto sicuro".
@@ -75,7 +75,7 @@ Negli ultimi anni i cambiamenti sono stati enormi: molte pratiche che prima rich
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fallo ora: fai un controllo di sicurezza alla tua app di pagamento
+Fallo ora: fai un controllo di sicurezza alla tua app di pagamento
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apri Alipay e WeChat, conferma che il pagamento con impronta/volto sia attivo.

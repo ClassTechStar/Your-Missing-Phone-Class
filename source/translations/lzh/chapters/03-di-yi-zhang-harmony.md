@@ -55,7 +55,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>升級鴻蒙NEXT前必讀
+升級鴻蒙NEXT前必讀
 
 {class="mt-1"}
 升級鴻蒙NEXT前必讀
@@ -94,7 +94,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意之事
+注意之事
 
 {class="mt-1"}
 注意事項
@@ -102,7 +102,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>今即試之：體驗鴻蒙特色功能
+今即試之：體驗鴻蒙特色功能
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 開控制中心，尋"超級終端"，觀四周有無他鴻蒙之設備。

@@ -58,7 +58,7 @@ II. Bateri generasi baharu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Perkara 3: Matlamat bersama kita ialah meningkatkan kecekapan dan pengalaman hidup. Jika anda membuat saya ketagihan melalui reka bentuk menggoda, saya berhak menyahpasang anda.
+Perkara 3: Matlamat bersama kita ialah meningkatkan kecekapan dan pengalaman hidup. Jika anda membuat saya ketagihan melalui reka bentuk menggoda, saya berhak menyahpasang anda.
 
 {class="mt-1"}
 1\. Bateri silikon-karbon
@@ -71,7 +71,7 @@ II. Bateri generasi baharu
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro dan cermin mata AR adalah pintu masuk pengiraan baharu selain telefon, tetapi jangka pendek sukar gantikan telefon

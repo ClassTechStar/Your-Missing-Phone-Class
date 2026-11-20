@@ -100,7 +100,7 @@ DNS over HTTPS (DoH)
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: Android: הגדרות &gt; חיבורים ושיתוף &gt; DNS פרטי &gt; הזן "one.one.one.one" או "dns.google". iPhone: חפש ב-Safari "1.1.1.1 DNS profile" והתקן פרופיל תיאור, או הורד את אפליקציית 1.1.1.1 של Cloudflare.
+: Android: הגדרות &gt; חיבורים ושיתוף &gt; DNS פרטי &gt; הזן "one.one.one.one" או "dns.google". iPhone: חפש ב-Safari "1.1.1.1 DNS profile" והתקן פרופיל תיאור, או הורד את אפליקציית 1.1.1.1 של Cloudflare.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>ביקורת Wi-Fi</strong>: פתח את רשימת ה-Wi-Fi, "שכח" כל נקודות החיבור שלא מזוהות, שאינן בשימוש תכוף, או בעלות שם מוזר.

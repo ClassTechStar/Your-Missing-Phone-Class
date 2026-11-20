@@ -40,7 +40,7 @@ Hintergrundprozess-Limit
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Hinweise:
+Hinweise:
 
 {class="mt-1"}
 Eine
@@ -52,12 +52,12 @@ In den Entwickleroptionen gibt es einen unauffaelligen, aber wichtigen Schalter 
 
 - <strong>Funktion des Schalters</strong>: Entspricht der Erklaerung gegenueber dem Hersteller: „Ich verzichte auf die Garantie, trage das Risiko selbst und beantrage die BL-Entsperrung." Ist der Schalter aus, wird jeder Entsperrbefehl direkt abgewiesen.
 - <strong>Verhaeltnis zum BL-Schloss</strong>: OEM-Entsperrung ist der „Antrag auf Berechtigung"; die BL-Entsperrung ist die „tatsaechliche Durchfuehrung". Ersteres erledigt man mit einem Tip in den Einstellungen; letzteres erfordert das Beantragen eines Entsperrcodes auf der Hersteller-Website und das Ausfuehren eines fastboot-Befehls am PC (z. B. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>). Beides ist unumgaenglich.
-- <strong>Wird er durch Zuruecksetzen auf Werkseinstellungen zurueckgesetzt?</strong>: Ja. Der Schalter „OEM-Entsperrung" kehrt nach dem Werksreset in den Aus-Zustand zurueck. Der BL-Schloss-Zustand ist jedoch physischer Natur – einmal entsperrt, wird er durch einen Werksreset nicht wieder gesperrt. Er muss manuell mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code>  wieder gesperrt werden.
+- <strong>Wird er durch Zuruecksetzen auf Werkseinstellungen zurueckgesetzt?</strong>: Ja. Der Schalter „OEM-Entsperrung" kehrt nach dem Werksreset in den Aus-Zustand zurueck. Der BL-Schloss-Zustand ist jedoch physischer Natur – einmal entsperrt, wird er durch einen Werksreset nicht wieder gesperrt. Er muss manuell mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> wieder gesperrt werden.
 - <strong>Wann sollte man ihn aktivieren?</strong>: Wenn du nicht sicher flashen oder rooten willst, bleibt er ausgeschaltet. Er und „USB-Debugging" sind zwei unabhaengige Schalter; beim Flashen muessen beide aktiviert sein.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Wissenswertes: Warum hat der Hersteller diesen Schalter eingebaut?
+Wissenswertes: Warum hat der Hersteller diesen Schalter eingebaut?
 
 {class="mt-1"}
 Fruehe Android-Versionen hatten diesen Schalter nicht; Malware konnte bei entsprechenden Berechtigungen heimlich ein System einspielen. Google verlangte spaeter von allen Android-Herstellern, in den Entwickleroptionen einen „OEM-Entsperrung"-Schalter als „informierte Zustimmung" des Nutzers einzubauen. Deshalb schlaegt ein erneuter Flash-Versuch fehl, wenn der Schalter aus ist – selbst wenn der BL bereits entsperrt wurde.
@@ -95,47 +95,47 @@ ADB steht fuer Android Debug Bridge und ist ein von Google bereitgestelltes Befe
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Treiber und Berechtigungsdialog nicht ignorieren
+Treiber und Berechtigungsdialog nicht ignorieren
 
 {class="mt-1"}
-Wenn Windows-Nutzer den Befehl <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>  „unauthorized" anzeigt oder ueberhaupt kein Geraet auflistet, fehlt meist der Treiber oder man hat am Handy vergessen, „zulassen" zu tippen. Fuer Samsung, Xiaomi und andere Marken lassen sich die jeweiligen „USB-Treiber" oder „Handy-Assistenten" installieren; Mac und Linux sind in der Regel treiberfrei. Wenn man den Dialog am Handy versehentlich weggetippt hat, einfach das Kabel neu anstecken – der Dialog erscheint erneut.
+Wenn Windows-Nutzer den Befehl <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> „unauthorized" anzeigt oder ueberhaupt kein Geraet auflistet, fehlt meist der Treiber oder man hat am Handy vergessen, „zulassen" zu tippen. Fuer Samsung, Xiaomi und andere Marken lassen sich die jeweiligen „USB-Treiber" oder „Handy-Assistenten" installieren; Mac und Linux sind in der Regel treiberfrei. Wenn man den Dialog am Handy versehentlich weggetippt hat, einfach das Kabel neu anstecken – der Dialog erscheint erneut.
 :::
 
 ##### Haeufig verwendete ADB-Befehle:
 
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb install app.apk</code>: APK vom PC auf dem Handy installieren (<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-r</code>  bedeutet Neuinstallation unter Beibehaltung der Daten;<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code>  Installation auf SD-Karte).
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb install app.apk</code>: APK vom PC auf dem Handy installieren (<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-r</code> bedeutet Neuinstallation unter Beibehaltung der Daten;<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> Installation auf SD-Karte).
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb uninstall com.xxx.xxx</code>: App nach Paketnamen deinstallieren.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb push PC-Pfad /sdcard/Zielpfad</code>: Datei vom PC auf das Handy uebertragen.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb pull /sdcard/Datei PC-Pfad</code>: Datei vom Handy auf den PC ziehen (viel schneller als sie sich selbst ueber WeChat zu schicken und herunterzuladen).
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code>: In die Linux-Shell des Handys wechseln; dort lassen sich Befehle wie <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code>, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code>, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code>  usw. direkt ausfuehren.
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code>: In die Linux-Shell des Handys wechseln; dort lassen sich Befehle wie <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code>, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code>, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code> usw. direkt ausfuehren.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot bootloader</code>: Handy in den Fastboot-Modus neu starten (Einstieg zum Flashen).
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot recovery</code>: In den Recovery-Modus neu starten.
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages</code>: Alle Paketnamen der installierten Apps auflisten (unerlaesslich zum Finden des Paketnamens). Mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code>  nur System-Apps, mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-3</code>  nur Drittanbieter-Apps.
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages</code>: Alle Paketnamen der installierten Apps auflisten (unerlaesslich zum Finden des Paketnamens). Mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> nur System-Apps, mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-3</code> nur Drittanbieter-Apps.
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 Paketname</code>: Vorinstallierte App fuer den aktuellen Nutzer deinstallieren – ohne Root. Siehe praktisches Beispiel unten.
 
 ##### Vorinstallierte Apps ohne Root deinstallieren – Praxisbeispiel:
 
-Dies ist eine der praktischsten ADB-Funktionen: Mit dem Befehl <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code>  lassen sich vorinstallierte Apps fuer den „aktuellen Nutzer" deinstallieren – ohne Root und ohne die Systempartition zu beeinflussen. Die deinstallierte App „verschwindet" aus dem System, ist aber tatsaechlich noch in der Systempartition vorhanden und kehrt nach einem Werksreset zurueck.
+Dies ist eine der praktischsten ADB-Funktionen: Mit dem Befehl <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> lassen sich vorinstallierte Apps fuer den „aktuellen Nutzer" deinstallieren – ohne Root und ohne die Systempartition zu beeinflussen. Die deinstallierte App „verschwindet" aus dem System, ist aber tatsaechlich noch in der Systempartition vorhanden und kehrt nach einem Werksreset zurueck.
 
-1. Zuerst mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages -s</code>  alle System-Apps auflisten und den Paketnamen der App finden, die du entfernen moechtest. Zum Beispiel ist der Xiaomi-Browser <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.browser</code>, der Huawei App Market <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.vmall.client</code>.
-2. Unsicher, welche App zu einem Paketnamen gehoert? Am PC laesst sich mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages | findstr Suchbegriff</code>  suchen, oder eine Drittanbieter-App „Package Viewer" installieren, die auf dem Handy die Paketnamen aller Apps anzeigt.
-3. Deinstallation ausfuehren:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 Paketname</code>, z. B. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 com.android.browser</code>. Rueckgabe <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Success</code>  bedeutet Erfolg.
+1. Zuerst mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages -s</code> alle System-Apps auflisten und den Paketnamen der App finden, die du entfernen moechtest. Zum Beispiel ist der Xiaomi-Browser <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.browser</code>, der Huawei App Market <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.vmall.client</code>.
+2. Unsicher, welche App zu einem Paketnamen gehoert? Am PC laesst sich mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages | findstr Suchbegriff</code> suchen, oder eine Drittanbieter-App „Package Viewer" installieren, die auf dem Handy die Paketnamen aller Apps anzeigt.
+3. Deinstallation ausfuehren:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 Paketname</code>, z. B. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 com.android.browser</code>. Rueckgabe <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Success</code> bedeutet Erfolg.
 4. Wie stellst du es wieder her? Zwei Moeglichkeiten: ① Werksreset (gruendlich, aber muehsam); ② Neu installieren:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell cmd package install-existing Paketname</code>.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Bloed nicht System-Kernpakete loeschen
+Bloed nicht System-Kernpakete loeschen
 
 {class="mt-1"}
-„pm uninstall --user 0" ist zwar eine sichere Methode ohne Root, aber das Loeschen kritischer System-Apps (wie <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code>  Statusleiste,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code>  Telefon,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code>  Einstellungen) kann zu Systemabstuerzen, schwarzen Bildschirmen oder Boot-Problemen fuehren. Vor dem Loeschen kurz suchen: „Ist dieser Paketname sicher zu loeschen?" – lieber weniger loeschen als falsch loeschen. Empfohlen: Nur ein bis zwei gleichzeitig entfernen und erst weitermachen, wenn alles funktioniert.
+„pm uninstall --user 0" ist zwar eine sichere Methode ohne Root, aber das Loeschen kritischer System-Apps (wie <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> Statusleiste,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> Telefon,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> Einstellungen) kann zu Systemabstuerzen, schwarzen Bildschirmen oder Boot-Problemen fuehren. Vor dem Loeschen kurz suchen: „Ist dieser Paketname sicher zu loeschen?" – lieber weniger loeschen als falsch loeschen. Empfohlen: Nur ein bis zwei gleichzeitig entfernen und erst weitermachen, wenn alles funktioniert.
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Wissenswertes: Was bedeutet „--user 0"?
+Wissenswertes: Was bedeutet „--user 0"?
 
 {class="mt-1"}
-Ab Android 4.2 wird Mehrbenutzerbetrieb unterstuetzt; jeder Nutzer hat eine eigene ID (Geraetebesitzer ist 0, Zweitnutzer beginnen bei 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code>  bedeutet „nur fuer den aktuellen Besitzer deinstallieren"; die APK-Datei in der Systempartition bleibt bestehen, wird dem Besitzer nur nicht mehr angezeigt. Deshalb ist kein Root noetig – es werden keine Systemdateien geaendert, sondern nur die „Nutzerkonfiguration". Das ist auch der wesentliche Unterschied zum Loeschen mit Root: Root-Loeschen entfernt die App tatsaechlich aus dem System, fuer alle Nutzer; ADB-Loeschen „versteckt" sie nur fuer den aktuellen Nutzer.
+Ab Android 4.2 wird Mehrbenutzerbetrieb unterstuetzt; jeder Nutzer hat eine eigene ID (Geraetebesitzer ist 0, Zweitnutzer beginnen bei 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> bedeutet „nur fuer den aktuellen Besitzer deinstallieren"; die APK-Datei in der Systempartition bleibt bestehen, wird dem Besitzer nur nicht mehr angezeigt. Deshalb ist kein Root noetig – es werden keine Systemdateien geaendert, sondern nur die „Nutzerkonfiguration". Das ist auch der wesentliche Unterschied zum Loeschen mit Root: Root-Loeschen entfernt die App tatsaechlich aus dem System, fuer alle Nutzer; ADB-Loeschen „versteckt" sie nur fuer den aktuellen Nutzer.
 :::
 
 #### V. Root-Berechtigung: Der „Superadmin" von Android
@@ -159,7 +159,7 @@ Root-Berechtigung entspricht dem Superuser unter Linux (volle Kontrolle ueber da
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Finde „Fenster-Animationsskala", „Übergangs-Animationsskala" und „Animationsdauer-Skala" und setze sie alle auf 0,5x oder aus.
+Finde „Fenster-Animationsskala", „Übergangs-Animationsskala" und „Animationsdauer-Skala" und setze sie alle auf 0,5x oder aus.
 
 {class="mt-1"}
 Prüfe, ob sich das Smartphone schneller anfühlt.
@@ -198,7 +198,7 @@ Um die Vorteile von Root zu geniessen und gleichzeitig Banking-Apps nutzen zu ko
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Das Katze-und-Maus-Spiel endet nie
+Das Katze-und-Maus-Spiel endet nie
 
 {class="mt-1"}
 Google aktualisiert die Erkennungsregeln regelmaessig, und App-Hersteller ziehen mit verstaerkten Play-Integrity-Pruefungen nach. Eine Methode, die heute funktioniert, kann morgen erkannt werden. Wenn du vollstaendig auf Banking-/Zahlungs-Apps angewiesen bist (z. B. taegliche Ueberweisungen, QR-Code-Zahlungen), ist die sicherste Wahl weiterhin: kein Root, BL nicht entsperren. Versteck-Methoden eignen sich eher fuer die Konstellation „Hauptgeraet ohne Root + Zweitgeraet zum Rooten-Experimentieren".
@@ -208,12 +208,12 @@ Google aktualisiert die Erkennungsregeln regelmaessig, und App-Hersteller ziehen
 
 - <strong>Wenn dir der Entwicklermodus nicht „hardcore" genug ist und du die vollständige Linux-Kommandozeile auf dem Smartphone erleben willst, dann ist Termux genau das Richtige für dich. Ohne Root-Rechte verwandelt es ein normales Android-Smartphone in eine portable Linux-Workstation – ein mächtiges Werkzeug für fortgeschrittene Nutzer, die Entwicklung und Systemadministration auf mobilen Geräten erkunden wollen.</strong>: Kann aktiviert werden, um Animationsbeschleunigung oder GPU-Rendering-Analyse auszuprobieren. Aber nicht an Optionen herumspielen, die du nicht verstehst.
 - <strong>OEM-Entsperrung und BL-Schloss</strong>: Wenn du nicht flashen oder rooten willst, bleiben beide Schalter am sichersten im Standardzustand (aus).
-- <strong>ADB</strong>: Ein maechtiges Werkzeug ohne Root, das auch normale Nutzer verwenden koennen – z. B. mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code>  vorinstallierte Apps entfernen. Vor dem Loeschen aber unbedingt pruefen, ob der Paketname sicher zu entfernen ist.
+- <strong>ADB</strong>: Ein maechtiges Werkzeug ohne Root, das auch normale Nutzer verwenden koennen – z. B. mit <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> vorinstallierte Apps entfernen. Vor dem Loeschen aber unbedingt pruefen, ob der Paketname sicher zu entfernen ist.
 - <strong>Lokal auf dem Smartphone laufende KI</strong>: Normale Nutzern wird vom Rooten abgeraten – das Risiko ueberwiegt den Nutzen. Wenn du bestimmte Funktionen brauchst, pruefe zunaechst, ob es Alternativen ohne Root gibt (z. B. vorinstallierte Apps per ADB entfernen, Shizuku als Ersatz fuer einige Root-Funktionen).
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Verwendet den APT-Paketmanager (ähnlich wie Debian und Ubuntu), mit dem tausende Linux-Softwarepakete installiert werden können – darunter Entwicklungs- und Netzwerk-Tools. Unterstützt mehrere Programmiersprachen-Umgebungen wie Python, Ruby, Node.js, Go, Rust, Swift.
+Verwendet den APT-Paketmanager (ähnlich wie Debian und Ubuntu), mit dem tausende Linux-Softwarepakete installiert werden können – darunter Entwicklungs- und Netzwerk-Tools. Unterstützt mehrere Programmiersprachen-Umgebungen wie Python, Ruby, Node.js, Go, Rust, Swift.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Sicherheits- und Netzwerkfunktionen

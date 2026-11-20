@@ -145,22 +145,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">模式名称</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">打开方法</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">辅助使用（没有单独简易模式，但可逐项调大）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 显示与亮度 > 文字大小，拉到最大。再进"辅助功能 > 显示与文字大小"开"粗体文本""按钮形状"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/荣耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 系统和更新 > 简易模式 > 开启</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米/红米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极简模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 更多设置 > 极简模式 > 开启</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/一加</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 特色功能 > 简易模式</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易桌面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 桌面、锁屏与壁纸 > 简易桌面</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 显示 > 简易模式</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">模式名称</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">打开方法</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">辅助使用（没有单独简易模式，但可逐项调大）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 显示与亮度 > 文字大小，拉到最大。再进"辅助功能 > 显示与文字大小"开"粗体文本""按钮形状"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/荣耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 系统和更新 > 简易模式 > 开启</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米/红米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极简模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 更多设置 > 极简模式 > 开启</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/一加</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 特色功能 > 简易模式</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易桌面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 桌面、锁屏与壁纸 > 简易桌面</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 显示 > 简易模式</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -317,7 +317,7 @@ iPhone 可以开"辅助触控"（设置 > 辅助功能 > 触控 > 辅助触控�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：帮长辈"装修"一下手机
+动手：帮长辈"装修"一下手机
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开简易模式（按上面的品牌表格操作）。
@@ -411,7 +411,7 @@ AI诈骗的更完整拆解在第六章，建议隔段时间带长辈一起复习
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>给长辈的"防骗口诀"（打印出来贴电话旁边）
+给长辈的"防骗口诀"（打印出来贴电话旁边）
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>陌生电话要转账 → 挂掉！</strong>
@@ -832,7 +832,7 @@ iPhone 用户顺手做一件事：在"健康"App里给长辈设一张"医疗急�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 先开简易模式或手动调大字体/图标，环境调好大半问题就没了

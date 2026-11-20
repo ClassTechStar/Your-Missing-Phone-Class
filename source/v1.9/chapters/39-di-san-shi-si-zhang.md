@@ -108,34 +108,34 @@ CarPlay Ultra 是第三条路线，也是截至撰写时最新的一条。它跟
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">路线</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你需要准备什么</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你能得到什么</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">投屏（CarPlay/HiCar等）</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一台支持的手机+车机支持对应协议</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机生态原样上车，学习成本几乎为零</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大多数人，尤其手机里已经养好习惯的</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">深度融合（鸿蒙座舱等）</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机与车机最好同属一个生态</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号互通、任务接力、语音控全车</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态内用户：华为+问界、小米+小米汽车这类组合</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">CarPlay Ultra</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">特定豪华品牌车型</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从仪表到空调的全面接管</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">现阶段少数人的选择，对普通人是方向参考</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">路线</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你需要准备什么</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你能得到什么</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">投屏（CarPlay/HiCar等）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一台支持的手机+车机支持对应协议</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机生态原样上车，学习成本几乎为零</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大多数人，尤其手机里已经养好习惯的</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">深度融合（鸿蒙座舱等）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机与车机最好同属一个生态</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号互通、任务接力、语音控全车</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态内用户：华为+问界、小米+小米汽车这类组合</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">CarPlay Ultra</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">特定豪华品牌车型</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从仪表到空调的全面接管</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">现阶段少数人的选择，对普通人是方向参考</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -144,7 +144,7 @@ CarPlay Ultra 是第三条路线，也是截至撰写时最新的一条。它跟
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把"什么手机走什么协议"这行字存在备忘录里：iPhone→CarPlay；华为→HiCar；小米→CarWith；OPPO→Carlink；vivo→Jovi InCar；万金油兜底→CarLife。看车、租车、换手机前翻出来对一眼，能省掉大半连接烦恼。
@@ -157,46 +157,46 @@ CarPlay Ultra 是第三条路线，也是截至撰写时最新的一条。它跟
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持手机系统</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持车型</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能丰富度</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">国内可用性</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仅 iPhone</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极广，绝大多数车型支持</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，地图/音乐/电话/消息均可</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">好，原生可用</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（国内手机需装服务框架）</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，合资/进口车居多</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，与CarPlay相当</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般，需科学上网激活</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机为主，部分支持其他安卓</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国产车与部分合资车型</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较高，可与鸿蒙座舱联动</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 与 Android 均可</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，老车型后装常见</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，更新较慢</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持手机系统</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持车型</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能丰富度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">国内可用性</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仅 iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极广，绝大多数车型支持</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，地图/音乐/电话/消息均可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">好，原生可用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（国内手机需装服务框架）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，合资/进口车居多</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，与CarPlay相当</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般，需科学上网激活</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机为主，部分支持其他安卓</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国产车与部分合资车型</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较高，可与鸿蒙座舱联动</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 与 Android 均可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，老车型后装常见</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，更新较慢</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -393,7 +393,7 @@ HiCar 连不上时的自查顺序：确认车机端"HiCar"开关是开的（部�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 已经提车的，给车机账号做一次安全检查：密码是不是独立且够长（别和常用密码复用）；手机号还是不是你在用的；账号里绑的支付方式有哪些、免密支付开了没有；家人共享名单里还有没有已经用不上的旧设备。车机账号如今能远程开车门、看行程、扣会员费，待遇等同一个重要网络账号，按第二十一章讲过的账号安全标准来管它，不吃亏。
@@ -401,7 +401,7 @@ HiCar 连不上时的自查顺序：确认车机端"HiCar"开关是开的（部�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 先对协议，再看生态，最后才谈流畅，顺序反了，多花的每一分钱都是在替营销买单。
@@ -459,7 +459,7 @@ HiCar 连不上时的自查顺序：确认车机端"HiCar"开关是开的（部�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>安全提醒
+安全提醒
 
 {class="mt-1"}
 无论用哪种方案，驾驶时操作手机都违反交规。手机支架只能用于"看导航"，不能用于"操作手机"。导航目的地、歌单、音量，都在出发前的停车状态设好，行车中交给语音控制，车机最好的体验是"上车就能用"，而不是路上边开边调。
@@ -571,40 +571,40 @@ HiCar 连不上时的自查顺序：确认车机端"HiCar"开关是开的（部�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">症状</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最可能的原因</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一反应</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插线完全无反应</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电线，或插到了仅充电的USB口</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换数据线、换中控USB口</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连上几秒就断</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">授权未完成，或握手信息错乱</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">两端删除配对，重新走首次连接</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用时断时续、掉帧</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机过热降频，或5GHz频段被干扰</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳、移出暴晒区、改有线</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无线每次都要手动重连</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">配对记录重复或蓝牙列表异常</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清两端配对列表，查自动连接设置</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有画面没声音（或反之）</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">车机音源或音频路由设置不对</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切对音源，检查媒体音量是否为零</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">症状</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最可能的原因</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一反应</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插线完全无反应</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电线，或插到了仅充电的USB口</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换数据线、换中控USB口</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连上几秒就断</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">授权未完成，或握手信息错乱</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">两端删除配对，重新走首次连接</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用时断时续、掉帧</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机过热降频，或5GHz频段被干扰</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳、移出暴晒区、改有线</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无线每次都要手动重连</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">配对记录重复或蓝牙列表异常</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清两端配对列表，查自动连接设置</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有画面没声音（或反之）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">车机音源或音频路由设置不对</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切对音源，检查媒体音量是否为零</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -622,34 +622,34 @@ UWB 还有一层安全价值：防中继攻击。坏人用信号中继设备把�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">使用方式</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">长处</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NFC</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机贴近感应区刷卡</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">省电，部分机型没电也能刷</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要贴近，无感应解锁</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近自动解锁、离开自动落锁</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无感使用，距离适中</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖手机状态，防中继能力弱</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UWB</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厘米级测距，精确感知位置</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">体验与安全性兼得</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要手机和车都支持，较新</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">使用方式</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">长处</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NFC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机贴近感应区刷卡</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">省电，部分机型没电也能刷</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要贴近，无感应解锁</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近自动解锁、离开自动落锁</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无感使用，距离适中</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖手机状态，防中继能力弱</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UWB</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">厘米级测距，精确感知位置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">体验与安全性兼得</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要手机和车都支持，较新</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -707,7 +707,7 @@ UWB 还有一层安全价值：防中继攻击。坏人用信号中继设备把�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：下次租车走一遍这套流程
+来动手：下次租车走一遍这套流程
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 上车只连蓝牙音频，同步通讯录和信息的三项授权全部拒绝。
@@ -756,7 +756,7 @@ UWB 还有一层安全价值：防中继攻击。坏人用信号中继设备把�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 车机是手机的分身，不是手机的替代——分身管行车里的事，剩下的一切留给停好车之后的你。
@@ -836,7 +836,7 @@ UWB 还有一层安全价值：防中继攻击。坏人用信号中继设备把�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>选车时的小建议
+选车时的小建议
 
 {class="mt-1"}
 如果在乎车机体验，选车时务必去4S店实测：①带自己的手机试CarPlay/HiCar连接是否稳定；②试语音助手的反应速度和指令识别率；③看应用市场有没有你常用的App；④关注后续OTA升级频率，好车机是用软件迭代出来的。
@@ -848,7 +848,7 @@ UWB 还有一层安全价值：防中继攻击。坏人用信号中继设备把�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：优化你的车机互联体验
+动手：优化你的车机互联体验
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 确认你的手机和车机支持的互联方案（CarPlay / HiCar / Android Auto / CarLife）。
@@ -859,7 +859,7 @@ UWB 还有一层安全价值：防中继攻击。坏人用信号中继设备把�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 车机互联三大路线：投屏（CarPlay等）、深度融合（鸿蒙座舱等）、CarPlay Ultra 深度集成

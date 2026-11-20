@@ -63,46 +63,46 @@ import SwiftData
 // 1. ‏@Model: هذا الصنف يصبح تلقائيًا "جدولًا"
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. ربط الحاوية بنقطة دخول التطبيق
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // قاعدة البيانات جاهزة
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // قاعدة البيانات جاهزة
+ }
 }
 
 // 3. في الواجهة تُقرأ البيانات بـ @Query وتُكتب بـ @Environment
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) يوان")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) يوان")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // حفظ
-        try? context.save()   // كتابة على القرص
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // حفظ
+ try? context.save() // كتابة على القرص
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ struct RecordListView: View {
 ```
 // JSON: {"name":"الرياض","main":{"temp":26.5},"weather":[{"description":"صافٍ"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "صافٍ"
+print(result.weather[0].description) // "صافٍ"
 ```
 :::
 
@@ -149,23 +149,23 @@ print(result.weather[0].description)   // "صافٍ"
 
 ```
 struct WeatherService {
-    // دالة غير متزامنة: async تعني "عليّ الانتظار قليلًا"، وthrows تعني "قد تفشل"
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // دالة غير متزامنة: async تعني "عليّ الانتظار قليلًا"، وthrows تعني "قد تفشل"
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // موضع الاستدعاء (داخل .task):
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "الرياض")
-        // تحديث الواجهة…
-    } catch {
-        print("حدث خطأ: \(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "الرياض")
+ // تحديث الواجهة…
+ } catch {
+ print("حدث خطأ: \(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ struct WeatherService {
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "انقطع الاتصال، تتحقق من الشبكة؟"
-        case .timedOut:               return "انتهت المهلة، تحاول لاحقًا؟"
-        case .cannotFindHost:         return "تعذر العثور على الخادم"
-        default:                      return "مشكلة في الشبكة: \(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "تنسيق البيانات غير صحيح (ربما تغيّرت الواجهة)"
-    }
-    return "حدث خطأ: \(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "انقطع الاتصال، تتحقق من الشبكة؟"
+ case .timedOut: return "انتهت المهلة، تحاول لاحقًا؟"
+ case .cannotFindHost: return "تعذر العثور على الخادم"
+ default: return "مشكلة في الشبكة: \(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "تنسيق البيانات غير صحيح (ربما تغيّرت الواجهة)"
+ }
+ return "حدث خطأ: \(error.localizedDescription)"
 }
 ```
 :::

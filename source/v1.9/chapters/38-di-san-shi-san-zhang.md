@@ -368,7 +368,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 折痕在照片里几乎看不出来，到了店里也别对着灯光较劲：正常使用你很快就会"视而不见"。真正该上手试的是铰链：反复开合几十次，听有没有异响、感受有没有松动，这比任何测评都诚实。
@@ -478,19 +478,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">端侧AI</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">云端AI</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">响应速度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地即时，断网也能用基础功能</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖网络，高峰期可能排队</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">隐私边界</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据大概率不出设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据要上传，看服务商的承诺</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">能力上限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">受芯片和内存限制，复杂任务偏弱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模型更大，复杂任务更强</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">费用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般随手机提供，不单独计费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可能按次或订阅计费，以官方说明为准</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">端侧AI</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">云端AI</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">响应速度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地即时，断网也能用基础功能</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖网络，高峰期可能排队</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">隐私边界</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据大概率不出设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据要上传，看服务商的承诺</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">能力上限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">受芯片和内存限制，复杂任务偏弱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模型更大，复杂任务更强</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">费用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般随手机提供，不单独计费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可能按次或订阅计费，以官方说明为准</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -569,7 +569,7 @@ AI功能对年轻人是效率，对爸妈可能是门槛的拆除者。下次回
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 AI负责起草，你负责签字。
@@ -587,7 +587,7 @@ AI负责起草，你负责签字。
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把AI当实习生用：交代任务时说清楚要求，拿到结果自己复核一遍，熟练之后再逐步放手。对实习生不检查就签字的人，对AI也不该例外。
@@ -604,21 +604,21 @@ AI负责起草，你负责签字。
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">代际</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">那一代解决的事</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">普通人记住的变化</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">1G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">让电话"无线"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大哥大，能打出去就了不起</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">2G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字化：语音清晰、能发短信</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短信拜年、彩信拜年</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">3G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机开始能上网</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机QQ、能看图片的新闻</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">4G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网速终于"够用"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">移动支付、短视频、直播</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">5G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">更高速率、更低时延、更多连接</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高清视频随处看、云游戏起步</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">6G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">业界预期：通信与感知融合、天地一体、AI原生网络（以标准组织口径为准）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">尚待落地，别急着下结论</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">代际</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">那一代解决的事</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">普通人记住的变化</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">1G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">让电话"无线"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大哥大，能打出去就了不起</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">2G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数字化：语音清晰、能发短信</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短信拜年、彩信拜年</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">3G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机开始能上网</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机QQ、能看图片的新闻</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">4G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网速终于"够用"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">移动支付、短视频、直播</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">5G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">更高速率、更低时延、更多连接</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高清视频随处看、云游戏起步</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">6G</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">业界预期：通信与感知融合、天地一体、AI原生网络（以标准组织口径为准）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">尚待落地，别急着下结论</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -728,7 +728,7 @@ AI合成的语音、换脸的视频、以假乱真的图片，成本已经低到
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 听到看到的都可以伪造，能回拨的才是真的。
@@ -884,7 +884,7 @@ AI功能越多，你留下的数据痕迹越多，"最小化"就是最好的防�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：制定你的《个人数字设备使用服务条款》
+来试试：制定你的《个人数字设备使用服务条款》
 
 {class="mt-1"}
 为你和你的手机（以及未来的AR眼镜、AI助手）写一份简单的"服务条款"，来定义你们的关系。例如：
@@ -897,7 +897,7 @@ AI功能越多，你留下的数据痕迹越多，"最小化"就是最好的防�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro与AR眼镜是手机之外的新计算入口，但短期难以取代手机

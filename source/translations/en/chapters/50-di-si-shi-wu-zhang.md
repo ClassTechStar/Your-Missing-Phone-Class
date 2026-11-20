@@ -27,16 +27,16 @@ The test-driven AI coding flow: first have the AI write the feature code; once t
 Write unit tests for the calculate_discount function.
 The test cases should cover:
 1. Happy path:
-   - 100-yuan item at 20% off -> 80
-   - 200-yuan item at 50% off -> 100
+ - 100-yuan item at 20% off -> 80
+ - 200-yuan item at 50% off -> 100
 2. Edge cases:
-   - 0-yuan item at 20% off -> 0
-   - 100-yuan item at 0% off -> 100 (no discount)
-   - 100-yuan item at 10% off -> 100 (full price)
+ - 0-yuan item at 20% off -> 0
+ - 100-yuan item at 0% off -> 100 (no discount)
+ - 100-yuan item at 10% off -> 100 (full price)
 3. Error cases:
-   - negative price -> should throw an error
-   - discount rate > 1 -> should throw an error
-   - non-numeric input -> should throw an error
+ - negative price -> should throw an error
+ - discount rate > 1 -> should throw an error
+ - non-numeric input -> should throw an error
 Use the Vitest framework and give the complete test file.
 ```
 :::

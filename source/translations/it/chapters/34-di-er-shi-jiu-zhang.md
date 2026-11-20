@@ -43,7 +43,7 @@ A lungo andare sullo schermo, gli occhi si seccano e si stancano. La modalità d
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>Regola 20-20-20
+Regola 20-20-20
 
 {class="mt-1"}
 Ogni <strong>20 minuti</strong> di schermo, sposta lo sguardo a <strong>20 piedi (circa 6 metri)</strong> di distanza, per <strong>20 secondi</strong>. Questo semplice gesto rilassa efficacemente i muscoli ciliari.
@@ -80,7 +80,7 @@ La quantità di informazioni che riceviamo ogni giorno equivale a quella che un 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fai: sfida di salute digitale di una settimana
+Fai: sfida di salute digitale di una settimana
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Oggi: apri Tempo di utilizzo / Benessere digitale e guarda i dati della settimana scorsa.
@@ -94,7 +94,7 @@ La quantità di informazioni che riceviamo ogni giorno equivale a quella che un 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Riepilogo del capitolo
+Riepilogo del capitolo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Prima guarda i dati di Tempo di utilizzo: prendere coscienza è il primo passo

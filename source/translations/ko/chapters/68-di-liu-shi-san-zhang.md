@@ -36,20 +36,20 @@ SwiftUI 상태 도구 전체 그림(2026년, @Observable이 주류)
 import Observation
 
 @Observable
-class CounterModel {                 // 뷰 모델
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // 뷰 모델
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // 모델 보유
+ @State private var model = CounterModel() // 모델 보유
 
-    var body: some View {
-        VStack {
-            Text("\(model.count)번 눌렀어요")
-            Button("눌러 보세요") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("\(model.count)번 눌렀어요")
+ Button("눌러 보세요") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -67,28 +67,28 @@ iOS 16부터 멀티페이지 내비게이션은 NavigationStack을 써요. 접�
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("김철수의 가계부") {
-                    DetailView(name: "김철수의 가계부")   // 목적지 화면
-                }
-                NavigationLink("이영희의 가계부") {
-                    DetailView(name: "이영희의 가계부")
-                }
-            }
-            .navigationTitle("가계부 목록")   // 상단 큰 제목
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("김철수의 가계부") {
+ DetailView(name: "김철수의 가계부") // 목적지 화면
+ }
+ NavigationLink("이영희의 가계부") {
+ DetailView(name: "이영희의 가계부")
+ }
+ }
+ .navigationTitle("가계부 목록") // 상단 큰 제목
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("\(name) 상세 화면")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("\(name) 상세 화면")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -108,27 +108,27 @@ NavigationLink는 '누를 수 있는 이동 링크'예요. navigationTitle은 �
 ```
 // 1. 아래에서 하프/전체 화면 팝업(입력 폼의 단골)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("한 줄 기록") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // 팝업되는 입력 화면
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("한 줄 기록") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // 팝업되는 입력 화면
+ }
+ }
 }
 
 // 2. 하단 탭 바(앱의 "뼈대")
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("가계부", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("통계", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("설정", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("가계부", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("통계", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("설정", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -152,18 +152,18 @@ iOS에서 가장 많이 쓰이고 '애플맛'이 가장 나는 컴포넌트가 �
 
 ```
 struct RecordListView: View {
-    @State private var records = ["점심 25.5", "지하철 6.0", "월급 +8000"]
+ @State private var records = ["점심 25.5", "지하철 6.0", "월급 +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // 왼쪽으로 밀어서 삭제
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // 왼쪽으로 밀어서 삭제
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -186,21 +186,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("포그라운드 복귀, 새로 고침 재개")
-            case .inactive:  print("전환 중(전화 수신/백그라운드 전환 순간)")
-            case .background: print("백그라운드 진입, 임시 저장")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("포그라운드 복귀, 새로 고침 재개")
+ case .inactive: print("전환 중(전화 수신/백그라운드 전환 순간)")
+ case .background: print("백그라운드 진입, 임시 저장")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

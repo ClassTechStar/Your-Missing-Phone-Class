@@ -47,13 +47,13 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形态</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">合上是什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">展开是什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话画像</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">横向折叠（书本式）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一台略厚略重的普通手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近方形的小平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一部顶两部，桌面场景多</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纵向折叠（翻盖式）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">粉饼盒大小的一小块</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常尺寸直板机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图便携和外屏速览</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阔折叠</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比普通手机略短略厚</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近 16:10 的一页小书</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">嫌竖折窄、又不要平板大</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三折叠</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折起来更厚一些</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">真接近小平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">少数人的移动办公尝试</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形态</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">合上是什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">展开是什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话画像</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">横向折叠（书本式）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一台略厚略重的普通手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近方形的小平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一部顶两部，桌面场景多</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纵向折叠（翻盖式）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">粉饼盒大小的一小块</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常尺寸直板机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图便携和外屏速览</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阔折叠</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">比普通手机略短略厚</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接近 16:10 的一页小书</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">嫌竖折窄、又不要平板大</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三折叠</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折起来更厚一些</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">真接近小平板</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">少数人的移动办公尝试</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -87,7 +87,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话判断
+一句话判断
 
 {class="mt-1"}
 如果你现在用直板机完全够用、没有"屏幕不够大"的痛点，就别买折叠屏。它是"锦上添花"的设备，不是"雪中送炭"的设备。
@@ -117,7 +117,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>这几类人别买
+这几类人别买
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 手机只用来刷短视频、聊微信、打电话的——折叠屏对你毫无增益，反而更重更厚。
@@ -133,7 +133,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：30秒自测
+来动手：30秒自测
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 过去一周，你有几次"想两件事同屏"？超过五次，加一分。
@@ -171,7 +171,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 只看发布会的参数表就下单，是折叠屏选购最常见的翻车起点。参数表不会告诉你折痕深浅、外屏好不好用、内屏修一次多少钱：这三件事只有真机和官方售后页能回答。参数可以线上看，钱包要在线下捂紧。
@@ -182,15 +182,15 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">指标</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话标准</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么验</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">铰链类型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">水滴铰链是当前主流</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查评测确认，别只听口头介绍</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内屏材质</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UTG超薄玻璃是底线</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查规格页，塑料膜机型直接排除</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折痕表现</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">亮屏正面几乎看不出</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">斜对灯看+指腹划，别在射灯下看</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">外屏尺寸</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">横折6.4英寸以上、竖折4英寸以上更实用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把外屏单独当手机用十分钟</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重量厚度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">展开低于230g算优秀，合上低于12mm算薄</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单手握持30秒自测</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">售后保修</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三个数字问到手：内屏、铰链、碎屏服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">让销售打开官方备件价格页</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">指标</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话标准</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么验</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">铰链类型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">水滴铰链是当前主流</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查评测确认，别只听口头介绍</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内屏材质</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UTG超薄玻璃是底线</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查规格页，塑料膜机型直接排除</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折痕表现</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">亮屏正面几乎看不出</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">斜对灯看+指腹划，别在射灯下看</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">外屏尺寸</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">横折6.4英寸以上、竖折4英寸以上更实用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把外屏单独当手机用十分钟</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重量厚度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">展开低于230g算优秀，合上低于12mm算薄</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单手握持30秒自测</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">售后保修</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三个数字问到手：内屏、铰链、碎屏服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">让销售打开官方备件价格页</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -201,7 +201,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>线下体验清单
+线下体验清单
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 亲手开合10次，感受铰链阻尼是否顺滑、有没有异响。
@@ -330,7 +330,7 @@ kind: appendix
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>内屏损坏的高发场景
+内屏损坏的高发场景
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 合上时夹住耳机线/充电线，直接压裂内屏。
@@ -415,16 +415,16 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">横向折叠屏</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">同价位直板旗舰</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平板</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机+接近7.5英寸内屏，一机两用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一块好屏，尺寸封顶</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同预算下最大</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">便携</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">合上能揣兜，但更厚更重</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">基本要包</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">续航</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一天一充边缘</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通常更稳</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">亮屏时间最长</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">影像</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">够用，玩法多（悬停/外屏取景）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同价位通常更强</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不是重点</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">维修</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内屏2000-4000元，最贵</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方选择多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">居中</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">适合</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要"带得走的大屏"的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大多数人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大屏需求主要在家的人</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与现有品牌手表、耳机等连动协作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同品牌体验通常更顺</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">横向折叠屏</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">同价位直板旗舰</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平板</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机+接近7.5英寸内屏，一机两用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一块好屏，尺寸封顶</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同预算下最大</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">便携</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">合上能揣兜，但更厚更重</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">基本要包</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">续航</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一天一充边缘</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通常更稳</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">亮屏时间最长</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">影像</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">够用，玩法多（悬停/外屏取景）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同价位通常更强</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不是重点</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">维修</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内屏2000-4000元，最贵</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方选择多</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">居中</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">适合</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要"带得走的大屏"的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大多数人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大屏需求主要在家的人</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与现有品牌手表、耳机等连动协作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同品牌体验通常更顺</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -451,7 +451,7 @@ kind: appendix
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>折叠屏不是"更好的手机"，而是"另一种形态的手机"。买它是因为你需要它独特的形态，不是因为它"更先进"。
+折叠屏不是"更好的手机"，而是"另一种形态的手机"。买它是因为你需要它独特的形态，不是因为它"更先进"。
 
 {class="text-right text-sm"}
 —— 关于折叠屏的选购哲学
@@ -492,7 +492,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>最后提醒
+最后提醒
 
 {class="mt-1"}
 折叠屏技术每年都在迭代，本附录写于2026年。买之前务必查最新评测和用户反馈，重点关注：铰链寿命实测、折痕表现、内屏维修政策这三项。线下亲手摸永远比看评测重要。换句话说，折叠屏的问题已经从「能不能买」变成了「哪种形态适合我、维修划不划算」，问题变了，判断标准也要跟着换。
@@ -567,7 +567,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 摸真机时带一张纸，上面写三样东西：你最常用的五个App、你平均每天看长内容的时间、你的口袋和包的收纳习惯。对着纸摸机，比凭感觉摸机有效得多，店员见过太多"摸着摸着买了另一类"的人，大多是因为进店前没想清楚自己要什么。
@@ -584,12 +584,12 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">预算档</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">大概能摸到什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四五千元档</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折叠屏目前的价格门槛——价格从万元档下探后出现的走量区间，具体机型以当期在售为准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一次尝鲜、想低成本试形态的人</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">万元上下</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">各家大折叠旗舰的主力价位，配置、影像、铰链相对完整（视机型与年份浮动）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">打算当两三年主力机的人</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一万八以内起售</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三折叠：华为 Mate XT / XTs、三星 Z TriFold</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">移动办公重度、预算宽裕的少数派</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">预算档</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">大概能摸到什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四五千元档</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折叠屏目前的价格门槛——价格从万元档下探后出现的走量区间，具体机型以当期在售为准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一次尝鲜、想低成本试形态的人</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">万元上下</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">各家大折叠旗舰的主力价位，配置、影像、铰链相对完整（视机型与年份浮动）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">打算当两三年主力机的人</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一万八以内起售</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三折叠：华为 Mate XT / XTs、三星 Z TriFold</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">移动办公重度、预算宽裕的少数派</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -638,7 +638,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：决策树速查版
+来动手：决策树速查版
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 划预算：四五千元档、万元上下、一万八以内起售，先定档。
@@ -812,17 +812,17 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要填的项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对应本篇的依据</th></tr></thead>
-  <tbody>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预算档：四五千元档 / 万元上下 / 一万八以内起售</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节第一步</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">形态与理由：四类选一，写一句"为什么是它"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八节逐类深拆</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三问答案：更大还是更小／一天展开几次／口袋改多少</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节第二步</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">六指标结论：铰链、内屏、折痕、外屏、重量、售后</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三节速查表</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">维修三数：内屏总成、铰链、碎屏服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三节与第五节</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">保险决策：买或不买，写一句理由</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第五节权衡法</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">渠道与时点：官方渠道优先，价格时点自己算</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节第四步</td></tr>
-  <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后续计划：两周适应期、季度体检</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十节与第十四节</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要填的项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对应本篇的依据</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预算档：四五千元档 / 万元上下 / 一万八以内起售</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节第一步</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">形态与理由：四类选一，写一句"为什么是它"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八节逐类深拆</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三问答案：更大还是更小／一天展开几次／口袋改多少</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节第二步</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">六指标结论：铰链、内屏、折痕、外屏、重量、售后</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三节速查表</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">维修三数：内屏总成、铰链、碎屏服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三节与第五节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">保险决策：买或不买，写一句理由</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第五节权衡法</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">渠道与时点：官方渠道优先，价格时点自己算</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九节第四步</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后续计划：两周适应期、季度体检</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十节与第十四节</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -833,7 +833,7 @@ kind: appendix
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 先问自己要不要"另一种形态"，再问哪种形态合手，最后才算钱：顺序反了，大概率买回一台用不出大屏价值的高级摆件。
@@ -841,7 +841,7 @@ kind: appendix
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 四类形态各管一段：横向折叠=手机+平板，纵向折叠=小巧+外屏速览，阔折叠=竖折加宽的一页书，三折叠=移动办公尝鲜。
 - 一句话判断：直板机够用就别买，折叠屏是"锦上添花"，不是"雪中送炭"。

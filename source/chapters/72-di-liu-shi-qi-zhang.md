@@ -25,7 +25,7 @@ App 做出来了，然后呢？这一章回答"从能跑"到"能交付"的三件
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：崩溃了怎么读？
+小贴士：崩溃了怎么读？
 
 {class="mt-1"}
 Swift 崩溃时控制台会打印 "Fatal error" 加原因，Xcode 会停在出错那一行并高亮。真机上的历史崩溃可以在 Xcode → Window → Organizer → Crashes 里看（需付费账号）。关键词优先搜 <strong>"错误原因第一句 + swiftui"</strong>——精确的问题，才有精确的答案。
@@ -54,21 +54,21 @@ import XCTest
 
 // 把"金额字符串转数字"这种逻辑抽成纯函数
 func parseAmount(_ input: String) -> Double? {
-    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
-          v > 0 else { return nil }
-    return v
+ guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+ v > 0 else { return nil }
+ return v
 }
 
 final class AmountTests: XCTestCase {
-    func testEmptyInputReturnsNil() {
-        XCTAssertNil(parseAmount(""))
-    }
-    func testNegativeReturnsNil() {
-        XCTAssertNil(parseAmount("-5"))
-    }
-    func testNormalValueParses() {
-        XCTAssertEqual(parseAmount("12.5"), 12.5)
-    }
+ func testEmptyInputReturnsNil() {
+ XCTAssertNil(parseAmount(""))
+ }
+ func testNegativeReturnsNil() {
+ XCTAssertNil(parseAmount("-5"))
+ }
+ func testNormalValueParses() {
+ XCTAssertEqual(parseAmount("12.5"), 12.5)
+ }
 }
 ```
 :::
@@ -86,7 +86,7 @@ final class AmountTests: XCTestCase {
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：证书丢了 = 更新断档
+避坑提醒：证书丢了 = 更新断档
 
 {class="mt-1"}
 签名证书和私钥一旦丢失，你无法再给旧 App 发更新，用户只能装"全新"应用。妥善备份证书（钥匙串导出 .p12）并记好密码。好在苹果提供了"自动签名"和云证书管理（Xcode 里勾选 Automatically manage signing），能省掉大部分手工操作的坑。
@@ -96,11 +96,11 @@ final class AmountTests: XCTestCase {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> 上传构建包</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 上传构建包</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填隐私与审核信息</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 苹果审核（1-7 天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> 上架</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 填隐私与审核信息</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> 苹果审核（1-7 天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 上架</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -123,7 +123,7 @@ final class AmountTests: XCTestCase {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：把记账本"交付"一次
+来动手：把记账本"交付"一次
 
 #### 六、崩溃上报与性能优化小清单
 
@@ -146,7 +146,7 @@ App 上架前，这两件事值得各花半小时：
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 调试三板斧：print 日志、断点、SwiftUI 预览与视图检查器
 - XCTest：单元测试（⌘U）+ UI 测试 + 手动测试，模板已预置

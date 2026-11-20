@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* guide the user to Settings */
-        default: /* already granted, go ahead */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* guide the user to Settings */
+ default: /* already granted, go ahead */
+ }
+ }
 }
 
 // 3. Degrade gracefully after denial: show a hint + open Settings
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. Request notification permission (one-time dialog)
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "granted" : "denied")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "granted" : "denied")
+ }
 
 // 2. Schedule a "daily 20:00 expense reminder"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "Expense reminder"
-    content.body = "You haven't recorded today's expenses yet"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "Expense reminder"
+ content.body = "You haven't recorded today's expenses yet"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ Swift 6's concurrency system has two rules every beginner must understand:
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // starts when it appears, cancels when it disappears
-            await vm.search(city: "Beijing")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // starts when it appears, cancels when it disappears
+ await vm.search(city: "Beijing")
+ }
+ }
 }
 ```
 :::

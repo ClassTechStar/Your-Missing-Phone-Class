@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "張三"        // let：常量（宜以為默認）
-var age = 18             // var：變量（後尚可改）
+let name = "張三" // let：常量（宜以為默認）
+var age = 18 // var：變量（後尚可改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> let 不可改，編譯報錯
+age = 19 // var 可改
+// name = "李四" // let 不可改，編譯報錯
 
-let score: Int = 100     // 亦可明書其型
-let pi = 3.14            // 不書亦自推之
+let score: Int = 100 // 亦可明書其型
+let pi = 3.14 // 不書亦自推之
 
-print("汝好，\(name)")   // 字符串插值：反斜槓 + 括號
+print("汝好，\(name)") // 字符串插值：反斜槓 + 括號
 ```
 :::
 
@@ -64,20 +64,20 @@ Swift 社區之鐵律：默認用 let，確有所須方用 var。可用 let 之�
 :::
 
 ```
-var name: String = "張三"   // 普通之型：決不容為 nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> 編譯之誤，徑阻之
+var name: String = "張三" // 普通之型：決不容為 nil
+// name = nil // 編譯之誤，徑阻之
 
-var nickname: String? = nil  // 加問號：許為 nil（可選值）
+var nickname: String? = nil // 加問號：許為 nil（可選值）
 nickname = "三兒"
 
 // 用可選值，必"解包"：
-if let n = nickname {        // if let：安全解包
-    print("汝好，\(n)")
+if let n = nickname { // if let：安全解包
+ print("汝好，\(n)")
 } else {
-    print("尚無暱稱")
+ print("尚無暱稱")
 }
 
-let len = nickname?.count ?? 0   // ?? 予默認值（空合運算符）
+let len = nickname?.count ?? 0 // ?? 予默認值（空合運算符）
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // 函數：名字於前，參數與返回類型於後
 func greet(name: String) -> String {
-    return "汝好，\(name)！"
+ return "汝好，\(name)！"
 }
-print(greet(name: "張三"))     // 調用時要帶參數名
+print(greet(name: "張三")) // 調用時要帶參數名
 
 // 閉包：就地定義，輕快直接
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = 當前元素
+let doubled = numbers.map { $0 * 2 } // $0 = 當前元素
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // 篩選
+let big = numbers.filter { $0 > 2 } // 篩選
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ Swift 官方之好甚明：先用結構體（struct），須繼承之時方用�
 ```
 // 結構體：盛數據之盒
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // 結構體自帶"逐一成員構造器"：可徑建
+ // 結構體自帶"逐一成員構造器"：可徑建
 }
 let r = Record(amount: 25.5, category: "餐飲", date: Date())
 
 // 協議：約"必具何能"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // 遵守協議 = 承諾實現其要求
+struct Record: Identifiable { ... } // 遵守協議 = 承諾實現其要求
 ```
 :::
 
@@ -170,7 +170,7 @@ Swift 語法速查卡（新手版）
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小結
+本章小結
 
 - let 為先，var 慎用；類型自動推斷，冒號之後明言亦可
 - 可選值者 Swift 之魂也：或空必理之，if let 與 ?? 乃護身之符，! 乃高危操作

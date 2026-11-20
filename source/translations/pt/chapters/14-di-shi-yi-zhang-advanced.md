@@ -102,7 +102,7 @@ Ao gravar vídeo HDR, é necessário um monitor compatível com HDR para visuali
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Sugestões Práticas
+Sugestões Práticas
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Gravação cotidiana: 1080p/4K + 30 fps + codificação H.265, equilibrando qualidade e tamanho de arquivo.
@@ -113,7 +113,7 @@ Ao gravar vídeo HDR, é necessário um monitor compatível com HDR para visuali
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Explore: As Configurações de Vídeo do Seu Celular
+Explore: As Configurações de Vídeo do Seu Celular
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abra o app da câmera e mude para o modo de vídeo.
@@ -241,7 +241,7 @@ Além da fotografia cotidiana, o celular tem alguns modos especiais que, bem usa
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Sugestões Práticas de Fotografia Estática
+Sugestões Práticas de Fotografia Estática
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Fotografia cotidiana: HEIF/JPEG padrão é suficiente; arquivo pequeno, qualidade bastante boa.
@@ -253,7 +253,7 @@ Além da fotografia cotidiana, o celular tem alguns modos especiais que, bem usa
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à Obra: Conheça a Capacidade da Sua Câmera
+Mãos à Obra: Conheça a Capacidade da Sua Câmera
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifique se seu celular suporta captura RAW (Ajustes → Câmera → Formatos); tente ativar e fotografar, comparando o tamanho do arquivo JPEG e RAW da mesma cena.

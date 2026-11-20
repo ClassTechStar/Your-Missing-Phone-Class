@@ -71,7 +71,7 @@ after_part: hongmeng-kai-fa-pian
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给待办清单加一张卡片
+来动手：给待办清单加一张卡片
 
 {class="mt-1"}
 1\. 用 DevEco 的模板创建 FormExtensionAbility；2. 卡片显示"今日待办数与最近一条"；3. 配置每 30 分钟定时刷新；4. 预览器查看效果后真机添加到桌面。
@@ -104,33 +104,33 @@ DevEco Studio 里不需要你手写脚手架。在 entry 模块上右键，菜�
 import { FormExtensionAbility, formBindingData, formProvider, Want } from '@kit.FormKit'
 
 export default class TodoFormAbility extends FormExtensionAbility {
-  // 用户把卡片添加到桌面那一刻，系统回调这里，你交出第一份数据
-  onAddForm(want: Want): formBindingData.FormBindingData {
-    let formId = want.parameters?.['ohos.extra.param.key.form_identity'] as string
-    TodoStore.addFormId(formId)              // formId 务必持久化，后面刷新全靠它
-    return formBindingData.createFormBindingData({
-      'todoCount': TodoStore.todayCount().toString(),
-      'latest': TodoStore.latestTitle()
-    })
-  }
+ // 用户把卡片添加到桌面那一刻，系统回调这里，你交出第一份数据
+ onAddForm(want: Want): formBindingData.FormBindingData {
+ let formId = want.parameters?.['ohos.extra.param.key.form_identity'] as string
+ TodoStore.addFormId(formId) // formId 务必持久化，后面刷新全靠它
+ return formBindingData.createFormBindingData({
+ 'todoCount': TodoStore.todayCount().toString(),
+ 'latest': TodoStore.latestTitle()
+ })
+ }
 
-  // 到了配置文件约定的刷新时刻，系统回调这里
-  onUpdateForm(formId: string): void {
-    formProvider.updateForm(formId, formBindingData.createFormBindingData({
-      'todoCount': TodoStore.todayCount().toString(),
-      'latest': TodoStore.latestTitle()
-    }))
-  }
+ // 到了配置文件约定的刷新时刻，系统回调这里
+ onUpdateForm(formId: string): void {
+ formProvider.updateForm(formId, formBindingData.createFormBindingData({
+ 'todoCount': TodoStore.todayCount().toString(),
+ 'latest': TodoStore.latestTitle()
+ }))
+ }
 
-  // 卡片被用户移除，记得清掉对应的 formId
-  onRemoveForm(formId: string): void {
-    TodoStore.removeFormId(formId)
-  }
+ // 卡片被用户移除，记得清掉对应的 formId
+ onRemoveForm(formId: string): void {
+ TodoStore.removeFormId(formId)
+ }
 
-  // 卡片上 action 为 message 的按钮，事件最终落到这里
-  onFormEvent(formId: string, want: Want): void {
-    // 收到指令、改数据、推回卡片，后文演示
-  }
+ // 卡片上 action 为 message 的按钮，事件最终落到这里
+ onFormEvent(formId: string, want: Want): void {
+ // 收到指令、改数据、推回卡片，后文演示
+ }
 }
 ```
 :::
@@ -152,23 +152,23 @@ DevEco 的预览器支持卡片预览（以你装的版本功能为准）：打�
 
 ```
 {
-  "forms": [
-    {
-      "name": "TodoCard",
-      "displayName": "$string:todo_card_name",
-      "description": "$string:todo_card_desc",
-      "src": "./ets/widget/pages/TodoCard.ets",
-      "type": "ArkTS",
-      "window": { "designWidth": 720, "autoDesignWidth": true },
-      "colorMode": "auto",
-      "isDefault": true,
-      "defaultDimension": "2*2",
-      "supportDimensions": ["2*2", "2*4"],
-      "updateEnabled": true,
-      "scheduledUpdateTime": "07:30",
-      "periodicRefresh": 30
-    }
-  ]
+ "forms": [
+ {
+ "name": "TodoCard",
+ "displayName": "$string:todo_card_name",
+ "description": "$string:todo_card_desc",
+ "src": "./ets/widget/pages/TodoCard.ets",
+ "type": "ArkTS",
+ "window": { "designWidth": 720, "autoDesignWidth": true },
+ "colorMode": "auto",
+ "isDefault": true,
+ "defaultDimension": "2*2",
+ "supportDimensions": ["2*2", "2*4"],
+ "updateEnabled": true,
+ "scheduledUpdateTime": "07:30",
+ "periodicRefresh": 30
+ }
+ ]
 }
 ```
 :::
@@ -198,23 +198,23 @@ let storage = new LocalStorage()
 @Entry(storage)
 @Component
 struct TodoCard {
-  // 与 FormExtensionAbility 塞进来的数据按 key 对应，单向绑定
-  @LocalStorageProp('todoCount') todoCount: string = '--'
-  @LocalStorageProp('latest') latest: string = '暂无待办'
+ // 与 FormExtensionAbility 塞进来的数据按 key 对应，单向绑定
+ @LocalStorageProp('todoCount') todoCount: string = '--'
+ @LocalStorageProp('latest') latest: string = '暂无待办'
 
-  build() {
-    Column({ space: 6 }) {
-      Text('今日待办').fontSize(12).fontColor($r('app.color.sub_text'))
-      Text(this.todoCount).fontSize(30).fontWeight(FontWeight.Bold)
-      Text(this.latest).fontSize(13).maxLines(1)
-        .textOverflow({ overflow: TextOverflow.Ellipsis })
-    }
-    .justifyContent(FlexAlign.Center)
-    .padding(12)
-    .onClick(() =&gt; {
-      postCardAction(this, { 'action': 'router', 'abilityName': 'EntryAbility' })
-    })
-  }
+ build() {
+ Column({ space: 6 }) {
+ Text('今日待办').fontSize(12).fontColor($r('app.color.sub_text'))
+ Text(this.todoCount).fontSize(30).fontWeight(FontWeight.Bold)
+ Text(this.latest).fontSize(13).maxLines(1)
+ .textOverflow({ overflow: TextOverflow.Ellipsis })
+ }
+ .justifyContent(FlexAlign.Center)
+ .padding(12)
+ .onClick(() =&gt; {
+ postCardAction(this, { 'action': 'router', 'abilityName': 'EntryAbility' })
+ })
+ }
 }
 ```
 :::
@@ -238,12 +238,12 @@ onClick 里真正的关键在 postCardAction，卡片环境的跳转受限，一
 
 ```
 Button('打卡一条')
-  .onClick(() =&gt; {
-    postCardAction(this, {
-      'action': 'message',
-      'params': { 'cmd': 'checkLatest' }
-    })
-  })
+ .onClick(() =&gt; {
+ postCardAction(this, {
+ 'action': 'message',
+ 'params': { 'cmd': 'checkLatest' }
+ })
+ })
 ```
 :::
 
@@ -251,7 +251,7 @@ Button('打卡一条')
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 卡片是"展示与入口"层，不是业务逻辑层。打卡的真正执行放在主应用的数据层或服务里，FormExtensionAbility 只做三件事：收指令、改数据、推回卡片。把业务逻辑塞进卡片扩展，意味着主应用和卡片两边各有一份"打卡"实现——改规则那天，两张脸对不上，用户报 bug 时只会说一句"卡片上打钩了，应用里还是没打"。
@@ -298,12 +298,12 @@ scheduledUpdateTime 是"每天这个时刻刷一次"，适合晨报类数据：�
 import { formProvider, formBindingData } from '@kit.FormKit'
 
 async function refreshTodoCard(formId: string, count: string, latest: string) {
-  try {
-    await formProvider.updateForm(formId,
-      formBindingData.createFormBindingData({ 'todoCount': count, 'latest': latest }))
-  } catch (e) {
-    // 卡片可能刚被移除，失败别当事故，记条日志就够
-  }
+ try {
+ await formProvider.updateForm(formId,
+ formBindingData.createFormBindingData({ 'todoCount': count, 'latest': latest }))
+ } catch (e) {
+ // 卡片可能刚被移除，失败别当事故，记条日志就够
+ }
 }
 ```
 :::
@@ -320,7 +320,7 @@ async function refreshTodoCard(formId: string, count: string, latest: string) {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 "更新于 XX:XX"这行小字是卡片设计里性价比最高的一笔：用户看到时间戳，就不会把旧数据当故障报修；你自己排查"卡片到底刷没刷"，也全靠它肉眼可验。
@@ -332,7 +332,7 @@ async function refreshTodoCard(formId: string, count: string, latest: string) {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 卡片的刷新决定权在系统手里，你的工作是把请求提得聪明：变化时自己推，定时刻踩着数据节奏，其余时间让手机睡觉。
@@ -356,12 +356,12 @@ async function refreshTodoCard(formId: string, count: string, latest: string) {
 
 ```
 {
-  "app": {
-    "bundleName": "com.example.todo.quick",
-    "label": "$string:quick_name",
-    "icon": "$media:quick_icon",
-    "atomicService": { /* 元服务专属配置，模板会填好 */ }
-  }
+ "app": {
+ "bundleName": "com.example.todo.quick",
+ "label": "$string:quick_name",
+ "icon": "$media:quick_icon",
+ "atomicService": { /* 元服务专属配置，模板会填好 */ }
+ }
 }
 ```
 :::
@@ -393,7 +393,7 @@ async function refreshTodoCard(formId: string, count: string, latest: string) {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：把"快速记一条"做成元服务
+来动手：把"快速记一条"做成元服务
 
 {class="mt-1"}
 用 Atomic Service 模板新建工程，做一个单页：文本输入（有余力加语音），保存后直接退出并 toast 确认。不要列表页、不要设置页。做完对比它和第 76 章完整应用的启动速度，你会对"轻"字第一次有体感。
@@ -440,7 +440,7 @@ async function refreshTodoCard(formId: string, count: string, latest: string) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 三个入口共同的前提是服务已上架、状态正常。线下部署的码和标签要有回收机制：服务下线、改名、换入口后，桌上那张二维码指向一个打不开的服务，是商家最恼火的售后工单：也是你的品牌污点。
@@ -474,12 +474,12 @@ async function refreshTodoCard(formId: string, count: string, latest: string) {
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit'
 
 export default class EntryAbility extends UIAbility {
-  // 流转发起时系统回调：你负责把"恢复任务所需"装进 wantParam
-  onContinue(wantParam: Record&lt;string, Object&gt;): AbilityConstant.OnContinueResult {
-    wantParam['noteId'] = TodoStore.currentEditingId()
-    wantParam['draftText'] = TodoStore.currentDraft()
-    return AbilityConstant.OnContinueResult.AGREE
-  }
+ // 流转发起时系统回调：你负责把"恢复任务所需"装进 wantParam
+ onContinue(wantParam: Record&lt;string, Object&gt;): AbilityConstant.OnContinueResult {
+ wantParam['noteId'] = TodoStore.currentEditingId()
+ wantParam['draftText'] = TodoStore.currentDraft()
+ return AbilityConstant.OnContinueResult.AGREE
+ }
 }
 ```
 :::
@@ -492,10 +492,10 @@ export default class EntryAbility extends UIAbility {
 ```
 // 对端拉起时，onCreate / onNewWant 的 want 里带着发起端塞的字段
 onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  let noteId = want.parameters?.['noteId']
-  if (noteId) {
-    TodoStore.resumeEditing(noteId as string)   // 恢复到同一条待办的编辑现场
-  }
+ let noteId = want.parameters?.['noteId']
+ if (noteId) {
+ TodoStore.resumeEditing(noteId as string) // 恢复到同一条待办的编辑现场
+ }
 }
 ```
 :::
@@ -521,8 +521,8 @@ import { distributedDataObject } from '@kit.ArkData'
 // 组网与账号条件满足时，两端对同一对象，一边改字段，另一端收到回调
 let obj = distributedDataObject.create(this.context, { title: '买菜', done: false })
 obj.on('change', (newVal: Object) =&gt; {
-  this.title = newVal.title as string
-  this.done = newVal.done as boolean
+ this.title = newVal.title as string
+ this.done = newVal.done as boolean
 })
 ```
 :::
@@ -547,7 +547,7 @@ obj.on('change', (newVal: Object) =&gt; {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 分布式调试最贵的成本是"两端状态各说各话"。从第一天立规矩：所有状态变更打日志，带设备标识和时间戳；复现问题先对时间线，再改代码。没有这条纪律，你会把大量深夜花在"平板上明明改了，手机为什么没变"的玄学排查上。
@@ -555,7 +555,7 @@ obj.on('change', (newVal: Object) =&gt; {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 接续传的不是数据，是任务；协同共享的不是文件，是此刻。
@@ -579,9 +579,9 @@ obj.on('change', (newVal: Object) =&gt; {
 
 ```
 if (canIUse('SystemCapability.DistributedDataManager.DataObject')) {
-  this.showCollabEntry = true    // 能力可用，协同入口照常展示
+ this.showCollabEntry = true // 能力可用，协同入口照常展示
 } else {
-  this.showCollabEntry = false   // 走降级，见下文三种姿势
+ this.showCollabEntry = false // 走降级，见下文三种姿势
 }
 ```
 :::
@@ -619,7 +619,7 @@ if (canIUse('SystemCapability.DistributedDataManager.DataObject')) {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把"不支持清单"写进需求文档：哪些条件走降级、降到什么界面、文案是什么。评审时，这份清单比 demo 里的丝滑流转更有说服力，它证明你想过那些没被演示到的用户。
@@ -656,7 +656,7 @@ if (canIUse('SystemCapability.DistributedDataManager.DataObject')) {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 上架前把"设计指南"与"审核指南"的最新版各过一遍，重点读卡片、元服务、多端相关的小节。规范是活的，书和博客都会过期，官网不会。
@@ -689,7 +689,7 @@ if (canIUse('SystemCapability.DistributedDataManager.DataObject')) {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：建"我的三个 Kit"书签夹
+来动手：建"我的三个 Kit"书签夹
 
 {class="mt-1"}
 在浏览器里建一个书签文件夹，存三条：Form Kit 的 API 参考页、元服务与应用接续相关的指南页、分布式能力的文档入口。这一章之后的每一次开发，你都会反复回到这三个页面，提前存好，别每次都靠搜索碰运气。
@@ -769,21 +769,21 @@ if (canIUse('SystemCapability.DistributedDataManager.DataObject')) {
 ```
 // 窗口尺寸变化时更新 isWide，接口以官方文档为准
 window.getLastWindow(this.context).then((w: window.Window) =&gt; {
-  w.on('windowSizeChange', (size: window.Size) =&gt; {
-    this.isWide = size.windowWidth &gt; this.wideThreshold
-  })
+ w.on('windowSizeChange', (size: window.Size) =&gt; {
+ this.isWide = size.windowWidth &gt; this.wideThreshold
+ })
 })
 
 build() {
-  Row() {
-    // 列表：窄屏占满整行，宽屏只占一部分
-    Column() { TaskList() }
-      .width(this.isWide ? '40%' : '100%')
-    if (this.isWide) {
-      Column() { TaskDetail() }
-        .layoutWeight(1)        // 剩下的宽度全给详情
-    }
-  }
+ Row() {
+ // 列表：窄屏占满整行，宽屏只占一部分
+ Column() { TaskList() }
+ .width(this.isWide ? '40%' : '100%')
+ if (this.isWide) {
+ Column() { TaskDetail() }
+ .layoutWeight(1) // 剩下的宽度全给详情
+ }
+ }
 }
 ```
 :::
@@ -809,7 +809,7 @@ build() {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给待办清单开双栏
+来动手：给待办清单开双栏
 
 {class="mt-1"}
 按本节的示意代码，把第 76 章的待办清单改成宽屏双栏：列表加详情。验收标准两条：窄屏退回单列毫无残缺；宽屏上点任何一条，右侧内容与左侧高亮严格同步。做完这一题，你就把"多端适配"从口号变成了手感。
@@ -831,8 +831,8 @@ formBindingData 传的是数据，别把它当快递车——塞一张大图、�
 ```
 // 只传卡片要显示的字段，别把整个对象扔过去
 formBindingData.createFormBindingData({
-  'todoCount': '3',
-  'latest': '给花浇水'      // 而不是把整个待办对象数组塞进来
+ 'todoCount': '3',
+ 'latest': '给花浇水' // 而不是把整个待办对象数组塞进来
 })
 ```
 :::
@@ -857,7 +857,7 @@ formBindingData.createFormBindingData({
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 给卡片和元服务各定一条"性能红线"写进文档：刷新回调里允许做什么、首屏允许加载什么、退出前必须清理什么。红线一旦写下来，评审就有依据，"我觉得可以再加一点"就有了对手。
@@ -899,7 +899,7 @@ formBindingData.createFormBindingData({
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 形态服务于任务：先问任务是什么，再挑形态，最后定指标，顺序反了，三样武器都会变成三个负担。
@@ -929,7 +929,7 @@ formBindingData.createFormBindingData({
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 上线前做一次"数据地图"练习：写下每一类用户数据存在哪、路过哪、谁能看见。画完这张图，你会先吓自己一跳，然后主动砍掉一半不必要的收集——这张图还是隐私说明的现成底稿，上架时直接用。
@@ -1080,7 +1080,7 @@ formBindingData.createFormBindingData({
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：今天的十分钟
+来动手：今天的十分钟
 
 {class="mt-1"}
 打开官方文档。把 Form Kit 指南页的"约束与限制"小节通读一遍。不用记全——只把与刷新、尺寸、内存相关的条目抄进你的笔记。这三类条目，是本章几节正文反复撞上的墙；先知道墙在哪，动手时就不会撞疼。
@@ -1090,7 +1090,7 @@ formBindingData.createFormBindingData({
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 三个练习都不依赖写代码，通勤路上、排队间隙就能做一半。把它们排进本周的日历，比"找时间做"靠谱得多，这一章的任务清单至此凑齐了：一张卡片、一个元服务、一次接续、一份四周计划、三个小练习，从今天排队的那十分钟就能开始。
@@ -1098,7 +1098,7 @@ formBindingData.createFormBindingData({
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 服务卡片管"瞥一眼"，元服务管"快进快出"，分布式管"接着做"：三句话各配一个指标，进阶之路就有了自己的刻度。
@@ -1110,7 +1110,7 @@ formBindingData.createFormBindingData({
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 服务卡片 = 应用的桌面切片，FormExtensionAbility + formBindingData 提供数据
 - 卡片设计心法：只放一个最关键的信息，别当缩小版首页

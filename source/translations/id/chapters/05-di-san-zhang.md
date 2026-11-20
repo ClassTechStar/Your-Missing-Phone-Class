@@ -18,7 +18,7 @@ Banyak orang melihat ikon Wi-Fi dan sinyal menyala bersamaan di bagian atas laya
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>Analogi Inti: Jalan dan Kendaraan
+Analogi Inti: Jalan dan Kendaraan
 
 {class="mt-1"}
 Bayangkan internet sebagai sebuah kota.<strong>"Jalan"</strong> adalah jalur antara ponsel Anda dan internet,<strong>"kendaraan"</strong> adalah data yang berjalan di jalan tersebut. Wi-Fi dan kuota data adalah dua jalan yang berbeda, tetapi data (kendaraan) itu sendiri sama.
@@ -36,7 +36,7 @@ Wi-Fi biasanya investasi sekali (biaya bulanan lebar pita), selama listrik tidak
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>Mari Coba: Periksa Paket Kuota Data Anda
+Mari Coba: Periksa Paket Kuota Data Anda
 
 {class="mt-1"}
 Buka [Pengaturan] &gt; [Jaringan Seluler] &gt; [Manajemen Kuota Data] di ponsel, lihat berapa banyak kuota data tersisa bulan ini dan aplikasi mana yang paling banyak mengonsumsi kuota. Tahu posisinya, baru tidak panik saat keluar rumah.
@@ -49,7 +49,7 @@ Dalam hal keamanan, data seluler biasanya lebih aman daripada Wi-Fi publik. Data
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Peringatan Keamanan
+Peringatan Keamanan
 
 {class="mt-1"}
 Di tempat umum seperti bandara, mal, kafe, jangan hubungkan ke Wi-Fi gratis dengan nama mencurigakan (seperti "Free_WiFi_2024"). Bahkan jika terhubung, jangan pernah login ke aplikasi bank atau memasukkan kata sandi di dalamnya.
@@ -81,7 +81,7 @@ Jaringan seluler adalah dasar Anda terhubung kapan saja dan di mana saja. Dari 2
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Peringatan Penting: Matikan [Data Roaming] Sebelum Bepergian ke Luar Negeri!
+Peringatan Penting: Matikan [Data Roaming] Sebelum Bepergian ke Luar Negeri!
 
 {class="mt-1"}
 Menggunakan data seluler di luar negeri dapat menghasilkan tagihan mahal! Sebelum bepergian ke luar negeri, pastikan mematikan data roaming di pengaturan, atau beli kartu kuota lokal/paket roaming internasional terlebih dahulu.
@@ -106,53 +106,53 @@ Standar Wi-Fi ditetapkan oleh IEEE, setiap generasi memiliki peningkatan signifi
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standar</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Daya Maksimum</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pita Frekuensi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kecepatan Maks</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Karakteristik</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Standar lama, cakupan lumayan</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Saat ini paling umum, kecepatan cukup</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Performa multi-perangkat kuat, latensi rendah</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menambah pita 6GHz, tidak padat</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Transmisi super cepat, agregasi multi-link</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standar</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Daya Maksimum</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pita Frekuensi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kecepatan Maks</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Karakteristik</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Standar lama, cakupan lumayan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Saat ini paling umum, kecepatan cukup</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Performa multi-perangkat kuat, latensi rendah</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menambah pita 6GHz, tidak padat</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Transmisi super cepat, agregasi multi-link</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ Saat kuota data Anda banyak, bisa mengaktifkan hotspot untuk tablet, komputer.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktikkan: Mengatur dan Mengelola Hotspot
+Praktikkan: Mengatur dan Mengelola Hotspot
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka [Pengaturan], cari "Hotspot Pribadi" atau "Tethering", aktifkan, atur nama dan kata sandi.

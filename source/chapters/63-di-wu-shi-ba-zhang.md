@@ -71,7 +71,7 @@ Gradle 常用命令速查
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：构建出问题先 clean
+小贴士：构建出问题先 clean
 
 {class="mt-1"}
 "昨天还能跑今天就不行"的灵异事件，十有六七是构建缓存错乱。<code class="inline">./gradlew clean</code> 之后重新构建，能治愈一大半玄学问题。还不行再重启 Android Studio——这招请配合 File → Invalidate Caches 一起服用。

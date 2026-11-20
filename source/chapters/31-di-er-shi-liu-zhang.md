@@ -99,7 +99,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：给你的下一台手机做一份"技术需求清单"
+来试试：给你的下一台手机做一份"技术需求清单"
 
 {class="mt-1"}
 拿出一张纸，按"必备/加分/不需要"三档，列出你对AI、卫星、折叠屏、Wi-Fi 7、快充、电池容量的需求。这样下次去线下店时，导购推荐的"卖点"你能迅速判断是真需求还是被推销。例如：
@@ -112,7 +112,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI手机三大判断标准：端侧大模型、NPU TOPS、AI Agent场景

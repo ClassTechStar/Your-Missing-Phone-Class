@@ -228,41 +228,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">브라우저</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">핵심 강점</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">대상 사용자</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium 기반 + Copilot AI 내장. 웹 요약/번역/대화 가능</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">효율을 추구하는 오피스 사용자, AI 집중 사용자(주력 추천)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">애플 생태계와 깊게 연동. 배터리 효율 높고 프라이버시 보호 강함</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac 사용자, 배터리와 시스템 연동 중시</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전 세계 사용률 1위, 가장 풍부한 확장 생태계</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">확장 기능이 많이 필요한 고급 사용자, 크로스 기기 동기화 사용자</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기본 광고·트래커 차단, 더 빠른 속도</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">프라이버시 중시, 확장 없이도 광고를 막고 싶은 사용자</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">동명 검색 엔진이 기록을 남기지 않음, 원클릭 흔적 삭제</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">맞춤 추적을 원치 않는 프라이버시 민감 사용자</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">브라우저</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">핵심 강점</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">대상 사용자</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium 기반 + Copilot AI 내장. 웹 요약/번역/대화 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">효율을 추구하는 오피스 사용자, AI 집중 사용자(주력 추천)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">애플 생태계와 깊게 연동. 배터리 효율 높고 프라이버시 보호 강함</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac 사용자, 배터리와 시스템 연동 중시</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전 세계 사용률 1위, 가장 풍부한 확장 생태계</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">확장 기능이 많이 필요한 고급 사용자, 크로스 기기 동기화 사용자</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기본 광고·트래커 차단, 더 빠른 속도</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">프라이버시 중시, 확장 없이도 광고를 막고 싶은 사용자</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">동명 검색 엔진이 기록을 남기지 않음, 원클릭 흔적 삭제</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">맞춤 추적을 원치 않는 프라이버시 민감 사용자</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -321,46 +321,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">플랫폼</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">진입 경로</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">권장 켜기 항목</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[설정] > [전화] / [메시지]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">알 수 없는 발신자 음소거, 차단된 연락처, 메시지의 "알 수 없는 발신자 필터"</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 앱 > 설정 > 스팸 차단 또는 보안 센터</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트 차단, 모르는 번호 한 번 울림 끊김, 문자 키워드 필터</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 > 스팸 차단, 휴대폰 관리자 > 스팸 차단</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">발신자 식별, 블랙리스트, 문자 스마트 차단</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 앱 > 스팸 차단 또는 기기 > 스팸 차단</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">수신 차단, 보이스피싱 식별, 문자 차단 규칙</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 > 스팸 전화 차단, i Manager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스팸 차단, 보이스피싱 경보, 메시지 필터</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 > 설정 > 번호 차단 / 발신자 표시 및 스팸 전화</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">알 수 없는 번호 차단, 스팸 전화 식별(지역 지원도 상이)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">플랫폼</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">진입 경로</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">권장 켜기 항목</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[설정] > [전화] / [메시지]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">알 수 없는 발신자 음소거, 차단된 연락처, 메시지의 "알 수 없는 발신자 필터"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 앱 > 설정 > 스팸 차단 또는 보안 센터</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트 차단, 모르는 번호 한 번 울림 끊김, 문자 키워드 필터</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 > 스팸 차단, 휴대폰 관리자 > 스팸 차단</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">발신자 식별, 블랙리스트, 문자 스마트 차단</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 앱 > 스팸 차단 또는 기기 > 스팸 차단</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">수신 차단, 보이스피싱 식별, 문자 차단 규칙</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 > 스팸 전화 차단, i Manager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스팸 차단, 보이스피싱 경보, 메시지 필터</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전화 > 설정 > 번호 차단 / 발신자 표시 및 스팸 전화</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">알 수 없는 번호 차단, 스팸 전화 식별(지역 지원도 상이)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -431,46 +431,46 @@ iOS 자체의 중국 지진 경보 지원은 제한적이라 보통 신뢰할 �
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">플랫폼</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">일반 경로</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">설명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">휴대폰 관리자 / 보안 센터 > 지진 경보 또는 설정에서 "지진" 검색</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">일부 버전은 시스템에 경보 서비스 내장. 네트워크 연결과 위치 권한 필요</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 보안 > 비상 경보 알림 / 지진 경보</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">이름이 "비상 경보 알림"일 수 있으며 지진 등이 포함됩니다</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 보안(SOS 긴급 연락) > 지진 경보</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">일부 기종은 지역 서비스 커버리지와 관련</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">날씨 앱 또는 설정 > 보안/기타 > 지진 경보</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">실제 시스템 버전 메뉴 기준</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">시스템 설정에 완전한 내장 스위치가 없을 수 있음. 신뢰할 수 있는 지진 경보 앱을 설치하고 알림을 허용하세요</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">앱에 백그라운드 실행·위치 권한 필요. 시스템 방해 금지가 경보를 차단하지 않도록 하세요</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung 등</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 안전 및 긴급 상황 / 무선 긴급 경보</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"긴급 경보" 범위는 지역·통신사에 따라 다릅니다</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">플랫폼</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">일반 경로</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">설명</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">휴대폰 관리자 / 보안 센터 > 지진 경보 또는 설정에서 "지진" 검색</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">일부 버전은 시스템에 경보 서비스 내장. 네트워크 연결과 위치 권한 필요</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 보안 > 비상 경보 알림 / 지진 경보</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">이름이 "비상 경보 알림"일 수 있으며 지진 등이 포함됩니다</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 보안(SOS 긴급 연락) > 지진 경보</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">일부 기종은 지역 서비스 커버리지와 관련</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">날씨 앱 또는 설정 > 보안/기타 > 지진 경보</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">실제 시스템 버전 메뉴 기준</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">시스템 설정에 완전한 내장 스위치가 없을 수 있음. 신뢰할 수 있는 지진 경보 앱을 설치하고 알림을 허용하세요</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">앱에 백그라운드 실행·위치 권한 필요. 시스템 방해 금지가 경보를 차단하지 않도록 하세요</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung 등</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 안전 및 긴급 상황 / 무선 긴급 경보</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"긴급 경보" 범위는 지역·통신사에 따라 다릅니다</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

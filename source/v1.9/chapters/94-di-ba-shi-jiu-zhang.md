@@ -128,7 +128,7 @@ ATM 取现是现金的主要来源，完整流程按步走：第一步，选机�
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：三笔"以为便宜"的钱
+避坑提醒：三笔"以为便宜"的钱
 
 {class="mt-1"}
 ① 机场换汇点汇率最差，应急少量即可；② 酒店代客换汇常有加价；③ 部分 ATM（尤其景区内）有高额附加费，用银行自营 ATM。出行前在银行 App 里开好"境外取现/境外支付"权限，比到了再折腾强。
@@ -857,7 +857,7 @@ ATM 取现是现金的主要来源，完整流程按步走：第一步，选机�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：配好你的"旅行钱包"
+来动手：配好你的"旅行钱包"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 钱包 App 里加好外币卡，支付宝/微信开通境外支付并查手续费。
@@ -880,7 +880,7 @@ ATM 取现是现金的主要来源，完整流程按步走：第一步，选机�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 退税单当登机牌管，账单回来必复盘；小费先查再给，隐藏收费先知先觉，花得明白，才是这一章的终点。
@@ -892,7 +892,7 @@ ATM 取现是现金的主要来源，完整流程按步走：第一步，选机�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 组合拳：手机闪付+外币卡主力，支付宝/微信境外补位，现金 1-2 天量
 - 刷卡永远选当地货币，拒绝 DCC 动态折算

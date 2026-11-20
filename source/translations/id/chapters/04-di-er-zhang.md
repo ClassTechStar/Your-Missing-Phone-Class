@@ -86,119 +86,119 @@ Berbagai ekstensi file di ponsel membingungkan, memahaminya bisa membantu Anda m
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Format</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tipe</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Karakteristik</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara buka yang disarankan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy compression, ukuran kecil, kompatibilitas terbaik. Format default foto ponsel.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/image viewer apa saja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless compression, mendukung background transparan. Sering digunakan untuk screenshot, icon. Ukuran lebih besar dari JPG.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/image viewer apa saja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy compression, ukuran kecil, kompatibilitas sangat baik. Format audio paling universal.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player apa saja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless compression, kualitas suara sama dengan CD, ukuran 3-5 kali lebih besar dari MP3. Pilihan audiophile.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player/aplikasi player profesional</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio mentah tanpa kompresi, kualitas suara terbaik tapi ukuran sangat besar. Sering digunakan untuk rekaman profesional.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AAC encoding, kualitas suara lebih baik dari MP3 pada bitrate sama. Sering digunakan di ekosistem Apple.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/music player</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format container video paling universal, kompatibilitas sangat baik. Format default video yang direkam ponsel.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/video player apa saja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format container open source, mendukung multi audio track, multi subtitle. Sering digunakan untuk resource film.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen Word. DOCX adalah format terkompresi, ukuran lebih kecil. DOC adalah format lama.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Presentasi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Presentasi PowerPoint. PPTX adalah format terkompresi.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spreadsheet</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spreadsheet Excel. XLSX adalah format terkompresi.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format cross-platform, layout tetap tidak bisa diedit. Sering digunakan untuk kontrak, tesis, e-book.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kompresi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format kompresi paling universal, kompatibilitas cross-platform baik.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bawaan sistem/aplikasi unzip</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kompresi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Rasio kompresi lebih tinggi dari ZIP, tapi butuh software khusus untuk unzip.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi unzip</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">File image disc, menyalin lengkap konten disc. Sering digunakan untuk package instalasi sistem.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi unzip/virtual drive</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Webpage</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">File webpage, dibuka dengan browser. Webpage yang disimpan sering menggunakan format ini.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Browser</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Format</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tipe</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Karakteristik</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara buka yang disarankan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy compression, ukuran kecil, kompatibilitas terbaik. Format default foto ponsel.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/image viewer apa saja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless compression, mendukung background transparan. Sering digunakan untuk screenshot, icon. Ukuran lebih besar dari JPG.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/image viewer apa saja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy compression, ukuran kecil, kompatibilitas sangat baik. Format audio paling universal.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player apa saja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless compression, kualitas suara sama dengan CD, ukuran 3-5 kali lebih besar dari MP3. Pilihan audiophile.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player/aplikasi player profesional</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio mentah tanpa kompresi, kualitas suara terbaik tapi ukuran sangat besar. Sering digunakan untuk rekaman profesional.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AAC encoding, kualitas suara lebih baik dari MP3 pada bitrate sama. Sering digunakan di ekosistem Apple.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/music player</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format container video paling universal, kompatibilitas sangat baik. Format default video yang direkam ponsel.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/video player apa saja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format container open source, mendukung multi audio track, multi subtitle. Sering digunakan untuk resource film.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen Word. DOCX adalah format terkompresi, ukuran lebih kecil. DOC adalah format lama.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Presentasi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Presentasi PowerPoint. PPTX adalah format terkompresi.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spreadsheet</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spreadsheet Excel. XLSX adalah format terkompresi.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format cross-platform, layout tetap tidak bisa diedit. Sering digunakan untuk kontrak, tesis, e-book.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kompresi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format kompresi paling universal, kompatibilitas cross-platform baik.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bawaan sistem/aplikasi unzip</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kompresi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Rasio kompresi lebih tinggi dari ZIP, tapi butuh software khusus untuk unzip.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi unzip</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">File image disc, menyalin lengkap konten disc. Sering digunakan untuk package instalasi sistem.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi unzip/virtual drive</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Webpage</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">File webpage, dibuka dengan browser. Webpage yang disimpan sering menggunakan format ini.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Browser</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Berlatih: Rapikan folder "Download"
+Berlatih: Rapikan folder "Download"
 
 {class="mt-1"}
 Buka file manager &gt; masuk folder "Download". Lihat apa saja isinya? Hapus yang tidak berguna, yang berguna dikategorikan (misalnya buat folder "Materi Kerja", "Sticker" untuk menaruhnya). Sekalian lihat ruang penyimpanan, pahami tipe file mana yang paling banyak memakan ruang.
@@ -216,21 +216,21 @@ Akar kekacauan adalah tidak adanya aturan. Membangun aturan sebenarnya sederhana
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>Penamaan "Waktu + Kejadian"</strong>: Nama folder mengandung timestamp dan deskripsi kejadian, memudahkan recall dan retrieval di kemudian hari. Misalnya <code>202606_TiketPerjalanan</code>,<code>2025RingkasanAkhirTahun</code>,<code>2024UlangTahunAnak</code>. Dengan begitu bisa melihat timeline, juga bisa tahu kontennya dengan sekali lihat.</li>
-                        <li><strong>Sistem klasifikasi tiga tingkat</strong>:
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>Tingkat 1</strong>: Berdasarkan tipe file (Dokumen / Gambar / Video / Audio)</li>
-                                <li><strong>Tingkat 2</strong>: Berdasarkan skenario penggunaan (Kerja / Kehidupan / Belajar)</li>
-                                <li><strong>Tingkat 3</strong>: Berdasarkan kejadian atau proyek spesifik (seperti "2026Q2_ProyekA")</li>
-                            </ul>
-                        </li>
-                        <li><strong>Rencana pembersihan bulanan</strong>: Setiap bulan pada tanggal tetap (disarankan hari gajian atau tanggal 1 awal bulan), lakukan penyortiran terpusat pada direktori "Download":<strong>arsipkan yang berguna, hapus yang tidak berguna, simpan ulang yang berharga</strong>. 12 kali penyortiran kecil setahun, jauh lebih ringan daripada menumpuk setahun untuk pembersihan besar.</li>
-                    </ul>
+ <li><strong>Penamaan "Waktu + Kejadian"</strong>: Nama folder mengandung timestamp dan deskripsi kejadian, memudahkan recall dan retrieval di kemudian hari. Misalnya <code>202606_TiketPerjalanan</code>,<code>2025RingkasanAkhirTahun</code>,<code>2024UlangTahunAnak</code>. Dengan begitu bisa melihat timeline, juga bisa tahu kontennya dengan sekali lihat.</li>
+ <li><strong>Sistem klasifikasi tiga tingkat</strong>:
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>Tingkat 1</strong>: Berdasarkan tipe file (Dokumen / Gambar / Video / Audio)</li>
+ <li><strong>Tingkat 2</strong>: Berdasarkan skenario penggunaan (Kerja / Kehidupan / Belajar)</li>
+ <li><strong>Tingkat 3</strong>: Berdasarkan kejadian atau proyek spesifik (seperti "2026Q2_ProyekA")</li>
+ </ul>
+ </li>
+ <li><strong>Rencana pembersihan bulanan</strong>: Setiap bulan pada tanggal tetap (disarankan hari gajian atau tanggal 1 awal bulan), lakukan penyortiran terpusat pada direktori "Download":<strong>arsipkan yang berguna, hapus yang tidak berguna, simpan ulang yang berharga</strong>. 12 kali penyortiran kecil setahun, jauh lebih ringan daripada menumpuk setahun untuk pembersihan besar.</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Daftar tugas bulan ini
+Daftar tugas bulan ini
 
 {class="mt-1"}
 Pilih satu akhir pekan yang luang, operasikan dengan urutan berikut:
@@ -258,7 +258,7 @@ Gambar adalah tipe data paling "sensitif" di ponsel:satu foto sembarangan bisa m
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>Prosedur standar mengirim foto ID/screenshot sensitif
+Prosedur standar mengirim foto ID/screenshot sensitif
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Pixelasi informasi yang terlihat</strong>: Dengan tool bawaan sistem atau pihak ketiga (seperti Meitu XiuXiu, Snapseed)<strong>coret beberapa digit tengah nomor KTP, nomor plat, nomor rumah, nama, jumlah</strong> dan field kunci lainnya;

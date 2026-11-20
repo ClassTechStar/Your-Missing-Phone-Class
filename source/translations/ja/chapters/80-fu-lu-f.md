@@ -25,7 +25,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>：閉じるとパウダーケースのよう、開くと通常サイズのスマートフォン。代表：Huawei Pocketシリーズ、Samsung Galaxy Z Flipシリーズ、OPPO Find N Flip、Xiaomi MIX Flip。「小型携帯＋外画面クイックチェック」が売り。
+：閉じるとパウダーケースのよう、開くと通常サイズのスマートフォン。代表：Huawei Pocketシリーズ、Samsung Galaxy Z Flipシリーズ、OPPO Find N Flip、Xiaomi MIX Flip。「小型携帯＋外画面クイックチェック」が売り。
 
 {class="mt-1"}
 2024-2025年の重要な進歩：ヒンジ寿命が一般的に50万回の折りたたみに対応（1日100回開閉で13年使用可能）、UTG超薄ガラスが初期のプラスチックフィルムに代わり、折り目は肉眼で見えるが触感は非常に軽微、価格は1万元帯から5000-6000元帯に下落。
@@ -42,7 +42,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>携帯性と大画面を両立したい女性ユーザー
+携帯性と大画面を両立したい女性ユーザー
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - ：縦折りスマートフォンは閉じると小さなバッグに入り、開くと通常のスマートフォン、外画面は化粧鏡や通知確認にも使えます。
@@ -63,7 +63,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>アフターと保証
+アフターと保証
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ：内画面割れの修理価格を重点的に確認。一部ブランドは初年度1回無料で内画面交換、自己負担の場合は2000-4000元かかることも。これは折りたたみスマートフォン最大の隠れコストです。
@@ -112,7 +112,7 @@ kind: appendix
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>開閉の力を均一に
+開閉の力を均一に
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - ：片手で勢いよく開かない、両手で中央から均等に展開するのが最も安定。
@@ -134,7 +134,7 @@ kind: appendix
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>アプリの対応がまちまち
+アプリの対応がまちまち
 
 {class="text-right text-sm"}
 ：主流アプリは大画面に対応済みだが、ニッチなアプリは単に「引き伸ばし拡大」の可能性があり、体験はいまひとつ。
@@ -155,7 +155,7 @@ Huawei Pocketシリーズ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>最後の注意
+最後の注意
 
 {class="mt-1"}
 折りたたみ画面技術は毎年イテレーションしており、本付録は2026年に執筆。購入前に必ず最新のレビューとユーザーフィードバックを確認し、ヒンジ寿命の実測、折り目の表現、内画面の修理ポリシーの3項目に注目。実店舗で直接触れることがレビューを見るより常に重要です。

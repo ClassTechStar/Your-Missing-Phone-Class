@@ -83,7 +83,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：Sync 失败别慌
+小贴士：Sync 失败别慌
 
 {class="mt-1"}
 满屏报红先别关。把报错滚到最后，找 Caused by 开头的那几行：那才是病根，上面一大片多是“被吓到的下游”。十有八九是网络：依赖下载超时，配镜像或代理后重试。剩下的情况，把那几行原文丢给搜索引擎或 AI，命中率高得惊人。
@@ -105,12 +105,12 @@ kind: chapter
 ```
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val type: String,        // "income" 收入 | "expense" 支出
-    val amount: Double,      // 金额（元）
-    val category: String,    // 分类：餐饮、交通、工资……
-    val note: String = "",   // 备注（可选）
-    val date: String         // "2026-08-15"
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val type: String, // "income" 收入 | "expense" 支出
+ val amount: Double, // 金额（元）
+ val category: String, // 分类：餐饮、交通、工资……
+ val note: String = "", // 备注（可选）
+ val date: String // "2026-08-15"
 )
 ```
 :::
@@ -129,20 +129,20 @@ Dao 里加两条“统计用”的查询——这是记账本的灵魂：
 ```
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
-    fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
+ @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+ fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
-    suspend fun monthIncome(month: String): Double   // month 形如 "2026-08"
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+ suspend fun monthIncome(month: String): Double // month 形如 "2026-08"
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
-    suspend fun monthExpense(month: String): Double
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+ suspend fun monthExpense(month: String): Double
 }
 ```
 :::
@@ -155,7 +155,7 @@ interface RecordDao {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：金额为什么用 Double？
+小贴士：金额为什么用 Double？
 
 {class="mt-1"}
 严谨的金融 App 会用 BigDecimal 或“以分为单位的 Int”来避免浮点误差（0.1+0.2≠0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成“分”为单位，这是无数前辈踩出来的坑。无论用哪种，展示层都统一格式化（比如保留两位小数），界面才像个正经记账工具。
@@ -175,21 +175,21 @@ interface RecordDao {
 ```
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 
-    companion object {
-        @Volatile
-        private var INSTANCE: AppDatabase? = null
+ companion object {
+ @Volatile
+ private var INSTANCE: AppDatabase? = null
 
-        fun get(context: Context): AppDatabase =
-            INSTANCE ?: synchronized(this) {
-                INSTANCE ?: Room.databaseBuilder(
-                    context.applicationContext,   // 一定要用 applicationContext
-                    AppDatabase::class.java,
-                    "records.db"
-                ).build().also { INSTANCE = it }
-            }
-    }
+ fun get(context: Context): AppDatabase =
+ INSTANCE ?: synchronized(this) {
+ INSTANCE ?: Room.databaseBuilder(
+ context.applicationContext, // 一定要用 applicationContext
+ AppDatabase::class.java,
+ "records.db"
+ ).build().also { INSTANCE = it }
+ }
+ }
 }
 ```
 :::
@@ -206,7 +206,7 @@ abstract class AppDatabase : RoomDatabase() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View（Compose 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel（状态与逻辑）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model（Room 数据层）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View（Compose 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel（状态与逻辑）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model（Room 数据层）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -223,21 +223,21 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 
-    // 把 Flow 转成界面能观察的状态
-    val records = dao.getAll()
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+ // 把 Flow 转成界面能观察的状态
+ val records = dao.getAll()
+ .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    // 用户操作：调用 suspend 函数
-    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
-        viewModelScope.launch {
-            dao.insert(Record(type = type, amount = amount,
-                category = category, note = note, date = date))
-        }
-    }
+ // 用户操作：调用 suspend 函数
+ fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+ viewModelScope.launch {
+ dao.insert(Record(type = type, amount = amount,
+ category = category, note = note, date = date))
+ }
+ }
 
-    fun deleteRecord(record: Record) {
-        viewModelScope.launch { dao.delete(record) }
-    }
+ fun deleteRecord(record: Record) {
+ viewModelScope.launch { dao.delete(record) }
+ }
 }
 ```
 :::
@@ -266,15 +266,15 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 class RecordViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val dao = AppDatabase.get(app).recordDao()
+ private val dao = AppDatabase.get(app).recordDao()
 
-    // 界面持续观察的状态
-    val records = dao.getAll()
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+ // 界面持续观察的状态
+ val records = dao.getAll()
+ .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
-        viewModelScope.launch { dao.insert(Record(type, amount, category, note, date)) }
-    }
+ fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+ viewModelScope.launch { dao.insert(Record(type, amount, category, note, date)) }
+ }
 }
 ```
 :::
@@ -290,9 +290,9 @@ AndroidViewModel 是“需要一个 Application 上下文的 ViewModel”的现�
 
 ```
 data class RecordUiState(
-    val monthRecords: List&lt;Record&gt; = emptyList(),
-    val month: String = LocalDate.now().toString().take(7),  // "2026-08"
-    val showAddDialog: Boolean = false
+ val monthRecords: List&lt;Record&gt; = emptyList(),
+ val month: String = LocalDate.now().toString().take(7), // "2026-08"
+ val showAddDialog: Boolean = false
 )
 ```
 :::
@@ -313,34 +313,34 @@ data class RecordUiState(
 ```
 @Composable
 fun RecordListScreen(vm: RecordViewModel) {
-    val records by vm.records.collectAsState()
+ val records by vm.records.collectAsState()
 
-    Column {
-        // 顶部汇总卡片（收入-支出=结余）
-        SummaryCard(records)
+ Column {
+ // 顶部汇总卡片（收入-支出=结余）
+ SummaryCard(records)
 
-        // 流水列表
-        LazyColumn {
-            items(records, key = { it.id }) { record -&gt;
-                RecordRow(record) { vm.deleteRecord(record) }
-            }
-        }
+ // 流水列表
+ LazyColumn {
+ items(records, key = { it.id }) { record -&gt;
+ RecordRow(record) { vm.deleteRecord(record) }
+ }
+ }
 
-        // 悬浮“记一笔”按钮 → 弹录入对话框
-        FloatingActionButton(onClick = { showAddDialog = true }) {
-            Text("+")
-        }
-    }
+ // 悬浮“记一笔”按钮 → 弹录入对话框
+ FloatingActionButton(onClick = { showAddDialog = true }) {
+ Text("+")
+ }
+ }
 }
 
 @Composable
 fun RecordRow(record: Record, onDelete: () -&gt; Unit) {
-    Row(Modifier.fillMaxWidth().padding(12.dp)) {
-        Text(record.category, fontWeight = FontWeight.Bold)
-        Spacer(Modifier.weight(1f))
-        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
-             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
-    }
+ Row(Modifier.fillMaxWidth().padding(12.dp)) {
+ Text(record.category, fontWeight = FontWeight.Bold)
+ Spacer(Modifier.weight(1f))
+ Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+ color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+ }
 }
 ```
 :::
@@ -361,33 +361,33 @@ RecordRow 的排版也有讲究：Row 里放 <code class="inline">Spacer(Modifie
 ```
 @Composable
 fun AddRecordDialog(vm: RecordViewModel, onDismiss: () -&gt; Unit) {
-    var type by remember { mutableStateOf("expense") }
-    var amountText by remember { mutableStateOf("") }
-    var category by remember { mutableStateOf("餐饮") }
-    var note by remember { mutableStateOf("") }
+ var type by remember { mutableStateOf("expense") }
+ var amountText by remember { mutableStateOf("") }
+ var category by remember { mutableStateOf("餐饮") }
+ var note by remember { mutableStateOf("") }
 
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text("记一笔") },
-        text = {
-            Column {
-                Row { /* 两个“收入 / 支出”切换芯片，点谁 type 变成谁的值 */ }
-                OutlinedTextField(value = amountText, onValueChange = { amountText = it },
-                                  label = { Text("金额") })
-                Row { /* 分类下拉：餐饮、交通、购物、娱乐、其他 */ }
-                OutlinedTextField(value = note, onValueChange = { note = it },
-                                  label = { Text("备注（可不填）") })
-            }
-        },
-        confirmButton = {
-            TextButton(onClick = {
-                val amount = amountText.trim().toDoubleOrNull() ?: return@TextButton
-                vm.addRecord(type, amount, category, note.trim(), LocalDate.now().toString())
-                onDismiss()
-            }) { Text("确定") }
-        },
-        dismissButton = { TextButton(onClick = onDismiss) { Text("取消") } }
-    )
+ AlertDialog(
+ onDismissRequest = onDismiss,
+ title = { Text("记一笔") },
+ text = {
+ Column {
+ Row { /* 两个“收入 / 支出”切换芯片，点谁 type 变成谁的值 */ }
+ OutlinedTextField(value = amountText, onValueChange = { amountText = it },
+ label = { Text("金额") })
+ Row { /* 分类下拉：餐饮、交通、购物、娱乐、其他 */ }
+ OutlinedTextField(value = note, onValueChange = { note = it },
+ label = { Text("备注（可不填）") })
+ }
+ },
+ confirmButton = {
+ TextButton(onClick = {
+ val amount = amountText.trim().toDoubleOrNull() ?: return@TextButton
+ vm.addRecord(type, amount, category, note.trim(), LocalDate.now().toString())
+ onDismiss()
+ }) { Text("确定") }
+ },
+ dismissButton = { TextButton(onClick = onDismiss) { Text("取消") } }
+ )
 }
 ```
 :::
@@ -398,7 +398,7 @@ fun AddRecordDialog(vm: RecordViewModel, onDismiss: () -&gt; Unit) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：输入校验别偷懒
+注意：输入校验别偷懒
 
 {class="mt-1"}
 金额输入框一定要校验：空值、负数、"abc"这类非法输入都要拦住（用 <code class="inline">toDoubleOrNull()</code> 判断）。App 崩掉最常见的原因之一就是“把用户的输入当成了乖孩子”。记住：<strong>用户输入的一切，都要当敌人审查</strong>。
@@ -416,12 +416,12 @@ fun AddRecordDialog(vm: RecordViewModel, onDismiss: () -&gt; Unit) {
 ```
 // 返回 null 表示合法，否则返回错误提示文案
 fun validateAmount(input: String): String? {
-    val text = input.trim()
-    if (text.isEmpty()) return "金额不能为空"
-    val value = text.toDoubleOrNull() ?: return "金额得是数字，比如 12.5"
-    if (value &lt;= 0) return "金额要大于 0"
-    if (value &gt; 99_999_999) return "金额太大了，检查一下是不是多按了个零"
-    return null
+ val text = input.trim()
+ if (text.isEmpty()) return "金额不能为空"
+ val value = text.toDoubleOrNull() ?: return "金额得是数字，比如 12.5"
+ if (value &lt;= 0) return "金额要大于 0"
+ if (value &gt; 99_999_999) return "金额太大了，检查一下是不是多按了个零"
+ return null
 }
 ```
 :::
@@ -475,30 +475,30 @@ suspend fun deleteById(id: Long)
 // 列表项：长按弹菜单（combinedClickable 是实验性 API，按编译器提示加 @OptIn）
 @Composable
 fun RecordRow(record: Record, onEdit: (Record) -&gt; Unit, onDelete: (Record) -&gt; Unit) {
-    var menuOpen by remember { mutableStateOf(false) }
-    Box(Modifier.combinedClickable(onLongClick = { menuOpen = true },
-                                   onClick = { onEdit(record) })) {
-        Row(Modifier.fillMaxWidth().padding(12.dp)) { /* 原有那行布局照旧 */ }
-        DropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
-            DropdownMenuItem(text = { Text("编辑") }, onClick = { onEdit(record); menuOpen = false })
-            DropdownMenuItem(text = { Text("删除") }, onClick = { onDelete(record); menuOpen = false })
-        }
-    }
+ var menuOpen by remember { mutableStateOf(false) }
+ Box(Modifier.combinedClickable(onLongClick = { menuOpen = true },
+ onClick = { onEdit(record) })) {
+ Row(Modifier.fillMaxWidth().padding(12.dp)) { /* 原有那行布局照旧 */ }
+ DropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
+ DropdownMenuItem(text = { Text("编辑") }, onClick = { onEdit(record); menuOpen = false })
+ DropdownMenuItem(text = { Text("删除") }, onClick = { onDelete(record); menuOpen = false })
+ }
+ }
 }
 
 // 删除前确认：pendingDelete 不为 null 时弹框
 if (pendingDelete != null) {
-    AlertDialog(
-        onDismissRequest = { pendingDelete = null },
-        title = { Text("删除这笔账？") },
-        text = { Text("删了就找不回来了。") },
-        confirmButton = {
-            TextButton(onClick = { pendingDelete?.let(vm::deleteRecord); pendingDelete = null }) {
-                Text("删除", color = MaterialTheme.colorScheme.error)
-            }
-        },
-        dismissButton = { TextButton(onClick = { pendingDelete = null }) { Text("手滑了") } }
-    )
+ AlertDialog(
+ onDismissRequest = { pendingDelete = null },
+ title = { Text("删除这笔账？") },
+ text = { Text("删了就找不回来了。") },
+ confirmButton = {
+ TextButton(onClick = { pendingDelete?.let(vm::deleteRecord); pendingDelete = null }) {
+ Text("删除", color = MaterialTheme.colorScheme.error)
+ }
+ },
+ dismissButton = { TextButton(onClick = { pendingDelete = null }) { Text("手滑了") } }
+ )
 }
 ```
 :::
@@ -529,7 +529,7 @@ val month: StateFlow&lt;String&gt; = _month.asStateFlow()
 
 // 当前月份的流水：记录或月份任一变化，就重新算一遍
 val monthRecords = combine(records, month) { list, m -&gt;
-    list.filter { it.date.startsWith(m) }
+ list.filter { it.date.startsWith(m) }
 }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
 fun switchMonth(m: String) { _month.value = m }
@@ -555,18 +555,18 @@ combine 的意思是“两条水管任何一条来水，就重新算一遍”：
 val monthList by vm.monthRecords.collectAsState()
 val month by vm.month.collectAsState()
 
-val income  = remember(monthList) { monthList.filter { it.type == "income"  }.sumOf { it.amount } }
+val income = remember(monthList) { monthList.filter { it.type == "income" }.sumOf { it.amount } }
 val expense = remember(monthList) { monthList.filter { it.type == "expense" }.sumOf { it.amount } }
 val balance = income - expense
 
 // 卡片：本月收入 / 本月支出 / 结余 三列；结余为负时换个警示色
 // 卡片下面一排月份 Chip：
 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-    recentMonths().forEach { m -&gt;
-        FilterChip(selected = m == month,
-                   onClick = { vm.switchMonth(m) },
-                   label = { Text(m) })
-    }
+ recentMonths().forEach { m -&gt;
+ FilterChip(selected = m == month,
+ onClick = { vm.switchMonth(m) },
+ label = { Text(m) })
+ }
 }
 ```
 :::
@@ -589,9 +589,9 @@ remember(monthList) 的意思是“列表没变就不重算”，界面重组再
 ```
 @Composable
 fun rememberBizColors(): Pair&lt;Color, Color&gt; {
-    val dark = isSystemInDarkTheme()
-    return if (dark) Color(0xFF7BD3A2) to Color(0xFFE58A8A)   // 深色：更亮、更柔
-           else Color(0xFF1E8E5A) to Color(0xFFC0392B)        // 浅色
+ val dark = isSystemInDarkTheme()
+ return if (dark) Color(0xFF7BD3A2) to Color(0xFFE58A8A) // 深色：更亮、更柔
+ else Color(0xFF1E8E5A) to Color(0xFFC0392B) // 浅色
 }
 ```
 :::
@@ -626,12 +626,12 @@ fun rememberBizColors(): Pair&lt;Color, Color&gt; {
 ```
 @Entity(tableName = "records", indices = [Index("date")])
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val type: String,
-    val amount: Double,
-    val category: String,
-    val note: String = "",
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val type: String,
+ val amount: Double,
+ val category: String,
+ val note: String = "",
+ val date: String
 )
 ```
 :::
@@ -702,8 +702,8 @@ data class Record(
 data class CategoryTotal(val category: String, val total: Double)
 
 @Query("SELECT category, SUM(amount) AS total FROM records " +
-       "WHERE type='expense' AND date LIKE :month || '%' " +
-       "GROUP BY category ORDER BY total DESC")
+ "WHERE type='expense' AND date LIKE :month || '%' " +
+ "GROUP BY category ORDER BY total DESC")
 suspend fun categoryTotals(month: String): List&lt;CategoryTotal&gt;
 ```
 :::
@@ -718,17 +718,17 @@ GROUP BY category 把同分类的账归堆，SUM 求和，ORDER BY 排出“花�
 ```
 val maxTotal = totals.maxOfOrNull { it.total } ?: return
 totals.forEach { t -&gt;
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Text(t.category, Modifier.width(56.dp))
-        Box(
-            Modifier
-                .fillMaxWidth(t.total / maxTotal)   // 占比决定宽度
-                .height(16.dp)
-                .background(incomeColor, RoundedCornerShape(4.dp))
-        )
-        Spacer(Modifier.width(8.dp))
-        Text(formatMoney(t.total))
-    }
+ Row(verticalAlignment = Alignment.CenterVertically) {
+ Text(t.category, Modifier.width(56.dp))
+ Box(
+ Modifier
+ .fillMaxWidth(t.total / maxTotal) // 占比决定宽度
+ .height(16.dp)
+ .background(incomeColor, RoundedCornerShape(4.dp))
+ )
+ Spacer(Modifier.width(8.dp))
+ Text(formatMoney(t.total))
+ }
 }
 ```
 :::
@@ -746,18 +746,18 @@ fillMaxWidth(fraction) 接受 0 到 1 的小数，正好拿来画占比。不需
 
 ```
 fun exportCsv(records: List&lt;Record&gt;): String = buildString {
-    appendLine("type,amount,category,note,date")
-    records.forEach { r -&gt;
-        appendLine(
-            listOf(
-                r.type,
-                formatMoney(r.amount),
-                escapeCsv(r.category),
-                escapeCsv(r.note),
-                r.date
-            ).joinToString(",")
-        )
-    }
+ appendLine("type,amount,category,note,date")
+ records.forEach { r -&gt;
+ appendLine(
+ listOf(
+ r.type,
+ formatMoney(r.amount),
+ escapeCsv(r.category),
+ escapeCsv(r.note),
+ r.date
+ ).joinToString(",")
+ )
+ }
 }
 
 // CSV 约定：字符串字段用引号包住，内部引号翻倍转义
@@ -779,20 +779,20 @@ fun escapeCsv(s: String): String = "\"${s.replace("\"", "\"\"")}\""
 ```
 @Composable
 fun CategoryPie(totals: List&lt;CategoryTotal&gt;, colorFor: (String) -&gt; Color) {
-    val grand = totals.sumOf { it.total }.takeIf { it &gt; 0 } ?: return
-    Canvas(Modifier.size(160.dp)) {
-        var start = -90f                       // 从正上方开始扫
-        totals.forEach { t -&gt;
-            val sweep = (t.total / grand * 360.0).toFloat()
-            drawArc(
-                color = colorFor(t.category),
-                startAngle = start,
-                sweepAngle = sweep,
-                useCenter = true
-            )
-            start += sweep
-        }
-    }
+ val grand = totals.sumOf { it.total }.takeIf { it &gt; 0 } ?: return
+ Canvas(Modifier.size(160.dp)) {
+ var start = -90f // 从正上方开始扫
+ totals.forEach { t -&gt;
+ val sweep = (t.total / grand * 360.0).toFloat()
+ drawArc(
+ color = colorFor(t.category),
+ startAngle = start,
+ sweepAngle = sweep,
+ useCenter = true
+ )
+ start += sweep
+ }
+ }
 }
 ```
 :::
@@ -861,18 +861,18 @@ fun CategoryPie(totals: List&lt;CategoryTotal&gt;, colorFor: (String) -&gt; Colo
 ```
 class RecordRepository(private val dao: RecordDao) {
 
-    fun getAll(): Flow&lt;List&lt;Record&gt;&gt; = dao.getAll()
+ fun getAll(): Flow&lt;List&lt;Record&gt;&gt; = dao.getAll()
 
-    fun observeMonth(month: String): Flow&lt;List&lt;Record&gt;&gt; =
-        dao.recordsOfMonth(month)   // Dao 里补一条按月查询
+ fun observeMonth(month: String): Flow&lt;List&lt;Record&gt;&gt; =
+ dao.recordsOfMonth(month) // Dao 里补一条按月查询
 
-    suspend fun add(record: Record) = dao.insert(record)
+ suspend fun add(record: Record) = dao.insert(record)
 
-    suspend fun remove(record: Record) = dao.delete(record)
+ suspend fun remove(record: Record) = dao.delete(record)
 
-    suspend fun monthIncome(month: String) = dao.monthIncome(month)
+ suspend fun monthIncome(month: String) = dao.monthIncome(month)
 
-    suspend fun monthExpense(month: String) = dao.monthExpense(month)
+ suspend fun monthExpense(month: String) = dao.monthExpense(month)
 }
 ```
 :::
@@ -895,31 +895,31 @@ class RecordRepository(private val dao: RecordDao) {
 ```
 class RecordDaoTest {
 
-    private lateinit var db: AppDatabase
-    private lateinit var dao: RecordDao
+ private lateinit var db: AppDatabase
+ private lateinit var dao: RecordDao
 
-    @Before fun setUp() {
-        val context = ApplicationProvider.getApplicationContext&lt;Context&gt;()
-        db = Room.inMemoryDatabaseBuilder(context, AppDatabase::class.java)
-            .allowMainThreadQueries()   // 测试里图省事，允许主线程访问
-            .build()
-        dao = db.recordDao()
-    }
+ @Before fun setUp() {
+ val context = ApplicationProvider.getApplicationContext&lt;Context&gt;()
+ db = Room.inMemoryDatabaseBuilder(context, AppDatabase::class.java)
+ .allowMainThreadQueries() // 测试里图省事，允许主线程访问
+ .build()
+ dao = db.recordDao()
+ }
 
-    @After fun tearDown() { db.close() }
+ @After fun tearDown() { db.close() }
 
-    @Test fun insertThenCount() = runTest {
-        dao.insert(Record(type = "expense", amount = 25.0,
-                          category = "餐饮", date = "2026-08-15"))
-        assertEquals(1, dao.getAll().first().size)
-    }
+ @Test fun insertThenCount() = runTest {
+ dao.insert(Record(type = "expense", amount = 25.0,
+ category = "餐饮", date = "2026-08-15"))
+ assertEquals(1, dao.getAll().first().size)
+ }
 
-    @Test fun deleteThenEmpty() = runTest {
-        dao.insert(Record(type = "income", amount = 100.0,
-                          category = "工资", date = "2026-08-01"))
-        dao.delete(dao.getAll().first().first())
-        assertEquals(0, dao.getAll().first().size)
-    }
+ @Test fun deleteThenEmpty() = runTest {
+ dao.insert(Record(type = "income", amount = 100.0,
+ category = "工资", date = "2026-08-01"))
+ dao.delete(dao.getAll().first().first())
+ assertEquals(0, dao.getAll().first().size)
+ }
 }
 ```
 :::
@@ -950,7 +950,7 @@ class RecordDaoTest {
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 小项目的价值不在功能多，在分层清楚。分层练熟了，后面天气项目加网络只是多接一层。
@@ -958,7 +958,7 @@ class RecordDaoTest {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：本周完成它
+来动手：本周完成它
 
 {class="mt-1"}
 按“数据层、ViewModel、列表页、录入页、汇总卡片”的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清“期望行为、实际行为、复现步骤”）。完成后用它记一周账，自己做的 App 用起来，成就感会推着你继续往前走。
@@ -966,7 +966,7 @@ class RecordDaoTest {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 需求五要素 → 拆成“每步能用”的小步骤，再动手
 - 数据层：Record 实体 + Dao（含月份统计 SQL）+ Database

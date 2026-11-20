@@ -76,12 +76,12 @@ Eine leichte Ausgaben-App: Einnahmen und Ausgaben erfassen, kategorisieren, Mona
 - Build: Vite
 ## Datenmodell
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## Entwicklungsplan
 Step 1: Grundfunktionen Buchungen (CRUD)

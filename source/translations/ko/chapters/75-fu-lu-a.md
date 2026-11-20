@@ -13,10 +13,10 @@ kind: appendix
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>외관 확인</strong>: 기기 본체, 화면에 스크래치, 찌그러짐이 있는지 점검.</li>
-                        <strong>정보 대조</strong>: 상자 위의 IMEI/시리얼 번호와 영수증 위의 것이 일치하는지 확인.
-                        <li><strong>기능 테스트</strong>: 전화를 걸어 이어피스와 마이크를 테스트, 사진을 찍어 카메라 점검.</li>
-                    </ul>
+ <li><strong>외관 확인</strong>: 기기 본체, 화면에 스크래치, 찌그러짐이 있는지 점검.</li>
+ <strong>정보 대조</strong>: 상자 위의 IMEI/시리얼 번호와 영수증 위의 것이 일치하는지 확인.
+ <li><strong>기능 테스트</strong>: 전화를 걸어 이어피스와 마이크를 테스트, 사진을 찍어 카메라 점검.</li>
+ </ul>
 ```
 
 #### 2. 활성화 및 초기 설정 "핵심 리마인더":

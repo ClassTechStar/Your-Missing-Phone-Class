@@ -95,7 +95,7 @@ Tasker乃安卓平臺上公認最強之自動化工具，常年霸榜。實話�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小貼士：自動化入門之正確姿勢
+小貼士：自動化入門之正確姿勢
 
 {class="mt-1"}
 先費5分鐘思之：君每日於手機上重複最多之3件事爲何？譬如每日晨之例行操作、每次連藍牙耳機後之習慣、每次出門前之設置……自此等高頻小事入手，各做一簡單之自動化。哪怕每個自動化只省君5秒鐘，日積月累亦可觀。且做出後之滿足感，真會上癮。
@@ -103,7 +103,7 @@ Tasker乃安卓平臺上公認最強之自動化工具，常年霸榜。實話�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>練一練：三個入門自動化挑戰
+練一練：三個入門自動化挑戰
 
 {class="mt-1 mb-2"}
 選一個最適合君者完成，做完君即入門矣：
@@ -116,7 +116,7 @@ Tasker乃安卓平臺上公認最強之自動化工具，常年霸榜。實話�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例 3：自動化"早安流程"
+案例 3：自動化"早安流程"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>場景</strong>：每日 7:00 自動播報天氣 + 關閉靜音 + 打開新聞。

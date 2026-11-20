@@ -36,35 +36,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المنظومة</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المزايا</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">العيوب</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الفئة المستهدفة</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أقوى خصوصية (معالجة محلية)، وتكامل سلس مع iPhone/Siri/الاختصارات</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أجهزة أقل وأغلى، وتحتاج إلى HomePod أو Apple TV كمركز</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستخدمو أجهزة Apple في المنزل، المهتمون بالخصوصية والتجربة</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أغنى أجهزة وأفضل قيمة، وXiao Ai مفيد</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منظومة نسبية مغلقة، وبيانات تُرفع إلى السحابة، وإعلانات أكثر</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المبتدئون بميزانية محدودة الراغبون في تجهيز المنزل بالكامل</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HarmonyOS Connect</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تكامل سلس مع هواتف/أجهزة HarmonyOS، وعدد الأجهزة ينمو بسرعة</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">دعم محدود للأجهزة في الخارج، والمنظومة لا تزال تلاحق</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستخدمو هواتف Huawei، المهتمون بـ«الأجهزة الفائقة» وتعاون الأجهزة</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المنظومة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المزايا</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">العيوب</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الفئة المستهدفة</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أقوى خصوصية (معالجة محلية)، وتكامل سلس مع iPhone/Siri/الاختصارات</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أجهزة أقل وأغلى، وتحتاج إلى HomePod أو Apple TV كمركز</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستخدمو أجهزة Apple في المنزل، المهتمون بالخصوصية والتجربة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أغنى أجهزة وأفضل قيمة، وXiao Ai مفيد</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منظومة نسبية مغلقة، وبيانات تُرفع إلى السحابة، وإعلانات أكثر</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المبتدئون بميزانية محدودة الراغبون في تجهيز المنزل بالكامل</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HarmonyOS Connect</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تكامل سلس مع هواتف/أجهزة HarmonyOS، وعدد الأجهزة ينمو بسرعة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">دعم محدود للأجهزة في الخارج، والمنظومة لا تزال تلاحق</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستخدمو هواتف Huawei، المهتمون بـ«الأجهزة الفائقة» وتعاون الأجهزة</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

@@ -42,7 +42,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識
+小知識
 
 {class="mt-1"}
 衞星通信需要手機有特殊嘅硬件天線，唔係所有手機都支援。另外，衞星通信通常需要付費訂閲服務，但緊急求救功能一般係免費嘅。
@@ -115,7 +115,7 @@ kind: chapter
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>技術展望
+技術展望
 
 {class="mt-1"}
 星閃技術代表咗無線通信嘅未來方向。隨住更多廠商加入，我哋可能會見到更多支援星閃嘅設備，享受更好嘅無線體驗。
@@ -123,7 +123,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>去檢查一下：你嘅手機係咪支援呢啲功能
+去檢查一下：你嘅手機係咪支援呢啲功能
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 去設定入面搜尋「衞星」，睇下有冇衞星通信相關選項。

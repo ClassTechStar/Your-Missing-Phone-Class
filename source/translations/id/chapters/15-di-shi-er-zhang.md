@@ -61,7 +61,7 @@ Mode Game/Ruang Game
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Unduh 3 album atau daftar putar favoritmu di aplikasi musik, pastikan bisa didengarkan offline.
+Unduh 3 album atau daftar putar favoritmu di aplikasi musik, pastikan bisa didengarkan offline.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Langganan 3 saluran yang menarik di Xiaoyuzhou atau Apple Podcast, unduh satu episode untuk dicoba.

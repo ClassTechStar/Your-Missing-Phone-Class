@@ -163,9 +163,9 @@ kind: appendix
 - 扩充无障碍章节（旁白/TalkBack 完整操作、放大与色彩滤镜、AI 图像描述、实时字幕、RTT/TTY 通话双通道）。
 - 用"角色-背景-任务-限制"思路重写提示词框架，附 3 个完整场景案例。
 - <strong>新增三篇技术进阶附录</strong>：
-  - 第一章附：<strong>安卓手机内存拓展解析</strong>（本质定义、zRAM/swap 原理、速度瓶颈、适用场景边界、各厂商命名与开启方式）。
-  - 第二十章附：<strong>Termux，Android 设备上的便携式 Linux 终端环境</strong>（核心功能、插件生态、安装配置、移动开发/服务器运维/安全测试等典型场景）。
-  - 第二十三章附：<strong>GitHub 入门指南：从代码托管到协作平台</strong>（Git vs GitHub 区分、核心概念、注册上手、Pull Request 协作流、安全提醒、国内访问方案）。
+ - 第一章附：<strong>安卓手机内存拓展解析</strong>（本质定义、zRAM/swap 原理、速度瓶颈、适用场景边界、各厂商命名与开启方式）。
+ - 第二十章附：<strong>Termux，Android 设备上的便携式 Linux 终端环境</strong>（核心功能、插件生态、安装配置、移动开发/服务器运维/安全测试等典型场景）。
+ - 第二十三章附：<strong>GitHub 入门指南：从代码托管到协作平台</strong>（Git vs GitHub 区分、核心概念、注册上手、Pull Request 协作流、安全提醒、国内访问方案）。
 
 这一版还立了一条往后一直沿用的规矩：<strong>正文讲怎么用，附节讲为什么</strong>。内存拓展、Termux、GitHub 入门这三篇附节都是这个结构：想深挖的读者进去看原理，不想被打扰的读者在正文里几乎感知不到它们的存在。你此刻读到的"第二十章附""第二十三章附"，就是那时候长出来的。
 
@@ -347,7 +347,7 @@ kind: appendix
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 版本史不是炫耀工作量，它是这本书"说到做到"的凭证。
@@ -423,7 +423,7 @@ AI 相关的内容也交代一句：书里涉及 AI 生成内容的地方按平�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 一本书的可信度，不靠"保证没错"，靠"错了能被指出、指出了能改对"。
@@ -469,7 +469,7 @@ AI 相关的内容也交代一句：书里涉及 AI 生成内容的地方按平�
 三年前是对的，现在可能就不对了。所以这一版做了三件事：
 
 1. 每章开头加**版本锚点**：本章路径按 iOS 18.x / HarmonyOS 5.x / Android 15 核对，
-   什么时候核对的、你的机型不一样怎么办，都写明。
+ 什么时候核对的、你的机型不一样怎么办，都写明。
 2. 路径登记进 **`path_db.json`**（本书的单一真源），正文里的路径可以逐条查、逐条巡检。
 3. 你报路径错，**改的是路径库**，不是把正文换个说法了事。
 
@@ -496,7 +496,7 @@ AI 相关的内容也交代一句：书里涉及 AI 生成内容的地方按平�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>为什么选择写出来
+为什么选择写出来
 
 藏着一件不难，读者迟早会发现——仓库是公开的，管线是公开的。
 写出来不难，因为这句话本身就在说清楚一件更重要的事：
@@ -599,7 +599,7 @@ AI 相关的内容也交代一句：书里涉及 AI 生成内容的地方按平�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 本节是"人话解读"，帮你看懂大意；真正的权利义务以 Creative Commons 官方文本为准（creativecommons.org/licenses/by-nc-sa/4.0/），有中英文全文。拿去做出版、发行这类大事之前，请先读原文，必要时咨询专业意见。
@@ -716,7 +716,7 @@ AI 相关的内容也交代一句：书里涉及 AI 生成内容的地方按平�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 提 Issue 之前先搜一遍已有的：你想报的问题可能已经有人报过，在那条下面补充一句"我也遇到了，我的机型是……"，比新开一条更有用。
@@ -870,7 +870,7 @@ AI 相关的内容也交代一句：书里涉及 AI 生成内容的地方按平�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 开源书的价值不只在于免费，在于它可以被指出错、被改对、被继续接着写。
@@ -884,7 +884,7 @@ AI 相关的内容也交代一句：书里涉及 AI 生成内容的地方按平�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 本书理念源自两门"缺失"的课（《你缺失的那门计算机课》与 MIT Missing Semester，入口在附录D），写给普通人；读法看第零章的暗号说明，检索用附录G的速查索引，系统学跟首页的学习路径。
 - 版本演进主线：v1.6 补资产与安全、立下"正文讲怎么用、附节讲为什么"的规矩；接着 v1.7 按场景横向扩容（第27-32章）并新增朗读功能与学习仪表盘；再是 v1.8 收编三本书长出第七至九篇（第37-69章）；随后 v1.9 补鸿蒙篇与五组生活场景篇至 15 篇 105 章；2026 年 11 月深编逐章加固 120 个内容区块。逐项记录在附录H。

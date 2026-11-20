@@ -56,7 +56,7 @@ Downloading apps from webpages or unknown links may bundle viruses, steal privac
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>What are "electronic parasites"?
+What are "electronic parasites"?
 
 {class="mt-1"}
 This refers to <strong>.</strong>—you think you "saved money," but actually "got infected." Common forms:
@@ -96,20 +96,20 @@ Apps requesting permissions (like contacts, location) is sometimes reasonable (m
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Permission options</strong>: "Always allow," "Only while using the app," "Deny," "Ask every time."</li>
-                        <li><strong>Management principles</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Minimization: Don't grant unless necessary.</li>
-                                <li>Post-audit: Regularly check permission settings to see who's "overstepping."</li>
-                                <li>Context-based: Like ride-hailing apps, only grant location permission while in use.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Permission options</strong>: "Always allow," "Only while using the app," "Deny," "Ask every time."</li>
+ <li><strong>Management principles</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Minimization: Don't grant unless necessary.</li>
+ <li>Post-audit: Regularly check permission settings to see who's "overstepping."</li>
+ <li>Context-based: Like ride-hailing apps, only grant location permission while in use.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Key Permissions to Watch
+Key Permissions to Watch
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Contacts/SMS: May be used to send spam messages.
@@ -152,16 +152,16 @@ Why are apps downloaded from official stores safer? Signature verification is ke
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Android signing</strong>: Developers sign APKs with private keys, and the system verifies with public keys during installation. If an APK is tampered with (e.g., implanted with a virus), the signature becomes invalid and the system refuses to install. Google Play also requires App Signing, where Google holds the signing key, further protecting app security.</li>
-                        <li><strong>iOS signing</strong>: Apple's review is stricter. Every IPA must be signed with a certificate issued by Apple, otherwise it cannot be installed. This is why iOS can only install apps from the App Store or enterprise certificates. Apps signed with enterprise certificates have limited validity and Apple can revoke them at any time.</li>
-                        <li><strong>Role of signatures</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Verify origin: Confirm the app indeed comes from the claimed developer.</li>
-                                <li>Verify integrity: Ensure the app wasn't tampered with during transmission.</li>
-                                <li>Prevent impersonation: A malicious app cannot disguise itself as another app.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Android signing</strong>: Developers sign APKs with private keys, and the system verifies with public keys during installation. If an APK is tampered with (e.g., implanted with a virus), the signature becomes invalid and the system refuses to install. Google Play also requires App Signing, where Google holds the signing key, further protecting app security.</li>
+ <li><strong>iOS signing</strong>: Apple's review is stricter. Every IPA must be signed with a certificate issued by Apple, otherwise it cannot be installed. This is why iOS can only install apps from the App Store or enterprise certificates. Apps signed with enterprise certificates have limited validity and Apple can revoke them at any time.</li>
+ <li><strong>Role of signatures</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Verify origin: Confirm the app indeed comes from the claimed developer.</li>
+ <li>Verify integrity: Ensure the app wasn't tampered with during transmission.</li>
+ <li>Prevent impersonation: A malicious app cannot disguise itself as another app.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. Installation Package Size and Optimization
@@ -180,7 +180,7 @@ Modern app optimization methods:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Trivia: Why are some app installation packages so large?
+Trivia: Why are some app installation packages so large?
 
 {class="mt-1"}
 Game apps are usually the largest because they contain lots of high-definition textures, 3D models, and audio files. Social apps are also quite large because they need to support various functional modules. Tool apps are usually the smallest. If you find a tool app that's unusually large, be alert to whether it bundles unnecessary features.
@@ -188,7 +188,7 @@ Game apps are usually the largest because they contain lots of high-definition t
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Audit 3 Apps' Permissions
+Hands-On: Audit 3 Apps' Permissions
 
 {class="mt-1"}
 Pick 3 commonly used apps (e.g., social, shopping, tool), go to the app permission management page in [Settings], review each item, and turn off or change unnecessary sensitive permissions to "Only while using the app."

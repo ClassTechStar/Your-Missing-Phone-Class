@@ -54,7 +54,7 @@ kemalangan jalan raya secara tiba-tiba, pinjaman kecemasan, penculikan
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>daya penipuannya sangat tinggi
+daya penipuannya sangat tinggi
 
 {class="mt-1"}
 .<strong>② Penipuan Menyamar Pihak Berkuasa / Khidmat Pelanggan</strong> Teknologi AI boleh mensimulasikan suara dan nada pihak berkuasa rasmi, khidmat pelanggan, dan badan kehakiman dengan tepat, malah boleh mensintesis tangkap layar pemindahan palsu yang sangat realistik. dokumen elektronik rasmi, waran tangkap dan lain-lain dokumen, melalui <strong>mewujudkan ketakutan atau tekanan autoriti</strong>, memperdaya mangsa memindahkan wang atau mengaktifkan perkongsian skrin, lalu mencuri maklumat akaun.
@@ -62,7 +62,7 @@ kemalangan jalan raya secara tiba-tiba, pinjaman kecemasan, penculikan
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>③ Penipuan Pelaburan dan Kewangan AI
+③ Penipuan Pelaburan dan Kewangan AI
 
 {class="mt-1"}
 Melalui algoritma AI memalsukan tangkap layar pulangan "pasti untung", antara muka perisian pemilihan saham kuantitatif maya atau laporan analisis pelaburan "tahap master", dengan pulangan tinggi sebagai umpan, menjual perkhidmatan pelaburan berharga tinggi atau memperdaya mangsa memindahkan dana ke akaun perdagangan yang dikawal,<strong>akhirnya lari dengan duit</strong>.
@@ -70,7 +70,7 @@ Melalui algoritma AI memalsukan tangkap layar pulangan "pasti untung", antara mu
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>2. Kaedah Memecahkan — Pemikiran Perlindungan "Cermin Membongkar Jin"
+2. Kaedah Memecahkan — Pemikiran Perlindungan "Cermin Membongkar Jin"
 
 {class="mt-1"}
 AI boleh mengklon suara dan wajah, tetapi bukan tidak boleh dikalahkan, terdapat beberapa kelemahan yang boleh dimanfaatkan:<strong>Kaedah pengesahan tindakan</strong>:
@@ -127,7 +127,7 @@ Kaedah pengurusan kebenaran asas lihat Bab 4 "Pengurusan Kebenaran". Dalam senar
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Enam, Perlindungan Privasi: Data Anda Adalah Harta Anda
+Enam, Perlindungan Privasi: Data Anda Adalah Harta Anda
 
 {class="mt-1"}
 Foto, rekod sembang, jejak lokasi dalam telefon, pada asasnya adalah "aset digital" anda. Sekiranya bocor, minimum gangguan iklan, maksimum dikesan, ditipu malah diperas.<strong>1. Prinsip "Minimakan" Kebenaran App:</strong>
@@ -170,7 +170,7 @@ Tujuh, Senarai "Pertolongan Cemas" Selepas Kehilangan / Kecurian
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Log masuk ke perbankan dalam talian atau pembayaran di Wi-Fi awam;
+Log masuk ke perbankan dalam talian atau pembayaran di Wi-Fi awam;
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Memberikan "perkongsian skrin" atau "kawalan jarak jauh" kepada orang asing.
@@ -182,7 +182,7 @@ Tujuh, Senarai "Pertolongan Cemas" Selepas Kehilangan / Kecurian
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Bab 7: Analisis Lengkap Fungsi Terkini
+Bab 7: Analisis Lengkap Fungsi Terkini
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Teknologi sentiasa berkembang, fungsi telefon juga sentiasa berevolusi. Komunikasi satelit, komunikasi tanpa rangkaian, pengesanan kemalangan, teknologi SparkLink... fungsi-fungsi yang kedengaran sangat fiksyen sains ini sebenarnya telah memasuki kehidupan kita. Mari kita kenali teknologi terkini ini bersama.

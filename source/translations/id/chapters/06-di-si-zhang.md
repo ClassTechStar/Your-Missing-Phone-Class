@@ -56,7 +56,7 @@ Pemindaian virus
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>Merujuk pada
+Merujuk pada
 
 {class="mt-1"}
 perangkat lunak "versi crack" yang ditanam trojan <strong>— Anda pikir "menghemat uang", sebenarnya "terjebak". Bentuk umum:</strong> Perangkat lunak berbayar "versi crack", "versi gratis", "versi tanpa iklan";
@@ -96,20 +96,20 @@ Opsi izin
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>: "Selalu izinkan", "Izinkan hanya saat digunakan", "Larang", "Tanya setiap kali".</strong> Prinsip pengelolaan</li>
-                        <li><strong>:</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Audit setelahnya: Periksa secara berkala di pengaturan izin siapa yang "melampaui wewenang".</li>
-                                <li>Kontekstual: Seperti aplikasi taksi, berikan izin lokasi hanya saat digunakan.</li>
-                                <li>Izin yang Perlu Diawasi Ketat</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>: "Selalu izinkan", "Izinkan hanya saat digunakan", "Larang", "Tanya setiap kali".</strong> Prinsip pengelolaan</li>
+ <li><strong>:</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Audit setelahnya: Periksa secara berkala di pengaturan izin siapa yang "melampaui wewenang".</li>
+ <li>Kontekstual: Seperti aplikasi taksi, berikan izin lokasi hanya saat digunakan.</li>
+ <li>Izin yang Perlu Diawasi Ketat</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Kontak/SMS: Mungkin digunakan untuk mengirim SMS spam.
+Kontak/SMS: Mungkin digunakan untuk mengirim SMS spam.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Lokasi real-time: Mungkin dilacak pergerakannya.
@@ -152,16 +152,16 @@ Tanda tangan Android
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>: Pengembang menandatangani APK dengan kunci privat, sistem memverifikasi dengan kunci publik saat pemasangan. Jika APK diubah (misalnya ditanam virus), tanda tangan akan tidak valid, sistem akan menolak memasang. Google Play juga mewajibkan App Signing, Google menyimpan kunci tanda tangan, lebih lanjut melindungi keamanan aplikasi.</strong> Tanda tangan iOS</li>
-                        <li><strong>: Peninjauan Apple lebih ketat. Setiap IPA harus ditandatangani sertifikat yang dikeluarkan Apple, jika tidak, tidak dapat dipasang. Inilah sebabnya iOS hanya dapat memasang aplikasi dari App Store atau sertifikat perusahaan. Aplikasi yang ditandatangani sertifikat perusahaan memiliki masa berlaku terbatas, dan Apple dapat mencabutnya kapan saja.</strong> Fungsi tanda tangan</li>
-                        <li><strong>:</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Verifikasi integritas: Memastikan aplikasi tidak diubah selama transmisi.</li>
-                                <li>Mencegah penyamaran: Aplikasi berbahaya tidak dapat menyamar sebagai aplikasi lain.</li>
-                                <li>4. Ukuran Paket Instalasi dan Optimasi</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>: Pengembang menandatangani APK dengan kunci privat, sistem memverifikasi dengan kunci publik saat pemasangan. Jika APK diubah (misalnya ditanam virus), tanda tangan akan tidak valid, sistem akan menolak memasang. Google Play juga mewajibkan App Signing, Google menyimpan kunci tanda tangan, lebih lanjut melindungi keamanan aplikasi.</strong> Tanda tangan iOS</li>
+ <li><strong>: Peninjauan Apple lebih ketat. Setiap IPA harus ditandatangani sertifikat yang dikeluarkan Apple, jika tidak, tidak dapat dipasang. Inilah sebabnya iOS hanya dapat memasang aplikasi dari App Store atau sertifikat perusahaan. Aplikasi yang ditandatangani sertifikat perusahaan memiliki masa berlaku terbatas, dan Apple dapat mencabutnya kapan saja.</strong> Fungsi tanda tangan</li>
+ <li><strong>:</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Verifikasi integritas: Memastikan aplikasi tidak diubah selama transmisi.</li>
+ <li>Mencegah penyamaran: Aplikasi berbahaya tidak dapat menyamar sebagai aplikasi lain.</li>
+ <li>4. Ukuran Paket Instalasi dan Optimasi</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### Anda mungkin menemukan, ukuran aplikasi yang ditampilkan di toko aplikasi berbeda dengan ruang yang digunakan setelah dipasang. Ini karena:
@@ -180,7 +180,7 @@ App Bundle (Android)
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Aplikasi jenis game biasanya paling besar, karena berisi banyak tekstur HD, model 3D, file audio. Aplikasi jenis sosial juga cukup besar, karena harus mendukung berbagai modul fungsi. Aplikasi jenis alat biasanya paling kecil. Jika Anda menemukan aplikasi alat tertentu sangat besar, waspadai apakah dibundel dengan fungsi yang tidak perlu.
+Aplikasi jenis game biasanya paling besar, karena berisi banyak tekstur HD, model 3D, file audio. Aplikasi jenis sosial juga cukup besar, karena harus mendukung berbagai modul fungsi. Aplikasi jenis alat biasanya paling kecil. Jika Anda menemukan aplikasi alat tertentu sangat besar, waspadai apakah dibundel dengan fungsi yang tidak perlu.
 
 {class="mt-1"}
 Praktik: Audit Izin 3 Aplikasi
@@ -188,7 +188,7 @@ Praktik: Audit Izin 3 Aplikasi
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pilih 3 aplikasi yang sering digunakan (seperti sosial, belanja, alat), masuk ke halaman manajemen izin aplikasi di [Pengaturan], audit satu per satu, matikan izin sensitif yang tidak perlu atau ubah menjadi "Izinkan hanya saat digunakan".
+Pilih 3 aplikasi yang sering digunakan (seperti sosial, belanja, alat), masuk ke halaman manajemen izin aplikasi di [Pengaturan], audit satu per satu, matikan izin sensitif yang tidak perlu atau ubah menjadi "Izinkan hanya saat digunakan".
 
 {class="mt-1"}
 Bab 5: Membuat Ponsel Lebih Memahami Anda, Pengaturan Dasar

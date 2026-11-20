@@ -52,7 +52,7 @@ Apple은 무료로 5GB를 주지만, 솔직히 이 5GB는 한 번 백업하기�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: 유료 사용자만 누릴 수 있는 프라이버시 3종 세트
+iCloud+: 유료 사용자만 누릴 수 있는 프라이버시 3종 세트
 
 {class="mt-1"}
 임의 유료 iCloud 등급(50GB/200GB/2TB 등)으로 업그레이드하면 자동으로 <strong>iCloud+</strong> 사용자가 되어, 세 가지 프라이버시 보호 기능이 잠금 해제됩니다:
@@ -70,7 +70,7 @@ Apple은 무료로 5GB를 주지만, 솔직히 이 5GB는 한 번 백업하기�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud 고급 데이터 보호(ADP)——진짜 엔드투엔드 암호화
+iCloud 고급 데이터 보호(ADP)——진짜 엔드투엔드 암호화
 
 {class="mt-1"}
 2022년 말 Apple은 <strong>iCloud 고급 데이터 보호(Advanced Data Protection, ADP)</strong>를 출시, 엔드투엔드 암호화(E2EE)를 기존 건강, 비밀번호 등 소수 데이터에서<strong>iCloud 데이터 대부분</strong>으로 확장,,사진, 메모, iCloud 클라우드 백업, 기기 정보 등 총 23류 데이터.
@@ -113,7 +113,7 @@ Apple의 "가족 공유"는 가족과 앱 구매, 음악, 영화, iCloud 공간�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>계정 도난의 결과는 상상보다 심각
+계정 도난의 결과는 상상보다 심각
 
 {class="mt-1"}
 해커가 계정 비밀번호를 손에 넣으면, 다음을 할 수 있습니다: 원격에서 스마트폰 잠금 후 몸값 요구, 사진과 연락처 열람, 결제 수단으로 물건 구매.
@@ -122,7 +122,7 @@ Apple의 "가족 공유"는 가족과 앱 구매, 음악, 영화, iCloud 공간�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 계정 종합 건강 검진
+실습: 계정 종합 건강 검진
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 스마트폰 설정 열기, 계정 페이지 진입, 2단계 인증 활성화 확인.

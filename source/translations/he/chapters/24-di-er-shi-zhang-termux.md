@@ -45,44 +45,44 @@ Termux<strong>Bash מובנה בלבד</strong>Shell. ל-Zsh/fish, התקן יד
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux:API</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">חושף פונקציות Android API לתוכניות שורת פקודה</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר הרצת סקריפטים בעת אתחול המכשיר</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספק חלון טרמינל צף</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר סכמות צבעים והתאמת גופנים לטרמינל</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משלב סקריפטים של Termux עם אפליקציית האוטומציה Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר הרצת סקריפטים מווידג'ט במסך הבית</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הערה חשובה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">את Termux והתוספים שלו חובה להתקין מאותו מקור, מכיוון שהם חולקים את אותו sharedUserId. ערבוב התקנות ממקורות שונים (כמו F-Droid ו-GitHub) יגרום לשגיאות התקנה.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux:API</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">חושף פונקציות Android API לתוכניות שורת פקודה</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר הרצת סקריפטים בעת אתחול המכשיר</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספק חלון טרמינל צף</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר סכמות צבעים והתאמת גופנים לטרמינל</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משלב סקריפטים של Termux עם אפליקציית האוטומציה Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר הרצת סקריפטים מווידג'ט במסך הבית</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הערה חשובה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">את Termux והתוספים שלו חובה להתקין מאותו מקור, מכיוון שהם חולקים את אותו sharedUserId. ערבוב התקנות ממקורות שונים (כמו F-Droid ו-GitHub) יגרום לשגיאות התקנה.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ארבע, מדריך התקנה והגדרה
+ארבע, מדריך התקנה והגדרה
 
 {class="mt-1"}
 שלבי התקנה
@@ -127,7 +127,7 @@ Termux מביא את חוויית טרמינל הלינוקס העוצמתית �
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>בוא ננסה: הרץ את פקודת הלינוקס הראשונה שלך על הטלפון
+בוא ננסה: הרץ את פקודת הלינוקס הראשונה שלך על הטלפון
 
 {class="mt-1"}
 הורד והתקן את Termux מ-F-Droid, בהפעלה הראשונה המתן לסיום האתחול.
@@ -135,7 +135,7 @@ Termux מביא את חוויית טרמינל הלינוקס העוצמתית �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>הרץ את
+הרץ את
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. pkg update &amp;&amp; pkg upgrade.

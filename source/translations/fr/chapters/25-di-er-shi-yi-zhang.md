@@ -100,7 +100,7 @@ Après tout cela, voici une liste de sécurité simple et directe, une demi-heur
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Faites-le maintenant : faites un « check-up de sécurité » de votre smartphone
+Faites-le maintenant : faites un « check-up de sécurité » de votre smartphone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Mise à niveau DNS</strong>: Android : Réglages &gt; Connexions et partage &gt; DNS privé &gt; saisissez « one.one.one.one » ou « dns.google ». iPhone : recherchez « 1.1.1.1 DNS profile » dans Safari, installez le profil de description, ou téléchargez l'application 1.1.1.1 de Cloudflare.

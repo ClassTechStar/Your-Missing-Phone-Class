@@ -87,7 +87,7 @@ If you've tried all the above methods and it still doesn't work, you need profes
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>The Universal First Move: Restart Your Phone
+The Universal First Move: Restart Your Phone
 
 {class="mt-1"}
 No matter what problem you encounter: lagging, crashing, can't connect to network, sound issues, first restart your phone. This sounds like a brush-off. But in my own experience, at least 60% of minor issues are resolved after a restart. Phones, like computers, accumulate all kinds of junk in memory over time. A restart clears it and starts fresh. So next time your phone has issues, don't rush to search "what to do"—restart first, then see.
@@ -95,7 +95,7 @@ No matter what problem you encounter: lagging, crashing, can't connect to networ
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Memorize Now: These Lifesaving Operations Should Be Second Nature
+Memorize Now: These Lifesaving Operations Should Be Second Nature
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Force restart</strong>: Full-screen iPhone: press volume up → volume down → long press power button until Logo appears. Android: long press power button for 10-15 seconds until vibration.

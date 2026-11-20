@@ -32,22 +32,22 @@ Ponsel sekarang pada dasarnya memiliki "Mode Sederhana" bawaan (ada yang disebut
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Merek</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nama mode</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara mengaktifkan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi, saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aksesibilitas (tidak ada mode sederhana terpisah, tapi bisa diperbesar per item)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Tampilan &amp; Kecerahan &gt; Ukuran Teks, tarik ke maksimum. Lalu masuk "Aksesibilitas &gt; Tampilan &amp; Ukuran Teks" aktifkan "Teks Tebal" "Bentuk Tombol"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengisian cepat Apple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Sistem &amp; Pembaruan &gt; Mode Sederhana &gt; Aktifkan</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Minimal</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Pengaturan Lainnya &gt; Mode Minimal &gt; Aktifkan</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Fitur Khas &gt; Mode Sederhana</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Desktop Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Desktop, Lock Screen &amp; Wallpaper &gt; Desktop Sederhana</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Tampilan &gt; Mode Sederhana</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Merek</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nama mode</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara mengaktifkan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi, saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aksesibilitas (tidak ada mode sederhana terpisah, tapi bisa diperbesar per item)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Tampilan &amp; Kecerahan &gt; Ukuran Teks, tarik ke maksimum. Lalu masuk "Aksesibilitas &gt; Tampilan &amp; Ukuran Teks" aktifkan "Teks Tebal" "Bentuk Tombol"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengisian cepat Apple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Sistem &amp; Pembaruan &gt; Mode Sederhana &gt; Aktifkan</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Minimal</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Pengaturan Lainnya &gt; Mode Minimal &gt; Aktifkan</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Fitur Khas &gt; Mode Sederhana</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Desktop Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Desktop, Lock Screen &amp; Wallpaper &gt; Desktop Sederhana</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode Sederhana</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengaturan &gt; Tampilan &gt; Mode Sederhana</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Sebagian lansia tidak mau pakai Mode Sederhana, merasa antarmukanya terlalu "kun
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Bantu lansia "merenovasi" ponsel
+Praktik: Bantu lansia "merenovasi" ponsel
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Aktifkan Mode Sederhana (ikuti tabel merek di atas).
@@ -96,7 +96,7 @@ Lansia adalah korban utama penipuan telekomunikasi. Bukan karena kewaspadaan mer
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"Mantra Anti-Penipuan" untuk lansia (print dan tempel di sebelah telepon)
+"Mantra Anti-Penipuan" untuk lansia (print dan tempel di sebelah telepon)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Telepon asing minta transfer → Tutup!</strong>
@@ -151,7 +151,7 @@ Banyak lansia punya masalah pendengaran, tapi tidak tahu ponsel bisa bekerja sam
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Pertama aktifkan Mode Sederhana atau perbesar font/ikon manual, lingkungan diatur lebih dari separuh masalah hilang

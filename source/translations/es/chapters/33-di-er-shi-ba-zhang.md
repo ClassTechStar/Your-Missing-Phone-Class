@@ -18,7 +18,7 @@ Mucha gente pregunta en internet "¿qué móvil comprar por 3000 yuanes?", pero 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tres pasos para elegir teléfono
+Tres pasos para elegir teléfono
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Primero piensa qué es lo que más te importa</strong>: ¿Fotos? ¿Juegos? ¿Autonomía? ¿Pantalla? ¿Fluidez del sistema? ¿O solo necesitas un teléfono que pueda hacer llamadas y usar WeChat? Ordena tus necesidades.
@@ -33,41 +33,41 @@ Las fichas técnicas tienen decenas de datos, pero los usuarios comunes solo nec
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cómo mirarlo</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Resumen en una frase</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Procesador (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determina cuántos años el teléfono funcionará fluido. Estándar 2026: Snapdragon 8 Elite Gen5/Dimensity 9500 o superior = gama alta; Snapdragon 8s Gen4/Dimensity 8400 = gama media-alta; Snapdragon 7+ Gen4/Dimensity 7350 = suficiente para tres años. Por debajo de Snapdragon 6 series, considérelo con cuidado.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compra lo nuevo no lo viejo; el SoC determina cuántos años tu teléfono funcionará sin lag</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Pantalla</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED tiene mejor color y consume menos que LCD; 120Hz es mucho más fluido al deslizar que 60Hz; resolución mínima 1080P. El PWM de alta frecuencia (1920Hz+) es mejor para los ojos.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + PWM de alta frecuencia = línea de aprobación de buena pantalla</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>No mires los megapíxeles, mira el tamaño del sensor</strong>. Un sensor más grande es mejor; el tamaño del sensor es mucho más importante que los megapíxeles. El gran angular es práctico; el teleobjetivo (3x o más zoom óptico) para fotografiar cosas lejanas; la lente macro casi siempre es de relleno.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor principal grande + teleobjetivo práctico &gt; múltiples lentes de relleno</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Batería y carga</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh es el mínimo aceptable; 5000mAh+ para un día sin preocupaciones. La carga rápida se mide en vatios: más de 60W es rápida; más de 100W es rapidísima. La carga inalámbrica es cómoda pero lenta.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + carga rápida 60W = combinación sin ansiedad</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Compromiso de actualización del sistema</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determina cuánto tiempo el teléfono recibirá actualizaciones de seguridad. Apple suele dar 5-6 años de actualizaciones; Samsung insignia da 4 años de sistema + 5 años de seguridad; Google Pixel da 7 años; los gama media nacionales tienen compromisos más cortos (2-3 años).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Si quieres usarlo mucho tiempo, elige una marca con largo compromiso de actualizaciones</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cómo mirarlo</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Resumen en una frase</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Procesador (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determina cuántos años el teléfono funcionará fluido. Estándar 2026: Snapdragon 8 Elite Gen5/Dimensity 9500 o superior = gama alta; Snapdragon 8s Gen4/Dimensity 8400 = gama media-alta; Snapdragon 7+ Gen4/Dimensity 7350 = suficiente para tres años. Por debajo de Snapdragon 6 series, considérelo con cuidado.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compra lo nuevo no lo viejo; el SoC determina cuántos años tu teléfono funcionará sin lag</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Pantalla</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED tiene mejor color y consume menos que LCD; 120Hz es mucho más fluido al deslizar que 60Hz; resolución mínima 1080P. El PWM de alta frecuencia (1920Hz+) es mejor para los ojos.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + PWM de alta frecuencia = línea de aprobación de buena pantalla</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>No mires los megapíxeles, mira el tamaño del sensor</strong>. Un sensor más grande es mejor; el tamaño del sensor es mucho más importante que los megapíxeles. El gran angular es práctico; el teleobjetivo (3x o más zoom óptico) para fotografiar cosas lejanas; la lente macro casi siempre es de relleno.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor principal grande + teleobjetivo práctico &gt; múltiples lentes de relleno</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Batería y carga</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh es el mínimo aceptable; 5000mAh+ para un día sin preocupaciones. La carga rápida se mide en vatios: más de 60W es rápida; más de 100W es rapidísima. La carga inalámbrica es cómoda pero lenta.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + carga rápida 60W = combinación sin ansiedad</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Compromiso de actualización del sistema</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determina cuánto tiempo el teléfono recibirá actualizaciones de seguridad. Apple suele dar 5-6 años de actualizaciones; Samsung insignia da 4 años de sistema + 5 años de seguridad; Google Pixel da 7 años; los gama media nacionales tienen compromisos más cortos (2-3 años).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Si quieres usarlo mucho tiempo, elige una marca con largo compromiso de actualizaciones</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ Estos son algunos de los "perfiles de uso" más comunes; encuéntrate en ellos:
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Escenarios de uso</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Qué mirar</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dirección recomendada</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Entusiasta de la fotografía</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor principal grande (1 pulgada ideal), estabilización óptica, teleobjetivo (3x+ zoom óptico), chip de imagen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X series, Huawei Pura/Mate series, Xiaomi Ultra series</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamer</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Procesador tope, alta tasa de muestreo táctil, sistema de refrigeración, batería grande + carga rápida</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO serie Digital, ROG Phone, Red Magic, Redmi K series</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Autonomía prioritaria</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Batería de 5500mAh+, procesador eficiente, pantalla LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic series, OnePlus, Redmi Note versión gran batería</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Para mayores</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple, fuente grande, volumen alto, batería grande, muchos puntos de servicio postventa</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, OPPO A series, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Para estudiantes</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta relación calidad-precio, duradero, batería grande, con control parental</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Usuario del ecosistema Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ya tienes Mac/iPad/AirPods, comprar iPhone es la única opción</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standard (relación calidad-precio) o Pro (experiencia completa)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Viajes internacionales</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Soporta eSIM, cobertura completa de bandas globales, servicios de Google</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S series, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Escenarios de uso</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Qué mirar</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dirección recomendada</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Entusiasta de la fotografía</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sensor principal grande (1 pulgada ideal), estabilización óptica, teleobjetivo (3x+ zoom óptico), chip de imagen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X series, Huawei Pura/Mate series, Xiaomi Ultra series</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamer</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Procesador tope, alta tasa de muestreo táctil, sistema de refrigeración, batería grande + carga rápida</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO serie Digital, ROG Phone, Red Magic, Redmi K series</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Autonomía prioritaria</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Batería de 5500mAh+, procesador eficiente, pantalla LTPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic series, OnePlus, Redmi Note versión gran batería</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Para mayores</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modo simple, fuente grande, volumen alto, batería grande, muchos puntos de servicio postventa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, OPPO A series, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Para estudiantes</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta relación calidad-precio, duradero, batería grande, con control parental</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Usuario del ecosistema Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ya tienes Mac/iPad/AirPods, comprar iPhone es la única opción</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standard (relación calidad-precio) o Pro (experiencia completa)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Viajes internacionales</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Soporta eSIM, cobertura completa de bandas globales, servicios de Google</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S series, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ Estos son algunos de los "perfiles de uso" más comunes; encuéntrate en ellos:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Práctica: usa este método para elegir un teléfono
+Práctica: usa este método para elegir un teléfono
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Coge un papel y escribe tus dos necesidades principales (por ejemplo: autonomía primero, fotos segundo).
@@ -208,7 +208,7 @@ Estos son algunos de los "perfiles de uso" más comunes; encuéntrate en ellos:
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tres pasos para elegir teléfono: primero necesidades → luego presupuesto → finalmente modelo

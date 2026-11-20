@@ -45,44 +45,44 @@ Termux<strong>Bash مدمج فقط</strong>هذا النوع من Shell. إذا 
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">اسم الإضافة</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">وصف الوظيفة</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يعرّض وظائف Android API لبرامج سطر الأوامر</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يسمح بتشغيل السكربتات عند إقلاع الجهاز</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يوفّر نافذة طرف عائمة</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يفعّل أنظمة ألوان وتخصيص الخطوط للطرف</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يدمج سكربتات Termux مع تطبيق الأتمتة Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يسمح بتشغيل السكربتات من عنصر واجهة على الشاشة الرئيسية</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">اسم الإضافة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">وصف الوظيفة</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يعرّض وظائف Android API لبرامج سطر الأوامر</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يسمح بتشغيل السكربتات عند إقلاع الجهاز</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يوفّر نافذة طرف عائمة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يفعّل أنظمة ألوان وتخصيص الخطوط للطرف</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يدمج سكربتات Termux مع تطبيق الأتمتة Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يسمح بتشغيل السكربتات من عنصر واجهة على الشاشة الرئيسية</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>تنبيه مهم
+تنبيه مهم
 
 {class="mt-1"}
 يجب تثبيت Termux وإضافاته من المصدر نفسه، لأنها تتشارك نفس sharedUserId. خلط التثبيتات من مصادر مختلفة (مثل F-Droid وGitHub) سيؤدي إلى أخطاء في التثبيت.
@@ -127,7 +127,7 @@ Termux<strong>Bash مدمج فقط</strong>هذا النوع من Shell. إذا 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>خلاصة
+خلاصة
 
 {class="mt-1"}
 يجلب Termux تجربة طرف Linux القوية إلى أجهزة Android، ويجعل الهاتف أداة تطوير وتعلم محمولة. سواء كنت مطوراً أو مدير أنظمة أو هاوياً للتقنية، يمكنك الاستفادة من Termux على الأجهزة المحمولة للاستمتاع بتجربة سطر أوامر كاملة، وتحقيق مفهوم "Linux في جيبك".
@@ -135,7 +135,7 @@ Termux<strong>Bash مدمج فقط</strong>هذا النوع من Shell. إذا 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: شغّل أول أمر Linux على هاتفك
+جرّب: شغّل أول أمر Linux على هاتفك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. نزّل Termux من F-Droid وثبّته، وعند أول تشغيل انتظر اكتمال التهيئة.

@@ -65,46 +65,46 @@ import SwiftData
 // 1. @Model: 이 클래스는 자동으로 "테이블"이 돼요
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. 앱 진입점에 컨테이너 연결
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // 데이터베이스 준비 완료
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // 데이터베이스 준비 완료
+ }
 }
 
 // 3. 뷰에서는 @Query로 읽고 @Environment로 기록
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount)위안")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount)위안")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // 저장
-        try? context.save()   // 디스크에 기록
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // 저장
+ try? context.save() // 디스크에 기록
+ }
 }
 ```
 :::
@@ -123,9 +123,9 @@ struct RecordListView: View {
 ```
 // JSON: {"name":"베이징","main":{"temp":26.5},"weather":[{"description":"맑음"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -134,7 +134,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "맑음"
+print(result.weather[0].description) // "맑음"
 ```
 :::
 
@@ -152,23 +152,23 @@ iOS 네트워킹은 시스템 내장 URLSession을 쓰고, Swift의 async/await(
 
 ```
 struct WeatherService {
-    // 비동기 함수: async는 "잠깐 기다릴게요", throws는 "실패할 수도 있어요" 표시
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // 비동기 함수: async는 "잠깐 기다릴게요", throws는 "실패할 수도 있어요" 표시
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // 호출부(.task 안에서):
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "베이징")
-        // 화면 업데이트……
-    } catch {
-        print("오류가 발생했어요: \(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "베이징")
+ // 화면 업데이트……
+ } catch {
+ print("오류가 발생했어요: \(error)")
+ }
 }
 ```
 :::
@@ -197,18 +197,18 @@ iOS는 HTTPS를 요구하죠. 로컬 http:// 서비스를 테스트할 때는 In
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "네트워크가 끊겼어요. 연결을 확인해 볼까요?"
-        case .timedOut:               return "요청 시간 초과. 잠시 후 다시 시도할까요?"
-        case .cannotFindHost:         return "서버를 찾을 수 없어요"
-        default:                      return "네트워크 문제: \(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "데이터 형식이 달라요(인터페이스가 바뀌었을 수 있어요)"
-    }
-    return "오류가 발생했어요: \(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "네트워크가 끊겼어요. 연결을 확인해 볼까요?"
+ case .timedOut: return "요청 시간 초과. 잠시 후 다시 시도할까요?"
+ case .cannotFindHost: return "서버를 찾을 수 없어요"
+ default: return "네트워크 문제: \(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "데이터 형식이 달라요(인터페이스가 바뀌었을 수 있어요)"
+ }
+ return "오류가 발생했어요: \(error.localizedDescription)"
 }
 ```
 :::

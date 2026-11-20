@@ -22,7 +22,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：密钥绝不能写死在代码里
+避坑提醒：密钥绝不能写死在代码里
 
 {class="mt-1"}
 API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。正确做法：放进 <code class="inline">local.properties</code>（这个文件已被 gitignore 忽略），再通过 Gradle 的 buildConfig 读进代码。搜索"Android 隐藏 API Key 的好办法"照着改即可。
@@ -40,21 +40,21 @@ API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小
 ```
 // JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "zh_cn"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "zh_cn"
+ ): WeatherResponse
 }
 ```
 :::
@@ -72,28 +72,28 @@ Gson 会自动把 JSON 塞进这些 data class<strong>字段名一致，魔法�
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // 转圈中
-    data class Success(val data: WeatherResponse) : UiState()  // 成功
-    data class Error(val message: String) : UiState()          // 失败
+ object Loading : UiState() // 转圈中
+ data class Success(val data: WeatherResponse) : UiState() // 成功
+ data class Error(val message: String) : UiState() // 失败
 }
 
 // ViewModel 里：
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("查不到这个城市，换个名字试试？")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("查不到这个城市，换个名字试试？")
+ }
+ }
 }
 
 // 界面里：
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // 转圈
-    is UiState.Success -&gt; WeatherContent(s.data)        // 展示
-    is UiState.Error -&gt; Text(s.message)                 // 报错
+ is UiState.Loading -&gt; CircularProgressIndicator() // 转圈
+ is UiState.Success -&gt; WeatherContent(s.data) // 展示
+ is UiState.Error -&gt; Text(s.message) // 报错
 }
 ```
 :::
@@ -112,28 +112,28 @@ when (val s = state) {
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "未知",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 湿度 ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ 体感 ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "未知",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 湿度 ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ 体感 ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::
@@ -149,7 +149,7 @@ fun WeatherContent(data: WeatherResponse) {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：图片让界面活起来
+小贴士：图片让界面活起来
 
 {class="mt-1"}
 给每种天气配一个 emoji 或图标（☀️🌧️❄️），用 <code class="inline">when(description)</code> 映射——三行代码，界面温度感翻倍。也可以加载第三方的天气图标库，但练手阶段 emoji 足够。
@@ -157,7 +157,7 @@ fun WeatherContent(data: WeatherResponse) {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：天气 App 验收清单
+来动手：天气 App 验收清单
 
 {class="mt-1"}
 ① 正常搜索出天气；② 断开网络，App 优雅报错不崩溃（开飞行模式测！）；③ 输一个不存在的城市，提示友好；④ 收藏两个城市，重启 App 还在；⑤ 转屏不丢状态。五条全过，这个项目才算毕业。
@@ -165,7 +165,7 @@ fun WeatherContent(data: WeatherResponse) {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 先浏览器试 API、看懂 JSON，再写代码，"预习"永远不亏
 - API Key 藏进 local.properties，绝不进代码库

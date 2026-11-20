@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Usa el modo nocturno para fotos de noche
+Usa el modo nocturno para fotos de noche
 
 {class="mt-1"}
 : El modo nocturno del teléfono toma varias fotos y las combina para mejorar la luminosidad. Úsalo en escenas de poca luz; mantén el teléfono estable.
@@ -60,27 +60,27 @@ Borra los mensajes antiguos
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Usa "videollamadas" para comunicaciones importantes</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Para comunicaciones importantes (hablar con los padres, reuniones de trabajo), usa videollamadas en lugar de llamadas de voz. La comunicación cara a cara es más efectiva.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Aprende a usar "compartir pantalla" en las videollamadas</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa el almacenamiento en la nube</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: En WeChat, Zoom y otras apps de videollamada, puedes compartir tu pantalla para mostrar a la otra persona lo que ves en tu teléfono. Útil para soporte técnico remoto.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa "grupos" de WeChat para comunicaciones de equipo</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa una tarjeta microSD si el teléfono lo soporta</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Crea grupos de WeChat para tu equipo o familia. Usa "notas de grupo" para anuncios importantes y "archivos de grupo" para compartir documentos.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aprende a usar " WeChat Mini Programs"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Los Mini Programs de WeChat son apps ligeras que se abren dentro de WeChat. Úsalos para servicios como pedir comida, pagar facturas o reservar citas sin instalar apps adicionales.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa "pagos móviles" para todo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Alipay y WeChat Pay te permiten pagar casi todo sin efectivo. Configura el pago biométrico para mayor comodidad y seguridad.</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa "escaneo de código QR" para todo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Borra el historial del navegador</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: El escaneo de código QR te permite añadir amigos, pagar, conectarse al Wi-Fi, abrir enlaces y mucho más. Aprende a usar el escáner integrado del teléfono.</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aprende a usar "compartir ubicación"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: En WeChat, puedes compartir tu ubicación en tiempo real con tus contactos. Útil para quedar con amigos o para que tu familia sepa dónde estás.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa " notas compartidas" para colaborar</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Usa "videollamadas" para comunicaciones importantes</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Para comunicaciones importantes (hablar con los padres, reuniones de trabajo), usa videollamadas en lugar de llamadas de voz. La comunicación cara a cara es más efectiva.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Aprende a usar "compartir pantalla" en las videollamadas</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa el almacenamiento en la nube</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: En WeChat, Zoom y otras apps de videollamada, puedes compartir tu pantalla para mostrar a la otra persona lo que ves en tu teléfono. Útil para soporte técnico remoto.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa "grupos" de WeChat para comunicaciones de equipo</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa una tarjeta microSD si el teléfono lo soporta</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Crea grupos de WeChat para tu equipo o familia. Usa "notas de grupo" para anuncios importantes y "archivos de grupo" para compartir documentos.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aprende a usar " WeChat Mini Programs"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Los Mini Programs de WeChat son apps ligeras que se abren dentro de WeChat. Úsalos para servicios como pedir comida, pagar facturas o reservar citas sin instalar apps adicionales.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa "pagos móviles" para todo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Alipay y WeChat Pay te permiten pagar casi todo sin efectivo. Configura el pago biométrico para mayor comodidad y seguridad.</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa "escaneo de código QR" para todo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Borra el historial del navegador</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: El escaneo de código QR te permite añadir amigos, pagar, conectarse al Wi-Fi, abrir enlaces y mucho más. Aprende a usar el escáner integrado del teléfono.</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aprende a usar "compartir ubicación"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: En WeChat, puedes compartir tu ubicación en tiempo real con tus contactos. Útil para quedar con amigos o para que tu familia sepa dónde estás.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa " notas compartidas" para colaborar</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>: Las notas compartidas de iCloud o las notas colaborativas de Google Keep permiten que varias personas editen el mismo documento. Útil para listas de la compra, planificación de viajes y notas de reuniones.
+: Las notas compartidas de iCloud o las notas colaborativas de Google Keep permiten que varias personas editen el mismo documento. Útil para listas de la compra, planificación de viajes y notas de reuniones.
 
 {class="mt-1"}
 Aprende a usar "traducción automática"
@@ -96,7 +96,7 @@ XII. Diez habilidades de aprendizaje <strong>El teléfono es también una podero
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Mira vídeos educativos en Bilibili/YouTube
+Mira vídeos educativos en Bilibili/YouTube
 
 {class="mt-1"}
 : Bilibili y YouTube tienen miles de vídeos educativos gratuitos: tutoriales, cursos, documentales. Úsalos para aprender nuevas habilidades.
@@ -113,7 +113,7 @@ XII. Diez habilidades de aprendizaje <strong>El teléfono es también una podero
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: Apps como Headspace, Calm y Xiao Sleep te guían en meditaciones para reducir el estrés y mejorar el sueño.
+: Apps como Headspace, Calm y Xiao Sleep te guían en meditaciones para reducir el estrés y mejorar el sueño.
 
 {class="mt-1"}
 XIII. Diez habilidades de vida
@@ -137,7 +137,7 @@ XIII. Diez habilidades de vida
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Usa apps de reservas
+Usa apps de reservas
 
 {class="mt-1"}
 : Apps como Meituan y Dianping te permiten reservar restaurantes, hoteles y entradas de cine. Úsalas para evitar colas y decepciones.
@@ -153,7 +153,7 @@ XIII. Diez habilidades de vida
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Usa apps de streaming de vídeo
+Usa apps de streaming de vídeo
 
 {class="mt-1"}
 : iQiyi, Tencent Video, Youku y YouTube te permiten ver películas, series y programas. Descarga vídeos para verlos sin conexión.
@@ -161,7 +161,7 @@ XIII. Diez habilidades de vida
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Usa apps de podcasts

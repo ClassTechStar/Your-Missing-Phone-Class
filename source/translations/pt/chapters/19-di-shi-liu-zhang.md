@@ -44,7 +44,7 @@ Um lembrete importante: a Fototeca do iCloud não é um "drive em nuvem", é uma
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: o trio de privacidade exclusivo para assinantes
+iCloud+: o trio de privacidade exclusivo para assinantes
 
 {class="mt-1"}
 Basta fazer upgrade para qualquer plano pago do iCloud (50GB/200GB/2TB etc.) para se tornar automaticamente usuário <strong>iCloud+</strong>, desbloqueando três funções de proteção de privacidade:
@@ -60,7 +60,7 @@ Nota: O Private Relay pode não estar disponível em alguns países/regiões. Us
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>Proteção Avançada de Dados do iCloud (ADP) — criptografia de ponta a ponta de verdade
+Proteção Avançada de Dados do iCloud (ADP) — criptografia de ponta a ponta de verdade
 
 {class="mt-1"}
 No final de 2022, a Apple lançou a <strong>Proteção Avançada de Dados do iCloud (Advanced Data Protection, ADP)</strong>, expandindo a criptografia de ponta a ponta (E2EE) dos poucos dados originais (saúde, senhas) para <strong>a grande maioria dos dados do iCloud</strong> — fotos, notas, backup do iCloud, informações do dispositivo, totalizando 23 categorias de dados.
@@ -99,7 +99,7 @@ Um cenário muito prático: configure o compartilhamento familiar no celular dos
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>As consequências de ter a conta roubada são mais graves do que você imagina
+As consequências de ter a conta roubada são mais graves do que você imagina
 
 {class="mt-1"}
 Se um hacker obtiver sua senha da conta, ele pode: bloquear remotamente seu celular e pedir resgate, ver suas fotos e contatos, fazer compras com seus métodos de pagamento. Mais problemático ainda: se sua conta estiver vinculada a muitas coisas, recuperá-la é um pesadelo por si só. Então, autenticação de dois fatores: ative agora.
@@ -107,7 +107,7 @@ Se um hacker obtiver sua senha da conta, ele pode: bloquear remotamente seu celu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prática: faça um check-up completo na sua conta
+Prática: faça um check-up completo na sua conta
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abra as configurações do celular, entre na página da conta e confirme que a autenticação de dois fatores está ativada.

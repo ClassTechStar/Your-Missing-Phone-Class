@@ -34,7 +34,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>iPhone「80%充電制限」機能——ゴールデンルールをシステム設定に
+iPhone「80%充電制限」機能——ゴールデンルールをシステム設定に
 
 {class="mt-1"}
 iPhone 15/16シリーズ（iOS 17以上）は「20%-80%の法則」をシステム機能にしました。有効化すると、充電が80%に達した時点で自動的に停止し、バッテリー劣化を大幅に遅らせます。設定パス：
@@ -48,7 +48,7 @@ iPhone 15/16シリーズ（iOS 17以上）は「20%-80%の法則」をシステ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>GaN充電器——出張組の良い相棒
+GaN充電器——出張組の良い相棒
 
 {class="mt-1"}
 最近の急速充電アダプタがどんどん小型化しているのに気づいているかもしれません。その立役者は<strong>GaN（窒化ガリウム）</strong>という新型半導体材料です。従来のシリコンベース充電器と比べ、GaN充電器にはいくつかの明確な利点があります：
@@ -127,47 +127,47 @@ iPhone 15/16シリーズ（iOS 17以上）は「20%-80%の法則」をシステ�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最大電力</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術路線</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術路線</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">USB PD 3.1</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低電圧大電流</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最も広範</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高電圧可変</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qualcomm機種</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低電圧大電流</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO系専用</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">チャージポンプ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple急速充電</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDプロトコル</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. ワイヤレス充電プロトコル</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最大電力</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術路線</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術路線</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">USB PD 3.1</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低電圧大電流</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最も広範</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高電圧可変</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qualcomm機種</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低電圧大電流</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO系専用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">チャージポンプ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple急速充電</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDプロトコル</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. ワイヤレス充電プロトコル</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ Qi標準
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>充電しながら大型ゲームをプレイするのを避ける、発熱が悪化。
+充電しながら大型ゲームをプレイするのを避ける、発熱が悪化。
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 粗悪な充電器やケーブルを使用しない、安全上のリスクがあり。
@@ -207,7 +207,7 @@ Qi標準
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>どの機種が採用しているか？
+どの機種が採用しているか？
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>HONOR（栄耀）</strong>: Magic シリーズがシリコン炭素負極を業界初採用。Magic6 Pro、Magic7 シリーズ、Magic V3 折りたたみスクリーンに採用。
@@ -228,7 +228,7 @@ Qi標準
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>健康度を確認：バッテリーの最大容量を見つけて記録。
+健康度を確認：バッテリーの最大容量を見つけて記録。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 消費詳細を分析：バッテリー設定のグラフとAppリストで消費の元凶を見つける。

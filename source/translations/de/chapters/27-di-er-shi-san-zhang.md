@@ -95,7 +95,7 @@ Automatisierung läuft nicht immer rund; ich habe einige Fallgruben für dich vo
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tipp: Die richtige Haltung zum Automatisierungs-Einstieg
+Tipp: Die richtige Haltung zum Automatisierungs-Einstieg
 
 {class="mt-1"}
 Nimm dir fünf Minuten Zeit und überlege: Was sind die drei Dinge, die du am Smartphone am häufigsten wiederholst? Zum Beispiel die morgendliche Routine, die Gewohnheiten nach dem Verbinden der Bluetooth-Kopfhörer, die Einstellungen vor dem Verlassen des Hauses … Beginne mit diesen hochfrequenten Kleinigkeiten und baue jeweils eine einfache Automatisierung. Selbst wenn jede nur Sekunden spart: Über Tage und Monate summiert sich das. Und das Erfüllungsgefühl nach dem Bau macht wirklich süchtig.
@@ -103,7 +103,7 @@ Nimm dir fünf Minuten Zeit und überlege: Was sind die drei Dinge, die du am Sm
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Übung: Drei Einsteiger-Automatisierungs-Herausforderungen
+Übung: Drei Einsteiger-Automatisierungs-Herausforderungen
 
 {class="mt-1 mb-2"}
 Wähle die für dich passende aus und führe sie durch – danach bist du eingestiegen:
@@ -116,7 +116,7 @@ Wähle die für dich passende aus und führe sie durch – danach bist du einges
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Fallbeispiel 3: Automatisierter „Guten-Morgen-Ablauf"
+Fallbeispiel 3: Automatisierter „Guten-Morgen-Ablauf"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Szenario</strong>: Taeglich um 7:00 Uhr automatisch Wetteransage + Stummschaltung deaktivieren + Nachrichten oeffnen.

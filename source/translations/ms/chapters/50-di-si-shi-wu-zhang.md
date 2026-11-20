@@ -27,16 +27,16 @@ Aliran kerja pengaturcaraan AI yang dipandu ujian ialah: biarkan AI menulis kod 
 Tulis ujian unit untuk fungsi calculate_discount.
 Kes ujian sepatutnya meliputi:
 1. Laluan normal:
-   - barang 100 yuan diskaun 20% -> 80
-   - barang 200 yuan diskaun 50% -> 100
+ - barang 100 yuan diskaun 20% -> 80
+ - barang 200 yuan diskaun 50% -> 100
 2. Kes sempadan:
-   - barang 0 yuan diskaun 20% -> 0
-   - barang 100 yuan tiada diskaun -> 100 (tidak didiskaun)
-   - barang 100 yuan diskaun 0% -> 100 (harga penuh)
+ - barang 0 yuan diskaun 20% -> 0
+ - barang 100 yuan tiada diskaun -> 100 (tidak didiskaun)
+ - barang 100 yuan diskaun 0% -> 100 (harga penuh)
 3. Kes luar biasa:
-   - harga negatif -> perlu lontar ralat
-   - kadar diskaun > 1 -> perlu lontar ralat
-   - input bukan nombor -> Perlu melontar ralat
+ - harga negatif -> perlu lontar ralat
+ - kadar diskaun > 1 -> perlu lontar ralat
+ - input bukan nombor -> Perlu melontar ralat
 Guna rangka kerja Vitest, berikan fail ujian yang lengkap.
 ```
 :::

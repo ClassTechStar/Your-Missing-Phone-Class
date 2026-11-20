@@ -63,46 +63,46 @@ import SwiftData
 // 1. @Model：このクラスは自動的に「テーブル」になる
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. アプリ入口にコンテナを接続
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // データベース準備完了
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // データベース準備完了
+ }
 }
 
 // 3. viewでは@Queryで読み、@Environmentで書く
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) 元")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) 元")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // 保存
-        try? context.save()   // ディスクに書き込む
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // 保存
+ try? context.save() // ディスクに書き込む
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ struct RecordListView: View {
 ```
 // JSON: {"name":"北京","main":{"temp":26.5},"weather":[{"description":"晴れ"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "晴れ"
+print(result.weather[0].description) // "晴れ"
 ```
 :::
 
@@ -149,23 +149,23 @@ iOSの通信にはシステム標準のURLSessionを使い、Swiftのasync/await
 
 ```
 struct WeatherService {
-    // 非同期関数：asyncは「少し待つ」の印、throwsは「失敗するかも」の印
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // 非同期関数：asyncは「少し待つ」の印、throwsは「失敗するかも」の印
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // 呼び出し側（.taskの中）：
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "北京")
-        // 画面を更新……
-    } catch {
-        print("エラー発生：\(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "北京")
+ // 画面を更新……
+ } catch {
+ print("エラー発生：\(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ struct WeatherService {
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "ネットが切れました。接続を確認してみますか？"
-        case .timedOut:               return "リクエストがタイムアウトしました。後でもう一度？"
-        case .cannotFindHost:         return "サーバーが見つかりません"
-        default:                      return "ネットワークに問題があります：\(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "データの形式が違います（APIが変わったのかも）"
-    }
-    return "エラーが発生しました：\(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "ネットが切れました。接続を確認してみますか？"
+ case .timedOut: return "リクエストがタイムアウトしました。後でもう一度？"
+ case .cannotFindHost: return "サーバーが見つかりません"
+ default: return "ネットワークに問題があります：\(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "データの形式が違います（APIが変わったのかも）"
+ }
+ return "エラーが発生しました：\(error.localizedDescription)"
 }
 ```
 :::

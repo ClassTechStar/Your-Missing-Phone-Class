@@ -24,19 +24,19 @@ Composeの核心はひと言で言えます。UI＝関数。画面に表示で�
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "こんにちは、$name！")     // ひとつの「文字ブロック」
+ Text(text = "こんにちは、$name！") // ひとつの「文字ブロック」
 }
 
 // 入れ子の組み合わせ：大きいブロックに小さいブロック
 @Composable
 fun HomeScreen() {
-    Column {                          // 縦に並べる
-        Greeting(name = "たろう")
-        Greeting(name = "はなこ")
-        Button(onClick = { /* 押したら何をするか */ }) {
-            Text("押して")
-        }
-    }
+ Column { // 縦に並べる
+ Greeting(name = "たろう")
+ Greeting(name = "はなこ")
+ Button(onClick = { /* 押したら何をするか */ }) {
+ Text("押して")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ Composeの4大基本コンポーネント
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "これはテキストです")
-        Button(onClick = { println("押された") }) {
-            Text("ボタン")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("何か入力") }
-        )
-    }
+ Column {
+ Text(text = "これはテキストです")
+ Button(onClick = { println("押された") }) {
+ Text("ボタン")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("何か入力") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("1行目")
-    Row {
-        Text("左")
-        Text("右")
-    }
-    Box {
-        Text("下の層")
-        Text("上に重なる小さなバッジ")
-    }
+ Text("1行目")
+ Row {
+ Text("左")
+ Text("右")
+ }
+ Box {
+ Text("下の層")
+ Text("上に重なる小さなバッジ")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "見栄えのするテキスト",
-    modifier = Modifier
-        .padding(16.dp)          // 四方に余白
-        .fillMaxWidth()          // 幅いっぱいに
-        .background(Color.Blue)  // 背景色
-        .clickable { /* クリック */ }// クリックできる
+ text = "見栄えのするテキスト",
+ modifier = Modifier
+ .padding(16.dp) // 四方に余白
+ .fillMaxWidth() // 幅いっぱいに
+ .background(Color.Blue) // 背景色
+ .clickable { /* クリック */ }// クリックできる
 )
 // チェーン呼び出し：順番に意味がある（先にpadding、後に背景。背景は余白を含まない）
 ```
@@ -150,15 +150,15 @@ padding(16.dp).background(Blue)とbackground(Blue).padding(16.dp)は、結果が
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf：変わる値を覚えておく
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf：変わる値を覚えておく
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "$count回押しました")
-        Button(onClick = { count++ }) {   // 状態を変える
-            Text("押して +1")                // 画面は自動更新
-        }
-    }
+ Column {
+ Text(text = "$count回押しました")
+ Button(onClick = { count++ }) { // 状態を変える
+ Text("押して +1") // 画面は自動更新
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> ユーザーがタップ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 状態が変わる（count++）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> ユーザーがタップ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 状態が変わる（count++）</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Composeが変化を検知</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 画面を自動で再描画（再構成）</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Composeが変化を検知</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 画面を自動で再描画（再構成）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ Android 12からの「Material You」は、アプリが壁紙から色を取り�
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // 値が変わると目標値へ自動でなめらかに遷移
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // 値が変わると目標値へ自動でなめらかに遷移
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

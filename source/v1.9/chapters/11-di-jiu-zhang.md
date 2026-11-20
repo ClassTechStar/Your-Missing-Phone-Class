@@ -302,12 +302,12 @@ Cubox、Instapaper 这类工具用起来最爽的动作是"存"，最痛的动�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">在哪里</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">留意点</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统自带（iOS备忘录/安卓相机文档模式）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱即有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">偶尔扫一页、临时出PDF</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进阶功能少，够用但不好专精</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软 365 Copilot"捕获"（原Microsoft Lens）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软365 Copilot App内</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白板/黑板拍正、证件卡整理、与OneDrive联动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要微软账号，深度使用绑定其生态</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专业扫描App（扫描全能王、白描）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应用商店安装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">批量扫描、去阴影、OCR高频用户</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心功能可能收费或限次，以App内说明为准</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">在哪里</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">留意点</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统自带（iOS备忘录/安卓相机文档模式）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱即有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">偶尔扫一页、临时出PDF</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进阶功能少，够用但不好专精</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软 365 Copilot"捕获"（原Microsoft Lens）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软365 Copilot App内</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">白板/黑板拍正、证件卡整理、与OneDrive联动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要微软账号，深度使用绑定其生态</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专业扫描App（扫描全能王、白描）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应用商店安装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">批量扫描、去阴影、OCR高频用户</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心功能可能收费或限次，以App内说明为准</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -377,7 +377,7 @@ OCR不是复印，是"猜字"。识别置信度再高的引擎，也会在你不
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 本章出现的所有路径（微信、WPS、系统设置的入口）都可能随版本调整。路径记不住没关系，记住"去设置里搜索功能名"的习惯就行：这一招永远不过时。
@@ -385,7 +385,7 @@ OCR不是复印，是"猜字"。识别置信度再高的引擎，也会在你不
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：三分钟完成"扫描-转文字-归档"
+来试试：三分钟完成"扫描-转文字-归档"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 用系统备忘录的"扫描文稿"（或"捕获"）扫一页纸质文档，导出PDF。
@@ -488,7 +488,7 @@ OCR不是复印，是"猜字"。识别置信度再高的引擎，也会在你不
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 手机办公的瓶颈几乎从来不是性能，是文件散落和通知打断。
@@ -496,7 +496,7 @@ OCR不是复印，是"猜字"。识别置信度再高的引擎，也会在你不
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：搭建你的移动办公工作流
+来试试：搭建你的移动办公工作流
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 选定你的主力文档App（WPS或Microsoft 365），登录并关联云盘。
@@ -549,7 +549,7 @@ OCR不是复印，是"猜字"。识别置信度再高的引擎，也会在你不
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 第一次在正式场合用某个协作工具之前，先拿它办一件"输得起的事"，约一次两三个人的内部小会、建一份不重要的共享文档。工具的坑（权限设错、共享没开、入会链接失效）在小事上踩完，大事上就稳了。
@@ -805,7 +805,7 @@ iOS的"屏幕使用时间"、安卓的"数字健康"，都有一份每周报告�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 手机办公不是把电脑装进口袋，是让每件事在对的地方发生：沟通在手机，创作在电脑，存档在云端，专注在你自己。
@@ -813,7 +813,7 @@ iOS的"屏幕使用时间"、安卓的"数字健康"，都有一份每周报告�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 文档三分类：看（手机满分）、改（修订+批注留痕）、从零写（回电脑）；发出去前转PDF保版式

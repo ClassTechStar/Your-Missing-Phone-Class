@@ -36,35 +36,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Οικοσύστημα</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πλεονεκτήματα</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Αδυναμίες</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Για ποιον</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Το ισχυρότερο απόρρητο (κυρίως τοπική επεξεργασία), ομαλή διασύνδεση με iPhone/Siri/Shortcuts</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σχετικά λίγες και ακριβότερες συσκευές, χρειάζεται HomePod ή Apple TV ως κεντρική μονάδα</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Νοικοκυριά που έχουν όλα Apple και εκτιμούν το απόρρητο και την εμπειρία</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Οι περισσότερες συσκευές, η καλύτερη σχέση ποιότητας-τιμής, το Xiao AI λειτουργεί πολύ καλά</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σχετικά κλειστό οικοσύστημα, πολλά δεδομένα πάνε στο cloud, αρκετές διαφημίσεις</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχάριοι με περιορισμένο budget που θέλουν να εξοπλίσουν όλο το σπίτι από ένα σημείο</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απρόσκοπτη ροή με κινητά/tablet/ρολόγια HarmonyOS, ταχύτατη αύξηση των διαθέσιμων συσκευών</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Λίγες υποστηριζόμενες συσκευές στο εξωτερικό, το οικοσύστημα ακόμα «τρέχει» να φτάσει</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Χρήστες κινητών Huawei που εκτιμούν τη συνεργασία πολλών συσκευών μέσω «Super Device»</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Οικοσύστημα</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πλεονεκτήματα</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Αδυναμίες</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Για ποιον</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Το ισχυρότερο απόρρητο (κυρίως τοπική επεξεργασία), ομαλή διασύνδεση με iPhone/Siri/Shortcuts</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σχετικά λίγες και ακριβότερες συσκευές, χρειάζεται HomePod ή Apple TV ως κεντρική μονάδα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Νοικοκυριά που έχουν όλα Apple και εκτιμούν το απόρρητο και την εμπειρία</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Οι περισσότερες συσκευές, η καλύτερη σχέση ποιότητας-τιμής, το Xiao AI λειτουργεί πολύ καλά</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σχετικά κλειστό οικοσύστημα, πολλά δεδομένα πάνε στο cloud, αρκετές διαφημίσεις</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχάριοι με περιορισμένο budget που θέλουν να εξοπλίσουν όλο το σπίτι από ένα σημείο</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απρόσκοπτη ροή με κινητά/tablet/ρολόγια HarmonyOS, ταχύτατη αύξηση των διαθέσιμων συσκευών</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Λίγες υποστηριζόμενες συσκευές στο εξωτερικό, το οικοσύστημα ακόμα «τρέχει» να φτάσει</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Χρήστες κινητών Huawei που εκτιμούν τη συνεργασία πολλών συσκευών μέσω «Super Device»</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

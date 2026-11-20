@@ -25,46 +25,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">對比項</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本質</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本控制工具（軟件）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">代碼託管平臺（網站）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">運行位置</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地電腦上</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">雲端（瀏覽器訪問）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心職責</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">記錄文件之每次變更（何以改、誰改、何時改）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">將Git倉庫放至雲端，方便存儲、展示、協作</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">為否需網絡</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不需，離線可用</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需聯網訪問</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">歸屬</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開源軟件，由Linus Torvalds（Linux之父）創建</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微軟旗下產品</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同類競品</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN、Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab、Gitee（碼雲）、Bitbucket</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">對比項</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本質</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本控制工具（軟件）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">代碼託管平臺（網站）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">運行位置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地電腦上</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">雲端（瀏覽器訪問）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心職責</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">記錄文件之每次變更（何以改、誰改、何時改）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">將Git倉庫放至雲端，方便存儲、展示、協作</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">為否需網絡</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不需，離線可用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需聯網訪問</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">歸屬</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開源軟件，由Linus Torvalds（Linux之父）創建</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微軟旗下產品</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同類競品</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN、Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab、Gitee（碼雲）、Bitbucket</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 簡言之：<strong>Git管"何以記錄變更"，GitHub管"變更放於何處、何以協作"</strong>。Git乃工具，於本地運行；GitHub乃平臺，將Git倉庫放至雲端，方便協作與展示。君可只用Git不用GitHub（譬如自己寫代碼做版本管理），然用GitHub必用Git（因GitHub即基於Git）。
@@ -117,7 +117,7 @@ GitHub所供不止代碼存儲，尚包括：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：README爲何物
+小知識：README爲何物
 
 {class="mt-1"}
 README.md乃一Markdown格式之文件。乃他人打開君倉庫時第一眼所見之內容。一個好之README通常含：項目簡介、安裝方法、使用示例、許可證、聯繫方式。寫好README乃程序員之基本素養，亦項目能否爲他人所用之第一道門檻。
@@ -181,7 +181,7 @@ GitHub乃全球開源運動之核心陣地。君可Fork喜歡之項目，修改�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>安全提醒
+安全提醒
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 千萬勿將密碼、API密鑰、數據庫連接串等敏感信息提交至GitHub，尤以公開倉庫爲甚，一旦泄露，將爲爬蟲秒抓，後果嚴重。
@@ -191,7 +191,7 @@ GitHub乃全球開源運動之核心陣地。君可Fork喜歡之項目，修改�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>國內訪問GitHub之注意事項
+國內訪問GitHub之注意事項
 
 {class="mt-1"}
 GitHub於國內訪問有時不穩，或出現打不開、克隆慢之情況。可嘗試：① 用國內鏡像站（如GitClone、ghproxy）加速克隆；② 配置Hosts或用代理；③ 若主要面向國內協作，亦可考慮國產替代品<strong>Gitee（碼雲）</strong>，功能類似且訪問速快。多數團隊會同時於GitHub與Gitee上託管，兼顧國際化與國內速度。
@@ -199,7 +199,7 @@ GitHub於國內訪問有時不穩，或出現打不開、克隆慢之情況。�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>進階玩法：以GitHub Pages搭免費個人博客
+進階玩法：以GitHub Pages搭免費個人博客
 
 {class="mt-1"}
 GitHub Pages允許君免費託管一靜態網站，配Jekyll、Hexo、Hugo等靜態站點生成器，可輕鬆搭建個人博客。寫畢Markdown文章push至倉庫，博客自動更新，且自帶HTTPS與自定義域名。無數技術博主之博客皆如此搭成，零成本、無廣告、版本可控。
@@ -213,7 +213,7 @@ GitHub早已不只是"程序員之工具"，其更像是一<strong>數字時代�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>試爲之：完成君之GitHub初體驗
+試爲之：完成君之GitHub初體驗
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 註冊一GitHub賬號，完善個人資料（頭像、簡介、感興趣之技術領域）。

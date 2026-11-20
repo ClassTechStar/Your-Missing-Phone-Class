@@ -25,7 +25,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句話判斷
+一句話判斷
 
 {class="mt-1"}
 若君今用直板機完全夠用、無"屏幕不夠大"之痛點，即勿買摺疊屏。其乃"錦上添花"之設備，非"雪中送炭"之設備。
@@ -42,7 +42,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>此幾類人勿買
+此幾類人勿買
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 手機只用來刷短視頻、聊微信、打電話者：摺疊屏對君毫無增益，反而更重更厚。
@@ -63,7 +63,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>線下體驗清單
+線下體驗清單
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 親手開合10次，感受鉸鏈阻尼是否順滑、有無異響。
@@ -112,7 +112,7 @@ kind: appendix
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>內屏損壞之高發場景
+內屏損壞之高發場景
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 合上時夾住耳機線/充電線，直接壓裂內屏。
@@ -134,7 +134,7 @@ kind: appendix
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>摺疊屏非"更好之手機"，乃"另一種形態之手機"。買它乃因君需其獨特之形態，非因其"更先進"。
+摺疊屏非"更好之手機"，乃"另一種形態之手機"。買它乃因君需其獨特之形態，非因其"更先進"。
 
 {class="text-right text-sm"}
 —— 關於摺疊屏的選購哲學
@@ -155,7 +155,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>最後提醒
+最後提醒
 
 {class="mt-1"}
 摺疊屏技術每年皆於迭代，本附錄寫於2026年。買之前務必查最新評測與用戶反饋，重點關注：鉸鏈壽命實測、摺痕表現、內屏維修政策這三項。線下親手摸永遠比觀評測重要。

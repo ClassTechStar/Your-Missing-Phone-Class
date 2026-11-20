@@ -36,35 +36,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">生態</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">所長</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">適用之人</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隱私至強（以本地處理為主）、與 iPhone、Siri、快捷指令相聯甚順</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設備偏少偏貴、須HomePod或Apple TV作中樞</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">舉家蘋果之器、重隱私與體驗之用者</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">米家（小米）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">器至富、性價比至高、小愛同學易用</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生態較封閉、數據多上雲、廣告偏多</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">預算有限、欲一處配齊全屋之初學者</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為智聯（鴻蒙）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">與鴻蒙之機、平板、手錶無縫流轉、器數驟增</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外之器支持者少、生態尚於追趕</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為機之用者、重「超級終端」多器協同者</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">生態</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">所長</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">適用之人</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隱私至強（以本地處理為主）、與 iPhone、Siri、快捷指令相聯甚順</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設備偏少偏貴、須HomePod或Apple TV作中樞</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">舉家蘋果之器、重隱私與體驗之用者</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">米家（小米）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">器至富、性價比至高、小愛同學易用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生態較封閉、數據多上雲、廣告偏多</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">預算有限、欲一處配齊全屋之初學者</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為智聯（鴻蒙）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">與鴻蒙之機、平板、手錶無縫流轉、器數驟增</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外之器支持者少、生態尚於追趕</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為機之用者、重「超級終端」多器協同者</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

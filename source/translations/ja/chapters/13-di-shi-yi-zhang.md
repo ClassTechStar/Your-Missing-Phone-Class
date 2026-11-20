@@ -61,7 +61,7 @@ Snapseed
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>カメラ設定で「グリッド線」をオンにし、自然光のある場所で3枚撮影（レンズ拭き、露出調整に注意）。
+カメラ設定で「グリッド線」をオンにし、自然光のある場所で3枚撮影（レンズ拭き、露出調整に注意）。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 最も良い1枚を選び、Snapseedで基本調整（明るさ、コントラスト、切り抜き）。

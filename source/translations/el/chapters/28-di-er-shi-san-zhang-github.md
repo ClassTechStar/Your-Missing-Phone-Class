@@ -25,46 +25,46 @@ GitHub = απαραίτητο.
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σύγκριση</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Φύση</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Version control (λογισμικό)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hosting (site)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τοποθεσία</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τοπικά</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cloud</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ευθύνη</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Καταγραφή αλλαγών</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cloud repos</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Δίκτυο</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Offline</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Online</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ιδιοκτησία</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Open source, Linus Torvalds</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ανταγωνιστές</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σύγκριση</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Φύση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Version control (λογισμικό)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hosting (site)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τοποθεσία</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τοπικά</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cloud</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ευθύνη</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Καταγραφή αλλαγών</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cloud repos</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Δίκτυο</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Offline</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Online</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ιδιοκτησία</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Open source, Linus Torvalds</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ανταγωνιστές</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 Απλά:<strong>Git=πώς, GitHub=πού</strong>. Git=tool, GitHub=platform.
@@ -117,7 +117,7 @@ GitHub = απαραίτητο.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Τι είναι README
+Τι είναι README
 
 {class="mt-1"}
 README = πρώτη εντύπωση.
@@ -181,7 +181,7 @@ Git as cloud.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Υπενθύμιση ασφαλείας
+Υπενθύμιση ασφαλείας
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Ποτέ sensitive info.
@@ -191,7 +191,7 @@ Git as cloud.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Πρόσβαση Κίνα
+Πρόσβαση Κίνα
 
 {class="mt-1"}
 Αν unstable:<strong>Gitee</strong>, γρήγορο.
@@ -199,7 +199,7 @@ Git as cloud.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>GitHub Pages blog
+GitHub Pages blog
 
 {class="mt-1"}
 Free static site.
@@ -213,7 +213,7 @@ Portfolio+βιογραφικό.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πράξη: GitHub
+Πράξη: GitHub
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Εγγραφή+προφίλ.

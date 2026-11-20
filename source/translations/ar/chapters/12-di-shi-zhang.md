@@ -64,7 +64,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>تذكر هذه القواعد، لتقي نفسك من الاحتيال
+تذكر هذه القواعد، لتقي نفسك من الاحتيال
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - الشرطة والنيابة والبنوك وخدمة العملاء لن يطلبوا منك تحويل الأموال إلى "حساب آمن".
@@ -75,7 +75,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>افعل ذلك الآن: أجرِ فحصاً أمنياً لتطبيقات الدفع لديك
+افعل ذلك الآن: أجرِ فحصاً أمنياً لتطبيقات الدفع لديك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. افتح Alipay وWeChat، وتأكد من تفعيل الدفع بالبصمة/الوجه.

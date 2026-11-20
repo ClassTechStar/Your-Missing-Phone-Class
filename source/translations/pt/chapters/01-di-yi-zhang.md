@@ -317,7 +317,7 @@ Pense: um dispositivo tão pequeno carrega quanta vida! Portanto, aprender a us�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: Conheça a configuração de hardware
+Mãos à obra: Conheça a configuração de hardware
 
 {class="mt-1"}
 Em [Configurações], veja se consegue encontrar o modelo do processador, a memória de acesso aleatório (RAM) e o tamanho específico do armazenamento interno (ROM). Tenha uma noção da capacidade do seu celular. Usuários de Android podem baixar "AnTuTu" ou "DevCheck" para verificar informações detalhadas de hardware.

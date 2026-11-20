@@ -53,7 +53,7 @@ UFSフラッシュ内に固定空間を直接切り分け、仮想メモリと�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事項
+注意事項
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - メモリ拡張は本体ストレージ容量の一部を占有するため、残りストレージが20-30GB以上あることを確認すること。そうでないとシステムの滑らかさに影響する可能性がある。
@@ -63,7 +63,7 @@ UFSフラッシュ内に固定空間を直接切り分け、仮想メモリと�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>まとめ
+まとめ
 
 {class="mt-1"}
 メモリ拡張は成熟したシステムレベルの最適化技術で、ハードウェアを変えずに中低価格帯機種のマルチタ、スク能力とバックグラウンド保持率を向上できるが、フラッシュと物理メモリの大きな速度差に制限され、「万能薬」ではない。有効化するか、どの程度にするかは、機種の物理メモリサイズ、フラッシュ規格、残りストレージ容量、使用習慣を総合的に判断する必要がある。
@@ -71,7 +71,7 @@ UFSフラッシュ内に固定空間を直接切り分け、仮想メモリと�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>やってみよう：あなたのスマートフォンにメモリ拡張があるか確認
+やってみよう：あなたのスマートフォンにメモリ拡張があるか確認
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 【設定】を開き、「メモリ拡張」「メモリ融合」「RAM Plus」または「Extended RAM」を検索。

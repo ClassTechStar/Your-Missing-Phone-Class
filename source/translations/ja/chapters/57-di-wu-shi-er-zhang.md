@@ -77,12 +77,12 @@ Intent（インテント）は、コンポーネント同士がやりとりす�
 ```
 // 方法その1：明示的Intent——行き先のページをはっきり指定
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "たろう")     // 車に「荷物」を積むイメージ（データ）
+intent.putExtra("name", "たろう") // 車に「荷物」を積むイメージ（データ）
 startActivity(intent)
 
 // 方法その2：暗黙的Intent——何をしたいかだけ言う。実行役はシステムが探す
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // システムがブラウザを開く/または選択させる
+startActivity(web) // システムがブラウザを開く/または選択させる
 ```
 :::
 
@@ -101,16 +101,16 @@ startActivity(web)   // システムがブラウザを開く/または選択さ�
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "不明")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "不明")
+ }
 }
 
 // ページ内で遷移：
-navController.navigate("detail/たろう")     // 引数付き
-navController.popBackStack()              // 前のページへ戻る
+navController.navigate("detail/たろう") // 引数付き
+navController.popBackStack() // 前のページへ戻る
 ```
 :::
 

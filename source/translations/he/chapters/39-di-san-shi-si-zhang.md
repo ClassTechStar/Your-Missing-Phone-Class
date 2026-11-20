@@ -27,46 +27,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פתרון</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מערכת</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">רכב</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תכונות</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סין</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone בלבד</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רחב</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טוב</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רחב</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בינוני</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סיני/משותף</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצוין</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS + Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רחב</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בינוני</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצוין</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פתרון</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מערכת</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">רכב</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תכונות</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סין</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone בלבד</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רחב</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טוב</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רחב</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בינוני</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סיני/משותף</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גבוה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצוין</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS + Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">רחב</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בינוני</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצוין</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ CarPlay = "השלך", HarmonyOS = "משפחה". הכי גבוה בסין:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
+אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
 
 {class="mt-1"}
 נהיגה + טלפון = עבירה. תושבת = "ניווט" בלבד. קול/חנה.
@@ -111,7 +111,7 @@ CarPlay = "השלך", HarmonyOS = "משפחה". הכי גבוה בסין:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>קניית רכב
+קניית רכב
 
 {class="mt-1"}
 :בדוק CarPlay/HiCar, קול, App, OTA.
@@ -119,7 +119,7 @@ CarPlay = "השלך", HarmonyOS = "משפחה". הכי גבוה בסין:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>תרגול
+תרגול
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. איזה פתרון?
@@ -130,7 +130,7 @@ CarPlay = "השלך", HarmonyOS = "משפחה". הכי גבוה בסין:
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 3 נתיבים: CarPlay, HarmonyOS, CarPlay 2.0

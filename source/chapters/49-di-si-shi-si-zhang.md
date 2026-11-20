@@ -34,10 +34,10 @@ kind: chapter
 1. 单文件HTML（内联CSS和JS），不使用框架
 2. 暗色主题，现代极简风格
 3. 展示4个工具入口卡片：
-   - 文本摘要工具
-   - 字数统计工具
-   - 颜色选择器
-   - 二维码生成器
+ - 文本摘要工具
+ - 字数统计工具
+ - 颜色选择器
+ - 二维码生成器
 4. 每个卡片有图标、标题、简短描述
 5. 卡片有悬停动画效果
 6. 响应式布局，手机上可用
@@ -109,17 +109,17 @@ Record { id, amount, type, category, note, date }
 1. Express服务器，端口3001
 2. SQLite数据库，表名records
 3. records表字段：
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. CRUD接口：
-   GET /api/records - 获取所有记录
-   POST /api/records - 新增记录
-   PUT /api/records/:id - 更新记录
-   DELETE /api/records/:id - 删除记录
+ GET /api/records - 获取所有记录
+ POST /api/records - 新增记录
+ PUT /api/records/:id - 更新记录
+ DELETE /api/records/:id - 删除记录
 5. 错误处理中间件
 请给出完整的后端代码结构。
 ```
@@ -163,7 +163,7 @@ AI 编程通用实战流程清单
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：本周完成"项目一"
+来动手：本周完成"项目一"
 
 {class="mt-1"}
 把第四十四章第一节的"个人工具站"当成你的第一个 AI 编程作业：花 5 分钟过五要素，把指令发给 AI（任何工具都行），再按三层验证验收。30 分钟内完成它：你的第一个 AI 编程作品就诞生了。做完记得把它存好，这是你从"读者"变成"实践者"的纪念品。
@@ -171,7 +171,7 @@ AI 编程通用实战流程清单
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 项目一（入门）：纯前端工具站，体验完整流程，30 分钟能完成
 - 项目二（进阶）：全栈记账系统，PRD + 记忆文件 + 5 步逐步实现，每步"能用"

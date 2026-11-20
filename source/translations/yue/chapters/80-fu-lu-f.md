@@ -25,7 +25,7 @@ after_part: fu-lu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句話判斷
+一句話判斷
 
 {class="mt-1"}
 如果你而家用直板機完全夠用、冇「螢幕唔夠大」嘅痛點，就唔好買折疊螢幕。佢係「錦上添花」嘅設備，唔係「雪中送炭」嘅設備。
@@ -42,7 +42,7 @@ after_part: fu-lu
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>呢幾類人唔好買
+呢幾類人唔好買
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 手機淨係用嚟刷短影片、傾微信、打電話嘅，折疊螢幕對你毫無增益，反而更重更厚。
@@ -63,7 +63,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>線下體驗清單
+線下體驗清單
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 親手開合10次，感受鉸鏈阻尼係咪順滑、有冇異響。
@@ -112,7 +112,7 @@ after_part: fu-lu
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>內屏損壞嘅高發場景
+內屏損壞嘅高發場景
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 合上嗰陣夾住耳機線/充電線——直接壓裂內屏。
@@ -134,7 +134,7 @@ after_part: fu-lu
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>折疊螢幕唔係「更好嘅手機」，而係「另一種形態嘅手機」。買佢係因為你需要佢獨特嘅形態，唔係因為佢「更先進」。
+折疊螢幕唔係「更好嘅手機」，而係「另一種形態嘅手機」。買佢係因為你需要佢獨特嘅形態，唔係因為佢「更先進」。
 
 {class="text-right text-sm"}
 —— 關於折疊螢幕嘅選購哲學
@@ -155,7 +155,7 @@ after_part: fu-lu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>最後提醒
+最後提醒
 
 {class="mt-1"}
 折疊螢幕技術每年都喺度迭代，本附錄寫於2026年。買之前務必查最新評測同用戶反饋，重點關注：鉸鏈壽命實測、摺痕表現、內屏維修政策呢三項。線下親手摸永遠比睇評測重要。

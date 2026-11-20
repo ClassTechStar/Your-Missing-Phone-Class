@@ -40,21 +40,21 @@ APIキーはあなたの「財布のパスワード」みたいなものです�
 ```
 // JSON: {"weather":[{"description":"晴れ"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "zh_cn"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "zh_cn"
+ ): WeatherResponse
 }
 ```
 :::
@@ -72,28 +72,28 @@ GsonはJSONをこれらのdata classへ自動で詰め込みます。フィー�
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // くるくる回る
-    data class Success(val data: WeatherResponse) : UiState()  // 成功
-    data class Error(val message: String) : UiState()          // 失敗
+ object Loading : UiState() // くるくる回る
+ data class Success(val data: WeatherResponse) : UiState() // 成功
+ data class Error(val message: String) : UiState() // 失敗
 }
 
 // ViewModel側：
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("その都市が見つかりません。別の名前で試してみて？")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("その都市が見つかりません。別の名前で試してみて？")
+ }
+ }
 }
 
 // 画面側：
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // 回る
-    is UiState.Success -&gt; WeatherContent(s.data)        // 表示
-    is UiState.Error -&gt; Text(s.message)                 // エラー表示
+ is UiState.Loading -&gt; CircularProgressIndicator() // 回る
+ is UiState.Success -&gt; WeatherContent(s.data) // 表示
+ is UiState.Error -&gt; Text(s.message) // エラー表示
 }
 ```
 :::
@@ -112,28 +112,28 @@ when (val s = state) {
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "不明",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 湿度 ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ 体感 ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "不明",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 湿度 ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ 体感 ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::

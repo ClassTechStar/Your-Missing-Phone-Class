@@ -42,7 +42,7 @@ Model yang Didukung:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Komunikasi satelit memerlukan ponsel dengan antena perangkat keras khusus, tidak semua ponsel mendukungnya. Selain itu, komunikasi satelit biasanya memerlukan layanan berlangganan berbayar, namun fitur panggilan darurat umumnya gratis.
+Komunikasi satelit memerlukan ponsel dengan antena perangkat keras khusus, tidak semua ponsel mendukungnya. Selain itu, komunikasi satelit biasanya memerlukan layanan berlangganan berbayar, namun fitur panggilan darurat umumnya gratis.
 
 {class="mt-1"}
 Dua, Komunikasi Tanpa Jaringan: Cara Baru Komunikasi Jarak Dekat
@@ -115,7 +115,7 @@ Prospek Teknologi
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Teknologi SparkLink mewakili arah masa depan komunikasi nirkabel. Seiring bergabungnya lebih banyak produsen, kita mungkin akan melihat lebih banyak perangkat yang mendukung SparkLink, menikmati pengalaman nirkabel yang lebih baik.
+Teknologi SparkLink mewakili arah masa depan komunikasi nirkabel. Seiring bergabungnya lebih banyak produsen, kita mungkin akan melihat lebih banyak perangkat yang mendukung SparkLink, menikmati pengalaman nirkabel yang lebih baik.
 
 {class="mt-1"}
 Periksa: Apakah ponsel Anda mendukung fitur-fitur ini
@@ -123,7 +123,7 @@ Periksa: Apakah ponsel Anda mendukung fitur-fitur ini
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cari "satelit" di pengaturan, lihat apakah ada opsi terkait komunikasi satelit.
+Cari "satelit" di pengaturan, lihat apakah ada opsi terkait komunikasi satelit.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Cari "deteksi kecelakaan" atau "SOS darurat", periksa apakah diaktifkan.

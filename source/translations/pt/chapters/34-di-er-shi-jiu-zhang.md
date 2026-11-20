@@ -43,7 +43,7 @@ Olhar para a tela do celular por longos períodos inevitavelmente causa olhos se
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>Regra 20-20-20
+Regra 20-20-20
 
 {class="mt-1"}
 A cada <strong>20 minutos</strong> de tela, desvie o olhar para algo a <strong>20 pés (cerca de 6 metros)</strong> de distância e mantenha por <strong>20 segundos</strong>. Este simples gesto alivia eficazmente a fadiga do músculo ciliar.
@@ -80,7 +80,7 @@ A quantidade de informação que recebemos diariamente equivale ao que os antigo
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: Desafio semanal de bem-estar digital
+Mãos à obra: Desafio semanal de bem-estar digital
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Hoje: Abra o Tempo de Uso/Bem-estar digital e veja seus dados de uso da última semana.
@@ -94,7 +94,7 @@ A quantidade de informação que recebemos diariamente equivale ao que os antigo
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo
+Resumo do capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Veja primeiro os dados de tempo de uso, reconhecer a realidade é o primeiro passo para a mudança

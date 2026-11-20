@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意之事
+注意之事
 
 {class="mt-1"}
 開發者模式裏之設置或影響系統穩定，不理解之選項勿亂改。開啓USB調試後，連接電腦時當小心，勿連不信任之電腦。
@@ -51,13 +51,13 @@ kind: supplement
 於開發者選項裏有一個不太起眼但甚重要之開關："OEM解鎖"（部分品牌叫"OEM解鎖允許"或"設備解鎖"）。此開關本身未能解鎖BL鎖，但它乃一個"前置許可"：只有打開它，廠商方允許汝通過fastboot命令或品牌工具去解鎖BL。
 
 - <strong>開關之作用</strong>：相當於向廠商聲明"吾同意放棄保修、自負風險，請允許吾解鎖BL"。若此開關乃關閉之，任何解鎖BL之命令都將爲直接拒絕。
-- <strong>與BL鎖之關係</strong>：OEM解鎖乃"申請資格"，BL解鎖方乃"實際操作"。前者於手機設置裏點一下遂行，後者須去廠商官網申請解鎖碼、用電腦跑fastboot命令（如  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>），二者缺一不可。
-- <strong>恢復出廠設置將重置嗎</strong>：將。"OEM解鎖"開關於恢復出廠後將回至關閉狀態，但BL鎖一旦解鎖就是物理級別之狀態，未能蓋因恢復出廠而重新上鎖——須手動執行  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code>  方能覆上鎖。
+- <strong>與BL鎖之關係</strong>：OEM解鎖乃"申請資格"，BL解鎖方乃"實際操作"。前者於手機設置裏點一下遂行，後者須去廠商官網申請解鎖碼、用電腦跑fastboot命令（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing unlock</code>），二者缺一不可。
+- <strong>恢復出廠設置將重置嗎</strong>：將。"OEM解鎖"開關於恢復出廠後將回至關閉狀態，但BL鎖一旦解鎖就是物理級別之狀態，未能蓋因恢復出廠而重新上鎖——須手動執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot flashing lock</code> 方能覆上鎖。
 - <strong>何時候宜打開</strong>：除非汝確定要刷機或Root，否則保持關閉。它與"USB調試"乃兩個獨立開關，刷機時通常須同時打開。
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：何故廠商要設置此開關
+小知識：何故廠商要設置此開關
 
 {class="mt-1"}
 早期安卓沒有此開關，惡意軟件只要拿至權限遂能偷偷刷入系統。Google後來要求所有安卓廠商於開發者選項中加入"OEM解鎖"開關，作爲一道"用戶知情同意"的確認。這亦就是何故即便汝解矣BL鎖，若OEM解鎖開關爲關閉，重新刷機仍然將失敗。
@@ -89,58 +89,58 @@ ADB 全稱 Android Debug Bridge（安卓調試橋），乃 Google 官方所出�
 ##### 何以通過 USB 連接：
 
 1. 手機端：入開發者項 → 開"USB調試"。
-2. 電腦端：自 Google 官方下載 Platform Tools（含  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb</code>  和  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot</code>  兩個可行文），解壓至任意目錄。
+2. 電腦端：自 Google 官方下載 Platform Tools（含 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb</code> 和 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot</code> 兩個可行文），解壓至任意目錄。
 3. 用數據線連接手機與電腦，手機上將彈窗"是否允許USB調試"，勾選"始終允許"並確定。
-4. 于電腦命令行（Windows 之 PowerShell 或 cmd）里執行  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>，若輸出類似  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">List of devices attached / xxxxxxxx device</code>，遂說明連上矣。
+4. 于電腦命令行（Windows 之 PowerShell 或 cmd）里執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>，若輸出類似 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">List of devices attached / xxxxxxxx device</code>，遂說明連上矣。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>驅動與授權彈窗勿略之
+驅動與授權彈窗勿略之
 
 {class="mt-1"}
-Windows 用戶若  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>  顯示 "unauthorized" 或根本不列出設備，多半乃驅動沒裝好或忘矣於手機上點"允許"。三星/小米等品牌可裝各自之"USB驅動"或"手機助手"來補齊驅動；Mac 與 Linux 一般免驅。若手機彈窗爲汝手滑點掉矣，拔插一下數據線遂將重新彈出來。
+Windows 用戶若 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> 顯示 "unauthorized" 或根本不列出設備，多半乃驅動沒裝好或忘矣於手機上點"允許"。三星/小米等品牌可裝各自之"USB驅動"或"手機助手"來補齊驅動；Mac 與 Linux 一般免驅。若手機彈窗爲汝手滑點掉矣，拔插一下數據線遂將重新彈出來。
 :::
 
 ##### 常用 ADB 命令：
 
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb install app.apk</code>：以電腦上之 APK 裝到手機（<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-r</code>  表覆蓋裝並留數據；<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code>  裝至 SD 卡）。
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb install app.apk</code>：以電腦上之 APK 裝到手機（<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-r</code> 表覆蓋裝並留數據；<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> 裝至 SD 卡）。
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb uninstall com.xxx.xxx</code>：按包名卸 App。
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb push 電腦路徑 /sdcard/目標路徑</code>：以電腦文件推送到手機。
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb pull /sdcard/文件 電腦路徑</code>：把手機文件拉至電腦（比發給自己微信再下載快得多）。
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code>：進入手機之 Linux Shell，可直接執行  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code>、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code>、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code>  等命令。
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code>：進入手機之 Linux Shell，可直接執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code>、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code>、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code> 等命令。
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot bootloader</code>：重啓手機進入 Fastboot 模式（刷機之入口）。
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot recovery</code>：重啓入 Recovery 模式。
-- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages</code>：列出手機上所有已安裝應用之包名（找包名必用）。加  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code>  只觀系統應用，加  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-3</code>  只觀第三方應用。
+- <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages</code>：列出手機上所有已安裝應用之包名（找包名必用）。加 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> 只觀系統應用，加 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-3</code> 只觀第三方應用。
 - <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 包名</code>：爲當前用戶卸預裝 App，免 Root，詳見下方實戰。
 
 ##### 免 Root 卸預裝 App 實戰：
 
-這乃 ADB 最實用之功能之一：用  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code>  命令可爲"當前用戶"卸載預裝 App，而不須 Root，亦不影響系統分區。爲卸載之 App 於系統裏"消失"，但實際還於系統分區裏，恢復出廠設置後將回來。
+這乃 ADB 最實用之功能之一：用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> 命令可爲"當前用戶"卸載預裝 App，而不須 Root，亦不影響系統分區。爲卸載之 App 於系統裏"消失"，但實際還於系統分區裏，恢復出廠設置後將回來。
 
-1. 先用  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages -s</code>  列出所有系統應用，找到汝欲卸載之包名。比如小米瀏覽器乃  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.browser</code>，華爲應用市場乃  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.vmall.client</code>。
-2. 不確定包名對應哪個 App？可於電腦上用  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages | findstr 關鍵字</code>  搜索，或裝一個第三方 App "Package Viewer"於手機上直接查看每個 App 之包名。
-3. 行卸：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 包名</code>，較如  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 com.android.browser</code>。返  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Success</code>  遂成功矣。
+1. 先用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages -s</code> 列出所有系統應用，找到汝欲卸載之包名。比如小米瀏覽器乃 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.browser</code>，華爲應用市場乃 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.vmall.client</code>。
+2. 不確定包名對應哪個 App？可於電腦上用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages | findstr 關鍵字</code> 搜索，或裝一個第三方 App "Package Viewer"於手機上直接查看每個 App 之包名。
+3. 行卸：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 包名</code>，較如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm uninstall --user 0 com.android.browser</code>。返 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Success</code> 遂成功矣。
 4. 欲恢復何以辦？兩種方法：① 恢復出廠設置（最徹底但麻煩）；② 重新安裝：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell cmd package install-existing 包名</code>。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>千萬勿亂刪系統核心包
+千萬勿亂刪系統核心包
 
 {class="mt-1"}
-"pm uninstall --user 0"雖是免 Root 之安全方式，但亂刪關鍵系統應用（如  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code>  態欄、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code>  電話、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code>  設置）將導致系統崩潰、黑屏、無法開機等嚴重問題。刪之前先 Google 一下"此包名能不可刪"，寧可少刪勿錯刪。建議一次唯刪一兩個，確認沒問題再繼續。
+"pm uninstall --user 0"雖是免 Root 之安全方式，但亂刪關鍵系統應用（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> 態欄、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> 電話、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> 設置）將導致系統崩潰、黑屏、無法開機等嚴重問題。刪之前先 Google 一下"此包名能不可刪"，寧可少刪勿錯刪。建議一次唯刪一兩個，確認沒問題再繼續。
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：--user 0 乃何意思
+小知識：--user 0 乃何意思
 
 {class="mt-1"}
-安卓 4.2 之後支持多用戶，每個用戶有獨立之 ID（機主乃 0，附加用戶自 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code>  表示"唯對當前機主卸載"，系統分區裏之 APK 文件依然存在，只是不賜機主顯示矣。這就是何故它不須 Root，沒動系統文件，只是改矣"用戶配置"。這亦乃它與 Root 後卸載最大之區別：Root 卸載乃真正自系統裏刪掉，所有用戶皆不再有；ADB 卸載只是"對當前用戶隱藏"。
+安卓 4.2 之後支持多用戶，每個用戶有獨立之 ID（機主乃 0，附加用戶自 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"唯對當前機主卸載"，系統分區裏之 APK 文件依然存在，只是不賜機主顯示矣。這就是何故它不須 Root，沒動系統文件，只是改矣"用戶配置"。這亦乃它與 Root 後卸載最大之區別：Root 卸載乃真正自系統裏刪掉，所有用戶皆不再有；ADB 卸載只是"對當前用戶隱藏"。
 :::
 
 #### 五、Root權限：安卓之"超級管員"
 
-Root權限相當於Linux中之超級用戶（對/目錄擁有完全控制權，可讀寫任意文件），乃安卓系統之最高權限。它與Windows之Administrator有本質區別：Windows出於安全考慮對管理員作了諸多限制（真正之最高權限實則乃 TrustedInstaller），即便是 Administrator 亦無法像 Linux root 那樣直接執行  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">sudo rm -rf /*</code>。獲得Root權限後，汝可修改系統文件、卸載預裝應用、使用須Root之高級App。
+Root權限相當於Linux中之超級用戶（對/目錄擁有完全控制權，可讀寫任意文件），乃安卓系統之最高權限。它與Windows之Administrator有本質區別：Windows出於安全考慮對管理員作了諸多限制（真正之最高權限實則乃 TrustedInstaller），即便是 Administrator 亦無法像 Linux root 那樣直接執行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">sudo rm -rf /*</code>。獲得Root權限後，汝可修改系統文件、卸載預裝應用、使用須Root之高級App。
 
 ##### Root之利：
 
@@ -159,7 +159,7 @@ Root權限相當於Linux中之超級用戶（對/目錄擁有完全控制權，�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>嚴重警告
+嚴重警告
 
 {class="mt-1"}
 Root操作有一定風險，或令手機變磚（不能開機）。若汝乃新手，建議先充分了解相關知識，並確保已有完整備份。操作前當細讀教程，確認汝之機型與系統版本。
@@ -198,7 +198,7 @@ Root操作有一定風險，或令手機變磚（不能開機）。若汝乃新�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>貓鼠遊戲永遠未能結束
+貓鼠遊戲永遠未能結束
 
 {class="mt-1"}
 Google 每隔一段時間遂將更新檢測規則，App 廠商亦將與進升級 Play Integrity 校驗。今天還能用之隱藏方案，明天或遂爲識別。若汝完全依賴銀行/支付 App（比如日常轉賬、掃碼付款），最穩妥之選擇仍然乃：勿 Root、勿解 BL 鎖。隱藏方案更適合"主力機不 Root + 備用機玩 Root"之玩家配置。
@@ -208,12 +208,12 @@ Google 每隔一段時間遂將更新檢測規則，App 廠商亦將與進升級
 
 - <strong>開發者模式</strong>：可開啓，體驗一下動畫加速、GPU 呈現分析等功能，但勿亂改其他不理解之選項。
 - <strong>OEM 解鎖與 BL 鎖</strong>：若汝不打算刷機或 Root，兩個開關皆保持默認（關閉）狀態最安全。
-- <strong>ADB</strong>：免 Root 之強大工具，普通人也能用，比如用  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code>  卸載預裝 App。但刪之前一定要查清楚包名能不可刪。
+- <strong>ADB</strong>：免 Root 之強大工具，普通人也能用，比如用 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> 卸載預裝 App。但刪之前一定要查清楚包名能不可刪。
 - <strong>Root</strong>：普通用戶不建議 Root，風險大於收益。若確實須某些功能，可先了解有無不須 Root 之替代方案（比如用 ADB 卸載預裝、用 Shizuku 替代部分 Root 功能）。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手爲之：啓開發者模式並調動畫速度
+動手爲之：啓開發者模式並調動畫速度
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 入設置 &gt; 關於手機。

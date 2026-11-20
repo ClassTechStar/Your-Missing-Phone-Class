@@ -42,16 +42,16 @@ kind: chapter
 :::
 
 ```
-let name = "张三"        // let：常量（推荐默认用这个）
-var age = 18             // var：变量（以后还能改）
+let name = "张三" // let：常量（推荐默认用这个）
+var age = 18 // var：变量（以后还能改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> let 不能改，编译报错
+age = 19 // var 可以改
+// name = "李四" // let 不能改，编译报错
 
-let score: Int = 100     // 也可以显式写明类型
-let pi = 3.14            // 不写也能自动推断
+let score: Int = 100 // 也可以显式写明类型
+let pi = 3.14 // 不写也能自动推断
 
-print("你好，\(name)")   // 字符串插值：反斜杠 + 括号
+print("你好，\(name)") // 字符串插值：反斜杠 + 括号
 ```
 :::
 
@@ -70,7 +70,7 @@ Swift 常用基础类型
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：let 优先原则
+小贴士：let 优先原则
 
 {class="mt-1"}
 Swift 社区的铁律：<strong>默认用 let，确有必要再用 var</strong>。能用 let 的地方用 var，Xcode 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug，代码越少变化，越容易推理。
@@ -102,11 +102,11 @@ Swift 社区的铁律：<strong>默认用 let，确有必要再用 var</strong>�
 :::
 
 ```
-let count = 5          // 推断为 Int
-let price = 3.14       // 推断为 Double
+let count = 5 // 推断为 Int
+let price = 3.14 // 推断为 Double
 
-// let total = count + price   // 报错：Int 和 Double 不能直接相加
-let total = Double(count) + price   // 显式转换：8.14
+// let total = count + price // 报错：Int 和 Double 不能直接相加
+let total = Double(count) + price // 显式转换：8.14
 ```
 :::
 
@@ -126,15 +126,15 @@ Swift 处理文字的招牌动作是插值：反斜杠加括号，把任何值�
 ```
 let first = "张"
 let last = "三"
-let full = first + last              // 拼接：张三
-let greeting = "你好，\(full)！"      // 插值：你好，张三！
-let line = "共 \(2 + 3) 项"          // 括号里可以放表达式
+let full = first + last // 拼接：张三
+let greeting = "你好，\(full)！" // 插值：你好，张三！
+let line = "共 \(2 + 3) 项" // 括号里可以放表达式
 
 let bio = """
 记账本说明：
 一、每天睡前记一笔
 二、月初看汇总
-"""                                  // 多行字符串
+""" // 多行字符串
 print(bio)
 ```
 :::
@@ -163,18 +163,18 @@ print(bio)
 ```
 let hasPaid = true
 if hasPaid {
-    print("已解锁全部章节")
+ print("已解锁全部章节")
 } else {
-    print("先看免费章节")
+ print("先看免费章节")
 }
 
 let score = 85
-let passed = score >= 60    // 比较的结果就是 Bool：true
+let passed = score >= 60 // 比较的结果就是 Bool：true
 print(passed)
 
-// if score { }              // 报错：条件必须是 Bool，整数不行
+// if score { } // 报错：条件必须是 Bool，整数不行
 
-let label = score >= 60 ? "及格" : "再补课"   // 三目运算符：一行二选一
+let label = score >= 60 ? "及格" : "再补课" // 三目运算符：一行二选一
 ```
 :::
 
@@ -206,27 +206,27 @@ Swift 圈的命名规矩是"小驼峰"：变量和函数第一个词小写、后
 :::
 
 ```
-var name: String = "张三"   // 普通类型：绝不允许是 nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> 编译错误，直接拦住
+var name: String = "张三" // 普通类型：绝不允许是 nil
+// name = nil // 编译错误，直接拦住
 
-var nickname: String? = nil  // 加个问号：允许为 nil（可选值）
+var nickname: String? = nil // 加个问号：允许为 nil（可选值）
 nickname = "三儿"
 
 // 使用可选值，必须"解包"：
-if let n = nickname {        // if let：安全解包
-    print("你好，\(n)")
+if let n = nickname { // if let：安全解包
+ print("你好，\(n)")
 } else {
-    print("还没有昵称")
+ print("还没有昵称")
 }
 
-let len = nickname?.count ?? 0   // ?? 给默认值（空合运算符）
+let len = nickname?.count ?? 0 // ?? 给默认值（空合运算符）
 print(len)
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：! 是"高危操作"
+注意：! 是"高危操作"
 
 {class="mt-1"}
 代码里写 <code class="inline">nickname!</code>（强制解包）等于对编译器喊"我保证它不是 nil"：一旦猜错，App 当场崩溃。新手期原则：<strong>尽量用 if let / ?? ，不用 !</strong>。Xcode 补全代码时偶尔会顺手加 !，记得改掉它。
@@ -252,16 +252,16 @@ var nickname: String? = "三儿"
 
 // 第一式：if let——顺手处理，有就用
 if let n = nickname {
-    print("昵称是 \(n)")     // 这个括号里，n 保证不是 nil
+ print("昵称是 \(n)") // 这个括号里，n 保证不是 nil
 }
 
 // 第二式：guard let——不满足就早退，主路保持平整
 func showNickname() {
-    guard let n = nickname else {
-        print("没有昵称")
-        return
-    }
-    print("昵称是 \(n)")     // 从这里往后，n 一直是普通 String
+ guard let n = nickname else {
+ print("没有昵称")
+ return
+ }
+ print("昵称是 \(n)") // 从这里往后，n 一直是普通 String
 }
 showNickname()
 
@@ -289,14 +289,14 @@ print(display)
 
 ```
 struct Profile {
-    var email: String?
+ var email: String?
 }
 
 let profile: Profile? = Profile(email: nil)
 
 // profile 可能没有，email 也可能没有——两道门都轻轻推一下：
 let letters = profile?.email?.count ?? 0
-print(letters)          // 0：任何一环断了，整条链安静地变成 nil
+print(letters) // 0：任何一环断了，整条链安静地变成 nil
 ```
 :::
 
@@ -327,7 +327,7 @@ nil 不是 0，不是空字符串 <code class="inline">""</code>，也不是某�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：把 ?? 读成"不然就"
+小贴士：把 ?? 读成"不然就"
 
 {class="mt-1"}
 读代码时把 <code class="inline">nickname ?? "匿名用户"</code> 翻译成"昵称，不然就叫匿名用户"，整行代码立刻从符号变成人话。同理，<code class="inline">if let</code> 读成"如果有就……"，<code class="inline">guard let</code> 读成"必须得有，不然走人"。符号背不住的时候，回到人话翻译，这条捷径全程有效。
@@ -355,16 +355,16 @@ nil 不是 0，不是空字符串 <code class="inline">""</code>，也不是某�
 ```
 // 函数：名字在前，参数和返回类型在后
 func greet(name: String) -> String {
-    return "你好，\(name)！"
+ return "你好，\(name)！"
 }
-print(greet(name: "张三"))     // 调用时要带参数名
+print(greet(name: "张三")) // 调用时要带参数名
 
 // 闭包：就地定义，轻快直接
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = 当前元素
+let doubled = numbers.map { $0 * 2 } // $0 = 当前元素
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // 筛选
+let big = numbers.filter { $0 > 2 } // 筛选
 // [3, 4]
 ```
 :::
@@ -384,22 +384,22 @@ SwiftUI 里闭包无处不在：按钮的 <code class="inline">Button("点我") 
 
 ```
 func move(from start: Int, to end: Int) {
-    print("把东西从 \(start) 号位搬到 \(end) 号位")
+ print("把东西从 \(start) 号位搬到 \(end) 号位")
 }
-move(from: 1, to: 5)        // 读起来像英语句子：从 1 移到 5
+move(from: 1, to: 5) // 读起来像英语句子：从 1 移到 5
 
 // 不想带标签，用下划线省掉：
 func add(_ a: Int, _ b: Int) -> Int {
-    return a + b
+ return a + b
 }
 print(add(3, 5))
 
 // 参数可以带默认值，不传就用默认的：
 func greet(_ name: String, punctuation: String = "！") -> String {
-    return "你好，\(name)\(punctuation)"
+ return "你好，\(name)\(punctuation)"
 }
-print(greet("张三"))                      // 你好，张三！
-print(greet("张三", punctuation: "？"))   // 你好，张三？
+print(greet("张三")) // 你好，张三！
+print(greet("张三", punctuation: "？")) // 你好，张三？
 ```
 :::
 
@@ -418,18 +418,18 @@ from、to 这种标签在定义里是"外部名 + 内部名"合体：调用时�
 
 ```
 func minMax(of numbers: [Int]) -> (min: Int, max: Int)? {
-    guard let first = numbers.first else { return nil }
-    var lo = first
-    var hi = first
-    for n in numbers {
-        lo = min(lo, n)
-        hi = max(hi, n)
-    }
-    return (lo, hi)
+ guard let first = numbers.first else { return nil }
+ var lo = first
+ var hi = first
+ for n in numbers {
+ lo = min(lo, n)
+ hi = max(hi, n)
+ }
+ return (lo, hi)
 }
 
 if let result = minMax(of: [3, 1, 9, 7]) {
-    print("最小 \(result.min)，最大 \(result.max)")
+ print("最小 \(result.min)，最大 \(result.max)")
 }
 ```
 :::
@@ -450,7 +450,7 @@ let names = ["张三", "李四", "王五"]
 
 // 第一张脸：完整写法，什么都写明
 let r1 = names.map { (n: String) -> String in
-    return "你好，\(n)"
+ return "你好，\(n)"
 }
 
 // 第二张脸：类型能推断，return 也能省
@@ -459,7 +459,7 @@ let r2 = names.map { n in "你好，\(n)" }
 // 第三张脸：参数都省了，用 $0 代表第一个参数
 let r3 = names.map { "你好，\($0)" }
 
-print(r3)   // ["你好，张三", "你好，李四", "你好，王五"]
+print(r3) // ["你好，张三", "你好，李四", "你好，王五"]
 ```
 :::
 
@@ -479,13 +479,13 @@ print(r3)   // ["你好，张三", "你好，李四", "你好，王五"]
 ```
 let bills = [12.5, 88.0, 5.0, 200.0, 45.0]
 
-let big = bills.filter { $0 > 50 }          // 筛：超过 50 的
+let big = bills.filter { $0 > 50 } // 筛：超过 50 的
 // [88.0, 200.0]
-let sorted = bills.sorted(by: >)            // 排：从大到小
+let sorted = bills.sorted(by: >) // 排：从大到小
 // [200.0, 88.0, 45.0, 12.5, 5.0]
-let total = bills.reduce(0, +)              // 合：全部加起来
+let total = bills.reduce(0, +) // 合：全部加起来
 // 350.5
-let report = bills.map { "一笔 \($0) 元" }  // 变：变成一行行文字
+let report = bills.map { "一笔 \($0) 元" } // 变：变成一行行文字
 // ["一笔 12.5 元", "一笔 88.0 元", ...]
 ```
 :::
@@ -522,21 +522,21 @@ filter 筛选、sorted 排序、reduce 合并、map 变换，这四个名字值�
 
 ```
 func waterFee(_ tons: Double) -> Double {
-    return tons * 3.0            // 假设水价一吨 3 元
+ return tons * 3.0 // 假设水价一吨 3 元
 }
 
 func electricFee(_ kwh: Double) -> Double {
-    if kwh <= 200 {
-        return kwh * 0.5         // 第一档
-    } else {
-        return 200 * 0.5 + (kwh - 200) * 0.8   // 第二档
-    }
+ if kwh <= 200 {
+ return kwh * 0.5 // 第一档
+ } else {
+ return 200 * 0.5 + (kwh - 200) * 0.8 // 第二档
+ }
 }
 
 func report(waterTons: Double, kwh: Double) -> String {
-    let water = waterFee(waterTons)
-    let electric = electricFee(kwh)
-    return "水费 \(water) 元，电费 \(electric) 元，合计 \(water + electric) 元"
+ let water = waterFee(waterTons)
+ let electric = electricFee(kwh)
+ return "水费 \(water) 元，电费 \(electric) 元，合计 \(water + electric) 元"
 }
 
 print(report(waterTons: 12, kwh: 260))
@@ -557,12 +557,12 @@ print(report(waterTons: 12, kwh: 260))
 
 ```
 func doubleIt(_ x: inout Int) {
-    x *= 2
+ x *= 2
 }
 
 var money = 50
-doubleIt(&money)      // & 表示"我要让你改真的"
-print(money)          // 100
+doubleIt(&money) // & 表示"我要让你改真的"
+print(money) // 100
 ```
 :::
 
@@ -580,20 +580,20 @@ Swift 的官方偏好很明确：<strong>优先用结构体（struct），需要
 ```
 // 结构体：装数据的盒子
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // 结构体自带"成员逐一构造器"：直接就能创建
+ // 结构体自带"成员逐一构造器"：直接就能创建
 }
 let r = Record(amount: 25.5, category: "餐饮", date: Date())
 
 // 协议：约定"必须具备哪些能力"
-protocol Identifiable {   // 标准库协议：id 为泛型 Hashable
-    var id: UUID { get }   // 这里以 UUID 为例的简化示意
+protocol Identifiable { // 标准库协议：id 为泛型 Hashable
+ var id: UUID { get } // 这里以 UUID 为例的简化示意
 }
-struct Record: Identifiable { ... }   // 遵守协议 = 承诺实现其要求
+struct Record: Identifiable { ... } // 遵守协议 = 承诺实现其要求
 ```
 :::
 
@@ -612,13 +612,13 @@ struct 和 class 最根本的差别，用一段十行代码就能看明白：
 
 ```
 struct Wallet {
-    var cash: Double
+ var cash: Double
 }
 
 var a = Wallet(cash: 100)
-var b = a              // 赋值这一刻，复制了一份全新的
-b.cash = 50            // 改的是 b 那一份
-print(a.cash)          // 100——a 毫发无损
+var b = a // 赋值这一刻，复制了一份全新的
+b.cash = 50 // 改的是 b 那一份
+print(a.cash) // 100——a 毫发无损
 ```
 :::
 
@@ -641,15 +641,15 @@ struct 是值类型，赋值时复制一份，像发传单：一人一张，你�
 
 ```
 struct Counter {
-    var count = 0
+ var count = 0
 
-    mutating func plusOne() {   // 要改自己的属性，先声明 mutating
-        count += 1
-    }
+ mutating func plusOne() { // 要改自己的属性，先声明 mutating
+ count += 1
+ }
 }
 var c = Counter()
 c.plusOne()
-print(c.count)      // 1
+print(c.count) // 1
 ```
 :::
 
@@ -668,22 +668,22 @@ print(c.count)      // 1
 
 ```
 protocol Payable {
-    func monthlyCost() -> Double
+ func monthlyCost() -> Double
 }
 
 extension Payable {
-    // 协议扩展：给所有签合同的类型"批量发装备"
-    func description() -> String {
-        "月费用 \(monthlyCost()) 元"
-    }
+ // 协议扩展：给所有签合同的类型"批量发装备"
+ func description() -> String {
+ "月费用 \(monthlyCost()) 元"
+ }
 }
 
 struct VipMember: Payable {
-    func monthlyCost() -> Double { 25 }
+ func monthlyCost() -> Double { 25 }
 }
 
 let member = VipMember()
-print(member.description())   // 月费用 25.0 元
+print(member.description()) // 月费用 25.0 元
 ```
 :::
 
@@ -702,16 +702,16 @@ struct 里除了"存数据的属性"，还有一类"现算的属性"：长得像
 
 ```
 struct Order {
-    var price: Double
-    var count: Int
+ var price: Double
+ var count: Int
 
-    var total: Double {        // 计算属性：不存值，现场算
-        price * Double(count)
-    }
+ var total: Double { // 计算属性：不存值，现场算
+ price * Double(count)
+ }
 }
 
 let order = Order(price: 12.0, count: 3)
-print(order.total)             // 36.0
+print(order.total) // 36.0
 // 改了 price，total 自动就是新值——因为它每次都现算
 ```
 :::
@@ -753,7 +753,7 @@ Swift 语法速查卡（新手版）
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：在 Playgrounds 里玩 15 分钟 Swift
+来动手：在 Playgrounds 里玩 15 分钟 Swift
 
 {class="mt-1"}
 有 Mac 就打开 Xcode → Playground；没 Mac 就用 iPad 上的 Swift Playgrounds 或网页版演练场。把本章每一段代码都跑一遍，改改数字和文字，故意制造几个错误看看 Xcode 怎么提示。这个"先玩后学"的 15 分钟，会让你第 62 章上手时轻松一倍。
@@ -772,12 +772,12 @@ Swift 语法速查卡（新手版）
 
 ```
 var scores = [90, 59, 82]
-scores.append(100)        // 尾部加一个
-scores.insert(75, at: 0)  // 插到最前面
-scores[1] = 91            // 改第 1 格（从 0 数起）
-scores.remove(at: 2)      // 删掉第 2 格
-print(scores.count)       // 4 个
-print(scores.isEmpty)     // false
+scores.append(100) // 尾部加一个
+scores.insert(75, at: 0) // 插到最前面
+scores[1] = 91 // 改第 1 格（从 0 数起）
+scores.remove(at: 2) // 删掉第 2 格
+print(scores.count) // 4 个
+print(scores.isEmpty) // false
 
 // 空数组必须写明类型，不然编译器不知道以后装什么：
 var todos: [String] = []
@@ -796,15 +796,15 @@ todos.append("买牛奶")
 
 ```
 var prices = ["咖啡": 15.0, "面包": 8.0]
-prices["蛋糕"] = 25.0      // 没有就新增
-prices["咖啡"] = 12.0      // 有就覆盖
+prices["蛋糕"] = 25.0 // 没有就新增
+prices["咖啡"] = 12.0 // 有就覆盖
 
-print(prices["蛋糕"])       // Optional(25.0)——注意！
-print(prices["蛋糕"] ?? 0)  // 25.0
-print(prices["披萨"] ?? 0)  // 0：查不到也不崩
+print(prices["蛋糕"]) // Optional(25.0)——注意！
+print(prices["蛋糕"] ?? 0) // 25.0
+print(prices["披萨"] ?? 0) // 0：查不到也不崩
 
 for (name, price) in prices {
-    print("\(name) 卖 \(price) 元")
+ print("\(name) 卖 \(price) 元")
 }
 ```
 :::
@@ -823,9 +823,9 @@ for (name, price) in prices {
 ```
 var visited: Set&lt;String&gt; = ["北京", "上海"]
 visited.insert("广州")
-visited.insert("广州")            // 重复的自动忽略
-print(visited.count)              // 3
-print(visited.contains("上海"))   // true
+visited.insert("广州") // 重复的自动忽略
+print(visited.count) // 3
+print(visited.contains("上海")) // true
 ```
 :::
 
@@ -851,7 +851,7 @@ let records = [("餐饮", 25.5), ("交通", 6.0), ("餐饮", 12.0), ("娱乐", 4
 
 var byCategory: [String: Double] = [:]
 for (category, amount) in records {
-    byCategory[category, default: 0] += amount
+ byCategory[category, default: 0] += amount
 }
 print(byCategory)
 // ["餐饮": 37.5, "交通": 6.0, "娱乐": 45.0]
@@ -873,11 +873,11 @@ print(byCategory)
 
 ```
 let word = "记账"
-print(word.count)                    // 2 个字符
+print(word.count) // 2 个字符
 for ch in word {
-    print(ch)                        // 逐个字符打印
+ print(ch) // 逐个字符打印
 }
-let upper = "hello".map { $0 }       // 集合操作照样能用
+let upper = "hello".map { $0 } // 集合操作照样能用
 print(upper)
 ```
 :::
@@ -895,23 +895,23 @@ print(upper)
 
 ```
 enum OrderStatus {
-    case placed        // 已下单
-    case cooking       // 商家制作中
-    case delivering    // 配送中
-    case done          // 已完成
+ case placed // 已下单
+ case cooking // 商家制作中
+ case delivering // 配送中
+ case done // 已完成
 }
 
 let status: OrderStatus = .delivering
 
 switch status {
 case .placed:
-    print("等待商家接单")
+ print("等待商家接单")
 case .cooking:
-    print("商家正在做")
+ print("商家正在做")
 case .delivering:
-    print("骑手在路上")
+ print("骑手在路上")
 case .done:
-    print("订单完成")
+ print("订单完成")
 }
 // 少写任何一个 case，编译报错——穷尽检查
 ```
@@ -930,20 +930,20 @@ Swift 枚举的杀手锏是关联值：每个 case 可以随身携带数据。
 
 ```
 enum Weather {
-    case sunny              // 晴：没什么可带
-    case rainy(Int)         // 雨：带上降水量
-    case cloudy             // 阴
+ case sunny // 晴：没什么可带
+ case rainy(Int) // 雨：带上降水量
+ case cloudy // 阴
 }
 
 let today = Weather.rainy(15)
 
 switch today {
 case .sunny:
-    print("记得防晒")
+ print("记得防晒")
 case .rainy(let mm):
-    print("降水 \(mm) 毫米，出门带伞")
+ print("降水 \(mm) 毫米，出门带伞")
 case .cloudy:
-    print("多云，体感舒适")
+ print("多云，体感舒适")
 }
 ```
 :::
@@ -961,14 +961,14 @@ case .cloudy:
 
 ```
 enum Weekday: Int {
-    case mon = 1, tue, wed, thu, fri, sat, sun
+ case mon = 1, tue, wed, thu, fri, sat, sun
 }
-print(Weekday.fri.rawValue)    // 5，后面的自动递增
+print(Weekday.fri.rawValue) // 5，后面的自动递增
 
 enum Direction: String {
-    case up = "上", down = "下"
+ case up = "上", down = "下"
 }
-print(Direction.up.rawValue)   // 上
+print(Direction.up.rawValue) // 上
 ```
 :::
 
@@ -985,22 +985,22 @@ print(Direction.up.rawValue)   // 上
 let score = 85
 switch score {
 case 90...100:
-    print("优秀")
+ print("优秀")
 case 60..<90:
-    print("及格")
+ print("及格")
 case 0..<60:
-    print("补考预备")
+ print("补考预备")
 default:
-    print("分数不对劲")
+ print("分数不对劲")
 }
 
 // 多个值共用一个 case，用逗号隔开：
 let letter = "a"
 switch letter {
 case "a", "e", "i", "o", "u":
-    print("元音")
+ print("元音")
 default:
-    print("辅音")
+ print("辅音")
 }
 ```
 :::
@@ -1011,7 +1011,7 @@ default:
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 字符串会拼错，枚举不会。让"可能的取值"列在代码里、由编译器看守，用户就少看到一半的诡异 bug。
@@ -1028,24 +1028,24 @@ Optional 管"有没有"，错误处理管"过程中的失败"。经典场景：�
 
 ```
 enum LoginError: Error {
-    case wrongPassword     // 密码不合法
-    case accountLocked     // 账号被锁
+ case wrongPassword // 密码不合法
+ case accountLocked // 账号被锁
 }
 
 func login(name: String, password: String) throws -> String {
-    guard password.count >= 6 else {
-        throw LoginError.wrongPassword    // 抛出一个"事故"
-    }
-    return "欢迎回来，\(name)"
+ guard password.count >= 6 else {
+ throw LoginError.wrongPassword // 抛出一个"事故"
+ }
+ return "欢迎回来，\(name)"
 }
 
 do {
-    let message = try login(name: "张三", password: "123")
-    print(message)
+ let message = try login(name: "张三", password: "123")
+ print(message)
 } catch LoginError.accountLocked {
-    print("账号被锁了，请联系客服")
+ print("账号被锁了，请联系客服")
 } catch {
-    print("登录失败：\(error)")          // 兜底 catch
+ print("登录失败：\(error)") // 兜底 catch
 }
 ```
 :::
@@ -1075,7 +1075,7 @@ try? 的哲学是"失败也正常，没有就没有"：比如读缓存文件，�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别用空 catch 装没事
+避坑提醒：别用空 catch 装没事
 
 {class="mt-1"}
 catch 块里什么都不写，等于把事故报告撕掉假装无事发生，之后界面空白、数据没存上，你对着一片正常运行的假象查半小时。哪怕暂时不知道怎么处理，也先 <code class="inline">print(error)</code> 留个证据——半小时后你还能看出错误长什么样，吞掉就什么都没有了。
@@ -1106,17 +1106,17 @@ catch 块里什么都不写，等于把事故报告撕掉假装无事发生，�
 
 ```
 extension Double {
-    var yuan: String {
-        "￥\(self)"
-    }
+ var yuan: String {
+ "￥\(self)"
+ }
 }
 
 extension Int {
-    var squared: Int { self * self }
+ var squared: Int { self * self }
 }
 
-print(25.5.yuan)     // ￥25.5
-print(7.squared)     // 49
+print(25.5.yuan) // ￥25.5
+print(7.squared) // 49
 ```
 :::
 
@@ -1140,21 +1140,21 @@ extension 里可以加计算属性（上面是）、加方法，还能让类型�
 ```
 // 把一段逻辑存进变量：类型是 (Int, Int) -> Int
 let operation: (Int, Int) -> Int = { $0 + $1 }
-print(operation(3, 5))          // 8
+print(operation(3, 5)) // 8
 
 // 函数当参数传：把"怎么处理"交给调用的人
 func apply(_ x: Int, _ f: (Int) -> Int) -> Int {
-    f(x)
+ f(x)
 }
-print(apply(10) { $0 * 2 })     // 20
-print(apply(10) { $0 + 1 })     // 11——同一个 apply，不同的逻辑
+print(apply(10) { $0 * 2 }) // 20
+print(apply(10) { $0 + 1 }) // 11——同一个 apply，不同的逻辑
 
 // 函数当返回值带出：造一台"逻辑生成器"
 func makeGreeter() -> (String) -> String {
-    return { "你好，\($0)！" }
+ return { "你好，\($0)！" }
 }
 let greet = makeGreeter()
-print(greet("张三"))            // 你好，张三！
+print(greet("张三")) // 你好，张三！
 ```
 :::
 
@@ -1260,7 +1260,7 @@ Swift ↔ Kotlin 对照速查
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：让编程智能当陪练，别让它代笔
+小贴士：让编程智能当陪练，别让它代笔
 
 {class="mt-1"}
 Xcode 26 的编程智能能陪你练：把本章代码贴给它，让它"故意改坏一处，我来找茬"，或者让它出题你答题。没装 Xcode 的同学，用通用 AI 聊天工具当陪练也行。但有一条纪律：练习阶段的代码必须自己敲，让 AI 代笔，等于花钱请人替你跑步。
@@ -1279,22 +1279,22 @@ Xcode 26 的编程智能能陪你练：把本章代码贴给它，让它"故意�
 
 ```
 enum Category: String {
-    case food = "餐饮"
-    case transport = "交通"
-    case play = "娱乐"
+ case food = "餐饮"
+ case transport = "交通"
+ case play = "娱乐"
 }
 
 struct Expense {
-    let name: String
-    let amount: Double
-    let category: Category
+ let name: String
+ let amount: Double
+ let category: Category
 }
 
 let expenses = [
-    Expense(name: "午饭", amount: 25.5, category: .food),
-    Expense(name: "地铁", amount: 6.0, category: .transport),
-    Expense(name: "电影", amount: 45.0, category: .play),
-    Expense(name: "咖啡", amount: 18.0, category: .food),
+ Expense(name: "午饭", amount: 25.5, category: .food),
+ Expense(name: "地铁", amount: 6.0, category: .transport),
+ Expense(name: "电影", amount: 45.0, category: .play),
+ Expense(name: "咖啡", amount: 18.0, category: .food),
 ]
 ```
 :::
@@ -1308,9 +1308,9 @@ let expenses = [
 
 ```
 func total(of list: [Expense], in category: Category? = nil) -> Double {
-    list
-        .filter { category == nil || $0.category == category }
-        .reduce(0) { $0 + $1.amount }
+ list
+ .filter { category == nil || $0.category == category }
+ .reduce(0) { $0 + $1.amount }
 }
 
 print("本月总计：\(total(of: expenses).yuan)")
@@ -1328,7 +1328,7 @@ print("餐饮小计：\(total(of: expenses, in: .food).yuan)")
 ```
 let biggest = expenses.max(by: { $0.amount < $1.amount })
 if let biggest = biggest {
-    print("最大一笔：\(biggest.name)，\(biggest.amount.yuan)")
+ print("最大一笔：\(biggest.name)，\(biggest.amount.yuan)")
 }
 // 最大一笔：电影，￥45.0
 ```
@@ -1343,8 +1343,8 @@ if let biggest = biggest {
 
 ```
 func report(_ list: [Expense]) -> String {
-    let lines = list.map { "\($0.name)：\($0.amount.yuan)" }
-    return "共 \(list.count) 笔\n" + lines.joined(separator: "\n")
+ let lines = list.map { "\($0.name)：\($0.amount.yuan)" }
+ return "共 \(list.count) 笔\n" + lines.joined(separator: "\n")
 }
 print(report(expenses))
 ```
@@ -1381,7 +1381,7 @@ print(report(expenses))
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：读报错的三步固定动作
+小贴士：读报错的三步固定动作
 
 {class="mt-1"}
 第一步，只读第一条报错，后面的多半是连锁反应；第二步，双击跳到出事行，看那一行和它上一行；第三步，看不懂就把报错原文复制去搜：英文原文是检索关键词，比中文转述准得多——搜报错原文时，Stack Overflow 和官方论坛的旧帖就在结果第一页。三步走完还没头绪，就去第 60 章第十一节的门诊表对号入座，那里专治环境类报错，和本节的语言类报错正好互补。
@@ -1427,7 +1427,7 @@ print(report(expenses))
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - let 优先，var 慎用；类型自动推断，冒号后显式声明也行
 - 可选值是 Swift 的灵魂：可能为空必须处理，if let / ?? 是护身符，! 是高危操作

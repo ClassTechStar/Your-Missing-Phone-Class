@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Σημειώσεις
+Σημειώσεις
 
 {class="mt-1"}
 Οι ρυθμίσεις της λειτουργίας προγραμματιστή μπορεί να επηρεάσουν τη σταθερότητα του συστήματος, μην αλλάζετε ό, τι δεν καταλαβαίνετε. Αφού ενεργοποιήσετε USB debugging, προσέξτε όταν συνδέεστε με υπολογιστή, μην συνδέεστε σε μη αξιόπιστους υπολογιστές.
@@ -57,7 +57,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Γνώση: Γιατί οι κατασκευαστές βάζουν αυτόν τον διακόπτη
+Γνώση: Γιατί οι κατασκευαστές βάζουν αυτόν τον διακόπτη
 
 {class="mt-1"}
 ,Δικαίωμα Σύστημα.Google Προγραμματιστής "OEM Ξεκλείδωμα","Χρήστης"επιβεβαίωση.BL, OEM Ξεκλείδωμα απενεργοποίηση, Flash.
@@ -95,7 +95,7 @@ ADB Android Debug Bridge(Debug), Google επίσημο Εντολή, USB Wi-Fi .
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Μην αγνοείτε drivers και popup εξουσιοδότησης
+Μην αγνοείτε drivers και popup εξουσιοδότησης
 
 {class="mt-1"}
 Χρήστες Windows αν <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> εμφάνιση "unauthorized" Συσκευή, Driver"επιτρέπεται "./Μάρκα"USBDriver"""Driver; Mac Linux . Καλώδιο δεδομένων.
@@ -124,7 +124,7 @@ ADB Android Debug Bridge(Debug), Google επίσημο Εντολή, USB Wi-Fi .
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Ποτέ μην διαγράφετε κρίσιμα πακέτα συστήματος
+Ποτέ μην διαγράφετε κρίσιμα πακέτα συστήματος
 
 {class="mt-1"}
 "pm uninstall --user 0" Root Ασφάλεια, Σύστημα Εφαρμογή( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> Γραμμή κατάστασης,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> Τηλέφωνο,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> Ρυθμίσεις)Σύστημα, . Google "". Συμβουλές, επιβεβαίωση.
@@ -132,7 +132,7 @@ ADB Android Debug Bridge(Debug), Google επίσημο Εντολή, USB Wi-Fi .
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Γνώση: Τι σημαίνει --user 0
+Γνώση: Τι σημαίνει --user 0
 
 {class="mt-1"}
 4.2 Χρήστης, Χρήστης ID( 0, Χρήστης 10 ).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> "απεγκατάσταση ",Σύστημα APK Αρχείο, εμφάνιση. Root,,Σύστημα Αρχείο,"Χρήστηςρύθμιση". Root απεγκατάσταση: Root απεγκατάσταση Σύστημα, Όλοι οι χρήστες; ADB απεγκατάσταση "Χρήστης απόκρυψη".
@@ -159,7 +159,7 @@ Root Δικαίωμα Linux Χρήστης(/Πίνακας περιεχομέν�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Σοβαρή προειδοποίηση
+Σοβαρή προειδοποίηση
 
 {class="mt-1"}
 Η διαδικασία Root έχει ρίσκο, μπορεί να κάνει το κινητό "τούβλο". Αν είστε αρχάριος, ενημερωθείτε επαρκώς και έχετε πλήρες αντίγραφο. Διαβάστε προσεκτικά τον οδηγό και επιβεβαιώστε το μοντέλο και την έκδοση συστήματος.
@@ -198,7 +198,7 @@ Root App,"απόκρυψη Root "Λύση.Κεντρική ιδέα: Τροπο�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Το παιχνίδι γάτας-ποντικιού δεν τελειώνει ποτέ
+Το παιχνίδι γάτας-ποντικιού δεν τελειώνει ποτέ
 
 {class="mt-1"}
 Google ενημέρωση, App αναβάθμιση Play Integrity .απόκρυψη Λύση. / App(καθημερινό,),: Root, BL .απόκρυψη Λύση " Root + Root"ρύθμιση.
@@ -213,7 +213,7 @@ Google ενημέρωση, App αναβάθμιση Play Integrity .απόκρυ
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκιμή: ενεργοποιήστε λειτουργία προγραμματιστή και ρυθμίστε ταχύτητα κινουμένων σχεδίων
+Δοκιμή: ενεργοποιήστε λειτουργία προγραμματιστή και ρυθμίστε ταχύτητα κινουμένων σχεδίων
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Μεταβείτε στα Ρυθμίσεις &gt; Σχετικά με το τηλέφωνο.

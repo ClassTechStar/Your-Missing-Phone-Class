@@ -58,7 +58,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>嚟試嚇：制定你嘅《個人數字設備使用服務條款》
+嚟試嚇：制定你嘅《個人數字設備使用服務條款》
 
 {class="mt-1"}
 為你同你嘅手機（以及未來嘅AR眼鏡、AI助手）寫一份簡單嘅「服務條款」，嚟定義你哋嘅關係。例如：
@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小結
+本章小結
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro與AR眼鏡係手機之外嘅新計算入口，但短期難以取代手機

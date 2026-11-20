@@ -36,35 +36,35 @@ El protocolo es el «idioma»; el ecosistema, el «círculo». Aunque todo sea c
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ecosistema</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ventajas</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Puntos débiles</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Para quién</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privacidad de las más fuertes (procesamiento principalmente local) e integración fluida con iPhone/Siri/Atajos</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menos dispositivos y más caros; necesita un HomePod o un Apple TV como hub</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios con dispositivos Apple en toda la casa que valoran la privacidad y la experiencia</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El catálogo más amplio, la mejor relación calidad-precio y un asistente Xiao AI muy práctico</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecosistema bastante cerrado, muchos datos en la nube y bastantes anuncios</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios primerizos con presupuesto ajustado que quieren equipar toda la casa en un solo sitio</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Traslado sin costuras entre móviles/tabletas/relojes con HarmonyOS y un catálogo que crece rápido</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pocos dispositivos disponibles fuera de China; el ecosistema aún va a la zaga</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios de móviles Huawei que valoran la colaboración multi-dispositivo del «Super Terminal»</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ecosistema</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ventajas</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Puntos débiles</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Para quién</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privacidad de las más fuertes (procesamiento principalmente local) e integración fluida con iPhone/Siri/Atajos</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menos dispositivos y más caros; necesita un HomePod o un Apple TV como hub</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios con dispositivos Apple en toda la casa que valoran la privacidad y la experiencia</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El catálogo más amplio, la mejor relación calidad-precio y un asistente Xiao AI muy práctico</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecosistema bastante cerrado, muchos datos en la nube y bastantes anuncios</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios primerizos con presupuesto ajustado que quieren equipar toda la casa en un solo sitio</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Traslado sin costuras entre móviles/tabletas/relojes con HarmonyOS y un catálogo que crece rápido</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pocos dispositivos disponibles fuera de China; el ecosistema aún va a la zaga</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios de móviles Huawei que valoran la colaboración multi-dispositivo del «Super Terminal»</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

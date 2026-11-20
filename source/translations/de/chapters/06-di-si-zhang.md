@@ -56,7 +56,7 @@ Apps aus Webseiten oder unbekannten Links können Viren einschleppen, Privatsph�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>Was sind „elektronische Parasiten“?
+Was sind „elektronische Parasiten“?
 
 {class="mt-1"}
 Gemeint sind <strong>„geknackte“ Software mit eingebautem Trojaner</strong>– du glaubst, Geld zu sparen, und bist längst reingefallen. Typische Formen:
@@ -96,20 +96,20 @@ Apps beantragen Rechte (Kontakte, Standort) mal zu Recht (Karten-App braucht Sta
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Berechtigungsoptionen</strong>: „Immer erlauben“, „Nur bei Verwendung erlauben“, „Nicht erlauben“, „Jedes Mal fragen“.</li>
-                        <li><strong>Leitprinzipien</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Minimierung: nur geben, wenn nötig.</li>
-                                <li>Nachkontrolle: regelmäßig in den Berechtigungseinstellungen sehen, wer „über seine Rechte“ hinausgeht.</li>
-                                <li>Situationabhängig: Der Taxi-App den Standort nur während der Nutzung geben.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Berechtigungsoptionen</strong>: „Immer erlauben“, „Nur bei Verwendung erlauben“, „Nicht erlauben“, „Jedes Mal fragen“.</li>
+ <li><strong>Leitprinzipien</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Minimierung: nur geben, wenn nötig.</li>
+ <li>Nachkontrolle: regelmäßig in den Berechtigungseinstellungen sehen, wer „über seine Rechte“ hinausgeht.</li>
+ <li>Situationabhängig: Der Taxi-App den Standort nur während der Nutzung geben.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Berechtigungen mit Fokus überwachen
+Berechtigungen mit Fokus überwachen
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Kontakte/SMS: könnten für Spam-SMS missbraucht werden.
@@ -152,16 +152,16 @@ Eine APK (Android Package Kit) ist im Kern ein ZIP-Archiv. Nach dem Entpacken si
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Android-Signatur</strong>: Der Entwickler signiert das APK mit einem privaten Schlüssel; bei der Installation verifiziert das System mit dem öffentlichen Schlüssel. Wurde das APK manipuliert (z. B. mit einem Virus infiziert), wird die Signatur ungültig und das System verweigert die Installation. Google Play verlangt zudem App Signing, bei dem Google den Signaturschlüssel verwahrt und die App-Sicherheit zusätzlich schützt.</li>
-                        <li><strong>iOS-Signatur</strong>: Apples Prüfung ist noch strenger. Jedes IPA muss mit einem von Apple ausgestellten Zertifikat signiert sein, sonst lässt es sich nicht installieren. Deshalb können iOS-Apps nur aus dem App Store oder über Unternehmenszertifikate installiert werden. Apps mit Unternehmenszertifikat haben eine begrenzte Gültigkeit und Apple kann sie jederzeit widerrufen.</li>
-                        <li><strong>Wozu die Signatur dient</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Herkunft prüfen: bestätigt, dass die App wirklich vom angegebenen Entwickler stammt.</li>
-                                <li>Integrität prüfen: stellt sicher, dass die App unterwegs nicht manipuliert wurde.</li>
-                                <li>Fälschung verhindern: Eine Schadsoftware kann sich nicht als andere App ausgeben.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Android-Signatur</strong>: Der Entwickler signiert das APK mit einem privaten Schlüssel; bei der Installation verifiziert das System mit dem öffentlichen Schlüssel. Wurde das APK manipuliert (z. B. mit einem Virus infiziert), wird die Signatur ungültig und das System verweigert die Installation. Google Play verlangt zudem App Signing, bei dem Google den Signaturschlüssel verwahrt und die App-Sicherheit zusätzlich schützt.</li>
+ <li><strong>iOS-Signatur</strong>: Apples Prüfung ist noch strenger. Jedes IPA muss mit einem von Apple ausgestellten Zertifikat signiert sein, sonst lässt es sich nicht installieren. Deshalb können iOS-Apps nur aus dem App Store oder über Unternehmenszertifikate installiert werden. Apps mit Unternehmenszertifikat haben eine begrenzte Gültigkeit und Apple kann sie jederzeit widerrufen.</li>
+ <li><strong>Wozu die Signatur dient</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Herkunft prüfen: bestätigt, dass die App wirklich vom angegebenen Entwickler stammt.</li>
+ <li>Integrität prüfen: stellt sicher, dass die App unterwegs nicht manipuliert wurde.</li>
+ <li>Fälschung verhindern: Eine Schadsoftware kann sich nicht als andere App ausgeben.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. Paketgröße und -optimierung
@@ -180,7 +180,7 @@ Quelle verifizieren: Bestätigen, dass die App tatsächlich vom angeblichen Entw
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Wähle eine häufig verwendete App (z. B. Social Media, Shopping, Werkzeug), öffne die App-Berechtigungsverwaltung in [Einstellungen], prüfe jeden Eintrag und deaktiviere unnötige sensible Berechtigungen oder ändere sie zu „Nur bei Verwendung erlauben".
+Wähle eine häufig verwendete App (z. B. Social Media, Shopping, Werkzeug), öffne die App-Berechtigungsverwaltung in [Einstellungen], prüfe jeden Eintrag und deaktiviere unnötige sensible Berechtigungen oder ändere sie zu „Nur bei Verwendung erlauben".
 
 {class="mt-1"}
 Kapitel 5: Das Smartphone besser verstehen lassen – Grundeinstellungen
@@ -188,7 +188,7 @@ Kapitel 5: Das Smartphone besser verstehen lassen – Grundeinstellungen
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Ein paar Minuten Einstellungen verbessern das Erlebnis enorm. Diese Einstellungen sind wie das „Stimmen" des Smartphones, damit es besser zu deinen Gewohnheiten passt.
+Ein paar Minuten Einstellungen verbessern das Erlebnis enorm. Diese Einstellungen sind wie das „Stimmen" des Smartphones, damit es besser zu deinen Gewohnheiten passt.
 
 {class="mt-1"}
 Eins. Ton und Vibration

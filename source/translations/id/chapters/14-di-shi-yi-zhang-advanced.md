@@ -102,7 +102,7 @@ HDR10
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Shooting harian: 1080P/4K + 30fps + encoding H.265, menyeimbangkan kualitas gambar dan ukuran file.
+Shooting harian: 1080P/4K + 30fps + encoding H.265, menyeimbangkan kualitas gambar dan ukuran file.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Shooting olahraga: 1080P/4K + 60fps, memastikan kelancaran.
@@ -113,7 +113,7 @@ HDR10
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Buka aplikasi kamera, beralih ke mode video.
+Buka aplikasi kamera, beralih ke mode video.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Lihat opsi resolusi dan frame rate, coba berbagai kombinasi.
@@ -241,7 +241,7 @@ Selain foto sehari-hari, di ponsel ada beberapa mode khusus, jika digunakan deng
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Saran praktis fotografi statis
+Saran praktis fotografi statis
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Foto harian: HEIF/JPEG default sudah cukup, file kecil, kualitas memadai.
@@ -253,7 +253,7 @@ Selain foto sehari-hari, di ponsel ada beberapa mode khusus, jika digunakan deng
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Coba sendiri: Pahami kemampuan kamera Anda
+Coba sendiri: Pahami kemampuan kamera Anda
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Cek apakah ponsel Anda mendukung syuting RAW (Settings → Camera → Format), coba aktifkan dan ambil satu foto, bandingkan ukuran file JPEG dan RAW skenario yang sama.

@@ -98,7 +98,7 @@ Die Qualität der KI-Antworten hängt stark davon ab, wie du „fragst“. Diese
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Warum ein Framework?
+Warum ein Framework?
 
 {class="mt-1"}
 Viele nutzen KI wie Baidu – sie tippen ein paar Stichworte ein. Aber KI ist keine Suchmaschine, sondern ein Sprachmodell, das nach dem Lesen und Verstehen antwortet.<strong>Gib ihr mehr Kontext, sage klar, was du willst, und halte sie davon ab, vom Thema abzudriften</strong>– dann liefert sie präzise Ergebnisse. Das Framework übersetzt das „Wie soll die gute Antwort aussehen" in deinem Kopf in Anweisungen, die die KI versteht.
@@ -198,39 +198,39 @@ Einen guten Prompt zu schreiben, ist keine einmalige Sache –<strong>nach dem S
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Symptom</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Lösung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Antwort zu allgemein, unbrauchbar</td>
-                                    <td class="border border-gray-300 px-3 py-2">Hintergrund ergänzen (wer du bist, in welchem Szenario)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Antwort zu akademisch / zu bürokratisch</td>
-                                    <td class="border border-gray-300 px-3 py-2">Tonfall-Einschränkung ergänzen + Liste abgelehnter „Phrasen"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Antwort am Thema vorbei / Frage nicht beantwortet</td>
-                                    <td class="border border-gray-300 px-3 py-2">Aufgabe mit Verben neu formulieren und verlangen: „nur das beantworten" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Antwort zu lang, nicht zu Ende lesbar</td>
-                                    <td class="border border-gray-300 px-3 py-2">Hart Wortzahl begrenzen (z. B. unter 200 Wörter)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">KI redet ernsthaft daher</td>
-                                    <td class="border border-gray-300 px-3 py-2">„Wenn unsicher, markiere als ‚ich bin unsicher'" + wichtige Fakten selbst prüfen</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Erste Version nicht zufriedenstellend</td>
-                                    <td class="border border-gray-300 px-3 py-2">Nicht neu schreiben – an den Original-Prompt anhängen: „nochmal überarbeiten"</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Symptom</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Lösung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Antwort zu allgemein, unbrauchbar</td>
+ <td class="border border-gray-300 px-3 py-2">Hintergrund ergänzen (wer du bist, in welchem Szenario)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Antwort zu akademisch / zu bürokratisch</td>
+ <td class="border border-gray-300 px-3 py-2">Tonfall-Einschränkung ergänzen + Liste abgelehnter „Phrasen"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Antwort am Thema vorbei / Frage nicht beantwortet</td>
+ <td class="border border-gray-300 px-3 py-2">Aufgabe mit Verben neu formulieren und verlangen: „nur das beantworten" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Antwort zu lang, nicht zu Ende lesbar</td>
+ <td class="border border-gray-300 px-3 py-2">Hart Wortzahl begrenzen (z. B. unter 200 Wörter)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">KI redet ernsthaft daher</td>
+ <td class="border border-gray-300 px-3 py-2">„Wenn unsicher, markiere als ‚ich bin unsicher'" + wichtige Fakten selbst prüfen</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Erste Version nicht zufriedenstellend</td>
+ <td class="border border-gray-300 px-3 py-2">Nicht neu schreiben – an den Original-Prompt anhängen: „nochmal überarbeiten"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Einen guten Prompt zu schreiben, ist keine einmalige Sache –<strong>nach dem S
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Szenario 1: Lebens-Assistent (Frühstücks-Kombinations-Vorschläge)
+Szenario 1: Lebens-Assistent (Frühstücks-Kombinations-Vorschläge)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -253,7 +253,7 @@ Du bist ein Frühstücks-Blogger, der sich auf nährstoffreiche Kombinationen ve
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Szenario 2: Lernhilfe (Vorbereitung auf die Englisch-CET-6-Prüfung)
+Szenario 2: Lernhilfe (Vorbereitung auf die Englisch-CET-6-Prüfung)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -267,7 +267,7 @@ Du bist ein <strong>erfahrener Englisch-CET-6-Lehrer</strong>(Rolle). Ich bin ei
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Szenario 3: Arbeitseffizienz (Besprechungsprotokoll aufbereiten)
+Szenario 3: Arbeitseffizienz (Besprechungsprotokoll aufbereiten)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -281,7 +281,7 @@ Du bist ein <strong>erfahrener Verwaltungsassistent</strong>(Rolle). Ich habe ge
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Fortgeschrittene Anwendung: Lass die KI zu deinem "persönlichen Assistenten" werden
+Fortgeschrittene Anwendung: Lass die KI zu deinem "persönlichen Assistenten" werden
 
 {class="mt-1"}
 System-Prompt
@@ -305,7 +305,7 @@ Sieben. Grenzen und Herausforderungen der KI: Wachsame Urteilskraft bewahren
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>KI-Nutzungstipps
+KI-Nutzungstipps
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Von der KI erstellte Inhalte können ungenau sein ("Halluzination"); wichtige Informationen müssen überprüft werden.
@@ -317,7 +317,7 @@ Sieben. Grenzen und Herausforderungen der KI: Wachsame Urteilskraft bewahren
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Herausforderung: Drei KI-Praxisaufgaben
+Herausforderung: Drei KI-Praxisaufgaben
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Herausforderung 1: Komplexe Anweisung</strong>: Sage zum Sprachassistenten: "Erinnere mich morgen früh um 7 Uhr an den Regenschirm und verschiebe den heutigen 14-Uhr-Kalendereintrag auf 16 Uhr." Prüfe, ob er mehrere Schritte auf einmal ausführen kann.
@@ -327,7 +327,7 @@ Sieben. Grenzen und Herausforderungen der KI: Wachsame Urteilskraft bewahren
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Fallbeispiel 2: Vollstaendiger Ablauf der Datenmigration beim Geraetewechsel
+Fallbeispiel 2: Vollstaendiger Ablauf der Datenmigration beim Geraetewechsel
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Szenario</strong>: iPhone 13 → Xiaomi 15 – markenuebergreifender Wechsel.

@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "דני"        // let: קבוע (מומלץ כברירת מחדל)
-var age = 18             // var: משתנה (אפשר לשנותו אחר כך)
+let name = "דני" // let: קבוע (מומלץ כברירת מחדל)
+var age = 18 // var: משתנה (אפשר לשנותו אחר כך)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var אפשר לשנות
-// name = "נועה"         // <i class="fas fa-times-circle mr-1"></i> let לא ניתן לשינוי, שגיאת קומפילציה
+age = 19 // var אפשר לשנות
+// name = "נועה" // let לא ניתן לשינוי, שגיאת קומפילציה
 
-let score: Int = 100     // אפשר גם לציין את הטיפוס במפורש
-let pi = 3.14            // גם בלי לכתוב אותו הוא יוסק אוטומטית
+let score: Int = 100 // אפשר גם לציין את הטיפוס במפורש
+let pi = 3.14 // גם בלי לכתוב אותו הוא יוסק אוטומטית
 
-print("שלום \(name)")   // שילוב מחרוזות: לוכסן אחורי + סוגריים
+print("שלום \(name)") // שילוב מחרוזות: לוכסן אחורי + סוגריים
 ```
 :::
 
@@ -64,20 +64,20 @@ print("שלום \(name)")   // שילוב מחרוזות: לוכסן אחורי 
 :::
 
 ```
-var name: String = "דני"   // טיפוס רגיל: לעולם לא יכול להיות nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> שגיאת קומפילציה: עוצרת אותך מיד
+var name: String = "דני" // טיפוס רגיל: לעולם לא יכול להיות nil
+// name = nil // שגיאת קומפילציה: עוצרת אותך מיד
 
-var nickname: String? = nil  // מוסיף סימן שאלה: מאפשר nil (ערך optional)
+var nickname: String? = nil // מוסיף סימן שאלה: מאפשר nil (ערך optional)
 nickname = "טומי"
 
 // עם ערכי optional חובה "לפתוח" אותם:
-if let n = nickname {        // if let: פתיחה בטוחה
-    print("שלום \(n)")
+if let n = nickname { // if let: פתיחה בטוחה
+ print("שלום \(n)")
 } else {
-    print("עוד אין כינוי")
+ print("עוד אין כינוי")
 }
 
-let len = nickname?.count ?? 0   // ?? ערך ברירת מחדל (אופרטור coalescing)
+let len = nickname?.count ?? 0 // ?? ערך ברירת מחדל (אופרטור coalescing)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // פונקציה: השם בקדמת; פרמטרים וטיפוס ההחזרה מאחור
 func greet(name: String) -> String {
-    return "שלום, \(name)!"
+ return "שלום, \(name)!"
 }
-print(greet(name: "דני"))     // בקריאה, עם שם הפרמטר
+print(greet(name: "דני")) // בקריאה, עם שם הפרמטר
 
 // closure: מוגדרת במקום, קלילה וישירה
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = האיבר הנוכחי
+let doubled = numbers.map { $0 * 2 } // $0 = האיבר הנוכחי
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // סינון
+let big = numbers.filter { $0 > 2 } // סינון
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ let big = numbers.filter { $0 > 2 }    // סינון
 ```
 // ה-struct: קופסת הנתונים
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // ל-struct יש "memberwise initializer" מובנה: אפשר ליצור ישירות
+ // ל-struct יש "memberwise initializer" מובנה: אפשר ליצור ישירות
 }
 let r = Record(amount: 25.5, category: "אוכל", date: Date())
 
 // פרוטוקול: הסכם על "אילו יכולות חייבות להיות"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // לאמץ את הפרוטוקול = להתחייב למלא את דרישותיו
+struct Record: Identifiable { ... } // לאמץ את הפרוטוקול = להתחייב למלא את דרישותיו
 ```
 :::
 

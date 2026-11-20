@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第 101 章看懂短剧市场与形态 → 第 102 章剧本结构（钩子/反转/卡点）→ 第 103 章手机竖屏拍摄实操 → 第 104 章竖屏剪辑与节奏包装 → 第 105 章平台政策与变现路径。

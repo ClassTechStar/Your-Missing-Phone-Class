@@ -91,7 +91,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 先用现成形象把第一条片子发出去，再考虑换平台。"哪家数字人最强"这个问题没有标准答案，但"我发没发出第一条"有，发出去的才算数。
@@ -463,7 +463,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：这些事千万别做
+避坑提醒：这些事千万别做
 
 {class="mt-1"}
 ① <strong>不克隆他人</strong>：用别人的脸/声音生成内容是侵权甚至违法。克隆自己也要在授权平台内做；② <strong>不冒充真人</strong>：以数字人冒充真人专家带货/导诊/理财，是监管重点打击对象，也别让观众误以为是本人出镜；③ <strong>按规定标识</strong>：AI 合成内容按规定添加显式/隐式标识，平台也普遍要求声明，标识不是束缚，是护身符。
@@ -843,7 +843,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：跑通第一条数字人口播
+来动手：跑通第一条数字人口播
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 写 150 字知识口播脚本，改成口语短句，数字与多音字标好读法。
@@ -853,7 +853,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 起步用平台授权形象，进阶再做自己的分身
 - 脚本是人话、文稿先校对、背景是实景、中景构图、情感音色

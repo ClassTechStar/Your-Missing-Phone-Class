@@ -22,7 +22,7 @@ kind: conclusion
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>終一個練習
+終一個練習
 
 {class="mt-1"}
 合上這本書，拿起汝之手機，作一件事：<strong>用30秒欲，汝之手機裏有哪三樣東西乃"丟矣將真正心疼"之？</strong>而後，確保彼等爲備份矣。這本書遂值矣。

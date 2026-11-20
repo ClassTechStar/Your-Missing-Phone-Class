@@ -63,46 +63,46 @@ import SwiftData
 // 1. @Model：呢個類自動變成"表"
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. App 入口掛上容器
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // 數據庫就緒
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // 數據庫就緒
+ }
 }
 
 // 3. 視圖入面用 @Query 讀、@Environment 寫
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) 元")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) 元")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // 存
-        try? context.save()   // 落盤
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // 存
+ try? context.save() // 落盤
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ struct RecordListView: View {
 ```
 // JSON: {"name":"北京","main":{"temp":26.5},"weather":[{"description":"晴"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "晴"
+print(result.weather[0].description) // "晴"
 ```
 :::
 
@@ -149,23 +149,23 @@ iOS 上網用系統自帶嘅 URLSession，配合 Swift 嘅 async/await（異步�
 
 ```
 struct WeatherService {
-    // 異步函數：async 標記"我要等一陣"，throws 標記"可能失敗"
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // 異步函數：async 標記"我要等一陣"，throws 標記"可能失敗"
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // 調用處（喺 .task 入面）：
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "北京")
-        // 更新界面……
-    } catch {
-        print("出咗錯：\(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "北京")
+ // 更新界面……
+ } catch {
+ print("出咗錯：\(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ struct WeatherService {
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "網絡斷咗，檢查吓連接？"
-        case .timedOut:               return "請求超時，遲啲再試？"
-        case .cannotFindHost:         return "伺服器搵不到咗"
-        default:                      return "網絡出咗問題：\(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "數據格式唔啱（可能係接口變咗）"
-    }
-    return "出咗錯：\(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "網絡斷咗，檢查吓連接？"
+ case .timedOut: return "請求超時，遲啲再試？"
+ case .cannotFindHost: return "伺服器搵不到咗"
+ default: return "網絡出咗問題：\(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "數據格式唔啱（可能係接口變咗）"
+ }
+ return "出咗錯：\(error.localizedDescription)"
 }
 ```
 :::

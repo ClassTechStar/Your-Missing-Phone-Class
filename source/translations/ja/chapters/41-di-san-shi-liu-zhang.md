@@ -36,35 +36,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">エコシステム</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">強み</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">弱み</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">向いている人</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">プライバシーが最強（ローカル処理が中心）、iPhone／Siri／ショートカットとの連携が滑らか</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスが少なめで高め、HomePod か Apple TV がハブとして必要</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家じゅう Apple 製で、プライバシーと体験を重視するユーザー</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home（Xiaomi）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスが最も豊富でコスパ最高、「Xiao AI（小愛同学）」も使いやすい</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">エコシステムがやや閉じ気味、データはクラウド処理が多く、広告も多め</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">予算が限られていて、家じゅうを一度にそろえたい入門ユーザー</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HUAWEI スマートホーム（HarmonyOS）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS のスマホ／タブレット／ウォッチとシームレスに連携、対応デバイス数も急増中</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外デバイスの対応が少なく、エコシステムはまだ追い上げ中</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HUAWEI スマホのユーザー、「スーパーデバイス」による複数デバイス連携を重視する人</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">エコシステム</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">強み</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">弱み</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">向いている人</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">プライバシーが最強（ローカル処理が中心）、iPhone／Siri／ショートカットとの連携が滑らか</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスが少なめで高め、HomePod か Apple TV がハブとして必要</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家じゅう Apple 製で、プライバシーと体験を重視するユーザー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home（Xiaomi）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">デバイスが最も豊富でコスパ最高、「Xiao AI（小愛同学）」も使いやすい</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">エコシステムがやや閉じ気味、データはクラウド処理が多く、広告も多め</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">予算が限られていて、家じゅうを一度にそろえたい入門ユーザー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HUAWEI スマートホーム（HarmonyOS）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS のスマホ／タブレット／ウォッチとシームレスに連携、対応デバイス数も急増中</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外デバイスの対応が少なく、エコシステムはまだ追い上げ中</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HUAWEI スマホのユーザー、「スーパーデバイス」による複数デバイス連携を重視する人</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

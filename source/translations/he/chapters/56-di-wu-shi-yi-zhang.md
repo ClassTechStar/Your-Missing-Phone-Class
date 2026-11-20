@@ -24,19 +24,19 @@ kind: chapter
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "שלום, $name!")     // "בלוק טקסט"
+ Text(text = "שלום, $name!") // "בלוק טקסט"
 }
 
 // הרכבה מקוננת: בלוקים גדולים שמכילים קטנים
 @Composable
 fun HomeScreen() {
-    Column {                          // מסודרים אנכית
-        Greeting(name = "דני")
-        Greeting(name = "נועה")
-        Button(onClick = { /* מה קורה בלחיצה */ }) {
-            Text("לחץ כאן")
-        }
-    }
+ Column { // מסודרים אנכית
+ Greeting(name = "דני")
+ Greeting(name = "נועה")
+ Button(onClick = { /* מה קורה בלחיצה */ }) {
+ Text("לחץ כאן")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ fun HomeScreen() {
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "זהו טקסט")
-        Button(onClick = { println("נלחץ!") }) {
-            Text("כפתור")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("הקלד משהו") }
-        )
-    }
+ Column {
+ Text(text = "זהו טקסט")
+ Button(onClick = { println("נלחץ!") }) {
+ Text("כפתור")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("הקלד משהו") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("שורה ראשונה")
-    Row {
-        Text("שמאל")
-        Text("ימין")
-    }
-    Box {
-        Text("השכבה התחתונה")
-        Text("תג מרוחף מעל")
-    }
+ Text("שורה ראשונה")
+ Row {
+ Text("שמאל")
+ Text("ימין")
+ }
+ Box {
+ Text("השכבה התחתונה")
+ Text("תג מרוחף מעל")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "טקסט יפה",
-    modifier = Modifier
-        .padding(16.dp)          // ריווח מכל הצדדים
-        .fillMaxWidth()          // ממלא את כל הרוחב
-        .background(Color.Blue)  // צבע רקע
-        .clickable { /* בלחיצה */ }// ניתן ללחיצה
+ text = "טקסט יפה",
+ modifier = Modifier
+ .padding(16.dp) // ריווח מכל הצדדים
+ .fillMaxWidth() // ממלא את כל הרוחב
+ .background(Color.Blue) // צבע רקע
+ .clickable { /* בלחיצה */ }// ניתן ללחיצה
 )
 // קריאות שרשרת: אחת אחרי השנייה, הסדר משנה (קודם padding ואז רקע; הרקע לא כולל את השוליים)
 ```
@@ -150,15 +150,15 @@ Text(
 ```
 @Composable
 fun Counter() {
-    // ‏remember + mutableStateOf: זוכר את הערך המשתנה הזה
-    var count by remember { mutableStateOf(0) }
+ // ‏remember + mutableStateOf: זוכר את הערך המשתנה הזה
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "לחצת $count פעמים")
-        Button(onClick = { count++ }) {   // משנה את המצב
-            Text("לחץ +1")                // הממשק מתרענן אוטומטית
-        }
-    }
+ Column {
+ Text(text = "לחצת $count פעמים")
+ Button(onClick = { count++ }) { // משנה את המצב
+ Text("לחץ +1") // הממשק מתרענן אוטומטית
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> המשתמש לוחץ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> המצב משתנה (count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> המשתמש לוחץ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> המצב משתנה (count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ‏Compose מזהה את השינוי</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> מצייר מחדש את הממשק (recomposition)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ‏Compose מזהה את השינוי</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> מצייר מחדש את הממשק (recomposition)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ fun Counter() {
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // כשהערך משתנה, מעבר חלק לערך היעד
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // כשהערך משתנה, מעבר חלק לערך היעד
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

@@ -67,7 +67,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來試試：搭建你的移動辦公工作流
+來試試：搭建你的移動辦公工作流
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 選定你的主力文件App（WPS或Microsoft 365），登入並關聯雲盤。

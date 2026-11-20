@@ -76,12 +76,12 @@ Un'app leggera di finanza personale con registrazione entrate/uscite, categorie,
 - Build: Vite
 ## Modello dati
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## Piano di sviluppo
 Step 1: funzioni base di registrazione (CRUD)

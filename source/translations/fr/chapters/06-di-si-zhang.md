@@ -56,7 +56,7 @@ Télécharger des applications depuis des pages web ou des liens inconnus peut i
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>Qu'est-ce qu'un « parasite électronique » ?
+Qu'est-ce qu'un « parasite électronique » ?
 
 {class="mt-1"}
 Il s'agit de <strong>logiciels « crackés » implantés de chevaux de Troie</strong>— vous croyez « économiser », en réalité vous « tombez dans le piège ». Formes courantes :
@@ -96,20 +96,20 @@ Les applications demandent des autorisations (comme contacts, localisation) parf
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Options d'autorisation</strong>: « Toujours autoriser », « Autoriser uniquement pendant l'utilisation », « Interdire », « Demander à chaque fois ».</li>
-                        <li><strong>Principes de gestion</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Minimisation : ne pas accorder ce qui n'est pas nécessaire.</li>
-                                <li>Audit a posteriori : vérifiez régulièrement dans les paramètres d'autorisation qui « dépasse ses droits ».</li>
-                                <li>Contextualisation : comme pour une application VTC, n'accordez la localisation que pendant l'utilisation.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Options d'autorisation</strong>: « Toujours autoriser », « Autoriser uniquement pendant l'utilisation », « Interdire », « Demander à chaque fois ».</li>
+ <li><strong>Principes de gestion</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Minimisation : ne pas accorder ce qui n'est pas nécessaire.</li>
+ <li>Audit a posteriori : vérifiez régulièrement dans les paramètres d'autorisation qui « dépasse ses droits ».</li>
+ <li>Contextualisation : comme pour une application VTC, n'accordez la localisation que pendant l'utilisation.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Autorisations à surveiller en priorité
+Autorisations à surveiller en priorité
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Contacts/SMS : peuvent être utilisés pour envoyer des spams.
@@ -152,16 +152,16 @@ Pourquoi les applications téléchargées depuis la boutique officielle sont-ell
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Signature Android</strong>: Le développeur signe l'APK avec une clé privée, le système vérifie avec la clé publique lors de l'installation. Si l'APK est altéré (par exemple avec un virus injecté), la signature devient invalide et le système refuse l'installation. Google Play exige également App Signing, où Google conserve la clé de signature, protégeant davantage la sécurité de l'application.</li>
-                        <li><strong>Signature iOS</strong>: L'examen d'Apple est encore plus strict. Chaque IPA doit avoir une signature avec certificat délivré par Apple, sinon l'installation est impossible. C'est pourquoi iOS ne permet d'installer des applications que depuis l'App Store ou via certificat d'entreprise. Les applications signées avec un certificat d'entreprise ont une durée de validité limitée, et Apple peut les révoquer à tout moment.</li>
-                        <li><strong>Rôle de la signature</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Vérification de l'origine : confirmer que l'application provient bien du développeur déclaré.</li>
-                                <li>Vérification de l'intégrité : s'assurer que l'application n'a pas été altérée pendant le transfert.</li>
-                                <li>Prévention de l'usurpation : une application malveillante ne peut se faire passer pour une autre.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Signature Android</strong>: Le développeur signe l'APK avec une clé privée, le système vérifie avec la clé publique lors de l'installation. Si l'APK est altéré (par exemple avec un virus injecté), la signature devient invalide et le système refuse l'installation. Google Play exige également App Signing, où Google conserve la clé de signature, protégeant davantage la sécurité de l'application.</li>
+ <li><strong>Signature iOS</strong>: L'examen d'Apple est encore plus strict. Chaque IPA doit avoir une signature avec certificat délivré par Apple, sinon l'installation est impossible. C'est pourquoi iOS ne permet d'installer des applications que depuis l'App Store ou via certificat d'entreprise. Les applications signées avec un certificat d'entreprise ont une durée de validité limitée, et Apple peut les révoquer à tout moment.</li>
+ <li><strong>Rôle de la signature</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Vérification de l'origine : confirmer que l'application provient bien du développeur déclaré.</li>
+ <li>Vérification de l'intégrité : s'assurer que l'application n'a pas été altérée pendant le transfert.</li>
+ <li>Prévention de l'usurpation : une application malveillante ne peut se faire passer pour une autre.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. Taille du package d'installation et optimisation
@@ -180,7 +180,7 @@ Moyens d'optimisation des applications modernes :
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Le saviez-vous : pourquoi certaines applications sont-elles si volumineuses ?
+Le saviez-vous : pourquoi certaines applications sont-elles si volumineuses ?
 
 {class="mt-1"}
 Les applications de jeu sont généralement les plus volumineuses, car elles contiennent de nombreuses textures HD, modèles 3D et fichiers audio. Les applications sociales sont également assez lourdes, car elles doivent prendre en charge divers modules fonctionnels. Les applications utilitaires sont généralement les plus légères. Si vous remarquez qu'une application utilitaire est anormalement volumineuse, méfiez-vous de fonctionnalités inutiles intégrées.
@@ -188,7 +188,7 @@ Les applications de jeu sont généralement les plus volumineuses, car elles con
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercice pratique : examiner les autorisations de 3 applications
+Exercice pratique : examiner les autorisations de 3 applications
 
 {class="mt-1"}
 Choisissez 3 applications courantes (comme sociale, shopping, utilitaire), accédez à la page de gestion des autorisations des applications dans [Paramètres], examinez chaque autorisation et désactivez ou modifiez en « Autoriser uniquement pendant l'utilisation » les autorisations sensibles non nécessaires.

@@ -92,7 +92,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事项
+注意事项
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 内存拓展会占用部分机身存储空间，请确保剩余存储不少于20-30GB，否则可能影响系统流畅度。
@@ -113,7 +113,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小结
+小结
 
 {class="mt-1"}
 内存拓展是一项成熟的系统级优化技术，能在硬件不变的前提下提升中低端机型的多任务能力与后台保活率，但它受限于闪存与物理内存的巨大速度鸿沟，并非"万能神药"。是否开启、开多大，需结合自身机型的物理内存大小、闪存规格、剩余存储空间及使用习惯来判断。判断标准其实只有一条：开启后你日常切换应用是否真的更顺，感觉不到，就是不需要。
@@ -121,7 +121,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：看看你的手机有没有内存拓展
+来动手：看看你的手机有没有内存拓展
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开【设置】，搜索"内存扩展"、"内存融合"、"RAM Plus"或"Extended RAM"。
@@ -268,7 +268,7 @@ Android Studio 自带一个叫 Memory Profiler 的工具，就是干这个用的
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 网上有教程教你把 swap 挪到内存卡或外接 U 盘，说是"保护机身闪存"。别照做，外置存储更慢、接触不良风险高，热插拔时正在进行的交换操作还可能损坏数据。省下那点写入量，抵不上一次翻车。
@@ -440,7 +440,7 @@ One UI 功能全、可调项多，但系统自身体量不小，同代硬件上�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 三条延长闪存寿命的日常习惯：剩余空间常年保持两成以上；拓展档位按需选、不贪大；拍摄党定期把素材导去电脑或网盘，别让相册把存储塞满。都是零成本的事，做完就可以把"闪存寿命焦虑"这页翻过去了。
@@ -529,7 +529,7 @@ One UI 功能全、可调项多，但系统自身体量不小，同代硬件上�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 内存拓展能救微信，救不了大模型——AI 要的是快，不是大。
@@ -624,7 +624,7 @@ One UI 功能全、可调项多，但系统自身体量不小，同代硬件上�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：今晚五分钟
+来动手：今晚五分钟
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开设置，搜索"内存扩展/内存融合/RAM Plus"，对照第六节的决策树做一次决定。
@@ -637,7 +637,7 @@ One UI 功能全、可调项多，但系统自身体量不小，同代硬件上�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 内存拓展不是新增硬件，是用软件把闪存"模拟"成 RAM 使用
 - 两种实现：zRAM 压缩（快但容量有限）+ swap 分区（容量大但慢）

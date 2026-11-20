@@ -39,14 +39,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // Tulis: simpan satu nilai
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // Baca: ambil nilainya (Flow memberitahu perubahan secara automatik)
 val themeFlow: Flow<Boolean> = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -65,33 +65,33 @@ Buku perakaunan ada ratusan hingga ribuan rekod, malah perlu pertanyaan dan stat
 // 1. Entity: struktur jadual (satu jadual = satu data class)
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. Dao: antara muka operasi data (tambah, padam, ubah, cari)
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. Database: pemasangan akhir
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -110,16 +110,16 @@ Cuaca, berita, kadar pertukaran… data-data ini tiada dalam telefon, tetapi di 
 ```
 // 1. Takrifkan antara muka: gambarkan permintaan HTTP sebagai fungsi
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. Cipta instance
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. Panggil seperti memanggil fungsi (di dalam coroutine)
 val result = api.getWeather("Beijing")
@@ -156,9 +156,9 @@ Dua penyelesaian penghuraian JSON
 // Tambah anotasi @Serializable pada data class
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // Retrofit memasang Converter berkenaan (contoh dengan sokongan rasmi Retrofit 2.11+):
@@ -180,13 +180,13 @@ suspend dan launch yang berulang di atas datang daripada korutin Kotlin (Corouti
 ```
 // Memulakan coroutine dalam ViewModel
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend: menunggu secara automatik tanpa menghalang
-    // Kemas kini state paparan……
+ val records = dao.getAll().first() // suspend: menunggu secara automatik tanpa menghalang
+ // Kemas kini state paparan……
 }
 
 // Jembalitan kata kunci:
-// suspend   —— "aku perlu tunggu, jangan halangi orang lain"
-// launch    —— "Mula kerja!"
+// suspend —— "aku perlu tunggu, jangan halangi orang lain"
+// launch —— "Mula kerja!"
 // viewModelScope —— "ruang kerja" yang mengikut halaman, berhenti sendiri apabila halaman dimusnahkan
 ```
 :::

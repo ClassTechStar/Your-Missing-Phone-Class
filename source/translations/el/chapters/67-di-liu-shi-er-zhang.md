@@ -25,17 +25,17 @@ kind: chapter
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body: περιγράφει "πώς μοιάζει η οθόνη"
-        VStack {               // κατακόρυφη διάταξη
-            Text("Γεια σου κόσμε!")
-                .font(.largeTitle)      // modifier: μεγάλος τίτλος
-            Button("Πάτα με") {
-                print("Πατήθηκε")
-            }
-            .buttonStyle(.borderedProminent)  // μπλε συμπαγές κουμπί
-        }
-        .padding()
-    }
+ var body: some View { // body: περιγράφει "πώς μοιάζει η οθόνη"
+ VStack { // κατακόρυφη διάταξη
+ Text("Γεια σου κόσμε!")
+ .font(.largeTitle) // modifier: μεγάλος τίτλος
+ Button("Πάτα με") {
+ print("Πατήθηκε")
+ }
+ .buttonStyle(.borderedProminent) // μπλε συμπαγές κουμπί
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -68,17 +68,17 @@ struct ContentView: View {
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("Λογαριασμός")
-        Spacer()                 // Ελαστικός χώρος: σπρώχνει τα δεξιά ως άκρο
-        Text("-25.5 γιουάν").foregroundColor(.red)
-    }
-    Divider()                    // Διαχωριστική γραμμή
-    Text("Σημείωση: μεσημεριανό")
+ HStack {
+ Text("Λογαριασμός")
+ Spacer() // Ελαστικός χώρος: σπρώχνει τα δεξιά ως άκρο
+ Text("-25.5 γιουάν").foregroundColor(.red)
+ }
+ Divider() // Διαχωριστική γραμμή
+ Text("Σημείωση: μεσημεριανό")
 }
-.padding(16)                     // περιθώριο γύρω-γύρω
+.padding(16) // περιθώριο γύρω-γύρω
 .background(Color(.systemGray6)) // ανοιχτό γκρι φόντο
-.cornerRadius(12)                // στρογγυλεμένες γωνίες
+.cornerRadius(12) // στρογγυλεμένες γωνίες
 
 // Η σειρά των modifiers μετράει: πρώτα padding μετά background, το φόντο δεν περιλαμβάνει τα περιθώρια
 ```
@@ -103,16 +103,16 @@ VStack(alignment: .leading, spacing: 12) {
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State: όταν αλλάζει αυτή η τιμή, ξαναζωγραφίζει
+ @State private var count = 0 // @State: όταν αλλάζει αυτή η τιμή, ξαναζωγραφίζει
 
-    var body: some View {
-        VStack {
-            Text("Έχεις πατήσει \(count) φορές")
-            Button("Πάτα με +1") {
-                count += 1          // αλλαγή κατάστασης, η οθόνη ανανεώνεται μόνη της
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Έχεις πατήσει \(count) φορές")
+ Button("Πάτα με +1") {
+ count += 1 // αλλαγή κατάστασης, η οθόνη ανανεώνεται μόνη της
+ }
+ }
+ }
 }
 ```
 :::
@@ -126,24 +126,24 @@ struct CounterView: View {
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("Γράψε κάτι", text: $text)  // αμφίδρομη σύνδεση με $
-            .textFieldStyle(.roundedBorder)
-        Text("Έγραψες: \(text)")   // ενημερώνεται ζωντανά όσο γράφεις
-    }
+ var body: some View {
+ TextField("Γράψε κάτι", text: $text) // αμφίδρομη σύνδεση με $
+ .textFieldStyle(.roundedBorder)
+ Text("Έγραψες: \(text)") // ενημερώνεται ζωντανά όσο γράφεις
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> Ενέργεια χρήστη</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> Η κατάσταση αλλάζει (count += 1)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Ενέργεια χρήστη</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Η κατάσταση αλλάζει (count += 1)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Το SwiftUI αντιλαμβάνεται την αλλαγή</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> Αυτόματο ξαναζωγράφισμα οθόνης (επανυπολογισμός του body)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Το SwiftUI αντιλαμβάνεται την αλλαγή</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Αυτόματο ξαναζωγράφισμα οθόνης (επανυπολογισμός του body)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -163,20 +163,20 @@ struct InputView: View {
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::

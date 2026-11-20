@@ -43,7 +43,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>작은 지식
+작은 지식
 
 {class="mt-1"}
 위성 통신은 스마트폰에 특수 하드웨어 안테나가 필요하며, 모든 스마트폰이 지원하는 것은 아닙니다.
@@ -119,7 +119,7 @@ SparkLink(SparkLink)는 화웨이가 주도하여 연구 개발한 차세대 무
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>기술 전망
+기술 전망
 
 {class="mt-1"}
 SparkLink 기술은 무선 통신의 미래 방향을 대표합니다. 더 많은 제조사가 가입함에 따라, 우리는 더 많은 SparkLink 지원 기기를 보게 되어, 더 나은 무선 경험을 누릴 것입니다.
@@ -127,7 +127,7 @@ SparkLink 기술은 무선 통신의 미래 방향을 대표합니다. 더 많�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>한번 확인해보세요: 당신의 스마트폰이 이러한 기능을 지원하는지
+한번 확인해보세요: 당신의 스마트폰이 이러한 기능을 지원하는지
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 설정에서 "위성"을 검색하여, 위성 통신 관련 옵션이 있는지 확인하세요.

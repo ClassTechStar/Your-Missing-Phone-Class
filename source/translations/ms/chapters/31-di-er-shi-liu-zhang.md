@@ -80,7 +80,7 @@ Jangka hayat telefon bertahun-tahun dikritik "cas sekali sehari", sejak 2024 tek
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>III. Miracast / Wireless Display
+III. Miracast / Wireless Display
 
 {class="mt-1"}
 Keluar sekeping kertas, ikut "perlu/tambahan/tidak perlu" tiga tahap, senaraikan keperluan anda terhadap AI, satelit, skrin lipat, Wi-Fi 7, cas pantas, kapasiti bateri. Jadi kali depan pergi ke kedai, "titik jualan" yang jurujual promo anda boleh cepat nilaikan adalah keperluan sebenar atau dijual. Contohnya:
@@ -93,7 +93,7 @@ Keluar sekeping kertas, ikut "perlu/tambahan/tidak perlu" tiga tahap, senaraikan
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tiga standard utama telefon AI: model besar peranti, NPU TOPS, senario AI Agent

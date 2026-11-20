@@ -22,7 +22,7 @@ La technologie change, mais les besoins humains ne changent pas — nous avons b
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Dernier exercice
+Dernier exercice
 
 {class="mt-1"}
 Fermez ce livre, prenez votre smartphone, et faites une chose :<strong>Prenez 30 secondes pour réfléchir : quelles sont les trois choses dans votre smartphone dont la perte vous ferait vraiment mal ?</strong> Puis assurez-vous qu'elles sont sauvegardées. Ce livre aura alors valu la peine.

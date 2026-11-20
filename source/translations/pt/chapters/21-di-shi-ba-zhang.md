@@ -90,7 +90,7 @@ Para uma pessoa comum, conseguir "uma cópia na nuvem e uma no computador" já �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Atenção especial ao histórico de conversas do WeChat
+Atenção especial ao histórico de conversas do WeChat
 
 {class="mt-1"}
 O histórico de conversas do WeChat não pode ser migrado por nenhuma ferramenta de migração de celular! Ele não está coberto pelo backup completo do dispositivo. É obrigatório usar a função nativa "Migração de Histórico de Conversas" do WeChat ou fazer backup para o WeChat no computador. Muita gente só descobre que perdeu todo o histórico depois de trocar de celular, aí já é tarde, pois o celular antigo pode já ter sido restaurado para as configurações de fábrica.
@@ -98,7 +98,7 @@ O histórico de conversas do WeChat não pode ser migrado por nenhuma ferramenta
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercício: faça um simulado completo de backup
+Exercício: faça um simulado completo de backup
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifique se o Backup do iCloud ou o backup em nuvem da marca está ativado e confirme a data do último backup.

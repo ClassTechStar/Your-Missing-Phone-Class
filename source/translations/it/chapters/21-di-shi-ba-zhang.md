@@ -90,7 +90,7 @@ Per le persone comuni, fare "una copia sul cloud e una sul computer" è già mol
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Attenzione particolare alla cronologia chat di WeChat
+Attenzione particolare alla cronologia chat di WeChat
 
 {class="mt-1"}
 La cronologia chat di WeChat non può essere migrata con alcuno strumento di migrazione telefonica! Non rientra nella copertura del backup integro. Devi usare la funzione "Migrazione cronologia chat" integrata in WeChat oppure backuppare su WeChat per computer. Molti si accorgono solo dopo aver cambiato telefono che la cronologia è sparita: a quel punto è tardi, perché il telefono vecchio magari è già stato ripristinato alle impostazioni di fabbrica.
@@ -98,7 +98,7 @@ La cronologia chat di WeChat non può essere migrata con alcuno strumento di mig
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Allenati: fai una prova completa di backup
+Allenati: fai una prova completa di backup
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifica che il backup su iCloud o sul cloud di marca sia attivo e controlla la data dell'ultimo backup.

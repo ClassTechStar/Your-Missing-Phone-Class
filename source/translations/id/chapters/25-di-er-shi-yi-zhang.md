@@ -100,7 +100,7 @@ Matikan sambungan Wi-Fi otomatis
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Upgrade DNS
+Upgrade DNS
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: Android: Pengaturan &gt; Koneksi &amp; Berbagi &gt; DNS Pribadi &gt; masukkan "one.one.one.one" atau "dns.google". iPhone: Cari "1.1.1.1 DNS profile" di Safari, instal profil deskripsi, atau unduh App Cloudflare 1.1.1.1.</strong> Audit Wi-Fi

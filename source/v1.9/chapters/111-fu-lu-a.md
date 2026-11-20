@@ -50,7 +50,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 给自己留一整块时间。验机加激活加迁移，顺的话一小时，不顺的话一下午。深夜困着拆、地铁扶手上拆、饭局间隙拆，都容易漏步骤，开箱值得一个从容的晚上。
@@ -83,12 +83,12 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核对处</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么操作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">包装盒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看盒子侧面贴纸上的IMEI、序列号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">贴纸应平整服帖，没有撕过重贴的痕迹</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">机身</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">取出卡槽托看小字；部分机型印在背板或包装内衬，位置视机型而定</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双卡机有两个IMEI，要和卡托上的两个都对上</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统内</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拨号盘输入 <code class="inline">*#06#</code>；或进 设置 → 关于手机（苹果为 设置 → 通用 → 关于本机）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">菜单名称以系统实际为准</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核对处</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么操作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">包装盒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看盒子侧面贴纸上的IMEI、序列号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">贴纸应平整服帖，没有撕过重贴的痕迹</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">机身</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">取出卡槽托看小字；部分机型印在背板或包装内衬，位置视机型而定</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双卡机有两个IMEI，要和卡托上的两个都对上</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统内</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拨号盘输入 <code class="inline">*#06#</code>；或进 设置 → 关于手机（苹果为 设置 → 通用 → 关于本机）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">菜单名称以系统实际为准</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -128,12 +128,12 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形态</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见特征</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">破绽多在哪儿</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">样机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统里可能残留演示模式或演示视频，相册里有预存样张，边框按键有把玩出来的油光</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池循环次数偏高（部分品牌可在设置或服务App里查看，路径以官方为准）；系统里有非正常预装内容</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">翻新机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">外壳很新但充电口旧，屏幕与边框缝隙不匀，配件疑似拼装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列号查出的激活日期远早于购买日期，保修状态对不上</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后封机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">封条是后贴的，封口胶带不对版，盒内清单缺件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列号与包装不一致，首次激活日期异常</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形态</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见特征</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">破绽多在哪儿</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">样机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统里可能残留演示模式或演示视频，相册里有预存样张，边框按键有把玩出来的油光</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池循环次数偏高（部分品牌可在设置或服务App里查看，路径以官方为准）；系统里有非正常预装内容</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">翻新机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">外壳很新但充电口旧，屏幕与边框缝隙不匀，配件疑似拼装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列号查出的激活日期远早于购买日期，保修状态对不上</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后封机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">封条是后贴的，封口胶带不对版，盒内清单缺件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">序列号与包装不一致，首次激活日期异常</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -204,13 +204,13 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">向导里常见的引导</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">当天的注意点</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/鸿蒙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为账号、云空间、手机克隆入口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号要登，云空间先按默认来，回头再配</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米账号、云服务、资讯类开关</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">资讯推荐类开关看一眼再勾</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自家账号、云服务、换机入口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换机入口直接连向官方搬家工具，可用</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星账号、自家商店与服务引导</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不用三星服务的话，账号可跳过</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">向导里常见的引导</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">当天的注意点</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/鸿蒙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为账号、云空间、手机克隆入口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号要登，云空间先按默认来，回头再配</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米账号、云服务、资讯类开关</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">资讯推荐类开关看一眼再勾</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自家账号、云服务、换机入口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换机入口直接连向官方搬家工具，可用</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星账号、自家商店与服务引导</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不用三星服务的话，账号可跳过</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -234,16 +234,16 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">大致路径</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">备注</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 顶部你的名字 → 查找 → 查找我的iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">顺手开"查找网络"，部分机型关机后仍可定位，视机型与系统版本而定</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 华为账号 → 查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与云空间绑定，鸿蒙机型一致</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">荣耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 荣耀账号 → 查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与华为类似，入口名称以系统为准</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 小米账号 → 云服务 → 查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开关藏在云服务里，容易漏</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 顶部账号 → 查找手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分版本归在"安全"分类下</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 安全 → 查找手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 安全和隐私 → 查找我的手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先登录三星账号</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">大致路径</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">备注</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 顶部你的名字 → 查找 → 查找我的iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">顺手开"查找网络"，部分机型关机后仍可定位，视机型与系统版本而定</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 华为账号 → 查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与云空间绑定，鸿蒙机型一致</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">荣耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 荣耀账号 → 查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与华为类似，入口名称以系统为准</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 小米账号 → 云服务 → 查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开关藏在云服务里，容易漏</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 顶部账号 → 查找手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分版本归在"安全"分类下</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 安全 → 查找手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同上</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 安全和隐私 → 查找我的手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先登录三星账号</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -316,7 +316,7 @@ kind: appendix
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 开箱当天决定的是「能不能用」，一周后这次复查决定的是「丢了会不会出事」。
@@ -338,7 +338,7 @@ kind: appendix
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>危险操作
+危险操作
 
 {class="mt-1"}
 用ADB命令删除系统App属于进阶操作：删错关键组件（状态栏、电话、系统设置）会直接黑屏无法开机。没有十足把握，一行命令都别敲。
@@ -391,7 +391,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 迁移开始前，给旧机的桌面截一张图。新机配置完对着截图看，哪个App没搬过来、哪个文件夹丢了，一眼就能查出来。
@@ -427,13 +427,13 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">换机组合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐路线</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">基本能搬</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">通常搬不走</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone → iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快速开始</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几乎全部：数据、App布局、Wi-Fi密码、健康数据等</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分银行类App的登录状态</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓同品牌</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方换机App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通讯录、短信、照片、视频、多数App列表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">聊天记录、部分App登录状态</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓跨品牌</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新品牌换机App（多支持从他牌迁入）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">基础数据：通讯录、短信、媒体文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统级设置、部分App数据</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓 ↔ iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">转移到iOS / 各品牌对应工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通讯录、照片、短信等基础数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App本体、聊天记录、绝大多数App数据</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">换机组合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐路线</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">基本能搬</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">通常搬不走</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone → iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快速开始</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几乎全部：数据、App布局、Wi-Fi密码、健康数据等</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分银行类App的登录状态</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓同品牌</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方换机App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通讯录、短信、照片、视频、多数App列表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">聊天记录、部分App登录状态</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓跨品牌</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新品牌换机App（多支持从他牌迁入）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">基础数据：通讯录、短信、媒体文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统级设置、部分App数据</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓 ↔ iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">转移到iOS / 各品牌对应工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通讯录、照片、短信等基础数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App本体、聊天记录、绝大多数App数据</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -515,7 +515,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 聊天记录没迁完就退出微信登录、或把旧机恢复出厂，等于亲手删档。旧机保持原样留观一周，是这一节最重要的一句话。
@@ -558,13 +558,13 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你的情况</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">常在国内，主卡稳定</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">实体卡继续用，eSIM不强求，等规则和渠道更成熟再说</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每年出境一两次</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主卡保留实体（漫游收验证码），出行前按第八十七章的清单买当地或通用eSIM上网</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手表想独立打电话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">属于可穿戴的独立号码业务，同样走运营商渠道与机型限制，办之前问客服</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双卡党</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">实体加eSIM的混合能否支持，视机型而定，先确认再动主号</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你的情况</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">常在国内，主卡稳定</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">实体卡继续用，eSIM不强求，等规则和渠道更成熟再说</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每年出境一两次</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主卡保留实体（漫游收验证码），出行前按第八十七章的清单买当地或通用eSIM上网</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手表想独立打电话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">属于可穿戴的独立号码业务，同样走运营商渠道与机型限制，办之前问客服</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双卡党</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">实体加eSIM的混合能否支持，视机型而定，先确认再动主号</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -793,21 +793,21 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你想解决的问题</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪一章</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怎么挑机型、去哪买更稳</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十八章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App装哪个、权限怎么管</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号安全、防诈骗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码太多记不住</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">云服务怎么配、备份怎么做</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十六章、第十八章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机出故障了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十九章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池与充电的科学</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十五章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧机处置与数据擦除</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十五章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈调手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十七章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给孩子立规矩</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十五章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢了、被盗了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出国旅行的全套准备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十六、八十七、八十九章</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你想解决的问题</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪一章</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怎么挑机型、去哪买更稳</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十八章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App装哪个、权限怎么管</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号安全、防诈骗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码太多记不住</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">云服务怎么配、备份怎么做</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十六章、第十八章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机出故障了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十九章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池与充电的科学</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十五章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧机处置与数据擦除</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十五章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈调手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十七章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给孩子立规矩</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十五章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢了、被盗了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十二章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出国旅行的全套准备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十六、八十七、八十九章</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -834,7 +834,7 @@ kind: appendix
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 开箱三部曲：看外观、对信息、试功能。IMEI要盒子、机身、系统内三处核对；封条、外观细节和首次激活日期，帮你看穿样机、翻新机、后封机，发现问题当场处置。
 - 激活当天四件事不隔夜：连Wi-Fi、登录账号并开双重认证、开"查找我的手机"、设像样的锁屏密码（顺手开SIM卡PIN码）。

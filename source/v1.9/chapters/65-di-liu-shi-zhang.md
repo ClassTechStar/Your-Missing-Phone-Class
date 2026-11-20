@@ -50,7 +50,7 @@ Mac 开发机配置参考（2026 年 8 月）
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：没有 Mac 也能先学语言
+小贴士：没有 Mac 也能先学语言
 
 {class="mt-1"}
 iPad 上免费的 <strong>Swift Playgrounds</strong> 能学 Swift 语言基础（不用 Mac）；注意它只有 iPad/Mac 版，iPhone 上没有。先把第 61 章的语言知识在 Playgrounds 里玩熟，等拿到 Mac 后直接起飞。磨刀不误砍柴工，说的就是这个。
@@ -146,7 +146,7 @@ Xcode 是苹果官方的集成开发环境，免费。三步装好：
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：版本和系统的“匹配游戏”
+注意：版本和系统的“匹配游戏”
 
 {class="mt-1"}
 新 Xcode 往往要求最新 macOS，旧 Mac 则会卡在老版本：拿当前版本说：Xcode 26 要求 macOS Sequoia 15.6 或更高。所以顺序别搞反：先升系统，再装 Xcode。上架 App Store 时，苹果也会要求用<strong>较新的 Xcode</strong> 构建（通常给一个宽限期；2026-04-28 起上传必须用 Xcode 26+/iOS 26 SDK 构建，超期旧 SDK 会被直接拒）。系统更新别拖太久，iOS 开发者是“追新版”最勤快的一群人。
@@ -355,26 +355,26 @@ Team、包标识、证书这几个词，在安装步骤和创建项目时都出�
 ::: div .figure
 ```html
 <svg aria-hidden="true" style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" rx="8" style="fill:var(--surface-6)" />
-      <text x="20" y="28" font-size="13" font-weight="bold" style="fill:var(--ink-3)">MyFirstApp/ 项目根目录</text>
-      <rect x="30" y="42" width="540" height="225" rx="6" style="fill:var(--ink-inverse);stroke:var(--line-2)" />
-      <rect x="45" y="56" width="250" height="196" rx="5" style="fill:var(--accent-wash)" />
-      <text x="56" y="78" font-size="11" font-weight="bold" style="fill:var(--accent-deep)">MyFirstApp/（代码目录）</text>
-      <text x="66" y="100" font-size="10" style="fill:#374151">├ MyFirstAppApp.swift  ← 程序入口</text>
-      <text x="66" y="120" font-size="10" style="fill:#374151">├ ContentView.swift  ← 主界面</text>
-      <text x="66" y="140" font-size="10" style="fill:#374151">└ Assets.xcassets  ← 图标、图片、颜色</text>
-      <text x="56" y="166" font-size="10" style="fill:var(--muted-2)">（新增文件都放这个目录下）</text>
-      <text x="56" y="196" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">Info 标签页 / Info.plist</text>
-      <text x="66" y="216" font-size="10" style="fill:var(--muted-2)">应用声明：名字、权限、设置</text>
-      <rect x="310" y="56" width="245" height="196" rx="5" style="fill:#f0fdf4" />
-      <text x="321" y="78" font-size="11" font-weight="bold" style="fill:#065f46">其他重要位置</text>
-      <text x="331" y="100" font-size="10" style="fill:#374151">📁 Preview Content/  ← 预览素材</text>
-      <text x="331" y="122" font-size="10" style="fill:#374151"><i class="fas fa-bullseye mr-1"></i> Target 设置（蓝色工程图标）</text>
-      <text x="331" y="142" font-size="10" style="fill:var(--muted-2)">——版本号、最低系统、签名都在这</text>
-      <text x="331" y="168" font-size="10" style="fill:#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← 单元测试</text>
-      <text x="331" y="188" font-size="10" style="fill:#374151">📱 MyFirstAppUITests/ ← 界面测试</text>
-      <text x="331" y="216" font-size="10" style="fill:var(--muted)">（测试模板已生成，第 67 章用）</text>
-    </svg>
+ <rect x="0" y="0" width="600" height="290" rx="8" style="fill:var(--surface-6)" />
+ <text x="20" y="28" font-size="13" font-weight="bold" style="fill:var(--ink-3)">MyFirstApp/ 项目根目录</text>
+ <rect x="30" y="42" width="540" height="225" rx="6" style="fill:var(--ink-inverse);stroke:var(--line-2)" />
+ <rect x="45" y="56" width="250" height="196" rx="5" style="fill:var(--accent-wash)" />
+ <text x="56" y="78" font-size="11" font-weight="bold" style="fill:var(--accent-deep)">MyFirstApp/（代码目录）</text>
+ <text x="66" y="100" font-size="10" style="fill:#374151">├ MyFirstAppApp.swift ← 程序入口</text>
+ <text x="66" y="120" font-size="10" style="fill:#374151">├ ContentView.swift ← 主界面</text>
+ <text x="66" y="140" font-size="10" style="fill:#374151">└ Assets.xcassets ← 图标、图片、颜色</text>
+ <text x="56" y="166" font-size="10" style="fill:var(--muted-2)">（新增文件都放这个目录下）</text>
+ <text x="56" y="196" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">Info 标签页 / Info.plist</text>
+ <text x="66" y="216" font-size="10" style="fill:var(--muted-2)">应用声明：名字、权限、设置</text>
+ <rect x="310" y="56" width="245" height="196" rx="5" style="fill:#f0fdf4" />
+ <text x="321" y="78" font-size="11" font-weight="bold" style="fill:#065f46">其他重要位置</text>
+ <text x="331" y="100" font-size="10" style="fill:#374151">📁 Preview Content/ ← 预览素材</text>
+ <text x="331" y="122" font-size="10" style="fill:#374151"> Target 设置（蓝色工程图标）</text>
+ <text x="331" y="142" font-size="10" style="fill:var(--muted-2)">——版本号、最低系统、签名都在这</text>
+ <text x="331" y="168" font-size="10" style="fill:#374151"> MyFirstAppTests/ ← 单元测试</text>
+ <text x="331" y="188" font-size="10" style="fill:#374151">📱 MyFirstAppUITests/ ← 界面测试</text>
+ <text x="331" y="216" font-size="10" style="fill:var(--muted)">（测试模板已生成，第 67 章用）</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -524,7 +524,7 @@ Xcode 高频快捷键（新手五件套）
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：免费账号的“七天限制”
+注意：免费账号的“七天限制”
 
 {class="mt-1"}
 免费 Apple ID 签名的 App <strong>7 天后会失效</strong>（重新运行一次即可续期）。这是苹果的防滥用机制。学习阶段完全够用；付费开发者账号（99 美元/年）则没有这个限制，第 67 章细说。
@@ -626,7 +626,7 @@ App 装进去之后，她点开很可能被"不受信任的开发者"拦住。�
 
 ```
 Text("你好，iOS！")
-    .font(.title)
+ .font(.title)
 ```
 :::
 
@@ -653,7 +653,7 @@ Text("你好，iOS！")
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：完成你的“开发仪式感”清单
+来动手：完成你的“开发仪式感”清单
 
 {class="mt-1"}
 ① 装好 Xcode 并跑通模拟器；② 用真机跑一次自己的 App 并截图留念；③ 把 Hello 文字改成你的名字；④ 到 Target 设置里把 App 显示名改成“我的第一个App”。做完这四步，你就是有作品的人了。
@@ -986,7 +986,7 @@ FAQ 的最后，回答三个"接下来"的问题，给这一章收个尾。
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 硬门槛：Mac + Xcode；没有 Mac 先用 iPad 上的 Swift Playgrounds 学语言
 - Xcode 26 要 macOS Sequoia 15.6+：先升系统再装 Xcode，更新别拖

@@ -34,10 +34,10 @@ Crea una pagina web con una cassetta degli attrezzi personale, requisiti:
 1. HTML in un solo file (CSS e JS inline), senza framework
 2. Tema scuro, stile minimale moderno
 3. Mostra 4 card di strumenti:
-   - Riassuntore di testo
-   - Contaparole
-   - Selettore colori
-   - Generatore di QR code
+ - Riassuntore di testo
+ - Contaparole
+ - Selettore colori
+ - Generatore di QR code
 4. Ogni card ha icona, titolo e breve descrizione
 5. Le card hanno un'animazione al passaggio del mouse
 6. Layout responsive, utilizzabile su telefono
@@ -109,17 +109,17 @@ Requisiti:
 1. Server Express, porta 3001
 2. Database SQLite, tabella records
 3. Campi della tabella records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. Endpoint CRUD:
-   GET /api/records - recupera tutte le voci
-   POST /api/records - aggiunge una voce
-   PUT /api/records/:id - aggiorna una voce
-   DELETE /api/records/:id - elimina una voce
+ GET /api/records - recupera tutte le voci
+ POST /api/records - aggiunge una voce
+ PUT /api/records/:id - aggiorna una voce
+ DELETE /api/records/:id - elimina una voce
 5. Middleware di gestione errori
 Fornisci la struttura completa del codice backend.
 ```

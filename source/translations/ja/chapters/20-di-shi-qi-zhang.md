@@ -66,7 +66,7 @@ iPhone使用 → Apple HomeKit対応デバイスを優先（少し高いがプ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB 超広帯域技術——Bluetooth より高精度な「空間感覚」
+UWB 超広帯域技術——Bluetooth より高精度な「空間感覚」
 
 {class="mt-1"}
 Bluetooth のほか、新型スマホには UWB（Ultra-Wideband、超広帯域）チップも内蔵されています。その能力は<strong>高精度な測距と空間定位</strong>——他のデバイスがどれくらい離れているか、どの方向にあるかを計算でき、精度はセンチメートル級に達します。Bluetooth は「近くにいる」しか分かりませんが、UWB は「左前方1.2m」まで分かります。主な用途：
@@ -80,7 +80,7 @@ Bluetooth のほか、新型スマホには UWB（Ultra-Wideband、超広帯域�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio と Auracast——Bluetooth オーディオの次世代標準
+LE Audio と Auracast——Bluetooth オーディオの次世代標準
 
 {class="mt-1"}
 20年使われてきた従来の Bluetooth オーディオ（A2DP）は<strong>LE Audio</strong>（低消費電力オーディオ）に置き換えられつつあります。これは Bluetooth 5.2 以降の次世代オーディオ標準です：
@@ -110,7 +110,7 @@ Bluetooth のほか、新型スマホには UWB（Ultra-Wideband、超広帯域�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>スマホとテレビが同じWi-Fiに接続されていることを確認。
+スマホとテレビが同じWi-Fiに接続されていることを確認。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. テレビで「画面ミラーリング」または「AirPlay」機能を見つけてオン。
@@ -122,7 +122,7 @@ Bluetooth のほか、新型スマホには UWB（Ultra-Wideband、超広帯域�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>事例1：バッテリー持ち改善の実戦
+事例1：バッテリー持ち改善の実戦
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>シーン</strong>: ユーザーの Xiaomi 14 バッテリー持ちが悪く、半日で切れる。

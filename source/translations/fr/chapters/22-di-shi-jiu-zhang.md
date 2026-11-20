@@ -87,7 +87,7 @@ Si toutes les méthodes ci-dessus ont été essayées sans succès, il faut fair
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>La première astuce universelle : redémarrez le téléphone
+La première astuce universelle : redémarrez le téléphone
 
 {class="mt-1"}
 Quel que soit le problème que vous rencontrez — ralentissement, fermeture inattendue, connexion réseau impossible, son anormal, redémarrez d'abord le téléphone. Cela ressemble à un repoussoir, mais d'après mon expérience, au moins six petits problèmes sur dix sont résolus après un redémarrage. Le téléphone, comme l'ordinateur, accumule avec le temps toutes sortes de choses en mémoire, le redémarrage permet de tout effacer et de recommencer. Donc, la prochaine fois que votre téléphone a un problème, ne vous précipitez pas pour chercher « quoi faire », redémarrez d'abord puis regardez.
@@ -95,7 +95,7 @@ Quel que soit le problème que vous rencontrez — ralentissement, fermeture ina
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mémorisez maintenant : ces opérations de sauvetage doivent être connues par cœur
+Mémorisez maintenant : ces opérations de sauvetage doivent être connues par cœur
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Redémarrage forcé</strong>: iPhone plein écran, appuyez sur volume haut → volume bas → maintenez le bouton d'alimentation jusqu'à l'apparition du logo. Android, maintenez le bouton d'alimentation 10-15 secondes jusqu'à la vibration.

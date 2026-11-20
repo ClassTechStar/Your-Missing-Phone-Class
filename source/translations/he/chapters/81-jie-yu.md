@@ -22,7 +22,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>תרגול אחרון
+תרגול אחרון
 
 {class="mt-1"}
 סגור, הרם, עשה:<strong>30 שנ': 3 דברים "אבד"?</strong>גבה. הספר שווה.

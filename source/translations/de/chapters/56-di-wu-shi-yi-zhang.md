@@ -24,19 +24,19 @@ Die Kernidee von Compose in einem Satz: Oberfläche = Funktion. Alles, was auf d
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hallo, $name!")     // ein "Text-Baustein"
+ Text(text = "Hallo, $name!") // ein "Text-Baustein"
 }
 
 // verschachtelte Komposition: große Blöcke umschließen kleine
 @Composable
 fun HomeScreen() {
-    Column {                          // vertikal gestapelt
-        Greeting(name = "Max")
-        Greeting(name = "Lena")
-        Button(onClick = { /* was beim Klick passieren soll */ }) {
-            Text("Klick mich")
-        }
-    }
+ Column { // vertikal gestapelt
+ Greeting(name = "Max")
+ Greeting(name = "Lena")
+ Button(onClick = { /* was beim Klick passieren soll */ }) {
+ Text("Klick mich")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ Die vier Grundbausteine von Compose
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "Das ist ein Text")
-        Button(onClick = { println("Geklickt!") }) {
-            Text("Schaltfläche")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("Etwas eingeben") }
-        )
-    }
+ Column {
+ Text(text = "Das ist ein Text")
+ Button(onClick = { println("Geklickt!") }) {
+ Text("Schaltfläche")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("Etwas eingeben") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ Die Bausteine sind da – aber wie anordnen? Merk dir drei "Schachteln":
 
 ```
 Column {
-    Text("Erste Zeile")
-    Row {
-        Text("Links")
-        Text("Rechts")
-    }
-    Box {
-        Text("Unterste Ebene")
-        Text("überlagerndes Badge oben")
-    }
+ Text("Erste Zeile")
+ Row {
+ Text("Links")
+ Text("Rechts")
+ }
+ Box {
+ Text("Unterste Ebene")
+ Text("überlagerndes Badge oben")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Soll das Layout hübscher werden? Gib den Komponenten einen Modifier – er schm
 
 ```
 Text(
-    text = "Schöner Text",
-    modifier = Modifier
-        .padding(16.dp)          // Abstand an allen Seiten
-        .fillMaxWidth()          // füllt die ganze Breite
-        .background(Color.Blue)  // Hintergrundfarbe
-        .clickable { /* Klick */ }// klickbar
+ text = "Schöner Text",
+ modifier = Modifier
+ .padding(16.dp) // Abstand an allen Seiten
+ .fillMaxWidth() // füllt die ganze Breite
+ .background(Color.Blue) // Hintergrundfarbe
+ .clickable { /* Klick */ }// klickbar
 )
 // verkettete Aufrufe: eins nach dem anderen; die Reihenfolge zählt (erst padding, dann Hintergrund; der Hintergrund ohne Rand)
 ```
@@ -150,15 +150,15 @@ Eine statische Oberfläche ist langweilig. Damit nach einem Tipp auf den Button 
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf: merkt sich diesen veränderlichen Wert
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf: merkt sich diesen veränderlichen Wert
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "Du hast $count Mal geklickt")
-        Button(onClick = { count++ }) {   // ändert den Zustand
-            Text("Klick +1")                // die Oberfläche aktualisiert sich automatisch
-        }
-    }
+ Column {
+ Text(text = "Du hast $count Mal geklickt")
+ Button(onClick = { count++ }) { // ändert den Zustand
+ Text("Klick +1") // die Oberfläche aktualisiert sich automatisch
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ Drei Zeilen Code – ein lebendiger Zähler. Das ist der Vorteil von Compose geg
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> Nutzer klickt</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> Zustand ändert sich (count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Nutzer klickt</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Zustand ändert sich (count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose bemerkt die Änderung</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> Zeichnet die Oberfläche neu (Recomposition)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose bemerkt die Änderung</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Zeichnet die Oberfläche neu (Recomposition)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ Drei "Cheats" für das Entwicklungserlebnis – wer sie benutzt hat, will sie ni
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // bei Wertänderung sanfter Übergang zum Zielwert
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // bei Wertänderung sanfter Übergang zum Zielwert
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

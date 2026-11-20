@@ -25,7 +25,7 @@ Kemajuan kunci 2024-2026: Hinge life umumnya spec 500rb kali fold (100 kali per 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Penilaian singkat
+Penilaian singkat
 
 {class="mt-1"}
 Jika ponsel batang lurus Anda saat ini sudah cukup dan tidak ada masalah "layar tidak cukup besar", jangan beli ponsel lipat. Ini adalah perangkat "tambahan", bukan perangkat "penyelamat".
@@ -42,7 +42,7 @@ Berdasarkan umpan balik pengguna nyata, kelompok orang berikut memiliki probabil
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Kelompok ini jangan beli
+Kelompok ini jangan beli
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Yang hanya menggunakan ponsel untuk menonton video pendek, chat WeChat, telepon—ponsel lipat tidak memberi nilai tambah, justru lebih berat dan lebih tebal.
@@ -63,7 +63,7 @@ Jangan terbuai oleh kata "lipat", saat membeli perhatikan:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Daftar pengalaman offline
+Daftar pengalaman offline
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka-tutup sendiri 10 kali, rasakan apakah tahanan engsel halus dan ada suara aneh.
@@ -112,7 +112,7 @@ Bagian paling rapuh ponsel lipat adalah layar dalam dan engsel, kebiasaan beriku
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Skenario frekuensi tinggi kerusakan layar dalam
+Skenario frekuensi tinggi kerusakan layar dalam
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Saat menutup terjepit kabel headphone/kabel pengisi daya,langsung meretakkan layar dalam.
@@ -134,7 +134,7 @@ Sebelum membeli, Anda harus memiliki beberapa pertimbangan ini:
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Ponsel lipat bukan "ponsel yang lebih baik", melainkan "ponsel bentuk lain". Membelinya karena Anda membutuhkan bentuknya yang unik, bukan karena "lebih canggih".
+Ponsel lipat bukan "ponsel yang lebih baik", melainkan "ponsel bentuk lain". Membelinya karena Anda membutuhkan bentuknya yang unik, bukan karena "lebih canggih".
 
 {class="text-right text-sm"}
 — Filosofi pembelian ponsel lipat
@@ -155,7 +155,7 @@ Saran pembelian: Anggaran cukup dan mengejar ekosistem pilih Huawei Mate X; ingi
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Pengingat Terakhir
+Pengingat Terakhir
 
 {class="mt-1"}
 Teknologi folding screen iterate setiap tahun, appendix ini ditulis di 2026. Sebelum beli pastikan cek review terbaru dan feedback user, fokus pada: hinge life actual test, crease performance, policy reparasi inner screen tiga item ini. Sentuh langsung offline selalu lebih penting dari lihat review.

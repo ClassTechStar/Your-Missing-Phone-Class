@@ -317,7 +317,7 @@ Pikirkan, perangkat kecil ini, menanggung berapa banyak kehidupan! Jadi, belajar
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Pahami konfigurasi hardware
+Praktik: Pahami konfigurasi hardware
 
 {class="mt-1"}
 Di [Pengaturan], lihat apakah bisa menemukan model prosesor, ukuran spesifik RAM dan ROM. Punya gambaran tentang kemampuan ponsel Anda. Pengguna Android bisa download "AnTuTu" atau "DevCheck" untuk melihat informasi hardware detail.

@@ -34,10 +34,10 @@ Erstelle eine persönliche Tool-Webseite mit diesen Anforderungen:
 1. HTML in einer einzigen Datei (inline CSS und JS), ohne Frameworks
 2. Dunkles Thema, moderner minimalistischer Stil
 3. Zeige 4 Tool-Karten:
-   - Textzusammenfasser
-   - Wortzähler
-   - Farbwähler
-   - QR-Code-Generator
+ - Textzusammenfasser
+ - Wortzähler
+ - Farbwähler
+ - QR-Code-Generator
 4. Jede Karte mit Symbol, Titel und kurzer Beschreibung
 5. Die Karten haben eine Hover-Animation
 6. Responsives Layout, auf dem Handy benutzbar
@@ -109,17 +109,17 @@ Anforderungen:
 1. Express-Server, Port 3001
 2. SQLite-Datenbank, Tabelle records
 3. Felder der Tabelle records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. CRUD-Endpunkte:
-   GET /api/records - alle Einträge abrufen
-   POST /api/records - Eintrag anlegen
-   PUT /api/records/:id - Eintrag aktualisieren
-   DELETE /api/records/:id - Eintrag löschen
+ GET /api/records - alle Einträge abrufen
+ POST /api/records - Eintrag anlegen
+ PUT /api/records/:id - Eintrag aktualisieren
+ DELETE /api/records/:id - Eintrag löschen
 5. Middleware für Fehlerbehandlung
 Gib die vollständige Backend-Code-Struktur.
 ```

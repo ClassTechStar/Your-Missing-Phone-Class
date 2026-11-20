@@ -41,7 +41,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>一句话原则
+一句话原则
 
 {class="mt-1"}
 2026年买智能设备，优先看是否有"Matter over Thread"标识，这是当下最经得起时间检验的选择。老设备若只支持Wi-Fi或蓝牙也不必急着淘汰，先用着，新购时再转向Matter。
@@ -106,53 +106,53 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">需要网关吗</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功耗</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型设备</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">断网后表现</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不需要，直连路由器</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摄像头、扫地机、电饭煲</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程控制和云自动化失效，设备本机按键一般可用</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙 / 蓝牙Mesh</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">近距离不用；远程要蓝牙网关</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">门锁、温湿度计、部分灯</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">走到设备跟前仍可控，远程失效</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Zigbee</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要专用网关</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很低</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">传感器、开关、灯泡</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网关在，本地联动照常跑</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Thread</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要边界路由器（常内置在音箱/电视盒子里）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很低</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新的Matter设备</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备间本地通信，表现最稳</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">红外</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不用（手机直发）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不耗电（电池设备另算）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">空调、电视、老风扇</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跟网络无关，照常能用</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">需要网关吗</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功耗</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型设备</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">断网后表现</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不需要，直连路由器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摄像头、扫地机、电饭煲</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程控制和云自动化失效，设备本机按键一般可用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙 / 蓝牙Mesh</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">近距离不用；远程要蓝牙网关</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">门锁、温湿度计、部分灯</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">走到设备跟前仍可控，远程失效</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Zigbee</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要专用网关</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很低</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">传感器、开关、灯泡</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网关在，本地联动照常跑</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Thread</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要边界路由器（常内置在音箱/电视盒子里）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很低</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新的Matter设备</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备间本地通信，表现最稳</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">红外</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不用（手机直发）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不耗电（电池设备另算）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">空调、电视、老风扇</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跟网络无关，照常能用</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -176,7 +176,7 @@ Matter从2022年发布到现在，走的路线是"小步快跑"：1.x系列版�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：给家里的设备做一次"协议普查"
+来动手：给家里的设备做一次"协议普查"
 
 {class="mt-1"}
 打开米家或家庭App，把家里所有智能设备列一张清单，每台标注三样：连接方式（Wi-Fi/蓝牙/Zigbee）、是否依赖网关、断网后还能不能用，最后这条最直观的验证法是把路由器断电两分钟，看哪些设备还听指挥。普查完多数人会发现家里都藏着一两台"孤儿设备"：换了个App就找不到、断网就彻底失联。把它的名字记下来，下次升级设备时优先替换它。
@@ -188,40 +188,40 @@ Matter从2022年发布到现在，走的路线是"小步快跑"：1.x系列版�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">生态</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">优势</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用人群</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐私最强（本地处理为主）、与iPhone/Siri/快捷指令联动顺滑</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备偏少偏贵、需要HomePod或Apple TV做中枢</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全家苹果设备、重视隐私与体验的用户</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">米家（小米）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备最丰富、性价比最高、小爱同学好用</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态相对封闭、数据多上云、广告偏多</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预算有限、想一站式配齐全屋的入门用户</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">鸿蒙智联（智慧生活App）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与鸿蒙手机/平板/手表无缝流转、设备数量快速增长</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外设备支持少、生态仍在追赶</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机用户、看重"超级终端"多设备协同</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">生态</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">优势</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用人群</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐私最强（本地处理为主）、与iPhone/Siri/快捷指令联动顺滑</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备偏少偏贵、需要HomePod或Apple TV做中枢</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全家苹果设备、重视隐私与体验的用户</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">米家（小米）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备最丰富、性价比最高、小爱同学好用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态相对封闭、数据多上云、广告偏多</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预算有限、想一站式配齐全屋的入门用户</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">鸿蒙智联（智慧生活App）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与鸿蒙手机/平板/手表无缝流转、设备数量快速增长</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外设备支持少、生态仍在追赶</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机用户、看重"超级终端"多设备协同</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>选生态的决策建议
+选生态的决策建议
 
 {class="mt-1"}
 看手机选生态：iPhone用户优先HomeKit，华为用户优先智联，其他安卓用户米家最省心。靠Matter协议，不同生态的设备也能被同一部手机控制，不必一次性"站队"。顺带一提，华为这边2025年10月发布了HarmonyOS 6，首批公测就覆盖90多款机型，智联的设备阵容还在快速扩张，华为手机用户放心选。
@@ -275,7 +275,7 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 骑墙玩法虽好，别为了骑墙而买设备。每多接一个生态，就多一份配置要维护：固件更新要两边都看、改名要两边都改，改了这边忘了那边，语音就"听不懂"了。日常仍然认准一个主生态使用，另一个只做备份入口。
@@ -301,23 +301,23 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>设备控制</strong>：打开HomeKit/米家/智慧生活App，可远程或本地开关灯、调色温、设定空调温度、拉合窗帘、查看摄像头画面。</li>
-                    <li><strong>自动化场景</strong>：把"条件→动作"组合起来，常用的三大场景：
-                        <ul class="list-disc pl-6 mt-1">
-                            <li><strong>回家模式</strong>：定位到家+天黑→开玄关灯+开空调+拉窗帘+关门锁。</li>
-                            <li><strong>离家模式</strong>：最后一个出门（定位离家或门锁上锁）→关灯+关空调+关插座+启动摄像头+布防。</li>
-                            <li><strong>睡眠模式</strong>：每晚23:00→关全屋主灯+拉窗帘+空调切26度+开夜灯。</li>
-                        </ul>
-                    </li>
-                    <li><strong>NFC碰一碰</strong>：在门贴一张NFC标签，手机一碰即触发对应场景（碰一下开门灯、再碰一下切睡眠）。iPhone用"快捷指令"自动化，安卓用"钱包"或厂商App均可写入。</li>
-                </ul>
+ <li><strong>设备控制</strong>：打开HomeKit/米家/智慧生活App，可远程或本地开关灯、调色温、设定空调温度、拉合窗帘、查看摄像头画面。</li>
+ <li><strong>自动化场景</strong>：把"条件→动作"组合起来，常用的三大场景：
+ <ul class="list-disc pl-6 mt-1">
+ <li><strong>回家模式</strong>：定位到家+天黑→开玄关灯+开空调+拉窗帘+关门锁。</li>
+ <li><strong>离家模式</strong>：最后一个出门（定位离家或门锁上锁）→关灯+关空调+关插座+启动摄像头+布防。</li>
+ <li><strong>睡眠模式</strong>：每晚23:00→关全屋主灯+拉窗帘+空调切26度+开夜灯。</li>
+ </ul>
+ </li>
+ <li><strong>NFC碰一碰</strong>：在门贴一张NFC标签，手机一碰即触发对应场景（碰一下开门灯、再碰一下切睡眠）。iPhone用"快捷指令"自动化，安卓用"钱包"或厂商App均可写入。</li>
+ </ul>
 ```
 
 自动化搭好后，记得留一个后手：灯、空调、门锁这类自动化最好都能手动关——断网或账号抽风时，家不能被一条云端规则锁在门外。门锁尤其如此，装之前就试一遍：机械钥匙孔在哪、没网能不能开。
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：搭一个"回家模式"
+来试试：搭一个"回家模式"
 
 {class="mt-1"}
 在手机智能家居App的"自动化"里新建一条：触发条件选"到达某地点"（家），动作依次加"开玄关灯""空调设26度""窗帘关闭"。保存后出门逛一圈，回家时看它是否自己亮灯，第一次成功的成就感，比下单新设备还过瘾。
@@ -362,7 +362,7 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：给走廊装一盏"会自己让路"的夜灯
+来动手：给走廊装一盏"会自己让路"的夜灯
 
 {class="mt-1"}
 需要：一台人体存在传感器、一盏可调亮度的灯或灯带。按上文两条规则配好"有人亮、无人灭"，把时段设在你真正的睡觉区间，亮度压到10%以下，夜灯太亮反而赶走睡意。配完当晚别急着睡，等半夜自然起夜一次，感受一下"灯比我先醒"的默契；要是中途灯灭了，把"无人判定时间"从2分钟放宽到3分钟再试。
@@ -480,7 +480,7 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>选购顺序建议
+选购顺序建议
 
 {class="mt-1"}
 先买智能音箱（定生态）→ 再买智能灯泡和插座（低门槛、立刻有反馈）→ 最后买门锁和摄像头（涉及安全，谨慎选）。一次只加一类设备，熟悉后再扩，避免"买回来不会用"。
@@ -544,7 +544,7 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 电热水壶、电暖器、厨房电器这类持续大功率设备，接智能插座前先核对两个数：插座的额定功率（看壳体标注）和电器的额定功率（看铭牌）。前者要明显大于后者，宁大勿小。拿不准的，别接，省下的那点"远程关火"便利，抵不上一次跳闸或起火的代价。
@@ -552,7 +552,7 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：用一只智能插座改造一台"笨电器"
+来动手：用一只智能插座改造一台"笨电器"
 
 {class="mt-1"}
 挑家里一台不会联网又总忘关的电器，加湿器、饮水机、床头小风扇都行。接上智能插座，配网后建两条自动化：一条"每晚12点关闭"，一条"早7点开启"。跑一周，看看电费账单和起床体验的变化。这一步花了不到半小时，但它能让你完整走一遍"配网—控制—自动化"的全流程，比看十篇测评都涨经验。
@@ -570,7 +570,7 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>这几个坑别踩
+这几个坑别踩
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 别用门锁的"远程开锁"功能给陌生人，优先用临时密码，用完即失效。
@@ -628,7 +628,7 @@ Matter来之后，这家人的解法很值得抄：全屋的灯和插座统一�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：给家里的摄像头做一次五步安检
+来动手：给家里的摄像头做一次五步安检
 
 {class="mt-1"}
 花五分钟，按顺序过一遍：打开设备App查看登录设备列表并清理陌生设备、修改成强密码并开启二次验证、检查分享名单，清掉不再需要的人、确认"隐私区域"或物理遮罩挡住了不该拍的位置、检查固件是否为最新。做完在日历上设一个三个月后的重复提醒，安检不是一次性的，是周期性的。
@@ -681,47 +681,47 @@ App里设备图标变灰、控制没反应，按下面顺序查，多数在第�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设备类型</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本机操作</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">App近场控制</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">远程控制与云联动</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Zigbee/Thread设备（网关在）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网关支持本地时可用</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效；本地自动化照常跑</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi设备</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按键一般可用</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效（需经云端）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙设备</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">贴近设备可用</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能门锁</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">指纹/密码/钥匙照常</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视型号，蓝牙近距离多可用</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程开锁、开锁通知失效</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能音箱</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">—</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">语音基本失效</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设备类型</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本机操作</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">App近场控制</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">远程控制与云联动</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Zigbee/Thread设备（网关在）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网关支持本地时可用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效；本地自动化照常跑</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi设备</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按键一般可用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效（需经云端）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙设备</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">贴近设备可用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能门锁</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">指纹/密码/钥匙照常</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视型号，蓝牙近距离多可用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程开锁、开锁通知失效</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能音箱</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">—</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">语音基本失效</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失效</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -729,7 +729,7 @@ App里设备图标变灰、控制没反应，按下面顺序查，多数在第�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 想提前知道自己家断网后的真实表现？找个周末上午，主动把路由器断电十分钟，拿手机挨个试：门锁开得开吗、灯喊得动吗、扫地机叫得停吗。演练一遍的收获，比看任何攻略都扎实。
@@ -804,7 +804,7 @@ App里设备图标变灰、控制没反应，按下面顺序查，多数在第�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把家庭账号设成"谁的手机谁注册"。用爸爸的手机注册了米家，两年后他换手机、注销号码，全屋设备跟着失踪：找回账号比重新配网还折腾。家庭账号用专门的手机号（最好是家里最稳定的号码）注册，开启二次验证，密码记进全家的密码备忘。
@@ -843,7 +843,7 @@ App里设备图标变灰、控制没反应，按下面顺序查，多数在第�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：花一百元档预算，给出租屋装上第一个自动化
+来动手：花一百元档预算，给出租屋装上第一个自动化
 
 {class="mt-1"}
 预算控制在一百元上下：两颗智能灯泡（卧室+客厅）加一台人体传感器。配置目标只有一个：晚上起夜路过客厅，灯自动亮起微光。装完这第一套，你就知道自家的户型和网络对智能家居友不友好，再决定要不要加码。租房党的扩张原则：一套自动化跑顺一周，才买下一件设备。
@@ -910,7 +910,7 @@ App里设备图标变灰、控制没反应，按下面顺序查，多数在第�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：画一张你家的"智能家居地图"
+来动手：画一张你家的"智能家居地图"
 
 {class="mt-1"}
 拿张纸或开个备忘录，画三个格子：第一格写"家里有哪些智能设备、各自什么协议"；第二格写"哪些自动化在跑、分别解决什么问题"。第三格写"断网后哪些还能用、谁有权限管什么"。写完你会发现两件事：哪些设备是买来吃灰的，哪些自动化是重复建设的。这张地图每半年更新一次，它比任何种草清单都更能告诉你下一步该买什么，以及更重要的，不该买什么。
@@ -918,7 +918,7 @@ App里设备图标变灰、控制没反应，按下面顺序查，多数在第�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Matter+Thread是2023-2026年的统一方向，买新设备优先看这个标识

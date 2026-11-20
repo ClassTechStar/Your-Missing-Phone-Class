@@ -34,10 +34,10 @@ kind: chapter
 1. ملف HTML واحد (CSS و JS مضمّنان)، دون أُطر عمل
 2. سمة داكنة بأسلوب عصري بسيط
 3. اعرض 4 بطاقات للدخول إلى الأدوات:
-   - أداة تلخيص النصوص
-   - عدّاد الكلمات
-   - منتقي الألوان
-   - مولّد رموز QR
+ - أداة تلخيص النصوص
+ - عدّاد الكلمات
+ - منتقي الألوان
+ - مولّد رموز QR
 4. لكل بطاقة أيقونة وعنوان ووصف قصير
 5. للبطاقات تأثير حركي عند التحويم
 6. تخطيط متجاوب يعمل على الهاتف
@@ -109,17 +109,17 @@ Record { id, amount, type, category, note, date }
 1. خادم Express، المنفذ 3001
 2. قاعدة بيانات SQLite، اسم الجدول records
 3. حقول جدول records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. نقاط CRUD:
-   GET /api/records - جلب كل السجلات
-   POST /api/records - إضافة سجل
-   PUT /api/records/:id - تحديث سجل
-   DELETE /api/records/:id - حذف سجل
+ GET /api/records - جلب كل السجلات
+ POST /api/records - إضافة سجل
+ PUT /api/records/:id - تحديث سجل
+ DELETE /api/records/:id - حذف سجل
 5. وسيط معالجة الأخطاء
 أعطني البنية الكاملة لكود الواجهة الخلفية.
 ```

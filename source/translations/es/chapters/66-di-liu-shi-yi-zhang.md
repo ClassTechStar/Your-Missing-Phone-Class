@@ -22,16 +22,16 @@ Un programa es "datos + lógica". Una variable es darle un nombre a un dato para
 :::
 
 ```
-let name = "Luis"        // let: constante (usa esta por defecto)
-var age = 18             // var: variable (podrás cambiarla luego)
+let name = "Luis" // let: constante (usa esta por defecto)
+var age = 18 // var: variable (podrás cambiarla luego)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var sí se puede cambiar
-// name = "María"         // <i class="fas fa-times-circle mr-1"></i> let no se puede cambiar: error de compilación
+age = 19 // var sí se puede cambiar
+// name = "María" // let no se puede cambiar: error de compilación
 
-let score: Int = 100     // también se puede declarar el tipo explícitamente
-let pi = 3.14            // si no lo escribes, se deduce automáticamente
+let score: Int = 100 // también se puede declarar el tipo explícitamente
+let pi = 3.14 // si no lo escribes, se deduce automáticamente
 
-print("Hola, \(name)")   // interpolación de cadenas: barra invertida + paréntesis
+print("Hola, \(name)") // interpolación de cadenas: barra invertida + paréntesis
 ```
 :::
 
@@ -64,20 +64,20 @@ Es el concepto más importante de Swift, sin discusión. En una frase: cuando un
 :::
 
 ```
-var name: String = "Luis"   // tipo normal: nunca puede ser nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> error de compilación: te frena al instante
+var name: String = "Luis" // tipo normal: nunca puede ser nil
+// name = nil // error de compilación: te frena al instante
 
-var nickname: String? = nil  // añade un signo ?: permite nil (opcional)
+var nickname: String? = nil // añade un signo ?: permite nil (opcional)
 nickname = "Tommy"
 
 // con opcionales hay que "desenvolverlos":
-if let n = nickname {        // if let: desenvolvimiento seguro
-    print("Hola, \(n)")
+if let n = nickname { // if let: desenvolvimiento seguro
+ print("Hola, \(n)")
 } else {
-    print("Todavía no hay apodo")
+ print("Todavía no hay apodo")
 }
 
-let len = nickname?.count ?? 0   // ?? valor por defecto (operador de coalescencia)
+let len = nickname?.count ?? 0 // ?? valor por defecto (operador de coalescencia)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ Una función es un trozo de lógica con nombre, como un botón del mando a dista
 ```
 // función: el nombre delante; parámetros y tipo de retorno detrás
 func greet(name: String) -> String {
-    return "¡Hola, \(name)!"
+ return "¡Hola, \(name)!"
 }
-print(greet(name: "Luis"))     // al llamar, con el nombre del parámetro
+print(greet(name: "Luis")) // al llamar, con el nombre del parámetro
 
 // closure: se define en el sitio, ágil y directa
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = el elemento actual
+let doubled = numbers.map { $0 * 2 } // $0 = el elemento actual
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // filtrar
+let big = numbers.filter { $0 > 2 } // filtrar
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ La preferencia oficial de Swift es clara: usa estructuras (struct) como primera 
 ```
 // el struct: la caja que guarda datos
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // el struct trae de serie su "memberwise initializer": se puede crear directamente
+ // el struct trae de serie su "memberwise initializer": se puede crear directamente
 }
 let r = Record(amount: 25.5, category: "comida", date: Date())
 
 // protocolo: el contrato de "qué capacidades debe tener"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // adoptar el protocolo = comprometerse a cumplir sus requisitos
+struct Record: Identifiable { ... } // adoptar el protocolo = comprometerse a cumplir sus requisitos
 ```
 :::
 

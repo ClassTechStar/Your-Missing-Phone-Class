@@ -20,19 +20,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기술</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">사용처</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">특징</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 생태계, 경험 가장 매끄러움. Apple TV 또는 AirPlay 지원 TV 필요</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">안드로이드 스마트폰</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct 직접 연결, 라우터 불필요. 안드로이드 스마트폰 "무선 화면 미러링" 기본 사용</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">모든 플랫폼</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">미디어 파일(영상/음악/사진)만 푸시, 화면 미러링 안 함. TV로 영상 푸시 재생에 적합</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기술</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">사용처</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">특징</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 생태계, 경험 가장 매끄러움. Apple TV 또는 AirPlay 지원 TV 필요</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">안드로이드 스마트폰</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct 직접 연결, 라우터 불필요. 안드로이드 스마트폰 "무선 화면 미러링" 기본 사용</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">모든 플랫폼</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">미디어 파일(영상/음악/사진)만 푸시, 화면 미러링 안 함. TV로 영상 푸시 재생에 적합</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -74,7 +74,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>보안리마인더
+보안리마인더
 
 {class="mt-1"}
 어떤 차량 연동 방안이든, 운전 중에는 가능한 한 음성 제어 사용 권장. 내비게이션은 미리 목적지 설정, 음악은 미리 플레이리스트 선택, 주행 중 차량 시스템 화면 조작 금지.
@@ -92,7 +92,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 스마트폰에서 TV로 화면 미러링 한 번 완료
+실습: 스마트폰에서 TV로 화면 미러링 한 번 완료
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 스마트폰과 TV가 같은 Wi-Fi에 연결되어 있는지 확인.
@@ -104,7 +104,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>챕터 요약
+챕터 요약
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 무선 화면 미러링 3대 진영: AirPlay(Apple), Miracast(Android), DLNA(크로스플랫폼 미디어 푸시)

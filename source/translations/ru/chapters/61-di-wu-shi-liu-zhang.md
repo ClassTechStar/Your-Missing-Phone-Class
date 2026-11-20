@@ -52,22 +52,22 @@ kind: chapter
 ```
 // Выносим логику вроде «строка суммы -> число» в чистую функцию
 fun parseAmount(input: String): Double? {
-    val v = input.trim().toDoubleOrNull()
-    return if (v != null && v > 0) v else null
+ val v = input.trim().toDoubleOrNull()
+ return if (v != null && v > 0) v else null
 }
 
 // Тестируем (JUnit4)
 @Test
 fun emptyInputReturnsNull() {
-    assertEquals(null, parseAmount(""))
+ assertEquals(null, parseAmount(""))
 }
 @Test
 fun negativeReturnsNull() {
-    assertEquals(null, parseAmount("-5"))
+ assertEquals(null, parseAmount("-5"))
 }
 @Test
 fun normalValueParses() {
-    assertEquals(12.5, parseAmount("12.5"))
+ assertEquals(12.5, parseAmount("12.5"))
 }
 ```
 :::
@@ -94,11 +94,11 @@ Android требует подписи для всех устанавливаем
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> Зарегистрировать аккаунт разработчика</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> Подготовить материалы для магазина</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> Загрузить AAB</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Зарегистрировать аккаунт разработчика</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Подготовить материалы для магазина</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Загрузить AAB</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> Заполнить форму безопасности данных</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> Проверка (от часов до дней)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> Публикация</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Заполнить форму безопасности данных</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Проверка (от часов до дней)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Публикация</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

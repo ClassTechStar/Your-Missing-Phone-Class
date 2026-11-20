@@ -32,22 +32,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מותג</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">שם מצב</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">אופן הפעלה</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אנדרואיד</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נגישות (אין מצב פשוט, אך ניתן להגדיל)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; תצוגה ובהירות &gt; גודל טקסט, מקסימלי. ואז "נגישות &gt; תצוגה וטקסט" הפעל "טקסט מודגש" "צורת כפתור"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; מערכת ועדכון &gt; מצב פשוט &gt; הפעל</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב מינימלי</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; הגדרות נוספות &gt; מצב מינימלי &gt; הפעל</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; פונקציות מיוחדות &gt; מצב פשוט</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שולחן עבודה פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; שולחן עבודה, מסך נעילה &gt; שולחן פשוט</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; תצוגה &gt; מצב פשוט</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מותג</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">שם מצב</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">אופן הפעלה</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אנדרואיד</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נגישות (אין מצב פשוט, אך ניתן להגדיל)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; תצוגה ובהירות &gt; גודל טקסט, מקסימלי. ואז "נגישות &gt; תצוגה וטקסט" הפעל "טקסט מודגש" "צורת כפתור"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; מערכת ועדכון &gt; מצב פשוט &gt; הפעל</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב מינימלי</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; הגדרות נוספות &gt; מצב מינימלי &gt; הפעל</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; פונקציות מיוחדות &gt; מצב פשוט</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שולחן עבודה פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; שולחן עבודה, מסך נעילה &gt; שולחן פשוט</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצב פשוט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות &gt; תצוגה &gt; מצב פשוט</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>פעולה: "שפץ" את הטלפון של ההורים
+פעולה: "שפץ" את הטלפון של ההורים
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. הפעל מצב פשוט (לפי הטבלה).
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"תרגיל נגד הונאות" (הדפס)
+"תרגיל נגד הונאות" (הדפס)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>טלפון + כסף → נתק!</strong>
@@ -151,7 +151,7 @@ WeChat צפוף. שינויים:
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - מצב פשוט/פונט גדול = בעיה נעלמת

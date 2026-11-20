@@ -58,7 +58,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>סעיף 1: זמן הקשב שלי שייך לי. כשאני עובד/מבלה עם המשפחה, עליך להיכנס באופן יזום למצב "נא לא להפריע".
+סעיף 1: זמן הקשב שלי שייך לי. כשאני עובד/מבלה עם המשפחה, עליך להיכנס באופן יזום למצב "נא לא להפריע".
 
 {class="mt-1"}
 "תנאים" לטלפון שלך:
@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision/AR = כניסה חדשה, לא מחליף

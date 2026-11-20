@@ -86,119 +86,119 @@ AndroidはLinuxベースで、ファイルシステムには一定の階層構�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形式</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">タイプ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特性</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推奨される開き方</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">画像</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">非可逆圧縮、サイズ小、互換性最高。スマートフォン撮影のデフォルト形式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アルバム/任意の画像ビューアー</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">画像</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可逆圧縮、透明背景サポート。スクリーンショット、アイコンに常用。JPGよりサイズ大。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アルバム/任意の画像ビューアー</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">非可逆圧縮、サイズ小、互換性極めて高い。最も汎用的なオーディオ形式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意の音楽プレーヤー</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可逆圧縮、音質はCDと同等、サイズはMP3の3-5倍。オーディオマニアの第一選択。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音楽プレーヤー/プロフェッショナル再生アプリ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無圧縮の生オーディオ、音質最高だがサイズ巨大。プロ録音に常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音楽プレーヤー</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AACエンコード、MP3の同ビットレートより音質が良い。Appleエコシステムで常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/音楽プレーヤー</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">動画</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最も汎用的な動画コンテナ形式、互換性極めて高い。スマートフォン録画のデフォルト形式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アルバム/任意の動画プレーヤー</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">動画</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オープンソースコンテナ形式、マルチオーディオトラック、マルチ字幕サポート。映画リソースに常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ドキュメント</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wordドキュメント。DOCXは圧縮形式でサイズがより小さい。DOCは旧形式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">プレゼン</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PowerPointプレゼン資料。PPTXは圧縮形式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スプレッドシート</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excelスプレッドシート。XLSXは圧縮形式。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ドキュメント</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">クロスプラットフォーム形式、レイアウト固定で編集不可。契約書、論文、電子書籍に常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圧縮</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最も汎用的な圧縮形式、クロスプラットフォーム互換性良好。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">システム標準/解凍アプリ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圧縮</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圧縮率はZIPより高いが、専用ソフトでの解凍が必要。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解凍アプリ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">イメージ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光ディスクイメージファイル、光ディスクの内容を完全にコピー。システムインストーラに常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解凍アプリ/仮想光ドライブ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ウェブページ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ウェブページファイル、ブラウザで開く。保存したウェブページに常用。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ブラウザ</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">形式</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">タイプ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特性</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推奨される開き方</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">画像</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">非可逆圧縮、サイズ小、互換性最高。スマートフォン撮影のデフォルト形式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アルバム/任意の画像ビューアー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">画像</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可逆圧縮、透明背景サポート。スクリーンショット、アイコンに常用。JPGよりサイズ大。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アルバム/任意の画像ビューアー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">非可逆圧縮、サイズ小、互換性極めて高い。最も汎用的なオーディオ形式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意の音楽プレーヤー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可逆圧縮、音質はCDと同等、サイズはMP3の3-5倍。オーディオマニアの第一選択。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音楽プレーヤー/プロフェッショナル再生アプリ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無圧縮の生オーディオ、音質最高だがサイズ巨大。プロ録音に常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音楽プレーヤー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オーディオ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AACエンコード、MP3の同ビットレートより音質が良い。Appleエコシステムで常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/音楽プレーヤー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">動画</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最も汎用的な動画コンテナ形式、互換性極めて高い。スマートフォン録画のデフォルト形式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アルバム/任意の動画プレーヤー</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">動画</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">オープンソースコンテナ形式、マルチオーディオトラック、マルチ字幕サポート。映画リソースに常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ドキュメント</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wordドキュメント。DOCXは圧縮形式でサイズがより小さい。DOCは旧形式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">プレゼン</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PowerPointプレゼン資料。PPTXは圧縮形式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スプレッドシート</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excelスプレッドシート。XLSXは圧縮形式。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ドキュメント</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">クロスプラットフォーム形式、レイアウト固定で編集不可。契約書、論文、電子書籍に常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圧縮</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最も汎用的な圧縮形式、クロスプラットフォーム互換性良好。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">システム標準/解凍アプリ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圧縮</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">圧縮率はZIPより高いが、専用ソフトでの解凍が必要。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解凍アプリ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">イメージ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光ディスクイメージファイル、光ディスクの内容を完全にコピー。システムインストーラに常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解凍アプリ/仮想光ドライブ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ウェブページ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ウェブページファイル、ブラウザで開く。保存したウェブページに常用。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ブラウザ</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>練習：「ダウンロード」フォルダを整理
+練習：「ダウンロード」フォルダを整理
 
 {class="mt-1"}
 ファイルマネージャーを開き &gt; 「ダウンロード」フォルダに入る。中に何があるか？不要なものを削除し、有用なものを分類（例えば「仕事資料」「スタンプ」フォルダを作成して入れる）。ついでにストレージ容量を確認し、どのタイプのファイルが最も多く占有しているか把握する。
@@ -216,21 +216,21 @@ AndroidはLinuxベースで、ファイルシステムには一定の階層構�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>「時間＋イベント」命名法</strong>：フォルダ名にタイムスタンプとイベント記述を含め、後日の回想と検索に便利。例えば <code>202606_旅行チケット</code>、<code>2025年年末まとめ</code>、<code>2024子供の誕生日</code>。これでタイムラインが見え、内容も一目で分かる。</li>
-                        <li><strong>3階層分類体系</strong>：
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>第1層</strong>：ファイルタイプ別（ドキュメント / 画像 / 動画 / オーディオ）</li>
-                                <li><strong>第2層</strong>：使用シーン別（仕事 / 生活 / 学習）</li>
-                                <li><strong>第3層</strong>：具体的なイベントやプロジェクト別（例：「2026Q2_プロジェクトA」）</li>
-                            </ul>
-                        </li>
-                        <li><strong>月次クリーン計画</strong>：毎月固定日付（給料日や月初1日を推奨）に、「ダウンロード」ディレクトリを一括整理：<strong>有用なものをアーカイブ、不要なものを削除、貴重なものを転送保存</strong>。年12回の小整理は、1年分の大掃除よりはるかに楽。</li>
-                    </ul>
+ <li><strong>「時間＋イベント」命名法</strong>：フォルダ名にタイムスタンプとイベント記述を含め、後日の回想と検索に便利。例えば <code>202606_旅行チケット</code>、<code>2025年年末まとめ</code>、<code>2024子供の誕生日</code>。これでタイムラインが見え、内容も一目で分かる。</li>
+ <li><strong>3階層分類体系</strong>：
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>第1層</strong>：ファイルタイプ別（ドキュメント / 画像 / 動画 / オーディオ）</li>
+ <li><strong>第2層</strong>：使用シーン別（仕事 / 生活 / 学習）</li>
+ <li><strong>第3層</strong>：具体的なイベントやプロジェクト別（例：「2026Q2_プロジェクトA」）</li>
+ </ul>
+ </li>
+ <li><strong>月次クリーン計画</strong>：毎月固定日付（給料日や月初1日を推奨）に、「ダウンロード」ディレクトリを一括整理：<strong>有用なものをアーカイブ、不要なものを削除、貴重なものを転送保存</strong>。年12回の小整理は、1年分の大掃除よりはるかに楽。</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>今月のタスクリスト
+今月のタスクリスト
 
 {class="mt-1"}
 暇な週末を選び、以下の順序で操作：
@@ -258,7 +258,7 @@ AndroidはLinuxベースで、ファイルシステムには一定の階層構�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>証明写真/センシティブスクリーンショット送信の標準フロー
+証明写真/センシティブスクリーンショット送信の標準フロー
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>可視情報のマスキング</strong>：システム標準またはサードパーティツール（Meitu XiuXiu、Snapseedなど）で<strong>身分証番号の中間数桁、ナンバープレート、部屋番号、氏名、金額</strong>などのキーフィールドを塗りつぶす。

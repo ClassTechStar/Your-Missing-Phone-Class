@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "張三"        // val：唯讀變量（宜以為默認）
-var age = 18             // var：可變變量（後尚可改）
+val name = "張三" // val：唯讀變量（宜以為默認）
+var age = 18 // var：可變變量（後尚可改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> val 不能改，編譯會報錯
+age = 19 // var 可改
+// name = "李四" // val 不能改，編譯會報錯
 
-val score: Int = 100     // 亦可明書其型
-val pi = 3.14            // 不書亦自推之
+val score: Int = 100 // 亦可明書其型
+val pi = 3.14 // 不書亦自推之
 ```
 :::
 
@@ -63,15 +63,15 @@ Kotlin 社區之鐵律：常則用 val，誠有必要方用 var。可用 val 處
 
 ```
 fun greet(name: String): String {
-    return "汝好，$name！"     // $ 符插變量於字串
+ return "汝好，$name！" // $ 符插變量於字串
 }
 
-println(greet("張三"))        // 輸出：汝好，張三！
+println(greet("張三")) // 輸出：汝好，張三！
 
 // 單行函數可簡寫成表達式
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // 輸出：8
+println(add(3, 5)) // 輸出：8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // 輸出：8
 // 判斷：if / else
 val age = 17
 if (age >= 18) {
-    println("成年人")
+ println("成年人")
 } else {
-    println("未成年")
+ println("未成年")
 }
 
 // 多分支：when（比 switch 好用一百倍）
 val score = 85
 val level = when {
-    score >= 90 -> "優秀"
-    score >= 60 -> "及格"
-    else -> "再接再厲"
+ score >= 90 -> "優秀"
+ score >= 60 -> "及格"
+ else -> "再接再厲"
 }
 
 // 重複：for 循環
 val fruits = listOf("蘋果", "香蕉", "橙子")
 for (fruit in fruits) {
-    println("吾好食$fruit")
+ println("吾好食$fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ Java 之世，至著名之 bug 曰 NullPointerException（空指針之異），�
 :::
 
 ```
-var name: String = "張三"   // 普通之型：決不容為 null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> 編譯之誤，徑阻汝
+var name: String = "張三" // 普通之型：決不容為 null
+// name = null // 編譯之誤，徑阻汝
 
 var nickname: String? = null // 加問號：許為 null
 nickname = "三兒"
 
 // 用可空之型，必安處之：
-println(nickname?.length)    // 安全調用：null 則返 null，不崩
-val len = nickname?.length ?: 0   // Elvis 運算符：null 時予默認值
+println(nickname?.length) // 安全調用：null 則返 null，不崩
+val len = nickname?.length ?: 0 // Elvis 運算符：null 時予默認值
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ String? 者，「許其為空」也；a ?: b 者，「a 空則用 b」也（形�
 ```
 // 普通類：模具
 class Dog(val name: String) {
-    fun bark() = println("$name 汪汪！")
+ fun bark() = println("$name 汪汪！")
 }
 
-val dog = Dog("旺財")      // 造物件
-dog.bark()                 // 旺財 汪汪！
+val dog = Dog("旺財") // 造物件
+dog.bark() // 旺財 汪汪！
 
 // data class：盛數據之盒（自動帶 equals/copy 等）
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "張三", "zhangsan@example.com")
-val twin = me.copy(name = "張三豐")   // 複製並改一個字段
+val twin = me.copy(name = "張三豐") // 複製並改一個字段
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // lambda 寫法：就地定義，輕快直接
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = 當前元素
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = 當前元素
 
 // 篩選 + 變換連招（真實項目裏極常見）
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

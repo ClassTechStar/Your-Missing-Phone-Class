@@ -61,7 +61,7 @@ Tausende Fotos in der Smartphone-Galerie, und man sucht ein bestimmtes ewig – 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Üben Sie: Ein vollständiger Durchlauf aus Fotografieren + Bearbeiten + Ordnen
+Üben Sie: Ein vollständiger Durchlauf aus Fotografieren + Bearbeiten + Ordnen
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Aktivieren Sie die „Gitterlinien" in den Kameraeinstellungen und machen Sie an einem Ort mit natürlichem Licht drei Fotos (Objektiv wischen, Belichtung anpassen).

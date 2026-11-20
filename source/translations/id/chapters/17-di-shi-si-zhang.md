@@ -46,7 +46,7 @@ Poin kunci:<strong>Master password itu sendiri tidak pernah meninggalkan perangk
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Mengapa "zero-knowledge" berarti penyedia layanan juga tidak bisa melihat password Anda?
+Mengapa "zero-knowledge" berarti penyedia layanan juga tidak bisa melihat password Anda?
 
 {class="mt-1"}
 Karena decryption key di-derive dari master password Anda, dan master password hanya ada di pikiran Anda, hanya digunakan di perangkat lokal Anda. Server penyedia layanan tidak punya master password, tidak punya decryption key, hanya ciphertext. Inilah sebabnya penyedia layanan resmi seperti Bitwarden, 1Password secara eksplisit menyatakan "kami juga tidak bisa melihat password Anda", bukan tidak mau lihat, tapi secara teknis tidak bisa.
@@ -71,7 +71,7 @@ Agustus 2022, password manager lama LastPass mengumumkan environment development
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Yang dipelajari dari insiden LastPass
+Yang dipelajari dari insiden LastPass
 
 {class="mt-1"}
 Pertama, master password harus panjang dan unik (disarankan 16+ karakter, termasuk huruf besar/kecil, angka, simbol); kedua, prioritaskan penyedia layanan yang mendukung Argon2id dengan iterasi tinggi; ketiga. untuk akun high-value (bank, email) pastikan aktifkan verifikasi dua faktor independen, jangan hanya andalkan password manager.
@@ -118,7 +118,7 @@ Jika suatu password muncul di database kebocoran,<strong>meskipun terlihat sekom
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Prinsip Query k-Anonymity
+Prinsip Query k-Anonymity
 
 {class="mt-1"}
 Khawatir input password di HaveIBeenPwned akan bocor lagi? Tidak perlu khawatir. Query modern memakai protokol "k-anonymity": browser hanya mengirim 5 karakter pertama hash password ke server, server mengembalikan semua list hash yang diawali 5 karakter tersebut, lalu dicocokkan secara lokal. Artinya, server tidak pernah melihat hash password lengkap Anda. "Leaked password detection" 1Password dan Bitwarden semua bekerja seperti ini.
@@ -133,7 +133,7 @@ Khawatir input password di HaveIBeenPwned akan bocor lagi? Tidak perlu khawatir.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cek Sekarang: Apakah Password Anda Aman
+Cek Sekarang: Apakah Password Anda Aman
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka haveibeenpwned.com, masukkan email yang sering Anda pakai, lihat di kebocoran mana Anda muncul.
@@ -159,36 +159,36 @@ Passkey berbasis standar FIDO2 / WebAuthn, memakai <strong>key pair di perangkat
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Password Tradisional</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Anti-Phishing</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Buruk, situs phishing bisa mencuri password</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturally anti-phishing, private key hanya menandatangani domain asli</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Dampak Kebocoran Server</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hash password mungkin bisa di-crack</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Server hanya simpan public key, bocor tidak berdampak</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kemudahan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu hafal/input/kelola</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/sidik jari login satu detik</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Replay Attack</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mungkin diintercept dan di-replay man-in-the-middle</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap tanda tangan sekali pakai, tidak bisa di-replay</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Password Tradisional</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Anti-Phishing</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Buruk, situs phishing bisa mencuri password</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturally anti-phishing, private key hanya menandatangani domain asli</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Dampak Kebocoran Server</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hash password mungkin bisa di-crack</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Server hanya simpan public key, bocor tidak berdampak</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Kemudahan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu hafal/input/kelola</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/sidik jari login satu detik</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Replay Attack</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mungkin diintercept dan di-replay man-in-the-middle</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap tanda tangan sekali pakai, tidak bisa di-replay</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Dukungan Platform
@@ -200,7 +200,7 @@ Passkey berbasis standar FIDO2 / WebAuthn, memakai <strong>key pair di perangkat
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Sinkronisasi cross-device adalah terobosan kunci
+Sinkronisasi cross-device adalah terobosan kunci
 
 {class="mt-1"}
 Pain point terbesar Passkey awal adalah "terikat satu perangkat", ganti ponsel harus buat ulang. Sejak 2023 Apple, Google, Microsoft mengimplementasikan sinkronisasi cloud Passkey: iCloud Keychain sync antar perangkat Apple, Google Password Manager sync antar perangkat Android. 1Password dan pihak ketiga lain membuka sinkronisasi cross-ecosystem. Artinya Passkey sudah memiliki praktikalitas untuk menggantikan password.
@@ -236,7 +236,7 @@ Proses ini melalui komunikasi double encryption Bluetooth + internet, private ke
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Coba Sekarang: Rasakan Login Tanpa Password
+Coba Sekarang: Rasakan Login Tanpa Password
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Login akun Google → Security → Passkeys → Add passkey, rasakan login Face ID/sidik jari.
@@ -247,7 +247,7 @@ Proses ini melalui komunikasi double encryption Bluetooth + internet, private ke
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Saran Masa Transisi
+Saran Masa Transisi
 
 {class="mt-1"}
 Passkey belum sepenuhnya menggantikan password, banyak situs masih dalam tahap "Passkey + password" berdampingan. Saran: akun high-value prioritaskan aktifkan Passkey, tapi <strong>jangan langsung hapus password tradisional</strong>, simpan sebagai cadangan; bersamaan terus gunakan password manager, karena tidak semua situs mendukung Passkey. Anggap Passkey sebagai "suplemen kuat password manager" bukan "pengganti langsung".
@@ -295,7 +295,7 @@ Situs mainstream yang mendukung: Google, GitHub, Microsoft, Apple ID, Facebook, 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Strategi Dual Key
+Strategi Dual Key
 
 {class="mt-1"}
 Risiko terbesar hardware key adalah "kehilangan". Saran: ① sekaligus daftarkan dua key berbeda; ② satu dibawa (gantungan kunci), satu disimpan di brankas rumah atau safe deposit box bank; ③ sebagian situs mengizinkan "recovery code cadangan" dicetak untuk disimpan offline. Dengan begitu bahkan jika key utama hilang, tidak akan terkunci permanen di luar akun.
@@ -303,7 +303,7 @@ Risiko terbesar hardware key adalah "kehilangan". Saran: ① sekaligus daftarkan
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Hati-hati Channel Pembelian
+Hati-hati Channel Pembelian
 
 {class="mt-1"}
 Pastikan beli dari toko resmi atau agen resmi, jangan beli key bekas atau sumber tidak jelas — secara teori hardware yang sudah di-preset mungkin sudah ditanam backdoor. Firmware YubiKey tidak bisa diupdate setelah keluar pabrik, tapi Yubico akan terus push security advisory, perhatikan situs resminya.
@@ -336,7 +336,7 @@ Versi gratis Bitwarden mendukung sharing password personal (via fitur "Send" sha
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Value for Money 1Password Families
+Value for Money 1Password Families
 
 {class="mt-1"}
 1Password Families sekitar 4.99 USD/bulan, mendukung maksimal 5 anggota keluarga, masing-masing punya personal vault independen + 4 shared vault. Dihitung per orang kurang dari 1 USD/bulan, saat ini solusi sharing keluarga dengan pengalaman terbaik. Versi keluarga Bitwarden 10 USD/tahun mendukung 6 orang, value for money lebih tinggi, tapi pengalaman antarmuka sedikit kalah.
@@ -369,7 +369,7 @@ Bayangkan skenario: Anda mengelola sendiri semua akun penting keluarga, tapi tib
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Set Sekarang: Simpan "Kunci Cadangan" untuk Keluarga
+Set Sekarang: Simpan "Kunci Cadangan" untuk Keluarga
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Pilih satu keluarga terpercaya sebagai "Emergency Contact".
@@ -388,7 +388,7 @@ Bayangkan skenario: Anda mengelola sendiri semua akun penting keluarga, tapi tib
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Password manager meski nyaman, tetapi juga ada risiko: jika master password bocor, semua kata sandi terbuka. Jadi master password tidak boleh sama dengan kata sandi lain, juga tidak boleh ditulis di tempat yang mudah ditemukan. Selain itu, disarankan pilih penyedia layanan dengan rekam jejak keamanan yang baik.
+Password manager meski nyaman, tetapi juga ada risiko: jika master password bocor, semua kata sandi terbuka. Jadi master password tidak boleh sama dengan kata sandi lain, juga tidak boleh ditulis di tempat yang mudah ditemukan. Selain itu, disarankan pilih penyedia layanan dengan rekam jejak keamanan yang baik.
 
 {class="mt-1"}
 Coba Sekarang: Mulai Menggunakan Password Manager
@@ -396,7 +396,7 @@ Coba Sekarang: Mulai Menggunakan Password Manager
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pilih satu password manager (rekomendasi Bitwarden atau bawaan sistem).
+Pilih satu password manager (rekomendasi Bitwarden atau bawaan sistem).
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Daftar akun, atur master password yang kuat.

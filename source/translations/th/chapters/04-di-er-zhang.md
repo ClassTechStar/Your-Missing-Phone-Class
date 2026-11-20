@@ -86,119 +86,119 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รูปแบบ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ประเภท</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คุณสมบัติ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แนะนำเปิดรูปแบบ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปภาพ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบมีข้อมูลสูญหาย ไฟล์เล็ก ความเข้ากันได้ดีที่สุด เป็นรูปแบบเริ่มต้นของการถ่ายภาพบนโทรศัพท์</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปภาพ/ตัวดูรูปภาพใดก็ได้</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปภาพ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบไม่สูญหาย รองรับพื้นหลังโปร่งใส ใช้บ่อยกับภาพหน้าจอและไอคอน ไฟล์ใหญ่กว่า JPG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปภาพ/ตัวดูรูปภาพใดก็ได้</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบมีข้อมูลสูญหาย ไฟล์เล็ก ความเข้ากันได้ดีมาก เป็นรูปแบบเสียงที่ใช้ได้สากลที่สุด</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรมเล่นเพลงใดก็ได้</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบไม่สูญหาย คุณภาพเสียงเทียบเท่า CD ไฟล์ใหญ่กว่า MP3 ถึง 3-5 เท่า ของโปรดสายออดิโอไฟแอน</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรมเล่นเพลง/แอปเล่นเฉพาะทาง</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียงต้นฉบับไม่บีบอัด คุณภาพดีที่สุดแต่ไฟล์มโหฬาร ใช้บ่อยในงานอัดเสียงระดับมืออาชีพ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรมเล่นเพลง</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เข้ารหัสแบบ AAC คุณภาพเสียงดีกว่า MP3 ที่อัตราบิตเท่ากัน ใช้บ่อยในระบบนิเวศของแอปเปิล</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/โปรแกรมเล่นเพลง</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">วิดีโอ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบครอบวิดีโอที่ใช้สากลที่สุด ความเข้ากันได้ดีมาก เป็นรูปแบบเริ่มต้นของวิดีโอที่อัดจากโทรศัพท์</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปภาพ/ตัวเล่นวิดีโอใดก็ได้</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">วิดีโอ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบครอบแบบโอเพนซอร์ส รองรับหลายแทร็กเสียง หลายซับไตเติล ใช้บ่อยกับไฟล์หนัง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอกสาร</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอกสาร Word DOCX เป็นรูปแบบบีบอัด ไฟล์เล็กกว่า DOC เป็นรูปแบบเวอร์ชันเก่า</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สาธิต</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไฟล์นำเสนอ PowerPoint PPTX เป็นรูปแบบบีบอัด</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตาราง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สเปรดชีต Excel XLSX เป็นรูปแบบบีบอัด</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอกสาร</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบข้ามแพลตฟอร์ม จัดหน้าตายตัวแก้ไขไม่ได้ ใช้บ่อยกับสัญญา งานวิชาการ และหนังสืออิเล็กทรอนิกส์</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัด</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบบีบอัดที่ใช้สากลที่สุด ใช้ข้ามแพลตฟอร์มได้ดี</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปในตัวระบบ/แอปแตกไฟล์</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัด</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อัตราการบีบอัดสูงกว่า ZIP แต่ต้องใช้ซอฟต์แวร์เฉพาะในการแตกไฟล์</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปแตกไฟล์</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อิมเมจ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไฟล์อิมเมจแผ่นดิสก์ คัดลอกเนื้อหาแผ่นมาทั้งหมด ใช้บ่อยกับแพ็กเกจติดตั้งระบบ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปแตกไฟล์/ไดรฟ์เสมือน</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">หน้าเว็บ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไฟล์หน้าเว็บ เปิดด้วยเบราว์เซอร์ หน้าเว็บที่บันทึกมักใช้รูปแบบนี้</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เบราว์เซอร์</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รูปแบบ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ประเภท</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คุณสมบัติ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แนะนำเปิดรูปแบบ</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปภาพ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบมีข้อมูลสูญหาย ไฟล์เล็ก ความเข้ากันได้ดีที่สุด เป็นรูปแบบเริ่มต้นของการถ่ายภาพบนโทรศัพท์</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปภาพ/ตัวดูรูปภาพใดก็ได้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปภาพ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบไม่สูญหาย รองรับพื้นหลังโปร่งใส ใช้บ่อยกับภาพหน้าจอและไอคอน ไฟล์ใหญ่กว่า JPG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปภาพ/ตัวดูรูปภาพใดก็ได้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบมีข้อมูลสูญหาย ไฟล์เล็ก ความเข้ากันได้ดีมาก เป็นรูปแบบเสียงที่ใช้ได้สากลที่สุด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรมเล่นเพลงใดก็ได้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัดแบบไม่สูญหาย คุณภาพเสียงเทียบเท่า CD ไฟล์ใหญ่กว่า MP3 ถึง 3-5 เท่า ของโปรดสายออดิโอไฟแอน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรมเล่นเพลง/แอปเล่นเฉพาะทาง</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียงต้นฉบับไม่บีบอัด คุณภาพดีที่สุดแต่ไฟล์มโหฬาร ใช้บ่อยในงานอัดเสียงระดับมืออาชีพ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรมเล่นเพลง</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เสียง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เข้ารหัสแบบ AAC คุณภาพเสียงดีกว่า MP3 ที่อัตราบิตเท่ากัน ใช้บ่อยในระบบนิเวศของแอปเปิล</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/โปรแกรมเล่นเพลง</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">วิดีโอ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบครอบวิดีโอที่ใช้สากลที่สุด ความเข้ากันได้ดีมาก เป็นรูปแบบเริ่มต้นของวิดีโอที่อัดจากโทรศัพท์</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปภาพ/ตัวเล่นวิดีโอใดก็ได้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">วิดีโอ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบครอบแบบโอเพนซอร์ส รองรับหลายแทร็กเสียง หลายซับไตเติล ใช้บ่อยกับไฟล์หนัง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอกสาร</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอกสาร Word DOCX เป็นรูปแบบบีบอัด ไฟล์เล็กกว่า DOC เป็นรูปแบบเวอร์ชันเก่า</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สาธิต</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไฟล์นำเสนอ PowerPoint PPTX เป็นรูปแบบบีบอัด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตาราง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สเปรดชีต Excel XLSX เป็นรูปแบบบีบอัด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เอกสาร</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบข้ามแพลตฟอร์ม จัดหน้าตายตัวแก้ไขไม่ได้ ใช้บ่อยกับสัญญา งานวิชาการ และหนังสืออิเล็กทรอนิกส์</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รูปแบบบีบอัดที่ใช้สากลที่สุด ใช้ข้ามแพลตฟอร์มได้ดี</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปในตัวระบบ/แอปแตกไฟล์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บีบอัด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อัตราการบีบอัดสูงกว่า ZIP แต่ต้องใช้ซอฟต์แวร์เฉพาะในการแตกไฟล์</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปแตกไฟล์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อิมเมจ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไฟล์อิมเมจแผ่นดิสก์ คัดลอกเนื้อหาแผ่นมาทั้งหมด ใช้บ่อยกับแพ็กเกจติดตั้งระบบ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปแตกไฟล์/ไดรฟ์เสมือน</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">หน้าเว็บ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไฟล์หน้าเว็บ เปิดด้วยเบราว์เซอร์ หน้าเว็บที่บันทึกมักใช้รูปแบบนี้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เบราว์เซอร์</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ฝึกหัด: จัดระเบียบโฟลเดอร์ "ดาวน์โหลด"
+ฝึกหัด: จัดระเบียบโฟลเดอร์ "ดาวน์โหลด"
 
 {class="mt-1"}
 เปิดตัวจัดการไฟล์ > เข้าไปที่โฟลเดอร์ "ดาวน์โหลด" ดูซิว่าข้างในมีอะไรบ้าง? อันที่ไม่ใช้ก็ลบทิ้ง อันที่ใช้ก็แยกหมวดหมู่ (เช่นสร้างโฟลเดอร์ "เอกสารงาน" "สติกเกอร์/มีม" ใส่เข้าไป) พลางสำรวจพื้นที่จัดเก็บดูว่าไฟล์ประเภทไหนกินที่มากที่สุด
@@ -216,21 +216,21 @@ kind: chapter
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>วิธีตั้งชื่อ "เวลา+เหตุการณ์"</strong>: ชื่อโฟลเดอร์มีการประทับเวลาและคำอธิบายเหตุการณ์ ค้นกลับและนึกได้ง่ายในภายหลัง เช่น <code>202606_ตั๋วการเดินทาง</code>, <code>2025_สรุปสิ้นปี</code>, <code>2024_วันเกิดลูก</code>แบบนี้เห็นทั้งไทม์ไลน์ และรู้เนื้อหาได้ในพริบตา</li>
-                        <li><strong>ระบบจำแนกสามระดับ</strong>:
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>ระดับที่หนึ่ง</strong>: แยกตามประเภทไฟล์ (เอกสาร / รูปภาพ / วิดีโอ / เสียง)</li>
-                                <li><strong>ระดับที่สอง</strong>: แยกตามสถานการณ์ใช้งาน (งาน / ชีวิตประจำวัน / เรียนรู้)</li>
-                                <li><strong>ระดับที่สาม</strong>: แยกตามเหตุการณ์หรือโครงการเฉพาะ (เช่น "2026Q2_โครงการA")</li>
-                            </ul>
-                        </li>
-                        <li><strong>แผนล้างรายเดือน</strong>: กำหนดวันคงที่หนึ่งวันทุกเดือน (แนะนำวันเงินเดือนออกหรือวันที่ 1 ของเดือน) จัดระเบียบโฟลเดอร์ "ดาวน์โหลด" รวมศูนย์ทีเดียว:<strong>เก็บถาวรอันที่ใช้ได้ ลบอันที่ไม่ใช้ ย้ายเก็บอันที่ล้ำค่า</strong>จัดเล็กๆ เดือนละครั้งตลอดปี สบายกว่ารวบทุกอย่างไว้กวาดใหญ่ทีเดียวมาก</li>
-                    </ul>
+ <li><strong>วิธีตั้งชื่อ "เวลา+เหตุการณ์"</strong>: ชื่อโฟลเดอร์มีการประทับเวลาและคำอธิบายเหตุการณ์ ค้นกลับและนึกได้ง่ายในภายหลัง เช่น <code>202606_ตั๋วการเดินทาง</code>, <code>2025_สรุปสิ้นปี</code>, <code>2024_วันเกิดลูก</code>แบบนี้เห็นทั้งไทม์ไลน์ และรู้เนื้อหาได้ในพริบตา</li>
+ <li><strong>ระบบจำแนกสามระดับ</strong>:
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>ระดับที่หนึ่ง</strong>: แยกตามประเภทไฟล์ (เอกสาร / รูปภาพ / วิดีโอ / เสียง)</li>
+ <li><strong>ระดับที่สอง</strong>: แยกตามสถานการณ์ใช้งาน (งาน / ชีวิตประจำวัน / เรียนรู้)</li>
+ <li><strong>ระดับที่สาม</strong>: แยกตามเหตุการณ์หรือโครงการเฉพาะ (เช่น "2026Q2_โครงการA")</li>
+ </ul>
+ </li>
+ <li><strong>แผนล้างรายเดือน</strong>: กำหนดวันคงที่หนึ่งวันทุกเดือน (แนะนำวันเงินเดือนออกหรือวันที่ 1 ของเดือน) จัดระเบียบโฟลเดอร์ "ดาวน์โหลด" รวมศูนย์ทีเดียว:<strong>เก็บถาวรอันที่ใช้ได้ ลบอันที่ไม่ใช้ ย้ายเก็บอันที่ล้ำค่า</strong>จัดเล็กๆ เดือนละครั้งตลอดปี สบายกว่ารวบทุกอย่างไว้กวาดใหญ่ทีเดียวมาก</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>รายการงานเดือนนี้
+รายการงานเดือนนี้
 
 {class="mt-1"}
 เลือกสุดสัปดาห์ที่ว่างสักครั้ง แล้วทำตามลำดับนี้:
@@ -258,7 +258,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>ขั้นตอนมาตรฐานในการส่งรูปบัตร/สกรีนช็อตที่อ่อนไหว
+ขั้นตอนมาตรฐานในการส่งรูปบัตร/สกรีนช็อตที่อ่อนไหว
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>ปิดบังข้อมูลที่มองเห็นได้ (มาร์กเอาต์)</strong>: ใช้เครื่องมือในตัวระบบหรือภายนอก (เช่น Meitu, Snapseed)<strong>ระบายทับเลขบัตรประชาชนบางหลักช่วงกลาง เลขทะเบียนรถ บ้านเลขที่ ชื่อ และจำนวนเงิน</strong>และช่องข้อมูลสำคัญอื่นๆ

@@ -25,7 +25,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话判断
+一句话判断
 
 {class="mt-1"}
 如果你现在用直板机完全够用、没有"屏幕不够大"的痛点，就别买折叠屏。它是"锦上添花"的设备，不是"雪中送炭"的设备。
@@ -42,7 +42,7 @@ kind: appendix
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>这几类人别买
+这几类人别买
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 手机只用来刷短视频、聊微信、打电话的，折叠屏对你毫无增益，反而更重更厚。
@@ -63,7 +63,7 @@ kind: appendix
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>线下体验清单
+线下体验清单
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 亲手开合10次，感受铰链阻尼是否顺滑、有没有异响。
@@ -112,7 +112,7 @@ kind: appendix
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>内屏损坏的高发场景
+内屏损坏的高发场景
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 合上时夹住耳机线/充电线，直接压裂内屏。
@@ -134,7 +134,7 @@ kind: appendix
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>折叠屏不是"更好的手机"，而是"另一种形态的手机"。买它是因为你需要它独特的形态，不是因为它"更先进"。
+折叠屏不是"更好的手机"，而是"另一种形态的手机"。买它是因为你需要它独特的形态，不是因为它"更先进"。
 
 {class="text-right text-sm"}
 —— 关于折叠屏的选购哲学
@@ -155,7 +155,7 @@ kind: appendix
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>最后提醒
+最后提醒
 
 {class="mt-1"}
 折叠屏技术每年都在迭代，本附录写于2026年。买之前务必查最新评测和用户反馈，重点关注：铰链寿命实测、折痕表现、内屏维修政策这三项。线下亲手摸永远比看评测重要。

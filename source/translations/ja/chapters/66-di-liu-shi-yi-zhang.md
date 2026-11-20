@@ -22,16 +22,16 @@ kind: chapter
 :::
 
 ```
-let name = "たろう"        // let：定数（デフォルトはこれがおすすめ）
-var age = 18             // var：変数（あとから変えられる）
+let name = "たろう" // let：定数（デフォルトはこれがおすすめ）
+var age = 18 // var：変数（あとから変えられる）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> varは変えられる
-// name = "はなこ"         // <i class="fas fa-times-circle mr-1"></i> letは変えられない。コンパイルエラー
+age = 19 // varは変えられる
+// name = "はなこ" // letは変えられない。コンパイルエラー
 
-let score: Int = 100     // 型を明示的に書いてもいい
-let pi = 3.14            // 書かなくても自動で推論される
+let score: Int = 100 // 型を明示的に書いてもいい
+let pi = 3.14 // 書かなくても自動で推論される
 
-print("こんにちは、\(name)")   // 文字列補間：バックスラッシュ + 括弧
+print("こんにちは、\(name)") // 文字列補間：バックスラッシュ + 括弧
 ```
 :::
 
@@ -64,20 +64,20 @@ Swiftコミュニティの鉄則：デフォルトはlet、本当に必要なと
 :::
 
 ```
-var name: String = "たろう"   // 普通の型：nilは絶対に許されない
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> コンパイラが直接止めてくれる
+var name: String = "たろう" // 普通の型：nilは絶対に許されない
+// name = nil // コンパイラが直接止めてくれる
 
-var nickname: String? = nil  // 疑問符を付けると：nilを許す（オプショナル）
+var nickname: String? = nil // 疑問符を付けると：nilを許す（オプショナル）
 nickname = "たーくん"
 
 // オプショナルを使うときは「ほどく」必要がある：
-if let n = nickname {        // if let：安全にほどく
-    print("こんにちは、\(n)")
+if let n = nickname { // if let：安全にほどく
+ print("こんにちは、\(n)")
 } else {
-    print("まだニックネームはない")
+ print("まだニックネームはない")
 }
 
-let len = nickname?.count ?? 0   // ?? でデフォルト値（nil結合演算子）
+let len = nickname?.count ?? 0 // ?? でデフォルト値（nil結合演算子）
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ print(len)
 ```
 // 関数：名前が先、引数と戻り値の型が後
 func greet(name: String) -> String {
-    return "こんにちは、\(name)！"
+ return "こんにちは、\(name)！"
 }
-print(greet(name: "たろう"))     // 呼び出すときは引数名を付ける
+print(greet(name: "たろう")) // 呼び出すときは引数名を付ける
 
 // クロージャ：その場で定義。手軽でストレート
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = 現在の要素
+let doubled = numbers.map { $0 * 2 } // $0 = 現在の要素
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // 絞り込み
+let big = numbers.filter { $0 > 2 } // 絞り込み
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ Swiftの公式のお好みははっきりしています。基本は構造体（
 ```
 // struct：データを入れる箱
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // structは「メンバー逐一イニシャライザ」付き：すぐ作れる
+ // structは「メンバー逐一イニシャライザ」付き：すぐ作れる
 }
 let r = Record(amount: 25.5, category: "食費", date: Date())
 
 // protocol：「どんな能力が必須か」の約束
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // protocolへの準拠 = 要件の実装を約束すること
+struct Record: Identifiable { ... } // protocolへの準拠 = 要件の実装を約束すること
 ```
 :::
 

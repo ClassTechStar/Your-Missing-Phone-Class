@@ -22,14 +22,14 @@ Un programma è «dati + logica». La variabile è il nome che diamo ai dati per
 :::
 
 ```
-val name = Marco        // val: variabile di sola lettura (il consigliato per default)
-var age = 18             // var: variabile mutabile (si può cambiare dopo)
+val name = Marco // val: variabile di sola lettura (il consigliato per default)
+var age = 18 // var: variabile mutabile (si può cambiare dopo)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var si può cambiare
-// name = "Anna"         // <i class="fas fa-times-circle mr-1"></i> val non si può cambiare: errore di compilazione
+age = 19 // var si può cambiare
+// name = "Anna" // val non si può cambiare: errore di compilazione
 
-val score: Int = 100     // puoi anche dichiarare il tipo esplicitamente
-val pi = 3.14            // se lo ometti viene dedotto automaticamente
+val score: Int = 100 // puoi anche dichiarare il tipo esplicitamente
+val pi = 3.14 // se lo ometti viene dedotto automaticamente
 ```
 :::
 
@@ -63,15 +63,15 @@ Una funzione è un pezzo di logica con un nome, come un pulsante del telecomando
 
 ```
 fun greet(name: String): String {
-    return "Ciao, $name!"     // il simbolo $ inserisce la variabile nella stringa
+ return "Ciao, $name!" // il simbolo $ inserisce la variabile nella stringa
 }
 
-println(greet(Marco))        // stampa: Ciao, Marco!
+println(greet(Marco)) // stampa: Ciao, Marco!
 
 // le funzioni di una riga si possono scrivere come espressioni
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // stampa: 8
+println(add(3, 5)) // stampa: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ L'intelligenza di un programma nasce da due cose: saper decidere (if/when) e sap
 // Decisioni: if / else
 val age = 17
 if (age >= 18) {
-    println("maggiorenne")
+ println("maggiorenne")
 } else {
-    println("minorenne")
+ println("minorenne")
 }
 
 // Multi-ramo: when (cento volte più comodo di switch)
 val score = 85
 val level = when {
-    score >= 90 -> "ottimo"
-    score >= 60 -> "sufficiente"
-    else -> "Continua così!"
+ score >= 90 -> "ottimo"
+ score >= 60 -> "sufficiente"
+ else -> "Continua così!"
 }
 
 // Ripetizione: un ciclo for
 val fruits = listOf("mela", "banana", "arancia")
 for (fruit in fruits) {
-    println("Mi piace la $fruit")
+ println("Mi piace la $fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ Il bug più celebre dell'era Java si chiama NullPointerException (eccezione di p
 :::
 
 ```
-var name: String = "Marco"   // tipo normale: non può mai essere null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> errore di compilazione — ti blocca subito
+var name: String = "Marco" // tipo normale: non può mai essere null
+// name = null // errore di compilazione — ti blocca subito
 
 var nickname: String? = null // aggiungi un punto di domanda: null consentito
 nickname = "Nino"
 
 // Con i tipi nullable devi gestirli in sicurezza:
-println(nickname?.length)    // chiamata sicura: restituisce null invece di crashare
-val len = nickname?.length ?: 0   // operatore Elvis: valore predefinito se null
+println(nickname?.length) // chiamata sicura: restituisce null invece di crashare
+val len = nickname?.length ?: 0 // operatore Elvis: valore predefinito se null
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ La classe è lo «stampo» degli oggetti, l'oggetto è il «prodotto finito» de
 ```
 // Classe normale: uno stampo
 class Dog(val name: String) {
-    fun bark() = println("$name: Bau!")
+ fun bark() = println("$name: Bau!")
 }
 
-val dog = Dog("Fido")      // crea un oggetto
-dog.bark()                 // Fido: Bau!
+val dog = Dog("Fido") // crea un oggetto
+dog.bark() // Fido: Bau!
 
 // data class: una scatola per dati (con equals/copy incluse)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, Marco, "zhangsan@example.com")
-val twin = me.copy(name = "Marco Rossi")   // copia e cambia un campo
+val twin = me.copy(name = "Marco Rossi") // copia e cambia un campo
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // Colle lambda: definita al volo, snella e diretta
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = elemento corrente
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = elemento corrente
 
 // Combinazione filtro + trasformazione (frequentissima nei progetti reali)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

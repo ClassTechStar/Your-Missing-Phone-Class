@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* направить в настройки */
-        default: /* разрешено, действуем */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* направить в настройки */
+ default: /* разрешено, действуем */
+ }
+ }
 }
 
 // 3. После отказа — мягкая деградация: подсказка + переход в настройки
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. Запрашиваем разрешение на уведомления (один диалог)
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "разрешено" : "отказано")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "разрешено" : "отказано")
+ }
 
 // 2. Планируем «ежедневное напоминание о записях в 20:00»
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "Напоминание о записях"
-    content.body = "Сегодня ещё нет записей"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "Напоминание о записях"
+ content.body = "Сегодня ещё нет записей"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ MVVM мы трогали в главе 65: здесь добавим три мо
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // начинается при появлении, отменяется при исчезновении
-            await vm.search(city: "Пекин")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // начинается при появлении, отменяется при исчезновении
+ await vm.search(city: "Пекин")
+ }
+ }
 }
 ```
 :::

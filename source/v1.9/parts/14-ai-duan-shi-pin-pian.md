@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第 96 章建立 AI 短视频工具全景 → 第 97 章剪映 AI 实操（图文成片/智能字幕/AI 配音）→ 第 98 章可灵 AI 实操（文生视频/图生视频）→ 第 99 章数字人与 AI 配音流水线 → 第 100 章把所有工具串成"从选题到发布"的工作流。

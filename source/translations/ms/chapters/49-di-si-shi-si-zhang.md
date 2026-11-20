@@ -34,10 +34,10 @@ Sila bina satu laman web alat peribadi dengan keperluan:
 1. HTML fail tunggal (CSS dan JS dalam baris), tanpa rangka kerja
 2. Tema gelap, gaya minimalis moden
 3. Paparkan 4 kad pintu masuk alat:
-   - alat perumus teks
-   - alat pengira kata
-   - alat pemilih warna
-   - penjana kod QR
+ - alat perumus teks
+ - alat pengira kata
+ - alat pemilih warna
+ - penjana kod QR
 4. Setiap kad ada ikon, tajuk dan huraian ringkas
 5. Kad ada kesan animasi ketika hover
 6. Responsif, boleh guna pada telefon
@@ -109,17 +109,17 @@ Keperluan:
 1. Pelayan Express, port 3001
 2. Pangkalan data SQLite, nama jadual records
 3. Medan jadual records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. API CRUD:
-   GET /api/records - dapatkan semua rekod
-   POST /api/records - tambah rekod
-   PUT /api/records/:id - kemas kini rekod
-   DELETE /api/records/:id - padam rekod
+ GET /api/records - dapatkan semua rekod
+ POST /api/records - tambah rekod
+ PUT /api/records/:id - kemas kini rekod
+ DELETE /api/records/:id - padam rekod
 5. Middleware pengendalian ralat
 Berikan struktur kod backend yang lengkap.
 ```

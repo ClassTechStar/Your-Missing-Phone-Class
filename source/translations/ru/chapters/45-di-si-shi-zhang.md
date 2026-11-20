@@ -76,12 +76,12 @@ kind: chapter
 - Сборка: Vite
 ## Модель данных
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## План разработки
 Step 1: базовые функции записей (CRUD)

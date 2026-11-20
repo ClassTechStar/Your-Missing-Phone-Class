@@ -66,7 +66,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>تقنية UWB فائقة العرض — "إحساس مكاني" أدق من البلوتوث
+تقنية UWB فائقة العرض — "إحساس مكاني" أدق من البلوتوث
 
 {class="mt-1"}
 إلى جانب البلوتوث، تخفي الهواتف الجديدة شريحة UWB (Ultra-Wideband، النطاق العريض جداً). قدرتها هي<strong>قياس المسافة بدقة وتحديد الموقع المكاني</strong>— تستطيع حساب مدى بُعد جهاز آخر عنك وفي أي اتجاه، بدقة تصل لمستوى السنتيمتر. البلوتوث يخبرك فقط "في الجوار"، لكن UWB يخبرك "على بُعد 1.2 متر إلى الأمام اليسار". تطبيقات شائعة:
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio وAuracast — الجيل الجديد من معايير الصوت عبر البلوتوث
+LE Audio وAuracast — الجيل الجديد من معايير الصوت عبر البلوتوث
 
 {class="mt-1"}
 الكلاسيكي الذي استُخدم لعشرين عاماً (A2DP) يحل محله<strong>LE Audio</strong>(صوت منخفض الطاقة)، وهو معيار الصوت الجديد منذ Bluetooth 5.2:
@@ -110,7 +110,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: اعرض شاشة هاتفك على التلفاز، وأعد مشهداً ذكياً
+جرّب: اعرض شاشة هاتفك على التلفاز، وأعد مشهداً ذكياً
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. تأكد من اتصال الهاتف والتلفاز بنفس شبكة Wi-Fi.
@@ -122,7 +122,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>حالة 1: تحسين عمر البطارية عملياً
+حالة 1: تحسين عمر البطارية عملياً
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>السيناريو</strong>: مستخدم Xiaomi 14 عمر بطارية ضعيف، ينفد في نصف يوم.

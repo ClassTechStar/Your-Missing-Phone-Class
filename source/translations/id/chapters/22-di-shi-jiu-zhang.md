@@ -87,7 +87,7 @@ Cari resmi yang sebenarnya, jangan cari yang "terlihat seperti resmi"
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Apa pun masalah yang Anda hadapi — lag, force close, tidak bisa terhubung jaringan, suara abnormal — mulai ulang ponsel dulu. Kalimat ini terdengar seperti menggampangkan, tetapi berdasarkan pengalaman saya sendiri, setidaknya enam dari sepuluh masalah kecil setelah mulai ulang langsung selesai. Ponsel seperti komputer, berjalan lama di memori akan menumpuk berbagai hal berantakan, mulai ulang adalah mengosongkan dan memulai lagi. Jadi, lain kali ponsel bermasalah, jangan terburu mencari "apa yang harus dilakukan", setelah mulai ulang lihat lagi.
+Apa pun masalah yang Anda hadapi — lag, force close, tidak bisa terhubung jaringan, suara abnormal — mulai ulang ponsel dulu. Kalimat ini terdengar seperti menggampangkan, tetapi berdasarkan pengalaman saya sendiri, setidaknya enam dari sepuluh masalah kecil setelah mulai ulang langsung selesai. Ponsel seperti komputer, berjalan lama di memori akan menumpuk berbagai hal berantakan, mulai ulang adalah mengosongkan dan memulai lagi. Jadi, lain kali ponsel bermasalah, jangan terburu mencari "apa yang harus dilakukan", setelah mulai ulang lihat lagi.
 
 {class="mt-1"}
 Ingat sekarang: Operasi penyelamat ini harus hafal di luar kepala
@@ -95,7 +95,7 @@ Ingat sekarang: Operasi penyelamat ini harus hafal di luar kepala
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Force restart
+Force restart
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: iPhone full-screen tekan volume naik → volume turun → tahan tombol daya sampai muncul Logo. Android tahan tombol daya 10-15 detik sampai bergetar.</strong> Bersihkan port pengisian

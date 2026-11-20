@@ -27,16 +27,16 @@ Der testgetriebene Ablauf beim KI-Programmieren: Zuerst lässt du die KI den Fun
 Schreibe Unit-Tests für die Funktion calculate_discount.
 Die Testfälle sollen abdecken:
 1. Normalfall:
-   - 100 Yuan mit 20 % Rabatt -> 80
-   - 200 Yuan mit 50 % Rabatt -> 100
+ - 100 Yuan mit 20 % Rabatt -> 80
+ - 200 Yuan mit 50 % Rabatt -> 100
 2. Grenzfälle:
-   - 0 Yuan mit 20 % Rabatt -> 0
-   - 100 Yuan ohne Rabatt -> 100 (keine Ermäßigung)
-   - 100 Yuan zum Vollpreis -> 100 (voller Preis)
+ - 0 Yuan mit 20 % Rabatt -> 0
+ - 100 Yuan ohne Rabatt -> 100 (keine Ermäßigung)
+ - 100 Yuan zum Vollpreis -> 100 (voller Preis)
 3. Fehlerfälle:
-   - negativer Preis -> muss einen Fehler werfen
-   - Rabatt > 1 -> muss einen Fehler werfen
-   - Eingabe keine Zahl -> Muss einen Fehler werfen
+ - negativer Preis -> muss einen Fehler werfen
+ - Rabatt > 1 -> muss einen Fehler werfen
+ - Eingabe keine Zahl -> Muss einen Fehler werfen
 Verwende das Vitest-Framework und gib die vollständige Testdatei.
 ```
 :::

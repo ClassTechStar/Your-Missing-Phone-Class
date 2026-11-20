@@ -57,7 +57,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>升级鸿蒙NEXT前必读
+升级鸿蒙NEXT前必读
 
 {class="mt-1"}
 升级到鸿蒙NEXT后，你的手机将无法运行安卓应用。升级之前请务必确认下面两件事：①你常用的App已有鸿蒙原生版本；②你的工作或生活中没有必须依赖安卓应用的场景。升级之后回不到鸿蒙4.3了。
@@ -104,7 +104,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事项
+注意事项
 
 {class="mt-1"}
 鸿蒙系统在不断更新迭代，不同版本可能有些差异。本文描述基于鸿蒙4.3和6的主要特性，具体功能请以你的手机实际版本为准。建议保持系统更新，以获得最新功能和安全补丁。
@@ -112,7 +112,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就试：体验鸿蒙特色功能
+现在就试：体验鸿蒙特色功能
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开控制中心，找到"超级终端"，看看周围有没有其他鸿蒙设备。

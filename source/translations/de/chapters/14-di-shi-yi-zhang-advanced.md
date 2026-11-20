@@ -102,7 +102,7 @@ Bei HDR-Videoaufnahmen wird ein HDR-fähiger Bildschirm benötigt, um die volle 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Praktische Empfehlungen
+Praktische Empfehlungen
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Alltag: 1080P/4K + 30fps + H.265-Codierung, ausgewogen zwischen Qualität und Dateigröße.
@@ -113,7 +113,7 @@ Bei HDR-Videoaufnahmen wird ein HDR-fähiger Bildschirm benötigt, um die volle 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Entdecken Sie: Ihre Smartphone-Videoeinstellungen
+Entdecken Sie: Ihre Smartphone-Videoeinstellungen
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Öffnen Sie die Kamera-App und wechseln Sie in den Videomodus.
@@ -241,7 +241,7 @@ Zusaetzlich zur Alltagsfotografie gibt es im Smartphone einige spezielle Modi, d
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Praktische Tipps fuer Standfotografie
+Praktische Tipps fuer Standfotografie
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Alltag: HEIF/JPEG ist ausreichend – kleine Dateien, brauchbare Qualitaet.
@@ -253,7 +253,7 @@ Zusaetzlich zur Alltagsfotografie gibt es im Smartphone einige spezielle Modi, d
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Probier es aus: Lerne deine Kamera kennen
+Probier es aus: Lerne deine Kamera kennen
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Pruefe, ob dein Smartphone RAW-Aufnahmen unterstuetzt (Einstellungen → Kamera → Formate), aktiviere es, mache eine Aufnahme und vergleiche die Dateigroessen von JPEG und RAW.

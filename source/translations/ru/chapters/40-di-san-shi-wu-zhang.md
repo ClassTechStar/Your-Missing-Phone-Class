@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Принцип «достаточно — значит достаточно»
+Принцип «достаточно — значит достаточно»
 
 {class="mt-1"}
 Первый телефон ребёнку не обязан быть флагманом. «Избыточная производительность» процессора чаще всего уходит на игры. Лучше выбрать аппарат с ёмкой батареей, средними характеристиками и экраном, бережным к глазам: в диапазоне 1500–2500 юаней или официальный восстановленный. Им проще управлять. Ориентир по бюджету: 1500–2500 юаней покрывают потребности большинства школьников.
@@ -60,27 +60,27 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Функция</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Экранное время</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / фирменные решения</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Лимиты на приложения</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да, по категориям</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да, по приложениям</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Время отключения</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да (между брендами есть отличия)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Фильтрация контента</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Системная, более полная</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Зависит от бренда, неоднородно</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Удалённое управление</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Семейный доступ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / облако бренда</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Согласование установки приложений</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Требуется одобрение родителя</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Поддерживается в Family Link</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Функция</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Экранное время</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / фирменные решения</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Лимиты на приложения</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да, по категориям</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да, по приложениям</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Время отключения</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Да (между брендами есть отличия)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Фильтрация контента</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Системная, более полная</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Зависит от бренда, неоднородно</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Удалённое управление</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Семейный доступ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / облако бренда</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Согласование установки приложений</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Требуется одобрение родителя</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Поддерживается в Family Link</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Родительский контроль — не «сделал и забыл»
+Родительский контроль — не «сделал и забыл»
 
 {class="mt-1"}
 Дети всегда найдут способ обойти ограничения (в сети полно инструкций «как взломать Экранное время»). Технические средства — лишь базовая линия. Настоящая защита, это общение и доверие между родителем и ребёнком. Рекомендуется ежемесячно вместе с ребёнком разбирать отчёты об использовании, а не следить односторонне.
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Не используйте удостоверение родителя для «переписывания» аккаунта
+Не используйте удостоверение родителя для «переписывания» аккаунта
 
 {class="mt-1"}
 Многие дети регистрируют игровой аккаунт на удостоверение родителя, чтобы обойти противозависимую систему. Это нарушает пользовательское соглашение и лишает ребёнка защиты. Родители должны беречь свои платёжные пароли и личные данные и не «одалживать аккаунт» ради удобства.
@@ -113,7 +113,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: вместе с ребёнком подпишите «Договор об использовании смартфона»
+Практика: вместе с ребёнком подпишите «Договор об использовании смартфона»
 
 {class="mt-1"}
 Записанные правила, подписанные обеими сторонами и прикреплённые на видном месте, работают лучше устных договорённостей. Рекомендуется включить:
@@ -137,7 +137,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Родитель — лучшая «брандмауэр»
+Родитель — лучшая «брандмауэр»
 
 {class="mt-1"}
 Исследования показывают сильную положительную корреляцию между временем использования телефона у родителей и у детей. Требовать от ребёнка не смотреть в телефон, а самому листать короткие видео до поздней ночи, правила не сработают. Чтобы изменить ребёнка, начните с того, чтобы отложить собственный телефон.
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Остерегайтесь обратной стороны «цифрового наследия детей»
+Остерегайтесь обратной стороны «цифрового наследия детей»
 
 {class="mt-1"}
 Ребёнка «записывают» с рождения, фотографии роста, выкладываемые родителями, видео из детского сада, данные о здоровье с умных часов. Эти данные после загрузки сложно полностью удалить. Перед публикацией подумайте: не будет ли ребёнку неловко за это фото через десять лет? Уважайте цифровую личность ребёнка: начните с умеренности в публикациях о детях.
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Итоги главы
+Итоги главы
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Нет универсального возраста для выдачи телефона, но в 3–6 лет лучше не давать, а до 13 лет, переход через детские часы или телефон без интернета.

@@ -53,7 +53,7 @@ Laluan pengaktifan umum: Masuk [Tetapan].[Lagi Tetapan].Cari subitem [Ingatan] a
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Fungsi kunci BL:
+Fungsi kunci BL:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Pengembangan ingatan akan mengambil sebahagian ruang storan badan, pastikan storan tinggal tidak kurang daripada 20-30GB, jika tidak mungkin menjejaskan kelancaran sistem.
@@ -63,7 +63,7 @@ Laluan pengaktifan umum: Masuk [Tetapan].[Lagi Tetapan].Cari subitem [Ingatan] a
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Rumusan
+Rumusan
 
 {class="mt-1"}
 Pengembangan ingatan adalah teknologi pengoptimuman tahap sistem yang matang, boleh meningkatkan keupayaan pelbagai tugas dan kadar latar belakang aktif model pertengahan hingga bawah tanpa mengubah perkakasan, tetapi terhad oleh jurang kelajuan besar antara flash dan ingatan fizikal, bukan "ubat penawar universal". Sama ada mengaktifkan, berapa besar, perlu mengambil kira saiz RAM fizikal model, spesifikasi flash, ruang storan tinggal dan tabiat penggunaan.
@@ -71,7 +71,7 @@ Pengembangan ingatan adalah teknologi pengoptimuman tahap sistem yang matang, bo
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari Berlatih: Lihat Adakah Telefon Anda Ada Pengembangan Ingatan
+Mari Berlatih: Lihat Adakah Telefon Anda Ada Pengembangan Ingatan
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka [Tetapan], cari "Pengembangan Ingatan", "Gabungan Ingatan", "RAM Plus" atau "Extended RAM".

@@ -53,7 +53,7 @@ La ruta habitual de activación: entrar en [Configuración] → [Más ajustes] �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Precauciones
+Precauciones
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - La expansión de memoria ocupa parte del almacenamiento del dispositivo, asegúrate de tener al menos 20-30GB libres, de lo contrario puede afectar a la fluidez del sistema.
@@ -63,7 +63,7 @@ La ruta habitual de activación: entrar en [Configuración] → [Más ajustes] �
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Resumen
+Resumen
 
 {class="mt-1"}
 La expansión de memoria es una tecnología madura de optimización a nivel de sistema, puede mejorar la capacidad multitarea y la tasa de apps activas en segúndo plano de modelos de gama media-baja sin cambiar el hardware, pero está limitada por la enorme brecha de velocidad entre flash y memoria física, no es una "panacea". Si activarla y cuánto, debe juzgarse según el tamaño de RAM física, la específicación del flash, el espacio libre y los hábitos de uso.
@@ -71,7 +71,7 @@ La expansión de memoria es una tecnología madura de optimización a nivel de s
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Manos a la obra: comprueba si tu móvil tiene expansión de memoria
+Manos a la obra: comprueba si tu móvil tiene expansión de memoria
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abre [Configuración], busca "extensión de memoria", "fusión de memoria", "RAM Plus" o "Extended RAM".

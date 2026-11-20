@@ -95,7 +95,7 @@ Otomatisasi tidak selalu mulus, ada beberapa jebakan yang sudah saya lalui untuk
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tip: Cara yang Tepat untuk Memulai Otomatisasi
+Tip: Cara yang Tepat untuk Memulai Otomatisasi
 
 {class="mt-1"}
 Luangkan 5 menit untuk berpikir: Apa 3 hal yang paling sering Anda ulangi di ponsel setiap hari? Misalnya rutinitas pagi, kebiasaan setiap kali menghubungkan earphone Bluetooth. pengaturan sebelum bepergian... mulailah dari hal-hal kecil frekuensi tinggi ini, buat satu otomatisasi sederhana untuk masing-masing. Bahkan jika setiap otomatisasi hanya menghemat 5 detik, akumulasi seiring waktu sangat signifikan. Dan kepuasan setelah membuatnya benar-benar adiktif.
@@ -103,7 +103,7 @@ Luangkan 5 menit untuk berpikir: Apa 3 hal yang paling sering Anda ulangi di pon
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari Berlatih: Tiga Tantangan Otomatisasi Pemula
+Mari Berlatih: Tiga Tantangan Otomatisasi Pemula
 
 {class="mt-1 mb-2"}
 Pilih satu yang paling cocok untuk Anda, setelah selesai Anda sudah lulus dasar:
@@ -116,7 +116,7 @@ Pilih satu yang paling cocok untuk Anda, setelah selesai Anda sudah lulus dasar:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Studi Kasus 3: Otomatisasi "Routine Selamat Pagi"
+Studi Kasus 3: Otomatisasi "Routine Selamat Pagi"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Skenario</strong>: Setiap hari 7:00 otomatis bacakan cuaca + matikan silent + buka berita.

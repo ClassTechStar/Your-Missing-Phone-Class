@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* 引導至設定中開之 */
-        default: /* 已授權，可行矣 */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* 引導至設定中開之 */
+ default: /* 已授權，可行矣 */
+ }
+ }
 }
 
 // 3. 被拒則優雅降級：予提示 + 跳設定
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. 申請通知之權（彈窗一次）
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "已授權" : "被拒絕")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "已授權" : "被拒絕")
+ }
 
 // 2. 安排一條"每日 20:00 記賬之提醒"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "記賬提醒"
-    content.body = "今日尚未記賬也"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "記賬提醒"
+ content.body = "今日尚未記賬也"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ Swift 6 並發之制有二規，新手必曉：
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // 現即始，隱即止
-            await vm.search(city: "北京")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // 現即始，隱即止
+ await vm.search(city: "北京")
+ }
+ }
 }
 ```
 :::
@@ -170,7 +170,7 @@ struct WeatherScreen: View {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小結
+本章小結
 
 - 權限三步：Info.plist 聲明（漏則必崩）、用時而請、見拒則引往設置
 - iOS 權限之窗惟彈一過：時擇「方欲用之頃」，文明其用

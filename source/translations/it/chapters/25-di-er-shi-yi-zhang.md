@@ -100,7 +100,7 @@ Tante chiacchiere, in conclusione ti do una lista di sicurezza semplice e dirett
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fallo ora: fai un "check-up di sicurezza" al tuo telefono
+Fallo ora: fai un "check-up di sicurezza" al tuo telefono
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Upgrade DNS</strong>: Android: Impostazioni > Connessione e condivisione > DNS privato > inserisci "one.one.one.one" o "dns.google". iPhone: cerca con Safari "1.1.1.1 DNS profile" e installa il profilo, oppure scarica l'app 1.1.1.1 di Cloudflare.

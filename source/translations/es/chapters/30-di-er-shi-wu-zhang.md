@@ -24,51 +24,51 @@ Principio fundamental: la limpieza de datos no es "eliminar", sino "sobrescribir
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marca</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ruta de borrado</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Diferencias clave y notas</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Sistema y actualizaciones &gt; Restablecer &gt; Restablecer datos de fábrica</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Primero cierra sesión en la cuenta de Huawei y desactiva "Buscar mi móvil", de lo contrario se activará el bloqueo de activación; en modo purificado puede requerir verificación de contraseña.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Mi dispositivo &gt; Restablecer datos de fábrica</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En la parte inferior hay opciones de "Formatear tarjeta SD virtual" y "Borrar todo el contenido y ajustes"; ambas deben estar marcadas; cierra sesión en la cuenta de Xiaomi antes de desactivar "Buscar dispositivo".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Otros ajustes &gt; Restaurar teléfono &gt; Borrar completamente todos los datos</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS ofrece un modo de "borrado completo" que sobrescribe el almacenamiento múltiples veces; requiere introducir la contraseña de bloqueo de pantalla para confirmar.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Gestión del sistema &gt; Copia de seguridad y restablecimiento &gt; Borrar todos los datos</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Marca "Formatear almacenamiento del teléfono" para limpiar la zona de la tarjeta SD; cierra sesión en la cuenta de vivo, desactiva "Buscar móvil".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Gestión general &gt; Restablecer &gt; Restablecer datos de fábrica</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Primero elimina la cuenta de Samsung y desactiva "Buscar mi móvil"; algunos modelos tienen opción de "sobrescritura automática", recomendada activar.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sinceramente, es normal que el móvil empiece a irse lento tras un ano de uso. La causa no necesariamente es que este roto; más a menudo es "acumulacion de basura": archivos basura, procesos en segúndo plano, espacio de almacenamiento llenandose poco a poco.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; General &gt; Transferir o restablecer iPhone &gt; Borrar todo el contenido y ajustes</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Debes cerrar sesión en Apple ID primero, de lo contrario el siguiente usuario será bloqueado por el bloqueo de activación de iCloud; iOS 15+ soporta "mantener datos de iCloud al cerrar sesión" para consulta posterior.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marca</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ruta de borrado</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Diferencias clave y notas</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Sistema y actualizaciones &gt; Restablecer &gt; Restablecer datos de fábrica</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Primero cierra sesión en la cuenta de Huawei y desactiva "Buscar mi móvil", de lo contrario se activará el bloqueo de activación; en modo purificado puede requerir verificación de contraseña.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Mi dispositivo &gt; Restablecer datos de fábrica</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">En la parte inferior hay opciones de "Formatear tarjeta SD virtual" y "Borrar todo el contenido y ajustes"; ambas deben estar marcadas; cierra sesión en la cuenta de Xiaomi antes de desactivar "Buscar dispositivo".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Otros ajustes &gt; Restaurar teléfono &gt; Borrar completamente todos los datos</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS ofrece un modo de "borrado completo" que sobrescribe el almacenamiento múltiples veces; requiere introducir la contraseña de bloqueo de pantalla para confirmar.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Gestión del sistema &gt; Copia de seguridad y restablecimiento &gt; Borrar todos los datos</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Marca "Formatear almacenamiento del teléfono" para limpiar la zona de la tarjeta SD; cierra sesión en la cuenta de vivo, desactiva "Buscar móvil".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; Gestión general &gt; Restablecer &gt; Restablecer datos de fábrica</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Primero elimina la cuenta de Samsung y desactiva "Buscar mi móvil"; algunos modelos tienen opción de "sobrescritura automática", recomendada activar.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sinceramente, es normal que el móvil empiece a irse lento tras un ano de uso. La causa no necesariamente es que este roto; más a menudo es "acumulacion de basura": archivos basura, procesos en segúndo plano, espacio de almacenamiento llenandose poco a poco.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes &gt; General &gt; Transferir o restablecer iPhone &gt; Borrar todo el contenido y ajustes</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Debes cerrar sesión en Apple ID primero, de lo contrario el siguiente usuario será bloqueado por el bloqueo de activación de iCloud; iOS 15+ soporta "mantener datos de iCloud al cerrar sesión" para consulta posterior.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Las tres cosas más fáciles de pasar por alto
+Las tres cosas más fáciles de pasar por alto
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>No cerrar sesión en la cuenta</strong>: Tras vender el teléfono, este es bloqueado remotamente y tú tampoco puedes desbloquearlo; al final tendrás que ir con tu documento de identidad al servicio oficial para desbloquearlo.
@@ -82,7 +82,7 @@ Los datos de tu teléfono ya no son "virtuales". Contienen tu dinero, relaciones
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>Base legal: Artículo 49 de la Ley de Protección de Información Personal
+Base legal: Artículo 49 de la Ley de Protección de Información Personal
 
 {class="mt-1"}
 La "Ley de Protección de Información Personal de la República Popular China", vigente desde 2021, establece en su artículo 49:<strong>Cuando fallece una persona física, sus familiares cercanos pueden ejercer los derechos de acceso, copia, rectificación y supresión de la información personal del fallecido previstos en este capítulo, en beneficio de sus propios intereses legítimos; salvo que el fallecido haya dispuesto otra cosa en vida.</strong>
@@ -108,7 +108,7 @@ Las dos apps más usadas por los chinos tienen reglas diferentes:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Lo que nunca debes hacer
+Lo que nunca debes hacer
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>No entregues las contraseñas de la cuenta del fallecido directamente a la familia para "seguir usándola"</strong>: esto viola el acuerdo de la plataforma, y si los fondos se congelan o se activan controles de riesgo, será más difícil justificarlo.
@@ -153,7 +153,7 @@ Las principales plataformas sociales nacionales tienen dos enfoques para gestion
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Recordatorio importante
+Recordatorio importante
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Las reglas de las plataformas se actualizan; antes de tramitar, consulta las últimas instrucciones del servicio de atención al cliente oficial.
@@ -174,7 +174,7 @@ Además de las cuentas sociales, cada vez más personas poseen <strong>activos d
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>El coste real de la "desaparición" de las criptomonedas
+El coste real de la "desaparición" de las criptomonedas
 
 {class="mt-1"}
 Según un informe de Chainalysis, a nivel mundial ya hay <strong>más de 3 millones de Bitcoin</strong> perdidos para siempre por claves privadas perdidas, equivalente a un sexto del total existente. Si posees activos cripto, asegúrate de que al menos una persona en la que confíes absolutamente conozca la <strong>ruta de recuperación</strong>; de lo contrario, esta riqueza permanecerá dormida para siempre en la blockchain.
@@ -227,7 +227,7 @@ Los testamentos tradicionales no cubren los activos digitales. Te recomiendo act
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Advertencia legal sobre "contraseñas"
+Advertencia legal sobre "contraseñas"
 
 {class="mt-1"}
 Escribir las contraseñas directamente en el testamento conlleva riesgo de fuga, y tras la publicación del testamento todos los herederos podrán verlas.<strong>Es más prudente: en el testamento solo se indica "lista de cuentas + voluntad de disposición + ubicación de custodia de contraseñas", y la contraseña real se transmite al albacea de confianza mediante la contraseña maestra del gestor de contraseñas</strong>. Así se cumplen los requisitos legales y se reduce el riesgo de filtración de contraseñas.
@@ -239,41 +239,41 @@ Un teléfono móvil contiene oro, plata, cobre, tierras raras y decenas de metal
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Canal</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Precio de reciclaje</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Seguridad de datos</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Casos de uso</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Trueque oficial (Huawei/Apple/Xiaomi, etc.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Medio, a menudo con vales de descuento añadidos</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El más alto, con proceso estandarizado oficial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Más rentable al cambiar a un teléfono nuevo de la misma marca</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Plataforma de reciclaje de terceros (Aihuishou, Zhuanzhuan, Huishoubao, etc.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ligeramente superior, se puede comparar</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Relativamente alto, con informe de borrado de datos</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Para monetizar directamente sin vincularse a una marca</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Donación benéfica (como escuelas rurales, organizaciones caritativas)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sin retorno económico</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requiere borrado completo por cuenta propia</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El dispositivo aún funciona y quieres hacer una buena acción</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Segunda vida (modificación propia)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ahorra dinero en nuevos dispositivos</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El propietario original sigue usándolo, sin riesgo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El dispositivo aún funciona bien y hay necesidades de modificación en casa</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Canal</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Precio de reciclaje</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Seguridad de datos</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Casos de uso</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Trueque oficial (Huawei/Apple/Xiaomi, etc.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Medio, a menudo con vales de descuento añadidos</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El más alto, con proceso estandarizado oficial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Más rentable al cambiar a un teléfono nuevo de la misma marca</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Plataforma de reciclaje de terceros (Aihuishou, Zhuanzhuan, Huishoubao, etc.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ligeramente superior, se puede comparar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Relativamente alto, con informe de borrado de datos</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Para monetizar directamente sin vincularse a una marca</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Donación benéfica (como escuelas rurales, organizaciones caritativas)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sin retorno económico</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Requiere borrado completo por cuenta propia</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El dispositivo aún funciona y quieres hacer una buena acción</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Segunda vida (modificación propia)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ahorra dinero en nuevos dispositivos</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El propietario original sigue usándolo, sin riesgo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El dispositivo aún funciona bien y hay necesidades de modificación en casa</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>V. Apéndices</strong>: El método más recomendado; el proceso es estandarizado y la seguridad de datos está garantizada. Apple, Huawei, Xiaomi y otras marcas tienen entradas de "trueque" en sus sitios web oficiales; tras la evaluación se puede descontar del precio del teléfono nuevo.
@@ -283,7 +283,7 @@ Un teléfono móvil contiene oro, plata, cobre, tierras raras y decenas de metal
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>La verdad sobre la basura electrónica
+La verdad sobre la basura electrónica
 
 {class="mt-1"}
 La placa de circuito de un teléfono contiene <strong>oro, plata, paladio, cobre</strong> y otros metales preciosos; cada tonelada de placas de circuito recicladas contiene decenas de veces más oro que el mineral de oro. Pero si se desecha libremente, el plomo, mercurio y cadmio filtrarán al suelo y al agua subterránea, contaminando durante décadas.<strong>El reciclaje correcto protege el medio ambiente y permite que los metales escasos se reciclen.</strong>
@@ -291,7 +291,7 @@ La placa de circuito de un teléfono contiene <strong>oro, plata, paladio, cobre
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Verificar información
+Verificar información
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Última copia de seguridad completa: sube fotos a la nube, copia archivos importantes al ordenador, exporta y archiva el historial de chat.
@@ -305,7 +305,7 @@ La placa de circuito de un teléfono contiene <strong>oro, plata, paladio, cobre
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Lista de tareas de este mes
+Lista de tareas de este mes
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Designa un "contacto de herencia" de Apple o configura el "gestor de cuentas inactivas" de Google para tu teléfono principal.

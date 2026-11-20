@@ -34,10 +34,10 @@ kind: chapter
 1. 單文件HTML（內聯CSS與JS），不使用框架
 2. 暗色主題，現代極簡風格
 3. 展示4個工具入口卡片：
-   - 文本摘要工具
-   - 字數統計工具
-   - 顏色選擇器
-   - 二維碼生成器
+ - 文本摘要工具
+ - 字數統計工具
+ - 顏色選擇器
+ - 二維碼生成器
 4. 每個卡片有圖標、標題、簡短描述
 5. 卡片有懸停動畫效果
 6. 響應式佈局，手機上可用
@@ -109,17 +109,17 @@ Record { id, amount, type, category, note, date }
 1. Express服務器，端口3001
 2. SQLite數據庫，表名records
 3. records表字段：
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. CRUD接口：
-   GET /api/records - 取所有記錄
-   POST /api/records - 新增記錄
-   PUT /api/records/:id - 更新記錄
-   DELETE /api/records/:id - 刪除記錄
+ GET /api/records - 取所有記錄
+ POST /api/records - 新增記錄
+ PUT /api/records/:id - 更新記錄
+ DELETE /api/records/:id - 刪除記錄
 5. 錯誤處理中間件
 請予完整之後端代碼結構。
 ```

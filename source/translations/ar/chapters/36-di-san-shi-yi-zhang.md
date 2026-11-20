@@ -70,7 +70,7 @@ JianYing (CapCut نسخة الصين) أنسب أداة مونتاج للمبت�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: صوّر فيديو قصير 30 ثانية
+جرّب: صوّر فيديو قصير 30 ثانية
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. اختر معرفة صغيرة تتقنها (مثل "كيف تكبّر خط الهاتف").
@@ -82,7 +82,7 @@ JianYing (CapCut نسخة الصين) أنسب أداة مونتاج للمبت�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - فكر قبل التصوير: من الجمهور، ما القيمة، في أي منصة

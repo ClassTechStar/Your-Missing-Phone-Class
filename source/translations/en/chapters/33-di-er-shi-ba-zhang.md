@@ -18,7 +18,7 @@ Many people ask online "what phone should I buy for 3,000 yuan?": this question 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Three-Step Phone Selection
+Three-Step Phone Selection
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>First, figure out what you care about most</strong>: Photography? Gaming? Battery life? Screen? System smoothness? Or just need to make calls and use WeChat? Prioritize your needs.
@@ -33,41 +33,41 @@ Spec sheets have dozens of data points, but ordinary users only need to focus on
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">How to Evaluate</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">One-Sentence Summary</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Processor (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determines how many years the phone will stay smooth. 2026 standards: Snapdragon 8 Elite Gen5 / Dimensity 9500 and above = top tier; Snapdragon 8s Gen4 / Dimensity 8400 = mid-to-high; Snapdragon 7+ Gen4 / Dimensity 7350 = good for three years. Below Snapdragon 6-series — be cautious.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Buy new, not old — SoC determines how many years your phone stays lag-free</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Screen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED has better colors and is more power-efficient than LCD; 120Hz refresh rate is noticeably smoother than 60Hz; resolution should be at least 1080P. High-frequency PWM dimming (1920Hz+) is more eye-friendly.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + high-frequency dimming = the baseline for a good screen</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Using Huawei phone → prioritize HarmonyOS Connect, best experience with Huawei devices.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Don't Look at Megapixels — Look at Sensor Size</strong>. Sensor size matters much more than megapixels. Ultrawide is practical; telephoto (3x+ optical zoom) for distant subjects; macro lenses are mostly filler.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Large-sensor main camera + practical telephoto &gt; multiple filler lenses</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Battery and Charging</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh is the baseline; 5000mAh+ easily lasts a day. For fast charging: 60W+ is fast, 100W+ is blazing fast. Wireless charging is convenient but slow.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + 60W fast charging = anxiety-free combo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">System Update Commitment</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determines how long the phone stays secure. Apple typically provides 5-6 years of system updates; Samsung flagships get 4 years system + 5 years security updates; Google Pixel gets 7 years; domestic mid-range phones generally have shorter commitments (2-3 years).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Want to use it longer — choose a brand with long update commitments</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">How to Evaluate</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">One-Sentence Summary</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Processor (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determines how many years the phone will stay smooth. 2026 standards: Snapdragon 8 Elite Gen5 / Dimensity 9500 and above = top tier; Snapdragon 8s Gen4 / Dimensity 8400 = mid-to-high; Snapdragon 7+ Gen4 / Dimensity 7350 = good for three years. Below Snapdragon 6-series — be cautious.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Buy new, not old — SoC determines how many years your phone stays lag-free</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Screen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED has better colors and is more power-efficient than LCD; 120Hz refresh rate is noticeably smoother than 60Hz; resolution should be at least 1080P. High-frequency PWM dimming (1920Hz+) is more eye-friendly.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + high-frequency dimming = the baseline for a good screen</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Using Huawei phone → prioritize HarmonyOS Connect, best experience with Huawei devices.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Don't Look at Megapixels — Look at Sensor Size</strong>. Sensor size matters much more than megapixels. Ultrawide is practical; telephoto (3x+ optical zoom) for distant subjects; macro lenses are mostly filler.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Large-sensor main camera + practical telephoto &gt; multiple filler lenses</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Battery and Charging</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh is the baseline; 5000mAh+ easily lasts a day. For fast charging: 60W+ is fast, 100W+ is blazing fast. Wireless charging is convenient but slow.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + 60W fast charging = anxiety-free combo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">System Update Commitment</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Determines how long the phone stays secure. Apple typically provides 5-6 years of system updates; Samsung flagships get 4 years system + 5 years security updates; Google Pixel gets 7 years; domestic mid-range phones generally have shorter commitments (2-3 years).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Want to use it longer — choose a brand with long update commitments</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ Here are the most common "user profiles" — just find the one that matches you:
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">4. "Ears" for Hearing-Impaired Users—Complete Live Captions Guide</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Key Specs to Look For</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Recommended Direction</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Photography Enthusiast</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Large-sensor main camera (1-inch ideal), OIS, telephoto (3x+ optical zoom), imaging chip</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X series, Huawei Pura/Mate series, Xiaomi Ultra series</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamer</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Top-tier processor, high touch sampling rate, cooling system, large battery + fast charging</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO Digital series, ROG Phone, RedMagic, Redmi K series</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Battery Life Priority</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh+ battery, energy-efficient processor, LTPO display</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic series, OnePlus, Redmi Note large battery edition</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 For Elderly Users</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy mode, large fonts, loud volume, big battery, many service centers</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, OPPO A series, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 For Students</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">High value for money, durable, large battery, parental control features</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Apple Ecosystem Users</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Already own Mac/iPad/AirPods, iPhone is the only solution</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standard (value) or Pro (full experience)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 International Travel</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM support, complete global band coverage, Google services</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S series, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">4. "Ears" for Hearing-Impaired Users—Complete Live Captions Guide</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Key Specs to Look For</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Recommended Direction</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Photography Enthusiast</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Large-sensor main camera (1-inch ideal), OIS, telephoto (3x+ optical zoom), imaging chip</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X series, Huawei Pura/Mate series, Xiaomi Ultra series</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamer</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Top-tier processor, high touch sampling rate, cooling system, large battery + fast charging</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO Digital series, ROG Phone, RedMagic, Redmi K series</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Battery Life Priority</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh+ battery, energy-efficient processor, LTPO display</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic series, OnePlus, Redmi Note large battery edition</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 For Elderly Users</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy mode, large fonts, loud volume, big battery, many service centers</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, OPPO A series, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 For Students</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">High value for money, durable, large battery, parental control features</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Apple Ecosystem Users</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Already own Mac/iPad/AirPods, iPhone is the only solution</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standard (value) or Pro (full experience)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 International Travel</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM support, complete global band coverage, Google services</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S series, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ Here are the most common "user profiles" — just find the one that matches you:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Use This Method to Choose a Phone
+Hands-On: Use This Method to Choose a Phone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Take a piece of paper and write down your two core needs (e.g., battery life first, camera second).
@@ -208,7 +208,7 @@ Here are the most common "user profiles" — just find the one that matches you:
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Three-step phone selection: define needs → set budget → pick model

@@ -59,7 +59,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：屏幕旋转会"杀死"Activity
+避坑提醒：屏幕旋转会"杀死"Activity
 
 {class="mt-1"}
 新手最经典的翻车现场：App 转一下屏幕，输入框里的字全没了。原因：旋转屏幕默认会销毁并重建 Activity（走一遍 onDestroy → onCreate）。解法：用 <code class="inline">rememberSaveable</code> 保存状态（Compose 里替代 remember），它会在重建时自动把值找回来。第 6、7 章会反复用到。
@@ -77,12 +77,12 @@ Intent（意图）是组件之间通信的"车票"。你想从一个页面跳到
 ```
 // 方式一：显式 Intent——明确指定去哪个页面
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "张三")     // 车上捎带"行李"（数据）
+intent.putExtra("name", "张三") // 车上捎带"行李"（数据）
 startActivity(intent)
 
 // 方式二：隐式 Intent——只说要干什么，系统找谁干
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // 系统会打开浏览器/或让你选
+startActivity(web) // 系统会打开浏览器/或让你选
 ```
 :::
 
@@ -101,22 +101,22 @@ startActivity(web)   // 系统会打开浏览器/或让你选
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "未知")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "未知")
+ }
 }
 
 // 在页面里跳转：
-navController.navigate("detail/张三")     // 带参数
-navController.popBackStack()              // 返回上一页
+navController.navigate("detail/张三") // 带参数
+navController.popBackStack() // 返回上一页
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：页面多了怎么办？
+小贴士：页面多了怎么办？
 
 {class="mt-1"}
 项目长大后，把所有页面路由集中写在一个文件里（比如 <code class="inline">AppNavGraph.kt</code>），统一管理，别让"跳转到哪"的逻辑散落在各个页面。这是从"能跑"走向"可维护"的第一步。
@@ -130,7 +130,7 @@ navController.popBackStack()              // 返回上一页
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给计数器装上"记忆"
+来动手：给计数器装上"记忆"
 
 {class="mt-1"}
 把第 51 章的计数器改造一下：① 把 remember 换成 rememberSaveable，旋转屏幕验证数字还在；② 加一个"关于"按钮，用 Navigation 跳到第二个页面显示版本号，正好练一遍页面跳转；③ 在两个页面的 onCreate/onPause 里打印日志，用 Logcat 看调用顺序。做完这三步，生命周期就不再是纸上谈兵。
@@ -138,7 +138,7 @@ navController.popBackStack()              // 返回上一页
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 四大组件：Activity（门面）、Service（后台）、BroadcastReceiver（喇叭）、ContentProvider（资料柜）
 - 生命周期六回调：onCreate、onStart、onResume、onPause、onStop、onDestroy

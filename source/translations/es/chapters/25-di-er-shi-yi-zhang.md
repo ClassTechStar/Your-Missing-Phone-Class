@@ -100,7 +100,7 @@ Después de todo esto, aquí tienes una lista de seguridad simple y directa. Ded
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hazlo ya: haz un "chequeo de seguridad" completo a tu móvil
+Hazlo ya: haz un "chequeo de seguridad" completo a tu móvil
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Mejora de DNS</strong>:Android: Ajustes &gt; Conexión y compartir &gt; DNS privado &gt; introduce "one.one.one.one" o "dns.google". iPhone: busca en Safari "1.1.1.1 DNS profile" para instalar el perfil, o descarga la App 1.1.1.1 de Cloudflare.

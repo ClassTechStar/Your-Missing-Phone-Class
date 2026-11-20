@@ -39,19 +39,19 @@ import SwiftData
 
 @Model
 class Record {
-    var type: String      // "income" entrata | "expense" uscita
-    var amount: Double    // importo (in yuan)
-    var category: String  // categoria: pasti, trasporti, stipendio…
-    var note: String      // nota (facoltativa)
-    var date: Date        // data della voce
+ var type: String // "income" entrata | "expense" uscita
+ var amount: Double // importo (in yuan)
+ var category: String // categoria: pasti, trasporti, stipendio…
+ var note: String // nota (facoltativa)
+ var date: Date // data della voce
 
-    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
-        self.type = type
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+ self.type = type
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 ```
 :::
@@ -70,7 +70,7 @@ Far agire il database direttamente dall'interfaccia? Funziona, ma il codice dell
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View (interfaccia SwiftUI)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel (il centro logico @Observable)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model (livello dati SwiftData)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View (interfaccia SwiftUI)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel (il centro logico @Observable)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model (livello dati SwiftData)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -87,31 +87,31 @@ import Observation
 
 @Observable
 class RecordViewModel {
-    var records: [Record] = []
-    private let context: ModelContext
+ var records: [Record] = []
+ private let context: ModelContext
 
-    init(context: ModelContext) { self.context = context }
+ init(context: ModelContext) { self.context = context }
 
-    func load() {
-        // filtro + ordinamento con #Predicate di SwiftData
-        let descriptor = FetchDescriptor<Record>(
-            sortBy: [SortDescriptor(\.date, order: .reverse)]
-        )
-        records = (try? context.fetch(descriptor)) ?? []
-    }
+ func load() {
+ // filtro + ordinamento con #Predicate di SwiftData
+ let descriptor = FetchDescriptor<Record>(
+ sortBy: [SortDescriptor(\.date, order: .reverse)]
+ )
+ records = (try? context.fetch(descriptor)) ?? []
+ }
 
-    func add(type: String, amount: Double, category: String, note: String) {
-        let r = Record(type: type, amount: amount, category: category, note: note)
-        context.insert(r)
-        try? context.save()
-        load()                       // ricarica; l'interfaccia si aggiorna
-    }
+ func add(type: String, amount: Double, category: String, note: String) {
+ let r = Record(type: type, amount: amount, category: category, note: note)
+ context.insert(r)
+ try? context.save()
+ load() // ricarica; l'interfaccia si aggiorna
+ }
 
-    func delete(_ record: Record) {
-        context.delete(record)
-        try? context.save()
-        load()
-    }
+ func delete(_ record: Record) {
+ context.delete(record)
+ try? context.save()
+ load()
+ }
 }
 ```
 :::
@@ -127,35 +127,35 @@ Nell'interfaccia scrivi @State private var vm = RecordViewModel(...) e poi rende
 
 ```
 struct RecordListView: View {
-    @State private var vm: RecordViewModel
-    @State private var showAdd = false
+ @State private var vm: RecordViewModel
+ @State private var showAdd = false
 
-    var body: some View {
-        NavigationStack {
-            List {
-                Section("Bilancio del mese") {          // card riepilogo
-                    SummaryRow(records: vm.records)
-                }
-                Section("Movimenti") {
-                    ForEach(vm.records) { r in
-                        RecordRow(record: r)
-                    }
-                    .onDelete { idx in
-                        idx.forEach { vm.delete(vm.records[$0]) }
-                    }
-                }
-            }
-            .navigationTitle("Il mio registro spese")
-            .toolbar {
-                Button { showAdd = true } label: {
-                    Image(systemName: "plus")
-                }
-            }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView(vm: vm)          // finestra di inserimento
-            }
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ Section("Bilancio del mese") { // card riepilogo
+ SummaryRow(records: vm.records)
+ }
+ Section("Movimenti") {
+ ForEach(vm.records) { r in
+ RecordRow(record: r)
+ }
+ .onDelete { idx in
+ idx.forEach { vm.delete(vm.records[$0]) }
+ }
+ }
+ }
+ .navigationTitle("Il mio registro spese")
+ .toolbar {
+ Button { showAdd = true } label: {
+ Image(systemName: "plus")
+ }
+ }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView(vm: vm) // finestra di inserimento
+ }
+ }
+ }
 }
 ```
 :::
@@ -183,17 +183,17 @@ Il campo dell'importo va sempre validato: blocca valori vuoti, negativi e input 
 
 ```
 func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
-    let cal = Calendar.current
-    let monthRecords = records.filter {
-        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
-    }
-    let income = monthRecords
-        .filter { $0.type == "income" }
-        .reduce(0) { $0 + $1.amount }
-    let expense = monthRecords
-        .filter { $0.type == "expense" }
-        .reduce(0) { $0 + $1.amount }
-    return (income, expense)
+ let cal = Calendar.current
+ let monthRecords = records.filter {
+ cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+ }
+ let income = monthRecords
+ .filter { $0.type == "income" }
+ .reduce(0) { $0 + $1.amount }
+ let expense = monthRecords
+ .filter { $0.type == "expense" }
+ .reduce(0) { $0 + $1.amount }
+ return (income, expense)
 }
 ```
 :::

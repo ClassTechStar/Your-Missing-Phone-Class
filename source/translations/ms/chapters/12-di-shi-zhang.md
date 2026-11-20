@@ -64,7 +64,7 @@ Perbandingan harga makanan penghantaran
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Bayaran balik belian dalam talian akan kembali ke kaedah asal, tak perlu anda berikan nombor kad bank.
+Bayaran balik belian dalam talian akan kembali ke kaedah asal, tak perlu anda berikan nombor kad bank.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Buat sekarang: Pemeriksaan keselamatan Apl pembayaran anda.
@@ -75,7 +75,7 @@ Perbandingan harga makanan penghantaran
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Tengok senarai "Peranti Log Masuk", buang peranti yang tak dikenali.
+Tengok senarai "Peranti Log Masuk", buang peranti yang tak dikenali.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Aktifkan voucher elektronik insurans perubatan anda, kali seterusnya pergi hospital tak perlu bawa kad fizikal.

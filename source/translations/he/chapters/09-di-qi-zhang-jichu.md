@@ -42,7 +42,7 @@ Apple
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>2. תקשורת ללא רשת: דרך חדשה לתקשורת מטווח קצר
+2. תקשורת ללא רשת: דרך חדשה לתקשורת מטווח קצר
 
 {class="mt-1"}
 "תקשורת ללא רשת" היא טכנולוגיה המאפשרת לשני טלפונים לתקשר ישירות זה עם זה ללא רשת סלולרית או Wi-Fi.
@@ -115,7 +115,7 @@ Apple
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>בדוק: האם הטלפון שלך תומך בתכונות אלה
+בדוק: האם הטלפון שלך תומך בתכונות אלה
 
 {class="mt-1"}
 חפש "לוויין" בהגדרות וראה אם יש אפשרויות הקשורות לתקשורת לוויינית.
@@ -123,7 +123,7 @@ Apple
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>חפש "זיהוי תאונות דרכים" או "SOS חירום", בדוק אם מופעל.
+חפש "זיהוי תאונות דרכים" או "SOS חירום", בדוק אם מופעל.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. אם הטלפון שלך הוא Huawei, בדוק אם הוא תומך בחיבור התקני SparkLink.

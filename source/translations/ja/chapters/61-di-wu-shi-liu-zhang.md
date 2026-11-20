@@ -52,22 +52,22 @@ kind: chapter
 ```
 // 「金額文字列を数値へ変換」するロジックを純粋関数として切り出す
 fun parseAmount(input: String): Double? {
-    val v = input.trim().toDoubleOrNull()
-    return if (v != null && v > 0) v else null
+ val v = input.trim().toDoubleOrNull()
+ return if (v != null && v > 0) v else null
 }
 
 // テストする（JUnit4）
 @Test
 fun emptyInputReturnsNull() {
-    assertEquals(null, parseAmount(""))
+ assertEquals(null, parseAmount(""))
 }
 @Test
 fun negativeReturnsNull() {
-    assertEquals(null, parseAmount("-5"))
+ assertEquals(null, parseAmount("-5"))
 }
 @Test
 fun normalValueParses() {
-    assertEquals(12.5, parseAmount("12.5"))
+ assertEquals(12.5, parseAmount("12.5"))
 }
 ```
 :::
@@ -94,11 +94,11 @@ Androidでは、すべてのインストールパッケージに署名が必須�
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 開発者アカウントを登録</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> ストア用素材を準備</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> AABをアップロード</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 開発者アカウントを登録</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> ストア用素材を準備</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> AABをアップロード</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> データセキュリティ表を記入</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 審査（数時間〜数日）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> ストアにリリース</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> データセキュリティ表を記入</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 審査（数時間〜数日）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> ストアにリリース</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

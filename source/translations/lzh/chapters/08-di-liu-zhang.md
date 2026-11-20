@@ -54,7 +54,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① AI 換臉擬聲之詐
+① AI 換臉擬聲之詐
 
 {class="mt-1"}
 ① AI 換臉擬聲之詐<strong>突車禍、緊借、遭綁</strong>等。此類之詐用親情、友情等情之紐，<strong>迷之性極強</strong>。
@@ -62,7 +62,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>。
+。
 
 {class="mt-1"}
 ② 冒權威/客服之詐<strong>造恐慌之心或權威之壓</strong>，誘受害者轉或開屏共之功，從而竊賬戶之信。
@@ -70,7 +70,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ AI 投資理財之詐
+③ AI 投資理財之詐
 
 {class="mt-1"}
 ③ AI 投資理財之詐<strong>終捲款而逃</strong>。
@@ -127,7 +127,7 @@ AI能克聲與面，然亦非無懈，有數破可利用：
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>真案之警
+真案之警
 
 {class="mt-1"}
 真案之警<strong>不改默認密 = 將家大門敞</strong>。
@@ -170,7 +170,7 @@ AI能克聲與面，然亦非無懈，有數破可利用：
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>切勿爲之事
+切勿爲之事
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - 用生日/123456/qwerty 等弱密。
@@ -182,7 +182,7 @@ AI能克聲與面，然亦非無懈，有數破可利用：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>試啓並擬"遠鎖"
+試啓並擬"遠鎖"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 保汝"查找吾手機"之功已開。

@@ -225,10 +225,7 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         if src.is_file():
             fonts_out.mkdir(exist_ok=True)
             shutil.copy2(src, fonts_out / name)
-    # 图标字体：FA 子集在 fonts/fa/，分章页 CSS 引用 ../fonts/fa/，必须一起分发
-    fa_src = root / 'fonts' / 'fa'
-    if fa_src.is_dir():
-        shutil.copytree(fa_src, fonts_out / 'fa', dirs_exist_ok=True)
+    # 图标已全部改为文字，不再需要分发图标字体
     for name, body in assets.items():
         for a, b in PATH_FIXES:      # 外置 JS 里的相对路径同样要降级
             body = body.replace(a, b)

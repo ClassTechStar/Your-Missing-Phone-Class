@@ -58,7 +58,7 @@ Qualsiasi evoluzione tecnologica, queste filosofie di vita digitale rimarranno v
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: redigi il tuo "Termini di servizio per l'uso di dispositivi digitali personali"
+Prova: redigi il tuo "Termini di servizio per l'uso di dispositivi digitali personali"
 
 {class="mt-1"}
 Scrivi un semplice "termini di servizio" tra te e il tuo telefono (e i futuri occhiali AR, assistenti AI), per definire la vostra relazione. Ad esempio:
@@ -71,7 +71,7 @@ Scrivi un semplice "termini di servizio" tra te e il tuo telefono (e i futuri oc
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Riepilogo del capitolo
+Riepilogo del capitolo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro e occhiali AR sono nuove porte di calcolo oltre il telefono, ma a breve termine difficilmente lo sostituiranno

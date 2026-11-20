@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>"הרכב"
+"הרכב"
 
 {class="mt-1"}
 הם הנתונים שנוסעים על הדרך.Wi-Fi וסלולר הן שתי דרכים שונות, אך הנתונים (הרכב) עצמם זהים.<strong>1. ההבדל המהותי:ערוץ מקומי מול כביש מהיר מרוחק</strong>Wi-Fi היא בעצם<strong>טכנולוגיית רשת מקומית</strong>, כמו כביש סלול אלחוטי מתחת לבניין שלכם, האחראי על העברת נתונים מהנתב לטלפון. אבל אם הפס הרחב מנותק או הסיב האופטי נקרע, הכביש עדיין שם אבל "הכביש המהיר" החיצוני מנותק, ומטבע הדברים אי אפשר להגיע לשום מקום. לעומת זאת, תעבורת הרשת (נתונים סלולריים) עוברת דרך תחנות בסיס 4G/5G של הספק, כלומר אתם נוסעים ישירות על הנתיב המהיר של הספק, וכל עוד יש קליטה אפשר להתחבר ישירות לאינטרנט.
@@ -36,7 +36,7 @@ Wi-Fi היא בדרך כלל השקעה חד-פעמית (דמי מנוי חוד�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>באילו אתרים ביקרתם
+באילו אתרים ביקרתם
 
 {class="mt-1"}
 (שמות דומיין), וכן
@@ -49,7 +49,7 @@ Wi-Fi היא בדרך כלל השקעה חד-פעמית (דמי מנוי חוד�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
+אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
 
 {class="mt-1"}
 ליד אות הספק או ליד אות ה-WLAN בשורת המצב, משמעה שהטלפון משתמש בשיטה המתאימה לגלישה;אם שניהם דולקים בו-זמנית, פירוש הדבר שהאצת רשת פועלת, והטלפון מנצל את שני הערוצים בו-זמנית.
@@ -81,7 +81,7 @@ Wi-Fi היא בדרך כלל השקעה חד-פעמית (דמי מנוי חוד�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>התחברות ל-Wi-Fi:
+התחברות ל-Wi-Fi:
 
 {class="mt-1"}
 גשו ל-[הגדרות] &gt; [WLAN] בחרו רשת והזינו סיסמה. כיום טלפונים רבים תומכים בסריקת קוד QR להתחברות, נוח יותר.
@@ -98,53 +98,53 @@ Wi-Fi היא בדרך כלל השקעה חד-פעמית (דמי מנוי חוד�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תקן</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פרוטוקול</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תדר</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מהירות מקסימלית</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מאפיינים</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תקן ישן, כיסוי סביר</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הנפוץ ביותר כיום, מהירות מספקת</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ביצועים מעולים בריבוי מכשירים, השהיה נמוכה</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מוסיף תדר 6GHz, ללא עומס</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">העברה במהירות על, צירוף קישורים מרובים</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תקן</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פרוטוקול</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תדר</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מהירות מקסימלית</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מאפיינים</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תקן ישן, כיסוי סביר</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הנפוץ ביותר כיום, מהירות מספקת</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ביצועים מעולים בריבוי מכשירים, השהיה נמוכה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מוסיף תדר 6GHz, ללא עומס</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">העברה במהירות על, צירוף קישורים מרובים</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -244,7 +244,7 @@ Bluetooth 4.2
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>פרק 4:התקנה וניהול אפליקציות——"חבילת הכישורים" של הטלפון
+פרק 4:התקנה וניהול אפליקציות——"חבילת הכישורים" של הטלפון
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. אפליקציות הופכות את הטלפון לכל-יכול,אבל צריך גם לנהל אותן היטב.בדיוק כמו שהיית מקצה מקום עבודה והרשאות לעובד חדש,התקנת אפליקציות דורשת גם תהליך מסודר

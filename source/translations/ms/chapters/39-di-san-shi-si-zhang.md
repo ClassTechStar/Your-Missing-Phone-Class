@@ -27,46 +27,46 @@ III. Konektiviti baharu
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">NPU generasi baharu akan lebih berkuasa, boleh jalankan model AI lebih besar pada peranti.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. Model AI pada peranti</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Model AI pada peranti akan menjadi lebih pintar: pemahaman bahasa semula jadi, penjanaan imej, penyelesaian masalah.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. AI peribadi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">AI peribadi akan belajar tabiat anda dan tawarkan cadangan proaktif, sambil melindungi privasi.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">V. Kamera generasi baharu</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Sensor lebih besar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, peta/muzik/telefon/mesej semua boleh</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Lensa boleh ubah</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lensa boleh ubah (variable lens) akan tawarkan zoom optik berterusan tanpa bahagian bergerak.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Komputasi fotografi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, setanding dengan CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VI. Ekosistem terhubung</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Utama telefon Huawei, sokong sebahagian Android lain</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan menjadi pusat kawalan IoT: lampu pintar, pintu, termostat, kamera keselamatan.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Kereta pintar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan disepadukan dengan kereta pintar: kunci digital, navigasi, hiburan, diagnostics.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Hotspot peribadi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Rumah pintar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan mengawal semua peranti rumah pintar: lampu, AC, mesin basuh, sistem keselamatan.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Pakai boleh pakai</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan disepadukan dengan kereta pintar: kunci digital, navigasi, hiburan, diagnostics.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">NPU generasi baharu akan lebih berkuasa, boleh jalankan model AI lebih besar pada peranti.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. Model AI pada peranti</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Model AI pada peranti akan menjadi lebih pintar: pemahaman bahasa semula jadi, penjanaan imej, penyelesaian masalah.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">3. AI peribadi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">AI peribadi akan belajar tabiat anda dan tawarkan cadangan proaktif, sambil melindungi privasi.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">V. Kamera generasi baharu</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Sensor lebih besar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, peta/muzik/telefon/mesej semua boleh</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Lensa boleh ubah</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lensa boleh ubah (variable lens) akan tawarkan zoom optik berterusan tanpa bahagian bergerak.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Komputasi fotografi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tinggi, setanding dengan CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VI. Ekosistem terhubung</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Utama telefon Huawei, sokong sebahagian Android lain</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan menjadi pusat kawalan IoT: lampu pintar, pintu, termostat, kamera keselamatan.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Kereta pintar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan disepadukan dengan kereta pintar: kunci digital, navigasi, hiburan, diagnostics.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Hotspot peribadi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Rumah pintar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan mengawal semua peranti rumah pintar: lampu, AC, mesin basuh, sistem keselamatan.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Pakai boleh pakai</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon akan disepadukan dengan kereta pintar: kunci digital, navigasi, hiburan, diagnostics.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ II. Hak digital
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
+atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
 
 {class="mt-1"}
 Tidak kira skim mana, semasa memandu operasi telefon melanggar peraturan trafik. Bracket telefon hanya untuk "lihat navigasi". tidak boleh untuk "operasi telefon". Tetapkan destinasi, tukar lagu dll operasi, sila berhenti kereta baru buat, atau
@@ -111,7 +111,7 @@ Tidak kira skim mana, semasa memandu operasi telefon melanggar peraturan trafik.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>IV. Penggunaan teknologi secara bertanggungjawab
+IV. Penggunaan teknologi secara bertanggungjawab
 
 {class="mt-1"}
 Jika ambil berat pengalaman unit kereta, semasa beli kereta mesti pergi ke kedai 4S uji sebenar: bawa telefon anda cuba sambung CarPlay/HiCar sama ada stabil; cuba kelajuan tindak balas dan kadar pengesanan arahan pembantu suara; lihat App Store ada App yang sering anda guna
@@ -119,7 +119,7 @@ Jika ambil berat pengalaman unit kereta, semasa beli kereta mesti pergi ke kedai
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Guna telefon secara sederhana, jangan ketagihan. Tetapkan masa untuk aktiviti luar talian.
+Guna telefon secara sederhana, jangan ketagihan. Tetapkan masa untuk aktiviti luar talian.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Sahkan skim sambungan yang telefon dan unit kereta anda sokong (CarPlay / HiCar / Android Auto / CarLife).
@@ -130,7 +130,7 @@ Jika ambil berat pengalaman unit kereta, semasa beli kereta mesti pergi ke kedai
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tiga laluan sambungan kereta: Pelancangan skrin (CarPlay dll), integrasi mendalam (kabin HarmonyOS dll), CarPlay 2.0 integrasi mendalam

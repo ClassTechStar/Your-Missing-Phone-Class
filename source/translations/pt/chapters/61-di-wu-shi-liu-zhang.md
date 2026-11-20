@@ -52,22 +52,22 @@ As três camadas de teste
 ```
 // Extraia lógica como "string de valor para número" numa função pura
 fun parseAmount(input: String): Double? {
-    val v = input.trim().toDoubleOrNull()
-    return if (v != null && v > 0) v else null
+ val v = input.trim().toDoubleOrNull()
+ return if (v != null && v > 0) v else null
 }
 
 // Testando (JUnit4)
 @Test
 fun emptyInputReturnsNull() {
-    assertEquals(null, parseAmount(""))
+ assertEquals(null, parseAmount(""))
 }
 @Test
 fun negativeReturnsNull() {
-    assertEquals(null, parseAmount("-5"))
+ assertEquals(null, parseAmount("-5"))
 }
 @Test
 fun normalValueParses() {
-    assertEquals(12.5, parseAmount("12.5"))
+ assertEquals(12.5, parseAmount("12.5"))
 }
 ```
 :::
@@ -94,11 +94,11 @@ Depois de publicar, toda atualização do App precisa da mesma assinatura, senã
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> Registrar conta de desenvolvedor</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> Preparar materiais da loja</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> Enviar o AAB</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Registrar conta de desenvolvedor</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Preparar materiais da loja</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Enviar o AAB</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> Preencher o formulário de segurança de dados</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> Revisão (de horas a dias)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> Publicado</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Preencher o formulário de segurança de dados</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Revisão (de horas a dias)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Publicado</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

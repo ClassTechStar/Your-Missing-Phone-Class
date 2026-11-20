@@ -44,7 +44,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：Vibe 是什么？
+小贴士：Vibe 是什么？
 
 {class="mt-1"}
 Vibe 直译是"氛围、感觉"。Vibe Coding 就是"跟着感觉指挥 AI 编程"，你描述想要什么，AI 负责实现。记住这个词，它是这场革命的"出生证明"。
@@ -88,7 +88,7 @@ Vibe Coding 这个词很快从戏谑变成了严肃的工程概念。到 2026 �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒："忽略代码细节"是有前提的
+避坑提醒："忽略代码细节"是有前提的
 
 {class="mt-1"}
 Karpathy 那句话里最容易被断章取义的，是"忽略代码细节"四个字。对一次性脚本、明天就扔的原型，这话成立；对要维护、要上线、要给别人接手的代码，这话是陷阱。忽略细节的代码出了问题，你连问题在哪都说不清：下一节我们就把这条边界画清楚。
@@ -213,34 +213,34 @@ Karpathy 那句话里最容易被断章取义的，是"忽略代码细节"四个
 ::: div .figure
 ```html
 <svg aria-hidden="true" style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="640" height="300" rx="8" style="fill:var(--ink-inverse)" />
-      <line x1="70" y1="240" x2="600" y2="240" stroke-width="1.5" style="stroke:var(--muted)" />
-      <line x1="70" y1="240" x2="70" y2="30" stroke-width="1.5" style="stroke:var(--muted)" />
-      <line x1="70" y1="190" x2="600" y2="190" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
-      <line x1="70" y1="140" x2="600" y2="140" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
-      <line x1="70" y1="90" x2="600" y2="90" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
-      <line x1="70" y1="40" x2="600" y2="40" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
-      <text x="62" y="244" font-size="10" text-anchor="end" style="fill:var(--muted-2)">0</text>
-      <text x="62" y="194" font-size="10" text-anchor="end" style="fill:var(--muted-2)">20</text>
-      <text x="62" y="144" font-size="10" text-anchor="end" style="fill:var(--muted-2)">40</text>
-      <text x="62" y="94" font-size="10" text-anchor="end" style="fill:var(--muted-2)">60</text>
-      <text x="62" y="44" font-size="10" text-anchor="end" style="fill:var(--muted-2)">80</text>
-      <text x="335" y="272" font-size="11" text-anchor="middle" style="fill:#374151">使用率 (%)</text>
-      <polyline points="70,215 220,172 370,152 590,116" stroke-width="2.5" style="fill:none;stroke:var(--accent-book)" />
-      <polyline points="70,52 220,85 370,103 590,135" stroke-width="2.5" style="fill:none;stroke:var(--muted)" />
-      <circle cx="70" cy="215" r="4" style="fill:var(--accent-book)" /><circle cx="220" cy="172" r="4" style="fill:var(--accent-book)" /><circle cx="370" cy="152" r="4" style="fill:var(--accent-book)" /><circle cx="590" cy="116" r="4" style="fill:var(--accent-book)" />
-      <circle cx="70" cy="52" r="4" style="fill:var(--muted)" /><circle cx="220" cy="85" r="4" style="fill:var(--muted)" /><circle cx="370" cy="103" r="4" style="fill:var(--muted)" /><circle cx="590" cy="135" r="4" style="fill:var(--muted)" />
-      <text x="70" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2024 Q4</text>
-      <text x="220" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2025 Q2</text>
-      <text x="370" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2025 Q4</text>
-      <text x="590" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2026 Q2</text>
-      <line x1="435" y1="60" x2="465" y2="60" stroke-width="2.5" style="stroke:var(--accent-book)" />
-      <text x="472" y="63" font-size="10" style="fill:#374151">Agent 模式使用率</text>
-      <line x1="435" y1="82" x2="465" y2="82" stroke-width="2.5" style="stroke:var(--muted)" />
-      <text x="472" y="85" font-size="10" style="fill:#374151">Tab 补全模式使用率</text>
-      <circle cx="529" cy="126" r="3" style="fill:#c0392b" />
-      <text x="529" y="152" font-size="10" text-anchor="middle" style="fill:#c0392b">≈ 2026 Q2 交叉</text>
-    </svg>
+ <rect x="0" y="0" width="640" height="300" rx="8" style="fill:var(--ink-inverse)" />
+ <line x1="70" y1="240" x2="600" y2="240" stroke-width="1.5" style="stroke:var(--muted)" />
+ <line x1="70" y1="240" x2="70" y2="30" stroke-width="1.5" style="stroke:var(--muted)" />
+ <line x1="70" y1="190" x2="600" y2="190" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
+ <line x1="70" y1="140" x2="600" y2="140" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
+ <line x1="70" y1="90" x2="600" y2="90" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
+ <line x1="70" y1="40" x2="600" y2="40" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
+ <text x="62" y="244" font-size="10" text-anchor="end" style="fill:var(--muted-2)">0</text>
+ <text x="62" y="194" font-size="10" text-anchor="end" style="fill:var(--muted-2)">20</text>
+ <text x="62" y="144" font-size="10" text-anchor="end" style="fill:var(--muted-2)">40</text>
+ <text x="62" y="94" font-size="10" text-anchor="end" style="fill:var(--muted-2)">60</text>
+ <text x="62" y="44" font-size="10" text-anchor="end" style="fill:var(--muted-2)">80</text>
+ <text x="335" y="272" font-size="11" text-anchor="middle" style="fill:#374151">使用率 (%)</text>
+ <polyline points="70,215 220,172 370,152 590,116" stroke-width="2.5" style="fill:none;stroke:var(--accent-book)" />
+ <polyline points="70,52 220,85 370,103 590,135" stroke-width="2.5" style="fill:none;stroke:var(--muted)" />
+ <circle cx="70" cy="215" r="4" style="fill:var(--accent-book)" /><circle cx="220" cy="172" r="4" style="fill:var(--accent-book)" /><circle cx="370" cy="152" r="4" style="fill:var(--accent-book)" /><circle cx="590" cy="116" r="4" style="fill:var(--accent-book)" />
+ <circle cx="70" cy="52" r="4" style="fill:var(--muted)" /><circle cx="220" cy="85" r="4" style="fill:var(--muted)" /><circle cx="370" cy="103" r="4" style="fill:var(--muted)" /><circle cx="590" cy="135" r="4" style="fill:var(--muted)" />
+ <text x="70" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2024 Q4</text>
+ <text x="220" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2025 Q2</text>
+ <text x="370" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2025 Q4</text>
+ <text x="590" y="285" font-size="10" text-anchor="middle" style="fill:var(--muted-2)">2026 Q2</text>
+ <line x1="435" y1="60" x2="465" y2="60" stroke-width="2.5" style="stroke:var(--accent-book)" />
+ <text x="472" y="63" font-size="10" style="fill:#374151">Agent 模式使用率</text>
+ <line x1="435" y1="82" x2="465" y2="82" stroke-width="2.5" style="stroke:var(--muted)" />
+ <text x="472" y="85" font-size="10" style="fill:#374151">Tab 补全模式使用率</text>
+ <circle cx="529" cy="126" r="3" style="fill:#c0392b" />
+ <text x="529" y="152" font-size="10" text-anchor="middle" style="fill:#c0392b">≈ 2026 Q2 交叉</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -387,7 +387,7 @@ Karpathy 那句话里最容易被断章取义的，是"忽略代码细节"四个
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>给零基础读者的定心丸
+给零基础读者的定心丸
 
 {class="mt-1"}
 如果你是零基础，别被"方法论"三个字吓到。方法论不是抽象的哲学，它就是一套"遇到问题该怎么想"的操作手册。就像学做菜：你可以照着菜谱一步步来（工具操作），但真正的大厨理解的是"为什么要这样调味""火候怎么控制"（方法论）。本书会从最基础的概念讲起，每个原则都配具体的对比案例，确保你不仅理解"是什么"，更能掌握"怎么做"。
@@ -395,7 +395,7 @@ Karpathy 那句话里最容易被断章取义的，是"忽略代码细节"四个
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给现在的你拍张"角色照"
+来动手：给现在的你拍张"角色照"
 
 {class="mt-1"}
 拿出一张纸，写下三个问题的答案：① 你现在是怎么用 AI 帮你写代码的（如果用过的话）？② 你更像上表中的"Coder"还是"指挥官"？③ 你希望三个月后的自己会怎样描述自己的工作方式？写完后夹在书里，读完第四十七章再回来看，你会发现变化比想象中快。
@@ -491,7 +491,7 @@ Karpathy 那句话里最容易被断章取义的，是"忽略代码细节"四个
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：语气笃定不等于结论正确
+避坑提醒：语气笃定不等于结论正确
 
 {class="mt-1"}
 AI 从不支支吾吾，错的时候也说得斩钉截铁，新手最容易被这份笃定带走。解药只有一个字：验。要证据，跑测试、看输出、查官方文档。把"验证习惯"练成本能，你在 AI 面前就永远不会是弱势方。
@@ -531,7 +531,7 @@ AI 从不支支吾吾，错的时候也说得斩钉截铁，新手最容易被�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：它像实习生，不像结对程序员
+小贴士：它像实习生，不像结对程序员
 
 {class="mt-1"}
 给 AI 定位时，"手速极快、经验有限、需要布置任务和检查作业的实习生"是最贴近的比喻。把它当结对程序员，你会过度信任；把它当搜索框：你会浪费它的主动性。定位准了，期待才合理，协作才顺畅。
@@ -690,7 +690,7 @@ AI 从不支支吾吾，错的时候也说得斩钉截铁，新手最容易被�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：把手上一个任务过一遍边界清单
+来动手：把手上一个任务过一遍边界清单
 
 {class="mt-1"}
 从你最近的工作或学习里挑一个具体任务，问三个问题：① 它属于第六节六类活里的哪一类，还是四类决定里的哪一类？② 按"错了能不能被快速发现"规则，它该谁主导？③ 如果交给 AI，你的验收标准是什么。写一句下来。写完的这三行，就是你个人边界地图的第一批坐标。
@@ -733,7 +733,7 @@ AI 从不支支吾吾，错的时候也说得斩钉截铁，新手最容易被�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 2025 年 Karpathy 用"Vibe Coding"命名了 AI 编程革命：从逐行写代码，变成用自然语言描述意图
 - 2026 年进化到 Agentic Engineering：给目标、放权、AI 自主规划执行，人负责验收

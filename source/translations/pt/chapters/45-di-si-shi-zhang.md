@@ -76,12 +76,12 @@ Um app leve de finanças pessoais com registro de receitas/despesas, categorias,
 - Build: Vite
 ## Modelo de dados
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## Plano de desenvolvimento
 Step 1: funções básicas de registro (CRUD)

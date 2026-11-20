@@ -59,7 +59,7 @@ debug 与 release 的区别也值得说清：debug 包带调试信息、可以�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>签名三坑
+签名三坑
 
 {class="mt-1"}
 1\. Profile 与证书、包名三者必须匹配，错一个签名失败；2. 发布证书有效期 3 年，到期后需更换新证书并同步更新 Profile，设个日历提醒；3. 调试证书实名开发者 180 天有效（未实名仅 14 天），到期重新生成。
@@ -77,7 +77,7 @@ debug 与 release 的区别也值得说清：debug 包带调试信息、可以�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：走一遍完整上架流程
+来动手：走一遍完整上架流程
 
 {class="mt-1"}
 把第 76 章的待办清单真上架：AGC 创建应用 / 配置发布签名 / 写一份隐私政策（如实说明"数据仅存本地，不联网收集"）/ 准备 3 张截图 / 提交审核。从提交到上架，个人开发者完全免费：这是三大平台里成本最低的"出道仪式"。
@@ -136,7 +136,7 @@ AGC 控制台里有崩溃分析（在应用的质量类菜单里找，具体入�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把"看崩溃和评论"固定成一个每周动作，比如周日晚上十分钟：打开 AGC，扫一遍崩溃排名靠前的堆栈、没回的评论、下载曲线有没有异常。十分钟不多，但能让你在差评发酵成口碑事故之前就出手。
@@ -144,7 +144,7 @@ AGC 控制台里有崩溃分析（在应用的质量类菜单里找，具体入�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别在应用里放"疯狂弹窗求评分"——一天弹三次的评分窗是差评的孵化器，还会被判"诱导评分"。评分入口出现一次、出现在用户刚获得价值的时刻、一点即走，才是体面的做法。
@@ -291,7 +291,7 @@ AGC 控制台里有崩溃分析（在应用的质量类菜单里找，具体入�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 给上架后的自己排一个每周十分钟的"看板时间"，固定回答四个问题：下载曲线不少人异常。日活是在涨还是在掉？这一版崩溃率比上一版好还是坏？不少人没回的评论。四个问题扫完，顺手写下三行周报，然后关页面，别陷进去刷一下午。
@@ -418,7 +418,7 @@ versionName 还有一点"心理学"：如果你连发十几个修复都只动第
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别在一版里同时换图标、改名字、大改功能：出了问题你分不清是哪个引起的，用户也看不懂"这版到底改了啥"。大动作拆开，一版只做一件大事，出事好定位，功劳也好认领。
@@ -526,7 +526,7 @@ versionName 还有一点"心理学"：如果你连发十几个修复都只动第
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 元服务不是"应用的精简试用装"，它是独立产品：单独的设计、单独的审核、单独的维护成本。别因为"听起来轻量"就顺手也做一个，先把应用本体站稳，再考虑要不要多养一个形态。
@@ -675,7 +675,7 @@ P2 的"体验优化版"是个人开发者最容易忽视的一招。单看每条
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把用户的要求照单全收。评论里的需求常常互相矛盾，A 要极简，B 要功能全。把需求收进台账，取舍权留在自己手里：你的应用要有一致的产品判断，而不是一群人各拉各的缰绳。
@@ -683,7 +683,7 @@ P2 的"体验优化版"是个人开发者最容易忽视的一招。单看每条
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 给已上架的应用跑一次完整的小循环：开台账文件，把评论、崩溃、自己使用中的问题各记两条；按 P0–P3 排一遍；挑出下一版的主题写成一句话；对照第六节的发版速查表走一遍。一个循环跑完，迭代就不再是概念了。
@@ -773,7 +773,7 @@ P2 的"体验优化版"是个人开发者最容易忽视的一招。单看每条
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把签名三件套的存放位置、备案编号、隐私政策链接、AGC 应用入口，记在同一个离线笔记里。这四样东西贯穿每一次发版，散落在四个地方的话，你每次都要找十分钟，集中一处，发版日的你会感谢现在的你。
@@ -781,7 +781,7 @@ P2 的"体验优化版"是个人开发者最容易忽视的一招。单看每条
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 在日历上写下你的第一批应用日期：备案启动日（越早越好）、预计提审日（留出驳回余量）、灰度观察日（过审后第 1–2 天）、全量日（第 3–5 天）。日期可以错，日历不能空，有日历的发布才叫计划，没日历的发布叫心血来潮。
@@ -789,7 +789,7 @@ P2 的"体验优化版"是个人开发者最容易忽视的一招。单看每条
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 上架不是发布一个安装包。上架是建立一条"改动/签名/提审/放量/看数据/再改动"的循环。第一次走完要脱层皮，走顺之后，你和用户之间只隔一次提审。
@@ -797,7 +797,7 @@ P2 的"体验优化版"是个人开发者最容易忽视的一招。单看每条
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 开发者账号实名免费，个人可发布；应用市场是唯一正式分发渠道
 - .hap 打包成 .app 上架；发布证书 + Profile 签名；debug 与 release 严格区分

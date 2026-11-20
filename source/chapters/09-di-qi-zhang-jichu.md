@@ -52,7 +52,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识
+小知识
 
 {class="mt-1"}
 卫星通信需要手机有特殊的硬件天线，不是所有手机都支持。另外，卫星通信通常需要付费订阅服务，但紧急求救功能一般是免费的。
@@ -125,7 +125,7 @@ kind: chapter
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>技术展望
+技术展望
 
 {class="mt-1"}
 星闪技术代表了无线通信的未来方向。随着更多厂商加入，我们可能会看到更多支持星闪的设备，享受更好的无线体验。
@@ -133,7 +133,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>去检查一下：你的手机是否支持这些功能
+去检查一下：你的手机是否支持这些功能
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 去设置里搜索"卫星"，看看是否有卫星通信相关选项。

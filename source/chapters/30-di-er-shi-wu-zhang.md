@@ -34,51 +34,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">擦除入口</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">关键差异与注意事项</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 系统和更新 > 重置 > 恢复出厂设置</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先退出华为账号并关闭"查找我的手机"，否则会触发激活锁；纯净模式下可能需要密码验证。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 我的设备 > 恢复出厂设置</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">底部有"格式化虚拟SD卡"和"清除全部内容与设置"选项，二者都要勾选；退出小米账号前先关闭"查找设备"。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / 一加</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 其他设置 > 还原手机 > 彻底清除全部数据</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS 提供"彻底清除"模式，会多次覆盖存储；需输入锁屏密码确认。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 系统管理 > 备份与重置 > 清除所有数据</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">勾选"格式化手机存储"才会清理SD卡区；需退出vivo账号，关闭"查找手机"。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 通用管理 > 重置 > 恢复出厂设置</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先移除Samsung账号并关闭"查找我的手机"；部分机型有"自动覆盖"选项，建议开启。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 通用 > 传输或还原iPhone > 抹掉所有内容和设置</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">必须先退出Apple ID，否则下一位用户被iCloud激活锁拦住；iOS 15+支持"退出时保留iCloud数据"以备后查。</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">擦除入口</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">关键差异与注意事项</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 系统和更新 > 重置 > 恢复出厂设置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先退出华为账号并关闭"查找我的手机"，否则会触发激活锁；纯净模式下可能需要密码验证。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 我的设备 > 恢复出厂设置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">底部有"格式化虚拟SD卡"和"清除全部内容与设置"选项，二者都要勾选；退出小米账号前先关闭"查找设备"。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / 一加</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 其他设置 > 还原手机 > 彻底清除全部数据</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS 提供"彻底清除"模式，会多次覆盖存储；需输入锁屏密码确认。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 系统管理 > 备份与重置 > 清除所有数据</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">勾选"格式化手机存储"才会清理SD卡区；需退出vivo账号，关闭"查找手机"。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 通用管理 > 重置 > 恢复出厂设置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先移除Samsung账号并关闭"查找我的手机"；部分机型有"自动覆盖"选项，建议开启。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 通用 > 传输或还原iPhone > 抹掉所有内容和设置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">必须先退出Apple ID，否则下一位用户被iCloud激活锁拦住；iOS 15+支持"退出时保留iCloud数据"以备后查。</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>最容易被忽略的三件事
+最容易被忽略的三件事
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>未退出账号</strong>：手机卖给下家后被远程锁定，自己也下不来，最后只能持身份证去官方售后解锁。
@@ -92,7 +92,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>法律依据：个人信息保护法第49条
+法律依据：个人信息保护法第49条
 
 {class="mt-1"}
 2021年施行的《中华人民共和国个人信息保护法》第49条明确规定：<strong>自然人死亡的，其近亲属为了自身的合法、正当利益，可以对死者相关个人信息行使本章规定的查阅、复制、更正、删除等权利；死者生前另有安排的除外。</strong>
@@ -118,7 +118,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>千万别做的事
+千万别做的事
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>不要把死者账号密码直接交给家人"接着用"</strong>——这违反平台协议，资金被冻结甚至触发风控时举证更难。
@@ -163,7 +163,7 @@ Google提供"不活跃账户管理器（Inactive Account Manager）"，能在用
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>关键提醒
+关键提醒
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 各平台规则会更新，办理前先查阅官方客服最新指引。
@@ -184,7 +184,7 @@ Google提供"不活跃账户管理器（Inactive Account Manager）"，能在用
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>加密货币"消失"的真实代价
+加密货币"消失"的真实代价
 
 {class="mt-1"}
 据Chainalysis报告，全球已有<strong>超过300万枚比特币</strong>因私钥丢失而永远无法找回，相当于现有总量的六分之一。如果你持有加密资产，请务必让至少一位你绝对信任的人知道<strong>恢复路径</strong>——否则这些财富将永远沉睡在区块链上。
@@ -237,7 +237,7 @@ Google提供"不活跃账户管理器（Inactive Account Manager）"，能在用
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>关于"密码"的法律提示
+关于"密码"的法律提示
 
 {class="mt-1"}
 将密码直接写进遗嘱存在泄露风险，且遗嘱公示后所有继承人都能看到。<strong>更稳妥的做法是：遗嘱里只写"账号清单 + 处置意愿 + 密码托管位置"，真正的密码通过密码管理器主密码单独传给信任执行人</strong>。这样既符合法律要求，也降低了密码泄露风险。
@@ -249,41 +249,41 @@ Google提供"不活跃账户管理器（Inactive Account Manager）"，能在用
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">渠道</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">回收价</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">数据安全</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用场景</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方以旧换新（华为/苹果/小米等）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，常叠加补贴券</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最高，官方有规范流程</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正打算换同品牌新机时最划算</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方回收平台（爱回收、转转、回收宝等）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">略高，可比价</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较高，有数据清除报告</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想直接变现、不绑定品牌</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公益捐赠（如乡村学校、爱心机构）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无经济回报</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需自行彻底擦除</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备仍可用、想做善事</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发挥余热（自留改造）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">省下新设备钱</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原机主本人继续用，无风险</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备性能尚可、家里有改造需求</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">渠道</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">回收价</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">数据安全</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用场景</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方以旧换新（华为/苹果/小米等）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，常叠加补贴券</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最高，官方有规范流程</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正打算换同品牌新机时最划算</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方回收平台（爱回收、转转、回收宝等）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">略高，可比价</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较高，有数据清除报告</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想直接变现、不绑定品牌</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公益捐赠（如乡村学校、爱心机构）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无经济回报</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需自行彻底擦除</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备仍可用、想做善事</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发挥余热（自留改造）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">省下新设备钱</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原机主本人继续用，无风险</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备性能尚可、家里有改造需求</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>官方回收/以旧换新</strong>：最推荐的方式，流程规范，数据安全有保障。苹果、华为、小米等品牌官网都有"以旧换新"入口，评估后可抵扣新机款。
@@ -293,7 +293,7 @@ Google提供"不活跃账户管理器（Inactive Account Manager）"，能在用
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>电子垃圾的真相
+电子垃圾的真相
 
 {class="mt-1"}
 一部手机的电路板里含有<strong>金、银、钯、铜</strong>等贵金属，每吨废旧电路板含金量是金矿石的数十倍。但若随意丢弃，其中的铅、汞、镉会渗入土壤与地下水，污染持续数十年。<strong>正确回收，既保护环境，也能让稀缺金属循环再生。</strong>
@@ -301,7 +301,7 @@ Google提供"不活跃账户管理器（Inactive Account Manager）"，能在用
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>实操：为你的旧手机执行一场"标准葬礼"
+实操：为你的旧手机执行一场"标准葬礼"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 最后一次完整备份：照片上传云端、重要文件复制到电脑、聊天记录导出存档。
@@ -315,7 +315,7 @@ Google提供"不活跃账户管理器（Inactive Account Manager）"，能在用
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>本月任务清单
+本月任务清单
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 为你目前的主力手机指定Apple"遗产联系人"或设置Google"不活跃账户管理器"。

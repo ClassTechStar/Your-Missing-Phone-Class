@@ -27,46 +27,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">โซลูชัน</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ระบบปฏิบัติการสมาร์ทโฟนที่รองรับ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รุ่นรถที่รองรับ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความครบครันของฟังก์ชัน</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">การใช้งานในประเทศไทย</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เฉพาะ iPhone</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กว้างขวางมาก รองรับรถยนต์เกือบทุกรุ่น</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สูง แผนที่/เพลง/โทรศัพท์/ข้อความ ใช้ได้หมด</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ดี ใช้งานได้ตามค่าเริ่มต้น</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (สมาร์ทโฟนในประเทศต้องติดตั้ง Service Framework)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างกว้างขวาง รถยนต์ร่วมทุน/นำเข้าเป็นส่วนใหญ่</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สูง เทียบเท่า CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปานกลาง ต้องใช้ VPN เพื่อเปิดใช้งาน</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สมาร์ทโฟน Huawei เป็นหลัก รองรับ Android อื่น ๆ บางส่วน</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รถยนต์ผลิตในประเทศและรถยนต์ร่วมทุนบางรุ่น</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างสูง เชื่อมต่อกับห้องโดยสาร HarmonyOS ได้</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ดีมาก ระบบนิเวศในประเทศ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ทั้ง iOS และ Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างกว้างขวาง พบบ่อยในการติดตั้งเพิ่มบนรถรุ่นเก่า</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปานกลาง อัปเดตช้ากว่าปกติ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ดีมาก ระบบนิเวศในประเทศ</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">โซลูชัน</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ระบบปฏิบัติการสมาร์ทโฟนที่รองรับ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">รุ่นรถที่รองรับ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความครบครันของฟังก์ชัน</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">การใช้งานในประเทศไทย</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เฉพาะ iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กว้างขวางมาก รองรับรถยนต์เกือบทุกรุ่น</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สูง แผนที่/เพลง/โทรศัพท์/ข้อความ ใช้ได้หมด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ดี ใช้งานได้ตามค่าเริ่มต้น</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (สมาร์ทโฟนในประเทศต้องติดตั้ง Service Framework)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างกว้างขวาง รถยนต์ร่วมทุน/นำเข้าเป็นส่วนใหญ่</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สูง เทียบเท่า CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปานกลาง ต้องใช้ VPN เพื่อเปิดใช้งาน</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สมาร์ทโฟน Huawei เป็นหลัก รองรับ Android อื่น ๆ บางส่วน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รถยนต์ผลิตในประเทศและรถยนต์ร่วมทุนบางรุ่น</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างสูง เชื่อมต่อกับห้องโดยสาร HarmonyOS ได้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ดีมาก ระบบนิเวศในประเทศ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ทั้ง iOS และ Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างกว้างขวาง พบบ่อยในการติดตั้งเพิ่มบนรถรุ่นเก่า</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปานกลาง อัปเดตช้ากว่าปกติ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ดีมาก ระบบนิเวศในประเทศ</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>คำเตือนด้านความปลอดภัย
+คำเตือนด้านความปลอดภัย
 
 {class="mt-1"}
 ไม่ว่าจะใช้วิธีใด การใช้โทรศัพท์ขณะขับรถถือเป็นการฝ่าฝืนกฎจราจร ขั้วจับโทรศัพท์ใช้สำหรับ "ดูแผนที่" ได้เท่านั้น ไม่สามารถใช้เพื่อ "กดใช้งานโทรศัพท์" การตั้งค่าจุดหมายปลายทาง สลับเพลง ฯลฯ โปรดอย่าทำขณะขับรถ หรือใช้คำสั่งเสียง
@@ -116,7 +116,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>คำแนะนำเล็กๆ น้อยๆ เวลาเลือกรถ
+คำแนะนำเล็กๆ น้อยๆ เวลาเลือกรถ
 
 {class="mt-1"}
 หากคุณสนใจประสบการณ์การใช้งานหน้าจอรถยนต์ เวลาเลือกรถต้องไปทดสอบที่โชว์รูมจริงๆ:
@@ -128,7 +128,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: ปรับปรุงประสบการณ์การเชื่อมต่อหน้าจอรถยนต์ของคุณ
+ลงมือทำ: ปรับปรุงประสบการณ์การเชื่อมต่อหน้าจอรถยนต์ของคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ยืนยันวิธีการเชื่อมต่อที่โทรศัพท์และหน้าจอรถยนต์ของคุณรองรับ (CarPlay / HiCar / Android Auto / CarLife)
@@ -139,7 +139,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - สามเส้นทางหลักของการเชื่อมต่อหน้าจอรถยนต์: การมิเรอร์หน้าจอ (CarPlay ฯลฯ), การผสานรวมอย่างลึกซึ้ง (ห้องโดยสาร HarmonyOS ฯลฯ), และการผสานรวมอย่างลึกของ CarPlay 2.0

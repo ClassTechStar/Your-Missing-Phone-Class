@@ -27,9 +27,9 @@ iPhone 15 Pro 시리즈 이후에서 Apple ProRes 영상 촬영 지원(최대 4K
 </p> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>HDR10</strong>: 가장 기초적인 HDR 표준, 호환성이 좋음.</li> <li><strong>HDR10+</strong>: 삼성이 추진한 표준, 동적 메타데이터 지원.</li> <li><strong>Dolby Vision</strong>: 돌비가 개발한 최고급 HDR 표준, 화질이 가장 좋지만 라이선스가 필요함.</li> <li><strong>HLG</strong>: 방송급 HDR 표준, 일반 디스플레이와 호환.
 </li> </ul> <p class="mb-2">HDR 영상을 촬영할 때는 HDR을 지원하는 디스플레이가 있어야 완전한 효과를 볼 수 있습니다.</p> <h4 class="text-lg font-semibold mt-4 mb-2">사,색 공간과 색 심도</h4> <h5 class="font-semibold mt-3 mb-1">색 공간:</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>sRGB</strong>: 표준 색 공간, 호환성이 가장 좋음.</li> <li><strong>Display P3</strong>: 애플이 보급한 광색역 표준, 색이 더 풍부함.
 </li> <li><strong>Rec.2020</strong>: HDR 영상의 표준 색 공간, 색역이 가장 넓음.</li> </ul> <h5 class="font-semibold mt-3 mb-1">색심도:</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>8-bit</strong>: 1670만 색, 일반 영상 표준.</li> <li><strong>10-bit</strong>: 10.7억 색, 전문가 영상 표준, 색 전환이 더 부드러움.
-</li> <li><strong>12-bit</strong>: 680억 색, 고급 전문가 표준.</li> </ul> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>실용 권장</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>일상 촬영: 1080P/4K + 30fps + H.265 코덱, 화질과 파일 크기의 균형.</li> <li>운동 촬영: 1080P/4K + 60fps, 부드러움 보장.</li> <li>전문가 창작: 4K + ProRes(지원하는 경우), 최대 후반 여지 보존.
+</li> <li><strong>12-bit</strong>: 680억 색, 고급 전문가 표준.</li> </ul> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold">실용 권장</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>일상 촬영: 1080P/4K + 30fps + H.265 코덱, 화질과 파일 크기의 균형.</li> <li>운동 촬영: 1080P/4K + 60fps, 부드러움 보장.</li> <li>전문가 창작: 4K + ProRes(지원하는 경우), 최대 후반 여지 보존.
 </li> <li>저장 권장: 높은 비트레이트 영상은 공간을 많이 차지하므로 정기적으로 컴퓨터나 클라우드 디스크에 백업할 것을 권장.
-</li> </ul> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>한번 탐색해 보세요: 당신의 스마트폰 영상 설정</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>카메라 App을 열고, 영상 모드로 전환하세요.</li> <li>해상도와 프레임률 옵션을 확인하고, 다양한 조합을 시도해 보세요.
+</li> </ul> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold">한번 탐색해 보세요: 당신의 스마트폰 영상 설정</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>카메라 App을 열고, 영상 모드로 전환하세요.</li> <li>해상도와 프레임률 옵션을 확인하고, 다양한 조합을 시도해 보세요.
 </li> <li>지원하는 경우, HDR, ProRes 등 고급 옵션이 있는지 확인하세요.</li> <li>다양한 설정으로 영상을 몇 장 촬영하고, 화질과 파일 크기를 비교하세요.
 </li> </ol> </div> <h4 class="text-lg font-semibold mt-4 mb-2">오,RAW 형식과 HEIF/JPEG 비교</h4> <h5 class="font-semibold mt-3 mb-1">RAW 형식이란:</h5> <p class="mb-2">RAW 형식은 카메라 센서가 기록한 "원본 데이터"입니다,어떠한 압축과 처리도 거치지 않은 순수 원본 정보입니다. 신선한 식재료와 같아서 후반 "요리"가 필요합니다.
 스마트폰은 저장과 연산 능력이 제한되어 기본값으로 촬영된 것은 이미 "요리된" JPEG 또는 HEIF이며, RAW는 별도로 켜야 합니다.</p> <h5 class="font-semibold mt-3 mb-1">RAW vs HEIF vs JPEG 비교:</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>JPEG</strong>: 가장 오래된 형식, 호환성이 가장 좋음(어떤 기기에서도 열림).
@@ -94,9 +94,9 @@ iPhone 15 Pro 시리즈 이후에서 Apple ProRes 영상 촬영 지원(최대 4K
 </li> <li>일부 스마트폰에는 전용 접사 렌즈가 있음(대부분 200만 또는 500만 화소의 소형 센서 렌즈)으로 화질이 보통; 플래그십 모델은 초광각 렌즈로 접사를 겸하여, 화질이 더 좋음.
 </li> <li>접사 촬영 시 렌즈가 피사체에 매우 가까워 빛을 가릴 수 있으며, 필요시 탁자 조명이나 손전등으로 보조 조명.
 </li> <li>초점 거리가 매우 가까워 피사계 심도가 매우 얕고, 피사체 전후로 몇 밀리미터만 이동해도 초점이 벗어날 수 있음. 촬영 시 손을 안정적으로 유지하고, 피사체를 움직이지 않게 하는 것이 좋습니다.
-</li> </ul> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>정적 사진 실용 권장</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>일상 촬영: HEIF/JPEG 기본값이면 충분, 파일이 작고 화질이 충분함.</li> <li>중요 장면(풍경, 인물, 후반 필요): RAW를 켜서 최대 후반 여지를 보존.
+</li> </ul> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold">정적 사진 실용 권장</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>일상 촬영: HEIF/JPEG 기본값이면 충분, 파일이 작고 화질이 충분함.</li> <li>중요 장면(풍경, 인물, 후반 필요): RAW를 켜서 최대 후반 여지를 보존.
 </li> <li>렌즈 선택: 풍경은 초광각, 인물은 망원, 일상은 주 카메라.</li> <li>야경과 별하늘: 반드시 스마트폰을 고정하고, 야간 모드 또는 천문 모드를 켜세요.
 </li> <li>대형 센서 스마트폰(예: 1인치 센서 모델)은 화질 상한이 더 높지만, 조작 습관이 여전히 관건.
-</li> </ul> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>직접 해보기: 당신의 카메라 능력 파악하기</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>스마트폰이 RAW 촬영을 지원하는지 확인(설정→카메라→형식), 켜고 한 장 촬영해 보고, 같은 장면의 JPEG과 RAW 파일 크기를 비교하세요.
+</li> </ul> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold">직접 해보기: 당신의 카메라 능력 파악하기</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>스마트폰이 RAW 촬영을 지원하는지 확인(설정→카메라→형식), 켜고 한 장 촬영해 보고, 같은 장면의 JPEG과 RAW 파일 크기를 비교하세요.
 </li> <li>초광각, 주 카메라, 망원 세 가지 초점 거리로 전환하여, 같은 원경을 각각 촬영하고, 시야 차이와 화질 차이를 체험하세요.
 </li> <li>야간 모드 또는 별하늘 모드가 있는 장면을 찾아, 스마트폰을 고정한 후 야경 사진을 한 장 촬영하세요.</li> <li>파노라마 모드로 가로 촬영을 한 장 해보고, 스마트폰을 안정적으로 이동하는 데 주의하세요.</li> </ol> </div> </p></p></p>

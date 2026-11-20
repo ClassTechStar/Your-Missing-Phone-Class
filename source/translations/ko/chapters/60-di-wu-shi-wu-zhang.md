@@ -43,21 +43,21 @@ API 키는 "지갑 비밀번호"와 같아서, 코드에 넣어 GitHub에 올리
 ```
 // JSON: {"weather":[{"description":"맑음"}],"main":{"temp":26.5,"humidity":40},"name":"베이징"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "ko"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "ko"
+ ): WeatherResponse
 }
 ```
 :::
@@ -75,28 +75,28 @@ Gson이 JSON을 이 data class들에 자동으로 채워 넣어요. 필드 이�
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // 로딩 표시
-    data class Success(val data: WeatherResponse) : UiState()  // 성공
-    data class Error(val message: String) : UiState()          // 실패
+ object Loading : UiState() // 로딩 표시
+ data class Success(val data: WeatherResponse) : UiState() // 성공
+ data class Error(val message: String) : UiState() // 실패
 }
 
 // ViewModel 안에서:
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("그 도시를 찾을 수 없어요. 다른 이름으로 시도해 볼까요?")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("그 도시를 찾을 수 없어요. 다른 이름으로 시도해 볼까요?")
+ }
+ }
 }
 
 // 화면 안에서:
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // 로딩
-    is UiState.Success -&gt; WeatherContent(s.data)        // 표시
-    is UiState.Error -&gt; Text(s.message)                 // 오류
+ is UiState.Loading -&gt; CircularProgressIndicator() // 로딩
+ is UiState.Success -&gt; WeatherContent(s.data) // 표시
+ is UiState.Error -&gt; Text(s.message) // 오류
 }
 ```
 :::
@@ -115,28 +115,28 @@ when (val s = state) {
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "알 수 없음",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 습도 ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ 체감 ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "알 수 없음",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 습도 ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ 체감 ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::

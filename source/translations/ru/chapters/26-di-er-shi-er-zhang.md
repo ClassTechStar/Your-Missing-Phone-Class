@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Зачем нужна схема?
+Зачем нужна схема?
 
 {class="mt-1"}
 Многие используют AI как Baidu — вбивают несколько ключевых слов. Но AI — не поисковик, это языковая модель, которая «читает, осмысливает и отвечает». <strong>Дайте ему больше контекста, чётко скажите, что нужно, и ограничьте от лихих уклонений</strong> — и он выдаст точный результат. Схема переводит ваше представление о «хорошем ответе» в инструкции, понятные AI.
@@ -198,39 +198,39 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Симптом</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Решение</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Ответ слишком общий, непрактичный</td>
-                                    <td class="border border-gray-300 px-3 py-2">Добавьте контекст (кто вы / какой сценарий)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Ответ слишком академичный / казённый</td>
-                                    <td class="border border-gray-300 px-3 py-2">Добавьте ограничение тона + список «казённых» фраз</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Ответ ушёл от темы / не о том</td>
-                                    <td class="border border-gray-300 px-3 py-2">Переформулируйте задачу через глагол и потребуйте «отвечать только на это»</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Ответ слишком длинный</td>
-                                    <td class="border border-gray-300 px-3 py-2">Жёстко ограничьте объём (до 200 знаков)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI уверенно говорит ерунду</td>
-                                    <td class="border border-gray-300 px-3 py-2">Добавьте «если не уверены — пометьте 'не уверен'» + проверка ключевых фактов</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Первая версия не устраивает</td>
-                                    <td class="border border-gray-300 px-3 py-2">Не переписывайте промпт, добавьте в конец «сделай ещё …»</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Симптом</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Решение</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Ответ слишком общий, непрактичный</td>
+ <td class="border border-gray-300 px-3 py-2">Добавьте контекст (кто вы / какой сценарий)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Ответ слишком академичный / казённый</td>
+ <td class="border border-gray-300 px-3 py-2">Добавьте ограничение тона + список «казённых» фраз</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Ответ ушёл от темы / не о том</td>
+ <td class="border border-gray-300 px-3 py-2">Переформулируйте задачу через глагол и потребуйте «отвечать только на это»</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Ответ слишком длинный</td>
+ <td class="border border-gray-300 px-3 py-2">Жёстко ограничьте объём (до 200 знаков)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI уверенно говорит ерунду</td>
+ <td class="border border-gray-300 px-3 py-2">Добавьте «если не уверены — пометьте 'не уверен'» + проверка ключевых фактов</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Первая версия не устраивает</td>
+ <td class="border border-gray-300 px-3 py-2">Не переписывайте промпт, добавьте в конец «сделай ещё …»</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Сценарий 1: Помощник в быту (варианты завтраков)
+Сценарий 1: Помощник в быту (варианты завтраков)
 
 {class="mt-1"}
 <strong>Промпт</strong>:
@@ -253,7 +253,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Сценарий 2: Помощь в учёбе (подготовка к CET-6)
+Сценарий 2: Помощь в учёбе (подготовка к CET-6)
 
 {class="mt-1"}
 <strong>Промпт</strong>:
@@ -267,7 +267,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Сценарий 3: Рабочая эффективность (подведение итогов совещания)
+Сценарий 3: Рабочая эффективность (подведение итогов совещания)
 
 {class="mt-1"}
 <strong>Промпт</strong>:
@@ -281,7 +281,7 @@ kind: chapter
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Продвинутые приёмы: сделайте AI своим «личным помощником»
+Продвинутые приёмы: сделайте AI своим «личным помощником»
 
 {class="mt-1"}
 Попробуйте эти продвинутые подходы, чтобы ощутить настоящую силу AI:
@@ -305,7 +305,7 @@ AI мощен, но далеко не «всемогущ». Трезвое по�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Советы по использованию AI
+Советы по использованию AI
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Сгенерированный AI контент может быть неточным (проблема «галлюцинаций») — важную информацию обязательно проверяйте.
@@ -317,7 +317,7 @@ AI мощен, но далеко не «всемогущ». Трезвое по�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Попробуйте: три практических задания по AI
+Попробуйте: три практических задания по AI
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Задание 1: Сложная инструкция</strong>: скажите голосовому помощнику: «Завтра в 7 утра напомни мне взять зонт и перенеси сегодняшнюю встречу в 15:00 на 16:00». Проверьте, может ли он выполнить многошаговую операцию за один раз.
@@ -327,7 +327,7 @@ AI мощен, но далеко не «всемогущ». Трезвое по�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Пример 2: Полный процесс миграции данных при смене телефона
+Пример 2: Полный процесс миграции данных при смене телефона
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Сценарий</strong>: iPhone 13 → Xiaomi 15, смена бренда.

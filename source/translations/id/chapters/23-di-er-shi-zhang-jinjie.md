@@ -40,7 +40,7 @@ Cara mengaktifkan:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Pengaturan dalam mode pengembang dapat mempengaruhi stabilitas sistem, opsi yang tidak dipahami jangan diubah sembarangan. Setelah mengaktifkan debugging USB, berhati-hatilah saat menghubungkan ke komputer, jangan hubungkan ke komputer yang tidak dipercaya.
+Pengaturan dalam mode pengembang dapat mempengaruhi stabilitas sistem, opsi yang tidak dipahami jangan diubah sembarangan. Setelah mengaktifkan debugging USB, berhati-hatilah saat menghubungkan ke komputer, jangan hubungkan ke komputer yang tidak dipercaya.
 
 {class="mt-1"}
 2\. BL lock (Bootloader lock): Pintu pertama flashing
@@ -57,7 +57,7 @@ Di Developer Options ada saklar yang tidak mencolok tapi sangat penting — "OEM
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Trivia: Mengapa Vendor Menyetel Saklar Ini
+Trivia: Mengapa Vendor Menyetel Saklar Ini
 
 {class="mt-1"}
 Awalnya Android tidak punya saklar ini, malware selama dapat permission bisa diam-diam flash system. Google kemudian mewajibkan semua vendor Android menambahkan saklar "OEM unlocking" di Developer Options, sebagai konfirmasi "persetujuan pengguna yang informed". Inilah sebabnya bahkan jika Anda sudah unlock BL lock, jika saklar OEM unlocking off, re-flash tetap akan gagal.
@@ -95,7 +95,7 @@ ADB kepanjangan Android Debug Bridge, adalah command line tool resmi dari Google
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Driver dan Pop-up Otorisasi Jangan Diabaikan
+Driver dan Pop-up Otorisasi Jangan Diabaikan
 
 {class="mt-1"}
 Pengguna Windows jika <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> menampilkan "unauthorized" atau tidak menampilkan device, kemungkinan driver belum terinstall atau lupa klik "Allow" di ponsel. Merek seperti Samsung/Xiaomi bisa install "USB driver" atau "Phone Assistant" masing-masing untuk melengkapi driver; Mac dan Linux umumnya tanpa driver. Jika pop-up ponsel tidak sengaja di-close, cabut-colok kabel data akan muncul lagi.
@@ -124,7 +124,7 @@ Ini salah satu fungsi ADB paling praktis: pakai <code class="bg-gray-100 dark:bg
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Jangan Sembarangan Hapus Paket Inti Sistem
+Jangan Sembarangan Hapus Paket Inti Sistem
 
 {class="mt-1"}
 "pm uninstall --user 0" meskipun adalah cara aman tanpa Root, tapi sembarangan hapus sistem app kunci (seperti <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> status bar,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> telepon,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> settings) akan menyebabkan sistem crash, black screen, tidak bisa boot, dan masalah serius lainnya. Sebelum hapus, Google dulu "apakah package name ini bisa dihapus", lebih baik hapus sedikit daripada salah hapus. Disarankan sekali hanya hapus satu-dua, konfirmasi tidak ada masalah baru lanjut.
@@ -132,7 +132,7 @@ Ini salah satu fungsi ADB paling praktis: pakai <code class="bg-gray-100 dark:bg
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Trivia: Apa Arti --user 0
+Trivia: Apa Arti --user 0
 
 {class="mt-1"}
 Sejak Android 4.2 mendukung multi-user, setiap user punya ID independen (owner adalah 0, additional user mulai dari 10).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> berarti "hanya uninstall untuk owner saat ini", file APK di system partition masih ada, hanya tidak ditampilkan ke owner. Inilah sebabnya tidak butuh Root, tidak menyentuh file sistem, hanya mengubah "user config". Ini juga perbedaan terbesar dengan uninstall setelah Root: uninstall Root benar-benar hapus dari sistem, semua user tidak lagi punya; uninstall ADB hanya "sembunyi untuk current user".
@@ -159,7 +159,7 @@ Root permission setara dengan super user di Linux (punya kontrol penuh atas dire
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Operasi Root memiliki risiko tertentu, dapat menyebabkan ponsel brick (tidak bisa dinyalakan). Jika Anda pemula, disarankan memahami pengetahuan terkait secara menyeluruh dulu, dan pastikan ada cadangan lengkap. Sebelum operasi baca tutorial dengan teliti, konfirmasikan model ponsel dan versi sistem Anda.
+Operasi Root memiliki risiko tertentu, dapat menyebabkan ponsel brick (tidak bisa dinyalakan). Jika Anda pemula, disarankan memahami pengetahuan terkait secara menyeluruh dulu, dan pastikan ada cadangan lengkap. Sebelum operasi baca tutorial dengan teliti, konfirmasikan model ponsel dan versi sistem Anda.
 
 {class="mt-1"}
 4\. Saran untuk pengguna biasa
@@ -198,7 +198,7 @@ Untuk menikmati kemudahan Root bersamaan masih bisa pakai App bank, komunitas me
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Permainan Kucing dan Tikus Tidak Pernah Berakhir
+Permainan Kucing dan Tikus Tidak Pernah Berakhir
 
 {class="mt-1"}
 Google setiap sekali waktu akan update aturan deteksi, vendor App juga akan ikut upgrade verifikasi Play Integrity. Solusi hide yang masih bisa dipakai hari ini, besok mungkin sudah diidentifikasi. Jika Anda sepenuhnya mengandalkan App bank/pembayaran (misalnya transfer harian, scan QR bayar), pilihan paling aman tetap: jangan Root, jangan unlock BL lock. Solusi hide lebih cocok untuk konfigurasi player "ponsel utama tidak Root + ponsel cadangan main Root".
@@ -213,7 +213,7 @@ Google setiap sekali waktu akan update aturan deteksi, vendor App juga akan ikut
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Masuk ke Pengaturan &gt; Tentang Ponsel.
+Masuk ke Pengaturan &gt; Tentang Ponsel.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Klik "Nomor Versi" 7 kali berturut-turut, sampai notifikasi mode pengembang aktif.

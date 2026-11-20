@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* Pandu ke tetapan */
-        default: /* Kebenaran diberi, teruskan! */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* Pandu ke tetapan */
+ default: /* Kebenaran diberi, teruskan! */
+ }
+ }
 }
 
 // 3. Jika ditolak, tangani dengan anggun: papar mesej + pandu ke tetapan
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. Minta kebenaran pemberitahuan (popup sekali)
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "Diberi kebenaran" : "Ditolak")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "Diberi kebenaran" : "Ditolak")
+ }
 
 // 2. Menjadualkan "setiap hari 20:00 peringatan merekod"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "Peringatan merekod"
-    content.body = "Hari ini belum merekod lagi"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "Peringatan merekod"
+ content.body = "Hari ini belum merekod lagi"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ Sistem keserentakan Swift 6 mempunyai dua peraturan yang wajib difahami pemula:
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // Mula bila muncul, batal bila hilang
-            await vm.search(city: "Beijing")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // Mula bila muncul, batal bila hilang
+ await vm.search(city: "Beijing")
+ }
+ }
 }
 ```
 :::

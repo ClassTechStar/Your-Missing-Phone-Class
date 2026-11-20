@@ -66,7 +66,7 @@ Passer des écouteurs filaires aux écouteurs Bluetooth a été pour moi l'amél
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>Technologie UWB (ultra large bande) — un « sens de l'espace » plus précis que le Bluetooth
+Technologie UWB (ultra large bande) — un « sens de l'espace » plus précis que le Bluetooth
 
 {class="mt-1"}
 Outre le Bluetooth, les nouveaux smartphones cachent également une puce UWB (Ultra-Wideband, ultra large bande). Sa capacité est <strong>la mesure de distance précise et le positionnement spatial</strong> — elle peut calculer à quelle distance se trouve un autre appareil et dans quelle direction, avec une précision de l'ordre du centimètre. Le Bluetooth peut seulement vous dire « à proximité », l'UWB peut vous dire « à 1,2 m en avant à gauche ». Applications courantes :
@@ -80,7 +80,7 @@ Outre le Bluetooth, les nouveaux smartphones cachent également une puce UWB (Ul
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio et Auracast — la nouvelle génération de normes audio Bluetooth
+LE Audio et Auracast — la nouvelle génération de normes audio Bluetooth
 
 {class="mt-1"}
 L'audio Bluetooth classique (A2DP) utilisé depuis vingt ans est en train d'être remplacé par <strong>LE Audio</strong>(audio à faible consommation), la nouvelle norme audio de Bluetooth 5.2 et au-delà :
@@ -110,7 +110,7 @@ Plus les appareils sont connectés, plus la surface d'exposition aux fuites de v
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez : projetez l'écran du smartphone sur la TV et créez une scène intelligente
+Essayez : projetez l'écran du smartphone sur la TV et créez une scène intelligente
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Assurez-vous que le smartphone et la TV sont sur le même WiFi.
@@ -122,7 +122,7 @@ Plus les appareils sont connectés, plus la surface d'exposition aux fuites de v
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Cas 1 : Optimisation pratique de l'autonomie de la batterie
+Cas 1 : Optimisation pratique de l'autonomie de la batterie
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scénario</strong> : L'utilisateur d'un Xiaomi 14 a une mauvaise autonomie, la batterie est vide en une demi-journée.

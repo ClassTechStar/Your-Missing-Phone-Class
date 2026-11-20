@@ -90,7 +90,7 @@ iPhone → iPhone חדש
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>תתאמן: תרגול גיבוי מלא
+תתאמן: תרגול גיבוי מלא
 
 {class="mt-1"}
 בדוק שגיבוי ענן iCloud או גיבוי ענן המותג מופעל, אשר את זמן הגיבוי האחרון.
@@ -98,7 +98,7 @@ iPhone → iPhone חדש
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>גבה תמונות ידנית: חבר בכבל למחשב, העתק את תיקיות DCIM ו-Pictures למחשב.
+גבה תמונות ידנית: חבר בכבל למחשב, העתק את תיקיות DCIM ו-Pictures למחשב.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. גבה אנשי קשר: משתמש iPhone ייצא vCard מ-iCloud.com; משתמש אנדרואיד ייצא קובץ .vcf מהגדרות אפליקציית אנשי הקשר.

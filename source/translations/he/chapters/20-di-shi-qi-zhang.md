@@ -66,7 +66,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB - "תחושת מרחב" מדויקת מ-Bluetooth
+UWB - "תחושת מרחב" מדויקת מ-Bluetooth
 
 {class="mt-1"}
 מלבד Bluetooth, יש שבב UWB. יכולת:<strong>מדידת מרחק מדויקת ומיקום מרחבי</strong>—מרחק וכיוון, דיוק סנטימטר. Bluetooth "בקרבה", UWB "1.2 מ' שמאל". שימושים:
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio ו-Auracast - דור חדש
+LE Audio ו-Auracast - דור חדש
 
 {class="mt-1"}
 A2DP הוותיק מוחלף על ידי<strong>LE Audio</strong>(LE Audio), Bluetooth 5.2+:
@@ -110,7 +110,7 @@ A2DP הוותיק מוחלף על ידי<strong>LE Audio</strong>(LE Audio), Blu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בטלוויזיה מצא את "שיקוף מסך" או "AirPlay" והפעל.
+בטלוויזיה מצא את "שיקוף מסך" או "AirPlay" והפעל.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. בטלפון: iPhone ממרכז הבקרה לוחץ על "שיקוף מסך"; אנדרואיד מושך למטה ומחפש "הקרנה אלחוטית".
@@ -122,7 +122,7 @@ A2DP הוותיק מוחלף על ידי<strong>LE Audio</strong>(LE Audio), Blu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>מקרה 1: אופטימיזציית חיי סוללה בפועל
+מקרה 1: אופטימיזציית חיי סוללה בפועל
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>תרחיש</strong>: משתמש Xiaomi 14, חיי סוללה ירודים, מתרוקנת בחצי יום.

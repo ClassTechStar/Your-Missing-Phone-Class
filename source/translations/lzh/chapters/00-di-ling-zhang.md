@@ -45,7 +45,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>買手機之小建議
+買手機之小建議
 
 {class="mt-1"}
 買手機之小建議
@@ -53,7 +53,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來動手：觀汝手機之"身份證"
+來動手：觀汝手機之"身份證"
 
 {class="mt-1"}
 來動手：觀汝手機之"身份證"
@@ -66,7 +66,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>此何以至要？
+此何以至要？
 
 {class="mt-1"}
 此何以至要？<strong>更恐爲多年積累之不可再生數據</strong>——孩子之成長照片、過世親人之語音、未備份之重要合同。科學地整理與防護習慣，能自三維護汝：

@@ -21,7 +21,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>기기 선택 세 가지 도끼
+기기 선택 세 가지 도끼
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>먼저 가장 중시하는 것 명확히</strong>: 촬영? 게임? 배터리 수명? 화면? 시스템 원활함? 아니면 전화·위챗만 가능하면 됨? 요구를 순서대로 정렬.
@@ -36,41 +36,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">차원</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">어떻게 보는지</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">한 문장 요약</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">프로세서(SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트폰이 몇 년간 원활하게 사용할 수 있는지 결정. 2026년 기준: 스냅드래곤 8 Elite Gen5/디멘시티 9500 이상=최고급; 스냅드래곤 8s Gen4/디멘시티 8400=중고급; 스냅드래곤 7+ Gen4/디멘시티 7350=3년 사용 가능. 스냅드래곤 6 시리즈 미만은 신중 고려.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">새 것이 옳다, SoC가 스마트폰이 몇 년간 안 끊어지는지 결정</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">화면</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED는 LCD보다 색감이 좋고 더 절전; 주사율 120Hz는 60Hz보다 화면 스크롤이 훨씬 매끄러움; 해상도 최소 1080P 이상. 고주파 PWM 디밍(1920Hz 이상)은 눈에 더 친화적.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+고주파 디밍=좋은 화면의 합격선</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">카메라</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>픽셀 수가 아닌 센서 크기를 볼 것</strong>. 센서가 더 크면 압도적, 센서 크기가 픽셀보다 훨씬 중요. 초광각은 실용적; 망원(3x 이상 광학 줌)은 멀리 있는 것을 촬영; 접사 렌즈는 대부분 메꾸기.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">대형 센서 메인 카메라+실용 망원>여러 메꾸기 렌즈</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">배터리 및 충전</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh는 기본 합격선, 5000mAh 이상은 하루 한 번 충전 매우 안정. 급속 충전은 와트로: 60W 이상은 빠름, 100W 이상은 매우 빠름. 무선 충전은 편리하지만 느림.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh+60W 급속 충전=불안 없는 조합</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">시스템 업데이트 약속</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트폰을 얼마나 오래 안전하게 사용할 수 있는지 결정. Apple은 일반적으로 5-6년 시스템 업데이트; 삼성 플래그십은 4년 시스템+5년 보안 업데이트; Google Pixel은 7년; 국내 중급기 업데이트 약속은 일반적으로 짧음(2-3년).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">오래 사용하려면, 시스템 업데이트 약속이 긴 브랜드 선택</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">차원</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">어떻게 보는지</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">한 문장 요약</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">프로세서(SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트폰이 몇 년간 원활하게 사용할 수 있는지 결정. 2026년 기준: 스냅드래곤 8 Elite Gen5/디멘시티 9500 이상=최고급; 스냅드래곤 8s Gen4/디멘시티 8400=중고급; 스냅드래곤 7+ Gen4/디멘시티 7350=3년 사용 가능. 스냅드래곤 6 시리즈 미만은 신중 고려.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">새 것이 옳다, SoC가 스마트폰이 몇 년간 안 끊어지는지 결정</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">화면</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED는 LCD보다 색감이 좋고 더 절전; 주사율 120Hz는 60Hz보다 화면 스크롤이 훨씬 매끄러움; 해상도 최소 1080P 이상. 고주파 PWM 디밍(1920Hz 이상)은 눈에 더 친화적.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+고주파 디밍=좋은 화면의 합격선</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">카메라</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>픽셀 수가 아닌 센서 크기를 볼 것</strong>. 센서가 더 크면 압도적, 센서 크기가 픽셀보다 훨씬 중요. 초광각은 실용적; 망원(3x 이상 광학 줌)은 멀리 있는 것을 촬영; 접사 렌즈는 대부분 메꾸기.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">대형 센서 메인 카메라+실용 망원>여러 메꾸기 렌즈</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">배터리 및 충전</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh는 기본 합격선, 5000mAh 이상은 하루 한 번 충전 매우 안정. 급속 충전은 와트로: 60W 이상은 빠름, 100W 이상은 매우 빠름. 무선 충전은 편리하지만 느림.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh+60W 급속 충전=불안 없는 조합</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">시스템 업데이트 약속</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스마트폰을 얼마나 오래 안전하게 사용할 수 있는지 결정. Apple은 일반적으로 5-6년 시스템 업데이트; 삼성 플래그십은 4년 시스템+5년 보안 업데이트; Google Pixel은 7년; 국내 중급기 업데이트 약속은 일반적으로 짧음(2-3년).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">오래 사용하려면, 시스템 업데이트 약속이 긴 브랜드 선택</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -125,51 +125,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">사용 시나리오</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">중점적으로 볼 것</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">추천 방향</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 사진 전문가</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">대형 센서 메인 카메라(1인치 최적), 광학 손떨림 보정, 망원(3x 이상 광학 줌), 영상 칩</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X 시리즈, 화웨이 Pura/Mate 시리즈, 샤오미 Ultra 시리즈</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 게임 플레이어</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">최고급 프로세서, 높은 터치 샘플링, 방열 시스템, 대용량 배터리+급속 충전</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO 숫자 시리즈, ROG Phone, Red Magic, Redmi K 시리즈</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 배터리 수명 우선</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh 이상 배터리, 에너지 효율 좋은 프로세서, LTPO 화면</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic 시리즈, OnePlus, Redmi Note 대용량 배터리 버전</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 어르신 사용</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드, 큰 글꼴, 큰 볼륨, 대용량 배터리, A/S 서비스 지점 많음</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 Changxiang, Honor Play, OPPO A 시리즈, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 학생 기기</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">가성비 높음, 내구성, 대용량 배터리, 학부모 통제 기능</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Apple 생태계 사용자</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">이미 Mac/iPad/AirPods 보유, iPhone 구매가 유일한 해법</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 표준판(가성비) 또는 Pro 버전(완전체 경험)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 해외 여행</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM 지원, 글로벌 주파수 대역 완전, Google 서비스</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, 삼성 S 시리즈, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">사용 시나리오</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">중점적으로 볼 것</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">추천 방향</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 사진 전문가</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">대형 센서 메인 카메라(1인치 최적), 광학 손떨림 보정, 망원(3x 이상 광학 줌), 영상 칩</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X 시리즈, 화웨이 Pura/Mate 시리즈, 샤오미 Ultra 시리즈</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 게임 플레이어</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">최고급 프로세서, 높은 터치 샘플링, 방열 시스템, 대용량 배터리+급속 충전</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO 숫자 시리즈, ROG Phone, Red Magic, Redmi K 시리즈</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 배터리 수명 우선</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh 이상 배터리, 에너지 효율 좋은 프로세서, LTPO 화면</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic 시리즈, OnePlus, Redmi Note 대용량 배터리 버전</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 어르신 사용</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">간편 모드, 큰 글꼴, 큰 볼륨, 대용량 배터리, A/S 서비스 지점 많음</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 Changxiang, Honor Play, OPPO A 시리즈, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 학생 기기</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">가성비 높음, 내구성, 대용량 배터리, 학부모 통제 기능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Apple 생태계 사용자</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">이미 Mac/iPad/AirPods 보유, iPhone 구매가 유일한 해법</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 표준판(가성비) 또는 Pro 버전(완전체 경험)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 해외 여행</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM 지원, 글로벌 주파수 대역 완전, Google 서비스</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, 삼성 S 시리즈, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -205,7 +205,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 이 방법론으로 한 대의 스마트폰 선택
+실습: 이 방법론으로 한 대의 스마트폰 선택
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 종이 한 장을 꺼내, 두 가지 핵심 요구 적기(예: 배터리 수명 1순위, 촬영 2순위).
@@ -217,7 +217,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>본 챕터 요약
+본 챕터 요약
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 기기 선택 세 가지 도끼: 먼저 요구 → 예산 → 마지막에 기종 선택

@@ -42,23 +42,23 @@ ArkTS 保留了 TypeScript 的核心语法：类型标注、接口。类、泛�
 
 ```
 interface Todo {
-  id: number
-  title: string
-  done: boolean
+ id: number
+ title: string
+ done: boolean
 }
 
 class TodoStore {
-  private items: Todo[] = []
+ private items: Todo[] = []
 
-  add(title: string): Todo {
-    let todo: Todo = { id: Date.now(), title: title, done: false }
-    this.items.push(todo)
-    return todo
-  }
+ add(title: string): Todo {
+ let todo: Todo = { id: Date.now(), title: title, done: false }
+ this.items.push(todo)
+ return todo
+ }
 
-  get count(): number {
-    return this.items.length
-  }
+ get count(): number {
+ return this.items.length
+ }
 }
 
 let store = new TodoStore()
@@ -115,7 +115,7 @@ ArkTS 对语言的最大扩展是<strong>装饰器体系</strong>，它们是 Ar
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：把 TodoStore 搬进 DevEco
+来动手：把 TodoStore 搬进 DevEco
 
 {class="mt-1"}
 1\. 在上一章的项目里新建 ets 文件夹下的 model/TodoStore.ets，把热身代码粘进去；2. 故意把一个返回类型删掉，看编译器报什么错；3. 故意用 any，看 arkts 报错码长什么样；4. 恢复代码，确认编译通过。报错不是失败——这是你和编译器建立信任的过程。
@@ -136,15 +136,15 @@ ArkTS 对语言的最大扩展是<strong>装饰器体系</strong>，它们是 Ar
 
 ```
 let names: string[] = ['阿黄', '小美', '老王']
-names.push('大鹏')                    // 尾部加一个
-names = names.filter(n => n !== '老王')   // 过滤，返回新数组
-let found = names.find(n => n.startsWith('小'))  // 找第一个匹配的
-let hasMei: boolean = names.includes('小美')      // 是否存在
+names.push('大鹏') // 尾部加一个
+names = names.filter(n => n !== '老王') // 过滤，返回新数组
+let found = names.find(n => n.startsWith('小')) // 找第一个匹配的
+let hasMei: boolean = names.includes('小美') // 是否存在
 
-let lengths: number[] = names.map(n => n.length)  // 一对一变换
+let lengths: number[] = names.map(n => n.length) // 一对一变换
 
 let scores: number[] = [88, 92, 75]
-scores.sort((a: number, b: number) => a - b)      // 从小到大
+scores.sort((a: number, b: number) => a - b) // 从小到大
 ```
 :::
 
@@ -159,21 +159,21 @@ scores.sort((a: number, b: number) => a - b)      // 从小到大
 
 ```
 // 错误示范一：空数组不标类型
-let list = []              // 编译器不知道这是什么的数组
-list.push('购物')          // 报错
+let list = [] // 编译器不知道这是什么的数组
+list.push('购物') // 报错
 
 // 错误示范二：一个数组混装几种东西
 let mixed: string[] = []
 mixed.push('购物')
-mixed.push(123)            // 报错：number 塞不进 string[]
+mixed.push(123) // 报错：number 塞不进 string[]
 
 // 纠正：先定形状，再往里放
 interface TodoItem {
-  title: string
-  done: boolean
+ title: string
+ done: boolean
 }
 let list: TodoItem[] = []
-list.push({ title: '购物', done: false })   // 字面量有类型可归，合法
+list.push({ title: '购物', done: false }) // 字面量有类型可归，合法
 ```
 :::
 
@@ -190,20 +190,20 @@ list.push({ title: '购物', done: false })   // 字面量有类型可归，合�
 
 ```
 let ages: Map&lt;string, number&gt; = new Map()
-ages.set('阿黄', 3)                 // 存
+ages.set('阿黄', 3) // 存
 ages.set('小美', 5)
 
-let a = ages.get('阿黄')            // 取，取不到时是 undefined
+let a = ages.get('阿黄') // 取，取不到时是 undefined
 if (a !== undefined) {
-  console.info('阿黄 ' + a + ' 岁')
+ console.info('阿黄 ' + a + ' 岁')
 }
 
-console.info('' + ages.has('老王'))   // 有没有这个键
-ages.delete('小美')                 // 删
-console.info('' + ages.size)        // 几条
+console.info('' + ages.has('老王')) // 有没有这个键
+ages.delete('小美') // 删
+console.info('' + ages.size) // 几条
 
 ages.forEach((age: number, name: string) => {
-  console.info(name + ': ' + age)   // 遍历
+ console.info(name + ': ' + age) // 遍历
 })
 ```
 :::
@@ -222,10 +222,10 @@ Set 只回答一个问题："这个东西在不在？"加过多少遍都算一�
 ```
 let seen: Set&lt;string&gt; = new Set()
 seen.add('点赞')
-seen.add('点赞')            // 重复加，没用，还是一条
-console.info('' + seen.has('点赞'))   // true
+seen.add('点赞') // 重复加，没用，还是一条
+console.info('' + seen.has('点赞')) // true
 seen.delete('点赞')
-console.info('' + seen.size)          // 0
+console.info('' + seen.size) // 0
 ```
 :::
 
@@ -233,7 +233,7 @@ console.info('' + seen.size)          // 0
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 弱引用容器这类高级玩法入门阶段先别碰，具体支持范围各版本可能不同，需要时查官方文档。前面这三种集合，够你写完前十个练手项目。
@@ -255,12 +255,12 @@ console.info('' + seen.size)          // 0
 ```
 // 错误示范：函数表达式
 const greet = function (name: string): string {
-  return '你好，' + name
+ return '你好，' + name
 }
 
 // 纠正：箭头函数
 const greet = (name: string): string => {
-  return '你好，' + name
+ return '你好，' + name
 }
 
 // 单个表达式还能更短，大括号和 return 一起省
@@ -282,22 +282,22 @@ const greet = (name: string): string => '你好，' + name
 ```
 // 可选参数：标问号，函数体内就得处理"没传"的情况
 function hello(name?: string): void {
-  let who: string = name !== undefined ? name : '朋友'
-  console.info('你好，' + who)
+ let who: string = name !== undefined ? name : '朋友'
+ console.info('你好，' + who)
 }
 
 // 默认值：不传就用默认的
 function greet(name: string, prefix: string = '同学'): void {
-  console.info(prefix + ' ' + name + '，你好')
+ console.info(prefix + ' ' + name + '，你好')
 }
 
 // 剩余参数：不知道会传几个
 function sum(...nums: number[]): number {
-  let total: number = 0
-  for (let n of nums) {
-    total += n
-  }
-  return total
+ let total: number = 0
+ for (let n of nums) {
+ total += n
+ }
+ return total
 }
 ```
 :::
@@ -322,13 +322,13 @@ let byDesc: Comparator = (a: number, b: number) => b - a
 
 // 回调作为参数传入时，参数类型写清楚
 function processIds(ids: number[], each: (id: number) => void): void {
-  for (let id of ids) {
-    each(id)
-  }
+ for (let id of ids) {
+ each(id)
+ }
 }
 
 processIds([1, 2, 3], (id: number) => {
-  console.info('处理 ' + id)
+ console.info('处理 ' + id)
 })
 ```
 :::
@@ -346,17 +346,17 @@ processIds([1, 2, 3], (id: number) => {
 
 ```
 function makeCounter(): () => number {
-  let count: number = 0
-  return (): number => {
-    count++
-    return count
-  }
+ let count: number = 0
+ return (): number => {
+ count++
+ return count
+ }
 }
 
 let c = makeCounter()
-console.info('' + c())   // 1
-console.info('' + c())   // 2
-console.info('' + c())   // 3
+console.info('' + c()) // 1
+console.info('' + c()) // 2
+console.info('' + c()) // 3
 ```
 :::
 
@@ -377,22 +377,22 @@ count 是 makeCounter 里的局部变量，按理说函数返回就该销毁，�
 
 ```
 class Article {
-  readonly id: number          // 只读：初始化之后不许改
-  title: string                // 不写修饰符，默认公开
-  private views: number = 0    // 私有：只有类自己能动
+ readonly id: number // 只读：初始化之后不许改
+ title: string // 不写修饰符，默认公开
+ private views: number = 0 // 私有：只有类自己能动
 
-  constructor(id: number, title: string) {
-    this.id = id
-    this.title = title
-  }
+ constructor(id: number, title: string) {
+ this.id = id
+ this.title = title
+ }
 
-  read(): void {
-    this.views++               // 类内部可以碰 private
-  }
+ read(): void {
+ this.views++ // 类内部可以碰 private
+ }
 
-  get hotness(): number {
-    return this.views
-  }
+ get hotness(): number {
+ return this.views
+ }
 }
 
 let art: Article = new Article(1, 'ArkTS 十日谈')
@@ -412,26 +412,26 @@ console.info('' + art.hotness)
 
 ```
 class Animal {
-  name: string
-  constructor(name: string) {
-    this.name = name
-  }
-  sound(): string {
-    return '...'
-  }
+ name: string
+ constructor(name: string) {
+ this.name = name
+ }
+ sound(): string {
+ return '...'
+ }
 }
 
 class Dog extends Animal {
-  constructor(name: string) {
-    super(name)                // 先把父类构造完，再做自己的事
-  }
-  sound(): string {            // 重写父类方法
-    return '汪！我是' + this.name
-  }
+ constructor(name: string) {
+ super(name) // 先把父类构造完，再做自己的事
+ }
+ sound(): string { // 重写父类方法
+ return '汪！我是' + this.name
+ }
 }
 
 let d: Animal = new Dog('阿黄')
-console.info(d.sound())        // 汪！我是阿黄
+console.info(d.sound()) // 汪！我是阿黄
 ```
 :::
 
@@ -446,31 +446,31 @@ console.info(d.sound())        // 汪！我是阿黄
 
 ```
 abstract class Shape {
-  abstract area(): number                  // 只声明，不实现
-  describe(): string {                     // 抽象类可以带现成的方法
-    return '面积是 ' + this.area()
-  }
+ abstract area(): number // 只声明，不实现
+ describe(): string { // 抽象类可以带现成的方法
+ return '面积是 ' + this.area()
+ }
 }
 
 class Circle extends Shape {
-  r: number
-  constructor(r: number) {
-    super()
-    this.r = r
-  }
-  area(): number {
-    return Math.PI * this.r * this.r
-  }
+ r: number
+ constructor(r: number) {
+ super()
+ this.r = r
+ }
+ area(): number {
+ return Math.PI * this.r * this.r
+ }
 }
 
 interface Speaker {
-  speak(): string
+ speak(): string
 }
 
 class Robot implements Speaker {
-  speak(): string {
-    return '哔——'
-  }
+ speak(): string {
+ return '哔——'
+ }
 }
 ```
 :::
@@ -491,11 +491,11 @@ interface PointA { x: number, y: number }
 interface PointB { x: number, y: number }
 
 function draw(p: PointA): void {
-  console.info('画点 ' + p.x + ',' + p.y)
+ console.info('画点 ' + p.x + ',' + p.y)
 }
 
 let b: PointB = { x: 1, y: 2 }
-draw(b)      // 在 TS 里畅通无阻，在 ArkTS 里报错
+draw(b) // 在 TS 里畅通无阻，在 ArkTS 里报错
 ```
 :::
 
@@ -516,20 +516,20 @@ Promise&lt;T&gt; 表示"将来会给你一个 T"。它有等待、成功、失�
 
 ```
 function fetchQuote(): Promise&lt;string&gt; {
-  return new Promise&lt;string&gt;(
-    (resolve: (v: string) => void, reject: (e: Error) => void) => {
-      setTimeout(() => {
-        // 假装这里是网络请求
-        resolve('今天也要好好吃饭')
-      }, 1000)
-    }
-  )
+ return new Promise&lt;string&gt;(
+ (resolve: (v: string) => void, reject: (e: Error) => void) => {
+ setTimeout(() => {
+ // 假装这里是网络请求
+ resolve('今天也要好好吃饭')
+ }, 1000)
+ }
+ )
 }
 
 fetchQuote().then((quote: string) => {
-  console.info(quote)
+ console.info(quote)
 }).catch((err: Object) => {
-  console.error('失败了')
+ console.error('失败了')
 })
 ```
 :::
@@ -545,14 +545,14 @@ fetchQuote().then((quote: string) => {
 
 ```
 async function showQuote(): Promise&lt;void&gt; {
-  try {
-    let quote: string = await fetchQuote()
-    console.info('拿到：' + quote)
-    let another: string = await fetchQuote()
-    console.info('再拿一条：' + another)
-  } catch (e) {
-    console.error('出错了，界面提示重试')
-  }
+ try {
+ let quote: string = await fetchQuote()
+ console.info('拿到：' + quote)
+ let another: string = await fetchQuote()
+ console.info('再拿一条：' + another)
+ } catch (e) {
+ console.error('出错了，界面提示重试')
+ }
 }
 ```
 :::
@@ -568,11 +568,11 @@ async function showQuote(): Promise&lt;void&gt; {
 
 ```
 async function loadPage(): Promise&lt;void&gt; {
-  // 三个请求一起发，全部完成才往下走
-  let quotes: string[] = await Promise.all([
-    fetchQuote(), fetchQuote(), fetchQuote()
-  ])
-  console.info('共拿到 ' + quotes.length + ' 条')
+ // 三个请求一起发，全部完成才往下走
+ let quotes: string[] = await Promise.all([
+ fetchQuote(), fetchQuote(), fetchQuote()
+ ])
+ console.info('共拿到 ' + quotes.length + ' 条')
 }
 ```
 :::
@@ -589,25 +589,25 @@ Promise.all 适合"互相不依赖"的请求：首屏要同时拿头像、昵称
 ```
 // 错误示范：回调里调 async 方法，返回的 Promise 没人管
 Button('换一句')
-  .onClick(() => {
-    this.loadQuote()      // loadQuote 内部若出错，这里无人接住
-  })
+ .onClick(() => {
+ this.loadQuote() // loadQuote 内部若出错，这里无人接住
+ })
 
 // 纠正：async 方法内部自己兜底，把错误消化在方法里
 async function loadQuote(): Promise&lt;void&gt; {
-  try {
-    let quote: string = await fetchQuote()
-    this.current = quote
-  } catch (e) {
-    this.current = '网络开小差了，再点一次试试'
-  }
+ try {
+ let quote: string = await fetchQuote()
+ this.current = quote
+ } catch (e) {
+ this.current = '网络开小差了，再点一次试试'
+ }
 }
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 async 不等于多线程。await 等待期间主线程确实会去干别的（比如响应你的点击），但 CPU 密集的计算，解析大 JSON、图片处理、复杂排序：照样占着主线程，界面照样卡。重活儿要走 Worker/TaskPool 那套多线程手段，后面的章节会讲，以官方文档为准。
@@ -626,13 +626,13 @@ async 不等于多线程。await 等待期间主线程确实会去干别的（�
 
 ```
 export class Todo {
-  id: number = 0
-  title: string = ''
-  done: boolean = false
+ id: number = 0
+ title: string = ''
+ done: boolean = false
 }
 
 export function formatTitle(raw: string): string {
-  return raw.trim()
+ return raw.trim()
 }
 ```
 :::
@@ -644,10 +644,10 @@ export function formatTitle(raw: string): string {
 
 ```
 import { Todo, formatTitle } from '../model/Todo'
-import { Todo as Task } from '../model/Todo'   // 重命名，避免撞名
+import { Todo as Task } from '../model/Todo' // 重命名，避免撞名
 
 let t: Todo = new Todo()
-t.title = formatTitle('  收拾桌面  ')
+t.title = formatTitle(' 收拾桌面 ')
 ```
 :::
 
@@ -710,16 +710,16 @@ initApp()
 
 ```
 entry/src/main/ets/
-├── entryability/      入口 Ability（工程模板自带）
-│   └── EntryAbility.ets
-├── pages/             页面，一个页面一个文件
-│   └── Index.ets
-├── model/             数据模型：interface 与 class
-│   ├── Todo.ets
-│   └── TodoStore.ets
-├── service/           网络请求、本地存储这类"做事"的代码
-├── view/              可复用的自定义组件
-└── utils/             到处都可能用的小工具
+├── entryability/ 入口 Ability（工程模板自带）
+│ └── EntryAbility.ets
+├── pages/ 页面，一个页面一个文件
+│ └── Index.ets
+├── model/ 数据模型：interface 与 class
+│ ├── Todo.ets
+│ └── TodoStore.ets
+├── service/ 网络请求、本地存储这类"做事"的代码
+├── view/ 可复用的自定义组件
+└── utils/ 到处都可能用的小工具
 ```
 :::
 
@@ -738,18 +738,18 @@ entry/src/main/ets/
 
 ```
 function parseCount(text: string): number {
-  try {
-    let n: number = Number(text)
-    if (Number.isNaN(n)) {
-      throw new Error('不是数字：' + text)
-    }
-    return n
-  } catch (e) {
-    console.error('解析失败，按 0 处理')
-    return 0
-  } finally {
-    console.info('解析结束')     // 无论成败都会执行
-  }
+ try {
+ let n: number = Number(text)
+ if (Number.isNaN(n)) {
+ throw new Error('不是数字：' + text)
+ }
+ return n
+ } catch (e) {
+ console.error('解析失败，按 0 处理')
+ return 0
+ } finally {
+ console.info('解析结束') // 无论成败都会执行
+ }
 }
 ```
 :::
@@ -765,11 +765,11 @@ function parseCount(text: string): number {
 
 ```
 catch (e) {
-  if (e instanceof Error) {
-    console.error('消息：' + e.message)
-  } else {
-    console.error('不知道是什么错误，原样打出来看看')
-  }
+ if (e instanceof Error) {
+ console.error('消息：' + e.message)
+ } else {
+ console.error('不知道是什么错误，原样打出来看看')
+ }
 }
 ```
 :::
@@ -785,10 +785,10 @@ catch (e) {
 import { BusinessError } from '@kit.BasicServicesKit'
 
 try {
-  // 某个系统 API 调用，比如请求网络
+ // 某个系统 API 调用，比如请求网络
 } catch (err) {
-  let e: BusinessError = err as BusinessError
-  console.error('错误码 ' + e.code + '：' + e.message)
+ let e: BusinessError = err as BusinessError
+ console.error('错误码 ' + e.code + '：' + e.message)
 }
 ```
 :::
@@ -804,29 +804,29 @@ code 是排障的关键线索，把它的含义到官方文档里搜一下，比
 
 ```
 class ApiError extends Error {
-  code: number
-  constructor(code: number, message: string) {
-    super(message)
-    this.code = code
-  }
+ code: number
+ constructor(code: number, message: string) {
+ super(message)
+ this.code = code
+ }
 }
 
 // 业务上发现不对，就抛一个带语义的错误
 function handleResponse(code: number, body: string): string {
-  if (code !== 0) {
-    throw new ApiError(code, '服务器说不行')
-  }
-  return body
+ if (code !== 0) {
+ throw new ApiError(code, '服务器说不行')
+ }
+ return body
 }
 
 try {
-  handleResponse(401, '')
+ handleResponse(401, '')
 } catch (e) {
-  if (e instanceof ApiError) {
-    console.error('业务错误码 ' + e.code)
-  } else if (e instanceof Error) {
-    console.error('普通异常：' + e.message)
-  }
+ if (e instanceof ApiError) {
+ console.error('业务错误码 ' + e.code)
+ } else if (e instanceof Error) {
+ console.error('普通异常：' + e.message)
+ }
 }
 ```
 :::
@@ -843,20 +843,20 @@ try {
 ```
 // 错误示范：忘写 await
 async function load(): Promise&lt;void&gt; {
-  try {
-    fetchSlow()          // fetchSlow 内部抛的错，这里接不到
-  } catch (e) {
-    // 永远走不到这里
-  }
+ try {
+ fetchSlow() // fetchSlow 内部抛的错，这里接不到
+ } catch (e) {
+ // 永远走不到这里
+ }
 }
 
 // 纠正：await 一写，错误才会落到这个 try 里
 async function load(): Promise&lt;void&gt; {
-  try {
-    await fetchSlow()
-  } catch (e) {
-    console.error('这回真的接住了')
-  }
+ try {
+ await fetchSlow()
+ } catch (e) {
+ console.error('这回真的接住了')
+ }
 }
 ```
 :::
@@ -897,18 +897,18 @@ async function load(): Promise&lt;void&gt; {
 ```
 // 症状
 function process(data: any): void {
-  console.info(data.name)
+ console.info(data.name)
 }
 // 诊断：any 的意思是"我不想想类型"。ArkTS 直接禁。
 // 处方：想清楚它到底是什么。是用户？就定义 User。
 
 interface User {
-  name: string
-  age: number
+ name: string
+ age: number
 }
 
 function process(data: User): void {
-  console.info(data.name)   // 编辑器还能帮你补全 name
+ console.info(data.name) // 编辑器还能帮你补全 name
 ```
 :::
 
@@ -924,12 +924,12 @@ function process(data: User): void {
 ```
 // 症状：JS 老习惯，对象当字典
 let obj = { a: 1, b: 2 }
-let va = obj['a']            // 字符串下标——报错
+let va = obj['a'] // 字符串下标——报错
 
 // 修法一：字段固定，直接点出来
 interface Config {
-  a: number
-  b: number
+ a: number
+ b: number
 }
 let c: Config = { a: 1, b: 2 }
 let va: number = c.a
@@ -937,7 +937,7 @@ let va: number = c.a
 // 修法二：键真的是动态的，用 Record
 let scores: Record&lt;string, number&gt; = {}
 scores['math'] = 90
-let ms = scores['math']      // Record 允许下标访问
+let ms = scores['math'] // Record 允许下标访问
 ```
 :::
 
@@ -956,19 +956,19 @@ interface A { x: number, y: number }
 interface B { x: number, y: number }
 function show(p: A): void { console.info('' + p.x) }
 let b: B = { x: 1, y: 2 }
-show(b)          // 报错：B 不能当 A 用
+show(b) // 报错：B 不能当 A 用
 
 // 修法：共用一个定义
 interface Point { x: number, y: number }
 function show(p: Point): void { console.info('' + p.x) }
 let b: Point = { x: 1, y: 2 }
-show(b)          // 通过
+show(b) // 通过
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：主动制造三个报错
+来动手：主动制造三个报错
 
 {class="mt-1"}
 1\. 写一行 let x: any = 1，记下面板上的报错码；2. 写一个 function 表达式赋值给变量，再记一个；3. 在 catch 括号里标个类型。每一条都先试编辑器的快速修复，修不动就对照上面的门诊表手改。主动犯一次错，比被动撞十次记得牢。
@@ -1023,10 +1023,10 @@ let all: string[] = arr1.concat(arr2)
 
 // 旧习惯：let both = { ...base, ...patch }
 function merge(base: Config, patch: Config): Config {
-  let out: Config = { a: base.a, b: base.b }
-  if (patch.a !== undefined) { out.a = patch.a }
-  if (patch.b !== undefined) { out.b = patch.b }
-  return out
+ let out: Config = { a: base.a, b: base.b }
+ if (patch.a !== undefined) { out.a = patch.a }
+ if (patch.b !== undefined) { out.b = patch.b }
+ return out
 }
 ```
 :::
@@ -1052,8 +1052,8 @@ function merge(base: Config, patch: Config): Config {
 :::
 
 ```
-let name: string = '阿黄'      // 会变的，用 let
-const maxTries: number = 3     // 不变的，用 const
+let name: string = '阿黄' // 会变的，用 let
+const maxTries: number = 3 // 不变的，用 const
 let done: boolean = false
 ```
 :::
@@ -1071,9 +1071,9 @@ let done: boolean = false
 let scores: number[] = [88, 92, 75]
 let pass: number = 0
 for (let s of scores) {
-  if (s >= 80) {
-    pass++
-  }
+ if (s >= 80) {
+ pass++
+ }
 }
 console.info('80 分以上 ' + pass + ' 人')
 ```
@@ -1145,7 +1145,7 @@ DevEco 自带 Code Linter，提交代码前跑一遍，能把本章讲的大部�
 // 第一版的样子：类型全是谜
 let rows = []
 function addRow(who, howMuch) {
-  rows.push({ name: who, amount: howMuch, time: Date.now() })
+ rows.push({ name: who, amount: howMuch, time: Date.now() })
 }
 ```
 :::
@@ -1159,15 +1159,15 @@ function addRow(who, howMuch) {
 
 ```
 interface DebtRow {
-  name: string
-  amount: number
-  time: number
+ name: string
+ amount: number
+ time: number
 }
 
 let rows: DebtRow[] = []
 
 function addRow(who: string, howMuch: number): void {
-  rows.push({ name: who, amount: howMuch, time: Date.now() })
+ rows.push({ name: who, amount: howMuch, time: Date.now() })
 }
 ```
 :::
@@ -1185,37 +1185,37 @@ function addRow(who: string, howMuch: number): void {
 
 ```
 class Ledger {
-  private rows: DebtRow[] = []
+ private rows: DebtRow[] = []
 
-  add(name: string, amount: number): DebtRow {
-    let row: DebtRow = { name: name, amount: amount, time: Date.now() }
-    this.rows.push(row)
-    return row
-  }
+ add(name: string, amount: number): DebtRow {
+ let row: DebtRow = { name: name, amount: amount, time: Date.now() }
+ this.rows.push(row)
+ return row
+ }
 
-  settle(name: string, amount: number): boolean {
-    let row = this.rows.find(r => r.name === name)
-    if (row === undefined) {
-      return false            // 人都不在账上，销个啥
-    }
-    row.amount = row.amount - amount
-    if (row.amount &lt;= 0) {
-      this.rows = this.rows.filter(r => r.name !== name)
-    }
-    return true
-  }
+ settle(name: string, amount: number): boolean {
+ let row = this.rows.find(r => r.name === name)
+ if (row === undefined) {
+ return false // 人都不在账上，销个啥
+ }
+ row.amount = row.amount - amount
+ if (row.amount &lt;= 0) {
+ this.rows = this.rows.filter(r => r.name !== name)
+ }
+ return true
+ }
 
-  total(): number {
-    let sum: number = 0
-    for (let r of this.rows) {
-      sum += r.amount
-    }
-    return sum
-  }
+ total(): number {
+ let sum: number = 0
+ for (let r of this.rows) {
+ sum += r.amount
+ }
+ return sum
+ }
 
-  get all(): DebtRow[] {
-    return this.rows
-  }
+ get all(): DebtRow[] {
+ return this.rows
+ }
 }
 ```
 :::
@@ -1235,21 +1235,21 @@ class Ledger {
 import { DebtRow } from '../model/DebtRow'
 
 export function sumDebts(rows: DebtRow[]): number {
-  let sum: number = 0
-  for (let r of rows) {
-    sum += r.amount
-  }
-  return sum
+ let sum: number = 0
+ for (let r of rows) {
+ sum += r.amount
+ }
+ return sum
 }
 
 export function topDebtor(rows: DebtRow[]): string | undefined {
-  let top: DebtRow | undefined = undefined
-  for (let r of rows) {
-    if (top === undefined || r.amount > top.amount) {
-      top = r
-    }
-  }
-  return top === undefined ? undefined : top.name
+ let top: DebtRow | undefined = undefined
+ for (let r of rows) {
+ if (top === undefined || r.amount > top.amount) {
+ top = r
+ }
+ }
+ return top === undefined ? undefined : top.name
 }
 ```
 :::
@@ -1269,13 +1269,13 @@ export function topDebtor(rows: DebtRow[]): string | undefined {
 import { BusinessError } from '@kit.BasicServicesKit'
 
 async function saveLedger(rows: DebtRow[]): Promise&lt;void&gt; {
-  try {
-    await saveToDisk(rows)      // 假想的存储调用
-  } catch (err) {
-    let e: BusinessError = err as BusinessError
-    console.error('保存失败，错误码 ' + e.code)
-    // 界面上提示"这笔记账没存上"，别让用户白记
-  }
+ try {
+ await saveToDisk(rows) // 假想的存储调用
+ } catch (err) {
+ let e: BusinessError = err as BusinessError
+ console.error('保存失败，错误码 ' + e.code)
+ // 界面上提示"这笔记账没存上"，别让用户白记
+ }
 }
 ```
 :::
@@ -1292,14 +1292,14 @@ async function saveLedger(rows: DebtRow[]): Promise&lt;void&gt; {
 ```
 ets/
 ├── pages/
-│   └── Index.ets            页面：只管显示和响应点击
+│ └── Index.ets 页面：只管显示和响应点击
 ├── model/
-│   ├── DebtRow.ets          interface DebtRow
-│   └── Ledger.ets           class Ledger
+│ ├── DebtRow.ets interface DebtRow
+│ └── Ledger.ets class Ledger
 ├── service/
-│   └── LedgerStore.ets      保存、读取
+│ └── LedgerStore.ets 保存、读取
 └── utils/
-    └── stats.ets            sumDebts、topDebtor
+ └── stats.ets sumDebts、topDebtor
 ```
 :::
 
@@ -1344,11 +1344,11 @@ import { sumDebts, topDebtor } from '../utils/stats'
 
 ```
 function pick&lt;T&gt;(items: T[], index: number): T {
-  return items[index]
+ return items[index]
 }
 
-let n: number = pick([10, 20, 30], 1)      // 20
-let s: string = pick(['a', 'b'], 0)        // 'a'
+let n: number = pick([10, 20, 30], 1) // 20
+let s: string = pick(['a', 'b'], 0) // 'a'
 ```
 :::
 
@@ -1392,19 +1392,19 @@ let idx: number = ages.indexOf(30)
 
 ```
 interface Order {
-  user: string
-  amount: number
+ user: string
+ amount: number
 }
 
 let orders: Order[] = [
-  { user: '阿黄', amount: 88 },
-  { user: '小美', amount: 199 },
-  { user: '老王', amount: 120 }
+ { user: '阿黄', amount: 88 },
+ { user: '小美', amount: 199 },
+ { user: '老王', amount: 120 }
 ]
 
 let bigUsers: string[] = orders
-  .filter((o: Order) => o.amount > 100)
-  .map((o: Order) => o.user)
+ .filter((o: Order) => o.amount > 100)
+ .map((o: Order) => o.user)
 // 结果：['小美', '老王']
 ```
 :::
@@ -1420,13 +1420,13 @@ let bigUsers: string[] = orders
 
 ```
 let sorted: Order[] = orders.slice().sort((a: Order, b: Order) => {
-  if (a.amount !== b.amount) {
-    return b.amount - a.amount        // 金额大的在前
-  }
-  if (a.user !== b.user) {
-    return a.user > b.user ? 1 : -1   // 同额按名字排
-  }
-  return 0
+ if (a.amount !== b.amount) {
+ return b.amount - a.amount // 金额大的在前
+ }
+ if (a.user !== b.user) {
+ return a.user > b.user ? 1 : -1 // 同额按名字排
+ }
+ return 0
 })
 ```
 :::
@@ -1442,15 +1442,15 @@ let sorted: Order[] = orders.slice().sort((a: Order, b: Order) => {
 
 ```
 function toCount(text: string): number {
-  let n: number = Number(text)
-  if (Number.isNaN(n) || n &lt; 0) {
-    return 0                // 不是数、是负数，都按 0 算
-  }
-  return Math.floor(n)
+ let n: number = Number(text)
+ if (Number.isNaN(n) || n &lt; 0) {
+ return 0 // 不是数、是负数，都按 0 算
+ }
+ return Math.floor(n)
 }
 
 let tags: string[] = '学习,运动,睡觉'.split(',')
-let line: string = tags.join(' · ')   // '学习 · 运动 · 睡觉'
+let line: string = tags.join(' · ') // '学习 · 运动 · 睡觉'
 ```
 :::
 
@@ -1465,13 +1465,13 @@ let line: string = tags.join(' · ')   // '学习 · 运动 · 睡觉'
 
 ```
 let a: number[] = [1, 2, 3]
-let b: number[] = a          // b 和 a 是同一个数组
+let b: number[] = a // b 和 a 是同一个数组
 b.push(4)
-console.info('' + a.length)  // 4！a 也"变"了
+console.info('' + a.length) // 4！a 也"变"了
 
-let c: number[] = a.slice()  // 复制一份新的
+let c: number[] = a.slice() // 复制一份新的
 c.push(5)
-console.info('' + a.length)  // 还是 4，a 安然无恙
+console.info('' + a.length) // 还是 4，a 安然无恙
 ```
 :::
 
@@ -1535,7 +1535,7 @@ console.info('' + a.length)  // 还是 4，a 安然无恙
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 ArkTS 的所有规矩，都是在替未来的你省排查时间。
@@ -1545,7 +1545,7 @@ ArkTS 的所有规矩，都是在替未来的你省排查时间。
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - ArkTS 保留 TS 核心：类型、接口、类、泛型、箭头函数
 - 六条收紧：禁 any、形状固定、无结构化类型、渲染类型受限、类型写全、字面量要有类型

@@ -61,7 +61,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ابدأ الآن: ابنِ نظام الترفيه الخاص بهاتفك
+ابدأ الآن: ابنِ نظام الترفيه الخاص بهاتفك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. نزّل 3 ألبومات أو قوائم تشغيل المفضلة لديك في تطبيق الموسيقى، وتأكد من إمكانية الاستماع دون اتصال.

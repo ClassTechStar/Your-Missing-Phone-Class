@@ -42,7 +42,7 @@ Il telefono si collega direttamente a un satellite di comunicazione in orbita pe
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosità
+Curiosità
 
 {class="mt-1"}
 La comunicazione satellitare richiede un'antenna hardware speciale sul telefono, non tutti i telefoni la supportano. Inoltre, di solito richiede un abbonamento a pagamento, ma la funzione di SOS di emergenza è generalmente gratuita.
@@ -115,7 +115,7 @@ Attualmente prevalentemente dispositivi dell'ecosistema Huawei, come la serie Hu
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Prospettive tecnologiche
+Prospettive tecnologiche
 
 {class="mt-1"}
 La tecnologia SparkLink rappresenta la direzione futura della comunicazione wireless. Con l'adesione di più produttori, potremmo vedere più dispositivi che supportano SparkLink e godere di un'esperienza wireless migliore.
@@ -123,7 +123,7 @@ La tecnologia SparkLink rappresenta la direzione futura della comunicazione wire
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Verifica: il tuo telefono supporta queste funzioni
+Verifica: il tuo telefono supporta queste funzioni
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Cerca "satellite" nelle impostazioni per vedere se ci sono opzioni relative alla comunicazione satellitare.

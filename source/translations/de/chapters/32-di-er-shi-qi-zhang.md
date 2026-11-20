@@ -16,7 +16,7 @@ Um ehrlich zu sein: Als ich dieses Kapitel schrieb, musste ich an meine Eltern d
 
 Bevor wir irgendeine Einstellung vornehmen, sollte ein Gedanke klar sein:<strong>Die Benutzeroberflaeche heutiger Smartphones wurde von Anfang an kaum fuer aeltere Nutzer gedacht</strong>. Winzige Pop-ups, Gestensteuerung mit praeziser Beruehrung, kaum unterscheidbare Icons – das ist nicht das Problem der Nutzer, sondern der Produkte. Wenn man aelteren Menschen beim Handy helfen will, heisst die erste Aufgabe nicht erklaeren, sondern die Umgebung fuer sie einrichten.<strong>die Umgebung einrichten</strong> Wenn das erledigt ist, verschwinden mehr als die Haelfte aller Probleme.
 
-Beim Helfen mit dem Handy gibt es drei eiserne Regeln: (1)  <strong>Nicht draengeln</strong>– Du nutzt seit zehn Jahren ein Smartphone, sie vielleicht erst seit drei Monaten. (2)  <strong>Mit Vergleichen arbeiten</strong>—, "Wi-Fi ist wie die Wasserleitung zu Hause: Erst wenn man den Hahn aufdreht, fließt Wasser." Solche Vergleiche sind zehntausendmal leichter zu verstehen als Fachbegriffe. ③ <strong>Aufschreiben</strong>– Mndl. Erklaerungen vergessen sie schnell. Schreib die wichtigsten Schritte auf einen Zettel und klebe ihn auf die Rueckseite der Handyhuellle – das wirkt besser als alles andere.
+Beim Helfen mit dem Handy gibt es drei eiserne Regeln: (1) <strong>Nicht draengeln</strong>– Du nutzt seit zehn Jahren ein Smartphone, sie vielleicht erst seit drei Monaten. (2) <strong>Mit Vergleichen arbeiten</strong>—, "Wi-Fi ist wie die Wasserleitung zu Hause: Erst wenn man den Hahn aufdreht, fließt Wasser." Solche Vergleiche sind zehntausendmal leichter zu verstehen als Fachbegriffe. ③ <strong>Aufschreiben</strong>– Mndl. Erklaerungen vergessen sie schnell. Schreib die wichtigsten Schritte auf einen Zettel und klebe ihn auf die Rueckseite der Handyhuellle – das wirkt besser als alles andere.
 
 1. Erster Schritt: Den »einfachen Modus« aktivieren – das Handy wird uebersichtlicher
 
@@ -32,22 +32,22 @@ Heutige Smartphones haben fast alle einen eingebauten »einfachen Modus« (manch
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marke</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Modusname</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Aktivierung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bedienungshilfen (kein separater einfacher Modus, aber Einzelanpassungen moeglich)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Anzeige &amp; Helligkeit &gt; Textgroesse, auf Maximum ziehen. Dann unter »Bedienungshilfen &gt; Anzeige &amp; Textgroesse« »Fetter Text« und »Schaltflaechenform« aktivieren</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Beim Kauf eines Ladegeräts bestätigen, dass es das Schnellladeprotokoll Ihres Smartphones unterstützt. Drittanbieter-Ladegeräte sind meist mit den unterstützten Protokollen gekennzeichnet.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; System &amp; Updates &gt; Einfacher Modus &gt; Aktivieren</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimal-Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Weitere Einstellungen &gt; Einfacher Modus &gt; Aktivieren</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Besondere Funktionen &gt; Einfacher Modus</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Desktop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Startbildschirm, Sperrbildschirm und Hintergrund &gt; Einfacher Desktop</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Anzeige &gt; Einfacher Modus</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marke</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Modusname</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Aktivierung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bedienungshilfen (kein separater einfacher Modus, aber Einzelanpassungen moeglich)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Anzeige &amp; Helligkeit &gt; Textgroesse, auf Maximum ziehen. Dann unter »Bedienungshilfen &gt; Anzeige &amp; Textgroesse« »Fetter Text« und »Schaltflaechenform« aktivieren</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Beim Kauf eines Ladegeräts bestätigen, dass es das Schnellladeprotokoll Ihres Smartphones unterstützt. Drittanbieter-Ladegeräte sind meist mit den unterstützten Protokollen gekennzeichnet.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; System &amp; Updates &gt; Einfacher Modus &gt; Aktivieren</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimal-Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Weitere Einstellungen &gt; Einfacher Modus &gt; Aktivieren</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Besondere Funktionen &gt; Einfacher Modus</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Desktop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Startbildschirm, Sperrbildschirm und Hintergrund &gt; Einfacher Desktop</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einfacher Modus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Einstellungen &gt; Anzeige &gt; Einfacher Modus</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Manche ältere Menschen möchten den einfachen Modus nicht nutzen, weil ihnen di
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praxis: Das Handy der Eltern "einrichten"
+Praxis: Das Handy der Eltern "einrichten"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Einfachen Modus aktivieren (nach der obigen Marken-Tabelle vorgehen).
@@ -96,7 +96,7 @@ III. Betrugsschutz —— dieses Kapitel bitte unbedingt zusammen mit den Eltern
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"Betrugsschutz-Merkregeln" für ältere Menschen (ausdrucken und neben das Telefon hängen)
+"Betrugsschutz-Merkregeln" für ältere Menschen (ausdrucken und neben das Telefon hängen)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Unbekannter Anruf fordert Überweisung → Auflegen!</strong>
@@ -151,7 +151,7 @@ VIII. Gesundheitsbezogene Funktionen —— das Handy ist mehr als ein Kommunika
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Kapitelzusammenfassung
+Kapitelzusammenfassung
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Zuerst den einfachen Modus aktivieren oder Schrift/Symbole manuell vergrößern – wenn die Umgebung stimmt, ist das meiste Problem gelöst

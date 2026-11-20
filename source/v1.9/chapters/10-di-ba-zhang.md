@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>录音使用红线
+录音使用红线
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 不得将录音用于敲诈、传播或公开侮辱他人。
@@ -91,17 +91,17 @@ kind: chapter
 - <strong>如何开启</strong>：安卓进入电话App > 设置 > 骚扰拦截；iOS进入设置 > 电话 > 来电阻止与身份识别。<strong>各品牌详细开关路径与推荐开启项，见第十三章第六节「实用系统工具」中的品牌对照表。</strong>。
 - <strong>主流标记平台</strong>：国内号码标记主要由三家数据服务商提供，腾讯手机管家、360手机卫士、电话邦。运营商（移动/联通/电信）的"机主姓名"显示、"骚扰拦截"功能也常调用这些数据。手机厂商（华为、小米、OPPO、vivo）的标记库多与上述服务商合作。
 - <strong>被误标记怎么办</strong>：如果你正常工作号码被错误标记为"外卖""快递""骚扰电话"，可通过以下渠道申诉：
-  - 电话邦：登录 dianhua.cn 的号码申诉页提交身份证明。
-  - 360：通过360手机卫士App内"号码申诉"功能提交。
-  - 腾讯：通过"腾讯手机管家"小程序"号码申诉"页面提交。
-  - 三大运营商：中国移动用户可发送短信"KTFSR"到10086开通防骚扰功能；电信用户关注"天翼防骚扰"公众号；联通用户在"联通手机管家"中设置。
+ - 电话邦：登录 dianhua.cn 的号码申诉页提交身份证明。
+ - 360：通过360手机卫士App内"号码申诉"功能提交。
+ - 腾讯：通过"腾讯手机管家"小程序"号码申诉"页面提交。
+ - 三大运营商：中国移动用户可发送短信"KTFSR"到10086开通防骚扰功能；电信用户关注"天翼防骚扰"公众号；联通用户在"联通手机管家"中设置。
 - <strong>防骚扰进阶</strong>：开启运营商的"高频呼叫拦截"（如移动的高频呼叫限制），可自动拦截AI语音外呼。
 - <strong>手机自带拦截常见能力</strong>：
-  - <strong>来电识别 / 智能拦截</strong>：按号码库自动标记并拦截骚扰、诈骗、广告推销。
-  - <strong>黑名单 / 白名单</strong>：手动拉黑已知骚扰号；把通讯录、快递外卖号加入白名单，避免误杀。
-  - <strong>短信关键词过滤</strong>：包含"中奖""贷款""点击链接"等关键词的短信自动归入拦截箱。
-  - <strong>iOS 静音未知来电</strong>：不在通讯录中的来电只静音进语音信箱，不打断你；适合骚扰电话多的用户，但要留意漏接陌生重要电话。
-  - <strong>勿扰模式联动</strong>：夜间或开会时只允许通讯录来电，配合定时开关，睡眠质量立刻改善。
+ - <strong>来电识别 / 智能拦截</strong>：按号码库自动标记并拦截骚扰、诈骗、广告推销。
+ - <strong>黑名单 / 白名单</strong>：手动拉黑已知骚扰号；把通讯录、快递外卖号加入白名单，避免误杀。
+ - <strong>短信关键词过滤</strong>：包含"中奖""贷款""点击链接"等关键词的短信自动归入拦截箱。
+ - <strong>iOS 静音未知来电</strong>：不在通讯录中的来电只静音进语音信箱，不打断你；适合骚扰电话多的用户，但要留意漏接陌生重要电话。
+ - <strong>勿扰模式联动</strong>：夜间或开会时只允许通讯录来电，配合定时开关，睡眠质量立刻改善。
 - <strong>实用软件怎么配合</strong>：优先用系统自带拦截，再叠加国家反诈中心与运营商防骚扰；清理类可选清浊等轻量工具，但同一类安全/清理软件装一套即可，详见第十三章。
 
 ##### 一个真实场景：水果店老板的号码被标了
@@ -141,7 +141,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识
+小知识
 
 {class="mt-1"}
 如果你的手机在通话时上网速度突然变慢或断网，多半是VoLTE/VoNR未开启，回落到了2G/3G网络。开启后即可实现"边打电话边刷视频"。
@@ -253,7 +253,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>验证码安全红线
+验证码安全红线
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>不要转发验证码</strong>：任何让你"读出验证码"或"转发短信"的人都可能是诈骗分子，包括自称"客服""快递员""公检法"的人。验证码 = 你的钱袋子。
@@ -413,7 +413,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给通讯录和微信做一次体检
+来动手：给通讯录和微信做一次体检
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 导出一份 .vcf 通讯录备份存到云盘，或确认云同步已经开启。
@@ -471,7 +471,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 通信安全的核心不是装多少拦截软件，是养成「从官方入口自己查一遍」的习惯。
@@ -506,14 +506,14 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">工具</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最适合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设备要求</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要留意的点</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">亲友日常、临时沟通</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人人都有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">群视频上限15人；弱网画质下降明显</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FaceTime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果家人之间、画质优先</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主持人为苹果设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">链接邀请安卓/Web有限制</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">腾讯会议</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国内正式会议、内训</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装App即可，微信扫码入会</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人数时长与权益有关，以官方说明为准</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Zoom</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨境会议、国际化协作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装App即可</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络环境要提前测试</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公司指定工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">企业微信、钉钉、飞书会议等</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公司账号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跟公司流程走，别用私人工具开正式会</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">工具</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最适合</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">设备要求</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要留意的点</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">亲友日常、临时沟通</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人人都有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">群视频上限15人；弱网画质下降明显</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FaceTime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果家人之间、画质优先</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主持人为苹果设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">链接邀请安卓/Web有限制</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">腾讯会议</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国内正式会议、内训</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装App即可，微信扫码入会</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人数时长与权益有关，以官方说明为准</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Zoom</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨境会议、国际化协作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装App即可</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络环境要提前测试</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公司指定工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">企业微信、钉钉、飞书会议等</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公司账号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跟公司流程走，别用私人工具开正式会</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -537,7 +537,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 网络卡顿时，先关闭视频保留语音，比直接挂断更礼貌。重要会议前可用"腾讯会议"自带的"网络检测"功能提前测试带宽。
@@ -612,7 +612,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小提示
+小提示
 
 {class="mt-1"}
 企业邮箱通常需要管理员开通"客户端授权密码"或"IMAP/SMTP授权码"，不能直接用网页登录密码。登录失败时先到网页版邮箱设置中生成授权码再填入手机。
@@ -654,7 +654,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>实操：备份一次微信聊天记录到电脑
+实操：备份一次微信聊天记录到电脑
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 在电脑上启动备份：打开电脑版微信 > 左下角菜单 > [迁移与备份] > [备份与恢复]。
@@ -884,7 +884,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 工具替你挡掉八成骚扰，剩下两成，靠你不点那个链接、不念那串数字。
@@ -892,7 +892,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 通讯录先备份（.vcf 或云同步）、合并重复、补全备注；紧急联系人和医疗急救信息填一次，锁屏可看

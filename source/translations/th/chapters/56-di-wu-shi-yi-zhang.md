@@ -24,19 +24,19 @@ kind: chapter
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "สวัสดี $name!")     // บล็อก "ข้อความ" หนึ่งชิ้น
+ Text(text = "สวัสดี $name!") // บล็อก "ข้อความ" หนึ่งชิ้น
 }
 
 // ประกอบซ้อนกัน: ชิ้นใหญ่ครอบชิ้นเล็ก
 @Composable
 fun HomeScreen() {
-    Column {                          // เรียงตามแนวตั้ง
-        Greeting(name = "ซานผวน")
-        Greeting(name = "ลี่ซือ")
-        Button(onClick = { /* แตะแล้วทำอะไร */ }) {
-            Text("แตะฉัน")
-        }
-    }
+ Column { // เรียงตามแนวตั้ง
+ Greeting(name = "ซานผวน")
+ Greeting(name = "ลี่ซือ")
+ Button(onClick = { /* แตะแล้วทำอะไร */ }) {
+ Text("แตะฉัน")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ fun HomeScreen() {
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "นี่คือข้อความ")
-        Button(onClick = { println("ถูกแตะแล้ว") }) {
-            Text("ปุ่ม")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("พิมพ์อะไรก็ได้") }
-        )
-    }
+ Column {
+ Text(text = "นี่คือข้อความ")
+ Button(onClick = { println("ถูกแตะแล้ว") }) {
+ Text("ปุ่ม")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("พิมพ์อะไรก็ได้") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("บรรทัดแรก")
-    Row {
-        Text("ซ้าย")
-        Text("ขวา")
-    }
-    Box {
-        Text("ชั้นล่าง")
-        Text("ป้ายเล็กที่ซ้อนอยู่ด้านบน")
-    }
+ Text("บรรทัดแรก")
+ Row {
+ Text("ซ้าย")
+ Text("ขวา")
+ }
+ Box {
+ Text("ชั้นล่าง")
+ Text("ป้ายเล็กที่ซ้อนอยู่ด้านบน")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "ข้อความสวย ๆ",
-    modifier = Modifier
-        .padding(16.dp)          // เว้นรอบด้าน
-        .fillMaxWidth()          // กว้างเต็มแถว
-        .background(Color.Blue)  // สีพื้นหลัง
-        .clickable { /* แตะ */ }// แตะได้
+ text = "ข้อความสวย ๆ",
+ modifier = Modifier
+ .padding(16.dp) // เว้นรอบด้าน
+ .fillMaxWidth() // กว้างเต็มแถว
+ .background(Color.Blue) // สีพื้นหลัง
+ .clickable { /* แตะ */ }// แตะได้
 )
 // ลูกโซ่: เรียงต่อกันทีละตัว ลำดับมีผล (padding ก่อน แล้วพื้นหลัง พื้นหลังไม่รวมช่องว่าง)
 ```
@@ -150,15 +150,15 @@ padding(16.dp).background(Blue) กับ background(Blue).padding(16.dp) ผล
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf: จำค่าที่เปลี่ยนได้นี้ไว้
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf: จำค่าที่เปลี่ยนได้นี้ไว้
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "คุณแตะไป $count ครั้ง")
-        Button(onClick = { count++ }) {   // แก้สเตต
-            Text("แตะฉัน +1")                // หน้าจอเด้งเอง
-        }
-    }
+ Column {
+ Text(text = "คุณแตะไป $count ครั้ง")
+ Button(onClick = { count++ }) { // แก้สเตต
+ Text("แตะฉัน +1") // หน้าจอเด้งเอง
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> ผู้ใช้แตะ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> สเตตเปลี่ยน (count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> ผู้ใช้แตะ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> สเตตเปลี่ยน (count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose ตรวจจับการเปลี่ยนแปลง</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> วาด UI ใหม่อัตโนมัติ (recomposition)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose ตรวจจับการเปลี่ยนแปลง</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> วาด UI ใหม่อัตโนมัติ (recomposition)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ MyFirstAppTheme { ... } ในโปรเจกต์เทมเพลตน�
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // เปลี่ยนค่าแล้วเลื่อนไปค่าใหม่อย่างนุ่มนวลอัตโนมัติ
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // เปลี่ยนค่าแล้วเลื่อนไปค่าใหม่อย่างนุ่มนวลอัตโนมัติ
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

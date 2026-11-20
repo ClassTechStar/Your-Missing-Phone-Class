@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"מספיק"
+"מספיק"
 
 {class="mt-1"}
 לא דגל. 1500-2500. רפורביש.
@@ -60,27 +60,27 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פונקציה</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Screen Time</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Limits</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן, קטגוריה</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן, App</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Downtime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Content</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מערכת</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תלוי מותג</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מרחוק</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אישור App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אישור</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פונקציה</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Screen Time</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Limits</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן, קטגוריה</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן, App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Downtime</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כן</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Content</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מערכת</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תלוי מותג</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מרחוק</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אישור App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אישור</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>לא "פעם אחת"
+לא "פעם אחת"
 
 {class="mt-1"}
 ילדים עוקפים. תקשורת &gt; טכנולוגיה. חודשי.
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>לא "השאל ת"ז"
+לא "השאל ת"ז"
 
 {class="mt-1"}
 ילדים משתמשים בת"ז של הורים. שמור.
@@ -113,7 +113,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>"הסכם"
+"הסכם"
 
 {class="mt-1"}
 כתוב + חתום:
@@ -137,7 +137,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>הורים = חומת אש
+הורים = חומת אש
 
 {class="mt-1"}
 הורים → ילדים. שנה את עצמך.
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>צד שני
+צד שני
 
 {class="mt-1"}
 תינוק → נתונים. "שיתוף ילדים" = פרטיות.
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 3-6: לא; &lt;13: שעון/פונקציונלי

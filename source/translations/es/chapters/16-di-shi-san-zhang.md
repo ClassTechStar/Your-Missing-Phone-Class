@@ -204,41 +204,41 @@ El dominio es la «dirección» del sitio; saber leerlo te ayuda a juzgar su nat
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Navegador</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Punto fuerte</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Público</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Núcleo Chromium + Copilot con IA: resume páginas, traduce y conversa</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Oficinistas orientados a la eficiencia y usuarios intensivos de IA (recomendado como principal)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Muy integrado con el ecosistema Apple, eficiente en batería y con buena privacidad</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios de iPhone/Mac que cuidan la autonomía y la integración</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El más usado del mundo y con el ecosistema de extensiones más rico</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios avanzados que necesitan muchas extensiones o sincronización multi-dispositivo</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloquea anuncios y rastreadores desde el primer momento y va más rápido</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Quien prioriza la privacidad y quiere bloquear anuncios sin instalar extensiones</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Su buscador no guarda historial y se limpia todo con un clic</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios sensibles a la privacidad que no quieren seguimiento personalizado</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Navegador</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Punto fuerte</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Público</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Núcleo Chromium + Copilot con IA: resume páginas, traduce y conversa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Oficinistas orientados a la eficiencia y usuarios intensivos de IA (recomendado como principal)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Muy integrado con el ecosistema Apple, eficiente en batería y con buena privacidad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios de iPhone/Mac que cuidan la autonomía y la integración</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El más usado del mundo y con el ecosistema de extensiones más rico</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios avanzados que necesitan muchas extensiones o sincronización multi-dispositivo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloquea anuncios y rastreadores desde el primer momento y va más rápido</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Quien prioriza la privacidad y quiere bloquear anuncios sin instalar extensiones</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Su buscador no guarda historial y se limpia todo con un clic</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuarios sensibles a la privacidad que no quieren seguimiento personalizado</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -287,46 +287,46 @@ Rutas por marca. Los nombres pueden variar según la versión del sistema; busca
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Plataforma</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ruta de acceso</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Opciones recomendadas</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Ajustes] > [Teléfono] / [Mensajes]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Silenciar llamadas desconocidas; contactos bloqueados; «Filtrar remitentes desconocidos» en Mensajes</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Teléfono > Ajustes > Bloqueo de spam; o Centro de seguridad</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloqueo inteligente, colgar llamadas de un solo tono de desconocidos, filtro de palabras clave en SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfono > Bloqueo de spam; Gestor del teléfono > Bloqueo de spam</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Identificación de llamadas, lista negra, bloqueo inteligente de SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Teléfono > Bloqueo de spam; o Este dispositivo > Bloqueo de spam</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloqueo de llamadas, identificación de estafas, reglas de bloqueo de SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfono > Bloqueo de llamadas spam; i Manager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloqueo de spam, alertas de estafas, filtrado de mensajes</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfono > Ajustes > Bloquear números / Identificador de llamadas y spam</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloquear números desconocidos, identificación de spam (según la región)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Plataforma</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ruta de acceso</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Opciones recomendadas</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Ajustes] > [Teléfono] / [Mensajes]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Silenciar llamadas desconocidas; contactos bloqueados; «Filtrar remitentes desconocidos» en Mensajes</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Teléfono > Ajustes > Bloqueo de spam; o Centro de seguridad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloqueo inteligente, colgar llamadas de un solo tono de desconocidos, filtro de palabras clave en SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfono > Bloqueo de spam; Gestor del teléfono > Bloqueo de spam</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Identificación de llamadas, lista negra, bloqueo inteligente de SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Teléfono > Bloqueo de spam; o Este dispositivo > Bloqueo de spam</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloqueo de llamadas, identificación de estafas, reglas de bloqueo de SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfono > Bloqueo de llamadas spam; i Manager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloqueo de spam, alertas de estafas, filtrado de mensajes</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teléfono > Ajustes > Bloquear números / Identificador de llamadas y spam</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bloquear números desconocidos, identificación de spam (según la región)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -390,46 +390,46 @@ Las rutas pueden variar según la versión del sistema; busca en Ajustes «terre
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Plataforma</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ruta habitual</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Notas</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gestor del teléfono / Centro de seguridad > Alerta sísmica; o busca «terremoto» en Ajustes</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Algunas versiones incluyen el servicio; requiere conexión y ubicación</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Seguridad > Notificaciones de emergencia / Alerta sísmica</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Puede llamarse «Notificaciones de emergencia» e incluir sismos</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Seguridad (SOS / contactos de emergencia) > Alerta sísmica</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Según el modelo y la cobertura del servicio en la región</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App de clima o Ajustes > Seguridad/Más > Alerta sísmica</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Confirma el menú en tu versión del sistema</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Suele no haber un interruptor completo integrado; instala una app de alerta sísmica de confianza y permite notificaciones</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La app necesita ejecutarse en segundo plano y permiso de ubicación; el modo No molestar no debe silenciarla</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung y otros</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Seguridad y emergencias / Alertas inalámbricas de emergencia</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La cobertura de las «alertas de emergencia» varía por región y operador</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Plataforma</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ruta habitual</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Notas</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gestor del teléfono / Centro de seguridad > Alerta sísmica; o busca «terremoto» en Ajustes</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Algunas versiones incluyen el servicio; requiere conexión y ubicación</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Seguridad > Notificaciones de emergencia / Alerta sísmica</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Puede llamarse «Notificaciones de emergencia» e incluir sismos</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Seguridad (SOS / contactos de emergencia) > Alerta sísmica</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Según el modelo y la cobertura del servicio en la región</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App de clima o Ajustes > Seguridad/Más > Alerta sísmica</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Confirma el menú en tu versión del sistema</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Suele no haber un interruptor completo integrado; instala una app de alerta sísmica de confianza y permite notificaciones</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La app necesita ejecutarse en segundo plano y permiso de ubicación; el modo No molestar no debe silenciarla</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung y otros</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ajustes > Seguridad y emergencias / Alertas inalámbricas de emergencia</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">La cobertura de las «alertas de emergencia» varía por región y operador</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

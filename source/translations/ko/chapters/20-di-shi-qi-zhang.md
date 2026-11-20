@@ -77,7 +77,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB 초광대역 기술——Bluetooth보다 더 정밀한 "공간 감각"
+UWB 초광대역 기술——Bluetooth보다 더 정밀한 "공간 감각"
 
 {class="mt-1"}
 Bluetooth 외에도, 신형 스마트폰에는 UWB(Ultra-Wideband, 초광대역) 칩이 숨어 있습니다. 그 능력은 <strong>정밀 거리 측정과 공간 위치 파악</strong>——다른 기기가 얼마나 떨어져 있는지, 어느 방향에 있는지 계산, 정밀도는 센티미터급.
@@ -92,7 +92,7 @@ Bluetooth는 "근처에 있다"만 알려주지만, UWB는 "왼쪽 앞 1.2미터
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio와 Auracast——Bluetooth 오디오의 신세대 표준
+LE Audio와 Auracast——Bluetooth 오디오의 신세대 표준
 
 {class="mt-1"}
 20년 쓴 클래식 Bluetooth 오디오(A2DP)가 <strong>LE Audio</strong>(저전력 오디오)로 교체되고 있습니다, 이는 Bluetooth 5.2 이후의 신세대 오디오 표준:
@@ -123,7 +123,7 @@ Bluetooth는 "근처에 있다"만 알려주지만, UWB는 "왼쪽 앞 1.2미터
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>체험: 스마트폰 화면을 TV로 미러링하고, 스마트 씬 설정하기
+체험: 스마트폰 화면을 TV로 미러링하고, 스마트 씬 설정하기
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 스마트폰과 TV가 같은 Wi-Fi에 연결되었는지 확인.
@@ -135,7 +135,7 @@ Bluetooth는 "근처에 있다"만 알려주지만, UWB는 "왼쪽 앞 1.2미터
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>사례 1: 배터리 타임 최적화 실전
+사례 1: 배터리 타임 최적화 실전
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>시나리오</strong>: 사용자 샤오미 14 배터리 타임 저조, 반나절이면 방전.

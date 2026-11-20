@@ -24,51 +24,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แบรนด์</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเข้าใช้งานการลบข้อมูล</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความแตกต่างและข้อควรระวังที่สำคัญ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปเปิล</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ระบบและการอัปเดต &gt; รีเซ็ต &gt; รีเซ็ตเป็นค่าเริ่มต้นโรงงาน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องออกจากระบบบัญชี Huawei และปิด "ค้นหาโทรศัพท์ของฉัน" ก่อน มิฉะนั้นจะเปิดใช้งานล็อก ในโหมด Pure อาจต้องมีการยืนยันรหัสผ่าน</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; อุปกรณ์ของฉัน &gt; รีเซ็ตเป็นค่าเริ่มต้นโรงงาน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ด้านล่างมีตัวเลือก "ฟอร์แมตการ์ด SD เสมือนจริง" และ "ล้างเนื้อหาและการตั้งค่าทั้งหมด" ต้องติ๊กเลือกทั้งสองอย่าง ออกจากระบบบัญชี Xiaomi ก่อนปิด "ค้นหาอุปกรณ์"</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การตั้งค่าอื่นๆ &gt; คืนค่าโทรศัพท์ &gt; ล้างข้อมูลทั้งหมดอย่างละเอียด</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS มีโหมด "ล้างข้อมูลอย่างละเอียด" ที่จะเขียนทับพื้นที่จัดเก็บข้อมูลหลายครั้ง ต้องป้อนรหัสล็อกหน้าจอเพื่อยืนยัน</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การจัดการระบบ &gt; สำรองข้อมูลและรีเซ็ต &gt; ล้างข้อมูลทั้งหมด</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องติ๊กเลือก "ฟอร์แมตที่เก็บข้อมูลโทรศัพท์" ถึงจะล้างข้อมูลในส่วนของ SD card ต้องออกจากระบบบัญชี vivo และปิด "ค้นหาโทรศัพท์"</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">หมดประกัน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การจัดการทั่วไป &gt; รีเซ็ต &gt; รีเซ็ตเป็นค่าเริ่มต้นโรงงาน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องลบบัญชี Samsung และปิด "ค้นหาโทรศัพท์ของฉัน" ก่อน บางรุ่นมีตัวเลือก "เขียนทับอัตโนมัติ" ขอแนะนำให้เปิดใช้งาน</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สมุดรายชื่อ (ข้ามง่ายแต่สำคัญมาก)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ทั่วไป &gt; ถ่ายโอนหรือคืนค่า iPhone &gt; ลบเนื้อหาและการตั้งค่าทั้งหมด</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องออกจากระบบ Apple ID ก่อน มิฉะนั้นผู้ใช้คนต่อไปจะถูก iCloud Activation Lock กีดกัน ใน iOS 15+ รองรับ "เก็บข้อมูล iCloud ไว้เมื่อออกจากระบบ" เพื่อใช้ตรวจสอบในภายหลัง</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">แบรนด์</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเข้าใช้งานการลบข้อมูล</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความแตกต่างและข้อควรระวังที่สำคัญ</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แอปเปิล</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ระบบและการอัปเดต &gt; รีเซ็ต &gt; รีเซ็ตเป็นค่าเริ่มต้นโรงงาน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องออกจากระบบบัญชี Huawei และปิด "ค้นหาโทรศัพท์ของฉัน" ก่อน มิฉะนั้นจะเปิดใช้งานล็อก ในโหมด Pure อาจต้องมีการยืนยันรหัสผ่าน</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; อุปกรณ์ของฉัน &gt; รีเซ็ตเป็นค่าเริ่มต้นโรงงาน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ด้านล่างมีตัวเลือก "ฟอร์แมตการ์ด SD เสมือนจริง" และ "ล้างเนื้อหาและการตั้งค่าทั้งหมด" ต้องติ๊กเลือกทั้งสองอย่าง ออกจากระบบบัญชี Xiaomi ก่อนปิด "ค้นหาอุปกรณ์"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การตั้งค่าอื่นๆ &gt; คืนค่าโทรศัพท์ &gt; ล้างข้อมูลทั้งหมดอย่างละเอียด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS มีโหมด "ล้างข้อมูลอย่างละเอียด" ที่จะเขียนทับพื้นที่จัดเก็บข้อมูลหลายครั้ง ต้องป้อนรหัสล็อกหน้าจอเพื่อยืนยัน</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การจัดการระบบ &gt; สำรองข้อมูลและรีเซ็ต &gt; ล้างข้อมูลทั้งหมด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องติ๊กเลือก "ฟอร์แมตที่เก็บข้อมูลโทรศัพท์" ถึงจะล้างข้อมูลในส่วนของ SD card ต้องออกจากระบบบัญชี vivo และปิด "ค้นหาโทรศัพท์"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">หมดประกัน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; การจัดการทั่วไป &gt; รีเซ็ต &gt; รีเซ็ตเป็นค่าเริ่มต้นโรงงาน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องลบบัญชี Samsung และปิด "ค้นหาโทรศัพท์ของฉัน" ก่อน บางรุ่นมีตัวเลือก "เขียนทับอัตโนมัติ" ขอแนะนำให้เปิดใช้งาน</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สมุดรายชื่อ (ข้ามง่ายแต่สำคัญมาก)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ตั้งค่า &gt; ทั่วไป &gt; ถ่ายโอนหรือคืนค่า iPhone &gt; ลบเนื้อหาและการตั้งค่าทั้งหมด</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องออกจากระบบ Apple ID ก่อน มิฉะนั้นผู้ใช้คนต่อไปจะถูก iCloud Activation Lock กีดกัน ใน iOS 15+ รองรับ "เก็บข้อมูล iCloud ไว้เมื่อออกจากระบบ" เพื่อใช้ตรวจสอบในภายหลัง</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>3 สิ่งที่มักถูกมองข้ามมากที่สุด
+3 สิ่งที่มักถูกมองข้ามมากที่สุด
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>ไม่ออกจากระบบบัญชี</strong>:หลังจากขายโทรศัพท์ต่อให้ผู้อื่นแล้วถูกล็อกระยะไกล ตัวเองก็ไม่สามารถออกจากระบบได้ สุดท้ายต้องนำบัตรประชาชนไปที่ศูนย์บริการอย่างเป็นทางการเพื่อขอปลดล็อก
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>ฐานทางกฎหมาย: มาตรา 49 แห่งพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล
+ฐานทางกฎหมาย: มาตรา 49 แห่งพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล
 
 {class="mt-1"}
 พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคลแห่งสาธารณรัฐประชาชนจีน ซึ่งมีผลบังคับใช้ในปี 2021 ระบุชัดเจนในมาตรา 49 ว่า:<strong>เมื่อบุคคลธรรมดาเสียชีวิต ญาติสนิทของผู้เสียชีวิตอาจใช้สิทธิตามที่กำหนดไว้ในบทนี้ เช่น สิทธิในการตรวจสอบ ทำสำเนา แก้ไข และลบข้อมูลส่วนบุคคลที่เกี่ยวข้องของผู้เสียชีวิต เพื่อประโยชน์ที่ชอบด้วยกฎหมายและสมเหตุสมผลของตนเอง เว้นแต่ผู้เสียชีวิตได้จัดการไว้เป็นอย่างอื่นก่อนเสียชีวิต</strong>
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>สิ่งที่ห้ามทำเด็ดขาด
+สิ่งที่ห้ามทำเด็ดขาด
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>อย่าส่งรหัสผ่านบัญชีของผู้เสียชีวิตให้ครอบครัว "นำไปใช้ต่อ"</strong>— การกระทำนี้ละเมิดข้อตกลงของแพลตฟอร์ม หากเงินถูกอายัดหรือทำให้ระบบรักษาความปลอดภัยทำงาน การนำเอกสารมาแสดงจะยากยิ่งขึ้น
@@ -153,7 +153,7 @@ Google มีบริการ "ตัวจัดการบัญชีท�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>ข้อควรจำสำคัญ
+ข้อควรจำสำคัญ
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - กฎระเบียบของแต่ละแพลตฟอร์มอาจมีการอัปเดต ก่อนดำเนินการควรตรวจสอบแนวทางล่าสุดจากฝ่ายบริการลูกค้าทางการก่อน
@@ -174,7 +174,7 @@ Google มีบริการ "ตัวจัดการบัญชีท�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>มูลค่าความสูญเสียที่แท้จริงจากการ"หายไป"ของสกุลเงินดิจิทัล
+มูลค่าความสูญเสียที่แท้จริงจากการ"หายไป"ของสกุลเงินดิจิทัล
 
 {class="mt-1"}
 ตามรายงานของ Chainalysis ทั่วโลกมี<strong>Bitcoin มากกว่า 3 ล้านเหรียญ</strong>ที่สูญหายไปตลอดกาลเนื่องจากกุญแจส่วนตัวหาย ซึ่งเทียบเท่ากับหนึ่งในหกของปริมาณทั้งหมดที่มีอยู่ หากคุณถือครองสินทรัพย์ดิจิทัล โปรดตรวจสอบให้แน่ใจว่ามีอย่างน้อยหนึ่งคนที่คุณไว้วางใจอย่างยิ่งรู้<strong>เส้นทางการกู้คืน</strong>—,มิฉะนั้นความมั่งคั่งเหล่านี้จะหลับใหลอยู่บนบล็อกเชนตลอดไป
@@ -227,7 +227,7 @@ Google มีบริการ "ตัวจัดการบัญชีท�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ข้อควรทราบทางกฎหมายเกี่ยวกับ "รหัสผ่าน"
+ข้อควรทราบทางกฎหมายเกี่ยวกับ "รหัสผ่าน"
 
 {class="mt-1"}
 การเขียนรหัสผ่านลงในพินัยกรรมโดยตรงมีความเสี่ยงที่จะรั่วไหล และเมื่อพินัยกรรมเปิดเผย ผู้สืบทอดทุกคนจะสามารถเห็นได้<strong>วิธีที่ปลอดภัยกว่าคือ: ในพินัยกรรมระบุเพียง "รายการบัญชี + ความประสงค์ในการจัดการ + สถานที่เก็บรหัสผ่าน" ส่วนรหัสผ่านจริงให้ส่งผ่านรหัสผ่านหลักของโปรแกรมจัดการรหัสผ่านไปยังผู้ปฏิบัติงานที่เชื่อถือได้แยกต่างหาก</strong> วิธีนี้ทั้งเป็นไปตามข้อกำหนดทางกฎหมัย และยังช่วยลดความเสี่ยงในการรั่วไหลของรหัสผ่าน
@@ -239,41 +239,41 @@ Google มีบริการ "ตัวจัดการบัญชีท�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ช่องทาง</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ราคารับซื้อ</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความปลอดภัยของข้อมูล</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คุณสมบัติ</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรม Trade-in ของแบรนด์ (Huawei, Apple, Xiaomi ฯลฯ)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระดับกลาง มักมีคูปองส่วนลดเพิ่มเติม</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สูงสุด มีกระบวนการมาตรฐานจากแบรนด์</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คุ้มค่าที่สุดเมื่อตั้งใจจะเปลี่ยนเป็นเครื่องใหม่แบรนด์เดิม</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แพลตฟอร์มรับซื้อของบุคคลที่สาม (Aihuishou, Zhuanzhuan, Huisoubao ฯลฯ)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างสูง สามารถเปรียบเทียบราคาได้</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างสูง มีรายงานการลบข้อมูล</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องการเปลี่ยนเป็นเงินสดโดยตรง ไม่ผูกกับแบรนด์</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บริจาคเพื่อการกุศล (เช่น โรงเรียนชนบท, องค์กรการกุศล)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไม่มีผลตอบแทนทางการเงิน</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องลบข้อมูลให้สมบูรณ์ด้วยตนเอง</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์ยังใช้งานได้และต้องการทำบุญ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">นำไปใช้ต่อ (เก็บไว้ดัดแปลงเอง)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ประหยัดเงินค่าอุปกรณ์ใหม่</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เจ้าของเครื่องเดิมใช้งานต่อเอง ไม่มีความเสี่ยง</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์ยังมีประสิทธิภาพพอใช้ได้ และที่บ้านมีความต้องการดัดแปลง</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ช่องทาง</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ราคารับซื้อ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความปลอดภัยของข้อมูล</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">คุณสมบัติ</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรแกรม Trade-in ของแบรนด์ (Huawei, Apple, Xiaomi ฯลฯ)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระดับกลาง มักมีคูปองส่วนลดเพิ่มเติม</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">สูงสุด มีกระบวนการมาตรฐานจากแบรนด์</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">คุ้มค่าที่สุดเมื่อตั้งใจจะเปลี่ยนเป็นเครื่องใหม่แบรนด์เดิม</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แพลตฟอร์มรับซื้อของบุคคลที่สาม (Aihuishou, Zhuanzhuan, Huisoubao ฯลฯ)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างสูง สามารถเปรียบเทียบราคาได้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ค่อนข้างสูง มีรายงานการลบข้อมูล</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องการเปลี่ยนเป็นเงินสดโดยตรง ไม่ผูกกับแบรนด์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">บริจาคเพื่อการกุศล (เช่น โรงเรียนชนบท, องค์กรการกุศล)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ไม่มีผลตอบแทนทางการเงิน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องลบข้อมูลให้สมบูรณ์ด้วยตนเอง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์ยังใช้งานได้และต้องการทำบุญ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">นำไปใช้ต่อ (เก็บไว้ดัดแปลงเอง)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ประหยัดเงินค่าอุปกรณ์ใหม่</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เจ้าของเครื่องเดิมใช้งานต่อเอง ไม่มีความเสี่ยง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์ยังมีประสิทธิภาพพอใช้ได้ และที่บ้านมีความต้องการดัดแปลง</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>รีไซเคิลกับทางการ / แลกเครื่องใหม่</strong>:เป็นวิธีที่แนะนำมากที่สุด กระบวนการเป็นระบบ ข้อมูลปลอดภัยและรับประกันได้ เว็บไซต์ของแบรนด์ต่างๆ เช่น Apple, Huawei, Xiaomi ล้วนมีช่องทาง "Trade-in" เมื่อประเมินราคาแล้วสามารถนำมาหักลดราคาเครื่องใหม่ได้
@@ -283,7 +283,7 @@ Google มีบริการ "ตัวจัดการบัญชีท�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>ความจริงเกี่ยวกับขยะอิเล็กทรอนิกส์
+ความจริงเกี่ยวกับขยะอิเล็กทรอนิกส์
 
 {class="mt-1"}
 แผงวงจรของสมาร์ทโฟนเครื่องเดียวประกอบด้วย<strong>ทองคำ, เงิน, แพลเลเดียม, ทองแดง</strong>และโลหะมีค่าอื่นๆ ปริมาณทองคำต่อตันของแผงวงจรเก่านั้นมีมากกว่าแร่ทองคำหลายสิบเท่า แต่หากทิ้งโดยไม่เลือกที่ ตะกั่ว ปรอท และแคดเมียมที่อยู่ในนั้นจะซึมลงสู่ดินและน้ำใต้ดิน สร้างมลพิษที่อยู่ยาวนานหลายสิบปี<strong>การรีไซเคิลที่ถูกวิธี ช่วยปกป้องสิ่งแวดล้อมและทำให้โลหะหายากหมุนเวียนกลับมาใช้ใหม่ได้</strong>
@@ -291,7 +291,7 @@ Google มีบริการ "ตัวจัดการบัญชีท�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: จัด "งานศพตามมาตรฐาน" ให้มือถือเก่าของคุณ
+ลงมือทำ: จัด "งานศพตามมาตรฐาน" ให้มือถือเก่าของคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. สำรองข้อมูลครั้งสุดท้ายอย่างครบถ้วน: อัปโหลดรูปภาพไปยังคลาวด์, คัดลอกไฟล์สำคัญไปยังคอมพิวเตอร์, และส่งออกประวัติแชทเก็บเป็นไฟล์
@@ -305,7 +305,7 @@ Google มีบริการ "ตัวจัดการบัญชีท�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>เลือกวันหยุดสุดสัปดาห์ที่ว่างสักวัน แล้วทำตามลำดับด้านล่าง:
+เลือกวันหยุดสุดสัปดาห์ที่ว่างสักวัน แล้วทำตามลำดับด้านล่าง:
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. กำหนด "ผู้ติดต่อมรดก" ของ Apple หรือตั้งค่า "ตัวจัดการบัญชีที่ไม่ใช้งาน" ของ Google สำหรับโทรศัพท์หลักเครื่องปัจจุบันของคุณ

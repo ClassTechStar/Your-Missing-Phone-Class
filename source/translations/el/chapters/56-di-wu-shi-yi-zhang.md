@@ -24,19 +24,19 @@ kind: chapter
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Γεια σου, $name!")     // Ενα "κομμάτι κειμένου"
+ Text(text = "Γεια σου, $name!") // Ενα "κομμάτι κειμένου"
 }
 
 // Φωλιάσμα: μεγάλα κομμάτια περιέχουν μικρά
 @Composable
 fun HomeScreen() {
-    Column {                          // Κατακόρυφη διάταξη
-        Greeting(name = "Γιώργος")
-        Greeting(name = "Νίκος")
-        Button(onClick = { /* τι γίνεται στο πάτημα */ }) {
-            Text("Πάτα με")
-        }
-    }
+ Column { // Κατακόρυφη διάταξη
+ Greeting(name = "Γιώργος")
+ Greeting(name = "Νίκος")
+ Button(onClick = { /* τι γίνεται στο πάτημα */ }) {
+ Text("Πάτα με")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ fun HomeScreen() {
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "Κείμενο εδώ")
-        Button(onClick = { println("Πατήθηκε") }) {
-            Text("Κουμπί")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("Γράψε κάτι") }
-        )
-    }
+ Column {
+ Text(text = "Κείμενο εδώ")
+ Button(onClick = { println("Πατήθηκε") }) {
+ Text("Κουμπί")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("Γράψε κάτι") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("Πρώτη γραμμή")
-    Row {
-        Text("Αριστερά")
-        Text("Δεξιά")
-    }
-    Box {
-        Text("Κάτω στρώμα")
-        Text("Ετικέτα σε επικάλυψη πάνω")
-    }
+ Text("Πρώτη γραμμή")
+ Row {
+ Text("Αριστερά")
+ Text("Δεξιά")
+ }
+ Box {
+ Text("Κάτω στρώμα")
+ Text("Ετικέτα σε επικάλυψη πάνω")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "Όμορφο κείμενο",
-    modifier = Modifier
-        .padding(16.dp)          // περιθώριο γύρω-γύρω
-        .fillMaxWidth()          // γεμίζει το πλάτος
-        .background(Color.Blue)  // χρώμα φόντου
-        .clickable { /* πάτημα */ }// με κλικ
+ text = "Όμορφο κείμενο",
+ modifier = Modifier
+ .padding(16.dp) // περιθώριο γύρω-γύρω
+ .fillMaxWidth() // γεμίζει το πλάτος
+ .background(Color.Blue) // χρώμα φόντου
+ .clickable { /* πάτημα */ }// με κλικ
 )
 // Αλυσιδωτά: το ένα μετά το άλλο, η σειρά μετράει (πρώτα padding μετά φόντο, το φόντο δεν περιλαμβάνει τα περιθώρια)
 ```
@@ -150,15 +150,15 @@ Text(
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf: θυμάται αυτή την τιμή που αλλάζει
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf: θυμάται αυτή την τιμή που αλλάζει
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "Έχεις πατήσει $count φορές")
-        Button(onClick = { count++ }) {   // αλλαγή κατάστασης
-            Text("Πάτα με +1")                // η οθόνη ανανεώνεται μόνη της
-        }
-    }
+ Column {
+ Text(text = "Έχεις πατήσει $count φορές")
+ Button(onClick = { count++ }) { // αλλαγή κατάστασης
+ Text("Πάτα με +1") // η οθόνη ανανεώνεται μόνη της
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> Ο χρήστης πατάει</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> Η κατάσταση αλλάζει (count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Ο χρήστης πατάει</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Η κατάσταση αλλάζει (count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Το Compose αντιλαμβάνεται την αλλαγή</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> Αυτόματο ξαναζωγράφισμα οθόνης (recomposition)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Το Compose αντιλαμβάνεται την αλλαγή</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Αυτόματο ξαναζωγράφισμα οθόνης (recomposition)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ fun Counter() {
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // Όταν αλλάζει η τιμή, ομαλή μετάβαση στον στόχο
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // Όταν αλλάζει η τιμή, ομαλή μετάβαση στον στόχο
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

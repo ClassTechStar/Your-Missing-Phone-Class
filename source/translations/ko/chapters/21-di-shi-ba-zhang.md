@@ -103,7 +103,7 @@ Wi-Fi 연결, 잠금 화면 상태일 때 자동 백업. 무료 5GB는 대부분
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>위챗 채팅 기록 특별 주의
+위챗 채팅 기록 특별 주의
 
 {class="mt-1"}
 위챗 채팅 기록은 어떤 스마트폰 기기 변경 도구로도 이전할 수 없습니다! 전체 백업 범위에 포함되지 않습니다. 반드시 위챗 자체의 "채팅 기록 이전" 기능 또는 컴퓨터 버전 위챗 백업 사용.
@@ -112,7 +112,7 @@ Wi-Fi 연결, 잠금 화면 상태일 때 자동 백업. 무료 5GB는 대부분
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>연습: 완전한 백업 훈련 한 번
+연습: 완전한 백업 훈련 한 번
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. iCloud 클라우드 백업 또는 브랜드 클라우드 백업 활성화 여부 확인, 마지막 백업 시간 확인.

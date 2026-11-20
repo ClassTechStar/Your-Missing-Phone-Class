@@ -53,7 +53,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>20-20-20法则
+20-20-20法则
 
 {class="mt-1"}
 每看屏幕<strong>20分钟</strong>，把视线移到<strong>20英尺（约6米）</strong>以外的地方，保持<strong>20秒</strong>。这个简单的动作能有效缓解睫状肌疲劳。
@@ -90,7 +90,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：一周数字健康挑战
+动手：一周数字健康挑战
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 今天：打开屏幕使用时间/数字健康，查看你上周的使用数据。
@@ -104,7 +104,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 先看屏幕使用时间数据，认清现状是改变的第一步

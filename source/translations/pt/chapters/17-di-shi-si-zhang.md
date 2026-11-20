@@ -46,7 +46,7 @@ Ponto-chave: <strong>a senha mestra nunca sai do seu dispositivo</strong>; ela t
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Por que "conhecimento zero" significa que nem o provedor consegue ver suas senhas?
+Por que "conhecimento zero" significa que nem o provedor consegue ver suas senhas?
 
 {class="mt-1"}
 Porque a chave de descriptografia é derivada da sua senha mestra, e a senha mestra só existe na sua mente e só é usada no seu dispositivo local. No servidor do provedor, não há nem a senha mestra, nem a chave de descriptografia — apenas texto cifrado. É por isso que provedores sérios como Bitwarden e 1Password declaram explicitamente que "nós também não podemos ver suas senhas". Não é que eles não queiram ver, é que tecnicamente é impossível.
@@ -71,7 +71,7 @@ Em agosto de 2022, o veterano gerenciador de senhas LastPass anunciou que seu am
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>O que Aprendemos com o Caso LastPass
+O que Aprendemos com o Caso LastPass
 
 {class="mt-1"}
 Primeiro, a senha mestra deve ser longa e única (recomenda-se 16 caracteres ou mais, incluindo maiúsculas, minúsculas, números e símbolos). Segundo, prefira provedores que suportem Argon2id e com alto número de iterações. Terceiro, para contas de alto valor (banco, e-mail), ative obrigatoriamente uma segunda verificação independente; não dependa apenas do gerenciador de senhas.
@@ -118,7 +118,7 @@ Se uma senha aparecer na base de dados de vazamentos, <strong>não importa o qu�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Princípio da Consulta k-Anonymity
+Princípio da Consulta k-Anonymity
 
 {class="mt-1"}
 Preocupado em digitar sua senha no HaveIBeenPwned e ela vazar de novo? Não precisa. As consultas modernas usam o protocolo "k-anonimato": o navegador envia apenas os 5 primeiros caracteres do hash da senha para o servidor; o servidor retorna todos os hashes que começam com esses 5 caracteres; a comparação é feita localmente. Ou seja, o servidor nunca vê o hash completo da sua senha. É assim que funciona a "detecção de senhas vazadas" do 1Password e do Bitwarden.
@@ -133,7 +133,7 @@ Preocupado em digitar sua senha no HaveIBeenPwned e ela vazar de novo? Não prec
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Verifique Agora: Suas Senhas Estão Seguras?
+Verifique Agora: Suas Senhas Estão Seguras?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abra o haveibeenpwned.com, digite seu e-mail mais usado e veja em quais incidentes de vazamento ele aparece.
@@ -159,36 +159,36 @@ O Passkey é baseado no padrão FIDO2 / WebAuthn, substituindo senhas por um <st
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensão</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Senha tradicional</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Anti-phishing</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ruim, sites de phishing podem roubar a senha</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturalmente anti-phishing, a chave privada só assina para o domínio real</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Impacto de vazamento no servidor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O hash da senha pode ser quebrado</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O servidor só armazena a chave pública, vazamento sem impacto</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Conveniência</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Precisa memorizar/digitar/gerenciar</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Login em um segundo com Face ID/impressão digital</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ataque de repetição</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pode ser interceptado e repetido por atacante intermediário</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cada assinatura é única, não pode ser repetida</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensão</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Senha tradicional</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Anti-phishing</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ruim, sites de phishing podem roubar a senha</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturalmente anti-phishing, a chave privada só assina para o domínio real</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Impacto de vazamento no servidor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O hash da senha pode ser quebrado</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">O servidor só armazena a chave pública, vazamento sem impacto</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Conveniência</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Precisa memorizar/digitar/gerenciar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Login em um segundo com Face ID/impressão digital</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ataque de repetição</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pode ser interceptado e repetido por atacante intermediário</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cada assinatura é única, não pode ser repetida</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Suporte nas plataformas
@@ -200,7 +200,7 @@ O Passkey é baseado no padrão FIDO2 / WebAuthn, substituindo senhas por um <st
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>A sincronização entre dispositivos é o avanço chave
+A sincronização entre dispositivos é o avanço chave
 
 {class="mt-1"}
 O maior ponto fraco inicial das Passkeys era a "vinculação a um único dispositivo", trocar de telefone significava recriar tudo. A partir de 2023, Apple, Google e Microsoft implementaram a sincronização em nuvem das Passkeys: iCloud Keychain sincroniza entre dispositivos Apple, Google Password Manager sincroniza entre dispositivos Android. Soluções de terceiros como 1Password permitem a sincronização entre ecossistemas. Isso significa que as Passkeys já têm a praticidade necessária para substituir as senhas.
@@ -236,7 +236,7 @@ Esse processo utiliza comunicação criptografada dupla via Bluetooth + Internet
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Experimente agora: login sem senha
+Experimente agora: login sem senha
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Faça login na conta Google → Segurança → Chaves de acesso → Adicionar chave de acesso, experimente o login com Face ID/impressão digital.
@@ -247,7 +247,7 @@ Esse processo utiliza comunicação criptografada dupla via Bluetooth + Internet
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Sugestões para o período de transição
+Sugestões para o período de transição
 
 {class="mt-1"}
 O Passkey ainda não substituiu completamente as senhas, muitos sites ainda estão na fase de coexistência "Passkey + senha". Sugestão: ative o Passkey prioritariamente para contas de alto valor, mas <strong>não exclua imediatamente a senha tradicional</strong>, mantenha como backup. Continue usando o gerenciador de senhas, pois nem todos os sites suportam Passkey. Veja o Passkey como um "complemento poderoso ao gerenciador de senhas", não como uma "substituição imediata".
@@ -295,7 +295,7 @@ Principais sites compatíveis: Google, GitHub, Microsoft, Apple ID, Facebook, Tw
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Estratégia de duas chaves
+Estratégia de duas chaves
 
 {class="mt-1"}
 O maior risco da chave de hardware é "perdê-la". Sugestões: ① Registre duas chaves diferentes ao mesmo tempo; ② Uma para carregar sempre (chaveiro), outra guardada em um cofre doméstico ou caixa de segurança bancária; ③ Alguns sites permitem imprimir o "código de recuperação de backup" para armazenamento offline. Assim, mesmo que a chave principal seja perdida, você não ficará permanentemente bloqueado fora da conta.
@@ -303,7 +303,7 @@ O maior risco da chave de hardware é "perdê-la". Sugestões: ① Registre duas
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Cuidado com o canal de compra
+Cuidado com o canal de compra
 
 {class="mt-1"}
 Compre sempre na loja oficial ou em revendedores autorizados. Não compre chaves de segunda mão ou de origem desconhecida: em teoria, hardware pré-configurado pode ter backdoors implantados. O firmware da YubiKey não pode ser atualizado após a fabricação, mas a Yubico publica continuamente avisos de segurança; basta acompanhar o site oficial.
@@ -336,7 +336,7 @@ A versão gratuita do Bitwarden suporta compartilhamento de senhas pessoais (com
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Custo-benefício do 1Password Família
+Custo-benefício do 1Password Família
 
 {class="mt-1"}
 O 1Password Families custa cerca de 4,99 USD/mês, suporta até 5 membros da família, cada um com seu próprio cofre privado + 4 cofres compartilhados. Isso dá menos de 1 USD/mês por pessoa, sendo atualmente a melhor solução de compartilhamento familiar. O Bitwarden Família custa 10 USD/ano para 6 pessoas, com custo-benefício ainda melhor, mas a experiência de interface é um pouco inferior.
@@ -369,7 +369,7 @@ Imagine este cenário: você gerencia sozinho todas as contas importantes da fam
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Configure agora: deixe uma "chave reserva" para sua família
+Configure agora: deixe uma "chave reserva" para sua família
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Escolha um familiar de confiança como "contato de emergência".
@@ -388,7 +388,7 @@ Imagine este cenário: você gerencia sozinho todas as contas importantes da fam
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Aviso importante
+Aviso importante
 
 {class="mt-1"}
 Embora o gerenciador de senhas seja conveniente, ele também tem riscos: se a senha mestra vazar, todas as senhas ficam expostas. Portanto, a senha mestra nunca deve ser igual a outras senhas, nem escrita em locais fáceis de encontrar. Além disso, recomenda-se escolher um provedor com bom histórico de segurança.
@@ -396,7 +396,7 @@ Embora o gerenciador de senhas seja conveniente, ele também tem riscos: se a se
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Experimente agora: comece a usar o gerenciador de senhas
+Experimente agora: comece a usar o gerenciador de senhas
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Escolha um gerenciador de senhas (recomenda-se Bitwarden ou o nativo do sistema).

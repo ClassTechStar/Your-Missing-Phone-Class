@@ -88,7 +88,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：搭建你的移动办公工作流
+来试试：搭建你的移动办公工作流
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 选定你的主力文档App（WPS或Microsoft 365），登录并关联云盘。

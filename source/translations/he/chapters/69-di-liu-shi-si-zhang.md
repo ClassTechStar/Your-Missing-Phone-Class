@@ -63,46 +63,46 @@ import SwiftData
 // 1. ‏@Model: המחלקה הזאת הופכת אוטומטית ל"טבלה"
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. לחבר את הקונטיינר בנקודת הכניסה של האפליקציה
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // מסד הנתונים מוכן
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // מסד הנתונים מוכן
+ }
 }
 
 // 3. ב-View קוראים עם @Query וכותבים עם @Environment
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) יואן")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) יואן")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // לשמור
-        try? context.save()   // שמירה לדיסק
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // לשמור
+ try? context.save() // שמירה לדיסק
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ struct RecordListView: View {
 ```
 // JSON: {"name":"תל אביב","main":{"temp":26.5},"weather":[{"description":"בהיר"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "בהיר"
+print(result.weather[0].description) // "בהיר"
 ```
 :::
 
@@ -149,23 +149,23 @@ print(result.weather[0].description)   // "בהיר"
 
 ```
 struct WeatherService {
-    // פונקציה אסינכרונית: async מסמן "אני צריך לחכות רגע", throws מסמן "עלול להיכשל"
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // פונקציה אסינכרונית: async מסמן "אני צריך לחכות רגע", throws מסמן "עלול להיכשל"
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // נקודת הקריאה (בתוך .task):
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "תל אביב")
-        // לעדכן את הממשק…
-    } catch {
-        print("שגיאה: \(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "תל אביב")
+ // לעדכן את הממשק…
+ } catch {
+ print("שגיאה: \(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ struct WeatherService {
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "אין רשת, לבדוק את החיבור?"
-        case .timedOut:               return "פסק הזמן חלף, לנסות שוב מאוחר יותר?"
-        case .cannotFindHost:         return "השרת לא נמצא"
-        default:                      return "בעיית רשת: \(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "פורמט הנתונים שגוי (ייתכן שה-API השתנתה)"
-    }
-    return "שגיאה: \(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "אין רשת, לבדוק את החיבור?"
+ case .timedOut: return "פסק הזמן חלף, לנסות שוב מאוחר יותר?"
+ case .cannotFindHost: return "השרת לא נמצא"
+ default: return "בעיית רשת: \(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "פורמט הנתונים שגוי (ייתכן שה-API השתנתה)"
+ }
+ return "שגיאה: \(error.localizedDescription)"
 }
 ```
 :::

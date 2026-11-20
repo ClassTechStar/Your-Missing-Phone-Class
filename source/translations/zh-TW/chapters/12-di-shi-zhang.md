@@ -64,7 +64,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>記住這幾條，防騙保平安
+記住這幾條，防騙保平安
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 公檢法、銀行、客服，不會讓你轉賬到"安全賬戶"。
@@ -75,7 +75,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>現在就做：給你的支付App做一次安全體檢
+現在就做：給你的支付App做一次安全體檢
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 開啟支付寶和微信，確認已開啟指紋/面容支付。

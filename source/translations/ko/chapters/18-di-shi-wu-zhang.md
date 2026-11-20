@@ -34,7 +34,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>iPhone "80% 충전 제한" 기능——황금 법칙을 시스템 설정으로
+iPhone "80% 충전 제한" 기능——황금 법칙을 시스템 설정으로
 
 {class="mt-1"}
 iPhone 15/16 시리즈(iOS 17 이상)는 "20%-80% 법칙"을 시스템 기능으로 만들었습니다. 켜면 스마트폰이 80%까지만 충전되고 자동 중단되어 배터리 노화를 크게 지연. 설정 경로:
@@ -49,7 +49,7 @@ iPhone 15/16 시리즈(iOS 17 이상)는 "20%-80% 법칙"을 시스템 기능으
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>GaN 충전기——출장족의 좋은 파트너
+GaN 충전기——출장족의 좋은 파트너
 
 {class="mt-1"}
 요즘 고속 충전 헤드가 갈수록 작아지는 것을 눈치챘을 겁니다. 그 배후의 공신은 <strong>GaN(질화 갈륨)</strong>이라는 신형 반도체 소재입니다. 전통 실리콘 기반 충전기 대비 GaN 충전기의 몇 가지 명확한 장점:
@@ -129,47 +129,47 @@ iPhone 15/16 시리즈(iOS 17 이상)는 "20%-80% 법칙"을 시스템 기능으
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">프로토콜</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">최고 출력</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기술 노선</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">호환성</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">고압/다단위</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">가장 넓음</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">고압 가변</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qualcomm 모델</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">저압 대전류</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO 계열 전용</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전하 펌프</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이/보영</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 고속 충전</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD 프로토콜</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">프로토콜</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">최고 출력</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기술 노선</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">호환성</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">고압/다단위</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">가장 넓음</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">고압 가변</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qualcomm 모델</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">저압 대전류</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO 계열 전용</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">전하 펌프</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이/보영</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 고속 충전</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD 프로토콜</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -190,7 +190,7 @@ iPhone 15/16 시리즈(iOS 17 이상)는 "20%-80% 법칙"을 시스템 기능으
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>고속 충전보안팁
+고속 충전보안팁
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 충전하면서 대형 게임 하는 것 피하기, 발열 악화.
@@ -210,7 +210,7 @@ iPhone 15/16 시리즈(iOS 17 이상)는 "20%-80% 법칙"을 시스템 기능으
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>어떤 모델이 채택했나?
+어떤 모델이 채택했나?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>보영</strong>: Magic 시리즈가 최초 상용화, Magic6 Pro, Magic7 시리즈, Magic V3 폴더블 모두 채택.
@@ -231,7 +231,7 @@ iPhone 15/16 시리즈(iOS 17 이상)는 "20%-80% 법칙"을 시스템 기능으
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>점검해 보기: 배터리 건강 검진
+점검해 보기: 배터리 건강 검진
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 건강도 확인: 배터리 최대 용량을 찾아 기록.

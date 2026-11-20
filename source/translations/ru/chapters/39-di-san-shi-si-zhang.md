@@ -27,46 +27,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Решение</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Поддерживаемая ОС телефона</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Поддерживаемые автомобили</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Богатство функций</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Доступность в Китае</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">только iPhone</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">очень широкая, поддерживается большинством моделей</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">высокая, карты/музыка/телефон/сообщения</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">хорошая, нативно доступна</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (китайским телефонам нужен сервисный фреймворк)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">довольно широкая, преимущественно совместные/импортные автомобили</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">высокая, сопоставима с CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">средняя, для активации нужен VPN</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">преимущественно Huawei, частичная поддержка других Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">китайские авто и часть совместных моделей</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">довольно высокая, связывается с HarmonyOS Cockpit</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">очень хорошая, локальная экосистема</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">и iOS, и Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">довольно широкая, часто доустанавливается на старые модели</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">средняя, обновления медленные</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">очень хорошая, локальная экосистема</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Решение</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Поддерживаемая ОС телефона</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Поддерживаемые автомобили</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Богатство функций</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Доступность в Китае</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">только iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">очень широкая, поддерживается большинством моделей</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">высокая, карты/музыка/телефон/сообщения</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">хорошая, нативно доступна</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (китайским телефонам нужен сервисный фреймворк)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">довольно широкая, преимущественно совместные/импортные автомобили</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">высокая, сопоставима с CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">средняя, для активации нужен VPN</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">преимущественно Huawei, частичная поддержка других Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">китайские авто и часть совместных моделей</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">довольно высокая, связывается с HarmonyOS Cockpit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">очень хорошая, локальная экосистема</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">и iOS, и Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">довольно широкая, часто доустанавливается на старые модели</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">средняя, обновления медленные</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">очень хорошая, локальная экосистема</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ III. HarmonyOS Cockpit: бесшовная передача задач межд�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Напоминание о безопасности
+Напоминание о безопасности
 
 {class="mt-1"}
 Какое бы решение вы ни выбрали, пользование телефоном за рулём нарушает ПДД. Держатель телефона служит только для «просмотра навигации», а не для «работы с телефоном». Назначение пункта назначения, переключение треков и подобные действия выполняйте только после остановки или голосом.
@@ -111,7 +111,7 @@ III. HarmonyOS Cockpit: бесшовная передача задач межд�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Совет при выборе автомобиля
+Совет при выборе автомобиля
 
 {class="mt-1"}
 Если для вас важен опыт мультимедиа, при выборе авто обязательно протестируйте в дилерском центре: ① возьмите свой телефон и проверьте стабильность CarPlay/HiCar-подключения. ② оцените скорость отклика голосового ассистента и качество распознавания команд. ③ посмотрите, есть ли в магазине приложений нужные вам приложения. ④ уточните частоту будущих OTA-обновлений, хорошая мультимедиа создаётся итеративно через софт.
@@ -119,7 +119,7 @@ III. HarmonyOS Cockpit: бесшовная передача задач межд�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: оптимизируйте свою автотелефонную интеграцию
+Практика: оптимизируйте свою автотелефонную интеграцию
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Уточните, какие схемы интеграции поддерживают ваш телефон и мультимедиа (CarPlay / HiCar / Android Auto / CarLife).
@@ -130,7 +130,7 @@ III. HarmonyOS Cockpit: бесшовная передача задач межд�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Итоги главы
+Итоги главы
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Три маршрута автотелефонной интеграции: трансляция экрана (CarPlay и т. д.), глубокое слияние (HarmonyOS Cockpit и т. д.), глубоко интегрированный CarPlay 2.0

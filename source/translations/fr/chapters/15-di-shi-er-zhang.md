@@ -61,7 +61,7 @@ Mon attitude envers les jeux sur smartphone est : jouer, d'accord, mais ne les l
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>À faire : créez votre système de divertissement sur smartphone
+À faire : créez votre système de divertissement sur smartphone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Dans l'application de musique, téléchargez vos 3 albums ou listes de lecture préférés, assurez-vous qu'ils soient disponibles hors ligne.

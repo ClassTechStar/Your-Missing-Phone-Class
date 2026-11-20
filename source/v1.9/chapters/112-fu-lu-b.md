@@ -54,7 +54,7 @@ kind: appendix
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 练习卡住时最有价值的产出，是你把「哪里不对」说清楚了——这也是第四十章「把想法变成 AI 可执行的指令」要练的能力。
@@ -336,13 +336,13 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">周次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">每天一刻钟做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本周完成标准</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第1周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜索框认路（第零章）、摸清硬件底细（第一章）、十分钟搭格局（第二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四个文件夹格局建成，"下载"里没有"忘了是啥"的大文件</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">审三个App权限（第四章）、远程锁定模拟一次（第六章）、账号体检（第十六章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">敏感权限无"永久允许"，双重认证已开，恢复密钥有纸质副本</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码大体检（第十四章）、备份演练（第十八章）、电池体检（第十五章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上次备份时间在一周以内，风险最高的密码已换</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">救命操作三招（第十九章）、给爸妈开骚扰拦截（第十三章）、做应急联系卡（第三十二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">强制重启不看书写得出来，长辈手机拦截已开</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">周次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">每天一刻钟做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本周完成标准</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第1周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜索框认路（第零章）、摸清硬件底细（第一章）、十分钟搭格局（第二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四个文件夹格局建成，"下载"里没有"忘了是啥"的大文件</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">审三个App权限（第四章）、远程锁定模拟一次（第六章）、账号体检（第十六章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">敏感权限无"永久允许"，双重认证已开，恢复密钥有纸质副本</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码大体检（第十四章）、备份演练（第十八章）、电池体检（第十五章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上次备份时间在一周以内，风险最高的密码已换</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">救命操作三招（第十九章）、给爸妈开骚扰拦截（第十三章）、做应急联系卡（第三十二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">强制重启不看书写得出来，长辈手机拦截已开</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -452,22 +452,22 @@ kind: appendix
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">周次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">练习</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">完成标准</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">完成日期</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话心得</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第1周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜索框认路（第零章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">找到备份入口，或记下"今天没找到"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第1周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">十分钟搭格局（第二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四个文件夹建成，"下载"清得动的清掉</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3月4日（示例）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纠结的都进了归档，居然不心疼</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">审三个App权限（第四章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三个App无"永久允许"的敏感权限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3月5日（示例）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">外卖App要通讯录，想了想拒了</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程锁定模拟（第六章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电脑上让手机响了一声</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号体检（第十六章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双重认证已开，恢复密钥有纸质副本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码大体检（第十四章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">泄露、重复、弱密码三个数字记下</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份演练（第十八章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上次备份时间在一周内，照片有电脑副本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池体检（第十五章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">耗电排行前几名都是"合理选手"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">救命操作三招（第十九章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不看书能做出强制重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈开骚扰拦截（第十三章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长辈手机拦截已开，反诈预警已开</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">做应急联系卡（第三十二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里、包里各一张</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第5周起</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自动化入门（第二十三章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一条自动化连续运转一周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第5周起</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitHub初体验（第二十三章附）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hello-github 仓库能打开给人看</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">周次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">练习</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">完成标准</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">完成日期</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话心得</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第1周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置搜索框认路（第零章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">找到备份入口，或记下"今天没找到"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第1周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">十分钟搭格局（第二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">四个文件夹建成，"下载"清得动的清掉</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3月4日（示例）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纠结的都进了归档，居然不心疼</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">审三个App权限（第四章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三个App无"永久允许"的敏感权限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3月5日（示例）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">外卖App要通讯录，想了想拒了</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程锁定模拟（第六章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电脑上让手机响了一声</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第2周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号体检（第十六章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双重认证已开，恢复密钥有纸质副本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码大体检（第十四章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">泄露、重复、弱密码三个数字记下</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份演练（第十八章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上次备份时间在一周内，照片有电脑副本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第3周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电池体检（第十五章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">耗电排行前几名都是"合理选手"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">救命操作三招（第十九章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不看书能做出强制重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">给爸妈开骚扰拦截（第十三章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长辈手机拦截已开，反诈预警已开</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第4周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">做应急联系卡（第三十二章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里、包里各一张</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第5周起</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自动化入门（第二十三章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一条自动化连续运转一周</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第5周起</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitHub初体验（第二十三章附）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hello-github 仓库能打开给人看</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（你填）</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -602,7 +602,7 @@ kind: appendix
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 开头四条提示加"卡住四步"是骨架：提示给你起点，四步给你退路，两者配合着用。
 - 练习地图按十五篇各挑三到五个练习，每个都写清做什么、完成标准、卡住了先看哪，篇尾补了"还有这些可选"。

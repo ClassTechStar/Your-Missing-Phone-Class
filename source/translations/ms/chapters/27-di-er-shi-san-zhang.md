@@ -95,7 +95,7 @@ Membuat automasi juga tidak semestinya lancar, ada beberapa perangkap yang saya 
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Cabaran Satu: Automasi selamat pagi
+Cabaran Satu: Automasi selamat pagi
 
 {class="mt-1"}
 : iOS: Dalam App Pintasan buat pintasan baharu → tambah "Dapatkan cuaca semasa" → "Baca teks" → "Buka App pilih NetEase Cloud". Selepas selesai anda boleh berkata kepada Siri "selamat pagi" untuk mencetus. Android: Dalam Tasker buat tugas baharu → tambah "Dapatkan cuaca" → "Baca" → "Buka App" → tetapkan masa pencetus setiap hari 7:00.
@@ -103,7 +103,7 @@ Membuat automasi juga tidak semestinya lancar, ada beberapa perangkap yang saya 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cabaran Dua: Jimat bateri automatik aras rendah
+Cabaran Dua: Jimat bateri automatik aras rendah
 
 {class="mt-1 mb-2"}
 : iOS: Tab Automasi → Baharu → "Aras bateri" → kurang daripada 25% → tambah "Tetapkan mod aras bateri rendah hidup" + "Tetapkan kecerahan 25%". Android: Tasker buat Profil baharu → Status → Kuasa → Bateri 0-25% → Tugas "Hidupkan mod jimat bateri" + "Kurangkan kecerahan".
@@ -116,7 +116,7 @@ Membuat automasi juga tidak semestinya lancar, ada beberapa perangkap yang saya 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Contact akan menerima pemberitahuan, boleh pilih terima atau tolak.
+Contact akan menerima pemberitahuan, boleh pilih terima atau tolak.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Kesan praktikal: Wi-Fi 7 router telah mula dijual, tetapi telefon perlu sokong. iPhone 15 Pro/16 siri, Xiaomi 14, Samsung S24 Ultra dll flagship 2024 telah sokong Wi-Fi 7; peranti lebih awal disokong melalui kemas kini OS. Jika ada router Wi-Fi 7, boleh nikmati kelajuan rangkaian lebih cepat dan lebih stabil.</strong>2. Cara waris menerima akses.

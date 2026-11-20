@@ -87,7 +87,7 @@ Se todos os métodos acima foram tentados e não funcionaram, é hora de procura
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>A primeira dica universal: reinicie o celular
+A primeira dica universal: reinicie o celular
 
 {class="mt-1"}
 Não importa qual problema você encontre, travamento, fechamento inesperado, rede que não conecta, som estranho, primeiro reinicie o celular. Esta frase parece enganação, mas, pela minha experiência, pelo menos 60% dos pequenos problemas se resolvem depois de reiniciar. O celular, assim como o computador, com o tempo de uso acumula várias coisas bagunçadas na memória. Reiniciar é limpar tudo e recomeçar. Então, da próxima vez que o celular der problema, não se apresse em pesquisar "o que fazer", reinicie primeiro e depois veja.
@@ -95,7 +95,7 @@ Não importa qual problema você encontre, travamento, fechamento inesperado, re
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Anote agora: estas operações de emergência devem estar na ponta da língua
+Anote agora: estas operações de emergência devem estar na ponta da língua
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Reinicialização forçada</strong>: iPhone com tela cheia: Aumentar Volume → Diminuir Volume → segurar botão liga/desliga até aparecer o logo. Android: segurar botão liga/desliga por 10-15 segundos até vibrar.

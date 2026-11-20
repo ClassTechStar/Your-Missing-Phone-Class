@@ -32,22 +32,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">العلامة</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">اسم الوضع</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">طريقة التفعيل</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوصول المساعد (لا وضع بسيط منفصل، لكن يمكن التكبير عنصراً بعنصر)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; العرض والسطوع &gt; حجم النص، اسحب للأكبر. ثم "الوصول المساعد &gt; العرض وحجم النص" فعّل "نص عريض" "أشكال الأزرار"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع البسيط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; النظام والتحديث &gt; الوضع البسيط &gt; تفعيل</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع المبسط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; إعدادات أكثر &gt; الوضع المبسط &gt; تفعيل</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع البسيط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; الميزات المميزة &gt; الوضع البسيط</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سطح المكتب المبسط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; سطح المكتب وشاشة القفل والخلفية &gt; سطح المكتب المبسط</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع البسيط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; العرض &gt; الوضع البسيط</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">العلامة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">اسم الوضع</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">طريقة التفعيل</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوصول المساعد (لا وضع بسيط منفصل، لكن يمكن التكبير عنصراً بعنصر)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; العرض والسطوع &gt; حجم النص، اسحب للأكبر. ثم "الوصول المساعد &gt; العرض وحجم النص" فعّل "نص عريض" "أشكال الأزرار"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع البسيط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; النظام والتحديث &gt; الوضع البسيط &gt; تفعيل</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع المبسط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; إعدادات أكثر &gt; الوضع المبسط &gt; تفعيل</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع البسيط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; الميزات المميزة &gt; الوضع البسيط</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سطح المكتب المبسط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; سطح المكتب وشاشة القفل والخلفية &gt; سطح المكتب المبسط</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الوضع البسيط</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الإعدادات &gt; العرض &gt; الوضع البسيط</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: ساعد كبار السن في "تزيين" الهاتف
+جرّب: ساعد كبار السن في "تزيين" الهاتف
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. افتح الوضع البسيط (اتبع جدول العلامات أعلاه).
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"نشيد مكافحة الاحتيال" لكبار السن (اطبعه والصقه بجانب الهاتف)
+"نشيد مكافحة الاحتيال" لكبار السن (اطبعه والصقه بجانب الهاتف)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>مكالمة غريبة تطلب تحويلاً ← أغلق!</strong>
@@ -151,7 +151,7 @@ WeChat أكثر تطبيق يستخدمه كبار السن، لكن واجهت�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - افتح أولاً الوضع البسيط أو كبّر الخط/الأيقونات يدوياً، ضبط البيئة يحل معظم المشاكل

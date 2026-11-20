@@ -53,7 +53,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意之事
+注意之事
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 內存拓展將佔用部分機身存儲空間，請確保剩餘存儲不少於20-30GB，否則或影響系統流暢度。
@@ -63,7 +63,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小結
+小結
 
 {class="mt-1"}
 小結
@@ -71,7 +71,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來動手：觀汝手機有無內存拓展
+來動手：觀汝手機有無內存拓展
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 啓【設置】，檢索"內存擴展"、"內存融合"、"RAM Plus"或"Extended RAM"。

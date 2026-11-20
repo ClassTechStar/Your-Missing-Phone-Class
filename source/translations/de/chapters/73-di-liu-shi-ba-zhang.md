@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* zu den Einstellungen führen, um es zu aktivieren */
-        default: /* erlaubt, los geht's */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* zu den Einstellungen führen, um es zu aktivieren */
+ default: /* erlaubt, los geht's */
+ }
+ }
 }
 
 // 3. nach Ablehnung elegant abfallen: Hinweis zeigen und zu den Einstellungen springen
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. Benachrichtigungsberechtigung anfragen (einmaliger Dialog)
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "Erlaubt" : "Abgelehnt")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "Erlaubt" : "Abgelehnt")
+ }
 
 // 2. eine "Erinnerung zum Ausgaben-Erfassen jeden Tag um 20:00 Uhr" planen
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "Ausgaben-Erinnerung"
-    content.body = "Heute hast du noch nichts erfasst"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "Ausgaben-Erinnerung"
+ content.body = "Heute hast du noch nichts erfasst"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ Das Nebenläufigkeitssystem von Swift 6 hat zwei Regeln, die Einsteiger unbeding
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // startet beim Erscheinen, bricht beim Verschwinden ab
-            await vm.search(city: "Berlin")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // startet beim Erscheinen, bricht beim Verschwinden ab
+ await vm.search(city: "Berlin")
+ }
+ }
 }
 ```
 :::

@@ -45,41 +45,41 @@ BL , 5 κεντρικό Διάσταση:
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Κεντρικός ρόλος</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Κλειδωμένο (προεπιλογή)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ξεκλείδωτο</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ασφάλεια συστήματος</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αποτρέπει εγγραφή μη υπογεγραμμένων συστημάτων, προστατεύει ακεραιότητα<br><span class="text-emerald-600 dark:text-emerald-400">✅ Υψηλή ασφάλεια: φορτώνει μόνο επίσημα υπογεγραμμένα images</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Ασφάλεια: επιτρέπεται τρίτου ROM, Σύστημα, Root Δικαίωμα Σύστημα</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Σταθερότητα συστήματος</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εξασφαλίζει δοκιμασμένο και βελτιστοποιημένο επίσημο σύστημα<br><span class="text-emerald-600 dark:text-emerald-400">✅ Σταθερό: επίσημο firmware, πλήρεις λειτουργίες, αξιόπιστο OTA</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ :τρίτου ROM ,Σύστημα, Λειτουργία(,),OTA ενημέρωση</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Εγγύηση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ο κατασκευαστής κλειδώνει το BL για να παρέχει σταθερό σύστημα και εγγύηση<br><span class="text-emerald-600 dark:text-emerald-400">✅ Εγγύηση ενεργή: δωρεάν επίσημη εξυπηρέτηση (μη ανθρώπινη ζημιά)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ :Ξεκλείδωμα BL , Ξεκλείδωμα καταγραφή</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ασφάλεια δεδομένων</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Το ξεκλείδωμα συνήθως διαγράφει δεδομένα, αποτρόπαια κακή χρήση<br><span class="text-emerald-600 dark:text-emerald-400">✅ Δεδομένα Ασφάλεια: καθημερινό, BL περιορισμός Σύστημα Τροποποίηση</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Δεδομένα: Ξεκλείδωμα Εκκαθάριση Όλοι οι χρήστες Δεδομένα; Ξεκλείδωμα Κρυπτογράφηση, Δεδομένα Αποθήκευση Ασφάλεια; Flash Δεδομένα</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Περιορισμοί λειτουργιών</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εξασφαλίζει λειτουργίες που εξαρτώνται από ασφαλές περιβάλλον (πληρωμές, τράπεζα)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Πλήρεις λειτουργίες: όλες οι επίσημες λειτουργίες διαθέσιμες</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Λειτουργία: Ασφάλεια Εφαρμογή( Google Pay, App) BL Ξεκλείδωμα απόρριψη; DRM υποβάθμιση, Βίντεο Αναπαραγωγή</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Κεντρικός ρόλος</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Κλειδωμένο (προεπιλογή)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ξεκλείδωτο</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ασφάλεια συστήματος</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αποτρέπει εγγραφή μη υπογεγραμμένων συστημάτων, προστατεύει ακεραιότητα<br><span class="text-emerald-600 dark:text-emerald-400">✅ Υψηλή ασφάλεια: φορτώνει μόνο επίσημα υπογεγραμμένα images</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Ασφάλεια: επιτρέπεται τρίτου ROM, Σύστημα, Root Δικαίωμα Σύστημα</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Σταθερότητα συστήματος</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εξασφαλίζει δοκιμασμένο και βελτιστοποιημένο επίσημο σύστημα<br><span class="text-emerald-600 dark:text-emerald-400">✅ Σταθερό: επίσημο firmware, πλήρεις λειτουργίες, αξιόπιστο OTA</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ :τρίτου ROM ,Σύστημα, Λειτουργία(,),OTA ενημέρωση</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Εγγύηση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ο κατασκευαστής κλειδώνει το BL για να παρέχει σταθερό σύστημα και εγγύηση<br><span class="text-emerald-600 dark:text-emerald-400">✅ Εγγύηση ενεργή: δωρεάν επίσημη εξυπηρέτηση (μη ανθρώπινη ζημιά)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ :Ξεκλείδωμα BL , Ξεκλείδωμα καταγραφή</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ασφάλεια δεδομένων</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Το ξεκλείδωμα συνήθως διαγράφει δεδομένα, αποτρόπαια κακή χρήση<br><span class="text-emerald-600 dark:text-emerald-400">✅ Δεδομένα Ασφάλεια: καθημερινό, BL περιορισμός Σύστημα Τροποποίηση</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Δεδομένα: Ξεκλείδωμα Εκκαθάριση Όλοι οι χρήστες Δεδομένα; Ξεκλείδωμα Κρυπτογράφηση, Δεδομένα Αποθήκευση Ασφάλεια; Flash Δεδομένα</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Περιορισμοί λειτουργιών</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εξασφαλίζει λειτουργίες που εξαρτώνται από ασφαλές περιβάλλον (πληρωμές, τράπεζα)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Πλήρεις λειτουργίες: όλες οι επίσημες λειτουργίες διαθέσιμες</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Λειτουργία: Ασφάλεια Εφαρμογή( Google Pay, App) BL Ξεκλείδωμα απόρριψη; DRM υποβάθμιση, Βίντεο Αναπαραγωγή</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ BL , 5 κεντρικό Διάσταση:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Σκεφτείτε το καλά
+Σκεφτείτε το καλά
 
 {class="mt-1"}
 Το κάψιμο Knox της Samsung είναι <strong>μη αναστρέψιμο</strong>. Root Λειτουργία, Συμβουλές Root Λύση.
@@ -123,7 +123,7 @@ BL , 5 κεντρικό Διάσταση:
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Σημαντική προειδοποίηση
+Σημαντική προειδοποίηση
 
 {class="mt-1"}
 Το flashing έχει ρίσκο, Προσοχή στις λειτουργίες.Μπορεί να προκαλέσει:
@@ -140,7 +140,7 @@ BL , 5 κεντρικό Διάσταση:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Προτεινόμενες πηγές
+Προτεινόμενες πηγές
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>:η μεγαλύτερη κοινότητα προγραμματιστών Android παγκοσμίως, Υπάρχουν πλούσια tutorials flashing και ROMresources.
@@ -152,7 +152,7 @@ BL , 5 κεντρικό Διάσταση:
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: Μπορεί να αναιρεθεί το BL Unlock;
+Q1: Μπορεί να αναιρεθεί το BL Unlock;
 
 {class="mb-2 pl-6"}
 <strong>A:</strong>.επίσημο, FlashScript( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>). Ξεκλείδωμα Ασφάλεια(Knox).
@@ -160,7 +160,7 @@ BL , 5 κεντρικό Διάσταση:
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: Πώς γίνεται Root μετά το Unlock;
+Q2: Πώς γίνεται Root μετά το Unlock;
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Το BL Unlock είναι μόνο το πρώτο βήμα. Το Root συνήθως απαιτεί:

@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "たろう"        // val：読み取り専用の変数（デフォルトはこれがおすすめ）
-var age = 18             // var：変更できる変数（あとから変えられる）
+val name = "たろう" // val：読み取り専用の変数（デフォルトはこれがおすすめ）
+var age = 18 // var：変更できる変数（あとから変えられる）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> varは変えられる
-// name = "はなこ"         // <i class="fas fa-times-circle mr-1"></i> valは変えられない。コンパイルエラー
+age = 19 // varは変えられる
+// name = "はなこ" // valは変えられない。コンパイルエラー
 
-val score: Int = 100     // 型を明示的に書いてもいい
-val pi = 3.14            // 書かなくても自動で推論される
+val score: Int = 100 // 型を明示的に書いてもいい
+val pi = 3.14 // 書かなくても自動で推論される
 ```
 :::
 
@@ -63,15 +63,15 @@ Kotlinコミュニティの鉄則です。ふだんはvalを使い、本当に�
 
 ```
 fun greet(name: String): String {
-    return "こんにちは、$name！"     // $記号で変数を文字列に差し込む
+ return "こんにちは、$name！" // $記号で変数を文字列に差し込む
 }
 
-println(greet("たろう"))        // 出力：こんにちは、たろう！
+println(greet("たろう")) // 出力：こんにちは、たろう！
 
 // 1行の関数は式として簡潔に書ける
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // 出力：8
+println(add(3, 5)) // 出力：8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // 出力：8
 // 判断：if / else
 val age = 17
 if (age >= 18) {
-    println("大人")
+ println("大人")
 } else {
-    println("未成年者")
+ println("未成年者")
 }
 
 // 多分岐：when（switchの百倍使いやすい）
 val score = 85
 val level = when {
-    score >= 90 -> "優秀"
-    score >= 60 -> "合格"
-    else -> "その調子！"
+ score >= 90 -> "優秀"
+ score >= 60 -> "合格"
+ else -> "その調子！"
 }
 
 // 繰り返し：forループ
 val fruits = listOf("りんご", "バナナ", "オレンジ")
 for (fruit in fruits) {
-    println("$fruitが大好き")
+ println("$fruitが大好き")
 }
 ```
 :::
@@ -123,15 +123,15 @@ Javaの時代でいちばん有名なバグが、NullPointerException（ヌル�
 :::
 
 ```
-var name: String = "たろう"   // 普通の型：nullは絶対に許されない
-// name = null                // <i class="fas fa-times-circle mr-1"></i> コンパイラが直接止めてくれる
+var name: String = "たろう" // 普通の型：nullは絶対に許されない
+// name = null // コンパイラが直接止めてくれる
 
 var nickname: String? = null // 疑問符を付けると：nullを許す
 nickname = "たーくん"
 
 // null許容型を使うときは、安全に扱う必要がある：
-println(nickname?.length)    // safe call：nullならnullを返すだけで、落ちない
-val len = nickname?.length ?: 0   // Elvis演算子：nullのときはデフォルト値
+println(nickname?.length) // safe call：nullならnullを返すだけで、落ちない
+val len = nickname?.length ?: 0 // Elvis演算子：nullのときはデフォルト値
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ String?は「nullを許す」、a ?: bは「aがnullならbを使う」という
 ```
 // 普通のクラス：鋳型
 class Dog(val name: String) {
-    fun bark() = println("$name ワンワン！")
+ fun bark() = println("$name ワンワン！")
 }
 
-val dog = Dog("ポチ")      // オブジェクトを作る
-dog.bark()                 // ポチ ワンワン！
+val dog = Dog("ポチ") // オブジェクトを作る
+dog.bark() // ポチ ワンワン！
 
 // data class：データを入れる箱（equals/copyなど付き）
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "たろう", "zhangsan@example.com")
-val twin = me.copy(name = "たろう丸")   // コピーして1つのフィールドだけ変える
+val twin = me.copy(name = "たろう丸") // コピーして1つのフィールドだけ変える
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // lambdaの書き方：その場で定義。手軽でストレート
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = 現在の要素
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = 現在の要素
 
 // 絞り込み + 変換の連携（実際のプロジェクトで非常によくある形）
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

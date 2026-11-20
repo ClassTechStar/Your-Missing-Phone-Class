@@ -27,46 +27,46 @@ Les trois solutions de duplication dominantes ont chacune leurs atouts ; voici u
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Solution</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Système smartphone pris en charge</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Véhicules pris en charge</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Richesse fonctionnelle</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Disponibilité en Chine</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone uniquement</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Très large, la grande majorité des véhicules</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Élevée, navigation/musique/téléphone/messages</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bonne, utilisable nativement</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (les smartphones nationaux nécessitent le cadre de services Google)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez large, surtout véhicules joint-venture/importés</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Élevée, comparable à CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moyenne, nécessite un VPN pour l'activation</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Surtout Huawei, partiellement autres Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Véhicules nationaux et certaines joint-ventures</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez élevée, peut interagir avec le cockpit HarmonyOS</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Très bonne, écosystème local</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS et Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez large, commun en installation après-vente sur anciens véhicules</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moyenne, mises à jour lentes</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Très bonne, écosystème local</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Solution</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Système smartphone pris en charge</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Véhicules pris en charge</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Richesse fonctionnelle</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Disponibilité en Chine</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone uniquement</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Très large, la grande majorité des véhicules</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Élevée, navigation/musique/téléphone/messages</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bonne, utilisable nativement</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (les smartphones nationaux nécessitent le cadre de services Google)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez large, surtout véhicules joint-venture/importés</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Élevée, comparable à CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moyenne, nécessite un VPN pour l'activation</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Surtout Huawei, partiellement autres Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Véhicules nationaux et certaines joint-ventures</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez élevée, peut interagir avec le cockpit HarmonyOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Très bonne, écosystème local</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS et Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Assez large, commun en installation après-vente sur anciens véhicules</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moyenne, mises à jour lentes</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Très bonne, écosystème local</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ Si votre système embarqué est trop ancien ou trop peu pratique, pouvez-vous ut
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Rappel de sécurité
+Rappel de sécurité
 
 {class="mt-1"}
 Quelle que soit la solution, manipuler le smartphone en conduisant est une infraction. Le support de smartphone ne sert qu'à « voir la navigation », pas à « manipuler le smartphone ». Pour définir une destination ou changer de musique, arrêtez-vous d'abord ou utilisez le contrôle vocal.
@@ -111,7 +111,7 @@ Quelle que soit la solution, manipuler le smartphone en conduisant est une infra
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Conseils lors de l'achat d'une voiture
+Conseils lors de l'achat d'une voiture
 
 {class="mt-1"}
 Si l'expérience du système embarqué compte pour vous, testez en concession : ① apportez votre smartphone pour tester la stabilité de CarPlay/HiCar ; ② testez la vitesse de réponse et le taux de reconnaissance de l'assistant vocal ; ③ vérifiez si la boutique d'applications propose vos applications habituelles ; ④ renseignez-vous sur la fréquence des mises à jour OTA: un bon système embarqué s'améliore par itérations logicielles.
@@ -119,7 +119,7 @@ Si l'expérience du système embarqué compte pour vous, testez en concession : 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercice : optimisez votre expérience de connectivité voiture
+Exercice : optimisez votre expérience de connectivité voiture
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Confirmez la solution de connectivité prise en charge par votre smartphone et votre système embarqué (CarPlay / HiCar / Android Auto / CarLife).
@@ -130,7 +130,7 @@ Si l'expérience du système embarqué compte pour vous, testez en concession : 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Résumé du chapitre
+Résumé du chapitre
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Trois voies de connectivité : duplication (CarPlay, etc.), intégration profonde (cockpit HarmonyOS, etc.), CarPlay 2.0 intégration profonde

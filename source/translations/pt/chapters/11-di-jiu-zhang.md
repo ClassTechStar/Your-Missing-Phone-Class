@@ -67,7 +67,7 @@ Todo o processo, do início ao fim. Levou cerca de quarenta minutos, sem ligar o
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Experimente: Monte Seu Fluxo de Trabalho Móvel
+Experimente: Monte Seu Fluxo de Trabalho Móvel
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Escolha seu app principal de documentos (WPS ou Microsoft 365), faça login e vincule o armazenamento em nuvem.

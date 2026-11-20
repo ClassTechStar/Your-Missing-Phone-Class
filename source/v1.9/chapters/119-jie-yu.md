@@ -146,20 +146,20 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">段落</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">章节</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">准备课</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">立规矩：数字资产、预防为主、定期体检</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬件与系统</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一至三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">机器怎么工作，文件怎么整理，网络怎么保通</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 与安全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四至六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装应用看权限，设置自己做，数据心里有数</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常场景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第七至十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">办公、支付、拍照、娱乐、工具，用到就翻</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬核进阶</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四至二十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码、电池、备份、排查、命令行、前沿判断</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生活篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十七至三十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">爸妈、换机、健康、车机、孩子、智能家居</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 编程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七至四十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把想法说清楚，让 AI 干活，你来验收</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三平台开发</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四十八至八十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓、iOS、鸿蒙，从装环境到上架商店</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可穿戴旅行健康</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十一至九十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">身上的设备、出发前的准备、身体的账本</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">创作篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九十六至一百零五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">剪映、可灵、数字人、短剧，手机就是工作室</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">随身口袋</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录 A–H</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱、练习、术语、资源、索引、路线图</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">段落</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">章节</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">准备课</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">立规矩：数字资产、预防为主、定期体检</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬件与系统</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一至三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">机器怎么工作，文件怎么整理，网络怎么保通</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 与安全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四至六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装应用看权限，设置自己做，数据心里有数</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常场景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第七至十三章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">办公、支付、拍照、娱乐、工具，用到就翻</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">硬核进阶</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四至二十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码、电池、备份、排查、命令行、前沿判断</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生活篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十七至三十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">爸妈、换机、健康、车机、孩子、智能家居</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 编程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七至四十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把想法说清楚，让 AI 干活，你来验收</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三平台开发</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四十八至八十章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓、iOS、鸿蒙，从装环境到上架商店</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可穿戴旅行健康</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第八十一至九十五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">身上的设备、出发前的准备、身体的账本</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">创作篇</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第九十六至一百零五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">剪映、可灵、数字人、短剧，手机就是工作室</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">随身口袋</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">附录 A–H</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱、练习、术语、资源、索引、路线图</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -169,13 +169,13 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你是谁</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议路线</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么这么走</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里那位"技术客服"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零章 → 第二十七章 → 第十八章 → 第三十二章 → 附录 D</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先给爸妈做环境改造，再补上备份与防骗，最后留一份随身清单</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学生党、想搞点东西的</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零章 → 第四、六章 → 第二十九章 → 第三十七至四十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">地基打牢，先管住自己，然后直接去 AI 编程篇做东西</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折腾党</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十九章 → 第二十、二十章附 → 第二十三章附 → 第二十四章 → 第二十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先学排查兜底，再上命令行与 GitHub；Root 与 BL 想清楚再动，最后用三问看前沿</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">创作者</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十一章 → 第九十六至一百章 → 第一百零一至一百零五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先学会拍，再用 AI 提效，最后看懂平台规则与变现路径</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">你是谁</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议路线</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么这么走</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里那位"技术客服"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零章 → 第二十七章 → 第十八章 → 第三十二章 → 附录 D</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先给爸妈做环境改造，再补上备份与防骗，最后留一份随身清单</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">学生党、想搞点东西的</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第零章 → 第四、六章 → 第二十九章 → 第三十七至四十七章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">地基打牢，先管住自己，然后直接去 AI 编程篇做东西</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折腾党</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十九章 → 第二十、二十章附 → 第二十三章附 → 第二十四章 → 第二十六章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先学排查兜底，再上命令行与 GitHub；Root 与 BL 想清楚再动，最后用三问看前沿</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">创作者</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十一章 → 第九十六至一百章 → 第一百零一至一百零五章</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先学会拍，再用 AI 提效，最后看懂平台规则与变现路径</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -200,7 +200,7 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 读完全书的意义，不是记住一百个步骤，是下次遇到问题时，你大概知道答案住在哪一章。
@@ -236,7 +236,7 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 境界不是终点，是视角：同一部手机，在不同的人手里，是完全不同的工具。
@@ -251,12 +251,12 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">境界</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型表现</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">卡住的信号</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪补课</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">会用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">照步骤操作，结果正确，高频动作稳定</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">教过就忘，不敢试新功能</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二、五、二十七章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">懂用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">知道为什么这么设，出问题会排查</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一卡顿就想恢复出厂</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四至二十一、二十六章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">善用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有自己的规则与取舍，能做出新东西</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">规则挂在嘴上，落实不到家人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九、三十五、三十七至四十七章</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">境界</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型表现</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">卡住的信号</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪补课</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">会用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">照步骤操作，结果正确，高频动作稳定</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">教过就忘，不敢试新功能</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二、五、二十七章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">懂用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">知道为什么这么设，出问题会排查</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一卡顿就想恢复出厂</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第十四至二十一、二十六章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">善用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有自己的规则与取舍，能做出新东西</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">规则挂在嘴上，落实不到家人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九、三十五、三十七至四十七章</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -300,7 +300,7 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：这张卡片怎么用
+小贴士：这张卡片怎么用
 
 {class="mt-1"}
 不必背。把它截图存进收藏夹，或者抄在备忘录置顶。真正起作用的时刻只有两种：一是你要"折腾"手机之前，扫一眼第一条；二是接到可疑电话的当下，想起第三条。十条里能条件反射两条，这张卡片就回本了，其余八条，留着遇到时翻。
@@ -352,7 +352,7 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：给这一章画三个记号
+来动手：给这一章画三个记号
 
 {class="mt-1"}
 现在就做三个小标记，让这篇结语开始为你工作：一，在后面"合上这本书之后，先做这六件事"那一节夹个书签，那是你周末要用的；二，把十件事清单截图存进收藏夹；三，在日历里新建一个半年后的提醒，标题就叫"手机年度体检"。三个标记画完，这一章就从"读过的内容"变成了"随叫随到的工具"。
@@ -378,15 +378,15 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">这件事</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">防的是什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话原理</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">锁屏密码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机离手的瞬间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据的第一道门，也是后面所有防护的前提</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双重认证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码泄露</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码丢了，坏人还差一道你的手机才拿得到验证码</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">黄金 30 分钟里的一切，都从"能定位"开始</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完整备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折腾与意外</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机坏了能修，数据没了就真没了</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核验习惯</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 换脸与拟声骗局</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">脸和声音都能伪造，回拨到你存的号码伪造不了</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限反查</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">慢性失血</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">风险常不在大窟窿，在没人看的小口子</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">这件事</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">防的是什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话原理</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">锁屏密码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机离手的瞬间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据的第一道门，也是后面所有防护的前提</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双重认证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码泄露</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码丢了，坏人还差一道你的手机才拿得到验证码</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机丢失</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">黄金 30 分钟里的一切，都从"能定位"开始</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完整备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">折腾与意外</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机坏了能修，数据没了就真没了</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核验习惯</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 换脸与拟声骗局</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">脸和声音都能伪造，回拨到你存的号码伪造不了</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限反查</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">慢性失血</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">风险常不在大窟窿，在没人看的小口子</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -431,7 +431,7 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：最容易拖的一步
+小贴士：最容易拖的一步
 
 {class="mt-1"}
 六件事里被拖得最久的一向是备份。诀窍是把它拆成两部分：一部分"开了就不用管"，相册自动云备份、聊天记录自动备份；另一部分"定期手动"，每半年一次全量备份。第一次手动跑完之后，剩下的就交给日历提醒。
@@ -439,7 +439,7 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 保持好奇，是愿意试试新东西；保持清醒，是知道什么时候该停下来核实。
@@ -479,7 +479,7 @@ AI 编程篇从 2025 年那条"Vibe Coding"的推文讲起。五大思维原则�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 AI 能替你操作，不能替你判断；能替你执行，不能替你负责。
@@ -500,12 +500,12 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方向</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一个产出</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主要章节</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把手机用得更深</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">喜欢动手、爱搞明白原理的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一次 ADB 操作 / 一个 Termux 脚本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十、二十三章及附</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从用户变成作者</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想做点东西、不怕试错的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一个跑得起来的小应用或一条视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七至八十、九十六至一百零五章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把课带回家</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里有老人小孩的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">爸妈手机的体检记录 / 一份家庭公约</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十七、二十九、三十五章</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方向</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合谁</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一个产出</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主要章节</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把手机用得更深</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">喜欢动手、爱搞明白原理的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一次 ADB 操作 / 一个 Termux 脚本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十、二十三章及附</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">从用户变成作者</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想做点东西、不怕试错的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一个跑得起来的小应用或一条视频</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三十七至八十、九十六至一百零五章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把课带回家</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家里有老人小孩的人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">爸妈手机的体检记录 / 一份家庭公约</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十七、二十九、三十五章</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -528,7 +528,7 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：好奇的最低配置
+小贴士：好奇的最低配置
 
 {class="mt-1"}
 不需要整块时间。遇到一个看不懂的名词、一个对不上的菜单，先问一句"它想解决什么问题"，再去搜官方文档——顺序别反。一年下来，这个习惯能攒出一大串"哦，原来如此"。好奇心的复利，就是这么一秒一秒滚起来的。
@@ -565,12 +565,12 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">问题</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">成因</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">每天一个动作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪章</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐私</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">便利与数据绑在一起流动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">授权弹窗多看十秒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六、二十一、二十五章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">沉迷</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注意力被精心设计地收割</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">睡前手机放卧室外充电</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九、三十五章</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信息茧房</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">推荐只投喂你爱看的</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每天主动搜一个陌生领域</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九章（信息焦虑）</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">问题</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">成因</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">每天一个动作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪章</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐私</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">便利与数据绑在一起流动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">授权弹窗多看十秒</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六、二十一、二十五章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">沉迷</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注意力被精心设计地收割</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">睡前手机放卧室外充电</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九、三十五章</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信息茧房</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">推荐只投喂你爱看的</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每天主动搜一个陌生领域</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第二十九章（信息焦虑）</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -589,7 +589,7 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把"保持清醒"活成新的焦虑。数字健康不是让你时刻自责，更不是把手机锁进抽屉。判断关系健康与否的标准是你自己的状态：这周睡得好、事办成了、心情不糟，说明当前的关系就没问题——数据好不好看，无所谓。
@@ -610,24 +610,24 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">体检项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">自查动作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">异常信号与处理</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">锁屏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">检查密码强度，试一次指纹/人脸解锁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码含生日或过于简单→换一个；生物识别失灵→重新录入</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双重认证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逐一查看邮箱、云空间、支付、聊天四大账号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有账号没开→当场补上，十分钟内的事，别写进待办</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确认开关状态，看一次定位是否准确</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">被关闭或定位漂移→重新开启并检查权限</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看最近一次备份时间，从云端真恢复一份文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超过一个月没备份→当天补跑；恢复失败→按第十八章排查</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按应用过相机、麦克风、位置、通讯录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">说不出理由的授权→关掉，App 会再要的</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储与电池</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看剩余空间比例和电池健康度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">空间低于两成→清缓存卸应用；电池健康骤降→检查充电习惯</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账单与登录记录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">翻近半年支付账单，看重要账号的登录设备列表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有不认识的扣款或陌生设备→立即改密码踢设备，按第三十二章流程走</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频连线，替爸妈把上面几项远程过一遍</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发现可疑短信来电→当场讲一遍"挂断回拨"，顺手开拦截</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">体检项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">自查动作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">异常信号与处理</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">锁屏</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">检查密码强度，试一次指纹/人脸解锁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密码含生日或过于简单→换一个；生物识别失灵→重新录入</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双重认证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">逐一查看邮箱、云空间、支付、聊天四大账号</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有账号没开→当场补上，十分钟内的事，别写进待办</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查找设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确认开关状态，看一次定位是否准确</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">被关闭或定位漂移→重新开启并检查权限</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看最近一次备份时间，从云端真恢复一份文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超过一个月没备份→当天补跑；恢复失败→按第十八章排查</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按应用过相机、麦克风、位置、通讯录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">说不出理由的授权→关掉，App 会再要的</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储与电池</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看剩余空间比例和电池健康度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">空间低于两成→清缓存卸应用；电池健康骤降→检查充电习惯</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账单与登录记录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">翻近半年支付账单，看重要账号的登录设备列表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有不认识的扣款或陌生设备→立即改密码踢设备，按第三十二章流程走</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频连线，替爸妈把上面几项远程过一遍</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发现可疑短信来电→当场讲一遍"挂断回拨"，顺手开拦截</td></tr>
+ </tbody>
 </table>
 ```
 :::
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 没验证过的备份，等于没有备份。
@@ -663,7 +663,7 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：让公约真正生效
+来动手：让公约真正生效
 
 {class="mt-1"}
 三步：一，写完存进备忘录并置顶，或者打印出来贴在每天看得见的地方；二，打开日历建一个半年后的提醒，标题就叫"回看我的手机使用公约"，提醒里写上公约的位置；三，把公约里最硬的一条（通常是验证条款）讲给家里另一个人听：有人知道你的规矩，规矩才守得住。
@@ -737,7 +737,7 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>最后一个练习
+最后一个练习
 
 {class="mt-1"}
 合上这本书，拿起你的手机，做一件事：<strong>用30秒想想，你的手机里有哪三样东西是"丢了会真正心疼"的？</strong>然后，确保它们被备份了。这本书就值了。
@@ -759,7 +759,7 @@ AI 能替你操作，不能替你判断；能替你执行，不能替你负责�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 全书 0–105 章：前半解决"手机帮我做事"，中段解决"出事怎么办"，后半解决"做点自己的东西"；按需回翻，附录 G 按词、按场景都能查

@@ -19,19 +19,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เทคโนโลยี</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ใครใช้</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเด่น</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระบบนิเวศ Apple ประสบการณ์ลื่นไหลที่สุด ต้องใช้ Apple TV หรือทีวีที่รองรับ AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">มือถือ Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เชื่อมต่อโดยตรงผ่าน Wi-Fi Direct ไม่ต้องใช้เราเตอร์ มือถือ Android จะใช้วิธีนี้เป็นค่าเริ่มต้นสำหรับ "การแคสต์หน้าจอไร้สาย"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ทุกแพลตฟอร์ม</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ส่งเฉพาะไฟล์สื่อ (วิดีโอ/เพลง/รูปภาพ) ไม่มิเรอร์หน้าจอ เหมาะสำหรับส่งวิดีโอไปเล่นบนทีวี</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เทคโนโลยี</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ใครใช้</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเด่น</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระบบนิเวศ Apple ประสบการณ์ลื่นไหลที่สุด ต้องใช้ Apple TV หรือทีวีที่รองรับ AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">มือถือ Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เชื่อมต่อโดยตรงผ่าน Wi-Fi Direct ไม่ต้องใช้เราเตอร์ มือถือ Android จะใช้วิธีนี้เป็นค่าเริ่มต้นสำหรับ "การแคสต์หน้าจอไร้สาย"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ทุกแพลตฟอร์ม</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ส่งเฉพาะไฟล์สื่อ (วิดีโอ/เพลง/รูปภาพ) ไม่มิเรอร์หน้าจอ เหมาะสำหรับส่งวิดีโอไปเล่นบนทีวี</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>คำเตือนด้านความปลอดภัย
+คำเตือนด้านความปลอดภัย
 
 {class="mt-1"}
 ไม่ว่าจะเลือกโซลูชันการเชื่อมต่อรถยนต์แบบใด ขณะขับรถควรพยายามใช้การควบคุมด้วยเสียงให้มากที่สุด ตั้งจุดหมายนำทางล่วงหน้า เลือกเพลย์ลิสต์ล่วงหน้า และห้ามไปจิ้มหน้าจอระบบรถยนต์ขณะขับขี่
@@ -86,7 +86,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: ทำการแคสต์หน้าจอจากมือถือไปยังทีวีสำเร็จ
+ลงมือทำ: ทำการแคสต์หน้าจอจากมือถือไปยังทีวีสำเร็จ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : ยืนยันว่ามือถือกับทีวีต่อ Wi-Fi เดียวกัน
@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - สามค่ายของการแคสต์ไร้สาย: AirPlay (Apple), Miracast (Android), DLNA (ส่งสื่อข้ามแพลตฟอร์ม)

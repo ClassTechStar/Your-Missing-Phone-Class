@@ -76,12 +76,12 @@ kind: chapter
 - البناء: Vite
 ## نموذج البيانات
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## خطة التطوير
 Step 1: التسجيل الأساسي للحركات (CRUD)

@@ -27,46 +27,46 @@ Usa la app de Tiempo para planificar el día
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Mira el tiempo por la mañana para decidir la ropa y el paraguas. Activa las alertas de lluvia para no pillarte fuera.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Usa el teléfono como cuentakilómetros</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Las apps de salud (Salud en iPhone, Google Fit en Android) registran tus pasos diarios. Útil para controlar la actividad física.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Usa "Buscar mi teléfono" en caso de pérdida</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Si pierdes el teléfono, usa "Buscar mi iPhone" o "Buscar mi dispositivo" desde otro dispositivo para localizarlo, bloquearlo o borrar los datos.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa el modo avión para cargar más rápido</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Al cargar el teléfono, activa el modo avión para que cargue más rápido (al no buscar red ni Wi-Fi, consume menos mientras carga).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa el teléfono como disco duro portátil</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Con un cable USB-C/Lightning, puedes transferir archivos entre el teléfono y el ordenador. Útil para llevar documentos o fotos grandes.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VI. Consejos para usuarios mayores</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El teléfono puede ser una gran herramienta para los mayores, pero requiere algunos ajustes para ser más accesible:</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activa el "modo sencillo"</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Muchos teléfonos Android tienen un "modo sencillo" que agranda los iconos y simplifica la interfaz. iPhone no tiene esta función, pero se puede lograr un efecto similar ajustando el tamaño de los iconos y el texto.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aumenta el tamaño del texto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Ajustes &gt; Pantalla &gt; Tamaño del texto. Aumenta el tamaño del texto para que sea más fácil de leer. iPhone también tiene "Texto en negrita" que mejora la legibilidad.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activa la lectura en voz alta</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: El iPhone tiene una función de "Lectura en voz alta" (Ajustes &gt; Accesibilidad &gt; Contenido leído). Android también la tiene; permite que el teléfono lea en voz alta el texto de la pantalla.</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activa el "modo de emergencia" y los contactos de emergencia</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Configura contactos de emergencia en el teléfono (Ajustes &gt; Emergencia). En caso de necesidad, cualquiera puede llamar a tus contactos de emergencia desde la pantalla de bloqueo.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Desactiva las notificaciones no esenciales</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: El iPhone tiene una función de "Lectura en voz alta" (Ajustes &gt; Accesibilidad &gt; Contenido leído). Android también la tiene; permite que el teléfono lea en voz alta el texto de la pantalla.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Mira el tiempo por la mañana para decidir la ropa y el paraguas. Activa las alertas de lluvia para no pillarte fuera.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Usa el teléfono como cuentakilómetros</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Las apps de salud (Salud en iPhone, Google Fit en Android) registran tus pasos diarios. Útil para controlar la actividad física.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Usa "Buscar mi teléfono" en caso de pérdida</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Si pierdes el teléfono, usa "Buscar mi iPhone" o "Buscar mi dispositivo" desde otro dispositivo para localizarlo, bloquearlo o borrar los datos.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa el modo avión para cargar más rápido</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Al cargar el teléfono, activa el modo avión para que cargue más rápido (al no buscar red ni Wi-Fi, consume menos mientras carga).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usa el teléfono como disco duro portátil</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Con un cable USB-C/Lightning, puedes transferir archivos entre el teléfono y el ordenador. Útil para llevar documentos o fotos grandes.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VI. Consejos para usuarios mayores</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El teléfono puede ser una gran herramienta para los mayores, pero requiere algunos ajustes para ser más accesible:</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activa el "modo sencillo"</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Muchos teléfonos Android tienen un "modo sencillo" que agranda los iconos y simplifica la interfaz. iPhone no tiene esta función, pero se puede lograr un efecto similar ajustando el tamaño de los iconos y el texto.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aumenta el tamaño del texto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Ajustes &gt; Pantalla &gt; Tamaño del texto. Aumenta el tamaño del texto para que sea más fácil de leer. iPhone también tiene "Texto en negrita" que mejora la legibilidad.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activa la lectura en voz alta</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: El iPhone tiene una función de "Lectura en voz alta" (Ajustes &gt; Accesibilidad &gt; Contenido leído). Android también la tiene; permite que el teléfono lea en voz alta el texto de la pantalla.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activa el "modo de emergencia" y los contactos de emergencia</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Configura contactos de emergencia en el teléfono (Ajustes &gt; Emergencia). En caso de necesidad, cualquiera puede llamar a tus contactos de emergencia desde la pantalla de bloqueo.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Desactiva las notificaciones no esenciales</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: El iPhone tiene una función de "Lectura en voz alta" (Ajustes &gt; Accesibilidad &gt; Contenido leído). Android también la tiene; permite que el teléfono lea en voz alta el texto de la pantalla.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ Aprende a usar "transferencia de archivos rápida"
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Alerta de seguridad
+Alerta de seguridad
 
 {class="mt-1"}
 No dejes que la batería llegue a 0%
@@ -111,7 +111,7 @@ No dejes que la batería llegue a 0%
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>No cargues el teléfono al 100% todas las noches
+No cargues el teléfono al 100% todas las noches
 
 {class="mt-1"}
 : Mantener la batería al 100% durante mucho tiempo la estresa. Si puedes, cárgala al 80-90% y desenchúfala.
@@ -119,7 +119,7 @@ No dejes que la batería llegue a 0%
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Desactiva el GPS, Bluetooth y Wi-Fi cuando no los uses
+Desactiva el GPS, Bluetooth y Wi-Fi cuando no los uses
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : Estos servicios consumen batería. Desactívalos cuando no los necesites; en Android, usa el panel de ajustes rápidos para hacerlo de un toque.
@@ -130,7 +130,7 @@ No dejes que la batería llegue a 0%
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - : Ajustes &gt; General &gt; Actualización en segundo plano (iPhone) o Ajustes &gt; Apps (Android). Desactiva la actualización en segundo plano de las apps que no necesiten estar siempre actualizadas.

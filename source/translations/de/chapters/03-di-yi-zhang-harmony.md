@@ -55,7 +55,7 @@ Drei. HarmonyOS NEXT (HarmonyOS 5): Der wahre Start von Huaweis eigenem Betriebs
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Vor dem Upgrade auf HarmonyOS NEXT unbedingt beachten
+Vor dem Upgrade auf HarmonyOS NEXT unbedingt beachten
 
 {class="mt-1"}
 Nach dem Upgrade auf HarmonyOS NEXT kann dein Smartphone keine Android-Anwendungen mehr ausführen. Kläre vor dem Upgrade unbedingt: ① Deine wichtigsten Apps liegen als native HarmonyOS-Version vor; ② In deinem Arbeits- oder Alltag gibt es kein Szenario, das zwingend auf Android-Apps angewiesen ist. Ein Zurückrollen auf HarmonyOS 4.3 ist nach dem Upgrade nicht möglich.
@@ -94,7 +94,7 @@ Stand des App-Ökosystems:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Wichtige Hinweise
+Wichtige Hinweise
 
 {class="mt-1"}
 HarmonyOS wird kontinuierlich weiterentwickelt, zwischen den Versionen kann es leichte Unterschiede geben. Diese Beschreibung bezieht sich auf die wesentlichen Merkmale von HarmonyOS 4.3 und 5.0. Die konkreten Funktionen richten sich nach der tatsächlichen Version deines Smartphones. Halte das System aktuell, um die neuesten Funktionen und Sicherheits-Patches zu erhalten.
@@ -102,7 +102,7 @@ HarmonyOS wird kontinuierlich weiterentwickelt, zwischen den Versionen kann es l
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt ausprobieren: HarmonyOS-Funktionen erleben
+Jetzt ausprobieren: HarmonyOS-Funktionen erleben
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Öffne das Kontrollzentrum und tippe auf „Super-Terminal“ – schau, ob es in der Nähe andere HarmonyOS-Geräte gibt.

@@ -98,7 +98,7 @@ Ramai orang menggunakan AI seperti menggunakan Baidu,menaip beberapa kata kunci.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>1. Peranan (Role): Beritahu AI siapa dia
+1. Peranan (Role): Beritahu AI siapa dia
 
 {class="mt-1"}
 Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional dan gaya ungkapan dalam bidang yang sepadan.<strong>Semakin spesifik penetapan peranan, semakin profesional outputnya</strong>.
@@ -198,39 +198,39 @@ Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional d
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Jawapan terlalu akademik/terlalu rasmi</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Tambah sekatan nada + senarai tolak "bahasa rasmi"</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Jawapan menyeleweng/tidak menjawab soalan</td>
-                                    <td class="border border-gray-300 px-3 py-2">Nyatakan semula tugas dengan kata kerja, dan minta "hanya jawab ini"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Jawapan terlalu panjang tidak habis dibaca</td>
-                                    <td class="border border-gray-300 px-3 py-2">Sekatan tegar jumlah perkataan (dalam 200 perkataan)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI bercakap serius tetapi merapu</td>
-                                    <td class="border border-gray-300 px-3 py-2">Tambah "jika tidak pasti sila tandakan 'saya tidak pasti'" + semakan sendiri fakta penting </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Versi pertama tidak memuaskan</td>
-                                    <td class="border border-gray-300 px-3 py-2">Jangan tulis semula, tambah pada prompt asal "lebih... sikit"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">7. Tiga Kes Senario Lengkap</td>
-                                    <td class="border border-gray-300 px-3 py-2">Senario Satu: Pembantu Kehidupan (Cadangan Padanan Sarapan)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Prompt</td>
-                                    <td class="border border-gray-300 px-3 py-2">:</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Jawapan terlalu akademik/terlalu rasmi</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Tambah sekatan nada + senarai tolak "bahasa rasmi"</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Jawapan menyeleweng/tidak menjawab soalan</td>
+ <td class="border border-gray-300 px-3 py-2">Nyatakan semula tugas dengan kata kerja, dan minta "hanya jawab ini"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Jawapan terlalu panjang tidak habis dibaca</td>
+ <td class="border border-gray-300 px-3 py-2">Sekatan tegar jumlah perkataan (dalam 200 perkataan)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI bercakap serius tetapi merapu</td>
+ <td class="border border-gray-300 px-3 py-2">Tambah "jika tidak pasti sila tandakan 'saya tidak pasti'" + semakan sendiri fakta penting </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Versi pertama tidak memuaskan</td>
+ <td class="border border-gray-300 px-3 py-2">Jangan tulis semula, tambah pada prompt asal "lebih... sikit"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">7. Tiga Kes Senario Lengkap</td>
+ <td class="border border-gray-300 px-3 py-2">Senario Satu: Pembantu Kehidupan (Cadangan Padanan Sarapan)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Prompt</td>
+ <td class="border border-gray-300 px-3 py-2">:</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional d
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Senario Satu: Pembantu kehidupan (cadangan padanan sarapan)
+Senario Satu: Pembantu kehidupan (cadangan padanan sarapan)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -257,7 +257,7 @@ Anda adalah blogger sarapan yang mahir dalam padanan pemakanan (<strong>Peranan<
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Senario Dua: Bantuan Pembelajaran (Persediaan English CET-6)
+Senario Dua: Bantuan Pembelajaran (Persediaan English CET-6)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -275,7 +275,7 @@ Anda adalah <strong>guru CET-6 berpengalaman</strong> (Peranan). Saya pelajar ij
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Senario Tiga: Kecekapan Kerja (Pengemasan Minit Mesyuarat)
+Senario Tiga: Kecekapan Kerja (Pengemasan Minit Mesyuarat)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -293,7 +293,7 @@ Anda adalah <strong>penolong pentadbiran kanan</strong> (Peranan). Saya baru sel
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Gaya lanjutan: Jadikan AI "Pembantu Peribadi" anda
+Gaya lanjutan: Jadikan AI "Pembantu Peribadi" anda
 
 {class="mt-1"}
 Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
@@ -318,7 +318,7 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>AI adalah alat bukan autoriti, kekalkan pemikiran dan penilaian bebas.
+AI adalah alat bukan autoriti, kekalkan pemikiran dan penilaian bebas.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Apabila menghadapi keputusan kritikal (perubatan, undang-undang, kewangan), rujuk profesional bukan bergantung pada AI
@@ -330,7 +330,7 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: Ambil foto pelancong dengan pejalan kaki, gunakan fungsi "pembasmian ajaib" atau "pemadam AI", padamkan pejalan kaki dengan bersih. Perhatikan kesan "pelengkap" AI terhadap latar belakang.
+: Ambil foto pelancong dengan pejalan kaki, gunakan fungsi "pembasmian ajaib" atau "pemadam AI", padamkan pejalan kaki dengan bersih. Perhatikan kesan "pelengkap" AI terhadap latar belakang.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Cabaran Tiga: Pengoptimuman prompt</strong>: Mula-mula guna prompt ringkas "tulis panduan pelancongan" bertanya AI, kemudian gunakan rangka kerja CRISPE menulis prompt terperinci. Bandingkan perbezaan kualiti dua jawapan tersebut.
@@ -340,7 +340,7 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>1. Cara menetapkan Legacy Contact
+1. Cara menetapkan Legacy Contact
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Kesan praktikal: Wi-Fi 7 router telah mula dijual, tetapi telefon perlu sokong. iPhone 15 Pro/16 siri, Xiaomi 14, Samsung S24 Ultra dll flagship 2024 telah sokong Wi-Fi 7; peranti lebih awal disokong melalui kemas kini OS. Jika ada router Wi-Fi 7, boleh nikmati kelajuan rangkaian lebih cepat dan lebih stabil.</strong>: iPhone 13 ke Xiaomi 15 tukar jenama.

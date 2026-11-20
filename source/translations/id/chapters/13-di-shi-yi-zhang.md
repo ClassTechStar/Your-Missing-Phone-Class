@@ -61,7 +61,7 @@ Manfaatkan Pencarian
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Aktifkan "Grid Lines" di pengaturan kamera, cari tempat dengan cahaya alami ambil tiga foto (perhatikan lap lensa, atur eksposur).
+Aktifkan "Grid Lines" di pengaturan kamera, cari tempat dengan cahaya alami ambil tiga foto (perhatikan lap lensa, atur eksposur).
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Pilih yang terbaik, gunakan Snapseed untuk penyesuaian dasar (kecerahan, kontras, crop).

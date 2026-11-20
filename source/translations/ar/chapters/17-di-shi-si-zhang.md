@@ -46,7 +46,7 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>لماذا تعني "المعرفة الصفرية" أن مزود الخدمة لا يستطيع رؤية كلمات مرورك؟
+لماذا تعني "المعرفة الصفرية" أن مزود الخدمة لا يستطيع رؤية كلمات مرورك؟
 
 {class="mt-1"}
 لأن مفتاح فك التشفير مُشتق من كلمة مرورك الرئيسية، وهذه الكلمة موجودة في عقلك فقط وتُستخدم على جهازك المحلي فقط. على خادم مزود الخدمة لا توجد كلمة المرور الرئيسية ولا مفتاح فك التشفير، فقط النص المشفر. لهذا يصرح مزودون موثوقون مثل Bitwarden و1Password بوضوح "نحن أيضاً لا نستطيع رؤية كلمات مرورك", ليس لأنهم لا يريدون، بل لأنهم تقنياً لا يستطيعون.
@@ -71,7 +71,7 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ما تعلمناه من حادثة LastPass
+ما تعلمناه من حادثة LastPass
 
 {class="mt-1"}
 أولاً، كلمة المرور الرئيسية يجب أن تكون طويلة وفريدة (يُنصح بـ 16 خانة فأكثر، تتضمن أحرف كبيرة وصغيرة وأرقاماً ورموزاً)؛ ثانياً، أعطِ الأولوية للمزودين الذين يدعمون Argon2id وذوي التكرارات العالية؛ ثالثاً، للحسابات عالية القيمة (البنوك، البريد الإلكتروني) فعّل التحقق الثنائي المستقل، ولا تعتمد فقط على مدير كلمات المرور.
@@ -118,7 +118,7 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>مبدأ استعلام k-إخفاء الهوية
+مبدأ استعلام k-إخفاء الهوية
 
 {class="mt-1"}
 قلق من أن إدخال كلمة المرور في HaveIBeenPwned قد يتسبب في تسريب آخر؟ لا داعي للقلق. الاستعلامات الحديثة تستخدم بروتوكول "k-إخفاء الهوية": يرسل المتصفح أول 5 خانات فقط من تجزئة كلمة المرور إلى الخادم، ويعيد الخادم قائمة بكل التجزئات التي تبدأ بهذه الخمس خانات، ثم تتم المقارنة محلياً. أي أن الخادم لا يرى أبداً تجزئة كلمة مرورك الكاملة. 1Password وBitwarden
@@ -133,7 +133,7 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>تحقق الآن: هل كلمات مرورك آمنة؟
+تحقق الآن: هل كلمات مرورك آمنة؟
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. افتح haveibeenpwned.com، أدخل بريدك الإلكتروني المعتاد، وانظر في أي خروقات ظهر.
@@ -159,36 +159,36 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البعد</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">كلمة المرور التقليدية</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">مقاومة التصيد</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضعيفة، مواقع التصيد يمكن أن تسرق كلمة المرور</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مقاومة طبيعية للتصيد، المفتاح الخاص يوقّع على النطاق الحقيقي فقط</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">تأثير تسريب الخادم</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تجزئة كلمة المرور قد تُكسر</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الخادم يخزن المفتاح العام فقط، التسريب بلا تأثير</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">السهولة</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تحتاج حفظاً/إدخالاً/إدارة</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تسجيل دخول بـ Face ID/بصمة في ثانية</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">هجوم إعادة التشغيل</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قد يُعترض ويعاد تشغيله بواسطة وسيط</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">كل توقيع لمرة واحدة، لا يمكن إعادة تشغيله</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البعد</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">كلمة المرور التقليدية</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">مقاومة التصيد</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضعيفة، مواقع التصيد يمكن أن تسرق كلمة المرور</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مقاومة طبيعية للتصيد، المفتاح الخاص يوقّع على النطاق الحقيقي فقط</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">تأثير تسريب الخادم</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تجزئة كلمة المرور قد تُكسر</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الخادم يخزن المفتاح العام فقط، التسريب بلا تأثير</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">السهولة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تحتاج حفظاً/إدخالاً/إدارة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تسجيل دخول بـ Face ID/بصمة في ثانية</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">هجوم إعادة التشغيل</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قد يُعترض ويعاد تشغيله بواسطة وسيط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">كل توقيع لمرة واحدة، لا يمكن إعادة تشغيله</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. حالة الدعم في كل منصة
@@ -200,7 +200,7 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>المزامنة عبر الأجهزة هي الإنجاز الحاسم
+المزامنة عبر الأجهزة هي الإنجاز الحاسم
 
 {class="mt-1"}
 أكبر مشكلة في Passkey مبكراً كانت "الارتباط بجهاز واحد" — تغيير الهاتف يعني إنشاءه من جديد. منذ 2023 نفّذت Apple وGoogle وMicrosoft مزامنة Passkey عبر السحابة: iCloud Keychain يتزامن عبر أجهزة Apple، وGoogle Password Manager يتزامن عبر أجهزة Android. و1Password وغيرها من الأطراف الثالثة ربطت المزامنة عبر المنظومات. هذا يعني أن Passkey أصبح عملياً بما يكفي لاستبدال كلمات المرور.
@@ -236,7 +236,7 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب الآن: جرّب تسجيل الدخول بدون كلمة مرور
+جرّب الآن: جرّب تسجيل الدخول بدون كلمة مرور
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. سجّل الدخول لحساب Google ← الأمان ← مفاتيح المرور ← أضف مفتاح مرور، جرّب تسجيل الدخول بـ Face ID/البصمة.
@@ -247,7 +247,7 @@ AES (معيار التشفير المتقدم) خوارزمية تشفير مت�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>نصيحة لمرحلة الانتقال
+نصيحة لمرحلة الانتقال
 
 {class="mt-1"}
 Passkey لم يستبدل كلمات المرور بالكامل بعد, العديد من المواقع ما زالت في مرحلة "Passkey + كلمة مرور" متعايشة. نصيحة: فعّل Passkey أولاً للحسابات عالية القيمة، لكن<strong>لا تحذف كلمة المرور التقليدية فوراً</strong>، اتركها كاحتياط؛ وتابع استخدام مدير كلمات المرور، لأن ليس كل المواقع تدعم Passkey. اعتبر Passkey "إضافة قوية لمدير كلمات المرور" وليس "استبدالاً فورياً".
@@ -295,7 +295,7 @@ Passkey لم يستبدل كلمات المرور بالكامل بعد, الع�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>استراتيجية المفتاح المزدوج
+استراتيجية المفتاح المزدوج
 
 {class="mt-1"}
 أكبر خطر للمفتاح المادي هو "الفقدان". يُنصح: ① سجّل مفتاحين مختلفين في آن واحد؛ ② احمل واحداً معك (حلقة المفاتيح)، وخزّن واحداً في خزنة المنزل أو صندوق إيداع البنك؛ ③ بعض المواقع تسمح بطباعة "رموز الاستعادة الاحتياطية" وحفظها دون اتصال. هكذا حتى لو فُقد المفتاح الرئيسي، لن تُحجز خارج حسابك بشكل دائم.
@@ -303,7 +303,7 @@ Passkey لم يستبدل كلمات المرور بالكامل بعد, الع�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>احذر من قناة الشراء
+احذر من قناة الشراء
 
 {class="mt-1"}
 اشترِ حتماً من المتجر الرسمي أو الوكيل المعتمد، ولا تشترِ مفاتيح مستعملة أو من مصدر مجهول — من الناحية النظرية قد تُزرع أبواب خلفية في الأجهزة المعدة مسبقاً. لا يمكن تحديث firmware لـ YubiKey بعد الخروج من المصنع، لكن Yubico يستمر في نشر إعلانات الأمان، تابع موقعه الرسمي.
@@ -336,7 +336,7 @@ Passkey لم يستبدل كلمات المرور بالكامل بعد, الع�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>قيمة 1Password Families مقابل السعر
+قيمة 1Password Families مقابل السعر
 
 {class="mt-1"}
 1Password Families حوالي 4.99 دولار/شهر، يدعم حتى 5 أفراد أسرة، لكل فرد خزنة شخصية مستقلة + 4 خزنات مشتركة. يحسب بأقل من 1 دولار/شهر للفرد، وهو أفضل حل لتجربة المشاركة العائلية حالياً. نسخة Bitwarden العائلية 10 دولار/سنة تدعم 6 أفراد، قيمة أعلى، لكن تجربة الواجهة أقل قليلاً.
@@ -369,7 +369,7 @@ Passkey لم يستبدل كلمات المرور بالكامل بعد, الع�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>اعمله الآن: اترك "مفتاحاً احتياطياً" للأسرة
+اعمله الآن: اترك "مفتاحاً احتياطياً" للأسرة
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. اختر فرد أسرة موثوقاً كـ "جهة اتصال طوارئ".
@@ -388,7 +388,7 @@ Passkey لم يستبدل كلمات المرور بالكامل بعد, الع�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>تذكير مهم
+تذكير مهم
 
 {class="mt-1"}
 مدير كلمات المرور رغم راحته، يحمل مخاطر: إذا تسرّبت كلمة المرور الرئيسية، تنكشف جميع كلمات المرور. لذا يجب ألا تتطابق كلمة المرور الرئيسية مع أي كلمة مرور أخرى، وألا تُكتب في مكان يسهل العثور عليه. كما يُنصح باختيار مزوّد بسجل أمني جيد.
@@ -396,7 +396,7 @@ Passkey لم يستبدل كلمات المرور بالكامل بعد, الع�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب الآن: ابدأ باستخدام مدير كلمات المرور
+جرّب الآن: ابدأ باستخدام مدير كلمات المرور
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. اختر مدير كلمات مرور (يُوصى بـ Bitwarden أو أداة النظام المدمجة).

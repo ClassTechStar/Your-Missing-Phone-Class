@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* 設定画面へ誘導 */
-        default: /* 許可済み、始めよう */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* 設定画面へ誘導 */
+ default: /* 許可済み、始めよう */
+ }
+ }
 }
 
 // 3. 拒否されたときの優雅な代替：案内を表示 + 設定へ誘導
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. 通知の権限を申請（ポップアップは1回）
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "許可された" : "拒否された")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "許可された" : "拒否された")
+ }
 
 // 2. 「毎日20:00に記帳リマインダー」を予約
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "記帳リマインダー"
-    content.body = "今日はまだ記帳していないよ"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "記帳リマインダー"
+ content.body = "今日はまだ記帳していないよ"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ Swift 6 の並行処理の仕組みには、初心者が必ず知っておくべ
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // 現れたら開始、消えたら取消
-            await vm.search(city: "北京")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // 現れたら開始、消えたら取消
+ await vm.search(city: "北京")
+ }
+ }
 }
 ```
 :::

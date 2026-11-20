@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事项
+注意事项
 
 {class="mt-1"}
 开发者模式里的设置可能会影响系统稳定性，不懂的选项不要乱改。开启USB调试后，连接电脑时要小心，不要连接不信任的电脑。
@@ -57,7 +57,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识：为什么厂商要设置这个开关
+小知识：为什么厂商要设置这个开关
 
 {class="mt-1"}
 早期安卓没有这个开关，恶意软件只要拿到权限就能偷偷刷入系统。Google后来要求所有安卓厂商在开发者选项中加入"OEM解锁"开关，作为一道"用户知情同意"的确认。所以，即便你解了BL锁，只要OEM解锁开关关着，重新刷机照样失败。
@@ -95,7 +95,7 @@ ADB 全称 Android Debug Bridge（安卓调试桥），是 Google 官方提供�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>驱动和授权弹窗别忽略
+驱动和授权弹窗别忽略
 
 {class="mt-1"}
 Windows 用户如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> 显示 "unauthorized" 或根本不列出设备，多半是驱动没装好或者忘了在手机上点"允许"。三星/小米等品牌可以装各自的"USB驱动"或"手机助手"来补齐驱动；Mac 和 Linux 一般免驱。如果手机弹窗被你手滑点掉了，拔插一下数据线就会重新弹出来。
@@ -124,7 +124,7 @@ Windows 用户如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>千万别乱删系统核心包
+千万别乱删系统核心包
 
 {class="mt-1"}
 "pm uninstall --user 0"虽然是免 Root 的安全方式，但乱删关键系统应用（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> 状态栏、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> 电话、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> 设置）会导致系统崩溃、黑屏、无法开机等严重问题。删之前先 Google 一下"这个包名能不能删"，宁可少删不要错删。建议一次只删一两个，确认没问题再继续。
@@ -132,7 +132,7 @@ Windows 用户如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识：--user 0 是什么意思
+小知识：--user 0 是什么意思
 
 {class="mt-1"}
 安卓 4.2 之后支持多用户，每个用户有独立的 ID（机主是 0，附加用户从 10 开始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"只对当前机主卸载"，系统分区里的 APK 文件依然存在，只是不再给机主显示。所以它不需要 Root，没动系统文件，只改了"用户配置"。这也是它和 Root 后卸载最大的区别：Root 卸载是真正从系统里删掉，所有用户都不再有；ADB 卸载只是"对当前用户隐藏"。
@@ -159,7 +159,7 @@ Root权限相当于Linux中的超级用户（对/目录拥有完全控制权，�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>严重警告
+严重警告
 
 {class="mt-1"}
 Root操作有一定风险，可能导致手机变砖（无法开机）。如果你是新手，建议先充分了解相关知识，并确保有完整的备份。操作前请仔细阅读教程，确认你的机型和系统版本。
@@ -198,7 +198,7 @@ Root操作有一定风险，可能导致手机变砖（无法开机）。如果�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>猫鼠游戏永远不会结束
+猫鼠游戏永远不会结束
 
 {class="mt-1"}
 Google 每隔一段时间就会更新检测规则，App 厂商也会跟进升级 Play Integrity 校验。今天还能用的隐藏方案，明天可能就被识别。如果你完全依赖银行/支付 App（比如日常转账、扫码付款），最稳妥的选择仍然是：不要 Root、不要解 BL 锁。隐藏方案更适合"主力机不 Root + 备用机玩 Root"的玩家配置。
@@ -213,7 +213,7 @@ Google 每隔一段时间就会更新检测规则，App 厂商也会跟进升级
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：开启开发者模式并调整动画速度
+来动手：开启开发者模式并调整动画速度
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 进入设置 > 关于手机。

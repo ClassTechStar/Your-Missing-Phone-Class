@@ -102,7 +102,7 @@ Quando si riprendono video HDR, serve un display che supporti HDR per vedere l'e
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Consigli pratici
+Consigli pratici
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Riprese quotidiane: 1080P/4K + 30fps + codifica H.265, equilibra qualità e dimensione del file.
@@ -113,7 +113,7 @@ Quando si riprendono video HDR, serve un display che supporti HDR per vedere l'e
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Esplora: le impostazioni video del tuo telefono
+Esplora: le impostazioni video del tuo telefono
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apri l'app Fotocamera, passa alla modalità video.
@@ -241,7 +241,7 @@ Oltre alle foto quotidiane, il telefono ha alcune modalità speciali; usate bene
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Consigli pratici per la fotografia statica
+Consigli pratici per la fotografia statica
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Scatti quotidiani: HEIF/JPEG predefinito, file piccolo e qualità sufficiente.
@@ -253,7 +253,7 @@ Oltre alle foto quotidiane, il telefono ha alcune modalità speciali; usate bene
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: scopri le capacità della tua fotocamera
+Prova: scopri le capacità della tua fotocamera
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifica se il tuo telefono supporta lo scatto RAW (Impostazioni → Fotocamera → Formato), attivalo e scatta una foto, confronta le dimensioni del file JPEG e RAW della stessa scena.

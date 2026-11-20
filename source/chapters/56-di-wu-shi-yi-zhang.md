@@ -24,19 +24,19 @@ Compose 的核心思想一句话：<strong>界面 = 函数</strong>。每个能�
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "你好，$name！")     // 一个"文字积木"
+ Text(text = "你好，$name！") // 一个"文字积木"
 }
 
 // 嵌套组合：大积木套小积木
 @Composable
 fun HomeScreen() {
-    Column {                          // 竖着排列
-        Greeting(name = "张三")
-        Greeting(name = "李四")
-        Button(onClick = { /* 点击做什么 */ }) {
-            Text("点我")
-        }
-    }
+ Column { // 竖着排列
+ Greeting(name = "张三")
+ Greeting(name = "李四")
+ Button(onClick = { /* 点击做什么 */ }) {
+ Text("点我")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ Compose 四大基础组件
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "这是一段文字")
-        Button(onClick = { println("被点击了") }) {
-            Text("按钮")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("输入点什么") }
-        )
-    }
+ Column {
+ Text(text = "这是一段文字")
+ Button(onClick = { println("被点击了") }) {
+ Text("按钮")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("输入点什么") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("第一行")
-    Row {
-        Text("左边")
-        Text("右边")
-    }
-    Box {
-        Text("底层")
-        Text("叠在上面的角标")
-    }
+ Text("第一行")
+ Row {
+ Text("左边")
+ Text("右边")
+ }
+ Box {
+ Text("底层")
+ Text("叠在上面的角标")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "好看的文字",
-    modifier = Modifier
-        .padding(16.dp)          // 四周留白
-        .fillMaxWidth()          // 撑满宽度
-        .background(Color.Blue)  // 背景色
-        .clickable { /* 点击 */ }// 可点击
+ text = "好看的文字",
+ modifier = Modifier
+ .padding(16.dp) // 四周留白
+ .fillMaxWidth() // 撑满宽度
+ .background(Color.Blue) // 背景色
+ .clickable { /* 点击 */ }// 可点击
 )
 // 链式调用：一个接一个，顺序有意义（先 padding 再背景，背景不含边距）
 ```
@@ -132,7 +132,7 @@ Text(
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：Modifier 的顺序有讲究
+注意：Modifier 的顺序有讲究
 
 {class="mt-1"}
 <code class="inline">padding(16.dp).background(Blue)</code> 和 <code class="inline">background(Blue).padding(16.dp)</code> 效果不同——前者是"先留白再涂色"（背景不含边距），后者是"先涂色再留白"（背景包含边距）。新手最容易在这上面画错"奇怪的白边"。不确定时，调换顺序试试，预览立刻告诉你答案。
@@ -150,15 +150,15 @@ Text(
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf：记住这个会变化的值
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf：记住这个会变化的值
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "你点了 $count 次")
-        Button(onClick = { count++ }) {   // 改状态
-            Text("点我 +1")                // 界面自动刷新
-        }
-    }
+ Column {
+ Text(text = "你点了 $count 次")
+ Button(onClick = { count++ }) { // 改状态
+ Text("点我 +1") // 界面自动刷新
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> 用户点击</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 状态改变（count++）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 用户点击</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 状态改变（count++）</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 自动重画界面（重组）</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 自动重画界面（重组）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -188,7 +188,7 @@ fun Counter() {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：Material 3 动态取色
+小贴士：Material 3 动态取色
 
 {class="mt-1"}
 Android 12 起的"Material You"能让 App 从你的壁纸里提取颜色。Compose 模板默认支持（<code class="inline">dynamicColor</code>）。你的 App 在不同用户手机上会"自动换装"，这就是现代安卓的浪漫。
@@ -210,22 +210,22 @@ Compose 三个开发体验上的"外挂"，用上就回不去：
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // 值变化时自动平滑过渡到目标值
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // 值变化时自动平滑过渡到目标值
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先功能后动画
+小贴士：先功能后动画
 
 {class="mt-1"}
 新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效，这也是"简单至上"原则：<strong>动画是锦上添花，功能是雪中送炭</strong>。
@@ -233,7 +233,7 @@ fun AnimatedBox() {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做一个"心情按钮"
+来动手：做一个"心情按钮"
 
 {class="mt-1"}
 把模板项目改成一个心情切换器：一个按钮，点击后在 😀开心 → 😢难过 → 😡生气 之间循环切换，文字和背景色跟着变。提示：用 <code class="inline">when</code> 根据状态选文案和颜色。做完发给朋友玩，收获第一波"哇你会做 App 了"。
@@ -241,7 +241,7 @@ fun AnimatedBox() {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - Compose 思想：界面 = @Composable 函数，积木式嵌套
 - 四大组件：Text / Button / TextField / Image

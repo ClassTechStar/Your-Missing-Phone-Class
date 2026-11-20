@@ -77,12 +77,12 @@ kind: chapter
 ```
 // الطريقة الأولى: Intent صريح — تحدد بوضوح إلى أي شاشة تذهب
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "أحمد")     // يحمل "أمتعة" في السيارة (البيانات)
+intent.putExtra("name", "أحمد") // يحمل "أمتعة" في السيارة (البيانات)
 startActivity(intent)
 
 // الطريقة الثانية: Intent ضمني — تقول فقط ما المطلوب والنظام يجد من ينفذه
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // سيفتح النظام المتصفح (أو سيتيح لك الاختيار)
+startActivity(web) // سيفتح النظام المتصفح (أو سيتيح لك الاختيار)
 ```
 :::
 
@@ -101,16 +101,16 @@ startActivity(web)   // سيفتح النظام المتصفح (أو سيتيح 
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "غير معروف")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "غير معروف")
+ }
 }
 
 // للتنقل من داخل الشاشة:
-navController.navigate("detail/أحمد")     // مع وسيط
-navController.popBackStack()              // العودة إلى الشاشة السابقة
+navController.navigate("detail/أحمد") // مع وسيط
+navController.popBackStack() // العودة إلى الشاشة السابقة
 ```
 :::
 

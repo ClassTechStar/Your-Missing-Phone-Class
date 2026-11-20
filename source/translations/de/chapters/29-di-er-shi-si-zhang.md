@@ -45,41 +45,41 @@ Um Vor- und Nachteile des BL-Schlosses anschaulicher zu verstehen, zeigen wir ei
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kernfunktion</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Gesperrter Zustand (Standard)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Entsperrter Zustand</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Systemsicherheit</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Verhindert das Flashen nicht signierter inoffizieller Systeme und schuetzt Systemintegritaet und Sicherheit der unteren Ebene<br><span class="text-emerald-600 dark:text-emerald-400">✅ Hohe Sicherheit: Es werden nur offiziell signierte Images geladen; effektiv gegen Manipulation boesartiger Firmware</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Verringerte Sicherheit: Drittanbieter-ROMs koennen geflasht werden; die Systemintegritaetspruefung wird unwirksam. Erlangt Malware Root-Rechte, kann sie das System tiefgreifend manipulieren</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Systemstabilitaet</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stellt sicher, dass das Handy mit dem vom Hersteller getesteten und optimierten offiziellen System laeuft – fuer Stabilitaet und Fluessigkeit<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stabil: Offizielle Firmware, vollstaendige Funktionen, zuverlaessige OTA-Updates</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Erhoehtes Risiko: Drittanbieter-ROMs koennen Kompatibilitaetsprobleme haben, was zu Systemabstuerzen, Brick-Zustaenden, Hardware-Fehlfunktionen (z. B. Kamera, Schnellladen) oder fehlgeschlagenen OTA-Updates fuehren kann</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Garantierechte</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Der Hersteller liefert durch die BL-Sperre ein stabiles offizielles System als Grundlage fuer die Garantie<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garantie gueltig: Kostenlose offizielle Garantie (bei nicht selbst verschuldeten Schaeden)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garantie erloschen: Die meisten Hersteller werten die BL-Entsperrung als freiwilligen Garantieverzicht. Selbst nach erneuter Sperrung kann der Entsperrverlauf erkannt und die Garantie abgelehnt werden</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Datensicherheit</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Der Entsperrvorgang loescht in der Regel alle Daten, um zu verhindern, dass alte Daten im neuen Systemumfeld missbraeucht werden<br><span class="text-emerald-600 dark:text-emerald-400">✅ Datensicherheit: Im Alltag beschraenkt die BL-Sperre die Moeglichkeit boesartiger Programme, die Systempartition zu aendern</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Datenrisiko: Beim Entsperren werden alle Nutzerdaten zwangsgeloescht. Wird nach dem Entsperren nicht korrekt verschluesselt, koennen Daten unsicher sein. Bei Verlust lassen sich Daten durch Flashen leichter extrahieren</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Funktionseinschraenkungen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stellt sicher, dass sicherheitsabhaengige Funktionen (wie Zahlungen, Banking-Apps) normal laufen<br><span class="text-emerald-600 dark:text-emerald-400">✅ Vollstaendige Funktionen: Alle offiziellen Features sind nutzbar</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Einschraenkungen: Einige sicherheitskritische Apps (z. B. Google Pay, Banking-Apps) koennen bei erkanntem entsperrtem BL die Ausfuehrung verweigern. DRM-Dienste koennen herabgestuft werden, was die HD-Videowiedergabe beeintraechtigt</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kernfunktion</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Gesperrter Zustand (Standard)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Entsperrter Zustand</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Systemsicherheit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Verhindert das Flashen nicht signierter inoffizieller Systeme und schuetzt Systemintegritaet und Sicherheit der unteren Ebene<br><span class="text-emerald-600 dark:text-emerald-400">✅ Hohe Sicherheit: Es werden nur offiziell signierte Images geladen; effektiv gegen Manipulation boesartiger Firmware</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Verringerte Sicherheit: Drittanbieter-ROMs koennen geflasht werden; die Systemintegritaetspruefung wird unwirksam. Erlangt Malware Root-Rechte, kann sie das System tiefgreifend manipulieren</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Systemstabilitaet</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stellt sicher, dass das Handy mit dem vom Hersteller getesteten und optimierten offiziellen System laeuft – fuer Stabilitaet und Fluessigkeit<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stabil: Offizielle Firmware, vollstaendige Funktionen, zuverlaessige OTA-Updates</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Erhoehtes Risiko: Drittanbieter-ROMs koennen Kompatibilitaetsprobleme haben, was zu Systemabstuerzen, Brick-Zustaenden, Hardware-Fehlfunktionen (z. B. Kamera, Schnellladen) oder fehlgeschlagenen OTA-Updates fuehren kann</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Garantierechte</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Der Hersteller liefert durch die BL-Sperre ein stabiles offizielles System als Grundlage fuer die Garantie<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garantie gueltig: Kostenlose offizielle Garantie (bei nicht selbst verschuldeten Schaeden)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garantie erloschen: Die meisten Hersteller werten die BL-Entsperrung als freiwilligen Garantieverzicht. Selbst nach erneuter Sperrung kann der Entsperrverlauf erkannt und die Garantie abgelehnt werden</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Datensicherheit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Der Entsperrvorgang loescht in der Regel alle Daten, um zu verhindern, dass alte Daten im neuen Systemumfeld missbraeucht werden<br><span class="text-emerald-600 dark:text-emerald-400">✅ Datensicherheit: Im Alltag beschraenkt die BL-Sperre die Moeglichkeit boesartiger Programme, die Systempartition zu aendern</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Datenrisiko: Beim Entsperren werden alle Nutzerdaten zwangsgeloescht. Wird nach dem Entsperren nicht korrekt verschluesselt, koennen Daten unsicher sein. Bei Verlust lassen sich Daten durch Flashen leichter extrahieren</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Funktionseinschraenkungen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stellt sicher, dass sicherheitsabhaengige Funktionen (wie Zahlungen, Banking-Apps) normal laufen<br><span class="text-emerald-600 dark:text-emerald-400">✅ Vollstaendige Funktionen: Alle offiziellen Features sind nutzbar</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Einschraenkungen: Einige sicherheitskritische Apps (z. B. Google Pay, Banking-Apps) koennen bei erkanntem entsperrtem BL die Ausfuehrung verweigern. DRM-Dienste koennen herabgestuft werden, was die HD-Videowiedergabe beeintraechtigt</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ Anders als andere Android-Hersteller hat Samsung beim BL-Entsperrmechanismus ein
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Zweimal nachdenken vor dem Handeln
+Zweimal nachdenken vor dem Handeln
 
 {class="mt-1"}
 Der Knox-Ausloeser bei Samsung ist <strong>unumkehrbar</strong>; einmal ausgeloest, gibt es keinen Weg zurueck in den Werkszustand. Wenn du nur Funktionen nutzen moechtest, die eigentlich Root erfordern, pruefe zunaechst, ob es Alternativen ohne Root gibt.
@@ -123,7 +123,7 @@ Der Knox-Ausloeser bei Samsung ist <strong>unumkehrbar</strong>; einmal ausgeloe
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Coolapk
+Coolapk
 
 {class="mt-1"}
 : Bekannte chinesische Digital-Community mit vielen chinesischsprachigen Anleitungen und Diskussionen.
@@ -140,7 +140,7 @@ Erstens. "Sterben" des alten Smartphones: Leitfaden für sicheres Verkaufen oder
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Kernprinzip: Datenbereinigung ist nicht "Löschen", sondern "Überschreiben".
+Kernprinzip: Datenbereinigung ist nicht "Löschen", sondern "Überschreiben".
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>"Großreinemachen"</strong>: Ein letztes vollständiges Backup durchführen, alle Konten abmelden.
@@ -152,7 +152,7 @@ Erstens. "Sterben" des alten Smartphones: Leitfaden für sicheres Verkaufen oder
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>F1: Kann man den BL nach dem Entsperren wieder sperren?
+F1: Kann man den BL nach dem Entsperren wieder sperren?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Ja, er kann neu gesperrt werden. In der Regel muss das komplette offizielle Flash-Paket geflasht und ein spezielles Flash-Skript (z. B. das von Xiaomi) <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>) verwendet werden. Aber Achtung: Einige durch die Entsperrung ausgeloeste Sicherungen (wie Samsung Knox) koennen auch nach dem erneuten Sperren nicht rueckgaengig gemacht werden.
@@ -160,7 +160,7 @@ Erstens. "Sterben" des alten Smartphones: Leitfaden für sicheres Verkaufen oder
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>F2: Wie rootet man nach dem Entsperren?
+F2: Wie rootet man nach dem Entsperren?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Die BL-Entsperrung ist nur der erste Schritt. Root erfordert in der Regel:

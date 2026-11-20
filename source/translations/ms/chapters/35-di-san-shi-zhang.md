@@ -19,19 +19,19 @@ Outlook Calendar: Kalendar Microsoft, segerak dengan akaun Microsoft.
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. App jam</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Alarm: Tetapkan alarm untuk bangun, peringatan.</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">FCP (Fast Charge Protocol)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem Apple, pengalaman paling lancar. Perlu Apple TV atau TV yang sokong AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stopwatch: Guna stopwatch untuk aktiviti sukan.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct sambung terus, tidak perlu router. Telefon Android "pelancangan skrin wayarles" lalai guna ini</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Forest: App fokus yang menanam pokok maya, tumbuhan akan mati jika anda keluar App.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hanya tolak fail media (video/muzik/gambar), tidak cermin skrin. Sesuai tolak video ke TV untuk main</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2. App jam</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Alarm: Tetapkan alarm untuk bangun, peringatan.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">FCP (Fast Charge Protocol)</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem Apple, pengalaman paling lancar. Perlu Apple TV atau TV yang sokong AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stopwatch: Guna stopwatch untuk aktiviti sukan.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct sambung terus, tidak perlu router. Telefon Android "pelancangan skrin wayarles" lalai guna ini</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Forest: App fokus yang menanam pokok maya, tumbuhan akan mati jika anda keluar App.</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hanya tolak fail media (video/muzik/gambar), tidak cermin skrin. Sesuai tolak video ke TV untuk main</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Memandu semasa operasi telefon adalah haram, tetapi navigasi, dengar muzik, jawa
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
+atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
 
 {class="mt-1"}
 Tidak kira skim sambungan kereta mana, semasa memandu perlu cuba guna kawalan suara. Navigasi tetapkan destinasi lebih awal, muzik pilih playlist lebih awal, jangan operasi skrin unit kereta semasa memandu.
@@ -86,7 +86,7 @@ Guna VPN untuk akses selamat ke rangkaian syarikat dari lokasi jauh.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Guna pengurus kata laluan untuk simpan kata laluan kerja dengan selamat.
+Guna pengurus kata laluan untuk simpan kata laluan kerja dengan selamat.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Jika anda mempunyai peranti rumah pintar, cuba cipta "Mod Keluar Rumah" dalam App telefon pintar: satu ketik matikan lampu, matikan penyaman udara, mulakan robot pembersih vakum.
@@ -98,7 +98,7 @@ Guna VPN untuk akses selamat ke rangkaian syarikat dari lokasi jauh.
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tiga kem pelancangan skrin wayarles: AirPlay (Apple), Miracast (Android), DLNA (media tolak merentas platform)

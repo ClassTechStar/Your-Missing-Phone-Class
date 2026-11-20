@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>Βασική metaphor: δρόμος και αυτοκίνητο
+Βασική metaphor: δρόμος και αυτοκίνητο
 
 {class="mt-1"}
 Φανταστείτε το διαδίκτυο σαν μια πόλη.<strong>«δρόμος»</strong> είναι η πύλη μεταξύ του τηλεφώνου σας και του internet,<strong>«αυτοκίνητο»</strong> είναι δεδομένα που τρέχουν στο δρόμο. Το Wi-Fi και τα δεδομένα είναι δύο διαφορετικοί δρόμοι, αλλά τα δεδομένα (αυτοκίνητο) είναι τα ίδια.
@@ -36,7 +36,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>Δοκιμάστε: Ελέγξτε το πακέτο δεδομένων σας
+Δοκιμάστε: Ελέγξτε το πακέτο δεδομένων σας
 
 {class="mt-1"}
 Ανοίξτε στο κινητό [Ρυθμίσεις] &gt; [Κινητό δίκτυο] &gt; [Διαχείριση δεδομένων], δείτε πόσα δεδομένα σας απομένουναυτό τον μήνα, ποιες App καταναλώνουν τα περισσότερα. Έτσι έχετε μια εικόνα, δεν ανησυχείτε όταν βγαίνετε.
@@ -49,7 +49,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Υπενθύμιση ασφαλείας
+Υπενθύμιση ασφαλείας
 
 {class="mt-1"}
 Σε αεροδρόμια, malls, καφέ και άλλα δημόσιους χώρους, μην συνδέεστε σε δωρεάν Wi-Fi με ύποπτα ονόματα (όπως «Free_WiFi_2024»). Ακόμα και αν συνδεθείτε, μην κάνετε login σε τραπεζικές App ήεισαγωγή κωδικούς.
@@ -81,7 +81,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Σημαντική προειδοποίηση: πριν ταξιδέψετε κλείστε το [Δεδομένα roaming]!
+Σημαντική προειδοποίηση: πριν ταξιδέψετε κλείστε το [Δεδομένα roaming]!
 
 {class="mt-1"}
 Η χρήση mobile data στο εξωτερικό μπορεί να παράγει τεράστιους λογαριασμούς! Πριν ταξιδέψετε πρέπει οπωσδήποτε κλείστε το data roaming, ή αγοράστε τοπική κάρτα δεδομένων/διεθνές roaming πακέτο.
@@ -106,53 +106,53 @@ Android και iOS μπορούν να κάνουν το συνδεδεμένο 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πρότυπο</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πρωτόκολλο</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ζώνη</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μέγιστη ταχύτητα</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Χαρακτηριστικά</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Παλιό πρότυπο, κάλυψη μέτρια</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σήμερα πιο κοινό, ταχύτητα επαρκής</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ισχυρή απόδοση σε πολλαπλές συσκευές, χαμηλή καθυστέρηση</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Προσθέτει ζώνη 6GHz, χωρίς συμφόρηση</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ακραία ταχύτητα, πολλαπλή σύνδεσησύνδεση</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πρότυπο</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πρωτόκολλο</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ζώνη</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μέγιστη ταχύτητα</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Χαρακτηριστικά</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Παλιό πρότυπο, κάλυψη μέτρια</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σήμερα πιο κοινό, ταχύτητα επαρκής</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ισχυρή απόδοση σε πολλαπλές συσκευές, χαμηλή καθυστέρηση</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Προσθέτει ζώνη 6GHz, χωρίς συμφόρηση</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ακραία ταχύτητα, πολλαπλή σύνδεσησύνδεση</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ NFC (Near Field Communication, επικοινωνία κοντινού πεδί�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκιμάστε: Ρυθμίστε και διαχειριστείτε το hotspot
+Δοκιμάστε: Ρυθμίστε και διαχειριστείτε το hotspot
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ανοίξτε [Ρυθμίσεις], βρείτε «Προσωπικό hotspot» ή «Κοινή χρήση δικτύου», ενεργοποιήστε, ρυθμίστε όνομα και κωδικό.

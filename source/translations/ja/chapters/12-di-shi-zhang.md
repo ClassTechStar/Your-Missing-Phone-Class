@@ -64,7 +64,7 @@ Appを開き、「マイ」または「ウォレット」を見つける。「�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>警察、銀行、カスタマーサポートは「安全口座」への送金を指示しません。
+警察、銀行、カスタマーサポートは「安全口座」への送金を指示しません。
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 誰かに支払いコードのスクショを送らせる人は、すべて詐欺師です。
@@ -75,7 +75,7 @@ Appを開き、「マイ」または「ウォレット」を見つける。「�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>AlipayとWeChatを開き、指紋/顔認証決済が有効か確認。
+AlipayとWeChatを開き、指紋/顔認証決済が有効か確認。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 「セキュリティロック」機能を見つけてオンに。

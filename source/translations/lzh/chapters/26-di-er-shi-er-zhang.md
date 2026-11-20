@@ -98,7 +98,7 @@ AI答之質，大抵繫於君何以"問"。同一之問，問法異，則AI所�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>何故需框架？
+何故需框架？
 
 {class="mt-1"}
 多人用AI如用百度：敲數關鍵詞入之。然AI非搜索引擎，其乃一"閱讀理解後回答"之語言模型。<strong>予其更多上下文、說清君欲何、限其勿跑偏</strong>，其即能予君精準之結果。框架乃將君腦中"好答案長何樣"譯爲AI能解之指令。
@@ -198,39 +198,39 @@ AI答之質，大抵繫於君何以"問"。同一之問，問法異，則AI所�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">症狀</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">解法</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太泛、不實用</td>
-                                    <td class="border border-gray-300 px-3 py-2">加背景（君爲何人/何場景）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太學術/太官方</td>
-                                    <td class="border border-gray-300 px-3 py-2">加語氣限制 + 拒"官話"清單</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答跑題/答非所問</td>
-                                    <td class="border border-gray-300 px-3 py-2">以動詞重述任務，並要求"只答此" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太長看不完</td>
-                                    <td class="border border-gray-300 px-3 py-2">硬性限字數（200字內）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI一本正經胡說</td>
-                                    <td class="border border-gray-300 px-3 py-2">加"若不確定請標‘吾不確定’" + 重要事實自查</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">第一版不滿意</td>
-                                    <td class="border border-gray-300 px-3 py-2">勿重寫，於原提示詞後追加"再…一些"</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">症狀</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">解法</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太泛、不實用</td>
+ <td class="border border-gray-300 px-3 py-2">加背景（君爲何人/何場景）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太學術/太官方</td>
+ <td class="border border-gray-300 px-3 py-2">加語氣限制 + 拒"官話"清單</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答跑題/答非所問</td>
+ <td class="border border-gray-300 px-3 py-2">以動詞重述任務，並要求"只答此" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太長看不完</td>
+ <td class="border border-gray-300 px-3 py-2">硬性限字數（200字內）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI一本正經胡說</td>
+ <td class="border border-gray-300 px-3 py-2">加"若不確定請標‘吾不確定’" + 重要事實自查</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">第一版不滿意</td>
+ <td class="border border-gray-300 px-3 py-2">勿重寫，於原提示詞後追加"再…一些"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ AI答之質，大抵繫於君何以"問"。同一之問，問法異，則AI所�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>場景一：生活助手（早餐搭配建議）
+場景一：生活助手（早餐搭配建議）
 
 {class="mt-1"}
 <strong>提示詞</strong>：
@@ -253,7 +253,7 @@ AI答之質，大抵繫於君何以"問"。同一之問，問法異，則AI所�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>場景二：學習輔助（英語六級備考）
+場景二：學習輔助（英語六級備考）
 
 {class="mt-1"}
 <strong>提示詞</strong>：
@@ -267,7 +267,7 @@ AI答之質，大抵繫於君何以"問"。同一之問，問法異，則AI所�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>場景三：工作效率（會議紀要整理）
+場景三：工作效率（會議紀要整理）
 
 {class="mt-1"}
 <strong>提示詞</strong>：
@@ -281,7 +281,7 @@ AI答之質，大抵繫於君何以"問"。同一之問，問法異，則AI所�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>進階玩法：令AI爲君之"私人助理"
+進階玩法：令AI爲君之"私人助理"
 
 {class="mt-1"}
 試此等進階用法，以體驗AI之真正實力：
@@ -305,7 +305,7 @@ AI雖強，然絕非"無所不能"。清醒識其侷限，方能更好用之：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>AI使用小貼士
+AI使用小貼士
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - AI生成之內容或不準（"幻覺"問題），重要信息務必覈實。
@@ -317,7 +317,7 @@ AI雖強，然絕非"無所不能"。清醒識其侷限，方能更好用之：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來挑戰：三道AI實戰題
+來挑戰：三道AI實戰題
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>挑戰一：複雜指令</strong>：對語音助手曰："明晨7點提醒吾帶傘，並將今日午後3點之日曆改至4點。" 觀其能否一次完成多步操作。
@@ -327,7 +327,7 @@ AI雖強，然絕非"無所不能"。清醒識其侷限，方能更好用之：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例 2：換機數據遷移全程
+案例 2：換機數據遷移全程
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>場景</strong>：iPhone 13 → 小米 15 跨品牌換機。

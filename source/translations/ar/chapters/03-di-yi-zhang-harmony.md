@@ -55,7 +55,7 @@ HarmonyOS NEXT (HarmonyOS NEXT 5.0) يختلف اختلافاً جوهرياً �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>اقرأ قبل الترقية إلى HarmonyOS NEXT
+اقرأ قبل الترقية إلى HarmonyOS NEXT
 
 {class="mt-1"}
 بعد الترقية إلى HarmonyOS NEXT، لن يتمكن هاتفك من تشغيل تطبيقات Android. يرجى التأكد قبل الترقية: ① التطبيقات التي تستخدمها عادةً لديها إصدارات HarmonyOS أصلية؛ ② لا يوجد في عملك أو حياتك سيناريو يعتمد ضرورة على تطبيقات Android. لا يمكن التراجع عن الترقية إلى HarmonyOS 4.3.
@@ -94,7 +94,7 @@ HarmonyOS ليس مجرد نظام للهواتف، بل نظام بيئي يغ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>تحذيرات
+تحذيرات
 
 {class="mt-1"}
 نظام HarmonyOS في تحديث وتكرار مستمر، الإصدارات المختلفة قد يكون فيها بعض الاختلافات. هذا الوصف يعتمد على الخصائص الرئيسية لـ HarmonyOS 4.3 و 6، الوظائف المحددة يرجى الرجوع إلى الإصدار الفعلي على هاتفك. يُنصح بالحفاظ على تحديث النظام للحصول على أحدث الوظائف وترقيعات الأمان.
@@ -102,7 +102,7 @@ HarmonyOS ليس مجرد نظام للهواتف، بل نظام بيئي يغ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرب الآن: اختبر وظائف HarmonyOS المميزة
+جرب الآن: اختبر وظائف HarmonyOS المميزة
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. افتح مركز التحكم، ابحث عن "الجهاز الطرفي الفائق"، انظر إن كانت هناك أجهزة HarmonyOS أخرى حولك.

@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Τρία βήματα επιλογής
+Τρία βήματα επιλογής
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Σκεφτείτε πρώτα τι σας νοιάζει περισσότερο</strong>:???Οθόνη? Σύστημα??.
@@ -33,41 +33,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Διάσταση</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πώς να κρίνετε</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σύνοψη σε μία φράση</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Επεξεργαστής (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">.2026:8 Elite Gen5/9500=;8s Gen4/8400=υψηλό;7+ Gen4/7350=.6 Συμβουλές.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αγοράστε νέο όχι παλιό, το SoC καθορίζει πόσα χρόνια το κινητό σας θα λειτουργεί χωρίς κολλήματα</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Οθόνη</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLEDLCD, Εξοικονόμηση ενέργειας;120Hz60Hz; Ανάλυση 1080P.PWM(1920Hz).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+=Οθόνη</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Κάμερα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Pixel Αισθητήρας</strong>. Αισθητήρας Pixel.Μεγάλη γωνία; Τηλεφακός(3xZoom);Macro Φακός.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">+Τηλεφακός&gt; Φακός</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Μπαταρία Φόρτιση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh βασικό,5000mAh.:60W,100W.ασύρματο Φόρτιση.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + 60W γρήγορη φόρτιση = συνδυασμός χωρίς άγχος</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Σύστημα ενημέρωση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ασφάλεια.5-6 Σύστημα ενημέρωση; ναυαρχίδα 4 Σύστημα+5 Ασφάλεια ενημέρωση; Pixel7; μεσαίο ενημέρωση(2-3).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,Σύστημα ενημέρωση Μάρκα</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Διάσταση</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Πώς να κρίνετε</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σύνοψη σε μία φράση</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Επεξεργαστής (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">.2026:8 Elite Gen5/9500=;8s Gen4/8400=υψηλό;7+ Gen4/7350=.6 Συμβουλές.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αγοράστε νέο όχι παλιό, το SoC καθορίζει πόσα χρόνια το κινητό σας θα λειτουργεί χωρίς κολλήματα</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Οθόνη</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLEDLCD, Εξοικονόμηση ενέργειας;120Hz60Hz; Ανάλυση 1080P.PWM(1920Hz).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+=Οθόνη</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Κάμερα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Pixel Αισθητήρας</strong>. Αισθητήρας Pixel.Μεγάλη γωνία; Τηλεφακός(3xZoom);Macro Φακός.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">+Τηλεφακός&gt; Φακός</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Μπαταρία Φόρτιση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh βασικό,5000mAh.:60W,100W.ασύρματο Φόρτιση.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + 60W γρήγορη φόρτιση = συνδυασμός χωρίς άγχος</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Σύστημα ενημέρωση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ασφάλεια.5-6 Σύστημα ενημέρωση; ναυαρχίδα 4 Σύστημα+5 Ασφάλεια ενημέρωση; Pixel7; μεσαίο ενημέρωση(2-3).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,Σύστημα ενημέρωση Μάρκα</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σενάρια χρήσης</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τι να προσέξετε</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Προτεινόμενη κατεύθυνση</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Ειδικοί στη φωτογραφία</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">(1), Τηλεφακός(3xZoom),</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">σειρά vivo X, σειρά Huawei Pura/Mate, σειρά Xiaomi Ultra</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamers</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">, Σύστημα, Μπαταρία+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO ψηφιακό, ROG Phone, Redmi K</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Προτεραιότητα στη διάρκεια μπαταρίας</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh Μπαταρία, LTPO Οθόνη</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Magic, Redmi Note Μπαταρία</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Για ηλικιωμένους</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">, Μπαταρία,</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, σειρά OPPO A, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 φοιτητές</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">, Μπαταρία, γονείς Λειτουργία</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Χρήστης</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αν έχετε ήδη Mac/iPad/AirPods, το iPhone είναι η μόνη επιλογή</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standard (σχέση ποιότητας-τιμής) ή Pro (πλήρης εμπειρία)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Ταξίδια στο εξωτερικό</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM, Ζώνη συχνότητας, Google</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, σειρά Samsung S, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σενάρια χρήσης</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τι να προσέξετε</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Προτεινόμενη κατεύθυνση</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Ειδικοί στη φωτογραφία</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">(1), Τηλεφακός(3xZoom),</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">σειρά vivo X, σειρά Huawei Pura/Mate, σειρά Xiaomi Ultra</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Gamers</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">, Σύστημα, Μπαταρία+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO ψηφιακό, ROG Phone, Redmi K</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Προτεραιότητα στη διάρκεια μπαταρίας</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh Μπαταρία, LTPO Οθόνη</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Magic, Redmi Note Μπαταρία</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Για ηλικιωμένους</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">, Μπαταρία,</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy, Honor Play, σειρά OPPO A, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 φοιτητές</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">, Μπαταρία, γονείς Λειτουργία</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Χρήστης</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αν έχετε ήδη Mac/iPad/AirPods, το iPhone είναι η μόνη επιλογή</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 standard (σχέση ποιότητας-τιμής) ή Pro (πλήρης εμπειρία)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Ταξίδια στο εξωτερικό</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM, Ζώνη συχνότητας, Google</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, σειρά Samsung S, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πρακτική:
+Πρακτική:
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ,κεντρικό(:,).
@@ -208,7 +208,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Τρία βήματα επιλογής: Σκεφτείτε ανάγκες → Καθορίστε προϋπολογισμό → Επιλέξτε μοντέλο

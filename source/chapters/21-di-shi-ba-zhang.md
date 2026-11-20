@@ -100,7 +100,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>微信聊天记录特别注意
+微信聊天记录特别注意
 
 {class="mt-1"}
 微信聊天记录无法通过任何手机换机工具迁移！它不在整机备份的覆盖范围内。必须用微信自带的"聊天记录迁移"功能，或备份到电脑版微信。很多人在换完新手机之后才发现聊天记录全没了，那时候已经晚了：旧手机可能已经恢复出厂设置了。
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>练一练：做一次完整的备份演练
+练一练：做一次完整的备份演练
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 检查iCloud云备份或品牌云备份是否开启，确认上一次备份时间。

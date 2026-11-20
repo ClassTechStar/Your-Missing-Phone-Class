@@ -44,7 +44,7 @@ adalah dua hala: Jika anda memadam di telefon pintar, ia juga dipadam di awan; j
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: Tiga set privasi hanya pengguna berbayar boleh nikmati
+iCloud+: Tiga set privasi hanya pengguna berbayar boleh nikmati
 
 {class="mt-1"}
 Sebaik sahaja naik taraf ke mana-mana tier iCloud berbayar (50GB/200GB/2TB dll), auto menjadi <strong>iCloud+</strong> pengguna, buka tiga fungsi perlindungan privasi:
@@ -60,7 +60,7 @@ Petua: Private Relay tidak tersedia di sesetengah negara/kawasan, pengguna domes
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud Advanced Data Protection (ADP) — Penyulitan hujung ke hujung sebenar
+iCloud Advanced Data Protection (ADP) — Penyulitan hujung ke hujung sebenar
 
 {class="mt-1"}
 Akhir 2022 Apple melancarkan <strong>iCloud Advanced Data Protection (ADP)</strong>, mengembangkan penyulitan hujung ke hujung (E2EE) dari asalnya kesihatan, kata laluan dll sedikit data, ke <strong>kebanyakan besar data iCloud</strong>— foto, nota, sandaran awan iCloud, maklumat peranti dll jumlah 23 jenis data.
@@ -99,7 +99,7 @@ Buka tetapan telefon pintar, masuk ke halaman akaun, sahkan pengesahan dua fakto
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Periksa sama ada "Nombor Telefon Dipercayai" dan "Kunci Pemulihan" telah ditetapkan, tulis kunci di atas kertas.
+Periksa sama ada "Nombor Telefon Dipercayai" dan "Kunci Pemulihan" telah ditetapkan, tulis kunci di atas kertas.
 
 {class="mt-1"}
 Masuk ke pengurusan iCloud atau ruang awan, lihat data mana yang disegerakkan, matikan yang tidak diperlukan.
@@ -107,7 +107,7 @@ Masuk ke pengurusan iCloud atau ruang awan, lihat data mana yang disegerakkan, m
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Sahkan "Cari Telefon Pintar Saya" telah diaktifkan.
+Sahkan "Cari Telefon Pintar Saya" telah diaktifkan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Jika anda menggunakan Android, periksa sama ada sandaran awan jenama, sandaran Google, dan sandaran WeChat semuanya telah diliputi.

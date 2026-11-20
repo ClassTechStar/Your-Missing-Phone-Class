@@ -125,16 +125,16 @@ OPPO 和 vivo 两家的支持体系长得像：官网都有"服务"入口，保�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">官网入口</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">手机端入口</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">值得先看的特色</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网页脚"技术支持"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方支持App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iCloud.com 网页端、天才吧预约</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务与支持"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预装服务类App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备件价格查询、寄修服务</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网服务页</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">社区讨论与官方公告区</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">线下网点密度、自助检测</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与OPPO类似，以官方为准</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网支持页</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方会员App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程诊断、网页版查找</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">荣耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务与支持"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面逻辑与华为相近</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">官网入口</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">手机端入口</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">值得先看的特色</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网页脚"技术支持"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方支持App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iCloud.com 网页端、天才吧预约</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务与支持"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预装服务类App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备件价格查询、寄修服务</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网服务页</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">社区讨论与官方公告区</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">线下网点密度、自助检测</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与OPPO类似，以官方为准</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网支持页</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方会员App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程诊断、网页版查找</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">荣耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官网"服务与支持"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方服务App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面逻辑与华为相近</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -203,7 +203,7 @@ OPPO 和 vivo 两家的支持体系长得像：官网都有"服务"入口，保�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 视频里夹带的"下载链接"和"私信领工具"要警惕：评论区置顶的第三方网盘链接、简介里的"激活工具""破解版"，十有八九不在官方渠道之内。第四章拆过商店外安装的风险：真正需要的东西，官方商店和官网支持页都给，绕路拿的都要多想一秒。
@@ -219,7 +219,7 @@ OPPO 和 vivo 两家的支持体系长得像：官网都有"服务"入口，保�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 收藏夹里的网址会失效，但「先找一手来源、再看适用范围、最后交叉验证」这套顺序不会。
@@ -289,7 +289,7 @@ OPPO 和 vivo 两家的支持体系长得像：官网都有"服务"入口，保�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 今天就做一次"来源体检"：翻出你最近收藏的一条手机技巧，按三条筛子过一遍——它的一手来源在哪？发布时间和你的系统版本对得上吗？换个关键词再搜一次，有没有不同说法？过不了筛的收藏，删了不心疼。
@@ -386,13 +386,13 @@ OPPO 和 vivo 两家的支持体系长得像：官网都有"服务"入口，保�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">渠道</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合问什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方客服（热线/在线）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号、支付、保修、政策类——要"官方定论"的</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">回答有据可查，复杂问题可要求升级</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方社区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">产品使用问题、功能建议，官方人员与资深用户都在</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先搜历史帖，你的问题多半有人问过</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">论坛与问答社区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">故障排查、进阶玩法，真人经验密度高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">经验会过时，看回帖时间</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 助手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解释概念、梳理步骤的第一轮问答</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">会一本正经地编造，验证见下一节</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">渠道</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合问什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方客服（热线/在线）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号、支付、保修、政策类——要"官方定论"的</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">回答有据可查，复杂问题可要求升级</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方社区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">产品使用问题、功能建议，官方人员与资深用户都在</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先搜历史帖，你的问题多半有人问过</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">论坛与问答社区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">故障排查、进阶玩法，真人经验密度高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">经验会过时，看回帖时间</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI 助手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解释概念、梳理步骤的第一轮问答</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">会一本正经地编造，验证见下一节</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -453,7 +453,7 @@ AI还有一个被低估的用法：当学习伙伴。看不懂第二十三章里
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 下次遇到手机问题，先问AI要一份排查清单，再挑其中一步去设置搜索框里验证。把这套"问—验—追"的循环跑熟一次，你就有了自己的随身排障助理。
@@ -461,7 +461,7 @@ AI还有一个被低估的用法：当学习伙伴。看不懂第二十三章里
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 有两类事别交给AI：一是替你做支付相关的决定，它不知道你的账户情况，也不该知道；二是替你保管敏感信息，密码、验证码、身份证照片，别贴给任何AI。涉及钱、账号、验证码、解锁的问题，AI只能当讲解员，不能当执行人。要你交出密码、验证码、点链接转账的"解决方案"，无论来自AI还是真人，一律按第三十二章的急救流程处理：停手，打官方电话。第二十一章划下的那条线在这里依然有效，工具越方便，越要守住"不泄露"的底线。
@@ -525,7 +525,7 @@ MIT 那门课的风格不一样，它假设你已经开始跟代码打交道：s
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 读完这页就建那条重复提醒，顺手把"季度体检"笔记也建了。别高估自己的记性，这一页所有的节奏设计，都默认"人会忘"。
@@ -610,7 +610,7 @@ MIT 那门课的风格不一样，它假设你已经开始跟代码打交道：s
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 最好的资源，是让你下次不用回来的那种，方法在手，入口常新。
@@ -618,7 +618,7 @@ MIT 那门课的风格不一样，它假设你已经开始跟代码打交道：s
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 官方支持是首选：官网支持页、官方服务App、客服热线与线下网点是同一套服务的多张面孔；数据迁移和电脑管理认准官方工具，它们对结果负责。
 - 逐品牌逛"服务与支持"：苹果官网、iCloud.com、官方支持App三层，天才吧管线下维修；华为、小米、OPPO、vivo、三星、荣耀各有官网服务页与官方App。保修查询、网点查询。备件价格、自助排查是最值得用的板块，速查表在本节末尾。

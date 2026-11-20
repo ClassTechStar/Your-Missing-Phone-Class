@@ -86,119 +86,119 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פורמט</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סוג</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מאפיינים</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דרך פתיחה מומלצת</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמונה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה מאבדת, נפח קטן, התאימות הטובה ביותר. פורמט ברירת המחדל של צילום בטלפון.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גלריה / כל מציג תמונות</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמונה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה ללא אובדן, תומך ברקע שקוף. נפוץ לצילומי מסך ואייקונים. נפח גדול יותר מ-JPG.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גלריה / כל מציג תמונות</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה מאבדת, נפח קטן, תאימות מעולה. פורמט השמע הנפוץ ביותר.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כל נגן מוזיקה</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה ללא אובדן, איכות שמע זהה ל-CD, נפח גדול פי 3-5 מ-MP3. בחירה ראשונה לאודיופילים.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נגן מוזיקה / אפליקציית נגינה מקצועית</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע גולמי ללא דחיסה, איכות השמע הטובה ביותר אך נפח עצום. נפוץ בהקלטות מקצועיות.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נגן מוזיקה</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קידוד AAC, איכות שמע טובה יותר מ-MP3 באותו קצב סיביות. נפוץ במערכת האקולוגית של אפל.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music / נגן מוזיקה</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">וידאו</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט האריזה הנפוץ ביותר לוידאו, תאימות מעולה. פורמט ברירת המחדל להקלטת וידאו בטלפון.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גלריה / כל נגן וידאו</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">וידאו</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט אריזה בקוד פתוח, תומך במספר רצועות שמע וכתוביות. נפוץ במשאבי סרטים.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC / nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מסמך</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מסמך Word. DOCX הוא פורמט דחוס, נפח קטן יותר. DOC הוא פורמט ישן.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצגת</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצגת PowerPoint. PPTX הוא פורמט דחוס.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גיליון</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גיליון אלקטרוני Excel. XLSX הוא פורמט דחוס.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מסמך</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט חוצה פלטפורמות, פריסה קבועה ולא ניתנת לעריכה. נפוץ לחוזים, מאמרים וספרים אלקטרוניים.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader / WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט הדחיסה הנפוץ ביותר, תאימות טובה חוצת פלטפורמות.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מובנה במערכת / אפליקציית חילוץ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יחס דחיסה גבוה מ-ZIP, אך דורש תוכנה ייעודית לחילוץ.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית חילוץ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמונת דיסק</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קובץ תמונת דיסק, העתקה מלאה של תוכן הדיסק. נפוץ בחבילות התקנת מערכת.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית חילוץ / כונן וירטואלי</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דף אינטרנט</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קובץ דף אינטרנט, נפתח בדפדפן. דפי אינטרנט שמורים משתמשים בדרך כלל בפורמט זה.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דפדפן</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פורמט</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">סוג</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מאפיינים</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דרך פתיחה מומלצת</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמונה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה מאבדת, נפח קטן, התאימות הטובה ביותר. פורמט ברירת המחדל של צילום בטלפון.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גלריה / כל מציג תמונות</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמונה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה ללא אובדן, תומך ברקע שקוף. נפוץ לצילומי מסך ואייקונים. נפח גדול יותר מ-JPG.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גלריה / כל מציג תמונות</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה מאבדת, נפח קטן, תאימות מעולה. פורמט השמע הנפוץ ביותר.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כל נגן מוזיקה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה ללא אובדן, איכות שמע זהה ל-CD, נפח גדול פי 3-5 מ-MP3. בחירה ראשונה לאודיופילים.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נגן מוזיקה / אפליקציית נגינה מקצועית</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע גולמי ללא דחיסה, איכות השמע הטובה ביותר אך נפח עצום. נפוץ בהקלטות מקצועיות.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">נגן מוזיקה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שמע</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קידוד AAC, איכות שמע טובה יותר מ-MP3 באותו קצב סיביות. נפוץ במערכת האקולוגית של אפל.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music / נגן מוזיקה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">וידאו</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט האריזה הנפוץ ביותר לוידאו, תאימות מעולה. פורמט ברירת המחדל להקלטת וידאו בטלפון.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גלריה / כל נגן וידאו</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">וידאו</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט אריזה בקוד פתוח, תומך במספר רצועות שמע וכתוביות. נפוץ במשאבי סרטים.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC / nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מסמך</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מסמך Word. DOCX הוא פורמט דחוס, נפח קטן יותר. DOC הוא פורמט ישן.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצגת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מצגת PowerPoint. PPTX הוא פורמט דחוס.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גיליון</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">גיליון אלקטרוני Excel. XLSX הוא פורמט דחוס.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מסמך</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט חוצה פלטפורמות, פריסה קבועה ולא ניתנת לעריכה. נפוץ לחוזים, מאמרים וספרים אלקטרוניים.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader / WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פורמט הדחיסה הנפוץ ביותר, תאימות טובה חוצת פלטפורמות.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מובנה במערכת / אפליקציית חילוץ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דחיסה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יחס דחיסה גבוה מ-ZIP, אך דורש תוכנה ייעודית לחילוץ.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית חילוץ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תמונת דיסק</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קובץ תמונת דיסק, העתקה מלאה של תוכן הדיסק. נפוץ בחבילות התקנת מערכת.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית חילוץ / כונן וירטואלי</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דף אינטרנט</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קובץ דף אינטרנט, נפתח בדפדפן. דפי אינטרנט שמורים משתמשים בדרך כלל בפורמט זה.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דפדפן</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>תרגול: ארגן את תיקיית "ההורדות"
+תרגול: ארגן את תיקיית "ההורדות"
 
 {class="mt-1"}
 פתח את מנהל הקבצים &gt; היכנס לתיקיית "ההורדות". ראה מה יש בפנים? מחק את מה שלא נחוץ, ומיין את השימושי לפי קטגוריות (לדוגמה, צור תיקיות "חומרי עבודה", "חבילות מדבקות" והכנס לתוכן). אגב כך, בדוק את מרחב האחסון וראה אילו סוגי קבצים תופסים הכי הרבה מקום.
@@ -216,21 +216,21 @@ kind: chapter
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>שיטת המתנה "זמן + אירוע"</strong>: שם התיקייה כולל חותמת זמן ותיאור אירוע, להקלה על זכירה וחיפוש עתידי. לדוגמה <code>202606_כרטיסי נסיעה</code>, <code>2025_סיכום שנתי</code>, <code>2024_יום הולדת הילד</code>. כך רואים את ציר הזמן וגם יודעים מה התוכן במבט אחד.</li>
-                        <li><strong>מערכת סיווג תלת-שכבתית</strong>:
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>רמה ראשונה</strong>: לפי סוג קובץ (מסמכים / תמונות / וידאו / שמע)</li>
-                                <li><strong>רמה שנייה</strong>: לפי תרחיש שימוש (עבודה / חיים / לימודים)</li>
-                                <li><strong>רמה שלישית</strong>: לפי אירוע או פרויקט ספציפי (כגון "2026Q2_פרויקט A")</li>
-                            </ul>
-                        </li>
-                        <li><strong>תוכנית ניקוי חודשית</strong>: קבעו תאריך קבוע בכל חודש (מומלץ ביום קבלת המשכורת או ב-1 לחודש), ובצעו ארגון מרוכז של תיקיית "ההורדות": <strong>לארכב את השימושי, למחוק את המיותר, להעביר את היקר</strong>. 12 ארגונים קטנים בשנה קלים בהרבה מניקיון יסודי אחד שנצבר במשך שנה.</li>
-                    </ul>
+ <li><strong>שיטת המתנה "זמן + אירוע"</strong>: שם התיקייה כולל חותמת זמן ותיאור אירוע, להקלה על זכירה וחיפוש עתידי. לדוגמה <code>202606_כרטיסי נסיעה</code>, <code>2025_סיכום שנתי</code>, <code>2024_יום הולדת הילד</code>. כך רואים את ציר הזמן וגם יודעים מה התוכן במבט אחד.</li>
+ <li><strong>מערכת סיווג תלת-שכבתית</strong>:
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>רמה ראשונה</strong>: לפי סוג קובץ (מסמכים / תמונות / וידאו / שמע)</li>
+ <li><strong>רמה שנייה</strong>: לפי תרחיש שימוש (עבודה / חיים / לימודים)</li>
+ <li><strong>רמה שלישית</strong>: לפי אירוע או פרויקט ספציפי (כגון "2026Q2_פרויקט A")</li>
+ </ul>
+ </li>
+ <li><strong>תוכנית ניקוי חודשית</strong>: קבעו תאריך קבוע בכל חודש (מומלץ ביום קבלת המשכורת או ב-1 לחודש), ובצעו ארגון מרוכז של תיקיית "ההורדות": <strong>לארכב את השימושי, למחוק את המיותר, להעביר את היקר</strong>. 12 ארגונים קטנים בשנה קלים בהרבה מניקיון יסודי אחד שנצבר במשך שנה.</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>רשימת משימות לחודש זה
+רשימת משימות לחודש זה
 
 {class="mt-1"}
 בחרו סוף שבוע פנוי ופעלו לפי הסדר הבא:
@@ -258,7 +258,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>נוהל סטנדרטי לשליחת תמונות מסמכים/צילומי מסך רגישים
+נוהל סטנדרטי לשליחת תמונות מסמכים/צילומי מסך רגישים
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>טשטוש מידע גלוי</strong>: בעזרת כלי המערכת או כלי צד שלישי (כמו Meituxiuxiu, Snapseed) <strong>טשטשו את הספרות האמצעיות של מספר תעודת הזהות, לוחית הרישוי, מספר הבית, השם והסכום</strong> ושדות מפתח נוספים;

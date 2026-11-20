@@ -273,7 +273,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：拿自己当第一批数据
+小贴士：拿自己当第一批数据
 
 {class="mt-1"}
 刷短剧的时候顺手观察自己：你在哪一秒划走？是因为听不清、看不懂，还是"没什么事发生"？你的拇指就是最诚实的观众样本，把自己划走的理由记下来，写剧本时逐条避开，比任何写作课都直接。
@@ -485,7 +485,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：看 100 部再做第 1 部
+小贴士：看 100 部再做第 1 部
 
 {class="mt-1"}
 入行最快的学费是“拉片”：把各平台热门短剧 Top 榜前 20 部各看前 10 集，用表格记下“每集钩子是什么、反转在哪几秒”。看懂了套路模板，你的第一版剧本就不会是自嗨。但别照搬爆款，爆款的结构和平台推荐机制绑在一起，照抄往往只抄到外壳，抄不到它为什么被推荐。
@@ -592,7 +592,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：完成第一次"拉片"
+来动手：完成第一次"拉片"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 选一部平台热榜短剧，看前 10 集。
@@ -669,7 +669,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：给拉片加一个"对照组"
+小贴士：给拉片加一个"对照组"
 
 {class="mt-1"}
 拉同一题材的两部剧，一部热的、一部冷的，各拆前 5 集，把两张表并排放。差异会自己浮出来：热的那部开场 3 秒全是事件，冷的那部全是铺垫；热的每集欠观众一个问题，冷的每集都把话说尽。对照一次，胜过单独拉十部。
@@ -893,7 +893,7 @@ FAQ 管方向，这一节管手上。五个新手真正动笔后会卡住的细�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：三张表的新手版本
+小贴士：三张表的新手版本
 
 {class="mt-1"}
 刚起步嫌三张表多？先只建拉片表，它直接产生手艺。两周后加调研表；投稿台账等你第一次投出去那天再建。表跟着你的阶段长，别让工具跑在你的实践前面。
@@ -965,7 +965,7 @@ FAQ 管方向，这一节管手上。五个新手真正动笔后会卡住的细�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：启动你的 13 周
+来动手：启动你的 13 周
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 把五个动作抄进日历：调研 2 周、拉片 2 周、写作 4 周、验证 2 周、投出 1 周、复盘 2 周。
@@ -1017,7 +1017,7 @@ FAQ 管方向，这一节管手上。五个新手真正动笔后会卡住的细�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 三反传统：竖屏、微时长、强钩子
 - 竖屏改的是构图不是叙事，一次只放一个信息点

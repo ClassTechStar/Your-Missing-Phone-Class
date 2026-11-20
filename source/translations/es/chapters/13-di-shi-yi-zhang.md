@@ -61,7 +61,7 @@ El álbum del móvil acumula miles de fotos y encontrar una específica lleva et
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica: haz un ciclo completo de foto + edición + organización con tu móvil
+Practica: haz un ciclo completo de foto + edición + organización con tu móvil
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. En ajustes de la cámara activa "cuadrícula"; busca un lugar con luz natural y haz tres fotos (limpia el lente, ajusta exposición).

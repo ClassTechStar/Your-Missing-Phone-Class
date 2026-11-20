@@ -56,7 +56,7 @@ Descargar App desde páginas web o enlaces desconocidos puede traer virus, robar
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>¿Qué es un "parásito electrónico"?
+¿Qué es un "parásito electrónico"?
 
 {class="mt-1"}
 Se refiere a <strong>software "pirateado" con troyanos incrustados</strong>: crees que "te has ahorrado dinero", pero en realidad "te has infectado". Formás habituales:
@@ -96,20 +96,20 @@ Que una App pida permisos (como contactos o ubicación) a veces es razonable (un
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Opciones de permisos</strong>: "Permitir siempre", "Permitir solo durante el uso", "Denegar", "Preguntar siempre".</li>
-                        <li><strong>Principios de gestión</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Minimización: no conceder lo que no sea necesario.</li>
-                                <li>Auditoría posterior: revisa periódicamente en los ajustes de permisos quién se "pasa de la raya".</li>
-                                <li>Contextual: con una App de transporte, por ejemplo, concede la ubicación solo cuando la uses.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Opciones de permisos</strong>: "Permitir siempre", "Permitir solo durante el uso", "Denegar", "Preguntar siempre".</li>
+ <li><strong>Principios de gestión</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Minimización: no conceder lo que no sea necesario.</li>
+ <li>Auditoría posterior: revisa periódicamente en los ajustes de permisos quién se "pasa de la raya".</li>
+ <li>Contextual: con una App de transporte, por ejemplo, concede la ubicación solo cuando la uses.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Permisos a vigilar especialmente
+Permisos a vigilar especialmente
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Contactos/SMS: pueden usarse para enviar SMS basura.
@@ -152,16 +152,16 @@ Un IPA (iOS App Store Package) también es un paquete comprimido, con una estruc
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Firma de Android</strong>: el desarrollador firma el APK con su clave privada y el sistema la verifica con la clave pública al instalar. Si el APK ha sido manipulado (por ejemplo, con un virus inyectado), la firma deja de ser válida y el sistema rechaza la instalación. Google Play además exige App Signing, con Google custodíando las claves de firma, para proteger aún más la seguridad de la aplicación.</li>
-                        <li><strong>Firma de iOS</strong>: la revisión de Apple es más estricta. Cada IPA debe estar firmado con un certificado emitido por Apple, de lo contrario no se puede instalar. Por eso en iOS solo se pueden instalar App desde la App Store o con un certificado empresarial. Las App firmadas con certificado empresarial tienen una validez limitada y Apple puede revocarlas en cualquier momento.</li>
-                        <li><strong>Función de la firma</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Verificar el origen: confirmar que la aplicación proviene efectivamente del desarrollador que dice ser.</li>
-                                <li>Verificar la integridad: asegurar que la aplicación no ha sido manipulada durante la transmisión.</li>
-                                <li>Evitar suplantaciones: una aplicación maliciosa no puede hacerse pasar por otra.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Firma de Android</strong>: el desarrollador firma el APK con su clave privada y el sistema la verifica con la clave pública al instalar. Si el APK ha sido manipulado (por ejemplo, con un virus inyectado), la firma deja de ser válida y el sistema rechaza la instalación. Google Play además exige App Signing, con Google custodíando las claves de firma, para proteger aún más la seguridad de la aplicación.</li>
+ <li><strong>Firma de iOS</strong>: la revisión de Apple es más estricta. Cada IPA debe estar firmado con un certificado emitido por Apple, de lo contrario no se puede instalar. Por eso en iOS solo se pueden instalar App desde la App Store o con un certificado empresarial. Las App firmadas con certificado empresarial tienen una validez limitada y Apple puede revocarlas en cualquier momento.</li>
+ <li><strong>Función de la firma</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Verificar el origen: confirmar que la aplicación proviene efectivamente del desarrollador que dice ser.</li>
+ <li>Verificar la integridad: asegurar que la aplicación no ha sido manipulada durante la transmisión.</li>
+ <li>Evitar suplantaciones: una aplicación maliciosa no puede hacerse pasar por otra.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. Tamaño del paquete de instalación y optimización
@@ -180,7 +180,7 @@ Medios de optimización de las App modernas:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Sabías que: ¿por qué algúnos paquetes de instalación son especialmente grandes?
+Sabías que: ¿por qué algúnos paquetes de instalación son especialmente grandes?
 
 {class="mt-1"}
 Las App de juegos suelen ser las más grandes, porque contienen muchas texturas en alta definición, modelos 3D y archivos de audio. Las App sociales también son bastante grandes, por la cantidad de módulos funcionales que deben admitir. Las App de herramientas suelen ser las más pequeñas. Si descubres que una App de herramientas es especialmente grande, sospecha si incluye funciones innecesarias.
@@ -188,7 +188,7 @@ Las App de juegos suelen ser las más grandes, porque contienen muchas texturas 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Práctica: audita los permisos de 3 App
+Práctica: audita los permisos de 3 App
 
 {class="mt-1"}
 Elige 3 App de uso habitual (por ejemplo, social, compras, herramientas), entra en la página de gestión de permisos de [Configuración], revísalas una por una y desactiva los permisos sensibles innecesarios o cámbialos a "Permitir solo durante el uso".

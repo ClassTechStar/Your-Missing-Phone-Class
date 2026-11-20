@@ -44,7 +44,7 @@ Backup
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: The Privacy Trio for Paid Users
+iCloud+: The Privacy Trio for Paid Users
 
 {class="mt-1"}
 As long as you upgrade to any paid iCloud tier (50GB/200GB/2TB, etc.), you automatically become an <strong>iCloud+</strong> user, unlocking three privacy protection features:
@@ -60,7 +60,7 @@ Note: Private Relay is not available in some countries/regions, and domestic use
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud Advanced Data Protection (ADP) — True End-to-End Encryption
+iCloud Advanced Data Protection (ADP) — True End-to-End Encryption
 
 {class="mt-1"}
 In late 2022, Apple launched <strong>iCloud Advanced Data Protection (ADP)</strong>, extending end-to-end encryption (E2EE) from the original limited data like Health and Passwords to <strong>the vast majority of iCloud data</strong>. This covers Photos, Notes, iCloud Backup, device information, and 23 categories in total.
@@ -99,7 +99,7 @@ Check whether "trusted phone numbers" and "recovery key" are set up; write the k
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Go to iCloud or cloud space management, see what data is syncing, turn off what you don't need.
+Go to iCloud or cloud space management, see what data is syncing, turn off what you don't need.
 
 {class="mt-1"}
 Confirm "Find My Phone" is enabled.
@@ -107,7 +107,7 @@ Confirm "Find My Phone" is enabled.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>If you use Android, check whether brand cloud backup, Google backup, and WeChat backup are all covered.
+If you use Android, check whether brand cloud backup, Google backup, and WeChat backup are all covered.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Chapter 17: Linking Your Phone with Other Devices

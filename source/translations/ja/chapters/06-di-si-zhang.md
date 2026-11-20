@@ -56,7 +56,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>トロイの木馬が植入された「クラッキング版」ソフトウェア
+トロイの木馬が植入された「クラッキング版」ソフトウェア
 
 {class="mt-1"}
 を指す——あなたは「節約した」と思うが。実際は「罠にはまった」。一般的な形式：<strong>「クラッキング版」「無料版」「広告除去版」の有料ソフトウェア；</strong>「いいね増やし」「紅包搶奪」「ゲームチート」などのグレーツール；
@@ -96,20 +96,20 @@ kind: chapter
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>管理原則</strong>：</li>
-                        <li><strong>最小化：不要なものは与えない。</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>状況に応じた判断：タクシー配車アプリのように、使用時のみ位置権限を与える。</li>
-                                <li>重点監視すべき権限</li>
-                                <li>連絡先/SMS：迷惑SMS送信に悪用される可能性。</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>管理原則</strong>：</li>
+ <li><strong>最小化：不要なものは与えない。</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>状況に応じた判断：タクシー配車アプリのように、使用時のみ位置権限を与える。</li>
+ <li>重点監視すべき権限</li>
+ <li>連絡先/SMS：迷惑SMS送信に悪用される可能性。</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>リアルタイム位置：行動追跡される可能性。
+リアルタイム位置：行動追跡される可能性。
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - カメラ/マイク：盗撮・盗聴される可能性。
@@ -152,16 +152,16 @@ APK（Android Package Kit）は本質的にZIP圧縮ファイルで、解凍す�
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>iOS署名</strong>：Appleの審査はより厳格。各IPAにはAppleが発行した証明書の署名が必須で、なければインストール不可。これがiOSがApp Storeまたは企業証明書からしかアプリをインストールできない理由だ。企業証明書で署名されたアプリは有効期限があり、Appleはいつでも取り消し可能。</li>
-                        <li><strong>署名の役割</strong>：</li>
-                        <li><strong>出所の検証：アプリが自称する開発者から実際に来ていることを確認。</strong>：
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>なりすまし防止：悪意あるアプリが他のアプリに偽装することを防ぐ。</li>
-                                <li>4. インストールパッケージのサイズと最適化</li>
-                                <li>アプリストアに表示されるアプリサイズと、インストール後に占有する容量が異なることに気づいたことがあるかもしれない。理由は以下の通り：</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>iOS署名</strong>：Appleの審査はより厳格。各IPAにはAppleが発行した証明書の署名が必須で、なければインストール不可。これがiOSがApp Storeまたは企業証明書からしかアプリをインストールできない理由だ。企業証明書で署名されたアプリは有効期限があり、Appleはいつでも取り消し可能。</li>
+ <li><strong>署名の役割</strong>：</li>
+ <li><strong>出所の検証：アプリが自称する開発者から実際に来ていることを確認。</strong>：
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>なりすまし防止：悪意あるアプリが他のアプリに偽装することを防ぐ。</li>
+ <li>4. インストールパッケージのサイズと最適化</li>
+ <li>アプリストアに表示されるアプリサイズと、インストール後に占有する容量が異なることに気づいたことがあるかもしれない。理由は以下の通り：</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. インストールパッケージのサイズと最適化
@@ -180,7 +180,7 @@ APK（Android Package Kit）は本質的にZIP圧縮ファイルで、解凍す�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>実践セクション：3つのアプリの権限を審査
+実践セクション：3つのアプリの権限を審査
 
 {class="mt-1"}
 よく使うアプリを3つ（ソーシャル、ショッピング、ツール系など）選び、[設定]のアプリ権限管理ページで項目ごとに審査し、不要なセンシティブ権限をオフにするか「使用中のみ許可」に変更する。
@@ -188,7 +188,7 @@ APK（Android Package Kit）は本質的にZIP圧縮ファイルで、解凍す�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>第五章：スマートフォンをもっと理解させる——基本設定
+第五章：スマートフォンをもっと理解させる——基本設定
 
 {class="mt-1"}
 数分かけて設定するだけで、体験は大幅に向上する。これらの設定はスマートフォンに「チューニング」を行うようなもので、あなたの使用習慣に合わせることができる。

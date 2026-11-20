@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>ثلاث خطوات لاختيار الهاتف
+ثلاث خطوات لاختيار الهاتف
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>فكر أولاً في ما يهمك أكثر</strong>: التصوير؟ الألعاب؟ البطارية؟ الشاشة؟ سلاسة النظام؟ أم فقط مكالمات وWeChat؟ رتّب احتياجاتك.
@@ -33,41 +33,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البعد</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">كيف تقرأ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">خلاصة بجملة</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">المعالج (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحدد كم سنة يعمل الهاتف بسلاسة. معيار 2026: Snapdragon 8 Elite Gen5 / Dimensity 9500 فأعلى = قمة؛ Snapdragon 8s Gen4 / Dimensity 8400 = متوسط عالٍ؛ Snapdragon 7+ Gen4 / Dimensity 7350 = يكفي ثلاث سنوات. أقل من سلسلة Snapdragon 6 يُنصح بالحذر.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">اشترِ الجديد لا القديم، SoC يحدد كم سنة يعمل هاتفك دون تلعثم</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">الشاشة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED أفضل في الألوان وأكثر توفيراً للطاقة من LCD؛ معدل تحديث 120Hz أنعم بكثير من 60Hz في التمرير؛ الدقة 1080P فأكثر. تعديل PWM عالي التردد (1920Hz فأكثر) أكثر راحة للعين.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + تعديل عالي التردد = الحد الأدنى لشاشة جيدة</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">الكاميرا</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>لا تنظر لعدد البكسل بل لحجم المستشعر</strong>. المستشعر الكبير أفضل بكثير. الزاوية الواسعة عملية؛ التيليفوتو (3x زوم بصري فأكثر) لتصوير الأشياء البعيدة؛ عدسة الماكرو غالباً غير مفيدة.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستشعر رئيسي كبير + تيليفوتو عملي &gt; عدة عدسات غير مفيدة</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">البطارية والشحن</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh هو الحد الأدنى، 5000mAh فأكثر شحن يومي مستقر. الشحن السريع حسب الواط: 60W فأكثر سريع، 100W فأكثر سريع جداً. الشحن اللاسلكي مريح لكن بطيء.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + شحن 60W = تركيبة بلا قلق</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">التزام تحديث النظام</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحدد كم سنة يعمل الهاتف بأمان. Apple تعطي عموماً 5-6 سنوات تحديث؛ Samsung الرائد 4 سنوات نظام + 5 سنوات أمان؛ Google Pixel 7 سنوات؛ الهواتف الصينية المتوسطة التزام أقصر عموماً (2-3 سنوات).</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تريد استخدامه طويلاً، اختر علامة بتزامن تحديث طويل</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البعد</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">كيف تقرأ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">خلاصة بجملة</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">المعالج (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحدد كم سنة يعمل الهاتف بسلاسة. معيار 2026: Snapdragon 8 Elite Gen5 / Dimensity 9500 فأعلى = قمة؛ Snapdragon 8s Gen4 / Dimensity 8400 = متوسط عالٍ؛ Snapdragon 7+ Gen4 / Dimensity 7350 = يكفي ثلاث سنوات. أقل من سلسلة Snapdragon 6 يُنصح بالحذر.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">اشترِ الجديد لا القديم، SoC يحدد كم سنة يعمل هاتفك دون تلعثم</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">الشاشة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED أفضل في الألوان وأكثر توفيراً للطاقة من LCD؛ معدل تحديث 120Hz أنعم بكثير من 60Hz في التمرير؛ الدقة 1080P فأكثر. تعديل PWM عالي التردد (1920Hz فأكثر) أكثر راحة للعين.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120Hz + تعديل عالي التردد = الحد الأدنى لشاشة جيدة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">الكاميرا</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>لا تنظر لعدد البكسل بل لحجم المستشعر</strong>. المستشعر الكبير أفضل بكثير. الزاوية الواسعة عملية؛ التيليفوتو (3x زوم بصري فأكثر) لتصوير الأشياء البعيدة؛ عدسة الماكرو غالباً غير مفيدة.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستشعر رئيسي كبير + تيليفوتو عملي &gt; عدة عدسات غير مفيدة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">البطارية والشحن</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh هو الحد الأدنى، 5000mAh فأكثر شحن يومي مستقر. الشحن السريع حسب الواط: 60W فأكثر سريع، 100W فأكثر سريع جداً. الشحن اللاسلكي مريح لكن بطيء.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh + شحن 60W = تركيبة بلا قلق</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">التزام تحديث النظام</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يحدد كم سنة يعمل الهاتف بأمان. Apple تعطي عموماً 5-6 سنوات تحديث؛ Samsung الرائد 4 سنوات نظام + 5 سنوات أمان؛ Google Pixel 7 سنوات؛ الهواتف الصينية المتوسطة التزام أقصر عموماً (2-3 سنوات).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تريد استخدامه طويلاً، اختر علامة بتزامن تحديث طويل</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">سيناريوهات الاستخدام</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ماذا تنظر</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">اتجاه التوصية</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 محترف التصوير</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستشعر رئيسي كبير (1 إنش أفضل)، تثبيت بصري، تيليفوتو (3x زوم بصري فأكثر)، شريحة تصوير</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سلسلة vivo X وسلسلة Huawei Pura/Mate وسلسلة Xiaomi Ultra</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 لاعب</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">معالج قمة، معدل لمس عالي، نظام تبريد، بطارية كبيرة + شحن سريع</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سلسلة iQOO الرقمية وROG Phone وRed Magic وسلسلة Redmi K</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 البطارية أولاً</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بطارية 5500mAh فأكثر، معالج بكفاءة جيدة، شاشة LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سلسلة Honor Magic وOnePlus وRedmi Note نسخة البطارية الكبيرة</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 لكبار السن</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">وضع بسيط، خط كبير، صوت كبير، بطارية كبيرة، نقاط خدمة ما بعد البيع كثيرة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Changxiang وHonor Play وسلسلة OPPO A وRedmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 للطلاب</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قيمة عالية، متين، بطارية كبيرة، تحكم أبوي</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 مستخدم منظومة Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لديك Mac/iPad/AirPods، iPhone هو الحل الوحيد</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 القياسي (قيمة) أو Pro (تجربة كاملة)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 السفر للخارج</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">دعم eSIM، تغطية ترددات عالمية، خدمات Google</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone وسلسلة Samsung S وPixel وOnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">سيناريوهات الاستخدام</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ماذا تنظر</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">اتجاه التوصية</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 محترف التصوير</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستشعر رئيسي كبير (1 إنش أفضل)، تثبيت بصري، تيليفوتو (3x زوم بصري فأكثر)، شريحة تصوير</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سلسلة vivo X وسلسلة Huawei Pura/Mate وسلسلة Xiaomi Ultra</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 لاعب</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">معالج قمة، معدل لمس عالي، نظام تبريد، بطارية كبيرة + شحن سريع</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سلسلة iQOO الرقمية وROG Phone وRed Magic وسلسلة Redmi K</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 البطارية أولاً</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بطارية 5500mAh فأكثر، معالج بكفاءة جيدة، شاشة LTPO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">سلسلة Honor Magic وOnePlus وRedmi Note نسخة البطارية الكبيرة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 لكبار السن</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">وضع بسيط، خط كبير، صوت كبير، بطارية كبيرة، نقاط خدمة ما بعد البيع كثيرة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Changxiang وHonor Play وسلسلة OPPO A وRedmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 للطلاب</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">قيمة عالية، متين، بطارية كبيرة، تحكم أبوي</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 مستخدم منظومة Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">لديك Mac/iPad/AirPods، iPhone هو الحل الوحيد</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 القياسي (قيمة) أو Pro (تجربة كاملة)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 السفر للخارج</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">دعم eSIM، تغطية ترددات عالمية، خدمات Google</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone وسلسلة Samsung S وPixel وOnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: استخدم هذه الطريقة لاختيار هاتف
+جرّب: استخدم هذه الطريقة لاختيار هاتف
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. خذ ورقة، اكتب احتياجين أساسيين (مثلاً: البطارية أولاً، التصوير ثانياً).
@@ -208,7 +208,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ثلاث خطوات: الاحتياج ← الميزانية ← الموديل

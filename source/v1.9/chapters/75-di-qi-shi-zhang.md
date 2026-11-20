@@ -102,7 +102,7 @@ after_part: hongmeng-kai-fa-pian
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小知识
+小知识
 
 {class="mt-1"}
 据华为官方口径，鸿蒙生态设备数量已超过 13 亿台（2026 年年中口径）。这个数字的含义是：即便鸿蒙手机市场份额还在爬坡，手表、平板、车机、智慧屏这些设备已经在跑鸿蒙系统了<strong>为鸿蒙写一个应用，它天然面对的是"全场景"而不只是"手机"</strong>。
@@ -377,7 +377,7 @@ iOS 的单商店是"精品店"哲学：入口唯一，规则统一，体验一�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 三个判断题的答案会随时间变：生态在长，需求在涨。今年答案全是"否"，不代表明年也是。把这一页书签住，半年后回来重新答一遍，答案变了，就是你的入场信号。
@@ -425,17 +425,17 @@ iOS 的单商店是"精品店"哲学：入口唯一，规则统一，体验一�
 @Entry
 @Component
 struct FirstPage {
-  @State count: number = 0
+ @State count: number = 0
 
-  build() {
-    Column() {
-      Text(`你点了 ${this.count} 次`)
-      Button('点我')
-        .onClick(() => {
-          this.count++
-        })
-    }
-  }
+ build() {
+ Column() {
+ Text(`你点了 ${this.count} 次`)
+ Button('点我')
+ .onClick(() => {
+ this.count++
+ })
+ }
+ }
 }
 ```
 :::
@@ -767,7 +767,7 @@ hdc 提前预演三个动作，混个脸熟：列出当前连接的设备（<cod
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：看看你身边的鸿蒙设备
+来动手：看看你身边的鸿蒙设备
 
 {class="mt-1"}
 拿出华为手机进 [设置] → [关于本机]，看系统版本号：如果是 HarmonyOS 4.x 及以下，说明这是一台"兼容版"鸿蒙；如果显示 HarmonyOS NEXT（版本号形如 5.0.0/6.0.0/7.0.0），这就是"纯血鸿蒙"。再去应用市场搜一下你常用的 App，看看有没有"鸿蒙原生版"——这个观察会帮你理解本篇反复强调的"生态迁移"。
@@ -775,7 +775,7 @@ hdc 提前预演三个动作，混个脸熟：列出当前连接的设备（<cod
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 2019 备胎转正；2024 HarmonyOS NEXT 移除 AOSP，与安卓正式"分家"
 - 定位全场景分布式：手机、平板、手表、车机、智慧屏一套系统

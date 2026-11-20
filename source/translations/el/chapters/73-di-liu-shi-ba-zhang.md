@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* Οδήγησε στις ρυθμίσεις */
-        default: /* Εγκρίθηκε, πάμε! */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* Οδήγησε στις ρυθμίσεις */
+ default: /* Εγκρίθηκε, πάμε! */
+ }
+ }
 }
 
 // 3. Σε άρνηση, διαχείριση με χάρη: μήνυμα + μετάβαση στις ρυθμίσεις
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. Αίτημα δι και ώματος ειδοποιήσεων (popup μία φορά)
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "Εγκρίθηκε" : "Απορρίφθηκε")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "Εγκρίθηκε" : "Απορρίφθηκε")
+ }
 
 // 2. Προγραμματισμός "κάτω 20:00 υπενθύμιση λογιστηρίου"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "Υπενθύμιση λογιστηρίου"
-    content.body = "Σήμερα δεν έχεις καταγράψει τίποτα"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "Υπενθύμιση λογιστηρίου"
+ content.body = "Σήμερα δεν έχεις καταγράψει τίποτα"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -144,20 +144,20 @@ func scheduleDailyReminder() {
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // Ξεκινά μόλις εμφανιστεί, ακυρώνεται μόλις φύγει
-            await vm.search(city: "Πεκίνο")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // Ξεκινά μόλις εμφανιστεί, ακυρώνεται μόλις φύγει
+ await vm.search(city: "Πεκίνο")
+ }
+ }
 }
 ```
 :::

@@ -36,35 +36,35 @@ Protokol adalah "bahasa", ekosistem adalah "lingkaran pergaulan". Meski semuanya
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ekosistem</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keunggulan</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelemahan</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Untuk siapa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privasi terkuat (utamanya proses lokal), mulus terhubung dengan iPhone/Siri/Pintasan</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat lebih sedikit dan mahal, perlu HomePod atau Apple TV sebagai pusat</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Keluarga dengan perangkat Apple, yang mengutamakan privasi dan pengalaman</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat paling lengkap, nilai terbaik, Xiao Ai mudah dipakai</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem relatif tertutup, banyak data ke awan, iklan agak banyak</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemula dengan anggaran terbatas yang ingin melengkapi seluruh rumah sekaligus</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mulus berpindah dengan ponsel/tablet/jam HarmonyOS, jumlah perangkat tumbuh cepat</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dukungan perangkat luar negeri sedikit, ekosistem masih mengejar</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna ponsel Huawei, yang mengutamakan kolaborasi multi-perangkat "Super Device"</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ekosistem</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keunggulan</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelemahan</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Untuk siapa</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privasi terkuat (utamanya proses lokal), mulus terhubung dengan iPhone/Siri/Pintasan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat lebih sedikit dan mahal, perlu HomePod atau Apple TV sebagai pusat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Keluarga dengan perangkat Apple, yang mengutamakan privasi dan pengalaman</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat paling lengkap, nilai terbaik, Xiao Ai mudah dipakai</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem relatif tertutup, banyak data ke awan, iklan agak banyak</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemula dengan anggaran terbatas yang ingin melengkapi seluruh rumah sekaligus</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mulus berpindah dengan ponsel/tablet/jam HarmonyOS, jumlah perangkat tumbuh cepat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dukungan perangkat luar negeri sedikit, ekosistem masih mengejar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna ponsel Huawei, yang mengutamakan kolaborasi multi-perangkat "Super Device"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

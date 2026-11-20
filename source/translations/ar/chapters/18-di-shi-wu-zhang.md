@@ -34,7 +34,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>وظيفة "حد شحن 80%" في iPhone — تحويل القاعدة الذهبية إلى إعداد نظام
+وظيفة "حد شحن 80%" في iPhone — تحويل القاعدة الذهبية إلى إعداد نظام
 
 {class="mt-1"}
 سلسلة iPhone 15/16 (iOS 17 وأحدث) حوّلت "قاعدة 20%-80%" إلى وظيفة نظام. عند التفعيل، يتوقف الهاتف عن الشحن تلقائياً عند 80%، مما يبطئ شيخوخة البطارية بشكل كبير. مسار الإعداد:
@@ -48,7 +48,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>شاحن GaN — الرفيق المثالي لمن يسافر
+شاحن GaN — الرفيق المثالي لمن يسافر
 
 {class="mt-1"}
 ربما لاحظت أن رؤوس الشحن السريع الحالية أصبحت أصغر فأصغر، والبطل وراء ذلك هو<strong>GaN (نتريد الغاليوم)</strong>هذه المادة أشباه الموصلات الجديدة. مقارنة بالشواحن التقليدية القائمة على السيليكون، لشواحن GaN مزايا واضحة:
@@ -127,47 +127,47 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البروتوكول</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">القدرة القصوى</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المسار التقني</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التوافق</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 واط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهد عالٍ/مستويات متعددة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأوسع</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">+100 واط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهد عالٍ قابل للضبط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أجهزة Qualcomm</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 واط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهد منخفض وتيار عالٍ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مخصص لسلسلة OPPO</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 واط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مضخة شحن</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">شحن Apple السريع</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27 واط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بروتوكول PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">البروتوكول</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">القدرة القصوى</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">المسار التقني</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التوافق</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 واط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهد عالٍ/مستويات متعددة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الأوسع</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">+100 واط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهد عالٍ قابل للضبط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أجهزة Qualcomm</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240 واط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جهد منخفض وتيار عالٍ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مخصص لسلسلة OPPO</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100 واط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مضخة شحن</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">شحن Apple السريع</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27 واط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">بروتوكول PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>تنبيهات سلامة الشحن السريع
+تنبيهات سلامة الشحن السريع
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - تجنب لعب الألعاب الكبيرة أثناء الشحن، فهو يزيد الحرارة.
@@ -207,7 +207,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>أي الموديلات استخدمتها؟
+أي الموديلات استخدمتها؟
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: سلسلة Magic رائدة في الاستخدام التجاري للأنود الكربوني السيليكوني، Magic6 Pro وسلسلة Magic7 وMagic V3 القابل للطي جميعها تستخدمه.
@@ -228,7 +228,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>لنتحقق: أجرِ فحصاً صحياً لبطاريتك
+لنتحقق: أجرِ فحصاً صحياً لبطاريتك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. تحقق من مستوى الصحة: ابحث عن وسجّل السعة القصوى لبطاريتك.

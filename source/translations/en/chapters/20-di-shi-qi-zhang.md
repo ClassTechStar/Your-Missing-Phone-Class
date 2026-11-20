@@ -66,7 +66,7 @@ Bluetooth speakers
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB (Ultra-Wideband) Technology — More Precise "Spatial Awareness" Than Bluetooth
+UWB (Ultra-Wideband) Technology — More Precise "Spatial Awareness" Than Bluetooth
 
 {class="mt-1"}
 In addition to Bluetooth, new phones also contain a UWB (Ultra-Wideband) chip. Its capability is <strong>precise distance measurement and spatial positioning</strong>. It can calculate how far another device is and in which direction, with centimeter-level precision. Bluetooth can only tell you "it's nearby," while UWB can tell you "it's 1.2 meters to your front-left." Common applications:
@@ -80,7 +80,7 @@ In addition to Bluetooth, new phones also contain a UWB (Ultra-Wideband) chip. I
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio and Auracast — The New Generation Bluetooth Audio Standard
+LE Audio and Auracast — The New Generation Bluetooth Audio Standard
 
 {class="mt-1"}
 The classic Bluetooth audio (A2DP) used for twenty years is being replaced by <strong>LE Audio</strong>(Low Energy Audio), the new generation audio standard from Bluetooth 5.2 onwards:
@@ -110,7 +110,7 @@ Make sure your phone and TV are on the same Wi-Fi.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>If you have smart home devices, try creating a "Leave Home Mode" in the phone app: one-tap to turn off lights, turn off AC, and start the robot vacuum.
+If you have smart home devices, try creating a "Leave Home Mode" in the phone app: one-tap to turn off lights, turn off AC, and start the robot vacuum.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Chapter 18: Data Backup and Migration
@@ -122,7 +122,7 @@ Make sure your phone and TV are on the same Wi-Fi.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Case 1: Battery Life Optimization in Practice
+Case 1: Battery Life Optimization in Practice
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: Xiaomi 14 user with poor battery life — out of power by midday.

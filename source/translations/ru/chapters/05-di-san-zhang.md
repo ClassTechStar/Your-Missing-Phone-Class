@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>Ключевая метафора: дорога и машина
+Ключевая метафора: дорога и машина
 
 {class="mt-1"}
 Представьте интернет как город. <strong>«Дорога»</strong> — это канал между вашим телефоном и интернетом, <strong>«машина»</strong> — данные, которые по ней едут. Wi-Fi и мобильный трафик, две разные дороги, но данные (машины) сами по себе одинаковы.
@@ -36,7 +36,7 @@ Wi-Fi, обычно разовая инвестиция (ежемесячная 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>Попробуйте: проверьте свой тариф
+Попробуйте: проверьте свой тариф
 
 {class="mt-1"}
 Откройте [Настройки] > [Мобильная сеть] > [Управление трафиком] и посмотрите, сколько трафика осталось на этот месяц и какие приложения расходуют больше всего. Когда знаешь цифры, выходишь из дома спокойно.
@@ -49,7 +49,7 @@ Wi-Fi, обычно разовая инвестиция (ежемесячная 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Напоминание о безопасности
+Напоминание о безопасности
 
 {class="mt-1"}
 В аэропортах, торговых центрах, кафе и других общественных местах не подключайтесь к подозрительным бесплатным сетям Wi-Fi (например, «Free_WiFi_2024»). Даже если подключились, ни в коем случае не входите в банковские приложения и не вводите пароли.
@@ -81,7 +81,7 @@ Wi-Fi, обычно разовая инвестиция (ежемесячная 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Важное предупреждение: отключите [Роуминг данных] перед выездом за границу!
+Важное предупреждение: отключите [Роуминг данных] перед выездом за границу!
 
 {class="mt-1"}
 Использование мобильных данных за границей может привести к астрономическим счетам! Перед выездом обязательно отключите роуминг данных в настройках или заранее приобретите местную SIM-карту / международный роуминговый пакет.
@@ -106,53 +106,53 @@ Wi-Fi, основной способ выхода в интернет дома �
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Стандарт</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Протокол</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Диапазон</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Макс. скорость</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Особенности</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5 ГГц</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600 Мбит/с</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устаревший стандарт, покрытие приемлемое</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5 ГГц</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3,5 Гбит/с</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый распространённый, скорость достаточная</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5 ГГц</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Гбит/с</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Отличная работа с множеством устройств, низкая задержка</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6 ГГц</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Гбит/с</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Добавлен диапазон 6 ГГц, без перегрузок</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6 ГГц</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46 Гбит/с</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сверхскоростная передача, агрегация нескольких каналов</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Стандарт</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Протокол</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Диапазон</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Макс. скорость</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Особенности</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5 ГГц</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600 Мбит/с</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устаревший стандарт, покрытие приемлемое</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5 ГГц</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3,5 Гбит/с</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый распространённый, скорость достаточная</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5 ГГц</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Гбит/с</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Отличная работа с множеством устройств, низкая задержка</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6 ГГц</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9,6 Гбит/с</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Добавлен диапазон 6 ГГц, без перегрузок</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6 ГГц</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46 Гбит/с</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сверхскоростная передача, агрегация нескольких каналов</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ NFC развился из технологии RFID и поддерживает 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Попробуйте сами: настройка и управление точкой доступа
+Попробуйте сами: настройка и управление точкой доступа
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Откройте [Настройки], найдите «Персональная точка доступа» или «Общий доступ к сети», включите, задайте имя и пароль.

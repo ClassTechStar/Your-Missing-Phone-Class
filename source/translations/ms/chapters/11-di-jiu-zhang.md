@@ -67,7 +67,7 @@ Pilih satu Apl storan awan, tetapkan sandaran automatik gambar telefon (pilih "S
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Bina satu halaman baharu dalam Notion atau Lark, cuba bina satu templat "Log Kerja" yang mudah.
+Bina satu halaman baharu dalam Notion atau Lark, cuba bina satu templat "Log Kerja" yang mudah.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Bab 10: Pembayaran Bergerak &amp; Perkhidmatan Hidup

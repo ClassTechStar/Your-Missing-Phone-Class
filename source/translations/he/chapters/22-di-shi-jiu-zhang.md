@@ -87,7 +87,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>זכור עכשיו: פעולות הצלה אלה צריכות להיות מוכרות לך היטב
+זכור עכשיו: פעולות הצלה אלה צריכות להיות מוכרות לך היטב
 
 {class="mt-1"}
 הפעלה מאולצת
@@ -95,7 +95,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: iPhone full-screen: הגדל עוצמה → הנמך עוצמה → לחץ ארוך על כפתור ההפעלה עד ללוגו. אנדרואיד: לחץ ארוך על כפתור ההפעלה 10-15 שניות עד רטט.
+: iPhone full-screen: הגדל עוצמה → הנמך עוצמה → לחץ ארוך על כפתור ההפעלה עד ללוגו. אנדרואיד: לחץ ארוך על כפתור ההפעלה 10-15 שניות עד רטט.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>ניקוי פתח טעינה</strong>: מצא כלי קטן (קיסם או מחט SIM), נקה בעדינות אבק מפתח הטעינה.

@@ -317,7 +317,7 @@ Piénsalo, ¡un pequeño dispositivo cargando cuánta vida! Por eso, aprender a 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica: conoce la configuración de hardware
+Practica: conoce la configuración de hardware
 
 {class="mt-1"}
 En [Configuración], mira si puedes encontrar el modelo de procesador, el tamaño específico de la memoria (RAM) y del almacenamiento (ROM). Ten una idea de las capacidades de tu móvil. Los usuarios de Android pueden descargar "AnTuTu" o "DevCheck" para ver información detallada del hardware.

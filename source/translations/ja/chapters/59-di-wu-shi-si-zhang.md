@@ -39,12 +39,12 @@ kind: chapter
 ```
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val type: String,        // "income" 収入 | "expense" 支出
-    val amount: Double,      // 金額（元）
-    val category: String,    // カテゴリー：食費、交通、給料……
-    val note: String = "",   // メモ（任意）
-    val date: String         // "2026-08-15"
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val type: String, // "income" 収入 | "expense" 支出
+ val amount: Double, // 金額（元）
+ val category: String, // カテゴリー：食費、交通、給料……
+ val note: String = "", // メモ（任意）
+ val date: String // "2026-08-15"
 )
 ```
 :::
@@ -59,20 +59,20 @@ Daoに「集計用」のクエリを2つ追加します。ここが家計簿の�
 ```
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
-    fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
+ @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+ fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
-    suspend fun monthIncome(month: String): Double   // monthは「2026-08」の形
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+ suspend fun monthIncome(month: String): Double // monthは「2026-08」の形
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
-    suspend fun monthExpense(month: String): Double
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+ suspend fun monthExpense(month: String): Double
 }
 ```
 :::
@@ -91,7 +91,7 @@ interface RecordDao {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View（Composeの画面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel（状態とロジック）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model（Roomのデータ層）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View（Composeの画面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel（状態とロジック）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model（Roomのデータ層）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -106,21 +106,21 @@ interface RecordDao {
 ```
 class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 
-    // Flowを画面から観察できる状態に変換
-    val records = dao.getAll()
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+ // Flowを画面から観察できる状態に変換
+ val records = dao.getAll()
+ .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    // ユーザー操作：suspend関数を呼ぶ
-    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
-        viewModelScope.launch {
-            dao.insert(Record(type = type, amount = amount,
-                category = category, note = note, date = date))
-        }
-    }
+ // ユーザー操作：suspend関数を呼ぶ
+ fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+ viewModelScope.launch {
+ dao.insert(Record(type = type, amount = amount,
+ category = category, note = note, date = date))
+ }
+ }
 
-    fun deleteRecord(record: Record) {
-        viewModelScope.launch { dao.delete(record) }
-    }
+ fun deleteRecord(record: Record) {
+ viewModelScope.launch { dao.delete(record) }
+ }
 }
 ```
 :::
@@ -139,34 +139,34 @@ class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 ```
 @Composable
 fun RecordListScreen(vm: RecordViewModel) {
-    val records by vm.records.collectAsState()
+ val records by vm.records.collectAsState()
 
-    Column {
-        // 上部の集計カード（収入-支出=残高）
-        SummaryCard(records)
+ Column {
+ // 上部の集計カード（収入-支出=残高）
+ SummaryCard(records)
 
-        // 明細リスト
-        LazyColumn {
-            items(records, key = { it.id }) { record -&gt;
-                RecordRow(record) { vm.deleteRecord(record) }
-            }
-        }
+ // 明細リスト
+ LazyColumn {
+ items(records, key = { it.id }) { record -&gt;
+ RecordRow(record) { vm.deleteRecord(record) }
+ }
+ }
 
-        // 浮遊する「記帳」ボタン → 入力ダイアログを出す
-        FloatingActionButton(onClick = { showAddDialog = true }) {
-            Text("+")
-        }
-    }
+ // 浮遊する「記帳」ボタン → 入力ダイアログを出す
+ FloatingActionButton(onClick = { showAddDialog = true }) {
+ Text("+")
+ }
+ }
 }
 
 @Composable
 fun RecordRow(record: Record, onDelete: () -&gt; Unit) {
-    Row(Modifier.fillMaxWidth().padding(12.dp)) {
-        Text(record.category, fontWeight = FontWeight.Bold)
-        Spacer(Modifier.weight(1f))
-        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
-             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
-    }
+ Row(Modifier.fillMaxWidth().padding(12.dp)) {
+ Text(record.category, fontWeight = FontWeight.Bold)
+ Spacer(Modifier.weight(1f))
+ Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+ color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+ }
 }
 ```
 :::

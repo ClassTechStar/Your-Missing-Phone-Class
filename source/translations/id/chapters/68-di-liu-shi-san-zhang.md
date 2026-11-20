@@ -35,20 +35,20 @@ Peta alat state SwiftUI (pada 2026, @Observable sudah menjadi arus utama)
 import Observation
 
 @Observable
-class CounterModel {                 // View model
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // View model
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // Memegang model
+ @State private var model = CounterModel() // Memegang model
 
-    var body: some View {
-        VStack {
-            Text("Kamu menekan \(model.count) kali")
-            Button("Tekan aku") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Kamu menekan \(model.count) kali")
+ Button("Tekan aku") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ Sejak iOS 16, navigasi multi-halaman memakai NavigationStack: seperti tumpukan p
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Buku kas Zhang San") {
-                    DetailView(name: "Buku kas Zhang San")   // halaman tujuan
-                }
-                NavigationLink("Buku kas Li Si") {
-                    DetailView(name: "Buku kas Li Si")
-                }
-            }
-            .navigationTitle("Daftar buku kas")   // judul besar di atas
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("Buku kas Zhang San") {
+ DetailView(name: "Buku kas Zhang San") // halaman tujuan
+ }
+ NavigationLink("Buku kas Li Si") {
+ DetailView(name: "Buku kas Li Si")
+ }
+ }
+ .navigationTitle("Daftar buku kas") // judul besar di atas
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("Halaman detail \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("Halaman detail \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ Selain "mendorong halaman", ada dua interaksi klasik lainnya:
 ```
 // 1. Pop setengah layar/layar penuh dari bawah (favorit formulir input)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("Catat") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // Halaman input yang muncul
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("Catat") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // Halaman input yang muncul
+ }
+ }
 }
 
 // 2. Bar tab bawah ("kerangka" aplikasi)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("Buku kas", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("Statistik", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("Pengaturan", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("Buku kas", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("Statistik", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("Pengaturan", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ Komponen paling sering dipakai sekaligus paling khas Apple di iOS adalah List, g
 
 ```
 struct RecordListView: View {
-    @State private var records = ["Makan siang 25.5", "MRT 6.0", "Gaji +8000"]
+ @State private var records = ["Makan siang 25.5", "MRT 6.0", "Gaji +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // geser kiri untuk menghapus
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // geser kiri untuk menghapus
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ Mirip siklus hidup Activity di Android, App iOS juga mengalami perubahan status 
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("Kembali ke depan, lanjutkan pembaruan")
-            case .inactive:  print("Sedang transisi (panggilan masuk/beralih ke latar sesaat)")
-            case .background: print("Masuk latar, simpan draf")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("Kembali ke depan, lanjutkan pembaruan")
+ case .inactive: print("Sedang transisi (panggilan masuk/beralih ke latar sesaat)")
+ case .background: print("Masuk latar, simpan draf")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

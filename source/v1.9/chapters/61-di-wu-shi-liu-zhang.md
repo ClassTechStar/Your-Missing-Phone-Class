@@ -48,7 +48,7 @@ App 做出来了，这一章回答"然后呢"，从"能跑"到"能交付"还差�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：报错怎么读？
+小贴士：报错怎么读？
 
 {class="mt-1"}
 崩溃后 Logcat 里会有红色堆栈（Stacktrace），在异常类型行之后，<strong>从上往下找第一条自己包名开头的行</strong>（比如 com.example.yourapp），那行基本就是案发现场。先看"Exception 类型"（空指针？类型转换？），再看"at ... 你的文件:行号"。这招能解决 80% 的崩溃。
@@ -109,12 +109,12 @@ FATAL EXCEPTION: main
 Process: com.example.ledger
 java.lang.NullPointerException: Attempt to read from field
 'java.lang.String amount' on a null object reference
-    at com.example.ledger.ui.DetailActivity.showAmount(DetailActivity.kt:87)
-    at com.example.ledger.ui.DetailActivity.onCreate(DetailActivity.kt:43)
-    at android.app.Activity.performCreate(Activity.java:...)
-    ...
+ at com.example.ledger.ui.DetailActivity.showAmount(DetailActivity.kt:87)
+ at com.example.ledger.ui.DetailActivity.onCreate(DetailActivity.kt:43)
+ at android.app.Activity.performCreate(Activity.java:...)
+ ...
 Caused by: java.lang.IllegalStateException: record not loaded yet
-    at com.example.ledger.data.RecordStore.currentRecord(RecordStore.kt:31)
+ at com.example.ledger.data.RecordStore.currentRecord(RecordStore.kt:31)
 ```
 :::
 
@@ -228,22 +228,22 @@ Caused by: java.lang.IllegalStateException: record not loaded yet
 ```
 // 把"金额字符串转数字"这种逻辑抽成纯函数
 fun parseAmount(input: String): Double? {
-    val v = input.trim().toDoubleOrNull()
-    return if (v != null && v > 0) v else null
+ val v = input.trim().toDoubleOrNull()
+ return if (v != null && v > 0) v else null
 }
 
 // 测试它（JUnit4）
 @Test
 fun emptyInputReturnsNull() {
-    assertEquals(null, parseAmount(""))
+ assertEquals(null, parseAmount(""))
 }
 @Test
 fun negativeReturnsNull() {
-    assertEquals(null, parseAmount("-5"))
+ assertEquals(null, parseAmount("-5"))
 }
 @Test
 fun normalValueParses() {
-    assertEquals(12.5, parseAmount("12.5"))
+ assertEquals(12.5, parseAmount("12.5"))
 }
 ```
 :::
@@ -283,18 +283,18 @@ fun normalValueParses() {
 
 ```
 class StatsTest {
-    @Test
-    fun emptyListReturnsNull() {
-        assertNull(averageOf(emptyList()))
-    }
-    @Test
-    fun singleValueReturnsItself() {
-        assertEquals(3.0, averageOf(listOf(3.0)))
-    }
-    @Test
-    fun normalAverage() {
-        assertEquals(5.0, averageOf(listOf(4.0, 6.0)))
-    }
+ @Test
+ fun emptyListReturnsNull() {
+ assertNull(averageOf(emptyList()))
+ }
+ @Test
+ fun singleValueReturnsItself() {
+ assertEquals(3.0, averageOf(listOf(3.0)))
+ }
+ @Test
+ fun normalAverage() {
+ assertEquals(5.0, averageOf(listOf(4.0, 6.0)))
+ }
 }
 ```
 :::
@@ -319,16 +319,16 @@ class StatsTest {
 ```
 @RunWith(AndroidJUnit4::class)
 class SaveRecordTest {
-    @get:Rule
-    val rule = ActivityScenarioRule(MainActivity::class.java)
+ @get:Rule
+ val rule = ActivityScenarioRule(MainActivity::class.java)
 
-    @Test
-    fun typeAmountAndSave_showsInList() {
-        onView(withId(R.id.amount_input))
-            .perform(typeText("12.5"), closeSoftKeyboard())
-        onView(withId(R.id.save_button)).perform(click())
-        onView(withText("12.5")).check(matches(isDisplayed()))
-    }
+ @Test
+ fun typeAmountAndSave_showsInList() {
+ onView(withId(R.id.amount_input))
+ .perform(typeText("12.5"), closeSoftKeyboard())
+ onView(withId(R.id.save_button)).perform(click())
+ onView(withText("12.5")).check(matches(isDisplayed()))
+ }
 }
 // imports：androidx.test.espresso.Espresso 相关与
 // androidx.test.ext.junit.runners.AndroidJUnit4 等，以官方文档为准
@@ -388,7 +388,7 @@ onView 找元素（按 id 或按显示的文字），perform 执行动作（输�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：测试代码也是代码
+小贴士：测试代码也是代码
 
 {class="mt-1"}
 测试文件同样需要重命名、删重复、拆太长的函数。最常见的新手问题是"复制上一个测试改个数字"，十个用例长得一模一样——真挂的时候，你得肉眼比对十份代码。宁可写得少，也要写得清楚：一个测试只说一件事。
@@ -406,7 +406,7 @@ onView 找元素（按 id 或按显示的文字），perform 执行动作（输�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：keystore 丢了 = App 丢了
+避坑提醒：keystore 丢了 = App 丢了
 
 {class="mt-1"}
 上架后更新 App 必须用<strong>同一个</strong>签名，否则商店会拒绝更新。keystore 文件和密码一旦丢失，你只能换个新应用重新上架，老用户全都接不上。务必把 keystore 和密码备份到安全的地方（密码管理器或加密备份，别用明文记事本），恢复流程也提前想好，密钥文件绝不提交到仓库，这是安卓开发者最昂贵的教训之一。
@@ -482,11 +482,11 @@ keystore（密钥库）是一个文件，里面装着你的"数字身份证"：�
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> 上传 AAB</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 注册开发者账号</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 准备商店素材</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 上传 AAB</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> 填数据安全表</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 审核（数小时~数天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> 上架</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 填数据安全表</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 审核（数小时~数天）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 上架</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -565,7 +565,7 @@ Play Console 里"创建应用"会让你选名称、默认语言、应用还是�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：A/B 看看同行
+小贴士：A/B 看看同行
 
 {class="mt-1"}
 上架前逛一圈商店里同类 App 的前十名，截图对比：他们图标什么风格？截图讲什么卖点？标题怎么写？<strong>模仿不是抄袭</strong>——学套路、换自己的内容，这是所有产品冷启动最快的一课。
@@ -640,7 +640,7 @@ Crashlytics 的后台比 Logcat 更适合做"管理"：崩溃按影响用户数�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：把记账本"交付"一次
+来动手：把记账本"交付"一次
 
 {class="mt-1"}
 ① 给 parseAmount 等逻辑补 3 个单元测试；② 用 Logcat 亲手抓一个自己制造的崩溃并修好；③ 生成一个 release 签名的 APK，发给朋友安装（这才是"作品"的仪式感）；④ 有余力就注册开发者账号，把记账本真正提交上架，顺手把版本号、构建命令、签名位置、上传步骤写进一个文档，发布是条可重复的流水线，下次不用重新翻聊天记录。前三条今晚就能做完。
@@ -864,7 +864,7 @@ Console 和崩溃后台里的数字很多，每周固定看这五个就够：<st
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 调试三板斧：Logcat 看日志、断点看变量、Layout Inspector 看界面
 - 读崩溃：从堆栈下往上找自己包名的第一行

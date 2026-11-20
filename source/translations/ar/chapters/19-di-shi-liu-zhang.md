@@ -44,7 +44,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: ثلاثية الخصوصية للمستخدمين المدفوعين فقط
+iCloud+: ثلاثية الخصوصية للمستخدمين المدفوعين فقط
 
 {class="mt-1"}
 بمجرد الترقية إلى أي فئة مدفوعة من iCloud (50GB/200GB/2TB وغيرها)، تصبح تلقائياً<strong>iCloud+</strong>مستخدم، وتفتح ثلاث وظائف حماية الخصوصية:
@@ -60,7 +60,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud Advanced Data Protection (ADP) — التشفير من طرف إلى طرف الحقيقي
+iCloud Advanced Data Protection (ADP) — التشفير من طرف إلى طرف الحقيقي
 
 {class="mt-1"}
 في نهاية 2022 أطلقت Apple<strong>iCloud Advanced Data Protection (ADP)</strong>ومدّت التشفير من طرف إلى طرف (E2EE) من البيانات القليلة السابقة كالصحة وكلمات المرور، إلى<strong>معظم بيانات iCloud</strong>— الصور والملاحظات والنسخ الاحتياطي السحابي لـ iCloud ومعلومات الجهاز وما مجموعه 23 فئة من البيانات.
@@ -99,7 +99,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>عواقب اختراق الحساب أخطر مما تتخيل
+عواقب اختراق الحساب أخطر مما تتخيل
 
 {class="mt-1"}
 إذا حصل القراصنة على كلمة مرور حسابك، يمكنه: قفل هاتفك عن بُعد وابتزازك بدفع فدية، والاطلاع على صورك وجهات اتصالك، واستخدام وسيلة الدفع الخاصة بك للشراء. الأسوأ أنه إذا كان حسابك مرتبطاً بأشياء كثيرة، فإن استعادة الحساب نفسه كابوس. لذلك، فعّل المصادقة الثنائية الآن.
@@ -107,7 +107,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>تطبيق عملي: أجرِ فحصاً شاملاً لحسابك
+تطبيق عملي: أجرِ فحصاً شاملاً لحسابك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. افتح إعدادات الهاتف، ادخل صفحة الحساب، وتأكد من تفعيل المصادقة الثنائية.

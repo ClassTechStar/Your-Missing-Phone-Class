@@ -70,7 +70,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>実践：30秒の短動画を一本撮る
+実践：30秒の短動画を一本撮る
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 得意な小ネタを一つ選ぶ（例："スマホの文字を大きくする方法"）。
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 撮る前に明確に：視聴者は誰か、どんな価値を提供するか、どのプラットフォームに投稿するか

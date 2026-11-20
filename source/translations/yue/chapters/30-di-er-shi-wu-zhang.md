@@ -24,51 +24,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">擦除入口</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">關鍵差異與注意事項</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 系統同更新 > 重置 > 恢復出廠設定</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先退出華為帳號並關閉「查找我嘅手機」，否則會觸發激活鎖；純淨模式下可能需要密碼驗證。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 我嘅設備 > 恢復出廠設定</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">底部有「格式化虛擬SD卡」同「清除全部內容與設定」選項，兩者都要勾選；退出小米帳號前先關閉「查找設備」。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / 一加</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 其他設定 > 還原手機 > 徹底清除全部數據</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS 提供「徹底清除」模式，會多次覆蓋儲存；需輸入鎖屏密碼確認。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 系統管理 > 備份與重置 > 清除所有數據</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">勾選「格式化手機儲存」先至會清理SD卡區；需退出vivo帳號，關閉「查找手機」。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 通用管理 > 重置 > 恢復出廠設定</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先移除Samsung帳號並關閉「查找我嘅手機」；部分機型有「自動覆蓋」選項，建議開啟。</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 通用 > 傳輸或還原iPhone > 抹掉所有內容同設定</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">必須先退出Apple ID，否則下一位用戶被iCloud激活鎖攔住；iOS 15+支援「退出時保留iCloud數據」以備後查。</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">擦除入口</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">關鍵差異與注意事項</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 系統同更新 > 重置 > 恢復出廠設定</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先退出華為帳號並關閉「查找我嘅手機」，否則會觸發激活鎖；純淨模式下可能需要密碼驗證。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 我嘅設備 > 恢復出廠設定</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">底部有「格式化虛擬SD卡」同「清除全部內容與設定」選項，兩者都要勾選；退出小米帳號前先關閉「查找設備」。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / 一加</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 其他設定 > 還原手機 > 徹底清除全部數據</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS 提供「徹底清除」模式，會多次覆蓋儲存；需輸入鎖屏密碼確認。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 系統管理 > 備份與重置 > 清除所有數據</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">勾選「格式化手機儲存」先至會清理SD卡區；需退出vivo帳號，關閉「查找手機」。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 通用管理 > 重置 > 恢復出廠設定</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需先移除Samsung帳號並關閉「查找我嘅手機」；部分機型有「自動覆蓋」選項，建議開啟。</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 通用 > 傳輸或還原iPhone > 抹掉所有內容同設定</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">必須先退出Apple ID，否則下一位用戶被iCloud激活鎖攔住；iOS 15+支援「退出時保留iCloud數據」以備後查。</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>最容易被忽略嘅三件事
+最容易被忽略嘅三件事
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>未退出帳號</strong>：手機賣畀下家後被遠程鎖定，自己都落唔到，最後淨係可以揸身份證去官方售後解鎖。
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>法律依據：個人資訊保護法第49條
+法律依據：個人資訊保護法第49條
 
 {class="mt-1"}
 2021年施行嘅《中華人民共同國個人資訊保護法》第49條明確規定：<strong>自然人身故嘅，其近親屬為咗自身嘅合法、正當利益，可以對死者相關個人資訊行使本章規定嘅查閲、複製、更正、刪除等權利；死者生前另有安排嘅除外。</strong>
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>千萬唔好做嘅事
+千萬唔好做嘅事
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>唔好將死者帳號密碼直接交畀家人「接住用」</strong>——呢個違反平臺協議，資金被凍結甚至觸發風控時舉證更難。
@@ -153,7 +153,7 @@ Google提供「不活躍賬戶管理器（Inactive Account Manager）」，能�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>關鍵提醒
+關鍵提醒
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 各平臺規則會更新，辦理前先查閲官方客服最新指引。
@@ -174,7 +174,7 @@ Google提供「不活躍賬戶管理器（Inactive Account Manager）」，能�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>加密貨幣「消失」嘅真實代價
+加密貨幣「消失」嘅真實代價
 
 {class="mt-1"}
 據Chainalysis報告，全球已有<strong>超過300萬枚比特幣</strong>因私鑰丟失而永遠無法搵返，相當於現有總量嘅六分之一。如果你持有加密資產，請務必等至少一位你絕對信任嘅人知道<strong>恢復路徑</strong>——否則呢啲財富將永遠沉睡喺區塊鏈上。
@@ -227,7 +227,7 @@ Google提供「不活躍賬戶管理器（Inactive Account Manager）」，能�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>關於「密碼」嘅法律提示
+關於「密碼」嘅法律提示
 
 {class="mt-1"}
 將密碼直接寫入遺囑存在洩露風險，且遺囑公示後所有繼承人都能睇到。<strong>更穩妥嘅做法係：遺囑入面便淨係寫「帳號清單 + 處置意願 + 密碼託管位置」，真正嘅密碼透過密碼管理器主密碼單獨傳畀信任執行人</strong>。咁樣既符合法律要求，亦降低咗密碼洩露風險。
@@ -239,41 +239,41 @@ Google提供「不活躍賬戶管理器（Inactive Account Manager）」，能�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">渠道</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">回收價</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">數據安全</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">適用場景</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方以舊換新（華為/蘋果/小米等）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，常疊加補貼券</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最高，官方有規範流程</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正打算換同品牌新機時最劃算</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方回收平臺（愛回收、轉轉、回收寶等）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">略高，可比價</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較高，有數據清除報告</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想直接變現、唔綁定品牌</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公益捐贈（如鄉村學校、愛心機構）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無經濟回報</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需自行徹底擦除</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設備仍可用、想做善事</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">發揮餘熱（自留改造）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">慳返新設備錢</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原機主本人繼續用，無風險</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設備效能尚可、屋企有改造需求</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">渠道</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">回收價</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">數據安全</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">適用場景</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方以舊換新（華為/蘋果/小米等）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，常疊加補貼券</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最高，官方有規範流程</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正打算換同品牌新機時最劃算</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方回收平臺（愛回收、轉轉、回收寶等）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">略高，可比價</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">較高，有數據清除報告</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想直接變現、唔綁定品牌</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公益捐贈（如鄉村學校、愛心機構）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無經濟回報</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需自行徹底擦除</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設備仍可用、想做善事</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">發揮餘熱（自留改造）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">慳返新設備錢</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原機主本人繼續用，無風險</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設備效能尚可、屋企有改造需求</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>官方回收/以舊換新</strong>：最推薦嘅方式，流程規範，數據安全有保障。蘋果、華為、小米等品牌官網都有「以舊換新」入口，評估後可抵扣新機款。
@@ -283,7 +283,7 @@ Google提供「不活躍賬戶管理器（Inactive Account Manager）」，能�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>電子垃圾嘅真相
+電子垃圾嘅真相
 
 {class="mt-1"}
 一部手機嘅電路板入面便含有<strong>金、銀、鈀、銅</strong>等貴金屬，每噸廢舊電路板含金量係金礦石嘅數十倍。但若隨意丟棄，其中嘅鉛、汞、鎘會滲入土壤與地下水，污染持續數十年。<strong>正確回收，既保護環境，亦能等稀缺金屬循環再生。</strong>
@@ -291,7 +291,7 @@ Google提供「不活躍賬戶管理器（Inactive Account Manager）」，能�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>實操：為你嘅舊手機執行一場「標準葬禮」
+實操：為你嘅舊手機執行一場「標準葬禮」
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 最後一次完整備份：相片上傳雲端、重要檔案複製到電腦、聊天記錄匯出存檔。
@@ -305,7 +305,7 @@ Google提供「不活躍賬戶管理器（Inactive Account Manager）」，能�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>本月任務清單
+本月任務清單
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 為你目前嘅主力手機指定Apple「遺產聯絡人」或設定Google「不活躍賬戶管理器」。

@@ -43,7 +43,7 @@ Wer lange aufs Handy schaut, bekommt trockene und schmerzende Augen – das ist 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>Die 20-20-20-Regel
+Die 20-20-20-Regel
 
 {class="mt-1"}
 Alle <strong>20 Minuten</strong> auf Bildschirm schauen, dann den Blick auf <strong>20 Fuß (ca. 6 m)</strong> in die Ferne richten und <strong>20 Sekunden</strong> halten. Diese einfache Übung lindert die Ermüdung des Ziliarmuskels wirksam.
@@ -80,7 +80,7 @@ Wir nehmen täglich so viele Informationen auf wie ein Mensch früher in seinem 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praxis: Eine Woche digitale Gesundheit
+Praxis: Eine Woche digitale Gesundheit
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Heute: Bildschirmzeit/Digitale Gesundheit öffnen und die Daten der letzten Woche ansehen.
@@ -94,7 +94,7 @@ Wir nehmen täglich so viele Informationen auf wie ein Mensch früher in seinem 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Kapitelzusammenfassung
+Kapitelzusammenfassung
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Zuerst die Bildschirmzeit-Daten ansehen – den Ist-Zustand erkennen ist der erste Schritt

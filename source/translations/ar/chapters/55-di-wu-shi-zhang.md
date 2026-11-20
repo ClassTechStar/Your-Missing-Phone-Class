@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "أحمد"        // val: متغير للقراءة فقط (يُفضَّل افتراضيًا)
-var age = 18             // var: متغير قابل للتغيير (يمكن تعديله لاحقًا)
+val name = "أحمد" // val: متغير للقراءة فقط (يُفضَّل افتراضيًا)
+var age = 18 // var: متغير قابل للتغيير (يمكن تعديله لاحقًا)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var يمكن تغييره
-// name = "سارة"         // <i class="fas fa-times-circle mr-1"></i> val لا يمكن تغييره، الترجمة ستُظهر خطأ
+age = 19 // var يمكن تغييره
+// name = "سارة" // val لا يمكن تغييره، الترجمة ستُظهر خطأ
 
-val score: Int = 100     // يمكن أيضًا تحديد النوع صراحة
-val pi = 3.14            // إن لم تكتبه سيُستنتج تلقائيًا
+val score: Int = 100 // يمكن أيضًا تحديد النوع صراحة
+val pi = 3.14 // إن لم تكتبه سيُستنتج تلقائيًا
 ```
 :::
 
@@ -63,15 +63,15 @@ val pi = 3.14            // إن لم تكتبه سيُستنتج تلقائيً
 
 ```
 fun greet(name: String): String {
-    return "مرحبًا، $name!"     // رمز $ يُدرج المتغير داخل النص
+ return "مرحبًا، $name!" // رمز $ يُدرج المتغير داخل النص
 }
 
-println(greet("أحمد"))        // الناتج: مرحبًا أحمد!
+println(greet("أحمد")) // الناتج: مرحبًا أحمد!
 
 // الدوال ذات السطر الواحد يمكن كتابتها كتعبير
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // الناتج: 8
+println(add(3, 5)) // الناتج: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // الناتج: 8
 // شرط: if / else
 val age = 17
 if (age >= 18) {
-    println("بالغ")
+ println("بالغ")
 } else {
-    println("قاصر")
+ println("قاصر")
 }
 
 // فروع متعددة: when (أفضل من switch بمئة مرة)
 val score = 85
 val level = when {
-    score >= 90 -> "ممتاز"
-    score >= 60 -> "ناجح"
-    else -> "واصل المحاولة!"
+ score >= 90 -> "ممتاز"
+ score >= 60 -> "ناجح"
+ else -> "واصل المحاولة!"
 }
 
 // تكرار: حلقة for
 val fruits = listOf("تفاح", "موز", "برتقال")
 for (fruit in fruits) {
-    println("أحب أكل $fruit")
+ println("أحب أكل $fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ for (fruit in fruits) {
 :::
 
 ```
-var name: String = "أحمد"   // نوع عادي: لا يجوز أن يكون null أبدًا
-// name = null                // <i class="fas fa-times-circle mr-1"></i> خطأ ترجمة: يوقفك فورًا
+var name: String = "أحمد" // نوع عادي: لا يجوز أن يكون null أبدًا
+// name = null // خطأ ترجمة: يوقفك فورًا
 
 var nickname: String? = null // أضف علامة استفهام: يسمح بـ null
 nickname = "تومي"
 
 // مع الأنواع القابلة لـ null يجب التعامل بأمان:
-println(nickname?.length)    // استدعاء آمن: إذا كانت null يرجع null دون انهيار
-val len = nickname?.length ?: 0   // معامل Elvis: قيمة افتراضية عند null
+println(nickname?.length) // استدعاء آمن: إذا كانت null يرجع null دون انهيار
+val len = nickname?.length ?: 0 // معامل Elvis: قيمة افتراضية عند null
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ println(len)
 ```
 // صنف عادي: القالب
 class Dog(val name: String) {
-    fun bark() = println("$name: هو هو!")
+ fun bark() = println("$name: هو هو!")
 }
 
-val dog = Dog("Rex")      // ينشئ الكائن
-dog.bark()                 // Rex: هو هو!
+val dog = Dog("Rex") // ينشئ الكائن
+dog.bark() // Rex: هو هو!
 
 // data class: صندوق البيانات (يشمل equals/copy وغيرها تلقائيًا)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "أحمد", "zhangsan@example.com")
-val twin = me.copy(name = "خالد")   // ينسخ ويغيّر حقلًا واحدًا
+val twin = me.copy(name = "خالد") // ينسخ ويغيّر حقلًا واحدًا
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // طريقة lambda: تُعرَّف في المكان، خفيفة ومباشرة
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = العنصر الحالي
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = العنصر الحالي
 
 // تصفية + تحويل متسلسل (شائع جدًا في المشاريع الحقيقية)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

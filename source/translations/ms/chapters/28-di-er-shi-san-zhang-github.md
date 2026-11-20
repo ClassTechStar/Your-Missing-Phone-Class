@@ -25,46 +25,46 @@ Hakikat
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Alat kawalan versi (perisian)</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform hos kod (laman web)</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Lokasi pelaksanaan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pada komputer tempatan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Awan (diakses melalui pelayar)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tanggungjawab teras</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Merakam setiap perubahan fail (bagaimana diubah, siapa mengubah, bila diubah)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Meletakkan repositori Git di awan, memudahkan storan, paparan, kolaborasi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlukan rangkaian</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tidak perlu, boleh digunakan luar talian</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu sambungan rangkaian untuk mengakses</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kepemilikan</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perisian sumber terbuka, dicipta oleh Linus Torvalds (bapa Linux)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Produk di bawah Microsoft</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pesaing serupa</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ringkasnya:</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Git mengurus "bagaimana merakam perubahan", GitHub mengurus "perubahan diletakkan di mana, bagaimana berkolaborasi"</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">. Git ialah alat, berjalan secara tempatan; GitHub ialah platform, meletakkan repositori Git di awan, memudahkan kolaborasi dan paparan. Anda boleh guna Git sahaja tanpa GitHub (contohnya menulis kod sendiri untuk pengurusan versi), tetapi menggunakan GitHub mesti guna Git (kerana GitHub berasaskan Git).</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Konsep Teras dan Fungsi GitHub</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Alat kawalan versi (perisian)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform hos kod (laman web)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Lokasi pelaksanaan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pada komputer tempatan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Awan (diakses melalui pelayar)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tanggungjawab teras</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Merakam setiap perubahan fail (bagaimana diubah, siapa mengubah, bila diubah)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Meletakkan repositori Git di awan, memudahkan storan, paparan, kolaborasi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlukan rangkaian</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tidak perlu, boleh digunakan luar talian</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu sambungan rangkaian untuk mengakses</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kepemilikan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perisian sumber terbuka, dicipta oleh Linus Torvalds (bapa Linux)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Produk di bawah Microsoft</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pesaing serupa</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ringkasnya:</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Git mengurus "bagaimana merakam perubahan", GitHub mengurus "perubahan diletakkan di mana, bagaimana berkolaborasi"</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">. Git ialah alat, berjalan secara tempatan; GitHub ialah platform, meletakkan repositori Git di awan, memudahkan kolaborasi dan paparan. Anda boleh guna Git sahaja tanpa GitHub (contohnya menulis kod sendiri untuk pengurusan versi), tetapi menggunakan GitHub mesti guna Git (kerana GitHub berasaskan Git).</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Konsep Teras dan Fungsi GitHub</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 📁 Konsep Asas <strong>Sebelum bertindak, kenali beberapa perkataan berfrekuensi tinggi dahulu, jika tidak melihat antara muka GitHub akan keliru:</strong> Repositori (Repository, singkatannya Repo)
@@ -117,7 +117,7 @@ Hakikat
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Ubah tempatan → Peringkat → Commit → Push → Kemas kini awan
+Ubah tempatan → Peringkat → Commit → Push → Kemas kini awan
 
 {class="mt-1"}
 . Di bawah ini dijelaskan setiap langkah dalam bahasa mudah:
@@ -181,7 +181,7 @@ Rajin commit, langkah kecil berlari pantas
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
+atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Repositori peribadi juga tidak mutlak selamat, maklumat sensitif lebih baik diurus menggunakan pemboleh ubah persekitaran, jangan masuk ke repositori kod.
@@ -191,7 +191,7 @@ Rajin commit, langkah kecil berlari pantas
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Gaya lanjutan: Gunakan GitHub Pages membina blog peribadi percuma
+Gaya lanjutan: Gunakan GitHub Pages membina blog peribadi percuma
 
 {class="mt-1"}
 GitHub Pages membolehkan anda menghoskan satu laman web statik secara percuma, dipadankan dengan penjana tapak statik seperti Jekyll, Hexo, Hugo, boleh membina blog peribadi dengan mudah. Selepas menulis artikel Markdown push ke repositori, blog dikemas kini secara automatik, juga dilengkapi HTTPS dan nama domain tersuai. Blog ramai blogger teknikal dibina sedemikian, kos sifar, tiada iklan, versi terkawal.<strong>9. Ringkasan: Mengapa Setiap Orang Patut Mengenali GitHub</strong> GitHub sudah lama bukan sekadar "alat pengaturcara", ia lebih seperti satu
@@ -199,7 +199,7 @@ GitHub Pages membolehkan anda menghoskan satu laman web statik secara percuma, d
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>cara kerja era digital
+cara kerja era digital
 
 {class="mt-1"}
 : pengurusan versi menjadikan semua boleh dijejak, mekanisme kolaborasi menjadikan pasukan beroperasi cekap, semangat sumber terbuka menjadikan pengetahuan mengalir bebas. Walaupun anda tidak menulis kod, memahami konsep "commit, cabang, gabung" juga boleh membantu anda menguruskan lebih baik apa-apa kandungan yang memerlukan "pengubahsuaian berulang + kolaborasi berbilang orang",daripada tesis kepada dokumen, daripada nota kepada cadangan.
@@ -213,7 +213,7 @@ hello-github
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>, tandakan "Add a README file".
+, tandakan "Add a README file".
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Masuk ke repositori, klik butang edit README.md (ikon pensil), tulis satu pengenalan diri dengan Markdown, commit perubahan.

@@ -96,7 +96,7 @@ commit 时那句说明（commit message），新手普遍不当回事，随手�
 :::
 
 ```
-update                          （半年后：你到底改了啥？）
+update （半年后：你到底改了啥？）
 修复：登录成功后跳转到错误页面的问题（半年后：一眼看懂）
 ```
 :::
@@ -113,46 +113,46 @@ update                          （半年后：你到底改了啥？）
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本质</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本控制工具（软件）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">代码托管平台（网站）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">运行位置</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地电脑上</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">云端（浏览器访问）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心职责</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">记录文件的每次变更（怎么改的、谁改的、何时改的）</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把Git仓库放到云端，方便存储、展示、协作</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">是否需要网络</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不需要，离线可用</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要联网访问</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">归属</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开源软件，由Linus Torvalds（Linux之父）创建</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软旗下产品</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同类竞品</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN、Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab、Gitee（码云）、Bitbucket</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本质</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本控制工具（软件）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">代码托管平台（网站）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">运行位置</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本地电脑上</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">云端（浏览器访问）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">核心职责</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">记录文件的每次变更（怎么改的、谁改的、何时改的）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把Git仓库放到云端，方便存储、展示、协作</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">是否需要网络</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不需要，离线可用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要联网访问</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">归属</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开源软件，由Linus Torvalds（Linux之父）创建</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软旗下产品</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同类竞品</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN、Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab、Gitee（码云）、Bitbucket</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 简单说：<strong>Git管"怎么记录变更"，GitHub管"变更放在哪、怎么协作"</strong>。Git是工具，在本地运行；GitHub是平台，把Git仓库放到云端，方便协作和展示。你可以只用Git不用GitHub（比如自己写代码做版本管理），但用GitHub一定要用Git（因为GitHub就是基于Git的）。
@@ -206,17 +206,17 @@ GitHub提供的不只是代码存储，还包括：
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话比喻</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对应的动作</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仓库</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整个项目的相册，附全部"拍摄记录"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建仓库 / git init / git clone</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提交</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">带备注的游戏存档</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git commit</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">平行存档线</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git branch / git switch</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">合并</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把草稿誊回正本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git merge / Pull Request</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fork</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把别人家的户型图复印一份，自己照着改</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页上点 Fork 按钮</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Push / Pull</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上传 / 下载</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git push / git pull</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Issue</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">项目议事厅里的发言帖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页上开 Issue</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pull Request</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"我改好了，请过目"的验收单</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页上发 PR</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话比喻</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对应的动作</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仓库</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整个项目的相册，附全部"拍摄记录"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建仓库 / git init / git clone</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提交</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">带备注的游戏存档</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git commit</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">平行存档线</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git branch / git switch</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">合并</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把草稿誊回正本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git merge / Pull Request</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fork</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把别人家的户型图复印一份，自己照着改</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页上点 Fork 按钮</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Push / Pull</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上传 / 下载</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git push / git pull</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Issue</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">项目议事厅里的发言帖</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页上开 Issue</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pull Request</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"我改好了，请过目"的验收单</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页上发 PR</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -247,7 +247,7 @@ GitHub提供的不只是代码存储，还包括：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识：README是什么
+小知识：README是什么
 
 {class="mt-1"}
 README.md是一个Markdown格式的文件，是别人打开你仓库时第一眼看到的内容，一个好的README通常包含：项目简介、安装方法、使用示例、许可证、联系方式。写好README是程序员的基本素养，也是项目能否被他人使用的第一道门槛。
@@ -313,7 +313,7 @@ Actions 解决的是"每次提交之后那些重复劳动"：跑测试、检查�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 Git最难的不是命令，是「每次提交只做一件事」这个习惯。
@@ -633,7 +633,7 @@ GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 没有协议的代码"看着免费、用着违法"；选协议不是选信仰，是在给"你和所有后来者"定一份使用合同，想清楚再挂，挂了就别轻易改。
@@ -648,12 +648,12 @@ GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git init</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把当前文件夹变成 Git 仓库</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">在项目根目录执行，别在磁盘根目录乱试</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git clone &lt;地址&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把云端仓库完整复制到本地</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">地址从仓库页面绿色 Code 按钮复制</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git config --global user.name / user.email</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置提交者身份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">邮箱用注册 GitHub 的同一个</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git init</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把当前文件夹变成 Git 仓库</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">在项目根目录执行，别在磁盘根目录乱试</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git clone &lt;地址&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把云端仓库完整复制到本地</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">地址从仓库页面绿色 Code 按钮复制</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git config --global user.name / user.email</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置提交者身份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">邮箱用注册 GitHub 的同一个</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -663,14 +663,14 @@ GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git status</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看当前状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每步操作前先看一眼</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git add &lt;文件&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把改动放进暂存区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git add . 会暂存全部改动，想清楚再用</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git commit -m "说明"</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正式记录一次提交</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">说明写"为什么"，别只写 update</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git push</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把本地提交推上云端</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">被拒先 pull，别急着 --force</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git pull</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把云端更新拉到本地</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开工前先拉一次，保持同步</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git status</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看当前状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每步操作前先看一眼</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git add &lt;文件&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把改动放进暂存区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">git add . 会暂存全部改动，想清楚再用</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git commit -m "说明"</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正式记录一次提交</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">说明写"为什么"，别只写 update</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git push</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把本地提交推上云端</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">被拒先 pull，别急着 --force</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git pull</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把云端更新拉到本地</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开工前先拉一次，保持同步</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -682,13 +682,13 @@ GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git log</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查看提交历史</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">翻页后按 q 退出</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git log --oneline</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每条提交压成一行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快速浏览用</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git diff</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看未暂存的改动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">加 --staged 看已暂存的</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git show &lt;提交编号&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看某次提交的详情</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编号从 git log 里复制</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git log</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查看提交历史</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">翻页后按 q 退出</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git log --oneline</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每条提交压成一行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快速浏览用</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git diff</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看未暂存的改动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">加 --staged 看已暂存的</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git show &lt;提交编号&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看某次提交的详情</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编号从 git log 里复制</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -698,14 +698,14 @@ GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git branch</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">列出本地分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">当前分支带星号</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git switch &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切换分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧教程里的 git checkout 是同一件事的老写法</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git switch -c &lt;新分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建并切换</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名字用英文短横线风格</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git merge &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把指定分支并进当前分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">合并前先确认自己在哪条分支</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git branch -d &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">删除已合并的分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大写 -D 是强删，慎用</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git branch</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">列出本地分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">当前分支带星号</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git switch &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切换分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧教程里的 git checkout 是同一件事的老写法</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git switch -c &lt;新分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建并切换</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名字用英文短横线风格</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git merge &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把指定分支并进当前分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">合并前先确认自己在哪条分支</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git branch -d &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">删除已合并的分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大写 -D 是强删，慎用</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -715,13 +715,13 @@ GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git remote -v</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查看已配置的远程地址</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">remote add 写错不报错，push 才报</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git remote add origin &lt;地址&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">关联远程仓库</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">写重复会报错，set-url 可改</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git push -u origin &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">首次推送并建立关联</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">之后该分支直接 git push 即可</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git fetch</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只下载不合并</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想先看看云端有什么再决定时用</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git remote -v</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查看已配置的远程地址</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">remote add 写错不报错，push 才报</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git remote add origin &lt;地址&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">关联远程仓库</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">写重复会报错，set-url 可改</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git push -u origin &lt;分支&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">首次推送并建立关联</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">之后该分支直接 git push 即可</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git fetch</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只下载不合并</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想先看看云端有什么再决定时用</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -731,22 +731,22 @@ GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git restore &lt;文件&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">丢弃某文件未暂存的改动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">丢弃即消失，先想清楚</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git restore --staged &lt;文件&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">移出暂存区，改动保留</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和上一条的区别先分清</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git commit --amend</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">修改最后一次提交</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只对还没 push 的提交用</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git reset --soft HEAD~1</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">撤销最后一次提交，改动退回暂存区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想保留劳动成果时用它</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git revert &lt;提交&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用一条"反向提交"抵消某次改动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已推送的提交用 revert，别用 reset</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git reflog</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看指针移动历史</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"完了我搞没了"时先跑它</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">新手注意</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git restore &lt;文件&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">丢弃某文件未暂存的改动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">丢弃即消失，先想清楚</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git restore --staged &lt;文件&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">移出暂存区，改动保留</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和上一条的区别先分清</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git commit --amend</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">修改最后一次提交</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只对还没 push 的提交用</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git reset --soft HEAD~1</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">撤销最后一次提交，改动退回暂存区</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想保留劳动成果时用它</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git revert &lt;提交&gt;</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用一条"反向提交"抵消某次改动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已推送的提交用 revert，别用 reset</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git reflog</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看指针移动历史</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"完了我搞没了"时先跑它</td></tr>
+ </tbody>
 </table>
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：先开个练习仓库
+小贴士：先开个练习仓库
 
 {class="mt-1"}
 撤销类命令第一次用，先开一个练习仓库随便造：新建一个空文件夹，git init，随手提交几次，把表里的命令挨个跑一遍，看每条命令执行后 git status 和 git log 的变化。半小时的练习，换来以后所有的淡定。
@@ -930,7 +930,7 @@ bisect：历史很长、不知道哪次提交引入了 bug 时，git bisect 帮�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>安全提醒
+安全提醒
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 千万不要把密码、API密钥、token、数据库连接串、.env文件等敏感信息提交到GitHub，尤其是公开仓库——一旦泄露，会被爬虫秒抓，后果严重。这类文件一律提前写进.gitignore。
@@ -940,7 +940,7 @@ bisect：历史很长、不知道哪次提交引入了 bug 时，git bisect 帮�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>国内访问GitHub的注意事项
+国内访问GitHub的注意事项
 
 {class="mt-1"}
 GitHub在国内访问有时不稳定，可能出现打不开、克隆慢的情况。可以尝试：① 使用国内镜像站加速克隆（镜像更替频繁，如 ghfast.top、gh-proxy.com，用前先确认在线）；② 配置Hosts或使用代理；③ 如果主要面向国内协作，也可以考虑国产替代品<strong>Gitee（码云）</strong>，功能类似且访问速度快。很多团队会同时在GitHub和Gitee上托管，兼顾国际化和国内速度。
@@ -948,7 +948,7 @@ GitHub在国内访问有时不稳定，可能出现打不开、克隆慢的情�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>进阶玩法：用GitHub Pages搭建免费个人博客
+进阶玩法：用GitHub Pages搭建免费个人博客
 
 {class="mt-1"}
 GitHub Pages允许你免费托管一个静态网站，配合Jekyll、Hexo、Hugo等静态站点生成器，可以轻松搭建个人博客。写完Markdown文章push到仓库，博客自动更新，还自带HTTPS和自定义域名。无数技术博主的博客都是这么搭的，零成本、无广告、版本可控。
@@ -1074,7 +1074,7 @@ GitHub Pages允许你免费托管一个静态网站，配合Jekyll、Hexo、Hugo
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 仓库是历史的容器：你现在写下的每一句提交说明，都是在给未来的自己留路标。
@@ -1090,7 +1090,7 @@ GitHub早已不只是"程序员的工具"，它更像是一个<strong>数字时�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：完成你的GitHub初体验
+来动手：完成你的GitHub初体验
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 注册一个GitHub账号，完善个人资料（头像、简介、感兴趣的技术领域）。

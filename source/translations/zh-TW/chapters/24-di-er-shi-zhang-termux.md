@@ -45,44 +45,44 @@ Termux的核心應用程式可以透過幾個可選的外掛應用進行擴充�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">外掛名稱</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能描述</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向命令列程式公開Android API功能</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允許在裝置啟動時執行指令碼</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提供浮動終端視窗</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">為終端啟用顏色方案和字型自定義</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">將Termux指令碼與Tasker自動化應用整合</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允許從主螢幕小部件執行指令碼</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">外掛名稱</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能描述</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向命令列程式公開Android API功能</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允許在裝置啟動時執行指令碼</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提供浮動終端視窗</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">為終端啟用顏色方案和字型自定義</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">將Termux指令碼與Tasker自動化應用整合</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允許從主螢幕小部件執行指令碼</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>重要提示
+重要提示
 
 {class="mt-1"}
 Termux及其外掛必須從同一來源安裝，因為它們共享相同的sharedUserId。混合來自不同來源（如F-Droid和GitHub）的安裝將導致安裝錯誤。
@@ -127,7 +127,7 @@ Termux的最新穩定版本是v0.118.2，適用於Android ≥ 7的裝置。需�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>總結
+總結
 
 {class="mt-1"}
 Termux將強大的Linux終端體驗帶到了Android裝置上，讓手機成為一臺便攜的開發和學習工具。無論是開發者、系統管理員還是技術愛好者，都可以利用Termux在移動裝置上享受完整的命令列體驗，實現"口袋裡的Linux"這一理念。
@@ -135,7 +135,7 @@ Termux將強大的Linux終端體驗帶到了Android裝置上，讓手機成為�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來動手：在手機上跑通第一條Linux命令
+來動手：在手機上跑通第一條Linux命令
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 從F-Droid下載並安裝Termux，首次啟動等待初始化完成。

@@ -48,7 +48,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：反馈三板斧
+小贴士：反馈三板斧
 
 {class="mt-1"}
 一个实用的反馈模板是"指出问题 + 说明期望 + 提供上下文"。比如："第 25 行的错误处理只用了 console.log（指出问题），生产环境应该用统一的错误处理器并返回用户友好提示（说明期望），项目里有一个 handleError 函数可以用（提供上下文）"。这种反馈比"改一下错误处理"有效十倍。
@@ -292,7 +292,7 @@ kind: chapter
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
 {class="vs-title"}
-<i class="fas fa-times-circle mr-1"></i> 差的调试描述
+ 差的调试描述
 
 {class="font-mono text-xs leading-relaxed"}
 按钮点击没反应，帮我看看
@@ -300,7 +300,7 @@ kind: chapter
 
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
 {class="vs-title"}
-<i class="fas fa-check-circle mr-1"></i> 好的调试描述
+ 好的调试描述
 
 {class="font-mono text-xs leading-relaxed"}
 点击登录按钮后页面无反应。<br>期望行为：点击后跳转到 /home 页面<br>实际行为：点击后无任何反应，控制台无报错<br>复现步骤：<br>1. 在登录页输入用户名admin和密码123456<br>2. 点击"登录"按钮<br>3. 页面无反应<br>已排查：<br>- 网络请求正常，返回200<br>- onClick事件已绑定<br>- 检查了LoginButton组件的代码<br>相关文件：@src/components/LoginButton.tsx<br>　@src/pages/Login.tsx
@@ -709,7 +709,7 @@ AI 编程中的迭代有两种基本策略，适用于不同场景。理解它�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 这些开关的共同点：把"人的注意力"留给决策点，把"重复的检查"交给自动化。
@@ -865,7 +865,7 @@ AI 编程中的迭代有两种基本策略，适用于不同场景。理解它�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给你的 AI 当一次"病人"
+来动手：给你的 AI 当一次"病人"
 
 {class="mt-1"}
 故意在浏览器里做一个小页面，制造一个 bug（比如按钮没反应）。然后按本章"好的调试描述"的格式，向 AI 完整描述一次：原始信息、期望 vs 实际、复现步骤、已排查项。感受一下 AI 定位问题的速度差异，你会理解为什么"描述问题"本身是门手艺。
@@ -873,7 +873,7 @@ AI 编程中的迭代有两种基本策略，适用于不同场景。理解它�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - Prompt 三层：系统层（写在记忆文件）、任务层（做什么+技术+约束）、反馈层（指出问题+期望+上下文）
 - 调试四要点：给原始信息、期望vs实际、复现步骤、已排查项

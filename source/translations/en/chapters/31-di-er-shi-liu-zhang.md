@@ -80,7 +80,7 @@ VII. Chapter Overview: Remember These Frontiers in One Sentence
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Try It: Make a "Tech Requirements Checklist" for Your Next Phone
+Try It: Make a "Tech Requirements Checklist" for Your Next Phone
 
 {class="mt-1"}
 Take a piece of paper and list your needs for AI, satellite, foldable screens, Wi-Fi 7, fast charging, and battery capacity in three tiers: "Must-have / Nice-to-have / Don't need." This way, next time you visit a store, you can quickly judge whether the salesperson's "selling points" are real needs or just upselling. For example:
@@ -93,7 +93,7 @@ Take a piece of paper and list your needs for AI, satellite, foldable screens, W
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - AI phone three criteria: on-device LLM, NPU TOPS, AI Agent scenarios

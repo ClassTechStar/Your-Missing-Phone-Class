@@ -102,7 +102,7 @@ HDR（High Dynamic Range）技術可以同時保留畫面中最亮和最暗部�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>實用建議
+實用建議
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 日常拍攝：1080P/4K + 30fps + H.265編碼，平衡畫質和檔案大小。
@@ -113,7 +113,7 @@ HDR（High Dynamic Range）技術可以同時保留畫面中最亮和最暗部�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>去探索一下：你的手機影片設定
+去探索一下：你的手機影片設定
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 開啟相機App，切換到影片模式。
@@ -241,7 +241,7 @@ AI不只是把整張圖一刀切處理，而是先"看懂"畫面裡有什麼，�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>靜態攝影實用建議
+靜態攝影實用建議
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 日常拍攝：HEIF/JPEG預設即可，檔案小、畫質夠用。
@@ -253,7 +253,7 @@ AI不只是把整張圖一刀切處理，而是先"看懂"畫面裡有什麼，�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手試試：摸清你的相機能力
+動手試試：摸清你的相機能力
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 檢視你的手機是否支援RAW拍攝（設定→相機→格式），試著開啟並拍攝一張，對比同一場景的JPEG和RAW檔案大小。

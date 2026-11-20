@@ -97,7 +97,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>万能第一招：重启手机
+万能第一招：重启手机
 
 {class="mt-1"}
 不管你遇到什么问题，卡顿、闪退、连不上网、声音异常，先重启一下手机。这句话听起来像是敷衍，但以我自己的经验，至少有六成的小毛病重启之后就好了。手机跟电脑一样，跑久了内存里会积累乱七八糟的东西。重启就是清空重来。所以，下次手机出问题，先别急着搜"怎么办"，重启完了再看看。
@@ -105,7 +105,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就记：这些救命操作要烂熟于心
+现在就记：这些救命操作要烂熟于心
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>强制重启</strong>：全面屏iPhone按音量加 → 音量减 → 长按电源键到出现Logo。安卓长按电源键10-15秒直到震动。

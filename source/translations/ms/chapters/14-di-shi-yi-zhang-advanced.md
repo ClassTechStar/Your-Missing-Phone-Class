@@ -102,7 +102,7 @@ Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan je
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Cadangan storan: video kadar bit tinggi sangat memenuhi ruang, cadangan sandarkan ke komputer atau storan awan secara berkala.
+Cadangan storan: video kadar bit tinggi sangat memenuhi ruang, cadangan sandarkan ke komputer atau storan awan secara berkala.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Terokai: Tetapan video telefon anda.
@@ -113,7 +113,7 @@ Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan je
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Ambil beberapa segmen video dengan tetapan berbeza, bandingkan kualiti gambar dan saiz fail.
+Ambil beberapa segmen video dengan tetapan berbeza, bandingkan kualiti gambar dan saiz fail.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Bab 12: Hiburan Audio-Visual &amp; Pembacaan
@@ -241,7 +241,7 @@ Selain tangkap harian, telefon ada beberapa mod khas, guna betul boleh tangkap g
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Cadangan praktikal fotografi statik
+Cadangan praktikal fotografi statik
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Tangkap harian: HEIF/JPEG lalai sudah memadai, fail kecil, kualiti cukup.
@@ -253,7 +253,7 @@ Selain tangkap harian, telefon ada beberapa mod khas, guna betul boleh tangkap g
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cuba sendiri: Kenal pasti keupayaan kamera anda
+Cuba sendiri: Kenal pasti keupayaan kamera anda
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Semak telefon anda sama ada menyokong tangkap RAW (Tetapan → Kamera → Format), cuba aktifkan dan tangkap satu, bandingkan saiz fail JPEG dan RAW adegan yang sama.

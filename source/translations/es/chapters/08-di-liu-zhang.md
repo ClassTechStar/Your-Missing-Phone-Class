@@ -54,7 +54,7 @@ En una era de rápido desarrollo de la IA, el modelo tradicional de "ver para cr
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① Fraude con intercambio de rostro y voz por IA
+① Fraude con intercambio de rostro y voz por IA
 
 {class="mt-1"}
 Los delincuentes recopilan fotos en alta resolución o muestras de voz de pocos segundos publicadas por el objetivo en redes sociales y, con IA de deepfake, clonan un "video de un ser querido" o una "voz" suficientemente creíbles. Guiones habituales:<strong>accidente repentino, petición urgente de dinero, secuestro</strong>, etc. Explotan los lazos afectivos y familiares, por lo que <strong>son extremadamente engañosos</strong>.
@@ -62,7 +62,7 @@ Los delincuentes recopilan fotos en alta resolución o muestras de voz de pocos 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② Suplantación de autoridades / servicio al cliente
+② Suplantación de autoridades / servicio al cliente
 
 {class="mt-1"}
 La IA puede simular con precisión la voz y el tono de agentes de servicio al cliente oficiales o de autoridades policíales y judiciales, e incluso sintetizar capturas de transferencia, documentos oficiales y órdenes de detención altamente realistas,<strong>generando pánico o presión de autoridad</strong> para inducir a la víctima a transferir dinero o activar la pantalla compartida y robar así la información de la cuenta.
@@ -70,7 +70,7 @@ La IA puede simular con precisión la voz y el tono de agentes de servicio al cl
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ Fraude de inversión con IA
+③ Fraude de inversión con IA
 
 {class="mt-1"}
 Medíante algoritmos de IA se falsifican capturas de rendimientos "sin riesgo", interfaces de software de selección cuantitativa de acciones o informes de análisis de inversión "de maestro", y con el cebo de altos retornos se vende un servicio de inversión caro o se induce a la víctima a transferir fondos a cuentas controladas por los estafadores,<strong>que al final desaparecen con el dinero</strong>.
@@ -127,7 +127,7 @@ Cámaras inteligentes, cerraduras inteligentes, altavoces inteligentes y otros d
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Advertencia con caso real
+Advertencia con caso real
 
 {class="mt-1"}
 En 2022, la policía de una localidad informó de que un hacker, aprovechando la contraseña por defecto de cámaras domésticas de cierta marca (muchos usuarios nunca la cambiaban), sustrajo imágenes de los dormitoríos de miles de familias y las vendió en internet.<strong>No cambiar la contraseña por defecto = dejar la puerta de casa abierta</strong>.
@@ -170,7 +170,7 @@ Si pierdes el teléfono, no te asustes; sigue este orden:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Lo que nunca debes hacer
+Lo que nunca debes hacer
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Usar contraseñas débiles como cumpleaños / 123456 / qwerty;
@@ -182,7 +182,7 @@ Si pierdes el teléfono, no te asustes; sigue este orden:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prueba a activar y simular el "bloqueo remoto"
+Prueba a activar y simular el "bloqueo remoto"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Asegúrate de tener activada la función "Buscar mi teléfono".

@@ -173,7 +173,7 @@ Constraint 是五要素里名字最陌生的一个，其实最接地气。它通
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：练五要素不用等大项目
+小贴士：练五要素不用等大项目
 
 {class="mt-1"}
 手边的事就能练。"做个提醒我给猫喂饭的小工具"，Who 是你和家人，What 是定时提醒加打卡，Why 是出差怕家人忘了换班，How 是手机网页加本地提醒，Constraint 是一周内能用，三十秒说完。再来个偏门的："把微信读书的划线导出来"，过一遍五要素你会发现，你要的其实不是"导出文件"。你要的其实是"一个能搜索的划线浏览页"。很多需求歧义不是表达问题，是你还没想明白，五要素就是那面镜子。
@@ -339,7 +339,7 @@ backlog 不是垃圾场，也要打理。规矩三条：一行一个想法，带
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 拆需求的刀法：竖着切，先能用，再变好——每一步都是一条能跑通的完整链路，而不是半截工程。
@@ -373,12 +373,12 @@ backlog 不是垃圾场，也要打理。规矩三条：一行一个想法，带
 - 构建：Vite
 ## 数据模型
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## 非目标
 - 不做登录和多人使用
@@ -468,7 +468,7 @@ PRD 不必从零手写。把五要素陈述和拆解清单丢给 AI，让它按�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别把 PRD 写成小说
+避坑提醒：别把 PRD 写成小说
 
 {class="mt-1"}
 见过三千字的 PRD，通篇是"用户体验要流畅""界面要有现代感""架构要优雅"，AI 读不出任何可执行的信息，只会按自己的理解各送你一堆。判断标准送你：文档里每句话，要么能变成代码，要么能变成一个验收动作，两头都不沾的句子，删。
@@ -535,7 +535,7 @@ PRD 不必从零手写。把五要素陈述和拆解清单丢给 AI，让它按�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给你的"心头好"写一份五要素卡
+来动手：给你的"心头好"写一份五要素卡
 
 {class="mt-1"}
 选一个你酝酿已久的小项目，花 5 分钟填一张卡：Who / What / Why / How / Constraint，各一句话。然后把它拆成 3-5 个"每一步都能用"的步骤。你会发现：把想法写下来之后，它就从"白日梦"变成了"待办清单"。
@@ -669,7 +669,7 @@ AI 收到这句话会怎么做？它见过的"学习追踪器"多了，按最高
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：最贵的是"看起来专业"的坏需求
+避坑提醒：最贵的是"看起来专业"的坏需求
 
 {class="mt-1"}
 "参考业界好办法，做一套完整的权限体系。"术语齐全，方向模糊，AI 会给你一大坨用不上的东西，而且每一坨都"符合好办法"，你还不好意思说不对。需求里每个大词，都值得追问一句：具体指什么？
@@ -713,7 +713,7 @@ AI 收到这句话会怎么做？它见过的"学习追踪器"多了，按最高
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：给想法安一个家
+小贴士：给想法安一个家
 
 {class="mt-1"}
 给 Could 和新想法一个专门的去处：项目里放一个 backlog.md，一行一个想法，想到就扔进去，然后继续做当前步骤。五秒钟的动作，能有效阻止"想法打断开发"，而且每轮迭代结束，它就是你下一轮的选材池。
@@ -757,7 +757,7 @@ Won't 这一级最容易名存实亡，想法很好，"以后一定做"，然后
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 需求文档是活的：先改文档，再下指令，改完留痕。对话会消失，文档不会。
@@ -938,7 +938,7 @@ Step N（名字）：作为一个____，我想要____，以便____。
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 需求五要素：Who / What / Why / How / Constraint，想清楚再开口
 - 需求拆解黄金法则：每一步完成后项目都是"能用的东西"

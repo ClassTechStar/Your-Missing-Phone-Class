@@ -254,7 +254,7 @@ Apple Watch 高频协同功能六件套
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：圆环的正确打开方式
+小贴士：圆环的正确打开方式
 
 {class="mt-1"}
 活动圆环（站立/运动/消耗）是苹果最强的习惯引擎，但它默认的目标对久坐新手偏高。设置 → 活动里把三环目标调到"跳一跳够得着"的水平，连续闭环比单日爆环更能建立习惯。周末挑战、与家人共享圆环，都是加倍正反馈的玩法。
@@ -359,7 +359,7 @@ iPhone 的"快捷指令"App 可以把自动化钉到表盘（复杂功能），�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：做一只"只服务你"的手表
+来动手：做一只"只服务你"的手表
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 通知做减法：只保留 3 个 App 的腕上通知。
@@ -435,7 +435,7 @@ Apple Watch 的表带是卡口式快拆，按住背面按钮就能滑出：这�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 Apple Watch 的价值在「少看手机」：通知做减法、操作做加法，表才有存在的意义。
@@ -658,7 +658,7 @@ Apple Watch 常见故障速查（处理无效再走第三级修复或售后）
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 配对→表盘→通知分流：通知做减法是第一步
 - 六大协同：通话、回复、支付、查找、遥控、体能训练

@@ -27,51 +27,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">브랜드</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">삭제 진입점</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">주요 차이점 및 주의사항</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 및 업데이트 > 재설정 > 공장 초기화</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 화웨이 계정에서 로그아웃하고 "내 스마트폰 찾기"를 꺼야 합니다. 그렇지 않으면 활성화 잠금이 트리거됩니다. 클린 모드에서는 비밀번호 인증이 필요할 수 있습니다.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">샤오미 / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 내 기기 > 공장 초기화</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">하단에 "가상 SD 카드 포맷"과 "모든 콘텐츠 및 설정 지우기" 옵션이 있으며, 둘 다 선택해야 함; 샤오미 계정에서 로그아웃하기 전에 먼저 "내 기기 찾기"를 끔.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 기타 설정 > 스마트폰 복원 > 모든 데이터 완전히 삭제</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS는 "완전 삭제" 모드를 제공하며 저장 공간을 여러 번 덮어씀; 잠금 화면 비밀번호로 확인 필요.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 관리 > 백업 및 재설정 > 모든 데이터 삭제</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"스마트폰 저장 공간 포맷"을 선택해야만 SD 카드 영역이 정리됨; vivo 계정에서 로그아웃하고 "내 스마트폰 찾기"를 꺼야 함.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">삼성</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 일반 관리 > 재설정 > 공장 초기화</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 Samsung 계정을 제거하고 "내 스마트폰 찾기"를 꺼야 함; 일부 모델에는 "자동 덮어쓰기" 옵션이 있으므로 활성화 권장.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 일반 > iPhone 전송 또는 복원 > 모든 콘텐츠 및 설정 지우기</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 Apple ID에서 로그아웃해야 하며, 그렇지 않으면 다음 사용자가 iCloud 활성화 잠금에 막힘; iOS 15+는 나중에 확인할 수 있도록 "로그아웃 시 iCloud 데이터 유지" 지원.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">브랜드</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">삭제 진입점</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">주요 차이점 및 주의사항</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 및 업데이트 > 재설정 > 공장 초기화</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 화웨이 계정에서 로그아웃하고 "내 스마트폰 찾기"를 꺼야 합니다. 그렇지 않으면 활성화 잠금이 트리거됩니다. 클린 모드에서는 비밀번호 인증이 필요할 수 있습니다.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">샤오미 / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 내 기기 > 공장 초기화</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">하단에 "가상 SD 카드 포맷"과 "모든 콘텐츠 및 설정 지우기" 옵션이 있으며, 둘 다 선택해야 함; 샤오미 계정에서 로그아웃하기 전에 먼저 "내 기기 찾기"를 끔.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 기타 설정 > 스마트폰 복원 > 모든 데이터 완전히 삭제</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS는 "완전 삭제" 모드를 제공하며 저장 공간을 여러 번 덮어씀; 잠금 화면 비밀번호로 확인 필요.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 관리 > 백업 및 재설정 > 모든 데이터 삭제</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"스마트폰 저장 공간 포맷"을 선택해야만 SD 카드 영역이 정리됨; vivo 계정에서 로그아웃하고 "내 스마트폰 찾기"를 꺼야 함.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">삼성</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 일반 관리 > 재설정 > 공장 초기화</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 Samsung 계정을 제거하고 "내 스마트폰 찾기"를 꺼야 함; 일부 모델에는 "자동 덮어쓰기" 옵션이 있으므로 활성화 권장.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 일반 > iPhone 전송 또는 복원 > 모든 콘텐츠 및 설정 지우기</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 Apple ID에서 로그아웃해야 하며, 그렇지 않으면 다음 사용자가 iCloud 활성화 잠금에 막힘; iOS 15+는 나중에 확인할 수 있도록 "로그아웃 시 iCloud 데이터 유지" 지원.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>가장 쉽게 간과되는 세 가지
+가장 쉽게 간과되는 세 가지
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>계정 로그아웃 누락</strong>: 스마트폰을 다음 사용자에게 판매한 후 원격으로 잠겨버려, 결국 신분증을 들고 공식 A/S 센터에 가서 잠금을 해제해야 함.
@@ -86,7 +86,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>법적 근거: 개인정보 보호법 제49조
+법적 근거: 개인정보 보호법 제49조
 
 {class="mt-1"}
 2021년 시행된 "중화인민공화국 개인정보 보호법" 제49조는 명확히 규정합니다: <strong>자연인이 사망한 경우, 그 근친자는 자신의 합법적이고 정당한 이익을 위해 사자 관련 개인정보에 대해 본 장에서 규정한 열람, 복사, 정정, 삭제 등의 권리를 행사할 수 있다.
@@ -115,7 +115,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>절대 하지 말아야 할 것
+절대 하지 말아야 할 것
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>사자의 계정 비밀번호를 직접 가족에게 넘겨 "계속 사용"하게 하지 마세요</strong>—,이는 플랫폼 계약을 위반하며, 자금이 동결되거나 리스크 관리가 발동될 때 증거가 더 어려워짐.
@@ -163,7 +163,7 @@ Google은 "비활성 계정 관리자(Inactive Account Manager)"를 제공하여
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>핵심 알림
+핵심 알림
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 각 플랫폼 규칙은 업데이트되며, 처리 전에 먼저 공식 고객 서비스의 최신 지침을 확인하세요.
@@ -185,7 +185,7 @@ Google은 "비활성 계정 관리자(Inactive Account Manager)"를 제공하여
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>암호화폐 "소멸"의 실제 대가
+암호화폐 "소멸"의 실제 대가
 
 {class="mt-1"}
 Chainalysis 보고에 따르면, 전 세계적으로 이미 <strong>300만 비트코인 이상</strong>이 개인키 분실로 영원히 회수 불가능하며, 이는 현재 총량의 6분의 1에 해당.
@@ -239,7 +239,7 @@ Chainalysis 보고에 따르면, 전 세계적으로 이미 <strong>300만 비�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>"비밀번호"에 대한 법률 알림
+"비밀번호"에 대한 법률 알림
 
 {class="mt-1"}
 비밀번호를 직접 유서에 쓰면 유출 위험이 있으며, 유서가 공개된 후 모든 상속인이 볼 수 있음.
@@ -254,41 +254,41 @@ Chainalysis 보고에 따르면, 전 세계적으로 이미 <strong>300만 비�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">경로</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">회수 가격</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">데이터보안</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">적용 시나리오</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">공식 트레이드인(화웨이/Apple/샤오미 등)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">중간, 보조금 쿠폰 중첩 가능</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">최고, 공식의 규범화된 절차</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">같은 브랜드의 새 기기로 교체할 때 가장 합산함</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">제3자 재활용 플랫폼(아이회수, 주안쥐안, 후이쇼우바오 등)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">약간 높음, 가격 비교 가능</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">높음, 데이터 정리 보고서 제공</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">직접 현금화하고 싶고 브랜드에 구속되지 않을 때</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">공익 기부(농촌 학교, 자선 기구 등)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">경제적 보상 없음</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">자체적으로 철저히 삭제 필요</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 아직 사용 가능하고 자선을 하고 싶을 때</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">남은 가치 발휘(자체 개조)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">새 기기 비용 절약</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">원래 사용자가 계속 사용, 위험 없음</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기 성능이 아직 괜찮고 가정에 개조 요구가 있을 때</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">경로</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">회수 가격</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">데이터보안</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">적용 시나리오</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">공식 트레이드인(화웨이/Apple/샤오미 등)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">중간, 보조금 쿠폰 중첩 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">최고, 공식의 규범화된 절차</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">같은 브랜드의 새 기기로 교체할 때 가장 합산함</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">제3자 재활용 플랫폼(아이회수, 주안쥐안, 후이쇼우바오 등)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">약간 높음, 가격 비교 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">높음, 데이터 정리 보고서 제공</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">직접 현금화하고 싶고 브랜드에 구속되지 않을 때</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">공익 기부(농촌 학교, 자선 기구 등)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">경제적 보상 없음</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">자체적으로 철저히 삭제 필요</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 아직 사용 가능하고 자선을 하고 싶을 때</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">남은 가치 발휘(자체 개조)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">새 기기 비용 절약</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">원래 사용자가 계속 사용, 위험 없음</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기 성능이 아직 괜찮고 가정에 개조 요구가 있을 때</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>공식 재활용/트레이드인</strong>: 가장 권장되는 방식으로, 절차가 규범적이고 데이터 보안이 보장됨.
@@ -299,7 +299,7 @@ Chainalysis 보고에 따르면, 전 세계적으로 이미 <strong>300만 비�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>전자 폐기물의 진실
+전자 폐기물의 진실
 
 {class="mt-1"}
 한 대의 스마트폰 회로기판에는 <strong>금, 은, 팔라듐, 구리</strong> 등 귀금속이 포함되어 있으며, 톤당 폐 회로기판의 금 함유량은 금광의 수십 배.
@@ -308,7 +308,7 @@ Chainalysis 보고에 따르면, 전 세계적으로 이미 <strong>300만 비�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 구형 스마트폰에 "표준 장례"를 집행하기
+실습: 구형 스마트폰에 "표준 장례"를 집행하기
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 마지막 전체 백업: 사진을 클라우드에 업로드, 중요한 파일은 컴퓨터에 복사, 채팅 기록을 내보내 보관.
@@ -322,7 +322,7 @@ Chainalysis 보고에 따르면, 전 세계적으로 이미 <strong>300만 비�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>이번 달 작업 목록
+이번 달 작업 목록
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 현재 주력 스마트폰에 Apple "유산 연락처"를 지정하거나 Google "비활성 계정 관리자"를 설정.

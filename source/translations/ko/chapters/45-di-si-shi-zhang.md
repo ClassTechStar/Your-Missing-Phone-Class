@@ -86,12 +86,12 @@ kind: chapter
 - 빌드: Vite
 ## 데이터 모델
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## 개발 계획
 Step 1: 기본 기록 기능 (CRUD)

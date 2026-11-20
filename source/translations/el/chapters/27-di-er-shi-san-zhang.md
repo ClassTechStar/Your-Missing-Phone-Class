@@ -95,7 +95,7 @@ Tasker: ισχυρότερο εργαλείο.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Συμβουλή
+Συμβουλή
 
 {class="mt-1"}
 Βρείτε 3 συχνές εργασίες.
@@ -103,7 +103,7 @@ Tasker: ισχυρότερο εργαλείο.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Εξάσκηση: 3 προκλήσεις
+Εξάσκηση: 3 προκλήσεις
 
 {class="mt-1 mb-2"}
 Επιλέξτε μία:
@@ -116,7 +116,7 @@ Tasker: ισχυρότερο εργαλείο.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Περίπτωση 3: Αυτοματοποίηση «καλό πρωί»
+Περίπτωση 3: Αυτοματοποίηση «καλό πρωί»
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Σενάριο</strong>: Κάθε μέρα 7:00 αυτόματη πρόγνωση καιρού + αθόρυβο κλείσιμο + άνοιγμα ειδήσεων.

@@ -26,7 +26,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>选机三板斧
+选机三板斧
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>先想清楚你最在乎什么</strong>：拍照？打游戏？续航？屏幕？系统流畅？还是只需要能打电话发微信就行？把需求排个序。
@@ -41,41 +41,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么看</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话总结</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">处理器（SoC）</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">决定了手机能流畅用几年。2026年的标准：骁龙8 Elite Gen5/天玑9500以上=顶级；骁龙8s Gen4/天玑8400=中高端；骁龙7+ Gen4/天玑7350=够用三年。低于骁龙6系的建议慎重。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">买新不买旧，SoC决定了你手机能用几年不卡</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">屏幕</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED比LCD色彩好、更省电；刷新率120Hz比60Hz滑屏流畅很多；分辨率至少1080P以上。高频PWM调光（1920Hz以上）对眼睛更友好。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+高频调光=好屏幕的及格线</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">摄像头</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>不看像素数看传感器尺寸</strong>。底大一级压死人，传感器尺寸比像素重要得多。超广角实用；长焦（3x以上光学变焦）拍远处的东西；微距镜头多半是凑数的。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大底主摄+实用长焦>多颗凑数镜头</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">电池和充电</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh是基础及格线，5000mAh以上一天一充很稳。快充看瓦数：60W以上算快，100W以上飞快。无线充电方便但慢。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh+60W快充=不焦虑组合</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统更新承诺</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">决定了手机能安全用多久。苹果一般给5-6年系统更新；三星旗舰给4年系统+5年安全更新；谷歌Pixel给7年；国产中端机更新承诺普遍偏短（2-3年）。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想用久一点，选系统更新承诺长的品牌</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么看</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话总结</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">处理器（SoC）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">决定了手机能流畅用几年。2026年的标准：骁龙8 Elite Gen5/天玑9500以上=顶级；骁龙8s Gen4/天玑8400=中高端；骁龙7+ Gen4/天玑7350=够用三年。低于骁龙6系的建议慎重。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">买新不买旧，SoC决定了你手机能用几年不卡</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">屏幕</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED比LCD色彩好、更省电；刷新率120Hz比60Hz滑屏流畅很多；分辨率至少1080P以上。高频PWM调光（1920Hz以上）对眼睛更友好。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+高频调光=好屏幕的及格线</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">摄像头</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>不看像素数看传感器尺寸</strong>。底大一级压死人，传感器尺寸比像素重要得多。超广角实用；长焦（3x以上光学变焦）拍远处的东西；微距镜头多半是凑数的。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大底主摄+实用长焦>多颗凑数镜头</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">电池和充电</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAh是基础及格线，5000mAh以上一天一充很稳。快充看瓦数：60W以上算快，100W以上飞快。无线充电方便但慢。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh+60W快充=不焦虑组合</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系统更新承诺</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">决定了手机能安全用多久。苹果一般给5-6年系统更新；三星旗舰给4年系统+5年安全更新；谷歌Pixel给7年；国产中端机更新承诺普遍偏短（2-3年）。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想用久一点，选系统更新承诺长的品牌</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -141,51 +141,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">使用场景</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">重点看什么</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐方向</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 拍照达人</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大底主摄（1英寸最佳）、光学防抖、长焦（3x以上光学变焦）、影像芯片</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X系列、华为Pura/Mate系列、小米Ultra系列</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 游戏玩家</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">顶级处理器、高触控采样率、散热系统、大电池+快充</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO数字系列、ROG Phone、红魔、Redmi K系列</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 续航优先</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh以上电池、能效好的处理器、LTPO屏幕</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">荣耀Magic系列、一加、Redmi Note大电池版</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 长辈使用</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式、大字体、大音量、大电池、售后网点多</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为畅享、荣耀Play、OPPO A系列、Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 学生用机</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">性价比高、耐用、电池大、有家长控制功能</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo、realme GT、iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 苹果生态用户</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已有Mac/iPad/AirPods，买iPhone是唯一解</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17标准版（性价比）或Pro版（满血体验）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 出国旅行</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM支持、全球频段覆盖完整、Google服务</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone、三星S系列、Pixel、一加</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">使用场景</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">重点看什么</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐方向</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 拍照达人</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大底主摄（1英寸最佳）、光学防抖、长焦（3x以上光学变焦）、影像芯片</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X系列、华为Pura/Mate系列、小米Ultra系列</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 游戏玩家</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">顶级处理器、高触控采样率、散热系统、大电池+快充</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO数字系列、ROG Phone、红魔、Redmi K系列</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 续航优先</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh以上电池、能效好的处理器、LTPO屏幕</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">荣耀Magic系列、一加、Redmi Note大电池版</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 长辈使用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">简易模式、大字体、大音量、大电池、售后网点多</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为畅享、荣耀Play、OPPO A系列、Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 学生用机</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">性价比高、耐用、电池大、有家长控制功能</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo、realme GT、iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 苹果生态用户</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已有Mac/iPad/AirPods，买iPhone是唯一解</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17标准版（性价比）或Pro版（满血体验）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 出国旅行</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM支持、全球频段覆盖完整、Google服务</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone、三星S系列、Pixel、一加</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -215,7 +215,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：用这套方法选一台手机
+动手：用这套方法选一台手机
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 拿一张纸，写下你的两个核心需求（比如：续航第一、拍照第二）。
@@ -227,7 +227,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 选机三板斧：先想需求 → 再定预算 → 最后挑机型

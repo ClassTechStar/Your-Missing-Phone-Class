@@ -102,7 +102,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>צילום ספורט: 1080P/4K + 60fps, להבטחת חלקות.
+צילום ספורט: 1080P/4K + 60fps, להבטחת חלקות.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - יצירה מקצועית: 4K + ProRes (אם נתמך), שמירת מרחב עיבוד מרבי.
@@ -113,7 +113,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בדוק את אפשרויות הרזולוציה וקצב הפריימים, נסה שילובים שונים.
+בדוק את אפשרויות הרזולוציה וקצב הפריימים, נסה שילובים שונים.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. אם נתמך, בדוק אם יש אפשרויות מתקדמות כמו HDR, ProRes.
@@ -241,7 +241,7 @@ AI לא מעבד את כל התמונה אחת, אלא "מבין" מה בתמו�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>המלצות מעשיות לצילום סטטי
+המלצות מעשיות לצילום סטטי
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - צילום יומיומי: HEIF/JPEG כברירת מחדל, קובץ קטן, איכות מספקת.
@@ -253,7 +253,7 @@ AI לא מעבד את כל התמונה אחת, אלא "מבין" מה בתמו�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>תרגול מעשי: הכר את יכולות המצלמה שלך
+תרגול מעשי: הכר את יכולות המצלמה שלך
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. בדוק אם הטלפון תומך ב-RAW (הגדרות &gt; מצלמה &gt; פורמט), הפעל וצלם, השווה גודל JPEG מול RAW.

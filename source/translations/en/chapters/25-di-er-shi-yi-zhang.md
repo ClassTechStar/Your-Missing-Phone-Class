@@ -100,7 +100,7 @@ Enable Two-Factor Authentication (2FA)
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Permission cleanup
+Permission cleanup
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: Go to Settings &gt; Privacy/Permission management, review permissions for each App. Mark Apps with unreasonable permission requirements (such as a calculator wanting contacts), and consider uninstalling or using alternatives.</strong> Check account security

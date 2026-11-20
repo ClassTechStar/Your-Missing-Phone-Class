@@ -46,7 +46,7 @@ Punto chiave: <strong>la password principale non lascia mai il tuo dispositivo</
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Perché "Zero-Knowledge" significa che nemmeno il provider vede le tue password?
+Perché "Zero-Knowledge" significa che nemmeno il provider vede le tue password?
 
 {class="mt-1"}
 Perché la chiave di decrittazione è derivata dalla tua password principale, che esiste solo nella tua testa ed è usata solo sul tuo dispositivo locale. Sul server del provider non c'è né la password principale né la chiave di decrittazione, ma solo il testo cifrato. Ecco perché provider seri come Bitwarden e 1Password dichiarano esplicitamente "non possiamo vedere le tue password nemmeno noi": non è che non vogliano, è che tecnicamente non possono.
@@ -71,7 +71,7 @@ Nell'agosto 2022 lo storico gestore LastPass ha annunciato la violazione del pro
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Cosa imparare dal caso LastPass
+Cosa imparare dal caso LastPass
 
 {class="mt-1"}
 Primo: la password principale deve essere lunga e unica (consigliato almeno 16 caratteri, con maiuscole, minuscole, numeri e simboli). Secondo: preferire provider che supportino Argon2id con un alto numero di iterazioni. Terzo: per gli account ad alto valore (banca, email) attiva sempre una seconda verifica indipendente, senza affidarti solo al gestore di password.
@@ -118,7 +118,7 @@ Se una password è presente nel database delle fughe, <strong>per quanto comples
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Principio di query k-Anonymity
+Principio di query k-Anonymity
 
 {class="mt-1"}
 Temi che inserire la password in HaveIBeenPwned provochi un'altra fuga? Non preoccuparti. Le query moderne usano il protocollo "k-Anonimity": il browser invia al server solo i primi 5 caratteri dell'hash della password, il server restituisce l'elenco di tutti gli hash che iniziano con quei 5 caratteri e il confronto avviene in locale. In altre parole, il server non vede mai l'hash completo della tua password. Il "controllo password trapelate" di 1Password e Bitwarden funziona così.
@@ -133,7 +133,7 @@ Temi che inserire la password in HaveIBeenPwned provochi un'altra fuga? Non preo
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Verifica ora: la tua password è sicura?
+Verifica ora: la tua password è sicura?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apri haveibeenpwned.com, inserisci la tua email abituale e guarda in quali violazioni è presente.
@@ -159,36 +159,36 @@ Il Passkey si basa sullo standard FIDO2 / WebAuthn e sostituisce la password con
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensione</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Password tradizionale</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Resistenza al phishing</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">bassa, i siti di phishing possono rubare la password</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">naturalmente anti-phishing, la chiave privata firma solo il dominio reale</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Effetto di una violazione del server</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">l'hash della password può essere cracked</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">il server conserva solo la chiave pubblica, la violazione non ha impatto</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Comodità</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">da ricordare/inserire/gestire</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">login in un secondo con Face ID/impronta</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Attacchi di replay</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">possono essere intercettati e replicati da un man-in-the-middle</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ogni firma è monouso, non può essere replicata</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimensione</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Password tradizionale</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Resistenza al phishing</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">bassa, i siti di phishing possono rubare la password</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">naturalmente anti-phishing, la chiave privata firma solo il dominio reale</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Effetto di una violazione del server</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">l'hash della password può essere cracked</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">il server conserva solo la chiave pubblica, la violazione non ha impatto</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Comodità</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">da ricordare/inserire/gestire</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">login in un secondo con Face ID/impronta</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Attacchi di replay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">possono essere intercettati e replicati da un man-in-the-middle</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ogni firma è monouso, non può essere replicata</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Supporto delle piattaforme
@@ -200,7 +200,7 @@ Il Passkey si basa sullo standard FIDO2 / WebAuthn e sostituisce la password con
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>La sincronizzazione tra dispositivi è il breakthrough chiave
+La sincronizzazione tra dispositivi è il breakthrough chiave
 
 {class="mt-1"}
 Il maggiore limite iniziale dei Passkey era il "vincolo a un singolo dispositivo": cambiando telefono bisognava ricrearli. Dal 2023 Apple, Google e Microsoft hanno realizzato la sincronizzazione cloud dei Passkey: iCloud Keychain sincronizza tra dispositivi Apple, il Gestore password Google sincronizza tra dispositivi Android. 1Password e altri terzi hanno reso possibile la sincronizzazione tra ecosistemi. Questo significa che i Passkey hanno ormai la maturità pratica per sostituire le password.
@@ -236,7 +236,7 @@ Il processo usa una doppia comunicazione cifrata via Bluetooth + Internet: la ch
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova ora: scopri il login senza password
+Prova ora: scopri il login senza password
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Accedi all'account Google → Sicurezza → Passkey → Aggiungi passkey e prova il login con Face ID/impronta.
@@ -247,7 +247,7 @@ Il processo usa una doppia comunicazione cifrata via Bluetooth + Internet: la ch
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Consigli per la fase di transizione
+Consigli per la fase di transizione
 
 {class="mt-1"}
 I Passkey non hanno ancora sostituito del tutto le password: molti siti sono in una fase di convivenza "Passkey + password". Consiglio: attiva prima i Passkey sugli account ad alto valore, ma <strong>non eliminare subito la password tradizionale</strong>, tienila come backup; continua a usare un gestore di password, perché non tutti i siti supportano i Passkey. Considera i Passkey come un "potente complemento" al gestore di password, non come una "sostituzione immediata".
@@ -295,7 +295,7 @@ Siti principali che la supportano: Google, GitHub, Microsoft, Apple ID, Facebook
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Strategia a due chiavi
+Strategia a due chiavi
 
 {class="mt-1"}
 Il rischio maggiore di una chiave hardware è lo "smarrimento". Consiglio: ① registra contemporaneamente due chiavi diverse; ② una da portare con sé (portachiavi), una da conservare in cassaforte di casa o in una cassetta di sicurezza in banca; ③ alcuni siti consentono di stampare "codici di recupero" da conservare offline. Così, anche se la chiave principale viene persa, non resterai chiuso fuori per sempre dall'account.
@@ -303,7 +303,7 @@ Il rischio maggiore di una chiave hardware è lo "smarrimento". Consiglio: ① r
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Attenzione al canale di acquisto
+Attenzione al canale di acquisto
 
 {class="mt-1"}
 Acquista sempre nel negozio ufficiale o da rivenditori autorizzati; evita chiavi di seconda mano o di origine sconosciuta: in teoria un hardware preconfigurato potrebbe avere un backdoor. Il firmware di YubiKey non può essere aggiornato dopo la fabbricazione, ma Yubico pubblica continuamente avvisi di sicurezza: basta seguire il sito ufficiale.
@@ -336,7 +336,7 @@ La versione gratuita di Bitwarden supporta la condivisione di password tra singo
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Rapporto qualità-prezzo di 1Password Famiglia
+Rapporto qualità-prezzo di 1Password Famiglia
 
 {class="mt-1"}
 1Password Families costa circa 4,99 dollari al mese e supporta fino a 5 membri della famiglia. Ciascuno ha una cassaforte personale + 4 casseforti condivise. A persona sono meno di 1 dollaro al mese: è la soluzione con la migliore esperienza di condivisione familiare oggi disponibile. La versione famiglia di Bitwarden a 10 dollari all'anno supporta 6 persone ed è più economica, ma l'interfaccia è leggermente inferiore.
@@ -369,7 +369,7 @@ Immagina uno scenario: gestisci da solo tutti gli account familiari importanti, 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Imposta ora: lascia ai tuoi cari una "chiave di riserva"
+Imposta ora: lascia ai tuoi cari una "chiave di riserva"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Scegli un familiare fidato come "contatto di emergenza".
@@ -388,7 +388,7 @@ Immagina uno scenario: gestisci da solo tutti gli account familiari importanti, 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Promemoria importante
+Promemoria importante
 
 {class="mt-1"}
 Il gestore di password è comodo ma comporta anche rischi: se la password principale viene esposta, tutte le password sono compromesse. La password principale non deve quindi essere uguale alle altre, né essere scritta in un luogo facilmente reperibile. Inoltre, preferisci provider con una buona storia di sicurezza.
@@ -396,7 +396,7 @@ Il gestore di password è comodo ma comporta anche rischi: se la password princi
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova ora: inizia a usare un gestore di password
+Prova ora: inizia a usare un gestore di password
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Scegli un gestore di password (consigliato Bitwarden o quello di sistema).

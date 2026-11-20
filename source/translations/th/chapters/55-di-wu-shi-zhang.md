@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "ซานผวน"        // val: ตัวแปรอ่านอย่างเดียว (แนะนำให้ใช้เป็นค่าเริ่มต้น)
-var age = 18             // var: ตัวแปรแก้ได้ (ภายหลังเปลี่ยนได้)
+val name = "ซานผวน" // val: ตัวแปรอ่านอย่างเดียว (แนะนำให้ใช้เป็นค่าเริ่มต้น)
+var age = 18 // var: ตัวแปรแก้ได้ (ภายหลังเปลี่ยนได้)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var แก้ได้
-// name = "ลี่ซือ"         // <i class="fas fa-times-circle mr-1"></i> val แก้ไม่ได้ คอมไพล์แล้ว error ทันที
+age = 19 // var แก้ได้
+// name = "ลี่ซือ" // val แก้ไม่ได้ คอมไพล์แล้ว error ทันที
 
-val score: Int = 100     // จะเขียนไทป์ชัด ๆ ก็ได้
-val pi = 3.14            // ไม่เขียนก็เดาเองได้
+val score: Int = 100 // จะเขียนไทป์ชัด ๆ ก็ได้
+val pi = 3.14 // ไม่เขียนก็เดาเองได้
 ```
 :::
 
@@ -63,15 +63,15 @@ val pi = 3.14            // ไม่เขียนก็เดาเองไ�
 
 ```
 fun greet(name: String): String {
-    return "สวัสดี $name!"     // เครื่องหมาย $ สอดตัวแปรลงในข้อความ
+ return "สวัสดี $name!" // เครื่องหมาย $ สอดตัวแปรลงในข้อความ
 }
 
-println(greet("ซานผวน"))        // ผลลัพธ์: สวัสดี ซานผวน!
+println(greet("ซานผวน")) // ผลลัพธ์: สวัสดี ซานผวน!
 
 // ฟังก์ชันบรรทัดเดียวเขียนเป็น expression ได้
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // ผลลัพธ์: 8
+println(add(3, 5)) // ผลลัพธ์: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // ผลลัพธ์: 8
 // การเช็คเงื่อนไข: if / else
 val age = 17
 if (age >= 18) {
-    println("ผู้ใหญ่")
+ println("ผู้ใหญ่")
 } else {
-    println("ผู้เยาว์")
+ println("ผู้เยาว์")
 }
 
 // หลายทางเลือก: when (ใช้ดีกว่า switch ร้อยเท่า)
 val score = 85
 val level = when {
-    score >= 90 -> "ดีเยี่ยม"
-    score >= 60 -> "ผ่าน"
-    else -> "สู้ ๆ เข้าละ!"
+ score >= 90 -> "ดีเยี่ยม"
+ score >= 60 -> "ผ่าน"
+ else -> "สู้ ๆ เข้าละ!"
 }
 
 // ทำซ้ำ: ลูป for
 val fruits = listOf("แอปเปิล", "กล้วย", "ส้ม")
 for (fruit in fruits) {
-    println("ฉันชอบกิน$fruit")
+ println("ฉันชอบกิน$fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ when คือรูปแบบหลายทางเลือกที่ใ
 :::
 
 ```
-var name: String = "ซานผวน"   // ไทป์ปกติ: ห้ามเป็น null เด็ดขาด
-// name = null                // <i class="fas fa-times-circle mr-1"></i> แก้ก่อน ไม่งั้นคอมไพเลอร์ตีกลับทันที
+var name: String = "ซานผวน" // ไทป์ปกติ: ห้ามเป็น null เด็ดขาด
+// name = null // แก้ก่อน ไม่งั้นคอมไพเลอร์ตีกลับทันที
 
 var nickname: String? = null // ใส่เครื่องหมายคำถาม: อนุญาตให้เป็น null
 nickname = "ซานเอ๋อร์"
 
 // ใช้ nullable type ต้องจัดการอย่างปลอดภัย:
-println(nickname?.length)    // safe call: เป็น null ก็คืน null ไม่เด้ง
-val len = nickname?.length ?: 0   // Elvis operator: เป็น null ก็ให้ค่าเริ่มต้น
+println(nickname?.length) // safe call: เป็น null ก็คืน null ไม่เด้ง
+val len = nickname?.length ?: 0 // Elvis operator: เป็น null ก็ให้ค่าเริ่มต้น
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ String? คือ "อนุญาตให้เป็น null ได้" ส�
 ```
 // คลาสปกติ: แม่พิมพ์
 class Dog(val name: String) {
-    fun bark() = println("$name ฮ่อง ฮ่อง!")
+ fun bark() = println("$name ฮ่อง ฮ่อง!")
 }
 
-val dog = Dog("โอ้เจ้า")      // สร้างออบเจกต์
-dog.bark()                 // โอ้เจ้า ฮ่อง ฮ่อง!
+val dog = Dog("โอ้เจ้า") // สร้างออบเจกต์
+dog.bark() // โอ้เจ้า ฮ่อง ฮ่อง!
 
 // data class: กล่องใส่ข้อมูล (มี equals/copy ให้พร้อม)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "ซานผวน", "zhangsan@example.com")
-val twin = me.copy(name = "ซานซานเฟิง")   // คัดลอกแล้วแก้ค่าเดียว
+val twin = me.copy(name = "ซานซานเฟิง") // คัดลอกแล้วแก้ค่าเดียว
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // สไตล์ lambda: นิยามเลยตรงนั้น กระชับไว
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = ตัวปัจจุบัน
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = ตัวปัจจุบัน
 
 // กรอง + แปลงต่อกัน (เจอบ่อยมากในโปรเจกต์จริง)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

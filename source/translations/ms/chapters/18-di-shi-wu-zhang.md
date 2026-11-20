@@ -34,7 +34,7 @@ Bateri ialah "jantung tenaga" telefon pintar anda. Bab ini membantu anda memaham
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Fungsi "had cas 80%" iPhone — Tukar peraturan emas ke tetapan sistem
+Fungsi "had cas 80%" iPhone — Tukar peraturan emas ke tetapan sistem
 
 {class="mt-1"}
 Siri iPhone 15/16 (iOS 17 ke atas) telah jadikan "peraturuan 20%-80%" sebagai fungsi sistem. Selepas aktifkan, telefon cas hingga 80% akan auto berhenti cas, dengan itu melambatkan penuaan bateri dengan mendadak. Laluan tetapan:
@@ -48,7 +48,7 @@ Tiga pilihan maksud: ①<strong>Tidak had</strong>— cas hingga 100%; ②<stron
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>Pengecas GaN — Rakan kombat travel
+Pengecas GaN — Rakan kombat travel
 
 {class="mt-1"}
 Anda mungkin perhati pengecas pantas sekarang semakin kecil, di sebaliknya adalah <strong>GaN (Gallium Nitride)</strong> bahan semikonduktor jenis baharu. Berbanding pengecas berasaskan silikon tradisional, pengecas GaN ada beberapa kelebihan:
@@ -127,47 +127,47 @@ Fasa rundingan
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ciri</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">240W</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">SuperVOOC</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cip Surge P1</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Voltan tinggi boleh laras</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Peranti Qualcomm</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Voltan rendah arus tinggi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Khusus keluarga OPPO</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pam cas</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cas Pantas Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protokol PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Protokol Pengecasan Wayarles</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengecasan wayarles juga mempunyai standard protokolnya sendiri:</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Standard Qi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Dirumuskan oleh WPC (Wireless Power Consortium), standard yang paling universal. Qi asas menyokong 5W-15W.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ciri</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">240W</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">SuperVOOC</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cip Surge P1</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Voltan tinggi boleh laras</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Peranti Qualcomm</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Voltan rendah arus tinggi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Khusus keluarga OPPO</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pam cas</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cas Pantas Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protokol PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Protokol Pengecasan Wayarles</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengecasan wayarles juga mempunyai standard protokolnya sendiri:</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Standard Qi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Dirumuskan oleh WPC (Wireless Power Consortium), standard yang paling universal. Qi asas menyokong 5W-15W.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ Fasa rundingan
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Jika pengecas atau telefon pintar menjadi panas secara luar biasa atau berbau, hentikan penggunaan dengan serta-merta.
+Jika pengecas atau telefon pintar menjadi panas secara luar biasa atau berbau, hentikan penggunaan dengan serta-merta.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 4. Ini Barulah Tip Jimat Bateri Sebenar
@@ -207,7 +207,7 @@ Jika anda perhati pengumuman telefon flagship 2024-2026, "anod silikon-karbon" h
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Model mana guna?
+Model mana guna?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: Siri Magic perintis komersial anod silikon-karbon, Magic6 Pro, Magic7 siri, Magic V3 skrin lipat semuanya guna.
@@ -228,7 +228,7 @@ Jika anda perhati pengumuman telefon flagship 2024-2026, "anod silikon-karbon" h
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Bab 16: Sistem Akaun &amp; Perkhidmatan Awan
+Bab 16: Sistem Akaun &amp; Perkhidmatan Awan
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Saya ada seorang kawan, telefon pintarnya dicuri tahun lepas. Perkara pertama yang terlintas di fikirannya bukan "berapa harganya telefon itu", tetapi "adakah foto-foto di dalamnya boleh diambil kembali?" Malangnya, dia tidak mengaktifkan sandaran awan. Telefon pintar adalah harta benda luaran, tetapi data dalam akaun: jika hilang, ia tidak akan kembali selama-lamanya. Bab ini kita akan bincangkan cara memberikan insurans sebenar untuk kehidupan digital anda.

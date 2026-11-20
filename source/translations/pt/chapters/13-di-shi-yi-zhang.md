@@ -61,7 +61,7 @@ Milhares de fotos acumuladas no álbum do celular, e você gasta um tempão para
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pratique: Complete um Ciclo de Fotografar + Editar + Organizar com o Celular
+Pratique: Complete um Ciclo de Fotografar + Editar + Organizar com o Celular
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ative as "Linhas de Grade" nas configurações da câmera; encontre um local com luz natural e tire três fotos (lembre-se de limpar a lente e ajustar a exposição).

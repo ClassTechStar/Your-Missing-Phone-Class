@@ -98,7 +98,7 @@ A qualidade da resposta da IA depende muito de como você "pergunta". A mesma pe
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Por que preciso de uma estrutura?
+Por que preciso de uma estrutura?
 
 {class="mt-1"}
 Muitas pessoas usam IA como usam o Baidu, digitam algumas palavras-chave. Mas a IA não é um mecanismo de busca; é um modelo de linguagem que "lê, compreende e depois responde". <strong>Dê a ela mais contexto, diga claramente o que você quer. Limite-a para não se desviar</strong>, e ela te dará resultados precisos. A estrutura é a tradução do que "uma boa resposta" significa na sua cabeça para instruções que a IA entende.
@@ -198,39 +198,39 @@ Escrever um bom prompt não é algo que se faz de uma vez. <strong>Antes de envi
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Sintoma</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Solução</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Resposta muito genérica, sem utilidade prática</td>
-                                    <td class="border border-gray-300 px-3 py-2">Adicione contexto (quem você é / qual cenário)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Resposta muito acadêmica / formal demais</td>
-                                    <td class="border border-gray-300 px-3 py-2">Adicione restrição de tom + lista de linguagem "burocrática" a evitar</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Resposta fora do tema / não responde a pergunta</td>
-                                    <td class="border border-gray-300 px-3 py-2">Reformule a tarefa com verbos e exija "responda apenas isto"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Resposta muito longa, impossível de ler</td>
-                                    <td class="border border-gray-300 px-3 py-2">Limite forçado de palavras (máx. 200 palavras)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">IA inventa coisas com convicção</td>
-                                    <td class="border border-gray-300 px-3 py-2">Adicione "se não tiver certeza, marque como 'não tenho certeza'" + verificação independente dos fatos importantes</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Primeira versão insatisfatória</td>
-                                    <td class="border border-gray-300 px-3 py-2">Não reescreva; acrescente ao prompt original "mais..."</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Sintoma</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Solução</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Resposta muito genérica, sem utilidade prática</td>
+ <td class="border border-gray-300 px-3 py-2">Adicione contexto (quem você é / qual cenário)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Resposta muito acadêmica / formal demais</td>
+ <td class="border border-gray-300 px-3 py-2">Adicione restrição de tom + lista de linguagem "burocrática" a evitar</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Resposta fora do tema / não responde a pergunta</td>
+ <td class="border border-gray-300 px-3 py-2">Reformule a tarefa com verbos e exija "responda apenas isto"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Resposta muito longa, impossível de ler</td>
+ <td class="border border-gray-300 px-3 py-2">Limite forçado de palavras (máx. 200 palavras)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">IA inventa coisas com convicção</td>
+ <td class="border border-gray-300 px-3 py-2">Adicione "se não tiver certeza, marque como 'não tenho certeza'" + verificação independente dos fatos importantes</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Primeira versão insatisfatória</td>
+ <td class="border border-gray-300 px-3 py-2">Não reescreva; acrescente ao prompt original "mais..."</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Escrever um bom prompt não é algo que se faz de uma vez. <strong>Antes de envi
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Cenário 1: Assistente pessoal (sugestão de cardápio de café da manhã)
+Cenário 1: Assistente pessoal (sugestão de cardápio de café da manhã)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -253,7 +253,7 @@ Você é uma blogueira de café da manhã especializada em nutrição (<strong>P
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Cenário 2: Apoio ao estudo (preparação para o CET-6 de inglês)
+Cenário 2: Apoio ao estudo (preparação para o CET-6 de inglês)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -267,7 +267,7 @@ Você é <strong>um professor experiente de inglês para o CET-6</strong> (Papel
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Cenário 3: Produtividade no trabalho (organização de ata de reunião)
+Cenário 3: Produtividade no trabalho (organização de ata de reunião)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -281,7 +281,7 @@ Você é <strong>um assistente administrativo sênior</strong> (Papel). Acabei d
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Jogada avançada: transforme a IA em seu "assistente pessoal"
+Jogada avançada: transforme a IA em seu "assistente pessoal"
 
 {class="mt-1"}
 Experimente estes usos avançados para sentir o verdadeiro poder da IA:
@@ -305,7 +305,7 @@ Embora poderosa, a IA está longe de ser "onipotente". Reconhecer suas limitaç�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Dicas de uso de IA
+Dicas de uso de IA
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Conteúdo gerado por IA pode ser impreciso (problema de "alucinação"). Sempre verifique informações importantes.
@@ -317,7 +317,7 @@ Embora poderosa, a IA está longe de ser "onipotente". Reconhecer suas limitaç�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Desafio: três exercícios práticos com IA
+Desafio: três exercícios práticos com IA
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Desafio 1: Instrução complexa</strong>: diga ao assistente de voz: "Amanhã às 7h me lembre de levar guarda-chuva, e mude o compromisso das 15h de hoje para as 16h." Veja se ele consegue completar múltiplas operações de uma vez.
@@ -327,7 +327,7 @@ Embora poderosa, a IA está longe de ser "onipotente". Reconhecer suas limitaç�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Exemplo 2: Fluxo completo de migração de dados ao trocar de celular
+Exemplo 2: Fluxo completo de migração de dados ao trocar de celular
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Cenário</strong>: iPhone 13 → Xiaomi 15, troca de celular entre marcas diferentes.

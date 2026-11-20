@@ -40,7 +40,7 @@ HarmonyOS
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Fungsi kunci BL:
+Fungsi kunci BL:
 
 {class="mt-1"}
 Perlindungan keselamatan
@@ -57,7 +57,7 @@ Dalam pilihan pembangun ada satu suis yang tidak ketara tetapi sangat penting - 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Mod demo: Mod paparan demo kedai, akan ganggu penggunaan biasa.
+Mod demo: Mod paparan demo kedai, akan ganggu penggunaan biasa.
 
 {class="mt-1"}
 Android awal tiada suis ini, perisian hasad hanya perlu dapat kebenaran boleh senyap-senyap flash masuk sistem. Google kemudian mewajibkan semua pengeluar Android tambah suis "OEM Unlocking" dalam pilihan pembangun, sebagai pengesahan "persetujuan pengguna". Inilah sebabnya walaupun anda buka kunci BL, jika suis OEM Unlocking ditutup, flash semula masih akan gagal.
@@ -95,7 +95,7 @@ ADB nama penuh Android Debug Bridge, adalah alat baris arahan rasmi Google, bena
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Cara cepat yang sering diabaikan.
+Cara cepat yang sering diabaikan.
 
 {class="mt-1"}
 Tetapan → Aksesibiliti → Boleh ubah teks kejutan → Tambah perintah <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> Paparan "unauthorized" atau tidak senarai peranti, kebanyakan adalah pemacu tidak dipasang atau lupa klik "benarkan" pada telefon. Samsung/Xiaomi dan jenama lain boleh pasang "USB driver" atau "phone assistant" masing-masing; Mac dan Linux biasanya tidak perlu pemacu. Jika popup telefon tidak sengaja ditutup, cabut dan pasang semula kabel data akan popup semula.
@@ -124,7 +124,7 @@ Ini adalah salah satu fungsi ADB paling praktikal: guna <code class="bg-gray-100
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>5. Awas keselamatan ADB
+5. Awas keselamatan ADB
 
 {class="mt-1"}
 "pm uninstall --user 0" walaupun adalah cara selamat tanpa Root, tetapi padam aplikasi sistem penting secara sembarangan (seperti <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> Jangan guna komputer awam atau wayar data tidak dipercayai untuk debug USB.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> IV. Root: Membuka kunci kebenaran tertinggi Android<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> Root bermaksud akses pentadbir tertinggi Android, boleh ubah apa sahaja dalam sistem. Ini kuasa yang sangat kuat tetapi juga sangat berbahaya.
@@ -132,7 +132,7 @@ Ini adalah salah satu fungsi ADB paling praktikal: guna <code class="bg-gray-100
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>1. Kaedah Root biasa
+1. Kaedah Root biasa
 
 {class="mt-1"}
 Unlock Bootloader: Langkah pertama, buka kunci pengesan but, kebanyakan pengeluar perlu permohonan rasmi.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> bermaksud "hanya nyahpasang untuk pemilik semasa", fail APK dalam partisi sistem masih wujud, hanya tidak papar kepada pemilik. Inilah sebabnya ia tidak perlu Root - tidak sentuh fail sistem, hanya ubah "konfigurasi pengguna". Ini juga sebabnya ia boleh "pasang semula" - kembalikan konfigurasi pengguna. Nyahpasang biasa betul-betul padam dari sistem, semua pengguna tidak lagi ada; nyahpasang ADB hanya "sembunyi dari pengguna semasa".
@@ -159,7 +159,7 @@ Kebenaran Root setara dengan super user dalam Linux (mempunyai kawalan penuh ke 
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>: Boleh diaktifkan, alami fungsi seperti percepatan animasi, tetapi jangan ubah tetapan lain sesuka hati.
+: Boleh diaktifkan, alami fungsi seperti percepatan animasi, tetapi jangan ubah tetapan lain sesuka hati.
 
 {class="mt-1"}
 Kunci BL
@@ -198,7 +198,7 @@ Untuk menikmati kemudahan Root sambil masih boleh guna App bank, komuniti telah 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Tetapan → Aksesibiliti → Kandungan Dibacakan → Baca Skrin
+Tetapan → Aksesibiliti → Kandungan Dibacakan → Baca Skrin
 
 {class="mt-1"}
 Google setiap satu masa akan kemas kini peraturan pengesanan, pengeluar App juga akan ikut menaiktaraf pengesahan Play Integrity. Skim sembunyi yang masih boleh guna hari ini, esok mungkin dikenalpasti. Jika anda sepenuhnya bergantung App bank/pembayaran (seperti pemindahan harian, bayar kod imbas), pilihan paling selamat masih: jangan Root, jangan buka kunci BL. Skim sembunyi lebih sesuai untuk konfigurasi pemain "telefon utama tidak Root + telefon sandaran main Root".
@@ -213,7 +213,7 @@ Google setiap satu masa akan kemas kini peraturan pengesanan, pengeluar App juga
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cari "Penskalaan Animasi Tetingkap", "Penskalaan Animasi Peralihan", "Penskalaan Tempoh Animasi", tetapkan semuanya kepada 0.5x atau matikan.
+Cari "Penskalaan Animasi Tetingkap", "Penskalaan Animasi Peralihan", "Penskalaan Tempoh Animasi", tetapkan semuanya kepada 0.5x atau matikan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Rasakan sama ada telefon pintar menjadi lebih pantas.

@@ -98,7 +98,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Γιατί χρειάζεται πλαίσιο;
+Γιατί χρειάζεται πλαίσιο;
 
 {class="mt-1"}
 Πολλοί χρησιμοποιούν την AI όπως το Baidu: πληκτρολογούν μερικές λέξεις-κλειδιά. Αλλά η AI δεν είναι μηχανή αναζήτησης, είναι ένα γλωσσικό μοντέλο που "διαβάζει, κατανοεί και απαντά".<strong>δώστε περισσότερο πλαίσιο, ξεκαθαρίστε τι θέλετε, περιορίστε τις αποκλίσεις</strong>, σας δίνει ακριβή αποτελέσματα. Το πλαίσιο μεταφράζει "τι είναι καλή απάντηση" σε εντολές AI.
@@ -198,39 +198,39 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Συμπτώματα</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Λύση</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Η απάντηση είναι πολύ γενική, μη πρακτική</td>
-                                    <td class="border border-gray-300 px-3 py-2">Προσθέστε πλαίσιο (ποιος είστε / σε ποιο σενάριο)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Πολύ ακαδημαϊκή/υπερβολικά επίσημη απάντηση</td>
-                                    <td class="border border-gray-300 px-3 py-2">Προσθέστε περιορισμό τόνου + λίστα απόρριψης «επίσημης γλώσσας»</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Η απάντηση ξεφεύγει από το θέμα/δεν απαντά στην ερώτηση</td>
-                                    <td class="border border-gray-300 px-3 py-2">Επαναλάβετε την εργασία με ρήμα και ζητήστε «απαντήστε μόνο σε αυτό» </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Η απάντηση είναι πολύ μεγάλη για να διαβαστεί</td>
-                                    <td class="border border-gray-300 px-3 py-2">Αυστηρό όριο λέξεων (μέσα σε 200)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Το AI μιλάει σοβαρά αλλά λέει ανοησίες</td>
-                                    <td class="border border-gray-300 px-3 py-2">Προσθέστε "Εάν δεν είστε σίγουροι, σημειώστε 'δεν είμαι σίγουρος'" + αυτοέλεγχος σημαντικών γεγονότων</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Δεν αρέσει η πρώτη έκδοση</td>
-                                    <td class="border border-gray-300 px-3 py-2">Μην ξαναγράψετε, προσθέστε "λίγο πιο..." στο αρχικό prompt</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Συμπτώματα</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Λύση</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Η απάντηση είναι πολύ γενική, μη πρακτική</td>
+ <td class="border border-gray-300 px-3 py-2">Προσθέστε πλαίσιο (ποιος είστε / σε ποιο σενάριο)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Πολύ ακαδημαϊκή/υπερβολικά επίσημη απάντηση</td>
+ <td class="border border-gray-300 px-3 py-2">Προσθέστε περιορισμό τόνου + λίστα απόρριψης «επίσημης γλώσσας»</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Η απάντηση ξεφεύγει από το θέμα/δεν απαντά στην ερώτηση</td>
+ <td class="border border-gray-300 px-3 py-2">Επαναλάβετε την εργασία με ρήμα και ζητήστε «απαντήστε μόνο σε αυτό» </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Η απάντηση είναι πολύ μεγάλη για να διαβαστεί</td>
+ <td class="border border-gray-300 px-3 py-2">Αυστηρό όριο λέξεων (μέσα σε 200)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Το AI μιλάει σοβαρά αλλά λέει ανοησίες</td>
+ <td class="border border-gray-300 px-3 py-2">Προσθέστε "Εάν δεν είστε σίγουροι, σημειώστε 'δεν είμαι σίγουρος'" + αυτοέλεγχος σημαντικών γεγονότων</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Δεν αρέσει η πρώτη έκδοση</td>
+ <td class="border border-gray-300 px-3 py-2">Μην ξαναγράψετε, προσθέστε "λίγο πιο..." στο αρχικό prompt</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Σενάριο 1: Βοηθός καθημερινότητας (προτάσεις πρωινού)
+Σενάριο 1: Βοηθός καθημερινότητας (προτάσεις πρωινού)
 
 {class="mt-1"}
 <strong>Prompt (προτροπή)</strong>:
@@ -253,7 +253,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Σενάριο 2: Εκπαίδευση (CET-6)
+Σενάριο 2: Εκπαίδευση (CET-6)
 
 {class="mt-1"}
 <strong>Prompt (προτροπή)</strong>:
@@ -267,7 +267,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Σενάριο 3: Αποδοτικότητα (πρακτικά)
+Σενάριο 3: Αποδοτικότητα (πρακτικά)
 
 {class="mt-1"}
 <strong>Prompt (προτροπή)</strong>:
@@ -281,7 +281,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Προχωρημένα: AI ως "βοηθός"
+Προχωρημένα: AI ως "βοηθός"
 
 {class="mt-1"}
 Δοκιμάστε προχωρημένες χρήσεις:
@@ -305,7 +305,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Συμβουλές AI
+Συμβουλές AI
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Μπορεί να είναι ανακριβές.
@@ -317,7 +317,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πρόκληση: 3 AI ασκήσεις
+Πρόκληση: 3 AI ασκήσεις
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Πρόκληση 1: Σύνθετη εντολή</strong>: Πείτε εντολή πολλαπλών βημάτων.
@@ -327,7 +327,7 @@ IV. Μεγάλα μοντέλα AI και κινητό: ο προσωπικός 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Περίπτωση 2: Πλήρης ροή μεταφοράς δεδομένων αλλαγής κινητού
+Περίπτωση 2: Πλήρης ροή μεταφοράς δεδομένων αλλαγής κινητού
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Σενάριο</strong>: iPhone 13 → Xiaomi 15 αλλαγή μάρκας.

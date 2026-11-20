@@ -46,7 +46,7 @@ Wesentlicher Punkt:<strong>Das Master-Passwort verlaesst niemals dein Geraet</st
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Warum bedeutet „Zero Knowledge", dass auch der Anbieter deine Passwoerter nicht sehen kann?
+Warum bedeutet „Zero Knowledge", dass auch der Anbieter deine Passwoerter nicht sehen kann?
 
 {class="mt-1"}
 Weil der Entschluesselungsschluessel aus deinem Master-Passwort abgeleitet wird und dieses nur in deinem Kopf und lokal auf deinem Geraet existiert. Auf den Servern des Anbieters gibt es weder das Master-Passwort noch den Entschluesselungsschluessel – nur den Geheimtext. Deshalb erklaeren seriöse Anbieter wie Bitwarden und 1Password ausdruecklich: „Auch wir koennen deine Passwoerter nicht sehen" – nicht weil sie nicht wollten, sondern weil es technisch unmoeglich ist.
@@ -71,7 +71,7 @@ Im August 2022 meldete der etablierte Passwortmanager LastPass einen Einbruch in
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Lehren aus dem LastPass-Vorfall
+Lehren aus dem LastPass-Vorfall
 
 {class="mt-1"}
 Erstens: Das Master-Passwort muss lang und einzigartig sein (mindestens 16 Zeichen, mit Gross-/Kleinbuchstaben, Zahlen und Symbolen). Zweitens: Bevorzuge Anbieter, die Argon2id und hohe Iterationszahlen unterstuetzen. Drittens: Fuer hochwertige Konten (Bank, E-Mail) zwingend eine unabhaengige Zwei-Faktor-Authentifizierung aktivieren – nicht nur auf den Passwortmanager vertrauen.
@@ -118,7 +118,7 @@ Wenn ein Passwort in einer Leak-Datenbank auftaucht,<strong>muss es unabhaengig 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Prinzip der k-Anonymitaets-Abfrage
+Prinzip der k-Anonymitaets-Abfrage
 
 {class="mt-1"}
 Sorge, dass die Eingabe bei HaveIBeenPwned zu einem erneuten Leak fuehrt? Keine Sorge. Moderne Abfragen nutzen das „k-Anonymitaets"-Protokoll: Der Browser sendet nur die ersten 5 Zeichen des Passwort-Hashs an den Server; dieser liefert alle Hashes mit diesem Praefix zurueck; der Abgleich erfolgt lokal. Der Server sieht niemals deinen vollstaendigen Passwort-Hash. Die „Leak-Erkennung" von 1Password und Bitwarden funktioniert so.
@@ -133,7 +133,7 @@ Sorge, dass die Eingabe bei HaveIBeenPwned zu einem erneuten Leak fuehrt? Keine 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt pruefen: Ist dein Passwort sicher?
+Jetzt pruefen: Ist dein Passwort sicher?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Oeffne haveibeenpwned.com, gib deine haeufig verwendete E-Mail-Adresse ein und pruefe, in welchen Leaks sie auftaucht.
@@ -159,36 +159,36 @@ Passkey basiert auf dem FIDO2-/WebAuthn-Standard und verwendet <strong>ein Schlu
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Traditionelles Passwort</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Phishing-Schutz</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Schlecht; Phishing-Seiten koennen Passwoerter stehlen</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phishing-resistent; Private Key signiert nur fuer echte Domains</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Auswirkung eines Server-Lecks</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Passwort-Hashs koennten geknackt werden</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Server speichert nur Public Key; Leck ohne Auswirkung</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Komfort</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Muss gemerkt/eingegeben/verwaltet werden</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/Fingerabdruck – Login in einer Sekunde</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Replay-Angriff</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kann per MITM abgefangen und wiedergegeben werden</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jede Signatur ist einmalig; nicht wiederverwendbar</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Traditionelles Passwort</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Phishing-Schutz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Schlecht; Phishing-Seiten koennen Passwoerter stehlen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phishing-resistent; Private Key signiert nur fuer echte Domains</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Auswirkung eines Server-Lecks</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Passwort-Hashs koennten geknackt werden</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Server speichert nur Public Key; Leck ohne Auswirkung</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Komfort</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Muss gemerkt/eingegeben/verwaltet werden</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/Fingerabdruck – Login in einer Sekunde</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Replay-Angriff</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kann per MITM abgefangen und wiedergegeben werden</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jede Signatur ist einmalig; nicht wiederverwendbar</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Plattform-Unterstuetzung
@@ -200,7 +200,7 @@ Passkey basiert auf dem FIDO2-/WebAuthn-Standard und verwendet <strong>ein Schlu
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Plattformuebergreifende Synchronisation als Durchbruch
+Plattformuebergreifende Synchronisation als Durchbruch
 
 {class="mt-1"}
 Frueher war die groesste Schwachstelle von Passkeys die „Bindung an ein einzelnes Geraet" – bei Geraetewechsel musste man neu erstellen. Seit 2023 haben Apple, Google und Microsoft die Cloud-Synchronisation von Passkeys umgesetzt: iCloud-Schluesselbund synchronisiert zwischen Apple-Geraeten, Google Passwortmanager zwischen Android-Geraeten. 1Password und weitere Drittanbieter ermoeglichen die plattformuebergreifende Synchronisation. Damit ist Passkey praktisch einsatzbereit.
@@ -236,7 +236,7 @@ Dieser Vorgang nutzt eine doppelte Verschluesselung per Bluetooth + Internet; de
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt ausprobieren: Passwortlosen Login erleben
+Jetzt ausprobieren: Passwortlosen Login erleben
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Google-Konto-Login → Sicherheit → Passkeys → Passkey hinzufuegen; Face-ID-/Fingerabdruck-Login erleben.
@@ -247,7 +247,7 @@ Dieser Vorgang nutzt eine doppelte Verschluesselung per Bluetooth + Internet; de
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Empfehlung fuer die Uebergangsphase
+Empfehlung fuer die Uebergangsphase
 
 {class="mt-1"}
 Passkey hat Passwoerter noch nicht vollstaendig abgeloest – viele Websites sind im Uebergang „Passkey + Passwort". Empfehlung: Hochwertige Konten zuerst mit Passkey aktivieren, aber <strong>traditionelle Passwoerter nicht sofort loeschen</strong>, als Backup behalten; weiterhin den Passwortmanager nutzen, da nicht alle Websites Passkey unterstuetzen. Passkey als „starke Ergaenzung" zum Passwortmanager betrachten, nicht als „sofortige Ersetzung".
@@ -295,7 +295,7 @@ Unterstützende Websites: Google, GitHub, Microsoft, Apple ID, Facebook, Twitter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Zwei-Schluessel-Strategie
+Zwei-Schluessel-Strategie
 
 {class="mt-1"}
 Das groesste Risiko eines Hardware-Schluessels ist der Verlust. Empfehlung: 1. Zwei verschiedene Schluessel registrieren; 2. Einen dabei haben (Schluesselbund), einen im Haussafe oder Bankschliessfach; 3. Bei einigen Websites „Backup-Codes" ausdrucken und offline aufbewahren. So bleibt man selbst bei Verlust nicht ausgesperrt.
@@ -303,7 +303,7 @@ Das groesste Risiko eines Hardware-Schluessels ist der Verlust. Empfehlung: 1. Z
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Kaufquelle sorgfaeltig waehlen
+Kaufquelle sorgfaeltig waehlen
 
 {class="mt-1"}
 Zwingend im offiziellen Shop oder bei autorisierten Haendlern kaufen; keine gebrauchten oder unabhaengigen Quellen – theoretisch koennte vorinstallierte Hardware einen Backdoor enthalten. YubiKey-Firmware ist nach Werk nicht aktualisierbar, aber Yubico veroeffentlicht fortlaufend Sicherheits-Hinweise auf der Website.
@@ -336,7 +336,7 @@ Die Gratis-Version von Bitwarden ermoeglicht das Teilen einzelner Passwoerter (p
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Preis-Leistungs-Verhaeltnis von 1Password Families
+Preis-Leistungs-Verhaeltnis von 1Password Families
 
 {class="mt-1"}
 1Password Families ca. 4,99 USD/Monat fuer bis zu 5 Familienmitglieder; jeder hat einen privaten Vault + 4 Shared Vaults. Pro Person weniger als 1 USD/Monat – die beste Familie-Sharing-Erfahrung. Bitwarden Familie: 10 USD/Jahr fuer 6 Personen; besseres Preis-Leistungs-Verhaeltnis, aber etwas schlechtere UI.
@@ -369,7 +369,7 @@ Stell dir vor: Du verwaltest allein alle wichtigen Familienkonten; bei unerwarte
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt einrichten: Hinterlege einen „Reserveschluessel" fuer die Familie
+Jetzt einrichten: Hinterlege einen „Reserveschluessel" fuer die Familie
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Eine vertrauenswuerdige Person als „Notfallkontakt" bestimmen.
@@ -388,7 +388,7 @@ Stell dir vor: Du verwaltest allein alle wichtigen Familienkonten; bei unerwarte
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Wichtiger Hinweis
+Wichtiger Hinweis
 
 {class="mt-1"}
 Ein Passwortmanager ist praktisch, birgt aber auch Risiken: Wenn das Master-Passwort geleakt wird, sind alle Passwörter offen. Daher darf das Master-Passwort niemals mit anderen identisch sein und sollte nicht an leicht auffindbaren Orten notiert werden. Wählen Sie außerdem einen Anbieter mit guter Sicherheits-Historie.
@@ -396,7 +396,7 @@ Ein Passwortmanager ist praktisch, birgt aber auch Risiken: Wenn das Master-Pass
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt ausprobieren: Starten Sie mit einem Passwortmanager
+Jetzt ausprobieren: Starten Sie mit einem Passwortmanager
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Wählen Sie einen Passwortmanager (Bitwarden oder systemeigen empfohlen).

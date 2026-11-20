@@ -22,7 +22,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Η τελευταία άσκηση
+Η τελευταία άσκηση
 
 {class="mt-1"}
 κλείσιμο, :<strong>Σκεφτείτε για 30 δευτερόλεπτα: ποια τρία πράγματα στο κινητό σας θα σας "σεβάστηκαν πραγματικά" αν χαθούν;</strong>,αντίγραφο ασφαλείας..

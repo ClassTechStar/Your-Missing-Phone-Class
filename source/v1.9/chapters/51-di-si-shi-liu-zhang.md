@@ -160,7 +160,7 @@ MCP 服务器配了却没反应，是新手最常见的卡点。别急着到处�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别被"一键安装全家桶"的帖子诱惑。一次授出文件系统、数据库、浏览器三合一的权限，等于把三把钥匙串在一把钥匙圈上。宁可分三次装三个窄权限的服务器，也别一次装一个"什么都管"的。审批弹窗出现时，看清它到底要执行什么再点头。尤其涉及删除、覆盖、对外发送的操作。
@@ -187,15 +187,15 @@ MCP 服务器配了却没反应，是新手最常见的卡点。别急着到处�
 
 ```
 {
-  "name": "query_order_status",
-  "description": "按订单号查询订单的当前状态。只读操作，不修改任何数据。用户询问订单进度时使用。",
-  "inputSchema": {
-    "type": "object",
-    "properties": {
-      "order_id": { "type": "string", "description": "订单号，平台生成的唯一编号" }
-    },
-    "required": ["order_id"]
-  }
+ "name": "query_order_status",
+ "description": "按订单号查询订单的当前状态。只读操作，不修改任何数据。用户询问订单进度时使用。",
+ "inputSchema": {
+ "type": "object",
+ "properties": {
+ "order_id": { "type": "string", "description": "订单号，平台生成的唯一编号" }
+ },
+ "required": ["order_id"]
+ }
 }
 ```
 :::
@@ -276,7 +276,7 @@ Skill 不是一股脑堆在一个地方，成熟的做法是分三层放。<stro
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 Skill 的名字和触发词要"像人话"。你日常会说"帮我审一下这段代码"，触发词就照这个写；写成"执行代码质量评估流程 v2"，你自己都想不起来用它。另外，一个 Skill 只管一件事，别做"全能审查+部署+周报"三合一，跟 MCP 服务器一样，窄而深的比宽而浅的好用。
@@ -420,7 +420,7 @@ Skill 的名字和触发词要"像人话"。你日常会说"帮我审一下这�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：一个人也能玩"多 Agent"
+小贴士：一个人也能玩"多 Agent"
 
 {class="mt-1"}
 对于个人开发者来说，你不需要搭建复杂的多 Agent 系统——你可以"扮演"不同的角色来模拟多 Agent 协作。比如：先用一个对话让 AI 写功能代码；然后开一个新对话（提供 CLAUDE.md 上下文），让 AI"作为代码审查者审查这段代码"；最后再开一个对话让 AI"根据审查意见修正代码"。这种"一人多角"的方式，能获得多 Agent 协作的大部分好处，而不需要复杂的基础设施。
@@ -545,7 +545,7 @@ Skill 的名字和触发词要"像人话"。你日常会说"帮我审一下这�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 工具会换，但这三层注意力不会白练：定义问题、设计验证、判断结果。
@@ -664,7 +664,7 @@ AI 编程是一个快速变化的领域。今天的好办法，明天可能就�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：开一个"踩坑笔记本"
+来动手：开一个"踩坑笔记本"
 
 {class="mt-1"}
 今天就建一个文档（笔记软件或 .md 文件都行），写下你到目前为止最想记住的三条 AI 编程心得——哪怕是"记得先想清楚再问"。以后每次踩坑、每次学到新招，都往里面记一条。半年后回看，你会感谢今天的自己。
@@ -806,7 +806,7 @@ diff 记录的是"改了什么"。测试输出记录的是"跑没跑过"，但�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - MCP 是 AI 与工具之间的通信标准：让 AI 能执行命令、查数据库、调 API
 - 自定义工作流/Skills 的核心价值是"一致性"：把好办法编码成指令模板

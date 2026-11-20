@@ -25,7 +25,7 @@ Key advances in 2024-2026: hinge life generally rated at 500,000 folds (100 fold
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>: Frequently view PDFs, annotate documents, and read long articles on their phone. When unfolded, the ~7.5-inch inner screen lets you view A4 PDFs without zooming—a transformative experience.
+: Frequently view PDFs, annotate documents, and read long articles on their phone. When unfolded, the ~7.5-inch inner screen lets you view A4 PDFs without zooming—a transformative experience.
 
 {class="mt-1"}
 Frequent Travelers / Business Users
@@ -42,7 +42,7 @@ Creatives Who Love "Flex Mode"
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Don't get dazzled by the word "folding"—focus on these key points when shopping:
+Don't get dazzled by the word "folding"—focus on these key points when shopping:
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Hinge Type
@@ -63,7 +63,7 @@ Crease Performance
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Ask clearly about the standalone inner screen repair price and warranty policy.
+Ask clearly about the standalone inner screen repair price and warranty policy.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. IV. Unique Foldable Usage Tips
@@ -112,7 +112,7 @@ Check for Foreign Objects Before Closing
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>VI. Foldable "Pitfalls" &amp; Realistic Expectations
+VI. Foldable "Pitfalls" &amp; Realistic Expectations
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Before buying, keep these things in mind:
@@ -134,7 +134,7 @@ Battery Life Is Generally Average
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>: The benchmark for horizontal folding. Strong HarmonyOS ecosystem synergy. Cover screen ratio close to a normal phone—works as a primary device when closed. High price but relatively best resale value.
+: The benchmark for horizontal folding. Strong HarmonyOS ecosystem synergy. Cover screen ratio close to a normal phone—works as a primary device when closed. High price but relatively best resale value.
 
 {class="text-right text-sm"}
 Samsung Galaxy Z Fold/Flip
@@ -155,7 +155,7 @@ Dismiss
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Final Reminder
+Final Reminder
 
 {class="mt-1"}
 Foldable screen technology iterates every year. This appendix was written in 2026. Before buying, be sure to check the latest reviews and user feedback, focusing on: hinge life tests, crease performance, and inner screen repair policies. Touching it in person at a store is always more important than reading reviews.

@@ -83,10 +83,10 @@ kind: chapter
 var count by remember { mutableStateOf(0) }
 
 Column {
-    Text("你点了 $count 次")
-    Button(onClick = { count++ }) {
-        Text("点我加一")
-    }
+ Text("你点了 $count 次")
+ Button(onClick = { count++ }) {
+ Text("点我加一")
+ }
 }
 ```
 :::
@@ -102,9 +102,9 @@ Column {
 val words = listOf("安卓", "Kotlin", "Compose")
 
 LazyColumn {
-    items(words) { word ->
-        Text(word)
-    }
+ items(words) { word ->
+ Text(word)
+ }
 }
 ```
 :::
@@ -118,14 +118,14 @@ LazyColumn {
 
 ```
 fun loadWeather() {
-    viewModelScope.launch {
-        try {
-            val result = api.getWeather("北京")
-            _uiState.value = result
-        } catch (e: Exception) {
-            Log.d("Weather", "取数失败", e)
-        }
-    }
+ viewModelScope.launch {
+ try {
+ val result = api.getWeather("北京")
+ _uiState.value = result
+ } catch (e: Exception) {
+ Log.d("Weather", "取数失败", e)
+ }
+ }
 }
 ```
 :::
@@ -191,7 +191,7 @@ fun loadWeather() {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别把"能跑"当"会了"
+避坑提醒：别把"能跑"当"会了"
 
 {class="mt-1"}
 速查卡抄来的代码能跑，不代表你下次能独立写出来。检验标准很简单：关掉卡片，在空文件里把它默写出来，再跑一遍。默写不出来就回头看上面的拆解，再来一次。这一下"主动回忆"比抄十遍都有用，它难受，但难受的部分才是学习发生的部分。
@@ -221,7 +221,7 @@ fun loadWeather() {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：把速查卡变成你的"错题本"
+来动手：把速查卡变成你的"错题本"
 
 {class="mt-1"}
 把本章的速查卡打印出来，或者抄进你的笔记软件。本周每次写代码前，先盖住右列，凭记忆把要用的写法写出来，再对照检查——错了就在那一行旁边画一笔。两周后数一数哪行画得最多，那就是你接下来要重点补的写法。这张画满记号的卡片，比任何新买的教程都值钱。
@@ -323,7 +323,7 @@ fun loadWeather() {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：把求救卡片贴在墙上
+小贴士：把求救卡片贴在墙上
 
 {class="mt-1"}
 Q5 的黄金三步，加上这节的提问模板，合起来就是一张"求救卡片"。打印出来贴在显示器旁边。学编程的第一年，你求救的次数比想象中多，而求救的质量，几乎决定了你解卡的速度。
@@ -372,7 +372,7 @@ Q5 的黄金三步，加上这节的提问模板，合起来就是一张"求救�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：过时教程是新手最大的坑
+避坑提醒：过时教程是新手最大的坑
 
 {class="mt-1"}
 教程里的写法和 IDE 的自动补全对不上号，九成是教程过时了，不是你抄错了。判断方法也简单：IDE 明明认识其他函数，唯独教程里的那个怎么敲都补不出来，八成是它被淘汰了。去官方文档搜一下现在怎么写，别跟过时代码死磕。
@@ -443,7 +443,7 @@ Gradle 常用命令速查
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：构建出问题先 clean
+小贴士：构建出问题先 clean
 
 {class="mt-1"}
 "昨天还能跑今天就不行"的灵异事件，十有六七是构建缓存错乱。<code class="inline">./gradlew clean</code> 之后重新构建，能治愈一大半玄学问题。还不行再重启 Android Studio——这招请配合 File → Invalidate Caches 一起服用。
@@ -547,7 +547,7 @@ Gradle 常用命令速查
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：查版本的两个官方入口
+小贴士：查版本的两个官方入口
 
 {class="mt-1"}
 一个是 Compose BOM 版本映射页（在 developer.android.com 搜 "Compose BOM" 就能到），一个是 AndroidX 各库的发布说明页。查这两处花一分钟，比凭记忆写版本号省下的排错时间，一个小时打不住。
@@ -640,7 +640,7 @@ Gradle 常用命令速查
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：改键位不丢人
+小贴士：改键位不丢人
 
 {class="mt-1"}
 File → Settings → Keymap 里可以随时改键，也能切换成你熟悉的方案。顺手比标准重要：键位是为你服务的，不是你为键位服务的。
@@ -703,7 +703,7 @@ File → Settings → Keymap 里可以随时改键，也能切换成你熟悉的
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：一次只改一个变量
+避坑提醒：一次只改一个变量
 
 {class="mt-1"}
 排障第一大忌是同时改三处。改完了好了，不知道是谁的功劳；坏了，更不知道谁背锅。每改一处，构建一次，记一笔。慢就是快，这句话在排障这件事上是字面意思。
@@ -770,7 +770,7 @@ File → Settings → Keymap 里可以随时改键，也能切换成你熟悉的
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：写下你的第一周计划
+来动手：写下你的第一周计划
 
 {class="mt-1"}
 现在就定三件事：① 每天几点、在哪里练（固定时间和地点，完成率翻倍）；② 第一周结束时你要跑通的东西（越具体越好，"跑起来 Hello World"就合格）；③ 遇到报错时你的第一动作（翻回 FAQ 的黄金三步）。写在纸上，拍进手机：三个星期后对照着看，你会感谢今晚这五分钟。
@@ -822,7 +822,7 @@ File → Settings → Keymap 里可以随时改键，也能切换成你熟悉的
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：开发者选项不是玩具
+避坑提醒：开发者选项不是玩具
 
 {class="mt-1"}
 里面的开关大多数为开发服务，乱开可能影响日常使用（比如限制后台进程会让微信收不到消息）。规矩：调试期间开的，验收完随手关回去。给爸妈远程帮忙时尤其注意：他们的手机上别留这些开关。

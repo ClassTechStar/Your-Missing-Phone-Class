@@ -22,7 +22,7 @@ Activa el pago biométrico
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>: Activa el pago con Face ID o huella en Alipay/WeChat Pay. Es más seguro que la contraseña y evita que alguien vea tu contraseña.
+: Activa el pago con Face ID o huella en Alipay/WeChat Pay. Es más seguro que la contraseña y evita que alguien vea tu contraseña.
 
 {class="mt-1"}
 Desactiva el identificador publicitario <strong>: Ajustes &gt; Privacidad &gt; Publicidad &gt; Desactivar identificador publicitario. Esto reduce el rastro que dejas para los anunciantes.</strong> Revisa los permisos de las apps

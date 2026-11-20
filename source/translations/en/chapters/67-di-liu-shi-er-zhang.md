@@ -25,17 +25,17 @@ Old-style interface development is "imperative": you give the system orders one 
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body: describes "what the screen looks like"
-        VStack {               // vertical stack
-            Text("Hello, world!")
-                .font(.largeTitle)      // modifier: large title
-            Button("Tap me") {
-                print("clicked")
-            }
-            .buttonStyle(.borderedProminent)  // solid blue button
-        }
-        .padding()
-    }
+ var body: some View { // body: describes "what the screen looks like"
+ VStack { // vertical stack
+ Text("Hello, world!")
+ .font(.largeTitle) // modifier: large title
+ Button("Tap me") {
+ print("clicked")
+ }
+ .buttonStyle(.borderedProminent) // solid blue button
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -68,17 +68,17 @@ Notice Image(systemName:),Apple ships a built-in icon library called SF Symbols 
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("Bill")
-        Spacer()                 // flexible space: pushes the right side to the edge
-        Text("-25.5 yuan").foregroundColor(.red)
-    }
-    Divider()                    // divider
-    Text("Note: lunch")
+ HStack {
+ Text("Bill")
+ Spacer() // flexible space: pushes the right side to the edge
+ Text("-25.5 yuan").foregroundColor(.red)
+ }
+ Divider() // divider
+ Text("Note: lunch")
 }
-.padding(16)                     // padding on all sides
+.padding(16) // padding on all sides
 .background(Color(.systemGray6)) // light gray background
-.cornerRadius(12)                // rounded corners
+.cornerRadius(12) // rounded corners
 
 // Modifier order matters: padding first, then background — the background excludes the padding
 ```
@@ -103,16 +103,16 @@ A static interface is dull. SwiftUI's rule: the interface always faithfully refl
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State: when this value changes, redraw
+ @State private var count = 0 // @State: when this value changes, redraw
 
-    var body: some View {
-        VStack {
-            Text("You tapped \(count) times")
-            Button("Tap me +1") {
-                count += 1          // change the state; the UI refreshes automatically
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("You tapped \(count) times")
+ Button("Tap me +1") {
+ count += 1 // change the state; the UI refreshes automatically
+ }
+ }
+ }
 }
 ```
 :::
@@ -126,24 +126,24 @@ A text field needs "two-way binding",the $ symbol hands over both the value and 
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("Type something", text: $text)  // $ = two-way binding
-            .textFieldStyle(.roundedBorder)
-        Text("You typed: \(text)")   // updates live as you type
-    }
+ var body: some View {
+ TextField("Type something", text: $text) // $ = two-way binding
+ .textFieldStyle(.roundedBorder)
+ Text("You typed: \(text)") // updates live as you type
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> User action</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> State changes (count += 1)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> User action</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> State changes (count += 1)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI notices the change</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> UI redraws automatically (body recomputed)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI notices the change</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> UI redraws automatically (body recomputed)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -163,20 +163,20 @@ Figure 3: SwiftUI's one-way "state → interface" data flow
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::

@@ -422,7 +422,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：声音是短剧的"隐形预算"
+小贴士：声音是短剧的"隐形预算"
 
 {class="mt-1"}
 同一个剧本，好声音+差画质能看，差声音+好画质没法看。百元级有线领夹麦是最划算的设备投资：比升级相机重要十倍。户外收音记六个字：背风、靠近、回放，话筒避开风口、离嘴近一点，每条拍完当场听一遍；开机前再花十秒试录一次，竖屏拍摄最贵的错误就是"收工回来才发现全场没录上声音"。现场救，别指望后期。
@@ -505,7 +505,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：拍一条"对话正反打"
+来动手：拍一条"对话正反打"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 用 102 章的第 1 集剧本，约两位朋友拍 3 分钟对话戏。
@@ -797,7 +797,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 竖屏看脸：近景 60%+特写 20%，运镜从简
 - 安全区当画框：人脸别贴边，道具别放角落

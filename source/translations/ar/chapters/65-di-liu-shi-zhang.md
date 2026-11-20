@@ -71,26 +71,26 @@ Xcode الجديد يطالب غالباً بأحدث macOS، بينما Mac ا�
 ::: div .figure
 ```html
 <svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ جذر المشروع</text>
-      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (مجلد الكود)</text>
-      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← نقطة الدخول</text>
-      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← الواجهة الرئيسية</text>
-      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← أيقونات وصور وألوان</text>
-      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(الملفات الجديدة توضع في هذا المجلد)</text>
-      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">تبويب Info / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="var(--muted-2)">إعلان التطبيق: الاسم، الأذونات، الإعدادات</text>
-      <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
-      <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">أماكن مهمة أخرى</text>
-      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← مواد المعاينة</text>
-      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> إعدادات الهدف (أيقونة المشروع الزرقاء)</text>
-      <text x="331" y="142" font-size="10" fill="var(--muted-2)">——الإصدار والنظام الأدنى والتوقيع كلها هنا</text>
-      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← اختبارات الوحدات</text>
-      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← اختبارات الواجهة</text>
-      <text x="331" y="216" font-size="10" fill="var(--muted)">(قالب الاختبارات جاهز، يُستخدم في الفصل 67)</text>
-    </svg>
+ <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+ <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ جذر المشروع</text>
+ <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+ <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+ <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (مجلد الكود)</text>
+ <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift ← نقطة الدخول</text>
+ <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift ← الواجهة الرئيسية</text>
+ <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets ← أيقونات وصور وألوان</text>
+ <text x="56" y="166" font-size="10" fill="var(--muted-2)">(الملفات الجديدة توضع في هذا المجلد)</text>
+ <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">تبويب Info / Info.plist</text>
+ <text x="66" y="216" font-size="10" fill="var(--muted-2)">إعلان التطبيق: الاسم، الأذونات، الإعدادات</text>
+ <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
+ <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">أماكن مهمة أخرى</text>
+ <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/ ← مواد المعاينة</text>
+ <text x="331" y="122" font-size="10" fill="var(--ink-2)"> إعدادات الهدف (أيقونة المشروع الزرقاء)</text>
+ <text x="331" y="142" font-size="10" fill="var(--muted-2)">——الإصدار والنظام الأدنى والتوقيع كلها هنا</text>
+ <text x="331" y="168" font-size="10" fill="var(--ink-2)"> MyFirstAppTests/ ← اختبارات الوحدات</text>
+ <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← اختبارات الواجهة</text>
+ <text x="331" y="216" font-size="10" fill="var(--muted)">(قالب الاختبارات جاهز، يُستخدم في الفصل 67)</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

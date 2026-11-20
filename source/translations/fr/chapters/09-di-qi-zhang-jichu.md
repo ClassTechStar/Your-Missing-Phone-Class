@@ -42,7 +42,7 @@ Le smartphone établit directement une connexion avec un satellite de communicat
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Le saviez-vous
+Le saviez-vous
 
 {class="mt-1"}
 La communication par satellite nécessite une antenne matérielle spéciale dans le smartphone, tous les smartphones ne la prennent pas en charge. De plus, la communication par satellite nécessite généralement un abonnement payant, mais la fonction de détresse d'urgence est généralement gratuite.
@@ -115,7 +115,7 @@ Actuellement principalement les appareils de l'écosystème Huawei, comme la sé
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Perspectives technologiques
+Perspectives technologiques
 
 {class="mt-1"}
 La technologie SparkLink représente l'orientation future des communications sans fil. Avec l'adhésion de davantage de fabricants, nous verrons probablement davantage d'appareils prenant en charge SparkLink, pour une meilleure expérience sans fil.
@@ -123,7 +123,7 @@ La technologie SparkLink représente l'orientation future des communications san
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Vérifiez : votre smartphone prend-il en charge ces fonctionnalités
+Vérifiez : votre smartphone prend-il en charge ces fonctionnalités
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Recherchez « satellite » dans les paramètres pour voir s'il y a des options de communication par satellite.

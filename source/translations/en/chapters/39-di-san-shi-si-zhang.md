@@ -27,46 +27,46 @@ The three mainstream casting solutions each have their strengths. Use this table
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Solution</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Supported Phone OS</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Supported Car Models</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Feature Richness</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">China Availability</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone only</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Very wide, most car models support it</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">High — maps/music/phone/messages all work</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Good, works natively</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (domestic phones need service framework)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly wide, mainly joint venture/imported cars</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">High, comparable to CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Average, requires VPN to activate</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mainly Huawei phones, some support other Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Domestic cars and some joint venture models</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly high, can integrate with HarmonyOS Cockpit</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excellent, local ecosystem</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Both iOS and Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly wide, common retrofit for older cars</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Medium, updates are slow</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excellent, local ecosystem</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Solution</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Supported Phone OS</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Supported Car Models</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Feature Richness</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">China Availability</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone only</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Very wide, most car models support it</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">High — maps/music/phone/messages all work</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Good, works natively</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android (domestic phones need service framework)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly wide, mainly joint venture/imported cars</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">High, comparable to CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Average, requires VPN to activate</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mainly Huawei phones, some support other Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Domestic cars and some joint venture models</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly high, can integrate with HarmonyOS Cockpit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excellent, local ecosystem</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Both iOS and Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fairly wide, common retrofit for older cars</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Medium, updates are slow</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excellent, local ecosystem</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ If your car system is too old or too hard to use, can you just use your phone in
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Security Reminder
+Security Reminder
 
 {class="mt-1"}
 Regardless of which solution you use, operating your phone while driving violates traffic rules. A phone mount is only for "viewing navigation" — not for "operating the phone." Set destinations, switch songs, etc. only after pulling over, or use voice control.
@@ -111,7 +111,7 @@ Regardless of which solution you use, operating your phone while driving violate
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tips When Choosing a Car
+Tips When Choosing a Car
 
 {class="mt-1"}
 If you care about the infotainment experience, be sure to test at the dealership: ① Bring your phone and test the CarPlay/HiCar connection stability. ② Test the voice assistant response speed and command recognition. ③ Check if the app store has your frequently used apps. ④ Pay attention to the OTA update frequency, because good car systems are built through software iteration.
@@ -119,7 +119,7 @@ If you care about the infotainment experience, be sure to test at the dealership
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Optimize Your Car Connectivity Experience
+Hands-On: Optimize Your Car Connectivity Experience
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Confirm which connectivity solution your phone and car support (CarPlay / HiCar / Android Auto / CarLife).
@@ -130,7 +130,7 @@ If you care about the infotainment experience, be sure to test at the dealership
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Three connectivity routes: casting (CarPlay etc.), deep integration (HarmonyOS Cockpit etc.), CarPlay 2.0 deep integration

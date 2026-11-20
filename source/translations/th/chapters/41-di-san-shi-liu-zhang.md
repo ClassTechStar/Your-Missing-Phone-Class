@@ -36,35 +36,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ระบบนิเวศ</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดแข็ง</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดอ่อน</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เหมาะกับใคร</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ความเป็นส่วนตัวแน่นที่สุด (ประมวลผลในเครื่องเป็นหลัก) ทำงานร่วมกับ iPhone/Siri/Shortcuts ลื่นไหล</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์น้อยและราคาสูง ต้องมี HomePod หรือ Apple TV เป็นฮับกลาง</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ครัวเรือนที่ใช้ของ Apple ทั้งบ้าน ผู้ใช้ที่ให้ความสำคัญกับความเป็นส่วนตัวและประสบการณ์</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์เยอะที่สุด คุ้มค่าที่สุด และผู้ช่วยเสียง Xiao AI ใช้งานได้ดี</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระบบนิเวศค่อนข้างปิด ข้อมูลส่วนใหญ่เก็บบนคลาวด์ โฆษณาก็เยอะหน่อย</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้เริ่มต้นที่งบจำกัด อยากจัดเต็มทั้งบ้านแบบจบในที่เดียว</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei AI Life (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ส่งต่องานระหว่างมือถือ/แท็บเล็ต/นาฬิกา HarmonyOS ได้ไร้รอยต่อ จำนวนอุปกรณ์โตเร็ว</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์สากล/ต่างประเทศรองรับน้อย ระบบนิเวศยังไล่ตามอยู่</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้มือถือ Huawei คนที่ให้ความสำคัญกับ "Super Device" ที่ทำงานร่วมกันหลายอุปกรณ์</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ระบบนิเวศ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดแข็ง</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดอ่อน</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เหมาะกับใคร</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ความเป็นส่วนตัวแน่นที่สุด (ประมวลผลในเครื่องเป็นหลัก) ทำงานร่วมกับ iPhone/Siri/Shortcuts ลื่นไหล</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์น้อยและราคาสูง ต้องมี HomePod หรือ Apple TV เป็นฮับกลาง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ครัวเรือนที่ใช้ของ Apple ทั้งบ้าน ผู้ใช้ที่ให้ความสำคัญกับความเป็นส่วนตัวและประสบการณ์</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์เยอะที่สุด คุ้มค่าที่สุด และผู้ช่วยเสียง Xiao AI ใช้งานได้ดี</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระบบนิเวศค่อนข้างปิด ข้อมูลส่วนใหญ่เก็บบนคลาวด์ โฆษณาก็เยอะหน่อย</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้เริ่มต้นที่งบจำกัด อยากจัดเต็มทั้งบ้านแบบจบในที่เดียว</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei AI Life (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ส่งต่องานระหว่างมือถือ/แท็บเล็ต/นาฬิกา HarmonyOS ได้ไร้รอยต่อ จำนวนอุปกรณ์โตเร็ว</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">อุปกรณ์สากล/ต่างประเทศรองรับน้อย ระบบนิเวศยังไล่ตามอยู่</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ใช้มือถือ Huawei คนที่ให้ความสำคัญกับ "Super Device" ที่ทำงานร่วมกันหลายอุปกรณ์</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

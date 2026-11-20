@@ -45,41 +45,41 @@ BL-блокировка — первое звено цепочки безопа�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ключевое измерение</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Заблокировано (по умолчанию)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Разблокировано</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Безопасность системы</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Запрещает прошивку неподписанных неофициальных систем, защищает целостность и низкоуровневую безопасность<br><span class="text-emerald-600 dark:text-emerald-400">✅ Высокая безопасность: загружаются только образы с официальной подписью, эффективно против зловредной модификации прошивки</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Безопасность снижена: разрешена прошивка сторонних ROM, проверка целостности отключена, зловредное ПО с Root-правами может глубоко модифицировать систему</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Стабильность системы</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Гарантирует работу официальной системы, протестированной и оптимизированной производителем<br><span class="text-emerald-600 dark:text-emerald-400">✅ Стабильно: официальная прошивка, полный функционал, надёжные OTA-обновления</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Риск выше: сторонний ROM может иметь проблемы совместимости — система может крашиться, окирпичиться, аппаратные функции (камера, быстрая зарядка) могут работать некорректно, OTA-обновления могут не работать</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Гарантия</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Производитель через заблокированный BL обеспечивает стабильную официальную систему и гарантийное обслуживание<br><span class="text-emerald-600 dark:text-emerald-400">✅ Гарантия действительна: бесплатный официальный ремонт (при неумышленных поломках)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Гарантия аннулирована: большинство производителей считают разблокировку BL добровольным отказом от гарантии; даже повторная блокировка может быть обнаружена по истории, и в ремонте откажут</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Безопасность данных</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Разблокировка обычно принудительно очищает данные, чтобы предотвратить зловредное использование старых данных в новой системе<br><span class="text-emerald-600 dark:text-emerald-400">✅ Данные в безопасности: при повседневном использовании BL ограничивает возможность зловредных программ модифицировать системные разделы</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Риск для данных: при разблокировке все пользовательские данные принудительно удаляются; если после разблокировки шифрование настроено неверно, хранилище может быть небезопасно; при потере устройства данные легче извлечь через прошивку</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Функциональные ограничения</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Гарантирует нормальную работу функций, зависящих от безопасной среды (платёж, банковские приложения)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Полный функционал: все официальные функции работают</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Ограниченный функционал: некоторые приложения, чувствительные к безопасности (Google Pay, банковские приложения) могут отказать в работе при обнаружении разблокированного BL; DRM-сервисы могут быть понижены, что влияет на воспроизведение HD-видео</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ключевое измерение</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Заблокировано (по умолчанию)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Разблокировано</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Безопасность системы</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Запрещает прошивку неподписанных неофициальных систем, защищает целостность и низкоуровневую безопасность<br><span class="text-emerald-600 dark:text-emerald-400">✅ Высокая безопасность: загружаются только образы с официальной подписью, эффективно против зловредной модификации прошивки</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Безопасность снижена: разрешена прошивка сторонних ROM, проверка целостности отключена, зловредное ПО с Root-правами может глубоко модифицировать систему</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Стабильность системы</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Гарантирует работу официальной системы, протестированной и оптимизированной производителем<br><span class="text-emerald-600 dark:text-emerald-400">✅ Стабильно: официальная прошивка, полный функционал, надёжные OTA-обновления</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Риск выше: сторонний ROM может иметь проблемы совместимости — система может крашиться, окирпичиться, аппаратные функции (камера, быстрая зарядка) могут работать некорректно, OTA-обновления могут не работать</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Гарантия</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Производитель через заблокированный BL обеспечивает стабильную официальную систему и гарантийное обслуживание<br><span class="text-emerald-600 dark:text-emerald-400">✅ Гарантия действительна: бесплатный официальный ремонт (при неумышленных поломках)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Гарантия аннулирована: большинство производителей считают разблокировку BL добровольным отказом от гарантии; даже повторная блокировка может быть обнаружена по истории, и в ремонте откажут</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Безопасность данных</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Разблокировка обычно принудительно очищает данные, чтобы предотвратить зловредное использование старых данных в новой системе<br><span class="text-emerald-600 dark:text-emerald-400">✅ Данные в безопасности: при повседневном использовании BL ограничивает возможность зловредных программ модифицировать системные разделы</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Риск для данных: при разблокировке все пользовательские данные принудительно удаляются; если после разблокировки шифрование настроено неверно, хранилище может быть небезопасно; при потере устройства данные легче извлечь через прошивку</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Функциональные ограничения</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Гарантирует нормальную работу функций, зависящих от безопасной среды (платёж, банковские приложения)<br><span class="text-emerald-600 dark:text-emerald-400">✅ Полный функционал: все официальные функции работают</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Ограниченный функционал: некоторые приложения, чувствительные к безопасности (Google Pay, банковские приложения) могут отказать в работе при обнаружении разблокированного BL; DRM-сервисы могут быть понижены, что влияет на воспроизведение HD-видео</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ BL-блокировка — первое звено цепочки безопа�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Трижды подумайте
+Трижды подумайте
 
 {class="mt-1"}
 Пережигание Knox у Samsung <strong>необратимо</strong> — однажды сработав, вернуть заводское состояние невозможно. Если вам нужны функции, требующие Root, сначала проверьте, есть ли альтернативы без Root.
@@ -123,7 +123,7 @@ BL-блокировка — первое звено цепочки безопа�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Важное предупреждение
+Важное предупреждение
 
 {class="mt-1"}
 Прошивка сопряжена с риском. Возможные последствия:
@@ -140,7 +140,7 @@ BL-блокировка — первое звено цепочки безопа�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Рекомендуемые ресурсы
+Рекомендуемые ресурсы
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>: крупнейшее в мире сообщество Android-разработчиков, богатые инструкции по прошивке и ROM-ресурсы.
@@ -152,7 +152,7 @@ BL-блокировка — первое звено цепочки безопа�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: Можно ли восстановить BL-блокировку после разблокировки?
+Q1: Можно ли восстановить BL-блокировку после разблокировки?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Да, можно заблокировать обратно. Обычно нужно прошить официальный полный образ через Fastboot и использовать специальный скрипт (например, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code> у Xiaomi). Однако обратите внимание: повторная блокировка может не обратить некоторые пережигания безопасности (например, Knox у Samsung).
@@ -160,7 +160,7 @@ BL-блокировка — первое звено цепочки безопа�
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: Как получить Root после разблокировки?
+Q2: Как получить Root после разблокировки?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Разблокировка BL — лишь первый шаг. Root обычно требует:

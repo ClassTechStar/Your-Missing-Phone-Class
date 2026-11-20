@@ -100,7 +100,7 @@ DNS (Domain Name System) เหมือนสมุดโทรศัพท์�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>อัปเกรด DNS
+อัปเกรด DNS
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: แอนดรอยด์: ตั้งค่า > การเชื่อมต่อและการแชร์ > Private DNS > กรอก one.one.one.one หรือ dns.google iPhone: ใช้ Safari ค้น 1.1.1.1 DNS profile ติดตั้งโปรไฟล์ หรือดาวน์โหลดแอป 1.1.1.1 ของ Cloudflare</strong>ตรวจสอบ Wi-Fi

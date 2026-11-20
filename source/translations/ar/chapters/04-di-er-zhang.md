@@ -86,119 +86,119 @@ Android مبني على Linux، ونظام الملفات له بنية هرمي
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التنسيق</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">النوع</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الخصائص</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">طريقة الفتح الموصى بها</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صورة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط مع فقد، حجم صغير، أفضل توافق. التنسيق الافتراضي لصور الهاتف.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الألبوم/أي عارض صور</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صورة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط بدون فقد، يدعم الخلفية الشفافة. شائع للقطات الشاشة والأيقونات. حجم أكبر من JPG.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الألبوم/أي عارض صور</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط مع فقد، حجم صغير، توافق ممتاز. تنسيق الصوت الأكثر شيوعاً.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أي مشغل موسيقى</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط بدون فقد، جودة صوت مطابقة لـ CD، حجم أكبر من MP3 بـ 3-5 مرات. الخيار الأول للهواة.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مشغل موسيقى/تطبيق تشغيل احترافي</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت خام بدون ضغط، أفضل جودة لكن حجم ضخم. شائع للتسجيلات الاحترافية.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مشغل موسيقى</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ترميز AAC، جودة صوت أفضل من MP3 عند نفس معدل البت. شائع في نظام Apple البيئي.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/مشغل موسيقى</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">فيديو</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق تغليف الفيديو الأكثر شيوعاً، توافق ممتاز. التنسيق الافتراضي لفيديو الهاتف.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الألبوم/أي مشغل فيديو</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">فيديو</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق تغليف مفتوح المصدر، يدعم مسارات صوت متعددة، ترجمات متعددة. شائع لموارد الأفلام.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستند</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستند Word. DOCX تنسيق مضغوط، حجم أصغر. DOC تنسيق قديم.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عرض تقديمي</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عرض تقديمي PowerPoint. PPTX تنسيق مضغوط.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جدول</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جدول Excel الإلكتروني. XLSX تنسيق مضغوط.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستند</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق عبر الأنظمة، تخطيط ثابت غير قابل للتحرير. شائع للعقود والأطروحات والكتب الإلكترونية.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مضغوط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق الضغط الأكثر شيوعاً، توافق عبر الأنظمة جيد.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدمج في النظام/تطبيق فك ضغط</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مضغوط</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">نسبة ضغط أعلى من ZIP، لكن يتطلب برنامجاً مخصصاً لفك الضغط.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق فك ضغط</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صورة</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ملف صورة قرص، ينسخ محتوى القرص بالكامل. شائع لحزم تثبيت النظام.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق فك ضغط/محرك أقراص افتراضي</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صفحة ويب</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ملف صفحة ويب، يفتح بالمتصفح. الصفحات المحفوظة شائعة بهذا التنسيق.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المتصفح</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التنسيق</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">النوع</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الخصائص</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">طريقة الفتح الموصى بها</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صورة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط مع فقد، حجم صغير، أفضل توافق. التنسيق الافتراضي لصور الهاتف.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الألبوم/أي عارض صور</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صورة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط بدون فقد، يدعم الخلفية الشفافة. شائع للقطات الشاشة والأيقونات. حجم أكبر من JPG.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الألبوم/أي عارض صور</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط مع فقد، حجم صغير، توافق ممتاز. تنسيق الصوت الأكثر شيوعاً.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">أي مشغل موسيقى</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ضغط بدون فقد، جودة صوت مطابقة لـ CD، حجم أكبر من MP3 بـ 3-5 مرات. الخيار الأول للهواة.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مشغل موسيقى/تطبيق تشغيل احترافي</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت خام بدون ضغط، أفضل جودة لكن حجم ضخم. شائع للتسجيلات الاحترافية.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مشغل موسيقى</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صوت</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ترميز AAC، جودة صوت أفضل من MP3 عند نفس معدل البت. شائع في نظام Apple البيئي.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/مشغل موسيقى</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">فيديو</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق تغليف الفيديو الأكثر شيوعاً، توافق ممتاز. التنسيق الافتراضي لفيديو الهاتف.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">الألبوم/أي مشغل فيديو</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">فيديو</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق تغليف مفتوح المصدر، يدعم مسارات صوت متعددة، ترجمات متعددة. شائع لموارد الأفلام.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستند</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستند Word. DOCX تنسيق مضغوط، حجم أصغر. DOC تنسيق قديم.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عرض تقديمي</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">عرض تقديمي PowerPoint. PPTX تنسيق مضغوط.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جدول</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جدول Excel الإلكتروني. XLSX تنسيق مضغوط.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مستند</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق عبر الأنظمة، تخطيط ثابت غير قابل للتحرير. شائع للعقود والأطروحات والكتب الإلكترونية.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مضغوط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تنسيق الضغط الأكثر شيوعاً، توافق عبر الأنظمة جيد.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدمج في النظام/تطبيق فك ضغط</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مضغوط</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">نسبة ضغط أعلى من ZIP، لكن يتطلب برنامجاً مخصصاً لفك الضغط.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق فك ضغط</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صورة</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ملف صورة قرص، ينسخ محتوى القرص بالكامل. شائع لحزم تثبيت النظام.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تطبيق فك ضغط/محرك أقراص افتراضي</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">صفحة ويب</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ملف صفحة ويب، يفتح بالمتصفح. الصفحات المحفوظة شائعة بهذا التنسيق.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المتصفح</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>تمرّن: رتّب مجلد "التنزيلات"
+تمرّن: رتّب مجلد "التنزيلات"
 
 {class="mt-1"}
 افتح مدير الملفات &gt; ادخل إلى مجلد "التنزيلات". انظر ماذا يوجد بداخله؟ احذف غير المفيد، وصنّف المفيد (مثلاً أنشئ مجلدات "مواد العمل" و"رموز تعبيرية" وضعها فيها). بالمناسبة، انظر إلى مساحة التخزين لمعرفة أنواع الملفات التي تحتل المساحة أكثر.
@@ -216,21 +216,21 @@ Android مبني على Linux، ونظام الملفات له بنية هرمي
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>طريقة تسمية "الوقت + الحدث"</strong>: اسم المجلد يحمل طابعاً زمنياً ووصفاً للحدث، يسهّل التذكر والبحث لاحقاً. مثلاً <code>202606_تذاكر_السفر</code>و<code>ملخص_2025_السنوي</code>و<code>2024_عيد_ميلاد_الطفل</code>. هكذا يمكنك رؤية الخط الزمني، ومعرفة المحتوى بنظرة واحدة.</li>
-                        <li><strong>نظام تصنيف ثلاثي المستويات</strong>:
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>المستوى الأول</strong>: حسب نوع الملف (مستند / صورة / فيديو / صوت)</li>
-                                <li><strong>المستوى الثاني</strong>: حسب سيناريو الاستخدام (عمل / حياة / تعلم)</li>
-                                <li><strong>المستوى الثالث</strong>: حسب حدث أو مشروع محدد (مثل "2026Q2_مشروع_A")</li>
-                            </ul>
-                        </li>
-                        <li><strong>خطة التنظيف الشهرية</strong>: حدد يوماً ثابتاً كل شهر (يُنصح يوم الراتب أو اليوم الأول من الشهر)، للتنظيم المركز لمجلد "التنزيلات":<strong>أرشفة المفيد، حذف غير المفيد، نقل الثمين</strong>. 12 تنظيماً صغيراً في السنة أسهل بكثير من تنظيف كبير بعد سنة كاملة.</li>
-                    </ul>
+ <li><strong>طريقة تسمية "الوقت + الحدث"</strong>: اسم المجلد يحمل طابعاً زمنياً ووصفاً للحدث، يسهّل التذكر والبحث لاحقاً. مثلاً <code>202606_تذاكر_السفر</code>و<code>ملخص_2025_السنوي</code>و<code>2024_عيد_ميلاد_الطفل</code>. هكذا يمكنك رؤية الخط الزمني، ومعرفة المحتوى بنظرة واحدة.</li>
+ <li><strong>نظام تصنيف ثلاثي المستويات</strong>:
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>المستوى الأول</strong>: حسب نوع الملف (مستند / صورة / فيديو / صوت)</li>
+ <li><strong>المستوى الثاني</strong>: حسب سيناريو الاستخدام (عمل / حياة / تعلم)</li>
+ <li><strong>المستوى الثالث</strong>: حسب حدث أو مشروع محدد (مثل "2026Q2_مشروع_A")</li>
+ </ul>
+ </li>
+ <li><strong>خطة التنظيف الشهرية</strong>: حدد يوماً ثابتاً كل شهر (يُنصح يوم الراتب أو اليوم الأول من الشهر)، للتنظيم المركز لمجلد "التنزيلات":<strong>أرشفة المفيد، حذف غير المفيد، نقل الثمين</strong>. 12 تنظيماً صغيراً في السنة أسهل بكثير من تنظيف كبير بعد سنة كاملة.</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>قائمة مهام هذا الشهر
+قائمة مهام هذا الشهر
 
 {class="mt-1"}
 اختر عطلة نهاية أسبوع فارغة، واعمل بالترتيب التالي:
@@ -258,7 +258,7 @@ Android مبني على Linux، ونظام الملفات له بنية هرمي
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>الإجراء القياسي لإرسال صور الهوية / لقطات الشاشة الحساسة
+الإجراء القياسي لإرسال صور الهوية / لقطات الشاشة الحساسة
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>طمس المعلومات المرئية</strong>: استخدم أداة مدمجة أو طرف ثالث (مثل Meitu XiuXiu، Snapseed)<strong>لطمس أرقام الهوية الوسطى، رقم اللوحة، رقم الباب، الاسم، المبلغ</strong>وغيرها من الحقول الرئيسية؛

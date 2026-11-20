@@ -61,7 +61,7 @@ Sejujurnya, kebanyakan orang ambil gambar dengan telefon, hasilnya jauh kurang b
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Semak sama ada sandaran awan diaktifkan, pastikan gambar sudah disimpan satu salinan di awan.
+Semak sama ada sandaran awan diaktifkan, pastikan gambar sudah disimpan satu salinan di awan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Bab 11 Lampiran: Pengetahuan Teknik Pengimejan Profesional

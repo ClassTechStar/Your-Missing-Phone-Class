@@ -37,46 +37,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持手机系统</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持车型</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能丰富度</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">国内可用性</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仅 iPhone</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极广，绝大多数车型支持</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，地图/音乐/电话/消息均可</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">好，原生可用</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（国内手机需装服务框架）</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，合资/进口车居多</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，与CarPlay相当</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般，需科学上网激活</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机为主，部分支持其他安卓</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国产车与部分合资车型</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较高，可与鸿蒙座舱联动</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 与 Android 均可</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，老车型后装常见</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，更新较慢</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持手机系统</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">支持车型</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能丰富度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">国内可用性</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">仅 iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极广，绝大多数车型支持</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，地图/音乐/电话/消息均可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">好，原生可用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android（国内手机需装服务框架）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，合资/进口车居多</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高，与CarPlay相当</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一般，需科学上网激活</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机为主，部分支持其他安卓</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国产车与部分合资车型</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较高，可与鸿蒙座舱联动</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 与 Android 均可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">较广，老车型后装常见</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中等，更新较慢</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">很好，本土生态</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -107,7 +107,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>安全提醒
+安全提醒
 
 {class="mt-1"}
 无论用哪种方案，驾驶时操作手机都违反交规。手机支架只能用于"看导航"，不能用于"操作手机"。设置目的地、切换歌曲等操作，请务必停车后再做，或使用语音控制。
@@ -121,7 +121,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>选车时的小建议
+选车时的小建议
 
 {class="mt-1"}
 如果在乎车机体验，选车时务必去4S店实测：①带自己的手机试CarPlay/HiCar连接是否稳定；②试语音助手的反应速度和指令识别率；③看应用市场有没有你常用的App；④关注后续OTA升级频率，好车机是用软件迭代出来的。
@@ -129,7 +129,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：优化你的车机互联体验
+动手：优化你的车机互联体验
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 确认你的手机和车机支持的互联方案（CarPlay / HiCar / Android Auto / CarLife）。
@@ -140,7 +140,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 车机互联三大路线：投屏（CarPlay等）、深度融合（鸿蒙座舱等）、CarPlay 2.0深度集成

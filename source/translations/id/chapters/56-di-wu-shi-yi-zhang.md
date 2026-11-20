@@ -24,19 +24,19 @@ Inti pemikiran Compose dalam satu kalimat: antarmuka = fungsi. Setiap hal yang b
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Halo, $name!")     // Satu "balok teks"
+ Text(text = "Halo, $name!") // Satu "balok teks"
 }
 
 // Komposisi bersarang: balok besar membungkus balok kecil
 @Composable
 fun HomeScreen() {
-    Column {                          // Disusun vertikal
-        Greeting(name = "Zhang San")
-        Greeting(name = "Li Si")
-        Button(onClick = { /* apa yang dilakukan saat diklik */ }) {
-            Text("Tekan aku")
-        }
-    }
+ Column { // Disusun vertikal
+ Greeting(name = "Zhang San")
+ Greeting(name = "Li Si")
+ Button(onClick = { /* apa yang dilakukan saat diklik */ }) {
+ Text("Tekan aku")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ Empat komponen dasar Compose
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "Ini sebuah teks")
-        Button(onClick = { println("Ditekan") }) {
-            Text("Tombol")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("Ketik sesuatu") }
-        )
-    }
+ Column {
+ Text(text = "Ini sebuah teks")
+ Button(onClick = { println("Ditekan") }) {
+ Text("Tombol")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("Ketik sesuatu") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ Komponen sudah ada, bagaimana menatanya? Ingat tiga 'kotak' ini:
 
 ```
 Column {
-    Text("Baris pertama")
-    Row {
-        Text("Kiri")
-        Text("Kanan")
-    }
-    Box {
-        Text("Lapisan bawah")
-        Text("Lencana kecil yang menumpuk di atas")
-    }
+ Text("Baris pertama")
+ Row {
+ Text("Kiri")
+ Text("Kanan")
+ }
+ Box {
+ Text("Lapisan bawah")
+ Text("Lencana kecil yang menumpuk di atas")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Ingin tata letaknya lebih cantik? Tambahkan Modifier (pemberi efek) pada kompone
 
 ```
 Text(
-    text = "Teks yang menarik",
-    modifier = Modifier
-        .padding(16.dp)          // beri ruang di sekeliling
-        .fillMaxWidth()          // penuhi lebar
-        .background(Color.Blue)  // warna latar
-        .clickable { /* klik */ }// bisa diklik
+ text = "Teks yang menarik",
+ modifier = Modifier
+ .padding(16.dp) // beri ruang di sekeliling
+ .fillMaxWidth() // penuhi lebar
+ .background(Color.Blue) // warna latar
+ .clickable { /* klik */ }// bisa diklik
 )
 // Rantai: dipanggil satu per satu, urutan berpengaruh (padding dulu baru latar, latar tidak termasuk jarak padding)
 ```
@@ -150,15 +150,15 @@ Antarmuka statis itu membosankan. Ingin angka bertambah 1 saat tombol ditekan, k
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf: mengingat nilai yang bisa berubah ini
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf: mengingat nilai yang bisa berubah ini
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "Kamu menekan $count kali")
-        Button(onClick = { count++ }) {   // ubah state
-            Text("Tekan aku +1")                // tampilan menyegarkan sendiri
-        }
-    }
+ Column {
+ Text(text = "Kamu menekan $count kali")
+ Button(onClick = { count++ }) { // ubah state
+ Text("Tekan aku +1") // tampilan menyegarkan sendiri
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ Tiga baris kode, satu penghitung yang hidup. Di sinilah Compose terasa enak diba
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> Pengguna menekan</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> State berubah (count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Pengguna menekan</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> State berubah (count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose mendeteksi perubahan</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> Menggambar ulang tampilan otomatis (recomposition)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose mendeteksi perubahan</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Menggambar ulang tampilan otomatis (recomposition)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ Tiga 'cheat' Compose soal pengalaman pengembangan; sekali memakai, tidak mau kem
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // Saat nilai berubah, otomatis bertransisi halus ke nilai target
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // Saat nilai berubah, otomatis bertransisi halus ke nilai target
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

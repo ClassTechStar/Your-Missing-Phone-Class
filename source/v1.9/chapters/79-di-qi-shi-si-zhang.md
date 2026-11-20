@@ -49,22 +49,22 @@ module.json5 里声明应用的基本信息、申请的权限、Ability 的入�
 
 ```
 {
-  "module": {
-    "name": "entry",
-    "type": "entry",
-    "abilities": [{
-      "name": "EntryAbility",
-      "srcEntry": "./ets/entryability/EntryAbility.ets",
-      "exported": true,
-      "skills": [{
-        "entities": ["entity.system.home"],
-        "actions": ["action.system.home"]
-      }]
-    }],
-    "requestPermissions": [
-      { "name": "ohos.permission.INTERNET" }
-    ]
-  }
+ "module": {
+ "name": "entry",
+ "type": "entry",
+ "abilities": [{
+ "name": "EntryAbility",
+ "srcEntry": "./ets/entryability/EntryAbility.ets",
+ "exported": true,
+ "skills": [{
+ "entities": ["entity.system.home"],
+ "actions": ["action.system.home"]
+ }]
+ }],
+ "requestPermissions": [
+ { "name": "ohos.permission.INTERNET" }
+ ]
+ }
 }
 ```
 :::
@@ -95,14 +95,14 @@ UIAbility 的生命周期与 Activity/Scene 高度对应：<strong>onCreate（�
 import { router } from '@kit.ArkUI'
 
 router.pushUrl({
-  url: 'pages/Detail',
-  params: { id: 42, from: 'list' }
+ url: 'pages/Detail',
+ params: { id: 42, from: 'list' }
 })
 
 // B 页面：接收参数 + 返回并回传
 let params = router.getParams() as Record&lt;string, number | string&gt;
 console.info('收到 id: ' + params.id)
-router.back()   // 复杂回传可用 emitter 事件或 AppStorage
+router.back() // 复杂回传可用 emitter 事件或 AppStorage
 ```
 :::
 
@@ -120,7 +120,7 @@ router.back()   // 复杂回传可用 emitter 事件或 AppStorage
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做两级页面
+来动手：做两级页面
 
 {class="mt-1"}
 给第 73 章的设置页加一个"关于"入口：点击跳转到 About 页面并传递应用版本号；About 页显示版本号与一个"返回"按钮。完成它，你就掌握了鸿蒙应用"多页面 + 参数传递"的最小闭环。
@@ -143,13 +143,13 @@ Navigation 的页面不走 router 那种全局注册，而是走"路由表"：�
 
 ```
 {
-  "routerMap": [
-    {
-      "name": "Detail",
-      "pageSourceFile": "src/main/ets/pages/Detail.ets",
-      "buildFunction": "DetailBuilder"
-    }
-  ]
+ "routerMap": [
+ {
+ "name": "Detail",
+ "pageSourceFile": "src/main/ets/pages/Detail.ets",
+ "buildFunction": "DetailBuilder"
+ }
+ ]
 }
 ```
 :::
@@ -176,23 +176,23 @@ this.pathStack.pushPathByName('Detail', { id: 42, from: 'list' })
 // Detail.ets：NavDestination 内通过 onReady 拿到上下文
 @Component
 struct DetailPage {
-  pathStack: NavPathStack = new NavPathStack()
+ pathStack: NavPathStack = new NavPathStack()
 
-  build() {
-    NavDestination() {
-      Column() {
-        Text('详情内容')
-      }
-    }
-    .title('详情')
-    .onReady((context: NavDestinationContext) =&gt; {
-      // 从路径信息里取参数
-      let param = context.pathInfo.param as Record&lt;string, number | string&gt;
-      console.info('id = ' + param.id)
-      // 存下栈的引用，本页内部还能继续往深处跳
-      this.pathStack = context.pathStack
-    })
-  }
+ build() {
+ NavDestination() {
+ Column() {
+ Text('详情内容')
+ }
+ }
+ .title('详情')
+ .onReady((context: NavDestinationContext) =&gt; {
+ // 从路径信息里取参数
+ let param = context.pathInfo.param as Record&lt;string, number | string&gt;
+ console.info('id = ' + param.id)
+ // 存下栈的引用，本页内部还能继续往深处跳
+ this.pathStack = context.pathStack
+ })
+ }
 }
 
 // 返回上一页
@@ -216,10 +216,10 @@ this.pathStack.pop()
 ```
 // 错误示范：用全局变量传参
 AppStorage.setOrCreate('pendingId', 42)
-this.pathStack.pushPathByName('Detail', '')   // 参数位空着
+this.pathStack.pushPathByName('Detail', '') // 参数位空着
 
 // Detail 页面里：
-let id = AppStorage.get&lt;number&gt;('pendingId')   // 谁都能改，谁都能读
+let id = AppStorage.get&lt;number&gt;('pendingId') // 谁都能改，谁都能读
 
 // 纠正：参数跟着路径走
 this.pathStack.pushPathByName('Detail', { id: 42 })
@@ -241,14 +241,14 @@ this.pathStack.pushPathByName('Detail', { id: 42 })
 ```
 // 页面层示意：离开页面时把栈名序列记下来
 onPageHide(): void {
-  let snapshot = this.pathStack.getAllPathName().join(',')
-  AppStorage.setOrCreate('nav_snapshot', snapshot)
+ let snapshot = this.pathStack.getAllPathName().join(',')
+ AppStorage.setOrCreate('nav_snapshot', snapshot)
 }
 
 // 应用重启后：按名字逐条压回，参数另存一份映射
 onPageShow(): void {
-  let names = AppStorage.get&lt;string&gt;('nav_snapshot') ?? ''
-  names.split(',').forEach(n =&gt; this.pathStack.pushPathByName(n, null))
+ let names = AppStorage.get&lt;string&gt;('nav_snapshot') ?? ''
+ names.split(',').forEach(n =&gt; this.pathStack.pushPathByName(n, null))
 }
 ```
 :::
@@ -265,7 +265,7 @@ onPageShow(): void {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2" aria-hidden="true"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 pushPathByName 传了路由表里不存在的名字，页面不会出现，也不会当场报错——线索只在日志里。遇到"点了没反应"的问题，先打印栈内容确认是不是名字没对上，再查路由表有没有登记，最后才怀疑别的。
@@ -273,7 +273,7 @@ pushPathByName 传了路由表里不存在的名字，页面不会出现，也�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 调试导航栈有个笨但好用的办法：每跳一次就打印一次栈的内容（getAllPathName 能列出当前栈里所有页面的名字，size 是深度）。栈一乱，日志一目了然，比在界面上反复猜快得多。
@@ -285,7 +285,7 @@ pushPathByName 传了路由表里不存在的名字，页面不会出现，也�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：把第 73 章的两级页面升级成 Navigation
+来动手：把第 73 章的两级页面升级成 Navigation
 
 {class="mt-1"}
 给 About 页在 route_map.json 里挂个名字，设置页改用 NavPathStack 传版本号，About 页在 onReady 里取参显示，再试试返回时带一个结果回去。跑通这条链，Navigation 的最小闭环就成了。
@@ -329,16 +329,16 @@ AppStorage 的数据应用一退就没了。想让某个键活过重启，用 Pe
 
 ```
 onCreate(): void {
-  // 先钉住，再使用。第二个参数是"没有历史数据时"的默认值
-  PersistentStorage.persistProp('themeMode', 'auto')
-  PersistentStorage.persistProp('fontSize', 'standard')
+ // 先钉住，再使用。第二个参数是"没有历史数据时"的默认值
+ PersistentStorage.persistProp('themeMode', 'auto')
+ PersistentStorage.persistProp('fontSize', 'standard')
 }
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2" aria-hidden="true"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 三件事别做。一别把大对象、长列表塞进去，每次变化都写盘，启动速度和闪存寿命双双遭殃；二别存敏感信息（token、密码）。落盘数据原则上能被有更高权限的环境读到，敏感数据走加密存储；三别在 persistProp 之前就往 AppStorage 写同名键，绑定会被冲掉，"明明存了却没恢复"的灵异事件多半是它。
@@ -366,7 +366,7 @@ storage.setOrCreate('filter', '全部')
 @Entry(storage)
 @Component
 struct ArchivePage {
-  @LocalStorageLink('filter') filter: string = ''
+ @LocalStorageLink('filter') filter: string = ''
 }
 ```
 :::
@@ -386,7 +386,7 @@ this.context.eventHub.emit('avatarChanged', newUri)
 
 // 接收方（一般在 aboutToAppear 里注册）
 this.context.eventHub.on('avatarChanged', (uri: string) =&gt; {
-  this.avatarUri = uri
+ this.avatarUri = uri
 })
 
 // aboutToDisappear 里务必注销，否则页面销毁后回调还挂着
@@ -410,18 +410,18 @@ let subscriber: commonEventManager.CommonEventSubscriber | undefined
 
 // aboutToAppear 里订阅
 commonEventManager.createSubscriber(
-  { events: ['usual.event.SCREEN_ON'] },
-  (err, sub) =&gt; {
-    subscriber = sub
-    commonEventManager.subscribe(sub, (err, data) =&gt; {
-      // 系统亮屏事件到了，做你的响应
-    })
-  }
+ { events: ['usual.event.SCREEN_ON'] },
+ (err, sub) =&gt; {
+ subscriber = sub
+ commonEventManager.subscribe(sub, (err, data) =&gt; {
+ // 系统亮屏事件到了，做你的响应
+ })
+ }
 )
 
 // aboutToDisappear 里注销
 if (subscriber) {
-  commonEventManager.unsubscribe(subscriber)
+ commonEventManager.unsubscribe(subscriber)
 }
 ```
 :::
@@ -431,15 +431,15 @@ if (subscriber) {
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">工具</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">作用范围</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型用途</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@State/@Prop/@Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">组件内部与父子组件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面自身的显示状态</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">LocalStorage</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单个 UIAbility 的页面之间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能力内共享的临时状态</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AppStorage</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整个应用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主题、未读数、全局标记</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PersistentStorage</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应用 + 磁盘</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重启后还在的少量配置</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">EventHub</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单个 Context 内</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">页面解耦的事件通知</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公共事件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨应用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统事件监听、应用间广播</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">工具</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">作用范围</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型用途</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@State/@Prop/@Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">组件内部与父子组件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面自身的显示状态</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">LocalStorage</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单个 UIAbility 的页面之间</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能力内共享的临时状态</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AppStorage</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整个应用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主题、未读数、全局标记</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PersistentStorage</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应用 + 磁盘</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重启后还在的少量配置</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">EventHub</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">单个 Context 内</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">页面解耦的事件通知</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公共事件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨应用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统事件监听、应用间广播</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -471,18 +471,18 @@ if (subscriber) {
 
 ```
 onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  this.parseWant(want)   // 冷启动
+ this.parseWant(want) // 冷启动
 }
 
 onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-  this.parseWant(want)   // 热启动
+ this.parseWant(want) // 热启动
 }
 
 parseWant(want: Want): void {
-  let orderId = want.parameters?.orderId as string
-  if (orderId) {
-    AppStorage.setOrCreate('pendingOrderId', orderId)
-  }
+ let orderId = want.parameters?.orderId as string
+ if (orderId) {
+ AppStorage.setOrCreate('pendingOrderId', orderId)
+ }
 }
 ```
 :::
@@ -511,10 +511,10 @@ WantAgent 和裸 Want 的取舍顺便说一句：通知、卡片这种"系统替
 ```
 // abilities 里 EntryAbility 的 skills 数组，追加一项
 "skills": [
-  {
-    "actions": ["com.example.retouch.action.EDIT_IMAGE"],
-    "uris": [{ "type": "image/*" }]
-  }
+ {
+ "actions": ["com.example.retouch.action.EDIT_IMAGE"],
+ "uris": [{ "type": "image/*" }]
+ }
 ]
 ```
 :::
@@ -531,7 +531,7 @@ WantAgent 和裸 Want 的取舍顺便说一句：通知、卡片这种"系统替
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：接一条"通知落页"链路
+来动手：接一条"通知落页"链路
 
 {class="mt-1"}
 点按钮发一条本地通知，WantAgent 指向详情页并带一个 id 参数。分别在冷启动（后台划掉应用再点通知）和热启动（应用挂着再点通知）两种情况下验证参数都到得了。两种情况都通过，才算接线成功，只测一种，等于没测。
@@ -550,12 +550,12 @@ WantAgent 和裸 Want 的取舍顺便说一句：通知、卡片这种"系统替
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">任务类型</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合场景</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点与限制</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短时任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切后台后需要一点时间收尾的活：写完一批缓存、上传最后一段日志</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主动申请，系统给一段宽限时间（时长视系统策略而定，以官方文档为准）；到期未完成会被挂起</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长时任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放、导航、运动记录、录音这类"前台开始、后台必须继续"的持续性服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">module.json5 声明 backgroundModes，代码里申请；状态栏常驻提醒用户"我在后台干活"</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">延迟任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不急的活：WiFi 环境下同步相册、充电时做备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">交给系统调度器（workScheduler），系统挑满足条件的空闲时机执行</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">任务类型</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合场景</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点与限制</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短时任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切后台后需要一点时间收尾的活：写完一批缓存、上传最后一段日志</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主动申请，系统给一段宽限时间（时长视系统策略而定，以官方文档为准）；到期未完成会被挂起</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长时任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放、导航、运动记录、录音这类"前台开始、后台必须继续"的持续性服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">module.json5 声明 backgroundModes，代码里申请；状态栏常驻提醒用户"我在后台干活"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">延迟任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不急的活：WiFi 环境下同步相册、充电时做备份</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">交给系统调度器（workScheduler），系统挑满足条件的空闲时机执行</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -575,13 +575,13 @@ import { backgroundTaskManager } from '@kit.BackgroundTaskKit'
 import { wantAgent } from '@kit.AbilityKit'
 
 async startContinuous() {
-  let wantAgentObj = await wantAgent.getWantAgent({
-    wants: [{ bundleName: 'com.example.player', abilityName: 'EntryAbility' }]
-  })
-  await backgroundTaskManager.startContinuousTask({
-    wantAgent: wantAgentObj,          // 点状态栏提醒能回到应用
-    backgroundMode: backgroundTaskManager.BackgroundMode.AUDIO_PLAYBACK
-  })
+ let wantAgentObj = await wantAgent.getWantAgent({
+ wants: [{ bundleName: 'com.example.player', abilityName: 'EntryAbility' }]
+ })
+ await backgroundTaskManager.startContinuousTask({
+ wantAgent: wantAgentObj, // 点状态栏提醒能回到应用
+ backgroundMode: backgroundTaskManager.BackgroundMode.AUDIO_PLAYBACK
+ })
 }
 
 // 停止播放时记得取消
@@ -614,10 +614,10 @@ await backgroundTaskManager.stopContinuousTask()
 import { preferences } from '@kit.ArkData'
 
 onBackground(): void {
-  let store = preferences.getPreferencesSync(this.context, { name: 'draft' })
-  store.putSync('draft_text', this.draftText)
-  store.putSync('draft_time', Date.now())
-  store.flush()   // flush 才真正落盘，漏了等于白存
+ let store = preferences.getPreferencesSync(this.context, { name: 'draft' })
+ store.putSync('draft_text', this.draftText)
+ store.putSync('draft_time', Date.now())
+ store.flush() // flush 才真正落盘，漏了等于白存
 }
 ```
 :::
@@ -631,13 +631,13 @@ onBackground(): void {
 
 ```
 onForeground(): void {
-  let store = preferences.getPreferencesSync(this.context, { name: 'draft' })
-  let saved = store.getSync('draft_text', '') as string
-  let savedTime = store.getSync('draft_time', 0) as number
-  if (saved !== '' &amp;&amp; savedTime &gt; this.lastRestoreTime) {
-    this.draftText = saved   // 接上被回收前的草稿
-    this.lastRestoreTime = savedTime
-  }
+ let store = preferences.getPreferencesSync(this.context, { name: 'draft' })
+ let saved = store.getSync('draft_text', '') as string
+ let savedTime = store.getSync('draft_time', 0) as number
+ if (saved !== '' &amp;&amp; savedTime &gt; this.lastRestoreTime) {
+ this.draftText = saved // 接上被回收前的草稿
+ this.lastRestoreTime = savedTime
+ }
 }
 ```
 :::
@@ -648,7 +648,7 @@ onForeground(): void {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 后台能活多久，不由你决定，由用户和系统共同决定。你要做的不是对抗回收，而是保证"被杀之后，一切都能接上"。
@@ -682,9 +682,9 @@ module.json5 里每个 Ability 可以配 launchType：<strong>singleton</strong>
 import { Want } from '@kit.AbilityKit'
 
 let want: Want = {
-  bundleName: 'com.example.shop',
-  abilityName: 'PayAbility',
-  parameters: { amount: 128, orderId: 'A1001' }
+ bundleName: 'com.example.shop',
+ abilityName: 'PayAbility',
+ parameters: { amount: 128, orderId: 'A1001' }
 }
 let result = await this.context.startAbilityForResult(want)
 console.info('支付结果码: ' + result.resultCode)
@@ -719,19 +719,19 @@ import { taskpool } from '@kit.ArkTS'
 
 @Concurrent
 function compressCount(paths: string[]): number {
-  // 这里跑在子线程，别碰 UI
-  let done = 0
-  for (let p of paths) {
-    // ...压缩逻辑...
-    done++
-  }
-  return done
+ // 这里跑在子线程，别碰 UI
+ let done = 0
+ for (let p of paths) {
+ // ...压缩逻辑...
+ done++
+ }
+ return done
 }
 
 // 主线程：扔进去，等结果
 taskpool.execute(compressCount, pathList).then((count: number) =&gt; {
-  console.info('压缩完成: ' + count)
-  this.refreshUI()   // 结果回到主线程，这里可以更新 UI
+ console.info('压缩完成: ' + count)
+ this.refreshUI() // 结果回到主线程，这里可以更新 UI
 })
 ```
 :::
@@ -750,18 +750,18 @@ taskpool.execute(compressCount, pathList).then((count: number) =&gt; {
 ```
 // 错误示范：主线程同步干重活
 aboutToAppear(): void {
-  let raw = this.readBigJson()      // 主线程读大文件
-  this.cityList = JSON.parse(raw)   // 主线程解析几百 KB
+ let raw = this.readBigJson() // 主线程读大文件
+ this.cityList = JSON.parse(raw) // 主线程解析几百 KB
 }
 
 // 纠正：扔给 TaskPool，回来再赋值
 async loadCities(): Promise&lt;string[]&gt; {
-  // 内部把"读文件 + 解析"包成 @Concurrent 任务丢进 taskpool
-  return await taskpool.execute(parseCitiesTask, filePath)
+ // 内部把"读文件 + 解析"包成 @Concurrent 任务丢进 taskpool
+ return await taskpool.execute(parseCitiesTask, filePath)
 }
 
 async aboutToAppear(): Promise&lt;void&gt; {
-  this.cityList = await this.loadCities()
+ this.cityList = await this.loadCities()
 }
 ```
 :::
@@ -785,7 +785,7 @@ import { worker, messageEvents } from '@kit.ArkTS'
 
 let pipeline = new worker.ThreadWorker('entry/ets/workers/PipelineWorker.ets')
 pipeline.onmessage = (e: messageEvents) =&gt; {
-  this.progress = e.data.step   // 子线程的进度回到主线程
+ this.progress = e.data.step // 子线程的进度回到主线程
 }
 pipeline.postMessage({ cmd: 'start' })
 // 用完：pipeline.terminate()
@@ -795,8 +795,8 @@ import { worker, ThreadWorkerGlobalScope, messageEvents } from '@kit.ArkTS'
 
 const workerPort: ThreadWorkerGlobalScope = worker.threadWorkerGlobalScope
 workerPort.onmessage = (e: messageEvents) =&gt; {
-  // ...干长活，随时 postMessage 汇报进度...
-  workerPort.postMessage({ step: 1 })
+ // ...干长活，随时 postMessage 汇报进度...
+ workerPort.postMessage({ step: 1 })
 }
 ```
 :::
@@ -807,7 +807,7 @@ workerPort.onmessage = (e: messageEvents) =&gt; {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 怀疑主线程被卡住时，用 DevEco Studio 的 Profiler 看主线程的耗时分布，找到最长的那个函数，它就是你该扔进 TaskPool 的第一个候选。别凭感觉猜，先量再改。
@@ -876,7 +876,7 @@ app.json5 里的 icon 和 label 是应用级的，桌面图标、设置里的应
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 门诊的通用第一步永远是：把生命周期日志打出来（本章第二节的老习惯），用 DevEco Studio 的 HiLog 过滤自己应用的业务域名，把回调串成时间线；命令行上用 hilog 直接看也行（hdc 相当于安卓的 adb）。九成骨架问题，看一遍"应用被拉起时到底走了哪些回调"就有眉目，剩下的再上工具。
@@ -889,20 +889,20 @@ app.json5 里的 icon 和 label 是应用级的，桌面图标、设置里的应
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">安卓</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">鸿蒙</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">入口配置文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidManifest.xml</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Info.plist</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">app.json5 + module.json5</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有界面的入口单元</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activity</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UIWindowScene（Scene 生命周期）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UIAbility</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">页面单元</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fragment / 第二个 Activity</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ViewController</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NavDestination</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">页面栈</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">返回栈（系统管理）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UINavigationController</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NavPathStack（开发者持有）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">前后台回调</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onPause / onResume / onStop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">scenePhase（.active/.inactive/.background）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onForeground / onBackground</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">保存数据的关键时机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onPause / onStop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">scenePhase 变 .background 时</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onBackground</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐式拉起</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Intent + IntentFilter</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">URL Scheme / Universal Links</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Want + skills / App Linking</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后台任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">前台服务 / WorkManager</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后台模式 / BGTaskScheduler</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长时任务 / 短时任务 / 延迟任务</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">线程协作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主线程 + 协程 / Handler</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主线程 + GCD / async-await</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主线程 + TaskPool / Worker</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">桌面快捷入口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快捷方式 / Widget</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Quick Actions / WidgetKit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">shortcuts / 桌面卡片</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">运行时权限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清单声明 + 代码申请弹窗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Info.plist 声明 + 代码申请</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">module.json5 声明 + requestPermissionsFromUser</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">安卓</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">鸿蒙</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">入口配置文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidManifest.xml</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Info.plist</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">app.json5 + module.json5</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有界面的入口单元</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activity</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UIWindowScene（Scene 生命周期）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UIAbility</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">页面单元</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fragment / 第二个 Activity</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ViewController</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NavDestination</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">页面栈</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">返回栈（系统管理）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UINavigationController</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NavPathStack（开发者持有）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">前后台回调</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onPause / onResume / onStop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">scenePhase（.active/.inactive/.background）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onForeground / onBackground</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">保存数据的关键时机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onPause / onStop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">scenePhase 变 .background 时</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onBackground</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐式拉起</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Intent + IntentFilter</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">URL Scheme / Universal Links</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Want + skills / App Linking</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后台任务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">前台服务 / WorkManager</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">后台模式 / BGTaskScheduler</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长时任务 / 短时任务 / 延迟任务</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">线程协作</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主线程 + 协程 / Handler</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主线程 + GCD / async-await</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主线程 + TaskPool / Worker</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">桌面快捷入口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快捷方式 / Widget</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Quick Actions / WidgetKit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">shortcuts / 桌面卡片</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">运行时权限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清单声明 + 代码申请弹窗</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Info.plist 声明 + 代码申请</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">module.json5 声明 + requestPermissionsFromUser</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -941,7 +941,7 @@ app.json5 里的 icon 和 label 是应用级的，桌面图标、设置里的应
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：给第 73 章的项目做一次"骨架体检"
+来动手：给第 73 章的项目做一次"骨架体检"
 
 {class="mt-1"}
 给 EntryAbility 的每个生命周期回调加一行日志；跑一遍冷启动、切后台、回前台、手动划掉，把日志按顺序抄下来对照本章的生命周期流程；再人为制造一次回收（后台清空或等系统回收，视机型方式不同），确认草稿能从 onBackground 的持久化里接回来。做完这三步，本章的内容就从"看过"变成"装进项目里了"。
@@ -949,7 +949,7 @@ app.json5 里的 icon 和 label 是应用级的，桌面图标、设置里的应
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - Stage 模型三层：应用 → 模块（Module）→ 能力（UIAbility/ExtensionAbility）
 - module.json5 对应 AndroidManifest：声明 Ability、权限、入口

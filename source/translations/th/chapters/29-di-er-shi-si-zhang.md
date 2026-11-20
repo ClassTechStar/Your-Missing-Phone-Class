@@ -45,41 +45,41 @@ Bootloader คือโปรแกรมแรกที่รันเมื่
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">บทบาทหลัก</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สถานะล็อก (ค่าเริ่มต้น)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สถานะปลดล็อก</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความปลอดภัยของระบบ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ป้องกันการแฟลชระบบที่ไม่เป็นทางการซึ่งไม่มีลายเซ็น ปกป้องความสมบูรณ์ของระบบและความปลอดภัยระดับล่าง<br><span class="text-emerald-600 dark:text-emerald-400">✅ ความปลอดภัยสูง: โหลดเฉพาะอิมเมจที่ลงลายเซ็นอย่างเป็นทางการ ป้องกันการดัดแปลงเฟิร์มแวร์ที่เป็นอันตรายได้อย่างมีประสิทธิภาพ</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ความปลอดภัยลดลง: อนุญาตให้แฟลช ROM ของบุคคลที่สามได้ กลไกการตรวจสอบความสมบูรณ์ของระบบล้มเหลว หากมัลแวร์ได้รับสิทธิ์ Root สามารถดัดแปลงระบบได้อย่างลึกซึ้ง</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความเสถียรของระบบ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รับประกันว่าโทรศัพท์จะทำงานบนระบบทางการที่ผ่านการทดสอบและปรับแต่งโดยผู้ผลิตแล้ว เพื่อความเสถียรและลื่นไหล<br><span class="text-emerald-600 dark:text-emerald-400">✅ เสถียร: ใช้เฟิร์มแวร์ทางการ ฟังก์ชันครบถ้วน อัปเดต OTA ที่เชื่อถือได้</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ความเสี่ยงเพิ่มขึ้น: ROM ของบุคคลที่สามอาจมีปัญหาความเข้ากันได้ อาจทำให้ระบบค้าง, อิฐ, หรือฟังก์ชันฮาร์ดแวร์ผิดปกติ (เช่น กล้อง, ชาร์จไว) การอัปเดต OTA อาจล้มเหลว</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">สิทธิประโยชน์การรับประกัน</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ผลิตล็อก BL เพื่อมอบระบบทางการที่เสถียน เพื่อให้บริการรับประกัน<br><span class="text-emerald-600 dark:text-emerald-400">✅ รับประกันมีผล: ได้รับบริการรับประกันฟรีจากทางการ (กรณีไม่ใช่ความเสียหายจากผู้ใช้)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ รับประกันสิ้นสุด: ผู้ผลิตส่วนใหญ่ถือว่าการปลดล็อก BL เป็นการสละสิทธิ์การรับประกันโดยสมัครใจ แม้จะล็อกกลับ ก็อาจถูกตรวจพบประวัติการปลดล็อกและปฏิเสธการรับประกัน</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความปลอดภัยของข้อมูล</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กระบวนการปลดล็อกมักจะบังคับล้างข้อมูล เพื่อป้องกันข้อมูลเก่าถูกนำไปใช้ในทางที่ผิดในสภาพแวดล้อมของระบบใหม่<br><span class="text-emerald-600 dark:text-emerald-400">✅ ข้อมูลปลอดภัย: ในการใช้งานประจำวัน การล็อก BL จะจำกัดความสามารถของโปรแกรมที่เป็นอันตรายในการแก้ไขพาร์ติชันระบบ</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ความเสี่ยงด้านข้อมูล: การปลดล็อกจะบังคับล้างข้อมูลผู้ใช้ทั้งหมด หากไม่เข้ารหัสอย่างถูกต้องหลังปลดล็อก การจัดเก็บข้อมูลอาจไม่ปลอดภัย หากสูญหายจะถูกแฟลชเพื่อดึงข้อมูลออกได้ง่ายขึ้น</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ข้อจำกัดของฟังก์ชัน</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รับประกันว่าฟังก์ชันที่ต้องพึ่งพาสภาพแวดล้อมที่ปลอดภัย (เช่น การชำระเงิน, แอปธนาคาร) ทำงานได้ปกติ<br><span class="text-emerald-600 dark:text-emerald-400">✅ ฟังก์ชันครบถ้วน: ฟังก์ชันทางการทั้งหมดสามารถใช้งานได้ปกติ</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ฟังก์ชันจำกัด: แอปที่ละเอียดอ่อนด้านความปลอดภัยบางส่วน (เช่น Google Pay, แอปธนาคาร) อาจปฏิเสธการทำงานเนื่องจากตรวจพบสถานะการปลดล็อก BL บริการ DRM อาจถูกปรับลดระดับ ส่งผลกระทบต่อการเล่นวิดีโอความละเอียดสูง</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">บทบาทหลัก</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สถานะล็อก (ค่าเริ่มต้น)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">สถานะปลดล็อก</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความปลอดภัยของระบบ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ป้องกันการแฟลชระบบที่ไม่เป็นทางการซึ่งไม่มีลายเซ็น ปกป้องความสมบูรณ์ของระบบและความปลอดภัยระดับล่าง<br><span class="text-emerald-600 dark:text-emerald-400">✅ ความปลอดภัยสูง: โหลดเฉพาะอิมเมจที่ลงลายเซ็นอย่างเป็นทางการ ป้องกันการดัดแปลงเฟิร์มแวร์ที่เป็นอันตรายได้อย่างมีประสิทธิภาพ</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ความปลอดภัยลดลง: อนุญาตให้แฟลช ROM ของบุคคลที่สามได้ กลไกการตรวจสอบความสมบูรณ์ของระบบล้มเหลว หากมัลแวร์ได้รับสิทธิ์ Root สามารถดัดแปลงระบบได้อย่างลึกซึ้ง</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความเสถียรของระบบ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รับประกันว่าโทรศัพท์จะทำงานบนระบบทางการที่ผ่านการทดสอบและปรับแต่งโดยผู้ผลิตแล้ว เพื่อความเสถียรและลื่นไหล<br><span class="text-emerald-600 dark:text-emerald-400">✅ เสถียร: ใช้เฟิร์มแวร์ทางการ ฟังก์ชันครบถ้วน อัปเดต OTA ที่เชื่อถือได้</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ความเสี่ยงเพิ่มขึ้น: ROM ของบุคคลที่สามอาจมีปัญหาความเข้ากันได้ อาจทำให้ระบบค้าง, อิฐ, หรือฟังก์ชันฮาร์ดแวร์ผิดปกติ (เช่น กล้อง, ชาร์จไว) การอัปเดต OTA อาจล้มเหลว</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">สิทธิประโยชน์การรับประกัน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ผู้ผลิตล็อก BL เพื่อมอบระบบทางการที่เสถียน เพื่อให้บริการรับประกัน<br><span class="text-emerald-600 dark:text-emerald-400">✅ รับประกันมีผล: ได้รับบริการรับประกันฟรีจากทางการ (กรณีไม่ใช่ความเสียหายจากผู้ใช้)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ รับประกันสิ้นสุด: ผู้ผลิตส่วนใหญ่ถือว่าการปลดล็อก BL เป็นการสละสิทธิ์การรับประกันโดยสมัครใจ แม้จะล็อกกลับ ก็อาจถูกตรวจพบประวัติการปลดล็อกและปฏิเสธการรับประกัน</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ความปลอดภัยของข้อมูล</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กระบวนการปลดล็อกมักจะบังคับล้างข้อมูล เพื่อป้องกันข้อมูลเก่าถูกนำไปใช้ในทางที่ผิดในสภาพแวดล้อมของระบบใหม่<br><span class="text-emerald-600 dark:text-emerald-400">✅ ข้อมูลปลอดภัย: ในการใช้งานประจำวัน การล็อก BL จะจำกัดความสามารถของโปรแกรมที่เป็นอันตรายในการแก้ไขพาร์ติชันระบบ</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ความเสี่ยงด้านข้อมูล: การปลดล็อกจะบังคับล้างข้อมูลผู้ใช้ทั้งหมด หากไม่เข้ารหัสอย่างถูกต้องหลังปลดล็อก การจัดเก็บข้อมูลอาจไม่ปลอดภัย หากสูญหายจะถูกแฟลชเพื่อดึงข้อมูลออกได้ง่ายขึ้น</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">ข้อจำกัดของฟังก์ชัน</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รับประกันว่าฟังก์ชันที่ต้องพึ่งพาสภาพแวดล้อมที่ปลอดภัย (เช่น การชำระเงิน, แอปธนาคาร) ทำงานได้ปกติ<br><span class="text-emerald-600 dark:text-emerald-400">✅ ฟังก์ชันครบถ้วน: ฟังก์ชันทางการทั้งหมดสามารถใช้งานได้ปกติ</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ ฟังก์ชันจำกัด: แอปที่ละเอียดอ่อนด้านความปลอดภัยบางส่วน (เช่น Google Pay, แอปธนาคาร) อาจปฏิเสธการทำงานเนื่องจากตรวจพบสถานะการปลดล็อก BL บริการ DRM อาจถูกปรับลดระดับ ส่งผลกระทบต่อการเล่นวิดีโอความละเอียดสูง</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ XDA Developers
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>โปรดคิดให้ดีก่อนลงมือทำ
+โปรดคิดให้ดีก่อนลงมือทำ
 
 {class="mt-1"}
 Knox ของ Samsung ที่ถูกทริกเกอร์นั้น<strong>ไม่สามารถย้อนกลับได้</strong>เมื่อถูกทริกเกอร์แล้วจะไม่สามารถกลับสู่สถานะโรงงานเดิมได้ หากคุณแค่ต้องการใช้ฟังก์ชันที่ปกติต้องใช้ Root ขอแนะนำให้ตรวจสอบก่อนว่ามีทางเลือกอื่นที่ไม่ต้องใช้ Root หรือไม่
@@ -123,7 +123,7 @@ Knox ของ Samsung ที่ถูกทริกเกอร์นั้น
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>คำเตือนสำคัญ
+คำเตือนสำคัญ
 
 {class="mt-1"}
 การแฟลชรอมมีความเสี่ยง ต้องดำเนินการด้วยความระมัดระวัง อาจทำให้:
@@ -140,7 +140,7 @@ Knox ของ Samsung ที่ถูกทริกเกอร์นั้น
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>แหล่งข้อมูลที่แนะนำ
+แหล่งข้อมูลที่แนะนำ
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>: ชุมชนนักพัฒนา Android ที่ใหญ่ที่สุดในโลก มีบทเรียนแฟลชรอมและแหล่ง ROM ที่หลากหลาย
@@ -152,7 +152,7 @@ Knox ของ Samsung ที่ถูกทริกเกอร์นั้น
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: หลังจากปลดล็อก Bootloader แล้วสามารถกลับไปล็อกใหม่ได้ไหม?
+Q1: หลังจากปลดล็อก Bootloader แล้วสามารถกลับไปล็อกใหม่ได้ไหม?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong>สามารถล็อกใหม่ได้ โดยปกติจะต้อง Flash ชุดเฟิร์มแวร์อย่างเป็นทางการ และใช้สคริปต์ Flash เฉพาะ (เช่น ของ Xiaomi <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>) เพื่อล็อกใหม่ได้ แต่โปรดทราบว่า หลังจากล็อกใหม่แล้ว การทริกเกอร์ความปลอดภัยบางอย่างที่เกิดจากการปลดล็อก (เช่น Knox ของ Samsung) อาจไม่สามารถย้อนกลับได้
@@ -160,7 +160,7 @@ Knox ของ Samsung ที่ถูกทริกเกอร์นั้น
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: หลังจากปลดล็อกแล้วจะ Root ได้อย่างไร?
+Q2: หลังจากปลดล็อกแล้วจะ Root ได้อย่างไร?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong>การปลดล็อก Bootloader เป็นเพียงก้าวแรก การ Root มักจะต้องทำดังนี้:

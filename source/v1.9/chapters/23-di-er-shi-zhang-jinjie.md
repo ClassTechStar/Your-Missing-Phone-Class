@@ -64,7 +64,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事项
+注意事项
 
 {class="mt-1"}
 开发者模式里的设置可能会影响系统稳定性，看不懂的选项保持默认。几条边界帮你画好：
@@ -77,7 +77,7 @@ kind: supplement
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 开发者选项里的开关不会「优化手机」，它们只是把系统默认行为暴露出来。看不懂的保持默认。
@@ -90,12 +90,12 @@ kind: supplement
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类别</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型选项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">态度</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">随便玩</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">显示触摸操作、显示布局边界、动画缩放三项、显示刷新频率类开关</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纯显示类，改了不满意就还原，无风险</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看懂再动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB调试、无线调试、后台进程限制、强制GPU渲染、4x MSAA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用途明确才开，用完关回去</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认别碰</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最小宽度/DPI类、OEM解锁、各种"停用/强制"底层选项</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不了解就不动，动了可能要恢复出厂才回得来</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类别</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型选项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">态度</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">随便玩</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">显示触摸操作、显示布局边界、动画缩放三项、显示刷新频率类开关</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">纯显示类，改了不满意就还原，无风险</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看懂再动</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB调试、无线调试、后台进程限制、强制GPU渲染、4x MSAA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用途明确才开，用完关回去</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认别碰</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最小宽度/DPI类、OEM解锁、各种"停用/强制"底层选项</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不了解就不动，动了可能要恢复出厂才回得来</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -149,7 +149,7 @@ USB调试值得单独一节，因为它是整个开发者选项里"权限最大"
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识：为什么厂商要设置这个开关
+小知识：为什么厂商要设置这个开关
 
 {class="mt-1"}
 早期安卓没有这个开关。恶意软件只要拿到权限就能偷偷刷入系统。Google后来要求所有安卓厂商在开发者选项中加入"OEM解锁"开关，作为一道"用户知情同意"的确认。这也就是为什么即便你解了BL锁，如果OEM解锁开关被关闭，重新刷机仍然会失败。
@@ -204,7 +204,7 @@ ADB 全称 Android Debug Bridge（安卓调试桥），是 Google 官方提供�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>驱动和授权弹窗别忽略
+驱动和授权弹窗别忽略
 
 {class="mt-1"}
 Windows 用户如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> 显示 "unauthorized" 或根本不列出设备，多半是驱动没装好或者忘了在手机上点"允许"。三星/小米等品牌可以装各自的"USB驱动"或"手机助手"来补齐驱动；Mac 和 Linux 一般免驱。如果手机弹窗被你手滑点掉了，拔插一下数据线就会重新弹出来。
@@ -233,7 +233,7 @@ Windows 用户如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>千万别乱删系统核心包
+千万别乱删系统核心包
 
 {class="mt-1"}
 "pm uninstall --user 0"虽然是免 Root 的安全方式，但乱删关键系统应用（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> 状态栏、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> 电话、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> 设置）会导致系统崩溃、黑屏、无法开机等严重问题。删之前先 Google 一下"这个包名能不能删"，宁可少删不要错删。建议一次只删一两个，确认没问题再继续。
@@ -241,7 +241,7 @@ Windows 用户如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知识：--user 0 是什么意思
+小知识：--user 0 是什么意思
 
 {class="mt-1"}
 安卓 4.2 之后支持多用户，每个用户有独立的 ID（机主是 0，附加用户从 10 开始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"只对当前机主卸载"。系统分区里的 APK 文件依然存在，只是不给机主显示了。这就是为什么它不需要 Root，没动系统文件，只是改了"用户配置"。这也是它和 Root 后卸载最大的区别：Root 卸载是真正从系统里删掉，所有用户都不再有；ADB 卸载只是"对当前用户隐藏"。
@@ -341,13 +341,13 @@ USB调试听起来极客，其实它服务的很多场景特别生活化。这�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层级</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么获得</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型能力</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主要风险</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">普通App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应用商店安装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只碰你授权的那几项（相机、定位等）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限给多了滥用</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Shizuku</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无线调试或ADB启动服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分系统级操作（批量管理应用等）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">授权对象要可信</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ADB</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开发者选项+电脑连接</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装卸、传文件、查日志、隐藏预装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">命令敲错、授权给陌生电脑</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁BL+Magisk等方案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全系统读写、模块定制</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">变砖、失去保修、完整性认证失效</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层级</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么获得</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型能力</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主要风险</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">普通App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">应用商店安装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只碰你授权的那几项（相机、定位等）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限给多了滥用</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Shizuku</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无线调试或ADB启动服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分系统级操作（批量管理应用等）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">授权对象要可信</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ADB</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开发者选项+电脑连接</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装卸、传文件、查日志、隐藏预装</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">命令敲错、授权给陌生电脑</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Root</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解锁BL+Magisk等方案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全系统读写、模块定制</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">变砖、失去保修、完整性认证失效</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -424,7 +424,7 @@ Root权限相当于Linux中的超级用户（对/目录拥有完全控制权，�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>严重警告
+严重警告
 
 {class="mt-1"}
 Root操作有一定风险，可能导致手机变砖（无法开机）。如果你是新手，建议先充分了解相关知识，并确保有完整的备份。操作前请仔细阅读教程，确认你的机型和系统版本。
@@ -471,7 +471,7 @@ Root操作有一定风险，可能导致手机变砖（无法开机）。如果�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>猫鼠游戏永远不会结束
+猫鼠游戏永远不会结束
 
 {class="mt-1"}
 Google 每隔一段时间就会更新检测规则，App 厂商也会跟进升级 Play Integrity 校验。今天还能用的隐藏方案，明天可能就被识别。如果你完全依赖银行/支付 App（比如日常转账、扫码付款），最稳妥的选择仍然是：不要 Root、不要解 BL 锁。隐藏方案更适合"主力机不 Root + 备用机玩 Root"的玩家配置。
@@ -492,7 +492,7 @@ Google 每隔一段时间就会更新检测规则，App 厂商也会跟进升级
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：开启开发者模式并调整动画速度
+来动手：开启开发者模式并调整动画速度
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 进入设置 > 关于手机。
@@ -587,15 +587,15 @@ Root不是装完就完事的，它是一份长期责任。给你一份可以照�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌/系统</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">开发者选项通常在哪</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常差异的点</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/鸿蒙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 系统和更新（部分版本在"关于手机"连点版本号后出现）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分条目命名与原生不同，USB调试相关选项有多个子开关</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 更多设置 → 开发者选项</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">BL解锁走社区流程（第八节），条目相对齐全</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 其他设置（部分版本在系统管理内）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分机型默认隐藏部分条目，版本差异较大</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 关于手机 → 软件信息，连点编译编号类条目开启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分选项叫法不同；解锁BL涉及Knox（第三、八节）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生安卓/Pixel类</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 系统 → 开发者选项</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">条目与谷歌文档基本一致，无线调试支持较好</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装过开发工具后才出现"开发者模式"开关（第一节）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有本章这套选项体系，普通用户无需操作</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌/系统</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">开发者选项通常在哪</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常差异的点</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/鸿蒙</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 系统和更新（部分版本在"关于手机"连点版本号后出现）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分条目命名与原生不同，USB调试相关选项有多个子开关</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 更多设置 → 开发者选项</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">BL解锁走社区流程（第八节），条目相对齐全</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 其他设置（部分版本在系统管理内）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分机型默认隐藏部分条目，版本差异较大</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 关于手机 → 软件信息，连点编译编号类条目开启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分选项叫法不同；解锁BL涉及Knox（第三、八节）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原生安卓/Pixel类</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 → 系统 → 开发者选项</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">条目与谷歌文档基本一致，无线调试支持较好</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装过开发工具后才出现"开发者模式"开关（第一节）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有本章这套选项体系，普通用户无需操作</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -646,15 +646,15 @@ Root不是装完就完事的，它是一份长期责任。给你一份可以照�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">需求</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ADB / Shizuku</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Root</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载预装App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以（pm uninstall --user 0）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以，且删得更彻底</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份应用连同数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">基本做不到（权限不够）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以（如 Swift Backup）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">改系统界面细节</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极少数场景可借Shizuku实现</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以（配合模块）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">深度控制每个App的权限与行为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常接收OTA更新</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不受影响</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">受影响，需按流程处理</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备完整性认证（银行App）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不受影响</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">过不了，靠隐藏方案且无保障</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">需求</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ADB / Shizuku</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Root</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载预装App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以（pm uninstall --user 0）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以，且删得更彻底</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">备份应用连同数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">基本做不到（权限不够）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以（如 Swift Backup）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">改系统界面细节</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极少数场景可借Shizuku实现</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以（配合模块）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">深度控制每个App的权限与行为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有限</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正常接收OTA更新</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不受影响</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">受影响，需按流程处理</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备完整性认证（银行App）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不受影响</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">过不了，靠隐藏方案且无保障</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -750,7 +750,7 @@ Root用户换机最容易漏的是"权限体系搬迁"：授权台账（第十�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 开发者选项分三类记：显示类随便玩，调试类看懂再动，底层与解锁类默认别碰

@@ -90,7 +90,7 @@ Perhatian khusus riwayat chat WeChat
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Riwayat chat WeChat tidak dapat dimigrasi melalui alat pindah ponsel apa pun! Itu tidak termasuk dalam cakupan pencadangan seluruh perangkat. Harus menggunakan fungsi "Migrasi Riwayat Chat" bawaan WeChat, atau cadangkan ke WeChat versi PC. Banyak orang setelah pindah ke ponsel baru, baru menemukan riwayat chat semua hilang, saat itu sudah terlambat — ponsel lama mungkin sudah di-reset pabrik.
+Riwayat chat WeChat tidak dapat dimigrasi melalui alat pindah ponsel apa pun! Itu tidak termasuk dalam cakupan pencadangan seluruh perangkat. Harus menggunakan fungsi "Migrasi Riwayat Chat" bawaan WeChat, atau cadangkan ke WeChat versi PC. Banyak orang setelah pindah ke ponsel baru, baru menemukan riwayat chat semua hilang, saat itu sudah terlambat — ponsel lama mungkin sudah di-reset pabrik.
 
 {class="mt-1"}
 Berlatih: Lakukan latihan pencadangan lengkap
@@ -98,7 +98,7 @@ Berlatih: Lakukan latihan pencadangan lengkap
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Periksa apakah iCloud Cloud Backup atau pencadangan cloud merek aktif, konfirmasikan waktu pencadangan terakhir.
+Periksa apakah iCloud Cloud Backup atau pencadangan cloud merek aktif, konfirmasikan waktu pencadangan terakhir.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Cadangkan foto secara manual: gunakan kabel data hubungkan ke komputer, salin folder DCIM dan Pictures ke komputer.

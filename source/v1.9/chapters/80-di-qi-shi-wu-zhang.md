@@ -44,22 +44,22 @@ after_part: hongmeng-kai-fa-pian
 import { preferences } from '@kit.ArkData'
 import { Context } from '@kit.AbilityKit'
 
-let store: preferences.Preferences | null = null   // 也有同步接口 getPreferencesSync
+let store: preferences.Preferences | null = null // 也有同步接口 getPreferencesSync
 
 // 初始化（一般在 EntryAbility onCreate 里拿 context 后做一次）
 async function initStore(context: Context) {
-  store = await preferences.getPreferences(context, { name: 'settings' })
+ store = await preferences.getPreferences(context, { name: 'settings' })
 }
 
 // 写
 async function saveTheme(dark: boolean) {
-  await store?.put('dark_mode', dark)
-  await store?.flush()   // 不调用 flush 可能不落盘！
+ await store?.put('dark_mode', dark)
+ await store?.flush() // 不调用 flush 可能不落盘！
 }
 
 // 读
 async function loadTheme(): Promise&lt;boolean&gt; {
-  return (await store?.get('dark_mode', false)) as boolean ?? false
+ return (await store?.get('dark_mode', false)) as boolean ?? false
 }
 ```
 :::
@@ -120,18 +120,18 @@ import { fileIo as fs } from '@kit.CoreFileKit'
 import { Context } from '@kit.AbilityKit'
 
 async function saveDraft(context: Context, text: string) {
-  // 路径永远从 context 拼，别手写一串绝对路径
-  let path = context.filesDir + '/draft.txt'
-  let file = fs.openSync(path,
-    fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC)
-  fs.writeSync(file.fd, text)
-  fs.closeSync(file.fd)
+ // 路径永远从 context 拼，别手写一串绝对路径
+ let path = context.filesDir + '/draft.txt'
+ let file = fs.openSync(path,
+ fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC)
+ fs.writeSync(file.fd, text)
+ fs.closeSync(file.fd)
 }
 
 async function loadDraft(context: Context): Promise&lt;string&gt; {
-  let path = context.filesDir + '/draft.txt'
-  if (!fs.accessSync(path)) return ''   // 文件不存在先兜底，别直接读
-  return fs.readTextSync(path)
+ let path = context.filesDir + '/draft.txt'
+ if (!fs.accessSync(path)) return '' // 文件不存在先兜底，别直接读
+ return fs.readTextSync(path)
 }
 ```
 :::
@@ -156,13 +156,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit'
 // 建议在安全控件 SaveButton 的点击回调里触发；
 // createAsset 等接口随版本调整，以官方文档为准
 async function saveToGallery(context: Context, srcPath: string) {
-  let helper = photoAccessHelper.getPhotoAccessHelper(context)
-  let uri = await helper.createAsset(photoAccessHelper.PhotoType.IMAGE, 'jpg')
-  let dest = fs.openSync(uri, fs.OpenMode.WRITE_ONLY)
-  let src = fs.openSync(srcPath, fs.OpenMode.READ_ONLY)
-  fs.copyFileSync(src.fd, dest.fd)
-  fs.closeSync(src.fd)
-  fs.closeSync(dest.fd)
+ let helper = photoAccessHelper.getPhotoAccessHelper(context)
+ let uri = await helper.createAsset(photoAccessHelper.PhotoType.IMAGE, 'jpg')
+ let dest = fs.openSync(uri, fs.OpenMode.WRITE_ONLY)
+ let src = fs.openSync(srcPath, fs.OpenMode.READ_ONLY)
+ fs.copyFileSync(src.fd, dest.fd)
+ fs.closeSync(src.fd)
+ fs.closeSync(dest.fd)
 }
 ```
 :::
@@ -171,7 +171,7 @@ async function saveToGallery(context: Context, srcPath: string) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 几个常见的"想当然"：把几 MB 的图片 Base64 之后塞进 Preferences：整个设置文件的读写都会被拖慢；把下载缓存写进 filesDir 从不清理，应用体积膨胀，用户在系统存储页看到你的应用占了好几个 GB；把"必须存在"的文件放进 cacheDir：某天系统清缓存，功能直接崩。目录的分工不是摆设。
@@ -183,7 +183,7 @@ async function saveToGallery(context: Context, srcPath: string) {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 给你的应用画一张"文件地图"：列出所有会落盘的文件、各自放哪个目录、大概多大、谁负责清理。名单写不出来的应用，多半已经在乱堆文件了。
@@ -208,20 +208,20 @@ async function saveToGallery(context: Context, srcPath: string) {
 import { http } from '@kit.NetworkKit'
 
 async function fetchTodos(): Promise&lt;string&gt; {
-  let req = http.createHttp()
-  try {
-    let resp = await req.request(
-      'https://api.example.com/todos',
-      { method: http.RequestMethod.GET,
-        header: { 'Content-Type': 'application/json' },
-        connectTimeout: 10000, readTimeout: 10000 })
-    if (resp.responseCode === 200) {
-      return resp.result as string
-    }
-    throw new Error('HTTP ' + resp.responseCode)
-  } finally {
-    req.destroy()   // 放在 finally 里，成败都执行
-  }
+ let req = http.createHttp()
+ try {
+ let resp = await req.request(
+ 'https://api.example.com/todos',
+ { method: http.RequestMethod.GET,
+ header: { 'Content-Type': 'application/json' },
+ connectTimeout: 10000, readTimeout: 10000 })
+ if (resp.responseCode === 200) {
+ return resp.result as string
+ }
+ throw new Error('HTTP ' + resp.responseCode)
+ } finally {
+ req.destroy() // 放在 finally 里，成败都执行
+ }
 }
 ```
 :::
@@ -237,22 +237,22 @@ async function fetchTodos(): Promise&lt;string&gt; {
 
 ```
 async function createTodo(title: string): Promise&lt;void&gt; {
-  let req = http.createHttp()
-  try {
-    let resp = await req.request(
-      'https://api.example.com/todos',
-      { method: http.RequestMethod.POST,
-        header: { 'Content-Type': 'application/json' },
-        extraData: JSON.stringify({ title: title, done: false }),
-        connectTimeout: 10000, readTimeout: 10000 })
-    if (resp.responseCode !== 200) {
-      throw new Error('HTTP ' + resp.responseCode)
-    }
-    // 很多接口 HTTP 200 只代表"通信成功"，
-    // 业务成败还要看响应体里的 code 字段
-  } finally {
-    req.destroy()
-  }
+ let req = http.createHttp()
+ try {
+ let resp = await req.request(
+ 'https://api.example.com/todos',
+ { method: http.RequestMethod.POST,
+ header: { 'Content-Type': 'application/json' },
+ extraData: JSON.stringify({ title: title, done: false }),
+ connectTimeout: 10000, readTimeout: 10000 })
+ if (resp.responseCode !== 200) {
+ throw new Error('HTTP ' + resp.responseCode)
+ }
+ // 很多接口 HTTP 200 只代表"通信成功"，
+ // 业务成败还要看响应体里的 code 字段
+ } finally {
+ req.destroy()
+ }
 }
 ```
 :::
@@ -270,20 +270,20 @@ POST 与 GET 的差别就在 body：<code class="inline">extraData</code> 传字
 
 ```
 interface TodoItem {
-  title: string
-  done: boolean
+ title: string
+ done: boolean
 }
 
 function safeParseTodos(text: string): TodoItem[] {
-  try {
-    let obj = JSON.parse(text) as Record&lt;string, object&gt;
-    // 别假设字段一定在：可选链 + 类型判断 + 默认值
-    let list = obj?.['data'] as TodoItem[] ?? []
-    return list.filter(item =&gt; typeof item?.title === 'string')
-  } catch (e) {
-    console.error('parse todos failed')   // 只打结论，不打完整报文
-    return []
-  }
+ try {
+ let obj = JSON.parse(text) as Record&lt;string, object&gt;
+ // 别假设字段一定在：可选链 + 类型判断 + 默认值
+ let list = obj?.['data'] as TodoItem[] ?? []
+ return list.filter(item =&gt; typeof item?.title === 'string')
+ } catch (e) {
+ console.error('parse todos failed') // 只打结论，不打完整报文
+ return []
+ }
 }
 ```
 :::
@@ -298,7 +298,7 @@ function safeParseTodos(text: string): TodoItem[] {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>三大易错点
+三大易错点
 
 {class="mt-1"}
 1\. 忘记声明 INTERNET 权限（报错很隐晦）；2. req.destroy() 不调用导致连接泄漏；3. URL 里的中文参数记得 encodeURIComponent，否则请求会直接失败。
@@ -308,7 +308,7 @@ function safeParseTodos(text: string): TodoItem[] {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 把你项目里所有发请求的函数过一遍四问：超时设了吗？destroy 调了吗？JSON 解析有 try/catch 吗？4xx 会误触发重试吗？四问全绿才算过关。
@@ -327,43 +327,43 @@ function safeParseTodos(text: string): TodoItem[] {
 
 ```
 class ApiError extends Error {
-  constructor(public code: number, msg: string) { super(msg) }
+ constructor(public code: number, msg: string) { super(msg) }
 }
 
 class ApiClient {
-  private baseUrl = 'https://api.example.com'
-  private token: string = ''   // 登录后由外部注入
+ private baseUrl = 'https://api.example.com'
+ private token: string = '' // 登录后由外部注入
 
-  async get(path: string): Promise&lt;object&gt; {
-    return this.request(path, http.RequestMethod.GET)
-  }
+ async get(path: string): Promise&lt;object&gt; {
+ return this.request(path, http.RequestMethod.GET)
+ }
 
-  async post(path: string, body: object): Promise&lt;object&gt; {
-    return this.request(path, http.RequestMethod.POST,
-      JSON.stringify(body))
-  }
+ async post(path: string, body: object): Promise&lt;object&gt; {
+ return this.request(path, http.RequestMethod.POST,
+ JSON.stringify(body))
+ }
 
-  private async request(path: string, method: http.RequestMethod,
-    body?: string): Promise&lt;object&gt; {
-    let req = http.createHttp()
-    try {
-      let resp = await req.request(this.baseUrl + path, {
-        method: method,
-        header: {
-          'Content-Type': 'application/json',
-          ...(this.token ? { 'Authorization': 'Bearer ' + this.token } : {})
-        },
-        extraData: body,
-        connectTimeout: 10000, readTimeout: 10000
-      })
-      if (resp.responseCode !== 200) {
-        throw new ApiError(resp.responseCode, '请求失败：HTTP ' + resp.responseCode)
-      }
-      return JSON.parse(resp.result as string) as object
-    } finally {
-      req.destroy()
-    }
-  }
+ private async request(path: string, method: http.RequestMethod,
+ body?: string): Promise&lt;object&gt; {
+ let req = http.createHttp()
+ try {
+ let resp = await req.request(this.baseUrl + path, {
+ method: method,
+ header: {
+ 'Content-Type': 'application/json',
+ ...(this.token ? { 'Authorization': 'Bearer ' + this.token } : {})
+ },
+ extraData: body,
+ connectTimeout: 10000, readTimeout: 10000
+ })
+ if (resp.responseCode !== 200) {
+ throw new ApiError(resp.responseCode, '请求失败：HTTP ' + resp.responseCode)
+ }
+ return JSON.parse(resp.result as string) as object
+ } finally {
+ req.destroy()
+ }
+ }
 }
 ```
 :::
@@ -385,7 +385,7 @@ token 过期自动刷新也是在这层做：收到"凭证失效"的响应，先
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 封装的边界感：ApiClient 只管"通信"，不懂业务。哪些接口要缓存、哪些要排队重发，让上层的数据仓库（Repository）去决定，通信层保持薄，业务层保持清楚，出了问题才知道去哪找。
@@ -421,34 +421,34 @@ token 过期自动刷新也是在这层做：收到"凭证失效"的响应，先
 import { fileIo as fs } from '@kit.CoreFileKit'
 
 class TwoLevelCache {
-  private mem = new Map&lt;string, string&gt;()
+ private mem = new Map&lt;string, string&gt;()
 
-  async get(context: Context, key: string, ttlMs: number): Promise&lt;string | null&gt; {
-    // 1. 内存层
-    let hit = this.mem.get(key)
-    if (hit) return hit
-    // 2. 磁盘层（文件内容形如 {t: 存入时间, v: 数据}）
-    let path = context.cacheDir + '/' + encodeURIComponent(key)
-    if (fs.accessSync(path)) {
-      try {
-        let obj = JSON.parse(fs.readTextSync(path))
-        if (Date.now() - obj.t &lt; ttlMs) {      // 没过期才可用
-          this.mem.set(key, obj.v as string)
-          return obj.v as string
-        }
-        fs.unlinkSync(path)                     // 过期顺手删
-      } catch (e) { /* 坏文件当没有 */ }
-    }
-    return null                                 // 3. 未命中，交给网络层
-  }
+ async get(context: Context, key: string, ttlMs: number): Promise&lt;string | null&gt; {
+ // 1. 内存层
+ let hit = this.mem.get(key)
+ if (hit) return hit
+ // 2. 磁盘层（文件内容形如 {t: 存入时间, v: 数据}）
+ let path = context.cacheDir + '/' + encodeURIComponent(key)
+ if (fs.accessSync(path)) {
+ try {
+ let obj = JSON.parse(fs.readTextSync(path))
+ if (Date.now() - obj.t &lt; ttlMs) { // 没过期才可用
+ this.mem.set(key, obj.v as string)
+ return obj.v as string
+ }
+ fs.unlinkSync(path) // 过期顺手删
+ } catch (e) { /* 坏文件当没有 */ }
+ }
+ return null // 3. 未命中，交给网络层
+ }
 
-  async put(context: Context, key: string, value: string): Promise&lt;void&gt; {
-    this.mem.set(key, value)
-    let path = context.cacheDir + '/' + encodeURIComponent(key)
-    let f = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC)
-    fs.writeSync(f.fd, JSON.stringify({ t: Date.now(), v: value }))
-    fs.closeSync(f.fd)
-  }
+ async put(context: Context, key: string, value: string): Promise&lt;void&gt; {
+ this.mem.set(key, value)
+ let path = context.cacheDir + '/' + encodeURIComponent(key)
+ let f = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE | fs.OpenMode.TRUNC)
+ fs.writeSync(f.fd, JSON.stringify({ t: Date.now(), v: value }))
+ fs.closeSync(f.fd)
+ }
 }
 ```
 :::
@@ -485,7 +485,7 @@ NetworkKit 里带网络连接管理（connection 模块），能查询当前是�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 离线优先一句话：界面永远有东西看，操作永远有地方记，网络只是搬运工。
@@ -517,7 +517,7 @@ NetworkKit 里带网络连接管理（connection 模块），能查询当前是�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 三条红线：明文 http 上生产；token 进 Preferences 或日志；"信任所有证书"应付了事。任何一条被查出来，轻则上架审核不过，重则用户数据泄露。没有例外。
@@ -590,7 +590,7 @@ NetworkKit 里带网络连接管理（connection 模块），能查询当前是�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 三大平台到这里可以对齐了：安卓 Room/DataStore、iOS SwiftData/UserDefaults、鸿蒙 RelationalStore/Preferences——都是「结构化」与「小设置」两分。
@@ -634,7 +634,7 @@ NetworkKit 里带网络连接管理（connection 模块），能查询当前是�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 综合练习：写一个"迷你离线笔记"，笔记本体存 RelationalStore，草稿文件存 filesDir，配图缓存进 cacheDir，列表页走"缓存优先"，断网可编辑、联网自动补传（补传带唯一 ID 防重复）。做完这一套，本章就真正属于你了。
@@ -655,73 +655,73 @@ NetworkKit 里带网络连接管理（connection 模块），能查询当前是�
 
 ```
 interface Expense {
-  id: number
-  note: string
-  amount: number
-  synced: number   // 0 待同步，1 已同步
+ id: number
+ note: string
+ amount: number
+ synced: number // 0 待同步，1 已同步
 }
 
 class ExpenseRepository {
-  private api = new ApiClient()
-  private rdb: relationalStore.RdbStore | null = null
+ private api = new ApiClient()
+ private rdb: relationalStore.RdbStore | null = null
 
-  async init(context: Context) {
-    this.rdb = await relationalStore.getRdbStore(context, {
-      name: 'expense.db',
-      securityLevel: relationalStore.SecurityLevel.S1
-    })
-    await this.rdb.executeSql(
-      'CREATE TABLE IF NOT EXISTS expense (' +
-      'id INTEGER PRIMARY KEY AUTOINCREMENT, ' +
-      'note TEXT, amount INTEGER, synced INTEGER)')
-  }
+ async init(context: Context) {
+ this.rdb = await relationalStore.getRdbStore(context, {
+ name: 'expense.db',
+ securityLevel: relationalStore.SecurityLevel.S1
+ })
+ await this.rdb.executeSql(
+ 'CREATE TABLE IF NOT EXISTS expense (' +
+ 'id INTEGER PRIMARY KEY AUTOINCREMENT, ' +
+ 'note TEXT, amount INTEGER, synced INTEGER)')
+ }
 
-  // 记一笔：先落库（用户的意志，必须立刻成功），再尝试同步（服务器的意愿，失败可等）
-  async addExpense(note: string, amount: number) {
-    await this.rdb?.executeSql(
-      'INSERT INTO expense (note, amount, synced) VALUES (?, ?, 0)',
-      [note, amount])
-    try {
-      await this.api.post('/expenses', { note: note, amount: amount })
-      await this.rdb?.executeSql(
-        'UPDATE expense SET synced = 1 WHERE synced = 0')
-    } catch (e) {
-      // 断网或超时：记录留在库里，等离线队列补发，不打扰用户
-    }
-  }
+ // 记一笔：先落库（用户的意志，必须立刻成功），再尝试同步（服务器的意愿，失败可等）
+ async addExpense(note: string, amount: number) {
+ await this.rdb?.executeSql(
+ 'INSERT INTO expense (note, amount, synced) VALUES (?, ?, 0)',
+ [note, amount])
+ try {
+ await this.api.post('/expenses', { note: note, amount: amount })
+ await this.rdb?.executeSql(
+ 'UPDATE expense SET synced = 1 WHERE synced = 0')
+ } catch (e) {
+ // 断网或超时：记录留在库里，等离线队列补发，不打扰用户
+ }
+ }
 
-  async listExpenses(): Promise&lt;Expense[]&gt; {
-    let out: Expense[] = []
-    let rs = await this.rdb?.querySql(
-      'SELECT id, note, amount, synced FROM expense ORDER BY id DESC LIMIT 100')
-    while (rs!.goToNextRow()) {
-      out.push({
-        id: rs!.getLong(rs!.getColumnIndex('id')),
-        note: rs!.getString(rs!.getColumnIndex('note')),
-        amount: rs!.getLong(rs!.getColumnIndex('amount')),
-        synced: rs!.getLong(rs!.getColumnIndex('synced'))
-      })
-    }
-    rs?.close()
-    return out
-  }
+ async listExpenses(): Promise&lt;Expense[]&gt; {
+ let out: Expense[] = []
+ let rs = await this.rdb?.querySql(
+ 'SELECT id, note, amount, synced FROM expense ORDER BY id DESC LIMIT 100')
+ while (rs!.goToNextRow()) {
+ out.push({
+ id: rs!.getLong(rs!.getColumnIndex('id')),
+ note: rs!.getString(rs!.getColumnIndex('note')),
+ amount: rs!.getLong(rs!.getColumnIndex('amount')),
+ synced: rs!.getLong(rs!.getColumnIndex('synced'))
+ })
+ }
+ rs?.close()
+ return out
+ }
 
-  // 网络恢复后补发所有待同步记录
-  async flushQueue() {
-    let rs = await this.rdb?.querySql('SELECT id, note, amount FROM expense WHERE synced = 0')
-    while (rs!.goToNextRow()) {
-      let id = rs!.getLong(rs!.getColumnIndex('id'))
-      let note = rs!.getString(rs!.getColumnIndex('note'))
-      let amount = rs!.getLong(rs!.getColumnIndex('amount'))
-      try {
-        await this.api.post('/expenses', { note: note, amount: amount, clientId: id })
-        await this.rdb?.executeSql('UPDATE expense SET synced = 1 WHERE id = ?', [id])
-      } catch (e) {
-        break   // 仍然失败：保留记录，下次再试
-      }
-    }
-    rs?.close()
-  }
+ // 网络恢复后补发所有待同步记录
+ async flushQueue() {
+ let rs = await this.rdb?.querySql('SELECT id, note, amount FROM expense WHERE synced = 0')
+ while (rs!.goToNextRow()) {
+ let id = rs!.getLong(rs!.getColumnIndex('id'))
+ let note = rs!.getString(rs!.getColumnIndex('note'))
+ let amount = rs!.getLong(rs!.getColumnIndex('amount'))
+ try {
+ await this.api.post('/expenses', { note: note, amount: amount, clientId: id })
+ await this.rdb?.executeSql('UPDATE expense SET synced = 1 WHERE id = ?', [id])
+ } catch (e) {
+ break // 仍然失败：保留记录，下次再试
+ }
+ }
+ rs?.close()
+ }
 }
 ```
 :::
@@ -737,12 +737,12 @@ class ExpenseRepository {
 
 ```
 async function todayTotal(rdb: relationalStore.RdbStore, dayStart: number): Promise&lt;number&gt; {
-  let rs = await rdb.querySql(
-    'SELECT SUM(amount) AS t FROM expense WHERE id &gt; ? AND synced IN (0, 1)',
-    [dayStart])
-  let total = rs.getLong(rs.getColumnIndex('t'))
-  rs.close()
-  return total
+ let rs = await rdb.querySql(
+ 'SELECT SUM(amount) AS t FROM expense WHERE id &gt; ? AND synced IN (0, 1)',
+ [dayStart])
+ let total = rs.getLong(rs.getColumnIndex('t'))
+ rs.close()
+ return total
 }
 ```
 :::
@@ -758,44 +758,44 @@ async function todayTotal(rdb: relationalStore.RdbStore, dayStart: number): Prom
 @Entry
 @Component
 struct BookPage {
-  @State list: Expense[] = []
-  @State offline: boolean = false
-  private repo = new ExpenseRepository()
+ @State list: Expense[] = []
+ @State offline: boolean = false
+ private repo = new ExpenseRepository()
 
-  async aboutToAppear() {
-    await this.repo.init(getContext(this) as Context)
-    this.list = await this.repo.listExpenses()   // 秒开：先给本地数据
-    this.refreshFromNet()                        // 再悄悄更新
-  }
+ async aboutToAppear() {
+ await this.repo.init(getContext(this) as Context)
+ this.list = await this.repo.listExpenses() // 秒开：先给本地数据
+ this.refreshFromNet() // 再悄悄更新
+ }
 
-  async refreshFromNet() {
-    try {
-      await this.repo.flushQueue()
-      this.list = await this.repo.listExpenses()
-      this.offline = false
-    } catch (e) {
-      this.offline = true   // 顶部提示条：离线中，展示上次数据
-    }
-  }
+ async refreshFromNet() {
+ try {
+ await this.repo.flushQueue()
+ this.list = await this.repo.listExpenses()
+ this.offline = false
+ } catch (e) {
+ this.offline = true // 顶部提示条：离线中，展示上次数据
+ }
+ }
 
-  build() {
-    Column() {
-      if (this.offline) {
-        Text('当前离线，展示的是上次的数据').fontSize(12)
-      }
-      Button('记一笔 早餐 12 元').onClick(async () => {
-        await this.repo.addExpense('早餐', 1200)   // 单位：分
-        this.list = await this.repo.listExpenses()
-      })
-      List() {
-        ForEach(this.list, (item: Expense) =&gt; {
-          ListItem() {
-            Text(item.note + ' ¥' + (item.amount / 100).toFixed(2))
-          }
-        }, (item: Expense) =&gt; item.id.toString())
-      }
-    }
-  }
+ build() {
+ Column() {
+ if (this.offline) {
+ Text('当前离线，展示的是上次的数据').fontSize(12)
+ }
+ Button('记一笔 早餐 12 元').onClick(async () => {
+ await this.repo.addExpense('早餐', 1200) // 单位：分
+ this.list = await this.repo.listExpenses()
+ })
+ List() {
+ ForEach(this.list, (item: Expense) =&gt; {
+ ListItem() {
+ Text(item.note + ' ¥' + (item.amount / 100).toFixed(2))
+ }
+ }, (item: Expense) =&gt; item.id.toString())
+ }
+ }
+ }
 }
 ```
 :::
@@ -806,7 +806,7 @@ struct BookPage {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 UI 说话，仓库决策，网络跑腿，存储落袋——四层各干各的，数据才有条不紊。
@@ -914,26 +914,26 @@ hilog.info(0x0000, TAG, '%{public}s cost=%{public}d ms', path, Date.now() - star
 ```
 // 建表语句里没有的索引，用 IF NOT EXISTS 单独建（放在迁移里执行）
 await rdb?.executeSql(
-  'CREATE INDEX IF NOT EXISTS idx_expense_synced ON expense (synced)')
+ 'CREATE INDEX IF NOT EXISTS idx_expense_synced ON expense (synced)')
 await rdb?.executeSql(
-  'CREATE INDEX IF NOT EXISTS idx_expense_note ON expense (note)')
+ 'CREATE INDEX IF NOT EXISTS idx_expense_note ON expense (note)')
 
 // 分页查询：每页只取一页的量，翻页用 OFFSET
 async function pageExpenses(page: number, size: number): Promise&lt;Expense[]&gt; {
-  let rs = await rdb?.querySql(
-    'SELECT id, note, amount FROM expense ORDER BY id DESC LIMIT ? OFFSET ?',
-    [size, page * size])
-  let out: Expense[] = []
-  while (rs!.goToNextRow()) {
-    out.push({
-      id: rs!.getLong(rs!.getColumnIndex('id')),
-      note: rs!.getString(rs!.getColumnIndex('note')),
-      amount: rs!.getLong(rs!.getColumnIndex('amount')),
-      synced: 1
-    })
-  }
-  rs?.close()
-  return out
+ let rs = await rdb?.querySql(
+ 'SELECT id, note, amount FROM expense ORDER BY id DESC LIMIT ? OFFSET ?',
+ [size, page * size])
+ let out: Expense[] = []
+ while (rs!.goToNextRow()) {
+ out.push({
+ id: rs!.getLong(rs!.getColumnIndex('id')),
+ note: rs!.getString(rs!.getColumnIndex('note')),
+ amount: rs!.getLong(rs!.getColumnIndex('amount')),
+ synced: 1
+ })
+ }
+ rs?.close()
+ return out
 }
 ```
 :::
@@ -951,17 +951,17 @@ ArkTS 是单线程模型，但数据库的异步写入可以并发发起，十�
 
 ```
 async function importExpenses(batch: Expense[]) {
-  try {
-    this.rdb?.beginTransaction()
-    for (let e of batch) {
-      await this.rdb?.executeSql(
-        'INSERT INTO expense (note, amount, synced) VALUES (?, ?, 0)',
-        [e.note, e.amount])
-    }
-    this.rdb?.commit()      // 全部成功才提交
-  } catch (err) {
-    this.rdb?.rollBack()    // 任何一条失败，整体回滚，不留半截数据
-  }
+ try {
+ this.rdb?.beginTransaction()
+ for (let e of batch) {
+ await this.rdb?.executeSql(
+ 'INSERT INTO expense (note, amount, synced) VALUES (?, ?, 0)',
+ [e.note, e.amount])
+ }
+ this.rdb?.commit() // 全部成功才提交
+ } catch (err) {
+ this.rdb?.rollBack() // 任何一条失败，整体回滚，不留半截数据
+ }
 }
 ```
 :::
@@ -985,17 +985,17 @@ async function importExpenses(batch: Expense[]) {
 const DB_VERSION = 2
 
 async function migrateIfNeeded(context: Context) {
-  let meta = await preferences.getPreferences(context, { name: 'db_meta' })
-  let current = (await meta.get('version', 1)) as number
-  if (current &gt;= DB_VERSION) return
+ let meta = await preferences.getPreferences(context, { name: 'db_meta' })
+ let current = (await meta.get('version', 1)) as number
+ if (current &gt;= DB_VERSION) return
 
-  if (current &lt; 2) {   // v1 -&gt; v2：新增"备注"列
-    await rdb?.executeSql('ALTER TABLE expense ADD COLUMN remark TEXT')
-  }
-  // if (current &lt; 3) { ... 未来的 v2 -&gt; v3，照这个格式接着写 ... }
+ if (current &lt; 2) { // v1 -&gt; v2：新增"备注"列
+ await rdb?.executeSql('ALTER TABLE expense ADD COLUMN remark TEXT')
+ }
+ // if (current &lt; 3) { ... 未来的 v2 -&gt; v3，照这个格式接着写 ... }
 
-  await meta.put('version', DB_VERSION)
-  await meta.flush()
+ await meta.put('version', DB_VERSION)
+ await meta.flush()
 }
 ```
 :::
@@ -1004,7 +1004,7 @@ async function migrateIfNeeded(context: Context) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 动手迁移前先备份：把要动的表导出一份临时文件（放 tempDir），迁移成功再删。迁移代码本身也会写错，有备份，错了还能重来；没备份，错了就是事故。
@@ -1025,18 +1025,18 @@ async function migrateIfNeeded(context: Context) {
 
 ```
 async function exportAll(): Promise&lt;string&gt; {
-  let list = await repo.listExpenses()
-  return JSON.stringify({ app: 'expense', version: 1, items: list })
+ let list = await repo.listExpenses()
+ return JSON.stringify({ app: 'expense', version: 1, items: list })
 }
 
 async function importAll(text: string): Promise&lt;number&gt; {
-  let obj = JSON.parse(text) as Record&lt;string, object&gt;
-  // 校验：来源对不对、结构全不全，不对就拒绝
-  if (obj?.['app'] !== 'expense') throw new Error('不是本应用的备份文件')
-  let items = obj?.['items'] as Expense[] ?? []
-  if (items.length === 0) throw new Error('备份里没有数据')
-  await importExpenses(items)   // 上一节的事务批量插入
-  return items.length
+ let obj = JSON.parse(text) as Record&lt;string, object&gt;
+ // 校验：来源对不对、结构全不全，不对就拒绝
+ if (obj?.['app'] !== 'expense') throw new Error('不是本应用的备份文件')
+ let items = obj?.['items'] as Expense[] ?? []
+ if (items.length === 0) throw new Error('备份里没有数据')
+ await importExpenses(items) // 上一节的事务批量插入
+ return items.length
 }
 ```
 :::
@@ -1066,7 +1066,7 @@ async function importAll(text: string): Promise&lt;number&gt; {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 把清单打印出来贴在工位上（或存成项目的 issue 模板）。每次发版前逐条打勾，打不完不发版，三个月后你会回来谢这份清单。
@@ -1089,7 +1089,7 @@ async function importAll(text: string): Promise&lt;number&gt; {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 数据的事没有玄学：落盘有凭据（flush）、传输有兜底（超时）、累积有清理（过期）、升级有阶梯（迁移）：四道门都关好，数据才真正属于你。
@@ -1171,7 +1171,7 @@ async function importAll(text: string): Promise&lt;number&gt; {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - Preferences 存小设置：全异步 API + 记得 flush() + 不支持对象
 - RelationalStore = 内置 SQLite：结构化数据首选，占位符防注入

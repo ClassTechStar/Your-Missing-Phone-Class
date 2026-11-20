@@ -56,7 +56,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 别一上来就恢复出厂。九成问题停在前三层，重装的代价却是几个小时和可能丢掉的数据。
@@ -173,14 +173,14 @@ App卡死弹出的"无响应，要等待还是关闭"（安卓）或转圈加载
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">现象</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">先做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">多半是谁的锅</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插上完全没反应</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换头换线交叉测试；清理充电口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">线或头坏了，其次是口内积灰</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时充时断，得摆个角度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清理充电口；换线验证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电口触点或线材老化</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能充但特别慢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">检查是不是小功率头；摸摸机身温度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">功率不匹配，或高温降速保护</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充到七八成就不动了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳散热；停掉边充边玩</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高温或电池保护策略，多数不是故障</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无线充没反应</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳再试；对准充电板中心</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壳太厚、金属件干扰或位置偏了</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">现象</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">先做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">多半是谁的锅</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插上完全没反应</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换头换线交叉测试；清理充电口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">线或头坏了，其次是口内积灰</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">时充时断，得摆个角度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清理充电口；换线验证</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充电口触点或线材老化</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能充但特别慢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">检查是不是小功率头；摸摸机身温度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">功率不匹配，或高温降速保护</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充到七八成就不动了</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳散热；停掉边充边玩</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高温或电池保护策略，多数不是故障</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无线充没反应</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳再试；对准充电板中心</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">壳太厚、金属件干扰或位置偏了</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -245,19 +245,19 @@ Wi-Fi图标亮着、微信却转圈，八成是DNS或者认证的问题。先试
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">故障现象</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一分钟做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">详解在哪</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">黑屏不开机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插电等半小时，再强制重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第六节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卡顿掉帧</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查存储余量与电池排行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第一节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发热明显</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳停充，查耗电排行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一节与第九节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">掉电异常快</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看电池排行与信号状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第九节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储爆满</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信与相册先清</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一节与第九节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络断连</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">飞行模式、忘记重连、重启路由</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第四节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙异常</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">关蓝牙重开、删除配对重配</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第十节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相机打不开</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查权限、重启、查占用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第十节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">触屏失灵</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">撕膜、擦手、重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第五节</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">声音异常</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查静音与蓝牙占用，清麦克风孔</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第七节</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">故障现象</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">第一分钟做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">详解在哪</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">黑屏不开机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">插电等半小时，再强制重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第六节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卡顿掉帧</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查存储余量与电池排行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第一节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发热明显</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">摘壳停充，查耗电排行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一节与第九节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">掉电异常快</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看电池排行与信号状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第九节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存储爆满</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信与相册先清</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第一节与第九节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络断连</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">飞行模式、忘记重连、重启路由</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第四节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蓝牙异常</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">关蓝牙重开、删除配对重配</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第十节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相机打不开</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查权限、重启、查占用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第十节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">触屏失灵</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">撕膜、擦手、重启</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第五节</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">声音异常</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">查静音与蓝牙占用，清麦克风孔</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本章第七节</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -581,7 +581,7 @@ iOS 的路径最统一：应用占用在"设置 → 通用 → iPhone 储存空�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>万能第一招：重启手机
+万能第一招：重启手机
 
 {class="mt-1"}
 不管你遇到什么问题：卡顿、闪退、连不上网、声音异常——先重启一下手机。这句话听起来像是敷衍，但以我自己的经验，至少有六成的小毛病重启之后就好了。手机跟电脑一样。跑久了内存里会积累各种乱七八糟的东西，重启就是清空重来。所以，下次手机出问题，先别急着搜"怎么办"，重启完了再看看。顺手再看一眼有没有待装的系统更新，有些诡异故障，官方一个补丁就解决了。
@@ -589,7 +589,7 @@ iOS 的路径最统一：应用占用在"设置 → 通用 → iPhone 储存空�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就记：这些救命操作要烂熟于心
+现在就记：这些救命操作要烂熟于心
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>强制重启</strong>：全面屏iPhone按音量加 → 音量减 → 长按电源键到出现Logo。安卓长按电源键10-15秒直到震动。
@@ -883,7 +883,7 @@ Fastboot 是比 Recovery 更底层的接口，主要给刷机、解锁BL这类�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 排查心法从便宜到贵：先重启、查更新，再做单一变量排查，备份后重置永远在最后

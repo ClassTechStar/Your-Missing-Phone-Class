@@ -74,7 +74,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"上工第一天"檢查清單
+"上工第一天"檢查清單
 
 {class="mt-1 text-sm"}
 拿到新手機或大版本更新後，建議花 10 分鐘過一遍這些設定：<br> ① 鎖屏密碼 + 生物識別；② 通知分組 + 關閉營銷推送；③ 字型大小 / 重新整理率 / 深色模式<br> ④ 預設輸入法 / 瀏覽器 / 郵件；⑤ 緊急聯絡人 / 醫療卡；⑥ 備份設定
@@ -90,7 +90,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS 旁白（VoiceOver）
+iOS 旁白（VoiceOver）
 
 {class="mt-1"}
 <strong>開啟路徑</strong>：[設定] > [輔助功能] > [旁白]，開啟開關。也可三擊側邊鍵（或主螢幕鍵）快速開關。
@@ -111,7 +111,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>安卓 TalkBack
+安卓 TalkBack
 
 {class="mt-1"}
 <strong>開啟路徑</strong>：[設定] > [輔助功能] > [TalkBack]，開啟開關。或長按音量上下鍵 3 秒快速啟用（部分品牌支援）。
@@ -155,7 +155,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>各系統 AI 影象描述支援情況
+各系統 AI 影象描述支援情況
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>：在 [設定] > [輔助功能] > [旁白] > [語音描述] 中開啟"影象描述"。系統會呼叫<strong>本地 AI 模型</strong>自動生成圖片文字描述（需 iPhone 12 及以上）。
@@ -165,7 +165,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>使用場景
+使用場景
 
 {class="mt-1"}
 試著對著一張街拍照片問"這張圖裡有幾個人？他們在做什麼？"，或者開啟外賣 App，讓 AI 讀出選單圖裡的菜品名<strong>這是真正的"科技讓生活更平等"</strong>。
@@ -178,7 +178,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>實時字幕開啟與最佳化
+實時字幕開啟與最佳化
 
 {class="mt-1"}
 <strong>iOS</strong>：[設定] > [輔助功能] > [實時字幕]，開啟開關。系統會檢測裝置所有音訊（通話、影片、播客、FaceTime、語音備忘錄），自動顯示字幕在螢幕上方。
@@ -203,7 +203,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>通話實時轉譯（TTY / RTT）
+通話實時轉譯（TTY / RTT）
 
 {class="mt-1"}
 <strong>iOS</strong>：[設定] > [輔助功能] > [RTT/TTY]，開啟後通話時螢幕上會顯示鍵盤，對方的語音會被實時打成文字，<strong>你打的字也會被念出來</strong>給對方聽。
@@ -231,7 +231,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>蘋果的無障礙設計哲學
+蘋果的無障礙設計哲學
 
 {class="mt-1"}
 蘋果在無障礙領域投入巨大，每年都會更新和新增輔助功能。蘋果官網有專門的無障礙頁面，詳細介紹各項功能的使用方法。iOS 的無障礙功能通常比安卓更完善、體驗更流暢，這也是很多殘障使用者選擇蘋果的重要原因。
@@ -239,7 +239,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>花30秒體驗一下
+花30秒體驗一下
 
 {class="mt-1"}
 找一段空閒時間，做以下體驗：

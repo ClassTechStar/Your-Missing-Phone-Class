@@ -45,41 +45,41 @@ Untuk lebih intuitif memahami pro dan kontra BL lock, kita pakai comparison tabl
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fungsi Inti</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Status Locked (Default)</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Status Setelah Unlock</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Keamanan Sistem</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mencegah flash sistem non-resmi yang tidak ditandatangani, melindungi integritas sistem dan keamanan low-level<br><span class="text-emerald-600 dark:text-emerald-400">✅ Keamanan tinggi: Hanya load image resmi yang ditandatangani, efektif menahan modifikasi firmware malicious</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Keamanan turun: Mengizinkan flash ROM pihak ketiga, mekanisme verifikasi integritas sistem gagal, malware jika mendapat permission Root bisa modifikasi sistem mendalam</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Stabilitas Sistem</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memastikan ponsel menjalankan sistem resmi yang sudah diuji dan dioptimalkan vendor, menjamin stabil dan lancar<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stabil: Memakai firmware resmi, fungsi lengkap, OTA upgrade dapat diandalkan</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risiko meningkat: ROM pihak ketiga mungkin ada masalah kompatibilitas, mungkin menyebabkan sistem crash, brick, fungsi hardware abnormal (seperti kamera, fast charge), OTA update mungkin gagal</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Hak Garansi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Vendor via lock BL menyediakan sistem resmi yang stabil, untuk memberikan layanan garansi<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garansi berlaku: Menikmati layanan garansi gratis resmi (bukan kerusakan buatan manusia)</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garansi batal: Mayoritas vendor menganggap unlock BL sebagai perilaku aktif melepaskan garansi, bahkan jika re-lock, mungkin terdeteksi riwayat unlock dan ditolak garansi</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Keamanan Data</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Proses unlock biasanya paksa clear data, mencegah data lama dimanfaatkan secara malicious di environment sistem baru<br><span class="text-emerald-600 dark:text-emerald-400">✅ Data aman: Dalam penggunaan harian, BL lock membatasi kemampuan program malicious memodifikasi system partition</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risiko data: Saat unlock akan paksa clear semua data user; jika setelah unlock tidak dienkripsi dengan benar, penyimpanan data mungkin tidak aman; setelah hilang lebih mudah di-flash untuk ekstraksi data</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Batasan Fungsi</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memastikan fungsi yang bergantung pada environment aman (seperti pembayaran, App bank) berjalan normal<br><span class="text-emerald-600 dark:text-emerald-400">✅ Fungsi lengkap: Semua fungsi resmi bisa normal dipakai</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Fungsi terbatas: Sebagian app security-sensitive (seperti Google Pay, App bank) mungkin karena mendeteksi status BL unlock menolak running; layanan DRM mungkin degrade, mempengaruhi playback video HD</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Fungsi Inti</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Status Locked (Default)</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Status Setelah Unlock</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Keamanan Sistem</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mencegah flash sistem non-resmi yang tidak ditandatangani, melindungi integritas sistem dan keamanan low-level<br><span class="text-emerald-600 dark:text-emerald-400">✅ Keamanan tinggi: Hanya load image resmi yang ditandatangani, efektif menahan modifikasi firmware malicious</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Keamanan turun: Mengizinkan flash ROM pihak ketiga, mekanisme verifikasi integritas sistem gagal, malware jika mendapat permission Root bisa modifikasi sistem mendalam</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Stabilitas Sistem</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memastikan ponsel menjalankan sistem resmi yang sudah diuji dan dioptimalkan vendor, menjamin stabil dan lancar<br><span class="text-emerald-600 dark:text-emerald-400">✅ Stabil: Memakai firmware resmi, fungsi lengkap, OTA upgrade dapat diandalkan</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risiko meningkat: ROM pihak ketiga mungkin ada masalah kompatibilitas, mungkin menyebabkan sistem crash, brick, fungsi hardware abnormal (seperti kamera, fast charge), OTA update mungkin gagal</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Hak Garansi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Vendor via lock BL menyediakan sistem resmi yang stabil, untuk memberikan layanan garansi<br><span class="text-emerald-600 dark:text-emerald-400">✅ Garansi berlaku: Menikmati layanan garansi gratis resmi (bukan kerusakan buatan manusia)</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Garansi batal: Mayoritas vendor menganggap unlock BL sebagai perilaku aktif melepaskan garansi, bahkan jika re-lock, mungkin terdeteksi riwayat unlock dan ditolak garansi</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Keamanan Data</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Proses unlock biasanya paksa clear data, mencegah data lama dimanfaatkan secara malicious di environment sistem baru<br><span class="text-emerald-600 dark:text-emerald-400">✅ Data aman: Dalam penggunaan harian, BL lock membatasi kemampuan program malicious memodifikasi system partition</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Risiko data: Saat unlock akan paksa clear semua data user; jika setelah unlock tidak dienkripsi dengan benar, penyimpanan data mungkin tidak aman; setelah hilang lebih mudah di-flash untuk ekstraksi data</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Batasan Fungsi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memastikan fungsi yang bergantung pada environment aman (seperti pembayaran, App bank) berjalan normal<br><span class="text-emerald-600 dark:text-emerald-400">✅ Fungsi lengkap: Semua fungsi resmi bisa normal dipakai</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ Fungsi terbatas: Sebagian app security-sensitive (seperti Google Pay, App bank) mungkin karena mendeteksi status BL unlock menolak running; layanan DRM mungkin degrade, mempengaruhi playback video HD</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ Berbeda dengan vendor Android lain, mekanisme BL unlock ponsel Samsung punya des
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Pikirkan Masak-Masak Sebelum Bertindak
+Pikirkan Masak-Masak Sebelum Bertindak
 
 {class="mt-1"}
 Fuse Knox Samsung adalah <strong>irreversible</strong>, sekali trigger tidak bisa kembali ke status pabrik. Jika Anda hanya ingin memakai beberapa fungsi yang aslinya butuh Root, disarankan pertama cek apakah ada alternatif tanpa Root.
@@ -123,7 +123,7 @@ Fuse Knox Samsung adalah <strong>irreversible</strong>, sekali trigger tidak bis
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Peringatan Penting
+Peringatan Penting
 
 {class="mt-1"}
 Flashing memiliki risiko, operasi harus hati-hati. Dapat menyebabkan:
@@ -140,7 +140,7 @@ Sebelum flashing, wajib melakukan backup lengkap, baca tutorial dengan teliti, k
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Sumber Daya Rekomendasi
+Sumber Daya Rekomendasi
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>: Komunitas developer Android terbesar di dunia, memiliki tutorial flashing dan sumber daya ROM yang kaya.
@@ -152,7 +152,7 @@ Sebelum flashing, wajib melakukan backup lengkap, baca tutorial dengan teliti, k
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1: Setelah unlock BL lock bisa recovery?
+Q1: Setelah unlock BL lock bisa recovery?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Bisa re-lock. Biasanya perlu flash official complete flash package, dan pakai flashing script tertentu (seperti Xiaomi <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>) bisa re-lock. Tapi perhatikan, setelah re-lock, beberapa fuse keamanan yang di-trigger karena unlock (seperti Knox Samsung) mungkin tidak bisa di-reverse.
@@ -160,7 +160,7 @@ Sebelum flashing, wajib melakukan backup lengkap, baca tutorial dengan teliti, k
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2: Setelah unlock bagaimana Root?
+Q2: Setelah unlock bagaimana Root?
 
 {class="mb-2 pl-6"}
 <strong>A:</strong> Unlock BL lock hanya langkah pertama. Root biasanya butuh:

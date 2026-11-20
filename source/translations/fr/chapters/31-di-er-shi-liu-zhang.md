@@ -80,7 +80,7 @@ VII. Aperçu du chapitre : retenez ces technologies de pointe en une phrase
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez : établissez une « liste de besoins technologiques » pour votre prochain smartphone
+Essayez : établissez une « liste de besoins technologiques » pour votre prochain smartphone
 
 {class="mt-1"}
 Prenez une feuille de papier et classez vos besoins en IA, satellite, écran pliable, Wi-Fi 7, charge rapide et capacité de batterie en trois niveaux : « indispensable / bonus / inutile ». Ainsi, lors de votre prochaine visite en magasin, vous pourrez rapidement distinguer les vrais besoins des arguments de vente. Par exemple :
@@ -93,7 +93,7 @@ Prenez une feuille de papier et classez vos besoins en IA, satellite, écran pli
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Résumé du chapitre
+Résumé du chapitre
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Trois critères d'évaluation du smartphone IA : grand modèle côté appareil, NPU TOPS, scénarios AI Agent

@@ -23,7 +23,7 @@ Es gibt keine Standardantwort, aber altersbezogene Richtwerte. Zu frueh: Der pra
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Das Prinzip »So viel wie noetig«
+Das Prinzip »So viel wie noetig«
 
 {class="mt-1"}
 Das erste Handy des Kindes muss kein Flaggschiff sein. Ueberschuessige Prozessorleistung wird oft fuer Spiele genutzt. Ein Mittelklasse-Geraet mit grossem Akku und augenfreundlichem Display ist leichter zu kontrollieren. Budget-Richtwert: 1500–2500 Yuan genuegen fuer die meisten Schueler.
@@ -60,27 +60,27 @@ Bevor das Geraet dem Kind uebergeben wird, ist die erste Massnahme nicht das Ein
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Funktion</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Bildschirmzeit</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Marken-Lösung</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App-Limits</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt, nach Kategorie</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt, nach App</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sperrzeit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt (Marken-Lösungen variieren)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Inhaltsfilter</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auf Systemebene, gründlicher</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Verändert je nach Marke, uneinheitlich</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fernverwaltung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Familienfreigabe</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Marken-Cloud</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App-Installationsfreigabe</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Elterliche Freigabe erforderlich</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link unterstützt</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Funktion</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Bildschirmzeit</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / Marken-Lösung</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App-Limits</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt, nach Kategorie</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt, nach App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sperrzeit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Unterstützt (Marken-Lösungen variieren)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Inhaltsfilter</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Auf Systemebene, gründlicher</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Verändert je nach Marke, uneinheitlich</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fernverwaltung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Familienfreigabe</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Marken-Cloud</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App-Installationsfreigabe</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Elterliche Freigabe erforderlich</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link unterstützt</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Elternkontrolle ist keine "einmalige Lösung"
+Elternkontrolle ist keine "einmalige Lösung"
 
 {class="mt-1"}
 Kinder finden immer Wege, sie zu umgehen (im Internet gibt es massenhaft Anleitungen zum Knacken der Bildschirmzeit). Technik ist nur die Grundlinie; die echte Verteidigungslinie sind Kommunikation und Vertrauen zwischen Eltern und Kind. Empfehlung: Den Nutzungsbericht jeden Monat zusammen mit dem Kind besprechen, nicht nur einseitig überwachen.
@@ -96,7 +96,7 @@ Alle großen Content-Plattformen haben einen integrierten "Jugendmodus", der nac
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Bei der Echt Namens-Verifizierung nicht den Ausweis der Eltern "leihen"
+Bei der Echt Namens-Verifizierung nicht den Ausweis der Eltern "leihen"
 
 {class="mt-1"}
 Viele Kinder nutzen den Ausweis der Eltern, um Spielekonten zu registrieren und die Anti-Sucht-Sperre zu umgehen. Das verstößt gegen die Nutzungsbedingungen und nimmt dem Kind den Schutz. Eltern sollten ihre Zahlungs-PINs und Ausweisdaten sicher aufbewahren und nicht aus Bequemlichkeit "leihen".
@@ -113,7 +113,7 @@ Technik blockt 90 % der Risiken, die restlichen 10 % hängen vom Urteilsverm
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praxis: Zusammen mit dem Kind einen "Handy-Nutzungsvertrag" unterzeichnen
+Praxis: Zusammen mit dem Kind einen "Handy-Nutzungsvertrag" unterzeichnen
 
 {class="mt-1"}
 Regeln aufschreiben, beide unterschreiben und gut sichtbar aufhängen – das wirkt besser als mündliche Absprachen. Empfohlene Inhalte:
@@ -137,7 +137,7 @@ Augen, Nacken und Schlaf von Kindern sind in der Entwicklung – der Handy-Schad
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>Eltern sind die beste "Firewall"
+Eltern sind die beste "Firewall"
 
 {class="mt-1"}
 Studien zeigen: Die Handy-Nutzungsdauer der Eltern korreliert stark mit der der Kinder. Wenn man vom Kind verlangt, nicht aufs Handy zu schauen, selbst aber bis spät in die Nacht Kurzvideos scrollt, werden die Regeln wirkungslos. Um das Kind zu ändern, zuerst das eigene Handy weglegen.
@@ -153,7 +153,7 @@ Dieser Abschnitt wird oft übersehen, ist aber wichtig. Die digitalen Vermögens
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Die andere Seite des "digitalen Kinder-Erbes"
+Die andere Seite des "digitalen Kinder-Erbes"
 
 {class="mt-1"}
 Kinder werden von Geburt an "aufgezeichnet" – die von Eltern geposteten Wachstumsfotos, Videos der Kita, Gesundheitsdaten der Smartwatch. Diese Daten lassen sich nach dem Upload kaum vollständig löschen. Vor dem Posten überlegen: Wird das Kind in zehn Jahren dieses Foto peinlich finden? Die digitale Persönlichkeit des Kindes respektieren – beginnen Sie damit, das "Kinder-Posting" zurückzuschrauben.
@@ -161,7 +161,7 @@ Kinder werden von Geburt an "aufgezeichnet" – die von Eltern geposteten Wachst
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Kapitelzusammenfassung
+Kapitelzusammenfassung
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Es gibt keine Standardantwort für das Alter der Handyvergabe, aber 3–6 Jahre möglichst gar nicht; vor 13 Jahren mit Kinderuhr oder Feature Phone überbrücken

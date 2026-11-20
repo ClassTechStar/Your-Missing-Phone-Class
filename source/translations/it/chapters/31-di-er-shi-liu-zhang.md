@@ -80,7 +80,7 @@ L'autonomia dei telefoni è stata criticata per anni come "una carica al giorno"
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: prepara una "lista dei requisiti tecnologici" per il tuo prossimo telefono
+Prova: prepara una "lista dei requisiti tecnologici" per il tuo prossimo telefono
 
 {class="mt-1"}
 Prendi un foglio e, secondo tre fasce "indispensabile / bonus / non serve", elenca le tue esigenze riguardo IA, satellite, schermo pieghevole, Wi-Fi 7, ricarica rapida, capacità batteria. Così, la prossima volta in negozio, potrai valutare rapidamente se i "punti di forza" consigliati dal commesso sono vere necessità o prodotti spinti. Ad esempio:
@@ -93,7 +93,7 @@ Prendi un foglio e, secondo tre fasce "indispensabile / bonus / non serve", elen
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Riepilogo del capitolo
+Riepilogo del capitolo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tre criteri per i telefoni IA: grandi modelli on-device, NPU TOPS, scenari AI Agent

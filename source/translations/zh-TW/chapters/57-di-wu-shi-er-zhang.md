@@ -77,12 +77,12 @@ Intent（意圖）是元件之間通訊的"車票"。你想從一個頁面跳到
 ```
 // 方式一：顯式 Intent——明確指定去哪個頁面
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "張三")     // 車上捎帶"行李"（資料）
+intent.putExtra("name", "張三") // 車上捎帶"行李"（資料）
 startActivity(intent)
 
 // 方式二：隱式 Intent——只說要幹什麼，系統找誰幹
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // 系統會開啟瀏覽器/或讓你選
+startActivity(web) // 系統會開啟瀏覽器/或讓你選
 ```
 :::
 
@@ -101,16 +101,16 @@ startActivity(web)   // 系統會開啟瀏覽器/或讓你選
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "未知")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "未知")
+ }
 }
 
 // 在頁面裡跳轉：
-navController.navigate("detail/張三")     // 帶引數
-navController.popBackStack()              // 返回上一頁
+navController.navigate("detail/張三") // 帶引數
+navController.popBackStack() // 返回上一頁
 ```
 :::
 

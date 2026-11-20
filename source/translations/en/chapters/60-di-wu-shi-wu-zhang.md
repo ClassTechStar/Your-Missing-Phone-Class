@@ -40,21 +40,21 @@ First define your "data model" based on the JSON the API returns; ignore any fie
 ```
 // JSON: {"weather":[{"description":"Sunny"}],"main":{"temp":26.5,"humidity":40},"name":"Beijing"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "en"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "en"
+ ): WeatherResponse
 }
 ```
 :::
@@ -72,28 +72,28 @@ The soul of a connected app is "state management." Slow network, no connection, 
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // spinner showing
-    data class Success(val data: WeatherResponse) : UiState()  // success
-    data class Error(val message: String) : UiState()          // failure
+ object Loading : UiState() // spinner showing
+ data class Success(val data: WeatherResponse) : UiState() // success
+ data class Error(val message: String) : UiState() // failure
 }
 
 // In the ViewModel:
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("Can't find that city — try another name?")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("Can't find that city — try another name?")
+ }
+ }
 }
 
 // In the UI:
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // spinner
-    is UiState.Success -&gt; WeatherContent(s.data)        // show
-    is UiState.Error -&gt; Text(s.message)                 // error
+ is UiState.Loading -&gt; CircularProgressIndicator() // spinner
+ is UiState.Success -&gt; WeatherContent(s.data) // show
+ is UiState.Error -&gt; Text(s.message) // error
 }
 ```
 :::
@@ -112,28 +112,28 @@ With the states in place, the UI looks like this (key excerpts):
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "Unknown",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 Humidity ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ Feels like ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "Unknown",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 Humidity ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ Feels like ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::

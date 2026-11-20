@@ -18,7 +18,7 @@ Bayangkan internet sebagai sebuah bandar.<strong>"Jalan"</strong> ialah laluan a
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>"Kenderaan"
+"Kenderaan"
 
 {class="mt-1"}
 ialah data yang bergerak di jalan. Wi-Fi dan data mudah alih adalah dua jalan berbeza, tetapi data (kenderaan) itu sendiri adalah sama.<strong>1. Perbezaan Asas: Saluran Tempatan vs Lebuhraya Jarak Jauh</strong> Wi-Fi pada asasnya adalah <strong>teknologi rangkaian kawasan tempatan</strong>, ia seperti jalan tanpa wayar yang dipasang di bawah bangunan anda, bertanggungjawab menghantar data dari penghala ke telefon. Tetapi jika bil lebar jalur lebar belum dibayar atau kabel gentian optik putus, jalan masih ada, tetapi "lebuhraya" di luar telah terputus, semestinya tidak ke mana-mana. Manakala data mudah alih (data mudah alih) dihantar melalui stesen pangkalan 4G/5G pengendali, bersamaan dengan memandu terus ke laluan lebuhraya pengendali, selagi ada isyarat, ia boleh terus menyambung ke internet.
@@ -36,7 +36,7 @@ Dari segi keselamatan, data mudah alih biasanya lebih selamat daripada Wi-Fi awa
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>laman web mana yang anda layari
+laman web mana yang anda layari
 
 {class="mt-1"}
 (nama domain), dan
@@ -49,7 +49,7 @@ Dari segi keselamatan, data mudah alih biasanya lebih selamat daripada Wi-Fi awa
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
+atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.
 
 {class="mt-1"}
 muncul di sebelah isyarat pengendali atau isyarat WLAN dalam bar status, ia bermaksud sedang menggunakan kaedah berkenaan untuk melayari internet; jika kedua-duanya menyala serentak, ini bermakna pecutan rangkaian berkesan, telefon sedang menggunakan kedua-dua saluran secara serentak.
@@ -81,7 +81,7 @@ Satu, Rangkaian Mudah Alih (4G/5G) dan Data Mudah Alih <strong>Rangkaian mudah a
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>Menyambung Wi-Fi:
+Menyambung Wi-Fi:
 
 {class="mt-1"}
 Pergi ke [Tetapan] &gt; [WLAN] pilih rangkaian dan masukkan kata laluan. Kini banyak telefon menyokong penyambungan melalui imbasan kod, lebih mudah.
@@ -98,53 +98,53 @@ Standard Wi-Fi ditetapkan oleh IEEE, setiap generasi mempunyai peningkatan yang 
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standard</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protokol</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur Frekuensi</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kadar Maksimum</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ciri</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Standard lama, liputan masih boleh</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Paling meluas digunakan, kelajuan memadai</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Prestasi berbilang peranti kuat, kependaman rendah</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menambah jalur 6GHz, tidak sesak</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemindahan kelajuan ultra, pengagregatan berbilang pautan</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Standard</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protokol</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jalur Frekuensi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kadar Maksimum</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ciri</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Standard lama, liputan masih boleh</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Paling meluas digunakan, kelajuan memadai</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Prestasi berbilang peranti kuat, kependaman rendah</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menambah jalur 6GHz, tidak sesak</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemindahan kelajuan ultra, pengagregatan berbilang pautan</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -244,7 +244,7 @@ Enam, Hotspot Peribadi: Jadikan Telefon sebagai Penghala Wi-Fi
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Bab 4: Pasang dan Urus Aplikasi — "Pakej Kemahiran" Telefon
+Bab 4: Pasang dan Urus Aplikasi — "Pakej Kemahiran" Telefon
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Aplikasi menjadikan telefon mampu melakukan apa sahaja, tetapi perlu diurus dengan baik. Sama seperti anda menyusun tempat duduk dan memperuntukkan kebenaran untuk pekerja baharu, memasang App juga memerlukan satu set proses piawaian

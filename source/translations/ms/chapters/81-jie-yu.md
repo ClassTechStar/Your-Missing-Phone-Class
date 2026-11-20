@@ -22,7 +22,7 @@ Teknologi berubah, tetapi keperluan manusia tidak berubah - kita perlukan rasa s
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Latihan terakhir
+Latihan terakhir
 
 {class="mt-1"}
 Tutup buku ini, ambil telefon anda, buat satu perkara:<strong>Guna 30 saat fikir, telefon anda ada tiga perkara apa yang "kehilangan akan betul-betul sakit hati"?</strong> Kemudian, pastikan ia telah disandarkan. Buku ini sudah berbaloi.

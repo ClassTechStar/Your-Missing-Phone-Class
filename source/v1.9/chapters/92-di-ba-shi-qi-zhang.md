@@ -63,7 +63,7 @@ eSIM 就是"电子 SIM 卡"：不插卡，扫码写进手机。前提是手机�
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：主卡数据开关是最大坑
+避坑提醒：主卡数据开关是最大坑
 
 {class="mt-1"}
 天价账单的头号来源：主卡的数据漫游没关。正确姿势是"双卡分职"——eSIM 管数据，主卡只留短信（收银行/平台验证码），并把主卡的"数据漫游"彻底关闭。落地后先发条消息测试验证码能收到，再放心用。另外给 eSIM 留条退路：重要行程保留一张能用的实体卡，或确认原号码的国际漫游处于可用状态，万一 eSIM 配置失败，你还不至于彻底失联。
@@ -347,7 +347,7 @@ eSIM 的全称是嵌入式 SIM（embedded SIM），它把传统 SIM 卡的芯片
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：偷跑大户前三名
+避坑提醒：偷跑大户前三名
 
 {class="mt-1"}
 系统更新、云相册、视频自动播放，这三样占了旅行流量意外消耗的大头，共同点是"你根本没主动打开它"。全部可以在设置里关掉，出发前一晚逐项确认，比落地后发现流量腰斩再补救划算得多。
@@ -405,7 +405,7 @@ iPhone 还有两个专属话题。一是换机转移：新 iPhone 设置时可�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：落地和回国各查一次"数据线"
+小贴士：落地和回国各查一次"数据线"
 
 {class="mt-1"}
 不是设置错了，是"被改了"：系统更新、恢复备份之后，默认数据线可能悄悄回到主卡。养成习惯：落地那天和回国那天，各打开设置看一眼数据线选的是谁，五秒钟的事，防的是几百块的账单。
@@ -437,7 +437,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：USB 共享是会议室里的体面方案
+小贴士：USB 共享是会议室里的体面方案
 
 {class="mt-1"}
 客户会议室里 Wi-Fi 密码要不来、信号又差时，一根数据线把手机网络共享给笔记本，比到处问密码快得多，也比公共热点安全得多。出差党的包里永远留一根数据线：它现在有两个用途：充电和上网。
@@ -471,7 +471,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒："免费 Wi-Fi + 退款链接"组合骗术
+避坑提醒："免费 Wi-Fi + 退款链接"组合骗术
 
 {class="mt-1"}
 境外常见的组合：连上免费 Wi-Fi 后收到"订单异常，点击退款"的短信或邮件，页面做得和订票平台一模一样。识别方法只有一条——所有退款、改签操作回到官方 App 里做，不看任何链接。真有退款，App 里也会显示。
@@ -517,7 +517,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：出发前开一个行程群和共享相册
+来动手：出发前开一个行程群和共享相册
 
 {class="mt-1"}
 全家人（包括爸妈）拉进一个行程群；手机上开好共享相册，约定每天晚上照片入库。这一步解决的是旅行后最大的遗憾——照片散落在每个人手机里，回来再也不汇总。
@@ -554,7 +554,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 落地一小时看地图，第一天晚上看账单。
@@ -609,7 +609,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：把演练排进时间表
+来动手：把演练排进时间表
 
 {class="mt-1"}
 在第八十六章的出发时间表里，给"通信演练"固定一个槽位（建议 T-48h），完成后在清单上打勾。有固定槽位的事情才会被真的执行。
@@ -665,7 +665,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：给离线包定一个"盘点日"
+小贴士：给离线包定一个"盘点日"
 
 {class="mt-1"}
 出发前一晚固定做一次五分钟的离线包盘点，逐项打勾。离线方案最大的特点是"感觉装好了"和"真的装好了"之间的落差，盘点就是消除落差的唯一办法。
@@ -688,7 +688,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：收尾也是给下次攒本钱
+小贴士：收尾也是给下次攒本钱
 
 {class="mt-1"}
 第八十六章的清单管"出发前"，这一节的清单管"回来后"。一出一进，通信方案才形成闭环，第二次出行的从容，全部来自第一次的收尾。
@@ -787,7 +787,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒："随手拍随手传"的代价
+避坑提醒："随手拍随手传"的代价
 
 {class="mt-1"}
 回家前流量见底的最常见剧本：全程 4K 录像加原图直传，第五天发现余量见底，导航都得省着开。素材是留给自己的，分享是给别人看的，两件事都值得做，但都请在 Wi-Fi 里做。
@@ -825,7 +825,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 方案做一次，行程次次受益，把这一章折成一张时间线，就再也不怕落地没网。
@@ -853,7 +853,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：出发前完成一次"eSIM 演练"
+来动手：出发前完成一次"eSIM 演练"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 确认手机支持 eSIM 并系统为最新。
@@ -863,7 +863,7 @@ Wi-Fi 版平板出境只有两条路：酒店 Wi-Fi 和手机热点，够用，�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 四方案里 eSIM 是多数人的首选：扫码即用、保号收码
 - 六步实操：选套餐/存码/添加/分职设置/落地/验证，回国删配置

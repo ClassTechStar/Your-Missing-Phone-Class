@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事項
+注意事項
 
 {class="mt-1"}
 二、BLロック（Bootloaderロック）：フラッシュの第一の門
@@ -57,7 +57,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>豆知識：なぜメーカーはこのスイッチを設けるのか
+豆知識：なぜメーカーはこのスイッチを設けるのか
 
 {class="mt-1"}
 初期の Android にはこのスイッチがなく、マルウェアは権限を取得すれば密かにシステムをフラッシュできました。Google は後にすべての Android メーカーに対し、開発者オプションに「OEM ロック解除」スイッチを追加し、「ユーザーの知情同意」の確認とすることを要求しました。これが、BL ロックを解除していても OEM ロック解除スイッチがオフなら再フラッシュが失敗する理由です。
@@ -95,7 +95,7 @@ ADB の正式名称は Android Debug Bridge で、Google が公式提供する�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>ドライバーと認証ポップアップを見逃さないで
+ドライバーと認証ポップアップを見逃さないで
 
 {class="mt-1"}
 Windows ユーザーで <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> が「unauthorized」と表示されるかデバイスがリストされない場合、多くはドライバーが未インストールかスマホで「許可」を押し忘れたのが原因です。Samsung/Xiaomi などのブランドは各社の「USB 、ドライバー」や「スマホアシスタント」をインストールしてドライバーを補完できます。Mac と Linux は通常ドライバー不要です。スマホのポップアップを誤って消してしまった場合は、ケーブルを挿し直すと再表示されます。
@@ -124,7 +124,7 @@ Windows ユーザーで <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>システムコアパッケージをむやみに削除しないでください
+システムコアパッケージをむやみに削除しないでください
 
 {class="mt-1"}
 「pm uninstall --user 0」は Root 不要の安全な方法ですが、重要システム App（ <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> ステータスバー、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> 電話、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> 設定など）をむやみに削除すると、システムクラッシュ、ブラックスクリーン、起動不能などの深刻な問題を引き起こします。削除前に「このパッケージ名は削除できるか」を検索し、少なくとも間違えないようにしてください。一度に1-2個だけ削除し、問題ないことを確認してから続行することを推奨します。
@@ -132,7 +132,7 @@ Windows ユーザーで <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>豆知識：--user 0 とは何か
+豆知識：--user 0 とは何か
 
 {class="mt-1"}
 Android 4.2 以降はマルチユーザーをサポートし、各ユーザーに独立した ID があります（機主は0、追加ユーザーは10から開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> は「現在の機主のみアンインストール」を意味し、システムパーティション内の APK ファイルは依然存在し、機主に表示されなくなるだけです。これが Root 不要の理由——システムファイルは変更せず、「ユーザー設定」を変えただけです。Root 後のアンインストールとの最大の違いもここにあります：Root アンインストールはシステムから本当に削除し、全ユーザーから消えますが、ADB アンインストールは「現在のユーザーに非表示」にするだけです。
@@ -159,7 +159,7 @@ Root 権限は Linux のスーパーユーザーに相当し（/ ディレクト
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Root操作にはリスクがあり、スマホがレンガ化（起動不可）する可能性があります。初心者の場合、まず関連知識を十分に学び、完全なバックアップがあることを確認してください。操作前にチュートリアルを注意深く読み、あなたの機種とシステムバージョンを確認してください。
+Root操作にはリスクがあり、スマホがレンガ化（起動不可）する可能性があります。初心者の場合、まず関連知識を十分に学び、完全なバックアップがあることを確認してください。操作前にチュートリアルを注意深く読み、あなたの機種とシステムバージョンを確認してください。
 
 {class="mt-1"}
 四、一般ユーザーへのアドバイス
@@ -198,7 +198,7 @@ Root の利便性を享受しながら銀行 App も使えるよう、コミュ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>いたちごっこは永遠に終わらない
+いたちごっこは永遠に終わらない
 
 {class="mt-1"}
 Google は定期的に検出ルールを更新し、App メーカーも Play Integrity 検証をアップグレードします。今日使える隠蔽方案が明日認識されるかもしれません。もし銀行/決済 App に完全に依存している（日常送金、QRコード決済など）なら、最も確実な選択は依然として：Root しない、BL ロックを解除しない。隠蔽方案は「メイン機 Root なし + サブ機で Root 遊び」のプレイヤー構成により適しています。
@@ -213,7 +213,7 @@ Google は定期的に検出ルールを更新し、App メーカーも Play Int
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>設定 &gt; デバイス情報に入る。
+設定 &gt; デバイス情報に入る。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 「ビルド番号」を連続7回タップ、開発者モードが有効化されたと表示されるまで。

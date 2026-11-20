@@ -317,7 +317,7 @@ Réfléchissez-y : un si petit appareil, combien il porte de votre vie ! Donc, a
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Passons à la pratique : connaître la configuration matérielle
+Passons à la pratique : connaître la configuration matérielle
 
 {class="mt-1"}
 Dans [Réglages], voyez si vous pouvez trouver le modèle de processeur, la taille spécifique de la RAM et du stockage (ROM). Ayez une idée des capacités de votre smartphone. Les utilisateurs Android peuvent télécharger « AnTuTu » ou « DevCheck » pour voir les informations matérielles détaillées.

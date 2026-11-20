@@ -22,7 +22,7 @@ La tecnologia cambia, ma i bisogni dell'uomo no, abbiamo bisogno di sicurezza, d
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Ultimo esercizio
+Ultimo esercizio
 
 {class="mt-1"}
 Chiudi questo libro, prendi il telefono e fai una cosa: <strong>in 30 secondi pensa, quali tre cose nel tuo telefono ti darebbero davvero dolore se le perdessi?</strong> Poi assicurati che siano backuppate. Il libro avrà reso.

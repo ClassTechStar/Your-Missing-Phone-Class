@@ -52,14 +52,14 @@ kind: chapter
 :::
 
 ```
-val name = "张三"        // val：只读变量（推荐默认用这个）
-var age = 18             // var：可变变量（以后还能改）
+val name = "张三" // val：只读变量（推荐默认用这个）
+var age = 18 // var：可变变量（以后还能改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> val 不能改，编译会报错
+age = 19 // var 可以改
+// name = "李四" // val 不能改，编译会报错
 
-val score: Int = 100     // 也可以显式写明类型
-val pi = 3.14            // 不写也能自动推断
+val score: Int = 100 // 也可以显式写明类型
+val pi = 3.14 // 不写也能自动推断
 ```
 :::
 
@@ -84,7 +84,7 @@ val 和 var 的取舍，光看定义容易轻敌。给你一个真实场景：�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：val 优先原则
+小贴士：val 优先原则
 
 {class="mt-1"}
 Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>。能用 val 的地方用 var，IDE 会黄字警告你。这个习惯能帮你少掉一大类"变量被意外修改"的 bug，代码越少变化，越容易推理。
@@ -107,10 +107,10 @@ Kotlin 社区的铁律：<strong>默认用 val，确有必要再用 var</strong>
 
 ```
 val receipt = """
-    记账小票
-    ----------
-    午餐：12.5 元
-    交通：5.0 元
+ 记账小票
+ ----------
+ 午餐：12.5 元
+ 交通：5.0 元
 """.trimIndent()
 
 println(receipt)
@@ -131,15 +131,15 @@ println(receipt)
 :::
 
 ```
-val fruits = listOf("苹果", "香蕉", "橙子")   // 创建一个列表
+val fruits = listOf("苹果", "香蕉", "橙子") // 创建一个列表
 
-println(fruits.size)        // 3（元素个数）
-println(fruits[0])          // 苹果（下标从 0 开始！）
-println(fruits.last())      // 橙子
-println(fruits.contains("香蕉"))   // true
+println(fruits.size) // 3（元素个数）
+println(fruits[0]) // 苹果（下标从 0 开始！）
+println(fruits.last()) // 橙子
+println(fruits.contains("香蕉")) // true
 
 val scores = listOf(85, 92, 78)
-println(scores.sum())       // 255（求和，第 54 章的记账本要用）
+println(scores.sum()) // 255（求和，第 54 章的记账本要用）
 ```
 :::
 
@@ -175,15 +175,15 @@ Kotlin 与 Swift 的变量声明对照
 
 ```
 fun greet(name: String): String {
-    return "你好，$name！"     // $ 符号把变量插进字符串
+ return "你好，$name！" // $ 符号把变量插进字符串
 }
 
-println(greet("张三"))        // 输出：你好，张三！
+println(greet("张三")) // 输出：你好，张三！
 
 // 单行函数可以简写成表达式
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // 输出：8
+println(add(3, 5)) // 输出：8
 ```
 :::
 
@@ -202,11 +202,11 @@ println(add(3, 5))            // 输出：8
 
 ```
 fun splitBill(total: Double, people: Int): Double {
-    return total / people
+ return total / people
 }
 
 val share = splitBill(216.4, 4)
-println("每人应付：$share 元")   // 每人应付：54.1 元
+println("每人应付：$share 元") // 每人应付：54.1 元
 ```
 :::
 
@@ -229,8 +229,8 @@ println("每人应付：$share 元")   // 每人应付：54.1 元
 
 ```
 fun orderTea(type: String, sugar: Int = 0, ice: Boolean = false): String {
-    val desc = if (ice) "加冰" else "去冰"
-    return "一杯$type，糖 $snow 份，$desc"
+ val desc = if (ice) "加冰" else "去冰"
+ return "一杯$type，糖 $snow 份，$desc"
 }
 ```
 :::
@@ -261,23 +261,23 @@ fun orderTea(type: String, sugar: Int = 0, ice: Boolean = false): String {
 // 判断：if / else
 val age = 17
 if (age >= 18) {
-    println("成年人")
+ println("成年人")
 } else {
-    println("未成年")
+ println("未成年")
 }
 
 // 多分支：when（比 switch 好用一百倍）
 val score = 85
 val level = when {
-    score >= 90 -> "优秀"
-    score >= 60 -> "及格"
-    else -> "再接再厉"
+ score >= 90 -> "优秀"
+ score >= 60 -> "及格"
+ else -> "再接再厉"
 }
 
 // 重复：for 循环
 val fruits = listOf("苹果", "香蕉", "橙子")
 for (fruit in fruits) {
-    println("我爱吃$fruit")
+ println("我爱吃$fruit")
 }
 ```
 :::
@@ -301,19 +301,19 @@ for 循环还有个"带下标"的兄弟。需要序号时（"第 1 名：苹果"
 // 形态一：带主语（对同一个值反复判断）
 val weather = "雨"
 when (weather) {
-    "晴" -> println("适合出门")
-    "雨" -> println("记得带伞")
-    "雪" -> println("注意保暖")
-    else -> println("查查天气 App")
+ "晴" -> println("适合出门")
+ "雨" -> println("记得带伞")
+ "雪" -> println("注意保暖")
+ else -> println("查查天气 App")
 }
 
 // 形态二：区间匹配（不用一个个列举）
 val temp = 26
 when (temp) {
-    in 35..100 -> println("高温预警")
-    in 24..34  -> println("舒适")
-    in 10..23  -> println("微凉")
-    else -> println("要穿外套了")
+ in 35..100 -> println("高温预警")
+ in 24..34 -> println("舒适")
+ in 10..23 -> println("微凉")
+ else -> println("要穿外套了")
 }
 ```
 :::
@@ -334,10 +334,10 @@ when 还有一个大杀器<strong>类型判断</strong>：<code class="inline">w
 :::
 
 ```
-for (i in 1..5)        println(i)   // 1 2 3 4 5（含 5）
-for (i in 1 until 5)   println(i)   // 1 2 3 4（不含 5）
-for (i in 5 downTo 1)  println(i)   // 5 4 3 2 1（倒数）
-for (i in 1..10 step 2) println(i)  // 1 3 5 7 9（隔一个）
+for (i in 1..5) println(i) // 1 2 3 4 5（含 5）
+for (i in 1 until 5) println(i) // 1 2 3 4（不含 5）
+for (i in 5 downTo 1) println(i) // 5 4 3 2 1（倒数）
+for (i in 1..10 step 2) println(i) // 1 3 5 7 9（隔一个）
 ```
 :::
 
@@ -357,15 +357,15 @@ Java 时代最著名的 bug 叫 <strong>NullPointerException（空指针异常�
 :::
 
 ```
-var name: String = "张三"   // 普通类型：绝不允许是 null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> 编译错误，直接把你拦住
+var name: String = "张三" // 普通类型：绝不允许是 null
+// name = null // 编译错误，直接把你拦住
 
 var nickname: String? = null // 加个问号：允许为 null
 nickname = "三儿"
 
 // 使用可空类型时，必须安全地处理：
-println(nickname?.length)    // 安全调用：null 就返回 null，不崩
-val len = nickname?.length ?: 0   // Elvis 操作符：null 时给默认值
+println(nickname?.length) // 安全调用：null 就返回 null，不崩
+val len = nickname?.length ?: 0 // Elvis 操作符：null 时给默认值
 println(len)
 ```
 :::
@@ -378,7 +378,7 @@ println(len)
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：? 和 ?: 别搞混
+注意：? 和 ?: 别搞混
 
 {class="mt-1"}
 <code class="inline">String?</code> 是"允许为空"，<code class="inline">a ?: b</code> 是"a 为空时用 b"（长得像猫王发型，所以叫 Elvis 操作符）。刚开始写代码时，看到编译器报"null 相关错误"，八成是你忘了处理可空类型——这正是语言在保护你。
@@ -405,7 +405,7 @@ nickname?.let { println("昵称是 $it，长度 ${it.length}") }
 
 // 智能转换：检查过就放行
 if (nickname != null) {
-    println(nickname.length)   // 这里不用写 ?.，编译器知道它非空
+ println(nickname.length) // 这里不用写 ?.，编译器知道它非空
 }
 ```
 :::
@@ -486,9 +486,9 @@ if (nickname != null) {
 ```
 val expenses = listOf(12.5, 88.0, 5.0, 23.3, 0.0, 66.0, 45.2)
 
-val total = expenses.sum()                      // 总共：240.0
-val biggest = expenses.max()                    // 最大的一笔：88.0
-val days = expenses.count { it > 0 }            // 有花销的天数：6
+val total = expenses.sum() // 总共：240.0
+val biggest = expenses.max() // 最大的一笔：88.0
+val days = expenses.count { it > 0 } // 有花销的天数：6
 
 println("本周合计：$total 元")
 println("最大单笔：$biggest 元")
@@ -512,17 +512,17 @@ println("花钱的日子有 $days 天")
 ```
 // 普通类：模具
 class Dog(val name: String) {
-    fun bark() = println("$name 汪汪！")
+ fun bark() = println("$name 汪汪！")
 }
 
-val dog = Dog("旺财")      // 造对象
-dog.bark()                 // 旺财 汪汪！
+val dog = Dog("旺财") // 造对象
+dog.bark() // 旺财 汪汪！
 
 // data class：装数据的盒子（自动带 equals/copy 等）
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "张三", "zhangsan@example.com")
-val twin = me.copy(name = "张三丰")   // 复制并改一个字段
+val twin = me.copy(name = "张三丰") // 复制并改一个字段
 ```
 :::
 
@@ -552,10 +552,10 @@ data class Record(val amount: Double, val category: String, val date: String)
 val a = Record(12.5, "餐饮", "10-01")
 val b = Record(12.5, "餐饮", "10-01")
 
-println(a == b)            // true——按内容比较，不是"同一条"才算相等
-println(a)                 // Record(amount=12.5, category=餐饮, date=10-01)
-val edited = a.copy(amount = 20.0)   // 只改金额，其他字段原样带走
-println(edited)            // Record(amount=20.0, category=餐饮, date=10-01)
+println(a == b) // true——按内容比较，不是"同一条"才算相等
+println(a) // Record(amount=12.5, category=餐饮, date=10-01)
+val edited = a.copy(amount = 20.0) // 只改金额，其他字段原样带走
+println(edited) // Record(amount=20.0, category=餐饮, date=10-01)
 ```
 :::
 
@@ -563,7 +563,7 @@ println(edited)            // Record(amount=20.0, category=餐饮, date=10-01)
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：data class 的字段也要守 val 优先
+注意：data class 的字段也要守 val 优先
 
 {class="mt-1"}
 data class 的字段默认都写成 <code class="inline">val</code>（只读），改数据用 copy 造新对象，而不是直接改旧对象的字段。"数据不可变 + 改动即复制"是现代界面开发的通行哲学，Compose 把它当基本前提。刚开始会觉得绕，用两次就顺了。
@@ -580,15 +580,15 @@ data class 之后，Kotlin 还有一件配套武器叫 <strong>sealed class（�
 
 ```
 sealed class UiState {
-    object Loading : UiState()                          // 加载中（没有数据，用 object）
-    data class Success(val list: List&lt;String&gt;) : UiState()   // 成功（带着数据）
-    data class Error(val message: String) : UiState()   // 失败（带着原因）
+ object Loading : UiState() // 加载中（没有数据，用 object）
+ data class Success(val list: List&lt;String&gt;) : UiState() // 成功（带着数据）
+ data class Error(val message: String) : UiState() // 失败（带着原因）
 }
 
 fun render(state: UiState): String = when (state) {
-    is UiState.Loading -> "加载中…"
-    is UiState.Success -> "加载到 ${state.list.size} 条数据"
-    is UiState.Error -> "出错了：${state.message}"
+ is UiState.Loading -> "加载中…"
+ is UiState.Success -> "加载到 ${state.list.size} 条数据"
+ is UiState.Error -> "出错了：${state.message}"
 }
 ```
 :::
@@ -622,7 +622,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // lambda 写法：就地定义，轻快直接
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = 当前元素
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = 当前元素
 
 // 筛选 + 变换连招（真实项目里极常见）
 val bills = listOf(12.5, 88.0, 5.0, 200.0)
@@ -648,12 +648,12 @@ it 这个魔法值得拆开讲一次。lambda 的完整写法是 <code class="in
 
 ```
 fun calc(a: Int, b: Int, op: (Int, Int) -> Int): Int {
-    return op(a, b)
+ return op(a, b)
 }
 
-println(calc(3, 5) { x, y -> x + y })   // 8
-println(calc(3, 5) { x, y -> x * y })   // 15
-println(calc(10, 3) { x, y -> x - y })  // 7
+println(calc(3, 5) { x, y -> x + y }) // 8
+println(calc(3, 5) { x, y -> x * y }) // 15
+println(calc(10, 3) { x, y -> x - y }) // 7
 ```
 :::
 
@@ -676,25 +676,25 @@ println(calc(10, 3) { x, y -> x - y })  // 7
 data class Record(val amount: Double, val category: String)
 
 val records = listOf(
-    Record(12.5, "餐饮"), Record(30.0, "交通"),
-    Record(20.0, "餐饮"), Record(88.0, "购物")
+ Record(12.5, "餐饮"), Record(30.0, "交通"),
+ Record(20.0, "餐饮"), Record(88.0, "购物")
 )
 
 // groupBy：按某个条件分组，得到"组名 -> 组员列表"的 Map
 val byCategory = records.groupBy { it.category }
-println(byCategory["餐饮"]?.size)   // 2（餐饮组有两条）
+println(byCategory["餐饮"]?.size) // 2（餐饮组有两条）
 
 // associateBy：按某个字段建立索引，得到"键 -> 对象"的 Map
 val byName = records.associateBy { it.category }
 
 // fold：带着"累积值"遍历——比 sum 更自由的归并
 val total = records.fold(0.0) { acc, r -> acc + r.amount }
-println(total)                      // 150.5
+println(total) // 150.5
 
 // 组合技：分组后算各组总额
 val sums = records.groupBy { it.category }
-    .mapValues { (_, group) -> group.sumOf { it.amount } }
-println(sums)                       // {餐饮=32.5, 交通=30.0, 购物=88.0}
+ .mapValues { (_, group) -> group.sumOf { it.amount } }
+println(sums) // {餐饮=32.5, 交通=30.0, 购物=88.0}
 ```
 :::
 
@@ -715,17 +715,17 @@ println(sums)                       // {餐饮=32.5, 交通=30.0, 购物=88.0}
 // 给 String 加一个"喊话"方法
 fun String.shout(): String = this.uppercase() + "！！"
 
-println("你好".shout())          // 你好！！
-println("kotlin".shout())        // KOTLIN！！
+println("你好".shout()) // 你好！！
+println("kotlin".shout()) // KOTLIN！！
 
 // 给 Int 加一个"打折"方法
 fun Int.discount(rate: Double): Double = this * rate
 
-println(100.discount(0.8))       // 80.0
+println(100.discount(0.8)) // 80.0
 
 // 更实用的例子：金额格式化
 fun Double.toPrice(): String = "%.2f".format(this)
-println(54.1.toPrice())          // 54.10
+println(54.1.toPrice()) // 54.10
 ```
 :::
 
@@ -748,12 +748,12 @@ println(54.1.toPrice())          // 54.10
 import kotlinx.coroutines.*
 
 fun main() = runBlocking {
-    launch {
-        delay(1000L)                    // 模拟"等 1 秒"（网络、读文件）
-        println("慢操作完成了")
-    }
-    println("这行先打印")               // 不会等上面那秒，立刻执行
-    delay(1500L)                        // 撑住 main，让协程有时间跑完
+ launch {
+ delay(1000L) // 模拟"等 1 秒"（网络、读文件）
+ println("慢操作完成了")
+ }
+ println("这行先打印") // 不会等上面那秒，立刻执行
+ delay(1500L) // 撑住 main，让协程有时间跑完
 }
 ```
 :::
@@ -764,7 +764,7 @@ fun main() = runBlocking {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：协程最容易记错的一件事
+小贴士：协程最容易记错的一件事
 
 {class="mt-1"}
 协程不等于多线程，它是"可暂停的任务"。大多数时候你不需要关心它跑在哪个线程上——框架已经替你安排好了（界面相关的活儿在主线程，网络文件在后台线程，第 53 章细说）。新手阶段对协程的过度关心，九成九是提前焦虑。
@@ -826,7 +826,7 @@ Playground 一周练习路径（每天 20-30 分钟）
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 语言版本升级通常不动语法，动的是「编译器愿意容忍什么」。报错变多往往是变严格了，不是你写错了。
@@ -866,13 +866,13 @@ K2 时代的报错信息已经相当"说人话"，但英文报错依然会吓到
 ```
 data class Record(val amount: Double, val category: String, val note: String)
 
-fun Double.toPrice(): String = "%.2f".format(this)   // 扩展函数：格式化金额
+fun Double.toPrice(): String = "%.2f".format(this) // 扩展函数：格式化金额
 
 val records = listOf(
-    Record(12.5, "餐饮", "午餐"),
-    Record(30.0, "交通", "地铁"),
-    Record(88.0, "购物", "卫衣"),
-    Record(20.0, "餐饮", "奶茶")
+ Record(12.5, "餐饮", "午餐"),
+ Record(30.0, "交通", "地铁"),
+ Record(88.0, "购物", "卫衣"),
+ Record(20.0, "餐饮", "奶茶")
 )
 
 // 总支出（sum 连招）
@@ -881,9 +881,9 @@ println("总支出：${total.toPrice()} 元")
 
 // 分组统计（groupBy + mapValues 组合技）
 val byCategory = records.groupBy { it.category }
-    .mapValues { (_, group) -> group.sumOf { it.amount } }
+ .mapValues { (_, group) -> group.sumOf { it.amount } }
 byCategory.forEach { (category, sum) ->
-    println("$category：${sum.toPrice()} 元")
+ println("$category：${sum.toPrice()} 元")
 }
 
 // 大额消费（filter + sorted 连招）
@@ -892,15 +892,15 @@ big.forEach { println("大额：${it.amount.toPrice()} 元 - ${it.note}") }
 
 // 状态建模（sealed class + when 穷尽检查）
 sealed class Report {
-    object Empty : Report()
-    data class Summary(val count: Int, val total: Double) : Report()
+ object Empty : Report()
+ data class Summary(val count: Int, val total: Double) : Report()
 }
 
 val report = if (records.isEmpty()) Report.Empty
-             else Report.Summary(records.size, total)
+ else Report.Summary(records.size, total)
 when (report) {
-    is Report.Empty -> println("本周还没有记账")
-    is Report.Summary -> println("共 ${report.count} 笔，合计 ${report.total.toPrice()} 元")
+ is Report.Empty -> println("本周还没有记账")
+ is Report.Summary -> println("共 ${report.count} 笔，合计 ${report.total.toPrice()} 元")
 }
 ```
 :::
@@ -922,7 +922,7 @@ when (report) {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：不装任何软件，先玩 10 分钟 Kotlin
+来动手：不装任何软件，先玩 10 分钟 Kotlin
 
 {class="mt-1"}
 浏览器打开 play.kotlinlang.org（Kotlin 官方在线演练场），把本章的每一段代码都粘进去跑一遍，改改数字和文字，看看输出怎么变。这个"先玩后学"的 10 分钟，会让你第 51 章上手时轻松一倍。
@@ -930,7 +930,7 @@ when (report) {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - val 优先，var 慎用；类型可自动推断，冒号后显式声明也行
 - 函数 = 打包的逻辑；字符串模板 $ 是招牌便利

@@ -19,19 +19,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">טכנולוגיה</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מי משתמש</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דרישות אביזרים</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפל, הכי חלק. דרוש Apple TV או טלוויזיה עם AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct, ללא נתב. ברירת מחדל ב-Android</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כל הפלטפורמות</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דוחף מדיה (וידאו/מוזיקה/תמונות), לא משקף מסך. להקרנת וידאו</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">טכנולוגיה</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מי משתמש</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דרישות אביזרים</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפל, הכי חלק. דרוש Apple TV או טלוויזיה עם AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct, ללא נתב. ברירת מחדל ב-Android</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כל הפלטפורמות</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">דוחף מדיה (וידאו/מוזיקה/תמונות), לא משקף מסך. להקרנת וידאו</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
+אם הגשת בטעות מידע רגיש, לא מספיק למחוק את הקובץ (הוא עדיין בהיסטוריה), צריך להשתמש ב-
 
 {class="mt-1"}
 בכל פתרון, השתמש בשליטה קולית. ניווט ומוזיקה מראש, לא בנהיגה.
@@ -86,7 +86,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>פעולה: הקרנה מטלפון לטלוויזיה
+פעולה: הקרנה מטלפון לטלוויזיה
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. בטלפון: iPhone ממרכז הבקרה לוחץ על "שיקוף מסך"; אנדרואיד מושך למטה ומחפש "הקרנה אלחוטית".
@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 3 מערכות: AirPlay, Miracast, DLNA

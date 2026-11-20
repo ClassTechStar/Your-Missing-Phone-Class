@@ -61,7 +61,7 @@ Migliaia di foto nella galleria del telefono, per cercarne una specifica si fa f
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Allenati: completa sul telefono un ciclo completo di scatto + ritocco + organizzazione
+Allenati: completa sul telefono un ciclo completo di scatto + ritocco + organizzazione
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apri la "Griglia" nelle impostazioni della fotocamera, trova un luogo con luce naturale e scatta tre foto (ricordati di pulire la lente e di regolare l'esposizione).

@@ -90,7 +90,7 @@ Kopiere die exportierte Kontakte-vcf und den Fotoordner zusätzlich auf eine ext
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Akkuverbrauch-Rangliste prüfen
+Akkuverbrauch-Rangliste prüfen
 
 {class="mt-1"}
 : In den Akku-Einstellungen die Rangliste der letzten 24 Stunden ansehen. Wenn eine App einen großen Anteil hat, die du aber kaum nutzt, läuft sie heimlich im Hintergrund – direkt deinstallieren oder Hintergrundaktivität einschränken.
@@ -98,7 +98,7 @@ Kopiere die exportierte Kontakte-vcf und den Fotoordner zusätzlich auf eine ext
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Überlege, was du zuletzt getan hast
+Überlege, was du zuletzt getan hast
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. : Wurde es nach einem System-Update langsam? (Nach großen Versions-Updates ist Langsamkeit in den ersten Tagen normal, das System baut im Hintergrund Indizes neu auf.) Oder wurde es nach der Installation einer neuen App langsam? (Probier, sie zu deinstallieren.)

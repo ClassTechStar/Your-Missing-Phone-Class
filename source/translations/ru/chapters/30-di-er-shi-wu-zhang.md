@@ -24,51 +24,51 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Бренд</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Путь стирания</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ключевые отличия и моменты, требующие внимания</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Система и обновление → Сброс → Восстановление заводских настроек</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно сначала выйти из аккаунта Huawei и отключить «Найти мой телефон», иначе сработает активационный замок; в режиме PureMode может потребоваться ввод пароля.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Моё устройство → Восстановление заводских настроек</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Внизу опции «Форматировать виртуальную SD-карту» и «Очистить все данные и настройки» — обе нужно отметить; перед выходом из аккаунта Xiaomi отключите «Найти устройство».</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Другие настройки → Сброс телефона → Полностью очистить все данные</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS предлагает режим «полная очистка» — многократно перезаписывает хранилище; требует ввода пароля блокировки экрана.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Управление системой → Бэкап и сброс → Очистить все данные</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно отметить «Форматировать хранилище телефона», иначе SD-область не очистится; нужно выйти из аккаунта vivo и отключить «Найти телефон».</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Общее управление → Сброс → Восстановление заводских настроек</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно сначала удалить аккаунт Samsung и отключить «Найти мой телефон»; на некоторых моделях есть опция «автоперезапись» — рекомендуется включить.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Основные → Перенос или сброс iPhone → Стереть все содержимое и настройки</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Обязательно сначала выйдите из Apple ID, иначе следующий пользователь будет заблокирован iCloud активационным замком; iOS 15+ поддерживает «сохранить данные iCloud при выходе» для последующей проверки.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Бренд</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Путь стирания</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ключевые отличия и моменты, требующие внимания</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Система и обновление → Сброс → Восстановление заводских настроек</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно сначала выйти из аккаунта Huawei и отключить «Найти мой телефон», иначе сработает активационный замок; в режиме PureMode может потребоваться ввод пароля.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Моё устройство → Восстановление заводских настроек</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Внизу опции «Форматировать виртуальную SD-карту» и «Очистить все данные и настройки» — обе нужно отметить; перед выходом из аккаунта Xiaomi отключите «Найти устройство».</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Другие настройки → Сброс телефона → Полностью очистить все данные</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS предлагает режим «полная очистка» — многократно перезаписывает хранилище; требует ввода пароля блокировки экрана.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Управление системой → Бэкап и сброс → Очистить все данные</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно отметить «Форматировать хранилище телефона», иначе SD-область не очистится; нужно выйти из аккаунта vivo и отключить «Найти телефон».</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Общее управление → Сброс → Восстановление заводских настроек</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно сначала удалить аккаунт Samsung и отключить «Найти мой телефон»; на некоторых моделях есть опция «автоперезапись» — рекомендуется включить.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки → Основные → Перенос или сброс iPhone → Стереть все содержимое и настройки</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Обязательно сначала выйдите из Apple ID, иначе следующий пользователь будет заблокирован iCloud активационным замком; iOS 15+ поддерживает «сохранить данные iCloud при выходе» для последующей проверки.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Три вещи, которые чаще всего забывают
+Три вещи, которые чаще всего забывают
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Не вышел из аккаунта</strong>:после продажи телефон удалённо блокируется, и вы сами не можете войти: в итоге приходится идти с паспортом в официальный сервис для разблокировки.
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>Правовое основание: статья 49 Закона о защите персональной информации
+Правовое основание: статья 49 Закона о защите персональной информации
 
 {class="mt-1"}
 Статья 49 Закона КНР «О защите персональной информации», вступившего в силу в 2021 году, прямо устанавливает:<strong> в случае смерти физического лица его близкие родственники вправе, в целях своих законных и правомерных интересов, осуществлять предусмотренные настоящей главой права в отношении персональной информации умершего: право на ознакомление, копирование, исправление и удаление; за исключением случаев, когда умерший при жизни распорядился иначе.</strong>
@@ -108,7 +108,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Чего категорически нельзя делать
+Чего категорически нельзя делать
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Не передавайте пароль от аккаунта умершего семье для «продолжения использования»</strong> — это нарушает соглашение с платформой; при блокировке средств или срабатывании контроля риска доказать правоту будет гораздо сложнее.
@@ -153,7 +153,7 @@ Google предоставляет «Inactive Account Manager», который �
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Ключевые напоминания
+Ключевые напоминания
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Правила платформ обновляются, перед оформлением ознакомьтесь с актуальными инструкциями службы поддержки.
@@ -174,7 +174,7 @@ Google предоставляет «Inactive Account Manager», который �
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Реальная цена «исчезновения» криптовалюты
+Реальная цена «исчезновения» криптовалюты
 
 {class="mt-1"}
 По данным Chainalysis, в мире <strong> более 3 миллионов биткоинов</strong> навсегда потеряны из-за утраты приватных ключей. Это примерно одна шестая часть от текущего общего объёма. Если вы владеете криптоактивами, убедитесь, что хотя бы один человек, которому вы абсолютно доверяете, знает <strong> путь восстановления</strong> — иначе эти богатства навсегда останутся спящими на блокчейне.
@@ -227,7 +227,7 @@ Google предоставляет «Inactive Account Manager», который �
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Юридическое замечание о «паролях»
+Юридическое замечание о «паролях»
 
 {class="mt-1"}
 Вписывать пароли прямо в завещание рискованно — после вскрытия завещания все наследники их увидят.<strong> Надёжнее: в завещании указывайте только «список аккаунтов + волю по распоряжению + место хранения паролей», а сами пароли передавайте доверенному исполнителю отдельно через мастер-пароль менеджера паролей</strong>. Это соответствует юридическим требованиям и снижает риск утечки паролей.
@@ -239,41 +239,41 @@ Google предоставляет «Inactive Account Manager», который �
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Канал</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Цена выкупа</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Безопасность данных</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Подходящий сценарий</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Официальный Trade-in (Huawei/Apple/Xiaomi и др.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Средняя, часто с бонусными купонами</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Наивысшая, стандартизированный процесс</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Выгоднее всего при покупке нового устройства того же бренда</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сторонние платформы выкупа (Aihuishou, Zhuanzhuan, Huishoubao и др.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Несколько выше, можно сравнивать</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Высокая, есть отчёт об очистке данных</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хотите сразу получить деньги, без привязки к бренду</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Благотворительная передача (сельские школы, НПО)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Без финансовой отдачи</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно полностью стереть самостоятельно</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устройство ещё работоспособно, хотите сделать доброе дело</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Вторичная жизнь (переделка для себя)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Экономия на новом устройстве</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Владелец продолжает использовать, без риска</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устройство ещё в норме, дома есть потребность в переделке</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Канал</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Цена выкупа</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Безопасность данных</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Подходящий сценарий</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Официальный Trade-in (Huawei/Apple/Xiaomi и др.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Средняя, часто с бонусными купонами</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Наивысшая, стандартизированный процесс</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Выгоднее всего при покупке нового устройства того же бренда</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сторонние платформы выкупа (Aihuishou, Zhuanzhuan, Huishoubao и др.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Несколько выше, можно сравнивать</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Высокая, есть отчёт об очистке данных</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хотите сразу получить деньги, без привязки к бренду</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Благотворительная передача (сельские школы, НПО)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Без финансовой отдачи</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Нужно полностью стереть самостоятельно</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устройство ещё работоспособно, хотите сделать доброе дело</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Вторичная жизнь (переделка для себя)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Экономия на новом устройстве</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Владелец продолжает использовать, без риска</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устройство ещё в норме, дома есть потребность в переделке</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>Официальный выкуп / Trade-in</strong>:самый рекомендуемый способ, стандартизированный процесс, безопасность данных гарантирована. На сайтах Apple, Huawei, Xiaomi и др. есть вход в программу Trade-in; после оценки сумма засчитывается в стоимость нового устройства.
@@ -283,7 +283,7 @@ Google предоставляет «Inactive Account Manager», который �
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>Правда об электронных отходах
+Правда об электронных отходах
 
 {class="mt-1"}
 Печатная плата телефона содержит <strong> золото, серебро, палладий, медь</strong> и другие драгоценные металлы; содержание золота в тонне отработанных плат в десятки раз выше, чем в тонне золотой руды. Но при выбрасывании на свалку свинец, ртуть и кадмий просачиваются в почву и грунтовые воды, загрязняя их на десятилетия.<strong> Правильная утилизация защищает окружающую среду и позволяет дефицитным металлам возвращаться в оборот.</strong>
@@ -291,7 +291,7 @@ Google предоставляет «Inactive Account Manager», который �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: устроьте вашему старому телефону «стандартные похороны»
+Практика: устроьте вашему старому телефону «стандартные похороны»
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Последняя полная резервная копия: загрузите фото в облако, скопируйте важные файлы на компьютер, экспортируйте историю чатов.
@@ -305,7 +305,7 @@ Google предоставляет «Inactive Account Manager», который �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Список задач на этот месяц
+Список задач на этот месяц
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Для вашего основного телефона укажите «контактное лицо для наследства» Apple или настройте «менеджер неактивных аккаунтов» Google.

@@ -32,22 +32,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">模式名稱</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">開啟方法</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">輔助使用（沒有單獨簡易模式，但可逐項調大）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 顯示與亮度 > 文字大小，拉到最大。再進"輔助功能 > 顯示與文字大小"開"粗體文字""按鈕形狀"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為/榮耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 系統和更新 > 簡易模式 > 開啟</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米/紅米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極簡模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 更多設定 > 極簡模式 > 開啟</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/一加</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 特色功能 > 簡易模式</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易桌面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 桌面、鎖屏與桌布 > 簡易桌面</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 顯示 > 簡易模式</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">品牌</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">模式名稱</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">開啟方法</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">輔助使用（沒有單獨簡易模式，但可逐項調大）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 顯示與亮度 > 文字大小，拉到最大。再進"輔助功能 > 顯示與文字大小"開"粗體文字""按鈕形狀"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為/榮耀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 系統和更新 > 簡易模式 > 開啟</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米/紅米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">極簡模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 更多設定 > 極簡模式 > 開啟</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/一加</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 特色功能 > 簡易模式</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易桌面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 桌面、鎖屏與桌布 > 簡易桌面</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡易模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 顯示 > 簡易模式</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手：幫長輩"裝修"一下手機
+動手：幫長輩"裝修"一下手機
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 開啟簡易模式（按上面的品牌表格操作）。
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>給長輩的"防騙口訣"（列印出來貼電話旁邊）
+給長輩的"防騙口訣"（列印出來貼電話旁邊）
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>陌生電話要轉帳 → 掛掉！</strong>
@@ -151,7 +151,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小結
+本章小結
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 先開簡易模式或手動調大字型/圖示，環境調好大半問題就沒了

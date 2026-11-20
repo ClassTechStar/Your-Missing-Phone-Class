@@ -45,44 +45,44 @@ Nama plugin
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Deskripsi fungsi</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux:API</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mengekspos fungsi Android API ke program command line</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memungkinkan menjalankan script saat perangkat booting</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menyediakan jendela terminal mengambang</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mengaktifkan skema warna dan kustomisasi font untuk terminal</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mengintegrasikan script Termux dengan aplikasi otomasi Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memungkinkan menjalankan script dari widget layar utama</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Penting</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Deskripsi fungsi</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux:API</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mengekspos fungsi Android API ke program command line</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memungkinkan menjalankan script saat perangkat booting</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menyediakan jendela terminal mengambang</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mengaktifkan skema warna dan kustomisasi font untuk terminal</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mengintegrasikan script Termux dengan aplikasi otomasi Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Memungkinkan menjalankan script dari widget layar utama</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Penting</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Termux dan plugin-nya harus diinstal dari sumber yang sama, karena mereka berbagi sharedUserId yang sama. Mencampur instalasi dari sumber berbeda (seperti F-Droid dan GitHub) akan menyebabkan error instalasi.
+Termux dan plugin-nya harus diinstal dari sumber yang sama, karena mereka berbagi sharedUserId yang sama. Mencampur instalasi dari sumber berbeda (seperti F-Droid dan GitHub) akan menyebabkan error instalasi.
 
 {class="mt-1"}
 4\. Panduan instalasi dan konfigurasi
@@ -127,7 +127,7 @@ Kesimpulan
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Termux membawa pengalaman terminal Linux yang kuat ke perangkat Android, menjadikan ponsel sebagai alat pengembangan dan pembelajaran portabel. Baik pengembang, administrator sistem, maupun penggemar teknologi, semua dapat memanfaatkan Termux untuk menikmati pengalaman command line lengkap di perangkat mobile, mewujudkan konsep "Linux di saku".
+Termux membawa pengalaman terminal Linux yang kuat ke perangkat Android, menjadikan ponsel sebagai alat pengembangan dan pembelajaran portabel. Baik pengembang, administrator sistem, maupun penggemar teknologi, semua dapat memanfaatkan Termux untuk menikmati pengalaman command line lengkap di perangkat mobile, mewujudkan konsep "Linux di saku".
 
 {class="mt-1"}
 Mari praktik: Jalankan perintah Linux pertama di ponsel
@@ -135,7 +135,7 @@ Mari praktik: Jalankan perintah Linux pertama di ponsel
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Unduh dan instal Termux dari F-Droid, tunggu inisialisasi selesai saat pertama dijalankan.
+Unduh dan instal Termux dari F-Droid, tunggu inisialisasi selesai saat pertama dijalankan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Jalankan

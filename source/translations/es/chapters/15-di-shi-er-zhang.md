@@ -61,7 +61,7 @@ Mi postura sobre juegos móviles: jugar está bien, pero no dejes que te control
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica: crea tu sistema de entretenimiento móvil
+Practica: crea tu sistema de entretenimiento móvil
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. En tu App de música, descarga tus canciones favoritas en 3 álbumes o listas; asegúrate de poder escucharlas sin conexión.

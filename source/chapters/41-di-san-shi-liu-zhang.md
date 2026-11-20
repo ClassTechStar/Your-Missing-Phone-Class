@@ -26,7 +26,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>一句话原则
+一句话原则
 
 {class="mt-1"}
 2026年买智能设备，优先看是否有"Matter over Thread"标识——这是当下最经得起时间检验的选择。老设备若只支持Wi-Fi或蓝牙也不必急着淘汰，先用着，新购时再转向Matter。
@@ -49,40 +49,40 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">生态</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">优势</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用人群</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐私最强（本地处理为主）、与iPhone/Siri/快捷指令联动顺滑</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备偏少偏贵、需要HomePod或Apple TV做中枢</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全家苹果设备、重视隐私与体验的用户</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">米家（小米）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备最丰富、性价比最高、小爱同学好用</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态相对封闭、数据多上云、广告偏多</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预算有限、想一站式配齐全屋的入门用户</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为智联（鸿蒙）</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与鸿蒙手机/平板/手表无缝流转、设备数量快速增长</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外设备支持少、生态仍在追赶</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机用户、看重"超级终端"多设备协同</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">生态</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">优势</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">短板</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用人群</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐私最强（本地处理为主）、与iPhone/Siri/快捷指令联动顺滑</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备偏少偏贵、需要HomePod或Apple TV做中枢</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全家苹果设备、重视隐私与体验的用户</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">米家（小米）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备最丰富、性价比最高、小爱同学好用</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态相对封闭、数据多上云、广告偏多</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预算有限、想一站式配齐全屋的入门用户</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为智联（鸿蒙）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与鸿蒙手机/平板/手表无缝流转、设备数量快速增长</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">海外设备支持少、生态仍在追赶</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为手机用户、看重"超级终端"多设备协同</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>选生态的决策建议
+选生态的决策建议
 
 {class="mt-1"}
 看手机选生态：iPhone用户优先HomeKit，华为用户优先智联，其他安卓用户米家最省心。靠Matter协议，不同生态的设备也能被同一部手机控制，不必一次性"站队"。
@@ -102,21 +102,21 @@ kind: chapter
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>设备控制</strong>：打开HomeKit/米家/智慧生活App，可远程或本地开关灯、调色温、设定空调温度、拉合窗帘、查看摄像头画面。</li>
-                    <li><strong>自动化场景</strong>：把"条件→动作"组合起来，常用的三大场景：
-                        <ul class="list-disc pl-6 mt-1">
-                            <li><strong>回家模式</strong>：定位到家+天黑→开玄关灯+开空调+拉窗帘+关门锁。</li>
-                            <li><strong>离家模式</strong>：最后一个出门（定位离家或门锁上锁）→关灯+关空调+关插座+启动摄像头+布防。</li>
-                            <li><strong>睡眠模式</strong>：每晚23:00→关全屋主灯+拉窗帘+空调切26度+开夜灯。</li>
-                        </ul>
-                    </li>
-                    <li><strong>NFC碰一碰</strong>：在门贴一张NFC标签，手机一碰即触发对应场景（碰一下开门灯、再碰一下切睡眠）。iPhone用"快捷指令"自动化，安卓用"钱包"或厂商App均可写入。</li>
-                </ul>
+ <li><strong>设备控制</strong>：打开HomeKit/米家/智慧生活App，可远程或本地开关灯、调色温、设定空调温度、拉合窗帘、查看摄像头画面。</li>
+ <li><strong>自动化场景</strong>：把"条件→动作"组合起来，常用的三大场景：
+ <ul class="list-disc pl-6 mt-1">
+ <li><strong>回家模式</strong>：定位到家+天黑→开玄关灯+开空调+拉窗帘+关门锁。</li>
+ <li><strong>离家模式</strong>：最后一个出门（定位离家或门锁上锁）→关灯+关空调+关插座+启动摄像头+布防。</li>
+ <li><strong>睡眠模式</strong>：每晚23:00→关全屋主灯+拉窗帘+空调切26度+开夜灯。</li>
+ </ul>
+ </li>
+ <li><strong>NFC碰一碰</strong>：在门贴一张NFC标签，手机一碰即触发对应场景（碰一下开门灯、再碰一下切睡眠）。iPhone用"快捷指令"自动化，安卓用"钱包"或厂商App均可写入。</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：搭一个"回家模式"
+来试试：搭一个"回家模式"
 
 {class="mt-1"}
 在手机智能家居App的"自动化"里新建一条：触发条件选"到达某地点"（家），动作依次加"开玄关灯""空调设26度""窗帘关闭"。保存后出门逛一圈，回家时看它是否自己亮灯，第一次成功的成就感，比下单新设备还过瘾。
@@ -133,7 +133,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>选购顺序建议
+选购顺序建议
 
 {class="mt-1"}
 先买智能音箱（定生态）→ 再买智能灯泡和插座（低门槛、立刻有反馈）→ 最后买门锁和摄像头（涉及安全，谨慎选）。一次只加一类设备，熟悉后再扩，避免"买回来不会用"。
@@ -150,7 +150,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>这几个坑别踩
+这几个坑别踩
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 别用门锁的"远程开锁"功能给陌生人，优先用临时密码，用完即失效。
@@ -160,7 +160,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Matter+Thread是2023-2026年的统一方向，买新设备优先看这个标识

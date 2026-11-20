@@ -66,7 +66,7 @@ Passare da cuffie con cavo a cuffie Bluetooth è stato forse il miglioramento pi
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>Tecnologia UWB (Ultra-Wideband): una "percezione spaziale" più precisa del Bluetooth
+Tecnologia UWB (Ultra-Wideband): una "percezione spaziale" più precisa del Bluetooth
 
 {class="mt-1"}
 Oltre al Bluetooth, nei nuovi telefoni si nasconde un chip UWB (Ultra-Wideband). La sua capacità è la <strong>misurazione precisa delle distanze e il posizionamento spaziale</strong>: riesce a calcolare quanto lontano e in quale direzione si trova un altro dispositivo, con precisione fino al centimetro. Il Bluetooth ti dice solo "è vicino", UWB ti dice "è a 1,2 m davanti a te sulla sinistra". Applicazioni comuni:
@@ -80,7 +80,7 @@ Oltre al Bluetooth, nei nuovi telefoni si nasconde un chip UWB (Ultra-Wideband).
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio e Auracast: la nuova generazione dell'audio Bluetooth
+LE Audio e Auracast: la nuova generazione dell'audio Bluetooth
 
 {class="mt-1"}
 Il classico audio Bluetooth (A2DP), usato per vent'anni, sta per essere sostituito da <strong>LE Audio</strong> (audio a basso consumo), il nuovo standard audio introdotto con il Bluetooth 5.2:
@@ -110,7 +110,7 @@ Più dispositivi sono collegati, più si amplia la superficie di rischio per la 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: proietta lo schermo del telefono sul TV e crea una scena smart
+Prova: proietta lo schermo del telefono sul TV e crea una scena smart
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Assicurati che telefono e TV siano sulla stessa rete Wi-Fi.
@@ -122,7 +122,7 @@ Più dispositivi sono collegati, più si amplia la superficie di rischio per la 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Caso 1: ottimizzazione dell'autonomia della batteria in pratica
+Caso 1: ottimizzazione dell'autonomia della batteria in pratica
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: utente con Xiaomi 14, scarsa autonomia, batteria esaurita in mezza giornata.

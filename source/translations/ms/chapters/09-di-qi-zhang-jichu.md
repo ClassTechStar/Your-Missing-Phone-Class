@@ -42,7 +42,7 @@ Huawei
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Prinsip Teknologi:
+Prinsip Teknologi:
 
 {class="mt-1"}
 Menggunakan Bluetooth atau frekuensi radio khusus, membina sambungan titik ke titak dalam jarak dekat (biasanya beberapa ratus meter hingga beberapa kilometer).
@@ -115,7 +115,7 @@ Cari "satelit" dalam tetapan, lihat adakah pilihan berkaitan komunikasi satelit.
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Cari "pengesanan kemalangan" atau "SOS kecemasan", semak sama ada telah diaktifkan.
+Cari "pengesanan kemalangan" atau "SOS kecemasan", semak sama ada telah diaktifkan.
 
 {class="mt-1"}
 Jika telefon anda adalah Huawei, lihat sama ada menyokong sambungan peranti SparkLink.
@@ -123,7 +123,7 @@ Jika telefon anda adalah Huawei, lihat sama ada menyokong sambungan peranti Spar
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fahami kaedah penggunaan fungsi-fungsi ini, mungkin berguna pada saat kritikal.
+Fahami kaedah penggunaan fungsi-fungsi ini, mungkin berguna pada saat kritikal.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Bahagian Perisian (Bab 8-14)

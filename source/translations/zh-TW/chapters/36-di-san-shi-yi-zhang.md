@@ -70,7 +70,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手：拍一條30秒的短影片
+動手：拍一條30秒的短影片
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 選一個你擅長的小知識（比如"怎麼把手機字型調大"）。
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小結
+本章小結
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 拍之前想清楚：觀眾是誰、提供什麼價值、在哪個平臺發

@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：打造你的手机娱乐系统
+来动手：打造你的手机娱乐系统
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 在音乐App里下载你最喜欢的3张专辑或歌单，确保离线可听。

@@ -33,7 +33,7 @@ GPT 系列的核心优势在于"均衡"，推理、编程、写作、多模态�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>好消息
+好消息
 
 {class="mt-1"}
 OpenAI 在 2026 年 8 月宣布免费用户默认模型升级为 GPT-5.6 Luna，并开放无限量文本聊天。这意味着你可以零成本体验 GPT 的基础能力，只有在需要更强推理或 API 调用时才需要付费。
@@ -73,7 +73,7 @@ Gemini 的定位是"科学推理和多模态场景的首选"。如果你的项�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：国内使用的现实门槛
+注意：国内使用的现实门槛
 
 {class="mt-1"}
 对于国内开发者来说，GPT、Claude、Gemini 的核心障碍是网络访问。虽然可以通过 Azure 代理、API 聚合平台等方式间接使用，但稳定性和合规性需要自行评估。如果你的项目对数据安全有严格要求，建议优先考虑国产模型。
@@ -102,7 +102,7 @@ DeepSeek V4 系列定价（2026 年 8 月，促销价）
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：DeepSeek 要涨价了
+避坑提醒：DeepSeek 要涨价了
 
 {class="mt-1"}
 DeepSeek 官方已于 2026 年 8 月 6 日公告"计划近期大幅上调 API 定价"，促销价随时可能结束，没用完的额度最好尽快用掉。部分媒体传闻涨幅可能达 30 倍，截至 8 月 14 日官方尚未公布最终调价方案。此外，DeepSeek V4 正式版引入了<strong>峰谷定价机制</strong>——高峰时段调用价格直接翻倍。建议关注官方公告获取最新定价。
@@ -149,31 +149,31 @@ Qwen 的定价采用阶梯策略，从极低成本的 qwen-turbo（输出 0.6 �
 ::: div .figure
 ```html
 <svg aria-hidden="true" style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="620" height="290" rx="8" style="fill:var(--ink-inverse)" />
-      <line x1="70" y1="230" x2="590" y2="230" stroke-width="1.5" style="stroke:var(--muted)" />
-      <line x1="70" y1="230" x2="70" y2="20" stroke-width="1.5" style="stroke:var(--muted)" />
-      <line x1="70" y1="60" x2="590" y2="60" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
-      <line x1="70" y1="116" x2="590" y2="116" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
-      <line x1="70" y1="173" x2="590" y2="173" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
-      <text x="62" y="234" font-size="10" text-anchor="end" style="fill:var(--muted-2)">0</text>
-      <text x="62" y="120" font-size="10" text-anchor="end" style="fill:var(--muted-2)">50</text>
-      <text x="62" y="64" font-size="10" text-anchor="end" style="fill:var(--muted-2)">100</text>
-      <text x="340" y="262" font-size="10.5" text-anchor="middle" style="fill:#374151">输出价格（元/百万Token）</text>
-      <!-- bars: price -->
-      <rect x="95" y="218" width="60" height="12" style="fill:var(--accent-book)" /><text x="125" y="212" font-size="9" text-anchor="middle" style="fill:#374151">6</text><text x="125" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">DeepSeek</text>
-      <rect x="195" y="146" width="60" height="84" style="fill:var(--accent-book)" /><text x="225" y="140" font-size="9" text-anchor="middle" style="fill:#374151">36</text><text x="225" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">Qwen</text>
-      <rect x="295" y="182" width="60" height="48" style="fill:var(--accent-book)" /><text x="325" y="176" font-size="9" text-anchor="middle" style="fill:#374151">24</text><text x="325" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">GLM</text>
-      <rect x="395" y="200" width="60" height="30" style="fill:var(--accent-book)" /><text x="425" y="194" font-size="9" text-anchor="middle" style="fill:#374151">16</text><text x="425" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">Kimi</text>
-      <rect x="495" y="170" width="60" height="60" style="fill:var(--accent-book)" /><text x="525" y="164" font-size="9" text-anchor="middle" style="fill:#374151">30</text><text x="525" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">豆包</text>
-      <!-- scores -->
-      <circle cx="125" cy="118" r="5" style="fill:var(--gold)" /><text x="140" y="114" font-size="9" style="fill:#78350f">87.5</text>
-      <circle cx="225" cy="110" r="5" style="fill:var(--gold)" /><text x="240" y="106" font-size="9" style="fill:#78350f">89.7</text>
-      <circle cx="325" cy="105" r="5" style="fill:var(--gold)" /><text x="340" y="101" font-size="9" style="fill:#78350f">90.5</text>
-      <circle cx="425" cy="112" r="5" style="fill:var(--gold)" /><text x="440" y="108" font-size="9" style="fill:#78350f">88+</text>
-      <circle cx="525" cy="116" r="5" style="fill:var(--gold)" /><text x="540" y="112" font-size="9" style="fill:#78350f">85+</text>
-      <rect x="90" y="30" width="12" height="12" style="fill:var(--accent-book)" /><text x="108" y="41" font-size="9.5" style="fill:#374151">输出价格(越低越好)</text>
-      <circle cx="170" cy="36" r="5" style="fill:var(--gold)" /><text x="182" y="40" font-size="9.5" style="fill:#374151">综合得分(越高越好)</text>
-    </svg>
+ <rect x="0" y="0" width="620" height="290" rx="8" style="fill:var(--ink-inverse)" />
+ <line x1="70" y1="230" x2="590" y2="230" stroke-width="1.5" style="stroke:var(--muted)" />
+ <line x1="70" y1="230" x2="70" y2="20" stroke-width="1.5" style="stroke:var(--muted)" />
+ <line x1="70" y1="60" x2="590" y2="60" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
+ <line x1="70" y1="116" x2="590" y2="116" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
+ <line x1="70" y1="173" x2="590" y2="173" stroke-width="1" stroke-dasharray="4,4" style="stroke:var(--line)" />
+ <text x="62" y="234" font-size="10" text-anchor="end" style="fill:var(--muted-2)">0</text>
+ <text x="62" y="120" font-size="10" text-anchor="end" style="fill:var(--muted-2)">50</text>
+ <text x="62" y="64" font-size="10" text-anchor="end" style="fill:var(--muted-2)">100</text>
+ <text x="340" y="262" font-size="10.5" text-anchor="middle" style="fill:#374151">输出价格（元/百万Token）</text>
+ <!-- bars: price -->
+ <rect x="95" y="218" width="60" height="12" style="fill:var(--accent-book)" /><text x="125" y="212" font-size="9" text-anchor="middle" style="fill:#374151">6</text><text x="125" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">DeepSeek</text>
+ <rect x="195" y="146" width="60" height="84" style="fill:var(--accent-book)" /><text x="225" y="140" font-size="9" text-anchor="middle" style="fill:#374151">36</text><text x="225" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">Qwen</text>
+ <rect x="295" y="182" width="60" height="48" style="fill:var(--accent-book)" /><text x="325" y="176" font-size="9" text-anchor="middle" style="fill:#374151">24</text><text x="325" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">GLM</text>
+ <rect x="395" y="200" width="60" height="30" style="fill:var(--accent-book)" /><text x="425" y="194" font-size="9" text-anchor="middle" style="fill:#374151">16</text><text x="425" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">Kimi</text>
+ <rect x="495" y="170" width="60" height="60" style="fill:var(--accent-book)" /><text x="525" y="164" font-size="9" text-anchor="middle" style="fill:#374151">30</text><text x="525" y="248" font-size="9.5" text-anchor="middle" style="fill:#374151">豆包</text>
+ <!-- scores -->
+ <circle cx="125" cy="118" r="5" style="fill:var(--gold)" /><text x="140" y="114" font-size="9" style="fill:#78350f">87.5</text>
+ <circle cx="225" cy="110" r="5" style="fill:var(--gold)" /><text x="240" y="106" font-size="9" style="fill:#78350f">89.7</text>
+ <circle cx="325" cy="105" r="5" style="fill:var(--gold)" /><text x="340" y="101" font-size="9" style="fill:#78350f">90.5</text>
+ <circle cx="425" cy="112" r="5" style="fill:var(--gold)" /><text x="440" y="108" font-size="9" style="fill:#78350f">88+</text>
+ <circle cx="525" cy="116" r="5" style="fill:var(--gold)" /><text x="540" y="112" font-size="9" style="fill:#78350f">85+</text>
+ <rect x="90" y="30" width="12" height="12" style="fill:var(--accent-book)" /><text x="108" y="41" font-size="9.5" style="fill:#374151">输出价格(越低越好)</text>
+ <circle cx="170" cy="36" r="5" style="fill:var(--gold)" /><text x="182" y="40" font-size="9.5" style="fill:#374151">综合得分(越高越好)</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -186,19 +186,19 @@ Qwen 的定价采用阶梯策略，从极低成本的 qwen-turbo（输出 0.6 �
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-globe mr-1"></i> 你的项目在国内还是国际部署？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">国内 → 选国产模型</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">国际 → 可选海外模型</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 你的项目在国内还是国际部署？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">国内 → 选国产模型</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">国际 → 可选海外模型</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-laptop-code mr-1"></i> 核心任务是编程还是其他？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">编程 → Claude 或 DeepSeek</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">其他 → 继续判断</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 核心任务是编程还是其他？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">编程 → Claude 或 DeepSeek</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">其他 → 继续判断</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-book mr-1"></i> 需要超长上下文(&gt;50万Token)？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">需要 → Gemini 或 Kimi</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">不需要 → 继续判断</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 需要超长上下文(&gt;50万Token)？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">需要 → Gemini 或 Kimi</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">不需要 → 继续判断</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-coins mr-1"></i> 预算敏感吗？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">敏感 → DeepSeek 或 Qwen-turbo</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">不敏感 → GPT-5.6 或 Claude</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 预算敏感吗？</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">敏感 → DeepSeek 或 Qwen-turbo</span><span class="text-gray-400 mx-1">│</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">不敏感 → GPT-5.6 或 Claude</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -207,7 +207,7 @@ Qwen 的定价采用阶梯策略，从极低成本的 qwen-turbo（输出 0.6 �
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：组合策略
+小贴士：组合策略
 
 {class="mt-1"}
 这个决策法不是教条——很多场景需要组合使用多个模型。一个常见的组合策略：用 DeepSeek 或 Qwen 做日常开发（成本低、中文好），用 Claude 做关键架构设计（推理强、幻觉低），用 Gemini 做多模态分析（图像视频处理）。按需切换模型，而不是"一个模型用到死"。
@@ -225,7 +225,7 @@ Token 不是字数，也不是字符数。大模型使用专门的分词器（To
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Token 成本快速估算
+Token 成本快速估算
 
 {class="mt-1"}
 100 万字中文约等于 150 万 Token。用 DeepSeek V4 Flash 处理 100 万字输入 + 100 万字输出，成本约 0.42 美元（约 3 元人民币）；用 Claude Fable 5 处理同样的量，成本约 60 美元（约 434 元人民币）。<strong>这就是为什么模型选择直接影响你的项目成本</strong>。
@@ -246,7 +246,7 @@ Token 不是字数，也不是字符数。大模型使用专门的分词器（To
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>安全提示：API Key = 钱包密码
+安全提示：API Key = 钱包密码
 
 {class="mt-1"}
 API Key 等同于你的钱包密码——任何拿到 Key 的人都可以用你的额度调用模型。因此：<strong>永远不要把 API Key 写在代码中</strong>（用环境变量管理）；永远不要把含 Key 的代码提交到公开的 Git 仓库；永远不要在社交媒体分享含 Key 的截图。如果 Key 泄露了，立即在平台上删除并重新创建。
@@ -269,17 +269,17 @@ import os
 
 # 1. 创建客户端（API Key从环境变量读取）
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 
 # 2. 发送请求
 response = client.chat.completions.create(
-    model="deepseek-chat",  # 指定模型
-    messages=[
-        {"role": "system", "content": "你是一个Python编程助手。"},
-        {"role": "user", "content": "写一个快速排序函数。"}
-    ]
+ model="deepseek-chat", # 指定模型
+ messages=[
+ {"role": "system", "content": "你是一个Python编程助手。"},
+ {"role": "user", "content": "写一个快速排序函数。"}
+ ]
 )
 
 # 3. 获取回复
@@ -304,29 +304,29 @@ print(f"总Token: {response.usage.total_tokens}")
 ```
 # DeepSeek
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 # model="deepseek-chat"
 
 # 通义千问（百炼平台）
 client = OpenAI(
-    api_key=os.environ.get("DASHSCOPE_API_KEY"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+ api_key=os.environ.get("DASHSCOPE_API_KEY"),
+ base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
 )
 # model="qwen-plus"
 
 # 智谱GLM
 client = OpenAI(
-    api_key=os.environ.get("GLM_API_KEY"),
-    base_url="https://open.bigmodel.cn/api/paas/v4"
+ api_key=os.environ.get("GLM_API_KEY"),
+ base_url="https://open.bigmodel.cn/api/paas/v4"
 )
 # model="glm-4"
 
 # OpenAI GPT
 client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY"),
-    # base_url使用默认值即可
+ api_key=os.environ.get("OPENAI_API_KEY"),
+ # base_url使用默认值即可
 )
 # model="gpt-5.6-terra"
 ```
@@ -344,17 +344,17 @@ client = OpenAI(
 ```
 # 流式响应：逐字输出
 stream = client.chat.completions.create(
-    model="deepseek-chat",
-    messages=[
-        {"role": "user", "content": "写一个Python的冒泡排序教程"}
-    ],
-    stream=True  # 开启流式响应
+ model="deepseek-chat",
+ messages=[
+ {"role": "user", "content": "写一个Python的冒泡排序教程"}
+ ],
+ stream=True # 开启流式响应
 )
 
 # 逐块接收并打印
 for chunk in stream:
-    if chunk.choices[0].delta.content is not None:
-        print(chunk.choices[0].delta.content, end="", flush=True)
+ if chunk.choices[0].delta.content is not None:
+ print(chunk.choices[0].delta.content, end="", flush=True)
 # 输出会像打字机一样逐字显示
 ```
 :::
@@ -404,7 +404,7 @@ for chunk in stream:
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：别买"共享 Key"
+避坑提醒：别买"共享 Key"
 
 {class="mt-1"}
 不要在淘宝、闲鱼等平台购买所谓的"共享 API Key"，这些 Key 通常来路不明，可能随时被封号，还有数据泄露风险。始终通过官方平台或正规聚合平台获取 API Key。
@@ -445,69 +445,69 @@ from openai import OpenAI
 
 # 1. 配置（API Key从环境变量读取，绝不硬编码）
 client = OpenAI(
-    api_key=os.environ.get("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com"
+ api_key=os.environ.get("DEEPSEEK_API_KEY"),
+ base_url="https://api.deepseek.com"
 )
 
 def summarize(text: str, max_length: int = 200) -> dict:
-    """生成文本摘要
+ """生成文本摘要
 
-    Args:
-        text: 要摘要的原文
-        max_length: 摘要最大长度（Token数）
+ Args:
+ text: 要摘要的原文
+ max_length: 摘要最大长度（Token数）
 
-    Returns:
-        dict: 包含摘要和Token消耗信息
-    """
-    try:
-        response = client.chat.completions.create(
-            model="deepseek-chat",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "你是一个摘要生成器。"
-                               "请用简洁的中文总结用户提供的文本。"
-                               "摘要不超过3句话。"
-                },
-                {
-                    "role": "user",
-                    "content": f"请摘要以下文本:\n\n{text}"
-                }
-            ],
-            max_tokens=max_length,  # 限制输出长度
-            temperature=0.3  # 低温度=更稳定
-        )
+ Returns:
+ dict: 包含摘要和Token消耗信息
+ """
+ try:
+ response = client.chat.completions.create(
+ model="deepseek-chat",
+ messages=[
+ {
+ "role": "system",
+ "content": "你是一个摘要生成器。"
+ "请用简洁的中文总结用户提供的文本。"
+ "摘要不超过3句话。"
+ },
+ {
+ "role": "user",
+ "content": f"请摘要以下文本:\n\n{text}"
+ }
+ ],
+ max_tokens=max_length, # 限制输出长度
+ temperature=0.3 # 低温度=更稳定
+ )
 
-        return {
-            "success": True,
-            "summary": response.choices[0].message.content,
-            "input_tokens": response.usage.prompt_tokens,
-            "output_tokens": response.usage.completion_tokens,
-            "total_tokens": response.usage.total_tokens
-        }
+ return {
+ "success": True,
+ "summary": response.choices[0].message.content,
+ "input_tokens": response.usage.prompt_tokens,
+ "output_tokens": response.usage.completion_tokens,
+ "total_tokens": response.usage.total_tokens
+ }
 
-    except Exception as e:
-        return {
-            "success": False,
-            "error": str(e)
-        }
+ except Exception as e:
+ return {
+ "success": False,
+ "error": str(e)
+ }
 
 # 2. 使用示例
 if __name__ == "__main__":
-    long_text = """
-    （粘贴一段长文本...）
-    """
+ long_text = """
+ （粘贴一段长文本...）
+ """
 
-    result = summarize(long_text)
+ result = summarize(long_text)
 
-    if result["success"]:
-        print(f"摘要: {result['summary']}")
-        print(f"消耗Token: {result['total_tokens']}")
-        # 估算成本：DeepSeek V4 Flash
-        cost = result['total_tokens'] * 0.000004  # 约0.4分/千Token
-        print(f"预估成本: {cost:.4f}元")
-    else:
-        print(f"出错了: {result['error']}")
+ if result["success"]:
+ print(f"摘要: {result['summary']}")
+ print(f"消耗Token: {result['total_tokens']}")
+ # 估算成本：DeepSeek V4 Flash
+ cost = result['total_tokens'] * 0.000004 # 约0.4分/千Token
+ print(f"预估成本: {cost:.4f}元")
+ else:
+ print(f"出错了: {result['error']}")
 ```
 :::
 
@@ -519,7 +519,7 @@ if __name__ == "__main__":
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：跑通你的第一次 API 调用
+来动手：跑通你的第一次 API 调用
 
 {class="mt-1"}
 注册一个国产模型平台（推荐 DeepSeek 或智谱，都送新用户额度），创建 API Key，把它写进系统环境变量（而不是代码里！），然后运行上面"第一次 API 调用"的代码。看到 AI 的回复打印出来的那一刻，你就跨过了"用 AI"和"造 AI 应用"之间的分界线。
@@ -527,7 +527,7 @@ if __name__ == "__main__":
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 国际三强：GPT-5.6（均衡全能）、Claude（编程天花板+幻觉率仅1%）、Gemini（多模态之王+200万上下文）
 - 国产五强：DeepSeek V4（性价比之王，注意涨价公告）、Qwen3.7（企业级）、GLM-5.1（SWE国产第一）、Kimi K3（超长文本）、豆包（免费入门）

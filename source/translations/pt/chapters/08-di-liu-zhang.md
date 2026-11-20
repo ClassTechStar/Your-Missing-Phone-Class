@@ -54,7 +54,7 @@ Com o rápido desenvolvimento da tecnologia de IA, o modelo cognitivo tradiciona
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① Golpe de Troca de Rosto e Voz por IA
+① Golpe de Troca de Rosto e Voz por IA
 
 {class="mt-1"}
 Criminosos coletam ilegalmente fotos de alta definição publicadas pela vítima em redes sociais ou apenas alguns segundos de amostra de voz, e usam tecnologia de deepfake por IA para clonar "vídeos de parentes/amigos" ou "áudios" suficientemente convincentes. Os roteiros comuns incluem: <strong>acidente de carro repentino, empréstimo de emergência, sequestro</strong>, etc. Esses golpes exploram laços emocionais como afeto familiar e amizade, com <strong>altíssimo poder de engano</strong>.
@@ -62,7 +62,7 @@ Criminosos coletam ilegalmente fotos de alta definição publicadas pela vítima
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② Golpe de Falsa Autoridade / Atendimento ao Cliente
+② Golpe de Falsa Autoridade / Atendimento ao Cliente
 
 {class="mt-1"}
 A tecnologia de IA pode simular com precisão a voz e a entonação de atendentes oficiais, órgãos de segurança pública, judiciário, etc., e até mesmo sintetizar capturas de tela de transferências falsas altamente realistas, documentos oficiais eletrônicos e mandados de prisão. Através da <strong>criação de pânico psicológico ou pressão de autoridade</strong>, induzem a vítima a transferir dinheiro ou ativar o compartilhamento de tela, roubando assim informações da conta.
@@ -70,7 +70,7 @@ A tecnologia de IA pode simular com precisão a voz e a entonação de atendente
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ Golpe de Investimento Financeiro com IA
+③ Golpe de Investimento Financeiro com IA
 
 {class="mt-1"}
 Através de algoritmos de IA, forjam capturas de tela de ganhos falsos "garantidos", interfaces de software de seleção de ações virtuais ou relatórios de análise de investimentos "nível mestre". Usam altos retornos , como isca para vender serviços de investimento caros ou induzir a vítima a transferir fundos para contas de negociação controladas por eles, <strong>e no final fogem com o dinheiro</strong>.
@@ -127,7 +127,7 @@ Câmeras inteligentes, fechaduras inteligentes, alto-falantes inteligentes e out
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Alerta de Caso Real
+Alerta de Caso Real
 
 {class="mt-1"}
 Em 2022, a polícia de uma região divulgou que hackers, ao quebrarem a senha padrão de câmeras domésticas de uma determinada marca (muitos usuários nunca a alteraram), roubaram imagens de quartos de milhares de famílias e as venderam online. <strong>Não alterar a senha padrão = Deixar a porta de casa escancarada</strong>.
@@ -170,7 +170,7 @@ Se perder o telefone, não entre em pânico. Siga esta ordem:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>O que NUNCA fazer
+O que NUNCA fazer
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - Usar senhas fracas como data de aniversário / 123456 / qwerty;
@@ -182,7 +182,7 @@ Se perder o telefone, não entre em pânico. Siga esta ordem:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Tente ativar e simular o "Bloqueio Remoto"
+Tente ativar e simular o "Bloqueio Remoto"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Certifique-se de que sua função "Buscar Meu Dispositivo" está ativada.

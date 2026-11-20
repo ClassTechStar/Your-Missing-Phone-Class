@@ -44,7 +44,7 @@ Un rappel important : la photothèque iCloud n'est pas un « disque réseau »: 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+ : la trinité de confidentialité réservée aux utilisateurs payants
+iCloud+ : la trinité de confidentialité réservée aux utilisateurs payants
 
 {class="mt-1"}
 Il suffit de passer à n'importe quel palier iCloud payant (50 Go/200 Go/2 To, etc.) pour devenir automatiquement <strong>iCloud+</strong> utilisateur et débloquer trois fonctions de protection de la vie privée :
@@ -60,7 +60,7 @@ Remarque : Private Relay n'est pas disponible dans certains pays/régions, les u
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>Protection avancée des données iCloud (ADP) — le véritable chiffrement de bout en bout
+Protection avancée des données iCloud (ADP) — le véritable chiffrement de bout en bout
 
 {class="mt-1"}
 Fin 2022, Apple a lancé <strong>Protection avancée des données iCloud (Advanced Data Protection, ADP)</strong>, étendant le chiffrement de bout en bout (E2EE) des quelques données de santé et de mots de passe à <strong>la grande majorité des données iCloud</strong> — photos, notes, sauvegardes iCloud, informations sur l'appareil, etc., soit 23 catégories de données au total.
@@ -99,7 +99,7 @@ Un scénario très pratique : configurez le partage familial sur le téléphone 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Les conséquences d'un piratage de compte sont plus graves que vous ne le pensez
+Les conséquences d'un piratage de compte sont plus graves que vous ne le pensez
 
 {class="mt-1"}
 Si un hacker obtient votre mot de passe de compte, il peut : verrouiller à distance votre téléphone et extorquer une rançon, consulter vos photos et contacts, utiliser vos moyens de paiement pour acheter. Plus problématique encore, si votre compte est lié à trop de choses, la récupération du compte elle-même est un cauchemar. Donc, l'authentification à deux facteurs, activez-la maintenant.
@@ -107,7 +107,7 @@ Si un hacker obtient votre mot de passe de compte, il peut : verrouiller à dist
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pratique : faites un check-up complet de votre compte
+Pratique : faites un check-up complet de votre compte
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez les réglages du téléphone, allez sur la page du compte, confirmez que l'authentification à deux facteurs est activée.

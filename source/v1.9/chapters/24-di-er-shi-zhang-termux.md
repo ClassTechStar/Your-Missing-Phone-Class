@@ -136,38 +136,38 @@ Termux的核心应用程序可以通过几个可选的插件应用进行扩展�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">插件名称</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能描述</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向命令行程序公开Android API功能</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允许在设备启动时运行脚本</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提供浮动终端窗口</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">为终端启用颜色方案和字体自定义</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">将Termux脚本与Tasker自动化应用集成</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允许从主屏幕小部件运行脚本</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">插件名称</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能描述</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向命令行程序公开Android API功能</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允许在设备启动时运行脚本</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提供浮动终端窗口</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">为终端启用颜色方案和字体自定义</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">将Termux脚本与Tasker自动化应用集成</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允许从主屏幕小部件运行脚本</td>
+ </tr>
+ </tbody>
 </table>
 ```
 
@@ -179,7 +179,7 @@ Termux的核心应用程序可以通过几个可选的插件应用进行扩展�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>重要提示
+重要提示
 
 {class="mt-1"}
 Termux及其插件必须从同一来源安装，因为它们共享相同的sharedUserId。混合来自不同来源（如F-Droid和GitHub）的安装将导致安装错误。
@@ -211,40 +211,40 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">组合</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">效果</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候用</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量减 + C</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ctrl + C</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中断卡住的命令</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量减 + L</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ctrl + L</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清屏</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量加 + E</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Esc</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">退出 vim 等需要 Esc 的场景</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量加 + T</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tab</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路径与文件名补全</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量加 + Q</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">显示或隐藏扩展按键行</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想要常驻的方向键和按键时</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">组合</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">效果</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候用</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量减 + C</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ctrl + C</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中断卡住的命令</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量减 + L</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ctrl + L</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清屏</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量加 + E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Esc</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">退出 vim 等需要 Esc 的场景</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量加 + T</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tab</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路径与文件名补全</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音量加 + Q</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">显示或隐藏扩展按键行</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想要常驻的方向键和按键时</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -318,30 +318,30 @@ GitHub Releases 的走法：浏览器打开 github.com/termux/termux-app，进 R
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">是什么</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">打个比方</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家目录（~）</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你自己的地盘，脚本、文档、下载的东西都在这</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你的卧室</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">$PREFIX</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整套软件系统的根，装进来的程序全在它下面</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整栋楼的公共设施层</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">软件源</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg 下载软件的仓库地址清单</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小区门口的进货渠道</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">是什么</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">打个比方</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">家目录（~）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你自己的地盘，脚本、文档、下载的东西都在这</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">你的卧室</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">$PREFIX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整套软件系统的根，装进来的程序全在它下面</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整栋楼的公共设施层</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">软件源</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg 下载软件的仓库地址清单</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小区门口的进货渠道</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -506,55 +506,55 @@ bootstrap 跑完，Termux 只是"能用"，还没"通"到手机，默认情况�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候用</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg update</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷新软件源列表</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装东西之前先跑</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg upgrade</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">升级已安装的包</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每隔一阵跑一次</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg search 关键词</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">搜索软件包</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不确定包名时</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg show 包名</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看包的详细信息</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装之前确认</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg install 包名</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安装</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主力命令</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg uninstall 包名</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不用了就清掉</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg list-installed</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">列出已安装的包</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清点家底</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg reinstall 包名</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重装</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">配置改坏了救场</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">命令</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候用</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg update</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷新软件源列表</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装东西之前先跑</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg upgrade</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">升级已安装的包</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每隔一阵跑一次</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg search 关键词</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">搜索软件包</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不确定包名时</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg show 包名</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看包的详细信息</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">装之前确认</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg install 包名</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安装</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主力命令</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg uninstall 包名</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不用了就清掉</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg list-installed</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">列出已安装的包</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清点家底</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg reinstall 包名</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重装</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">配置改坏了救场</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -576,35 +576,35 @@ Linux 的 rm 没有回收站，删了就是删了。两条习惯能救你很多�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">看到的报错</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">多半的原因</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么办</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">command not found</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">包没装，或命令拼错</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg search 后安装；检查拼写</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Permission denied</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限不够</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想想是不是在动沙盒外的东西；Termux 没有 sudo</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Failed to fetch / 404</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">源数据过期或网络问题</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先 pkg update；不行就 termux-change-repo 换镜像</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">No space left on device</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">空间满了</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载不用的包，检查手机剩余空间</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">看到的报错</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">多半的原因</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么办</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">command not found</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">包没装，或命令拼错</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">pkg search 后安装；检查拼写</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Permission denied</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限不够</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">想想是不是在动沙盒外的东西；Termux 没有 sudo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Failed to fetch / 404</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">源数据过期或网络问题</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先 pkg update；不行就 termux-change-repo 换镜像</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">No space left on device</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">空间满了</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">卸载不用的包，检查手机剩余空间</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -771,7 +771,7 @@ Termux能干的事很多，但它本质上是一个能跑任意命令的终端�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 Termux适合学命令、做临时脚本、看懂日志，不适合当服务器或存secrets。
@@ -835,40 +835,40 @@ Termux适合学命令、做临时脚本、看懂日志，不适合当服务器�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">教程里出现的</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux 的现实</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么办</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sudo 命令</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有，也不需要</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">删掉 sudo，直接跑后面的部分</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">apt 命令</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与 pkg 等价</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">当成 pkg 用</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">systemctl 管理服务</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有 systemd 这一层</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务就是普通进程；开机自启用 Termux:Boot</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图形界面操作</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认纯命令行</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">真需要就另配 VNC，以官方文档为准</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">/etc、/usr 等系统路径</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">都对应到沙盒的 $PREFIX 下</td>
-      <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把教程路径里的系统目录换到 $PREFIX 下对号入座</td>
-    </tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">教程里出现的</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Termux 的现实</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">怎么办</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">sudo 命令</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有，也不需要</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">删掉 sudo，直接跑后面的部分</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">apt 命令</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与 pkg 等价</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">当成 pkg 用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">systemctl 管理服务</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有 systemd 这一层</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务就是普通进程；开机自启用 Termux:Boot</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图形界面操作</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">默认纯命令行</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">真需要就另配 VNC，以官方文档为准</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">/etc、/usr 等系统路径</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">都对应到沙盒的 $PREFIX 下</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把教程路径里的系统目录换到 $PREFIX 下对号入座</td>
+ </tr>
+ </tbody>
 </table>
 ```
 :::
@@ -999,7 +999,7 @@ Termux的最新稳定版本是v0.118.3（以 GitHub Releases 页面为准），�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>总结
+总结
 
 {class="mt-1"}
 Termux将强大的Linux终端体验带到了Android设备上，让手机成为一台便携的开发和学习工具。无论是开发者、系统管理员还是技术爱好者，都可以利用Termux在移动设备上享受完整的命令行体验，实现"口袋里的Linux"这一理念。
@@ -1007,7 +1007,7 @@ Termux将强大的Linux终端体验带到了Android设备上，让手机成为�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：在手机上跑通第一条Linux命令
+来动手：在手机上跑通第一条Linux命令
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 从F-Droid下载并安装Termux，首次启动等待初始化完成。

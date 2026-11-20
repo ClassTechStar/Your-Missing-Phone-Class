@@ -22,16 +22,16 @@ A program is just "data + logic." A variable is simply a name you give to a piec
 :::
 
 ```
-let name = "Alex"        // let: constant (the recommended default)
-var age = 18             // var: variable (can change later)
+let name = "Alex" // let: constant (the recommended default)
+var age = 18 // var: variable (can change later)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var can change
-// name = "Sam"         // <i class="fas fa-times-circle mr-1"></i> let can't be changed — compile error
+age = 19 // var can change
+// name = "Sam" // let can't be changed — compile error
 
-let score: Int = 100     // you can also declare the type explicitly
-let pi = 3.14            // omitted, it's still inferred automatically
+let score: Int = 100 // you can also declare the type explicitly
+let pi = 3.14 // omitted, it's still inferred automatically
 
-print("Hello, \(name)")   // string interpolation: backslash + parentheses
+print("Hello, \(name)") // string interpolation: backslash + parentheses
 ```
 :::
 
@@ -64,20 +64,20 @@ This is the most important concept in Swift, bar none. In one sentence: when a v
 :::
 
 ```
-var name: String = Alex   // a regular type: never allowed to be nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> compile error — it stops you outright
+var name: String = Alex // a regular type: never allowed to be nil
+// name = nil // compile error — it stops you outright
 
-var nickname: String? = nil  // add a question mark: nil is allowed (an optional)
+var nickname: String? = nil // add a question mark: nil is allowed (an optional)
 nickname = "Al"
 
 // To use an optional, you must "unwrap" it:
-if let n = nickname {        // if let: safe unwrapping
-    print("Hello, \(n)")
+if let n = nickname { // if let: safe unwrapping
+ print("Hello, \(n)")
 } else {
-    print("No nickname yet")
+ print("No nickname yet")
 }
 
-let len = nickname?.count ?? 0   // ?? provides a default (the nil-coalescing operator)
+let len = nickname?.count ?? 0 // ?? provides a default (the nil-coalescing operator)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ A function is a named piece of logic, like a button on a remote control. A closu
 ```
 // Functions: name first, then parameters and return type
 func greet(name: String) -> String {
-    return "Hello, \(name)!"
+ return "Hello, \(name)!"
 }
-print(greet(name: "Alex"))     // the argument label is required at the call site
+print(greet(name: "Alex")) // the argument label is required at the call site
 
 // Closures: defined inline, quick and direct
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = the current element
+let doubled = numbers.map { $0 * 2 } // $0 = the current element
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // filter
+let big = numbers.filter { $0 > 2 } // filter
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ Swift's official preference is clear: prefer structs, and use classes only when 
 ```
 // A struct: a box for data
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // Structs come with a built-in "memberwise initializer": you can create one directly
+ // Structs come with a built-in "memberwise initializer": you can create one directly
 }
 let r = Record(amount: 25.5, category: "Food", date: Date())
 
 // A protocol: a contract for "which abilities are required"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // conforming to a protocol = promising to fulfill its requirements
+struct Record: Identifiable { ... } // conforming to a protocol = promising to fulfill its requirements
 ```
 :::
 

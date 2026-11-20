@@ -32,22 +32,22 @@ Most phones now have a built-in "Easy Mode" (some call it "Care Mode," "Senior M
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Brand</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Mode Name</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">How to Enable</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accessibility (no separate Easy Mode, but items can be enlarged individually)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Display &amp; Brightness &gt; Text Size, drag to max. Then go to "Accessibility &gt; Display &amp; Text Size" and enable "Bold Text" and "Button Shapes"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Wireless Charging Protocols</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System &amp; Updates &gt; Easy Mode &gt; Enable</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimalist Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Additional Settings &gt; Minimalist Mode &gt; Enable</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Special Features &gt; Easy Mode</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Desktop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Home Screen, Lock Screen &amp; Wallpaper &gt; Easy Desktop</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Display &gt; Easy Mode</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Brand</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Mode Name</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">How to Enable</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accessibility (no separate Easy Mode, but items can be enlarged individually)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Display &amp; Brightness &gt; Text Size, drag to max. Then go to "Accessibility &gt; Display &amp; Text Size" and enable "Bold Text" and "Button Shapes"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Wireless Charging Protocols</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System &amp; Updates &gt; Easy Mode &gt; Enable</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimalist Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Additional Settings &gt; Minimalist Mode &gt; Enable</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Special Features &gt; Easy Mode</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Desktop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Home Screen, Lock Screen &amp; Wallpaper &gt; Easy Desktop</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Easy Mode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Display &gt; Easy Mode</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Some elderly relatives don't want to use Easy Mode, they think it looks too "old
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Help Elderly Relatives "Renovate" Their Phone
+Hands-On: Help Elderly Relatives "Renovate" Their Phone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Enable Easy Mode (follow the brand table above).
@@ -96,7 +96,7 @@ Elderly people are prime targets for telecom fraud. It's not that they're less v
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Anti-Fraud Mantra for Elderly Relatives (Print and Stick Next to the Phone)
+Anti-Fraud Mantra for Elderly Relatives (Print and Stick Next to the Phone)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Stranger calls asking for money transfer → Hang up!</strong>
@@ -151,7 +151,7 @@ VIII. Health-Related Features — A Phone Is More Than a Communication Tool
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Enable Easy Mode or manually enlarge fonts/icons first, once the environment is set up, most problems disappear

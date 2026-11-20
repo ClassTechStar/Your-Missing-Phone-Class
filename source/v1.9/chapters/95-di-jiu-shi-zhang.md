@@ -282,7 +282,7 @@ DeepL 走的不是"广"，是"精"。同样一段英文或德文，丢给它和�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：离线包是"翻译的地基"
+小贴士：离线包是"翻译的地基"
 
 {class="mt-1"}
 所有离线能力都要出发前准备好：Google 翻译的语言包、苹果翻译的目标语言、有道的离线包，各自下载并开飞行模式验证一次。注意语言包、相机取词、语音识别往往是三个独立的下载项，缺一个就少一样能力，你要拍照翻菜单，就别只下了文本语言包。翻译 App 的离线包通常 100-300MB/语种，比想象中大，记得留好空间。
@@ -387,7 +387,7 @@ DeepL 走的不是"广"，是"精"。同样一段英文或德文，丢给它和�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：搭好你的"语言工具箱"
+来动手：搭好你的"语言工具箱"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 按目的地选 1 个主力（相机强）+1 个对话（系统翻译），都下好离线包，飞行模式实测拍照翻菜单。
@@ -863,7 +863,7 @@ AI 大模型恰好擅长这个。落地前问它："在某个国家，餐厅用�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 菜单路牌用相机翻译，对话用系统级对话模式（先看清语言方向）
 - 复杂沟通交给 AI 助手整段生成，更得体

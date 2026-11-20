@@ -77,12 +77,12 @@ Intent (เจตนา) คือ "ตั๋ว" ที่ใช้สื่อ
 ```
 // แบบที่หนึ่ง: Intent แบบชัด—ระบุปลายทางเองเลย
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "ซานผวน")     // เหมือนฝาก "สัมภาระ" ขึ้นรถ (ข้อมูล)
+intent.putExtra("name", "ซานผวน") // เหมือนฝาก "สัมภาระ" ขึ้นรถ (ข้อมูล)
 startActivity(intent)
 
 // แบบที่สอง: Intent แบบนัย—บอกแค่จะทำอะไร ระบบหาตัวทำเอง
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // ระบบจะเปิดเบราว์เซอร์/หรือให้คุณเลือก
+startActivity(web) // ระบบจะเปิดเบราว์เซอร์/หรือให้คุณเลือก
 ```
 :::
 
@@ -101,16 +101,16 @@ startActivity(web)   // ระบบจะเปิดเบราว์เซ�
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "ไม่ทราบ")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "ไม่ทราบ")
+ }
 }
 
 // เปลี่ยนหน้าในหน้าจอ:
-navController.navigate("detail/ซานผวน")     // พร้อมพารามิเตอร์
-navController.popBackStack()              // กลับหน้าก่อนหน้า
+navController.navigate("detail/ซานผวน") // พร้อมพารามิเตอร์
+navController.popBackStack() // กลับหน้าก่อนหน้า
 ```
 :::
 

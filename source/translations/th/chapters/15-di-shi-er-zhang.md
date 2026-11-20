@@ -61,7 +61,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือ: สร้างระบบความบันเทิงบนมือถือของคุณ
+ลงมือ: สร้างระบบความบันเทิงบนมือถือของคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ดาวน์โหลดอัลบั้มหรือเพลย์ลิสต์โปรด 3 ชุดในแอปเพลง ให้แน่ใจว่าฟังออฟไลน์ได้

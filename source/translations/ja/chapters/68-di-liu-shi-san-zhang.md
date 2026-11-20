@@ -35,20 +35,20 @@ SwiftUIの状態管理ツール全体図（2026年、@Observableが主流）
 import Observation
 
 @Observable
-class CounterModel {                 // ビューモデル
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // ビューモデル
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // モデルを保持
+ @State private var model = CounterModel() // モデルを保持
 
-    var body: some View {
-        VStack {
-            Text("\(model.count)回押しました")
-            Button("押して") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("\(model.count)回押しました")
+ Button("押して") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ iOS 16以降、複数ページのナビゲーションにはNavigationStackを�
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("たろうの家計簿") {
-                    DetailView(name: "たろうの家計簿")   // 行き先のページ
-                }
-                NavigationLink("はなこの家計簿") {
-                    DetailView(name: "はなこの家計簿")
-                }
-            }
-            .navigationTitle("家計簿リスト")   // 上の大きな見出し
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("たろうの家計簿") {
+ DetailView(name: "たろうの家計簿") // 行き先のページ
+ }
+ NavigationLink("はなこの家計簿") {
+ DetailView(name: "はなこの家計簿")
+ }
+ }
+ .navigationTitle("家計簿リスト") // 上の大きな見出し
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("\(name) の詳細ページ")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("\(name) の詳細ページ")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ NavigationLinkは「タップできる移動リンク」です。navigationTitle
 ```
 // 1. 下から半画面/全画面で表示（入力フォームの定番）
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("記帳する") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // 表示される入力ページ
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("記帳する") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // 表示される入力ページ
+ }
+ }
 }
 
 // 2. 下部タブバー（アプリの「骨格」）
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("家計簿", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("統計", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("設定", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("家計簿", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("統計", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("設定", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ iOSでいちばんよく使い、いちばん「Appleらしい」コンポーネ
 
 ```
 struct RecordListView: View {
-    @State private var records = ["昼ごはん 25.5", "地下鉄 6.0", "給料 +8000"]
+ @State private var records = ["昼ごはん 25.5", "地下鉄 6.0", "給料 +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // 左スワイプで削除
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // 左スワイプで削除
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ AndroidのActivityのライフサイクルと同じように、iOSアプリに�
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("前面に戻る。更新を再開")
-            case .inactive:  print("移行中（着信/バックグラウンド切替の瞬間）")
-            case .background: print("バックグラウンドへ。下書きを保存")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("前面に戻る。更新を再開")
+ case .inactive: print("移行中（着信/バックグラウンド切替の瞬間）")
+ case .background: print("バックグラウンドへ。下書きを保存")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

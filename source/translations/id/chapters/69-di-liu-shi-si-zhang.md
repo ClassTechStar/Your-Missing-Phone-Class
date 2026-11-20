@@ -63,46 +63,46 @@ import SwiftData
 // 1. @Model: kelas ini otomatis menjadi "tabel"
 @Model
 class Record {
-    var amount: Double
-    var category: String
-    var note: String
-    var date: Date
+ var amount: Double
+ var category: String
+ var note: String
+ var date: Date
 
-    init(amount: Double, category: String, note: String, date: Date) {
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(amount: Double, category: String, note: String, date: Date) {
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 
 // 2. Pasang kontainer di titik masuk aplikasi
 @main
 struct MyApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(for: Record.self)   // database siap
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .modelContainer(for: Record.self) // database siap
+ }
 }
 
 // 3. Di view pakai @Query untuk baca, @Environment untuk tulis
 struct RecordListView: View {
-    @Query(sort: \Record.date, order: .reverse) var records: [Record]
-    @Environment(\.modelContext) private var context
+ @Query(sort: \Record.date, order: .reverse) var records: [Record]
+ @Environment(\.modelContext) private var context
 
-    var body: some View {
-        List(records) { r in
-            Text("\(r.category) \(r.amount) yuan")
-        }
-    }
+ var body: some View {
+ List(records) { r in
+ Text("\(r.category) \(r.amount) yuan")
+ }
+ }
 
-    func add(amount: Double, category: String) {
-        let r = Record(amount: amount, category: category, note: "", date: Date())
-        context.insert(r)     // simpan
-        try? context.save()   // tulis ke disk
-    }
+ func add(amount: Double, category: String) {
+ let r = Record(amount: amount, category: category, note: "", date: Date())
+ context.insert(r) // simpan
+ try? context.save() // tulis ke disk
+ }
 }
 ```
 :::
@@ -121,9 +121,9 @@ Data dari server sebagian besar berupa teks JSON. Protokol Codable di Swift memb
 ```
 // JSON: {"name":"Beijing","main":{"temp":26.5},"weather":[{"description":"Cerah"}]}
 struct WeatherResponse: Codable {
-    let name: String
-    let main: Main
-    let weather: [Weather]
+ let name: String
+ let main: Main
+ let weather: [Weather]
 }
 struct Main: Codable { let temp: Double }
 struct Weather: Codable { let description: String }
@@ -132,7 +132,7 @@ struct Weather: Codable { let description: String }
 let decoder = JSONDecoder()
 let data = jsonString.data(using: .utf8)!
 let result = try decoder.decode(WeatherResponse.self, from: data)
-print(result.weather[0].description)   // "Cerah"
+print(result.weather[0].description) // "Cerah"
 ```
 :::
 
@@ -149,23 +149,23 @@ Untuk koneksi internet, iOS memakai URLSession bawaan sistem; dikombinasikan den
 
 ```
 struct WeatherService {
-    // Fungsi async: async artinya "aku perlu menunggu", throws artinya "bisa gagal"
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        let url = URL(string:
-            "https://api.example.com/weather?city=\(city)")!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ // Fungsi async: async artinya "aku perlu menunggu", throws artinya "bisa gagal"
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ let url = URL(string:
+ "https://api.example.com/weather?city=\(city)")!
+ let (data, _) = try await URLSession.shared.data(from: url)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 
 // Titik pemanggilan (di dalam .task):
 .task {
-    do {
-        let weather = try await service.fetchWeather(city: "Beijing")
-        // Perbarui tampilan……
-    } catch {
-        print("Terjadi kesalahan: \(error)")
-    }
+ do {
+ let weather = try await service.fetchWeather(city: "Beijing")
+ // Perbarui tampilan……
+ } catch {
+ print("Terjadi kesalahan: \(error)")
+ }
 }
 ```
 :::
@@ -193,18 +193,18 @@ Koneksi putus, timeout, 404, server 500… kesalahan yang berbeda butuh pesan ya
 
 ```
 func friendlyMessage(_ error: Error) -> String {
-    if let urlError = error as? URLError {
-        switch urlError.code {
-        case .notConnectedToInternet: return "Koneksi terputus, cek dulu ya?"
-        case .timedOut:               return "Permintaan habis waktu, coba lagi nanti ya?"
-        case .cannotFindHost:         return "Server tidak ditemukan"
-        default:                      return "Ada masalah jaringan: \(urlError.code)"
-        }
-    }
-    if let d = error as? DecodingError {
-        return "Format data tidak cocok (mungkin API-nya berubah)"
-    }
-    return "Terjadi kesalahan: \(error.localizedDescription)"
+ if let urlError = error as? URLError {
+ switch urlError.code {
+ case .notConnectedToInternet: return "Koneksi terputus, cek dulu ya?"
+ case .timedOut: return "Permintaan habis waktu, coba lagi nanti ya?"
+ case .cannotFindHost: return "Server tidak ditemukan"
+ default: return "Ada masalah jaringan: \(urlError.code)"
+ }
+ }
+ if let d = error as? DecodingError {
+ return "Format data tidak cocok (mungkin API-nya berubah)"
+ }
+ return "Terjadi kesalahan: \(error.localizedDescription)"
 }
 ```
 :::

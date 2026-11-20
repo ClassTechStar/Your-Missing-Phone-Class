@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: اصنع "قائمة متطلبات تقنية" لهاتفك القادم
+جرّب: اصنع "قائمة متطلبات تقنية" لهاتفك القادم
 
 {class="mt-1"}
 خذ ورقة، صنّف بالثلاث فئات "ضروري/إضافي/غير ضروري"، اذكر احتياجاتك في AI والأقمار الصناعية والشاشات القابلة للطي وWi-Fi 7 والشحن السريع وسعة البطارية. هكذا في المرة القادمة في المتجر، تستطيع الحكم بسرعة على "نقاط البيع" التي يروجها البائع: هل هي احتياج حقيقي أم دفع للبيع. مثلاً:
@@ -93,7 +93,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ثلاثة معايير لحكم هاتف AI: نموذج كبير جانبي، NPU TOPS، سيناريو AI Agent

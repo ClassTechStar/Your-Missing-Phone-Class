@@ -32,22 +32,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μάρκα</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Όνομα λειτουργίας</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">άνοιγμα</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Προσβασιμότητα (δεν υπάρχει ξεχωριστή απλή λειτουργία, αλλά μπορεί να ρυθμιστεί ανά στοιχείο)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; εμφάνιση &gt; . "Λειτουργία &gt; εμφάνιση """""</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Σύστημα ενημέρωση &gt; &gt; ενεργοποίηση</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υπερ-απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Ρυθμίσεις &gt; &gt; ενεργοποίηση</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Λειτουργία &gt;</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή επιφάνεια εργασίας</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; , &gt;</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; εμφάνιση &gt;</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μάρκα</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Όνομα λειτουργίας</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">άνοιγμα</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Προσβασιμότητα (δεν υπάρχει ξεχωριστή απλή λειτουργία, αλλά μπορεί να ρυθμιστεί ανά στοιχείο)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; εμφάνιση &gt; . "Λειτουργία &gt; εμφάνιση """""</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Σύστημα ενημέρωση &gt; &gt; ενεργοποίηση</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υπερ-απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Ρυθμίσεις &gt; &gt; ενεργοποίηση</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; Λειτουργία &gt;</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή επιφάνεια εργασίας</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; , &gt;</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απλή λειτουργία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ρυθμίσεις &gt; εμφάνιση &gt;</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πρακτική:""
+Πρακτική:""
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. άνοιγμα(Μάρκα).
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>""(Εκτύπωση)
+""(Εκτύπωση)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Άγνωστο τηλέφωνο ζητά μεταφορά χρημάτων → Κλείστε!</strong>
@@ -151,7 +151,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - χειροκίνητο/,

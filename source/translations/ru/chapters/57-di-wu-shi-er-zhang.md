@@ -77,12 +77,12 @@ Intent («намерение»): «билет» для общения компо
 ```
 // Способ 1: явный Intent — прямо указываем, на какой экран идти
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", Иван)     // везём с собой «багаж» (данные)
+intent.putExtra("name", Иван) // везём с собой «багаж» (данные)
 startActivity(intent)
 
 // Способ 2: неявный Intent — говорим, что сделать, система ищет исполнителя
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // система откроет браузер / или предложит выбрать
+startActivity(web) // система откроет браузер / или предложит выбрать
 ```
 :::
 
@@ -101,16 +101,16 @@ startActivity(web)   // система откроет браузер / или п
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "Неизвестно")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "Неизвестно")
+ }
 }
 
 // Переход внутри экрана:
-navController.navigate("detail/Иван")     // с аргументами
-navController.popBackStack()              // назад
+navController.navigate("detail/Иван") // с аргументами
+navController.popBackStack() // назад
 ```
 :::
 

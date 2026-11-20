@@ -39,12 +39,12 @@ Definiere zuerst, wie eine Buchung aussieht – die Felder sollen reichen, aber 
 ```
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val type: String,        // "income" Einnahme | "expense" Ausgabe
-    val amount: Double,      // Betrag (Yuan)
-    val category: String,    // Kategorie: Essen, Verkehr, Gehalt …
-    val note: String = "",   // Notiz (optional)
-    val date: String         // "2026-08-15"
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val type: String, // "income" Einnahme | "expense" Ausgabe
+ val amount: Double, // Betrag (Yuan)
+ val category: String, // Kategorie: Essen, Verkehr, Gehalt …
+ val note: String = "", // Notiz (optional)
+ val date: String // "2026-08-15"
 )
 ```
 :::
@@ -59,20 +59,20 @@ In den Dao kommen zwei "Statistik-Abfragen" – sie sind die Seele des Haushalts
 ```
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
-    fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
+ @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+ fun getAll(): Flow&lt;List&lt;Record&gt;&gt;
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
-    suspend fun monthIncome(month: String): Double   // month hat das Format "2026-08"
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+ suspend fun monthIncome(month: String): Double // month hat das Format "2026-08"
 
-    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
-    suspend fun monthExpense(month: String): Double
+ @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+ suspend fun monthExpense(month: String): Double
 }
 ```
 :::
@@ -91,7 +91,7 @@ Die Oberfläche direkt auf die Datenbank zugreifen lassen? Läuft zwar – aber 
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View (Compose-Oberfläche)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel (Zustand und Logik)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model (Datenlayer mit Room)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View (Compose-Oberfläche)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel (Zustand und Logik)</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model (Datenlayer mit Room)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -106,21 +106,21 @@ Abbildung 5: Die drei MVVM-Schichten – Daten fließen in eine Richtung, keine 
 ```
 class RecordViewModel(private val dao: RecordDao) : ViewModel() {
 
-    // wandelt den Flow in einen von der UI beobachtbaren Zustand
-    val records = dao.getAll()
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+ // wandelt den Flow in einen von der UI beobachtbaren Zustand
+ val records = dao.getAll()
+ .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    // Nutzeraktionen: suspend-Funktionen aufrufen
-    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
-        viewModelScope.launch {
-            dao.insert(Record(type = type, amount = amount,
-                category = category, note = note, date = date))
-        }
-    }
+ // Nutzeraktionen: suspend-Funktionen aufrufen
+ fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+ viewModelScope.launch {
+ dao.insert(Record(type = type, amount = amount,
+ category = category, note = note, date = date))
+ }
+ }
 
-    fun deleteRecord(record: Record) {
-        viewModelScope.launch { dao.delete(record) }
-    }
+ fun deleteRecord(record: Record) {
+ viewModelScope.launch { dao.delete(record) }
+ }
 }
 ```
 :::
@@ -139,34 +139,34 @@ Für die Listenseite nimm LazyColumn (träge ladende Liste) – selbst bei riesi
 ```
 @Composable
 fun RecordListScreen(vm: RecordViewModel) {
-    val records by vm.records.collectAsState()
+ val records by vm.records.collectAsState()
 
-    Column {
-        // oben die Zusammenfassungs-Karte (Einnahmen - Ausgaben = Saldo)
-        SummaryCard(records)
+ Column {
+ // oben die Zusammenfassungs-Karte (Einnahmen - Ausgaben = Saldo)
+ SummaryCard(records)
 
-        // Liste der Buchungen
-        LazyColumn {
-            items(records, key = { it.id }) { record -&gt;
-                RecordRow(record) { vm.deleteRecord(record) }
-            }
-        }
+ // Liste der Buchungen
+ LazyColumn {
+ items(records, key = { it.id }) { record -&gt;
+ RecordRow(record) { vm.deleteRecord(record) }
+ }
+ }
 
-        // schwebender Button "Ausgabe erfassen" → öffnet den Eingabedialog
-        FloatingActionButton(onClick = { showAddDialog = true }) {
-            Text("+")
-        }
-    }
+ // schwebender Button "Ausgabe erfassen" → öffnet den Eingabedialog
+ FloatingActionButton(onClick = { showAddDialog = true }) {
+ Text("+")
+ }
+ }
 }
 
 @Composable
 fun RecordRow(record: Record, onDelete: () -&gt; Unit) {
-    Row(Modifier.fillMaxWidth().padding(12.dp)) {
-        Text(record.category, fontWeight = FontWeight.Bold)
-        Spacer(Modifier.weight(1f))
-        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
-             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
-    }
+ Row(Modifier.fillMaxWidth().padding(12.dp)) {
+ Text(record.category, fontWeight = FontWeight.Bold)
+ Spacer(Modifier.weight(1f))
+ Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+ color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+ }
 }
 ```
 :::

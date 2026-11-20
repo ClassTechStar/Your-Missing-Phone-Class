@@ -86,119 +86,119 @@ IV. Резервное копирование и восстановление д
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Формат</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Тип</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Особенности</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Рекомендуемое приложение</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Изображение</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие с потерями, малый размер, лучшая совместимость. Формат по умолчанию для фото с телефона.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Галерея / любой просмотрщик</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Изображение</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие без потерь, поддержка прозрачного фона. Часто используется для скриншотов и иконок. Размер больше JPG.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Галерея / любой просмотрщик</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие с потерями, малый размер, отличная совместимость. Самый универсальный аудиоформат.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Любой музыкальный плеер</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие без потерь, качество как у CD, размер в 3-5 раз больше MP3. Выбор аудиофилов.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Музыкальный плеер / проф. приложение</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Несжатое исходное аудио, лучшее качество, но огромный размер. Часто в профессиональной записи.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Музыкальный плеер</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Кодек AAC, при том же битрейте качество лучше MP3. Часто в экосистеме Apple.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music / музыкальный плеер</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Видео</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый универсальный видеоформат, отличная совместимость. Формат по умолчанию для видео с телефона.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Галерея / любой видеоплеер</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Видео</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Открытый формат, поддержка нескольких аудиодорожек и субтитров. Часто для фильмов.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC / nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Документ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Документы Word. DOCX — сжатый формат, меньший размер. DOC — старый формат.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Презентация</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Презентации PowerPoint. PPTX — сжатый формат.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Таблица</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Электронные таблицы Excel. XLSX — сжатый формат.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Документ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Кроссплатформенный формат, фиксированная вёрстка, не редактируется. Для договоров, статей, электронных книг.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader / WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архив</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый универсальный формат сжатия, хорошая кроссплатформенная совместимость.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Системный / архиватор</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архив</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Степень сжатия выше, чем у ZIP, но требуется специальное ПО для распаковки.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архиватор</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Образ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Файл образа диска, полное копирование содержимого диска. Часто для установочных пакетов системы.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архиватор / виртуальный привод</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Веб-страница</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Файл веб-страницы, открывается браузером. Сохранённые веб-страницы часто в этом формате.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Браузер</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Формат</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Тип</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Особенности</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Рекомендуемое приложение</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Изображение</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие с потерями, малый размер, лучшая совместимость. Формат по умолчанию для фото с телефона.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Галерея / любой просмотрщик</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Изображение</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие без потерь, поддержка прозрачного фона. Часто используется для скриншотов и иконок. Размер больше JPG.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Галерея / любой просмотрщик</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие с потерями, малый размер, отличная совместимость. Самый универсальный аудиоформат.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Любой музыкальный плеер</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Сжатие без потерь, качество как у CD, размер в 3-5 раз больше MP3. Выбор аудиофилов.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Музыкальный плеер / проф. приложение</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Несжатое исходное аудио, лучшее качество, но огромный размер. Часто в профессиональной записи.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Музыкальный плеер</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Аудио</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Кодек AAC, при том же битрейте качество лучше MP3. Часто в экосистеме Apple.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music / музыкальный плеер</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Видео</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый универсальный видеоформат, отличная совместимость. Формат по умолчанию для видео с телефона.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Галерея / любой видеоплеер</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Видео</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Открытый формат, поддержка нескольких аудиодорожек и субтитров. Часто для фильмов.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC / nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Документ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Документы Word. DOCX — сжатый формат, меньший размер. DOC — старый формат.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Презентация</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Презентации PowerPoint. PPTX — сжатый формат.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Таблица</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Электронные таблицы Excel. XLSX — сжатый формат.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS / Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Документ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Кроссплатформенный формат, фиксированная вёрстка, не редактируется. Для договоров, статей, электронных книг.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader / WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архив</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый универсальный формат сжатия, хорошая кроссплатформенная совместимость.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Системный / архиватор</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архив</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Степень сжатия выше, чем у ZIP, но требуется специальное ПО для распаковки.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архиватор</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Образ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Файл образа диска, полное копирование содержимого диска. Часто для установочных пакетов системы.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Архиватор / виртуальный привод</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Веб-страница</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Файл веб-страницы, открывается браузером. Сохранённые веб-страницы часто в этом формате.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Браузер</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Упражнение: наведите порядок в папке «Загрузки»
+Упражнение: наведите порядок в папке «Загрузки»
 
 {class="mt-1"}
 Откройте файловый менеджер > зайдите в папку «Загрузки». Посмотрите, что там есть? Удалите ненужное, полезное рассортируйте по категориям (например, создайте папки «Рабочие материалы», «Стикеры»). Заодно проверьте использование памяти и узнайте, какие типы файлов занимают больше всего места.
@@ -216,21 +216,21 @@ VIII. Управление изображениями и файловой сис
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>Именование «Время + Событие»</strong>: в названия папок включайте временную метку и описание события для удобного последующего поиска. Например: <code>202606_Чеки_путешествия</code>, <code>2025_Годовой_отчёт</code>, <code>2024_День_рождения_ребёнка</code>. Так вы видите и хронологию, и сразу понимаете содержание.</li>
-                        <li><strong>Трёхуровневая система классификации</strong>:
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>Уровень 1</strong>: по типу файла (документы / изображения / видео / аудио)</li>
-                                <li><strong>Уровень 2</strong>: по сценарию использования (работа / жизнь / учёба)</li>
-                                <li><strong>Уровень 3</strong>: по конкретному событию или проекту (например, «2026Q2_Проект_А»)</li>
-                            </ul>
-                        </li>
-                        <li><strong>Ежемесячный план уборки</strong>: каждый месяц в фиксированный день (рекомендуется в день зарплаты или 1-го числа) проводите централизованную уборку каталога «Загрузки»: <strong>архивируйте полезное, удаляйте бесполезное, сохраняйте ценное</strong>. 12 маленьких уборок в год гораздо легче, чем одна генеральная уборка раз в год.</li>
-                    </ul>
+ <li><strong>Именование «Время + Событие»</strong>: в названия папок включайте временную метку и описание события для удобного последующего поиска. Например: <code>202606_Чеки_путешествия</code>, <code>2025_Годовой_отчёт</code>, <code>2024_День_рождения_ребёнка</code>. Так вы видите и хронологию, и сразу понимаете содержание.</li>
+ <li><strong>Трёхуровневая система классификации</strong>:
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>Уровень 1</strong>: по типу файла (документы / изображения / видео / аудио)</li>
+ <li><strong>Уровень 2</strong>: по сценарию использования (работа / жизнь / учёба)</li>
+ <li><strong>Уровень 3</strong>: по конкретному событию или проекту (например, «2026Q2_Проект_А»)</li>
+ </ul>
+ </li>
+ <li><strong>Ежемесячный план уборки</strong>: каждый месяц в фиксированный день (рекомендуется в день зарплаты или 1-го числа) проводите централизованную уборку каталога «Загрузки»: <strong>архивируйте полезное, удаляйте бесполезное, сохраняйте ценное</strong>. 12 маленьких уборок в год гораздо легче, чем одна генеральная уборка раз в год.</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Список задач на этот месяц
+Список задач на этот месяц
 
 {class="mt-1"}
 Выберите свободные выходные и действуйте в следующем порядке:
@@ -258,7 +258,7 @@ VIII. Управление изображениями и файловой сис
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>Стандартный процесс отправки фото документов / чувствительных скриншотов
+Стандартный процесс отправки фото документов / чувствительных скриншотов
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Закрашивание видимой информации</strong>: с помощью встроенных или сторонних инструментов (например, Meitu Xiuxiu, Snapseed) <strong>замажьте средние цифры номера паспорта, номера автомобиля, адрес, имя, сумму</strong> и другие ключевые поля;

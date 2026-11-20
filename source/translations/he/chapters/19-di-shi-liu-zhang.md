@@ -44,7 +44,7 @@ Apple נותנת לך 5GB בחינם, להגיד את האמת, 5GB לא מספ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: פרטיות בתשלום
+iCloud+: פרטיות בתשלום
 
 {class="mt-1"}
 כל רמה בתשלום (50/200/2TB) =<strong>iCloud+</strong>משתמשים, פתחו שלוש פונקציות הגנת פרטיות:
@@ -60,7 +60,7 @@ Apple נותנת לך 5GB בחינם, להגיד את האמת, 5GB לא מספ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud ADP - E2EE אמיתי
+iCloud ADP - E2EE אמיתי
 
 {class="mt-1"}
 בסוף 2022 Apple השיקה<strong>iCloud Advanced Data Protection (ADP)</strong>, E2EE מ-בריאות/סיסמאות ל-<strong>רוב נתוני iCloud</strong>—תמונות, פתקים, גיבוי, מכשיר - 23 סוגים.
@@ -99,7 +99,7 @@ Apple נותנת לך 5GB בחינם, להגיד את האמת, 5GB לא מספ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>תרגול מעשי: בדיקת רפואה מקיפה לחשבון שלך
+תרגול מעשי: בדיקת רפואה מקיפה לחשבון שלך
 
 {class="mt-1"}
 פתח את הגדרות הטלפון, כנס לדף החשבון, אשר שאימות דו-שלבי מופעל.
@@ -107,7 +107,7 @@ Apple נותנת לך 5GB בחינם, להגיד את האמת, 5GB לא מספ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בדוק ש"מספר טלפון מהימן" ו"מפתח שחזור" הוגדרו, המפתח רשום על נייר.
+בדוק ש"מספר טלפון מהימן" ו"מפתח שחזור" הוגדרו, המפתח רשום על נייר.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. כנס לניהול iCloud או שטח ענן, ראה אילו נתונים מסונכרנים, כבה את מה שלא צריך.

@@ -47,25 +47,25 @@ after_part: hongmeng-kai-fa-pian
 import { http } from '@kit.NetworkKit'
 
 export interface Weather {
-  city: string
-  temp: number
-  text: string        // 天气现象：晴/多云/小雨
+ city: string
+ temp: number
+ text: string // 天气现象：晴/多云/小雨
 }
 
 export class WeatherService {
-  async fetch(city: string): Promise&lt;Weather&gt; {
-    let req = http.createHttp()
-    try {
-      let resp = await req.request(
-        'https://api.example.com/weather?city=' + encodeURIComponent(city),
-        { method: http.RequestMethod.GET,
-          header: { 'Content-Type': 'application/json' },
-          expectDataType: http.HttpDataType.STRING })
-      let data = JSON.parse(resp.result as string)
-      return { city: data.city, temp: data.temp, text: data.text }
-    } finally {
-      req.destroy()
-    }
+ async fetch(city: string): Promise&lt;Weather&gt; {
+ let req = http.createHttp()
+ try {
+ let resp = await req.request(
+ 'https://api.example.com/weather?city=' + encodeURIComponent(city),
+ { method: http.RequestMethod.GET,
+ header: { 'Content-Type': 'application/json' },
+ expectDataType: http.HttpDataType.STRING })
+ let data = JSON.parse(resp.result as string)
+ return { city: data.city, temp: data.temp, text: data.text }
+ } finally {
+ req.destroy()
+ }
 ```
 :::
 
@@ -87,7 +87,7 @@ JSON 解析的常见报错有两类：字段名对不上（返回 snake_case、�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：完成天气助手
+来动手：完成天气助手
 
 {class="mt-1"}
 1\. 注册一个真实天气 API 的免费开发者账号，替换示例 URL；2. 按 API 文档定义响应 interface 并解析；3. 实现输入城市 → 点击查询 → 三态渲染的完整闭环；4. 加上"上次查询城市"的本地记忆（第 75 章的 Preferences）。
@@ -108,14 +108,14 @@ JSON 解析的常见报错有两类：字段名对不上（返回 snake_case、�
 
 ```
 {
-  "city": "北京",
-  "updateTime": "2026-11-13 08:00",
-  "daily": [
-    { "date": "2026-11-13", "textDay": "晴",   "tempMax": 14, "tempMin": 3 },
-    { "date": "2026-11-14", "textDay": "多云", "tempMax": 12, "tempMin": 2 },
-    { "date": "2026-11-15", "textDay": "小雨", "tempMax": 9,  "tempMin": 1 }
-    // ……后面还有几天，实际长度以接口返回为准
-  ]
+ "city": "北京",
+ "updateTime": "2026-11-13 08:00",
+ "daily": [
+ { "date": "2026-11-13", "textDay": "晴", "tempMax": 14, "tempMin": 3 },
+ { "date": "2026-11-14", "textDay": "多云", "tempMax": 12, "tempMin": 2 },
+ { "date": "2026-11-15", "textDay": "小雨", "tempMax": 9, "tempMin": 1 }
+ // ……后面还有几天，实际长度以接口返回为准
+ ]
 }
 ```
 :::
@@ -129,43 +129,43 @@ JSON 解析的常见报错有两类：字段名对不上（返回 snake_case、�
 
 ```
 export interface DailyItem {
-  date: string        // 形如 2026-11-13，具体格式看服务商文档
-  textDay: string     // 白天天气现象
-  tempMax: number
-  tempMin: number
+ date: string // 形如 2026-11-13，具体格式看服务商文档
+ textDay: string // 白天天气现象
+ tempMax: number
+ tempMin: number
 }
 
 export interface Forecast {
-  city: string
-  days: DailyItem[]
+ city: string
+ days: DailyItem[]
 }
 
 async fetchForecast(city: string): Promise&lt;Forecast&gt; {
-  let req = http.createHttp()
-  try {
-    let resp = await req.request(
-      'https://api.example.com/forecast?city=' + encodeURIComponent(city) + '&amp;days=7',
-      { method: http.RequestMethod.GET,
-        connectTimeout: 10000, readTimeout: 10000,
-        expectDataType: http.HttpDataType.STRING })
-    let raw = JSON.parse(resp.result as string)
-    let list: DailyItem[] = []
-    if (Array.isArray(raw.daily)) {
-      for (let d of raw.daily) {
-        // 逐条校验：缺关键字段的那天直接跳过
-        if (typeof d.date === 'string' &amp;&amp;
-            typeof d.tempMax === 'number' &amp;&amp;
-            typeof d.tempMin === 'number') {
-          list.push({ date: d.date,
-            textDay: typeof d.textDay === 'string' ? d.textDay : '未知',
-            tempMax: d.tempMax, tempMin: d.tempMin })
-        }
-      }
-    }
-    return { city: typeof raw.city === 'string' ? raw.city : '', days: list }
-  } finally {
-    req.destroy()
-  }
+ let req = http.createHttp()
+ try {
+ let resp = await req.request(
+ 'https://api.example.com/forecast?city=' + encodeURIComponent(city) + '&amp;days=7',
+ { method: http.RequestMethod.GET,
+ connectTimeout: 10000, readTimeout: 10000,
+ expectDataType: http.HttpDataType.STRING })
+ let raw = JSON.parse(resp.result as string)
+ let list: DailyItem[] = []
+ if (Array.isArray(raw.daily)) {
+ for (let d of raw.daily) {
+ // 逐条校验：缺关键字段的那天直接跳过
+ if (typeof d.date === 'string' &amp;&amp;
+ typeof d.tempMax === 'number' &amp;&amp;
+ typeof d.tempMin === 'number') {
+ list.push({ date: d.date,
+ textDay: typeof d.textDay === 'string' ? d.textDay : '未知',
+ tempMax: d.tempMax, tempMin: d.tempMin })
+ }
+ }
+ }
+ return { city: typeof raw.city === 'string' ? raw.city : '', days: list }
+ } finally {
+ req.destroy()
+ }
 }
 ```
 :::
@@ -186,10 +186,10 @@ const WEEK: string[] = ['周日', '周一', '周二', '周三', '周四', '周�
 
 // dateStr 是接口给的日期，todayStr 是本地算出的今天（同格式）
 export function weekdayLabel(dateStr: string, todayStr: string): string {
-  let d = new Date(dateStr)
-  if (isNaN(d.getTime())) { return '' }   // 解析失败给空串，别显示 NaN
-  if (dateStr === todayStr) { return '今天' }
-  return WEEK[d.getDay()]
+ let d = new Date(dateStr)
+ if (isNaN(d.getTime())) { return '' } // 解析失败给空串，别显示 NaN
+ if (dateStr === todayStr) { return '今天' }
+ return WEEK[d.getDay()]
 }
 ```
 :::
@@ -209,22 +209,22 @@ export function weekdayLabel(dateStr: string, todayStr: string): string {
 @State forecast: Forecast | null = null
 
 Column({ space: 4 }) {
-  Text('未来 7 天').fontSize(14).fontColor('#888888')
-  Scroll() {
-    Row({ space: 12 }) {
-      ForEach(this.forecast!.days, (d: DailyItem) =&gt; {
-        Column({ space: 6 }) {
-          Text(weekdayLabel(d.date, this.todayStr)).fontSize(13)
-          Text(d.textDay).fontSize(12).fontColor('#888888')
-          Text(d.tempMin + '° ~ ' + d.tempMax + '°').fontSize(14)
-        }
-        .padding(10).borderRadius(12)
-        .backgroundColor('#F2F3F5')
-      }, (d: DailyItem) =&gt; d.date)   // 键值用日期，别用下标
-    }.padding({ left: 12, right: 12 })
-  }
-  .scrollable(ScrollDirection.Horizontal)
-  .edgeEffect(EdgeEffect.Spring)
+ Text('未来 7 天').fontSize(14).fontColor('#888888')
+ Scroll() {
+ Row({ space: 12 }) {
+ ForEach(this.forecast!.days, (d: DailyItem) =&gt; {
+ Column({ space: 6 }) {
+ Text(weekdayLabel(d.date, this.todayStr)).fontSize(13)
+ Text(d.textDay).fontSize(12).fontColor('#888888')
+ Text(d.tempMin + '° ~ ' + d.tempMax + '°').fontSize(14)
+ }
+ .padding(10).borderRadius(12)
+ .backgroundColor('#F2F3F5')
+ }, (d: DailyItem) =&gt; d.date) // 键值用日期，别用下标
+ }.padding({ left: 12, right: 12 })
+ }
+ .scrollable(ScrollDirection.Horizontal)
+ .edgeEffect(EdgeEffect.Spring)
 }
 ```
 :::
@@ -233,7 +233,7 @@ ForEach 的第二个参数是键值生成函数，这里用日期字符串当键
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 预报列表最隐蔽的 bug 是"长度写死"：有人写完 7 个 Text 的硬编码版本，开发时接口刚好回 7 天，一切正常；上线后某天服务商调整了免费额度只回 3 天，界面下半截挂着三个空白格子。判定标准很简单。凡是跟着接口数据走的数量，都必须来自 ForEach 循环，不能来自你手写的份数。
@@ -254,16 +254,16 @@ ForEach 的第二个参数是键值生成函数，这里用日期字符串当键
 
 ```
 "requestPermissions": [
-  {
-    "name": "ohos.permission.LOCATION",
-    "reason": "$string:location_reason",
-    "usedScene": { "abilities": ["WeatherAbility"], "when": "inuse" }
-  },
-  {
-    "name": "ohos.permission.APPROXIMATE_LOCATION",
-    "reason": "$string:location_reason",
-    "usedScene": { "abilities": ["WeatherAbility"], "when": "inuse" }
-  }
+ {
+ "name": "ohos.permission.LOCATION",
+ "reason": "$string:location_reason",
+ "usedScene": { "abilities": ["WeatherAbility"], "when": "inuse" }
+ },
+ {
+ "name": "ohos.permission.APPROXIMATE_LOCATION",
+ "reason": "$string:location_reason",
+ "usedScene": { "abilities": ["WeatherAbility"], "when": "inuse" }
+ }
 ]
 
 // string.json 里对应写：
@@ -283,24 +283,24 @@ import { geoLocationManager } from '@kit.LocationKit'
 import { abilityAccessCtrl } from '@kit.AbilityKit'
 
 async locateAndLoad() {
-  try {
-    let mgr = abilityAccessCtrl.createAtManager()
-    let result = await mgr.requestPermissionsFromUser(this.context,
-      ['ohos.permission.LOCATION', 'ohos.permission.APPROXIMATE_LOCATION'])
-    let granted = result.authResults.every((r: number) =&gt; r === 0)
-    // 授权判定细节以官方文档为准
-    if (!granted) {
-      this.city = '北京'   // 回退默认城市，别让页面卡在空白
-      this.hint = '未开启定位，先显示默认城市，可在系统设置里打开'
-      return this.load()
-    }
-    let loc = geoLocationManager.getCurrentLocation()
-    this.city = await this.svc.cityFromLocation(loc.latitude, loc.longitude)
-    this.load()
-  } catch (e) {
-    this.hint = '定位失败，可以手动输入城市查询'
-    this.load()
-  }
+ try {
+ let mgr = abilityAccessCtrl.createAtManager()
+ let result = await mgr.requestPermissionsFromUser(this.context,
+ ['ohos.permission.LOCATION', 'ohos.permission.APPROXIMATE_LOCATION'])
+ let granted = result.authResults.every((r: number) =&gt; r === 0)
+ // 授权判定细节以官方文档为准
+ if (!granted) {
+ this.city = '北京' // 回退默认城市，别让页面卡在空白
+ this.hint = '未开启定位，先显示默认城市，可在系统设置里打开'
+ return this.load()
+ }
+ let loc = geoLocationManager.getCurrentLocation()
+ this.city = await this.svc.cityFromLocation(loc.latitude, loc.longitude)
+ this.load()
+ } catch (e) {
+ this.hint = '定位失败，可以手动输入城市查询'
+ this.load()
+ }
 }
 ```
 :::
@@ -313,7 +313,7 @@ async locateAndLoad() {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 两条提醒。其一，模拟器里的定位是"假位置"：你可以在模拟器的位置设置里手动选一个点，但最终验证一定要上真机，站在小区楼下跑一次，看看拿到的城市对不对。其二，天气应用用<strong>单次定位就够了</strong>，别开持续位置监听：天气不会因为你走了两条街就变，持续监听是导航类应用的事，用在这里只多耗电不多准确（第十节细说）。
@@ -332,17 +332,17 @@ async locateAndLoad() {
 @State refreshing: boolean = false
 
 Refresh({ refreshing: this.refreshing }) {
-  Column() {
-    // ……原来的三态内容原样放进来
-  }
-  .width('100%')
+ Column() {
+ // ……原来的三态内容原样放进来
+ }
+ .width('100%')
 }
 .onRefreshing(() =&gt; {
-  if (this.loading) {           // 上一次请求还没回来就别发了
-    this.refreshing = false
-    return
-  }
-  this.load().finally(() =&gt; { this.refreshing = false })
+ if (this.loading) { // 上一次请求还没回来就别发了
+ this.refreshing = false
+ return
+ }
+ this.load().finally(() =&gt; { this.refreshing = false })
 })
 ```
 :::
@@ -364,10 +364,10 @@ Refresh({ refreshing: this.refreshing }) {
 
 ```
 export interface CityItem {
-  id: string           // 服务商的城市 ID，重名城市靠它区分
-  name: string         // 展示名
-  temp: number | null  // 还没请求到数据时是 null
-  updatedAt: number    // 上次刷新的时间戳，缓存要用
+ id: string // 服务商的城市 ID，重名城市靠它区分
+ name: string // 展示名
+ temp: number | null // 还没请求到数据时是 null
+ updatedAt: number // 上次刷新的时间戳，缓存要用
 }
 ```
 :::
@@ -385,15 +385,15 @@ export interface CityItem {
 
 ```
 async addCity(id: string, name: string) {
-  // 去重：同一个 ID 只加一次
-  let exists = this.cities.some((c: CityItem) =&gt; c.id === id)
-  if (exists) {
-    this.hint = '这个城市已经在列表里了'
-    return
-  }
-  this.cities.push({ id: id, name: name, temp: null, updatedAt: 0 })
-  await this.saveCityList()   // 持久化，见下文
-  this.loadCity(this.cities.length - 1)
+ // 去重：同一个 ID 只加一次
+ let exists = this.cities.some((c: CityItem) =&gt; c.id === id)
+ if (exists) {
+ this.hint = '这个城市已经在列表里了'
+ return
+ }
+ this.cities.push({ id: id, name: name, temp: null, updatedAt: 0 })
+ await this.saveCityList() // 持久化，见下文
+ this.loadCity(this.cities.length - 1)
 }
 ```
 :::
@@ -412,22 +412,22 @@ ArkUI 的 List 自带侧滑删除，给 ListItem 挂上 swipeAction，再把一�
 ```
 @Builder
 deleteButton(index: number) {
-  Button('删除')
-    .backgroundColor('#E5484D')
-    .onClick(() =&gt; this.removeCity(index))
+ Button('删除')
+ .backgroundColor('#E5484D')
+ .onClick(() =&gt; this.removeCity(index))
 }
 
 List({ space: 8 }) {
-  ForEach(this.cities, (c: CityItem, i: number) =&gt; {
-    ListItem() {
-      Row() {
-        Text(c.name).fontSize(16).layoutWeight(1)
-        Text(c.temp === null ? '--' : c.temp + '°').fontSize(16)
-      }
-      .padding(14).borderRadius(12)
-    }
-    .swipeAction({ end: this.deleteButton(i) })
-  }, (c: CityItem) =&gt; c.id)
+ ForEach(this.cities, (c: CityItem, i: number) =&gt; {
+ ListItem() {
+ Row() {
+ Text(c.name).fontSize(16).layoutWeight(1)
+ Text(c.temp === null ? '--' : c.temp + '°').fontSize(16)
+ }
+ .padding(14).borderRadius(12)
+ }
+ .swipeAction({ end: this.deleteButton(i) })
+ }, (c: CityItem) =&gt; c.id)
 }
 ```
 :::
@@ -441,13 +441,13 @@ List({ space: 8 }) {
 
 ```
 removeCity(index: number) {
-  this.cities.splice(index, 1)
-  if (this.current &gt; index) {
-    this.current--              // 删的是前面的城市，选中下标左移
-  } else if (this.current === index) {
-    this.current = Math.max(0, Math.min(index, this.cities.length - 1))
-  }                             // 删的就是当前城市，就近落到一个合法位置
-  this.saveCityList()
+ this.cities.splice(index, 1)
+ if (this.current &gt; index) {
+ this.current-- // 删的是前面的城市，选中下标左移
+ } else if (this.current === index) {
+ this.current = Math.max(0, Math.min(index, this.cities.length - 1))
+ } // 删的就是当前城市，就近落到一个合法位置
+ this.saveCityList()
 }
 ```
 :::
@@ -460,7 +460,7 @@ removeCity(index: number) {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 城市列表别贪多。天气 API 的免费额度几乎都按调用量计费，10 个城市每次启动全部刷新，额度消耗速度是单城市的 10 倍。合理策略是只刷用户正在看的那个城市，其他城市切过去时再刷（配合第七节的缓存）。省额度、省电、省流量，一箭三雕。
@@ -485,30 +485,30 @@ removeCity(index: number) {
 import { preferences } from '@kit.ArkData'
 
 export class WeatherCache {
-  private store: preferences.Preferences | null = null
+ private store: preferences.Preferences | null = null
 
-  // context 从 Ability 里传进来
-  async init(context: Context): Promise&lt;void&gt; {
-    this.store = await preferences.getPreferences(context, 'weather_cache')
-  }
+ // context 从 Ability 里传进来
+ async init(context: Context): Promise&lt;void&gt; {
+ this.store = await preferences.getPreferences(context, 'weather_cache')
+ }
 
-  async save(cityId: string, rawJson: string): Promise&lt;void&gt; {
-    if (this.store === null) { return }
-    await this.store.put('raw_' + cityId, rawJson)
-    await this.store.put('time_' + cityId, Date.now())
-    await this.store.flush()
-  }
+ async save(cityId: string, rawJson: string): Promise&lt;void&gt; {
+ if (this.store === null) { return }
+ await this.store.put('raw_' + cityId, rawJson)
+ await this.store.put('time_' + cityId, Date.now())
+ await this.store.flush()
+ }
 
-  async load(cityId: string): Promise&lt;string | null&gt; {
-    if (this.store === null) { return null }
-    let raw = await this.store.get('raw_' + cityId, '') as string
-    return raw === '' ? null : raw
-  }
+ async load(cityId: string): Promise&lt;string | null&gt; {
+ if (this.store === null) { return null }
+ let raw = await this.store.get('raw_' + cityId, '') as string
+ return raw === '' ? null : raw
+ }
 
-  async savedAt(cityId: string): Promise&lt;number&gt; {
-    if (this.store === null) { return 0 }
-    return await this.store.get('time_' + cityId, 0) as number
-  }
+ async savedAt(cityId: string): Promise&lt;number&gt; {
+ if (this.store === null) { return 0 }
+ return await this.store.get('time_' + cityId, 0) as number
+ }
 }
 ```
 :::
@@ -517,7 +517,7 @@ export class WeatherCache {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 缓存里存"原始响应"还是"给 UI 的模型"？强烈建议存原始响应的 JSON 字符串。存 UI 模型的话，哪天你改了个字段名、加了个显示需求，所有旧缓存瞬间作废，用户升级后的第一次启动满屏异常；存原始响应，解析逻辑升级了，旧缓存照样能被新逻辑消化。缓存的数据格式要跟接口对齐，不要跟界面对齐。
@@ -532,24 +532,24 @@ export class WeatherCache {
 
 ```
 async onPageShow() {
-  await this.cache.init(this.context)
-  // 第一步：先上缓存，页面立刻有内容
-  let cached = await this.cache.load(this.currentCityId)
-  if (cached !== null) {
-    this.applyData(cached, true)
-  }
-  // 第二步：再要新数据，成功后整体覆盖
-  this.load()
+ await this.cache.init(this.context)
+ // 第一步：先上缓存，页面立刻有内容
+ let cached = await this.cache.load(this.currentCityId)
+ if (cached !== null) {
+ this.applyData(cached, true)
+ }
+ // 第二步：再要新数据，成功后整体覆盖
+ this.load()
 }
 
 applyData(rawJson: string, fromCache: boolean) {
-  this.weather = parseWeather(rawJson)   // 第四节那套防御式解析
-  if (fromCache) {
-    let at = this.lastSavedAt
-    this.updatedText = '数据更新于 ' + formatTime(at)
-    // 过期线自己定：比如超过 3 小时就算"可能过期"，按天气数据的更新节奏来
-    this.stale = Date.now() - at &gt; 3 * 3600 * 1000
-  }
+ this.weather = parseWeather(rawJson) // 第四节那套防御式解析
+ if (fromCache) {
+ let at = this.lastSavedAt
+ this.updatedText = '数据更新于 ' + formatTime(at)
+ // 过期线自己定：比如超过 3 小时就算"可能过期"，按天气数据的更新节奏来
+ this.stale = Date.now() - at &gt; 3 * 3600 * 1000
+ }
 }
 ```
 :::
@@ -560,7 +560,7 @@ applyData(rawJson: string, fromCache: boolean) {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 测试缓存别靠"等它过期"。开发期把过期线临时改成 10 秒，跑一遍"有网 → 断网 → 重启应用"的流程：断网重启后能看到旧数据并带着过期标记，这个流程通了，缓存就算验收了。验收完把过期线改回去，别把调试参数带上生产。
@@ -581,19 +581,19 @@ applyData(rawJson: string, fromCache: boolean) {
 
 ```
 const ICON_MAP: Record&lt;string, string&gt; = {
-  '晴': 'ic_sunny',
-  '多云': 'ic_partly',
-  '阴': 'ic_overcast',
-  '小雨': 'ic_rain_light',
-  '大雨': 'ic_rain_heavy',
-  '雷阵雨': 'ic_thunder',
-  '雪': 'ic_snow',
-  '雾': 'ic_fog',
-  '霾': 'ic_haze'
+ '晴': 'ic_sunny',
+ '多云': 'ic_partly',
+ '阴': 'ic_overcast',
+ '小雨': 'ic_rain_light',
+ '大雨': 'ic_rain_heavy',
+ '雷阵雨': 'ic_thunder',
+ '雪': 'ic_snow',
+ '雾': 'ic_fog',
+ '霾': 'ic_haze'
 }
 
 export function iconOf(text: string): string {
-  return ICON_MAP[text] ?? 'ic_unknown'   // 兜底图标必须有
+ return ICON_MAP[text] ?? 'ic_unknown' // 兜底图标必须有
 }
 ```
 :::
@@ -612,46 +612,46 @@ export function iconOf(text: string): string {
 ```
 @Component
 struct TempChart {
-  days: DailyItem[] = []
-  private ctx: CanvasRenderingContext2D =
-    new CanvasRenderingContext2D(new RenderingContextSettings(true))
+ days: DailyItem[] = []
+ private ctx: CanvasRenderingContext2D =
+ new CanvasRenderingContext2D(new RenderingContextSettings(true))
 
-  build() {
-    // 示例按固定尺寸示意；要做自适应，可在 onReady 里取实际宽高后再画
-    Canvas(this.ctx).width(336).height(120)
-      .onReady(() =&gt; this.draw())
-  }
+ build() {
+ // 示例按固定尺寸示意；要做自适应，可在 onReady 里取实际宽高后再画
+ Canvas(this.ctx).width(336).height(120)
+ .onReady(() =&gt; this.draw())
+ }
 
-  draw() {
-    if (this.days.length &lt; 2) { return }   // 一天画不成线，也防除以 0
-    let w = 336
-    let h = 120
-    let max = this.days[0].tempMax
-    let min = this.days[0].tempMin
-    for (let d of this.days) {
-      if (d.tempMax &gt; max) { max = d.tempMax }
-      if (d.tempMin &lt; min) { min = d.tempMin }
-    }
-    let span = Math.max(1, max - min)      // 温度都一样时也别除以 0
-    let step = w / (this.days.length - 1)
-    // 上下各留 20 像素边距，把温度映射成 y 坐标
-    let y = (t: number): number =&gt; 20 + (max - t) / span * (h - 40)
+ draw() {
+ if (this.days.length &lt; 2) { return } // 一天画不成线，也防除以 0
+ let w = 336
+ let h = 120
+ let max = this.days[0].tempMax
+ let min = this.days[0].tempMin
+ for (let d of this.days) {
+ if (d.tempMax &gt; max) { max = d.tempMax }
+ if (d.tempMin &lt; min) { min = d.tempMin }
+ }
+ let span = Math.max(1, max - min) // 温度都一样时也别除以 0
+ let step = w / (this.days.length - 1)
+ // 上下各留 20 像素边距，把温度映射成 y 坐标
+ let y = (t: number): number =&gt; 20 + (max - t) / span * (h - 40)
 
-    this.drawLine(this.days.map((d: DailyItem) =&gt; d.tempMax), y, step, '#FF7D00')
-    this.drawLine(this.days.map((d: DailyItem) =&gt; d.tempMin), y, step, '#4D88FF')
-  }
+ this.drawLine(this.days.map((d: DailyItem) =&gt; d.tempMax), y, step, '#FF7D00')
+ this.drawLine(this.days.map((d: DailyItem) =&gt; d.tempMin), y, step, '#4D88FF')
+ }
 
-  private drawLine(vals: number[], y: (t: number) =&gt; number,
-                   step: number, color: string) {
-    this.ctx.beginPath()
-    for (let i = 0; i &lt; vals.length; i++) {
-      if (i === 0) { this.ctx.moveTo(i * step, y(vals[i])) }
-      else { this.ctx.lineTo(i * step, y(vals[i])) }
-    }
-    this.ctx.strokeStyle = color
-    this.ctx.lineWidth = 2
-    this.ctx.stroke()
-  }
+ private drawLine(vals: number[], y: (t: number) =&gt; number,
+ step: number, color: string) {
+ this.ctx.beginPath()
+ for (let i = 0; i &lt; vals.length; i++) {
+ if (i === 0) { this.ctx.moveTo(i * step, y(vals[i])) }
+ else { this.ctx.lineTo(i * step, y(vals[i])) }
+ }
+ this.ctx.strokeStyle = color
+ this.ctx.lineWidth = 2
+ this.ctx.stroke()
+ }
 }
 ```
 :::
@@ -670,20 +670,20 @@ struct TempChart {
 ```
 // resources/base/element/color.json（浅色）
 {
-  "color": [
-    { "name": "text_primary",   "value": "#1A1A1A" },
-    { "name": "text_secondary", "value": "#888888" },
-    { "name": "bg_card",        "value": "#F2F3F5" }
-  ]
+ "color": [
+ { "name": "text_primary", "value": "#1A1A1A" },
+ { "name": "text_secondary", "value": "#888888" },
+ { "name": "bg_card", "value": "#F2F3F5" }
+ ]
 }
 
 // resources/dark/element/color.json（深色，同名不同值）
 {
-  "color": [
-    { "name": "text_primary",   "value": "#E6E6E6" },
-    { "name": "text_secondary", "value": "#9E9E9E" },
-    { "name": "bg_card",        "value": "#2A2A2A" }
-  ]
+ "color": [
+ { "name": "text_primary", "value": "#E6E6E6" },
+ { "name": "text_secondary", "value": "#9E9E9E" },
+ { "name": "bg_card", "value": "#2A2A2A" }
+ ]
 }
 
 // 代码里一律引用资源：
@@ -752,17 +752,17 @@ struct TempChart {
 private seq: number = 0
 
 async load() {
-  let mySeq = ++this.seq          // 发起前领号
-  this.loading = true
-  try {
-    let data = await this.svc.fetch(this.city)
-    if (mySeq !== this.seq) { return }   // 已有更新的请求，这份结果作废
-    this.weather = data
-  } catch (e) {
-    if (mySeq !== this.seq) { return }   // 过期请求的报错同样不显示
-    this.error = '加载失败，请检查网络后重试'
-  }
-  this.loading = false
+ let mySeq = ++this.seq // 发起前领号
+ this.loading = true
+ try {
+ let data = await this.svc.fetch(this.city)
+ if (mySeq !== this.seq) { return } // 已有更新的请求，这份结果作废
+ this.weather = data
+ } catch (e) {
+ if (mySeq !== this.seq) { return } // 过期请求的报错同样不显示
+ this.error = '加载失败，请检查网络后重试'
+ }
+ this.loading = false
 }
 ```
 :::
@@ -815,14 +815,14 @@ private lastFetchAt: number = 0
 private lastCity: string = ''
 
 async load() {
-  let now = Date.now()
-  // 同一城市一分钟内重复触发，直接复用上一次结果
-  if (this.city === this.lastCity &amp;&amp; now - this.lastFetchAt &lt; 60 * 1000) {
-    return
-  }
-  this.lastFetchAt = now
-  this.lastCity = this.city
-  // ……后面的请求逻辑不变
+ let now = Date.now()
+ // 同一城市一分钟内重复触发，直接复用上一次结果
+ if (this.city === this.lastCity &amp;&amp; now - this.lastFetchAt &lt; 60 * 1000) {
+ return
+ }
+ this.lastFetchAt = now
+ this.lastCity = this.city
+ // ……后面的请求逻辑不变
 }
 ```
 :::
@@ -835,7 +835,7 @@ async load() {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 天气应用的美德是克制：数据更新得慢，你就该请求得慢；用户不在场，你就该安静。
@@ -880,7 +880,7 @@ async load() {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 换平台只是换方言，"请求—解析—三态—兜底"这个骨架才是你自己的；项目做完不算完，删掉重写一遍才算。
@@ -956,7 +956,7 @@ key 泄露主要走两条路。第一条是<strong>代码仓库</strong>：公�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 key 一旦进过 git 历史，就按"已经泄露"处理：吊销重发，然后在新配置里换上新值。很多人删掉文件再提交一次就以为完事了，历史提交一翻。key 明晃晃躺在那里。同理，聊天记录里发过的 key、演示截图里拍到的 key，都按泄露处理。
@@ -964,7 +964,7 @@ key 一旦进过 git 历史，就按"已经泄露"处理：吊销重发，然后
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 别人问你要 key "借来用用"，直接拒绝，让他自己花五分钟注册一个免费账号。key 的额度和你这个注册账号绑在一起，借出去的每一笔调用都算你头上，出了滥用还得你去找服务商解释。这不是小气，是账号归属的基本责任问题。
@@ -1032,7 +1032,7 @@ key 一旦进过 git 历史，就按"已经泄露"处理：吊销重发，然后
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 适老化的验收方法：把系统字号调到最大，用你不常用的那只手、慢慢点，自己把应用用满一周。过关标准只有一条，爸妈第一次完全独立地查到了"明天的天气"，中途没喊你。
@@ -1054,7 +1054,7 @@ key 一旦进过 git 历史，就按"已经泄露"处理：吊销重发，然后
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 应用不是写完那天出生的，是被第一批用户的反馈养大的；听反馈、小步改、记下来。
@@ -1080,7 +1080,7 @@ key 一旦进过 git 历史，就按"已经泄露"处理：吊销重发，然后
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 单点功能都会写，一天下来环环咬合不出错，才算真的把网络应用做完了。
@@ -1092,7 +1092,7 @@ key 一旦进过 git 历史，就按"已经泄露"处理：吊销重发，然后
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 三层拆分：Service 管请求、页面管三态、UI 按状态渲染
 - HTTP 请求用 @kit.NetworkKit 的 http 模块，用完 destroy

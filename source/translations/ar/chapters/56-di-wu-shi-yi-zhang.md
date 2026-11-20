@@ -24,19 +24,19 @@ kind: chapter
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "مرحبًا، $name!")     // "قطعة نص"
+ Text(text = "مرحبًا، $name!") // "قطعة نص"
 }
 
 // تركيب متداخل: قطع كبيرة تحتوي قطعًا صغيرة
 @Composable
 fun HomeScreen() {
-    Column {                          // مرتبة رأسيًا
-        Greeting(name = "أحمد")
-        Greeting(name = "سارة")
-        Button(onClick = { /* ماذا يحدث عند الضغط */ }) {
-            Text("اضغط هنا")
-        }
-    }
+ Column { // مرتبة رأسيًا
+ Greeting(name = "أحمد")
+ Greeting(name = "سارة")
+ Button(onClick = { /* ماذا يحدث عند الضغط */ }) {
+ Text("اضغط هنا")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ fun HomeScreen() {
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "هذا نص")
-        Button(onClick = { println("تم الضغط!") }) {
-            Text("زر")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("اكتب شيئًا") }
-        )
-    }
+ Column {
+ Text(text = "هذا نص")
+ Button(onClick = { println("تم الضغط!") }) {
+ Text("زر")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("اكتب شيئًا") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("السطر الأول")
-    Row {
-        Text("يسار")
-        Text("يمين")
-    }
-    Box {
-        Text("الطبقة السفلية")
-        Text("شارة علوية متراكبة")
-    }
+ Text("السطر الأول")
+ Row {
+ Text("يسار")
+ Text("يمين")
+ }
+ Box {
+ Text("الطبقة السفلية")
+ Text("شارة علوية متراكبة")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "نص جميل",
-    modifier = Modifier
-        .padding(16.dp)          // هامش من كل الجهات
-        .fillMaxWidth()          // يملأ العرض كاملًا
-        .background(Color.Blue)  // لون الخلفية
-        .clickable { /* عند الضغط */ }// قابل للنقر
+ text = "نص جميل",
+ modifier = Modifier
+ .padding(16.dp) // هامش من كل الجهات
+ .fillMaxWidth() // يملأ العرض كاملًا
+ .background(Color.Blue) // لون الخلفية
+ .clickable { /* عند الضغط */ }// قابل للنقر
 )
 // استدعاءات متسلسلة: واحدًا بعد الآخر، والترتيب مهم (padding أولًا ثم الخلفية؛ الخلفية لا تشمل الهامش)
 ```
@@ -150,15 +150,15 @@ padding(16.dp).background(Blue) و background(Blue).padding(16.dp) تعطيان 
 ```
 @Composable
 fun Counter() {
-    // ‏remember + mutableStateOf: يتذكر هذه القيمة المتغيرة
-    var count by remember { mutableStateOf(0) }
+ // ‏remember + mutableStateOf: يتذكر هذه القيمة المتغيرة
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "ضغطت $count مرات")
-        Button(onClick = { count++ }) {   // يغيّر الحالة
-            Text("اضغط +1")                // تتحدث الواجهة تلقائيًا
-        }
-    }
+ Column {
+ Text(text = "ضغطت $count مرات")
+ Button(onClick = { count++ }) { // يغيّر الحالة
+ Text("اضغط +1") // تتحدث الواجهة تلقائيًا
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> المستخدم يضغط</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> الحالة تتغير (count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> المستخدم يضغط</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> الحالة تتغير (count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose يلاحظ التغير</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> يعيد رسم الواجهة (إعادة تركيب)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose يلاحظ التغير</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> يعيد رسم الواجهة (إعادة تركيب)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ fun Counter() {
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // عند تغير القيمة ينتقل بسلاسة إلى القيمة الهدف
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // عند تغير القيمة ينتقل بسلاسة إلى القيمة الهدف
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

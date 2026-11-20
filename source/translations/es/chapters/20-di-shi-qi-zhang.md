@@ -66,7 +66,7 @@ Cambiar auriculares con cable por Bluetooth fue para mí la mejora más notable 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>Tecnologia UWB (ultra wideband): una "sensacion espacial" mas precisa que el Bluetooth
+Tecnologia UWB (ultra wideband): una "sensacion espacial" mas precisa que el Bluetooth
 
 {class="mt-1"}
 Ademas del Bluetooth, los telefonos nuevos esconden un chip UWB (Ultra-Wideband). Su capacidad es la <strong>medicion de distancia y posicionamiento espacial precisos</strong>-- calcula a que distancia esta otro dispositivo y en que direccion, con precision centimetrica. El Bluetooth solo dice "cerca"; UWB dice "a 1,2 m a tu izquierda". Aplicaciones:
@@ -80,7 +80,7 @@ Ademas del Bluetooth, los telefonos nuevos esconden un chip UWB (Ultra-Wideband)
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio y Auracast: la nueva generacion de audio por Bluetooth
+LE Audio y Auracast: la nueva generacion de audio por Bluetooth
 
 {class="mt-1"}
 El clasico audio Bluetooth (A2DP) usado durante veinte anos esta siendo sustituido por <strong>LE Audio</strong>(audio de bajo consumo), el nuevo estandar desde Bluetooth 5.2:
@@ -110,7 +110,7 @@ Cuantos más dispositivos conectes, mayor es el riesgo de filtración de privaci
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica: proyecta la pantalla del móvil a la TV y configura una escena inteligente
+Practica: proyecta la pantalla del móvil a la TV y configura una escena inteligente
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Asegúrate de que el móvil y la TV están en la misma Wi-Fi.
@@ -122,7 +122,7 @@ Cuantos más dispositivos conectes, mayor es el riesgo de filtración de privaci
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Caso 1: optimizacion de autonomia en la practica
+Caso 1: optimizacion de autonomia en la practica
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Escenario</strong>: Un usuario de Xiaomi 14 tiene mala autonomia y se queda sin bateria a mediodia.

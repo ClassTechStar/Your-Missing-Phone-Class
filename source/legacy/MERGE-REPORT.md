@@ -22,12 +22,12 @@
 ## 二、合并策略与执行结果
 
 1. **权威文本取自成品**：`v1.8/zh-CN.html` 是 19 种语言的翻译基准，也是读者实际看到的内容。
-   由 `python -m bookkit extract` 把 84 个章节反解为 `source/chapters/*.md`，第 0–12 章、第 37–69 章的
-   Markdown 首次补齐（此前这三段只存在于 HTML 成品里）。
+ 由 `python -m bookkit extract` 把 84 个章节反解为 `source/chapters/*.md`，第 0–12 章、第 37–69 章的
+ Markdown 首次补齐（此前这三段只存在于 HTML 成品里）。
 2. **保真校验**：反解后重新构建，逐章比对已发布成品——区块 id 顺序、侧栏目录 97 个锚点、
-   可见文本（312,756 字）三项完全一致，84/84 章结构等价，见 `python -m bookkit build --verify`。
+ 可见文本（312,756 字）三项完全一致，84/84 章结构等价，见 `python -m bookkit build --verify`。
 3. **不采用**：把三份源稿按行合并成一份。理由见第一节：它们是分叉修订而非互补片段；
-   且其正文与成品已有出入（成品经过多轮校订与 v1.8 改版），任何"拼合"都会把旧文本带回主线。
+ 且其正文与成品已有出入（成品经过多轮校订与 v1.8 改版），任何"拼合"都会把旧文本带回主线。
 4. **沿用**：`你缺失的那门手机课A`（无扩展名）已重命名为 `.md`，便于工具与编辑器识别。
 
 ## 三、保留价值
@@ -35,12 +35,12 @@
 - **译审参照**：翻译新章节时可用旧稿的行文口径做风格参考。
 - **历史取证**：勘误报告（ERR-10/ERR-19）中的行号与标点问题可在这些文件中复现。
 - **不再维护**：请勿在本目录修改正文；如需修改内容，请改 `source/chapters/` 并运行
-  `python -m bookkit build --verify` 与 `python -m bookkit lint`。
+ `python -m bookkit build --verify` 与 `python -m bookkit lint`。
 
 ## 四、相关命令
 
 ```bash
-python -m bookkit extract          # 成品 HTML → source/（一次性引导，可重复运行）
-python -m bookkit build --verify   # 源稿 → HTML 与成品逐章等价性比对
+python -m bookkit extract # 成品 HTML → source/（一次性引导，可重复运行）
+python -m bookkit build --verify # 源稿 → HTML 与成品逐章等价性比对
 python -m bookkit lint --all-versions
 ```

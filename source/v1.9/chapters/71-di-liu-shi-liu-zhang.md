@@ -75,9 +75,9 @@ kind: chapter
 
 ```
 {
-  "weather": [ { "description": "晴" } ],
-  "main": { "temp": 26.5, "humidity": 40 },
-  "name": "北京"
+ "weather": [ { "description": "晴" } ],
+ "main": { "temp": 26.5, "humidity": 40 },
+ "name": "北京"
 }
 ```
 :::
@@ -109,7 +109,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：密钥绝不能写死在代码里
+避坑提醒：密钥绝不能写死在代码里
 
 {class="mt-1"}
 API Key 相当于你的"钱包密码"，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。iOS 的正确做法：放进 <code class="inline">Config.xcconfig</code>（配置文件，已被 gitignore 忽略），通过 Info.plist 读入代码。搜索"iOS xcconfig 管理密钥"照着改即可。
@@ -140,8 +140,8 @@ WEATHER_API_KEY = 你刚申请的Key
 
 ```
 enum Config {
-    static let apiKey = Bundle.main.object(
-        forInfoDictionaryKey: "WEATHER_API_KEY") as? String ?? ""
+ static let apiKey = Bundle.main.object(
+ forInfoDictionaryKey: "WEATHER_API_KEY") as? String ?? ""
 }
 ```
 :::
@@ -168,27 +168,27 @@ enum Config {
 ```
 // JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
 struct WeatherResponse: Codable {
-    let weather: [Weather]
-    let main: Main
-    let name: String
+ let weather: [Weather]
+ let main: Main
+ let name: String
 }
 struct Weather: Codable { let description: String }
 struct Main: Codable { let temp: Double; let humidity: Int }
 
 struct WeatherService {
-    let key: String   // 从 xcconfig 读入
+ let key: String // 从 xcconfig 读入
 
-    func fetchWeather(city: String) async throws -> WeatherResponse {
-        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
-        comps.queryItems = [
-            URLQueryItem(name: "q", value: city),
-            URLQueryItem(name: "appid", value: key),
-            URLQueryItem(name: "units", value: "metric"),
-            URLQueryItem(name: "lang", value: "zh_cn")
-        ]
-        let (data, _) = try await URLSession.shared.data(from: comps.url!)
-        return try JSONDecoder().decode(WeatherResponse.self, from: data)
-    }
+ func fetchWeather(city: String) async throws -> WeatherResponse {
+ var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+ comps.queryItems = [
+ URLQueryItem(name: "q", value: city),
+ URLQueryItem(name: "appid", value: key),
+ URLQueryItem(name: "units", value: "metric"),
+ URLQueryItem(name: "lang", value: "zh_cn")
+ ]
+ let (data, _) = try await URLSession.shared.data(from: comps.url!)
+ return try JSONDecoder().decode(WeatherResponse.self, from: data)
+ }
 }
 ```
 :::
@@ -216,13 +216,13 @@ struct WeatherService {
 
 ```
 struct Main: Codable {
-    let temp: Double
-    let humidity: Int
+ let temp: Double
+ let humidity: Int
 
-    enum CodingKeys: String, CodingKey {
-        case temp
-        case humidity = "humidity_percent"   // JSON 里叫这个，模型里叫 humidity
-    }
+ enum CodingKeys: String, CodingKey {
+ case temp
+ case humidity = "humidity_percent" // JSON 里叫这个，模型里叫 humidity
+ }
 }
 ```
 :::
@@ -250,20 +250,20 @@ struct Main: Codable {
 
 ```
 struct TempTestView: View {
-    @State private var text = "请求中…"
+ @State private var text = "请求中…"
 
-    var body: some View {
-        Text(text)
-            .task {
-                do {
-                    let service = WeatherService(key: Config.apiKey)
-                    let data = try await service.fetchWeather(city: "beijing")
-                    text = "\(data.name)：\(data.main.temp)°C"
-                } catch {
-                    text = "失败：\(error)"
-                }
-            }
-    }
+ var body: some View {
+ Text(text)
+ .task {
+ do {
+ let service = WeatherService(key: Config.apiKey)
+ let data = try await service.fetchWeather(city: "beijing")
+ text = "\(data.name)：\(data.main.temp)°C"
+ } catch {
+ text = "失败：\(error)"
+ }
+ }
+ }
 }
 ```
 :::
@@ -281,25 +281,25 @@ struct TempTestView: View {
 
 ```
 enum LoadState {
-    case loading                  // 转圈中
-    case success(WeatherResponse) // 成功
-    case error(String)            // 失败
+ case loading // 转圈中
+ case success(WeatherResponse) // 成功
+ case error(String) // 失败
 }
 
 @Observable
 class WeatherViewModel {
-    var state: LoadState = .loading
-    private let service = WeatherService(key: Config.apiKey)
+ var state: LoadState = .loading
+ private let service = WeatherService(key: Config.apiKey)
 
-    func search(city: String) async {
-        state = .loading
-        do {
-            let data = try await service.fetchWeather(city: city)
-            state = .success(data)
-        } catch {
-            state = .error("查不到这个城市，换个名字试试？")
-        }
-    }
+ func search(city: String) async {
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ state = .success(data)
+ } catch {
+ state = .error("查不到这个城市，换个名字试试？")
+ }
+ }
 }
 
 // 界面里：
@@ -328,19 +328,19 @@ catch 里一刀切"查不到这个城市"是把四件事说成了一件事。URL
 
 ```
 do {
-    let data = try await service.fetchWeather(city: city)
-    state = .success(data)
+ let data = try await service.fetchWeather(city: city)
+ state = .success(data)
 } catch let e as URLError {
-    switch e.code {
-    case .notConnectedToNetwork:
-        state = .error("没有网络，检查一下 Wi-Fi 或蜂窝数据")
-    case .timedOut:
-        state = .error("网络太慢，超时了，请稍后再试")
-    default:
-        state = .error("出了点小问题，请稍后再试")
-    }
+ switch e.code {
+ case .notConnectedToNetwork:
+ state = .error("没有网络，检查一下 Wi-Fi 或蜂窝数据")
+ case .timedOut:
+ state = .error("网络太慢，超时了，请稍后再试")
+ default:
+ state = .error("出了点小问题，请稍后再试")
+ }
 } catch {
-    state = .error("出了点小问题，请稍后再试")
+ state = .error("出了点小问题，请稍后再试")
 }
 ```
 :::
@@ -371,23 +371,23 @@ loading 状态最常见的槽点是"转圈转得人发慌"。两个低成本改�
 ```
 @Observable
 class WeatherViewModel {
-    var state: LoadState = .loading
-    private(set) var lastGood: WeatherResponse?   // 最近一次成功的结果
-    private(set) var lastUpdated: Date?           // 它是什么时候拿到的
+ var state: LoadState = .loading
+ private(set) var lastGood: WeatherResponse? // 最近一次成功的结果
+ private(set) var lastUpdated: Date? // 它是什么时候拿到的
 
-    private let service = WeatherService(key: Config.apiKey)
+ private let service = WeatherService(key: Config.apiKey)
 
-    func search(city: String) async {
-        state = .loading
-        do {
-            let data = try await service.fetchWeather(city: city)
-            lastGood = data          // 成功一次，就存一份底
-            lastUpdated = Date()
-            state = .success(data)
-        } catch {
-            state = .error("查不到这个城市，换个名字试试？")
-        }
-    }
+ func search(city: String) async {
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ lastGood = data // 成功一次，就存一份底
+ lastUpdated = Date()
+ state = .success(data)
+ } catch {
+ state = .error("查不到这个城市，换个名字试试？")
+ }
+ }
 }
 ```
 :::
@@ -401,18 +401,18 @@ class WeatherViewModel {
 
 ```
 case .error(let msg):
-    VStack(spacing: 10) {
-        if let d = vm.lastGood {
-            WeatherContent(data: d)
-            if let t = vm.lastUpdated {
-                Text("数据时间 \(t.formatted(date: .omitted, time: .shortened)) · 暂为旧数据")
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
-            }
-        }
-        Text(msg)
-            .foregroundColor(.secondary)
-    }
+ VStack(spacing: 10) {
+ if let d = vm.lastGood {
+ WeatherContent(data: d)
+ if let t = vm.lastUpdated {
+ Text("数据时间 \(t.formatted(date: .omitted, time: .shortened)) · 暂为旧数据")
+ .font(.footnote)
+ .foregroundColor(.secondary)
+ }
+ }
+ Text(msg)
+ .foregroundColor(.secondary)
+ }
 ```
 :::
 
@@ -429,24 +429,24 @@ case .error(let msg):
 
 ```
 struct WeatherContent: View {
-    let data: WeatherResponse
+ let data: WeatherResponse
 
-    var body: some View {
-        VStack(spacing: 12) {
-            Text(data.name)
-                .font(.title.bold())
-            Text("\(Int(data.main.temp))°C")
-                .font(.system(size: 76, weight: .thin))
-            Text(data.weather.first?.description ?? "未知")
-                .font(.title3)
-                .foregroundColor(.secondary)
-            HStack(spacing: 24) {
-                Label("湿度 \(data.main.humidity)%", systemImage: "humidity")
-                Label("当前气温 \(Int(data.main.temp))°C", systemImage: "thermometer")
-            }
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 12) {
+ Text(data.name)
+ .font(.title.bold())
+ Text("\(Int(data.main.temp))°C")
+ .font(.system(size: 76, weight: .thin))
+ Text(data.weather.first?.description ?? "未知")
+ .font(.title3)
+ .foregroundColor(.secondary)
+ HStack(spacing: 24) {
+ Label("湿度 \(data.main.humidity)%", systemImage: "humidity")
+ Label("当前气温 \(Int(data.main.temp))°C", systemImage: "thermometer")
+ }
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -468,19 +468,19 @@ struct WeatherContent: View {
 
 ```
 func icon(for description: String) -> String {
-    switch description {
-    case let d where d.contains("雨"):  return "cloud.rain"
-    case let d where d.contains("雪"):  return "snowflake"
-    case let d where d.contains("雷"):  return "cloud.bolt.rain"
-    case let d where d.contains("云"):  return "cloud"
-    case let d where d.contains("雾"):  return "cloud.fog"
-    default:                            return "sun.max"
-    }
+ switch description {
+ case let d where d.contains("雨"): return "cloud.rain"
+ case let d where d.contains("雪"): return "snowflake"
+ case let d where d.contains("雷"): return "cloud.bolt.rain"
+ case let d where d.contains("云"): return "cloud"
+ case let d where d.contains("雾"): return "cloud.fog"
+ default: return "sun.max"
+ }
 }
 
 // 用在 WeatherContent 里：
 Image(systemName: icon(for: data.weather.first?.description ?? ""))
-    .font(.largeTitle)
+ .font(.largeTitle)
 ```
 :::
 
@@ -505,38 +505,38 @@ Image(systemName: icon(for: data.weather.first?.description ?? ""))
 
 ```
 struct WeatherView: View {
-    @State private var vm = WeatherViewModel()
-    @State private var cityInput = "beijing"
+ @State private var vm = WeatherViewModel()
+ @State private var cityInput = "beijing"
 
-    var body: some View {
-        NavigationStack {
-            VStack(spacing: 16) {
-                HStack {
-                    TextField("城市拼音，如 beijing", text: $cityInput)
-                        .textFieldStyle(.roundedBorder)
-                    Button("查询") {
-                        Task { await vm.search(city: cityInput) }
-                    }
-                }
-                .padding(.horizontal)
+ var body: some View {
+ NavigationStack {
+ VStack(spacing: 16) {
+ HStack {
+ TextField("城市拼音，如 beijing", text: $cityInput)
+ .textFieldStyle(.roundedBorder)
+ Button("查询") {
+ Task { await vm.search(city: cityInput) }
+ }
+ }
+ .padding(.horizontal)
 
-                switch vm.state {
-                case .loading:
-                    ProgressView("加载中…")
-                case .success(let d):
-                    WeatherContent(data: d)
-                case .error(let msg):
-                    Text(msg).foregroundColor(.secondary)
-                }
+ switch vm.state {
+ case .loading:
+ ProgressView("加载中…")
+ case .success(let d):
+ WeatherContent(data: d)
+ case .error(let msg):
+ Text(msg).foregroundColor(.secondary)
+ }
 
-                Spacer()
-            }
-            .navigationTitle("天气")
-            .task {                       // 进页面自动查一次
-                await vm.search(city: cityInput)
-            }
-        }
-    }
+ Spacer()
+ }
+ .navigationTitle("天气")
+ .task { // 进页面自动查一次
+ await vm.search(city: cityInput)
+ }
+ }
+ }
 }
 ```
 :::
@@ -564,11 +564,11 @@ struct WeatherView: View {
 
 ```
 NavigationStack {
-    // …三态界面…
-    .searchable(text: $cityInput, prompt: "城市拼音，如 beijing")
-    .onSubmit(of: .search) {
-        Task { await vm.search(city: cityInput) }
-    }
+ // …三态界面…
+ .searchable(text: $cityInput, prompt: "城市拼音，如 beijing")
+ .onSubmit(of: .search) {
+ Task { await vm.search(city: cityInput) }
+ }
 }
 ```
 :::
@@ -595,11 +595,11 @@ favorites = UserDefaults.standard.stringArray(forKey: "favorite_cities") ?? []
 
 // 界面：用 .task 在页面出现时自动查第一个收藏
 .task {
-    if let first = favorites.first {
-        await vm.search(city: first)
-    } else {
-        await vm.search(city: "beijing")   // 没收藏就查默认城市
-    }
+ if let first = favorites.first {
+ await vm.search(city: first)
+ } else {
+ await vm.search(city: "beijing") // 没收藏就查默认城市
+ }
 }
 ```
 :::
@@ -617,8 +617,8 @@ favorites = UserDefaults.standard.stringArray(forKey: "favorite_cities") ?? []
 
 ```
 .refreshable {
-    let city = lastCity   // 记住上一次查的是哪儿
-    await vm.search(city: city)
+ let city = lastCity // 记住上一次查的是哪儿
+ await vm.search(city: city)
 }
 ```
 :::
@@ -635,7 +635,7 @@ favorites = UserDefaults.standard.stringArray(forKey: "favorite_cities") ?? []
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：中文城市的"梗"
+小贴士：中文城市的"梗"
 
 {class="mt-1"}
 OpenWeatherMap 对中文城市名支持一般，搜"北京"可能无结果而 "beijing" 正常。产品化做法是内置一份"城市名 → 英文/坐标"映射表，或接国内天气服务。练手阶段先支持拼音/英文城市名即可，别和它较劲。
@@ -680,7 +680,7 @@ print("GET weather q=\(city) key=\(maskedKey)")
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：请求没过 ATS？
+小贴士：请求没过 ATS？
 
 {class="mt-1"}
 如果请求一发出就报 "App Transport Security" 错误，八成是用了 http:// 明文地址。正式接口必须 HTTPS；本地调试临时开例外（Info.plist 加 NSAllowsLocalNetworking），上架前记得清干净。
@@ -688,7 +688,7 @@ print("GET weather q=\(city) key=\(maskedKey)")
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：天气 App 验收清单
+来动手：天气 App 验收清单
 
 {class="mt-1"}
 ① 正常搜索出天气；② 断开网络，App 优雅报错不崩溃（模拟器里关掉 Mac 的网络测！）；③ 输一个不存在的城市，提示友好；④ 收藏两个城市，重启 App 还在；⑤ 深色模式下界面不刺眼；⑥ 开飞行模式再搜一次，App 不崩、文案友好，顺便看看有没有把上次的天气缓存出来；后台切回、弱网各试一遍，模拟器对这些场景不敏感，最好真机来。六条全过，这个项目才算毕业。
@@ -765,21 +765,21 @@ URLSession 对请求超时有默认行为，具体数值由系统决定，想自
 
 ```
 func search(city: String, retryCount: Int = 0) async {
-    state = .loading
-    do {
-        let data = try await service.fetchWeather(city: city)
-        lastGood = data
-        lastUpdated = Date()
-        state = .success(data)
-    } catch {
-        // 只自动重试一次，且被取消的任务不再重试
-        if retryCount < 1, !(error is CancellationError) {
-            try? await Task.sleep(for: .seconds(2))
-            await search(city: city, retryCount: retryCount + 1)
-        } else {
-            state = .error("查不到这个城市，换个名字试试？")
-        }
-    }
+ state = .loading
+ do {
+ let data = try await service.fetchWeather(city: city)
+ lastGood = data
+ lastUpdated = Date()
+ state = .success(data)
+ } catch {
+ // 只自动重试一次，且被取消的任务不再重试
+ if retryCount < 1, !(error is CancellationError) {
+ try? await Task.sleep(for: .seconds(2))
+ await search(city: city, retryCount: retryCount + 1)
+ } else {
+ state = .error("查不到这个城市，换个名字试试？")
+ }
+ }
 }
 ```
 :::
@@ -797,12 +797,12 @@ func search(city: String, retryCount: Int = 0) async {
 
 ```
 enum ServiceError: Error {
-    case serverError(Int)      // 带上状态码，界面好分级
+ case serverError(Int) // 带上状态码，界面好分级
 }
 
 let (data, response) = try await URLSession.shared.data(from: url)
 if let http = response as? HTTPURLResponse, http.statusCode != 200 {
-    throw ServiceError.serverError(http.statusCode)
+ throw ServiceError.serverError(http.statusCode)
 }
 ```
 :::
@@ -999,7 +999,7 @@ if let http = response as? HTTPURLResponse, http.statusCode != 200 {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 先浏览器试 API、看懂 JSON，再写代码，"预习"永远不亏
 - API Key 藏进 xcconfig，绝不进代码库

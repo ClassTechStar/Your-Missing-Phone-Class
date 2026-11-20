@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>コア比喩：道と車
+コア比喩：道と車
 
 {class="mt-1"}
 インターネットを都市と想像してほしい。<strong>「道」</strong>はスマートフォンからインターネットまでの通道で、<strong>「車」</strong>は道を走るデータだ。Wi-Fiとモバイルデータは2つの異なる道だが、データ（車）自体は同じだ。
@@ -36,7 +36,7 @@ Wi-Fiは通常一回限りの投資（ブロードバンド月額）で、電気
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>試してみよう：データパッケージを確認
+試してみよう：データパッケージを確認
 
 {class="mt-1"}
 スマートフォンの [設定] &gt; [モバイルネットワーク] &gt; [データ管理] を開き、今月の残りデータ容量と、最もデータを消費するアプリを確認。把握してから出かければ慌てない。
@@ -49,7 +49,7 @@ Wi-Fiは通常一回限りの投資（ブロードバンド月額）で、電気
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>セキュリティリマインダー
+セキュリティリマインダー
 
 {class="mt-1"}
 空港、ショッピングモール、カフェなどの公共場所では、名前の不審な無料Wi-Fi（例：「Free_WiFi_2024」）には接続しないでください。たとえ接続しても、銀行アプリへのログインやパスワード入力は絶対に行わないでください。
@@ -81,7 +81,7 @@ iPhoneユーザーはより直感的：Wi-Fiアイコンが点灯していれば
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>重要警告：海外渡航前に【データローミング】をオフに！
+重要警告：海外渡航前に【データローミング】をオフに！
 
 {class="mt-1"}
 海外でモバイルデータを使用すると天文学的な請求が発生する可能性がある！海外渡航前に必ず設定でデータローミングをオフにするか、現地のSIMカードや国際ローミングパッケージを事前に購入すること。
@@ -106,53 +106,53 @@ Wi-Fi規格はIEEEが制定し、各世代で顕著な向上がある：
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">規格</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">プロトコル</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">周波数帯</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速度</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特徴</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧規格、カバレッジはそこそこ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">現在最も普及、速度も十分</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多数のデバイスで高性能、遅延が少ない</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6GHz帯追加、混雑なし</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超高速転送、マルチリンク集約</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">規格</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">プロトコル</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">周波数帯</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特徴</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旧規格、カバレッジはそこそこ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">現在最も普及、速度も十分</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多数のデバイスで高性能、遅延が少ない</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6GHz帯追加、混雑なし</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超高速転送、マルチリンク集約</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ NFCはRFID技術から派生し、3つの動作モードをサポート：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>やってみよう：テザリングの設定と管理
+やってみよう：テザリングの設定と管理
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. [設定]を開き、「テザリング」または「ネットワーク共有」を見つけて有効化し、名称とパスワードを設定。

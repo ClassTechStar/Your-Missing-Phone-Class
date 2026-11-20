@@ -55,7 +55,7 @@ HarmonyOS NEXT（HarmonyOS NEXT 5.0）はHarmonyOS 4.3とは根本的に異な�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>HarmonyOS NEXTアップグレード前の必読事項
+HarmonyOS NEXTアップグレード前の必読事項
 
 {class="mt-1"}
 HarmonyOS NEXTにアップグレードすると、スマートフォンはAndroidアプリを実行できなくなる。アップグレード前に必ず確認すること：①常用アプリにHarmonyOSネイティブ版があるか；②仕事や生活にAndroidアプリに依存する必須シーンがないか。アップグレード後はHarmonyOS 4.3に戻すことはできない。
@@ -94,7 +94,7 @@ HarmonyOSアプリマーケットには数百万のアプリがあり、主要�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事項
+注意事項
 
 {class="mt-1"}
 HarmonyOSシステムは絶えず更新反復されており、バージョンにより多少の差異がある可能性がある。本記事の記述はHarmonyOS 4.3と6の主要特性に基づいており、具体的な機能はあなたのスマートフォンの実際のバージョンによる。システム更新を維持し、最新機能とセキュリティパッチを取得することを推奨。
@@ -102,7 +102,7 @@ HarmonyOSシステムは絶えず更新反復されており、バージョン�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>今すぐ試そう：HarmonyOSの特色機能を体験
+今すぐ試そう：HarmonyOSの特色機能を体験
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. コントロールセンターを開き、「スーパーターミナル」を見つけ、周囲に他のHarmonyOSデバイスがあるか確認。

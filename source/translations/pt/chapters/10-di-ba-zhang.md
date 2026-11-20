@@ -39,13 +39,13 @@ Limites no uso de gravações
 - Como funciona: o app de telefone consulta uma enorme base de números pela internet e, na hora da chamada, mostra "spam", "golpe" ou o nome da empresa.
 - Como ativar: no Android, abra o app de telefone > Configurações > Bloqueio de spam; no iOS, vá em Configurações > Telefone > Bloqueio e Identificação de Chamadas. Os caminhos detalhados por marca e as opções recomendadas estão na tabela comparativa do Capítulo 13 «Ferramentas úteis do sistema».
 - Principais plataformas de marcação: na China, a marcação de números é feita principalmente por três provedores de dados, Tencent Mobile Manager, 360 Mobile Guard e Diànghuà Bāng (Tapir). As operadoras (China Mobile/Unicom/Telecom) também costumam usar esses dados para exibir o "nome do titular" e o bloqueio de spam. As bases de marcação dos fabricantes (Huawei, Xiaomi, OPPO, vivo) geralmente se integram a esses provedores.
-- E se o seu número for marcado por engano: se o seu número de trabalho normal for marcado erradamente como "delivery", "correios" ou "spam", você pode recorrer pelos seguintes canais: |   |  Diànghuà Bāng: acesse a plataforma de recurso de números (haoma.tk.cn) e envie um documento de identidade.
+- E se o seu número for marcado por engano: se o seu número de trabalho normal for marcado erradamente como "delivery", "correios" ou "spam", você pode recorrer pelos seguintes canais: | | Diànghuà Bāng: acesse a plataforma de recurso de números (haoma.tk.cn) e envie um documento de identidade.
 - 360: envie pelo recurso "Recurso de número" dentro do app 360 Mobile Guard.
 - Tencent: envie pela página "Recurso de número" do miniapp "Tencent Mobile Manager".
 - Três grandes operadoras: usuários da China Mobile podem enviar o SMS "KTFSR" para 10086 e ativar o antispam; usuários da Telecom devem seguir a conta oficial "Tianyi Antispam"; usuários da Unicom configuram no "Unicom Mobile Manager".
 
 - Antispam avançado: ative o "bloqueio de chamadas de alta frequência" da operadora (por exemplo, a limitação de chamadas de alta frequência da China Mobile) para bloquear automaticamente chamadas de voz por IA.
-- Recursos comuns de bloqueio nativo do celular: |   |  Identificação de chamadas / bloqueio inteligente: marca e bloqueia automaticamente spam, golpes e telemarketing com base em bases de números.
+- Recursos comuns de bloqueio nativo do celular: | | Identificação de chamadas / bloqueio inteligente: marca e bloqueia automaticamente spam, golpes e telemarketing com base em bases de números.
 - Lista negra / lista branca: bloqueie manualmente números de spam conhecidos; adicione contatos e números de entrega à lista branca para evitar bloqueios acidentais.
 - Filtro de palavras-chave em SMS: mensagens com termos como "prêmio", "empréstimo" ou "clique no link" vão automaticamente para a caixa de bloqueio.
 - Silenciar chamadas desconhecidas no iOS: chamadas fora dos contatos são apenas silenciadas e vão para o correio de voz, sem interromper você; ideal para quem recebe muito spam, mas fique atento a chamadas importantes de desconhecidos.

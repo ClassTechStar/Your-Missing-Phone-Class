@@ -93,7 +93,7 @@ Swift + SwiftUI + SwiftData + MVVM，这套组合不是唯一解，但对跟着�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：模拟器够用，但别完全不碰真机
+小贴士：模拟器够用，但别完全不碰真机
 
 {class="mt-1"}
 记账本几乎不用传感器，模拟器能覆盖绝大多数开发场景。但两个习惯建议养成：每周在真机上跑一次看看手感（真机调试怎么连线，第 60 章讲过）；给自己定个规矩，说"做完了"之前必须在真机过一遍。键盘弹出、深色模式、动态字体这些细节，模拟器和真机的表现并不总一样。
@@ -119,26 +119,26 @@ import SwiftData
 
 @Model
 class Record {
-    var type: String      // "income" 收入 | "expense" 支出
-    var amount: Double    // 金额（元）；生产建议以「分」存 Int，见下方小贴士
-    var category: String  // 分类：餐饮、交通、工资……
-    var note: String      // 备注（可选）
-    var date: Date        // 记账日期
+ var type: String // "income" 收入 | "expense" 支出
+ var amount: Double // 金额（元）；生产建议以「分」存 Int，见下方小贴士
+ var category: String // 分类：餐饮、交通、工资……
+ var note: String // 备注（可选）
+ var date: Date // 记账日期
 
-    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
-        self.type = type
-        self.amount = amount
-        self.category = category
-        self.note = note
-        self.date = date
-    }
+ init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+ self.type = type
+ self.amount = amount
+ self.category = category
+ self.note = note
+ self.date = date
+ }
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：金额到底用什么类型存？
+小贴士：金额到底用什么类型存？
 
 {class="mt-1"}
 浮点数算钱有经典翻车现场：0.1 + 0.2 不等于 0.3，账目一多就会冒出 0.30000000000000004 这种诡异数字。正经做法有两条：以「分」为单位存整数（Int），展示时再格式化成元；或者用 <code class="inline">Decimal</code>（精确十进制）参与运算。上面的模型为了直观用了 Double，纯练手无妨，哪天真拿它记账，先把金额这一列换掉。这是无数前辈踩出来的坑，记在账上比记在心上牢。
@@ -178,12 +178,12 @@ import SwiftData
 
 @main
 struct LedgerBookApp: App {
-    var body: some Scene {
-        WindowGroup {
-            RecordListView()
-        }
-        .modelContainer(for: Record.self)   // 全 App 的数据库容器
-    }
+ var body: some Scene {
+ WindowGroup {
+ RecordListView()
+ }
+ .modelContainer(for: Record.self) // 全 App 的数据库容器
+ }
 }
 ```
 :::
@@ -204,12 +204,12 @@ struct LedgerBookApp: App {
 @Environment(\.modelContext) private var context
 
 Button("塞三条测试数据") {
-    for i in 1...3 {
-        context.insert(Record(type: "expense",
-                              amount: Double(i) * 10,
-                              category: "测试分类\(i)"))
-    }
-    try? context.save()
+ for i in 1...3 {
+ context.insert(Record(type: "expense",
+ amount: Double(i) * 10,
+ category: "测试分类\(i)"))
+ }
+ try? context.save()
 }
 ```
 :::
@@ -228,7 +228,7 @@ Button("塞三条测试数据") {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> View（SwiftUI 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> ViewModel（@Observable 逻辑中枢）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-database mr-1"></i> Model（SwiftData 数据层）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> View（SwiftUI 界面）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> ViewModel（@Observable 逻辑中枢）</span><span class="text-gray-400 mx-1">⇄</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> Model（SwiftData 数据层）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -245,31 +245,31 @@ import Observation
 
 @Observable
 class RecordViewModel {
-    var records: [Record] = []
-    private let context: ModelContext
+ var records: [Record] = []
+ private let context: ModelContext
 
-    init(context: ModelContext) { self.context = context }
+ init(context: ModelContext) { self.context = context }
 
-    func load() {
-        // SwiftData 的 #Predicate 筛选 + 排序
-        let descriptor = FetchDescriptor<Record>(
-            sortBy: [SortDescriptor(\.date, order: .reverse)]
-        )
-        records = (try? context.fetch(descriptor)) ?? []
-    }
+ func load() {
+ // SwiftData 的 #Predicate 筛选 + 排序
+ let descriptor = FetchDescriptor<Record>(
+ sortBy: [SortDescriptor(\.date, order: .reverse)]
+ )
+ records = (try? context.fetch(descriptor)) ?? []
+ }
 
-    func add(type: String, amount: Double, category: String, note: String) {
-        let r = Record(type: type, amount: amount, category: category, note: note)
-        context.insert(r)
-        try? context.save()
-        load()                       // 重新加载，界面刷新
-    }
+ func add(type: String, amount: Double, category: String, note: String) {
+ let r = Record(type: type, amount: amount, category: category, note: note)
+ context.insert(r)
+ try? context.save()
+ load() // 重新加载，界面刷新
+ }
 
-    func delete(_ record: Record) {
-        context.delete(record)
-        try? context.save()
-        load()
-    }
+ func delete(_ record: Record) {
+ context.delete(record)
+ try? context.save()
+ load()
+ }
 }
 ```
 :::
@@ -311,10 +311,10 @@ class RecordViewModel {
 
 ```
 do {
-    records = try context.fetch(descriptor)
+ records = try context.fetch(descriptor)
 } catch {
-    print("读取账目失败：\(error)")
-    records = []
+ print("读取账目失败：\(error)")
+ records = []
 }
 ```
 :::
@@ -332,12 +332,12 @@ do {
 
 ```
 func add(type: String, amount: Double, category: String, note: String) -> Bool {
-    guard amount > 0 else { return false }   // 非法金额直接拒绝
-    let r = Record(type: type, amount: amount, category: category, note: note)
-    context.insert(r)
-    try? context.save()
-    load()
-    return true
+ guard amount > 0 else { return false } // 非法金额直接拒绝
+ let r = Record(type: type, amount: amount, category: category, note: note)
+ context.insert(r)
+ try? context.save()
+ load()
+ return true
 }
 ```
 :::
@@ -357,36 +357,36 @@ FetchDescriptor 还能带筛选和限量条件，现在用不上，但值得知�
 
 ```
 struct RecordListView: View {
-    @State private var vm: RecordViewModel
-    @State private var showAdd = false
+ @State private var vm: RecordViewModel
+ @State private var showAdd = false
 
-    var body: some View {
-        NavigationStack {
-            List {
-                Section("本月结余") {          // 汇总卡片
-                    SummaryRow(records: vm.records)
-                }
-                Section("流水") {
-                    ForEach(vm.records) { r in
-                        RecordRow(record: r)
-                    }
-                    .onDelete { idx in
-                        val targets = idx.map { vm.records[$0] }
-                    targets.forEach { vm.delete(it) }
-                    }
-                }
-            }
-            .navigationTitle("我的记账本")
-            .toolbar {
-                Button { showAdd = true } label: {
-                    Image(systemName: "plus")
-                }
-            }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView(vm: vm)          // 录入弹窗
-            }
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ Section("本月结余") { // 汇总卡片
+ SummaryRow(records: vm.records)
+ }
+ Section("流水") {
+ ForEach(vm.records) { r in
+ RecordRow(record: r)
+ }
+ .onDelete { idx in
+ val targets = idx.map { vm.records[$0] }
+ targets.forEach { vm.delete(it) }
+ }
+ }
+ }
+ .navigationTitle("我的记账本")
+ .toolbar {
+ Button { showAdd = true } label: {
+ Image(systemName: "plus")
+ }
+ }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView(vm: vm) // 录入弹窗
+ }
+ }
+ }
 }
 ```
 :::
@@ -401,7 +401,7 @@ struct RecordListView: View {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：多选删除的下标陷阱
+注意：多选删除的下标陷阱
 
 {class="mt-1"}
 上面 onDelete 的写法藏着本章最阴险的一个 bug：vm.delete 内部每次都会调 load()，records 数组整个换了一遍，而 idx 里装的是"删除前那一屏"的下标——删完第一条。第二个下标对应的已经不是你以为的那条，轻则删错账，重则下标越界当场崩掉。多选删除的正确姿势是<strong>先收集快照，再逐个删除</strong>：<code class="inline">let targets = idx.map { vm.records[$0] }</code>，然后 <code class="inline">targets.forEach { vm.delete(it) }</code>——先把要删的 Record 对象本身抓在手里（对象引用不会因为数组刷新而抓错），再挨个送走。单条左滑删除没这个问题，它一次只动一个下标。
@@ -420,39 +420,39 @@ struct RecordListView: View {
 
 ```
 struct RecordRow: View {
-    let record: Record
+ let record: Record
 
-    var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: record.type == "income" ? "plus.circle" : "minus.circle")
-                .foregroundColor(record.type == "income" ? .green : .secondary)
+ var body: some View {
+ HStack(spacing: 12) {
+ Image(systemName: record.type == "income" ? "plus.circle" : "minus.circle")
+ .foregroundColor(record.type == "income" ? .green : .secondary)
 
-            VStack(alignment: .leading, spacing: 2) {
-                Text(record.category)
-                    .font(.body)
-                if !record.note.isEmpty {
-                    Text(record.note)
-                        .font(.footnote)
-                        .foregroundColor(.secondary)
-                        .lineLimit(1)          // 长备注截成一行
-                }
-            }
+ VStack(alignment: .leading, spacing: 2) {
+ Text(record.category)
+ .font(.body)
+ if !record.note.isEmpty {
+ Text(record.note)
+ .font(.footnote)
+ .foregroundColor(.secondary)
+ .lineLimit(1) // 长备注截成一行
+ }
+ }
 
-            Spacer()
+ Spacer()
 
-            VStack(alignment: .trailing, spacing: 2) {
-                Text(record.type == "income"
-                     ? "+\(String(format: "%.2f", record.amount))"
-                     : "-\(String(format: "%.2f", record.amount))")
-                    .font(.body.weight(.semibold))
-                    .foregroundColor(record.type == "income" ? .green : .primary)
-                Text(record.date, format: .dateTime.month().day())
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
-            }
-        }
-        .padding(.vertical, 2)
-    }
+ VStack(alignment: .trailing, spacing: 2) {
+ Text(record.type == "income"
+ ? "+\(String(format: "%.2f", record.amount))"
+ : "-\(String(format: "%.2f", record.amount))")
+ .font(.body.weight(.semibold))
+ .foregroundColor(record.type == "income" ? .green : .primary)
+ Text(record.date, format: .dateTime.month().day())
+ .font(.caption2)
+ .foregroundColor(.secondary)
+ }
+ }
+ .padding(.vertical, 2)
+ }
 }
 ```
 :::
@@ -470,64 +470,64 @@ struct RecordRow: View {
 
 ```
 struct AddRecordView: View {
-    let vm: RecordViewModel
-    @Environment(\.dismiss) private var dismiss
+ let vm: RecordViewModel
+ @Environment(\.dismiss) private var dismiss
 
-    @State private var type = "expense"      // 默认记支出（多数账是支出）
-    @State private var amountText = ""
-    @State private var category = "餐饮"
-    @State private var note = ""
+ @State private var type = "expense" // 默认记支出（多数账是支出）
+ @State private var amountText = ""
+ @State private var category = "餐饮"
+ @State private var note = ""
 
-    let categories = ["餐饮", "交通", "购物", "居住", "娱乐", "医疗", "其他"]
+ let categories = ["餐饮", "交通", "购物", "居住", "娱乐", "医疗", "其他"]
 
-    var amount: Double? {
-        Double(amountText)                   // 转不出来就是 nil，不崩
-    }
+ var amount: Double? {
+ Double(amountText) // 转不出来就是 nil，不崩
+ }
 
-    var canSave: Bool {
-        (amount ?? 0) > 0
-    }
+ var canSave: Bool {
+ (amount ?? 0) > 0
+ }
 
-    var body: some View {
-        NavigationStack {
-            Form {
-                Picker("类型", selection: $type) {
-                    Text("支出").tag("expense")
-                    Text("收入").tag("income")
-                }
-                .pickerStyle(.segmented)
+ var body: some View {
+ NavigationStack {
+ Form {
+ Picker("类型", selection: $type) {
+ Text("支出").tag("expense")
+ Text("收入").tag("income")
+ }
+ .pickerStyle(.segmented)
 
-                HStack {
-                    Text("金额")
-                    TextField("0.00", text: $amountText)
-                        .keyboardType(.decimalPad)
-                        .multilineTextAlignment(.trailing)
-                }
+ HStack {
+ Text("金额")
+ TextField("0.00", text: $amountText)
+ .keyboardType(.decimalPad)
+ .multilineTextAlignment(.trailing)
+ }
 
-                Picker("分类", selection: $category) {
-                    ForEach(categories, id: \.self) { Text($0) }
-                }
+ Picker("分类", selection: $category) {
+ ForEach(categories, id: \.self) { Text($0) }
+ }
 
-                TextField("备注（可选）", text: $note)
-            }
-            .navigationTitle("记一笔")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("取消") { dismiss() }
-                }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("保存") {
-                        if let a = amount,
-                           vm.add(type: type, amount: a,
-                                  category: category, note: note) {
-                            dismiss()
-                        }
-                    }
-                    .disabled(!canSave)
-                }
-            }
-        }
-    }
+ TextField("备注（可选）", text: $note)
+ }
+ .navigationTitle("记一笔")
+ .toolbar {
+ ToolbarItem(placement: .cancellationAction) {
+ Button("取消") { dismiss() }
+ }
+ ToolbarItem(placement: .confirmationAction) {
+ Button("保存") {
+ if let a = amount,
+ vm.add(type: type, amount: a,
+ category: category, note: note) {
+ dismiss()
+ }
+ }
+ .disabled(!canSave)
+ }
+ }
+ }
+ }
 }
 ```
 :::
@@ -545,10 +545,10 @@ struct AddRecordView: View {
 
 ```
 enum Ledger {
-    static let categories = ["餐饮", "交通", "购物",
-                             "居住", "娱乐", "医疗", "其他"]
-    static let income = "income"
-    static let expense = "expense"
+ static let categories = ["餐饮", "交通", "购物",
+ "居住", "娱乐", "医疗", "其他"]
+ static let income = "income"
+ static let expense = "expense"
 }
 
 // 用的时候：Ledger.categories、Ledger.income
@@ -572,9 +572,9 @@ enum Ledger {
 @FocusState private var amountFocused: Bool
 
 TextField("0.00", text: $amountText)
-    .keyboardType(.decimalPad)
-    .focused($amountFocused)
-    .onAppear { amountFocused = true }
+ .keyboardType(.decimalPad)
+ .focused($amountFocused)
+ .onAppear { amountFocused = true }
 ```
 :::
 
@@ -595,13 +595,13 @@ SwiftUI 的默认组件天生支持深色模式，前提是你别跟系统较劲
 
 ```
 if vm.records.isEmpty {
-    ContentUnavailableView {
-        Label("还没有账目", systemImage: "tray")
-    } description: {
-        Text("点右上角 +，记下第一笔")
-    }
+ ContentUnavailableView {
+ Label("还没有账目", systemImage: "tray")
+ } description: {
+ Text("点右上角 +，记下第一笔")
+ }
 } else {
-    // 正常的流水列表
+ // 正常的流水列表
 }
 ```
 :::
@@ -614,7 +614,7 @@ if vm.records.isEmpty {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：输入校验别偷懒
+注意：输入校验别偷懒
 
 {class="mt-1"}
 金额输入框一定要校验：空值、负数、"abc"这类非法输入都要拦住（用 <code class="inline">Double(text)</code> 判断，失败返回 nil）。App 崩掉最常见的原因之一就是"把用户的输入当成了乖孩子"。记住：<strong>用户输入的一切，都要当敌人审查</strong>。
@@ -633,17 +633,17 @@ if vm.records.isEmpty {
 
 ```
 func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
-    let cal = Calendar.current
-    let monthRecords = records.filter {
-        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
-    }
-    let income = monthRecords
-        .filter { $0.type == "income" }
-        .reduce(0) { $0 + $1.amount }
-    let expense = monthRecords
-        .filter { $0.type == "expense" }
-        .reduce(0) { $0 + $1.amount }
-    return (income, expense)
+ let cal = Calendar.current
+ let monthRecords = records.filter {
+ cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+ }
+ let income = monthRecords
+ .filter { $0.type == "income" }
+ .reduce(0) { $0 + $1.amount }
+ let expense = monthRecords
+ .filter { $0.type == "expense" }
+ .reduce(0) { $0 + $1.amount }
+ return (income, expense)
 }
 ```
 :::
@@ -663,31 +663,31 @@ func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
 
 ```
 struct SummaryRow: View {
-    let records: [Record]
+ let records: [Record]
 
-    private var s: (income: Double, expense: Double) {
-        monthSummary(records)
-    }
+ private var s: (income: Double, expense: Double) {
+ monthSummary(records)
+ }
 
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("本月结余")
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
-                Text("\(String(format: "%.2f", s.income - s.expense)) 元")
-                    .font(.title2.bold())
-            }
-            Spacer()
-            VStack(alignment: .trailing, spacing: 4) {
-                Text("收入 \(String(format: "%.2f", s.income))")
-                    .font(.footnote)
-                Text("支出 \(String(format: "%.2f", s.expense))")
-                    .font(.footnote)
-            }
-        }
-        .padding(.vertical, 4)
-    }
+ var body: some View {
+ HStack {
+ VStack(alignment: .leading, spacing: 4) {
+ Text("本月结余")
+ .font(.footnote)
+ .foregroundColor(.secondary)
+ Text("\(String(format: "%.2f", s.income - s.expense)) 元")
+ .font(.title2.bold())
+ }
+ Spacer()
+ VStack(alignment: .trailing, spacing: 4) {
+ Text("收入 \(String(format: "%.2f", s.income))")
+ .font(.footnote)
+ Text("支出 \(String(format: "%.2f", s.expense))")
+ .font(.footnote)
+ }
+ }
+ .padding(.vertical, 4)
+ }
 }
 ```
 :::
@@ -708,7 +708,7 @@ struct SummaryRow: View {
 
 // 行的点击手势里：editingRecord = r
 .sheet(item: $editingRecord) { r in
-    AddRecordView(vm: vm, editing: r)
+ AddRecordView(vm: vm, editing: r)
 }
 ```
 :::
@@ -753,30 +753,30 @@ import SwiftData
 
 final class LedgerTests: XCTestCase {
 
-    func testAddChangesCount() throws {
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: Record.self,
-                                           configurations: config)
-        let vm = RecordViewModel(context: ModelContext(container))
+ func testAddChangesCount() throws {
+ let config = ModelConfiguration(isStoredInMemoryOnly: true)
+ let container = try ModelContainer(for: Record.self,
+ configurations: config)
+ let vm = RecordViewModel(context: ModelContext(container))
 
-        vm.add(type: "expense", amount: 12,
-               category: "测试", note: "")
+ vm.add(type: "expense", amount: 12,
+ category: "测试", note: "")
 
-        XCTAssertEqual(vm.records.count, 1)
-    }
+ XCTAssertEqual(vm.records.count, 1)
+ }
 
-    func testDeleteEmpties() throws {
-        // 同样的内存容器：先加一笔，删掉，断言归零
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: Record.self,
-                                           configurations: config)
-        let vm = RecordViewModel(context: ModelContext(container))
+ func testDeleteEmpties() throws {
+ // 同样的内存容器：先加一笔，删掉，断言归零
+ let config = ModelConfiguration(isStoredInMemoryOnly: true)
+ let container = try ModelContainer(for: Record.self,
+ configurations: config)
+ let vm = RecordViewModel(context: ModelContext(container))
 
-        vm.add(type: "expense", amount: 12, category: "测试", note: "")
-        vm.delete(vm.records[0])
+ vm.add(type: "expense", amount: 12, category: "测试", note: "")
+ vm.delete(vm.records[0])
 
-        XCTAssertTrue(vm.records.isEmpty)
-    }
+ XCTAssertTrue(vm.records.isEmpty)
+ }
 }
 ```
 :::
@@ -806,10 +806,10 @@ import Charts
 
 // items: [(category: String, total: Double)]
 Chart(items, id: \.category) { item in
-    BarMark(
-        x: .value("分类", item.category),
-        y: .value("金额", item.total)
-    )
+ BarMark(
+ x: .value("分类", item.category),
+ y: .value("金额", item.total)
+ )
 }
 .frame(height: 220)
 ```
@@ -823,7 +823,7 @@ SwiftData 开同步的大头在工程配置：选中 target。Signing &amp; Capa
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：本周完成它
+来动手：本周完成它
 
 {class="mt-1"}
 按"数据层 / ViewModel / 列表页 / 录入弹窗 / 汇总卡片"的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时带上环境版本，比如 Xcode 26 / Swift 6.2，再说清"期望行为、实际行为、复现步骤"，版本说清了能少绕不少路）。完成后用它记一周账，自己做的 App 用起来，成就感会推着你继续往前走。
@@ -913,16 +913,16 @@ bug 门诊治的是"已经翻车的"，这一节防的是"还没翻车的"。八
 
 ```
 func testRejectsInvalidAmount() throws {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try ModelContainer(for: Record.self,
-                                       configurations: config)
-    let vm = RecordViewModel(context: ModelContext(container))
+ let config = ModelConfiguration(isStoredInMemoryOnly: true)
+ let container = try ModelContainer(for: Record.self,
+ configurations: config)
+ let vm = RecordViewModel(context: ModelContext(container))
 
-    let ok = vm.add(type: "expense", amount: -5,
-                    category: "测试", note: "")
+ let ok = vm.add(type: "expense", amount: -5,
+ category: "测试", note: "")
 
-    XCTAssertFalse(ok)                       // 拒绝了
-    XCTAssertTrue(vm.records.isEmpty)        // 而且没入库
+ XCTAssertFalse(ok) // 拒绝了
+ XCTAssertTrue(vm.records.isEmpty) // 而且没入库
 }
 ```
 :::
@@ -1019,10 +1019,10 @@ func testRejectsInvalidAmount() throws {
 ```
 // 列表行里：
 .onDelete { idx in
-    for i in idx {
-        context.delete(records[i])   // 界面直接摸数据库
-    }
-    try? context.save()
+ for i in idx {
+ context.delete(records[i]) // 界面直接摸数据库
+ }
+ try? context.save()
 }
 ```
 :::
@@ -1037,9 +1037,9 @@ func testRejectsInvalidAmount() throws {
 ```
 // ViewModel 里：
 func delete(_ record: Record) {
-    context.delete(record)
-    try? context.save()
-    load()
+ context.delete(record)
+ try? context.save()
+ load()
 }
 
 // 界面里只剩一句：
@@ -1065,12 +1065,12 @@ vm.delete(record)
 ```
 let header = "日期,类型,分类,金额,备注"
 let lines = vm.records.map {
-    "\($0.date),\($0.type),\($0.category),\($0.amount),\($0.note)"
+ "\($0.date),\($0.type),\($0.category),\($0.amount),\($0.note)"
 }
 let csv = ([header] + lines).joined(separator: "\n")
 
 ShareLink(item: csv,
-          preview: SharePreview("我的账单.csv"))
+ preview: SharePreview("我的账单.csv"))
 ```
 :::
 
@@ -1108,7 +1108,7 @@ ShareLink(item: csv,
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 需求五要素 → 拆成"每步能用"的小步骤，再动手
 - 数据层：@Model 模型 + modelContainer 容器 + FetchDescriptor 查询

@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>""Αρχές
+""Αρχές
 
 {class="mt-1"}
 ναυαρχίδα."".Μπαταρία, Οθόνηεπίσημο. :1500-2500 φοιτητές.
@@ -60,27 +60,27 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Λειτουργία</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Οθόνη</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Family Link / Μάρκα Λύση</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Όρια εφαρμογών</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστηρίζεται, ανά κατηγορία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστηρίζεται, ανά εφαρμογή</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ώρες απενεργοποίησης</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστηρίζεται</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">(Μάρκα Λύση)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Φιλτράρισμα περιεχομένου</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σύστημα,</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μάρκα,</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">απομακρυσμένο</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">οικογένεια</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Μάρκα</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">εγκατάσταση App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">γονείςέγκριση</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστήριξη Family Link</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Λειτουργία</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS Οθόνη</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Family Link / Μάρκα Λύση</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Όρια εφαρμογών</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστηρίζεται, ανά κατηγορία</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστηρίζεται, ανά εφαρμογή</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ώρες απενεργοποίησης</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστηρίζεται</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">(Μάρκα Λύση)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Φιλτράρισμα περιεχομένου</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σύστημα,</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μάρκα,</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">απομακρυσμένο</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">οικογένεια</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / Μάρκα</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">εγκατάσταση App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">γονείςέγκριση</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υποστήριξη Family Link</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>γονείς ""
+γονείς ""
 
 {class="mt-1"}
 ("Οθόνη").Τεχνολογία. Συμβουλές.
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>γονείς ""
+γονείς ""
 
 {class="mt-1"}
 γονείς, Χρήστης Πρωτόκολλο. γονείς Κωδικός,"".
@@ -113,7 +113,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πρακτική:""
+Πρακτική:""
 
 {class="mt-1"}
 , .Συμβουλές:
@@ -137,7 +137,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>γονείς ""
+γονείς ""
 
 {class="mt-1"}
 . Βίντεο. .
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>"παιδιάψηφιακό"
+"παιδιάψηφιακό"
 
 {class="mt-1"}
 "καταγραφή",—γονείς, Βίντεο, Έξυπνο Υγεία Δεδομένα.Δεδομένα Μεταφόρτωση Διαγραφή.Δημοσίευση: Φωτογραφία? ψηφιακό,"".
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ,3-6,13 παιδιά Λειτουργία

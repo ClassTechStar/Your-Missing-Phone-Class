@@ -36,35 +36,35 @@ Le protocole est la « langue », l'écosystème est le « cercle ». Même avec
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Écosystème</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Atouts</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Limites</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Public</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Confidentialité maximale (traitement local), intégration fluide iPhone/Siri/Raccourcis</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Appareils plus rares et plus chers, hub HomePod ou Apple TV requis</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Familles tout Apple, attentives à la vie privée et à l'expérience</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le plus large catalogue, excellent rapport qualité-prix, assistant Xiao Ai agréable</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Écosystème relativement fermé, données souvent dans le cloud, publicités plus nombreuses</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Budget limité, volonté d'équiper toute la maison en une fois</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Continuité fluide téléphone/tablette/montre HarmonyOS, catalogue en croissance rapide</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moins d'appareils à l'étranger, écosystème qui rattrape son retard</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Utilisateurs de téléphones Huawei, partisans du « Super Device » multi-appareils</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Écosystème</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Atouts</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Limites</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Public</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Confidentialité maximale (traitement local), intégration fluide iPhone/Siri/Raccourcis</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Appareils plus rares et plus chers, hub HomePod ou Apple TV requis</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Familles tout Apple, attentives à la vie privée et à l'expérience</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le plus large catalogue, excellent rapport qualité-prix, assistant Xiao Ai agréable</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Écosystème relativement fermé, données souvent dans le cloud, publicités plus nombreuses</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Budget limité, volonté d'équiper toute la maison en une fois</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Continuité fluide téléphone/tablette/montre HarmonyOS, catalogue en croissance rapide</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Moins d'appareils à l'étranger, écosystème qui rattrape son retard</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Utilisateurs de téléphones Huawei, partisans du « Super Device » multi-appareils</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

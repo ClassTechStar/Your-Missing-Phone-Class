@@ -204,41 +204,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ブラウザ</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主な強み</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">向いている人</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromiumベース＋Copilot AI内蔵。ページ要約／翻訳／会話が可能</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">効率を重視するオフィスワーカー、AIヘビーユーザー（メイン推奨）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Appleエコシステムと深く統合。省電力・高効率、プライバシー保護が強い</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone／Macユーザー、バッテリーとシステム連携を重視する人</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">世界最大の普及率、最も豊富な拡張エコシステム</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拡張を多用する上級者、デバイス間同期派</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">初期設定で広告とトラッカーをブロック、高速</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">プライバシー重視、拡張なしで広告をブロックしたい人</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同名検索エンジンが履歴を記録せず、ワンタップで痕跡消去</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">パーソナライズ追跡を避けたいプライバシー敏感なユーザー</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ブラウザ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主な強み</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">向いている人</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromiumベース＋Copilot AI内蔵。ページ要約／翻訳／会話が可能</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">効率を重視するオフィスワーカー、AIヘビーユーザー（メイン推奨）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Appleエコシステムと深く統合。省電力・高効率、プライバシー保護が強い</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone／Macユーザー、バッテリーとシステム連携を重視する人</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">世界最大の普及率、最も豊富な拡張エコシステム</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拡張を多用する上級者、デバイス間同期派</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">初期設定で広告とトラッカーをブロック、高速</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">プライバシー重視、拡張なしで広告をブロックしたい人</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同名検索エンジンが履歴を記録せず、ワンタップで痕跡消去</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">パーソナライズ追跡を避けたいプライバシー敏感なユーザー</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -287,46 +287,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">プラットフォーム</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口パス</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推奨オン項目</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[設定] > [電話] / [メッセージ]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不明な着信を消音。ブロック済み連絡先。メッセージの「不明な送信者をフィルタ」</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話アプリ > 設定 > 迷惑ブロック。またはセキュリティセンター</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマートブロック、知らない番号の一回鳴り切断、SMSキーワードフィルタ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 迷惑ブロック。スマホマネージャー > 迷惑ブロック</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">着信識別、ブラックリスト、SMSスマートブロック</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話アプリ > 迷惑ブロック。または本機 > 迷惑ブロック</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">着信ブロック、詐欺電話識別、SMSブロックルール</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 迷惑電話ブロック。iマネージャー</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">迷惑ブロック、詐欺電話警告、メッセージフィルタ</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 設定 > 番号をブロック / 発信者表示と迷惑電話</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不明な番号のブロック、迷惑電話識別（地域により対応が異なる）</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">プラットフォーム</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口パス</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推奨オン項目</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[設定] > [電話] / [メッセージ]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不明な着信を消音。ブロック済み連絡先。メッセージの「不明な送信者をフィルタ」</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話アプリ > 設定 > 迷惑ブロック。またはセキュリティセンター</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマートブロック、知らない番号の一回鳴り切断、SMSキーワードフィルタ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 迷惑ブロック。スマホマネージャー > 迷惑ブロック</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">着信識別、ブラックリスト、SMSスマートブロック</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話アプリ > 迷惑ブロック。または本機 > 迷惑ブロック</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">着信ブロック、詐欺電話識別、SMSブロックルール</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 迷惑電話ブロック。iマネージャー</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">迷惑ブロック、詐欺電話警告、メッセージフィルタ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 設定 > 番号をブロック / 発信者表示と迷惑電話</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不明な番号のブロック、迷惑電話識別（地域により対応が異なる）</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -390,46 +390,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">プラットフォーム</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主な入口</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">説明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマホマネージャー／セキュリティセンター > 地震速報。または設定で「地震」を検索</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一部バージョンはシステム内蔵の警報サービス。ネット接続と位置情報の有効化が必要</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > セキュリティ > 緊急警報通知 / 地震速報</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名称は「緊急警報通知」の場合あり。地震などを含む</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > セキュリティ（SOS緊急連絡）> 地震速報</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">機種と地域サービスのカバレッジによる</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天気アプリ、または設定 > セキュリティ／その他 > 地震速報</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">実際のOSバージョンのメニューに従うこと</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">システム設定に完全な内蔵スイッチがないことが多い。信頼できる地震速報アプリをインストールして通知を許可</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アプリにはバックグラウンド実行と位置情報の権限が必要。おやすみモードで警報を遮断しない</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsungなど</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > セキュリティと緊急事態 / ワイヤレス緊急警報</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「緊急警報」のカバレッジは地域と通信事業者で異なる</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">プラットフォーム</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主な入口</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">説明</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマホマネージャー／セキュリティセンター > 地震速報。または設定で「地震」を検索</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一部バージョンはシステム内蔵の警報サービス。ネット接続と位置情報の有効化が必要</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > セキュリティ > 緊急警報通知 / 地震速報</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名称は「緊急警報通知」の場合あり。地震などを含む</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > セキュリティ（SOS緊急連絡）> 地震速報</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">機種と地域サービスのカバレッジによる</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天気アプリ、または設定 > セキュリティ／その他 > 地震速報</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">実際のOSバージョンのメニューに従うこと</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">システム設定に完全な内蔵スイッチがないことが多い。信頼できる地震速報アプリをインストールして通知を許可</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">アプリにはバックグラウンド実行と位置情報の権限が必要。おやすみモードで警報を遮断しない</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsungなど</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > セキュリティと緊急事態 / ワイヤレス緊急警報</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「緊急警報」のカバレッジは地域と通信事業者で異なる</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

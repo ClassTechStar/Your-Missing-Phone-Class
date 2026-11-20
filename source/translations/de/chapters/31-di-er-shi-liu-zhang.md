@@ -80,7 +80,7 @@ Die Akkulaufzeit von Handys wurde jahrelang als „taegliches Laden" kritisiert;
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Ausprobieren: Erstelle eine „Technik-Anforderungsliste" fuer dein naechstes Handy
+Ausprobieren: Erstelle eine „Technik-Anforderungsliste" fuer dein naechstes Handy
 
 {class="mt-1"}
 Nimm ein Blatt Papier und ordne deine Wuensche fuer KI, Satellit, faltbares Display, Wi-Fi 7, Schnellladen und Akkukapazitaet in drei Stufen: „unbedingt / Bonus / nicht noetig". So kannst du beim naechsten Besuch im Laden schnell beurteilen, ob ein vom Verkaeufer angepriesenes „Verkaufsargument" wirklich dein Beduerfnis trifft. Beispiel:
@@ -93,7 +93,7 @@ Nimm ein Blatt Papier und ordne deine Wuensche fuer KI, Satellit, faltbares Disp
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Kapitelzusammenfassung
+Kapitelzusammenfassung
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Drei Kriterien fuer KI-Handys: On-Device-Modell, NPU-TOPS, KI-Agent-Szenario

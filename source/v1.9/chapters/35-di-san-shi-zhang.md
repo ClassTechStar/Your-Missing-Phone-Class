@@ -42,19 +42,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">谁用</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果生态，体验最流畅。需要Apple TV或支持AirPlay的电视</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct直连，不需要路由器。安卓手机"无线投屏"默认用这个</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">所有平台</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只推送媒体文件（视频/音乐/图片），不镜像屏幕。适合推视频到电视上播放</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">谁用</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果生态，体验最流畅。需要Apple TV或支持AirPlay的电视</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct直连，不需要路由器。安卓手机"无线投屏"默认用这个</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">所有平台</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只推送媒体文件（视频/音乐/图片），不镜像屏幕。适合推视频到电视上播放</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -219,21 +219,21 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">有线投屏</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">无线投屏</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">延迟</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几乎为零，跟手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通常可感知，视网络而定</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">画质</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">稳定输出，不掉帧</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">受Wi-Fi状况影响，可能压缩</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">电量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可借带供电的转接头边充边投</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机耗电明显更快</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">便携</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要带线和转接头</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一部手机走天下</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">适配条件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看手机是否支持视频输出</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看两端协议是否对得上</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">适合场景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正式演示、游戏、看电影</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常随手投、临时分享</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">有线投屏</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">无线投屏</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">延迟</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几乎为零，跟手</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通常可感知，视网络而定</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">画质</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">稳定输出，不掉帧</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">受Wi-Fi状况影响，可能压缩</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">电量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可借带供电的转接头边充边投</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机耗电明显更快</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">便携</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要带线和转接头</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一部手机走天下</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">适配条件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看手机是否支持视频输出</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看两端协议是否对得上</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">适合场景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">正式演示、游戏、看电影</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常随手投、临时分享</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -445,7 +445,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>安全提醒
+安全提醒
 
 {class="mt-1"}
 无论哪种车载互联方案，开车时都应尽量使用语音控制。导航提前设好目的地，音乐提前选好歌单，不要在行驶中操作车机屏幕。
@@ -637,7 +637,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：完成一次手机到电视的投屏
+动手：完成一次手机到电视的投屏
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 确保手机和电视连同一个Wi-Fi。
@@ -656,19 +656,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见连接方式</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话提示</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线USB即插即用；无线视车机支持，首次通常需有线配对</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连不上先换线</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Android Auto</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线为主，无线视车型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国内服务受限，海外场景顺手</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">HiCar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线无线均支持，视车型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为生态融合深</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarLife</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线为主</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老车兜底，功能朴素但稳定</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见连接方式</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话提示</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线USB即插即用；无线视车机支持，首次通常需有线配对</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">连不上先换线</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Android Auto</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线为主，无线视车型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国内服务受限，海外场景顺手</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">HiCar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线无线均支持，视车型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为生态融合深</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarLife</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线为主</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老车兜底，功能朴素但稳定</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -802,20 +802,20 @@ CarLife是典型的"功能不多但哪里都有"：跨iOS和安卓，很多只�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead>
-    <tr class="bg-light dark:bg-gray-700">
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">背后厂商</th>
-      <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话特点</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">HiCar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态融合深，国内合作车型多</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarWith</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">面向小米手机，生态联动方向</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Carlink（含多厂商联盟方案）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO等</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主攻安卓阵营手机与车机互连</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Jovi InCar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo手机的互联方案</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarLife</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨平台兜底，老车友好</td></tr>
-  </tbody>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">背后厂商</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话特点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">HiCar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态融合深，国内合作车型多</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarWith</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">面向小米手机，生态联动方向</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Carlink（含多厂商联盟方案）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO等</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">主攻安卓阵营手机与车机互连</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Jovi InCar</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo手机的互联方案</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">CarLife</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">百度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨平台兜底，老车友好</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -1025,7 +1025,7 @@ CarLife是典型的"功能不多但哪里都有"：跨iOS和安卓，很多只�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 所有升级都先在家演练一遍再实战：盒子配好网、扩展坞插熟、车机连稳，把"第一次"留在客厅和车位上，而不是会议室和高速上。
@@ -1033,7 +1033,7 @@ CarLife是典型的"功能不多但哪里都有"：跨iOS和安卓，很多只�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 无线投屏三阵营：AirPlay（苹果）、Miracast（安卓）、DLNA（跨平台推媒体）

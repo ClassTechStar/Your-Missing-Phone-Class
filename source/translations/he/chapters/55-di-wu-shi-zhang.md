@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "דני"        // val: משתנה לקריאה בלבד (מומלץ כברירת מחדל)
-var age = 18             // var: משתנה שאפשר לשנות (אפשר לשנותו אחר כך)
+val name = "דני" // val: משתנה לקריאה בלבד (מומלץ כברירת מחדל)
+var age = 18 // var: משתנה שאפשר לשנות (אפשר לשנותו אחר כך)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var אפשר לשנות
-// name = "נועה"         // <i class="fas fa-times-circle mr-1"></i> val לא ניתן לשינוי, הקומפילציה תדווח שגיאה
+age = 19 // var אפשר לשנות
+// name = "נועה" // val לא ניתן לשינוי, הקומפילציה תדווח שגיאה
 
-val score: Int = 100     // אפשר גם לציין את הטיפוס במפורש
-val pi = 3.14            // גם בלי לכתוב אותו הוא יוסק אוטומטית
+val score: Int = 100 // אפשר גם לציין את הטיפוס במפורש
+val pi = 3.14 // גם בלי לכתוב אותו הוא יוסק אוטומטית
 ```
 :::
 
@@ -63,15 +63,15 @@ val pi = 3.14            // גם בלי לכתוב אותו הוא יוסק או
 
 ```
 fun greet(name: String): String {
-    return "שלום, $name!"     // הסימן $ מכניס את המשתנה למחרוזת
+ return "שלום, $name!" // הסימן $ מכניס את המשתנה למחרוזת
 }
 
-println(greet("דני"))        // פלט: שלום דני!
+println(greet("דני")) // פלט: שלום דני!
 
 // פונקציות של שורה אחת אפשר לכתוב כביטוי
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // פלט: 8
+println(add(3, 5)) // פלט: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // פלט: 8
 // תנאי: if / else
 val age = 17
 if (age >= 18) {
-    println("מבוגר")
+ println("מבוגר")
 } else {
-    println("קטין")
+ println("קטין")
 }
 
 // מספר ענפים: when (פי מאה יותר טוב מ-switch)
 val score = 85
 val level = when {
-    score >= 90 -> "מצוין"
-    score >= 60 -> "עובר"
-    else -> "המשך כך!"
+ score >= 90 -> "מצוין"
+ score >= 60 -> "עובר"
+ else -> "המשך כך!"
 }
 
 // חזרה: לולאת for
 val fruits = listOf("תפוח", "בננה", "תפוז")
 for (fruit in fruits) {
-    println("אני אוהב לאכול $fruit")
+ println("אני אוהב לאכול $fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ when היא הדרך הנפוצה ביותר ב-Kotlin לענפים מרובים
 :::
 
 ```
-var name: String = "דני"   // טיפוס רגיל: לעולם לא יכול להיות null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> שגיאת קומפילציה: עוצרת אותך מיד
+var name: String = "דני" // טיפוס רגיל: לעולם לא יכול להיות null
+// name = null // שגיאת קומפילציה: עוצרת אותך מיד
 
 var nickname: String? = null // מוסיף סימן שאלה: מאפשר null
 nickname = "טומי"
 
 // עם טיפוסים שיכולים להיות null חובה לטפל בבטחה:
-println(nickname?.length)    // קריאה בטוחה: אם null מחזיר null, בלי קריסה
-val len = nickname?.length ?: 0   // אופרטור Elvis: ערך ברירת מחדל כש-null
+println(nickname?.length) // קריאה בטוחה: אם null מחזיר null, בלי קריסה
+val len = nickname?.length ?: 0 // אופרטור Elvis: ערך ברירת מחדל כש-null
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ String? פירושו "מותר להיות ריק", ו-a ?: b פירושו "אם 
 ```
 // מחלקה רגילה: התבנית
 class Dog(val name: String) {
-    fun bark() = println("$name: האו האו!")
+ fun bark() = println("$name: האו האו!")
 }
 
-val dog = Dog("Rex")      // יוצר אובייקט
-dog.bark()                 // Rex: האו האו!
+val dog = Dog("Rex") // יוצר אובייקט
+dog.bark() // Rex: האו האו!
 
 // data class: קופסת הנתונים (כולל equals/copy וכו' אוטומטית)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "דני", "zhangsan@example.com")
-val twin = me.copy(name = "איתי")   // מעתיק ומשנה שדה אחד
+val twin = me.copy(name = "איתי") // מעתיק ומשנה שדה אחד
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // דרך lambda: מוגדרת במקום, קלילה וישירה
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = האיבר הנוכחי
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = האיבר הנוכחי
 
 // סינון + המרה בשרשרת (נפוץ מאוד בפרויקטים אמיתיים)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

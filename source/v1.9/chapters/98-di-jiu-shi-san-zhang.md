@@ -135,7 +135,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 智能手表不能确诊睡眠呼吸暂停，也不能确诊任何病。报告里的"血氧偏低""呼吸质量异常"只是筛查线索，别因为一晚数据吓自己连夜挂急诊，也别因为设备没报警就无视憋醒症状。要不要查、怎么治（包括要不要用呼吸机），只听医生的。
@@ -343,7 +343,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 给自己定一个"周报日"：每周日晚花两分钟看本周睡眠周报，平时不打开睡眠页。看数据的频率降下来，焦虑跟着降下来，趋势反而看得更清楚，大多数 App 都有周报或周对比入口，找不到就在设置里搜"周"。
@@ -424,7 +424,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：别为分数失眠
+小贴士：别为分数失眠
 
 {class="mt-1"}
 上一章说过"完美睡眠脚本症"：盯着 92 分睡觉，反而睡不好。睡眠评分终究是算法的估计值，不是今晚要过的及格线，正确用法是"看周趋势找问题"，比如连续两周深睡偏低→先查咖啡因和入睡时间。分数本身不是目标，白天的精神状态才是。
@@ -438,7 +438,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：跑一个两周"睡眠实验"
+来动手：跑一个两周"睡眠实验"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 固定一个唤醒闹钟连续两周（周末也一样）。
@@ -498,7 +498,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 睡眠实验的目标不是拿满分，是找到属于你自己的那一两条规律，别人的攻略管概率，你的数据管你。
@@ -522,7 +522,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 安眠药类话题只听医生的：不自行买处方药、不按别人的经验用药、不突然停药。复诊时可以把你的睡眠监测周报带去，时点、时长、夜间心率的趋势图，能帮医生更具体地了解情况，但记住它的身份是"参考材料"，不是检查报告。
@@ -608,7 +608,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把"看周报"揉进每周一次的固定通话里：顺口问一句"这周睡得咋样"，聊两句午睡和起夜，比每天盯着数据更有用，也更有人情味。设备记录的是曲线，子女记住的应该是电话。
@@ -630,7 +630,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 通宵或只睡两三个小时之后的第二天，是困倦驾驶的高危日：等红灯都能睡着的那种困，自己感觉不到但反应已经明显变慢。赶早班机回来的当天、熬夜加班的次日，能不开车就不开车，地铁、打车、让同事捎一段，都比"我还行"靠谱。
@@ -849,7 +849,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把本章的三条铁律写在记录表第一页：起床时间神圣；一次只改一件事；白天状态是唯一裁判。工具和实验都可以变，这三条不变——它们是本章所有内容的最小公约数。
@@ -914,7 +914,7 @@ REM（快速眼动睡眠）和深睡正好相反：集中在后半夜，越靠�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 时长准确率高、分期误差大：看周平均不看单晚，躺着看书会被记成睡眠
 - 四指标按优先级：总时长最优先，时点规律次之，深睡占比看趋势即可

@@ -66,7 +66,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB超寬帶技術——比藍牙更精準之"空間感"
+UWB超寬帶技術——比藍牙更精準之"空間感"
 
 {class="mt-1"}
 除矣藍牙，新款手機裏尚藏着一顆UWB（Ultra-Wideband，超寬帶）芯片。它的能力乃<strong>精確測距與空間定位</strong>——能算出另一個設備離汝多遠、於哪個方向，精度可達釐米級。藍牙只能告訴汝"於附近"，UWB能告訴汝"於汝左前方1.2米"。常見應用：
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio與Auracast——藍牙音頻之新一代標準
+LE Audio與Auracast——藍牙音頻之新一代標準
 
 {class="mt-1"}
 用矣二十年之經典藍牙音頻（A2DP）方爲<strong>LE Audio</strong>（低功耗音頻）取代，這乃藍牙5.2以後之新一代音頻標準：
@@ -110,7 +110,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>試爲之：將手機屏投至電視上，並設一智能場景
+試爲之：將手機屏投至電視上，並設一智能場景
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 確保手機與電視連同一Wi-Fi。
@@ -122,7 +122,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例 1：電池續航優實戰
+案例 1：電池續航優實戰
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>場景</strong>：用戶小米14 續航差，半天遂沒電。

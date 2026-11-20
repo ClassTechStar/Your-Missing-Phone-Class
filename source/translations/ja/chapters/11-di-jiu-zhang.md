@@ -67,7 +67,7 @@ Appleエコシステム → iCloud
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>メインのドキュメントApp（WPSまたはMicrosoft 365）を選び、ログインしてクラウドストレージを連携。
+メインのドキュメントApp（WPSまたはMicrosoft 365）を選び、ログインしてクラウドストレージを連携。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. メモまたは付箋を開き、スキャン機能で書類を撮影し、PDFとして書き出して自分に送信。

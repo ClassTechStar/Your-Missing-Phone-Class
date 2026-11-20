@@ -39,14 +39,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // 寫：存一個值
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // 讀：攞出嚟（Flow 會自動通知變化）
 val themeFlow: Flow<Boolean> = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -65,33 +65,33 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 // 1. Entity：表結構（一張表 = 一個 data class）
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. Dao：操作接口（增刪改查）
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. Database：總裝
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -110,16 +110,16 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 // 1. 定義接口：將 HTTP 請求寫成函數
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. 建立實例
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. 像調函數一樣調用（喺協程入面）
 val result = api.getWeather("北京")
@@ -156,9 +156,9 @@ JSON 解析兩大方案
 // 畀數據類加 @Serializable 註解
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // Retrofit 掛上對應 Converter（以 Retrofit 2.11+ 官方支援爲例）：
@@ -180,13 +180,13 @@ data class WeatherResponse(
 ```
 // 喺 ViewModel 入面啓動協程
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend：會自動掛起等
-    // 更新界面狀態……
+ val records = dao.getAll().first() // suspend：會自動掛起等
+ // 更新界面狀態……
 }
 
 // 關鍵詞速記：
-// suspend   —— "我要等待，別攔着別人"
-// launch    —— "開工！"
+// suspend —— "我要等待，別攔着別人"
+// launch —— "開工！"
 // viewModelScope —— 跟着頁面走嘅"工作間"，頁面銷燬自動收工
 ```
 :::

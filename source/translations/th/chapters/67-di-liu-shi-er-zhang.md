@@ -25,17 +25,17 @@ kind: chapter
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body: บอกว่า "หน้าจอหน้าตาเป็นยังไง"
-        VStack {               // เรียงตามแนวตั้ง
-            Text("สวัสดีชาวโลก!")
-                .font(.largeTitle)      // มอดิฟายเออร์: หัวเรื่องใหญ่
-            Button("แตะฉัน") {
-                print("ถูกแตะแล้ว")
-            }
-            .buttonStyle(.borderedProminent)  // ปุ่มทึบสีน้ำเงิน
-        }
-        .padding()
-    }
+ var body: some View { // body: บอกว่า "หน้าจอหน้าตาเป็นยังไง"
+ VStack { // เรียงตามแนวตั้ง
+ Text("สวัสดีชาวโลก!")
+ .font(.largeTitle) // มอดิฟายเออร์: หัวเรื่องใหญ่
+ Button("แตะฉัน") {
+ print("ถูกแตะแล้ว")
+ }
+ .buttonStyle(.borderedProminent) // ปุ่มทึบสีน้ำเงิน
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -68,17 +68,17 @@ struct ContentView: View {
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("บิล")
-        Spacer()                 // ช่องยืดหยุ่น: ดันฝั่งขวาไปสุด
-        Text("-25.5 หยวน").foregroundColor(.red)
-    }
-    Divider()                    // เส้นแบ่ง
-    Text("โน้ต: มื้อกลางวัน")
+ HStack {
+ Text("บิล")
+ Spacer() // ช่องยืดหยุ่น: ดันฝั่งขวาไปสุด
+ Text("-25.5 หยวน").foregroundColor(.red)
+ }
+ Divider() // เส้นแบ่ง
+ Text("โน้ต: มื้อกลางวัน")
 }
-.padding(16)                     // เว้นรอบด้าน
+.padding(16) // เว้นรอบด้าน
 .background(Color(.systemGray6)) // พื้นเทาอ่อน
-.cornerRadius(12)                // มุมโค้ง
+.cornerRadius(12) // มุมโค้ง
 
 // ลำดับมอดิฟายเออร์มีผล: padding ก่อน แล้ว background พื้นหลังไม่รวมช่องว่าง
 ```
@@ -103,16 +103,16 @@ padding(16).background(สีเทา) กับ background(สีเทา).pa
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State: ค่านี้เปลี่ยนเมื่อไร วาดใหม่เมื่อนั้น
+ @State private var count = 0 // @State: ค่านี้เปลี่ยนเมื่อไร วาดใหม่เมื่อนั้น
 
-    var body: some View {
-        VStack {
-            Text("คุณแตะไป \(count) ครั้ง")
-            Button("แตะฉัน +1") {
-                count += 1          // แก้สเตต หน้าจอเด้งเอง
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("คุณแตะไป \(count) ครั้ง")
+ Button("แตะฉัน +1") {
+ count += 1 // แก้สเตต หน้าจอเด้งเอง
+ }
+ }
+ }
 }
 ```
 :::
@@ -126,24 +126,24 @@ struct CounterView: View {
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("พิมพ์อะไรก็ได้", text: $text)  // $ ไบนดิ้งสองทาง
-            .textFieldStyle(.roundedBorder)
-        Text("คุณพิมพ์ว่า: \(text)")   // อัปเดตสด ๆ ระหว่างพิมพ์
-    }
+ var body: some View {
+ TextField("พิมพ์อะไรก็ได้", text: $text) // $ ไบนดิ้งสองทาง
+ .textFieldStyle(.roundedBorder)
+ Text("คุณพิมพ์ว่า: \(text)") // อัปเดตสด ๆ ระหว่างพิมพ์
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> ผู้ใช้ดำเนินการ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> สเตตเปลี่ยน (count += 1)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> ผู้ใช้ดำเนินการ</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> สเตตเปลี่ยน (count += 1)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI ตรวจจับการเปลี่ยนแปลง</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> วาด UI ใหม่อัตโนมัติ (body คำนวณใหม่)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI ตรวจจับการเปลี่ยนแปลง</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> วาด UI ใหม่อัตโนมัติ (body คำนวณใหม่)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -163,20 +163,20 @@ struct InputView: View {
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::

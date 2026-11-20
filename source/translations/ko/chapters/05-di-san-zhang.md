@@ -20,7 +20,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>핵심 비유: 길과 차
+핵심 비유: 길과 차
 
 {class="mt-1"}
 인터넷을 도시라고 상상해 보세요. <strong>"길"</strong>은 스마트폰에서 인터넷까지의 통로이고, <strong>"차"</strong>는 그 위를 달리는 데이터입니다. Wi-Fi와 데이터는 서로 다른 두 길이지만, 데이터(차) 자체는 동일합니다.
@@ -41,7 +41,7 @@ Wi-Fi는 일반적으로 일회성 투자(broadband 월 요금)이며, 전기만
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>시도해 보기: 데이터 요금제 확인
+시도해 보기: 데이터 요금제 확인
 
 {class="mt-1"}
 스마트폰의 [설정] > [모바일 네트워크] > [데이터 관리]를 열고, 이번 달에 남은 데이터 양과 어떤 앱이 데이터를 가장 많이 사용하는지 확인합니다. 상황을 파악하고 있어야 외출해도 당황하지 않습니다.
@@ -58,7 +58,7 @@ Wi-Fi는 일반적으로 일회성 투자(broadband 월 요금)이며, 전기만
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>보안리마인더
+보안리마인더
 
 {class="mt-1"}
 공항, 쇼핑몰, 카페 등 공공장소에서는 의심스러운 이름의 무료 Wi-Fi(예: "Free_WiFi_2024")에 연결하지 마세요. 연결했더라도 은행 앱에 로그인하거나 비밀번호를 입력해서는 절대 안 됩니다.
@@ -92,7 +92,7 @@ iPhone 사용자에게는 더 직관적입니다. Wi-Fi 아이콘이 켜져 있�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>중요 경고: 출국 전 [데이터 로밍]을 꼭 끄세요!
+중요 경고: 출국 전 [데이터 로밍]을 꼭 끄세요!
 
 {class="mt-1"}
 해외에서 모바일 데이터를 사용하면 엄청난 요금이 발생할 수 있습니다! 출국 전 반드시 설정에서 데이터 로밍을 끄거나, 현지 데이터 SIM 카드/국제 로밍 요금제를 미리 구매하세요.
@@ -117,53 +117,53 @@ Wi-Fi 표준은 IEEE가 제정하며, 세대마다 큰 향상이 있습니다:
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">표준</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">프로토콜</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">주파수 대역</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">최고 속도</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">특징</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">오래된 표준, 커버리기는 괜찮음</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">현재 가장 보급되어 있고, 속도도 충분함</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">다중 기기 성능이 강하고 지연이 낮음</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6GHz 주파수 대역 추가, 혼잡 없음</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">초고속 전송, 다중 링크 집계</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">표준</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">프로토콜</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">주파수 대역</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">최고 속도</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">특징</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">오래된 표준, 커버리기는 괜찮음</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">현재 가장 보급되어 있고, 속도도 충분함</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">다중 기기 성능이 강하고 지연이 낮음</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6GHz 주파수 대역 추가, 혼잡 없음</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">초고속 전송, 다중 링크 집계</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -263,7 +263,7 @@ NFC는 RFID 기술에서 발전한 것으로, 세 가지 작동 모드를 지원
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>직접 해보기: 핫스팟 설정 및 관리
+직접 해보기: 핫스팟 설정 및 관리
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. [설정]을 열고 "개인 핫스팟" 또는 "네트워크 공유"를 찾아 활성화한 후, 이름과 비밀번호를 설정합니다.

@@ -76,7 +76,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB超宽带技术——比蓝牙更精准的"空间感"
+UWB超宽带技术——比蓝牙更精准的"空间感"
 
 {class="mt-1"}
 除了蓝牙，新款手机里还藏着一颗UWB（Ultra-Wideband，超宽带）芯片。它的能力是<strong>精确测距和空间定位</strong>——能算出另一个设备离你多远、在哪个方向，精度可达厘米级。蓝牙只能告诉你"在附近"，UWB能告诉你"在你左前方1.2米"。常见应用：
@@ -90,7 +90,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio与Auracast——蓝牙音频的新一代标准
+LE Audio与Auracast——蓝牙音频的新一代标准
 
 {class="mt-1"}
 用了二十年的经典蓝牙音频（A2DP）正在被<strong>LE Audio</strong>（低功耗音频）取代，这是蓝牙5.2以后的新一代音频标准：
@@ -120,7 +120,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：把手机屏幕投到电视上，并设置一个智能场景
+来试试：把手机屏幕投到电视上，并设置一个智能场景
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 确保手机和电视连同一个Wi-Fi。
@@ -132,7 +132,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例 1：电池续航优化实战
+案例 1：电池续航优化实战
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>场景</strong>：用户小米14 续航差，半天就没电。

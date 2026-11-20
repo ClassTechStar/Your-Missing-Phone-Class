@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第 86 章出发前的准备清单 → 第 87 章 eSIM 与国际流量方案（重点实操）→ 第 88 章离线地图与导航 → 第 89 章海外支付与汇率 → 第 90 章翻译 App 对比与语言攻略。

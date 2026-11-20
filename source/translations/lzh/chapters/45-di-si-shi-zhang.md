@@ -76,12 +76,12 @@ kind: chapter
 - 構建：Vite
 ## 數據模型
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## 開發計劃
 Step 1: 基礎記錄功能 (CRUD)

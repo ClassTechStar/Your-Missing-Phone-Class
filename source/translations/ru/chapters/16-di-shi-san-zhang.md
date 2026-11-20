@@ -204,41 +204,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Браузер</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ключевые плюсы</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Для кого</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ядро Chromium + встроенный Copilot AI: резюме страниц, перевод, диалог</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Офисным работникам, ценящим эффективность, и активным пользователям ИИ (рекомендуется как основной)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Глубокая интеграция с экосистемой Apple, экономия батареи, сильная приватность</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Пользователям iPhone/Mac, важным автономность и связь с системой</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самое высокое использование в мире, самая богатая экосистема расширений</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Продвинутым пользователям с множеством расширений и тем, кому нужна синхронизация устройств</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Из коробки блокирует рекламу и трекеры, работает быстрее</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Тем, кто ценит приватность и хочет блокировать рекламу без плагинов</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Собственный поисковик не хранит историю, следы чистятся в один клик</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Чувствительным к приватности пользователям, не желающим персонализированного трекинга</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Браузер</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ключевые плюсы</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Для кого</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ядро Chromium + встроенный Copilot AI: резюме страниц, перевод, диалог</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Офисным работникам, ценящим эффективность, и активным пользователям ИИ (рекомендуется как основной)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Глубокая интеграция с экосистемой Apple, экономия батареи, сильная приватность</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Пользователям iPhone/Mac, важным автономность и связь с системой</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самое высокое использование в мире, самая богатая экосистема расширений</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Продвинутым пользователям с множеством расширений и тем, кому нужна синхронизация устройств</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Из коробки блокирует рекламу и трекеры, работает быстрее</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Тем, кто ценит приватность и хочет блокировать рекламу без плагинов</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Собственный поисковик не хранит историю, следы чистятся в один клик</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Чувствительным к приватности пользователям, не желающим персонализированного трекинга</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -287,46 +287,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Платформа</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Путь входа</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Рекомендуемые опции</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Настройки] > [Телефон] / [Сообщения]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Неизвестные вызовы беззвучно; заблокированные контакты; «Фильтровать неизвестных отправителей» в Сообщениях</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Настройки > Блокировка спама; или Центр безопасности</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Умная блокировка, отсечение звонков «один гудок», фильтрация SMS по ключевым словам</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Блокировка спама; Менеджер телефона > Блокировка спама</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Идентификация звонящих, чёрный список, умная блокировка SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Блокировка спама; или Устройство > Блокировка спама</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Блокировка звонков, распознавание мошенничества, правила фильтрации SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Блокировка спам-звонков; i-менеджер</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Блокировка спама, предупреждения о мошенничестве, фильтрация сообщений</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Настройки > Блокировка номеров / Определение номера и спам</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Блокировка неизвестных номеров, распознавание спам-звонков (поддержка зависит от региона)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Платформа</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Путь входа</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Рекомендуемые опции</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Настройки] > [Телефон] / [Сообщения]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Неизвестные вызовы беззвучно; заблокированные контакты; «Фильтровать неизвестных отправителей» в Сообщениях</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Настройки > Блокировка спама; или Центр безопасности</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Умная блокировка, отсечение звонков «один гудок», фильтрация SMS по ключевым словам</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Блокировка спама; Менеджер телефона > Блокировка спама</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Идентификация звонящих, чёрный список, умная блокировка SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Блокировка спама; или Устройство > Блокировка спама</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Блокировка звонков, распознавание мошенничества, правила фильтрации SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Блокировка спам-звонков; i-менеджер</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Блокировка спама, предупреждения о мошенничестве, фильтрация сообщений</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Телефон > Настройки > Блокировка номеров / Определение номера и спам</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Блокировка неизвестных номеров, распознавание спам-звонков (поддержка зависит от региона)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -390,46 +390,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Платформа</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Частые входы</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Пояснение</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Менеджер телефона / Центр безопасности > Предупреждение о землетрясении; или поиск в настройках «землетрясение»</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">В части версий сервис встроен в систему, нужен интернет и включённая геолокация</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Безопасность > Экстренные уведомления / Предупреждение о землетрясении</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Может называться «Экстренные уведомления», включает землетрясения и др.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Безопасность (SOS-связь) > Предупреждение о землетрясении</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Зависит от модели и покрытия сервиса в регионе</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Погодное приложение или Настройки > Безопасность/Дополнительно > Предупреждение о землетрясении</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ориентируйтесь на фактическое меню вашей версии системы</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">В системных настройках часто нет полного переключателя; установите надёжное приложение предупреждения и разрешите уведомления</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Приложению нужны фоновая работа и геолокация; не глушите его сигналы режимом «Не беспокоить»</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung и др.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Безопасность и чрезвычайные ситуации / Экстренные оповещения</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Охват «экстренных оповещений» зависит от региона и оператора</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Платформа</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Частые входы</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Пояснение</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Менеджер телефона / Центр безопасности > Предупреждение о землетрясении; или поиск в настройках «землетрясение»</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">В части версий сервис встроен в систему, нужен интернет и включённая геолокация</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Безопасность > Экстренные уведомления / Предупреждение о землетрясении</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Может называться «Экстренные уведомления», включает землетрясения и др.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Безопасность (SOS-связь) > Предупреждение о землетрясении</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Зависит от модели и покрытия сервиса в регионе</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Погодное приложение или Настройки > Безопасность/Дополнительно > Предупреждение о землетрясении</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ориентируйтесь на фактическое меню вашей версии системы</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">В системных настройках часто нет полного переключателя; установите надёжное приложение предупреждения и разрешите уведомления</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Приложению нужны фоновая работа и геолокация; не глушите его сигналы режимом «Не беспокоить»</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung и др.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Безопасность и чрезвычайные ситуации / Экстренные оповещения</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Охват «экстренных оповещений» зависит от региона и оператора</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

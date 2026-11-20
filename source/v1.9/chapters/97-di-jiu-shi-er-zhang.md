@@ -86,7 +86,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 注册任何运动 App 前，先去设置里翻一遍隐私选项：轨迹默认对谁可见、能不能关闭公开动态、历史轨迹能不能一键清空。你的跑步路线里藏着家和单位的坐标，第 91 章讲的权限最小化，在这里同样成立。
@@ -125,7 +125,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 挑课程别只看封面好看，先看两个数：每周频次和单次时长。跟你现在的作息对不上，再科学的计划也会在第十天烂尾。
@@ -289,7 +289,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒："热开就不疼"不是不疼
+避坑提醒："热开就不疼"不是不疼
 
 {class="mt-1"}
 运动中注意力集中、身体兴奋，疼感会变钝，跑起来确实好多了，但跑完回家、第二天早晨，疼会原样回来。判断伤病的窗口是跑后 24 小时，不是跑到第 3 公里时的感觉。
@@ -390,7 +390,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：防水≠随便下水
+避坑提醒：防水≠随便下水
 
 {class="mt-1"}
 手表的防水等级（如 5ATM/IP68）是实验室条件下的静态指标：热水澡、桑拿、深潜都不在保护范围内，热水蒸汽照样进表。游泳后用清水冲洗表体、擦干表带，寿命能翻倍。
@@ -518,7 +518,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 记录的意义不在按下开始那天，在三个月后回头对比那天。
@@ -610,7 +610,7 @@ App 记的是客观数据，缺的那一块是主观感受：而它恰恰是日�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 数据不准时先查佩戴，再查模式，最后才怀疑设备。九成情况是前两步。
@@ -633,7 +633,7 @@ App 记的是客观数据，缺的那一块是主观感受：而它恰恰是日�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：完成一次"带心率的轻松跑"
+来动手：完成一次"带心率的轻松跑"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 算好自己的轻松跑心率区间（最大心率 × 60-70%）。
@@ -862,7 +862,7 @@ App 记的是客观数据，缺的那一块是主观感受：而它恰恰是日�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 新手先用自带训练 App，三个月后再谈第三方
 - 跑步看数据：时长&gt;心率&gt;配速&gt;距离，轻松跑守 60-70% 心率，看区间不看峰值

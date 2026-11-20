@@ -58,7 +58,7 @@ Apa pun teknologi berevolusi, beberapa filosofi kehidupan digital berikut, 10 ta
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari Coba: Susun "Syarat dan Ketentuan Layanan Penggunaan Perangkat Digital Pribadi" Anda
+Mari Coba: Susun "Syarat dan Ketentuan Layanan Penggunaan Perangkat Digital Pribadi" Anda
 
 {class="mt-1"}
 Tulis satu "service agreement" sederhana untuk Anda dan ponsel Anda (serta AR glasses, AI assistant masa depan), untuk mendefinisikan hubungan kalian. Misalnya:
@@ -71,7 +71,7 @@ Tulis satu "service agreement" sederhana untuk Anda dan ponsel Anda (serta AR gl
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro dan AR glasses adalah new computing entry point di luar ponsel, tapi sulit menggantikan ponsel jangka pendek

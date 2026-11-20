@@ -22,7 +22,7 @@ kind: conclusion
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>最後の練習
+最後の練習
 
 {class="mt-1"}
 この本を閉じ、スマホを手に取って、一つのことをしてください：<strong>30秒間考えてみてください。あなたのスマホの中で「失くしたら本当に心痛む」ものは3つ何ですか？</strong>そして、それらがバックアップされていることを確認してください。この本の価値はそれで十分です。

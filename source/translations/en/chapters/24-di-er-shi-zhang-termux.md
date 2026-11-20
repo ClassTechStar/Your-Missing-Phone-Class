@@ -45,44 +45,44 @@ Termux's core application can be extended through several optional plugin apps, 
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Plugin Name</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Feature Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Exposes Android API functionality to command-line programs</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Allows running scripts when the device boots</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Provides a floating terminal window</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Enables color schemes and font customization for the terminal</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Integrates Termux scripts with the Tasker automation app</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Allows running scripts from home screen widgets</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Plugin Name</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Feature Description</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Exposes Android API functionality to command-line programs</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Allows running scripts when the device boots</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Provides a floating terminal window</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Enables color schemes and font customization for the terminal</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Integrates Termux scripts with the Tasker automation app</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Allows running scripts from home screen widgets</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Important Note
+Important Note
 
 {class="mt-1"}
 Termux and its plugins must be installed from the same source, because they share the same sharedUserId. Mixing installations from different sources (such as F-Droid and GitHub) will result in installation errors.
@@ -115,7 +115,7 @@ Remotely manage servers via SSH, perform system maintenance, log analysis, and o
 
 ##### Learning Linux Operations
 
-Provides a real Linux environment. It is an ideal platform for learning the command line and system administration. You can practice Shell scripting and Linux file permission management (such as  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">🔐 Network Security Testing</code>. Install security tools like Nmap, SQLMap, Hydra, and Metasploit. They are used for network scanning and penetration testing.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">6. Version and Compatibility</code> The latest stable version of Termux is v0.118.2, suitable for devices with Android ≥ 7. Note that Termux may have instability on Android 12 and higher versions; recommend following the official update log for the latest compatibility information.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Provides a real Linux environment, making it an ideal platform for learning command line and system administration. You can practice Shell scripting, Linux file permission management (such as</code> chmod 755
+Provides a real Linux environment. It is an ideal platform for learning the command line and system administration. You can practice Shell scripting and Linux file permission management (such as <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">🔐 Network Security Testing</code>. Install security tools like Nmap, SQLMap, Hydra, and Metasploit. They are used for network scanning and penetration testing.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">6. Version and Compatibility</code> The latest stable version of Termux is v0.118.2, suitable for devices with Android ≥ 7. Note that Termux may have instability on Android 12 and higher versions; recommend following the official update log for the latest compatibility information.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Provides a real Linux environment, making it an ideal platform for learning command line and system administration. You can practice Shell scripting, Linux file permission management (such as</code> chmod 755
 
 ##### 🔐 Network Security Testing
 
@@ -127,7 +127,7 @@ The latest stable version of Termux is v0.118.2, for devices running Android 7.0
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Summary
+Summary
 
 {class="mt-1"}
 Termux brings the powerful Linux terminal experience to Android devices, making the phone a portable development and learning tool. Whether developers, system administrators, or tech enthusiasts, all can use Termux to enjoy a complete command-line experience on mobile devices, realizing the concept of "Linux in your pocket".
@@ -135,7 +135,7 @@ Termux brings the powerful Linux terminal experience to Android devices, making 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-on: Run Your First Linux Command on Your Phone
+Hands-on: Run Your First Linux Command on Your Phone
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Download and install Termux from F-Droid, wait for initialization to complete on first launch.

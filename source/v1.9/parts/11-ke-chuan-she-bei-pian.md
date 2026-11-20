@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第 81 章建立可穿戴的全景认知与选购框架 → 第 82、83 章分别吃透两大阵营的旗舰体验（Apple Watch / 华为手表）→ 第 84 章认识"无感监测"的新形态智能戒指 → 第 85 章玩转表盘、快捷指令与自动化，让手环手表真正"替你干活"。

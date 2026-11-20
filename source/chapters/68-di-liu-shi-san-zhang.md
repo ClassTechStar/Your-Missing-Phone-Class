@@ -35,20 +35,20 @@ SwiftUI 状态工具全景（2026 年，@Observable 已是主流）
 import Observation
 
 @Observable
-class CounterModel {                 // 视图模型
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // 视图模型
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // 持有模型
+ @State private var model = CounterModel() // 持有模型
 
-    var body: some View {
-        VStack {
-            Text("你点了 \(model.count) 次")
-            Button("点我") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("你点了 \(model.count) 次")
+ Button("点我") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ iOS 16 起，多页面导航用 <strong>NavigationStack</strong>——像一摞�
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("张三的账本") {
-                    DetailView(name: "张三的账本")   // 目标页面
-                }
-                NavigationLink("李四的账本") {
-                    DetailView(name: "李四的账本")
-                }
-            }
-            .navigationTitle("账本列表")   // 顶部大标题
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("张三的账本") {
+ DetailView(name: "张三的账本") // 目标页面
+ }
+ NavigationLink("李四的账本") {
+ DetailView(name: "李四的账本")
+ }
+ }
+ .navigationTitle("账本列表") // 顶部大标题
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("\(name) 的详情页")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("\(name) 的详情页")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,34 +106,34 @@ NavigationLink 就是"能点的跳转链接"；<code class="inline">navigationTi
 ```
 // 1. 底部弹出半屏/全屏（录入表单最爱）
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("记一笔") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // 弹出的录入页
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("记一笔") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // 弹出的录入页
+ }
+ }
 }
 
 // 2. 底部标签栏（App 的"骨架"）
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("账本", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("统计", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("设置", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("账本", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("统计", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("设置", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：什么时候用哪种？
+小贴士：什么时候用哪种？
 
 {class="mt-1"}
 经验法则：<strong>主流程用 NavigationStack 推页面（列表→详情），临时操作用 sheet 弹窗（新增、编辑、确认），并列的几大块用 TabView（底部标签）</strong>。三者组合，就是绝大多数 App 的骨架。
@@ -150,18 +150,18 @@ iOS 上最常用、最有"苹果味"的组件就是 <strong>List</strong>——�
 
 ```
 struct RecordListView: View {
-    @State private var records = ["午饭 25.5", "地铁 6.0", "工资 +8000"]
+ @State private var records = ["午饭 25.5", "地铁 6.0", "工资 +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // 左滑删除
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // 左滑删除
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -170,7 +170,7 @@ struct RecordListView: View {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：搭一个"三页骨架"
+来动手：搭一个"三页骨架"
 
 #### 五、程序生命周期：前台与后台
 
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("回到前台，恢复刷新")
-            case .inactive:  print("过渡中（来电/切后台瞬间）")
-            case .background: print("进后台，保存草稿")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("回到前台，恢复刷新")
+ case .inactive: print("过渡中（来电/切后台瞬间）")
+ case .background: print("进后台，保存草稿")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::
@@ -211,7 +211,7 @@ struct MyApp: App {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 状态四工具：@State（页面私有）、@Binding（借用）、@Observable（逻辑）、.environment（全局）
 - 新项目用 @Observable 宏写视图模型；老教程的 @ObservableObject 能读即可

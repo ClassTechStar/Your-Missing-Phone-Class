@@ -45,41 +45,41 @@ BL鎖乃整個安全啓動鏈之第一環。它驗證通過後，方將加載並
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
-                            <thead>
-                                <tr class="bg-gray-100 dark:bg-gray-800">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心作用</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">鎖定狀態（默認）</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解鎖後狀態</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系統安全</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防止刷入未簽名之非官方系統，保護系統完整性與底層安全<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高安全：僅加載官方簽名鏡像，有效抵禦惡意固件篡改</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 安全降低：允許刷入第三方 ROM，系統完整性校驗機制失效，惡意軟件若獲取 Root 權限可深度篡改系統</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系統穩定性</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">確保手機運行經過廠商測試與優化之官方系統，保障穩定流暢<br><span class="text-emerald-600 dark:text-emerald-400">✅ 穩定：使用官方固件，功能完整，OTA 升級可靠</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 風險增加：第三方 ROM 或存在兼容性問題，或導致系統崩潰、變磚、硬件功能異常（如攝像頭、快充），OTA 更新或失敗</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保修權益</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">廠商通過鎖定 BL 提供穩定之官方系統，以提供保修服務<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保修有效：享受官方免費保修服務（非人爲損壞）</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保修失效：絕大多數廠商將解鎖 BL 視爲主動放棄保修之行爲，縱重新上鎖，亦或爲檢測出歷史解鎖記錄而拒保</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">數據安全</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解鎖過程通常強制清除數據，防止舊數據於新系統環境下爲惡意利用<br><span class="text-emerald-600 dark:text-emerald-400">✅ 數據安全：日常使用中，BL 鎖限制了惡意程序對系統分區之修改能力</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 數據風險：解鎖時將強制清除所有用戶數據；若解鎖後未正確加密，數據存儲或不安全；丟失後更易爲刷機提取數據</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">功能限制</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">確保依賴安全環境之功能（如支付、銀行 App）正常運行<br><span class="text-emerald-600 dark:text-emerald-400">✅ 功能完整：所有官方功能均可正常使用</span></td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 功能受限：部分安全敏感應用（如 Google Pay、銀行 App）或因檢測至 BL 解鎖狀態而拒絕運行；DRM 服務或降級，影響高清視頻播放</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-gray-100 dark:bg-gray-800">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心作用</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">鎖定狀態（默認）</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解鎖後狀態</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系統安全</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">防止刷入未簽名之非官方系統，保護系統完整性與底層安全<br><span class="text-emerald-600 dark:text-emerald-400">✅ 高安全：僅加載官方簽名鏡像，有效抵禦惡意固件篡改</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 安全降低：允許刷入第三方 ROM，系統完整性校驗機制失效，惡意軟件若獲取 Root 權限可深度篡改系統</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">系統穩定性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">確保手機運行經過廠商測試與優化之官方系統，保障穩定流暢<br><span class="text-emerald-600 dark:text-emerald-400">✅ 穩定：使用官方固件，功能完整，OTA 升級可靠</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 風險增加：第三方 ROM 或存在兼容性問題，或導致系統崩潰、變磚、硬件功能異常（如攝像頭、快充），OTA 更新或失敗</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">保修權益</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">廠商通過鎖定 BL 提供穩定之官方系統，以提供保修服務<br><span class="text-emerald-600 dark:text-emerald-400">✅ 保修有效：享受官方免費保修服務（非人爲損壞）</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 保修失效：絕大多數廠商將解鎖 BL 視爲主動放棄保修之行爲，縱重新上鎖，亦或爲檢測出歷史解鎖記錄而拒保</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">數據安全</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解鎖過程通常強制清除數據，防止舊數據於新系統環境下爲惡意利用<br><span class="text-emerald-600 dark:text-emerald-400">✅ 數據安全：日常使用中，BL 鎖限制了惡意程序對系統分區之修改能力</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 數據風險：解鎖時將強制清除所有用戶數據；若解鎖後未正確加密，數據存儲或不安全；丟失後更易爲刷機提取數據</span></td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">功能限制</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">確保依賴安全環境之功能（如支付、銀行 App）正常運行<br><span class="text-emerald-600 dark:text-emerald-400">✅ 功能完整：所有官方功能均可正常使用</span></td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><span class="text-amber-600 dark:text-amber-400">⚠️ 功能受限：部分安全敏感應用（如 Google Pay、銀行 App）或因檢測至 BL 解鎖狀態而拒絕運行；DRM 服務或降級，影響高清視頻播放</span></td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -115,7 +115,7 @@ BL鎖乃整個安全啓動鏈之第一環。它驗證通過後，方將加載並
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>三思而後行
+三思而後行
 
 {class="mt-1"}
 三星之 Knox 熔斷乃<strong>不可逆</strong>之，一旦觸發遂回不去原廠狀態。若汝只為欲用一些原本須 Root 之功能，建議先查查有無不須 Root 之替代方案。
@@ -123,7 +123,7 @@ BL鎖乃整個安全啓動鏈之第一環。它驗證通過後，方將加載並
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>重要警告
+重要警告
 
 {class="mt-1"}
 刷機有風險，操作需謹慎。或導致：
@@ -140,7 +140,7 @@ BL鎖乃整個安全啓動鏈之第一環。它驗證通過後，方將加載並
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>推薦資源
+推薦資源
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>XDA Developers</strong>：全球最大之安卓開發者社區，有豐富之刷機教程與ROM資源。
@@ -152,7 +152,7 @@ BL鎖乃整個安全啓動鏈之第一環。它驗證通過後，方將加載並
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q1：解鎖BL鎖後還能恢復嗎？
+Q1：解鎖BL鎖後還能恢復嗎？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>可重新上鎖。通常須刷入官方完整之線刷包，並使用特定之刷機腳本（如小米之 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">flash_all_lock.bat</code>）即可重新上鎖。但注意，重新上鎖後，因解鎖而觸發之一些安全熔斷（如三星之Knox）或無法逆轉。
@@ -160,7 +160,7 @@ BL鎖乃整個安全啓動鏈之第一環。它驗證通過後，方將加載並
 
 ::: div .qa-item .mt-3
 {class="font-semibold mb-1"}
-<i class="fas fa-question-circle text-primary mr-1"></i>Q2：解鎖後何以Root？
+Q2：解鎖後何以Root？
 
 {class="mb-2 pl-6"}
 <strong>A：</strong>解鎖BL鎖只為第一步。Root通常須：

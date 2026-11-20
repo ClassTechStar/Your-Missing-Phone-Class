@@ -30,15 +30,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* 引导去设置里开 */
-        default: /* 已授权，开干 */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* 引导去设置里开 */
+ default: /* 已授权，开干 */
+ }
+ }
 }
 
 // 3. 被拒后优雅降级：给提示 + 跳设置
@@ -48,7 +48,7 @@ class LocationModel {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：iOS 权限的"一次性"
+注意：iOS 权限的"一次性"
 
 {class="mt-1"}
 iOS 的权限弹窗<strong>只弹一次</strong>——用户拒绝后再也不会弹。所以：申请的时机要选在"用户正要用的那一刻"（而不是一启动就弹一堆），文案要说明用途。被拒后的界面引导（"去设置里开启定位"）是标配，别让用户困在死胡同里。
@@ -68,27 +68,27 @@ import UserNotifications
 
 // 1. 申请通知权限（弹窗一次）
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "已授权" : "被拒绝")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "已授权" : "被拒绝")
+ }
 
 // 2. 安排一条"每天 20:00 记账提醒"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "记账提醒"
-    content.body = "今天还没记账哦"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "记账提醒"
+ content.body = "今天还没记账哦"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -105,7 +105,7 @@ func scheduleDailyReminder() {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：SwiftUI 的"生态红利"
+小贴士：SwiftUI 的"生态红利"
 
 {class="mt-1"}
 iOS 生态还有两个"只此一家"的进阶玩法：<strong>小组件（WidgetKit）</strong>让用户不打开 App 就能看信息（记账本的"本月支出"放桌面），<strong>快捷指令（App Intents）</strong>让用户用 Siri 或自动化调用你的功能。两者都有官方框架，入门成本不高，但对用户体验的加成巨大，进阶路上值得优先解锁。
@@ -128,7 +128,7 @@ AI 辅助 iOS 开发的四个场景
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给记账本加"三件套"
+来动手：给记账本加"三件套"
 
 #### 五、Swift 并发要点：@MainActor 与 Task
 
@@ -144,20 +144,20 @@ Swift 6 的并发体系有两条新手必懂的规则：
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // 出现即开始，消失即取消
-            await vm.search(city: "北京")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // 出现即开始，消失即取消
+ await vm.search(city: "北京")
+ }
+ }
 }
 ```
 :::
@@ -170,7 +170,7 @@ struct WeatherScreen: View {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 权限三步：Info.plist 声明（漏了必崩）、用时申请、被拒引导去设置
 - iOS 权限弹窗只弹一次：时机选在"正要用的那一刻"，文案写清用途

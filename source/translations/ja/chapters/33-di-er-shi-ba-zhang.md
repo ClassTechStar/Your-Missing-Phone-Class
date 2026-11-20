@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>選び方の三手
+選び方の三手
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>まず何を最も重視するかを明確にする</strong>：写真？ゲーム？バッテリー？画面？システムの快適さ？それとも電話とWeChatができればいい？ニーズに優先順位を付ける。
@@ -33,41 +33,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">比較項目</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">見方</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一言まとめ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">プロセッサ（SoC）</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマホが何年スムーズに使えるかを決める。2026年の基準：Snapdragon 8 Elite Gen5/Dimensity 9500以上=トップクラス；Snapdragon 8s Gen4/Dimensity 8400=中高級；Snapdragon 7+ Gen4/Dimensity 7350=3年使える。Snapdragon 6系以下は要注意。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新しいものを買え、SoCがスマホが何年卡なくなく使えるかを決める</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">画面</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLEDはLCDより色彩が良く省電力；リフレッシュレート120Hzは60Hzよりスクロールがずっと滑らか；解像度は最低1080P以上。高周波PWM調光（1920Hz以上）は目に優しい。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+高周波調光=良い画面の合格ライン</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">：家に老人、子供、ペットがいれば、スマホでいつでも家庭の状況を確認。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>画素数ではなくセンサーサイズを見る</strong>。センサーが大きいほど圧倒的に有利で、画素数よりはるかに重要。超広角は実用的；望遠（3x以上の光学ズーム）は遠くのものを撮る；マクロレンズは大抵おまけ。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大センサーメインカメラ+実用的な望遠&gt;おまけレンズ複数</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">バッテリーと充電</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAhは最低合格ライン、5000mAh以上なら一日一充で安定。急速充電はワット数を見る：60W以上で速い、100W以上で超速い。ワイヤレス充電は便利だが遅い。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh+60W急速充電=不安なしの組み合わせ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">システム更新の約束</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマホがどれだけ安全に使えるかを決める。Appleは通常5-6年のシステム更新；Samsungフラッグシップは4年のシステム+5年のセキュリティ更新；Google Pixelは7年；国産ミッドレンジは更新期間が総じて短い（2-3年）。</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">長く使いたいなら、システム更新の約束が長いブランドを選ぶ</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">比較項目</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">見方</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一言まとめ</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">プロセッサ（SoC）</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマホが何年スムーズに使えるかを決める。2026年の基準：Snapdragon 8 Elite Gen5/Dimensity 9500以上=トップクラス；Snapdragon 8s Gen4/Dimensity 8400=中高級；Snapdragon 7+ Gen4/Dimensity 7350=3年使える。Snapdragon 6系以下は要注意。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新しいものを買え、SoCがスマホが何年卡なくなく使えるかを決める</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">画面</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLEDはLCDより色彩が良く省電力；リフレッシュレート120Hzは60Hzよりスクロールがずっと滑らか；解像度は最低1080P以上。高周波PWM調光（1920Hz以上）は目に優しい。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED+120Hz+高周波調光=良い画面の合格ライン</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">：家に老人、子供、ペットがいれば、スマホでいつでも家庭の状況を確認。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>画素数ではなくセンサーサイズを見る</strong>。センサーが大きいほど圧倒的に有利で、画素数よりはるかに重要。超広角は実用的；望遠（3x以上の光学ズーム）は遠くのものを撮る；マクロレンズは大抵おまけ。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大センサーメインカメラ+実用的な望遠&gt;おまけレンズ複数</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">バッテリーと充電</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500mAhは最低合格ライン、5000mAh以上なら一日一充で安定。急速充電はワット数を見る：60W以上で速い、100W以上で超速い。ワイヤレス充電は便利だが遅い。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000mAh+60W急速充電=不安なしの組み合わせ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">システム更新の約束</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">スマホがどれだけ安全に使えるかを決める。Appleは通常5-6年のシステム更新；Samsungフラッグシップは4年のシステム+5年のセキュリティ更新；Google Pixelは7年；国産ミッドレンジは更新期間が総じて短い（2-3年）。</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">長く使いたいなら、システム更新の約束が長いブランドを選ぶ</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">これこそが真の「テクノロジーが生活をより平等にする」</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注目ポイント</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">おすすめの方向</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 写真愛好家</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大センサーメインカメラ（1インチがベスト）、光学手ブレ補正、望遠（3x以上光学ズーム）、画像処理チップ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo Xシリーズ、Huawei Pura/Mateシリーズ、Xiaomi Ultraシリーズ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 ゲーマー</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">トップクラスのプロセッサ、高いタッチサンプリングレート、冷却システム、大バッテリー+急速充電</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO数字シリーズ、ROG Phone、Red Magic、Redmi Kシリーズ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 バッテリー優先</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh以上のバッテリー、効率の良いプロセッサ、LTPO画面</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magicシリーズ、OnePlus、Redmi Note大バッテリー版</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 お年寄り向け</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード、大きな文字、大きな音量、大バッテリー、アフターサービス拠点が多い</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy、Honor Play、OPPO Aシリーズ、Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 学生向け</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">コスパ高い、頑丈、大バッテリー、ペアレンタルコントロール機能あり</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo、realme GT、iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Appleエコシステムユーザー</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">すでにMac/iPad/AirPodsを持っており、iPhoneを選ぶのが唯一の解</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17標準版（コスパ）またはPro版（フルスペック）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 海外旅行</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM対応、全世界周波数バンド対応、Googleサービス</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone、Samsung Sシリーズ、Pixel、OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">これこそが真の「テクノロジーが生活をより平等にする」</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">注目ポイント</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">おすすめの方向</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 写真愛好家</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">大センサーメインカメラ（1インチがベスト）、光学手ブレ補正、望遠（3x以上光学ズーム）、画像処理チップ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo Xシリーズ、Huawei Pura/Mateシリーズ、Xiaomi Ultraシリーズ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 ゲーマー</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">トップクラスのプロセッサ、高いタッチサンプリングレート、冷却システム、大バッテリー+急速充電</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO数字シリーズ、ROG Phone、Red Magic、Redmi Kシリーズ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 バッテリー優先</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5500mAh以上のバッテリー、効率の良いプロセッサ、LTPO画面</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magicシリーズ、OnePlus、Redmi Note大バッテリー版</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 お年寄り向け</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">簡単モード、大きな文字、大きな音量、大バッテリー、アフターサービス拠点が多い</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Enjoy、Honor Play、OPPO Aシリーズ、Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 学生向け</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">コスパ高い、頑丈、大バッテリー、ペアレンタルコントロール機能あり</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo、realme GT、iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Appleエコシステムユーザー</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">すでにMac/iPad/AirPodsを持っており、iPhoneを選ぶのが唯一の解</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17標準版（コスパ）またはPro版（フルスペック）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 海外旅行</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">eSIM対応、全世界周波数バンド対応、Googleサービス</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone、Samsung Sシリーズ、Pixel、OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>実践：この方法でスマホを一台選ぶ
+実践：この方法でスマホを一台選ぶ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 紙を一枚取り、二つのコアニーズを書く（例：バッテリー第一、写真第二）。
@@ -208,7 +208,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 選び方の三手：ニーズ → 予算 → 機種

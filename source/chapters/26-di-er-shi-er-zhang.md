@@ -98,7 +98,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>为什么需要框架？
+为什么需要框架？
 
 {class="mt-1"}
 很多人用 AI 像用百度一样：敲几个关键词进去。但 AI 不是搜索引擎，而是一个先读懂、再回答的语言模型。<strong>给它更多上下文、说清你要什么、限制它别跑偏</strong>，它就能给你精准的结果。框架就是把你脑子里的"好答案长什么样"翻译成指令。
@@ -198,39 +198,39 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">症状</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">解法</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太泛、不实用</td>
-                                    <td class="border border-gray-300 px-3 py-2">加背景（你是谁/什么场景）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太学术/太官方</td>
-                                    <td class="border border-gray-300 px-3 py-2">加语气限制 + 拒绝"官话"清单</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答跑题/答非所问</td>
-                                    <td class="border border-gray-300 px-3 py-2">把任务用动词重新说一遍，并要求"只回答这个" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">回答太长看不完</td>
-                                    <td class="border border-gray-300 px-3 py-2">硬性限制字数（200 字内）</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">AI 一本正经胡说</td>
-                                    <td class="border border-gray-300 px-3 py-2">加"如不确定请标注'我不确定'" + 重要事实自查</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">第一版不满意</td>
-                                    <td class="border border-gray-300 px-3 py-2">不要重写，在原提示词后追加"再…一些"</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">症状</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">解法</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太泛、不实用</td>
+ <td class="border border-gray-300 px-3 py-2">加背景（你是谁/什么场景）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太学术/太官方</td>
+ <td class="border border-gray-300 px-3 py-2">加语气限制 + 拒绝"官话"清单</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答跑题/答非所问</td>
+ <td class="border border-gray-300 px-3 py-2">把任务用动词重新说一遍，并要求"只回答这个" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">回答太长看不完</td>
+ <td class="border border-gray-300 px-3 py-2">硬性限制字数（200 字内）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">AI 一本正经胡说</td>
+ <td class="border border-gray-300 px-3 py-2">加"如不确定请标注'我不确定'" + 重要事实自查</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">第一版不满意</td>
+ <td class="border border-gray-300 px-3 py-2">不要重写，在原提示词后追加"再…一些"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>场景一：生活助手（早餐搭配建议）
+场景一：生活助手（早餐搭配建议）
 
 {class="mt-1"}
 <strong>提示词</strong>：
@@ -253,7 +253,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>场景二：学习辅助（英语六级备考）
+场景二：学习辅助（英语六级备考）
 
 {class="mt-1"}
 <strong>提示词</strong>：
@@ -267,7 +267,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>场景三：工作效率（会议纪要整理）
+场景三：工作效率（会议纪要整理）
 
 {class="mt-1"}
 <strong>提示词</strong>：
@@ -281,7 +281,7 @@ AI 的回答质量，很大程度上取决于你如何"提问"。同样一个问
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>进阶玩法：让 AI 成为你的"私人助理"
+进阶玩法：让 AI 成为你的"私人助理"
 
 {class="mt-1"}
 试试这些进阶用法，体验 AI 的真正实力：
@@ -305,7 +305,7 @@ AI虽然强大，但绝非"无所不能"。清醒地认识它的局限，才能�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>AI使用小贴士
+AI使用小贴士
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - AI生成的内容可能不准确（"幻觉"问题），重要信息务必核实。
@@ -317,7 +317,7 @@ AI虽然强大，但绝非"无所不能"。清醒地认识它的局限，才能�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来挑战：三道AI实战题
+来挑战：三道AI实战题
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>挑战一：复杂指令</strong>：对语音助手说："明早7点提醒我带伞，并把今天下午3点的日历改到4点。" 看看它能否一次完成多步操作。
@@ -327,7 +327,7 @@ AI虽然强大，但绝非"无所不能"。清醒地认识它的局限，才能�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>案例 2：换机数据迁移完整流程
+案例 2：换机数据迁移完整流程
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>场景</strong>：iPhone 13 → 小米 15 跨品牌换机。

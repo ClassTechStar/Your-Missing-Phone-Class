@@ -58,7 +58,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来试试：制定你的《个人数字设备使用服务条款》
+来试试：制定你的《个人数字设备使用服务条款》
 
 {class="mt-1"}
 为你和你的手机（以及未来的AR眼镜、AI助手）写一份简单的"服务条款"，来定义你们的关系。例如：
@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro与AR眼镜是手机之外的新计算入口，但短期难以取代手机

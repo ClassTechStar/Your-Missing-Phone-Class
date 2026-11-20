@@ -36,35 +36,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">אקוסיסטם</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">יתרונות</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">חסרונות</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">קהל יעד</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פרטיות חזקה (עיבוד מקומי), שילוב חלק עם iPhone/Siri/קיצורי דרך</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פחות מכשירים ויקרים, דורש HomePod או Apple TV כמרכז</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בית של Apple, שמים דגש על פרטיות וחווייה</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הכי הרבה מכשירים, יחס מחיר-ביצועים מעולה, XiaoAi שימושית</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אקוסיסטם סגור יחסית, הרבה נתונים בענן, יותר פרסומות</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תקציב מוגבל, רוצים להשלים בית שלם בפעם אחת</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">העברה חלקה עם HarmonyOS טלפון/טאבלט/שעון, מספר מכשירים גדל במהירות</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פחות תמיכה במכשירים בחו"ל, האקוסיסטם עדיין רודף</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשי Huawei, שמים דגש על "Super Device" רב-מכשירים</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">אקוסיסטם</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">יתרונות</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">חסרונות</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">קהל יעד</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פרטיות חזקה (עיבוד מקומי), שילוב חלק עם iPhone/Siri/קיצורי דרך</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פחות מכשירים ויקרים, דורש HomePod או Apple TV כמרכז</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בית של Apple, שמים דגש על פרטיות וחווייה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הכי הרבה מכשירים, יחס מחיר-ביצועים מעולה, XiaoAi שימושית</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אקוסיסטם סגור יחסית, הרבה נתונים בענן, יותר פרסומות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תקציב מוגבל, רוצים להשלים בית שלם בפעם אחת</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">העברה חלקה עם HarmonyOS טלפון/טאבלט/שעון, מספר מכשירים גדל במהירות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">פחות תמיכה במכשירים בחו"ל, האקוסיסטם עדיין רודף</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשי Huawei, שמים דגש על "Super Device" רב-מכשירים</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

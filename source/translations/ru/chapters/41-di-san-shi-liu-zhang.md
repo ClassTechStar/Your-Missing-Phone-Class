@@ -36,35 +36,35 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Экосистема</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Сильные стороны</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Слабые стороны</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Кому подходит</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Лучшая приватность (в основном локальная обработка), плавная связка с iPhone/Siri/Shortcuts</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устройств немного и стоят недёшево, нужен хаб — HomePod или Apple TV</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Те, у кого вся техника Apple и кто ценит приватность и качество опыта</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый богатый выбор устройств, лучшая цена-качество, удобный ассистент Xiao AI</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Экосистема довольно закрытая, много данных уходит в облако, много рекламы</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Начинающие с ограниченным бюджетом, которые хотят обустроить весь дом в одном месте</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Бесшовная передача задач между телефонами/планшетами/часами HarmonyOS; количество устройств быстро растёт</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Немного зарубежных устройств, экосистема ещё догоняет конкурентов</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Пользователи Huawei, ценящие межустройственную связку «Супертерминал»</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Экосистема</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Сильные стороны</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Слабые стороны</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Кому подходит</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Лучшая приватность (в основном локальная обработка), плавная связка с iPhone/Siri/Shortcuts</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Устройств немного и стоят недёшево, нужен хаб — HomePod или Apple TV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Те, у кого вся техника Apple и кто ценит приватность и качество опыта</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Самый богатый выбор устройств, лучшая цена-качество, удобный ассистент Xiao AI</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Экосистема довольно закрытая, много данных уходит в облако, много рекламы</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Начинающие с ограниченным бюджетом, которые хотят обустроить весь дом в одном месте</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Бесшовная передача задач между телефонами/планшетами/часами HarmonyOS; количество устройств быстро растёт</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Немного зарубежных устройств, экосистема ещё догоняет конкурентов</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Пользователи Huawei, ценящие межустройственную связку «Супертерминал»</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

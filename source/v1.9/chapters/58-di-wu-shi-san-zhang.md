@@ -66,14 +66,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // 写：存一个值
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // 读：取出来（Flow 会自动通知变化）
 val themeFlow: Flow&lt;Boolean&gt; = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -96,34 +96,34 @@ DataStore 还有一个进阶版本：Proto DataStore（用 Protocol Buffers 定�
 // 1. Entity：表结构（一张表 = 一个 data class）
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. Dao：操作接口（增删改查）
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. Database：总装
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -142,16 +142,16 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 // 1. 定义接口：把 HTTP 请求描述成函数
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. 创建实例
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. 像调函数一样调用（在协程里）
 val result = api.getWeather("北京")
@@ -160,7 +160,7 @@ val result = api.getWeather("北京")
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：两条网络铁律
+避坑提醒：两条网络铁律
 
 {class="mt-1"}
 ① <strong>网络请求绝不能在主线程做</strong>——会卡死界面甚至崩溃（NetworkOnMainThreadException）。所有网络调用必须放在协程（viewModelScope.launch）里。② 明文 HTTP 默认被禁止：安卓 9 起要求 HTTPS。测试时若要用 http:// 的本地地址，需要在 Manifest 里显式声明 <code class="inline">usesCleartextTraffic</code>——但正式产品必须全走 HTTPS。
@@ -192,9 +192,9 @@ JSON 解析两大方案
 // 给数据类加 @Serializable 注解
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // Retrofit 挂上对应 Converter（以 Retrofit 2.11+ 官方支持为例）：
@@ -216,13 +216,13 @@ data class WeatherResponse(
 ```
 // 在 ViewModel 里启动协程
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend：会自动挂起等待
-    // 更新界面状态……
+ val records = dao.getAll().first() // suspend：会自动挂起等待
+ // 更新界面状态……
 }
 
 // 关键词速记：
-// suspend   —— "我要等待，别拦着别人"
-// launch    —— "开工！"
+// suspend —— "我要等待，别拦着别人"
+// launch —— "开工！"
 // viewModelScope —— 跟着页面走的"工作间"，页面销毁自动收工
 ```
 :::
@@ -233,7 +233,7 @@ viewModelScope.launch {
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 升级依赖时先升 BOM 与 Kotlin 插件，再看编译报错；单独升某一个库，最容易踩版本不匹配。
@@ -241,7 +241,7 @@ viewModelScope.launch {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做一个"每日一句"小应用
+来动手：做一个"每日一句"小应用
 
 {class="mt-1"}
 找一个免费的名言 API（比如 hitokoto 之类），用 Retrofit 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮（协程里重新请求）。再把喜欢的句子用 Room 存进"收藏夹"。这个练习把 DataStore/Room/Retrofit/协程全用了一遍，做完它，第 54、55 章就是小菜一碟。
@@ -263,16 +263,16 @@ viewModelScope.launch {
 ```
 @Dao
 interface RecordDao {
-    // 单条查询也返回 Flow：这条记录一变，观察它的界面自动刷新
-    @Query("SELECT * FROM records WHERE id = :id")
-    fun getById(id: Long): Flow&lt;Record?&gt;
+ // 单条查询也返回 Flow：这条记录一变，观察它的界面自动刷新
+ @Query("SELECT * FROM records WHERE id = :id")
+ fun getById(id: Long): Flow&lt;Record?&gt;
 
-    @Update
-    suspend fun update(record: Record)
+ @Update
+ suspend fun update(record: Record)
 
-    // 按 id 精确删，不用先查出整个对象
-    @Query("DELETE FROM records WHERE id = :id")
-    suspend fun deleteById(id: Long)
+ // 按 id 精确删，不用先查出整个对象
+ @Query("DELETE FROM records WHERE id = :id")
+ suspend fun deleteById(id: Long)
 }
 ```
 :::
@@ -293,21 +293,21 @@ Room.databaseBuilder 每次调用都有开销，而且两个实例同时写同�
 ```
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 
-    companion object {
-        @Volatile
-        private var INSTANCE: AppDatabase? = null
+ companion object {
+ @Volatile
+ private var INSTANCE: AppDatabase? = null
 
-        fun getInstance(context: Context): AppDatabase =
-            INSTANCE ?: synchronized(this) {
-                INSTANCE ?: Room.databaseBuilder(
-                    context.applicationContext,
-                    AppDatabase::class.java,
-                    "ledger.db"   // 数据库文件名，落在应用私有目录
-                ).build().also { INSTANCE = it }
-            }
-    }
+ fun getInstance(context: Context): AppDatabase =
+ INSTANCE ?: synchronized(this) {
+ INSTANCE ?: Room.databaseBuilder(
+ context.applicationContext,
+ AppDatabase::class.java,
+ "ledger.db" // 数据库文件名，落在应用私有目录
+ ).build().also { INSTANCE = it }
+ }
+ }
 }
 ```
 :::
@@ -316,7 +316,7 @@ abstract class AppDatabase : RoomDatabase() {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：allowMainThreadQueries()
+避坑提醒：allowMainThreadQueries()
 
 {class="mt-1"}
 老教程里常见的这个开关，意思是"允许在主线程查数据库"，等于把卡顿合法化。演示两行代码时勉强能用，项目里别碰，列表一长，界面直接冻住。正确姿势就是 suspend 函数加 Flow，Room 会自己安排后台线程。
@@ -334,17 +334,17 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 // 从版本 1 升到 2：给 records 表加一列
 val MIGRATION_1_2 = object : Migration(1, 2) {
-    override fun migrate(db: SupportSQLiteDatabase) {
-        db.execSQL(
-            "ALTER TABLE records ADD COLUMN syncStatus INTEGER NOT NULL DEFAULT 0"
-        )
-    }
+ override fun migrate(db: SupportSQLiteDatabase) {
+ db.execSQL(
+ "ALTER TABLE records ADD COLUMN syncStatus INTEGER NOT NULL DEFAULT 0"
+ )
+ }
 }
 
 // 构建数据库时挂上（可以挂多条）：
 Room.databaseBuilder(context, AppDatabase::class.java, "ledger.db")
-    .addMigrations(MIGRATION_1_2)
-    .build()
+ .addMigrations(MIGRATION_1_2)
+ .build()
 ```
 :::
 
@@ -367,22 +367,22 @@ Retrofit 底层的网络活儿其实是 OkHttpClient 干的。通过 .client() �
 
 ```
 val client = OkHttpClient.Builder()
-    .connectTimeout(10, TimeUnit.SECONDS)   // 连不上就放弃的时间
-    .readTimeout(30, TimeUnit.SECONDS)      // 连上了但迟迟不给数据的时间
-    .addInterceptor { chain ->
-        val request = chain.request().newBuilder()
-            .addHeader("Authorization", "Bearer $token")
-            .build()
-        chain.proceed(request)              // 放行，请求继续往下走
-    }
-    .build()
+ .connectTimeout(10, TimeUnit.SECONDS) // 连不上就放弃的时间
+ .readTimeout(30, TimeUnit.SECONDS) // 连上了但迟迟不给数据的时间
+ .addInterceptor { chain ->
+ val request = chain.request().newBuilder()
+ .addHeader("Authorization", "Bearer $token")
+ .build()
+ chain.proceed(request) // 放行，请求继续往下走
+ }
+ .build()
 
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .client(client)
-    // .addConverterFactory(……) 挂上你选的转换器，前文两种任选其一
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .client(client)
+ // .addConverterFactory(……) 挂上你选的转换器，前文两种任选其一
+ .build()
+ .create(WeatherApi::class.java)
 ```
 :::
 
@@ -402,23 +402,23 @@ val api = Retrofit.Builder()
 ```
 // 三种状态，少了哪种编译器都会提醒你
 sealed interface UiState&lt;out T&gt; {
-    data object Loading : UiState&lt;Nothing&gt;
-    data class Success&lt;T&gt;(val data: T) : UiState&lt;T&gt;
-    data class Error(val message: String) : UiState&lt;Nothing&gt;
+ data object Loading : UiState&lt;Nothing&gt;
+ data class Success&lt;T&gt;(val data: T) : UiState&lt;T&gt;
+ data class Error(val message: String) : UiState&lt;Nothing&gt;
 }
 
 private val _weather = MutableStateFlow&lt;UiState&lt;WeatherResponse&gt;&gt;(UiState.Loading)
 val weather = _weather.asStateFlow()
 
 fun load(city: String) {
-    viewModelScope.launch {
-        _weather.value = UiState.Loading
-        try {
-            _weather.value = UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            _weather.value = UiState.Error("加载失败，点我重试")
-        }
-    }
+ viewModelScope.launch {
+ _weather.value = UiState.Loading
+ try {
+ _weather.value = UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ _weather.value = UiState.Error("加载失败，点我重试")
+ }
+ }
 }
 ```
 :::
@@ -446,11 +446,11 @@ Flow 默认是"冷"的：构建它的代码写在那里并不执行，每次 col
 
 ```
 dao.getAll()
-    .map { list -&gt; list.filter { it.amount &gt; 0 } }  // 只看收入
-    .onEach { println("拿到 ${it.size} 条") }       // 途中做点副作用
-    .distinctUntilChanged()                        // 数据没变就别惊动界面
-    .flowOn(Dispatchers.Default)                   // 上面的加工放后台算
-    .collect { list -&gt; render(list) }              // 收集：数据在这被真正消费
+ .map { list -&gt; list.filter { it.amount &gt; 0 } } // 只看收入
+ .onEach { println("拿到 ${it.size} 条") } // 途中做点副作用
+ .distinctUntilChanged() // 数据没变就别惊动界面
+ .flowOn(Dispatchers.Default) // 上面的加工放后台算
+ .collect { list -&gt; render(list) } // 收集：数据在这被真正消费
 ```
 :::
 
@@ -467,12 +467,12 @@ dao.getAll()
 
 ```
 val visible: Flow&lt;List&lt;Record&gt;&gt; =
-    combine(dao.getAll(), keyword) { list, kw -&gt;
-        if (kw.isBlank()) list
-        else list.filter {
-            it.note.contains(kw) || it.category.contains(kw)
-        }
-    }
+ combine(dao.getAll(), keyword) { list, kw -&gt;
+ if (kw.isBlank()) list
+ else list.filter {
+ it.note.contains(kw) || it.category.contains(kw)
+ }
+ }
 ```
 :::
 
@@ -487,11 +487,11 @@ val visible: Flow&lt;List&lt;Record&gt;&gt; =
 
 ```
 val records: StateFlow&lt;List&lt;Record&gt;&gt; = dao.getAll()
-    .stateIn(
-        scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(), // 有人看才开工，短暂离开不重启
-        initialValue = emptyList()                  // 开工前的占位值
-    )
+ .stateIn(
+ scope = viewModelScope,
+ started = SharingStarted.WhileSubscribed(), // 有人看才开工，短暂离开不重启
+ initialValue = emptyList() // 开工前的占位值
+ )
 ```
 :::
 
@@ -519,21 +519,21 @@ Compose 界面绑定只要一行 collectAsState()，第 52 章讲状态时你已
 
 ```
 class WeatherRepository(
-    private val api: WeatherApi,
-    private val dao: WeatherDao
+ private val api: WeatherApi,
+ private val dao: WeatherDao
 ) {
-    // 界面只订阅这个：永远读库
-    val cached: Flow&lt;List&lt;Weather&gt;&gt; = dao.getAll()
+ // 界面只订阅这个：永远读库
+ val cached: Flow&lt;List&lt;Weather&gt;&gt; = dao.getAll()
 
-    // 有网才调这个：拉最新 → 写库。界面不直接碰它
-    suspend fun refresh(city: String) {
-        try {
-            val resp = api.getWeather(city)
-            dao.insertAll(listOf(resp.toEntity(fetchedAt = System.currentTimeMillis())))
-        } catch (e: Exception) {
-            // 刷新失败不吭声：旧数据还在，下次再试
-        }
-    }
+ // 有网才调这个：拉最新 → 写库。界面不直接碰它
+ suspend fun refresh(city: String) {
+ try {
+ val resp = api.getWeather(city)
+ dao.insertAll(listOf(resp.toEntity(fetchedAt = System.currentTimeMillis())))
+ } catch (e: Exception) {
+ // 刷新失败不吭声：旧数据还在，下次再试
+ }
+ }
 }
 ```
 :::
@@ -571,8 +571,8 @@ class WeatherRepository(
 
 ```
 val logging = HttpLoggingInterceptor().apply {
-    level = HttpLoggingInterceptor.Level.BODY
-    redactHeader("Authorization")   // 日志里这根头永远显示为 ***
+ level = HttpLoggingInterceptor.Level.BODY
+ redactHeader("Authorization") // 日志里这根头永远显示为 ***
 }
 ```
 :::
@@ -585,7 +585,7 @@ val logging = HttpLoggingInterceptor().apply {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 界面只读 Room，网络只写 Room。
@@ -613,33 +613,33 @@ val logging = HttpLoggingInterceptor().apply {
 
 ```
 class LedgerRepository(
-    private val dao: RecordDao,
-    private val api: LedgerApi
+ private val dao: RecordDao,
+ private val api: LedgerApi
 ) {
-    // 界面唯一的数据入口：永远读 Room
-    val records: Flow&lt;List&lt;Record&gt;&gt; = dao.getAll()
+ // 界面唯一的数据入口：永远读 Room
+ val records: Flow&lt;List&lt;Record&gt;&gt; = dao.getAll()
 
-    // 记一笔：只写本地，标"待同步"，全程没有网络代码
-    suspend fun addRecord(amount: Double, category: String, note: String) {
-        dao.insert(
-            Record(
-                amount = amount,
-                category = category,
-                note = note,
-                date = todayString(),
-                syncStatus = SYNC_PENDING
-            )
-        )
-    }
+ // 记一笔：只写本地，标"待同步"，全程没有网络代码
+ suspend fun addRecord(amount: Double, category: String, note: String) {
+ dao.insert(
+ Record(
+ amount = amount,
+ category = category,
+ note = note,
+ date = todayString(),
+ syncStatus = SYNC_PENDING
+ )
+ )
+ }
 
-    // 联网时：把远端账单搬进 Room（upsert：有则更新、无则插入）
-    suspend fun syncFromRemote() {
-        try {
-            api.getRecords().forEach { dao.upsert(it.toEntity()) }
-        } catch (e: Exception) {
-            // 断网不算错误：本地照常能用，下次再同步
-        }
-    }
+ // 联网时：把远端账单搬进 Room（upsert：有则更新、无则插入）
+ suspend fun syncFromRemote() {
+ try {
+ api.getRecords().forEach { dao.upsert(it.toEntity()) }
+ } catch (e: Exception) {
+ // 断网不算错误：本地照常能用，下次再同步
+ }
+ }
 }
 ```
 :::
@@ -674,13 +674,13 @@ ViewModel 那层就是第 52 章的模板接上 Repository：状态用 StateFlow
 
 ```
 viewModelScope.launch {
-    val lines = withContext(Dispatchers.IO) {
-        file.readLines()                        // 等待型操作，走 IO 车道
-    }
-    val stats = withContext(Dispatchers.Default) {
-        lines.map { it.toDouble() }.sorted()    // 计算型操作，走 Default 车道
-    }
-    _uiState.value = UiState.Success(stats)     // 回到主线程更新界面
+ val lines = withContext(Dispatchers.IO) {
+ file.readLines() // 等待型操作，走 IO 车道
+ }
+ val stats = withContext(Dispatchers.Default) {
+ lines.map { it.toDouble() }.sorted() // 计算型操作，走 Default 车道
+ }
+ _uiState.value = UiState.Success(stats) // 回到主线程更新界面
 }
 ```
 :::
@@ -698,16 +698,16 @@ async 有一处容易踩：async 块里抛的异常不会立刻冒出来，要�
 
 ```
 viewModelScope.launch {
-    try {
-        val weatherDeferred = async { api.getWeather("北京") }
-        val newsDeferred = async { api.getNews() }
-        // 两个请求同时出发；await 时才可能抛异常，所以 try 包在外层
-        val weather = weatherDeferred.await()
-        val news = newsDeferred.await()
-        _uiState.value = UiState.Success(HomeData(weather, news))
-    } catch (e: Exception) {
-        _uiState.value = UiState.Error("加载失败，点我重试")
-    }
+ try {
+ val weatherDeferred = async { api.getWeather("北京") }
+ val newsDeferred = async { api.getNews() }
+ // 两个请求同时出发；await 时才可能抛异常，所以 try 包在外层
+ val weather = weatherDeferred.await()
+ val news = newsDeferred.await()
+ _uiState.value = UiState.Success(HomeData(weather, news))
+ } catch (e: Exception) {
+ _uiState.value = UiState.Error("加载失败，点我重试")
+ }
 }
 ```
 :::
@@ -954,9 +954,9 @@ Room 支持外键和关系查询（@Relation 一类），官方文档有完整�
 
 ```
 class MyApp : Application() {
-    // lazy：第一次用到才初始化，不拖慢启动
-    val database by lazy { AppDatabase.getInstance(this) }
-    val ledgerApi by lazy { buildLedgerApi() }   // 用第八节的 OkHttp + Retrofit 配置
+ // lazy：第一次用到才初始化，不拖慢启动
+ val database by lazy { AppDatabase.getInstance(this) }
+ val ledgerApi by lazy { buildLedgerApi() } // 用第八节的 OkHttp + Retrofit 配置
 }
 ```
 :::
@@ -1004,15 +1004,15 @@ ViewModel 怎么拿到这些依赖？第 52 章的工厂写法可以起步；项
 
 ```
 override suspend fun refresh(city: String) {
-    val latest = dao.getLatest(city)
-    val isFresh = latest != null &amp;&amp;
-        System.currentTimeMillis() - latest.fetchedAt &lt; FRESH_MS  // 多久算新鲜，视业务定
-    if (isFresh) return               // 还新鲜，不打扰服务器
-    try {
-        dao.insertAll(api.getWeather(city).toEntities())
-    } catch (e: Exception) {
-        // 断网：旧数据继续服役，界面不受影响
-    }
+ val latest = dao.getLatest(city)
+ val isFresh = latest != null &amp;&amp;
+ System.currentTimeMillis() - latest.fetchedAt &lt; FRESH_MS // 多久算新鲜，视业务定
+ if (isFresh) return // 还新鲜，不打扰服务器
+ try {
+ dao.insertAll(api.getWeather(city).toEntities())
+ } catch (e: Exception) {
+ // 断网：旧数据继续服役，界面不受影响
+ }
 }
 ```
 :::
@@ -1086,8 +1086,8 @@ override suspend fun refresh(city: String) {
 
 ```
 val locationFlow: Flow&lt;Location&gt; = callbackFlow {
-    registerListener { loc -&gt; trySend(loc) }     // 回调塞进管道
-    awaitClose { unregisterListener() }          // 管道关闭时反注册，防泄漏
+ registerListener { loc -&gt; trySend(loc) } // 回调塞进管道
+ awaitClose { unregisterListener() } // 管道关闭时反注册，防泄漏
 }
 ```
 :::
@@ -1108,13 +1108,13 @@ val locationFlow: Flow&lt;Location&gt; = callbackFlow {
 :::
 
 ```
-val syncRequest = PeriodicWorkRequestBuilder&lt;SyncWorker&gt;(6, TimeUnit.HOURS)  // 间隔按业务定
-    .setConstraints(
-        Constraints.Builder()
-            .setRequiredNetworkType(NetworkType.CONNECTED)
-            .build()
-    )
-    .build()
+val syncRequest = PeriodicWorkRequestBuilder&lt;SyncWorker&gt;(6, TimeUnit.HOURS) // 间隔按业务定
+ .setConstraints(
+ Constraints.Builder()
+ .setRequiredNetworkType(NetworkType.CONNECTED)
+ .build()
+ )
+ .build()
 WorkManager.getInstance(context).enqueue(syncRequest)
 ```
 :::
@@ -1136,7 +1136,7 @@ WorkManager.getInstance(context).enqueue(syncRequest)
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 口诀：小配置进 DataStore，成批数据进 Room，外面的数据走 Retrofit
 - DataStore 返回 Flow：值变了，观察者自动收到

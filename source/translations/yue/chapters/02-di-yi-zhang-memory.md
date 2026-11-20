@@ -53,7 +53,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事項
+注意事項
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 記憶體擴展會佔用部分機身存儲空間，請確保剩餘存儲唔少過20-30GB，否則可能影響系統流暢度。
@@ -63,7 +63,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小結
+小結
 
 {class="mt-1"}
 記憶體擴展係一項成熟嘅系統級優化技術，可以喺硬件不變嘅前提下提升中低端機型嘅多任務能力同後台保活率，但佢受限於閃存同物理記憶體嘅巨大速度鴻溝，並非「萬能神藥」。係咪開啟、開幾大，需結合自身機型嘅物理記憶體大小、閃存規格、剩餘存儲空間同使用習慣嚟判斷。
@@ -71,7 +71,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>嚟動手：睇下你嘅手機有冇記憶體擴展
+嚟動手：睇下你嘅手機有冇記憶體擴展
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打開【設定】，搜尋「記憶體擴展」、「記憶體融合」、「RAM Plus」或「Extended RAM」。

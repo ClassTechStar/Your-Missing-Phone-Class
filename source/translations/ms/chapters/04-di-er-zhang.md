@@ -86,119 +86,119 @@ Pelbagai akhiran fail dalam telefon membuatkan orang pening, memahaminya boleh m
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Format</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jenis</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ciri</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara Buka Cadangan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan rugi, saiz kecil, keserasian terbaik. Format lalai gambar telefon.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/pemihat gambar apa sahaja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan tanpa rugi, menyokong latar belakang telus. Tangkap layar, ikon biasa guna. Saiz lebih besar daripada JPG.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/pemihat gambar apa sahaja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan rugi, saiz kecil, keserasian sangat baik. Format audio paling universal.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemain muzik apa sahaja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan tanpa rugi, kualiti bunyi sama dengan CD, saiz 3-5 kali lebih besar daripada MP3. Pilihan utama audiophile.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemain muzik/App pemain profesional</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio mentah tanpa mampatan, kualiti bunyi terbaik tetapi saiz sangat besar. Rakaman profesional biasa guna.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemain muzik</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengekodan AAC, kualiti bunyi lebih baik daripada MP3 pada kadar bit sama. Ekosistem Apple biasa guna.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/pemain muzik</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format pembungkus video paling universal, keserasian sangat baik. Format lalai video yang dirakam telefon.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/pemain video apa sahaja</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format pembungkus sumber terbuka, menyokong pelbagai trek audio, pelbagai sari kata. Sumber filem biasa guna.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen Word. DOCX ialah format mampatan, saiz lebih kecil. DOC ialah format lama.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Persembahan</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Persembahan PowerPoint. PPTX ialah format mampatan.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jadual</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hamparan Excel. XLSX ialah format mampatan.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format merentasi platform, susunan tetap tidak boleh edit. Kontrak, tesis, e-buku biasa guna.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format mampatan paling universal, keserasian merentasi platform baik.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terbina sistem/App nyahmampat</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nisbah mampatan lebih tinggi daripada ZIP, tetapi memerlukan perisian khusus untuk nyahmampat.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App nyahmampat</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Halaman web</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fail halaman web, dibuka dengan pelayar. Halaman web yang disimpan biasa menggunakan format ini.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pelayar</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cuba Ini: Susun Folder "Muat Turun"</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Buka pengurus fail &gt; Masuk ke folder "Muat Turun". Lihat apa yang ada di dalamnya? Padamkan yang tidak berguna, dan kategorikan yang berguna (contohnya buat folder "Bahan Kerja", "Stiker Emoji" dan masukkannya). Sekali lihat ruang storan, fahami jenis fail mana yang menggunakan paling banyak.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lapan, Pengurusan Imej dan Sistem Fail: Atur Aset dengan Teratur</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pada bahagian sebelumnya kita belajar "mengenali folder", tetapi sekadar mengenali tidak cukup. Bahagian ini akan membincangkan</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Format</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Jenis</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ciri</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Cara Buka Cadangan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan rugi, saiz kecil, keserasian terbaik. Format lalai gambar telefon.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/pemihat gambar apa sahaja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gambar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan tanpa rugi, menyokong latar belakang telus. Tangkap layar, ikon biasa guna. Saiz lebih besar daripada JPG.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/pemihat gambar apa sahaja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan rugi, saiz kecil, keserasian sangat baik. Format audio paling universal.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemain muzik apa sahaja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan tanpa rugi, kualiti bunyi sama dengan CD, saiz 3-5 kali lebih besar daripada MP3. Pilihan utama audiophile.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemain muzik/App pemain profesional</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio mentah tanpa mampatan, kualiti bunyi terbaik tetapi saiz sangat besar. Rakaman profesional biasa guna.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemain muzik</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengekodan AAC, kualiti bunyi lebih baik daripada MP3 pada kadar bit sama. Ekosistem Apple biasa guna.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/pemain muzik</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format pembungkus video paling universal, keserasian sangat baik. Format lalai video yang dirakam telefon.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album/pemain video apa sahaja</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Video</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format pembungkus sumber terbuka, menyokong pelbagai trek audio, pelbagai sari kata. Sumber filem biasa guna.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen Word. DOCX ialah format mampatan, saiz lebih kecil. DOC ialah format lama.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Persembahan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Persembahan PowerPoint. PPTX ialah format mampatan.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jadual</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hamparan Excel. XLSX ialah format mampatan.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Dokumen</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format merentasi platform, susunan tetap tidak boleh edit. Kontrak, tesis, e-buku biasa guna.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format mampatan paling universal, keserasian merentasi platform baik.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Terbina sistem/App nyahmampat</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mampatan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nisbah mampatan lebih tinggi daripada ZIP, tetapi memerlukan perisian khusus untuk nyahmampat.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App nyahmampat</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Halaman web</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fail halaman web, dibuka dengan pelayar. Halaman web yang disimpan biasa menggunakan format ini.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pelayar</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cuba Ini: Susun Folder "Muat Turun"</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Buka pengurus fail &gt; Masuk ke folder "Muat Turun". Lihat apa yang ada di dalamnya? Padamkan yang tidak berguna, dan kategorikan yang berguna (contohnya buat folder "Bahan Kerja", "Stiker Emoji" dan masukkannya). Sekali lihat ruang storan, fahami jenis fail mana yang menggunakan paling banyak.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lapan, Pengurusan Imej dan Sistem Fail: Atur Aset dengan Teratur</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pada bahagian sebelumnya kita belajar "mengenali folder", tetapi sekadar mengenali tidak cukup. Bahagian ini akan membincangkan</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>bagaimana membina satu set piawaian pengurusan yang boleh dilaksanakan jangka panjang secara proaktif
+bagaimana membina satu set piawaian pengurusan yang boleh dilaksanakan jangka panjang secara proaktif
 
 {class="mt-1"}
 , supaya fail anda sentiasa boleh ditemui, tidak hilang, dan tidak diintip.
@@ -216,21 +216,21 @@ Akar kekacauan adalah ketiadaan peraturan. Membina peraturan sebenarnya sangat m
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>2025_Ringkasan_Akhir_Tahun</strong>, <code>2024_Hari_Jadi_Anak</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code>Sistem pengelasan tiga peringkat</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code>Peringkat Pertama</code>: Mengikut jenis fail (Dokumen / Imej / Video / Audio)</li>
-                        <li><strong>Peringkat Kedua</strong>: Mengikut senario penggunaan (Kerja / Kehidupan / Pembelajaran)
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>Peringkat Ketiga</strong>: Mengikut peristiwa atau projek tertentu (seperti "2026Q2_ProjekA")</li>
-                                <li><strong>Pelan pembersihan bulanan</strong>: Tetapkan satu tarikh tetap setiap bulan (disyorkan pada hari gaji atau 1hb bulan), lakukan pembersihan berpusat pada direktori "Muat Turun":</li>
-                                <li><strong>Arkibkan yang berguna, padamkan yang tidak berguna, pindahkan yang berharga</strong>. 12 pembersihan kecil setahun lebih ringan daripada pembersihan besar setahun penuh.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Senarai Tugas Bulan Ini</strong> Pilih hujung minggu yang lapang, ikut urutan berikut:<strong>Cipta folder kerja bulan ini dalam pengurus fail dalam format</strong>2026Q2_ProjekA</li>
-                    </ul>
+ <li><strong>2025_Ringkasan_Akhir_Tahun</strong>, <code>2024_Hari_Jadi_Anak</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code>Sistem pengelasan tiga peringkat</code> AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.<code>Peringkat Pertama</code>: Mengikut jenis fail (Dokumen / Imej / Video / Audio)</li>
+ <li><strong>Peringkat Kedua</strong>: Mengikut senario penggunaan (Kerja / Kehidupan / Pembelajaran)
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>Peringkat Ketiga</strong>: Mengikut peristiwa atau projek tertentu (seperti "2026Q2_ProjekA")</li>
+ <li><strong>Pelan pembersihan bulanan</strong>: Tetapkan satu tarikh tetap setiap bulan (disyorkan pada hari gaji atau 1hb bulan), lakukan pembersihan berpusat pada direktori "Muat Turun":</li>
+ <li><strong>Arkibkan yang berguna, padamkan yang tidak berguna, pindahkan yang berharga</strong>. 12 pembersihan kecil setahun lebih ringan daripada pembersihan besar setahun penuh.</li>
+ </ul>
+ </li>
+ <li><strong>Senarai Tugas Bulan Ini</strong> Pilih hujung minggu yang lapang, ikut urutan berikut:<strong>Cipta folder kerja bulan ini dalam pengurus fail dalam format</strong>2026Q2_ProjekA</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>;
+;
 
 {class="mt-1"}
 Semak semua fail dalam direktori "Muat Turun" minggu ini, simpan yang berguna, arkibkan, dan padamkan yang tidak berguna;
@@ -258,7 +258,7 @@ Pikselkan maklumat yang kelihatan <strong>: Gunakan alat terbina dalam atau piha
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>dan medan utama lain;
+dan medan utama lain;
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Nyahkan metadata</strong>: Sebelum menghantar, klik "Kongsi" atau "Eksport" dalam album, sistem akan bertanya sama ada hendak mengekalkan maklumat lokasi, pilih <strong>"Jangan kekalkan"</strong>. Dengan ini, model peranti penggambaran, koordinat GPS, dan masa penggambaran tidak akan dihantar bersama gambar;

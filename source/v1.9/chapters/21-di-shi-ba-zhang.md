@@ -655,7 +655,7 @@ backups 这件事拖着不做，不是懒，是心理账户在作祟：备份的
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 备份的价值只在「恢复成功」那一刻体现。设好自动备份之后，别忘了真的恢复一次。
@@ -663,7 +663,7 @@ backups 这件事拖着不做，不是懒，是心理账户在作祟：备份的
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>微信聊天记录特别注意
+微信聊天记录特别注意
 
 {class="mt-1"}
 微信聊天记录无法通过任何手机换机工具迁移！它不在整机备份的覆盖范围内。必须用微信自带的"聊天记录迁移"功能，或备份到电脑版微信。很多人在换完新手机之后才发现聊天记录全没了，那时候已经晚了，旧手机可能已经恢复出厂设置了。所以换机前就用应用自带的迁移功能把记录搬到新机，并在新机上点开验证能正常看，再动旧机。
@@ -671,7 +671,7 @@ backups 这件事拖着不做，不是懒，是心理账户在作祟：备份的
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>练一练：做一次完整的备份演练
+练一练：做一次完整的备份演练
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 检查iCloud云备份或品牌云备份是否开启，确认上一次备份时间。
@@ -1054,7 +1054,7 @@ iPhone 的 iCloud 备份自动化条件很明确：插电源、锁屏、连 Wi-F
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 数据保险不是买来的，是养出来的：一次备份是运气，两次是习惯，每季度都备份才是体系。

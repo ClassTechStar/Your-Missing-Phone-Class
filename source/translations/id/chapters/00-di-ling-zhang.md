@@ -45,7 +45,7 @@ Tapi alasan utama kapasitas ponsel Anda menyusut ada tiga:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Saran kecil saat membeli ponsel
+Saran kecil saat membeli ponsel
 
 {class="mt-1"}
 Saat ini ponsel 128GB pada dasarnya tidak cukup, mulai dari 256GB lebih aman. Jika Anda suka fotografi atau bermain game. disarankan langsung ke 512GB atau lebih besar. Ingat, untuk ruang penyimpanan, lebih baik berlebih daripada kurang.
@@ -53,7 +53,7 @@ Saat ini ponsel 128GB pada dasarnya tidak cukup, mulai dari 256GB lebih aman. Ji
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari praktik: Lihat "KTP" ponsel Anda
+Mari praktik: Lihat "KTP" ponsel Anda
 
 {class="mt-1"}
 Buka [Pengaturan], temukan tentang ponsel (atau opsi serupa), catat: model ponsel, versi sistem, total ruang penyimpanan dan ruang tersisa. Ini adalah langkah pertama untuk mengenalnya. Sekalian cek kesehatan baterai, supaya ada gambaran.
@@ -66,7 +66,7 @@ Sebelum memulai pengetahuan spesifik, mari kita bangun pemahaman inti:<strong>po
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>Mengapa ini penting?
+Mengapa ini penting?
 
 {class="mt-1"}
 Jika ponsel hilang atau rusak, yang Anda hilang bukan hanya perangkat keras senilai beberapa ribu yuan,<strong>tapi lebih mungkin data yang tidak bisa diperbarui yang terkumpul bertahun-tahun</strong>—foto tumbuh kembang anak, suara kerabat yang telah meninggal, kontrak penting yang tidak dicadangkan. Kebiasaan mengatur dan melindungi secara ilmiah bisa melindungi Anda dari tiga dimensi:

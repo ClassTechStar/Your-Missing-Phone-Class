@@ -74,7 +74,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"업무 시작 첫날" 점검 리스트
+"업무 시작 첫날" 점검 리스트
 
 {class="mt-1 text-sm"}
 새 스마트폰을 받거나 대규모 업데이트 후, 10분 정도 투자하여 다음 설정을 확인하세요:
@@ -99,7 +99,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS VoiceOver(VoiceOver)
+iOS VoiceOver(VoiceOver)
 
 {class="mt-1"}
 <strong>활성화 경로</strong>: [설정] > [접근성] > [VoiceOver], 열고 켜기/끄기. 측면 키 3회 탭(또는 홈 화면 키)으로 빠른 켜기/끄기 가능.
@@ -120,7 +120,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>안드로이드 TalkBack
+안드로이드 TalkBack
 
 {class="mt-1"}
 <strong>활성화 경로</strong>: [설정] > [접근성] > [TalkBack]에서 스위치를 켭니다. 볼륨 위아래 버튼을 3초간 길게 눌러 빠르게 활성화할 수도 있습니다(일부 브랜드 지원).
@@ -167,7 +167,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>각 시스템의 AI 이미지 설명 지원 현황
+각 시스템의 AI 이미지 설명 지원 현황
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: [설정] > [접근성] > [VoiceOver] > [음성 설명]에서 "이미지 설명"을 활성화. 시스템이 <strong>온디바이스 AI 모델</strong>을 호출하여 자동으로 이미지 텍스트 설명을 생성(iPhone 12 이상 필요).
@@ -177,7 +177,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>사용 시나리오
+사용 시나리오
 
 {class="mt-1"}
 한 거리 사진을 보고 "이 사진에 몇 명이 있나요? 그들은 무엇을 하고 있나요?" 물어보세요, 또는 배달 App 열고 AI가 메뉴 이미지의 메뉴 이름 읽어주기 - <strong>이것이 진정한 "기술이 삶을 더 평등하게"</strong>.
@@ -190,7 +190,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>실시간 자막 활성화 및 최적화
+실시간 자막 활성화 및 최적화
 
 {class="mt-1"}
 <strong>iOS</strong>: [설정] > [접근성] > [실시간 자막], 열고 켜기/끄기. 시스템이 기기의 모든 오디오 감지(전화, 영상, 팟캐스트, FaceTime, 음성 메모), 화면 상단에 자동 자막 표시.
@@ -215,7 +215,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>통화 실시간 전환(TTY / RTT)
+통화 실시간 전환(TTY / RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [설정] > [접근성] > [RTT/TTY], 켜기 후 통화 시 화면에 키보드 표시, 상대방의 음성이 실시간으로 문자로 변환, <strong>당신이 입력한 글자도 음성으로 읽어져</strong> 상대방에게 전달.
@@ -243,7 +243,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>애플의 배리어프리 설계 철학
+애플의 배리어프리 설계 철학
 
 {class="mt-1"}
 애플은 배리어프리 분야에 막대한 투자, 매년 접근성 업데이트 및 추가. 애플 공식 홈페이지에 전용 배리어프리 페이지, 각 항목 기능의 사용 방법 상세 소개.
@@ -252,7 +252,7 @@ iOS의 배리어프리 기능은 보통 안드로이드보다 더 완벽하고 �
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>30초 체험
+30초 체험
 
 {class="mt-1"}
 잠시 여가 시간 찾아, 아래 체험 진행:

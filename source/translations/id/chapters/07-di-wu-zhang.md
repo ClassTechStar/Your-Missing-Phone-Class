@@ -74,7 +74,7 @@ Widget layar utama
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Saat mendapat ponsel baru atau pembaruan versi besar, disarankan luangkan 10 menit untuk meninjau pengaturan ini:
+Saat mendapat ponsel baru atau pembaruan versi besar, disarankan luangkan 10 menit untuk meninjau pengaturan ini:
 
 {class="mt-1 text-sm"}
 1. Kata sandi kunci layar + biometrik;
@@ -95,7 +95,7 @@ membacakan semua konten visual di layar <strong>, pengguna mengoperasikan ponsel
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>Jalur aktivasi
+Jalur aktivasi
 
 {class="mt-1"}
 <strong>: [Pengaturan] &gt; [Aksesibilitas] &gt; [TalkBack], buka sakelar. Atau tahan tombol volume atas-bawah 3 detik untuk aktifkan cepat (sebagian merek mendukung).</strong> Gerakan dasar
@@ -116,7 +116,7 @@ membacakan semua konten visual di layar <strong>, pengguna mengoperasikan ponsel
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>Jalur aktivasi
+Jalur aktivasi
 
 {class="mt-1"}
 <strong>: [Pengaturan] &gt; [Aksesibilitas] &gt; [TalkBack], buka sakelar. Atau tahan tombol volume atas-bawah 3 detik untuk aktifkan cepat (sebagian merek mendukung).</strong> Gerakan dasar
@@ -160,7 +160,7 @@ menjelaskan konten gambar dengan satu kalimat <strong>, sangat membantu untuk me
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>iOS 15+
+iOS 15+
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>: Di [Pengaturan] &gt; [Aksesibilitas] &gt; [VoiceOver] &gt; [Deskripsi Suara] aktifkan "Deskripsi Gambar". Sistem akan memanggil</strong> model AI lokal <strong>untuk menghasilkan deskripsi teks gambar otomatis (perlu iPhone 12 ke atas).</strong> Aplikasi TalkBack versi baru
@@ -170,7 +170,7 @@ menjelaskan konten gambar dengan satu kalimat <strong>, sangat membantu untuk me
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Coba bertanya pada foto street photography "berapa orang di gambar ini? apa yang mereka lakukan?", atau buka aplikasi ojek/pesan makanan, biarkan AI membaca nama menu di gambar menu —
+Coba bertanya pada foto street photography "berapa orang di gambar ini? apa yang mereka lakukan?", atau buka aplikasi ojek/pesan makanan, biarkan AI membaca nama menu di gambar menu —
 
 {class="mt-1"}
 ini adalah "teknologi membuat hidup lebih setara" yang sebenarnya <strong>.</strong>.
@@ -183,7 +183,7 @@ fungsi speech-to-text tingkat sistem <strong>, sangat berguna bagi pengguna tuna
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>iOS
+iOS
 
 {class="mt-1"}
 <strong>: Pengguna biasa tidak dapat mengaktifkan mode pengembang lengkap, membutuhkan akun Apple Developer berbayar.</strong> Android 12+
@@ -208,7 +208,7 @@ tidak bisa mendengar juga tidak bisa bicara <strong>(seperti kehilangan suara me
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>iOS
+iOS
 
 {class="mt-1"}
 <strong>: Pengguna biasa tidak dapat mengaktifkan mode pengembang lengkap, membutuhkan akun Apple Developer berbayar.</strong> teks yang Anda ketik juga akan dibacakan <strong>ke lawan bicara.</strong> Android
@@ -236,7 +236,7 @@ tidak bisa mendengar juga tidak bisa bicara <strong>(seperti kehilangan suara me
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>Apple berinvestasi besar di bidang aksesibilitas, setiap tahun memperbarui dan menambahkan fitur aksesibilitas. Situs web Apple memiliki halaman aksesibilitas khusus, detail penggunaan setiap fitur. Fitur aksesibilitas iOS biasanya lebih lengkap dan pengalaman lebih lancar daripada Android, ini juga alasan penting banyak pengguna disabilitas memilih Apple.
+Apple berinvestasi besar di bidang aksesibilitas, setiap tahun memperbarui dan menambahkan fitur aksesibilitas. Situs web Apple memiliki halaman aksesibilitas khusus, detail penggunaan setiap fitur. Fitur aksesibilitas iOS biasanya lebih lengkap dan pengalaman lebih lancar daripada Android, ini juga alasan penting banyak pengguna disabilitas memilih Apple.
 
 {class="mt-1"}
 Luangkan 30 Detik untuk Mencoba
@@ -244,7 +244,7 @@ Luangkan 30 Detik untuk Mencoba
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Cari waktu luang, lakukan pengalaman berikut:
+Cari waktu luang, lakukan pengalaman berikut:
 
 {class="mt-1"}
 Aktifkan

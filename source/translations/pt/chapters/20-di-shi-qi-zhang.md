@@ -66,7 +66,7 @@ Trocar o fone com fio pelo Bluetooth foi, para mim, a melhoria mais perceptível
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>Tecnologia UWB (Ultra-Wideband) — sensação espacial mais precisa que o Bluetooth
+Tecnologia UWB (Ultra-Wideband) — sensação espacial mais precisa que o Bluetooth
 
 {class="mt-1"}
 Além do Bluetooth, os celulares mais novos também trazem um chip UWB (Ultra-Wideband, banda ultralarga). Sua capacidade é a <strong>medição precisa de distância e posicionamento espacial</strong>. Ele consegue calcular a que distância e em que direção está outro dispositivo, com precisão de centímetros. O Bluetooth só diz "está por perto"; o UWB diz "está a 1,2 metro à sua frente e à esquerda". Aplicações comuns:
@@ -80,7 +80,7 @@ Além do Bluetooth, os celulares mais novos também trazem um chip UWB (Ultra-Wi
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio e Auracast — a nova geração de padrão de áudio Bluetooth
+LE Audio e Auracast — a nova geração de padrão de áudio Bluetooth
 
 {class="mt-1"}
 O áudio Bluetooth clássico (A2DP), usado por duas décadas, está sendo substituído pelo <strong>LE Audio</strong> (Áudio de Baixa Energia), o novo padrão de áudio a partir do Bluetooth 5.2:
@@ -110,7 +110,7 @@ Quanto mais dispositivos conectados, maior a superfície de risco de vazamento d
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Experimente: espelhe a tela do celular na TV e configure um cenário inteligente
+Experimente: espelhe a tela do celular na TV e configure um cenário inteligente
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Certifique-se de que o celular e a TV estão na mesma rede Wi-Fi.
@@ -122,7 +122,7 @@ Quanto mais dispositivos conectados, maior a superfície de risco de vazamento d
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Caso 1: Otimização prática da autonomia da bateria
+Caso 1: Otimização prática da autonomia da bateria
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Cenário</strong>: Usuário com Xiaomi 14 com autonomia ruim, descarregando em meio dia.

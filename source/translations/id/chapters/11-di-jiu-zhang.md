@@ -67,7 +67,7 @@ Coba Sekarang: Bangun Alur Kerja Perkantoran Mobile Anda
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pilih aplikasi dokumen utama Anda (WPS atau Microsoft 365), login dan kaitkan dengan cloud storage.
+Pilih aplikasi dokumen utama Anda (WPS atau Microsoft 365), login dan kaitkan dengan cloud storage.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Buka Notes atau memo, gunakan fitur pindai untuk memfoto dokumen, ekspor sebagai PDF kirim ke diri sendiri.

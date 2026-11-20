@@ -41,7 +41,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>核心比喻：路与车
+核心比喻：路与车
 
 {class="mt-1"}
 把互联网想象成一座城市。<strong>"路"</strong>是你手机到互联网之间的通道，<strong>"车"</strong>是跑在路上的数据。Wi-Fi和流量是两条不同的路，但数据（车）本身是一样的。
@@ -65,7 +65,7 @@ Wi-Fi通常是一次性投入（宽带月费），只要电费不断，全家人
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>来试试：检查你的流量套餐
+来试试：检查你的流量套餐
 
 {class="mt-1"}
 打开手机的 [设置] > [移动网络] > [流量管理]，看看你本月还剩多少流量、哪些App最耗流量。心里有数，出门才不慌。
@@ -80,7 +80,7 @@ Wi-Fi通常是一次性投入（宽带月费），只要电费不断，全家人
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>安全提醒
+安全提醒
 
 {class="mt-1"}
 在机场、商场、咖啡厅等公共场所，不要连接名字可疑的免费Wi-Fi（如"Free_WiFi_2024"）。即使连了，也绝不要在上面登录银行App或输入密码。
@@ -154,7 +154,7 @@ iPhone用户则更直观：Wi-Fi图标亮着一般就是在用Wi-Fi——但注�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>重要警告：出国前关闭【数据漫游】！
+重要警告：出国前关闭【数据漫游】！
 
 {class="mt-1"}
 在国外使用移动数据可能产生天价账单！出国前务必在设置里关闭数据漫游，或者提前购买当地流量卡/国际漫游套餐。
@@ -208,7 +208,7 @@ eSIM 带来的使用变化也值得预告：一张手机可以装多个运营商
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把"流量用在哪了"的查看入口放到桌面上（长按流量管理图标添加快捷方式，或放进负一屏），每周瞄一眼排行榜。流量异常的第一信号永远是排行榜突变，某个平时不起眼的App突然冲上前三，十有八九是它新开了个"后台预加载"开关。
@@ -264,53 +264,53 @@ Wi-Fi标准由IEEE制定，每一代都有显著提升：
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">标准</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">频段</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老旧标准，覆盖还行</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">目前最普及，速度够用</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多设备性能强，延迟低</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">增加6GHz频段，不拥堵</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极速传输，多链路聚合</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">标准</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">频段</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老旧标准，覆盖还行</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">目前最普及，速度够用</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多设备性能强，延迟低</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">增加6GHz频段，不拥堵</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极速传输，多链路聚合</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -358,14 +358,14 @@ Wi-Fi除了"连互联网"，还能让设备直接对话，不经过路由器。�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">症状</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见原因</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对策</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只有某个房间卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">穿墙衰减，5G频段尤其明显</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">该房间连2.4G，或加装信号扩展设备</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">晚上固定时段卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">邻居网络高峰期信道拥挤</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路由器设置里换信道，或改用5G频段</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">越用越卡，重启就好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路由器长期运行内存耗尽</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每月定时重启路由器</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人多就卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老旧路由器带不动多设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换支持Wi-Fi 6及以上的路由器</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线快无线慢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi链路是瓶颈（标准、距离、干扰）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优化路由器位置与频段分配</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">症状</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见原因</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对策</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只有某个房间卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">穿墙衰减，5G频段尤其明显</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">该房间连2.4G，或加装信号扩展设备</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">晚上固定时段卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">邻居网络高峰期信道拥挤</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路由器设置里换信道，或改用5G频段</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">越用越卡，重启就好</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">路由器长期运行内存耗尽</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每月定时重启路由器</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人多就卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老旧路由器带不动多设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">换支持Wi-Fi 6及以上的路由器</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有线快无线慢</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi链路是瓶颈（标准、距离、干扰）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优化路由器位置与频段分配</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -425,7 +425,7 @@ Wi-Fi 这一节的知识密度不小，帮你把最常用的压缩成三句行�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 蓝牙耳机连了电脑又连手机，经常"自动切换失败"变成两边都没声。这不是故障，是多连接设备在仲裁谁优先。对策：固定一个主设备（耳机主动连接它），另一个设备要用时手动从蓝牙列表点一下连接，别让两个设备抢"自动重连"的主动权。
@@ -495,7 +495,7 @@ NFC基于RFID技术演变而来，支持三种工作模式：
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 NFC 天线在手机上的位置因机型而异（一般在摄像头附近或中框），刷卡时贴不准会失败。查一下你机型官方说明的天线位置，刷卡时用那一角贴终端感应区，成功率立刻上升。刷卡失败的另一个常见原因是手机套太厚。金属磁吸支架和厚壳都会挡感应。
@@ -515,7 +515,7 @@ NFC 天线在手机上的位置因机型而异（一般在摄像头附近或中�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 智能设备的账号安全比手机更容易被忽视：摄像头、门锁这类设备，务必改掉出厂默认密码、开启双重认证，并定期在App里查看登录记录。家里网络上一节讲过的"设备清单"里，看到不认识的IoT设备要警惕——它可能是蹭网者，也可能是你忘了改密码的旧设备。
@@ -539,7 +539,7 @@ NFC 的日常开关策略和蓝牙不同。刷交通卡的人建议<strong>常�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手试试：设置并管理热点
+动手试试：设置并管理热点
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开 [设置]，找到"个人热点"或"网络共享"，开启它，设好名称和密码。
@@ -567,7 +567,7 @@ NFC 的日常开关策略和蓝牙不同。刷交通卡的人建议<strong>常�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：给家里路由器做次体检
+来动手：给家里路由器做次体检
 
 {class="mt-1"}
 今晚花十五分钟：把路由器挪到更开阔的位置；登录管理页改掉出厂管理密码；看看固件有没有更新；数一数连接设备清单里有没有不认识的。四件事做完，家里的网络体验和安全水平都会上一个台阶。
@@ -581,7 +581,7 @@ NFC 的日常开关策略和蓝牙不同。刷交通卡的人建议<strong>常�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>重要提醒
+重要提醒
 
 {class="mt-1"}
 在中国境内使用VPN服务有严格的法律边界：个人访问境外互联网必须使用经国家批准的跨境信道，擅自"翻墙"属违规行为。企业、学校因办公学习需要接入外部网络，走单位提供的合规通道。选择任何VPN类工具前，先确认其合法性，这一条比任何技术建议都优先。
@@ -607,7 +607,7 @@ NFC 的日常开关策略和蓝牙不同。刷交通卡的人建议<strong>常�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>重要提醒
+重要提醒
 
 {class="mt-1"}
 "屏幕共享"类请求是近年高发手法：骗子冒充客服或公检法，诱导你开启会议软件的屏幕共享功能，实时观看你的短信验证码和银行界面。记住一条铁律：任何让你开启屏幕共享的"客服"，百分之百是骗子，真客服不需要看你的屏幕。
@@ -628,7 +628,7 @@ NFC 的日常开关策略和蓝牙不同。刷交通卡的人建议<strong>常�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 断网排查的尽头是三个动作：重启手机、重启路由器、打客服报障：九成的断网死在这三招手里，剩下的九成半靠六层漏斗。
@@ -695,7 +695,7 @@ Bluetooth 与 NFC 之外，还有一项近场技术常被顺带提起：<strong>
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 网络素养就三句话：分清路和车，认得每条路的脾气（Wi-Fi快而近、流量稳而贵、蓝牙短而省、NFC碰而安），出事时按漏斗走不乱试。
@@ -703,7 +703,7 @@ Bluetooth 与 NFC 之外，还有一项近场技术常被顺带提起：<strong>
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 路与车模型：Wi-Fi是局域内的路，流量是运营商的专线；Wi-Fi图标亮≠互联网通，两段要分别验证

@@ -14,7 +14,7 @@ class: mb-12
 
 ::: div .info-box .rounded-lg .p-4 .mb-4
 {class="font-semibold"}
-<i class="fas fa-route mr-2"></i>本篇路线
+本篇路线
 
 {class="mt-1"}
 第 91 章建立健康管理全景与数据聚合认知 → 第 92 章运动记录实操 → 第 93 章睡眠监测与作息改善 → 第 94 章心率血氧与慢病管理 → 第 95 章女性健康与心理健康 App。

@@ -34,10 +34,10 @@ Think Before Codingの原則に基づき、指示にはAIが目標を理解す�
 1. 単一HTMLファイル（CSSとJSをインライン）、フレームワーク不使用
 2. ダークテーマ、モダンなミニマルスタイル
 3. 4つのツールカードを表示：
-   - テキスト要約ツール
-   - 文字数カウントツール
-   - カラーピッカー
-   - QRコード生成ツール
+ - テキスト要約ツール
+ - 文字数カウントツール
+ - カラーピッカー
+ - QRコード生成ツール
 4. 各カードにアイコン、タイトル、短い説明
 5. カードはホバーアニメーション付き
 6. レスポンシブ、スマホで使える
@@ -114,17 +114,17 @@ Record { id, amount, type, category, note, date }
 1. Expressサーバー、ポート3001
 2. SQLiteデータベース、テーブル名records
 3. recordsテーブルのフィールド：
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. CRUD API：
-   GET /api/records - 全記録の取得
-   POST /api/records - 記録の追加
-   PUT /api/records/:id - 記録の更新
-   DELETE /api/records/:id - 記録の削除
+ GET /api/records - 全記録の取得
+ POST /api/records - 記録の追加
+ PUT /api/records/:id - 記録の更新
+ DELETE /api/records/:id - 記録の削除
 5. エラー処理ミドルウェア
 完全なバックエンドコード構成を示してください。
 ```

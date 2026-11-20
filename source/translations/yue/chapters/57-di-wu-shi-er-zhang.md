@@ -77,12 +77,12 @@ Intent（意圖）係組件之間通訊嘅「車飛」。你想由一個頁面�
 ```
 // 方式一：顯式 Intent——明確指定去邊個頁面
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "張三")     // 車上帶埋"行李"（數據）
+intent.putExtra("name", "張三") // 車上帶埋"行李"（數據）
 startActivity(intent)
 
 // 方式二：隱式 Intent——淨係講要做乜，系統搵邊個做
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // 系統會開瀏覽器／或者畀你揀
+startActivity(web) // 系統會開瀏覽器／或者畀你揀
 ```
 :::
 
@@ -101,16 +101,16 @@ startActivity(web)   // 系統會開瀏覽器／或者畀你揀
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "未知")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "未知")
+ }
 }
 
 // 喺頁面入面跳轉：
-navController.navigate("detail/張三")     // 帶參數
-navController.popBackStack()              // 返回上一頁
+navController.navigate("detail/張三") // 帶參數
+navController.popBackStack() // 返回上一頁
 ```
 :::
 

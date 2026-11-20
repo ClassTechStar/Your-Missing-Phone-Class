@@ -58,7 +58,7 @@ Independentemente de como a tecnologia evolua, os seguintes princípios de filos
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Experimente: Elabore seus "Termos de Serviço de Uso de Dispositivos Digitais Pessoais"
+Experimente: Elabore seus "Termos de Serviço de Uso de Dispositivos Digitais Pessoais"
 
 {class="mt-1"}
 Escreva um simples "termo de serviço" para você e seu celular (e futuros óculos AR, assistente de IA) para definir o relacionamento entre vocês. Por exemplo:
@@ -71,7 +71,7 @@ Escreva um simples "termo de serviço" para você e seu celular (e futuros ócul
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo
+Resumo do capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro e óculos AR são novas portas de computação além do celular, mas dificilmente substituirão o celular a curto prazo

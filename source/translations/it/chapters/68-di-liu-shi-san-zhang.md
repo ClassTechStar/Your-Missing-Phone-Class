@@ -35,20 +35,20 @@ Panorama degli strumenti di stato di SwiftUI (nel 2026 @Observable è già lo st
 import Observation
 
 @Observable
-class CounterModel {                 // il view model
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // il view model
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // contiene il modello
+ @State private var model = CounterModel() // contiene il modello
 
-    var body: some View {
-        VStack {
-            Text("Hai toccato \(model.count) volte")
-            Button("Toccami") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Hai toccato \(model.count) volte")
+ Button("Toccami") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ Dall'iOS 16 in poi la navigazione tra più pagine usa NavigationStack: come una 
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Il registro di Marco") {
-                    DetailView(name: "Il registro di Marco")   // schermata di destinazione
-                }
-                NavigationLink("Il registro di Anna") {
-                    DetailView(name: "Il registro di Anna")
-                }
-            }
-            .navigationTitle("Elenco dei registri")   // titolo grande in alto
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("Il registro di Marco") {
+ DetailView(name: "Il registro di Marco") // schermata di destinazione
+ }
+ NavigationLink("Il registro di Anna") {
+ DetailView(name: "Il registro di Anna")
+ }
+ }
+ .navigationTitle("Elenco dei registri") // titolo grande in alto
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("Dettagli di \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("Dettagli di \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ Oltre "spingere le pagine" esistono due interazioni classiche:
 ```
 // 1. Sale dal basso a mezza/full screen (il preferito per i form di inserimento)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("Aggiungi voce") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // la finestra di inserimento
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("Aggiungi voce") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // la finestra di inserimento
+ }
+ }
 }
 
 // 2. La barra delle schede in basso (lo "scheletro" dell'app)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("Registro", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("Statistiche", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("Impostazioni", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("Registro", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("Statistiche", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("Impostazioni", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ Il componente più usato e più "Apple" su iOS è List: offre di serie separator
 
 ```
 struct RecordListView: View {
-    @State private var records = ["Pranzo 25.5", "Metro 6.0", "Stipendio +8000"]
+ @State private var records = ["Pranzo 25.5", "Metro 6.0", "Stipendio +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // swipe a sinistra per eliminare
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // swipe a sinistra per eliminare
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ Come il ciclo di vita delle Activity su Android, anche un'app iOS attraversa sta
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("Di nuovo in primo piano, riprendo l'aggiornamento")
-            case .inactive:  print("In transizione (chiamata / appena in background)")
-            case .background: print("In background, salvo la bozza")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("Di nuovo in primo piano, riprendo l'aggiornamento")
+ case .inactive: print("In transizione (chiamata / appena in background)")
+ case .background: print("In background, salvo la bozza")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

@@ -55,10 +55,10 @@ UFS 플래시에 고정 공간을 직접 구획하여 가상 메모리로 사용
 브랜드마다 명칭이 다양: Xiaomi는 "메모리 확장", 화웨이는 "메모리 퓨전", 삼성은 "RAM Plus", vivo는 "Extended RAM", OnePlus는 "Memory Extension".
 이 기능은 시스템 네이티브 능력으로, 안드로이드 기반 버전과 직접적인 연관 관계가 없음.
 <p class="mb-2">일반적인 활성화 경로: [설정]→[추가 설정]→[메모리] 또는 [성능] 하위 항목→"메모리 확장"을 켜고 용량 단계 선택 (보통 2GB–7GB), 재시작 후 적용. 활성화 후 시스템은 "8GB+4GB"와 같은 메모리 조합 표시.
-<div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>주의 사항</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>메모리 확장은 기기 저장 공간의 일부를 차지하므로, 남은 저장 공간이 20-30GB 미만인지 확인하세요. 그렇지 않으면 시스템 원활성에 영향을 미칠 수 있음.
+<div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold">주의 사항</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>메모리 확장은 기기 저장 공간의 일부를 차지하므로, 남은 저장 공간이 20-30GB 미만인지 확인하세요. 그렇지 않으면 시스템 원활성에 영향을 미칠 수 있음.
 </li> <li>플래시가 가상 메모리로 사용되면 읽기/쓰기 손실이 발생합니다. 현대 UFS 플래시의 수명이 길긴 하지만, 장기 고주파 스왑은 여전히 저장 공간의 노화를 가속화할 수 있음.
 </li> <li>스마트폰 자체 물리 메모리가 작은 경우 (예: 4GB 이하), 메모리 확장을 켜는 것은 급한 불을 끌 수 있을 뿐, 근본적인 끊김 문제를 해결할 수 없음.
-</li> </ul> </div> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>요약</p> <p class="mt-1">메모리 확장은 성숙한 시스템 레벨 최적화 기술로, 하드웨어 변경 없이 중저가 기기의 멀티태스킹 능력과 백그라운드 유지율을 향상시킬 수 있지만, 플래시와 물리 메모리 간의 거대한 속도 격차에 제한되어 "만능 신약"은 아닙니다.
+</li> </ul> </div> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold">요약</p> <p class="mt-1">메모리 확장은 성숙한 시스템 레벨 최적화 기술로, 하드웨어 변경 없이 중저가 기기의 멀티태스킹 능력과 백그라운드 유지율을 향상시킬 수 있지만, 플래시와 물리 메모리 간의 거대한 속도 격차에 제한되어 "만능 신약"은 아닙니다.
 켤지, 얼마나 켤지는 자체 기기의 물리 메모리 크기, 플래시 사양, 남은 저장 공간 및 사용 습관을 종합적으로 고려하여 판단해야 합니다.
-</p> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>직접 해보기: 내 스마트폰에 메모리 확장이 있는지 확인</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>[설정]을 열고, "메모리 확장", "메모리 퓨전", "RAM Plus" 또는 "Extended RAM"을 검색.</li> <li>찾은 후 현재 켜져 있는지, 그리고 확장 용량 설정이 얼마인지 확인.
+</p> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold">직접 해보기: 내 스마트폰에 메모리 확장이 있는지 확인</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>[설정]을 열고, "메모리 확장", "메모리 퓨전", "RAM Plus" 또는 "Extended RAM"을 검색.</li> <li>찾은 후 현재 켜져 있는지, 그리고 확장 용량 설정이 얼마인지 확인.
 </li> <li>본 절 내용을 대조하여 판단: 당신의 기기 물리 메모리는 얼마? 플래시 사양은? 남은 저장 공간이 충분한가?</li> <li>끄기 또는 확장 용량 낮추기를 시도하고, 일주일간 백그라운드 보존과 발열 변화를 관찰하여, 자신에게 가장 적합한 설정을 찾으세요.</li> </ol> </div> </p>

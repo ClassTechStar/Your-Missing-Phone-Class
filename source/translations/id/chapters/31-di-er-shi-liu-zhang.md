@@ -80,7 +80,7 @@ Daya tahan ponsel selama bertahun-tahun dikritik "cas sehari sekali", sejak 2024
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Coba: Buat "daftar kebutuhan teknis" untuk ponsel berikutnya
+Coba: Buat "daftar kebutuhan teknis" untuk ponsel berikutnya
 
 {class="mt-1"}
 Ambil selembar kertas, bagi dalam tiga tingkat "wajib/plus/tidak perlu", daftar kebutuhan AI, satelit, layar lipat, Wi-Fi 7, pengisian cepat, kapasitas baterai. Saat ke toko offline, "selling point" yang direkomendasikan sales bisa cepat Anda nilai apakah kebutuhan nyata atau sekadar dijual. Misalnya:
@@ -93,7 +93,7 @@ Ambil selembar kertas, bagi dalam tiga tingkat "wajib/plus/tidak perlu", daftar 
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan Bab
+Ringkasan Bab
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Tiga kriteria ponsel AI: large model on-device, TOPS NPU, skenario AI Agent

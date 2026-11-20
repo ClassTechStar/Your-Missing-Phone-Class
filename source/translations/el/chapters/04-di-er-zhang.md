@@ -86,119 +86,119 @@ IV. Αντίγραφο ασφαλείας και ανάκτηση δεδομέν
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μορφή</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τύπος</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Χαρακτηριστικά</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Προτεινόμενος τρόπος ανοίγματος</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εικόνα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy συμπίεση, μικρό μέγεθος, καλύτερη συμβατότητα. Προεπιλεγμένη μορφή φωτογραφίας κινητού.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Άλμπουμ/οποιοδήποτε image viewer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εικόνα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless συμπίεση, υποστηρίζει διαφανές φόντο. Σε screenshots, εικονίδιασυχνά χρησιμοποιούμενα. Μεγαλύτερο από JPG.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Άλμπουμ/οποιοδήποτε image viewer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy συμπίεση, μικρό μέγεθος, εξαιρετική συμβατότητα. Πιο κοινή μορφή ήχου.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Όποιο music player</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless συμπίεση, ποιότητα ίδια με CD, μέγεθος 3-5 φορές μεγαλύτερο από MP3. Προτίμηση audiophiles.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player/επαγγελματική App</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ασυμπίεστος αρχικό ήχος, καλύτερη ποιότητα αλλά τεράστιο μέγεθος. Σε επαγγελματική ηχογράφηση συχνά χρησιμοποιούμενα.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κωδικοποίηση AAC, καλύτερη ποιότητα από MP3 στο ίδιο bitrate. Στο οικοσύστημα Apple συχνά χρησιμοποιούμενα.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/Music player</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Βίντεο</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πιο κοινό container format βίντεο, εξαιρετική συμβατότητα. Προεπιλογή βίντεο κινητού.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Άλμπουμ/οποιοδήποτε video player</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Βίντεο</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ανοιχτού κώδικα container, υποστηρίζει πολλαπλάκομμάια ήχου και υποτίτλους. Σε πόρους ταινιώνσυχνά χρησιμοποιούμενα.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έγγραφα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έγγραφο Word. Το DOCX είναι συμπιεσμένη μορφή, μικρότερο μέγεθος. Το DOC είναι παλιά μορφή.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Παρουσίαση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PowerPoint παρουσίαση. Το PPTX είναι συμπιεσμένη μορφή.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πίνακας</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel λογιστικό φύλλο. Το XLSX είναι συμπιεσμένη μορφή.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έγγραφα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cross-platform μορφή, σταθερή διάταξη μηεπεξεργάσιμο. Σε συμβόλαια, διατριβές, ebooks συχνά χρησιμοποιούμενα.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Συμπίεση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πιο κοινή μορφή συμπίεσης, cross-platform συμβατότητα.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ενσωματωμένο/αποσυμπίεση App</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Συμπίεση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μεγαλύτερος λόγος συμπίεσης από ZIP, αλλά χρειάζεται ειδικό λογισμικό.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">αποσυμπίεση App</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εικόνα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχείο εικόνας δίσκου, πλήρης αντιγραφή περιεχομένου δίσκου. Σε πακέτα εγκατάστασης συστήματος συχνά χρησιμοποιούμενα.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">αποσυμπίεση App/Virtual drive</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ιστοσελίδα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχείο ιστού, ανοίγει με browser. Σε αποθηκευμένες ιστοσελίδες συχνά χρησιμοποιούμενα.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Browser</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Μορφή</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Τύπος</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Χαρακτηριστικά</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Προτεινόμενος τρόπος ανοίγματος</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εικόνα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy συμπίεση, μικρό μέγεθος, καλύτερη συμβατότητα. Προεπιλεγμένη μορφή φωτογραφίας κινητού.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Άλμπουμ/οποιοδήποτε image viewer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εικόνα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless συμπίεση, υποστηρίζει διαφανές φόντο. Σε screenshots, εικονίδιασυχνά χρησιμοποιούμενα. Μεγαλύτερο από JPG.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Άλμπουμ/οποιοδήποτε image viewer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossy συμπίεση, μικρό μέγεθος, εξαιρετική συμβατότητα. Πιο κοινή μορφή ήχου.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Όποιο music player</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lossless συμπίεση, ποιότητα ίδια με CD, μέγεθος 3-5 φορές μεγαλύτερο από MP3. Προτίμηση audiophiles.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player/επαγγελματική App</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ασυμπίεστος αρχικό ήχος, καλύτερη ποιότητα αλλά τεράστιο μέγεθος. Σε επαγγελματική ηχογράφηση συχνά χρησιμοποιούμενα.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Music player</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ήχος</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κωδικοποίηση AAC, καλύτερη ποιότητα από MP3 στο ίδιο bitrate. Στο οικοσύστημα Apple συχνά χρησιμοποιούμενα.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/Music player</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Βίντεο</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πιο κοινό container format βίντεο, εξαιρετική συμβατότητα. Προεπιλογή βίντεο κινητού.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Άλμπουμ/οποιοδήποτε video player</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Βίντεο</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ανοιχτού κώδικα container, υποστηρίζει πολλαπλάκομμάια ήχου και υποτίτλους. Σε πόρους ταινιώνσυχνά χρησιμοποιούμενα.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έγγραφα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έγγραφο Word. Το DOCX είναι συμπιεσμένη μορφή, μικρότερο μέγεθος. Το DOC είναι παλιά μορφή.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Παρουσίαση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PowerPoint παρουσίαση. Το PPTX είναι συμπιεσμένη μορφή.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πίνακας</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel λογιστικό φύλλο. Το XLSX είναι συμπιεσμένη μορφή.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έγγραφα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cross-platform μορφή, σταθερή διάταξη μηεπεξεργάσιμο. Σε συμβόλαια, διατριβές, ebooks συχνά χρησιμοποιούμενα.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Συμπίεση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πιο κοινή μορφή συμπίεσης, cross-platform συμβατότητα.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ενσωματωμένο/αποσυμπίεση App</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Συμπίεση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μεγαλύτερος λόγος συμπίεσης από ZIP, αλλά χρειάζεται ειδικό λογισμικό.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">αποσυμπίεση App</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εικόνα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχείο εικόνας δίσκου, πλήρης αντιγραφή περιεχομένου δίσκου. Σε πακέτα εγκατάστασης συστήματος συχνά χρησιμοποιούμενα.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">αποσυμπίεση App/Virtual drive</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ιστοσελίδα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρχείο ιστού, ανοίγει με browser. Σε αποθηκευμένες ιστοσελίδες συχνά χρησιμοποιούμενα.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Browser</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Εξάσκηση: Οργανώστε τον φάκελο «Λήψεις»
+Εξάσκηση: Οργανώστε τον φάκελο «Λήψεις»
 
 {class="mt-1"}
 Ανοίξτε τον διαχειριστή αρχείων &gt; μπείτε στον φάκελο «Λήψεις». Δείτε τι υπάρχει; Διαγράψτε τα άχρηστα, τα χρήσιμα ταξινομήστε (π.χ. δημιουργήστε φακέλους «Εργασία», «Memes»). Ελέγξτε τον αποθηκευτικό χώρο, δείτε ποιοι τύποι αρχείων καταλαμβάνουν τα περισσότερα.
@@ -216,21 +216,21 @@ VIII. Διαχείριση εικόνων και συστήματος αρχεί
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>Ονοματοθεσία «χρόνος+γεγονός»</strong>: το όνομα του φακέλου περιλαμβάνει χρονική σήμανση και περιγραφή γεγονότος, διευκολύνοντας την ανάκληση και αναζήτηση. Για παράδειγμα <code>202606_Ταξιδιωτικά έγγραφα</code>,<code>Απολογισμός τέλους έτους 2025</code>,<code>Γενέθλια παιδιού 2024</code>. Έτσι μπορείτε να δείτε το χρονοδιάγραμμα και να ξέρετε το περιεχόμενο με μια ματιά.</li>
-                        <li><strong>Σύστημα ταξινόμησης τριών επιπέδων</strong>:
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>Επίπεδο 1</strong>: κατά τύπο αρχείου (έγγραφα / εικόνες / βίντεο / ήχος)</li>
-                                <li><strong>Επίπεδο 2</strong>: ανά σενάριο χρήσης (εργασία / ζωή / μάθηση)</li>
-                                <li><strong>Επίπεδο 3</strong>: κατά συγκεκριμένο γεγονός ή έργο (όπως "2026Q2_Έργο A")</li>
-                            </ul>
-                        </li>
-                        <li><strong>Μηνιαίο σχέδιο καθαρισμού</strong>: Ορίστε μια σταθερή ημερομηνία κάθε μήνα (π.χ. ημέρα μισθοδοσίας ή 1 η του μήνα) για οργάνωση του φακέλου "Λήψεις":<strong>Αρχειοθετήστε τα χρήσιμα, διαγράψτε τα άχρηστα, μεταφέρετε τα πολύτιμα</strong>. 12 μικρές οργανώσεις το χρόνο είναι πολύ πιο εύκολες από μία μεγάλη ετήσια γενική καθαριότητα.</li>
-                    </ul>
+ <li><strong>Ονοματοθεσία «χρόνος+γεγονός»</strong>: το όνομα του φακέλου περιλαμβάνει χρονική σήμανση και περιγραφή γεγονότος, διευκολύνοντας την ανάκληση και αναζήτηση. Για παράδειγμα <code>202606_Ταξιδιωτικά έγγραφα</code>,<code>Απολογισμός τέλους έτους 2025</code>,<code>Γενέθλια παιδιού 2024</code>. Έτσι μπορείτε να δείτε το χρονοδιάγραμμα και να ξέρετε το περιεχόμενο με μια ματιά.</li>
+ <li><strong>Σύστημα ταξινόμησης τριών επιπέδων</strong>:
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>Επίπεδο 1</strong>: κατά τύπο αρχείου (έγγραφα / εικόνες / βίντεο / ήχος)</li>
+ <li><strong>Επίπεδο 2</strong>: ανά σενάριο χρήσης (εργασία / ζωή / μάθηση)</li>
+ <li><strong>Επίπεδο 3</strong>: κατά συγκεκριμένο γεγονός ή έργο (όπως "2026Q2_Έργο A")</li>
+ </ul>
+ </li>
+ <li><strong>Μηνιαίο σχέδιο καθαρισμού</strong>: Ορίστε μια σταθερή ημερομηνία κάθε μήνα (π.χ. ημέρα μισθοδοσίας ή 1 η του μήνα) για οργάνωση του φακέλου "Λήψεις":<strong>Αρχειοθετήστε τα χρήσιμα, διαγράψτε τα άχρηστα, μεταφέρετε τα πολύτιμα</strong>. 12 μικρές οργανώσεις το χρόνο είναι πολύ πιο εύκολες από μία μεγάλη ετήσια γενική καθαριότητα.</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Λίστα εργασία αυτού του μήνα
+Λίστα εργασία αυτού του μήνα
 
 {class="mt-1"}
 Διαλέξτε ένα ελεύθερο Σαββατοκύριακο, ακολουθήστε τη σειρά:
@@ -258,7 +258,7 @@ VIII. Διαχείριση εικόνων και συστήματος αρχεί
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>Σταθερή διαδικασία αποστολής φωτογραφίες εγγράφων/ευαίσθητων screenshots
+Σταθερή διαδικασία αποστολής φωτογραφίες εγγράφων/ευαίσθητων screenshots
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Μαρκάρισμα ορατών πληροφοριών</strong>: χρησιμοποιήστε ενσωματωμένα εργαλεία ή τρίτες εφαρμογές (π.χ. Meitu Xiuxiu, Snapseed)<strong>Καλύψτε τα μεσαία ψηφία του αριθμού ταυτότητας, πινακίδα αυτοκινήτου, αριθμό πόρτας, όνομα, ποσό</strong> και άλλα κρίσιμα πεδία·.

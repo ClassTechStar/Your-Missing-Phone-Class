@@ -44,7 +44,7 @@ Un avvertimento importante: la libreria foto di iCloud non è un "disco di rete"
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: il tris di privacy riservato agli utenti a pagamento
+iCloud+: il tris di privacy riservato agli utenti a pagamento
 
 {class="mt-1"}
 Basta passare a qualsiasi livello a pagamento di iCloud (50 GB/200 GB/2 TB ecc.) per diventare automaticamente utenti <strong>iCloud+</strong> e sbloccare tre funzioni di privacy:
@@ -60,7 +60,7 @@ Nota: Private Relay non è disponibile in alcuni paesi/regioni; gli utenti in Ci
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud Advanced Data Protection (ADP) — la vera crittografia end-to-end
+iCloud Advanced Data Protection (ADP) — la vera crittografia end-to-end
 
 {class="mt-1"}
 Alla fine del 2022 Apple ha lanciato <strong>iCloud Advanced Data Protection (ADP)</strong>, estendendo la crittografia end-to-end (E2EE) dai pochi dati di salute, password e simili alla <strong>maggior parte dei dati iCloud</strong>: foto, note, backup iCloud, informazioni sui dispositivi, per un totale di 23 categorie.
@@ -99,7 +99,7 @@ Uno scenario molto pratico: imposta la condivisione con la famiglia sul telefono
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Le conseguenze del furto dell'account sono più gravi di quanto pensi
+Le conseguenze del furto dell'account sono più gravi di quanto pensi
 
 {class="mt-1"}
 Se un hacker ottiene la password del tuo account, può: bloccare da remoto il tuo telefono e chiedere un riscatto, visionare le tue foto e la tua rubrica, fare acquisti con il tuo metodo di pagamento. Peggio ancora, se l'account è legato a troppe cose, recuperarlo è di per sé un incubo. Quindi: attiva subito la verifica in due fattori.
@@ -107,7 +107,7 @@ Se un hacker ottiene la password del tuo account, può: bloccare da remoto il tu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>In pratica: fai un check-up completo del tuo account
+In pratica: fai un check-up completo del tuo account
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Apri le Impostazioni del telefono, vai alla pagina dell'account e conferma che la verifica in due fattori sia attiva.

@@ -24,19 +24,19 @@ kind: chapter
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Привет, $name!")     // «кирпичик текста»
+ Text(text = "Привет, $name!") // «кирпичик текста»
 }
 
 // Вложенная компоновка: большие блоки содержат маленькие
 @Composable
 fun HomeScreen() {
-    Column {                          // вертикально
-        Greeting(name = Иван)
-        Greeting(name = Мария)
-        Button(onClick = { /* что делать по нажатию */ }) {
-            Text("Нажми")
-        }
-    }
+ Column { // вертикально
+ Greeting(name = Иван)
+ Greeting(name = Мария)
+ Button(onClick = { /* что делать по нажатию */ }) {
+ Text("Нажми")
+ }
+ }
 }
 ```
 :::
@@ -64,18 +64,18 @@ fun HomeScreen() {
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "Это какой-то текст")
-        Button(onClick = { println("Нажато") }) {
-            Text("Кнопка")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("Введите что-нибудь") }
-        )
-    }
+ Column {
+ Text(text = "Это какой-то текст")
+ Button(onClick = { println("Нажато") }) {
+ Text("Кнопка")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("Введите что-нибудь") }
+ )
+ }
 }
 ```
 :::
@@ -97,15 +97,15 @@ fun BasicWidgets() {
 
 ```
 Column {
-    Text("Первая строка")
-    Row {
-        Text("Слева")
-        Text("Справа")
-    }
-    Box {
-        Text("Нижний слой")
-        Text("Бейдж поверх")
-    }
+ Text("Первая строка")
+ Row {
+ Text("Слева")
+ Text("Справа")
+ }
+ Box {
+ Text("Нижний слой")
+ Text("Бейдж поверх")
+ }
 }
 ```
 :::
@@ -119,12 +119,12 @@ Column {
 
 ```
 Text(
-    text = "Красивый текст",
-    modifier = Modifier
-        .padding(16.dp)          // отступы со всех сторон
-        .fillMaxWidth()          // занять всю ширину
-        .background(Color.Blue)  // цвет фона
-        .clickable { /* нажатие */ }// кликабельно
+ text = "Красивый текст",
+ modifier = Modifier
+ .padding(16.dp) // отступы со всех сторон
+ .fillMaxWidth() // занять всю ширину
+ .background(Color.Blue) // цвет фона
+ .clickable { /* нажатие */ }// кликабельно
 )
 // Цепочки вызовов: одна за другой, порядок важен (сначала padding, потом фон — фон не включает отступы)
 ```
@@ -150,15 +150,15 @@ padding(16.dp).background(Blue) и background(Blue).padding(16.dp) дают ра
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf: запоминаем меняющееся значение
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf: запоминаем меняющееся значение
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "Вы нажали $count раз")
-        Button(onClick = { count++ }) {   // меняем состояние
-            Text("Нажми +1")                // интерфейс обновится сам
-        }
-    }
+ Column {
+ Text(text = "Вы нажали $count раз")
+ Button(onClick = { count++ }) { // меняем состояние
+ Text("Нажми +1") // интерфейс обновится сам
+ }
+ }
 }
 ```
 :::
@@ -167,11 +167,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> Пользователь нажимает</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> Состояние меняется (count++)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Пользователь нажимает</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Состояние меняется (count++)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose замечает изменение</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> Интерфейс перерисовывается сам (рекомпозиция)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose замечает изменение</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Интерфейс перерисовывается сам (рекомпозиция)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -210,15 +210,15 @@ MyFirstAppTheme { ... } из шаблонного проекта, это и ес
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // при изменении значения плавно переходит к целевому
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // при изменении значения плавно переходит к целевому
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::

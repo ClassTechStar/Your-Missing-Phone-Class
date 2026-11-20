@@ -87,7 +87,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把"屏幕使用时间"的小组件放到首屏或负一屏。天天看得见的数据才有约束力，藏在三层菜单里的数据只是日记。
@@ -143,7 +143,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别在孩子不知情的情况下偷偷装监控类App。被发现的那天，你失去的不只是这套工具，还有往后所有数字规则的话语权。要用，就当面装，数据一起看。
@@ -207,7 +207,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 跟同事和朋友把预期说清楚："文字消息不一定秒回，急事直接打电话。"一句话，同时救你的注意力和对方的焦虑。
@@ -219,7 +219,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>20-20-20法则
+20-20-20法则
 
 {class="mt-1"}
 每看屏幕<strong>20分钟</strong>，把视线移到<strong>20英尺（约6米）</strong>以外的地方，保持<strong>20秒</strong>。这个简单的动作能有效缓解睫状肌疲劳。
@@ -257,7 +257,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把系统字号调大一档（设置 > 显示与亮度 > 字体大小）。字大了，眯眼和不自觉凑近都会变少，这一个动作，同时护眼和护颈椎。
@@ -295,7 +295,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 颈椎的账是按角度算的：手机放得越低，脖子扛得越重。举高手机，是成本最低的颈椎保险。
@@ -333,7 +333,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别把"听白噪音助眠"当成继续玩手机的通行证。助眠App可以用，但开着它顺手点开短视频，等于给睡眠上了个假保险。用助眠功能，就把这个App的其他通知全关，定时停止播放也设上。
@@ -399,7 +399,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 数字排毒排的从来不是手机，是"无意识使用"。手机拿在手里但意识在线，不算问题；人飘着刷了两小时，才是问题。
@@ -407,7 +407,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手：一周数字健康挑战
+动手：一周数字健康挑战
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 今天：打开屏幕使用时间/数字健康，查看你上周的使用数据。
@@ -471,7 +471,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 出门散步可以试试"带了不看不掏"的练习：手机照带（支付和安全用得上），但从楼下十分钟开始，争取全程不掏。练成之后，散步那段路会变成你一天里最完整的一段注意力。
@@ -745,7 +745,7 @@ iPhone上，限额一到，App图标变灰，打开会弹出"限额已用完"的
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 反复不是失败，是练习的组成部分。真正的问题从来不是"我又刷了"，而是"我接下来怎么安排"。
@@ -906,7 +906,7 @@ iPhone可以在屏幕使用时间里选择在多设备之间合并统计（视�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把"想买清单"放在购物App之外，记在系统备忘录里。想买的东西先冷静三天，三天后还想要再买。这一招一年帮你省下的，远不止钱，还有那些堆在角落的"当时很想要"。
@@ -956,7 +956,7 @@ iPhone可以在屏幕使用时间里选择在多设备之间合并统计（视�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 改变不是想通了才开始，是开始了才想通。数据先变，观念后变，这一章的所有方法，都是为"先动起来"准备的。
@@ -1043,7 +1043,7 @@ iPhone可以在屏幕使用时间里选择在多设备之间合并统计（视�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 先看屏幕使用时间数据，认清现状是改变的第一步

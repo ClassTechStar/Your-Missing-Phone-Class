@@ -45,7 +45,7 @@ Mais la perte de capacité de votre smartphone s'explique principalement par tro
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Petit conseil pour l'achat d'un smartphone
+Petit conseil pour l'achat d'un smartphone
 
 {class="mt-1"}
 Aujourd'hui, 128 Go ne suffisent plus vraiment, 256 Go est un minimum prudent. Si vous aimez prendre des photos ou jouer, envisagez directement 512 Go voire plus. Rappelez-vous, pour l'espace de stockage, mieux vaut avoir trop que pas assez.
@@ -53,7 +53,7 @@ Aujourd'hui, 128 Go ne suffisent plus vraiment, 256 Go est un minimum prudent. S
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>À vous de jouer : regardez la « carte d'identité » de votre smartphone
+À vous de jouer : regardez la « carte d'identité » de votre smartphone
 
 {class="mt-1"}
 Ouvrez [Paramètres], trouvez À propos du téléphone (ou une option similaire), et notez : le modèle, la version du système, l'espace de stockage total et l'espace restant. C'est la première étape pour le connaître. Profitez-en pour vérifier l'état de santé de la batterie, pour avoir une idée.
@@ -66,7 +66,7 @@ Avant d'entrer dans les connaissances spécifiques, établissons d'abord une com
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>Pourquoi est-ce important ?
+Pourquoi est-ce important ?
 
 {class="mt-1"}
 Si votre smartphone est perdu ou cassé, vous ne perdez pas seulement du matériel valant plusieurs milliers de yuans,<strong>mais surtout des données irremplaçables accumulées au fil des années</strong>— les photos de la croissance de vos enfants, les messages vocaux d'un proche disparu, des contrats importants non sauvegardés. Des habitudes rationnelles d'organisation et de protection vous protègent sur trois dimensions :

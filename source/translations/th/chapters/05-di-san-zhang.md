@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-road mr-2"></i>อุปมาหลัก: ถนนกับรถ
+อุปมาหลัก: ถนนกับรถ
 
 {class="mt-1"}
 ลองนึกว่าอินเทอร์เน็ตคือเมืองหนึ่ง<strong>"ถนน"</strong>คือทางผ่านจากโทรศัพท์ของคุณไปสู่อินเทอร์เน็ต<strong>"รถ"</strong>คือข้อมูลที่วิ่งบนถนน Wi-Fi กับดาต้าเป็นถนนคนละเส้น แต่ข้อมูล (รถ) นั้นเหมือนกันเอง
@@ -36,7 +36,7 @@ Wi-Fi มักเป็นการจ่ายครั้งเดียว (
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands-helping mr-2"></i>ลองเลย: ตรวจสอบแพ็กเกจดาต้าของคุณ
+ลองเลย: ตรวจสอบแพ็กเกจดาต้าของคุณ
 
 {class="mt-1"}
 เปิด [ตั้งค่า] > [เครือข่ายมือถือ] > [การจัดการดาต้า] ดูว่าเดือนนี้ดาต้าเหลือเท่าไร แอปไหนกินดาต้ามากที่สุด มีตัวเลขอยู่ในใจ ออกจากบ้านก็ไม่ตื่นตระหนก
@@ -49,7 +49,7 @@ Wi-Fi มักเป็นการจ่ายครั้งเดียว (
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>คำเตือนด้านความปลอดภัย
+คำเตือนด้านความปลอดภัย
 
 {class="mt-1"}
 ในสถานที่สาธารณะเช่นสนามบิน ห้าง ร้านกาแฟ อย่าเชื่อมต่อไวไฟฟรีที่ชื่อน่าสงสัย (เช่น "Free_WiFi_2024") แม้ต่อแล้ว ก็อย่าเด็ดขาดที่จะล็อกอินแอปธนาคารหรือกรอกรหัสผ่านบนนั้น
@@ -81,7 +81,7 @@ Wi-Fi มักเป็นการจ่ายครั้งเดียว (
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>คำเตือนสำคัญ: ปิด [การโรมมิ่งข้อมูล] ก่อนไปต่างประเทศ!
+คำเตือนสำคัญ: ปิด [การโรมมิ่งข้อมูล] ก่อนไปต่างประเทศ!
 
 {class="mt-1"}
 ใช้ดาต้ามือถือต่างประเทศอาจโผล่บิลราคาสวรรค์! ก่อนออกนอกประเทศต้องปิดการโรมมิ่งข้อมูลในการตั้งค่า หรือไม่ก็ซื้อซิมดาต้าท้องถิ่น/แพ็กเกจโรมมิ่งนานาชาติเตรียมไว้ล่วงหน้า
@@ -106,53 +106,53 @@ Wi-Fi เป็นกำลังหลักของการต่อเน�
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">มาตรฐาน</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">โปรโตคอล</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ย่านความถี่</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">อัตราความเร็วสูงสุด</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเด่น</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">มาตรฐานรุ่นเก่า ครอบคลุมยังโอเค</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แพร่หลายที่สุดตอนนี้ ความเร็วใช้ได้</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับหลายอุปกรณ์ได้แรง ดีเลย์ต่ำ</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เพิ่มย่านความถี่ 6GHz ไม่แออัด</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ถ่ายโอนความเร็วสูงสุด รวมหลายลิงก์เข้าด้วยกัน</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">มาตรฐาน</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">โปรโตคอล</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ย่านความถี่</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">อัตราความเร็วสูงสุด</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">จุดเด่น</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">มาตรฐานรุ่นเก่า ครอบคลุมยังโอเค</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แพร่หลายที่สุดตอนนี้ ความเร็วใช้ได้</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับหลายอุปกรณ์ได้แรง ดีเลย์ต่ำ</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เพิ่มย่านความถี่ 6GHz ไม่แออัด</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ถ่ายโอนความเร็วสูงสุด รวมหลายลิงก์เข้าด้วยกัน</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -247,7 +247,7 @@ NFC วิวัฒน์มาจากเทคโนโลยี RFID รอ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองทำดู: ตั้งค่าและจัดการฮอตสปอต
+ลองทำดู: ตั้งค่าและจัดการฮอตสปอต
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เปิด [ตั้งค่า] หา "ฮอตสปอตส่วนตัว" หรือ "การแชร์เครือข่าย" เปิดมันขึ้นมา ตั้งชื่อและรหัสผ่านให้เรียบร้อย

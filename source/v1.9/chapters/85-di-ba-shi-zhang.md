@@ -125,7 +125,7 @@ HiLog 的过滤技巧也值得记：日志按 Domain 和 Tag 区分，自己打�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 到这里三平台都走完了：安卓、iOS、鸿蒙。把各自的「环境 / 语言 / 界面 / 数据 / 发布」五段串起来，你会发现迁移成本主要在名字，不在思路。
@@ -299,7 +299,7 @@ hidumper 的输出很专业也很长，第一次用别慌：先 -ls 找到服务
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 /data/local/tmp 是你在设备上的演练场，出了这个目录的"顺手删除"都算危险操作——真机没有回收站，删掉的东西不会回来。
@@ -365,7 +365,7 @@ DevEco 底部的 Log 窗口日常够用：选设备与进程，过滤框敲 Tag 
 
 ```
 hdc shell hilog -T MyApp_Net -L ERROR
-hdc shell hilog | grep MyApp    （Windows 传统命令行把 grep 换成 findstr）
+hdc shell hilog | grep MyApp （Windows 传统命令行把 grep 换成 findstr）
 ```
 :::
 
@@ -451,7 +451,7 @@ USB 真机：开发者选项开 USB 调试，插线后设备出现在 DevEco 的
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手
+来动手
 
 {class="mt-1"}
 给列表渲染埋一个条件断点（条件写 index === 5），再给同一行配一个日志断点，各跑一次，体会"停"与"不停"两种玩法的区别，以后按需选。
@@ -518,7 +518,7 @@ Frame 面板录制滑动，看到丢帧集中出现在列表项进入屏幕的�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 别上来就"优化"。先用 Frame 确认真掉帧，再用 CPU 面板归因，很多"我觉得卡"其实是动效预期错位，改代码反而帮倒忙。
@@ -572,18 +572,18 @@ Frame 面板录制滑动，看到丢帧集中出现在列表项进入屏幕的�
 
 ```
 "signingConfigs": [
-  {
-    "name": "release",
-    "material": {
-      "storeFile": "xxx.p12",
-      "storePassword": "****",
-      "keyAlias": "xxx",
-      "keyPassword": "****",
-      "certpath": "xxx.cer",
-      "profile": "xxx.p7b",
-      "signAlg": "SHA256withECDSA"
-    }
-  }
+ {
+ "name": "release",
+ "material": {
+ "storeFile": "xxx.p12",
+ "storePassword": "****",
+ "keyAlias": "xxx",
+ "keyPassword": "****",
+ "certpath": "xxx.cer",
+ "profile": "xxx.p7b",
+ "signAlg": "SHA256withECDSA"
+ }
+ }
 ]
 ```
 :::
@@ -617,7 +617,7 @@ Frame 面板录制滑动，看到丢帧集中出现在列表项进入屏幕的�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 .p12 和密码别进代码仓库；发布密钥丢了，已有应用的更新会非常麻烦。备份到安全的地方（加密盘、密码管理器），并且确认备份能恢复，备份打不开等于没备份。
@@ -683,7 +683,7 @@ ArkTS 的规则报错常带 arkts-no-xxx 这样的编号。最高效的排查法
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 迁移老 TS 代码时，先跑一遍编译器把所有 arkts 编号抄下来，按编号批量修——比逐行猜快得多，也比"感觉上改完了"可靠得多。
@@ -918,7 +918,7 @@ build 产物目录与各类构建缓存都是生成物：手改无用，下次�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 接手别人的项目，第一件事把 app.json5、根 build-profile.json5、module.json5 各读一遍，三个文件读完，这个项目的版本、签名、权限、入口你就全知道了。
@@ -990,7 +990,7 @@ build 产物目录与各类构建缓存都是生成物：手改无用，下次�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 不确定组件长什么样时，去官方 Samples 按组件搜，几乎每个常用组件都有能跑的示例——按第十二节的三步用法处理，半天就能上手一组组件。
@@ -1012,7 +1012,7 @@ import { http } from '@kit.NetworkKit';
 
 let client = http.createHttp();
 let resp = await client.request('https://example.com/api/list',
-  { method: http.RequestMethod.GET, expectDataType: http.HttpDataType.OBJECT });
+ { method: http.RequestMethod.GET, expectDataType: http.HttpDataType.OBJECT });
 client.destroy();
 ```
 :::
@@ -1218,7 +1218,7 @@ client.destroy();
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 引入新 Kit 的固定动作四连，读指南、看约束、声明权限、真机验证。四步走完再写业务代码，返工最少。
@@ -1282,7 +1282,7 @@ client.destroy();
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒
+避坑提醒
 
 {class="mt-1"}
 敏感信息进一次日志，就可能永远留在某次导出的文件里，打日志之前，回看第六节的规范清单，三秒钟的事。
@@ -1383,7 +1383,7 @@ client.destroy();
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 速查章的价值不在写它的人，在批注它的人，书是地图，你的批注才是本地路况。
@@ -1483,13 +1483,13 @@ AlertDialog.show({ message: '确认删除这条记录？' });
 private timerId: number = -1;
 
 aboutToAppear(): void {
-  this.timerId = setInterval(() => {
-    // 周期任务
-  }, 1000);
+ this.timerId = setInterval(() => {
+ // 周期任务
+ }, 1000);
 }
 
 aboutToDisappear(): void {
-  clearInterval(this.timerId);
+ clearInterval(this.timerId);
 }
 ```
 :::
@@ -1505,7 +1505,7 @@ aboutToDisappear(): void {
 
 ```
 ForEach(this.list, (item: Item) => {
-  Text(item.name).fontSize(16)
+ Text(item.name).fontSize(16)
 }, (item: Item) => item.id)
 ```
 :::
@@ -1523,7 +1523,7 @@ ForEach(this.list, (item: Item) => {
 @State count: number = 0;
 
 Button('加一').onClick(() => {
-  this.count += 1;
+ this.count += 1;
 })
 Text(`当前：${this.count}`)
 ```
@@ -1560,10 +1560,10 @@ await prefs.flush();
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 export class Log {
-  private static readonly DOMAIN: number = 0x0001;
-  static info(tag: string, msg: string): void {
-    hilog.info(Log.DOMAIN, tag, '%{public}s', msg);
-  }
+ private static readonly DOMAIN: number = 0x0001;
+ static info(tag: string, msg: string): void {
+ hilog.info(Log.DOMAIN, tag, '%{public}s', msg);
+ }
 }
 ```
 :::
@@ -1579,8 +1579,8 @@ export class Log {
 
 ```
 Text($r('app.string.welcome'))
-  .fontColor($r('app.color.text_primary'))
-  .backgroundImage($r('app.media.banner'))
+ .fontColor($r('app.color.text_primary'))
+ .backgroundImage($r('app.media.banner'))
 ```
 :::
 
@@ -1614,11 +1614,11 @@ import { taskpool } from '@kit.ArkTS';
 
 @Concurrent
 function heavyWork(input: number): number {
-  return input * 2; // 真正的重活放这里
+ return input * 2; // 真正的重活放这里
 }
 
 taskpool.execute(heavyWork, 100).then((result: number) => {
-  // 回到主线程更新状态
+ // 回到主线程更新状态
 });
 ```
 :::
@@ -1706,7 +1706,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 发布的底气不是"应该没问题"。发布的底气是清单上十五个勾，勾是证据，感觉不是。
@@ -1714,7 +1714,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - hdc 是鸿蒙的 adb：（list targets / install / shell aa start / file）
 - 装饰器速查：V1 的 @State/@Prop/@Link 优先记牢，V2 别与 V1 混用

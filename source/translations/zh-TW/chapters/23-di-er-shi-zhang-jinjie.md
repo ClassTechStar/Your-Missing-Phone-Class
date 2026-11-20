@@ -40,7 +40,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意事項
+注意事項
 
 {class="mt-1"}
 開發者模式裡的設定可能會影響系統穩定性，不懂的選項不要亂改。開啟USB除錯後，連線電腦時要小心，不要連線不信任的電腦。
@@ -57,7 +57,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：為什麼廠商要設定這個開關
+小知識：為什麼廠商要設定這個開關
 
 {class="mt-1"}
 早期安卓沒有這個開關。惡意軟體只要拿到許可權就能偷偷刷入系統。Google後來要求所有安卓廠商在開發者選項中加入"OEM解鎖"開關，作為一道"使用者知情同意"的確認。這也就是為什麼即便你解了BL鎖，如果OEM解鎖開關被關閉，重新刷機仍然會失敗。
@@ -95,7 +95,7 @@ ADB 全稱 Android Debug Bridge（安卓除錯橋），是 Google 官方提供�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>驅動和授權彈窗別忽略
+驅動和授權彈窗別忽略
 
 {class="mt-1"}
 Windows 使用者如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> 顯示 "unauthorized" 或根本不列出裝置，多半是驅動沒裝好或者忘了在手機上點"允許"。三星/小米等品牌可以裝各自的"USB驅動"或"手機助手"來補齊驅動；Mac 和 Linux 一般免驅。如果手機彈窗被你手滑點掉了，拔插一下資料線就會重新彈出來。
@@ -124,7 +124,7 @@ Windows 使用者如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>千萬別亂刪系統核心包
+千萬別亂刪系統核心包
 
 {class="mt-1"}
 "pm uninstall --user 0"雖然是免 Root 的安全方式，但亂刪關鍵系統應用（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> 狀態列、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> 電話、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> 設定）會導致系統崩潰、黑屏、無法開機等嚴重問題。刪之前先 Google 一下"這個包名能不能刪"，寧可少刪不要錯刪。建議一次只刪一兩個，確認沒問題再繼續。
@@ -132,7 +132,7 @@ Windows 使用者如果 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知識：--user 0 是什麼意思
+小知識：--user 0 是什麼意思
 
 {class="mt-1"}
 安卓 4.2 之後支援多使用者，每個使用者有獨立的 ID（機主是 0，附加使用者從 10 開始）。<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> 表示"只對當前機主解除安裝"，系統分割區裡的 APK 檔案依然存在，只是不給機主顯示了。這就是為什麼它不需要 Root，沒動系統檔案，只是改了"使用者配置"。這也是它和 Root 後解除安裝最大的區別：Root 解除安裝是真正從系統裡刪掉，所有使用者都不再有；ADB 解除安裝只是"對當前使用者隱藏"。
@@ -159,7 +159,7 @@ Root許可權相當於Linux中的超級使用者（對/目錄擁有完全控制�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>嚴重警告
+嚴重警告
 
 {class="mt-1"}
 Root操作有一定風險，可能導致手機變磚（無法開機）。如果你是新手，建議先充分了解相關知識，並確保有完整的備份。操作前請仔細閱讀教程，確認你的機型和系統版本。
@@ -198,7 +198,7 @@ Root操作有一定風險，可能導致手機變磚（無法開機）。如果�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>貓鼠遊戲永遠不會結束
+貓鼠遊戲永遠不會結束
 
 {class="mt-1"}
 Google 每隔一段時間就會更新檢測規則，App 廠商也會跟進升級 Play Integrity 校驗。今天還能用的隱藏方案，明天可能就被識別。如果你完全依賴銀行/支付 App（比如日常轉帳、掃碼付款），最穩妥的選擇仍然是：不要 Root、不要解 BL 鎖。隱藏方案更適合"主力機不 Root + 備用機玩 Root"的玩家配置。
@@ -213,7 +213,7 @@ Google 每隔一段時間就會更新檢測規則，App 廠商也會跟進升級
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來動手：開啟開發者模式並調整動畫速度
+來動手：開啟開發者模式並調整動畫速度
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 進入設定 > 關於手機。

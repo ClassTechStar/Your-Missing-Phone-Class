@@ -98,7 +98,7 @@ AI大規模モデル（Large Language Model、LLM）は膨大なテキストデ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>と、精確な結果をくれる。フレームワークはあなたの頭の中の「良い答えとは何か」をAIが理解できる指示に翻訳するもの。
+と、精確な結果をくれる。フレームワークはあなたの頭の中の「良い答えとは何か」をAIが理解できる指示に翻訳するもの。
 
 {class="mt-1"}
 1\. 役割（Role）：AIに誰であるかを伝える<strong>AIに具体的な「アイデンティティ」を与えると、対応分野の専門知識と表現方法を呼び出す。</strong>役割設定が具体的なほど、出力が専門的
@@ -198,39 +198,39 @@ AIに具体的な「役割」を与えると、その分野の専門知識と表
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">背景を追加（あなたは誰/どんなシーン）</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">回答が学術的/公式すぎる</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">トーン制約を追加＋「役所語」拒否リスト</td>
-                                    <td class="border border-gray-300 px-3 py-2">回答が脱線/質問に答えていない</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">タスクを動詞で言い直し、「これだけ答えて」を要求</td>
-                                    <td class="border border-gray-300 px-3 py-2">回答が長すぎて読めない</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">文字数を硬く制限（200字以内）</td>
-                                    <td class="border border-gray-300 px-3 py-2">AIがもっともらしく嘘をつく </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">「不確かな場合は『分かりません』と表示」を追加＋重要事実の自己チェック</td>
-                                    <td class="border border-gray-300 px-3 py-2">第一版が不満足</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">書き直さず、元のプロンプト後に「もう少し…して」を追加</td>
-                                    <td class="border border-gray-300 px-3 py-2">7. 3つの完全なシナリオ事例</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">シナリオ1：生活アシスタント（朝食組み合わせ提案）</td>
-                                    <td class="border border-gray-300 px-3 py-2">プロンプト</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">背景を追加（あなたは誰/どんなシーン）</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">回答が学術的/公式すぎる</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">トーン制約を追加＋「役所語」拒否リスト</td>
+ <td class="border border-gray-300 px-3 py-2">回答が脱線/質問に答えていない</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">タスクを動詞で言い直し、「これだけ答えて」を要求</td>
+ <td class="border border-gray-300 px-3 py-2">回答が長すぎて読めない</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">文字数を硬く制限（200字以内）</td>
+ <td class="border border-gray-300 px-3 py-2">AIがもっともらしく嘘をつく </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">「不確かな場合は『分かりません』と表示」を追加＋重要事実の自己チェック</td>
+ <td class="border border-gray-300 px-3 py-2">第一版が不満足</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">書き直さず、元のプロンプト後に「もう少し…して」を追加</td>
+ <td class="border border-gray-300 px-3 py-2">7. 3つの完全なシナリオ事例</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">シナリオ1：生活アシスタント（朝食組み合わせ提案）</td>
+ <td class="border border-gray-300 px-3 py-2">プロンプト</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ AIに具体的な「役割」を与えると、その分野の専門知識と表
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>あなたは栄養バランスに優れた朝食ブロガーです（
+あなたは栄養バランスに優れた朝食ブロガーです（
 
 {class="mt-1"}
 <strong>シニア行政アシスタント</strong>：
@@ -253,7 +253,7 @@ AIに具体的な「役割」を与えると、その分野の専門知識と表
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>あなたは
+あなたは
 
 {class="mt-1"}
 <strong>シニア行政アシスタント</strong>：
@@ -267,7 +267,7 @@ Q2マーケティング推進案を議論しました<strong>（背景）。</st
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>あなたは
+あなたは
 
 {class="mt-1"}
 <strong>シニア行政アシスタント</strong>：
@@ -281,7 +281,7 @@ Q2マーケティング推進案を議論しました<strong>（背景）。</st
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>：AIの回答に不満がある時、「これは専門的すぎるので、小学生にもわかる言葉で説明し直してください」と言えます。
+：AIの回答に不満がある時、「これは専門的すぎるので、小学生にもわかる言葉で説明し直してください」と言えます。
 
 {class="mt-1"}
 思考の連鎖（CoT）
@@ -305,7 +305,7 @@ Q2マーケティング推進案を議論しました<strong>（背景）。</st
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>プロンプトを活用：より具体的で明確な記述ほど、AIの回答の質が高くなります。
+プロンプトを活用：より具体的で明確な記述ほど、AIの回答の質が高くなります。
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - AIはツールであり権威ではありません、独立した思考と判断力を保ってください。
@@ -317,7 +317,7 @@ Q2マーケティング推進案を議論しました<strong>（背景）。</st
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>チャレンジ2：AI画像編集
+チャレンジ2：AI画像編集
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>：通行人が写った観光写真を撮り、「魔法消去」や「AI消しゴム」機能を使って通行人をきれいに消去してください。AIが背景をどう「補完」するか観察してください。</strong>チャレンジ3：プロンプト最適化
@@ -327,7 +327,7 @@ Q2マーケティング推進案を議論しました<strong>（背景）。</st
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>事例2：機種変更データ移行の完全フロー
+事例2：機種変更データ移行の完全フロー
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>シーン</strong>: iPhone 13 → Xiaomi 15 のクロスブランド機種変更。

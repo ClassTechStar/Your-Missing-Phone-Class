@@ -24,51 +24,51 @@ Prinsip inti: Data cleaning bukan "hapus", tapi "overwrite". Banyak orang mengir
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Merek</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Entri Wipe</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Perbedaan Kunci dan Catatan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System &amp; Update &gt; Reset &gt; Factory Reset</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu pertama logout akun Huawei dan matikan "Find My Phone", jika tidak akan trigger activation lock; dalam mode pure mungkin butuh verifikasi password.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; My Device &gt; Factory Reset</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Di bawah ada opsi "Format Virtual SD Card" dan "Clear All Content &amp; Settings", keduanya harus dicentang; sebelum logout akun Xiaomi pertama matikan "Find Device".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Additional Settings &gt; Restore Phone &gt; Thoroughly Clear All Data</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS menyediakan mode "Thorough Clear", akan multiple overwrite storage; perlu input lock screen password untuk konfirmasi.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System Management &gt; Backup &amp; Reset &gt; Clear All Data</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Centang "Format Phone Storage" baru bisa clean SD card area; perlu logout akun vivo, matikan "Find Phone".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General Management &gt; Reset &gt; Factory Reset</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu pertama remove akun Samsung dan matikan "Find My Phone"; sebagian model ada opsi "Auto Overwrite", disarankan aktifkan.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi, saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General &gt; Transfer or Reset iPhone &gt; Erase All Content and Settings</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Harus pertama logout Apple ID, jika tidak pengguna berikutnya diblokir iCloud activation lock; iOS 15+ mendukung "Keep iCloud Data on Logout" untuk investigasi nanti.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Merek</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Entri Wipe</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Perbedaan Kunci dan Catatan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System &amp; Update &gt; Reset &gt; Factory Reset</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu pertama logout akun Huawei dan matikan "Find My Phone", jika tidak akan trigger activation lock; dalam mode pure mungkin butuh verifikasi password.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; My Device &gt; Factory Reset</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Di bawah ada opsi "Format Virtual SD Card" dan "Clear All Content &amp; Settings", keduanya harus dicentang; sebelum logout akun Xiaomi pertama matikan "Find Device".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; Additional Settings &gt; Restore Phone &gt; Thoroughly Clear All Data</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS menyediakan mode "Thorough Clear", akan multiple overwrite storage; perlu input lock screen password untuk konfirmasi.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; System Management &gt; Backup &amp; Reset &gt; Clear All Data</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Centang "Format Phone Storage" baru bisa clean SD card area; perlu logout akun vivo, matikan "Find Phone".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General Management &gt; Reset &gt; Factory Reset</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu pertama remove akun Samsung dan matikan "Find My Phone"; sebagian model ada opsi "Auto Overwrite", disarankan aktifkan.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi, saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings &gt; General &gt; Transfer or Reset iPhone &gt; Erase All Content and Settings</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Harus pertama logout Apple ID, jika tidak pengguna berikutnya diblokir iCloud activation lock; iOS 15+ mendukung "Keep iCloud Data on Logout" untuk investigasi nanti.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Tiga Hal yang Paling Mudah Diabaikan
+Tiga Hal yang Paling Mudah Diabaikan
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Tidak Logout Akun</strong>: Ponsel dijual ke pembeli berikutnya lalu di-lock remote, sendiri juga tidak bisa keluar, akhirnya hanya bisa bawa KTP ke service center resmi untuk unlock.
@@ -82,7 +82,7 @@ Data di ponsel, sudah lama bukan "virtual" lagi. Itu membawa dana Anda, hubungan
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>Dasar Hukum: Pasal 49 Personal Information Protection Law
+Dasar Hukum: Pasal 49 Personal Information Protection Law
 
 {class="mt-1"}
 Pasal 49 Personal Information Protection Law RRT yang berlaku 2021 secara jelas menyatakan:<strong>Jika natural person meninggal, kerabat dekatnya untuk kepentingan legal dan wajar sendiri, bisa menjalankan hak akses, salin, koreksi, hapus, dll. terhadap personal information terkait almarhum sebagaimana diatur dalam bab ini; kecuali almarhum saat hidup memiliki arranjo lain.</strong>
@@ -108,7 +108,7 @@ Kedua App yang paling sering dipakai orang Tiongkok ini, aturannya masing-masing
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Menggunakan kata sandi lemah seperti tanggal lahir / 123456 / qwerty;
+Menggunakan kata sandi lemah seperti tanggal lahir / 123456 / qwerty;
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Jangan langsung memberikan password akun almarhum ke keluarga untuk "dipakai lanjut"</strong>— ini melanggar agreement platform, saat dana dibekukan atau bahkan trigger risk control pembuktian lebih sulit.
@@ -153,7 +153,7 @@ Platform media sosial mainstream domestik menangani akun almarhum dengan dua pen
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Pengingat Kunci
+Pengingat Kunci
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Aturan setiap platform akan update, sebelum memproses pertama cek panduan terbaru customer service resmi.
@@ -174,7 +174,7 @@ Selain akun media sosial, semakin banyak orang memegang <strong>aset digital yan
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Harga Nyata Cryptocurrency "Hilang"
+Harga Nyata Cryptocurrency "Hilang"
 
 {class="mt-1"}
 Menurut laporan Chainalysis, global sudah ada <strong>lebih dari 3 juta Bitcoin</strong> karena private key hilang selamanya tidak bisa recovery, setara dengan seperenam dari total yang ada. Jika Anda memegang crypto asset, pastikan minimal satu orang yang Anda mutlak percaya tahu <strong>recovery path</strong>— jika tidak kekayaan ini akan selamanya tertidur di blockchain.
@@ -227,7 +227,7 @@ Will properti tradisional tidak bisa mengurus aset digital. Disarankan Anda seti
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Tips Hukum tentang "Password"
+Tips Hukum tentang "Password"
 
 {class="mt-1"}
 Menulis password langsung di will ada risiko bocor, dan setelah will dibuka semua ahli waris bisa melihat.<strong>Cara yang lebih aman: Di will hanya tulis "daftar akun + keinginan disposal + lokasi escrow password", password asli via master password manager secara terpisah diberikan ke eksekutor terpercaya</strong>. Dengan begitu sesuai requirement legal, juga menurunkan risiko password bocor.
@@ -239,41 +239,41 @@ Satu ponsel mengandung puluhan jenis logam seperti emas, perak, tembaga, rare ea
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Channel</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Harga Daur Ulang</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keamanan Data</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Produksi profesional kelas atas. Seri iPhone 15 Pro mendukung shooting video Apple ProRes (hingga 4K 60fps), tetapi format ProRes RAW saat ini perlu digunakan bersama perangkat perekam eksternal, ponsel belum mendukung shooting langsung.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Trade-in Resmi (Huawei/Apple/Xiaomi, dll.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sedang, sering ditambah voucher subsidi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tertinggi, resmi punya proses standar</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Paling worth it saat berencana ganti ponsel merek yang sama</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Platform Daur Ulang Pihak Ketiga (Aihuishou, Zhuanzhuan, Huisoubao, dll.)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sedikit lebih tinggi, bisa compare harga</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup tinggi, ada laporan data wipe</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ingin langsung cair, tidak terikat merek</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Donasi Amal (seperti sekolah pedesaan, lembaga amal)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tanpa return ekonomi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu wipe menyeluruh sendiri</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat masih usable, ingin berbuat baik</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Manfaatkan Sisa (Simpan &amp; Modifikasi)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hemat uang perangkat baru</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemilik asli terus pakai, tanpa risiko</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Performa perangkat masih OK, ada kebutuhan modifikasi di rumah</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Channel</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Harga Daur Ulang</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keamanan Data</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">: Produksi profesional kelas atas. Seri iPhone 15 Pro mendukung shooting video Apple ProRes (hingga 4K 60fps), tetapi format ProRes RAW saat ini perlu digunakan bersama perangkat perekam eksternal, ponsel belum mendukung shooting langsung.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Trade-in Resmi (Huawei/Apple/Xiaomi, dll.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sedang, sering ditambah voucher subsidi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tertinggi, resmi punya proses standar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Paling worth it saat berencana ganti ponsel merek yang sama</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Platform Daur Ulang Pihak Ketiga (Aihuishou, Zhuanzhuan, Huisoubao, dll.)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sedikit lebih tinggi, bisa compare harga</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cukup tinggi, ada laporan data wipe</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ingin langsung cair, tidak terikat merek</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Donasi Amal (seperti sekolah pedesaan, lembaga amal)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tanpa return ekonomi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu wipe menyeluruh sendiri</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat masih usable, ingin berbuat baik</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Manfaatkan Sisa (Simpan &amp; Modifikasi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hemat uang perangkat baru</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pemilik asli terus pakai, tanpa risiko</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Performa perangkat masih OK, ada kebutuhan modifikasi di rumah</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>Recycle resmi/Trade-in</strong>: Cara yang paling direkomendasikan, proses standar, keamanan data terjamin. Situs resmi Apple, Huawei, Xiaomi, dll. semua punya entri "Trade-in", setelah evaluasi bisa dipakai diskon harga ponsel baru.
@@ -283,7 +283,7 @@ Satu ponsel mengandung puluhan jenis logam seperti emas, perak, tembaga, rare ea
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>Fakta Sampah Elektronik
+Fakta Sampah Elektronik
 
 {class="mt-1"}
 Circuit board satu ponsel mengandung <strong>emas, perak, palladium, tembaga</strong> dan logam mulia lainnya, setiap ton circuit board bekas kandungan emasnya puluhan kali dari bijih emas. Tapi jika dibuang sembarangan, timbal, merkuri, kadmium di dalamnya akan meresap ke tanah dan air tanah, polusi berlangsung puluhan tahun.<strong>Daur ulang yang benar melindungi lingkungan sekaligus mendaur ulang logam langka.</strong>
@@ -291,7 +291,7 @@ Circuit board satu ponsel mengandung <strong>emas, perak, palladium, tembaga</st
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktik: Lakukan "Pemakaman Standar" untuk Ponsel Lama Anda
+Praktik: Lakukan "Pemakaman Standar" untuk Ponsel Lama Anda
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Backup lengkap terakhir kali: foto diunggah ke cloud, file penting disalin ke komputer, riwayat chat diekspor untuk arsip.
@@ -305,7 +305,7 @@ Circuit board satu ponsel mengandung <strong>emas, perak, palladium, tembaga</st
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Daftar tugas bulan ini
+Daftar tugas bulan ini
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Tetapkan Apple "Legacy Contact" atau setel Google "Inactive Account Manager" untuk ponsel utama Anda saat ini.

@@ -77,12 +77,12 @@ Intent (niat) adalah 'tiket' komunikasi antar komponen. Ingin berpindah dari sat
 ```
 // Cara satu: Intent eksplisit—tentukan halaman tujuan secara jelas
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "Zhang San")     // Seperti menitipkan "barang bawaan" di kendaraan (data)
+intent.putExtra("name", "Zhang San") // Seperti menitipkan "barang bawaan" di kendaraan (data)
 startActivity(intent)
 
 // Cara dua: Intent implisit—cukup bilang mau apa, sistem carikan pelakunya
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // Sistem akan membuka browser/atau meminta Anda memilih
+startActivity(web) // Sistem akan membuka browser/atau meminta Anda memilih
 ```
 :::
 
@@ -101,16 +101,16 @@ Aplikasi nyata pasti punya banyak halaman. Solusi navigasi yang direkomendasikan
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "Tidak diketahui")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "Tidak diketahui")
+ }
 }
 
 // Berpindah halaman di dalam halaman:
-navController.navigate("detail/Zhang San")     // dengan parameter
-navController.popBackStack()              // kembali ke halaman sebelumnya
+navController.navigate("detail/Zhang San") // dengan parameter
+navController.popBackStack() // kembali ke halaman sebelumnya
 ```
 :::
 

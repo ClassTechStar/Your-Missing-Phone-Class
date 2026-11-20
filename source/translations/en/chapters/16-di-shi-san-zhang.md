@@ -204,41 +204,41 @@ A domain is a site's "street address." Reading it helps you judge what a site is
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Browser</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Highlights</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Best for</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium + built-in Copilot AI: summarize pages, translate, chat</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Productivity-focused office users, heavy AI users (recommended main browser)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Deep Apple integration, power-efficient, strong privacy</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac users who care about battery and system integration</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Most widely used globally, richest extension ecosystem</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Power users who need many extensions, cross-device sync fans</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blocks ads and trackers out of the box, faster</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privacy-minded users who want ad blocking without installing add-ons</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Search engine keeps no history; one tap clears traces</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privacy-sensitive users who don't want personalized tracking</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Browser</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Highlights</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Best for</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium + built-in Copilot AI: summarize pages, translate, chat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Productivity-focused office users, heavy AI users (recommended main browser)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Deep Apple integration, power-efficient, strong privacy</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac users who care about battery and system integration</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Most widely used globally, richest extension ecosystem</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Power users who need many extensions, cross-device sync fans</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Blocks ads and trackers out of the box, faster</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privacy-minded users who want ad blocking without installing add-ons</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Search engine keeps no history; one tap clears traces</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privacy-sensitive users who don't want personalized tracking</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -287,46 +287,46 @@ Entries by brand below. Names may vary slightly by system version, search Settin
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Where to find it</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Recommended switches</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Settings] > [Phone] / [Messages]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Silence Unknown Callers; Blocked Contacts; "Filter Unknown Senders" in Messages</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone app > Settings > Spam blocking; or Security app</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Smart blocking, block one-ring hangs, SMS keyword filter</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone > Spam blocking; Phone Manager > Spam blocking</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Caller ID, blacklist, smart SMS blocking</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone app > Spam blocking; or This phone > Spam blocking</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Call blocking, scam call detection, SMS filter rules</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone > Spam call blocking; i Manager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spam blocking, scam call warnings, message filtering</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone > Settings > Block numbers / Caller ID and spam protection</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Block unknown numbers, spam call ID (varies by region)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Where to find it</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Recommended switches</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Settings] > [Phone] / [Messages]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Silence Unknown Callers; Blocked Contacts; "Filter Unknown Senders" in Messages</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone app > Settings > Spam blocking; or Security app</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Smart blocking, block one-ring hangs, SMS keyword filter</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone > Spam blocking; Phone Manager > Spam blocking</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Caller ID, blacklist, smart SMS blocking</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone app > Spam blocking; or This phone > Spam blocking</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Call blocking, scam call detection, SMS filter rules</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone > Spam call blocking; i Manager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Spam blocking, scam call warnings, message filtering</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone > Settings > Block numbers / Caller ID and spam protection</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Block unknown numbers, spam call ID (varies by region)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -390,46 +390,46 @@ Entries below may vary by system version. Search Settings for "earthquake," "ear
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Common path</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone Manager / Security > Earthquake warning; or search "earthquake" in Settings</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Some versions include a built-in warning service; needs internet and location</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings > Safety > Emergency alerts / Earthquake warning</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">May be named "Emergency alerts" and cover earthquakes among others</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings > Safety (SOS emergency) > Earthquake warning</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Depends on model and regional service coverage</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Weather app or Settings > Safety/More > Earthquake warning</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Follow the menus on your actual system version</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Often no full built-in switch; install a reliable earthquake warning app and allow notifications</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App needs background run and location; don't block its alerts in Do Not Disturb</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung, etc.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings > Safety and emergency / Wireless emergency alerts</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Emergency alerts" coverage varies by region and carrier</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Common path</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Notes</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Phone Manager / Security > Earthquake warning; or search "earthquake" in Settings</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Some versions include a built-in warning service; needs internet and location</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings > Safety > Emergency alerts / Earthquake warning</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">May be named "Emergency alerts" and cover earthquakes among others</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings > Safety (SOS emergency) > Earthquake warning</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Depends on model and regional service coverage</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Weather app or Settings > Safety/More > Earthquake warning</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Follow the menus on your actual system version</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Often no full built-in switch; install a reliable earthquake warning app and allow notifications</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App needs background run and location; don't block its alerts in Do Not Disturb</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung, etc.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Settings > Safety and emergency / Wireless emergency alerts</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Emergency alerts" coverage varies by region and carrier</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

@@ -102,7 +102,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>توصيات عملية
+توصيات عملية
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - التصوير اليومي: 1080P/4K + 30fps + ترميز H.265، توازن بين الجودة وحجم الملف.
@@ -113,7 +113,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>استكشف: إعدادات الفيديو في هاتفك
+استكشف: إعدادات الفيديو في هاتفك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. افتح تطبيق الكاميرا، وبدّل إلى وضع الفيديو.
@@ -241,7 +241,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>نصائح عملية للتصوير الثابت
+نصائح عملية للتصوير الثابت
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - التصوير اليومي: HEIF/JPEG الافتراضي كافٍ، حجم الملف صغير والجودة مقبولة.
@@ -253,7 +253,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب بنفسك: تعرّف على قدرات كاميرتك
+جرّب بنفسك: تعرّف على قدرات كاميرتك
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. تحقق مما إذا كان هاتفك يدعم التصوير بصيغة RAW (الإعدادات ← الكاميرا ← الصيغة)، حاول تفعيله والتقاط صورة، وقارن حجم ملف JPEG مع RAW لنفس المشهد.

@@ -95,7 +95,7 @@ Android側は少し複雑ですが、上限もより高いです。まず簡単�
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>自分に最も適したものを1つ完了すれば、入門完了です：
+自分に最も適したものを1つ完了すれば、入門完了です：
 
 {class="mt-1"}
 チャレンジ1：おはようオートメーション
@@ -103,7 +103,7 @@ Android側は少し複雑ですが、上限もより高いです。まず簡単�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>：iOS：ショートカットアプリで新規ショートカット→「現在の天気を取得」→「テキストを朗読」→「アプリを開くでNetEase Cloud Musicを選択」を追加。完了後、Siriに「おはよう」と言ってトリガーできます。Android：Taskerで新規タスク→「天気を取得」→「朗読」→「アプリを開く」を追加→トリガー時間を毎日7:00に設定。
+：iOS：ショートカットアプリで新規ショートカット→「現在の天気を取得」→「テキストを朗読」→「アプリを開くでNetEase Cloud Musicを選択」を追加。完了後、Siriに「おはよう」と言ってトリガーできます。Android：Taskerで新規タスク→「天気を取得」→「朗読」→「アプリを開く」を追加→トリガー時間を毎日7:00に設定。
 
 {class="mt-1 mb-2"}
 チャレンジ2：低バッテリー自動省電力
@@ -116,7 +116,7 @@ Android側は少し複雑ですが、上限もより高いです。まず簡単�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>事例3：自動化「おはようフロー」
+事例3：自動化「おはようフロー」
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>シーン</strong>: 毎日7:00に自動で天気予報 + マナーモード解除 + ニュースを開く。

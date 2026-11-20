@@ -66,7 +66,7 @@ Auch alte Autos können das
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>UWB-Technologie – Praeziseres „Raeumliches Gefuehl" als Bluetooth
+UWB-Technologie – Praeziseres „Raeumliches Gefuehl" als Bluetooth
 
 {class="mt-1"}
 Zusaetzlich zu Bluetooth verbirgt sich in neueren Smartphones ein UWB-Chip (Ultra-Wideband). Seine Faehigkeit ist <strong>praecise Entfernungsmessung und raeumliche Positionierung</strong>– er berechnet, wie weit ein anderes Geraet entfernt ist und in welcher Richtung, mit Zentimetergenauigkeit. Bluetooth sagt nur „in der Naehe"; UWB sagt „1,2 m schraeg links vorne". Haeufige Anwendungen:
@@ -80,7 +80,7 @@ Zusaetzlich zu Bluetooth verbirgt sich in neueren Smartphones ein UWB-Chip (Ultr
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio und Auracast – Die naechste Generation der Bluetooth-Audio-Standards
+LE Audio und Auracast – Die naechste Generation der Bluetooth-Audio-Standards
 
 {class="mt-1"}
 Das zwanzig Jahre alte klassische Bluetooth-Audio (A2DP) wird durch <strong>LE Audio</strong>(Low Energy Audio) abgeloest – der neue Audiostandard ab Bluetooth 5.2:
@@ -110,7 +110,7 @@ Auf dem Smartphone: iPhone im Kontrollzentrum auf „Bildschirmspiegelung" tippe
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: WeChat-Chatverläufe (auch wenn der WeChat-Server sie speichert, kannst du sie nicht selbst vom Server herunterladen), Geräteanmeldedaten der Mobile-Bank, Schlüssel in Zwei-Faktor-Authentifizierungs-Apps (wie Google Authenticator).
+: WeChat-Chatverläufe (auch wenn der WeChat-Server sie speichert, kannst du sie nicht selbst vom Server herunterladen), Geräteanmeldedaten der Mobile-Bank, Schlüssel in Zwei-Faktor-Authentifizierungs-Apps (wie Google Authenticator).
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Du solltest also vor allem die erste und dritte Kategorie schützen
@@ -122,7 +122,7 @@ Auf dem Smartphone: iPhone im Kontrollzentrum auf „Bildschirmspiegelung" tippe
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Fallbeispiel 1: Akkulaufzeit-Optimierung in der Praxis
+Fallbeispiel 1: Akkulaufzeit-Optimierung in der Praxis
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Szenario</strong>: Der Nutzer eines Xiaomi 14 hat schlechte Akkulaufzeit – nach einem halben Tag ist der Akku leer.

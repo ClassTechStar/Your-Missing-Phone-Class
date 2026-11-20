@@ -84,7 +84,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"上工第一天"检查清单
+"上工第一天"检查清单
 
 {class="mt-1 text-sm"}
 拿到新手机或大版本更新后，建议花 10 分钟过一遍这些设置：<br> ① 锁屏密码 + 生物识别。<br> ② 通知分组 + 关闭营销推送。<br> ③ 字体大小 / 刷新率 / 深色模式。<br> ④ 默认输入法 / 浏览器 / 邮件。<br> ⑤ 紧急联系人 / 医疗卡。<br> ⑥ 备份设置。
@@ -100,7 +100,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS 旁白（VoiceOver）
+iOS 旁白（VoiceOver）
 
 {class="mt-1"}
 <strong>开启路径</strong>：[设置] > [辅助功能] > [旁白]，打开开关。也可三击侧边键（或主屏幕键）快速开关。
@@ -121,7 +121,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>安卓 TalkBack
+安卓 TalkBack
 
 {class="mt-1"}
 <strong>开启路径</strong>：[设置] > [辅助功能] > [TalkBack]，打开开关。或长按音量上下键 3 秒快速启用（部分品牌支持）。
@@ -165,7 +165,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>各系统 AI 图像描述支持情况
+各系统 AI 图像描述支持情况
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>：在 [设置] > [辅助功能] > [旁白] > [语音描述] 中开启"图像描述"。系统会调用<strong>本地 AI 模型</strong>自动生成图片文字描述（需 iPhone 12 及以上）。
@@ -175,7 +175,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>使用场景
+使用场景
 
 {class="mt-1"}
 试着对着一张街拍照片问"这张图里有几个人？他们在做什么？"，或者打开外卖 App，让 AI 读出菜单图里的菜品名<strong>这是真正的"科技让生活更平等"</strong>。
@@ -188,7 +188,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>实时字幕开启与优化
+实时字幕开启与优化
 
 {class="mt-1"}
 <strong>iOS</strong>：[设置] > [辅助功能] > [实时字幕]，打开开关。系统会检测设备所有音频（通话、视频、播客、FaceTime、语音备忘录），自动显示字幕在屏幕上方。
@@ -213,7 +213,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>通话实时转译（TTY / RTT）
+通话实时转译（TTY / RTT）
 
 {class="mt-1"}
 <strong>iOS</strong>：[设置] > [辅助功能] > [RTT/TTY]，开启后通话时屏幕上会显示键盘，对方的语音会被实时打成文字，<strong>你打的字也会被念出来</strong>给对方听。
@@ -241,7 +241,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>苹果的无障碍设计哲学
+苹果的无障碍设计哲学
 
 {class="mt-1"}
 苹果在无障碍领域投入巨大，每年都会更新和新增辅助功能。苹果官网有专门的无障碍页面，详细介绍各项功能的使用方法。iOS 的无障碍功能通常比安卓更完善、体验更流畅，这也是很多残障用户选择苹果的重要原因。
@@ -249,7 +249,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>花30秒体验一下
+花30秒体验一下
 
 {class="mt-1"}
 找一段空闲时间，做以下体验：

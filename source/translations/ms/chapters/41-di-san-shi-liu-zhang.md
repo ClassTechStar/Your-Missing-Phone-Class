@@ -36,35 +36,35 @@ Protokol ialah "bahasa", ekosistem ialah "kumpulan". Walaupun semuanya menyokong
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ekosistem</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelebihan</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kekurangan</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sesuai untuk</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privasi paling kuat (terutamanya pemprosesan setempat), integrasi lancar dengan iPhone/Siri/Shortcut</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bilangan peranti kurang dan agak mahal, perlukan HomePod atau Apple TV sebagai hab</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang seluruh keluarganya guna peranti Apple dan mengutamakan privasi serta pengalaman</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mijia (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pilihan peranti paling banyak, nilai wang terbaik, pembantu suara Xiao AI mudah digunakan</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem agak tertutup, banyak data dimuat naik ke awan, iklan agak banyak</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna baharu yang bajet terhad dan mahu melengkapkan seluruh rumah dalam satu tempat</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Peralihan tanpa jahitan dengan telefon/tablet/jam HarmonyOS, bilangan peranti berkembang pesat</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sokongan peranti luar negara kurang, ekosistem masih mengejar</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna telefon Huawei yang menghargai kerjasama berbilang peranti "Super Device"</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ekosistem</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelebihan</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kekurangan</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sesuai untuk</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Privasi paling kuat (terutamanya pemprosesan setempat), integrasi lancar dengan iPhone/Siri/Shortcut</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bilangan peranti kurang dan agak mahal, perlukan HomePod atau Apple TV sebagai hab</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang seluruh keluarganya guna peranti Apple dan mengutamakan privasi serta pengalaman</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mijia (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pilihan peranti paling banyak, nilai wang terbaik, pembantu suara Xiao AI mudah digunakan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ekosistem agak tertutup, banyak data dimuat naik ke awan, iklan agak banyak</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna baharu yang bajet terhad dan mahu melengkapkan seluruh rumah dalam satu tempat</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Smart Life (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Peralihan tanpa jahitan dengan telefon/tablet/jam HarmonyOS, bilangan peranti berkembang pesat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sokongan peranti luar negara kurang, ekosistem masih mengejar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna telefon Huawei yang menghargai kerjasama berbilang peranti "Super Device"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3

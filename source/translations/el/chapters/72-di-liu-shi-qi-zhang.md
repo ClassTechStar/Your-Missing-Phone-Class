@@ -54,21 +54,21 @@ import XCTest
 
 // Διαχωρίζουμε τη λογική "μετατροπή κειμένου ποσού σε αριθμό" σε καθαρή συνάρτηση
 func parseAmount(_ input: String) -> Double? {
-    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
-          v > 0 else { return nil }
-    return v
+ guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+ v > 0 else { return nil }
+ return v
 }
 
 final class AmountTests: XCTestCase {
-    func testEmptyInputReturnsNil() {
-        XCTAssertNil(parseAmount(""))
-    }
-    func testNegativeReturnsNil() {
-        XCTAssertNil(parseAmount("-5"))
-    }
-    func testNormalValueParses() {
-        XCTAssertEqual(parseAmount("12.5"), 12.5)
-    }
+ func testEmptyInputReturnsNil() {
+ XCTAssertNil(parseAmount(""))
+ }
+ func testNegativeReturnsNil() {
+ XCTAssertNil(parseAmount("-5"))
+ }
+ func testNormalValueParses() {
+ XCTAssertEqual(parseAmount("12.5"), 12.5)
+ }
 }
 ```
 :::
@@ -96,11 +96,11 @@ final class AmountTests: XCTestCase {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> Εγγραφή λογαριασμού developer</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> Προετοιμασία υλικών για το κατάστημα</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> Ανέβασμα πακέτου build</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Εγγραφή λογαριασμού developer</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Προετοιμασία υλικών για το κατάστημα</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Ανέβασμα πακέτου build</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> Συμπλήρωσε στοιχεία ιδιωτικότητας και ελέγχου</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> Έλεγχος Apple (1-7 μέρες)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> Κυκλοφορία</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Συμπλήρωσε στοιχεία ιδιωτικότητας και ελέγχου</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Έλεγχος Apple (1-7 μέρες)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Κυκλοφορία</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

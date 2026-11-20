@@ -87,7 +87,7 @@ Periksa kedudukan penggunaan bateri
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>: iPhone skrin penuh tekan volume naik → volume turun → tahan butang kuasa sehingga Logo muncul. Android tahan butang kuasa 10-15 saat sehingga bergetar.
+: iPhone skrin penuh tekan volume naik → volume turun → tahan butang kuasa sehingga Logo muncul. Android tahan butang kuasa 10-15 saat sehingga bergetar.
 
 {class="mt-1"}
 Bersihkan port pengecasan
@@ -95,7 +95,7 @@ Bersihkan port pengecasan
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: Cari alat kecil (pic gigi atau pen jarum telefon pintar), perlahan-lahan bersihkan habuk dalam port pengecasan.
+: Cari alat kecil (pic gigi atau pen jarum telefon pintar), perlahan-lahan bersihkan habuk dalam port pengecasan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Sambung semula Wi-Fi</strong>: Pergi ke tetapan Wi-Fi "lupakan" Wi-Fi semasa anda, masukkan semula kata laluan untuk menyambung.

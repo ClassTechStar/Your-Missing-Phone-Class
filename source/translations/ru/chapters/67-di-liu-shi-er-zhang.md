@@ -25,17 +25,17 @@ kind: chapter
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body: описывает «как выглядит экран»
-        VStack {               // вертикально
-            Text("Привет, мир!")
-                .font(.largeTitle)      // модификатор: крупный заголовок
-            Button("Нажми") {
-                print("Нажато")
-            }
-            .buttonStyle(.borderedProminent)  // сплошная синяя кнопка
-        }
-        .padding()
-    }
+ var body: some View { // body: описывает «как выглядит экран»
+ VStack { // вертикально
+ Text("Привет, мир!")
+ .font(.largeTitle) // модификатор: крупный заголовок
+ Button("Нажми") {
+ print("Нажато")
+ }
+ .buttonStyle(.borderedProminent) // сплошная синяя кнопка
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -68,17 +68,17 @@ struct ContentView: View {
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("Счёт")
-        Spacer()                 // гибкое пространство: отталкивает правую часть к краю
-        Text("-25.5 юаня").foregroundColor(.red)
-    }
-    Divider()                    // разделитель
-    Text("Заметка: обед")
+ HStack {
+ Text("Счёт")
+ Spacer() // гибкое пространство: отталкивает правую часть к краю
+ Text("-25.5 юаня").foregroundColor(.red)
+ }
+ Divider() // разделитель
+ Text("Заметка: обед")
 }
-.padding(16)                     // отступы со всех сторон
+.padding(16) // отступы со всех сторон
 .background(Color(.systemGray6)) // светло-серый фон
-.cornerRadius(12)                // скругление углов
+.cornerRadius(12) // скругление углов
 
 // Порядок модификаторов важен: сначала padding, потом background — фон не включает отступы
 ```
@@ -103,16 +103,16 @@ padding(16).background(серый) и background(серый).padding(16) даю�
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State: при изменении значения перерисовать
+ @State private var count = 0 // @State: при изменении значения перерисовать
 
-    var body: some View {
-        VStack {
-            Text("Вы нажали \(count) раз")
-            Button("Нажми +1") {
-                count += 1          // меняем состояние — интерфейс обновится сам
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Вы нажали \(count) раз")
+ Button("Нажми +1") {
+ count += 1 // меняем состояние — интерфейс обновится сам
+ }
+ }
+ }
 }
 ```
 :::
@@ -126,24 +126,24 @@ struct CounterView: View {
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("Введите что-нибудь", text: $text)  // $ — двусторонняя связь
-            .textFieldStyle(.roundedBorder)
-        Text("Вы ввели: \(text)")   // обновляется на лету
-    }
+ var body: some View {
+ TextField("Введите что-нибудь", text: $text) // $ — двусторонняя связь
+ .textFieldStyle(.roundedBorder)
+ Text("Вы ввели: \(text)") // обновляется на лету
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> Действие пользователя</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> Состояние меняется (count += 1)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Действие пользователя</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Состояние меняется (count += 1)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI замечает изменение</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> Интерфейс перерисовывается сам (body пересчитывается)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI замечает изменение</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Интерфейс перерисовывается сам (body пересчитывается)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -163,20 +163,20 @@ struct InputView: View {
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::

@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>مبدأ "يكفي ما يكفي"
+مبدأ "يكفي ما يكفي"
 
 {class="mt-1"}
 هاتف الطفل الأول لا يحتاج أن يكون رائد الأعمال. "الأداء الفائض" للمعالج غالباً يُستخدم للألعاب. اختر هاتفاً ببطارية كبيرة وأداء متوسط وشاشة مريحة للعين في فئة الألف أو جهاز مُجدّد رسمي، أفضل للتحكم. الميزانية: 1500-2500 يوان تكفي أغلب الطلاب.
@@ -60,27 +60,27 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الوظيفة</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS وقت الشاشة</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / حلول العلامات</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حد التطبيقات</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم، حسب الفئة</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم، حسب التطبيق</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">وقت الإيقاف</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم (حلول العلامات تتفاوت)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تصفية المحتوى</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">على مستوى النظام، أكثر شمولاً</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يعتمد على العلامة، متفاوت</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">إدارة عن بعد</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المشاركة العائلية</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / سحابة العلامة</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">موافقة تثبيت التطبيقات</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تتطلب موافقة الوالد</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link يدعم</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الوظيفة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS وقت الشاشة</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / حلول العلامات</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">حد التطبيقات</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم، حسب الفئة</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم، حسب التطبيق</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">وقت الإيقاف</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">مدعوم (حلول العلامات تتفاوت)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تصفية المحتوى</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">على مستوى النظام، أكثر شمولاً</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يعتمد على العلامة، متفاوت</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">إدارة عن بعد</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">المشاركة العائلية</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / سحابة العلامة</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">موافقة تثبيت التطبيقات</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">تتطلب موافقة الوالد</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link يدعم</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>رقابة الوالدين ليست "مرة واحدة للأبد"
+رقابة الوالدين ليست "مرة واحدة للأبد"
 
 {class="mt-1"}
 الطفل يجد دائماً طريقة للتجاوز (ابحث "كيف تكسر وقت الشاشة" ستجد دروساً كثيرة). الوسائل التقنية مجرد حد أدنى، الدفاع الحقيقي هو تواصل الوالدين والطفل والثقة. راجع التقرير شهرياً مع الطفل، بدلاً من المراقبة الأحادية.
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>لا تستخدم هوية الوالد للمصادقة "استعارة حساب"
+لا تستخدم هوية الوالد للمصادقة "استعارة حساب"
 
 {class="mt-1"}
 كثير من الأطفال يستخدمون هوية الوالد لتسجيل حساب لعبة لتجاوز منع الإدمان، هذا يخالف الاتفاقية ويُفقد الطفل الحماية. احتفظ بكلمة مرور الدفع ومعلومات الهوية، لا "تستعير حساباً" للطفل للسهولة.
@@ -113,7 +113,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: وقّع مع الطفل "ميثاق استخدام الهاتف"
+جرّب: وقّع مع الطفل "ميثاق استخدام الهاتف"
 
 {class="mt-1"}
 كتابة القواعد وتوقيع الطرفين ولصقها في مكان ظاهر، أكثر فاعلية من الاتفاق الشفهي. يُقترح أن يتضمن:
@@ -137,7 +137,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>الوالد أفضل "جدار حماية"
+الوالد أفضل "جدار حماية"
 
 {class="mt-1"}
 تشير الدراسات إلى أن مدة استخدام الهاتف للوالدين مرتبطة إيجابياً بقوة مع الطفل. طلب الطفل عدم استخدام الهاتف، بينما يتصفح الوالد الفيديوهات القصيرة حتى منتصف الليل، يُفشل القواعد. لتغيير الطفل، ابدأ بترك هاتفك.
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>احذر الجانب الآخر لـ"التراث الرقمي للطفل"
+احذر الجانب الآخر لـ"التراث الرقمي للطفل"
 
 {class="mt-1"}
 الطفل يُسجَّل منذ الولادة, صور النمو التي ينشرها الوالد وفيديوهات الروضة وبيانات ساعة الطفل الصحية. هذه البيانات يصعب حذفها تماماً بعد الرفع. قبل النشر فكّر: بعد عشر سنوات هل سيحرج الطفل من هذه الصورة؟ احترام شخصية الطفل الرقمية يبدأ بضبط "نشر صور الطفل".
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - لا إجابة قياسية لعمر إعطاء الهاتف، لكن 3-6 تجنب، وقبل 13 سنة ساعة طفل أو هاتف وظائف انتقال

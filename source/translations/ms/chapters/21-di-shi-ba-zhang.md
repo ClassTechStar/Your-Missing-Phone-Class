@@ -90,7 +90,7 @@ Periksa sama ada sandaran awan iCloud atau sandaran awan jenama telah diaktifkan
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Sandar foto secara manual: Sambungkan komputer dengan kabel data, salin folder DCIM dan Pictures ke komputer.
+Sandar foto secara manual: Sambungkan komputer dengan kabel data, salin folder DCIM dan Pictures ke komputer.
 
 {class="mt-1"}
 Sandar kenalan: Pengguna iPhone pergi ke iCloud.com eksport vCard; pengguna Android eksport fail .vcf dalam tetapan App Kenalan.
@@ -98,7 +98,7 @@ Sandar kenalan: Pengguna iPhone pergi ke iCloud.com eksport vCard; pengguna Andr
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Sandar rekod sembang WeChat: Buka WeChat → Saya → Tetapan → Umum → Pemindahan &amp; Sandaran Rekod Sembang → Sandar ke komputer.
+Sandar rekod sembang WeChat: Buka WeChat → Saya → Tetapan → Umum → Pemindahan &amp; Sandaran Rekod Sembang → Sandar ke komputer.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Salin satu salinan fail vcf kenalan yang dieksport dan folder foto ke cakera keras luaran atau pemacu USB, lengkapkan "satu salinan luar talian di tempat lain" dalam prinsip "Tiga-Dua-Satu".

@@ -174,7 +174,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：一套常见的"组合拳"
+小贴士：一套常见的"组合拳"
 
 {class="mt-1"}
 工具不是二选一，成熟玩家基本都是混编：原型和验证用云端 Builder，日常编码用 IDE 内置 AI，批量改造用终端智能体，积压的小任务丢给云端并行智能体。四件套各管一段，谁也替代不了谁。如果你只有预算或精力上其中一件，按你的主业选：想做产品选 IDE 内置，想快速验证选云端 Builder，带团队跑项目选终端智能体。
@@ -192,7 +192,7 @@ kind: chapter
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-question-circle mr-1"></i> 你要做什么？</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 你要做什么？</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
@@ -351,7 +351,7 @@ Git 高频命令速查
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：四类命令，逐字看清再批
+避坑提醒：四类命令，逐字看清再批
 
 {class="mt-1"}
 删除类（比如 rm 加了递归参数）、强推类（git push --force）、硬重置类（git reset --hard）、数据库删除结构类（DROP 开头），这四类命令造成的后果往往不可逆。智能体提议的命令不等于安全的命令，批准前逐字读一遍；看不懂就让它先用大白话解释"这条命令会动什么、会删什么"。宁可慢十秒，不要悔一晚。
@@ -510,7 +510,7 @@ MCP 服务器分类速查（名称与安装以官方列表为准）
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：供应链审查不是一次性动作
+避坑提醒：供应链审查不是一次性动作
 
 {class="mt-1"}
 很多人装服务器时审查过来源，装完就再也没看过。但服务器本身也会"变质"：维护者更换、依赖更新、仓库易主，都可能改变它的风险等级。把"季度巡检"立成规矩：每三个月翻一遍已装的服务器，来源还活跃吗？权限还最小吗？还在用的留下，不再用的下线并作废令牌。巡检一次十分钟，换的是长夜的安稳。

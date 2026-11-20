@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來試試：賜汝之下一臺手機作一份"技術需求清單"
+來試試：賜汝之下一臺手機作一份"技術需求清單"
 
 {class="mt-1"}
 拿出一張紙，按"必備/加分/不須"三檔，列出汝對AI、衛星、摺疊屏、Wi-Fi 7、快充、電池容量之需求。此樣下次去線下店時，導購推薦之"賣點"汝能迅速判斷乃真需求抑爲推銷。例如：

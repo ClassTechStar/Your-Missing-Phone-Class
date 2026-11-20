@@ -22,14 +22,14 @@ kind: chapter
 :::
 
 ```
-val name = "張三"        // val：只讀變數（推薦預設用呢個）
-var age = 18             // var：可變變數（之後仲可以改）
+val name = "張三" // val：只讀變數（推薦預設用呢個）
+var age = 18 // var：可變變數（之後仲可以改）
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
-// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> val 不能改，編譯會報錯
+age = 19 // var 可以改
+// name = "李四" // val 不能改，編譯會報錯
 
-val score: Int = 100     // 都可以明確寫明類型
-val pi = 3.14            // 唔寫都會自動推斷
+val score: Int = 100 // 都可以明確寫明類型
+val pi = 3.14 // 唔寫都會自動推斷
 ```
 :::
 
@@ -63,15 +63,15 @@ Kotlin 社區嘅鐵律：預設用 val，真係有需要先用 var。用得 val 
 
 ```
 fun greet(name: String): String {
-    return "你好，$name！"     // $ 符號把變數插進字串
+ return "你好，$name！" // $ 符號把變數插進字串
 }
 
-println(greet("張三"))        // 輸出：你好，張三！
+println(greet("張三")) // 輸出：你好，張三！
 
 // 單行函數可以簡寫成表達式
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // 輸出：8
+println(add(3, 5)) // 輸出：8
 ```
 :::
 
@@ -90,23 +90,23 @@ println(add(3, 5))            // 輸出：8
 // 判斷：if / else
 val age = 17
 if (age >= 18) {
-    println("成年人")
+ println("成年人")
 } else {
-    println("未成年")
+ println("未成年")
 }
 
 // 多分支：when（比 switch 好用一百倍）
 val score = 85
 val level = when {
-    score >= 90 -> "優秀"
-    score >= 60 -> "及格"
-    else -> "再接再厲"
+ score >= 90 -> "優秀"
+ score >= 60 -> "及格"
+ else -> "再接再厲"
 }
 
 // 重複：for 循環
 val fruits = listOf("蘋果", "香蕉", "橙子")
 for (fruit in fruits) {
-    println("我愛喫$fruit")
+ println("我愛喫$fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ Java 年代最出名嘅 bug 叫 NullPointerException（空指標異常），程�
 :::
 
 ```
-var name: String = "張三"   // 普通類型：絕對唔會係 null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> 編譯錯誤，直接將你擋住
+var name: String = "張三" // 普通類型：絕對唔會係 null
+// name = null // 編譯錯誤，直接將你擋住
 
 var nickname: String? = null // 加個問號：允許爲 null
 nickname = "三兒"
 
 // 用可空類型嗰陣，必須安全咁處理：
-println(nickname?.length)    // 安全調用：null 就返回 null，唔會崩
-val len = nickname?.length ?: 0   // Elvis 操作符：null 時畀預設值
+println(nickname?.length) // 安全調用：null 就返回 null，唔會崩
+val len = nickname?.length ?: 0 // Elvis 操作符：null 時畀預設值
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ String? 係「允許為空」，a ?: b 係「a 為空嗰陣就用 b」（個樣�
 ```
 // 普通類：模具
 class Dog(val name: String) {
-    fun bark() = println("$name 汪汪！")
+ fun bark() = println("$name 汪汪！")
 }
 
-val dog = Dog("旺財")      // 整物件
-dog.bark()                 // 旺財 汪汪！
+val dog = Dog("旺財") // 整物件
+dog.bark() // 旺財 汪汪！
 
 // data class：裝數據嘅盒（自動帶 equals/copy 等）
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "張三", "zhangsan@example.com")
-val twin = me.copy(name = "張三豐")   // 複製並改一個字段
+val twin = me.copy(name = "張三豐") // 複製並改一個字段
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // lambda 寫法：就地定義，輕快直接
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = 當前元素
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = 當前元素
 
 // 篩選 + 變換連招（真實項目入面極常見）
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

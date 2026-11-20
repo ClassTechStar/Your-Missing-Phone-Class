@@ -67,7 +67,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>試爲之：搭建君之移動辦公工作流
+試爲之：搭建君之移動辦公工作流
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 擇定君之主力文檔App（WPS或Microsoft 365），登錄並關聯雲盤。

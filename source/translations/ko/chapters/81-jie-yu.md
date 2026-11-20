@@ -29,7 +29,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>마지막 연습
+마지막 연습
 
 {class="mt-1"}
 이 책을 덮고, 스마트폰을 들고, 한 가지 일을 하세요: <strong>30초 동안 생각해 보세요. 스마트폰에서 "잃어버리면 정말 아까울" 세 가지는 무엇인가요?</strong> 그리고 그것들이 백업되어 있는지 확인하세요.

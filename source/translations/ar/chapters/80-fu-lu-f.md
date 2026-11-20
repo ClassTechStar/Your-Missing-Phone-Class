@@ -25,7 +25,7 @@ after_part: fu-lu
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>المستخدمات اللواتي يردن المحمولية مع شاشة كبيرة
+المستخدمات اللواتي يردن المحمولية مع شاشة كبيرة
 
 {class="mt-1"}
 :الشاشة القابلة للطي عموديًا عند الطي تدخل في حقيبة صغيرة، وعند الفتح هاتف عادي، والشاشة الخارجية يمكن استخدامها كمرآة makeup وقراءة الإشعارات.
@@ -42,7 +42,7 @@ after_part: fu-lu
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>أداء آثار الطي
+أداء آثار الطي
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - :اذهب إلى متجر فعلي وافتحه بيديك. مستوى القبول لعام 2025 هو: عند إضاءة الشاشة لا يكاد يُرى من الأمام، تحت الضوء المائل يُرى خط ضحل، عند مرور الإصبع انخفاض خفيف ولكن لا يجرح اليد.
@@ -63,7 +63,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>2. حالة التعليق (طي 90 درجة)
+2. حالة التعليق (طي 90 درجة)
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. هذا "السلاح السري" للشاشات القابلة للطي:
@@ -112,7 +112,7 @@ after_part: fu-lu
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>عمر البطارية عادي عمومًا
+عمر البطارية عادي عمومًا
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - :لأنه يجب إدخال آلية المفصل، مساحة البطارية مضغوطة، عمر البطارية بنفس السعر عادة أقل من الهاتف المسطح.
@@ -134,7 +134,7 @@ after_part: fu-lu
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>:بين الشاشات الأفقية نسبة الشاشة الداخلية/الخارجية الأقرب للهاتف العادي، عند الطي تجربة الاستخدام كهاتف مسطح جيدة.
+:بين الشاشات الأفقية نسبة الشاشة الداخلية/الخارجية الأقرب للهاتف العادي، عند الطي تجربة الاستخدام كهاتف مسطح جيدة.
 
 {class="text-right text-sm"}
 OPPO Find N series
@@ -155,7 +155,7 @@ OPPO Find N series
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>تذكير أخير
+تذكير أخير
 
 {class="mt-1"}
 تقنية الشاشة القابلة للطي تتطور كل عام، هذا الملحق كُتب في 2026. قبل الشراء تأكد من أحدث التقييمات وآراء المستخدمين، ركّز على: عمر المفصلة الفعلي، أداء التجعيد، سياسة إصلاح الشاشة الداخلية. اللمس اليدوي في المتجر أهم من قراءة التقييمات.

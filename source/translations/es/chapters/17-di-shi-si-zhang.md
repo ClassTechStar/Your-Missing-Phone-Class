@@ -46,7 +46,7 @@ Punto clave:<strong>La contrasena maestra nunca sale de tu dispositivo</strong>,
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Por que "conocimiento cero" implica que el proveedor tampoco ve tus contrasenas?
+Por que "conocimiento cero" implica que el proveedor tampoco ve tus contrasenas?
 
 {class="mt-1"}
 Porque la clave de descifrado se deriva de tu contrasena maestra, que solo existe en tu mente y se usa en tu dispositivo. En el servidor del proveedor no hay ni contrasena maestra ni clave de descifrado, solo texto cifrado. Por eso Bitwarden, 1Password y otros proveedores serios declaran que "tampoco pueden ver tus contrasenas": no es que no quieran, es que tecnicamente no pueden.
@@ -71,7 +71,7 @@ En agosto de 2022, el veterano gestor LastPass anuncio que su entorno de desarro
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Lecciones del incidente de LastPass
+Lecciones del incidente de LastPass
 
 {class="mt-1"}
 Primero, la contrasena maestra debe ser larga y unica (se recomiendan 16 o mas caracteres con mayusculas, minusculas, numeros y simbolos). Segundo, elige proveedores que soporten Argon2id y un alto numero de iteraciones. Tercero, activa verificacion en dos pasos independiente para cuentas de alto valor (banco, correo); no dependas solo del gestor de contrasenas.
@@ -118,7 +118,7 @@ Si una contrasena aparece en una filtracion,<strong>por muy compleja que parezca
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Principio de consulta k-anonimato
+Principio de consulta k-anonimato
 
 {class="mt-1"}
 Te preocupa que introducir la contrasena en HaveIBeenPwned vuelva a filtrarla? No hace falta. Las consultas modernas usan el protocolo "k-anonimato": el navegador solo envia los primeros 5 caracteres del hash al servidor, que devuelve todos los hashes que empiezan por esos 5 caracteres y luego se comparan localmente. El servidor nunca ve el hash completo de tu contrasena. Asi funcionan las funciones de "deteccion de contrasenas filtradas" de 1Password y Bitwarden.
@@ -133,7 +133,7 @@ Te preocupa que introducir la contrasena en HaveIBeenPwned vuelva a filtrarla? N
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hazlo ahora: comprueba si tus contrasenas son seguras
+Hazlo ahora: comprueba si tus contrasenas son seguras
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abre haveibeenpwned.com e introduce tu correo habitual para ver en que filtraciones aparece.
@@ -159,36 +159,36 @@ Passkey se basa en el estandar FIDO2/WebAuthn y usa <strong>un par de claves en 
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Contrasena tradicional</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Resistencia al phishing</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baja; el sitio de phishing puede robar la contrasena</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Resistencia natural; la clave privada solo firma para el dominio real</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Impacto de una filtracion del servidor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El hash de la contrasena podria descifrarse</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El servidor solo guarda la clave publica; la filtracion no afecta</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Comodidad</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hay que memorizar, escribir y gestionar</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Inicio de sesion con Face ID o huella en un segundo</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ataque de reproduccion</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Podria ser interceptado y reproducido por un intermediario</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cada firma es unica; no se puede reproducir</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Contrasena tradicional</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Resistencia al phishing</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baja; el sitio de phishing puede robar la contrasena</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Resistencia natural; la clave privada solo firma para el dominio real</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Impacto de una filtracion del servidor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El hash de la contrasena podria descifrarse</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">El servidor solo guarda la clave publica; la filtracion no afecta</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Comodidad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hay que memorizar, escribir y gestionar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Inicio de sesion con Face ID o huella en un segundo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ataque de reproduccion</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Podria ser interceptado y reproducido por un intermediario</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cada firma es unica; no se puede reproducir</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Soporte por plataforma
@@ -200,7 +200,7 @@ Passkey se basa en el estandar FIDO2/WebAuthn y usa <strong>un par de claves en 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>La sincronizacion entre dispositivos es el avance clave
+La sincronizacion entre dispositivos es el avance clave
 
 {class="mt-1"}
 Al principio, el mayor problema de Passkey era que se vinculaba a un unico dispositivo: al cambiar de telefono habia que recrearlo. Desde 2023, Apple, Google y Microsoft sincronizan Passkey en la nube: iCloud Keychain entre dispositivos Apple y Google Password Manager entre dispositivos Android. 1Password y otros de terceros permiten la sincronizacion entre ecosistemas. Passkey ya es practico para sustituir a la contrasena.
@@ -236,7 +236,7 @@ Este proceso usa comunicacion doblemente cifrada por Bluetooth e Internet; la cl
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pruebalo ahora: experimenta el inicio sin contrasena
+Pruebalo ahora: experimenta el inicio sin contrasena
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Inicia sesion en tu cuenta de Google &gt; Seguridad &gt; Claves de acceso &gt; Anadir clave de acceso; prueba el inicio con Face ID o huella.
@@ -247,7 +247,7 @@ Este proceso usa comunicacion doblemente cifrada por Bluetooth e Internet; la cl
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Recomendacion para la transicion
+Recomendacion para la transicion
 
 {class="mt-1"}
 Passkey no sustituye completamente a la contrasena; muchos sitios siguen en fase de coexistencia. Recomendacion: activa Passkey en las cuentas de alto valor, pero <strong>no borres la contrasena tradicional de inmediato</strong> como respaldo; sigue usando el gestor de contrasenas porque no todos los sitios soportan Passkey. Considera Passkey un "complemento potente del gestor", no un "sustituto inmediato".
@@ -295,7 +295,7 @@ Sitios compatibles principales: Google, GitHub, Microsoft, Apple ID, Facebook, T
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Estrategia de dos llaves
+Estrategia de dos llaves
 
 {class="mt-1"}
 El mayor riesgo de la llave de hardware es perderla. Recomendaciones: 1) registra dos llaves distintas; 2) lleva una encima (en el llavero) y guarda otra en la caja fuerte de casa o del banco; 3) en algunos sitios puedes imprimir codigos de recuperacion y guardarlos sin conexion. Asi, si pierdes la principal, no te quedas fuera.
@@ -303,7 +303,7 @@ El mayor riesgo de la llave de hardware es perderla. Recomendaciones: 1) registr
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Cuidado con el canal de compra
+Cuidado con el canal de compra
 
 {class="mt-1"}
 Compra en la tienda oficial o distribuidor autorizado; evita llaves de segunda mano o de origen dudoso, ya que un hardware preconfigurado podria tener una puerta trasera. El firmware de la YubiKey no se actualiza tras la fabricacion, pero Yubico publica avisos de seguridad; consulta su web.
@@ -336,7 +336,7 @@ La version gratuita de Bitwarden permite compartir contrasenas individuales (med
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Relacion calidad-precio de 1Password Families
+Relacion calidad-precio de 1Password Families
 
 {class="mt-1"}
 1Password Families cuesta unos 4,99 dolares al mes para hasta 5 miembros; cada uno tiene un almacen privado y 4 compartidos. Menos de 1 dolar por persona al mes; es la mejor experiencia de comparticion familiar. La version familiar de Bitwarden cuesta 10 dolares al ano para 6 personas; mejor precio, pero la interfaz es algo inferior.
@@ -369,7 +369,7 @@ Imagina que gestionas tu solo todas las cuentas familiares; si tienes un acciden
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hazlo ahora: deja una "llave de repuesto" para tu familia
+Hazlo ahora: deja una "llave de repuesto" para tu familia
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Elige a un familiar de confianza como "contacto de emergencia".
@@ -388,7 +388,7 @@ Imagina que gestionas tu solo todas las cuentas familiares; si tienes un acciden
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Aviso importante
+Aviso importante
 
 {class="mt-1"}
 Los gestores de contraseñas son cómodos, pero conllevan riesgos: si se filtra la contraseña maestra, todas quedan expuestas. Nunca uses la misma contraseña maestra que para otras cuentas, ni la escribas donde pueda ser encontrada fácilmente. Además, elige proveedores con buen historial de seguridad.
@@ -396,7 +396,7 @@ Los gestores de contraseñas son cómodos, pero conllevan riesgos: si se filtra 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica ahora: empieza a usar un gestor de contraseñas
+Practica ahora: empieza a usar un gestor de contraseñas
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Elige un gestor (recomiendo Bitwarden o el del sistema).

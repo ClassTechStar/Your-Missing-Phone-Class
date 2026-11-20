@@ -64,7 +64,7 @@ Individual Income Tax
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Do It Now: Give Your Payment Apps a Security Checkup
+Do It Now: Give Your Payment Apps a Security Checkup
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Open Alipay and WeChat, confirm that fingerprint/face payment is enabled.
@@ -75,7 +75,7 @@ Individual Income Tax
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Activate your electronic medical insurance certificate, so next time you visit the hospital you won't need to bring the physical card.
+Activate your electronic medical insurance certificate, so next time you visit the hospital you won't need to bring the physical card.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Chapter 11: Photography and Photo Management

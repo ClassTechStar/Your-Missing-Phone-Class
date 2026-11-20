@@ -61,7 +61,7 @@ What to do when your phone heats up while gaming
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>If you play games, open Game Mode and see what settings you can optimize (do-not-disturb, frame rate priority, etc.).
+If you play games, open Game Mode and see what settings you can optimize (do-not-disturb, frame rate priority, etc.).
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Chapter 13: Recommended Tool Apps

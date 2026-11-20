@@ -86,119 +86,119 @@ Les extensions de fichiers sur le smartphone donnent le tournis ; les comprendre
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Format</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Type</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caractéristiques</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ouverture recommandée</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression avec perte, petite taille, meilleure compatibilité. Format par défaut des photos du smartphone.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album / n'importe quelle visionneuse d'images</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression sans perte, prend en charge la transparence. Souvent utilisé pour captures d'écran, icônes. Taille plus grande que JPG.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album / n'importe quelle visionneuse d'images</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression avec perte, petite taille, excellente compatibilité. Le format audio le plus universel.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">N'importe quel lecteur de musique</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression sans perte, qualité sonore identique au CD, taille 3 à 5 fois plus grande que le MP3. Choix des audiophiles.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lecteur de musique / app de lecture spécialisée</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio brut non compressé, meilleure qualité mais taille énorme. Courant en enregistrement professionnel.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lecteur de musique</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Codage AAC, meilleure qualité que le MP3 à débit égal. Courant dans l'écosystème Apple.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music / lecteur de musique</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Vidéo</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format conteneur vidéo le plus universel, excellente compatibilité. Format par défaut des vidéos enregistrées par le smartphone.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album / n'importe quel lecteur vidéo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Vidéo</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format conteneur open source, prend en charge plusieurs pistes audio et sous-titres. Courant pour les films.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Document</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Document Word. DOCX est un format compressé, plus petit. DOC est l'ancien format.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Présentation</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Présentation PowerPoint. PPTX est un format compressé.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tableur</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tableur Excel. XLSX est un format compressé.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Document</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format multiplateforme, mise en page fixe non éditable. Courant pour contrats, mémoires, livres électroniques.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format de compression le plus universel, bonne compatibilité multiplateforme.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Intégré au système / app de décompression</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Taux de compression supérieur à ZIP, mais nécessite un logiciel dédié pour décompresser.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App de décompression</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image disque</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fichier image de disque, copie complète du contenu d'un disque. Courant pour les paquets d'installation système.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App de décompression / lecteur de disque virtuel</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Page web</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fichier de page web, ouvert avec un navigateur. Les pages web enregistrées utilisent souvent ce format.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Navigateur</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Format</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Type</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Caractéristiques</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ouverture recommandée</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression avec perte, petite taille, meilleure compatibilité. Format par défaut des photos du smartphone.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album / n'importe quelle visionneuse d'images</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression sans perte, prend en charge la transparence. Souvent utilisé pour captures d'écran, icônes. Taille plus grande que JPG.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album / n'importe quelle visionneuse d'images</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression avec perte, petite taille, excellente compatibilité. Le format audio le plus universel.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">N'importe quel lecteur de musique</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression sans perte, qualité sonore identique au CD, taille 3 à 5 fois plus grande que le MP3. Choix des audiophiles.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lecteur de musique / app de lecture spécialisée</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio brut non compressé, meilleure qualité mais taille énorme. Courant en enregistrement professionnel.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lecteur de musique</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Audio</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Codage AAC, meilleure qualité que le MP3 à débit égal. Courant dans l'écosystème Apple.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music / lecteur de musique</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Vidéo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format conteneur vidéo le plus universel, excellente compatibilité. Format par défaut des vidéos enregistrées par le smartphone.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Album / n'importe quel lecteur vidéo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Vidéo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format conteneur open source, prend en charge plusieurs pistes audio et sous-titres. Courant pour les films.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Document</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Document Word. DOCX est un format compressé, plus petit. DOC est l'ancien format.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Présentation</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Présentation PowerPoint. PPTX est un format compressé.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tableur</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tableur Excel. XLSX est un format compressé.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Document</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format multiplateforme, mise en page fixe non éditable. Courant pour contrats, mémoires, livres électroniques.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Format de compression le plus universel, bonne compatibilité multiplateforme.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Intégré au système / app de décompression</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compression</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Taux de compression supérieur à ZIP, mais nécessite un logiciel dédié pour décompresser.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App de décompression</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Image disque</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fichier image de disque, copie complète du contenu d'un disque. Courant pour les paquets d'installation système.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App de décompression / lecteur de disque virtuel</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Page web</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fichier de page web, ouvert avec un navigateur. Les pages web enregistrées utilisent souvent ce format.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Navigateur</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercice : rangez le dossier « Téléchargements »
+Exercice : rangez le dossier « Téléchargements »
 
 {class="mt-1"}
 Ouvrez le gestionnaire de fichiers &gt; entrez dans le dossier « Téléchargements ». Regardez ce qu'il contient ? Supprimez l'inutile, classez l'utile (par exemple créez des dossiers « Documents professionnels », « Stickers » pour les y mettre). Profitez-en pour regarder l'espace de stockage, voyez quels types de fichiers prennent le plus de place.
@@ -216,21 +216,21 @@ La source du chaos est l'absence de règles. Établir des règles est en fait si
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
-                        <li><strong>Méthode de nommage « date + événement »</strong>: le nom du dossier contient un horodatage et une description d'événement, pour faciliter la mémoire et la recherche ultérieures. Par exemple <code>202606_Tickets de voyage</code>, le <code>Bilan annuel 2025</code>, le <code>Anniversaire enfant 2024</code>. Vous voyez ainsi la chronologie et le contenu d'un seul coup d'œil.</li>
-                        <li><strong>Système de classification à trois niveaux</strong>:
-                            <ul class="list-disc pl-6 mt-1 space-y-0.5">
-                                <li><strong>Niveau 1</strong>: par type de fichier (document / image / vidéo / audio)</li>
-                                <li><strong>Niveau 2</strong>: par scénario d'usage (travail / vie / apprentissage)</li>
-                                <li><strong>Niveau 3</strong>: par événement ou projet spécifique (ex. « 2026Q2_Projet A »)</li>
-                            </ul>
-                        </li>
-                        <li><strong>Plan de nettoyage mensuel</strong>: fixez une date chaque mois (idéalement le jour de paie ou le 1er du mois), faites un tri ciblé du répertoire « Téléchargements » :<strong>archivez l'utile, supprimez l'inutile, sauvegardez le précieux</strong>. 12 petits rangements par an sont bien plus légers qu'un grand ménage annuel.</li>
-                    </ul>
+ <li><strong>Méthode de nommage « date + événement »</strong>: le nom du dossier contient un horodatage et une description d'événement, pour faciliter la mémoire et la recherche ultérieures. Par exemple <code>202606_Tickets de voyage</code>, le <code>Bilan annuel 2025</code>, le <code>Anniversaire enfant 2024</code>. Vous voyez ainsi la chronologie et le contenu d'un seul coup d'œil.</li>
+ <li><strong>Système de classification à trois niveaux</strong>:
+ <ul class="list-disc pl-6 mt-1 space-y-0.5">
+ <li><strong>Niveau 1</strong>: par type de fichier (document / image / vidéo / audio)</li>
+ <li><strong>Niveau 2</strong>: par scénario d'usage (travail / vie / apprentissage)</li>
+ <li><strong>Niveau 3</strong>: par événement ou projet spécifique (ex. « 2026Q2_Projet A »)</li>
+ </ul>
+ </li>
+ <li><strong>Plan de nettoyage mensuel</strong>: fixez une date chaque mois (idéalement le jour de paie ou le 1er du mois), faites un tri ciblé du répertoire « Téléchargements » :<strong>archivez l'utile, supprimez l'inutile, sauvegardez le précieux</strong>. 12 petits rangements par an sont bien plus légers qu'un grand ménage annuel.</li>
+ </ul>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>Liste des tâches du mois
+Liste des tâches du mois
 
 {class="mt-1"}
 Choisissez un week-end libre, procédez dans l'ordre suivant :
@@ -258,7 +258,7 @@ Les images sont le type de données le plus « sensible » du smartphone, une ph
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-image mr-2"></i>Procédure standard pour l'envoi de photos d'identité / captures sensibles
+Procédure standard pour l'envoi de photos d'identité / captures sensibles
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>Masquer les informations visibles</strong>: avec l'outil intégré au système ou un outil tiers (comme Meitu XiuXiu, Snapseed)<strong>barrez quelques chiffres du milieu du numéro de carte d'identité, la plaque d'immatriculation, le numéro de porte, le nom, le montant</strong> et autres champs clés ;

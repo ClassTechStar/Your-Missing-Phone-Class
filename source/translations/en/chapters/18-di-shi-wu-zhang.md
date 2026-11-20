@@ -34,7 +34,7 @@ Aging
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>iPhone "80% Charge Limit" Feature — Turning the Golden Rule into a System Setting
+iPhone "80% Charge Limit" Feature — Turning the Golden Rule into a System Setting
 
 {class="mt-1"}
 The iPhone 15/16 series (iOS 17+) has turned the "20%-80% rule" into a system feature. When enabled, the phone automatically stops charging at 80%, significantly slowing battery aging. Settings path:
@@ -48,7 +48,7 @@ The three options mean: ①<strong>No Limit</strong>— charges to 100%; ②<str
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>GaN Chargers — A Traveler's Best Companion
+GaN Chargers — A Traveler's Best Companion
 
 {class="mt-1"}
 You may have noticed that fast chargers are getting smaller and smaller, the hero behind this is <strong>GaN (Gallium Nitride)</strong> this new semiconductor material. Compared to traditional silicon-based chargers, GaN chargers have several clear advantages:
@@ -127,47 +127,47 @@ Charging phase
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">240W</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">High voltage/Multi-level</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Widest</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">QC 5.0</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qualcomm models</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Low voltage, high current</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO family exclusive</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Fast Charging</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD protocol</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Wireless Charging Protocols</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wireless charging also has its own protocol standards:</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi standard</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Developed by WPC (Wireless Power Consortium), the most universal standard. Basic Qi supports 5W-15W.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi2 standard</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">240W</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">High voltage/Multi-level</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Widest</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">QC 5.0</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qualcomm models</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Low voltage, high current</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO family exclusive</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Charge pump</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Fast Charging</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD protocol</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Wireless Charging Protocols</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wireless charging also has its own protocol standards:</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi standard</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">: Developed by WPC (Wireless Power Consortium), the most universal standard. Basic Qi supports 5W-15W.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Qi2 standard</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ Proprietary protocols
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>4. These Are the Real Battery-Saving Tips
+4. These Are the Real Battery-Saving Tips
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Screen (the power hog)
@@ -207,7 +207,7 @@ If you've been paying attention to 2024-2026 flagship phone launches, "silicon-c
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Which Models Use It?
+Which Models Use It?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: The Magic series pioneered the commercial use of silicon-carbon anodes. The Magic6 Pro, Magic7 series, and Magic V3 foldable all use it.
@@ -228,7 +228,7 @@ If you've been paying attention to 2024-2026 flagship phone launches, "silicon-c
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>I have a friend whose phone was stolen last year. His first thought wasn't "how much was the phone worth", but "can I get my photos back?" Unfortunately, he hadn't enabled cloud backup. A phone is just a physical object, but the data in your account—once truly lost, can never be recovered. In this chapter, we'll talk about how to put real insurance on your digital life.
+I have a friend whose phone was stolen last year. His first thought wasn't "how much was the phone worth", but "can I get my photos back?" Unfortunately, he hadn't enabled cloud backup. A phone is just a physical object, but the data in your account—once truly lost, can never be recovered. In this chapter, we'll talk about how to put real insurance on your digital life.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 1. How Much Does Your Phone Account Actually Manage?

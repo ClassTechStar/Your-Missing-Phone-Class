@@ -70,7 +70,7 @@ Cover video pendek adalah "muka", tentukan orang mahu klik masuk atau tidak. Beb
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praktikal: Tangkap satu video pendek 30 saat
+Praktikal: Tangkap satu video pendek 30 saat
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 2. Guna AI untuk produktiviti.
@@ -82,7 +82,7 @@ Cover video pendek adalah "muka", tentukan orang mahu klik masuk atau tidak. Beb
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Biarkan AI pilih scene: Buka kamera, biarkan AI kenalpasti scene dan optimumkan.

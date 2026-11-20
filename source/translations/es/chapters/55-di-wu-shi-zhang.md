@@ -22,14 +22,14 @@ Un programa es "datos + lógica". Una variable no es más que ponerle nombre a u
 :::
 
 ```
-val name = "Luis"        // val: variable de solo lectura (usa esta por defecto)
-var age = 18             // var: variable mutable (podrás cambiarla luego)
+val name = "Luis" // val: variable de solo lectura (usa esta por defecto)
+var age = 18 // var: variable mutable (podrás cambiarla luego)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var sí se puede cambiar
-// name = "María"         // <i class="fas fa-times-circle mr-1"></i> val no se puede cambiar: el compilador dará error
+age = 19 // var sí se puede cambiar
+// name = "María" // val no se puede cambiar: el compilador dará error
 
-val score: Int = 100     // también se puede declarar el tipo explícitamente
-val pi = 3.14            // si no lo escribes, se deduce automáticamente
+val score: Int = 100 // también se puede declarar el tipo explícitamente
+val pi = 3.14 // si no lo escribes, se deduce automáticamente
 ```
 :::
 
@@ -63,15 +63,15 @@ Una función es un trozo de lógica con nombre, como un botón del mando a dista
 
 ```
 fun greet(name: String): String {
-    return "¡Hola, $name!"     // el símbolo $ inserta la variable en la cadena
+ return "¡Hola, $name!" // el símbolo $ inserta la variable en la cadena
 }
 
-println(greet("Luis"))        // salida: ¡Hola, Luis!
+println(greet("Luis")) // salida: ¡Hola, Luis!
 
 // las funciones de una línea se pueden escribir como expresión
 fun add(a: Int, b: Int) = a + b
 
-println(add(3, 5))            // salida: 8
+println(add(3, 5)) // salida: 8
 ```
 :::
 
@@ -90,23 +90,23 @@ La "inteligencia" de un programa nace de dos cosas: saber decidir (if/when) y sa
 // condición: if / else
 val age = 17
 if (age >= 18) {
-    println("Adulto")
+ println("Adulto")
 } else {
-    println("Menor de edad")
+ println("Menor de edad")
 }
 
 // varias ramas: when (cien veces mejor que switch)
 val score = 85
 val level = when {
-    score >= 90 -> "Excelente"
-    score >= 60 -> "Aprobado"
-    else -> "¡Sigue así!"
+ score >= 90 -> "Excelente"
+ score >= 60 -> "Aprobado"
+ else -> "¡Sigue así!"
 }
 
 // repetir: bucle for
 val fruits = listOf("manzana", "plátano", "naranja")
 for (fruit in fruits) {
-    println("Me encanta comer $fruit")
+ println("Me encanta comer $fruit")
 }
 ```
 :::
@@ -123,15 +123,15 @@ El bug más famoso de la era Java se llama NullPointerException (excepción de p
 :::
 
 ```
-var name: String = "Luis"   // tipo normal: nunca puede ser null
-// name = null                // <i class="fas fa-times-circle mr-1"></i> error de compilación: te frena al instante
+var name: String = "Luis" // tipo normal: nunca puede ser null
+// name = null // error de compilación: te frena al instante
 
 var nickname: String? = null // añade un signo ?: permite null
 nickname = "Tommy"
 
 // con tipos nullable hay que manejarlos con seguridad:
-println(nickname?.length)    // llamada segura: si es null devuelve null, sin crash
-val len = nickname?.length ?: 0   // operador Elvis: valor por defecto si es null
+println(nickname?.length) // llamada segura: si es null devuelve null, sin crash
+val len = nickname?.length ?: 0 // operador Elvis: valor por defecto si es null
 println(len)
 ```
 :::
@@ -156,17 +156,17 @@ La clase es el "molde" de los objetos y el objeto, la "pieza salida del molde". 
 ```
 // clase normal: el molde
 class Dog(val name: String) {
-    fun bark() = println("$name: ¡guau!")
+ fun bark() = println("$name: ¡guau!")
 }
 
-val dog = Dog("Rex")      // crea el objeto
-dog.bark()                 // Rex: ¡guau!
+val dog = Dog("Rex") // crea el objeto
+dog.bark() // Rex: ¡guau!
 
 // data class: la caja que guarda datos (con equals/copy etc. de serie)
 data class User(val id: Int, val name: String, val email: String)
 
 val me = User(1, "Luis", "zhangsan@example.com")
-val twin = me.copy(name = "Luisa")   // copia y cambia un campo
+val twin = me.copy(name = "Luisa") // copia y cambia un campo
 ```
 :::
 
@@ -187,7 +187,7 @@ fun double(x: Int) = x * 2
 val result = listOf(1, 2, 3).map(::double)
 
 // forma lambda: se define en el sitio, ágil y directa
-val result2 = listOf(1, 2, 3).map { it * 2 }   // it = el elemento actual
+val result2 = listOf(1, 2, 3).map { it * 2 } // it = el elemento actual
 
 // filtrar + transformar en cadena (súper común en proyectos reales)
 val bills = listOf(12.5, 88.0, 5.0, 200.0)

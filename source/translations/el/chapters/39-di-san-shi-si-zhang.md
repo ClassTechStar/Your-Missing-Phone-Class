@@ -27,46 +27,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Λύση</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σύστημα</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Υποστηριζόμενα οχήματα</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Λειτουργία</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Διαθεσιμότητα στην Κίνα</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μόνο iPhone</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πολύ ευρύ, τα περισσότερα οχήματα υποστηρίζονται</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,Χάρτης/Μουσική//Μήνυμα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,εγγενές</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android(Framework)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρκετά ευρύ, κυρίως α uther γμένα/εισαγόμενα οχήματα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλή, αντίστοιχη με CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μέτρια, απαιτεί ενεργοποίηση μέσω circumvention</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κυρίως Huawei, μερικά υποστηρίζουν άλλα Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κινεζικά οχήματα και ορισμένα α uther γμένα</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλή, μπορεί να συνεργαστεί με cockpit HarmonyOS</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πολύ καλή, τοπικό οικοσύστημα</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τόσο iOS όσο και Android</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρκετά ευρύ, συχνό σε παλαιά οχήματα με aftermarket</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,ενημέρωση</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πολύ καλή, τοπικό οικοσύστημα</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Λύση</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Σύστημα</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Υποστηριζόμενα οχήματα</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Λειτουργία</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Διαθεσιμότητα στην Κίνα</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μόνο iPhone</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πολύ ευρύ, τα περισσότερα οχήματα υποστηρίζονται</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,Χάρτης/Μουσική//Μήνυμα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,εγγενές</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android(Framework)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρκετά ευρύ, κυρίως α uther γμένα/εισαγόμενα οχήματα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλή, αντίστοιχη με CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μέτρια, απαιτεί ενεργοποίηση μέσω circumvention</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κυρίως Huawei, μερικά υποστηρίζουν άλλα Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κινεζικά οχήματα και ορισμένα α uther γμένα</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Υψηλή, μπορεί να συνεργαστεί με cockpit HarmonyOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πολύ καλή, τοπικό οικοσύστημα</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baidu CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τόσο iOS όσο και Android</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Αρκετά ευρύ, συχνό σε παλαιά οχήματα με aftermarket</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">,ενημέρωση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Πολύ καλή, τοπικό οικοσύστημα</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -97,7 +97,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Υπενθύμιση ασφαλείας
+Υπενθύμιση ασφαλείας
 
 {class="mt-1"}
 Λύση. "Πλοήγηση ","".Ρυθμίσεις, Φωνή.
@@ -111,7 +111,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Συμβουλές
+Συμβουλές
 
 {class="mt-1"}
 ,4S:①CarPlay/HiCar σύνδεση;②Φωνή;③Εφαρμογή App;④OTA αναβάθμιση—:.
@@ -119,7 +119,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πρακτική: βελτιστοποίηση
+Πρακτική: βελτιστοποίηση
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. επιβεβαίωση Λύση(CarPlay / HiCar / Android Auto / CarLife).
@@ -130,7 +130,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - :Κασκολήψη οθόνης(CarPlay),(),CarPlay 2.0

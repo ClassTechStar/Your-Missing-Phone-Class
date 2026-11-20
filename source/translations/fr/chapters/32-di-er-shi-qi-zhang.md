@@ -32,22 +32,22 @@ Les smartphones actuels intègrent presque tous un « mode simplifié » (parfoi
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marque</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nom du mode</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Méthode d'activation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accessibilité (pas de mode simplifié distinct, mais réglage individuel possible)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Affichage et luminosité &gt; Taille du texte, glisser au maximum. Puis « Accessibilité &gt; Affichage et taille du texte » activer « Texte en gras » « Forme des boutons »</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Système et mises à jour &gt; Mode simplifié &gt; Activer</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode minimal</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Plus de réglages &gt; Mode minimal &gt; Activer</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Fonctions spéciales &gt; Mode simplifié</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bureau simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Bureau, écran de verrouillage et fond d'écran &gt; Bureau simplifié</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Affichage &gt; Mode simplifié</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Marque</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nom du mode</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Méthode d'activation</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accessibilité (pas de mode simplifié distinct, mais réglage individuel possible)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Affichage et luminosité &gt; Taille du texte, glisser au maximum. Puis « Accessibilité &gt; Affichage et taille du texte » activer « Texte en gras » « Forme des boutons »</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Système et mises à jour &gt; Mode simplifié &gt; Activer</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode minimal</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Plus de réglages &gt; Mode minimal &gt; Activer</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Fonctions spéciales &gt; Mode simplifié</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bureau simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Bureau, écran de verrouillage et fond d'écran &gt; Bureau simplifié</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mode simplifié</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Réglages &gt; Affichage &gt; Mode simplifié</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Certains seniors ne veulent pas du mode simplifié, trouvant l'interface trop «
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Exercice : « décorez » le smartphone de vos aînés
+Exercice : « décorez » le smartphone de vos aînés
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Activez le mode simplifié (selon le tableau des marques ci-dessus).
@@ -96,7 +96,7 @@ Les seniors sont les principales victimes de la fraude téléphonique. Ce n'est 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>« Formule anti-fraude » pour les seniors (imprimez-la et collez-la près du téléphone)
+« Formule anti-fraude » pour les seniors (imprimez-la et collez-la près du téléphone)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Appel inconnu demandant un virement → Raccrochez !</strong>
@@ -151,7 +151,7 @@ VIII. Fonctions liées à la santé — le smartphone n'est pas qu'un outil de c
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Résumé du chapitre
+Résumé du chapitre
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Activez d'abord le mode simplifié ou agrandissez manuellement la police et les icônes, une fois l'environnement réglé, la plupart des problèmes disparaissent

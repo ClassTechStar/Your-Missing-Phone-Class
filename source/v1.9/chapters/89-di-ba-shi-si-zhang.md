@@ -261,7 +261,7 @@ HRV（心率变异性）是全章最核心也最容易被讲玄的指标，用�
 
 ::: div .info-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>进阶：把"恢复度"用进训练计划
+进阶：把"恢复度"用进训练计划
 
 {class="mt-1"}
 跑步/健身爱好者可以把戒指的就绪度当"训练开关"：分数低（HRV 降、静息心率升、睡眠差）就安排轻松跑或休息，分数高再上强度。这比"按计划硬练"更能避开过度训练——身体给的信号，比日程表诚实。
@@ -273,7 +273,7 @@ HRV（心率变异性）是全章最核心也最容易被讲玄的指标，用�
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：洗手、健身与"摘不摘"
+避坑提醒：洗手、健身与"摘不摘"
 
 {class="mt-1"}
 戒指标称防水，但热水澡、桑拿、握杠铃会磨损涂层或硌手，养成"洗澡/力量训练摘下、其余时间戴着"的习惯即可。另外充电仓要随身带（4-8 天一充），出差别忘。尺码买错是退货重灾区，一定先试戴。
@@ -289,7 +289,7 @@ HRV（心率变异性）是全章最核心也最容易被讲玄的指标，用�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：记两周"恢复度日志"
+来动手：记两周"恢复度日志"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 连续两周每天早上记录就绪度/睡眠分与前晚入睡时间。
@@ -435,7 +435,7 @@ HRV（心率变异性）是全章最核心也最容易被讲玄的指标，用�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 戒指换来的不是数据，是"夜里的自己"，它把你看不见的那八小时，变成了每天早上两页可读的报告。
@@ -591,7 +591,7 @@ HRV 的进阶还有一个"负向用法"值得一讲：识别"别人说的不适�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 戒指专攻睡眠/HRV/体温趋势，指端信号夜间更稳，连续性是最大优势
 - 把它当传感器：换来夜间连续数据，牺牲的是一切即时交互

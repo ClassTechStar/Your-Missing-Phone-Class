@@ -25,7 +25,7 @@ Usa la búsqueda visual con IA
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>: sobre mesa a 90 grados, mitad superior encuadre, mitad inferior disparador; no necesitas pedir ayuda.
+: sobre mesa a 90 grados, mitad superior encuadre, mitad inferior disparador; no necesitas pedir ayuda.
 
 {class="mt-1"}
 Timelapse/nocturna
@@ -42,7 +42,7 @@ Videollamada
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Algunos plegables horizontales (Huawei, Samsung) pueden cambiar a "modo PC" al abrir; con monitor y teclado externos funcionan como PC básica para documentos y correo temporalmente. No es herramienta principal de productividad pero muy útil en emergencias.
+Algunos plegables horizontales (Huawei, Samsung) pueden cambiar a "modo PC" al abrir; con monitor y teclado externos funcionan como PC básica para documentos y correo temporalmente. No es herramienta principal de productividad pero muy útil en emergencias.
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - V. Puntos de mantenimiento: alarga la vida de tu pantalla plegable
@@ -63,7 +63,7 @@ Evita unas/duros objetos en pantalla interna
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Abrir y cerrar inmediatamente al entrar del frío al calor en invierno — el cambio de temperatura causa estrés en el vidrío.
+Abrir y cerrar inmediatamente al entrar del frío al calor en invierno — el cambio de temperatura causa estrés en el vidrío.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Tras un año de uso, pensar "la huella del pliegue se profundizó" y arrancar la película original: arrancarla daña también la pantalla interna
@@ -112,7 +112,7 @@ V. Puntos de mantenimiento: alarga la vida de tu pantalla plegable
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Escenarios comunes de daños a la pantalla interna
+Escenarios comunes de daños a la pantalla interna
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Pellizcar el cable de los auriculares al cerrar/Cable de carga,,Presionar y agrietar directamente la pantalla interna.
@@ -134,7 +134,7 @@ Antes de comprar, ten en cuenta estos aspectos:
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Las pantallas plegables no son"Un teléfono mejor",sino"Otra forma de teléfono".Lo compras porque necesitas su forma única, No es porque"Más avanzado".
+Las pantallas plegables no son"Un teléfono mejor",sino"Otra forma de teléfono".Lo compras porque necesitas su forma única, No es porque"Más avanzado".
 
 {class="text-right text-sm"}
 —: Filosofía de compra de pantallas plegables
@@ -155,7 +155,7 @@ Consejos de compra:con presupuesto suficiente y buscando ecosistema, elige Huawe
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Recordatorio Final
+Recordatorio Final
 
 {class="mt-1"}
 Usa la traducción de imágenes con IA

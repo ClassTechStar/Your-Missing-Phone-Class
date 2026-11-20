@@ -58,7 +58,7 @@ Egal wie sich die Technik entwickelt – diese Prinzipien digitalen Lebens werde
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>: Gehäuse und Bildschirm auf Kratzer und Dellen kontrollieren.
+: Gehäuse und Bildschirm auf Kratzer und Dellen kontrollieren.
 
 {class="mt-1"}
 Schreibe fuer dich und dein Handy (und kuenftige AR-Brillen, AI-Assistenten) ein einfaches »Nutzungsabkommen«, das eure Beziehung definiert. Zum Beispiel:
@@ -71,7 +71,7 @@ Schreibe fuer dich und dein Handy (und kuenftige AR-Brillen, AI-Assistenten) ein
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Kapitelzusammenfassung
+Kapitelzusammenfassung
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision Pro und AR-Brillen sind neue Computing-Zugaenge neben dem Handy, koennen es aber kurzfristig nicht ersetzen

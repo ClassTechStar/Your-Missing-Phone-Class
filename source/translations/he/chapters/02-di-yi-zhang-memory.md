@@ -53,7 +53,7 @@ kind: supplement
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>הערות חשובות
+הערות חשובות
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - הרחבת זיכרון תתפוס חלק משטח האחסון הפנימי, אנא ודא שנותרו לפחות 20-30GB, אחרת עלול להיפגע חלקות המערכת.
@@ -63,7 +63,7 @@ kind: supplement
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>סיכום
+סיכום
 
 {class="mt-1"}
 הרחבת זיכרון היא טכנולוגיית אופטימיזציה מערכתית בשלה, יכולה לשפר את יכולת ריבוי המשימות ושיעור שמירת יישומי הרקע בדגמי ביניים ונמוכים ללא שינוי חומרה, אך היא מוגבלת על ידי פער המהירות העצום בין זיכרון הבזק לזיכרון פיזי, ואינה "תרופת פלא". האם להפעיל ובאיזו רמה, יש לשקול לפי גודל הזיכרון הפיזי, מפרט זיכרון ההבזק, שטח האחסון הפנוי והרגלי השימוש של הדגם שלך.
@@ -71,7 +71,7 @@ kind: supplement
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>בוא נתנסה: בדוק אם לטלפון שלך יש הרחבת זיכרון
+בוא נתנסה: בדוק אם לטלפון שלך יש הרחבת זיכרון
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. פתח את[הגדרות], חפש "הרחבת זיכרון", "מיזוג זיכרון", "RAM Plus" או "Extended RAM".

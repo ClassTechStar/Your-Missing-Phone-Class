@@ -45,7 +45,7 @@ Pero las razones principales por las que se reduce la capacidad de tu móvil son
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Pequeño consejo para comprar móvil
+Pequeño consejo para comprar móvil
 
 {class="mt-1"}
 Ahora los móviles de 128GB básicamente no son suficientes, 256GB para empezar es más prudente. Si te gusta tomar fotos, jugar, se recomienda directamente 512GB o más. Recuerda, el espacio de almacenamiento, mejor que sobre y no que falte.
@@ -53,7 +53,7 @@ Ahora los móviles de 128GB básicamente no son suficientes, 256GB para empezar 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Manos a la obra: mira la "identidad" de tu móvil
+Manos a la obra: mira la "identidad" de tu móvil
 
 {class="mt-1"}
 Abre [Configuración], busca Acerca del teléfono (o una opción similar), anota: modelo del móvil, versión del sistema, espacio de almacenamiento total y espacio libre. Este es el primer paso para conocerlo. Aprovecha para revisar la salud de la batería, para tener una idea.
@@ -66,7 +66,7 @@ Antes de empezar con el conocimiento específico, primero establezcamos una cogn
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>¿Por qué es importante?
+¿Por qué es importante?
 
 {class="mt-1"}
 Si pierdes o se rompe el móvil, no solo pierdes hardware de varios miles,<strong>sino que pueden ser años de datos irregenerables acumulados</strong>—fotos del crecimiento de los hijos, audios de familiares fallecidos, contratos importantes sin respaldo. Los hábitos científicos de organización y protección pueden protegerte en tres dimensiones:

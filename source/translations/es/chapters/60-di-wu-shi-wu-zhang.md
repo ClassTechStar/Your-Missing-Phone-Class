@@ -40,21 +40,21 @@ Define primero el "modelo de datos" según el JSON que devuelve la API; los camp
 ```
 // JSON: {"weather":[{"description":"Despejado"}],"main":{"temp":26.5,"humidity":40},"name":"Madrid"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "zh_cn"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "zh_cn"
+ ): WeatherResponse
 }
 ```
 :::
@@ -72,28 +72,28 @@ El alma de una app conectada está en la "gestión de estados". Red lenta, sin c
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // cargando
-    data class Success(val data: WeatherResponse) : UiState()  // éxito
-    data class Error(val message: String) : UiState()          // fallo
+ object Loading : UiState() // cargando
+ data class Success(val data: WeatherResponse) : UiState() // éxito
+ data class Error(val message: String) : UiState() // fallo
 }
 
 // en el ViewModel:
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("No encuentro esa ciudad, ¿pruebas con otro nombre?")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("No encuentro esa ciudad, ¿pruebas con otro nombre?")
+ }
+ }
 }
 
 // en la interfaz:
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // rueda de carga
-    is UiState.Success -&gt; WeatherContent(s.data)        // muestra
-    is UiState.Error -&gt; Text(s.message)                 // muestra el error
+ is UiState.Loading -&gt; CircularProgressIndicator() // rueda de carga
+ is UiState.Success -&gt; WeatherContent(s.data) // muestra
+ is UiState.Error -&gt; Text(s.message) // muestra el error
 }
 ```
 :::
@@ -112,28 +112,28 @@ Con el estado listo, la interfaz queda así (fragmentos clave):
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "Desconocido",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 Humedad ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ Sensación ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "Desconocido",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 Humedad ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ Sensación ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::

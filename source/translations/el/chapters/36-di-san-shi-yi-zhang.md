@@ -70,7 +70,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Πρακτική:30 Βίντεο
+Πρακτική:30 Βίντεο
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Γνώση("").
@@ -82,7 +82,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου
+Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - :, Πλατφόρμα

@@ -50,15 +50,15 @@ import CoreLocation
 
 @Observable
 class LocationModel {
-    private let manager = CLLocationManager()
+ private let manager = CLLocationManager()
 
-    func request() {
-        switch manager.authorizationStatus {
-        case .notDetermined: manager.requestWhenInUseAuthorization()
-        case .denied, .restricted: /* 引导去设置里开 */
-        default: /* 已授权，开干 */
-        }
-    }
+ func request() {
+ switch manager.authorizationStatus {
+ case .notDetermined: manager.requestWhenInUseAuthorization()
+ case .denied, .restricted: /* 引导去设置里开 */
+ default: /* 已授权，开干 */
+ }
+ }
 }
 
 // 3. 被拒后优雅降级：给提示 + 跳设置
@@ -68,7 +68,7 @@ class LocationModel {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：iOS 权限的"一次性"
+注意：iOS 权限的"一次性"
 
 {class="mt-1"}
 iOS 的权限弹窗<strong>通常只弹一次</strong>——明确拒绝后再也不会弹（定位有"仅本次允许/下次再问"选项，选它下次还会问）。所以：申请的时机要选在"用户正要用的那一刻"（而不是一启动就弹一堆），文案要说明用途。被拒后的界面引导（"去设置里开启定位"）是标配，别让用户困在死胡同里。
@@ -203,27 +203,27 @@ import UserNotifications
 
 // 1. 申请通知权限（弹窗一次）
 UNUserNotificationCenter.current()
-    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-        print(granted ? "已授权" : "被拒绝")
-    }
+ .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+ print(granted ? "已授权" : "被拒绝")
+ }
 
 // 2. 安排一条"每天 20:00 记账提醒"
 func scheduleDailyReminder() {
-    let content = UNMutableNotificationContent()
-    content.title = "记账提醒"
-    content.body = "今天还没记账哦"
-    content.sound = .default
+ let content = UNMutableNotificationContent()
+ content.title = "记账提醒"
+ content.body = "今天还没记账哦"
+ content.sound = .default
 
-    var comps = DateComponents()
-    comps.hour = 20
-    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+ var comps = DateComponents()
+ comps.hour = 20
+ let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
 
-    let request = UNNotificationRequest(
-        identifier: "daily-reminder",
-        content: content,
-        trigger: trigger
-    )
-    UNUserNotificationCenter.current().add(request)
+ let request = UNNotificationRequest(
+ identifier: "daily-reminder",
+ content: content,
+ trigger: trigger
+ )
+ UNUserNotificationCenter.current().add(request)
 }
 ```
 :::
@@ -279,8 +279,8 @@ content.sound = .default
 
 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 600, repeats: false)
 let request = UNNotificationRequest(identifier: "focus-over",
-                                    content: content,
-                                    trigger: trigger)
+ content: content,
+ trigger: trigger)
 UNUserNotificationCenter.current().add(request)
 ```
 :::
@@ -420,25 +420,25 @@ UNUserNotificationCenter.current().add(request)
 
 ```
 protocol RecordStore {
-    func all() -> [Record]
-    func add(_ record: Record)
+ func all() -> [Record]
+ func add(_ record: Record)
 }
 
 @Observable
 class RecordListModel {
-    private let store: any RecordStore
-    private(set) var records: [Record] = []
+ private let store: any RecordStore
+ private(set) var records: [Record] = []
 
-    init(store: any RecordStore) {
-        self.store = store
-        records = store.all()
-    }
+ init(store: any RecordStore) {
+ self.store = store
+ records = store.all()
+ }
 
-    var monthExpense: Double {
-        records.filter { $0.type == .expense }
-               .map(\.amount)
-               .reduce(0, +)
-    }
+ var monthExpense: Double {
+ records.filter { $0.type == .expense }
+ .map(\.amount)
+ .reduce(0, +)
+ }
 }
 ```
 :::
@@ -452,22 +452,22 @@ class RecordListModel {
 
 ```
 final class FakeRecordStore: RecordStore {
-    var stored: [Record] = []
-    func all() -> [Record] { stored }
-    func add(_ record: Record) { stored.append(record) }
+ var stored: [Record] = []
+ func all() -> [Record] { stored }
+ func add(_ record: Record) { stored.append(record) }
 }
 
 final class RecordListModelTests: XCTestCase {
-    func testMonthExpenseOnlyCountsExpense() {
-        var fake = FakeRecordStore()
-        fake.stored = [
-            Record(amount: 100, type: .income),
-            Record(amount: 30, type: .expense),
-            Record(amount: 20, type: .expense)
-        ]
-        let vm = RecordListModel(store: fake)
-        XCTAssertEqual(vm.monthExpense, 50)
-    }
+ func testMonthExpenseOnlyCountsExpense() {
+ var fake = FakeRecordStore()
+ fake.stored = [
+ Record(amount: 100, type: .income),
+ Record(amount: 30, type: .expense),
+ Record(amount: 20, type: .expense)
+ ]
+ let vm = RecordListModel(store: fake)
+ XCTAssertEqual(vm.monthExpense, 50)
+ }
 }
 ```
 :::
@@ -494,7 +494,7 @@ final class RecordListModelTests: XCTestCase {
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：SwiftUI 的"生态红利"
+小贴士：SwiftUI 的"生态红利"
 
 {class="mt-1"}
 iOS 生态还有两个"只此一家"的进阶玩法：<strong>小组件（WidgetKit）</strong>让用户不打开 App 就能看信息（记账本的"本月支出"放桌面），<strong>快捷指令（App Intents）</strong>让用户用 Siri 或自动化调用你的功能。两者都有官方框架，入门成本不高，但对用户体验的加成巨大：进阶路上值得优先解锁。
@@ -533,20 +533,20 @@ Swift 6 的并发体系有两条新手必懂的规则：
 
 ```
 struct WeatherScreen: View {
-    @State private var vm = WeatherViewModel()
+ @State private var vm = WeatherViewModel()
 
-    var body: some View {
-        Group {
-            switch vm.state {
-            case .loading: ProgressView()
-            case .success(let d): WeatherContent(data: d)
-            case .error(let m): Text(m)
-            }
-        }
-        .task {                       // 出现即开始，消失即取消
-            await vm.search(city: "北京")
-        }
-    }
+ var body: some View {
+ Group {
+ switch vm.state {
+ case .loading: ProgressView()
+ case .success(let d): WeatherContent(data: d)
+ case .error(let m): Text(m)
+ }
+ }
+ .task { // 出现即开始，消失即取消
+ await vm.search(city: "北京")
+ }
+ }
 }
 ```
 :::
@@ -564,7 +564,7 @@ struct WeatherScreen: View {
 
 ```
 Button("刷新天气") {
-    Task { await vm.search(city: "北京") }
+ Task { await vm.search(city: "北京") }
 }
 ```
 :::
@@ -598,23 +598,23 @@ Button("刷新天气") {
 
 ```
 struct MonthExpenseEntry: TimelineEntry {
-    let date: Date
-    let total: Double
+ let date: Date
+ let total: Double
 }
 
 struct MonthExpenseProvider: TimelineProvider {
-    func placeholder(in context: Context) -> MonthExpenseEntry {
-        .init(date: .now, total: 0)
-    }
-    func getSnapshot(in context: Context,
-                     completion: @escaping (MonthExpenseEntry) -&gt; Void) {
-        completion(.init(date: .now, total: readTotal()))
-    }
-    func getTimeline(in context: Context,
-                     completion: @escaping (Timeline&lt;MonthExpenseEntry&gt;) -&gt; Void) {
-        let entry = MonthExpenseEntry(date: .now, total: readTotal())
-        completion(Timeline(entries: [entry], policy: .atEnd))
-    }
+ func placeholder(in context: Context) -> MonthExpenseEntry {
+ .init(date: .now, total: 0)
+ }
+ func getSnapshot(in context: Context,
+ completion: @escaping (MonthExpenseEntry) -&gt; Void) {
+ completion(.init(date: .now, total: readTotal()))
+ }
+ func getTimeline(in context: Context,
+ completion: @escaping (Timeline&lt;MonthExpenseEntry&gt;) -&gt; Void) {
+ let entry = MonthExpenseEntry(date: .now, total: readTotal())
+ completion(Timeline(entries: [entry], policy: .atEnd))
+ }
 }
 ```
 :::
@@ -648,23 +648,23 @@ struct MonthExpenseProvider: TimelineProvider {
 import AppIntents
 
 struct QuickRecordIntent: AppIntent {
-    static var title: LocalizedStringResource = "快速记一笔"
-    static var description = IntentDescription("不打开 App，直接记一笔支出")
+ static var title: LocalizedStringResource = "快速记一笔"
+ static var description = IntentDescription("不打开 App，直接记一笔支出")
 
-    @Parameter(title: "金额")
-    var amount: Double
+ @Parameter(title: "金额")
+ var amount: Double
 
-    func perform() async throws -&gt; some IntentResult &amp; ProvidesDialog {
-        RecordStore.shared.add(Record(amount: amount, type: .expense))
-        return .result(dialog: "记好了，\(amount) 元")
-    }
+ func perform() async throws -&gt; some IntentResult &amp; ProvidesDialog {
+ RecordStore.shared.add(Record(amount: amount, type: .expense))
+ return .result(dialog: "记好了，\(amount) 元")
+ }
 }
 
 struct MyFirstAppShortcuts: AppShortcutsProvider {
-    static var appShortcuts: [AppShortcut] {
-        AppShortcut(intent: QuickRecordIntent(),
-                    phrases: ["用\(.applicationName)记一笔"])
-    }
+ static var appShortcuts: [AppShortcut] {
+ AppShortcut(intent: QuickRecordIntent(),
+ phrases: ["用\(.applicationName)记一笔"])
+ }
 }
 ```
 :::
@@ -725,7 +725,7 @@ struct MyFirstAppShortcuts: AppShortcutsProvider {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给记账本加"三件套"
+来动手：给记账本加"三件套"
 
 {class="mt-1"}
 ① 给记账本加"每天 20:00 记账提醒"（通知权限 + 本地通知）；② 把 ViewModel 的数据源改成协议抽象，并写一个注入假数据的单元测试；③ 加一个"本月支出"桌面小组件。三件套做完，你的项目就有"正规军"的样子了。
@@ -768,7 +768,7 @@ SwiftUI 时代，<code>@AppStorage("key")</code> 把 UserDefaults 包装成了�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：今天的三十分钟
+来动手：今天的三十分钟
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开你的练手项目，检查 Info.plist 里每个用途描述：能否一句话回答"为什么要"？
@@ -791,7 +791,7 @@ SwiftUI 时代，<code>@AppStorage("key")</code> 把 UserDefaults 包装成了�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>本章小结之外的一句话
+本章小结之外的一句话
 
 {class="mt-1"}
 架构决定你三个月后还能不能维护，权限体验决定用户三分钟后还信不信你。两件事都不在"功能清单"里，但都写进了留存率。
@@ -801,7 +801,7 @@ SwiftUI 时代，<code>@AppStorage("key")</code> 把 UserDefaults 包装成了�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 权限三步：Info.plist 声明（漏了必崩）、用时申请、被拒引导去设置
 - iOS 权限弹窗只弹一次：时机选在"正要用的那一刻"，文案写清用途

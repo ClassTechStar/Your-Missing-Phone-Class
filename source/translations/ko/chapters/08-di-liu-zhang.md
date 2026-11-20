@@ -55,7 +55,7 @@ AI 기술이 급속히 발전하는 오늘날, 전통적인 "보는 것이 믿�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① AI 얼굴 교체·음성 모방 사기
+① AI 얼굴 교체·음성 모방 사기
 
 {class="mt-1"}
 불법자들이 소셜 미디어에 게시된 대상의 HD 사진이나 수 초 분량의 음성 샘플을 불법 수집하여, AI 딥페이크 기술을 통해 진짜와 구별하기 어려운 "친족 영상" 또는 "음성"을 복제합니다.
@@ -64,7 +64,7 @@ AI 기술이 급속히 발전하는 오늘날, 전통적인 "보는 것이 믿�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② 권위 / 고객 센터 사칭 사기
+② 권위 / 고객 센터 사칭 사기
 
 {class="mt-1"}
 AI 기술은 공식 고객센터, 검찰 경찰 기관 담당자의 음성과 억양을 정밀하게 모방할 수 있으며, 심지어 매우 사실적인 가짜 이체 캡처 화면. 전자 공문. 체포영장 등을 합성하여, <strong>공포 심리나 권위적 압력을 조성</strong>하고, 피해자가 이체하거나 화면 공유 기능을 켜도록 유도하여 계좌 정보를 훔칩니다.
@@ -72,7 +72,7 @@ AI 기술은 공식 고객센터, 검찰 경찰 기관 담당자의 음성과 �
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ AI 투자 재테크 사기
+③ AI 투자 재테크 사기
 
 {class="mt-1"}
 AI 알고리즘으로 "무조건 수익"이라는 허위 수익 스크린샷, 가상 양적 선종 소프트웨어 인터페이스나 "마스터급" 투자 분석 보고서를 위조하여, 고수익을 미끼로 고가의 투자 서비스를 판매하거나 피해자가 ,자금을 그들이 통제하는 거래 계정으로 이체하도록 유도하며, <strong>결국 자금을 챙겨 도주합니다</strong>.
@@ -138,7 +138,7 @@ AI는 목소리와 얼굴을 복제할 수 있지만 완벽하지는 않아, 이
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>실제 사례 경고
+실제 사례 경고
 
 {class="mt-1"}
 2022년 어느 지역 경찰 통보에 따르면, 해커가 어떤 브랜드 가정용 카메라의 기본 비밀번호를 돌파(많은 사용자가 수정한 적 없음)하여, 수천 가구의 침실 화면을 훔쳐 온라인에서 판매했습니다.
@@ -184,7 +184,7 @@ AI는 목소리와 얼굴을 복제할 수 있지만 완벽하지는 않아, 이
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>절대 하면 안 되는 일
+절대 하면 안 되는 일
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - 생일 / 123456 / qwerty 등 약한 비밀번호 사용;
@@ -196,7 +196,7 @@ AI는 목소리와 얼굴을 복제할 수 있지만 완벽하지는 않아, 이
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>활성화를 시도하고 "원격 잠금"을 시뮬레이션해보세요
+활성화를 시도하고 "원격 잠금"을 시뮬레이션해보세요
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 반드시 "나의 스마트폰 찾기" 기능을 켜세요.

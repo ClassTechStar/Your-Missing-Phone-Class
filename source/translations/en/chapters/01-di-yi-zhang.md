@@ -317,7 +317,7 @@ Think about it,how much life is packed into one tiny device! So, learning to use
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-on: Understand Hardware Configuration
+Hands-on: Understand Hardware Configuration
 
 {class="mt-1"}
 In [Settings], see if you can find the processor model, RAM, and ROM (storage) sizes. Get a sense of your phone's capabilities. Android users can download "AnTuTu" or "DevCheck" to view detailed hardware information.

@@ -35,20 +35,20 @@ kind: chapter
 import Observation
 
 @Observable
-class CounterModel {                 // модель представления
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // модель представления
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // хранит модель
+ @State private var model = CounterModel() // хранит модель
 
-    var body: some View {
-        VStack {
-            Text("Вы нажали \(model.count) раз")
-            Button("Нажми") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Вы нажали \(model.count) раз")
+ Button("Нажми") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ struct CounterView: View {
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Записная книжка Ивана") {
-                    DetailView(name: "Записная книжка Ивана")   // целевой экран
-                }
-                NavigationLink("Записная книжка Марии") {
-                    DetailView(name: "Записная книжка Марии")
-                }
-            }
-            .navigationTitle("Список записных книжек")   // крупный заголовок сверху
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("Записная книжка Ивана") {
+ DetailView(name: "Записная книжка Ивана") // целевой экран
+ }
+ NavigationLink("Записная книжка Марии") {
+ DetailView(name: "Записная книжка Марии")
+ }
+ }
+ .navigationTitle("Список записных книжек") // крупный заголовок сверху
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("Подробности: \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("Подробности: \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ NavigationLink, «кликабельная ссылка-переход»; naviga
 ```
 // 1. Выезжает снизу на пол/весь экран (любимый приём для форм ввода)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("Новая запись") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // появляющаяся форма ввода
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("Новая запись") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // появляющаяся форма ввода
+ }
+ }
 }
 
 // 2. Нижняя панель вкладок ("скелет" приложения)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("Записи", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("Статистика", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("Настройки", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("Записи", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("Статистика", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("Настройки", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ struct MainTabView: View {
 
 ```
 struct RecordListView: View {
-    @State private var records = ["Обед 25.5", "Метро 6.0", "Зарплата +8000"]
+ @State private var records = ["Обед 25.5", "Метро 6.0", "Зарплата +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // свайп влево — удалить
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // свайп влево — удалить
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("Снова на переднем плане, возобновляем обновление")
-            case .inactive:  print("Переход (звонок / мгновение в фоне)")
-            case .background: print("Ушёл в фон, сохраняем черновик")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("Снова на переднем плане, возобновляем обновление")
+ case .inactive: print("Переход (звонок / мгновение в фоне)")
+ case .background: print("Ушёл в фон, сохраняем черновик")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

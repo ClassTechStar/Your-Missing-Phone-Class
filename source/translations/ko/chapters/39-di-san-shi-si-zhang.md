@@ -19,10 +19,10 @@ kind: chapter
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>스마트폰 화면을 차량 시스템으로 미러링</strong>: 차량 시스템은 단지 하나의 "표시기"와 "스피커" 역할만 하며, 연산과 지도 데이터는 모두 스마트폰에서 옵니다. 대표 솔루션: Apple CarPlay, Google Android Auto, 화웨이 HiCar, 바이두 CarLife. 장점은 스마트폰 생태계를 차량에 직접 가져와 앱을 다시 설치할 필요가 없다는 것; 단점은 차량 시스템 자체의 하드웨어 능력이 방치된다는 것입니다.</li>
-                        <strong>스마트폰과 차량 시스템의 심층 융합</strong>: 차량 시스템은 독립 시스템이지만, 스마트폰과 계정, 앱, 데이터를 공유하며, 심지어 작업을 "이어받기"할 수 있음. 대표 솔루션: HarmonyOS 콕핏(원제(원제)/즈제(즈제)), BYD DiLink, NIO NIO OS, 리싱(리싱) 차량 시스템. 장점은 경험의 일체화; 단점은 보통 같은 브랜드 생태계에 종속됨.
-                        <li><strong>CarPlay 2.0 심층 통합 버전</strong>: 2025년 Apple이 발표한 차세대 CarPlay는 더 이상 단순한 "미러링"이 아니라, 차량 시스템의 계기판, 에어컨 제어, 시트 조절 등 핵심 기능을 인계받음. Ferrari, Aston Martin, Porsche 등 브랜드가 선도 탑재, 차량 시스템이 "스마트폰 제조업체 주도"의 새로운 단계에 진입했음을 표시.</li>
-                    </ul>
+ <li><strong>스마트폰 화면을 차량 시스템으로 미러링</strong>: 차량 시스템은 단지 하나의 "표시기"와 "스피커" 역할만 하며, 연산과 지도 데이터는 모두 스마트폰에서 옵니다. 대표 솔루션: Apple CarPlay, Google Android Auto, 화웨이 HiCar, 바이두 CarLife. 장점은 스마트폰 생태계를 차량에 직접 가져와 앱을 다시 설치할 필요가 없다는 것; 단점은 차량 시스템 자체의 하드웨어 능력이 방치된다는 것입니다.</li>
+ <strong>스마트폰과 차량 시스템의 심층 융합</strong>: 차량 시스템은 독립 시스템이지만, 스마트폰과 계정, 앱, 데이터를 공유하며, 심지어 작업을 "이어받기"할 수 있음. 대표 솔루션: HarmonyOS 콕핏(원제(원제)/즈제(즈제)), BYD DiLink, NIO NIO OS, 리싱(리싱) 차량 시스템. 장점은 경험의 일체화; 단점은 보통 같은 브랜드 생태계에 종속됨.
+ <li><strong>CarPlay 2.0 심층 통합 버전</strong>: 2025년 Apple이 발표한 차세대 CarPlay는 더 이상 단순한 "미러링"이 아니라, 차량 시스템의 계기판, 에어컨 제어, 시트 조절 등 핵심 기능을 인계받음. Ferrari, Aston Martin, Porsche 등 브랜드가 선도 탑재, 차량 시스템이 "스마트폰 제조업체 주도"의 새로운 단계에 진입했음을 표시.</li>
+ </ul>
 ```
 
 #### 2. CarPlay / Android Auto / HiCar 비교
@@ -32,46 +32,46 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">솔루션</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">지원스마트폰시스템</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">지원 차종</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기능 풍부도</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">국내 사용 가능성</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone만</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매우 광범위, 대부분의 차종 지원</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">높음, 지도/음악/전화/메시지 모두 가능</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">좋음, 기본 사용 가능</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android(국내 스마트폰은 서비스 프레임워크 설치 필요)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">상당히 광범위, 합작/수입차가 많음</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">높음, CarPlay와 상당</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">보통, 과학적 인터넷 접속으로 활성화 필요</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 HiCar</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 스마트폰 중심, 일부 다른 Android 지원</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">국산차 및 일부 합작 차종</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">상당히 높음, HarmonyOS 콕핏과 연동 가능</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매우 좋음, 토착 생태계</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">바이두 CarLife</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS와 Android 모두 가능</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">상당히 광범위, 구형 차량 후장착에 흔함</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">중간, 업데이트 느림</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매우 좋음, 토착 생태계</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">솔루션</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">지원스마트폰시스템</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">지원 차종</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기능 풍부도</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">국내 사용 가능성</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple CarPlay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone만</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매우 광범위, 대부분의 차종 지원</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">높음, 지도/음악/전화/메시지 모두 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">좋음, 기본 사용 가능</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Auto</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android(국내 스마트폰은 서비스 프레임워크 설치 필요)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">상당히 광범위, 합작/수입차가 많음</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">높음, CarPlay와 상당</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">보통, 과학적 인터넷 접속으로 활성화 필요</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 HiCar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 스마트폰 중심, 일부 다른 Android 지원</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">국산차 및 일부 합작 차종</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">상당히 높음, HarmonyOS 콕핏과 연동 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매우 좋음, 토착 생태계</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">바이두 CarLife</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS와 Android 모두 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">상당히 광범위, 구형 차량 후장착에 흔함</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">중간, 업데이트 느림</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매우 좋음, 토착 생태계</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -109,7 +109,7 @@ CarPlay가 "스마트폰을 차량 시스템으로 미러링"이라고 한다면
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>보안리마인더
+보안리마인더
 
 {class="mt-1"}
 어떤 방안을 사용하든, 운전 중 스마트폰 조작은 교통 규정을 위반합니다. 스마트폰 거치대는 "내비게이션 보기"에만 사용 가능하며, "스마트폰 조작"에는 사용할 수 없습니다.
@@ -129,7 +129,7 @@ CarPlay가 "스마트폰을 차량 시스템으로 미러링"이라고 한다면
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>차량 선택 시 작은 제안
+차량 선택 시 작은 제안
 
 {class="mt-1"}
 차량 시스템 경험을 중시한다면, 차량 선택 시 반드시 4S 대리점에서 실측:
@@ -141,7 +141,7 @@ CarPlay가 "스마트폰을 차량 시스템으로 미러링"이라고 한다면
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 차량 연동 경험 최적화
+실습: 차량 연동 경험 최적화
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 당신의 스마트폰과 차량 시스템이 지원하는 연동 방안(CarPlay / HiCar / Android Auto / CarLife)을 확인.
@@ -152,7 +152,7 @@ CarPlay가 "스마트폰을 차량 시스템으로 미러링"이라고 한다면
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>챕터 요약
+챕터 요약
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 차량 연동 3대 노선: 미러링(CarPlay 등), 심층 융합(HarmonyOS 콕핏 등), CarPlay 2.0 심층 통합

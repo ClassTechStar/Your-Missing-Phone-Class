@@ -34,7 +34,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>ฟังก์ชัน "จำกัดการชาร์จ 80%" ของ iPhone — เปลี่ยนกฎทองให้เป็นการตั้งค่าระบบ
+ฟังก์ชัน "จำกัดการชาร์จ 80%" ของ iPhone — เปลี่ยนกฎทองให้เป็นการตั้งค่าระบบ
 
 {class="mt-1"}
 iPhone ซีรีส์ 15/16 (iOS 17 ขึ้นไป) ทำ "กฎ 20%-80%" เป็นฟังก์ชันระบบแล้ว เปิดแล้วเครื่องจะหยุดชาร์จเองที่ 80% ช่วยชะลอความแก่ของแบตได้อย่างมาก เส้นทางตั้งค่า:
@@ -48,7 +48,7 @@ iPhone ซีรีส์ 15/16 (iOS 17 ขึ้นไป) ทำ "กฎ 20%-8
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>หัวชาร์จ GaN — คู่หูสายเดินทาง
+หัวชาร์จ GaN — คู่หูสายเดินทาง
 
 {class="mt-1"}
 คุณอาจสังเกตว่าหัวชาร์จเร็วตอนนี้เล็กลงเรื่อยๆ ผู้มีพระคุณข้างหลังคือ<strong>GaN (แกลเลียมไนไตรด์)</strong>วัสดุเซมิคอนดักเตอร์ชนิดใหม่ เทียบกับหัวชาร์จซิลิคอนแบบดั้งเดิม GaN มีข้อดีชัดเจน:
@@ -128,47 +128,47 @@ iPhone ซีรีส์ 15/16 (iOS 17 ขึ้นไป) ทำ "กฎ 20%-8
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">โปรโตคอล</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">กำลังสูงสุด</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เส้นทางเทคโนโลยี</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความเข้ากันได้</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แรงดันสูง/หลายระดับ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กว้างขวางที่สุด</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แรงดันสูงปรับได้</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เครื่อง Qualcomm</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แรงดันต่ำกระแนสูง</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เฉพาะสาย OPPO</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปั๊มประจุ</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ชาร์จเร็วแอปเปิล</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรโตคอล PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">โปรโตคอล</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">กำลังสูงสุด</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">เส้นทางเทคโนโลยี</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ความเข้ากันได้</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แรงดันสูง/หลายระดับ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">กว้างขวางที่สุด</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แรงดันสูงปรับได้</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เครื่อง Qualcomm</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">แรงดันต่ำกระแนสูง</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เฉพาะสาย OPPO</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ปั๊มประจุ</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ชาร์จเร็วแอปเปิล</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">โปรโตคอล PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -189,7 +189,7 @@ iPhone ซีรีส์ 15/16 (iOS 17 ขึ้นไป) ทำ "กฎ 20%-8
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>คำเตือนความปลอดภัยชาร์จเร็ว
+คำเตือนความปลอดภัยชาร์จเร็ว
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - เลี่ยงเล่นเกมใหญ่ไปพลางชาร์จไปพลาง จะยิ่งร้อนกว่าเดิม
@@ -208,7 +208,7 @@ iPhone ซีรีส์ 15/16 (iOS 17 ขึ้นไป) ทำ "กฎ 20%-8
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>รุ่นไหนใช้แล้วบ้าง?
+รุ่นไหนใช้แล้วบ้าง?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: ซีรีส์ Magic เป็นรายแรกที่ใช้เชิงพาณิชย์ Magic6 Pro, ซีรีส์ Magic7, Magic V3 พับได้ ล้วนใช้
@@ -229,7 +229,7 @@ iPhone ซีรีส์ 15/16 (iOS 17 ขึ้นไป) ทำ "กฎ 20%-8
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>มาตรวจดู: ทำการตรวจสุขภาพให้แบตของคุณ
+มาตรวจดู: ทำการตรวจสุขภาพให้แบตของคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. ดูความสุขภาพแบต: หาและจดความจุสูงสุดของแบตคุณไว้

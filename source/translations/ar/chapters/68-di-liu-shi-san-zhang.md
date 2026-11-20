@@ -35,20 +35,20 @@ kind: chapter
 import Observation
 
 @Observable
-class CounterModel {                 // نموذج العرض
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // نموذج العرض
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // يحتفظ بالنموذج
+ @State private var model = CounterModel() // يحتفظ بالنموذج
 
-    var body: some View {
-        VStack {
-            Text("ضغطت \(model.count) مرات")
-            Button("اضغط هنا") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("ضغطت \(model.count) مرات")
+ Button("اضغط هنا") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ struct CounterView: View {
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("دفتر أحمد") {
-                    DetailView(name: "دفتر أحمد")   // الشاشة الهدف
-                }
-                NavigationLink("دفتر سارة") {
-                    DetailView(name: "دفتر سارة")
-                }
-            }
-            .navigationTitle("قائمة الدفاتر")   // عنوان كبير في الأعلى
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("دفتر أحمد") {
+ DetailView(name: "دفتر أحمد") // الشاشة الهدف
+ }
+ NavigationLink("دفتر سارة") {
+ DetailView(name: "دفتر سارة")
+ }
+ }
+ .navigationTitle("قائمة الدفاتر") // عنوان كبير في الأعلى
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("تفاصيل \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("تفاصيل \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ NavigationLink هو «رابط تنقل قابل للنقر»؛ وnavigationTitl
 ```
 // 1. لوحة تنبثق من الأسفل، نصف شاشة أو كاملة (المفضلة لنماذج الإدخال)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("تسجيل مصروف") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // شاشة الإدخال المنبثقة
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("تسجيل مصروف") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // شاشة الإدخال المنبثقة
+ }
+ }
 }
 
 // 2. شريط التبويبات السفلي ("الهيكل العظمي" للتطبيق)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("الدفتر", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("إحصاءات", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("الإعدادات", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("الدفتر", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("إحصاءات", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("الإعدادات", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ struct MainTabView: View {
 
 ```
 struct RecordListView: View {
-    @State private var records = ["غداء 25.5", "مترو 6.0", "راتب +8000"]
+ @State private var records = ["غداء 25.5", "مترو 6.0", "راتب +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // اسحب لليسار للحذف
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // اسحب لليسار للحذف
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("عودة إلى المقدمة: استئناف التحديث")
-            case .inactive:  print("في الانتقال (مكالمة أو لحظة الانتقال إلى الخلفية)")
-            case .background: print("إلى الخلفية: حفظ المسودة")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("عودة إلى المقدمة: استئناف التحديث")
+ case .inactive: print("في الانتقال (مكالمة أو لحظة الانتقال إلى الخلفية)")
+ case .background: print("إلى الخلفية: حفظ المسودة")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

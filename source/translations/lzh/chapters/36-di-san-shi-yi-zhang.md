@@ -70,7 +70,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>動手：拍一條30秒之短視頻
+動手：拍一條30秒之短視頻
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 選一個汝擅長之小知識（比如"何以將手機字體調大"）。

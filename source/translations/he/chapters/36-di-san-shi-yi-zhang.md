@@ -70,7 +70,7 @@ JianYing (CapCut) הוא כלי העריכה הטוב ביותר למתחילי�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>פעולה: סרטון 30 שניות
+פעולה: סרטון 30 שניות
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. בחר נושא (כמו "הגדלת גופן").
@@ -82,7 +82,7 @@ JianYing (CapCut) הוא כלי העריכה הטוב ביותר למתחילי�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק
+סיכום פרק
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - לפני צילום: קהל, ערך, פלטפורמה

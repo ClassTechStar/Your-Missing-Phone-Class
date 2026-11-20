@@ -80,7 +80,7 @@ Cadangan penggunaan
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Lima, Fungsi Pembantu dan Aksesibiliti: Kuasa Teknologi untuk Kebaikan
+Lima, Fungsi Pembantu dan Aksesibiliti: Kuasa Teknologi untuk Kebaikan
 
 {class="mt-1 text-sm"}
 Jangan takut dengan nama "fungsi pembantu", fungsi-fungsi ini boleh digunakan oleh semua orang. Pada asalnya direka untuk orang kurang upaya, tetapi juga sangat berguna untuk orang biasa, tangan sementara cedera atau memeluk bayi, fon telinga rosak di dalam kereta api dan tidak dapat mendengar dengan jelas, memakai cermin mata baca untuk melihat fon kecil... semuanya boleh menyelamatkan keadaan. Pada akhirnya, reka bentuk aksesibiliti mencerminkan konsep<br> teknologi untuk kebaikan<br> : membolehkan semua orang menikmati kehidupan digital secara sama rata.
@@ -96,7 +96,7 @@ Laluan pengaktifan <strong>: [Tetapan] &gt; [Fungsi Pembantu] &gt; [VoiceOver], 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>:
+:
 
 {class="mt-1"}
 <strong>Luncur kiri-kanan satu jari: Tukar elemen fokus;</strong> Sebar dengan dua jari: Tatal halaman penuh atas/bawah/kiri/kanan;
@@ -117,7 +117,7 @@ Laluan pengaktifan <strong>: [Tetapan] &gt; [Fungsi Pembantu] &gt; [VoiceOver], 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>:
+:
 
 {class="mt-1"}
 <strong>Luncur kiri-kanan satu jari: Tukar elemen fokus;</strong> Ketuk dua kali satu jari: Aktifkan elemen;
@@ -161,7 +161,7 @@ iOS 15+<strong>: Dalam [Tetapan] &gt; [Fungsi Pembantu] &gt; [VoiceOver] &gt; [P
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>untuk menjana penerangan teks imej secara automatik (memerlukan iPhone 12 dan ke atas).
+untuk menjana penerangan teks imej secara automatik (memerlukan iPhone 12 dan ke atas).
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>Aplikasi TalkBack versi baharu</strong>: Google TalkBack dalam versi lebih baharu menyepadukan fungsi <strong>soal jawab imej</strong>, boleh bertanya "Apa yang ada dalam gambar ini", AI menjawab secara masa nyata (tidak bergantung ketat pada versi sistem Android, kemas kini aplikasi TalkBack sahaja untuk mengalaminya).
@@ -171,7 +171,7 @@ iOS 15+<strong>: Dalam [Tetapan] &gt; [Fungsi Pembantu] &gt; [VoiceOver] &gt; [P
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>4. "Telinga" Pengguna Pekak — Panduan Lengkap Sarikata Masa Nyata
+4. "Telinga" Pengguna Pekak — Panduan Lengkap Sarikata Masa Nyata
 
 {class="mt-1"}
 Sarikata masa nyata (Live Captions) adalah fungsi <strong>ucapan-ke-teks peringkat sistem</strong>, sangat berguna bagi pengguna kurang pendengaran dalam persekitaran bising, perpustakaan dan senario bahasa asing.
@@ -184,7 +184,7 @@ iOS <strong>: [Tetapan] &gt; [Fungsi Pembantu] &gt; [Sarikata Masa Nyata], buka 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>: Tekan
+: Tekan
 
 {class="mt-1"}
 <strong>Android</strong>→ Klik ikon "Sarikata Masa Nyata" dalam kotak timbul; atau aktifkan dalam [Tetapan] &gt; [Fungsi Pembantu] &gt; [Sarikata Masa Nyata].
@@ -209,7 +209,7 @@ iOS <strong>: [Tetapan] &gt; [Fungsi Pembantu] &gt; [RTT/TTY], selepas diaktifka
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>kepada pihak lain.
+kepada pihak lain.
 
 {class="mt-1"}
 <strong>Android</strong>: [Tetapan] &gt; [Fungsi Pembantu] &gt; [Transliterasi Masa Nyata] + [Pemberitahuan Bunyi]. "Transliterasi Masa Nyata" memaparkan ucapan pihak lain sebagai teks secara masa nyata; "Pemberitahuan Bunyi" menukar input anda kepada ucapan apabila suara tidak mudah.<strong>Keserasian</strong>:
@@ -238,7 +238,7 @@ iOS <strong>: [Tetapan] &gt; [Fungsi Pembantu] &gt; [RTT/TTY], selepas diaktifka
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>Aktifkan
+Aktifkan
 
 {class="mt-1"}
 VoiceOver / TalkBack
@@ -246,7 +246,7 @@ VoiceOver / TalkBack
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>, cuba melayari WeChat dengan luncuran tiga jari tanpa menggunakan mata;
+, cuba melayari WeChat dengan luncuran tiga jari tanpa menggunakan mata;
 
 {class="mt-1"}
 Buka

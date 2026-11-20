@@ -98,7 +98,7 @@ La qualité des réponses de l'IA dépend en grande partie de la façon dont vou
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Pourquoi a-t-on besoin d'un cadre ?
+Pourquoi a-t-on besoin d'un cadre ?
 
 {class="mt-1"}
 Beaucoup de gens utilisent l’IA comme Baidu, en tapant quelques mots-clés. Mais l’IA n’est pas un moteur de recherche, c’est un modèle de langage qui « lit, comprend puis répond ».<strong>Donnez-lui plus de contexte, dites clairement ce que vous voulez, empêchez-la de s'égarer</strong>, et elle vous donnera des résultats précis. Le cadre consiste à traduire l'image du « à quoi ressemble une bonne réponse » dans votre tête en instructions compréhensibles par l'IA.
@@ -198,39 +198,39 @@ Cette étape doit commencer par un <strong>verbe d’action</strong>(écrire, li
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Symptôme</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Solution</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Réponse trop vague, pas pratique</td>
-                                    <td class="border border-gray-300 px-3 py-2">Ajoutez du contexte (qui êtes-vous / quel scénario)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Réponse trop académique / trop formelle</td>
-                                    <td class="border border-gray-300 px-3 py-2">Ajoutez des contraintes de ton + liste de « langue de bois » à refuser</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Réponse hors sujet / ne répond pas à la question</td>
-                                    <td class="border border-gray-300 px-3 py-2">Reformulez la tâche avec un verbe d'action, et exigez « ne répondre qu'à ça » </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Réponse trop longue, impossible à lire</td>
-                                    <td class="border border-gray-300 px-3 py-2">Limitez strictement le nombre de mots (200 max)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">L'IA affirme des choses fausses avec assurance</td>
-                                    <td class="border border-gray-300 px-3 py-2">Ajoutez « si incertain, indiquez-le » + vérification des faits importants</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Pas satisfait de la première version</td>
-                                    <td class="border border-gray-300 px-3 py-2">Ne réécrivez pas, ajoutez au prompt initial « encore plus… »</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Symptôme</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Solution</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Réponse trop vague, pas pratique</td>
+ <td class="border border-gray-300 px-3 py-2">Ajoutez du contexte (qui êtes-vous / quel scénario)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Réponse trop académique / trop formelle</td>
+ <td class="border border-gray-300 px-3 py-2">Ajoutez des contraintes de ton + liste de « langue de bois » à refuser</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Réponse hors sujet / ne répond pas à la question</td>
+ <td class="border border-gray-300 px-3 py-2">Reformulez la tâche avec un verbe d'action, et exigez « ne répondre qu'à ça » </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Réponse trop longue, impossible à lire</td>
+ <td class="border border-gray-300 px-3 py-2">Limitez strictement le nombre de mots (200 max)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">L'IA affirme des choses fausses avec assurance</td>
+ <td class="border border-gray-300 px-3 py-2">Ajoutez « si incertain, indiquez-le » + vérification des faits importants</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Pas satisfait de la première version</td>
+ <td class="border border-gray-300 px-3 py-2">Ne réécrivez pas, ajoutez au prompt initial « encore plus… »</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Cette étape doit commencer par un <strong>verbe d’action</strong>(écrire, li
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Scénario 1 : Assistant de vie (suggestions de petit-déjeuner)
+Scénario 1 : Assistant de vie (suggestions de petit-déjeuner)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -253,7 +253,7 @@ Vous êtes un blogueur culinaire spécialiste en équilibre nutritionnel (<stron
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Scénario 2 : Aide à l'apprentissage (préparation à l'examen d'anglais niveau 6)
+Scénario 2 : Aide à l'apprentissage (préparation à l'examen d'anglais niveau 6)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -267,7 +267,7 @@ Vous êtes un <strong>professeur d’anglais expérimenté pour l’examen nivea
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Scénario 3 : Efficacité au travail (mise en forme de compte-rendu de réunion)
+Scénario 3 : Efficacité au travail (mise en forme de compte-rendu de réunion)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -281,7 +281,7 @@ Vous êtes un <strong>assistant administratif senior</strong>(Rôle). Je viens d
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Usage avancé : faire de l'IA votre « assistant personnel »
+Usage avancé : faire de l'IA votre « assistant personnel »
 
 {class="mt-1"}
 Essayez ces usages avancés pour découvrir la véritable puissance de l'IA :
@@ -305,7 +305,7 @@ L'IA est puissante, mais elle n'est en aucun cas « omnipotente ». Reconnaître
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Astuces pour l'utilisation de l'IA
+Astuces pour l'utilisation de l'IA
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Le contenu généré par l'IA peut être inexact (problème d'« hallucination »), les informations importantes doivent être vérifiées.
@@ -317,7 +317,7 @@ L'IA est puissante, mais elle n'est en aucun cas « omnipotente ». Reconnaître
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>À vous de jouer : trois exercices pratiques avec l'IA
+À vous de jouer : trois exercices pratiques avec l'IA
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Défi 1 : Instructions complexes</strong>:dites à l’assistant vocal « Rappelle-moi de prendre un parapluie demain matin à 7h, et déplace mon rendez-vous de 15h à 16h ». Voyez s’il peut accomplir plusieurs actions en une seule requête.
@@ -327,7 +327,7 @@ L'IA est puissante, mais elle n'est en aucun cas « omnipotente ». Reconnaître
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Cas 2 : Processus complet de migration de données lors d'un changement de smartphone
+Cas 2 : Processus complet de migration de données lors d'un changement de smartphone
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scénario</strong> : Changement intermarque d'iPhone 13 vers Xiaomi 15.

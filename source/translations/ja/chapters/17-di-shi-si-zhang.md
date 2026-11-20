@@ -46,7 +46,7 @@ AES（Advanced Encryption Standard）は米国国立標準技術研究所（NIST
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>なぜ「ゼロナレッジ」はサービス提供者にもパスワードを見せないのか？
+なぜ「ゼロナレッジ」はサービス提供者にもパスワードを見せないのか？
 
 {class="mt-1"}
 暗号化鍵はあなたのマスターパスワードから派生し、マスターパスワードはあなたの頭の中にのみ存在し、ローカルデバイス上でのみ使用されるからです。サービス提供者のサーバーにはマスターパスワードも暗号化鍵もなく、暗号文しかありません。だからこそ、Bitwarden、1Password などの正規サービス提供者は「私たちもあなた、のパスワードを見ることはできません」と明確に宣言しているのです：見たくないのではなく、技術的に不可能なのです。
@@ -71,7 +71,7 @@ AES（Advanced Encryption Standard）は米国国立標準技術研究所（NIST
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>LastPass 事件から学んだこと
+LastPass 事件から学んだこと
 
 {class="mt-1"}
 第一に、マスターパスワードは長くユニークである必要があります（16文字以上、大文字・小文字・数字・記号を含む）。第二に、Argon2id をサポートし反復回数の多いサービス提供者を優先しましょう。第三に、高価値アカウント（銀行、メール）には必ず独立した二要素認証を設定し、パスワードマネージャーだけに頼らないようにしましょう。
@@ -118,7 +118,7 @@ AES（Advanced Encryption Standard）は米国国立標準技術研究所（NIST
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>k-匿名性クエリの原理
+k-匿名性クエリの原理
 
 {class="mt-1"}
 HaveIBeenPwned にパスワードを入力するとまた漏洩するのでは？心配いりません。現代のクエリは「k-匿名」プロトコルを採用しています：ブラウザはパスワードハッシュの最初の5文字だけをサーバーに送信し、サーバーはその5文字で始まる全ハッシュリストを返し、ローカルで照合します。つまり、サーバーはあなたの完全なパスワードハッシュを見ることはありません。1Password、Bitwarden の「漏洩パスワード検出」もこの仕組みで動作しています。
@@ -133,7 +133,7 @@ HaveIBeenPwned にパスワードを入力するとまた漏洩するのでは�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>今すぐ確認：あなたのパスワードは安全か
+今すぐ確認：あなたのパスワードは安全か
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. haveibeenpwned.com を開き、よく使うメールアドレスを入力して、どの漏洩事件に関与しているか確認しましょう。
@@ -159,36 +159,36 @@ Passkey は FIDO2 / WebAuthn 標準に基づき、<strong>デバイス上の鍵�
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">比較項目</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">従来のパスワード</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">フィッシング耐性</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低い、フィッシングサイトがパスワードを盗める</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本質的にフィッシング耐性、秘密鍵は本物のドメインにのみ署名</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">サーバー漏洩の影響</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">パスワードハッシュが破解される可能性がある</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">サーバーは公開鍵のみ保存、漏洩の影響なし</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">利便性</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">記憶/入力/管理が必要</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/指紋で1秒ログイン</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">リプレイ攻撃</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中間者攻撃で傍受・再生される可能性</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">毎回使い捨て署名、再生不可</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">比較項目</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">従来のパスワード</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">フィッシング耐性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低い、フィッシングサイトがパスワードを盗める</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本質的にフィッシング耐性、秘密鍵は本物のドメインにのみ署名</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">サーバー漏洩の影響</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">パスワードハッシュが破解される可能性がある</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">サーバーは公開鍵のみ保存、漏洩の影響なし</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">利便性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">記憶/入力/管理が必要</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/指紋で1秒ログイン</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">リプレイ攻撃</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中間者攻撃で傍受・再生される可能性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">毎回使い捨て署名、再生不可</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. 各プラットフォームのサポート状況
@@ -200,7 +200,7 @@ Passkey は FIDO2 / WebAuthn 標準に基づき、<strong>デバイス上の鍵�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>クロスデバイス同期が重要なブレークスルー
+クロスデバイス同期が重要なブレークスルー
 
 {class="mt-1"}
 初期の Passkey の最大の課題は「単一デバイスにバインド」，スマホを替えるたびに再作成が必要でした。2023年以降、Apple、Google、Microsoft は Passkey のクラウド同期を実現：iCloud キーチェーンは Apple デバイス間で同期、Google パスワードマネージャーは Android デバイス間で同期。1Password などのサードパーティはクロスエコシステム同期を実現しました。これは Passkey がパスワードを代替する実用性を備えたことを意味します。
@@ -236,7 +236,7 @@ Windows PC で、iPhone にしか Passkey がないサイトにログインす�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>今すぐ試す：パスワード不要ログインを体験
+今すぐ試す：パスワード不要ログインを体験
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Google アカウントにログイン → セキュリティ → パスキー → パスキーを追加で、Face ID/指紋ログインを体験。
@@ -247,7 +247,7 @@ Windows PC で、iPhone にしか Passkey がないサイトにログインす�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>移行期のアドバイス
+移行期のアドバイス
 
 {class="mt-1"}
 Passkey はパスワードを完全に置き換えたわけではありません：多くのサイトはまだ「Passkey + パスワード」の併用段階です。高価値アカウントで Passkey を優先的に有効化しますが、<strong>従来のパスワードをすぐに削除しないでください</strong>、バックアップとして残しましょう。同時にパスワードマネージャーの使用も続けてください。すべてのサイトが Passkey に対応しているわけではないからです。Passkey は「パスワードマネージャーの強力な補完」として捉え、「即時置き換え」とは考えないでください。
@@ -295,7 +295,7 @@ Google アカウント + YubiKey を例に：
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>デュアルキー戦略
+デュアルキー戦略
 
 {class="mt-1"}
 ハードウェアキーの最大のリスクは「紛失」です。推奨：① 異なる2本のキーを同時に登録；② 1本は随身携帯（キーホルダー）。1本は自宅の金庫または銀行貸金庫に保管；③ 一部サイトでは「バックアップ復旧コード」を印刷してオフライン保存可能。これで主キーを紛失してもアカウントから永久に締め出されることはありません。
@@ -303,7 +303,7 @@ Google アカウント + YubiKey を例に：
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>購入ルートに注意
+購入ルートに注意
 
 {class="mt-1"}
 必ず公式ストアまたは正規代理店から購入し、中古や出所不明のキーは買わないでください，理論上、プリセットされたハードウェアにバックドアが仕込まれている可能性があります。YubiKey のファームウェアは出荷後に更新できませんが、Yubico は継続的にセキュリティ公告を発信するので公式サイトを確認してください。
@@ -336,7 +336,7 @@ Bitwarden の無料版は個人パスワード共有をサポート（「Send」
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>1Password Families のコストパフォーマンス
+1Password Families のコストパフォーマンス
 
 {class="mt-1"}
 1Password Families は約4.99ドル/月で最大5人の家族メンバーをサポート。各人に独立した個人保管庫 + 4つの共有保管庫。一人当たり1ドル/月未満で、現在家庭共有で最も優れた体験を提供します。Bitwarden の家庭版は10ドル/年で6人サポートし、コストパフォーマンスはより高いですが、インターフェース体験はやや劣ります。
@@ -369,7 +369,7 @@ Bitwarden の無料版は個人パスワード共有をサポート（「Send」
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>今すぐ設定：家族のために「スペアキー」を残す
+今すぐ設定：家族のために「スペアキー」を残す
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 信頼する家族1人を「緊急連絡先」に選定。
@@ -388,7 +388,7 @@ Bitwarden の無料版は個人パスワード共有をサポート（「Send」
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>パスワードマネージャーは便利ですがリスクもあります：マスターパスワードが漏洩すると、すべてのパスワードが露出します。だからマスターパスワードは他のパスワードと絶対に同じにせず、見つけやすい場所に書かないでください。また、良好なセキュリティ実績のあるサービスプロバイダーを選ぶことをおすすめします。
+パスワードマネージャーは便利ですがリスクもあります：マスターパスワードが漏洩すると、すべてのパスワードが露出します。だからマスターパスワードは他のパスワードと絶対に同じにせず、見つけやすい場所に書かないでください。また、良好なセキュリティ実績のあるサービスプロバイダーを選ぶことをおすすめします。
 
 {class="mt-1"}
 今すぐ試す：パスワードマネージャーを使い始める
@@ -396,7 +396,7 @@ Bitwarden の無料版は個人パスワード共有をサポート（「Send」
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>パスワードマネージャーを一つ選ぶ（Bitwardenまたはシステム標準を推奨）。
+パスワードマネージャーを一つ選ぶ（Bitwardenまたはシステム標準を推奨）。
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. アカウント登録、強力なマスターパスワードを設定。

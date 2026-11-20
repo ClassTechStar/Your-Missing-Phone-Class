@@ -77,12 +77,12 @@ Der Intent (die "Absicht") ist das "Fahrticket" für die Kommunikation zwischen 
 ```
 // Variante 1: expliziter Intent – klar angegeben, zu welcher Seite
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", "Max")     // nimmt "Gepäck" mit (die Daten)
+intent.putExtra("name", "Max") // nimmt "Gepäck" mit (die Daten)
 startActivity(intent)
 
 // Variante 2: impliziter Intent – du sagst nur, was zu tun ist; das System sucht, wer es tut
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // das System öffnet den Browser (oder lässt dich wählen)
+startActivity(web) // das System öffnet den Browser (oder lässt dich wählen)
 ```
 :::
 
@@ -101,16 +101,16 @@ Echte Apps haben mehrere Seiten. Die offiziell empfohlene Navigationslösung fü
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "Unbekannt")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "Unbekannt")
+ }
 }
 
 // um innerhalb der Ansicht zu navigieren:
-navController.navigate("detail/Max")     // mit Parameter
-navController.popBackStack()              // zurück zur vorherigen Seite
+navController.navigate("detail/Max") // mit Parameter
+navController.popBackStack() // zurück zur vorherigen Seite
 ```
 :::
 

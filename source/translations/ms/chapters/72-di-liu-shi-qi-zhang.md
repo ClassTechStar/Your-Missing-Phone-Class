@@ -54,21 +54,21 @@ import XCTest
 
 // Pisahkan logik "tukar rentetan jumlah kepada nombor" menjadi fungsi tulen
 func parseAmount(_ input: String) -> Double? {
-    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
-          v > 0 else { return nil }
-    return v
+ guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+ v > 0 else { return nil }
+ return v
 }
 
 final class AmountTests: XCTestCase {
-    func testEmptyInputReturnsNil() {
-        XCTAssertNil(parseAmount(""))
-    }
-    func testNegativeReturnsNil() {
-        XCTAssertNil(parseAmount("-5"))
-    }
-    func testNormalValueParses() {
-        XCTAssertEqual(parseAmount("12.5"), 12.5)
-    }
+ func testEmptyInputReturnsNil() {
+ XCTAssertNil(parseAmount(""))
+ }
+ func testNegativeReturnsNil() {
+ XCTAssertNil(parseAmount("-5"))
+ }
+ func testNormalValueParses() {
+ XCTAssertEqual(parseAmount("12.5"), 12.5)
+ }
 }
 ```
 :::
@@ -96,11 +96,11 @@ Sekali sijil pemeteraian dan kunci peribadi hilang, anda tidak dapat lagi mengha
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> Daftar akaun pembangun</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-invoice mr-1"></i> Menyiapkan bahan kedai</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-box mr-1"></i> Muat naik pakej binaan</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Daftar akaun pembangun</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Menyiapkan bahan kedai</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Muat naik pakej binaan</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-clipboard-list mr-1"></i> Isi maklumat privasi dan semakan</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> Semakan Apple (1-7 hari)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-champagne-glasses mr-1"></i> Naik ke kedai</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> Isi maklumat privasi dan semakan</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Semakan Apple (1-7 hari)</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> Naik ke kedai</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}

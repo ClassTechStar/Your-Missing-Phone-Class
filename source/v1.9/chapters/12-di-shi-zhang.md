@@ -66,12 +66,12 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">账户角色</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">放什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">绑什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">出事最多损失</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">工资卡（总仓库）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存款、大额资金</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">什么都不绑，或只绑银行自己的App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几乎为零（不接触网络支付）</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电子账户（零钱包）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本月零花钱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付宝、微信等日常支付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">额度内的小额</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信用卡（缓冲层）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不存钱，只记账</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网购、订票、境外消费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可申诉、可挂失止付</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">账户角色</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">放什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">绑什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">出事最多损失</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">工资卡（总仓库）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">存款、大额资金</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">什么都不绑，或只绑银行自己的App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几乎为零（不接触网络支付）</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电子账户（零钱包）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">本月零花钱</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付宝、微信等日常支付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">额度内的小额</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">信用卡（缓冲层）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不存钱，只记账</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网购、订票、境外消费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可申诉、可挂失止付</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -214,14 +214,14 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">季度体检项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">大概在哪里找</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">通过标准</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生物支付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付设置</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已开启且能正常验证</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全锁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用户保护中心→安全中心（支付宝）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">夜间保护或启动保护至少开一个</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免密支付/自动扣款</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付设置</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只保留确需的签约，额度调低</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">登录设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号与安全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有陌生设备、旧设备已移除</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">绑定的银行卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">银行卡列表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有已注销、已换新的旧卡</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">季度体检项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">大概在哪里找</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">通过标准</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生物支付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付设置</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">已开启且能正常验证</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全锁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用户保护中心→安全中心（支付宝）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">夜间保护或启动保护至少开一个</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免密支付/自动扣款</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付设置</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只保留确需的签约，额度调低</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">登录设备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">账号与安全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有陌生设备、旧设备已移除</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">绑定的银行卡</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">银行卡列表</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没有已注销、已换新的旧卡</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -236,7 +236,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 把季度体检设成手机日历的重复提醒，标题直接写"关掉用不到的自动扣费"。提醒文案越具体，越不容易被自己按掉。
@@ -264,14 +264,14 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">虚拟交通卡</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">乘车码</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷闸方式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">熄屏贴近感应区，"嘀"一声过</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">打开二维码对准扫码口</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络要求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完全不需要网络</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双离线，无网可刷，联网后自动扣款</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充值</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预充值，用完再充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">直接扣款，无需充值</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优惠</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分城市与实体卡一致</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以当地活动为准</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨城</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"交通联合"卡可在不少城市直接刷</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切城市重新开通当地码</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">虚拟交通卡</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">乘车码</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">刷闸方式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">熄屏贴近感应区，"嘀"一声过</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">打开二维码对准扫码口</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络要求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完全不需要网络</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">双离线，无网可刷，联网后自动扣款</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">充值</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">预充值，用完再充</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">直接扣款，无需充值</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优惠</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分城市与实体卡一致</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以当地活动为准</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨城</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"交通联合"卡可在不少城市直接刷</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">切城市重新开通当地码</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -412,7 +412,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 办完一件事，顺手看看服务页面有没有"办事进度"或"消息订阅"开关。居住证、社保转移这类要等结果的事，开了订阅就不用天天进去刷。
@@ -431,14 +431,14 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-  <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">场景</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">顺手的选择</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么</th></tr></thead>
-  <tbody>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发红包、群里凑份子</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长在聊天里，两步完成</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">交水电煤、查社保</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付宝</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生活服务集中，入口齐全</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超市收银台快速结账</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意，或闪付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">付款码或NFC贴一下都行</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">坐公交地铁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">虚拟交通卡/乘车码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节已详述</td></tr>
-    <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">境外刷卡消费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">绑卡的闪付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全球POS通用性最好（第九节）</td></tr>
-  </tbody>
+ <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">场景</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">顺手的选择</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">为什么</th></tr></thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发红包、群里凑份子</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微信</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">长在聊天里，两步完成</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">交水电煤、查社保</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支付宝</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生活服务集中，入口齐全</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超市收银台快速结账</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意，或闪付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">付款码或NFC贴一下都行</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">坐公交地铁</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">虚拟交通卡/乘车码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第四节已详述</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">境外刷卡消费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">绑卡的闪付</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全球POS通用性最好（第九节）</td></tr>
+ </tbody>
 </table>
 ```
 :::
@@ -481,7 +481,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 微信管"人"，支付宝管"事"，闪付管"机器"，别让任何一个工具包揽你全部的钱。
@@ -582,7 +582,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士
+小贴士
 
 {class="mt-1"}
 出发前把护照、机票、酒店确认单的照片存进手机相册的一个专属相簿（记得别带敏感信息的原图外发），落地办事的时候翻这一个相簿就够了，比在几百张照片里翻找体面得多。
@@ -746,7 +746,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 账单是生活最诚实的镜子：每月十五分钟，把钱花在你真的想要的东西上。
@@ -770,7 +770,7 @@ kind: chapter
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 这页备忘平时谁都不会看，但它决定出事那天，你家是"有条不紊"还是"集体抓瞎"。
@@ -786,7 +786,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>记住这几条，防骗保平安
+记住这几条，防骗保平安
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - 公检法、银行、客服，不会让你转账到"安全账户"。
@@ -798,7 +798,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>现在就做：给你的支付App做一次安全体检
+现在就做：给你的支付App做一次安全体检
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开支付宝和微信，确认已开启指纹/面容支付。
@@ -810,7 +810,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 绑卡只是授权不是搬家：三个密码分开，工资卡不绑App，用电子账户给手机支付兜底

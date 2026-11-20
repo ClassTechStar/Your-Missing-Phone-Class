@@ -43,7 +43,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>20-20-20ルール
+20-20-20ルール
 
 {class="mt-1"}
 画面を見るごとに<strong>20分</strong>、視線を<strong>20フィート（約6メートル）</strong>以遠に移し、<strong>20秒</strong>維持する。この簡単な動作が毛様体筋の疲労を効果的に和らげる。
@@ -80,7 +80,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>実践：一週間デジタルヘルスチャレンジ
+実践：一週間デジタルヘルスチャレンジ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 今日：スクリーンタイム/デジタルウェルビーイングを開き、先週の使用データを見る。
@@ -94,7 +94,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - まずスクリーンタイムデータを見て現状を認識することが変化の第一歩

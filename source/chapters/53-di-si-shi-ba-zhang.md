@@ -20,7 +20,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：安卓的开源基因
+小贴士：安卓的开源基因
 
 {class="mt-1"}
 安卓的核心代码（AOSP，Android Open Source Project）是开源的，任何厂商都能拿去修改定制。所以小米有 MIUI（现在叫澎湃 OS）、华为有鸿蒙兼容层、三星有 One UI。这对开发者是好事：<strong>你学的是"安卓开发"，不是"某个品牌的开发"</strong>，一套功夫，全网通吃。
@@ -46,7 +46,7 @@ kind: chapter
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
 {class="vs-title"}
-<i class="fas fa-times-circle mr-1"></i> Java 风格（啰嗦版）
+ Java 风格（啰嗦版）
 
 {class="font-mono text-xs leading-relaxed"}
 public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&nbsp;protected void onCreate(Bundle b) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b);<br>&nbsp;&nbsp;&nbsp;&nbsp; setContentView(R.layout.activity);<br>&nbsp;&nbsp;}<br>}
@@ -54,7 +54,7 @@ public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&
 
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
 {class="vs-title"}
-<i class="fas fa-check-circle mr-1"></i> Kotlin 风格（清爽版）
+ Kotlin 风格（清爽版）
 
 {class="font-mono text-xs leading-relaxed"}
 class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(b: Bundle?) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b)<br>&nbsp;&nbsp;&nbsp;&nbsp;setContent { App() }<br>&nbsp;&nbsp;}<br>}
@@ -69,11 +69,11 @@ class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 写代码</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hammer mr-1"></i> 编译打包（APK/AAB）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-flask mr-1"></i> 测试（模拟器+真机）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-rocket mr-1"></i> 发布（商店/安装包）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 编译打包（APK/AAB）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 测试（模拟器+真机）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 发布（商店/安装包）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -119,7 +119,7 @@ class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：看看你手机里的"安卓"
+来动手：看看你手机里的"安卓"
 
 {class="mt-1"}
 打开手机的 [设置] → [关于手机]（或"关于本机"），找到"安卓版本"或"Android 版本"那一栏——连续点它几下，还能触发系统的彩蛋小游戏。记下你的版本号，对照上面的版本表看看它属于哪一代。你的手机，就是你的第一个"开发测试机"。
@@ -127,17 +127,17 @@ class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 安卓 2008 年诞生，2026 年是全球市场份额最大的移动系统，活跃设备数十亿
 - 最新正式版 Android 17；主流 App 最低支持 Android 8-10，用户盘子才够大
 - 新项目一律用 Kotlin：代码少 30%+、防空指针、官方钦定
 - APK 自己装，AAB 上商店；SDK 是官方开发装备包
 - 2026 标准技术栈：
-  - 界面：Kotlin + Compose
-  - 架构：MVVM
-  - 数据：Room
-  - 网络：Retrofit
-  - 构建：Gradle
-  - 开发环境：Android Studio
+ - 界面：Kotlin + Compose
+ - 架构：MVVM
+ - 数据：Room
+ - 网络：Retrofit
+ - 构建：Gradle
+ - 开发环境：Android Studio
 :::

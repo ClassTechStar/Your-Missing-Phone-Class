@@ -204,41 +204,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">瀏覽器</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心賣點</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">適用人群</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微軟 Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium 核心 + 內置 Copilot AI，可以總結網頁/翻譯/對話</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">追求效率嘅辦公族、AI 重度用戶（推薦主力）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同蘋果生態深度整合，慳電高效，私隱保護強</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac 用戶，重視續航同系統聯動</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全球使用率最高，擴充插件生態最豐富</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要大量擴充插件嘅進階用戶、跨裝置同步一族</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開箱即用屏蔽廣告同追蹤器，速度更快</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注重私隱、唔裝插件都想屏蔽廣告嘅用戶</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同名搜尋引擎唔記錄歷史，一鍵清除痕跡</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">唔希望被個性化追蹤嘅私隱敏感用戶</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">瀏覽器</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心賣點</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">適用人群</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微軟 Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium 核心 + 內置 Copilot AI，可以總結網頁/翻譯/對話</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">追求效率嘅辦公族、AI 重度用戶（推薦主力）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同蘋果生態深度整合，慳電高效，私隱保護強</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac 用戶，重視續航同系統聯動</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全球使用率最高，擴充插件生態最豐富</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要大量擴充插件嘅進階用戶、跨裝置同步一族</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開箱即用屏蔽廣告同追蹤器，速度更快</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注重私隱、唔裝插件都想屏蔽廣告嘅用戶</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同名搜尋引擎唔記錄歷史，一鍵清除痕跡</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">唔希望被個性化追蹤嘅私隱敏感用戶</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -287,46 +287,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平臺</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口路徑</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推薦開啟項目</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[設定] > [電話] / [訊息]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">靜音未知來電；已阻止嘅聯絡人；訊息入面「過濾未知發件人」</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 App > 設定 > 騷擾攔截；或者 安全中心</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能攔截、陌生號響一聲掛斷、短訊關鍵詞過濾</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為 / 榮耀</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 騷擾攔截；手機管家 > 騷擾攔截</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">來電識別、黑名單、短訊智能攔截</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 App > 騷擾攔截；或者 本機 > 騷擾攔截</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">來電攔截、詐騙電話識別、短訊攔截規則</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 騷擾電話攔截；i 管家</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">騷擾攔截、詐騙電話預警、訊息過濾</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 設定 > 阻止號碼 / 來電顯示同垃圾電話</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阻止未知號碼、垃圾電話識別（地區支援度唔同）</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平臺</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口路徑</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推薦開啟項目</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[設定] > [電話] / [訊息]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">靜音未知來電；已阻止嘅聯絡人；訊息入面「過濾未知發件人」</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 App > 設定 > 騷擾攔截；或者 安全中心</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能攔截、陌生號響一聲掛斷、短訊關鍵詞過濾</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為 / 榮耀</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 騷擾攔截；手機管家 > 騷擾攔截</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">來電識別、黑名單、短訊智能攔截</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 App > 騷擾攔截；或者 本機 > 騷擾攔截</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">來電攔截、詐騙電話識別、短訊攔截規則</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 騷擾電話攔截；i 管家</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">騷擾攔截、詐騙電話預警、訊息過濾</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">電話 > 設定 > 阻止號碼 / 來電顯示同垃圾電話</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阻止未知號碼、垃圾電話識別（地區支援度唔同）</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -390,46 +390,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平臺</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常見入口</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">說明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手機管家 / 安全中心 > 地震預警；或者 設定搜尋「地震」</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分版本系統內置預警服務，要聯網並開啟定位</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為 / 榮耀</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 安全 > 應急預警通知 / 地震預警</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名稱可能是「應急預警通知」，內含地震等</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 安全（SOS 緊急聯絡）> 地震預警</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分機型同地區服務覆蓋有關</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天氣 App 或者 設定 > 安全/更多 > 地震預警</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以實際系統版本選單為準</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系統設定中通常冇完整內置開關；安裝可靠地震預警 App 並允許通知</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 要後台運行同定位權限；系統勿擾唔好屏蔽佢嘅警報</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星等</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 安全與緊急情況 / 無線緊急警報</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「緊急警報」覆蓋範圍因地區同電信商而異</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平臺</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常見入口</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">說明</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手機管家 / 安全中心 > 地震預警；或者 設定搜尋「地震」</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分版本系統內置預警服務，要聯網並開啟定位</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">華為 / 榮耀</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 安全 > 應急預警通知 / 地震預警</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名稱可能是「應急預警通知」，內含地震等</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 安全（SOS 緊急聯絡）> 地震預警</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分機型同地區服務覆蓋有關</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天氣 App 或者 設定 > 安全/更多 > 地震預警</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以實際系統版本選單為準</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系統設定中通常冇完整內置開關；安裝可靠地震預警 App 並允許通知</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 要後台運行同定位權限；系統勿擾唔好屏蔽佢嘅警報</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星等</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定 > 安全與緊急情況 / 無線緊急警報</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「緊急警報」覆蓋範圍因地區同電信商而異</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

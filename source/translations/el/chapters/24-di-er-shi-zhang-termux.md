@@ -45,44 +45,44 @@ Termux <strong>Μόνο ενσωματωμένο Bash</strong> Shell.ZshfishShel
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Όνομα πρόσθετου</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Περιγραφή λειτουργίας</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έκθεση λειτουργιών Android API σε προγράμματα γραμμής εντολών</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Επιτρέπει εκτέλεση σεναρίων κατά την εκκίνηση</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Παρέχει παράθυρο πλωτού τερματικού</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ενεργοποίηση σχημάτων χρωμάτων και προσαρμογής γραμματοσειρών</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ενσωμάτωση σεναρίων Termux με την εφαρμογή αυτοματισμού Tasker</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Επιτρέπει εκτέλεση σεναρίων από widget αρχικής</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Όνομα πρόσθετου</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Περιγραφή λειτουργίας</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Έκθεση λειτουργιών Android API σε προγράμματα γραμμής εντολών</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Επιτρέπει εκτέλεση σεναρίων κατά την εκκίνηση</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Παρέχει παράθυρο πλωτού τερματικού</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ενεργοποίηση σχημάτων χρωμάτων και προσαρμογής γραμματοσειρών</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ενσωμάτωση σεναρίων Termux με την εφαρμογή αυτοματισμού Tasker</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Επιτρέπει εκτέλεση σεναρίων από widget αρχικής</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Σημαντική υπόδειξη
+Σημαντική υπόδειξη
 
 {class="mt-1"}
 Το Termux και τα πρόσθετά του πρέπει να εγκαθίστανται από την ίδια πηγή, διότι μοιράζονται το ίδιο sharedUserId. Ανάμειξη πηγών (π.χ. F-Droid και GitHub) προκαλεί σφάλμα εγκατάστασης.
@@ -127,7 +127,7 @@ Linux, Εντολή Σύστημα Πλατφόρμα, ShellScript, Linux Αρχ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Συμπέρασμα
+Συμπέρασμα
 
 {class="mt-1"}
 Το Termux φέρνει την ισχυρή εμπειρία τερματικού Linux σε Android, κάνοντας το κινητό φορητό εργαλείο ανάπτυξης και μάθησης. Developers, διαχειριστές συστημάτων και λάτρεις της τεχνολογίας απολαμβάνουν πλήρη εμπειρία γραμμής εντολών, υλοποιώντας την ιδέα "Linux στην τσέπη".
@@ -135,7 +135,7 @@ Linux, Εντολή Σύστημα Πλατφόρμα, ShellScript, Linux Αρχ
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκιμή: τρέξτε την πρώτη εντολή Linux στο κινητό
+Δοκιμή: τρέξτε την πρώτη εντολή Linux στο κινητό
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Κατεβάστε και εγκαταστήστε το Termux από F-Droid, περιμένετε την αρχικοποίηση.

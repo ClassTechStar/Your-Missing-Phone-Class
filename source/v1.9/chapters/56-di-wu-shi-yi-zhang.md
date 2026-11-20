@@ -47,19 +47,19 @@ Compose 的核心思想一句话：<strong>界面 = 函数</strong>。每个能�
 ```
 @Composable
 fun Greeting(name: String) {
-    Text(text = "你好，$name！")     // 一个"文字积木"
+ Text(text = "你好，$name！") // 一个"文字积木"
 }
 
 // 嵌套组合：大积木套小积木
 @Composable
 fun HomeScreen() {
-    Column {                          // 竖着排列
-        Greeting(name = "张三")
-        Greeting(name = "李四")
-        Button(onClick = { /* 点击做什么 */ }) {
-            Text("点我")
-        }
-    }
+ Column { // 竖着排列
+ Greeting(name = "张三")
+ Greeting(name = "李四")
+ Button(onClick = { /* 点击做什么 */ }) {
+ Text("点我")
+ }
+ }
 }
 ```
 :::
@@ -110,7 +110,7 @@ Compose 把思路整个倒过来：不写"怎么改"，只写"每种状态长什
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 界面是状态的函数：状态对，界面就对；界面错，先查状态。
@@ -137,18 +137,18 @@ Compose 四大基础组件
 ```
 @Composable
 fun BasicWidgets() {
-    Column {
-        Text(text = "这是一段文字")
-        Button(onClick = { println("被点击了") }) {
-            Text("按钮")
-        }
-        var input by remember { mutableStateOf("") }
-        TextField(
-            value = input,
-            onValueChange = { input = it },
-            label = { Text("输入点什么") }
-        )
-    }
+ Column {
+ Text(text = "这是一段文字")
+ Button(onClick = { println("被点击了") }) {
+ Text("按钮")
+ }
+ var input by remember { mutableStateOf("") }
+ TextField(
+ value = input,
+ onValueChange = { input = it },
+ label = { Text("输入点什么") }
+ )
+ }
 }
 ```
 :::
@@ -166,10 +166,10 @@ Text 看着最简单，实际承担了界面里一半的信息量。真正常用
 
 ```
 Text(
-    text = news.title,
-    maxLines = 2,                                // 最多两行
-    overflow = TextOverflow.Ellipsis,            // 放不下就省略号
-    style = MaterialTheme.typography.titleMedium // 字号字体听主题的
+ text = news.title,
+ maxLines = 2, // 最多两行
+ overflow = TextOverflow.Ellipsis, // 放不下就省略号
+ style = MaterialTheme.typography.titleMedium // 字号字体听主题的
 )
 ```
 :::
@@ -190,7 +190,7 @@ Button(onClick = { /* 主操作 */ }) { Text("立即下单") }
 OutlinedButton(onClick = { /* 次要操作 */ }) { Text("看看就好") }
 TextButton(onClick = { /* 轻量操作 */ }) { Text("跳过") }
 IconButton(onClick = { /* 图标点击 */ }) {
-    Icon(Icons.Default.Favorite, contentDescription = "收藏")
+ Icon(Icons.Default.Favorite, contentDescription = "收藏")
 }
 ```
 :::
@@ -222,10 +222,10 @@ TextField 在 Compose 里是"受控组件"：它显示什么，完全由你传�
 ```
 var address by remember { mutableStateOf("") }
 TextField(
-    value = address,
-    onValueChange = { address = it },   // it 是用户敲进去的新内容
-    label = { Text("收货地址") },
-    singleLine = true
+ value = address,
+ onValueChange = { address = it }, // it 是用户敲进去的新内容
+ label = { Text("收货地址") },
+ singleLine = true
 )
 ```
 :::
@@ -244,17 +244,17 @@ TextField(
 ```
 var query by rememberSaveable { mutableStateOf("") }
 TextField(
-    value = query,
-    onValueChange = { query = it },
-    label = { Text("搜歌曲、歌手") },
-    singleLine = true,
-    trailingIcon = {
-        if (query.isNotEmpty()) {
-            IconButton(onClick = { query = "" }) {
-                Icon(Icons.Default.Close, contentDescription = "清空")
-            }
-        }
-    }
+ value = query,
+ onValueChange = { query = it },
+ label = { Text("搜歌曲、歌手") },
+ singleLine = true,
+ trailingIcon = {
+ if (query.isNotEmpty()) {
+ IconButton(onClick = { query = "" }) {
+ Icon(Icons.Default.Close, contentDescription = "清空")
+ }
+ }
+ }
 )
 ```
 :::
@@ -272,9 +272,9 @@ trailingIcon 是输入框预留的"尾巴槽"，里面放任意组件。注意�
 
 ```
 Icon(
-    Icons.Default.Search,
-    contentDescription = "搜索",
-    tint = MaterialTheme.colorScheme.primary   // 颜色也听主题的
+ Icons.Default.Search,
+ contentDescription = "搜索",
+ tint = MaterialTheme.colorScheme.primary // 颜色也听主题的
 )
 ```
 :::
@@ -292,9 +292,9 @@ Icon(
 
 ```
 Image(
-    painter = painterResource(R.drawable.avatar),
-    contentDescription = "用户头像",      // 有含义的图：写清楚是什么
-    modifier = Modifier.size(48.dp)
+ painter = painterResource(R.drawable.avatar),
+ contentDescription = "用户头像", // 有含义的图：写清楚是什么
+ modifier = Modifier.size(48.dp)
 )
 // 纯装饰性的图（背景花纹之类），明确传 null，读屏会跳过它
 Image(painter = painterResource(R.drawable.pattern), contentDescription = null)
@@ -316,13 +316,13 @@ Image(painter = painterResource(R.drawable.pattern), contentDescription = null)
 var agreed by remember { mutableStateOf(false) }
 
 Row(verticalAlignment = Alignment.CenterVertically) {
-    Checkbox(checked = agreed, onCheckedChange = { agreed = it })
-    Text("我已阅读并同意用户协议")
+ Checkbox(checked = agreed, onCheckedChange = { agreed = it })
+ Text("我已阅读并同意用户协议")
 }
 Spacer(Modifier.height(12.dp))
 Button(
-    onClick = { /* 注册 */ },
-    enabled = agreed              // 勾了才亮
+ onClick = { /* 注册 */ },
+ enabled = agreed // 勾了才亮
 ) { Text("注册") }
 ```
 :::
@@ -350,15 +350,15 @@ Button(
 
 ```
 Column {
-    Text("第一行")
-    Row {
-        Text("左边")
-        Text("右边")
-    }
-    Box {
-        Text("底层")
-        Text("叠在上面的角标")
-    }
+ Text("第一行")
+ Row {
+ Text("左边")
+ Text("右边")
+ }
+ Box {
+ Text("底层")
+ Text("叠在上面的角标")
+ }
 }
 ```
 :::
@@ -372,12 +372,12 @@ Column {
 
 ```
 Text(
-    text = "好看的文字",
-    modifier = Modifier
-        .padding(16.dp)          // 四周留白
-        .fillMaxWidth()          // 撑满宽度
-        .background(Color.Blue)  // 背景色
-        .clickable { /* 点击 */ }// 可点击
+ text = "好看的文字",
+ modifier = Modifier
+ .padding(16.dp) // 四周留白
+ .fillMaxWidth() // 撑满宽度
+ .background(Color.Blue) // 背景色
+ .clickable { /* 点击 */ }// 可点击
 )
 // 链式调用：一个接一个，顺序有意义（先 padding 再背景，背景不含边距）
 ```
@@ -385,7 +385,7 @@ Text(
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：Modifier 的顺序有讲究
+注意：Modifier 的顺序有讲究
 
 {class="mt-1"}
 <code class="inline">padding(16.dp).background(Blue)</code> 和 <code class="inline">background(Blue).padding(16.dp)</code> 效果不同——前者是"先留白再涂色"（背景不含边距），后者是"先涂色再留白"（背景包含边距）。新手最容易在这上面画错"奇怪的白边"。不确定时，调换顺序试试，预览立刻告诉你答案。
@@ -402,11 +402,11 @@ Text(
 
 ```
 Row(
-    verticalAlignment = Alignment.CenterVertically,
-    modifier = Modifier.fillMaxWidth()
+ verticalAlignment = Alignment.CenterVertically,
+ modifier = Modifier.fillMaxWidth()
 ) {
-    Text("订单详情", modifier = Modifier.weight(1f))   // 占据剩余宽度
-    Text("14:23")
+ Text("订单详情", modifier = Modifier.weight(1f)) // 占据剩余宽度
+ Text("14:23")
 }
 ```
 :::
@@ -447,18 +447,18 @@ weight(1f) 单独说一句：它把一行或一列的剩余空间分给某个子
 
 ```
 Box {
-    Icon(
-        Icons.Default.Notifications,
-        contentDescription = "通知",
-        modifier = Modifier.size(32.dp)
-    )
-    Box(
-        modifier = Modifier
-            .size(10.dp)
-            .align(Alignment.TopEnd)     // 钉在右上角
-            .clip(CircleShape)
-            .background(Color.Red)
-    )
+ Icon(
+ Icons.Default.Notifications,
+ contentDescription = "通知",
+ modifier = Modifier.size(32.dp)
+ )
+ Box(
+ modifier = Modifier
+ .size(10.dp)
+ .align(Alignment.TopEnd) // 钉在右上角
+ .clip(CircleShape)
+ .background(Color.Red)
+ )
 }
 ```
 :::
@@ -477,31 +477,31 @@ Box 里的子项默认全部叠在同一个位置；想挪动某个子项，用 
 ```
 @Composable
 fun ChatRow(name: String, lastMessage: String, time: String) {
-    Card(modifier = Modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.padding(12.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Image(
-                painter = painterResource(R.drawable.avatar),
-                contentDescription = null,        // 行整体有文字，头像算装饰
-                modifier = Modifier
-                    .size(48.dp)
-                    .clip(CircleShape)
-            )
-            Spacer(Modifier.width(12.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(name, style = MaterialTheme.typography.titleMedium)
-                Text(
-                    lastMessage,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    style = MaterialTheme.typography.bodySmall
-                )
-            }
-            Text(time, style = MaterialTheme.typography.bodySmall)
-        }
-    }
+ Card(modifier = Modifier.fillMaxWidth()) {
+ Row(
+ modifier = Modifier.padding(12.dp),
+ verticalAlignment = Alignment.CenterVertically
+ ) {
+ Image(
+ painter = painterResource(R.drawable.avatar),
+ contentDescription = null, // 行整体有文字，头像算装饰
+ modifier = Modifier
+ .size(48.dp)
+ .clip(CircleShape)
+ )
+ Spacer(Modifier.width(12.dp))
+ Column(modifier = Modifier.weight(1f)) {
+ Text(name, style = MaterialTheme.typography.titleMedium)
+ Text(
+ lastMessage,
+ maxLines = 1,
+ overflow = TextOverflow.Ellipsis,
+ style = MaterialTheme.typography.bodySmall
+ )
+ }
+ Text(time, style = MaterialTheme.typography.bodySmall)
+ }
+ }
 }
 ```
 :::
@@ -549,15 +549,15 @@ ConstraintLayout 一行没列，因为多数界面用 Row、Column、Box 组合�
 ```
 @Composable
 fun Counter() {
-    // remember + mutableStateOf：记住这个会变化的值
-    var count by remember { mutableStateOf(0) }
+ // remember + mutableStateOf：记住这个会变化的值
+ var count by remember { mutableStateOf(0) }
 
-    Column {
-        Text(text = "你点了 $count 次")
-        Button(onClick = { count++ }) {   // 改状态
-            Text("点我 +1")                // 界面自动刷新
-        }
-    }
+ Column {
+ Text(text = "你点了 $count 次")
+ Button(onClick = { count++ }) { // 改状态
+ Text("点我 +1") // 界面自动刷新
+ }
+ }
 }
 ```
 :::
@@ -566,11 +566,11 @@ fun Counter() {
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> 用户点击</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 状态改变（count++）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 用户点击</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 状态改变（count++）</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> Compose 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 自动重画界面（重组）</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> Compose 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 自动重画界面（重组）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -618,17 +618,17 @@ var address by rememberSaveable { mutableStateOf("") }
 // 无状态版本：值从外面来，变化也交回外面
 @Composable
 fun Counter(count: Int, onIncrement: () -> Unit) {
-    Column {
-        Text("你点了 $count 次")
-        Button(onClick = onIncrement) { Text("点我 +1") }
-    }
+ Column {
+ Text("你点了 $count 次")
+ Button(onClick = onIncrement) { Text("点我 +1") }
+ }
 }
 
 // 有状态的调用方：状态住在这里
 @Composable
 fun CounterScreen() {
-    var count by remember { mutableStateOf(0) }
-    Counter(count = count, onIncrement = { count++ })
+ var count by remember { mutableStateOf(0) }
+ Counter(count = count, onIncrement = { count++ })
 }
 ```
 :::
@@ -667,35 +667,35 @@ fun CounterScreen() {
 ```
 @Composable
 fun MiniForm() {
-    var nickname by rememberSaveable { mutableStateOf("") }
-    var phone by rememberSaveable { mutableStateOf("") }
-    val canSubmit = nickname.isNotBlank() && phone.length == 11
+ var nickname by rememberSaveable { mutableStateOf("") }
+ var phone by rememberSaveable { mutableStateOf("") }
+ val canSubmit = nickname.isNotBlank() && phone.length == 11
 
-    Column(Modifier.padding(16.dp)) {
-        TextField(
-            value = nickname,
-            onValueChange = { nickname = it },
-            label = { Text("昵称") },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(Modifier.height(8.dp))
-        TextField(
-            value = phone,
-            onValueChange = { phone = it },
-            label = { Text("手机号") },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(Modifier.height(16.dp))
-        Button(
-            onClick = { /* 提交 */ },
-            enabled = canSubmit,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(if (canSubmit) "下一步" else "先填完整再点我")
-        }
-    }
+ Column(Modifier.padding(16.dp)) {
+ TextField(
+ value = nickname,
+ onValueChange = { nickname = it },
+ label = { Text("昵称") },
+ singleLine = true,
+ modifier = Modifier.fillMaxWidth()
+ )
+ Spacer(Modifier.height(8.dp))
+ TextField(
+ value = phone,
+ onValueChange = { phone = it },
+ label = { Text("手机号") },
+ singleLine = true,
+ modifier = Modifier.fillMaxWidth()
+ )
+ Spacer(Modifier.height(16.dp))
+ Button(
+ onClick = { /* 提交 */ },
+ enabled = canSubmit,
+ modifier = Modifier.fillMaxWidth()
+ ) {
+ Text(if (canSubmit) "下一步" else "先填完整再点我")
+ }
+ }
 }
 ```
 :::
@@ -718,7 +718,7 @@ Material 3 的配色是一套"槽位"系统：primary 是主色；onPrimary 是"
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：Material 3 动态取色
+小贴士：Material 3 动态取色
 
 {class="mt-1"}
 Android 12 起的"Material You"能让 App 从你的壁纸里提取颜色。Compose 模板默认支持（<code class="inline">dynamicColor</code>）。你的 App 在不同用户手机上会"自动换装"，这就是现代安卓的浪漫。
@@ -750,22 +750,22 @@ Compose 三个开发体验上的"外挂"，用上就回不去：
 ```
 @Composable
 fun AnimatedBox() {
-    var big by remember { mutableStateOf(false) }
-    // 值变化时自动平滑过渡到目标值
-    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+ var big by remember { mutableStateOf(false) }
+ // 值变化时自动平滑过渡到目标值
+ val size by animateDpAsState(if (big) 120.dp else 60.dp)
 
-    Box(Modifier
-        .size(size)
-        .background(MaterialTheme.colorScheme.primary)
-        .clickable { big = !big }
-    )
+ Box(Modifier
+ .size(size)
+ .background(MaterialTheme.colorScheme.primary)
+ .clickable { big = !big }
+ )
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先功能后动画
+小贴士：先功能后动画
 
 {class="mt-1"}
 新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效——这也是"简单至上"原则：<strong>动画是锦上添花，功能是雪中送炭</strong>。
@@ -783,13 +783,13 @@ fun AnimatedBox() {
 ```
 @Preview(showBackground = true, name = "浅色")
 @Preview(showBackground = true, name = "深色",
-         uiMode = Configuration.UI_MODE_NIGHT_YES)
+ uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Preview(showBackground = true, name = "大字体", fontScale = 1.3f)
 @Composable
 fun ChatRowPreview() {
-    MyFirstAppTheme {
-        ChatRow(name = "妈妈", lastMessage = "记得吃饭", time = "12:30")
-    }
+ MyFirstAppTheme {
+ ChatRow(name = "妈妈", lastMessage = "记得吃饭", time = "12:30")
+ }
 }
 ```
 :::
@@ -824,7 +824,7 @@ Compose 不是一个库，是一组库：ui、material3、foundation、ui-toolin
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 Compose 的难点不是控件 API，是「状态放在哪」。把这一句想清楚，大部分界面 bug 会自己消失。
@@ -832,7 +832,7 @@ Compose 的难点不是控件 API，是「状态放在哪」。把这一句想�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做一个"心情按钮"
+来动手：做一个"心情按钮"
 
 {class="mt-1"}
 把模板项目改成一个心情切换器：一个按钮，点击后在 😀开心 → 😢难过 → 😡生气 之间循环切换，文字和背景色跟着变。提示：用 <code class="inline">when</code> 根据状态选文案和颜色。做完发给朋友玩，收获第一波"哇你会做 App 了"。
@@ -868,7 +868,7 @@ Compose 执行你的函数时，会顺手记录"谁读了哪个状态"。状态�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 重组不可怕，可怕的是你亲手放在重组路径上的重活。
@@ -887,9 +887,9 @@ Compose 执行你的函数时，会顺手记录"谁读了哪个状态"。状态�
 val contacts = remember { listOf("张三", "李四", "王五", "赵六") }
 
 LazyColumn {
-    items(contacts, key = { it }) { name ->
-        ChatRow(name = name, lastMessage = "最近消息", time = "12:30")
-    }
+ items(contacts, key = { it }) { name ->
+ ChatRow(name = name, lastMessage = "最近消息", time = "12:30")
+ }
 }
 ```
 :::
@@ -924,18 +924,18 @@ LazyColumn {
 ```
 @Composable
 fun App() {
-    val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "list") {
-        composable("list") {
-            ContactListScreen(
-                onOpenDetail = { id -> navController.navigate("detail/$id") }
-            )
-        }
-        composable("detail/{id}") { entry ->
-            val id = entry.arguments?.getString("id")
-            DetailScreen(id = id, onBack = { navController.popBackStack() })
-        }
-    }
+ val navController = rememberNavController()
+ NavHost(navController = navController, startDestination = "list") {
+ composable("list") {
+ ContactListScreen(
+ onOpenDetail = { id -> navController.navigate("detail/$id") }
+ )
+ }
+ composable("detail/{id}") { entry ->
+ val id = entry.arguments?.getString("id")
+ DetailScreen(id = id, onBack = { navController.popBackStack() })
+ }
+ }
 }
 ```
 :::
@@ -950,7 +950,7 @@ A 页面跳到 B 页面、B 把选择结果带回 A 的场景（比如从地址�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别自己发明"页面切换"
+避坑提醒：别自己发明"页面切换"
 
 {class="mt-1"}
 有人图省事，用一个状态变量 if/else 换整屏内容：返回键失灵、状态丢失、切换动画要手写，老式写法的坑一个不少。页面归属导航系统管，界面归属 Composable 管，别越界。
@@ -992,37 +992,37 @@ A 页面跳到 B 页面、B 把选择结果带回 A 的场景（比如从地址�
 ```
 @Composable
 fun OrderScreen() {
-    var quantity by remember { mutableStateOf(1) }
+ var quantity by remember { mutableStateOf(1) }
 
-    Column(Modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(R.drawable.latte),
-            contentDescription = "燕麦拿铁商品图",
-            modifier = Modifier.fillMaxWidth().height(220.dp),
-            contentScale = ContentScale.Crop
-        )
-        Column(Modifier.padding(16.dp)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("燕麦拿铁", style = MaterialTheme.typography.headlineSmall)
-                Spacer(Modifier.weight(1f))
-                Text(
-                    "￥28",
-                    style = MaterialTheme.typography.titleLarge,
-                    color = MaterialTheme.colorScheme.primary
-                )
-            }
-            Text(
-                "中度烘焙，丝滑燕麦，冰热可选。",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(top = 8.dp)
-            )
-        }
-        Spacer(Modifier.weight(1f))     // 弹簧：把按钮推到最底
-        Button(
-            onClick = { /* 加入购物车 */ },
-            modifier = Modifier.fillMaxWidth().padding(16.dp)
-        ) { Text("加入购物车") }
-    }
+ Column(Modifier.fillMaxSize()) {
+ Image(
+ painter = painterResource(R.drawable.latte),
+ contentDescription = "燕麦拿铁商品图",
+ modifier = Modifier.fillMaxWidth().height(220.dp),
+ contentScale = ContentScale.Crop
+ )
+ Column(Modifier.padding(16.dp)) {
+ Row(verticalAlignment = Alignment.CenterVertically) {
+ Text("燕麦拿铁", style = MaterialTheme.typography.headlineSmall)
+ Spacer(Modifier.weight(1f))
+ Text(
+ "￥28",
+ style = MaterialTheme.typography.titleLarge,
+ color = MaterialTheme.colorScheme.primary
+ )
+ }
+ Text(
+ "中度烘焙，丝滑燕麦，冰热可选。",
+ style = MaterialTheme.typography.bodyMedium,
+ modifier = Modifier.padding(top = 8.dp)
+ )
+ }
+ Spacer(Modifier.weight(1f)) // 弹簧：把按钮推到最底
+ Button(
+ onClick = { /* 加入购物车 */ },
+ modifier = Modifier.fillMaxWidth().padding(16.dp)
+ ) { Text("加入购物车") }
+ }
 }
 ```
 :::
@@ -1038,9 +1038,9 @@ fun OrderScreen() {
 
 ```
 Row(verticalAlignment = Alignment.CenterVertically) {
-    OutlinedButton(onClick = { if (quantity > 1) quantity-- }) { Text("−") }
-    Text("  $quantity  ", style = MaterialTheme.typography.titleMedium)
-    OutlinedButton(onClick = { quantity++ }) { Text("+") }
+ OutlinedButton(onClick = { if (quantity > 1) quantity-- }) { Text("−") }
+ Text(" $quantity ", style = MaterialTheme.typography.titleMedium)
+ OutlinedButton(onClick = { quantity++ }) { Text("+") }
 }
 ```
 :::
@@ -1065,7 +1065,7 @@ quantity 是状态，两个按钮只改状态，数字自动跟着变。注意�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：翻译你自己的设计稿
+来动手：翻译你自己的设计稿
 
 {class="mt-1"}
 打开一个你常用的 App，截一张页面，在纸上拆出盒子（哪里 Column、哪里 Row、哪里 Box），再用 Compose 把它写出来，配上 @Preview 的浅色/深色/大字体三个预览。不用做得一模一样，骨架对就行。
@@ -1139,24 +1139,24 @@ quantity 是状态，两个按钮只改状态，数字自动跟着变。注意�
 ```
 @Composable
 fun MealPicker() {
-    var meal by rememberSaveable { mutableStateOf("还没抽") }
+ var meal by rememberSaveable { mutableStateOf("还没抽") }
 
-    Column(
-        modifier = Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(meal, style = MaterialTheme.typography.displaySmall)
-        Spacer(Modifier.height(32.dp))
-        Button(
-            onClick = {
-                meal = listOf("番茄炒蛋", "青椒肉丝", "清蒸鲈鱼").random()
-            },
-            modifier = Modifier.height(64.dp)
-        ) {
-            Text("今天吃什么", style = MaterialTheme.typography.titleLarge)
-        }
-    }
+ Column(
+ modifier = Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally,
+ verticalArrangement = Arrangement.Center
+ ) {
+ Text(meal, style = MaterialTheme.typography.displaySmall)
+ Spacer(Modifier.height(32.dp))
+ Button(
+ onClick = {
+ meal = listOf("番茄炒蛋", "青椒肉丝", "清蒸鲈鱼").random()
+ },
+ modifier = Modifier.height(64.dp)
+ ) {
+ Text("今天吃什么", style = MaterialTheme.typography.titleLarge)
+ }
+ }
 }
 ```
 :::
@@ -1189,17 +1189,17 @@ fun MealPicker() {
 ```
 @Composable
 fun FeedScreen(loading: Boolean) {
-    if (loading) {
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            CircularProgressIndicator()
-        }
-    } else {
-        LazyColumn {
-            items(posts, key = { it.id }) { post ->
-                PostRow(post)
-            }
-        }
-    }
+ if (loading) {
+ Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+ CircularProgressIndicator()
+ }
+ } else {
+ LazyColumn {
+ items(posts, key = { it.id }) { post ->
+ PostRow(post)
+ }
+ }
+ }
 }
 ```
 :::
@@ -1260,7 +1260,7 @@ fun FeedScreen(loading: Boolean) {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 先把界面做对，再做好看，最后才做花，顺序反了，三样都保不住。
@@ -1279,7 +1279,7 @@ fun FeedScreen(loading: Boolean) {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 不刷新，先查状态链；链没断，再查重组——顺序别反。
@@ -1287,7 +1287,7 @@ fun FeedScreen(loading: Boolean) {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - Compose 思想：界面 = @Composable 函数，积木式嵌套
 - 四大组件：Text / Button / TextField / Image

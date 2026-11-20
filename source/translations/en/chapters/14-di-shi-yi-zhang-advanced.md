@@ -102,7 +102,7 @@ When shooting HDR video, you need an HDR-capable display to see the full effect.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Practical Advice
+Practical Advice
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Everyday shooting: 1080P/4K + 30fps + H.265 encoding, balancing quality and file size.
@@ -113,7 +113,7 @@ When shooting HDR video, you need an HDR-capable display to see the full effect.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Explore: Your Phone's Video Settings
+Explore: Your Phone's Video Settings
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Open the Camera app and switch to video mode.
@@ -241,7 +241,7 @@ Beyond everyday photography, your phone has several special modes that, when use
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Practical Tips for Still Photography
+Practical Tips for Still Photography
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Daily shooting: HEIF/JPEG default is fine, small file size and adequate quality.
@@ -253,7 +253,7 @@ Beyond everyday photography, your phone has several special modes that, when use
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Try It Yourself: Understand Your Camera's Capabilities
+Try It Yourself: Understand Your Camera's Capabilities
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Check if your phone supports RAW shooting (Settings → Camera → Format). Try enabling it and take a shot, then compare the JPEG and RAW file sizes of the same scene.

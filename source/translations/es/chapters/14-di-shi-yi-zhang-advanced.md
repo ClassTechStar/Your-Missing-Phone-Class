@@ -102,7 +102,7 @@ Al grabar video HDR, necesitas un monitor compatible con HDR para ver el efecto 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Consejos prácticos
+Consejos prácticos
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Grabación diaria: 1080P/4K + 30fps + codificación H.265; equilibra calidad y tamaño de archivo.
@@ -113,7 +113,7 @@ Al grabar video HDR, necesitas un monitor compatible con HDR para ver el efecto 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Explora: ajustes de video de tu móvil
+Explora: ajustes de video de tu móvil
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Abre la App de cámara, cambia al modo video.
@@ -241,7 +241,7 @@ Ademas de las fotos cotidianas, el telefono tiene varios modos especiales que, u
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Practical tips for still photography
+Practical tips for still photography
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - : For everyday shooting: the default HEIF/JPEG is fine; small file and sufficient quality.
@@ -253,7 +253,7 @@ Ademas de las fotos cotidianas, el telefono tiene varios modos especiales que, u
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-on: get to know your camera capabilities
+Hands-on: get to know your camera capabilities
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Comprueba si tu telefono soporta disparo en RAW (Ajustes &gt; Camara &gt; Formato), activa la opcion y dispara una foto; compara el tamano del archivo JPEG y del RAW en la misma escena.

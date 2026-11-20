@@ -98,7 +98,7 @@ La qualità delle risposte dell'IA dipende in gran parte da come "poni la domand
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>Perché serve un framework?
+Perché serve un framework?
 
 {class="mt-1"}
 Molti usano l'IA come usano Baidu — inserendo qualche parola chiave. Ma l'IA non è un motore di ricerca. È un modello linguistico che "legge, comprende e poi risponde". <strong>Dandole più contesto, dicendo chiaramente cosa vuoi e limitandola per evitare derive</strong>, otterrai risultati precisi. Il framework serve a tradurre nella tua mente "come dev'essere una buona risposta" in istruzioni comprensibili all'IA.
@@ -198,39 +198,39 @@ Scrivere bene i prompt non è un'operazione una tantum: <strong>prima di inviarl
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Sintomo</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">Soluzione</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Risposta troppo generica, poco pratica</td>
-                                    <td class="border border-gray-300 px-3 py-2">Aggiungi background (chi sei / in quale scenario)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Risposta troppo accademica / troppo formale</td>
-                                    <td class="border border-gray-300 px-3 py-2">Aggiungi vincoli di tono + una lista di espressioni da evitare</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Risposta fuori tema / non risponde alla domanda</td>
-                                    <td class="border border-gray-300 px-3 py-2">Riformula il compito con un verbo e chiedi "rispondi solo a questo" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Risposta troppo lunga, non finibile</td>
-                                    <td class="border border-gray-300 px-3 py-2">Limita rigidamente le parole (massimo 200)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">L'IA finge con aria seria</td>
-                                    <td class="border border-gray-300 px-3 py-2">Aggiungi "se non sei sicuro, scrivi 'non sono sicuro'" + verifica autonoma dei fatti importanti</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">Prima versione insoddisfacente</td>
-                                    <td class="border border-gray-300 px-3 py-2">Non riscrivere, aggiungi al prompt originale "un po' più..."</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">Sintomo</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">Soluzione</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Risposta troppo generica, poco pratica</td>
+ <td class="border border-gray-300 px-3 py-2">Aggiungi background (chi sei / in quale scenario)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Risposta troppo accademica / troppo formale</td>
+ <td class="border border-gray-300 px-3 py-2">Aggiungi vincoli di tono + una lista di espressioni da evitare</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Risposta fuori tema / non risponde alla domanda</td>
+ <td class="border border-gray-300 px-3 py-2">Riformula il compito con un verbo e chiedi "rispondi solo a questo" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Risposta troppo lunga, non finibile</td>
+ <td class="border border-gray-300 px-3 py-2">Limita rigidamente le parole (massimo 200)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">L'IA finge con aria seria</td>
+ <td class="border border-gray-300 px-3 py-2">Aggiungi "se non sei sicuro, scrivi 'non sono sicuro'" + verifica autonoma dei fatti importanti</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">Prima versione insoddisfacente</td>
+ <td class="border border-gray-300 px-3 py-2">Non riscrivere, aggiungi al prompt originale "un po' più..."</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ Scrivere bene i prompt non è un'operazione una tantum: <strong>prima di inviarl
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>Scenario 1: assistente di vita (consigli per la colazione)
+Scenario 1: assistente di vita (consigli per la colazione)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -253,7 +253,7 @@ Sei un blogger di colazione esperto di abbinamenti nutrizionali (<strong>ruolo</
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>Scenario 2: supporto allo studio (preparazione all'esame di inglese di Livello 6)
+Scenario 2: supporto allo studio (preparazione all'esame di inglese di Livello 6)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -267,7 +267,7 @@ Sei un <strong>professore di inglese di Livello 6 con molta esperienza</strong> 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>Scenario 3: efficienza sul lavoro (riassunto del verbale di riunione)
+Scenario 3: efficienza sul lavoro (riassunto del verbale di riunione)
 
 {class="mt-1"}
 <strong>Prompt</strong>:
@@ -281,7 +281,7 @@ Sei un <strong>assistente amministrativo senior</strong> (ruolo). Ho appena term
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>Usi avanzati: rendi l'IA il tuo "assistente personale"
+Usi avanzati: rendi l'IA il tuo "assistente personale"
 
 {class="mt-1"}
 Prova questi usi avanzati per sperimentare la vera forza dell'IA:
@@ -305,7 +305,7 @@ Anche se potente, l'IA non è affatto "onnipotente". Riconoscere lucidamente i s
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Suggerimenti per l'uso dell'IA
+Suggerimenti per l'uso dell'IA
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - I contenuti generati dall'IA possono essere inaccurati (problema delle "allucinazioni"): verifica sempre le informazioni importanti.
@@ -317,7 +317,7 @@ Anche se potente, l'IA non è affatto "onnipotente". Riconoscere lucidamente i s
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Sfida: tre esercizi pratici con l'IA
+Sfida: tre esercizi pratici con l'IA
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Sfida 1: istruzioni complesse</strong>: dì all'assistente vocale: "Domani alle 7 ricordami di portare l'ombrello e sposta l'appuntamento delle 15 di oggi pomeriggio alle 16." Verifica se riesce a completare operazioni multi-step in una volta sola.
@@ -327,7 +327,7 @@ Anche se potente, l'IA non è affatto "onnipotente". Riconoscere lucidamente i s
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Caso 2: flusso completo di migrazione dati al cambio telefono
+Caso 2: flusso completo di migrazione dati al cambio telefono
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: iPhone 13 → Xiaomi 15, cambio cross-brand.

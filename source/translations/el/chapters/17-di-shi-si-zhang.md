@@ -46,7 +46,7 @@ AES(προηγμένος Κρυπτογράφηση)Τεχνολογία(NIST)Κ
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Γιατί ο «μηδενικής γνώσης» σημαίνει ότι ο πάροχος δεν βλέπει τους κωδικούς σας;
+Γιατί ο «μηδενικής γνώσης» σημαίνει ότι ο πάροχος δεν βλέπει τους κωδικούς σας;
 
 {class="mt-1"}
 Αποκρυπτογράφηση Κωδικός, Κωδικός, τοπικό Συσκευή.Διακομιστής Κωδικός, Αποκρυπτογράφηση. Bitwarden,1Password "Κωδικός",,Τεχνολογία.
@@ -71,7 +71,7 @@ AES(προηγμένος Κρυπτογράφηση)Τεχνολογία(NIST)Κ
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Τι μάθαμε από το περιστατικό LastPass
+Τι μάθαμε από το περιστατικό LastPass
 
 {class="mt-1"}
 ,Κωδικός(Συμβουλές 16 , ψηφιακό,); Argon2id, (,)ενεργοποίηση επαλήθευση, Διαχειριστής κωδικών.
@@ -118,7 +118,7 @@ AES(προηγμένος Κρυπτογράφηση)Τεχνολογία(NIST)Κ
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Αρχή ερωτήματος k-Anonymity
+Αρχή ερωτήματος k-Anonymity
 
 {class="mt-1"}
 HaveIBeenPwned είσοδος Κωδικός?."k-"Πρωτόκολλο: Browser Κωδικός Hash 5 Διακομιστής, Διακομιστής Επιστροφή 5 Hash, τοπικό.,Διακομιστής Κωδικός Hash.1Password, Bitwarden "Κωδικός".
@@ -133,7 +133,7 @@ HaveIBeenPwned είσοδος Κωδικός?."k-"Πρωτόκολλο: Browser 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Ελέγξτε τώρα: Είναι ασφαλείς οι κωδικοί σας;
+Ελέγξτε τώρα: Είναι ασφαλείς οι κωδικοί σας;
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. άνοιγμα haveibeenpwned.com, είσοδος.
@@ -159,36 +159,36 @@ HaveIBeenPwned είσοδος Κωδικός?."k-"Πρωτόκολλο: Browser 
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Διάσταση</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Παραδοσιακός κωδικός</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Αντίσταση σε phishing</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Χαμηλή, τα sites phishing κλέβουν κωδικούς</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εγγενής αντίσταση, το ιδιωτικό κλειδί υπογράφει μόνο το πραγματικό domain</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Επίπτωση διαρροής διακομιστή</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τα hashes κωδικών μπορεί να σπάσουν</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ο διακομιστής αποθηκεύει μόνο δημόσια κλειδιά, καμία επίπτωση</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ευκολία</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απαιτεί μνήμη/εισαγωγή/διαχείριση</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σύνδεση σε ένα δευτερόλεπτο με Face ID/δακτυλικό</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Επίθεση replay</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μπορεί να παγιδευτεί από man-in-the-middle</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κάθε υπογραφή είναι εφάπαξ, αδύνατο replay</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Διάσταση</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Παραδοσιακός κωδικός</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Αντίσταση σε phishing</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Χαμηλή, τα sites phishing κλέβουν κωδικούς</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Εγγενής αντίσταση, το ιδιωτικό κλειδί υπογράφει μόνο το πραγματικό domain</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Επίπτωση διαρροής διακομιστή</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Τα hashes κωδικών μπορεί να σπάσουν</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ο διακομιστής αποθηκεύει μόνο δημόσια κλειδιά, καμία επίπτωση</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Ευκολία</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Απαιτεί μνήμη/εισαγωγή/διαχείριση</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Σύνδεση σε ένα δευτερόλεπτο με Face ID/δακτυλικό</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Επίθεση replay</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Μπορεί να παγιδευτεί από man-in-the-middle</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Κάθε υπογραφή είναι εφάπαξ, αδύνατο replay</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Υποστήριξη ανά πλατφόρμα
@@ -200,7 +200,7 @@ HaveIBeenPwned είσοδος Κωδικός?."k-"Πρωτόκολλο: Browser 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Ο διαθεματικός συγχρονισμός είναι η κρίσιμη ανακάλυψη
+Ο διαθεματικός συγχρονισμός είναι η κρίσιμη ανακάλυψη
 
 {class="mt-1"}
 Passkey "Συσκευή",,.2023 Apple, Google, Microsoft Passkey cloud συγχρονισμός:iCloud συγχρονισμός Apple Συσκευή, Google Διαχειριστής κωδικών συγχρονισμός Συσκευή.1Password τρίτου συγχρονισμός. Passkey Κωδικός.
@@ -236,7 +236,7 @@ Bluetooth+Κρυπτογράφηση, Passkey iPhone.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκιμάστε τώρα: Εμπειρία σύνδεσης χωρίς κωδικό
+Δοκιμάστε τώρα: Εμπειρία σύνδεσης χωρίς κωδικό
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Google → Ασφάλεια → → Προσθήκη, Face ID/.
@@ -247,7 +247,7 @@ Bluetooth+Κρυπτογράφηση, Passkey iPhone.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Συμβουλές μεταβατικής περιόδου
+Συμβουλές μεταβατικής περιόδου
 
 {class="mt-1"}
 Passkey Κωδικός,,"Passkey + Κωδικός".Συμβουλές: ενεργοποίηση Passkey,<strong>Μην διαγράψετε αμέσως τους παραδοσιακούς κωδικούς</strong>, Διαχειριστής κωδικών, Passkey. Passkey "Διαχειριστής κωδικών """.
@@ -295,7 +295,7 @@ Passkey Κωδικός,,"Passkey + Κωδικός".Συμβουλές: ενερ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Στρατηγική διπλού κλειδιού
+Στρατηγική διπλού κλειδιού
 
 {class="mt-1"}
 "".Συμβουλές:① ;② (), ③ επιτρέπεται "επαναφορά"Εκτύπωσηεκτός σύνδεσης αποθήκευση..
@@ -303,7 +303,7 @@ Passkey Κωδικός,,"Passkey + Κωδικός".Συμβουλές: ενερ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Προσοχή στο κανάλι αγοράς
+Προσοχή στο κανάλι αγοράς
 
 {class="mt-1"}
 επίσημο Εξουσιοδότηση,:,.YubiKey Firmware ενημέρωση, Yubico Ασφάλεια Ανακοίνωση.
@@ -336,7 +336,7 @@ Bitwarden δωρεάν άτομο Κωδικός(" Send"Λειτουργία Κ�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Αξία για χρήμα του 1Password Families
+Αξία για χρήμα του 1Password Families
 
 {class="mt-1"}
 1Password Families 4.99 /, 5 οικογένεια Μέλος, + 4 . 1 /,οικογένεια Λύση.Bitwarden οικογένεια 10 / 6 , .
@@ -369,7 +369,7 @@ Bitwarden δωρεάν άτομο Κωδικός(" Send"Λειτουργία Κ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Ρυθμίστε τώρα: Αφήστε ένα «εφεδρικό κλειδί» για την οικογένεια
+Ρυθμίστε τώρα: Αφήστε ένα «εφεδρικό κλειδί» για την οικογένεια
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Επιλέξτε έναν έμπιστο συγγενή ως «επαφή επείγουσας πρόσβασης».
@@ -388,7 +388,7 @@ Bitwarden δωρεάν άτομο Κωδικός(" Send"Λειτουργία Κ�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Σημαντική υπενθύμιση
+Σημαντική υπενθύμιση
 
 {class="mt-1"}
 Ο διαχειριστής κωδικών αν και βολικός, έχει κινδύνους: αν ο κύριος κωδικός διαρρεύσει, όλοι οι κωδικοί εκτίθενται. Επομένως ο κύριος κωδικός δεν πρέπει ποτέ να είναι ίδιος με άλλους κωδικούς, ούτε να γράφεται σε μέρη που βρίσκονται εύκολα. Επιπλέον, συνιστάται να επιλέγετε παρόχους με καλό ιστορικό ασφαλείας.
@@ -396,7 +396,7 @@ Bitwarden δωρεάν άτομο Κωδικός(" Send"Λειτουργία Κ�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκιμάστε τώρα: ξεκινήστε διαχειριστή κωδικών
+Δοκιμάστε τώρα: ξεκινήστε διαχειριστή κωδικών
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Επιλέξτε διαχειριστή κωδικών (Bitwarden ή ενσωματωμένο).

@@ -35,20 +35,20 @@ Panorama de las herramientas de estado de SwiftUI (en 2026, @Observable ya es lo
 import Observation
 
 @Observable
-class CounterModel {                 // el view model
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // el view model
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // mantiene el modelo
+ @State private var model = CounterModel() // mantiene el modelo
 
-    var body: some View {
-        VStack {
-            Text("Has pulsado \(model.count) veces")
-            Button("Púlsame") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("Has pulsado \(model.count) veces")
+ Button("Púlsame") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ Desde iOS 16, la navegación multipágina usa NavigationStack: funciona como una
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Las cuentas de Luis") {
-                    DetailView(name: "Las cuentas de Luis")   // página destino
-                }
-                NavigationLink("Las cuentas de María") {
-                    DetailView(name: "Las cuentas de María")
-                }
-            }
-            .navigationTitle("Lista de cuentas")   // título grande arriba
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("Las cuentas de Luis") {
+ DetailView(name: "Las cuentas de Luis") // página destino
+ }
+ NavigationLink("Las cuentas de María") {
+ DetailView(name: "Las cuentas de María")
+ }
+ }
+ .navigationTitle("Lista de cuentas") // título grande arriba
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("Detalles de \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("Detalles de \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ Además de «empujar páginas», hay dos interacciones clásicas:
 ```
 // 1. hoja que sube desde abajo, media pantalla o completa (la favorita de los formularios de alta)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("Apuntar gasto") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // la pantalla de alta que se abre
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("Apuntar gasto") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // la pantalla de alta que se abre
+ }
+ }
 }
 
 // 2. barra de pestañas inferior (el "esqueleto" de la app)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("Cuentas", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("Estadísticas", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("Ajustes", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("Cuentas", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("Estadísticas", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("Ajustes", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ El componente más usado y con más «sabor Apple» de iOS es List: trae de fáb
 
 ```
 struct RecordListView: View {
-    @State private var records = ["Comida 25.5", "Metro 6.0", "Nómina +8000"]
+ @State private var records = ["Comida 25.5", "Metro 6.0", "Nómina +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // desliza a la izquierda para borrar
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // desliza a la izquierda para borrar
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ Como el ciclo de vida de las Activity de Android, las apps de iOS también pasan
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("vuelta a primer plano: reanudar el refresco")
-            case .inactive:  print("en transición (llamada o el instante en que pasa a segundo plano)")
-            case .background: print("pasa a segundo plano: guardar el borrador")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("vuelta a primer plano: reanudar el refresco")
+ case .inactive: print("en transición (llamada o el instante en que pasa a segundo plano)")
+ case .background: print("pasa a segundo plano: guardar el borrador")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

@@ -208,41 +208,41 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דפדפן</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">נקודות חוזק</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">קהל יעד</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ליבת Chromium + Copilot AI מובנה, מסכם עמודים/מתרגם/משוחח</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">עובדי משרד שמחפשים יעילות, משתמשי AI כבדים (מומלץ כראשי)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אינטגרציה עמוקה עם Apple, חיסכון באנרגיה, פרטיות חזקה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשי iPhone/Mac, שמים דגש על סוללה וקישוריות מערכת</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שיעור השימוש הגבוה ביותר בעולם, מערכת התוספים העשירה ביותר</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשים מתקדמים שצריכים הרבה תוספים, אוהבי סנכרון בין מכשירים</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חוסם פרסומות ועוקבים כברירת מחדל, מהיר יותר</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מי ששם דגש על פרטיות ורוצה לחסום פרסומות בלי התקנת תוספים</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מנוע חיפוש מובנה לא שומר היסטוריה, ניקוי עקבות בלחיצה אחת</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשים רגישים לפרטיות שלא רוצים מעקב מותאם אישית</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דפדפן</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">נקודות חוזק</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">קהל יעד</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ליבת Chromium + Copilot AI מובנה, מסכם עמודים/מתרגם/משוחח</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">עובדי משרד שמחפשים יעילות, משתמשי AI כבדים (מומלץ כראשי)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אינטגרציה עמוקה עם Apple, חיסכון באנרגיה, פרטיות חזקה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשי iPhone/Mac, שמים דגש על סוללה וקישוריות מערכת</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">שיעור השימוש הגבוה ביותר בעולם, מערכת התוספים העשירה ביותר</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשים מתקדמים שצריכים הרבה תוספים, אוהבי סנכרון בין מכשירים</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חוסם פרסומות ועוקבים כברירת מחדל, מהיר יותר</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מי ששם דגש על פרטיות ורוצה לחסום פרסומות בלי התקנת תוספים</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מנוע חיפוש מובנה לא שומר היסטוריה, ניקוי עקבות בלחיצה אחת</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משתמשים רגישים לפרטיות שלא רוצים מעקב מותאם אישית</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -291,46 +291,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פלטפורמה</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">נתיב כניסה</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מומלץ להפעיל</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[הגדרות] > [טלפון] / [הודעות]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">השתקת שיחות לא מזוהות; אנשי קשר חסומים; "סינון שולחים לא מזוהים" בהודעות</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית טלפון > הגדרות > חסימת שיחות; או מרכז אבטחה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימה חכמה, ניתוק שיחה אחת ממספר לא מזוהה, סינון SMS לפי מילות מפתח</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טלפון > חסימת שיחות; מנהל טלפון > חסימת שיחות</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">זיהוי מתקשר, רשימה שחורה, חסימת SMS חכמה</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית טלפון > חסימת שיחות; או מכשיר זה > חסימת שיחות</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימת שיחות, זיהוי שיחות הונאה, כללי חסימת SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טלפון > חסימת שיחות זבל; iManager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימת שיחות, אזהרת שיחות הונאה, סינון הודעות</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טלפון > הגדרות > חסימת מספרים / זיהוי מתקשר ושיחות זבל</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימת מספרים לא מזוהים, זיהוי שיחות זבל (תמיכה משתנה לפי אזור)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פלטפורמה</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">נתיב כניסה</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מומלץ להפעיל</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[הגדרות] > [טלפון] / [הודעות]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">השתקת שיחות לא מזוהות; אנשי קשר חסומים; "סינון שולחים לא מזוהים" בהודעות</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית טלפון > הגדרות > חסימת שיחות; או מרכז אבטחה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימה חכמה, ניתוק שיחה אחת ממספר לא מזוהה, סינון SMS לפי מילות מפתח</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טלפון > חסימת שיחות; מנהל טלפון > חסימת שיחות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">זיהוי מתקשר, רשימה שחורה, חסימת SMS חכמה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית טלפון > חסימת שיחות; או מכשיר זה > חסימת שיחות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימת שיחות, זיהוי שיחות הונאה, כללי חסימת SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טלפון > חסימת שיחות זבל; iManager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימת שיחות, אזהרת שיחות הונאה, סינון הודעות</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טלפון > הגדרות > חסימת מספרים / זיהוי מתקשר ושיחות זבל</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">חסימת מספרים לא מזוהים, זיהוי שיחות זבל (תמיכה משתנה לפי אזור)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -394,46 +394,46 @@ kind: chapter
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פלטפורמה</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">כניסה נפוצה</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">הערה</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מנהל טלפון / מרכז אבטחה > התראת רעידות אדמה; או חיפוש "רעידת אדמה" בהגדרות</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בחלק מהגרסאות שירות התראה מובנה, דורש חיבור רשת והפעלת מיקום</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות > אבטחה > התראת חירום / התראת רעידות אדמה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">השם עשוי להיות "התראת חירום", כולל רעידות אדמה</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות > אבטחה (SOS) > התראת רעידות אדמה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תלוי בדגם ובכיסוי השירות באזור</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית מזג אוויר או הגדרות > אבטחה/עוד > התראת רעידות אדמה</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לפי תפריט גרסת המערכת בפועל</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בדרך כלל אין מתג מובנה מלא; התקינו אפליקציית התראה אמינה ואשרו התראות</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">האפליקציה צריכה לפעול ברקע והרשאות מיקום; אל תחסמו את ההתראות שלה ב"לא להפריע"</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung ועוד</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות > אבטחה וחירום / התראות חירום אלחוטיות</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כיסוי "התראות חירום" משתנה לפי אזור וספק</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פלטפורמה</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">כניסה נפוצה</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">הערה</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מנהל טלפון / מרכז אבטחה > התראת רעידות אדמה; או חיפוש "רעידת אדמה" בהגדרות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בחלק מהגרסאות שירות התראה מובנה, דורש חיבור רשת והפעלת מיקום</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות > אבטחה > התראת חירום / התראת רעידות אדמה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">השם עשוי להיות "התראת חירום", כולל רעידות אדמה</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות > אבטחה (SOS) > התראת רעידות אדמה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">תלוי בדגם ובכיסוי השירות באזור</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אפליקציית מזג אוויר או הגדרות > אבטחה/עוד > התראת רעידות אדמה</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לפי תפריט גרסת המערכת בפועל</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בדרך כלל אין מתג מובנה מלא; התקינו אפליקציית התראה אמינה ואשרו התראות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">האפליקציה צריכה לפעול ברקע והרשאות מיקום; אל תחסמו את ההתראות שלה ב"לא להפריע"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung ועוד</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הגדרות > אבטחה וחירום / התראות חירום אלחוטיות</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">כיסוי "התראות חירום" משתנה לפי אזור וספק</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3

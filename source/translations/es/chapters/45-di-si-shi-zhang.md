@@ -76,12 +76,12 @@ Una app ligera de control de gastos personales que permite registrar ingresos y 
 - Build: Vite
 ## Modelo de datos
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## Plan de desarrollo
 Step 1: registro básico de movimientos (CRUD)

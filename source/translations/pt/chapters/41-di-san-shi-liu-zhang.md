@@ -36,35 +36,35 @@ Protocolo é "língua"; ecossistema é "círculo". Mesmo com Matter, você escol
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                    <thead>
-                        <tr class="bg-light dark:bg-gray-700">
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ecossistema</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pontos fortes</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Limites</th>
-                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Público</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Máxima privacidade (processamento local), integração fluida com iPhone/Siri/Atalhos</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menos aparelhos e mais caros; exige HomePod ou Apple TV como hub</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Casas 100% Apple que valorizam privacidade e experiência</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Maior variedade, ótimo custo-benefício, assistente Xiao AI competente</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecossistema mais fechado, muitos dados na nuvem e mais anúncios</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Iniciantes com orçamento limitado que querem equipar a casa de uma vez</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fluxo perfeito com celulares/tablets/relógios HarmonyOS; catálogo em rápida expansão</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menos aparelhos fora da China; ecossistema ainda em construção</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuários de celular Huawei que querem o "Super Device"</td>
-                        </tr>
-                    </tbody>
-                </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ecossistema</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pontos fortes</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Limites</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Público</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Máxima privacidade (processamento local), integração fluida com iPhone/Siri/Atalhos</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menos aparelhos e mais caros; exige HomePod ou Apple TV como hub</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Casas 100% Apple que valorizam privacidade e experiência</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home (Xiaomi)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Maior variedade, ótimo custo-benefício, assistente Xiao AI competente</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Ecossistema mais fechado, muitos dados na nuvem e mais anúncios</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Iniciantes com orçamento limitado que querem equipar a casa de uma vez</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink (HarmonyOS)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Fluxo perfeito com celulares/tablets/relógios HarmonyOS; catálogo em rápida expansão</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menos aparelhos fora da China; ecossistema ainda em construção</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Usuários de celular Huawei que querem o "Super Device"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -80,7 +80,7 @@ Escolha pelo celular: iPhone → HomeKit; Huawei → HiLink; outros Androids →
 Na maioria dos casos iniciantes, o celular é o seu hub: controla luzes, ar, cortinas e segurança pelo app e cria automações para a casa "se mexer sozinha":
 
 - Controle: abra HomeKit/Mi Home/Smart Life para ligar luzes, ajustar cor e temperatura, definir o ar, abrir/fechar cortinas e ver câmeras, à distância ou na rede local.
-- Automações: combine "condição → ação". Três clássicas: |   |  Modo Chegada: localização em casa + escureceu → luz da entrada + ar + cortinas + trancar a porta.
+- Automações: combine "condição → ação". Três clássicas: | | Modo Chegada: localização em casa + escureceu → luz da entrada + ar + cortinas + trancar a porta.
 - Modo Saída: o último a sair (geolocalização ou porta trancada) → apagar luzes + desligar ar + desligar tomadas + ativar câmeras + armar.
 - Modo Dormir: toda noite às 23:00 → apagar luzes principais + fechar cortinas + ar a 26 °C + luz noturna.
 

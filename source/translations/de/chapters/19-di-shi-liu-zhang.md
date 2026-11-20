@@ -44,7 +44,7 @@ Ein wichtiger Hinweis: Die iCloud-Fotomediathek ist keine „Cloud-Festplatte" �
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+: Die drei Datenschutz-Funktionen fuer zahlende Nutzer
+iCloud+: Die drei Datenschutz-Funktionen fuer zahlende Nutzer
 
 {class="mt-1"}
 Wenn du auf einen beliebigen kostenpflichtigen iCloud-Tarif (50 GB/200 GB/2 TB) upgradest, wirst du automatisch zu einem <strong>iCloud+</strong>-Nutzer und erhaeltst drei Datenschutz-Funktionen:
@@ -60,7 +60,7 @@ Hinweis: Private Relay ist in einigen Laendern/Regionen nicht verfuegbar; Nutzer
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud Advanced Data Protection (ADP) – Echte Ende-zu-Ende-Verschluesselung
+iCloud Advanced Data Protection (ADP) – Echte Ende-zu-Ende-Verschluesselung
 
 {class="mt-1"}
 Ende 2022 stellte Apple <strong>iCloud Advanced Data Protection (ADP)</strong> vor, das die Ende-zu-Ende-Verschluesselung (E2EE) von bisherigen wenigen Daten (Gesundheit, Passwoerter) auf <strong>den Großteil der iCloud-Daten</strong> ausweitete – Fotos, Notizen, iCloud-Backups, Geraeteinformationen und insgesamt 23 Datenkategorien.
@@ -99,7 +99,7 @@ Ein praktisches Szenario: Richten Sie auf dem Smartphone Ihrer Eltern die Famili
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Die Folgen eines Kontohacks sind gravierender als Sie denken
+Die Folgen eines Kontohacks sind gravierender als Sie denken
 
 {class="mt-1"}
 Wenn ein Hacker Ihr Passwort hat, kann er: Ihr Smartphone aus der Ferne sperren und Lösegeld erpressen; Ihre Fotos und Kontakte einsehen; mit Ihrer Zahlungsmethode einkaufen. Noch schlimmer: Wenn Ihr Konto zu viele Dinge gebunden hat, ist bereits die Rückgewinnung des Kontos ein Albtraum. Also: Zwei-Faktor-Authentifizierung – jetzt aktivieren!
@@ -107,7 +107,7 @@ Wenn ein Hacker Ihr Passwort hat, kann er: Ihr Smartphone aus der Ferne sperren 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Praxis: Führen Sie eine umfassende Überprüfung Ihres Kontos durch
+Praxis: Führen Sie eine umfassende Überprüfung Ihres Kontos durch
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Öffnen Sie die Smartphone-Einstellungen, gehen Sie zur Konto-Seite und bestätigen Sie, dass die Zwei-Faktor-Authentifizierung aktiv ist.

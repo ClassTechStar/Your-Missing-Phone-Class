@@ -82,12 +82,12 @@ Intent(인텐트)는 컴포넌트끼리 소통하는 "차표"예요. 한 화면�
 ```
 // 방법 1: 명시적 Intent — 어떤 화면으로 갈지 직접 지정
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", 김철수)     // 차에 "짐"(데이터)을 싣는 셈
+intent.putExtra("name", 김철수) // 차에 "짐"(데이터)을 싣는 셈
 startActivity(intent)
 
 // 방법 2: 암시적 Intent — 무엇을 할지만 말하면 시스템이 처리할 주체를 찾아요
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // 시스템이 브라우저를 열거나 선택하게 해요
+startActivity(web) // 시스템이 브라우저를 열거나 선택하게 해요
 ```
 :::
 
@@ -106,16 +106,16 @@ startActivity(web)   // 시스템이 브라우저를 열거나 선택하게 해�
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "알 수 없음")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "알 수 없음")
+ }
 }
 
 // 화면 안에서 이동:
-navController.navigate("detail/김철수")     // 인자 전달
-navController.popBackStack()              // 이전 화면으로 돌아가기
+navController.navigate("detail/김철수") // 인자 전달
+navController.popBackStack() // 이전 화면으로 돌아가기
 ```
 :::
 

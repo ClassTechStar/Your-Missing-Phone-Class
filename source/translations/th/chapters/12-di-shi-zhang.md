@@ -64,7 +64,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>จำข้อพวกนี้ไว้ กันโกงให้ปลอดภัย
+จำข้อพวกนี้ไว้ กันโกงให้ปลอดภัย
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - ตำรวจ อัยการ ศาล ธนาคาร เจ้าหน้าที่ จะไม่ให้คุณโอนเงินไป "บัญชีที่ปลอดภัย" เด็ดขาด
@@ -75,7 +75,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ทำเลยตอนนี้: ตรวจสุขภาพความปลอดภัยให้แอปชำระเงินของคุณ
+ทำเลยตอนนี้: ตรวจสุขภาพความปลอดภัยให้แอปชำระเงินของคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เปิด Alipay กับ WeChat ยืนยันว่าเปิดการชำระเงินด้วยลายนิ้ว/ใบหน้าแล้ว

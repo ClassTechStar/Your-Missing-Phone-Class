@@ -40,7 +40,7 @@ La modalità sviluppatore è un menu nascosto integrato nel sistema del telefono
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Avvertenze
+Avvertenze
 
 {class="mt-1"}
 Le impostazioni della modalità sviluppatore possono compromettere la stabilità del sistema: non modificare le opzioni che non comprendi. Dopo aver attivato il debug USB, fai attenzione quando colleghi il telefono a computer non fidati.
@@ -57,7 +57,7 @@ Tra le opzioni sviluppatore c'è un interruttore poco appariscente ma molto impo
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosità: perché i produttori mettono questo interruttore
+Curiosità: perché i produttori mettono questo interruttore
 
 {class="mt-1"}
 Sui primi Android non c'era questo interruttore e un malware, una volta ottenuti i permessi, poteva installare di nascosto un sistema non ufficiale. In seguito Google ha preteso che tutti i produttori Android inserissero nelle opzioni sviluppatore l'interruttore "Sblocco OEM", come conferma di "consenso informato dell'utente". Ecco perché, anche se hai sbloccato il BL, se l'interruttore "Sblocco OEM" viene spento, un nuovo flash fallirà comunque.
@@ -95,7 +95,7 @@ ADB sta per Android Debug Bridge, uno strumento a riga di comando ufficiale di G
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Non ignorare driver e popup di autorizzazione
+Non ignorare driver e popup di autorizzazione
 
 {class="mt-1"}
 Se su Windows <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code> restituisce "unauthorized" o non elenca il dispositivo, con tutta probabilità i driver non sono installati oppure hai dimenticato di toccare "Consenti" sul telefono. Per Samsung, Xiaomi e altri marchi puoi installare i rispettivi "driver USB" o "assistenti telefono" per integrare i driver; su Mac e Linux di solito non servono driver. Se hai chiuso per sbaglio il popup sul telefono, scollega e ricollega il cavo e riapparirà.
@@ -124,7 +124,7 @@ Se su Windows <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb device
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Non cancellare a caso i pacchetti di sistema essenziali
+Non cancellare a caso i pacchetti di sistema essenziali
 
 {class="mt-1"}
 "pm uninstall --user 0" è un metodo sicuro senza Root, ma cancellare a caso app di sistema critiche (come <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.systemui</code> per la barra di stato, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.phone</code> per il telefono, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">com.android.settings</code> per le impostazioni) provoca gravi conseguenze: crash di sistema, schermo nero, impossibilità di accendere. Prima di cancellare, cerca su Google "questo nome di pacchetto si può cancellare?"; meglio cancellare meno che sbagliare. Consigliato di cancellare solo una o due app alla volta, verificare che tutto sia a posto, poi proseguire.
@@ -132,7 +132,7 @@ Se su Windows <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb device
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosità: cosa significa --user 0
+Curiosità: cosa significa --user 0
 
 {class="mt-1"}
 Da Android 4.2 è supportato il multi-utente e ogni utente ha un proprio ID (il proprietario è 0, gli utenti aggiuntivi partono da 10). <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">--user 0</code> indica "disinstalla solo per il proprietario corrente"; il file APK nella partizione di sistema resta, semplicemente non viene più mostrato al proprietario. Ecco perché non serve il Root: non si toccano i file di sistema, si modifica solo la "configurazione utente". Questa è la differenza rispetto alla disinstallazione con Root: la disinstallazione con Root elimina davvero il file dal sistema e nessun utente lo ha più; la disinstallazione ADB "nasconde all'utente corrente".
@@ -159,7 +159,7 @@ I permessi Root equivalgono al superuser di Linux (controllo completo sulla dire
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Avvertenza grave
+Avvertenza grave
 
 {class="mt-1"}
 L'operazione di Root comporta rischi e può trasformare il telefono in un "mattone" (impossibilità di accenderlo). Se sei un neofita, è meglio prima studiare a fondo l'argomento e assicurarti di avere un backup completo. Prima di operare leggi con attenzione il tutorial e verifica il tuo modello e la versione di sistema.
@@ -198,7 +198,7 @@ Per godere delle comodità del Root e al tempo stesso poter usare le app bancari
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>La caccia al topo non finirà mai
+La caccia al topo non finirà mai
 
 {class="mt-1"}
 Di tanto in tanto Google aggiorna le regole di rilevamento e i produttori di app seguono con un upgrade dei controlli Play Integrity. Le soluzioni di nascondimento che funzionano oggi potrebbero essere identificate domani. Se dipendi completamente dalle app bancarie/di pagamento (ad esempio bonifici quotidiani, pagamenti con QR), la scelta più sicura resta: niente Root, niente sblocco BL. Le soluzioni di nascondimento sono più adatte alla configurazione da giocatore "telefono principale senza Root + telefono secondario con Root".
@@ -213,7 +213,7 @@ Di tanto in tanto Google aggiorna le regole di rilevamento e i produttori di app
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prova: attiva la modalità sviluppatore e regola la velocità delle animazioni
+Prova: attiva la modalità sviluppatore e regola la velocità delle animazioni
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Entra in Impostazioni > Info telefono.

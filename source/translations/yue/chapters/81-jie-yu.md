@@ -22,7 +22,7 @@ after_part: fu-lu
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>最後一個練習
+最後一個練習
 
 {class="mt-1"}
 合上呢本書，拿起你嘅手機，做一件事：<strong>用30秒諗下，你嘅手機入面有邊三樣嘢係「唔見咗會真正心痛」嘅？</strong>然後，確保佢哋俾人備份咗。呢本書就值啦。

@@ -19,19 +19,19 @@ Wireless casting all looks like "phone screen to TV," but there are three underl
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Technology</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Who Uses It</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocol</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple ecosystem, smoothest experience. Requires Apple TV or AirPlay-enabled TV</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android phones</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct connection, no router needed. Android phones' "wireless casting" uses this by default</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">All platforms</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Only pushes media files (video/music/photos), doesn't mirror screen. Good for pushing video to TV for playback</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Technology</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Who Uses It</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocol</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple ecosystem, smoothest experience. Requires Apple TV or AirPlay-enabled TV</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android phones</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct connection, no router needed. Android phones' "wireless casting" uses this by default</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">All platforms</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Only pushes media files (video/music/photos), doesn't mirror screen. Good for pushing video to TV for playback</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ Operating your phone while driving is illegal, but navigation, music, and calls 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Security Reminder
+Security Reminder
 
 {class="mt-1"}
 Regardless of which car connectivity solution you use, always rely on voice control while driving. Set your navigation destination and music playlist before starting to drive, never operate the car screen while in motion.
@@ -86,7 +86,7 @@ Meetings are the most frequent casting scenario and also the most prone to probl
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: Complete a Phone-to-TV Cast
+Hands-On: Complete a Phone-to-TV Cast
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Chapter 18: Data Backup and Migration.
@@ -98,7 +98,7 @@ Meetings are the most frequent casting scenario and also the most prone to probl
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Three wireless casting camps: AirPlay (Apple), Miracast (Android), DLNA (cross-platform media push)

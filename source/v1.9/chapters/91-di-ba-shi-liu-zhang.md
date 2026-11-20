@@ -95,7 +95,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别只带一部手机出门
+避坑提醒：别只带一部手机出门
 
 {class="mt-1"}
 如果条件允许，带一台备用机（旧手机装好常用 App）或至少把家人的联系方式写在纸上放在行李里。手机在境外丢失/被盗是最常见的旅行事故，"手机=钱包=地图=机票"的现代旅行，备份就是第二部手机。
@@ -155,7 +155,7 @@ T-2h 还有一件容易忘的事：<strong>把时区想清楚</strong>。手机�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 旅行中最贵的不是流量，是"到了才发现验证码收不到、地图没下载、卡被锁"，这三样全都能在出发前验证掉。
@@ -578,7 +578,7 @@ T-2h 还有一件容易忘的事：<strong>把时区想清楚</strong>。手机�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：把清单变成手机里的真实动作
+来动手：把清单变成手机里的真实动作
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 今晚按本章四条线（证件/数据/App/硬件）逐项勾选，拍照证件入云端。
@@ -715,7 +715,7 @@ T-2h 还有一件容易忘的事：<strong>把时区想清楚</strong>。手机�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：进水的手机，别急着开机验证
+避坑提醒：进水的手机，别急着开机验证
 
 {class="mt-1"}
 手机落水，第一动作是关机、擦干表面、不充电、不反复开机测试，然后尽快送正规检修——边充电边"试试还能不能用"是大忌。网上流传的各种土法干燥效果有限，还可能耽误处理时间；进过水后来"看起来没事"的，也建议尽早检修，腐蚀是慢性的。
@@ -751,7 +751,7 @@ T-2h 还有一件容易忘的事：<strong>把时区想清楚</strong>。手机�
 
 ::: div .tip-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：退房前夜来一次"充电设备点名"
+小贴士：退房前夜来一次"充电设备点名"
 
 {class="mt-1"}
 多人同住时，给每个充电头、每根线做标记（第二十一节常备包里的那卷胶带就是干这个的），退房前一晚把所有充电设备集中到一张桌子上清点一遍。转换头和线是酒店失物招领的常驻冠军，点名一分钟，省掉的是回家后的"装备残缺感"。
@@ -777,7 +777,7 @@ T-2h 还有一件容易忘的事：<strong>把时区想清楚</strong>。手机�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：出发前预演一次转存
+来动手：出发前预演一次转存
 
 {class="mt-1"}
 在家演练完整流程：读卡器连设备、拷一段视频、核对数量、清卡。跑一遍你就知道转接头缺不缺、线够不够长、整个流程要几分钟：这些答案在酒店房间里现想，代价很高。
@@ -810,7 +810,7 @@ T-2h 还有一件容易忘的事：<strong>把时区想清楚</strong>。手机�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 主卡管身份，流量卡管上网，漫游开关管钱袋：三句话念一遍，双卡的账单事故基本与你绝缘。
@@ -820,7 +820,7 @@ T-2h 还有一件容易忘的事：<strong>把时区想清楚</strong>。手机�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 证件拍照双备份：本地+云端+同行人各一份，锁屏设急救卡
 - 出发前夜：整机备份、清出 1/3 空间、装好六类 App

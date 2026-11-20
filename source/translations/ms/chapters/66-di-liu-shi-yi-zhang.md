@@ -22,16 +22,16 @@ Program ialah "data + logik". Pemboleh ubah ialah memberi nama kepada data dan m
 :::
 
 ```
-let name = "Zhang San"        // let: pemalar (digalakkan sebagai lalai)
-var age = 18             // var: pemboleh ubah (boleh diubah kemudian)
+let name = "Zhang San" // let: pemalar (digalakkan sebagai lalai)
+var age = 18 // var: pemboleh ubah (boleh diubah kemudian)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var boleh diubah
-// name = "Li Si"         // <i class="fas fa-times-circle mr-1"></i> let tidak boleh diubah, ralat semasa kompilasi
+age = 19 // var boleh diubah
+// name = "Li Si" // let tidak boleh diubah, ralat semasa kompilasi
 
-let score: Int = 100     // juga boleh tulis jenisnya secara jelas
-let pi = 3.14            // tidak ditulis pun boleh dikesan automatik
+let score: Int = 100 // juga boleh tulis jenisnya secara jelas
+let pi = 3.14 // tidak ditulis pun boleh dikesan automatik
 
-print("Hai, \(name)")   // interpolasi rentetan: tanda kembar + kurungan
+print("Hai, \(name)") // interpolasi rentetan: tanda kembar + kurungan
 ```
 :::
 
@@ -64,20 +64,20 @@ Ini konsep paling penting dalam Swift, tiada tandingan. Ringkasnya: apabila sesu
 :::
 
 ```
-var name: String = "Zhang San"   // Jenis biasa: langsung tidak boleh nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> Ditahan terus oleh pengkompil
+var name: String = "Zhang San" // Jenis biasa: langsung tidak boleh nil
+// name = nil // Ditahan terus oleh pengkompil
 
-var nickname: String? = nil  // beri tanda soal: membenarkan nil (optional)
+var nickname: String? = nil // beri tanda soal: membenarkan nil (optional)
 nickname = "San Er"
 
 // Guna optional mesti "buka bungkusnya" dahulu:
-if let n = nickname {        // if let: buka bungkus dengan selamat
-    print("Hai, \(n)")
+if let n = nickname { // if let: buka bungkus dengan selamat
+ print("Hai, \(n)")
 } else {
-    print("Belum ada nama panggilan")
+ print("Belum ada nama panggilan")
 }
 
-let len = nickname?.count ?? 0   // ?? memberi nilai lalai (nil coalescing)
+let len = nickname?.count ?? 0 // ?? memberi nilai lalai (nil coalescing)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ Fungsi ialah sepotong logik yang bernama, seperti butang pada alat kawalan jauh.
 ```
 // Fungsi: nama di hadapan, parameter dan jenis pemulangan di belakang
 func greet(name: String) -> String {
-    return "Hai, \(name)!"
+ return "Hai, \(name)!"
 }
-print(greet(name: "Zhang San"))     // Semasa memanggil mesti nyatakan nama parameter
+print(greet(name: "Zhang San")) // Semasa memanggil mesti nyatakan nama parameter
 
 // Closure: takrif terus di situ, ringkas
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = elemen semasa
+let doubled = numbers.map { $0 * 2 } // $0 = elemen semasa
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // Tapisan
+let big = numbers.filter { $0 > 2 } // Tapisan
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ Keutamaan rasmi Swift jelas: utamakan struct, gunakan class hanya apabila perlu 
 ```
 // Struct: kotak penyimpan data
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // Struct ada "memberwise initializer" sendiri: terus boleh dicipta
+ // Struct ada "memberwise initializer" sendiri: terus boleh dicipta
 }
 let r = Record(amount: 25.5, category: "Makanan", date: Date())
 
 // Protocol: persetujuan "keupayaan apa yang wajib ada"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // Mematuhi protocol = berjanji melaksanakan tuntutannya
+struct Record: Identifiable { ... } // Mematuhi protocol = berjanji melaksanakan tuntutannya
 ```
 :::
 

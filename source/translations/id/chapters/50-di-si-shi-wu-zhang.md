@@ -27,16 +27,16 @@ Alur pemrograman AI berbasis pengujian: minta AI menulis kode fitur dulu, setela
 Tulis unit test untuk fungsi calculate_discount.
 Kasus uji harus mencakup:
 1. Jalur normal:
-   - barang 100 yuan diskon 20% -> 80
-   - barang 200 yuan diskon 50% -> 100
+ - barang 100 yuan diskon 20% -> 80
+ - barang 200 yuan diskon 50% -> 100
 2. Kasus batas:
-   - barang 0 yuan diskon 20% -> 0
-   - barang 100 yuan tanpa diskon -> 100 (tidak didiskon)
-   - barang 100 yuan diskon 0% -> 100 (harga penuh)
+ - barang 0 yuan diskon 20% -> 0
+ - barang 100 yuan tanpa diskon -> 100 (tidak didiskon)
+ - barang 100 yuan diskon 0% -> 100 (harga penuh)
 3. Kasus abnormal:
-   - harga negatif -> harus melempar error
-   - rasio diskon > 1 -> harus melempar error
-   - input bukan angka -> Harus melempar error
+ - harga negatif -> harus melempar error
+ - rasio diskon > 1 -> harus melempar error
+ - input bukan angka -> Harus melempar error
 Pakai framework Vitest, berikan file test yang lengkap.
 ```
 :::

@@ -16,7 +16,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 工具清单会年年变，但判断标准不变：解决一个明确问题、少要权限、数据能带走。
@@ -54,65 +54,65 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类别</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议数量</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">默认主力</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候才上第三方</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清理</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统自带存储清理</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统清理管不到的大文件、应用残留</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统天气</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要分钟级降雨预报等进阶能力</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">待办清单</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统提醒事项</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任务多、需要跨设备同步与协作</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">笔记</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统备忘录</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有明确的长期知识管理需求</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">扫描</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统扫一扫 / 备忘录扫描</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高频多页 PDF、需要 OCR</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">浏览器</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统默认浏览器</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有明确理由（广告拦截、跨设备同步）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">地图</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高德或百度其一</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出国旅行另加 Google Maps</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远控 / 快传 / 动态口令</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">各 1</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确实有对应需求再装</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类别</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">建议数量</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">默认主力</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">什么时候才上第三方</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">清理</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统自带存储清理</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统清理管不到的大文件、应用残留</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统天气</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要分钟级降雨预报等进阶能力</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">待办清单</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统提醒事项</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任务多、需要跨设备同步与协作</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">笔记</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统备忘录</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有明确的长期知识管理需求</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">扫描</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统扫一扫 / 备忘录扫描</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高频多页 PDF、需要 OCR</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">浏览器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统默认浏览器</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有明确理由（广告拦截、跨设备同步）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">地图</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高德或百度其一</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">出国旅行另加 Google Maps</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远控 / 快传 / 动态口令</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">各 1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">——</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">确实有对应需求再装</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -126,7 +126,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>季度复查仪式
+季度复查仪式
 
 {class="mt-1"}
 在日历里建一条每三个月重复的「App 清点」：按「最近使用」排序，三个月没打开过的考虑卸载；顺手检查主力App的通知和权限有没有被某次更新悄悄放宽。十分钟的事，换一整季清爽。
@@ -140,11 +140,11 @@ kind: chapter
 
 - <strong>滴答清单（TickTick）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要把工作、生活、学习任务与日程统一记录的人；本节重点推荐之一。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>跨手机/电脑/平板/Web 同步；<strong>清单 + 日历 + 番茄钟</strong>三合一；自然语言输入「明天下午3点开会」「每周一交周报」自动识别时间与重复规则；支持子任务、标签、优先级、附件与协作清单。适合「日程安排 + 任务打卡 + 每日回顾」一体化管理。
 - <strong>滴答清单怎么用得更顺</strong>：
-  - <strong>收集箱</strong>：先全部丢进「今天/收集箱」，晚上再归类到工作、家庭、学习清单。
-  - <strong>日历视图</strong>：会议、截止日拖到日历上看冲突，比只看待办列表更直观。
-  - <strong>重复任务</strong>：吃药、缴费、健身设成规则任务，不用每次手填。
-  - <strong>番茄钟</strong>：在任务上直接开专注，统计本周「真正做完了多少」。
-  - <strong>与手机功能联动</strong>：语音助手说「提醒我…」可进系统提醒；重要截止日同时开系统日历双保险。
+ - <strong>收集箱</strong>：先全部丢进「今天/收集箱」，晚上再归类到工作、家庭、学习清单。
+ - <strong>日历视图</strong>：会议、截止日拖到日历上看冲突，比只看待办列表更直观。
+ - <strong>重复任务</strong>：吃药、缴费、健身设成规则任务，不用每次手填。
+ - <strong>番茄钟</strong>：在任务上直接开专注，统计本周「真正做完了多少」。
+ - <strong>与手机功能联动</strong>：语音助手说「提醒我…」可进系统提醒；重要截止日同时开系统日历双保险。
 - <strong>Todoist</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求极简、跨平台用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>界面克制清爽，项目层级清晰（任务→子任务→子子任务），karma 积分激励习惯养成。
 - <strong>Microsoft To Do</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>办公党、Outlook用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>完全免费、无广告，"我的一天"功能每天清空、减轻心理负担，与微软生态深度集成。
 - <strong>系统便签/提醒事项</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>不想装第三方App的轻度用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>原生体验、零延迟，Siri/小爱语音直接添加，与系统 widget 联动。
@@ -227,7 +227,7 @@ Forest 和潮汐怎么选：前者靠「种树」的游戏化外督，专注中�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>扫描件的三个坑
+扫描件的三个坑
 
 {class="mt-1"}
 一是一页一张散着拍，回头凑不齐顺序，务必拍完当场合并、当场命名；二是顺手把含证件的PDF发进各种群聊，发出去就收不回了；三是扫描App默认把文件存到它自家云上，换手机就找不到了，存本地，再走你自己信得过的渠道保存。
@@ -284,7 +284,7 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>健康App是记录仪，不是医生
+健康App是记录仪，不是医生
 
 {class="mt-1"}
 所有健康类App都适合做一件事：把长期趋势记下来，给你和医生看。都不适合做的事：替代诊断。心率「看起来不太齐」、血氧「偶尔偏低」，App会提示，但判断交给医生，带着一周的记录去门诊，比对着App里一个数字自己吓自己有用得多。
@@ -405,20 +405,20 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 域名是网站的"门牌号"，读懂它能帮你判断网站的性质和来源：
 
 - <strong>常见后缀含义</strong>：
-  - .com — 商业机构，最常见
-  - .cn — 中国国家域名
-  - .org — 非营利组织
-  - .net — 网络服务机构
-  - .edu — 教育机构
-  - .gov — 政府机构
-  - .xyz/.tech/.info — 新兴通用域名，门槛低，需谨慎
+ - .com — 商业机构，最常见
+ - .cn — 中国国家域名
+ - .org — 非营利组织
+ - .net — 网络服务机构
+ - .edu — 教育机构
+ - .gov — 政府机构
+ - .xyz/.tech/.info — 新兴通用域名，门槛低，需谨慎
 - <strong>国家/地区域名</strong>：
-  - .jp — 日本
-  - .kr — 韩国
-  - .uk — 英国
-  - .de — 德国
-  - .tw — 台湾
-  - .hk — 香港
+ - .jp — 日本
+ - .kr — 韩国
+ - .uk — 英国
+ - .de — 德国
+ - .tw — 台湾
+ - .hk — 香港
 - <strong>安全提示</strong>：.gov和.edu后缀的网站通常更可信，因为申请门槛高。.xyz、.top等廉价域名容易被钓鱼网站利用，访问时要多留个心眼
 
 钓鱼页面最爱用的手法是「山寨域名」：把官网里的字母 o 换成数字 0、在品牌名后面挂一串「-official」「-vip」之类的尾巴，再配一个 .xyz 或 .top 的后缀。看到「某银行.xyz」「某快递-退款.top」这种组合，直接关掉，别抱着「点进去看看也不亏」的侥幸。
@@ -440,46 +440,46 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">浏览器</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心卖点</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用人群</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软 Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium 内核 + 内置 Copilot AI，可总结网页/翻译/对话</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">追求效率的办公族、AI 重度用户（推荐主力）</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与苹果生态深度集成，省电高效，隐私保护强</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac 用户，重视续航与系统联动</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全球使用率最高，扩展插件生态最丰富</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要大量扩展插件的进阶用户、跨设备同步党</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱即用屏蔽广告与追踪器，速度更快</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注重隐私、不装插件也想屏蔽广告的用户</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同名搜索引擎不记录历史，一键清除痕迹</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不希望被个性化追踪的隐私敏感用户</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">浏览器</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心卖点</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用人群</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软 Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium 内核 + 内置 Copilot AI，可总结网页/翻译/对话</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">追求效率的办公族、AI 重度用户（推荐主力）</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与苹果生态深度集成，省电高效，隐私保护强</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac 用户，重视续航与系统联动</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全球使用率最高，扩展插件生态最丰富</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要大量扩展插件的进阶用户、跨设备同步党</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱即用屏蔽广告与追踪器，速度更快</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注重隐私、不装插件也想屏蔽广告的用户</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同名搜索引擎不记录历史，一键清除痕迹</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不希望被个性化追踪的隐私敏感用户</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>试着创建一个"睡前放松"的自动化流程
+试着创建一个"睡前放松"的自动化流程
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 创建触发条件：特定时间（如22:30）。
@@ -510,7 +510,7 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ::: div .success-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>实用软件选型原则
+实用软件选型原则
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>系统优先</strong>：拦截、清理、权限管理，先打开手机自带开关。
@@ -528,51 +528,51 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平台</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口路径</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐开启项</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[设置] > [电话] / [信息]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">静音未知来电；已阻止的联系人；信息中「过滤未知发件人」</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 App > 设置 > 骚扰拦截；或 安全中心</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能拦截、陌生号响一声挂断、短信关键词过滤</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为 / 荣耀</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 骚扰拦截；手机管家 > 骚扰拦截</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">来电识别、黑名单、短信智能拦截</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 App > 骚扰拦截；或 本机 > 骚扰拦截</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">来电拦截、诈骗电话识别、短信拦截规则</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 骚扰电话拦截；i 管家</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">骚扰拦截、诈骗电话预警、信息过滤</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 设置 > 阻止号码 / 来电显示与垃圾电话</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阻止未知号码、垃圾电话识别（地区支持度不同）</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平台</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口路径</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐开启项</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[设置] > [电话] / [信息]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">静音未知来电；已阻止的联系人；信息中「过滤未知发件人」</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 App > 设置 > 骚扰拦截；或 安全中心</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能拦截、陌生号响一声挂断、短信关键词过滤</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为 / 荣耀</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 骚扰拦截；手机管家 > 骚扰拦截</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">来电识别、黑名单、短信智能拦截</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 App > 骚扰拦截；或 本机 > 骚扰拦截</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">来电拦截、诈骗电话识别、短信拦截规则</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 骚扰电话拦截；i 管家</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">骚扰拦截、诈骗电话预警、信息过滤</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 设置 > 阻止号码 / 来电显示与垃圾电话</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阻止未知号码、垃圾电话识别（地区支持度不同）</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>三层防护叠加建议
+三层防护叠加建议
 
 {class="mt-1"}
 日常推荐「<strong>系统拦截 + 运营商防骚扰 + 国家反诈中心</strong>」三层叠加：系统管标记与黑名单，运营商在网侧挡高频外呼，反诈中心补官方预警。三层不必都开到最严，避免把快递、外卖、医生电话也误杀，可对通讯录与最近联系人放行。
@@ -580,7 +580,7 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手练习：今天就把骚扰拦截打开
+动手练习：今天就把骚扰拦截打开
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开电话 App 设置，找到「骚扰拦截 / 静音未知来电」，开启智能拦截。
@@ -605,10 +605,10 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 - <strong>系统天气 App</strong>：华为天气、小米天气、OPPO 天气、vivo 天气、苹果「天气」等，多数会推送当地气象台预警；进入天气 App 设置，确认<strong>「气象预警 / 灾害性天气」通知已开启</strong>。
 - <strong>彩云天气等分钟级降雨</strong>：适合通勤、接送孩子前判断「这半小时要不要带伞」；预警能力仍以官方气象台为准。
 - <strong>预警颜色含义（通用）</strong>：
-  - <strong>蓝色</strong>：注意防范，一般照常出行、关注更新。
-  - <strong>黄色</strong>：加强防范，减少不必要户外活动。
-  - <strong>橙色</strong>：严重，尽量留在室内，远离危险区域。
-  - <strong>红色</strong>：特别严重，听从停课、停工、避险指引，不要硬闯积水、山洪、大风路段。
+ - <strong>蓝色</strong>：注意防范，一般照常出行、关注更新。
+ - <strong>黄色</strong>：加强防范，减少不必要户外活动。
+ - <strong>橙色</strong>：严重，尽量留在室内，远离危险区域。
+ - <strong>红色</strong>：特别严重，听从停课、停工、避险指引，不要硬闯积水、山洪、大风路段。
 - <strong>常见预警类型</strong>：暴雨、暴雪、台风、高温、寒潮、大风；雷电、冰雹、道路结冰、大雾、干旱、地质灾害风险。
 
 用一个真实的晚上帮你记住红色预警该做什么：台风红色预警生效的那个傍晚，你该做的不是刷视频看雨有多大，而是照着预警提示逐条落实，把阳台上的花盆和晾衣杆收进来，给充电宝和手机充满电。车别停在低洼处和树下，确认家里手电筒在哪，冰箱多冻一格水（停电时延缓化冻）。这些动作加起来二十分钟，都是预警通知里那行「请做好防范」的具体版。预警App的价值就在这一刻：提前几个小时知道，就有时间准备；提前几分钟才知道，就只能待着不动了。
@@ -617,10 +617,10 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 - <strong>发布主体</strong>：气象台负责气象类；地质灾害、山洪等常由自然资源、水利、应急管理部门联合发布；地方政府也会通过应急广播、短信、12379 等渠道发布。
 - <strong>怎么多渠道接收</strong>：
-  - 手机系统通知 + 天气 App 预警。
-  - 微信关注当地「应急管理局」「气象局」公众号。
-  - 12379 国家预警信息发布相关渠道（短信/服务，视地区开通情况）。
-  - 电视、应急广播、村/社区大喇叭，山区、汛期不要只盯手机。
+ - 手机系统通知 + 天气 App 预警。
+ - 微信关注当地「应急管理局」「气象局」公众号。
+ - 12379 国家预警信息发布相关渠道（短信/服务，视地区开通情况）。
+ - 电视、应急广播、村/社区大喇叭，山区、汛期不要只盯手机。
 - <strong>户外与出行提醒</strong>：台风天不贴广告牌、不走树下；暴雨不进地下车库、隧道、下穿桥；山区旅游遇「地质灾害气象风险」预警应立即离开陡坡、沟谷。
 - <strong>与急救手册联动</strong>：灾后失联、手机没电、需要定位求救时，见 <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">第三十二章</a> 地震/灾害场景，以及 <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">第七章</a> 卫星通信与无网通。
 
@@ -641,51 +641,51 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平台</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见入口</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">说明</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机管家 / 安全中心 > 地震预警；或 设置搜索「地震」</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分版本系统内置预警服务，需联网并开启定位</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为 / 荣耀</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全 > 应急预警通知 / 地震预警</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名称可能是「应急预警通知」，内含地震等</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全（SOS 紧急联络）> 地震预警</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分机型与地区服务覆盖有关</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气 App 或 设置 > 安全/更多 > 地震预警</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以实际系统版本菜单为准</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统设置中通常无完整内置开关；安装可靠地震预警 App 并允许通知</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 需后台运行与定位权限；系统勿扰勿屏蔽其警报</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星等</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全与紧急情况 / 无线紧急警报</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「紧急警报」覆盖范围因地区与运营商而异</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平台</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见入口</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">说明</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机管家 / 安全中心 > 地震预警；或 设置搜索「地震」</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分版本系统内置预警服务，需联网并开启定位</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为 / 荣耀</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全 > 应急预警通知 / 地震预警</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名称可能是「应急预警通知」，内含地震等</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全（SOS 紧急联络）> 地震预警</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分机型与地区服务覆盖有关</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气 App 或 设置 > 安全/更多 > 地震预警</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以实际系统版本菜单为准</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统设置中通常无完整内置开关；安装可靠地震预警 App 并允许通知</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 需后台运行与定位权限；系统勿扰勿屏蔽其警报</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星等</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全与紧急情况 / 无线紧急警报</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「紧急警报」覆盖范围因地区与运营商而异</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>关于地震预警的常见误区
+关于地震预警的常见误区
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>预警 ≠ 预报</strong>：它不能告诉你「明天会不会地震」，只在已发生地震、波尚未到达时报警。
@@ -696,7 +696,7 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>预警能力怎么搭配
+预警能力怎么搭配
 
 {class="mt-1"}
 日常建议：「<strong>系统天气预警通知 + 官方气象/应急渠道 + 地震预警（系统或正规 App）</strong>」。与防骚扰一样，不必装一堆同类软件；关键是<strong>通知权限打开、定位允许、勿扰能突破</strong>。给长辈手机做完骚扰拦截后，顺手把天气预警和地震预警也检查一遍。
@@ -704,7 +704,7 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手练习：10 分钟检查预警设置
+动手练习：10 分钟检查预警设置
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开系统天气 App，进入设置，开启「气象预警 / 灾害性天气」通知。
@@ -734,9 +734,9 @@ Keep 的强项是课程全、中文引导、零基础友好：第一次打开选
 - <strong>ToDesk</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求连接稳定、低延迟远程办公/运维的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>设备码+密码连接，手机控电脑、电脑控手机（视版本）、文件传输与多显示器切换较顺手，国内节点体验通常较好。
 - <strong>基本用法</strong>：电脑端安装客户端并登录/保持在线、手机端装 App、用<strong>设备识别码 + 连接密码</strong>（或同一账号）建立会话、手机触控板/手势操作桌面。
 - <strong>安全红线（务必记住）</strong>：
-  - 陌生人自称「客服/公检法/运营商」让你装向日葵、ToDesk 并远程你<strong>手机或电脑</strong>，<strong>一律拒绝</strong>——这是典型诈骗手法（详见第二十七章）。
-  - 自己用时：开启二次验证、修改默认密码、不用时退出账号或关闭无人值守；公司电脑遵守单位安全规定。
-  - 公共场合远程办公注意周围是否有人偷窥屏幕与口令。
+ - 陌生人自称「客服/公检法/运营商」让你装向日葵、ToDesk 并远程你<strong>手机或电脑</strong>，<strong>一律拒绝</strong>——这是典型诈骗手法（详见第二十七章）。
+ - 自己用时：开启二次验证、修改默认密码、不用时退出账号或关闭无人值守；公司电脑遵守单位安全规定。
+ - 公共场合远程办公注意周围是否有人偷窥屏幕与口令。
 
 ##### 向日葵/ToDesk 上手路径：从安装到连上
 
@@ -801,7 +801,7 @@ KDE Connect 值得多说两句：它把「手机和电脑是一对」这件事�
 
 ::: div .success-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-diagram-project mr-2"></i>实用工作流示例
+实用工作流示例
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>早上</strong>：滴答清单看今日日程 → 天气/预警扫一眼 → 电脑开 Trae/文档，手机放一旁。
@@ -812,7 +812,7 @@ KDE Connect 值得多说两句：它把「手机和电脑是一对」这件事�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-shield mr-2"></i>远控与账号安全口诀
+远控与账号安全口诀
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - 别人让你装远控软件 → <strong>挂电话，自己找官方客服</strong>。
@@ -823,7 +823,7 @@ KDE Connect 值得多说两句：它把「手机和电脑是一对」这件事�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>动手练习：把「跨设备」链路跑通一次
+动手练习：把「跨设备」链路跑通一次
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 手机与电脑连同一 Wi-Fi，用 LocalSend（或隔空投送）互传一张照片。
@@ -925,7 +925,7 @@ iOS 的快捷指令和安卓各家的自动化（第四节启蒙过的那批）�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给工具箱来一次大扫除
+来动手：给工具箱来一次大扫除
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开应用商店的订阅页（iOS：设置 → Apple 账户 → 订阅；安卓：对应商店的订阅管理），列出所有在续费的订阅。
@@ -968,7 +968,7 @@ iOS 的快捷指令和安卓各家的自动化（第四节启蒙过的那批）�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 少装多精：一个类别一个主力，用配额表管住「装App的手」，每季度按「最近使用」清点一次，卸载前先导出数据。
 - 系统自带优先：推送稳、无广告、权限克制；跨平台、专业深度、系统没做这三种情形才上第三方。

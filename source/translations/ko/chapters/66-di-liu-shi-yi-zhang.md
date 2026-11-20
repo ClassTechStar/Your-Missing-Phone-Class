@@ -23,16 +23,16 @@ kind: chapter
 :::
 
 ```
-let name = 김철수        // let: 상수(기본으로 추천)
-var age = 18             // var: 변수(나중에 바꿀 수 있어요)
+let name = 김철수 // let: 상수(기본으로 추천)
+var age = 18 // var: 변수(나중에 바꿀 수 있어요)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var는 바꿀 수 있어요
-// name = 이영희         // <i class="fas fa-times-circle mr-1"></i> let은 바꿀 수 없어요, 컴파일 오류
+age = 19 // var는 바꿀 수 있어요
+// name = 이영희 // let은 바꿀 수 없어요, 컴파일 오류
 
-let score: Int = 100     // 타입을 직접 쓸 수도 있어요
-let pi = 3.14            // 생략해도 자동으로 추론해요
+let score: Int = 100 // 타입을 직접 쓸 수도 있어요
+let pi = 3.14 // 생략해도 자동으로 추론해요
 
-print("안녕, \(name)")   // 문자열 보간: 역슬래시 + 괄호
+print("안녕, \(name)") // 문자열 보간: 역슬래시 + 괄호
 ```
 :::
 
@@ -67,20 +67,20 @@ Swift 커뮤니티의 철칙: 기본은 let, 정말 필요할 때만 var. let으
 :::
 
 ```
-var name: String = 김철수   // 일반 타입: 절대 nil이면 안 돼요
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> 컴파일 오류로 바로 막혀요
+var name: String = 김철수 // 일반 타입: 절대 nil이면 안 돼요
+// name = nil // 컴파일 오류로 바로 막혀요
 
-var nickname: String? = nil  // 물음표 하나: nil 허용(옵셔널)
+var nickname: String? = nil // 물음표 하나: nil 허용(옵셔널)
 nickname = "순이"
 
 // 옵셔널을 쓰려면 반드시 "언래핑"해야 해요:
-if let n = nickname {        // if let: 안전 언래핑
-    print("안녕, \(n)")
+if let n = nickname { // if let: 안전 언래핑
+ print("안녕, \(n)")
 } else {
-    print("아직 닉네임이 없어요")
+ print("아직 닉네임이 없어요")
 }
 
-let len = nickname?.count ?? 0   // ?? 기본값 제공(널 병합 연산자)
+let len = nickname?.count ?? 0 // ?? 기본값 제공(널 병합 연산자)
 print(len)
 ```
 :::
@@ -106,16 +106,16 @@ Xcode가 코드를 완성할 때 가끔 !를 덧붙이니 꼭 고치세요.
 ```
 // 함수: 이름이 먼저, 매개변수와 반환 타입이 뒤에
 func greet(name: String) -> String {
-    return "안녕, \(name)!"
+ return "안녕, \(name)!"
 }
-print(greet(name: "김철수"))     // 호출할 때는 매개변수 이름을 붙여야 해요
+print(greet(name: "김철수")) // 호출할 때는 매개변수 이름을 붙여야 해요
 
 // 클로저: 그 자리에서 정의, 가볍고 직접적
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = 현재 원소
+let doubled = numbers.map { $0 * 2 } // $0 = 현재 원소
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // 필터
+let big = numbers.filter { $0 > 2 } // 필터
 // [3, 4]
 ```
 :::
@@ -134,20 +134,20 @@ Swift의 공식 선호는 분명해요. 구조체(struct)를 우선하고, 상�
 ```
 // 구조체: 데이터를 담는 상자
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // 구조체는 "멤버와이즈 이니셜라이저"가 기본 제공돼요: 바로 생성 가능
+ // 구조체는 "멤버와이즈 이니셜라이저"가 기본 제공돼요: 바로 생성 가능
 }
 let r = Record(amount: 25.5, category: "식사", date: Date())
 
 // 프로토콜: "어떤 능력을 갖춰야 하는지"의 약속
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // 프로토콜 채택 = 요구사항을 구현하겠다는 약속
+struct Record: Identifiable { ... } // 프로토콜 채택 = 요구사항을 구현하겠다는 약속
 ```
 :::
 

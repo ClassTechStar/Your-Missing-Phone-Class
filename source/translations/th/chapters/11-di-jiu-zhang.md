@@ -67,7 +67,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลองเลย: สร้างเวิร์กโฟลว์ทำงานบนมือถือของคุณ
+ลองเลย: สร้างเวิร์กโฟลว์ทำงานบนมือถือของคุณ
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. เลือกแอปเอกสารหลักของคุณ (WPS หรือ Microsoft 365) ล็อกอินและเชื่อมคลาวด์ไดรฟ์

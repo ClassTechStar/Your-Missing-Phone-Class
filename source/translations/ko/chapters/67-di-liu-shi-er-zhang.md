@@ -27,17 +27,17 @@ kind: chapter
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body: "화면이 어떻게 생겼는지"를 기술
-        VStack {               // 세로 배치
-            Text("안녕, 세상!")
-                .font(.largeTitle)      // 수식어: 큰 제목
-            Button("눌러 보세요") {
-                print("클릭됨")
-            }
-            .buttonStyle(.borderedProminent)  // 파란색 솔리드 버튼
-        }
-        .padding()
-    }
+ var body: some View { // body: "화면이 어떻게 생겼는지"를 기술
+ VStack { // 세로 배치
+ Text("안녕, 세상!")
+ .font(.largeTitle) // 수식어: 큰 제목
+ Button("눌러 보세요") {
+ print("클릭됨")
+ }
+ .buttonStyle(.borderedProminent) // 파란색 솔리드 버튼
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -71,17 +71,17 @@ Image(systemName:)에 주목하세요. 애플이 SF Symbols 아이콘 라이브�
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("청구서")
-        Spacer()                 // 탄성 공간: 오른쪽을 끝까지 밀어냄
-        Text("-25.5위안").foregroundColor(.red)
-    }
-    Divider()                    // 구분선
-    Text("메모: 점심")
+ HStack {
+ Text("청구서")
+ Spacer() // 탄성 공간: 오른쪽을 끝까지 밀어냄
+ Text("-25.5위안").foregroundColor(.red)
+ }
+ Divider() // 구분선
+ Text("메모: 점심")
 }
-.padding(16)                     // 사방 여백
+.padding(16) // 사방 여백
 .background(Color(.systemGray6)) // 옅은 회색 배경
-.cornerRadius(12)                // 둥근 모서리
+.cornerRadius(12) // 둥근 모서리
 
 // 수식어 순서에 의미가 있어요: padding 먼저, background 나중 — 배경은 여백을 포함하지 않아요
 ```
@@ -107,16 +107,16 @@ padding(16).background(회색)과 background(회색).padding(16)은 결과가 �
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State: 이 값이 바뀌면 다시 그려요
+ @State private var count = 0 // @State: 이 값이 바뀌면 다시 그려요
 
-    var body: some View {
-        VStack {
-            Text("\(count)번 눌렀어요")
-            Button("눌러 보세요 +1") {
-                count += 1          // 상태 변경, 화면 자동 새로 고침
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("\(count)번 눌렀어요")
+ Button("눌러 보세요 +1") {
+ count += 1 // 상태 변경, 화면 자동 새로 고침
+ }
+ }
+ }
 }
 ```
 :::
@@ -130,24 +130,24 @@ struct CounterView: View {
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("무언가를 입력해 보세요", text: $text)  // $ 양방향 바인딩
-            .textFieldStyle(.roundedBorder)
-        Text("입력한 내용: \(text)")   // 입력하는 즉시 갱신
-    }
+ var body: some View {
+ TextField("무언가를 입력해 보세요", text: $text) // $ 양방향 바인딩
+ .textFieldStyle(.roundedBorder)
+ Text("입력한 내용: \(text)") // 입력하는 즉시 갱신
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> 사용자 조작</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 상태 변경(count += 1)</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 사용자 조작</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 상태 변경(count += 1)</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI가 변화를 감지</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 화면 자동 다시 그리기(body 재계산)</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI가 변화를 감지</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 화면 자동 다시 그리기(body 재계산)</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -167,20 +167,20 @@ struct InputView: View {
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::

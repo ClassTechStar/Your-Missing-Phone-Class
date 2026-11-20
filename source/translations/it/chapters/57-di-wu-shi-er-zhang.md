@@ -77,12 +77,12 @@ L'Intent (intenzione) è il «biglietto» con cui i componenti comunicano. Per s
 ```
 // Modo 1: Intent esplicito — indichi esattamente quale schermata aprire
 val intent = Intent(this, DetailActivity::class.java)
-intent.putExtra("name", Marco)     // porta con sé il "bagaglio" (dati)
+intent.putExtra("name", Marco) // porta con sé il "bagaglio" (dati)
 startActivity(intent)
 
 // Modo 2: Intent implicito — dichiari cosa fare e il sistema trova chi lo fa
 val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
-startActivity(web)   // il sistema apre il browser / oppure ti fa scegliere
+startActivity(web) // il sistema apre il browser / oppure ti fa scegliere
 ```
 :::
 
@@ -101,16 +101,16 @@ Le app vere hanno più schermate. Lo schema di navigazione raccomandato ufficial
 val navController = rememberNavController()
 
 NavHost(navController, startDestination = "home") {
-    composable("home") { HomeScreen(navController) }
-    composable("detail/{name}") { entry ->
-        val name = entry.arguments?.getString("name")
-        DetailScreen(name ?: "Sconosciuto")
-    }
+ composable("home") { HomeScreen(navController) }
+ composable("detail/{name}") { entry ->
+ val name = entry.arguments?.getString("name")
+ DetailScreen(name ?: "Sconosciuto")
+ }
 }
 
 // Navigare da una schermata:
-navController.navigate("detail/Marco")     // con argomenti
-navController.popBackStack()              // torna indietro
+navController.navigate("detail/Marco") // con argomenti
+navController.popBackStack() // torna indietro
 ```
 :::
 

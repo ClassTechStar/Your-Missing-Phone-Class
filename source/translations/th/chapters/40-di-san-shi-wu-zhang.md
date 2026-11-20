@@ -23,7 +23,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>หลักการ "ใช้พอเพียง"
+หลักการ "ใช้พอเพียง"
 
 {class="mt-1"}
 มือถือเครื่องแรกของลูกไม่จำเป็นต้องเป็นรุ่นท็อป ประสิทธิภาพที่เหลือเฟือของหน่วยประมวลผลมักถูกใช้ไปกับการเล่นเกม การเลือกมือถือราคาพันกว่าบาทหรือเครื่องตกแต่งใหม่จากโรงงานที่แบตเตอรี่อึด ประสิทธิภาพปานกลาง และหน้าจอถนอมสายตา กลับจะช่วยให้ควบคุมได้ง่ายกว่า งบประมาณอ้างอิง: ช่วง 1500-2500 หยวน ก็เพียงพอสำหรับความต้องการของนักเรียนส่วนใหญ่
@@ -60,27 +60,27 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ฟังก์ชัน</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS เวลาใช้งานหน้าจอ</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / โซลูชันของแบรนด์</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ขีดจำกัด App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ แบ่งตามหมวดหมู่</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ แบ่งตาม App</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เวลาพักการใช้งาน</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ (แตกต่างกันเล็กน้อยตามแบรนด์)</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การกรองเนื้อหา</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระดับระบบ ค่อนข้างทั่วถึง</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ขึ้นอยู่กับแบรนด์ มาตรฐานไม่เท่ากัน</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การจัดการระยะไกล</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / คลาวด์ของแบรนด์</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การอนุมัติการติดตั้ง App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องได้รับอนุมัติจากผู้ปกครอง</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับโดย Family Link</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">ฟังก์ชัน</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">iOS เวลาใช้งานหน้าจอ</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Android Family Link / โซลูชันของแบรนด์</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ขีดจำกัด App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ แบ่งตามหมวดหมู่</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ แบ่งตาม App</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">เวลาพักการใช้งาน</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับ (แตกต่างกันเล็กน้อยตามแบรนด์)</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การกรองเนื้อหา</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ระดับระบบ ค่อนข้างทั่วถึง</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ขึ้นอยู่กับแบรนด์ มาตรฐานไม่เท่ากัน</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การจัดการระยะไกล</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Sharing</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Family Link / คลาวด์ของแบรนด์</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">การอนุมัติการติดตั้ง App</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ต้องได้รับอนุมัติจากผู้ปกครอง</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">รองรับโดย Family Link</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>การควบคุมโดยผู้ปกครองไม่ใช่เรื่อง "ทำครั้งเดียวจบ"
+การควบคุมโดยผู้ปกครองไม่ใช่เรื่อง "ทำครั้งเดียวจบ"
 
 {class="mt-1"}
 เด็กๆ มักจะหาวิธีบายพาสได้เสมอ (ค้นหาในอินเทอร์เน็ต "วิธีแฮ็กเวลาใช้งานหน้าจอ" จะเจอบทแนะนำเพียบ) มาตรการทางเทคนิคเป็นเพียงขั้นต่ำ แนวป้องกันที่แท้จริงคือการสื่อสารและความไว้วางใจระหว่างผู้ปกครองกับลูก แนะนำให้ทบทวนรายงานการใช้งานร่วมกับลูกทุกเดือน แทนที่จะคอยเฝ้าระวังฝ่ายเดียว
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>อย่าใช้บัตรประชาชนของผู้ปกครองเพื่อ "ยืมบัญชี"
+อย่าใช้บัตรประชาชนของผู้ปกครองเพื่อ "ยืมบัญชี"
 
 {class="mt-1"}
 เด็กหลายคนใช้บัตรประชาชนของผู้ปกครองลงทะเบียนบัญชีเกมเพื่อบายพาสระบบป้องกันการเสพติด ซึ่งนอกจากจะละเมิดข้อตกลงผู้ใช้แล้ว ยังทำให้เด็กสูญเสียการปกป้องอีกด้วย ผู้ปกครองควรเก็บรหัสผ่านการชำระเงินและข้อมูลประจำตัวของตนเองไว้ให้ดี อย่า "ยืมบัญชี" ให้ลูกเพียงเพื่อความสะดวก
@@ -113,7 +113,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>ลงมือทำ: ทำสัญญาฉบับหนึ่งเรื่อง "กติกาการใช้มือถือ" ร่วมกับลูก
+ลงมือทำ: ทำสัญญาฉบับหนึ่งเรื่อง "กติกาการใช้มือถือ" ร่วมกับลูก
 
 {class="mt-1"}
 การเขียนกติกาลงไป โดยให้ทั้งสองฝ่ายเซ็นชื่อและติดไว้ในที่ที่เห็นได้ชัดเจน จะได้ผลดีกว่าการตกลงกันปากต่อปาก ขอแนะนำให้ระบุสิ่งต่อไปนี้:
@@ -137,7 +137,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-heart-pulse mr-2"></i>ผู้ปกครองคือ "ไฟร์วอลล์" ที่ดีที่สุด
+ผู้ปกครองคือ "ไฟร์วอลล์" ที่ดีที่สุด
 
 {class="mt-1"}
 งานวิจัยพบว่า เวลาที่ผู้ปกครองใช้มือถือมีความสัมพันธ์เชิงบวกกับเวลาที่เด็กใช้มือถืออย่างมาก หากสั่งลูกให้ไม่ดูมือถือ แต่ตัวเองกลับเล่นคลิปสั้นจนดึก กติกาก็จะใช้ไม่ได้ผล หากต้องการเปลี่ยนแปลงเด็ก ให้เริ่มจากการวางมือถือของตัวเองก่อน
@@ -153,7 +153,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>ระวังอีกด้านของ "มรดกดิจิทัลของเด็ก"
+ระวังอีกด้านของ "มรดกดิจิทัลของเด็ก"
 
 {class="mt-1"}
 เด็กๆ ถูก "บันทึก" ตั้งแต่เกิด,รูปเติบโตที่ผู้ปกครองโพสต์, วิดีโอจากโรงเรียนอนุบาล, ข้อมูลสุขภาพจากสมาร์ทวอทช์ เมื่อข้อมูลเหล่านี้ถูกอัปโหลดไปแล้ว จะลบทิ้งให้หมดจดได้ยาก ก่อนโพสต์ ลองคิดดูสักนิด: สิบปีข้างหน้าลูกจะอายที่รูปนี้ไหม? การเคารพตัวตนดิจิทัลของเด็ก เริ่มจากการรู้จักควบคุมตัวเองในการ "โพสต์รูปลูก"
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้
+สรุปบทนี้
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ไม่มีคำตอบตายตัวว่าอายุเท่าไหร่ถึงควรได้รับมือถือ แต่อายุ 3-6 ปีควรหลีกเลี่ยง, ก่อน 13 ปีให้ใช้สมาร์ทวอทช์หรือโทรศัพท์พื้นฐานไปก่อน

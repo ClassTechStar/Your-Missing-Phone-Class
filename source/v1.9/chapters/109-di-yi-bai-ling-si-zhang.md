@@ -472,7 +472,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：用第 100 章的工作流复用
+小贴士：用第 100 章的工作流复用
 
 {class="mt-1"}
 短剧剪辑与短视频共用剪映一条龙：智能字幕、卡点、AI 音效一步到位。第 96-100 章的技能直接迁移，你的短剧后期不用学第二套软件。
@@ -572,7 +572,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：剪出 90 秒的"30 秒感"
+来动手：剪出 90 秒的"30 秒感"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 把 103 章拍的素材粗剪成 3 分钟版，再狠砍到 90 秒。
@@ -772,7 +772,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 节奏三律：快切但不快懂、掐头去尾、反应镜头是金
 - 每一秒都有存在的理由：先删再特效

@@ -46,7 +46,7 @@ AES（高級加密標準）乃美國國家標準與技術研究院（NIST）認�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>何故"零知識"意味着服務商亦觀不至汝之密碼？
+何故"零知識"意味着服務商亦觀不至汝之密碼？
 
 {class="mt-1"}
 蓋因解密密鑰由汝之主密碼派生，而主密碼唯存在於汝腦中、唯於汝本地設備上使用。服務商之服務器上既沒有主密碼，亦沒有解密密鑰，只有密文。這就是何故 Bitwarden、1Password 等正規服務商皆明確聲明"我們亦無法看到汝之密碼"：非彼等不欲觀，乃技術上作不至。
@@ -71,7 +71,7 @@ AES（高級加密標準）乃美國國家標準與技術研究院（NIST）認�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>自 LastPass 事件學至之
+自 LastPass 事件學至之
 
 {class="mt-1"}
 第一，主密碼須長且獨特（建議 16 位以上，包含大小寫、數字、符號）；第二，優先選擇支持 Argon2id、迭代次數高之服務商；第三，對高價值賬號（銀行、郵箱）務必開啓獨立之二次驗證，勿唯依賴密碼管理器。
@@ -118,7 +118,7 @@ AES（高級加密標準）乃美國國家標準與技術研究院（NIST）認�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>k-Anonymity 查詢理
+k-Anonymity 查詢理
 
 {class="mt-1"}
 擔心於 HaveIBeenPwned 輸入密碼將再次泄露？不必擔心。現代查詢採用"k-匿名"協議：瀏覽器唯以密碼哈希之前 5 位發給服務器，服務器返回所有以這 5 位開頭之哈希列表，本地再比對。亦就是曰，服務器永遠觀不至汝之完整密碼哈希。1Password、Bitwarden 之"已泄露密碼檢測"皆乃這樣工作之。
@@ -133,7 +133,7 @@ AES（高級加密標準）乃美國國家標準與技術研究院（NIST）認�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>現在遂查：汝之密碼是否安全
+現在遂查：汝之密碼是否安全
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打開 haveibeenpwned.com，輸入汝之常用郵箱，觀看出現在何泄露事件中。
@@ -159,36 +159,36 @@ Passkey 基於 FIDO2 / WebAuthn 標準，用<strong>設備上之密鑰對</stron
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">維度</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">傳統密</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">抗釣魚</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">差，釣魚網站可竊取密</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天然抗釣魚，私鑰唯對真實域名簽名</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">服器泄露響</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密碼哈希或爲破解</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服務器唯存公鑰，泄露無影響</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">便性</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需記憶/輸入/管</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/指紋一秒登錄</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">重放攻擊</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">或爲中間人截獲重放</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每次簽名一性，無法重放</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">維度</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">傳統密</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">抗釣魚</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">差，釣魚網站可竊取密</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天然抗釣魚，私鑰唯對真實域名簽名</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">服器泄露響</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密碼哈希或爲破解</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服務器唯存公鑰，泄露無影響</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">便性</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需記憶/輸入/管</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/指紋一秒登錄</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">重放攻擊</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">或爲中間人截獲重放</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每次簽名一性，無法重放</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. 各平臺支情況
@@ -200,7 +200,7 @@ Passkey 基於 FIDO2 / WebAuthn 標準，用<strong>設備上之密鑰對</stron
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>跨設備同步乃關鍵突破
+跨設備同步乃關鍵突破
 
 {class="mt-1"}
 早期 Passkey 之最大痛點乃"綁定單臺設備"，換手機遂要重新創建。2023 年起 Apple、Google、Microsoft 實現矣 Passkey 之雲端同步：iCloud 鑰匙串同步跨 Apple 設備，Google 密碼管理器同步跨安卓設備。1Password 等第三方則打通矣跨生態同步。這意味着 Passkey 已具備替代密碼之實用性。
@@ -236,7 +236,7 @@ Passkey 基於 FIDO2 / WebAuthn 標準，用<strong>設備上之密鑰對</stron
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>現在遂試：體驗無密碼登錄
+現在遂試：體驗無密碼登錄
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 登錄 Google 賬號 → 安全 → 通行密鑰 → 添通行密鑰，體驗 Face ID/指紋登錄。
@@ -247,7 +247,7 @@ Passkey 基於 FIDO2 / WebAuthn 標準，用<strong>設備上之密鑰對</stron
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>過渡期宜
+過渡期宜
 
 {class="mt-1"}
 Passkey 並未悉取代密，許多網站仍處於"Passkey + 密"並存階段。宜：高價值賬號優先開啓 Passkey。但<strong>勿立即刪除傳統密碼</strong>，留作備用；同時繼續使用密碼管理器，蓋因非所有網站皆支持 Passkey。以 Passkey 觀作"密碼管理器之強力補充"而非"立刻替換"。
@@ -295,7 +295,7 @@ Passkey 並未悉取代密，許多網站仍處於"Passkey + 密"並存階段。
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>雙密鑰策
+雙密鑰策
 
 {class="mt-1"}
 硬件密鑰最大之風險乃"丟失"。建議：① 同時註冊兩以不同之密鑰；② 一以隨身攜帶（鑰匙扣），一以存放於家中保險櫃或銀行保管箱；③ 部分網站允許以"備用恢復碼"打印出來離線保存。這樣縱主密鑰丟失，亦未能爲永久鎖於賬號外。
@@ -303,7 +303,7 @@ Passkey 並未悉取代密，許多網站仍處於"Passkey + 密"並存階段。
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>購機渠要慎
+購機渠要慎
 
 {class="mt-1"}
 務必自官方店鋪或授權代理購買，勿買二手或來源不明之密鑰：理論上預置過之硬件或已爲植入後門。YubiKey 之固件於出廠後無法更新，但 Yubico 將持續推送安全公告，關注其官網即可。
@@ -336,7 +336,7 @@ Bitwarden 之免費版支持個人密碼共享（通過"發送 Send"功能限時
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>1Password 家庭版之性價比
+1Password 家庭版之性價比
 
 {class="mt-1"}
 1Password Families 約 4.99 美元/月，支持最多 5 位家庭成員，每人皆有獨立之私人保險庫 + 4 個共享保險庫。算下來人均不至 1 美元/月，乃目前家庭共享體驗最好之方案。Bitwarden 之家庭版 10 美元/年支持 6 人，性價比更高，但界面體驗略遜。
@@ -369,7 +369,7 @@ Bitwarden 之免費版支持個人密碼共享（通過"發送 Send"功能限時
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>現在遂設：爲家人留一以"備用鑰匙"
+現在遂設：爲家人留一以"備用鑰匙"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 選定一位信任之家人作爲"緊急聯繫人"。
@@ -388,7 +388,7 @@ Bitwarden 之免費版支持個人密碼共享（通過"發送 Send"功能限時
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>重要提醒
+重要提醒
 
 {class="mt-1"}
 重要提醒
@@ -396,7 +396,7 @@ Bitwarden 之免費版支持個人密碼共享（通過"發送 Send"功能限時
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>今即試之：始用密碼管理器
+今即試之：始用密碼管理器
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 擇一密碼管理器（薦Bitwarden或系統自帶）。

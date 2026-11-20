@@ -84,27 +84,27 @@ kind: chapter
 ::: div .figure
 ```html
 <svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="0" y="0" width="600" height="300" fill="var(--surface-6)" rx="8"/>
-      <text x="20" y="30" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ βασικός φάκελος έργου</text>
-      <rect x="30" y="45" width="540" height="230" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
-      <text x="45" y="70" font-size="11" fill="var(--accent-book)" font-weight="bold">app/ ← εκεί γράφεις κώδικα</text>
-      <rect x="60" y="82" width="240" height="178" fill="var(--accent-wash)" rx="5"/>
-      <text x="70" y="102" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/main/</text>
-      <text x="80" y="120" font-size="10" fill="var(--ink-2)">├ java/…/MainActivity.kt  ← κώδικας λογικής</text>
-      <text x="80" y="138" font-size="10" fill="var(--ink-2)">├ res/  ← πόροι (εικόνες, κείμενα, χρώματα)</text>
-      <text x="80" y="156" font-size="10" fill="var(--ink-2)">└ AndroidManifest.xml  ← η "ταυτότητα" της εφαρμογής</text>
-      <text x="70" y="180" font-size="10" fill="var(--accent-deep)" font-weight="bold">build.gradle.kts</text>
-      <text x="80" y="198" font-size="10" fill="var(--muted-2)">Δήλωση των βιβλιοθηκών (έκδοση SDK, Compose κ.λπ.)</text>
-      <text x="70" y="222" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/androidTest/ και test/</text>
-      <text x="80" y="240" font-size="10" fill="var(--muted-2)">Κώδικας αυτοματοποιημένων τεστ (χρήση στο κεφάλαιο 56)</text>
-      <rect x="320" y="82" width="230" height="178" fill="#f0fdf4" rx="5"/>
-      <text x="330" y="102" font-size="10" fill="#065f46" font-weight="bold">Άλλα αρχεία στον βασικό φάκελο</text>
-      <text x="340" y="122" font-size="10" fill="var(--ink-2)">gradle/ + gradlew.bat  ← scripts build</text>
-      <text x="340" y="142" font-size="10" fill="var(--ink-2)">settings.gradle.kts  ← ρυθμίσεις έργου</text>
-      <text x="340" y="162" font-size="10" fill="var(--muted-2)">(ο κανόνας του αρχάριου: ακούμπα μόνο στον φάκελο app/ </text>
-      <text x="340" y="180" font-size="10" fill="var(--muted-2)">τα υπόλοιπα βλέπε προς το παρόν ως "μαύρο κουτί", μην τα πειράξεις)</text>
-      <text x="340" y="208" font-size="10" fill="var(--muted)">.gitignore  ← λίστα αγνόησης ελέγχου εκδόσεων</text>
-    </svg>
+ <rect x="0" y="0" width="600" height="300" fill="var(--surface-6)" rx="8"/>
+ <text x="20" y="30" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ βασικός φάκελος έργου</text>
+ <rect x="30" y="45" width="540" height="230" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+ <text x="45" y="70" font-size="11" fill="var(--accent-book)" font-weight="bold">app/ ← εκεί γράφεις κώδικα</text>
+ <rect x="60" y="82" width="240" height="178" fill="var(--accent-wash)" rx="5"/>
+ <text x="70" y="102" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/main/</text>
+ <text x="80" y="120" font-size="10" fill="var(--ink-2)">├ java/…/MainActivity.kt ← κώδικας λογικής</text>
+ <text x="80" y="138" font-size="10" fill="var(--ink-2)">├ res/ ← πόροι (εικόνες, κείμενα, χρώματα)</text>
+ <text x="80" y="156" font-size="10" fill="var(--ink-2)">└ AndroidManifest.xml ← η "ταυτότητα" της εφαρμογής</text>
+ <text x="70" y="180" font-size="10" fill="var(--accent-deep)" font-weight="bold">build.gradle.kts</text>
+ <text x="80" y="198" font-size="10" fill="var(--muted-2)">Δήλωση των βιβλιοθηκών (έκδοση SDK, Compose κ.λπ.)</text>
+ <text x="70" y="222" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/androidTest/ και test/</text>
+ <text x="80" y="240" font-size="10" fill="var(--muted-2)">Κώδικας αυτοματοποιημένων τεστ (χρήση στο κεφάλαιο 56)</text>
+ <rect x="320" y="82" width="230" height="178" fill="#f0fdf4" rx="5"/>
+ <text x="330" y="102" font-size="10" fill="#065f46" font-weight="bold">Άλλα αρχεία στον βασικό φάκελο</text>
+ <text x="340" y="122" font-size="10" fill="var(--ink-2)">gradle/ + gradlew.bat ← scripts build</text>
+ <text x="340" y="142" font-size="10" fill="var(--ink-2)">settings.gradle.kts ← ρυθμίσεις έργου</text>
+ <text x="340" y="162" font-size="10" fill="var(--muted-2)">(ο κανόνας του αρχάριου: ακούμπα μόνο στον φάκελο app/ </text>
+ <text x="340" y="180" font-size="10" fill="var(--muted-2)">τα υπόλοιπα βλέπε προς το παρόν ως "μαύρο κουτί", μην τα πειράξεις)</text>
+ <text x="340" y="208" font-size="10" fill="var(--muted)">.gitignore ← λίστα αγνόησης ελέγχου εκδόσεων</text>
+ </svg>
 ```
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -127,12 +127,12 @@ kind: chapter
 
 ```
 setContent {
-    MyFirstAppTheme {
-        Surface(modifier = Modifier.fillMaxSize()) {
-            // ▼ Άλλαξε εδώ το κείμενο με δικό σου
-            Text("Γεια σου Γιώργο! Αυτή είναι η πρώτη μου εφαρμογή")
-        }
-    }
+ MyFirstAppTheme {
+ Surface(modifier = Modifier.fillMaxSize()) {
+ // ▼ Άλλαξε εδώ το κείμενο με δικό σου
+ Text("Γεια σου Γιώργο! Αυτή είναι η πρώτη μου εφαρμογή")
+ }
+ }
 }
 ```
 :::

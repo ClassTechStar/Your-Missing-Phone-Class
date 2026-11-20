@@ -34,7 +34,7 @@ II. Mitos do carregamento? Carregamento rápido, sem fio e regras de ouro
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Função "Limite de 80% de carga" do iPhone — transformando a regra de ouro em configuração do sistema
+Função "Limite de 80% de carga" do iPhone — transformando a regra de ouro em configuração do sistema
 
 {class="mt-1"}
 A série iPhone 15/16 (iOS 17 ou superior) já transformou a "regra 20%-80%" em uma função do sistema. Quando ativada, o telefone para automaticamente de carregar ao atingir 80%, retardando significativamente o envelhecimento da bateria. Caminho de configuração:
@@ -48,7 +48,7 @@ Significado das três opções: ①<strong>Sem limite</strong> — carrega até 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-plug mr-2"></i>Carregador GaN — o melhor parceiro de viagem
+Carregador GaN — o melhor parceiro de viagem
 
 {class="mt-1"}
 Você deve ter notado que os carregadores rápidos estão ficando cada vez menores. O herói por trás disso é o <strong>GaN (Nitreto de Gálio)</strong>, um novo material semicondutor. Comparado aos carregadores tradicionais de silício, o carregador GaN tem várias vantagens claras:
@@ -127,47 +127,47 @@ Fluxo de trabalho do carregamento rápido:
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocolo</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Potência máxima</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Rota técnica</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Compatibilidade</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensão / múltiplos níveis</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">A mais ampla</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensão ajustável</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modelos Qualcomm</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baixa tensão, alta corrente</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Exclusivo OPPO</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bomba de carga</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Fast Charge</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protocolo PD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Protocolo</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Potência máxima</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Rota técnica</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Compatibilidade</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensão / múltiplos níveis</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">A mais ampla</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alta tensão ajustável</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modelos Qualcomm</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Baixa tensão, alta corrente</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Exclusivo OPPO</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bomba de carga</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Fast Charge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Protocolo PD</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -188,7 +188,7 @@ O carregamento sem fio também tem seus próprios padrões de protocolo:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Dicas de segurança para carregamento rápido
+Dicas de segurança para carregamento rápido
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Evite jogar games pesados enquanto carrega, pois isso intensifica o aquecimento.
@@ -207,7 +207,7 @@ Se você acompanhou os lançamentos de flagships de 2024-2026, o termo "ânodo d
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Quais modelos já usam?
+Quais modelos já usam?
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Honor</strong>: A série Magic foi a primeira a comercializar o ânodo de silício-carbono. Magic6 Pro, série Magic7 e o dobrável Magic V3 adotam a tecnologia.
@@ -228,7 +228,7 @@ V. Estas sim são as verdadeiras técnicas de economia de bateria
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Vamos verificar: faça um check-up na sua bateria
+Vamos verificar: faça um check-up na sua bateria
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifique a saúde: encontre e anote a capacidade máxima da sua bateria.

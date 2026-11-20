@@ -53,7 +53,7 @@ The general enabling path is: enter [Settings] → [More Settings] → find the 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Notes
+Notes
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Memory expansion occupies part of the phone's storage space; please ensure free storage is no less than 20-30GB, otherwise it may affect system fluidity.
@@ -63,7 +63,7 @@ The general enabling path is: enter [Settings] → [More Settings] → find the 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Summary
+Summary
 
 {class="mt-1"}
 Memory expansion is a mature system-level optimization technology. It can improve multitasking capability and background retention for mid-to-low-end models without hardware changes, but it's limited by the huge speed gap between flash and physical memory, and is not a "miracle cure." Whether to enable it and how much to set should be judged based on your model's physical memory size, flash specification, free storage space, and usage habits.
@@ -71,7 +71,7 @@ Memory expansion is a mature system-level optimization technology. It can improv
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-on: Check If Your Phone Has Memory Expansion
+Hands-on: Check If Your Phone Has Memory Expansion
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Open [Settings] and search for "Memory Extension," "Memory Fusion," "RAM Plus," or "Extended RAM."

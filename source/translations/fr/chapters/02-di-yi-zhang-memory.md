@@ -53,7 +53,7 @@ Le chemin d'activation général : [Réglages] → [Plus de réglages] → trouv
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Précautions
+Précautions
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - L'extension de mémoire occupe une partie du stockage interne, veillez à ce qu'il reste au moins 20-30 Go, sinon la fluidité du système peut être affectée.
@@ -63,7 +63,7 @@ Le chemin d'activation général : [Réglages] → [Plus de réglages] → trouv
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Résumé
+Résumé
 
 {class="mt-1"}
 L'extension de mémoire est une technologie d'optimisation au niveau système mature, qui peut améliorer les capacités de multitâche et le maintien en arrière-plan des modèles milieu et entrée de gamme sans modifier le matériel, mais elle est limitée par le fossé de vitesse entre flash et RAM physique, et n'est pas une « panacée ». L'activer ou non, et à quel niveau, dépend de la taille de la RAM physique, de la spécification de flash, de l'espace de stockage libre et des habitudes d'utilisation.
@@ -71,7 +71,7 @@ L'extension de mémoire est une technologie d'optimisation au niveau système ma
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>À vous de jouer : vérifiez si votre smartphone a l'extension de mémoire
+À vous de jouer : vérifiez si votre smartphone a l'extension de mémoire
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez [Réglages], recherchez « extension de mémoire », « fusion de mémoire », « RAM Plus » ou « Extended RAM ».

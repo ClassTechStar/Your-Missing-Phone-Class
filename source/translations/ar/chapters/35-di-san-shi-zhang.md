@@ -19,19 +19,19 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التقنية</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">من يستخدمها</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الميزات</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منظومة Apple، التجربة الأكثر سلاسة. يتطلب Apple TV أو تلفاز يدعم AirPlay</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">هواتف Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">اتصال Wi-Fi Direct مباشر، لا يحتاج راوتر. "البث اللاسلكي" في Android يستخدم هذا افتراضياً</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جميع المنصات</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يدفع ملفات الوسائط فقط (فيديو/موسيقى/صور)، لا ينسخ الشاشة. مناسب لدفع الفيديو للتلفاز</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">التقنية</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">من يستخدمها</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">الميزات</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">منظومة Apple، التجربة الأكثر سلاسة. يتطلب Apple TV أو تلفاز يدعم AirPlay</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">هواتف Android</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">اتصال Wi-Fi Direct مباشر، لا يحتاج راوتر. "البث اللاسلكي" في Android يستخدم هذا افتراضياً</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">جميع المنصات</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">يدفع ملفات الوسائط فقط (فيديو/موسيقى/صور)، لا ينسخ الشاشة. مناسب لدفع الفيديو للتلفاز</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -69,7 +69,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
+مستوى متقدم: استخدم GitHub Pages لبناء مدونة شخصية مجانية
 
 {class="mt-1"}
 أياً كان حل الاتصال بالسيارة، استخدم التحكم الصوتي قدر الإمكان أثناء القيادة. اضبط الوجهة للملاحة مسبقاً، اختر قائمة الأغاني مسبقاً، لا تتعامل مع شاشة السيارة أثناء القيادة.
@@ -86,7 +86,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>جرّب: أكمل بثاً من الهاتف للتلفاز
+جرّب: أكمل بثاً من الهاتف للتلفاز
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. تأكد من اتصال الهاتف والتلفاز بنفس شبكة Wi-Fi.
@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة الفصل
+خلاصة الفصل
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - ثلاثة معسكرات للبث اللاسلكي: AirPlay (Apple) وMiracast (Android) وDLNA (دفع الوسائط عبر المنصات)

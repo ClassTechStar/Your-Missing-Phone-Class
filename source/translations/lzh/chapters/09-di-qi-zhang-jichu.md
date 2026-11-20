@@ -42,7 +42,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>小知
+小知
 
 {class="mt-1"}
 小知
@@ -115,7 +115,7 @@ kind: chapter
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>技之望
+技之望
 
 {class="mt-1"}
 技之望
@@ -123,7 +123,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>往略檢之：汝手機是否支持此等功
+往略檢之：汝手機是否支持此等功
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 往設置中搜"衛星"，觀有無衛星通相關之擇。

@@ -32,22 +32,22 @@ I telefoni di oggi integrano quasi tutti una "Modalità semplice" (chiamata da a
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Brand</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nome modalità</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Come attivarla</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accessibilità (nessuna modalità semplice separata, ma può essere ingrandita voce per voce)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Display e luminosità > Dimensione testo, trascina al massimo. Quindi in "Accessibilità > Display e dimensione testo" attiva "Testo in grassetto" e "Forma dei pulsanti"</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Sistema e aggiornamenti > Modalità semplice > Attiva</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità essenziale</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Altre impostazioni > Modalità essenziale > Attiva</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Funzioni speciali > Modalità semplice</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Desktop semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Desktop, schermata di blocco e sfondo > Desktop semplice</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Display > Modalità semplice</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Brand</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Nome modalità</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Come attivarla</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Accessibilità (nessuna modalità semplice separata, ma può essere ingrandita voce per voce)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Display e luminosità > Dimensione testo, trascina al massimo. Quindi in "Accessibilità > Display e dimensione testo" attiva "Testo in grassetto" e "Forma dei pulsanti"</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Sistema e aggiornamenti > Modalità semplice > Attiva</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità essenziale</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Altre impostazioni > Modalità essenziale > Attiva</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Funzioni speciali > Modalità semplice</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Desktop semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Desktop, schermata di blocco e sfondo > Desktop semplice</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Modalità semplice</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Impostazioni > Display > Modalità semplice</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ Alcuni anziani non vogliono usare la modalità semplice, la trovano troppo "vecc
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Fai: aiuta gli anziani a "ristrutturare" il telefono
+Fai: aiuta gli anziani a "ristrutturare" il telefono
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Attiva la modalità semplice (segui la tabella dei brand sopra).
@@ -96,7 +96,7 @@ Gli anziani sono la categoria più colpita dalle truffe telecom. Non è che abbi
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>La "filastrocca anti-truffa" per gli anziani (stampala e attaccala vicino al telefono)
+La "filastrocca anti-truffa" per gli anziani (stampala e attaccala vicino al telefono)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Chiamata sconosciuta che chiede soldi → riaggancia!</strong>
@@ -151,7 +151,7 @@ Molti anziani hanno problemi di udito, ma non sanno che il telefono può funzion
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Riepilogo del capitolo
+Riepilogo del capitolo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Prima attiva la modalità semplice o ingrandisci manualmente caratteri/icone: ambienti ben configurati risolvono la maggior parte dei problemi

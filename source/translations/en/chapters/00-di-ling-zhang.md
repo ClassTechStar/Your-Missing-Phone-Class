@@ -45,7 +45,7 @@ But there are three main reasons your phone's storage shrinks:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tips for Buying a Phone
+Tips for Buying a Phone
 
 {class="mt-1"}
 Nowadays 128GB phones are basically not enough; 256GB is a safer starting point. If you like taking photos or playing games, consider going straight to 512GB or larger. Remember, when it comes to storage, it's far better to have surplus than to come up short at the worst possible moment.
@@ -53,7 +53,7 @@ Nowadays 128GB phones are basically not enough; 256GB is a safer starting point.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-on: Check Your Phone's "ID Card"
+Hands-on: Check Your Phone's "ID Card"
 
 {class="mt-1"}
 Open [Settings], find About Phone (or a similar option), and note down: phone model, system version, total storage, and available storage. This is the first step to understanding it. Also check battery health so you have a clear picture.
@@ -66,7 +66,7 @@ Before diving into specific knowledge, let's establish a core understanding:<str
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>Why Does This Matter?
+Why Does This Matter?
 
 {class="mt-1"}
 If your phone is lost or broken, you lose not only a few thousand yuan of hardware,<strong>but more likely years of irreplaceable data</strong>—photos of your child growing up, voice messages from departed loved ones, important contracts that were never backed up. Scientific organization and protection habits can safeguard you across three dimensions:

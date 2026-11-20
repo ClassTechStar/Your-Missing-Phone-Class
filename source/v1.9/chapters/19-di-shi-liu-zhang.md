@@ -317,7 +317,7 @@ QQ那边对应的是"设备锁"：在QQ安全中心开启后，新设备登录�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-crown mr-2"></i>iCloud+：付费用户才能享受的隐私三件套
+iCloud+：付费用户才能享受的隐私三件套
 
 {class="mt-1"}
 只要升级到任意付费iCloud档位（50GB/200GB/2TB等），就自动成为<strong>iCloud+</strong>用户，解锁三个隐私保护功能：
@@ -333,7 +333,7 @@ QQ那边对应的是"设备锁"：在QQ安全中心开启后，新设备登录�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-halved mr-2"></i>iCloud高级数据保护（ADP）——真正的端到端加密
+iCloud高级数据保护（ADP）——真正的端到端加密
 
 {class="mt-1"}
 2022年底苹果推出了<strong>iCloud高级数据保护（Advanced Data Protection，ADP）</strong>，把端到端加密（E2EE）从原来的健康、密码等少数数据，扩展到了<strong>绝大部分iCloud数据</strong>——照片、备忘录、iCloud云备份、设备信息等共23类数据。
@@ -615,7 +615,7 @@ QQ那边对应的是"设备锁"：在QQ安全中心开启后，新设备登录�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>账号被盗的后果比你想象的要严重
+账号被盗的后果比你想象的要严重
 
 {class="mt-1"}
 如果黑客拿到了你的账号密码，他可以：远程锁定你的手机并勒索赎金、查看你的照片和通讯录、用你的支付方式买东西。更麻烦的是，如果你的账号绑定了太多东西，找回账号本身就是一场噩梦。所以，双重认证，现在就去开。
@@ -903,7 +903,7 @@ QQ那边对应的是"设备锁"：在QQ安全中心开启后，新设备登录�
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 账号问题的麻烦从不在于设不好，而在于多年后没人记得当初绑了哪些服务。
@@ -911,7 +911,7 @@ QQ那边对应的是"设备锁"：在QQ安全中心开启后，新设备登录�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>实操：给你的账号做一次全面体检
+实操：给你的账号做一次全面体检
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 打开手机设置，进入账号页面，确认双重认证已开启。

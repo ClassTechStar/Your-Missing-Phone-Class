@@ -43,7 +43,7 @@ Prolonged screen time inevitably causes dry, sore eyes. Eye protection mode (blu
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>The 20-20-20 Rule
+The 20-20-20 Rule
 
 {class="mt-1"}
 Every <strong>20 minutes</strong> of screen time, look at something <strong>20 feet (about 6 meters)</strong> away for <strong>20 seconds</strong>. This simple action effectively relieves ciliary muscle fatigue.
@@ -80,7 +80,7 @@ The amount of information we receive daily equals what people in ancient times r
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Hands-On: One-Week Digital Health Challenge
+Hands-On: One-Week Digital Health Challenge
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Today: Open Screen Time / Digital Wellbeing and review last week's usage data.
@@ -94,7 +94,7 @@ The amount of information we receive daily equals what people in ancient times r
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Chapter Summary
+Chapter Summary
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - First check your screen time data, understanding the current state is the first step to change

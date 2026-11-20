@@ -27,23 +27,23 @@ kind: chapter
 
 @Composable
 fun CameraButton() {
-    val permission = rememberPermissionState(
-        permission = android.Manifest.permission.CAMERA
-    )
-    Button(onClick = {
-        when {
-            permission.status.isGranted -&gt; openCamera()
-            permission.status.shouldShowRationale -&gt; showExplainDialog()
-            else -&gt; permission.launchPermissionRequest()
-        }
-    }) { Text("拍照") }
+ val permission = rememberPermissionState(
+ permission = android.Manifest.permission.CAMERA
+ )
+ Button(onClick = {
+ when {
+ permission.status.isGranted -&gt; openCamera()
+ permission.status.shouldShowRationale -&gt; showExplainDialog()
+ else -&gt; permission.launchPermissionRequest()
+ }
+ }) { Text("拍照") }
 }
 ```
 :::
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：被永久拒绝怎么办？
+注意：被永久拒绝怎么办？
 
 {class="mt-1"}
 用户勾了"不再询问"后，<code class="inline">launchPermissionRequest</code> 不会再弹窗。此时应引导用户去系统设置里手动开启（用 <code class="inline">Intent</code> 跳到应用设置页），并在界面里说明"这个权限用来做什么"。态度好一点，用户开权限的意愿会高很多<strong>申请权限的文案，值得认真写</strong>。
@@ -63,22 +63,22 @@ fun CameraButton() {
 
 // 1. 创建通知渠道（Android 8+ 必须）
 val channel = NotificationChannel(
-    "reminder", "提醒", NotificationManager.IMPORTANCE_DEFAULT
+ "reminder", "提醒", NotificationManager.IMPORTANCE_DEFAULT
 )
 val manager = getSystemService(NotificationManager::class.java)
 manager.createNotificationChannel(channel)
 
 // 2. 发通知
 val notification = NotificationCompat.Builder(this, "reminder")
-    .setSmallIcon(R.drawable.ic_notification)
-    .setContentTitle("记账提醒")
-    .setContentText("今天还没记账哦")
-    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-    .build()
+ .setSmallIcon(R.drawable.ic_notification)
+ .setContentTitle("记账提醒")
+ .setContentText("今天还没记账哦")
+ .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+ .build()
 if (ActivityCompat.checkSelfPermission(this,
-        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+ Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
 ) {
-    manager.notify(1, notification)
+ manager.notify(1, notification)
 }
 ```
 :::
@@ -94,7 +94,7 @@ if (ActivityCompat.checkSelfPermission(this,
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：别过度设计
+小贴士：别过度设计
 
 {class="mt-1"}
 Hilt 和模块化都是好工具，但<strong>单人项目先别急着上</strong>。记账本单模块 + 手动创建依赖完全够用。等代码量超过几万行、编译开始变慢、多人协作时，再按需引入。工具是服务目标的，不是用来炫耀的——这也是咱们 AI 编程书里的"简单至上"原则。
@@ -127,7 +127,7 @@ Compose 写起来爽，但"重组过多"也会卡。三个实用技巧：
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给记账本加"三件套"
+来动手：给记账本加"三件套"
 
 {class="mt-1"}
 ① 给记账本加"每天 20:00 记账提醒"（WorkManager + 通知渠道 + Android 13 通知权限）；② 把数据库和 API 的创建改成 Hilt 注入；③ 试着用 AI 工具让"月度筛选"功能提速实现，然后按三层验收法检查产出。三件套做完，你的项目就有"正规军"的样子了。
@@ -135,7 +135,7 @@ Compose 写起来爽，但"重组过多"也会卡。三个实用技巧：
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 敏感权限：Manifest 声明 + 运行时申请 + 被拒后优雅引导
 - 通知三纪律：只发有用的、能关、不骚扰；渠道 + 权限缺一不可

@@ -67,7 +67,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Попробуйте: постройте свой рабочий процесс мобильного офиса
+Попробуйте: постройте свой рабочий процесс мобильного офиса
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Выберите основное приложение для документов (WPS или Microsoft 365), войдите и подключите облачное хранилище.

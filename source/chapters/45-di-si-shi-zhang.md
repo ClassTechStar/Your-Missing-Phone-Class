@@ -76,12 +76,12 @@ kind: chapter
 - 构建：Vite
 ## 数据模型
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## 开发计划
 Step 1: 基础记录功能 (CRUD)
@@ -135,7 +135,7 @@ Step 5: 数据导出
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给你的"心头好"写一份五要素卡
+来动手：给你的"心头好"写一份五要素卡
 
 {class="mt-1"}
 选一个你酝酿已久的小项目，花 5 分钟填一张卡：Who / What / Why / How / Constraint，各一句话。然后把它拆成 3-5 个"每一步都能用"的步骤。你会发现：把想法写下来之后，它就从"白日梦"变成了"待办清单"。
@@ -143,7 +143,7 @@ Step 5: 数据导出
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 需求五要素：Who / What / Why / How / Constraint：想清楚再开口
 - 需求拆解黄金法则：每一步完成后项目都是"能用的东西"

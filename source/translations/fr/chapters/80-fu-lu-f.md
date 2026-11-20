@@ -25,7 +25,7 @@ Progrès clés 2024-2026 : durée de vie de la charnière généralement annonc�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Jugement en une phrase
+Jugement en une phrase
 
 {class="mt-1"}
 Si votre smartphone à barre actuel vous suffit totalement et que vous n'avez pas le point faible « l'écran n'est pas assez grand », n'achetez pas de pliable. C'est un appareil qui « ajoute du luxe », pas un appareil qui « sauve la mise ».
@@ -42,7 +42,7 @@ Selon les retours d'utilisateurs réels, ces catégories ont une forte probabili
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-triangle-exclamation mr-2"></i>Ces catégories ne doivent pas acheter
+Ces catégories ne doivent pas acheter
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Si vous n'utilisez le smartphone que pour les courtes vidéos, WeChat et les appels, l'écran pliable n'apporte rien, au contraire il est plus lourd et plus épais.
@@ -63,7 +63,7 @@ Ne vous laissez pas éblouir par le mot « pliable », lors de l'achat regardez 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Liste de vérification en boutique
+Liste de vérification en boutique
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez et fermez 10 fois vous-même, sentez si la résistance de la charnière est fluide et sans bruit.
@@ -112,7 +112,7 @@ Ce qui est le plus fragile sur un pliable, c'est l'écran interne et la charniè
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Scénarios fréquents d'endommagement de l'écran interne
+Scénarios fréquents d'endommagement de l'écran interne
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Câble d'écouteurs/de charge coincé en fermant, fissure directe de l'écran interne.
@@ -134,7 +134,7 @@ Avant d'acheter, ayez ces comptes en tête :
 
 ::: div .highlight-quote
 {class="mb-1"}
-<i class="fas fa-quote-left mr-2" aria-hidden="true"></i>L'écran pliable n'est pas un « meilleur smartphone », mais un « smartphone d'une autre forme ». On l'achète parce qu'on a besoin de sa forme unique, pas parce qu'il est « plus avancé ».
+L'écran pliable n'est pas un « meilleur smartphone », mais un « smartphone d'une autre forme ». On l'achète parce qu'on a besoin de sa forme unique, pas parce qu'il est « plus avancé ».
 
 {class="text-right text-sm"}
 —: De la philosophie d'achat des écrans pliables
@@ -155,7 +155,7 @@ Conseils d'achat : budget confortable et écosystème → Huawei Mate X ; charni
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-circle-info mr-2"></i>Dernier Rappel
+Dernier Rappel
 
 {class="mt-1"}
 La technologie des écrans pliables évolue chaque année ; cette annexe est rédigée en 2026. Avant l'achat, consultez les derniers tests et retours utilisateurs, en privilégiant : la durée de vie réelle de la charnière, l'aspect du pli et la politique de réparation de l'écran intérieur. Toucher en magasin reste plus important que lire des tests.

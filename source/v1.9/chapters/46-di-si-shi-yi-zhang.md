@@ -294,7 +294,7 @@ Google 的 Gemini CLI 值得单独一小节，因为它的定位很特殊：终�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：别把原型当产品
+避坑提醒：别把原型当产品
 
 {class="mt-1"}
 云端 Builder 造出来的东西，"看着像产品"和"是产品"之间隔着一整个第 45 章，没有测试、没有备份、没有像样的错误处理。它的正确归宿是验证想法，然后导出代码迁到本地深度开发。数据和应用务必在本地留副本：见过有人用云端工具跑了半年业务，一次平台策略调整就把自己架在火上。
@@ -394,7 +394,7 @@ AGENTS.md 既然是通用答案，就给你一份"写什么"的清单。一，�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给你自己配一套"兵器组合"
+来动手：给你自己配一套"兵器组合"
 
 {class="mt-1"}
 用三个判断维度（编程基础、项目阶段、部署需求）给自己定位：如果你是零基础 → 试试 Bolt 或 v0 做一个页面；有基础 → 用 Cursor 或 Trae 做一个迭代任务；想挑战 → 在终端里跑一次 Claude Code。然后回答：哪种流派最符合你当前的阶段？
@@ -437,7 +437,7 @@ AGENTS.md 既然是通用答案，就给你一份"写什么"的清单。一，�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>小贴士：把你的答案写下来
+小贴士：把你的答案写下来
 
 {class="mt-1"}
 每次重走决策树，把日期和五个答案记在项目 README 里。三个月后回看，你会清晰看到自己从"浏览器里点点点"走到"终端里排工单"的轨迹：这条轨迹，就是成长曲线本身。
@@ -587,7 +587,7 @@ AGENTS.md 既然是通用答案，就给你一份"写什么"的清单。一，�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 三大流派：IDE 内置 AI（日常开发）、终端 Agent（项目级操作）、云端 Builder（零基础原型）
 - 选工具看三问：编程基础？项目阶段？部署需求？

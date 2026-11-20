@@ -74,7 +74,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>قائمة فحص"اليوم الأول من العمل"
+قائمة فحص"اليوم الأول من العمل"
 
 {class="mt-1 text-sm"}
 بعد الحصول على هاتف جديد أو تحديث كبير للإصدار، يُستحسن قضاء 10 دقائق لمراجعة هذه الإعدادات:
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS VoiceOver
+iOS VoiceOver
 
 {class="mt-1"}
 <strong>مسار التفعيل</strong>: [الإعدادات] &gt; [إمكانية الوصول] &gt; [VoiceOver]، افتح المفتاح. يمكن أيضاً النقر ثلاث مرات على الزر الجانبي (أو زر الشاشة الرئيسية) للتبديل السريع.
@@ -117,7 +117,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>Android TalkBack
+Android TalkBack
 
 {class="mt-1"}
 <strong>مسار التفعيل</strong>: [الإعدادات] &gt; [إمكانية الوصول] &gt; [TalkBack]، افتح المفتاح. أو اضغط مطولاً على زري رفع وخفض الصوت لمدة 3 ثوانٍ للتفعيل السريع (تدعمه بعض العلامات).
@@ -161,7 +161,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>دعم وصف الصور بالذكاء الاصطناعي في كل نظام
+دعم وصف الصور بالذكاء الاصطناعي في كل نظام
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: فعّل"وصف الصور" في [الإعدادات] &gt; [إمكانية الوصول] &gt; [VoiceOver] &gt; [وصف صوتي]. سيستدعي النظام<strong>نموذج ذكاء اصطناعي محلي</strong>لإنشاء وصف نصي للصورة تلقائياً (يتطلب iPhone 12 فأحدث).
@@ -171,7 +171,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>سيناريوهات الاستخدام
+سيناريوهات الاستخدام
 
 {class="mt-1"}
 جرّب أن تسأل عن صورة شارع"كم شخصاً في هذه الصورة؟ ماذا يفعلون؟"، أو افتح تطبيق توصيل الطعام ودع الذكاء الاصطناعي يقرأ أسماء الأطباق في صورة القائمة<strong>هذا هو"التكنولوجيا التي تجعل الحياة أكثر مساواة"حقاً</strong>.
@@ -184,7 +184,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>تفعيل وتحسين الترجمة الفورية
+تفعيل وتحسين الترجمة الفورية
 
 {class="mt-1"}
 <strong>iOS</strong>: [الإعدادات] &gt; [إمكانية الوصول] &gt; [الترجمة الفورية]، افتح المفتاح. سيكتشف النظام جميع أصوات الجهاز (المكالمات والفيديو والبودكاست وFaceTime والملاحظات الصوتية)، ويعرض الترجمة تلقائياً أعلى الشاشة.
@@ -209,7 +209,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>الترجمة الفورية للمكالمات (TTY/RTT)
+الترجمة الفورية للمكالمات (TTY/RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [الإعدادات] &gt; [إمكانية الوصول] &gt; [RTT/TTY]، بعد التفعيل ستظهر لوحة مفاتيح على الشاشة أثناء المكالمات، ويتحول صوت الطرف الآخر إلى نص في الوقت الفعلي،<strong>كما ستُقرأ كلماتك المكتوبة بصوت عالٍ</strong>للطرف الآخر.
@@ -237,7 +237,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>فلسفة Apple في تصميم إمكانية الوصول
+فلسفة Apple في تصميم إمكانية الوصول
 
 {class="mt-1"}
 تستثمر Apple كثيراً في مجال إمكانية الوصول، وتحدّث وتضيف وظائف مساعدة كل عام. يوجد لدى موقع Apple صفحة مخصصة لإمكانية الوصول، تشرح بالتفصيل كيفية استخدام كل وظيفة. عادة ما تكون وظائف إمكانية الوصول في iOS أكثر اكتمالاً وتجربة أكثر سلاسة من Android، وهذا سبب مهم لاختيار العديد من المستخدمين ذوي الإعاقات لـ Apple.
@@ -245,7 +245,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>اقضِ 30 ثانية لتجربتها
+اقضِ 30 ثانية لتجربتها
 
 {class="mt-1"}
 اختر وقتاً فراغاً، وقم بالتجارب التالية:

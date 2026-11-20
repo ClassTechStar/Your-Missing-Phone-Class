@@ -34,10 +34,10 @@ Crie uma página web de caixa de ferramentas pessoal, requisitos:
 1. HTML em arquivo único (CSS e JS inline), sem frameworks
 2. Tema escuro, estilo minimalista moderno
 3. Mostrar 4 cards de ferramentas:
-   - Resumidor de texto
-   - Contador de palavras
-   - Seletor de cores
-   - Gerador de QR code
+ - Resumidor de texto
+ - Contador de palavras
+ - Seletor de cores
+ - Gerador de QR code
 4. Cada card tem ícone, título e descrição curta
 5. Os cards têm animação ao passar o mouse
 6. Layout responsivo, utilizável no celular
@@ -109,17 +109,17 @@ Requisitos:
 1. Servidor Express, porta 3001
 2. Banco de dados SQLite, tabela records
 3. Campos da tabela records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. Endpoints CRUD:
-   GET /api/records - obter todos os registros
-   POST /api/records - adicionar registro
-   PUT /api/records/:id - atualizar registro
-   DELETE /api/records/:id - excluir registro
+ GET /api/records - obter todos os registros
+ POST /api/records - adicionar registro
+ PUT /api/records/:id - atualizar registro
+ DELETE /api/records/:id - excluir registro
 5. Middleware de tratamento de erros
 Dê a estrutura completa do código backend.
 ```

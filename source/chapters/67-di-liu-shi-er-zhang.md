@@ -25,17 +25,17 @@ kind: chapter
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body：描述"界面长什么样"
-        VStack {               // 竖着排列
-            Text("你好，世界！")
-                .font(.largeTitle)      // 修饰符：大标题
-            Button("点我") {
-                print("被点击了")
-            }
-            .buttonStyle(.borderedProminent)  // 蓝色实心按钮
-        }
-        .padding()
-    }
+ var body: some View { // body：描述"界面长什么样"
+ VStack { // 竖着排列
+ Text("你好，世界！")
+ .font(.largeTitle) // 修饰符：大标题
+ Button("点我") {
+ print("被点击了")
+ }
+ .buttonStyle(.borderedProminent) // 蓝色实心按钮
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -68,17 +68,17 @@ SwiftUI 四大基础视图
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("账单")
-        Spacer()                 // 弹性空间：把右边推到尽头
-        Text("-25.5 元").foregroundColor(.red)
-    }
-    Divider()                    // 分割线
-    Text("备注：午饭")
+ HStack {
+ Text("账单")
+ Spacer() // 弹性空间：把右边推到尽头
+ Text("-25.5 元").foregroundColor(.red)
+ }
+ Divider() // 分割线
+ Text("备注：午饭")
 }
-.padding(16)                     // 四周留白
+.padding(16) // 四周留白
 .background(Color(.systemGray6)) // 浅灰底
-.cornerRadius(12)                // 圆角
+.cornerRadius(12) // 圆角
 
 // 修饰符顺序有意义：先 padding 再 background，背景不含边距
 ```
@@ -86,7 +86,7 @@ VStack(alignment: .leading, spacing: 12) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：修饰符顺序有讲究
+注意：修饰符顺序有讲究
 
 {class="mt-1"}
 <code class="inline">padding(16).background(灰)</code> 和 <code class="inline">background(灰).padding(16)</code> 效果不同——前者"先留白再涂色"（背景不含边距），后者"先涂色再留白"（背景包含边距）。新手最常见的"奇怪白边"都源于此。不确定时调换顺序，预览立刻告诉你答案。
@@ -103,16 +103,16 @@ VStack(alignment: .leading, spacing: 12) {
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State：这个值变了要重画
+ @State private var count = 0 // @State：这个值变了要重画
 
-    var body: some View {
-        VStack {
-            Text("你点了 \(count) 次")
-            Button("点我 +1") {
-                count += 1          // 改状态，界面自动刷新
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("你点了 \(count) 次")
+ Button("点我 +1") {
+ count += 1 // 改状态，界面自动刷新
+ }
+ }
+ }
 }
 ```
 :::
@@ -126,24 +126,24 @@ struct CounterView: View {
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("输入点什么", text: $text)  // $ 双向绑定
-            .textFieldStyle(.roundedBorder)
-        Text("你输入了：\(text)")   // 输入时实时更新
-    }
+ var body: some View {
+ TextField("输入点什么", text: $text) // $ 双向绑定
+ .textFieldStyle(.roundedBorder)
+ Text("你输入了：\(text)") // 输入时实时更新
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> 用户操作</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 状态改变（count += 1）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 用户操作</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 状态改变（count += 1）</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 自动重画界面（body 重新计算）</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 自动重画界面（body 重新计算）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -163,27 +163,27 @@ struct InputView: View {
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先功能后动画
+小贴士：先功能后动画
 
 {class="mt-1"}
 新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效：动画是锦上添花，功能是雪中送炭。这也是咱们一贯的"简单至上"原则。
@@ -191,7 +191,7 @@ struct AnimatedHeartView: View {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做一个"心情按钮"
+来动手：做一个"心情按钮"
 
 #### 六、常用修饰符速查：一页在手，界面不愁
 
@@ -212,7 +212,7 @@ SwiftUI 常用修饰符速查
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - SwiftUI 是声明式：描述"长什么样"，系统负责画和重画
 - 视图 = 遵守 View 协议的结构体；body 描述界面；修饰符链式"上妆"

@@ -56,7 +56,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① AI 换脸拟声诈骗
+① AI 换脸拟声诈骗
 
 {class="mt-1"}
 不法分子通过非法搜集目标对象在社交媒体发布的高清照片或仅需几秒钟的语音样本，利用AI深度伪造技术克隆出足以乱真的"亲友视频"或"语音"。常见剧本包括：<strong>突发车祸、紧急借款、遭遇绑架</strong>等。此类诈骗利用亲情、友情等情感纽带，<strong>迷惑性极高</strong>。
@@ -64,7 +64,7 @@ kind: chapter
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② 冒充权威 / 客服诈骗
+② 冒充权威 / 客服诈骗
 
 {class="mt-1"}
 AI技术能够精准模拟官方客服、公检法机关人员的声音与语调，甚至可以合成高度逼真的虚假转账截图、电子公文、通缉令等文件，通过<strong>制造恐慌心理或权威压力</strong>，诱导受害者转账或开启屏幕共享功能，从而窃取账户信息。
@@ -72,7 +72,7 @@ AI技术能够精准模拟官方客服、公检法机关人员的声音与语调
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ AI 投资理财诈骗
+③ AI 投资理财诈骗
 
 {class="mt-1"}
 通过AI算法伪造"稳赚不赔"的虚假收益截图、虚拟量化选股软件界面或"大师级"投资分析报告，以高额回报为诱饵，售卖高价投资服务或诱导受害者将资金转入其控制的交易账户，<strong>最终卷款跑路</strong>。
@@ -129,7 +129,7 @@ AI可以克隆声音和面容，但也不是无懈可击，有几个破绽可以
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>真实案例警示
+真实案例警示
 
 {class="mt-1"}
 2022年某地警方通报，黑客通过破解某品牌家用摄像头的默认密码（很多用户从未修改），窃取了上千户家庭的卧室画面并在网上兜售。<strong>不改默认密码 = 把家大门敞开</strong>。
@@ -180,7 +180,7 @@ AI可以克隆声音和面容，但也不是无懈可击，有几个破绽可以
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>千万别做的事
+千万别做的事
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - 用生日 / 123456 / qwerty 等弱密码。
@@ -192,7 +192,7 @@ AI可以克隆声音和面容，但也不是无懈可击，有几个破绽可以
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>试着启用并模拟"远程锁定"
+试着启用并模拟"远程锁定"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 确保你的"查找我的手机"功能已开启。

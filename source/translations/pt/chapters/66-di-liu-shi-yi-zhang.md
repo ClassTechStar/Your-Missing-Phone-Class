@@ -22,16 +22,16 @@ Um programa é “dados + lógica”. Variável é dar um nome aos dados e guard
 :::
 
 ```
-let name = "João"        // let: constante (o padrão recomendado)
-var age = 18             // var: variável (pode mudar depois)
+let name = "João" // let: constante (o padrão recomendado)
+var age = 18 // var: variável (pode mudar depois)
 
-age = 19                 // <i class="fas fa-check-circle mr-1"></i> var pode mudar
-// name = "Maria"         // <i class="fas fa-times-circle mr-1"></i> let não pode mudar: erro de compilação
+age = 19 // var pode mudar
+// name = "Maria" // let não pode mudar: erro de compilação
 
-let score: Int = 100     // também é possível declarar o tipo explicitamente
-let pi = 3.14            // se omitir, é inferido automaticamente
+let score: Int = 100 // também é possível declarar o tipo explicitamente
+let pi = 3.14 // se omitir, é inferido automaticamente
 
-print("Olá, \(name)")   // interpolação de string: barra invertida + parênteses
+print("Olá, \(name)") // interpolação de string: barra invertida + parênteses
 ```
 :::
 
@@ -64,20 +64,20 @@ Este é o conceito mais importante do Swift, sem concorrência. Em uma frase: qu
 :::
 
 ```
-var name: String = "João"   // tipo comum: nunca pode ser nil
-// name = nil                // <i class="fas fa-times-circle mr-1"></i> erro de compilação — te barra direto
+var name: String = "João" // tipo comum: nunca pode ser nil
+// name = nil // erro de compilação — te barra direto
 
-var nickname: String? = nil  // adicione um ponto de interrogação: nil permitido (opcional)
+var nickname: String? = nil // adicione um ponto de interrogação: nil permitido (opcional)
 nickname = "Zé"
 
 // Para usar um opcional, é preciso fazer o "unwrap":
-if let n = nickname {        // if let: unwrap seguro
-    print("Olá, \(n)")
+if let n = nickname { // if let: unwrap seguro
+ print("Olá, \(n)")
 } else {
-    print("Ainda sem apelido")
+ print("Ainda sem apelido")
 }
 
-let len = nickname?.count ?? 0   // ?? fornece valor padrão (operador de coalescência)
+let len = nickname?.count ?? 0 // ?? fornece valor padrão (operador de coalescência)
 print(len)
 ```
 :::
@@ -102,16 +102,16 @@ Uma função é um trecho de lógica com nome, como um botão do controle remoto
 ```
 // Funções: nome primeiro, parâmetros e tipo de retorno depois
 func greet(name: String) -> String {
-    return "Olá, \(name)!"
+ return "Olá, \(name)!"
 }
-print(greet(name: "João"))     // na chamada é preciso o nome do parâmetro
+print(greet(name: "João")) // na chamada é preciso o nome do parâmetro
 
 // Closures: definidas na hora, leves e diretas
 let numbers = [1, 2, 3, 4]
-let doubled = numbers.map { $0 * 2 }   // $0 = elemento atual
+let doubled = numbers.map { $0 * 2 } // $0 = elemento atual
 // [2, 4, 6, 8]
 
-let big = numbers.filter { $0 > 2 }    // filtro
+let big = numbers.filter { $0 > 2 } // filtro
 // [3, 4]
 ```
 :::
@@ -130,20 +130,20 @@ A preferência oficial do Swift é clara: use struct primeiro e recorra à class
 ```
 // A struct: uma caixa para dados
 struct Record {
-    var id = UUID()
-    var amount: Double
-    var category: String
-    var date: Date
+ var id = UUID()
+ var amount: Double
+ var category: String
+ var date: Date
 
-    // Structs já vêm com o "memberwise initializer": dá para criar direto
+ // Structs já vêm com o "memberwise initializer": dá para criar direto
 }
 let r = Record(amount: 25.5, category: "Alimentação", date: Date())
 
 // O protocolo: um contrato de "quais habilidades são exigidas"
 protocol Identifiable {
-    var id: UUID { get }
+ var id: UUID { get }
 }
-struct Record: Identifiable { ... }   // conformar-se a um protocolo = prometer cumprir seus requisitos
+struct Record: Identifiable { ... } // conformar-se a um protocolo = prometer cumprir seus requisitos
 ```
 :::
 

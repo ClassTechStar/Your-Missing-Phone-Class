@@ -76,7 +76,7 @@ CapCut(CapCut의 국내 버전)은 현재 초보자에게 가장 적합한 스�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>실습: 30초 숏폼 영상 하나 촬영하기
+실습: 30초 숏폼 영상 하나 촬영하기
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 당신이 잘 아는 작은 주제를 선택합니다 (예: "스마트폰 글씨 크기 키우는 방법").
@@ -88,7 +88,7 @@ CapCut(CapCut의 국내 버전)은 현재 초보자에게 가장 적합한 스�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>챕터 요약
+챕터 요약
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 촬영 전에 명확히 생각: 시청자는 누구인가, 어떤 가치를 제공할 것인가, 어떤 플랫폼에 게시할 것인가

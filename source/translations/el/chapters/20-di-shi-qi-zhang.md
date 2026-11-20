@@ -66,7 +66,7 @@ IV. Με το έξυπνο σπίτι: το τηλέφωνο ως ο "κεντρ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-location-crosshairs mr-2"></i>Τεχνολογία UWB — πιο ακριβής «χωρική αίσθηση» από το Bluetooth
+Τεχνολογία UWB — πιο ακριβής «χωρική αίσθηση» από το Bluetooth
 
 {class="mt-1"}
 Bluetooth, UWB(Ultra-Wideband,).<strong>Ακριβής μέτρηση απόστασης και χωρικός εντοπισμός</strong>—,Συσκευή, .Bluetooth"",UWB"1.2".Εφαρμογή:
@@ -80,7 +80,7 @@ Bluetooth, UWB(Ultra-Wideband,).<strong>Ακριβής μέτρηση απόστ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-headphones mr-2"></i>LE Audio και Auracast — η νέα γενιά ήχου Bluetooth
+LE Audio και Auracast — η νέα γενιά ήχου Bluetooth
 
 {class="mt-1"}
 Το κλασικό Bluetooth audio (A2DP) δύο δεκαετιών αντικαθίσταται <strong>LE Audio</strong>(χαμηλής κατανάλωσης ήχος), η νέα γενιά από Bluetooth 5.2:
@@ -110,7 +110,7 @@ Bluetooth, UWB(Ultra-Wideband,).<strong>Ακριβής μέτρηση απόστ
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Δοκιμή: κάντε cast στην τηλεόραση και στήστε μια έξυπνη σκηνή
+Δοκιμή: κάντε cast στην τηλεόραση και στήστε μια έξυπνη σκηνή
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Σιγουρευτείτε ότι κινητό και τηλεόραση είναι στο ίδιο Wi-Fi.
@@ -122,7 +122,7 @@ Bluetooth, UWB(Ultra-Wideband,).<strong>Ακριβής μέτρηση απόστ
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Περίπτωση 1: Πρακτική βελτιστοποίηση αυτονομίας
+Περίπτωση 1: Πρακτική βελτιστοποίηση αυτονομίας
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Σενάριο</strong>: Ο χρήστης του Xiaomi 14 έχει κακή αυτονομία, εξαντλείται σε μισή μέρα.

@@ -90,7 +90,7 @@ Para la mayoría, tener "una copia en la nube + una en el ordenador" ya es excel
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Atencion especial al historial de WeChat
+Atencion especial al historial de WeChat
 
 {class="mt-1"}
 ¡El historial de chat de WeChat NO puede migrarse con ningúna herramienta de transferencia de móviles! No está cubierto por la copia completa. Debes usar la función propia "Migración de historial de chat" de WeChat o copiar a WeChat para PC. Mucha gente lo descubre después de cambiar de móvil cuando ya es tarde,el viejo móvil ya puede haber sido restablecido de fábrica.
@@ -98,7 +98,7 @@ Para la mayoría, tener "una copia en la nube + una en el ordenador" ya es excel
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Practica: haz una copia de seguridad completa
+Practica: haz una copia de seguridad completa
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Verifica que la Copia de seguridad en iCloud o de marca esté activa; cuándo fue la última copia.

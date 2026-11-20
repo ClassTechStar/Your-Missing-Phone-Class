@@ -45,7 +45,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>買手機的小建議
+買手機的小建議
 
 {class="mt-1"}
 現在128GB的手機基本不夠用了，256GB起步比較穩妥。如果你喜歡拍照、玩遊戲，建議直接上512GB甚至更大。記住，儲存空間這東西，寧可富餘，不可捉襟見肘。
@@ -53,7 +53,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>來動手：看看你的手機"身份證"
+來動手：看看你的手機"身份證"
 
 {class="mt-1"}
 開啟 [設定]，找到關於手機（或類似選項），記下：手機型號、系統版本、總儲存空間和剩餘空間。這是瞭解它的第一步。順便看看電池健康度，心裡有個數。
@@ -66,7 +66,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>為什麼這很重要？
+為什麼這很重要？
 
 {class="mt-1"}
 如果手機丟了或壞了，你損失的不僅是幾千塊錢的硬體，<strong>更可能是多年積累的不可再生資料</strong>——孩子的成長照片、過世親人的語音、沒備份的重要合同。科學地整理與防護習慣，能從三個維度保護你：

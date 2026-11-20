@@ -74,7 +74,7 @@ Sono funzionalità "una volta impostate non torni più indietro": ciascuna può 
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Checklist "primo giorno di lavoro"
+Checklist "primo giorno di lavoro"
 
 {class="mt-1 text-sm"}
 Con un telefono nuovo o dopo un grande aggiornamento, dedica 10 minuti a queste impostazioni:<br> ① Password di blocco + biometria. ② Raggruppamento notifiche + disattivazione push marketing. ③ Dimensione caratteri / frequenza di aggiornamento, modalità scura<br>. ④ Tastiera / browser / client mail predefiniti. ⑤ Contatti di emergenza / cartella clinica. ⑥ Impostazioni di backup
@@ -90,7 +90,7 @@ Lo screen reader è lo strumento centrale per gli ipovedenti: <strong>legge ad a
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>VoiceOver di iOS
+VoiceOver di iOS
 
 {class="mt-1"}
 <strong>Percorso di attivazione</strong>: [Impostazioni] > [Accessibilità] > [VoiceOver], attiva l'interruttore. Oppure triplo clic sul tasto laterale (o Home) per attivare/disattivare rapidamente.
@@ -111,7 +111,7 @@ Lo screen reader è lo strumento centrale per gli ipovedenti: <strong>legge ad a
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>TalkBack di Android
+TalkBack di Android
 
 {class="mt-1"}
 <strong>Percorso di attivazione</strong>: [Impostazioni] > [Accessibilità] > [TalkBack], attiva l'interruttore. Oppure tieni premuti i tasti volume su+giù per 3 secondi (su alcuni brand).
@@ -155,7 +155,7 @@ Quando lo screen reader incontra un'immagine, la pratica tradizionale è saltarl
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>Supporto alla descrizione AI delle immagini sui sistemi
+Supporto alla descrizione AI delle immagini sui sistemi
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: in [Impostazioni] > [Accessibilità] > [VoiceOver] > [Descrizioni vocali] attiva "Descrizioni immagini". Il sistema usa un <strong>modello AI locale</strong> per generare automaticamente la descrizione testuale (richiede iPhone 12 o successivo).
@@ -165,7 +165,7 @@ Quando lo screen reader incontra un'immagine, la pratica tradizionale è saltarl
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Scenario d'uso
+Scenario d'uso
 
 {class="mt-1"}
 Prova a chiedere di una foto di strada "quante persone ci sono in questa immagine? Cosa stanno facendo?", oppure apri un'app di delivery e fai leggere dall'AI il nome dei piatti nel menu <strong>questa è la vera "tecnologia che rende la vita più paritaria"</strong>.
@@ -178,7 +178,7 @@ I sottotitoli live (Live Captions) sono una funzione <strong>di sistema di speec
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>Attivazione e ottimizzazione dei sottotitoli live
+Attivazione e ottimizzazione dei sottotitoli live
 
 {class="mt-1"}
 <strong>iOS</strong>: [Impostazioni] > [Accessibilità] > [Sottotitoli live], attiva. Il sistema rileva tutti gli audio del dispositivo (chiamate, video, podcast, FaceTime, Memo vocali) e mostra i sottotoli in alto sullo schermo.
@@ -203,7 +203,7 @@ Quando l'utente <strong>non sente e non può parlare</strong> (afonia improvvisa
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>Trascrizione in tempo reale della chiamata (TTY / RTT)
+Trascrizione in tempo reale della chiamata (TTY / RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [Impostazioni] > [Accessibilità] > [RTT/TTY], una volta attivo, in chiamata compare una tastiera a schermo; la voce dell'interlocutore viene trascritta in testo in tempo reale e <strong>quello che digiti viene letto a voce</strong> all'interlocutore.
@@ -231,7 +231,7 @@ Quando l'utente <strong>non sente e non può parlare</strong> (afonia improvvisa
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>La filosofia di accessibilità di Apple
+La filosofia di accessibilità di Apple
 
 {class="mt-1"}
 Apple investe moltissimo nell'accessibilità e ogni anno aggiorna e aggiunge funzioni. Sul sito Apple c'è una pagina dedicata all'accessibilità, con spiegazioni dettagliate. Le funzioni di accessibilità di iOS sono in genere più complete e fluide rispetto ad Android, motivo per cui molti utenti con disabilità scelgono Apple.
@@ -239,7 +239,7 @@ Apple investe moltissimo nell'accessibilità e ogni anno aggiorna e aggiunge fun
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>30 secondi per provare
+30 secondi per provare
 
 {class="mt-1"}
 Trova un momento libero e fai queste prove:

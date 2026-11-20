@@ -40,21 +40,21 @@ kind: chapter
 ```
 // JSON: {"weather":[{"description":"صافٍ"}],"main":{"temp":26.5,"humidity":40},"name":"الرياض"}
 data class WeatherResponse(
-    val weather: List&lt;Weather&gt;,
-    val main: Main,
-    val name: String
+ val weather: List&lt;Weather&gt;,
+ val main: Main,
+ val name: String
 )
 data class Weather(val description: String)
 data class Main(val temp: Double, val humidity: Int)
 
 interface WeatherApi {
-    @GET("data/2.5/weather")
-    suspend fun getWeather(
-        @Query("q") city: String,
-        @Query("appid") key: String,
-        @Query("units") metric: String = "metric",
-        @Query("lang") lang: String = "zh_cn"
-    ): WeatherResponse
+ @GET("data/2.5/weather")
+ suspend fun getWeather(
+ @Query("q") city: String,
+ @Query("appid") key: String,
+ @Query("units") metric: String = "metric",
+ @Query("lang") lang: String = "zh_cn"
+ ): WeatherResponse
 }
 ```
 :::
@@ -72,28 +72,28 @@ interface WeatherApi {
 
 ```
 sealed class UiState {
-    object Loading : UiState()                    // جارٍ التحميل
-    data class Success(val data: WeatherResponse) : UiState()  // نجاح
-    data class Error(val message: String) : UiState()          // فشل
+ object Loading : UiState() // جارٍ التحميل
+ data class Success(val data: WeatherResponse) : UiState() // نجاح
+ data class Error(val message: String) : UiState() // فشل
 }
 
 // في الـ ViewModel:
 fun search(city: String) {
-    viewModelScope.launch {
-        _state.value = UiState.Loading
-        _state.value = try {
-            UiState.Success(api.getWeather(city))
-        } catch (e: Exception) {
-            UiState.Error("تعذر العثور على هذه المدينة، جرّب اسمًا آخر؟")
-        }
-    }
+ viewModelScope.launch {
+ _state.value = UiState.Loading
+ _state.value = try {
+ UiState.Success(api.getWeather(city))
+ } catch (e: Exception) {
+ UiState.Error("تعذر العثور على هذه المدينة، جرّب اسمًا آخر؟")
+ }
+ }
 }
 
 // في الواجهة:
 when (val s = state) {
-    is UiState.Loading -&gt; CircularProgressIndicator()   // مؤشر تحميل دائري
-    is UiState.Success -&gt; WeatherContent(s.data)        // يعرض
-    is UiState.Error -&gt; Text(s.message)                 // يعرض الخطأ
+ is UiState.Loading -&gt; CircularProgressIndicator() // مؤشر تحميل دائري
+ is UiState.Success -&gt; WeatherContent(s.data) // يعرض
+ is UiState.Error -&gt; Text(s.message) // يعرض الخطأ
 }
 ```
 :::
@@ -112,28 +112,28 @@ when (val s = state) {
 ```
 @Composable
 fun WeatherContent(data: WeatherResponse) {
-    Column(
-        Modifier.fillMaxSize().padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
-        Text(
-            "${data.main.temp}°C",
-            fontSize = 72.sp,
-            fontWeight = FontWeight.Light
-        )
-        Text(
-            data.weather.firstOrNull()?.description ?: "غير معروف",
-            fontSize = 20.sp,
-            color = Color.Gray
-        )
-        Spacer(Modifier.height(16.dp))
-        Row {
-            Text("💧 الرطوبة ${data.main.humidity}%")
-            Spacer(Modifier.width(24.dp))
-            Text("🌡️ الإحساس ${data.main.temp}°C")
-        }
-    }
+ Column(
+ Modifier.fillMaxSize().padding(24.dp),
+ horizontalAlignment = Alignment.CenterHorizontally
+ ) {
+ Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+ Text(
+ "${data.main.temp}°C",
+ fontSize = 72.sp,
+ fontWeight = FontWeight.Light
+ )
+ Text(
+ data.weather.firstOrNull()?.description ?: "غير معروف",
+ fontSize = 20.sp,
+ color = Color.Gray
+ )
+ Spacer(Modifier.height(16.dp))
+ Row {
+ Text("💧 الرطوبة ${data.main.humidity}%")
+ Spacer(Modifier.width(24.dp))
+ Text("🌡️ الإحساس ${data.main.temp}°C")
+ }
+ }
 }
 ```
 :::

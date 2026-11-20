@@ -74,7 +74,7 @@ Dieser Bereich behandelt Funktionen, „die man nach dem Einrichten nicht mehr m
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>„Erster Arbeitstag"-Checkliste
+„Erster Arbeitstag"-Checkliste
 
 {class="mt-1 text-sm"}
 Bei einem neuen Smartphone oder nach einem großen Versions-Update empfiehlt es sich, 10 Minuten in diese Einstellungen zu investieren:<br> · Sperrbildschirm-Passwort + biometrische Entsperrung · Benachrichtigungsgruppierung + Marketing-Push deaktivieren · Schriftgröße / Aktualisierungsrate / Dunkelmodus<br> · Standard-Eingabemethode / Browser / E-Mail · Notfallkontakte / medizinische ID · Backup-Einstellungen
@@ -90,7 +90,7 @@ Ein Screenreader ist das wichtigste Werkzeug für sehbehinderte Nutzer. Er liest
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS VoiceOver
+iOS VoiceOver
 
 {class="mt-1"}
 <strong>Aktivierungspfad</strong>: [Einstellungen] &gt; [Bedienungshilfen] &gt; [VoiceOver], Schalter umlegen. Alternativ dreifaches Drücken der Seitentaste (oder Home-Taste) zum schnellen Ein-/Ausschalten.
@@ -111,7 +111,7 @@ Ein Screenreader ist das wichtigste Werkzeug für sehbehinderte Nutzer. Er liest
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>: [TalkBack] &gt; [Text-in-Sprache-Einstellungen], hier lassen sich
+: [TalkBack] &gt; [Text-in-Sprache-Einstellungen], hier lassen sich
 
 {class="mt-1"}
 <strong>Aktivierungsweg</strong>: [Einstellungen] > [Bedienungshilfen] > [TalkBack], Schalter aktivieren. Oder beide Lautstärketasten 3 Sekunden gedrückt halten (je nach Marke).
@@ -155,7 +155,7 @@ Wenn ein Screenreader auf ein Bild stößt, wird es traditionell übersprungen o
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>Android
+Android
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: Unter [Einstellungen] &gt; [Bedienungshilfen] &gt; [VoiceOver] &gt; [Sprachbeschreibung] „Bildbeschreibung" aktivieren. Das System nutzt ein <strong>iOS</strong> zur automatischen Erstellung von Bildbeschreibungen (ab iPhone 12).
@@ -165,7 +165,7 @@ Wenn ein Screenreader auf ein Bild stößt, wird es traditionell übersprungen o
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Anwendungsszenario
+Anwendungsszenario
 
 {class="mt-1"}
 Versuche, bei einem Straßenfoto zu fragen „Wie viele Personen sind auf diesem Bild? Was machen sie?" oder öffne eine Lieferanten-App und lass die KI die Gerichtnamen im Menü vorlesen –<strong>das ist wirklich „Technik, die das Leben gerechter macht"</strong>.
@@ -178,7 +178,7 @@ Live-Captions (Echtzeituntertitel) sind eine <strong>systemweite Sprach-zu-Text-
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>Live-Captions aktivieren und optimieren
+Live-Captions aktivieren und optimieren
 
 {class="mt-1"}
 <strong>iOS</strong>: [Einstellungen] &gt; [Bedienungshilfen] &gt; [Live-Captions], Schalter umlegen. Das System erkennt alle Audioquellen des Geräts (Anrufe, Videos, Podcasts, FaceTime, Sprachmemos) und zeigt automatisch Untertitel oben auf dem Bildschirm an.
@@ -203,7 +203,7 @@ Wenn ein Nutzer <strong>weder hören noch sprechen kann</strong>:
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>Echtzeit-Anruf-Übersetzung (TTY / RTT)
+Echtzeit-Anruf-Übersetzung (TTY / RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [Einstellungen] &gt; [Bedienungshilfen] &gt; [RTT/TTY], nach der Aktivierung wird beim Telefonieren eine Tastatur eingeblendet. Die Sprache des Gesprächspartners wird in Echtzeit in Text umgewandelt,<strong>und dein getippter Text wird dem Gesprächspartner vorgelesen</strong>.
@@ -231,7 +231,7 @@ Wenn ein Nutzer <strong>weder hören noch sprechen kann</strong>:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>Apples Barrierefreiheits-Philosophie
+Apples Barrierefreiheits-Philosophie
 
 {class="mt-1"}
 Apple investiert viel in Barrierefreiheit und erweitert die Funktionen jedes Jahr. Auf der Apple-Website gibt es eine eigene Barrierefreiheitsseite mit detaillierten Anleitungen. iOS ist in diesem Bereich meist ausgereifter und flüssiger als Android – ein wichtiger Grund, warum viele Nutzer mit Behinderung Apple wählen.
@@ -239,7 +239,7 @@ Apple investiert viel in Barrierefreiheit und erweitert die Funktionen jedes Jah
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>30 Sekunden ausprobieren
+30 Sekunden ausprobieren
 
 {class="mt-1"}
 Nimm dir etwas freie Zeit für folgende Erfahrungen:

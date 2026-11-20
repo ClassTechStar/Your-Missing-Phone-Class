@@ -52,7 +52,7 @@ kind: chapter
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先看生态再选设备
+小贴士：先看生态再选设备
 
 {class="mt-1"}
 可穿戴是"生态附属品"：iPhone 配 Apple Watch 体验最佳（不兼容安卓）；安卓阵营各家手表在自家安卓手机上体验最完整，配 iPhone 往往大幅受限；安卓用户配华为/小米/Galaxy Watch 各有取舍；戒指类（Oura/Galaxy Ring）反而不挑手机，靠 App 连接。所以买之前先确认你的手机品牌，再查一遍「我的手机 + 这块表」的官方兼容说明：而不是先看这块表的参数。在同生态内挑设备，功能完整度会高一大截。
@@ -189,7 +189,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>避坑提醒：数据焦虑是真实存在的
+避坑提醒：数据焦虑是真实存在的
 
 {class="mt-1"}
 戴上监测设备后，很多人开始"为数据而睡"——越盯着睡眠分数越睡不着（这有个名字：完美睡眠执念，Orthosomnia）。记住：设备是帮你了解自己的工具，不是给你打分的老师。分数难看但精力充沛，就以精力为准。
@@ -313,7 +313,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-pen mr-2"></i>来动手：给现有设备做一次"配对体检"
+来动手：给现有设备做一次"配对体检"
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - 打开手机上对应的手表/手环 App（如 watch、运动健康、Mi Fitness），检查固件是否为最新版。
@@ -451,7 +451,7 @@ OPPO 和 vivo 用户挑表时还有一个隐藏考量：线下渠道。这两家
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 可穿戴是传感器，不是医生；是配件，不是主人。数据帮你认识自己，决定权永远在你手里。
@@ -639,7 +639,7 @@ OPPO 和 vivo 用户挑表时还有一个隐藏考量：线下渠道。这两家
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hand-pointer mr-2"></i>来动手：把这份清单打印出来
+来动手：把这份清单打印出来
 
 {class="mt-1"}
 把第一周清单抄进备忘录，每天睡前打一个勾。七天全勾的设备，吃灰概率会小很多。
@@ -737,7 +737,7 @@ OPPO 和 vivo 用户挑表时还有一个隐藏考量：线下渠道。这两家
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 手表=全能旗舰、手环=性价比哨兵、戒指=无感记录仪
 - 先看手机生态再选设备，买前查「我的手机 + 这块表」的官方兼容说明

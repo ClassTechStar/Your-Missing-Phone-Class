@@ -56,7 +56,7 @@ Scaricare app da pagine web o link sconosciuti può portare virus, furto di priv
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>Cos'è un "parassita elettronico"?
+Cos'è un "parassita elettronico"?
 
 {class="mt-1"}
 Si tratta di <strong>software "craccati" con trojan incorporati</strong> — credi di "risparmiare", in realtà "ci caschi". Formi comuni:
@@ -96,20 +96,20 @@ Le richieste di permessi (come contatti o posizione) a volte sono ragionevoli (l
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Opzioni di permesso</strong>: "Consenti sempre", "Consenti solo durante l'uso", "Negato", "Chiedi ogni volta".</li>
-                        <li><strong>Principi di gestione</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Minimizzazione: non concedere se non necessario.</li>
-                                <li>Revisione a posteriori: controlla periodicamente nelle impostazioni dei permessi chi "sfora".</li>
-                                <li>Contestualizza: per le app di trasporto, concedi la posizione solo quando le usi.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Opzioni di permesso</strong>: "Consenti sempre", "Consenti solo durante l'uso", "Negato", "Chiedi ogni volta".</li>
+ <li><strong>Principi di gestione</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Minimizzazione: non concedere se non necessario.</li>
+ <li>Revisione a posteriori: controlla periodicamente nelle impostazioni dei permessi chi "sfora".</li>
+ <li>Contestualizza: per le app di trasporto, concedi la posizione solo quando le usi.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Permessi da tenere sotto stretta sorveglianza
+Permessi da tenere sotto stretta sorveglianza
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Contatti/SMS: potrebbero essere usati per inviare SMS spam.
@@ -152,16 +152,16 @@ Perché le app scaricate dallo store ufficiale sono più sicure? La verifica del
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Firma Android</strong>: lo sviluppatore firma l'APK con una chiave privata e il sistema verifica con la chiave pubblica in fase di installazione. Se l'APK viene manomesso (ad esempio con un virus iniettato), la firma non è più valida e il sistema rifiuta l'installazione. Google Play richiede inoltre l'App Signing, con Google che conserva le chiavi di firma per proteggere ulteriormente l'app.</li>
-                        <li><strong>Firma iOS</strong>: la revisione di Apple è più rigorosa. Ogni IPA deve avere la firma di un certificato rilasciato da Apple, altrimenti non si installa. Ecco perché su iOS si può installare solo da App Store o con certificati enterprise. Le app firmate con certificati enterprise hanno validità limitata e Apple può revocarle in qualsiasi momento.</li>
-                        <li><strong>Ruolo della firma</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Verifica della provenienza: conferma che l'app viene davvero dallo sviluppatore dichiarato.</li>
-                                <li>Verifica dell'integrità: assicura che l'app non sia stata manomessa in transito.</li>
-                                <li>Prevenzione dell'imitazione: le app malevole non possono fingersi altre app.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Firma Android</strong>: lo sviluppatore firma l'APK con una chiave privata e il sistema verifica con la chiave pubblica in fase di installazione. Se l'APK viene manomesso (ad esempio con un virus iniettato), la firma non è più valida e il sistema rifiuta l'installazione. Google Play richiede inoltre l'App Signing, con Google che conserva le chiavi di firma per proteggere ulteriormente l'app.</li>
+ <li><strong>Firma iOS</strong>: la revisione di Apple è più rigorosa. Ogni IPA deve avere la firma di un certificato rilasciato da Apple, altrimenti non si installa. Ecco perché su iOS si può installare solo da App Store o con certificati enterprise. Le app firmate con certificati enterprise hanno validità limitata e Apple può revocarle in qualsiasi momento.</li>
+ <li><strong>Ruolo della firma</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Verifica della provenienza: conferma che l'app viene davvero dallo sviluppatore dichiarato.</li>
+ <li>Verifica dell'integrità: assicura che l'app non sia stata manomessa in transito.</li>
+ <li>Prevenzione dell'imitazione: le app malevole non possono fingersi altre app.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. Dimensione del pacchetto e ottimizzazione
@@ -180,7 +180,7 @@ Tecniche di ottimizzazione delle app moderne:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Curiosità: perché alcune app hanno pacchetti di installazione tanto grandi?
+Curiosità: perché alcune app hanno pacchetti di installazione tanto grandi?
 
 {class="mt-1"}
 Le app di gioco sono in genere le più grandi, perché contengono moltissime texture HD, modelli 3D e file audio. Anche le app social sono piuttosto grandi, perché devono supportare molti moduli funzionali. Le app tool sono in genere le più piccole. Se noti che un'app tool è insolitamente grande, diffida di eventuali funzioni superflue incorporate.
@@ -188,7 +188,7 @@ Le app di gioco sono in genere le più grandi, perché contengono moltissime tex
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Attività pratica: revisiona i permessi di 3 app
+Attività pratica: revisiona i permessi di 3 app
 
 {class="mt-1"}
 Scegli 3 app che usi spesso (ad esempio social, shopping, tool), entra nella pagina di gestione dei permessi delle app in [Impostazioni], revisiona voce per voce e disattiva i permessi sensibili non necessari o cambiali in "Consenti solo durante l'uso".

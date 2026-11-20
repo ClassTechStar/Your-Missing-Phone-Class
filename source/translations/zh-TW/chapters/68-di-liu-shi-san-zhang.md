@@ -35,20 +35,20 @@ SwiftUI 狀態工具全景（2026 年，@Observable 已是主流）
 import Observation
 
 @Observable
-class CounterModel {                 // 檢視模型
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // 檢視模型
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // 持有模型
+ @State private var model = CounterModel() // 持有模型
 
-    var body: some View {
-        VStack {
-            Text("你點了 \(model.count) 次")
-            Button("點我") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("你點了 \(model.count) 次")
+ Button("點我") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ iOS 16 起，多頁面導航用 NavigationStack，像一摞盤子，推一個進
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("張三的帳本") {
-                    DetailView(name: "張三的帳本")   // 目標頁面
-                }
-                NavigationLink("李四的帳本") {
-                    DetailView(name: "李四的帳本")
-                }
-            }
-            .navigationTitle("帳本列表")   // 頂部大標題
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("張三的帳本") {
+ DetailView(name: "張三的帳本") // 目標頁面
+ }
+ NavigationLink("李四的帳本") {
+ DetailView(name: "李四的帳本")
+ }
+ }
+ .navigationTitle("帳本列表") // 頂部大標題
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("\(name) 的詳情頁")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("\(name) 的詳情頁")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ NavigationLink 就是"能點的跳轉連結"；navigationTitle 自動生成導�
 ```
 // 1. 底部彈出半屏/全屏（錄入表單最愛）
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("記一筆") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // 彈出的錄入頁
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("記一筆") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // 彈出的錄入頁
+ }
+ }
 }
 
 // 2. 底部標籤欄（App 的"骨架"）
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("帳本", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("統計", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("設定", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("帳本", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("統計", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("設定", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ iOS 上最常用、最有"蘋果味"的元件就是 List——天然帶分割線
 
 ```
 struct RecordListView: View {
-    @State private var records = ["午飯 25.5", "地鐵 6.0", "工資 +8000"]
+ @State private var records = ["午飯 25.5", "地鐵 6.0", "工資 +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // 左滑刪除
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // 左滑刪除
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("回到前臺，恢復重新整理")
-            case .inactive:  print("過渡中（來電/切後臺瞬間）")
-            case .background: print("進後臺，儲存草稿")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("回到前臺，恢復重新整理")
+ case .inactive: print("過渡中（來電/切後臺瞬間）")
+ case .background: print("進後臺，儲存草稿")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

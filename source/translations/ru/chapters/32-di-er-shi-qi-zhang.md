@@ -32,22 +32,22 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Бренд</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Название режима</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Как включить</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Универсальный доступ (отдельного простого режима нет, но можно увеличивать элементы по отдельности)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Экран и яркость > Размер текста, вывести на максимум. Затем в «Универсальный доступ > Экран и размер текста» включить «Жирный текст» и «Формы кнопок»</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Система и обновление > Простой режим > Включить</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Минимальный режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Дополнительные настройки > Минимальный режим > Включить</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Специальные функции > Простой режим</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой рабочий стол</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Рабочий стол, экран блокировки и обои > Простой рабочий стол</td></tr>
-                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Экран > Простой режим</td></tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Бренд</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Название режима</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Как включить</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Универсальный доступ (отдельного простого режима нет, но можно увеличивать элементы по отдельности)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Экран и яркость > Размер текста, вывести на максимум. Затем в «Универсальный доступ > Экран и размер текста» включить «Жирный текст» и «Формы кнопок»</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei/Honor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Система и обновление > Простой режим > Включить</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi/Redmi</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Минимальный режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Дополнительные настройки > Минимальный режим > Включить</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/OnePlus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Специальные функции > Простой режим</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo/iQOO</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой рабочий стол</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Рабочий стол, экран блокировки и обои > Простой рабочий стол</td></tr>
+ <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Простой режим</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Настройки > Экран > Простой режим</td></tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -65,7 +65,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: помогите пожилым «обставить» телефон
+Практика: помогите пожилым «обставить» телефон
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Включите простой режим (действуйте по таблице брендов выше).
@@ -96,7 +96,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>«Правила защиты от мошенничества» для пожилых (распечатайте и наклейте рядом с телефоном)
+«Правила защиты от мошенничества» для пожилых (распечатайте и наклейте рядом с телефоном)
 
 {class="list-none pl-0 mt-1 space-y-1"}
 - ☎ <strong>Незнакомец просит перевести деньги → кладите трубку!</strong>
@@ -151,7 +151,7 @@ WeChat, самое популярное приложение у пожилых �
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Итоги главы
+Итоги главы
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Сначала включите простой режим или вручную увеличьте шрифт/иконки — после настройки среды большая часть проблем исчезнет

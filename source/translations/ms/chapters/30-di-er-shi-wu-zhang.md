@@ -24,51 +24,51 @@ Prinsip teras: pembersihan data bukan "padam", tetapi "timpa". Ramai orang fikir
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Skrin retak dan sentuh tidak berfungsi: Perlu sambung penyesuai USB-OTG dan tetikus, atau guna kabel sambung ke TV/monitor dengan input HDMI.</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Telefon tidak boleh but: Mungkin hanya bateri habis, cuba cas 30 minit dahulu; jika masih tidak boleh, mungkin kerosakan perkakasan.</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kerosakan air: Jangan cas atau cuba buka, segera matikan dan bawa ke pusat servis.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kerosakan papan induk: Pemulihan data mungkin memerlukan pakar untuk membaca cip storan secara terus — mahal dan tidak dijamin.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu dahulu log keluar akaun Huawei dan tutup "Cari Telefon", jika tidak akan pencetus kunci pengaktifan; mod bersih mungkin perlu pengesahan kata laluan.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tenorshare UltData: Sokong iOS dan Android, boleh pulihkan foto, kenalan, mesej, nota.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bawah ada pilihan "Format Kad SD Maya" dan "Padam Semua Kandungan dan Tetapan", kedua-dua perlu tandakan; log keluar akaun Xiaomi dahulu tutup "Cari Peranti".</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iMobie PhoneRescue: Khas untuk iOS, boleh pulihkan data dari sandaran iCloud/iTunes.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Alat pemulihan data sumber terbuka</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS sediakan mod "padam menyeluruh", akan menimpa storan berbilang kali; perlu masuk kata laluan skrin kunci untuk sahkan.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iTunes/Finder: Boleh pulihkan dari sandaran iPhone jika pernah buat sandaran.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Pemulihan dari awan</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iCloud: Log masuk iCloud.com, muat turun foto, kenalan, nota dll.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Google Account: Log masuk myaccount.google.com, akses data yang disegerakkan.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kelebihan terbesar sandaran awan ialah "tidak perlu anda risau", selesai secara automatik. Kelemahan terbesar ialah pemulihan memerlukan masa muat turun yang lama, dan ruang percuma biasanya tidak mencukupi.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perkhidmatan pengeluar: Samsung Cloud, Huawei Cloud, Xiaomi Cloud dll.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mesti dahulu log keluar Apple ID, jika tidak pengguna seterusnya dihalang oleh kunci pengaktifan iCloud; iOS 15+ sokong "kekal data iCloud semasa log keluar" untuk rujukan kemudian.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Skrin retak dan sentuh tidak berfungsi: Perlu sambung penyesuai USB-OTG dan tetikus, atau guna kabel sambung ke TV/monitor dengan input HDMI.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Telefon tidak boleh but: Mungkin hanya bateri habis, cuba cas 30 minit dahulu; jika masih tidak boleh, mungkin kerosakan perkakasan.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kerosakan air: Jangan cas atau cuba buka, segera matikan dan bawa ke pusat servis.</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO/vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kerosakan papan induk: Pemulihan data mungkin memerlukan pakar untuk membaca cip storan secara terus — mahal dan tidak dijamin.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu dahulu log keluar akaun Huawei dan tutup "Cari Telefon", jika tidak akan pencetus kunci pengaktifan; mod bersih mungkin perlu pengesahan kata laluan.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tenorshare UltData: Sokong iOS dan Android, boleh pulihkan foto, kenalan, mesej, nota.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bawah ada pilihan "Format Kad SD Maya" dan "Padam Semua Kandungan dan Tetapan", kedua-dua perlu tandakan; log keluar akaun Xiaomi dahulu tutup "Cari Peranti".</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iMobie PhoneRescue: Khas untuk iOS, boleh pulihkan data dari sandaran iCloud/iTunes.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Alat pemulihan data sumber terbuka</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS sediakan mod "padam menyeluruh", akan menimpa storan berbilang kali; perlu masuk kata laluan skrin kunci untuk sahkan.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iTunes/Finder: Boleh pulihkan dari sandaran iPhone jika pernah buat sandaran.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Pemulihan dari awan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iCloud: Log masuk iCloud.com, muat turun foto, kenalan, nota dll.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Google Account: Log masuk myaccount.google.com, akses data yang disegerakkan.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kelebihan terbesar sandaran awan ialah "tidak perlu anda risau", selesai secara automatik. Kelemahan terbesar ialah pemulihan memerlukan masa muat turun yang lama, dan ruang percuma biasanya tidak mencukupi.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perkhidmatan pengeluar: Samsung Cloud, Huawei Cloud, Xiaomi Cloud dll.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mesti dahulu log keluar Apple ID, jika tidak pengguna seterusnya dihalang oleh kunci pengaktifan iCloud; iOS 15+ sokong "kekal data iCloud semasa log keluar" untuk rujukan kemudian.</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>1. Sandaran automatik
+1. Sandaran automatik
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>iPhone: Aktifkan Sandaran iCloud (Tetapan → Nama anda → iCloud → Sandanan iCloud).</strong> Android: Aktifkan sandaran Google (Tetapan → Sistem → Sandaran).
@@ -82,7 +82,7 @@ Prinsip teras: pembersihan data bukan "padam", tetapi "timpa". Ramai orang fikir
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>I. Penyesuaian tetapan asas
+I. Penyesuaian tetapan asas
 
 {class="mt-1"}
 1\. Saiz teks dan paparan <strong>Tetapan → Paparan → Saiz Teks: Tambah saiz teks sistem.</strong>
@@ -108,7 +108,7 @@ Tetapan → Paparan → Zoom Paparan — Tukar ke "Lebih Besar" untuk antara muk
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Log masuk ke perbankan dalam talian atau pembayaran di Wi-Fi awam;
+Log masuk ke perbankan dalam talian atau pembayaran di Wi-Fi awam;
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - <strong>Jangan beri kata laluan akaun si mati terus kepada keluarga "terus guna"</strong>4. Video dan muzik
@@ -153,7 +153,7 @@ Google menyediakan "Inactive Account Manager", boleh auto laksanakan operasi pra
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>2. Fotografi
+2. Fotografi
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Jika anda suka fotografi, cari telefon dengan kamera yang baik — sensor besar, kacamat optik berbilang, penstabilan gambar optik (OIS).
@@ -174,7 +174,7 @@ Google menyediakan "Inactive Account Manager", boleh auto laksanakan operasi pra
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-skull-crossbones mr-2"></i>Telefoto: 3x optik atau lebih, OIS, sesuai untuk potret dan zoom jauh.
+Telefoto: 3x optik atau lebih, OIS, sesuai untuk potret dan zoom jauh.
 
 {class="mt-1"}
 6\. Penyalutan dan tahan lasak <strong>IP67/IP68: Tahan air dan habuk. Gorilla Glass Victus atau lebih tinggi: tahan jatuh dan calar.</strong> Disebabkan kekunci peribadi hilang tidak boleh dipulihkan selama-lamanya, setara dengan satu per enam daripada jumlah sedia ada. Jika anda pegang aset kripto, pastikan biar sekurang-kurangnya satu orang yang anda mutlak percaya tahu <strong>5G: Sokong band n28/n41/n78 dll. Wi-Fi 6E/7: Kelajuan rangkaian lebih tinggi. Bluetooth 5.3+: LE Audio sokong.</strong> NFC: Untuk pembayaran mudah alih dan kunci pintu. UWB: Untuk kunci kereta digital dan cari peranti.
@@ -227,7 +227,7 @@ iPhone 16 Pro/Pro Max, Samsung S25 Ultra, Xiaomi 15 Pro, Huawei Mate 70 Pro, viv
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Peringatan undang-undang tentang "kata laluan"
+Peringatan undang-undang tentang "kata laluan"
 
 {class="mt-1"}
 Menulis kata laluan terus dalam wasiat ada risiko bocor, dan selepas wasiat diumumkan semua waris boleh lihat.<strong>Cara lebih selamat: dalam wasiat hanya tulis "senarai akaun + kehendak pelupusan + lokasi simpanan kata laluan", kata laluan sebenar melalui kata laluan pengurus kata laluan utama berasingan beri kepada pelaksana yang dipercayai</strong>. Ini mematuhi keperluan undang-undang, juga mengurangkan risiko kebocoran kata laluan.
@@ -239,41 +239,41 @@ Menulis kata laluan terus dalam wasiat ada risiko bocor, dan selepas wasiat dium
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tetapan → Paparan → Kecerahan Automatik ‑ Biarkan telefon auto sesuaikan kecerahan mengikut persekitaran.</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">4. Peraturan 20-20-20</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">V. Langkah-langkah digital legacy yang anda boleh ambil sekarang</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">HDR10</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tukar-tambah rasmi (Huawei/Apple/Xiaomi dll)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">II. Pelindung leher dan tulang belakang</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Angkat telefon ke paras mata</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jangan tunduk terlalu lama — angkat telefon ke paras mata untuk kurangkan tekanan leher.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Senaman leher</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap 30 minit, buat senaman leher mudah: putar perlahan, regang ke kiri dan kanan.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Bantal telefon</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jangan guna telefon sambil berbaring — tekanan pada leher dan bahu sangat tinggi. Jika perlu, guna bantal untuk angkat kepala.</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">III. Pelindung jari dan pergelangan tangan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Tukar tangan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap 15-20 minit, tukar tangan yang memegang telefon untuk elakkan ketegangan satu sisi.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Senaman jari</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Regang jari, buat genggaman dan lepaskan, putar pergelangan tangan — ulang 10 kali setiap jam.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Guna stylus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jika anda kerap taip lama, pertimbang guna stylus untuk kurangkan ketegangan ibu jari.</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">IV. Pelindung tidur</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Tetapan → Paparan → Kecerahan Automatik ‑ Biarkan telefon auto sesuaikan kecerahan mengikut persekitaran.</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">4. Peraturan 20-20-20</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">V. Langkah-langkah digital legacy yang anda boleh ambil sekarang</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">HDR10</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tukar-tambah rasmi (Huawei/Apple/Xiaomi dll)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">II. Pelindung leher dan tulang belakang</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Angkat telefon ke paras mata</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jangan tunduk terlalu lama — angkat telefon ke paras mata untuk kurangkan tekanan leher.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Senaman leher</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap 30 minit, buat senaman leher mudah: putar perlahan, regang ke kiri dan kanan.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Bantal telefon</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jangan guna telefon sambil berbaring — tekanan pada leher dan bahu sangat tinggi. Jika perlu, guna bantal untuk angkat kepala.</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">III. Pelindung jari dan pergelangan tangan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. Tukar tangan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Setiap 15-20 minit, tukar tangan yang memegang telefon untuk elakkan ketegangan satu sisi.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. Senaman jari</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Regang jari, buat genggaman dan lepaskan, putar pergelangan tangan — ulang 10 kali setiap jam.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. Guna stylus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jika anda kerap taip lama, pertimbang guna stylus untuk kurangkan ketegangan ibu jari.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">IV. Pelindung tidur</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 - <strong>Manfaatkan sisa</strong>: Cara paling disyorkan, proses standard, keselamatan data terjamin. Apple, Huawei, Xiaomi dan jenama lain di laman web rasmi ada pintu masuk "tukar-tambah", selepas penilaian boleh tolak harga telefon baru.
@@ -283,7 +283,7 @@ Menulis kata laluan terus dalam wasiat ada risiko bocor, dan selepas wasiat dium
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-leaf mr-2"></i>Sentiasa semak telefon walaupun tiada pemberitahuan, rasa cemas tanpa telefon, guna telefon semasa makan atau bual.
+Sentiasa semak telefon walaupun tiada pemberitahuan, rasa cemas tanpa telefon, guna telefon semasa makan atau bual.
 
 {class="mt-1"}
 2\. Cara mengurangkan ketagihan <strong>Aktifkan App Limits: Tetapan → Waktu Skrin → Had App ‑ Tetapkan had masa untuk App tertentu.</strong> Mod fokus: Tetapan → Fokus → Pilih mod (Kerja, Tidur, Peribadi) ‑ Hadkan pemberitahuan mengikut situasi.<strong>Letakkan telefon di tempat lain: Apabila bekerja atau belajar, letakkan telefon di dalam laci atau bilik lain untuk elakkan godaan.</strong>
@@ -291,7 +291,7 @@ Menulis kata laluan terus dalam wasiat ada risiko bocor, dan selepas wasiat dium
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Pilih destinasi seterusnya: kitar semula rasmi, platform formal, atau hadiahkan.
+Pilih destinasi seterusnya: kitar semula rasmi, platform formal, atau hadiahkan.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Sandaran penuh terakhir: Foto muat naik ke awan, fail penting salin ke komputer, rekod sembang eksport arkib.
@@ -305,7 +305,7 @@ Menulis kata laluan terus dalam wasiat ada risiko bocor, dan selepas wasiat dium
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-calendar-check mr-2"></i>;
+;
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Untuk telefon utama anda semasa, tentukan Apple "Legacy Contact" atau tetapkan Google "Inactive Account Manager".

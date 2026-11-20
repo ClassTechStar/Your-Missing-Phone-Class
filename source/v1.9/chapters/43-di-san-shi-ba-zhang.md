@@ -16,7 +16,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>70 行文件为什么这么值钱？
+70 行文件为什么这么值钱？
 
 {class="mt-1"}
 数万个 Star 是什么概念？GitHub 上绝大多数项目一辈子都到不了这个数字。一个 70 行的文本文件能获得它，恰恰证明了一件事：AI 时代最稀缺的不是代码，而是"想清楚"的能力。这 70 行，就是"想清楚"的浓缩版。
@@ -144,7 +144,7 @@ Karpathy 的原版是四条：先思考、简单至上、精准修改、目标�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：先思考 ≠ 先写完美文档
+注意：先思考 ≠ 先写完美文档
 
 {class="mt-1"}
 "先思考"不等于"写一份完美的 PRD 再开始"。它是一个快速但有条理的思考过程，花 30 秒想清楚上面三个问题，远比花 30 分钟在对话中反复修改来得高效。小任务三问可以很短；大项目可以把它们扩展成完整的需求文档（详见第四十章）。
@@ -375,7 +375,7 @@ Karpathy 用一个 diff（差异对比）的例子说明了这一点。假设你
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
 {class="vs-title"}
-<i class="fas fa-times-circle mr-1"></i> 差的指令（范围模糊）
+ 差的指令（范围模糊）
 
 {class="font-mono text-xs leading-relaxed"}
 帮我优化这个项目的<br>折扣计算逻辑
@@ -383,7 +383,7 @@ Karpathy 用一个 diff（差异对比）的例子说明了这一点。假设你
 
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
 {class="vs-title"}
-<i class="fas fa-check-circle mr-1"></i> 好的指令（精准指定范围）
+ 好的指令（精准指定范围）
 
 {class="font-mono text-xs leading-relaxed"}
 只修改 cart.py 中的 calculate_discount 函数：<br>1. 在现有折扣基础上增加会员价逻辑<br>2. 会员用户额外享受 10% 折扣<br>3. 不要修改函数签名和其他函数<br>4. 保持现有的变量命名风格
@@ -462,7 +462,7 @@ AI 说"改完了"，不等于改完了。养成一个 30 秒的小仪式：让�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：目标驱动 ≠ 放任不管
+注意：目标驱动 ≠ 放任不管
 
 {class="mt-1"}
 它需要你在 AI 执行后进行严格的验收：结果是否满足需求？边界情况是否处理了？是否有明显的过度设计？如果结果不符合预期，提供具体的反馈——不是"重写"，而是"这里的问题在于空列表输入会报 IndexError，请修改为添加空值检查"。
@@ -537,15 +537,15 @@ AI 说"改完了"，不等于改完了。养成一个 30 秒的小仪式：让�
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-bullseye mr-1"></i> 定义目标</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-robot mr-1"></i> AI 生成代码</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-search mr-1"></i> 功能验证</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 定义目标</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> AI 生成代码</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 功能验证</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-check-circle mr-1"></i> 通过</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-flask mr-1"></i> 边界验证</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-check-circle mr-1"></i> 通过</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-landmark mr-1"></i> 架构审查</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-check-circle mr-1"></i> 通过，进入下一步</span>
+<span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 通过</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 边界验证</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 通过</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 架构审查</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 通过，进入下一步</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-red-500 bg-red-50 text-red-900 dark:bg-red-950 dark:text-red-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-times-circle mr-1"></i> 不通过</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-file-alt mr-1"></i> 提供具体反馈</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 重新生成</span>
+<span class="border-2 border-red-500 bg-red-50 text-red-900 dark:bg-red-950 dark:text-red-200 rounded-md px-3 py-1 text-sm text-center"> 不通过</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> 提供具体反馈</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center"> 重新生成</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -631,7 +631,7 @@ AI 说"改完了"，不等于改完了。养成一个 30 秒的小仪式：让�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>天才实习生比喻
+天才实习生比喻
 
 {class="mt-1"}
 你可以把模型想象成一个天才实习生，智商很高，但如果不给他项目背景文档、不告诉他用哪些工具、不给他设定期限和验收标准，他也做不出好东西。Harness Engineering 就是"如何给天才实习生搭好工作环境"的工程。
@@ -860,7 +860,7 @@ AI 说"改完了"，不等于改完了。养成一个 30 秒的小仪式：让�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：用"思考三角"拆解你的下一个想法
+来动手：用"思考三角"拆解你的下一个想法
 
 {class="mt-1"}
 挑一个你一直想做但没动手的小东西（比如一个倒数日网页、一个喝水提醒脚本）。花 3 分钟回答：① 它解决什么问题？② 做出来长什么样？③ 有什么约束（时间、技术、环境）？然后把答案写成一段话。恭喜你，你已经完成了人生第一次"Think Before Coding"——这段话就是一条合格的高质量指令。
@@ -870,7 +870,7 @@ AI 说"改完了"，不等于改完了。养成一个 30 秒的小仪式：让�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 五大原则源自 Karpathy 70 行的 CLAUDE.md（70K+ Star），本书补充第五条"迭代验证"
 - Think Before Coding：开口前回答三问，做什么？结果长啥样？有什么约束？

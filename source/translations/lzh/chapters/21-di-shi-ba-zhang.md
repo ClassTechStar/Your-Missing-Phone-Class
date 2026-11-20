@@ -90,7 +90,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>微信聊天記錄尤注意
+微信聊天記錄尤注意
 
 {class="mt-1"}
 微信聊天記錄尤注意
@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>練之：作一次完整之備份演練
+練之：作一次完整之備份演練
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 查iCloud雲備份或品牌雲備份有否開啓，確認上一次備份之時。

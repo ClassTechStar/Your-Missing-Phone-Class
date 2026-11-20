@@ -98,7 +98,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-puzzle-piece mr-2"></i>لماذا نحتاج إلى إطار عمل؟
+لماذا نحتاج إلى إطار عمل؟
 
 {class="mt-1"}
 كثير من الناس يستخدمون الذكاء الاصطناعي مثل استخدام Baidu, يكتبون بضع كلمات مفتاحية. لكن الذكاء الاصطناعي ليس محرك بحث، بل هو نموذج لغوي "يجيب بعد فهم المقروء".<strong>إذا أعطيته سياقًا أكثر ووضحت ما تريده ومنعته عن الانحراف</strong>، فسيعطيك نتائج دقيقة. الإطار هو ترجمة "كيف تبدو الإجابة الجيدة" في ذهنك إلى تعليمات يفهمها الذكاء الاصطناعي.
@@ -198,39 +198,39 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 px-3 py-2 text-left">العرض</th>
-                                    <th class="border border-gray-300 px-3 py-2 text-left">الحل</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">الإجابة عامة وغير عملية</td>
-                                    <td class="border border-gray-300 px-3 py-2">أضف خلفية (من أنت/أي سيناريو)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">الإجابة أكاديمية/رسمية للغاية</td>
-                                    <td class="border border-gray-300 px-3 py-2">أضف قيود النبرة + قائمة رفض "اللغة الرسمية"</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">الإجابة خارج الموضوع/لا تجيب على السؤال</td>
-                                    <td class="border border-gray-300 px-3 py-2">أعد صياغة المهمة بأفعال، واطلب "أجب عن هذا فقط" </td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">الإجابة طويلة جدًا لا تكملها</td>
-                                    <td class="border border-gray-300 px-3 py-2">حدد عدد الكلمات بصرامة (أقل من 200 كلمة)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">الذكاء الاصطناعي يتحدث بجدية عن لا شيء</td>
-                                    <td class="border border-gray-300 px-3 py-2">أضف "إذا لم تكن متأكدًا اكتب 'لست متأكدًا'" + تحقق ذاتي من الحقائق المهمة</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 px-3 py-2">النسخة الأولى غير مرضية</td>
-                                    <td class="border border-gray-300 px-3 py-2">لا تعيد الكتابة، ألحق بالمطالبة الأصلية "اجعلها ... أكثر"</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 px-3 py-2 text-left">العرض</th>
+ <th class="border border-gray-300 px-3 py-2 text-left">الحل</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">الإجابة عامة وغير عملية</td>
+ <td class="border border-gray-300 px-3 py-2">أضف خلفية (من أنت/أي سيناريو)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">الإجابة أكاديمية/رسمية للغاية</td>
+ <td class="border border-gray-300 px-3 py-2">أضف قيود النبرة + قائمة رفض "اللغة الرسمية"</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">الإجابة خارج الموضوع/لا تجيب على السؤال</td>
+ <td class="border border-gray-300 px-3 py-2">أعد صياغة المهمة بأفعال، واطلب "أجب عن هذا فقط" </td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">الإجابة طويلة جدًا لا تكملها</td>
+ <td class="border border-gray-300 px-3 py-2">حدد عدد الكلمات بصرامة (أقل من 200 كلمة)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">الذكاء الاصطناعي يتحدث بجدية عن لا شيء</td>
+ <td class="border border-gray-300 px-3 py-2">أضف "إذا لم تكن متأكدًا اكتب 'لست متأكدًا'" + تحقق ذاتي من الحقائق المهمة</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 px-3 py-2">النسخة الأولى غير مرضية</td>
+ <td class="border border-gray-300 px-3 py-2">لا تعيد الكتابة، ألحق بالمطالبة الأصلية "اجعلها ... أكثر"</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -239,7 +239,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-coffee mr-2"></i>السيناريو الأول: مساعد الحياة (اقتراحات إفطار)
+السيناريو الأول: مساعد الحياة (اقتراحات إفطار)
 
 {class="mt-1"}
 <strong>المطالبة</strong>:
@@ -257,7 +257,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-graduation-cap mr-2"></i>السيناريو الثاني: المساعدة في التعلم (التحضير لامتحان CET-6)
+السيناريو الثاني: المساعدة في التعلم (التحضير لامتحان CET-6)
 
 {class="mt-1"}
 <strong>المطالبة</strong>:
@@ -275,7 +275,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-briefcase mr-2"></i>السيناريو الثالث: كفاءة العمل (تنظيم محاضر الاجتماع)
+السيناريو الثالث: كفاءة العمل (تنظيم محاضر الاجتماع)
 
 {class="mt-1"}
 <strong>المطالبة</strong>:
@@ -293,7 +293,7 @@ kind: chapter
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-rocket mr-2"></i>مستوى متقدم: اجعل الذكاء الاصطناعي "مساعدك الشخصي"
+مستوى متقدم: اجعل الذكاء الاصطناعي "مساعدك الشخصي"
 
 {class="mt-1"}
 جرب هذه الاستخدامات المتقدمة لتختبر القوة الحقيقية للذكاء الاصطناعي:
@@ -317,7 +317,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>نصائح لاستخدام الذكاء الاصطناعي
+نصائح لاستخدام الذكاء الاصطناعي
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - قد يكون المحتوى الذي يولده الذكاء الاصطناعي غير دقيق (مشكلة "الهلوسة")، لذا تحقق دائمًا من المعلومات المهمة.
@@ -329,7 +329,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>بكلام بسيط، الأتمتة هي:
+بكلام بسيط، الأتمتة هي:
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>جعل الهاتف يؤدي تلقائيًا سلسلة من المهام نيابة عنك عند تحقيق شرط معين.</strong>لا تحتاج إلى التشغيل اليدوي في كل مرة، ولا إلى تذكر ما يجب فعله, فالهاتف يحكم على التوقيت بنفسه وينفذ بنفسه.
@@ -339,7 +339,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>حالة 2: عملية نقل البيانات الكاملة عند تغيير الهاتف
+حالة 2: عملية نقل البيانات الكاملة عند تغيير الهاتف
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>السيناريو</strong>: iPhone 13 ← Xiaomi 15 تغيير بين علامتين.

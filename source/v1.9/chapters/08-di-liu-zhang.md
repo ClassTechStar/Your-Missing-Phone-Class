@@ -192,7 +192,7 @@ iPhone 在 [设置] > [密码] 里有"安全建议"，会列出重复使用、�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 公共 Wi-Fi 可以连，别在里面干要紧事；公共 USB 可以插，只充电不传数据。
@@ -487,7 +487,7 @@ App 内嵌网页的登录也有讲究：能用官方App内登录，就不要在�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-user-secret mr-2"></i>① AI 换脸拟声诈骗
+① AI 换脸拟声诈骗
 
 {class="mt-1"}
 不法分子通过非法搜集目标对象在社交媒体发布的高清照片或仅需几秒钟的语音样本，利用AI深度伪造技术克隆出足以乱真的"亲友视频"或"语音"。常见剧本包括：<strong>突发车祸、紧急借款、遭遇绑架</strong>等。此类诈骗利用亲情、友情等情感纽带，<strong>迷惑性极高</strong>。记住一句：视频里是熟人的脸，不等于电话那头是本人<strong>AI 换脸视频不能当身份凭证</strong>。
@@ -495,7 +495,7 @@ App 内嵌网页的登录也有讲究：能用官方App内登录，就不要在�
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-gavel mr-2"></i>② 冒充权威 / 客服诈骗
+② 冒充权威 / 客服诈骗
 
 {class="mt-1"}
 AI技术能够精准模拟官方客服、公检法机关人员的声音与语调，甚至可以合成高度逼真的虚假转账截图、电子公文、通缉令等文件，通过<strong>制造恐慌心理或权威压力</strong>，诱导受害者转账或开启屏幕共享功能，从而窃取账户信息。
@@ -503,7 +503,7 @@ AI技术能够精准模拟官方客服、公检法机关人员的声音与语调
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-chart-line mr-2"></i>③ AI 投资理财诈骗
+③ AI 投资理财诈骗
 
 {class="mt-1"}
 通过AI算法伪造"稳赚不赔"的虚假收益截图、虚拟量化选股软件界面或"大师级"投资分析报告，以高额回报为诱饵，售卖高价投资服务或诱导受害者将资金转入其控制的交易账户，<strong>最终卷款跑路</strong>。
@@ -513,7 +513,7 @@ AI技术能够精准模拟官方客服、公检法机关人员的声音与语调
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-microphone mr-2"></i>④ "对着手机念数字"的街头骗贷
+④ "对着手机念数字"的街头骗贷
 
 {class="mt-1"}
 有人在街头以"手机看不清卡号"为由请你帮个忙，让你对着一段正在视频通话的手机朗读银行卡号或一串数字。注意：对方借此同时采集了<strong>你的声纹和清晰正脸</strong>——这两样正是冒名贷款要用的材料。陌生人提出的"念数字"请求，一律拒绝；被拍了也别慌，及时联系银行冻结相关账户并报警。
@@ -586,7 +586,7 @@ AI可以克隆声音和面容，但也不是无懈可击，有几个破绽可以
 
 ::: div .tip-box .rounded-lg .p-4 .mb-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 任何「现在就要转账」的请求，无论对方是谁、用什么方式联系，都先挂断，再自己回拨。
@@ -623,7 +623,7 @@ AI可以克隆声音和面容，但也不是无懈可击，有几个破绽可以
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 链接不点、码不乱扫，账户状态只认官方App，你不需要认出所有假的，只需要认得真的。
@@ -662,7 +662,7 @@ iOS 那个分享入口值得专门练一遍：点开分享面板。找到"选项
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>真实案例警示
+真实案例警示
 
 {class="mt-1"}
 多地警方都通报过类似案件：黑客通过破解家用摄像头的默认密码（很多用户从未修改），窃取卧室画面并在网上兜售。<strong>不改默认密码 = 把家大门敞开</strong>。
@@ -974,7 +974,7 @@ eSIM 再多说两句。对安全而言，它最直接的好处是"卡不可拔"�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>千万别做的事
+千万别做的事
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - 用生日 / 123456 / qwerty 等弱密码。
@@ -986,7 +986,7 @@ eSIM 再多说两句。对安全而言，它最直接的好处是"卡不可拔"�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>试着启用并模拟"远程锁定"
+试着启用并模拟"远程锁定"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 确保你的"查找我的手机"功能已开启。

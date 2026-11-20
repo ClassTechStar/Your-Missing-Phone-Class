@@ -35,20 +35,20 @@ kind: chapter
 import Observation
 
 @Observable
-class CounterModel {                 // מודל התצוגה
-    var count = 0
-    func increment() { count += 1 }
+class CounterModel { // מודל התצוגה
+ var count = 0
+ func increment() { count += 1 }
 }
 
 struct CounterView: View {
-    @State private var model = CounterModel()   // מחזיק את המודל
+ @State private var model = CounterModel() // מחזיק את המודל
 
-    var body: some View {
-        VStack {
-            Text("לחצת \(model.count) פעמים")
-            Button("לחץ כאן") { model.increment() }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("לחצת \(model.count) פעמים")
+ Button("לחץ כאן") { model.increment() }
+ }
+ }
 }
 ```
 :::
@@ -66,28 +66,28 @@ struct CounterView: View {
 
 ```
 struct HomeView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("הפנקס של דני") {
-                    DetailView(name: "הפנקס של דני")   // מסך היעד
-                }
-                NavigationLink("הפנקס של נועה") {
-                    DetailView(name: "הפנקס של נועה")
-                }
-            }
-            .navigationTitle("רשימת הפנקסים")   // כותרת גדולה למעלה
-        }
-    }
+ var body: some View {
+ NavigationStack {
+ List {
+ NavigationLink("הפנקס של דני") {
+ DetailView(name: "הפנקס של דני") // מסך היעד
+ }
+ NavigationLink("הפנקס של נועה") {
+ DetailView(name: "הפנקס של נועה")
+ }
+ }
+ .navigationTitle("רשימת הפנקסים") // כותרת גדולה למעלה
+ }
+ }
 }
 
 struct DetailView: View {
-    let name: String
-    var body: some View {
-        Text("פרטי \(name)")
-            .navigationTitle(name)
-            .navigationBarTitleDisplayMode(.inline)
-    }
+ let name: String
+ var body: some View {
+ Text("פרטי \(name)")
+ .navigationTitle(name)
+ .navigationBarTitleDisplayMode(.inline)
+ }
 }
 ```
 :::
@@ -106,27 +106,27 @@ NavigationLink הוא "קישור שאפשר ללחוץ עליו ולעבור מ
 ```
 // 1. sheet שעולה מלמטה, חצי מסך או מסך מלא (האהובה על טפסי הזנה)
 struct HomeView: View {
-    @State private var showAdd = false
-    var body: some View {
-        Button("לרשום הוצאה") { showAdd = true }
-            .sheet(isPresented: $showAdd) {
-                AddRecordView()     // מסך ההזנה שנפתח
-            }
-    }
+ @State private var showAdd = false
+ var body: some View {
+ Button("לרשום הוצאה") { showAdd = true }
+ .sheet(isPresented: $showAdd) {
+ AddRecordView() // מסך ההזנה שנפתח
+ }
+ }
 }
 
 // 2. סרגל טאבים תחתון ("השלד" של האפליקציה)
 struct MainTabView: View {
-    var body: some View {
-        TabView {
-            RecordListView()
-                .tabItem { Label("פנקס", systemImage: "book") }
-            StatsView()
-                .tabItem { Label("סטטיסטיקה", systemImage: "chart.pie") }
-            SettingsView()
-                .tabItem { Label("הגדרות", systemImage: "gear") }
-        }
-    }
+ var body: some View {
+ TabView {
+ RecordListView()
+ .tabItem { Label("פנקס", systemImage: "book") }
+ StatsView()
+ .tabItem { Label("סטטיסטיקה", systemImage: "chart.pie") }
+ SettingsView()
+ .tabItem { Label("הגדרות", systemImage: "gear") }
+ }
+ }
 }
 ```
 :::
@@ -150,18 +150,18 @@ struct MainTabView: View {
 
 ```
 struct RecordListView: View {
-    @State private var records = ["צהריים 25.5", "מטרו 6.0", "משכורת +8000"]
+ @State private var records = ["צהריים 25.5", "מטרו 6.0", "משכורת +8000"]
 
-    var body: some View {
-        List {
-            ForEach(records, id: \.self) { r in
-                Text(r)
-            }
-            .onDelete { indexSet in          // החלקה שמאלה למחיקה
-                records.remove(atOffsets: indexSet)
-            }
-        }
-    }
+ var body: some View {
+ List {
+ ForEach(records, id: \.self) { r in
+ Text(r)
+ }
+ .onDelete { indexSet in // החלקה שמאלה למחיקה
+ records.remove(atOffsets: indexSet)
+ }
+ }
+ }
 }
 ```
 :::
@@ -184,21 +184,21 @@ struct RecordListView: View {
 ```
 @main
 struct MyApp: App {
-    @Environment(\.scenePhase) private var phase
+ @Environment(\.scenePhase) private var phase
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .onChange(of: phase) { _, newPhase in
-            switch newPhase {
-            case .active:    print("חזרה לחזית: לחדש את הרענון")
-            case .inactive:  print("במעבר (שיחה או רגע המעבר לרקע)")
-            case .background: print("מעבר לרקע: לשמור טיוטה")
-            @unknown default: break
-            }
-        }
-    }
+ var body: some Scene {
+ WindowGroup {
+ ContentView()
+ }
+ .onChange(of: phase) { _, newPhase in
+ switch newPhase {
+ case .active: print("חזרה לחזית: לחדש את הרענון")
+ case .inactive: print("במעבר (שיחה או רגע המעבר לרקע)")
+ case .background: print("מעבר לרקע: לשמור טיוטה")
+ @unknown default: break
+ }
+ }
+ }
 }
 ```
 :::

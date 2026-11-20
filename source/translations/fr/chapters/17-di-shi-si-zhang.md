@@ -46,7 +46,7 @@ Point clé :<strong>Le mot de passe principal ne quitte jamais votre appareil</s
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Pourquoi « zéro connaissance » signifie-t-il que le prestataire ne peut pas voir vos mots de passe ?
+Pourquoi « zéro connaissance » signifie-t-il que le prestataire ne peut pas voir vos mots de passe ?
 
 {class="mt-1"}
 Parce que la clé de déchiffrement est dérivée de votre mot de passe principal, et que celui-ci n'existe que dans votre tête et n'est utilisé que sur votre appareil local. Le serveur du prestataire ne contient ni le mot de passe principal ni la clé de déchiffrement, seulement le texte chiffré. C'est pourquoi les prestataires sérieux comme Bitwarden et 1Password déclarent explicitement « nous ne pouvons pas non plus voir vos mots de passe », ce n'est pas qu'ils ne le veulent pas, c'est techniquement impossible.
@@ -71,7 +71,7 @@ En août 2022, le vétéran des gestionnaires de mots de passe LastPass a annonc
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Ce qu'on apprend de l'incident LastPass
+Ce qu'on apprend de l'incident LastPass
 
 {class="mt-1"}
 Premièrement, le mot de passe principal doit être long et unique (16 caractères minimum, avec majuscules, minuscules, chiffres et symboles) ; deuxièmement, privilégiez les prestataires prenant en charge Argon2id avec un nombre d'itérations élevé ; troisièmement, pour les comptes à haute valeur (banque, e-mail), activez impérativement une authentification à deux facteurs indépendante, ne vous fiez pas uniquement au gestionnaire de mots de passe.
@@ -118,7 +118,7 @@ Si un mot de passe apparaît dans la base des fuites,<strong>quelle que soit sa 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Principe de requête k-anonymat
+Principe de requête k-anonymat
 
 {class="mt-1"}
 Inquiet de saisir votre mot de passe sur HaveIBeenPwned et de provoquer une nouvelle fuite ? Pas d'inquiétude. Les requêtes modernes utilisent le protocole « k-anonymat » : le navigateur n'envoie que les 5 premiers caractères du hachis du mot de passe au serveur, qui renvoie la liste de tous les hachis commençant par ces 5 caractères, puis la comparaison se fait localement. Autrement dit, le serveur ne voit jamais le hachis complet de votre mot de passe. La « détection de mots de passe fuités » de 1Password et Bitwarden fonctionne ainsi.
@@ -133,7 +133,7 @@ Inquiet de saisir votre mot de passe sur HaveIBeenPwned et de provoquer une nouv
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Vérifiez maintenant : vos mots de passe sont-ils sécurisés ?
+Vérifiez maintenant : vos mots de passe sont-ils sécurisés ?
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Ouvrez haveibeenpwned.com, saisissez votre e-mail habituel et voyez dans quelles fuites il apparaît.
@@ -159,36 +159,36 @@ Passkey est basé sur la norme FIDO2 / WebAuthn, utilisant <strong>une paire de 
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Mot de passe traditionnel</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Résistance au hameçonnage</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Faible, les sites d'hameçonnage peuvent voler le mot de passe</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturellement résistant, la clé privée ne signe que pour le vrai domaine</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Impact d'une fuite du serveur</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le hachis du mot de passe peut être cassé</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le serveur ne stocke que la clé publique, aucune incidence en cas de fuite</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Commodité</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nécessite mémorisation/saisie/gestion</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Connexion en une seconde avec Face ID/empreinte</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Attaque par rejeu</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Peut être interceptée et rejouée par un homme du milieu</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chaque signature est à usage unique, impossible à rejouer</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Dimension</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Mot de passe traditionnel</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Résistance au hameçonnage</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Faible, les sites d'hameçonnage peuvent voler le mot de passe</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Naturellement résistant, la clé privée ne signe que pour le vrai domaine</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Impact d'une fuite du serveur</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le hachis du mot de passe peut être cassé</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Le serveur ne stocke que la clé publique, aucune incidence en cas de fuite</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Commodité</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nécessite mémorisation/saisie/gestion</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Connexion en une seconde avec Face ID/empreinte</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Attaque par rejeu</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Peut être interceptée et rejouée par un homme du milieu</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chaque signature est à usage unique, impossible à rejouer</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. Prise en charge par plateforme
@@ -200,7 +200,7 @@ Passkey est basé sur la norme FIDO2 / WebAuthn, utilisant <strong>une paire de 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>La synchronisation multi-appareils est une percée clé
+La synchronisation multi-appareils est une percée clé
 
 {class="mt-1"}
 La plus grande difficulté des premiers Passkey était d'être « liés à un seul appareil », il fallait les recréer en changeant de smartphone. À partir de 2023, Apple, Google et Microsoft ont mis en œuvre la synchronisation cloud des Passkey : le trousseau iCloud synchronise entre appareils Apple, Google Password Manager entre appareils Android. 1Password et d'autres tiers ont ouvert la synchronisation inter-écosystèmes. Cela signifie que Passkey est désormais assez mature pour remplacer les mots de passe.
@@ -236,7 +236,7 @@ Ce processus utilise une communication doublement chiffrée par Bluetooth + Inte
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez maintenant : découvrez la connexion sans mot de passe
+Essayez maintenant : découvrez la connexion sans mot de passe
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Connectez-vous à votre compte Google → Sécurité → Clés d'accès → Ajouter une clé d'accès, découvrez la connexion Face ID/empreinte.
@@ -247,7 +247,7 @@ Ce processus utilise une communication doublement chiffrée par Bluetooth + Inte
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Recommandations pour la période de transition
+Recommandations pour la période de transition
 
 {class="mt-1"}
 Passkey n'a pas complètement remplacé les mots de passe, de nombreux sites sont encore au stade « Passkey + mot de passe » coexistant. Recommandation : activez Passkey en priorité pour les comptes à haute valeur, mais <strong>ne supprimez pas immédiatement les mots de passe traditionnels</strong>, gardez-les comme secours ; continuez à utiliser un gestionnaire de mots de passe, car tous les sites ne prennent pas en charge Passkey. Considérez Passkey comme un « puissant complément au gestionnaire de mots de passe » et non comme un « remplacement immédiat ».
@@ -295,7 +295,7 @@ Sites prenant principalement en charge : Google, GitHub, Microsoft, Apple ID, Fa
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Stratégie à double clé
+Stratégie à double clé
 
 {class="mt-1"}
 Le plus grand risque d'une clé matérielle est la « perte ». Recommandations : ① enregistrez simultanément deux clés différentes ; ② portez-en une sur vous (porte-clés) et stockez l'autre dans un coffre-fort à domicile ou à la banque ; ③ certains sites permettent d'imprimer des « codes de récupération de secours » à conserver hors ligne. Ainsi, même en cas de perte de la clé principale, vous ne serez pas définitivement verrouillé hors de votre compte.
@@ -303,7 +303,7 @@ Le plus grand risque d'une clé matérielle est la « perte ». Recommandations 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Prudence sur le canal d'achat
+Prudence sur le canal d'achat
 
 {class="mt-1"}
 Achetez impérativement auprès de la boutique officielle ou d'un revendeur autorisé, n'achetez pas de clés d'occasion ou d'origine inconnue, en théorie, du matériel préconfiguré peut avoir été compromis. Le firmware du YubiKey ne peut pas être mis à jour après l'usine, mais Yubico publie continuellement des bulletins de sécurité, suivez son site officiel.
@@ -336,7 +336,7 @@ La version gratuite de Bitwarden prend en charge le partage de mots de passe per
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Rapport qualité-prix de 1Password Families
+Rapport qualité-prix de 1Password Families
 
 {class="mt-1"}
 1Password Families coûte environ 4,99 USD/mois, prend en charge jusqu'à 5 membres de la famille, chacun disposant d'un coffre-fort personnel indépendant + 4 coffres-forts partagés. Cela représente moins de 1 USD/mois par personne, c'est actuellement la meilleure solution de partage familial. La version familiale de Bitwarden à 10 USD/an prend en charge 6 personnes, avec un meilleur rapport qualité-prix, mais une interface légèrement inférieure.
@@ -369,7 +369,7 @@ Imaginez un scénario : vous gérez seul tous les comptes familiaux importants, 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Configurez maintenant : laissez un « double » à votre famille
+Configurez maintenant : laissez un « double » à votre famille
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Choisissez un membre de la famille de confiance comme « contact d'urgence ».
@@ -388,7 +388,7 @@ IX. Bonnes pratiques d'utilisation du gestionnaire de mots de passe
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Rappel important
+Rappel important
 
 {class="mt-1"}
 Le gestionnaire de mots de passe est pratique, mais comporte des risques : si le mot de passe maître fuite, tous les mots de passe sont exposés. Le mot de passe maître ne doit donc jamais être identique aux autres mots de passe, ni écrit dans un endroit facile à trouver. Par ailleurs, il est recommandé de choisir un prestataire avec un bon historique de sécurité.
@@ -396,7 +396,7 @@ Le gestionnaire de mots de passe est pratique, mais comporte des risques : si le
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Essayez maintenant : commencez à utiliser un gestionnaire de mots de passe
+Essayez maintenant : commencez à utiliser un gestionnaire de mots de passe
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Choisissez un gestionnaire de mots de passe (Bitwarden recommandé ou intégré au système).

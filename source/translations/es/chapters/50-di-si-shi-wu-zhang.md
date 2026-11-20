@@ -27,16 +27,16 @@ El flujo de la programación con IA guiada por pruebas es: primero pides a la IA
 Escribe pruebas unitarias para la función calculate_discount.
 Los casos de prueba deben cubrir:
 1. Camino normal:
-   - 100 yuan con 20 % de descuento -> 80
-   - 200 yuan con 50 % de descuento -> 100
+ - 100 yuan con 20 % de descuento -> 80
+ - 200 yuan con 50 % de descuento -> 100
 2. Casos límite:
-   - 0 yuan con 20 % de descuento -> 0
-   - 100 yuan sin descuento -> 100 (no hay rebaja)
-   - 100 yuan a precio completo -> 100 (precio íntegro)
+ - 0 yuan con 20 % de descuento -> 0
+ - 100 yuan sin descuento -> 100 (no hay rebaja)
+ - 100 yuan a precio completo -> 100 (precio íntegro)
 3. Casos de error:
-   - precio negativo -> debe lanzar un error
-   - descuento > 1 -> debe lanzar un error
-   - entrada no numérica -> Debe lanzar un error
+ - precio negativo -> debe lanzar un error
+ - descuento > 1 -> debe lanzar un error
+ - entrada no numérica -> Debe lanzar un error
 Usa el framework Vitest y dame el archivo de tests completo.
 ```
 :::

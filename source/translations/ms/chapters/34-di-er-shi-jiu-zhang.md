@@ -43,7 +43,7 @@ Lama lihat skrin telefon, mata kering, bengkak adalah pasti. Mod pelindung mata 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-eye mr-2"></i>Akses rangkaian: Sambung ke pelayan NAS atau rangkaian melalui SMB/FTP.
+Akses rangkaian: Sambung ke pelayan NAS atau rangkaian melalui SMB/FTP.
 
 {class="mt-1"}
 3\. Awan <strong>iCloud Drive: Storan awan Apple, segerak dengan semua peranti Apple.</strong> Google Drive: Storan awan Google, segerak dengan akaun Google.<strong>OneDrive: Storan awan Microsoft, segerak dengan akaun Microsoft.</strong> Dropbox: Storan awan popular, sokong pelbagai platform.<strong>VI. Imbasan dokumen</strong>1. Imbasan terbina dalam
@@ -80,7 +80,7 @@ Google Maps: Peta popular, sokong navigasi, ulasan, foto, lalu lintas real-time.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>X. Penjagaan kesihatan
+X. Penjagaan kesihatan
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Hari ini: Buka Masa Skrin/Kesihatan Digital, lihat data guna minggu lepas.
@@ -94,7 +94,7 @@ Google Maps: Peta popular, sokong navigasi, ulasan, foto, lalu lintas real-time.
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
+Windows 11: Tetapan → Sistem → Papar → Pelbagai paparan → Sambung ke paparan wayarles.
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Dahulu lihat data Masa Skrin, fahami situasi semasa adalah langkah pertama berubah

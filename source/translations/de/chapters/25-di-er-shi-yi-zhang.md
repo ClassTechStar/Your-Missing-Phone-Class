@@ -100,7 +100,7 @@ Nach all dem Reden hier eine einfach-brisante Sicherheits-Checkliste – eine ha
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Jetzt machen: Führe einen „Sicherheits-Check" deines Smartphones durch
+Jetzt machen: Führe einen „Sicherheits-Check" deines Smartphones durch
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>DNS-Upgrade</strong>: Android: Einstellungen → Verbindungen &amp; Teilen → Privates DNS → „one.one.one.one" oder „dns.google" eintragen. iPhone: In Safari „1.1.1.1 DNS profile" suchen, Profil installieren oder die Cloudflare-1.1.1.1-App herunterladen.

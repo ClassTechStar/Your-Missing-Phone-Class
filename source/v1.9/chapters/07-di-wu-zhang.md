@@ -453,7 +453,7 @@ Wi-Fi 设置里最有用的动作是"修剪"：把手机里存着的几十个历
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给明天的自己配三套"自动化"
+来动手：给明天的自己配三套"自动化"
 
 {class="mt-1"}
 第一套，睡眠自动化：睡前时段自动开启勿扰/睡眠专注，只放行家人电话；第二套，通勤自动化：到家或到公司的时间段里，让铃声恢复、媒体音量回落。第三套，截屏入口：把"滚动截屏"和"录屏"都放进快捷面板。三套各花三分钟，配置完你会感觉手机第一次"主动"配合了你的生活节奏。自动化的具体工具（快捷指令、场景自动化）视系统支持程度而定，不支持自动触发的，把这三套做成手动卡片也够用。
@@ -467,7 +467,7 @@ Wi-Fi 设置里最有用的动作是"修剪"：把手机里存着的几十个历
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"上工第一天"检查清单（2026 版）
+"上工第一天"检查清单（2026 版）
 
 {class="mt-1 text-sm"}
 拿到新手机，按「先保安全，再谈好用」的顺序，花十分钟照着勾：
@@ -499,7 +499,7 @@ Wi-Fi 设置里最有用的动作是"修剪"：把手机里存着的几十个历
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS 旁白（VoiceOver）
+iOS 旁白（VoiceOver）
 
 {class="mt-1"}
 <strong>开启路径</strong>：[设置] > [辅助功能] > [旁白]，打开开关。也可三击侧边键（或主屏幕键）快速开关。
@@ -520,7 +520,7 @@ Wi-Fi 设置里最有用的动作是"修剪"：把手机里存着的几十个历
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>安卓 TalkBack
+安卓 TalkBack
 
 {class="mt-1"}
 <strong>开启路径</strong>：[设置] > [辅助功能] > [TalkBack]，打开开关。或长按音量上下键 3 秒快速启用（部分品牌支持）。
@@ -568,7 +568,7 @@ Wi-Fi 设置里最有用的动作是"修剪"：把手机里存着的几十个历
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>各系统 AI 图像描述支持情况
+各系统 AI 图像描述支持情况
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>：在 [设置] > [辅助功能] > [旁白] > [语音描述] 中开启"图像描述"。系统会调用<strong>本地 AI 模型</strong>自动生成图片文字描述（需 iPhone 12 及以上）。
@@ -578,7 +578,7 @@ Wi-Fi 设置里最有用的动作是"修剪"：把手机里存着的几十个历
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>使用场景
+使用场景
 
 {class="mt-1"}
 试着对着一张街拍照片问"这张图里有几个人？他们在做什么？"，或者打开外卖 App，让 AI 读出菜单图里的菜品名<strong>这是真正的"科技让生活更平等"</strong>。
@@ -593,7 +593,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>实时字幕开启与优化
+实时字幕开启与优化
 
 {class="mt-1"}
 <strong>iOS</strong>：[设置] > [辅助功能] > [实时字幕]，打开开关。系统会检测设备所有音频（通话、视频、播客、FaceTime、语音备忘录），自动显示字幕在屏幕上方。
@@ -620,7 +620,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>通话实时转译（TTY / RTT）
+通话实时转译（TTY / RTT）
 
 {class="mt-1"}
 <strong>iOS</strong>：[设置] > [辅助功能] > [RTT/TTY]，开启后通话时屏幕上会显示键盘，对方的语音会被实时打成文字，<strong>你打的字也会被念出来</strong>给对方听。
@@ -652,7 +652,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>苹果的无障碍设计哲学
+苹果的无障碍设计哲学
 
 {class="mt-1"}
 苹果在无障碍领域投入巨大，每年都会更新和新增辅助功能。苹果官网有专门的无障碍页面，详细介绍各项功能的使用方法。iOS 的无障碍功能通常比安卓更完善、体验更流畅，这也是很多残障用户选择苹果的重要原因。
@@ -662,7 +662,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>花30秒体验一下
+花30秒体验一下
 
 {class="mt-1"}
 找一段空闲时间，做以下体验：
@@ -714,7 +714,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给手机做一次"耗电三查"
+来动手：给手机做一次"耗电三查"
 
 {class="mt-1"}
 打开电池设置：一查耗电排行前三名，把不该上榜的限制后台，二查"始终允许"定位的应用清单，把可疑的降级；三查省电模式的开关位置，确认自己能在三秒内打开它。全程五分钟，今晚就能看到电量曲线的变化。
@@ -762,7 +762,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 锁屏是门、查找是网、SIM卡PIN是卡槽上的锁、双重认证是账号的门闩，四样都上，手机丢了也丢不了你的人生。
@@ -788,7 +788,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>长辈手机的"防呆"组合拳
+长辈手机的"防呆"组合拳
 
 {class="mt-1"}
 给爸妈配机的最后一道工序，是把"容错"做足：桌面只留常用图标（误触面变小）、大字体加大图标（看得清才点得准）、纯净模式开起（第四章）、夜间勿扰定时（睡得安稳）、家人来电单独铃声（一响就知道是谁）、紧急信息填好（关键时刻）。六件事一次配齐不超过半小时，之后他们手机的"意外率"会断崖式下降：这不是替他们使用手机，是把手机调到一个"怎么点都不容易出事"的状态。
@@ -798,7 +798,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 基础设置的全部要义一句话：让手机少打扰你，让关键信息不漏过你，让意外发生时有东西替你：三件事配好，手机才算真正"属于你"。
@@ -806,7 +806,7 @@ AI 读图的价值远不止读菜单。视力下降的长辈收到孩子发来�
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+本章小结
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - 音量分媒体/铃声/闹钟三根滑杆；静音、勿扰、专注是三档不同的礼貌等级

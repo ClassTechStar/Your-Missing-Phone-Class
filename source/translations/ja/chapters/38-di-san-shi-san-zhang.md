@@ -58,7 +58,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>定期的に「デジタル断捨離」と「ソーシャル断食」を実行する。
+定期的に「デジタル断捨離」と「ソーシャル断食」を実行する。
 
 {class="mt-1"}
 あなたとスマホ（そして将来のARグラスやAIアシスタント）のために簡単な"利用規約"を書き、関係を定義する。例えば：
@@ -71,7 +71,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章のまとめ
+本章のまとめ
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Vision ProとARグラスはスマホ以外の新たなコンピューティング入口だが、短期的にはスマホを代替できない

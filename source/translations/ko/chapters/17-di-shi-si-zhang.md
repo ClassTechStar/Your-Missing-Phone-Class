@@ -49,7 +49,7 @@ AES(고급 암호화 표준)는 미국 국립표준기술원(NIST)이 인정한 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>"제로 지식"이 서비스 제공자도 비밀번호를 볼 수 없다는 의미인 이유는?
+"제로 지식"이 서비스 제공자도 비밀번호를 볼 수 없다는 의미인 이유는?
 
 {class="mt-1"}
 해독 키가 마스터 비밀번호에서 파생되는데, 마스터 비밀번호는 오직 당신 머릿속에만 존재하고 로컬 기기에서만 사용되기 때문입니다.
@@ -77,7 +77,7 @@ AES(고급 암호화 표준)는 미국 국립표준기술원(NIST)이 인정한 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>LastPass 사건에서 배운 점
+LastPass 사건에서 배운 점
 
 {class="mt-1"}
 첫째, 마스터 비밀번호는 길고 고유해야 합니다(16자 이상, 대소문자/숫자/기호 포함 권장); 둘째. Argon2id 지원. 반복 횟수가 높은 서비스 제공자를 우선 선택하세요; 셋째. 고가치 계정(은행, 이메일)에는 반드시 독립된 2단계 인증을 켜고, 비밀번호 관리자에만 의존하지 마세요.
@@ -125,7 +125,7 @@ AES(고급 암호화 표준)는 미국 국립표준기술원(NIST)이 인정한 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>k-Anonymity 조회 원리
+k-Anonymity 조회 원리
 
 {class="mt-1"}
 HaveIBeenPwned에 비밀번호를 입력하면 또 유출될까 봐 걱정되세요? 걱정 마세요.
@@ -142,7 +142,7 @@ HaveIBeenPwned에 비밀번호를 입력하면 또 유출될까 봐 걱정되세
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>지금 바로 확인: 당신의 비밀번호가 안전한지
+지금 바로 확인: 당신의 비밀번호가 안전한지
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. haveibeenpwned.com을 열고, 자주 쓰는 이메일을 입력해 어떤 유출 사건에 등장했는지 확인.
@@ -169,36 +169,36 @@ Passkey는 FIDO2 / WebAuthn 표준 기반,<strong>기기 상의 키 쌍</strong>
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">차원</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">전통 비밀번호</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">피싱 내성</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">낮음, 피싱 사이트가 비밀번호 탈취 가능</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">천성적으로 피싱 내성, 개인 키는 진짜 도메인에만 서명</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">서버 유출 영향</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">비밀번호 해시가 크래킹될 수 있음</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">서버는 공개 키만 저장, 유출 영향 없음</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">편의성</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기억/입력/관리 필요</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/지문 1초 로그인</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">재전송 공격</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">중간자가 가로채 재전송 가능</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매 서명 일회성, 재전송 불가</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">차원</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">전통 비밀번호</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Passkey</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">피싱 내성</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">낮음, 피싱 사이트가 비밀번호 탈취 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">천성적으로 피싱 내성, 개인 키는 진짜 도메인에만 서명</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">서버 유출 영향</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">비밀번호 해시가 크래킹될 수 있음</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">서버는 공개 키만 저장, 유출 영향 없음</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">편의성</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기억/입력/관리 필요</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Face ID/지문 1초 로그인</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">재전송 공격</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">중간자가 가로채 재전송 가능</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">매 서명 일회성, 재전송 불가</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ##### 3. 각 플랫폼 지원 현황
@@ -210,7 +210,7 @@ Passkey는 FIDO2 / WebAuthn 표준 기반,<strong>기기 상의 키 쌍</strong>
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>크로스 디바이스 동기화가 핵심 돌파구
+크로스 디바이스 동기화가 핵심 돌파구
 
 {class="mt-1"}
 초기 Passkey의 가장 큰 골칫거리는 "단일 기기 바인딩"——스마트폰을 바꾸면 다시 만들어야 한다는 점이었습니다.
@@ -248,7 +248,7 @@ Windows PC에서 iPhone에만 Passkey가 있는 웹사이트에 로그인하려�
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>지금 바로 시도: 비밀번호 없는 로그인 체험
+지금 바로 시도: 비밀번호 없는 로그인 체험
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Google 계정 로그인 → 보안 → 통행 키 → 통행 키 추가, Face ID/지문 로그인 체험.
@@ -259,7 +259,7 @@ Windows PC에서 iPhone에만 Passkey가 있는 웹사이트에 로그인하려�
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>과도기 권장
+과도기 권장
 
 {class="mt-1"}
 Passkey가 비밀번호를 완전히 대체한 것은 아닙니다,:많은 웹사이트는 여전히 "Passkey + 비밀번호" 공존 단계입니다.
@@ -310,7 +310,7 @@ Google 계정 + YubiKey를 예로:
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>듀얼 키 전략
+듀얼 키 전략
 
 {class="mt-1"}
 하드웨어 키의 가장 큰 위험은 "분실"입니다.
@@ -320,7 +320,7 @@ Google 계정 + YubiKey를 예로:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>구매 루트 주의
+구매 루트 주의
 
 {class="mt-1"}
 반드시 공식 매장이나 공인 대리점에서 구매, 중고나 출처 불명의 키는 사지 마세요,,이론적으로 사전 설정된 하드웨어에 백도어가 심어져 있을 수 있습니다.
@@ -355,7 +355,7 @@ Bitwarden은 자체 호스팅 옵션도 제공, 데이터 주권 요구가 높�
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>1Password 가족 버전의 가성비
+1Password 가족 버전의 가성비
 
 {class="mt-1"}
 1Password Families는 약 4.99달러/월, 최대 5명의 가족 구성원 지원, 각자 독립된 개인 보관함 + 4개 공유 보관함. 1인당 월 1달러 미만, 현재 가족 공유 경험 최고의 방안.
@@ -389,7 +389,7 @@ Bitwarden 가족 버전은 10달러/년에 6명 지원, 가성비 더 높지만 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>지금 바로 설정: 가족에게 "예비 열쇠"를 남기기
+지금 바로 설정: 가족에게 "예비 열쇠"를 남기기
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 신뢰하는 가족 한 명을 "비상 연락처"로 선택.
@@ -408,7 +408,7 @@ Bitwarden 가족 버전은 10달러/년에 6명 지원, 가성비 더 높지만 
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>중요 알림
+중요 알림
 
 {class="mt-1"}
 비밀번호 관리자는 편리하지만 위험도 있습니다: 마스터 비밀번호가 유출되면 모든 비밀번호가 노출됩니다.
@@ -417,7 +417,7 @@ Bitwarden 가족 버전은 10달러/년에 6명 지원, 가성비 더 높지만 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>지금 바로 시도: 비밀번호 관리자 사용 시작
+지금 바로 시도: 비밀번호 관리자 사용 시작
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. 비밀번호 관리자 선택(Bitwarden 또는 시스템 내장 권장).

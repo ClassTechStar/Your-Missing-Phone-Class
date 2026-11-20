@@ -97,7 +97,7 @@ kind: chapter
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>만능 첫 수: 스마트폰 재부팅
+만능 첫 수: 스마트폰 재부팅
 
 {class="mt-1"}
 어떤 문제를 겪든—:버벅거림, 강제 종료, 네트워크 연결 불량, 소리 이상,,먼저 스마트폰 재부팅.
@@ -107,7 +107,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>지금 바로 외우기: 이 구명 조작은 완벽히 숙지
+지금 바로 외우기: 이 구명 조작은 완벽히 숙지
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>강제 재부팅</strong>: 풀스크린 iPhone은 볼륨 업 → 볼륨 다운 → 전원 버튼 길게 눌러 Logo 나올 때까지. Android는 전원 버튼 10-15초 길게 눌러 진동까지.

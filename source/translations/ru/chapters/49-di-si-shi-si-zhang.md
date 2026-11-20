@@ -34,10 +34,10 @@ kind: chapter
 1. HTML одним файлом (CSS и JS инлайном), без фреймворков
 2. Тёмная тема, современный минимализм
 3. Четыре карточки-инструмента:
-   - Суммаризатор текста
-   - Счётчик слов
-   - Пипетка цветов
-   - Генератор QR-кодов
+ - Суммаризатор текста
+ - Счётчик слов
+ - Пипетка цветов
+ - Генератор QR-кодов
 4. У каждой карточки иконка, заголовок и короткое описание
 5. Анимация при наведении на карточки
 6. Адаптивная вёрстка, удобна на телефоне
@@ -109,17 +109,17 @@ Record { id, amount, type, category, note, date }
 1. Сервер Express, порт 3001
 2. База данных SQLite, таблица records
 3. Поля таблицы records:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. CRUD-эндпоинты:
-   GET /api/records — получить все записи
-   POST /api/records — добавить запись
-   PUT /api/records/:id — обновить запись
-   DELETE /api/records/:id — удалить запись
+ GET /api/records — получить все записи
+ POST /api/records — добавить запись
+ PUT /api/records/:id — обновить запись
+ DELETE /api/records/:id — удалить запись
 5. Мидлварь обработки ошибок
 Дайте полную структуру серверного кода.
 ```

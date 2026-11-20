@@ -45,7 +45,7 @@ Mas a redução da capacidade do seu celular deve-se principalmente a três raz�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Pequena sugestão de compra
+Pequena sugestão de compra
 
 {class="mt-1"}
 Hoje em dia, um celular de 128GB já não chega, 256GB é um ponto de partida mais seguro. Se gosta de fotografar ou jogar, recomendamos 512GB ou mais. Lembre-se, quanto ao espaço de armazenamento, mais vale ter a mais do que ficar aquém.
@@ -53,7 +53,7 @@ Hoje em dia, um celular de 128GB já não chega, 256GB é um ponto de partida ma
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à obra: veja a "identidade" do seu celular
+Mãos à obra: veja a "identidade" do seu celular
 
 {class="mt-1"}
 Abra [Definições], encontre Sobre o celular (ou opção semelhante) e anote: modelo do celular, versão do sistema, espaço de armazenamento total e disponível. Este é o primeiro passo para o conhecer. Aproveite para verificar o estado de saúde da bateria, para ter uma ideia.
@@ -66,7 +66,7 @@ Antes de começarmos os conhecimentos específicos, vamos estabelecer uma compre
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-vault mr-2"></i>Porque é que isto é importante?
+Porque é que isto é importante?
 
 {class="mt-1"}
 Se o celular se perder ou avariar, não perde apenas alguns milhares de yuans em hardware, <strong>mas, mais ainda, dados irrecuperáveis acumulados durante anos</strong> — fotografias do crescimento dos filhos, mensagens de voz de entes queridos falecidos, contratos importantes sem backup. Hábitos científicos de organização e proteção podem protegê-lo em três dimensões:

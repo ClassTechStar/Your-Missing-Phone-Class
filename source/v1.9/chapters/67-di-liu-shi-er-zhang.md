@@ -45,17 +45,17 @@ kind: chapter
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {      // body：描述"界面长什么样"
-        VStack {               // 竖着排列
-            Text("你好，世界！")
-                .font(.largeTitle)      // 修饰符：大标题
-            Button("点我") {
-                print("被点击了")
-            }
-            .buttonStyle(.borderedProminent)  // 蓝色实心按钮
-        }
-        .padding()
-    }
+ var body: some View { // body：描述"界面长什么样"
+ VStack { // 竖着排列
+ Text("你好，世界！")
+ .font(.largeTitle) // 修饰符：大标题
+ Button("点我") {
+ print("被点击了")
+ }
+ .buttonStyle(.borderedProminent) // 蓝色实心按钮
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -87,16 +87,16 @@ struct ContentView: View {
 
 ```
 struct SwitchDemo: View {
-    @State private var isOn = false
+ @State private var isOn = false
 
-    var body: some View {
-        VStack {
-            Toggle("电源", isOn: $isOn)
-            Text(isOn ? "设备运行中" : "设备已关闭")
-                .foregroundColor(isOn ? .green : .secondary)
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack {
+ Toggle("电源", isOn: $isOn)
+ Text(isOn ? "设备运行中" : "设备已关闭")
+ .foregroundColor(isOn ? .green : .secondary)
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -132,7 +132,7 @@ struct SwitchDemo: View {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 命令式管过程，声明式管结果。你描述"现在该是什么样"，过去怎么变来的、未来怎么变过去，都不归你管。
@@ -162,14 +162,14 @@ SwiftUI 四大基础视图
 
 ```
 Text("本月支出")
-    .font(.headline)             // 语义字号：标题级
-    .foregroundColor(.secondary) // 次要文字色
+ .font(.headline) // 语义字号：标题级
+ .foregroundColor(.secondary) // 次要文字色
 
 Text("这是很长的一句话，会自动换行，行距也调过了。")
-    .lineSpacing(6)              // 行间距
-    .lineLimit(2)                // 最多两行，超了省略号
+ .lineSpacing(6) // 行间距
+ .lineLimit(2) // 最多两行，超了省略号
 
-Text("账单共 \(12 + 3) 笔")       // 插值直接用第 61 章的语法
+Text("账单共 \(12 + 3) 笔") // 插值直接用第 61 章的语法
 ```
 :::
 
@@ -187,24 +187,24 @@ Text("账单共 \(12 + 3) 笔")       // 插值直接用第 61 章的语法
 ```
 // 写法一：纯文字标题
 Button("保存") {
-    print("保存了")
+ print("保存了")
 }
 .buttonStyle(.borderedProminent)
 
 // 写法二：自定义外观（图标 + 文字）
 Button {
-    print("分享了")
+ print("分享了")
 } label: {
-    HStack {
-        Image(systemName: "square.and.arrow.up")
-        Text("分享")
-    }
+ HStack {
+ Image(systemName: "square.and.arrow.up")
+ Text("分享")
+ }
 }
 .buttonStyle(.bordered)
 
 // 置灰：条件不满足时禁用
 Button("提交") { }
-    .disabled(false)
+ .disabled(false)
 ```
 :::
 
@@ -221,19 +221,19 @@ buttonStyle 常用三档：borderedProminent（实心、最显眼，一屏留一
 
 ```
 struct InputDemo: View {
-    @State private var nickname = ""
-    @State private var password = ""
+ @State private var nickname = ""
+ @State private var password = ""
 
-    var body: some View {
-        VStack(spacing: 12) {
-            TextField("给自己起个昵称", text: $nickname)
-                .textFieldStyle(.roundedBorder)
-            SecureField("密码", text: $password)   // 自动打圆点
-                .textFieldStyle(.roundedBorder)
-            Text("昵称长度：\(nickname.count)")
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 12) {
+ TextField("给自己起个昵称", text: $nickname)
+ .textFieldStyle(.roundedBorder)
+ SecureField("密码", text: $password) // 自动打圆点
+ .textFieldStyle(.roundedBorder)
+ Text("昵称长度：\(nickname.count)")
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -248,15 +248,15 @@ struct InputDemo: View {
 :::
 
 ```
-Image(systemName: "heart")            // SF Symbols 系统图标
-    .imageScale(.large)
-    .foregroundColor(.red)
+Image(systemName: "heart") // SF Symbols 系统图标
+ .imageScale(.large)
+ .foregroundColor(.red)
 
-Image(systemName: "heart.fill")       // .fill = 实心变体
+Image(systemName: "heart.fill") // .fill = 实心变体
 
-Image("trip-photo")                   // Assets 里的本地图片
-    .resizable()                      // 允许改尺寸
-    .scaledToFit()                    // 按比例缩放，不变形
+Image("trip-photo") // Assets 里的本地图片
+ .resizable() // 允许改尺寸
+ .scaledToFit() // 按比例缩放，不变形
 ```
 :::
 
@@ -264,7 +264,7 @@ SF Symbols 的名字有规律：基础名 + 变体后缀：heart 和 heart.fill�
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先问系统要，再找素材
+小贴士：先问系统要，再找素材
 
 {class="mt-1"}
 做界面想用任何图标之前，先想想 SF Symbols 里有没有：铃铛、Wi-Fi、电池、文件夹、各种箭头，日常 App 的图标需求它基本全包了，还自动适配深色模式和粗细调整。第三方图标库是"系统图标不合适"时才轮到的选项，顺序别颠倒。
@@ -281,22 +281,22 @@ SF Symbols 的名字有规律：基础名 + 变体后缀：heart 和 heart.fill�
 
 ```
 struct ControlsDemo: View {
-    @State private var on = true
-    @State private var volume = 0.5
-    @State private var choice = "浅色"
+ @State private var on = true
+ @State private var volume = 0.5
+ @State private var choice = "浅色"
 
-    var body: some View {
-        VStack(spacing: 16) {
-            Toggle("提醒我", isOn: $on)           // 开关
-            Slider(value: $volume, in: 0...1)     // 滑块
-            Picker("主题", selection: $choice) {  // 选择器
-                Text("浅色").tag("浅色")
-                Text("深色").tag("深色")
-            }
-            .pickerStyle(.segmented)              // 分段样式
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 16) {
+ Toggle("提醒我", isOn: $on) // 开关
+ Slider(value: $volume, in: 0...1) // 滑块
+ Picker("主题", selection: $choice) { // 选择器
+ Text("浅色").tag("浅色")
+ Text("深色").tag("深色")
+ }
+ .pickerStyle(.segmented) // 分段样式
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -314,17 +314,17 @@ struct ControlsDemo: View {
 
 ```
 struct MoreControlsDemo: View {
-    @State private var cups = 3
-    @State private var startDate = Date()
+ @State private var cups = 3
+ @State private var startDate = Date()
 
-    var body: some View {
-        VStack(spacing: 16) {
-            Stepper("每天目标 \(cups) 杯", value: $cups, in: 1...20)
-            DatePicker("开始日期", selection: $startDate,
-                       displayedComponents: .date)
-        }
-        .padding()
-    }
+ var body: some View {
+ VStack(spacing: 16) {
+ Stepper("每天目标 \(cups) 杯", value: $cups, in: 1...20)
+ DatePicker("开始日期", selection: $startDate,
+ displayedComponents: .date)
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -344,17 +344,17 @@ Stepper 的 <code class="inline">in: 1...20</code> 顺手复习了第 61 章的�
 
 ```
 VStack(alignment: .leading, spacing: 12) {
-    HStack {
-        Text("账单")
-        Spacer()                 // 弹性空间：把右边推到尽头
-        Text("-25.5 元").foregroundColor(.red)
-    }
-    Divider()                    // 分割线
-    Text("备注：午饭")
+ HStack {
+ Text("账单")
+ Spacer() // 弹性空间：把右边推到尽头
+ Text("-25.5 元").foregroundColor(.red)
+ }
+ Divider() // 分割线
+ Text("备注：午饭")
 }
-.padding(16)                     // 四周留白
+.padding(16) // 四周留白
 .background(Color(.systemGray6)) // 浅灰底
-.cornerRadius(12)                // 圆角
+.cornerRadius(12) // 圆角
 
 // 修饰符顺序有意义：先 padding 再 background，背景不含边距
 ```
@@ -362,7 +362,7 @@ VStack(alignment: .leading, spacing: 12) {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：修饰符顺序有讲究
+注意：修饰符顺序有讲究
 
 {class="mt-1"}
 <code class="inline">padding(16).background(灰)</code> 和 <code class="inline">background(灰).padding(16)</code> 效果不同——前者"先留白再涂色"（背景不含边距），后者"先涂色再留白"（背景包含边距）。新手最常见的"奇怪白边"都源于此。不确定时调换顺序，预览立刻告诉你答案。
@@ -385,16 +385,16 @@ VStack 和 HStack 都接受两个"氛围参数"：<code class="inline">alignment
 
 ```
 HStack {
-    Text("左侧")
-    Spacer()                          // 弹簧：把右边推到头
-    Text("右侧")
+ Text("左侧")
+ Spacer() // 弹簧：把右边推到头
+ Text("右侧")
 }
 
 Text("撑满整行")
-    .frame(maxWidth: .infinity, alignment: .leading)  // 撑满 + 左对齐
+ .frame(maxWidth: .infinity, alignment: .leading) // 撑满 + 左对齐
 
 Button("标准按钮") { }
-    .frame(width: 120, height: 44)    // 固定尺寸
+ .frame(width: 120, height: 44) // 固定尺寸
 ```
 :::
 
@@ -411,12 +411,12 @@ ZStack 最常见的三个用途里，角标最有代表性——"铃铛图标右
 
 ```
 ZStack(alignment: .topTrailing) {
-    Image(systemName: "bell")
-        .font(.title2)
-    Circle()
-        .fill(.red)
-        .frame(width: 10, height: 10)
-        .offset(x: 4, y: -4)          // 微调位置
+ Image(systemName: "bell")
+ .font(.title2)
+ Circle()
+ .fill(.red)
+ .frame(width: 10, height: 10)
+ .offset(x: 4, y: -4) // 微调位置
 }
 ```
 :::
@@ -442,16 +442,16 @@ ZStack(alignment:) 决定孩子们怎么叠：topTrailing 就是右上角。第�
 
 ```
 VStack(alignment: .leading, spacing: 8) {
-    HStack {
-        Text("交通")
-            .font(.headline)
-        Spacer()
-        Text("-6.0 元")
-            .foregroundColor(.red)
-    }
-    Text("备注：早高峰地铁")
-        .font(.caption)
-        .foregroundColor(.secondary)
+ HStack {
+ Text("交通")
+ .font(.headline)
+ Spacer()
+ Text("-6.0 元")
+ .foregroundColor(.red)
+ }
+ Text("备注：早高峰地铁")
+ .font(.caption)
+ .foregroundColor(.secondary)
 }
 .padding(16)
 .background(Color(.systemGray6))
@@ -477,10 +477,10 @@ padding 有四种常见形态，一口气认全：
 :::
 
 ```
-.padding()                        // 系统默认留白
-.padding(16)                      // 四周都留 16
-.padding(.horizontal, 16)         // 只左右留
-.padding(.top, 8)                 // 只顶上留
+.padding() // 系统默认留白
+.padding(16) // 四周都留 16
+.padding(.horizontal, 16) // 只左右留
+.padding(.top, 8) // 只顶上留
 ```
 :::
 
@@ -520,16 +520,16 @@ padding 有四种常见形态，一口气认全：
 
 ```
 struct CounterView: View {
-    @State private var count = 0   // @State：这个值变了要重画
+ @State private var count = 0 // @State：这个值变了要重画
 
-    var body: some View {
-        VStack {
-            Text("你点了 \(count) 次")
-            Button("点我 +1") {
-                count += 1          // 改状态，界面自动刷新
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("你点了 \(count) 次")
+ Button("点我 +1") {
+ count += 1 // 改状态，界面自动刷新
+ }
+ }
+ }
 }
 ```
 :::
@@ -543,24 +543,24 @@ struct CounterView: View {
 
 ```
 struct InputView: View {
-    @State private var text = ""
+ @State private var text = ""
 
-    var body: some View {
-        TextField("输入点什么", text: $text)  // $ 双向绑定
-            .textFieldStyle(.roundedBorder)
-        Text("你输入了：\(text)")   // 输入时实时更新
-    }
+ var body: some View {
+ TextField("输入点什么", text: $text) // $ 双向绑定
+ .textFieldStyle(.roundedBorder)
+ Text("你输入了：\(text)") // 输入时实时更新
+ }
 }
 ```
 :::
 
 ::: div .figure
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-hand-pointer mr-1"></i> 用户操作</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-redo mr-1"></i> 状态改变（count += 1）</span>
+<span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 用户操作</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"> 状态改变（count += 1）</span>
 :::
 
 :::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
-<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-brain mr-1"></i> SwiftUI 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-palette mr-1"></i> 自动重画界面（body 重新计算）</span>
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center"> SwiftUI 感知到变化</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center"> 自动重画界面（body 重新计算）</span>
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
@@ -569,7 +569,7 @@ struct InputView: View {
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>注意：状态放哪儿，决定界面重算多大一圈
+注意：状态放哪儿，决定界面重算多大一圈
 
 {class="mt-1"}
 一个状态该放在 @State、@Observable 对象还是 SwiftData 模型里，直接决定视图重算的范围。放错了位置，就会出现"改一个字段整页闪"。SwiftUI 的多数"玄学刷新"，最后都能归结到两件事：状态放错了地方，或是把能现算的派生值又存了一份。
@@ -592,23 +592,23 @@ struct InputView: View {
 
 ```
 struct ParentView: View {
-    @State private var isOn = false
+ @State private var isOn = false
 
-    var body: some View {
-        VStack {
-            Text("开关现在是 \(isOn ? "开" : "关")")
-            ChildToggle(isOn: $isOn)   // $ ：把"值 + 修改权"一起借出去
-        }
-    }
+ var body: some View {
+ VStack {
+ Text("开关现在是 \(isOn ? "开" : "关")")
+ ChildToggle(isOn: $isOn) // $ ：把"值 + 修改权"一起借出去
+ }
+ }
 }
 
 struct ChildToggle: View {
-    @Binding var isOn: Bool            // 子视图声明"我借了一个绑定"
+ @Binding var isOn: Bool // 子视图声明"我借了一个绑定"
 
-    var body: some View {
-        Toggle("孩子这边也能控制", isOn: $isOn)
-            .padding()
-    }
+ var body: some View {
+ Toggle("孩子这边也能控制", isOn: $isOn)
+ .padding()
+ }
 }
 ```
 :::
@@ -628,23 +628,23 @@ $ 符号是这段代码的灵魂，读法固定：<strong>父视图写 $isOn 是
 
 ```
 struct ThemeCard: View {
-    @Environment(\.colorScheme) var colorScheme   // 读环境：深浅色
+ @Environment(\.colorScheme) var colorScheme // 读环境：深浅色
 
-    var body: some View {
-        Text(colorScheme == .dark ? "现在是深色模式" : "现在是浅色模式")
-            .padding()
-            .background(colorScheme == .dark ? Color.black : Color.white)
-    }
+ var body: some View {
+ Text(colorScheme == .dark ? "现在是深色模式" : "现在是浅色模式")
+ .padding()
+ .background(colorScheme == .dark ? Color.black : Color.white)
+ }
 }
 
 struct EditSheet: View {
-    @Environment(\.dismiss) private var dismiss   // 拿到"关闭"动作
+ @Environment(\.dismiss) private var dismiss // 拿到"关闭"动作
 
-    var body: some View {
-        Button("保存并关闭") {
-            dismiss()                              // 一句话关页面
-        }
-    }
+ var body: some View {
+ Button("保存并关闭") {
+ dismiss() // 一句话关页面
+ }
+ }
 }
 ```
 :::
@@ -662,31 +662,31 @@ struct EditSheet: View {
 
 ```
 struct WaterView: View {
-    @State private var cups = 0
-    @State private var nickname = ""
+ @State private var cups = 0
+ @State private var nickname = ""
 
-    var body: some View {
-        VStack(spacing: 16) {
-            TextField("你的昵称", text: $nickname)
-                .textFieldStyle(.roundedBorder)
+ var body: some View {
+ VStack(spacing: 16) {
+ TextField("你的昵称", text: $nickname)
+ .textFieldStyle(.roundedBorder)
 
-            Text("\(nickname.isEmpty ? "朋友" : nickname)，今天喝了 \(cups) 杯")
-                .font(.title2)
+ Text("\(nickname.isEmpty ? "朋友" : nickname)，今天喝了 \(cups) 杯")
+ .font(.title2)
 
-            HStack(spacing: 12) {
-                Button("+1 杯") { cups += 1 }
-                    .buttonStyle(.borderedProminent)
-                Button("重来") { cups = 0 }
-                    .buttonStyle(.bordered)
-            }
+ HStack(spacing: 12) {
+ Button("+1 杯") { cups += 1 }
+ .buttonStyle(.borderedProminent)
+ Button("重来") { cups = 0 }
+ .buttonStyle(.bordered)
+ }
 
-            if cups >= 8 {
-                Text("今日目标达成！")
-                    .foregroundColor(.green)
-            }
-        }
-        .padding()
-    }
+ if cups >= 8 {
+ Text("今日目标达成！")
+ .foregroundColor(.green)
+ }
+ }
+ .padding()
+ }
 }
 ```
 :::
@@ -714,25 +714,25 @@ struct WaterView: View {
 
 ```
 struct Badge: View {
-    let count: Int                 // 只显示：普通参数，let 收下
+ let count: Int // 只显示：普通参数，let 收下
 
-    var body: some View {
-        Text("未读 \(count)")
-            .font(.caption)
-    }
+ var body: some View {
+ Text("未读 \(count)")
+ .font(.caption)
+ }
 }
 
-// 调用：Badge(count: unread)   —— 不加 $
+// 调用：Badge(count: unread) —— 不加 $
 
 struct Editor: View {
-    @Binding var title: String     // 要修改：接绑定
+ @Binding var title: String // 要修改：接绑定
 
-    var body: some View {
-        TextField("标题", text: $title)
-    }
+ var body: some View {
+ TextField("标题", text: $title)
+ }
 }
 
-// 调用：Editor(title: $title)   —— 加 $
+// 调用：Editor(title: $title) —— 加 $
 ```
 :::
 
@@ -751,20 +751,20 @@ struct Editor: View {
 
 ```
 struct TagList: View {
-    let tags = ["餐饮", "交通", "娱乐"]
+ let tags = ["餐饮", "交通", "娱乐"]
 
-    var body: some View {
-        HStack {
-            ForEach(tags, id: \.self) { tag in
-                Text(tag)
-                    .font(.caption)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 4)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-            }
-        }
-    }
+ var body: some View {
+ HStack {
+ ForEach(tags, id: \.self) { tag in
+ Text(tag)
+ .font(.caption)
+ .padding(.horizontal, 10)
+ .padding(.vertical, 4)
+ .background(Color(.systemGray6))
+ .cornerRadius(8)
+ }
+ }
+ }
 }
 ```
 :::
@@ -786,27 +786,27 @@ struct TagList: View {
 
 ```
 struct AnimatedHeartView: View {
-    @State private var liked = false
+ @State private var liked = false
 
-    var body: some View {
-        Button {
-            withAnimation(.spring(duration: 0.4)) {
-                liked.toggle()
-            }
-        } label: {
-            Image(systemName: liked ? "heart.fill" : "heart")
-                .font(.system(size: 48))
-                .foregroundColor(liked ? .red : .gray)
-                .scaleEffect(liked ? 1.3 : 1.0)
-        }
-    }
+ var body: some View {
+ Button {
+ withAnimation(.spring(duration: 0.4)) {
+ liked.toggle()
+ }
+ } label: {
+ Image(systemName: liked ? "heart.fill" : "heart")
+ .font(.system(size: 48))
+ .foregroundColor(liked ? .red : .gray)
+ .scaleEffect(liked ? 1.3 : 1.0)
+ }
+ }
 }
 ```
 :::
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：先功能后动画
+小贴士：先功能后动画
 
 {class="mt-1"}
 新手常犯的毛病是"界面还没做对，就开始纠结动画"。先让功能跑通，最后再统一加动效：动画是锦上添花，功能是雪中送炭。这也是咱们一贯的"简单至上"原则。
@@ -832,7 +832,7 @@ struct AnimatedHeartView: View {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做一个"心情按钮"
+来动手：做一个"心情按钮"
 
 #### 六、常用修饰符速查：一页在手，界面不愁
 
@@ -876,28 +876,28 @@ SwiftUI 常用修饰符速查
 
 ```
 struct SettingsView: View {
-    @State private var notifications = true
-    @State private var dailyGoal = 8
-    @State private var drink = "白开水"
-    @State private var startDate = Date()
+ @State private var notifications = true
+ @State private var dailyGoal = 8
+ @State private var drink = "白开水"
+ @State private var startDate = Date()
 
-    var body: some View {
-        Form {
-            Section("提醒") {
-                Toggle("打卡提醒", isOn: $notifications)
-                Stepper("每天 \(dailyGoal) 杯", value: $dailyGoal, in: 1...20)
-            }
-            Section("偏好") {
-                Picker("常喝的", selection: $drink) {
-                    Text("白开水").tag("白开水")
-                    Text("茶").tag("茶")
-                    Text("咖啡").tag("咖啡")
-                }
-                DatePicker("开始日期", selection: $startDate,
-                           displayedComponents: .date)
-            }
-        }
-    }
+ var body: some View {
+ Form {
+ Section("提醒") {
+ Toggle("打卡提醒", isOn: $notifications)
+ Stepper("每天 \(dailyGoal) 杯", value: $dailyGoal, in: 1...20)
+ }
+ Section("偏好") {
+ Picker("常喝的", selection: $drink) {
+ Text("白开水").tag("白开水")
+ Text("茶").tag("茶")
+ Text("咖啡").tag("咖啡")
+ }
+ DatePicker("开始日期", selection: $startDate,
+ displayedComponents: .date)
+ }
+ }
+ }
 }
 ```
 :::
@@ -913,36 +913,36 @@ Form 的妙处是"你只管填内容，排版它包了"：每一行自动获得�
 
 ```
 struct AddExpenseForm: View {
-    @State private var amountText = ""
-    @State private var category = "餐饮"
-    @State private var note = ""
+ @State private var amountText = ""
+ @State private var category = "餐饮"
+ @State private var note = ""
 
-    var canSave: Bool {
-        Double(amountText) != nil        // 金额能转成数字才允许保存
-    }
+ var canSave: Bool {
+ Double(amountText) != nil // 金额能转成数字才允许保存
+ }
 
-    var body: some View {
-        Form {
-            Section("金额与分类") {
-                TextField("金额", text: $amountText)
-                    .keyboardType(.decimalPad)
-                Picker("分类", selection: $category) {
-                    Text("餐饮").tag("餐饮")
-                    Text("交通").tag("交通")
-                    Text("娱乐").tag("娱乐")
-                }
-            }
-            Section("备注") {
-                TextField("可不填", text: $note)
-            }
-            Section {
-                Button("保存这笔账") {
-                    // 存进数据层——第 64 章见
-                }
-                .disabled(!canSave)
-            }
-        }
-    }
+ var body: some View {
+ Form {
+ Section("金额与分类") {
+ TextField("金额", text: $amountText)
+ .keyboardType(.decimalPad)
+ Picker("分类", selection: $category) {
+ Text("餐饮").tag("餐饮")
+ Text("交通").tag("交通")
+ Text("娱乐").tag("娱乐")
+ }
+ }
+ Section("备注") {
+ TextField("可不填", text: $note)
+ }
+ Section {
+ Button("保存这笔账") {
+ // 存进数据层——第 64 章见
+ }
+ .disabled(!canSave)
+ }
+ }
+ }
 }
 ```
 :::
@@ -965,13 +965,13 @@ struct AddExpenseForm: View {
 ```
 // 会自己换装的（推荐）：
 Text("金额")
-    .foregroundColor(.primary)        // 主文字色：深浅色模式自动反转
-    .background(Color(.systemGray6))  // 系统灰：自动适配
+ .foregroundColor(.primary) // 主文字色：深浅色模式自动反转
+ .background(Color(.systemGray6)) // 系统灰：自动适配
 
 // 写死颜色的（深色模式下会出事）：
 Text("金额")
-    .foregroundColor(.black)          // 深色模式下几乎看不见
-    .background(Color.white)
+ .foregroundColor(.black) // 深色模式下几乎看不见
+ .background(Color.white)
 ```
 :::
 
@@ -986,10 +986,10 @@ Text("金额")
 
 ```
 Text("跟系统走")
-    .font(.body)              // 用户调大字体，这行跟着变大
+ .font(.body) // 用户调大字体，这行跟着变大
 
 Text("不跟系统走")
-    .font(.system(size: 17))  // 写死了，用户调多大都是 17
+ .font(.system(size: 17)) // 写死了，用户调多大都是 17
 ```
 :::
 
@@ -1001,7 +1001,7 @@ Text("不跟系统走")
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：无障碍不是加分题
+小贴士：无障碍不是加分题
 
 {class="mt-1"}
 系统色、动态字体、读屏标签这三件事，共同点是"各多写一两行而已"，覆盖的却是深色模式用户、长辈用户、视障用户三大人群。把它们当默认习惯，而不是上架前的"临终关怀"。
@@ -1034,24 +1034,24 @@ Text("不跟系统走")
 
 ```
 struct RevealView: View {
-    @State private var show = false
+ @State private var show = false
 
-    var body: some View {
-        VStack {
-            Button(show ? "收起" : "展开") {
-                withAnimation(.easeInOut(duration: 0.3)) {
-                    show.toggle()
-                }
-            }
-            if show {
-                Text("这里是隐藏内容")
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(10)
-                    .transition(.scale.combined(with: .opacity))
-            }
-        }
-    }
+ var body: some View {
+ VStack {
+ Button(show ? "收起" : "展开") {
+ withAnimation(.easeInOut(duration: 0.3)) {
+ show.toggle()
+ }
+ }
+ if show {
+ Text("这里是隐藏内容")
+ .padding()
+ .background(Color(.systemGray6))
+ .cornerRadius(10)
+ .transition(.scale.combined(with: .opacity))
+ }
+ }
+ }
 }
 ```
 :::
@@ -1064,7 +1064,7 @@ struct RevealView: View {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：给"心情按钮"加动画
+来动手：给"心情按钮"加动画
 
 {class="mt-1"}
 回到第六节的心情切换器，加两个动效：文字和背景色变化包进 withAnimation；切换瞬间给整个卡片一个 .transition(.scale.combined(with: .opacity))。改完在画布的交互模式里点几下——同一行业务代码，观感立刻上一个档次。这就是"先功能后动画"的正确打开方式：功能已经稳了，动效是最后穿上的外套。
@@ -1081,17 +1081,17 @@ struct RevealView: View {
 
 ```
 #Preview("浅色") {
-    WaterView()
+ WaterView()
 }
 
 #Preview("深色") {
-    WaterView()
-        .preferredColorScheme(.dark)
+ WaterView()
+ .preferredColorScheme(.dark)
 }
 
 #Preview("大字体") {
-    WaterView()
-        .environment(\.dynamicTypeSize, .accessibility3)
+ WaterView()
+ .environment(\.dynamicTypeSize, .accessibility3)
 }
 ```
 :::
@@ -1109,24 +1109,24 @@ struct RevealView: View {
 
 ```
 struct Expense {
-    let name: String
-    let amount: Double
+ let name: String
+ let amount: Double
 }
 
 // 示例数据：只给预览和测试用
 let sampleExpenses = [
-    Expense(name: "午饭", amount: 25.5),
-    Expense(name: "地铁", amount: 6.0),
-    Expense(name: "一场电影", amount: 45.0),
+ Expense(name: "午饭", amount: 25.5),
+ Expense(name: "地铁", amount: 6.0),
+ Expense(name: "一场电影", amount: 45.0),
 ]
 
 #Preview {
-    VStack {
-        ForEach(sampleExpenses, id: \.name) { e in
-            Text("\(e.name)：\(e.amount) 元")
-        }
-    }
-    .padding()
+ VStack {
+ ForEach(sampleExpenses, id: \.name) { e in
+ Text("\(e.name)：\(e.amount) 元")
+ }
+ }
+ .padding()
 }
 ```
 :::
@@ -1172,7 +1172,7 @@ let sampleExpenses = [
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>小贴士：把编程智能当第二意见
+小贴士：把编程智能当第二意见
 
 {class="mt-1"}
 自己排查两轮还没头绪，把"这个视图为什么没刷新"连同相关代码一起问 Xcode 26 的编程智能——第 60 章装好它时就打过照面。它的价值在"第二意见"：先自己想，再看它说，两边对不上的地方往往就是盲区。直接伸手要答案，练不出自己的诊断力。
@@ -1193,14 +1193,14 @@ Form 自带滚动，但普通页面内容一多（比如说明页、详情页）
 
 ```
 ScrollView {
-    VStack(alignment: .leading, spacing: 12) {
-        Text("使用说明")
-            .font(.title.bold())
-        Text("第一段：这是一段很长的说明文字，页面会滚动。")
-        Text("第二段：内容再多也不怕，滚到哪画到哪。")
-        // ……更多内容
-    }
-    .padding()
+ VStack(alignment: .leading, spacing: 12) {
+ Text("使用说明")
+ .font(.title.bold())
+ Text("第一段：这是一段很长的说明文字，页面会滚动。")
+ Text("第二段：内容再多也不怕，滚到哪画到哪。")
+ // ……更多内容
+ }
+ .padding()
 }
 ```
 :::
@@ -1222,14 +1222,14 @@ ScrollView {
 
 ```
 Text(长文本)
-    .lineLimit(3)                       // 最多三行，超出省略
-    .lineLimit(nil)                     // 不限行数（写 nil 是"不限"）
+ .lineLimit(3) // 最多三行，超出省略
+ .lineLimit(nil) // 不限行数（写 nil 是"不限"）
 
 Text("0000000000000000000")
-    .minimumScaleFactor(0.5)            // 空间不够时允许缩到一半大
+ .minimumScaleFactor(0.5) // 空间不够时允许缩到一半大
 
 Text("超长的账号名显示不下")
-    .truncationMode(.middle)            // 中间省略：保留头尾
+ .truncationMode(.middle) // 中间省略：保留头尾
 ```
 :::
 
@@ -1250,16 +1250,16 @@ Text("超长的账号名显示不下")
 
 ```
 struct AlertDemo: View {
-    @State private var showSaved = false
+ @State private var showSaved = false
 
-    var body: some View {
-        Button("保存") {
-            showSaved = true          // 改状态触发弹窗
-        }
-        .alert("已保存", isPresented: $showSaved) {
-            Button("好", role: .cancel) { }
-        }
-    }
+ var body: some View {
+ Button("保存") {
+ showSaved = true // 改状态触发弹窗
+ }
+ .alert("已保存", isPresented: $showSaved) {
+ Button("好", role: .cancel) { }
+ }
+ }
 }
 ```
 :::
@@ -1273,11 +1273,11 @@ struct AlertDemo: View {
 
 ```
 .confirmationDialog("确定删除这笔账？", isPresented: $showConfirm,
-                    titleVisibility: .visible) {
-    Button("删除", role: .destructive) {
-        // 真正执行删除
-    }
-    Button("取消", role: .cancel) { }
+ titleVisibility: .visible) {
+ Button("删除", role: .destructive) {
+ // 真正执行删除
+ }
+ Button("取消", role: .cancel) { }
 }
 ```
 :::
@@ -1305,7 +1305,7 @@ struct AlertDemo: View {
 
 ::: div .quote-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-quote-left mr-2"></i>一句话记牢
+一句话记牢
 
 {class="mt-1"}
 界面写完只算一半，检查通过才算做完。你替用户多想一步，用户就少骂你一句。
@@ -1375,7 +1375,7 @@ struct AlertDemo: View {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - SwiftUI 是声明式：描述"长什么样"，系统负责画和重画
 - 视图 = 遵守 View 协议的结构体；body 描述界面；修饰符链式"上妆"

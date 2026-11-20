@@ -87,7 +87,7 @@ Router neu starten
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Der Entwicklermodus ist ein im Smartphone-System integriertes verstecktes Menü mit vielen Funktionen, die normale Nutzer nicht brauchen, die Entwickler jedoch benötigen.
+Der Entwicklermodus ist ein im Smartphone-System integriertes verstecktes Menü mit vielen Funktionen, die normale Nutzer nicht brauchen, die Entwickler jedoch benötigen.
 
 {class="mt-1"}
 So aktivierst du ihn:
@@ -95,7 +95,7 @@ So aktivierst du ihn:
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Android
+Android
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Die echte Autorisierung finden, nicht eine, die so aussieht</strong> HarmonyOS

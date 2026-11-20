@@ -37,10 +37,10 @@ Think Before Coding 원칙에 따라, 지시는 AI가 목표를 이해할 만큼
 1. 단일 파일 HTML(인라인 CSS·JS), 프레임워크 없이
 2. 다크 테마, 현대적인 미니멀 스타일
 3. 4개의 도구 입구 카드 표시:
-   - 텍스트 요약 도구
-   - 글자 수 세기 도구
-   - 색상 선택기
-   - QR 코드 생성기
+ - 텍스트 요약 도구
+ - 글자 수 세기 도구
+ - 색상 선택기
+ - QR 코드 생성기
 4. 각 카드에는 아이콘, 제목, 짧은 설명이 있어요
 5. 카드에 호버 애니메이션 효과
 6. 반응형 레이아웃, 휴대폰에서도 사용 가능
@@ -116,17 +116,17 @@ Record { id, amount, type, category, note, date }
 1. Express 서버, 포트 3001
 2. SQLite 데이터베이스, 테이블 이름 records
 3. records 테이블 필드:
-   id (TEXT PRIMARY KEY)
-   amount (REAL)
-   type (TEXT: 'income'|'expense')
-   category (TEXT)
-   note (TEXT)
-   date (TEXT: YYYY-MM-DD)
+ id (TEXT PRIMARY KEY)
+ amount (REAL)
+ type (TEXT: 'income'|'expense')
+ category (TEXT)
+ note (TEXT)
+ date (TEXT: YYYY-MM-DD)
 4. CRUD 엔드포인트:
-   GET /api/records - 모든 기록 조회
-   POST /api/records - 기록 추가
-   PUT /api/records/:id - 기록 수정
-   DELETE /api/records/:id - 기록 삭제
+ GET /api/records - 모든 기록 조회
+ POST /api/records - 기록 추가
+ PUT /api/records/:id - 기록 수정
+ DELETE /api/records/:id - 기록 삭제
 5. 에러 처리 미들웨어
 완성된 백엔드 코드 구조를 제시해 주세요.
 ```

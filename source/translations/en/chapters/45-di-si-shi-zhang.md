@@ -76,12 +76,12 @@ A lightweight personal finance tracker supporting income/expense records, catego
 - Build: Vite
 ## Data model
 Record {
-  id: string
-  amount: number
-  type: 'income' | 'expense'
-  category: string
-  note: string
-  date: string  // YYYY-MM-DD
+ id: string
+ amount: number
+ type: 'income' | 'expense'
+ category: string
+ note: string
+ date: string // YYYY-MM-DD
 }
 ## Development plan
 Step 1: basic record features (CRUD)

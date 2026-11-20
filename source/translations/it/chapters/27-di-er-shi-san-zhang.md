@@ -95,7 +95,7 @@ L'automazione non è tutta rose e fiori; alcune trappole le ho già esplorate pe
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Suggerimento: la postura giusta per iniziare con l'automazione
+Suggerimento: la postura giusta per iniziare con l'automazione
 
 {class="mt-1"}
 Prenditi 5 minuti per pensare: quali sono le 3 cose che ripeti di più sul telefono ogni giorno? Ad esempio le operazioni di routine mattutine, le abitudini dopo aver collegato le cuffie Bluetooth, le impostazioni prima di uscire... Parti da queste piccole cose ad alta frequenza e crea per ciascuna una semplice automazione. Anche se ogni automazione ti risparmia solo 5 secondi. Nel lungo periodo è tanto. E la soddisfazione di vedere funzionare il risultato crea davvero dipendenza.
@@ -103,7 +103,7 @@ Prenditi 5 minuti per pensare: quali sono le 3 cose che ripeti di più sul telef
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Allenati: tre sfide di automazione per principianti
+Allenati: tre sfide di automazione per principianti
 
 {class="mt-1 mb-2"}
 Scegli quella più adatta a te e completala: a quel punto avrai imparato le basi:
@@ -116,7 +116,7 @@ Scegli quella più adatta a te e completala: a quel punto avrai imparato le basi
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Caso 3: automazione del "flusso buongiorno"
+Caso 3: automazione del "flusso buongiorno"
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Scenario</strong>: ogni giorno alle 7:00 annuncio automatico del meteo + disattivazione silenzioso + apertura notizie.

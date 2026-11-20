@@ -58,7 +58,7 @@ No leer los permisos al instalar una app
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Explicacion en una frase
+Explicacion en una frase
 
 {class="mt-1"}
 : Mucha gente aprueba todos los permisos sin pensar. Lee los permisos que pide la app; si una app pide permisos que no necesita, no la instales.
@@ -71,7 +71,7 @@ No leer los permisos al instalar una app
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumen del capítulo
+Resumen del capítulo
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Dejar el teléfono sin código de desbloqueo

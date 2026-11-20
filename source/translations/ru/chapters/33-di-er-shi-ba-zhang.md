@@ -18,7 +18,7 @@ kind: chapter
 
 ::: div .info-box .rounded-lg .p-4 .mt-3 .mb-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Три топора выбора
+Три топора выбора
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Сначала определите, что для вас важнее всего</strong>: камера? игры? автономность? экран? плавность системы? или достаточно просто звонков и WeChat? Расставьте приоритеты.
@@ -33,41 +33,41 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Параметр</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">На что смотреть</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Итог в одном предложении</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Процессор (SoC)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Определяет, сколько лет телефон будет работать плавно. Стандарт 2026 года: Snapdragon 8 Elite Gen5 / Dimensity 9500 и выше = топ; Snapdragon 8s Gen4 / Dimensity 8400 = средне-высокий; Snapdragon 7+ Gen4 / Dimensity 7350 = хватит на три года. Ниже Snapdragon 6-й серии — подходить с осторожностью.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Покупайте новое, а не старое — SoC определяет, сколько лет телефон не будет тормозить</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Экран</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED лучше LCD по цветам и экономичнее; частота 120 Гц плавнее 60 Гц; разрешение — минимум 1080P. ШИМ-димминг с высокой частотой (от 1920 Гц) меньше утомляет глаза.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120 Гц + высокочастотный ШИМ = проходной балл хорошего экрана</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Камера</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Смотрите не на мегапиксели, а на размер сенсора</strong>. Большой сенсор важнее количества мегапикселей. Сверхширокоугольник полезен; телеобъектив (от 3x оптического зума) — для съёмки удалённых объектов; макрообъектив обычно бесполезен.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Основная камера с большим сенсором + полезный телевик &gt; россыпь «для галочки»</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Батарея и зарядка</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500 м Ач — проходной минимум, свыше 5000 м Ач — зарядки раз в день достаточно. Мощность зарядки: 60 Вт — быстро, 100 Вт и выше — очень быстро. Беспроводная зарядка удобна, но медленная.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000 м Ач + 60 Вт = комбинация без тревоги</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Обещание обновлений</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Определяет, как долго телефон будет безопасно использоваться. Apple обычно даёт 5–6 лет системных обновлений; флагманы Samsung — 4 года системы + 5 лет безопасности; Google Pixel — 7 лет; китайские среднебюджетные модели — обычно 2–3 года.</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хотите пользоваться дольше — выбирайте бренды с длительной поддержкой</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Параметр</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">На что смотреть</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Итог в одном предложении</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Процессор (SoC)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Определяет, сколько лет телефон будет работать плавно. Стандарт 2026 года: Snapdragon 8 Elite Gen5 / Dimensity 9500 и выше = топ; Snapdragon 8s Gen4 / Dimensity 8400 = средне-высокий; Snapdragon 7+ Gen4 / Dimensity 7350 = хватит на три года. Ниже Snapdragon 6-й серии — подходить с осторожностью.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Покупайте новое, а не старое — SoC определяет, сколько лет телефон не будет тормозить</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Экран</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED лучше LCD по цветам и экономичнее; частота 120 Гц плавнее 60 Гц; разрешение — минимум 1080P. ШИМ-димминг с высокой частотой (от 1920 Гц) меньше утомляет глаза.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OLED + 120 Гц + высокочастотный ШИМ = проходной балл хорошего экрана</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Камера</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>Смотрите не на мегапиксели, а на размер сенсора</strong>. Большой сенсор важнее количества мегапикселей. Сверхширокоугольник полезен; телеобъектив (от 3x оптического зума) — для съёмки удалённых объектов; макрообъектив обычно бесполезен.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Основная камера с большим сенсором + полезный телевик &gt; россыпь «для галочки»</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Батарея и зарядка</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4500 м Ач — проходной минимум, свыше 5000 м Ач — зарядки раз в день достаточно. Мощность зарядки: 60 Вт — быстро, 100 Вт и выше — очень быстро. Беспроводная зарядка удобна, но медленная.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5000 м Ач + 60 Вт = комбинация без тревоги</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Обещание обновлений</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Определяет, как долго телефон будет безопасно использоваться. Apple обычно даёт 5–6 лет системных обновлений; флагманы Samsung — 4 года системы + 5 лет безопасности; Google Pixel — 7 лет; китайские среднебюджетные модели — обычно 2–3 года.</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хотите пользоваться дольше — выбирайте бренды с длительной поддержкой</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -122,51 +122,51 @@ kind: chapter
 ::: div .overflow-x-auto
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                            <thead>
-                                <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Сценарий</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">На что смотреть</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Рекомендация</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Фотоэнтузиаст</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Основная камера с большим сенсором (лучше 1 дюйм), оптическая стабилизация, телеобъектив (от 3x оптического зума), выделенный чип обработки изображений</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X, Huawei Pura/Mate, Xiaomi Ultra</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Геймер</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Топовый процессор, высокая частота дискретизации касаний, система охлаждения, большая батарея + быстрая зарядка</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO цифровой серии, ROG Phone, Red Magic, Redmi K</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Приоритет автономности</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Батарея от 5500 м Ач, энергоэффективный процессор, LTPO-экран</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic, OnePlus, Redmi Note версия с большой батареей</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Использование пожилыми</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Упрощённый режим, крупный шрифт, громкий звук, большая батарея, много сервисных центров</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Changxiang, Honor Play, OPPO A, Redmi Note</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Ученик</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хорошее соотношение цена/качество, прочность, большая батарея, наличие родительского контроля</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Пользователь экосистемы Apple</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Если уже есть Mac/iPad/AirPods, iPhone — единственный логичный выбор</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 Standard (цена/качество) или Pro (полный опыт)</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Путешествия за границу</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Поддержка eSIM, полное покрытие глобальных частот, сервисы Google</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S, Pixel, OnePlus</td>
-                                </tr>
-                            </tbody>
-                        </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Сценарий</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">На что смотреть</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Рекомендация</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📸 Фотоэнтузиаст</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Основная камера с большим сенсором (лучше 1 дюйм), оптическая стабилизация, телеобъектив (от 3x оптического зума), выделенный чип обработки изображений</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo X, Huawei Pura/Mate, Xiaomi Ultra</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🎮 Геймер</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Топовый процессор, высокая частота дискретизации касаний, система охлаждения, большая батарея + быстрая зарядка</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iQOO цифровой серии, ROG Phone, Red Magic, Redmi K</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🔋 Приоритет автономности</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Батарея от 5500 м Ач, энергоэффективный процессор, LTPO-экран</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Honor Magic, OnePlus, Redmi Note версия с большой батареей</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👴 Использование пожилыми</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Упрощённый режим, крупный шрифт, громкий звук, большая батарея, много сервисных центров</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei Changxiang, Honor Play, OPPO A, Redmi Note</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 Ученик</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Хорошее соотношение цена/качество, прочность, большая батарея, наличие родительского контроля</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Пользователь экосистемы Apple</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Если уже есть Mac/iPad/AirPods, iPhone — единственный логичный выбор</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone 17 Standard (цена/качество) или Pro (полный опыт)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">🌍 Путешествия за границу</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Поддержка eSIM, полное покрытие глобальных частот, сервисы Google</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone, Samsung S, Pixel, OnePlus</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 :::
 
@@ -196,7 +196,7 @@ kind: chapter
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Практика: выберите телефон по этой методике
+Практика: выберите телефон по этой методике
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Возьмите лист бумаги, запишите две главные потребности (например: автономность: первое, камера — второе).
@@ -208,7 +208,7 @@ kind: chapter
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Итоги главы
+Итоги главы
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
 - Три топора выбора: сначала потребности → затем бюджет → в конце модель

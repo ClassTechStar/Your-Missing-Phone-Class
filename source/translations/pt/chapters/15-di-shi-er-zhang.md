@@ -61,7 +61,7 @@ Minha atitude em relação a jogos mobile é: pode jogar, mas não deixe o jogo 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mãos à Obra: Monte Seu Sistema de Entretenimento Mobile
+Mãos à Obra: Monte Seu Sistema de Entretenimento Mobile
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. No app de música, baixe seus 3 álbuns ou playlists favoritos e garanta que estejam disponíveis offline.

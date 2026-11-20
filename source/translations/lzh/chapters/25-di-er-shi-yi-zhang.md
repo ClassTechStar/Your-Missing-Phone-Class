@@ -100,7 +100,7 @@ DNS（域名系統）猶如互聯網之電話本：君輸入"baidu.com"，DNS爲
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>即刻爲之：爲君之手機做一次"安全體檢"
+即刻爲之：爲君之手機做一次"安全體檢"
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>DNS升級</strong>：安卓：設置 &gt; 連接與共享 &gt; 私人DNS &gt; 填入"one.one.one.one"或"dns.google"。iPhone：以Safari搜"1.1.1.1 DNS profile"安裝描述文件，或下載Cloudflare之1.1.1.1 App。

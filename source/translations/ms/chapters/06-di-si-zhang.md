@@ -56,7 +56,7 @@ Ia merujuk kepada <strong>perisian "versi retak" yang ditanam trojan</strong> �
 
 ::: div .danger-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-bug mr-2"></i>"Versi retak", "versi percuma", "versi tanpa iklan" perisian berbayar;
+"Versi retak", "versi percuma", "versi tanpa iklan" perisian berbayar;
 
 {class="mt-1"}
 Alat kelabu seperti "pemboost like", "perebut sampul merah", "penipu permainan";<strong>App "versi dalaman" yang dikatakan disyorkan oleh "iklan kecil" dalam sembang kumpulan.</strong> Program-program ini kelihatan boleh digunakan, tetapi di sebaliknya mungkin
@@ -96,20 +96,20 @@ Kemas kini
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Minimakan: Jangan berikan jika tidak perlu.</strong> Audit selepas itu: Semak secara berkala siapa yang "melampaui kebenaran" dalam tetapan kebenaran.</li>
-                        <li><strong>Prinsip pengurusan</strong>:
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Senarai kenalan/SMS: Boleh digunakan untuk menghantar SMS spam.</li>
-                                <li>Lokasi masa nyata: Boleh dijejak pergerakan anda.</li>
-                                <li>Kamera/Mikrofon: Boleh merakam secara senyap.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Minimakan: Jangan berikan jika tidak perlu.</strong> Audit selepas itu: Semak secara berkala siapa yang "melampaui kebenaran" dalam tetapan kebenaran.</li>
+ <li><strong>Prinsip pengurusan</strong>:
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Senarai kenalan/SMS: Boleh digunakan untuk menghantar SMS spam.</li>
+ <li>Lokasi masa nyata: Boleh dijejak pergerakan anda.</li>
+ <li>Kamera/Mikrofon: Boleh merakam secara senyap.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-shield-alt mr-2"></i>Akses fail: Boleh membaca fail peribadi anda.
+Akses fail: Boleh membaca fail peribadi anda.
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Enam, Unsur Pembentukan Pakej Pemasangan Perisian
@@ -152,16 +152,16 @@ Kemas kini
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Fungsi tandatangan</strong>:</li>
-                        <li><strong>Mengesahkan sumber: Mengesahkan aplikasi benar-benar dari pembangun yang didakwa.</strong> Mengesahkan integriti: Memastikan aplikasi tidak diubah suai semasa penghantaran.</li>
-                        <li><strong>Mencegah penyamaran: Aplikasi hasad tidak boleh menyamar sebagai aplikasi lain.</strong>
-                            <ol class="list-alpha pl-6 mt-1 space-y-1">
-                                <li>Anda mungkin mendapati saiz App yang dipaparkan di kedai aplikasi berbeza dengan ruang yang digunakan selepas pemasangan. Ini kerana:</li>
-                                <li>Saiz muat turun</li>
-                                <li>: Saiz APK/IPA selepas pemampatan.</li>
-                            </ol>
-                        </li>
-                    </ul>
+ <li><strong>Fungsi tandatangan</strong>:</li>
+ <li><strong>Mengesahkan sumber: Mengesahkan aplikasi benar-benar dari pembangun yang didakwa.</strong> Mengesahkan integriti: Memastikan aplikasi tidak diubah suai semasa penghantaran.</li>
+ <li><strong>Mencegah penyamaran: Aplikasi hasad tidak boleh menyamar sebagai aplikasi lain.</strong>
+ <ol class="list-alpha pl-6 mt-1 space-y-1">
+ <li>Anda mungkin mendapati saiz App yang dipaparkan di kedai aplikasi berbeza dengan ruang yang digunakan selepas pemasangan. Ini kerana:</li>
+ <li>Saiz muat turun</li>
+ <li>: Saiz APK/IPA selepas pemampatan.</li>
+ </ol>
+ </li>
+ </ul>
 ```
 
 ##### 4. Saiz Pakej Pemasangan dan Pengoptimuman
@@ -180,7 +180,7 @@ Kemas kini
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Bab 5: Buat Telefon Lebih Memahami Anda — Tetapan Asas
+Bab 5: Buat Telefon Lebih Memahami Anda — Tetapan Asas
 
 {class="mt-1"}
 Luangkan beberapa minit untuk tetapan, peningkatan pengalaman sangat besar. Tetapan ini seperti "menala" telefon, menjadikannya lebih sesuai dengan tabiat penggunaan anda.
@@ -188,7 +188,7 @@ Luangkan beberapa minit untuk tetapan, peningkatan pengalaman sangat besar. Teta
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Satu, Bunyi dan Getaran
+Satu, Bunyi dan Getaran
 
 {class="mt-1"}
 Tetapkan nada dering dan bunyi pemberitahuan yang anda suka. Gunakan mod senyap (mesyuarat) dan mod jangan ganggu (tidur) dengan fleksibel, dunia serta-merta tenang.

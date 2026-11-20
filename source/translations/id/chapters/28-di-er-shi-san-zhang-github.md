@@ -25,46 +25,46 @@ Banyak orang bingung dengan dua istilah ini saat pertama kali bertemu, berikut k
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Item Perbandingan</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Esensi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alat kontrol versi (perangkat lunak)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Platform hosting kode (situs web)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lokasi berjalan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Di komputer lokal</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cloud (akses browser)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tanggung jawab inti</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mencatat setiap perubahan file (bagaimana diubah, siapa mengubah, kapan diubah)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menempatkan repository Git di cloud, memudahkan penyimpanan, tampilan, kolaborasi</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Butuh jaringan?</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tidak perlu, bisa offline</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu internet untuk akses</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kepemilikan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat lunak open source, dibuat oleh Linus Torvalds (bapak Linux)</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Produk milik Microsoft</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kompetitor sejenis</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Item Perbandingan</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Git</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GitHub</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Esensi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Alat kontrol versi (perangkat lunak)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Platform hosting kode (situs web)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Lokasi berjalan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Di komputer lokal</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cloud (akses browser)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tanggung jawab inti</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mencatat setiap perubahan file (bagaimana diubah, siapa mengubah, kapan diubah)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menempatkan repository Git di cloud, memudahkan penyimpanan, tampilan, kolaborasi</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Butuh jaringan?</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tidak perlu, bisa offline</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perlu internet untuk akses</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kepemilikan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Perangkat lunak open source, dibuat oleh Linus Torvalds (bapak Linux)</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Produk milik Microsoft</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kompetitor sejenis</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee, Bitbucket</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 Singkatnya:<strong>Git mengurus "bagaimana mencatat perubahan", GitHub mengurus "di mana perubahan disimpan, bagaimana berkolaborasi"</strong>. Git adalah alat, berjalan secara lokal; GitHub adalah platform, menempatkan repository Git di cloud, memudahkan kolaborasi dan tampilan. Anda bisa menggunakan Git tanpa GitHub (misalnya menulis kode sendiri untuk kontrol versi), tapi menggunakan GitHub harus menggunakan Git (karena GitHub berbasis Git).
@@ -117,7 +117,7 @@ GitHub tidak hanya menyediakan penyimpanan kode, tetapi juga:
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Pengetahuan Kecil: Apa itu README
+Pengetahuan Kecil: Apa itu README
 
 {class="mt-1"}
 README.md adalah file format Markdown, konten pertama yang dilihat orang saat membuka repository Anda. README yang baik biasanya berisi: pengenalan proyek. cara instalasi, contoh penggunaan, lisensi, kontak. Menulis README yang baik adalah kompetensi dasar programmer, juga ambang pertama apakah proyek bisa digunakan orang lain.
@@ -181,7 +181,7 @@ Gunakan repository kode sebagai cloud drive, saat ganti komputer atau kerja mult
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-triangle mr-2"></i>Peringatan Keamanan
+Peringatan Keamanan
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Jangan pernah commit informasi sensitif seperti kata sandi, API key, string koneksi database ke GitHub, terutama repository publik:sekali bocor, akan di-scrape dalam hitungan detik, konsekuensinya serius.
@@ -191,7 +191,7 @@ Gunakan repository kode sebagai cloud drive, saat ganti komputer atau kerja mult
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-info-circle mr-2"></i>Catatan untuk Mengakses GitHub di Dalam Negeri
+Catatan untuk Mengakses GitHub di Dalam Negeri
 
 {class="mt-1"}
 Akses GitHub di dalam negeri kadang tidak stabil, mungkin tidak bisa dibuka atau clone lambat. Bisa coba: ① Gunakan situs mirror domestik (seperti GitClone, ghproxy) untuk mempercepat clone; ② Konfigurasi Hosts atau gunakan proxy; ③ Jika utamanya untuk kolaborasi domestik, juga bisa pertimbangkan alternatif domestik <strong>Gitee</strong>, fungsinya serupa dan aksesnya cepat. Banyak tim hosting di GitHub dan Gitee sekaligus, mengakomodasi internasionalisasi dan kecepatan domestik.
@@ -199,7 +199,7 @@ Akses GitHub di dalam negeri kadang tidak stabil, mungkin tidak bisa dibuka atau
 
 ::: div .success-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Tingkat Lanjut: Bangun Blog Pribadi Gratis dengan GitHub Pages
+Tingkat Lanjut: Bangun Blog Pribadi Gratis dengan GitHub Pages
 
 {class="mt-1"}
 GitHub Pages memungkinkan Anda hosting situs web statis secara gratis, dipadukan dengan generator situs statis seperti Jekyll, Hexo, Hugo, bisa dengan mudah membangun blog pribadi. Setelah menulis artikel Markdown push ke repository, blog otomatis update, juga dilengkapi HTTPS dan custom domain. Blog tak terhitung jumlahnya dibangun seperti ini, biaya nol, tanpa iklan, versi terkontrol.
@@ -213,7 +213,7 @@ Bagi mahasiswa ilmu komputer, GitHub adalah keterampilan wajib: ia adalah portof
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Mari Praktik: Selesaikan Pengalaman Pertama GitHub Anda
+Mari Praktik: Selesaikan Pengalaman Pertama GitHub Anda
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Daftarkan akun GitHub, lengkapi profil pribadi (avatar, bio, bidang teknis yang diminati).

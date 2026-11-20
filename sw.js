@@ -15,7 +15,7 @@
  */
 'use strict';
 
-const VERSION = 'v3';
+const VERSION = 'v4';
 const CACHE = 'phoneclass-' + VERSION;
 const SHELL = [
   './',
@@ -24,9 +24,8 @@ const SHELL = [
   './icons/icon-192.png',
   './icons/icon-512.png',
   './quiz.html',
-  // 字体只有 14KB（woff2 子集），预缓存后首屏正文与图标不再等网络
+  // 正文字体只有 0.6MB（woff2 子集），预缓存后首屏不等网络；图标已改为纯文字
   './fonts/MiSans-subset.woff2',
-  './fonts/fa/fa-solid-900.subset.woff2',
 ];
 // 题库 JSON（quiz/zh-CN.json，约 200KB）不进预缓存：壳层要小，
 // 用户点开自测页时同源 GET 会顺手缓存它，第二次起就能离线用。

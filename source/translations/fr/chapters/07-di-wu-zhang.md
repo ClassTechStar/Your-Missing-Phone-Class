@@ -74,7 +74,7 @@ Cette partie regroupe des fonctionnalités « dont on ne peut plus se passer une
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Liste de contrôle « premier jour de travail »
+Liste de contrôle « premier jour de travail »
 
 {class="mt-1 text-sm"}
 Après avoir reçu un nouveau smartphone ou une mise à jour majeure, il est recommandé de passer 10 minutes sur ces paramètres :<br> ① Mot de passe d'écran de verrouillage + biométrie ② Groupement des notifications + désactivation des pushes marketing ③ Taille de police / taux de rafraîchissement / mode sombre<br> ④ Clavier / navigateur / messagerie par défaut ⑤ Contact d'urgence / carte médicale ⑥ Paramètres de sauvegarde
@@ -90,7 +90,7 @@ Le lecteur d'écran est l'outil principal pour les utilisateurs malvoyants. Il <
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>iOS VoiceOver
+iOS VoiceOver
 
 {class="mt-1"}
 <strong>Chemin d'activation</strong>: [Paramètres] &gt; [Accessibilité] &gt; [VoiceOver], activez le commutateur. Vous pouvez aussi triple-cliquer sur le bouton latéral (ou le bouton principal) pour basculer rapidement.
@@ -111,7 +111,7 @@ Le lecteur d'écran est l'outil principal pour les utilisateurs malvoyants. Il <
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-volume-up mr-2"></i>Android TalkBack
+Android TalkBack
 
 {class="mt-1"}
 <strong>Chemin d'activation</strong>: [Paramètres] &gt; [Accessibilité] &gt; [TalkBack], activez le commutateur. Ou appuyez longuement sur les touches de volume haut et bas pendant 3 secondes pour activer rapidement (certaines marques le prennent en charge).
@@ -155,7 +155,7 @@ Quand le lecteur d'écran rencontre une image, l'approche traditionnelle est de 
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-robot mr-2"></i>Prise en charge de la description d'images par IA sur chaque système
+Prise en charge de la description d'images par IA sur chaque système
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: Dans [Paramètres] &gt; [Accessibilité] &gt; [VoiceOver] &gt; [Description vocale], activez « Description d'images ». Le système appelle un <strong>modèle IA local</strong> pour générer automatiquement une description textuelle des images (nécessite iPhone 12 et supérieur).
@@ -165,7 +165,7 @@ Quand le lecteur d'écran rencontre une image, l'approche traditionnelle est de 
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-lightbulb mr-2"></i>Scénario d'utilisation
+Scénario d'utilisation
 
 {class="mt-1"}
 Essayez de demander à propos d'une photo de rue « Combien de personnes y a-t-il sur cette image ? Que font-elles ? », ou ouvrez une application de livraison et laissez l'IA lire les noms de plats sur le menu<strong>c'est vraiment « la technologie rendant la vie plus égalitaire »</strong>.
@@ -178,7 +178,7 @@ Les sous-titres en temps réel (Live Captions) sont une fonctionnalité <strong>
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-closed-captioning mr-2"></i>Activation et optimisation des sous-titres en temps réel
+Activation et optimisation des sous-titres en temps réel
 
 {class="mt-1"}
 <strong>iOS</strong>: [Paramètres] &gt; [Accessibilité] &gt; [Sous-titres en temps réel], activez le commutateur. Le système détecte tout l'audio de l'appareil (appels, vidéos, podcasts, FaceTime, mémos vocaux) et affiche automatiquement les sous-titres en haut de l'écran.
@@ -203,7 +203,7 @@ Quand l'utilisateur <strong>ne peut ni entendre ni parler</strong>(comme une aph
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
-<i class="fas fa-phone mr-2"></i>Transcription en temps réel des appels (TTY / RTT)
+Transcription en temps réel des appels (TTY / RTT)
 
 {class="mt-1"}
 <strong>iOS</strong>: [Paramètres] &gt; [Accessibilité] &gt; [RTT/TTY], après activation, un clavier s'affiche à l'écran pendant l'appel, la voix de l'interlocuteur est transcrite en texte en temps réel,<strong>et ce que vous tapez est lu à voix haute</strong> pour l'interlocuteur.
@@ -231,7 +231,7 @@ Quand l'utilisateur <strong>ne peut ni entendre ni parler</strong>(comme une aph
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-universal-access mr-2"></i>La philosophie d'accessibilité d'Apple
+La philosophie d'accessibilité d'Apple
 
 {class="mt-1"}
 Apple investit massivement dans l'accessibilité, mettant à jour et ajoutant de nouvelles fonctionnalités d'accessibilité chaque année. Le site d'Apple propose une page dédiée à l'accessibilité, détaillant l'utilisation de chaque fonctionnalité. Les fonctionnalités d'accessibilité d'iOS sont généralement plus complètes et plus fluides que celles d'Android, c'est d'ailleurs une raison importante pour laquelle de nombreuses personnes en situation de handicap choisissent Apple.
@@ -239,7 +239,7 @@ Apple investit massivement dans l'accessibilité, mettant à jour et ajoutant de
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>Prenez 30 secondes pour essayer
+Prenez 30 secondes pour essayer
 
 {class="mt-1"}
 Trouvez un moment libre et faites les expériences suivantes :

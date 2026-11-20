@@ -39,14 +39,14 @@ val Context.dataStore by preferencesDataStore(name = "settings")
 
 // 写：存一个值
 suspend fun saveTheme(isDark: Boolean) {
-    context.dataStore.edit { prefs ->
-        prefs[THEME_KEY] = isDark
-    }
+ context.dataStore.edit { prefs ->
+ prefs[THEME_KEY] = isDark
+ }
 }
 
 // 读：取出来（Flow 会自动通知变化）
 val themeFlow: Flow<Boolean> = context.dataStore.data
-    .map { it[THEME_KEY] ?: false }
+ .map { it[THEME_KEY] ?: false }
 ```
 :::
 
@@ -65,33 +65,33 @@ val themeFlow: Flow<Boolean> = context.dataStore.data
 // 1. Entity：表结构（一张表 = 一个 data class）
 @Entity(tableName = "records")
 data class Record(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val amount: Double,
-    val category: String,
-    val note: String,
-    val date: String
+ @PrimaryKey(autoGenerate = true) val id: Long = 0,
+ val amount: Double,
+ val category: String,
+ val note: String,
+ val date: String
 )
 
 // 2. Dao：操作接口（增删改查）
 @Dao
 interface RecordDao {
-    @Query("SELECT * FROM records ORDER BY date DESC")
-    fun getAll(): Flow<List<Record>>
+ @Query("SELECT * FROM records ORDER BY date DESC")
+ fun getAll(): Flow<List<Record>>
 
-    @Insert
-    suspend fun insert(record: Record)
+ @Insert
+ suspend fun insert(record: Record)
 
-    @Delete
-    suspend fun delete(record: Record)
+ @Delete
+ suspend fun delete(record: Record)
 
-    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
-    suspend fun sumByCategory(c: String): Double
+ @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+ suspend fun sumByCategory(c: String): Double
 }
 
 // 3. Database：总装
 @Database(entities = [Record::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun recordDao(): RecordDao
+ abstract fun recordDao(): RecordDao
 }
 ```
 :::
@@ -110,16 +110,16 @@ abstract class AppDatabase : RoomDatabase() {
 ```
 // 1. 定义接口：把 HTTP 请求描述成函数
 interface WeatherApi {
-    @GET("v1/weather")
-    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+ @GET("v1/weather")
+ suspend fun getWeather(@Query("city") city: String): WeatherResponse
 }
 
 // 2. 创建实例
 val api = Retrofit.Builder()
-    .baseUrl("https://api.example.com/")
-    .addConverterFactory(GsonConverterFactory.create())
-    .build()
-    .create(WeatherApi::class.java)
+ .baseUrl("https://api.example.com/")
+ .addConverterFactory(GsonConverterFactory.create())
+ .build()
+ .create(WeatherApi::class.java)
 
 // 3. 像调函数一样调用（在协程里）
 val result = api.getWeather("北京")
@@ -128,7 +128,7 @@ val result = api.getWeather("北京")
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：两条网络铁律
+避坑提醒：两条网络铁律
 
 {class="mt-1"}
 ① <strong>网络请求绝不能在主线程做</strong>——会卡死界面甚至崩溃（NetworkOnMainThreadException）。所有网络调用必须放在协程（viewModelScope.launch）里。② 明文 HTTP 默认被禁止：安卓 9 起要求 HTTPS。测试时若要用 http:// 的本地地址，需要在 Manifest 里显式声明 <code class="inline">usesCleartextTraffic</code>——但正式产品必须全走 HTTPS。
@@ -156,9 +156,9 @@ JSON 解析两大方案
 // 给数据类加 @Serializable 注解
 @Serializable
 data class WeatherResponse(
-    val weather: List<Weather>,
-    val main: Main,
-    val name: String
+ val weather: List<Weather>,
+ val main: Main,
+ val name: String
 )
 
 // Retrofit 挂上对应 Converter（以 Retrofit 2.11+ 官方支持为例）：
@@ -180,13 +180,13 @@ data class WeatherResponse(
 ```
 // 在 ViewModel 里启动协程
 viewModelScope.launch {
-    val records = dao.getAll().first()  // suspend：会自动挂起等待
-    // 更新界面状态……
+ val records = dao.getAll().first() // suspend：会自动挂起等待
+ // 更新界面状态……
 }
 
 // 关键词速记：
-// suspend   —— "我要等待，别拦着别人"
-// launch    —— "开工！"
+// suspend —— "我要等待，别拦着别人"
+// launch —— "开工！"
 // viewModelScope —— 跟着页面走的"工作间"，页面销毁自动收工
 ```
 :::
@@ -195,7 +195,7 @@ viewModelScope.launch {
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
-<i class="fas fa-hands mr-2"></i>来动手：做一个"每日一句"小应用
+来动手：做一个"每日一句"小应用
 
 {class="mt-1"}
 找一个免费的名言 API（比如 hitokoto 之类），用 Retrofit 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮（协程里重新请求）。再把喜欢的句子用 Room 存进"收藏夹"。这个练习把 DataStore/Room/Retrofit/协程全用了一遍，做完它，第 7、8 章就是小菜一碟。
@@ -203,7 +203,7 @@ viewModelScope.launch {
 
 ::: div .chapter-summary
 {class="font-semibold mb-1"}
-<i class="fas fa-flag-checkered mr-1"></i>本章小结
+本章小结
 
 - 口诀：小配置进 DataStore，成批数据进 Room，外面的数据走 Retrofit
 - DataStore 返回 Flow：值变了，观察者自动收到

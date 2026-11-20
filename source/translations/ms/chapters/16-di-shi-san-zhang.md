@@ -204,41 +204,41 @@ Domain ialah "nombor rumah" sesuatu laman web; memahaminya membantu anda menilai
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pelayar</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelebihan utama</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sesuai untuk</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teras Chromium + Copilot AI terbina dalam, boleh merumuskan halaman web/menterjemah/berbual</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pekerja pejabat yang menginginkan kecekapan, pengguna berat AI (disyorkan sebagai pelayar utama)</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Integrasi mendalam dengan ekosistem Apple, menjimatkan bateri dan cekap, perlindungan privasi kuat</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna iPhone/Mac yang menghargai hayat bateri dan hubungan dengan sistem</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kadar penggunaan global paling tinggi, ekosistem sambungan paling kaya</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna lanjutan yang memerlukan banyak sambungan, peminat segerak merentas peranti</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menyekat iklan dan penjejak terus tanpa sebarang konfigurasi, kelajuan lebih pantas</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang menghargai privasi dan mahu menyekat iklan tanpa memasang sambungan</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Enjin carian sama nama tidak merekod sejarah, satu klik memadam semua jejak</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang sensitif terhadap privasi dan tidak mahu dijejak secara peribadi</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pelayar</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kelebihan utama</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Sesuai untuk</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Microsoft Edge</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Teras Chromium + Copilot AI terbina dalam, boleh merumuskan halaman web/menterjemah/berbual</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pekerja pejabat yang menginginkan kecekapan, pengguna berat AI (disyorkan sebagai pelayar utama)</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Integrasi mendalam dengan ekosistem Apple, menjimatkan bateri dan cekap, perlindungan privasi kuat</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna iPhone/Mac yang menghargai hayat bateri dan hubungan dengan sistem</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kadar penggunaan global paling tinggi, ekosistem sambungan paling kaya</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna lanjutan yang memerlukan banyak sambungan, peminat segerak merentas peranti</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Menyekat iklan dan penjejak terus tanpa sebarang konfigurasi, kelajuan lebih pantas</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang menghargai privasi dan mahu menyekat iklan tanpa memasang sambungan</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Enjin carian sama nama tidak merekod sejarah, satu klik memadam semua jejak</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengguna yang sensitif terhadap privasi dan tidak mahu dijejak secara peribadi</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -287,46 +287,46 @@ Berikut adalah pintu masuk yang disenaraikan mengikut jenama. Nama mungkin sedik
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Laluan Pintu Masuk</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Item Disyorkan untuk Diaktifkan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Tetapan] > [Telefon] / [Mesej]</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Senyapkan pemanggil tidak dikenali; Kenalan yang disekat; "Tapis penghantar tidak dikenali" dalam Mesej</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi Telefon > Tetapan > Sekatan Gangguan; atau Pusat Keselamatan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekatan pintar, tutup automatik panggilan nombor asing yang berdering sekali, penapis kata kunci SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon > Sekatan Gangguan; Mobile Manager > Sekatan Gangguan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengecaman panggilan masuk, senarai hitam, sekatan pintar SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi Telefon > Sekatan Gangguan; atau Telefon > Sekatan Gangguan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekatan panggilan masuk, pengecaman panggilan penipuan, peraturan sekatan SMS</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon > Sekatan Panggilan Gangguan; i Manager</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekatan gangguan, amaran panggilan penipuan, penapisan mesej</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon > Tetapan > Sekat Nombor / ID Pemanggil dan Panggilan Spam</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekat nombor tidak dikenali, pengecaman panggilan spam (sokongan berbeza mengikut wilayah)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Laluan Pintu Masuk</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Item Disyorkan untuk Diaktifkan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Tetapan] > [Telefon] / [Mesej]</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Senyapkan pemanggil tidak dikenali; Kenalan yang disekat; "Tapis penghantar tidak dikenali" dalam Mesej</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi Telefon > Tetapan > Sekatan Gangguan; atau Pusat Keselamatan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekatan pintar, tutup automatik panggilan nombor asing yang berdering sekali, penapis kata kunci SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon > Sekatan Gangguan; Mobile Manager > Sekatan Gangguan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Pengecaman panggilan masuk, senarai hitam, sekatan pintar SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi Telefon > Sekatan Gangguan; atau Telefon > Sekatan Gangguan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekatan panggilan masuk, pengecaman panggilan penipuan, peraturan sekatan SMS</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon > Sekatan Panggilan Gangguan; i Manager</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekatan gangguan, amaran panggilan penipuan, penapisan mesej</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Telefon > Tetapan > Sekat Nombor / ID Pemanggil dan Panggilan Spam</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sekat nombor tidak dikenali, pengecaman panggilan spam (sokongan berbeza mengikut wilayah)</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
@@ -390,46 +390,46 @@ Pintu masuk berikut mungkin sedikit berbeza mengikut versi sistem, boleh terus m
 
 ```html
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
-                        <thead>
-                            <tr class="bg-light dark:bg-gray-700">
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pintu Masuk Biasa</th>
-                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mobile Manager / Pusat Keselamatan > Amaran Gempa; atau cari "gempa" dalam Tetapan</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sesetengah versi sistem mempunyai perkhidmatan amaran terbina dalam, perlu sambungan rangkaian dan mengaktifkan lokasi</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tetapan > Keselamatan > Notifikasi Amaran Kecemasan / Amaran Gempa</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nama mungkin "Notifikasi Amaran Kecemasan", merangkumi gempa dan sebagainya</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tetapan > Keselamatan (Kontak Kecemasan SOS) > Amaran Gempa</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sesetengah model bergantung kepada liputan perkhidmatan wilayah</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi Cuaca atau Tetapan > Keselamatan/Lagi > Amaran Gempa</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Rujuk menu versi sistem yang sebenar</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Biasanya tiada suis terbina dalam yang lengkap dalam tetapan sistem; pasang aplikasi amaran gempa yang boleh dipercayai dan benarkan notifikasi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi memerlukan operasi latar belakang dan kebenaran lokasi; jangan biarkan mod Jangan Ganggu sistem menyekat amaran aplikasi tersebut</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung dan lain-lain</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tetapan > Keselamatan dan Kecemasan / Amaran Kecemasan Tanpa Wayar</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Liputan "Amaran Kecemasan" berbeza mengikut wilayah dan operator</td>
-                            </tr>
-                        </tbody>
-                    </table>
+ <thead>
+ <tr class="bg-light dark:bg-gray-700">
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Platform</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Pintu Masuk Biasa</th>
+ <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Keterangan</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi / Redmi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mobile Manager / Pusat Keselamatan > Amaran Gempa; atau cari "gempa" dalam Tetapan</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sesetengah versi sistem mempunyai perkhidmatan amaran terbina dalam, perlu sambungan rangkaian dan mengaktifkan lokasi</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei / Honor</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tetapan > Keselamatan > Notifikasi Amaran Kecemasan / Amaran Gempa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nama mungkin "Notifikasi Amaran Kecemasan", merangkumi gempa dan sebagainya</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / OnePlus</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tetapan > Keselamatan (Kontak Kecemasan SOS) > Amaran Gempa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sesetengah model bergantung kepada liputan perkhidmatan wilayah</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi Cuaca atau Tetapan > Keselamatan/Lagi > Amaran Gempa</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Rujuk menu versi sistem yang sebenar</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Biasanya tiada suis terbina dalam yang lengkap dalam tetapan sistem; pasang aplikasi amaran gempa yang boleh dipercayai dan benarkan notifikasi</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aplikasi memerlukan operasi latar belakang dan kebenaran lokasi; jangan biarkan mod Jangan Ganggu sistem menyekat amaran aplikasi tersebut</td>
+ </tr>
+ <tr>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Samsung dan lain-lain</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tetapan > Keselamatan dan Kecemasan / Amaran Kecemasan Tanpa Wayar</td>
+ <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Liputan "Amaran Kecemasan" berbeza mengikut wilayah dan operator</td>
+ </tr>
+ </tbody>
+ </table>
 ```
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
