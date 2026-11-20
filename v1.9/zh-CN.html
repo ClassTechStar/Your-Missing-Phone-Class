@@ -74926,4 +74926,43 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre>
  });
  }
  </script>
+ <script>
+ /* ===== iOS PWA 离线存储提示（优化方案 §5.3）=====
+ 事实：WebKit 约 7 天不使用就会清除站点存储（ITP），「装到桌面断网能看」
+ 在 iPhone 上对低频用户是脆弱的，安卓无此问题。这里在 iOS + 独立窗口模式
+ 第 2 次访问时给一次可关闭的横幅，说实话而不是等读者断网时才发现。
+ 只出现一次：点「知道了」后 localStorage 记一笔，之后永不再来。 */
+ (function () {
+ if (!(navigator.standalone && /iphone|ipad/i.test(navigator.userAgent))) return;
+ var KEY = 'ios-offline-hint';
+ var VKEY = 'ios-offline-hint-visits';
+ var visits;
+ try {
+ visits = +(localStorage.getItem(VKEY) || 0) + 1;
+ localStorage.setItem(VKEY, String(visits));
+ if (visits !== 2 || localStorage.getItem(KEY)) return;
+ } catch (e) { return; }
+ document.addEventListener('DOMContentLoaded', function () {
+ var bar = document.createElement('div');
+ bar.setAttribute('role', 'status');
+ bar.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:99;'
+ + 'background:#fff7ed;border:1px solid #f59e0b;color:#92400e;'
+ + 'border-radius:10px;padding:12px 44px 12px 14px;font-size:14px;'
+ + 'line-height:1.6;box-shadow:0 4px 16px rgba(0,0,0,.12)';
+ bar.textContent = 'iPhone 会自动清理较久没打开的离线内容。'
+ + '想长期离线阅读，建议下载单文件版或 Android APK。';
+ var close = document.createElement('button');
+ close.textContent = '知道了';
+ close.style.cssText = 'position:absolute;right:10px;top:8px;border:0;'
+ + 'background:none;color:#92400e;font-size:14px;cursor:pointer;'
+ + 'text-decoration:underline;padding:4px';
+ close.onclick = function () {
+ try { localStorage.setItem(KEY, '1'); } catch (e) {}
+ bar.remove();
+ };
+ bar.appendChild(close);
+ document.body.appendChild(bar);
+ });
+ })();
+ </script>
 </body></html>
