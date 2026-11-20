@@ -30,6 +30,9 @@ RE_CANONICAL = re.compile(r'\s*<link rel="canonical"[^>]*>')
 RE_STYLE = re.compile(r'<style[\s\S]*?</style>')
 RE_SCRIPT = re.compile(r'<script(?![^>]*\bsrc=)[^>]*>[\s\S]*?</script>')
 RE_SCRIPT_BODY = re.compile(r'<script[^>]*>([\s\S]*?)</script>')
+# 单文件专用的整章懒渲染样式（方案 §5.1）：分章页每页只有一章、本来就秒出，
+# 不需要此规则，反而带来正文占位高度的布局风险，生成章节页前剥掉。
+RE_SINGLEFILE_STYLE = re.compile(r'<style id="singlefile-lazy">[\s\S]*?</style>')
 
 # 单文件里的相对路径比站点根深一层，分章页再深一层。
 # 字体例外：章节页把字体随页面树复制到 <page>/fonts/，HTML 里的预加载链接
@@ -204,6 +207,9 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
 
     # 共享壳层一次性外置 CSS/JS 与路径改写（所有页共用同一套资产）
     assets = {}
+    head_slim = RE_SINGLEFILE_STYLE.sub('', head_slim)
+    top_matter = RE_SINGLEFILE_STYLE.sub('', top_matter)
+    tail = RE_SINGLEFILE_STYLE.sub('', tail)
     head_slim = _externalize(head_slim, assets)
     top_matter = _externalize(top_matter, assets)
     tail = _externalize(tail, assets)

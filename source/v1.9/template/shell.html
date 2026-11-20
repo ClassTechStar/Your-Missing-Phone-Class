@@ -12,7 +12,10 @@
  }
 
  html {
- scroll-behavior: smooth;
+ /* 不设 scroll-behavior:smooth：全局平滑会让「原生 #hash 跳转」变成动画，
+ 而 content-visibility:auto 下动画的目标是渲染前的占位坐标——动画在途时
+ scrollToAnchor 的逐帧校准滚动会被它逐帧顶掉（实测落点偏移 5 万 px）。
+ 平滑效果由 JS 在需要处显式请求（scrollToAnchor 的收尾一步）。 */
  scroll-padding-top: 5rem;
  }
  body {
@@ -166,8 +169,8 @@
  .toc-child.open {
  max-height: 3000px;
  }
- /* 整章不做 content-visibility:auto：超长章节离屏按 800px 占位，
- 会让锚点跳转、scrollIntoView 与入场观察器全部失准。
+ /* 整章懒渲染见 #singlefile-lazy 样式块（方案 §5.1）：auto 占位 + 锚点强制渲染补偿，
+ 历史上的固定 800px 占位漂移事故不再复现。
  表格/代码块的局部懒渲染见下方 P2-2 规则，不受影响。 */
  .content-section p {
  margin-bottom: 1rem;
@@ -1391,6 +1394,14 @@
  .dark .quote-line { background: var(--accent-deep); color: #c7d2fe; }
  @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
  </style>
+<style id="singlefile-lazy">
+/* 单文件版专用（优化方案 §5.1）：整章懒渲染，首屏从「渲染 120 章」变「渲染第 1 章」。
+ contain-intrinsic-size 用 auto + 估算值：渲染过一次就记住实测高度，
+ 不会再像历史上的固定 800px 占位那样把锚点跳转顶偏（scrollToAnchor 已做强制渲染补偿）。
+ 分章版每页只有一章、本来就秒出，不需要本块——split.py 会把它从章节页剥掉。
+ 打印/PDF 导出见 @media print 的强制 visible 规则；?safe=1 关闭增强时同样直出。 */
+html:not(.safe) .content-section { content-visibility: auto; contain-intrinsic-size: auto 500px; }
+</style>
 <style id="reader-bundle-style">
 /* P2-2 懒渲染：长表格/代码块按需渲染（浏览器原生，回滚=移除本样式） */
 html:not(.safe) .content-section table,
@@ -1863,23 +1874,42 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 
  // ===== 全局锚点导航：补偿固定导航栏偏移 =====
  // 必须用 scrollIntoView 而非手动算坐标：.content-section 设了
- // content-visibility:auto + contain-intrinsic-size(0 800px)，屏幕外章节
- // 按 800px 占位，getBoundingClientRect 拿到的是占位坐标，直接 scrollTo
+ // content-visibility:auto + contain-intrinsic-size(auto 500px)，屏幕外章节
+ // 按估算高度占位，getBoundingClientRect 拿到的是占位坐标，直接 scrollTo
  // 会落到错误位置（越靠后的章节累计偏差越大）。scrollIntoView 由浏览器
  // 负责按需渲染目标并定位，配合 html{scroll-padding-top:5rem} 抵消固定
  // 导航栏高度。
  function scrollToAnchor(id) {
  const el = document.getElementById(id);
  if (!el) return;
- // 第一步：instant 模式先强制渲染目标章节并定位，避免 content-visibility
- // 在 smooth 滚动过程中因延迟渲染导致定位漂移。
+ // content-visibility:auto 下未渲染区块按估算高度占位，滚动落点会随
+ // 就地渲染（占位 → 实高）漂移。对策：instant 归位后跨帧校准——
+ // 渲染扩张发生在帧边界，同帧内量两次只会得到「没动」的假收敛，
+ // 必须等下一帧回读落点，不在导航栏下沿就再滚，几帧内收敛后再平滑。
+ const pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+ let tries = 0;
+ const calibrate = () => {
+ tries += 1;
  el.scrollIntoView({ behavior: 'instant', block: 'start' });
- // 第二步：在目标已渲染、坐标稳定后，再触发一次 smooth 滚动以获得平滑体验。
+ requestAnimationFrame(() => {
+ const top = el.getBoundingClientRect().top;
+ if (tries < 8 && Math.abs(top - pad) > 2) {
+ calibrate();
+ return;
+ }
  requestAnimationFrame(() => {
  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
  el.classList.add('scroll-target-flash');
  setTimeout(() => el.classList.remove('scroll-target-flash'), 1200);
  });
+ });
+ };
+ calibrate();
+ // 渲染扩张（占位 → 实高）可能在校准收敛之后才落地，落点会被再推偏：
+ // 随后几拍复查，漂了就重新校准。每章只渲染一次，几拍内彻底稳定。
+ [300, 800, 1600].forEach(ms => setTimeout(() => {
+ if (Math.abs(el.getBoundingClientRect().top - pad) > 2) calibrate();
+ }, ms));
  }
  document.addEventListener('click', (e) => {
  const link = e.target.closest('a[href^="#"]');
@@ -1891,6 +1921,12 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
  if (window.innerWidth < 1024) closeSidebar();
  requestAnimationFrame(() => scrollToAnchor(targetId));
  }, { passive: false });
+
+ // 初始 #hash 载入走同一套校准：现代浏览器对 content-visibility:auto 的目标
+ // 会先渲染再定位，这里补一次 instant 落点，兜住占位未渲染时的定位偏差。
+ window.addEventListener('load', () => {
+ if (location.hash.length > 1) scrollToAnchor(location.hash.slice(1));
+ });
 
  // ===== 目录折叠 =====
  $$('.toc-toggle-btn').forEach(btn => {

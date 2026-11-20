@@ -123,6 +123,14 @@ class TestSplitAssets:
         assert 'book.css' in assets and 'book.js' in assets
         assert 'aaa' not in out
 
+    def test_singlefile_lazy_style_stripped_for_chapter_pages(self):
+        """单文件专用的整章懒渲染不进分章页（每页只有一章，不需要）。"""
+        page = '<style id="singlefile-lazy">lazy{}</style><style>keep{}</style>'
+        out = S.RE_SINGLEFILE_STYLE.sub('', page)
+        assert 'singlefile-lazy' not in out
+        assert 'lazy' not in out
+        assert 'keep' in out
+
 
 if __name__ == '__main__':
     pytest.main([__file__, '-q'])
