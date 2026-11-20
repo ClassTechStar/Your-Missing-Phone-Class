@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
-"""把 v1.8 的 18 种非中文语言反解为 source/translations/<lang>/ 源稿。
+"""翻译对拍：v1.8 的 18 种非中文语言「反解 → 重建 → 逐章比对」保真验证。
 
 每语言：
-1. extract --no-strict → chapters/*.md + parts/ + book.json + template/
+1. extract --no-strict → 临时目录（不回写 source/translations——对拍是验证，
+   不是回写；把失真的反解产物写回源稿会污染 1500+ 文件）
 2. build --book → 重建 HTML
 3. 逐章比对（84 个 content-section 的 normalize 后 inner_html 必须一致）
+
+任一语言失真即退出码 1（CI 硬门禁）。需要回写源稿请直接用
+`python -m bookkit extract --version v1.8 --lang <lang> --out source/translations/<lang>`。
 
 用法：python scripts/extract_translations.py [--langs a,b,c]
 """
@@ -75,16 +79,16 @@ def main():
     langs = sys.argv[sys.argv.index('--langs') + 1].split(',') if '--langs' in sys.argv else LANGS
     report = {}
     for lang in langs:
-        tdir = ROOT / 'source' / 'translations' / lang
+        tdir = ROOT / 'dist' / '_extract' / lang
         print(f'== {lang}', flush=True)
         rc, out = run(f'python -m bookkit extract --version v1.8 --lang {lang} '
-                      f'--out source/translations/{lang} --no-strict')
+                      f'--out dist/_extract/{lang} --no-strict')
         if rc != 0:
             report[lang] = f'EXTRACT FAIL: {out[-200:]}'
             continue
         built = ROOT / 'dist' / f'_verify_{lang}.html'
         rc, out = run(f'python -m bookkit build --lang {lang} '
-                      f'--book source/translations/{lang}/book.json '
+                      f'--book dist/_extract/{lang}/book.json '
                       f'--out dist/_verify_{lang}.html')
         if rc != 0:
             report[lang] = f'BUILD FAIL: {out[-200:]}'
@@ -102,6 +106,7 @@ def main():
             bad += 1
         print(f'{"✓" if ok else "✗"} {lang}: {r}')
     print(f'全保真语言: {len(report) - bad}/{len(report)}')
+    return 1 if bad else 0
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

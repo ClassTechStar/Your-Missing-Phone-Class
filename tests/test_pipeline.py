@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""增量管线边界用例：tm 分段/哈希、quick 块提取、split 链接改写。"""
+"""增量管线边界用例：tm 分段/哈希、quick 块提取、split 链接改写、extract 页脚剥离。"""
 import pytest
 
 from bookkit import quick as Q
@@ -42,6 +42,39 @@ class TestQuick:
         md = '::: div .quick-read\nx\n:::\n\n::: div .chapter-summary\ny\n:::\n'
         m = Q.RE_QUICK.search(md)
         assert m.group(1).strip() == 'x'
+
+
+class TestExtractErrataFooter:
+    """反解必须剔除 build 注入的勘误页脚——否则重建翻倍，翻译对拍 84 章全失配。"""
+
+    FOOTER_P = ('<p class="text-xs text-gray-500 dark:text-gray-400 mt-6 pt-3 '
+                'border-t border-gray-200 dark:border-gray-700">报告错误</p>')
+
+    def _section(self, inner):
+        from bookkit import htmlparse as H
+        tree = H.parse(f'<div id="x" class="mb-10 content-section">{inner}</div>')
+        return H, next(n for n in tree.find_all('div'))
+
+    def test_drop_errata_footer_removes_only_footer(self):
+        from bookkit import extract as E
+        H, div = self._section(f'<p>正文</p>{self.FOOTER_P}')
+        E._drop_errata_footer(div)
+        out = ''.join(H.serialize_child(c) for c in div.children)
+        assert '报告错误' not in out
+        assert '正文' in out
+
+    def test_drop_errata_footer_keeps_normal_paragraphs(self):
+        from bookkit import extract as E
+        H, div = self._section('<p class="mt-6 pt-3">正文小尾巴</p>')
+        E._drop_errata_footer(div)
+        out = ''.join(H.serialize_child(c) for c in div.children)
+        assert '正文小尾巴' in out
+
+    def test_errata_footer_mark_matches_build(self):
+        """build 注入的页脚形状变了，extract 的剥离标记必须跟着变。"""
+        from bookkit import build as B
+        from bookkit import extract as E
+        assert E.ERRATA_FOOTER_MARK in B.errata_footer('en')
 
 
 class TestSplitRewrite:

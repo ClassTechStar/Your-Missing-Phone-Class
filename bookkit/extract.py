@@ -120,6 +120,22 @@ def _front_matter(meta: dict) -> str:
     return '\n'.join(lines) + '\n'
 
 
+# build.errata_footer() 注入的章末「报告错误」段落的 class 特征
+ERRATA_FOOTER_MARK = 'mt-6 pt-3 border-t'
+
+
+def _drop_errata_footer(node) -> None:
+    """剔除 build 注入的章末勘误页脚（构建生成物，不是源稿内容）。
+
+    build.py 在每个 content-section 末尾追加这条 <p>；反解若不剔除，
+    重建时页脚会被再追加一次，逐章比对 84 章全失配——extract_translations
+    的翻译对拍就是这么从全绿烂到 0/18 的。
+    """
+    node.children = [c for c in node.children
+                     if not (isinstance(c, Node) and c.tag == 'p'
+                             and ERRATA_FOOTER_MARK in (c.get('class') or ''))]
+
+
 def extract(root: Path, version: str = 'v1.8', lang: str = 'zh-CN',
             src_dir: Path = None, dry_run: bool = False,
             strict: bool = True) -> dict:
@@ -181,6 +197,7 @@ def extract(root: Path, version: str = 'v1.8', lang: str = 'zh-CN',
             meta['after_part'] = state['part']
         idx = len(chapters_meta)
         rel = f'chapters/{idx:02d}-{cid}.md'
+        _drop_errata_footer(cnode)
         chapter_files[rel] = _front_matter(meta) + '\n' + M.to_markdown(cnode).strip('\n') + '\n'
         chapters_meta.append({'id': cid, 'file': rel, 'part': pid or '',
                               'after_part': meta.get('after_part', ''),
