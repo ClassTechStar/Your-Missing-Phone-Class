@@ -1301,7 +1301,7 @@
  .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid var(--ink-2); }
  .code-head { background: var(--ink-2); color: var(--line); font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
  .code-head .dots { letter-spacing: 3px; color: var(--muted); }
- .code-block pre { background: var(--surface-dark); color: var(--line); padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+ .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
  .dark .code-block { border-color: var(--muted-3); }
  code.inline { background: var(--surface-3); color: var(--accent-book); padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
  .dark code.inline { background: var(--surface-dark-3); color: var(--accent-soft); }
@@ -1576,7 +1576,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </style><style id="criwits-skin-3">
 /* 补全 v1.9 模板引用却未定义的设计 token（纸面风取值） */
 :root{
-  --ink:#1a1a1a;--ink-2:#495057;--ink-inverse:#ffffff;
+  --ink:#1a1a1a;--ink-2:#495057;--ink-3:#1a1a1a;--ink-inverse:#ffffff;
   --muted:#868e96;--muted-2:#adb5bd;--muted-3:#adb5bd;
   --line:#e9ecef;--line-2:#dee2e6;--line-3:#e9ecef;
   --surface-2:#f8f9fa;--surface-3:#f1f2f3;--surface-4:#f8f9fa;
@@ -1586,7 +1586,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   --wash-warm:#fff8ec;--wash-dark:#2d2413;
 }
 .dark{
-  --ink:#e5e7eb;--ink-2:#d1d5db;--ink-inverse:#0b3050;
+  --ink:#e5e7eb;--ink-2:#d1d5db;--ink-3:#e5e7eb;--ink-inverse:#0b3050;
   --muted:#9ca3af;--muted-2:#6b7280;--muted-3:#6b7280;
   --line:#374151;--line-2:#4b5563;--line-3:#374151;
   --surface-2:#1f2937;--surface-3:#1f2937;--surface-4:#111827;
@@ -1594,6 +1594,8 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   --gold:#ffc266;--ok:#2ecc71;
   --sky:#66b5f2;--sky-deep:#66b5f2;--sky-wash:#0f1c2e;
   --wash-warm:#2d2413;--wash-dark:#0f1c2e;
+  --surface-dark:#1f2937;--surface-dark-2:#111827;--surface-dark-3:#1f2937;
+  --surface-dark-4:#111827;--surface-dark-5:#374151;
 }
 /* 蓝底一律白字：恢复进度 toast / streak toast / hero 药丸 */
 .restore-position-toast,#streak-toast{color:#fff!important}
