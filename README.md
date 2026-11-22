@@ -1,8 +1,8 @@
 # 你缺失的那门手机课
 
-![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20章·371.3%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
+![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20章·371.7%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
 
-面向普通人的手机使用指南。最新中文版 v1.9 共 120 章 · 15 篇 · 371.3 万字（章节编号从第 0 章到第 105 章，另有专题附节、结语与附录 A–H）——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
+面向普通人的手机使用指南。最新中文版 v1.9 共 120 章 · 15 篇 · 371.7 万字（章节编号从第 0 章到第 105 章，另有专题附节、结语与附录 A–H）——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
 - **多语言入口**：[index.html](index.html)（按浏览器语言跳转）
@@ -27,7 +27,7 @@ Markdown 源稿（source/，逐章）
         └──▶ MCP Server（mcp/server.py）──▶ Claude 等 AI 客户端直查全书结构/全文
 
 v1.9/（最新中文版，120 章）曾在这条流水线之外直接维护：
-逐章扩写至约 3 万字（全书 43.5 万 → 371.3 万字）。2026-11-17 起源稿
+逐章扩写至约 3 万字（全书 43.5 万 → 371.7 万字）。2026-11-17 起源稿
 回写完成（source/v1.9/），`build --verify` 等价性已成为 CI 必过门禁。
 源稿之上再派生三条增量链路：
         ├──▶ bookkit split：121 个分章页 + 3 条策展路径页 + sitemap/JSON-LD（章节级 URL，页级预算 300KB）
@@ -76,7 +76,7 @@ v1.9/（最新中文版，120 章）曾在这条流水线之外直接维护：
 
 ## 在线阅读
 
-### v1.9 · 最新中文版 — 120 章 · 371.3 万字
+### v1.9 · 最新中文版 — 120 章 · 371.7 万字
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>（站点首页即 v1.9）
 - **仓库文件**：[v1.9/zh-CN.html](v1.9/zh-CN.html)（单文件 HTML，离线可开）
@@ -160,7 +160,7 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 
 | 目录 | 说明 |
 |------|------|
-| `v1.9/` | 最新中文版：120 章，逐章约 3 万字（371.3 万字） |
+| `v1.9/` | 最新中文版：120 章，逐章约 3 万字（371.7 万字） |
 | `v1.8/` | 19 种语言的单文件 HTML（完整翻译版，84 章） |
 | `source/` | 中文源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json`；v1.9 源稿见 `source/v1.9/`（120 章，已回写） |
 | `source/translations/` | 另外 18 种语言的翻译源稿，与成品逐章等价 |

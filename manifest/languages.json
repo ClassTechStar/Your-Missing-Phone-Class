@@ -404,7 +404,7 @@
       "baseline": "zh-CN",
       "note": "源稿↔成品等价性由 CI「v1.9 源稿回写等价性」必过门禁承担（bookkit build --book source/v1.9/book.json --verify）；直接修改 v1.9/zh-CN.html 而不回写 source/v1.9 的提交会被阻断",
       "budget": {
-        "max_html_kb": 13100,
+        "max_html_kb": 13200,
         "max_dom_tags": 92500
       },
       "checks": {
