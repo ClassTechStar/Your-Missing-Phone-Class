@@ -1,0 +1,79 @@
+name: 翻译认领
+description: 认领一种语言的一章，把机翻改成能读的译文
+title: "[翻译认领] "
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢愿意动手。这本书的外语版是机器翻译 + 术语统一，质量按星级公开分层
+        （见 [语言分级页](https://classtechstar.github.io/Yihggh.github.io/languages.html)）。
+        认领一章就够，不必一次改完一本书。
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: 语言
+      description: 选你想认领的语言（简体中文为人工审校版，暂不开放认领）
+      options:
+        - English (en)
+        - 繁體中文 (zh-TW)
+        - 粵語 (yue)
+        - 한국어 (ko)
+        - 日本語 (ja)
+        - Русский (ru)
+        - Italiano (it)
+        - Português (pt)
+        - Español (es)
+        - Français (fr)
+        - Deutsch (de)
+        - العربية (ar)
+        - עברית (he)
+        - ภาษาไทย (th)
+        - Bahasa Indonesia (id)
+        - Bahasa Melayu (ms)
+        - Ελληνικά (el)
+        - 文言文 (lzh)
+    validations:
+      required: true
+
+  - type: input
+    id: chapter
+    attributes:
+      label: 章节
+      description: 章 id 或章标题都行，例如 di-yi-zhang / 第一章
+      placeholder: di-yi-zhang / 第一章
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 你能做到哪一步
+      options:
+        - 只指出具体句子的问题（不提交 PR）
+        - 认领这一章并提交 PR
+        - 愿意长期维护这种语言
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: 计划或具体问题
+      description: 例如「先改第一章的机翻句子，保留术语表用法」；只指出问题时，请贴句子与位置
+      placeholder: 我打算先对照中文版重写第一章的前三节，术语按 glossary 来。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已读 CONTRIBUTING.md 的「翻译贡献」一节
+          required: true
+        - label: 我理解这种语言当前可能是机翻，改动按章计入，不承诺整本质量
+          required: true
+        - label: 我不会改变原文的事实、数字与操作路径，只改表达
+          required: true

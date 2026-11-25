@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>PDF、离线与纸书 · 你缺失的那门手机课</title>
+<meta name="description" content="《你缺失的那门手机课》19 种语言的 PDF、离线单文件 HTML、Android APK 获取方式，以及纸书与打印说明。全部公益免费、CC BY-NC-SA。">
+<link rel="canonical" href="https://classtechstar.github.io/Yihggh.github.io/pdf.html">
+<meta name="theme-color" content="#0F8A8A">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PDF、离线与纸书 · 你缺失的那门手机课">
+<meta property="og:description" content="19 种语言的 PDF、离线单文件、APK，以及纸书与打印说明。">
+<meta property="og:url" content="https://classtechstar.github.io/Yihggh.github.io/pdf.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F8A8A'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%230F8A8A'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%230F8A8A'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:MiSans;src:url("fonts/MiSans-subset.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+:root{--ink:#16333A;--body:#3F5A63;--muted:#7B9098;--line:#D3E2E2;--bg:#F7FAFA;--card:#fff;--accent:#0F8A8A}
+@media (prefers-color-scheme:dark){:root{--ink:#E7EFEF;--body:#B9CCCC;--muted:#7E9696;--line:#243838;--bg:#0B1516;--card:#12201F;--accent:#3FB3B3}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--body);line-height:1.7;
+  font-family:MiSans,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+.wrap{width:min(820px,calc(100% - 2.5rem));margin:0 auto}
+header{padding:1.2rem 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+a{color:var(--accent)}
+header a{text-decoration:none;color:var(--muted);font-size:.88rem}
+header a:hover{color:var(--accent)}
+main{padding:2.6rem 0 3rem}
+h1{color:var(--ink);font-size:clamp(1.7rem,4.5vw,2.4rem);margin:0 0 .6rem}
+h2{color:var(--ink);font-size:1.15rem;margin:2.2rem 0 .6rem}
+p{margin:.5rem 0 1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.7rem;padding:1.1rem 1.25rem;margin:0 0 1rem}
+.card h2{margin:0 0 .4rem}
+.card p:last-child{margin-bottom:0}
+.btn{display:inline-block;padding:.55rem 1rem;border-radius:.45rem;background:var(--accent);color:#fff;
+  text-decoration:none;font-weight:600;font-size:.9rem;margin:.2rem .4rem .2rem 0}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.5rem;margin:.6rem 0 0}
+.lang-grid a{display:block;border:1px solid var(--line);border-radius:.45rem;padding:.45rem .65rem;
+  background:var(--card);text-decoration:none;color:var(--body);font-size:.86rem}
+.lang-grid a:hover{border-color:var(--accent);color:var(--accent)}
+.note{border-left:3px solid var(--accent);padding:.2rem 0 .2rem .9rem;color:var(--muted);font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:1.4rem 0 2rem;color:var(--muted);font-size:.82rem}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.86em;background:var(--line);
+  padding:.08rem .3rem;border-radius:.25rem;color:var(--body)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="./">← 回到《你缺失的那门手机课》</a>
+    <a href="languages.html">语言分级</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>PDF、离线与纸书</h1>
+    <p>同一本书，四种拿法：网页分章读、单文件离线读、PDF 排版、Android APK。
+      全部公益免费，<strong>没有付费墙，也没有需要注册的下载站</strong>。</p>
+
+    <div class="card">
+      <h2>PDF（19 种语言）</h2>
+      <p>XeLaTeX 排版，带目录书签；阿拉伯语与希伯来语做了从右到左适配。
+        每种语言一本，按版本挂在 GitHub Releases。</p>
+      <a class="btn" href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.8-20261028">打开 PDF Release</a>
+      <a class="btn ghost" href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases">全部 Releases</a>
+    </div>
+
+    <div class="card">
+      <h2>离线单文件 HTML</h2>
+      <p>一个文件就是整本书，双击即开，不依赖网络与安装。中文 v1.9 单文件约 13.4 MB；
+        外语版为 v1.8（84 章），0.9–2.6 MB。想省流量就用分章页，每章一页。</p>
+      <a class="btn" href="v1.9/zh-CN.html">下载中文 v1.9 单文件</a>
+      <a class="btn ghost" href="v1.9/zh-CN/">中文分章阅读</a>
+    </div>
+
+    <div class="card">
+      <h2>Android APK（19 种语言）</h2>
+      <p>每种语言一个独立安装包，可共存、可覆盖升级；安装包不入仓库，走 GitHub Release。
+        校验和见仓库根的 <code>checksums.sha256</code>（若已发布）。</p>
+      <a class="btn" href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r4">打开 APK Release</a>
+    </div>
+
+    <div class="card">
+      <h2>纸书与打印</h2>
+      <p>本书<strong>没有售卖纸书</strong>。需要纸质版可以自己打印，或找打印店装订；
+        学校、社区、公益组织用于教学也欢迎。</p>
+      <p class="note">许可是 CC BY-NC-SA 4.0：可以自由复制、分发、改编，但<strong>不得售卖</strong>，
+        改编需以相同许可共享。若你想做批量印刷或课程采用，请先在 GitHub 开 Issue 说一声，
+        我们会把勘误和最新版本同步给你。</p>
+    </div>
+
+    <h2>19 种语言入口</h2>
+    <p>外语版当前为 v1.8（84 章），已全部按章拆页；质量分级与依据见
+      <a href="languages.html">语言分级页</a>。</p>
+    <div class="lang-grid">
+      <a href="v1.9/zh-CN/">简体中文 · v1.9</a>
+      <a href="v1.8/zh-TW/">繁體中文</a>
+      <a href="v1.8/yue/">粵語</a>
+      <a href="v1.8/en/">English</a>
+      <a href="v1.8/ko/">한국어</a>
+      <a href="v1.8/ja/">日本語</a>
+      <a href="v1.8/ru/">Русский</a>
+      <a href="v1.8/it/">Italiano</a>
+      <a href="v1.8/pt/">Português</a>
+      <a href="v1.8/es/">Español</a>
+      <a href="v1.8/fr/">Français</a>
+      <a href="v1.8/de/">Deutsch</a>
+      <a href="v1.8/ar/">العربية</a>
+      <a href="v1.8/he/">עברית</a>
+      <a href="v1.8/th/">ภาษาไทย</a>
+      <a href="v1.8/id/">Bahasa Indonesia</a>
+      <a href="v1.8/ms/">Bahasa Melayu</a>
+      <a href="v1.8/el/">Ελληνικά</a>
+      <a href="v1.8/lzh/">文言文</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">CC BY-NC-SA 4.0 · 公益 · 免费 · 永远开源 · CLASS TECH STAR</div>
+</footer>
+</body>
+</html>

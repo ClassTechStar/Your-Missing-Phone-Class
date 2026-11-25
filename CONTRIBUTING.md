@@ -3,6 +3,27 @@
 感谢参与《你缺失的那门手机课》。这本书写给"存储满了不知道删什么"的爸妈，
 也写给每一个普通人——贡献前请守住这个定位：**通俗、可操作、不吓人**。
 
+## 贡献流程（先看这张图）
+
+```text
+发现错误 / 想认领翻译
+        │
+        ▼
+GitHub Issue（勘误模板 / 翻译认领模板）
+        │  作者确认范围，避免白做
+        ▼
+fork → 改 source/（不改成品 HTML）
+        │
+        ▼
+本地门禁：pytest / lint / claims / build --verify / i18n --check-spacing
+        │
+        ▼
+PR（一个主题）→ CI 全绿 → 合并
+        │
+        ▼
+作者重建成品并部署站点（贡献者不需要动 v1.8/、v1.9/ 成品）
+```
+
 ## 内容贡献（勘误 / 扩写 / 新章）
 
 1. **单一事实源**：中文正文的唯一事实源是 `source/`（v1.8）与 `source/v1.9/`（最新中文版）。
@@ -22,13 +43,18 @@
 
 ## 翻译贡献
 
+> 想直接认领一章：用 [「翻译认领」Issue 模板](https://github.com/ClassTechStar/Your-Missing-Phone-Class/issues/new?template=translation.yml)
+> 写下语言 + 章节即可，不必先读完整个指南。
+
 1. 先读 [docs/i18n/weblate-guide.md](docs/i18n/weblate-guide.md)：用
    `python -m bookkit tm report --lang <你的语言> --book source/v1.9/book.json`
    导出待译段落，只翻译变更段（TM 命中部分直接复用）。
 2. **术语表是法律**：`manifest/glossary/<lang>.json` 已锁定 SoC/Passkey/eSIM 等译法，
    译文必须沿用；建议改进术语表本身（单独提 PR）。
 3. 保留行内标签（`<strong>` 等）与列表结构；译文落盘 `source/translations/<lang>/` 后
-   跑 `python scripts/extract_translations.py` 自检 84/84 章一致。
+   跑 `python scripts/extract_translations.py` 自检 v1.8 的 84/84 章一致，
+   再跑 `python -m bookkit i18n --check-spacing --fail-on error` 确认没有标点空格回归。
+   v1.9 译文按 TM 增量管线滚动推进，不要求一次补齐 120 章。
 4. 回传译文也可以只交 `tm import` 用的 `{hash: 译文段}` JSON（见指南第三节）。
 
 ## 工具链贡献（bookkit / scripts / mcp / 前端壳）
@@ -42,7 +68,7 @@
 
 - 提交信息用 Conventional Commits（`fix(v1.9): …` / `feat(i18n): …` / `ci: …`）。
 - 一个 PR 一个主题；内容 PR 请附"改了哪几章、事实依据"。
-- CI 全绿（lint / claims / build --verify / 分章预算 / 32+ 单测 / 25 页浏览器冒烟）是合并前提。
+- CI 全绿（lint / claims / build --verify / 19 语分章预算 / 110 项单测 / 35 页浏览器冒烟）是合并前提。
 
 ## 许可
 

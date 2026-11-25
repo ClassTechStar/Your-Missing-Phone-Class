@@ -171,7 +171,7 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 | `scripts/` | 质检与维护脚本，见 [scripts/README.md](scripts/README.md) |
 | `latex/` | 19 种语言的 LaTeX 书稿源文件与编译产物 |
 | `mcp/` | 本书结构的 MCP 查询服务器，AI 客户端可以直连查章节 |
-| `quiz/` | 章节自测题库（zh-CN 120 章 360 题 · ja 77 章 174 题）与 [quiz.html](quiz.html) 答题页 |
+| `quiz/` | 章节自测题库（zh-CN 120 章 600 题 · ja 77 章 258 题）与 [quiz.html](quiz.html) 答题页 |
 | `index.html` | 多语言阅读入口页（卡片块由 `bookkit index` 生成） |
 | `手机课-LaTeX-PDF/` | 排版管线脚本（typeset.py，PDF 可复现；大文件见 Releases） |
 

@@ -70,7 +70,8 @@ def main() -> int:
 
     if site:
         top = [f'{site}/', f'{site}/errata.html', f'{site}/languages.html',
-               f'{site}/quiz.html', f'{site}/v1.9/zh-CN/', f'{site}/v1.9/zh-CN.html']
+               f'{site}/quiz.html', f'{site}/pdf.html',
+               f'{site}/v1.9/zh-CN/', f'{site}/v1.9/zh-CN.html']
         urls = list(dict.fromkeys(top + urls))
         sm = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

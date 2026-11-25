@@ -182,7 +182,7 @@ jobs:
       - name: 构建分章页（中文 + en/ar/ja 供浏览器冒烟覆盖）
         run: python scripts/build_all_sites.py --langs zh-CN en ar ja --strict-budget
 
-      - name: 浏览器冒烟（28 页 console 零报错 + 锚点解析 + h3 计数）
+      - name: 浏览器冒烟（35 页 console 零报错 + 锚点解析 + h3 计数）
         run: python scripts/web_smoke.py
 
       - name: 题库与结构 schema 校验（quiz / book.json）

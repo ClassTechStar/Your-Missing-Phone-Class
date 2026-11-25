@@ -40,7 +40,7 @@ DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 必须与站点上发布的那一版书对齐（当前 v1.9）——错版会点进死链。
 # robots.txt 是搜索引擎入口（方案 §6.4，sitemap 坐标写在里面）。
 ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json',
-          'errata.html', 'languages.html', 'quiz.html', 'robots.txt']
+          'errata.html', 'languages.html', 'quiz.html', 'pdf.html', 'robots.txt']
 ASSET_DIRS = ['icons', 'quiz']
 # 字体只发布 woff2 子集（0.6MB）：7.8MB 的 TTF 母本只在仓库里留档，
 # 不上网——CSS 双源声明下浏览器永远优先 woff2，省掉 90% 的字体流量。
@@ -90,6 +90,7 @@ def patch_sitemap(xml: str, base: str) -> str:
            f'{base}/errata.html',             # 勘误页
            f'{base}/languages.html',         # 语言诚实分级页
            f'{base}/quiz.html',               # 章节自测页
+           f'{base}/pdf.html',                # PDF/离线/纸书分发页
            f'{base}/v1.9/zh-CN/',             # 分章目录（首页主入口）
            f'{base}/v1.9/zh-CN.html']        # 单文件整本书（离线备选）
     have = set(re.findall(r'<loc>([^<]+)</loc>', xml))
