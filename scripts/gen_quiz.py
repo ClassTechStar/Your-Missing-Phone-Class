@@ -14,9 +14,9 @@
 章节 id 是书页锚点，错版会让题目指向不存在的章节。--version 决定取哪版源稿。
 
 用法：
-    python scripts/gen_quiz.py                          # v1.9 → quiz/zh-CN.json
+    python scripts/gen_quiz.py                          # v1.9 → quiz/zh-CN.json（每章 5 题）
     python scripts/gen_quiz.py --version v1.8 --lang ja --out quiz/ja.json
-    python scripts/gen_quiz.py --per-chapter 3 --out quiz/zh-CN.json
+    python scripts/gen_quiz.py --per-chapter 8 --out quiz/zh-CN.json
 """
 
 import argparse
@@ -257,7 +257,7 @@ def _table_question(row: str, col: str) -> str:
     return f'「{row}」的{col}是什么？'
 
 
-def build(lang: str, per_chapter: int = 3, version: str = 'v1.9'):
+def build(lang: str, per_chapter: int = 5, version: str = 'v1.9'):
     chapters = load_chapters(lang, version)
     strong_all, head_all, intro_all = {}, {}, {}
     for cid, nav, md in chapters:
@@ -354,7 +354,7 @@ def build(lang: str, per_chapter: int = 3, version: str = 'v1.9'):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--lang', default='zh-CN')
-    ap.add_argument('--per-chapter', type=int, default=3)
+    ap.add_argument('--per-chapter', type=int, default=5)
     ap.add_argument('--out', type=Path, default=None)
     ap.add_argument('--version', default='v1.9',
                     help='题库对齐的书籍版本：v1.9（120 章，中文）/ v1.8（84 章，19 语言）')

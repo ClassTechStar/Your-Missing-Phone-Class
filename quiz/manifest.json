@@ -1,6 +1,6 @@
 {
   "name": "你缺失的那门手机课 · 章节自测题库",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "schemaVersion": 1,
   "generator": "scripts/gen_quiz.py",
   "languages": [
@@ -11,14 +11,14 @@
     "zh-CN": {
       "bookVersion": "v1.9",
       "chapters": 120,
-      "questions": 360,
-      "note": "对齐 v1.9 源稿（120 章，每章 3 题）。站点发布的就是这一份。"
+      "questions": 600,
+      "note": "对齐 v1.9 源稿（120 章，每章 5 题）。站点发布的就是这一份。"
     },
     "ja": {
       "bookVersion": "v1.8",
       "chapters": 77,
-      "questions": 174,
-      "note": "v1.9 尚无日文译本，题库沿用 v1.8 的日文译本（84 章中 77 章能出题）。"
+      "questions": 258,
+      "note": "v1.9 尚无日文译本，题库沿用 v1.8 的日文译本（84 章中 77 章能出题，每章最多 5 题）。"
     }
   },
   "note": "题库由 scripts/gen_quiz.py 从源稿自动生成；题库必须与某一版书的源稿对齐（章节 id 是书页锚点，错版会指向不存在的章节）。新增语言题库后在此登记 languages 与 banks，并跑 scripts/quiz_lint.py 校验。"

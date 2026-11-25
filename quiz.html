@@ -82,6 +82,8 @@ a { color:var(--primary); text-decoration:none; }
 .explain { margin-top:8px; padding:10px 14px; border-radius:10px; background:var(--soft);
   font-size:.86rem; color:var(--muted); display:none; }
 .explain.show { display:block; }
+.explain .back-to-text { display:inline-block; margin-top:6px; color:var(--primary); font-weight:600; }
+.explain .back-to-text:hover { text-decoration:underline; }
 .result { text-align:center; }
 .result b { font-size:2.1rem; color:var(--primary); }
 .bar { height:5px; background:var(--line); border-radius:3px; overflow:hidden; margin-top:12px; }
@@ -193,7 +195,9 @@ async function boot() {
   // 题库版本与章数写明在页面上：题库与书的版本错位会让章节 id 变成死链，
   // 读者一眼就该知道自己答的是哪一版。
   const bv = app.data.bookVersion || '';
-  $('bankInfo').textContent = (bv ? `题库版本 ${bv} · ` : '') + `共 ${app.chapters.length} 章`;
+  const totalQ = app.chapters.reduce((s, c) => s + c.questions.length, 0);
+  $('bankInfo').textContent = (bv ? `题库版本 ${bv} · ` : '') +
+    `共 ${app.chapters.length} 章 · ${totalQ} 题`;
   renderOverview();
   renderGrid();
   // 支持 #chapter-id 直接进入
@@ -246,6 +250,26 @@ function renderGrid() {
   });
 }
 
+/* 错题回链正文（方案 W7）：答完一题给出本章分页 URL；题库 id 与章页 id 同源 */
+function chapterUrl(id) {
+  const ver = app.data.bookVersion || 'v1.9';
+  const lang = app.data.lang || 'zh-CN';
+  if (ver === 'v1.9') return `v1.9/${lang}/${id}.html`;
+  return `v1.8/${lang}/${id}.html`;
+}
+function makeExplain(c, q) {
+  const ex = document.createElement('div');
+  ex.className = 'explain';
+  ex.textContent = '💡 ' + q.explain;
+  const a = document.createElement('a');
+  a.className = 'back-to-text';
+  a.href = chapterUrl(c.id);
+  a.textContent = '回正文这一章 →';
+  ex.appendChild(document.createElement('br'));
+  ex.appendChild(a);
+  return ex;
+}
+
 function openChapter(i) {
   app.idx = i;
   app.answered = 0; app.correct = 0; app.done = new Set();
@@ -286,9 +310,7 @@ function openChapter(i) {
       };
       div.appendChild(btn);
     });
-    const ex = document.createElement('div');
-    ex.className = 'explain';
-    ex.textContent = '💡 ' + q.explain;
+    const ex = makeExplain(c, q);
     div.appendChild(ex);
     body.appendChild(div);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -383,9 +405,7 @@ function openReview() {
       };
       div.appendChild(btn);
     });
-    const ex = document.createElement('div');
-    ex.className = 'explain';
-    ex.textContent = '💡 ' + q.explain;
+    const ex = makeExplain(c, q);
     div.appendChild(ex);
     body.appendChild(div);
     window.scrollTo({ top: 0, behavior: 'smooth' });

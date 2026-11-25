@@ -132,6 +132,19 @@ a.btn.gray{background:#4b5563}
 【截图】（如有）</code></pre>
 <p class="sub">填不满也没关系。<strong>章节 + 你看到的实际样子</strong>这两项最重要，其余可以后补。</p>
 
+<h2 id="translate">认领翻译：把某一章改到能读</h2>
+<p>14 种语言目前是机器翻译 + 术语统一，质量不承诺。我们不想假装它们和中文版一样好，
+也不想让它们一直停在这里。如果你愿意认领一章：</p>
+<ol>
+<li>在 <a href="languages.html">语言分级页</a> 选一个语言，记下它的星级；</li>
+<li>在 <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/issues/new?template=translation.yml">「翻译认领」Issue</a> 里写下语言 + 章节；</li>
+<li>按 Issue 里的路径改 <code>source/translations/&lt;lang&gt;/chapters/</code>，跑
+<code>python -m bookkit i18n --check-spacing --fail-on error</code> 与
+<code>python -m bookkit build --lang &lt;lang&gt; --verify</code>；</li>
+<li>提 PR，CI 会自动跑结构对齐与标点门禁。</li>
+</ol>
+<p>从机翻到可读，不需要一次改完一本书，一章就够。改完的那一章会从两星升到三星的候选池。</p>
+
 <h2>已经确认并修好的问题</h2>
 <p>下面每一条都是真的在书稿里查出来、并且已经改掉的。写在这里是为了让你知道我们改了什么，
 也为了让你知道<strong>反馈确实会变成改动</strong>。</p>
