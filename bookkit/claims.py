@@ -3,6 +3,7 @@
 对应勘误报告中的 ERR-05（index 统计与目录过期）与 ERR-21（文档宣称漂移）。
 """
 
+import json
 import re
 from pathlib import Path
 
@@ -17,6 +18,22 @@ RE_INDEX_STAT = re.compile(
     r'<p class="text-4xl md:text-5xl font-black mb-2">([^<]+)</p>')
 RE_INDEX_AUTOGEN = re.compile(r'AUTOGEN:languages-(?P<ver>v[\d.]+)\s+(?P<kind>START|END)')
 
+# docs/ 也纳入宣称值门禁（方案 W6）：竞赛材料长期停在 v1.8 口径，
+# 与 manifest 的语言分级互相打架。这里校验总量、篇数、字数与禁用旧口径。
+RE_DOC_INTRO = re.compile(r'—\s*(\d+)\s*章[、,]\s*([\d.]+)\s*万字')
+RE_DOC_BODY = re.compile(r'\*\*(\d+)\s*篇\s*·\s*(\d+)\s*个内容区块\s*·\s*([\d.]+)\s*万字\*\*')
+RE_DOC_BADGE = re.compile(r'(\d+)\s*区块\s*/\s*(v[\d.]+)\s*/\s*(\d+)\s*语言')
+RE_DOC_DATA_BLOCK = re.compile(r'\| 内容区块（简体中文基准） \| (\d+) \|')
+RE_DOC_DATA_WAN = re.compile(r'\| 正文字数（简体中文，可见文本） \| ≈ ([\d.]+) 万字 \|')
+RE_DOC_DATA_PARTS = re.compile(r'\| 篇章结构 \| (\d+) 篇')
+DOC_FORBIDDEN = [
+    (re.compile(r'\b84\s*章'), '84 章（v1.8 旧口径）'),
+    (re.compile(r'18\.1\s*万字'), '18.1 万字（v1.8 旧口径）'),
+    (re.compile(r'非机器翻译直出'), '「非机器翻译直出」与语言分级矛盾'),
+    (re.compile(r'19\s*种语言全量翻译'), '「19 种语言全量翻译」与语言分级矛盾'),
+    (re.compile(r'19\s*种语言同一质量'), '「19 种语言同一质量」与语言分级矛盾'),
+]
+
 
 def _stats(mf, root: Path, version: str) -> dict:
     """从真实内容计算：语言数、内容区块数。"""
@@ -26,6 +43,100 @@ def _stats(mf, root: Path, version: str) -> dict:
     if baseline.is_file():
         sections = len(T.section_ids(baseline.read_text(encoding='utf-8')))
     return {"languages": len(files), "sections": sections, "codes": [c for c, _ in files]}
+
+
+def _check_docs(root: Path, mf, newest: str, newest_real: dict,
+                newest_wan: str, real: dict) -> list:
+    """docs/ 与 ACCESSIBILITY.md 的对外口径必须与最新版实测一致。"""
+    issues = []
+    docs = sorted((root / 'docs').rglob('*.md')) if (root / 'docs').is_dir() else []
+    acc = root / 'ACCESSIBILITY.md'
+    if acc.is_file():
+        docs.append(acc)
+    parts = 0
+    bp = root / 'source' / newest / 'book.json'
+    if bp.is_file():
+        book = json.loads(bp.read_text(encoding='utf-8'))
+        parts = sum(1 for p in book.get('parts', [])
+                    if p.get('chapters') and p.get('id') != 'fu-lu')
+
+    def bad(rel, text, pos, msg):
+        issues.append(Issue('claims-docs', ERROR, msg, file=rel,
+                            line=T.line_of(text, pos) if pos is not None else 0))
+
+    for path in docs:
+        rel = str(path.relative_to(root)).replace('\\', '/')
+        text = path.read_text(encoding='utf-8')
+        for rx, label in DOC_FORBIDDEN:
+            m = rx.search(text)
+            if not m:
+                continue
+            # v1.8 的历史记述（如「v1.8（84 章）」）是事实，不算漂移；
+            # 只有把旧口径当成当前口径才算过期。
+            line_no = T.line_of(text, m.start())
+            line = text.splitlines()[line_no - 1] if line_no else ''
+            if ('84 章' in label or '18.1' in label) and \
+                    ('v1.8' in line or '历史' in line or '译本' in line):
+                continue
+            bad(rel, text, m.start(), f'{rel} 含过期口径：{label}')
+        if rel.endswith('项目说明书.md'):
+            m = RE_DOC_INTRO.search(text)
+            if not m:
+                bad(rel, text, None, f'{rel} 未找到导语「N 章、X 万字」')
+            else:
+                if int(m.group(1)) != newest_real['sections']:
+                    bad(rel, text, m.start(),
+                        f'{rel} 导语宣称 {m.group(1)} 章，实测 {newest_real["sections"]}')
+                if m.group(2) != newest_wan:
+                    bad(rel, text, m.start(),
+                        f'{rel} 导语宣称 {m.group(2)} 万字，实测 {newest_wan}')
+            m = RE_DOC_BODY.search(text)
+            if not m:
+                bad(rel, text, None, f'{rel} 未找到「N 篇 · M 个内容区块 · X 万字」')
+            else:
+                for got, want, name in (
+                        (m.group(1), parts, '篇数'),
+                        (m.group(2), newest_real['sections'], '内容区块'),
+                        (m.group(3), newest_wan, '字数')):
+                    if str(got) != str(want):
+                        bad(rel, text, m.start(),
+                            f'{rel} {name}宣称 {got}，实测 {want}')
+        if rel.endswith('数据与证据.md'):
+            for rx, want, name in (
+                    (RE_DOC_DATA_BLOCK, newest_real['sections'], '内容区块'),
+                    (RE_DOC_DATA_WAN, newest_wan, '字数'),
+                    (RE_DOC_DATA_PARTS, parts, '篇数')):
+                m = rx.search(text)
+                if not m:
+                    bad(rel, text, None, f'{rel} 未找到{name}行')
+                elif str(m.group(1)) != str(want):
+                    bad(rel, text, m.start(),
+                        f'{rel} {name}宣称 {m.group(1)}，实测 {want}')
+        if rel.endswith('答辩演示脚本.md'):
+            m = RE_DOC_INTRO.search(text)
+            if not m:
+                bad(rel, text, None, f'{rel} 未找到导语「N 章、X 万字」')
+            else:
+                if int(m.group(1)) != newest_real['sections']:
+                    bad(rel, text, m.start(),
+                        f'{rel} 导语宣称 {m.group(1)} 章，实测 {newest_real["sections"]}')
+                if m.group(2) != newest_wan:
+                    bad(rel, text, m.start(),
+                        f'{rel} 导语宣称 {m.group(2)} 万字，实测 {newest_wan}')
+            m = RE_DOC_BADGE.search(text)
+            if not m:
+                bad(rel, text, None, f'{rel} 未找到首屏徽章「M 区块 / vX / N 语言」')
+            else:
+                if int(m.group(1)) != newest_real['sections']:
+                    bad(rel, text, m.start(),
+                        f'{rel} 徽章区块 {m.group(1)}，实测 {newest_real["sections"]}')
+                if m.group(2) != newest:
+                    bad(rel, text, m.start(),
+                        f'{rel} 徽章版本 {m.group(2)}，实际 {newest}')
+                if int(m.group(3)) != real['languages']:
+                    bad(rel, text, m.start(),
+                        f'{rel} 徽章语言数 {m.group(3)}，实际 {real["languages"]}')
+    return issues
 
 
 def check_claims(root: Path, mf) -> list:
@@ -104,6 +215,11 @@ def check_claims(root: Path, mf) -> list:
                 issues.append(Issue("claims", ERROR,
                                     f"README 提供 {len(apks)} 个 APK 链接，实际 {real['languages']} 种语言",
                                     file=readme_rel))
+        # 流水线示意图里残留旧 APK tag（链接检查抓不到纯文本）
+        if 'apk-v1.8-r2' in rd:
+            issues.append(Issue("claims", ERROR,
+                                "README 流水线示意图仍指向旧 APK tag apk-v1.8-r2（应为 r4）",
+                                file=readme_rel, line=T.line_of(rd, rd.find('apk-v1.8-r2'))))
 
         # 章数/字数宣称值：badge 与正文 ↔ 最新版基线实测（字数 = 可见文本去空白）
         for label, rx, want in (
@@ -179,4 +295,5 @@ def check_claims(root: Path, mf) -> list:
                                     f"index.html 卡片指向不存在的文件 {v}/{c}.html",
                                     file=index_rel))
 
+    issues += _check_docs(root, mf, newest, newest_real, newest_wan, real)
     return issues

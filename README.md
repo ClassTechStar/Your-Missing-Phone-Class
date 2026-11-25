@@ -21,7 +21,7 @@ Markdown 源稿（source/，逐章）
         ▼  bookkit build（manifest/languages.json 单一数据源）
 19 种语言单文件 HTML（v1.8/，每语言一个，离线自足）
         ├──▶ XeLaTeX 排版 ──▶ 5 个 Release 共 93 本 PDF（latex/）
-        ├──▶ aapt2 / d8 / apksigner ──▶ 19 个 Android APK（Release：apk-v1.8-r2）
+        ├──▶ aapt2 / d8 / apksigner ──▶ 19 个 Android APK（Release：apk-v1.8-r4）
         ├──▶ PWA：sw.js 精准缓存，断网可读（manifest.webmanifest）
         ├──▶ 章节自测题库（quiz/，zh-CN + ja，gen_quiz.py 自动生成）
         └──▶ MCP Server（mcp/server.py）──▶ Claude 等 AI 客户端直查全书结构/全文
