@@ -56,3 +56,7 @@ manifest/tm/
 
 # 去 AI 味管线的诊断产物（AI 味报告、朗读体检清单、路径库候选等）：可由脚本重新生成，不入库
 state/
+
+# MiSans TTF 母本（7.8MB，仅用于本地重新子集化）：Gitee 免费仓库不支持 LFS，
+# 统一不入库；站点与构建使用已入库的 MiSans-subset.woff2
+fonts/MiSans-Normal.ttf
