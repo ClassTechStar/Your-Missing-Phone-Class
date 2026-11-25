@@ -12632,7 +12632,7 @@ func scheduleDailyReminder() {
  </div></main></div><!-- 快捷工具：浮动按钮组 --><div id="quick-tools" class="quick-tools no-print" aria-label="快捷工具"><button id="quick-glass" class="quick-tool-btn" title="液态玻璃效果 (开/关)" aria-label="切换液态玻璃效果" aria-pressed="true"><span aria-hidden="true">透</span></button><button id="quick-search" class="quick-tool-btn" title="搜索 (Ctrl+K)" aria-label="搜索"><span aria-hidden="true">搜</span></button><button id="quick-theme" class="quick-tool-btn" title="切换深色/浅色" aria-label="切换主题"><span aria-hidden="true">夜</span></button><button id="quick-print" class="quick-tool-btn" title="打印 / 导出PDF" aria-label="打印或导出"><span aria-hidden="true">印</span></button><button id="quick-toc" class="quick-tool-btn" title="目录" aria-label="打开目录"><span aria-hidden="true">目</span></button><button id="quick-tts" class="quick-tool-btn" title="语音朗读" aria-label="语音朗读"><span class="tts-ico" aria-hidden="true">▶</span></button><button id="quick-shortcuts" class="quick-tool-btn" title="键盘快捷键 (?)" aria-label="快捷键面板"><span aria-hidden="true">?</span></button><button id="quick-backup" class="quick-tool-btn" title="备份/恢复进度" aria-label="备份进度"><span aria-hidden="true">备</span></button></div><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/><feGaussianBlur in="noise" stdDeviation="2" result="soft"/><feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/></filter></defs></svg><!-- 快捷键面板 --><div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="键盘快捷键"><div class="search-panel" style="max-width:480px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">键盘快捷键</span><button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭">ESC</button></div><div class="p-4 space-y-2 text-sm"><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">搜索内容</span><span class="kbd">Ctrl + K</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">切换深色/浅色</span><span class="kbd">T</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">语音朗读 播放/暂停</span><span class="kbd">R</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">停止朗读</span><span class="kbd">ESC</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">打开快捷键面板</span><span class="kbd">?</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">字号调大 / 调小</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div><div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">打印 / 导出PDF</span><span class="kbd">Ctrl + P</span></div></div></div></div><!-- 备份/恢复弹窗 --><div id="backup-overlay" class="search-overlay" role="dialog" aria-label="备份与恢复"><div class="search-panel" style="max-width:520px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">阅读进度备份与恢复</span><button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="关闭">ESC</button></div><div class="p-5 space-y-4 text-sm"><div class="info-box rounded-lg p-3"><p class="text-xs">备份包含：已读章节、书签、阅读位置、字号偏好、健康自检结果。数据保存在浏览器本地，更换浏览器或清除缓存后丢失，建议定期导出备份。</p></div><div><button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> 导出备份文件
  </button><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">下载一个 JSON 文件，保存到安全位置</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> 导入备份恢复
  </button><input type="file" id="backup-import-input" accept=".json" class="hidden"><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">选择之前导出的备份文件恢复进度</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> 清除所有阅读数据
- </button><p class="text-xs text-red-400 mt-1 text-center">不可恢复！请先导出备份</p></div></div></div></div><!-- 阅读连续天数提示 --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#0074d9,#7c3aed);color:#fff;border:none;"><span id="streak-toast-text">连续阅读第 X 天！</span></div><!-- 语音朗读控件栏 --><div id="tts-controls" class="tts-controls" role="region" aria-label="语音朗读控制" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="当前朗读章节">未开始</span><button class="tts-btn" id="tts-prev" title="上一段" aria-label="上一段"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="播放/暂停" aria-label="播放朗读"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="下一段" aria-label="下一段"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="减速" aria-label="减速">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="加速" aria-label="加速">+</button><button class="tts-btn" id="tts-stop" title="停止朗读" aria-label="停止朗读"><span aria-hidden="true">×</span></button></div><!-- 回到顶部按钮 --><button id="back-to-top" class="opacity-0 invisible" aria-label="回到顶部"><svg class="progress-ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- 阅读位置恢复提示 --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">上次读到：...</span><button class="btn-restore" id="restore-btn">继续阅读</button><button class="btn-dismiss" id="dismiss-btn">忽略</button></div><!-- JS脚本 -->
+ </button><p class="text-xs text-red-400 mt-1 text-center">不可恢复！请先导出备份</p></div></div></div></div><!-- 阅读连续天数提示 --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#0074d9,#7c3aed);color:#fff;border:none;"><span id="streak-toast-text">连续阅读第 X 天！</span></div><!-- 语音朗读控件栏 --><div id="tts-controls" class="tts-controls" role="region" aria-label="语音朗读控制" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="当前朗读章节">未开始</span><button class="tts-btn" id="tts-prev" title="上一段" aria-label="上一段"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="播放/暂停" aria-label="播放朗读"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="下一段" aria-label="下一段"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="减速" aria-label="减速">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="加速" aria-label="加速">+</button><button class="tts-btn" id="tts-stop" title="停止朗读" aria-label="停止朗读"><span aria-hidden="true">×</span></button></div><!-- 回到顶部按钮 --><button id="back-to-top" class="opacity-0 invisible" aria-label="回到顶部"><svg class="progress-ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- 阅读位置恢复提示 --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">上次读到：...</span><button class="btn-restore" id="restore-btn">撤销</button><button class="btn-dismiss" id="dismiss-btn">忽略</button></div><!-- JS脚本 -->
  <script>
  (function() {
  'use strict';
@@ -12783,22 +12783,32 @@ func scheduleDailyReminder() {
  // ===== 阅读位置记忆 =====
  const POSITION_KEY = 'phoneCourse_scrollPos';
  const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+ const POSITION_SECTION_KEY = 'phoneCourse_lastSection';
+ const POSITION_OFFSET_KEY = 'phoneCourse_lastOffset';
  let savePosTimer = null;
  function saveReadingPosition() {
  const scrollY = window.scrollY;
  if (scrollY < 200) return; // 太靠前不保存
  localStorage.setItem(POSITION_KEY, scrollY.toString());
- // 找到当前章节名
+ // 找到当前章节名、章 id 与章内偏移（恢复时按 id 定位，避免占位高度漂移）
  let currentChapter = '';
+ let currentSectionId = '';
+ let currentOffset = 0;
  const viewportTop = scrollY + 100;
  for (let i = sections.length - 1; i >= 0; i--) {
  if (sections[i].offsetTop <= viewportTop) {
  const h3 = sections[i].querySelector('h3');
  if (h3) currentChapter = h3.textContent;
+ currentSectionId = sections[i].getAttribute('id') || '';
+ currentOffset = Math.max(0, scrollY - sections[i].offsetTop);
  break;
  }
  }
  if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+ if (currentSectionId) {
+ localStorage.setItem(POSITION_SECTION_KEY, currentSectionId);
+ localStorage.setItem(POSITION_OFFSET_KEY, String(currentOffset));
+ }
  }
  window.addEventListener('scroll', () => {
  clearTimeout(savePosTimer);
@@ -12809,7 +12819,20 @@ func scheduleDailyReminder() {
  function tryRestorePosition() {
  const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
  const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+ const savedSectionId = localStorage.getItem(POSITION_SECTION_KEY) || '';
+ const savedOffset = parseInt(localStorage.getItem(POSITION_OFFSET_KEY) || '0', 10);
  if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+ // 方案 W5：默认直达上次位置。优先按章节 id 定位：content-visibility 下
+ // 直接跳 scrollY 会因未渲染章节的占位高度而漂移；先强制渲染该章再补章内偏移。
+ const sectionEl = savedSectionId ? document.getElementById(savedSectionId) : null;
+ if (sectionEl) {
+ sectionEl.scrollIntoView({ behavior: 'instant', block: 'start' });
+ requestAnimationFrame(() => {
+ window.scrollTo({ top: sectionEl.offsetTop + savedOffset, behavior: 'auto' });
+ });
+ } else {
+ window.scrollTo({ top: savedPos, behavior: 'auto' });
+ }
  restoreToastText.textContent = `上次读到：${savedChapter}`;
  setTimeout(() => restoreToast.classList.add('show'), 800);
  // 10秒后自动隐藏
@@ -12817,11 +12840,9 @@ func scheduleDailyReminder() {
  }
  }
  if (restoreBtn) {
+ // 位置已自动恢复：按钮改为「撤销」，把读者送回本次打开时的位置（顶部）
  restoreBtn.addEventListener('click', () => {
- const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
- if (savedPos > 0) {
- window.scrollTo({ top: savedPos, behavior: 'smooth' });
- }
+ window.scrollTo({ top: 0, behavior: 'smooth' });
  if (restoreToast) restoreToast.classList.remove('show');
  });
  }
@@ -13101,20 +13122,11 @@ func scheduleDailyReminder() {
  }
 
  // ===== 搜索（增强：键盘导航 + 结果计数） =====
- let searchData = null;
  let searchSelectedIdx = -1;
  let searchResultItems = [];
 
- function buildSearchIndex() {
- if (searchData) return;
- searchData = sections.map(section => {
- const id = section.getAttribute('id');
- const h3 = section.querySelector('h3');
- const title = h3 ? h3.textContent : '';
- const text = section.textContent;
- return { id, title, text };
- });
- }
+ // 方案 W5：不再预建全书索引。120 章 × textContent 全量拷进 JS 数组会让
+ // 低端安卓首次搜索内存峰值翻倍；改为 runSearch 逐章扫描、只保留命中章。
 
  function renderSearchPlaceholder(message) {
  if (searchResults) {
@@ -13122,7 +13134,6 @@ func scheduleDailyReminder() {
  }
  }
  function runSearch(query) {
- buildSearchIndex();
  const normalizedQuery = (query || '').trim().toLowerCase();
  if (!normalizedQuery) {
  renderSearchPlaceholder('输入关键词开始搜索');
@@ -13130,9 +13141,18 @@ func scheduleDailyReminder() {
  searchResultItems = [];
  return;
  }
- const results = searchData.filter(item =>
- item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
- ).slice(0, 20);
+ const results = [];
+ // 逐章读取 textContent：只保留命中的前 20 章，扫完一章即释放上一章
+ for (const section of sections) {
+ const id = section.getAttribute('id');
+ const h3 = section.querySelector('h3');
+ const title = h3 ? h3.textContent : '';
+ const text = section.textContent;
+ if (!title.toLowerCase().includes(normalizedQuery) &&
+ !text.toLowerCase().includes(normalizedQuery)) continue;
+ results.push({ id, title, text });
+ if (results.length >= 20) break;
+ }
 
  if (results.length === 0) {
  renderSearchPlaceholder('未找到相关内容');
@@ -13171,7 +13191,6 @@ func scheduleDailyReminder() {
  }
  function openSearch() {
  if (!searchOverlay) return;
- buildSearchIndex();
  searchOverlay.classList.add('active');
  searchOverlay.setAttribute('aria-hidden', 'false');
  if (searchInput) {
