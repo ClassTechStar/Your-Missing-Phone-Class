@@ -11,7 +11,8 @@ from . import textutil as T
 from .model import ERROR, Issue
 
 RE_README_HEADLINE = re.compile(
-    r'最新版本\s*\((?P<ver>v[\d.]+)\)\s*[—\-–]\s*(?P<langs>\d+)\s*种语言\s*[·、]\s*(?P<sections>\d+)\s*章')
+    r'最新版本\s*\((?P<ver>v[\d.]+)\)\s*[—\-–]\s*(?P<langs>\d+)\s*种语言'
+    r'(?:可用)?(?:[（(][^）)]*[）)])?\s*[·、]\s*(?P<sections>\d+)\s*章')
 RE_README_LANG_LINK = re.compile(r'\[[^\]]*\]\((?:\./)?(?P<ver>v[\d.]+)/(?P<code>[\w-]+)\.html\)')
 RE_APK = re.compile(r'releases/download/(?P<ver>v[\d.]+)/(?P<asset>[\w.\-]+\.apk)')
 RE_INDEX_STAT = re.compile(

@@ -7,7 +7,7 @@
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
 - **多语言入口**：[index.html](index.html)（按浏览器语言跳转）
 - **PDF 下载**：见 [PDF 下载](#pdf-下载)
-- **Android 应用**：19 种语言各有独立 APK，见 [apk-v1.8-r4 Release](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r4)（书名统一版，versionCode 4 可覆盖旧包）
+- **Android 应用**：19 种语言各有独立 APK，见 [apk-v1.8-r4 Release](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r4)（书名统一版，versionCode 4 可覆盖旧包）；每个包的 SHA-256 见 [checksums.sha256](checksums.sha256)
 
 内容与代码采用 CC BY-NC-SA 4.0 许可。
 
@@ -84,7 +84,7 @@ v1.9/（最新中文版，120 章）曾在这条流水线之外直接维护：
 - 源稿：[source/v1.9/](source/v1.9/)（已回写，`build --verify` 等价性为 CI 必过门禁）
 - 多语言版、PDF 与 Android APK 目前基于 v1.8（见下方），v1.9 的翻译与多端制作进行中
 
-### 最新版本 (v1.8) — 19 种语言 · 84 章
+### 最新版本 (v1.8) — 19 种语言可用（3 种审校）· 84 章
 
 | 语言 | 在线阅读 | APK 安装包 |
 |------|----------|------------|

@@ -40,7 +40,8 @@ DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 必须与站点上发布的那一版书对齐（当前 v1.9）——错版会点进死链。
 # robots.txt 是搜索引擎入口（方案 §6.4，sitemap 坐标写在里面）。
 ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json',
-          'errata.html', 'languages.html', 'quiz.html', 'pdf.html', 'robots.txt']
+          'errata.html', 'languages.html', 'quiz.html', 'pdf.html',
+          'checksums.sha256', 'robots.txt']
 ASSET_DIRS = ['icons', 'quiz']
 # 字体只发布 woff2 子集（0.6MB）：7.8MB 的 TTF 母本只在仓库里留档，
 # 不上网——CSS 双源声明下浏览器永远优先 woff2，省掉 90% 的字体流量。
