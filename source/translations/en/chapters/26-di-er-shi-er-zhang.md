@@ -154,7 +154,7 @@ Practical examples:<strong>"Please</strong> list 5 permissions I should immediat
 - The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>"Please</strong> explain 'what is 5G' in words a primary school student can understand
 - The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>"Please</strong> write three short video scripts for my breakfast shop
 - The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>Why is it effective?</strong> The task part is the "command center" for AI's actions
-- The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>. Vague words like "do something," "make a," "take a look" are taboos for AI,it will guess your meaning, and the results often go off track.</strong>4. Constraints: Tell AI What Not to Do
+- The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"<strong>. Vague words like "do something," "make a," "take a look" are taboos for AI, it will guess your meaning, and the results often go off track.</strong>4. Constraints: Tell AI What Not to Do
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -287,7 +287,7 @@ Please organize the following meeting notes into structured minutes <strong>(Tas
 Multi-AI collaboration
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- <strong>: Use A to write the first draft, B to polish, C to translate:combining them works even better.</strong> System prompts
+- <strong>: Use A to write the first draft, B to polish, C to translate: combining them works even better.</strong> System prompts
 - <strong>: Preset your identity, preferences, taboos, and so on in the AI settings, so that the answers fit your needs better.</strong>7. AI's Limitations and Challenges: Maintain Clear Judgment
 - <strong>Although AI is powerful, it's by no means "omnipotent." Clearly understanding its limitations is key to using it better:</strong>"Hallucination" problem
 - <strong>Challenge 2: AI Photo Editing</strong> Knowledge cutoff
@@ -297,7 +297,7 @@ Multi-AI collaboration
 
 Limited reasoning ability
 
-- <strong>: Complex multi-step reasoning, mathematical proofs, and logical traps,AI still easily makes mistakes.</strong> Privacy risks
+- <strong>: Complex multi-step reasoning, mathematical proofs, and logical traps, AI still easily makes mistakes.</strong> Privacy risks
 - <strong>: In cloud AI services, your conversations may be used for model training. For sensitive information, prioritize on-device AI.</strong> Bias and values
 - <strong>: AI may carry biases from training data; you need to maintain independent thinking.</strong> AI Usage Tips
 - <strong>AI-generated content may be inaccurate ("hallucination" problem); important information must be verified.</strong> Don't enter personal privacy information into AI (ID numbers, passwords, bank information, etc.)
@@ -321,7 +321,7 @@ Challenge 3: Prompt Optimization
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>: First use a simple prompt "write a travel guide" to ask AI, then use the CRISPE framework to write a detailed prompt. Compare the quality difference of the two answers.</strong> Chapter 23: Programming Thinking and Automation Enlightenment
-2. <strong>In the previous two chapters, we built a secure "boundary wall" for our phones and witnessed its increasingly smart "AI brain" within the wall. Now, let's unlock one of the phone's ultimate potentials: letting it "think" like a programmer and automatically complete the continuous tasks you set. You might say: "I don't know how to write code, what does this have to do with me?" Don't worry, this chapter doesn't require you to write a single line of code,modern phones have lowered the threshold for "programming" to the point where you can do it with simple dragging and dropping.</strong>1. What Exactly Is Automation?
+2. <strong>In the previous two chapters, we built a secure "boundary wall" for our phones and witnessed its increasingly smart "AI brain" within the wall. Now, let's unlock one of the phone's ultimate potentials: letting it "think" like a programmer and automatically complete the continuous tasks you set. You might say: "I don't know how to write code, what does this have to do with me?" Don't worry, this chapter doesn't require you to write a single line of code, modern phones have lowered the threshold for "programming" to the point where you can do it with simple dragging and dropping.</strong>1. What Exactly Is Automation?
 3. <strong>In plain language, automation is:</strong> letting your phone automatically do a series of things for you when a certain condition is met.
 :::
 

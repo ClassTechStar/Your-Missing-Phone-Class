@@ -118,7 +118,7 @@ Rajah 5: Enam langkah muat naik ke App Store
 Halaman kedai ialah etalase yang dilihat pengguna semasa 'membelah kedai'. Tiga bahan menentukan tanggapan pertama:
 
 - Ikon: 1024×1024, jangan gunakan tangkapan skrin sambil lewa. Tiada kemahiran reka bentuk? Jana grafik ringkas dengan alat AI; barulah layak jika masih dapat dikenali dengan sekali pandang walaupun dikecilkan pada skrin utama;
-- Tangkapan skrin: sekurang-kurangnya 2 set (saiz utama iPhone), memaparkan senario fungsi paling teras; setiap satu disertai satu ayat teks berbahasa manusia ('catat sekelip mata' sepuluh kali lebih baik dari,pada 'penyelesaian pengurusan kewangan yang cekap');
+- Tangkapan skrin: sekurang-kurangnya 2 set (saiz utama iPhone), memaparkan senario fungsi paling teras; setiap satu disertai satu ayat teks berbahasa manusia ('catat sekelip mata' sepuluh kali lebih baik dari, pada 'penyelesaian pengurusan kewangan yang cekap');
 - Huraian: ayat pertama menjelaskan 'apa ini + untuk siapa'; jangan menimbunkan 'paling profesional, paling hebat', kejujuran lebih berkesan daripada pembesaran
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

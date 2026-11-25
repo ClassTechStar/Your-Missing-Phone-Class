@@ -10,15 +10,15 @@ kind: chapter
 ### Bab 55: Proyek 2—Aplikasi Cek Cuaca (Versi Jaringan)
 
 {class="chapter-intro mb-4"}
-Aplikasi catatan keuangan melatih 'kekuatan dasar', aplikasi cuaca 'memperluas wawasan',ia harus bergaul dengan internet. Di proyek ini kamu belajar: mendaftar API gratis, parsing JSON, menangani tiga keadaan antarmuka 'memuat/berhasil/gagal', serta cara menyembunyikan kunci API dengan baik. Setelah selesai, kamu punya kemampuan membuat aplikasi 'terhubung internet' apa pun,berita, nilai tukar, terjemahan, polanya persis sama.
+Aplikasi catatan keuangan melatih 'kekuatan dasar', aplikasi cuaca 'memperluas wawasan',ia harus bergaul dengan internet. Di proyek ini kamu belajar: mendaftar API gratis, parsing JSON, menangani tiga keadaan antarmuka 'memuat/berhasil/gagal', serta cara menyembunyikan kunci API dengan baik. Setelah selesai, kamu punya kemampuan membuat aplikasi 'terhubung internet' apa pun, berita, nilai tukar, terjemahan, polanya persis sama.
 
 #### 1. Mendaftar API Cuaca Gratis
 
-Untuk latihan pribadi, disarankan OpenWeatherMap atau QWeather,keduanya punya kuota gratis, langsung bisa dipakai setelah mendaftar. Contoh dengan OpenWeatherMap:
+Untuk latihan pribadi, disarankan OpenWeatherMap atau QWeather, keduanya punya kuota gratis, langsung bisa dipakai setelah mendaftar. Contoh dengan OpenWeatherMap:
 
 1. Daftar akun → buat satu Key (apikey) di halaman API keys;
 2. Versi gratis bisa memanggil antarmuka Current Weather (cuaca saat ini): api.openweathermap.org/data/2.5/weather? q=beijing&appid=KeyAnda&units=metric;
-3. Coba dulu sekali di peramban, lihat seperti apa bentuk JSON yang dikembalikan:ini 'pralatihan' yang wajib dilakukan sebelum menyambung API apa pun
+3. Coba dulu sekali di peramban, lihat seperti apa bentuk JSON yang dikembalikan: ini 'pralatihan' yang wajib dilakukan sebelum menyambung API apa pun
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -59,7 +59,7 @@ interface WeatherApi {
 ```
 :::
 
-Gson otomatis memasukkan JSON ke data class ini,nama kolomnya cocok, sihir terjadi sendiri.
+Gson otomatis memasukkan JSON ke data class ini, nama kolomnya cocok, sihir terjadi sendiri.
 
 #### 3. Tiga Keadaan Antarmuka: Memuat / Berhasil / Gagal
 
@@ -138,13 +138,13 @@ fun WeatherContent(data: WeatherResponse) {
 ```
 :::
 
-Beberapa detail kecil layak dipelajari: firstOrNull() mengambil elemen pertama dengan aman (daftarnya bisa kosong), ?: "Tidak diketahui" memberi teks cadangan:prinsip null safety juga berlaku di antarmuka. Suhu memakai ukuran huruf besar 72.sp agar menguasai tampilan, dan ketebalan 'Light' membuat angkanya terlihat elegan—ini resep klasik aplikasi cuaca.
+Beberapa detail kecil layak dipelajari: firstOrNull() mengambil elemen pertama dengan aman (daftarnya bisa kosong), ?: "Tidak diketahui" memberi teks cadangan: prinsip null safety juga berlaku di antarmuka. Suhu memakai ukuran huruf besar 72.sp agar menguasai tampilan, dan ketebalan 'Light' membuat angkanya terlihat elegan—ini resep klasik aplikasi cuaca.
 
 #### 5. Detail Antarmuka dan Interaksi
 
 - Kolom pencarian: TextField di bagian atas, ketik nama kota lalu tekan cari (atur aksi 'cari' di keyboard, tekan enter langsung mencari);
 - Kartu cuaca: suhu huruf besar (26.5°), deskripsi cuaca (cerah), kelembapan, nama kota;
-- Kota favorit: simpan kota yang sering dilihat ke DataStore, otomatis dicek saat dibuka berikutnya,sekalian mengulang Bab 6;
+- Kota favorit: simpan kota yang sering dilihat ke DataStore, otomatis dicek saat dibuka berikutnya, sekalian mengulang Bab 6;
 - Tarik untuk menyegarkan: di Compose pakai PullToRefreshBox (disediakan Material 3), rasanya langsung 'profesional'
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
@@ -152,7 +152,7 @@ Beberapa detail kecil layak dipelajari: firstOrNull() mengambil elemen pertama d
 Tips: Gambar Membuat Antarmuka Hidup
 
 {class="mt-1"}
-Beri satu emoji atau ikon untuk tiap jenis cuaca (☀️🌧️❄️), petakan dengan when(description),tiga baris kode, kehangatan antarmuka berlipat. Bisa juga memuat pustaka ikon cuaca pihak ketiga, tapi di tahap latihan emoji sudah cukup.
+Beri satu emoji atau ikon untuk tiap jenis cuaca (☀️🌧️❄️), petakan dengan when(description), tiga baris kode, kehangatan antarmuka berlipat. Bisa juga memuat pustaka ikon cuaca pihak ketiga, tapi di tahap latihan emoji sudah cukup.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

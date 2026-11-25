@@ -36,7 +36,7 @@ Strategi AI setiap pabrikan berbeda jelas, saat membeli bisa difokuskan pada:
 
 Komunikasi satelit adalah salah satu demokratisasi teknologi paling nyata dua tahun terakhir. Saat debut 2022 Huawei Mate 60 dan iPhone 14 masih eksklusif flagship, 2025 sudah turun ke kelas 2000-3000 yuan.
 
-- <strong>BeiDou short message turun ke ponsel kelas menengah</strong>: fitur short message satelit BeiDou (bisa kirim SMS dalam 1000 karakter Man,darin + lokasi) sudah turun ke model kelas menengah seperti Redmi, realme, iQOO, tanpa biaya bulanan, gratis. Cocok untuk hiking, road trip, dll.
+- <strong>BeiDou short message turun ke ponsel kelas menengah</strong>: fitur short message satelit BeiDou (bisa kirim SMS dalam 1000 karakter Man, darin + lokasi) sudah turun ke model kelas menengah seperti Redmi, realme, iQOO, tanpa biaya bulanan, gratis. Cocok untuk hiking, road trip, dll.
 - <strong>Tiantong satellite voice call</strong>: seri Huawei Mate 60/70, seri Honor Magic6 dll. mendukung panggilan suara satelit Tiantong-1, bisa menelpon/menerima panggilan satelit, mengirim pesan satelit. Perlu langganan paket satelit operator (sekitar 10-200 yuan/bulan), cocok untuk pengguna yang sering masuk area terpencil.
 - <strong>iPhone satellite messaging (SOS)</strong>: iPhone 14 dan model berikutnya mendukung SOS satelit, bisa mengirim pesan teks ke layanan darurat dan berbagi lokasi. Gratis 2 tahun, sebagian wilayah bisa diperpanjang berbayar.
 - <strong>Shooting harian: 1080P/4K + 30fps + encoding H.265, menyeimbangkan kualitas gambar dan ukuran file.</strong>: pengguna kota pada dasarnya tidak butuh, tapi pecinta outdoor, pebisnis yang sering ke daerah terpencil sangat disarankan memilih model dengan fitur satelit — bisa menyelamatkan nyata di momen kritis.

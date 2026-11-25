@@ -9,11 +9,11 @@ kind: chapter
 ### Lampiran Bab 23: Panduan Permulaan GitHub — Daripada Hos Kod ke Platform Kolaborasi
 
 {class="chapter-intro mb-4"}
-Bab sebelumnya kita bincangkan "pemikiran pengaturcaraan", dan untuk benar-benar melaksanakan pemikiran pengaturcaraan dan membuat projek bersama orang lain, tidak boleh lari dari satu nama,GitHub. Sama ada anda pelajar jabatan sains komputer yang ingin menyertai pertandingan, ingin menyimpan karya kod anda, atau sekadar ingin melihat apa yang sedang dikerjakan oleh pembangun di seluruh dunia, GitHub adalah platform yang mesti anda kenali. Bahagian ini bermula dari konsep paling asas, membantu anda membina satu pemahaman yang jelas.
+Bab sebelumnya kita bincangkan "pemikiran pengaturcaraan", dan untuk benar-benar melaksanakan pemikiran pengaturcaraan dan membuat projek bersama orang lain, tidak boleh lari dari satu nama, GitHub. Sama ada anda pelajar jabatan sains komputer yang ingin menyertai pertandingan, ingin menyimpan karya kod anda, atau sekadar ingin melihat apa yang sedang dikerjakan oleh pembangun di seluruh dunia, GitHub adalah platform yang mesti anda kenali. Bahagian ini bermula dari konsep paling asas, membantu anda membina satu pemahaman yang jelas.
 
 #### 1. Apakah Sebenarnya GitHub?
 
-Git ialah buku harian di komputer anda, GitHub ialah platform blog awam <strong>—anda boleh menerbitkan karya sendiri, mengikuti projek orang lain, menyertai perbincangan dan kolaborasi. Ia bukan sahaja "gudang belakang pentas pengaturcara", lebih seperti sebuah "bandar teknologi" yang dibina bersama oleh pembangun di seluruh dunia,projek dilahirkan di sini, diulang, dibincangkan, diguna semula.</strong> Bagi orang biasa, GitHub juga bukan sesuatu yang jauh dari jangkauan. Ramai bukan pengaturcara menggunakannya untuk menghoskan nota, buku elektronik, blog peribadi, malah untuk menyandarkan fail konfigurasi. Selagi anda mempunyai sedikit keperluan "mahu mengemas benda anda dengan baik dan berkongsi", GitHub berbaloi untuk anda kenali.
+Git ialah buku harian di komputer anda, GitHub ialah platform blog awam <strong>—anda boleh menerbitkan karya sendiri, mengikuti projek orang lain, menyertai perbincangan dan kolaborasi. Ia bukan sahaja "gudang belakang pentas pengaturcara", lebih seperti sebuah "bandar teknologi" yang dibina bersama oleh pembangun di seluruh dunia, projek dilahirkan di sini, diulang, dibincangkan, diguna semula.</strong> Bagi orang biasa, GitHub juga bukan sesuatu yang jauh dari jangkauan. Ramai bukan pengaturcara menggunakannya untuk menghoskan nota, buku elektronik, blog peribadi, malah untuk menyandarkan fail konfigurasi. Selagi anda mempunyai sedikit keperluan "mahu mengemas benda anda dengan baik dan berkongsi", GitHub berbaloi untuk anda kenali.
 
 2\. Perbezaan Antara Git dan GitHub (Konsep Penting!)<strong>Ramai orang akan mengelirukan dua perkataan ini ketika pertama kali terdedah, di sini membantu anda menyusun dengan jelas:</strong> Perbandingan
 
@@ -144,7 +144,7 @@ Tempat paling kuat GitHub terletak pada mekanisme kolaborasinya. Satu aliran ker
 3. <strong>Semakan kod (Code Review)</strong>: Ahli pasukan melihat kod anda, mengemukakan pendapat atau cadangan pengubahsuaian. Anda boleh terus commit berdasarkan maklum balas, PR akan dikemas kini secara automatik.
 4. <strong>Gabung</strong>: Selepas semakan lulus, klik "Merge" untuk menggabungkan kod ke cabang utama. Sumbangan anda secara rasmi memasuki projek!
 5. <strong>Aliran ini menjamin</strong> mana-mana kod sebelum memasuki cabang utama telah disemak
-6. <strong>, sangat mengurangkan kebarangkalian kesilapan. Projek sumber terbuka juga menggunakan mekanisme ini untuk menerima sumbangan daripada orang asing di seluruh dunia:anda benar-benar boleh menghantar PR pada sesetengah projek sumber terbuka terkenal, selepas diterima anda menjadi penyumbang projek tersebut.</strong>7. Senario Aplikasi Tipikal GitHub
+6. <strong>, sangat mengurangkan kebarangkalian kesilapan. Projek sumber terbuka juga menggunakan mekanisme ini untuk menerima sumbangan daripada orang asing di seluruh dunia: anda benar-benar boleh menghantar PR pada sesetengah projek sumber terbuka terkenal, selepas diterima anda menjadi penyumbang projek tersebut.</strong>7. Senario Aplikasi Tipikal GitHub
 
 🎓 Pelajar menyertai pertandingan dan projek kursus <strong>Pelajar jabatan sains komputer menyertai ACM, hackathon, reka bentuk pengijazahan, hampir semuanya tidak boleh lari dari GitHub. Ia bukan sahaja boleh menjadi platform kolaborasi pasukan. juga boleh menjadi tetingkap pameran karya.juri pertandingan boleh terus melihat repositori anda, memahami kualiti kod dan proses kolaborasi. Ramai syarikat semasa merekrut juga meminta melampirkan halaman utama GitHub, sebagai bukti keupayaan teknikal.</strong>📚 Pangkalan pengetahuan peribadi dan hos nota
 
@@ -176,7 +176,7 @@ Rajin commit, langkah kecil berlari pantas
 - <strong>Manfaatkan .gitignore</strong>: Fail ini digunakan untuk memberitahu Git fail mana yang tidak perlu dimasukkan dalam pengurusan versi (contohnya konfigurasi kata laluan, keluaran kompilasi, folder kebergantungan), mengelakkan memuat naik fail sampah.
 - <strong>Banyak melihat projek sumber terbuka yang cemerlang</strong>: Layari GitHub Trending, lihat struktur kod projek bintang tinggi, cara menulis README, aliran kolaborasi, adalah cara percuma paling cepat untuk meningkatkan diri.
 - <strong>Mohon pakej pelajar GitHub</strong>: Selepas pengesahan pelajar boleh mendapatkan kuota banyak alat dan perkhidmatan berbayar secara percuma (Copilot, nama domain, perkhidmatan awan dll.), bernilai ribuan dolar.
-- <strong>Peringatan Keselamatan</strong> Jangan sekali-kali memuat naik kata laluan, kunci API, rentetan sambungan pangkalan data dan maklumat sensitif lain ke GitHub, terutamanya repositori awam,selepas bocor, akan ditangkap oleh perayau dalam beberapa saat, akibatnya serius.
+- <strong>Peringatan Keselamatan</strong> Jangan sekali-kali memuat naik kata laluan, kunci API, rentetan sambungan pangkalan data dan maklumat sensitif lain ke GitHub, terutamanya repositori awam, selepas bocor, akan ditangkap oleh perayau dalam beberapa saat, akibatnya serius.
 - <strong>Tidak sengaja memuat naik maklumat sensitif, hanya memadam fail tidak cukup (masih ada dalam rekod sejarah), perlu gunakan</strong> git filter-branch.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4

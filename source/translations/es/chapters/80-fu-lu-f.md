@@ -142,7 +142,7 @@ Las pantallas plegables no son"Un teléfono mejor",sino"Otra forma de teléfono"
 
 #### VII. ¿Cómo elegir entre marcas principales (2025)?
 
-No se especifican modelos concretos(Quedará obsoleto),Solo se describe el estilo de la marca, Te ayuda a localizar rápidamente:
+No se especifican modelos concretos(Quedará obsoleto), Solo se describe el estilo de la marca, Te ayuda a localizar rápidamente:
 
 - <strong>Huawei Mate Xseries</strong>:Referente de los pliegues horizontales, fuerte sinergia del ecosistema HarmonyOS, La proporción de la pantalla externa se acerca a un teléfono normal, Cerrado puede usarse como teléfono principal.Precio alto pero mejor tasa de retención de valor.
 - <strong>Samsung Galaxy Z Fold/Flip</strong>:Pionero de las pantallas plegables, Ajuste de bisagras maduro, Z FlipEs el más atractivo de los pliegues verticales.Pocos puntos de servicio postventa en el país es una desventaja.
@@ -151,7 +151,7 @@ No se especifican modelos concretos(Quedará obsoleto),Solo se describe el estil
 - <strong>OPPO Find Nseries</strong>:De los pliegues horizontales, los de tamaño más compacto, Se puede sostener con una mano, Adecuado para usuarios que encuentran los pliegues grandes demasiado pesados.
 - <strong>Huawei Pocket series</strong>:De los pliegues verticales, el de pantalla interna y externa más grande y práctico, Espejo de maquillaje, Funciones orientadas a mujeres como la detección de protección solar están bien elaboradas.
 
-Consejos de compra:con presupuesto suficiente y buscando ecosistema, elige HuaweiMate X; para la bisagra mas madura, elige SamsungZ Fold; mejor relacion calidad-precio: Xiaomi/vivo; verticalplegablemira HuaweiPockety SamsungZ Flip.
+Consejos de compra: con presupuesto suficiente y buscando ecosistema, elige HuaweiMate X; para la bisagra mas madura, elige SamsungZ Fold; mejor relacion calidad-precio: Xiaomi/vivo; verticalplegablemira HuaweiPockety SamsungZ Flip.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 51: Pengembangan Antarmuka—Pengantar Jetpack Compose
 
 {class="chapter-intro mb-4"}
-Antarmuka adalah segala sesuatu yang dilihat pengguna. Sebelum Compose muncul, antarmuka Android ditulis dengan XML,rumit seperti mengerjakan soal isian; pada 2021 Google merilis Jetpack Compose: antarmuka 'digambar' langsung dengan kode Kotlin, apa yang terlihat itulah hasilnya,ubah satu baris kode, pratinjau langsung menyegar. Memasuki 2026, Compose sudah menjadi arus utama mutlak proyek-proyek baru. Bab ini kita belajar 'menggambar'.
+Antarmuka adalah segala sesuatu yang dilihat pengguna. Sebelum Compose muncul, antarmuka Android ditulis dengan XML, rumit seperti mengerjakan soal isian; pada 2021 Google merilis Jetpack Compose: antarmuka 'digambar' langsung dengan kode Kotlin, apa yang terlihat itulah hasilnya, ubah satu baris kode, pratinjau langsung menyegar. Memasuki 2026, Compose sudah menjadi arus utama mutlak proyek-proyek baru. Bab ini kita belajar 'menggambar'.
 
 #### 1. Cara Berpikir Compose: Antarmuka Adalah Fungsi
 
@@ -41,7 +41,7 @@ fun HomeScreen() {
 ```
 :::
 
-Perhatikan 'topi' @Composable,ia memberi tahu kompiler 'ini balok susun antarmuka'. Baloknya bisa disusun bertingkat tanpa batas, itulah seluruh rahasia Compose.
+Perhatikan 'topi' @Composable, ia memberi tahu kompiler 'ini balok susun antarmuka'. Baloknya bisa disusun bertingkat tanpa batas, itulah seluruh rahasia Compose.
 
 #### 2. Komponen Dasar: Teks, Tombol, Kolom Input, Gambar
 
@@ -110,7 +110,7 @@ Column {
 ```
 :::
 
-Ingin tata letaknya lebih cantik? Tambahkan Modifier (pemberi efek) pada komponen,ia seperti 'menata rias' balok susun:
+Ingin tata letaknya lebih cantik? Tambahkan Modifier (pemberi efek) pada komponen, ia seperti 'menata rias' balok susun:
 
 ::: div .code-block
 :::inline div .code-head
@@ -135,7 +135,7 @@ Text(
 Perhatian: Urutan Modifier Ada Aturannya
 
 {class="mt-1"}
-padding(16.dp).background(Blue) dan background(Blue).padding(16.dp) hasilnya berbeda,yang pertama 'memberi ruang dulu lalu mengecat' (latar tidak menutupi margin), yang kedua 'mengecat dulu lalu memberi ruang' (latar ikut menutupi margin). Pemula paling sering salah menggambar 'pinggiran putih aneh' di sini. Kalau ragu, tukar saja urutannya dan pratinjau langsung memberi jawaban.
+padding(16.dp).background(Blue) dan background(Blue).padding(16.dp) hasilnya berbeda, yang pertama 'memberi ruang dulu lalu mengecat' (latar tidak menutupi margin), yang kedua 'mengecat dulu lalu memberi ruang' (latar ikut menutupi margin). Pemula paling sering salah menggambar 'pinggiran putih aneh' di sini. Kalau ragu, tukar saja urutannya dan pratinjau langsung memberi jawaban.
 :::
 
 #### 4. State: Membuat Antarmuka 'Hidup'
@@ -191,7 +191,7 @@ MyFirstAppTheme { ... } di proyek templat itulah temanya. Ia berbasis spesifikas
 Tips: Warna Dinamis Material 3
 
 {class="mt-1"}
-Mulai Android 12, 'Material You' memungkinkan aplikasi mengambil warna dari wallpaper-mu. Templat Compose mendukungnya secara bawaan (dynamicColor). Aplikasimu akan 'berganti kostum' otomatis di ponsel tiap pengguna,itulah romantisme Android modern.
+Mulai Android 12, 'Material You' memungkinkan aplikasi mengambil warna dari wallpaper-mu. Templat Compose mendukungnya secara bawaan (dynamicColor). Aplikasimu akan 'berganti kostum' otomatis di ponsel tiap pengguna, itulah romantisme Android modern.
 :::
 
 #### 6. Pratinjau, Animasi, dan Live Edit: 'Cheat' Compose
@@ -200,7 +200,7 @@ Tiga 'cheat' Compose soal pengalaman pengembangan; sekali memakai, tidak mau kem
 
 - Pratinjau @Preview: beri anotasi @Preview pada Composable, Android Studio langsung merender tampilannya di sisi kanan—ubah kode, hasilnya langsung terlihat, tidak perlu memasang ke ponsel tiap kali;
 - Live Edit: Android Studio versi 2026 mendukung 'pembaruan panas' sebagian perubahan di emulator/ponsel asli; penyesuaian kecil seperti warna teks langsung berubah di perangkat dalam sekejap;
-- API animasi: animateFloatAsState, AnimatedVisibility,beberapa baris kode membuat elemen berpindah dengan mulus,'kesan premium' sering hanya selisih puluhan baris ini
+- API animasi: animateFloatAsState, AnimatedVisibility, beberapa baris kode membuat elemen berpindah dengan mulus,'kesan premium' sering hanya selisih puluhan baris ini
 
 ::: div .code-block
 :::inline div .code-head
@@ -228,7 +228,7 @@ fun AnimatedBox() {
 Tips: Fungsi Dulu, Animasi Kemudian
 
 {class="mt-1"}
-Kebiasaan buruk pemula: 'antarmuka belum benar, tapi sudah sibuk memikirkan animasi'. Pastikan fungsinya jalan dulu, tambahkan efek gerak di akhir secara serentak,ini juga prinsip 'kesederhanaan di atas segalanya': animasi adalah pemanis, fungsi adalah penyelamat.
+Kebiasaan buruk pemula: 'antarmuka belum benar, tapi sudah sibuk memikirkan animasi'. Pastikan fungsinya jalan dulu, tambahkan efek gerak di akhir secara serentak, ini juga prinsip 'kesederhanaan di atas segalanya': animasi adalah pemanis, fungsi adalah penyelamat.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

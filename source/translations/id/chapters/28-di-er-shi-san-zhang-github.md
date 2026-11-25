@@ -9,13 +9,13 @@ kind: chapter
 ### Lampiran Bab 23: Panduan Pemula GitHub—Dari Hosting Kode ke Platform Kolaborasi
 
 {class="chapter-intro mb-4"}
-Bab sebelumnya membahas "pemikiran pemrograman", dan untuk benar-benar mewujudkan pemikiran pemrograman dan mengerjakan proyek bersama orang lain, tidak bisa dipisahkan dari satu nama,GitHub. Baik Anda mahasiswa ilmu komputer yang ingin mengikuti kompetisi, ingin menyimpan karya kode Anda, atau sekadar ingin melihat apa yang dikerjakan developer global, GitHub adalah platform yang harus Anda kenal. Kita mulai dari konsep paling dasar, membantu Anda membangun pemahaman yang jelas.
+Bab sebelumnya membahas "pemikiran pemrograman", dan untuk benar-benar mewujudkan pemikiran pemrograman dan mengerjakan proyek bersama orang lain, tidak bisa dipisahkan dari satu nama, GitHub. Baik Anda mahasiswa ilmu komputer yang ingin mengikuti kompetisi, ingin menyimpan karya kode Anda, atau sekadar ingin melihat apa yang dikerjakan developer global, GitHub adalah platform yang harus Anda kenal. Kita mulai dari konsep paling dasar, membantu Anda membangun pemahaman yang jelas.
 
 #### 1. Apa Sebenarnya GitHub Itu?
 
 Singkatnya, GitHub adalah <strong>platform hosting kode dan kolaborasi berbasis Git</strong>. Diluncurkan pada 2008, diakuisisi Microsoft pada 2018, hingga kini masih menjadi platform hosting kode open source terbesar di dunia, menampung ratusan juta repository, mencakup hampir semua bahasa pemrograman mainstream.
 
-Jika menggunakan analogi:<strong>Git adalah buku harian di komputer Anda, GitHub adalah platform blog publik</strong>—Anda bisa mempublikasikan karya Anda, mengikuti proyek orang lain, berpartisipasi dalam diskusi dan kolaborasi. Ia bukan hanya "gudang backstage programmer", tapi lebih seperti "kota teknologi" yang dibangun bersama oleh developer global:proyek lahir, diiterasi, didiskusikan, dan digunakan ulang di sini.
+Jika menggunakan analogi:<strong>Git adalah buku harian di komputer Anda, GitHub adalah platform blog publik</strong>—Anda bisa mempublikasikan karya Anda, mengikuti proyek orang lain, berpartisipasi dalam diskusi dan kolaborasi. Ia bukan hanya "gudang backstage programmer", tapi lebih seperti "kota teknologi" yang dibangun bersama oleh developer global: proyek lahir, diiterasi, didiskusikan, dan digunakan ulang di sini.
 
 Bagi orang biasa, GitHub juga tidak terlalu jauh dari jangkauan. Banyak non-programmer menggunakannya untuk hosting catatan, buku elektronik, blog pribadi, bahkan untuk backup file konfigurasi. Selama Anda memiliki sedikit kebutuhan "ingin mengatur dan membagikan barang Anda", GitHub layak untuk dipelajari.
 
@@ -146,13 +146,13 @@ Hal terkuat dari GitHub adalah mekanisme kolaborasinya. Workflow kolaborasi tim 
 5. <strong>Code Review</strong>: Anggota tim meninjau kode Anda, memberikan pendapat atau saran perubahan. Anda bisa terus commit berdasarkan feedback, PR akan otomatis update.
 6. <strong>Merge</strong>: Setelah review lolos, klik "Merge" untuk merge kode ke branch utama. Kontribusi Anda resmi masuk ke proyek!
 
-Workflow ini memastikan <strong>setiap kode ditinjau sebelum masuk ke branch utama</strong>, sangat mengurangi probabilitas error. Proyek open source juga menggunakan mekanisme ini untuk menerima kontribusi dari orang asing di seluruh dunia,Anda benar-benar bisa mengajukan PR di proyek open source terkenal, setelah diterima Anda menjadi kontributor proyek tersebut.
+Workflow ini memastikan <strong>setiap kode ditinjau sebelum masuk ke branch utama</strong>, sangat mengurangi probabilitas error. Proyek open source juga menggunakan mekanisme ini untuk menerima kontribusi dari orang asing di seluruh dunia, Anda benar-benar bisa mengajukan PR di proyek open source terkenal, setelah diterima Anda menjadi kontributor proyek tersebut.
 
 #### 7. Skenario Aplikasi Tipikal GitHub
 
 ##### Mahasiswa Mengikuti Kompetisi dan Proyek Mata Kuliah
 
-Mahasiswa ilmu komputer mengikuti ACM, hackathon, tugas akhir, hampir selalu membutuhkan GitHub. Ia bisa menjadi platform kolaborasi tim sekaligus jendela tampilan karya,juri kompetisi bisa langsung melihat repository Anda, memahami kualitas kode dan proses kolaborasi. Banyak perusahaan saat rekrutmen juga meminta melampirkan halaman GitHub, sebagai bukti kemampuan teknis.
+Mahasiswa ilmu komputer mengikuti ACM, hackathon, tugas akhir, hampir selalu membutuhkan GitHub. Ia bisa menjadi platform kolaborasi tim sekaligus jendela tampilan karya, juri kompetisi bisa langsung melihat repository Anda, memahami kualitas kode dan proses kolaborasi. Banyak perusahaan saat rekrutmen juga meminta melampirkan halaman GitHub, sebagai bukti kemampuan teknis.
 
 ##### Hosting Basis Pengetahuan dan Catatan Pribadi
 
@@ -184,7 +184,7 @@ Gunakan repository kode sebagai cloud drive, saat ganti komputer atau kerja mult
 Peringatan Keamanan
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Jangan pernah commit informasi sensitif seperti kata sandi, API key, string koneksi database ke GitHub, terutama repository publik:sekali bocor, akan di-scrape dalam hitungan detik, konsekuensinya serius.
+- Jangan pernah commit informasi sensitif seperti kata sandi, API key, string koneksi database ke GitHub, terutama repository publik: sekali bocor, akan di-scrape dalam hitungan detik, konsekuensinya serius.
 - Jika tidak sengaja commit informasi sensitif, hanya menghapus file tidak cukup (masih ada di riwayat), gunakan<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> atau alat profesional untuk membersihkan riwayat, dan segera ganti key yang bocor.
 - Repository private juga tidak absolut aman, informasi sensitif sebaiknya dikelola dengan environment variable, tidak masuk ke repository kode.
 :::
@@ -207,7 +207,7 @@ GitHub Pages memungkinkan Anda hosting situs web statis secara gratis, dipadukan
 
 #### 9. Kesimpulan: Mengapa Semua Orang Harus Mengenal GitHub
 
-GitHub sudah lama bukan hanya "alat programmer", ia lebih seperti <strong>cara kerja era digital</strong>: kontrol versi membuat segalanya traceable, mekanisme kolaborasi membuat tim beroperasi efisien, semangat open source membuat pengetahuan mengalir bebas. Bahkan jika Anda tidak menulis kode, memahami konsep "commit, branch, merge" juga bisa membantu Anda mengelola konten apa pun yang membutuhkan "modifikasi berulang + kolaborasi multi-orang" dengan lebih baik,dari makalah ke dokumen, dari catatan ke proposal.
+GitHub sudah lama bukan hanya "alat programmer", ia lebih seperti <strong>cara kerja era digital</strong>: kontrol versi membuat segalanya traceable, mekanisme kolaborasi membuat tim beroperasi efisien, semangat open source membuat pengetahuan mengalir bebas. Bahkan jika Anda tidak menulis kode, memahami konsep "commit, branch, merge" juga bisa membantu Anda mengelola konten apa pun yang membutuhkan "modifikasi berulang + kolaborasi multi-orang" dengan lebih baik, dari makalah ke dokumen, dari catatan ke proposal.
 
 Bagi mahasiswa ilmu komputer, GitHub adalah keterampilan wajib: ia adalah portofolio Anda, platform kolaborasi, perpustakaan sumber belajar, juga "resume" yang paling meyakinkan saat mencari pekerjaan di masa depan. Daftarkan akun lebih awal, unggah tugas mata kuliah dan proyek kecil Anda, kumpulkan secara bertahap, beberapa tahun kemudian Anda akan memiliki resume teknis yang membuat interviewer terkesan.
 

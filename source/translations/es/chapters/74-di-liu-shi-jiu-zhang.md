@@ -31,7 +31,7 @@ Puedes aprender el lenguaje, pero no hacer desarrollo completo. Con Swift Playgr
 
 P2: ¿Cuánto cuesta aprender desarrollo de iOS?
 
-Fase de aprendizaje: 0 (Xcode es gratuito y una cuenta Apple gratuita permite depurar en un dispositivo real). Fase de publicación: la cuenta de desarrollador cuesta 99 dólares al año (unos 700 yuanes). Sumando la inversión en un Mac, ese es todo el coste. Frente a lo que se recibe a cambio,en el App Store, hasta una pequeña utilidad encuentra usuarios que pagan, la cuenta sale a favor.
+Fase de aprendizaje: 0 (Xcode es gratuito y una cuenta Apple gratuita permite depurar en un dispositivo real). Fase de publicación: la cuenta de desarrollador cuesta 99 dólares al año (unos 700 yuanes). Sumando la inversión en un Mac, ese es todo el coste. Frente a lo que se recibe a cambio, en el App Store, hasta una pequeña utilidad encuentra usuarios que pagan, la cuenta sale a favor.
 
 P3: ¿Qué conviene aprender primero, SwiftUI o UIKit?
 
@@ -43,7 +43,7 @@ El panorama de 2026: los puestos básicos de «solo saber dibujar interfaces» t
 
 P5: ¿Qué hago si el proceso de revisión rechaza mi app?
 
-No entres en pánico: es totalmente normal:la probabilidad de que el primer envío sea rechazado no es baja. Apple suele escribir el motivo del rechazo con mucho detalle (qué pantalla, qué directriz): corrige punto por punto, responde con una explicación en App Store Connect y vuelve a enviar. Las tres causas de rechazo más habituales son: no explicar con claridad para qué se pide cada permiso, bugs en la interfaz y metadatos (capturas/descripción) que no coinciden con la app real. Si revisas estos tres puntos por adelantado, te ahorras una ronda de espera.
+No entres en pánico: es totalmente normal: la probabilidad de que el primer envío sea rechazado no es baja. Apple suele escribir el motivo del rechazo con mucho detalle (qué pantalla, qué directriz): corrige punto por punto, responde con una explicación en App Store Connect y vuelve a enviar. Las tres causas de rechazo más habituales son: no explicar con claridad para qué se pide cada permiso, bugs en la interfaz y metadatos (capturas/descripción) que no coinciden con la app real. Si revisas estos tres puntos por adelantado, te ahorras una ronda de espera.
 
 #### 3. Atajos de teclado de Xcode: guía de referencia rápida
 

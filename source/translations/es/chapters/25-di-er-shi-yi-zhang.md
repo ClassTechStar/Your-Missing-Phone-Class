@@ -10,7 +10,7 @@ kind: chapter
 ### Capítulo 21: ¿Se puede conectar al Wi-Fi público?
 
 {class="chapter-intro mb-4"}
-Usamos el móvil todos los días para navegar, pagar, chatear... parece muy cómodo. ¿Alguna vez has pensado cuánto "desnuda" está tu información en internet? Sinceramente, la mayoría nunca se lo plantea. Pero cuando algo pasa,cuenta hackeada, tarjeta clonada: ya es tarde para arrepentirse. En este capítulo hablaremos de cómo hacer tu vida digital menos "transparente".
+Usamos el móvil todos los días para navegar, pagar, chatear... parece muy cómodo. ¿Alguna vez has pensado cuánto "desnuda" está tu información en internet? Sinceramente, la mayoría nunca se lo plantea. Pero cuando algo pasa, cuenta hackeada, tarjeta clonada: ya es tarde para arrepentirse. En este capítulo hablaremos de cómo hacer tu vida digital menos "transparente".
 
 #### I. VPN: la "capa de invisibilidad" en la red
 
@@ -66,7 +66,7 @@ Personalmente recomiendo Cloudflare 1.1.1.1 o Google 8.8.8.8 como servidores DNS
 
 Primero, la conclusión:<strong>el modo incognito es tu cortina de casa, no una capa de invisibilidad.</strong>
 
-Qué hace: no deja rastros locales,al cerrar la ventana incógnito, el navegador no guarda historial, Cookies, fórmularíos ni búsquedas. Útil para buscar algo en un ordenador ajeno o comprar regalos sin que la familia lo vea en el historial.
+Qué hace: no deja rastros locales, al cerrar la ventana incógnito, el navegador no guarda historial, Cookies, fórmularíos ni búsquedas. Útil para buscar algo en un ordenador ajeno o comprar regalos sin que la familia lo vea en el historial.
 
 Qué NO hace:
 
@@ -94,7 +94,7 @@ Después de todo esto, aquí tienes una lista de seguridad simple y directa. Ded
 1. <strong>Desactiva conexión automática Wi-Fi</strong>:iPhone: Ajustes &gt; WLAN. Android: Ajustes de Wi-Fi.
 2. <strong>Cambia a un DNS cifrado</strong>:Android: DNS privado a "dns.google". iPhone: usa App o perfil para configurar DoH 1.1.1.1.
 3. <strong>Activa autenticacion en dos factores (2FA)</strong>:WeChat, Alipay, Apple ID, Google: activa 2FA en todos. El SMS ya es el nivel más bajo de 2FA; mejor usar TOTP (Google Authenticator, Microsoft Authenticator).
-4. <strong>Revisa permisos de Apps</strong>:Revisa los permisos de cada App, especialmente ubicación, contactos, SMS, micrófono y cámara. Descubrirás que algunas Apps de linterna piden tus contactos,desinstálalas de inmediato.
+4. <strong>Revisa permisos de Apps</strong>:Revisa los permisos de cada App, especialmente ubicación, contactos, SMS, micrófono y cámara. Descubrirás que algunas Apps de linterna piden tus contactos, desinstálalas de inmediato.
 5. <strong>Limpieza periódica de datos del navegador</strong>:Programa un recordatorío mensual: limpiar caché y Cookies.
 6. <strong>No uses cables de puntos de carga publicos</strong>:El puerto USB carga y transfiere datos; puntos de carga maliciosos ("Juice Jacking") pueden robar datos mientras cargas. Lleva siempre tu propio cargador y cable.
 

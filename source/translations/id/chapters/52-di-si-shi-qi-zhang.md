@@ -56,11 +56,11 @@ Gambar 6: Pohon keputusan pemilihan alat pemrograman AI
 
 Q1: Saya sama sekali tidak bisa pemrograman, bisakah tetap coding dengan AI?
 
-Bisa. Alat pemrograman AI tahun 2026 sudah cukup kuat; kamu bisa mendeskripsikan kebutuhan dengan bahasa alami dan membiarkan AI menghasilkan kodenya. Tetapi ada dua saran: pertama, mulai dari alat Builder berbasis cloud (seperti v0, Bolt) yang tidak butuh konfigurasi lingkungan pengembangan; kedua, pelajari konsep dasar sambil memakainya,tidak perlu mahir sintaks, tetapi kamu harus bisa "mengerti garis besar" kode yang ditulis AI agar penerimaannya efektif.
+Bisa. Alat pemrograman AI tahun 2026 sudah cukup kuat; kamu bisa mendeskripsikan kebutuhan dengan bahasa alami dan membiarkan AI menghasilkan kodenya. Tetapi ada dua saran: pertama, mulai dari alat Builder berbasis cloud (seperti v0, Bolt) yang tidak butuh konfigurasi lingkungan pengembangan; kedua, pelajari konsep dasar sambil memakainya, tidak perlu mahir sintaks, tetapi kamu harus bisa "mengerti garis besar" kode yang ditulis AI agar penerimaannya efektif.
 
 Q2: Bahasa pemrograman apa yang sebaiknya saya pelajari?
 
-Tergantung apa yang mau kamu kerjakan. Frontend situs web,JavaScript/TypeScript; pengolahan data atau AI,Python; backend tingkat enterprise:Java atau Go. Tetapi yang lebih penting: di era pemrograman AI, pentingnya "bahasa" sedang menurun. AI membantu menangani detail sintaks; yang perlu kamu pahami adalah "struktur program":apa itu fungsi, apa itu perulangan, apa itu struktur data. Konsep-konsep ini berlaku lintas bahasa; begitu paham, berpindah ke bahasa apa pun jadi cepat.
+Tergantung apa yang mau kamu kerjakan. Frontend situs web, JavaScript/TypeScript; pengolahan data atau AI, Python; backend tingkat enterprise:Java atau Go. Tetapi yang lebih penting: di era pemrograman AI, pentingnya "bahasa" sedang menurun. AI membantu menangani detail sintaks; yang perlu kamu pahami adalah "struktur program":apa itu fungsi, apa itu perulangan, apa itu struktur data. Konsep-konsep ini berlaku lintas bahasa; begitu paham, berpindah ke bahasa apa pun jadi cepat.
 
 Q3: Apakah kode buatan AI bermasalah dari sisi hak cipta?
 
@@ -72,7 +72,7 @@ Dalam jangka pendek, tidak. Yang digantikan AI bukan profesi "pemrogram", melain
 
 Q5: Bagaimana menilai apakah hasil kerja AI sudah benar?
 
-Metode verifikasi tiga lapis. Lapis pertama: verifikasi fungsi,bisakah ia dijalankan? Benarkah input dan outputnya? Ini yang paling dasar. Lapis kedua: verifikasi batas:apa yang terjadi dengan input kosong, input super panjang, atau input aneh? Ini menemukan masalah yang tersembunyi. Lapis ketiga: verifikasi arsitektur,apakah struktur kode masuk akal? Adakah yang ditulis langsung (hardcoded)? Apakah mudah dikembangkan? Ini menuntut daya nilaimu secara teknis. Kalau kamu belum bisa menilai lapis ketiga, minimal penuhi dua lapis pertama,bisa dijalankan dan batasnya normal, itu sudah lebih baik daripada kebanyakan pemula.
+Metode verifikasi tiga lapis. Lapis pertama: verifikasi fungsi, bisakah ia dijalankan? Benarkah input dan outputnya? Ini yang paling dasar. Lapis kedua: verifikasi batas: apa yang terjadi dengan input kosong, input super panjang, atau input aneh? Ini menemukan masalah yang tersembunyi. Lapis ketiga: verifikasi arsitektur, apakah struktur kode masuk akal? Adakah yang ditulis langsung (hardcoded)? Apakah mudah dikembangkan? Ini menuntut daya nilaimu secara teknis. Kalau kamu belum bisa menilai lapis ketiga, minimal penuhi dua lapis pertama, bisa dijalankan dan batasnya normal, itu sudah lebih baik daripada kebanyakan pemula.
 
 #### 4. Sumber belajar yang direkomendasikan
 
@@ -89,14 +89,14 @@ Daftar sumber belajar yang direkomendasikan
 
 #### 5. Penutup: alat di tangan, metodologi di hati
 
-Kembali pada keyakinan inti buku ini: alat beriterasi setiap tiga bulan, metodologi berevolusi setiap tiga tahun. Pada hari ini, Agustus 2026, kemampuan alat pemrograman AI sudah kuat luar biasa,kamu bisa membuat situs web dengan satu kalimat, menghasilkan aplikasi full-stack dengan satu deskripsi, menyelesaikan restrukturisasi rumit dengan satu instruksi. Tetapi semakin kuat alatnya, justru semakin menonjol pentingnya metodologi,sebab kekuatan alat memperbesar setiap keputusan yang kamu ambil.
+Kembali pada keyakinan inti buku ini: alat beriterasi setiap tiga bulan, metodologi berevolusi setiap tiga tahun. Pada hari ini, Agustus 2026, kemampuan alat pemrograman AI sudah kuat luar biasa, kamu bisa membuat situs web dengan satu kalimat, menghasilkan aplikasi full-stack dengan satu deskripsi, menyelesaikan restrukturisasi rumit dengan satu instruksi. Tetapi semakin kuat alatnya, justru semakin menonjol pentingnya metodologi, sebab kekuatan alat memperbesar setiap keputusan yang kamu ambil.
 
 Jika kebutuhanmu jelas, AI membantumu mewujudkannya dengan efisien; jika kebutuhanmu samar, AI juga dengan efisien menghasilkan hal yang salah. Jika kamu patuh pada kesederhanaan, AI membantumu memverifikasi gagasan dengan cepat; jika kamu serakah menghendaki segalanya. AI juga membantumu menumpuk utang teknis dengan cepat. Jika kamu mengubah dengan presisi, AI membantumu mengoptimalkan kode sepresisi bedah; jika instruksimu samar, AI juga membantumu memasukkan bug dengan gencar.
 
-Itulah sebabnya buku ini menghabiskan sebagian besar halamannya untuk metodologi, bukan operasional alat. Bukan karena alat tidak penting, melainkan karena metodologi adalah "pengali" bagi alat:semakin baik metodologinya, semakin besar nilai alat itu; jika metodologinya nol, alat sekuat apa pun tetap nol dikali bilangan apa pun.
+Itulah sebabnya buku ini menghabiskan sebagian besar halamannya untuk metodologi, bukan operasional alat. Bukan karena alat tidak penting, melainkan karena metodologi adalah "pengali" bagi alat: semakin baik metodologinya, semakin besar nilai alat itu; jika metodologinya nol, alat sekuat apa pun tetap nol dikali bilangan apa pun.
 
 :::inline div .quote-line
-Anda tidak lagi coding sendirian. Anda seorang komandan, AI adalah pasukan Anda. Kualitas cara berpikir Anda menentukan kekuatan tempur pasukan itu. Mulai hari ini, bersenjatailah dengan metodologi dan perbesar kemampuan Anda dengan alat:itulah seluruh rahasia coding bersama AI.
+Anda tidak lagi coding sendirian. Anda seorang komandan, AI adalah pasukan Anda. Kualitas cara berpikir Anda menentukan kekuatan tempur pasukan itu. Mulai hari ini, bersenjatailah dengan metodologi dan perbesar kemampuan Anda dengan alat: itulah seluruh rahasia coding bersama AI.
 :::
 
 #### Daftar pustaka

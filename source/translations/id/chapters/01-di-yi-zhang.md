@@ -32,7 +32,7 @@ CPU adalah komponen paling inti dalam SoC, bertanggung jawab menangani sebagian 
 - <strong>Medium core</strong>: Seimbang antara performa dan konsumsi daya, menangani tugas beban menengah sehari-hari. Men-scroll Weibo, menonton video, multi-tasking utamanya mengandalkan ini.
 - <strong>Small core/Efficiency core</strong>: Konsumsi daya terendah, menangani tugas latar belakang ringan. Mode standby, mendengarkan musik, menerima pesan, hampir tidak boros listrik.
 
-Tiga tingkat core bekerja sama: scheduler sistem mengalokasikan secara otomatis berdasarkan beban tugas,tugas ringan diserahkan ke small core untuk hemat daya, pekerjaan berat diserahkan ke big core untuk bekerja keras, setelah selesai kembali ke small core. Inilah sebabnya ponsel bisa bermain game dengan lancar sekaligus standby seharian.
+Tiga tingkat core bekerja sama: scheduler sistem mengalokasikan secara otomatis berdasarkan beban tugas, tugas ringan diserahkan ke small core untuk hemat daya, pekerjaan berat diserahkan ke big core untuk bekerja keras, setelah selesai kembali ke small core. Inilah sebabnya ponsel bisa bermain game dengan lancar sekaligus standby seharian.
 
 <strong>Karakteristik arsitektur tiap merek</strong>:
 

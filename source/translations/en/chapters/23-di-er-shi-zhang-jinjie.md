@@ -35,7 +35,7 @@ Developer Mode is a hidden menu built into the phone system, containing many fea
 
 ##### Background &amp; Battery Related:
 
-- <strong>Settings in Developer Mode may affect system stability,don't change options you don't understand. After enabling USB Debugging, be careful when connecting to computers, and don't connect to untrusted computers.</strong>: You can set "Standard limit," "At most 1 process," "At most 2 processes," etc. On the surface, limiting background processes seems like it would save battery, but Android's built-in background management is already quite good. Forcibly limiting it causes apps to reload frequently (cold starts actually consume more power and worsen the experience). This option is more suited for debugging; ordinary users shouldn't keep it enabled long-term. "Standard limit" is fine.
+- <strong>Settings in Developer Mode may affect system stability, don't change options you don't understand. After enabling USB Debugging, be careful when connecting to computers, and don't connect to untrusted computers.</strong>: You can set "Standard limit," "At most 1 process," "At most 2 processes," etc. On the surface, limiting background processes seems like it would save battery, but Android's built-in background management is already quite good. Forcibly limiting it causes apps to reload frequently (cold starts actually consume more power and worsen the experience). This option is more suited for debugging; ordinary users shouldn't keep it enabled long-term. "Standard limit" is fine.
 - <strong>Don't Keep Activities</strong>: Destroys every activity as soon as you leave it. Highly discouraged, causes frequent white screens and reloads, only for testing app recovery logic.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -206,7 +206,7 @@ Google updates detection rules periodically, and app developers follow up with P
 
 #### VII. Advice for Ordinary Users
 
-- <strong>: Not recommended for ordinary users,risks outweigh benefits. If you really need certain features, first look into whether there are alternatives that don't require Root.</strong>: You can enable it to experience animation acceleration, GPU rendering analysis, and other features, but don't randomly change other options you don't understand.
+- <strong>: Not recommended for ordinary users, risks outweigh benefits. If you really need certain features, first look into whether there are alternatives that don't require Root.</strong>: You can enable it to experience animation acceleration, GPU rendering analysis, and other features, but don't randomly change other options you don't understand.
 - <strong>OEM Unlocking and BL Lock</strong>: If you don't plan to flash or Root, keep both toggles in their default (off) state for maximum safety.
 - <strong>ADB</strong>: A powerful no-Root tool that ordinary people can use too — for example, using <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm uninstall --user 0</code> to uninstall pre-installed apps. But before deleting, always check whether the package name can be safely deleted.
 - <strong>Root</strong>: Root is not recommended for ordinary users, the risks outweigh the benefits. If you truly need certain features, first check whether there are no-Root alternatives (such as using ADB to uninstall pre-installed apps, or using Shizuku to replace some Root functionality).

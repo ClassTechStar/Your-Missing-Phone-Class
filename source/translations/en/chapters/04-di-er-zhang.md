@@ -15,8 +15,8 @@ Phones get messy over time, and good habits start with managing files. Just like
 #### I. Three-Tier Storage System: Your Digital Warehouse
 
 {class="list-decimal pl-6 mb-3 space-y-2"}
-1. <strong>Device storage</strong>: The core zone,fast, and where the system and apps live. This is your phone's most precious space, so spend it wisely.
-2. <strong>SD card (if supported)</strong>: An extra closet:slower, but good for large files like movies and photos. Note: many flagship phones no longer support SD cards.
+1. <strong>Device storage</strong>: The core zone, fast, and where the system and apps live. This is your phone's most precious space, so spend it wisely.
+2. <strong>SD card (if supported)</strong>: An extra closet: slower, but good for large files like movies and photos. Note: many flagship phones no longer support SD cards.
 3. <strong>Cloud storage</strong>: A safe + sync drive. Prevents loss and syncs across multiple devices. iCloud, Baidu Netdisk, and OneDrive are common choices.
 
 #### II. Understanding the "File Manager"
@@ -31,7 +31,7 @@ Android usually has a [Files] or [File Manager] app, while iOS has the built-in 
 - <strong>Music</strong>: Music files.
 - <strong>Movies</strong>: Video files.
 - <strong>Documents</strong>: Document files.
-- <strong>Android</strong>: Android system folder containing data for each app:generally do not delete manually.
+- <strong>Android</strong>: Android system folder containing data for each app: generally do not delete manually.
 
 #### III. File System Structure: A Deeper Look
 
@@ -39,7 +39,7 @@ Android is based on Linux, so its file system has a hierarchical structure. Whil
 
 ##### Storage partitions:
 
-- <strong>/system</strong>: System partition, storing operating system files. Ordinary users have no access,root permission is required.
+- <strong>/system</strong>: System partition, storing operating system files. Ordinary users have no access, root permission is required.
 - <strong>/data</strong>: Data partition, storing user data and app data. This is the space you use day to day.
 - <strong>/sdcard or /storage/emulated/0</strong>: User-accessible storage, where your photos and downloads live.
 
@@ -50,7 +50,7 @@ Android is based on Linux, so its file system has a hierarchical structure. Whil
 
 #### IV. Data Backup and Recovery: Insure Your Data
 
-Data is priceless,backup is a habit you must build.
+Data is priceless, backup is a habit you must build.
 
 ##### Backup strategies:
 
@@ -68,20 +68,20 @@ Data is priceless,backup is a habit you must build.
 #### V. File Security: Protect Your Privacy
 
 - <strong>Encrypt sensitive files</strong>: Many phones have a "Secure Folder" or "Private Space" feature. You can place sensitive files inside them, and they require a password or fingerprint to access.
-- <strong>Deleting ≠ destroying</strong>: Ordinary deletion only marks the space as available to overwrite,the data is still there. To truly delete, use dedicated secure erasure tools or overwrite multiple times.
+- <strong>Deleting ≠ destroying</strong>: Ordinary deletion only marks the space as available to overwrite, the data is still there. To truly delete, use dedicated secure erasure tools or overwrite multiple times.
 - <strong>Cloud security</strong>: Choose reputable cloud providers, enable two-factor authentication, and regularly review logged-in devices.
 
 #### VI. Out of Space? Time for a Deep Clean
 
-- <strong>Clear cache</strong>: Apps' temporary memory:clearing it frees up space. You can do this in Settings &gt; Storage.
+- <strong>Clear cache</strong>: Apps' temporary memory: clearing it frees up space. You can do this in Settings &gt; Storage.
 - <strong>Find large files</strong>: Use the file manager to sort by size and catch the "culprits" hogging space.
-- <strong>Delete leftovers</strong>: After uninstalling apps, junk files are sometimes left behind,clean them up manually.
+- <strong>Delete leftovers</strong>: After uninstalling apps, junk files are sometimes left behind, clean them up manually.
 - <strong>Clean up albums</strong>: Delete duplicate photos, blurry photos, and unneeded screenshots.
-- <strong>Clean up WeChat</strong>: WeChat is a space hog,regularly cleaning chat history and cache is essential.
+- <strong>Clean up WeChat</strong>: WeChat is a space hog, regularly cleaning chat history and cache is essential.
 
 #### VII. Complete Guide to Common File Formats
 
-All those file extensions on your phone can be dizzying,understanding them helps you manage files better:
+All those file extensions on your phone can be dizzying, understanding them helps you manage files better:
 
 ::: div .overflow-x-auto
 ```html
@@ -212,7 +212,7 @@ In the previous section we learned to "recognize folders," but recognition alone
 {class="font-semibold mt-4 mb-1"}
 ##### 1. File Classification and Naming Conventions
 
-The root of chaos is the lack of rules. Establishing rules is actually simple,the key is <strong>persistence</strong>.
+The root of chaos is the lack of rules. Establishing rules is actually simple, the key is <strong>persistence</strong>.
 
 ```html
 <ul class="list-disc pl-6 mb-3 space-y-2">
@@ -237,18 +237,18 @@ Pick a free weekend and follow these steps in order:
 
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. Create a work folder for this month in the file manager in the form <code>2026Q2_ProjectA</code> ;
-2. Go through all the files from this week in the "Downloads" folder,keep the useful ones, archive them, and delete the useless ones;
+2. Go through all the files from this week in the "Downloads" folder, keep the useful ones, archive them, and delete the useless ones;
 3. Create annual folders like <code>2025_Family</code> and <code>2026_Family</code> for this year's family photos
 :::
 
 {class="font-semibold mt-4 mb-1"}
 ##### 2. Redundant File Handling Strategies
 
-Phones "gain weight" over time,mostly because of redundant files.
+Phones "gain weight" over time, mostly because of redundant files.
 
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>72-hour auto-cleanup</strong>: Temporary files received by social apps like WeChat and QQ (stickers, chat images, short videos) are usually useless after one view. In [WeChat] &gt; [Settings] &gt; [General] &gt; [Storage], turn on "Auto Cleanup" and set the cache expiration to 72 hours. Your phone will feel instantly lighter, and you won't lose important records.
-- <strong>Targeted storage cleanup</strong>: Android [Settings] &gt; [Storage] &gt; [Cleanup], iOS [Settings] &gt; [General] &gt; [iPhone Storage],the system will list items by category: cache / temporary files / uninstallable apps / large files. Focus on: ① cache files; ② expired installation packages (old versions left after app upgrades); ③ duplicate files (photos with the same name and size).
+- <strong>Targeted storage cleanup</strong>: Android [Settings] &gt; [Storage] &gt; [Cleanup], iOS [Settings] &gt; [General] &gt; [iPhone Storage], the system will list items by category: cache / temporary files / uninstallable apps / large files. Focus on: ① cache files; ② expired installation packages (old versions left after app upgrades); ③ duplicate files (photos with the same name and size).
 - <strong>Auto-classification rules</strong>: Most brand album apps support smart classification: people, scenery, documents, screenshots. Once enabled, a newly taken group photo will be automatically filed under "People &gt; Zhang San," and a scanned contract under "Documents."<strong>Combined with monthly organizing, this greatly reduces the chance of "not being able to find things."</strong>.
 
 {class="font-semibold mt-4 mb-1"}
@@ -262,7 +262,7 @@ Mask visible information
 
 {class="list-decimal pl-6 mt-1 space-y-1 text-sm"}
 1. <strong>: Use the built-in or third-party tools (such as Meitu XiuXiu, Snapseed) to</strong> redact the middle digits of ID numbers, license plates, house numbers, names, amounts <strong>, and other key fields;</strong> Strip metadata
-2. <strong>: Before sending, tap "Share" or "Export" in the album:the system will ask whether to keep location info,choose</strong>"Don't Keep."<strong>This way the shooting device model, GPS coordinates, and shooting time won't be sent along with the image;</strong> Temporary watermark
+2. <strong>: Before sending, tap "Share" or "Export" in the album: the system will ask whether to keep location info, choose</strong>"Don't Keep."<strong>This way the shooting device model, GPS coordinates, and shooting time won't be sent along with the image;</strong> Temporary watermark
 3. <strong>(optional): Add a text watermark like "For XX processing only" on sensitive screenshots to prevent misuse.</strong> Common methods for metadata (EXIF) cleanup:
 :::
 

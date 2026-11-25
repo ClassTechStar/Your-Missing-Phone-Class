@@ -18,7 +18,7 @@ kind: appendix
 #### 2. Activation & Initial Setup "Key Reminders":
 
 - <strong>: Turn on "Find My Phone" and set a reliable lock screen password.</strong> eSIM Setup
-- <strong>: If your phone supports eSIM (e.g., iPhone, some Android flagships), you can add an eSIM plan in Settings without inserting a physical SIM card. eSIM is especially convenient when traveling abroad,you can directly purchase a local carrier's eSIM plan.</strong> Data Migration
+- <strong>: If your phone supports eSIM (e.g., iPhone, some Android flagships), you can add an eSIM plan in Settings without inserting a physical SIM card. eSIM is especially convenient when traveling abroad, you can directly purchase a local carrier's eSIM plan.</strong> Data Migration
 - <strong>: When migrating data from an old phone, ensure both phones have sufficient battery. iPhone uses "Quick Start", Android uses the official device transfer app.</strong>3. Installing Apps "Safety First":
 - <strong>Use Official Stores First</strong>: Apple uses App Store, Android uses the phone's built-in app store
 - <strong>Don't Grant Permissions Carelessly</strong>: When permission requests pop up during installation, think carefully: "Does this app really need this?"

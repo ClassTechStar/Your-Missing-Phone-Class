@@ -30,7 +30,7 @@ The core function of Pure Mode (also called "Protection Mode") is to <strong>blo
 
 ##### 2. Who it's for
 
-- <strong>Elderly users</strong>: Can't tell "official" from "fake" ads,Pure Mode is the most reliable safeguard.
+- <strong>Elderly users</strong>: Can't tell "official" from "fake" ads, Pure Mode is the most reliable safeguard.
 - <strong>Users insensitive to app permissions</strong>: Don't need to install niche apps, beta versions, or foreign-region games.
 - <strong>All users who want to improve device security</strong>: Even for power users, having it on is better than off—if you have a temporary need, just turn it off briefly.
 
@@ -43,7 +43,7 @@ The core function of Pure Mode (also called "Protection Mode") is to <strong>blo
 {class="font-semibold mt-4 mb-1"}
 ##### 4. App Store Security Detection Mechanisms
 
-App stores aren't just for show,there's a complete security pipeline behind them:
+App stores aren't just for show, there's a complete security pipeline behind them:
 
 - <strong>Virus scanning</strong>: Each app is jointly scanned by multiple antivirus engines before listing, to identify known trojan and virus signatures.
 - <strong>Permission review</strong>: The store reviews whether the permissions an app requests are "reasonable"—a flashlight app asking for contacts? Directly rejected or delisted.
@@ -67,7 +67,7 @@ This refers to <strong>.</strong>—you think you "saved money," but actually "g
 - So-called "internal versions" of apps recommended by "small ads" in group chats
 
 {class="mt-2"}
-These programs appear usable, but behind the scenes they may be <strong>stealing contacts, reading SMS, eavesdropping on the microphone, mining in the background</strong>. Pure Mode is the <strong>first line of defense</strong> against them,simply not letting you install them.
+These programs appear usable, but behind the scenes they may be <strong>stealing contacts, reading SMS, eavesdropping on the microphone, mining in the background</strong>. Pure Mode is the <strong>first line of defense</strong> against them, simply not letting you install them.
 :::
 
 ##### Second line of defense recommendations:

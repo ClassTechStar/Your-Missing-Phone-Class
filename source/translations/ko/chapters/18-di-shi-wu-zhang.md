@@ -106,7 +106,7 @@ GaN 충전기——출장족의 좋은 파트너
 
 <strong>화웨이 SuperCharge</strong>——고압 고속 충전의 진화
 
-- <strong>FCP(Fast Charge Protocol)</strong>:9V/2A,18W,호환QC 2.0.
+- <strong>FCP(Fast Charge Protocol)</strong>:9V/2A,18W, 호환QC 2.0.
 - <strong>SCP(Super Charge Protocol)</strong>: 더 높은 출력 지원, 22.5W에서 66W를 거쳐 100W까지.
 - <strong>기술 특징</strong>: 전하 펌프 기술 채택, 고압을 저압 대전류로 변환해 배터리에 입력, 효율 98% 달성.
 - <strong>호환성</strong>: 화웨이/보영 스마트폰 전용, 일부 충전기는 PD 프로토콜 지원.

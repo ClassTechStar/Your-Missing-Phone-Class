@@ -91,7 +91,7 @@ Dalam kebanyakan senario permulaan, telefon itulah "hab rumah" anda - mengawal l
 Mari cuba: bina "Mod Pulang"
 
 {class="mt-1"}
-Dalam bahagian "Automasi" aplikasi rumah pintar telefon anda, cipta satu yang baharu: pilih syarat pencetus "sampai ke sesuatu lokasi" (rumah), kemudian tambahkan tindakan satu demi satu "nyalakan lampu lobi" "tetapkan penghawa dingin 26 darjah" "tutup langsir". Selepas simpan, keluar berjalan sebentar dan pulang untuk melihat sama ada lampu menyala dengan sendirinya - rasa berjaya kali pertama itu lebih mengujakan dari,pada membeli peranti baharu.
+Dalam bahagian "Automasi" aplikasi rumah pintar telefon anda, cipta satu yang baharu: pilih syarat pencetus "sampai ke sesuatu lokasi" (rumah), kemudian tambahkan tindakan satu demi satu "nyalakan lampu lobi" "tetapkan penghawa dingin 26 darjah" "tutup langsir". Selepas simpan, keluar berjalan sebentar dan pulang untuk melihat sama ada lampu menyala dengan sendirinya - rasa berjaya kali pertama itu lebih mengujakan dari, pada membeli peranti baharu.
 :::
 
 #### 4. Cadangan set permulaan

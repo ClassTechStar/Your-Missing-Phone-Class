@@ -391,7 +391,7 @@ Skema langganan model dalam negeri (Tiongkok) sedikit berbeda. DeepSeek terutama
 
 ##### 3. Platform Agregator API
 
-Jika kamu perlu memakai beberapa model sekaligus, platform agregator API adalah pilihan yang praktis. Platform agregator memberikan satu API Key terpadu se,hingga kamu bisa memanggil puluhan model dari seluruh dunia tanpa harus mendaftar di tiap platform.
+Jika kamu perlu memakai beberapa model sekaligus, platform agregator API adalah pilihan yang praktis. Platform agregator memberikan satu API Key terpadu se, hingga kamu bisa memanggil puluhan model dari seluruh dunia tanpa harus mendaftar di tiap platform.
 
 ::: div .overflow-x-auto
 ```html
@@ -407,7 +407,7 @@ Platform agregator API populer (Agustus 2026)
 Peringatan jebakan: jangan beli "Key bersama"
 
 {class="mt-1"}
-Jangan membeli yang namanya "API Key bersama" di platform seperti Taobao atau Xianyu,Key semacam ini biasanya berasal dari sumber yang tidak jelas, bisa kapan saja diblokir, dan berisiko membocorkan data. Selalu dapatkan API Key melalui platform resmi atau platform agregator yang kredibel.
+Jangan membeli yang namanya "API Key bersama" di platform seperti Taobao atau Xianyu, Key semacam ini biasanya berasal dari sumber yang tidak jelas, bisa kapan saja diblokir, dan berisiko membocorkan data. Selalu dapatkan API Key melalui platform resmi atau platform agregator yang kredibel.
 :::
 
 ##### 4. Strategi optimasi biaya
@@ -415,7 +415,7 @@ Jangan membeli yang namanya "API Key bersama" di platform seperti Taobao atau Xi
 Memilih model yang tepat hanyalah langkah pertama; cara "memakainya secara hemat" sama pentingnya. Berikut beberapa strategi optimasi biaya yang sudah teruji di praktik:
 
 1. Manfaatkan cache hit. Banyak model menyediakan fitur "cache":ketika permintaanmu memuat konten yang sudah pernah diproses sebelumnya (seperti system prompt), bagian itu hanya ditagih dengan harga sangat rendah. Harga cache hit DeepSeek hanya 1/60 dari harga normal. Letakkan system prompt yang tetap di awal daftar pesan agar cache hit maksimal.
-2. Routing berjenjang,pakai model murah untuk tugas sederhana dan model mahal untuk tugas kompleks. Misalnya, pakai DeepSeek V4 Flash untuk klasifikasi teks (output 2 yuan/juta token) dan Claude untuk desain arsitektur (output 181 yuan/juta token). Sekitar 80% panggilan dalam satu proyek bisa memakai model murah.
+2. Routing berjenjang, pakai model murah untuk tugas sederhana dan model mahal untuk tugas kompleks. Misalnya, pakai DeepSeek V4 Flash untuk klasifikasi teks (output 2 yuan/juta token) dan Claude untuk desain arsitektur (output 181 yuan/juta token). Sekitar 80% panggilan dalam satu proyek bisa memakai model murah.
 3. Batasi panjang output. API ditagih berdasarkan token output; semakin panjang, semakin mahal. Pada skenario yang tidak butuh penjelasan panjang lebar, atur parameter max_tokens untuk membatasi panjang output agar AI tidak "terlalu banyak basa-basi".
 4. Gunakan Batch API untuk tugas non-real-time. Jika kamu punya banyak tugas yang tidak butuh respons seketika (misalnya pelabelan data massal atau ringkasan dokumen), Batch API memberikan diskon 50%. OpenAI dan Azure sama-sama menyediakan fitur ini.
 5. Pantau pemakaian token. Sebagian besar platform API menyediakan dasbor statistik pemakaian. Periksa berkala distribusi pemakaiannya, cari panggilan yang paling boros token, lalu optimalkan secara terarah. Satu penyesuaian kecil pada prompt (misalnya mengganti "jelaskan ,secara rinci" dengan "jelaskan dalam 3 kalimat") bisa menghemat 50% token.
@@ -431,7 +431,7 @@ Strategi optimasi biaya dan hasilnya (Agustus 2026)
 
 #### 6. Praktik: menghubungkan API model besar ke proyek
 
-Mari akhiri bab ini dengan satu praktik lengkap,membuat "Generator Ringkasan AI": pengguna memasukkan sepotong teks panjang, lalu program memanggil API model besar untuk menghasilkan ringkasan. Praktik ini memperlihatkan alur lengkap pemanggilan API: konfigurasi lingkungan, pemanggilan API, penanganan error, dan kontrol biaya.
+Mari akhiri bab ini dengan satu praktik lengkap, membuat "Generator Ringkasan AI": pengguna memasukkan sepotong teks panjang, lalu program memanggil API model besar untuk menghasilkan ringkasan. Praktik ini memperlihatkan alur lengkap pemanggilan API: konfigurasi lingkungan, pemanggilan API, penanganan error, dan kontrol biaya.
 
 ::: div .code-block
 :::inline div .code-head
@@ -511,10 +511,10 @@ if __name__ == "__main__":
 ```
 :::
 
-Kode ini mencerminkan beberapa praktik terbaik pemanggilan API: API Key dibaca lewat environment variable, tidak pernah ditulis langsung di dalam kode; fungsi dilengkapi dokumentasi dan type hint yang jelas; max_tokens diatur untuk membatasi panjang output; temperature diatur rendah (0.3) agar output lebih stabil; penanganan error lengkap; dan informasi konsumsi token dikembalikan untuk pelacakan biaya. Saat kamu memakai AI untuk menulis kode ini, sampaikan saja persyaratan-persyaratan tersebut,AI sepenuhnya mampu mewujudkannya untukmu.
+Kode ini mencerminkan beberapa praktik terbaik pemanggilan API: API Key dibaca lewat environment variable, tidak pernah ditulis langsung di dalam kode; fungsi dilengkapi dokumentasi dan type hint yang jelas; max_tokens diatur untuk membatasi panjang output; temperature diatur rendah (0.3) agar output lebih stabil; penanganan error lengkap; dan informasi konsumsi token dikembalikan untuk pelacakan biaya. Saat kamu memakai AI untuk menulis kode ini, sampaikan saja persyaratan-persyaratan tersebut, AI sepenuhnya mampu mewujudkannya untukmu.
 
 :::inline div .quote-line
-Pelajaran terakhir bab ini: model adalah "amunisi", metodologi adalah "taktik". Memilih amunisi yang tepat membuat pertempuran lebih lancar, tetapi tanpa taktik yang baik, amunisi sebanyak apa pun tak akan menang. Setelah mengenal karakter tiap model dan cara memakai API, Anda punya "gudang amunisi" yang cukup,tetapi bagaimana memenangkan pertempurannya tetap bergantung pada metodologi berpikir yang dipelajari di bab-bab sebelumnya.
+Pelajaran terakhir bab ini: model adalah "amunisi", metodologi adalah "taktik". Memilih amunisi yang tepat membuat pertempuran lebih lancar, tetapi tanpa taktik yang baik, amunisi sebanyak apa pun tak akan menang. Setelah mengenal karakter tiap model dan cara memakai API, Anda punya "gudang amunisi" yang cukup, tetapi bagaimana memenangkan pertempurannya tetap bergantung pada metodologi berpikir yang dipelajari di bab-bab sebelumnya.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -522,7 +522,7 @@ Pelajaran terakhir bab ini: model adalah "amunisi", metodologi adalah "taktik". 
 Mari praktik: buat panggilan API pertamamu berhasil
 
 {class="mt-1"}
-Daftar di satu platform model dalam negeri (disarankan DeepSeek atau Zhipu,keduanya memberi kuota gratis bagi pengguna baru), buat API Key, tuliskan ke environment variable sistem (bukan ke dalam kode!), lalu jalankan kode "panggilan API pertama" di atas. Pada saat jawaban AI berhasil tercetak, kamu sudah melewati garis batas antara "memakai AI" dan "membangun aplikasi AI".
+Daftar di satu platform model dalam negeri (disarankan DeepSeek atau Zhipu, keduanya memberi kuota gratis bagi pengguna baru), buat API Key, tuliskan ke environment variable sistem (bukan ke dalam kode!), lalu jalankan kode "panggilan API pertama" di atas. Pada saat jawaban AI berhasil tercetak, kamu sudah melewati garis batas antara "memakai AI" dan "membangun aplikasi AI".
 :::
 
 ::: div .chapter-summary

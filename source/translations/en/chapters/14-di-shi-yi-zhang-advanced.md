@@ -71,7 +71,7 @@ Bitrate determines the data density of video, expressed in data per second (Mbps
 
 - <strong>Characteristics</strong>: Combines the advantages of ProRes and RAW formats.
 - <strong>What is RAW</strong>: Unprocessed raw sensor data, preserving maximum information.
-- <strong>Pros</strong>: Huge room for post adjustment,exposure, white balance, and other parameters can be changed without any quality loss.
+- <strong>Pros</strong>: Huge room for post adjustment, exposure, white balance, and other parameters can be changed without any quality loss.
 - <strong>Cons</strong>: Extremely huge files, requiring professional post-production software to process.
 - <strong>Applicable scenarios</strong>: High-end professional production. iPhone 15 Pro series and later support Apple ProRes video recording (up to 4K 60fps), and iPhone 17 Pro further supports ProRes RAW direct in-device recording.
 

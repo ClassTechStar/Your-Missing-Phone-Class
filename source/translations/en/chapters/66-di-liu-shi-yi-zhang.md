@@ -51,7 +51,7 @@ Common basic types in Swift
 Tip: The let-First Principle
 
 {class="mt-1"}
-An iron rule of the Swift community: use let by default, and only use var when it's truly necessary. If you use var where let would do, Xcode will warn you with yellow text. This habit saves you from a whole family of "variable got changed by accident" bugs,the less your code changes, the easier it is to reason about.
+An iron rule of the Swift community: use let by default, and only use var when it's truly necessary. If you use var where let would do, Xcode will warn you with yellow text. This habit saves you from a whole family of "variable got changed by accident" bugs, the less your code changes, the easier it is to reason about.
 :::
 
 #### 2. Optionals: Swift's "Anti-Crash Charm"
@@ -116,7 +116,7 @@ let big = numbers.filter { $0 > 2 } // filter
 ```
 :::
 
-Closures are everywhere in SwiftUI: the braces after Button("Tap me") { ... } are a closure. Please commit these "collection combo moves" to memory:map, filter, and sorted,because 90% of the list handling you'll ever do is just combinations of them.
+Closures are everywhere in SwiftUI: the braces after Button("Tap me") { ... } are a closure. Please commit these "collection combo moves" to memory: map, filter, and sorted, because 90% of the list handling you'll ever do is just combinations of them.
 
 #### 4. Structs and Protocols: Swift's "LEGO" System
 
@@ -147,7 +147,7 @@ struct Record: Identifiable { ... } // conforming to a protocol = promising to f
 ```
 :::
 
-Almost everything in SwiftUI is a struct (View is a protocol). It's fine if that sentence doesn't click yet:you'll run into it every day in Chapter 62. In the world of Swift, embrace the struct first.
+Almost everything in SwiftUI is a struct (View is a protocol). It's fine if that sentence doesn't click yet: you'll run into it every day in Chapter 62. In the world of Swift, embrace the struct first.
 
 #### 5. A Syntax Cheat Sheet for Absolute Beginners
 
@@ -173,7 +173,7 @@ If you have a Mac, open Xcode > Playground; if not, use Swift Playgrounds on the
 Chapter summary
 
 - let first, var with care; types are inferred automatically, but you can also declare them explicitly after a colon
-- Optionals are the soul of Swift: if a value might be missing, you must handle it:if let / ?? are your protective charm, and ! is a high-risk move
+- Optionals are the soul of Swift: if a value might be missing, you must handle it: if let / ?? are your protective charm, and ! is a high-risk move
 - Function calls carry argument names; a closure = a function without a name, and they're everywhere in SwiftUI
 - Prefer structs and conform to protocols; almost everything in SwiftUI is a struct
 - 20% of the syntax does 80% of the work: learn to use it first, master it later

@@ -118,7 +118,7 @@ Gambar 5: Enam langkah menerbitkan ke App Store
 Halaman toko adalah etalase yang dilihat pengguna saat "berkunjung". Tiga aset menentukan kesan pertama:
 
 - Ikon: 1024×1024, jangan asal pakai tangkapan layar. Kalau tidak punya kemampuan desain, buat grafis sederhana dengan alat AI; baru dianggap layak jika tetap mudah dikenali sekali lihat setelah diperkecil di layar utama;
-- Tangkapan layar: minimal 2 set (ukuran utama iPhone), memperlihatkan skenario fitur paling inti; setiap gambar diberi satu kalimat caption berbahasa manusia ("Catat dalam sekejap" sepuluh kali lebih baik dari,pada "Solusi pencatatan keuangan yang efisien");
+- Tangkapan layar: minimal 2 set (ukuran utama iPhone), memperlihatkan skenario fitur paling inti; setiap gambar diberi satu kalimat caption berbahasa manusia ("Catat dalam sekejap" sepuluh kali lebih baik dari, pada "Solusi pencatatan keuangan yang efisien");
 - Deskripsi: kalimat pertama menjelaskan dengan jelas "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat", kejujuran lebih efektif daripada bombastis
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

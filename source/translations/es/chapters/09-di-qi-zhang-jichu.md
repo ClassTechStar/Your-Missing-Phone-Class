@@ -74,7 +74,7 @@ La detección de accidentes usa los sensores del teléfono para detectar acciden
 
 ##### Principio de funcionamiento:
 
-El teléfono combina varios sensores,acelerómetro, giroscopio, barómetro, micrófono, para determinar si se ha producido una colisión grave. Al detectar un accidente, el teléfono:
+El teléfono combina varios sensores, acelerómetro, giroscopio, barómetro, micrófono, para determinar si se ha producido una colisión grave. Al detectar un accidente, el teléfono:
 
 1. Muestra una cuenta atrás y pregunta si estás bien.
 2. Si no respondes cuando termina la cuenta atrás, llama automáticamente al teléfono de emergencia.

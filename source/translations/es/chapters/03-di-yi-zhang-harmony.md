@@ -21,7 +21,7 @@ Un ejemplo: estás viendo un video en el móvil y quieres verlo en pantalla gran
 
 #### 2. HarmonyOS 4.3: versión madura basada en AOSP
 
-HarmonyOS 4.3 es la versión ampliamente desplegada actualmente en móviles Huawei. Cabe señalar que HarmonyOS 4.3 es compatible con el marco de código del proyecto de código abierto Android (AOSP), por lo que puede ser totalmente compatible con aplicaciones Android,la mayoría de las Apps que descargas de la AppGallery de Huawei son esencialmente aplicaciones Android, ejecutadas a través de la capa de compatibilidad de HarmonyOS. Pero HarmonyOS 4.3 no es simplemente un Android recubierto, sobre AOSP añade muchas capacidades distribuidas auto-desarrolladas por Huawei, el motor Ark, etc.
+HarmonyOS 4.3 es la versión ampliamente desplegada actualmente en móviles Huawei. Cabe señalar que HarmonyOS 4.3 es compatible con el marco de código del proyecto de código abierto Android (AOSP), por lo que puede ser totalmente compatible con aplicaciones Android, la mayoría de las Apps que descargas de la AppGallery de Huawei son esencialmente aplicaciones Android, ejecutadas a través de la capa de compatibilidad de HarmonyOS. Pero HarmonyOS 4.3 no es simplemente un Android recubierto, sobre AOSP añade muchas capacidades distribuidas auto-desarrolladas por Huawei, el motor Ark, etc.
 
 ##### Características principales:
 
@@ -41,7 +41,7 @@ HarmonyOS 4.3 es la versión ampliamente desplegada actualmente en móviles Huaw
 
 3. HarmonyOS NEXT (HarmonyOS 6): el verdadero punto de partida del sistema operativo autónomo de Huawei
 
-HarmonyOS NEXT (HarmonyOS NEXT 5.0) tiene una diferencia fundamental con HarmonyOS 4.3,adopta el microkernel HarmonyOS auto-desarrollado por Huawei, ya no depende del kernel Linux ni del código AOSP, y <strong>ya no soporta directamente aplicaciones Android</strong>. Este es el paso clave de HarmonyOS de "forma tránsitoria compatible con Android" a "sistema operativo completamente independiente".
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) tiene una diferencia fundamental con HarmonyOS 4.3, adopta el microkernel HarmonyOS auto-desarrollado por Huawei, ya no depende del kernel Linux ni del código AOSP, y <strong>ya no soporta directamente aplicaciones Android</strong>. Este es el paso clave de HarmonyOS de "forma tránsitoria compatible con Android" a "sistema operativo completamente independiente".
 
 ##### Cambios importantes:
 

@@ -16,7 +16,7 @@ Sebelum menjelajah secara resmi, mari kita bahas beberapa aturan dasar dulu, unt
 
 Buku ini bisa membantu Anda memahami secara sistematis cara menggunakan ponsel, memahami alasan di balik fitur-fiturnya, dan baik Anda pengguna Android maupun Apple, sebagian besar konsepnya berlaku umum. Buku ini akan mengajak Anda berlatih langsung, meningkatkan Anda dari "bisa menggunakan" menjadi "memahami penggunaan".
 
-Buku ini bukan manual untuk ponsel tertentu, juga bukan berita teknologi tentang produk terbaru, apalagi panduan untuk membuat Anda kecanduan ponsel. Sejujurnya, jika yang Anda harapkan adalah "cara menonton video di ponsel dengan lebih nikmat", Anda mungkin akan kecewa,kami lebih peduli pada cara membuat ponsel benar-benar melayani Anda, bukan sebaliknya.
+Buku ini bukan manual untuk ponsel tertentu, juga bukan berita teknologi tentang produk terbaru, apalagi panduan untuk membuat Anda kecanduan ponsel. Sejujurnya, jika yang Anda harapkan adalah "cara menonton video di ponsel dengan lebih nikmat", Anda mungkin akan kecewa, kami lebih peduli pada cara membuat ponsel benar-benar melayani Anda, bukan sebaliknya.
 
 #### 2. Penjelasan "kode rahasia" kami
 
@@ -83,5 +83,5 @@ Jika ponsel hilang atau rusak, yang Anda hilang bukan hanya perangkat keras seni
 Sama seperti menjaga kesehatan tidak bisa menunggu sakit baru ke dokter,<strong>manajemen ponsel juga harus dimulai dari "kebiasaan harian"</strong>. Yang ditekankan berulang-ulang dalam buku ini bukan teknik tingkat lanjut tertentu, melainkan prinsip-prinsip sederhana ini:
 
 - <strong>Pencegahan utama</strong>: Instal aplikasi hanya dari toko resmi, hilangkan informasi sensitif foto sebelum dikirim, jangan gunakan kata sandi yang sama berulang,"tindakan kecil" ini biayanya sangat rendah, tapi bisa menangkal sebagian besar risiko.
-- <strong>Pemeriksaan berkala</strong>: Atur folder unduhan sebulan sekali, audit izin sekali per kuartal, cadangan penuh sekali per enam bulan,ritme tetap jauh lebih efektif daripada pemadam kebakaran sesaat.
+- <strong>Pemeriksaan berkala</strong>: Atur folder unduhan sebulan sekali, audit izin sekali per kuartal, cadangan penuh sekali per enam bulan, ritme tetap jauh lebih efektif daripada pemadam kebakaran sesaat.
 - <strong>Sisakan jalan mundur</strong>: Aktifkan sinkronisasi cloud, catat akun dan kata sandi dengan baik, tulis sebuah "daftar warisan digital",pastikan ketika kejadian tak terduga terjadi, Anda dan keluarga bisa menghadapinya dengan tenang.

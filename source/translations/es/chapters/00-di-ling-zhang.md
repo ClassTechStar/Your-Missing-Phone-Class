@@ -82,6 +82,6 @@ Si pierdes o se rompe el móvil, no solo pierdes hardware de varios miles,<stron
 
 Como cuidar la salud no puede esperar a enfermarse para ver al médico,<strong>la gestión del móvil también debe empezar por los "hábitos diarios"</strong>. Lo que este libro enfatiza repetidamente no es una técnica avanzada concreta, sino estos principios sencillos:
 
-- <strong>Prevención ante todo</strong>: instalar Apps solo desde tiendas oficiales, desensibilizar fotos antes de enviarlas, no repetir contraseñas:estos "pequeños gestos" tienen un coste bajísimo, pero bloquean la mayoría de los riesgos.
+- <strong>Prevención ante todo</strong>: instalar Apps solo desde tiendas oficiales, desensibilizar fotos antes de enviarlas, no repetir contraseñas: estos "pequeños gestos" tienen un coste bajísimo, pero bloquean la mayoría de los riesgos.
 - <strong>Revisión periódica</strong>: organizar la carpeta de descargas una vez al mes, auditoría de permisos cada trimestre, copia de seguridad completa cada semestre—un ritmo fijo es cien veces más efectivo que apagar fuegos.
 - <strong>Dejar una salida</strong>: activar la sincronización en la nube, anotar bien las cuentas y contraseñas, escribir una "lista de legado digital",para asegurar que cuando ocurra algo imprevisto, tú y tu familia puedan manejarlo con calma.

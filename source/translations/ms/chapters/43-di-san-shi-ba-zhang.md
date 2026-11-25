@@ -46,7 +46,7 @@ Perbandingan input kabur dan input jelas bagi keperluan yang sama
 Perhatian: berfikir dahulu bukan bermakna menulis dokumen sempurna dahulu
 
 {class="mt-1"}
-"Berfikir dahulu" tidak sama dengan "tulis satu PRD yang sempurna dahulu baru bermula". Ia satu proses berfikir yang pantas tetapi tersusun - meluangkan 30 saat memikirkan tiga soalan di atas dengan jelas jauh lebih cekap dari,pada meluangkan 30 minit membaiki berulang kali dalam perbualan. Untuk tugas kecil, tiga soalan itu boleh jadi sangat ringkas; untuk projek besar, ia boleh dikembangkan menjadi dokumen keperluan lengkap (lihat Bab 40 untuk butiran).
+"Berfikir dahulu" tidak sama dengan "tulis satu PRD yang sempurna dahulu baru bermula". Ia satu proses berfikir yang pantas tetapi tersusun - meluangkan 30 saat memikirkan tiga soalan di atas dengan jelas jauh lebih cekap dari, pada meluangkan 30 minit membaiki berulang kali dalam perbualan. Untuk tugas kecil, tiga soalan itu boleh jadi sangat ringkas; untuk projek besar, ia boleh dikembangkan menjadi dokumen keperluan lengkap (lihat Bab 40 untuk butiran).
 :::
 
 #### 2. Prinsip dua: Simplicity First (utamakan kesederhanaan)
@@ -93,7 +93,7 @@ Bantu saya optimumkan logik pengiraan diskaun projek ini
 Arahan yang baik (skop dinyatakan dengan tepat)
 
 {class="font-mono text-xs leading-relaxed"}
-Hanya pinda fungsi calculate_discount dalam cart.py:mboleh ubah sedia ada
+Hanya pinda fungsi calculate_discount dalam cart.py: mboleh ubah sedia ada
 1. Tambahkan logik harga ahli di atas diskaun sedia ada
 2. Pengguna ahli menikmati diskaun tambahan 10%
 3. Jangan pinda tandatangan fungsi dan fungsi lain

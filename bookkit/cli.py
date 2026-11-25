@@ -101,8 +101,10 @@ def build_parser() -> argparse.ArgumentParser:
     ex.add_argument("--dry-run", action="store_true", help="只解析不写盘")
     ex.add_argument("--no-strict", action="store_true", help="跳过字节级往返断言（翻译反解用；提取按树位置，不受序列化差异影响）")
 
-    i18 = common(sub.add_parser("i18n", help="翻译覆盖率报告"), fail_default="never")
+    i18 = common(sub.add_parser("i18n", help="翻译覆盖率报告与译文标点门禁"), fail_default="never")
     i18.add_argument("--report", type=Path, default=None, help="报告输出路径（Markdown）")
+    i18.add_argument("--check-spacing", action="store_true",
+                     help="检查译文中 ASCII 标点后缺空格（配合 --fail-on error 做 CI 门禁）")
 
     tm = common(sub.add_parser("tm", help="翻译记忆库：build（构建）/ report（增量待译导出）/ import（译文合并）"))
     tm.add_argument("action", choices=["build", "report", "import"])
@@ -238,6 +240,14 @@ def main(argv=None) -> int:
         issues = I.issues(mf)
         if issues:
             print(f"-- 缺章告警：{len(issues)} 条（详见报告）")
+        if args.check_spacing:
+            defects = I.spacing_defects(mf.root)
+            for d in defects[:40]:
+                print(f"  [{d['lang']}] {d['file']}:{d['line']}: "
+                      f"{d['punct']} 后缺空格 → {d['token']}")
+            print(f"-- 译文标点空格：{len(defects)} 处"
+                  + ("（全部通过）" if not defects else "（运行 scripts/fix_i18n_spacing.py --apply 修复）"))
+            issues += I.spacing_issues(mf.root)
 
     elif args.cmd == "quick":
         from . import quick as Q

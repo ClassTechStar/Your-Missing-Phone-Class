@@ -10,15 +10,15 @@ kind: chapter
 ### Chapter 66: Project 2—Weather App (the Networked Version)
 
 {class="chapter-intro mb-4"}
-The expense tracker was "internal training"; the weather app is "seeing the world",it has to deal with the internet. In this project you'll learn: how to apply for a free API, parse JSON, handle the three UI states of "loading/success/failure," and how to keep an API key safe. Once you finish it, you'll be able to build any "networked app",news, exchange rates, translation,the pattern is exactly the same.
+The expense tracker was "internal training"; the weather app is "seeing the world",it has to deal with the internet. In this project you'll learn: how to apply for a free API, parse JSON, handle the three UI states of "loading/success/failure," and how to keep an API key safe. Once you finish it, you'll be able to build any "networked app",news, exchange rates, translation, the pattern is exactly the same.
 
 #### 1. Apply for a free weather API
 
-For personal practice, we recommend OpenWeatherMap or, in China, QWeather (HeFeng Weather):both have free tiers you can use right after registering. Taking OpenWeatherMap as an example:
+For personal practice, we recommend OpenWeatherMap or, in China, QWeather (HeFeng Weather): both have free tiers you can use right after registering. Taking OpenWeatherMap as an example:
 
 1. Register an account → generate a Key (apikey) on the API keys page;
 2. The free tier can call the Current Weather endpoint: api.openweathermap.org/data/2.5/weather? q=beijing&appid=YOUR_KEY&units=metric;
-3. Try it in a browser first and see what the returned JSON looks like,this "preview" is a must before hooking up any API
+3. Try it in a browser first and see what the returned JSON looks like, this "preview" is a must before hooking up any API
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -106,7 +106,7 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 ```
 :::
 
-This loading/success/error three-part pattern is the "all-purpose template" for networked interfaces,memorize it first, and every networked app you build later can follow the same recipe.
+This loading/success/error three-part pattern is the "all-purpose template" for networked interfaces, memorize it first, and every networked app you build later can follow the same recipe.
 
 #### 4. Hands-on UI code: drawing the weather
 
@@ -153,7 +153,7 @@ A few details worth learning: first? safely grabs the first element (the list ma
 Tip: the quirk with Chinese city names
 
 {class="mt-1"}
-OpenWeatherMap's support for Chinese city names is spotty,searching a Chinese name may return no results while "beijing" works fine. The production-grade approach is to bundle a "city name → English/coordinates" mapping table, or hook up a domestic weather service. At the practice stage, just support pinyin/English city names,don't fight it.
+OpenWeatherMap's support for Chinese city names is spotty, searching a Chinese name may return no results while "beijing" works fine. The production-grade approach is to bundle a "city name → English/coordinates" mapping table, or hook up a domestic weather service. At the practice stage, just support pinyin/English city names, don't fight it.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -164,7 +164,7 @@ Get hands-on: the weather app acceptance checklist
 
 When a networked app misbehaves, nine times out of ten it's "the request wasn't sent right" or "the response wasn't parsed right." Three debugging tools:
 
-1. Print the raw data: print String(data: data, encoding: .utf8) to see the raw JSON,field names and types at a glance, ten times faster than guessing;
+1. Print the raw data: print String(data: data, encoding: .utf8) to see the raw JSON, field names and types at a glance, ten times faster than guessing;
 2. Packet capture tools: the free Proxyman on Mac, or the open-source Charles, can intercept all of the app's requests and responses, letting you see the network layer like an X-ray;
 3. Simulate a weak network: the Simulator menu's Features → Network Link Conditioner can simulate 3G and high latency. Download the tool from the developer website. That surfaces those "spinner spins forever" experience problems
 
@@ -185,8 +185,8 @@ If a request fails the moment it's sent with an "App Transport Security" error, 
 Chapter summary
 
 - Try the API in a browser and understand the JSON before writing code,"previewing" never hurts
-- Hide the API key in an xcconfig:never in the codebase
+- Hide the API key in an xcconfig: never in the codebase
 - Codable models + URLSession async/await: match the fields and the JSON parses automatically
 - The loading/success/error three-state pattern is the Swiss Army knife of networked UIs
-- No connection, empty input, nonexistent city,error handling is the passing grade for a networked app
+- No connection, empty input, nonexistent city, error handling is the passing grade for a networked app
 :::

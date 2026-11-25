@@ -56,13 +56,13 @@ kind: chapter
 - <strong>Samsung DeX</strong>:ναυαρχίδα Λειτουργία.σύνδεση εμφάνιση, .Bluetooth, Σημείωση.
 - <strong>Λειτουργία επιφάνειας εργασίας Huawei</strong>:Mate/Pura σύνδεση εμφάνιση Λειτουργία.,Αρχείο, App.
 - <strong>Motorola Ready For</strong>:Moto ναυαρχίδα, Λειτουργία DeX.
-- <strong>Σενάρια χρήσης</strong>:(Email,),PPT, Βίντεο.Excel επαγγελματικός.
+- <strong>Σενάρια χρήσης</strong>:(Email,), PPT, Βίντεο.Excel επαγγελματικός.
 
 4. Διασύνδεση με αυτοκίνητο — Ο σωστός τρόπος χρήσης κινητού κατά την οδήγηση
 
 ,Πλοήγηση, Μουσική. Σύστημα Οθόνηκεντρικό Λειτουργία,:
 
-- <strong>Apple CarPlay</strong>:iPhone Χρήστης.USB ασύρματο σύνδεση, Οθόνη iPhone:—Πλοήγηση(/),Μουσική, .Siri Φωνή.
+- <strong>Apple CarPlay</strong>:iPhone Χρήστης.USB ασύρματο σύνδεση, Οθόνη iPhone:—Πλοήγηση(/), Μουσική, .Siri Φωνή.
 - <strong>Android Auto</strong>:Χρήστης Λύση.Λειτουργία CarPlay, Google Maps, Spotify.Google περιορισμός, Λειτουργία.
 - <strong>Huawei HiCar</strong>:Λύση. Πλοήγηση Μουσική, Βιντεοκλήση, Λειτουργία.
 - <strong>Baidu CarLife</strong>:Πλατφόρμα Λύση, iOS.Λειτουργία, CarLife.
@@ -101,7 +101,7 @@ kind: chapter
 Σύνοψη κεφαλαίου
 
 {class="list-disc pl-5 text-sm space-y-0.5"}
-- ασύρματο Κασκολήψη οθόνης:AirPlay(),Miracast(),DLNA(Πλατφόρμα)
+- ασύρματο Κασκολήψη οθόνης:AirPlay(), Miracast(), DLNA(Πλατφόρμα)
 - ενσύρματο Κασκολήψη οθόνης Καθυστέρηση, Σενάριο HDMI
 - Samsung DeX / Λειτουργία επιφάνειας εργασίας Huawei μετατρέπουν το κινητό σε υπολογιστή ελαφριάς εργασίας
 - :CarPlay/Android Auto/HiCar/CarLife Λύση

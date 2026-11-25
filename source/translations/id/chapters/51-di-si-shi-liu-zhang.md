@@ -30,7 +30,7 @@ Cara membangun alur kerja kustom berbeda-beda antar alat. Cursor mendukung Rules
 
 #### 3. Pola kolaborasi multi-Agent
 
-Menjelang 2026, kolaborasi multi-Agent mulai menjadi topik yang hangat dibicarakan. Gagasan intinya: jangan hanya memakai satu AI untuk menyelesaikan tugas, melainkan gunakan beberapa AI dengan pembagian tugas berbeda untuk bekerja sama. Misalnya, satu AI menulis kode, satu AI menulis pengujian, satu AI meninjau kode:masing-masing menjalankan tugasnya dan saling memeriksa.
+Menjelang 2026, kolaborasi multi-Agent mulai menjadi topik yang hangat dibicarakan. Gagasan intinya: jangan hanya memakai satu AI untuk menyelesaikan tugas, melainkan gunakan beberapa AI dengan pembagian tugas berbeda untuk bekerja sama. Misalnya, satu AI menulis kode, satu AI menulis pengujian, satu AI meninjau kode: masing-masing menjalankan tugasnya dan saling memeriksa.
 
 Keunggulan kolaborasi multi-Agent terletak pada "pembagian tugas" dan "verifikasi silang": setiap Agent fokus pada bidangnya sehingga kualitas hasilnya lebih tinggi; pemeriksaan silang antar-Agent bisa menemukan masalah yang mungkin terlewat bila dikerjakan sendirian. Tetapi kekurangannya juga jelas: biaya koordinasi tinggi, beban komunikasi besar, dan debugging lebih rumit.
 
@@ -46,20 +46,20 @@ Bagi pengembang perorangan, kamu tidak perlu membangun sistem multi-Agent yang r
 
 Pemrograman AI adalah bidang yang berubah sangat cepat; praktik terbaik hari ini bisa saja perlu diperbarui besok. Berikut beberapa saran untuk belajar terus-menerus:
 
-Pertama, ikuti sumber aslinya, bukan tafsiran orang kedua. Tweet asli Andrej Karpathy dan CLAUDE.md, dokumentasi resmi Anthropic dan OpenAI, catatan pembaruan berbagai alat:semua ini adalah informasi tingkat pertama. Artikel dan tutorial komunitas adalah tafsiran dan ringkasan atas informasi itu; bermanfaat tetapi bisa terdistorsi. Biasakan membaca sumber aslinya.
+Pertama, ikuti sumber aslinya, bukan tafsiran orang kedua. Tweet asli Andrej Karpathy dan CLAUDE.md, dokumentasi resmi Anthropic dan OpenAI, catatan pembaruan berbagai alat: semua ini adalah informasi tingkat pertama. Artikel dan tutorial komunitas adalah tafsiran dan ringkasan atas informasi itu; bermanfaat tetapi bisa terdistorsi. Biasakan membaca sumber aslinya.
 
 Kedua, belajar dipacu praktik. Jangan "selesai belajar baru mengerjakan", melainkan "belajar sambil mengerjakan". Setiap kali menemui tipe masalah baru (misalnya pertama kali menangani unggah berkas, pertama kali terhubung ke API pihak ketiga), jadikan itu kesempatan mempelajari pengetahuan terkait. Efisiensi belajar dalam praktik jauh melampaui teori yang dipelajari lepas dari konteks.
 
-Ketiga, jaga kepekaan terhadap alat tanpa berlebihan mengejar yang baru. Setiap satu-dua bulan, sisihkan setengah hari untuk mengetahui alat dan tren terbaru,tetapi jangan berpindah alat setiap kali ada yang baru. Patokannya: apakah alat baru itu mampu menembus hambatanmu yang signifikan? Kalau tidak, kombinasi sekarang sudah cukup.
+Ketiga, jaga kepekaan terhadap alat tanpa berlebihan mengejar yang baru. Setiap satu-dua bulan, sisihkan setengah hari untuk mengetahui alat dan tren terbaru, tetapi jangan berpindah alat setiap kali ada yang baru. Patokannya: apakah alat baru itu mampu menembus hambatanmu yang signifikan? Kalau tidak, kombinasi sekarang sudah cukup.
 
-Keempat, bangun basis pengetahuan pribadi. Catat setiap percakapan yang berhasil memecahkan masalah rumit, setiap pelajaran dari kesalahan, dan setiap metode yang terbukti efektif. Tidak perlu dipublikasikan,ini "catatan metodologi" milikmu sendiri. Seiring waktu, ia akan menjadi aset paling berhargamu.
+Keempat, bangun basis pengetahuan pribadi. Catat setiap percakapan yang berhasil memecahkan masalah rumit, setiap pelajaran dari kesalahan, dan setiap metode yang terbukti efektif. Tidak perlu dipublikasikan, ini "catatan metodologi" milikmu sendiri. Seiring waktu, ia akan menjadi aset paling berhargamu.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mari praktik: mulai "buku catatan jebakan"
 
 {class="mt-1"}
-Buat satu dokumen hari ini (perangkat lunak catatan atau berkas .md sama saja), tuliskan tiga pelajaran pemrograman AI yang paling ingin kamu ingat sampai hari ini,sekecil apa pun, misalnya "ingat berpikir dulu sebelum bertanya". Ke depan, setiap kali terpeleset atau menemukan trik baru, tambahkan satu catatan. Setengah tahun kemudian saat membacanya kembali, kamu akan berterima kasih kepada dirimu hari ini.
+Buat satu dokumen hari ini (perangkat lunak catatan atau berkas .md sama saja), tuliskan tiga pelajaran pemrograman AI yang paling ingin kamu ingat sampai hari ini, sekecil apa pun, misalnya "ingat berpikir dulu sebelum bertanya". Ke depan, setiap kali terpeleset atau menemukan trik baru, tambahkan satu catatan. Setengah tahun kemudian saat membacanya kembali, kamu akan berterima kasih kepada dirimu hari ini.
 :::
 
 ::: div .chapter-summary

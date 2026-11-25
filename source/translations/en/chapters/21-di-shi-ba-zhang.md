@@ -17,7 +17,7 @@ Stored on app servers, available by re-logging in on a new phone
 In a gray area, requiring special handling
 
 - <strong>: WeChat chat history (although WeChat servers store it, you can't download it from the server yourself), device credentials bound to mobile banking, keys in two-step verification apps (like Google Authenticator).</strong> So what you need to focus on protecting is the first and third categories.
-- <strong>2. Full Phone Backup: Get Everything in One Go</strong> A full phone backup is like taking a complete "snapshot" of your phone:current system settings, home screen layout, app data, photos, contacts, all packaged up.
+- <strong>2. Full Phone Backup: Get Everything in One Go</strong> A full phone backup is like taking a complete "snapshot" of your phone: current system settings, home screen layout, app data, photos, contacts, all packaged up.
 - <strong>Option 1: Local Computer Backup (Most Reliable, Recommended for People with Computers)</strong> iPhone.
 
 : Connect your phone to the computer with a data cable, open iTunes (older Windows version) or Finder (Mac), and select "Back Up Now" on the device page. Note: check "Encrypt backup", otherwise passwords and health data won't be included.
@@ -28,13 +28,13 @@ In a gray area, requiring special handling
 
 ##### The benefit of computer backup is that you don't need to pay for cloud space, and the restore speed is much faster than cloud restore. The downside is that you need to remember to plug in and back up periodically—most people can't manage this.
 
-- <strong>Android</strong>: Each brand's cloud has backup functionality. Huawei phones search "cloud backup" in Settings, Xiaomi goes to "Xiaomi Cloud Service", OPPO/vivo similarly. There's also a Google-built backup (Settings → System → Backup):turn this on too.
+- <strong>Android</strong>: Each brand's cloud has backup functionality. Huawei phones search "cloud backup" in Settings, Xiaomi goes to "Xiaomi Cloud Service", OPPO/vivo similarly. There's also a Google-built backup (Settings → System → Backup): turn this on too.
 
 ##### The biggest benefit of cloud backup is "you don't have to worry about it"—it's automatic. The biggest downside is that restoring takes a long time to download, and the free space is usually not enough.
 
 - <strong>iPhone</strong> Full phone backup is the safety net, but some things are too important and deserve a separate extra copy:
 - <strong>Android</strong> Dual insurance plan
-- : Enable iCloud Photos/Google Photos auto-sync, and every few months manually copy photos to your computer or external hard drive. This way, one copy in the cloud, one copy locally,mutual backup
+- : Enable iCloud Photos/Google Photos auto-sync, and every few months manually copy photos to your computer or external hard drive. This way, one copy in the cloud, one copy locally, mutual backup
 
 #### Free plan
 
@@ -42,7 +42,7 @@ In a gray area, requiring special handling
 
 ##### Contacts (Easily Overlooked but Extremely Important)
 
-- <strong>iPhone contacts sync with iCloud by default,as long as sync is on, no extra backup needed. But if you want to be safer, you can export a vCard file from iCloud.com and save it on your computer.</strong> Android contacts usually sync with Google or brand cloud. Go to the Contacts app settings to export a .vcf file—that's a complete backup.
+- <strong>iPhone contacts sync with iCloud by default, as long as sync is on, no extra backup needed. But if you want to be safer, you can export a vCard file from iCloud.com and save it on your computer.</strong> Android contacts usually sync with Google or brand cloud. Go to the Contacts app settings to export a .vcf file—that's a complete backup.
 - <strong>WeChat Chat History (Handle Separately, Top Priority)</strong> This must be discussed separately, because WeChat chat history is often incomplete in full phone backups, and phone migration tools simply can't handle it.
 
 ##### Method 1: Migrate to new phone
@@ -80,8 +80,8 @@ Method 3: Back up to cloud
 
 1
 
-- <strong>: At least one backup should be in a different physical location (to prevent fire, theft, etc. from destroying all data at once).</strong> For ordinary people, achieving "one in the cloud, one on the computer" is already quite good. Don't make it too complicated,the key is that you actually do it.
-- <strong>Special Attention for WeChat Chat History</strong> WeChat chat history cannot be migrated by any phone replacement tool! It's not covered by full phone backup. You must use WeChat's built-in "Chat History Migration" feature, or back up to the computer version of WeChat. Many people discover after getting a new phone that all chat history is gone:and by then it's too late. The old phone may have already been factory reset.
+- <strong>: At least one backup should be in a different physical location (to prevent fire, theft, etc. from destroying all data at once).</strong> For ordinary people, achieving "one in the cloud, one on the computer" is already quite good. Don't make it too complicated, the key is that you actually do it.
+- <strong>Special Attention for WeChat Chat History</strong> WeChat chat history cannot be migrated by any phone replacement tool! It's not covered by full phone backup. You must use WeChat's built-in "Chat History Migration" feature, or back up to the computer version of WeChat. Many people discover after getting a new phone that all chat history is gone: and by then it's too late. The old phone may have already been factory reset.
 - <strong>Practice: Do a Complete Backup Drill</strong> Check whether iCloud Backup or brand cloud backup is enabled, confirm the last backup time.
 
 Manually back up photos: Use a data cable to connect to the computer, copy the DCIM and Pictures folders to the computer.

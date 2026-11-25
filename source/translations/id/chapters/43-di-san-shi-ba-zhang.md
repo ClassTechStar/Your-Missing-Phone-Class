@@ -10,16 +10,16 @@ kind: chapter
 ### Bab 38: Lima Prinsip Berpikir Pemrograman AI
 
 {class="chapter-intro mb-4"}
-Jika buku ini hanya bisa membuat Anda mengingat satu bab, haruslah bab ini. Lima prinsip berpikir adalah jantung seluruh buku:semua bab berikutnya (konteks, kebutuhan, percakapan, kualitas) adalah pengembangan lima prinsip ini di berbagai skenario. Tenang, masing-masing tidak sulit dipahami,tetapi masing-masing layak Anda "tanamkan ke otot" lewat beberapa proyek.
+Jika buku ini hanya bisa membuat Anda mengingat satu bab, haruslah bab ini. Lima prinsip berpikir adalah jantung seluruh buku: semua bab berikutnya (konteks, kebutuhan, percakapan, kualitas) adalah pengembangan lima prinsip ini di berbagai skenario. Tenang, masing-masing tidak sulit dipahami, tetapi masing-masing layak Anda "tanamkan ke otot" lewat beberapa proyek.
 
-Awal ceritanya menarik: saat Andrej Karpathy membuka proyeknya, ia menyertakan file CLAUDE.md hanya 70 baris yang merangkum empat prinsip inti bekerja sama dengan AI. File ini mendapatkan lebih dari 70.000 Star di GitHub. menjadi pedoman yang paling luas dikutip praktisi pemrograman AI di seluruh dunia. Empat prinsip ini bukan slogan kosong, melainkan kebiasaan berpikir yang bisa dijalankan, disaring dari praktik yang melimpah. Buku ini menambahkan prinsip kelima di atas fondasi itu:iterasi verifikasi,sehingga menjadi sistem lima prinsip yang lengkap.
+Awal ceritanya menarik: saat Andrej Karpathy membuka proyeknya, ia menyertakan file CLAUDE.md hanya 70 baris yang merangkum empat prinsip inti bekerja sama dengan AI. File ini mendapatkan lebih dari 70.000 Star di GitHub. menjadi pedoman yang paling luas dikutip praktisi pemrograman AI di seluruh dunia. Empat prinsip ini bukan slogan kosong, melainkan kebiasaan berpikir yang bisa dijalankan, disaring dari praktik yang melimpah. Buku ini menambahkan prinsip kelima di atas fondasi itu: iterasi verifikasi, sehingga menjadi sistem lima prinsip yang lengkap.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Mengapa file 70 baris begitu berharga?
 
 {class="mt-1"}
-70.000 Star itu apa artinya? Mayoritas proyek di GitHub tidak akan pernah mencapai angka itu seumur hidup. Sebuah file teks 70 baris bisa mendapatkannya,justru membuktikan satu hal: di era AI, yang paling langka bukan kode, melainkan kemampuan "berpikir jernih". 70 baris itu adalah versi pekat dari "berpikir jernih".
+70.000 Star itu apa artinya? Mayoritas proyek di GitHub tidak akan pernah mencapai angka itu seumur hidup. Sebuah file teks 70 baris bisa mendapatkannya, justru membuktikan satu hal: di era AI, yang paling langka bukan kode, melainkan kemampuan "berpikir jernih". 70 baris itu adalah versi pekat dari "berpikir jernih".
 :::
 
 1. Prinsip satu: Think Before Coding (pikirkan dulu, baru menulis kode)
@@ -46,12 +46,12 @@ Perbandingan masukan tidak jelas dan masukan jelas untuk kebutuhan yang sama
 Catatan: berpikir dulu ≠ menulis dokumen sempurna dulu
 
 {class="mt-1"}
-"Berpikir dulu" tidak sama dengan "menulis PRD sempurna sebelum mulai". Ini proses berpikir yang cepat tetapi teratur,meluangkan 30 detik memikirkan tiga pertanyaan di atas jauh lebih efisien dari,pada menghabiskan 30 menit bolak-balik merevisi di percakapan. Untuk tugas kecil, tiga pertanyaan bisa sangat singkat; untuk proyek besar, kembangkan menjadi dokumen kebutuhan lengkap (lihat Bab 40).
+"Berpikir dulu" tidak sama dengan "menulis PRD sempurna sebelum mulai". Ini proses berpikir yang cepat tetapi teratur, meluangkan 30 detik memikirkan tiga pertanyaan di atas jauh lebih efisien dari, pada menghabiskan 30 menit bolak-balik merevisi di percakapan. Untuk tugas kecil, tiga pertanyaan bisa sangat singkat; untuk proyek besar, kembangkan menjadi dokumen kebutuhan lengkap (lihat Bab 40).
 :::
 
 2. Prinsip dua: Simplicity First (kesederhanaan di atas segalanya)
 
-Jebakan terbesar pemrograman AI bukan "tidak bisa jadi", melainnam "terlalu banyak dikerjakan". Saat Anda berkata kepada AI "buat sistem manajemen pengguna", ia mungkin menghasilkan autentikasi, izin, peran, log audit, ekspor data,seperangkat fitur lengkap,padahal Anda mungkin hanya butuh halaman login sederhana. Over-generation adalah penyebab utama kode AI membengkak.
+Jebakan terbesar pemrograman AI bukan "tidak bisa jadi", melainnam "terlalu banyak dikerjakan". Saat Anda berkata kepada AI "buat sistem manajemen pengguna", ia mungkin menghasilkan autentikasi, izin, peran, log audit, ekspor data, seperangkat fitur lengkap, padahal Anda mungkin hanya butuh halaman login sederhana. Over-generation adalah penyebab utama kode AI membengkak.
 
 "Kesederhanaan di atas segalanya" menuntut Anda mengikuti prinsip "minimum viable" setiap kali memberi instruksi: wujudkan fungsi inti dengan kode sesedikit mungkin, selesaikan masalah dengan solusi paling sederhana, validasi gagasan dengan fitur paling minim. Karpathy punya peribahasa yang tajam: "Kalau Anda hanya perlu menghitung harga diskon, Anda tidak butuh mesin e-commerce."
 
@@ -73,11 +73,11 @@ Perbandingan solusi berlebihan dan solusi sederhana untuk skenario umum
 
 #### 3. Prinsip tiga: Surgical Changes (perubahan presisi)
 
-Saat mengiterasi proyek yang sudah ada, setiap perubahan harus sepresisi bedah,hanya menyentuh yang perlu disentuh, tidak mengganggu yang tidak perlu. Ini terutama penting dalam pemrograman AI, karena AI punya kecenderungan "sekalian saya rapikan": Anda memintanya memperbaiki satu bug, ia mungkin ikut me-refactor separuh file.
+Saat mengiterasi proyek yang sudah ada, setiap perubahan harus sepresisi bedah, hanya menyentuh yang perlu disentuh, tidak mengganggu yang tidak perlu. Ini terutama penting dalam pemrograman AI, karena AI punya kecenderungan "sekalian saya rapikan": Anda memintanya memperbaiki satu bug, ia mungkin ikut me-refactor separuh file.
 
 Tuntutan inti "perubahan presisi" adalah: setiap instruksi kepada AI harus menetapkan lingkup dan batasan perubahan secara eksplisit. Katakan "hanya ubah fungsi calculate_discount" "jangan sentuh bagian lain" "pertahankan gaya kode yang ada". Saat perubahan AI melebihi lingkup yang Anda minta. segera minta ia mengembalikan bagian yang berlebihan.
 
-Karpathy menjelaskan hal ini dengan contoh diff (perbandingan perbedaan). Misalkan Anda meminta AI menambahkan logika "harga member" pada fungsi hitung diskon keranjang belanja: keluaran yang baik hanya mengubah satu fungsi itu dan menambah beberapa baris kode; keluaran yang buruk me-refactor seluruh file,meski kode baru mungkin lebih "elegan", Anda tidak bisa memastikan ia tidak memperkenalkan bug baru. Dalam pemrograman AI, "tampak lebih baik" tidak pernah bisa menjadi alasan menyimpang dari instruksi.
+Karpathy menjelaskan hal ini dengan contoh diff (perbandingan perbedaan). Misalkan Anda meminta AI menambahkan logika "harga member" pada fungsi hitung diskon keranjang belanja: keluaran yang baik hanya mengubah satu fungsi itu dan menambah beberapa baris kode; keluaran yang buruk me-refactor seluruh file, meski kode baru mungkin lebih "elegan", Anda tidak bisa memastikan ia tidak memperkenalkan bug baru. Dalam pemrograman AI, "tampak lebih baik" tidak pernah bisa menjadi alasan menyimpang dari instruksi.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -103,16 +103,16 @@ Hanya ubah fungsi calculate_discount di cart.py:
 
 4. Prinsip empat: Goal-Driven Execution (eksekusi berbasis tujuan)
 
-Prinsip ini menjawab pertanyaan kunci: sebaiknya Anda memberi AI instruksi "bagaimana cara" atau "apa yang harus dilakukan"? Jawaban Karpathy adalah yang kedua. Daripada memberi tahu AI "buat dulu sebuah kelas, lalu tambahkan metode, lalu tulis tes", lebih baik katakan "saya butuh alat yang bisa membaca file CSV dan menghitung jumlah nilai unik tiap kolom". Biarkan AI menentukan sendiri jalur implementasinya,Anda bertugas memverifikasi hasilnya.
+Prinsip ini menjawab pertanyaan kunci: sebaiknya Anda memberi AI instruksi "bagaimana cara" atau "apa yang harus dilakukan"? Jawaban Karpathy adalah yang kedua. Daripada memberi tahu AI "buat dulu sebuah kelas, lalu tambahkan metode, lalu tulis tes", lebih baik katakan "saya butuh alat yang bisa membaca file CSV dan menghitung jumlah nilai unik tiap kolom". Biarkan AI menentukan sendiri jalur implementasinya, Anda bertugas memverifikasi hasilnya.
 
-Manfaat "berbasis tujuan" bersifat ganda. Bagi AI, ia mendapat ruang otonomi lebih luas:bisa memilih jalur implementasi terbaik, tidak terikat langkah antara Anda; bagi Anda, perhatian bergeser dari "bagaimana cara" ke "apakah hasilnya benar"—memang itulah tugas seorang komandan.
+Manfaat "berbasis tujuan" bersifat ganda. Bagi AI, ia mendapat ruang otonomi lebih luas: bisa memilih jalur implementasi terbaik, tidak terikat langkah antara Anda; bagi Anda, perhatian bergeser dari "bagaimana cara" ke "apakah hasilnya benar"—memang itulah tugas seorang komandan.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Catatan: berbasis tujuan ≠ membiarkan begitu saja
 
 {class="mt-1"}
-Prinsip ini menuntut Anda melakukan verifikasi ketat setelah AI mengeksekusi: apakah hasilnya memenuhi kebutuhan? Apakah kasus tepi sudah ditangani? Apakah ada over-engineering yang mencolok? Jika hasil tidak sesuai harapan, berikan umpan balik spesifik—bukan "tulis ulang", melainkan "masalahnya di sini: input daftar kosong memunculkan IndexError:tolong tambahkan pengecekan nilai kosong".
+Prinsip ini menuntut Anda melakukan verifikasi ketat setelah AI mengeksekusi: apakah hasilnya memenuhi kebutuhan? Apakah kasus tepi sudah ditangani? Apakah ada over-engineering yang mencolok? Jika hasil tidak sesuai harapan, berikan umpan balik spesifik—bukan "tulis ulang", melainkan "masalahnya di sini: input daftar kosong memunculkan IndexError: tolong tambahkan pengecekan nilai kosong".
 :::
 
 ::: div .overflow-x-auto
@@ -131,7 +131,7 @@ Ini prinsip kelima yang ditambahkan buku ini di atas empat prinsip Karpathy. Key
 "Iterasi verifikasi" bukan pasif "salah ya coba lagi", melainkan alur verifikasi yang terstruktur. Setiap kali AI memberi keluaran, verifikasi pada tiga tingkat:
 
 - Tingkat 1 · Verifikasi fungsional: bisakah dijalankan? Input-output sudah benar?
-- Tingkat 2 · Verifikasi tepi: input kosong, input terlalu panjang, input tidak wajar:bagaimana hasilnya?
+- Tingkat 2 · Verifikasi tepi: input kosong, input terlalu panjang, input tidak wajar: bagaimana hasilnya?
 - Tingkat 3 · Verifikasi arsitektur: struktur kode sudah masuk akal? Ada hard coding? Mudah dikembangkan nanti?
 
 ::: div .figure
@@ -151,7 +151,7 @@ Ini prinsip kelima yang ditambahkan buku ini di atas empat prinsip Karpathy. Key
 Gambar 2: Siklus iterasi verifikasi pemrograman AI
 :::
 
-Kunci siklus ini ada pada langkah "memberi umpan balik spesifik". Saat verifikasi gagal, jangan berkata "salah, ulangi", tetapi "fungsi memunculkan IndexError saat input daftar kosong,tolong tambahkan pengecekan nilai kosong di baris 15". Umpan balik spesifik membuat AI bisa memperbaiki dengan tepat; umpan balik kabur hanya membuatnya menebak-nebak maksud Anda lagi.
+Kunci siklus ini ada pada langkah "memberi umpan balik spesifik". Saat verifikasi gagal, jangan berkata "salah, ulangi", tetapi "fungsi memunculkan IndexError saat input daftar kosong, tolong tambahkan pengecekan nilai kosong di baris 15". Umpan balik spesifik membuat AI bisa memperbaiki dengan tepat; umpan balik kabur hanya membuatnya menebak-nebak maksud Anda lagi.
 
 #### 6. Harness Engineering: Agent = Model + Harness
 
@@ -161,16 +161,16 @@ Pada pertengahan 2026, konsep bernama Harness Engineering mulai populer di komun
 <strong>Kemampuan Agent = kemampuan model × kualitas Harness</strong>
 :::
 
-Kemampuan model adalah batas kecerdasan otak AI; Harness adalah "lingkungan kerja" yang dibangun di sekitar model,termasuk manajemen konteks, integrasi alat, orkestrasi alur, sistem memori, dan lainnya.
+Kemampuan model adalah batas kecerdasan otak AI; Harness adalah "lingkungan kerja" yang dibangun di sekitar model, termasuk manajemen konteks, integrasi alat, orkestrasi alur, sistem memori, dan lainnya.
 
-Konsep ini menjelaskan kebingungan yang umum: mengapa dengan GPT-4 atau Claude yang sama, sebagian orang bisa membuat proyek memukau, sementara yang lain hanya mendapat kode biasa saja? Bedanya bukan di model, melainkan di Harness. Harness yang baik mencakup: file spesifikasi proyek yang jelas, integrasi alat yang wajar, konteks percakapan yang teratur, alur verifikasi yang matang. Model menentukan batas kecerdasan,Harness menentukan sejauh mana Anda bisa memanfaatkan batas itu.
+Konsep ini menjelaskan kebingungan yang umum: mengapa dengan GPT-4 atau Claude yang sama, sebagian orang bisa membuat proyek memukau, sementara yang lain hanya mendapat kode biasa saja? Bedanya bukan di model, melainkan di Harness. Harness yang baik mencakup: file spesifikasi proyek yang jelas, integrasi alat yang wajar, konteks percakapan yang teratur, alur verifikasi yang matang. Model menentukan batas kecerdasan, Harness menentukan sejauh mana Anda bisa memanfaatkan batas itu.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Peribahasa magang jenius
 
 {class="mt-1"}
-Bayangkan model sebagai magang jenius,IQ sangat tinggi, tetapi kalau tidak diberi dokumen latar belakang proyek, tidak diberi tahu alat apa yang dipakai, tidak diberi tenggat dan standar verifikasi—ia juga tidak akan menghasilkan karya bagus. Harness Engineering adalah rekayasa "bagaimana membangun lingkungan kerja yang baik untuk magang jenius".
+Bayangkan model sebagai magang jenius, IQ sangat tinggi, tetapi kalau tidak diberi dokumen latar belakang proyek, tidak diberi tahu alat apa yang dipakai, tidak diberi tenggat dan standar verifikasi—ia juga tidak akan menghasilkan karya bagus. Harness Engineering adalah rekayasa "bagaimana membangun lingkungan kerja yang baik untuk magang jenius".
 :::
 
 Bab-bab berikutnya pada dasarnya mengajarkan cara membangun Harness yang baik: Bab 39 mengajarkan manajemen konteks (sistem memori proyek), Bab 40 mengajarkan definisi kebutuhan (PRD), Bab 43 mengajarkan teknik percakapan (berlapis Prompt), Bab 45 mengajarkan penjaminan kualitas (alur verifikasi). Kombinasi semuanya itulah Harness Anda.
@@ -188,9 +188,9 @@ Pilih satu hal kecil yang selalu ingin Anda buat tetapi tidak pernah mulai (misa
 Ringkasan bab ini
 
 - Lima prinsip berasal dari CLAUDE.md 70 baris Karpathy (70K+ Star); buku ini menambahkan prinsip kelima "iterasi verifikasi"
-- Think Before Coding: sebelum bicara, jawab tiga pertanyaan,mengerjakan apa? Seperti apa hasilnya? Apa batasannya?
+- Think Before Coding: sebelum bicara, jawab tiga pertanyaan, mengerjakan apa? Seperti apa hasilnya? Apa batasannya?
 - Simplicity First: jebakan terbesar AI adalah "terlalu banyak dikerjakan",menghitung diskon tidak butuh mesin e-commerce
-- Surgical Changes: ubah sepresisi bedah,tolak kecenderungan AI "sekalian saya rapikan"
+- Surgical Changes: ubah sepresisi bedah, tolak kecenderungan AI "sekalian saya rapikan"
 - Goal-Driven Execution: katakan "apa yang dilakukan", bukan "bagaimana cara":biarkan AI memilih jalurnya sendiri
 - Iterate and Verify: tiga tingkat verifikasi (fungsional/tepi/arsitektur) + umpan balik spesifik, iterasi berkelanjutan
 - Harness Engineering: kemampuan = Model × Harness—perlakukan AI sebagai "magang jenius" yang lingkungan kerjanya Anda atur

@@ -47,7 +47,7 @@ kind: chapter
 iCloud+: Τρία εργαλεία ιδιωτικότητας για πληρωμένους χρήστες
 
 {class="mt-1"}
-αναβάθμισηεπί πληρωμή iCloud(50GB/200GB/2TB),αυτόματο <strong>iCloud+</strong> χρήστες, ξεκλειδώνονται τρεις λειτουργίες ιδιωτικότητας:
+αναβάθμισηεπί πληρωμή iCloud(50GB/200GB/2TB), αυτόματο <strong>iCloud+</strong> χρήστες, ξεκλειδώνονται τρεις λειτουργίες ιδιωτικότητας:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Private Relay</strong>:"VPN".Safari Κίνηση δεδομένων Διακομιστής,(). Wi-Fi Ιδιωτικότητα.Ρυθμίσεις:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ρυθμίσεις &gt; Το όνομά σας &gt; iCloud &gt; Private Relay</code>.
@@ -68,7 +68,7 @@ iCloud Advanced Data Protection (ADP) — πραγματική κρυπτογρ�
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Τι είναι E2EE</strong>:Κρυπτογράφηση Συσκευή, Διακομιστής.Hacker, Αποκρυπτογράφηση Δεδομένα.
 - <strong>Διαδρομή ενεργοποίησης</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Ρυθμίσεις &gt; Το όνομά σας &gt; iCloud &gt; Advanced Data Protection</code>, ακολουθήστε τις οδηγίες για επαφή/κλειδί ανάκτησης (<strong>Υποχρεωτικό</strong>, αν χάσετε το κλειδί τα δεδομένα δεν ανακτώνται).
-- <strong>Σημειώσεις</strong>:①ενεργοποίηση επαναφορά, Δεδομένα;②,iCloud Λειτουργία E2EE;③Apple IDADP.
+- <strong>Σημειώσεις</strong>:①ενεργοποίηση επαναφορά, Δεδομένα;②, iCloud Λειτουργία E2EE;③Apple IDADP.
 
 {class="mt-1"}
 Συμβουλές: Ιδιωτικότητα Δεδομένα, Συμβουλές ενεργοποίηση ADP:,cloud Δεδομένα.

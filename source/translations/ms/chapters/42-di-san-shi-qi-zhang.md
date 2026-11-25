@@ -28,7 +28,7 @@ Vibe secara harfiah bermaksud "suasana, perasaan". Vibe Coding ialah "mengarah A
 
 Dari saat itu, maksud perkataan "pengekodan" mula terbelah: pengekodan tradisional menterjemahkan reka bentuk kepada sintaks; pengekodan baharu menterjemahkan niat kepada arahan. Yang pertama menguji jari, yang kedua menguji otak.
 
-Perkataan Vibe Coding dengan cepat bertukar daripada gurauan kepada konsep kejuruteraan yang serius. Menjelang pertengahan 2026, ia telah berevolusi daripada satu jenaka di media sosial ke,pada satu sistem metodologi lengkap - merangkumi keseluruhan proses daripada penyataan keperluan, pengurusan konteks, pengesahan iteratif hingga jaminan kualiti. Orang juga sedar: "ikut perasaan" hanyalah keadaan peringkat permulaan; pengaturcaraan AI yang benar-benar cekap memerlukan cara berfikir yang tersusun. Dan cara berfikir inilah yang buku ini hendak berikan kepada anda.
+Perkataan Vibe Coding dengan cepat bertukar daripada gurauan kepada konsep kejuruteraan yang serius. Menjelang pertengahan 2026, ia telah berevolusi daripada satu jenaka di media sosial ke, pada satu sistem metodologi lengkap - merangkumi keseluruhan proses daripada penyataan keperluan, pengurusan konteks, pengesahan iteratif hingga jaminan kualiti. Orang juga sedar: "ikut perasaan" hanyalah keadaan peringkat permulaan; pengaturcaraan AI yang benar-benar cekap memerlukan cara berfikir yang tersusun. Dan cara berfikir inilah yang buku ini hendak berikan kepada anda.
 
 #### 2. Keadaan 2026: era Agentic Engineering
 
@@ -100,7 +100,7 @@ Jadual ini patut anda lihat lebih sekali - ia meringkaskan keseluruhan intipati 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Perbandingan dimensi kebolehan antara Coder tradisional dan Konduktor AI
 
-Ini sama sekali bukan bermakna pengetahuan pengaturcaraan tidak penting lagi. Sebaliknya: apabila anda dapat memahami kod yang ditulis AI, barulah anda boleh menyemak dan membaikinya dengan berkesan; apabila anda memahami struktur data dan algoritma, barulah anda dapat menilai sama ada penyelesaian AI munasabah. Simpanan pengetahuan menentukan "had pengarahan" anda - tetapi peranan pengetahuan bertukar dari,pada "alat pelaksanaan" kepada "asas pertimbangan".
+Ini sama sekali bukan bermakna pengetahuan pengaturcaraan tidak penting lagi. Sebaliknya: apabila anda dapat memahami kod yang ditulis AI, barulah anda boleh menyemak dan membaikinya dengan berkesan; apabila anda memahami struktur data dan algoritma, barulah anda dapat menilai sama ada penyelesaian AI munasabah. Simpanan pengetahuan menentukan "had pengarahan" anda - tetapi peranan pengetahuan bertukar dari, pada "alat pelaksanaan" kepada "asas pertimbangan".
 
 #### 4. Mengapa metodologi lebih penting daripada alat
 

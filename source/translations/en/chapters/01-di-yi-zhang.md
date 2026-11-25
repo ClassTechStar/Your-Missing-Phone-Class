@@ -18,9 +18,9 @@ Small as it is, the phone has all the vital organs. Let's get to know these prec
 
 ##### 1. SoC (System on Chip): The Phone's "Brain + Heart"
 
-SoC stands for System on Chip, which translates to "cramming the entire system onto a single chip." It's not just the CPU (Central Processing Unit),it integrates the CPU, GPU (Graphics Processing Unit), NPU (Neural Processing Unit), ISP (Image Signal Processor), baseband (responsible for communication), and more all together.
+SoC stands for System on Chip, which translates to "cramming the entire system onto a single chip." It's not just the CPU (Central Processing Unit), it integrates the CPU, GPU (Graphics Processing Unit), NPU (Neural Processing Unit), ISP (Image Signal Processor), baseband (responsible for communication), and more all together.
 
-It's like building a city's government building, power plant, communication center, and police station all in one tower:extremely efficient.
+It's like building a city's government building, power plant, communication center, and police station all in one tower: extremely efficient.
 
 ##### CPU: The Core of General-Purpose Computing
 
@@ -32,7 +32,7 @@ The CPU is the most central component of the SoC, responsible for handling the v
 - <strong>Medium core</strong>: Balances performance and power, handles everyday medium-load tasks. Scrolling Weibo, watching videos, and multitasking mainly rely on it.
 - <strong>Small core / Efficiency core</strong>: Lowest power consumption, handles lightweight background tasks. Standby, listening to music, receiving messages—almost no power draw.
 
-The three tiers of cores work together: the system scheduler automatically assigns tasks based on load,lightweight tasks go to small cores to save power, heavy work goes to big cores to crank through it, then switches back to small cores when done. This is why a phone can both run games smoothly and stay on standby all day.
+The three tiers of cores work together: the system scheduler automatically assigns tasks based on load, lightweight tasks go to small cores to save power, heavy work goes to big cores to crank through it, then switches back to small cores when done. This is why a phone can both run games smoothly and stay on standby all day.
 
 <strong>Brand Architecture Characteristics</strong>:
 
@@ -86,7 +86,7 @@ The ISP processes the raw data from the camera, turning light signals into beaut
 
 ##### 2. RAM: The Temporary Workbench
 
-RAM is like your desk,the bigger it is, the more files you can spread out at once. 12GB is the current mainstream, 16GB suits heavy users, and 24GB+ is for gamers and geeks.
+RAM is like your desk, the bigger it is, the more files you can spread out at once. 12GB is the current mainstream, 16GB suits heavy users, and 24GB+ is for gamers and geeks.
 
 RAM type also matters: LPDDR5 is faster and more power-efficient than LPDDR4X. Although Apple's RAM isn't large, system optimization is good, so it appears "sufficient."
 
@@ -94,7 +94,7 @@ RAM type also matters: LPDDR5 is faster and more power-efficient than LPDDR4X. A
 
 ##### 3. Storage (ROM/Flash): The Long-Term Warehouse
 
-Storage is like your bookcase,the place that holds all your photos, videos, and apps. The mainstream now is UFS 3.1 or UFS 4.0, several times faster than the older eMMC.
+Storage is like your bookcase, the place that holds all your photos, videos, and apps. The mainstream now is UFS 3.1 or UFS 4.0, several times faster than the older eMMC.
 
 <strong>Why does storage speed matter?</strong> It determines app opening speed, game loading speed, and photo saving speed. After long use, slow storage makes the phone increasingly laggy.
 
@@ -105,7 +105,7 @@ The screen is the main window for interaction between you and your phone; its qu
 - <strong>Material</strong>: OLED has vivid colors, high contrast, and is more power-efficient (pixels don't emit light when displaying black), but may have flicker at low brightness that strains the eyes; LCD is more eye-friendly and lower cost, but contrast and color aren't as good as OLED.
 - <strong>Resolution</strong>: 1080P is mainstream, 2K is sharper but more power-hungry. Apple's "Retina display" concept means: at a certain distance, the human eye cannot distinguish individual pixels.
 - <strong>Refresh rate</strong>: 60Hz is standard, 90Hz/120Hz is smoother, silky-smooth when scrolling. High refresh rates consume more power, so many phones support adaptive refresh rate (LTPO), dynamically adjusting based on content.
-- <strong>Touch sampling rate</strong>: Affects touch response speed; gamers should pay attention,the higher, the more responsive.
+- <strong>Touch sampling rate</strong>: Affects touch response speed; gamers should pay attention, the higher, the more responsive.
 - <strong>Dimming method</strong>: DC dimming is more eye-friendly than PWM dimming, less likely to tire the eyes at low brightness. Many phones now support high-frequency PWM dimming, also for eye protection.
 
 ##### Screen HDR Technology
@@ -128,9 +128,9 @@ HDR in photography and screen HDR are two different things. Photography HDR uses
 
 The battery is the phone's most "short-lived" component, visibly aging after two or three years. Mainstream capacity now is 5500-7500mAh.
 
-- <strong>Charging power</strong>: The Android camp has already raced to 100W or even 200W, fully charging in a dozen minutes; Apple is still hovering at 20-30W. Does fast charging damage the battery? Using original accessories is generally fine,the phone has temperature protection.
+- <strong>Charging power</strong>: The Android camp has already raced to 100W or even 200W, fully charging in a dozen minutes; Apple is still hovering at 20-30W. Does fast charging damage the battery? Using original accessories is generally fine, the phone has temperature protection.
 - <strong>Wireless charging</strong>: Convenient but inefficient and generates heat. Suitable for casual charging at the office, not suitable when you're rushing out.
-- <strong>Reverse charging</strong>: The phone becomes a power bank, charging earphones and watches,useful for emergencies.
+- <strong>Reverse charging</strong>: The phone becomes a power bank, charging earphones and watches, useful for emergencies.
 
 ##### 6. Camera: The Magic of Light and Shadow
 
@@ -149,7 +149,7 @@ Traditional telephoto lenses require a long optical path, which would make the p
 
 - <strong>Structural principle</strong>: Light enters through the lens → prism refracts 90 degrees → passes through the lens group along the phone's width → reaches the sensor. It's like laying a vertical telescope on its side.
 - <strong>Optical characteristics</strong>: High optical zoom multiplier (5x-10x), image quality far exceeding digital zoom. But the sensor is usually smaller than the main camera, with average low-light performance.
-- <strong>Imaging advantages</strong>: Shooting the moon, distant buildings, and stage close-ups,beyond the reach of ordinary phones.
+- <strong>Imaging advantages</strong>: Shooting the moon, distant buildings, and stage close-ups, beyond the reach of ordinary phones.
 
 ##### OIS Optical Stabilization vs EIS Electronic Stabilization
 
@@ -198,7 +198,7 @@ There are over a dozen sensors hidden inside the phone, working silently:
 - <strong>Proximity sensor</strong>: Turns off the screen when the phone is close to your ear during a call.
 - <strong>Fingerprint sensor</strong>: Mainstream now is under-display optical or ultrasonic fingerprint.
 - <strong>Face recognition</strong>: Apple's Face ID uses 3D structured light, with high security; many Android phones use 2D photo recognition, with average security.
-- <strong>That "System Update" button you tap in [Settings],that's it.</strong>: Near Field Communication, for transit cards, access cards, bank cards.
+- <strong>That "System Update" button you tap in [Settings], that's it.</strong>: Near Field Communication, for transit cards, access cards, bank cards.
 - <strong>Barometer</strong>: Measures altitude, can even detect when you climb stairs.
 - <strong>Hall sensor</strong>: Detects the opening and closing of magnetic cases.
 
@@ -210,7 +210,7 @@ Hardware is the body; the operating system is the soul. The three major systems 
 - <strong>iOS</strong>: Like a carefully tended garden, Apple controls both hardware and software, with a unified and smooth experience. App quality is high, privacy protection is good, but freedom is low—many things must follow Apple's rules.
 - <strong>HarmonyOS</strong>: Huawei's new species, focusing on distributed capabilities, allowing different devices to collaborate seamlessly. We'll cover it specifically later.
 
-All three have extremely rich ecosystems,just choose the lifestyle you prefer. There's no absolute good or bad, only what suits you.
+All three have extremely rich ecosystems, just choose the lifestyle you prefer. There's no absolute good or bad, only what suits you.
 
 #### 3. Phone Ports Explained
 
@@ -313,7 +313,7 @@ It has long been more than just a phone:
 9. <strong>Digital ID</strong>: Electronic ID cards, electronic driver's license, health codes...
 10. <strong>Entertainment center</strong>: Music, videos, e-books, podcasts...
 
-Think about it,how much life is packed into one tiny device! So, learning to use it well is learning to live better.
+Think about it, how much life is packed into one tiny device! So, learning to use it well is learning to live better.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

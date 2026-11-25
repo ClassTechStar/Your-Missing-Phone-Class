@@ -16,7 +16,7 @@ kind: chapter
 
 2024, ναυαρχίδα "AI",iOS 18Apple Intelligence."AI"?:
 
-- <strong>Μεγάλα μοντέλα στην άκρη της συσκευής</strong>:τοπικό Παράμετρος 7B(Qwen, Llama, DeepSeek),cloud, Μετάφραση. :Λειτουργία πτήσης AI Λειτουργία.
+- <strong>Μεγάλα μοντέλα στην άκρη της συσκευής</strong>:τοπικό Παράμετρος 7B(Qwen, Llama, DeepSeek), cloud, Μετάφραση. :Λειτουργία πτήσης AI Λειτουργία.
 - <strong>Ισχύς NPU (TOPS)</strong>:NPU(Δίκτυο)TOPS().2024 ναυαρχίδα(8 Gen3,9300)NPU40-70 TOPS,2025-2026100 TOPS.
 - <strong>Σενάρια AI Agent</strong>:"",App:,"Φωτογραφία Κοινοποίηση ",Σύστημα αυτόματο, Αρχείο, App.AI"AI"κεντρικό.
 
@@ -26,7 +26,7 @@ kind: chapter
 
 - <strong>Apple Apple Intelligence (iOS 18+)</strong>:Σύστημα Εφαρμογή,—Email, Ειδοποίηση, AI. Private Cloud Compute.Ιδιωτικότητα Σύστημα, Σενάριο, Λειτουργία 2025.
 - <strong>Google Gemini Nano</strong>:Pixel 8/9,"αναζήτηση",Magic Compose, Ηχογράφηση.Gemini Nano, ανοιχτού κώδικα, AI.
-- <strong>Huawei Pangu LLM</strong>:, AI, AI(),Κλήση.NEXT 5.0 Σύστημα, AI Σύστημα.
+- <strong>Huawei Pangu LLM</strong>:, AI, AI(), Κλήση.NEXT 5.0 Σύστημα, AI Σύστημα.
 - <strong>Xiaomi MiLM</strong>:HyperOS, AI, AI, AI, Ανάλυση."", .
 - <strong>OPPO (Andes) και vivo (BlueLM)</strong>:ColorOS 15OriginOS 5, AI, AI, AI, Φωτογραφία("Φωτογραφία").
 
@@ -37,7 +37,7 @@ kind: chapter
 Δορυφόρος Τεχνολογία.2022Mate 60iPhone 14 ναυαρχίδα,20252000-3000.
 
 - <strong>BeiDou σύντομα μηνύματα σε μεσαία μοντέλα</strong>:Δορυφόρος Λειτουργία(1000SMS+)Redmi, realme, iQOO μεσαίο, δωρεάν.,Σενάριο.
-- <strong>Tiantong δορυφορικές κλήσεις</strong>:Mate 60/70, Magic6 Δορυφόρος Κλήση Λειτουργία,/Δορυφόρος, Δορυφόρος Μήνυμα.Δορυφόρος(10-200),Χρήστης.
+- <strong>Tiantong δορυφορικές κλήσεις</strong>:Mate 60/70, Magic6 Δορυφόρος Κλήση Λειτουργία,/Δορυφόρος, Δορυφόρος Μήνυμα.Δορυφόρος(10-200), Χρήστης.
 - <strong>iPhone δορυφορικά μηνύματα (SOS)</strong>:iPhone 14 Δορυφόρος SOS, Επείγον Μήνυμα.δωρεάν 2.
 - <strong>Πρακτικές συμβουλές</strong>:Χρήστης, επαγγελματίες Συμβουλές Δορυφόρος Λειτουργία:—.
 
@@ -45,7 +45,7 @@ kind: chapter
 
 Foldable"""".Foldable,:,App.
 
-- <strong>Ανθεκτικότητα υλισμικού</strong>:50(10013),Οθόνη, IPX8.UTG+Λύση Οθόνη "".
+- <strong>Ανθεκτικότητα υλισμικού</strong>:50(10013), Οθόνη, IPX8.UTG+Λύση Οθόνη "".
 - <strong>Προσαρμογή εφαρμογών</strong>:κύριο App(, B, Office, WPS),30%App, εμφάνιση.Συμβουλές App.
 - <strong>Αλληλεπίδραση σε στάση ανοίγματος</strong>:αναδίπλωση 90°-120°,App"εμφάνιση,",Βιντεοκλήση, .Κάμερα Foldable.
 - <strong>Split-screen και multitasking</strong>: Σε μεγάλη οθόνη μπορούν να λειτουργήσουν ταυτόχρονα δύο εφαρμογές σε διαιρούμενη οθόνη, ακόμα και τρεις εφαρμογές σε μικρά παράθυρα. Η λογική διαιρούμενης οθόνης των HyperOS, ColorOS, OriginOS είναι ήδη αρκετά ώριμη, αλλά η διαιρούμενη οθόνη του iOS (στο στυλ iPadOS) δεν είναι ακόμα διαθέσιμη στο iPhone.
@@ -57,9 +57,9 @@ Foldable"""".Foldable,:,App.
 
 Αν και το 6G δεν έχει κυκλοφορήσει, οι τεχνολογίες είναι καθ' οδόν:
 
-- <strong>Πρόοδος 6G</strong>:3GPP20276G,2030.6G Ρυθμός 1 Tbps(5G50),Καθυστέρηση 0.1ms,"" (+). επαλήθευση.
+- <strong>Πρόοδος 6G</strong>:3GPP20276G,2030.6G Ρυθμός 1 Tbps(5G50), Καθυστέρηση 0.1ms,"" (+). επαλήθευση.
 - <strong>Wi-Fi 7 (802.11be)</strong>:2024 ναυαρχίδα, Ρυθμός 46 Gbps(Wi-Fi 64),320MHz,4K-QAM, MLO().Wi-Fi 7, ναυαρχίδα Ρυθμός 2-5 Gbps, Wi-Fi 6E2-3.Wi-Fi 7, Wi-Fi 7.
-- <strong>Bluetooth 5.4 και LE Audio</strong>:2024-2026Bluetooth5.4LE Audio(Ήχος),Ακουστικά, Auracast Ήχος συγχρονισμός.
+- <strong>Bluetooth 5.4 και LE Audio</strong>:2024-2026Bluetooth5.4LE Audio(Ήχος), Ακουστικά, Auracast Ήχος συγχρονισμός.
 
 Έκτο: Μπαταρία πυριτίου-άνθρακα: υλική ανακάλυψη στην αυτονομία
 
@@ -88,7 +88,7 @@ Foldable"""".Foldable,:,App.
 {class="list-disc pl-6 mt-1 space-y-1"}
 - :5000mAh Μπαταρία,80W, NFC, IP68.
 - Bonus: on-device AI, Wi-Fi 7, BeiDou σύντομα μηνύματα.
-- :Foldable(),Δορυφόρος Κλήση(),240W.
+- :Foldable(), Δορυφόρος Κλήση(),240W.
 :::
 
 ::: div .chapter-summary

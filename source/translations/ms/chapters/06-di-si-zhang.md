@@ -170,7 +170,7 @@ Akses fail: Boleh membaca fail peribadi anda.
 
 - <strong>Penggunaan masa jalan</strong>: App juga menghasilkan cache dan fail data semasa berjalan, menggunakan lebih banyak ruang
 - <strong>Kaedah pengoptimuman App moden:</strong> App Bundle (Android)
-- <strong>: Teknologi pengedaran dinamik Google Play. Pengguna hanya memuat turun sumber yang sesuai untuk peranti mereka semasa memuat turun (seperti hanya memuat turun imej resolusi skrin yang se,padan), mengurangkan saiz muat turun dengan ketara.</strong> App Thinning (iOS)
+- <strong>: Teknologi pengedaran dinamik Google Play. Pengguna hanya memuat turun sumber yang sesuai untuk peranti mereka semasa memuat turun (seperti hanya memuat turun imej resolusi skrin yang sepadan), mengurangkan saiz muat turun dengan ketara.</strong> App Thinning (iOS)
 
 : Teknologi yang serupa, Apple secara automatik memotong sumber yang tidak diperlukan mengikut peranti.
 

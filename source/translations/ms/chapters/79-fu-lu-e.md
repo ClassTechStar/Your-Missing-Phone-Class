@@ -22,22 +22,22 @@ Teknologi berkembang pesat dari hari ke hari; kandungan buku ini berdasarkan tek
 - Memperluas bab aksesibiliti (panduan lengkap operasi VoiceOver/TalkBack, zum dan penapis warna, penerangan imej AI, sari kata masa nyata, saluran ganda panggilan RTT/TTY).
 - Menulis semula rangka kerja arah prompt dengan pendekatan "Peranan-Konteks-Tugas-Had", disertakan 3 contoh senario lengkap.
 - Menambah tiga lampiran teknologi lanjutan: Tambahan Bab 1: Analisis peluasan memori telefon Android (definisi asas, prinsip zRAM/swap, bottleneck kelajuan, sempadan senario yang sesuai, serta penamaan dan cara pengaktifan oleh pelbagai pengeluar).
-- Tambahan Bab 20: Termux,persekitaran terminal Linux mudah alih pada peranti Android (fungsi teras, ekosistem pemalam, pemasangan dan konfigurasi, serta senario tipikal seperti pembangunan mudah alih/penyelenggaraan pelayan/ujian keselamatan).
-- Tambahan Bab 23: Panduan Asas GitHub,daripada pengehosan kod kepada platform kolaborasi (perbezaan Git dan GitHub, konsep teras, pendaftaran dan permulaan, aliran kerja kolaborasi Pull Request, peringatan keselamatan, penyelesaian akses dari tanah besar).
+- Tambahan Bab 20: Termux, persekitaran terminal Linux mudah alih pada peranti Android (fungsi teras, ekosistem pemalam, pemasangan dan konfigurasi, serta senario tipikal seperti pembangunan mudah alih/penyelenggaraan pelayan/ujian keselamatan).
+- Tambahan Bab 23: Panduan Asas GitHub, daripada pengehosan kod kepada platform kolaborasi (perbezaan Git dan GitHub, konsep teras, pendaftaran dan permulaan, aliran kerja kolaborasi Pull Request, peringatan keselamatan, penyelesaian akses dari tanah besar).
 
 #### Poin Kemas Kini Versi 1.7
 
 1\. Menambah 4 bab baharu
 
-- Bab 29:Kesihatan Digital,analisis masa skrin, had App, mod Jangan Ganggu, peraturan 20-20-20 penjagaan mata, penyelamatan tulang belakang leher, pengurusan tidur, "buta selektif" bagi kebimbangan maklumat, cabaran kesihatan digital selama seminggu.
-- Bab 30: Penghantaran Skrin dan Sistem Kereta:perbandingan tiga kem AirPlay / Miracast / DLNA, pilihan penghantaran skrin berkabel, mod desktop Samsung DeX, empat penyelesaian kereta utama CarPlay / Android Auto / HiCar / CarLife, serta praktik penghantaran skrin di bilik mesyuarat.
-- Bab 31: Penghasilan Video Pendek,tiga soalan pemilihan topik, tetapan penggambaran 5 langkah, lima teknik pergerakan kamera (tolak, tarik, pan, alih. ikut), aliran kerja enam langkah CapCut (Jianying), poin penting menghasilkan muka depan, serta prinsip kandungan "3 saat pertama menentukan segalanya".
-- Bab 32:Manual Pertolongan Cemas Keselamatan,SOP 30 minit emas selepas telefon hilang, proses kendalian 72 jam selepas ditipu, pemeriksaan mod selamat apabila dijangkiti, enam langkah merebut semula akaun yang direta, cara menghadapi mesej ugutan, serta lima perkara pencegahan harian.
+- Bab 29:Kesihatan Digital, analisis masa skrin, had App, mod Jangan Ganggu, peraturan 20-20-20 penjagaan mata, penyelamatan tulang belakang leher, pengurusan tidur, "buta selektif" bagi kebimbangan maklumat, cabaran kesihatan digital selama seminggu.
+- Bab 30: Penghantaran Skrin dan Sistem Kereta: perbandingan tiga kem AirPlay / Miracast / DLNA, pilihan penghantaran skrin berkabel, mod desktop Samsung DeX, empat penyelesaian kereta utama CarPlay / Android Auto / HiCar / CarLife, serta praktik penghantaran skrin di bilik mesyuarat.
+- Bab 31: Penghasilan Video Pendek, tiga soalan pemilihan topik, tetapan penggambaran 5 langkah, lima teknik pergerakan kamera (tolak, tarik, pan, alih. ikut), aliran kerja enam langkah CapCut (Jianying), poin penting menghasilkan muka depan, serta prinsip kandungan "3 saat pertama menentukan segalanya".
+- Bab 32:Manual Pertolongan Cemas Keselamatan, SOP 30 minit emas selepas telefon hilang, proses kendalian 72 jam selepas ditipu, pemeriksaan mod selamat apabila dijangkiti, enam langkah merebut semula akaun yang direta, cara menghadapi mesej ugutan, serta lima perkara pencegahan harian.
 
 2\. Menambah dua bab baharu
 
-- Bab 27: Mesra Warga Emas dan Kasih Sayang Keluarga,jadual perbandingan mod mudah antara jenama, enam penipuan dan tiga lapis pertahanan antipenipuan, bantuan jarak jauh (MeeTime/Sunflower), mod Penyayang WeChat dan input suara, SOS / pengesanan jatuh / peringatan ubat.
-- Bab 28:Panduan Pembelian,kaedah pemilihan telefon tiga langkah, jadual spesifikasi "cuma lihat lima perkara", cadangan lima aras bajet, jadual pemilihan untuk tujuh senario, lima perangkap pembelian telefon, serta analisis masa dan saluran pembelian.
+- Bab 27: Mesra Warga Emas dan Kasih Sayang Keluarga, jadual perbandingan mod mudah antara jenama, enam penipuan dan tiga lapis pertahanan antipenipuan, bantuan jarak jauh (MeeTime/Sunflower), mod Penyayang WeChat dan input suara, SOS / pengesanan jatuh / peringatan ubat.
+- Bab 28:Panduan Pembelian, kaedah pemilihan telefon tiga langkah, jadual spesifikasi "cuma lihat lima perkara", cadangan lima aras bajet, jadual pemilihan untuk tujuh senario, lima perangkap pembelian telefon, serta analisis masa dan saluran pembelian.
 
 3\. Menambah fungsi bacaan suara dan interaksi
 

@@ -23,7 +23,7 @@ An app you can only "look at" is dead; an app that can store data and reach the 
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 The division of labor among the data trio
 
-Memorize this mantra: "small settings go into UserDefaults, batches of data go into SwiftData, and data from the outside travels over URLSession." Core Data from old tutorials still works (SwiftData is its modern incarnation), while hand-written SQLite is essentially a thing of the past:learn the new way directly and don't take the old road.
+Memorize this mantra: "small settings go into UserDefaults, batches of data go into SwiftData, and data from the outside travels over URLSession." Core Data from old tutorials still works (SwiftData is its modern incarnation), while hand-written SQLite is essentially a thing of the past: learn the new way directly and don't take the old road.
 
 #### 2. UserDefaults: Storing a Few Small Settings
 
@@ -46,11 +46,11 @@ UserDefaults.standard.removeObject(forKey: "isDarkMode")
 ```
 :::
 
-Keep in mind that it's only right for loose little settings,hand dozens or hundreds of records over to SwiftData, and don't use UserDefaults as a database (it slows down launch time and makes searching a pain).
+Keep in mind that it's only right for loose little settings, hand dozens or hundreds of records over to SwiftData, and don't use UserDefaults as a database (it slows down launch time and makes searching a pain).
 
 #### 3. SwiftData: Giving Data a "Real Home"
 
-SwiftData is the official database solution starting with iOS 17, and it boils "creating tables, adding, deleting, updating, querying" down to the bare minimum:one @Model annotation turns a data class into a database table:
+SwiftData is the official database solution starting with iOS 17, and it boils "creating tables, adding, deleting, updating, querying" down to the bare minimum: one @Model annotation turns a data class into a database table:
 
 ::: div .code-block
 :::inline div .code-head
@@ -107,11 +107,11 @@ struct RecordListView: View {
 ```
 :::
 
-This "@Model + modelContainer + @Query" template can be dropped into any of your projects as-is,just swap in your own field names. The moment the data changes, @Query refreshes the interface automatically. Simply delightful.
+This "@Model + modelContainer + @Query" template can be dropped into any of your projects as-is, just swap in your own field names. The moment the data changes, @Query refreshes the interface automatically. Simply delightful.
 
 #### 4. Codable: A "Translator" for JSON
 
-Most of what servers send is JSON text. Swift's Codable protocol makes the "JSON ⇄ struct" conversion happen automatically:line up the field names, and the magic works:
+Most of what servers send is JSON text. Swift's Codable protocol makes the "JSON ⇄ struct" conversion happen automatically: line up the field names, and the magic works:
 
 ::: div .code-block
 :::inline div .code-head
@@ -136,7 +136,7 @@ print(result.weather[0].description) // "Sunny"
 ```
 :::
 
-Iron rule: look at the JSON that actually comes back before you define your fields. Many "parse failed" bugs come from a misspelled field name or a wrongly guessed type (the server sends the string "26.5" and you declared a Double):print out the raw JSON and compare, and you'll locate the problem in ten seconds.
+Iron rule: look at the JSON that actually comes back before you define your fields. Many "parse failed" bugs come from a misspelled field name or a wrongly guessed type (the server sends the string "26.5" and you declared a Double): print out the raw JSON and compare, and you'll locate the problem in ten seconds.
 
 #### 5. URLSession + async/await: Talking to Servers
 
@@ -175,7 +175,7 @@ struct WeatherService {
 Pitfall Alert: Two Iron Rules of Networking
 
 {class="mt-1"}
-1) Networking must use async/await and must never block the main thread:a frozen interface is a crash-level experience. Swift's structured concurrency makes this natural, but don't forget try await and do/catch. 2) ATS blocks plain-text HTTP by default: iOS requires HTTPS. While testing a local http:// service, you can temporarily allow an exception in Info.plist (NSAppTransportSecurity), but a production app must use HTTPS throughout,App Review keeps an eye on this too.
+1) Networking must use async/await and must never block the main thread: a frozen interface is a crash-level experience. Swift's structured concurrency makes this natural, but don't forget try await and do/catch. 2) ATS blocks plain-text HTTP by default: iOS requires HTTPS. While testing a local http:// service, you can temporarily allow an exception in Info.plist (NSAppTransportSecurity), but a production app must use HTTPS throughout, App Review keeps an eye on this too.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
@@ -209,10 +209,10 @@ func friendlyMessage(_ error: Error) -> String {
 ```
 :::
 
-Show the user "plain words," and save the "raw words" for the logs (print the full error). Don't fling the gibberish English of error.localizedDescription straight at the user:that feeling of a polished product hides in details like these.
+Show the user "plain words," and save the "raw words" for the logs (print the full error). Don't fling the gibberish English of error.localizedDescription straight at the user: that feeling of a polished product hides in details like these.
 
 {class="mt-1"}
-Find a free quotes API (something like hitokoto), use URLSession + async/await to fetch a "quote of the day," show it in the middle of the screen, and add a "New quote" button. Then use SwiftData to save your favorite quotes into a "favorites" list. This one exercise uses UserDefaults/SwiftData/Codable/URLSession all at once,finish it, and Chapters 7 and 8 will be a piece of cake.
+Find a free quotes API (something like hitokoto), use URLSession + async/await to fetch a "quote of the day," show it in the middle of the screen, and add a "New quote" button. Then use SwiftData to save your favorite quotes into a "favorites" list. This one exercise uses UserDefaults/SwiftData/Codable/URLSession all at once, finish it, and Chapters 7 and 8 will be a piece of cake.
 :::
 
 ::: div .chapter-summary

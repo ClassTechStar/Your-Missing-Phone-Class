@@ -38,7 +38,7 @@ Garis merah penggunaan rekaman
 
 - Prinsipnya: App telepon menelusuri basis data nomor yang besar melalui internet, lalu menampilkan "panggilan gangguan", "panggilan penipuan", atau nama perusahaan saat ada panggilan masuk.
 - Cara mengaktifkan: Di Android, buka App Telepon > Pengaturan > Pemblokiran Gangguan; di iOS, buka Pengaturan > Telepon > Pemblokiran & Identifikasi Pemanggil. Jalur pengaturan detail per merek dan opsi yang disarankan ada di tabel perbandingan merek pada Bab 13 "Alat Sistem Praktis".
-- Platform penandaan utama: Penandaan nomor di Tiongkok terutama disediakan tiga penyedia data,Tencent Mobile Manager, 360 Mobile Guard, dan Dianhuabang (Tapir). Fitur "nama pemilik" dan "pemblokiran gangguan" dari operator (China Mobile/Unicom/Telecom) juga sering memakai data ini. Basis penandaan merek ponsel (Huawei, Xiaomi, OPPO, vivo) umumnya bekerja sama dengan penyedia di atas.
+- Platform penandaan utama: Penandaan nomor di Tiongkok terutama disediakan tiga penyedia data, Tencent Mobile Manager, 360 Mobile Guard, dan Dianhuabang (Tapir). Fitur "nama pemilik" dan "pemblokiran gangguan" dari operator (China Mobile/Unicom/Telecom) juga sering memakai data ini. Basis penandaan merek ponsel (Huawei, Xiaomi, OPPO, vivo) umumnya bekerja sama dengan penyedia di atas.
 - Kalau salah ditandai: Jika nomor kerja Anda keliru ditandai sebagai "antar makanan", "kurir", atau "panggilan gangguan", Anda bisa mengajukan banding lewat kanal berikut: Dianhuabang: kunjungi platform banding nomor (haoma.tk.cn) dan lampirkan bukti identitas.
 - 360: ajukan lewat fitur "Banding Nomor" di App 360 Mobile Guard.
 - Tencent: ajukan lewat halaman "Banding Nomor" di mini program "Tencent Mobile Manager".
@@ -49,8 +49,8 @@ Garis merah penggunaan rekaman
 - Daftar hitam / daftar putih: blokir manual nomor gangguan yang diketahui; masukkan kontak serta nomor kurir/antar makanan ke daftar putih agar tidak salah blokir.
 - Filter kata kunci SMS: SMS yang memuat kata kunci seperti "menang hadiah", "pinjaman", "klik tautan" otomatis masuk kotak blokir.
 - iOS bisukan panggilan tak dikenal: panggilan yang tidak ada di kontak hanya dibisukan ke pesan suara, tidak mengganggu Anda; cocok untuk yang sering diganggu panggilan tak dikenal, tapi perlu waspada melewatkan panggilan penting dari nomor asing.
-- Terhubung dengan mode Jangan Ganggu: saat malam atau rapat, hanya izinkan panggilan dari kontak, lengkap dengan jadwal otomatis,kualitas tidur langsung membaik.
-- Cara memadukan perangkat lunak praktis: utamakan pemblokiran bawaan sistem, lalu tambahkan Pusat Anti-Penipuan Nasional dan layanan anti-gangguan operator; untuk pembersihan bisa pilih alat ringan seperti Qingzhuo, tetapi satu jenis perangkat lunak keamanan/pembersihan cukup satu set,lihat Bab 13.
+- Terhubung dengan mode Jangan Ganggu: saat malam atau rapat, hanya izinkan panggilan dari kontak, lengkap dengan jadwal otomatis, kualitas tidur langsung membaik.
+- Cara memadukan perangkat lunak praktis: utamakan pemblokiran bawaan sistem, lalu tambahkan Pusat Anti-Penipuan Nasional dan layanan anti-gangguan operator; untuk pembersihan bisa pilih alat ringan seperti Qingzhuo, tetapi satu jenis perangkat lunak keamanan/pembersihan cukup satu set, lihat Bab 13.
 
 ##### Apa itu VoLTE/VoNR dan cara mengaktifkannya:
 
@@ -72,13 +72,13 @@ SMS tradisional belum punah—masih menjadi kanal andalan untuk menerima kode ve
 
 - iMessage: pesan antarperangkat Apple lewat internet, tampil sebagai gelembung biru. Mendukung foto/video berkualitas tinggi, tanda terima baca, sepenuhnya gratis, dan terenkripsi ujung ke ujung.
 - RCS: protokol komunikasi generasi berikutnya yang didorong operator global dan Google. Fiturnya mirip iMessage atau WeChat, tapi berbasis nomor telepon.
-- Interoperabilitas iMessage dan RCS: Sejak iOS 18, Apple mulai mendukung standar RCS. Artinya, iPhone dan ponsel Android bisa bertukar foto HD, tanda terima baca, dan indikator sedang mengetik lewat RCS:pengalaman "gelembung hijau" yang terputus pun berakhir. Syaratnya, kedua operator harus mengaktifkan RCS dan versi sistem ponsel cukup baru.
+- Interoperabilitas iMessage dan RCS: Sejak iOS 18, Apple mulai mendukung standar RCS. Artinya, iPhone dan ponsel Android bisa bertukar foto HD, tanda terima baca, dan indikator sedang mengetik lewat RCS: pengalaman "gelembung hijau" yang terputus pun berakhir. Syaratnya, kedua operator harus mengaktifkan RCS dan versi sistem ponsel cukup baru.
 
 ##### Penerapan RCS di Tiongkok:
 
 - China Mobile: paling awal menerapkan RCS; sebagian provinsi sudah mendukung layanan "Pesan 5G" untuk mengirim pesan media kaya dan kartu interaktif. Perlu ponsel yang mendukung dan diaktifkan di gerai operator.
 - China Telecom: menyediakan layanan lewat "Telecom Pesan 5G"; sebagian paket sudah mendukung secara bawaan, pengguna lama perlu mengirim perintah SMS tertentu untuk mengaktifkan.
-- China Unicom: menerapkan Pesan 5G di kota-kota utama, tetapi dukungan perangkat belum merata,banyak model Android masih perlu mengaktifkan sakelar "Pesan Lanjutan" atau "Pesan 5G" secara manual di App SMS.
+- China Unicom: menerapkan Pesan 5G di kota-kota utama, tetapi dukungan perangkat belum merata, banyak model Android masih perlu mengaktifkan sakelar "Pesan Lanjutan" atau "Pesan 5G" secara manual di App SMS.
 - Pengalaman nyata: Adopsi RCS di Tiongkok lebih lambat dari perkiraan, terutama karena ekosistem WeChat yang kuat dan penyesuaian perangkat yang belum seragam. Komunikasi harian masih didominasi WeChat; RCS lebih banyak berperan sebagai "kanal resmi" (seperti notifikasi bank dan pesan pemerintah).
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
@@ -86,7 +86,7 @@ SMS tradisional belum punah—masih menjadi kanal andalan untuk menerima kode ve
 Garis merah keamanan kode verifikasi
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Jangan teruskan kode verifikasi: siapa pun yang meminta Anda "membacakan kode verifikasi" atau "meneruskan SMS" bisa jadi penipu:termasuk yang mengaku "layanan pelanggan", "kurir", atau "aparat penegak hukum". Kode verifikasi = dompet Anda.
+- Jangan teruskan kode verifikasi: siapa pun yang meminta Anda "membacakan kode verifikasi" atau "meneruskan SMS" bisa jadi penipu: termasuk yang mengaku "layanan pelanggan", "kurir", atau "aparat penegak hukum". Kode verifikasi = dompet Anda.
 - Waspadai SMS phishing: curigai tautan dalam SMS seperti "ETC kedaluwarsa", "kartu asuransi kesehatan dibekukan", "ganti rugi paket hilang". Lembaga resmi tidak akan meminta nomor kartu bank dan kata sandi lewat tautan SMS.
 - Identifikasi nomor: SMS resmi bank biasanya berasal dari nomor pendek awalan 95 atau 1069 + tanda tangan perusahaan. "Notifikasi bank" yang dikirim dari nomor HP 11 digit biasanya hampir pasti penipuan.
 - Cadangan dua faktor: jangan ganti nomor HP yang terikat ke akun penting sembarangan; jika terpaksa ganti nomor, pastikan melepas kaitan semua akun kunci terlebih dahulu, karena pemilik nomor baru bisa mengatur ulang kata sandi Anda lewat kode verifikasi SMS.
@@ -105,8 +105,8 @@ WeChat dan QQ sudah melampaui alat komunikasi; keduanya menjadi "super app" yang
 
 ##### Cara mendalam membersihkan ruang penyimpanan:
 
-- Jalur umum: WeChat [Saya] > [Pengaturan] > [Umum] > [Ruang Penyimpanan],bisa membersihkan cache dan riwayat chat secara detail berdasarkan waktu serta jenis file.
-- Pembersihan per chat: buka sebuah chat > "…" di kanan atas > [Riwayat Chat] > [Kelola Ruang Penyimpanan],bisa menghapus foto, video, dan file di chat tertentu sambil mempertahankan teks.
+- Jalur umum: WeChat [Saya] > [Pengaturan] > [Umum] > [Ruang Penyimpanan], bisa membersihkan cache dan riwayat chat secara detail berdasarkan waktu serta jenis file.
+- Pembersihan per chat: buka sebuah chat > "…" di kanan atas > [Riwayat Chat] > [Kelola Ruang Penyimpanan], bisa menghapus foto, video, dan file di chat tertentu sambil mempertahankan teks.
 - Bersihkan foto/video asli: foto dan video HD asli di grup paling memakan ruang. Di [Kelola Ruang Penyimpanan], centang "Foto asli" untuk menghapus massal.
 - Matikan unduhan otomatis: [Pengaturan] > [Umum] > [Foto, Video, File, dan Panggilan], matikan "Unduhan otomatis" agar tidak diam-diam meng-cache banyak file grup di WiFi.
 - Cache mini program: di [Temukan] > [Mini Program], tekan lama mini program yang jarang dipakai lalu hapus untuk membebaskan cache lokalnya.
@@ -114,20 +114,20 @@ WeChat dan QQ sudah melampaui alat komunikasi; keduanya menjadi "super app" yang
 
 ##### Tips mengelola grup:
 
-- Pengumuman grup: pemilik/admin grup memublikasikannya di "…" kanan atas chat grup > [Pengumuman Grup]. Semua anggota menerima notifikasi kuat,cocok untuk pemberitahuan penting. Otomatis muncul saat anggota baru bergabung.
+- Pengumuman grup: pemilik/admin grup memublikasikannya di "…" kanan atas chat grup > [Pengumuman Grup]. Semua anggota menerima notifikasi kuat, cocok untuk pemberitahuan penting. Otomatis muncul saat anggota baru bergabung.
 - Tugas grup: pemilik grup dapat mengatur pesan yang disematkan sebagai "Tugas Grup"; semua anggota melihat penanda merah di atas, dan hilang otomatis setelah diklik selesai. Cocok untuk pendaftaran acara dan pengumpulan tugas.
 - Rantai Grup (Jielong): ketik "#jielong" di kotak input untuk memulai rantai, cocok untuk pesan makan bersama atau pengumpulan daftar pendaftaran. Hasil rantai otomatis dirangkum di bagian atas grup, sehingga chat tidak banjir pesan.
 - Siaran langsung grup: " + " di kanan atas chat grup > [Siaran Grup]—bisa memulai live yang hanya bisa ditonton anggota grup; cocok untuk pelatihan internal, kumpul keluarga, atau uji coba produk internal.
-- Lipat chat grup: di daftar grup, geser nama grup ke kiri > [Lipat]:grup yang kurang penting bisa dirapikan ke "Grup Terlipat", dan hanya memberi notifikasi saat ada yang @ Anda.
+- Lipat chat grup: di daftar grup, geser nama grup ke kiri > [Lipat]: grup yang kurang penting bisa dirapikan ke "Grup Terlipat", dan hanya memberi notifikasi saat ada yang @ Anda.
 - Hanya pemilik/admin yang boleh @ semua: saat grup berisi 500 orang ke atas, anggota biasa tidak bisa @ semua, agar tidak saling mengganggu.
 
 ##### Pengelolaan izin Moments secara detail:
 
 - Visibilitas kelompok: saat membagikan, klik "Siapa yang boleh melihat", pilih "Terlihat sebagian" atau "Sembunyikan dari",berdasarkan label kelompok yang sudah diatur (misalnya "Rekan kerja", "Keluarga", "Klien").
 - Rentang teman yang boleh melihat: [Saya] > [Pengaturan] > [Izin Teman] > [Moments] > [Rentang teman yang ,boleh melihat Moments]—pilih "3 hari terakhir / 1 bulan / 6 bulan / Semua". Disarankan pilih "6 bulan" untuk menyeimbangkan privasi dan sosial.
-- Sembunyikan satu unggahan Moments: tekan lama unggahan di Moments > [Jangan lihat Moments-nya] atau [Berhenti ikuti],pihak lain tidak akan tahu.
-- Kelola iklan Moments: [Saya] > [Pengaturan] > [Tentang WeChat] > [Informasi Pribadi & Izin] > [Kelola Iklan Personal],bisa mematikan rekomendasi personal berbasis perilaku.
-- Sepuluh unggahan untuk orang asing: [Izin Teman] > [Moments] > [Izinkan orang asing melihat sepuluh unggahan Moments],matikan agar orang asing tidak bisa menelusuri unggahan lama Anda.
+- Sembunyikan satu unggahan Moments: tekan lama unggahan di Moments > [Jangan lihat Moments-nya] atau [Berhenti ikuti], pihak lain tidak akan tahu.
+- Kelola iklan Moments: [Saya] > [Pengaturan] > [Tentang WeChat] > [Informasi Pribadi & Izin] > [Kelola Iklan Personal], bisa mematikan rekomendasi personal berbasis perilaku.
+- Sepuluh unggahan untuk orang asing: [Izin Teman] > [Moments] > [Izinkan orang asing melihat sepuluh unggahan Moments], matikan agar orang asing tidak bisa menelusuri unggahan lama Anda.
 
 #### 4. Perbandingan video call
 
@@ -135,8 +135,8 @@ Setiap alat video call punya keunggulan masing-masing. Memilih alat yang sesuai 
 
 - Video WeChat: jangkauan sejuta umat, cocok untuk semua usia. Ideal untuk kontak harian keluarga dan teman, komunikasi cepat. Maksimal 20 orang dalam video (perlu mini program "Grup Video"); kekurangannya, kualitas gambar turun drastis saat jaringan buruk.
 - FaceTime: khusus ekosistem Apple, kualitas gambar sangat baik, terenkripsi ujung ke ujung. Sejak iOS 15 mendukung undangan "tautan" untuk pengguna Android/Web, tetapi host harus perangkat Apple. Cocok untuk komunikasi keluarga lintas perangkat.
-- Zoom: pilihan utama untuk rapat internasional, mendukung rapat gratis hingga 100 orang selama 40 menit. Fitur berbagi layar, latar virtual, dan ruang diskusi kelompok lengkap,cocok untuk kolaborasi lintas negara/jarak jauh.
-- Tencent Meeting: pilihan utama untuk kerja kantoran di Tiongkok, terintegrasi erat dengan WeChat, masuk cukup dengan pindai QR. Mendukung rapat 300 orang (versi berbayar); perekaman cloud, takarir langsung, dan notulen rapatnya kuat,cocok untuk pelatihan internal dan rapat besar.
+- Zoom: pilihan utama untuk rapat internasional, mendukung rapat gratis hingga 100 orang selama 40 menit. Fitur berbagi layar, latar virtual, dan ruang diskusi kelompok lengkap, cocok untuk kolaborasi lintas negara/jarak jauh.
+- Tencent Meeting: pilihan utama untuk kerja kantoran di Tiongkok, terintegrasi erat dengan WeChat, masuk cukup dengan pindai QR. Mendukung rapat 300 orang (versi berbayar); perekaman cloud, takarir langsung, dan notulen rapatnya kuat, cocok untuk pelatihan internal dan rapat besar.
 - Saran pemakaian: kontak harian 1 lawan 1 pilih WeChat; antarpengguna Apple pilih FaceTime; rapat bisnis resmi pilih Zoom atau Tencent Meeting (di Tiongkok Tencent, lintas negara Zoom).
 
 ##### Kebutuhan bandwidth dan perkiraan konsumsi kuota:
@@ -159,7 +159,7 @@ Setiap alat video call punya keunggulan masing-masing. Memilih alat yang sesuai 
 Tips kecil
 
 {class="mt-1"}
-Saat jaringan tersendat, matikan video dan pertahankan suara,lebih sopan daripada langsung menutup panggilan. Sebelum rapat penting, uji bandwidth lebih dulu dengan fitur "Deteksi Jaringan" bawaan Tencent Meeting.
+Saat jaringan tersendat, matikan video dan pertahankan suara, lebih sopan daripada langsung menutup panggilan. Sebelum rapat penting, uji bandwidth lebih dulu dengan fitur "Deteksi Jaringan" bawaan Tencent Meeting.
 :::
 
 #### 5. Email: konfigurasi dan pemakaian di ponsel
@@ -169,8 +169,8 @@ Saat jaringan tersendat, matikan video dan pertahankan suara,lebih sopan daripad
 
 ##### Perbedaan protokol IMAP vs POP3 vs Exchange:
 
-- POP3: setelah mengunduh email dari server, salinan asli dihapus secara bawaan dan hanya tersimpan di perangkat. Cocok untuk satu perangkat dan kebutuhan baca offline. Kekurangannya, setelah ganti perangkat Anda tidak melihat email lama,sudah tidak direkomendasikan.
-- IMAP: email selalu tersimpan di server, di perangkat hanya cache. Sinkronisasi multi-perangkat (ponsel/komputer/tablet) konsisten,sudah dibaca di satu perangkat, dianggap sudah dibaca di semua. Protokol utama yang direkomendasikan saat ini.
+- POP3: setelah mengunduh email dari server, salinan asli dihapus secara bawaan dan hanya tersimpan di perangkat. Cocok untuk satu perangkat dan kebutuhan baca offline. Kekurangannya, setelah ganti perangkat Anda tidak melihat email lama, sudah tidak direkomendasikan.
+- IMAP: email selalu tersimpan di server, di perangkat hanya cache. Sinkronisasi multi-perangkat (ponsel/komputer/tablet) konsisten, sudah dibaca di satu perangkat, dianggap sudah dibaca di semua. Protokol utama yang direkomendasikan saat ini.
 - Exchange (termasuk ActiveSync): protokol Microsoft yang, selain email, juga menyinkronkan kalender, kontak, dan tugas. Pilihan utama untuk email perusahaan. Didukung Outlook, NetEase Enterprise Mail, dan Tencent Enterprise Mail.
 - Saran pemilihan: email pribadi pakai IMAP; email kantor utamakan Exchange, lalu IMAP; sebisa mungkin jangan pakai POP3 kecuali ada kebutuhan arsip khusus.
 

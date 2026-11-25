@@ -16,7 +16,7 @@ Afraid of heat
 
 Aging
 
-- <strong>: Over time, the maximum capacity will decrease,this is normal.</strong> Core Metrics: Cycle Count and Battery Health.
+- <strong>: Over time, the maximum capacity will decrease, this is normal.</strong> Core Metrics: Cycle Count and Battery Health.
 - <strong>One cycle is not one charge. For example, if you use 60% today and recharge to full, then use 40% tomorrow and recharge to full, the total 100% consumed counts as one cycle.</strong> Battery health is the current maximum capacity as a percentage of brand-new. Below 80%, you'll noticeably feel the battery life shorten.
 - <strong>How to check?</strong> iPhone: Settings &gt; Battery &gt; Battery Health &amp; Charging; Android: usually search "battery health" in Settings.
 
@@ -81,7 +81,7 @@ Charging phase
 <strong>: 5V, 9V, 15V, 20V; PD 3.1 also supports 28V, 36V, 48V.</strong> Compatibility
 
 - <strong>Protocol</strong> Advantages
-- <strong>: Strong universality,one charger can charge multiple devices; supports PPS (Programmable Power Supply) for fine-tuning voltage and current.</strong> Disadvantages
+- <strong>: Strong universality, one charger can charge multiple devices; supports PPS (Programmable Power Supply) for fine-tuning voltage and current.</strong> Disadvantages
 - <strong>QC 5.0</strong> Qualcomm QC (Quick Charge)
 - <strong>—Veteran of the Android Camp</strong> QC 3.0
 - <strong>: Supports adjustable voltage from 3.6V-20V in 0.2V steps, up to 18W.</strong> QC 4.0/4+
@@ -182,7 +182,7 @@ Proprietary protocols
 ##### Check certification
 
 - <strong>: Apple users should choose MFi-certified cables; Android users should choose original brand or well-known third-party.</strong> Check heat
-- <strong>: It's normal for the phone to heat up during fast charging, but if it's burning hot, that's not normal:pause charging or change the charger.</strong> Fast Charging Safety Tips
+- <strong>: It's normal for the phone to heat up during fast charging, but if it's burning hot, that's not normal: pause charging or change the charger.</strong> Fast Charging Safety Tips
 - <strong>Avoid playing heavy games while charging, which will increase heat.</strong> Do not use low-quality chargers and cables, which may cause safety hazards.
 - <strong>Remove thick phone cases while charging to help with heat dissipation.</strong> If the charger or phone heats abnormally or has an unusual smell, stop using it immediately.
 

@@ -110,7 +110,7 @@ Pihak rasmi DeepSeek telah mengumumkan pada 6 Ogos 2026 "berancangan menaikkan h
 
 ##### 2. Tongyi Qianwen Qwen3.7 Max: Pilihan Peringkat Perusahaan Alibaba Cloud
 
-Siri Tongyi Qianwen (Qwen) dari,pada Alibaba Cloud bersandar pada ekosistem Alibaba Cloud dan mempunyai kelebihan semula jadi dalam pelancaran peringkat perusahaan. Qwen3.7 Max yang dikeluarkan pada Julai 2026 ialah model utama semasa: model padat 235B parameter dengan konteks asli 256K, boleh dikembangkan sehingga 1M. Kelebihan teras Qwen: ekosistem sumber terbuka yang matang (seluruh siri daripada 7B hingga 235B bersumber terbuka), kefahaman senario bahasa Cina yang tepat, serta integrasi mendalam dengan infrastruktur Alibaba Cloud.
+Siri Tongyi Qianwen (Qwen) dari, pada Alibaba Cloud bersandar pada ekosistem Alibaba Cloud dan mempunyai kelebihan semula jadi dalam pelancaran peringkat perusahaan. Qwen3.7 Max yang dikeluarkan pada Julai 2026 ialah model utama semasa: model padat 235B parameter dengan konteks asli 256K, boleh dikembangkan sehingga 1M. Kelebihan teras Qwen: ekosistem sumber terbuka yang matang (seluruh siri daripada 7B hingga 235B bersumber terbuka), kefahaman senario bahasa Cina yang tepat, serta integrasi mendalam dengan infrastruktur Alibaba Cloud.
 
 ::: div .overflow-x-auto
 ```html
@@ -418,7 +418,7 @@ Memilih model yang betul hanyalah langkah pertama; cara "menggunakannya secara j
 2. Penghalaan berperingkat, gunakan model murah untuk tugasan mudah dan model mahal untuk tugasan kompleks. Contohnya, gunakan DeepSeek V4 Flash untuk klasifikasi teks (output 2 yuan/sejuta ,Token) dan Claude untuk reka bentuk seni bina (output 181 yuan/sejuta Token). Dalam sesuatu projek, 80% daripada panggilan boleh menggunakan model murah.
 3. Hadkan panjang output. API dibilkan mengikut Token output; makin panjang output, makin mahal. Dalam situasi yang tidak memerlukan huraian panjang lebar, tetapkan parameter max_tokens untuk mengehadkan panjang output dan elakkan AI "bercakap berbelit".
 4. Gunakan Batch API untuk tugasan bukan masa nyata. Jika anda mempunyai banyak tugasan yang tidak memerlukan respons segera (contohnya pelabelan data secara pukal atau ringkasan dokumen), gunakan Batch API untuk menikmati diskaun 50%. OpenAI dan Azure kedua-duanya menyediakan fungsi ini.
-5. Pantau penggunaan Token. Kebanyakan platform API menyediakan papan pemuka statistik penggunaan. Semak taburan penggunaan secara berkala, kenal pasti panggilan yang paling banyak menghabiskan Token, dan buat pengoptimuman secara bersasar. Satu pelarasan kecil pada Prompt (contohnya menukar "sila jelaskan dengan terperinci" ke,pada "sila jelaskan dalam 3 ayat") boleh menjimatkan sehingga 50% Token.
+5. Pantau penggunaan Token. Kebanyakan platform API menyediakan papan pemuka statistik penggunaan. Semak taburan penggunaan secara berkala, kenal pasti panggilan yang paling banyak menghabiskan Token, dan buat pengoptimuman secara bersasar. Satu pelarasan kecil pada Prompt (contohnya menukar "sila jelaskan dengan terperinci" ke, pada "sila jelaskan dalam 3 ayat") boleh menjimatkan sehingga 50% Token.
 
 ::: div .overflow-x-auto
 ```html
@@ -514,7 +514,7 @@ if __name__ == "__main__":
 Kod ini mencerminkan beberapa amalan terbaik panggilan API: API Key dibaca melalui pemboleh ubah persekitaran dan tidak pernah dikodkan terus dalam kod; fungsi mempunyai dokumentasi dan petunjuk jenis yang jelas; max_tokens ditetapkan untuk mengehadkan panjang output; temperature ditetapkan pada nilai rendah (0.3) untuk output yang lebih stabil; pengendalian ralat yang lengkap disediakan; dan maklumat penggunaan Token dipulangkan untuk penjejakan kos. Apabila anda meminta AI menulis kod seperti ini, beritahulah keperluan-keperluan ini, ia memang mampu melaksanakannya untuk anda.
 
 :::inline div .quote-line
-Pelajaran akhir bab ini: model ialah "peluru", metodologi ialah "taktik". Pilih peluru betul membantu peperangan lebih lancar, tetapi tanpa taktik baik, peluru sebanyak mana pun tidak menang. Selepas mengenali kelebihan setiap model dan cara guna API, anda ada "gudang peluru" yang cukup,tetapi bagaimana memenangkan peperangan tetap bergantung pada metodologi pemikiran yang dipelajari dalam bab-bab sebelumnya.
+Pelajaran akhir bab ini: model ialah "peluru", metodologi ialah "taktik". Pilih peluru betul membantu peperangan lebih lancar, tetapi tanpa taktik baik, peluru sebanyak mana pun tidak menang. Selepas mengenali kelebihan setiap model dan cara guna API, anda ada "gudang peluru" yang cukup, tetapi bagaimana memenangkan peperangan tetap bergantung pada metodologi pemikiran yang dipelajari dalam bab-bab sebelumnya.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

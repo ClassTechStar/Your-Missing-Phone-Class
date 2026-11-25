@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 67: Polish and Ship—Testing, Debugging, and the App Store
 
 {class="chapter-intro mb-4"}
-The app works,now what? This chapter covers the three things on the road from "it runs" to "it's deliverable": how to debug efficiently to find bugs, how to write tests to prevent regressions, and how to get your app onto the App Store for the whole world to download. Shipping isn't just ceremony,it's the dividing line between a project and a product.
+The app works, now what? This chapter covers the three things on the road from "it runs" to "it's deliverable": how to debug efficiently to find bugs, how to write tests to prevent regressions, and how to get your app onto the App Store for the whole world to download. Shipping isn't just ceremony, it's the dividing line between a project and a product.
 
 1. The three debugging essentials: print, breakpoints, and previews
 
@@ -33,7 +33,7 @@ When Swift crashes, the console prints "Fatal error" plus the reason, and Xcode 
 
 #### 2. Testing: insurance for your code
 
-Manual testing can't be trusted,fix one feature and another quietly breaks. Tests are both the "undo button" and the "bulletproof vest." iOS uses the XCTest framework, in two flavors:
+Manual testing can't be trusted, fix one feature and another quietly breaks. Tests are both the "undo button" and the "bulletproof vest." iOS uses the XCTest framework, in two flavors:
 
 ::: div .overflow-x-auto
 ```html
@@ -77,7 +77,7 @@ Run tests with ⌘U. Change code only once everything is green, and you'll feel 
 
 #### 3. Signing and packaging: stamping your app
 
-Every iOS app must be signed before it can be installed,proof that "this package came from you and hasn't been tampered with." The hierarchy:
+Every iOS app must be signed before it can be installed, proof that "this package came from you and hasn't been tampered with." The hierarchy:
 
 - Learning stage: a free Apple ID + Xcode automatic signing (Personal Team) runs on a real device, renewed every 7 days;
 - Distribution stage: a paid developer account (99 USD/year) issues the certificates and provisioning profiles needed to ship and install long-term.
@@ -89,7 +89,7 @@ Packaging: in Xcode, Product → Archive; once the build finishes, in Organizer 
 Pitfall warning: lose the certificate = updates cut off
 
 {class="mt-1"}
-Once a signing certificate and its private key are lost, you can no longer push updates to your old app,users can only install it as a "brand-new" app. Back up your certificates carefully (export a .p12 from Keychain) and keep the password safe. Fortunately, Apple offers "automatic signing" and cloud certificate management (check Automatically manage signing in Xcode), which spares you most of the manual pitfalls.
+Once a signing certificate and its private key are lost, you can no longer push updates to your old app, users can only install it as a "brand-new" app. Back up your certificates carefully (export a .p12 from Keychain) and keep the password safe. Fortunately, Apple offers "automatic signing" and cloud certificate management (check Automatically manage signing in Xcode), which spares you most of the manual pitfalls.
 :::
 
 #### 4. The full App Store submission process
@@ -108,8 +108,8 @@ Figure 5: Six steps to the App Store
 :::
 
 - Register: developer.apple.com, personal accounts 99 USD/year;
-- Assets: icon (1024×1024, no rounded corners,Apple does the rounding itself), screenshots (each iPhone size), description, privacy policy link;
-- Privacy questionnaire: honestly declare what data you collect,an offline expense tracker can declare "no data collected";
+- Assets: icon (1024×1024, no rounded corners, Apple does the rounding itself), screenshots (each iPhone size), description, privacy policy link;
+- Privacy questionnaire: honestly declare what data you collect, an offline expense tracker can declare "no data collected";
 - Review: the first submission often waits 1–7 days; if rejected, fix things one by one per the "review notes",Apple's rejection reasons are usually written very specifically, so just follow them;
 - TestFlight: before release, send a beta build to friends for internal testing (up to 10,000 people), gather a round of feedback, then submit officially—very professional
 
@@ -135,10 +135,10 @@ Just because it didn't crash in your testing doesn't mean it won't on users' pho
 
 ##### 2. Four performance self-checks
 
-1. Use LazyVStack / List for lists: don't lay out long lists with a plain VStack:lazy loading is lesson one of performance;
+1. Use LazyVStack / List for lists: don't lay out long lists with a plain VStack: lazy loading is lesson one of performance;
 2. Don't force in full-size images: use AsyncImage (for remote images) and the system cache; a 5MB original can bog down older phones badly;
 3. Don't do heavy work on the main thread: route network calls and large files through async/await;
-4. Measure with Instruments: Xcode's built-in profiler (Time Profiler, memory leak checks),measure first, then optimize; don't go by feel
+4. Measure with Instruments: Xcode's built-in profiler (Time Profiler, memory leak checks), measure first, then optimize; don't go by feel
 
 {class="mt-1"}
 ① Add 3 unit tests for logic like parseAmount (green with ⌘U). ② Use a breakpoint to catch a crash you created yourself and fix it. ③ Build a package with Product → Archive and invite friends to test via TestFlight. ④ If you have the bandwidth, register a developer account and actually submit the expense tracker to the store. The first three steps can be done tonight.

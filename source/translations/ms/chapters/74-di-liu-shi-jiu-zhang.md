@@ -43,7 +43,7 @@ Keadaan pasaran pada 2026: jawatan peringkat permulaan yang hanya 'boleh melukis
 
 Q5: Apa yang perlu dilakukan jika App ditolak semasa semakan?
 
-Jangan panik, ini perkara biasa,kebarangkalian ditolak pada penghantaran pertama tidak rendah. Sebab penolakan Apple biasanya ditulis dengan sangat terperinci (halaman mana. garis panduan yang mana). Baiki satu demi satu, kemudian balas dengan penerangan dalam App Store Connect dan hantar semula. Tiga sebab penolakan yang paling biasa: kegunaan kebenaran tidak dijelaskan dengan jelas, antara muka mempunyai bug, dan metadata (tangkapan skrin/penerangan) tidak sepadan dengan aplikasi sebenar. Memeriksa ketiga-tiga perkara ini lebih awal boleh menjimatkan satu pusingan penantian.
+Jangan panik, ini perkara biasa, kebarangkalian ditolak pada penghantaran pertama tidak rendah. Sebab penolakan Apple biasanya ditulis dengan sangat terperinci (halaman mana. garis panduan yang mana). Baiki satu demi satu, kemudian balas dengan penerangan dalam App Store Connect dan hantar semula. Tiga sebab penolakan yang paling biasa: kegunaan kebenaran tidak dijelaskan dengan jelas, antara muka mempunyai bug, dan metadata (tangkapan skrin/penerangan) tidak sepadan dengan aplikasi sebenar. Memeriksa ketiga-tiga perkara ini lebih awal boleh menjimatkan satu pusingan penantian.
 
 #### 3. Rujukan Pantas Pintasan Xcode yang Kerap Digunakan
 
@@ -77,12 +77,12 @@ Senarai Sumber Pembelajaran Pembangunan iOS (Ogos 2026)
 
 #### 5. Penutup: Daripada App Pertama ke App ke-N
 
-Bila dilihat kembali, anda telah bergerak daripada "tidak tahu apa itu SwiftUI" kepada memasang Xcode, mempelajari Swift, melukis antara muka dengan SwiftUI, menyambungkan App kepada pangkalan data dan rangkaian. kemudian menguji, membungkus dan menerbitkannya,sepanjang perjalanan ini, anda telah menamatkan bahagian yang paling sukar dalam perjalanan daripada sifar ke satu.
+Bila dilihat kembali, anda telah bergerak daripada "tidak tahu apa itu SwiftUI" kepada memasang Xcode, mempelajari Swift, melukis antara muka dengan SwiftUI, menyambungkan App kepada pangkalan data dan rangkaian. kemudian menguji, membungkus dan menerbitkannya, sepanjang perjalanan ini, anda telah menamatkan bahagian yang paling sukar dalam perjalanan daripada sifar ke satu.
 
 Dunia teknologi berubah dengan sangat pantas: rangka kerja akan dinaik taraf, alat akan ditukar ganti, dan AI akan mengambil alih lebih banyak kerja "menaip papan kekunci". Tetapi ada satu perkara yang tidak akan lapuk: kebolehan anda menguraikan idea yang kabur menjadi langkah yang jelas, kemudian melaksanakannya langkah demi langkah. Alat ialah pembesar, manakala cara berfikir ialah asas. Pembesar boleh diganti, tetapi asas tidak boleh tergugat.
 
 :::inline div .quote-line
-Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta iPhone. Mulai hari ini, berkarya dengan papan kekunci:itulah romantisme pembangun iOS.
+Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta iPhone. Mulai hari ini, berkarya dengan papan kekunci: itulah romantisme pembangun iOS.
 :::
 
 #### Rujukan

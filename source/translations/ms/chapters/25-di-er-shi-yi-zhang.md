@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 21: Boleh sambung ke Wi-Fi awam?
 
 {class="chapter-intro mb-4"}
-Kita menggunakan telefon untuk melayari internet, membuat pembayaran, dan bersembang setiap hari, rasa sangat mudah. Tetapi pernahkah anda terfikir, rekod sembang anda, kata laluan pembayaran, foto-foto anda... berapa kerap maklumat ini "berlari telanjang" di internet? Jujurlah, kebanyakan orang langsung tidak pernah memikirkan masalah ini, tetapi sekali berlaku insiden,contohnya akaun dicuri, kad bank dikuras,baru menyesal sudah terlambat. Dalam bab ini, kita akan bincang dengan baik, bagaimana membuat kehidupan digital anda tidak begitu "telus".
+Kita menggunakan telefon untuk melayari internet, membuat pembayaran, dan bersembang setiap hari, rasa sangat mudah. Tetapi pernahkah anda terfikir, rekod sembang anda, kata laluan pembayaran, foto-foto anda... berapa kerap maklumat ini "berlari telanjang" di internet? Jujurlah, kebanyakan orang langsung tidak pernah memikirkan masalah ini, tetapi sekali berlaku insiden, contohnya akaun dicuri, kad bank dikuras, baru menyesal sudah terlambat. Dalam bab ini, kita akan bincang dengan baik, bagaimana membuat kehidupan digital anda tidak begitu "telus".
 
 #### 1. VPN: "Jubah Halimunan" dalam Rangkaian
 
@@ -21,7 +21,7 @@ Kita menggunakan telefon untuk melayari internet, membuat pembayaran, dan bersem
 
 (contohnya melihat kandungan yang hanya tersedia di negara tertentu); ketiga,<strong>menghalang ISP anda daripada merekodkan tabuan pelayaran anda</strong>. Tetapi saya perlu ingatkan satu perkara:<strong>jangan guna VPN percuma!</strong> Di sebalik percuma sering bermakna data anda adalah "barang dagangan" mereka. Saya ada seorang kawan yang menggunakan VPN percuma tertentu, akibatnya telefonnya mula memaparkan iklan secara misteri, kemudian baru diketahui VPN itu menjual data pelayarannya kepada pengiklan dalam bentuk pakej. Jadi memilih VPN, sama ada pilih jenama berbayar besar (seperti NordVPN, ExpressVPN). atau jangan guna langsung.<strong>Selain itu, VPN bukan penyelesaian segala-galanya. Ia hanya melindungi data "dalam penghantaran", jika laman web sasaran itu sendiri tidak selamat, atau telefon anda sudah dijangkiti perisian hasad, VPN juga tidak dapat membantu anda.</strong>2. Perangkap Manis Wi-Fi Awam, Lebih Bahaya Daripada Yang Anda Bayangkan <strong>Anda mungkin rasa, bukankah hanya menyambung Wi-Fi percuma, berapa besar risikonya? Biar saya ceritakan satu kisah benar: penyelidik keselamatan pernah membuat eksperimen, memasang satu titik panas Wi-Fi bernama "Starbucks_Free" di lapangan terbang, dalam masa kurang satu jam sudah ada ratusan orang menyambung. Hakikatnya titik panas ini dibina oleh penyelidik sendiri, semua</strong> trafik tidak disulitkan
 
-yang melalui titik panas ini—seperti kandungan laman HTTP yang anda layari, komunikasi App yang tidak mengaktifkan TLS,mereka benar-benar boleh menangkap dan melihatnya.
+yang melalui titik panas ini—seperti kandungan laman HTTP yang anda layari, komunikasi App yang tidak mengaktifkan TLS, mereka benar-benar boleh menangkap dan melihatnya.
 
 2. Perangkap Manis Wi-Fi Awam — Lebih Bahaya Daripada Yang Anda Bayangkan
 
@@ -41,7 +41,7 @@ Pastikan HTTPS <strong>: Permulaan bar alamat ialah https://, "s" tambahan berma
 Selepas pengesahan lulus, kedua-dua pihak menggunakan penyulitan kunci awam untuk merundingkan satu "kunci sesi", komunikasi selepas itu semua disulitkan dengan kunci ini.
 
 1. Ini seperti anda pergi ke bank untuk urusan: Anda menyerahkan kad pengenalan (sijil), kerani mengesahkan identiti anda, kemudian kedua-dua pihak bersetuju dengan satu kod rahsia, perbualan selepas itu hanya kedua-dua anda yang faham. Walaupun ada orang mengintip di sebelah, mereka hanya boleh mendengar kod sulit yang tidak bermakna.
-2. Tetapi perhatikan: HTTPS hanya menjamin proses "penghantaran" disulitkan, tidak menjamin laman web sasaran adalah pihak yang baik. Laman web pancingan juga boleh menggunakan HTTPS,ikon gembok kecil itu hanya menunjukkan anda menyambung ke "sesuatu laman web", tidak bermakna laman web itu ialah yang anda ingin tuju. Jadi anda masih perlu menyemak sendiri sama ada alamat web adalah betul.
+2. Tetapi perhatikan: HTTPS hanya menjamin proses "penghantaran" disulitkan, tidak menjamin laman web sasaran adalah pihak yang baik. Laman web pancingan juga boleh menggunakan HTTPS, ikon gembok kecil itu hanya menunjukkan anda menyambung ke "sesuatu laman web", tidak bermakna laman web itu ialah yang anda ingin tuju. Jadi anda masih perlu menyemak sendiri sama ada alamat web adalah betul.
 3. 4. Keselamatan DNS: Adakah "Buku Telefon Rangkaian" Anda Selamat?
 4. DNS (Sistem Nama Domain) seperti buku telefon internet: anda memasukkan "baidu.com", DNS membantu anda mencari alamat IP yang sepadan (contohnya 110.242.68.66), kemudian pelayar baru boleh menyambung. Masalahnya ialah, pertanyaan DNS tradisional adalah
 
@@ -60,7 +60,7 @@ DNS over TLS (DoT)
 - <strong>Saya peribadi mengesyorkan menggunakan Cloudflare 1.1.1.1 atau Google 8.8.8.8 sebagai pelayan DNS, kedua-duanya menyokong DNS sulit. Dalam tetapan "DNS Peribadi" Android, terus isi "one.one.one.one" atau "dns.google", sangat mudah. iPhone agak lebih rumit, perlu memasang fail profil atau menetapkan melalui App, tetapi juga berbaloi untuk dilakukan.</strong>5. Adakah "Pelayaran Tanpa Jejak" Benar-Benar Menjadikan Anda Halimunan?
 - <strong>Kesimpulan dahulu:</strong> Mod tanpa jejak adalah langsir rumah anda, bukan jubah halimunan.
 
-Apa yang ia lakukan: Tidak meninggalkan jejak secara tempatan,selepas menutup tetingkap tanpa jejak, pelayar tidak menyimpan sejarah pelayaran, Cookies, rekod pengisian borang, rekod carian. Meminjam komputer orang lain untuk mencari sesuatu, atau membeli hadiah tanpa mahu dikesan oleh keluarga dari sejarah pelayaran, menggunakan mod tanpa jejak adalah sesuai.
+Apa yang ia lakukan: Tidak meninggalkan jejak secara tempatan, selepas menutup tetingkap tanpa jejak, pelayar tidak menyimpan sejarah pelayaran, Cookies, rekod pengisian borang, rekod carian. Meminjam komputer orang lain untuk mencari sesuatu, atau membeli hadiah tanpa mahu dikesan oleh keluarga dari sejarah pelayaran, menggunakan mod tanpa jejak adalah sesuai.
 
 5. Adakah "Pelayaran Tanpa Jejak" Benar-Benar Menjadikan Anda Halimunan?
 
@@ -75,7 +75,7 @@ ISP anda
 - kekal <strong>, tidak akan hilang apabila tetingkap ditutup.</strong> Jadi ingat: Mod tanpa jejak ialah "pemadam tempatan", bukan "jubah halimunan rangkaian". Jika anda benar-benar perlu menyembunyikan jejak pelayaran, perlu menggunakan gabungan VPN + pelayar Tor, tetapi untuk penggunaan harian, memahami perkara ini sudah memadai
 - 6. Privasi Pelayar: Jangan Biarkan Pelayar Menjual Anda mungkin tidak sedar, pelayar itu sendiri adalah sebuah pengumpul maklumat yang besar. Cookies, sejarah pelayaran, cache, auto-isi, kebenaran lokasi... setiap satu boleh membocorkan privasi anda. Beberapa cadangan: Bersihkan data pelayaran secara berkala
 
-: Setiap beberapa ketika, pergi ke tetapan dan bersihkan Cookies, cache, sejarah pelayaran. Bukan untuk menghalang "penjejakan",membersihkan Cookies sudah tidak begitu berkesan,tetapi untuk mengelakkan telefon semakin perlahan. Cache pelayar boleh menggunakan beberapa GB ruang.
+: Setiap beberapa ketika, pergi ke tetapan dan bersihkan Cookies, cache, sejarah pelayaran. Bukan untuk menghalang "penjejakan",membersihkan Cookies sudah tidak begitu berkesan, tetapi untuk mengelakkan telefon semakin perlahan. Cache pelayar boleh menggunakan beberapa GB ruang.
 
 #### 6. Privasi Pelayar: Jangan Biarkan Pelayar Menjual Anda
 

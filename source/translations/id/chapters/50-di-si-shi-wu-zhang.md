@@ -10,13 +10,13 @@ kind: chapter
 ### Bab 45: Ditulis AI, belum tentu selesai
 
 {class="chapter-intro mb-4"}
-Kode buatan AI punya satu ciri: biasanya "kelihatannya benar",penamaan variabel rapi, komentar lengkap, logika jernih. Tapi "kelihatannya benar" tidak sama dengan "benar sungguhan". Masalah yang tersembunyi dalam kode AI sering lebih sulit ditemukan daripada dalam kode tulisan tangan, karena kualitas permukaannya terlalu tinggi sehingga mudah membuat orang lengah. Bab ini mengajarkan cara membangun sistem jaminan kualitas yang efektif untuk kode AI,dengan tiga lini pertahanan (pengujian, tinjauan, dan kontrol versi), "kelihatannya benar" diubah menjadi "benar sungguhan".
+Kode buatan AI punya satu ciri: biasanya "kelihatannya benar",penamaan variabel rapi, komentar lengkap, logika jernih. Tapi "kelihatannya benar" tidak sama dengan "benar sungguhan". Masalah yang tersembunyi dalam kode AI sering lebih sulit ditemukan daripada dalam kode tulisan tangan, karena kualitas permukaannya terlalu tinggi sehingga mudah membuat orang lengah. Bab ini mengajarkan cara membangun sistem jaminan kualitas yang efektif untuk kode AI, dengan tiga lini pertahanan (pengujian, tinjauan, dan kontrol versi), "kelihatannya benar" diubah menjadi "benar sungguhan".
 
 #### 1. Berbasis pengujian: minta AI menulis pengujian
 
-Pengujian adalah lini pertahanan pertama jaminan kualitas pemrograman AI. Kabar baiknya: meminta AI menulis pengujian lebih mudah dan lebih andal daripada memintanya menulis kode fitur:karena perilaku yang diharapkan dari pengujian sudah jelas, sehingga kode "kelihatannya benar tapi sebenarnya salah" jarang muncul.
+Pengujian adalah lini pertahanan pertama jaminan kualitas pemrograman AI. Kabar baiknya: meminta AI menulis pengujian lebih mudah dan lebih andal daripada memintanya menulis kode fitur: karena perilaku yang diharapkan dari pengujian sudah jelas, sehingga kode "kelihatannya benar tapi sebenarnya salah" jarang muncul.
 
-Alur pemrograman AI berbasis pengujian: minta AI menulis kode fitur dulu, setelah fungsi dasarnya terverifikasi, langsung minta ia menulis kasus uji. Kasus uji harus mencakup jalur normal, kasus batas, dan kasus pengecualian. Setelah itu minta AI mengoreksi kode fitur berdasarkan umpan balik pengujian. Keunggulan alur ini: begitu pengujian selesai ditulis, ia menjadi alat verifikasi yang terus-menerus,setiap perubahan berikutnya bisa dipastikan tidak menimbulkan regresi cukup dengan menjalankan pengujian.
+Alur pemrograman AI berbasis pengujian: minta AI menulis kode fitur dulu, setelah fungsi dasarnya terverifikasi, langsung minta ia menulis kasus uji. Kasus uji harus mencakup jalur normal, kasus batas, dan kasus pengecualian. Setelah itu minta AI mengoreksi kode fitur berdasarkan umpan balik pengujian. Keunggulan alur ini: begitu pengujian selesai ditulis, ia menjadi alat verifikasi yang terus-menerus, setiap perubahan berikutnya bisa dipastikan tidak menimbulkan regresi cukup dengan menjalankan pengujian.
 
 ::: div .code-block
 :::inline div .code-head
@@ -56,11 +56,11 @@ Meskipun sudah ada cakupan pengujian, kamu tetap perlu meninjau secara manual ko
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Dimensi kunci tinjauan kode AI
 
-Saat meninjau, kamu tidak harus memeriksa semuanya sendiri,minta AI membantu melakukan putaran tinjauan pertama. Instruksinya misalnya: "Tinjau keamanan, penanganan error, dan kinerja kode ini, tunjukkan potensi masalahnya." Kemampuan AI meninjau kodenya sendiri terus meningkat; meskipun belum bisa menggantikan tinjauan manual sepenuhnya, ia dapat menyaring sebagian besar masalah yang mencolok.
+Saat meninjau, kamu tidak harus memeriksa semuanya sendiri, minta AI membantu melakukan putaran tinjauan pertama. Instruksinya misalnya: "Tinjau keamanan, penanganan error, dan kinerja kode ini, tunjukkan potensi masalahnya." Kemampuan AI meninjau kodenya sendiri terus meningkat; meskipun belum bisa menggantikan tinjauan manual sepenuhnya, ia dapat menyaring sebagian besar masalah yang mencolok.
 
 #### 3. Kontrol versi: peran Git dalam pemrograman AI
 
-Peran Git dalam pemrograman AI lebih penting daripada dalam pemrograman tradisional. Karena setiap perubahan AI bisa menimbulkan perubahan yang tak terduga, kamu butuh satu "obat penyesalan" yang andal,kontrol versi itulah obat penyesalannya.
+Peran Git dalam pemrograman AI lebih penting daripada dalam pemrograman tradisional. Karena setiap perubahan AI bisa menimbulkan perubahan yang tak terduga, kamu butuh satu "obat penyesalan" yang andal, kontrol versi itulah obat penyesalannya.
 
 Praktik terbaik Git dalam pemrograman AI adalah "commit sering, maju bertahap kecil". Setiap satu titik fitur yang bisa diverifikasi selesai, langsung commit. Dengan begitu, saat salah satu perubahan AI bermasalah, kamu bisa mundur tepat ke keadaan terakhir yang masih berfungsi, tanpa harus membuang seluruh pekerjaan.
 
@@ -77,7 +77,7 @@ Ada beberapa jebakan yang muncul berulang kali dalam pemrograman AI dan hampir s
 
 ##### 1. Jebakan pertama: jebakan kepercayaan
 
-"Kode buatan AI kelihatan sangat profesional, pasti tidak ada masalah, kan?",inilah jebakan paling berbahaya. Kode yang dihasilkan AI sangat rapi di permukaan:penamaannya baku, komentarnya lengkap, strukturnya jernih,"kesan profesional di permukaan" semacam ini membuat orang lengah. Tapi kerapian permukaan tidak berarti logikanya benar. Penawarnya: selalu verifikasi lewat pengujian, jangan menilai dari "kelihatannya benar atau tidak".
+"Kode buatan AI kelihatan sangat profesional, pasti tidak ada masalah, kan?",inilah jebakan paling berbahaya. Kode yang dihasilkan AI sangat rapi di permukaan: penamaannya baku, komentarnya lengkap, strukturnya jernih,"kesan profesional di permukaan" semacam ini membuat orang lengah. Tapi kerapian permukaan tidak berarti logikanya benar. Penawarnya: selalu verifikasi lewat pengujian, jangan menilai dari "kelihatannya benar atau tidak".
 
 ##### 2. Jebakan kedua: jebakan pembengkakan
 
@@ -96,7 +96,7 @@ Ada beberapa jebakan yang muncul berulang kali dalam pemrograman AI dan hampir s
 Ringkasan empat jebakan utama
 
 {class="mt-1"}
-Jebakan kepercayaan,jangan percaya yang "kelihatannya benar"; jebakan pembengkakan,AI suka "memberi lebih"; jebakan pemahaman,kebutuhan yang samar akan ia "tebak"; jebakan konteks,ingatan percakapan pasti "lupa". Penawarnya masing-masing: verifikasi lewat pengujian, buang yang berlebihan, beri detail secukupnya, tulis ke berkas memori.
+Jebakan kepercayaan, jangan percaya yang "kelihatannya benar"; jebakan pembengkakan, AI suka "memberi lebih"; jebakan pemahaman, kebutuhan yang samar akan ia "tebak"; jebakan konteks, ingatan percakapan pasti "lupa". Penawarnya masing-masing: verifikasi lewat pengujian, buang yang berlebihan, beri detail secukupnya, tulis ke berkas memori.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

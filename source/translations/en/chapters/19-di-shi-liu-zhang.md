@@ -18,11 +18,11 @@ Notes
 
 - <strong>Contacts</strong> App purchase history
 - <strong>Photos and videos</strong> Find My Phone
-- <strong>: After your phone is lost, this is the only tool that can help you locate, lock, and remotely wipe data.</strong> If you use an Apple phone, all of the above is tied to your Apple ID. If you use Android, it's tied to your Huawei/Xiaomi/OPPO/vivo account, plus your Google account. These accounts are the "household register" of your digital life:lose the register, and many things become unprovable
+- <strong>: After your phone is lost, this is the only tool that can help you locate, lock, and remotely wipe data.</strong> If you use an Apple phone, all of the above is tied to your Apple ID. If you use Android, it's tied to your Huawei/Xiaomi/OPPO/vivo account, plus your Google account. These accounts are the "household register" of your digital life: lose the register, and many things become unprovable
 - <strong>2. Three Must-Do Things, Right Now</strong> Enable two-factor authentication
 - <strong>: Whether you use Apple or Android, the first thing to do is go to account settings and turn on "Two-Factor Authentication" or "Two-Step Verification". This is like adding a deadbolt to your door—password alone isn't enough, your phone also needs to receive a verification code. Even if someone guesses your password online, without your phone, they can't get in.</strong> Bind a reliable recovery method
 
-: Two-factor authentication is secure, but there's a risk,what if you lose your own phone? So the system will prompt you to set up a "recovery key" or "backup email/phone number". This is your only way to get your account back in an emergency. Best to write it on paper, don't store it on your phone.
+: Two-factor authentication is secure, but there's a risk, what if you lose your own phone? So the system will prompt you to set up a "recovery key" or "backup email/phone number". This is your only way to get your account back in an emergency. Best to write it on paper, don't store it on your phone.
 
 #### Confirm "Find My Phone" is enabled
 
@@ -89,7 +89,7 @@ WeChat/QQ
 - <strong>6. Family Sharing: Let Your Family Benefit Too</strong> Apple's "Family Sharing" lets you share app purchases, music, movies, iCloud space with your family, and even share location. You can add up to 6 people. Setup method: Settings → Your Name → Family Sharing. Huawei and Xiaomi also have similar features, findable in account settings as "Family Sharing" or "Family Cloud".
 - <strong>A very practical scenario: Set up Family Sharing on your parents' phones, so you can always see their location (provided they agree). If an elderly person wanders off or can't be reached by phone, you have a location.</strong> The Consequences of Account Theft Are More Serious Than You Think.
 
-If a hacker gets your account password, they can: remotely lock your phone and extort ransom, view your photos and contacts, make purchases with your payment methods. More troublingly, if your account is tied to too many things, recovering the account itself is a nightmare. So, two-factor authentication:go enable it now.
+If a hacker gets your account password, they can: remotely lock your phone and extort ransom, view your photos and contacts, make purchases with your payment methods. More troublingly, if your account is tied to too many things, recovering the account itself is a nightmare. So, two-factor authentication: go enable it now.
 
 #### Hands-on: Give Your Account a Comprehensive Health Check
 

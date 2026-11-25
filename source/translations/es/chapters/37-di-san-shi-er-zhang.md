@@ -84,7 +84,7 @@ Al descubrir que te han estafado, lo más importante es mantener la calma. Decid
 
 Escenario tres: el móvil se ha infectado con un virus o un troyano — ¿qué hacer?
 
-Si tu móvil presenta estos síntomas,anuncios que aparecen sin motivo, apps extrañas que se instalan solas, la factura del teléfono se dispara o el consumo de datos es anormal, lo más probable es que tenga malware:
+Si tu móvil presenta estos síntomas, anuncios que aparecen sin motivo, apps extrañas que se instalan solas, la factura del teléfono se dispara o el consumo de datos es anormal, lo más probable es que tenga malware:
 
 - Primer paso: entra en modo seguro, en un Android, mantén pulsado el botón de encendido para apagar; luego mantenlo pulsado para encender y, en cuanto vibre, mantén pulsado el botón de bajar volumen sin soltarlo hasta entrar en modo seguro (abajo a la izquierda verás el texto «Modo seguro»). En este modo todas las apps de terceros se desactivan, lo que facilita la investigación.
 - Segundo paso: desinstala las apps sospechosas, en modo seguro, entra en [Ajustes] > [Gestión de aplicaciones], ordena por fecha, localiza las apps instaladas recientemente que no reconozcas y desinstálalas.

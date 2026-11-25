@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 65: Project One—My Expense Tracker (Local Version)
 
 {class="chapter-intro mb-4"}
-Welcome to your first "serious project." This expense tracker never touches the internet, but it's complete in every part: you can record a transaction, view the running history, see monthly totals, and edit or delete entries. Finishing it means you've walked the whole "data → logic → interface" path end to end. Don't rush to copy code:think it through first, then build. That's our standing principle.
+Welcome to your first "serious project." This expense tracker never touches the internet, but it's complete in every part: you can record a transaction, view the running history, see monthly totals, and edit or delete entries. Finishing it means you've walked the whole "data → logic → interface" path end to end. Don't rush to copy code: think it through first, then build. That's our standing principle.
 
 #### 1. Thinking About Requirements: Ask Five Questions First
 
@@ -27,7 +27,7 @@ Then break it into small steps where "every step is usable": 1) build the SwiftD
 
 #### 2. The Data Layer: Giving Transactions a Home
 
-First, define what a transaction looks like,enough fields to do the job, but don't get greedy:
+First, define what a transaction looks like, enough fields to do the job, but don't get greedy:
 
 ::: div .code-block
 :::inline div .code-head
@@ -74,7 +74,7 @@ Let the interface talk to the database directly? It runs, but the interface code
 :::
 
 {class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
-Figure 4: MVVM's three layers,data flows in one direction, and no layer oversteps its bounds
+Figure 4: MVVM's three layers, data flows in one direction, and no layer oversteps its bounds
 :::
 
 ::: div .code-block
@@ -116,7 +116,7 @@ class RecordViewModel {
 ```
 :::
 
-In the interface, write @State private var vm = RecordViewModel(...), then render the list straight from vm.records,the moment the data changes, the interface refreshes automatically.
+In the interface, write @State private var vm = RecordViewModel(...), then render the list straight from vm.records, the moment the data changes, the interface refreshes automatically.
 
 #### 4. The Interface: List Screen + Entry Sheet
 

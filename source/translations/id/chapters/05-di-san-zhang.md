@@ -58,7 +58,7 @@ Di tempat umum seperti bandara, mal, kafe, jangan hubungkan ke Wi-Fi gratis deng
 {class="font-semibold mt-4 mb-1"}
 ##### 4. Penilaian di Sisi Ponsel: Pahami "Kode Rahasia" di Status Bar
 
-Bagaimana mengetahui apa yang sedang digunakan ponsel untuk terhubung? Mengambil ponsel Huawei sebagai contoh, munculnya <strong>ikon panah dua arah</strong> di samping sinyal operator atau sinyal WLAN di status bar menandakan se,dang menggunakan metode tersebut untuk internet; jika keduanya menyala bersamaan, berarti akselerasi jaringan aktif, ponsel sedang memanfaatkan dua saluran sekaligus.
+Bagaimana mengetahui apa yang sedang digunakan ponsel untuk terhubung? Mengambil ponsel Huawei sebagai contoh, munculnya <strong>ikon panah dua arah</strong> di samping sinyal operator atau sinyal WLAN di status bar menandakan sedang menggunakan metode tersebut untuk internet; jika keduanya menyala bersamaan, berarti akselerasi jaringan aktif, ponsel sedang memanfaatkan dua saluran sekaligus.
 
 Pengguna iPhone lebih intuitif: jika ikon Wi-Fi menyala berarti menggunakan Wi-Fi, jika tidak menyala lihat batang sinyal di kanan atas berarti menggunakan kuota data. Sebagian ponsel Android juga akan menampilkan ": Jika sinyal buruk, secara manual beralih kembali ke 4G, daya tahan baterai akan jauh lebih baik." atau "4G" di status bar, langsung memberi tahu jenis jaringan seluler saat ini.
 

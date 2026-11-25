@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 23: Biarkan telefon urus kerja berulang
 
 {class="chapter-intro mb-4"}
-Anda tidak perlu mengendalikan secara manual setiap kali, dan tidak perlu mengingat apa yang perlu dilakukan,telefon akan menilai masa yang sesuai sendiri, dan melaksanakan sendiri.
+Anda tidak perlu mengendalikan secara manual setiap kali, dan tidak perlu mengingat apa yang perlu dilakukan, telefon akan menilai masa yang sesuai sendiri, dan melaksanakan sendiri.
 
 Contohnya: Setiap pagi apabila anda bangun, anda perlu mematikan mod jangan ganggu secara manual, membuka WeChat untuk melihat mesej, membuka App cuaca untuk melihat apa yang perlu dipakai hari ini, membuka NetEase Cloud untuk memainkan lagu. Jika langkah-langkah ini dibungkus menjadi satu aliran automasi, ditetapkan "laksanakan secara automatik setiap pagi jam 7", maka apabila anda bangun hanya perlu mengambil telefon, semuanya sudah bersedia. Bukankah sangat puas apabila memikirkannya?
 
@@ -89,7 +89,7 @@ Membuat automasi juga tidak semestinya lancar, ada beberapa perangkap yang saya 
 : Dalam iOS, pencetus di bawah tab "Automasi" kebanyakan memerlukan pengesahan manual anda sebelum boleh berjalan (mekanisme keselamatan iOS). Tetapi sambungan Wi-Fi, sambungan Bluetooth, penghentian penggera ini boleh berjalan secara automatik sepenuhnya, tidak memerlukan pengesahan.
 
 - <strong>Tasker memerlukan kebenaran kebolehaksesan</strong>: Banyak fungsi lanjutan (seperti simulasi klik) memerlukan kebenaran perkhidmatan kebolehaksesan, ini akan membuat telefon memaparkan pemberitahuan kekal dalam tetapan. Ini adalah reka bentuk keselamatan Android, tidak boleh dialihkeluarkan.
-- <strong>Jangan buat automasi terlalu kompleks</strong>: Apabila baru mula membuat automasi, mulakan dari aliran kecil "2-3 tindakan". Jangan terus buat satu aliran super 20 langkah,proses nyahpepijat akan membuat anda gila.
+- <strong>Jangan buat automasi terlalu kompleks</strong>: Apabila baru mula membuat automasi, mulakan dari aliran kecil "2-3 tindakan". Jangan terus buat satu aliran super 20 langkah, proses nyahpepijat akan membuat anda gila.
 - <strong>Petua Kecil: Postur yang betul untuk permulaan automasi</strong> Luangkan 5 minit berfikir: Apakah 3 perkara yang paling kerap anda ulang pada telefon setiap hari? Contohnya rutin pagi setiap hari, kebiasaan selepas menyambung fon kepala Bluetooth setiap kali, tetapan sebelum keluar setiap kali... Mula dari perkara kecil berfrekuensi tinggi ini, buat satu automasi ringkas untuk setiap satu. Walaupun setiap automasi hanya menjimatkan 5 saat anda. lama-kelamaan juga berjumlah banyak. Dan kepuasan selepas berjaya membuatnya, benar-benar boleh menimbulkan ketagihan.
 - <strong>Berlatih: Tiga cabaran automasi permulaan</strong> Pilih satu yang paling sesuai untuk anda selesaikan, selepas selesai anda sudah memasuki tahap permulaan:.
 
@@ -110,7 +110,7 @@ Cabaran Dua: Jimat bateri automatik aras rendah
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. <strong>Cabaran Tiga: Navigasi automatik apabila menyambung Bluetooth kereta</strong>: iOS: Automasi → Baharu → "Bluetooth" → pilih Bluetooth kereta anda → tambah "Buka App pilih Amap" + "Volum media laras ke 80%". Android: Tasker → Profil → Status → Bluetooth disambung → pilih Bluetooth kereta → Tugas "Buka Amap" + "Naikkan volum media".
-2. <strong>Lampiran Bab 23: Panduan Permulaan GitHub — Daripada Hos Kod ke Platform Kolaborasi</strong> Bab sebelumnya kita bincangkan "pemikiran pengaturcaraan", dan untuk benar-benar melaksanakan pemikiran pengaturcaraan dan membuat projek bersama orang lain, tidak boleh lari dari satu nama,GitHub. Sama ada anda pelajar jabatan sains komputer yang ingin menyertai pertandingan, ingin menyimpan karya kod anda, atau sekadar ingin melihat apa yang sedang dikerjakan oleh pembangun di seluruh dunia, GitHub adalah platform yang mesti anda kenali. Bahagian ini bermula dari konsep paling asas, membantu anda membina satu pemahaman yang jelas.
+2. <strong>Lampiran Bab 23: Panduan Permulaan GitHub — Daripada Hos Kod ke Platform Kolaborasi</strong> Bab sebelumnya kita bincangkan "pemikiran pengaturcaraan", dan untuk benar-benar melaksanakan pemikiran pengaturcaraan dan membuat projek bersama orang lain, tidak boleh lari dari satu nama, GitHub. Sama ada anda pelajar jabatan sains komputer yang ingin menyertai pertandingan, ingin menyimpan karya kod anda, atau sekadar ingin melihat apa yang sedang dikerjakan oleh pembangun di seluruh dunia, GitHub adalah platform yang mesti anda kenali. Bahagian ini bermula dari konsep paling asas, membantu anda membina satu pemahaman yang jelas.
 3. <strong>1. Apakah Sebenarnya GitHub?</strong> Ringkasnya, GitHub ialah sebuah.
 :::
 

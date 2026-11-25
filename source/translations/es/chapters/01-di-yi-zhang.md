@@ -32,7 +32,7 @@ La CPU es el componente más central del SoC, responsable de procesar la mayorí
 - <strong>Núcleo medio</strong>: equilibrio entre rendimiento y consumo, procesa tareas de carga media diaria. Navegar redes sociales, ver videos, cambiar entre aplicaciones depende principalmente de él.
 - <strong>Núcleo pequeño/Núcleo de eficiencia</strong>: el de menor consumo, procesa tareas ligeras en segúndo plano. Reposo, escuchar música, recibir mensajes, etc., casi no gasta batería.
 
-Los tres niveles de núcleos trabajan juntos: el planificador del sistema asigna automáticamente según la carga de la tarea,las tareas ligeras al núcleo pequeño para ahorrar energía, el trabajo pesado al núcleo grande a toda máquina, y vuelve al pequeño al terminar. Por eso el móvil puede ejecutar juegos fluidamente y también estar en reposo todo el día.
+Los tres niveles de núcleos trabajan juntos: el planificador del sistema asigna automáticamente según la carga de la tarea, las tareas ligeras al núcleo pequeño para ahorrar energía, el trabajo pesado al núcleo grande a toda máquina, y vuelve al pequeño al terminar. Por eso el móvil puede ejecutar juegos fluidamente y también estar en reposo todo el día.
 
 <strong>Características de cada marca</strong>:
 

@@ -10,9 +10,9 @@ kind: chapter
 ### Capítulo 38: Los cinco principios de pensamiento de la programación con IA
 
 {class="chapter-intro mb-4"}
-Si solo puedes quedarte con un capítulo de este libro, que sea este. Los cinco principios de pensamiento son el corazón de la obra; todos los capítulos posteriores,contexto, requisitos, conversación, calidad, son estos cinco principios desplegados en distintos escenarios. Tranquilo: ninguno es difícil de entender, pero cada uno merece que lo «metas en el músculo» con un par de proyectos.
+Si solo puedes quedarte con un capítulo de este libro, que sea este. Los cinco principios de pensamiento son el corazón de la obra; todos los capítulos posteriores, contexto, requisitos, conversación, calidad, son estos cinco principios desplegados en distintos escenarios. Tranquilo: ninguno es difícil de entender, pero cada uno merece que lo «metas en el músculo» con un par de proyectos.
 
-El origen de la historia es curioso: al publicar su proyecto como código abierto, Andrej Karpathy adjuntó un archivo CLAUDE.md de apenas 70 líneas que resumía cuatro principios centrales para colaborar con la IA. Ese archivo acumuló más de 70.000 estrellas en GitHub y se convirtió en la guía más citada por la comunidad mundial de programación con IA. No son consignas vacías, sino hábitos de pensamiento accionables destilados de mucha práctica. Sobre esa base, este libro añade un quinto principio,la verificación iterativa, y completa el sistema de los cinco principios.
+El origen de la historia es curioso: al publicar su proyecto como código abierto, Andrej Karpathy adjuntó un archivo CLAUDE.md de apenas 70 líneas que resumía cuatro principios centrales para colaborar con la IA. Ese archivo acumuló más de 70.000 estrellas en GitHub y se convirtió en la guía más citada por la comunidad mundial de programación con IA. No son consignas vacías, sino hábitos de pensamiento accionables destilados de mucha práctica. Sobre esa base, este libro añade un quinto principio, la verificación iterativa, y completa el sistema de los cinco principios.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

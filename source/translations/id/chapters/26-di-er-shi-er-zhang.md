@@ -36,17 +36,17 @@ Aplikasi Model Besar AI di Ponsel:
 
 ##### Asisten percakapan
 
-- <strong>: App seperti DeepSeek, ChatGPT, Doubao, Kimi, dll., bisa bertanya, menerjemahkan, menulis copy, meringkas artikel kapan saja. Lebih cerdas dari mesin pencari tradisional:ia tidak hanya memberi Anda tautan, tetapi langsung memberi jawaban.</strong> Penulisan dan kreasi
+- <strong>: App seperti DeepSeek, ChatGPT, Doubao, Kimi, dll., bisa bertanya, menerjemahkan, menulis copy, meringkas artikel kapan saja. Lebih cerdas dari mesin pencari tradisional: ia tidak hanya memberi Anda tautan, tetapi langsung memberi jawaban.</strong> Penulisan dan kreasi
 - <strong>: Biarkan AI membantu Anda menulis email, meringkas notulen rapat, memoles artikel, menghasilkan copy kreatif.</strong> Pembuatan dan pengeditan gambar
 - <strong>: AI menghapus orang yang lewat di foto dengan satu klik, memperluas batas gambar, mengubah gaya, bahkan menghasilkan gambar berdasarkan deskripsi teks.</strong> Terjemahan real-time
 - <strong>Terjemahan real-time</strong> Bimbingan belajar
-- <strong>: AI bisa menjelaskan konsep, memberikan soal latihan, mengoreksi pekerjaan,tutor pribadi yang selalu bersama Anda.</strong> Model Besar Sisi Perangkat: Ponsel Menjalankan AI Sendiri
+- <strong>: AI bisa menjelaskan konsep, memberikan soal latihan, mengoreksi pekerjaan, tutor pribadi yang selalu bersama Anda.</strong> Model Besar Sisi Perangkat: Ponsel Menjalankan AI Sendiri
 
 ##### Ponsel flagship terbaru sudah bisa menjalankan model besar AI kecil secara lokal (biasanya sekitar parameter 7B), perubahan yang dibawa:
 
 Tidak perlu jaringan
 
-- <strong>: Bisa menggunakan fungsi AI bahkan saat offline,di pesawat atau di kereta bawah tanah.</strong> Privasi lebih aman
+- <strong>: Bisa menggunakan fungsi AI bahkan saat offline, di pesawat atau di kereta bawah tanah.</strong> Privasi lebih aman
 - <strong>: Percakapan dan data Anda tidak diunggah ke cloud, sepenuhnya diproses secara lokal di ponsel.</strong> Respons lebih cepat
 - <strong>: Tanpa latensi jaringan, respons AI hampir instan.</strong> Keterbatasan saat ini
 - <strong>: Kemampuan model sisi perangkat masih kalah dengan model besar cloud, tugas kompleks masih memerlukan koneksi internet. Namun seiring peningkatan daya komputasi AI chip, model sisi perangkat akan semakin kuat.</strong> Integrasi AI Tingkat Sistem:
@@ -60,7 +60,7 @@ Tidak perlu jaringan
 
 #### 5. Beberapa Skenario Aplikasi Tipikal dan Praktik
 
-Skenario 1: Terjemahan Real-time,Penerjemah Pribadi untuk Bepergian ke Luar Negeri
+Skenario 1: Terjemahan Real-time, Penerjemah Pribadi untuk Bepergian ke Luar Negeri
 
 ##### Performa aktual
 
@@ -301,7 +301,7 @@ Coba penggunaan lanjutan ini, rasakan kekuatan AI yang sebenarnya:
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Optimasi percakapan multi-putaran</strong>: Saat tidak puas dengan jawaban AI, Anda bisa bilang "Ini terlalu profesional, tolong jelaskan sekali lagi dengan bahasa yang bisa dipahami siswa SD".
 - <strong>Chain of Thought (CoT)</strong>: Minta AI "berpikir langkah demi langkah", kualitas jawaban biasanya lebih tinggi: "Tolong analisis soal matematika ini langkah demi langkah".
-- <strong>Kolaborasi multi-AI</strong>: Gunakan A untuk menulis draf awal, B untuk memoles, C untuk menerjemahkan:kombinasi memberikan hasil yang lebih baik.
+- <strong>Kolaborasi multi-AI</strong>: Gunakan A untuk menulis draf awal, B untuk memoles, C untuk menerjemahkan: kombinasi memberikan hasil yang lebih baik.
 - <strong>System prompt</strong>: Preset identitas, preferensi, pantangan Anda di pengaturan AI, agar jawaban lebih sesuai kebutuhan Anda.
 :::
 
@@ -311,7 +311,7 @@ AI memang kuat, tetapi bukan "serba bisa". Memahami keterbatasannya dengan jerni
 
 - <strong>Masalah "halusinasi"</strong>: AI bisa bicara sok tahu tapi salah (istilah profesional: Hallucination). Ia akan mengarang peristiwa sejarah yang tidak ada, kutipan yang salah, statistik palsu. Informasi penting harus diverifikasi secara manual.
 - <strong>Pemutusan pengetahuan</strong>: Sebagian besar data pelatihan AI memiliki tanggal cutoff (misalnya awal 2024), ia tidak tahu apa yang terjadi setelah itu.
-- <strong>Kemampuan penalaran terbatas</strong>: Penalaran multi-langkah yang kompleks, pembuktian matematika, jebakan logika,AI masih mudah salah.
+- <strong>Kemampuan penalaran terbatas</strong>: Penalaran multi-langkah yang kompleks, pembuktian matematika, jebakan logika, AI masih mudah salah.
 - <strong>Risiko privasi</strong>: Pada layanan AI cloud, percakapan Anda mungkin digunakan untuk pelatihan model. Informasi sensitif sebaiknya prioritas menggunakan AI sisi perangkat.
 - <strong>Bias dan nilai</strong>: AI mungkin membawa bias dari data pelatihan, perlu mempertahankan pemikiran independen.
 

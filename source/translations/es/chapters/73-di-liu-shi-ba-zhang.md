@@ -124,7 +124,7 @@ En 2026, la IA ya está profundamente metida en el flujo de desarrollo de Apple.
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Los cuatro escenarios del desarrollo de iOS asistido por IA
 
-La metodología concreta:cómo dar instrucciones a la IA, cómo aceptar los resultados, cómo evitar tropiezos: está desarrollada en 11 capítulos completos de la séptima parte de este libro, «Práctica de programación con IA» (capítulos 37-47); se recomienda encarecidamente leerla a la par: la sintaxis de Swift, en esta parte; los trucos de colaborar con la IA, en la séptima.
+La metodología concreta: cómo dar instrucciones a la IA, cómo aceptar los resultados, cómo evitar tropiezos: está desarrollada en 11 capítulos completos de la séptima parte de este libro, «Práctica de programación con IA» (capítulos 37-47); se recomienda encarecidamente leerla a la par: la sintaxis de Swift, en esta parte; los trucos de colaborar con la IA, en la séptima.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

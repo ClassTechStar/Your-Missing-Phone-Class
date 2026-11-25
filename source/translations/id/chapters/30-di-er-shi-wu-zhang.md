@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 25: Sebelum menjual ponsel lama, urus dulu ini
 
 {class="chapter-intro mb-4"}
-Hei, teman-teman, setelah lebih dari dua puluh bab "pelatihan", saya yakin Anda telah tumbuh dari "pemula digital" menjadi pengguna ponsel yang cukup mahir. Tapi kehidupan teknologi selalu berputar:cinta baru akhirnya menjadi cinta lama. Saat Anda bersiap mempensiunkan "rekan lama" Anda, tahukah Anda bagaimana berpisah dengan layak dan aman?
+Hei, teman-teman, setelah lebih dari dua puluh bab "pelatihan", saya yakin Anda telah tumbuh dari "pemula digital" menjadi pengguna ponsel yang cukup mahir. Tapi kehidupan teknologi selalu berputar: cinta baru akhirnya menjadi cinta lama. Saat Anda bersiap mempensiunkan "rekan lama" Anda, tahukah Anda bagaimana berpisah dengan layak dan aman?
 
 1. "Eutanasia" Ponsel Lama: Panduan Jual atau Hadiah dengan Aman
 

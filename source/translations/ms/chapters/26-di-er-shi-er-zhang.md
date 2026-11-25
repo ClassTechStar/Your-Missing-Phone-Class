@@ -94,7 +94,7 @@ Prinsip di sebalik
 
 #### Mengapa perlukan rangka kerja?
 
-Ramai orang menggunakan AI seperti menggunakan Baidu,menaip beberapa kata kunci. Tetapi AI bukan enjin carian, ia adalah model bahasa yang "memahami bacaan kemudian menjawab".<strong>Berikan lebih banyak konteks, jelaskan apa yang anda mahu, hadkan ia daripada menyeleweng</strong>, ia boleh memberikan hasil yang tepat. Rangka kerja ialah menterjemahkan "seperti apa jawapan baik dalam fikiran anda" kepada arahan yang boleh difahami oleh AI.
+Ramai orang menggunakan AI seperti menggunakan Baidu, menaip beberapa kata kunci. Tetapi AI bukan enjin carian, ia adalah model bahasa yang "memahami bacaan kemudian menjawab".<strong>Berikan lebih banyak konteks, jelaskan apa yang anda mahu, hadkan ia daripada menyeleweng</strong>, ia boleh memberikan hasil yang tepat. Rangka kerja ialah menterjemahkan "seperti apa jawapan baik dalam fikiran anda" kepada arahan yang boleh difahami oleh AI.
 
 ::: div .info-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -154,7 +154,7 @@ Berikan AI satu "identiti" khusus, ia akan menggunakan pengetahuan profesional d
 - Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>, berikan jadual perbandingan kelebihan dan kekurangan." (Format jelas)</strong>"Sila
 - Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>." (Gaya jelas)</strong>"Sila
 - Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>, masing-masing menyasarkan pekerja, pasangan kekasih, dan ibu bapa yang membawa anak." (Pengkhususan jelas)</strong> Mengapa berkesan?
-- Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>Semakin jelas kata kerja, semakin spesifik keperluan, semakin AI tahu "apa yang perlu diserahkan"</strong>. "Buat sikit", "buat satu", "tengok" yang kabur adalah pantang larang AI:ia akan meneka maksud anda, hasilnya sering menyeleweng
+- Bahagian tugas ialah "pusat arahan" tindakan AI.<strong>Semakin jelas kata kerja, semakin spesifik keperluan, semakin AI tahu "apa yang perlu diserahkan"</strong>. "Buat sikit", "buat satu", "tengok" yang kabur adalah pantang larang AI: ia akan meneka maksud anda, hasilnya sering menyeleweng
 
 ::: div .highlight-quote
 {class="mb-1"}
@@ -300,7 +300,7 @@ Cuba gaya penggunaan lanjutan ini, alami kekuatan sebenar AI:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Pemikiran Berantai (CoT)</strong>: Suruh AI "berfikir langkah demi langkah", kualiti jawapan biasanya lebih tinggi: "Sila analisis soalan matematik ini langkah demi langkah".
-- <strong>Kolaborasi berbilang AI</strong>: Gunakan A menulis draf awal, B mengemas, C menterjemah:penggunaan gabungan lebih berkesan.
+- <strong>Kolaborasi berbilang AI</strong>: Gunakan A menulis draf awal, B mengemas, C menterjemah: penggunaan gabungan lebih berkesan.
 - <strong>Prompt sistem</strong>: Prasetel identiti, keutamaan, pantang larang anda dalam tetapan AI, menjadikan jawapan lebih sesuai dengan keperluan anda.
 - <strong>Risiko privasi</strong>: Dalam perkhidmatan AI awan, perbualan anda mungkin digunakan untuk melatih model. Untuk maklumat sensitif, utamakan AI pada peranti.
 - <strong>Masalah "Halusinasi"</strong>: AI mungkin bercakap serius tetapi merapu (istilah profesional: Hallucination). Ia akan mereka peristiwa sejarah yang tidak wujud, petikan yang salah, statistik palsu. Maklumat penting mesti disahkan secara manual.

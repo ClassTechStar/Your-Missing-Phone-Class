@@ -126,7 +126,7 @@ Forced Data Wipe <strong>: After the fuse is triggered, the phone forces a facto
 Important Warning
 
 {class="mt-1"}
-Flashing carries risks,proceed with caution. It may cause:
+Flashing carries risks, proceed with caution. It may cause:
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - Bricked phone (won’t boot)

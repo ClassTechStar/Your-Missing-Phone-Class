@@ -16,7 +16,7 @@ Android + Windows (Link to Windows)
 
 Brand multi-screen Collaboration
 
-- <strong>: Huawei's "Multi-Screen Collaboration" and Xiaomi's "Xiaomi Smart Connect" go even further,directly project your phone screen onto your computer. You can use the mouse to drag files from phone to computer, and also browse TikTok and reply to WeChat on the computer. Cross-device copy-paste and file dragging all work, with a very smooth experience.</strong>2. Screen Casting to TV: Watch Together with the Whole Family
+- <strong>: Huawei's "Multi-Screen Collaboration" and Xiaomi's "Xiaomi Smart Connect" go even further, directly project your phone screen onto your computer. You can use the mouse to drag files from phone to computer, and also browse TikTok and reply to WeChat on the computer. Cross-device copy-paste and file dragging all work, with a very smooth experience.</strong>2. Screen Casting to TV: Watch Together with the Whole Family
 - <strong>When I went home for Chinese New Year, my cousin wanted to play her graduation trip video from her phone on the TV. After fumbling for a long time, we found it was actually very simple:</strong> iPhone → TV
 - <strong>: Swipe down from the top right to open Control Center, tap the icon with two overlapping squares (Screen Mirroring), find your TV's name, and tap to connect. The prerequisite is that the TV and phone are on the same Wi-Fi, and the TV supports AirPlay (most smart TVs do).</strong> Android → TV
 
@@ -24,35 +24,35 @@ Brand multi-screen Collaboration
 
 Direct cast from video apps
 
-- <strong>: If you just want to watch iQiyi, Bilibili, or YouTube on TV, it's even simpler:find a small rectangle icon with a Wi-Fi symbol on the playback interface, tap it, select the TV, and the video goes over. At this point, the phone can do other things while the video continues playing on the TV, without interfering with each other.</strong> What if screen casting fails
-- <strong>: 90% of the time, it's because they're not on the same Wi-Fi. The other 10% is that the TV's screen casting function isn't enabled,look for the "Multi-Screen Interaction" or "AirPlay" switch in TV settings.</strong>3. With Smart Watches/Bands: A Health Manager on Your Wrist
-- <strong>I bought my mom a fitness band. At first she said "I don't exercise, why buy this?" After two weeks of use, she discovered she was only sleeping five hours a day, and started proactively adjusting her schedule. This is the most practical value of watches/bands,turning invisible health data into visible numbers.</strong> Notification filter
+- <strong>: If you just want to watch iQiyi, Bilibili, or YouTube on TV, it's even simpler: find a small rectangle icon with a Wi-Fi symbol on the playback interface, tap it, select the TV, and the video goes over. At this point, the phone can do other things while the video continues playing on the TV, without interfering with each other.</strong> What if screen casting fails
+- <strong>: 90% of the time, it's because they're not on the same Wi-Fi. The other 10% is that the TV's screen casting function isn't enabled, look for the "Multi-Screen Interaction" or "AirPlay" switch in TV settings.</strong>3. With Smart Watches/Bands: A Health Manager on Your Wrist
+- <strong>I bought my mom a fitness band. At first she said "I don't exercise, why buy this?" After two weeks of use, she discovered she was only sleeping five hours a day, and started proactively adjusting her schedule. This is the most practical value of watches/bands, turning invisible health data into visible numbers.</strong> Notification filter
 - <strong>: When your phone keeps vibrating in your bag or pocket, just raise your wrist to take a look—is it a WeChat from the boss or a Pinduoduo promotion? Judge in a second, and let messages not worth pulling out the phone for go.</strong> Health data sync
 
 - The watch monitors heart rate, blood oxygen, sleep, and steps 24 hours a day, and this data is automatically aggregated into the health app on your phone. Over time, you can see your trends—have you been walking too little this month, has your sleep quality improved this week.
 
 Transit card/access card sync
 
-- <strong>: Transit cards and access cards bound on your phone will mostly auto-sync to your watch. When taking the subway, you don't need to pull out your phone,just tap your wrist against the turnstile, and you really get a "the future is here" feeling.</strong> Find phone lifesaver
-- <strong>: Watches generally have a "find phone" feature:tap it and the phone will ring. I use this feature far more than expected,I just put the phone down somewhere and forget where.</strong>4. With Smart Home: The Phone Is the Home's "Master Switch"
+- <strong>: Transit cards and access cards bound on your phone will mostly auto-sync to your watch. When taking the subway, you don't need to pull out your phone, just tap your wrist against the turnstile, and you really get a "the future is here" feeling.</strong> Find phone lifesaver
+- <strong>: Watches generally have a "find phone" feature: tap it and the phone will ring. I use this feature far more than expected, I just put the phone down somewhere and forget where.</strong>4. With Smart Home: The Phone Is the Home's "Master Switch"
 - <strong>Smart home sounds mysterious, but it boils down to three things: remote control via phone, set automation rules, voice control.</strong> Let me talk about a few of my own actual use cases, so you can see how practical this thing is:
 - <strong>Air conditioner</strong>: On the way home in summer, use your phone to turn on the AC in advance—when you walk in, it's already cool. Buy an AC companion socket for a hundred-something yuan to achieve this, no need to replace the AC
 
 #### Lights
 
-: Lying in bed before sleep, too lazy to get up to turn off the lights:just tap on your phone or say "Hey Siri/Xiaoai, turn off the lights".
+: Lying in bed before sleep, too lazy to get up to turn off the lights: just tap on your phone or say "Hey Siri/Xiaoai, turn off the lights".
 
 Robot vacuum
 
-- <strong>: Before going out, tap "Start Cleaning" on your phone,when you come back, the floor is clean. You can also set a daily scheduled cleaning.</strong> Camera
+- <strong>: Before going out, tap "Start Cleaning" on your phone, when you come back, the floor is clean. You can also set a daily scheduled cleaning.</strong> Camera
 - <strong>: If you have elderly, children, or pets at home, you can check on the home situation anytime from your phone.</strong> Which ecosystem to choose? One-sentence summary:
-- <strong>Using iPhone → prioritize devices that support Apple HomeKit (a bit more expensive but better privacy protection).</strong> Many devices, want cost-effectiveness → Xiaomi Mi Jia ecosystem is the most complete:lights, sockets, robot vacuums, everything
+- <strong>Using iPhone → prioritize devices that support Apple HomeKit (a bit more expensive but better privacy protection).</strong> Many devices, want cost-effectiveness → Xiaomi Mi Jia ecosystem is the most complete: lights, sockets, robot vacuums, everything
 - <strong>Using Huawei phone → prioritize HarmonyOS Connect, best experience with Huawei devices.</strong>5. Bluetooth Headphones and Speakers: Wireless Freedom
 
 Switching from wired to Bluetooth headphones was, for me, one of the most noticeable upgrades in phone experience. No more pulling out a tangled mess from the bag, no more worrying about the cable catching on door handles.
 
 - Pairing is simple
-- : Headphones generally enter pairing mode automatically when first turned on (flashing light). Turn on Bluetooth on your phone to find them, tap to connect. After that, they auto-connect every time you take them out:nothing to do
+- : Headphones generally enter pairing mode automatically when first turned on (flashing light). Turn on Bluetooth on your phone to find them, tap to connect. After that, they auto-connect every time you take them out: nothing to do
 - Same brand has bonuses
 
 - AirPods with iPhone will auto-pop up to show battery, and can seamlessly switch between multiple Apple devices. Huawei FreeBuds with Huawei phones, Xiaomi earbuds with Xiaomi phones, also have similar pop-ups and optimizations.
@@ -96,9 +96,9 @@ The classic Bluetooth audio (A2DP) used for twenty years is being replaced by <s
 
 Old cars can use it too
 
-- <strong>: If your car is older and doesn't support it, buy an external CarPlay screen for a few hundred yuan, stick it on the dashboard:the experience is about the same.</strong>7. Security and Privacy in Integration.
-- <strong>The more devices connected, the larger the surface area for privacy leaks. A few points to note:</strong> Before screen casting in public, first check whether your phone notification bar has any private messages:don't let the whole family see what they shouldn't.
-- <strong>Before giving or selling a device to someone else, unbind it first,go to phone settings, find that device, and select "Remove" or "Unpair".</strong> For smart home cameras, buy branded, encrypted ones,don't buy no-name ones for a few dozen yuan. There's been too much news about cameras being hacked for live streaming.
+- <strong>: If your car is older and doesn't support it, buy an external CarPlay screen for a few hundred yuan, stick it on the dashboard: the experience is about the same.</strong>7. Security and Privacy in Integration.
+- <strong>The more devices connected, the larger the surface area for privacy leaks. A few points to note:</strong> Before screen casting in public, first check whether your phone notification bar has any private messages: don't let the whole family see what they shouldn't.
+- <strong>Before giving or selling a device to someone else, unbind it first, go to phone settings, find that device, and select "Remove" or "Unpair".</strong> For smart home cameras, buy branded, encrypted ones, don't buy no-name ones for a few dozen yuan. There's been too much news about cameras being hacked for live streaming.
 
 Try It: Cast Your Phone Screen to TV and Set Up a Smart Scene
 
@@ -114,7 +114,7 @@ If you have smart home devices, try creating a "Leave Home Mode" in the phone ap
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
 1. Chapter 18: Data Backup and Migration
-2. A neighbor of mine dropped her phone into a pool, and by the time she fished it out, it wouldn't turn on. What hurt her most wasn't the phone itself, but the three years of unbacked-up photos,every record of her child from birth to learning to walk. After hearing her story, I felt terrible, because this was completely avoidable. In this chapter, we'll seriously put insurance on your data
+2. A neighbor of mine dropped her phone into a pool, and by the time she fished it out, it wouldn't turn on. What hurt her most wasn't the phone itself, but the three years of unbacked-up photos, every record of her child from birth to learning to walk. After hearing her story, I felt terrible, because this was completely avoidable. In this chapter, we'll seriously put insurance on your data
 3. 1. First, Figure Out: What in Your Phone Is Gone Forever If Lost
 4. Different data has different "survival states",you need to distinguish them:
 5. Stored locally on the phone, truly gone if lost

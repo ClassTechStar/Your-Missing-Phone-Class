@@ -36,7 +36,7 @@ The lock screen is your phone's first line of defense, and also the most easily 
 - <strong>Locate</strong>: Find where you left your phone on a map.
 - <strong>Play sound</strong>: Make your phone ring—good for finding it at home.
 - <strong>Lost Mode</strong>: Remotely lock the phone and display a contact number.
-- <strong>Remote erase</strong>: The last resort,wipes all data (but after erasing, it can no longer be located).
+- <strong>Remote erase</strong>: The last resort, wipes all data (but after erasing, it can no longer be located).
 
 Go to [Settings]:Apple users look for "Find My iPhone," Android users look for "Find My Device" or similar brand services, and make sure it's enabled (green).
 
@@ -44,7 +44,7 @@ Go to [Settings]:Apple users look for "Find My iPhone," Android users look for "
 
 The primary purpose of system updates is to fix security vulnerabilities, just like patching holes in a house. So when you see a system update prompt, upgrade as soon as possible.
 
-Of course, major version updates (like iOS 17 to iOS 18) may have compatibility issues:you can wait a few days before upgrading.
+Of course, major version updates (like iOS 17 to iOS 18) may have compatibility issues: you can wait a few days before upgrading.
 
 #### IV. Recognizing and Preventing Telecom Fraud
 
@@ -79,7 +79,7 @@ Through AI algorithms, fraudsters forge "guaranteed profit" fake return screensh
 {class="font-semibold mt-4 mb-1"}
 ##### 2. How to Break Through—"Magic Mirror" Defense Thinking
 
-AI can clone voices and faces, but it's not invincible,there are several vulnerabilities to exploit:
+AI can clone voices and faces, but it's not invincible, there are several vulnerabilities to exploit:
 
 {class="list-disc pl-6 mb-3 space-y-2"}
 - <strong>Action verification method</strong>.<strong>easily shows flaws like screen stuttering, facial distortion, or edge bleeding</strong> when handling complex dynamic occlusion, rapid motion scenes, and lighting changes.
@@ -153,14 +153,14 @@ In 2022, police in a certain area reported that hackers cracked the default pass
 
 #### VII. "First Aid" Checklist After Loss / Theft
 
-Don't panic if your phone is lost,follow these steps in order:
+Don't panic if your phone is lost, follow these steps in order:
 
 1. <strong>Immediately freeze the SIM card</strong>: Contact the carrier to report the loss, preventing it from being used to receive verification codes.
 2. <strong>Remote lock</strong>: Enable "Lost Mode" through cloud services (iCloud / brand cloud).
 3. <strong>Change important passwords</strong>: Immediately change passwords for all important accounts that were logged in on the phone (payments, banks, email).
 4. <strong>Report to police</strong>: File a report at the police station and record the IMEI number. This also helps prove identity if the phone is recovered.
 5. <strong>Notify family and friends</strong>: Prevent scammers from borrowing money in your name.
-6. <strong>(Last resort) Remote erase</strong>: Only do this when recovery is hopeless:after erasing, the location feature stops working.
+6. <strong>(Last resort) Remote erase</strong>: Only do this when recovery is hopeless: after erasing, the location feature stops working.
 
 #### VIII. SIM Card and eSIM Security
 

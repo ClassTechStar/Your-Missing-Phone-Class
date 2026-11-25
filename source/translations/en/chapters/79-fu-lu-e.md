@@ -22,22 +22,22 @@ Technology advances at a dizzying pace, and the book's content is based on the m
 - Expanded the accessibility chapter (full VoiceOver/TalkBack operation, magnification and color filters, AI image descriptions, Live Captions, RTT/TTY dual-channel calls).
 - Rewrote the prompt framework using the "role-background-task-constraints" approach, with 3 complete scenario examples.
 - Added three advanced technical appendices: Appendix to Chapter 1: how Android memory extension works (what it actually is, zRAM/swap principles, speed bottlenecks, where it helps and where it doesn't, and each manufacturer's naming and how to turn it on).
-- Appendix to Chapter 20: Termux:a portable Linux terminal environment on Android devices (core features, the plugin ecosystem, installation and setup, and typical scenarios like mobile development, server administration, and security testing).
-- Appendix to Chapter 23: a beginner's guide to GitHub:from code hosting to a collaboration platform (Git vs. GitHub, core concepts, signing up and getting started, the Pull Request collaboration flow, security reminders, and access options within China).
+- Appendix to Chapter 20: Termux: a portable Linux terminal environment on Android devices (core features, the plugin ecosystem, installation and setup, and typical scenarios like mobile development, server administration, and security testing).
+- Appendix to Chapter 23: a beginner's guide to GitHub: from code hosting to a collaboration platform (Git vs. GitHub, core concepts, signing up and getting started, the Pull Request collaboration flow, security reminders, and access options within China).
 
 #### What's new in version 1.7
 
 1\. Four new chapters
 
-- Chapter 29:Digital Wellbeing,screen time analysis, app limits, Do Not Disturb, the 20-20-20 eye rule, saving your neck, sleep management, information anxiety and "selective blindness," and a one-week digital wellbeing challenge.
-- Chapter 30: Screen Casting and Cars,a comparison of the AirPlay / Miracast / DLNA three camps, wired casting options, Samsung DeX desktop mode, the four car systems CarPlay / Android Auto / HiCar / CarLife, and casting in meeting rooms in practice.
+- Chapter 29:Digital Wellbeing, screen time analysis, app limits, Do Not Disturb, the 20-20-20 eye rule, saving your neck, sleep management, information anxiety and "selective blindness," and a one-week digital wellbeing challenge.
+- Chapter 30: Screen Casting and Cars, a comparison of the AirPlay / Miracast / DLNA three camps, wired casting options, Samsung DeX desktop mode, the four car systems CarPlay / Android Auto / HiCar / CarLife, and casting in meeting rooms in practice.
 - Chapter 31: Short-Video Creation — the three questions for picking a topic, 5 setup steps before shooting, and five camera moves (push, pull, pan, shift, follow). It also covers the six-step CapCut (JianYing) workflow, cover-image essentials, and the "first 3 seconds decide everything" content principle.
-- Chapter 32: Safety First-Aid Handbook:the golden 30 minutes after losing your phone (SOP), the 72-hour response process after being scammed, safe-mode checks for malware, six steps to take back a hijacked account, how to handle ransom messages, and five daily prevention habits.
+- Chapter 32: Safety First-Aid Handbook: the golden 30 minutes after losing your phone (SOP), the 72-hour response process after being scammed, safe-mode checks for malware, six steps to take back a hijacked account, how to handle ransom messages, and five daily prevention habits.
 
 2\. Two new chapters
 
-- Chapter 27: Seniors and Family,an easy-mode comparison table across brands, six common scams and three lines of defense, remote assistance (ChangLian / Sunflower), WeChat Care Mode and voice input, plus SOS / fall detection / medication reminders.
-- Chapter 28: Buying Guide,the three-step method for choosing a phone, a "only look at these five" spec sheet, recommendations across five budget tiers, a seven-scenario chooser table, five buying traps, and an analysis of when and where to buy.
+- Chapter 27: Seniors and Family, an easy-mode comparison table across brands, six common scams and three lines of defense, remote assistance (ChangLian / Sunflower), WeChat Care Mode and voice input, plus SOS / fall detection / medication reminders.
+- Chapter 28: Buying Guide, the three-step method for choosing a phone, a "only look at these five" spec sheet, recommendations across five budget tiers, a seven-scenario chooser table, five buying traps, and an analysis of when and where to buy.
 
 3\. New read-aloud and interaction features
 
@@ -75,7 +75,7 @@ Added Part 8, "Hands-On Android Development" (Chapters 48–58, 11 chapters) and
 #### Content additions: practical apps and harassment blocking
 
 - Chapter 13 adds a new Section 6, "Practical System Tools": cleanup tools like Qingzhuo, the built-in storage cleaner, the National Anti-Fraud Center app, brand phone managers, carrier anti-harassment services, and AdGuard, along with the selection principle of "system first / official supplements / third-party apps in moderation.".
-- A brand-by-brand table for built-in harassment blocking: covering iOS, Xiaomi/Redmi, Huawei/Honor, OPPO/realme/OnePlus, vivo/iQOO, and Samsung,entry paths and recommended settings for each.
+- A brand-by-brand table for built-in harassment blocking: covering iOS, Xiaomi/Redmi, Huawei/Honor, OPPO/realme/OnePlus, vivo/iQOO, and Samsung, entry paths and recommended settings for each.
 - Chapter 8's harassment-blocking coverage expanded: added hands-on instructions for caller ID, blacklists and whitelists, SMS keyword filtering, iOS Silence Unknown Callers, and Do Not Disturb integration, with cross-links to Chapter 13.
 - A three-layer protection recommendation: system blocking + carrier anti-harassment + the National Anti-Fraud Center app, with emphasis on whitelists to prevent false positives.
 

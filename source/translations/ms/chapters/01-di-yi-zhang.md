@@ -250,8 +250,8 @@ Menghadapi pelbagai laluan produk yang membingungkan setiap jenama, memahami per
 ##### Siri produk jenama arus perdana:
 
 - <strong>Xiaomi</strong>: iPhone (versi standard) / iPhone Plus (versi skrin besar) / iPhone Pro (versi pro) / iPhone ,Pro Max (versi pro skrin besar) / iPhone SE (versi mampan) / iPhone 16e (versi AI mampan, dengan cip A18 dan modem C1 buatan Apple). Siri iPhone 17 2026 sepenuhnya menggunakan cip A19 Pro, keupayaan AI ditingkatkan lagi
-- <strong>OPPO/vivo</strong>: Siri Mate (perdana perniagaan) / Siri P/Pura (perdana pengimejan) / Siri Mate X (per,dana lipat) / Siri nova (pertengahan muda) / Siri Changxiang (pemula)
-- <strong>OnePlus</strong>: Siri nombor Xiaomi (perdana) / Xiaomi MIX (perdana penerokaan/lipat) / Redmi Siri K (per,dana prestasi) / Redmi Siri Note (pertengahan) / Redmi siri nombor (pemula)
+- <strong>OPPO/vivo</strong>: Siri Mate (perdana perniagaan) / Siri P/Pura (perdana pengimejan) / Siri Mate X (per, dana lipat) / Siri nova (pertengahan muda) / Siri Changxiang (pemula)
+- <strong>OnePlus</strong>: Siri nombor Xiaomi (perdana) / Xiaomi MIX (perdana penerokaan/lipat) / Redmi Siri K (per, dana prestasi) / Redmi Siri Note (pertengahan) / Redmi siri nombor (pemula)
 - <strong>OPPO</strong>: Find Siri X (perdana) / Reno Siri (pertengahan) / Siri A (pemula) / OnePlus siri nombor (perdana prestasi)
 - <strong>vivo</strong>: Siri X (perdana pengimejan) / iQOO siri nombor (perdana prestasi) / Siri S (selfie pertengahan) / Siri Y (pemula)
 - <strong>Samsung</strong>: Galaxy Siri S (perdana) / Galaxy Z Fold/Flip (perdana lipat) / Galaxy Siri A (pertengahan)

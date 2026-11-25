@@ -10,16 +10,16 @@ kind: chapter
 ### Bab 49: Menyiapkan Lingkungan Pengembangan—Android Studio dan Proyek Pertama
 
 {class="chapter-intro mb-4"}
-Ada pepatah: untuk bekerja dengan baik, tajamkan dulu alatmu. Di bab ini kita menyiapkan 'dapurnya': memasang Android Studio, menjalankan emulator, membuat proyek Android pertama dalam hidupmu, lalu membongkar struktur proyeknya sampai benar-benar paham. Setelah lingkungan siap, untuk pertama kalinya kamu akan melihat kode tulisanmu berubah menjadi tombol yang bisa ditekan:momen yang oleh banyak orang diingat seumur hidup.
+Ada pepatah: untuk bekerja dengan baik, tajamkan dulu alatmu. Di bab ini kita menyiapkan 'dapurnya': memasang Android Studio, menjalankan emulator, membuat proyek Android pertama dalam hidupmu, lalu membongkar struktur proyeknya sampai benar-benar paham. Setelah lingkungan siap, untuk pertama kalinya kamu akan melihat kode tulisanmu berubah menjadi tombol yang bisa ditekan: momen yang oleh banyak orang diingat seumur hidup.
 
 #### 1. Memasang Android Studio
 
 Android Studio adalah lingkungan pengembangan terpadu (IDE) resmi dari Google, gratis, dan fiturnya lengkap: menulis kode, melihat pratinjau tampilan, debugging, sampai mengemas aplikasi semuanya di dalamnya. Pemasangannya empat langkah:
 
 1. Buka situs resmi developer.android.com/studio, unduh versi stabil terbaru (per Agustus 2026: versi setelah Narwhal; tersedia untuk Windows/Mac/Linux);
-2. Jalankan berkas pemasangannya, tinggal klik 'Berikutnya' terus,wizard instalasi otomatis menyertakan Android SDK dan komponen emulator;
+2. Jalankan berkas pemasangannya, tinggal klik 'Berikutnya' terus, wizard instalasi otomatis menyertakan Android SDK dan komponen emulator;
 3. Saat dijalankan pertama kali, unduh komponen SDK sesuai petunjuk (cukup pakai pilihan bawaan; butuh beberapa menit dan beberapa GB ruang);
-4. Setelah selesai kamu akan melihat halaman selamat datang,selamat, 'dapurnya' sudah terpasang
+4. Setelah selesai kamu akan melihat halaman selamat datang, selamat, 'dapurnya' sudah terpasang
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -42,14 +42,14 @@ Di halaman selamat datang klik New Project, pilih templat Empty Activity (templa
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Tiga hal yang diisi saat membuat proyek
 
-Setelah klik Finish, Android Studio akan otomatis mengunduh dependensi dan membangun proyek dengan Gradle (pertama kali perlu menunggu beberapa menit, setelah itu jauh lebih cepat). Begitu build selesai, kamu punya aplikasi yang bisa jalan,walau untuk sekarang hanya menampilkan tulisan 'Hello Android!'.
+Setelah klik Finish, Android Studio akan otomatis mengunduh dependensi dan membangun proyek dengan Gradle (pertama kali perlu menunggu beberapa menit, setelah itu jauh lebih cepat). Begitu build selesai, kamu punya aplikasi yang bisa jalan, walau untuk sekarang hanya menampilkan tulisan 'Hello Android!'.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
 Tips: Seluk-Beluk Nama Paket
 
 {class="mt-1"}
-Nama paket (package name) ibarat 'nomor identitas' aplikasi; tidak boleh ada yang sama di seluruh dunia, dan setelah naik toko tidak bisa diubah lagi. Untuk latihan pribadi, com.example.xxx sudah cukup; produk resmi harus diganti dengan domainmu sendiri yang dibalik (misalnya com.namamu.namaaplikasi). Jangan pernah naik toko dengan com.example,toko akan menolaknya.
+Nama paket (package name) ibarat 'nomor identitas' aplikasi; tidak boleh ada yang sama di seluruh dunia, dan setelah naik toko tidak bisa diubah lagi. Untuk latihan pribadi, com.example.xxx sudah cukup; produk resmi harus diganti dengan domainmu sendiri yang dibalik (misalnya com.namamu.namaaplikasi). Jangan pernah naik toko dengan com.example, toko akan menolaknya.
 :::
 
 #### 3. Menjalankannya: Emulator dan Ponsel Asli
@@ -62,7 +62,7 @@ Emulator adalah ponsel Android yang divirtualisasi di dalam komputer. Di Android
 
 ##### 2. Debugging Ponsel Asli (Lebih Disarankan)
 
-Ponsel asli selalu jadi lingkungan uji paling nyata,rasa gesekannya, jaringannya, sensor aslinya, tidak ada yang bisa ditandingi emulator. Debugging dengan ponsel Android asli itu mudah:
+Ponsel asli selalu jadi lingkungan uji paling nyata, rasa gesekannya, jaringannya, sensor aslinya, tidak ada yang bisa ditandingi emulator. Debugging dengan ponsel Android asli itu mudah:
 
 1. Di ponsel buka [Pengaturan] → [Tentang Ponsel], ketuk 'Nomor Versi' 7 kali berturut-turut untuk mengaktifkan 'Opsi Pengembang';
 2. Di [Opsi Pengembang], aktifkan USB Debugging;
@@ -114,7 +114,7 @@ Gambar 2: Struktur proyek yang wajib dipahami pemula (pegangan: sentuh saja dire
 - MainActivity.kt: 'pintu gerbang' aplikasi. Saat pengguna mengetuk ikonnya, inilah yang pertama dibangunkan. Di templat sekarang, ia bertugas menampilkan 'Hello Android!'.
 - AndroidManifest.xml: 'buku keluarga' aplikasi—menyatakan aplikasi ini bernama apa, ikonnya yang mana, ada halaman apa saja, dan izin apa saja yang dipakai (kamera, lokasi, dst.).
 - Direktori res/: gudang sumber daya, menyimpan gambar, ikon, teks, warna. Menaruh teks di berkas sumber daya alih-alih menulisnya mati di kode adalah kebiasaan baik pengembangan Android (memudahkan ganti bahasa, ganti tema).
-- build.gradle.kts: resep build,menyatakan versi minimum yang didukung dan pustaka apa saja yang dipakai (misalnya Compose).
+- build.gradle.kts: resep build, menyatakan versi minimum yang didukung dan pustaka apa saja yang dipakai (misalnya Compose).
 
 #### 5. Coba-Coba: Ganti 'Hello' dengan Namamu
 
@@ -137,7 +137,7 @@ setContent {
 ```
 :::
 
-Selamat, kamu baru saja menyelesaikan satu siklus lengkap 'ubah kode → kompilasi → pasang → jalankan'. Siklus inilah rutinitas pengembangan untuk setiap hari ke depan. Sekalian saja coba ubah yang lain: perbesar ukuran huruf, ganti warna,bab berikutnya kita akan belajar dari mana semua 'sihir' itu berasal.
+Selamat, kamu baru saja menyelesaikan satu siklus lengkap 'ubah kode → kompilasi → pasang → jalankan'. Siklus inilah rutinitas pengembangan untuk setiap hari ke depan. Sekalian saja coba ubah yang lain: perbesar ukuran huruf, ganti warna, bab berikutnya kita akan belajar dari mana semua 'sihir' itu berasal.
 
 6. Pertolongan Pertama Error Umum: 'Ruang Gawat Darurat' Dua Pekan Pertama Pemula
 

@@ -28,7 +28,7 @@ Tiga senjata utama debugging
 Petua: cara membaca mesej ralat?
 
 {class="mt-1"}
-Selepas aplikasi ranap, Logcat akan memaparkan stacktrace berwarna merah. Cari dari bawah ke atas baris pertama yang bermula dengan nama pakej anda sendiri (contohnya com.example.yourapp) — baris itu biasanya lokasi 'kejadian'. Lihat dahulu "jenis Exception" (penunjuk kosong? ralat penukaran jenis?), kemudian lihat "at ... fail anda:nombor baris". Cara ini boleh menyelesaikan 80% daripada ranapan.
+Selepas aplikasi ranap, Logcat akan memaparkan stacktrace berwarna merah. Cari dari bawah ke atas baris pertama yang bermula dengan nama pakej anda sendiri (contohnya com.example.yourapp) — baris itu biasanya lokasi 'kejadian'. Lihat dahulu "jenis Exception" (penunjuk kosong? ralat penukaran jenis?), kemudian lihat "at ... fail anda: nombor baris". Cara ini boleh menyelesaikan 80% daripada ranapan.
 :::
 
 #### 2. Ujian: beri 'insurans' kepada kod anda
@@ -117,7 +117,7 @@ Perhatian bagi pengguna di China: Google Play memerlukan persekitaran rangkaian 
 Halaman kedai ialah etalase yang dilihat pengguna ketika "melayari kedai". Tiga bahan menentukan tanggapan pertama:
 
 - Ikon: 512×512, jangan guna tangkapan skrin sekadar lepas. Jika tiada kemahiran reka bentuk, gunakan alat AI untuk menjana bentuk geometri ringkas; ia hanya layak jika masih dikenali sekilas pandang walaupun diperkecil pada skrin utama telefon;
-- Tangkapan skrin: sekurang-kurangnya 2 keping, lebih baik 4-6 keping, memaparkan senario fungsi paling teras; setiap satu disertakan satu ayat mudah difahami ("Catat satu entri dalam se saat" sepuluh kali lebih baik dari,pada "Penyelesaian perakaunan yang cekap");
+- Tangkapan skrin: sekurang-kurangnya 2 keping, lebih baik 4-6 keping, memaparkan senario fungsi paling teras; setiap satu disertakan satu ayat mudah difahami ("Catat satu entri dalam se saat" sepuluh kali lebih baik dari, pada "Penyelesaian perakaunan yang cekap");
 - Penerangan: ayat pertama mesti menjelaskan "apa ini + untuk siapa"; jangan menimbun "paling profesional, paling hebat", keutamaan carian kedai terutamanya bergantung pada kata kunci dan penukaran muat turun; kejujuran lebih berkesan daripada pembesaran berlebihan
 
 ::: div .info-box .rounded-lg .p-4 .mt-4

@@ -36,7 +36,7 @@ Example 3: Scan Code Automatic Bookkeeping
 
 ##### Every time you scan a code to pay with WeChat/Alipay, the phone reads the payment notification and automatically records the amount and merchant to a memo or Numbers spreadsheet. This requires using the "Receive SMS/Notification" trigger in Shortcuts' "Automation" (iOS 17+ supports reading Wallet transactions), combined with the "Append to Numbers" action. For people who want to keep accounts but are too lazy to do it manually, this is a lifesaver.
 
-There's also a clever use many people don't know about: you can add shortcuts to your home screen, turning them into an App icon. For example, make a "Call a Ride Home" shortcut, put the icon on the desktop, and with one tap, it directly opens Didi and sets the destination to home,much faster than opening the App yourself and slowly typing.
+There's also a clever use many people don't know about: you can add shortcuts to your home screen, turning them into an App icon. For example, make a "Call a Ride Home" shortcut, put the icon on the desktop, and with one tap, it directly opens Didi and sets the destination to home, much faster than opening the App yourself and slowly typing.
 
 ##### 3. Android Automation—Tasker and Its Friends
 
@@ -46,7 +46,7 @@ On the Android side, things are a bit more complicated, but the ceiling is also 
 
 Many Android phones come with "Auto Clicker" built-in, or you can download it from the app store. Its principle is super simple. You manually operate once. It records the coordinates and time intervals of your taps, then can play them back at high speed. For example, if a certain App gives daily check-in rewards, you record the tapping process once, and then it automatically runs every day. The downside is: it only recognizes coordinates; if the interface layout changes (such as a pop-up ad), it taps the wrong place.
 
-Intermediate Level: Tasker,The King of Android Automation
+Intermediate Level: Tasker, The King of Android Automation
 
 Tasker is universally recognized as the most powerful automation tool on the Android platform, consistently topping the charts. Honestly, its learning curve is a bit steep and the interface isn't pretty, but once you get the hang of it, you'll feel your phone suddenly becomes omnipotent. Tasker's core is also the "trigger → task" pattern:
 
@@ -65,7 +65,7 @@ Here are some classic practical Tasker scenarios:
 
 Late-night eye protection
 
-- <strong>: Trigger condition "time 22:00-06:00" → task "Turn on eye protection mode, reduce brightness to 20%, set screen to black and white (grayscale mode)." Black and white screen has a miraculous effect on the desire to scroll short videos,once the picture goes gray, you don't want to scroll anymore.</strong> Auto-play podcast when headphones inserted
+- <strong>: Trigger condition "time 22:00-06:00" → task "Turn on eye protection mode, reduce brightness to 20%, set screen to black and white (grayscale mode)." Black and white screen has a miraculous effect on the desire to scroll short videos, once the picture goes gray, you don't want to scroll anymore.</strong> Auto-play podcast when headphones inserted
 - <strong>: Trigger condition "wired headphones inserted/Bluetooth headphones connected", task "Open Xiaoyuzhou App and start playing the latest episode." Put on headphones and start listening, without unlocking the phone to find the App.</strong> If you find Tasker too hard to learn, try its simplified sibling:
 - <strong>MacroDroid</strong>. The interface is much friendlier, with rich templates, suitable for users who don't want to tinker. Also, many domestic Android systems (Xiaomi's MIUI, Huawei's HarmonyOS, OPPO's ColorOS) now come with "Scenes" or "Smart Assistant" features; while not as powerful as Tasker, they're completely sufficient for daily automation
 - <strong>4. Daily Applications of Automation Thinking</strong> The biggest gain from learning automation is actually not saving that little bit of time, but
@@ -82,7 +82,7 @@ After receiving a delivery sign-off SMS, automatically add a "pick up package" t
 - 5. Pitfall Guide: Common Problems with Automation
 - Automation isn't all smooth sailing; I've stepped into a few pitfalls for you first:
 
-Location triggers may not work reliably <strong>: iOS's "arrive/leave location" trigger uses geofencing technology, and accuracy depends on GPS signal and system optimization. Sometimes it triggers only 10 minutes after you've arrived home. It's recommended to use Wi-Fi connection or cell tower triggers instead of location triggers:more reliable and more power-efficient.</strong> Shortcuts "Automation" requires authorization
+Location triggers may not work reliably <strong>: iOS's "arrive/leave location" trigger uses geofencing technology, and accuracy depends on GPS signal and system optimization. Sometimes it triggers only 10 minutes after you've arrived home. It's recommended to use Wi-Fi connection or cell tower triggers instead of location triggers: more reliable and more power-efficient.</strong> Shortcuts "Automation" requires authorization
 
 - In iOS, most triggers under the "Automation" tab require manual confirmation to run (iOS's security mechanism). However, Wi-Fi connection, Bluetooth connection, and alarm stopped triggers can run fully automatically without confirmation.
 

@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 3: No Network? Don't Restart Just Yet
 
 {class="chapter-intro mb-4"}
-Without a network, a smartphone loses half its "smart." Networks are the lifeline of modern phones,understanding them, using them well, and protecting them is required study for every phone user.
+Without a network, a smartphone loses half its "smart." Networks are the lifeline of modern phones, understanding them, using them well, and protecting them is required study for every phone user.
 
 0. Don't Get Lost Online—Telling Wi-Fi and Mobile Data Apart via "Roads" and "Cars"
 
@@ -32,7 +32,7 @@ Wi-Fi is essentially a <strong>local area network technology</strong>. It is lik
 {class="font-semibold mt-4 mb-1"}
 ##### 2. Cost and Scenarios: Fixed Monthly Fee vs. Pay-per-Use
 
-Wi-Fi is usually a one-time investment (monthly broadband fee):as long as the power is on, the whole family can use it unlimited, making it ideal for high-traffic scenarios like downloading movies and gaming. Mobile data is billed by usage,exceeding your plan may result in throttling or extra charges, making it more suitable for lightweight tasks in mobile scenarios like subways and business trips.
+Wi-Fi is usually a one-time investment (monthly broadband fee): as long as the power is on, the whole family can use it unlimited, making it ideal for high-traffic scenarios like downloading movies and gaming. Mobile data is billed by usage, exceeding your plan may result in throttling or extra charges, making it more suitable for lightweight tasks in mobile scenarios like subways and business trips.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}
@@ -77,7 +77,7 @@ Mobile networks are the foundation of staying connected anywhere. From 2G to 5G,
 
 - <strong>What data is</strong>: The amount of data generated when your phone goes online. Video and images use the most data; text and voice use relatively little.
 - <strong>Data-saving tips</strong>: Turn on "Data Saver" in settings, and update apps or watch HD video over Wi-Fi.
-- <strong>Signal bars ≠ speed</strong>: Strong signal only means a good connection,speed also depends on how busy the base station is and how far you are from it.
+- <strong>Signal bars ≠ speed</strong>: Strong signal only means a good connection, speed also depends on how busy the base station is and how far you are from it.
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -89,7 +89,7 @@ Using mobile data abroad can result in astronomical bills! Before going abroad, 
 
 #### II. Wi-Fi: Connection, Sharing, and Security
 
-Wi-Fi is the main connection for homes and offices:fast and doesn't use mobile data. But Wi-Fi is constantly evolving, and the differences between standards are significant.
+Wi-Fi is the main connection for homes and offices: fast and doesn't use mobile data. But Wi-Fi is constantly evolving, and the differences between standards are significant.
 
 ##### Connecting to Wi-Fi:
 
@@ -172,7 +172,7 @@ Public Wi-Fi may have hackers eavesdropping on data or setting up phishing hotsp
 
 III. Bluetooth: The All-Rounder of Short-Range Wireless Communication
 
-Bluetooth is probably one of the most frequently used wireless technologies on your phone,wireless earbuds, smart watches, car systems, keyboards and mice all rely on it to connect.
+Bluetooth is probably one of the most frequently used wireless technologies on your phone, wireless earbuds, smart watches, car systems, keyboards and mice all rely on it to connect.
 
 ##### Technical principles:
 
@@ -203,11 +203,11 @@ Infrared remote control is one of the oldest wireless control technologies, but 
 
 ##### Working principle:
 
-An infrared remote works by emitting infrared light pulses at a specific frequency (usually 38kHz) through an infrared LED, and the infrared receiver in the appliance decodes these pulses to carry out the corresponding actions. Different brands use different encoding protocols,common ones include NEC, RC5, RC6, and SONY. The infrared app on your phone ships with a code library for each brand, so picking the brand and model matches the right code.
+An infrared remote works by emitting infrared light pulses at a specific frequency (usually 38kHz) through an infrared LED, and the infrared receiver in the appliance decodes these pulses to carry out the corresponding actions. Different brands use different encoding protocols, common ones include NEC, RC5, RC6, and SONY. The infrared app on your phone ships with a code library for each brand, so picking the brand and model matches the right code.
 
 ##### Limitations:
 
-- <strong>Directionality</strong>: Infrared travels in straight lines and must be aimed at the device,cannot pass through walls.
+- <strong>Directionality</strong>: Infrared travels in straight lines and must be aimed at the device, cannot pass through walls.
 - <strong>Short range</strong>: Effective distance is generally 5-8 meters.
 - <strong>No Apple support</strong>: iPhone has no infrared emitter and cannot use this feature.
 
@@ -225,10 +225,10 @@ NFC evolved from RFID technology and supports three working modes:
 
 ##### Security mechanisms:
 
-- <strong>Ultra-short distance</strong>: The communication distance within 10 cm is itself a physical security guarantee,remote eavesdropping is virtually impossible.
+- <strong>Ultra-short distance</strong>: The communication distance within 10 cm is itself a physical security guarantee, remote eavesdropping is virtually impossible.
 - <strong>Secure chip</strong>: The phone has a built-in independent Secure Element (SE) or uses HCE (Host Card Emulation). Payment keys are stored in the secure area and cannot be extracted even if the phone is rooted.
-- <strong>Fingerprint/Face verification</strong>: Payments require biometric confirmation,even if the phone is lost, it cannot be used for fraudulent transactions.
-- <strong>Tokenization</strong>: Apple Pay, Huawei Pay, etc., do not transmit real card numbers but use one-time tokens:even if intercepted, they cannot be reused.
+- <strong>Fingerprint/Face verification</strong>: Payments require biometric confirmation, even if the phone is lost, it cannot be used for fraudulent transactions.
+- <strong>Tokenization</strong>: Apple Pay, Huawei Pay, etc., do not transmit real card numbers but use one-time tokens: even if intercepted, they cannot be reused.
 
 ##### Typical applications:
 
@@ -242,8 +242,8 @@ NFC evolved from RFID technology and supports three working modes:
 When you have plenty of data, you can turn on the hotspot for tablets and computers.
 
 - <strong>How to enable</strong>: Settings &gt; Personal Hotspot/Tethering, turn it on.
-- <strong>Things to note</strong>: It drains battery and data,remember to set a strong password and limit the number of connected devices.
-- <strong>USB tethering</strong>: Connect to a computer with a cable,more stable and faster than wireless hotspot.
+- <strong>Things to note</strong>: It drains battery and data, remember to set a strong password and limit the number of connected devices.
+- <strong>USB tethering</strong>: Connect to a computer with a cable, more stable and faster than wireless hotspot.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

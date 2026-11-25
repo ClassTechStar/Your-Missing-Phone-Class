@@ -21,7 +21,7 @@ Contoh: Anda menggunakan ponsel menonton video, ingin menonton di layar besar, c
 
 #### 2. HarmonyOS 4.3: Versi matang berbasis AOSP
 
-HarmonyOS 4.3 adalah versi yang saat ini banyak di-deploy di ponsel Huawei. Perlu dijelaskan, HarmonyOS 4.3 kompatibel dengan code framework Android Open Source Project (AOSP), karena itu ia bisa kompatibel penuh dengan aplikasi Android,sebagian besar aplikasi yang Anda download dari Huawei AppGallery pada dasarnya masih aplikasi Android, berjalan melalui compatibility layer HarmonyOS. Tapi HarmonyOS 4.3 bukan sekadar shell Android, ia menambahkan banyak kemampuan distributed self-developed Huawei, Ark Engine, dan teknologi lain di atas AOSP.
+HarmonyOS 4.3 adalah versi yang saat ini banyak di-deploy di ponsel Huawei. Perlu dijelaskan, HarmonyOS 4.3 kompatibel dengan code framework Android Open Source Project (AOSP), karena itu ia bisa kompatibel penuh dengan aplikasi Android, sebagian besar aplikasi yang Anda download dari Huawei AppGallery pada dasarnya masih aplikasi Android, berjalan melalui compatibility layer HarmonyOS. Tapi HarmonyOS 4.3 bukan sekadar shell Android, ia menambahkan banyak kemampuan distributed self-developed Huawei, Ark Engine, dan teknologi lain di atas AOSP.
 
 ##### Fitur inti:
 
@@ -41,7 +41,7 @@ HarmonyOS 4.3 adalah versi yang saat ini banyak di-deploy di ponsel Huawei. Perl
 
 3. HarmonyOS NEXT (HarmonyOS 6): Titik awal sejati sistem operasi self-developed Huawei
 
-HarmonyOS NEXT (HarmonyOS NEXT 5.0) dan HarmonyOS 4.3 memiliki perbedaan mendasar,ia menggunakan microkernel HarmonyOS self-developed Huawei, tidak lagi bergantung pada kernel Linux dan kode AOSP, juga <strong>tidak lagi langsung mendukung aplikasi Android</strong>. Ini adalah langkah kunci HarmonyOS dari "bentuk transisi kompatibel Android" resmi menuju "sistem operasi sepenuhnya independen".
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) dan HarmonyOS 4.3 memiliki perbedaan mendasar, ia menggunakan microkernel HarmonyOS self-developed Huawei, tidak lagi bergantung pada kernel Linux dan kode AOSP, juga <strong>tidak lagi langsung mendukung aplikasi Android</strong>. Ini adalah langkah kunci HarmonyOS dari "bentuk transisi kompatibel Android" resmi menuju "sistem operasi sepenuhnya independen".
 
 ##### Perubahan besar:
 

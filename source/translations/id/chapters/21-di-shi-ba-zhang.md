@@ -29,7 +29,7 @@ Opsi 1: Pencadangan lokal komputer (paling andal, direkomendasikan untuk yang pu
 ##### iPhone
 
 - <strong>: Pengaturan → Nama Anda → iCloud → iCloud Cloud Backup → Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi. saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan.</strong> Android
-- <strong>Android</strong> Keuntungan pencadangan komputer adalah tidak perlu membeli ruang cloud, dan kecepatan pemulihan jauh lebih cepat dari pemulihan cloud. Kerugiannya adalah Anda harus ingat untuk secara berkala mencolokkan kabel untuk menca,dangkan — sebagian besar orang tidak bisa melakukan ini
+- <strong>Android</strong> Keuntungan pencadangan komputer adalah tidak perlu membeli ruang cloud, dan kecepatan pemulihan jauh lebih cepat dari pemulihan cloud. Kerugiannya adalah Anda harus ingat untuk secara berkala mencolokkan kabel untuk menca, dangkan — sebagian besar orang tidak bisa melakukan ini
 - Opsi 2: Pencadangan cloud (paling nyaman, direkomendasikan untuk semua orang)
 
 ##### iPhone

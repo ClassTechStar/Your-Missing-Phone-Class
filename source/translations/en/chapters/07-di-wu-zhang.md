@@ -23,22 +23,22 @@ Set a ringtone and notification sound you like. Use silent mode (for meetings) a
 
 #### II. Display and Brightness
 
-- <strong>Auto brightness</strong>: Lets the phone adjust based on ambient light,worry-free.
+- <strong>Auto brightness</strong>: Lets the phone adjust based on ambient light, worry-free.
 - <strong>Eye comfort/Night Shift mode</strong>: Filters blue light, making phone use more comfortable at night.
 - <strong>Dark mode</strong>: Saves power (especially effective on OLED screens) and isn't harsh on the eyes at night. Many apps also support dark mode.
 - <strong>Screen refresh rate</strong>: Adjustable on some Android phones—higher (like 120Hz) means smoother scrolling.
-- <strong>Auto-lock</strong>: Set to 15 or 30 seconds,both secure and power-saving.
+- <strong>Auto-lock</strong>: Set to 15 or 30 seconds, both secure and power-saving.
 - <strong>Font size</strong>: Think the text is too small? Make it bigger.
 
 #### III. Wallpaper, Themes, and Home Screen
 
-Change to a nice wallpaper (static or dynamic),even your mood changes. Android brand phones often have theme stores that can change the entire set of icons and style.
+Change to a nice wallpaper (static or dynamic), even your mood changes. Android brand phones often have theme stores that can change the entire set of icons and style.
 
 <strong>Home screen widgets</strong>: Put weather, schedule, and music controls on the home screen for one-step access. Both iOS and Android support this—long-press an empty area on the home screen to add.
 
 IV. Efficiency Settings: Make Your Phone Your "External Brain"
 
-These are "once set, never go back" features,each one can significantly boost your daily efficiency.
+These are "once set, never go back" features, each one can significantly boost your daily efficiency.
 
 ##### 1. Focus / Do Not Disturb Mode: Reclaim Attention Stolen by Notifications
 
@@ -58,13 +58,13 @@ These are "once set, never go back" features,each one can significantly boost yo
 - <strong>Long screenshot / Scroll screenshot</strong>: After a regular screenshot, tap the "Long Screenshot" option.
 - <strong>One-tap scan</strong>: Add a "Scan" icon to Control Center / Quick Settings.
 - <strong>Back Tap (iPhone)</strong>: In [Settings] &gt; [Accessibility] &gt; [Touch] &gt; [Back Tap], bind actions like "Screenshot" or "Lock Screen.".
-- <strong>Voice wake</strong>: Siri / Xiaoai / Xiaoyi / Xiaobu,just call out to check weather or set an alarm.
+- <strong>Voice wake</strong>: Siri / Xiaoai / Xiaoyi / Xiaobu, just call out to check weather or set an alarm.
 
 ##### 4. Input Method: The Most Underestimated Efficiency Tool
 
 - <strong>Choose the right input method</strong>:<br> · Sogou / Baidu: Large lexicon, fast trending word updates;<br> · iFlytek: Highest voice input recognition rate, a note-taking lifesaver in meetings;<br> · Gboard (Google): Clean and simple, strong cross-platform sync, supports gesture typing;<br> · iOS built-in: Best privacy, deeply integrated with the system.
 - <strong>Essential toggles</strong>: Smart correction, word prediction, cloud lexicon sync, swipe up for numbers and symbols.
-- <strong>Privacy tip</strong>: Use "full-sentence prediction" or "personalized recommendations" with caution,they may upload your input content.
+- <strong>Privacy tip</strong>: Use "full-sentence prediction" or "personalized recommendations" with caution, they may upload your input content.
 
 ##### 5. Home Screen and Multitasking: Smooth Out Your Workflow
 
@@ -82,7 +82,7 @@ After getting a new phone or a major version update, spend 10 minutes going thro
 
 #### V. Accessibility: The Power of Tech for Good
 
-Don't be intimidated by the name "accessibility",these features are for everyone. They were originally designed for people with disabilities, but they're also useful for ordinary people,temporarily injured hands, holding a baby, broken earbuds on the subway, or needing reading glasses for small text... they can all save the day. Ultimately, accessible design embodies the philosophy of <strong>tech for good</strong>: letting everyone equally enjoy digital life.
+Don't be intimidated by the name "accessibility",these features are for everyone. They were originally designed for people with disabilities, but they're also useful for ordinary people, temporarily injured hands, holding a baby, broken earbuds on the subway, or needing reading glasses for small text... they can all save the day. Ultimately, accessible design embodies the philosophy of <strong>tech for good</strong>: letting everyone equally enjoy digital life.
 
 ##### 1. "Eyes" for Visually Impaired Users—Complete Screen Reader Guide
 
@@ -159,7 +159,7 @@ AI Image Description Support by System
 
 {class="list-disc pl-6 mt-1 space-y-1 text-sm"}
 - <strong>iOS 15+</strong>: Enable "Image Descriptions" in [Settings] &gt; [Accessibility] &gt; [VoiceOver] &gt; [Speech Descriptions]. The system calls a <strong>local AI model</strong> to automatically generate text descriptions of images (requires iPhone 12 or later).
-- <strong>Newer TalkBack app</strong>: Google TalkBack integrates <strong>image Q&amp; A</strong> in newer versions,you can ask "What's in this image?" and AI answers in real time (not strictly dependent on Android system version:just update the TalkBack app to experience it).
+- <strong>Newer TalkBack app</strong>: Google TalkBack integrates <strong>image Q&amp; A</strong> in newer versions, you can ask "What's in this image?" and AI answers in real time (not strictly dependent on Android system version: just update the TalkBack app to experience it).
 - <strong>Third-party apps</strong>: "Seeing AI" (iOS), "Lookout" (Android), "Xiaoyi Bangbang" (Huawei) are all excellent AI visual assistants that can recognize objects, read documents, and identify facial expressions.
 :::
 
@@ -192,7 +192,7 @@ Enabling and Optimizing Live Captions
 {class="list-decimal pl-6 mt-1 space-y-0.5 text-sm"}
 1. Use in a <strong>quiet environment</strong> as much as possible, away from air conditioners and machinery noise;
 2. The speaker <strong>articulates clearly and speaks at a moderate pace</strong> for the highest recognition accuracy;
-3. Multi-person conversations reduce accuracy,use "show only one person" mode;
+3. Multi-person conversations reduce accuracy, use "show only one person" mode;
 4. Supports mainstream languages like Mandarin Chinese, Cantonese, and English;<strong>minority languages have lower recognition rates</strong>;
 5. Background music or voice interference during speech will cause intermittent recognition
 :::
@@ -223,7 +223,7 @@ Real-Time Call Transcription (TTY / RTT)
 ##### 6. "Small but Practical" Features for Everyone
 
 - <strong>Back Tap</strong>(iOS 14+): [Settings] &gt; [Accessibility] &gt; [Touch] &gt; [Back Tap], can bind <strong>double-tap/triple-tap</strong> to trigger screenshot, lock screen, control center, etc. Especially handy when carrying packages with both hands.
-- <strong>Assistive Touch / Floating Ball</strong>: iOS [Accessibility] &gt; [Touch] &gt; [Assistive Touch], Android [Accessibility] &gt; [Floating Navigation]. Virtual buttons replace gestures or physical buttons,lifesaver when buttons are unresponsive or for one-handed use.
+- <strong>Assistive Touch / Floating Ball</strong>: iOS [Accessibility] &gt; [Touch] &gt; [Assistive Touch], Android [Accessibility] &gt; [Floating Navigation]. Virtual buttons replace gestures or physical buttons, lifesaver when buttons are unresponsive or for one-handed use.
 - <strong>Switch Control</strong>: Control the phone through external switches, single clicks, or head movements<strong>designed for users with physical disabilities</strong>. iOS [Accessibility] &gt; [Switch Control], Android [Accessibility] &gt; [Switch Access].
 - <strong>Sound Recognition</strong>(iOS): [Accessibility] &gt; [Sound Recognition]. After enabling, the phone "listens" for doorbells, baby cries, fire alarms, sirens, etc., and <strong>upon recognition, vibrates + sends a screen notification</strong>—very valuable for hearing-impaired users and during sleep.
 - <strong>LED Flash Alerts</strong>: iOS [Accessibility] &gt; [Audio/Visual] &gt; [LED Flash for Alerts], Android [Settings] &gt; [Notifications] &gt; [Flash Alerts]. The flash blinks for incoming calls and notifications<strong>sensible even without sound in noisy environments</strong>.

@@ -37,7 +37,7 @@ Berdasarkan umpan balik pengguna nyata, kelompok orang berikut memiliki probabil
 
 1. <strong>Pengguna berat pembaca/pengolah dokumen</strong>: Sering membuka PDF, menganotasi dokumen, membaca artikel panjang di ponsel. Layar dalam mendekati 7,5 inci saat dibuka, membaca PDF A4 tanpa zoom, pengalaman meningkat drastis.
 2. <strong>Pengguna bisnis yang sering bepergian/rapat</strong>: Tidak ingin membawa tablet tapi merasa layar ponsel terlalu kecil. Ponsel lipat horizontal saat dibuka untuk melihat PPT, menandatangani kontrak, membandingkan email dua layar, efisiensi lebih tinggi daripada ponsel batang lurus.
-3. <strong>Orang yang menyukai kreasi "mode duduk"</strong>: Lipat hingga 90 derajat dan letakkan di meja, layar atas untuk pembingkaian layar bawah untuk menekan rana (swafoto/time-lapse), layar atas video layar bawah mencatat, layar atas live streaming layar bawah melihat komentar,ini adalah bentuk yang tidak bisa dilakukan ponsel batang lurus.
+3. <strong>Orang yang menyukai kreasi "mode duduk"</strong>: Lipat hingga 90 derajat dan letakkan di meja, layar atas untuk pembingkaian layar bawah untuk menekan rana (swafoto/time-lapse), layar atas video layar bawah mencatat, layar atas live streaming layar bawah melihat komentar, ini adalah bentuk yang tidak bisa dilakukan ponsel batang lurus.
 4. <strong>Pengguna wanita yang menginginkan portabilitas sekaligus layar besar</strong>: Ponsel lipat vertikal saat tertutup bisa masuk ke tas kecil, saat dibuka menjadi ponsel normal, layar luar juga bisa berfungsi sebagai cermin rias, melihat notifikasi.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -46,7 +46,7 @@ Kelompok ini jangan beli
 
 {class="list-disc pl-6 mt-2 space-y-1"}
 - Yang hanya menggunakan ponsel untuk menonton video pendek, chat WeChat, telepon—ponsel lipat tidak memberi nilai tambah, justru lebih berat dan lebih tebal.
-- Yang tangan kecil atau memiliki tendonitis pergelangan tangan,ponsel lipat horizontal saat dibuka umumnya 230g+, pegangan satu tangan melelahkan.
+- Yang tangan kecil atau memiliki tendonitis pergelangan tangan, ponsel lipat horizontal saat dibuka umumnya 230g+, pegangan satu tangan melelahkan.
 - Yang anggaran terbatas, ingin menggunakan satu ponsel selama lebih dari 4 tahun—nilai jual kembali ponsel lipat lebih rendah daripada ponsel batang lurus, biaya perbaikan tinggi.
 :::
 
@@ -115,9 +115,9 @@ Bagian paling rapuh ponsel lipat adalah layar dalam dan engsel, kebiasaan beriku
 Skenario frekuensi tinggi kerusakan layar dalam
 
 {class="list-disc pl-6 mt-2 space-y-1"}
-- Saat menutup terjepit kabel headphone/kabel pengisi daya,langsung meretakkan layar dalam.
-- Dimasukkan ke tas bercampur dengan kunci,layar luar tidak apa-apa, layar dalam tertekan oleh kunci sampai retak.
-- Musim dingin masuk dari tempat dingin ke ruangan hangat lalu langsung buka-tutup,perbedaan suhu menyebabkan perubahan tegangan kaca.
+- Saat menutup terjepit kabel headphone/kabel pengisi daya, langsung meretakkan layar dalam.
+- Dimasukkan ke tas bercampur dengan kunci, layar luar tidak apa-apa, layar dalam tertekan oleh kunci sampai retak.
+- Musim dingin masuk dari tempat dingin ke ruangan hangat lalu langsung buka-tutup, perbedaan suhu menyebabkan perubahan tegangan kaca.
 - Setelah dipakai setahun merasa "lipatan menjadi lebih dalam" lalu mengupas ,pelindung pabrik—mengupas pelindung bisa merusak layar dalam ikut serta.
 :::
 

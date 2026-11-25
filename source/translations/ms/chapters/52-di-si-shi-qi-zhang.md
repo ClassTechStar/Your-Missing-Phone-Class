@@ -96,7 +96,7 @@ Jika keperluan anda jelas, AI dapat membantu anda melaksanakannya dengan cekap; 
 Inilah sebab buku ini menggunakan sebahagian besar ruangannya untuk membincangkan metodologi dan bukan operasi alat. Bukan kerana alat tidak penting, tetapi kerana metodologi ialah "pendarab" alat, semakin baik metodologi, semakin besar nilai alat; jika metodologi sifar, alat sekukur mana pun hanyalah sifar didarab dengan apa jua nombor.
 
 :::inline div .quote-line
-Anda tidak lagi mengekod bersendirian. Anda seorang panglima, AI ialah tentera anda. Kualiti pemikiran anda menentukan kekuatan tempur tentera itu. Mulai hari ini, persenjatai pemikiran dengan metodologi dan perbesar keupayaan dengan alat,itulah keseluruhan rahasia pengekodan AI.
+Anda tidak lagi mengekod bersendirian. Anda seorang panglima, AI ialah tentera anda. Kualiti pemikiran anda menentukan kekuatan tempur tentera itu. Mulai hari ini, persenjatai pemikiran dengan metodologi dan perbesar keupayaan dengan alat, itulah keseluruhan rahasia pengekodan AI.
 :::
 
 #### Rujukan

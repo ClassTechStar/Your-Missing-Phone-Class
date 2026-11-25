@@ -9,7 +9,7 @@ kind: supplement
 ### Chapter 20 Appendix: Termux—A Portable Linux Terminal Environment on Android Devices
 
 {class="chapter-intro mb-4"}
-If you feel Developer Mode isn't "hardcore" enough and want to experience a complete Linux command line on your phone, then Termux is for you. It requires no root permission, yet can turn an ordinary Android phone into a portable Linux workstation,a powerful tool for advanced users to explore mobile development and operations.
+If you feel Developer Mode isn't "hardcore" enough and want to experience a complete Linux command line on your phone, then Termux is for you. It requires no root permission, yet can turn an ordinary Android phone into a portable Linux workstation, a powerful tool for advanced users to explore mobile development and operations.
 
 #### 1. What Is Termux
 
@@ -29,7 +29,7 @@ Uses the APT package manager (similar to Debian and Ubuntu), can install thousan
 
 ##### Security and Network Features
 
-- <strong>SSH remote connection</strong>: Supports SSH client and server features:connect to other devices remotely or turn your phone into an SSH host.
+- <strong>SSH remote connection</strong>: Supports SSH client and server features: connect to other devices remotely or turn your phone into an SSH host.
 - <strong>Encryption tools</strong>: Provides encryption tools like OpenSSL, supports data encryption and secure communication.
 - <strong>Server setup</strong>: Can configure Nginx or Apache to set up a static web server.
 

@@ -84,7 +84,7 @@ Bila dilihat semula, anda daripada "tidak tahu apa itu Activity" kepada memasang
 Dunia teknologi berubah sangat pantas: rangka kerja akan dinaik taraf, alat akan berganti, AI akan mengambil alih lebih banyak kerja "menaip papan kekunci". Tetapi ada satu perkara yang tidak akan lapuk: kebolehan anda menguraikan idea yang kabar kepada langkah-langkah yang jelas, kemudian melaksanakannya langkah demi langkah. Alat ialah pengganda, pemikiran ialah asas. Pengganda boleh diganti, tetapi asas tidak boleh digoyang.
 
 :::inline div .quote-line
-Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta peranti Android. Mulai hari ini, berkarya dengan papan kekunci,itulah romantisme pembangun Android.
+Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta peranti Android. Mulai hari ini, berkarya dengan papan kekunci, itulah romantisme pembangun Android.
 :::
 
 #### Rujukan

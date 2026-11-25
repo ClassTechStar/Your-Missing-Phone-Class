@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 14: Password Managers
 
 {class="chapter-intro mb-4"}
-In the digital age, your passwords are the keys to your front door. But with too many keys, all too complex,what then? A password manager is your "universal key butler".
+In the digital age, your passwords are the keys to your front door. But with too many keys, all too complex, what then? A password manager is your "universal key butler".
 
 #### I. Why Do You Need a Password Manager?
 

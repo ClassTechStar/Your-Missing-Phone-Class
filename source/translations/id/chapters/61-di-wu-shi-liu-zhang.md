@@ -10,7 +10,7 @@ kind: chapter
 ### Bab 56: App sudah selesai, tinggal tayang
 
 {class="chapter-intro mb-4"}
-Aplikasinya sudah jadi, terus? Bab ini menjawab tiga hal untuk berpindah dari 'bisa jalan' ke 'bisa diserahkan': cara men-debug untuk menemukan bug secara efisien, cara menulis pengujian untuk mencegah regresi, dan cara mengirim aplikasi ke Google Play agar diunduh orang seluruh dunia. Naik toko bukan sekadar seremoni,itulah garis batas yang mengubah sebuah karya menjadi produk.
+Aplikasinya sudah jadi, terus? Bab ini menjawab tiga hal untuk berpindah dari 'bisa jalan' ke 'bisa diserahkan': cara men-debug untuk menemukan bug secara efisien, cara menulis pengujian untuk mencegah regresi, dan cara mengirim aplikasi ke Google Play agar diunduh orang seluruh dunia. Naik toko bukan sekadar seremoni, itulah garis batas yang mengubah sebuah karya menjadi produk.
 
 #### 1. Tiga Jurus Debugging: Logcat, Breakpoint, Inspektur UI
 
@@ -117,7 +117,7 @@ Catatan untuk pengguna di Tiongkok: Google Play membutuhkan lingkungan jaringan 
 Halaman toko adalah etalase yang dilihat pengguna saat "berkeliling di toko". Tiga aset menentukan kesan pertama:
 
 - Ikon: 512×512, jangan asal pakai tangkapan layar. Kalau tidak punya kemampuan desain, pakai alat AI untuk membuat bentuk geometris sederhana; baru memenuhi syarat jika ikon tetap dikenali sekali lihat setelah diperkecil di layar utama ponsel;
-- Tangkapan layar: minimal 2, sebaiknya 4-6, menampilkan skenario fitur paling inti; tiap gambar diberi satu kalimat bahasa sehari-hari ("catat satu catatan dalam sekejap" sepuluh kali lebih baik dari,pada "solusi pencatatan keuangan yang efisien");
+- Tangkapan layar: minimal 2, sebaiknya 4-6, menampilkan skenario fitur paling inti; tiap gambar diberi satu kalimat bahasa sehari-hari ("catat satu catatan dalam sekejap" sepuluh kali lebih baik dari, pada "solusi pencatatan keuangan yang efisien");
 - Deskripsi: kalimat pertama harus menjelaskan "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat", bobot pencarian toko utamanya melihat kata kunci dan konversi unduhan; kejujuran lebih efektif daripada bombastis
 
 ::: div .info-box .rounded-lg .p-4 .mt-4

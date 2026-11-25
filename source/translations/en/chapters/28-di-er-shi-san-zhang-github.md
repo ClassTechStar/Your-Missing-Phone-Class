@@ -9,13 +9,13 @@ kind: chapter
 ### Chapter 23 Appendix: GitHub Beginner's Guide—From Code Hosting to Collaboration Platform
 
 {class="chapter-intro mb-4"}
-Chapter 23 Appendix: GitHub Beginner's Guide,From Code Hosting to Collaboration Platform
+Chapter 23 Appendix: GitHub Beginner's Guide, From Code Hosting to Collaboration Platform
 
 #### 1. What Exactly Is GitHub?
 
 1\. What Exactly Is GitHub?<strong>Simply put, GitHub is a</strong> based on Git. It launched in 2008, was acquired by Microsoft in 2018, and remains the world's largest open-source code hosting platform, hosting hundreds of millions of repositories covering almost all mainstream programming languages.
 
-If you use an analogy to understand:<strong>Git is the diary on your computer, and GitHub is a public blogging platform</strong>—you can publish your work, follow others' projects, and participate in discussions and collaboration. It's not just a "programmer's back-end repository," but more like a "technology city" built by global developers together:projects are born here, iterated, discussed, and reused.
+If you use an analogy to understand:<strong>Git is the diary on your computer, and GitHub is a public blogging platform</strong>—you can publish your work, follow others' projects, and participate in discussions and collaboration. It's not just a "programmer's back-end repository," but more like a "technology city" built by global developers together: projects are born here, iterated, discussed, and reused.
 
 For ordinary people, GitHub is not out of reach either. Many non-programmers use it to host notes, e-books, personal blogs, and even to back up configuration files. As long as you have a slight need to "organize your things and share them," GitHub is worth knowing about.
 
@@ -146,13 +146,13 @@ GitHub's most powerful aspect is its collaboration mechanism. A typical team col
 5. <strong>Code Review</strong>: Team members review your code, offering feedback or suggesting changes. You can continue to commit based on feedback, and the PR will automatically update.
 6. <strong>Merge</strong>: After review passes, click "Merge" to merge the code into the main branch. Your contribution is officially part of the project!
 
-This process ensures that <strong>all code is reviewed before entering the main branch</strong>, greatly reducing the chance of errors. Open source projects also use this mechanism to accept contributions from strangers worldwide,you can completely submit a PR to a well-known open source project, and once adopted, you become a contributor to that project.
+This process ensures that <strong>all code is reviewed before entering the main branch</strong>, greatly reducing the chance of errors. Open source projects also use this mechanism to accept contributions from strangers worldwide, you can completely submit a PR to a well-known open source project, and once adopted, you become a contributor to that project.
 
 #### 7. GitHub's Typical Application Scenarios
 
 ##### Students Participating in Competitions and Course Projects
 
-Computer science students participating in ACM, hackathons, and graduation designs almost all can't do without GitHub. It serves both as a team collaboration platform and as a showcase for work,competition judges can directly view your repository to understand code quality and the collaboration process. Many companies also require attaching a GitHub homepage when recruiting, as proof of technical ability.
+Computer science students participating in ACM, hackathons, and graduation designs almost all can't do without GitHub. It serves both as a team collaboration platform and as a showcase for work, competition judges can directly view your repository to understand code quality and the collaboration process. Many companies also require attaching a GitHub homepage when recruiting, as proof of technical ability.
 
 ##### Personal Knowledge Base and Note Hosting
 
@@ -164,11 +164,11 @@ GitHub is the core base of the global open source movement. You can Fork project
 
 ##### Automated Deployment and CI/CD
 
-With GitHub Actions, you can achieve a fully automated process of "code pushed, automatically tested + automatically deployed to server." Many personal blogs and documentation sites are built this way,after writing an article, just push, and the website automatically updates.
+With GitHub Actions, you can achieve a fully automated process of "code pushed, automatically tested + automatically deployed to server." Many personal blogs and documentation sites are built this way, after writing an article, just push, and the website automatically updates.
 
 ##### 💾 Code Backup and Multi-Device Sync
 
-Use code repositories as cloud drives; when changing computers or working on multiple devices, just git pull to get the latest code,no more USB drive copying back and forth.
+Use code repositories as cloud drives; when changing computers or working on multiple devices, just git pull to get the latest code, no more USB drive copying back and forth.
 
 #### 8. Advice for Beginners
 
@@ -176,7 +176,7 @@ Use code repositories as cloud drives; when changing computers or working on mul
 - <strong>Commit frequently, take small steps</strong>: Commit once for each small feature completed, rather than writing all day before committing once. This makes it easier to locate problems.
 - <strong>Develop on branches, don't directly modify the main branch</strong> Even for personal projects, develop the habit of opening branches, so you won't be flustered when collaborating on teams in the future.
 - <strong>Make good use of .gitignore</strong>: This file tells Git which files not to include in version management (such as password configs, build artifacts, dependency folders), avoiding uploading junk files.
-- <strong>Look at excellent open source projects more</strong>: Browse GitHub Trending, look at the code structure, README writing, and collaboration process of high-star projects,it's the fastest free way to improve.
+- <strong>Look at excellent open source projects more</strong>: Browse GitHub Trending, look at the code structure, README writing, and collaboration process of high-star projects, it's the fastest free way to improve.
 - <strong>Apply for GitHub Student Pack</strong>: After student verification, you can get free access to many paid tools and services (Copilot, domains, cloud services, etc.), worth thousands of dollars.
 
 ::: div .warning-box .rounded-lg .p-4 .mt-4
@@ -184,7 +184,7 @@ Use code repositories as cloud drives; when changing computers or working on mul
 Security Reminder
 
 {class="list-disc pl-6 mt-1 space-y-1"}
-- Never commit sensitive information like passwords, API keys, database connection strings to GitHub, especially public repositories,once leaked, they'll be scraped by crawlers in seconds, with serious consequences.
+- Never commit sensitive information like passwords, API keys, database connection strings to GitHub, especially public repositories, once leaked, they'll be scraped by crawlers in seconds, with serious consequences.
 - If you accidentally commit sensitive information, just deleting the file isn't enough (it's still in the history); use<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> or professional tools to clean history, and immediately change the leaked keys.
 - Private repositories aren't absolutely secure either; sensitive information is best managed with environment variables, not in code repositories.
 :::
@@ -202,7 +202,7 @@ GitHub access from within China is sometimes unstable, with situations like not 
 Advanced Technique: Build a Free Personal Blog with GitHub Pages
 
 {class="mt-1"}
-GitHub Pages allows you to host a static website for free. Combined with static site generators like Jekyll, Hexo, and Hugo, you can easily build a personal blog. After writing a Markdown article and pushing to the repository, the blog automatically updates, with HTTPS and custom domain names included. Countless tech bloggers' blogs are built this way,zero cost, no ads, version controllable.
+GitHub Pages allows you to host a static website for free. Combined with static site generators like Jekyll, Hexo, and Hugo, you can easily build a personal blog. After writing a Markdown article and pushing to the repository, the blog automatically updates, with HTTPS and custom domain names included. Countless tech bloggers' blogs are built this way, zero cost, no ads, version controllable.
 :::
 
 #### 9. Summary: Why Everyone Should Understand GitHub

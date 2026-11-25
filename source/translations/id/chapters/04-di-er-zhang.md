@@ -254,7 +254,7 @@ Ponsel dipakai lama akan "bertambah gemuk", kebanyakan karena file redundan yang
 {class="font-semibold mt-4 mb-1"}
 ##### 3. Standar penanganan keamanan gambar
 
-Gambar adalah tipe data paling "sensitif" di ponsel:satu foto sembarangan bisa membocorkan lokasi, perangkat, waktu Anda. Kami menyarankan <strong>membangun workflow "perlindungan ganda"</strong>:
+Gambar adalah tipe data paling "sensitif" di ponsel: satu foto sembarangan bisa membocorkan lokasi, perangkat, waktu Anda. Kami menyarankan <strong>membangun workflow "perlindungan ganda"</strong>:
 
 ::: div .warning-box .rounded-lg .p-4 .mt-3
 {class="font-semibold"}

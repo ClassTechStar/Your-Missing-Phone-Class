@@ -46,9 +46,9 @@ iOS development has hard requirements: you must have a Mac (Xcode runs only on m
 
 #### 3. Which Language to Write In: Objective-C or Swift?
 
-iOS development history has two "lead actors" as well. Objective-C was the founding veteran:used from 2008 to 2014; Swift is the new language Apple released in 2014, and it has evolved all the way to Swift 6 (released in 2024, bringing strict concurrency checking). By 2026, nearly all new projects use Swift.
+iOS development history has two "lead actors" as well. Objective-C was the founding veteran: used from 2008 to 2014; Swift is the new language Apple released in 2014, and it has evolved all the way to Swift 6 (released in 2024, bringing strict concurrency checking). By 2026, nearly all new projects use Swift.
 
-A bit of honest advice for absolute beginners: go straight to Swift and don't even look at Objective-C,unless your future job means maintaining legacy code from ten years ago. Swift's advantages: clean syntax (none of the C-era baggage of semicolons and header files), an Optional mechanism that wipes out "null pointer crashes" at the language level, seamless integration with SwiftUI, and Swift Playgrounds on the iPad for learning while you play.
+A bit of honest advice for absolute beginners: go straight to Swift and don't even look at Objective-C, unless your future job means maintaining legacy code from ten years ago. Swift's advantages: clean syntax (none of the C-era baggage of semicolons and header files), an Optional mechanism that wipes out "null pointer crashes" at the language level, seamless integration with SwiftUI, and Swift Playgrounds on the iPad for learning while you play.
 
 ::: div .grid .md:grid-cols-2 .gap-3 .my-3
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
@@ -87,8 +87,8 @@ Figure 1: The full journey of an iOS app from idea to the App Store (note the ex
 
 Key concepts in the pipeline:
 
-- Signing: every iOS app must be "signed" before it can be installed,proof that "this package came from you and hasn't been tampered with." During the learning stage, Xcode signs automatically with your Apple ID; publishing uses a developer certificate. Chapter 67 covers the details.
-- Simulator: an iPhone virtualized on your Mac:the main arena for development and debugging. It runs on the Mac's CPU, so it's remarkably smooth,a big step up from Android emulators.
+- Signing: every iOS app must be "signed" before it can be installed, proof that "this package came from you and hasn't been tampered with." During the learning stage, Xcode signs automatically with your Apple ID; publishing uses a developer certificate. Chapter 67 covers the details.
+- Simulator: an iPhone virtualized on your Mac: the main arena for development and debugging. It runs on the Mac's CPU, so it's remarkably smooth, a big step up from Android emulators.
 - TestFlight: Apple's official "beta distribution" tool—before release, you send test builds to up to 10,000 testers, who install and try them with the TestFlight app. It's an elegance unique to the iOS ecosystem.
 
 #### 5. The Full iOS Tech Stack: Your "Weapon List"
@@ -102,7 +102,7 @@ Key concepts in the pipeline:
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 The mainstream iOS tech stack at a glance (2026)
 
-Notice anything? This list is quite a bit shorter than Android's,because Apple "takes care of" a lot of things for you. The closed ecosystem costs you freedom and pays you back in peace of mind: no agonizing over which networking library or which database to pick,the official option is usually the best answer.
+Notice anything? This list is quite a bit shorter than Android's, because Apple "takes care of" a lot of things for you. The closed ecosystem costs you freedom and pays you back in peace of mind: no agonizing over which networking library or which database to pick, the official option is usually the best answer.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}

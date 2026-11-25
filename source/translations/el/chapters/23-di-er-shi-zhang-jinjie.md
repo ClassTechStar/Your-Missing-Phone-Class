@@ -24,12 +24,12 @@ kind: supplement
 
 ##### Συχνές λειτουργίες:
 
-- <strong>Εντοπισμός σφαλμάτων USB</strong>:σύνδεση προηγμένος(Flash, Δεδομένα επαναφορά, ADB Εντολή),κεφάλαιο "ADB Εντολή".
+- <strong>Εντοπισμός σφαλμάτων USB</strong>:σύνδεση προηγμένος(Flash, Δεδομένα επαναφορά, ADB Εντολή), κεφάλαιο "ADB Εντολή".
 - <strong>Εμφάνιση λειτουργίας αφής</strong>:Οθόνηεμφάνιση().
 
 ##### Απόδοση και ομαλότητα:
 
-- <strong>(κλιμάκωση / κλιμάκωση / κλιμάκωση)</strong>:άνοιγμα App. προεπιλογή 1x,0.5x"" (,),απενεργοποίηση.0.5x, απενεργοποίηση, "".
+- <strong>(κλιμάκωση / κλιμάκωση / κλιμάκωση)</strong>:άνοιγμα App. προεπιλογή 1x,0.5x"" (,), απενεργοποίηση.0.5x, απενεργοποίηση, "".
 - <strong>Εξαναγκασμένη απόδοση GPU (Force GPU Rendering)</strong>:2DGPUCPU.App βελτιστοποίηση, GPU Κατανάλωση ενέργειας.προεπιλογή GPU, υψηλό, Χρήστης προεπιλογή.
 - <strong>εμφάνιση GPU(Profile GPU Rendering)</strong>:Οθόνη πραγματικού χρόνουεμφάνιση,16.6ms(60fps)..Προγραμματιστής App, Χρήστης App βελτιστοποίηση,,App.
 
@@ -140,7 +140,7 @@ ADB Android Debug Bridge(Debug), Google επίσημο Εντολή, USB Wi-Fi .
 
 #### Πέμπτο: Root — ο «υπερ διαχειριστής» του Android
 
-Root Δικαίωμα Linux Χρήστης(/Πίνακας περιεχομένων, Αρχείο),Σύστημα Δικαίωμα.WindowsAdministrator:Windows Ασφάλεια Διαχειριστής περιορισμός(Δικαίωμα TrustedInstaller), Administrator Linux root <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">sudo rm -rf /*</code>.Root Δικαίωμα, Τροποποίηση Σύστημα Αρχείο, απεγκατάσταση Εφαρμογή, Root προηγμένος App.
+Root Δικαίωμα Linux Χρήστης(/Πίνακας περιεχομένων, Αρχείο), Σύστημα Δικαίωμα.WindowsAdministrator:Windows Ασφάλεια Διαχειριστής περιορισμός(Δικαίωμα TrustedInstaller), Administrator Linux root <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">sudo rm -rf /*</code>.Root Δικαίωμα, Τροποποίηση Σύστημα Αρχείο, απεγκατάσταση Εφαρμογή, Root προηγμένος App.
 
 ##### Πλεονεκτήματα του Root:
 
@@ -173,13 +173,13 @@ Root Χρήστης:RootModule, άνοιγμα App,:"Συσκευή Ασφάλε
 
 - <strong>SafetyNet Attestation (παλαιά έκδοση, από το 2017)</strong>:Google Συσκευή API, Εφαρμογή Google Διακομιστής "Συσκευή CTS έλεγχος, Τροποποίηση επίσημο".Επιστροφή Basic Attestation(βασικό) Strong Attestation(,).Google SafetyNet 2024 .
 - <strong>Play Integrity API (νέα έκδοση, από 2022)</strong>:Google Λύση, SafetyNet .Συσκευή,"Εφαρμογή " (App )"/Εξουσιοδότηση" (Χρήστης Google ). App μεταφορά Play Integrity.
-- <strong>Ποιος το χρησιμοποιεί</strong>:, App( Google Pay, /Σενάριο),(Netflix ),(/),επιχείρηση App(MDM Συσκευή).
+- <strong>Ποιος το χρησιμοποιεί</strong>:, App( Google Pay, /Σενάριο),(Netflix ),(/), επιχείρηση App(MDM Συσκευή).
 
 ##### Τρία επίπεδα αποτελεσμάτων Play Integrity:
 
 - <strong>MEETS_DEVICE_INTEGRITY(Συσκευή)</strong>:Συσκευή Android Σύστημα, Bootloader Ξεκλείδωμα, Root, CTS έλεγχος., App.
 - <strong>MEETS_BASIC_INTEGRITY (βασική ακεραιότητα)</strong>:Συσκευή. App υποβάθμιση( Netflix Αναπαραγωγή περιορισμός), App απόρριψη.
-- <strong>MEETS_STRONG_INTEGRITY (ισχυρή ακεραιότητα)</strong>:προηγμένος,( Google Pixel Titan M ),τρίτου Μάρκα Root .
+- <strong>MEETS_STRONG_INTEGRITY (ισχυρή ακεραιότητα)</strong>:προηγμένος,( Google Pixel Titan M ), τρίτου Μάρκα Root .
 - <strong>Καμία ετικέτα (NO_INTEGRITY)</strong>:Συσκευή Root, Ξεκλείδωμα BL, τρίτου ROM αναλογικό,/ App απόρριψη.
 
 ##### Γιατί μετά από Root αυτές οι εφαρμογές δεν δουλεύουν:

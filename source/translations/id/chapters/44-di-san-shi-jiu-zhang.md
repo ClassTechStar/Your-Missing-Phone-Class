@@ -10,11 +10,11 @@ kind: chapter
 ### Bab 39: AI tidak paham? Mungkin penjelasan Anda kurang jelas
 
 {class="chapter-intro mb-4"}
-Pernah mengalami ini: ganti jendela percakapan baru, AI seperti lupa ingatan,semua dasar proyek Anda hilang dari kepalanya? Ini bukan AI sengaja menyebalkan—memang ia "pelupa" sejak lahir. Bab ini mengajarkan cara memasang "sistem memori jangka panjang" untuk AI, sekaligus mengenalkan salah satu paradigma pengembangan paling populer pada 2026,spec-driven development.
+Pernah mengalami ini: ganti jendela percakapan baru, AI seperti lupa ingatan, semua dasar proyek Anda hilang dari kepalanya? Ini bukan AI sengaja menyebalkan—memang ia "pelupa" sejak lahir. Bab ini mengajarkan cara memasang "sistem memori jangka panjang" untuk AI, sekaligus mengenalkan salah satu paradigma pengembangan paling populer pada 2026, spec-driven development.
 
 #### 1. File memori proyek: "memori jangka panjang" AI
 
-Model AI punya keterbatasan mendasar: memorinya "jangka pendek". Setiap kali percakapan dimulai, pengetahuan AI tentang proyek Anda adalah nol. Anda harus terus-menerus memberi tahu "kami memakai React" "backend-nya Node.js" "databasenya PostgreSQL" "gaya kode pakai tanda kutip ganda". Ini tidak hanya tidak efisien, tetapi juga mudah terlewat,seperti setiap hari harus melatih karyawan baru dari awal.
+Model AI punya keterbatasan mendasar: memorinya "jangka pendek". Setiap kali percakapan dimulai, pengetahuan AI tentang proyek Anda adalah nol. Anda harus terus-menerus memberi tahu "kami memakai React" "backend-nya Node.js" "databasenya PostgreSQL" "gaya kode pakai tanda kutip ganda". Ini tidak hanya tidak efisien, tetapi juga mudah terlewat, seperti setiap hari harus melatih karyawan baru dari awal.
 
 Solusinya adalah "file memori proyek"—sebuah file teks biasa di root ,proyek yang dibaca otomatis oleh alat AI setiap kali percakapan dimulai. Tiap alat punya konvensi penamaan berbeda:
 
@@ -27,7 +27,7 @@ Solusinya adalah "file memori proyek"—sebuah file teks biasa di root ,proyek y
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Konvensi penamaan file memori proyek berbagai alat
 
-Meski namanya berbeda, prinsipnya sama: tulis informasi yang ingin Anda "selalu ingatkan" kepada AI di file ini. File memori proyek yang baik seharusnya memuat: ikhtisar proyek (proyek apa ini), stack teknologi (teknologi apa yang dipakai), standar kode (penamaan. indentasi, gaya komentar), struktur direktori (bagaimana kode diorganisasi), konvensi pengembangan (strategi branching, standar commit, tuntutan pengujian). CLAUDE.md Karpathy hanya 70 baris,tetapi mencakup semua informasi kunci: ringkas namun lengkap.
+Meski namanya berbeda, prinsipnya sama: tulis informasi yang ingin Anda "selalu ingatkan" kepada AI di file ini. File memori proyek yang baik seharusnya memuat: ikhtisar proyek (proyek apa ini), stack teknologi (teknologi apa yang dipakai), standar kode (penamaan. indentasi, gaya komentar), struktur direktori (bagaimana kode diorganisasi), konvensi pengembangan (strategi branching, standar commit, tuntutan pengujian). CLAUDE.md Karpathy hanya 70 baris, tetapi mencakup semua informasi kunci: ringkas namun lengkap.
 
 ::: div .code-block
 :::inline div .code-head
@@ -67,12 +67,12 @@ Aplikasi pencatat keuangan pribadi full-stack untuk membantu pengguna mencatat p
 Catatan: jangan ditulis jadi "dokumen kebutuhan kedua"
 
 {class="mt-1"}
-Perhatikan panjang file ini:jangan sampai menjadi dokumen kebutuhan puluhan halaman. Tujuan file memori proyek adalah "membangun latar belakang pemahaman AI dengan cepat", bukan "mendeskripsikan setiap fitur secara detail". Jaga tetap ringkas, terstruktur, dan hanya tulis "yang perlu diketahui AI".
+Perhatikan panjang file ini: jangan sampai menjadi dokumen kebutuhan puluhan halaman. Tujuan file memori proyek adalah "membangun latar belakang pemahaman AI dengan cepat", bukan "mendeskripsikan setiap fitur secara detail". Jaga tetap ringkas, terstruktur, dan hanya tulis "yang perlu diketahui AI".
 :::
 
 #### 2. Spec-Driven Development (SDD)
 
-Spec-Driven Development (SDD, pengembangan berbasis spesifikasi) adalah paradigma pengembangan yang mulai matang pada 2026,inti idenya satu kalimat: tulis spesifikasi dulu, baru tulis kode. Berbeda dengan TDD (test-driven development) tradisional, "spesifikasi" SDD tidak hanya kasus uji, tetapi juga deskripsi kebutuhan, definisi antarmuka, model data, dan lainnya. AI menghasilkan kode berdasarkan spesifikasi ini,tugas manusia adalah menulis dan memelihara spesifikasinya.
+Spec-Driven Development (SDD, pengembangan berbasis spesifikasi) adalah paradigma pengembangan yang mulai matang pada 2026, inti idenya satu kalimat: tulis spesifikasi dulu, baru tulis kode. Berbeda dengan TDD (test-driven development) tradisional, "spesifikasi" SDD tidak hanya kasus uji, tetapi juga deskripsi kebutuhan, definisi antarmuka, model data, dan lainnya. AI menghasilkan kode berdasarkan spesifikasi ini, tugas manusia adalah menulis dan memelihara spesifikasinya.
 
 Alur kerja SDD dalam lima langkah:
 
@@ -105,11 +105,11 @@ Dalam alur ini, file spesifikasi adalah "sumber kebenaran tunggal",kode bisa dib
 Gambar 3: Alur kerja Spec-Driven Development (SDD)
 :::
 
-Keunggulan SDD: file spesifikasi lebih stabil daripada kode. Saat model dasar atau alat berubah, file spesifikasi Anda tetap berlaku:cukup minta alat AI baru menghasilkan ulang kodenya. Inilah sebabnya buku ini menekankan "metodologi lebih penting daripada alat":file spesifikasi adalah wujud nyata metodologi Anda.
+Keunggulan SDD: file spesifikasi lebih stabil daripada kode. Saat model dasar atau alat berubah, file spesifikasi Anda tetap berlaku: cukup minta alat AI baru menghasilkan ulang kodenya. Inilah sebabnya buku ini menekankan "metodologi lebih penting daripada alat":file spesifikasi adalah wujud nyata metodologi Anda.
 
 #### 3. Manajemen jendela konteks
 
-Meski sudah punya file memori proyek, Anda tetap akan menghadapi masalah "konteks tidak cukup" di percakapan. Jendela konteks model AI (jumlah informasi yang bisa diproses sekaligus) itu terbatas. Saat percakapan terlalu panjang dan file yang dirujuk terlalu banyak, AI akan "melupakan" informasi awal,kualitas keluaran pun menurun. Ibarat Anda ngobrol dengan teman selama enam jam,ia sudah lupa apa yang Anda katakan di awal.
+Meski sudah punya file memori proyek, Anda tetap akan menghadapi masalah "konteks tidak cukup" di percakapan. Jendela konteks model AI (jumlah informasi yang bisa diproses sekaligus) itu terbatas. Saat percakapan terlalu panjang dan file yang dirujuk terlalu banyak, AI akan "melupakan" informasi awal, kualitas keluaran pun menurun. Ibarat Anda ngobrol dengan teman selama enam jam, ia sudah lupa apa yang Anda katakan di awal.
 
 Strategi inti manajemen jendela konteks adalah "rujukan berlapis":
 

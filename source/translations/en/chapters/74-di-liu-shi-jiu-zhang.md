@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 69: Quick Reference and Resources
 
 {class="chapter-intro mb-4"}
-This chapter is a quick-reference handbook that works on its own. When you can't remember a bit of syntax or need to make a fast decision, flip straight here. Treat it as a set of "pocket cards": common code, common questions, and learning resources,nothing left out.
+This chapter is a quick-reference handbook that works on its own. When you can't remember a bit of syntax or need to make a fast decision, flip straight here. Treat it as a set of "pocket cards": common code, common questions, and learning resources, nothing left out.
 
 #### 1. Common code cheat sheet
 
@@ -31,7 +31,7 @@ You can learn the language, but not do the full development. Swift Playgrounds o
 
 Q2: How much does learning iOS development cost?
 
-Learning stage: 0 dollars (Xcode is free + a free Apple ID for on-device debugging). Release stage: a developer account at 99 USD/year (about 700 RMB). Add a Mac, and that's the entire cost. Compared with the payoff—even a small utility on the App Store has paying users:the math works out.
+Learning stage: 0 dollars (Xcode is free + a free Apple ID for on-device debugging). Release stage: a developer account at 99 USD/year (about 700 RMB). Add a Mac, and that's the entire cost. Compared with the payoff—even a small utility on the App Store has paying users: the math works out.
 
 Q3: SwiftUI or UIKit—which one first?
 

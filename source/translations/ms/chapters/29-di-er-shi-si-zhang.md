@@ -144,7 +144,7 @@ Coolapk
 
 {class="list-disc pl-6 mt-1 space-y-1"}
 - <strong>Forum setiap model</strong>: Seperti komuniti Xiaomi, komuniti OnePlus dll., mempunyai tutorial rasmi dan bukan rasmi.
-- <strong>Bab 25: Pemprosesan Telefon Terpakai &amp; Warisan Digital</strong> Hei kawan-kawan, selepas lebih dua puluh bab "latihan", dipercayai anda telah bertumbuh daripada "pemula digital" menjadi pengguna telefon yang agak tenang. Tetapi kehidupan teknologi sentiasa berkitlar,kekasih baru akhirnya menjadi kekasih lama. Apabila anda bersedia membiarkan rakan lama ini "bersara", adakah anda tahu bagaimana berpisah secara bermaruah dan selamat?
+- <strong>Bab 25: Pemprosesan Telefon Terpakai &amp; Warisan Digital</strong> Hei kawan-kawan, selepas lebih dua puluh bab "latihan", dipercayai anda telah bertumbuh daripada "pemula digital" menjadi pengguna telefon yang agak tenang. Tetapi kehidupan teknologi sentiasa berkitlar, kekasih baru akhirnya menjadi kekasih lama. Apabila anda bersedia membiarkan rakan lama ini "bersara", adakah anda tahu bagaimana berpisah secara bermaruah dan selamat?
 - <strong>1. "Eutanasia" Telefon Lama: Panduan Jual atau Hadiah Selamat</strong> Prinsip teras: Pembersihan data bukan "memadam", tetapi "menindih".
 :::
 

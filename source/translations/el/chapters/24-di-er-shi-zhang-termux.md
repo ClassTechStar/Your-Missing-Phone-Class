@@ -115,7 +115,7 @@ Termux <strong>Μόνο ενσωματωμένο Bash</strong> Shell.ZshfishShel
 
 ##### Εκμάθηση Linux
 
-Linux, Εντολή Σύστημα Πλατφόρμα, ShellScript, Linux Αρχείο Δικαίωμα( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> Ορισμός δι και ωμάτων rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> Αλλαγή ιδιοκτησίας αρχείου,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> Προβολή owner/group/other Δικαίωμα)βασικό Εντολή.Unix/Linux""Δικαίωμα(owner / group / other × / / ),Windows NTFSACL.
+Linux, Εντολή Σύστημα Πλατφόρμα, ShellScript, Linux Αρχείο Δικαίωμα( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> Ορισμός δι και ωμάτων rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> Αλλαγή ιδιοκτησίας αρχείου,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> Προβολή owner/group/other Δικαίωμα)βασικό Εντολή.Unix/Linux""Δικαίωμα(owner / group / other × / / ), Windows NTFSACL.
 
 ##### 🔐 Network security testing
 

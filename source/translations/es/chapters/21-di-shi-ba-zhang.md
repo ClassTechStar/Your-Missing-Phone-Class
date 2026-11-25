@@ -24,7 +24,7 @@ Por tanto, debes proteger con prioridad la primera y tercera categorías.
 
 #### II. Copia de seguridad completa: todo de una vez
 
-La copia de seguridad completa es como hacer una "foto" completa del móvil,ajustes del sistema, disposición del escritorío, datos de Apps, fotos, contactos: todo empaquetado.
+La copia de seguridad completa es como hacer una "foto" completa del móvil, ajustes del sistema, disposición del escritorío, datos de Apps, fotos, contactos: todo empaquetado.
 
 ##### Opcion 1: Copia local en ordenador (la más fiable, recomendada si tienes PC)
 
@@ -93,7 +93,7 @@ Para la mayoría, tener "una copia en la nube + una en el ordenador" ya es excel
 Atencion especial al historial de WeChat
 
 {class="mt-1"}
-¡El historial de chat de WeChat NO puede migrarse con ningúna herramienta de transferencia de móviles! No está cubierto por la copia completa. Debes usar la función propia "Migración de historial de chat" de WeChat o copiar a WeChat para PC. Mucha gente lo descubre después de cambiar de móvil cuando ya es tarde,el viejo móvil ya puede haber sido restablecido de fábrica.
+¡El historial de chat de WeChat NO puede migrarse con ningúna herramienta de transferencia de móviles! No está cubierto por la copia completa. Debes usar la función propia "Migración de historial de chat" de WeChat o copiar a WeChat para PC. Mucha gente lo descubre después de cambiar de móvil cuando ya es tarde, el viejo móvil ya puede haber sido restablecido de fábrica.
 :::
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4

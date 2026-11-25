@@ -10,7 +10,7 @@ kind: chapter
 ### Chapter 68: The Road Ahead—Permissions, Notifications, and Modern Architecture
 
 {class="chapter-intro mb-4"}
-Being able to build an app is only the start. This chapter is about the hurdles between "can build" and "builds well": how to ask for permissions gracefully, how to send notifications without being annoying, how to lift your architecture another level, and,here in 2026,how to team up with AI to write iOS code. Every item is something you'll run into right away in a real project.
+Being able to build an app is only the start. This chapter is about the hurdles between "can build" and "builds well": how to ask for permissions gracefully, how to send notifications without being annoying, how to lift your architecture another level, and, here in 2026, how to team up with AI to write iOS code. Every item is something you'll run into right away in a real project.
 
 #### 1. Permissions: knock before you enter
 
@@ -51,7 +51,7 @@ class LocationModel {
 Note: iOS permissions are "one-shot"
 
 {class="mt-1"}
-The iOS permission prompt appears only once,once the user declines, it never pops up again. So: time the request for "the exact moment the user is about to use the feature" (not a pile of prompts at launch), and write the copy so it explains the purpose. Post-denial guidance ("go to Settings and turn on location") is standard equipment,don't leave users stuck in a dead end.
+The iOS permission prompt appears only once, once the user declines, it never pops up again. So: time the request for "the exact moment the user is about to use the feature" (not a pile of prompts at launch), and write the copy so it explains the purpose. Post-denial guidance ("go to Settings and turn on location") is standard equipment, don't leave users stuck in a dead end.
 :::
 
 #### 2. Notifications: say something useful at the right time
@@ -99,7 +99,7 @@ Note: the iOS notification permission is also "one prompt only," and users can s
 
 Chapter 65 used MVVM; here are three advanced points to add:
 
-- Protocol abstraction: make the ViewModel depend on a protocol rather than a concrete class:then tests can inject a "fake data source." This is the cornerstone of testability;
+- Protocol abstraction: make the ViewModel depend on a protocol rather than a concrete class: then tests can inject a "fake data source." This is the cornerstone of testability;
 - Single responsibility: one ViewModel handles one thing only (the expense-tracking one doesn't handle weather); when features grow, split it up;
 - Don't over-engineer: for a solo small project, "an @Observable class + protocol abstraction" is plenty. Heavy architectures like VIPER or Clean Architecture can wait until team size and complexity come knocking—tools serve the goal; they're not for showing off
 
@@ -124,7 +124,7 @@ By 2026, AI is deeply embedded in Apple's development workflow. If you want to s
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Four scenarios for AI-assisted iOS development
 
-For the full methodology,how to give AI instructions, how to review its work, how to avoid pitfalls,the complete 11 chapters are in Part 7 of this book, "Hands-On AI Coding" (Chapters 37–47), which I strongly recommend reading alongside this one: leave the Swift syntax to this part, and the art of working with AI to Part 7.
+For the full methodology, how to give AI instructions, how to review its work, how to avoid pitfalls, the complete 11 chapters are in Part 7 of this book, "Hands-On AI Coding" (Chapters 37–47), which I strongly recommend reading alongside this one: leave the Swift syntax to this part, and the art of working with AI to Part 7.
 
 ::: div .practice-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -135,7 +135,7 @@ Get hands-on: add the "power trio" to the expense tracker
 Swift 6's concurrency system has two rules every beginner must understand:
 
 - The UI can only be updated on the main thread: SwiftUI views are @MainActor by default, so bring network callbacks back to the main thread before changing state (await MainActor.run { ... }, or mark the ViewModel @MainActor);
-- Manage async work with Task: the .task { } modifier starts automatically when the view appears and cancels automatically when it disappears,that's the standard way to kick off async work in SwiftUI; don't scatter raw Tasks in body.
+- Manage async work with Task: the .task { } modifier starts automatically when the view appears and cancels automatically when it disappears, that's the standard way to kick off async work in SwiftUI; don't scatter raw Tasks in body.
 
 ::: div .code-block
 :::inline div .code-head
@@ -162,7 +162,7 @@ struct WeatherScreen: View {
 ```
 :::
 
-Behind these two rules is Swift 6's "data-race safety" design,the compiler errors out the moment you get it wrong, instead of waiting for the app to crash to find out. The compiler's errors aren't nitpicking; they're taking a bullet for you.
+Behind these two rules is Swift 6's "data-race safety" design, the compiler errors out the moment you get it wrong, instead of waiting for the app to crash to find out. The compiler's errors aren't nitpicking; they're taking a bullet for you.
 
 {class="mt-1"}
 ① Add a "daily 8:00 PM expense reminder" to the tracker (notification permission + local notifications); ② switch the ViewModel's data source to a protocol abstraction and write a unit test that injects fake data; ③ add a "spending this month" home-screen widget. Finish the trio and your project starts to look like a regular army.

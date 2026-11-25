@@ -25,7 +25,7 @@ Percakapan dengan AI dapat dibagi menjadi tiga lapisan, masing-masing menjalanka
 {class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
 Tiga lapisan Prompt dalam percakapan
 
-Prompt lapisan sistem biasanya ditulis di berkas memori proyek (misalnya CLAUDE.md) dan tidak perlu diulang di setiap percakapan. Lapisan tugas adalah yang paling sering kamu pakai dalam percakapan,ia harus memuat tiga unsur: "apa yang dikerjakan", "teknologi apa yang dipakai", dan "apa batasannya". Lapisan umpan balik adalah yang paling menguji kemampuan:umpan balik yang baik membuat AI mengoreksi dengan tepat, umpan balik yang buruk hanya membuatnya menebak lagi.
+Prompt lapisan sistem biasanya ditulis di berkas memori proyek (misalnya CLAUDE.md) dan tidak perlu diulang di setiap percakapan. Lapisan tugas adalah yang paling sering kamu pakai dalam percakapan, ia harus memuat tiga unsur: "apa yang dikerjakan", "teknologi apa yang dipakai", dan "apa batasannya". Lapisan umpan balik adalah yang paling menguji kemampuan: umpan balik yang baik membuat AI mengoreksi dengan tepat, umpan balik yang buruk hanya membuatnya menebak lagi.
 
 ::: div .info-box .rounded-lg .p-4 .mt-4
 {class="font-semibold"}
@@ -68,7 +68,7 @@ Ada dua strategi dasar iterasi dalam pemrograman AI, masing-masing cocok untuk s
 
 Strategi "langkah kecil cepat" cocok untuk pengembangan fitur dan perbaikan bug. Intinya: setiap kali hanya minta AI melakukan satu perubahan kecil, verifikasi sampai lolos, baru lanjut ke perubahan berikutnya. Kelebihannya, setiap langkah bisa diverifikasi dan bisa dikembalikan sehingga risikonya terkendali; kekurangannya. lebih lambat dan butuh interaksi percakapan yang sering. Cocok untuk: pengembangan fitur baru, eksplorasi saat solusi terbaik belum pasti, dan iterasi hati-hati saat kamu belum terlalu yakin dengan hasil AI.
 
-Strategi "restrukturisasi besar" cocok untuk perubahan skala besar dengan tujuan yang sudah jelas. Intinya: jelaskan tujuan lengkapnya sekali jalan, lalu biarkan AI merencanakan dan mengeksekusi seluruh perubahan secara mandiri. Kelebihannya, lebih cepat dan AI dapat melihat gambaran menyeluruh untuk mengambil keputusan arsitektur yang lebih baik; kekurangannya, risikonya tinggi,jika pemahaman AI menyimpang, biaya koreksinya besar. Cocok untuk: peningkatan arsitektur yang jelas, migrasi kode skala besar, dan restrukturisasi yang dilindungi pengujian memadai.
+Strategi "restrukturisasi besar" cocok untuk perubahan skala besar dengan tujuan yang sudah jelas. Intinya: jelaskan tujuan lengkapnya sekali jalan, lalu biarkan AI merencanakan dan mengeksekusi seluruh perubahan secara mandiri. Kelebihannya, lebih cepat dan AI dapat melihat gambaran menyeluruh untuk mengambil keputusan arsitektur yang lebih baik; kekurangannya, risikonya tinggi, jika pemahaman AI menyimpang, biaya koreksinya besar. Cocok untuk: peningkatan arsitektur yang jelas, migrasi kode skala besar, dan restrukturisasi yang dilindungi pengujian memadai.
 
 ::: div .overflow-x-auto
 ```html
@@ -98,7 +98,7 @@ Keempat, gunakan fitur manajemen konteks pada alat yang dipakai. Sebagian besar 
 Mari praktik: berperan sebagai "pasien" untuk AI-mu
 
 {class="mt-1"}
-Dengan sengaja buat satu halaman kecil di browser dan ciptakan satu bug (misalnya tombol tidak berfungsi). Lalu, mengikuti format "deskripsi debugging yang baik" di bab ini, jelaskan masalahnya secara lengkap kepada AI: informasi mentah, harapan vs aktual, langkah reproduksi, dan hal-hal yang sudah diperiksa. Rasakan perbedaan kecepatan AI menemukan masalah:kamu akan paham mengapa "mendeskripsikan masalah" sendiri adalah sebuah keterampilan.
+Dengan sengaja buat satu halaman kecil di browser dan ciptakan satu bug (misalnya tombol tidak berfungsi). Lalu, mengikuti format "deskripsi debugging yang baik" di bab ini, jelaskan masalahnya secara lengkap kepada AI: informasi mentah, harapan vs aktual, langkah reproduksi, dan hal-hal yang sudah diperiksa. Rasakan perbedaan kecepatan AI menemukan masalah: kamu akan paham mengapa "mendeskripsikan masalah" sendiri adalah sebuah keterampilan.
 :::
 
 ::: div .chapter-summary

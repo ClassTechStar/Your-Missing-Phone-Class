@@ -82,7 +82,7 @@ Dilihat ke belakang, kamu berangkat dari "tidak tahu SwiftUI itu apa", lalu mema
 Dunia teknologi berubah sangat cepat: framework akan diperbarui, alat akan berganti, dan AI akan mengambil alih semakin banyak pekerjaan "menekan tombol keyboard". Namun ada satu hal yang tidak akan usang: kemampuanmu memecah sebuah ide yang masih kabur menjadi langkah-langkah yang jelas, lalu mewujudkannya selangkah demi selangkah. Alat adalah pengeras, cara berpikir adalah fondasi. Pengeras boleh diganti, fondasi tidak boleh goyah.
 
 :::inline div .quote-line
-Anda tidak lagi sekadar "orang yang pandai memakai ponsel". Anda bisa mengubah ide di kepala menjadi aplikasi yang benar-benar berjalan di ratusan juta iPhone. Mulai hari ini, berkarya lewat keyboard,itulah romantisme developer iOS.
+Anda tidak lagi sekadar "orang yang pandai memakai ponsel". Anda bisa mengubah ide di kepala menjadi aplikasi yang benar-benar berjalan di ratusan juta iPhone. Mulai hari ini, berkarya lewat keyboard, itulah romantisme developer iOS.
 :::
 
 #### Referensi

@@ -39,11 +39,11 @@ The fundamental limitation of this technology is the speed difference. Currently
 
 Memory expansion is not a panacea; effects vary by model and usage scenario:
 
-- <strong>When it helps</strong>: Models with 6GB physical RAM + UFS 3.1 or above, with ≥30GB free space, can keep 3-4 more apps alive in the background after enabling 3GB expansion, with a 68% reduction in reload rate,suitable for heavy multitaskers like delivery riders and ride-hailing drivers.
+- <strong>When it helps</strong>: Models with 6GB physical RAM + UFS 3.1 or above, with ≥30GB free space, can keep 3-4 more apps alive in the background after enabling 3GB expansion, with a 68% reduction in reload rate, suitable for heavy multitaskers like delivery riders and ride-hailing drivers.
 - <strong>Daily scenarios</strong>: Significant improvements for WeChat multi-instance, browser tab retention, instant messaging response, with noticeably shorter cold-start times for background apps.
 - <strong>Limited scenarios</strong>: Limited improvement for high-bandwidth scenarios like large game loading and 4K video editing.
 - <strong>When it's harmful</strong>: Models with 8GB RAM + UFS 2.2 and insufficient free space, where enabling it actually increases game frame rate fluctuations, with more battery drain when scrolling short videos and lag when switching.
-- <strong>When it's useless</strong>: Models with 16GB+ of large RAM see almost zero benefit:at most keeping one more app alive, but increasing CPU load by 12% and heat by 2-3°C. For models with more than 12GB RAM, it's recommended to simply turn it off to avoid meaningless compression computation.
+- <strong>When it's useless</strong>: Models with 16GB+ of large RAM see almost zero benefit: at most keeping one more app alive, but increasing CPU load by 12% and heat by 2-3°C. For models with more than 12GB RAM, it's recommended to simply turn it off to avoid meaningless compression computation.
 
 #### 5. Naming and Enabling Methods by Manufacturer
 
