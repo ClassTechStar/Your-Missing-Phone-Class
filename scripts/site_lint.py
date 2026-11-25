@@ -65,13 +65,18 @@ def main() -> int:
         for p in json.loads((ROOT / 'manifest' / 'path.json').read_text(encoding='utf-8')):
             if f'{site}/v1.9/zh-CN/{p["id"]}.html' not in locs:
                 fail(f'sitemap 缺路径页 {p["id"]}')
-        # 每条 URL 可映射到真实文件（死链检查）
+        # 每条 URL 可映射到真实文件（死链检查）。
+        # v1.8/ 下既有仓库里的单文件（v1.8/en.html），也有构建出的分章页
+        # （v1.8/en/di-yi-zhang.html），两处都要找。
         for u in locs:
             rel = u[len(site):].lstrip('/')
-            if rel.startswith('v1.8/'):
-                ok = (ROOT / rel).is_file()
+            if not rel:                       # 站点根 = 落地页
+                ok = (ROOT / 'site-landing.html').is_file()
+            elif rel.endswith('/'):           # 目录 URL = 目录下的 index.html
+                ok = ((SITE_DIR / rel / 'index.html').is_file()
+                      or (ROOT / rel / 'index.html').is_file())
             else:
-                ok = (SITE_DIR / rel).is_file()
+                ok = (SITE_DIR / rel).is_file() or (ROOT / rel).is_file()
             if not ok:
                 fail(f'sitemap 死链: {u}')
 
@@ -99,8 +104,7 @@ def main() -> int:
             for code, url in re.findall(
                     r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', h):
                 target = url.split('#')[0][len(site):].lstrip('/')
-                ok = ((ROOT / target).is_file() if target.startswith('v1.8/')
-                      else (SITE_DIR / target).is_file())
+                ok = (SITE_DIR / target).is_file() or (ROOT / target).is_file()
                 if not ok:
                     fail(f'{cid}.html: hreflang={code} 指向不存在的 {url}')
             for href in re.findall(r'href="([^"#?][^"]*\.html)[^"]*"', h):
@@ -109,7 +113,44 @@ def main() -> int:
                 if href not in names and not (PAGE_DIR / href).is_file():
                     fail(f'{cid}.html: 内链死链 {href}')
     else:
-        fail('dist/site/v1.9/zh-CN/ 不存在（先运行 python -m bookkit split）')
+        fail('dist/site/v1.9/zh-CN/ 不存在（先运行 python scripts/build_all_sites.py）')
+
+    # ---- 8. 外语分章页覆盖（W3-4）----
+    # 18 语各 84 章：目录页、章页、sitemap 三处都要在，且首页 canonical 自指。
+    trans = ROOT / 'source' / 'translations'
+    n_foreign = 0
+    if sm.is_file() and trans.is_dir():
+        locs_set = set(re.findall(r'<loc>([^<]+)</loc>', sm.read_text(encoding='utf-8')))
+        for d in sorted(p for p in trans.iterdir() if p.is_dir()):
+            bp = d / 'book.json'
+            if not bp.is_file():
+                continue
+            ids = [c['id'] for c in json.loads(bp.read_text(encoding='utf-8'))['chapters']]
+            page_dir = SITE_DIR / 'v1.8' / d.name
+            if not (page_dir / 'index.html').is_file():
+                fail(f'{d.name}: 缺分章目录页 v1.8/{d.name}/index.html')
+                continue
+            missing = [cid for cid in ids if not (page_dir / f'{cid}.html').is_file()]
+            if missing:
+                fail(f'{d.name}: 缺 {len(missing)} 个章页（如 {missing[:3]}）')
+            for u in [f'{site}/v1.8/{d.name}/index.html'] + \
+                     [f'{site}/v1.8/{d.name}/{cid}.html' for cid in ids]:
+                if u not in locs_set:
+                    fail(f'{d.name}: sitemap 缺章页 {u}')
+            h = (page_dir / f'{ids[0]}.html').read_text(encoding='utf-8')
+            tags = re.findall(r'<link rel="canonical" href="([^"]+)"', h)
+            want = f'{site}/v1.8/{d.name}/{ids[0]}.html'
+            if tags != [want]:
+                fail(f'{d.name}: 章页 canonical 应为 {want}，实际 {tags[:2]}')
+            kb = len(h.encode('utf-8')) // 1024
+            if kb > 300:
+                fail(f'{d.name}: 章页 {ids[0]}.html 为 {kb}KB（超 300KB 预算）')
+            for code, url in re.findall(
+                    r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"', h):
+                target = url.split('#')[0][len(site):].lstrip('/')
+                if not ((SITE_DIR / target).is_file() or (ROOT / target).is_file()):
+                    fail(f'{d.name}/{ids[0]}.html: hreflang={code} 指向不存在的 {url}')
+            n_foreign += len(ids) + 1
 
     # ---- 6. 勘误页时效公示 ----
     errata = (ROOT / 'errata.html').read_text(encoding='utf-8')
@@ -130,7 +171,7 @@ def main() -> int:
         print(f'\n共 {len(failures)} 处站点基建问题')
         return 1
     print(f'OK: robots/sitemap/OG/prefetch/hreflang/勘误公示/内链全部通过'
-          f'（{len(list(PAGE_DIR.glob("*.html")))} 页）')
+          f'（中文 {len(list(PAGE_DIR.glob("*.html")))} 页 + 外语 {n_foreign} 页）')
     return 0
 
 

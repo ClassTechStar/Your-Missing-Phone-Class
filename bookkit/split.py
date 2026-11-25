@@ -197,6 +197,31 @@ def hreflang_block(alts: dict, x_default: str = '') -> str:
     return '\n'.join(lines) + '\n'
 
 
+def language_index(root: Path) -> dict:
+    """各语言的版本与章 id（跨语言 hreflang / sitemap 用）。
+
+    zh-CN 以 v1.9 为准；其余 18 语以 source/translations/<lang>/book.json 为准。
+    外语版仍是 v1.8（84 章），所以同一章 id 只在两种版本都存在的章上互链。
+    """
+    idx = {}
+    v19 = root / 'source' / 'v1.9' / 'book.json'
+    if v19.is_file():
+        book = json.loads(v19.read_text(encoding='utf-8'))
+        idx['zh-CN'] = {'version': book.get('version', 'v1.9'),
+                        'ids': {c['id'] for c in book.get('chapters', [])}}
+    trans = root / 'source' / 'translations'
+    if not trans.is_dir():
+        return idx
+    for d in sorted(p for p in trans.iterdir() if p.is_dir()):
+        bp = d / 'book.json'
+        if not bp.is_file():
+            continue
+        book = json.loads(bp.read_text(encoding='utf-8'))
+        idx[d.name] = {'version': book.get('version', 'v1.8'),
+                       'ids': {c['id'] for c in book.get('chapters', [])}}
+    return idx
+
+
 def load_paths(root: Path, chapter_ids) -> list:
     """策展路径（方案 §7）：manifest/path.json 只存章 ID 与编辑定的文案，
     章标题/导读构建时从源稿取——零内容复制、零翻译分叉。
@@ -275,7 +300,7 @@ PATH_NAV_JS = '''<script>
 
 
 def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
-          out: Path = None) -> dict:
+          out: Path = None, write_sitemap: bool = True) -> dict:
     book = B.load_book(root, book_path, lang)
     version = book.get('version') or 'v1.9'
     built = B.build(root, lang=lang, book_path=book_path)['html']
@@ -321,7 +346,9 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         m, _ = B._read_md(root, ch['file'])
         meta[ch['id']] = {'title': m.get('nav') or ch['id']}
     descs = {}
-    paths = load_paths(root, set(order))
+    # 策展路径文案目前只有中文（manifest/path.json）。外语版先不生成路径页，
+    # 否则 18 个语言站会各混进 3 页中文路径，读者会以为点错了语言。
+    paths = load_paths(root, set(order)) if lang == 'zh-CN' else []
     path_nav_js = ''
     if paths:
         pdata = {p['id']: {'t': p['title'], 'c': p['chapters']} for p in paths}
@@ -331,14 +358,12 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     site = ((json.loads((root / 'manifest' / 'languages.json').read_text(encoding='utf-8'))
              .get('site_url') or '').rstrip('/'))
 
-    # ---- hreflang 备选表（方案 §6.3）----
-    # v1.9 的逐章译文尚在制作；现阶段备选指向 v1.8 各语言单文件的同 id 锚点
-    # （v1.8 无此章或无该语言成品则不发），将来 v1.9/<lang>/ 章节页落地，
-    # 把 alts_for 换成逐章 URL 即可，互链结构不变。
+    # ---- hreflang 备选表（方案 §6.3 / W3-4）----
+    # 18 语分章页落地后，备选指向各语言的逐章 URL（不再退回 v1.8 单文件锚点）；
+    # 某语言没有这一章（v1.8 只有 84 章）就不发，避免指向不存在页。
     _mf = json.loads((root / 'manifest' / 'languages.json').read_text(encoding='utf-8'))
     langs_meta = _mf.get('languages', {})
-    v18_ids = {c['id'] for c in json.loads((root / 'source' / 'book.json')
-                                           .read_text(encoding='utf-8'))['chapters']}
+    lang_idx = language_index(root)
     v18_files = {c for c in langs_meta if (root / 'v1.8' / f'{c}.html').is_file()}
 
     def alts_for(cid: str = '') -> dict:
@@ -348,8 +373,14 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
             if code == lang:
                 out[hl] = (f'{site}/{version}/{lang}/{cid}.html' if cid
                            else f'{site}/{version}/{lang}/index.html')
-            elif code in v18_files and (not cid or cid in v18_ids):
-                out[hl] = f'{site}/v1.8/{code}.html' + (f'#{cid}' if cid else '')
+                continue
+            info = lang_idx.get(code)
+            if not info:
+                continue
+            if not cid:
+                out[hl] = f'{site}/{info["version"]}/{code}/index.html'
+            elif cid in info['ids']:
+                out[hl] = f'{site}/{info["version"]}/{code}/{cid}.html'
         return out
 
     out = Path(out) if out else (root / 'dist' / 'site')
@@ -399,14 +430,12 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
     (page_dir / 'assets').mkdir(exist_ok=True)
     # MiSans：CSS 里的 @font-face 用 ../fonts/ 相对路径，字体随页面树一起输出
     fonts_out = page_dir / 'fonts'
-    # 正文字体：woff2 子集优先，TTF 仅作兜底（CSS 里双源声明，浏览器不会下 TTF）
-    for name in ('MiSans-subset.woff2', 'MiSans-Normal.ttf'):
-        src = root / 'fonts' / name
-        if not src.is_file() and name.endswith('.ttf'):
-            src = root / 'assets' / 'fonts' / name   # 兼容旧布局
-        if src.is_file():
-            fonts_out.mkdir(exist_ok=True)
-            shutil.copy2(src, fonts_out / name)
+    # 正文字体只分发 woff2 子集：19 种语言各复制一份 7.8MB TTF 会把站点撑到
+    # 150MB，而 CSS 双源声明下浏览器永远优先 woff2；TTF 母本只在仓库里留档。
+    src = root / 'fonts' / 'MiSans-subset.woff2'
+    if src.is_file():
+        fonts_out.mkdir(exist_ok=True)
+        shutil.copy2(src, fonts_out / src.name)
     # 图标已全部改为文字，不再需要分发图标字体
     for name, body in assets.items():
         for a, b in PATH_FIXES:      # 外置 JS 里的相对路径同样要降级
@@ -573,6 +602,7 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         emit(f'{pid}.html', _rewrite_hrefs(ppage, idmap, pid, frozenset(part_first)))
 
     # ---- sitemap ----
+    urls = []
     if site:
         urls = [f'{site}/{version}/{lang}/index.html'] + \
                [f'{site}/{version}/{lang}/{cid}.html' for cid in order]
@@ -581,14 +611,16 @@ def split(root: Path, lang: str = 'zh-CN', book_path: Path = None,
         urls += [f'{site}/v1.8/{c}.html' for c in sorted(v18_files)]
         # 策展路径页
         urls += [f'{site}/{version}/{lang}/{p["id"]}.html' for p in paths]
-        sm = ['<?xml version="1.0" encoding="UTF-8"?>',
-              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-        sm += [f'  <url><loc>{u}</loc></url>' for u in urls]
-        sm.append('</urlset>')
-        (out / 'sitemap.xml').write_text('\n'.join(sm) + '\n', encoding='utf-8', newline='\n')
+        if write_sitemap:
+            sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+            sm += [f'  <url><loc>{u}</loc></url>' for u in urls]
+            sm.append('</urlset>')
+            (out / 'sitemap.xml').write_text('\n'.join(sm) + '\n',
+                                             encoding='utf-8', newline='\n')
 
     return {'version': version, 'lang': lang, 'pages': len(pages),
             'out': str(page_dir), 'budget': PAGE_BUDGET,
             'over_budget': budget_bad,
             'bad_canonical': canon_bad,
-            'page_stats': pages}
+            'page_stats': pages, 'urls': urls}

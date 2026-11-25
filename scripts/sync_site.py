@@ -41,7 +41,10 @@ DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # robots.txt 是搜索引擎入口（方案 §6.4，sitemap 坐标写在里面）。
 ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json',
           'errata.html', 'languages.html', 'quiz.html', 'robots.txt']
-ASSET_DIRS = ['icons', 'quiz', 'fonts']
+ASSET_DIRS = ['icons', 'quiz']
+# 字体只发布 woff2 子集（0.6MB）：7.8MB 的 TTF 母本只在仓库里留档，
+# 不上网——CSS 双源声明下浏览器永远优先 woff2，省掉 90% 的字体流量。
+FONT_SUBSET = 'MiSans-subset.woff2'
 # 书页里的 og:image 是绝对地址（manifest 的 site_url + cover-og.png），
 # 图必须一起部署到站点根，否则分享卡片抓不到图。
 COVER = ('docs/promotion/assets/cover-og.png', 'cover-og.png')
@@ -167,23 +170,26 @@ def main():
     for d in ASSET_DIRS:
         n = len(list((ROOT / d).glob('*'))) if (ROOT / d).is_dir() else 0
         plan.append((d + '/', f'{n} 个文件'))
+    if (ROOT / 'fonts' / FONT_SUBSET).is_file():
+        plan.append(('fonts/' + FONT_SUBSET, '字体子集'))
 
     for name, note in plan:
         print(f'  → {name:24s} {note}')
 
-    # 分章页（章节级 URL + sitemap/JSON-LD）：构建后随站点一起发布
+    # 分章页（章节级 URL + sitemap/JSON-LD）：19 种语言全量构建后随站点发布
     import subprocess
-    r = subprocess.run([sys.executable, '-m', 'bookkit', 'split',
-                        '--book', 'source/v1.9/book.json', '--out', 'dist/site',
-                        '--strict-budget'], cwd=ROOT)
+    r = subprocess.run([sys.executable, 'scripts/build_all_sites.py',
+                        '--out', 'dist/site', '--strict-budget'], cwd=ROOT)
     if r.returncode != 0:
         print('!! 分章化构建失败（超页级预算或构建错误），中止部署')
         return 1
     split_root = ROOT / 'dist' / 'site'
-    n_pages = len(list((split_root / 'v1.9' / 'zh-CN').glob('*.html')))
-    plan.append((f'v1.9/zh-CN/（分章 {n_pages} 页）', '复制'))
+    n_cn = len(list((split_root / 'v1.9' / 'zh-CN').glob('*.html')))
+    n_foreign = len(list((split_root / 'v1.8').glob('*/*.html')))
+    plan.append((f'v1.9/zh-CN/（分章 {n_cn} 页）', '复制'))
+    plan.append((f'v1.8/<lang>/（外语分章 {n_foreign} 页）', '复制'))
     plan.append(('sitemap.xml', '复制'))
-    for name, note in plan[-2:]:
+    for name, note in plan[-3:]:
         print(f'  → {name:24s} {note}')
 
     if args.dry_run:
@@ -208,9 +214,20 @@ def main():
         if tgt.exists():
             shutil.rmtree(tgt)
         shutil.copytree(ROOT / d, tgt)
+    font_dir = dest / 'fonts'
+    font_dir.mkdir(exist_ok=True)
+    src_font = ROOT / 'fonts' / FONT_SUBSET
+    if src_font.is_file():
+        shutil.copy2(src_font, font_dir / FONT_SUBSET)
+    # 旧的 TTF 若曾部署过，一并清掉（7.8MB 且浏览器不会下）
+    stale_ttf = font_dir / 'MiSans-Normal.ttf'
+    if stale_ttf.is_file():
+        stale_ttf.unlink()
+        print('  ! 已删除站点上的 7.8MB TTF 母本（浏览器用 woff2）')
 
-    # 分章页与 sitemap
+    # 分章页与 sitemap：中文 v1.9 + 18 语 v1.8 章页
     shutil.copytree(split_root / 'v1.9', dest / 'v1.9', dirs_exist_ok=True)
+    shutil.copytree(split_root / 'v1.8', dest / 'v1.8', dirs_exist_ok=True)
 
     # 单文件整本书（站点上 /v1.9/zh-CN.html）：它比站点根深一层，
     # ../sw.js、../errata.html 这类路径本来就是对的，只需修 SW scope。
@@ -334,6 +351,30 @@ def main():
         elif tags[0] != want:
             canon_bad.append(f'v1.9/zh-CN/{f.name}: canonical={tags[0]} 应为 {want}')
         n_checked += 1
+    # 外语分章页：每语言抽查目录页与第一章，canonical 必须指向自己
+    n_foreign = 0
+    for lang_dir in sorted((dest / 'v1.8').iterdir()):
+        if not lang_dir.is_dir():
+            continue
+        bp = ROOT / 'source' / 'translations' / lang_dir.name / 'book.json'
+        if not bp.is_file():
+            continue
+        book = json.loads(bp.read_text(encoding='utf-8'))
+        cid = book['chapters'][0]['id']
+        for rel in (f'v1.8/{lang_dir.name}/index.html',
+                    f'v1.8/{lang_dir.name}/{cid}.html'):
+            f = dest / rel
+            if not f.is_file():
+                canon_bad.append(f'{rel}: 文件缺失')
+                continue
+            h = f.read_text(encoding='utf-8')
+            tags = re.findall(r'<link rel="canonical" href="([^"]+)"', h)
+            want = site_base() + '/' + rel
+            if len(tags) != 1:
+                canon_bad.append(f'{rel}: canonical 有 {len(tags)} 个')
+            elif tags[0] != want:
+                canon_bad.append(f'{rel}: canonical={tags[0]} 应为 {want}')
+            n_foreign += 1
     if canon_bad:
         print('!! canonical 不统一：\n   ' + '\n   '.join(canon_bad[:10])
               + (f'\n   …共 {len(canon_bad)} 处' if len(canon_bad) > 10 else ''))

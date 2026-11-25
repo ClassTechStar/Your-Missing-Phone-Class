@@ -125,6 +125,12 @@ def main():
                     ('dist/site/v1.9/zh-CN/di-ling-zhang.html', 1),
                     # 策展路径页（方案 §7）：进度联动 JS 也要零 console error
                     ('dist/site/v1.9/zh-CN/gei-ba-ma-de-shi-zhang.html', None)]
+    # 外语分章页（W3-4）：英语 + 阿拉伯语（RTL）+ 日语各抽一章
+    for lang, cid in (('en', 'di-yi-zhang'), ('ar', 'di-yi-zhang'), ('ja', 'di-yi-zhang')):
+        p = ROOT / 'dist' / 'site' / 'v1.8' / lang / f'{cid}.html'
+        if p.is_file() and (ROOT / 'dist' / 'site' / 'v1.8' / lang / 'index.html').is_file():
+            targets += [(f'dist/site/v1.8/{lang}/index.html', None),
+                        (f'dist/site/v1.8/{lang}/{cid}.html', 1)]
     fails = []
     with sync_playwright() as pw:
         browser = pw.chromium.launch()

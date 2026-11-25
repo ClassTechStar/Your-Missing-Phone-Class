@@ -62,6 +62,14 @@ h1{color:var(--ink);font-size:clamp(2rem,6vw,3rem);line-height:1.25;margin:0 0 .
 .card h2{font-size:.95rem;color:var(--ink);margin:0 0 .3rem;font-weight:600}
 .card p{margin:0;color:var(--muted);font-size:.84rem}
 .card .tag{float:right;color:var(--warm);font-size:.72rem;font-weight:600}
+.langs{border-top:1px solid var(--line);padding-top:1.6rem;margin-bottom:2.6rem}
+.langs h2{font-size:1rem;color:var(--ink);margin:0 0 .35rem}
+.langs p{margin:0 0 .9rem;color:var(--muted);font-size:.85rem}
+.langs p a{color:var(--accent)}
+.lang-links{display:flex;flex-wrap:wrap;gap:.5rem}
+.lang-links a{border:1px solid var(--line);border-radius:.4rem;padding:.35rem .7rem;
+  text-decoration:none;color:var(--body);font-size:.85rem;background:var(--card)}
+.lang-links a:hover{border-color:var(--accent);color:var(--accent)}
 footer{border-top:1px solid var(--line);padding:1.6rem 0 2.2rem;color:var(--muted);font-size:.82rem}
 footer a{color:var(--muted)}
 footer a:hover{color:var(--accent)}
@@ -122,6 +130,33 @@ footer .row{display:flex;gap:1.2rem;flex-wrap:wrap;margin-bottom:.5rem}
         <p>源稿、脚本、APK 全公开</p>
       </a>
     </div>
+
+    <section class="langs" aria-labelledby="langs-title">
+      <h2 id="langs-title">其他语言</h2>
+      <p>19 种语言都能读了。外语版为 v1.8（84 章），和中文版一样每章一页，不再下载整本；
+        各语言的实际审校程度见 <a href="languages.html">语言分级页</a>。</p>
+      <div class="lang-links">
+        <a href="v1.9/zh-CN/">简体中文</a>
+        <a href="v1.8/zh-TW/">繁體中文</a>
+        <a href="v1.8/yue/">粵語</a>
+        <a href="v1.8/en/">English</a>
+        <a href="v1.8/ko/">한국어</a>
+        <a href="v1.8/ja/">日本語</a>
+        <a href="v1.8/ru/">Русский</a>
+        <a href="v1.8/it/">Italiano</a>
+        <a href="v1.8/pt/">Português</a>
+        <a href="v1.8/es/">Español</a>
+        <a href="v1.8/fr/">Français</a>
+        <a href="v1.8/de/">Deutsch</a>
+        <a href="v1.8/ar/">العربية</a>
+        <a href="v1.8/he/">עברית</a>
+        <a href="v1.8/th/">ภาษาไทย</a>
+        <a href="v1.8/id/">Bahasa Indonesia</a>
+        <a href="v1.8/ms/">Bahasa Melayu</a>
+        <a href="v1.8/el/">Ελληνικά</a>
+        <a href="v1.8/lzh/">文言文</a>
+      </div>
+    </section>
   </div>
 </main>
 
