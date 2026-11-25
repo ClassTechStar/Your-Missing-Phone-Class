@@ -28,7 +28,7 @@ def esc(s: str) -> str:
 
 
 CSS = """
-@font-face{font-family:'MiSans';src:url('fonts/MiSans-Normal.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'MiSans';src:url('fonts/MiSans-subset.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
 :root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#fafafa;--accent:#2563eb;
 --warm:#fef3c7;--warm-line:#f59e0b;--ok:#059669}
 *{box-sizing:border-box}
