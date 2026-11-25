@@ -3,6 +3,9 @@
 > 本文件描述的工具链**已落地可用**（Python 3 标准库，零第三方依赖）。历史上的 `scripts/check_consistency.py`、
 > `scripts/generate_index.py`、`scripts/languages.json` 已在提交 `7f58c0c` 删除；其能力由 `bookkit/` 包与
 > `manifest/languages.json` 取代，本节与之对齐。
+>
+> 一次性内容手术脚本（`inject_*` / `v19_*` / `enrich_*` / 部分 `fix_*` 等 39 个）已归档到
+> `scripts/legacy/`：保留溯源价值，不再随仓库演进维护；根目录只留可重复执行的活脚本。
 
 ## 一、一条命令看清全貌
 
