@@ -12464,7 +12464,7 @@ func scheduleDailyReminder() {
  </div></main></div><!-- クイックツール：フローティングボタングループ --><div id="quick-tools" class="quick-tools no-print" aria-label="クイックツール"><button id="quick-glass" class="quick-tool-btn" title="液态玻璃效果 (开/关)" aria-label="切换液态玻璃效果" aria-pressed="true"><span aria-hidden="true">透</span></button><button id="quick-search" class="quick-tool-btn" title="検索 (Ctrl+K)" aria-label="検索"><span aria-hidden="true">搜</span></button><button id="quick-theme" class="quick-tool-btn" title="ダーク/ライトの切り替え" aria-label="テーマの切り替え"><span aria-hidden="true">夜</span></button><button id="quick-print" class="quick-tool-btn" title="印刷 / PDF書き出し" aria-label="印刷または書き出し"><span aria-hidden="true">印</span></button><button id="quick-toc" class="quick-tool-btn" title="目次" aria-label="目次を開く"><span aria-hidden="true">目</span></button><button id="quick-tts" class="quick-tool-btn" title="音声読み上げ" aria-label="音声読み上げ"><span class="tts-ico" aria-hidden="true">▶</span></button><button id="quick-shortcuts" class="quick-tool-btn" title="キーボードショートカット (?)" aria-label="ショートカット一覧"><span aria-hidden="true">?</span></button><button id="quick-backup" class="quick-tool-btn" title="バックアップ/復元の進行状況" aria-label="バックアップの進行状況"><span aria-hidden="true">備</span></button></div><!-- ショートカットパネル --><div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="キーボードショートカット"><div class="search-panel" style="max-width:480px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">キーボードショートカット</span><button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="閉じる">ESC</button></div><div class="p-4 space-y-2 text-sm"><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">コンテンツを検索</span><span class="kbd">Ctrl + K</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">ダーク/ライト切替</span><span class="kbd">T</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">読み上げ 再生/一時停止</span><span class="kbd">R</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">読み上げを停止</span><span class="kbd">ESC</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">ショートカットパネルを開く</span><span class="kbd">?</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">文字サイズを大きく / 小さく</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div><div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">印刷 / PDF書き出し</span><span class="kbd">Ctrl + P</span></div></div></div></div><!-- バックアップ/復元モーダル --><div id="backup-overlay" class="search-overlay" role="dialog" aria-label="バックアップと復元"><div class="search-panel" style="max-width:520px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">読書の進捗バックアップと復元</span><button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="閉じる">ESC</button></div><div class="p-5 space-y-4 text-sm"><div class="info-box rounded-lg p-3"><p class="text-xs">バックアップの内容：既読の章、しおり、読書位置、文字サイズの設定、健康セルフチェックの結果。データはブラウザのローカルに保存されるため、ブラウザを変えたりキャッシュを消したりすると失われます。定期的にバックアップを書き出すことをおすすめします。</p></div><div><button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> バックアップファイルを書き出す
  </button><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">JSON ファイルをダウンロードし、安全な場所に保存します</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> バックアップを読み込んで復元
  </button><input type="file" id="backup-import-input" accept=".json" class="hidden"><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">以前書き出したバックアップファイルを選んで進捗を復元します</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> 読書データをすべて消去
- </button><p class="text-xs text-red-400 mt-1 text-center">復元できません！先にバックアップを書き出してください</p></div></div></div></div><!-- 連続読書日数トースト --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),var(--progress-via));color:var(--ink-inverse);border:none;"><span id="streak-toast-text">連続X日読書！</span></div><!-- 音声読み上げコントロールバー --><div id="tts-controls" class="tts-controls" role="region" aria-label="音声読み上げコントロール" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="現在読み上げ中の章">未開始</span><button class="tts-btn" id="tts-prev" title="前の段落へ" aria-label="前の段落へ"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="再生/一時停止" aria-label="読み上げを再生"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="次の段落へ" aria-label="次の段落へ"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="速度を下げる" aria-label="速度を下げる">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="速度を上げる" aria-label="速度を上げる">+</button><button class="tts-btn" id="tts-stop" title="読み上げを停止" aria-label="読み上げを停止"><span aria-hidden="true">×</span></button></div><!-- トップへ戻るボタン --><button id="back-to-top" class="opacity-0 invisible" aria-label="先頭へ戻る"><svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- 読書位置復元トースト --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">前回読んだ位置：...</span><button class="btn-restore" id="restore-btn">続きを読む</button><button class="btn-dismiss" id="dismiss-btn">無視</button></div><!-- JSスクリプト -->
+ </button><p class="text-xs text-red-400 mt-1 text-center">復元できません！先にバックアップを書き出してください</p></div></div></div></div><!-- 連続読書日数トースト --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),var(--progress-via));color:var(--ink-inverse);border:none;"><span id="streak-toast-text">連続X日読書！</span></div><!-- 音声読み上げコントロールバー --><div id="tts-controls" class="tts-controls" role="region" aria-label="音声読み上げコントロール" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="現在読み上げ中の章">未開始</span><button class="tts-btn" id="tts-prev" title="前の段落へ" aria-label="前の段落へ"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="再生/一時停止" aria-label="読み上げを再生"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="次の段落へ" aria-label="次の段落へ"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="速度を下げる" aria-label="速度を下げる">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="速度を上げる" aria-label="速度を上げる">+</button><button class="tts-btn" id="tts-stop" title="読み上げを停止" aria-label="読み上げを停止"><span aria-hidden="true">×</span></button></div><!-- トップへ戻るボタン --><button id="back-to-top" class="opacity-0 invisible" aria-label="先頭へ戻る"><svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- 読書位置復元トースト --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">前回読んだ位置：...</span><button class="btn-restore" id="restore-btn">元に戻す</button><button class="btn-dismiss" id="dismiss-btn">無視</button></div><!-- JSスクリプト -->
  <script>
  (function() {
  'use strict';
@@ -12615,6 +12615,8 @@ func scheduleDailyReminder() {
  // ===== 読書位置の記憶 =====
  const POSITION_KEY = 'phoneCourse_scrollPos';
  const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+ const POSITION_SECTION_KEY = 'phoneCourse_lastSection';
+ const POSITION_OFFSET_KEY = 'phoneCourse_lastOffset';
  let savePosTimer = null;
  function saveReadingPosition() {
  const scrollY = window.scrollY;
@@ -12622,15 +12624,23 @@ func scheduleDailyReminder() {
  localStorage.setItem(POSITION_KEY, scrollY.toString());
  // 現在の章名を取得
  let currentChapter = '';
+ let currentSectionId = '';
+ let currentOffset = 0;
  const viewportTop = scrollY + 100;
  for (let i = sections.length - 1; i >= 0; i--) {
  if (sections[i].offsetTop <= viewportTop) {
  const h3 = sections[i].querySelector('h3');
  if (h3) currentChapter = h3.textContent;
+ currentSectionId = sections[i].getAttribute('id') || '';
+ currentOffset = Math.max(0, scrollY - sections[i].offsetTop);
  break;
  }
  }
  if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+ if (currentSectionId) {
+ localStorage.setItem(POSITION_SECTION_KEY, currentSectionId);
+ localStorage.setItem(POSITION_OFFSET_KEY, String(currentOffset));
+ }
  }
  window.addEventListener('scroll', () => {
  clearTimeout(savePosTimer);
@@ -12641,7 +12651,20 @@ func scheduleDailyReminder() {
  function tryRestorePosition() {
  const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
  const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+ const savedSectionId = localStorage.getItem(POSITION_SECTION_KEY) || '';
+ const savedOffset = parseInt(localStorage.getItem(POSITION_OFFSET_KEY) || '0', 10);
  if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+ // 方案 W5：默认直达上次位置。优先按章节 id 定位：content-visibility 下
+ // 直接跳 scrollY 会因未渲染章节的占位高度而漂移；先强制渲染该章再补章内偏移。
+ const sectionEl = savedSectionId ? document.getElementById(savedSectionId) : null;
+ if (sectionEl) {
+ sectionEl.scrollIntoView({ behavior: 'instant', block: 'start' });
+ requestAnimationFrame(() => {
+ window.scrollTo({ top: sectionEl.offsetTop + savedOffset, behavior: 'auto' });
+ });
+ } else {
+ window.scrollTo({ top: savedPos, behavior: 'auto' });
+ }
  restoreToastText.textContent = `前回読んだところ：${savedChapter}`;
  setTimeout(() => restoreToast.classList.add('show'), 800);
  // 10秒後に自動的に隠す
@@ -12649,11 +12672,9 @@ func scheduleDailyReminder() {
  }
  }
  if (restoreBtn) {
+ // 位置已自动恢复：按钮改为「撤销」，把读者送回本次打开时的位置（顶部）
  restoreBtn.addEventListener('click', () => {
- const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
- if (savedPos > 0) {
- window.scrollTo({ top: savedPos, behavior: 'smooth' });
- }
+ window.scrollTo({ top: 0, behavior: 'smooth' });
  if (restoreToast) restoreToast.classList.remove('show');
  });
  }
@@ -12933,20 +12954,11 @@ func scheduleDailyReminder() {
  }
 
  // ===== 検索（強化：キーボードナビゲーション＋結果カウント） =====
- let searchData = null;
  let searchSelectedIdx = -1;
  let searchResultItems = [];
 
- function buildSearchIndex() {
- if (searchData) return;
- searchData = sections.map(section => {
- const id = section.getAttribute('id');
- const h3 = section.querySelector('h3');
- const title = h3 ? h3.textContent : '';
- const text = section.textContent;
- return { id, title, text };
- });
- }
+ // 方案 W5：不再预建全书索引。120 章 × textContent 全量拷进 JS 数组会让
+ // 低端安卓首次搜索内存峰值翻倍；改为 runSearch 逐章扫描、只保留命中章。
 
  function renderSearchPlaceholder(message) {
  if (searchResults) {
@@ -12954,7 +12966,6 @@ func scheduleDailyReminder() {
  }
  }
  function runSearch(query) {
- buildSearchIndex();
  const normalizedQuery = (query || '').trim().toLowerCase();
  if (!normalizedQuery) {
  renderSearchPlaceholder('キーワードを入力して検索');
@@ -12962,9 +12973,18 @@ func scheduleDailyReminder() {
  searchResultItems = [];
  return;
  }
- const results = searchData.filter(item =>
- item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
- ).slice(0, 20);
+ const results = [];
+ // 逐章读取 textContent：只保留命中的前 20 章，扫完一章即释放上一章
+ for (const section of sections) {
+ const id = section.getAttribute('id');
+ const h3 = section.querySelector('h3');
+ const title = h3 ? h3.textContent : '';
+ const text = section.textContent;
+ if (!title.toLowerCase().includes(normalizedQuery) &&
+ !text.toLowerCase().includes(normalizedQuery)) continue;
+ results.push({ id, title, text });
+ if (results.length >= 20) break;
+ }
 
  if (results.length === 0) {
  renderSearchPlaceholder('関連する内容が見つかりません');
@@ -13003,7 +13023,6 @@ func scheduleDailyReminder() {
  }
  function openSearch() {
  if (!searchOverlay) return;
- buildSearchIndex();
  searchOverlay.classList.add('active');
  searchOverlay.setAttribute('aria-hidden', 'false');
  if (searchInput) {

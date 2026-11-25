@@ -12543,7 +12543,7 @@ func scheduleDailyReminder() {
  </div></main></div><!-- Outils rapides: groupe de boutons flottants --><div id="quick-tools" class="quick-tools no-print" aria-label="Outils rapides"><button id="quick-glass" class="quick-tool-btn" title="液态玻璃效果 (开/关)" aria-label="切换液态玻璃效果" aria-pressed="true"><span aria-hidden="true">G</span></button><button id="quick-search" class="quick-tool-btn" title="Rechercher (Ctrl+K)" aria-label="Rechercher"><span aria-hidden="true">S</span></button><button id="quick-theme" class="quick-tool-btn" title="Basculer sombre/clair" aria-label="Changer de thème"><span aria-hidden="true">N</span></button><button id="quick-print" class="quick-tool-btn" title="Imprimer / Exporter en PDF" aria-label="Imprimer ou exporter"><span aria-hidden="true">P</span></button><button id="quick-toc" class="quick-tool-btn" title="Sommaire" aria-label="Ouvrir le sommaire"><span aria-hidden="true">T</span></button><button id="quick-tts" class="quick-tool-btn" title="Lecture vocale" aria-label="Lecture vocale"><span class="tts-ico" aria-hidden="true">▶</span></button><button id="quick-shortcuts" class="quick-tool-btn" title="Raccourcis clavier (?)" aria-label="Panneau des raccourcis"><span aria-hidden="true">?</span></button><button id="quick-backup" class="quick-tool-btn" title="Sauvegarder/Restaurer la progression" aria-label="Sauvegarde de la progression"><span aria-hidden="true">B</span></button></div><!-- Panneau des raccourcis --><div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="Raccourcis clavier"><div class="search-panel" style="max-width:480px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Raccourcis clavier</span><button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fermer">ESC</button></div><div class="p-4 space-y-2 text-sm"><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Rechercher du contenu</span><span class="kbd">Ctrl + K</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Basculer sombre/clair</span><span class="kbd">T</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Lecture vocale : lecture/pause</span><span class="kbd">R</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Arrêter la lecture</span><span class="kbd">ESC</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Ouvrir le panneau de raccourcis</span><span class="kbd">?</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Augmenter / réduire la taille du texte</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div><div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">Imprimer / exporter en PDF</span><span class="kbd">Ctrl + P</span></div></div></div></div><!-- Boîte de dialogue sauvegarde/restauration --><div id="backup-overlay" class="search-overlay" role="dialog" aria-label="Sauvegarde et restauration"><div class="search-panel" style="max-width:520px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Sauvegarde et restauration de la progression</span><button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fermer">ESC</button></div><div class="p-5 space-y-4 text-sm"><div class="info-box rounded-lg p-3"><p class="text-xs">La sauvegarde contient : chapitres lus, signets, position de lecture, préférence de taille de police, résultats de l'autodiagnostic santé. Les données sont stockées localement dans le navigateur : elles sont perdues si tu changes de navigateur ou vides le cache ; pense à exporter régulièrement une sauvegarde.</p></div><div><button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> Exporter le fichier de sauvegarde
  </button><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Télécharger un fichier JSON et l'enregistrer dans un endroit sûr</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> Importer une sauvegarde et restaurer
  </button><input type="file" id="backup-import-input" accept=".json" class="hidden"><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Choisir un fichier de sauvegarde exporté auparavant pour restaurer la progression</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> Effacer toutes les données de lecture
- </button><p class="text-xs text-red-400 mt-1 text-center">Irrécupérable ! Exporte d'abord une sauvegarde</p></div></div></div></div><!-- Notification de jours de lecture consécutifs --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),var(--progress-via));color:var(--ink-inverse);border:none;"><span id="streak-toast-text">Jour X de lecture d'affilée !</span></div><!-- Barre de commandes de lecture vocale --><div id="tts-controls" class="tts-controls" role="region" aria-label="Contrôle de la lecture vocale" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="Chapitre en cours de lecture">Pas commencé</span><button class="tts-btn" id="tts-prev" title="Paragraphe précédent" aria-label="Paragraphe précédent"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="Lecture/Pause" aria-label="Lire à voix haute"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="Paragraphe suivant" aria-label="Paragraphe suivant"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="Ralentir" aria-label="Ralentir">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="Accélérer" aria-label="Accélérer">+</button><button class="tts-btn" id="tts-stop" title="Arrêter la lecture" aria-label="Arrêter la lecture"><span aria-hidden="true">×</span></button></div><!-- Bouton «Haut de page» --><button id="back-to-top" class="opacity-0 invisible" aria-label="Retour en haut"><svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- Notification de restauration de la position de lecture --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">Dernière lecture : ...</span><button class="btn-restore" id="restore-btn">Continuer la lecture</button><button class="btn-dismiss" id="dismiss-btn">Ignorer</button></div><!-- Script JS -->
+ </button><p class="text-xs text-red-400 mt-1 text-center">Irrécupérable ! Exporte d'abord une sauvegarde</p></div></div></div></div><!-- Notification de jours de lecture consécutifs --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),var(--progress-via));color:var(--ink-inverse);border:none;"><span id="streak-toast-text">Jour X de lecture d'affilée !</span></div><!-- Barre de commandes de lecture vocale --><div id="tts-controls" class="tts-controls" role="region" aria-label="Contrôle de la lecture vocale" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="Chapitre en cours de lecture">Pas commencé</span><button class="tts-btn" id="tts-prev" title="Paragraphe précédent" aria-label="Paragraphe précédent"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="Lecture/Pause" aria-label="Lire à voix haute"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="Paragraphe suivant" aria-label="Paragraphe suivant"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="Ralentir" aria-label="Ralentir">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="Accélérer" aria-label="Accélérer">+</button><button class="tts-btn" id="tts-stop" title="Arrêter la lecture" aria-label="Arrêter la lecture"><span aria-hidden="true">×</span></button></div><!-- Bouton «Haut de page» --><button id="back-to-top" class="opacity-0 invisible" aria-label="Retour en haut"><svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- Notification de restauration de la position de lecture --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">Dernière lecture : ...</span><button class="btn-restore" id="restore-btn">Annuler</button><button class="btn-dismiss" id="dismiss-btn">Ignorer</button></div><!-- Script JS -->
  <script>
  (function() {
  'use strict';
@@ -12694,6 +12694,8 @@ func scheduleDailyReminder() {
  // ===== Mémoire de la position de lecture =====
  const POSITION_KEY = 'phoneCourse_scrollPos';
  const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+ const POSITION_SECTION_KEY = 'phoneCourse_lastSection';
+ const POSITION_OFFSET_KEY = 'phoneCourse_lastOffset';
  let savePosTimer = null;
  function saveReadingPosition() {
  const scrollY = window.scrollY;
@@ -12701,15 +12703,23 @@ func scheduleDailyReminder() {
  localStorage.setItem(POSITION_KEY, scrollY.toString());
  // Trouve le nom du chapitre en cours
  let currentChapter = '';
+ let currentSectionId = '';
+ let currentOffset = 0;
  const viewportTop = scrollY + 100;
  for (let i = sections.length - 1; i >= 0; i--) {
  if (sections[i].offsetTop <= viewportTop) {
  const h3 = sections[i].querySelector('h3');
  if (h3) currentChapter = h3.textContent;
+ currentSectionId = sections[i].getAttribute('id') || '';
+ currentOffset = Math.max(0, scrollY - sections[i].offsetTop);
  break;
  }
  }
  if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+ if (currentSectionId) {
+ localStorage.setItem(POSITION_SECTION_KEY, currentSectionId);
+ localStorage.setItem(POSITION_OFFSET_KEY, String(currentOffset));
+ }
  }
  window.addEventListener('scroll', () => {
  clearTimeout(savePosTimer);
@@ -12720,7 +12730,20 @@ func scheduleDailyReminder() {
  function tryRestorePosition() {
  const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
  const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+ const savedSectionId = localStorage.getItem(POSITION_SECTION_KEY) || '';
+ const savedOffset = parseInt(localStorage.getItem(POSITION_OFFSET_KEY) || '0', 10);
  if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+ // 方案 W5：默认直达上次位置。优先按章节 id 定位：content-visibility 下
+ // 直接跳 scrollY 会因未渲染章节的占位高度而漂移；先强制渲染该章再补章内偏移。
+ const sectionEl = savedSectionId ? document.getElementById(savedSectionId) : null;
+ if (sectionEl) {
+ sectionEl.scrollIntoView({ behavior: 'instant', block: 'start' });
+ requestAnimationFrame(() => {
+ window.scrollTo({ top: sectionEl.offsetTop + savedOffset, behavior: 'auto' });
+ });
+ } else {
+ window.scrollTo({ top: savedPos, behavior: 'auto' });
+ }
  restoreToastText.textContent = `Dernière lecture : ${savedChapter}`;
  setTimeout(() => restoreToast.classList.add('show'), 800);
  // Masquage automatique après 10 secondes
@@ -12728,11 +12751,9 @@ func scheduleDailyReminder() {
  }
  }
  if (restoreBtn) {
+ // 位置已自动恢复：按钮改为「撤销」，把读者送回本次打开时的位置（顶部）
  restoreBtn.addEventListener('click', () => {
- const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
- if (savedPos > 0) {
- window.scrollTo({ top: savedPos, behavior: 'smooth' });
- }
+ window.scrollTo({ top: 0, behavior: 'smooth' });
  if (restoreToast) restoreToast.classList.remove('show');
  });
  }
@@ -13012,20 +13033,11 @@ func scheduleDailyReminder() {
  }
 
  // ===== Recherche (enrichie : navigation clavier + compteur de résultats) =====
- let searchData = null;
  let searchSelectedIdx = -1;
  let searchResultItems = [];
 
- function buildSearchIndex() {
- if (searchData) return;
- searchData = sections.map(section => {
- const id = section.getAttribute('id');
- const h3 = section.querySelector('h3');
- const title = h3 ? h3.textContent : '';
- const text = section.textContent;
- return { id, title, text };
- });
- }
+ // 方案 W5：不再预建全书索引。120 章 × textContent 全量拷进 JS 数组会让
+ // 低端安卓首次搜索内存峰值翻倍；改为 runSearch 逐章扫描、只保留命中章。
 
  function renderSearchPlaceholder(message) {
  if (searchResults) {
@@ -13033,7 +13045,6 @@ func scheduleDailyReminder() {
  }
  }
  function runSearch(query) {
- buildSearchIndex();
  const normalizedQuery = (query || '').trim().toLowerCase();
  if (!normalizedQuery) {
  renderSearchPlaceholder('Saisissez des mots-clés pour chercher');
@@ -13041,9 +13052,18 @@ func scheduleDailyReminder() {
  searchResultItems = [];
  return;
  }
- const results = searchData.filter(item =>
- item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
- ).slice(0, 20);
+ const results = [];
+ // 逐章读取 textContent：只保留命中的前 20 章，扫完一章即释放上一章
+ for (const section of sections) {
+ const id = section.getAttribute('id');
+ const h3 = section.querySelector('h3');
+ const title = h3 ? h3.textContent : '';
+ const text = section.textContent;
+ if (!title.toLowerCase().includes(normalizedQuery) &&
+ !text.toLowerCase().includes(normalizedQuery)) continue;
+ results.push({ id, title, text });
+ if (results.length >= 20) break;
+ }
 
  if (results.length === 0) {
  renderSearchPlaceholder('Aucun résultat trouvé');
@@ -13082,7 +13102,6 @@ func scheduleDailyReminder() {
  }
  function openSearch() {
  if (!searchOverlay) return;
- buildSearchIndex();
  searchOverlay.classList.add('active');
  searchOverlay.setAttribute('aria-hidden', 'false');
  if (searchInput) {

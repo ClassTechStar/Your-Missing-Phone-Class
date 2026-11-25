@@ -11432,7 +11432,7 @@ func scheduleDailyReminder() {
  </div></main></div><!-- 빠른 도구: 플로팅 버튼 그룹 --><div id="quick-tools" class="quick-tools no-print" aria-label="빠른 도구"><button id="quick-glass" class="quick-tool-btn" title="液态玻璃效果 (开/关)" aria-label="切换液态玻璃效果" aria-pressed="true"><span aria-hidden="true">G</span></button><button id="quick-search" class="quick-tool-btn" title="검색 (Ctrl+K)" aria-label="검색"><span aria-hidden="true">S</span></button><button id="quick-theme" class="quick-tool-btn" title="다크/라이트 전환" aria-label="테마 전환"><span aria-hidden="true">N</span></button><button id="quick-print" class="quick-tool-btn" title="인쇄 / PDF 내보내기" aria-label="인쇄 또는 내보내기"><span aria-hidden="true">P</span></button><button id="quick-toc" class="quick-tool-btn" title="목차" aria-label="목차 열기"><span aria-hidden="true">T</span></button><button id="quick-tts" class="quick-tool-btn" title="음성 낭독" aria-label="음성 낭독"><span class="tts-ico" aria-hidden="true">▶</span></button><button id="quick-shortcuts" class="quick-tool-btn" title="키보드 단축키 (?)" aria-label="단축키 패널"><span aria-hidden="true">?</span></button><button id="quick-backup" class="quick-tool-btn" title="진행 상황 백업/복구" aria-label="진행 상황 백업"><span aria-hidden="true">B</span></button></div><!-- 단축키 패널 --><div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="키보드 단축키"><div class="search-panel" style="max-width:480px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">키보드 단축키</span><button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="닫기">ESC</button></div><div class="p-4 space-y-2 text-sm"><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">내용 검색</span><span class="kbd">Ctrl + K</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">다크/라이트 전환</span><span class="kbd">T</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">음성 낭독 재생/일시정지</span><span class="kbd">R</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">낭독 중지</span><span class="kbd">ESC</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">단축키 패널 열기</span><span class="kbd">?</span></div><div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">글자 크게 / 작게</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div><div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">인쇄 / PDF 내보내기</span><span class="kbd">Ctrl + P</span></div></div></div></div><!-- 백업/복원 팝업 --><div id="backup-overlay" class="search-overlay" role="dialog" aria-label="백업과 복구"><div class="search-panel" style="max-width:520px"><div class="search-input-wrapper"><span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">독서 진행 백업과 복원</span><button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="닫기">ESC</button></div><div class="p-5 space-y-4 text-sm"><div class="info-box rounded-lg p-3"><p class="text-xs">백업 항목: 읽은 챕터, 책갈피, 읽던 위치, 글자 크기 설정, 건강 자가 진단 결과. 데이터는 브라우저 로컬에 저장되며, 브라우저를 바꾸거나 캐시를 지우면 사라져요. 주기적으로 백업을 내보내 두길 권해요.</p></div><div><button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> 백업 파일 내보내기
  </button><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">JSON 파일 하나를 내려받아 안전한 곳에 보관해요</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> 백업 가져와 복원
  </button><input type="file" id="backup-import-input" accept=".json" class="hidden"><p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">이전에 내보낸 백업 파일을 선택해 진행 상황을 복원해요</p></div><div class="border-t border-gray-200 dark:border-gray-700 pt-4"><button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"> 모든 독서 데이터 지우기
- </button><p class="text-xs text-red-400 mt-1 text-center">복구할 수 없어요! 먼저 백업을 내보내 주세요</p></div></div></div></div><!-- 연속 독서 일수 알림 --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),var(--progress-via));color:var(--ink-inverse);border:none;"><span id="streak-toast-text">연속 독서 X일째!</span></div><!-- 음성 읽기 컨트롤 바 --><div id="tts-controls" class="tts-controls" role="region" aria-label="음성 낭독 제어" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="현재 낭독 중인 챕터">시작 전</span><button class="tts-btn" id="tts-prev" title="이전 단락" aria-label="이전 단락"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="재생/일시정지" aria-label="낭독 재생"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="다음 단락" aria-label="다음 단락"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="속도 늦추기" aria-label="속도 늦추기">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="속도 높이기" aria-label="속도 높이기">+</button><button class="tts-btn" id="tts-stop" title="낭독 중지" aria-label="낭독 중지"><span aria-hidden="true">×</span></button></div><!-- 맨 위로 버튼 --><button id="back-to-top" class="opacity-0 invisible" aria-label="맨 위로"><svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- 읽던 위치 복원 알림 --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">마지막으로 읽은 장: ...</span><button class="btn-restore" id="restore-btn">이어서 읽기</button><button class="btn-dismiss" id="dismiss-btn">닫기</button></div><!-- JS 스크립트 -->
+ </button><p class="text-xs text-red-400 mt-1 text-center">복구할 수 없어요! 먼저 백업을 내보내 주세요</p></div></div></div></div><!-- 연속 독서 일수 알림 --><div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),var(--progress-via));color:var(--ink-inverse);border:none;"><span id="streak-toast-text">연속 독서 X일째!</span></div><!-- 음성 읽기 컨트롤 바 --><div id="tts-controls" class="tts-controls" role="region" aria-label="음성 낭독 제어" aria-live="polite"><span class="tts-chapter-label" id="tts-label" title="현재 낭독 중인 챕터">시작 전</span><button class="tts-btn" id="tts-prev" title="이전 단락" aria-label="이전 단락"><span aria-hidden="true">‹</span></button><button class="tts-btn play-btn" id="tts-play" title="재생/일시정지" aria-label="낭독 재생"><span class="tts-ico" aria-hidden="true">▶</span></button><button class="tts-btn" id="tts-next" title="다음 단락" aria-label="다음 단락"><span aria-hidden="true">›</span></button><button class="tts-btn" id="tts-speed-down" title="속도 늦추기" aria-label="속도 늦추기">−</button><span class="tts-speed-badge" id="tts-speed-display">1.0x</span><button class="tts-btn" id="tts-speed-up" title="속도 높이기" aria-label="속도 높이기">+</button><button class="tts-btn" id="tts-stop" title="낭독 중지" aria-label="낭독 중지"><span aria-hidden="true">×</span></button></div><!-- 맨 위로 버튼 --><button id="back-to-top" class="opacity-0 invisible" aria-label="맨 위로"><svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/></svg></button><!-- 읽던 위치 복원 알림 --><div id="restore-toast" class="restore-position-toast" role="alert"><span id="restore-toast-text">마지막으로 읽은 장: ...</span><button class="btn-restore" id="restore-btn">실행 취소</button><button class="btn-dismiss" id="dismiss-btn">닫기</button></div><!-- JS 스크립트 -->
  <script>
  (function() {
  'use strict';
@@ -11583,6 +11583,8 @@ func scheduleDailyReminder() {
  // ===== 읽던 위치 기억 =====
  const POSITION_KEY = 'phoneCourse_scrollPos';
  const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+ const POSITION_SECTION_KEY = 'phoneCourse_lastSection';
+ const POSITION_OFFSET_KEY = 'phoneCourse_lastOffset';
  let savePosTimer = null;
  function saveReadingPosition() {
  const scrollY = window.scrollY;
@@ -11590,15 +11592,23 @@ func scheduleDailyReminder() {
  localStorage.setItem(POSITION_KEY, scrollY.toString());
  // 현재 챕터 이름 찾기
  let currentChapter = '';
+ let currentSectionId = '';
+ let currentOffset = 0;
  const viewportTop = scrollY + 100;
  for (let i = sections.length - 1; i >= 0; i--) {
  if (sections[i].offsetTop <= viewportTop) {
  const h3 = sections[i].querySelector('h3');
  if (h3) currentChapter = h3.textContent;
+ currentSectionId = sections[i].getAttribute('id') || '';
+ currentOffset = Math.max(0, scrollY - sections[i].offsetTop);
  break;
  }
  }
  if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+ if (currentSectionId) {
+ localStorage.setItem(POSITION_SECTION_KEY, currentSectionId);
+ localStorage.setItem(POSITION_OFFSET_KEY, String(currentOffset));
+ }
  }
  window.addEventListener('scroll', () => {
  clearTimeout(savePosTimer);
@@ -11609,7 +11619,20 @@ func scheduleDailyReminder() {
  function tryRestorePosition() {
  const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
  const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+ const savedSectionId = localStorage.getItem(POSITION_SECTION_KEY) || '';
+ const savedOffset = parseInt(localStorage.getItem(POSITION_OFFSET_KEY) || '0', 10);
  if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+ // 方案 W5：默认直达上次位置。优先按章节 id 定位：content-visibility 下
+ // 直接跳 scrollY 会因未渲染章节的占位高度而漂移；先强制渲染该章再补章内偏移。
+ const sectionEl = savedSectionId ? document.getElementById(savedSectionId) : null;
+ if (sectionEl) {
+ sectionEl.scrollIntoView({ behavior: 'instant', block: 'start' });
+ requestAnimationFrame(() => {
+ window.scrollTo({ top: sectionEl.offsetTop + savedOffset, behavior: 'auto' });
+ });
+ } else {
+ window.scrollTo({ top: savedPos, behavior: 'auto' });
+ }
  restoreToastText.textContent = `마지막으로 읽은 곳: ${savedChapter}`;
  setTimeout(() => restoreToast.classList.add('show'), 800);
  // 10초 후 자동 숨김
@@ -11617,11 +11640,9 @@ func scheduleDailyReminder() {
  }
  }
  if (restoreBtn) {
+ // 位置已自动恢复：按钮改为「撤销」，把读者送回本次打开时的位置（顶部）
  restoreBtn.addEventListener('click', () => {
- const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
- if (savedPos > 0) {
- window.scrollTo({ top: savedPos, behavior: 'smooth' });
- }
+ window.scrollTo({ top: 0, behavior: 'smooth' });
  if (restoreToast) restoreToast.classList.remove('show');
  });
  }
@@ -11901,20 +11922,11 @@ func scheduleDailyReminder() {
  }
 
  // ===== 검색(강화: 키보드 내비게이션 + 결과 개수) =====
- let searchData = null;
  let searchSelectedIdx = -1;
  let searchResultItems = [];
 
- function buildSearchIndex() {
- if (searchData) return;
- searchData = sections.map(section => {
- const id = section.getAttribute('id');
- const h3 = section.querySelector('h3');
- const title = h3 ? h3.textContent : '';
- const text = section.textContent;
- return { id, title, text };
- });
- }
+ // 方案 W5：不再预建全书索引。120 章 × textContent 全量拷进 JS 数组会让
+ // 低端安卓首次搜索内存峰值翻倍；改为 runSearch 逐章扫描、只保留命中章。
 
  function renderSearchPlaceholder(message) {
  if (searchResults) {
@@ -11922,7 +11934,6 @@ func scheduleDailyReminder() {
  }
  }
  function runSearch(query) {
- buildSearchIndex();
  const normalizedQuery = (query || '').trim().toLowerCase();
  if (!normalizedQuery) {
  renderSearchPlaceholder('키워드를 입력해 검색하세요');
@@ -11930,9 +11941,18 @@ func scheduleDailyReminder() {
  searchResultItems = [];
  return;
  }
- const results = searchData.filter(item =>
- item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
- ).slice(0, 20);
+ const results = [];
+ // 逐章读取 textContent：只保留命中的前 20 章，扫完一章即释放上一章
+ for (const section of sections) {
+ const id = section.getAttribute('id');
+ const h3 = section.querySelector('h3');
+ const title = h3 ? h3.textContent : '';
+ const text = section.textContent;
+ if (!title.toLowerCase().includes(normalizedQuery) &&
+ !text.toLowerCase().includes(normalizedQuery)) continue;
+ results.push({ id, title, text });
+ if (results.length >= 20) break;
+ }
 
  if (results.length === 0) {
  renderSearchPlaceholder('관련 내용을 찾지 못했어요');
@@ -11971,7 +11991,6 @@ func scheduleDailyReminder() {
  }
  function openSearch() {
  if (!searchOverlay) return;
- buildSearchIndex();
  searchOverlay.classList.add('active');
  searchOverlay.setAttribute('aria-hidden', 'false');
  if (searchInput) {
