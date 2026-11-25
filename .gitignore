@@ -29,10 +29,12 @@ latex/smoke*
 # 脚本临时文件
 scripts/_*.py
 
-# 各语言 LaTeX 编译瞬态（保留 main.tex/.toc/.pdf 与 chapters/ figures/）
+# 各语言 LaTeX 编译瞬态（源稿 main.tex/.toc 与 chapters/ figures/ 入库；
+# main.pdf 是成品，走 GitHub Releases，不入库）
 latex/*/main.aux
 latex/*/main.log
 latex/*/main.out
+latex/*/main.pdf
 latex/*/pass*.log
 
 # LaTeX-PDF 排版管线（仓库内副本）：脚本入库，大资产与中间物不入库
@@ -42,6 +44,9 @@ latex/*/pass*.log
 手机课-LaTeX-PDF/render-*/
 手机课-LaTeX-PDF/fonttest/
 手机课-LaTeX-PDF/fonts/
+# static/ 下的成品 HTML 是 v1.8/v1.9 的陈旧重复拷贝（曾分叉出旧书名），
+# 已删除；成品以 v1.8/、v1.9/ 为准，防止再次复制回来
+手机课-LaTeX-PDF/static/
 
 # 根目录临时副本（成品以 v1.9/ 为准；站点部署由 scripts/sync_site.py 现场改写相对路径，无需固定副本）
 你缺失的那门手机课*Fixed.html
